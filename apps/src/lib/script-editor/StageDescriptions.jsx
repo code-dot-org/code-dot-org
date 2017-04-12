@@ -45,7 +45,6 @@ const styles = {
 const StageDescriptions = React.createClass({
   propTypes: {
     scriptName: PropTypes.string.isRequired,
-    // TODO - update stories.
     currentDescriptions: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,

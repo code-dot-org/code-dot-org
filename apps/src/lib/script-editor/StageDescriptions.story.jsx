@@ -1,27 +1,31 @@
 import React from 'react';
 import StageDescriptions from './StageDescriptions';
 
-const currentByStage = {
-  'The Internet': {
+const currentDescriptions = [
+  {
+    name: 'The Internet',
     studentDescription: 'This is what the student will see',
     teacherDescription: 'This is what the teacher will see'
   },
-  'The Need for Addressing': {
+  {
+    name: 'The Need for Addressing',
     studentDescription: 'This is what the student will see',
     teacherDescription: 'This is what the teacher will see'
   }
-};
+];
 
-const importedByStage={
-  'The Internet': {
+const importedDescriptions = [
+  {
+    name: 'The internet',
     studentDescription: 'This is the new description of what the student will see',
     teacherDescription: 'This is the new description of what the teacher will see'
   },
-  'The Need for Addressing': {
+  {
+    name: 'The Need for Addressing',
     studentDescription: 'This is what the student will see',
     teacherDescription: 'This is what the teacher will see'
   }
-};
+];
 
 /**
  * Hack that gives us a ref to a child so that we can modify it's state;
@@ -41,41 +45,58 @@ const ModifyState = React.createClass({
   }
 });
 
-
+// TODO - also write unit tests
 export default storybook => {
   storybook
     .storiesOf('StageDescriptions', module)
     .addStoryTable([
       {
-        name:'stage descriptions',
+        name:'collapsed stage descriptions',
         story: () => (
           <StageDescriptions
             scriptName="csd2"
-            currentByStage={currentByStage}
+            currentDescriptions={currentDescriptions}
           />
         )
       },
       {
-        name:'While merging',
+        name:'uncollapsed before import',
         story: () => (
-          <ModifyState importText="Querying server..." >
+          <ModifyState collapsed={false}>
             <StageDescriptions
               scriptName="csd2"
-              currentByStage={currentByStage}
+              currentDescriptions={currentDescriptions}
+            />
+          </ModifyState>
+        )
+      },
+      {
+        name:'While importing',
+        story: () => (
+          <ModifyState
+            buttonText="Querying server..."
+            collapsed={false}
+          >
+            <StageDescriptions
+              scriptName="csd2"
+              currentDescriptions={currentDescriptions}
             />
           </ModifyState>
         )
       },
       {
         name:'stage descriptions with changes after merging',
+        description: 'Simulates one of the stages being named slightly differently on CB',
         story: () => (
           <ModifyState
-            importedByStage={importedByStage}
-            importText="Imported"
+            collapsed={false}
+            importedDescriptions={importedDescriptions}
+            mismatchedStages={['The internet']}
+            buttonText="Imported"
           >
             <StageDescriptions
               scriptName="csd2"
-              currentByStage={currentByStage}
+              currentDescriptions={currentDescriptions}
             />
           </ModifyState>
         )
