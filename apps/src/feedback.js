@@ -195,7 +195,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
-  if (experiments.isEnabled('gamification')) {
+  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
     const hintsUsed = (options.response.hints_used || 0) +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
@@ -205,7 +205,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
 
-    const progress = experiments.isEnabled('g.stageprogress') ?
+    const progress = experiments.isEnabled('gamification') ?
       FeedbackUtils.calculateStageProgress(
         actualBlocks <= idealBlocks,
         hintsUsed,
@@ -214,19 +214,32 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       {};
 
     let onContinue = options.onContinue;
-    if (experiments.isEnabled('g.endstage') && lastInStage) {
+    if (experiments.isEnabled('gamification') && lastInStage) {
       onContinue = () => {
         ReactDOM.render(
           <StageAchievementDialog
             stageName={stageName}
             assetUrl={this.studioApp_.assetUrl}
-            onContinue={options.onContinue}
-            showStageProgress={experiments.isEnabled('g.stageprogress')}
+            onContinue={onContinue}
+            showStageProgress={experiments.isEnabled('gamification')}
             newStageProgress={progress.newStageProgress}
             numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
           />,
           container
         );
+      };
+    }
+
+    let showPuzzleRatingButtons = false;
+    if (options.response && options.response.puzzle_ratings_enabled) {
+      showPuzzleRatingButtons = true;
+      const prevOnContinue = onContinue;
+      onContinue = () => {
+        puzzleRatingUtils.cachePuzzleRating(container, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+        });
+        prevOnContinue();
       };
     }
 
@@ -239,11 +252,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={onContinue}
-        showStageProgress={experiments.isEnabled('g.stageprogress')}
+        showStageProgress={experiments.isEnabled('gamification')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
         newPerfectProgress={progress.newPerfectProgress}
         newHintUsageProgress={progress.newHintUsageProgress}
+        showPuzzleRatingButtons={showPuzzleRatingButtons}
       />, container);
     return;
   }
@@ -416,11 +430,16 @@ FeedbackUtils.calculateStageProgress = function (
   const progress = ClientState.allLevelsProgress();
   const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
 
-  let numPassed = 0,
+  let numLevels = 0,
+    numPassed = 0,
     numPerfect = 0,
     numZeroHints = 0,
     numOneHint = 0;
   for (let i = 0; i < levels.length; i++) {
+    if (levels[i].freePlay) {
+      continue;
+    }
+    numLevels++;
     if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
       continue;
     }
@@ -439,10 +458,10 @@ FeedbackUtils.calculateStageProgress = function (
     }
   }
 
-  const passedScore = numPassed / levels.length;
-  const perfectScore = numPerfect / levels.length;
-  const hintScore = numZeroHints / levels.length +
-    0.5 * numOneHint / levels.length;
+  const passedScore = numPassed / numLevels;
+  const perfectScore = numPerfect / numLevels;
+  const hintScore = numZeroHints / numLevels +
+    0.5 * numOneHint / numLevels;
   const oldStageProgress = 0.3 * passedScore +
     0.4 * perfectScore +
     0.3 * hintScore;
@@ -460,9 +479,9 @@ FeedbackUtils.calculateStageProgress = function (
   const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
   const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
 
-  const newPassedProgress = newPassedLevels * passedWeight / levels.length;
-  const newPerfectProgress = newPerfectLevels * perfectWeight / levels.length;
-  const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
+  const newPassedProgress = newPassedLevels * passedWeight / numLevels;
+  const newPerfectProgress = newPerfectLevels * perfectWeight / numLevels;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / numLevels;
 
   const newStageProgress = oldStageProgress +
     newPassedProgress +
