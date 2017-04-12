@@ -158,7 +158,7 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            if (experiments.isEnabled('g.endstage') && Feedback.isLastLevel()) {
+            if (experiments.isEnabled('gamification') && Feedback.isLastLevel()) {
               const stageInfo = lastServerResponse.previousStageInfo;
               const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
               showDialog("success", () => {
@@ -175,7 +175,7 @@ export function processResults(onComplete, beforeHook) {
                     // This is a hack
                     assetUrl={path => '/blockly/' + path}
                     onContinue={dialogHidden}
-                    showStageProgress={experiments.isEnabled('g.stageprogress')}
+                    showStageProgress={experiments.isEnabled('gamification')}
                     newStageProgress={progress.newStageProgress}
                     numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
                   />,
