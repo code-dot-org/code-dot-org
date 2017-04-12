@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407201709) do
+ActiveRecord::Schema.define(version: 20170410203353) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -163,18 +163,18 @@ ActiveRecord::Schema.define(version: 20170407201709) do
   end
 
   create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "name",                   null: false
-    t.string   "type",                   null: false
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "name",                 null: false
+    t.string   "type",                 null: false
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.integer  "section_id"
     t.integer  "min_user_id"
     t.integer  "max_user_id"
     t.integer  "overflow_max_user_id"
-    t.datetime "earliest_section_start"
-    t.datetime "latest_section_start"
+    t.datetime "earliest_section_at"
+    t.datetime "latest_section_at"
     t.integer  "script_id"
     t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
     t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
@@ -375,6 +375,36 @@ ActiveRecord::Schema.define(version: 20170407201709) do
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+  end
+
+  create_table "pd_facilitator_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "teachercon"
+    t.index ["user_id", "teachercon"], name: "index_pd_fac_prog_reg_on_user_id_and_teachercon", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_facilitator_program_registrations_on_user_id", using: :btree
+  end
+
+  create_table "pd_facilitator_teachercon_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",     null: false
+    t.date    "tc1_arrive"
+    t.date    "tc1_depart"
+    t.date    "fit1_arrive"
+    t.date    "fit1_depart"
+    t.string  "fit1_course"
+    t.date    "tc2_arrive"
+    t.date    "tc2_depart"
+    t.date    "fit2_arrive"
+    t.date    "fit2_depart"
+    t.string  "fit2_course"
+    t.date    "tc3_arrive"
+    t.date    "tc3_depart"
+    t.date    "fit3_arrive"
+    t.date    "fit3_depart"
+    t.string  "fit3_course"
+    t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
   end
 
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

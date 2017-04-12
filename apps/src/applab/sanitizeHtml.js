@@ -170,7 +170,7 @@ export default function sanitizeHtml(unsafe, warn, persistingHtml, rejectExistin
           warnings.push('element id is already in use: ' + attribs.id);
           delete attribs.id;
         }
-        if (attribs.type === 'password') {
+        if (attribs.type === 'password' && tagName === 'input') {
           warnings.push('for security reasons, input type can not be: ' + attribs.type);
           delete attribs.type;
         }
