@@ -1,9 +1,11 @@
 import {assert} from '../util/configuredChai';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
 var testUtils = require('./../util/testUtils');
-testUtils.setExternalGlobals();
 
 var runState = require('@cdo/apps/redux/runState');
+
+describe('runState', () => {
+  testUtils.setExternalGlobals();
 
 describe('isRunning reducer', function () {
   var reducer = runState.default;
@@ -133,5 +135,7 @@ describe('isDebuggerPaused reducer', function () {
       nextStep: undefined,
     });
   });
+
+});
 
 });
