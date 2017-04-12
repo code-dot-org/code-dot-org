@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407201709) do
+ActiveRecord::Schema.define(version: 20170412065832) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -324,6 +324,15 @@ ActiveRecord::Schema.define(version: 20170407201709) do
     t.index ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
   end
 
+  create_table "pd_accepted_programs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "workshop_name",          null: false
+    t.string   "course",                 null: false
+    t.integer  "user_id",                null: false
+    t.integer  "teacher_application_id"
+  end
+
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_session_id",    null: false
     t.integer  "teacher_id"
@@ -377,6 +386,36 @@ ActiveRecord::Schema.define(version: 20170407201709) do
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
   end
 
+  create_table "pd_facilitator_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "teachercon"
+    t.index ["user_id", "teachercon"], name: "index_pd_fac_prog_reg_on_user_id_and_teachercon", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_facilitator_program_registrations_on_user_id", using: :btree
+  end
+
+  create_table "pd_facilitator_teachercon_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",     null: false
+    t.date    "tc1_arrive"
+    t.date    "tc1_depart"
+    t.date    "fit1_arrive"
+    t.date    "fit1_depart"
+    t.string  "fit1_course"
+    t.date    "tc2_arrive"
+    t.date    "tc2_depart"
+    t.date    "fit2_arrive"
+    t.date    "fit2_depart"
+    t.string  "fit2_course"
+    t.date    "tc3_arrive"
+    t.date    "tc3_depart"
+    t.date    "fit3_arrive"
+    t.date    "fit3_depart"
+    t.string  "fit3_course"
+    t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
+  end
+
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "regional_partner_id"
     t.date     "start_date"
@@ -406,7 +445,6 @@ ActiveRecord::Schema.define(version: 20170407201709) do
     t.string   "primary_email",                           null: false
     t.string   "secondary_email",                         null: false
     t.text     "application",               limit: 65535, null: false
-    t.string   "accepted_workshop"
     t.string   "regional_partner_override"
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
