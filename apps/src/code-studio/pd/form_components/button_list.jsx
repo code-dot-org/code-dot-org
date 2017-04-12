@@ -65,8 +65,8 @@ const ButtonList = React.createClass({
 
     const options = answers.map((answer, i) => {
       const checked = this.props.type === 'radio' ?
-        (this.props.selectedItems === answer) :
-        !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+          (this.props.selectedItems === answer) :
+          !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
 
       return (
         <InputComponent

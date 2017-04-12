@@ -158,8 +158,8 @@ export default class FacilitatorProgramRegistration extends React.Component {
       <Button key="next" onClick={this.nextPage.bind(this)} bsStyle="primary">Next</Button>
     );
     if (this.state.data.confirmTrainingDate === "No" ||
-      this.state.data.confirmTeacherconDate === 'No - I\'m no longer interested' ||
-      this.state.currentPage === this.pageComponents.length - 1) {
+        this.state.data.confirmTeacherconDate === 'No - I\'m no longer interested' ||
+        this.state.currentPage === this.pageComponents.length - 1) {
       nextButton = (
         <Button
           key="submit"
