@@ -9,7 +9,6 @@
 #  primary_email             :string(255)      not null
 #  secondary_email           :string(255)      not null
 #  application               :text(65535)      not null
-#  accepted_workshop         :string(255)
 #  regional_partner_override :string(255)
 #
 # Indexes
@@ -155,8 +154,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def accepted_workshop
-    # temporarily fall back to the DB attribute until old data is ported to accepted_program
-    accepted_program.try(:workshop_name) || read_attribute(:accepted_workshop)
+    accepted_program.try(:workshop_name)
   end
 
   def teacher_first_name
