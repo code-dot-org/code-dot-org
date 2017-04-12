@@ -2,20 +2,20 @@
 #
 # Table name: experiments
 #
-#  id                     :integer          not null, primary key
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
-#  name                   :string(255)      not null
-#  type                   :string(255)      not null
-#  start_time             :datetime
-#  end_time               :datetime
-#  section_id             :integer
-#  min_user_id            :integer
-#  max_user_id            :integer
-#  overflow_max_user_id   :integer
-#  earliest_section_start :datetime
-#  latest_section_start   :datetime
-#  script_id              :integer
+#  id                   :integer          not null, primary key
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  name                 :string(255)      not null
+#  type                 :string(255)      not null
+#  start_at             :datetime
+#  end_at               :datetime
+#  section_id           :integer
+#  min_user_id          :integer
+#  max_user_id          :integer
+#  overflow_max_user_id :integer
+#  earliest_section_at  :datetime
+#  latest_section_at    :datetime
+#  script_id            :integer
 #
 # Indexes
 #
@@ -55,8 +55,8 @@ class Experiment < ApplicationRecord
       e1.or(e2)
     end
     now = DateTime.now
-    experiments.where('start_time IS NULL OR start_time < ?', now).
-      where('end_time IS NULL OR end_time > ?', now).
+    experiments.where('start_at IS NULL OR start_at < ?', now).
+      where('end_at IS NULL OR end_at > ?', now).
       where('script_id IS NULL OR script_id = ?', script.try(:id))
   end
 
@@ -67,8 +67,8 @@ class Experiment < ApplicationRecord
     now = DateTime.now
     @@experiments.select do |experiment|
       experiment.enabled?(user: user, section: section) &&
-        (experiment.start_time.nil? || experiment.start_time < now) &&
-        (experiment.end_time.nil? || experiment.end_time > now) &&
+        (experiment.start_at.nil? || experiment.start_at < now) &&
+        (experiment.end_at.nil? || experiment.end_at > now) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id))
     end
   end
