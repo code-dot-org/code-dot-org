@@ -66,6 +66,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   ]
 
   belongs_to :user
+  has_one :accepted_program, class_name: 'Pd::AcceptedProgram', foreign_key: :teacher_application_id
 
   validates_presence_of :user
   validates_presence_of :application
@@ -131,6 +132,31 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   def application_hash
     application ? JSON.parse(application) : {}
+  end
+
+  def accepted_workshop=(workshop_name)
+    if workshop_name.nil?
+      accepted_program.try(:destroy)
+      return
+    end
+
+    params = {
+      workshop_name: workshop_name,
+      course: selected_course,
+      user_id: user_id,
+      teacher_application_id: id
+    }
+
+    if accepted_program
+      accepted_program.update! params
+    else
+      self.accepted_program = Pd::AcceptedProgram.find_or_create_by! params
+    end
+  end
+
+  def accepted_workshop
+    # temporarily fall back to the DB attribute until old data is ported to accepted_program
+    accepted_program.try(:workshop_name) || read_attribute(:accepted_workshop)
   end
 
   def teacher_first_name
