@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410231011) do
+ActiveRecord::Schema.define(version: 20170412065832) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -433,7 +433,6 @@ ActiveRecord::Schema.define(version: 20170410231011) do
     t.string   "primary_email",                           null: false
     t.string   "secondary_email",                         null: false
     t.text     "application",               limit: 65535, null: false
-    t.string   "accepted_workshop"
     t.string   "regional_partner_override"
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
