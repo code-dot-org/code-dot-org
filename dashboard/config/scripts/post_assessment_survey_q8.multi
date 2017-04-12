@@ -1,5 +1,5 @@
-name 'pre-assessment survey q1'
-question 'I have the ability to do my schoolwork'
+name 'post-assessment survey q8'
+question 'It is important for me to be good at my school work.'
 right 'Strongly disagree'
 right 'Disagree'
 right 'Slightly disagree'
