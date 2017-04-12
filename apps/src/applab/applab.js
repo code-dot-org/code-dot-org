@@ -300,7 +300,7 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
-  if (Applab.tickCount === applabConstants.CAPTURE_TICK_COUNT) {
+  if (Applab.tickCount === applabThumbnail.CAPTURE_TICK_COUNT) {
     applabThumbnail.captureScreenshot();
   }
   if (Applab.JSInterpreter) {
