@@ -42,37 +42,35 @@ TestWrapper.propTypes = {
 export default storybook => {
   storybook
     .storiesOf('FieldGroup', module)
-    .addStoryTable([
-      {
-        name: 'basic example',
-        story: () => (
-          <FieldGroup
-            id="basic"
-            type="text"
-            label="this is a basic fieldgroup"
-            onChange={storybook.action('onChange')}
-          />
-        )
-      }, {
-        name: 'dropdown with children',
-        story: () => (
-          <FieldGroup
-            id="dropdown"
-            componentClass="select"
-            label="a dropdown with children"
-            onChange={storybook.action('onChange')}
-          >
-            <option>Please Select One:</option>
-            <option value="first">One</option>
-            <option value="second">Two</option>
-            <option value="third">Three</option>
-          </FieldGroup>
-        )
-      }, {
-        name: 'full-featured example',
-        story: () => (
-          <TestWrapper onChange={storybook.action('onChange')} />
-        )
-      }
-    ]);
+    .addStoryTable([{
+      name: 'basic example',
+      story: () => (
+        <FieldGroup
+          id="basic"
+          type="text"
+          label="this is a basic fieldgroup"
+          onChange={storybook.action('onChange')}
+        />
+      )
+    }, {
+      name: 'dropdown with children',
+      story: () => (
+        <FieldGroup
+          id="dropdown"
+          componentClass="select"
+          label="a dropdown with children"
+          onChange={storybook.action('onChange')}
+        >
+          <option>Please Select One:</option>
+          <option value="first">One</option>
+          <option value="second">Two</option>
+          <option value="third">Three</option>
+        </FieldGroup>
+      )
+    }, {
+      name: 'full-featured example',
+      story: () => (
+        <TestWrapper onChange={storybook.action('onChange')} />
+      )
+    }]);
 };
