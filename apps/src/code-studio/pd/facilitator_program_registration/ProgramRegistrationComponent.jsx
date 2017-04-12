@@ -7,7 +7,10 @@ export default class ProgramRegistrationComponent extends React.Component {
     super(props);
 
     if (this.constructor === ProgramRegistrationComponent) {
-      throw new TypeError("ProgramRegistrationComponent is an abstract class; cannot construct instances directly");
+      throw new TypeError(`
+        ProgramRegistrationComponent is an abstract class; cannot construct
+        instances directly
+      `);
     }
   }
 
