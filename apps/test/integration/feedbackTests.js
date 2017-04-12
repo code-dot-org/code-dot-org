@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('../util/testUtils');
-testUtils.setExternalGlobals();
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -14,6 +13,8 @@ var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
 describe("checkForEmptyContainerBlockFailure_", function () {
   var studioApp;
   var TestResults;
+
+  testUtils.setExternalGlobals();
 
   // create our environment
   beforeEach(function () {
