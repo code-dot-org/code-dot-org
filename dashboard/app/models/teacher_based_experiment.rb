@@ -2,20 +2,20 @@
 #
 # Table name: experiments
 #
-#  id                     :integer          not null, primary key
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
-#  name                   :string(255)      not null
-#  type                   :string(255)      not null
-#  start_time             :datetime
-#  end_time               :datetime
-#  section_id             :integer
-#  min_user_id            :integer
-#  max_user_id            :integer
-#  overflow_max_user_id   :integer
-#  earliest_section_start :datetime
-#  latest_section_start   :datetime
-#  script_id              :integer
+#  id                   :integer          not null, primary key
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  name                 :string(255)      not null
+#  type                 :string(255)      not null
+#  start_at             :datetime
+#  end_at               :datetime
+#  section_id           :integer
+#  min_user_id          :integer
+#  max_user_id          :integer
+#  overflow_max_user_id :integer
+#  earliest_section_at  :datetime
+#  latest_section_at    :datetime
+#  script_id            :integer
 #
 # Indexes
 #
@@ -34,8 +34,8 @@ class TeacherBasedExperiment < Experiment
     Experiment.where(type: TeacherBasedExperiment.to_s).
       where('(? >= min_user_id AND ? < max_user_id) OR (? < overflow_max_user_id)',
         user_id, user_id, user_id
-      ).where('earliest_section_start IS NULL OR earliest_section_start < ?', section.first_activity_at).
-      where('latest_section_start IS NULL OR latest_section_start > ?', section.first_activity_at)
+      ).where('earliest_section_at IS NULL OR earliest_section_at < ?', section.first_activity_at).
+      where('latest_section_at IS NULL OR latest_section_at > ?', section.first_activity_at)
   end
 
   def enabled?(user: nil, section: nil)
@@ -44,9 +44,9 @@ class TeacherBasedExperiment < Experiment
     user_id = section.user_id % 100
     return ((user_id >= min_user_id && user_id < max_user_id) ||
         user_id < overflow_max_user_id) &&
-      (earliest_section_start.nil? ||
-        earliest_section_start < section.first_activity_at) &&
-      (latest_section_start.nil? ||
-        latest_section_start > section.first_activity_at)
+      (earliest_section_at.nil? ||
+        earliest_section_at < section.first_activity_at) &&
+      (latest_section_at.nil? ||
+        latest_section_at > section.first_activity_at)
   end
 end
