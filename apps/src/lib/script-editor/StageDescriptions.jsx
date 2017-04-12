@@ -1,20 +1,37 @@
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
+import $ from 'jquery';
+import color from '@cdo/apps/util/color';
+
+const NBSP = "\u00a0";
 
 const styles = {
   main: {
     border: '1px solid lightgray',
     padding: 10
   },
-  note: {
+  stage: {
+    paddingTop: 10,
     paddingBottom: 10
   },
   stageName: {
     fontSize: 16,
     textDecoration: 'underline'
   },
-  inputUpdate: {
+  original: {
+    backgroundColor: color.lightest_gray
+  },
+  update: {
     backgroundColor: 'lightgreen'
+  },
+  expander: {
+    paddingLeft: 10
+  },
+  collapsed: {
+    display: 'none'
+  },
+  warning: {
+    backgroundColor: color.realyellow
   }
 };
 
@@ -30,98 +47,125 @@ const StageDescriptions = React.createClass({
         studentDescription: PropTypes.string.isRequired,
         teacherDescription: PropTypes.string.isRequired,
       })
-    ).isRequired,
-    inputStyle: PropTypes.object.isRequired,
+    ).isRequired
   },
 
   getInitialState() {
     return {
-      isImporting: false,
-      hasImported: false,
-      importedByStage: {}
+      // start collapsed
+      collapsed: true,
+      importText: null,
+      importedByStage: {},
+      ignoredStages: []
     };
+  },
+
+  expand() {
+    this.setState({
+      collapsed: false
+    });
+  },
+
+  processImport(result) {
+    let importedByStage = {};
+    const { currentByStage } = this.props;
+
+    const ignoredStages = [];
+
+    result.lessons.forEach(lesson => {
+      const current = currentByStage[lesson.title];
+      if (!current) {
+        ignoredStages.push(lesson.title);
+        return;
+      }
+      importedByStage[lesson.title] = {
+        studentDescription: lesson.student_desc,
+        teacherDescription: lesson.teacher_desc
+      };
+    });
+
+    this.setState({
+      importText: 'Imported',
+      importedByStage,
+      ignoredStages
+    });
   },
 
   importDescriptions() {
     this.setState({
-      isImporting: true
+      importText: 'Querying server...'
     });
 
-    // TODO - import
+    // TODO - path isnt hardcoded
+    $.getJSON('https://curriculum.code.org/csp/unit2.json')
+    .done(this.processImport)
+    .fail(jqXHR => {
+      this.setState({
+        importText: jqXHR.statusText
+      });
+    });
   },
 
   render() {
-    const { inputStyle, currentByStage } = this.props;
-    const { isImporting, hasImported, importedByStage } = this.state;
+    const { currentByStage } = this.props;
+    const { importedByStage } = this.state;
 
     const stageNames = _.uniq(Object.keys(currentByStage).concat(Object.keys(importedByStage)));
 
     return (
       <div>
-        <h3>Stage Descriptions</h3>
+        <h4>
+          Stage Descriptions
+        </h4>
         <div style={styles.main}>
-          <div style={styles.note}>Note: We only show info for stages that have descriptions</div>
-          {stageNames.map((stageName, index) => {
-            const currentStudent = (currentByStage[stageName] || {}).studentDescription;
-            const currentTeacher = (currentByStage[stageName] || {}).teacherDescription;
-            const updatedStudent = (importedByStage[stageName] || {}).studentDescription;
-            const updatedTeacher = (importedByStage[stageName] || {}).teacherDescription;
+          {this.state.collapsed &&
+            <button className="btn" onClick={this.expand}>Click to Expand</button>
+          }
+          {!this.state.collapsed &&
+            <div>
+              {stageNames.map((stageName, index) => {
+                const currentStudent = (currentByStage[stageName] || {}).studentDescription;
+                const currentTeacher = (currentByStage[stageName] || {}).teacherDescription;
+                const updatedStudent = (importedByStage[stageName] || {}).studentDescription;
+                const updatedTeacher = (importedByStage[stageName] || {}).teacherDescription;
 
-            if (!currentStudent && !currentTeacher && !updatedStudent && !updatedTeacher) {
-              // show nothing if we have nothing
-              return;
-            }
-
-            return (
-              <div key={index}>
-                <div style={styles.stageName}>{stageName}</div>
-                <label>
-                  Current Student Description
-                  <input
-                    defaultValue={currentStudent}
-                    style={inputStyle}
-                    readOnly
-                  />
-                </label>
-                {importedByStage[stageName] && updatedStudent !== currentStudent &&
-                  <label>
-                    Updated Student Description
-                    <input
-                      defaultValue={updatedStudent}
-                      style={{...inputStyle, ...styles.inputUpdate}}
-                      readOnly
-                    />
-                  </label>
-                }
-                <label>
-                  Current Teacher Description
-                  <input
-                    defaultValue={currentTeacher}
-                    style={inputStyle}
-                    readOnly
-                  />
-                </label>
-                {importedByStage[stageName] && updatedTeacher !== currentTeacher &&
-                  <label>
-                    Updated Teacher Description
-                    <input
-                      defaultValue={updatedTeacher}
-                      style={{...inputStyle, ...styles.inputUpdate}}
-                      readOnly
-                    />
-                  </label>
-                }
-              </div>
-            );
-          })}
-          <button
-            className="btn"
-            disabled={isImporting || hasImported}
-            onClick={this.importDescriptions}
-          >
-            {isImporting ? "Querying server..." : (
-              hasImported ? "Imported" : "Import from Curriculum Builder")}
-          </button>
+                return (
+                  <div style={styles.stage} key={index}>
+                    <div style={styles.stageName}>{stageName}</div>
+                    <label>
+                      Student Description
+                      <div style={styles.original}>{currentStudent || NBSP}</div>
+                      {importedByStage[stageName] && updatedStudent !== currentStudent &&
+                        <div style={styles.update}>{updatedStudent}</div>
+                      }
+                    </label>
+                    <label>
+                      Teacher Description
+                      <div style={styles.original}>{currentTeacher || NBSP}</div>
+                      {importedByStage[stageName] && updatedTeacher !== currentTeacher &&
+                        <div style={styles.update}>{updatedTeacher}</div>
+                      }
+                    </label>
+                  </div>
+                );
+              })}
+              {this.state.ignoredStages.length > 0 &&
+                <div style={styles.warning}>
+                  Stages from Curriculum Builder that don't have matching stages in levelbuilder:
+                  {this.state.ignoredStages.map((name, index) => (
+                    <div key={index}>{name}</div>
+                  ))}
+                </div>
+              }
+              <button
+                className="btn"
+                disabled={!!this.state.importText}
+                onClick={this.importDescriptions}
+              >
+                {this.state.importText || "Import from Curriculum Builder"}
+              </button>
+            </div>
+          }
         </div>
       </div>
     );
