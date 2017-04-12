@@ -1,15 +1,6 @@
 import React from 'react';
 import StageDescriptions from './StageDescriptions';
 
-const inputStyle = {
-  width: '100%',
-  boxSizing: 'border-box',
-  padding: '4px 6px',
-  color: '#555',
-  border: '1px solid #ccc',
-  borderRadius: 4
-};
-
 const currentByStage = {
   'The Internet': {
     studentDescription: 'This is what the student will see',
@@ -59,7 +50,6 @@ export default storybook => {
         name:'stage descriptions',
         story: () => (
           <StageDescriptions
-            inputStyle={inputStyle}
             currentByStage={currentByStage}
           />
         )
@@ -67,9 +57,8 @@ export default storybook => {
       {
         name:'While merging',
         story: () => (
-          <ModifyState isImporting={true}>
+          <ModifyState importText="Querying server..." >
             <StageDescriptions
-              inputStyle={inputStyle}
               currentByStage={currentByStage}
             />
           </ModifyState>
@@ -80,10 +69,9 @@ export default storybook => {
         story: () => (
           <ModifyState
             importedByStage={importedByStage}
-            hasImported={true}
+            importText="Imported"
           >
             <StageDescriptions
-              inputStyle={inputStyle}
               currentByStage={currentByStage}
             />
           </ModifyState>

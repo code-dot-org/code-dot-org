@@ -71,7 +71,6 @@ const ScriptEditor = React.createClass({
         </label>
         <StageDescriptions
           currentByStage={this.props.i18nData.stageDescriptions}
-          inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
         <label>

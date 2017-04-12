@@ -749,9 +749,21 @@ class Script < ActiveRecord::Base
   end
 
   def summarize_i18n
-    %w(title description description_short description_audience).map do |key|
+    data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+
+    data['stageDescriptions'] = {}
+    stages.each do |stage|
+      student = (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: '')
+      teacher = (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+
+      data['stageDescriptions'][stage.name] = {
+        studentDescription: student,
+        teacherDescription: teacher
+      }
+    end
+    data
   end
 
   def self.clear_cache
