@@ -11,8 +11,8 @@ const styles = {
     borderRadius: 2,
     border: '1px solid gray',
     position: 'relative',
-    height: 200,
-    width: 400
+    height: 245,
+    width: 520
   },
   overlay: {
     background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
@@ -27,7 +27,7 @@ const styles = {
     position: 'absolute',
   },
   courseName: {
-    paddingLeft: 20,
+    paddingLeft: 25,
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 5,
@@ -40,16 +40,16 @@ const styles = {
     display: 'inline'
   },
   description: {
-    paddingLeft: 20,
-    paddingRight: 10,
-    paddingTop: 10,
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 20,
     paddingBottom: 5,
-    marginTop: 90,
+    marginTop: 115,
     fontSize: 14,
     fontFamily: '"Gotham", sans-serif',
     color: color.gray,
     background: color.white,
-    height: 100,
+    height: 130,
     position: 'absolute',
     zIndex: 2,
   },
@@ -58,13 +58,13 @@ const styles = {
     zIndex: 3,
     fontSize: 18,
     color: color.white,
-    marginLeft: 350,
+    marginLeft: 460,
     background: color.teal,
     padding: 10,
     borderRadius: 100,
     border: '1px solid white',
     display: 'inline',
-    marginTop: 10
+    marginTop: 15
   },
   continueLink: {
     color: color.teal,
@@ -79,11 +79,12 @@ const styles = {
     color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
-    marginLeft: 5,
+    marginLeft: 15,
   },
   linkBox: {
     display: 'block',
-    paddingBottom: 10
+    paddingBottom: 10,
+    marginTop: 20
   },
 };
 
