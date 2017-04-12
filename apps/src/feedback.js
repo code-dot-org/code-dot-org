@@ -2,7 +2,6 @@
 
 import $ from 'jquery';
 import { getStore } from './redux';
-import { trySetLocalStorage } from './utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
@@ -43,8 +42,6 @@ var authoredHintUtils = require('./authoredHintUtils');
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
 import StageAchievementDialog from './templates/StageAchievementDialog';
-
-const POINTS_KEY = 'tempPoints';
 
 /**
  * @typedef {Object} TestableBlock
@@ -198,7 +195,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
-  if (experiments.isEnabled('gamification')) {
+  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
     const hintsUsed = (options.response.hints_used || 0) +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
@@ -233,24 +230,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       };
     }
 
-    let totalPoints = 0;
-    if (experiments.isEnabled('g.bannermode')) {
-      const newPoints = 1 +
-        (isFinite(idealBlocks) && actualBlocks <= idealBlocks ? 1 : 0) +
-        (hintsUsed < 2 ? 1 : 0);
-
-      let pointsData = JSON.parse(localStorage.getItem(POINTS_KEY) || '{}');
-      if (typeof pointsData !== 'object') {
-        pointsData = {};
-      }
-      pointsData[window.appOptions.serverLevelId] = newPoints;
-      trySetLocalStorage(POINTS_KEY, JSON.stringify(pointsData));
-
-      for (let id in pointsData) {
-        totalPoints += pointsData[id];
-      }
-    }
-
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
@@ -260,8 +239,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={onContinue}
-        bannerMode={experiments.isEnabled('g.bannermode')}
-        totalPoints={totalPoints}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
@@ -439,11 +416,16 @@ FeedbackUtils.calculateStageProgress = function (
   const progress = ClientState.allLevelsProgress();
   const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
 
-  let numPassed = 0,
+  let numLevels = 0,
+    numPassed = 0,
     numPerfect = 0,
     numZeroHints = 0,
     numOneHint = 0;
   for (let i = 0; i < levels.length; i++) {
+    if (levels[i].freePlay) {
+      continue;
+    }
+    numLevels++;
     if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
       continue;
     }
@@ -462,10 +444,10 @@ FeedbackUtils.calculateStageProgress = function (
     }
   }
 
-  const passedScore = numPassed / levels.length;
-  const perfectScore = numPerfect / levels.length;
-  const hintScore = numZeroHints / levels.length +
-    0.5 * numOneHint / levels.length;
+  const passedScore = numPassed / numLevels;
+  const perfectScore = numPerfect / numLevels;
+  const hintScore = numZeroHints / numLevels +
+    0.5 * numOneHint / numLevels;
   const oldStageProgress = 0.3 * passedScore +
     0.4 * perfectScore +
     0.3 * hintScore;
@@ -483,9 +465,9 @@ FeedbackUtils.calculateStageProgress = function (
   const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
   const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
 
-  const newPassedProgress = newPassedLevels * passedWeight / levels.length;
-  const newPerfectProgress = newPerfectLevels * perfectWeight / levels.length;
-  const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
+  const newPassedProgress = newPassedLevels * passedWeight / numLevels;
+  const newPerfectProgress = newPerfectLevels * perfectWeight / numLevels;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / numLevels;
 
   const newStageProgress = oldStageProgress +
     newPassedProgress +
