@@ -25,7 +25,8 @@ class SoundLibraryApi < Sinatra::Base
     begin
       result = Aws::S3::Bucket.
         new(SOUND_LIBRARY_BUCKET).
-        object(sound_name).
+        object_versions(prefix: sound_name).
+        find {|version| !version.head.delete_marker}.
         get
       content_type result.content_type
       cache_for 3600
