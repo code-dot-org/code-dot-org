@@ -416,7 +416,6 @@ ActiveRecord::Schema.define(version: 20170410203353) do
     t.date    "fit3_depart"
     t.string  "fit3_course"
     t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
->>>>>>> staging
   end
 
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
