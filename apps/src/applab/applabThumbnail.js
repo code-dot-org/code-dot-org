@@ -53,20 +53,10 @@ export function captureScreenshot() {
 
   isCapturePending = true;
 
-  // Record a square image showing the top two thirds of the app window.
-  //
-  // Note that without the height and width constraints we will get somewhere
-  // between the full app window and just the top two thirds, depending on the
-  // current scale factor. In the future, if we want to capture the whole app
-  // window or a center-crop, tweaking or removing the width/height options will
-  // be insufficient. However the whole app window can be captured by
-  // capturing #visualizationColumn and then cropping appropriately.
+  // Record a square center-cropped image of the app window.
 
-  const captureSize = $('#visualization').width();
   const options = {
     background: '#eee',
-    width: captureSize,
-    height: captureSize,
   };
 
   // html2canvas can take up to 2 seconds to capture the visualization contents
@@ -80,7 +70,8 @@ export function captureScreenshot() {
       return;
     }
 
-    // Scale the image down so we don't send so much data over the network.
+    // Center-crop and scale the image down so we don't send so much data over
+    // the network.
     const thumbnailCanvas = thumbnailUtils.createThumbnail(canvas, THUMBNAIL_SIZE);
 
     return new Promise((resolve, reject) => {
