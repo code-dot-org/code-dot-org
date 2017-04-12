@@ -109,10 +109,7 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors theremin template",
     "markdown_instructions": "# Light Theremin: Displaying Output\r\n\r\nHow will your collected data be displayed?\r\nDoes your data need to be transformed or processed before being displayed?\r\n\r\n# Do This\r\n\r\nReplace your call to `console.log()` with the kind of output you need for your project.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

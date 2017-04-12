@@ -1,4 +1,4 @@
-﻿# Regional Partner Directory
+# Regional Partner Directory
 
 Each of our Regional Partners is listed below in alphabetical order by organization name. To visit their website, click on the name of the organization. You'll find the region of service and contact information, as well as a brief description of the organization below.
 
@@ -7,7 +7,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[California](#ca)**<br/>
 - **[Colorado](#co)**</br/>
 - **[Florida](#fl)**<br/>
-- **[Georiga](#ga)**<br/>
+- **[Georgia](#ga)**<br/>
 - **[Idaho](#id)**<br/>
 - **[Illinois](#il)**<br/>
 - **[Indiana](#in)**<br/>
@@ -43,6 +43,7 @@ A+ College Ready works to dramatically increase the number of students in Alabam
 
 **Programs**<br/>
 CS Principles<br/>
+CS Discoveries<br/>
 
 **Contact us for adivce on:** Working with districts statewide
 
@@ -67,10 +68,7 @@ To achieve its vision of an Arizona recognized globally for a qualified workforc
 
 **Programs**<br/>
 CS Principles<br/>
-Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)
-CS in Science<br/>
-CS in Algebra<br/>
+CS Discoveries</br>
 
 **Contact us for adivce on:** Fundraising-private, state and federal programs,  Program PD for CS integration, Large-scale CS program implementation across the state/region/nationally<br/>
 
@@ -220,7 +218,7 @@ ________________
 <a id="co"></a>
 
 ## Colorado
-### Share Fair Nation and Colorado Education Initiative<br/>
+### Mindspark Learning and Colorado Education Initiative<br/>
 Colorado
 
 Share Fair Nation is a non-profit organization created by the Morgridge Family Foundation a year and a half ago as part of their efforts to provide professional learning opportunities and support as a result of their transformative investments to the education sector. Share Fair Nation's mission is to teach and inspire educators in emerging practices, with the ultimate goals of engaging students and preparing them for success in a modern workforce. Technology is critical to our mission, because it's critical to our learners. Today's students are digital natives so technology helps them engage, and more importantly, it will be a tremendous force in tomorrow's job market.
@@ -233,7 +231,7 @@ CS Discoveries<br/>
 
 **Contact Information**<br/>
 Brandon Petersen<br/>
-brandon.petersen@sharefairnation.org
+brandon@mymindsparklearning.org
 
 Greg Hesse<br/>
 ghessee@coloradoedinitiative.org
@@ -260,7 +258,7 @@ More information is available [here.](http://browardschools.com/browardcodes)
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -278,13 +276,11 @@ christine.semisch@browardschools.com<br/>
 <br/>
 
 ### [Florida State College Jacksonville](http://www.fscj.edu/)<br/>
-Northeast Florida<br/>
+Jacksonville, Florida<br/>
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
-CS in Science<br/>
-CS in Algebra<br/>
 
 **Contact Information**<br/>
 Dr. Betina Malhotra (primary)<br/>
@@ -363,7 +359,7 @@ Idaho Digital Learning provides innovative education methods through digital lea
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -405,7 +401,7 @@ Chicago <br/>
 
 **Programs**<br/>
 CS Principles<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -428,7 +424,7 @@ Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap bet
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -532,28 +528,8 @@ CS Discoveries<br/>
 Heather Lageman <br/>
 heather.lageman@gmail.com<br/>
 
-Jim Corns<br/>
-jimcorns@gmail.com
-
-
 <br/>
 
-### [Charles County Public Schools](http://www.ccboe.com/)<br/>
-Southern Maryland<br/>
-
-**Programs**<br/>
-CS Principles<br/>
-Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
-CS in Science<br/>
-CS in Algebra<br/>
-
-**Contact Information**<br/>
-Traci Chappelear<br/>
-tchappelear@ccboe.com
-
-
-<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -618,8 +594,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** Google Profeesional Development
 
 **Contact Information**<br/>
-Frank Mathews<Br/>
-frankm@rpdp.net<Br/>
+Frank Mathews<br/>
+frankm@rpdp.net<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -636,7 +612,8 @@ CS Discoveries<br/>
 
 **Contact Information**<br/>
 Henry Harms<br/>
-harms@tcnj.edu<br/><br/>[**Back to the top**](#top)
+harms@tcnj.edu<br/><br/>
+[**Back to the top**](#top)
 <br/>
 ________________
 <a id="ny"></a>
@@ -834,7 +811,7 @@ The Rice University School Mathematics Project (RUSMP) was established in 1987 i
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
@@ -889,7 +866,7 @@ Utah STEM Action Center is a state agency under the Governor's Office of Economi
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 
 **Contact us for information on:** Utah's Efforts, CS/IT Pathway, Legislative initiatives and partnerships
@@ -914,7 +891,7 @@ CodeVA is Virginia's computer science advocacy and teacher training/support orga
 **Programs**<br/>
 CS Principles<br/>
 Exploring Computer Science<br/>
-CS Discoveries (starting in the 2017-2018 school year)<br/>
+CS Discoveries<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
