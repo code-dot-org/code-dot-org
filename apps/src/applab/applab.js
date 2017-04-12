@@ -338,7 +338,7 @@ Applab.init = function (config) {
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
 
-  // Necessary for tests. Make these members once we can instantiate applab.
+  // Necessary for tests.
   applabThumbnail.init();
 
   // replace studioApp methods with our own

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import tickWrapper from '../../util/tickWrapper';
 import { TestResults } from '@cdo/apps/constants';
 import sinon from 'sinon';
