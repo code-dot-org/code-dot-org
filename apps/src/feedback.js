@@ -205,7 +205,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
 
-    const progress = experiments.isEnabled('g.stageprogress') ?
+    const progress = experiments.isEnabled('gamification') ?
       FeedbackUtils.calculateStageProgress(
         actualBlocks <= idealBlocks,
         hintsUsed,
@@ -214,14 +214,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       {};
 
     let onContinue = options.onContinue;
-    if (experiments.isEnabled('g.endstage') && lastInStage) {
+    if (experiments.isEnabled('gamification') && lastInStage) {
       onContinue = () => {
         ReactDOM.render(
           <StageAchievementDialog
             stageName={stageName}
             assetUrl={this.studioApp_.assetUrl}
             onContinue={onContinue}
-            showStageProgress={experiments.isEnabled('g.stageprogress')}
+            showStageProgress={experiments.isEnabled('gamification')}
             newStageProgress={progress.newStageProgress}
             numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
           />,
@@ -252,7 +252,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={onContinue}
-        showStageProgress={experiments.isEnabled('g.stageprogress')}
+        showStageProgress={experiments.isEnabled('gamification')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
         newPerfectProgress={progress.newPerfectProgress}
