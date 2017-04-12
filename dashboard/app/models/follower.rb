@@ -35,7 +35,7 @@ class Follower < ActiveRecord::Base
 
   validate :cannot_follow_yourself, :teacher_must_be_teacher
 
-  validates_presence_of :user, :student_user, :section
+  validates_presence_of :student_user, :section
 
   after_create :assign_script
   def assign_script
