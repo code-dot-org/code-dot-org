@@ -4,6 +4,7 @@ import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
+import PuzzleRatingButtons from './PuzzleRatingButtons';
 import StageProgressBar from './StageProgressBar';
 
 const ANIMATION_OVERLAP = 0.05;
@@ -87,6 +88,7 @@ const AchievementDialog = Radium(React.createClass({
     newPassedProgress: React.PropTypes.number,
     newPerfectProgress: React.PropTypes.number,
     newHintUsageProgress: React.PropTypes.number,
+    showPuzzleRatingButtons: React.PropTypes.bool,
   },
 
   getInitialState() {
@@ -225,6 +227,7 @@ const AchievementDialog = Radium(React.createClass({
         <div style={styles.footer}>
           <p style={styles.feedbackMessage}>{feedbackMessage}</p>
 
+          {this.props.showPuzzleRatingButtons && <PuzzleRatingButtons/>}
           <button
             onClick={this.handleClose}
             style={[
