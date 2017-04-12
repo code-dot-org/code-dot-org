@@ -42,6 +42,9 @@ const styles = {
  */
 const StageDescriptions = React.createClass({
   propTypes: {
+    scriptName: PropTypes.string.isRequired,
+    // TODO - can we do this by lesson position instead of name, but then still
+    // warn when names are different
     currentByStage: PropTypes.objectOf(
       PropTypes.shape({
         studentDescription: PropTypes.string.isRequired,
@@ -96,8 +99,7 @@ const StageDescriptions = React.createClass({
       importText: 'Querying server...'
     });
 
-    // TODO - path isnt hardcoded
-    $.getJSON('https://curriculum.code.org/csp/unit2.json')
+    $.getJSON(`https://curriculum.code.org/metadata/${this.props.scriptName}.json`)
     .done(this.processImport)
     .fail(jqXHR => {
       this.setState({
