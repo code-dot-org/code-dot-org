@@ -99,7 +99,6 @@ describe('project.js', () => {
 describe('project.saveThumbnail', () => {
   const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
   const STUB_BLOB = 'stub-binary-data';
-  let updateTimestamp;
 
   beforeEach(() => {
     sinon.stub(header, 'updateTimestamp');
