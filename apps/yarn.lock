@@ -3,9 +3,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.12":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.12.tgz#f3e5523460d8ab0f6f20787c8a9d8d1de707ce12"
+"@code-dot-org/blockly@1.6.13":
+  version "1.6.13"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.13.tgz#3b42ce156cc33bbe47d82384b8f93a12b8699bbe"
 
 "@code-dot-org/bramble@0.1.13":
   version "0.1.13"
@@ -44,9 +44,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/johnny-five@0.9.62-cdo.0":
-  version "0.9.62-cdo.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.0.tgz#cbb704f69ab78fd99b7a557e9725894f5e7fa986"
+"@code-dot-org/johnny-five@0.9.62-cdo.1":
+  version "0.9.62-cdo.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.1.tgz#c4d1d63c75eff511826169d83e35d6b8fe518c10"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
