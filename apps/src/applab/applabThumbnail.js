@@ -7,7 +7,7 @@ import * as thumbnailUtils from '../util/thumbnail';
 window.html2canvas = thumbnailUtils.html2canvas;
 
 // The width and height in pixels of the thumbnail image to capture.
-const THUMBNAIL_SIZE = 180;
+export const THUMBNAIL_SIZE = 180;
 
 /**
  * @type {number} The last time at which a screenshot capture was attempted.
