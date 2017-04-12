@@ -42,11 +42,11 @@ class Pd::PaymentTerm < ApplicationRecord
         where('end_date > ? or end_date IS NULL', workshop.workshop_starting_date)
 
     # Now, look for ones with the course that matches. If there are none, fall back to nil
-    payment_terms_with_course = payment_terms.where('course = ? or course IS NULL', workshop.course)
+    payment_terms_for_course = payment_terms.where(course: workshop.course)
 
-    if payment_terms_with_course.any?
-      payment_terms_with_course_and_subject = payment_terms_with_course.where(subject: workshop.subject)
-      found_payment_terms = payment_terms_with_course_and_subject.any? ? payment_terms_with_course_and_subject : payment_terms_with_course
+    if payment_terms_for_course.any?
+      payment_terms_with_course_and_subject = payment_terms_for_course.where(subject: workshop.subject)
+      found_payment_terms = payment_terms_with_course_and_subject.any? ? payment_terms_with_course_and_subject : payment_terms_for_course
     else
       found_payment_terms = payment_terms
     end
@@ -56,8 +56,8 @@ class Pd::PaymentTerm < ApplicationRecord
       raise "No payment terms were found for workshop #{workshop.id}"
     elsif found_payment_terms.size > 1
       raise "Multiple payment terms were found for workshop #{workshop.id}"
-    else
-      found_payment_terms[0]
     end
+
+    found_payment_terms[0]
   end
 end
