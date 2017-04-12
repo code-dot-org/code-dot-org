@@ -1,4 +1,3 @@
-import * as applabConstants from './constants';
 import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
 import * as thumbnailUtils from '../util/thumbnail';
@@ -8,6 +7,15 @@ window.html2canvas = thumbnailUtils.html2canvas;
 
 // The width and height in pixels of the thumbnail image to capture.
 export const THUMBNAIL_SIZE = 180;
+
+// Number of ticks after which to capture a thumbnail image of the play space.
+// 300 ticks equates to approximately 1-1.5 seconds in apps that become idle
+// after the first few ticks, or 10-15 seconds in apps that draw constantly.
+export const CAPTURE_TICK_COUNT = 300;
+
+// Minimum time to wait after capturing a thumbnail image before capturing
+// another thumbnail.
+const MIN_CAPTURE_INTERVAL_MS = 60000;
 
 /**
  * @type {number} The last time at which a screenshot capture was attempted.
@@ -40,7 +48,7 @@ export function captureScreenshot() {
   }
 
   // Skip capturing a screenshot if we just captured one recently.
-  if (Date.now() - lastCaptureTimeMs < applabConstants.MIN_CAPTURE_INTERVAL_MS) {
+  if (Date.now() - lastCaptureTimeMs < MIN_CAPTURE_INTERVAL_MS) {
     return;
   }
   lastCaptureTimeMs = Date.now();

@@ -4,9 +4,8 @@ import { TestResults } from '@cdo/apps/constants';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {CAPTURE_TICK_COUNT} from '@cdo/apps/applab/constants';
 import * as thumbnailUtils from '@cdo/apps/util/thumbnail';
-import {isCaptureComplete} from '@cdo/apps/applab/applabThumbnail';
+import {CAPTURE_TICK_COUNT, isCaptureComplete} from '@cdo/apps/applab/applabThumbnail';
 
 export default {
   app: "applab",
