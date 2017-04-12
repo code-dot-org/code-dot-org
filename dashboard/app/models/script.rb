@@ -753,14 +753,11 @@ class Script < ActiveRecord::Base
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
-    data['stageDescriptions'] = {}
-    stages.each do |stage|
-      student = (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: '')
-      teacher = (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
-
-      data['stageDescriptions'][stage.name] = {
-        studentDescription: student,
-        teacherDescription: teacher
+    data['stageDescriptions'] = stages.map do |stage|
+      {
+        name: stage.name,
+        studentDescription: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
+        teacherDescription: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
       }
     end
     data
