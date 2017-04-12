@@ -108,7 +108,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test 'student_user_new errors when joining a section with deleted teacher' do
-    @laurel.update!(deleted_at: Time.now)
+    @laurel.destroy
     sign_in @laurel_student_1.student_user
 
     assert_does_not_create(Follower) do
