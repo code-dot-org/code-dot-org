@@ -32,7 +32,7 @@
     "instructions": "**Challenge:** Solve this puzzle with the fewest number of blocks.",
     "ideal": "11",
     "step_speed": "2",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If we are moving along the path to the pumpkin, what do we have to repeatedly do? When do we stop repeating?\",\"hint_id\":\"courseE_farmer_ramp16_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b64b6a40468a9e8eb0b610161aa9b4d/courseE_farmer_ramp16.mp3\"}]",
     "markdown_instructions": "**Challenge:** Solve this puzzle with the fewest number of blocks.",
     "contained_level_names": null
   },
