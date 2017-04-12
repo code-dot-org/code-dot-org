@@ -43,6 +43,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     :how_traveling,
     :need_hotel,
     :need_ada,
+    :photo_release,
     :liability_waiver,
     :gender,
     :race,
@@ -129,6 +130,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
     photo_release: [
       'Yes',
+      'No',
     ],
 
     liability_waiver: [
