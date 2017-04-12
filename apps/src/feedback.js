@@ -219,13 +219,26 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           <StageAchievementDialog
             stageName={stageName}
             assetUrl={this.studioApp_.assetUrl}
-            onContinue={options.onContinue}
+            onContinue={onContinue}
             showStageProgress={experiments.isEnabled('g.stageprogress')}
             newStageProgress={progress.newStageProgress}
             numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
           />,
           container
         );
+      };
+    }
+
+    let showPuzzleRatingButtons = false;
+    if (options.response && options.response.puzzle_ratings_enabled) {
+      showPuzzleRatingButtons = true;
+      const prevOnContinue = onContinue;
+      onContinue = () => {
+        puzzleRatingUtils.cachePuzzleRating(container, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+        });
+        prevOnContinue();
       };
     }
 
@@ -243,6 +256,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         newPassedProgress={progress.newPassedProgress}
         newPerfectProgress={progress.newPerfectProgress}
         newHintUsageProgress={progress.newHintUsageProgress}
+        showPuzzleRatingButtons={showPuzzleRatingButtons}
       />, container);
     return;
   }
