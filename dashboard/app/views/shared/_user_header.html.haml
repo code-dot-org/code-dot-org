@@ -4,9 +4,9 @@
       %i.fa.fa-users
       %span= t('nav.user.label', username: t('nav.user.team'))
     - else
-      %span= t('nav.user.label', username: h(current_user.short_name))
-    %span.user_menu_glyph
-      &#x25BC;
+      %span.user_name= t('nav.user.label', username: h(current_user.short_name))
+    %i.down-arrow{class: "fa fa-caret-down"}
+    %i.up-arrow{style: "display: none", class: "fa fa-caret-up"}
     %div{style: 'position: relative; top: 3px;'}
       .user_options{style: 'display: none;'}
         - if current_user.teacher?
@@ -42,16 +42,21 @@
 
 :javascript
   function hideUserOptions() {
-    $('.user_options').hide();
-    $('.user_menu_glyph').html('&#x25BC;');
+    $('.user_options').slideUp();
+    $('.up-arrow').hide();
+    $('.down-arrow').show();
     $(document).off('click', hideUserOptions);
   }
   $('.user_menu').click(function (e) {
     if ($('.user_options').is(':hidden')) {
       e.stopPropagation();
-      $('.user_options').show();
-      $('.user_menu_glyph').html('&#x25B2;');
+      $('.user_options').slideDown();
+      $('.up-arrow').show();
+      $('.down-arrow').hide();
       $(document).on('click', hideUserOptions);
+
+      $("#nav-hamburger").removeClass('active');
+      $('#nav ul').slideUp();
     }
   });
   $('.user_options').click(function (e) {

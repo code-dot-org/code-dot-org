@@ -1,6 +1,7 @@
 $(function () {
 
   $('#nav-hamburger').click(function (e){
+    $(this).toggleClass( 'active' );
     $('#nav ul').slideToggle();
     e.preventDefault();
   });
@@ -27,13 +28,5 @@ $(function () {
     $('#educate-up').toggle();
     e.preventDefault();
   });
-
-  var hamburger = document.querySelector( '#nav-hamburger' );
-
-  if (hamburger) {
-    hamburger.addEventListener( 'click', function () {
-      this.classList.toggle( 'active' );
-    });
-  }
 
 });
