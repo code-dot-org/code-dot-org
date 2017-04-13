@@ -1311,7 +1311,7 @@ exports.install = function (blockly, blockInstallOptions) {
       return metadata.name.toLowerCase().trim() === lowercaseSound;
     }));
 
-    studioApp.playAudio(lowercaseSound, playbackOptions);
+    studioApp().playAudio(lowercaseSound, playbackOptions);
   }
 
   blockly.Blocks.studio_playSound = {
