@@ -4,26 +4,26 @@ import StageDescriptions from './StageDescriptions';
 const currentDescriptions = [
   {
     name: 'The Internet',
-    studentDescription: 'This is what the student will see',
-    teacherDescription: 'This is what the teacher will see'
+    descriptionStudent: 'This is what the student will see',
+    descriptionTeacher: 'This is what the teacher will see'
   },
   {
     name: 'The Need for Addressing',
-    studentDescription: 'This is what the student will see',
-    teacherDescription: 'This is what the teacher will see'
+    descriptionStudent: 'This is what the student will see',
+    descriptionTeacher: 'This is what the teacher will see'
   }
 ];
 
 const importedDescriptions = [
   {
     name: 'The internet',
-    studentDescription: 'This is the new description of what the student will see',
-    teacherDescription: 'This is the new description of what the teacher will see'
+    descriptionStudent: 'This is the new description of what the student will see',
+    descriptionTeacher: 'This is the new description of what the teacher will see'
   },
   {
     name: 'The Need for Addressing',
-    studentDescription: 'This is what the student will see',
-    teacherDescription: 'This is what the teacher will see'
+    descriptionStudent: 'This is what the student will see',
+    descriptionTeacher: 'This is what the teacher will see'
   }
 ];
 
