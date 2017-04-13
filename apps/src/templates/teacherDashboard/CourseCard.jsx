@@ -12,7 +12,9 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 245,
-    width: 520
+    width: 520,
+    margin: 25,
+    float: 'left'
   },
   overlay: {
     background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
@@ -25,6 +27,7 @@ const styles = {
   },
   image: {
     position: 'absolute',
+    width: 520
   },
   courseName: {
     paddingLeft: 25,
@@ -46,7 +49,8 @@ const styles = {
     paddingBottom: 5,
     marginTop: 115,
     fontSize: 14,
-    fontFamily: '"Gotham", sans-serif',
+    lineHeight: 1.5,
+    fontFamily: '"Gotham 3r", sans-serif',
     color: color.gray,
     background: color.white,
     height: 130,
@@ -72,7 +76,7 @@ const styles = {
     fontFamily: '"Gotham", sans-serif',
     fontWeight: 'bold',
     marginTop: -2,
-    display: 'inline'
+    display: 'inline',
   },
   chevron: {
     display: 'inline',
@@ -84,7 +88,8 @@ const styles = {
   linkBox: {
     display: 'block',
     paddingBottom: 10,
-    marginTop: 20
+    marginTop: 20,
+    textDecoration: 'none'
   },
 };
 
@@ -142,11 +147,11 @@ const CourseCard = React.createClass({
 
         {this.renderEnrollmentIcon()}
 
-        <h2 style={styles.courseName}>
+        <div style={styles.courseName}>
           {cardData.courseName}
-        </h2>
+        </div>
 
-        <h4 style={styles.description}>
+        <div style={styles.description}>
           {cardData.description}
 
           <a href={cardData.link} style={styles.linkBox}>
@@ -156,7 +161,7 @@ const CourseCard = React.createClass({
 
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
           </a>
-        </h4>
+        </div>
 
         <div style={styles.overlay}/>
       </div>
