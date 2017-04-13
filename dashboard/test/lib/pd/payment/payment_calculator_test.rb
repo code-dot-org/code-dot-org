@@ -40,25 +40,5 @@ module Pd::Payment
       insufficient_puzzles = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
       assert_equal 0, PaymentCalculator.instance.calculate(insufficient_puzzles)
     end
-
-    test 'Calculate CSP Workshop' do
-
-    end
-
-    test 'Calculate CSP Workshop with insufficient attendees' do
-
-    end
-
-    test 'Calculate CSP Workshop with more than the maximum number of attendees' do
-
-    end
-
-    test 'Raises error if there is no payment term' do
-
-    end
-
-    test 'Calculate CSP Workshop Payment with fixed payment amount' do
-
-    end
   end
 end
