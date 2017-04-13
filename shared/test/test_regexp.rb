@@ -25,7 +25,6 @@ class RegexpUtilsTest < Minitest::Test
     '123',
     '1 2',
     '123456',
-    '12345 6789',
     '12345-abcd'
   ]
 
