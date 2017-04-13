@@ -101,6 +101,32 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['Phone number is invalid'], order.errors.full_messages
   end
 
+  test 'phone number validation regex' do
+    valid_phone_numbers = [
+      '111-222-3333',
+      '111-222-3333, ex 400',
+      '(111)222-3333',
+      '(111) 222 3333',
+      'mobile: 111-222-3333'
+    ]
+
+    invalid_phone_numbers = [
+      '1234567',
+      'abc',
+      '111 2222'
+    ]
+
+    valid_phone_numbers.each do |valid_phone_number|
+      assert (valid_phone_number =~ Pd::WorkshopMaterialOrder::PHONE_NUMBER_VALIDATION_REGEX),
+        "expected #{valid_phone_number} to be valid"
+    end
+
+    invalid_phone_numbers.each do |invalid_phone_number|
+      refute (invalid_phone_number =~ Pd::WorkshopMaterialOrder::PHONE_NUMBER_VALIDATION_REGEX),
+        "expected #{invalid_phone_number} to be invalid"
+    end
+  end
+
   test 'zip code must be a valid format' do
     order = build :pd_workshop_material_order, zip_code: 'invalid'
     refute order.valid?
