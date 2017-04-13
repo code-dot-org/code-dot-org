@@ -9,6 +9,6 @@ export default function loadNetSim(options) {
   options.isEditorless = true;
 
   var netSim = new NetSim();
-  netSim.injectStudioApp(studioApp);
+  netSim.injectStudioApp(studioApp());
   appMain(netSim, levels, options);
 }
