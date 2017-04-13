@@ -60,4 +60,22 @@ class Pd::PaymentTerm < ApplicationRecord
 
     found_payment_terms[0]
   end
+
+  def calculate(workshop)
+    if workshop.course == Pd::Workshop::COURSE_CSF
+      calculate_csf_workshop(workshop)
+    else
+      calculate_non_csf_workshop(workshop)
+    end
+  end
+
+  private
+
+  def calculate_csf_workshop(workshop)
+    if workshop
+  end
+
+  def calculate_non_csf_workshop(workshop)
+
+  end
 end
