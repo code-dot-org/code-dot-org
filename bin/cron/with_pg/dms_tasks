@@ -55,7 +55,7 @@ def main
   dms_client = Aws::DatabaseMigrationService::Client.new
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
-    next if task_name.start_with? 'test'
+    next unless task_name.start_with? 'cron'
 
     task_arn = replication_task.replication_task_arn
     # TODO(asher): Gracefully handle the case when the DMS task has never been run.

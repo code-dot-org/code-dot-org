@@ -178,7 +178,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "students cannot be transferred to other soft-deleted teachers" do
-    @other_teacher.update!(deleted_at: DateTime.now)
+    @other_teacher.destroy
 
     @params[:new_section_code] = @other_teacher_section.code
     @params[:stay_enrolled_in_current_section] = false

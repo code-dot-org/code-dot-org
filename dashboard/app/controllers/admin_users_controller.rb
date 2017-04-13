@@ -64,8 +64,7 @@ class AdminUsersController < ApplicationController
   def undelete_user
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
-      user.deleted_at = nil
-      user.save!
+      user.restore
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"

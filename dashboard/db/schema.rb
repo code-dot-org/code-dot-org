@@ -418,7 +418,7 @@ ActiveRecord::Schema.define(version: 20170412065832) do
 
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "regional_partner_id"
-    t.date     "start_date"
+    t.date     "start_date",                        null: false
     t.date     "end_date"
     t.string   "course"
     t.string   "subject"

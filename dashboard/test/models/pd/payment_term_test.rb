@@ -16,7 +16,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
   test 'raises error if no applicable payment terms' do
     create :pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 4.months
-    [@workshop_1, @workshop_3].each do |workshop|
+    [@workshop_1, @workshop_2, @workshop_3].each do |workshop|
       error = assert_raises(RuntimeError) do
         Pd::PaymentTerm.for_workshop(workshop)
       end
