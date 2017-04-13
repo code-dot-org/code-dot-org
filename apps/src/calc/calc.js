@@ -32,6 +32,7 @@ var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = require('lodash');
 import * as timeoutList from '../lib/util/timeoutList';
+import {getStore} from '../redux';
 
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
@@ -199,7 +200,7 @@ Calc.init = function (config) {
   studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<CalcVisualizationColumn/>}
         onMount={studioApp().init.bind(studioApp(), config)}
