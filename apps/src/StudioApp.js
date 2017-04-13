@@ -36,7 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from './code-studio/components/SmallFooter';
 import project from './code-studio/initApp/project';
-import assets from './code-studio/assets';
+import * as assets from './code-studio/assets';
 import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
 
