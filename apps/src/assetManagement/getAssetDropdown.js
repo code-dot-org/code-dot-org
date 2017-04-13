@@ -19,7 +19,7 @@ module.exports = function (typeFilter) {
     dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
     }, typeFilter, null, {
-      showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+      showUnderageWarning: !studioApp().reduxStore.getState().pageConstants.is13Plus
     });
   };
   options.push({
