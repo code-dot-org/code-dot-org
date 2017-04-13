@@ -575,6 +575,7 @@ en:
       CSD U3 L2 Challenges:
         description here: description here
         title: title
+      CSD U3 Movement Challenges: {}
       CSD U3 Project Build a Game SFLP: {}
       CSD U3 Random randomNumber Map: {}
       CSD U3 SFLP Card Project: {}
@@ -1579,6 +1580,7 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Longitudinal study description: {}
       Looking at More Encryption Algorithms: {}
       Lossy vs. Lossless Compression: {}
       Make a Hypothesis: {}
@@ -2837,11 +2839,15 @@ en:
         description here: description here
       onlineNeighbors:
         Your Online Neighborhood: Your Online Neighborhood
+      'placeholder text: submit and warning about longitudinal study request': {}
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
       plc csp1 philosophy and commentary: {}
+      post-assessment survey heading1: {}
+      post-assessment survey heading2: {}
+      post-assessment survey heading3: {}
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
@@ -3256,6 +3262,7 @@ en:
       name:
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
+        CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
@@ -4875,6 +4882,10 @@ en:
         gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
         kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
         megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP verify 18:
+        Are you over 18?: Are you over 18?
+        'No': 'No'
+        'Yes': 'Yes'
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent

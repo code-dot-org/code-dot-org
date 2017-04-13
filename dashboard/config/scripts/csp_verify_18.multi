@@ -1,0 +1,5 @@
+name 'CSP verify 18'
+question 'Are you over 18?'
+
+right 'Yes'
+right 'No'

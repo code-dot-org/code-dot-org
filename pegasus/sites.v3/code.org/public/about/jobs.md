@@ -29,7 +29,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 
 - **Events (Spring/Summer)**
-	- [Event Manager, Professional Learning Team (Contract)](#events)
 	- [Events Intern, Professional Learning Team](#intern)
 - **Marketing**
 	- [Director of Marketing & Communications](#director)
@@ -48,37 +47,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="events"href="#events">Events Manager, Professional Learning Team (Seattle, WA; looking to fill contract role immediately)</a>
-
-**Scope of Work:**
-
-Code.org is looking for a Event Coordinator to manage logistics for Code.org’s Professional Learning & Community (PLC) team’s 2017 summer conference-style events. The event manager will work collaboratively with a team of program managers and coordinators. We are looking for someone able to start immediately; this is a full-time, contract role through mid-August. 
-
-The PLC team is responsible for the success of Code.org professional development for teachers. This summer, Code.org is hosting three 8-day summer professional development conferences for middle and high school computer science teachers and facilitators from across the country. Venues are already booked in Houston, Phoenix, and Philadelphia; attendance at each of the three events will be 500+ participants. These conferences are intensive, hands-on, in-person workshops providing foundational experiences with computer science and the Code.org suite of tools. Participants will explore Code.org’s curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum.
-
-The event manager will: 
-
-- Manage all event logistics (travel, accommodations, catering, and swag/supplies); act as primary logistics point-of-contact 
-- Provide on-site coordination and support for all events 
-- Draft communications to stakeholders and respond to requests for information
-- Update and managing event attendee lists and track numbers and teacher activity across programs
-- Provide excellent internal and external customer service and support 
-
-**Experience Required:**
-
-We are looking for a self-starter who can hit the ground running; you should be skilled in successfully managing large conference-style events, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented and tech-savvy. Proficiency with Google Apps (Docs, Sheets, Slides, Forms) is required. You should be flexible and willing to work in a fast-paced, start-up environment. 
-
-
-Additional requirements:
-
-- Proven experience as an events planner or organizer 
-- Excellent time management and communication skills
-- Ability to submit references or referrals from previous clients 
-- Ability and willingness to travel for all three events: June 16-25, July 14-23, and July 28-August 6 
-
-**To Apply:**
-
-If you are interested please submit resume or application materials to <a href="mailto:megan@code.org">megan@code.org</a>. Position is open immediately. Applications must be received by COB Wednesday, April 12th, 2017.  
 
 ## <a name="intern"href="#intern">Events Intern, Professional Learning Team (Seattle, WA)</a>
 

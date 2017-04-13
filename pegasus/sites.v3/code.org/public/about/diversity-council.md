@@ -1,6 +1,7 @@
 ---
 title: Code.org Diversity Advisory Council
 theme: responsive
+nav: about_nav
 ---
 # Code.org Diversity Advisory Council
 
