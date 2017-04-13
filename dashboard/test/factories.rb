@@ -849,7 +849,7 @@ FactoryGirl.define do
     apartment_or_suite 'Suite 900'
     city 'Seattle'
     state 'WA'
-    zip_code '98101'
+    add_attribute :zip_code, '98101'
     phone_number '555-111-2222'
   end
 
