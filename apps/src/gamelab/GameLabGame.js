@@ -1,5 +1,8 @@
 var GameLabGame = function (p5Inst) {
   this.p5Inst = p5Inst;
+
+  const startDate = new Date();
+  this.startTime = startDate.getTime();
 };
 
 var READONLY = true;
@@ -34,6 +37,15 @@ Object.defineProperty(GameLabGame.prototype, 'frameRate', {
   },
   set: function (value) {
     this.p5Inst.frameRate(value);
+  }
+});
+
+Object.defineProperty(GameLabGame.prototype, 'seconds', {
+  enumerable: true,
+  get: function () {
+    const currentDate = new Date();
+    const currentTime = currentDate.getTime();
+    return Math.round((currentTime - this.startTime) / 1000);
   }
 });
 

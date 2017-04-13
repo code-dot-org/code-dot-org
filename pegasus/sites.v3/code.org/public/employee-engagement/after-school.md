@@ -52,7 +52,7 @@ Commitments include:
 * Co-hosting the after school program
 * Organizing fellow employees to act as volunteers
 
-[Learn more about this exciting program](/employee-engagement/after-school-1)!
+[Learn more about this exciting program](https://code.org/employee-engagement/after-school-1)!
 
 You will be provided with many resources, tools, and template messaging to help get your program up and running! We hope you take advantage of this wonderful opportunity to bring Computer Science education to our community.
 

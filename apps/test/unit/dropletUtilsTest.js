@@ -3,7 +3,6 @@ import {assert} from '../util/configuredChai';
 var sinon = require('sinon');
 
 var testUtils = require('./../util/testUtils');
-testUtils.setExternalGlobals();
 
 var dropletUtils = require('@cdo/apps/dropletUtils');
 
@@ -127,7 +126,11 @@ const BASE_DROPLET_CONFIG = Object.freeze({
   "paramButtonsForUnknownFunctions": true
 });
 
+describe('dropletUtils', () => {
+  testUtils.setExternalGlobals();
+
 describe('promptNum', function () {
+
   afterEach(function () {
     if (window.prompt.restore) {
       window.prompt.restore();
@@ -380,4 +383,6 @@ describe('getParamFromCodeAtIndex', () => {
     const code = "myProperty(object1, ";
     assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'object1');
   });
+});
+
 });

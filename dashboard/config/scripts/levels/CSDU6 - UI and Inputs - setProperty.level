@@ -41,7 +41,8 @@
       "declareAssign_str_hello_world": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "getProperty": null
     },
     "edit_code": true,
     "embed": "false",
@@ -80,6 +81,8 @@
     "markdown_instructions": "# setProperty background-color\r\n\r\nChange the `background-color` of a button to a new random color each time it is clicked using `setProperty()`.",
     "hide_share_and_remix": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 125px; width: 190px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); position: absolute; left: 60px; top: 140px;\">Click Me!</button></div></div>",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
