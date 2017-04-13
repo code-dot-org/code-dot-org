@@ -1,6 +1,4 @@
 require 'timeout'
-require 'image_optim'
-require 'image_compressor_pack'
 require 'digest/md5'
 require 'active_job'
 require 'active_support/core_ext/module/attribute_accessors'
@@ -79,6 +77,9 @@ module Cdo
 
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
+    require 'image_optim'
+    require 'image_compressor_pack'
+
     logger.level = Logger::WARN
 
     IMAGE_OPTIM = ImageOptim.new(
@@ -96,6 +97,7 @@ module Cdo
       end
     rescue => e
       # Log error and return original content.
+      cache.write(cache_key, data) if cache && cache_key
       logger.fatal "Error: #{e}\n#{CDO.backtrace e}"
       data
     end

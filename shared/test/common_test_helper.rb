@@ -16,7 +16,6 @@ raise 'Test helper must only be used in `test` environment!' unless rack_env? :t
 VCR.configure do |c|
   c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
   c.allow_http_connections_when_no_cassette = true
-  c.hook_into :webmock
   # Filter unnecessary headers from the http interactions.
   c.before_record do |i|
     %w(

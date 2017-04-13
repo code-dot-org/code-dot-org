@@ -4,6 +4,10 @@ require_relative './common_test_helper'
 
 require 'webmock'
 
+VCR.configure do |c|
+  c.hook_into :webmock
+end
+
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]
 if ENV['CIRCLECI']
