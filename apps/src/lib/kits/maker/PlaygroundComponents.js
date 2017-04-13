@@ -26,8 +26,12 @@ import Piezo from './Piezo';
  * @returns {Promise.<Object.<String, Object>>} board components
  */
 export function createCircuitPlaygroundComponents(board) {
-  return new Promise(resolve => {
-    resolve({
+  return Promise.all([
+    initializeSoundSensor(board),
+    initializeLightSensor(board),
+    initializeThermometer(board),
+  ]).then(sensors => {
+    return {
       colorLeds: initializeColorLeds(board),
 
       led: new five.Led({board, pin: 13}),
@@ -43,11 +47,11 @@ export function createCircuitPlaygroundComponents(board) {
       // Must initialize sound sensor BEFORE left button, otherwise left button
       // will not respond to input.  This has something to do with them sharing
       // pin 4 on the board.
-      soundSensor: initializeSoundSensor(board),
+      soundSensor: sensors[0],
 
-      lightSensor: initializeLightSensor(board),
+      lightSensor: sensors[1],
 
-      tempSensor: initializeThermometer(board),
+      tempSensor: sensors[2],
 
       accelerometer: initializeAccelerometer(board),
 
@@ -57,7 +61,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       // TODO (captouch): Re-enable when we can lazy-enable streaming
       // ...initializeTouchPads(board)
-    });
+    };
   });
 }
 
@@ -159,6 +163,7 @@ function initializeColorLed(board, pin) {
 }
 
 function initializeSoundSensor(board) {
+  // TODO: Make async, don't resolve until first read from sensor
   const sensor = new five.Sensor({
     board,
     pin: "A4",
@@ -169,6 +174,7 @@ function initializeSoundSensor(board) {
 }
 
 function initializeLightSensor(board) {
+  // TODO: Make async, don't resolve until first read from sensor
   const sensor = new five.Sensor({
     board,
     pin: "A5",
@@ -212,6 +218,7 @@ function addSensorFeatures(fmap, sensor) {
 }
 
 function initializeThermometer(board) {
+  // TODO: Make async, don't resolve until first read from sensor
   const sensor = new five.Thermometer({
     board,
     controller: Thermometer,
