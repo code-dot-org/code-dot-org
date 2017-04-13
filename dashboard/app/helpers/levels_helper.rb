@@ -222,11 +222,11 @@ module LevelsHelper
       else
         section = current_user.sections_as_student.first
       end
-      @app_options[:experiments] =
-        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
       if section && section.first_activity_at.nil?
         section.update!(first_activity_at: DateTime.now)
       end
+      @app_options[:experiments] =
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
     end
 
     @app_options
