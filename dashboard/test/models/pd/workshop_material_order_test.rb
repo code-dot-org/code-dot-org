@@ -36,6 +36,8 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
 
   setup do
     Geocoder.stubs(:search).returns([stub(postal_code: '98101')])
+    @mock_mimeo_rest_client = mock('Pd::MimeoRestClient')
+    Pd::MimeoRestClient.stubs(:new).returns(@mock_mimeo_rest_client)
   end
 
   test 'required fields' do
@@ -118,8 +120,26 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ["Zip code doesn't match the address. Did you mean 98101?"], order.errors.full_messages
   end
 
+  test 'known user correctable error validation: apartment or suite required' do
+    order_error = {
+      ErrorCode: 'InternalServerError',
+      Message: 'PlaceOrder error occurs for andrew@code.org : '\
+        'The recipient Andrew Oberhardt has address validation issue: '\
+        'Address found, but requires a apartment/suite.'
+    }
+
+    @mock_mimeo_rest_client.expects(:place_order).raises(RestClient::BadRequest)
+    RestClient::BadRequest.any_instance.stubs(:response).returns(stub(code: 400, body: order_error.to_json))
+    Honeybadger.expects(:notify).never
+
+    order = build :pd_workshop_material_order, apartment_or_suite: nil
+    order.place_order
+    refute order.valid?
+    assert_equal ['Apartment or suite is required for this address'], order.errors.full_messages
+  end
+
   test 'place_order' do
-    Pd::MimeoRestClient.any_instance.expects(:place_order).with(
+    @mock_mimeo_rest_client.expects(:place_order).with(
       first_name: @enrollment.first_name,
       last_name: @enrollment.last_name,
       company_name: nil,
@@ -148,7 +168,7 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   test 'place_order error' do
-    Pd::MimeoRestClient.any_instance.expects(:place_order).raises(RestClient::BadRequest)
+    @mock_mimeo_rest_client.expects(:place_order).raises(RestClient::BadRequest)
     RestClient::BadRequest.any_instance.stubs(:response).returns(stub(code: 400, body: ORDER_ERROR.to_json))
     Honeybadger.expects(:notify)
 
@@ -160,71 +180,74 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ({'code' => 400, 'body' => ORDER_ERROR}), order.order_error
   end
 
-  test 'check_status' do
-    Pd::MimeoRestClient.any_instance.expects(:get_status).with(ORDER_ID).returns('Pending')
+  test 'refresh checks status' do
+    @mock_mimeo_rest_client.expects(:get_status).with(ORDER_ID).returns('Pending')
 
     order = build :pd_workshop_material_order, order_id: ORDER_ID
-    assert_equal 'Pending', order.check_status
+    order.refresh
+    assert_equal 'Pending', order.order_status
     refute order.shipped?
     assert_equal Time.zone.now, order.order_status_last_checked_at
     assert_equal Time.zone.now, order.order_status_changed_at
   end
 
-  test 'check_status returns nil if not ordered' do
-    Pd::MimeoRestClient.any_instance.expects(:get_status).never
+  test 'refresh does not check status if not ordered' do
+    @mock_mimeo_rest_client.expects(:get_status).never
 
     order = build :pd_workshop_material_order
     refute order.ordered?
-    assert_nil order.check_status
+    order.refresh
   end
 
-  test 'check_status skipped once for final status' do
-    Pd::MimeoRestClient.any_instance.expects(:get_status).never
+  test 'refresh does not check status again once it reaches a final status' do
+    @mock_mimeo_rest_client.expects(:get_status).never
+    Pd::MimeoRestClient.expects(:final_status?).with('a final status').returns(true)
 
-    order_shipped = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'Shipped'
-    assert_equal 'Shipped', order_shipped.check_status
-
-    order_canceled = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'Canceled'
-    assert_equal 'Canceled', order_canceled.check_status
+    order = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'a final status'
+    order.refresh
+    assert_equal 'a final status', order.order_status
   end
 
-  test 'check_status error' do
-    Pd::MimeoRestClient.any_instance.expects(:get_status).raises(RestClient::BadRequest)
+  test 'refresh logs to honeybadger but does not fail for get_status error' do
+    @mock_mimeo_rest_client.expects(:get_status).raises(RestClient::BadRequest)
     RestClient::BadRequest.any_instance.stubs(:response).returns(stub(code: 400, body: nil))
     Honeybadger.expects(:notify)
 
     order = build :pd_workshop_material_order, order_id: ORDER_ID
-    assert_nil order.check_status
+    order.refresh
+    assert_nil order.order_status
   end
 
-  test 'track' do
-    Pd::MimeoRestClient.any_instance.expects(:track).with(ORDER_ID).returns(TRACKING_RESPONSE).once
+  test 'refresh for shipped order gets tracking info' do
+    @mock_mimeo_rest_client.expects(:track).with(ORDER_ID).returns(TRACKING_RESPONSE).once
 
     order = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'Shipped'
-    expected_respone = {tracking_id: TRACKING_ID, tracking_url: TRACKING_URL}
-    assert_equal expected_respone, order.track
-    assert_equal TRACKING_ID, order.tracking_id
-    assert_equal TRACKING_URL, order.tracking_url
 
     # second call does not re-query API (verified by .once in above expectation)
-    assert_equal expected_respone, order.track
+    2.times do
+      order.refresh
+      assert_equal TRACKING_ID, order.tracking_id
+      assert_equal TRACKING_URL, order.tracking_url
+    end
   end
 
-  test 'track skipped before it ships' do
-    Pd::MimeoRestClient.any_instance.expects(:track).never
+  test 'refresh does not track before it ships' do
+    @mock_mimeo_rest_client.expects(:get_status).returns('Pending')
+    @mock_mimeo_rest_client.expects(:track).never
 
     order = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'Pending'
-    assert_nil order.track
+    order.refresh
     assert_nil order.tracking_id
     assert_nil order.tracking_url
   end
 
-  test 'track error' do
-    Pd::MimeoRestClient.any_instance.expects(:track).raises(RestClient::BadRequest)
+  test 'refresh logs to honeybadger but does not fail for track error' do
+    @mock_mimeo_rest_client.expects(:track).raises(RestClient::BadRequest)
     RestClient::BadRequest.any_instance.stubs(:response).returns(stub(code: 400, body: nil))
     Honeybadger.expects(:notify)
 
     order = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'Shipped'
-    assert_nil order.track
+    order.refresh
+    assert_nil order.tracking_id
   end
 end

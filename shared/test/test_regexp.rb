@@ -15,13 +15,16 @@ class RegexpUtilsTest < Minitest::Test
     'abc'
   ].freeze
 
-  VALID_US_ZIP_CODES = %w[
-    12345
-    12345-6789
+  VALID_US_ZIP_CODES = [
+    '12345',
+    '12345-6789',
+    '123456789',
+    '12345 6789'
   ]
   INVALID_US_ZIP_CODES = [
     '123',
     '1 2',
+    '123456',
     '12345 6789',
     '12345-abcd'
   ]

@@ -85,6 +85,7 @@ class Pd::MimeoRestClientTest < ActiveSupport::TestCase
           Address: {
             FirstName: 'first_name',
             LastName: 'last_name',
+            CompanyName: 'Code.org',
             Street: '1501 4th Ave',
             ApartmentOrSuite: 'Suite 900',
             City: 'Seattle',
@@ -93,8 +94,7 @@ class Pd::MimeoRestClientTest < ActiveSupport::TestCase
             PostalCode: '98101',
             TelephoneNumber: '555-111-2222',
             Email: 'test@code.org',
-            CompanyName: 'Code.org',
-            IsResidential: false
+            IsResidential: true
           },
           ShippingMethodId: @settings[:shipping_method_id]
         }
@@ -102,6 +102,13 @@ class Pd::MimeoRestClientTest < ActiveSupport::TestCase
       PaymentMethod: {
         __type: 'UserCreditLimitPaymentMethod:http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService'
       },
+      Options: {
+        RecipientNotificationOptions: {
+          SendShippingAlerts: false,
+          ShouldNotifyRecipients: false,
+          IncludeSenderContactInformation: false
+        }
+      }
     }
 
     client = Pd::MimeoRestClient.new
