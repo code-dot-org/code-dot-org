@@ -1,27 +1,27 @@
-require 'state_abbr'
 class Pd::WorkshopMaterialOrdersController < ApplicationController
-  load_and_authorize_resource :enrollment, class: 'Pd::Enrollment', find_by: 'code', id_param: :enrollment_code
+  load_and_authorize_resource :enrollment, class: 'Pd::Enrollment', find_by: 'code',
+    id_param: :enrollment_code
+
+  load_and_authorize_resource :workshop_material_order, class: 'Pd::WorkshopMaterialOrder',
+    through: :enrollment, parent: false, singleton: true, except: :admin_index
+
+  load_and_authorize_resource :workshop_material_order, class: 'Pd::WorkshopMaterialOrder',
+    parent: false, only: :admin_index, collection: :admin_index
 
   # GET /pd/workshop_materials/:enrollment_code
   def new
     if !@enrollment.completed_survey? || @enrollment.workshop.course != Pd::Workshop::COURSE_CSF
       redirect_to CDO.code_org_url("/pd-workshop-survey/#{@enrollment.code}", CDO.default_scheme)
-      return
     elsif @enrollment.workshop_material_order
       render :thanks
-      return
     end
-
-    @workshop_materials_order = Pd::WorkshopMaterialOrder.new
   end
 
   # POST /pd/workshop_materials/:enrollment_code
   def create
-    @workshop_materials_order = Pd::WorkshopMaterialOrder.new workshop_material_order_params
-    @workshop_materials_order.assign_attributes(enrollment: @enrollment, user: current_user)
+    @workshop_material_order.place_order if @workshop_material_order.valid?
 
-    if @workshop_materials_order.save
-      @workshop_materials_order.place_order
+    if @workshop_material_order.save
       render :thanks
     else
       render :new
@@ -30,10 +30,11 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
 
   # GET /pd/workshop_materials
   def admin_index
-    require_admin
-
-    @workshop_material_orders = Pd::WorkshopMaterialOrder.order(created_at: :desc).all
-    @workshop_material_orders.each(&:refresh)
+    @workshop_material_orders = Pd::WorkshopMaterialOrder.order(created_at: :desc)
+    @workshop_material_orders.find_each do |order|
+      order.refresh
+      order.save!
+    end
   end
 
   def workshop_material_order_params
