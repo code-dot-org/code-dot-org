@@ -35,6 +35,12 @@ require 'pd/mimeo_rest_client'
 require 'state_abbr'
 module Pd
   class WorkshopMaterialOrder < ActiveRecord::Base
+    USER_CORRECTABLE_ORDER_ERRORS = [{
+      match_text: 'Address found, but requires a apartment/suite.',
+      field: :apartment_or_suite,
+      message: 'is required for this address'
+    }]
+
     belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
     belongs_to :user
     has_one :workshop, class_name: 'Pd::Workshop', through: :enrollment, foreign_key: :pd_workshop_id
@@ -47,7 +53,10 @@ module Pd
     validates_presence_of :zip_code
     validates_presence_of :phone_number
     validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
-    validates :phone_number, us_phone_number: true, if: -> {phone_number.present?}
+
+    # Make sure the phone number contains at least 10 digits.
+    # Allow any format and additional text, such as extensions.
+    validates :phone_number, format: /(\d.?){10}/, if: -> {phone_number.present?}
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
 
     validate :valid_address?, if: :address_fields_changed?
@@ -69,6 +78,27 @@ module Pd
 
       unless workshop.course == Pd::Workshop::COURSE_CSF
         errors.add(:workshop, 'must be CSF')
+      end
+    end
+
+    validate :no_user_correctable_order_errors?
+    # Validates that the order error is not a known user-correctable error.
+    # Note: the order error response body has fields ErrorCode and Message, for example:
+    # {
+    #   ErrorCode: 'InternalServerError',
+    #   Message: "PlaceOrder error occurs for andrew@code.org :
+    #             The recipient Andrew Oberhardt has address validation issue:
+    #             Address found, but requires a apartment/suite."
+    # }
+    def no_user_correctable_order_errors?
+      return if shipped?
+      error_message = order_error_body.try(:[], 'Message')
+      if error_message
+        USER_CORRECTABLE_ORDER_ERRORS.each do |user_correctable_error|
+          if error_message.include? user_correctable_error[:match_text]
+            errors.add(user_correctable_error[:field], user_correctable_error[:message])
+          end
+        end
       end
     end
 
@@ -100,6 +130,10 @@ module Pd
       raw.nil? ? nil : JSON.parse(raw)
     end
 
+    def order_error_body
+      order_error.try(:[], 'body')
+    end
+
     def ordered?
       ordered_at.present?
     end
@@ -109,7 +143,7 @@ module Pd
     end
 
     # Place order with the Mimeo API, based on shipping info in a valid model
-    # Save order_attempted_at to the DB, and
+    # Set order_attempted_at, and
     #   on success: ordered_at, order_response, order_id
     #   on error: order_error
     # This is idempotent. Once an order has been successfully placed, subsequent calls will
@@ -142,18 +176,29 @@ module Pd
         self.order_error = nil
         self.order_id = response['OrderFriendlyId']
       rescue RestClient::ExceptionWithResponse => error
-        self.order_error = report_error(:place_order, error).to_json
-      ensure
-        save!
+        is_correctable = USER_CORRECTABLE_ORDER_ERRORS.any? do |uce|
+          error.response.try(:body).include?(uce[:match_text])
+        end
+        self.order_error = report_error(:place_order, error, notify_honeybadger: !is_correctable).to_json
       end
 
       response
     end
 
+    # Update status and tracking info.
+    # @return [Pd::WorkshopMaterialOrder] this object (with updated status and tracking)
+    def refresh
+      check_status
+      update_tracking_info
+
+      self
+    end
+
+    private
+
     # Check the status of an order with the Mimeo API
-    # Save order_status_last_checked_at in the DB, and when the status changes:
+    # Set order_status_last_checked_at, and when the status changes:
     #   order_status and order_status_changed_at
-    # @return [String, nil] last known order status string, or nil if no order has been made
     # See MimeoRestClient::STATUS for available status strings.
     # Once 'Shipped', it will not be checked again.
     def check_status
@@ -169,21 +214,15 @@ module Pd
           self.order_status_changed_at = order_status_last_checked_at
         end
       rescue RestClient::ExceptionWithResponse => error
-        puts "error: #{error}"
         report_error :check_status, error
-      ensure
-        save!
       end
-
-      order_status
     end
 
-    # Track the order via the Mimeo API
-    # Save tracking_id and tracking_url, if present
-    # This is idempotent. Once a tracking id is received, it will be returned on
+    # Update order tracking info via the Mimeo API
+    # Set tracking_id and tracking_url, if present
+    # This is idempotent. Once a tracking id is received, it will be kept on
     #   subsequent calls (without contacting Mimeo)
-    # @return [Hash, nil] hash of tracking :id and :url, or nil if it hasn't shipped.
-    def track
+    def update_tracking_info
       return nil unless shipped?
 
       unless tracking_id.present?
@@ -195,39 +234,30 @@ module Pd
           )
         rescue RestClient::ExceptionWithResponse => error
           report_error :track, error
-          return nil
         end
       end
-
-      {tracking_id: tracking_id, tracking_url: tracking_url}
     end
-
-    # Update status and tracking info
-    def refresh
-      check_status
-      track
-    end
-
-    private
 
     # Parse and report error
     # @param method [String]
     # @param error [RestClient::ExceptionWithResponse]
     # @return [Hash] hash of parsed error details, code: and body:
-    def report_error(method, error)
+    def report_error(method, error, notify_honeybadger: true)
       # error response should have a JSON body, but in case the response is missing (i.e. timeout), or
       # the body is a different format and can't be parsed, use the raw string
       body_raw = error.response.try(:body)
       body_parsed = JSON.parse(body_raw) rescue body_raw
       error_details = {code: error.response.code, body: body_parsed}
 
-      Honeybadger.notify(error,
-        error_message: "Error in MimeoRestClient.#{method}: #{error.message}",
-        context: {
-          pd_workshop_material_order_id: id,
-          error_details: error_details
-        }
-      )
+      if notify_honeybadger
+        Honeybadger.notify(error,
+          error_message: "Error in MimeoRestClient.#{method}: #{error.message}",
+          context: {
+            pd_workshop_material_order_id: id,
+            error_details: error_details
+          }
+        )
+      end
 
       error_details
     end

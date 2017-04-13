@@ -71,8 +71,8 @@ class Pd::MimeoRestClient
             TelephoneNumber: phone_number,
             Email: email,
 
-            # Guidance from the Mimeo support team is to always set IsResidential to false
-            IsResidential: false
+            # Guidance from the Mimeo API support team on 2017-04-10 is to always set IsResidential to true
+            IsResidential: true
           },
           ShippingMethodId: @shipping_method_id
         }
@@ -80,6 +80,13 @@ class Pd::MimeoRestClient
       PaymentMethod: {
         __type: 'UserCreditLimitPaymentMethod:http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService'
       },
+      Options: {
+        RecipientNotificationOptions: {
+          SendShippingAlerts: false,
+          ShouldNotifyRecipients: false,
+          IncludeSenderContactInformation: false
+        }
+      }
     }
 
     response = post 'Orders/PlaceOrder', order_params
@@ -155,7 +162,7 @@ class Pd::MimeoRestClient
   end
 
   def get_config_value(key)
-    raise KeyError, "Unable to find mimeo setting: #{key}" unless CDO.mimeo_api && CDO.mimeo_api.key?(key.to_s)
+    raise KeyError, "Unable to find mimeo setting: #{key}" unless CDO.mimeo_api.try(:key?, key.to_s)
     CDO.mimeo_api[key.to_s]
   end
 end

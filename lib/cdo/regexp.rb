@@ -16,7 +16,7 @@ module RegexpUtils
     US_PHONE_NUMBER_ONLY_REGEXP === text
   end
 
-  US_ZIP_CODE_REGEXP = /^\d{5}(-?\d{4})?$/
+  US_ZIP_CODE_REGEXP = /^\d{5}([\W-]?\d{4})?$/
 
   # @return true if the entire text matches the format of a US zip code
   # Note it does not verify that it's an actual zip code.
