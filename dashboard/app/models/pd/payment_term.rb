@@ -4,7 +4,7 @@
 #
 #  id                  :integer          not null, primary key
 #  regional_partner_id :integer
-#  start_date          :date
+#  start_date          :date             not null
 #  end_date            :date
 #  course              :string(255)
 #  subject             :string(255)
@@ -61,23 +61,5 @@ class Pd::PaymentTerm < ApplicationRecord
     end
 
     found_payment_terms[0]
-  end
-
-  def calculate(workshop)
-    if workshop.course == Pd::Workshop::COURSE_CSF
-      calculate_csf_workshop(workshop)
-    else
-      calculate_non_csf_workshop(workshop)
-    end
-  end
-
-  private
-
-  def calculate_csf_workshop(workshop)
-
-  end
-
-  def calculate_non_csf_workshop(workshop)
-
   end
 end
