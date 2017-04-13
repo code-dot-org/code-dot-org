@@ -23,40 +23,42 @@ import Piezo from './Piezo';
  *
  * @param {five.Board} board - the johnny-five board object that needs new
  *        components initialized.
- * @returns {Object.<String, Object>} board components
+ * @returns {Promise.<Object.<String, Object>>} board components
  */
 export function createCircuitPlaygroundComponents(board) {
-  return {
-    colorLeds: initializeColorLeds(board),
+  return new Promise(resolve => {
+    resolve({
+      colorLeds: initializeColorLeds(board),
 
-    led: new five.Led({board, pin: 13}),
+      led: new five.Led({board, pin: 13}),
 
-    toggleSwitch: new five.Switch({board, pin: 21}),
+      toggleSwitch: new five.Switch({board, pin: 21}),
 
-    buzzer: new Piezo({
-      board,
-      pin: 5,
-      controller: PlaygroundIO.Piezo
-    }),
+      buzzer: new Piezo({
+        board,
+        pin: 5,
+        controller: PlaygroundIO.Piezo
+      }),
 
-    // Must initialize sound sensor BEFORE left button, otherwise left button
-    // will not respond to input.  This has something to do with them sharing
-    // pin 4 on the board.
-    soundSensor: initializeSoundSensor(board),
+      // Must initialize sound sensor BEFORE left button, otherwise left button
+      // will not respond to input.  This has something to do with them sharing
+      // pin 4 on the board.
+      soundSensor: initializeSoundSensor(board),
 
-    lightSensor: initializeLightSensor(board),
+      lightSensor: initializeLightSensor(board),
 
-    tempSensor: initializeThermometer(board),
+      tempSensor: initializeThermometer(board),
 
-    accelerometer: initializeAccelerometer(board),
+      accelerometer: initializeAccelerometer(board),
 
-    buttonL: initializeButton(board, '4'),
+      buttonL: initializeButton(board, '4'),
 
-    buttonR: initializeButton(board, '19'),
+      buttonR: initializeButton(board, '19'),
 
-    // TODO (captouch): Re-enable when we can lazy-enable streaming
-    // ...initializeTouchPads(board)
-  };
+      // TODO (captouch): Re-enable when we can lazy-enable streaming
+      // ...initializeTouchPads(board)
+    });
+  });
 }
 
 /**
