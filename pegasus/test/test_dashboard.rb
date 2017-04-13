@@ -1,12 +1,8 @@
 # Tests for the Dashboard helpers module, including the User helper object
 
-require 'minitest/autorun'
-require 'rack/test'
-require 'mocha/mini_test'
+require_relative './test_helper'
 require_relative '../helper_modules/dashboard'
 require_relative 'fixtures/fake_dashboard'
-
-ENV['RACK_ENV'] = 'test'
 
 class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do

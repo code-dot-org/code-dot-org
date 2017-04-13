@@ -1,5 +1,6 @@
 # Common settings shared across unit tests for shared, pegasus, lib
 ENV['RACK_ENV'] = 'test'
+ENV['UNIT_TEST'] = '1'
 
 require 'minitest/autorun'
 require 'rack/test'

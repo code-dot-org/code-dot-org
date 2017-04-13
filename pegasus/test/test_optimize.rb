@@ -1,6 +1,7 @@
 require_relative './test_helper'
 require 'active_support/cache'
 require 'active_job'
+require_relative '../router'
 
 module Cdo
   class OptimizeJob < ActiveJob::Base
@@ -14,10 +15,9 @@ class OptimizeTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    CDO.stubs(image_optim: true)
+    # Stub image_optim dependencies not available in unit-test environment.
     Cdo::OptimizeJob.stubs(:require).with('image_compressor_pack')
     Cdo::OptimizeJob.stubs(:require).with('image_optim')
-
     @image_optim = mock('double')
     ::ImageOptim.stubs(new: @image_optim)
 
@@ -26,16 +26,24 @@ class OptimizeTest < Minitest::Test
   end
 
   def app
-    Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
+    Rack::Builder.app do
+      require 'cdo/rack/optimize'
+      use Rack::Optimize
+      run Documents
+    end
   end
 
   def test_optimize_image
     compressed_image = 'compressed-image-data'
     @image_optim.expects(:optimize_image_data).returns(compressed_image)
 
+    # First request returns original image, begins optimization in background.
     get('/images/logo.png')
     assert_equal 3374, last_response.content_length
 
+    sleep(0.1)
+
+    # Second request returns optimized image.
     get('/images/logo.png')
     assert_equal compressed_image.length, last_response.content_length
   end

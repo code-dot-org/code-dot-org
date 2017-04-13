@@ -1,7 +1,4 @@
-require_relative '../../deployment'
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
-require 'mocha/mini_test'
+require_relative './test_helper'
 require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test

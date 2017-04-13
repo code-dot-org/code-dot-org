@@ -1,6 +1,4 @@
-require_relative '../src/env'
-require 'rack/test'
-require 'minitest/autorun'
+require_relative './test_helper'
 require 'webmock/minitest'
 
 class HourOfCodeHelpersTest < Minitest::Test
