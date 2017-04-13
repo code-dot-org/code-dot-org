@@ -92,6 +92,7 @@ class Ability
         end
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
+        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
       end
 
       if user.district_contact?

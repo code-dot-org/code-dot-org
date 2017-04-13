@@ -36,7 +36,7 @@
     "debugger_disabled": "false",
     "show_d_pad": "false",
     "callout_json": "[]",
-    "start_blocks": "var my_sprite = createSprite(300, 100);\r\ndrawSprites();",
+    "start_blocks": "var mySprite = createSprite(300, 100);\r\ndrawSprites();",
     "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "instructions_important": "false",
@@ -48,6 +48,9 @@
     "expand_debugger": "false",
     "contained_level_names": [
       "CSD U3 Sprites intro predict multi"
+    ],
+    "encrypted_examples": [
+
     ]
   },
   "published": true,
