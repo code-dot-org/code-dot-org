@@ -25,7 +25,7 @@ popd
 
 # build the static storybook site
 echo "Building the static storybook site"
-build-storybook -o $DIR_TO_DEPLOY -s build/package/
+node --max_old_space_size=4096 `npm bin`/build-storybook -o $DIR_TO_DEPLOY -s build/package/
 
 # remove a bunch of crap we don't actually need.
 echo "Removing some unused files"

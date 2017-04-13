@@ -2,7 +2,6 @@ import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import Immutable from 'immutable';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('DetailProgressTable', () => {

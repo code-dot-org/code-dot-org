@@ -1,5 +1,4 @@
 import {expect} from '../../util/configuredChai';
-import {testUtils} from '../../util/testUtils';
 import {SVG_NS} from '@cdo/apps/constants';
 import {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
 

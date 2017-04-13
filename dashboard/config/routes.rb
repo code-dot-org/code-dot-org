@@ -335,6 +335,9 @@ Dashboard::Application.routes.draw do
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
+
+      get :facilitator_program_registrations, to: 'facilitator_program_registrations#index'
+      post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
     end
   end
 
@@ -348,6 +351,8 @@ Dashboard::Application.routes.draw do
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
     get 'teacher_application/thanks', to: 'teacher_application#thanks'
+
+    get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
