@@ -184,9 +184,9 @@ export default class SetupChecklist extends Component {
               stepStatus={this.state[STATUS_APP_INSTALLED]}
               stepName="Chrome App installed"
             >
-              Please install the <a href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg">Code.org Serial Connector Chrome App extension</a>.
+              Please install the <a href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg" target="_blank">Code.org Serial Connector Chrome App extension</a>.
               <br/>Once it is installed, come back to this page and click the "re-detect" button, above.
-              <br/>If a dialog asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
+              <br/>If a prompt asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
               {surveyLink}
             </SetupStep>
             <SetupStep

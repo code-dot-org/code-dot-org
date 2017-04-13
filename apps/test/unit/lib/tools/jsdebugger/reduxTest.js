@@ -13,7 +13,7 @@ describe('The JSDebugger redux duck', () => {
     registerReducers(reducers);
     store = getStore();
     state = store.getState();
-    studioApp = {reduxStore: getStore(), hideSource: true};
+    studioApp = {hideSource: true};
     interpreter = new JSInterpreter({
       shouldRunAtMaxSpeed: () => false,
       studioApp
