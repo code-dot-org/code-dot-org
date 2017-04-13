@@ -22,7 +22,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
+        return studioApp().enableShowCode === true && studioApp().enableShowBlockCount === true;
       },
       missingBlocks: [],
       xml:

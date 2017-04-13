@@ -1,5 +1,5 @@
 import {stub} from 'sinon';
-import GameLabGame from '@cdo/apps/gamelab/GameLabGame';
+import GameLabWorld from '@cdo/apps/gamelab/GameLabWorld';
 import {expect} from '../../util/configuredChai';
 
 describe('seconds', function () {
@@ -10,8 +10,8 @@ describe('seconds', function () {
     // Time when seconds gets called.
     Date.prototype.getTime.onCall(1).returns(10000);
 
-    let gameLabGame = new GameLabGame({});
-    expect(gameLabGame.seconds).to.equal(5);
+    let gameLabWorld = new GameLabWorld({});
+    expect(gameLabWorld.seconds).to.equal(5);
     Date.prototype.getTime.restore();
   });
 });
