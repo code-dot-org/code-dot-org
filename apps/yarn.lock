@@ -10972,7 +10972,7 @@ uglify-js@~2.2, uglify-js@~2.2.1:
     optimist "~0.3.5"
     source-map "~0.1.7"
 
-uglify-js@~2.4.0, uglify-js@2.4.24:
+uglify-js@~2.4.0:
   version "2.4.24"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.4.24.tgz#fad5755c1e1577658bb06ff9ab6e548c95bebd6e"
   dependencies:
