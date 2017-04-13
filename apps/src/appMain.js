@@ -8,13 +8,13 @@ var authoredHintUtils = require('./authoredHintUtils');
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
-  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp),
+  loadBlocks: _.bind(studioApp().loadBlocks, studioApp()),
+  arrangeBlockPosition: _.bind(studioApp().arrangeBlockPosition, studioApp()),
   getDropletContents: function () {
-    return _.bind(studioApp.editor.getValue, studioApp.editor)();
+    return _.bind(studioApp().editor.getValue, studioApp().editor)();
   },
   getDroplet: function () {
-    return studioApp.editor;
+    return studioApp().editor;
   },
   // Set to true to ignore onBeforeUnload events
   ignoreOnBeforeUnload: false,
@@ -59,12 +59,12 @@ module.exports = function (app, levels, options) {
     options.level = level;
   }
 
-  studioApp.configure(options);
-  studioApp.configureRedux(app.getAppReducers ? app.getAppReducers() : null);
+  studioApp().configure(options);
+  studioApp().configureRedux(app.getAppReducers ? app.getAppReducers() : null);
 
-  options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(studioApp().assetUrl, options.skinId);
 
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp().isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1,
@@ -84,7 +84,7 @@ module.exports = function (app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        studioApp.initReadonly(options);
+        studioApp().initReadonly(options);
       }
     } else {
       app.init(options);

@@ -158,11 +158,11 @@ function shareProject() {
     // once more of code-studio is integrated into mainline react tree.
     const appType = dashboard.project.getStandaloneApp();
     const studioApp = require('../StudioApp').singleton;
-    const pageConstants = studioApp.reduxStore.getState().pageConstants;
+    const pageConstants = studioApp().reduxStore.getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
     ReactDOM.render(
-      <Provider store={studioApp.reduxStore}>
+      <Provider store={studioApp().reduxStore}>
         <ShareDialog
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}

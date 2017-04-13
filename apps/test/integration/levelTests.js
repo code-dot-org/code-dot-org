@@ -158,11 +158,11 @@ describe('Level tests', function () {
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
-    if (studioApp.editor && studioApp.editor.aceEditor &&
-        studioApp.editor.aceEditor.session &&
-        studioApp.editor.aceEditor.session.$mode &&
-        studioApp.editor.aceEditor.session.$mode.cleanup) {
-      studioApp.editor.aceEditor.session.$mode.cleanup();
+    if (studioApp().editor && studioApp().editor.aceEditor &&
+        studioApp().editor.aceEditor.session &&
+        studioApp().editor.aceEditor.session.$mode &&
+        studioApp().editor.aceEditor.session.$mode.cleanup) {
+      studioApp().editor.aceEditor.session.$mode.cleanup();
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
