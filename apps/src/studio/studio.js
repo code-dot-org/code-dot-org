@@ -53,6 +53,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -2006,7 +2007,7 @@ Studio.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={onMount}

@@ -1,5 +1,6 @@
 /** @file Droplet-friendly command defintions for audio commands. */
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {getStore} from '../../redux';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {
@@ -142,6 +143,6 @@ export const dropletConfig = {
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !studioApp().reduxStore.getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }
