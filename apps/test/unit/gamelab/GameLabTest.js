@@ -47,7 +47,6 @@ describe("GameLab", () => {
       studioApp = {
         setCheckForEmptyBlocks: sinon.spy(),
         showRateLimitAlert: sinon.spy(),
-        reduxStore: getStore(),
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
       };

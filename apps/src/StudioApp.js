@@ -219,7 +219,6 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
-Object.defineProperty(StudioApp.prototype, 'reduxStore', { get: getStore });
 
 /**
  * Configure StudioApp options
@@ -271,7 +270,7 @@ StudioApp.prototype.createReduxStore_ = function () {
 
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
-    window.reduxStore = this.reduxStore;
+    window.reduxStore = getStore();
   }
 };
 
@@ -327,7 +326,7 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   ReactDOM.render(
-    <Provider store={this.reduxStore}>
+    <Provider store={getStore()}>
       <InstructionsDialogWrapper
         showInstructionsDialog={(autoClose) => {
             this.showInstructionsDialog_(config.level, autoClose);
@@ -359,7 +358,7 @@ StudioApp.prototype.init = function (config) {
       app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
-      isResponsive: this.reduxStore.getState().pageConstants.isResponsive,
+      isResponsive: getStore().getState().pageConstants.isResponsive,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -858,7 +857,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(setIsRunning(!showRun));
+  getStore().dispatch(setIsRunning(!showRun));
 
   if (this.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -876,7 +875,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore.getState().runState.isRunning;
+  return getStore().getState().runState.isRunning;
 };
 
 /**
@@ -1089,7 +1088,7 @@ StudioApp.prototype.onReportComplete = function (response) {
  * @param {boolean} autoClose - closes instructions after 32s if true
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
-  const reduxState = this.reduxStore.getState();
+  const reduxState = getStore().getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
 
   var instructionsDiv = document.createElement('div');
@@ -1143,7 +1142,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
     }
 
     // update redux
-    this.reduxStore.dispatch(closeInstructionsDialog());
+    getStore().dispatch(closeInstructionsDialog());
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -1161,7 +1160,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', () => {
     ReactDOM.render(
-      <Provider store={this.reduxStore}>
+      <Provider store={getStore()}>
         <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
@@ -1370,7 +1369,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
     visualization.style.width = newVizWidthString;
   }
   var scale = (newVizWidth / this.nativeVizWidth);
-  this.reduxStore.dispatch(setVisualizationScale(scale));
+  getStore().dispatch(setVisualizationScale(scale));
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
 
@@ -1489,7 +1488,7 @@ StudioApp.prototype.displayFeedback = function (options) {
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    this.reduxStore.dispatch(setFeedback({ message }));
+    getStore().dispatch(setFeedback({ message }));
   }
 };
 
@@ -1503,7 +1502,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
-  const constants = this.reduxStore.getState().pageConstants;
+  const constants = getStore().getState().pageConstants;
   if (!constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(options.feedbackType);
   }
@@ -1619,7 +1618,7 @@ StudioApp.prototype.resetButtonClick = function () {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  this.reduxStore.dispatch(setFeedback(null));
+  getStore().dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
@@ -1864,7 +1863,7 @@ StudioApp.prototype.configureDom = function (config) {
       // of a larger page.
       smallFooter.style.boxSizing = "border-box";
     }
-    if (this.reduxStore.getState().pageConstants.isResponsive) {
+    if (getStore().getState().pageConstants.isResponsive) {
       smallFooter.className += " responsive";
     }
   }
@@ -2896,10 +2895,10 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isK1: config.level.isK1,
   }, appSpecificConstants);
 
-  this.reduxStore.dispatch(setPageConstants(combined));
+  getStore().dispatch(setPageConstants(combined));
 
   const instructionsConstants = determineInstructionsConstants(config);
-  this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
+  getStore().dispatch(setInstructionsConstants(instructionsConstants));
 };
 
 StudioApp.prototype.showRateLimitAlert = function () {
