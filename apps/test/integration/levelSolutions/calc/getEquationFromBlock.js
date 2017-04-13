@@ -37,7 +37,7 @@ function validateGeneratedEquation(assert, blockXml, expectedEquation, blockInde
     }
   });
 
-  studioApp.loadBlocks(blockXml);
+  studioApp().loadBlocks(blockXml);
 
   if (blockIndex === 0) {
     assert.equal(Blockly.mainBlockSpace.getTopBlocks().length, 1);

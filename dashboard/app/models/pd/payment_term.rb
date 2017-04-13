@@ -22,6 +22,8 @@ class Pd::PaymentTerm < ApplicationRecord
 
   belongs_to :regional_partner
 
+  validates_presence_of :regional_partner
+
   serialized_attrs %w(
     per_attendee_payment
     fixed_payment
