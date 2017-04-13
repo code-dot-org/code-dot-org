@@ -18,6 +18,7 @@ var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+import {getStore} from '../redux';
 
 var ResultType = studioApp().ResultType;
 var TestResults = studioApp().TestResults;
@@ -573,7 +574,7 @@ Flappy.init = function (config) {
   studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         isRtl={studioApp().isRtl()}
         visualizationColumn={<FlappyVisualizationColumn/>}

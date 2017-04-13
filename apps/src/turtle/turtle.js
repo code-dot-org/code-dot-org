@@ -47,6 +47,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -219,7 +220,7 @@ Artist.prototype.init = function (config) {
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
   ReactDOM.render(
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={this.studioApp_.init.bind(this.studioApp_, config)}

@@ -40,7 +40,8 @@ const styles = {
 const MiniViewTopRow = React.createClass({
   propTypes: {
     scriptName: PropTypes.string.isRequired,
-    linesOfCodeText: PropTypes.string.isRequired,
+    // May not have this (i.e if not logged in)
+    linesOfCodeText: PropTypes.string,
   },
 
   render() {
