@@ -50,6 +50,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -474,7 +475,7 @@ Maze.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={studioApp().init.bind(studioApp(), config)}
