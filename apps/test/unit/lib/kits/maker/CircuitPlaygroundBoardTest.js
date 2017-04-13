@@ -115,11 +115,12 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('initializes a set of components', () => {
-      return board.connectToFirmware().then(() => {
-        board.initializeComponents();
-        // TODO (captouch): Add 8 when we re-enable
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
-      });
+      return board.connectToFirmware()
+        .then(() => board.initializeComponents())
+        .then(() => {
+          // TODO (captouch): Add 8 when we re-enable
+          expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        });
     });
   });
 
