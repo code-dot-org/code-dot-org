@@ -41,6 +41,10 @@ module Pd
       message: 'is required for this address'
     }]
 
+    # Make sure the phone number contains at least 10 digits.
+    # Allow any format and additional text, such as extensions.
+    PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
+
     belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
     belongs_to :user
     has_one :workshop, class_name: 'Pd::Workshop', through: :enrollment, foreign_key: :pd_workshop_id
@@ -54,9 +58,7 @@ module Pd
     validates_presence_of :phone_number
     validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
 
-    # Make sure the phone number contains at least 10 digits.
-    # Allow any format and additional text, such as extensions.
-    validates :phone_number, format: /(\d.?){10}/, if: -> {phone_number.present?}
+    validates :phone_number, format: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
 
     validate :valid_address?, if: :address_fields_changed?
