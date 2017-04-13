@@ -67,6 +67,44 @@ describe('Piezo', function () {
     });
   });
 
+  describe('note()', () => {
+    let piezo, controller;
+
+    beforeEach(() => {
+      controller = makeStubPiezoController();
+      piezo = new Piezo({controller});
+    });
+
+    it('calls frequency() on the controller', () => {
+      expect(controller.frequency.value).not.to.have.been.called;
+      piezo.note('A4', 100);
+      expect(controller.frequency.value).to.have.been.calledOnce;
+    });
+
+    it('converts a note to a frequency correctly', () => {
+      // Spot-check a few notes
+      // A4 = 440Hz
+      piezo.note('A4');
+      expect(controller.frequency.value).to.have.been.calledWith(440);
+
+      // C4 = 262Hz
+      controller.frequency.value.reset();
+      piezo.note('C4');
+      expect(controller.frequency.value).to.have.been.calledWith(262);
+
+      // C2 = 65Hz
+      controller.frequency.value.reset();
+      piezo.note('C2');
+      expect(controller.frequency.value).to.have.been.calledWith(65);
+    });
+
+    it('passes the duration through untouched', () => {
+      const duration = 1000 * Math.random();
+      piezo.note('A4', duration);
+      expect(controller.frequency.value).to.have.been.calledWith(440, duration);
+    });
+  });
+
   // These two methods should be identical in our implementation, so run them
   // through the same set of tests.
   ['stop', 'off'].forEach(methodUnderTest => {

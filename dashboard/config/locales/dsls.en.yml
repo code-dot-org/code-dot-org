@@ -519,6 +519,7 @@ en:
       'CSD Map: Timed For Loop': {}
       'CSD Map: Timed Loop': {}
       'CSD Map: onBoardEvent': {}
+      CSD Placeholder: {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
@@ -575,6 +576,7 @@ en:
         description here: description here
         title: title
       CSD U3 Project Build a Game SFLP: {}
+      CSD U3 Random randomNumber Map: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
       CSD U3 SFLP Sprites and Images:
@@ -589,6 +591,7 @@ en:
       CSD U3 Variables STOP showing value: {}
       CSD U3 Variables STOP using value: {}
       CSD U3 Variables console write: {}
+      CSD U3 Variables variables map: {}
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
       CSD U3 Variables2 STOP variables in expressions: {}
@@ -3265,6 +3268,7 @@ en:
         CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP Unit 5 Cumulative Assessment 3 MC: {}
         CSP Unit 5 Cumulative Assessment 4 MC: {}
+        CSP post-assessment survey: {}
         CSP pre-assessment survey: {}
         HOC post-survey 2016 levelgroup: {}
         HOC pre-survey 2016 levelgroup: {}
@@ -4694,6 +4698,12 @@ en:
         Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
         The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
         The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
+      CSD U3 Sprite Movement Predict Multi:
+        "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+        Read this program and predict which of the following animations will be produced.: Read this program and predict which of the following animations will be produced.
       CSD U3 Sprites intro predict multi:
         ? '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
         : '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
@@ -4703,7 +4713,7 @@ en:
         : '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
         ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
         : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
-        When run, where will the sprite <code>my_sprite</code> be located?: When run, where will the sprite <code>my_sprite</code> be located?
+        When run, where will the sprite <code>mySprite</code> be located?: When run, where will the sprite <code>mySprite</code> be located?
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
@@ -7397,6 +7407,19 @@ en:
         The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
         The bird will not move at all.: The bird will not move at all.
         The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseE_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the 'repeat 3' loop is inside the 'repeat 4' loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the 'repeat 3' loop is inside the 'repeat 4' loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a 'turn 90 degrees' block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a 'turn 90 degrees' block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The 'repeat 3' loop is inside the 'repeat 4' loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The 'repeat 3' loop is inside the 'repeat 4' loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
@@ -7416,10 +7439,44 @@ en:
         The farmer will harvest the corn.: The farmer will harvest the corn.
         The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
         The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+      courseE_multi_farmer_predict1:
+        Correct!: Correct!
+        I don't know: I don't know
+        ? Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
+        : Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
+        Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
+        The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn: The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn
+        The farmer will go to the sprout and try to pick lettuce no matter what.: The farmer will go to the sprout and try to pick lettuce no matter what.
+        ? The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
+        : The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
+        ? We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
+        : We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
+      courseE_multi_farmer_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        The farmer will not anywhere because there's no pumpkin in the first place.: The farmer will not anywhere because there's no pumpkin in the first place.
+        The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
+        The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
+        What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?
       courseE_multi_farmer_ramp12:
         " ": " "
         right answer: right answer
         wrong answer: wrong answer
+      courseE_multi_maze_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
+        Nothing. The bird will not move at all.: Nothing. The bird will not move at all.
+        ? Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        : Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        The bird will move forward three times, turn, then move forward three more times, making it to the pig!: The bird will move forward three times, turn, then move forward three more times, making it to the pig!
+        The bird will move forward, then turn and crash into a wall.: The bird will move forward, then turn and crash into a wall.
+        This code uses a new block. What do you think would happen if you pressed 'Run'?: This code uses a new block. What do you think would happen if you pressed 'Run'?
       courseE_prediction_artistFunction1:
         Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
         Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
@@ -8053,6 +8110,280 @@ en:
         What is f(2)?: What is f(2)?
         f(x) = x + 3: f(x) = x + 3
         x: x
+      post-assessment survey q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q10:
+        Agree: Agree
+        Disagree: Disagree
+        I think I am better at computer science than most of the other kids at my school.: I think I am better at computer science than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q11:
+        Agree: Agree
+        Disagree: Disagree
+        I think I am very good at computer science.: I think I am very good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q12:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in my computer science class if I try.: I can figure out how to solve the most difficult problems in my computer science class if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q13:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q14:
+        Agree: Agree
+        Disagree: Disagree
+        I think computer science is interesting.: I think computer science is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q15:
+        Agree: Agree
+        Disagree: Disagree
+        I like doing computer science activities.: I like doing computer science activities.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q17:
+        Agree: Agree
+        Disagree: Disagree
+        Kids like me do computer science.: Kids like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q18:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science more than other kids at my school.: I like computer science more than other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q19:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q20:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q21:
+        Agree: Agree
+        Computer Science applies to most aspects of real life.: Computer Science applies to most aspects of real life.
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q22:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q23:
+        Agree: Agree
+        Because of Computer Science Principles, I am interested in learning more computer science.: Because of Computer Science Principles, I am interested in learning more computer science.
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q24:
+        Agree: Agree
+        Disagree: Disagree
+        I am interested in taking more computer science classes (in high school or after high school): I am interested in taking more computer science classes (in high school or after high school)
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q25:
+        Agree: Agree
+        Disagree: Disagree
+        I am interested in doing computer science outside of school time.: I am interested in doing computer science outside of school time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q26:
+        Agree: Agree
+        Disagree: Disagree
+        I feel that I am accepted in this computer science class.: I feel that I am accepted in this computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q27:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q28:
+        Agree: Agree
+        Disagree: Disagree
+        I feel that I am accepted in this computer science class.: I feel that I am accepted in this computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q29:
+        Agree: Agree
+        Disagree: Disagree
+        I think my computer science class is interesting.: I think my computer science class is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q30:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time in computer science class.: I enjoy my time in computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q31:
+        Agree: Agree
+        Disagree: Disagree
+        I like doing the activities we do in my computer science class.: I like doing the activities we do in my computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q33:
+        I took the AP CS Principles Exam and submitted the Performance Tasks.: I took the AP CS Principles Exam and submitted the Performance Tasks.
+        'No': 'No'
+        'Yes': 'Yes'
+      post-assessment survey q34:
+        Easy: Easy
+        Hard: Hard
+        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.
+        Kinda easy: Kinda easy
+        Kinda hard: Kinda hard
+        Neutral: Neutral
+        Really easy: Really easy
+        Really hard: Really hard
+      post-assessment survey q35:
+        I don't think I got any questions right: I don't think I got any questions right
+        I feel like I got about half right and half wrong: I feel like I got about half right and half wrong
+        I feel like I only got a few right: I feel like I only got a few right
+        I got a lot of questions right, but some wrong: I got a lot of questions right, but some wrong
+        I got most of the questions right: I got most of the questions right
+        If you DID take the CS Principles AP exam, how do you think you did?: If you DID take the CS Principles AP exam, how do you think you did?
+      post-assessment survey q36:
+        Cost of exam: Cost of exam
+        I didn't know it was an option: I didn't know it was an option
+        I didn't think I'd do well: I didn't think I'd do well
+        If you DID NOT take the CS Principles AP exam, why not?: If you DID NOT take the CS Principles AP exam, why not?
+        Wasn't offered at my school: Wasn't offered at my school
+      post-assessment survey q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q5:
+        Agree: Agree
+        Disagree: Disagree
+        I like my schoolwork.: I like my schoolwork.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q6:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q7:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time at school.: I enjoy my time at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q8:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my school work.: It is important for me to be good at my school work.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q9:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       pre-assessment survey q1:
         Agree: Agree
         Disagree: Disagree

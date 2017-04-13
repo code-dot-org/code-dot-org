@@ -5,12 +5,13 @@ require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
 require_relative 'fixtures/fake_dashboard'
+require_relative 'sequel_test_case'
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
 end
 
-class SectionApiHelperTest < Minitest::Test
+class SectionApiHelperTest < SequelTestCase
   describe DashboardStudent do
     before do
       FakeDashboard.use_fake_database
@@ -38,6 +39,45 @@ class SectionApiHelperTest < Minitest::Test
         assert_equal [], students
       end
     end
+
+    describe 'update_if_allowed' do
+      # TODO(asher): Fix this test so that the DB change does not pollute other tests.
+      # it 'updates students' do
+      #   params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
+      #   updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
+      #   assert_equal 'Updated User', updated_student[:name]
+      # end
+
+      it 'noops for students in deleted sections' do
+        params = {id: FakeDashboard::STUDENT_DELETED_SECTION[:id], name: 'Updated User'}
+        updated_student = DashboardStudent.update_if_allowed(
+          params, FakeDashboard::TEACHER_DELETED_SECTION[:id]
+        )
+        assert_nil updated_student
+        assert_equal FakeDashboard::STUDENT_DELETED_SECTION[:name],
+          Dashboard::User.get(FakeDashboard::STUDENT_DELETED_SECTION[:id]).to_hash[:name]
+      end
+
+      it 'noops for deleted followers' do
+        params = {id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id], name: 'Updated User'}
+        updated_student = DashboardStudent.update_if_allowed(
+          params, FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        )
+        assert_nil updated_student
+        assert_equal FakeDashboard::STUDENT_DELETED_FOLLOWER[:name],
+          Dashboard::User.get(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).to_hash[:name]
+      end
+
+      it 'noops for deleted students' do
+        params = {id: FakeDashboard::STUDENT_DELETED[:id], name: 'Updated User'}
+        updated_student = DashboardStudent.update_if_allowed(
+          params, FakeDashboard::TEACHER_DELETED_USER[:id]
+        )
+        assert_nil updated_student
+        assert_equal FakeDashboard::STUDENT_DELETED[:name],
+          Dashboard::User.get_with_deleted(FakeDashboard::STUDENT_DELETED[:id]).to_hash[:name]
+      end
+    end
   end
 
   describe DashboardSection do
@@ -57,6 +97,7 @@ class SectionApiHelperTest < Minitest::Test
         assert DashboardSection.valid_grade?("12")
         assert DashboardSection.valid_grade?("Other")
       end
+
       it 'does not accept invalid numbers and strings' do
         assert !DashboardSection.valid_grade?("Something else")
         assert !DashboardSection.valid_grade?("56")
@@ -110,7 +151,7 @@ class SectionApiHelperTest < Minitest::Test
           user: {id: 15, user_type: 'teacher'}
         }
         DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
+        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `stage_extras`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', 0, DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
 
       it 'creates a row in the database with name' do
@@ -119,7 +160,7 @@ class SectionApiHelperTest < Minitest::Test
           name: 'My cool section'
         }
         DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
+        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `stage_extras`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', 0, DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
     end
   end

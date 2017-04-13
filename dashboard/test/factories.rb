@@ -2,6 +2,23 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :experiment do
+    name "fancyFeature"
+
+    factory :user_based_experiment, class: 'UserBasedExperiment' do
+      type "UserBasedExperiment"
+      percentage 50
+    end
+    factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
+      type "TeacherBasedExperiment"
+      percentage 50
+      script nil
+    end
+    factory :single_section_experiment, class: 'SingleSectionExperiment' do
+      type "SingleSectionExperiment"
+      section
+    end
+  end
   factory :section_hidden_stage do
     section nil
     stage nil
@@ -636,6 +653,58 @@ FactoryGirl.define do
         whatTeachingSteps: 'learn and practice'
       }.stringify_keys
     end
+  end
+
+  factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
+    association :user, factory: :facilitator, strategy: :create
+    transient do
+      form_data {build :pd_facilitator_program_registration_hash, user: user}
+    end
+    form_data {from_data.to_json}
+  end
+
+  # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
+  factory :pd_facilitator_program_registration_hash, class: 'Hash' do
+    initialize_with do
+      {
+        confirmTeacherconDate: "Yes",
+        addressStreet: "123 Main st",
+        addressCity: "Anywhere",
+        addressState: "AK",
+        addressZip: "12345",
+        contactName: "Fred",
+        contactRelationship: "Imaginary Friend",
+        contactPhone: "123-456-7890",
+        liveFarAway: "Yes",
+        dietaryNeeds: ["Gluten Free"],
+        howTraveling: "Flying",
+        needHotel: "Yes",
+        needAda: "Yes",
+        photoRelease: ["Yes"],
+        gender: "Female",
+        race: ["Hispanic or Latino"],
+        age: "26-30",
+        yearsTaught: "1",
+        gradesTaught: ["Middle School/Junior High"],
+        gradesPlanningToTeach: ["Middle School/Junior High"],
+        subjectsTaught: ["Science"],
+        csYearsTaught: "1",
+        liabilityWaiver: ["Yes"]
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
+    workshop_name 'a workshop'
+    course 'csd'
+    association :user, factory: :teacher, strategy: :create
+    association :teacher_application, factory: :pd_teacher_application, strategy: :create
+  end
+
+  factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
+    association :user, factory: :facilitator, strategy: :create
+    tc1_arrive Date.new(2017, 8, 23)
+    tc1_depart Date.new(2017, 8, 29)
   end
 
   # school info
