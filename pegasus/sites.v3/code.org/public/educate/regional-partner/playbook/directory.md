@@ -28,7 +28,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Tennessee](#tn)**</br/>
 - **[Texas](#tx)**<br/>
 - **[Utah](#ut)**<br/>
-- **[Viriginia](#va)**<br/>
+- **[Virginia](#va)**<br/>
 - **[Washington](#wa)**<br/>
 - **[Wisconsin](#wi)**</br/>
 
@@ -45,7 +45,7 @@ A+ College Ready works to dramatically increase the number of students in Alabam
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for adivce on:** Working with districts statewide
+**Contact us for advice on:** Working with districts statewide
 
 **Contact Information**<br/>
 Melissa Crook<br/>
@@ -70,7 +70,7 @@ To achieve its vision of an Arizona recognized globally for a qualified workforc
 CS Principles<br/>
 CS Discoveries</br>
 
-**Contact us for adivce on:** Fundraising-private, state and federal programs,  Program PD for CS integration, Large-scale CS program implementation across the state/region/nationally<br/>
+**Contact us for advice on:** Fundraising-private, state and federal programs,  Program PD for CS integration, Large-scale CS program implementation across the state/region/nationally<br/>
 
 **Contact Information** <br/>
 Grand Canyon University<br/>
@@ -94,13 +94,13 @@ ________________
 ### [9 Dots Community Learning Center](http://www.9dots.org)<br/>
 Los Angeles and Orange County, California<br/>
 
-9 Dots is a nonprofit collaborative of engineers and educators committed to creating an education culture that gives more kids the chance to choose their own futures.
+9 Dots is a community of engineers, educators, and researchers committed to creating an education culture that gives more kids the chance to imagine and build their own futures. Our getCoding Initiative supports Title I schools in building computer science (CS) pathways from Kindergarten to AP Computer Science Principles. 9 Dots also runs free after school, weekend, and summer programs at our learning center in Hollywood.
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for adivce on:** Community outreach to schools, teachers and students.<br/>
+**Contact us for advice on:** Community outreach, K-12 professional development, and open source curriculum<br/>
 
 **Contact Information** <br/>
 Laura Lee	<br/>
@@ -218,7 +218,7 @@ ________________
 <a id="co"></a>
 
 ## Colorado
-### Mindspark Learning and Colorado Education Initiative<br/>
+### mindspark Learning and Colorado Education Initiative<br/>
 Colorado
 
 Share Fair Nation is a non-profit organization created by the Morgridge Family Foundation a year and a half ago as part of their efforts to provide professional learning opportunities and support as a result of their transformative investments to the education sector. Share Fair Nation's mission is to teach and inspire educators in emerging practices, with the ultimate goals of engaging students and preparing them for success in a modern workforce. Technology is critical to our mission, because it's critical to our learners. Today's students are digital natives so technology helps them engage, and more importantly, it will be a tremendous force in tomorrow's job market.
@@ -419,7 +419,7 @@ ________________
 ### [Nextech](http://nextech.org/)<br/>
 Indiana
 
-Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap between Indiana’s technology-related employment opportunities and the number of high school graduates pursuing them.  Our mission is to connect educators, innovative nonprofits, and entrepreneurs to deliver best-in-class education and work-based learning programs that inspireand enable young people from all backgrounds to pursue careers in technology.
+Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap between Indiana’s technology-related employment opportunities and the number of high school graduates pursuing them.  Our mission is to connect educators, innovative nonprofits, and entrepreneurs to deliver best-in-class education and work-based learning programs that inspire and enable young people from all backgrounds to pursue careers in technology.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -446,13 +446,13 @@ ________________
 ### [NewBoCo](http://Newbo.co)<br/>
 Iowa
 
-New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and coworking.
+New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and co-working.
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and coworking<br/>
+**Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and co-working<br/>
 
 **Contact Information**<br/>
 Kristine Sorensen<br/>
@@ -502,7 +502,7 @@ MMSA develops and applies research and best practices in Science, Technology, En
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** Engaging employers and higher education partners on supporting K-12 computer science. Education-ese such as frameworks, standards, assessment, curriculum, instruction, STEM; state policy actions; and implementing statewide programming.
+**Contact us for advice on:** Engaging employers and higher education partners on supporting K-12 computer science. Education such as frameworks, standards, assessment, curriculum, instruction, STEM; state policy actions; and implementing statewide programming.
 
 **Contact Information**<br/>
 Jason Judd<br/>
@@ -591,7 +591,7 @@ Southern Nevada Regional Professional Development Program (SNRPDP) is a state fu
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** Google Profeesional Development
+**Contact us for advice on:** Google Professional Development
 
 **Contact Information**<br/>
 Frank Mathews<br/>
