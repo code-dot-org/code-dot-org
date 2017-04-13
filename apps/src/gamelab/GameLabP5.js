@@ -1,4 +1,4 @@
-import {singleton as studioApp} from '../StudioApp';
+import {getStore} from '../redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
@@ -813,7 +813,7 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
   this.p5.projectAnimations = {};
   animationList.orderedKeys.forEach(key => {
     const props = animationList.propsByKey[key];
-    const frameCount = allAnimationsSingleFrameSelector(studioApp().reduxStore.getState()) ? 1 : props.frameCount;
+    const frameCount = allAnimationsSingleFrameSelector(getStore().getState()) ? 1 : props.frameCount;
     const image = this.p5.loadImage(props.dataURI, () => {
       const spriteSheet = this.p5.loadSpriteSheet(
           image,

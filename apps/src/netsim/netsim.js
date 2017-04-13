@@ -9,6 +9,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
+import {getStore} from '../redux';
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
 var ObservableEvent = require('../ObservableEvent');
@@ -268,7 +269,7 @@ NetSim.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <NetSimView
         generateCodeAppHtml={generateCodeAppHtmlFromEjs}
         onMount={onMount}
@@ -1355,7 +1356,7 @@ NetSim.prototype.resetShard = function () {
  * Show the instrutions modal dialog on top of the NetSim interface.
  */
 NetSim.prototype.showInstructionsDialog = function () {
-  this.studioApp_.reduxStore.dispatch(openInstructionsDialog({
+  getStore().dispatch(openInstructionsDialog({
     autoClose: false,
     aniGifOnly: false,
     hintsOnly: false

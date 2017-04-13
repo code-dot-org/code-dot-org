@@ -2,7 +2,7 @@
 
 var commonMsg = require('@cdo/locale');
 var utils = require('../utils');
-const studioApp = require('../StudioApp').singleton;
+import {getStore} from '../redux';
 
 /**
  * Returns a list of options (optionally filtered by type) for code-mode
@@ -19,7 +19,7 @@ module.exports = function (typeFilter) {
     dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
     }, typeFilter, null, {
-      showUnderageWarning: !studioApp().reduxStore.getState().pageConstants.is13Plus
+      showUnderageWarning: !getStore().getState().pageConstants.is13Plus
     });
   };
   options.push({

@@ -9,6 +9,7 @@ import ShareDialog from './components/ShareDialog';
 import progress from './progress';
 import Dialog from './LegacyDialog';
 import {Provider} from 'react-redux';
+import {getStore} from '../redux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -157,12 +158,11 @@ function shareProject() {
     // TODO: ditch this in favor of react-redux connector
     // once more of code-studio is integrated into mainline react tree.
     const appType = dashboard.project.getStandaloneApp();
-    const studioApp = require('../StudioApp').singleton;
-    const pageConstants = studioApp().reduxStore.getState().pageConstants;
+    const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
     ReactDOM.render(
-      <Provider store={studioApp().reduxStore}>
+      <Provider store={getStore()}>
         <ShareDialog
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
