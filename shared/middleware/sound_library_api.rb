@@ -14,6 +14,10 @@ SOUND_LIBRARY_BUCKET = 'cdo-sound-library'.freeze
 # https://docs.google.com/document/d/1Oj--H-xwrK3u4A0L5ML73n8XDutsH5n2i8caGRc3NL8/edit
 #
 class SoundLibraryApi < Sinatra::Base
+  helpers do
+    load(CDO.dir('shared', 'middleware', 'helpers', 'core.rb'))
+  end
+
   #
   # GET /api/v1/sound-library/<filename>
   #
