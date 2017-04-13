@@ -468,9 +468,9 @@ class LevelsHelperTest < ActionView::TestCase
     teacher = create(:teacher)
     experiment = create(:teacher_based_experiment,
       earliest_section_at: DateTime.now - 1.days,
-      latest_section_at: DateTime.now + 1.days
+      latest_section_at: DateTime.now + 1.days,
+      percentage: 100,
     )
-    experiment.update!(min_user_id: teacher.id, max_user_id: teacher.id + 1, overflow_max_user_id: 0)
     Experiment.update_cache
     section = create(:section, user: teacher)
     student = create(:student)
