@@ -1,3 +1,4 @@
+- require 'state_abbr'
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
@@ -9,7 +10,7 @@
     background-color: #ff0 !important;
   }
 
-=form_for @workshop_materials_order, url: {action: :create} do |form|
+=form_for @workshop_material_order, url: {action: :create} do |form|
 
   %h1 Thank you for your survey submission
 
@@ -17,14 +18,14 @@
     Complete the following form if you'd like to receive materials to teach the
     unplugged lessons in Courses 1-4 (US attendees only).
 
-  - errors = @workshop_materials_order.errors || {}
+  - errors = @workshop_material_order.errors || {}
   - if errors.any?
     #error_explanation.selectable
       %h2 Error
       %ul
-        - @workshop_materials_order.errors.each do |name, message|
+        - @workshop_material_order.errors.each do |name, message|
           %li
-            %span= raw @workshop_materials_order.errors.full_message(name, message).html_safe
+            %span= raw @workshop_material_order.errors.full_message(name, message).html_safe
 
   #workshop-container
     .form-group
