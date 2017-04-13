@@ -164,6 +164,16 @@ export function incrementRateLimitCounters() {
             // occasionally fail with max_retry. It's possible these would succeed on
             // a second attempt, but we want to discourage this so give an error instead.
             return Promise.reject(`${tooFrequentMsg} Error code: maxretry`);
+          } else if (String(error).includes('disconnect')) {
+            // Sometimes a transaction fails because the response from the
+            // server is lost on the network, so we don't know whether the
+            // transaction succeeded or not. Retry once in this case, since
+            // the consequences of double-incrementing are relatively low.
+            setTimeout(() => {
+              // Make this event visible in UI test output and New Relic.
+              throw new Error('retrying incrementIntervalCounters after network disconnect');
+            }, 0);
+            return incrementIntervalCounters(maxWriteCount, interval, currentTimeMs);
           } else {
             return Promise.reject(error);
           }
