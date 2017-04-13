@@ -313,7 +313,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     delete :destroy
 
     user = user.reload
-    assert user.deleted_at
+    assert user.deleted?
   end
 
   test 'edit shows alert for unconfirmed email for teachers' do
