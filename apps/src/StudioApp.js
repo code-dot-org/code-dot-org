@@ -2920,4 +2920,28 @@ StudioApp.prototype.showRateLimitAlert = function () {
   });
 };
 
-export const singleton = new StudioApp();
+let instance;
+
+export function singleton() {
+  if (!instance) {
+    instance = new StudioApp();
+  }
+  return instance;
+}
+
+if (IN_UNIT_TEST) {
+  let __oldInstance;
+
+  module.exports.stubStudioApp = function () {
+    if (__oldInstance) {
+      throw new Error("StudioApp has already been stubbed. Did you forget to call restore?");
+    }
+    __oldInstance = instance;
+    instance = null;
+  };
+
+  module.exports.restoreStudioApp = function () {
+    instance = __oldInstance;
+    __oldInstance = null;
+  };
+}
