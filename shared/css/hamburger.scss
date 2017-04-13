@@ -2,7 +2,7 @@
 @import 'font';
 
 //colors
-$color_blue_chill_80_approx: rgba(3,147,158, 0.8);
+$color_blue_chill_80_approx: rgba(3, 147, 158, 0.8);
 $color_pacific_blue_approx: #00b2c0;
 
 
@@ -43,7 +43,8 @@ $color_pacific_blue_approx: #00b2c0;
     float: right;
     margin-top: 8px;
     display: inline-block;
-    span {
+
+    %extend_burger {
       cursor: pointer;
       height: 3px;
       width: 25px;
@@ -54,43 +55,28 @@ $color_pacific_blue_approx: #00b2c0;
       content: '';
       margin-top: 2px;
       margin-bottom: 2px;
+    }
+    span {
+      @extend %extend_burger;
       transition: all 500ms ease-in-out;
-      &:before {
-        cursor: pointer;
-        height: 3px;
-        width: 25px;
-        border-radius: 2px;
-        background: $white;
-        position: absolute;
-        display: block;
-        content: '';
-        margin-top: 2px;
-        margin-bottom: 2px;
+      &::before {
+        @extend %extend_burger;
         transition: all 500ms ease-in-out;
         top: -10px;
       }
-      &:after {
-        cursor: pointer;
-        height: 3px;
-        width: 25px;
-        border-radius: 2px;
-        background: $white;
-        position: absolute;
-        display: block;
-        content: '';
-        margin-top: 2px;
-        margin-bottom: 2px;
+      &::after {
+        @extend %extend_burger;
         transition: all 500ms ease-in-out;
         bottom: -10px;
       }
     }
     &.active span {
       background-color: transparent;
-      &:before {
+      &::before {
         top: 0;
         transform: rotate(45deg);
       }
-      &:after {
+      &::after {
         top: 0;
         transform: rotate(-45deg);
       }
@@ -126,20 +112,16 @@ $color_pacific_blue_approx: #00b2c0;
       border-bottom: solid 2px $color_blue_chill_80_approx;
       border-radius: 2px;
       padding-bottom: 10px;
-      display: block;
-      float: none;
       margin-bottom: 5px;
       margin-top: 5px;
       margin-left: 25px;
-      white-space: normal;
-      overflow: visible;
-      &:last-of-type {
+      &::last-of-type {
         border-bottom: none;
       }
-      &:before {
+      &::before {
         content: none;
       }
-      &:last-child {
+      &::last-child {
         margin-right: 0;
       }
       a {
