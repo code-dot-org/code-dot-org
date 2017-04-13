@@ -654,7 +654,11 @@ class Script < ActiveRecord::Base
           },
           script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
         )
-        Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
+        # There are three types of i18n data
+        # 1. Stage names, which we get from the script DSL (i18n variable here)
+        # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
+        # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
+        Script.update_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -679,7 +683,21 @@ class Script < ActiveRecord::Base
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
 
-  def self.update_i18n(stages_i18n, metadata_i18n = {})
+  def self.update_i18n(stages_i18n, script_name, metadata_i18n = {})
+    if metadata_i18n != {}
+      # TODO: write testss
+      stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      metadata_i18n['stages'] = {}
+      JSON.parse(stage_descriptions).each do |stage|
+        stage_name = stage['name']
+        metadata_i18n['stages'][stage_name] = {
+          'description_student' => stage['descriptionStudent'],
+          'description_teacher' => stage['descriptionTeacher']
+        }
+      end
+      metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
+    end
+
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
     i18n.deep_merge!(stages_i18n) {|_, old, _| old}
@@ -756,8 +774,8 @@ class Script < ActiveRecord::Base
     data['stageDescriptions'] = stages.map do |stage|
       {
         name: stage.name,
-        studentDescription: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        teacherDescription: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
+        descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
       }
     end
     data

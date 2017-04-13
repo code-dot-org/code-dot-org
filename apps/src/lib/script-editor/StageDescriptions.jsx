@@ -48,8 +48,8 @@ const StageDescriptions = React.createClass({
     currentDescriptions: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
-        studentDescription: PropTypes.string.isRequired,
-        teacherDescription: PropTypes.string.isRequired,
+        descriptionStudent: PropTypes.string.isRequired,
+        descriptionTeacher: PropTypes.string.isRequired,
       })
     ).isRequired
   },
@@ -89,8 +89,8 @@ const StageDescriptions = React.createClass({
 
       importedDescriptions.push({
         name: lesson.title,
-        studentDescription: lesson.student_desc,
-        teacherDescription: lesson.teacher_desc
+        descriptionStudent: lesson.student_desc,
+        descriptionTeacher: lesson.teacher_desc
       });
     });
 
@@ -115,6 +115,18 @@ const StageDescriptions = React.createClass({
     });
   },
 
+  updatedStageDescriptions() {
+    const { currentDescriptions } = this.props;
+    const { importedDescriptions } = this.state;
+
+    // we want to make sure that we use the existing names, with the imported descriptions
+    return currentDescriptions.map((item, index) => ({
+      name: item.name,
+      descriptionStudent: importedDescriptions[index].descriptionStudent,
+      descriptionTeacher: importedDescriptions[index].descriptionTeacher,
+    }));
+  },
+
   render() {
     const { currentDescriptions } = this.props;
     const { importedDescriptions } = this.state;
@@ -133,12 +145,12 @@ const StageDescriptions = React.createClass({
           {!this.state.collapsed &&
             <div>
               {currentDescriptions.map((stage, index) => {
-                const currentStudent = stage.studentDescription;
-                const currentTeacher = stage.teacherDescription;
+                const currentStudent = stage.descriptionStudent;
+                const currentTeacher = stage.descriptionTeacher;
 
                 const importedStage = importedDescriptions[index];
-                const updatedStudent = hasImported && importedStage.studentDescription;
-                const updatedTeacher = hasImported && importedStage.teacherDescription;
+                const updatedStudent = hasImported && importedStage.descriptionStudent;
+                const updatedTeacher = hasImported && importedStage.descriptionTeacher;
 
                 return (
                   <div style={styles.stage} key={index}>
@@ -179,6 +191,13 @@ const StageDescriptions = React.createClass({
                     <div key={index}>- {name}</div>
                   ))}
                 </div>
+              }
+              {hasImported &&
+                <input
+                  name="stage_descriptions"
+                  type="hidden"
+                  defaultValue={JSON.stringify(this.updatedStageDescriptions())}
+                />
               }
               <button
                 className="btn"
