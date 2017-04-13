@@ -10,7 +10,7 @@ import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
 import {setPropertyDropdown, setImageSelector} from './setPropertyDropdown';
-import {singleton as studioApp} from '../StudioApp';
+import {getStore} from '../redux';
 import * as applabConstants from './constants';
 
 var DEFAULT_WIDTH = "320";
@@ -19,7 +19,7 @@ var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }
 

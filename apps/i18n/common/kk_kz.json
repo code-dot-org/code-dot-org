@@ -362,6 +362,7 @@
   "yes": "Иә",
   "yourProgress": "Your Progress",
   "age": "Age",
+  "assignedTo": "Assigned to",
   "by": "By",
   "deleteProject": "Delete Project",
   "disableMaker": "Disable Maker Toolkit",
@@ -385,5 +386,6 @@
   "share": "Share",
   "unplugged": "UNPLUGGED",
   "unpluggedActivity": "UNPLUGGED ACTIVITY",
+  "viewCourse": "View course",
   "viewUnitOverview": "View Unit Overview"
 }

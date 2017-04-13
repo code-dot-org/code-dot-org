@@ -1,5 +1,6 @@
 /** @file Droplet-friendly command defintions for audio commands. */
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {getStore} from '../../redux';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {
@@ -38,9 +39,9 @@ export const commands = {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
     apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
 
-    if (studioApp.cdoSounds) {
+    if (studioApp().cdoSounds) {
       const url = assetPrefix.fixPath(opts.url);
-      if (studioApp.cdoSounds.isPlayingURL(url)) {
+      if (studioApp().cdoSounds.isPlayingURL(url)) {
         return;
       }
 
@@ -69,7 +70,7 @@ export const commands = {
         // an issue.
         forceHTML5 = true;
       }
-      studioApp.cdoSounds.playURL(url, {
+      studioApp().cdoSounds.playURL(url, {
         volume: 1.0,
         loop: !!opts.loop,
         forceHTML5: forceHTML5,
@@ -85,14 +86,14 @@ export const commands = {
   stopSound(opts) {
     apiValidateType(opts, 'stopSound', 'url', opts.url, 'string', OPTIONAL);
 
-    if (studioApp.cdoSounds) {
+    if (studioApp().cdoSounds) {
       if (opts.url) {
         const url = assetPrefix.fixPath(opts.url);
-        if (studioApp.cdoSounds.isPlayingURL(url)) {
-          studioApp.cdoSounds.stopLoopingAudio(url);
+        if (studioApp().cdoSounds.isPlayingURL(url)) {
+          studioApp().cdoSounds.stopLoopingAudio(url);
         }
       } else {
-        studioApp.cdoSounds.stopAllAudio();
+        studioApp().cdoSounds.stopAllAudio();
       }
     }
   },
@@ -142,6 +143,6 @@ export const dropletConfig = {
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }

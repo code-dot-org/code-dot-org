@@ -237,8 +237,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "deleted user cannot sign in" do
     teacher = create(:teacher)
-    teacher.deleted_at = Time.now # 'delete' the user
-    teacher.save!
+    teacher.destroy
 
     post :create, params: {
       user: {
