@@ -113,7 +113,8 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     invalid_phone_numbers = [
       '1234567',
       'abc',
-      '111 2222'
+      '111 2222',
+      '((((((((((((((((('
     ]
 
     valid_phone_numbers.each do |valid_phone_number|
