@@ -1189,24 +1189,27 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function () {
-  var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
+  const codeWorkspace = document.getElementById('codeWorkspace');
+  if (codeWorkspace) {
+    var workspaceWidth = codeWorkspace.clientWidth;
 
-  // Keep blocks static relative to the right edge in RTL mode
-  if (this.isUsingBlockly() && Blockly.RTL) {
-    if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
-      var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
-      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-        topBlock.moveBy(blockOffset, 0);
-      });
+    // Keep blocks static relative to the right edge in RTL mode
+    if (this.isUsingBlockly() && Blockly.RTL) {
+      if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
+        var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
+        Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+          topBlock.moveBy(blockOffset, 0);
+        });
+      }
     }
+    this.lastWorkspaceWidth = workspaceWidth;
+
+    // Droplet toolbox width varies as the window size changes, so refresh:
+    this.resizeToolboxHeader();
+
+    // Content below visualization is a resizing scroll area in pinned mode
+    onResizeSmallFooter();
   }
-  this.lastWorkspaceWidth = workspaceWidth;
-
-  // Droplet toolbox width varies as the window size changes, so refresh:
-  this.resizeToolboxHeader();
-
-  // Content below visualization is a resizing scroll area in pinned mode
-  onResizeSmallFooter();
 };
 
 /**
@@ -2920,4 +2923,28 @@ StudioApp.prototype.showRateLimitAlert = function () {
   });
 };
 
-export const singleton = new StudioApp();
+let instance;
+
+export function singleton() {
+  if (!instance) {
+    instance = new StudioApp();
+  }
+  return instance;
+}
+
+if (IN_UNIT_TEST) {
+  let __oldInstance;
+
+  module.exports.stubStudioApp = function () {
+    if (__oldInstance) {
+      throw new Error("StudioApp has already been stubbed. Did you forget to call restore?");
+    }
+    __oldInstance = instance;
+    instance = null;
+  };
+
+  module.exports.restoreStudioApp = function () {
+    instance = __oldInstance;
+    __oldInstance = null;
+  };
+}

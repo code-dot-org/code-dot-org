@@ -146,7 +146,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
-      if (level.editCode && !studioApp.editor) {
+      if (level.editCode && !studioApp().editor) {
         timeout = 500;
       }
 
