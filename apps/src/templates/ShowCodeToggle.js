@@ -39,17 +39,19 @@ export default class ShowCodeToggle extends Component {
   };
 
   componentWillMount() {
-    this.setState({showingBlocks: studioApp.editor.currentlyUsingBlocks});
+    if (studioApp().editor) {
+      this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
+    }
   }
 
   onClick = () => {
-    if (studioApp.editCode) {
+    if (studioApp().editCode) {
       // are we trying to toggle from blocks to text (or the opposite)
-      let fromBlocks = studioApp.editor.currentlyUsingBlocks;
+      let fromBlocks = studioApp().editor.currentlyUsingBlocks;
 
       let result;
       try {
-        result = studioApp.editor.toggleBlocks();
+        result = studioApp().editor.toggleBlocks();
       } catch (err) {
         result = {error: err, nonDropletError: true};
       }
@@ -58,17 +60,17 @@ export default class ShowCodeToggle extends Component {
           dropletError: !result.nonDropletError,
           fromBlocks,
         });
-        studioApp.showToggleBlocksError();
+        studioApp().showToggleBlocksError();
       } else {
-        studioApp.onDropletToggle();
-        this.setState({showingBlocks: studioApp.editor.currentlyUsingBlocks});
+        studioApp().onDropletToggle();
+        this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
       }
     } else {
-      studioApp.showGeneratedCode();
+      studioApp().showGeneratedCode();
     }
 
     if (this.props.onToggle) {
-      this.props.onToggle(studioApp.editCode ? studioApp.editor.currentlyUsingBlocks : true);
+      this.props.onToggle(studioApp().editCode ? studioApp().editor.currentlyUsingBlocks : true);
     }
   }
 
@@ -83,17 +85,21 @@ export default class ShowCodeToggle extends Component {
         ]}
       />
     );
+    let label = msg.showCodeHeader();
+    if (studioApp().editCode) {
+      label = this.state.showingBlocks ? msg.showTextHeader() : msg.showBlocksHeader();
+    }
     return (
       <PaneButton
         id="show-code-header"
         hiddenImage={blocksGlyphImage}
         iconClass={this.state.showingBlocks ? "fa fa-code" : ""}
-        label={this.state.showingBlocks ? msg.showCodeHeader() : msg.showBlocksHeader()}
+        label={label}
         isRtl={!!this.props.isRtl}
         isMinecraft={!!this.props.isMinecraft}
         headerHasFocus={!!this.props.hasFocus}
         onClick={this.onClick}
-        style={studioApp.enableShowCode ? {display: 'inline-block'} : {display: 'none'}}
+        style={studioApp().enableShowCode ? {display: 'inline-block'} : {display: 'none'}}
       />
     );
   }
