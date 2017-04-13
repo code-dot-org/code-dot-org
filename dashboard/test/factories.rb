@@ -590,9 +590,9 @@ FactoryGirl.define do
       end
       evaluator.enrolled_and_attending_users.times do
         teacher = create :teacher
-        workshop.enrollment << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
         workshop.sessions.each do |session|
-
+          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
         end
       end
       evaluator.enrolled_unattending_users.times do

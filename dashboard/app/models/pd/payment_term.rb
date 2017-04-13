@@ -72,7 +72,7 @@ class Pd::PaymentTerm < ApplicationRecord
   private
 
   def calculate_csf_workshop(workshop)
-    if workshop
+
   end
 
   def calculate_non_csf_workshop(workshop)

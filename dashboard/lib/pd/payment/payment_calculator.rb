@@ -1,4 +1,4 @@
-module Pd::Payment2
+module Pd::Payment
   class PaymentCalculator
     include Singleton
     MINIMUM_PUZZLES_FOR_CSF_QUALIFICATION = 10
@@ -20,7 +20,7 @@ module Pd::Payment2
     private
 
     def calculate_csf_payment(workshop)
-      return 0 if workshop.type == Pd::Workshop::TYPE_DISTRICT
+      return 0 if workshop.workshop_type == Pd::Workshop::TYPE_DISTRICT
 
       attending_teachers = workshop.sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
 
