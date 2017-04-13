@@ -22,8 +22,8 @@ module.exports = {
       missingBlocks: [],
       xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_moveForward" /></next></block></next></block></next></block></xml>',
       runBeforeClick: function (assert) {
-        assert(studioApp.enableShowCode, "expected enableShowCode to be true");
-        assert(!studioApp.editCode, "Expected editCode to be false");
+        assert(studioApp().enableShowCode, "expected enableShowCode to be true");
+        assert(!studioApp().editCode, "Expected editCode to be false");
         LegacyDialog.levelTestDontFinishOnShow = true;
         const el = document.getElementById('show-code-header');
         assert(el, "Expected there to be a show-code-header button");
