@@ -17,6 +17,7 @@ import {Provider} from 'react-redux';
 import AppView from '../../templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
+import {getStore} from '../../redux';
 
 const TestResults = studioApp().TestResults;
 
@@ -369,7 +370,7 @@ Craft.init = function (config) {
   });
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={
           <CraftVisualizationColumn showScore={!!config.level.useScore}/>

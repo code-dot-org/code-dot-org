@@ -13,6 +13,7 @@ var MusicController = require('../../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
+import {getStore} from '../../redux';
 
 var TestResults = studioApp().TestResults;
 
@@ -313,7 +314,7 @@ Craft.init = function (config) {
   });
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<CraftVisualizationColumn/>}
         onMount={onMount}
