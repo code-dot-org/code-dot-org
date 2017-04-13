@@ -40,11 +40,13 @@ class OptimizeTest < Minitest::Test
     # First request returns original image, begins optimization in background.
     get('/images/logo.png')
     assert_equal 3374, last_response.content_length
+    assert_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
 
     sleep(0.1)
 
     # Second request returns optimized image.
     get('/images/logo.png')
     assert_equal compressed_image.length, last_response.content_length
+    refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
   end
 end

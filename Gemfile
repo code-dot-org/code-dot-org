@@ -53,8 +53,11 @@ group :development do
   gem 'web-console'
 end
 
+# Rack::Cache middleware used in development/test;
+# Rack::Cache::Response used by Rack::Optimize in non-development environments.
+gem 'rack-cache'
+
 group :development, :test do
-  gem 'rack-cache'
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   # Use debugger

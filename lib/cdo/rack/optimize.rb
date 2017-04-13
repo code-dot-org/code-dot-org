@@ -1,4 +1,5 @@
 require 'cdo/optimizer'
+require 'rack/cache'
 
 # Rack middleware that applies an optimizing filter pass on response content.
 module Rack
@@ -23,17 +24,21 @@ module Rack
       optimized_content = Cdo::Optimizer.optimize(content, content_type)
 
       # If the optimizer returns nil, the optimization is still pending.
-      # Return `no-store` cache header so the un-optimized content won't get cached.
       if optimized_content.nil?
-        headers['Cache-Control'] = 'private, no-store'
         optimized_content = content
+
+        # Reduce the `s-maxage` cache-control header, so un-optimized content is only stored briefly in proxy caches.
+        # Browsers will still hold the resource for whatever cache lifetime originally set.
+        response = Rack::Cache::Response.new(status, headers, body)
+        response.shared_max_age = 10
+        headers = response.headers
       end
 
       # Update content-length after transform.
       headers['content-length'] = optimized_content.bytesize.to_s
-      response = [optimized_content]
+      response_body = [optimized_content]
 
-      [status, headers, response]
+      [status, headers, response_body]
     end
 
     def should_process?(env, status, headers, body)
