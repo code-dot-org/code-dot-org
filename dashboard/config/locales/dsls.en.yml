@@ -4886,9 +4886,6 @@ en:
         Are you over 18?: Are you over 18?
         'No': 'No'
         'Yes': 'Yes'
-        answer1: answer1
-        answer2: answer2
-        question: question
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
