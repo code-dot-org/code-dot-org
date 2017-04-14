@@ -4,6 +4,7 @@ require 'active_job'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/cache'
+require 'image_size'
 
 # Optimizes content on-the-fly based on provided content-type.
 # If the process takes longer than specified timeout, the original data will be returned
@@ -69,10 +70,7 @@ module Cdo
     OPTIMIZE_VERSION = 0
 
     def self.cache_key(data)
-      Digest::MD5.new.
-        update(data).
-        update(OPTIMIZE_VERSION.to_s).
-        hexdigest
+      "optimize-#{OPTIMIZE_VERSION}-#{Digest::MD5.hexdigest(data)}"
     end
   end
 
@@ -80,14 +78,16 @@ module Cdo
   class OptimizeJob < ActiveJob::Base
     require 'image_optim'
     require 'image_compressor_pack'
-    require 'image_size'
 
-    logger.level = Logger::WARN
+    # Don't optimize images larger than this threshold.
+    IMAGE_PIXEL_MAX = 2.megabytes
 
     IMAGE_OPTIM = ImageOptim.new(
       config_paths: dashboard_dir('config/image_optim.yml'),
       cache_dir: dashboard_dir('tmp/cache/image_optim')
     )
+
+    logger.level = Logger::WARN
 
     def perform(data)
       cache = Optimizer.cache
@@ -96,7 +96,7 @@ module Cdo
         # Write `false` to cache to prevent concurrent image optimizations.
         cache.write(cache_key, false)
         pixels = ImageSize.new(data).size.inject(&:*) rescue 0
-        if pixels > 2.megabytes
+        if pixels > IMAGE_PIXEL_MAX
           data
         else
           IMAGE_OPTIM.optimize_image_data(data) || data
@@ -104,8 +104,8 @@ module Cdo
       end
     rescue => e
       # Log error and return original content.
+      Honeybadger.notify(e)
       cache.write(cache_key, data) if cache && cache_key
-      logger.fatal "Error: #{e}\n#{CDO.backtrace e}"
       data
     end
   end

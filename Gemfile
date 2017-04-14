@@ -259,3 +259,5 @@ group :staging, :test, :production, :adhoc, :levelbuilder do
   gem 'image_optim', github: 'wjordan/image_optim', ref: 'guetzli'
   gem 'image_optim_rails'
 end
+
+gem 'image_size', require: false

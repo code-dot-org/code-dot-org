@@ -765,6 +765,7 @@ DEPENDENCIES
   image_compressor_pack!
   image_optim!
   image_optim_rails
+  image_size
   ims-lti!
   jbuilder (~> 2.5)
   jquery-rails
