@@ -1,26 +1,26 @@
 ---
 title: Code.org Advocacy Coalition
-
+theme: responsive
 ---
+<link href="/css/interactive_map.css", rel="stylesheet"></link>
 
 # Code.org Advocacy Coalition
-The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](https://drive.google.com/open?id=0B58r1w66kPdsbmJTaWVhSWRaM0E). 
-## Map
+The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](https://drive.google.com/open?id=0B58r1w66kPdsbmJTaWVhSWRaM0E).
+
 
 <%= view :interactive_map, use_url: false %>
 
+<div style="clear:both"></div>
 
-<div style="clear:both">
-</div>
 
 ## Our Agenda
-Despite demand for computer science professionals, the country’s K-12 education system continues to marginalize computer science education. While decisions about what is taught in elementary, middle and high schools are vested in state and local authority, policy at all levels of government must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of our economy. 
+Despite demand for computer science professionals, the country’s K-12 education system continues to marginalize computer science education. While decisions about what is taught in elementary, middle and high schools are vested in state and local authority, policy at all levels of government must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of our economy.
 
-The Code.org Advocacy Coalition supports the implementation of the following policies to make computer science a fundamental part of the K-12 education system: 
+The Code.org Advocacy Coalition supports the implementation of the following policies to make computer science a fundamental part of the K-12 education system:
 
 * Create a state plan for K-12 computer science
 * Define computer science and establish rigorous K-12 computer science academic standards
-* Fund computer science professional development and support course development 
+* Fund computer science professional development and support course development
 * Implement a clear certification pathway for computer science teachers
 * Incentivize higher education institutions to offer computer science to pre-service teachers
 * Establish dedicated computer science positions in state and local education authorities
@@ -44,38 +44,38 @@ The Code.org Advocacy Coalition supports the implementation of the following pol
 * [Professional development funding calculator](https://docs.google.com/spreadsheets/d/1jAqB1Q0IiY4XRvpnfUdDwkfL2OEgvBT2HYg07yQAOSc/pubhtml)
 * [AP CS A data by state over the past 10 years](https://code.org/promote/ap)
 
-For more information, please contact advocacy@code.org. 
+For more information, please contact advocacy@code.org.
 
 
 ## Members
 
 * <a href="http://www.afterschoolalliance.org/">Afterschool Alliance</a>
 * <a href="http://access-ca.org/">Alliance for California Computing Education for Students and Schools (ACCESS)</a>
-* <a href="http://www.aauw.org/">American Association for University Women</a> 
-* <a href="http://anitaborg.org/">Anita Borg Institute</a> 
-* <a href="https://www.ncwit.org/">Association for Computing Machinery</a> 
+* <a href="http://www.aauw.org/">American Association for University Women</a>
+* <a href="http://anitaborg.org/">Anita Borg Institute</a>
+* <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Public Schools</a>
-* <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a> 
-* <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a> 
+* <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a>
+* <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a>
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
 * <a href="http://cra.org/">Computing Research Association</a>
 * <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>
-* <a href="http://csta.acm.org/">CSTA</a> 
-* <a href="https://www.google.com/edu/">Google</a> 
+* <a href="http://csta.acm.org/">CSTA</a>
+* <a href="https://www.google.com/edu/">Google</a>
 * <a href="http://expandingcomputing.cs.umass.edu/">Expanding Computing Education Pathways (ECEP)</a>
 * <a href="https://www.facebook.com/facebookdiversity">Facebook</a>  
-* <a href="https://www.ieee.org/index.html">IEEE</a> 
-* <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a> 
-* <a href="https://www.nms.org/">National Math and Science Initiative</a> 
+* <a href="https://www.ieee.org/index.html">IEEE</a>
+* <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a>
+* <a href="https://www.nms.org/">National Math and Science Initiative</a>
 * <a href="https://www.ncwit.org/">NCWIT</a>
 * <a href="http://nextech.org/">Nextech</a>
 * <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
-* <a href="http://stand.org/">Stand for Children</a> 
-* <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a> 
-* <a href="http://www.technet.org/">TechNet</a> 
+* <a href="http://stand.org/">Stand for Children</a>
+* <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a>
+* <a href="http://www.technet.org/">TechNet</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
 
 [#tools-section]

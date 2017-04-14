@@ -63,7 +63,6 @@ def puts_after_dtp_tasks
   puts <<-EOS.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
     * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
     * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
@@ -271,6 +270,14 @@ def main
 
   puts_script_intro
   ask_for_name
+
+  should_i 'mark robo-DTT as green' do
+    test_sha = GitHub.sha 'test'
+    InfraTestTopic.set_green_commit test_sha
+    should_i 'reset DTT message to yes' do
+      DevelopersTopic.set_dtt 'yes'
+    end
+  end
 
   do_dtt_subroutine
 

@@ -12,8 +12,10 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
 
-gem 'sprockets', '~> 3.6.3'
-gem 'sprockets-rails', '~> 3.1.1'
+# Compile Sprockets assets concurrently in `assets:precompile`.
+# Ref: https://github.com/rails/sprockets/pull/470
+gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
+gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -230,7 +232,6 @@ gem 'addressable'
 gem 'bcrypt'
 gem 'firebase'
 gem 'firebase_token_generator'
-gem 'selectize-rails'
 gem 'sshkit'
 gem 'validates_email_format_of'
 

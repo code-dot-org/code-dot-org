@@ -1,6 +1,7 @@
 ---
 title: CS in Science Facilitator Program
 nav: educate_nav
+theme: responsive
 ---
 # Become a Computer Science in Science Facilitator
 **For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**

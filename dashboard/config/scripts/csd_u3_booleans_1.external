@@ -1,6 +1,5 @@
 name 'CSD U3 - Booleans - 1'
-href 'path/to/html/in/asset/folder'
-css 'unplugged'
+display_name 'Booleans and Conditionals Unplugged'
 markdown <<MARKDOWN
 # Overview
 

@@ -3,7 +3,6 @@
 # Table name: followers
 #
 #  id              :integer          not null, primary key
-#  user_id         :integer
 #  student_user_id :integer          not null
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -14,7 +13,6 @@
 #
 #  index_followers_on_section_id_and_student_user_id  (section_id,student_user_id)
 #  index_followers_on_student_user_id                 (student_user_id)
-#  index_followers_on_user_id_and_student_user_id     (user_id,student_user_id)
 #
 
 # Join table defining student-teacher relationships for Users
@@ -32,12 +30,12 @@ class Follower < ActiveRecord::Base
   end
 
   def teacher_must_be_teacher
-    errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
+    errors.add(:user, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
 
   validate :cannot_follow_yourself, :teacher_must_be_teacher
 
-  validates_presence_of :user, :student_user, :section
+  validates_presence_of :student_user, :section
 
   after_create :assign_script
   def assign_script

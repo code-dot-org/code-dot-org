@@ -16,6 +16,7 @@ import * as gridUtils from './gridUtils';
 import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
+import {getStore} from '../redux';
 
 var designMode = {};
 export default designMode;
@@ -574,7 +575,7 @@ function deleteElement(element) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            studioApp.reduxStore.getState().screens.currentScreenId));
+            getStore().getState().screens.currentScreenId));
   }
 }
 
@@ -632,7 +633,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 
 designMode.onInsertEvent = function (code) {
   Applab.appendToEditor(code);
-  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
   Applab.scrollToEnd();
 };
 
@@ -1134,7 +1135,7 @@ designMode.createScreen = function () {
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  studioApp.reduxStore.dispatch(screens.changeScreen(screenId));
+  getStore().dispatch(screens.changeScreen(screenId));
 };
 
 /**
@@ -1149,7 +1150,7 @@ designMode.changeScreen = function (screenId) {
  */
 function renderScreens(screenId) {
   // Update which screen is shown in run mode
-  Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
+  Applab.changeScreen(getStore().getState().screens.currentScreenId);
 
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
@@ -1193,7 +1194,7 @@ designMode.renderDesignWorkspace = function (element) {
   var props = {
     handleDragStart: function () {
       if ($('#resetButton').is(':visible')) {
-        studioApp.resetButtonClick();
+        studioApp().resetButtonClick();
       }
     },
     element: element || null,
@@ -1206,7 +1207,7 @@ designMode.renderDesignWorkspace = function (element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
-    store: studioApp.reduxStore,
+    store: getStore(),
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
