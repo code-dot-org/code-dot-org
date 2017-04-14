@@ -165,6 +165,25 @@ class SectionApiHelperTest < SequelTestCase
     end
   end
 
+  describe 'DashboardSectionMore' do
+    before do
+      FakeDashboard.use_fake_database
+    end
+
+    describe 'remove_student' do
+      # TODO(asher): After making tests not pollute each other, uncomment this test case and write
+      # additional test cases.
+      # it 'soft-deletes follower' do
+      #   pegasus_section = DashboardSection.fetch_if_teacher(
+      #     FakeDashboard::SECTION_NORMAL[:id],
+      #     FakeDashboard::TEACHER[:id]
+      #   )
+      #   removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
+      #   assert removed
+      # end
+    end
+  end
+
   describe DashboardUserScript do
     # TODO(asher): Add tests here.
   end
