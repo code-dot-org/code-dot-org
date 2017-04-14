@@ -18,9 +18,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "destroying section destroys appropriate followers" do
-    already_deleted_follower = nil
-    Timecop.travel DateTime.new(2017, 2, 18, 12, 0, 0) do
-      already_deleted_follower = create :follower, section: @section
+    delete_time = Time.now - 1.day
+    already_deleted_follower = create :follower, section: @section
+    Timecop.travel(delete_time) do
       already_deleted_follower.destroy
     end
     follower = create :follower, section: @section
@@ -30,25 +30,24 @@ class SectionTest < ActiveSupport::TestCase
     assert @section.reload.deleted?
     assert follower.reload.deleted?
     assert already_deleted_follower.reload.deleted?
-    assert_equal '2017-02-18 12:00:00 UTC', already_deleted_follower.deleted_at.to_s
+    assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
   end
 
   test "restoring section restores appropriate followers" do
-    section = create :section
-    old_deleted_follower = create :follower, section: section
-    Timecop.travel Time.local(2012, 2, 18, 12, 0, 0) do
+    old_deleted_follower = create :follower, section: @section
+    Timecop.travel(Time.now - 1.day) do
       old_deleted_follower.reload.destroy
     end
-    new_deleted_follower = create :follower, section: section
+    new_deleted_follower = create :follower, section: @section
 
-    section.reload.destroy
-    assert section.reload.deleted?
+    @section.reload.destroy
+    assert @section.reload.deleted?
     assert new_deleted_follower.reload.deleted?
     assert old_deleted_follower.reload.deleted?
 
-    Section.with_deleted.find_by_id(section.id).restore(recursive: true, recovery_window: 5.minutes)
+    Section.with_deleted.find_by_id(@section.id).restore(recursive: true, recovery_window: 5.minutes)
 
-    refute section.reload.deleted?
+    refute @section.reload.deleted?
     refute new_deleted_follower.reload.deleted?
     assert old_deleted_follower.reload.deleted?
   end
