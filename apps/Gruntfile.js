@@ -262,6 +262,7 @@ testsContext.keys().forEach(testsContext);
       },
       files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/code-studio.css', 'style/code-studio/code-studio.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
