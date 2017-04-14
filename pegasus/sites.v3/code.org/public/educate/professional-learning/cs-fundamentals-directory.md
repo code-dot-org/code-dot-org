@@ -1,6 +1,7 @@
 ---
 title: K-5 Program
 nav: educate_nav
+theme: responsive
 ---
 <a name="top"></a>
 # Find a Computer Science Fundamentals Facilitator
@@ -2078,6 +2079,9 @@ style="clear:both">&nbsp;
 </p>
 
 <a id="wy"></a>
+
+[col-33]
+
 ## Wyoming
 ### James Kapptie
 Cody, Wyoming
@@ -2086,13 +2090,9 @@ kapptie@pd.code.org
 
 [/col-33]
 
-<p
-style="clear:both">&nbsp;
-</p>
+<div style="clear:both"></div>
 
 <br />
 <br />
 <a href="#top">Back to top</a>
-<p
-style="clear:both";>&nbsp;
-</p>
+

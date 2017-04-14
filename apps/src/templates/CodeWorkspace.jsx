@@ -1,20 +1,18 @@
 import $ from 'jquery';
-var React = require('react');
+import React from 'react';
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-var PaneHeader = require('./PaneHeader');
-var PaneSection = PaneHeader.PaneSection;
-var PaneButton = PaneHeader.PaneButton;
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
 var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var color = require("../util/color");
 var utils = require('@cdo/apps/utils');
+import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
-
-var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
-var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
+import ShowCodeToggle from './ShowCodeToggle';
+import {singleton as studioApp} from '../StudioApp';
 
 var styles = {
   headerIcon: {
@@ -22,25 +20,12 @@ var styles = {
   },
   chevron: {
     fontSize: 18,
+    ':hover': {
+      color: color.white,
+    },
   },
-  runningChevron: {
+  runningIcon: {
     color: color.dark_charcoal
-  },
-  blocksGlyph: {
-    display: 'none',
-    height: 18,
-    lineHeight: '24px',
-    verticalAlign: 'text-bottom',
-    paddingRight: 8
-  },
-  blocksGlyphRtl: {
-    paddingRight: 0,
-    paddingLeft: 8,
-    transform: 'scale(-1, 1)',
-    MozTransform: 'scale(-1, 1)',
-    WebkitTransform: 'scale(-1, 1)',
-    OTransform: 'scale(-1, 1)',
-    msTransform: 'scale(-1, 1)',
   },
 };
 
@@ -54,6 +39,7 @@ var CodeWorkspace = React.createClass({
     isRunning: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
+    runModeIndicators: React.PropTypes.bool.isRequired,
     withSettingsCog: React.PropTypes.bool,
   },
 
@@ -93,18 +79,15 @@ var CodeWorkspace = React.createClass({
       // an order of operations problem with regards to emitting
       // and listening to the resize events.
       textbox.style.bottom = debuggerHeight + 'px';
+      utils.fireResizeEvent();
     }
-  },
-
-  runModeIndicators() {
-    // ignore runModeIndicators in MC
-    return !this.props.isMinecraft;
   },
 
   renderToolboxHeaders() {
     const {
       editCode,
       isRunning,
+      runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
     } = this.props;
@@ -112,8 +95,11 @@ var CodeWorkspace = React.createClass({
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevron,
-      this.runModeIndicators() && isRunning && styles.runningChevron
+      runModeIndicators && isRunning && styles.runningIcon
     ];
+
+    const settingsCog = showSettingsCog &&
+        <SettingsCog {...{isRunning, runModeIndicators}}/>;
     return [
       <PaneSection
         id="toolbox-header"
@@ -127,23 +113,31 @@ var CodeWorkspace = React.createClass({
         <span style={textStyle}>
           {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
         </span>
-        {showSettingsCog && <SettingsCog/>}
+        {settingsCog}
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
         key="show-toolbox-header"
         style={commonStyles.hidden}
       >
-        <i
-          id="show-toolbox-icon"
-          style={chevronStyle}
-          className="fa fa-chevron-circle-right"
-        />
-        <span>
-          {msg.showToolbox()}
+        <span id="show-toolbox-click-target">
+          <i
+            id="show-toolbox-icon"
+            style={chevronStyle}
+            className="fa fa-chevron-circle-right"
+          />
+          <span>
+            {msg.showToolbox()}
+          </span>
         </span>
+        {settingsCog}
       </PaneSection>
     ];
+  },
+
+  onToggleShowCode(usingBlocks) {
+    this.blockCounterEl.style.display =
+        (usingBlocks && studioApp.enableShowBlockCount) ? 'inline-block' : 'none';
   },
 
   render() {
@@ -152,22 +146,11 @@ var CodeWorkspace = React.createClass({
     // By default, continue to show header as focused. When runModeIndicators
     // is enabled, remove focus while running.
     var hasFocus = true;
-    if (this.runModeIndicators() && props.isRunning) {
+    if (props.runModeIndicators && props.isRunning) {
       hasFocus = false;
     }
 
     var isRtl = props.localeDirection === 'rtl';
-
-    var blocksGlyphImage = (
-      <img
-        id="blocks_glyph"
-        src={hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-        style={[
-          styles.blocksGlyph,
-          isRtl && styles.blocksGlyphRtl
-        ]}
-      />
-    );
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
@@ -179,14 +162,11 @@ var CodeWorkspace = React.createClass({
         >
           <div id="codeModeHeaders">
             {this.renderToolboxHeaders()}
-            <PaneButton
-              id="show-code-header"
-              hiddenImage={blocksGlyphImage}
-              iconClass="fa fa-code"
-              label={msg.showCodeHeader()}
+            <ShowCodeToggle
               isRtl={isRtl}
+              hasFocus={hasFocus}
               isMinecraft={props.isMinecraft}
-              headerHasFocus={hasFocus}
+              onToggle={this.onToggleShowCode}
             />
             {!props.readonlyWorkspace &&
               <PaneButton
@@ -209,7 +189,7 @@ var CodeWorkspace = React.createClass({
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
-              <div id="blockCounter">
+              <div id="blockCounter" ref={el => this.blockCounterEl = el}>
                 <ProtectedStatefulDiv id="blockUsed" className="block-counter-default"/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
@@ -243,5 +223,6 @@ module.exports = connect(state => ({
   isRunning: !!state.runState.isRunning,
   showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  isMinecraft: !!state.pageConstants.isMinecraft
+  isMinecraft: !!state.pageConstants.isMinecraft,
+  runModeIndicators: shouldUseRunModeIndicators(state),
 }))(Radium(CodeWorkspace));

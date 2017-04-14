@@ -82,7 +82,7 @@ var IFrameEmbedOverlay = React.createClass({
 
   onClick() {
     if (!this.state.tooYoung) {
-      studioApp.startIFrameEmbeddedApp(this.handleTooYoung);
+      studioApp().startIFrameEmbeddedApp(this.handleTooYoung);
     }
   },
 

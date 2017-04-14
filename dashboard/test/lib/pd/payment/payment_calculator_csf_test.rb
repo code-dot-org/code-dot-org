@@ -8,12 +8,12 @@ module Pd::Payment
 
       # >= 10 passing levels: qualified
       @qualified_teacher = create :teacher, :with_puzzles, num_puzzles: 10
-      @workshop.section.add_student @qualified_teacher
+      @workshop.section.add_student @qualified_teacher, move_for_same_teacher: false
       create :pd_enrollment, workshop: @workshop, user: @qualified_teacher
 
       # < 10 passing levels: unqualified
       @unqualified_teacher = create :teacher, :with_puzzles, num_puzzles: 9
-      @workshop.section.add_student @unqualified_teacher
+      @workshop.section.add_student @unqualified_teacher, move_for_same_teacher: false
       create :pd_enrollment, workshop: @workshop, user: @unqualified_teacher
     end
 
@@ -68,12 +68,12 @@ module Pd::Payment
     test 'teachers in section with enrollments in another workshop are not counted' do
       external_teacher = create :teacher, :with_puzzles, num_puzzles: 10
       create :pd_enrollment, user: external_teacher
-      @workshop.section.add_student external_teacher
+      @workshop.section.add_student external_teacher, move_for_same_teacher: false
 
       summary = PaymentCalculatorCSF.instance.calculate(@workshop)
       assert_equal 2, summary.num_teachers
       assert_equal 1, summary.num_qualified_teachers
-      assert_equal @qualified_teacher, summary.teacher_summaries.first.teacher
+      assert_equal @qualified_teacher, summary.teacher_summaries.find(&:qualified?).teacher
     end
   end
 end

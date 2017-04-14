@@ -1,6 +1,7 @@
 ---
 title: CS Principles Professional Learning Program Application
 nav: plc_csp_nav
+theme: responsive
 ---
 
 # Let’s get started!

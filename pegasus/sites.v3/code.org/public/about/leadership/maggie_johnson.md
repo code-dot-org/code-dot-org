@@ -1,6 +1,7 @@
 ---
 title: Maggie Johnson
 nav: about_nav
+theme: responsive
 ---
 # Maggie Johnson
 

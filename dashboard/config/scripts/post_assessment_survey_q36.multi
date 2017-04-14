@@ -1,0 +1,6 @@
+name 'post-assessment survey q36'
+question 'If you DID NOT take the CS Principles AP exam, why not?'
+right 'Cost of exam'
+right 'Wasn\'t offered at my school'
+right 'I didn\'t think I\'d do well'
+right 'I didn\'t know it was an option'

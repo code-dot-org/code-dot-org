@@ -2,18 +2,19 @@
 #
 # Table name: sections
 #
-#  id           :integer          not null, primary key
-#  user_id      :integer          not null
-#  name         :string(255)
-#  created_at   :datetime
-#  updated_at   :datetime
-#  code         :string(255)
-#  script_id    :integer
-#  grade        :string(255)
-#  login_type   :string(255)      default("email"), not null
-#  deleted_at   :datetime
-#  stage_extras :boolean          default(FALSE), not null
-#  section_type :string(255)
+#  id                :integer          not null, primary key
+#  user_id           :integer          not null
+#  name              :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#  code              :string(255)
+#  script_id         :integer
+#  grade             :string(255)
+#  login_type        :string(255)      default("email"), not null
+#  deleted_at        :datetime
+#  stage_extras      :boolean          default(FALSE), not null
+#  section_type      :string(255)
+#  first_activity_at :datetime
 #
 # Indexes
 #
@@ -150,11 +151,10 @@ class Section < ActiveRecord::Base
 
   # @param student [User] The student to enroll in this section.
   # @param move_for_same_teacher [Boolean] Whether the student should be unenrolled from other
-  #   sections belonging to the same teacher. (default true)
+  #   sections belonging to the same teacher.
   # @return [Follower] The newly created follower enrollment.
-  # TODO(asher): Change the default value of move_for_same_teacher to false. Determine whether it
-  #   is possible to eliminate this option.
-  def add_student(student, move_for_same_teacher: true)
+  # TODO(asher): Eliminate this option.
+  def add_student(student, move_for_same_teacher:)
     if move_for_same_teacher
       sections_with_same_teacher = student.sections_as_student.where(user_id: user_id)
       unless sections_with_same_teacher.empty?
@@ -169,7 +169,7 @@ class Section < ActiveRecord::Base
       end
     end
 
-    Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+    Follower.find_or_create_by!(student_user: student, section: self)
   end
 
   private

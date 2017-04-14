@@ -41,9 +41,10 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.6.9",
+    "@code-dot-org/blockly": "1.6.13",
     "@code-dot-org/bramble": "0.1.13",
-    "@code-dot-org/js-interpreter-tyrant": "^0.0.1",
+    "@code-dot-org/johnny-five": "0.9.62-cdo.1",
+    "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/p5.play": "1.1.6-cdo",
     "@code-dot-org/piskel": "0.10.0-cdo.0",
@@ -86,6 +87,7 @@
     "enzyme": "2.4.1",
     "es6-promise": "3.0.2",
     "eslint": "^3.7.1",
+    "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-react": "^5.2.2",
     "exports-loader": "^0.6.3",
     "express": "4.11.2",
@@ -101,7 +103,7 @@
     "grunt-contrib-clean": "0.6.0",
     "grunt-contrib-concat": "0.5.1",
     "grunt-contrib-copy": "0.7.0",
-    "grunt-contrib-uglify": "0.7.0",
+    "grunt-contrib-uglify": "2.3.0",
     "grunt-contrib-watch": "0.6.1",
     "grunt-exec": "0.4.6",
     "grunt-express": "1.4.1",
@@ -118,7 +120,6 @@
     "http-proxy": "1.11.1",
     "http-server": "^0.9.0",
     "immutable": "3.8.1",
-    "johnny-five": "0.9.62",
     "jquery": "2.1.4",
     "jquery-ui": "1.10.5",
     "js-cookie": "^2.1.2",
@@ -191,7 +192,6 @@
     "style-loader": "^0.13.1",
     "time-grunt": "^1.3.0",
     "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#c88a3793cf7953090f78fa36f0e991abdcd756da",
-    "uglify-js": "2.4.24",
     "unminified-webpack-plugin": "^1.1.0",
     "video.js": "4.5.2",
     "webpack": "1.13.1",
@@ -203,11 +203,11 @@
   },
   "dependencies": {
     "@code-dot-org/js-interpreter": "^1.1.1",
-    "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
     "crypto-js": "^3.1.9-1",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
     "query-string": "4.1.0",
-    "react-hot-loader": "^1.3.1"
+    "react-hot-loader": "^1.3.1",
+    "selectize": "^0.12.4"
   }
 }

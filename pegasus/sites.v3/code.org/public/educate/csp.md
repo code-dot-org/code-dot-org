@@ -2,6 +2,7 @@
 title: Computer Science Principles
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 # Computer Science Principles #
@@ -91,19 +92,19 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
-<div style="width: 30%; float: left; margin-right: 12px;">
+<div class="col-25" style="float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "images_pixels", video_code: "15aqFQQVBWU", play_button: 'center' %>
 
 </div>
 
-<div style="width: 30%; float: left; margin-right: 12px;">
+<div class="col-25" style="float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "digital_compression", video_code: "By30SCp-Tsw", play_button: 'center' %>
 
 </div>
 
-<div style="width: 30%; float: left; margin-right: 12px;">
+<div class="col-25" style="float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "the_internet", video_code: "ZhEf7e4kopM", play_button: 'center' %>
 

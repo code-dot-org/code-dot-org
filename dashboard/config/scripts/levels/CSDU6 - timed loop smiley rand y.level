@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Infinite Loop\r\n\r\nThe `timedLoop()` is really useful not only for looping code at a slower speed, but also if you want to a loop to run infinitely. The provided program moves the image \"smiley\" to a random x position every second, can you make the image also move to a random y?",
+    "markdown_instructions": "# Infinite Loop\r\n\r\nThe `timedLoop()` is really useful not only for looping code at a slower speed, but also to loop code infinitely. The provided program moves the image \"smiley\" to a random x position every second, can you make the image also move to a random y?",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

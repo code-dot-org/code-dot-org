@@ -1,6 +1,7 @@
 ---
 title: Translators
 nav: translate_nav
+theme: responsive
 ---
 # Lead Translators 
 

@@ -8,7 +8,7 @@
     "skin": "applab",
     "code_functions": {
       "setNumber": null,
-      "value": null
+      "soundSensor.value": null
     },
     "edit_code": true,
     "embed": "false",

@@ -1,5 +1,5 @@
 /** @file Playground Component setup tests */
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
@@ -43,8 +43,8 @@ describe('Circuit Playground Components', () => {
           'toggleSwitch',
           'buzzer',
           'soundSensor',
-          'tempSensor',
           'lightSensor',
+          'tempSensor',
           'accelerometer',
           'buttonL',
           'buttonR',
@@ -97,6 +97,125 @@ describe('Circuit Playground Components', () => {
 
           it(`on pin ${pin}`, () => {
             expect(led.pin).to.equal(pin);
+          });
+        });
+      });
+
+      // Note: The Mozilla color value documentation was very
+      // helpful when writing these tests:
+      // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+      describe('that each accept color formats', () => {
+        let led;
+        beforeEach(() => {
+          led = createCircuitPlaygroundComponents(board).colorLeds[0];
+        });
+
+        it('hexadecimal color "#306090"', () => {
+          led.color('#306090');
+          expect(led.color()).to.deep.equal({
+            red: 0x30,
+            green: 0x60,
+            blue: 0x90,
+          });
+        });
+
+        it('CSS1 color keywords "lime"', () => {
+          led.color('lime');
+          expect(led.color()).to.deep.equal({
+            red: 0x00,
+            green: 0xff,
+            blue: 0x00,
+          });
+        });
+
+        it('CSS2 color keywords "orange"', () => {
+          led.color('orange');
+          expect(led.color()).to.deep.equal({
+            red: 0xff,
+            green: 0xa5,
+            blue: 0x00,
+          });
+        });
+
+        it('CSS3 color keywords "chocolate"', () => {
+          led.color('chocolate');
+          expect(led.color()).to.deep.equal({
+            red: 0xd2,
+            green: 0x69,
+            blue: 0x1e,
+          });
+        });
+
+        it('CSS4 color keywords "rebeccapurple"', () => {
+          // See: https://codepen.io/trezy/post/honoring-a-great-man
+          led.color('rebeccapurple');
+          expect(led.color()).to.deep.equal({
+            red: 0x66,
+            green: 0x33,
+            blue: 0x99,
+          });
+        });
+
+        it('CSS functional notation "rgb(30, 60, 90)"', () => {
+          led.color('rgb(30, 60, 90)');
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
+          led.color('rgba(30, 60, 90, 0.5)');
+          expect(led.color()).to.deep.equal({
+            red: 15,
+            green: 30,
+            blue: 45,
+          });
+        });
+
+        it('CSS4 functional notation "rgb(30, 60, 90, 0.5)"', () => {
+          led.color('rgb(30, 60, 90, 0.5)');
+          expect(led.color()).to.deep.equal({
+            red: 15,
+            green: 30,
+            blue: 45,
+          });
+        });
+
+        it('CSS4 functional notation "rgba(30, 60, 90)"', () => {
+          led.color('rgba(30, 60, 90)');
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('Array of color values [30, 60, 90]', () => {
+          led.color([30, 60, 90]);
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('Color object {red: 30, green: 60, blue: 90}', () => {
+          led.color({red: 30, green: 60, blue: 90});
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('Separate color arguments (30, 60, 90)', () => {
+          led.color(30, 60, 90);
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
           });
         });
       });
@@ -169,10 +288,11 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('soundSensor', () => {
-      let soundSensor;
+      let soundSensor, pin;
 
       beforeEach(() => {
         soundSensor = createCircuitPlaygroundComponents(board).soundSensor;
+        pin = soundSensor.pin;
       });
 
       it('creates a five.Sensor', () => {
@@ -191,6 +311,62 @@ describe('Circuit Playground Components', () => {
         expect(soundSensor).to.haveOwnProperty('start');
         expect(soundSensor).to.haveOwnProperty('getAveragedValue');
         expect(soundSensor).to.haveOwnProperty('setScale');
+      });
+
+      describe('setScale', () => {
+        it('adjusts the range of values provided by .value', () => {
+          // Before setting scale, raw values are passed through to .value
+          setRawAnalogValue(pin, 0);
+          expect(soundSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 500);
+          expect(soundSensor.value).to.equal(500);
+          setRawAnalogValue(pin, 1023);
+          expect(soundSensor.value).to.equal(1023);
+
+          soundSensor.setScale(0, 100);
+
+          // After setting scale, raw values are mapped to the new range
+          setRawAnalogValue(pin, 0);
+          expect(soundSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 512);
+          expect(soundSensor.value).to.equal(50);
+          setRawAnalogValue(pin, 1023);
+          expect(soundSensor.value).to.equal(100);
+        });
+
+        it('clamps values provided by .value to the given range', () => {
+          // Before setting scale, values are not clamped
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, -1);
+          expect(soundSensor.value).to.equal(-1);
+          setRawAnalogValue(pin, 1024);
+          expect(soundSensor.value).to.equal(1024);
+
+          soundSensor.setScale(0, 100);
+
+          // Afterward, values ARE clamped
+          setRawAnalogValue(pin, -1);
+          expect(soundSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 1024);
+          expect(soundSensor.value).to.equal(100);
+        });
+
+        it('rounds values provided by .value to integers', () => {
+          // Before setting scale, raw values are not rounded
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, Math.PI);
+          expect(soundSensor.value).to.equal(Math.PI);
+          setRawAnalogValue(pin, 543.21);
+          expect(soundSensor.value).to.equal(543.21);
+
+          soundSensor.setScale(0, 100);
+
+          // Afterward, only integer values are returned
+          for (let i = 0; i < 1024; i++) {
+            setRawAnalogValue(pin, i);
+            expect(soundSensor.value % 1).to.equal(0);
+          }
+        });
       });
     });
 
@@ -213,18 +389,21 @@ describe('Circuit Playground Components', () => {
         expect(tempSensor.pin).to.equal(0);
       });
 
-      it('with sensor methods', () => {
-        expect(tempSensor).to.haveOwnProperty('start');
-        expect(tempSensor).to.haveOwnProperty('getAveragedValue');
-        expect(tempSensor).to.haveOwnProperty('setScale');
+      it('with a F (farenheit) property', () => {
+        expect(tempSensor).to.have.ownProperty('F');
+      });
+
+      it('and a C (celsius) property', () => {
+        expect(tempSensor).to.have.ownProperty('C');
       });
     });
 
     describe('lightSensor', () => {
-      let lightSensor;
+      let lightSensor, pin;
 
       beforeEach(() => {
         lightSensor = createCircuitPlaygroundComponents(board).lightSensor;
+        pin = lightSensor.pin;
       });
 
       it('creates a five.Sensor', () => {
@@ -243,6 +422,62 @@ describe('Circuit Playground Components', () => {
         expect(lightSensor).to.haveOwnProperty('start');
         expect(lightSensor).to.haveOwnProperty('getAveragedValue');
         expect(lightSensor).to.haveOwnProperty('setScale');
+      });
+
+      describe('setScale', () => {
+        it('adjusts the range of values provided by .value', () => {
+          // Before setting scale, raw values are passed through to .value
+          setRawAnalogValue(pin, 0);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 500);
+          expect(lightSensor.value).to.equal(500);
+          setRawAnalogValue(pin, 1023);
+          expect(lightSensor.value).to.equal(1023);
+
+          lightSensor.setScale(0, 100);
+
+          // After setting scale, raw values are mapped to the new range
+          setRawAnalogValue(pin, 0);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 512);
+          expect(lightSensor.value).to.equal(50);
+          setRawAnalogValue(pin, 1023);
+          expect(lightSensor.value).to.equal(100);
+        });
+
+        it('clamps values provided by .value to the given range', () => {
+          // Before setting scale, values are not clamped
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, -1);
+          expect(lightSensor.value).to.equal(-1);
+          setRawAnalogValue(pin, 1024);
+          expect(lightSensor.value).to.equal(1024);
+
+          lightSensor.setScale(0, 100);
+
+          // Afterward, values ARE clamped
+          setRawAnalogValue(pin, -1);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 1024);
+          expect(lightSensor.value).to.equal(100);
+        });
+
+        it('rounds values provided by .value to integers', () => {
+          // Before setting scale, raw values are not rounded
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, Math.PI);
+          expect(lightSensor.value).to.equal(Math.PI);
+          setRawAnalogValue(pin, 543.21);
+          expect(lightSensor.value).to.equal(543.21);
+
+          lightSensor.setScale(0, 100);
+
+          // Afterward, only integer values are returned
+          for (let i = 0; i < 1024; i++) {
+            setRawAnalogValue(pin, i);
+            expect(lightSensor.value % 1).to.equal(0);
+          }
+        });
       });
     });
 
@@ -573,6 +808,17 @@ describe('Circuit Playground Components', () => {
       });
     });
   });
+
+  /**
+   * Simulate a raw value coming back from the board on the given pin.
+   * @param {number} pin
+   * @param {number} rawValue - usually in range 0-1023.
+   * @throws if nothing is monitoring the given analog pin
+   */
+  function setRawAnalogValue(pin, rawValue) {
+    const readCallback = board.io.analogRead.args.find(callArgs => callArgs[0] === pin)[1];
+    readCallback(rawValue);
+  }
 });
 
 /**
@@ -592,6 +838,9 @@ function newBoard() {
   // they get called.
   io.sysexCommand = sinon.spy();
   io.sysexResponse = sinon.spy();
+
+  // Spy on this so we can retrieve and use the registered callbacks if needed
+  sinon.spy(io, 'analogRead');
 
   const board = new five.Board({
     io: io,

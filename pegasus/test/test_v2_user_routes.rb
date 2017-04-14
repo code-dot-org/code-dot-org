@@ -5,8 +5,9 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
+require_relative 'sequel_test_case'
 
-class V2UserRoutesTest < Minitest::Test
+class V2UserRoutesTest < SequelTestCase
   describe 'User Routes' do
     before do
       FakeDashboard.use_fake_database
@@ -108,8 +109,15 @@ class V2UserRoutesTest < Minitest::Test
         )
       end
 
-      it 'returns no deleted students or deleted followers' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+      it 'returns no deleted followers' do
+        with_role FakeDashboard::TEACHER_DELETED_FOLLOWER
+        @pegasus.get '/v2/students'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal [], JSON.parse(@pegasus.last_response.body)
+      end
+
+      it 'returns no deleted users' do
+        with_role FakeDashboard::TEACHER_DELETED_USER
         @pegasus.get '/v2/students'
         assert_equal 200, @pegasus.last_response.status
         assert_equal [], JSON.parse(@pegasus.last_response.body)
@@ -168,13 +176,13 @@ class V2UserRoutesTest < Minitest::Test
 
       it 'returns 403 when seeking deleted student' do
         with_role FakeDashboard::ADMIN
-        @pegasus.get "/v2/students/#{FakeDashboard::DELETED_STUDENT[:id]}"
+        @pegasus.get "/v2/students/#{FakeDashboard::STUDENT_DELETED[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
 
       it 'returns 403 when seeking former student' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
-        @pegasus.get "/v2/students/#{FakeDashboard::SELF_STUDENT[:id]}"
+        with_role FakeDashboard::TEACHER_DELETED_FOLLOWER
+        @pegasus.get "/v2/students/#{FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
     end
@@ -183,7 +191,7 @@ class V2UserRoutesTest < Minitest::Test
       NEW_NAME = 'Sherry Student'
 
       it 'returns 403 "Forbidden" when signed in as another student' do
-        with_role FakeDashboard::SELF_STUDENT
+        with_role FakeDashboard::STUDENT_SELF
         Dashboard.db.transaction(rollback: :always) do
           @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
             {name: NEW_NAME}.to_json,
@@ -193,7 +201,7 @@ class V2UserRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" when signed in as unconnected teacher' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_SELF
         Dashboard.db.transaction(rollback: :always) do
           @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
             {name: NEW_NAME}.to_json,
@@ -219,9 +227,9 @@ class V2UserRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" when signed in as former teacher' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_FOLLOWER
         Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::SELF_STUDENT[:id]}/update",
+          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]}/update",
             {name: NEW_NAME}.to_json,
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
           assert_equal 403, @pegasus.last_response.status

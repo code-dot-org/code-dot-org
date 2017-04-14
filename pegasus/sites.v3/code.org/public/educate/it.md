@@ -1,6 +1,7 @@
 ---
 title: IT Requirements
 nav: educate_nav
+theme: responsive
 ---
 # IT requirements for Code.org tutorials
 
@@ -51,7 +52,7 @@ If you can't get embedded videos to play, you can still use our tutorials withou
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25/> for each video, allowing students to download individual tutorial videos.
 3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
-  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px"/>
+  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%"/>
 
 ## Still having trouble?
 
