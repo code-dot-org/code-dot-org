@@ -7,8 +7,8 @@
   "properties": {
     "skin": "artist",
     "instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
-    "x": "166",
-    "y": "184",
+    "x": "68",
+    "y": "93",
     "start_direction": "90",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -234,8 +234,8 @@
                       </value>
                       <next>
                         <block type="jump_to_xy">
-                          <title name="XPOS">90</title>
-                          <title name="YPOS">86</title>
+                          <title name="XPOS">185</title>
+                          <title name="YPOS">285</title>
                           <next>
                             <block type="create_a_circle_size" inline="false">
                               <value name="VALUE">
