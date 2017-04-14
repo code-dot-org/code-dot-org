@@ -71,7 +71,10 @@
     "markdown_instructions": "# Extend Your Scene\r\n\r\nThis is the final scene you made with your sprites. You'll now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n# Do This\r\n\r\n* Add a draw loop to your program\r\n* Use the lasso selector (click, hold and drag) to select all your code and place it inside your draw loop\r\n* Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that the move.",
     "project_template_level_name": "CSD U3 Sprites scene template",
     "display_name": "Challenge: Extend Your Scene",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

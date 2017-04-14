@@ -235,6 +235,10 @@ class CDOImpl < OpenStruct
     site_url('code.org', path, scheme)
   end
 
+  def default_scheme
+    rack_env?(:development) ? 'http:' : 'https:'
+  end
+
   def dir(*dirs)
     File.join(root_dir, *dirs)
   end
