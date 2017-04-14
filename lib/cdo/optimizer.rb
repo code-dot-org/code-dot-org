@@ -2,6 +2,7 @@ require 'timeout'
 require 'digest/md5'
 require 'active_job'
 require 'active_support/core_ext/module/attribute_accessors'
+require 'active_support/core_ext/numeric/bytes'
 require 'active_support/cache'
 
 # Optimizes content on-the-fly based on provided content-type.
@@ -79,6 +80,7 @@ module Cdo
   class OptimizeJob < ActiveJob::Base
     require 'image_optim'
     require 'image_compressor_pack'
+    require 'image_size'
 
     logger.level = Logger::WARN
 
@@ -93,7 +95,12 @@ module Cdo
       cache.fetch(cache_key) do
         # Write `false` to cache to prevent concurrent image optimizations.
         cache.write(cache_key, false)
-        IMAGE_OPTIM.optimize_image_data(data) || data
+        pixels = ImageSize.new(data).size.inject(&:*) rescue 0
+        if pixels > 2.megabytes
+          data
+        else
+          IMAGE_OPTIM.optimize_image_data(data) || data
+        end
       end
     rescue => e
       # Log error and return original content.
