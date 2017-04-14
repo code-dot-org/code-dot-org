@@ -86,8 +86,11 @@
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
               = render partial: 'shared/user_header_ajax'
 
-              &nbsp;
-              = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: {user_type: user_type}
+              - hamburger_class = current_user ? '' : 'show_on_tablet'
+              %span{class: hamburger_class}
+                &nbsp;
+                &nbsp;
+                = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: {user_type: user_type}
 
 - if script_level
   - view_as = @user || current_user
