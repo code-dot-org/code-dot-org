@@ -446,9 +446,8 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    # TTS
-    # TTS is currently only enabled for k1
-    if script && script.is_k1?
+    # Text to speech
+    if script && script.text_to_speech_enabled?
       level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
       level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end

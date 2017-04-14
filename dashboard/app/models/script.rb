@@ -394,6 +394,10 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  def text_to_speech_enabled?
+    is_k1? || name == Script::COURSEC_DRAFT_NAME
+  end
+
   def hide_solutions?
     name == 'algebra'
   end
