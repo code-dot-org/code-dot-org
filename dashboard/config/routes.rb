@@ -213,7 +213,6 @@ Dashboard::Application.routes.draw do
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
-  get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/debug', to: 'admin_reports#debug'
 
   # internal search tools
@@ -363,8 +362,9 @@ Dashboard::Application.routes.draw do
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
-    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
-    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
+    get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
+    post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
+    get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
