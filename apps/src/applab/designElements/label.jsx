@@ -210,13 +210,10 @@ export default {
 
   resizeToFitText: function (element) {
     var size = this.getBestSize(element);
-    console.log("New best size: (" + size.width + ", " + size.height + ")");
-    console.log("Alignment: " + element.style.textAlign);
 
     // For center or right alignment, we should adjust the left side to effectively retain that alignment.
     if (element.style.textAlign === 'center' || element.style.textAlign === 'right') {
       var left = parseInt(element.style.left, 10);
-      console.log("Old left: " + element.style.left + " (" + left + ")");
       var width = parseInt(element.style.width, 10);
       // Positive delta means that it is getting wider
       var delta = size.width - width;
@@ -226,9 +223,11 @@ export default {
         // must be centered
         left -= delta / 2;
       }
-      console.log("New left, dude: " + left);
       // Don't move text past the left side
       element.style.left = Math.max(0, left) + 'px';
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.left = element.style.left;
+      }
     }
     element.style.width = size.width + 'px';
     element.style.height = size.height + 'px';
@@ -244,17 +243,14 @@ export default {
     var currentSize = this.getCurrentSize(element);
     var bestSize = this.getBestSize(element);
     var isBestSize = (currentSize.width == bestSize.width && currentSize.height == bestSize.height);
-    if (isBestSize) {
-      console.log("Current size: (" + currentSize.width + ", " + currentSize.height + ")");
-    }
-    return currentSize.width === bestSize.width && currentSize.height == bestSize.height;
+    return Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
+        Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
   },
 
   /**
    * @returns {boolean} True if it modified the backing element
    */
   onPropertyChange: function (element, name, value, previouslyFitExactly) {
-    console.log('Changing ' + name + ' property to ' + value + ' (' + previouslyFitExactly + ')');
     switch (name) {
       case 'text':
       case 'fontSize':
@@ -274,3 +270,21 @@ export default {
     return true;
   }
 };
+
+
+/**
+ * This represents the amount of error allowed before we consider a label's size to "fit exactly".
+ * This allows for rounding errors for adjusting center aligned labels, as well as allowing users
+ * to have a chance of returning to an exact fit.
+ */
+const STILL_FITS = 3;
+
+
+/**
+ * While in design mode, elements get wrapped in a ui-draggable container.
+ * @returns {true} If element is currently wrapped
+ */
+function isDraggableContainer(element) {
+  return $(element).hasClass('ui-draggable');
+}
+
