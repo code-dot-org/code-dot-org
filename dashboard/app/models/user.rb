@@ -742,7 +742,7 @@ class User < ActiveRecord::Base
   end
 
   def confirmation_required?
-    teacher? && !confirmed?
+    false
   end
 
   # There are some shenanigans going on with this age stuff. The
