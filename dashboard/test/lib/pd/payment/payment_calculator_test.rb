@@ -5,7 +5,7 @@ module Pd::Payment
     self.use_transactional_test_case = true
 
     test 'Raise error if workshop is not ended' do
-      workshop = create(:pd_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
+      workshop = create(:pd_workshop, course: Pd::Workshop::COURSE_CSF)
       error = assert_raises(RuntimeError) do
         PaymentCalculator.instance.calculate(workshop)
       end
@@ -14,11 +14,11 @@ module Pd::Payment
     end
 
     test 'Calculate CSF Workshop payment' do
-      workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF)
+      workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
 
-      create_passed_levels(workshop.enrollments)
+      create_passed_levels(workshop.enrollments[0..9])
 
-      assert_equal 1000, PaymentCalculator.instance.calculate(workshop)
+      assert_equal 500, PaymentCalculator.instance.calculate(workshop)
     end
 
     test 'Calculate CSF Workshop with insufficient attendees' do
