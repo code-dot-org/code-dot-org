@@ -4,7 +4,7 @@
 #
 #  id                  :integer          not null, primary key
 #  regional_partner_id :integer
-#  start_date          :date
+#  start_date          :date             not null
 #  end_date            :date
 #  course              :string(255)
 #  subject             :string(255)
