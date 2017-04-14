@@ -1,8 +1,8 @@
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
-import ProgramRegistrationComponent from './ProgramRegistrationComponent';
+import FormComponent from '../form_components/FormComponent';
 
-export default class PhotoRelease extends ProgramRegistrationComponent {
+export default class PhotoRelease extends FormComponent {
   render() {
     return (
       <FormGroup>
