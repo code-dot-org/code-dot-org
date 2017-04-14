@@ -166,12 +166,6 @@ class AdminReportsController < ApplicationController
     end
   end
 
-  def admin_stats
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @stats = Properties.get('admin_stats')
-    end
-  end
-
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
