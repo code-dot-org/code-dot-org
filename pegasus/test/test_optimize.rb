@@ -8,6 +8,9 @@ module Cdo
   end
 end
 
+class ImageSize
+end
+
 class ImageOptim
 end
 
@@ -16,10 +19,11 @@ class OptimizeTest < Minitest::Test
 
   def setup
     # Stub image_optim dependencies not available in unit-test environment.
-    Cdo::OptimizeJob.stubs(:require).with('image_compressor_pack')
-    Cdo::OptimizeJob.stubs(:require).with('image_optim')
+    Cdo::OptimizeJob.stubs(:require)
     @image_optim = mock('double')
     ::ImageOptim.stubs(new: @image_optim)
+    @image_size = mock('double')
+    ::ImageSize.stubs(new: @image_size)
 
     require 'cdo/optimizer'
     Cdo::Optimizer.stubs(cache: ActiveSupport::Cache::MemoryStore.new)
@@ -36,6 +40,7 @@ class OptimizeTest < Minitest::Test
   def test_optimize_image
     compressed_image = 'compressed-image-data'
     @image_optim.expects(:optimize_image_data).returns(compressed_image)
+    @image_size.expects(:size).returns([1, 1])
 
     # First request returns original image, begins optimization in background.
     get('/images/logo.png')
