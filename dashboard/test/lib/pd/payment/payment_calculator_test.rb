@@ -14,7 +14,7 @@ module Pd::Payment
     end
 
     test 'Calculate CSF Workshop payment' do
-      workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
+      workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF)
 
       create_passed_levels(workshop.enrollments)
 
