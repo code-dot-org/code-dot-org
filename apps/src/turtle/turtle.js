@@ -1537,11 +1537,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   this.ctxFeedback.canvas.height = height || origHeight;
 
   // Clear the feedback layer
-  var style = this.ctxFeedback.fillStyle;
-  this.ctxFeedback.fillStyle = color.white;
-  this.ctxFeedback.clearRect(0, 0, this.ctxFeedback.canvas.width,
-    this.ctxFeedback.canvas.height);
-  this.ctxFeedback.fillStyle = style;
+  this.clearImage_(this.ctxFeedback);
 
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // For frozen skins, show everything - including background,
@@ -1550,22 +1546,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
     this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
-    // Draw the images layer.
-    if (!this.level.discardBackground) {
-      this.ctxFeedback.globalCompositeOperation = 'source-over';
-      this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
-          this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-    }
-
-    // Draw the predraw layer.
-    this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-
-    // Draw the user layer.
-    this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    this.drawImage_(this.ctxFeedback);
   }
 
   // Save the canvas as a png
@@ -1576,6 +1557,33 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   this.ctxFeedback.canvas.height = origHeight;
 
   return image;
+};
+
+Artist.prototype.clearImage_ = function (context) {
+  var style = context.fillStyle;
+  context.fillStyle = color.white;
+  context.clearRect(0, 0, context.canvas.width,
+    context.canvas.height);
+  context.fillStyle = style;
+};
+
+Artist.prototype.drawImage_ = function (context) {
+  // Draw the images layer.
+  if (!this.level.discardBackground) {
+    context.globalCompositeOperation = 'source-over';
+    context.drawImage(this.ctxImages.canvas, 0, 0,
+      context.canvas.width, context.canvas.height);
+  }
+
+  // Draw the predraw layer.
+  context.globalCompositeOperation = 'source-over';
+  context.drawImage(this.ctxPredraw.canvas, 0, 0,
+    context.canvas.width, context.canvas.height);
+
+  // Draw the user layer.
+  context.globalCompositeOperation = 'source-over';
+  context.drawImage(this.ctxScratch.canvas, 0, 0,
+    context.canvas.width, context.canvas.height);
 };
 
 // Helper for creating canvas elements.
