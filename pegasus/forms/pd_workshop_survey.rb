@@ -34,27 +34,31 @@ class PdWorkshopSurvey
       result[:how_much_learned_s] = required_enum data, :how_much_learned_s
       result[:how_motivating_s] = required_enum data, :how_motivating_s
 
-      result[:who_facilitated_ss] = required data[:who_facilitated_ss]
+      enrollment = DASHBOARD_DB[:pd_enrollments].where(id: data[:enrollment_id_i]).first
+      no_expected_facilitators = DASHBOARD_DB[:pd_workshops_facilitators].where(pd_workshop_id: enrollment[:pd_workshop_id]).blank? if enrollment
+      unless no_expected_facilitators
+        result[:who_facilitated_ss] = required data[:who_facilitated_ss]
 
-      unless result[:who_facilitated_ss].class == FieldError
-        result[:how_clearly_presented_s] = {}
-        result[:how_interesting_s] = {}
-        result[:how_often_given_feedback_s] = {}
-        result[:help_quality_s] = {}
-        result[:how_comfortable_asking_questions_s] = {}
-        result[:how_often_taught_new_things_s] = {}
-        result[:things_facilitator_did_well_s] = {}
-        result[:things_facilitator_could_improve_s] = {}
+        unless result[:who_facilitated_ss].class == FieldError
+          result[:how_clearly_presented_s] = {}
+          result[:how_interesting_s] = {}
+          result[:how_often_given_feedback_s] = {}
+          result[:help_quality_s] = {}
+          result[:how_comfortable_asking_questions_s] = {}
+          result[:how_often_taught_new_things_s] = {}
+          result[:things_facilitator_did_well_s] = {}
+          result[:things_facilitator_could_improve_s] = {}
 
-        result[:who_facilitated_ss].each do |facilitator|
-          result[:how_clearly_presented_s][facilitator] = required_enum(data, :how_clearly_presented_s, facilitator)
-          result[:how_interesting_s][facilitator] = required_enum(data, :how_interesting_s, facilitator)
-          result[:how_often_given_feedback_s][facilitator] = required_enum(data, :how_often_given_feedback_s, facilitator)
-          result[:help_quality_s][facilitator] = required_enum(data, :help_quality_s, facilitator)
-          result[:how_comfortable_asking_questions_s][facilitator] = required_enum(data, :how_comfortable_asking_questions_s, facilitator)
-          result[:how_often_taught_new_things_s][facilitator] = required_enum(data, :how_often_taught_new_things_s, facilitator)
-          result[:things_facilitator_did_well_s][facilitator] = stripped(data[:things_facilitator_did_well_s].try(:[], facilitator))
-          result[:things_facilitator_could_improve_s][facilitator] = stripped(data[:things_facilitator_could_improve_s].try(:[], facilitator))
+          result[:who_facilitated_ss].each do |facilitator|
+            result[:how_clearly_presented_s][facilitator] = required_enum(data, :how_clearly_presented_s, facilitator)
+            result[:how_interesting_s][facilitator] = required_enum(data, :how_interesting_s, facilitator)
+            result[:how_often_given_feedback_s][facilitator] = required_enum(data, :how_often_given_feedback_s, facilitator)
+            result[:help_quality_s][facilitator] = required_enum(data, :help_quality_s, facilitator)
+            result[:how_comfortable_asking_questions_s][facilitator] = required_enum(data, :how_comfortable_asking_questions_s, facilitator)
+            result[:how_often_taught_new_things_s][facilitator] = required_enum(data, :how_often_taught_new_things_s, facilitator)
+            result[:things_facilitator_did_well_s][facilitator] = stripped(data[:things_facilitator_did_well_s].try(:[], facilitator))
+            result[:things_facilitator_could_improve_s][facilitator] = stripped(data[:things_facilitator_could_improve_s].try(:[], facilitator))
+          end
         end
       end
 
