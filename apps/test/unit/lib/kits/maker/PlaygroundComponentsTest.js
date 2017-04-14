@@ -25,6 +25,15 @@ describe('Circuit Playground Components', () => {
   beforeEach(() => {
     board = newBoard();
 
+    // Give thermometer an initial value so it can finish initialization in tests.
+    const originalThermometerInitialize = Playground.Thermometer.initialize.value;
+    sinon.stub(Playground.Thermometer.initialize, 'value')
+      .callsFake(function (opts, dataHandler) {
+        originalThermometerInitialize.call(this, opts, dataHandler);
+        // 235 raw sensor value = 0C = 32F
+        dataHandler(235);
+      });
+
     // Use 100x accelerated time in these tests
     // We need time to pass for sensors to send back readings
     // during initialization
@@ -35,6 +44,7 @@ describe('Circuit Playground Components', () => {
   afterEach(() => {
     clock.restore();
     clearInterval(intervalKey);
+    Playground.Thermometer.initialize.value.restore();
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {
@@ -306,11 +316,12 @@ describe('Circuit Playground Components', () => {
 
     describe('soundSensor', () => {
       const pin = 4;
+      const initialValue = 55;
       let soundSensor;
 
       beforeEach(() => {
         // Provide a fake analog reading during initialization
-        setTimeout(() => setRawAnalogValue(pin, 0), 0);
+        setTimeout(() => setRawAnalogValue(pin, initialValue), 0);
         return createCircuitPlaygroundComponents(board).then((components) => {
           soundSensor = components.soundSensor;
         });
@@ -336,6 +347,7 @@ describe('Circuit Playground Components', () => {
 
       it('with a non-null value immediately after initialization', () => {
         expect(soundSensor.value).not.to.be.null;
+        expect(soundSensor.value).to.equal(initialValue);
       });
 
       describe('setScale', () => {
@@ -396,12 +408,9 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('tempSensor', () => {
-      const pin = 0;
       let tempSensor;
 
       beforeEach(() => {
-        // Provide a fake analog reading during initialization
-        setTimeout(() => setRawAnalogValue(pin, 0), 0);
         return createCircuitPlaygroundComponents(board)
           .then((components) => tempSensor = components.tempSensor);
       });
@@ -427,19 +436,24 @@ describe('Circuit Playground Components', () => {
       });
 
       it('with non-null values immediately after initialization', () => {
+        // This test depends on the fake initial thermometer reading
+        // set up in the beforeEach block at the top  of this file.
         expect(tempSensor.F).not.to.be.null;
+        expect(tempSensor.F).to.equal(32);
         expect(tempSensor.C).not.to.be.null;
+        expect(tempSensor.C).to.equal(0);
       });
 
     });
 
     describe('lightSensor', () => {
       const pin = 5;
+      const initialValue = 56;
       let lightSensor;
 
       beforeEach(() => {
         // Provide a fake analog reading during initialization
-        setTimeout(() => setRawAnalogValue(pin, 0), 0);
+        setTimeout(() => setRawAnalogValue(pin, initialValue), 0);
         return createCircuitPlaygroundComponents(board).then((components) => {
           lightSensor = components.lightSensor;
         });
@@ -465,6 +479,7 @@ describe('Circuit Playground Components', () => {
 
       it('with a non-null value immediately after initialization', () => {
         expect(lightSensor.value).not.to.be.null;
+        expect(lightSensor.value).to.equal(initialValue);
       });
 
       describe('setScale', () => {

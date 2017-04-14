@@ -220,11 +220,14 @@ function addSensorFeatures(fmap, sensor) {
 }
 
 function initializeThermometer(board) {
-  return new five.Thermometer({
-    board,
-    controller: Thermometer,
-    pin: "A0",
-    freq: 100
+  return new Promise(resolve => {
+    const thermometer = new five.Thermometer({
+      board,
+      controller: Thermometer,
+      pin: "A0",
+      freq: 100
+    });
+    thermometer.once('data', () => resolve(thermometer));
   });
 }
 
