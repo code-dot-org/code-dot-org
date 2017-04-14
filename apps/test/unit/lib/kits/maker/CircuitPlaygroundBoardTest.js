@@ -38,6 +38,14 @@ describe('CircuitPlaygroundBoard', () => {
       return playground;
     });
 
+    // Give thermometer an initial value so it can finish initialization in tests.
+    const originalThermometerInitialize = Playground.Thermometer.initialize.value;
+    sinon.stub(Playground.Thermometer.initialize, 'value')
+      .callsFake(function (opts, dataHandler) {
+        originalThermometerInitialize.call(this, opts, dataHandler);
+        dataHandler(135);
+      });
+
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
   });
@@ -46,6 +54,7 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
+    Playground.Thermometer.initialize.value.restore();
   });
 
   it('is an EventEmitter', () => {
