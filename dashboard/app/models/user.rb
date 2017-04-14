@@ -113,7 +113,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
-  devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
@@ -346,7 +346,6 @@ class User < ActiveRecord::Base
   # NOTE: Order is important here.
   before_save :make_teachers_21,
     :normalize_email,
-    :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students,
     :hide_school_info_for_students,
@@ -362,16 +361,6 @@ class User < ActiveRecord::Base
     self.email = email.strip.downcase
   end
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # We make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed.
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
@@ -384,7 +373,6 @@ class User < ActiveRecord::Base
   def hide_email_and_full_address_for_students
     if student?
       self.email = ''
-      self.unconfirmed_email = nil
       self.full_address = nil
     end
   end
@@ -732,10 +720,6 @@ class User < ActiveRecord::Base
 
   def locale
     read_attribute(:locale).try(:to_sym)
-  end
-
-  def confirmation_required?
-    false
   end
 
   # There are some shenanigans going on with this age stuff. The
