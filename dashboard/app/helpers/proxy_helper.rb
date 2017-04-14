@@ -3,7 +3,8 @@ require 'uri'
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  def render_proxied_url(location,
+  def render_proxied_url(
+    location,
     allowed_content_types:,
     allowed_hostname_suffixes:,
     expiry_time:,
