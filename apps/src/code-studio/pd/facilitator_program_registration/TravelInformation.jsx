@@ -20,6 +20,7 @@ export default class TravelInformation extends ProgramRegistrationComponent {
             type: "text",
             required: true
           })}
+          <p>We are unable to ship to PO boxes, so please share your physical street address.</p>
           {this.buildFieldGroup({
             name: "addressCity",
             type: "text",
