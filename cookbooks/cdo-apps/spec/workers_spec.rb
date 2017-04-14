@@ -46,4 +46,20 @@ describe 'cdo-apps::workers' do
     let(:varnish_suffix) {''}
     run_test 'varnish using bytes', 32, 8, 4, 2, 1024 * 1024 * 1024
   end
+
+  context 'few CPUs' do
+    let(:cpu) {2}
+    let(:memory) {64}
+    it 'disables image_optim' do
+      expect(node['cdo-secrets']['image_optim']).to be false
+    end
+  end
+
+  context 'high CPUs' do
+    let(:cpu) {16}
+    let(:memory) {64}
+    it 'does not disable image_optim' do
+      expect(node['cdo-secrets']['image_optim']).not_to be false
+    end
+  end
 end
