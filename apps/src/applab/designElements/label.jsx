@@ -210,17 +210,23 @@ export default {
 
   resizeToFitText: function (element) {
     var size = this.getBestSize(element);
-    if (element.style.textAlign !== 'left') {
+    console.log("New best size: (" + size.width + ", " + size.height + ")");
+    console.log("Alignment: " + element.style.textAlign);
+
+    // For center or right alignment, we should adjust the left side to effectively retain that alignment.
+    if (element.style.textAlign === 'center' || element.style.textAlign === 'right') {
       var left = parseInt(element.style.left, 10);
+      console.log("Old left: " + element.style.left + " (" + left + ")");
       var width = parseInt(element.style.width, 10);
       // Positive delta means that it is getting wider
       var delta = size.width - width;
       if (element.style.textAlign === 'right') {
         left -= delta;
       } else {
-        // assume middle
+        // must be centered
         left -= delta / 2;
       }
+      console.log("New left, dude: " + left);
       // Don't move text past the left side
       element.style.left = Math.max(0, left) + 'px';
     }
@@ -237,6 +243,10 @@ export default {
     }
     var currentSize = this.getCurrentSize(element);
     var bestSize = this.getBestSize(element);
+    var isBestSize = (currentSize.width == bestSize.width && currentSize.height == bestSize.height);
+    if (isBestSize) {
+      console.log("Current size: (" + currentSize.width + ", " + currentSize.height + ")");
+    }
     return currentSize.width === bestSize.width && currentSize.height == bestSize.height;
   },
 
@@ -244,7 +254,7 @@ export default {
    * @returns {boolean} True if it modified the backing element
    */
   onPropertyChange: function (element, name, value, previouslyFitExactly) {
-    console.log('Changing ' + name + ' to ' + value + '(' + previouslyFitExactly + ')');
+    console.log('Changing ' + name + ' property to ' + value + ' (' + previouslyFitExactly + ')');
     switch (name) {
       case 'text':
       case 'fontSize':
