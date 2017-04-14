@@ -100,28 +100,29 @@ $color_pacific_blue_approx: #00b2c0;
     li {
       color: $white;
       line-height: 30px;
-      display: inline-block;
-      float: left;
       padding: 0.25em;
       text-indent: 0;
       list-style-type: none;
       max-width: 250px;
       text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
       border-bottom: solid 2px $color_blue_chill_80_approx;
       border-radius: 2px;
       padding-bottom: 10px;
       margin-bottom: 5px;
       margin-top: 5px;
       margin-left: 25px;
-      &::last-of-type {
+      display: block;
+      float: none;
+      white-space: normal;
+      overflow: visible;
+
+      &:last-of-type {
         border-bottom: none;
       }
       &::before {
         content: none;
       }
-      &::last-child {
+      &:last-child {
         margin-right: 0;
       }
       a {
