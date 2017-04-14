@@ -1,46 +1,46 @@
 import {assert} from '../util/configuredChai';
-const testUtils = require('./../util/testUtils');
-testUtils.setExternalGlobals();
+import {setExternalGlobals, throwOnConsoleErrors} from './../util/testUtils';
 import React from 'react';
 import {mount} from 'enzyme';
 
 import FacilitatorProgramRegistration from '@cdo/apps/code-studio/pd/facilitator_program_registration/FacilitatorProgramRegistration';
 
-const DEFAULTS = {
-  apiEndpoint: "",
-  course: "",
-  options: {
-    "confirmTeacherconDate": ["Yes", "No - but I need to attend a different date.", "No - I'm no longer interested"],
-    "alternateTeacherconDate": ["TeacherCon 1: June 18 - 23", "TeacherCon 2: July 16 - 21", "TeacherCon 3: July 30 - August 4"],
-    "confirmTrainingDate": ["Yes", "No"],
-    "declineTrainingDate": ["I want to participate in the program, but I'm no longer able to attend these dates.", "I am no longer interested in the Code.org Facilitator Development Program."],
-    "csdAlternateTrainingDate": ["July 22 - 23 (immediately following TeacherCon 2)", "August 5 - 6 (immediately following TeacherCon 3)"],
-    "cspAlternateTrainingDate": ["June 24 - 25 (immediately following TeacherCon 1)", "July 22 - 23 (immediately following TeacherCon 2)", "August 5 - 6 (immediately following TeacherCon 3)"],
-    "addressState": {
-      "AL": "Alabama",
-      "DC": "Washington DC"
-    },
-    "dietaryNeeds": ["None", "Vegetarian", "Gluten Free", "Food allergy", "Other"],
-    "liveFarAway": ["Yes", "No"],
-    "howTraveling": ["Driving", "Flying", "Train", "Carpooling with another attendee", "Public transit"],
-    "needHotel": ["Yes", "No"],
-    "needAda": ["Yes", "No"],
-    "photoRelease": ["Yes"],
-    "liabilityWaiver": ["Yes"],
-    "gender": ["Male", "Female", "Other", "Prefer not to say"],
-    "race": ["White", "Black or African American", "Hispanic or Latino", "Asian", "Native Hawaiian or other Pacific Islander", "American Indian/Alaska Native", "Other", "Prefer not to say"],
-    "age": ["21-25", "26-30", "31-35", "36-40", "41-45", "46-50", "51-55", "56-60", "61-65", "66+", "Prefer not to say"],
-    "gradesTaught": ["Pre-K", "Elementary", "Middle School/Junior High", "High School", "I am not teaching"],
-    "gradesPlanningToTeach": ["Pre-K", "Elementary", "Middle School/Junior High", "High School", "I am not teaching this course"],
-    "subjectsTaught": ["Computer Science", "English/Language Arts", "Science", "Math", "Arts/Music", "Other"]
-  },
-  attendanceDates: {},
-  teachercon: 1,
-  teacherconLocation: "Whereever"
-};
-
 describe('FacilitatorProgramRegistration', function () {
-  testUtils.throwOnConsoleErrors();
+  setExternalGlobals();
+  throwOnConsoleErrors();
+
+  const DEFAULTS = {
+    apiEndpoint: "",
+    course: "",
+    options: {
+      "confirmTeacherconDate": ["Yes", "No - but I need to attend a different date.", "No - I'm no longer interested"],
+      "alternateTeacherconDate": ["TeacherCon 1: June 18 - 23", "TeacherCon 2: July 16 - 21", "TeacherCon 3: July 30 - August 4"],
+      "confirmTrainingDate": ["Yes", "No"],
+      "declineTrainingDate": ["I want to participate in the program, but I'm no longer able to attend these dates.", "I am no longer interested in the Code.org Facilitator Development Program."],
+      "csdAlternateTrainingDate": ["July 22 - 23 (immediately following TeacherCon 2)", "August 5 - 6 (immediately following TeacherCon 3)"],
+      "cspAlternateTrainingDate": ["June 24 - 25 (immediately following TeacherCon 1)", "July 22 - 23 (immediately following TeacherCon 2)", "August 5 - 6 (immediately following TeacherCon 3)"],
+      "addressState": {
+        "AL": "Alabama",
+        "DC": "Washington DC"
+      },
+      "dietaryNeeds": ["None", "Vegetarian", "Gluten Free", "Food allergy", "Other"],
+      "liveFarAway": ["Yes", "No"],
+      "howTraveling": ["Driving", "Flying", "Train", "Carpooling with another attendee", "Public transit"],
+      "needHotel": ["Yes", "No"],
+      "needAda": ["Yes", "No"],
+      "photoRelease": ["Yes"],
+      "liabilityWaiver": ["Yes"],
+      "gender": ["Male", "Female", "Other", "Prefer not to say"],
+      "race": ["White", "Black or African American", "Hispanic or Latino", "Asian", "Native Hawaiian or other Pacific Islander", "American Indian/Alaska Native", "Other", "Prefer not to say"],
+      "age": ["21-25", "26-30", "31-35", "36-40", "41-45", "46-50", "51-55", "56-60", "61-65", "66+", "Prefer not to say"],
+      "gradesTaught": ["Pre-K", "Elementary", "Middle School/Junior High", "High School", "I am not teaching"],
+      "gradesPlanningToTeach": ["Pre-K", "Elementary", "Middle School/Junior High", "High School", "I am not teaching this course"],
+      "subjectsTaught": ["Computer Science", "English/Language Arts", "Science", "Math", "Arts/Music", "Other"]
+    },
+    attendanceDates: {},
+    teachercon: 1,
+    teacherconLocation: "Whereever"
+  };
 
   // componentDidUpdate contains some jquery that doesn't play nice with the
   // testing environment. Stub it out for these test.
