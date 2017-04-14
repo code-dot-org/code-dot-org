@@ -95,6 +95,16 @@ describe('FacilitatorProgramRegistration', function () {
   });
 
   it('ends the form early if either date is declined', function () {
+    const assertNextNotSubmit = function () {
+      assert.lengthOf(wrapper.find("button[type='button']"), 1);
+      assert.lengthOf(wrapper.find("button[type='submit']"), 0);
+    };
+
+    const assertSubmitNotNext = function () {
+      assert.lengthOf(wrapper.find("button[type='button']"), 0);
+      assert.lengthOf(wrapper.find("button[type='submit']"), 1);
+    };
+
     const wrapper = mount(
       <FacilitatorProgramRegistration
         {...DEFAULTS}
@@ -111,33 +121,25 @@ describe('FacilitatorProgramRegistration', function () {
       />
     );
 
-    // by default, "next" and not "submit"
-    assert.lengthOf(wrapper.find("button[type='button']"), 1);
-    assert.lengthOf(wrapper.find("button[type='submit']"), 0);
+    assertNextNotSubmit();
 
     wrapper.instance().handleChange({
       confirmTeacherconDate: "No - I'm no longer interested"
     });
 
-    // now, "submit" and not "next"
-    assert.lengthOf(wrapper.find("button[type='button']"), 0);
-    assert.lengthOf(wrapper.find("button[type='submit']"), 1);
+    assertSubmitNotNext();
 
     wrapper.instance().handleChange({
       confirmTeacherconDate: "Yes"
     });
 
-    // again, "next" and not "submit"
-    assert.lengthOf(wrapper.find("button[type='button']"), 1);
-    assert.lengthOf(wrapper.find("button[type='submit']"), 0);
+    assertNextNotSubmit();
 
     wrapper.instance().handleChange({
       confirmTrainingDate: "No"
     });
 
-    // again, "submit" and not "next"
-    assert.lengthOf(wrapper.find("button[type='button']"), 0);
-    assert.lengthOf(wrapper.find("button[type='submit']"), 1);
+    assertSubmitNotNext();
   });
 
   it('on error, navigates to the earliest page with an error', function () {
