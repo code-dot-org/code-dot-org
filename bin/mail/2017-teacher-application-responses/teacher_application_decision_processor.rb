@@ -51,6 +51,11 @@ class TeacherApplicationDecisionProcessor
     'July 30 - August 4, 2017: Philadelphia'
   ].freeze
 
+  # Array of string tuples. Replace any of the first strings with the second in partner names.
+  PARTNER_NAME_OVERRIDES = [
+    ['Share Fair Nation', 'mindSpark Learning (formerly Share Fair Nation)']
+  ]
+
   attr_reader :results
   def initialize
     # Change working dir to this directory so all file names are local
@@ -147,6 +152,11 @@ class TeacherApplicationDecisionProcessor
   def process(decision, teacher_application, params = {})
     raise "Unexpected decision: #{decision}" unless @results.key? decision
 
+    # Make sure regional partner names have overrides applied before sending
+    if params.key? :regional_partner_name_s
+      params[:regional_partner_name_s] = apply_partner_name_overrides(params[:regional_partner_name_s])
+    end
+
     # Construct result hash, add to appropriate list, and return the new result
     {
       name: teacher_application.teacher_name,
@@ -241,5 +251,13 @@ class TeacherApplicationDecisionProcessor
   def lookup_workshop(workshop_string)
     raise "Unexpected workshop: #{workshop_string}" unless @workshop_map.key? workshop_string
     @workshop_map[workshop_string]
+  end
+
+  def apply_partner_name_overrides(partner_name)
+    mutated_partner_name = partner_name.dup
+    PARTNER_NAME_OVERRIDES.each do |override|
+      mutated_partner_name.gsub!(override[0], override[1])
+    end
+    mutated_partner_name
   end
 end

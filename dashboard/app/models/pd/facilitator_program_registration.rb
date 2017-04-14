@@ -11,8 +11,7 @@
 #
 # Indexes
 #
-#  index_pd_fac_prog_reg_on_user_id_and_teachercon        (user_id,teachercon) UNIQUE
-#  index_pd_facilitator_program_registrations_on_user_id  (user_id)
+#  index_pd_fac_prog_reg_on_user_id_and_teachercon  (user_id,teachercon) UNIQUE
 #
 
 require 'state_abbr'
@@ -43,6 +42,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     :how_traveling,
     :need_hotel,
     :need_ada,
+    :photo_release,
     :liability_waiver,
     :gender,
     :race,
@@ -129,6 +129,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
     photo_release: [
       'Yes',
+      'No',
     ],
 
     liability_waiver: [

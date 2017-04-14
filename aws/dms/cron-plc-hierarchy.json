@@ -46,7 +46,7 @@
       "rule-name": "5",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "plc_evaluation_answers"
+        "table-name": "plc_learning_modules"
       },
       "rule-action": "include"
     },
@@ -56,7 +56,7 @@
       "rule-name": "6",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "plc_evaluation_questions"
+        "table-name": "plc_learning_module_tasks"
       },
       "rule-action": "include"
     },
@@ -66,7 +66,7 @@
       "rule-name": "7",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "plc_learning_modules"
+        "table-name": "plc_tasks"
       },
       "rule-action": "include"
     },
@@ -74,26 +74,6 @@
       "rule-type": "selection",
       "rule-id": "8",
       "rule-name": "8",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "plc_learning_module_tasks"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "9",
-      "rule-name": "9",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "plc_tasks"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "10",
-      "rule-name": "10",
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "plc_user_course_enrollments"

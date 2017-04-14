@@ -95,7 +95,7 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
+          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
           evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
@@ -655,6 +655,15 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
+    regional_partner nil
+    start_date "2017-04-06"
+    end_date nil
+    course nil
+    subject nil
+    properties {{}}
+  end
+
   factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
     association :user, factory: :facilitator, strategy: :create
     transient do
@@ -812,6 +821,12 @@ FactoryGirl.define do
     association :school_info, factory: :school_info_without_country
     school 'Example School'
     code {SecureRandom.hex(10)}
+
+    trait :from_user do
+      user
+      full_name {user.name} # sets first_name and last_name
+      email {user.email}
+    end
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -834,6 +849,17 @@ FactoryGirl.define do
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
     association :facilitator
     course Pd::Workshop::COURSES.first
+  end
+
+  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
+    association :enrollment, factory: :pd_enrollment
+    association :user, factory: :teacher
+    street '1501 4th Ave'
+    apartment_or_suite 'Suite 900'
+    city 'Seattle'
+    state 'WA'
+    add_attribute :zip_code, '98101'
+    phone_number '555-111-2222'
   end
 
   factory :school_district do
