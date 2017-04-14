@@ -5,15 +5,15 @@ module Pd::Payment
     MINIMUM_QUALIFIED_TEACHERS_FOR_CSF = 10
     PAYMENT_PER_TEACHER_CSF = 50
 
-    # Under these payment terms we can have a *much* simpler workshop payment calculator
     def calculate(workshop)
-      raise "Workshop #{workshop.id} is not ended - cannot pay" if
-          workshop.state != Pd::Workshop::STATE_ENDED
+      if workshop.state != Pd::Workshop::STATE_ENDED
+        raise "Workshop #{workshop.id} is not ended - cannot pay"
+      end
 
       if workshop.course == Pd::Workshop::COURSE_CSF
         calculate_csf_payment(workshop)
       else
-        calculate_non_csf_payment(workshop)
+        calculate_workshop_payment(workshop)
       end
     end
 
@@ -40,7 +40,7 @@ module Pd::Payment
       end
     end
 
-    def calculate_non_csf_payment(workshop)
+    def calculate_workshop_payment(workshop)
     end
   end
 end
