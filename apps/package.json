@@ -154,7 +154,7 @@
     "progress-bar-webpack-plugin": "^1.8.0",
     "pusher-js": "3.2.1",
     "radium": "0.18.1",
-    "react": "15.3.0",
+    "react": "15.3.2",
     "react-addons-shallow-compare": "15.3.0",
     "react-addons-test-utils": "15.3.0",
     "react-bootstrap": "0.30.1",

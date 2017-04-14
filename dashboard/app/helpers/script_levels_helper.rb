@@ -62,8 +62,7 @@ module ScriptLevelsHelper
   end
 
   def section_options
-    # TODO(asher): remove check for deleted_at when possible.
-    current_user.sections.where(deleted_at: nil).map do |section|
+    current_user.sections.map do |section|
       content_tag 'option', section.name, value: url_for(
         action: params[:action],
         controller: params[:controller],
