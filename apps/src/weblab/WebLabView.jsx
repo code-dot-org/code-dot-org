@@ -7,7 +7,8 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
-import PaneHeader, {PaneButton} from '../templates/PaneHeader';
+import PaneHeader from '../templates/PaneHeader';
+var PaneButton = PaneHeader.PaneButton;
 
 /**
  * Top-level React wrapper for WebLab
