@@ -163,25 +163,27 @@ function initializeColorLed(board, pin) {
 }
 
 function initializeSoundSensor(board) {
-  // TODO: Make async, don't resolve until first read from sensor
-  const sensor = new five.Sensor({
-    board,
-    pin: "A4",
-    freq: 100
+  return new Promise(resolve => {
+    const sensor = new five.Sensor({
+      board,
+      pin: "A4",
+      freq: 100
+    });
+    addSensorFeatures(five.Board.fmap, sensor);
+    sensor.once('data', () => resolve(sensor));
   });
-  addSensorFeatures(five.Board.fmap, sensor);
-  return sensor;
 }
 
 function initializeLightSensor(board) {
-  // TODO: Make async, don't resolve until first read from sensor
-  const sensor = new five.Sensor({
-    board,
-    pin: "A5",
-    freq: 100
+  return new Promise(resolve => {
+    const sensor = new five.Sensor({
+      board,
+      pin: "A5",
+      freq: 100
+    });
+    addSensorFeatures(five.Board.fmap, sensor);
+    sensor.once('data', () => resolve(sensor));
   });
-  addSensorFeatures(five.Board.fmap, sensor);
-  return sensor;
 }
 
 /**
@@ -218,14 +220,12 @@ function addSensorFeatures(fmap, sensor) {
 }
 
 function initializeThermometer(board) {
-  // TODO: Make async, don't resolve until first read from sensor
-  const sensor = new five.Thermometer({
+  return new five.Thermometer({
     board,
     controller: Thermometer,
     pin: "A0",
     freq: 100
   });
-  return sensor;
 }
 
 function initializeButton(board, pin) {

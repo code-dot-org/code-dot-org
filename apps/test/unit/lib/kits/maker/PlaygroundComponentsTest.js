@@ -20,15 +20,21 @@ import {
 process.hrtime = require('browser-process-hrtime');
 
 describe('Circuit Playground Components', () => {
-  let board, clock;
+  let board, clock, intervalKey;
 
   beforeEach(() => {
-    clock = sinon.useFakeTimers();
     board = newBoard();
+
+    // Use 100x accelerated time in these tests
+    // We need time to pass for sensors to send back readings
+    // during initialization
+    intervalKey = setInterval(() => clock.tick(1000), 10);
+    clock = sinon.useFakeTimers();
   });
 
   afterEach(() => {
     clock.restore();
+    clearInterval(intervalKey);
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {
@@ -299,12 +305,14 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('soundSensor', () => {
-      let soundSensor, pin;
+      const pin = 4;
+      let soundSensor;
 
       beforeEach(() => {
+        // Provide a fake analog reading during initialization
+        setTimeout(() => setRawAnalogValue(pin, 0), 0);
         return createCircuitPlaygroundComponents(board).then((components) => {
           soundSensor = components.soundSensor;
-          pin = soundSensor.pin;
         });
       });
 
@@ -324,6 +332,10 @@ describe('Circuit Playground Components', () => {
         expect(soundSensor).to.haveOwnProperty('start');
         expect(soundSensor).to.haveOwnProperty('getAveragedValue');
         expect(soundSensor).to.haveOwnProperty('setScale');
+      });
+
+      it('with a non-null value immediately after initialization', () => {
+        expect(soundSensor.value).not.to.be.null;
       });
 
       describe('setScale', () => {
@@ -384,9 +396,12 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('tempSensor', () => {
+      const pin = 0;
       let tempSensor;
 
       beforeEach(() => {
+        // Provide a fake analog reading during initialization
+        setTimeout(() => setRawAnalogValue(pin, 0), 0);
         return createCircuitPlaygroundComponents(board)
           .then((components) => tempSensor = components.tempSensor);
       });
@@ -410,15 +425,23 @@ describe('Circuit Playground Components', () => {
       it('and a C (celsius) property', () => {
         expect(tempSensor).to.have.ownProperty('C');
       });
+
+      it('with non-null values immediately after initialization', () => {
+        expect(tempSensor.F).not.to.be.null;
+        expect(tempSensor.C).not.to.be.null;
+      });
+
     });
 
     describe('lightSensor', () => {
-      let lightSensor, pin;
+      const pin = 5;
+      let lightSensor;
 
       beforeEach(() => {
+        // Provide a fake analog reading during initialization
+        setTimeout(() => setRawAnalogValue(pin, 0), 0);
         return createCircuitPlaygroundComponents(board).then((components) => {
           lightSensor = components.lightSensor;
-          pin = lightSensor.pin;
         });
       });
 
@@ -438,6 +461,10 @@ describe('Circuit Playground Components', () => {
         expect(lightSensor).to.haveOwnProperty('start');
         expect(lightSensor).to.haveOwnProperty('getAveragedValue');
         expect(lightSensor).to.haveOwnProperty('setScale');
+      });
+
+      it('with a non-null value immediately after initialization', () => {
+        expect(lightSensor.value).not.to.be.null;
       });
 
       describe('setScale', () => {
