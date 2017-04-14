@@ -90,9 +90,7 @@ module.exports = function (testCollection, testData, dataItem, done) {
 };
 
 sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
-  if (!LegacyDialog.levelTestDontFinishOnShow) {
-    finished();
-  }
+  finished();
 });
 
 sinon.stub(LegacyDialog.prototype, 'hide');
