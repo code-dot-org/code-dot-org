@@ -72,11 +72,8 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "start_blocks": "// Create sprites and set animation images\r\n\r\nfunction draw(){\r\n  // Draw a background\r\n  \r\n  // Update properties using the counter pattern\r\n  \r\n  // Draw sprites\r\n  \r\n}"
+    "start_blocks": "// Create sprites and set animation images\r\n\r\nfunction draw(){\r\n  // Draw a background\r\n  \r\n  // Update properties using the counter pattern\r\n  \r\n  // Draw sprites\r\n  \r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

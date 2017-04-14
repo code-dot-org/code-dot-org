@@ -566,6 +566,7 @@ en:
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
+      CSD U3 Draw Loop Map: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Entertainment: {}
       CSD U3 Expressions STOP writing 10: {}
@@ -3460,6 +3461,14 @@ en:
         RGB Colors: RGB Colors
         rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
+        Is the dog sprite's less than the cat sprite's x?: Is the dog sprite's less than the cat sprite's x?
+        Is the dog sprite's rotation less than the cat sprite's rotation?: Is the dog sprite's rotation less than the cat sprite's rotation?
+        Is the dog sprite's scale greater than the cat sprite's scale?: Is the dog sprite's scale greater than the cat sprite's scale?
+        Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
+        Is the dog sprite's x greater than the cat sprite's x?: Is the dog sprite's x greater than the cat sprite's x?
+        Is the dog sprite's x less than the cat sprite's x?: Is the dog sprite's x less than the cat sprite's x?
+        Is the rotation of the dog sprite less than the rotation of the cat sprite?: Is the rotation of the dog sprite less than the rotation of the cat sprite?
+        Is the scale of the dog sprite greater than the scale of the cat sprite?: Is the scale of the dog sprite greater than the scale of the cat sprite?
         Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
         Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
         Is the x of the dog sprite equal to the x of the cat sprite?: Is the x of the dog sprite equal to the x of the cat sprite?
@@ -3467,6 +3476,8 @@ en:
         Is the x of the dog sprite less than the x of the cat sprite?: Is the x of the dog sprite less than the x of the cat sprite?
         Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        dog.rotation &lt; cat.rotation: dog.rotation &lt; cat.rotation
+        dog.scale &gt; cat.scale: dog.scale &gt; cat.scale
         dog.width &gt; cat.width: dog.width &gt; cat.width
         dog.width &lt; cat.width: dog.width &lt; cat.width
         dog.x &gt; cat.x: dog.x &gt; cat.x
@@ -4692,6 +4703,7 @@ en:
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
       CSD U3 Boolean MC:
+        "  0<br>200<br>100": "  0<br>200<br>100"
         "  200<br>10<br>-20": "  200<br>10<br>-20"
         "  false<br>true<br>false": "  false<br>true<br>false"
         "  true<br>error<br>true": "  true<br>error<br>true"
