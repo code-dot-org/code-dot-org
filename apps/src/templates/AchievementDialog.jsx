@@ -77,27 +77,27 @@ const styles = {
 
 const AchievementDialog = Radium(React.createClass({
   propTypes: {
-    puzzleNumber: React.PropTypes.number,
-    idealBlocks: React.PropTypes.number,
-    actualBlocks: React.PropTypes.number,
-    hintsUsed: React.PropTypes.number,
+    achievements: React.PropTypes.arrayOf(React.PropTypes.shape({
+      check: React.PropTypes.bool,
+      msg: React.PropTypes.string,
+      progress: React.PropTypes.number,
+    })),
     assetUrl: React.PropTypes.func,
-    onContinue: React.PropTypes.func,
-    showStageProgress: React.PropTypes.bool,
+    feedbackMessage: React.PropTypes.string,
     oldStageProgress: React.PropTypes.number,
-    newPassedProgress: React.PropTypes.number,
-    newPerfectProgress: React.PropTypes.number,
-    newHintUsageProgress: React.PropTypes.number,
+    onContinue: React.PropTypes.func,
     showPuzzleRatingButtons: React.PropTypes.bool,
+    showStageProgress: React.PropTypes.bool,
+    tooManyBlocks: React.PropTypes.bool,
   },
 
   getInitialState() {
     return {isOpen: true};
   },
 
-  handleClose(nextPuzzle = true) {
+  handleClose() {
     this.setState({isOpen: false});
-    nextPuzzle && this.props.onContinue();
+    this.props.tooManyBlocks && this.props.onContinue();
   },
 
   icon(flag) {
@@ -142,52 +142,18 @@ const AchievementDialog = Radium(React.createClass({
     };
   },
 
-  blocksUsedMessage(blockDelta, params) {
-    if (blockDelta > 0) {
-      return locale.usingTooManyBlocks(params);
-    } else if (blockDelta === 0) {
-      return locale.exactNumberOfBlocks(params);
-    } else {
-      return locale.fewerNumberOfBlocks(params);
-    }
-  },
-
-  hintsMessage(numHints) {
-    if (numHints === 0) {
-      return locale.withoutHints();
-    } else if (numHints === 1) {
-      return locale.usingOneHint();
-    } else {
-      return locale.usingHints();
-    }
-  },
-
   render() {
-    const showNumBlocksRow = isFinite(this.props.idealBlocks);
-    const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
-    const tooManyBlocks = blockDelta > 0;
-    const tooManyHints = this.props.hintsUsed > 1;
-    const params = {
-      puzzleNumber: this.props.puzzleNumber,
-      numBlocks: this.props.idealBlocks,
-    };
-    const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
-
-    const achievementRowGenerators = [
-      this.achievementRowGenerator(true /* show */, true /* success */,
-          locale.puzzleCompleted()),
-      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks,
-          this.blocksUsedMessage(blockDelta, params)),
-      this.achievementRowGenerator(true /* show */, !tooManyHints,
-          this.hintsMessage(this.props.hintsUsed)),
-    ].filter(row => row);
+    const achievementRowGenerators = this.props.achievements.map(achievement => {
+      return this.achievementRowGenerator(true, achievement.check, achievement.msg);
+    });
 
     return (
       <BaseDialog
         useUpdatedStyles
         isOpen={this.state.isOpen}
-        handleClose={this.handleClose.bind(this, !tooManyBlocks)}
+        handleClose={this.handleClose}
         assetUrl={this.props.assetUrl}
+        {...this.props}
       >
         <StaggeredMotion
           defaultStyles={Array(achievementRowGenerators.length + 1).fill({ progress: 0 })}
@@ -211,11 +177,10 @@ const AchievementDialog = Radium(React.createClass({
                 {this.props.showStageProgress &&
                   <StageProgressBar
                     stageProgress={
-                        this.props.oldStageProgress +
-                        (interpolatingValues[1].progress * this.props.newPassedProgress) +
-                        (interpolatingValues[2].progress * this.props.newPerfectProgress) +
-                        (interpolatingValues[showNumBlocksRow ? 3 : 2].progress *
-                          this.props.newHintUsageProgress)
+                        this.props.achievements.reduce((totalProgress, achievement, index) => {
+                          return totalProgress +
+                            (achievement.progress * interpolatingValues[index + 1].progress);
+                        }, this.props.oldStageProgress)
                     }
                   />
                 }
@@ -224,21 +189,21 @@ const AchievementDialog = Radium(React.createClass({
           }
         </StaggeredMotion>
         <div style={styles.footer}>
-          <p style={styles.feedbackMessage}>{feedbackMessage}</p>
+          <p style={styles.feedbackMessage}>{this.props.feedbackMessage}</p>
 
           {this.props.showPuzzleRatingButtons && <PuzzleRatingButtons/>}
           <button
             onClick={this.handleClose}
             style={[
               styles.buttonPrimary,
-              tooManyBlocks && styles.buttonSecondary
+              this.props.tooManyBlocks && styles.buttonSecondary
             ]}
           >
             {locale.continue()}
           </button>
-          {tooManyBlocks &&
+          {this.props.tooManyBlocks &&
             <button
-              onClick={this.handleClose.bind(this, false)}
+              onClick={this.handleClose}
               style={styles.buttonPrimary}
             >
               {locale.tryAgain()}
