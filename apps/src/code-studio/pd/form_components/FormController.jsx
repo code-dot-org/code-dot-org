@@ -7,6 +7,13 @@ import {
   Pagination,
 } from 'react-bootstrap';
 
+const styles = {
+  pageButtons: {
+    verticalAlign: 'middle',
+    margin: '0 10px'
+  }
+};
+
 /**
  * Helper class for dashboard forms. Expects to be extended by a class which
  * will implement the getPageComponents method, which is expected to return an
@@ -274,10 +281,7 @@ export default class FormController extends React.Component {
 
     const pageButtons = (
       <Pagination
-        style={{
-          verticalAlign: 'middle',
-          margin: '0 10px'
-        }}
+        style={styles.pageButtons}
         items={this.getPageComponents().length}
         activePage={this.state.currentPage + 1}
         onSelect={i => this.setPage(i - 1)}
