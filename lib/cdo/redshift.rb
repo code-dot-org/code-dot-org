@@ -6,7 +6,9 @@
 #     require 'cdo/redshift'
 #   end
 
-require 'pg'
+RakeUtils.with_bundle_dir(File.expand_path('../../../bin/cron/with_pg', __FILE__)) do
+  require 'pg'
+end
 require 'singleton'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
