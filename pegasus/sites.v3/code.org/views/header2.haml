@@ -3,7 +3,7 @@
 
 %link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
-%script{src: '/shared/js/hamburger.js'}
+%script{src: minifiable_asset_path("js/hamburger.js")}
 
 #pageheader2-wrapper
   #pageheader
@@ -47,24 +47,3 @@
         =view banner
 
 #clear{:style=>'clear:both'}
-
-:javascript
-  var headerSetup = false;
-
-  $ = jQuery;
-  $(document).ready(function() {
-    if (headerSetup) {
-      return;
-    }
-    headerSetup = true;
-
-    $.ajax({
-      type: "GET",
-      url: '/dashboardapi/user_menu',
-      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-      success: function(data) {
-        // data is ur summary
-        $('#sign_in_or_user').html(data);
-      }
-    });
-  });
