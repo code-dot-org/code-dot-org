@@ -56,18 +56,18 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
   test 'validations for payment terms' do
     term_1 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, properties: {})
-    term_1.save
+    refute term_1.valid?
 
-    assert_equal 'Must have either per attendee payment or fixed payment', term_1.errors[:terms][0]
+    assert_equal ['Must have either per attendee payment or fixed payment'], term_1.errors.full_messages
 
     term_2 = build(:pd_payment_term, start_date: Date.today)
     term_2.save
 
-    assert_equal 'is required', term_2.errors[:regional_partner][0]
+    assert_equal ['Regional partner is required'], term_2.errors.full_messages
 
     term_3 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: nil)
     term_3.save
 
-    assert_equal 'is required', term_3.errors[:start_date][0]
+    assert_equal ['Start date is required'], term_3.errors.full_messages
   end
 end
