@@ -50,6 +50,9 @@ class StorageApps
     owner, id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
+    # Remove metadata keys from :value hash (they're stored in separate columns or calculated dynamically).
+    %w(id isOwner createdAt updatedAt).each{ |key| value.delete(key) }
+
     row = {
       value: value.to_json,
       updated_at: DateTime.now,
