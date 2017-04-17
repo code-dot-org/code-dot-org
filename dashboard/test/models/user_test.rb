@@ -21,6 +21,7 @@ class UserTest < ActiveSupport::TestCase
     }
 
     @admin = create :admin
+    @teacher = create :teacher
   end
 
   test 'make_teachers_21' do
@@ -84,10 +85,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'hash_email' do
-    teacher = create :teacher
-    teacher.update!(email: 'hash_email@example.com')
+    @teacher.update!(email: 'hash_email@example.com')
     assert_equal User.hash_email('hash_email@example.com'),
-      teacher.hashed_email
+      @teacher.hashed_email
   end
 
   test "log in with password with pepper" do
@@ -600,10 +600,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'teachers have hashed email and plaintext email' do
-    teacher = create :teacher, email: 'email@email.xx'
-
-    assert teacher.email.present?
-    assert teacher.hashed_email.present?
+    assert @teacher.email.present?
+    assert @teacher.hashed_email.present?
   end
 
   test 'cannot create duplicate hashed and plaintext email' do
@@ -678,7 +676,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'changing user from teacher to student removes full_address' do
     user = create :teacher
-    user.update(full_address: 'fake address')
+    user.update!(full_address: 'fake address')
 
     user.user_type = User::TYPE_STUDENT
     user.save!
@@ -688,7 +686,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'changing user from teacher to student removed unconfirmed_email' do
     user = create :teacher
-    user.update(email: 'unconfirmed_email@example.com')
+    user.update!(email: 'unconfirmed_email@example.com')
 
     assert user.unconfirmed_email.present?
     user.update(user_type: User::TYPE_STUDENT)
@@ -1268,8 +1266,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'student and teacher relationships' do
-    student = create :student
     teacher = create :teacher
+    student = create :student
     section = create :section, user_id: teacher.id
 
     follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
@@ -1332,9 +1330,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
-    fake_teacher = create :teacher
-    assert fake_teacher.teacher?
-    refute fake_teacher.authorized_teacher?
+    assert @teacher.teacher?
+    refute @teacher.authorized_teacher?
 
     # you have to be in a cohort
     c = create :cohort
@@ -1349,11 +1346,8 @@ class UserTest < ActiveSupport::TestCase
     assert plc_teacher.authorized_teacher?
 
     # admins should be authorized teachers too
-    admin = create :teacher
-    admin.admin = true
-    admin.save!
-    assert admin.teacher?
-    assert admin.authorized_teacher?
+    assert @admin.teacher?
+    assert @admin.authorized_teacher?
   end
 
   test "can_edit_account?" do
@@ -1406,8 +1400,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for teacher without version' do
-    teacher = create :teacher
-    assert_nil teacher.terms_version
+    assert_nil @teacher.terms_version
   end
 
   test 'terms_of_service_version for teacher with version' do
