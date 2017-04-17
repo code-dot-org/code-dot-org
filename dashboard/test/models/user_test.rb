@@ -22,6 +22,7 @@ class UserTest < ActiveSupport::TestCase
 
     @admin = create :admin
     @teacher = create :teacher
+    @student = create :student
   end
 
   test 'make_teachers_21' do
@@ -593,10 +594,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'students have hashed email not plaintext email' do
-    student = create :student, email: 'will_be_hashed@email.xx'
-
-    assert student.email.blank?
-    assert student.hashed_email.present?
+    assert @student.email.blank?
+    assert @student.hashed_email.present?
   end
 
   test 'teachers have hashed email and plaintext email' do
@@ -708,27 +707,23 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'sanitize_race_data sanitizes closed_dialog' do
-    user = create :student
-    user.update!(races: %w(white closed_dialog))
-    assert_equal %w(closed_dialog), user.reload.races
+    @student.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), @student.reload.races
   end
 
   test 'sanitize_race_data sanitizes too many races' do
-    user = create :student
-    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
-    assert_equal %w(nonsense), user.reload.races
+    @student.reload.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), @student.reload.races
   end
 
   test 'sanitize_race_data sanitizes non-races' do
-    user = create :student
-    user.update!(races: %w(not_a_race white))
-    assert_equal %w(nonsense), user.reload.races
+    @student.update!(races: %w(not_a_race white))
+    assert_equal %w(nonsense), @student.reload.races
   end
 
   test 'sanitize_race_data noops valid responses' do
-    user = create :student
-    user.update!(races: %w(black hispanic))
-    assert_equal %w(black hispanic), user.reload.races
+    @student.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), @student.reload.races
   end
 
   test 'under 13' do
@@ -941,8 +936,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is true for user with password' do
-    user = create :student
-    assert user.can_edit_password?
+    assert @student.can_edit_password?
   end
 
   test 'can_edit_password? is false for user without password' do
@@ -952,8 +946,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is true for user with password' do
-    user = create :student
-    assert user.can_edit_email?
+    assert @student.can_edit_email?
   end
 
   test 'can_edit_email? is false for user without password' do
@@ -1260,9 +1253,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-    refute user.confirmation_required?
-    refute user.confirmed_at
+    refute @student.confirmation_required?
+    refute @student.confirmed_at
   end
 
   test 'student and teacher relationships' do
@@ -1409,8 +1401,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for student without teachers' do
-    student = create :student
-    assert_nil student.terms_version
+    assert_nil @student.terms_version
   end
 
   test 'terms_of_service_version for student with teachers without version' do
@@ -1466,16 +1457,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do
-    user = create :user
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    assert user.should_see_inline_answer?(nil)
-    assert user.should_see_inline_answer?(create(:script_level))
+    assert @student.should_see_inline_answer?(nil)
+    assert @student.should_see_inline_answer?(create(:script_level))
   end
 
   test 'should_see_inline_answer? returns false for non teachers' do
-    user = create :student
-    assert_not user.should_see_inline_answer?(create(:script_level))
+    assert_not @student.should_see_inline_answer?(create(:script_level))
   end
 
   test 'should_see_inline_answer? returns true for authorized teachers in csp' do
