@@ -1254,7 +1254,6 @@ class UserTest < ActiveSupport::TestCase
 
   test 'email confirmation not required for students' do
     refute @student.confirmation_required?
-    refute @student.confirmed_at
   end
 
   test 'student and teacher relationships' do
