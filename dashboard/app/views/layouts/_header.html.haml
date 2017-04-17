@@ -4,9 +4,6 @@
 - level = local_assigns[:level]
 - full_width = local_assigns[:full_width]
 
-%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
-%script{src: '/shared/js/hamburger.js'}
-
 = render partial: 'layouts/unsupported_browser'
 
 - show_bug_links = script_level || (level && level.try(:is_project_level))
@@ -18,6 +15,8 @@
 - header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
 
 - if show_header2
+  %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+  %script{src: minifiable_asset_path("js/hamburger.js")}
   - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
   - user_type = request.cookies[cookie_key]
 
@@ -84,7 +83,10 @@
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
-              = render partial: 'shared/user_header_ajax'
+              - if show_header2
+                %span#sign_in_or_user
+              - else
+                = render partial: 'shared/user_header_ajax'
 
               - if show_header2
                 - hamburger_class = current_user ? '' : 'show_on_tablet'
