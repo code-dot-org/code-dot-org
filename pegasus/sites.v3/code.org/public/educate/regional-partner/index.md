@@ -16,6 +16,8 @@ The ideal Regional Partner is a U.S. based regional education unit, a non-profit
 
 **We are now accepting applications for partners in new regions! Check the map below to see if your region needs a partner. If it does, review the <a href="/educate/regional-partner/terms" target=_blank>partnership terms</a> and then <a href="/educate/regional-partner/apply" target=_blank>apply</a>!**
 
+Interested in sharing this information with another organization? [Share our 1-pager]() on the Regional Partner Program.
+
 [col-50]
 
 <%= view :display_video_thumbnail, id: "plp_intro", video_code: "cf1KKBGK6mY", play_button: 'center' %>

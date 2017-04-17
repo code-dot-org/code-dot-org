@@ -9,16 +9,29 @@ theme: responsive
 
 ## <a name="what"></a>Apply for Professional Learning
 
-Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. General applications for the 2017-18 CS Principles Professional Learning Program have closed. 
+Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** 
 
 We are still accepting applicants in the following regions:
 
-* Bay Area, CA: Contra Costa, San Jose, and Oakland
+* Arizona
+* Bay Area and Central Coast, CA
+* Sacramento Valley and Nort Coast, CA
+* San Joaquin Valley, CA
+* Colorado
+* Northeast Florida
 * Miami, FL
 * Iowa
+* Illinois
+* Indiana
+* Maine
 * Montana
+* New Jersey
+* Nevada
+* Oklahoma
+* Pennsylvania
 * South Carolina
 * Tennessee
+* Austin, TX
 * Dallas, TX
 * Virginia
 * Wisconsin
