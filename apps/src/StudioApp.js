@@ -2892,6 +2892,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance.removeAllListeners();
     instance = __oldInstance;
     __oldInstance = null;
   };
