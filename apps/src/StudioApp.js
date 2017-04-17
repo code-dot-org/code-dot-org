@@ -1987,7 +1987,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // was initialized, so include it initially, and conditionally remove it here.
   if (!project.useFirebase()) {
     // Remove onRecordEvent from the palette
-    delete config.level.codeFunctions.onRecordEvent;
+    if (config.level.codeFunctions) {
+      delete config.level.codeFunctions.onRecordEvent;
+    }
 
     // Remove onRecordEvent from autocomplete, while still recognizing it as a command
     const block = config.dropletConfig.blocks.find(block => {
@@ -2003,9 +2005,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // was initialized, so include it initially, and conditionally remove it here.
   if (!project.useMakerAPIs()) {
     //// Remove maker blocks from the palette
-    makerDropletBlocks.forEach(block => {
-      delete config.level.codeFunctions[block.func];
-    });
+    if (config.level.codeFunctions) {
+      makerDropletBlocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
+    }
 
     // Remove onRecordEvent from autocomplete, while still recognizing it as a command
     const block = config.dropletConfig.blocks.find(block => {
