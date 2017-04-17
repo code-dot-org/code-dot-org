@@ -1,5 +1,4 @@
 var testUtils = require('../util/testUtils');
-testUtils.setExternalGlobals();
 import {assert} from '../util/configuredChai';
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
@@ -7,6 +6,9 @@ var sinon = require('sinon');
 var shareWarnings = require('@cdo/apps/shareWarnings');
 
 describe('shareWarnings', function () {
+
+  testUtils.setExternalGlobals();
+
   describe('checkSharedAppWarnings function', function () {
 
     beforeEach(() => {

@@ -860,19 +860,28 @@ var projects = module.exports = {
   },
 
   /**
-   * Uploads a thumbnail image to the thumbnail path in the files API, and
-   * stores a URL to access the thumbnail in current.thumbnailUrl.
+   * Uploads a thumbnail image to the thumbnail path in the files API. If
+   * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   * @returns {Promise} A promise indicating whether the upload was successful.
    */
   saveThumbnail(pngBlob) {
-    if (current && current.isOwner) {
+    if (!current) {
+      return Promise.reject('Project not initialized.');
+    }
+    if (!current.isOwner) {
+      return Promise.reject('Project not owned by current user.');
+    }
+
+    return new Promise((resolve, reject) => {
       const thumbnailPath = '.metadata/thumbnail.png';
       filesApi.putFile(thumbnailPath, pngBlob, () => {
         current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+        resolve();
       }, error => {
-        console.warn(`error saving thumbnail image: ${error}`);
+        reject(`error saving thumbnail image: ${error}`);
       });
-    }
+    });
   },
 };
 

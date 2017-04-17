@@ -64,7 +64,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "markdown_instructions": "# Create Your Scene - Drawing\r\n\r\nYou're going to start creating a scene of your own. If you haven't already, take a minute to sketch out a picture of your scene (consider using graph paper). Once you have an idea and plan for your scene, start drawing the background.\r\n\r\n# Do This\r\n\r\n* Use a `backgound()` commands to set fill the screen with a color\r\n* Add any necessary shape commands to draw the non-sprite elements of your scene",
+    "markdown_instructions": "# Create Your Scene - Drawing\r\n\r\nYou're going to start creating a scene of your own. If you haven't already, take a minute to sketch out a picture of your scene (consider using graph paper). Once you have an idea and plan for your scene, start drawing the background.\r\n\r\n# Do This\r\n\r\n* Use a `background()` commands to set fill the screen with a color\r\n* Add any necessary shape commands to draw the non-sprite elements of your scene",
     "project_template_level_name": "CSD U3 Sprites scene template",
     "contained_level_names": null
   },

@@ -4,6 +4,7 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
+const project = require('@cdo/apps/code-studio/initApp/project');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -120,13 +121,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  window.dashboard.project.useFirebase = function () {
-    return Boolean(testData.useFirebase);
-  };
-
-  window.dashboard.project.isOwner = function () {
-    return true;
-  };
+  project.useFirebase.returns(!!testData.useFirebase);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
@@ -150,7 +145,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
-      if (level.editCode && !studioApp.editor) {
+      if (level.editCode && !studioApp().editor) {
         timeout = 500;
       }
 

@@ -7,9 +7,27 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "rect": null,
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
       "fill": null,
-      "ellipse": null
+      "ellipse": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
     },
     "show_d_pad": "true",
     "edit_code": true,

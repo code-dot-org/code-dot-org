@@ -110,7 +110,7 @@ class DashboardStudent
     return if user_to_update.empty?
     return if Dashboard.db[:sections].
       join(:followers, section_id: :sections__id).
-      where(sections__user_id: dashboard_user_id).
+      where(sections__user_id: dashboard_user_id, sections__deleted_at: nil).
       where(followers__student_user_id: params[:id], followers__deleted_at: nil).
       empty?
 
@@ -279,6 +279,7 @@ class DashboardSection
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
     script_id = params[:course] && valid_course_id?(params[:course][:id]) ?
       params[:course][:id].to_i : params[:script_id]
+    stage_extras = params[:stage_extras] ? params[:stage_extras] : false
     created_at = DateTime.now
 
     row = nil
@@ -292,6 +293,7 @@ class DashboardSection
           grade: grade,
           script_id: script_id,
           code: SectionHelpers.random_code,
+          stage_extras: stage_extras,
           created_at: created_at,
           updated_at: created_at,
         }
@@ -349,7 +351,6 @@ class DashboardSection
       select(*fields).
       where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
-
     section = new(row)
     return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
     nil
@@ -398,10 +399,14 @@ class DashboardSection
     return student_ids
   end
 
+  # @param student_id [Integer] The user ID of the student to unenroll.
+  # @return [Boolean] Whether the student's enrollment was removed.
   def remove_student(student_id)
     # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
 
-    rows_deleted = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
+    rows_deleted = Dashboard.db[:followers].
+      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
+      update(deleted_at: DateTime.now)
     rows_deleted > 0
   end
 
