@@ -13,5 +13,10 @@ class SectionHelpersTest < Minitest::Test
       codes = 10.times.map {SectionHelpers.random_code}
       assert codes.grep(/[AEIOU]/).empty?
     end
+
+    it 'does not return naughty substrings' do
+      SectionHelpers.stubs(:random_text).returns('BCDMNP', 'BCDFGH')
+      assert_equal 'BCDFGH', SectionHelpers.random_code
+    end
   end
 end
