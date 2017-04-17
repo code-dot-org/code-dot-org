@@ -58,7 +58,7 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
           // the consequences of double-incrementing are relatively low.
           setTimeout(() => {
             // Make this event visible in UI test output and New Relic.
-            throw new Error('retrying incrementIntervalCounters after network disconnect');
+            throw new Error('retrying updateTableCountersHelper after network disconnect');
           }, 0);
           return updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config);
         } else {
