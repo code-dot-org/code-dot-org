@@ -34,14 +34,16 @@ class FollowersController < ApplicationController
 
     authorize! :destroy, f
     f.delete
-    if @teacher.email.present?
+    # Though in theory required, we are missing an email address for many teachers.
+    if @teacher && @teacher.email.present?
       FollowerMailer.student_disassociated_notify_teacher(@teacher, current_user).deliver_now
     end
+    teacher_name = @teacher ? @teacher.name : I18n.t('user.deleted_user')
     redirect_to(
       root_path,
       notice: t(
         'teacher.student_teacher_disassociated',
-        teacher_name: @teacher.name,
+        teacher_name: teacher_name,
         section_code: params[:section_code]
       )
     )
