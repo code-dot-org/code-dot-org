@@ -45,7 +45,6 @@ const ModifyState = React.createClass({
   }
 });
 
-// TODO - also write unit tests
 export default storybook => {
   storybook
     .storiesOf('StageDescriptions', module)
