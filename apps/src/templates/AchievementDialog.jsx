@@ -88,7 +88,7 @@ const AchievementDialog = Radium(React.createClass({
     onContinue: React.PropTypes.func,
     showPuzzleRatingButtons: React.PropTypes.bool,
     showStageProgress: React.PropTypes.bool,
-    tooManyBlocks: React.PropTypes.bool,
+    encourageRetry: React.PropTypes.bool,
   },
 
   getInitialState() {
@@ -97,7 +97,7 @@ const AchievementDialog = Radium(React.createClass({
 
   handleClose() {
     this.setState({isOpen: false});
-    this.props.tooManyBlocks && this.props.onContinue();
+    this.props.encourageRetry && this.props.onContinue();
   },
 
   icon(flag) {
@@ -190,12 +190,12 @@ const AchievementDialog = Radium(React.createClass({
             onClick={this.handleClose}
             style={[
               styles.buttonPrimary,
-              this.props.tooManyBlocks && styles.buttonSecondary
+              this.props.encourageRetry && styles.buttonSecondary
             ]}
           >
             {locale.continue()}
           </button>
-          {this.props.tooManyBlocks &&
+          {this.props.encourageRetry &&
             <button
               onClick={this.handleClose}
               style={styles.buttonPrimary}

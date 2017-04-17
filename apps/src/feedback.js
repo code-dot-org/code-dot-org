@@ -261,12 +261,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       <AchievementDialog
         achievements={achievements}
         assetUrl={this.studioApp_.assetUrl}
+        encourageRetry={!isPerfect}
         feedbackMessage={feedbackMessage}
         oldStageProgress={progress.oldStageProgress}
         onContinue={onContinue}
         showPuzzleRatingButtons={showPuzzleRatingButtons}
         showStageProgress={true}
-        tooManyBlocks={!isPerfect}
       />, container);
     return;
   }
