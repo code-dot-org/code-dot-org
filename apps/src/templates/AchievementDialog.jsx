@@ -127,26 +127,16 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRowGenerator(show, successful, message) {
-    if (!show) {
-      return null;
-    }
-
-    return (style, index) => {
-      return (
-        <p style={{...styles.achievement.row, ...style}} key={index}>
-          {this.icon(successful)}
-          <span style={styles.achievement.text}>{message}</span>
-        </p>
-      );
-    };
+  achievementRow(successful, message, style, index) {
+    return (
+      <p style={{...styles.achievement.row, ...style}} key={index}>
+        {this.icon(successful)}
+        <span style={styles.achievement.text}>{message}</span>
+      </p>
+    );
   },
 
   render() {
-    const achievementRowGenerators = this.props.achievements.map(achievement => {
-      return this.achievementRowGenerator(true, achievement.check, achievement.msg);
-    });
-
     return (
       <BaseDialog
         useUpdatedStyles
@@ -156,7 +146,7 @@ const AchievementDialog = Radium(React.createClass({
         {...this.props}
       >
         <StaggeredMotion
-          defaultStyles={Array(achievementRowGenerators.length + 1).fill({ progress: 0 })}
+          defaultStyles={Array(this.props.achievements.length + 1).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
               { progress: spring(1, { stiffness: 100, damping: 25 }) } :
@@ -171,8 +161,12 @@ const AchievementDialog = Radium(React.createClass({
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
                 <div style={styles.checkmarks}>
-                  {achievementRowGenerators.map((generator, index) =>
-                          generator(interpolatingStyles[index + 1], index))}
+                  {this.props.achievements.map((achievement, index) =>
+                    this.achievementRow(
+                        achievement.check,
+                        achievement.msg,
+                        interpolatingStyles[index + 1],
+                        index))}
                 </div>
                 {this.props.showStageProgress &&
                   <StageProgressBar
