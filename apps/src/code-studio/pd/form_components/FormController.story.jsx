@@ -103,9 +103,20 @@ const OPTIONS = {
   three: ["Seventh", "Eighth", "Ninth"]
 };
 
+const reactBootstrapStoryDecorator = (story) => (
+  // Currently the Bootstrap 3 styles required by React-Bootstrap are only
+  // applied inside div#application-container. This is to prevent conflicts with
+  // other parts of Code Studio using Bootstrap 2. See pd.scss. Without this
+  // container div it won't render properly.
+  <div id="application-container">
+    {story()}
+  </div>
+);
+
 export default storybook => {
   storybook
     .storiesOf('FormComponent', module)
+    .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([{
       name: 'simple form with generated radio buttons',
       story: () => (
@@ -156,6 +167,7 @@ export default storybook => {
 
   storybook
     .storiesOf('FormController', module)
+    .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([{
       name: 'simple multi-page form',
       story: () => (
