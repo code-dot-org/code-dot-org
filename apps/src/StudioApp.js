@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {EventEmitter} from 'events';
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
@@ -39,7 +40,6 @@ import project from './code-studio/initApp/project';
 import * as assets from './code-studio/assets';
 import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
-import ObservableEvent from './ObservableEvent';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
@@ -83,144 +83,145 @@ var MAX_PHONE_WIDTH = 500;
  *           (such as when they are not signed in).
  */
 
-function StudioApp() {
-  this.feedback_ = new FeedbackUtils(this);
-  this.authoredHintsController_ = new AuthoredHints(this);
+class StudioApp extends EventEmitter {
+  constructor() {
+    super();
+    this.feedback_ = new FeedbackUtils(this);
+    this.authoredHintsController_ = new AuthoredHints(this);
 
-  /**
-  * The parent directory of the apps. Contains common.js.
-  */
-  this.BASE_URL = undefined;
+    /**
+     * The parent directory of the apps. Contains common.js.
+     */
+    this.BASE_URL = undefined;
 
-  this.enableShowCode = true;
-  this.editCode = false;
-  this.usingBlockly_ = true;
+    this.enableShowCode = true;
+    this.editCode = false;
+    this.usingBlockly_ = true;
 
-  /**
-   * @type {AudioPlayer}
-   */
-  this.cdoSounds = null;
-  /**
-   * @type {?Droplet.Editor}
-   */
-  this.editor = null;
-  /**
-   * @type {?DropletTooltipManager}
-   */
-  this.dropletTooltipManager = null;
+    /**
+     * @type {AudioPlayer}
+     */
+    this.cdoSounds = null;
+    /**
+     * @type {?Droplet.Editor}
+     */
+    this.editor = null;
+    /**
+     * @type {?DropletTooltipManager}
+     */
+    this.dropletTooltipManager = null;
 
-  // @type {string} for all of these
-  this.icon = undefined;
-  this.winIcon = undefined;
-  this.failureIcon = undefined;
+    // @type {string} for all of these
+    this.icon = undefined;
+    this.winIcon = undefined;
+    this.failureIcon = undefined;
 
-  // The following properties get their non-default values set by the application.
+    // The following properties get their non-default values set by the application.
 
-  /**
-   * Whether to alert user to empty blocks, short-circuiting all other tests.
-   * @member {boolean}
-   */
-  this.checkForEmptyBlocks_ = false;
+    /**
+     * Whether to alert user to empty blocks, short-circuiting all other tests.
+     * @member {boolean}
+     */
+    this.checkForEmptyBlocks_ = false;
 
-  /**
-  * The ideal number of blocks to solve this level.  Users only get 2
-  * stars if they use more than this number.
-  * @type {number}
-  */
-  this.IDEAL_BLOCK_NUM = undefined;
+    /**
+     * The ideal number of blocks to solve this level.  Users only get 2
+     * stars if they use more than this number.
+     * @type {number}
+     */
+    this.IDEAL_BLOCK_NUM = undefined;
 
-  /**
-   * @typedef {Object} TestableBlock
-   * @property {string|function} test - A test whether the block is
-   *           present, either:
-   *           - A string, in which case the string is searched for in
-   *             the generated code.
-   *           - A single-argument function is called on each user-added
-   *             block individually.  If any call returns true, the block
-   *             is deemed present.  "User-added" blocks are ones that are
-   *             neither disabled or undeletable.
-   * @property {string} type - The type of block to be produced for
-   *           display to the user if the test failed.
-   * @property {Object} [titles] - A dictionary, where, for each
-   *           KEY-VALUE pair, this is added to the block definition:
-   *           <title name="KEY">VALUE</title>.
-   * @property {Object} [value] - A dictionary, where, for each
-   *           KEY-VALUE pair, this is added to the block definition:
-   *           <value name="KEY">VALUE</value>
-   * @property {string} [extra] - A string that should be blacked
-   *           between the "block" start and end tags.
-   */
+    /**
+     * @typedef {Object} TestableBlock
+     * @property {string|function} test - A test whether the block is
+     *           present, either:
+     *           - A string, in which case the string is searched for in
+     *             the generated code.
+     *           - A single-argument function is called on each user-added
+     *             block individually.  If any call returns true, the block
+     *             is deemed present.  "User-added" blocks are ones that are
+     *             neither disabled or undeletable.
+     * @property {string} type - The type of block to be produced for
+     *           display to the user if the test failed.
+     * @property {Object} [titles] - A dictionary, where, for each
+     *           KEY-VALUE pair, this is added to the block definition:
+     *           <title name="KEY">VALUE</title>.
+     * @property {Object} [value] - A dictionary, where, for each
+     *           KEY-VALUE pair, this is added to the block definition:
+     *           <value name="KEY">VALUE</value>
+     * @property {string} [extra] - A string that should be blacked
+     *           between the "block" start and end tags.
+     */
 
-  /**
-  * @type {!TestableBlock[]}
-  */
-  this.requiredBlocks_ = [];
+    /**
+     * @type {!TestableBlock[]}
+     */
+    this.requiredBlocks_ = [];
 
-  /**
-  * The number of required blocks to give hints about at any one time.
-  * Set this to Infinity to show all.
-  * @type {number}
-  */
-  this.maxRequiredBlocksToFlag_ = 1;
+    /**
+     * The number of required blocks to give hints about at any one time.
+     * Set this to Infinity to show all.
+     * @type {number}
+     */
+    this.maxRequiredBlocksToFlag_ = 1;
 
-  /**
-  * @type {!TestableBlock[]}
-  */
-  this.recommendedBlocks_ = [];
+    /**
+     * @type {!TestableBlock[]}
+     */
+    this.recommendedBlocks_ = [];
 
-  /**
-  * The number of recommended blocks to give hints about at any one time.
-  * Set this to Infinity to show all.
-  * @type {number}
-  */
-  this.maxRecommendedBlocksToFlag_ = 1;
+    /**
+     * The number of recommended blocks to give hints about at any one time.
+     * Set this to Infinity to show all.
+     * @type {number}
+     */
+    this.maxRecommendedBlocksToFlag_ = 1;
 
-  /**
-  * The number of attempts (how many times the run button has been pressed)
-  * @type {?number}
-  */
-  this.attempts = 0;
+    /**
+     * The number of attempts (how many times the run button has been pressed)
+     * @type {?number}
+     */
+    this.attempts = 0;
 
-  /**
-  * Stores the time at init. The delta to current time is used for logging
-  * and reporting to capture how long it took to arrive at an attempt.
-  * @type {?number}
-  */
-  this.initTime = undefined;
+    /**
+     * Stores the time at init. The delta to current time is used for logging
+     * and reporting to capture how long it took to arrive at an attempt.
+     * @type {?number}
+     */
+    this.initTime = undefined;
 
-  /**
-  * Enumeration of user program execution outcomes.
-  */
-  this.ResultType = constants.ResultType;
+    /**
+     * Enumeration of user program execution outcomes.
+     */
+    this.ResultType = constants.ResultType;
 
-  /**
-  * Enumeration of test results.
-  */
-  this.TestResults = constants.TestResults;
+    /**
+     * Enumeration of test results.
+     */
+    this.TestResults = constants.TestResults;
 
-  /**
-   * If true, we don't show blockspace. Used when viewing shared levels
-   */
-  this.hideSource = false;
+    /**
+     * If true, we don't show blockspace. Used when viewing shared levels
+     */
+    this.hideSource = false;
 
-  /**
-   * If true, we're viewing a shared level.
-   */
-  this.share = false;
+    /**
+     * If true, we're viewing a shared level.
+     */
+    this.share = false;
 
-  this.onAttempt = undefined;
-  this.onContinue = undefined;
-  this.onResetPressed = undefined;
-  this.backToPreviousLevel = undefined;
-  this.sendToPhone = undefined;
-  this.enableShowBlockCount = true;
+    this.onAttempt = undefined;
+    this.onContinue = undefined;
+    this.onResetPressed = undefined;
+    this.backToPreviousLevel = undefined;
+    this.sendToPhone = undefined;
+    this.enableShowBlockCount = true;
 
-  this.disableSocialShare = false;
-  this.noPadding = false;
+    this.disableSocialShare = false;
+    this.noPadding = false;
 
-  this.MIN_WORKSPACE_HEIGHT = undefined;
-
-  this.afterInit = new ObservableEvent();
+    this.MIN_WORKSPACE_HEIGHT = undefined;
+  }
 }
 
 /**
@@ -546,7 +547,7 @@ StudioApp.prototype.init = function (config) {
     this.setupLegacyShareView();
   }
 
-  this.afterInit.notifyObservers();
+  this.emit('afterInit');
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
