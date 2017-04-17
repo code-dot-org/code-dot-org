@@ -73,6 +73,10 @@ if (IN_STORYBOOK || IN_UNIT_TEST) {
 export function getStore() {
   if (!reduxStore) {
     reduxStore = createStoreWithReducers();
+    if (experiments.isEnabled('reduxGlobalStore')) {
+      // Expose our store globally, to make debugging easier
+      window.reduxStore = reduxStore;
+    }
   }
 
   return reduxStore;
@@ -87,8 +91,9 @@ function createStoreWithReducers() {
 }
 
 /**
- * Register multiple top-level reducers with the global store and get back
- * selector functions to access the state for each reducer.
+ * Register multiple top-level reducers with the global store. This does not remove
+ * any reducers that have been previously registered.
+ *
  * @param {object} reducers - an object mapping unique keys to reducer functions
  *     The keys will be used in the state object.
  * @returns void

@@ -379,3 +379,7 @@ And /^I wait for initial applab save to complete$/ do
     @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
   end
 end
+
+And /^I open the debug console$/ do
+  steps 'And I click selector "#debug-area-header .fa-chevron-circle-up" if it exists'
+end

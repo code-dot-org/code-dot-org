@@ -40,11 +40,6 @@ FactoryGirl.define do
     user_type User::TYPE_STUDENT
     confirmed_at Time.now
 
-    # Child of :user factory, since it's in the `factory :user` block
-    factory :admin do
-      admin true
-    end
-
     factory :levelbuilder do
       after(:create) do |levelbuilder|
         levelbuilder.permission = UserPermission::LEVELBUILDER
@@ -56,7 +51,7 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       admin false
-      factory :admin_teacher do
+      factory :admin do
         admin true
       end
       factory :terms_of_service_teacher do
@@ -109,7 +104,6 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-      admin false
     end
 
     factory :young_student do
@@ -577,6 +571,8 @@ FactoryGirl.define do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
       num_enrollments 0
+      enrolled_and_attending_users 0
+      enrolled_unattending_users 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
@@ -585,6 +581,17 @@ FactoryGirl.define do
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
+      end
+      evaluator.enrolled_and_attending_users.times do
+        teacher = create :teacher
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.sessions.each do |session|
+          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
+        end
+      end
+      evaluator.enrolled_unattending_users.times do
+        teacher = create :teacher
+        workshop.enrollment << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
   end

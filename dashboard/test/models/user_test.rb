@@ -1625,18 +1625,31 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 
-  test 'non_deleted_sections doesnt return deleted sections' do
-    teacher = create :teacher
-    section1 = create :section, user_id: teacher.id
-    section2 = create :section, user_id: teacher.id
+  test 'deleting teacher deletes dependent sections and followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
 
-    assert_equal [section1, section2], teacher.sections
-    assert_equal [section1, section2], teacher.non_deleted_sections
+    teacher.destroy
 
-    section1.update!(deleted_at: Time.now)
+    assert teacher.reload.deleted?
+    assert section.reload.deleted?
+    assert follower.reload.deleted?
+    refute student.reload.deleted?
+  end
 
-    # sections still incldues our deleted section, but non_deleted_sections does not
-    assert_equal [section1, section2], teacher.sections
-    assert_equal [section2], teacher.non_deleted_sections
+  test 'deleting student deletes dependent followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
+
+    student.destroy
+
+    refute teacher.reload.deleted?
+    refute section.reload.deleted?
+    assert follower.reload.deleted?
+    assert student.reload.deleted?
   end
 end

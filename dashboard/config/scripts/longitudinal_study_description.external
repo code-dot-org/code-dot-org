@@ -1,5 +1,31 @@
 name 'Longitudinal study description'
 
 markdown <<MARKDOWN
-Here is some stuff about the longitudinal study
+# We want to stay in touch!
+
+**You are part of a special group of people**
+
+For the first time ever, students like you will be graduating from high school having taken *CS Principles*. That makes you part of a special group of people with a unique view on the world.  As you get older and move on in life past high school, what happens? 
+
+We are *super interested* to get in touch with you in the future to find out.
+
+** What are we asking?**
+
+* We are hoping that you will participate in a long-range study that tries to capture the life stories and paths of students who have taken CS Principles.
+* You need to be 18 years old, and to give us permission to get in touch with you.
+
+**What are you agreeing to?**
+
+* For us (Code.org) to contact you once or twice a year after high school to answer a few survey questions, and maybe for us to interview you once.
+
+That's about it. 
+
+So if...
+
+* You are 18 years or older 
+* You are willing and interested to have us contact you in the future (think: once or twice per year) to answer a few questions, possibly to be interviewed, about your views and your life story
+
+...then please **click continue to provide us with contact information where we can reach you.**
+
+
 MARKDOWN
