@@ -16,6 +16,17 @@
         = render partial: 'workshop_details'
         %h2
           Your Information
+        - unless @signed_in
+          %div.info-box-teal
+            %div.left
+              =image_tag image_url("info.png")
+            %div.right
+              %p
+                %span.message
+                  Already have a Code.org account?
+              %p
+                = link_to 'Sign in', CDO.studio_url("/users/sign_in?return_to=#{request.url}")
+                first to pre-fill some information.
         %p
           Fields marked with a
           %span.form-required-field
