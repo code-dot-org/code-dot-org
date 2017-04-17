@@ -639,10 +639,10 @@ function setupReduxSubscribers(store) {
     // new tables are added and removed.
     const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
     tablesRef.on('child_added', snapshot => {
-      store.dispatch(addTableName(snapshot.key()));
+      store.dispatch(addTableName(typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key));
     });
     tablesRef.on('child_removed', snapshot => {
-      store.dispatch(deleteTableName(snapshot.key()));
+      store.dispatch(deleteTableName(typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key));
     });
   }
 }
