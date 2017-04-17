@@ -79,17 +79,15 @@ describe('Circuit Playground Components', () => {
 
     it('can initialize a second set of components with a second board', () => {
       // Checks a necessary condition for a true johnny-five level reset.
-      let componentsOne, componentsTwo;
       const boardOne = newBoard();
       const boardTwo = newBoard();
-      return createCircuitPlaygroundComponents(boardOne)
-        .then(components => componentsOne = components)
-        .then(() => createCircuitPlaygroundComponents(boardTwo))
-        .then(components => componentsTwo = components)
-        .then(() => {
-          expect(componentsOne.led.board === boardOne).to.be.true;
-          expect(componentsTwo.led.board === boardTwo).to.be.true;
-        });
+      return Promise.all([
+        createCircuitPlaygroundComponents(boardOne),
+        createCircuitPlaygroundComponents(boardTwo),
+      ]).then(([componentsOne, componentsTwo]) => {
+        expect(componentsOne.led.board === boardOne).to.be.true;
+        expect(componentsTwo.led.board === boardTwo).to.be.true;
+      });
     });
 
     describe('colorLeds', () => {
