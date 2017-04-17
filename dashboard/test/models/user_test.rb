@@ -1624,4 +1624,32 @@ class UserTest < ActiveSupport::TestCase
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
+
+  test 'deleting teacher deletes dependent sections and followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
+
+    teacher.destroy
+
+    assert teacher.reload.deleted?
+    assert section.reload.deleted?
+    assert follower.reload.deleted?
+    refute student.reload.deleted?
+  end
+
+  test 'deleting student deletes dependent followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
+
+    student.destroy
+
+    refute teacher.reload.deleted?
+    refute section.reload.deleted?
+    assert follower.reload.deleted?
+    assert student.reload.deleted?
+  end
 end
