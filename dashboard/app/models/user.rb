@@ -292,13 +292,6 @@ class User < ActiveRecord::Base
   has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
 
-  # sections will include those that have been deleted until/unless we do the work
-  # to enable the paranoia gem. This method will return only sections that have
-  # not been deleted
-  def non_deleted_sections
-    sections.where(deleted_at: nil)
-  end
-
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
