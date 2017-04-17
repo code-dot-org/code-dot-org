@@ -5,8 +5,22 @@ class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @good_data = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
-    @good_data_young = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
+    @good_data = {
+      email: 'foo@bar.com',
+      password: 'foosbars',
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 28
+    }
+    @good_data_young = {
+      email: 'foo@bar.com',
+      password: 'foosbars',
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 8
+    }
+
+    @admin = create :admin
   end
 
   test 'make_teachers_21' do
@@ -1582,22 +1596,19 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_or_create_teacher creates new teacher' do
-    admin = create :admin
-
     params = {
       email: 'email@example.net',
       name: 'test user'
     }
 
     user = assert_creates(User) do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert user.teacher?
-    assert_equal admin, user.invited_by
+    assert_equal @admin, user.invited_by
   end
 
   test 'find_or_create_teacher finds existing teacher' do
-    admin = create :admin
     teacher = create :teacher
 
     params = {
@@ -1606,21 +1617,19 @@ class UserTest < ActiveSupport::TestCase
     }
 
     found = assert_does_not_create(User) do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert_equal teacher, found
   end
 
   test 'find_or_create_teacher with an invalid email raises ArgumentError' do
-    admin = create :admin
-
     params = {
       email: 'invalid',
       name: 'test user'
     }
 
     e = assert_raises ArgumentError do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
