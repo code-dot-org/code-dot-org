@@ -38,13 +38,14 @@ describe('CircuitPlaygroundBoard', () => {
       return playground;
     });
 
-    // Give thermometer an initial value so it can finish initialization in tests.
-    const originalThermometerInitialize = Playground.Thermometer.initialize.value;
-    sinon.stub(Playground.Thermometer.initialize, 'value')
-      .callsFake(function (opts, dataHandler) {
-        originalThermometerInitialize.call(this, opts, dataHandler);
-        dataHandler(135);
-      });
+    // Our sensors and thermometer block initialization until they receive data
+    // over the wire.  That's not great for unit tests, so here we stub waiting
+    // for data to resolve immediately.
+    sinon.stub(EventEmitter.prototype, 'once');
+    EventEmitter.prototype.once.withArgs('data').callsFake(function (_, callback) {
+      callback();
+    });
+    EventEmitter.prototype.once.callThrough();
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
@@ -54,7 +55,7 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
-    Playground.Thermometer.initialize.value.restore();
+    EventEmitter.prototype.once.restore();
   });
 
   it('is an EventEmitter', () => {
@@ -195,13 +196,13 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`celebrateSuccessfulConnection()`, () => {
-    let clock, realSetTimeout, yieldToPromiseChain;
+    let clock, yieldToPromiseChain;
 
     beforeEach(() => {
       // Promise chains and fake timers don't work together so well, so we
       // give ourselves a real `setTimeout(cb, 0)` function that will let any
       // promise chains run as far as they can before entering the callback.
-      realSetTimeout = window.setTimeout;
+      const realSetTimeout = window.setTimeout;
       yieldToPromiseChain = cb => realSetTimeout(cb, 0);
 
       // Now use fake timers so we can test exactly when the different commands
@@ -214,9 +215,6 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('plays a song and animates lights', done => {
-      // We need to manually advance time _during_ connect() to allow sensors to
-      // fully initialize, since we're using a fake clock in this test.
-      realSetTimeout(() => clock.tick(1000), 50);
       board.connect().then(() => {
         // Mock board components that will be used to celebrate
         const buzzer = sinon.mock(board.prewiredComponents_.buzzer);
