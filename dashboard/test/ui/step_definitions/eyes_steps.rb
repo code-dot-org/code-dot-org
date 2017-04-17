@@ -18,15 +18,16 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
 
   @eyes.branch_name = GitUtils.current_branch
 
-  pr_base = GitUtils.circle_pr_branch_base_no_origin
-  if pr_base
-    puts "Branch is #{pr_base}"
-    @eyes.parent_branch_name = pr_base
-  else
-    fallback_branch = GitUtils.current_branch_base_no_origin
-    puts "No PR for eyes branch: #{GitUtils.current_branch}, using fallback parent branch #{fallback_branch}"
-    @eyes.parent_branch_name = fallback_branch
-  end
+  # pr_base = GitUtils.circle_pr_branch_base_no_origin
+  # if pr_base
+  #   puts "Branch is #{pr_base}"
+  #   @eyes.parent_branch_name = pr_base
+  # else
+  #   fallback_branch = GitUtils.current_branch_base_no_origin
+  #   puts "No PR for eyes branch: #{GitUtils.current_branch}, using fallback parent branch #{fallback_branch}"
+  #   @eyes.parent_branch_name = fallback_branch
+  # end
+  @eyes.parent_branch_name = 'origin/test'
 
   @original_browser = @browser
   config = {app_name: 'Code.org', test_name: test_name, driver: @browser}
