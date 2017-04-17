@@ -288,13 +288,13 @@ class User < ActiveRecord::Base
   has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections
+  has_many :sections, dependent: :destroy
   has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
