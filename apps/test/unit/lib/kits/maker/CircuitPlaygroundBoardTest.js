@@ -42,9 +42,7 @@ describe('CircuitPlaygroundBoard', () => {
     // over the wire.  That's not great for unit tests, so here we stub waiting
     // for data to resolve immediately.
     sinon.stub(EventEmitter.prototype, 'once');
-    EventEmitter.prototype.once.withArgs('data').callsFake(function (_, callback) {
-      callback();
-    });
+    EventEmitter.prototype.once.withArgs('data').callsArg(1);
     EventEmitter.prototype.once.callThrough();
 
     // Construct a board to test on
