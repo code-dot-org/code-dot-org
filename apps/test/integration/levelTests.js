@@ -124,12 +124,8 @@ describe('Level tests', function () {
 
     wrappedEventListener.attach();
 
-    // For some reason, these commands don't always get called when they are
-    // placed inside the existing window.Applab block below.
-    if (window.Applab) {
-      sinon.stub(project, 'saveThumbnail');
-      sinon.stub(project, 'isOwner').returns(true);
-    }
+    sinon.stub(project, 'saveThumbnail');
+    sinon.stub(project, 'isOwner').returns(true);
 
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
@@ -186,10 +182,8 @@ describe('Level tests', function () {
       window.Studio.interpreter = null;
     }
 
-    if (window.Applab) {
-      project.saveThumbnail.restore();
-      project.isOwner.restore();
-    }
+    project.saveThumbnail.restore();
+    project.isOwner.restore();
 
     tickWrapper.reset();
   });
