@@ -69,7 +69,7 @@ class Pd::PaymentTerm < ApplicationRecord
 
   def sufficient_contract_terms
     unless per_attendee_payment? || fixed_payment
-      errors.add(:terms, 'Must have either per attendee payment or fixed payment')
+      errors.add(:base, 'Must have either per attendee payment or fixed payment')
     end
   end
 end
