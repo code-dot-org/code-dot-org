@@ -13,6 +13,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
+        @signed_in = true
         @enrollment.full_name = current_user.name
         @enrollment.email = current_user.email
         @enrollment.email_confirmation = current_user.email
@@ -74,6 +75,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render_404
     else
       @cancel_url = url_for action: :cancel, code: @enrollment.code
+      @account_exists = User.find_by_email_or_hashed_email(
+        @enrollment.email
+        ).present?
     end
   end
 
