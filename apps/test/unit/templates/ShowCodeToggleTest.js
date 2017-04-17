@@ -6,6 +6,8 @@ import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
 
 describe('ShowCodeToggle', () => {
   let config, toggle, containerDiv, codeWorkspaceDiv;
@@ -14,6 +16,11 @@ describe('ShowCodeToggle', () => {
   afterEach(restoreStudioApp);
   beforeEach(() => sinon.stub(LegacyDialog.prototype, 'show'));
   afterEach(() => LegacyDialog.prototype.show.restore());
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+  });
+  afterEach(restoreRedux);
 
   beforeEach(() => sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
     this.editor = {
@@ -56,7 +63,6 @@ describe('ShowCodeToggle', () => {
 `;
     document.body.appendChild(containerDiv);
 
-    studioApp().configureRedux({});
     studioApp().configure(config);
     studioApp().init(config);
   });
