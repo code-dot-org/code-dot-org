@@ -7,14 +7,23 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "rect": null,
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
       "fill": null
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "fill(\"blue\");\r\nrect(100,100,50,50);\r\nrect(250, 100, 50, 50);",
+    "start_blocks": "fill(\"blue\");\r\nrect(100,100);\r\nrect(250, 100);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

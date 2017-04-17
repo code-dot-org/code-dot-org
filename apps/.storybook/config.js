@@ -8,6 +8,7 @@ import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import '../style/common.scss';
 import '../style/netsim/style.scss';
 import '../style/applab/style.scss';
+import '../src/templates/GameButtons.story.scss';
 
 const styles = {
   centeredStory: {

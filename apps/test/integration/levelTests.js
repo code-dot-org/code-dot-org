@@ -25,7 +25,6 @@ var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 var testUtils = require('../util/testUtils');
-testUtils.setExternalGlobals();
 import {setupBlocklyFrame} from './util/testBlockly';
 
 // Anatomy of a level test collection. The example itself is uncommented so
@@ -90,6 +89,7 @@ describe('Level tests', function () {
   // Don't expect console.error or console.warn to be used during any level test
   testUtils.throwOnConsoleErrors();
   testUtils.throwOnConsoleWarnings();
+  testUtils.setExternalGlobals();
 
   before(function (done) {
     this.timeout(15000);
@@ -166,11 +166,11 @@ describe('Level tests', function () {
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
-    if (studioApp.editor && studioApp.editor.aceEditor &&
-        studioApp.editor.aceEditor.session &&
-        studioApp.editor.aceEditor.session.$mode &&
-        studioApp.editor.aceEditor.session.$mode.cleanup) {
-      studioApp.editor.aceEditor.session.$mode.cleanup();
+    if (studioApp().editor && studioApp().editor.aceEditor &&
+        studioApp().editor.aceEditor.session &&
+        studioApp().editor.aceEditor.session.$mode &&
+        studioApp().editor.aceEditor.session.$mode.cleanup) {
+      studioApp().editor.aceEditor.session.$mode.cleanup();
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
