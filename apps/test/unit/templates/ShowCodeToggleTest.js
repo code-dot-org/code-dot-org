@@ -8,7 +8,7 @@ import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
 describe('ShowCodeToggle', () => {
-  let toggle, containerDiv, codeWorkspaceDiv;
+  let config, toggle, containerDiv, codeWorkspaceDiv;
 
   beforeEach(stubStudioApp);
   afterEach(restoreStudioApp);
@@ -29,7 +29,7 @@ describe('ShowCodeToggle', () => {
   }));
 
   beforeEach(() => {
-    const config = {
+    config = {
       enableShowCode: true,
       containerId: 'foo',
       level: {
@@ -194,6 +194,29 @@ describe('ShowCodeToggle', () => {
     });
 
     it("will appear hidden", () => {
+      expect(toggle.containsMatchingElement(
+        <PaneButton
+          id="show-code-header"
+          headerHasFocus={false}
+          isRtl={false}
+          iconClass="fa fa-code"
+          label="Show Text"
+          style={{display: 'none'}}
+        />
+      )).to.be.true;
+    });
+  });
+
+  describe("when studioApp() is initialized again", () => {
+    beforeEach(() => {
+      toggle = mount(
+        <ShowCodeToggle />
+      );
+      config.enableShowCode = false;
+      studioApp().init(config);
+    });
+
+    it("will reflect the most recent config passed to studioApp().init()", () => {
       expect(toggle.containsMatchingElement(
         <PaneButton
           id="show-code-header"
