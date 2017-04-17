@@ -5,12 +5,15 @@
 $color_blue_chill_80_approx: rgba(3, 147, 158, 0.8);
 $color_pacific_blue_approx: #00b2c0;
 
-
 #pageheader-wrapper {
   z-index: 99;
-  padding-top: 5px;
 }
 
+@media (max-width: 970px) {
+  #pageheader-wrapper {
+    padding-top: 5px;
+  }
+}
 
 #hamburger {
 
