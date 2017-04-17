@@ -22,8 +22,7 @@ var KeyCodes = constants.KeyCodes;
 
 var SquareType = tiles.SquareType;
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
 
