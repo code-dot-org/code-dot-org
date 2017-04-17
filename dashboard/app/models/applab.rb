@@ -59,7 +59,18 @@ class Applab < Blockly
 
   # List of possible palette categories
   def self.palette_categories
-    %w(uicontrols canvas data turtle control math variables functions)
+    %w(
+      uicontrols
+      canvas
+      data
+      turtle
+      control
+      math
+      variables
+      functions
+      Maker
+      Circuit
+    )
   end
 
   def self.create_from_level_builder(params, level_params)
