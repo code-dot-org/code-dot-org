@@ -122,6 +122,7 @@ window.SignupManager = function (options) {
    *   in the data_json field. (default {})
    */
   function logAnalyticsEvent(eventName, extraData = {}) {
+    // TODO (eric): remove this logging once school dropdown changes are complete
     const streamName = "analysis-events";
     const study = "signup_school_dropdown";
     const studyGroup = "show_school_dropdown";
