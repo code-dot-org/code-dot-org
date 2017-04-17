@@ -26,11 +26,14 @@ import Piezo from './Piezo';
  * @returns {Promise.<Object.<String, Object>>} board components
  */
 export function createCircuitPlaygroundComponents(board) {
+  // Must initialize sound sensor BEFORE left button, otherwise left button
+  // will not respond to input.  This has something to do with them sharing
+  // pin 4 on the board.
   return Promise.all([
     initializeSoundSensor(board),
     initializeLightSensor(board),
     initializeThermometer(board),
-  ]).then(sensors => {
+  ]).then(([soundSensor, lightSensor, tempSensor]) => {
     return {
       colorLeds: initializeColorLeds(board),
 
@@ -44,14 +47,11 @@ export function createCircuitPlaygroundComponents(board) {
         controller: PlaygroundIO.Piezo
       }),
 
-      // Must initialize sound sensor BEFORE left button, otherwise left button
-      // will not respond to input.  This has something to do with them sharing
-      // pin 4 on the board.
-      soundSensor: sensors[0],
+      soundSensor,
 
-      lightSensor: sensors[1],
+      lightSensor,
 
-      tempSensor: sensors[2],
+      tempSensor,
 
       accelerometer: initializeAccelerometer(board),
 
