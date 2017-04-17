@@ -12,7 +12,6 @@ var dropletUtils = require('./dropletUtils');
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require("./util/experiments");
 var KeyCodes = constants.KeyCodes;
 var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
@@ -42,7 +41,7 @@ import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
-import { getStore, registerReducers } from './redux';
+import { getStore } from './redux';
 import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
@@ -54,7 +53,6 @@ import {
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 import { setVisualizationScale } from './redux/layout';
-var commonReducers = require('./redux/commonReducers');
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -249,33 +247,6 @@ StudioApp.prototype.configure = function (options) {
 
   this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
-};
-
-/**
- * Creates a redux store for this app, while caching the set of app specific
- * reducers, so that we can recreate the store from scratch at any point if need
- * be
- * @param {object} reducers - App specific reducers, or null if the app is not
- *   providing any.
- */
-StudioApp.prototype.configureRedux = function (reducers) {
-  this.reducers_ = reducers;
-  this.createReduxStore_();
-};
-
-/**
- * Creates our redux store by combining the set of app specific reducers that
- * we stored along with a set of common reducers used by every app. Creation
- * should happen once on app load (tests will also recreate our store between
- * runs).
- */
-StudioApp.prototype.createReduxStore_ = function () {
-  registerReducers(_.assign({}, commonReducers, this.reducers_));
-
-  if (experiments.isEnabled('reduxGlobalStore')) {
-    // Expose our store globally, to make debugging easier
-    window.reduxStore = getStore();
-  }
 };
 
 /**

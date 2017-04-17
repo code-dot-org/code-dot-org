@@ -19,6 +19,7 @@ import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -123,6 +124,9 @@ describe('Level tests', function () {
 
     wrappedEventListener.attach();
 
+    sinon.stub(project, 'saveThumbnail');
+    sinon.stub(project, 'isOwner').returns(true);
+
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
     originalRender = Blockly.BlockSvg.prototype.render;
@@ -178,6 +182,9 @@ describe('Level tests', function () {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
+
+    project.saveThumbnail.restore();
+    project.isOwner.restore();
 
     tickWrapper.reset();
   });

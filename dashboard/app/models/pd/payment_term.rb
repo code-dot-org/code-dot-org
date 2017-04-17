@@ -3,7 +3,7 @@
 # Table name: pd_payment_terms
 #
 #  id                  :integer          not null, primary key
-#  regional_partner_id :integer
+#  regional_partner_id :integer          not null
 #  start_date          :date             not null
 #  end_date            :date
 #  course              :string(255)
