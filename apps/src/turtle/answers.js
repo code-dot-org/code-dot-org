@@ -206,7 +206,7 @@ exports.answer = function (page, level) {
       case 9:
         // Different height snowmen.
         for (var height = 110; height >= 70; height -= 10) {
-          setRandomVisibleColour();
+          api.penColour('#000000');  // black
           drawSnowman(height);
           api.turnRight(90);
           api.jumpForward(60);
