@@ -29,7 +29,17 @@ window.SignupManager = function (options) {
 
   function formError(err) {
     // Define the fields that can have specific errors attached to them.
-    var fields = ["user_type", "name", "email", "password", "password_confirmation", "age", "gender", "terms_of_service_version", "school_info.zip"];
+    var fields = [
+      "user_type",
+      "name",
+      "email",
+      "password",
+      "password_confirmation",
+      "age",
+      "gender",
+      "terms_of_service_version",
+      "school_info.zip"
+    ];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
