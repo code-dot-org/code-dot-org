@@ -39,6 +39,7 @@ import project from './code-studio/initApp/project';
 import * as assets from './code-studio/assets';
 import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
+import ObservableEvent from './ObservableEvent';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
@@ -218,6 +219,8 @@ function StudioApp() {
   this.noPadding = false;
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
+
+  this.afterInit = new ObservableEvent();
 }
 
 /**
@@ -542,6 +545,8 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
+
+  this.afterInit.notifyObservers();
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {

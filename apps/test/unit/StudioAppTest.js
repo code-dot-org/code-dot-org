@@ -67,5 +67,25 @@ describe('StudioApp.singleton', () => {
       expect(assetsApi.getFiles).to.have.been.calledOnce;
       expect(listStore.reset).to.have.been.calledWith(files);
     });
+
+    it("will notify any observers of afterInit", () => {
+      const observer = sinon.spy();
+      studioApp().afterInit.register(observer);
+      studioApp().init({
+        usesAssets: true,
+        enableShowCode: true,
+        containerId: 'foo',
+        level: {
+          editCode: true,
+          codeFunctions: {},
+        },
+        dropletConfig: {
+          blocks: [],
+        },
+        skin: {},
+      });
+
+      expect(observer).to.have.been.calledOnce;
+    });
   });
 });
