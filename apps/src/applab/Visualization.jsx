@@ -60,8 +60,8 @@ var Visualization = React.createClass({
   },
 
   handleTryAgain() {
-    studioApp.resetButtonClick();
-    studioApp.runButtonClick();
+    studioApp().resetButtonClick();
+    studioApp().runButtonClick();
   },
 
   render: function () {

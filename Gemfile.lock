@@ -29,6 +29,14 @@ GIT
       activemodel (>= 4.0)
 
 GIT
+  remote: https://github.com/rubysherpas/paranoia.git
+  revision: 9e43d569abf077aa95ac11f3151fbdde7dd219b5
+  ref: 9e43d569abf077aa95ac11f3151fbdde7dd219b5
+  specs:
+    paranoia (2.2.1)
+      activerecord (>= 4.0, < 5.1)
+
+GIT
   remote: https://github.com/wjordan/geocoder.git
   revision: 2da20897188b57f777df89f90e45cf331c5b014f
   ref: rack-request-fix
@@ -82,6 +90,15 @@ GIT
   specs:
     seamless_database_pool (1.0.19)
       activerecord (>= 3.2.0)
+
+GIT
+  remote: https://github.com/wjordan/sprockets.git
+  revision: 69ead85e8f9f8ef293090064e582847b1d659ec6
+  ref: concurrent_asset_bundle_3.x
+  specs:
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
 
 GEM
   remote: https://rubygems.org/
@@ -442,8 +459,6 @@ GEM
     parallel (1.9.0)
     parallel_tests (2.13.0)
       parallel
-    paranoia (2.2.0.pre)
-      activerecord (>= 4.0, < 5.1)
     parser (2.3.3.1)
       ast (~> 2.2)
     pdf-reader (1.4.0)
@@ -566,7 +581,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     securecompare (1.0.0)
-    selectize-rails (0.12.4)
     selenium-webdriver (3.0.3)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
@@ -594,9 +608,6 @@ GEM
       activesupport (>= 4.2)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
-    sprockets (3.6.3)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
     sprockets-rails (3.1.1)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
@@ -759,7 +770,7 @@ DEPENDENCIES
   os
   parallel
   parallel_tests
-  paranoia (~> 2.2.0.pre)
+  paranoia!
   pdf-reader
   phantomjs (~> 1.9.7.1)
   pusher (~> 1.3.0)
@@ -787,7 +798,6 @@ DEPENDENCIES
   scss_lint
   sdoc
   seamless_database_pool!
-  selectize-rails
   selenium-webdriver (~> 3.0.3)
   sequel (~> 4.10)
   shotgun
@@ -795,8 +805,8 @@ DEPENDENCIES
   sinatra (~> 2.0.0.beta2)
   spring
   spring-commands-testunit
-  sprockets (~> 3.6.3)
-  sprockets-rails (~> 3.1.1)
+  sprockets!
+  sprockets-rails
   sqlite3
   sshkit
   stringex (~> 2.5.2)
@@ -814,4 +824,4 @@ DEPENDENCIES
   youtube-dl.rb
 
 BUNDLED WITH
-   1.12.5
+   1.14.5

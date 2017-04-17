@@ -2,7 +2,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+
+  setup_all do
     @good_data = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
     @good_data_young = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
@@ -1418,9 +1420,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for students with deleted teachers' do
-    time_now = DateTime.now
     follower = create :follower
-    follower.user.update(deleted_at: time_now, terms_of_service_version: 1)
+    follower.user.update(terms_of_service_version: 1)
+    follower.user.destroy
     assert_nil follower.student_user.terms_version
   end
 
@@ -1623,18 +1625,31 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 
-  test 'non_deleted_sections doesnt return deleted sections' do
-    teacher = create :teacher
-    section1 = create :section, user_id: teacher.id
-    section2 = create :section, user_id: teacher.id
+  test 'deleting teacher deletes dependent sections and followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
 
-    assert_equal [section1, section2], teacher.sections
-    assert_equal [section1, section2], teacher.non_deleted_sections
+    teacher.destroy
 
-    section1.update!(deleted_at: Time.now)
+    assert teacher.reload.deleted?
+    assert section.reload.deleted?
+    assert follower.reload.deleted?
+    refute student.reload.deleted?
+  end
 
-    # sections still incldues our deleted section, but non_deleted_sections does not
-    assert_equal [section1, section2], teacher.sections
-    assert_equal [section2], teacher.non_deleted_sections
+  test 'deleting student deletes dependent followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
+
+    student.destroy
+
+    refute teacher.reload.deleted?
+    refute section.reload.deleted?
+    assert follower.reload.deleted?
+    assert student.reload.deleted?
   end
 end

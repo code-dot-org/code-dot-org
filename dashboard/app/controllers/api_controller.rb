@@ -203,7 +203,7 @@ class ApiController < ApplicationController
     if level.finishable?
       slog(
         tag: 'activity_start',
-        script_level_id: script_level.id,
+        script_level_id: script_level.try(:id),
         level_id: level.id,
         user_agent: request.user_agent,
         locale: locale

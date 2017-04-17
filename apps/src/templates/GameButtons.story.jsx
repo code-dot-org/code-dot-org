@@ -1,12 +1,6 @@
 import React from 'react';
 import {UnconnectedGameButtons, RunButton, ResetButton} from './GameButtons';
 
-// le sigh... we can't just import the craft stylesheet because
-// it changes global elements. So instead we have to import the below
-// sass stylesheet which scopes all the craft rules to only work
-// inside the specific story cells that need them.
-import './GameButtons.story.scss';
-
 export default function (storybook) {
   storybook
     .storiesOf('RunButton', module)

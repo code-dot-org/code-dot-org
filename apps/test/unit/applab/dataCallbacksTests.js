@@ -4,7 +4,6 @@ import sinon from 'sinon';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 var applabCommands = require('@cdo/apps/applab/commands');
 var AppStorage = require('@cdo/apps/applab/appStorage');
@@ -13,6 +12,8 @@ var AppStorage = require('@cdo/apps/applab/appStorage');
 describe('createRecord callbacks', function () {
   var xhr;
   var lastRequest;
+
+  testUtils.setExternalGlobals();
 
   // Intercept all XHR requests, storing the last one
   before(function () {

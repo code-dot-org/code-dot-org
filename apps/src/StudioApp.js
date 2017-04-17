@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, droplet, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -11,7 +11,6 @@ var dropletUtils = require('./dropletUtils');
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require("./util/experiments");
 var KeyCodes = constants.KeyCodes;
 var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
@@ -34,10 +33,14 @@ var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import SmallFooter from './code-studio/components/SmallFooter';
+import project from './code-studio/initApp/project';
+import * as assets from './code-studio/assets';
+import i18n from './code-studio/i18n';
+import AbuseError from './code-studio/components/abuse_error';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
-import { getStore, registerReducers } from './redux';
+import { getStore } from './redux';
 import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
@@ -49,7 +52,6 @@ import {
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 import { setVisualizationScale } from './redux/layout';
-var commonReducers = require('./redux/commonReducers');
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -215,7 +217,6 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
-Object.defineProperty(StudioApp.prototype, 'reduxStore', { get: getStore });
 
 /**
  * Configure StudioApp options
@@ -245,33 +246,6 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
- * Creates a redux store for this app, while caching the set of app specific
- * reducers, so that we can recreate the store from scratch at any point if need
- * be
- * @param {object} reducers - App specific reducers, or null if the app is not
- *   providing any.
- */
-StudioApp.prototype.configureRedux = function (reducers) {
-  this.reducers_ = reducers;
-  this.createReduxStore_();
-};
-
-/**
- * Creates our redux store by combining the set of app specific reducers that
- * we stored along with a set of common reducers used by every app. Creation
- * should happen once on app load (tests will also recreate our store between
- * runs).
- */
-StudioApp.prototype.createReduxStore_ = function () {
-  registerReducers(_.assign({}, commonReducers, this.reducers_));
-
-  if (experiments.isEnabled('reduxGlobalStore')) {
-    // Expose our store globally, to make debugging easier
-    window.reduxStore = this.reduxStore;
-  }
-};
-
-/**
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
@@ -287,7 +261,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
-    isOwner: dashboard.project.isOwner(),
+    isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -323,7 +297,7 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   ReactDOM.render(
-    <Provider store={this.reduxStore}>
+    <Provider store={getStore()}>
       <InstructionsDialogWrapper
         showInstructionsDialog={(autoClose) => {
             this.showInstructionsDialog_(config.level, autoClose);
@@ -338,7 +312,7 @@ StudioApp.prototype.init = function (config) {
 
     // Pre-populate asset list
     assetsApi.getFiles(result => {
-      dashboard.assets.listStore.reset(result.files);
+      assets.listStore.reset(result.files);
     }, xhr => {
       // Unable to load asset list
     });
@@ -355,7 +329,7 @@ StudioApp.prototype.init = function (config) {
       app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
-      isResponsive: this.reduxStore.getState().pageConstants.isResponsive,
+      isResponsive: getStore().getState().pageConstants.isResponsive,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -772,7 +746,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
+    baseMoreMenuString: i18n.t('footer.built_on_code_studio'),
     baseStyle: {
       paddingLeft: 0,
       width: $("#visualization").width()
@@ -780,32 +754,32 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     className: 'dark',
     menuItems: [
       {
-        text: window.dashboard.i18n.t('footer.try_hour_of_code'),
+        text: i18n.t('footer.try_hour_of_code'),
         link: 'https://code.org/learn',
         newWindow: true
       },
       {
-        text: window.dashboard.i18n.t('footer.report_abuse'),
+        text: i18n.t('footer.report_abuse'),
         link: "/report_abuse",
         newWindow: true
       },
       {
-        text: window.dashboard.i18n.t('footer.how_it_works'),
+        text: i18n.t('footer.how_it_works'),
         link: location.href + "/edit",
         newWindow: false
       },
       {
-        text: window.dashboard.i18n.t('footer.copyright'),
+        text: i18n.t('footer.copyright'),
         link: '#',
         copyright: true
       },
       {
-        text: window.dashboard.i18n.t('footer.tos'),
+        text: i18n.t('footer.tos'),
         link: "https://code.org/tos",
         newWindow: true
       },
       {
-        text: window.dashboard.i18n.t('footer.privacy'),
+        text: i18n.t('footer.privacy'),
         link: "https://code.org/privacy",
         newWindow: true
       }
@@ -854,7 +828,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(setIsRunning(!showRun));
+  getStore().dispatch(setIsRunning(!showRun));
 
   if (this.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -872,7 +846,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore.getState().runState.isRunning;
+  return getStore().getState().runState.isRunning;
 };
 
 /**
@@ -1085,7 +1059,7 @@ StudioApp.prototype.onReportComplete = function (response) {
  * @param {boolean} autoClose - closes instructions after 32s if true
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
-  const reduxState = this.reduxStore.getState();
+  const reduxState = getStore().getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
 
   var instructionsDiv = document.createElement('div');
@@ -1139,7 +1113,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
     }
 
     // update redux
-    this.reduxStore.dispatch(closeInstructionsDialog());
+    getStore().dispatch(closeInstructionsDialog());
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -1157,7 +1131,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', () => {
     ReactDOM.render(
-      <Provider store={this.reduxStore}>
+      <Provider store={getStore()}>
         <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
@@ -1185,24 +1159,27 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function () {
-  var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
+  const codeWorkspace = document.getElementById('codeWorkspace');
+  if (codeWorkspace) {
+    var workspaceWidth = codeWorkspace.clientWidth;
 
-  // Keep blocks static relative to the right edge in RTL mode
-  if (this.isUsingBlockly() && Blockly.RTL) {
-    if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
-      var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
-      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-        topBlock.moveBy(blockOffset, 0);
-      });
+    // Keep blocks static relative to the right edge in RTL mode
+    if (this.isUsingBlockly() && Blockly.RTL) {
+      if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
+        var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
+        Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+          topBlock.moveBy(blockOffset, 0);
+        });
+      }
     }
+    this.lastWorkspaceWidth = workspaceWidth;
+
+    // Droplet toolbox width varies as the window size changes, so refresh:
+    this.resizeToolboxHeader();
+
+    // Content below visualization is a resizing scroll area in pinned mode
+    onResizeSmallFooter();
   }
-  this.lastWorkspaceWidth = workspaceWidth;
-
-  // Droplet toolbox width varies as the window size changes, so refresh:
-  this.resizeToolboxHeader();
-
-  // Content below visualization is a resizing scroll area in pinned mode
-  onResizeSmallFooter();
 };
 
 /**
@@ -1363,7 +1340,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
     visualization.style.width = newVizWidthString;
   }
   var scale = (newVizWidth / this.nativeVizWidth);
-  this.reduxStore.dispatch(setVisualizationScale(scale));
+  getStore().dispatch(setVisualizationScale(scale));
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
 
@@ -1482,7 +1459,7 @@ StudioApp.prototype.displayFeedback = function (options) {
     // communicate the feedback message to the top instructions via
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
-    this.reduxStore.dispatch(setFeedback({ message }));
+    getStore().dispatch(setFeedback({ message }));
   }
 };
 
@@ -1496,7 +1473,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
-  const constants = this.reduxStore.getState().pageConstants;
+  const constants = getStore().getState().pageConstants;
   if (!constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(options.feedbackType);
   }
@@ -1612,7 +1589,7 @@ StudioApp.prototype.resetButtonClick = function () {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  this.reduxStore.dispatch(setFeedback(null));
+  getStore().dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
@@ -1857,7 +1834,7 @@ StudioApp.prototype.configureDom = function (config) {
       // of a larger page.
       smallFooter.style.boxSizing = "border-box";
     }
-    if (this.reduxStore.getState().pageConstants.isResponsive) {
+    if (getStore().getState().pageConstants.isResponsive) {
       smallFooter.className += " responsive";
     }
   }
@@ -1917,8 +1894,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
           ReactDOM.render(React.createElement(WireframeButtons, {
-            channelId: dashboard.project.getCurrentId(),
-            appType: dashboard.project.getStandaloneApp(),
+            channelId: project.getCurrentId(),
+            appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
           }), div);
         }
@@ -1976,9 +1953,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
-  // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
+  // We didn't have access to project.useFirebase() when dropletConfig
   // was initialized, so include it initially, and conditionally remove it here.
-  if (!window.dashboard.project.useFirebase()) {
+  if (!project.useFirebase()) {
     // Remove onRecordEvent from the palette
     delete config.level.codeFunctions.onRecordEvent;
 
@@ -1992,9 +1969,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   // Remove maker API blocks from palette and autocomplete, unless maker APIs are enabled.
-  // We didn't have access to window.dashboard.project.useMakerAPIs() when dropletConfig
+  // We didn't have access to project.useMakerAPIs() when dropletConfig
   // was initialized, so include it initially, and conditionally remove it here.
-  if (!window.dashboard.project.useMakerAPIs()) {
+  if (!project.useMakerAPIs()) {
     //// Remove maker blocks from the palette
     makerDropletBlocks.forEach(block => {
       delete config.level.codeFunctions[block.func];
@@ -2755,13 +2732,16 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
  * If the current project is considered abusive, display a small alert box
  */
 StudioApp.prototype.alertIfAbusiveProject = function () {
-  if (window.dashboard && dashboard.project &&
-      dashboard.project.exceedsAbuseThreshold()) {
-    var i18n = {
-      tos: window.dashboard.i18n.t('project.abuse.tos'),
-      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-    };
-    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  if (project.exceedsAbuseThreshold()) {
+    this.displayWorkspaceAlert(
+      'error',
+      <AbuseError
+        i18n={{
+          tos: i18n.t('project.abuse.tos'),
+          contact_us: i18n.t('project.abuse.contact_us')
+        }}
+      />
+    );
   }
 };
 
@@ -2770,13 +2750,16 @@ StudioApp.prototype.alertIfAbusiveProject = function () {
  * display a small alert box.
  */
 StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
-  if (window.dashboard && dashboard.project &&
-      dashboard.project.hasPrivacyProfanityViolation()) {
-    var i18n = {
-      tos: window.dashboard.i18n.t('project.abuse.policy_violation'),
-      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-    };
-    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  if (project.hasPrivacyProfanityViolation()) {
+    this.displayWorkspaceAlert(
+      'error',
+      <AbuseError
+        i18n={{
+          tos: i18n.t('project.abuse.policy_violation'),
+          contact_us: i18n.t('project.abuse.contact_us')
+        }}
+      />
+    );
   }
 };
 
@@ -2883,10 +2866,10 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isK1: config.level.isK1,
   }, appSpecificConstants);
 
-  this.reduxStore.dispatch(setPageConstants(combined));
+  getStore().dispatch(setPageConstants(combined));
 
   const instructionsConstants = determineInstructionsConstants(config);
-  this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
+  getStore().dispatch(setInstructionsConstants(instructionsConstants));
 };
 
 StudioApp.prototype.showRateLimitAlert = function () {
@@ -2904,10 +2887,34 @@ StudioApp.prototype.showRateLimitAlert = function () {
   }
 
   logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: window.dashboard.project.isEditing(),
-    isOwner: window.dashboard.project.isOwner(),
+    isEditing: project.isEditing(),
+    isOwner: project.isOwner(),
     share: !!this.share,
   });
 };
 
-export const singleton = new StudioApp();
+let instance;
+
+export function singleton() {
+  if (!instance) {
+    instance = new StudioApp();
+  }
+  return instance;
+}
+
+if (IN_UNIT_TEST) {
+  let __oldInstance;
+
+  module.exports.stubStudioApp = function () {
+    if (__oldInstance) {
+      throw new Error("StudioApp has already been stubbed. Did you forget to call restore?");
+    }
+    __oldInstance = instance;
+    instance = null;
+  };
+
+  module.exports.restoreStudioApp = function () {
+    instance = __oldInstance;
+    __oldInstance = null;
+  };
+}
