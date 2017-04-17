@@ -75,8 +75,6 @@ Eval.init = function (config) {
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
-  config.skin.failureAvatar = null;
-  config.skin.winAvatar = null;
 
   config.loadAudio = function () {
     studioApp().loadAudio(skin.winSound, 'win');
