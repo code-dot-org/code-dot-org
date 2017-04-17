@@ -4,7 +4,15 @@ import {
   Button,
   Alert,
   FormGroup,
+  Pagination,
 } from 'react-bootstrap';
+
+const styles = {
+  pageButtons: {
+    verticalAlign: 'middle',
+    margin: '0 10px'
+  }
+};
 
 /**
  * Helper class for dashboard forms. Expects to be extended by a class which
@@ -213,6 +221,20 @@ export default class FormController extends React.Component {
   }
 
   /**
+   * switch to the specified page in sequence, if it exists
+   */
+  setPage(i) {
+    const page = Math.min(
+      Math.max(i, 0),
+      this.getPageComponents().length - 1
+    );
+
+    this.setState({
+      currentPage: page
+    });
+  }
+
+  /**
    * @returns {boolean}
    */
   shouldShowSubmit() {
@@ -229,7 +251,6 @@ export default class FormController extends React.Component {
         <Button
           key="back"
           onClick={this.prevPage.bind(this)}
-          style={{marginRight: 5}}
         >
           Back
         </Button>
@@ -258,9 +279,19 @@ export default class FormController extends React.Component {
       );
     }
 
+    const pageButtons = (
+      <Pagination
+        style={styles.pageButtons}
+        items={this.getPageComponents().length}
+        activePage={this.state.currentPage + 1}
+        onSelect={i => this.setPage(i - 1)}
+      />
+    );
+
     return (
-      <FormGroup>
+      <FormGroup className="text-center">
         {backButton}
+        {pageButtons}
         {nextButton}
       </FormGroup>
     );
