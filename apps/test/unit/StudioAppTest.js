@@ -68,9 +68,9 @@ describe('StudioApp.singleton', () => {
       expect(listStore.reset).to.have.been.calledWith(files);
     });
 
-    it("will notify any observers of afterInit", () => {
-      const observer = sinon.spy();
-      studioApp().afterInit.register(observer);
+    it("will emit an afterInit event", () => {
+      const listener = sinon.spy();
+      studioApp().on('afterInit', listener);
       studioApp().init({
         usesAssets: true,
         enableShowCode: true,
@@ -85,7 +85,7 @@ describe('StudioApp.singleton', () => {
         skin: {},
       });
 
-      expect(observer).to.have.been.calledOnce;
+      expect(listener).to.have.been.calledOnce;
     });
   });
 });
