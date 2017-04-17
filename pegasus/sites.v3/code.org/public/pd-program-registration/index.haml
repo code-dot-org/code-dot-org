@@ -93,7 +93,7 @@ title: "Code.org Professional Learning Program Registration"
   - else
     %script{type: 'text/javascript'}$('#not-attending').show();
 
-- elsif application.nil?
+- elsif teachercon_program.nil?
   %p
     You must first complete a
     %a{href: 'https://studio.code.org/pd/teacher_application'}teacher application.
