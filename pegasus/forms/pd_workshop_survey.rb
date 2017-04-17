@@ -34,10 +34,10 @@ class PdWorkshopSurvey
       result[:how_much_learned_s] = required_enum data, :how_much_learned_s
       result[:how_motivating_s] = required_enum data, :how_motivating_s
 
-      enrollment = DASHBOARD_DB[:pd_enrollments].where(id: data[:enrollment_id_i]).first
-      no_expected_facilitators = DASHBOARD_DB[:pd_workshops_facilitators].where(pd_workshop_id: enrollment[:pd_workshop_id]).blank? if enrollment
-      unless no_expected_facilitators
-        result[:who_facilitated_ss] = required data[:who_facilitated_ss]
+      expected_facilitators = data[:facilitator_names_s]
+
+      unless expected_facilitators.nil? || expected_facilitators.empty?
+        result[:who_facilitated_ss] = required_multi_enum(data, :who_facilitated_ss, expected_facilitators)
 
         unless result[:who_facilitated_ss].class == FieldError
           result[:how_clearly_presented_s] = {}
@@ -118,10 +118,11 @@ class PdWorkshopSurvey
     required enum value, OPTIONS[field_name]
   end
 
-  def self.required_multi_enum(data, field_name)
+  def self.required_multi_enum(data, field_name, allowed=nil)
+    allowed = OPTIONS[field_name] if allowed.nil?
     values = required data[field_name]
     return values if values.class == FieldError
-    return FieldError.new(field_name, :invalid) if values.any? {|v| !OPTIONS[field_name].include?(v)}
+    return FieldError.new(field_name, :invalid) if values.any? {|v| !allowed.include?(v)}
     values
   end
 
