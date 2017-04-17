@@ -35,7 +35,9 @@ export default class FacilitatorProgramRegistration extends React.Component {
 
   handleChange(newState) {
     const data = Object.assign({}, this.state.data, newState);
-    this.setState({ data });
+    this.setState({
+      data
+    });
   }
 
   componentWillUpdate(nextProps, nextState) {
