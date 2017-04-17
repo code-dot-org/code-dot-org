@@ -8238,7 +8238,7 @@ hook('mousedown', 7, function() {
   return this.hideDropdown();
 });
 
-Editor.prototype.reparse = function(list, recovery, updates, originalTrigger) {
+Editor.prototype.reparse = function(list, updates, originalTrigger) {
   var context, e, newList, originalText, originalUpdates, parent, ref1;
   if (updates == null) {
     updates = [];
@@ -8257,14 +8257,14 @@ Editor.prototype.reparse = function(list, recovery, updates, originalTrigger) {
         type: location.type
       };
     });
-    this.reparse(new model.List(list.start.next, list.end.prev), recovery, updates, originalTrigger);
-    if (!this.reparse(list.parent, recovery, updates, originalTrigger)) {
+    this.reparse(new model.List(list.start.next, list.end.prev), updates, originalTrigger);
+    if (!this.reparse(list.parent, updates, originalTrigger)) {
       this.populateSocket(list, originalText);
       originalUpdates.forEach(function(location, i) {
         updates[i].count = location.count;
         return updates[i].type = location.type;
       });
-      this.reparse(list.parent, recovery, updates, originalTrigger);
+      this.reparse(list.parent, updates, originalTrigger);
     }
     return;
   }
@@ -8272,29 +8272,21 @@ Editor.prototype.reparse = function(list, recovery, updates, originalTrigger) {
   context = ((ref1 = list.start.container) != null ? ref1 : list.start.parent).parseContext;
   try {
     newList = this.mode.parse(list.stringifyInPlace(), {
-      wrapAtRoot: parent.type !== 'socket',
+      wrapAtRoot: (parent != null ? parent.type : void 0) !== 'socket',
       context: context
     });
   } catch (error) {
     e = error;
-    try {
-      newList = this.mode.parse(recovery(list.stringifyInPlace()), {
-        wrapAtRoot: parent.type !== 'socket',
-        context: context
+    while ((parent != null) && parent.type === 'socket') {
+      parent = parent.parent;
+    }
+    if (parent != null) {
+      return this.reparse(parent, updates, originalTrigger);
+    } else {
+      this.markBlock(originalTrigger, {
+        color: '#F00'
       });
-    } catch (error) {
-      e = error;
-      while ((parent != null) && parent.type === 'socket') {
-        parent = parent.parent;
-      }
-      if (parent != null) {
-        return this.reparse(parent, recovery, updates, originalTrigger);
-      } else {
-        this.markBlock(originalTrigger, {
-          color: '#F00'
-        });
-        return false;
-      }
+      return false;
     }
   }
   if (newList.start.next === newList.end) {
@@ -8912,7 +8904,7 @@ Editor.prototype.setCursor = function(destination, validate, direction) {
   if (this.cursorAtSocket() && !this.cursor.is(destination)) {
     socket = this.getCursor();
     if (indexOf.call(socket.classes, '__comment__') < 0) {
-      this.reparse(socket, null, (destination.document === this.cursor.document ? [destination.location] : []));
+      this.reparse(socket, (destination.document === this.cursor.document ? [destination.location] : []));
       this.hiddenInput.blur();
       this.dropletElement.focus();
     }
