@@ -1685,6 +1685,8 @@ en:
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
+            CSP Student Post Survey Staging: CSP Student Post Survey Staging
+            CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
           description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
@@ -2820,6 +2822,15 @@ en:
             Sprites: Sprites
             Plotting Shapes: Plotting Shapes
             Sprite Movement: Sprite Movement
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Conditionals
+            Taking Input: Taking Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games

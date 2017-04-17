@@ -56,7 +56,7 @@ exports.playSoundDropdown = function () {
         return metadata.name.toLowerCase().trim() === lowercaseSound;
       }));
 
-      studioApp.playAudio(lowercaseSound, playbackOptions);
+      studioApp().playAudio(lowercaseSound, playbackOptions);
       callback(utils.quote(sound));
     };
     return {

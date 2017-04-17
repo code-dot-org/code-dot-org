@@ -262,6 +262,7 @@ testsContext.keys().forEach(testsContext);
       },
       files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/code-studio.css', 'style/code-studio/code-studio.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
@@ -452,6 +453,7 @@ testsContext.keys().forEach(testsContext);
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+    'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
