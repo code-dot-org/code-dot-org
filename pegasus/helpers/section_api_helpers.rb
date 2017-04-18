@@ -431,6 +431,7 @@ class DashboardSection
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
+      where(followers__deleted_at: nil).
       map do |row|
         row.merge(
           {

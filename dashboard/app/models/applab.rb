@@ -26,7 +26,7 @@
 require 'cdo/shared_constants'
 
 class Applab < Blockly
-  before_save :update_json_fields
+  before_save :update_json_fields, :validate_maker_if_needed
 
   serialized_attrs %w(
     free_play
@@ -59,7 +59,12 @@ class Applab < Blockly
 
   # List of possible palette categories
   def self.palette_categories
-    %w(uicontrols canvas data turtle control math variables functions)
+    %w(uicontrols canvas data turtle control math variables functions) +
+        maker_palette_categories
+  end
+
+  def self.maker_palette_categories
+    %w(Maker Circuit)
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -107,6 +112,17 @@ class Applab < Blockly
 
     success = palette_result && log_conditions_result
     throw :abort unless success
+  end
+
+  def validate_maker_if_needed
+    maker_enabled = properties['makerlab_enabled'] == 'true'
+    starting_category = properties['palette_category_at_start']
+    if Applab.maker_palette_categories.include?(starting_category) && !maker_enabled
+      raise ArgumentError.new(
+        "Selected '#{starting_category}' as the palette category at start, " \
+            "but 'Enable Maker APIs' is not checked."
+      )
+    end
   end
 
   def self.palette
