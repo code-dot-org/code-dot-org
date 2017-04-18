@@ -121,6 +121,15 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
       end
+
+      if user.permission?(UserPermission::WORKSHOP_ADMIN)
+        can :manage, Pd::Workshop
+        can :manage, Pd::Workshop
+        can :manage, Pd::CourseFacilitator
+        can :manage, :workshop_organizer_survey_report
+        can :manage, :pd_workshop_summary_report
+        can :manage, :pd_teacher_attendance_report
+      end
     end
 
     # Override Script and ScriptLevel.
