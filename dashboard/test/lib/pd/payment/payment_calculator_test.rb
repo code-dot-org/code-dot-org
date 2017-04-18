@@ -50,6 +50,15 @@ module Pd::Payment
       assert_equal "No payment terms were found for workshop #{@csp_workshop.id}", error.message
     end
 
+    test 'Error raised if workshop has no regional partner' do
+      unpartnered_workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
+      error = assert_raises(RuntimeError) do
+        PaymentCalculator.instance.calculate(unpartnered_workshop)
+      end
+
+      assert_equal "Cannot calculate payment for workshop #{unpartnered_workshop.id} because there is no regional partner", error.message
+    end
+
     test 'Calculate CSP Workshop with per attendee payment' do
       create(:pd_payment_term, regional_partner: @regional_partner, properties: {per_attendee_payment: 10})
 
