@@ -303,16 +303,16 @@ class UserTest < ActiveSupport::TestCase
     refute user.save
   end
 
-  test "cannot make an account without email an admin" do
-    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+  test "cannot make a student admin" do
+    student = create :student
+    student.admin = true
+    refute student.valid?
+    refute student.save
 
-    user.admin = true
-    refute user.save
-  end
-
-  test "cannot create admin without email" do
-    assert_does_not_create(User) do
-      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+    assert_raises(ActiveRecord::RecordInvalid) do
+      assert_does_not_create(User) do
+        create :student, admin: true
+      end
     end
   end
 
