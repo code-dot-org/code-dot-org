@@ -672,16 +672,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.full_address.nil?
   end
 
-  test 'changing user from teacher to student removed unconfirmed_email' do
-    user = create :teacher
-    user.update(email: 'unconfirmed_email@example.com')
-
-    assert user.unconfirmed_email.present?
-    user.update(user_type: User::TYPE_STUDENT)
-
-    assert_nil user.unconfirmed_email
-  end
-
   test 'changing user from student to teacher saves email' do
     user = create :student, email: 'email@old.xx'
 
@@ -1239,18 +1229,6 @@ class UserTest < ActiveSupport::TestCase
     deleted_user.destroy
 
     create(:user, name: 'Same Name')
-  end
-
-  test 'email confirmation not required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-    refute user.confirmation_required?
-    refute user.confirmed_at
-  end
-
-  test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-    refute user.confirmation_required?
-    refute user.confirmed_at
   end
 
   test 'student and teacher relationships' do

@@ -316,36 +316,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert user.deleted?
   end
 
-  test 'edit shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-
-    sign_in user
-    get :edit
-
-    assert_response :success
-    assert_select '.alert', false
-  end
-
-  test 'edit does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-
-    sign_in user
-    get :edit
-
-    assert_response :success
-    assert_select '.alert', 0
-  end
-
-  test 'edit does not show alert for unconfirmed email for teachers if already confirmed' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
-
-    sign_in user
-    get :edit
-
-    assert_response :success
-    assert_select '.alert', 0
-  end
-
   # The next several tests explore profile changes for users with or without
   # passwords.  Examples of users without passwords are users that authenticate
   # via oauth (a third-party account), or students with a picture password.
