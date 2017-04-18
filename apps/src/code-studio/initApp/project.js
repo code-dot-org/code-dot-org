@@ -317,6 +317,9 @@ var projects = module.exports = {
     isInitialCaptureComplete() {
       return initialCaptureComplete;
     },
+    setCurrentData(data) {
+      current = data;
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
