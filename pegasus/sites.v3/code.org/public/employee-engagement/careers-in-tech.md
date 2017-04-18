@@ -4,6 +4,8 @@ theme: responsive
 nav: employee_engagement_nav
 ---
 
+<img src="/images/employee-engagement/company-visit.jpg" style="max-width: 100%">
+
 # Employees showcase their careers in tech
 
 Help break stereotypes about computer science careers by inspiring students with the opportunities in your own company. Work with a local high school teacher to plan a field trip to your office.

@@ -51,7 +51,7 @@
         - [:id, :name, :email, :provider, :deleted_at].each do |field|
           %td
             %span= user[field]
-        - if user[:deleted_at]
+        - if user.deleted?
           %td
             =link_to 'Undelete User', undelete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure?"}
 - else

@@ -28,13 +28,15 @@ module.exports.AllAnimationsCategory = 'category_all';
 
 module.exports.AnimationCategories = {
 	'category_animals': 'Animals',
+	'category_backgrounds': 'Backgrounds',
 	'category_generic_items': 'Generic items',
 	'category_vehicles': 'Vehicles',
 	'category_characters': 'Characters',
 	'category_environment': 'Environment',
 	'category_food': 'Food',
 	'category_tools': 'Tools',
-	'category_gameplay': 'Game play',
+	'category_gameplay': 'Board games',
+	'category_music': 'Music',
 	'category_obstacles': 'Obstacles',
 	'category_all': 'All'
 };
