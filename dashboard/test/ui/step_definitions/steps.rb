@@ -1188,3 +1188,22 @@ Then /^I wait until the image within element "([^"]*)" has loaded$/ do |selector
     @browser.execute_script("return $(#{image_status_selector.dump}).length > 0;")
   end
 end
+
+Then /^I wait until initial thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialCaptureComplete();')
+  end
+end
+
+Then /^I wait for initial project save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
+end
+
+When /^I switch to text mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet text mode
+  STEPS
+end
