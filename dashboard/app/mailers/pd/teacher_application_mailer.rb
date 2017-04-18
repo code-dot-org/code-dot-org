@@ -1,5 +1,10 @@
 # coding: utf-8
 class Pd::TeacherApplicationMailer < ActionMailer::Base
+  PRINCIPAL_APPROVAL_DUE_DATE_BY_COURSE = {
+    Pd::Workshop::COURSE_CSP => 'May 5, 2017',
+    Pd::Workshop::COURSE_CSD => 'April 17, 2017',
+  }
+
   default content_type: 'text/html'
 
   def application_receipt(teacher_application)
@@ -15,7 +20,7 @@ class Pd::TeacherApplicationMailer < ActionMailer::Base
     @teacher_name = teacher_application.teacher_name
     @program_name = teacher_application.program_name
     @program_url = teacher_application.program_url
-    @due_date = @program_name == Pd::Workshop::COURSE_CSP ? 'May 5, 2017' : 'April 17, 2017'
+    @due_date = PRINCIPAL_APPROVAL_DUE_DATE_BY_COURSE[@program_name] || raise("Unexpected program #{program_name}")
 
     mail from: from_teacher,
       subject: "Approval requested: #{@teacher_name}’s participation in Code.org Professional Learning Program",
