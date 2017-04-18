@@ -57,15 +57,3 @@ Piezo.prototype.stop = function () {
   five.Piezo.prototype.off.call(this);
 };
 Piezo.prototype.off = Piezo.prototype.stop;
-
-/**
- * We override johnny-five's note() function because there seems to be a bug
- * where it computes the frequency incorrectly.
- * If that bug gets fixed, we should be able to remove this patch.
- * @param {string} note
- * @param {number} duration in milliseconds
- */
-Piezo.prototype.note = function (note, duration) {
-  const frequency = five.Piezo.Parsers.hzFromInput(note);
-  return this.frequency(frequency, duration);
-};
