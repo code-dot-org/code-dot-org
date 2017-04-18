@@ -934,6 +934,8 @@
   dashboard_students_reset_password: "Επαναφορά κωδικού πρόσβασης"
   dashboard_students_share_section: "Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας
     με τους μαθητές σας:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: "Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των
     μαθητών σας."
   dashboard_students_secret_picture_title: "Μυστική εικόνα"
@@ -958,6 +960,7 @@
     ταχυδρομείου, ή αν θέλετε να δημιουργήσετε λογαριασμούς γι αυτούς, αλλάξτε τον
     μυστικό τύπο της ενότητας σε  <b>λέξη</b> ή <b>εικόνα</b>."
   dashboard_students_print_page: "Εκτυπώστε αυτή την σελίδα"
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Κλικ
     εδώ</a> για το έγγραφο δήλωσης απορρίτου, που μπορείτε να μοιράσετε ή να τυπώσετε
@@ -1189,6 +1192,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -2014,6 +2019,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "Αυτόματα δημιουργημένο"
   dashboard_students_reset_secret: "Επαναφορά μυστικού"
   dashboard_students_reset_password: "Επαναφορά κωδικού πρόσβασης"
-  dashboard_students_share_section: 'Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας με τους μαθητές σας:'
+  dashboard_students_share_section: "Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας με τους μαθητές σας:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των μαθητών σας."
   dashboard_students_secret_picture_title: "Μυστική εικόνα"
   dashboard_students_secret_picture: "Αυτή η ενότητα χρησιμοποιεί την <b>εικόνα</b> ως τον μυστικό της τύπο.  Αυτό σημαίνει ότι κάθε ένας από τους μαθητές σας έχει μια μυστική εικόνα για χρήση αντί για έναν κωδικό πρόσβασης για να εισέλθει.  Οι μαθητές πρέπει να χρησιμοποιούν τη διεύθυνση εισόδου στον ιστό που δίνεται παραπάνω για να εισέλθουν."
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "Πείτε στους μαθητές σας να δημιουργήσουν τους δικούς τους λογαριασμούς και να ενταχθούν στο τμήμα σας στο"
   dashboard_students_no_email: "Αν οι μαθητές σας δεν έχουν διευθύνσεις ηλεκτρονικού ταχυδρομείου, ή αν θέλετε να δημιουργήσετε λογαριασμούς γι αυτούς, αλλάξτε τον μυστικό τύπο της ενότητας σε  <b>λέξη</b> ή <b>εικόνα</b>."
   dashboard_students_print_page: "Εκτυπώστε αυτή την σελίδα"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Κλικ εδώ</a> για το έγγραφο δήλωσης απορρίτου, που μπορείτε να μοιράσετε ή να τυπώσετε για τους μαθητές σας."
   dashboard_curriculum_k5_title: "Πόροι Επιμορφωτή για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

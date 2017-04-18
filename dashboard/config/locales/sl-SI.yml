@@ -86,6 +86,8 @@
     forgot_password: Si pozabil/a svoje geslo?
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} študentov se je že prijavilo."
     teacher_count: "%{count} učiteljev se je že prijavilo."
@@ -200,6 +202,14 @@
       Začetni tečaji so zabavni, vizualno zanimivi in učijo osnovne koncepte računalništva z usporabo preprostih, vodenih izkušenj kot v računalniški igri. Nauči se programirati od Billa Gatesa, Marka Zuckenberga, Angry Birds in Plants Vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Povabilo poslano
     added_teacher: "%{name} dodan/a kot tvoj/a učitelj/ica"
@@ -214,8 +224,6 @@
       blank_code: Vnesite šifro razdelka
       cant_join_own_section: "Žal se ne morete pridružiti svojemu razdelku."
     mail:
-      invite_student:
-        subject: Pridruži se razredu z %{teacher_name} pri Code.org!
       student_disassociated:
         subject: 'Code.org obvestilo: %{student_name} ni več tvoj učenec.'
   reports:
@@ -462,6 +470,7 @@
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Dodaj svoje ime
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Bodite na tekočem z novimi funkcijami in posodobitvami na našem
       blogu za učitelje. <a href='%{teacher_blog_url}' target='_blank'>Poglejte pretekle
       objave.</a>
@@ -525,16 +534,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
       drugo šifro odseka."
-    section_code_not_entered: Prosimo navedite current_section_code.
     section_code_cant_be_current_section: Trenutni odsek ne more biti enak kot nov
       odsek.
     current_section_dne: "Žal, oddelek %{current_section_code} ne obstaja. Prosimo
       vnesite drugo šifro odseka."
-    students_not_yours: Učencev, ki ne pripadajo vam, ne morete premakniti iz oddelka.
-    stay_enrolled_not_entered: Prosimo vnesite stay_enrolled_in_current_section.
     student_ids_not_entered: Prosimo vnesite student_ids.
     student_not_found: Eden ali več učencev ni bilo najdenih.
     all_students_must_be_in_current_section: Vsi učenci morajo trenutno biti vključeni
