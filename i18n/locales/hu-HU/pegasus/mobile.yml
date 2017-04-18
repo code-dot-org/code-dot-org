@@ -669,7 +669,8 @@
   dashboard_students_auto_generated: "Automatikusan létrehozott"
   dashboard_students_reset_secret: "Titok beállítása"
   dashboard_students_reset_password: "Jelszó beállítása"
-  dashboard_students_share_section: 'Oszd meg a diákjaiddal ennek a szekciónak a belépési oldalát:'
+  dashboard_students_share_section: "Oszd meg a diákjaiddal ennek a szekciónak a belépési oldalát:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Nyomtasd ki a diákjaid belépési adatait tartalmazó kártyákat."
   dashboard_students_secret_picture_title: "Titkos kép"
   dashboard_students_secret_picture: "Ez a szakasz titkos típusú <b>képet</b> használ. Ez azt jelenti, hogy a diákok a képet jelszó segítségével tekinthetik meg. A diákoknak be kell hozzá jelentkezniük a fenti webcímen."
@@ -680,6 +681,7 @@
   dashboard_students_join_link: "Mondd meg a diákjaidnak, hogy hozzanak létre egy hozzáférést és csatlakozzanak a szekciódhoz"
   dashboard_students_no_email: "Ha a diákjaidnak nincs email címe, vagy Te szeretnéd létrehozni nekik a hozzáféréseket, akkor állítsd a szekció titkosítási típusát <b>szó</b> vagy <b>kép</b> típusúra."
   dashboard_students_print_page: "Nyomtasd ki ezt az oldalt"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Kattints ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz velük."
   dashboard_curriculum_k5_title: "K-5 pedagógus források"
@@ -875,6 +877,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

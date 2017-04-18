@@ -666,7 +666,8 @@
   dashboard_students_auto_generated: "Auto-generada"
   dashboard_students_reset_secret: "Reinicialitza la contrasenya"
   dashboard_students_reset_password: "Reinicialitza la contrasenya"
-  dashboard_students_share_section: 'Comparteix la pàgina d''inici de sessió amb els vostres alumnes:'
+  dashboard_students_share_section: "Comparteix la pàgina d'inici de sessió amb els vostres alumnes:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Imprimeix targetes amb la informació d'accés dels vostres alumnes."
   dashboard_students_secret_picture_title: "Imatge secreta"
   dashboard_students_secret_picture: "Aquest grup utilitza <b>imatges</b> com a contrasenya. Això significa que cadascun dels vostres alumnes utilitza una imatge secreta per entrar, enlloc d'una paraula de pas. Cal que els alumnes utilitzin la pàgina web indicada per iniciar la sessió."
@@ -677,6 +678,7 @@
   dashboard_students_join_link: "Digues als alumnes que es facin el seu propi compte i s'uneixin a la teva secció a"
   dashboard_students_no_email: "Si els estudiants no tenen adreces de correu electrònic, o voldries crear comptes per a ells, canvia el tipus secret d aquesta secció a <b>paraula</b> o <b>fotografia</b>."
   dashboard_students_print_page: "Imprimeix aquesta pàgina"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> Fes clic aquí</a> per veure el nostre document de privacitat, que pot ser compartit o imprès per als teus alumnes."
   dashboard_curriculum_k5_title: "Recursos per a educadors de K-5"
@@ -872,6 +874,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
