@@ -11,6 +11,7 @@ ________________
 - [Facilitators](#facilitators)<br/>
 - [Administrator and Counselor Workshops](#ac)<br/>
 - [Community Events](#community)<br/>
+- [Welcome Kit Postage](#kits)<br/>
 
 ________________
 <a id="workshops"></a>
@@ -76,7 +77,7 @@ Every payment cycle (~2.5 weeks), Code.org will pull attendance data from all da
 
 *Ex: Your organization's per person rate is $30pp. 25 idividuals register for your workshop, 20 show up and are marked attended by you in the dashboard. Code.org will send you a check for 20 * $30 = $600.*<br/>
 
-
+[**Back to the top**](#top)
 ________________
 <a id="community"></a>
 <br/>
@@ -84,6 +85,18 @@ ________________
 To receive reimbursement for a community event, send an official invoice and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
+
+[**Back to the top**](#top)
+
+________________
+<a id="kits"></a>
+<br/>
+## Welcome Kit Postage
+To receive reimbursement for postage of welcome kits, send an official invoice for the amount spent on postage to invoices@code.org within 30 days of mailing your kits. Requests for reimbursement received after the 30 day cutoff will not be processed. 
+
+[**Back to the top**](#top)
+
+
 
 
 

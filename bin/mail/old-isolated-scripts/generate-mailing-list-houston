@@ -22,13 +22,11 @@ def dashboard_teachers(params={})
   [].tap do |results|
     DASHBOARD_DB[:users].where(user_type: 'teacher').each do |i|
       i = yield(i) if block_given?
-      if i
-        if location = Geocoder.search(i[:current_sign_in_ip].to_s.strip).first
-          #sleep(0.3)
-          if location.city == 'Houston' && location.state == 'Texas'
-            results << {email: i[:email].downcase.strip, name: i[:name]}.merge(i.to_hash.slice(*fields))
-          end
-        end
+      next unless i
+      next unless location = Geocoder.search(i[:current_sign_in_ip].to_s.strip).first
+      #sleep(0.3)
+      if location.city == 'Houston' && location.state == 'Texas'
+        results << {email: i[:email].downcase.strip, name: i[:name]}.merge(i.to_hash.slice(*fields))
       end
     end
   end
@@ -43,7 +41,7 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end

@@ -31,7 +31,7 @@ DOWNLOAD_DESTINATION = '~/cdo-sound-library'.freeze
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
-    Hash[map {|k, v| yield k, v }]
+    Hash[map {|k, v| yield k, v}]
   end
 
   # Drop a key from the hash, returning the hash (destructive)
@@ -306,7 +306,7 @@ The sound has been skipped.
       metadata['version'] = objects['mp3'].object.version_id
 
       # Generate appropriate sourceUrl pointing to the sound library API
-      metadata['sourceUrl'] = "/api/v1/sound-library/#{metadata['version']}/#{name}.mp3"
+      metadata['sourceUrl'] = "/api/v1/sound-library/#{name}.mp3"
 
       verbose <<-EOS
 #{bold name} @ #{metadata['version']}

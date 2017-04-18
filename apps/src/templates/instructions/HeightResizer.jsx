@@ -37,7 +37,8 @@ var HeightResizer = React.createClass({
      * @param {number} delta - amount we're trying to resize by
      * @returns {number} delta - amount we've actually resized
      */
-    onResize: React.PropTypes.func.isRequired
+    onResize: React.PropTypes.func.isRequired,
+    style: React.PropTypes.object,
   },
 
   getInitialState: function () {
@@ -59,6 +60,9 @@ var HeightResizer = React.createClass({
   },
 
   onMouseDown: function (event) {
+    if (event.button !== 0) {
+      return;
+    }
     event.stopPropagation();
     event.preventDefault();
 
@@ -89,9 +93,13 @@ var HeightResizer = React.createClass({
   },
 
   render: function () {
-    var mainStyle = [styles.main, {
-      top: this.props.position - RESIZER_HEIGHT
-    }];
+    var mainStyle = [
+      styles.main,
+      {
+        top: this.props.position - RESIZER_HEIGHT
+      },
+      this.props.style,
+    ];
 
     return (
       <div

@@ -1,23 +1,33 @@
 %script{src: "/js/raphael.js"}
 %script{src: "/js/extended_us_map.js"}
 
-%div#map
-%div#infobox.greybox
+- require 'state_abbr'
+
+#state-list.phone-feature
+  %h2 Choose a State
+  %form
+    %select.dropdown#state-dropdown
+      %option
+      -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
+        %option{value:abbr}= state
+
+%h2.tablet-feature Choose a State
+#map.tablet-feature
+#infobox.greybox.col-33
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
   %ul
-    %li
+    %li.states-link
       Only
-      %strong
-        =credit_count
-      states allow students to count computer science courses toward high school graduation.
-  
+      = succeed " allow students to count computer science courses toward high school graduation." do
+        %strong= credit_count
+        states
     %li
       There are currently
       %strong
         = format_integer_with_commas(jobs_nationwide)
       open computing jobs nationwide.
-  
+
     %li
       Last year, only
       %strong
@@ -26,10 +36,10 @@
   %p.info
     See a
     = succeed "." do
-      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'} summary of state efforts
+      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'} summary of state efforts
 
 :javascript
-  var webServiceLocation = "/promote/state/";
+  var webServiceLocation = '/promote/state/';
 
   $(document).ready(function() {
     if (#{use_url}) {
@@ -48,6 +58,26 @@
         });
       }
     }
+
+    $("#state-dropdown").change(
+        function(){
+
+          var abbr = $('#state-dropdown option:selected').val();
+          console.log(abbr)
+          if (abbr != '') {          // Load the selected state's information into the infobox
+            $.ajax({
+              url: webServiceLocation + abbr.toLowerCase(),
+              type: "get",
+            }).done(function(data) {
+              $("#infobox").html(data);
+            }).fail(function () {
+              if (#{use_url}) {
+                window.location = "/promote"
+              }
+            });
+          }
+        }
+      )
 
     // Load the SVG into the #map div
     $('#map').usmap({
@@ -107,21 +137,3 @@
       });
     }
   };
-
-:css
-  #map {
-  width: 56%;
-  min-height: 350px;
-  float: left;
-  margin-top: 25px
-  }
-
-  #infobox {
-    width: 44%;
-    text-align:left;
-    float:left
-  }
-
-  .info {
-    font-size:18px;
-  }

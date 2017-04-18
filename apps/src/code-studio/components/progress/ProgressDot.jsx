@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import ReactTooltip from 'react-tooltip';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '@cdo/apps/util/color';
-import progressStyles, { createOutline } from './progressStyles';
+import { createOutline } from './progressStyles';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const dotSize = 24;
@@ -70,6 +71,9 @@ const styles = {
     cursor: 'default',
     color: color.charcoal
   },
+  iconBasedDot: {
+    display: 'inline-block'
+  },
   dot: {
     common: {
       display: 'inline-block',
@@ -118,7 +122,17 @@ const styles = {
       fontSize: 16,
       lineHeight: '32px'
     },
-    icon: progressStyles.dotIcon,
+    icon: {
+      borderColor: 'transparent',
+      fontSize: 24,
+      verticalAlign: -4,
+      color: color.white,
+      textShadow: createOutline(color.lighter_gray),
+      ':hover': {
+        color: color.white,
+        backgroundColor: 'transparent'
+      }
+    },
     icon_small: {
       width: 9,
       height: 9,
@@ -225,7 +239,31 @@ export const ProgressDot = Radium(React.createClass({
     return '';
   },
 
+  tooltipContent() {
+    const { level } = this.props;
+    if (level.name === undefined) {
+      return level.title;
+    }
+    return level.title +". "+ level.name;
+  },
+
+  renderTooltip(tooltipId) {
+    const { courseOverviewPage } = this.props;
+    if (!courseOverviewPage) {
+      return (
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          effect="solid"
+        >
+          {this.tooltipContent()}
+        </ReactTooltip>
+      );
+    }
+  },
+
   render() {
+
     const { level, status, courseOverviewPage, currentLevelId } = this.props;
 
     const onCurrent = currentLevelId &&
@@ -241,6 +279,8 @@ export const ProgressDot = Radium(React.createClass({
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
 
+    const tooltipId = _.uniqueId();
+
     return (
       <a
         key="link"
@@ -253,18 +293,27 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <i
-            className={this.iconClassName()}
-            style={[
-              styles.dot.common,
-              styles.dot.puzzle,
-              courseOverviewPage && styles.dot.overview,
-              styles.dot.icon,
-              smallDot && styles.dot.icon_small,
-              status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
-              outlineCurrent && {textShadow: createOutline(color.level_current)}
-            ]}
-          /> :
+          <div
+            data-tip
+            data-for={tooltipId}
+            aria-describedby={tooltipId}
+            style={styles.iconBasedDot}
+          >
+            <i
+              className={this.iconClassName()}
+              style={[
+                styles.dot.common,
+                styles.dot.puzzle,
+                courseOverviewPage && styles.dot.overview,
+                styles.dot.icon,
+                smallDot && styles.dot.icon_small,
+                status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
+                outlineCurrent && {textShadow: createOutline(color.level_current)}
+              ]}
+            />
+            {this.renderTooltip(tooltipId)}
+          </div> :
+
           <div
             className={this.iconClassName()}
             style={[
@@ -278,12 +327,21 @@ export const ProgressDot = Radium(React.createClass({
               styles.status[status || LevelStatus.not_tried],
             ]}
           >
+
+          <div
+            data-tip
+            data-for={tooltipId}
+            aria-describedby={tooltipId}
+          >
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
-              title={level.title || undefined}
+              title={this.props.level.title || undefined}
             />
+            {this.renderTooltip(tooltipId)}
           </div>
+
+        </div>
         }
         {
           showLevelName &&

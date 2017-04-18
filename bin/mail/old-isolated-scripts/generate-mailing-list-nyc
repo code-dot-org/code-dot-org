@@ -36,7 +36,7 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end
@@ -47,17 +47,16 @@ def query_contacts(params)
   [].tap do |results|
     SOLR.query(params.merge(rows: 10000)).each do |i|
       i = yield(i) if block_given?
-      if i
-        results << {
-          id: i['id'],
-          email: i['email_s'].downcase.strip,
-          name: i['name_s'],
-          city: i['location_city_s'],
-          state: i['location_state_code_s'] || i['state_code_s'],
-          country: 'united_states',
-          address: i['school_address_s'],
-        }.merge(i.slice(*fields))
-      end
+      next unless i
+      results << {
+        id: i['id'],
+        email: i['email_s'].downcase.strip,
+        name: i['name_s'],
+        city: i['location_city_s'],
+        state: i['location_state_code_s'] || i['state_code_s'],
+        country: 'united_states',
+        address: i['school_address_s'],
+      }.merge(i.slice(*fields))
     end
   end
 end

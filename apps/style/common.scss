@@ -789,8 +789,8 @@ input[type="radio"] {
 #puzzleRatingButtons {
 
   $red: #FF3014;
-  $dark-red: #D62911;
-  $dark-blue: #00647F;
+  $dark-red: $dark_red;
+  $dark-blue: $dark_blue;
   $gray: #333333;
   $dark-gray: #4D4D4D;
   $light-gray: $light_gray;
@@ -1056,6 +1056,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     left: 8px;
     line-height: $workspace-headers-height;
     color: $lighter_purple;
+    cursor: pointer;
+    &:hover.fa {
+      color: $white;
+    }
   }
 
   #hide-toolbox-icon {
@@ -1066,25 +1070,18 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     width: 270px;
     border-right: 1px solid gray;
     float: left;
-
-    &.toggleable {
-      cursor: pointer;
-      &:hover .fa {
-        color: $white;
-      }
-    }
   }
   #show-toolbox-header {
     border: 0;
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    &:hover .fa {
+    #show-toolbox-click-target:hover  .fa {
       color: $white;
     }
 
     & > span {
-      margin: auto 18px;
+      margin: auto auto auto 18px;
     }
   }
   #blockCounter, #blockUsed {

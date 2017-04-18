@@ -2,6 +2,7 @@
 title: CS Fundamentals for grades K-5
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 [solid-block-header]
@@ -41,14 +42,14 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 ## High quality workshops for teachers, at no cost (US only)
 
-Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
+Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
 
 Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
 
 <br />
-[<button style="font-size: 22px; height: 50px">Learn more & find a local workshop</button>](/professional-development-workshops)<br />
+[<button>Learn more & find a local workshop</button>](/professional-development-workshops)<br />
 
-<img src="/images/k5teacherquotes.png" width="800"/>
+<img src="/images/k5teacherquotes.png" width="100%"/>
 
 ### <strong>No workshop in your area?</strong>
 [Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
@@ -135,6 +136,11 @@ The Code Studio teacher home page makes it easy for teachers to view lesson plan
 ### <strong>Tech support & teacher forums</strong>
 Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
+### <strong>Pilot the '17-'18 version of the curriculum!</strong>
+We are revising Courses 1 - 4 based on the great feedback we've gotten in the last couple of years. In particular, the biggest change we are making
+is to break the content up into 6 courses aligned to each K-5 grade level. We're collecting feedback in Spring 2017 in preparation for making these courses broadly
+available for the '17 - '18 school year. [Learn more and sign up for the pilot](/educate/curriculum/cs-fundamentals-pilot).
+
 [solid-block-header]
 
 <a name="other"></a>Other Resources
@@ -169,6 +175,3 @@ Thousands of engineers and individuals passionate about computer science have si
 
 ## Spread the word!
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
-
-
-

@@ -48,11 +48,8 @@
     "markdown_instructions": "# For Loop - Condition\r\n\r\n* Run the program - how many times does it print?\r\n* Change the 2 to another positive number less than 5. What happens?",
     "start_blocks": "for (var i = 0; i < 2; i= i+1) {\r\n  console.log(\"message\");\r\n}",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -35,11 +35,14 @@ class Ability
       Plc::CourseUnit,
       # PD models
       Pd::Workshop,
+      Pd::Enrollment,
       Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
-      Pd::TeacherApplication
+      Pd::TeacherApplication,
+      :workshop_organizer_survey_report,
+      Pd::WorkshopMaterialOrder
     ]
 
     if user.persisted?
@@ -73,9 +76,9 @@ class Ability
           !script.professional_learning_course?
         end
         can :manage, SectionHiddenStage do |hidden_stage|
-          userid == hidden_stage.section.user_id
+          user.id == hidden_stage.section.user_id
         end
-        can :create, Pd::TeacherApplication, user_id: user.id
+        can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
       end
 
       if user.facilitator?
@@ -90,8 +93,9 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
-        can [:read, :start, :end, :workshop_survey_report, :summary], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
+        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
       end
 
       if user.district_contact?
@@ -109,10 +113,10 @@ class Ability
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can [:read, :start, :end, :update, :destroy, :summary], Pd::Workshop, organizer_id: user.id
+        can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::CourseFacilitator
-        can :read, :workshop_organizer_survey_report
+        can :index, :workshop_organizer_survey_report
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
       end

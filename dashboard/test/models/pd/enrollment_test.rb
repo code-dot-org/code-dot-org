@@ -29,9 +29,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'resolve_user' do
     teacher1 = create :teacher
     teacher2 = create :teacher
-    enrollment_with_email = create :pd_enrollment, email: teacher1.email
-    enrollment_with_user = create :pd_enrollment, user: teacher2
-    enrollment_with_no_user = create :pd_enrollment
+    enrollment_with_email = build :pd_enrollment, email: teacher1.email
+    enrollment_with_user = build :pd_enrollment, user: teacher2
+    enrollment_with_no_user = build :pd_enrollment
 
     assert_nil enrollment_with_email.user
     assert_equal teacher1, enrollment_with_email.resolve_user
@@ -41,6 +41,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_nil enrollment_with_no_user.user
     assert_nil enrollment_with_no_user.resolve_user
+  end
+
+  test 'autoupdate_user_field called on validation' do
+    teacher = create :teacher
+    enrollment = build :pd_enrollment, email: teacher.email
+
+    enrollment.valid?
+
+    assert_equal teacher, enrollment.user
   end
 
   test 'required field validations without country' do
@@ -101,7 +110,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.in_section?
 
     # in section: true
-    workshop.section.add_student teacher
+    workshop.section.add_student teacher, move_for_same_teacher: false
     assert enrollment.in_section?
   end
 
@@ -271,10 +280,33 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
     without_surveys = [enrollment_no_survey]
-    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where: stub(map: with_surveys.map(&:id))))
+    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
+        [
+          {source_id: enrollment_with_unprocessed_survey.id.to_s},
+          {source_id: enrollment_with_processed_survey.id.to_s}
+        ]
+      )
+    )
 
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
     assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
+  end
+
+  test 'enrolling in class automatically enrolls in online learning' do
+    Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
+      workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
+      plc_course = create :plc_course, name: plc_course_name
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: workshop
+
+      assert_equal 1, Plc::UserCourseEnrollment.where(user: teacher, plc_course: plc_course).size
+    end
+
+    workshop = create :pd_workshop, course: 'Counselor'
+    teacher = create :teacher
+    assert_no_difference('Plc::UserCourseEnrollment.count') do
+      create :pd_enrollment, user: teacher, workshop: workshop
+    end
   end
 end

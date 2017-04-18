@@ -4,11 +4,14 @@ import React from 'react';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import color from "../util/color";
+import {singleton as studioApp} from '../StudioApp';
+import project from '../code-studio/initApp/project';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
+import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
 var styles = {
   nonResponsive: {
@@ -52,6 +55,15 @@ var Visualization = React.createClass({
     isResponsive: React.PropTypes.bool.isRequired
   },
 
+  handleDisableMaker() {
+    project.toggleMakerEnabled();
+  },
+
+  handleTryAgain() {
+    studioApp().resetButtonClick();
+    studioApp().runButtonClick();
+  },
+
   render: function () {
     var appWidth = applabConstants.APP_WIDTH;
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
@@ -84,6 +96,12 @@ var Visualization = React.createClass({
           <AppLabCrosshairOverlay/>
           <AppLabTooltipOverlay/>
         </VisualizationOverlay>
+        <MakerStatusOverlay
+          width={appWidth}
+          height={appHeight}
+          handleDisableMaker={this.handleDisableMaker}
+          handleTryAgain={this.handleTryAgain}
+        />
         <div
           style={[
             styles.screenBlock,

@@ -62,13 +62,13 @@ end
 def share_snapshot_with_account(backup_account_id, latest_snapshot)
   # Copy the automated backup into a shareable manual one
   temp_snapshot_name = "temp-snapshot-#{Time.now.to_i}"
-  copied_snapshot = latest_snapshot.copy({ target_db_snapshot_identifier: temp_snapshot_name })
+  copied_snapshot = latest_snapshot.copy({target_db_snapshot_identifier: temp_snapshot_name})
 
   wait_for_snapshot_copy(copied_snapshot)
   puts "Temporary snapshot #{copied_snapshot.snapshot_id} is ready - #{Time.now}"
 
   # Share the new snapshot with the backup account
-  restore_attribute = copied_snapshot.attributes.find { |attr| attr.name == 'restore' }
+  restore_attribute = copied_snapshot.attributes.find {|attr| attr.name == 'restore'}
   restore_attribute.modify(
     {
       values_to_add: [backup_account_id],
@@ -95,11 +95,11 @@ def main
   rds_backup = Aws::RDS::Resource.new(credentials: credentials_backup)
   backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
 
-  production_instance = rds_primary.db_instances.find{ |i| i.id == 'production' }
+  production_instance = rds_primary.db_instances.find {|i| i.id == 'production'}
 
   # Find the latest automated backup
   sorted_snapshots = production_instance.snapshots.
-      select{ |snap| snap.status == 'available' && !snap.snapshot_id.start_with?('temp-snapshot-') }.
+      select {|snap| snap.status == 'available' && !snap.snapshot_id.start_with?('temp-snapshot-')}.
       sort_by(&:snapshot_create_time)
   latest_snapshot = sorted_snapshots.last
 

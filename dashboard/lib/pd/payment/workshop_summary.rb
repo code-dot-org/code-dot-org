@@ -63,7 +63,7 @@ module Pd::Payment
     end
 
     def plp
-      workshop.professional_learning_partner
+      workshop.regional_partner
     end
 
     # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).
@@ -109,10 +109,10 @@ module Pd::Payment
             payment_type: payment.try(&:type),
             qualified: qualified?,
             teacher_attendance_days: total_teacher_attendance_days,
-            food_payment: payment.try{|p| p.amounts[:food]},
-            facilitator_payment: payment.try{|p| p.amounts[:facilitator]},
-            staffer_payment: payment.try{|p| p.amounts[:staffer]},
-            venue_payment: payment.try{|p| p.amounts[:venue]},
+            food_payment: payment.try {|p| p.amounts[:food]},
+            facilitator_payment: payment.try {|p| p.amounts[:facilitator]},
+            staffer_payment: payment.try {|p| p.amounts[:staffer]},
+            venue_payment: payment.try {|p| p.amounts[:venue]},
             payment_total: payment.try(&:total)
           }
         )

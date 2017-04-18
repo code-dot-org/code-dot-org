@@ -8,8 +8,6 @@ import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
-window.acorn = require('../../../../../lib/jsinterpreter/acorn');
-require('../../../../../lib/jsinterpreter/interpreter');
 
 describe('The DebugConsole component', () => {
   let root;
@@ -135,7 +133,7 @@ describe('The DebugConsole component', () => {
     beforeEach(() => {
       let interpreter = new JSInterpreter({
         shouldRunAtMaxSpeed: () => false,
-        studioApp: {reduxStore: getStore(), hideSource: true}
+        studioApp: {hideSource: true}
       });
       const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
       interpreter.calculateCodeInfo(code);
@@ -189,7 +187,7 @@ describe('The DebugConsole component', () => {
       selection = '';
       inputEl = debugInput().get(0);
       sinon.spy(inputEl, 'focus');
-      sinon.stub(window, 'getSelection', () => selection);
+      sinon.stub(window, 'getSelection').callsFake(() => selection);
     });
 
     afterEach(() => {

@@ -18,6 +18,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF
   end
 
+  def teacher_enrollment_receipt__csp_summer_workshop
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+  end
+
   def teacher_enrollment_receipt__admin
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
@@ -40,6 +44,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def organizer_enrollment_reminder
     mail :organizer_enrollment_reminder, target: :workshop
+  end
+
+  def organizer_should_close_reminder
+    mail :organizer_should_close_reminder, target: :workshop
   end
 
   def facilitator_enrollment_reminder

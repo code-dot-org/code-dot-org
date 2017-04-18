@@ -1,9 +1,13 @@
-/* globals appOptions, Dialog, CDOSounds */
+/* globals appOptions, CDOSounds */
 import $ from 'jquery';
+import experiments from '@cdo/apps/util/experiments';
 import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
+import StageAchievementDialog from '@cdo/apps/templates/StageAchievementDialog';
+import Feedback from '@cdo/apps/feedback';
 import { getResult } from './codeStudioLevels';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -23,14 +27,14 @@ function dialogHidden() {
   }
 }
 
-export function showDialog(type, callback) {
+export function showDialog(type, callback, onHidden) {
   dialogType = type;
 
   // Use our prefabricated dialog content.
   var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-  var dialog = new window.Dialog({
+  var dialog = new LegacyDialog({
     body: content,
-    onHidden: dialogHidden,
+    onHidden: onHidden || dialogHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
 
@@ -146,7 +150,7 @@ export function processResults(onComplete, beforeHook) {
             />,
             body
           );
-          const dialog = new Dialog({
+          const dialog = new LegacyDialog({
             body: body,
             width: 800,
             redirect: lastServerResponse.nextRedirect
@@ -154,7 +158,33 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success");
+            if (experiments.isEnabled('gamification') && Feedback.isLastLevel()) {
+              const stageInfo = lastServerResponse.previousStageInfo;
+              const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+              showDialog("success", () => {
+                const div = document.createElement('div');
+                document.body.appendChild(div);
+                const progress = Feedback.calculateStageProgress(
+                  true /* isPerfect */,
+                  0 /* hintsUsed */,
+                  appOptions.serverLevelId,
+                  false /* finiteIdealBlocks */);
+                ReactDOM.render(
+                  <StageAchievementDialog
+                    stageName={stageName}
+                    // This is a hack
+                    assetUrl={path => '/blockly/' + path}
+                    onContinue={dialogHidden}
+                    showStageProgress={experiments.isEnabled('gamification')}
+                    newStageProgress={progress.newStageProgress}
+                    numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
+                  />,
+                  div
+                );
+              }, () => {});
+            } else {
+              showDialog("success");
+            }
           } else {
             window.location.href = lastServerResponse.nextRedirect;
           }

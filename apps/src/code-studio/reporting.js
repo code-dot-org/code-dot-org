@@ -92,16 +92,12 @@ function validateReport(report) {
         }
         break;
       case 'fallbackResponse':
-        if (!isContainedLevel && ['free_response', 'multi', 'level_group',
-            'text_match', 'match', 'contract_match', 'odometer',
-            'text_compression', 'pixelation', 'external', 'frequency_analysis',
-            'unplug', 'standalone_video'].includes(report.app)) {
-          // In this case, we end up with json for an object. It seems likely
-          // that we could/should just pass around the object instead.
-          validateType('fallbackResponse', value, 'string');
-        } else {
-          validateType('fallbackResponse', value, 'object');
-        }
+        // Sometimes we get an object, sometimes we get json for that object.
+        // When each is true depends on whether it's a contained level or not,
+        // whether it's in a script or not, and what type of level it is.
+        // Attempts to describe when each happens have fallen up short. What
+        // should likely happen is we consolidate around one, then make sure we
+        // always use that.}
         break;
       case 'callback':
         validateType('callback', value, 'string');
@@ -145,10 +141,14 @@ function validateReport(report) {
         validateType('testResult', value, 'number');
         break;
       case 'submitted':
-        // In sendResultsCompletion this becomes either "true" the string  or false the boolean
-        // Would probably be better long term if it was always a string or always a boolean
-        if (value !== "true" && value !== false) {
-          console.error('Expected submitted to be either string "true" or value false');
+        if (report.app === 'applab' || report.app === 'gamelab') {
+          validateType('submitted', value, 'boolean');
+        } else {
+          // In sendResultsCompletion this becomes either "true" (the string) or false (the boolean).
+          // Would probably be better long term if it was always a string or always a boolean.
+          if (value !== "true" && value !== false) {
+            console.error('Expected submitted to be either string "true" or value false');
+          }
         }
         break;
       case 'onComplete':

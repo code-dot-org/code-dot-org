@@ -40,7 +40,7 @@ class FilesApiTestBase < Minitest::Test
     raise "Not a test path: #{prefix}" unless prefix.include?('test')
     s3 = Aws::S3::Client.new
     objects = s3.list_objects(bucket: bucket, prefix: prefix).contents.map do |object|
-      { key: object.key }
+      {key: object.key}
     end
     if objects.any?
       s3.delete_objects(
@@ -83,6 +83,10 @@ class FilesApiTestBase < Minitest::Test
 
   def successful?
     last_response.successful?
+  end
+
+  def bad_request?
+    last_response.bad_request?
   end
 
   def not_found?

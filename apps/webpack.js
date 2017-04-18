@@ -44,6 +44,8 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'static'),
           path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test'),
+          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
         loader: "url-loader?limit=1024",
       },
@@ -64,6 +66,9 @@ var baseConfig = {
           compact: false,
         }
       },
+    ],
+    noParse: [
+      /html2canvas/,
     ],
   },
 };
@@ -115,6 +120,11 @@ var devtool = process.env.CHEAP ?
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
+  resolve: _.extend({}, baseConfig.resolve, {
+    alias: _.extend({}, baseConfig.resolve.alias, {
+      '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
+    }),
+  }),
   externals: {
     "blockly": "this Blockly",
   },
@@ -122,11 +132,13 @@ var storybookConfig = _.extend({}, baseConfig, {
     new webpack.ProvidePlugin({React: 'react'}),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(false),
+      IN_STORYBOOK: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(true),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
+    new webpack.IgnorePlugin(/^serialport$/),
   ]
 });
 
@@ -142,7 +154,8 @@ var karmaConfig = _.extend({}, baseConfig, {
       '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
       // Use mock-firmata to unit test playground-io maker components
-      'firmata': 'mock-firmata/mock-firmata'
+      'firmata': 'mock-firmata/mock-firmata',
+      'chrome-serialport': path.resolve(__dirname, 'test', 'unit', 'lib', 'kits', 'maker', 'StubChromeSerialPort.js'),
     }),
   }),
   externals: {
@@ -164,6 +177,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     new webpack.ProvidePlugin({React: 'react'}),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
+      IN_STORYBOOK: JSON.stringify(false),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(false),
@@ -207,12 +221,13 @@ function create(options) {
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
+        IN_STORYBOOK: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true)
+      new webpack.optimize.OccurrenceOrderPlugin(true),
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
@@ -225,7 +240,10 @@ function create(options) {
         new webpack.optimize.UglifyJsPlugin({
           compressor: {
             warnings: false
-          }
+          },
+          // Don't generate source maps for our minified code, as these are expensive
+          // and we haven't been using them.
+          sourceMap: false
         }),
         new UnminifiedWebpackPlugin(),
       ]

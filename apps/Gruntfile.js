@@ -246,12 +246,6 @@ testsContext.keys().forEach(testsContext);
           src: ['*.js'],
           dest: 'build/package/js/fileupload/',
         },
-        {
-          expand: true,
-          cwd: 'lib/jsinterpreter',
-          src: ['*.js'],
-          dest: 'build/package/js/jsinterpreter/'
-        }
       ]
     }
   };
@@ -268,6 +262,7 @@ testsContext.keys().forEach(testsContext);
       },
       files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/code-studio.css', 'style/code-studio/code-studio.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
@@ -313,6 +308,10 @@ testsContext.keys().forEach(testsContext);
     generateSharedConstants: './script/generateSharedConstants.rb'
   };
 
+  var junitReporterBaseConfig = {
+    outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+  };
+
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -320,6 +319,7 @@ testsContext.keys().forEach(testsContext);
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/storybook/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
@@ -341,6 +341,9 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'unit.xml',
+      }),
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
@@ -353,8 +356,26 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'integration.xml',
+      }),
       files: [
         {src: ['test/integration-tests.js'], watched: false},
+      ],
+    },
+    storybook: {
+      coverageReporter: {
+        dir: 'coverage/storybook',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'storybook.xml',
+      }),
+      files: [
+        {src: ['test/storybook-tests.js'], watched: false},
       ],
     },
     all: {
@@ -391,7 +412,9 @@ testsContext.keys().forEach(testsContext);
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
@@ -430,10 +453,12 @@ testsContext.keys().forEach(testsContext);
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+    'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
     'teacher-dashboard/index': './src/sites/code.org/pages/teacher-dashboard/index.js',
+    'pd-workshop-survey/splat': './src/sites/code.org/pages/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
@@ -562,8 +587,6 @@ testsContext.keys().forEach(testsContext);
   config.uglify = {
     lib: {
       files: _.fromPairs([
-        'jsinterpreter/interpreter.js',
-        'jsinterpreter/acorn.js',
         'p5play/p5.play.js',
         'p5play/p5.js'
       ].map(function (src) {
@@ -759,6 +782,10 @@ testsContext.keys().forEach(testsContext);
     'exec:generateSharedConstants',
     'concat',
     'karma:unit'
+  ]);
+
+  grunt.registerTask('storybookTest', [
+    'karma:storybook',
   ]);
 
   grunt.registerTask('integrationTest', [

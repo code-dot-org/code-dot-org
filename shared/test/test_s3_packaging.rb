@@ -4,7 +4,7 @@ require 'aws-sdk'
 require 'cdo/rake_utils'
 
 require_relative '../../lib/cdo/aws/s3_packaging'
-ORIGINAL_HASH = 'fake-hash'
+ORIGINAL_HASH = 'fake-hash'.freeze
 
 class S3PackagingTest < Minitest::Test
   include SetupTest
@@ -14,10 +14,10 @@ class S3PackagingTest < Minitest::Test
     target_location = Dir.mktmpdir
     Dir.chdir(source_location) do
       FileUtils.mkdir('src')
-      File.open('src/one.js', 'w') { |file| file.write("file one") }
-      File.open('src/two.js', 'w') { |file| file.write("file two") }
+      File.open('src/one.js', 'w') {|file| file.write("file one")}
+      File.open('src/two.js', 'w') {|file| file.write("file two")}
       FileUtils.mkdir('build')
-      File.open('build/output.js', 'w') { |file| file.write("output") }
+      File.open('build/output.js', 'w') {|file| file.write("output")}
     end
     packager = RakeUtils.stub(:git_folder_hash, commit_hash) do
       S3Packaging.new('test-package', source_location, target_location).tap do |s3|

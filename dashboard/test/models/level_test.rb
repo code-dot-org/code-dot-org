@@ -37,6 +37,22 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
 
+  test "karel checks total value" do
+    json = [[
+      {tileType: 1, value: 1},
+      {tileType: 1, value: 2},
+      {tileType: 1, value: 3},
+    ]].to_json
+
+    assert_nothing_raised do
+      Karel.parse_maze(json, 6)
+    end
+
+    assert_raises ArgumentError do
+      Karel.parse_maze(json, 7)
+    end
+  end
+
   test "cannot create two custom levels with same name" do
     assert_no_difference('Level.count') do
       level2 = Level.create(@custom_maze_data)
@@ -474,5 +490,86 @@ EOS
 
     level.calculate_ideal_level_source_id
     assert_equal right, level.ideal_level_source
+  end
+
+  test 'localizes callouts' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+          "#{level_name}_callout" => {
+            "first": "first test markdown",
+            "second": "second test markdown",
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      callout_json: JSON.generate(
+        [
+          {"callout_text": "first english markdown", "localization_key": "first"},
+          {"callout_text": "second english markdown", "localization_key": "second"},
+        ]
+      )
+    )
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first test markdown"
+    assert_equal callouts[1].callout_text, "second test markdown"
+  end
+
+  test 'handles bad callout localization data' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+    I18n.locale = test_locale
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      callout_json: JSON.generate(
+        [
+          {"callout_text": "first english markdown", "localization_key": "first"},
+          {"callout_text": "second english markdown", "localization_key": "second"},
+        ]
+      )
+    )
+
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+          "#{level_name}_callout" => []
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first english markdown"
+    assert_equal callouts[1].callout_text, "second english markdown"
+
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first english markdown"
+    assert_equal callouts[1].callout_text, "second english markdown"
   end
 end

@@ -9,11 +9,6 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
     @workshops = load_filtered_ended_workshops
 
     report = @workshops.map do |workshop|
-      # TODO(aoby): These workshops are being skipped so as to prevent an
-      # exception from happening when we try to process a user with no account.
-      # Fix this exception and remove this `next` statement.
-      next unless workshop.account_required_for_attendance?
-
       ::Pd::Payment::PaymentFactory.get_payment(workshop).try do |workshop_summary|
         workshop_summary.teacher_summaries.map do |teacher_summary|
           teacher_summary.generate_teacher_progress_report_line_item(current_user.admin?)

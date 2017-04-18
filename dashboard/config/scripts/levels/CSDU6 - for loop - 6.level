@@ -48,11 +48,8 @@
     "markdown_instructions": "# For Loop - Condition Practice\r\n\r\nChange the condition of the for loop so that the word message prints 6 times.",
     "start_blocks": "for (var i = 0; i < 4; i++) {\r\n  console.log(\"message\");\r\n}",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

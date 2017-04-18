@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionProjectsList from './SectionProjectsList';
+import experiments from '@cdo/apps/util/experiments';
 
 const STUB_PROJECTS_DATA = [
   {
@@ -10,9 +11,18 @@ const STUB_PROJECTS_DATA = [
     updatedAt: '2016-12-31T23:59:59.999-08:00'
   },
   {
+    channel: 'AAAABBBBCCCCDDDDEE',
+    name: 'Cats and Kittens',
+    studentName: 'Charlie',
+    thumbnailUrl: '/media/common_images/stickers/cat.png',
+    type: 'weblab',
+    updatedAt: '2016-11-30T00:00:00.001-08:00'
+  },
+  {
     channel: 'NOPQRSTUVWXYZ567879',
     name: 'Batyote',
     studentName: 'Bob',
+    thumbnailUrl: '/media/common_images/stickers/bat.png',
     type: 'gamelab',
     updatedAt: '2017-01-01T00:00:00.001-08:00'
   },
@@ -23,14 +33,32 @@ export default storybook => {
     .storiesOf('SectionProjectsList', module)
     .addStoryTable([
       {
-        name: 'basic section projects list',
+        name: 'basic section projects list without thumbnail column',
         description: `This is a simple section projects list with stub data.`,
-        story: () => (
-          <SectionProjectsList
-            projectsData={STUB_PROJECTS_DATA}
-            studioUrlPrefix={'https://studio.code.org'}
-          />
-        )
+        story: () => {
+          experiments.setEnabled('showProjectThumbnails', true);
+          return (
+            <SectionProjectsList
+              projectsData={STUB_PROJECTS_DATA}
+              studioUrlPrefix={'https://studio.code.org'}
+              showProjectThumbnails={false}
+            />
+          );
+        }
+      },
+      {
+        name: 'basic section projects list with thumbnail column',
+        description: `This is a simple section projects list with stub data.`,
+        story: () => {
+          experiments.setEnabled('showProjectThumbnails', true);
+          return (
+            <SectionProjectsList
+              projectsData={STUB_PROJECTS_DATA}
+              studioUrlPrefix={'https://studio.code.org'}
+              showProjectThumbnails={true}
+            />
+          );
+        }
       },
     ]);
 };

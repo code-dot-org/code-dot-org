@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2017-03-23T01:06:42.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_unspotted_bugs",
+    "instructions_important": "false",
+    "display_name": "Unspotted Bugs",
+    "encrypted_teacher_markdown": "kH4KbGeC+quKd9iX7r0gxPR36T+VObezdZI0+fH9LlGeAt+IoKrHr77FemCM\nn4drke4l0dRvEZgL/olVYwuBNaViBriWhUTR99l1eU/1GCJbofxyoAkCUfDe\nlncj/aBBT9o3MbRX9rcI02TIFdzv7j2wMiM5mvvt03h05T1qoZOOoa8MYSVi\niPXxOwkCoZoUpjLtipDh0y1Br/s1M+gZuHgLwWMx7+RUv70IUoGyX2XWGKqu\nid8+4P16JYZZT2Y92G4Kq4F4yxpIMRXqZkqtRXVBEom/JSDyLlc7aNRRt0OU\nkki0v97b9/mAqKhNSoStfz6qijwHLyvoe+Dd1iejLC9K7enLheFX+z4FJ3UC\noD48lWMmNrGMax7+qdvsiXJ7UYKnZgfDuTF7NOpX4IFjvMOohyL4ANQncYQd\nMWo2R4APPLBFPgJVoPyoIiI4F4qIVZNuCI7N2cZ4aKQj+RdRRp3/JV3LPFzF\nNa51nip7LbzDqvpvAseQtkdpfHLR4NbwlYbZv8iz68qWoNcVdyv5HLfBhh27\nr29U8FI8nAPuKr6tKxDO4/0jlky/BfKrUAka31oruxrignSxXROjokYRW3Vb\nh+vC12LX8LkwdtamdQ55VXMASeLATKjtpXZmn8N/0HOCwvjFl/rAsAxKSzQU\nolIFKXNGxzkdJpipylHa9V0k2Sj3cVdwESSMDi3WZ3rFTa5nRwxaDTlZvk6i\nx4HMDlndrIdTh989czs5ucsfIum1P+hKQqUY0nwd8KDWngT2K0AGuvBzHiX/\nbUaWXiZZx5+r4kBs/blpG5pmojARB4jMyU5ZfP85R8xRECi8/3HP8D2X07kk\n3pZrNxe/2IdrxRK704kwL7LolSt1t9+Rg7CIIkw9+PN7tHXNp7AhCRoj\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

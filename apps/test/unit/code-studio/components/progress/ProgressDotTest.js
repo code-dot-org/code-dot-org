@@ -4,17 +4,10 @@ import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 import sinon from 'sinon';
 import saveAnswers from '@cdo/apps/code-studio//levels/saveAnswers';
-import $ from 'jquery';
 
 import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
-
-// If we set a color as something like #fff, the browser converts it to rgb(255, 255, 255)
-// This is a semi-hacky helper function that allows us to get the rgb string for a color
-function colorToRgb(color) {
-  return $("<div>").css("background-color", color)[0].style.backgroundColor;
-}
 
 describe('ProgressDot component tests', () => {
   let renderer, level;
@@ -280,7 +273,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-video-camera');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-video-camera');
       });
 
       it('shows no icon on course overview when none is provided', () => {
@@ -316,7 +309,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-video-camera');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-video-camera');
       });
     });
 
@@ -373,7 +366,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-file-text');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-file-text');
       });
 
       it('has a file icon on external levels in header', () => {
@@ -390,7 +383,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-file-text');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-file-text');
       });
 
       it('has a link icon on external link levels in course overview', () => {
@@ -407,7 +400,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-external-link-square');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-external-link-square');
       });
 
       it('shows a locked icon on course overivew when locked', () => {

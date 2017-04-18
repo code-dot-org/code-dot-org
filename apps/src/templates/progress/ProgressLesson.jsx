@@ -8,29 +8,46 @@ import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
+import FocusAreaIndicator from './FocusAreaIndicator';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 const styles = {
-  main: {
+  outer: {
+    position: 'relative',
+    display: 'table',
+    width: '100%',
+    marginBottom: 12,
     background: color.lightest_gray,
     borderWidth: 1,
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
+  },
+  rightCol: {
+    display: 'table-cell',
+    verticalAlign: 'top',
+    width: 200,
+    height: '100%',
+    borderRadius: 2,
+  },
+  main: {
     padding: 20,
-    marginBottom: 12
   },
   heading: {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
   },
-  headingText: {
-    marginLeft: 10
-  },
   hiddenOrLocked: {
     background: color.white,
     borderStyle: 'dashed',
-    borderWidth: 2,
+  },
+  translucent: {
     opacity: 0.6
+  },
+  caret: {
+    marginRight: 10
   },
   icon: {
     marginRight: 5,
@@ -46,10 +63,11 @@ const ProgressLesson = React.createClass({
   propTypes: {
     description: PropTypes.string,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
+    showTeacherInfo: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired
   },
@@ -67,57 +85,93 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { description, lesson, lessonNumber, levels, lessonIsVisible, lessonLockedForSection } = this.props;
+    const {
+      description,
+      lesson,
+      levels,
+      showTeacherInfo,
+      viewAs,
+      lessonIsVisible,
+      lessonLockedForSection
+    } = this.props;
 
-    if (!lessonIsVisible(lesson)) {
+    if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
 
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
-    const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
-    const icon = this.state.collapsed ? "caret-right" : "caret-down";
+    const title = lesson.stageNumber ?
+      i18n.lessonNumbered({lessonNumber: lesson.stageNumber, lessonName: lesson.name}) :
+      lesson.name;
+    const caret = this.state.collapsed ? "caret-right" : "caret-down";
 
     const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
 
+    const hiddenOrLocked = hiddenForStudents || locked;
+    const tooltipId = _.uniqueId();
     return (
       <div
         style={{
-          ...styles.main,
-          ...(hiddenForStudents && styles.hiddenOrLocked),
-          ...(locked && styles.hiddenOrLocked),
+          ...styles.outer,
+          ...(hiddenOrLocked && styles.hiddenOrLocked)
         }}
       >
         <div
-          style={styles.heading}
-          onClick={this.toggleCollapsed}
+          style={{
+            ...styles.main,
+            ...(hiddenOrLocked && viewAs !== ViewType.Teacher && styles.translucent)
+          }}
         >
-          {hiddenForStudents &&
-            <FontAwesome
-              icon="eye-slash"
-              style={styles.icon}
+          <div
+            style={styles.heading}
+            onClick={this.toggleCollapsed}
+          >
+            <FontAwesome icon={caret} style={styles.caret}/>
+            {hiddenForStudents &&
+              <FontAwesome
+                icon="eye-slash"
+                style={styles.icon}
+              />
+            }
+            {lesson.lockable &&
+              <span data-tip data-for={tooltipId}>
+                <FontAwesome
+                  icon={locked ? 'lock' : 'unlock'}
+                  style={{
+                    ...styles.icon,
+                    ...(!locked && styles.unlockedIcon)
+                  }}
+                />
+                {!locked &&
+                  <ReactTooltip
+                    id={tooltipId}
+                    role="tooltip"
+                    wrapper="span"
+                    effect="solid"
+                  >
+                    {i18n.lockAssessmentLong()}
+                  </ReactTooltip>
+                }
+            </span>
+            }
+            <span>{title}</span>
+          </div>
+          {!this.state.collapsed &&
+            <ProgressLessonContent
+              description={description}
+              levels={levels}
+              disabled={locked && viewAs !== ViewType.Teacher}
             />
           }
-          {lesson.lockable &&
-            <FontAwesome
-              icon={locked ? 'lock' : 'unlock'}
-              style={{
-                ...styles.icon,
-                ...(!locked && styles.unlockedIcon)
-              }}
-            />
-          }
-          <FontAwesome icon={icon}/>
-          <span style={styles.headingText}>{title}</span>
         </div>
-        {!this.state.collapsed &&
-          <ProgressLessonContent
-            description={description}
-            levels={levels}
-            disabled={locked}
-          />
+        {showTeacherInfo && viewAs === ViewType.Teacher &&
+          <div style={styles.rightCol}>
+            <ProgressLessonTeacherInfo lesson={lesson}/>
+          </div>
         }
+        {lesson.isFocusArea && <FocusAreaIndicator/>}
       </div>
     );
   }
@@ -126,6 +180,8 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
+  showTeacherInfo: state.progress.showTeacherInfo,
+  viewAs: state.stageLock.viewAs,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

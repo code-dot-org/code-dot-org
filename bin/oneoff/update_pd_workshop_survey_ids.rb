@@ -2,6 +2,7 @@
 
 require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/only_one'
 require src_dir 'database'
 
 def main

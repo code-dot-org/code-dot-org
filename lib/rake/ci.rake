@@ -53,15 +53,15 @@ namespace :ci do
   # Additionally run the lint task if specified for the environment.
   task build: [:chef_update] do
     Dir.chdir(deploy_dir) do
-      ChatClient.wrap('rake lint') { Rake::Task['lint'].invoke } if CDO.lint
-      ChatClient.wrap('rake build') { Rake::Task['build'].invoke }
+      ChatClient.wrap('rake lint') {Rake::Task['lint'].invoke} if CDO.lint
+      ChatClient.wrap('rake build') {Rake::Task['build'].invoke}
     end
   end
 
   multitask deploy_multi: [:deploy_console, :deploy_stack]
 
   task :deploy_stack do
-    ChatClient.wrap('CloudFormation stack update') { RakeUtils.rake_stream_output 'stack:start' }
+    ChatClient.wrap('CloudFormation stack update') {RakeUtils.rake_stream_output 'stack:start'}
   end
 
   task :deploy_console do
@@ -70,11 +70,24 @@ namespace :ci do
     end
   end
 
-  task all: [
-    'firebase:ci',
-    :build_with_cloudfront,
-    :deploy_multi
-  ]
+  desc 'Publish a new tag and release to GitHub'
+  task :publish_github_release do
+    begin
+      RakeUtils.system "bin/create-release --force"
+      ChatClient.log '<a href="https://github.com/code-dot-org/code-dot-org/releases/latest">New release created</a>'
+    rescue RuntimeError => e
+      ChatClient.log 'Failed to create a new release.', color: 'red'
+      ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
+    end
+  end
+
+  all_tasks = []
+  all_tasks << 'firebase:ci'
+  all_tasks << :build_with_cloudfront
+  all_tasks << :deploy_multi
+  all_tasks << :publish_github_release if rack_env?(:production)
+  task all: all_tasks
+
   task test: [
     :all,
     'test:ci'
@@ -83,7 +96,7 @@ end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  ChatClient.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
+  ChatClient.wrap('CI build') {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
 end
 
 # Returns true if upgrade succeeded, false if failed.

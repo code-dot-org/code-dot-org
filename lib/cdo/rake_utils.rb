@@ -4,7 +4,7 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
-require 'parallel/processor_count'
+require 'parallel'
 
 module RakeUtils
   def self.system__(command)
@@ -176,12 +176,27 @@ module RakeUtils
   end
 
   def self.git_push
+    old_latest_stash = RakeUtils.git_latest_stash
     system 'git', 'pull', '--rebase', '--autostash', 'origin', git_branch # Rebase local commit(s) if any new commits on origin.
     system 'git', 'push', 'origin', git_branch
+    new_latest_stash = RakeUtils.git_latest_stash
+    if old_latest_stash != new_latest_stash
+      ChatClient.log <<-ERROR, color: 'yellow'
+Warning! Content was stashed but not restored during rebase.
+Created stash:
+```
+#{new_latest_stash}
+```
+      ERROR
+    end
   end
 
   def self.git_revision
     `git rev-parse HEAD`.strip
+  end
+
+  def self.git_latest_stash
+    `git stash list --date=local`.lines.first.strip
   end
 
   def self.git_update_count
@@ -291,7 +306,7 @@ module RakeUtils
 
     destination_local_pathname = Pathname(destination_local_path)
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
-    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url) }
+    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url)}
     new_fetchable_url
   end
 

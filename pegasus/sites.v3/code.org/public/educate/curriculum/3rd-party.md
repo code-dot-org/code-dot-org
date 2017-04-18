@@ -1,6 +1,7 @@
 ---
 title: 3rd Party Educator Resources
 nav: educate_nav
+theme: responsive
 ---
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
@@ -43,6 +44,8 @@ nav: educate_nav
 
 
 ## High School
+
+Looking for resources specifically for AP Computer Science Principles A in Java? See the [AP Computer Science A Resource Page](3rd-party/apcsa)
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|

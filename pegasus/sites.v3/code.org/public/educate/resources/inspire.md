@@ -2,6 +2,7 @@
 title: Inspire students
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 
@@ -23,15 +24,13 @@ Thousands of engineers and individuals passionate about computer science have si
 
 [/col-60]
 
-<div style='clear:both'></div>
+
 
 ## 2. Show these videos
 
-<div style="float:left; padding:10px">
-
 <%= view :inspirational_videos %>
 
-<div style='clear:both'></div>
+<div style="clear: both;"></div>
 
 ## 3. Student of the Week and Teacher of the Month
 
@@ -40,7 +39,7 @@ Share these inspiring stories about students and teachers who are changing the f
 [<button>Student of the Week</button>](/sotw)&nbsp;&nbsp;[<button>Teacher of the Month</button>](/totm)
 
 ## 4. Learn about Careers in Tech
-Watch videos and read interviews with inspirational people working in a variety of roles to change the face of technology and the world. 
+Watch videos and read interviews with inspirational people working in a variety of roles to change the face of technology and the world.
 
 [<button>Careers in Tech</button>](/careers)
 
@@ -58,7 +57,7 @@ Watch videos and read interviews with inspirational people working in a variety 
 [![image](/images/fit-260/ashton-poster.png)](/files/ashton-poster.pdf)
 [![image](/images/fit-260/obama-poster.png)](/files/obama-poster.pdf)
 
-</br> 
+</br>
 </br>
 
 [![image](/images/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)

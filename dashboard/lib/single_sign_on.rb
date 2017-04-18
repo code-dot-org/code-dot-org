@@ -1,10 +1,19 @@
 # From https://raw.githubusercontent.com/discourse/discourse/master/lib/single_sign_on.rb
 class SingleSignOn
-  ACCESSORS = [:nonce, :name, :username, :email, :avatar_url, :avatar_force_update,
-               :about_me, :external_id, :return_sso_url, :admin, :moderator]
-  FIXNUMS = []
-  BOOLS = [:avatar_force_update, :admin, :moderator]
-  NONCE_EXPIRY_TIME = 10.minutes
+  ACCESSORS = [
+    :nonce,
+    :name,
+    :username,
+    :email,
+    :avatar_url,
+    :avatar_force_update,
+    :about_me,
+    :external_id,
+    :return_sso_url,
+    :admin,
+    :moderator
+  ].freeze
+  BOOLS = [:avatar_force_update, :admin, :moderator].freeze
 
   attr_accessor(*ACCESSORS)
   attr_accessor :sso_secret, :sso_url
@@ -36,7 +45,6 @@ class SingleSignOn
 
     ACCESSORS.each do |k|
       val = decoded_hash[k.to_s]
-      val = val.to_i if FIXNUMS.include? k
       if BOOLS.include? k
         val = ["true", "false"].include?(val) ? val == "true" : nil
       end

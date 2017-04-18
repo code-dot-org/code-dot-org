@@ -50,11 +50,8 @@
     "markdown_instructions": "# For Loop - Looping Through A List\r\n\r\n* Print out all the items in the colors list using a for loop",
     "start_blocks": "var colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\n\r\n\r\n\r\n\r\n",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

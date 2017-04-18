@@ -9,10 +9,10 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.width": null,
-      "Game.height": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.width": null,
+      "World.height": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "playSound": null,
       "keyDown": null,
       "keyWentDown": null,
@@ -84,7 +84,8 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "comment_Variables": null
+      "comment_Variables": null,
+      "stopSound": null
     },
     "show_d_pad": "true",
     "edit_code": true,

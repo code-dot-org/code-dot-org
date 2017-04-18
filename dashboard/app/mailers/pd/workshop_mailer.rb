@@ -1,5 +1,5 @@
 class Pd::WorkshopMailer < ActionMailer::Base
-  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'
+  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
@@ -23,12 +23,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     }
   }
 
-  # Online URL used in the details partials, organized by course.
-  ONLINE_URL = {
-    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/course/cs-in-science-support',
-    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/course/cs-in-algebra-support',
-    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/course/ecs-support'
-  }
+  ONLINE_URL = 'https://studio.code.org/my-professional-learning'
 
   after_action :save_timestamp
 
@@ -37,7 +32,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @details_partial = get_details_partial @workshop.course, @workshop.subject
-    @online_url = ONLINE_URL[@workshop.course]
+    @online_url = ONLINE_URL
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -73,6 +68,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_no_reply,
       subject: 'Code.org workshop cancellation',
+      to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def organizer_should_close_reminder(workshop)
+    @workshop = workshop
+
+    mail content_type: 'text/html',
+      from: from_no_reply,
+      subject: "Your #{@workshop.course} workshop is still open, please close it",
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 

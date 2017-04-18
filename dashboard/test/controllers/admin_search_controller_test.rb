@@ -24,10 +24,10 @@ class AdminSearchControllerTest < ActionController::TestCase
   end
 
   test "undelete_section should undelete deleted section" do
-    @teacher_section.update(deleted_at: DateTime.now)
+    @teacher_section.destroy
     post :undelete_section, params: {section_code: @teacher_section.code}
     assert_response :redirect
-    assert_nil @teacher_section.reload.deleted_at
+    refute @teacher_section.reload.deleted?
     assert_equal "Section (CODE: #{@teacher_section.code}) undeleted!",
       flash[:alert]
   end
@@ -36,9 +36,24 @@ class AdminSearchControllerTest < ActionController::TestCase
     code = @teacher_section.code
     post :undelete_section, params: {section_code: code}
     assert_response :redirect
-    assert_nil @teacher_section.reload.deleted_at
+    refute @teacher_section.reload.deleted?
     assert_equal "Section (CODE: #{code}) not found or undeleted.",
       flash[:alert]
+  end
+
+  test "undelete_section should recursively undelete" do
+    follower = create :follower, section: @teacher_section
+    follower.destroy
+    @teacher_section.destroy
+
+    assert_creates(Section, Follower) do
+      assert_no_change("Section.with_deleted.count", "Follower.with_deleted.count") do
+        post :undelete_section, params: {section_code: @teacher_section.code}
+
+        refute follower.reload.deleted?
+        refute @teacher_section.reload.deleted?
+      end
+    end
   end
 
   #

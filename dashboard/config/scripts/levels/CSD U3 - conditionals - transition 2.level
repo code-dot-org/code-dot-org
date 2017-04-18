@@ -43,9 +43,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.frameRate": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,
@@ -93,10 +93,10 @@
     },
     "show_debug_watch": "true",
     "encrypted_examples": "rYqzKs723vcC6ypUdn/3q3qPqyO9ha2100YZOACfE3OblsTKh1vrDNLztuct\nNmE4\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "true"
+    "expand_debugger": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

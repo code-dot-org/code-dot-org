@@ -229,11 +229,15 @@ export function isNameUnique(name, animationListProps) {
 function generateAnimationName(baseName, animationList) {
   let unavailableNumbers = [];
   // Match names with the form baseName_#
-  const re = new RegExp(`^${baseName}_(\\d+)$`);
   for (let animation in animationList) {
-    let match = re.exec(animationList[animation].name);
-    if (match !== null) {
-      unavailableNumbers.push(parseInt(match[1]));
+    let animationName = animationList[animation].name;
+    if (animationName.substring(0, baseName.length) === baseName) {
+      animationName = animationName.replace(baseName, '');
+      if (animationName[0] === '_') {
+        const brokenUpString = animationName.split('_');
+        const number = parseInt(brokenUpString.pop());
+        unavailableNumbers.push(number);
+      }
     }
   }
   unavailableNumbers.sort((a, b) => a - b);
@@ -293,7 +297,7 @@ export function setInitialAnimationList(serializedAnimationList) {
     for (let j = i + 1; j < numberAnimations; j++) {
       const otherKey = serializedAnimationList.orderedKeys[j];
       if (name === serializedAnimationList.propsByKey[otherKey].name) {
-        serializedAnimationList.propsByKey[key].name = generateAnimationName(name, serializedAnimationList.propsByKey);
+        serializedAnimationList.propsByKey[otherKey].name = generateAnimationName(name, serializedAnimationList.propsByKey);
       }
     }
   }
@@ -458,7 +462,7 @@ export function cloneAnimation(key) {
  * Set the display name of the specified animation.
  * @param {string} key
  * @param {string} name
- * @returns {{type: ActionType, key: string, name: string}}
+ * @returns {{type: string, key: string, name: string}}
  */
 export function setAnimationName(key, name) {
   return dispatch => {
@@ -475,7 +479,7 @@ export function setAnimationName(key, name) {
  * Set the frameDelay of the specified animation.
  * @param {string} key
  * @param {number} frameDelay
- * @returns {{type: ActionType, key: string, frameDelay: number}}
+ * @returns {{type: string, key: string, frameDelay: number}}
  */
 export function setAnimationFrameDelay(key, frameDelay) {
   return dispatch => {
@@ -492,7 +496,7 @@ export function setAnimationFrameDelay(key, frameDelay) {
  * Set the looping value of the specified animation.
  * @param {string} key
  * @param {bool} looping
- * @returns {{type: ActionType, key: string, looping: bool}}
+ * @returns {{type: string, key: string, looping: bool}}
  */
 export function setAnimationLooping(key, looping) {
   return dispatch => {
@@ -588,7 +592,7 @@ function loadAnimationFromSource(key, callback) {
  * Action creator for adding an animation.
  * @param {!AnimationKey} key
  * @param {SerializedAnimation} props
- * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
 export function addAnimationAction(key, props) {
   return {
@@ -603,7 +607,7 @@ export function addAnimationAction(key, props) {
  * Set these as pending before loading them into Piskel.
  * @param {!AnimationKey} key
  * @param {SerializedAnimation} props
- * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
 function setPendingFramesAction(key, props) {
   return {
@@ -615,7 +619,7 @@ function setPendingFramesAction(key, props) {
 
 /**
  * Action creator for removing pending frames.
- * @returns {{type: ActionType}}
+ * @returns {{type: string}}
  */
 export function removePendingFramesAction() {
   return {
@@ -625,7 +629,7 @@ export function removePendingFramesAction() {
 
 /**
  * Action creator for when pending frames are done loading from the source url.
- * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
 function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
@@ -637,7 +641,7 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
 
 /**
  * Action creator for when pending frames will start loading from the source url.
- * @returns {{type: ActionType}}
+ * @returns {{type: string}}
  */
 function startLoadingPendingFramesFromSourceAction() {
   return {

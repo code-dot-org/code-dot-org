@@ -1,19 +1,20 @@
 ---
 title: Towards Measuring Basic Coding Proficiency
 nav: about_nav
+theme: responsive
 ---
 
 # Towards Measuring Basic Coding Proficiency
 *March, 2017*
 ## Summary
 
-This report explains Code.org’s investigations into whether or not students using its courses designed for K-5 were achieving any level of "basic coding proficiency".  Since the course materials weren’t originally engineered to measure coding proficiency, nor was the curriculum designed with specific coding proficiency targets in mind, our challenge was to see what we could learn from data we had on hand. We have collected a relatively massive amount of user activity data over the year, and despite the fact that no universal definition of “coding proficiency” exists for this age group, we wanted see if we could at least gain some insight into how well students were doing with the coding concepts presented across the courses we offer on our platform. This paper gives background about the puzzles in our courses and the kinds of data we collect, explains our methods for tagging puzzles for concepts and difficulty, and defining what “proficiency” means for our platform. Finally we present a few of our results and describe learnings and future work.
+This report explains Code.org’s investigations into whether or not students using its courses designed for K-8 were achieving any level of "basic coding proficiency".  Since the course materials weren’t originally engineered to measure coding proficiency, nor was the curriculum designed with specific coding proficiency targets in mind, our challenge was to see what we could learn from data we had on hand. We have collected a relatively massive amount of user activity data over the year, and despite the fact that no universal definition of “coding proficiency” exists for this age group, we wanted see if we could at least gain some insight into how well students were doing with the coding concepts presented across the courses we offer on our platform. This paper gives background about the puzzles in our courses and the kinds of data we collect, explains our methods for tagging puzzles for concepts and difficulty, and defining what “proficiency” means for our platform. Finally we present a few of our results and describe learnings and future work.
 
 This report describes a starting point for us as our organization begins to turn its eye toward more rigorous experimental designs, statistical analysis and modeling to measure student learning.  We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing. If you’d like to get involved please contact [data@code.org](mailto:data@code.org)
 
 ## Background
 
-Code.org’s Computer Science Fundamentals program consists of five courses geared toward K-5 students.  Courses 1-4 are designed to be approximately 20 class-hours long, including "unplugged" activities which are lessons that happen off the computer.  Many of our materials are designed to be taught by a teacher in a classroom. They are typically taught once or twice a week over the course of a semester.
+Code.org’s Computer Science Fundamentals program consists of five courses geared toward K-8 students.  Courses 1-4 are designed to be approximately 20 class-hours long, including "unplugged" activities which are lessons that happen off the computer.  Many of our materials are designed to be taught by a teacher in a classroom. They are typically taught once or twice a week over the course of a semester.
 
 The primary feature of these courses are programming puzzles that guide students through using a certain programming concept (like a loop) to solve a small problem.  Our puzzles are similar to what are known as "Parson’s Puzzles" <sup><a name="ftnt1ref" href="#ftnt1">[1]</a></sup> in which a small challenge or puzzle is laid forth, and you are presented with a set of coding blocks as tools to solve that problem.  This approach to learning programming makes it impossible to make certain kinds of typical “beginner mistakes” related to syntax and, in theory, allows the learner’s cognitive load to focus more on how to use code as a problem-solving medium.
 
@@ -265,6 +266,7 @@ What follows below are results and data collected between **January 1 - December
 
 <p align="center">
     <strong>Fig. 0 - Number of students demonstrating basic proficiency in 2016 by age</strong><br/>
+       <img src="/images/proficiency/darkblue_sq.png"> demonstrated proficiency <img src="/images/proficiency/lightblue_sq.png">      not yet demonstrating proficiency<br/>
     <img src="/images/proficiency/proficiency-chart.png" width="80%"/><br/>
     Age
 </p>
@@ -293,6 +295,7 @@ From our data we see that most students in the K-12 age range are using the mate
     <strong>
         Fig. 1 - Students with and without a teacher as a % of all students within their age group
     </strong><br/>
+       <img src="/images/proficiency/darkblue_sq.png"> with teacher <img src="/images/proficiency/lightblue_sq.png"> without teacher<br/>
     <img src="/images/proficiency/with-without-teacher.png" width="80%"/><br/>
     Age
 </p>
@@ -310,11 +313,11 @@ The table below shows, for each concept, the raw number of students who solved 3
 
 
 
-## How long does it take to demonstrate proficiency?
+## Activity of students demonstrating proficiency 
 
-Roughly speaking, a majority of students who reach the proficiency bar do so after working on about 100 puzzles and most have done so by 200 puzzles.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles are older students using the accelerated course which has 109 coding puzzles. 
+Roughly speaking, a majority of students who reach the proficiency bar do so having worked on 100 puzzles or fewer, and most have done so by 200 puzzles or fewer.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles or fewer are older students using the accelerated course which has 109 coding puzzles. 
 
-The chart below shows for all students who eventually reach the proficiency bar, how many total puzzles they attempted.  For example, of all students who eventually reached proficiency roughly 50% have done so in 100 puzzles or fewer.   Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  
+The chart below shows for all students who eventually reach the proficiency bar, how many *total* puzzles they attempted. Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  
 
 <p></p>
 
@@ -326,7 +329,7 @@ The chart below shows for all students who eventually reach the proficiency bar,
 
 </p>
 
-*Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another 680 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.*
+*Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another ~400 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.*
 
 ## Does the age of the student make a difference?
 
@@ -353,7 +356,8 @@ We found students associated with teachers<sup><a name="ftnt5ref" href="#ftnt5">
 <table>
   <tr>
     <td style="border: 0;" width="30%" valign="top"><strong>Fig. 5 - Students demonstrating proficiency with or without a teacher as % of all students</strong><br><br><img src="/images/proficiency/with-without-all-students.png" width="90%"/></td>
-    <td style="border: 0;" width="60%" valign="top"><strong>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group</strong><br><br><img src="/images/proficiency/teacher-age-group.png" width="90%"/></td>
+    <td style="border: 0;" width="60%" valign="top"><strong>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group</strong><br><br><img src="/images/proficiency/teacher-age-group.png" width="90%"/>
+</td>
   </tr>
 </table>
 
@@ -419,7 +423,6 @@ Some of the things we are planning to do in the near future related to this K-5 
 * Remake the concept-difficulty matrix (and associated puzzle tags) to make it more objective, reliable and auditable
 * Do classroom observations and studies to validate and calibrate proficiency measures from data
 * Apply more rigorous statistical models and techniques (such as ELO modeling) for analysis
-* 
 * Do a public data release
 
 We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing.  If you have suggestions or thoughts on how we can continue or improve this research or if you’d like to get involved, we’d welcome your input and feedback.  Please contact us at [data@code.org](mailto:data@code.org) we’d welcome your feedback. 

@@ -15,7 +15,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @section = create :section, user_id: @teacher.id
-    Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
+    Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
     @custom_script = create(:script, name: 'laurel', hideable_stages: true)
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
@@ -128,8 +128,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
-    netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
+    netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
+    netsim_script_level = allthethings_script.script_levels.find {|script_level| script_level.level_id == netsim_level.id}
     get :show, params: {
       script_id: allthethings_script,
       stage_position: netsim_script_level.stage.relative_position,
@@ -1136,6 +1136,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'button', I18n.t('teacher.panel.example')
   end
 
+  test "logged out can not view teacher markdown" do
+    refute can_view_teacher_markdown?
+  end
+
+  test "can view CSF teacher markdown as non-authorized teacher" do
+    stubs(:current_user).returns(@teacher)
+    @script.stubs(:k5_course?).returns(true)
+    assert can_view_teacher_markdown?
+  end
+
+  test "students can not view CSF teacher markdown" do
+    stubs(:current_user).returns(@student)
+    @script.stubs(:k5_course?).returns(true)
+    refute can_view_teacher_markdown?
+  end
+
   test "should present single available level for single-level scriptlevels" do
     level = create :maze
     get_show_script_level_page(create(:script_level, levels: [level]))
@@ -1158,7 +1174,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 2": {"active": false}}'
+        properties: '{"variants": {"maze 2": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1171,7 +1187,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level2
@@ -1185,7 +1201,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         create(
           :script_level,
           levels: [level, level2],
-          properties: '{"maze 1": {"active": false}, "maze 2": {"active": false}}'
+          properties: '{"variants": {"maze 1": {"active": false}, "maze 2": {"active": false}}}'
         )
       )
     end
@@ -1203,7 +1219,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1224,7 +1240,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1232,7 +1248,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   def put_student_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
-    Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+    Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
   end
 
@@ -1268,12 +1284,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # when attached to course, we should hide only if hidden in every section
     assert_equal [stage1.id.to_s], hidden
 
-    # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    # validate hidden_stage? gives same result
+    assert_equal true, student.hidden_stage?(stage1.script_levels.first)
+    assert_equal false, student.hidden_stage?(stage2.script_levels.first)
+    assert_equal false, student.hidden_stage?(stage3.script_levels.first)
   end
 
   test "user in two sections, neither attached to course" do
@@ -1303,12 +1317,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # when not attached to course, we should hide when hidden in any section
     assert_equal [stage1.id.to_s, stage2.id.to_s, stage3.id.to_s], hidden
 
-    # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    # validate hidden_stage? gives same result
+    assert_equal true, student.hidden_stage?(stage1.script_levels.first)
+    assert_equal true, student.hidden_stage?(stage2.script_levels.first)
+    assert_equal true, student.hidden_stage?(stage3.script_levels.first)
   end
 
   test "user in two sections, one attached to course one not" do
@@ -1337,12 +1349,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # only the stages hidden in the attached section are considered hidden
     assert_equal [stage1.id.to_s, stage2.id.to_s], hidden
 
-    # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    # validate hidden_stage? gives same result
+    assert_equal true, student.hidden_stage?(stage1.script_levels.first)
+    assert_equal true, student.hidden_stage?(stage2.script_levels.first)
+    assert_equal false, student.hidden_stage?(stage3.script_levels.first)
   end
 
   test "user not signed in" do
@@ -1476,5 +1486,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 403
 
     assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
+  end
+
+  test "should redirect when script has a redirect_to property" do
+    script = create :script
+    new_script = create :script
+    create(:script_level, script: script)
+    create(:script_level, script: script)
+    create(:script_level, script: new_script)
+    script.update(redirect_to: new_script.name)
+
+    get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
+    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
   end
 end

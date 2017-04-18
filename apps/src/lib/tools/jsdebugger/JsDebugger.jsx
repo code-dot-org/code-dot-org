@@ -502,10 +502,10 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
 export default connect(
   (state) => ({
-    debugButtons: state.pageConstants.showDebugButtons,
-    debugConsole: state.pageConstants.showDebugConsole,
-    debugWatch: state.pageConstants.showDebugWatch,
-    debugSlider: state.pageConstants.showDebugSlider,
+    debugButtons: !!state.pageConstants.showDebugButtons,
+    debugConsole: !!state.pageConstants.showDebugConsole,
+    debugWatch: !!state.pageConstants.showDebugWatch,
+    debugSlider: !!state.pageConstants.showDebugSlider,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     stepSpeed: state.runState.stepSpeed,
     isOpen: isOpen(state),

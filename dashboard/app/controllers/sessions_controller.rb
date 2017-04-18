@@ -6,6 +6,12 @@ class SessionsController < Devise::SessionsController
   def new
     session[:return_to] ||= params[:return_to]
     @already_hoc_registered = params[:already_hoc_registered]
+    if params[:providerNotLinked]
+      # This code is only reached through the oauth flow when the user already has an email account.
+      # Usually email would not be available for students, this is a special case where oauth fills it in.
+      flash.now[:alert] = I18n.t 'auth.not_linked', provider: I18n.t("auth.#{params[:providerNotLinked]}")
+      @email = params[:email]
+    end
     super
   end
 
@@ -25,8 +31,8 @@ class SessionsController < Devise::SessionsController
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
     respond_to do |format|
-      format.all { head :no_content }
-      format.any(*navigational_formats) { redirect_to redirect_path }
+      format.all {head :no_content}
+      format.any(*navigational_formats) {redirect_to redirect_path}
     end
   end
 

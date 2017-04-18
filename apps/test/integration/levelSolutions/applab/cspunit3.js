@@ -2,7 +2,6 @@ import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 
 /**
  * This is based off of the currently version of U3L2_TurtleSquare_right.level,
@@ -174,10 +173,9 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return levelDefinition;
       },
-      runBeforeClick: function () {
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
+      onExecutionError: function () {
+        // Trigger the custom validator and done callback
+        Applab.onPuzzleComplete();
       },
       customValidator: function (assert) {
         var errorText = 'Unknown identifier: turnRight';
@@ -231,10 +229,9 @@ module.exports = {
           executePaletteApisOnly: false
         });
       },
-      runBeforeClick: function () {
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
+      onExecutionError: function () {
+        // Trigger the custom validator and done callback
+        Applab.onPuzzleComplete();
       },
       customValidator: function (assert) {
         var button = document.getElementById('id');

@@ -56,12 +56,11 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = new_locale
     options = blockly_options
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
-    I18n.locale = default_locale
   end
 
   test "custom level displays english instruction" do
     default_locale = 'en-US'
-    @level.name = 'frozen line'
+    @level = Level.find_by_name 'frozen line'
 
     I18n.locale = default_locale
     options = blockly_options
@@ -69,11 +68,10 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "custom level displays localized instruction if exists" do
-    default_locale = 'en-US'
     new_locale = 'es-ES'
 
     I18n.locale = new_locale
-    @level.name = 'frozen line'
+    @level = Level.find_by_name 'frozen line'
     options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
@@ -82,13 +80,12 @@ class LevelsHelperTest < ActionView::TestCase
     @level.name = 'this_level_doesnt_exist'
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
-    I18n.locale = default_locale
   end
 
   test "get video choices" do
     choices_cached = video_key_choices
     assert_equal(choices_cached.count, Video.count)
-    Video.all.each{|video| assert_includes(choices_cached, video.key)}
+    Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
@@ -129,9 +126,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? { |callout| callout['id'] == callout1.id }
-    assert callouts.any? { |callout| callout['id'] == callout2.id }
-    assert callouts.none? { |callout| callout['id'] == irrelevant_callout.id }
+    assert callouts.any? {|callout| callout['id'] == callout1.id}
+    assert callouts.any? {|callout| callout['id'] == callout2.id}
+    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
   end
 
   test "should localize callouts" do
@@ -144,7 +141,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -275,8 +272,6 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:follower).student_user
     sign_in user
 
-    app_options = self.app_options # ha
-
     assert_equal true, app_options[:level]['submittable']
   end
 
@@ -286,14 +281,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -302,8 +295,6 @@ class LevelsHelperTest < ActionView::TestCase
 
     user = create(:follower).student_user
     sign_in user
-
-    app_options = self.app_options # ha ha
 
     assert_equal true, app_options[:level]['submittable']
   end
@@ -314,14 +305,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable multi level is not submittable for non-logged in user' do
     @level = create(:multi, submittable: true)
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -412,7 +401,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     stage = script.stages[0]
@@ -472,5 +461,23 @@ class LevelsHelperTest < ActionView::TestCase
 
     standalone = false
     assert_not include_multi_answers?(standalone)
+  end
+
+  test 'section first_activity_at should not be nil when finding experiments' do
+    Experiment.stubs(:should_cache?).returns true
+    teacher = create(:teacher)
+    experiment = create(:teacher_based_experiment,
+      earliest_section_at: DateTime.now - 1.days,
+      latest_section_at: DateTime.now + 1.days,
+      percentage: 100,
+    )
+    Experiment.update_cache
+    section = create(:section, user: teacher)
+    student = create(:student)
+    section.add_student(student, move_for_same_teacher: false)
+
+    sign_in student
+
+    assert_includes app_options[:experiments], experiment.name
   end
 end

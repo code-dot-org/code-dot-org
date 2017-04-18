@@ -202,7 +202,7 @@ end
 
 if $options.config
   $browsers = $options.config.map do |name|
-    $browsers.detect {|b| b['name'] == name }.tap do |browser|
+    $browsers.detect {|b| b['name'] == name}.tap do |browser|
       unless browser
         puts "No config exists with name #{name}"
         exit
@@ -216,7 +216,7 @@ $errfile = File.open("error.log", "w")
 $errbrowserfile = File.open("errorbrowsers.log", "w")
 
 def prefix_string(msg, prefix)
-  msg.to_s.lines.map { |line| "#{prefix}#{line}" }.join
+  msg.to_s.lines.map {|line| "#{prefix}#{line}"}.join
 end
 
 def log_success(msg)
@@ -400,7 +400,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
-  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
 
   # disable some stuff to make require_rails_env run faster within cucumber.
@@ -467,9 +467,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 
     failing_scenarios = lines.rindex("Failing Scenarios:\n")
     if failing_scenarios
-      return lines[failing_scenarios..-1].map { |line| "#{log_prefix}#{line}" }.join
+      return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
     else
-      return lines.last(3).map { |line| "#{log_prefix}#{line}" }.join
+      return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
     end
   end
 
@@ -482,10 +482,10 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     elsif $options.magic_retry
       flakiness = flakiness_for_test(test_run_string)
       if !flakiness
-        $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
+        $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
         return 1
       elsif flakiness == 0.0
-        $lock.synchronize { puts "#{test_run_string} is not flaky".green }
+        $lock.synchronize {puts "#{test_run_string} is not flaky".green}
         return 1
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
@@ -496,11 +496,11 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
         flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
 
         if max_reruns < 2
-          $lock.synchronize { puts flakiness_message.green }
+          $lock.synchronize {puts flakiness_message.green}
         elsif max_reruns < 3
-          $lock.synchronize { puts flakiness_message.yellow }
+          $lock.synchronize {puts flakiness_message.yellow}
         else
-          $lock.synchronize { puts flakiness_message.red }
+          $lock.synchronize {puts flakiness_message.red}
         end
         return max_reruns
       end
@@ -515,6 +515,13 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   rerun_filename = test_run_string + ".rerun"
   if max_reruns > 0
     arguments += " --format rerun --out #{rerun_filename}"
+  end
+
+  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # provide pretty test reports with success/fail/timing data upon completion.
+  # See: https://circleci.com/docs/test-metadata/#cucumber
+  if ENV['CI']
+    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
   FileUtils.rm rerun_filename, force: true

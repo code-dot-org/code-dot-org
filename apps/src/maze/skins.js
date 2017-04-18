@@ -63,7 +63,8 @@ var CONFIGS = {
     pegmanHeight: 50,
     pegmanWidth: 50,
 
-    goal: 'gold.png',
+    goal: 'gem.png',
+    collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
     look: '#000',

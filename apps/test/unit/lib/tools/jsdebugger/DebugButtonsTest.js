@@ -7,8 +7,6 @@ import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
-window.acorn = require('../../../../../lib/jsinterpreter/acorn');
-require('../../../../../lib/jsinterpreter/interpreter');
 
 
 const EXAMPLE_CODE = `
@@ -25,8 +23,6 @@ describe('The DebugConsole component', () => {
       // doesn't ignore breakpoints.
       shouldRunAtMaxSpeed: () => false,
       studioApp: {
-        reduxStore: getStore(),
-
         // set hideSource to true so interpreter doesn't try to look up
         // non-existent ace editor
         hideSource: true,

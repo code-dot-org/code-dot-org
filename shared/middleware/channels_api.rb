@@ -129,7 +129,11 @@ class ChannelsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = JSON.parse(request.body.read)
+    begin
+      value = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
+    end
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
@@ -160,7 +164,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = channel_policy_violation?(id)
-    {has_violation: value }.to_json
+    {has_violation: value}.to_json
   end
 
   #
@@ -177,7 +181,7 @@ class ChannelsApi < Sinatra::Base
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
-    {abuse_score: value }.to_json
+    {abuse_score: value}.to_json
   end
 
   #
@@ -193,7 +197,7 @@ class ChannelsApi < Sinatra::Base
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
-    {abuse_score: value }.to_json
+    {abuse_score: value}.to_json
   end
 
   #
@@ -212,7 +216,7 @@ class ChannelsApi < Sinatra::Base
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
-    {abuse_score: value }.to_json
+    {abuse_score: value}.to_json
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))

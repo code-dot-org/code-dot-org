@@ -60,6 +60,8 @@ module ScriptConstants
       CSD2_NAME = 'csd2'.freeze,
       CSD3_NAME = 'csd3'.freeze,
       CSD4_NAME = 'csd4'.freeze,
+      CSD5_NAME = 'csd5'.freeze,
+      CSD6_NAME = 'csd6'.freeze,
     ],
     csp: [
       CSP_UNIT1_NAME = 'cspunit1'.freeze,
@@ -98,7 +100,7 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME
     ]
-  }
+  }.freeze
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
   # This can be used to override that, with lower numbers ordered sooner, and higher numbers
@@ -106,7 +108,7 @@ module ScriptConstants
   CATEGORY_ORDERING_PRIORITY = {
     research_studies: 1,
     csp: 2,
-  }
+  }.freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script

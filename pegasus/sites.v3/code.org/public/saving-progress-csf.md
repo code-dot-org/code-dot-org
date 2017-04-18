@@ -1,5 +1,6 @@
 ---
 title: Saving progress in CS Fundamentals
+theme: responsive
 ---
 
 # Saving Progress in Computer Science Fundamentals (December 3 - 11)
@@ -18,7 +19,7 @@ It’s an exciting time of year, but our servers can’t handle it! We can’t s
 
 **Due to this, we unfortunately will not be saving or reporting student progress on Course 1-4, our Accelerated Course or the Hour of Code tutorials from December 3-11.**
 
-<img style="width: 700px" src="images/csedweek-courses.png"/>
+<img style="width: 700px; max-width: 100%" src="images/csedweek-courses.png"/>
 
 Given that your students have already gone beyond an Hour of Code, Computer Science Education Week provides an excellent opportunity for them to explore activities outside their normal curriculum. Here are some ideas teachers have recommended for great ways your classroom can celebrate the Hour of Code without student progress functionality:
 

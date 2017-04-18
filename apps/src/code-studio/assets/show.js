@@ -3,7 +3,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ImagePicker = require('../components/ImagePicker');
-var Dialog = require('../dialog');
+var SoundPicker = require('../components/SoundPicker');
+var Dialog = require('../LegacyDialog');
 
 /**
  * Display the "Manage Assets" modal.
@@ -26,7 +27,9 @@ module.exports = function showAssetManager(assetChosen, typeFilter, onClose, opt
     onHidden: onClose
   });
 
-  ReactDOM.render(React.createElement(ImagePicker, {
+  let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
+
+  ReactDOM.render(React.createElement(pickerType, {
     typeFilter: typeFilter,
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     useFilesApi: !!options.useFilesApi,

@@ -15,6 +15,7 @@ class ScriptDSL < BaseDSL
     @hidden = true
     @login_required = false
     @hideable_stages = false
+    @student_detail_progress_view = false
     @wrapup_video = nil
   end
 
@@ -25,6 +26,7 @@ class ScriptDSL < BaseDSL
   boolean :hidden
   boolean :login_required
   boolean :hideable_stages
+  boolean :student_detail_progress_view
 
   string :wrapup_video
 
@@ -47,6 +49,7 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_stages: @hideable_stages,
+      student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete
     }
@@ -85,7 +88,7 @@ class ScriptDSL < BaseDSL
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
       video_key: @video_key_for_next_level
-    }.merge(properties).select{|_, v| v.present? }
+    }.merge(properties).select {|_, v| v.present?}
     @video_key_for_next_level = nil
 
     # Having @current_scriptlevel implies we're a level inside of a variants block
@@ -113,7 +116,7 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
       if progression
-        script_level[:properties] = { progression: progression }
+        script_level[:properties] = {progression: progression}
       end
 
       @scriptlevels << script_level
@@ -121,7 +124,7 @@ class ScriptDSL < BaseDSL
   end
 
   def variants
-    @current_scriptlevel = { levels: [], properties: {}, stage: @stage}
+    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
   end
 
   def endvariants
@@ -162,6 +165,7 @@ class ScriptDSL < BaseDSL
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_stages true' if script.hideable_stages
+    s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 
     s << '' unless s.empty?
@@ -185,7 +189,7 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level), sl.progression).map{ |l| l.indent(2) })
+            s.concat(serialize_level(level, type, sl.active?(level), sl.progression).map {|l| l.indent(2)})
           end
           s << 'endvariants'
         else
@@ -209,7 +213,7 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
+    l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
     l += ', active: false' unless active.nil? || active
     l += ", progression: '#{progression}'" if progression
     s << l

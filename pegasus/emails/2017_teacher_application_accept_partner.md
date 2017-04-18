@@ -49,7 +49,7 @@ As a reminder, to join the Professional Learning Program we ask that you commit 
 
 * Share the good news with your school! Start talking with your administration, colleagues, students, and parents now about the course you will be teaching next year, and encourage a diverse group of students to enroll. Once you accept your space in the program, you will receive a welcome kit complete with recruitment tips and tools. In the meantime, please help yourself to these [videos and resources](https://code.org/educate/resources/videos).
 
-Please contact [<%= regional_partner_contact_person_email_s %> ](<%= regional_partner_contact_person_email_s %> ) with any additional questions. We look forward to hearing from you by April 21, 2017.
+Please contact [<%= regional_partner_contact_person_email_s %> ](<%= regional_partner_contact_person_email_s %>)for more information, including questions about the possible travel costs associated with your workshop. We look forward to hearing from you by April 21, 2017.
 
 Thank you,  
 Sarah Fairweather  

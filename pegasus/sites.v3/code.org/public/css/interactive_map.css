@@ -1,0 +1,29 @@
+#map {
+  width: 700px;
+  min-height: 425px;
+  float: left;
+  margin-right: -100px;
+}
+
+#infobox {
+  text-align: left;
+  float: right;
+}
+
+.info {
+  font-size: 18px;
+}
+
+#state-dropdown {
+  width: 70%;
+  height: 34px;
+  background-color: #e2e4e3;
+  color: #595959;
+  margin-bottom: 10px;
+}
+
+.info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}

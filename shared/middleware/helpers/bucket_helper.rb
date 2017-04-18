@@ -59,7 +59,7 @@ class BucketHelper
     target_object_prefix = s3_path owner_id, channel_id, target_object
 
     objects = @s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
-    target_object = objects.find { |x| x.key == target_object_prefix }
+    target_object = objects.find {|x| x.key == target_object_prefix}
 
     app_size = objects.map(&:size).reduce(:+).to_i
     object_size = target_object.nil? ? nil : target_object.size.to_i
@@ -79,7 +79,11 @@ class BucketHelper
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
-    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    begin
+      owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return {status: 'NOT_FOUND'}
+    end
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
@@ -111,16 +115,15 @@ class BucketHelper
     src_prefix = s3_path src_owner_id, src_channel_id
     result = @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
-      if (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
-        mime_type = Sinatra::Base.mime_type(File.extname(filename))
-        category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
+      mime_type = Sinatra::Base.mime_type(File.extname(filename))
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
-        src = "#{@bucket}/#{src_prefix}#{filename}"
-        dest = s3_path dest_owner_id, dest_channel_id, filename
-        response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+      src = "#{@bucket}/#{src_prefix}#{filename}"
+      dest = s3_path dest_owner_id, dest_channel_id, filename
+      response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
-        {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
-      end
+      {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
     end
     result.compact
   end
@@ -136,14 +139,14 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
+    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
-    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: { abuse_score: abuse_score.to_s})
+    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
 
     # Delete the old version, if doing an in-place replace
     @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
@@ -185,9 +188,9 @@ class BucketHelper
 
   def delete_multiple(encrypted_channel_id, filenames)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    objects = filenames.map { |filename| { key: s3_path(owner_id, channel_id, filename) } }
+    objects = filenames.map {|filename| {key: s3_path(owner_id, channel_id, filename)}}
 
-    @s3.delete_objects(bucket: @bucket, delete: { objects: objects, quiet: true})
+    @s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
   def list_versions(encrypted_channel_id, filename)

@@ -121,7 +121,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
@@ -149,6 +149,11 @@ class User < ActiveRecord::Base
   has_one :district_as_contact,
     class_name: 'District',
     foreign_key: 'contact_id'
+
+  has_many :regional_partner_program_managers,
+    foreign_key: :program_manager_id
+  has_many :regional_partners,
+    through: :regional_partner_program_managers
 
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
@@ -282,15 +287,16 @@ class User < ActiveRecord::Base
 
   has_many :gallery_activities, -> {order 'id desc'}
 
-  # student/teacher relationships where I am the teacher
-  has_many :followers
+  # Relationships (sections/followers/students) from being a teacher.
+  has_many :sections, dependent: :destroy
+  has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
-  has_many :sections
 
-  # student/teacher relationships where I am the student
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
-  has_many :teachers, through: :followeds, source: :user
+  # Relationships (sections_as_students/followeds/teachers) from being a
+  # student.
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
+  has_many :teachers, through: :sections_as_student, source: :user
 
   has_one :prize
   has_one :teacher_prize
@@ -343,6 +349,7 @@ class User < ActiveRecord::Base
     :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students,
+    :hide_school_info_for_students,
     :sanitize_race_data
 
   def make_teachers_21
@@ -380,6 +387,10 @@ class User < ActiveRecord::Base
       self.unconfirmed_email = nil
       self.full_address = nil
     end
+  end
+
+  def hide_school_info_for_students
+    self.school_info = nil if student?
   end
 
   def sanitize_race_data
@@ -467,6 +478,13 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
+      if auth.provider == :the_school_project
+        user.username = auth.extra.raw_info.nickname
+        user.user_type = auth.extra.raw_info.role
+        user.locale = auth.extra.raw_info.locale
+        user.school = auth.extra.raw_info.school.name
+      end
+
       # treat clever admin types as teachers
       if CLEVER_ADMIN_USER_TYPES.include? user.user_type
         user.user_type = User::TYPE_TEACHER
@@ -540,7 +558,7 @@ class User < ActiveRecord::Base
       where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
-          { value: login.downcase, hashed_value: hash_email(login.downcase) }
+          {value: login.downcase, hashed_value: hash_email(login.downcase)}
         ]
       ).first
     elsif hashed_email = conditions.delete(:hashed_email)
@@ -605,10 +623,36 @@ class User < ActiveRecord::Base
     user_level.nil? || user_level.locked?(script_level.stage)
   end
 
+  # Returns the next script_level for the next progression level in the given
+  # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    script.script_levels.detect do |script_level|
+    # Find the user level that we've most recently had progress on
+    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+
+    script_level_index = 0
+    if user_level
+      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      script_level_index = last_script_level.chapter - 1 if last_script_level
+    end
+
+    next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      unpassed_progression_level?(script_level, user_levels)
+    end
+
+    # if we don't have any unpassed levels proceeding the one we've most recently
+    # submitted, just go to the one we've most recently submitted
+    next_unpassed || last_script_level
+  end
+
+  # Returns true if all progression levels in the provided script have a passing
+  # result
+  def completed_progression_levels?(script)
+    user_levels_by_level = user_levels_by_level(script)
+
+    script.script_levels.none? do |script_level|
       user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -644,6 +688,26 @@ class User < ActiveRecord::Base
       first
   end
 
+  # Is the stage containing the provided script_level hidden for this user?
+  def hidden_stage?(script_level)
+    return false if try(:teacher?)
+
+    sections = sections_as_student.select {|s| s.deleted_at.nil?}
+    return false if sections.empty?
+
+    script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
+
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
+      # hides the stage
+      script_sections.all? {|s| script_level.stage_hidden_for_section?(s.id)}
+    else
+      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # hide it
+      sections.any? {|s| script_level.stage_hidden_for_section?(s.id)}
+    end
+  end
+
   def student?
     user_type == TYPE_STUDENT
   end
@@ -663,7 +727,7 @@ class User < ActiveRecord::Base
   end
 
   def student_of?(teacher)
-    followeds.find_by_user_id(teacher.id).present?
+    teachers.include? teacher
   end
 
   def locale
@@ -797,8 +861,6 @@ class User < ActiveRecord::Base
   end
 
   def in_progress_and_completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.compact.reject do |user_script|
       begin
         user_script.script.nil?
@@ -811,13 +873,13 @@ class User < ActiveRecord::Base
   end
 
   def all_advertised_scripts_completed?
-    advertised_scripts.all? { |script| completed?(script) }
+    advertised_scripts.all? {|script| completed?(script)}
   end
 
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || next_unpassed_progression_level(script).nil?
+    user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)
@@ -838,24 +900,18 @@ class User < ActiveRecord::Base
   end
 
   def working_on_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
   # NOTE: Changes to this method should be mirrored in
   # in_progress_and_completed_scripts.
   def working_on_user_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.where('user_scripts.completed_at is null')
   end
 
   # NOTE: Changes to this method should be mirrored in
   # in_progress_and_completed_scripts.
   def completed_user_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.where('user_scripts.completed_at is not null')
   end
 
@@ -863,50 +919,9 @@ class User < ActiveRecord::Base
     working_on_scripts.first.try(:cached)
   end
 
-  def needs_to_backfill_user_scripts?
-    # Backfill only applies to users created before UserScript model was introduced.
-    created_at < Date.new(2014, 9, 15) &&
-      user_scripts.empty? &&
-      !user_levels.empty?
-  end
-
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
-  end
-
-  # Creates UserScript information based on data contained in UserLevels.
-  # Provides backwards compatibility with users created before the UserScript model
-  # was introduced (cf. code-dot-org/website-ci#194).
-  # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts(scripts = Script.all)
-    # backfill progress in scripts
-    scripts.each do |script|
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
-        ul_map = user_levels_by_level(script)
-        script.script_levels.each do |sl|
-          ul = ul_map[sl.level_id]
-          next unless ul
-          # is this the first level we started?
-          user_script.started_at = ul.created_at if
-            ul.created_at &&
-            (!user_script.started_at || ul.created_at < user_script.started_at)
-
-          # is this the last level we worked on?
-          user_script.last_progress_at = ul.updated_at if
-            ul.updated_at &&
-            (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
-        end
-
-        # backfill completed scripts
-        if user_script.last_progress_at && user_script.check_completed?
-          user_script.completed_at = user_script.last_progress_at
-        end
-
-        user_script.save! if user_script.changed? && !user_script.empty?
-      end
-    end
   end
 
   def self.track_script_progress(user_id, script_id)
@@ -941,7 +956,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+          user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -995,7 +1010,7 @@ class User < ActiveRecord::Base
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
-      if !user_level.perfect? &&
+      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         ([
           ScriptConstants::TWENTY_HOUR_NAME,
@@ -1088,16 +1103,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def recent_activities(limit = 10)
-    activities.order('id desc').limit(limit)
-  end
-
   def can_pair?
     !sections_as_student.empty?
   end
 
   def can_pair_with?(other_user)
-    self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
+    self != other_user && sections_as_student.any? {|section| other_user.sections_as_student.include? section}
   end
 
   def self.csv_attributes
@@ -1106,7 +1117,7 @@ class User < ActiveRecord::Base
   end
 
   def to_csv
-    User.csv_attributes.map{ |attr| send(attr) }
+    User.csv_attributes.map {|attr| send(attr)}
   end
 
   def self.progress_queue
@@ -1145,7 +1156,7 @@ class User < ActiveRecord::Base
   end
 
   def section_for_script(script)
-    followeds.collect(&:section).find { |section| section.script_id == script.id }
+    sections_as_student.find {|section| section.script_id == script.id}
   end
 
   # Returns the version of our Terms of Service we consider the user as having
@@ -1156,14 +1167,7 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
-    # As of August 2016, it may be the case that the `followed` exists but
-    # `followed.user` does not as the result of user deletion. In this case, we
-    # ignore any terms of service versions associated with deleted teacher
-    # accounts.
-    followeds.
-      collect{|followed| followed.user.try(:terms_of_service_version)}.
-      compact.
-      max
+    teachers.map(&:terms_of_service_version).try(:compact).try(:max)
   end
 
   # Returns whether the user has accepted the latest major version of the Terms of Service

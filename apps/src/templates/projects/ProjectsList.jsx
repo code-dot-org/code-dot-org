@@ -1,7 +1,28 @@
 import React from 'react';
-import {Table} from 'reactabular';
+import {Table, sort} from 'reactabular';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
+import wrappedSortable from '../tables/wrapped_sortable';
+import orderBy from 'lodash/orderBy';
+
+const THUMBNAIL_SIZE = 50;
+
+/** @enum {number} */
+export const COLUMNS = {
+  THUMBNAIL: 0,
+  PROJECT_NAME: 1,
+  STUDENT_NAME: 2,
+  APP_TYPE: 3,
+  LAST_EDITED: 4,
+};
+
+/** @enum {number} */
+export const COLUMNS_WITHOUT_THUMBNAILS = {
+  PROJECT_NAME: 0,
+  STUDENT_NAME: 1,
+  APP_TYPE: 2,
+  LAST_EDITED: 3,
+};
 
 const styles = {
   table: {
@@ -22,6 +43,12 @@ const styles = {
     border: '1px solid gray',
     padding: 10,
     backgroundColor: color.teal,
+  },
+  thumbnailCell: {
+    border: '1px solid gray',
+    width: THUMBNAIL_SIZE,
+    minWidth: THUMBNAIL_SIZE,
+    padding: 0
   },
 };
 
@@ -44,12 +71,18 @@ function typeFormatter(type) {
 
 /**
  * Takes a date formatted as YYYY-MM-DD and returns it as MM/DD/YYYY.
- * @param {string} date
+ * @param {string} dateString
  * @returns {string}
  */
 function dateFormatter(dateString) {
   const date = new Date(dateString);
   return date.toLocaleDateString();
+}
+
+function thumbnailFormatter(thumbnailUrl) {
+  return thumbnailUrl ?
+    <img src={thumbnailUrl} width={THUMBNAIL_SIZE} height={THUMBNAIL_SIZE}/> :
+    '';
 }
 
 const ProjectsList = React.createClass({
@@ -58,6 +91,39 @@ const ProjectsList = React.createClass({
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: React.PropTypes.string.isRequired,
+    showProjectThumbnails: React.PropTypes.bool.isRequired,
+  },
+
+  getInitialState() {
+    const sortingColumn = this.props.showProjectThumbnails ?
+      COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
+    const sortingColumns = {
+      [sortingColumn]: {
+        direction: 'desc',
+        position: 0
+      }
+    };
+    return {sortingColumns};
+  },
+
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  },
+
+  // The user requested a new sorting column. Adjust the state accordingly.
+  onSort(selectedColumn) {
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns: this.state.sortingColumns,
+        // Custom sortingOrder removes 'no-sort' from the cycle
+        sortingOrder: {
+          FIRST: 'asc',
+          asc: 'desc',
+          desc: 'asc'
+        },
+        selectedColumn
+      })
+    });
   },
 
   /**
@@ -78,13 +144,24 @@ const ProjectsList = React.createClass({
     return <a href={url} target="_blank">{name}</a>;
   },
 
-  getColumns() {
-    return [
+  getColumns(sortable) {
+    const thumbnailColumn = {
+      property: 'thumbnailUrl',
+      header: {
+        props: {style: styles.headerCell},
+      },
+      cell: {
+        format: thumbnailFormatter,
+        props: {style: styles.thumbnailCell}
+      }
+    };
+    const standardColumns = [
       {
         property: 'name',
         header: {
           label: commonMsg.projectName(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: this.nameFormatter,
@@ -96,6 +173,7 @@ const ProjectsList = React.createClass({
         header: {
           label: commonMsg.studentName(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           props: {style: styles.cell}
@@ -106,6 +184,7 @@ const ProjectsList = React.createClass({
         header: {
           label: commonMsg.projectType(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: typeFormatter,
@@ -117,6 +196,7 @@ const ProjectsList = React.createClass({
         header: {
           label: commonMsg.lastEdited(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: dateFormatter,
@@ -124,18 +204,37 @@ const ProjectsList = React.createClass({
         }
       },
     ];
+
+    return this.props.showProjectThumbnails ?
+      [thumbnailColumn].concat(standardColumns) : standardColumns;
   },
 
   render() {
+    const sortableOptions = {
+      // Dim inactive sorting icons in the column headers
+      default: {color: 'rgba(255, 255, 255, 0.2 )'}
+    };
+
+    // Define a sorting transform that can be applied to each column
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const columns = this.getColumns(sortable);
+    const sortingColumns = this.getSortingColumns();
+
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy,
+    })(this.props.projectsData);
+
     return (
       <Table.Provider
         className="pure-table pure-table-striped"
-        columns={this.getColumns()}
+        columns={columns}
         style={styles.table}
       >
         <Table.Header />
 
-        <Table.Body rows={this.props.projectsData} rowKey="channel" />
+        <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>
     );
   }

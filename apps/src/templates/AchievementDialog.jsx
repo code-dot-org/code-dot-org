@@ -1,13 +1,13 @@
-import { Motion, StaggeredMotion, spring } from 'react-motion';
+import { StaggeredMotion, spring } from 'react-motion';
 import React from 'react';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
+import PuzzleRatingButtons from './PuzzleRatingButtons';
+import StageProgressBar from './StageProgressBar';
 
-const ANIMATION_OVERLAP = 0.2;
-const MIN_PROGRESS_WIDTH = 22;
-const MAX_PROGRESS_WIDTH = 400;
+const ANIMATION_OVERLAP = 0.05;
 
 const styles = {
   checkmarks: {
@@ -73,40 +73,6 @@ const styles = {
     color: '#5b6770',
     border: '1px solid #c5c5c5',
   },
-  stageRewards: {
-    position: 'absolute',
-    background: '#f3eeff',
-    top: 240,
-    left: 100,
-    width: '500px',
-    height: '75px',
-    border: '1px solid #d2cae6',
-    borderRadius: 3,
-  },
-  stageRewardsTitle: {
-    textAlign: 'center',
-    color: '#655689',
-    fontSize: 14,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  progressBackground: {
-    position: 'absolute',
-    background: '#fff',
-    borderRadius: 10,
-    border: '1px solid #d2cae6',
-    height: 20,
-    width: MAX_PROGRESS_WIDTH,
-    left: 50,
-  },
-  progressForeground: {
-    position: 'absolute',
-    background: '#eaa721',
-    borderRadius: 11,
-    height: 22,
-    top: -1,
-    left: -1,
-  },
 };
 
 const AchievementDialog = Radium(React.createClass({
@@ -122,6 +88,7 @@ const AchievementDialog = Radium(React.createClass({
     newPassedProgress: React.PropTypes.number,
     newPerfectProgress: React.PropTypes.number,
     newHintUsageProgress: React.PropTypes.number,
+    showPuzzleRatingButtons: React.PropTypes.bool,
   },
 
   getInitialState() {
@@ -160,13 +127,19 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRow(flag, message, style) {
-    return (
-      <p style={{...styles.achievement.row, ...style}}>
-        {this.icon(flag)}
-        <span style={styles.achievement.text}>{message}</span>
-      </p>
-    );
+  achievementRowGenerator(show, successful, message) {
+    if (!show) {
+      return null;
+    }
+
+    return (style, index) => {
+      return (
+        <p style={{...styles.achievement.row, ...style}} key={index}>
+          {this.icon(successful)}
+          <span style={styles.achievement.text}>{message}</span>
+        </p>
+      );
+    };
   },
 
   blocksUsedMessage(blockDelta, params) {
@@ -179,26 +152,36 @@ const AchievementDialog = Radium(React.createClass({
     }
   },
 
-  hintsMessage(tooManyHints) {
-    return tooManyHints ? locale.usingHints() : locale.withoutHints();
-  },
-
-  progressToBarWidth(progress) {
-    return MIN_PROGRESS_WIDTH +
-      progress * (MAX_PROGRESS_WIDTH - MIN_PROGRESS_WIDTH);
+  hintsMessage(numHints) {
+    if (numHints === 0) {
+      return locale.withoutHints();
+    } else if (numHints === 1) {
+      return locale.usingOneHint();
+    } else {
+      return locale.usingHints();
+    }
   },
 
   render() {
     const showNumBlocksRow = isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
-    const tooManyHints = this.props.hintsUsed > 0;
+    const tooManyHints = this.props.hintsUsed > 1;
 
     const params = {
       puzzleNumber: this.props.puzzleNumber,
       numBlocks: this.props.idealBlocks,
     };
     const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+
+    const achievementRowGenerators = [
+      this.achievementRowGenerator(true /* show */, true /* success */,
+          locale.puzzleCompleted()),
+      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks,
+          this.blocksUsedMessage(blockDelta, params)),
+      this.achievementRowGenerator(true /* show */, !tooManyHints,
+          this.hintsMessage(this.props.hintsUsed)),
+    ].filter(row => row);
 
     return (
       <BaseDialog
@@ -208,13 +191,13 @@ const AchievementDialog = Radium(React.createClass({
         assetUrl={this.props.assetUrl}
       >
         <StaggeredMotion
-          defaultStyles={Array(4).fill({ progress: 0 })}
+          defaultStyles={Array(achievementRowGenerators.length + 1).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
-              { progress: spring(1, { stiffness: 50, damping: 25 }) } :
+              { progress: spring(1, { stiffness: 100, damping: 25 }) } :
               { progress: spring(
                   prevInterpolatedStyles[i - 1].progress > (1 - ANIMATION_OVERLAP) ? 1 : 0,
-                  { stiffness: 30, damping: 25 }),
+                  { stiffness: 60, damping: 25 }),
               };
           })}
         >
@@ -223,49 +206,19 @@ const AchievementDialog = Radium(React.createClass({
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
                 <div style={styles.checkmarks}>
-                  {this.achievementRow(
-                      true,
-                      locale.puzzleCompleted(),
-                      interpolatingStyles[1])}
-                  {showNumBlocksRow && this.achievementRow(
-                      !tooManyBlocks,
-                      this.blocksUsedMessage(blockDelta, params),
-                      interpolatingStyles[2])}
-                  {this.achievementRow(
-                      !tooManyHints,
-                      this.hintsMessage(tooManyHints),
-                      interpolatingStyles[showNumBlocksRow ? 3 : 2])}
+                  {achievementRowGenerators.map((generator, index) =>
+                          generator(interpolatingStyles[index + 1], index))}
                 </div>
                 {this.props.showStageProgress &&
-                  <div style={styles.stageRewards}>
-                    <div style={styles.stageRewardsTitle}>
-                      {locale.stageRewards()}
-                    </div>
-                    <div style={styles.progressBackground}>
-                      <Motion
-                        defaultStyle={{
-                          width: this.progressToBarWidth(this.props.oldStageProgress)
-                        }}
-                        style={{
-                          width: spring(this.progressToBarWidth(
-                              this.props.oldStageProgress +
-                              (interpolatingValues[1].progress > 0 ? this.props.newPassedProgress : 0) +
-                              (interpolatingValues[2].progress > 0 ? this.props.newPerfectProgress : 0) +
-                              (interpolatingValues[showNumBlocksRow ? 3 : 2].progress > 0 ?
-                                this.props.newHintUsageProgress : 0)),
-                            { stiffness: 70, damping: 25 })
-                        }}
-                      >
-                        {interpolatingStyle =>
-                          <div
-                            style={{
-                              ...styles.progressForeground,
-                              ...interpolatingStyle,
-                            }}
-                          />}
-                      </Motion>
-                    </div>
-                  </div>
+                  <StageProgressBar
+                    stageProgress={
+                        this.props.oldStageProgress +
+                        (interpolatingValues[1].progress * this.props.newPassedProgress) +
+                        (interpolatingValues[2].progress * this.props.newPerfectProgress) +
+                        (interpolatingValues[showNumBlocksRow ? 3 : 2].progress *
+                          this.props.newHintUsageProgress)
+                    }
+                  />
                 }
               </div>);
             }
@@ -274,6 +227,7 @@ const AchievementDialog = Radium(React.createClass({
         <div style={styles.footer}>
           <p style={styles.feedbackMessage}>{feedbackMessage}</p>
 
+          {this.props.showPuzzleRatingButtons && <PuzzleRatingButtons/>}
           <button
             onClick={this.handleClose}
             style={[

@@ -1,8 +1,11 @@
-// TODO: import apps/lib/jsinterpreter/interpreter.js directly
-// instead of referencing window.
 var codegen = require('./codegen');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 var utils = require('./utils');
+var Interpreter = require('@code-dot-org/js-interpreter');
+var acorn = require('@code-dot-org/js-interpreter/acorn');
+import patchInterpreter from './lib/tools/jsinterpreter/patchInterpreter';
+import {getStore} from './redux';
+
 import { setIsDebuggerPaused } from './redux/runState';
 
 /**
@@ -28,23 +31,23 @@ var JSInterpreter = module.exports = function (options) {
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
 
-  /** @type {ObservableEvent} */
-  this.onNextStepChanged = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onNextStepChanged = new ObservableEventDEPRECATED();
   this._runStateUpdater = this.onNextStepChanged.register(() => {
-    this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    getStore().dispatch(setIsDebuggerPaused(
       this.paused,
       this.nextStep
     ));
   });
 
-  /** @type {ObservableEvent} */
-  this.onPause = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onPause = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.onExecutionError = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onExecutionError = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.onExecutionWarning = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onExecutionWarning = new ObservableEventDEPRECATED();
 
   this.paused = false;
   this.yieldExecution = false;
@@ -62,101 +65,14 @@ var JSInterpreter = module.exports = function (options) {
 };
 
 JSInterpreter.prototype.patchInterpreterMethods_ = function () {
-
+  const base = patchInterpreter();
   if (!JSInterpreter.baseHasProperty &&
       !JSInterpreter.baseGetProperty &&
       !JSInterpreter.baseSetProperty) {
-    JSInterpreter.baseHasProperty = window.Interpreter.prototype.hasProperty;
-    JSInterpreter.baseGetProperty = window.Interpreter.prototype.getProperty;
-    JSInterpreter.baseSetProperty = window.Interpreter.prototype.setProperty;
+    JSInterpreter.baseHasProperty = base.hasProperty;
+    JSInterpreter.baseGetProperty = base.getProperty;
+    JSInterpreter.baseSetProperty = base.setProperty;
   }
-
-  // These methods need to be patched in order to support custom marshaling.
-
-  // These changes revert a 10% speedup commit that bypassed hasProperty,
-  // getProperty, and setProperty:
-  // https://github.com/NeilFraser/JS-Interpreter/commit/c6f25b4a30046a858e5e90a92a8c0d24a93c0231
-
-  /**
-  * Retrieves a value from the scope chain.
-  * @param {!Object} name Name of variable.
-  * @return {!Object} The value.
-  */
-  window.Interpreter.prototype.getValueFromScope = function (name) {
-    var scope = this.getScope();
-    var nameStr = name.toString();
-    while (scope) {
-      if (this.hasProperty(scope, nameStr)) {
-        return this.getProperty(scope, nameStr);
-      }
-      scope = scope.parentScope;
-    }
-    this.throwException('Unknown identifier: ' + nameStr);
-    return this.UNDEFINED;
-  };
-
-  /**
-  * Sets a value to the current scope.
-  * @param {!Object} name Name of variable.
-  * @param {!Object} value Value.
-  * @param {boolean} declarator true if called from variable declarator.
-  */
-  window.Interpreter.prototype.setValueToScope = function (name, value, declarator) {
-    var scope = this.getScope();
-    var strict = scope.strict;
-    var nameStr = name.toString();
-    while (scope) {
-      if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
-        if (declarator) {
-          // from a declarator, always call baseSetProperty
-          JSInterpreter.baseSetProperty.call(this, scope, nameStr, value);
-        } else {
-          this.setProperty(scope, nameStr, value);
-        }
-        return;
-      }
-      scope = scope.parentScope;
-    }
-    this.throwException('Unknown identifier: ' + nameStr);
-  };
-
-  /**
-   * Sets a value to the scope chain or to an object property.
-   * @param {!Object|!Array} left Name of variable or object/propname tuple.
-   * @param {!Object} value Value.
-   * @param {boolean} declarator true if called from variable declarator.
-   */
-  window.Interpreter.prototype.setValue = function (left, value, declarator) {
-    if (left.length) {
-      var obj = left[0];
-      var prop = left[1];
-      this.setProperty(obj, prop, value);
-    } else {
-      this.setValueToScope(left, value, declarator);
-    }
-  };
-
-  // Patched to add the 3rd "declarator" parameter on the setValue() call(s).
-  // Also removed erroneous? call to hasProperty when there is node.init
-  // Changed to call setValue with this.UNDEFINED when there is no node.init
-  // and JSInterpreter.baseHasProperty returns false for current scope.
-  window.Interpreter.prototype['stepVariableDeclarator'] = function () {
-    var state = this.stateStack[0];
-    var node = state.node;
-    if (node.init && !state.done) {
-      state.done = true;
-      this.stateStack.unshift({node: node.init});
-    } else {
-      if (node.init) {
-        this.setValue(this.createPrimitive(node.id.name), state.value, true);
-      } else {
-        if (!JSInterpreter.baseHasProperty.call(this, this.getScope(), node.id.name)) {
-          this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
-        }
-      }
-      this.stateStack.shift();
-    }
-  };
 };
 
 /**
@@ -170,7 +86,7 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
  *        interpreter global scope.
  * @param {Object} [options.blockFilter] - an object with block-name keys that
  *        should be used to filter which blocks are populated.
- * @param {Array} [options.globalFunctions] - objects containing functions to
+ * @param {Object} [options.globalFunctions] - objects containing functions to
  *        place in the interpreter global scope.
  * @param {boolean} [options.enableEvents] - allow the interpreter to define
  *        event handlers that can be invoked by native code. (default false)
@@ -276,7 +192,7 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    new window.Interpreter('', initFunc);
+    new Interpreter('', initFunc);
     // We initialize with an empty program so that all of our global functions
     // can be injected before the user code is processed (thus allowing user
     // code to override globals of the same names)
@@ -1159,7 +1075,7 @@ JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
 JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
   var value;
   try {
-    var ast = window.acorn.parse(watchExpression);
+    var ast = acorn.parse(watchExpression);
     if (ast.type === 'Program' &&
         ast.body[0].type === 'ExpressionStatement') {
       value = this.getWatchValueFromNode_(ast.body[0].expression);
@@ -1245,7 +1161,7 @@ JSInterpreter.prototype.getCurrentState = function () {
  */
 JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   var currentScope = this.interpreter.getScope();
-  var evalInterpreter = new window.Interpreter(expression);
+  var evalInterpreter = new Interpreter(expression);
   // Set scope to the current scope of the running program
   // NOTE: we are being a little tricky here (we are re-running
   // part of the Interpreter constructor with a different interpreter's
@@ -1287,7 +1203,7 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));
@@ -1296,7 +1212,7 @@ JSInterpreter.prototype.handlePauseContinue = function () {
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));
@@ -1305,7 +1221,7 @@ JSInterpreter.prototype.handleStepOver = function () {
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));
@@ -1314,7 +1230,7 @@ JSInterpreter.prototype.handleStepIn = function () {
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));

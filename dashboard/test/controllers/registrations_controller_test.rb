@@ -281,7 +281,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   test 'update rejects unwanted parameters' do
     user = create :user, name: 'non-admin'
     sign_in user
-    post :update, params: {user: { name: 'admin', admin: true }}
+    post :update, params: {user: {name: 'admin', admin: true}}
 
     user.reload
     assert_equal 'admin', user.name
@@ -313,7 +313,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     delete :destroy
 
     user = user.reload
-    assert user.deleted_at
+    assert user.deleted?
   end
 
   test 'edit shows alert for unconfirmed email for teachers' do

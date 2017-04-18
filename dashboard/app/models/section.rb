@@ -2,19 +2,19 @@
 #
 # Table name: sections
 #
-#  id           :integer          not null, primary key
-#  user_id      :integer          not null
-#  name         :string(255)
-#  created_at   :datetime
-#  updated_at   :datetime
-#  code         :string(255)
-#  script_id    :integer
-#  grade        :string(255)
-#  admin_code   :string(255)
-#  login_type   :string(255)      default("email"), not null
-#  deleted_at   :datetime
-#  stage_extras :boolean          default(FALSE), not null
-#  section_type :string(255)
+#  id                :integer          not null, primary key
+#  user_id           :integer          not null
+#  name              :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#  code              :string(255)
+#  script_id         :integer
+#  grade             :string(255)
+#  login_type        :string(255)      default("email"), not null
+#  deleted_at        :datetime
+#  stage_extras      :boolean          default(FALSE), not null
+#  section_type      :string(255)
+#  first_activity_at :datetime
 #
 # Indexes
 #
@@ -28,12 +28,15 @@ require 'full-name-splitter'
 require 'rambling-trie'
 
 class Section < ActiveRecord::Base
-  belongs_to :user
+  acts_as_paranoid
 
-  has_many :followers, dependent: :restrict_with_error
+  belongs_to :user
+  alias_attribute :teacher, :user
+
+  has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
-  has_many :students, -> { order('name')}, through: :followers, source: :student_user
+  has_many :students, -> {order('name')}, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
   validates :name, presence: true
@@ -42,8 +45,8 @@ class Section < ActiveRecord::Base
 
   has_many :section_hidden_stages
 
-  LOGIN_TYPE_PICTURE = 'picture'
-  LOGIN_TYPE_WORD = 'word'
+  LOGIN_TYPE_PICTURE = 'picture'.freeze
+  LOGIN_TYPE_WORD = 'word'.freeze
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -82,12 +85,12 @@ class Section < ActiveRecord::Base
     # trie. Because FullNameSplitter implicitly performs whitespace
     # normalization, this is necessary to ensure that we can recognize
     # the name on the other side
-    self.students.each do |student|
+    students.each do |student|
       student.name = student.name.strip.split(/\s+/).join(' ')
       trie.add student.name
     end
 
-    self.students.map do |student|
+    students.map do |student|
       first, _last = FullNameSplitter.split(student.name)
       if first.nil?
         # if fullnamesplitter can't identify the first name, default to
@@ -148,20 +151,27 @@ class Section < ActiveRecord::Base
     self.followers_attributes = follower_params
   end
 
-  def add_student(student, move_for_same_teacher: true)
-    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: user_id))
-      # if this student is already in another section owned by the
-      # same teacher, move them to this section instead of creating a
-      # new one
-      follower.update_attributes!(section: self)
-    else
-      follower = Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+  # @param student [User] The student to enroll in this section.
+  # @param move_for_same_teacher [Boolean] Whether the student should be unenrolled from other
+  #   sections belonging to the same teacher.
+  # @return [Follower] The newly created follower enrollment.
+  # TODO(asher): Eliminate this option.
+  def add_student(student, move_for_same_teacher:)
+    if move_for_same_teacher
+      sections_with_same_teacher = student.sections_as_student.where(user_id: user_id)
+      unless sections_with_same_teacher.empty?
+        # If this student is already in another section owned by the
+        # same teacher, move them to this section instead of creating a
+        # new one.
+        # TODO(asher): Presently, this only unenrolls the student from one of the existing sections.
+        # Change this to unenroll the student from all sections.
+        follower = sections_with_same_teacher.first.
+          followers.where(student_user_id: student.id).first
+        return follower.update_attributes!(section: self)
+      end
     end
-    follower
-  end
 
-  def teacher
-    user
+    Follower.find_or_create_by!(student_user: student, section: self)
   end
 
   private

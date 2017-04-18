@@ -42,9 +42,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
-      "Game.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
       "playSound": null,
       "keyDown": null,
       "keyWentUp": null,
@@ -133,7 +133,8 @@
       "console.log": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_debug_watch": "false",
     "encrypted_examples": "hBYEo3wudGBFMFzTZ/joDBvBc0h7k5p7JWdsCu9nmhxMPKlb7gdxA2UfwmPx\nbdwa\n",

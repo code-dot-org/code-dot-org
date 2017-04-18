@@ -11,13 +11,17 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 video_player: true
+theme: responsive
 ---
 -state ||= nil
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
+%link{:href=>"/css/promote.css", :rel=>"stylesheet"}
+%link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
+
 #promote-page
-  %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
+  %h1 Promote Computer Science
 
   %div{:id=>'us_content'}
 
@@ -25,12 +29,15 @@ video_player: true
       = view :petition
 
     #interactive-map.section.clear
-      %h2{:style=>"margin-top: 0px"} Choose a State
       = view :interactive_map, use_url: true
 
-    #stats-section.section.clear
+    #stats-section.section.clear.desktop-feature
       %h2 What’s wrong with this picture? Share these stats
       = view :stats_carousel
+
+    #stats-section-mobile.section.clear.mobile-feature
+      %h2 Computer Science Education Stats
+      = view :stats_mobile
 
     #tools-section.section.clear
       %h2 Tools to help you advocate locally
@@ -42,11 +49,8 @@ video_player: true
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear
-      %h2{:style=>'margin-top: 0px'} Tell the world! Share the Code.org video
+      %h2 Tell the world! Share the Code.org video
       = view :youtube_videos
-
-      #stateaction{:style=>'padding-left:30px'}
-        %a{:href=>"/action"} See where computer science counts towards high school graduation
 
     #quotes-section.section.clear
       %h2 Leaders and trendsetters agree more students should learn computer science

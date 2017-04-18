@@ -7,7 +7,7 @@ class NewRelicClient
   attr_reader :api_key
 
   # Base URL for the NewRelic V2 REST API
-  NEWRELIC_URL = 'https://api.newrelic.com/v2'
+  NEWRELIC_URL = 'https://api.newrelic.com/v2'.freeze
 
   # The disabled alert policy id for Code.org servers.
   DISABLED_ALERT_POLICY_ID = 355700
@@ -95,7 +95,7 @@ class NewRelicClient
     http = Net::HTTP.new(uri.hostname, uri.port)
     http.use_ssl = true
 
-    response = http.start { http.request(req) }
+    response = http.start {http.request(req)}
 
     if response.code == "200"
       JSON.parse(response.body)

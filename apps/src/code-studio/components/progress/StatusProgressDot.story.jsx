@@ -16,6 +16,27 @@ export default storybook => {
     }
   });
 
+  const defaultProps = {
+    viewAs: ViewType.Student,
+    courseOverviewPage: true,
+    postMilestoneDisabled: false,
+    signInState: SignInState.SignedIn,
+    saveAnswersBeforeNavigation: false,
+    level: {
+      icon: null,
+      ids: [5275],
+      kind: 'puzzle',
+      next: [2, 1],
+      position: 1,
+      previous: [7,15],
+      title: 1,
+      url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
+    },
+    levelProgress: { 5275: TestResults.ALL_PASS },
+    lessonIsLockedForAllStudents: () => false
+  };
+
+
   storybook
     .storiesOf('StatusProgressDot', module)
     .addStoryTable([
@@ -25,22 +46,7 @@ export default storybook => {
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
-              viewAs={ViewType.Student}
-              courseOverviewPage={true}
-              postMilestoneDisabled={false}
-              signInState={SignInState.SignedIn}
-              saveAnswersBeforeNavigation={false}
-              level={{
-                icon: null,
-                ids: [5275],
-                kind: 'puzzle',
-                next: [2, 1],
-                position: 1,
-                previous: [7,15],
-                title: 1,
-                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-              }}
-              levelProgress={{ 5275: TestResults.ALL_PASS }}
+              {...defaultProps}
             />
           </Provider>
         )
@@ -52,22 +58,8 @@ export default storybook => {
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
-              viewAs={ViewType.Student}
-              courseOverviewPage={true}
+              {...defaultProps}
               postMilestoneDisabled={true}
-              signInState={SignInState.SignedIn}
-              saveAnswersBeforeNavigation={false}
-              level={{
-                icon: null,
-                ids: [5275],
-                kind: 'puzzle',
-                next: [2, 1],
-                position: 1,
-                previous: [7,15],
-                title: 1,
-                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-              }}
-              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )
@@ -79,22 +71,9 @@ export default storybook => {
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
-              viewAs={ViewType.Student}
-              courseOverviewPage={true}
+              {...defaultProps}
               postMilestoneDisabled={true}
               signInState={SignInState.SignedOut}
-              saveAnswersBeforeNavigation={false}
-              level={{
-                icon: null,
-                ids: [5275],
-                kind: 'puzzle',
-                next: [2, 1],
-                position: 1,
-                previous: [7,15],
-                title: 1,
-                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-              }}
-              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )
@@ -106,22 +85,9 @@ export default storybook => {
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
-              viewAs={ViewType.Student}
-              courseOverviewPage={true}
+              {...defaultProps}
               postMilestoneDisabled={true}
               signInState={SignInState.Unknown}
-              saveAnswersBeforeNavigation={false}
-              level={{
-                icon: null,
-                ids: [5275],
-                kind: 'puzzle',
-                next: [2, 1],
-                position: 1,
-                previous: [7,15],
-                title: 1,
-                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-              }}
-              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )

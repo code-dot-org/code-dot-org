@@ -9,13 +9,13 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.allSprites": null,
-      "Game.width": null,
-      "Game.height": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
-      "Game.frameRate": null,
-      "Game.frameCount": null,
+      "World.allSprites": null,
+      "World.width": null,
+      "World.height": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
+      "World.frameCount": null,
       "playSound": null,
       "keyDown": null,
       "keyWentDown": null,
@@ -161,7 +161,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "stopSound": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -187,7 +188,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

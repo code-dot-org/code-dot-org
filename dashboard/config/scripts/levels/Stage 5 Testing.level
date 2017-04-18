@@ -31,8 +31,8 @@
       "y": null,
       "rotation": null,
       "scale": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -42,7 +42,8 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "return": null
+      "return": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "false",
@@ -67,7 +68,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

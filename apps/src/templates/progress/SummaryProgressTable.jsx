@@ -5,6 +5,7 @@ import { levelType, lessonType } from './progressTypes';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
 import { connect } from 'react-redux';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
 const styles = {
   table: {
@@ -28,12 +29,13 @@ const SummaryProgressTable = React.createClass({
     ).isRequired,
 
     // redux provided
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonLockedForSection: PropTypes.func.isRequired,
     lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { lessons, levelsByLesson } = this.props;
+    const { lessons, levelsByLesson, viewAs } = this.props;
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
@@ -49,7 +51,7 @@ const SummaryProgressTable = React.createClass({
             </td>
             <td style={rowStyles.col2}>
               <div style={rowStyles.colText}>
-                {i18n.yourProgress()}
+                {i18n.progress()}
               </div>
             </td>
           </tr>
@@ -58,15 +60,15 @@ const SummaryProgressTable = React.createClass({
           {/*Filter our lessons to those that will be rendered, and then make
             every other (remaining) one dark */
             lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
-            .filter(item => this.props.lessonIsVisible(item.lesson))
+            .filter(item => this.props.lessonIsVisible(item.lesson, viewAs))
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}
-                lessonNumber={item.lesson.stageNumber}
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
                 lockedForSection={this.props.lessonLockedForSection(item.lesson.id)}
+                viewAs={viewAs}
                 lessonIsVisible={this.props.lessonIsVisible}
               />
             ))
@@ -81,6 +83,7 @@ const SummaryProgressTable = React.createClass({
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
+  viewAs: state.stageLock.viewAs,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);

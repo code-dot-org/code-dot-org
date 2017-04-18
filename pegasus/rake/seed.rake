@@ -65,7 +65,7 @@ class CsvToSqlTable
   end
 
   def create_table(columns)
-    schema = columns.map{|column| column_name_to_schema(column)}
+    schema = columns.map {|column| column_name_to_schema(column)}
 
     DB.create_table!(@table, charset: 'utf8') do
       primary_key :id
@@ -77,7 +77,7 @@ class CsvToSqlTable
       end
     end
 
-    [DB[@table], schema.map{|i| i[:name]}]
+    [DB[@table], schema.map {|i| i[:name]}]
   end
 
   def column_name_to_schema(name)
@@ -179,7 +179,7 @@ class GSheetToCsv
           # Output the columns.
           csv << columns
         end
-        csv << columns.map{|i| row[i]}
+        csv << columns.map {|i| row[i]}
       end
     end
 
@@ -211,7 +211,7 @@ namespace :seed do
     count = 0
     CSV.foreach(path, headers: true, encoding: 'utf-8') do |data|
       record = {}
-      db.columns.each{|column| record[column] = csv_smart_value(data[column.to_s])}
+      db.columns.each {|column| record[column] = csv_smart_value(data[column.to_s])}
 
       count += 1
       record[:id] = count if auto_id
@@ -270,25 +270,21 @@ namespace :seed do
     end
   end
 
-  task migrate: imports.keys.map{|i| stub_path(i)} do
-    Dir.glob(pegasus_dir('data/*.csv')){|i| CsvToSqlTable.new(i).import}
+  desc 'import any modified seeds'
+  task migrate: imports.keys.map {|i| stub_path(i)} do
+    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import}
   end
 
+  desc 'drop and import all seeds'
   task reset: imports.keys do
-    Dir.glob(pegasus_dir('data/*.csv')){|i| CsvToSqlTable.new(i).import!}
+    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import!}
   end
 
   task :sync_v3 do
-    Dir.glob(pegasus_dir('data/*.gsheet')){|i| GSheetToCsv.new(i).import}
+    Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
   end
 
+  desc 'update remote seeds and import any modified'
   task sync: [:sync_v3, sync_tasks, :migrate].flatten do
-  end
-
-  task :help do
-    puts "seed:help - display this message"
-    puts "seed:migrate - import any modified seeds"
-    puts "seed:reset - drop and import all seeds"
-    puts "seed:sync - update remote seeds and import any modified"
   end
 end

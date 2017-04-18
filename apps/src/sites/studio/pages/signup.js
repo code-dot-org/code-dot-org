@@ -1,9 +1,11 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
+  var lastUserType = "";
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
   if (self.options.isTeacher === "true") {
@@ -22,6 +24,7 @@ window.SignupManager = function (options) {
     } else {
       url = "/";
     }
+    logFormSuccess();
     window.location.href = url;
   }
 
@@ -45,6 +48,7 @@ window.SignupManager = function (options) {
         errorField.fadeTo("normal", 1);
       }
     }
+    logFormError(err);
   }
 
   $("#user_user_type").change(function () {
@@ -99,6 +103,9 @@ window.SignupManager = function (options) {
 
     // Implicitly accept terms of service for students.
     $("#user_terms_of_service_version").prop('checked', true);
+
+    logTeacherToggle(false);
+    lastUserType = "student";
   }
 
   function showTeacher() {
@@ -115,18 +122,95 @@ window.SignupManager = function (options) {
 
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
+
+    logTeacherToggle(true);
+    lastUserType = "teacher";
+  }
+
+  function getSchoolDropdownStudyGroup() {
+    const variationID = 8256420202; // comes from Optimizely config
+    if (window.optimizely && window.optimizely.data && window.optimizely.data.state) {
+      const variantNumber = window.optimizely.data.state.variationMap[variationID];
+      if (variantNumber === 1) {
+        return "show_school_dropdown";
+      }
+    }
+    return shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
+  }
+
+  /**
+   * Log signup-related analytics events to Firehose.
+   * @param eventName name of the event to log
+   * @param extraData optional hash object for supplemental data to be injected
+   *   in the data_json field. (default {})
+   */
+  function logAnalyticsEvent(eventName, extraData = {}) {
+    const streamName = "analysis-events";
+    const study = "signup_school_dropdown";
+    const studyGroup = getSchoolDropdownStudyGroup();
+
+    let dataJson = extraData;
+    if (window.optimizely && window.optimizely.data) {
+      const optimizelyData = {
+        optimizely_data: window.optimizely.data.state
+      };
+      Object.assign(dataJson, optimizelyData);
+    }
+
+    firehoseClient.putRecord(
+      streamName,
+      {
+        study: study,
+        study_group: studyGroup,
+        event: eventName,
+        data_json: JSON.stringify(dataJson),
+      }
+    );
+  }
+
+  function logTeacherToggle(isTeacher) {
+    let event;
+    // We track change events separately depending on whether they're initial selections or changes
+    if (lastUserType === "") {
+      event = isTeacher ? "select_teacher" : "select_student";
+    } else {
+      event = isTeacher ? "select_teacher_from_student" : "select_student_from_teacher";
+    }
+    logAnalyticsEvent(event);
+  }
+
+  function logEventWithInferredUserType(event, extraData = {}) {
+    logAnalyticsEvent(event + "_" + getUserTypeSelected(), extraData);
+  }
+
+  function logFormSubmitted() {
+    logEventWithInferredUserType("submit");
+  }
+
+  function logFormError(err) {
+    logEventWithInferredUserType("submit_error", {error_info: err});
+  }
+
+  function logFormSuccess() {
+    logEventWithInferredUserType("submit_success");
+  }
+
+  function getUserTypeSelected() {
+    const formData = $('#new_user').serializeArray();
+    const userType = $.grep(formData, e => e.name === "user[user_type]");
+    if (userType.length === 1) {
+      return userType[0].value;
+    }
+    return "no_user_type";
   }
 
   function isTeacherSelected() {
-    var formData = $('#new_user').serializeArray();
-    var userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === "teacher") {
-      return true;
-    }
-    return false;
+    return getUserTypeSelected() === "teacher";
   }
 
   $(".signupform").submit(function () {
+    logFormSubmitted();
+
     // Clear the prior hashed email.
     $('#user_hashed_email').val('');
 
@@ -146,6 +230,8 @@ window.SignupManager = function (options) {
       // (But we left it showing in the form UI in case they
       // reattempt.)
       $.grep(formData, e => e.name === "user[email]")[0].value = "";
+      $.grep(formData, e => e.name.startsWith("user[school_info_attributes]"))
+        .forEach(x => x.value = "");
     }
 
     // Hide all errors that might be showing from a previous attempt.
@@ -195,4 +281,6 @@ window.SignupManager = function (options) {
   $("#user_name").placeholder();
   $("#user_email").placeholder();
   $("#user_school").placeholder();
+
+  logAnalyticsEvent("page_load");
 };

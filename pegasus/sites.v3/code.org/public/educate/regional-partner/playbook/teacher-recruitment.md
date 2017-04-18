@@ -8,6 +8,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Teacher Application](#teachapp)
+- [Teacher Onboarding](#teachon)
 - [District Outreach](#district)
 - [Teacher Outreach](#teachout)
 
@@ -16,19 +17,26 @@ ________________
 ## Teacher Application
 
 ### What does the application process look like and how is my organization involved?
-Refer to the [Teacher Application Process Document](https://docs.google.com/document/d/1BhWbgYYxDcKnCYTGOQaT1YD_KKjVWE7F1tI6wWDHKa4/edit#) for everything you need to know about the Code.org teacher application process.
+Refer to the [Teacher Application Process Document](https://docs.google.com/document/d/1BhWbgYYxDcKnCYTGOQaT1YD_KKjVWE7F1tI6wWDHKa4/edit#) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, copies of the communications applicants will receive and a FAQ.
 
 You can also reference the [Application Spreadsheet Guide](https://docs.google.com/document/d/1Y_bRru2qWNMW5A1tS4uXs_YU0Sq70p3O725aJiSMrIY/edit#) for information on how to use the application spreadsheet tool.
 
 ### Application Links
-- Computer Science Discoveries - [Apply here!](https://code.org/educate/professional-learning/cs-discoveries)
+- Computer Science Discoveries - <span style="color:red">FULL!</span>
 - Computer Science Principles - [Apply here!](https://code.org/educate/professional-learning/cs-principles)
+
+________________
+<a id="teachon"></a>
+## Teacher Onboarding
+
+### My cohorts are full, now what?
+Refer to the [Teacher Onboarding Plan](https://docs.google.com/document/d/1Z3O_c5db1AvczuNV1uyxegI_1yeOZtFna8tDJgEQPxg/edit) for information on what teachers go through once they are accepted to professional learning. This document includes registration deadlines, how the waitlist is handled, and a list of communications Code.org sends to teachers leading up to TeacherCon.
 
 ________________
 <a id="district"></a>
 ## District Outreach
 
-### The Outreach Pipleine
+### The Outreach Pipeline
 [How to Bring Computer Science to a District](https://docs.google.com/document/d/1cBSwosx1SNy7ydOjTrtYmeq6oZLkxSSHptGD3HfdtFM/view)<br/>
 This document walks through the full outreach process, from identifying interested districts to closing a partnership to make CS accessable to all students.  It includes helpful questions to ask along the way, and list of issues to address at the district level and in individual school sites.
 

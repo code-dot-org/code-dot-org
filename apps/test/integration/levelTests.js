@@ -19,16 +19,17 @@ import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 var testUtils = require('../util/testUtils');
-testUtils.setExternalGlobals();
-import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
+import {setupBlocklyFrame} from './util/testBlockly';
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
+// eslint-disable-next-line
 var example = {
   // app name
   app: "turtle",
@@ -82,22 +83,20 @@ function loadSource(src) {
 }
 
 describe('Level tests', function () {
-  var studioApp;
   var originalRender;
   var clock, tickInterval;
 
   // Don't expect console.error or console.warn to be used during any level test
   testUtils.throwOnConsoleErrors();
   testUtils.throwOnConsoleWarnings();
+  testUtils.setExternalGlobals();
 
   before(function (done) {
     this.timeout(15000);
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('/base/lib/jsinterpreter/acorn.js')
-    .then(function () { return loadSource('/base/lib/jsinterpreter/interpreter.js'); })
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/ace.js'); })
+    loadSource('/base/lib/ace/src-noconflict/ace.js')
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
@@ -116,15 +115,17 @@ describe('Level tests', function () {
 
     tickInterval = window.setInterval(function () {
       if (clock) {
-        clock.tick(100); // fake 1000 ms for every real 1ms
+        clock.tick(100); // fake 100 ms for every real 1ms
       }
     }, 1);
     clock = sinon.useFakeTimers(Date.now());
 
     setupBlocklyFrame();
-    studioApp = getStudioAppSingleton();
 
     wrappedEventListener.attach();
+
+    sinon.stub(project, 'saveThumbnail');
+    sinon.stub(project, 'isOwner').returns(true);
 
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
@@ -161,11 +162,11 @@ describe('Level tests', function () {
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
-    if (studioApp.editor && studioApp.editor.aceEditor &&
-        studioApp.editor.aceEditor.session &&
-        studioApp.editor.aceEditor.session.$mode &&
-        studioApp.editor.aceEditor.session.$mode.cleanup) {
-      studioApp.editor.aceEditor.session.$mode.cleanup();
+    if (studioApp().editor && studioApp().editor.aceEditor &&
+        studioApp().editor.aceEditor.session &&
+        studioApp().editor.aceEditor.session.$mode &&
+        studioApp().editor.aceEditor.session.$mode.cleanup) {
+      studioApp().editor.aceEditor.session.$mode.cleanup();
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
@@ -180,6 +181,9 @@ describe('Level tests', function () {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
+
+    project.saveThumbnail.restore();
+    project.isOwner.restore();
 
     tickWrapper.reset();
   });

@@ -1,6 +1,7 @@
 ---
 title: Professional Learning
 nav: educate_nav
+theme: responsive
 ---
 # Professional Learning #
 <img src="/images/k5pdcropped.jpg" width="100%"/>

@@ -14,7 +14,7 @@ class Array
       columns = first.keys
       results << columns
       each do |row|
-        results << columns.map{|column| row[column]}
+        results << columns.map {|column| row[column]}
       end
     end
   end

@@ -21,7 +21,7 @@ class XhrProxyController < ApplicationController
       text/json
       text/plain
     )
-  )
+  ).freeze
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
@@ -37,20 +37,23 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     dweet.io
+    enclout.com
     githubusercontent.com
     googleapis.com
     herokuapp.com
     isenseproject.org
     lakeside-cs.org
     query.yahooapis.com
+    rejseplanen.dk
     noaa.gov
     rhcloud.com
     swapi.co
+    translate.yandex.net
     wikipedia.org
-  )
+  ).freeze
 
   # How long the content is allowed to be cached
-  EXPIRY_TIME = 1.minute
+  EXPIRY_TIME = 1.minute.freeze
 
   # Return the proxied api at the URL specified in the 'u' parameter. The 'c' parameter
   # is an unforgeable token which identifies the app lab app which is generating the request,

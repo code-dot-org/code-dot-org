@@ -43,9 +43,9 @@ module Cdo
         responses = @mock_responses.select do |response|
           request.path_info == response[:url] &&
             request.request_method == response[:method] &&
-            response[:request].all?{|name, value| env["HTTP_#{name.upcase.tr('-', '_')}"] == value }
+            response[:request].all? {|name, value| env["HTTP_#{name.upcase.tr('-', '_')}"] == value}
         end
-        responses.max_by{|r| r[:request].length}
+        responses.max_by {|r| r[:request].length}
       end
 
       def app

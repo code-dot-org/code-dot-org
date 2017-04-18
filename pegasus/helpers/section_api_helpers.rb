@@ -10,11 +10,12 @@ require 'cdo/section_helpers'
 class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
-    Dashboard.db[:users].
-      join(:followers, student_user_id: :users__id).
-      join(Sequel.as(:users, :users_students), id: :followers__student_user_id).
-      where(followers__user_id: user_id, followers__deleted_at: nil).
-      where(users_students__deleted_at: nil).
+    Dashboard.db[:sections].
+      join(:followers, section_id: :sections__id).
+      join(:users, id: :followers__student_user_id).
+      where(sections__user_id: user_id, sections__deleted_at: nil).
+      where(followers__deleted_at: nil).
+      where(users__deleted_at: nil).
       select(*fields).
       all
   end
@@ -105,12 +106,12 @@ class DashboardStudent
   end
 
   def self.update_if_allowed(params, dashboard_user_id)
-    user_to_update = Dashboard.db[:users].
-      where(id: params[:id], deleted_at: nil)
+    user_to_update = Dashboard.db[:users].where(id: params[:id], deleted_at: nil)
     return if user_to_update.empty?
-    return if Dashboard.db[:followers].
-      where(student_user_id: params[:id], user_id: dashboard_user_id).
-      where(deleted_at: nil).
+    return if Dashboard.db[:sections].
+      join(:followers, section_id: :sections__id).
+      where(sections__user_id: dashboard_user_id, sections__deleted_at: nil).
+      where(followers__student_user_id: params[:id], followers__deleted_at: nil).
       empty?
 
     fields = {updated_at: DateTime.now}
@@ -261,11 +262,11 @@ class DashboardSection
     disabled_courses = valid_courses(user_id).select do |course|
       !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
     end
-    disabled_courses.map{|course| course[:id]}
+    disabled_courses.map {|course| course[:id]}
   end
 
   def self.valid_course_id?(course_id)
-    valid_courses.find{|course| course[:id] == course_id.to_i}
+    valid_courses.find {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)
@@ -278,6 +279,7 @@ class DashboardSection
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
     script_id = params[:course] && valid_course_id?(params[:course][:id]) ?
       params[:course][:id].to_i : params[:script_id]
+    stage_extras = params[:stage_extras] ? params[:stage_extras] : false
     created_at = DateTime.now
 
     row = nil
@@ -291,13 +293,14 @@ class DashboardSection
           grade: grade,
           script_id: script_id,
           code: SectionHelpers.random_code,
+          stage_extras: stage_extras,
           created_at: created_at,
           updated_at: created_at,
         }
       )
     rescue Sequel::UniqueConstraintViolation
       tries += 1
-      retry if tries < 2
+      retry if tries < 3
       raise
     end
 
@@ -345,11 +348,9 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, id: :user_id).
       select(*fields).
-      where(sections__id: id, sections__deleted_at: nil).
+      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
-
     section = new(row)
     return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
     nil
@@ -362,7 +363,7 @@ class DashboardSection
       join(:users, id: :user_id).
       select(*fields).
       where(sections__user_id: user_id, sections__deleted_at: nil).
-      map{|row| new(row).to_owner_hash}
+      map {|row| new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
@@ -374,7 +375,7 @@ class DashboardSection
       join(:users, id: :student_user_id).
       where(student_user_id: student_id).
       where(sections__deleted_at: nil, followers__deleted_at: nil).
-      map{|row| new(row).to_member_hash}
+      map {|row| new(row).to_member_hash}
   end
 
   def add_student(student)
@@ -383,9 +384,8 @@ class DashboardSection
     created_at = DateTime.now
     Dashboard.db[:followers].insert(
       {
-        user_id: @row[:teacher_id],
-        student_user_id: student_id,
         section_id: @row[:id],
+        student_user_id: student_id,
         created_at: created_at,
         updated_at: created_at,
       }
@@ -394,15 +394,19 @@ class DashboardSection
   end
 
   def add_students(students)
-    student_ids = students.map{|i| add_student(i)}.compact
+    student_ids = students.map {|i| add_student(i)}.compact
     DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
     return student_ids
   end
 
+  # @param student_id [Integer] The user ID of the student to unenroll.
+  # @return [Boolean] Whether the student's enrollment was removed.
   def remove_student(student_id)
     # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
 
-    rows_deleted = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
+    rows_deleted = Dashboard.db[:followers].
+      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
+      update(deleted_at: DateTime.now)
     rows_deleted > 0
   end
 
@@ -411,7 +415,7 @@ class DashboardSection
   end
 
   def student?(user_id)
-    !!students.index{|i| i[:id] == user_id}
+    !!students.index {|i| i[:id] == user_id}
   end
 
   def students
@@ -439,7 +443,7 @@ class DashboardSection
   end
 
   def teacher?(user_id)
-    !!teachers.index{|i| i[:id] == user_id}
+    !!teachers.index {|i| i[:id] == user_id}
   end
 
   def teachers

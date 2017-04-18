@@ -92,7 +92,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     end
     enrollment = Pd::Enrollment.last
     refute_nil enrollment.code
-    assert_redirected_to action: :show, code: enrollment.code
+    assert_redirected_to action: :thanks, code: enrollment.code
   end
 
   test 'creating a duplicate enrollment renders duplicate view' do

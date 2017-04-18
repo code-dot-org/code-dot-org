@@ -59,6 +59,10 @@ def main
       page['levels'].each_with_index do |contained_level_name, position_index|
         contained_level = Level.find_by_name(contained_level_name)
         next unless contained_level.type == 'Multi'
+        next if contained_levels.
+          select {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}.
+          any?
+
         contained_question = get_contained_question(contained_level)
         contained_levels << {
           level_id: level.id,
@@ -83,7 +87,7 @@ def main
   end
 
   LevelSource.
-    where(level_id: contained_levels.map{|row| row[:contained_level_id]}).
+    where(level_id: contained_levels.map {|row| row[:contained_level_id]}).
     find_each do |level_source|
     level_sources_multi_types << {
       level_source_id: level_source.id,

@@ -250,7 +250,7 @@
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Unplugged lessons: Unplugged lessons
             Writing computer programs: Writing computer programs
           description_audience: ''
@@ -410,7 +410,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -548,7 +548,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Next Steps: Next Steps
             Strings and Images: Zeichenfolgen und Bilder
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             The Big Game: The Big Game
             The Design Recipe: Das Design-Rezept
           description_audience: ''
@@ -586,7 +586,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -600,7 +600,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -769,7 +769,8 @@
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
-            Standalone video: Standalone video
+            Standalone video: Video
+            Curriculum Reference: Curriculum Reference
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -787,7 +788,7 @@
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: Zeichenfolgen und Bilder
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Writing Contracts: Writing Contracts
           description_audience: ''
         cspfacilitator:
@@ -862,7 +863,7 @@
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Das Design-Rezept
@@ -1484,7 +1485,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -1765,7 +1766,7 @@
           stage:
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -2343,7 +2344,7 @@
           description_short: "\\tPhase 3: School Year Support"
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Das Design-Rezept
@@ -2430,6 +2431,14 @@
               4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
               7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to
+              Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays
+              and Functions with Return Values
+            Unit 5 Overview: Unit 5 Overview
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2909,7 +2918,19 @@
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
         csp5-support:
-          stage: []
+          stage:
+            Unit 5 Overview: Unit 5 Overview
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to
+              Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays
+              and Functions with Return Values
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
           description_short: Teacher Professional Learning Course for CSP Unit 1
@@ -2952,17 +2973,113 @@
           description: ''
         gamelab-demo:
           stage:
-            Simple Sprite Movement: Simple Sprite Movement
+            Simple Sprite Movement: Einfache Sprite-Bewegung
         csd6-draft:
           stage:
             UI and Input: UI and Input
             Computing Innovations: Computing Innovations
             Input Uplugged: Input Uplugged
             The Circuit Playground: The Circuit Playground
-            Foo: Foo
+            Foo: Kram
             Lists: Listen
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: '"Zähle mit"-Schleifen'
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
+            For Loops with UI and Board: For Loops with UI and Board
+            Lists and For Loops: Lists and For Loops
+            Analog Input: Analog Input
+            Polling Events: Polling Events
+            Sensor Applications: Sensor Applications
           title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-gamelab:
+          stage:
+            Introduction: Einführung
+            Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+          title: Game Lab Workshop
+          description_audience: Teachers attending an in-person Game Lab Workshop
+          description_short: Level progression to accompany an in-person Game Lab
+            Workshop
+          description: This level progression is intended to accompany an in-person
+            Game Lab Workshop. This is not intended to teach the tool or CS concepts,
+            but rather to support a workshop facilitator in introducing attendees
+            to the breadth of Game Lab.
+        csd5-draft:
+          stage:
+            new stage: new stage
+            Interpreting Data: Interpreting Data
+            Data in the Real World: Data in the Real World
+            Combining Representations: Combining Representations
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-1hour:
+          stage:
+            App Lab Workshop: App Lab Workshop
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Room Escape: Room Escape
+            Extra: Extra
+          title: App Lab 1 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction
+            to app lab in 1 hour. Students should be able to come in with different
+            backgrounds in computer science and have fun creating something.
+        applab-2hour:
+          stage:
+            new stage: new stage
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+          title: App Lab 2 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction
+            to app lab in 2 hours. Students should be able to come in with different
+            backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          stage:
+            Introduction: Einführung
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab Basics
+            The Circuit Playground: The Circuit Playground
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+          title: Maker Toolkit Workshop
+          description_audience: Teachers attending an in-person Maker Toolkit Workshop
+          description_short: Level progression to accompany an in-person Maker Toolkit
+            Workshop
+          description: This level progression is intended to accompany an in-person
+            Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts,
+            but rather to support a workshop facilitator in introducing attendees
+            to the breadth of App Lab and the Maker Toolkit.
+        coursee-ramp:
+          stage:
+            Introduction: Einführung
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

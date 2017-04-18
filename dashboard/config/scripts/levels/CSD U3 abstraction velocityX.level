@@ -54,7 +54,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"orange_fish\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"orange_fish\": {\r\n      \"name\": \"orange_fish\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/JDGh2rDzOa1KisZY-itHXA/orange_fish.png?version=FLUf1rzqvX7uf63Plv.abas9G32Mkwoz\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"FLUf1rzqvX7uf63Plv.abas9G32Mkwoz\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"684c155a-f1f0-41e0-bbf3-3c720dafd2cf\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"684c155a-f1f0-41e0-bbf3-3c720dafd2cf\": {\r\n      \"name\": \"orange_fish\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/_P2pNNL5h5fklibSA7Kp4g/684c155a-f1f0-41e0-bbf3-3c720dafd2cf.png?version=AL81enL4T.FoOM2Ke9JPI.7LPm_gZ6nR\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"AL81enL4T.FoOM2Ke9JPI.7LPm_gZ6nR\"\r\n    }\r\n  }\r\n}",
     "markdown_instructions": "# velocityX\r\n\r\nOne way to move sprites in Game Lab is with the counter pattern. For example `sprite1.x = sprite1.x + 1` moves a sprite by 1 pixel each frame of the draw loop. This pattern is so common that sprites have a `velocityX` property that does this for you.\r\n\r\n# Do This\r\n\r\n* Drag a `sprite.velocityX` block directly below where your sprite is created. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Show me where](#triggercallout=code_triggered)\r\n* Write the name of your sprite in the block.\r\n* Assign the `velocityX` property a value of 1.\r\n* Run the code. What happens?\r\n* Re-run the code giving the `velocityX` property a different value. What's changing?\r\n",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
@@ -65,6 +65,9 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "encrypted_examples": "DfGS34dE6KEVWQx/Qf6UOylIyaHiVzgY84ojBYXLCWOSAyvWyMgGlmgA1N0c\nhA7C\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -1,6 +1,7 @@
 ---
 title: Alice Steinglass
 nav: about_nav
+theme: responsive
 ---
 # Alice Steinglass
 

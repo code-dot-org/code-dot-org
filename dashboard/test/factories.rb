@@ -1,6 +1,24 @@
-# rubocop:disable Metrics/BlockLength
+require 'cdo/activity_constants'
+
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :experiment do
+    name "fancyFeature"
+
+    factory :user_based_experiment, class: 'UserBasedExperiment' do
+      type "UserBasedExperiment"
+      percentage 50
+    end
+    factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
+      type "TeacherBasedExperiment"
+      percentage 50
+      script nil
+    end
+    factory :single_section_experiment, class: 'SingleSectionExperiment' do
+      type "SingleSectionExperiment"
+      section
+    end
+  end
   factory :section_hidden_stage do
     section nil
     stage nil
@@ -15,17 +33,12 @@ FactoryGirl.define do
 
   factory :user do
     birthday Date.new(1991, 3, 14)
-    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+    sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     password "00secret"
     locale 'en-US'
-    sequence(:name) { |n| "User#{n} Codeberg" }
+    sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
     confirmed_at Time.now
-
-    # Child of :user factory, since it's in the `factory :user` block
-    factory :admin do
-      admin true
-    end
 
     factory :levelbuilder do
       after(:create) do |levelbuilder|
@@ -38,7 +51,7 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       admin false
-      factory :admin_teacher do
+      factory :admin do
         admin true
       end
       factory :terms_of_service_teacher do
@@ -77,8 +90,8 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher if evaluator.in_section
+          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
+          evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
@@ -91,7 +104,6 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-      admin false
     end
 
     factory :young_student do
@@ -105,6 +117,23 @@ FactoryGirl.define do
         create(:follower, section: section, student_user: user)
       end
     end
+
+    factory :old_student do
+      user_type User::TYPE_STUDENT
+      birthday Time.zone.today - 30.years
+    end
+
+    trait :with_puzzles do
+      transient do
+        num_puzzles 1
+        puzzle_result ActivityConstants::MINIMUM_PASS_RESULT
+      end
+      after(:create) do |user, evaluator|
+        evaluator.num_puzzles.times do
+          create :user_level, user: user, best_result: evaluator.puzzle_result
+        end
+      end
+    end
   end
 
   factory :districts_users do
@@ -113,18 +142,18 @@ FactoryGirl.define do
   end
 
   factory :section do
-    sequence(:name) { |n| "Section #{n}"}
-    user { create :teacher }
+    sequence(:name) {|n| "Section #{n}"}
+    user {create :teacher}
   end
 
   factory :game do
-    sequence(:name) { |n| "game#{n}.com"}
+    sequence(:name) {|n| "game#{n}.com"}
     app "maze"
   end
 
   factory :level, class: Blockly do
-    sequence(:name) { |n| "Level_#{n}" }
-    sequence(:level_num) {|n| "1_2_#{n}" }
+    sequence(:name) {|n| "Level_#{n}"}
+    sequence(:level_num) {|n| "1_2_#{n}"}
 
     # User id must be non-nil for custom level
     user_id '1'
@@ -181,12 +210,12 @@ FactoryGirl.define do
 
   factory :match, parent: :level, class: Match do
     game {create(:game, app: "match")}
-    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
+    properties {{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :text_match, parent: :level, class: TextMatch do
     game {create(:game, app: "textmatch")}
-    properties{{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
+    properties {{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :artist, parent: :level, class: Artist do
@@ -242,11 +271,15 @@ FactoryGirl.define do
     link_title 'title'
   end
 
+  factory :curriculum_reference, parent: :level, class: CurriculumReference do
+    game {Game.curriculum_reference}
+  end
+
   factory :level_source do
     level
     data '<xml/>'
     trait :with_image do
-      level { create(:level, game: Game.find_by_app(Game::ARTIST))}
+      level {create(:level, game: Game.find_by_app(Game::ARTIST))}
       after :create do |level_source, _|
         create :level_source_image, level_source: level_source
       end
@@ -259,12 +292,12 @@ FactoryGirl.define do
 
   factory :gallery_activity do
     user
-    user_level { create(:user_level) }
-    level_source { create(:level_source, :with_image, level: user_level.level) }
+    user_level {create(:user_level)}
+    level_source {create(:level_source, :with_image, level: user_level.level)}
   end
 
   factory :script do
-    sequence(:name) { |n| "bogus-script-#{n}" }
+    sequence(:name) {|n| "bogus-script-#{n}"}
   end
 
   factory :script_level do
@@ -317,7 +350,7 @@ FactoryGirl.define do
   end
 
   factory :stage do
-    sequence(:name) { |n| "Bogus Stage #{n}" }
+    sequence(:name) {|n| "Bogus Stage #{n}"}
     script
 
     absolute_position do |stage|
@@ -332,7 +365,7 @@ FactoryGirl.define do
   end
 
   factory :callout do
-    sequence(:element_id) { |n| "#pageElement#{n}" }
+    sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
     script_level
   end
@@ -340,33 +373,43 @@ FactoryGirl.define do
   factory :activity do
     level
     user
-    level_source { create :level_source, level: level }
+    level_source {create :level_source, level: level}
   end
 
   factory :concept do
-    sequence(:name) { |n| "Algorithm #{n}" }
+    sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
       video
     end
   end
 
   factory :video do
-    sequence(:key) { |n| "concept_#{n}" }
+    sequence(:key) {|n| "concept_#{n}"}
     youtube_code 'Bogus text'
   end
 
   factory :prize do
     prize_provider
-    sequence(:code) { |n| "prize_code_#{n}" }
+    sequence(:code) {|n| "prize_code_#{n}"}
   end
 
   factory :prize_provider do
   end
 
   factory :follower do
-    section
-    user { section.user }
-    student_user { create :student }
+    association :student_user, factory: :student
+
+    transient do
+      section nil
+      user nil
+    end
+
+    after(:build) do |follower, evaluator|
+      follower.user = evaluator.user ||
+        evaluator.section.try(:user) ||
+        build(:teacher)
+      follower.section = evaluator.section || build(:section, user: follower.user)
+    end
   end
 
   factory :user_level do
@@ -390,13 +433,13 @@ FactoryGirl.define do
   end
 
   factory :district do
-    sequence(:name) { |n| "District #{n}" }
+    sequence(:name) {|n| "District #{n}"}
     location 'Panem'
     contact {create(:district_contact)}
   end
 
   factory :workshop do
-    sequence(:name) { |n| "My Workshop #{n}" }
+    sequence(:name) {|n| "My Workshop #{n}"}
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
@@ -495,25 +538,24 @@ FactoryGirl.define do
   end
 
   factory :survey_result do
-    user { create :teacher }
+    user {create :teacher}
     kind 'Diversity2016'
-    properties {{survey2016_ethnicity_asian: "1"}}
-    properties {{survey2016_foodstamps: "3"}}
+    properties {{diversity_asian: "1", diversity_farm: "3"}}
   end
 
   factory :hint_view_request do
-    user { create :student }
-    script { create :script }
-    level { create :level }
+    user {create :student}
+    script {create :script}
+    level {create :level}
   end
 
   factory :level_concept_difficulty do
-    level { create :level }
+    level {create :level}
     repeat_loops 2
   end
 
   factory :user_proficiency do
-    user { create :student }
+    user {create :student}
     sequencing_d1_count 1
     repeat_loops_d2_count 2
     repeat_loops_d4_count 3
@@ -528,11 +570,28 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      num_enrollments 0
+      enrolled_and_attending_users 0
+      enrolled_unattending_users 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
         workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
+      end
+      evaluator.num_enrollments.times do
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop)
+      end
+      evaluator.enrolled_and_attending_users.times do
+        teacher = create :teacher
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.sessions.each do |session|
+          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
+        end
+      end
+      evaluator.enrolled_unattending_users.times do
+        teacher = create :teacher
+        workshop.enrollment << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
   end
@@ -551,10 +610,10 @@ FactoryGirl.define do
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
+    association :user, factory: :teacher, strategy: :create
     transient do
-      application_hash {build(:pd_teacher_application_hash)}
+      application_hash {build :pd_teacher_application_hash, user: user}
     end
-    association :user, factory: :teacher, strategy: :build
     application {application_hash.to_json}
     primary_email {application_hash['primaryEmail']}
     secondary_email {application_hash['secondaryEmail']}
@@ -563,6 +622,7 @@ FactoryGirl.define do
   # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
   factory :pd_teacher_application_hash, class: 'Hash' do
     transient do
+      user nil
       association :school, factory: :public_school, strategy: :build
       association :school_district, strategy: :build
     end
@@ -573,7 +633,7 @@ FactoryGirl.define do
         'school-district' => school_district.id,
         firstName: 'Rubeus',
         lastName: 'Hagrid',
-        primaryEmail: 'rubeus@hogwarts.co.uk',
+        primaryEmail: user ? user.email : 'rubeus@hogwarts.co.uk',
         secondaryEmail: 'rubeus+also@hogwarts.co.uk',
         principalPrefix: 'Mrs.',
         principalFirstName: 'Minerva',
@@ -600,6 +660,67 @@ FactoryGirl.define do
         whatTeachingSteps: 'learn and practice'
       }.stringify_keys
     end
+  end
+
+  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
+    regional_partner nil
+    start_date "2017-04-06"
+    end_date nil
+    course nil
+    subject nil
+    properties {{}}
+  end
+
+  factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
+    association :user, factory: :facilitator, strategy: :create
+    transient do
+      form_data {build :pd_facilitator_program_registration_hash, user: user}
+    end
+    form_data {from_data.to_json}
+  end
+
+  # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
+  factory :pd_facilitator_program_registration_hash, class: 'Hash' do
+    initialize_with do
+      {
+        confirmTeacherconDate: "Yes",
+        addressStreet: "123 Main st",
+        addressCity: "Anywhere",
+        addressState: "AK",
+        addressZip: "12345",
+        contactName: "Fred",
+        contactRelationship: "Imaginary Friend",
+        contactPhone: "123-456-7890",
+        liveFarAway: "Yes",
+        dietaryNeeds: ["Gluten Free"],
+        howTraveling: "Flying",
+        needHotel: "Yes",
+        needAda: "Yes",
+        photoRelease: ["Yes"],
+        gender: "Female",
+        race: ["Hispanic or Latino"],
+        age: "26-30",
+        yearsTaught: "1",
+        gradesTaught: ["Middle School/Junior High"],
+        gradesPlanningToTeach: ["Middle School/Junior High"],
+        subjectsTaught: ["Science"],
+        csYearsTaught: "1",
+        liabilityWaiver: ["Yes"]
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
+    workshop_name 'a workshop'
+    course 'csd'
+    association :user, factory: :teacher, strategy: :create
+    association :teacher_application, factory: :pd_teacher_application, strategy: :create
+  end
+
+  factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
+    association :user, factory: :facilitator, strategy: :create
+    tc1_arrive Date.new(2017, 8, 23)
+    tc1_depart Date.new(2017, 8, 29)
   end
 
   # school info
@@ -701,12 +822,18 @@ FactoryGirl.define do
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
-    sequence(:first_name) { |n| "Participant#{n}" }
+    sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
-    sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    sequence(:email) {|n| "participant#{n}@example.com.xx"}
     association :school_info, factory: :school_info_without_country
     school 'Example School'
     code {SecureRandom.hex(10)}
+
+    trait :from_user do
+      user
+      full_name {user.name} # sets first_name and last_name
+      email {user.email}
+    end
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -731,9 +858,15 @@ FactoryGirl.define do
     course Pd::Workshop::COURSES.first
   end
 
-  factory :professional_learning_partner do
-    sequence(:name) { |n| "PLP #{n}" }
-    contact {create :teacher}
+  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
+    association :enrollment, factory: :pd_enrollment
+    association :user, factory: :teacher
+    street '1501 4th Ave'
+    apartment_or_suite 'Suite 900'
+    city 'Seattle'
+    state 'WA'
+    add_attribute :zip_code, '98101'
+    phone_number '555-111-2222'
   end
 
   factory :school_district do
@@ -766,7 +899,8 @@ FactoryGirl.define do
   end
 
   factory :regional_partner do
-    sequence(:name) { |n| "Partner#{n}" }
+    sequence(:name) {|n| "Partner#{n}"}
+    contact {create :teacher}
     group 1
   end
 
@@ -775,4 +909,3 @@ FactoryGirl.define do
     association :regional_partner
   end
 end
-# rubocop:enable Metrics/BlockLength

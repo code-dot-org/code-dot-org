@@ -20,7 +20,8 @@ describe('getContainedLevelResultInfo', () => {
   };
 
   before(() => {
-    sinon.stub(codeStudioLevels, 'getContainedLevelResult', () => containedLevelResult);
+    sinon.stub(codeStudioLevels, 'getContainedLevelResult')
+        .returns(containedLevelResult);
   });
 
   after(() => {

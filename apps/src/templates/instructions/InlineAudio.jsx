@@ -187,6 +187,7 @@ const InlineAudio = React.createClass({
   }
 });
 
+export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
