@@ -52,6 +52,7 @@ import {
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 import { setVisualizationScale } from './redux/layout';
+import Sounds from './Sounds';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -93,10 +94,6 @@ function StudioApp() {
   this.editCode = false;
   this.usingBlockly_ = true;
 
-  /**
-   * @type {AudioPlayer}
-   */
-  this.cdoSounds = null;
   /**
    * @type {?Droplet.Editor}
    */
@@ -234,8 +231,6 @@ StudioApp.prototype.configure = function (options) {
     this.editCode = false;
     this.usingBlockly_ = false;
   }
-
-  this.cdoSounds = options.cdoSounds;
 
   // Bind assetUrl to the instance so that we don't need to depend on callers
   // binding correctly as they pass this function around.
@@ -851,31 +846,19 @@ StudioApp.prototype.isRunning = function () {
 
 /**
  * Attempts to associate a set of audio files to a given name
- * Handles the case where cdoSounds does not exist, e.g. in tests
- * and grunt dev preview mode
  * @param {Object} audioConfig sound configuration
  */
 StudioApp.prototype.registerAudio = function (audioConfig) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
-  this.cdoSounds.register(audioConfig);
+  Sounds.getSingleton().register(audioConfig);
 };
 
 /**
  * Attempts to associate a set of audio files to a given name
- * Handles the case where cdoSounds does not exist, e.g. in tests
- * and grunt dev preview mode
  * @param {Array.<string>} filenames file paths for sounds
  * @param {string} name ID to associate sound effect with
  */
 StudioApp.prototype.loadAudio = function (filenames, name) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
-  this.cdoSounds.registerByFilenamesAndID(filenames, name);
+  Sounds.getSingleton().registerByFilenamesAndID(filenames, name);
 };
 
 /**
@@ -886,14 +869,10 @@ StudioApp.prototype.loadAudio = function (filenames, name) {
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function (name, options) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  this.cdoSounds.play(name, newOptions);
+  Sounds.getSingleton().play(name, newOptions);
 };
 
 /**
@@ -901,11 +880,7 @@ StudioApp.prototype.playAudio = function (name, options) {
  * @param {string} name ID of sound
  */
 StudioApp.prototype.stopLoopingAudio = function (name) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
-  this.cdoSounds.stopLoopingAudio(name);
+  Sounds.getSingleton().stopLoopingAudio(name);
 };
 
 /**
@@ -928,7 +903,7 @@ StudioApp.prototype.inject = function (div, options) {
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
-  Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
+  Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
 /**

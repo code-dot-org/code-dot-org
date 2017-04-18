@@ -64,6 +64,7 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
+import Sounds from '../Sounds';
 
 var ResultType = studioApp().ResultType;
 var TestResults = studioApp().TestResults;
@@ -785,9 +786,7 @@ Applab.reset = function () {
     divApplab.removeChild(divApplab.firstChild);
   }
 
-  if (studioApp().cdoSounds) {
-    studioApp().cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
