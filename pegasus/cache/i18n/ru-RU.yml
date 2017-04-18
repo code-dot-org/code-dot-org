@@ -893,8 +893,10 @@
   dashboard_students_auto_generated: "Автоматически сгенерированные"
   dashboard_students_reset_secret: "Переустановить секрет"
   dashboard_students_reset_password: "Сменить пароль"
-  dashboard_students_share_section: "Поделитесь страницей для входа в этот раздел
-    со своими студентами:"
+  dashboard_students_share_section: "Поделитесь страницей со своими студентами для
+    входа в этот раздел:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: "Распечатать карточки с данными доступа учеников."
   dashboard_students_secret_picture_title: "Секретное изображение"
   dashboard_students_secret_picture: "В данном разделе в качестве секретного параметра
@@ -920,6 +922,7 @@
     или вы хотите создать учетные записи для них, измените секретный параметр этого
     раздела на <b>«слово»</b> или <b>«изображение»</b>."
   dashboard_students_print_page: "Распечатать эту страницу"
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: "Ссылка"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
     здесь</a>, чтобы распечатать нашу политику конфиденциальности или поделиться ею
@@ -1145,6 +1148,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: "Урок 1: Интернет"
   csp2_name: "Урок 2: Цифровая информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1924,6 +1929,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
