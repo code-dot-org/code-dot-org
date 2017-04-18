@@ -6,6 +6,9 @@ ruby:
 
 javascript:
   enabled: false
+eslint:
+  enabled: true
+  config_file: .eslintrc.js
 
 scss:
   config_file: .scss-lint.yml
