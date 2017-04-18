@@ -62,6 +62,12 @@ FactoryGirl.define do
           facilitator.permission = UserPermission::FACILITATOR
         end
       end
+      factory :workshop_admin do
+        name 'Workshop Admin'
+        after(:create) do |user|
+          user.permission = UserPermission::WORKSHOP_ADMIN
+        end
+      end
       factory :workshop_organizer do
         name 'Workshop Organizer Person'
         after(:create) do |workshop_organizer|
