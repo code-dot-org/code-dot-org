@@ -49,6 +49,7 @@ import {
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import project from '../code-studio/initApp/project';
+import {createThumbnail} from '../util/thumbnail';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -1096,16 +1097,7 @@ function captureImage(thumbnailSize) {
   }
 
   // Scale the image down so we don't send so much data over the network.
-  const thumbnailCanvas = document.createElement('canvas');
-  thumbnailCanvas.width = thumbnailSize;
-  thumbnailCanvas.height = thumbnailSize;
-
-  // Make sure any empty areas appear white.
-  const thumbnailContext = thumbnailCanvas.getContext('2d');
-  thumbnailContext.fillStyle = 'white';
-  thumbnailContext.fillRect(0, 0, thumbnailSize, thumbnailSize);
-
-  thumbnailContext.drawImage(p5Canvas, 0, 0, thumbnailSize, thumbnailSize);
+  const thumbnailCanvas = createThumbnail(p5Canvas, thumbnailSize);
 
   thumbnailCanvas.toBlob(blob => {
     project.saveThumbnail(blob);

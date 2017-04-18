@@ -2,8 +2,10 @@
  * A subscription/notification atom, used to cleanly hook up callbacks
  * without attaching anything to the DOM or other global scope.
  * @constructor
+ * @deprecated Use EventEmitter instead, which you can import from the events module.
+ *             See https://nodejs.org/api/events.html
  */
-var ObservableEvent = module.exports = function () {
+var ObservableEventDEPRECATED = module.exports = function () {
   /**
    * Objects observing this.
    * @type {Array}
@@ -18,7 +20,7 @@ var ObservableEvent = module.exports = function () {
  *        Will receive any arguments passed to notifyObservers.
  * @returns {Object} key - used to unregister from observable
  */
-ObservableEvent.prototype.register = function (onNotify) {
+ObservableEventDEPRECATED.prototype.register = function (onNotify) {
   var key = {toCall:onNotify};
   Object.freeze(key);
   this.observerList_.push(key);
@@ -30,7 +32,7 @@ ObservableEvent.prototype.register = function (onNotify) {
  * @param {Object} keyObj - Key generated when registering
  * @returns {boolean} - Whether an unregistration actually occurred
  */
-ObservableEvent.prototype.unregister = function (keyObj) {
+ObservableEventDEPRECATED.prototype.unregister = function (keyObj) {
   for (var i = 0; i < this.observerList_.length; i++) {
     if (keyObj === this.observerList_[i]) {
       this.observerList_.splice(i, 1);
@@ -41,12 +43,12 @@ ObservableEvent.prototype.unregister = function (keyObj) {
 };
 
 /**
- * Call all methods subscribed to this ObservableEvent, passing through
+ * Call all methods subscribed to this ObservableEventDEPRECATED, passing through
  * any arguments.
  * @param {...} Any arguments, which are passed through to the observing
  *              functions.
  */
-ObservableEvent.prototype.notifyObservers = function () {
+ObservableEventDEPRECATED.prototype.notifyObservers = function () {
   var args = Array.prototype.slice.call( arguments, 0 );
   this.observerList_.forEach(function (observer) {
     observer.toCall.apply(undefined, args);

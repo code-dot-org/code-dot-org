@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170414010203) do
+ActiveRecord::Schema.define(version: 20170417182609) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -416,7 +416,7 @@ ActiveRecord::Schema.define(version: 20170414010203) do
   end
 
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "regional_partner_id"
+    t.integer  "regional_partner_id",               null: false
     t.date     "start_date",                        null: false
     t.date     "end_date"
     t.string   "course"

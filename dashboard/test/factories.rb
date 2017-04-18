@@ -668,7 +668,7 @@ FactoryGirl.define do
     end_date nil
     course nil
     subject nil
-    properties {{}}
+    properties {{fixed_payment: 50}}
   end
 
   factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do

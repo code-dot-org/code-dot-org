@@ -37,13 +37,18 @@ export function imageDataFromURI(uri) {
   });
 }
 
+export function canvasFromImage(image) {
+  const canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+  const context = canvas.getContext('2d');
+  context.drawImage(image, 0, 0, image.width, image.height);
+  return canvas;
+}
+
 export function dataURIFromURI(uri) {
   return imageFromURI(uri).then(image => {
-    const canvas = document.createElement('canvas');
-    canvas.width = image.width;
-    canvas.height = image.height;
-    const context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0, image.width, image.height);
+    const canvas = canvasFromImage(image);
     return canvas.toDataURL();
   });
 }
@@ -75,7 +80,7 @@ export function dataURIToFramedBlob(dataURI, callback) {
   frame.src = artistShareFrame;
 }
 
-function imageFromURI(uri) {
+export function imageFromURI(uri) {
   return new Promise((resolve, reject) => {
     let image = new Image();
     image.onload = () => resolve(image);
