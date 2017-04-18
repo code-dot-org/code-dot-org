@@ -19,7 +19,7 @@ import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
 import {getStore} from '../../redux';
 
-const TestResults = studioApp().TestResults;
+import {TestResults} from '../../constants';
 
 const MEDIA_URL = '/blockly/media/craft/';
 

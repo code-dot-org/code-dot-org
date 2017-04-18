@@ -15,7 +15,7 @@ var AppView = require('../../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 import {getStore} from '../../redux';
 
-var TestResults = studioApp().TestResults;
+import {TestResults} from '../../constants';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
