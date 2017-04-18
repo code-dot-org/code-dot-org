@@ -12,7 +12,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
-  batch = Applitools::Base::BatchInfo.new(ENV['BATCH_NAME'])
+  batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
   batch.id = ENV['BATCH_ID']
   @eyes.batch = batch
 
