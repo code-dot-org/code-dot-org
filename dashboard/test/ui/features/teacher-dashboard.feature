@@ -46,7 +46,7 @@ Feature: Using the teacher dashboard
     And I sign out
 
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard?sectionProjects=1/#sections"
+    And I am on "http://code.org/teacher-dashboard/#sections"
     And I click selector "a:contains('SectionName')" once I see it
     And I click selector "a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
