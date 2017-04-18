@@ -925,6 +925,8 @@
   dashboard_students_reset_password: Redefinir senha
   dashboard_students_share_section: 'Compartilhe a página de inscrição da turma com
     seus alunos:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Imprima cartões com as informações de login de seus
     alunos.
   dashboard_students_secret_picture_title: Imagem secreta
@@ -949,6 +951,7 @@
     quer criar as contas para eles, altere o tipo de segredo da turma para <b>palavra</b>
     ou <b>imagem</b>.
   dashboard_students_print_page: Imprimir esta página
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
     aqui</a> para ver nosso documento de privacidade. Ele pode ser compartilhado ou
@@ -1175,6 +1178,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1956,6 +1961,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
