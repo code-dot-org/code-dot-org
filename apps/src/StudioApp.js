@@ -38,6 +38,7 @@ import project from './code-studio/initApp/project';
 import * as assets from './code-studio/assets';
 import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
+import {TestResults} from './constants';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore } from './redux';
@@ -181,16 +182,6 @@ function StudioApp() {
   * @type {?number}
   */
   this.initTime = undefined;
-
-  /**
-  * Enumeration of user program execution outcomes.
-  */
-  this.ResultType = constants.ResultType;
-
-  /**
-  * Enumeration of test results.
-  */
-  this.TestResults = constants.TestResults;
 
   /**
    * If true, we don't show blockspace. Used when viewing shared levels
@@ -1407,7 +1398,7 @@ StudioApp.prototype.clearHighlighting = function () {
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
 * @param {{feedbackType: number}} Test results (a constant property of
-*     this.TestResults).
+*     TestResults).
 */
 StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
@@ -1416,7 +1407,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
-    options.feedbackType = this.TestResults.EDIT_BLOCKS;
+    options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
   this.onFeedback(options);
@@ -1443,7 +1434,7 @@ StudioApp.prototype.displayFeedback = function (options) {
  * into the top instructions
  * @param {Object} options
  * @param {number} options.feedbackType Test results (a constant property
- *     of this.TestResults).false
+ *     of TestResults).false
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If we show instructions when collapsed, we only use dialogs for

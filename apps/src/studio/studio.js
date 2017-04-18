@@ -37,7 +37,6 @@ import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
 import paramLists from './paramLists.js';
-import sharedConstants from '../constants';
 import studioCell from './cell';
 import studioMsg from './locale';
 import { GridMove, GridMoveAndCancel } from './spriteActions';
@@ -65,12 +64,7 @@ var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
 
-var KeyCodes = sharedConstants.KeyCodes;
-
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
-
-var SVG_NS = sharedConstants.SVG_NS;
+import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 
 // Whether we are showing debug information
 var showDebugInfo = false;

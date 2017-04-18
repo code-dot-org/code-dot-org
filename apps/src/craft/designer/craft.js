@@ -20,7 +20,7 @@ import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
-const TestResults = studioApp().TestResults;
+import {TestResults} from '../../constants';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
