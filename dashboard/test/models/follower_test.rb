@@ -10,7 +10,7 @@ class FollowerTest < ActiveSupport::TestCase
   test "followers are soft-deleted" do
     assert_no_change("Follower.with_deleted.count") do
       @follower.destroy
-      refute @follower.reload.deleted_at.nil?
+      assert @follower.reload.deleted?
     end
   end
 
