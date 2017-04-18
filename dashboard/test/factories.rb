@@ -625,6 +625,7 @@ FactoryGirl.define do
       user nil
       association :school, factory: :public_school, strategy: :build
       association :school_district, strategy: :build
+      course 'csd'
     end
 
     initialize_with do
@@ -639,7 +640,7 @@ FactoryGirl.define do
         principalFirstName: 'Minerva',
         principalLastName: 'McGonagall',
         principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: 'csd',
+        selectedCourse: course,
         phoneNumber: '555-555-5555',
         gradesAtSchool: [10],
         genderIdentity: 'Male',
