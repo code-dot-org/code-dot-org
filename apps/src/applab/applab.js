@@ -66,8 +66,7 @@ import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
 import Sounds from '../Sounds';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 /**
  * Create a namespace for the application.
@@ -949,7 +948,7 @@ Applab.execute = function () {
   codeWhenRun = studioApp().getCode();
   Applab.currentExecutionLog = [];
 
-  if (codeWhenRun) {
+  if (typeof codeWhenRun === 'string') {
     // Create a new interpreter for this run
     Applab.JSInterpreter = new JSInterpreter({
       studioApp: studioApp(),
@@ -1177,7 +1176,7 @@ Applab.onPuzzleComplete = function (submit) {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    Applab.testResults = studioApp().TestResults.ALL_PASS;
+    Applab.testResults = TestResults.ALL_PASS;
     Applab.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly

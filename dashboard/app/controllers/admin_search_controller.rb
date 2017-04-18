@@ -56,7 +56,7 @@ class AdminSearchController < ApplicationController
 
   def undelete_section
     section = Section.with_deleted.find_by_code params[:section_code]
-    if section && section.deleted_at
+    if section.try(:deleted?)
       section.restore(recursive: true, recovery_window: 5.minutes)
       flash[:alert] = "Section (CODE: #{params[:section_code]}) undeleted!"
     else

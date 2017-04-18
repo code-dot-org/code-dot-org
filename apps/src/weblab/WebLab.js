@@ -15,6 +15,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {getStore} from '../redux';
+import {TestResults} from '../constants';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -223,7 +224,7 @@ WebLab.prototype.init = function (config) {
         app: 'weblab',
         level: this.level.id,
         result: true,
-        testResult: this.studioApp_.TestResults.FREE_PLAY,
+        testResult: TestResults.FREE_PLAY,
         program: this.getCurrentFilesVersionId() || '',
         submitted: false,
         onComplete: this.studioApp_.onContinue.bind(this.studioApp_),

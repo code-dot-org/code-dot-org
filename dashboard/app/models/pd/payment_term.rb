@@ -23,17 +23,20 @@ class Pd::PaymentTerm < ApplicationRecord
   belongs_to :regional_partner
 
   validates_presence_of :regional_partner
+  validates_presence_of :start_date
+  validate :sufficient_contract_terms
 
   serialized_attrs %w(
     per_attendee_payment
     fixed_payment
     minimum_attendees_for_payment
     maximum_attendees_for_payment
+    facilitator_payment
     pay_facilitators
   )
 
   def self.for_workshop(workshop)
-    return nil unless workshop.regional_partner
+    raise "Cannot calculate payment for workshop #{workshop.id} because there is no regional partner" unless workshop.regional_partner
 
     found_payment_terms = nil # Should always be exactly one term, otherwise we are in bad state
 
@@ -61,5 +64,13 @@ class Pd::PaymentTerm < ApplicationRecord
     end
 
     found_payment_terms[0]
+  end
+
+  private
+
+  def sufficient_contract_terms
+    unless per_attendee_payment? || fixed_payment
+      errors.add(:base, 'Must have either per attendee payment or fixed payment')
+    end
   end
 end
