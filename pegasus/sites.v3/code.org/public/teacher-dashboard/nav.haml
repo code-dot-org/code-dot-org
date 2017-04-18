@@ -35,7 +35,7 @@ content-type: text/ng-template
           'ng-class' => 'tab == "assessments" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/assessments"}= I18n.t('dashboard_navigation_view_assessments_surveys')
 
-      %li{'ng-show' => 'showSectionProjectsTab && section && section.students.length > 0 && !editingAll(section.students)',
+      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
           'ng-class' => 'tab == "projects" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/projects"}= 'Projects'
 
