@@ -51,7 +51,7 @@ class ApiController < ApplicationController
     end
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
-      next if section[:deleted_at]
+      next if section.deleted?
       @section = section
       load_script
 
