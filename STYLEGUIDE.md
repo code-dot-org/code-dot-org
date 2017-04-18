@@ -382,6 +382,7 @@ var selfClosing = (
   />
 );
 ```
+* something about i18n
 
 
 ### In /apps
