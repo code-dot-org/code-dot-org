@@ -15,6 +15,8 @@ class Pd::TeacherApplicationMailer < ActionMailer::Base
     @teacher_name = teacher_application.teacher_name
     @program_name = teacher_application.program_name
     @program_url = teacher_application.program_url
+    @due_date = @program_name == Pd::Workshop::COURSE_CSP ? 'May 5, 2017' : 'April 17, 2017'
+
     mail from: from_teacher,
       subject: "Approval requested: #{@teacher_name}’s participation in Code.org Professional Learning Program",
       to: email_address(teacher_application.principal_name, teacher_application.principal_email)
