@@ -33,15 +33,12 @@ describe('search assets from animation library', function () {
   it('searchAssets searches the sound library with a cateogry', function () {
     const maxResults = 5;
     const pageCount = 0;
-    const searchedData = searchAssets('click', 'category_ui', soundLibrary, pageCount, maxResults);
+    const searchedData = searchAssets('click', 'category_objects', soundLibrary, pageCount, maxResults);
 
     assert.equal(searchedData.pageCount, 1);
-    assert.equal(searchedData.results.length, 5);
-    assert.equal(searchedData.results[0].name, "click1");
-    assert.equal(searchedData.results[1].name, "click2");
-    assert.equal(searchedData.results[2].name, "click3");
-    assert.equal(searchedData.results[3].name, "click4");
-    assert.equal(searchedData.results[4].name, "click5");
+    assert.equal(searchedData.results.length, 2);
+    assert.equal(searchedData.results[0].name, "click");
+    assert.equal(searchedData.results[1].name, "metal_click");
   });
 
   it('searchAssets finds results where search term is not at the begining', function () {
@@ -58,25 +55,22 @@ describe('search assets from animation library', function () {
   });
 
   it('searchAssets searches the sound library without a cateogry, using multiple pages', function () {
-    const maxResults = 4;
+    const maxResults = 1;
     const pageCount = 0;
     const searchedData = searchAssets('click', '', soundLibrary, pageCount, maxResults);
 
     assert.equal(searchedData.pageCount, 2);
-    assert.equal(searchedData.results.length, 4);
-    assert.equal(searchedData.results[0].name, "click1");
-    assert.equal(searchedData.results[1].name, "click2");
-    assert.equal(searchedData.results[2].name, "click3");
-    assert.equal(searchedData.results[3].name, "click4");
+    assert.equal(searchedData.results.length, 1);
+    assert.equal(searchedData.results[0].name, "click");
   });
 
   it('searchAssets searches the sound library getting page 2 results', function () {
-    const maxResults = 4;
+    const maxResults = 1;
     const pageCount = 1;
     const searchedData = searchAssets('click', '', soundLibrary, pageCount, maxResults);
 
     assert.equal(searchedData.pageCount, 2);
     assert.equal(searchedData.results.length, 1);
-    assert.equal(searchedData.results[0].name, "click5");
+    assert.equal(searchedData.results[0].name, "metal_click");
   });
 });
