@@ -6,7 +6,7 @@ module Pd::Payment
 
     setup_all do
       @regional_partner = create :regional_partner
-      @csp_workshop = create(:pd_ended_workshop, regional_partner: @regional_partner, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, enrolled_and_attending_users: 20)
+      @csp_workshop = create(:pd_ended_workshop, regional_partner: @regional_partner, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, enrolled_and_attending_users: 20, num_sessions: 2)
 
       2.times do
         @csp_workshop.facilitators << create(:facilitator)
@@ -60,49 +60,47 @@ module Pd::Payment
     end
 
     test 'Calculate CSP Workshop with per attendee payment' do
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {per_attendee_payment: 10})
+      create(:pd_payment_term, regional_partner: @regional_partner, per_attendee_payment: 10, fixed_payment: nil)
 
       assert_equal 200, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with fixed payment' do
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {fixed_payment: 42})
+      create(:pd_payment_term, regional_partner: @regional_partner, fixed_payment: 42)
 
       assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with per attendee payment and fixed payment' do
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {fixed_payment: 42, per_attendee_payment: 10})
+      create(:pd_payment_term, regional_partner: @regional_partner, fixed_payment: 42, per_attendee_payment: 10)
 
       assert_equal 242, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with excessive teachers' do
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {per_attendee_payment: 10, maximum_attendees_for_payment: 19})
+      create(:pd_payment_term, regional_partner: @regional_partner, per_attendee_payment: 10, maximum_attendees_for_payment: 19, fixed_payment: nil)
 
       assert_equal 190, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with insufficient teachers' do
-      payment_term = create(:pd_payment_term, regional_partner: @regional_partner, properties: {per_attendee_payment: 10, minimum_attendees_for_payment: 30})
+      payment_term = create(:pd_payment_term, regional_partner: @regional_partner, per_attendee_payment: 10, minimum_attendees_for_payment: 30, fixed_payment: nil)
 
       assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
 
-      payment_term.destroy
-
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {per_attendee_payment: 10, minimum_attendees_for_payment: 30, fixed_payment: 42})
+      payment_term.update!(fixed_payment: 42)
 
       assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with sufficient attendees and facilitator payment' do
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {per_attendee_payment: 10, facilitator_payment: 50})
+      create(:pd_payment_term, regional_partner: @regional_partner, per_attendee_payment: 10, facilitator_payment: 50, fixed_payment: nil)
 
       assert_equal 300, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with insufficient attendees and facilitator payment' do
-      create(:pd_payment_term, regional_partner: @regional_partner, properties: {fixed_payment: 42, minimum_attendees_for_payment: 30, facilitator_payment: 50})
+      create(:pd_payment_term, regional_partner: @regional_partner, fixed_payment: 42, minimum_attendees_for_payment: 30, facilitator_payment: 50)
 
       assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
     end
