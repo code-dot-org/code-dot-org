@@ -154,10 +154,10 @@ class Stage < ActiveRecord::Base
           path: script_level.path,
           level_id: level.id,
           type: level.class.to_s,
-          name: level.name
+          name: level.name,
         }
 
-        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
+        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference contained_level_names).each do |key|
           value = level.properties[key] || level.try(key)
           level_json[key] = value if value
         end
