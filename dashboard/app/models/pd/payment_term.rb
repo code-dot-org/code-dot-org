@@ -36,7 +36,7 @@ class Pd::PaymentTerm < ApplicationRecord
   )
 
   def self.for_workshop(workshop)
-    return "Cannot calculate payment for workshop #{workshop.id} because there is no regional partner" unless workshop.regional_partner
+    raise "Cannot calculate payment for workshop #{workshop.id} because there is no regional partner" unless workshop.regional_partner
 
     found_payment_terms = nil # Should always be exactly one term, otherwise we are in bad state
 
