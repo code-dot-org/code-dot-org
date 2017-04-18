@@ -89,6 +89,8 @@
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} elever har allerede registrert seg."
     teacher_count: "%{count} lærere har allerede registrert seg."
@@ -205,6 +207,14 @@
       Kursene er morsomme, visuelt stimulerende og lærer deg de grunnleggende konseptene innen informatikk ved å benytte en enkel, spill-lignende opplevelse som du loses igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Invitasjon er sendt
     added_teacher: "%{name} er lagt til som din lærer"
@@ -219,8 +229,6 @@
       blank_code: Vennligst skriv en seksjonskode
       cant_join_own_section: Beklager, du kan ikke bli med i din egen seksjon.
     mail:
-      invite_student:
-        subject: Bli med i en av klassene til %{teacher_name} på Code.org!
       student_disassociated:
         subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet
           som din elev.'
@@ -467,6 +475,7 @@
       og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning.
     announcement_petition_button: Legg til navnet ditt
     announcement_go_beyond_button: Fortsett videre
+    announcement_apply_now: Apply now
     announcement_all: Hold deg oppdatert med oppdateringer og ny funksjonalitet på
       lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere
       kunngjøringer.</a>
@@ -529,17 +538,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn
       en annen seksjonskode.
-    section_code_not_entered: Legg inn gjeldende_seksjons_kode.
     section_code_cant_be_current_section: Gjeldende seksjon kan ikke være den samme
       som den nye seksjonen.
     current_section_dne: Beklager, men seksjon %{current_section_code} finnes ikke.
       Legg inn en annen seksjonskode.
-    students_not_yours: Du kan ikke flytte elever fra en seksjon som ikke tilhører
-      deg.
-    stay_enrolled_not_entered: Vennligst oppgi stay_enrolled_in_current_section.
     student_ids_not_entered: Vennligst oppgi student_ids.
     student_not_found: En eller flere elever ble ikke funnet.
     all_students_must_be_in_current_section: Alle elever må være innrullert i din
