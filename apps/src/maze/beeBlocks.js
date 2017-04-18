@@ -37,6 +37,10 @@ exports.install = function (blockly, blockInstallOptions) {
     [[msg.nectarRemaining(), 'nectarRemaining'],
      [msg.honeyAvailable(), 'honeyAvailable']]);
 
+  addConditionalComparisonBlock(blockly, generator, 'bee_ifelseifelseNectarAmount', 'ifelseifelse',
+    [[msg.nectarRemaining(), 'nectarRemaining'],
+     [msg.honeyAvailable(), 'honeyAvailable']]);
+
   addConditionalComparisonBlock(blockly, generator, 'bee_ifTotalNectar', 'if',
     [[msg.totalNectar(), 'nectarCollected'],
      [msg.totalHoney(), 'honeyCreated']]);
@@ -183,6 +187,9 @@ function addIfElseFlowerHive(blockly, generator) {
 }
 
 function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
+
+  var hasElse = (type === 'ifelse' || type === 'ifelseifelse');
+  var hasElseIf = (type === 'ifelseifelse');
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function () {
@@ -191,10 +198,8 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       var conditionalMsg;
       switch (type) {
         case 'if':
-          conditionalMsg = msg.ifCode();
-          this.setHSV(196, 1.0, 0.79);
-          break;
         case 'ifelse':
+        case 'ifelseifelse':
           conditionalMsg = msg.ifCode();
           this.setHSV(196, 1.0, 0.79);
           break;
@@ -206,7 +211,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
           throw 'Unexpcted type for addConditionalComparisonBlock';
       }
 
-      this.appendDummyInput()
+      this.appendDummyInput('IF')
           .appendTitle(conditionalMsg);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(arg1), 'ARG1');
@@ -217,13 +222,32 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'ARG2');
-      this.setInputsInline(true);
       this.appendStatementInput('DO')
           .appendTitle(msg.doCode());
-      if (type === "ifelse") {
+      this.setInputsInline(true);
+
+      if (hasElseIf) {
+        this.appendStatementInput();
+        this.appendDummyInput('ELSEIF')
+            .appendTitle(msg.elseCode() + " " + conditionalMsg);
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldDropdown(arg1), 'ARG3');
+        this.appendDummyInput().appendTitle(' ');
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldDropdown(OPERATORS), 'OP2');
+        this.appendDummyInput().appendTitle(' ');
+        this.appendDummyInput()
+            .appendTitle(new blockly.FieldTextInput('0',
+              blockly.FieldTextInput.numberValidator), 'ARG4');
+        this.appendStatementInput('ELSEDO')
+            .appendTitle(msg.doCode());
+      }
+
+      if (hasElse) {
         this.appendStatementInput('ELSE')
             .appendTitle(msg.elseCode());
       }
+
       this.setPreviousStatement(true);
       this.setNextStatement(true);
 
@@ -244,13 +268,22 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
     var argument2 = this.getTitleValue('ARG2');
     var branch0 = generator.statementToCode(this, 'DO');
     var elseBlock = "";
-    if (type === "ifelse") {
-      var branch1 = generator.statementToCode(this, 'ELSE');
-      elseBlock = ' else {\n' + branch1 + '}';
+    if (hasElse) {
+      var elseBranch = generator.statementToCode(this, 'ELSE');
+      elseBlock = ' else {\n' + elseBranch + '}';
+    }
+
+    if (hasElseIf) {
+      var argument3 = 'Maze.' + this.getTitleValue('ARG3') +
+          '(\'block_id_' + this.id + '\')';
+      var operator1 = this.getTitleValue('OP2');
+      var argument4 = this.getTitleValue('ARG4');
+      var elseIfBranch = generator.statementToCode(this, 'ELSEDO');
+      elseBlock = ' else if (' + argument3 + ' ' + operator1  + ' ' + argument4 + ') {\n' + elseIfBranch + '}' + elseBlock;
     }
 
     var command = type;
-    if (type === "ifelse") {
+    if (type === "ifelse" || type === 'ifelseifelse') {
       command = "if";
     }
 
