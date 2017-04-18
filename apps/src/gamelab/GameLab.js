@@ -50,6 +50,7 @@ import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLe
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import project from '../code-studio/initApp/project';
 import {createThumbnail} from '../util/thumbnail';
+import Sounds from '../Sounds';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -459,9 +460,7 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
-  if (this.studioApp_.cdoSounds) {
-    this.studioApp_.cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
 

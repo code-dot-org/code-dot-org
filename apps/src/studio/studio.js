@@ -54,6 +54,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {getStore} from '../redux';
+import Sounds from '../Sounds';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -1845,7 +1846,7 @@ Studio.init = function (config) {
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp().cdoSounds, skin.assetUrl, levelTracks);
+      Sounds.getSingleton(), skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -1879,9 +1880,7 @@ Studio.init = function (config) {
 
   // Add a post-video hook to start the background music, if available.
   config.level.afterVideoBeforeInstructionsFn = showInstructions => {
-    if (studioApp().cdoSounds) {
-      studioApp().cdoSounds.whenAudioUnlocked(() => Studio.musicController.play());
-    }
+    Sounds.getSingleton().whenAudioUnlocked(() => Studio.musicController.play());
     showInstructions();
   };
 
@@ -4843,11 +4842,9 @@ Studio.setSprite = function (opts) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
-    if (studioApp().cdoSounds) {
-      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp().cdoSounds, audioOption);
-      });
-    }
+    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+      return new ThreeSliceAudio(Sounds.getSingleton(), audioOption);
+    });
   }
   Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
