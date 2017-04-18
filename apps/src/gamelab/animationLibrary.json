@@ -2687,6 +2687,1302 @@
         "y": 300
       }
     },
+    "category_characters/kid_1": {
+      "name": "kid_1",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 237,
+        "y": 348
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:47 UTC",
+      "pngLastModified": "2017-04-18 20:16:48 UTC",
+      "version": "tjiOYq3G34_U8rLEQCw3i4jxedtiADVK",
+      "sourceUrl": "/api/v1/animation-library/tjiOYq3G34_U8rLEQCw3i4jxedtiADVK/category_characters/kid_1.png",
+      "sourceSize": {
+        "x": 237,
+        "y": 348
+      }
+    },
+    "category_characters/kid_10": {
+      "name": "kid_10",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 234,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:10 UTC",
+      "pngLastModified": "2017-04-18 20:17:11 UTC",
+      "version": "tyoUa6.gSjRbO3PumZjb4aP3aW.DRZeR",
+      "sourceUrl": "/api/v1/animation-library/tyoUa6.gSjRbO3PumZjb4aP3aW.DRZeR/category_characters/kid_10.png",
+      "sourceSize": {
+        "x": 234,
+        "y": 300
+      }
+    },
+    "category_characters/kid_11": {
+      "name": "kid_11",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 237,
+        "y": 353
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:13 UTC",
+      "pngLastModified": "2017-04-18 20:17:14 UTC",
+      "version": "27xo.TyusmKNBauiZvCtJ5HNSblhEiWx",
+      "sourceUrl": "/api/v1/animation-library/27xo.TyusmKNBauiZvCtJ5HNSblhEiWx/category_characters/kid_11.png",
+      "sourceSize": {
+        "x": 237,
+        "y": 353
+      }
+    },
+    "category_characters/kid_11_side": {
+      "name": "kid_11_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 206,
+        "y": 347
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:11 UTC",
+      "pngLastModified": "2017-04-18 20:17:12 UTC",
+      "version": "azLxtcjMiY6xmoCN8Ud6zmmIqwacB308",
+      "sourceUrl": "/api/v1/animation-library/azLxtcjMiY6xmoCN8Ud6zmmIqwacB308/category_characters/kid_11_side.png",
+      "sourceSize": {
+        "x": 206,
+        "y": 347
+      }
+    },
+    "category_characters/kid_12": {
+      "name": "kid_12",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 242,
+        "y": 339
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:16 UTC",
+      "pngLastModified": "2017-04-18 20:17:16 UTC",
+      "version": "QBayF9vdhd1mQBPqRp1VqunB8NYf4cLX",
+      "sourceUrl": "/api/v1/animation-library/QBayF9vdhd1mQBPqRp1VqunB8NYf4cLX/category_characters/kid_12.png",
+      "sourceSize": {
+        "x": 242,
+        "y": 339
+      }
+    },
+    "category_characters/kid_12_side": {
+      "name": "kid_12_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 206,
+        "y": 341
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:14 UTC",
+      "pngLastModified": "2017-04-18 20:17:15 UTC",
+      "version": "rKm9fti9a3G.5huPUJBFxEXfPLHrwvow",
+      "sourceUrl": "/api/v1/animation-library/rKm9fti9a3G.5huPUJBFxEXfPLHrwvow/category_characters/kid_12_side.png",
+      "sourceSize": {
+        "x": 206,
+        "y": 341
+      }
+    },
+    "category_characters/kid_13": {
+      "name": "kid_13",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 186,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:17 UTC",
+      "pngLastModified": "2017-04-18 20:17:18 UTC",
+      "version": "2pKEnUoTCNDPc4Fq5vwqAx0FggQGWPtB",
+      "sourceUrl": "/api/v1/animation-library/2pKEnUoTCNDPc4Fq5vwqAx0FggQGWPtB/category_characters/kid_13.png",
+      "sourceSize": {
+        "x": 186,
+        "y": 300
+      }
+    },
+    "category_characters/kid_14": {
+      "name": "kid_14",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 268
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:20 UTC",
+      "pngLastModified": "2017-04-18 20:17:21 UTC",
+      "version": "Lvfg6SgEq4hiLt1OmfMF_AMRPk1ph08_",
+      "sourceUrl": "/api/v1/animation-library/Lvfg6SgEq4hiLt1OmfMF_AMRPk1ph08_/category_characters/kid_14.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 268
+      }
+    },
+    "category_characters/kid_14_side": {
+      "name": "kid_14_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 291
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:19 UTC",
+      "pngLastModified": "2017-04-18 20:17:20 UTC",
+      "version": "SzxNhyAUVp2eENqF4HsR7kHx9fzlL46l",
+      "sourceUrl": "/api/v1/animation-library/SzxNhyAUVp2eENqF4HsR7kHx9fzlL46l/category_characters/kid_14_side.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 291
+      }
+    },
+    "category_characters/kid_15": {
+      "name": "kid_15",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 245,
+        "y": 380
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:25 UTC",
+      "pngLastModified": "2017-04-18 20:17:26 UTC",
+      "version": "EmBCqmn.81QEqwee6WGv.ODG.T.A_O8M",
+      "sourceUrl": "/api/v1/animation-library/EmBCqmn.81QEqwee6WGv.ODG.T.A_O8M/category_characters/kid_15.png",
+      "sourceSize": {
+        "x": 245,
+        "y": 380
+      }
+    },
+    "category_characters/kid_15_side": {
+      "name": "kid_15_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 213,
+        "y": 380
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:22 UTC",
+      "pngLastModified": "2017-04-18 20:17:23 UTC",
+      "version": "WDM2BU9SMSlqdktxkwHiVTN_vxQbe0hi",
+      "sourceUrl": "/api/v1/animation-library/WDM2BU9SMSlqdktxkwHiVTN_vxQbe0hi/category_characters/kid_15_side.png",
+      "sourceSize": {
+        "x": 213,
+        "y": 380
+      }
+    },
+    "category_characters/kid_15_walking": {
+      "name": "kid_15_walking",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 217,
+        "y": 380
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:23 UTC",
+      "pngLastModified": "2017-04-18 20:17:24 UTC",
+      "version": "Up0S.Xhlklyr47N71VMjLkLdmsQwoncI",
+      "sourceUrl": "/api/v1/animation-library/Up0S.Xhlklyr47N71VMjLkLdmsQwoncI/category_characters/kid_15_walking.png",
+      "sourceSize": {
+        "x": 217,
+        "y": 380
+      }
+    },
+    "category_characters/kid_16": {
+      "name": "kid_16",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 169,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:30 UTC",
+      "pngLastModified": "2017-04-18 20:17:31 UTC",
+      "version": "Rhl1a_u37jbwpemsNUicHjqYO2PqKxN9",
+      "sourceUrl": "/api/v1/animation-library/Rhl1a_u37jbwpemsNUicHjqYO2PqKxN9/category_characters/kid_16.png",
+      "sourceSize": {
+        "x": 169,
+        "y": 300
+      }
+    },
+    "category_characters/kid_16_walking": {
+      "name": "kid_16_walking",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 175,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:26 UTC",
+      "pngLastModified": "2017-04-18 20:17:27 UTC",
+      "version": "ZLnH9X7QL1ArOkIDGwhiezMuqB9R.2kc",
+      "sourceUrl": "/api/v1/animation-library/ZLnH9X7QL1ArOkIDGwhiezMuqB9R.2kc/category_characters/kid_16_walking.png",
+      "sourceSize": {
+        "x": 175,
+        "y": 300
+      }
+    },
+    "category_characters/kid_16_waving": {
+      "name": "kid_16_waving",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 222,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:28 UTC",
+      "pngLastModified": "2017-04-18 20:17:29 UTC",
+      "version": "bMi2FWHM7yPBvPWKOh3lBsTGoeLvTJe1",
+      "sourceUrl": "/api/v1/animation-library/bMi2FWHM7yPBvPWKOh3lBsTGoeLvTJe1/category_characters/kid_16_waving.png",
+      "sourceSize": {
+        "x": 222,
+        "y": 300
+      }
+    },
+    "category_characters/kid_17": {
+      "name": "kid_17",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 208,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:31 UTC",
+      "pngLastModified": "2017-04-18 20:17:32 UTC",
+      "version": "ATFL.ttj1OCPNZPL2FLCRGp2Ig1vnCsa",
+      "sourceUrl": "/api/v1/animation-library/ATFL.ttj1OCPNZPL2FLCRGp2Ig1vnCsa/category_characters/kid_17.png",
+      "sourceSize": {
+        "x": 208,
+        "y": 300
+      }
+    },
+    "category_characters/kid_18": {
+      "name": "kid_18",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 287,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:33 UTC",
+      "pngLastModified": "2017-04-18 20:17:33 UTC",
+      "version": "efIHgQovIofFB71xb_VVf5ut9oLwVuHV",
+      "sourceUrl": "/api/v1/animation-library/efIHgQovIofFB71xb_VVf5ut9oLwVuHV/category_characters/kid_18.png",
+      "sourceSize": {
+        "x": 287,
+        "y": 400
+      }
+    },
+    "category_characters/kid_19": {
+      "name": "kid_19",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 265
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:25:50 UTC",
+      "pngLastModified": "2017-04-18 20:17:38 UTC",
+      "version": "oN1Jjg4hX49WedK62dyJoPXTV.bDI4NO",
+      "sourceUrl": "/api/v1/animation-library/oN1Jjg4hX49WedK62dyJoPXTV.bDI4NO/category_characters/kid_19.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 265
+      }
+    },
+    "category_characters/kid_19_side": {
+      "name": "kid_19_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 297
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:25:49 UTC",
+      "pngLastModified": "2017-04-18 20:17:36 UTC",
+      "version": "i43lCz_VPxsqJHsreV7piXNUVfibaU5L",
+      "sourceUrl": "/api/v1/animation-library/i43lCz_VPxsqJHsreV7piXNUVfibaU5L/category_characters/kid_19_side.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 297
+      }
+    },
+    "category_characters/kid_1_side": {
+      "name": "kid_1_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 236,
+        "y": 337
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:45 UTC",
+      "pngLastModified": "2017-04-18 20:16:46 UTC",
+      "version": "R4xI293UFr7EyvRk6dX7k3qmgNZaBcTI",
+      "sourceUrl": "/api/v1/animation-library/R4xI293UFr7EyvRk6dX7k3qmgNZaBcTI/category_characters/kid_1_side.png",
+      "sourceSize": {
+        "x": 236,
+        "y": 337
+      }
+    },
+    "category_characters/kid_2": {
+      "name": "kid_2",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 293,
+        "y": 412
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:53 UTC",
+      "pngLastModified": "2017-04-18 20:16:53 UTC",
+      "version": "PmmZe6fr77iZI3KNiTpFXP_XRJSTiXk7",
+      "sourceUrl": "/api/v1/animation-library/PmmZe6fr77iZI3KNiTpFXP_XRJSTiXk7/category_characters/kid_2.png",
+      "sourceSize": {
+        "x": 293,
+        "y": 412
+      }
+    },
+    "category_characters/kid_20": {
+      "name": "kid_20",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 200,
+        "y": 272
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:38 UTC",
+      "pngLastModified": "2017-04-18 20:17:39 UTC",
+      "version": "xHJp5inuPegKCLLCAkKR1vbSl7RDqyXE",
+      "sourceUrl": "/api/v1/animation-library/xHJp5inuPegKCLLCAkKR1vbSl7RDqyXE/category_characters/kid_20.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 272
+      }
+    },
+    "category_characters/kid_21": {
+      "name": "kid_21",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 196,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:40 UTC",
+      "pngLastModified": "2017-04-18 20:17:41 UTC",
+      "version": "7MdzyCK5kgbmOO3FyrGgEUQYb5x1WM0I",
+      "sourceUrl": "/api/v1/animation-library/7MdzyCK5kgbmOO3FyrGgEUQYb5x1WM0I/category_characters/kid_21.png",
+      "sourceSize": {
+        "x": 196,
+        "y": 300
+      }
+    },
+    "category_characters/kid_22": {
+      "name": "kid_22",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 239,
+        "y": 350
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:43 UTC",
+      "pngLastModified": "2017-04-18 20:17:44 UTC",
+      "version": "G6qzo5CJVPF.JQOXW9L97pt0DkEIMDhl",
+      "sourceUrl": "/api/v1/animation-library/G6qzo5CJVPF.JQOXW9L97pt0DkEIMDhl/category_characters/kid_22.png",
+      "sourceSize": {
+        "x": 239,
+        "y": 350
+      }
+    },
+    "category_characters/kid_22_side": {
+      "name": "kid_22_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 206,
+        "y": 344
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:41 UTC",
+      "pngLastModified": "2017-04-18 20:17:42 UTC",
+      "version": "J7d6ml3N_l9N5eI8CKmM5KVwaMQoaNL8",
+      "sourceUrl": "/api/v1/animation-library/J7d6ml3N_l9N5eI8CKmM5KVwaMQoaNL8/category_characters/kid_22_side.png",
+      "sourceSize": {
+        "x": 206,
+        "y": 344
+      }
+    },
+    "category_characters/kid_23": {
+      "name": "kid_23",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 194,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:45 UTC",
+      "pngLastModified": "2017-04-18 20:17:46 UTC",
+      "version": "Y9YlMrn0PIT2MyHZnMiAtJxW9A1jwuae",
+      "sourceUrl": "/api/v1/animation-library/Y9YlMrn0PIT2MyHZnMiAtJxW9A1jwuae/category_characters/kid_23.png",
+      "sourceSize": {
+        "x": 194,
+        "y": 300
+      }
+    },
+    "category_characters/kid_24": {
+      "name": "kid_24",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 181,
+        "y": 287
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:46 UTC",
+      "pngLastModified": "2017-04-18 20:17:47 UTC",
+      "version": "Fy6ImNiiH8CVidA_ioJee0Ezpf6UXo8t",
+      "sourceUrl": "/api/v1/animation-library/Fy6ImNiiH8CVidA_ioJee0Ezpf6UXo8t/category_characters/kid_24.png",
+      "sourceSize": {
+        "x": 181,
+        "y": 287
+      }
+    },
+    "category_characters/kid_25": {
+      "name": "kid_25",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 192,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:48 UTC",
+      "pngLastModified": "2017-04-18 20:17:49 UTC",
+      "version": "j9lV7QPMjucz80Kv_1RdPuh2wFgXU18x",
+      "sourceUrl": "/api/v1/animation-library/j9lV7QPMjucz80Kv_1RdPuh2wFgXU18x/category_characters/kid_25.png",
+      "sourceSize": {
+        "x": 192,
+        "y": 300
+      }
+    },
+    "category_characters/kid_26": {
+      "name": "kid_26",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 239,
+        "y": 360
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:53 UTC",
+      "pngLastModified": "2017-04-18 20:17:53 UTC",
+      "version": "AjyELaF6cvhqlI0dwIi.DYkheYP_MMom",
+      "sourceUrl": "/api/v1/animation-library/AjyELaF6cvhqlI0dwIi.DYkheYP_MMom/category_characters/kid_26.png",
+      "sourceSize": {
+        "x": 239,
+        "y": 360
+      }
+    },
+    "category_characters/kid_26_side": {
+      "name": "kid_26_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 225,
+        "y": 375
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:50 UTC",
+      "pngLastModified": "2017-04-18 20:17:51 UTC",
+      "version": "kyr8qEm1zuw_knN6.PhbMB_AQhJ2C68b",
+      "sourceUrl": "/api/v1/animation-library/kyr8qEm1zuw_knN6.PhbMB_AQhJ2C68b/category_characters/kid_26_side.png",
+      "sourceSize": {
+        "x": 225,
+        "y": 375
+      }
+    },
+    "category_characters/kid_27": {
+      "name": "kid_27",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 165,
+        "y": 258
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:56 UTC",
+      "pngLastModified": "2017-04-18 20:17:56 UTC",
+      "version": "dhXBLjiAfq8aYaRtn4yv8Ln2x26.xA6z",
+      "sourceUrl": "/api/v1/animation-library/dhXBLjiAfq8aYaRtn4yv8Ln2x26.xA6z/category_characters/kid_27.png",
+      "sourceSize": {
+        "x": 165,
+        "y": 258
+      }
+    },
+    "category_characters/kid_27_side": {
+      "name": "kid_27_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 162,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:54 UTC",
+      "pngLastModified": "2017-04-18 20:17:55 UTC",
+      "version": "zatn_QNr.5qM7NDDWTPoyVx42JUz7ZgL",
+      "sourceUrl": "/api/v1/animation-library/zatn_QNr.5qM7NDDWTPoyVx42JUz7ZgL/category_characters/kid_27_side.png",
+      "sourceSize": {
+        "x": 162,
+        "y": 300
+      }
+    },
+    "category_characters/kid_28": {
+      "name": "kid_28",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 192,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:57 UTC",
+      "pngLastModified": "2017-04-18 20:17:58 UTC",
+      "version": "oULfDt2.icQYfyC9h_aGyBdzVPbmlZmJ",
+      "sourceUrl": "/api/v1/animation-library/oULfDt2.icQYfyC9h_aGyBdzVPbmlZmJ/category_characters/kid_28.png",
+      "sourceSize": {
+        "x": 192,
+        "y": 300
+      }
+    },
+    "category_characters/kid_29": {
+      "name": "kid_29",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 246
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:59 UTC",
+      "pngLastModified": "2017-04-18 20:17:59 UTC",
+      "version": "LWEjL3swVG7B0A7rTboxl2Z5IZHJ7qXF",
+      "sourceUrl": "/api/v1/animation-library/LWEjL3swVG7B0A7rTboxl2Z5IZHJ7qXF/category_characters/kid_29.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 246
+      }
+    },
+    "category_characters/kid_2_right": {
+      "name": "kid_2_right",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 248,
+        "y": 403
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:49 UTC",
+      "pngLastModified": "2017-04-18 20:16:50 UTC",
+      "version": "4s4EBxdLlcyYE1mslnLdpvMnL_6aBU5w",
+      "sourceUrl": "/api/v1/animation-library/4s4EBxdLlcyYE1mslnLdpvMnL_6aBU5w/category_characters/kid_2_right.png",
+      "sourceSize": {
+        "x": 248,
+        "y": 403
+      }
+    },
+    "category_characters/kid_2_walking": {
+      "name": "kid_2_walking",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 252,
+        "y": 422
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:50 UTC",
+      "pngLastModified": "2017-04-18 20:16:52 UTC",
+      "version": ".QvNPEeACo_eN_iXm2rUyutLQPIV8jtY",
+      "sourceUrl": "/api/v1/animation-library/.QvNPEeACo_eN_iXm2rUyutLQPIV8jtY/category_characters/kid_2_walking.png",
+      "sourceSize": {
+        "x": 252,
+        "y": 422
+      }
+    },
+    "category_characters/kid_3": {
+      "name": "kid_3",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 200,
+        "y": 253
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:54 UTC",
+      "pngLastModified": "2017-04-18 20:16:55 UTC",
+      "version": "ID1a07_r0kah1PdI_j0s1Rjezf_zYOdR",
+      "sourceUrl": "/api/v1/animation-library/ID1a07_r0kah1PdI_j0s1Rjezf_zYOdR/category_characters/kid_3.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 253
+      }
+    },
+    "category_characters/kid_30": {
+      "name": "kid_30",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 235,
+        "y": 341
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:04 UTC",
+      "pngLastModified": "2017-04-18 20:18:06 UTC",
+      "version": "hLx1SxAtFA1HfbV.BUeRiegZDxQrMb0Z",
+      "sourceUrl": "/api/v1/animation-library/hLx1SxAtFA1HfbV.BUeRiegZDxQrMb0Z/category_characters/kid_30.png",
+      "sourceSize": {
+        "x": 235,
+        "y": 341
+      }
+    },
+    "category_characters/kid_30_side": {
+      "name": "kid_30_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 204,
+        "y": 343
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:00 UTC",
+      "pngLastModified": "2017-04-18 20:18:01 UTC",
+      "version": "jKdzRfQYd29Tkthyux.TAduVSPN94ozL",
+      "sourceUrl": "/api/v1/animation-library/jKdzRfQYd29Tkthyux.TAduVSPN94ozL/category_characters/kid_30_side.png",
+      "sourceSize": {
+        "x": 204,
+        "y": 343
+      }
+    },
+    "category_characters/kid_31": {
+      "name": "kid_31",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 249
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:07 UTC",
+      "pngLastModified": "2017-04-18 20:18:08 UTC",
+      "version": "dKT5w53r3wT.fQSWTOTJR4FNylSndfSo",
+      "sourceUrl": "/api/v1/animation-library/dKT5w53r3wT.fQSWTOTJR4FNylSndfSo/category_characters/kid_31.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 249
+      }
+    },
+    "category_characters/kid_32": {
+      "name": "kid_32",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 267
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:09 UTC",
+      "pngLastModified": "2017-04-18 20:18:10 UTC",
+      "version": "7AzmuUpIqFSaf1FDAt4B8D56I15jJT4K",
+      "sourceUrl": "/api/v1/animation-library/7AzmuUpIqFSaf1FDAt4B8D56I15jJT4K/category_characters/kid_32.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 267
+      }
+    },
+    "category_characters/kid_33": {
+      "name": "kid_33",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 251
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:12 UTC",
+      "pngLastModified": "2017-04-18 20:18:13 UTC",
+      "version": "C1._4tjeAZ3ceH1xMnbps2fQyUrRSJEU",
+      "sourceUrl": "/api/v1/animation-library/C1._4tjeAZ3ceH1xMnbps2fQyUrRSJEU/category_characters/kid_33.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 251
+      }
+    },
+    "category_characters/kid_34": {
+      "name": "kid_34",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 238,
+        "y": 359
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:17 UTC",
+      "pngLastModified": "2017-04-18 20:18:18 UTC",
+      "version": "9Y2Poq7bzjP3or6HNqfYx.BTVsV1izjU",
+      "sourceUrl": "/api/v1/animation-library/9Y2Poq7bzjP3or6HNqfYx.BTVsV1izjU/category_characters/kid_34.png",
+      "sourceSize": {
+        "x": 238,
+        "y": 359
+      }
+    },
+    "category_characters/kid_34_excited": {
+      "name": "kid_34_excited",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 324,
+        "y": 372
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:13 UTC",
+      "pngLastModified": "2017-04-18 20:18:14 UTC",
+      "version": "ha9vFBJkW3V3uwigeqRS1T1EG4IVXiTT",
+      "sourceUrl": "/api/v1/animation-library/ha9vFBJkW3V3uwigeqRS1T1EG4IVXiTT/category_characters/kid_34_excited.png",
+      "sourceSize": {
+        "x": 324,
+        "y": 372
+      }
+    },
+    "category_characters/kid_34_side": {
+      "name": "kid_34_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 202,
+        "y": 357
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:15 UTC",
+      "pngLastModified": "2017-04-18 20:18:16 UTC",
+      "version": "FkyLstCMtqeTVoOYF5WrEOKohm0.H0eE",
+      "sourceUrl": "/api/v1/animation-library/FkyLstCMtqeTVoOYF5WrEOKohm0.H0eE/category_characters/kid_34_side.png",
+      "sourceSize": {
+        "x": 202,
+        "y": 357
+      }
+    },
+    "category_characters/kid_35": {
+      "name": "kid_35",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 316
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:18 UTC",
+      "pngLastModified": "2017-04-18 20:18:19 UTC",
+      "version": "0olPwyYLVDKbtu5FMfVeSsIOCIe9C0q2",
+      "sourceUrl": "/api/v1/animation-library/0olPwyYLVDKbtu5FMfVeSsIOCIe9C0q2/category_characters/kid_35.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 316
+      }
+    },
+    "category_characters/kid_36": {
+      "name": "kid_36",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 239,
+        "y": 340
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:22 UTC",
+      "pngLastModified": "2017-04-18 20:18:22 UTC",
+      "version": "fqQhpw8ZtI_5RDpMbMkTfAtw9s5q2DcJ",
+      "sourceUrl": "/api/v1/animation-library/fqQhpw8ZtI_5RDpMbMkTfAtw9s5q2DcJ/category_characters/kid_36.png",
+      "sourceSize": {
+        "x": 239,
+        "y": 340
+      }
+    },
+    "category_characters/kid_36_side": {
+      "name": "kid_36_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 225,
+        "y": 335
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:20 UTC",
+      "pngLastModified": "2017-04-18 20:18:21 UTC",
+      "version": "q.T5foNdzPoxH10I4ImavanHY.nSkxUQ",
+      "sourceUrl": "/api/v1/animation-library/q.T5foNdzPoxH10I4ImavanHY.nSkxUQ/category_characters/kid_36_side.png",
+      "sourceSize": {
+        "x": 225,
+        "y": 335
+      }
+    },
+    "category_characters/kid_37": {
+      "name": "kid_37",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 200,
+        "y": 247
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:23 UTC",
+      "pngLastModified": "2017-04-18 20:18:24 UTC",
+      "version": "YPUbkJaYaKcfYbRvI4ABxB6rB5GorAUc",
+      "sourceUrl": "/api/v1/animation-library/YPUbkJaYaKcfYbRvI4ABxB6rB5GorAUc/category_characters/kid_37.png",
+      "sourceSize": {
+        "x": 200,
+        "y": 247
+      }
+    },
+    "category_characters/kid_38": {
+      "name": "kid_38",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 190,
+        "y": 288
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:24 UTC",
+      "pngLastModified": "2017-04-18 20:18:26 UTC",
+      "version": "Y.TQF72uhNrf3egCSzNP2U3GbrTDVtnt",
+      "sourceUrl": "/api/v1/animation-library/Y.TQF72uhNrf3egCSzNP2U3GbrTDVtnt/category_characters/kid_38.png",
+      "sourceSize": {
+        "x": 190,
+        "y": 288
+      }
+    },
+    "category_characters/kid_39": {
+      "name": "kid_39",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 236,
+        "y": 343
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:28 UTC",
+      "pngLastModified": "2017-04-18 20:18:29 UTC",
+      "version": "0p3eD1EZFykFOk.sy85fk02u4PL_vjcE",
+      "sourceUrl": "/api/v1/animation-library/0p3eD1EZFykFOk.sy85fk02u4PL_vjcE/category_characters/kid_39.png",
+      "sourceSize": {
+        "x": 236,
+        "y": 343
+      }
+    },
+    "category_characters/kid_39_side": {
+      "name": "kid_39_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 203,
+        "y": 344
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:26 UTC",
+      "pngLastModified": "2017-04-18 20:18:27 UTC",
+      "version": "sDvZCXt5VCK0DkEKutmdTG8C0AzIQg4N",
+      "sourceUrl": "/api/v1/animation-library/sDvZCXt5VCK0DkEKutmdTG8C0AzIQg4N/category_characters/kid_39_side.png",
+      "sourceSize": {
+        "x": 203,
+        "y": 344
+      }
+    },
+    "category_characters/kid_4": {
+      "name": "kid_4",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 232,
+        "y": 327
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:57 UTC",
+      "pngLastModified": "2017-04-18 20:16:58 UTC",
+      "version": "gssK_VIyUT9pAZkFGJ3v.K14YzuiXLn4",
+      "sourceUrl": "/api/v1/animation-library/gssK_VIyUT9pAZkFGJ3v.K14YzuiXLn4/category_characters/kid_4.png",
+      "sourceSize": {
+        "x": 232,
+        "y": 327
+      }
+    },
+    "category_characters/kid_40": {
+      "name": "kid_40",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 177,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:31 UTC",
+      "pngLastModified": "2017-04-18 20:18:32 UTC",
+      "version": "qVonD9NKonCKH8AjnZdTMpAARTouw31L",
+      "sourceUrl": "/api/v1/animation-library/qVonD9NKonCKH8AjnZdTMpAARTouw31L/category_characters/kid_40.png",
+      "sourceSize": {
+        "x": 177,
+        "y": 300
+      }
+    },
+    "category_characters/kid_41": {
+      "name": "kid_41",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 210,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:33 UTC",
+      "pngLastModified": "2017-04-18 20:18:35 UTC",
+      "version": "rR91R.Zp1paofwjIppp9yYOAzaZtdCL3",
+      "sourceUrl": "/api/v1/animation-library/rR91R.Zp1paofwjIppp9yYOAzaZtdCL3/category_characters/kid_41.png",
+      "sourceSize": {
+        "x": 210,
+        "y": 300
+      }
+    },
+    "category_characters/kid_42": {
+      "name": "kid_42",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 243,
+        "y": 331
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:38 UTC",
+      "pngLastModified": "2017-04-18 20:18:39 UTC",
+      "version": "sosjbiStMaeZxtsdTIaHm84sYBTjn.SV",
+      "sourceUrl": "/api/v1/animation-library/sosjbiStMaeZxtsdTIaHm84sYBTjn.SV/category_characters/kid_42.png",
+      "sourceSize": {
+        "x": 243,
+        "y": 331
+      }
+    },
+    "category_characters/kid_42_side": {
+      "name": "kid_42_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 206,
+        "y": 330
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:35 UTC",
+      "pngLastModified": "2017-04-18 20:18:36 UTC",
+      "version": "ukGUj99ykmF9lZOMMYdu7xL12l1XLxC9",
+      "sourceUrl": "/api/v1/animation-library/ukGUj99ykmF9lZOMMYdu7xL12l1XLxC9/category_characters/kid_42_side.png",
+      "sourceSize": {
+        "x": 206,
+        "y": 330
+      }
+    },
+    "category_characters/kid_43_sitting": {
+      "name": "kid_43_sitting",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 274
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:40 UTC",
+      "pngLastModified": "2017-04-18 20:18:41 UTC",
+      "version": "OLveA4INPPqBWq_N2C0JSRRlh_uiAaef",
+      "sourceUrl": "/api/v1/animation-library/OLveA4INPPqBWq_N2C0JSRRlh_uiAaef/category_characters/kid_43_sitting.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 274
+      }
+    },
+    "category_characters/kid_44_suit": {
+      "name": "kid_44_suit",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 152,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:42 UTC",
+      "pngLastModified": "2017-04-18 20:18:43 UTC",
+      "version": "6Ohzj9cAysmgKz1.c7bgi9jPwN3JthC7",
+      "sourceUrl": "/api/v1/animation-library/6Ohzj9cAysmgKz1.c7bgi9jPwN3JthC7/category_characters/kid_44_suit.png",
+      "sourceSize": {
+        "x": 152,
+        "y": 300
+      }
+    },
+    "category_characters/kid_45_suit": {
+      "name": "kid_45_suit",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:44 UTC",
+      "pngLastModified": "2017-04-18 20:18:46 UTC",
+      "version": "Rw6zhRjJhwRyeVe.ETqKyM7LQJ6ew8dI",
+      "sourceUrl": "/api/v1/animation-library/Rw6zhRjJhwRyeVe.ETqKyM7LQJ6ew8dI/category_characters/kid_45_suit.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_characters/kid_46": {
+      "name": "kid_46",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 192,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:51 UTC",
+      "pngLastModified": "2017-04-18 20:18:52 UTC",
+      "version": "S6Fhdg_Y0SFrccabQVAQPoyUEjthe9QL",
+      "sourceUrl": "/api/v1/animation-library/S6Fhdg_Y0SFrccabQVAQPoyUEjthe9QL/category_characters/kid_46.png",
+      "sourceSize": {
+        "x": 192,
+        "y": 257
+      }
+    },
+    "category_characters/kid_46_left": {
+      "name": "kid_46_left",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 171,
+        "y": 255
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:47 UTC",
+      "pngLastModified": "2017-04-18 20:18:49 UTC",
+      "version": "8reLJfOV86HuXUSDI0UBNO1H2cZOrEVb",
+      "sourceUrl": "/api/v1/animation-library/8reLJfOV86HuXUSDI0UBNO1H2cZOrEVb/category_characters/kid_46_left.png",
+      "sourceSize": {
+        "x": 171,
+        "y": 255
+      }
+    },
+    "category_characters/kid_46_side": {
+      "name": "kid_46_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 194,
+        "y": 256
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:49 UTC",
+      "pngLastModified": "2017-04-18 20:18:50 UTC",
+      "version": "iRUm1fXH58T2bk5KBq3.VlE2kr5VMDmG",
+      "sourceUrl": "/api/v1/animation-library/iRUm1fXH58T2bk5KBq3.VlE2kr5VMDmG/category_characters/kid_46_side.png",
+      "sourceSize": {
+        "x": 194,
+        "y": 256
+      }
+    },
+    "category_characters/kid_4_side": {
+      "name": "kid_4_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 232,
+        "y": 340
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:56 UTC",
+      "pngLastModified": "2017-04-18 20:16:57 UTC",
+      "version": "h19uAkE38LybFyGg.7ZntAsL2rUNzk4z",
+      "sourceUrl": "/api/v1/animation-library/h19uAkE38LybFyGg.7ZntAsL2rUNzk4z/category_characters/kid_4_side.png",
+      "sourceSize": {
+        "x": 232,
+        "y": 340
+      }
+    },
+    "category_characters/kid_6": {
+      "name": "kid_6",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 170,
+        "y": 310
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:01 UTC",
+      "pngLastModified": "2017-04-18 20:17:02 UTC",
+      "version": "HVR0kzP7ho1Hv8lRWLfyGSU.zis5sYb5",
+      "sourceUrl": "/api/v1/animation-library/HVR0kzP7ho1Hv8lRWLfyGSU.zis5sYb5/category_characters/kid_6.png",
+      "sourceSize": {
+        "x": 170,
+        "y": 310
+      }
+    },
+    "category_characters/kid_6_sitting": {
+      "name": "kid_6_sitting",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 190,
+        "y": 274
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:16:59 UTC",
+      "pngLastModified": "2017-04-18 20:17:00 UTC",
+      "version": "gEzR_BLS6sGN9sSlv_ASwcI9EBBb2ZIi",
+      "sourceUrl": "/api/v1/animation-library/gEzR_BLS6sGN9sSlv_ASwcI9EBBb2ZIi/category_characters/kid_6_sitting.png",
+      "sourceSize": {
+        "x": 190,
+        "y": 274
+      }
+    },
+    "category_characters/kid_7": {
+      "name": "kid_7",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 291,
+        "y": 415
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:03 UTC",
+      "pngLastModified": "2017-04-18 20:17:05 UTC",
+      "version": "eJeyksVcE8bgMHUE0WtDegb0fT6791Ai",
+      "sourceUrl": "/api/v1/animation-library/eJeyksVcE8bgMHUE0WtDegb0fT6791Ai/category_characters/kid_7.png",
+      "sourceSize": {
+        "x": 291,
+        "y": 415
+      }
+    },
+    "category_characters/kid_8": {
+      "name": "kid_8",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 239,
+        "y": 342
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:06 UTC",
+      "pngLastModified": "2017-04-18 20:17:07 UTC",
+      "version": "KPatbmDgzUqt7O_rAKxby8zQwaqNA5xS",
+      "sourceUrl": "/api/v1/animation-library/KPatbmDgzUqt7O_rAKxby8zQwaqNA5xS/category_characters/kid_8.png",
+      "sourceSize": {
+        "x": 239,
+        "y": 342
+      }
+    },
+    "category_characters/kid_9": {
+      "name": "kid_9",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 273,
+        "y": 395
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:17:07 UTC",
+      "pngLastModified": "2017-04-18 20:17:08 UTC",
+      "version": "IoBPEa9WaX4ucU9ifP_uWQBH3IS0N9A1",
+      "sourceUrl": "/api/v1/animation-library/IoBPEa9WaX4ucU9ifP_uWQBH3IS0N9A1/category_characters/kid_9.png",
+      "sourceSize": {
+        "x": 273,
+        "y": 395
+      }
+    },
+    "category_characters/kid_at_desk": {
+      "name": "kid_at_desk",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 346,
+        "y": 349
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:53 UTC",
+      "pngLastModified": "2017-04-18 20:18:54 UTC",
+      "version": "OfJf20pSnVcegbHIjmxe9wI3j7Wy0uBd",
+      "sourceUrl": "/api/v1/animation-library/OfJf20pSnVcegbHIjmxe9wI3j7Wy0uBd/category_characters/kid_at_desk.png",
+      "sourceSize": {
+        "x": 346,
+        "y": 349
+      }
+    },
+    "category_characters/kid_outline": {
+      "name": "kid_outline",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 250
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:56 UTC",
+      "pngLastModified": "2017-04-18 20:18:57 UTC",
+      "version": "6msFqtWa31p1U8FsFq.brdR5PvqPEdtz",
+      "sourceUrl": "/api/v1/animation-library/6msFqtWa31p1U8FsFq.brdR5PvqPEdtz/category_characters/kid_outline.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 250
+      }
+    },
+    "category_characters/kid_outline_side": {
+      "name": "kid_outline_side",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 180,
+        "y": 295
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-18 20:18:54 UTC",
+      "pngLastModified": "2017-04-18 20:18:55 UTC",
+      "version": "AhdjLW4Mb1cBfeQOHMAJGoqD3ps_fZS7",
+      "sourceUrl": "/api/v1/animation-library/AhdjLW4Mb1cBfeQOHMAJGoqD3ps_fZS7/category_characters/kid_outline_side.png",
+      "sourceSize": {
+        "x": 180,
+        "y": 295
+      }
+    },
     "category_characters/little_robot": {
       "name": "little_robot",
       "frameCount": 1,
@@ -14844,6 +16140,15 @@
     "alienyellow_walk": [
       "category_characters/alienYellow_walk"
     ],
+    "angry": [
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side"
+    ],
     "animals": [
       "category_animals/bee",
       "category_animals/bunny1",
@@ -14896,6 +16201,10 @@
       "category_animals/snake_square",
       "category_animals/snake_token",
       "category_characters/springMan"
+    ],
+    "annoyed": [
+      "category_characters/kid_11",
+      "category_characters/kid_11_side"
     ],
     "apple": [
       "category_food/apple"
@@ -14955,6 +16264,11 @@
     ],
     "baby_robot": [
       "category_characters/baby_robot"
+    ],
+    "backpack": [
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving"
     ],
     "bandage": [
       "category_generic_items/bandage"
@@ -15031,6 +16345,10 @@
       "category_vehicles/playerShip3_orange",
       "category_vehicles/playerShip3_red"
     ],
+    "blank": [
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
+    ],
     "blender": [
       "category_generic_items/blender",
       "category_tools/blender"
@@ -15059,6 +16377,9 @@
     "blue_robot_2": [
       "category_characters/blue_robot_2"
     ],
+    "blush": [
+      "category_characters/kid_9"
+    ],
     "boat": [
       "category_vehicles/boat"
     ],
@@ -15083,6 +16404,80 @@
     ],
     "box2": [
       "category_characters/box2"
+    ],
+    "boy": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
     ],
     "bread": [
       "category_food/bread"
@@ -15846,6 +17241,78 @@
       "category_characters/green_monser",
       "category_characters/green_robot",
       "category_characters/happy_critter",
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side",
       "category_characters/little_robot",
       "category_characters/monster_in_case",
       "category_characters/orange_monster",
@@ -16890,6 +18357,84 @@
       "category_gameplay/ufoRed",
       "category_gameplay/ufoYellow"
     ],
+    "color_in": [
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
+    ],
+    "comic": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
+    ],
     "compass": [
       "category_generic_items/compass"
     ],
@@ -16963,6 +18508,9 @@
     "computer_tower_light": [
       "category_generic_items/computer_tower_light"
     ],
+    "concerned": [
+      "category_characters/kid_35"
+    ],
     "continuous_grass": [
       "category_backgrounds/continuous_grass"
     ],
@@ -17020,6 +18568,9 @@
     "crutch": [
       "category_generic_items/crutch",
       "category_tools/crutch"
+    ],
+    "crying": [
+      "category_characters/kid_18"
     ],
     "cucumber": [
       "category_food/cucumber"
@@ -17911,6 +19462,80 @@
     "giraffe_token": [
       "category_animals/giraffe_token"
     ],
+    "girl": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
+    ],
     "glass": [
       "category_obstacles/glass"
     ],
@@ -18167,6 +19792,22 @@
       "category_tools/wrench",
       "category_tools/wrench_simple"
     ],
+    "happy": [
+      "category_characters/kid_10",
+      "category_characters/kid_2",
+      "category_characters/kid_24",
+      "category_characters/kid_28",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_30",
+      "category_characters/kid_32",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_39"
+    ],
     "happy_critter": [
       "category_characters/happy_critter"
     ],
@@ -18202,6 +19843,80 @@
     ],
     "hoe_silver": [
       "category_tools/hoe_silver"
+    ],
+    "human": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
     ],
     "hurdles": [
       "category_obstacles/cactus",
@@ -18342,6 +20057,296 @@
     "keys": [
       "category_generic_items/keys"
     ],
+    "kid": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
+    ],
+    "kid_1": [
+      "category_characters/kid_1"
+    ],
+    "kid_10": [
+      "category_characters/kid_10"
+    ],
+    "kid_11": [
+      "category_characters/kid_11"
+    ],
+    "kid_11_side": [
+      "category_characters/kid_11_side"
+    ],
+    "kid_12": [
+      "category_characters/kid_12"
+    ],
+    "kid_12_side": [
+      "category_characters/kid_12_side"
+    ],
+    "kid_13": [
+      "category_characters/kid_13"
+    ],
+    "kid_14": [
+      "category_characters/kid_14"
+    ],
+    "kid_14_side": [
+      "category_characters/kid_14_side"
+    ],
+    "kid_15": [
+      "category_characters/kid_15"
+    ],
+    "kid_15_side": [
+      "category_characters/kid_15_side"
+    ],
+    "kid_15_walking": [
+      "category_characters/kid_15_walking"
+    ],
+    "kid_16": [
+      "category_characters/kid_16"
+    ],
+    "kid_16_walking": [
+      "category_characters/kid_16_walking"
+    ],
+    "kid_16_waving": [
+      "category_characters/kid_16_waving"
+    ],
+    "kid_17": [
+      "category_characters/kid_17"
+    ],
+    "kid_18": [
+      "category_characters/kid_18"
+    ],
+    "kid_19": [
+      "category_characters/kid_19"
+    ],
+    "kid_19_side": [
+      "category_characters/kid_19_side"
+    ],
+    "kid_1_side": [
+      "category_characters/kid_1_side"
+    ],
+    "kid_2": [
+      "category_characters/kid_2"
+    ],
+    "kid_20": [
+      "category_characters/kid_20"
+    ],
+    "kid_21": [
+      "category_characters/kid_21"
+    ],
+    "kid_22": [
+      "category_characters/kid_22"
+    ],
+    "kid_22_side": [
+      "category_characters/kid_22_side"
+    ],
+    "kid_23": [
+      "category_characters/kid_23"
+    ],
+    "kid_24": [
+      "category_characters/kid_24"
+    ],
+    "kid_25": [
+      "category_characters/kid_25"
+    ],
+    "kid_26": [
+      "category_characters/kid_26"
+    ],
+    "kid_26_side": [
+      "category_characters/kid_26_side"
+    ],
+    "kid_27": [
+      "category_characters/kid_27"
+    ],
+    "kid_27_side": [
+      "category_characters/kid_27_side"
+    ],
+    "kid_28": [
+      "category_characters/kid_28"
+    ],
+    "kid_29": [
+      "category_characters/kid_29"
+    ],
+    "kid_2_right": [
+      "category_characters/kid_2_right"
+    ],
+    "kid_2_walking": [
+      "category_characters/kid_2_walking"
+    ],
+    "kid_3": [
+      "category_characters/kid_3"
+    ],
+    "kid_30": [
+      "category_characters/kid_30"
+    ],
+    "kid_30_side": [
+      "category_characters/kid_30_side"
+    ],
+    "kid_31": [
+      "category_characters/kid_31"
+    ],
+    "kid_32": [
+      "category_characters/kid_32"
+    ],
+    "kid_33": [
+      "category_characters/kid_33"
+    ],
+    "kid_34": [
+      "category_characters/kid_34"
+    ],
+    "kid_34_excited": [
+      "category_characters/kid_34_excited"
+    ],
+    "kid_34_side": [
+      "category_characters/kid_34_side"
+    ],
+    "kid_35": [
+      "category_characters/kid_35"
+    ],
+    "kid_36": [
+      "category_characters/kid_36"
+    ],
+    "kid_36_side": [
+      "category_characters/kid_36_side"
+    ],
+    "kid_37": [
+      "category_characters/kid_37"
+    ],
+    "kid_38": [
+      "category_characters/kid_38"
+    ],
+    "kid_39": [
+      "category_characters/kid_39"
+    ],
+    "kid_39_side": [
+      "category_characters/kid_39_side"
+    ],
+    "kid_4": [
+      "category_characters/kid_4"
+    ],
+    "kid_40": [
+      "category_characters/kid_40"
+    ],
+    "kid_41": [
+      "category_characters/kid_41"
+    ],
+    "kid_42": [
+      "category_characters/kid_42"
+    ],
+    "kid_42_side": [
+      "category_characters/kid_42_side"
+    ],
+    "kid_43_sitting": [
+      "category_characters/kid_43_sitting"
+    ],
+    "kid_44_suit": [
+      "category_characters/kid_44_suit"
+    ],
+    "kid_45_suit": [
+      "category_characters/kid_45_suit"
+    ],
+    "kid_46": [
+      "category_characters/kid_46"
+    ],
+    "kid_46_left": [
+      "category_characters/kid_46_left"
+    ],
+    "kid_46_side": [
+      "category_characters/kid_46_side"
+    ],
+    "kid_4_side": [
+      "category_characters/kid_4_side"
+    ],
+    "kid_6": [
+      "category_characters/kid_6"
+    ],
+    "kid_6_sitting": [
+      "category_characters/kid_6_sitting"
+    ],
+    "kid_7": [
+      "category_characters/kid_7"
+    ],
+    "kid_8": [
+      "category_characters/kid_8"
+    ],
+    "kid_9": [
+      "category_characters/kid_9"
+    ],
+    "kid_at_desk": [
+      "category_characters/kid_at_desk"
+    ],
+    "kid_outline": [
+      "category_characters/kid_outline"
+    ],
+    "kid_outline_side": [
+      "category_characters/kid_outline_side"
+    ],
     "kitchen": [
       "category_backgrounds/kitchen",
       "category_generic_items/bandage",
@@ -18460,6 +20465,80 @@
     ],
     "lollipop_red": [
       "category_obstacles/lollipop_red"
+    ],
+    "man": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
     ],
     "meadow": [
       "category_backgrounds/meadow"
@@ -19031,6 +21110,9 @@
       "category_obstacles/wheat_grow",
       "category_obstacles/wheat_stage4"
     ],
+    "office": [
+      "category_characters/kid_at_desk"
+    ],
     "onion": [
       "category_food/onion"
     ],
@@ -19144,6 +21226,83 @@
     "pepper": [
       "category_food/pepper",
       "category_generic_items/pepper"
+    ],
+    "person": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
+    ],
+    "phone": [
+      "category_characters/kid_7"
     ],
     "piano": [
       "category_music/piano"
@@ -19524,6 +21683,10 @@
     "pine_trees": [
       "category_backgrounds/pine_trees"
     ],
+    "pink": [
+      "category_characters/kid_1",
+      "category_characters/kid_1_side"
+    ],
     "pink_monster": [
       "category_characters/pink_monster"
     ],
@@ -19708,6 +21871,9 @@
     "pterodactyl": [
       "category_animals/pterodactyl"
     ],
+    "purple": [
+      "category_characters/kid_13"
+    ],
     "purple_monster": [
       "category_characters/purple_monster"
     ],
@@ -19767,6 +21933,9 @@
     "recorder": [
       "category_music/recorder"
     ],
+    "red": [
+      "category_characters/kid_21"
+    ],
     "red_alien": [
       "category_characters/red_alien"
     ],
@@ -19819,6 +21988,9 @@
     "roller": [
       "category_generic_items/roller",
       "category_tools/roller"
+    ],
+    "sad": [
+      "category_characters/kid_23"
     ],
     "salt": [
       "category_generic_items/salt"
@@ -19961,6 +22133,10 @@
     "spike_top": [
       "category_obstacles/spike_top"
     ],
+    "spiked": [
+      "category_characters/kid_26",
+      "category_characters/kid_26_side"
+    ],
     "spikeman": [
       "category_characters/spikeMan"
     ],
@@ -19993,6 +22169,9 @@
     ],
     "stage": [
       "category_backgrounds/stage"
+    ],
+    "star": [
+      "category_characters/kid_32"
     ],
     "start": [
       "category_gameplay/cardBack_blue1",
@@ -20318,6 +22497,9 @@
     "sunshine_showers": [
       "category_backgrounds/sunshine_showers"
     ],
+    "surprised": [
+      "category_characters/kid_21"
+    ],
     "sword_bronze": [
       "category_tools/sword_bronze"
     ],
@@ -20338,6 +22520,10 @@
     ],
     "tablet": [
       "category_generic_items/tablet"
+    ],
+    "talking": [
+      "category_characters/kid_22",
+      "category_characters/kid_22_side"
     ],
     "tall_robot": [
       "category_characters/tall_robot"
@@ -20799,6 +22985,11 @@
       "category_vehicles/playerShip3_orange",
       "category_vehicles/playerShip3_red"
     ],
+    "vest": [
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side"
+    ],
     "video_game_controller": [
       "category_generic_items/video_game_controller"
     ],
@@ -20817,6 +23008,10 @@
     "watermelon": [
       "category_food/watermelon"
     ],
+    "wave": [
+      "category_characters/kid_10",
+      "category_characters/kid_24"
+    ],
     "wheat": [
       "category_obstacles/wheat"
     ],
@@ -20831,6 +23026,80 @@
     ],
     "wingman": [
       "category_characters/wingMan"
+    ],
+    "woman": [
+      "category_characters/kid_1",
+      "category_characters/kid_10",
+      "category_characters/kid_11",
+      "category_characters/kid_11_side",
+      "category_characters/kid_12",
+      "category_characters/kid_12_side",
+      "category_characters/kid_13",
+      "category_characters/kid_14",
+      "category_characters/kid_14_side",
+      "category_characters/kid_15",
+      "category_characters/kid_15_side",
+      "category_characters/kid_15_walking",
+      "category_characters/kid_16",
+      "category_characters/kid_16_walking",
+      "category_characters/kid_16_waving",
+      "category_characters/kid_17",
+      "category_characters/kid_18",
+      "category_characters/kid_19",
+      "category_characters/kid_19_side",
+      "category_characters/kid_1_side",
+      "category_characters/kid_2",
+      "category_characters/kid_20",
+      "category_characters/kid_21",
+      "category_characters/kid_22",
+      "category_characters/kid_22_side",
+      "category_characters/kid_23",
+      "category_characters/kid_24",
+      "category_characters/kid_25",
+      "category_characters/kid_26",
+      "category_characters/kid_26_side",
+      "category_characters/kid_27",
+      "category_characters/kid_27_side",
+      "category_characters/kid_28",
+      "category_characters/kid_29",
+      "category_characters/kid_2_right",
+      "category_characters/kid_2_walking",
+      "category_characters/kid_3",
+      "category_characters/kid_30",
+      "category_characters/kid_30_side",
+      "category_characters/kid_31",
+      "category_characters/kid_32",
+      "category_characters/kid_33",
+      "category_characters/kid_34",
+      "category_characters/kid_34_excited",
+      "category_characters/kid_34_side",
+      "category_characters/kid_35",
+      "category_characters/kid_36",
+      "category_characters/kid_36_side",
+      "category_characters/kid_37",
+      "category_characters/kid_38",
+      "category_characters/kid_39",
+      "category_characters/kid_39_side",
+      "category_characters/kid_4",
+      "category_characters/kid_40",
+      "category_characters/kid_41",
+      "category_characters/kid_42",
+      "category_characters/kid_42_side",
+      "category_characters/kid_43_sitting",
+      "category_characters/kid_44_suit",
+      "category_characters/kid_45_suit",
+      "category_characters/kid_46",
+      "category_characters/kid_46_left",
+      "category_characters/kid_46_side",
+      "category_characters/kid_4_side",
+      "category_characters/kid_6",
+      "category_characters/kid_6_sitting",
+      "category_characters/kid_7",
+      "category_characters/kid_8",
+      "category_characters/kid_9",
+      "category_characters/kid_at_desk",
+      "category_characters/kid_outline",
+      "category_characters/kid_outline_side"
     ],
     "wood": [
       "category_environment/wood"
