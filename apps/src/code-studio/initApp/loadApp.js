@@ -1,4 +1,4 @@
-/* global addToHome CDOSounds trackEvent Applab Blockly */
+/* global addToHome trackEvent Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
 import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
+import Sounds from '../../Sounds';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -83,7 +84,7 @@ export function setupApp(appOptions) {
   // Sets up default options and initializes blockly
   var baseOptions = {
     containerId: 'codeApp',
-    cdoSounds: CDOSounds,
+    cdoSounds: Sounds.getSingleton(),
     position: {blockYCoordinateInterval: 25},
     onInitialize: function () {
       createCallouts(this.level.callouts || this.callouts);
