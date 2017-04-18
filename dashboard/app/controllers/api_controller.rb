@@ -51,7 +51,7 @@ class ApiController < ApplicationController
     end
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
-      next if section[:deleted_at]
+      next if section.deleted?
       @section = section
       load_script
 
@@ -203,7 +203,7 @@ class ApiController < ApplicationController
     if level.finishable?
       slog(
         tag: 'activity_start',
-        script_level_id: script_level.id,
+        script_level_id: script_level.try(:id),
         level_id: level.id,
         user_agent: request.user_agent,
         locale: locale

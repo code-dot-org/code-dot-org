@@ -62,7 +62,8 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
-var project = require('@cdo/apps/code-studio/initApp/project');
+import project from '../code-studio/initApp/project';
+import * as applabThumbnail from './applabThumbnail';
 
 var ResultType = studioApp().ResultType;
 var TestResults = studioApp().TestResults;
@@ -299,6 +300,9 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
+  if (Applab.tickCount === applabThumbnail.CAPTURE_TICK_COUNT) {
+    applabThumbnail.captureScreenshot();
+  }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
   }
@@ -333,6 +337,9 @@ Applab.init = function (config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
+
+  // Necessary for tests.
+  applabThumbnail.init();
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
@@ -943,7 +950,7 @@ Applab.execute = function () {
   codeWhenRun = studioApp().getCode();
   Applab.currentExecutionLog = [];
 
-  if (codeWhenRun) {
+  if (typeof codeWhenRun === 'string') {
     // Create a new interpreter for this run
     Applab.JSInterpreter = new JSInterpreter({
       studioApp: studioApp(),
