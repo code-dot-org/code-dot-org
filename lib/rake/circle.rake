@@ -105,7 +105,7 @@ namespace :circle do
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
-            " --parallel 5" \
+            " --parallel 7" \
             " --retry_count 1" \
             " --html"
       end
