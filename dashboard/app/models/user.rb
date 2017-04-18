@@ -181,6 +181,14 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
+  validate :admins_must_be_teachers
+
+  def admins_must_be_teachers
+    if admin
+      errors.add(:admin, 'must be a teacher') unless teacher?
+    end
+  end
+
   # TODO: I think we actually want to do this.
   # You can be associated with districts through cohorts
   # has_many :districts, through: :cohorts.
@@ -527,7 +535,7 @@ class User < ActiveRecord::Base
   end
 
   def email_required?
-    return true if teacher? || admin?
+    return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
