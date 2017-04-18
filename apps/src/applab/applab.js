@@ -1434,3 +1434,8 @@ Applab.readProperty = function (element, property) {
 Applab.getAppReducers = function () {
   return reducers;
 };
+
+// Needed for UI tests.
+Applab.__TestInterface = {
+  isCaptureComplete: applabThumbnail.isCaptureComplete
+};

@@ -383,3 +383,9 @@ end
 And /^I open the debug console$/ do
   steps 'And I click selector "#debug-area-header .fa-chevron-circle-up" if it exists'
 end
+
+And /^I wait until applab thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return Applab.__TestInterface.isCaptureComplete();')
+  end
+end
