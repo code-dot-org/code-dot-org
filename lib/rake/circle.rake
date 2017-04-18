@@ -101,7 +101,7 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
-            " --config ChromeLatestWin7" \
+            " --config ChromeLatestWin7,iPhone" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost.studio.code.org:3000" \
             " --circle" \
