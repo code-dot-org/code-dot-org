@@ -22,7 +22,6 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     sinon.stub(project, 'isEditing').returns(true);
     sinon.stub(project, 'useFirebase').returns(false);
     sinon.stub(project, 'useMakerAPIs').returns(false);
-    sinon.stub(project, 'isOwner').returns(true);
 
     sinon.stub(assets.listStore, 'reset');
     sinon.stub(assets.listStore, 'add').returns([]);
@@ -39,7 +38,6 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     project.isEditing.restore();
     project.useFirebase.restore();
     project.useMakerAPIs.restore();
-    project.isOwner.restore();
 
     assets.listStore.reset.restore();
     assets.listStore.add.restore();

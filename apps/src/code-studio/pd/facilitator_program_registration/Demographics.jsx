@@ -1,9 +1,9 @@
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 
-import ProgramRegistrationComponent from './ProgramRegistrationComponent';
+import FormComponent from '../form_components/FormComponent';
 
-export default class Demographics extends ProgramRegistrationComponent {
+export default class Demographics extends FormComponent {
   render() {
     return (
       <FormGroup>

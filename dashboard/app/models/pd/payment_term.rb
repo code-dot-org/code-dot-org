@@ -3,7 +3,7 @@
 # Table name: pd_payment_terms
 #
 #  id                  :integer          not null, primary key
-#  regional_partner_id :integer
+#  regional_partner_id :integer          not null
 #  start_date          :date             not null
 #  end_date            :date
 #  course              :string(255)
@@ -23,6 +23,8 @@ class Pd::PaymentTerm < ApplicationRecord
   belongs_to :regional_partner
 
   validates_presence_of :regional_partner
+  validates_presence_of :start_date
+  validate :sufficient_contract_terms
 
   serialized_attrs %w(
     per_attendee_payment
@@ -61,5 +63,13 @@ class Pd::PaymentTerm < ApplicationRecord
     end
 
     found_payment_terms[0]
+  end
+
+  private
+
+  def sufficient_contract_terms
+    unless per_attendee_payment? || fixed_payment
+      errors.add(:base, 'Must have either per attendee payment or fixed payment')
+    end
   end
 end
