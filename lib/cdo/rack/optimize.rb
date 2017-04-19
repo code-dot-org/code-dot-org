@@ -31,6 +31,8 @@ module Rack
         # Browsers will still hold the resource for whatever cache lifetime originally set.
         response = Rack::Cache::Response.new(status, headers, body)
         response.shared_max_age = 10
+        # Remove Last-Modified header so proxy caches get the updated resource when revalidating.
+        response.delete_header('Last-Modified')
         headers = response.headers
       end
 
