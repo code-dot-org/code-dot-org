@@ -91,7 +91,7 @@ FactoryGirl.define do
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|

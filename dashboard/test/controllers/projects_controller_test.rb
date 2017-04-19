@@ -15,8 +15,8 @@ class ProjectsControllerTest < ActionController::TestCase
     @driver = create :user
     @navigator = create :user
     section = create :section
-    section.add_student @driver, move_for_same_teacher: false
-    section.add_student @navigator, move_for_same_teacher: false
+    section.add_student @driver
+    section.add_student @navigator
   end
 
   test "get index" do

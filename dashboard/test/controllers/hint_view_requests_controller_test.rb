@@ -82,8 +82,8 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     driver = create :user
     navigator = create :user
     section = create :section
-    section.add_student driver, move_for_same_teacher: false
-    section.add_student navigator, move_for_same_teacher: false
+    section.add_student driver
+    section.add_student navigator
 
     driver_initial = HintViewRequest.where(user: driver).count
     navigator_initial = HintViewRequest.where(user: navigator).count
