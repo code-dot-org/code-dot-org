@@ -8,6 +8,19 @@ nav: employee_engagement_nav
 
 # Employees Volunteer in a Classroom
 
+<div class="col-50" style="float:left; padding:10px">
+
+  <img src="/images/employee-engagement/classroom-students.jpg" style="max-width: 100%">
+</div>
+
+<div class="col-50" style="float:left; padding:10px">
+
+  <strong>Company lift</strong>: Low<br>
+  <strong>Employee lift</strong>: Low<br>
+  <strong>Cadence</strong>: One time event that can be run any time of the year  
+</div>
+
+<div style="clear: both;"></div>
 
 The Hour of Code volunteer in a classroom program gives your employees the opportunity to be a guest speaker and help students through online tutorials in their local classrooms or via video call. This opportunity is provided year-round, however, the demand for volunteers in our teachers' classrooms is much higher in December during Computer Science Education Week.
 
@@ -20,8 +33,6 @@ Learn more about the Hour of Code [here](https://www.hourofcode.com).
 3. Company administrators send [second communication](#communication2) to employees about program
 4. Teachers reach out to employees who have signed up
 5. Employees who were contacted by teachers volunteer in classrooms
-6. Employee volunteers receive annual participation and feedback survey
-7. Company receives employee signup numbers
 
 <br/>
 
@@ -94,42 +105,3 @@ Sign up today to help lead this movement forward!
 -SIGNED
 
 [/letter]
-
-### Share our Videos: 
-
-<div class="col-33" style="float:left; padding:10px">
-
-  <%= view :display_video_thumbnail, id: "uniqueid", video_code: "nKIu9yen5nc", letterbox: 'false', caption: "What most schools don't teach" %>
-</div>
-
-<div class="col-33" style="float:left; padding:10px">
-
-  <%= view :display_video_thumbnail, id: "uniqueid2", video_code: "QvyTEx1wyOY", letterbox: 'false', caption: "Computer Science is Changing Everything" %>
-</div>
-
-<div class="col-33" style="float:left; padding:10px">
-
-  <%= view :display_video_thumbnail, id: "uniqueid6", video_code: "qYZF6oIZtfc", letterbox: 'false', caption: "Anybody Can Learn" %>
-</div>
-
-<div style="clear: both;"></div>
-
-<div class="col-33" style="float:left; padding:10px">
-
-  <%= view :display_video_thumbnail, id: "uniqueid4", video_code: "cFdncBMDtP8", letterbox: 'false', caption: "Malala Challenges Girls to do the Hour of Code" %>
-</div>
-
-<div class="col-33" style="float:left; padding:10px">
-
-  <%= view :display_video_thumbnail, id: "uniqueid5", video_code: "KsOIlDT145A", download_path: '//videos.code.org/social/what-most-schools-dont-teach.mp4', letterbox: 'false', caption: "Hour of Code - WORLDWIDE" %>
-</div>
-
-<div class="col-33" style="float:left; padding:10px">
-
-  <%= view :display_video_thumbnail, id: "uniqueid3", video_code: "FC5FbmsH4fw", letterbox: 'false', caption: "The Hour of Code is Here" %>
-</div>
-
-<div style="clear: both;"></div>
-
-### Other resources:
-Promote through Code.org [SWAG](https://store.code.org) (all proceeds go to supporting more students gain access to computer science education)
