@@ -7,6 +7,7 @@ var _ = require('lodash');
  * @property {string} blockPrefix Prepend this string before the normal block name in the palette
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
+ * @property {String} color block color, overriding category and type if present
  * @property {String} type type of the block (e.g. value, either, property, readonlyproperty)
  * @property {Object[]} dropdown array of dropdown info for arguments (see Droplet docs)
  * @property {Object|string[]|Function} objectDropdown dropdown info for object on the left side of member expression (assumes wildcard in name)
@@ -527,7 +528,9 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
     }
 
     var category = mergedCategories[block.category];
-    if (category) {
+    if (typeof block.color === 'string' && block.color.length > 0) {
+      newFunc.color = block.color;
+    } else if (category) {
       newFunc.color = category.rgb || category.color;
     }
 

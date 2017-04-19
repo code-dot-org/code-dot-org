@@ -65,6 +65,7 @@ import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
 import Sounds from '../Sounds';
+import color from '../util/color';
 
 import {TestResults, ResultType} from '../constants';
 
@@ -603,6 +604,7 @@ Applab.init = function (config) {
       blocks: makerToolkit.dropletConfig.blocks.map(block => ({
         ...block,
         category: undefined,
+        color: color.light_gray,
         noAutocomplete: true,
       }))
     };
