@@ -30,7 +30,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     sign_in create :teacher
     get :new, params: {workshop_id: @workshop.id}
     assert_template :new
-    # Should NOT see this message if not logged in
+    # Should NOT see this message if logged in
     assert_select 'span.info-box-message', count: 0
   end
 
