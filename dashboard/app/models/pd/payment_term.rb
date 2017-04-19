@@ -79,14 +79,14 @@ class Pd::PaymentTerm < ApplicationRecord
   def truncate_previous_term
     # When we create a new payment term, see if there are any payment terms for the exact
     # criteria. If there is one, truncate it.
-    old_payment_term = Pd::PaymentTerm.find_by(
+    old_payment_terms = Pd::PaymentTerm.where(
       regional_partner: regional_partner,
       course: course,
       subject: subject
-    )
+    ).where('end_date > ? or end_date IS NULL', start_date)
 
-    if old_payment_term
-      old_payment_term.update(end_date: start_date)
-    end
+    raise 'Only one payment term should exist per time range' unless old_payment_terms.size <= 1
+
+    old_payment_terms.update_all(end_date: start_date)
   end
 end
