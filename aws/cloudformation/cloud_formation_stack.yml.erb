@@ -356,7 +356,7 @@ Resources:
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <% end -%>
 <% if frontends -%>
-<%   cache_node = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
+<%   cache_node_type = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -367,8 +367,11 @@ Resources:
     Properties:
       ReplicationGroupDescription: Geocoder Replication Group
       NumCacheClusters: 3
+<%  if cache_node_type.include? 'cache.t2' %>
+      AutomaticFailoverEnabled: false
+<%  end-%>
       Engine: redis
-      CacheNodeType: <%= cache_node %>
+      CacheNodeType: <%= cache_node_type %>
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
   MemcachedParameterGroup:
@@ -381,7 +384,7 @@ Resources:
   Memcached:
     Type: AWS::ElastiCache::CacheCluster
     Properties:
-      CacheNodeType: <%= cache_node %>
+      CacheNodeType: <%= cache_node_type %>
       CacheParameterGroupName: !Ref MemcachedParameterGroup
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
       ClusterName: memcached-<%=stack_name%>
