@@ -1,0 +1,106 @@
+---
+title: TeacherCon Houston
+nav: educate_nav
+theme: responsive
+---
+<a id="top"></a>
+
+[solid-block-header]
+
+TeacherCon Houston
+
+[/solid-block-header]
+## June 18-23, 2017
+<p align="left"><img src="/images/houstonskyline.jpg" width="100%"></p> 
+
+### **What is TeacherCon?**
+
+TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
+
+### **Travel & Hotel Information**
+<details>
+  <summary>**Hotel Information**</summary>
+  <p>
+  
+</p>
+</details>
+
+<details>
+<summary>**Should I book my own travel to TeacherCon?**</summary>
+  <p>
+**Please DO NOT make travel or lodging arrangements in advance.** You will receive an email from us approximately seven weeks ahead of your scheduled TeacherCon with detailed information about how to book your flight through our travel system, Egencia. We also have a room set aside for you at our conference hotel, so you don’t need to make a reservation.
+
+</p>
+</details>
+
+<details>
+<summary>**What if I choose to drive to TeacherCon?**</summary>
+  <p>
+If you choose to drive to TeacherCon instead of fly, you will receive a $150 gift card at the end of the summer August to help cover the cost of mileage. **No additional reimbursements will be provided**.
+</p>
+</details>
+
+<details>
+<summary>**Will I need additional transportation once I arrive at TeacherCon?**</summary>
+  <p>
+You will not need to rent a vehicle while at TeacherCon since all conference sessions and meals will take place on site at the hotel. If your Regional Event is off-site, transportation options will be provided. If you are flying, you will need to arrange your own transportation to and from the airport (ex: SuperShuttle, ride share, taxi or metro in Philly). Plan to pay for this upfront but we will provide you a gift card that will cover the cost once you arrive at the hotel. (see expenses covered for details, below).
+</p>
+</details>
+
+<details>
+<summary>**What expenses are covered during TeacherCon?**</summary>
+  <p>
+Code.org will pay for relevant travel, accommodation and meal expenses for your summer conference. These include:
+- Flights to and from your assigned TeacherCon Location
+- A room for you at the hotel
+- Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
+
+All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide and other incidentals such as taxis, public transportation, etc. No additional reimbursements will be provided. Districts will not be reimbursed.
+</p>
+</details>
+
+### **What to Bring**
+<details>
+  <summary>**What should I pack?**</summary>
+  <p>
+We encourage **business casual** attire during TeacherCon. All our conference sessions are indoors, and air conditioning is usually cool in hotels. We recommend that you bring a light sweater if you get cold easily in air conditioned rooms. You can expect temperatures to be quite warm during the day, so pack a water bottle! If you plan to venture outdoors during your free time, be sure to check the local forecast and plan accordingly!
+</p>
+</details>
+
+<details>
+<summary>**What devices will I need to bring?**</summary>
+  <p>
+Please bring your laptop and charger, as well as any adapters. If you’re bringing a school or district owned laptop, please make sure you have administrator permissions.
+</p>
+</details>
+
+### **Agenda**
+<details>
+  <summary>**Schedule for the Week**</summary>
+  <p>
+
+</p>
+</details>
+
+<details>
+<summary>**Will I have any free time?**</summary>
+  <p>
+You know it! Sessions end each day at 4:30pm, which leaves plenty of time in the evenings to explore the area and spend time with the folks you meet throughout the day. In addition, the Regional Event that will take place Wednesday evening is designed for you, your Regional Partner, and other teachers from your area to get to know one another through a fun activity outside of the conference setting.
+</p>
+</details>
+
+<details>
+<summary>**What if I can't attend for the full week?**</summary>
+  <p>
+We expect you to attend for the full conference. Make plans to be with us from Registration on Sunday afternoon through the Closing Ceremonies on Friday afternoon to ensure that you receive the full training experience. If you are local and are commuting to the conference on a daily basis, you qualify for late registration. Plan to join us Monday morning by 8:00am. If you have any concerns, please let us know at [teacher@code.org](mailto:teacher@code.org).
+</p>
+</details>
+
+### **Contact Us**
+Check out our [FAQ's!]()
+Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
+
+[**Back to the top**](#top)
+<br/>
+
+  
