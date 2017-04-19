@@ -18,6 +18,7 @@ const styles = {
     position: 'relative',
     display: 'table',
     width: '100%',
+    height: '100%',
     marginBottom: 12,
     background: color.lightest_gray,
     borderWidth: 1,
