@@ -8,7 +8,7 @@
   %p Note: since markdown instructions do not currently get translated, please do not use outside of middle school, high school and PD.
   %p You can drag-and-drop or paste images in to this box, and they will be uploaded to a suitable location.
   = f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
-  #markdown-instructions-preview
+  #level_markdown_instructions_preview
 .field
   = f.label :instructions_important
   %p
@@ -21,17 +21,9 @@
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_markdown_instructions', 'markdown', function (editor, change) {
     localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
-
-    $('#markdown-instructions-preview')
-      .html(marked(editor.getValue(), {renderer: renderer}))
-      .children('details').details();
   }, true);
 
   var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || params[:type]}');
   if (locallyStoredMarkdown) {
     mdEditor.setValue(locallyStoredMarkdown);
   }
-
-  $('#markdown-instructions-preview')
-      .html(marked(mdEditor.getValue(), {renderer: renderer}))
-      .children('details').details();
