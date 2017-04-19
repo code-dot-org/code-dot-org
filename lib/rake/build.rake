@@ -10,6 +10,9 @@ namespace :build do
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
+      # Workaround for https://github.com/sass/node-sass/issues/1804
+      RakeUtils.npm_rebuild 'node-sass'
+
       if rack_env?(:staging)
         ChatClient.log 'Updating <b>apps</b> i18n strings...'
         RakeUtils.system './sync-apps.sh'
