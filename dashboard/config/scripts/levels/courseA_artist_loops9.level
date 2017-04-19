@@ -31,11 +31,13 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You don't have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. \",\"hint_id\":\"courseA_artist_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/acc93f2a3e853603af1a0364b8088e36/courseA_artist_loops9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Add another block to the code you are given to draw the rest of the stairs.\",\"hint_id\":\"courseA_artist_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9cfcbf5620f0a5b937a561b4066d8016/courseA_artist_loops9.mp3\"}]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n**Challenge:** The stairs down to the dock are broken.  Help me fix them.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/53c68133f897895caa0369b4afa3ec3b-image-1470789463684.gif\" width=\"300\"/>\r\n",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3a6de65cfa4cf228b89cf61ba712f3f5-image-1477123431903.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -48,42 +50,11 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="simple_move_right" deletable="false">
-              <next>
-                <block type="simple_move_down" deletable="false">
-                  <next>
-                    <block type="simple_jump_right">
-                      <next>
-                        <block type="simple_move_down">
-                          <next>
-                            <block type="simple_jump_right">
-                              <next>
-                                <block type="simple_move_down">
-                                  <next>
-                                    <block type="simple_jump_right">
-                                      <next>
-                                        <block type="simple_move_down">
-                                          <next>
-                                            <block type="simple_jump_right">
-                                              <next>
-                                                <block type="simple_move_down"/>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              <statement name="DO">
+                <block type="simple_move_right"/>
+              </statement>
             </block>
           </next>
         </block>
