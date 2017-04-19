@@ -189,10 +189,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # TODO: I think we actually want to do this.
-  # You can be associated with districts through cohorts
-  # has_many :districts, through: :cohorts.
-
   def facilitator?
     permission? UserPermission::FACILITATOR
   end
