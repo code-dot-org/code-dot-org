@@ -127,15 +127,15 @@ const BASE_DROPLET_CONFIG = Object.freeze({
 describe('dropletUtils', () => {
   testUtils.setExternalGlobals();
 
-  describe('promptNum', function () {
+  describe('promptNum', () => {
 
-    afterEach(function () {
+    afterEach(() => {
       if (window.prompt.restore) {
         window.prompt.restore();
       }
     });
 
-    it('returns a number if I enter a number', function () {
+    it('returns a number if I enter a number', () => {
       var prompt = sinon.stub(window, 'prompt');
       prompt.returns('123');
 
@@ -144,7 +144,7 @@ describe('dropletUtils', () => {
       assert.strictEqual(val, 123);
     });
 
-    it('can handle non-integer numbers', function () {
+    it('can handle non-integer numbers', () => {
       var prompt = sinon.stub(window, 'prompt');
       prompt.returns('1.23');
 
@@ -153,7 +153,7 @@ describe('dropletUtils', () => {
       assert.strictEqual(val, 1.23);
     });
 
-    it('reprompts if I enter a non-numerical value', function () {
+    it('reprompts if I enter a non-numerical value', () => {
       var prompt = sinon.stub(window, 'prompt');
       prompt.onCall(0).returns('onetwothree');
       prompt.onCall(1).returns('123');
@@ -164,8 +164,8 @@ describe('dropletUtils', () => {
     });
   });
 
-  describe('generateDropletModeOptions', function () {
-    it('folds in specified blocks to config', function () {
+  describe('generateDropletModeOptions', () => {
+    it('folds in specified blocks to config', () => {
       const expectedOptionsObject = _.merge({}, BASE_DROPLET_CONFIG, {
         functions: {
           "MyTestBlock": {
@@ -204,7 +204,7 @@ describe('dropletUtils', () => {
       assert.deepEqual(normalizedResult, expectedOptionsObject);
     });
 
-    it('generates the expected object for maze', function () {
+    it('generates the expected object for maze', () => {
       const expectedOptionsObject = _.merge({}, BASE_DROPLET_CONFIG, {
         functions: {
           "moveForward": {
@@ -243,10 +243,10 @@ describe('dropletUtils', () => {
     });
   });
 
-  describe('mergeCategoriesWithConfig', function () {
+  describe('mergeCategoriesWithConfig', () => {
     var mergeCategoriesWithConfig = dropletUtils.__TestInterface.mergeCategoriesWithConfig;
 
-    it('can merge in specified categories into config', function () {
+    it('can merge in specified categories into config', () => {
       const expected = _.merge({}, {
         "My Test Category": {
           "id": "test-category",
@@ -276,7 +276,7 @@ describe('dropletUtils', () => {
       assert.deepEqual(Object.keys(expected), Object.keys(normalizedResult));
     });
 
-    it('returns cloned categories', function () {
+    it('returns cloned categories', () => {
       var appConfig = {
         blocks: [
           {func: 'penUp', parent: {}, category: 'Turtle' }
@@ -300,7 +300,7 @@ describe('dropletUtils', () => {
     });
   });
 
-  describe('filteredBlocksFromConfig', function () {
+  describe('filteredBlocksFromConfig', () => {
     var filteredBlocksFromConfig = dropletUtils.__TestInterface.filteredBlocksFromConfig;
 
     var codeFunctions = {
@@ -315,7 +315,7 @@ describe('dropletUtils', () => {
       ]
     };
 
-    it('returns source and target when paletteOnly is true', function () {
+    it('returns source and target when paletteOnly is true', () => {
       var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
       assert.deepEqual(mergedBlocks, [
         {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
@@ -323,12 +323,12 @@ describe('dropletUtils', () => {
       ]);
     });
 
-    it('returns all blocks when paletteOnly is false', function () {
+    it('returns all blocks when paletteOnly is false', () => {
       var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null);
       assert.deepEqual(mergedBlocks, dropletConfig.blocks);
     });
 
-    it('doesnt return target when source is not in codeFunctions', function () {
+    it('doesnt return target when source is not in codeFunctions', () => {
       var codeFunctions = {
         thirdBlock: null
       };
