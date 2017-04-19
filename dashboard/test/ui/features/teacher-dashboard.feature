@@ -61,13 +61,12 @@ Feature: Using the teacher dashboard
 
     # Create an applab project and generate a thumbnail
 
-    When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/4?noautoplay=true"
+    When I am on "http://studio.code.org/projects/applab/new"
     And I wait for the page to fully load
-    And I press the first ".project_remix" element to load a new page
-    And I wait for the page to fully load
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And check that the URL contains "http://studio.code.org/projects/applab"
+    And I switch to text mode
+    And I append text to droplet "createCanvas('id', 320, 450);\nsetFillColor('red');\ncircle(160, 225, 160);"
     And I press "runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
     And I press "resetButton"
     And I click selector "#runButton" once I see it
@@ -78,7 +77,6 @@ Feature: Using the teacher dashboard
 
     When I am on "http://studio.code.org/projects/gamelab/new"
     And I wait for the page to fully load
-    And I wait for initial project save to complete
     And I switch to text mode
     And I append text to droplet "\nfill('orange');\nellipse(200,200,400,400);"
     And I press "runButton"
@@ -94,7 +92,7 @@ Feature: Using the teacher dashboard
     # Load the section projects page
 
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard/?enableExperiments=showProjectThumbnails#sections"
+    And I am on "http://code.org/teacher-dashboard?enableExperiments=showProjectThumbnails#/sections"
     And I click selector "a:contains('SectionName')" once I see it
     And I click selector "a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
