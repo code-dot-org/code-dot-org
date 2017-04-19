@@ -16,7 +16,7 @@ import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/init
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import {getExportedGlobals} from './export';
-window.CDOSounds = new Sounds();
+window.CDOSounds = Sounds.getSingleton();
 
 const noop = function () {};
 

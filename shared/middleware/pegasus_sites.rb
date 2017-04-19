@@ -6,12 +6,13 @@ class PegasusSites
 
     config_ru = File.absolute_path(File.dirname(__FILE__) + '/../../pegasus/config.ru')
     @pegasus_app = Rack::Builder.parse_file(config_ru).first
-    @pegasus_hosts = [
-      'code.org',
-      'codeprojects.org',
-      'csedweek.org',
-      'hourofcode.com',
-    ].map {|i| canonical_hostname(i)}
+    pegasus_domains = %w(
+      code.org
+      codeprojects.org
+      csedweek.org
+      hourofcode.com
+    ).concat(CDO.partners.map {|partner| "#{partner}.code.org"})
+    @pegasus_hosts = pegasus_domains.map {|i| canonical_hostname(i)}
   end
 
   def call(env)

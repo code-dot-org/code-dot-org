@@ -40,8 +40,7 @@ var Equation = require('./equation');
 var Token = require('./token');
 var InputIterator = require('./inputIterator');
 
-var TestResults = studioApp().TestResults;
-var ResultType = studioApp().ResultType;
+import {TestResults, ResultType} from '../constants';
 
 var level;
 var skin;
