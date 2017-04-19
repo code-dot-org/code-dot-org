@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 window.SignupManager = function (options) {
@@ -30,7 +29,17 @@ window.SignupManager = function (options) {
 
   function formError(err) {
     // Define the fields that can have specific errors attached to them.
-    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "schooladdress", "age", "gender", "terms_of_service_version", "school_info.zip"];
+    var fields = [
+      "user_type",
+      "name",
+      "email",
+      "password",
+      "password_confirmation",
+      "age",
+      "gender",
+      "terms_of_service_version",
+      "school_info.zip"
+    ];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
@@ -60,32 +69,11 @@ window.SignupManager = function (options) {
     }
   });
 
-  function shouldShowSchoolDropdown() {
-    if (experiments.isEnabled('schoolDropdownOnRegistration')) {
-      return true;
-    }
-
-    // We enable the school dropdown in an A/B test by setting 'display' to 'none' on this div in Optimizely
-    var testMarker = $("#schooldropdown-ab-test-marker");
-    if (!testMarker) {
-      return false;
-    }
-    return testMarker.css("display") === "none";
-  }
-
   function setSchoolInfoVisibility(state) {
-    var showSchoolDropdown = shouldShowSchoolDropdown();
     if (state) {
-      if (showSchoolDropdown) {
-        $("#schooldropdown-block").fadeIn();
-      } else {
-        $("#schoolname-block").fadeIn();
-        $("#schooladdress-block").fadeIn();
-      }
+      $("#schooldropdown-block").fadeIn();
     } else {
       $("#schooldropdown-block").hide();
-      $("#schoolname-block").hide();
-      $("#schooladdress-block").hide();
     }
   }
 
@@ -127,17 +115,6 @@ window.SignupManager = function (options) {
     lastUserType = "teacher";
   }
 
-  function getSchoolDropdownStudyGroup() {
-    const variationID = 8256420202; // comes from Optimizely config
-    if (window.optimizely && window.optimizely.data && window.optimizely.data.state) {
-      const variantNumber = window.optimizely.data.state.variationMap[variationID];
-      if (variantNumber === 1) {
-        return "show_school_dropdown";
-      }
-    }
-    return shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
-  }
-
   /**
    * Log signup-related analytics events to Firehose.
    * @param eventName name of the event to log
@@ -145,9 +122,10 @@ window.SignupManager = function (options) {
    *   in the data_json field. (default {})
    */
   function logAnalyticsEvent(eventName, extraData = {}) {
+    // TODO (eric): remove this logging once school dropdown changes are complete
     const streamName = "analysis-events";
     const study = "signup_school_dropdown";
-    const studyGroup = getSchoolDropdownStudyGroup();
+    const studyGroup = "show_school_dropdown";
 
     let dataJson = extraData;
     if (window.optimizely && window.optimizely.data) {
