@@ -46,6 +46,14 @@ export default class FacilitatorProgramRegistration extends FormController {
   /**
    * @override
    */
+  onSuccessfulSubmit() {
+    // Let the server display a confirmation page as appropriate
+    window.location.reload(true);
+  }
+
+  /**
+   * @override
+   */
   shouldShowSubmit() {
     return super.shouldShowSubmit() ||
         this.state.data.confirmTrainingDate === "No" ||
