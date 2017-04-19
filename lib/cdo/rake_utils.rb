@@ -176,19 +176,7 @@ module RakeUtils
   end
 
   def self.git_push
-    old_latest_stash = RakeUtils.git_latest_stash
-    system 'git', 'pull', '--rebase', '--autostash', 'origin', git_branch # Rebase local commit(s) if any new commits on origin.
     system 'git', 'push', 'origin', git_branch
-    new_latest_stash = RakeUtils.git_latest_stash
-    if old_latest_stash != new_latest_stash
-      ChatClient.log <<-ERROR, color: 'yellow'
-Warning! Content was stashed but not restored during rebase.
-Created stash:
-```
-#{new_latest_stash}
-```
-      ERROR
-    end
   end
 
   def self.git_revision
@@ -245,6 +233,15 @@ Created stash:
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
     commands += "#{sudo} yarn".split
+    commands += args
+    RakeUtils.system(*commands)
+  end
+
+  def self.npm_rebuild(*args)
+    sudo = CDO.npm_use_sudo ? 'sudo' : ''
+    commands = []
+    commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
+    commands += "#{sudo} npm rebuild".split
     commands += args
     RakeUtils.system(*commands)
   end

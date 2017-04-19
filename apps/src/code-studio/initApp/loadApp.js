@@ -1,4 +1,4 @@
-/* global addToHome CDOSounds trackEvent Applab Blockly */
+/* global addToHome trackEvent Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -83,7 +83,6 @@ export function setupApp(appOptions) {
   // Sets up default options and initializes blockly
   var baseOptions = {
     containerId: 'codeApp',
-    cdoSounds: CDOSounds,
     position: {blockYCoordinateInterval: 25},
     onInitialize: function () {
       createCallouts(this.level.callouts || this.callouts);

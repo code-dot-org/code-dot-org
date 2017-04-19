@@ -134,7 +134,7 @@ describe('project.saveThumbnail', () => {
   });
 
   it('fails if project is not initialized', done => {
-    project.updateCurrentData_(null, undefined);
+    project.__TestInterface.setCurrentData(undefined);
 
     const promise = project.saveThumbnail(STUB_BLOB);
     promise.catch(e => {
@@ -145,7 +145,7 @@ describe('project.saveThumbnail', () => {
   });
 
   it('fails if project is not owned by the current user', done => {
-    project.updateCurrentData_(null, {});
+    project.__TestInterface.setCurrentData({});
 
     project.saveThumbnail(STUB_BLOB).catch(e => {
       expect(e).to.contain('Project not owned by current user');

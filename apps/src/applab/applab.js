@@ -64,9 +64,9 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
+import Sounds from '../Sounds';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 /**
  * Create a namespace for the application.
@@ -785,9 +785,7 @@ Applab.reset = function () {
     divApplab.removeChild(divApplab.firstChild);
   }
 
-  if (studioApp().cdoSounds) {
-    studioApp().cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
@@ -950,7 +948,7 @@ Applab.execute = function () {
   codeWhenRun = studioApp().getCode();
   Applab.currentExecutionLog = [];
 
-  if (codeWhenRun) {
+  if (typeof codeWhenRun === 'string') {
     // Create a new interpreter for this run
     Applab.JSInterpreter = new JSInterpreter({
       studioApp: studioApp(),
@@ -1178,7 +1176,7 @@ Applab.onPuzzleComplete = function (submit) {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    Applab.testResults = studioApp().TestResults.ALL_PASS;
+    Applab.testResults = TestResults.ALL_PASS;
     Applab.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
