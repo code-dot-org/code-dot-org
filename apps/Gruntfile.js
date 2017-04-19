@@ -77,6 +77,7 @@ testsContext.keys().forEach(testsContext);
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
+  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -448,9 +449,6 @@ testsContext.keys().forEach(testsContext);
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
-    // Hamburger for header on dashboard & pegasus.
-    hamburger: './src/hamburger/hamburger.js',
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 

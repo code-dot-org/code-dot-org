@@ -40,6 +40,8 @@
 
 const chalk = require('chalk');
 const child_process = require('child_process');
+const path = require('path');
+const fs = require('fs');
 
 const SILENCED = [
   'applab',
@@ -81,7 +83,6 @@ const SILENCED = [
   'studio',
   'turtle',
   'tutorialExplorer',
-  'hamburger',
   'weblab',
   'learn/index'
 ];
