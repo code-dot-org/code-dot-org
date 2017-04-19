@@ -221,12 +221,12 @@ module Pd::Payment
     test 'teacher summaries with deleted teacher account' do
       workshop = create :pd_ended_workshop, num_sessions: 1
 
-      create :pd_workshop_participant,
+      pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
         enrolled: true,
         in_section: true,
-        attended: true,
-        deleted_at: DateTime.now
+        attended: true
+      pd_workshop_participant.destroy
 
       calculator = PaymentCalculatorBase.instance
 
