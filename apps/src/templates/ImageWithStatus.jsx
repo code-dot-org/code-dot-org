@@ -23,6 +23,9 @@ export class ImageWithStatus extends Component {
   constructor(props) {
     super(props);
 
+    this.handleImageLoad = this.handleImageLoad.bind(this);
+    this.handleImageError = this.handleImageError.bind(this);
+
     this.state = {
       imageStatus: STATUS.LOADING,
     };
@@ -49,8 +52,8 @@ export class ImageWithStatus extends Component {
           src={this.props.src}
           width={this.props.width}
           height={this.props.height}
-          onLoad={this.handleImageLoad.bind(this)}
-          onError={this.handleImageError.bind(this)}
+          onLoad={this.handleImageLoad}
+          onError={this.handleImageError}
         />
         <div data-image-status={this.state.imageStatus}/>
       </div>
