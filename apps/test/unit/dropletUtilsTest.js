@@ -127,324 +127,324 @@ const BASE_DROPLET_CONFIG = Object.freeze({
 describe('dropletUtils', () => {
   testUtils.setExternalGlobals();
 
-describe('promptNum', function () {
+  describe('promptNum', function () {
 
-  afterEach(function () {
-    if (window.prompt.restore) {
-      window.prompt.restore();
-    }
-  });
-
-  it('returns a number if I enter a number', function () {
-    var prompt = sinon.stub(window, 'prompt');
-    prompt.returns('123');
-
-    var val = dropletUtils.promptNum('Enter a value');
-    assert.strictEqual(prompt.callCount, 1);
-    assert.strictEqual(val, 123);
-  });
-
-  it('can handle non-integer numbers', function () {
-    var prompt = sinon.stub(window, 'prompt');
-    prompt.returns('1.23');
-
-    var val = dropletUtils.promptNum('Enter a value');
-    assert.strictEqual(prompt.callCount, 1);
-    assert.strictEqual(val, 1.23);
-  });
-
-  it('reprompts if I enter a non-numerical value', function () {
-    var prompt = sinon.stub(window, 'prompt');
-    prompt.onCall(0).returns('onetwothree');
-    prompt.onCall(1).returns('123');
-
-    var val = dropletUtils.promptNum('Enter a value');
-    assert.strictEqual(prompt.callCount, 2);
-    assert.strictEqual(val, 123);
-  });
-});
-
-describe('generateDropletModeOptions', function () {
-  it('folds in specified blocks to config', function () {
-    const expectedOptionsObject = _.merge({}, BASE_DROPLET_CONFIG, {
-      functions: {
-        "MyTestBlock": {
-          "value": true,
-          "color": "#COO110",
-          "title": "MyTestBlock"
-        }
+    afterEach(function () {
+      if (window.prompt.restore) {
+        window.prompt.restore();
       }
     });
-    const appOptionsConfig = {
-      dropletConfig: {
-        blocks: [
-          {func: 'MyTestBlock', category: 'My Test Category', type: 'value' }
-        ],
+
+    it('returns a number if I enter a number', function () {
+      var prompt = sinon.stub(window, 'prompt');
+      prompt.returns('123');
+
+      var val = dropletUtils.promptNum('Enter a value');
+      assert.strictEqual(prompt.callCount, 1);
+      assert.strictEqual(val, 123);
+    });
+
+    it('can handle non-integer numbers', function () {
+      var prompt = sinon.stub(window, 'prompt');
+      prompt.returns('1.23');
+
+      var val = dropletUtils.promptNum('Enter a value');
+      assert.strictEqual(prompt.callCount, 1);
+      assert.strictEqual(val, 1.23);
+    });
+
+    it('reprompts if I enter a non-numerical value', function () {
+      var prompt = sinon.stub(window, 'prompt');
+      prompt.onCall(0).returns('onetwothree');
+      prompt.onCall(1).returns('123');
+
+      var val = dropletUtils.promptNum('Enter a value');
+      assert.strictEqual(prompt.callCount, 2);
+      assert.strictEqual(val, 123);
+    });
+  });
+
+  describe('generateDropletModeOptions', function () {
+    it('folds in specified blocks to config', function () {
+      const expectedOptionsObject = _.merge({}, BASE_DROPLET_CONFIG, {
+        functions: {
+          "MyTestBlock": {
+            "value": true,
+            "color": "#COO110",
+            "title": "MyTestBlock"
+          }
+        }
+      });
+      const appOptionsConfig = {
+        dropletConfig: {
+          blocks: [
+            {func: 'MyTestBlock', category: 'My Test Category', type: 'value' }
+          ],
+          categories: {
+            'My Test Category': {
+              color: 'white',
+              rgb: '#COO110',
+              blocks: []
+            }
+          }
+        },
+        level: {
+          codeFunctions: {
+            MyTestBlock: null
+          }
+        }
+      };
+      const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
+
+      // I got our expected result by running this code and doing a JSON.parse on
+      // the result. This does some things like ignore fields set to undefined.
+      // In order to be able to do an equality comparison, I stringify/parse
+      // this result so that it will match our expected
+      const normalizedResult = JSON.parse(JSON.stringify(result));
+      assert.deepEqual(normalizedResult, expectedOptionsObject);
+    });
+
+    it('generates the expected object for maze', function () {
+      const expectedOptionsObject = _.merge({}, BASE_DROPLET_CONFIG, {
+        functions: {
+          "moveForward": {
+            "color": "red",
+            "title": "moveForward"
+          },
+          "turnLeft": {
+            "color": "red",
+            "title": "turnLeft"
+          },
+          "turnRight": {
+            "color": "red",
+            "title": "turnRight"
+          }
+        }
+      });
+
+      const appOptionsConfig = {
+        dropletConfig: mazeDropletConfig,
+        level: {
+          codeFunctions: {
+            moveForward: null,
+            turnLeft: null,
+            turnRight: null
+          }
+        }
+      };
+      const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
+
+      // I got our expected result by running this code and doing a JSON.parse on
+      // the result. This does some things like ignore fields set to undefined.
+      // In order to be able to do an equality comparison, I stringify/parse
+      // this result so that it will match our expected
+      const normalizedResult = JSON.parse(JSON.stringify(result));
+      assert.deepEqual(normalizedResult, expectedOptionsObject);
+    });
+  });
+
+  describe('mergeCategoriesWithConfig', function () {
+    var mergeCategoriesWithConfig = dropletUtils.__TestInterface.mergeCategoriesWithConfig;
+
+    it('can merge in specified categories into config', function () {
+      const expected = _.merge({}, {
+        "My Test Category": {
+          "id": "test-category",
+          "color": "blue",
+          "rgb": '#COO110',
+          "blocks": []
+        }
+      }, BASE_DROPLET_CATEGORIES);
+
+      const dropletConfig = {
         categories: {
           'My Test Category': {
-            color: 'white',
+            id: "test-category",
+            color: 'blue',
             rgb: '#COO110',
             blocks: []
           }
         }
-      },
-      level: {
-        codeFunctions: {
-          MyTestBlock: null
-        }
-      }
-    };
-    const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
-
-    // I got our expected result by running this code and doing a JSON.parse on
-    // the result. This does some things like ignore fields set to undefined.
-    // In order to be able to do an equality comparison, I stringify/parse
-    // this result so that it will match our expected
-    const normalizedResult = JSON.parse(JSON.stringify(result));
-    assert.deepEqual(normalizedResult, expectedOptionsObject);
-  });
-
-  it('generates the expected object for maze', function () {
-    const expectedOptionsObject = _.merge({}, BASE_DROPLET_CONFIG, {
-      functions: {
-        "moveForward": {
-          "color": "red",
-          "title": "moveForward"
-        },
-        "turnLeft": {
-          "color": "red",
-          "title": "turnLeft"
-        },
-        "turnRight": {
-          "color": "red",
-          "title": "turnRight"
-        }
-      }
+      };
+      const result = mergeCategoriesWithConfig(dropletConfig);
+      // I got our expected result by running this code and doing a JSON.parse on
+      // the result. This does some things like ignore fields set to undefined.
+      // In order to be able to do an equality comparison, I stringify/parse
+      // this result so that it will match our expected
+      const normalizedResult = JSON.parse(JSON.stringify(result));
+      assert.deepEqual(normalizedResult, expected);
+      assert.deepEqual(Object.keys(expected), Object.keys(normalizedResult));
     });
 
-    const appOptionsConfig = {
-      dropletConfig: mazeDropletConfig,
-      level: {
-        codeFunctions: {
-          moveForward: null,
-          turnLeft: null,
-          turnRight: null
+    it('returns cloned categories', function () {
+      var appConfig = {
+        blocks: [
+          {func: 'penUp', parent: {}, category: 'Turtle' }
+        ],
+        categories: {
+          Turtle: {
+            color: 'cyan',
+            rgb: '#4DD0E1',
+            blocks: []
+          }
         }
-      }
-    };
-    const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
+      };
 
-    // I got our expected result by running this code and doing a JSON.parse on
-    // the result. This does some things like ignore fields set to undefined.
-    // In order to be able to do an equality comparison, I stringify/parse
-    // this result so that it will match our expected
-    const normalizedResult = JSON.parse(JSON.stringify(result));
-    assert.deepEqual(normalizedResult, expectedOptionsObject);
-  });
-});
+      var result = mergeCategoriesWithConfig(appConfig);
 
-describe('mergeCategoriesWithConfig', function () {
-  var mergeCategoriesWithConfig = dropletUtils.__TestInterface.mergeCategoriesWithConfig;
-
-  it('can merge in specified categories into config', function () {
-    const expected = _.merge({}, {
-      "My Test Category": {
-        "id": "test-category",
-        "color": "blue",
-        "rgb": '#COO110',
-        "blocks": []
-      }
-    }, BASE_DROPLET_CATEGORIES);
-
-    const dropletConfig = {
-      categories: {
-        'My Test Category': {
-          id: "test-category",
-          color: 'blue',
-          rgb: '#COO110',
-          blocks: []
-        }
-      }
-    };
-    const result = mergeCategoriesWithConfig(dropletConfig);
-    // I got our expected result by running this code and doing a JSON.parse on
-    // the result. This does some things like ignore fields set to undefined.
-    // In order to be able to do an equality comparison, I stringify/parse
-    // this result so that it will match our expected
-    const normalizedResult = JSON.parse(JSON.stringify(result));
-    assert.deepEqual(normalizedResult, expected);
-    assert.deepEqual(Object.keys(expected), Object.keys(normalizedResult));
+      // Make sure that the returned merged object is a clone. Otherwise, if we
+      // were to be modifying result.Turtle.blocks (something that happens in
+      // generateDropletPalette), we end up modifying the base config unintentionally
+      assert(result.Turtle !== appConfig.categories.Turtle);
+      assert(result.Turtle.blocks !== appConfig.categories.Turtle.blocks);
+    });
   });
 
-  it('returns cloned categories', function () {
-    var appConfig = {
-      blocks: [
-        {func: 'penUp', parent: {}, category: 'Turtle' }
-      ],
-      categories: {
-        Turtle: {
-          color: 'cyan',
-          rgb: '#4DD0E1',
-          blocks: []
-        }
-      }
-    };
+  describe('filteredBlocksFromConfig', function () {
+    var filteredBlocksFromConfig = dropletUtils.__TestInterface.filteredBlocksFromConfig;
 
-    var result = mergeCategoriesWithConfig(appConfig);
-
-    // Make sure that the returned merged object is a clone. Otherwise, if we
-    // were to be modifying result.Turtle.blocks (something that happens in
-    // generateDropletPalette), we end up modifying the base config unintentionally
-    assert(result.Turtle !== appConfig.categories.Turtle);
-    assert(result.Turtle.blocks !== appConfig.categories.Turtle.blocks);
-  });
-});
-
-describe('filteredBlocksFromConfig', function () {
-  var filteredBlocksFromConfig = dropletUtils.__TestInterface.filteredBlocksFromConfig;
-
-  var codeFunctions = {
-    sourceBlock: null
-  };
-
-  var dropletConfig = {
-    blocks: [
-      {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
-      {func: 'targetBlock', category: 'Math', type: 'value'},
-      {func: 'thirdBlock',  category: 'Math', type: 'value'}
-    ]
-  };
-
-  it('returns source and target when paletteOnly is true', function () {
-    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
-    assert.deepEqual(mergedBlocks, [
-      {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
-      {func: 'targetBlock', category: 'Math', type: 'value'}
-    ]);
-  });
-
-  it('returns all blocks when paletteOnly is false', function () {
-    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null);
-    assert.deepEqual(mergedBlocks, dropletConfig.blocks);
-  });
-
-  it('doesnt return target when source is not in codeFunctions', function () {
     var codeFunctions = {
-      thirdBlock: null
+      sourceBlock: null
     };
-    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
-    assert.deepEqual(mergedBlocks, [
-      {func: 'thirdBlock',  category: 'Math', type: 'value'}
-    ]);
-  });
-});
 
-describe('getParamFromCodeAtIndex', () => {
-  const getParamFromCodeAtIndex = dropletUtils.__TestInterface.getParamFromCodeAtIndex;
-
-  it("works with single quotes", () => {
-    const code = "myProperty('element1', ";
-    assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
-  });
-
-  it("works with single quotes for 2 params", () => {
-    const code = "myProperty('element1', 'element2',";
-    assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
-  });
-
-  it('works with double quotes', () => {
-    const code = 'myProperty("element1", ';
-    assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
-  });
-
-  it('works with double quotes with 2 params', () => {
-    const code = 'myProperty("element1", "element2",';
-    assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
-  });
-
-  it('should return null with mixed quotes', () => {
-    const code = 'myProperty("element1\', ';
-    assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), null);
-  });
-
-  it('works with no trailing space', () => {
-    const code = "myProperty('element1',";
-    assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
-  });
-
-  it('works with multiple `myProperty`s', () => {
-    const code = "myProperty('element1', 'width', 100); myProperty('element2', ";
-    assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element2');
-  });
-
-  it('works with non-quoted strings (variable names)', () => {
-    const code = "myProperty(object1, ";
-    assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'object1');
-  });
-});
-
-describe('makeDisabledConfig', () => {
-  let originalConfig;
-
-  beforeEach(() => {
-    originalConfig = {
-      categories: {
-        'A category': {
-          color: 'cyan',
-          rgb: '#00cccc',
-          blocks: []
-        },
-      },
+    var dropletConfig = {
       blocks: [
-        {func: 'pinMode', parent: {}, category: 'A category', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
-        {func: 'digitalWrite', parent: {}, category: 'A category', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
-        {func: 'digitalRead', parent: {}, category: 'A category', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
-      ],
-      additionalPredefValues: [
-        'buttonL',
-        'buttonR',
-      ],
-      autocompleteFunctionsWithParens: true,
+        {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+        {func: 'targetBlock', category: 'Math', type: 'value'},
+        {func: 'thirdBlock',  category: 'Math', type: 'value'}
+      ]
     };
+
+    it('returns source and target when paletteOnly is true', function () {
+      var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
+      assert.deepEqual(mergedBlocks, [
+        {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+        {func: 'targetBlock', category: 'Math', type: 'value'}
+      ]);
+    });
+
+    it('returns all blocks when paletteOnly is false', function () {
+      var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null);
+      assert.deepEqual(mergedBlocks, dropletConfig.blocks);
+    });
+
+    it('doesnt return target when source is not in codeFunctions', function () {
+      var codeFunctions = {
+        thirdBlock: null
+      };
+      var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, { paletteOnly: true });
+      assert.deepEqual(mergedBlocks, [
+        {func: 'thirdBlock',  category: 'Math', type: 'value'}
+      ]);
+    });
   });
 
-  // Given a stating config, generates a "disabled" droplet config that has the
-  // following properties:
-  it('does not mutate the original config', () => {
-    const originalConfigCopy = _.cloneDeep(originalConfig);
-    dropletUtils.makeDisabledConfig(originalConfig);
-    expect(originalConfigCopy).to.deep.equal(originalConfig);
+  describe('getParamFromCodeAtIndex', () => {
+    const getParamFromCodeAtIndex = dropletUtils.__TestInterface.getParamFromCodeAtIndex;
+
+    it("works with single quotes", () => {
+      const code = "myProperty('element1', ";
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
+    });
+
+    it("works with single quotes for 2 params", () => {
+      const code = "myProperty('element1', 'element2',";
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
+    });
+
+    it('works with double quotes', () => {
+      const code = 'myProperty("element1", ';
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
+    });
+
+    it('works with double quotes with 2 params', () => {
+      const code = 'myProperty("element1", "element2",';
+      assert.equal(getParamFromCodeAtIndex(1, 'myProperty', code), 'element2');
+    });
+
+    it('should return null with mixed quotes', () => {
+      const code = 'myProperty("element1\', ';
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), null);
+    });
+
+    it('works with no trailing space', () => {
+      const code = "myProperty('element1',";
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element1');
+    });
+
+    it('works with multiple `myProperty`s', () => {
+      const code = "myProperty('element1', 'width', 100); myProperty('element2', ";
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'element2');
+    });
+
+    it('works with non-quoted strings (variable names)', () => {
+      const code = "myProperty(object1, ";
+      assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'object1');
+    });
   });
 
-  it('removes all categories', () => {
-    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
-    expect(Object.keys(originalConfig.categories)).not.to.be.empty;
-    expect(Object.keys(disabledConfig.categories)).to.be.empty;
-  });
+  describe('makeDisabledConfig', () => {
+    let originalConfig;
 
-  it('removes all blocks from categories', () => {
-    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
-    assert(originalConfig.blocks.some(block => block.category !== undefined));
-    assert(disabledConfig.blocks.every(block => block.category === undefined));
-  });
+    beforeEach(() => {
+      originalConfig = {
+        categories: {
+          'A category': {
+            color: 'cyan',
+            rgb: '#00cccc',
+            blocks: []
+          },
+        },
+        blocks: [
+          {func: 'pinMode', parent: {}, category: 'A category', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
+          {func: 'digitalWrite', parent: {}, category: 'A category', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
+          {func: 'digitalRead', parent: {}, category: 'A category', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
+        ],
+        additionalPredefValues: [
+          'buttonL',
+          'buttonR',
+        ],
+        autocompleteFunctionsWithParens: true,
+      };
+    });
 
-  it('turns all blocks gray', () => {
-    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
-    assert(originalConfig.blocks.some(block => block.color !== color.light_gray));
-    assert(disabledConfig.blocks.every(block => block.color === color.light_gray));
-  });
+    // Given a stating config, generates a "disabled" droplet config that has the
+    // following properties:
+    it('does not mutate the original config', () => {
+      const originalConfigCopy = _.cloneDeep(originalConfig);
+      dropletUtils.makeDisabledConfig(originalConfig);
+      expect(originalConfigCopy).to.deep.equal(originalConfig);
+    });
 
-  it('removes all blocks from autocomplete', () => {
-    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
-    assert(originalConfig.blocks.some(block => !block.noAutocomplete));
-    assert(disabledConfig.blocks.every(block => block.noAutocomplete));
-  });
+    it('removes all categories', () => {
+      const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+      expect(Object.keys(originalConfig.categories)).not.to.be.empty;
+      expect(Object.keys(disabledConfig.categories)).to.be.empty;
+    });
 
-  it('removes all additional defines', () => {
-    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
-    expect(originalConfig.additionalPredefValues).not.to.be.empty;
-    expect(disabledConfig.additionalPredefValues).to.be.empty;
+    it('removes all blocks from categories', () => {
+      const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+      assert(originalConfig.blocks.some(block => block.category !== undefined));
+      assert(disabledConfig.blocks.every(block => block.category === undefined));
+    });
+
+    it('turns all blocks gray', () => {
+      const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+      assert(originalConfig.blocks.some(block => block.color !== color.light_gray));
+      assert(disabledConfig.blocks.every(block => block.color === color.light_gray));
+    });
+
+    it('removes all blocks from autocomplete', () => {
+      const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+      assert(originalConfig.blocks.some(block => !block.noAutocomplete));
+      assert(disabledConfig.blocks.every(block => block.noAutocomplete));
+    });
+
+    it('removes all additional defines', () => {
+      const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+      expect(originalConfig.additionalPredefValues).not.to.be.empty;
+      expect(disabledConfig.additionalPredefValues).to.be.empty;
+    });
   });
-});
 
 });
