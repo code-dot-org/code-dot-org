@@ -591,7 +591,7 @@ FactoryGirl.define do
       end
       evaluator.enrolled_unattending_users.times do
         teacher = create :teacher
-        workshop.enrollment << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
   end
@@ -664,12 +664,8 @@ FactoryGirl.define do
   end
 
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    regional_partner nil
-    start_date "2017-04-06"
-    end_date nil
-    course nil
-    subject nil
-    properties {{fixed_payment: 50}}
+    start_date {Date.today}
+    fixed_payment 50
   end
 
   factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
