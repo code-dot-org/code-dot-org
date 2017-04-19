@@ -26,8 +26,12 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   end
 
   test 'raises error if too many payment terms' do
-    create :pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 1.month
+    term_1 = create :pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 1.month
     create :pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 45.days, end_date: Date.today + 4.months
+
+    # Generate the overlap by updating while skipping callbacks - theoretically this
+    # shouldn't be possible because of the truncation logic but trying it anyway
+    term_1.update_column(:end_date, nil)
 
     error = assert_raises(RuntimeError) do
       Pd::PaymentTerm.for_workshop(@workshop_2)
@@ -95,5 +99,14 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 4.months)
     term_1.reload
     assert_equal Date.today + 4.months, term_1.end_date
+  end
+
+  test 'Truncate on overlap' do
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, end_date: Date.today + 2.months)
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 1.month)
+
+    term_1.reload
+
+    assert_equal Date.today + 1.month, term_1.end_date
   end
 end
