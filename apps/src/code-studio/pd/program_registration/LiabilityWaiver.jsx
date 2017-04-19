@@ -6,7 +6,7 @@ export default class LiabilityWaiver extends FormComponent {
   render() {
     return (
       <FormGroup>
-        <h4>Part 3 of 4: Liability Waiver</h4>
+        <h4>Liability Waiver</h4>
         <p>
           <em>
             I understand that by registering for and attending a

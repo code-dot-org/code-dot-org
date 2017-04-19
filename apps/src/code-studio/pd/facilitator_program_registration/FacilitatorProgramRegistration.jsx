@@ -3,8 +3,8 @@ import React from 'react';
 import FormController from '../form_components/FormController';
 import DateConfirm from './DateConfirm';
 import TravelInformation from './TravelInformation';
-import PhotoRelease from './PhotoRelease';
-import LiabilityWaiver from './LiabilityWaiver';
+import PhotoRelease from '../program_registration/PhotoRelease';
+import LiabilityWaiver from '../program_registration/LiabilityWaiver';
 import Demographics from './Demographics';
 
 export default class FacilitatorProgramRegistration extends FormController {
