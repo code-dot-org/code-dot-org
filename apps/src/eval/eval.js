@@ -36,8 +36,7 @@ var EvalText = require('./evalText');
 var utils = require('../utils');
 import {getStore} from '../redux';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 import canvg from 'canvg';
 // tests don't have svgelement

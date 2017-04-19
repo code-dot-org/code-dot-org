@@ -378,7 +378,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_enrollment_count' do
     # Deleted enrollment should not be counted
-    create :pd_enrollment, workshop: @workshop, deleted_at: Time.now
+    pd_enrollment = create :pd_enrollment, workshop: @workshop
+    pd_enrollment.destroy
 
     # Workshops with 0 (not counting deleted), 1 and 2 enrollments
     workshops = [

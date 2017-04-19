@@ -44,9 +44,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/johnny-five@0.9.62-cdo.1":
-  version "0.9.62-cdo.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.1.tgz#c4d1d63c75eff511826169d83e35d6b8fe518c10"
+"@code-dot-org/johnny-five@0.9.62-cdo.2":
+  version "0.9.62-cdo.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.2.tgz#66e4e597b3f454257ab52bb85e98d6be72697d07"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
