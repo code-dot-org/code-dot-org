@@ -1,31 +1,21 @@
 name 'Longitudinal study description'
-
+css 'unplugged'
 markdown <<MARKDOWN
-# We want to stay in touch!
+# Participate in a Long-Range Study!
 
-**You are part of a special group of people**
+## Are you 18 years or older?
+If you're 18 years or older, you can choose to participate in a longitudinal study with us - a long-range study that will try to capture the decisions, stories, and paths of students, such as yourself, in your post-high school life.
 
-For the first time ever, students like you will be graduating from high school having taken *CS Principles*. That makes you part of a special group of people with a unique view on the world.  As you get older and move on in life past high school, what happens? 
+### If you want to participate, [please fill out this simple form (it will take 1 minute or less)](https://docs.google.com/forms/d/e/1FAIpQLScfLsr5G1HI1PFZOtShBnP6uIKG4c4N_HC_TUyKftzLKzk3-Q/viewform) 
 
-We are *super interested* to get in touch with you in the future to find out.
+If you choose to participate, Code.org will contact you 2-3 times per year over the next few years. As a thank you, we will give you a &#36;10 gift card each time you participate.
 
-** What are we asking?**
+## Not yet 18?
+*Unfortunately, we are only conducting longitudinal studies with students who are already at least 18 years old. If you are interested in participating you can contact us once you turn 18.*
 
-* We are hoping that you will participate in a long-range study that tries to capture the life stories and paths of students who have taken CS Principles.
-* You need to be 18 years old, and to give us permission to get in touch with you.
 
-**What are you agreeing to?**
 
-* For us (Code.org) to contact you once or twice a year after high school to answer a few survey questions, and maybe for us to interview you once.
 
-That's about it. 
-
-So if...
-
-* You are 18 years or older 
-* You are willing and interested to have us contact you in the future (think: once or twice per year) to answer a few questions, possibly to be interviewed, about your views and your life story
-
-...then please **click continue to provide us with contact information where we can reach you.**
 
 
 MARKDOWN
