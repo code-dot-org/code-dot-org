@@ -364,7 +364,7 @@ Resources:
       NumCacheClusters: 3
       Engine: redis
       CacheNodeType: cache.r3.large
-      SecurityGroupIds: [!GetAtt [VPC, RedisSecurityGroup]]
+      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
 <% end -%>
   ActivitiesQueue:
