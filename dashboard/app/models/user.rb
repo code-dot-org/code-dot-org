@@ -1085,12 +1085,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # @param script [Script] The script to assign.
+  # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.assigned_at = Time.now
-
-      user_script.save!
+      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
       return user_script
     end
   end
