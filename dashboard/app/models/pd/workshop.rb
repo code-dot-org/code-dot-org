@@ -462,9 +462,4 @@ class Pd::Workshop < ActiveRecord::Base
   def associated_online_course
     Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
-
-  # Get all the teachers that have actually attended this workshop via the attendence.
-  def attending_teachers
-    sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
-  end
 end
