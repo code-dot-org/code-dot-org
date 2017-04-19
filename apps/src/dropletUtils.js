@@ -1,4 +1,5 @@
-var _ = require('lodash');
+import _ from 'lodash';
+import color from './util/color';
 
 /**
  * @name DropletBlock
@@ -30,7 +31,12 @@ var _ = require('lodash');
  * @name DropletConfig
  * @description Configuration information for Droplet
  * @property {DropletBlock[]} blocks list of blocks
- * @property {Object} categories configuration of categories within which to place blocks
+ * @property {Object} categories configuration of categories within which to
+ *   place blocks
+ * @property {boolean} autocompleteFunctionsWithParens If set, we will append
+ *   "();" after functions
+ * @property {string[]} additionalPredefValues Additional keywords to add to
+ *   autocomplete and consider 'defined' for linting purposes.
  */
 
 var COLOR_PURPLE = '#BB77C7';
@@ -714,6 +720,37 @@ function getParamFromCodeAtIndex(index, methodName, code) {
   }
   return null;
 }
+
+/**
+ * Given a stating config, generates a "disabled" droplet config that has the
+ * following properties:
+ *  - Removes all categories
+ *  - Removes all blocks from categories
+ *  - Turns all blocks gray
+ *  - Removes all blocks from autocomplete
+ *  - Removes all additional defines
+ * @param {DropletConfig} originalConfig
+ */
+module.exports.makeDisabledConfig = function makeDisabledConfig(originalConfig) {
+  return {
+    // Start with existing config
+    ...originalConfig,
+
+    // No categories
+    categories: {},
+
+    // No extra predefined values
+    additionalPredefValues: [],
+
+    // Turn all blocks gray and disable autocomplete
+    blocks: originalConfig.blocks.map(block => ({
+      ...block,
+      category: undefined,
+      color: color.light_gray,
+      noAutocomplete: true,
+    }))
+  };
+};
 
 exports.__TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig,
