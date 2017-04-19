@@ -9,7 +9,7 @@ class Api::V1::Pd::SessionAttendanceSerializerTest < ::ActionController::TestCas
   test 'enrollments and section members match on email regardless of case' do
     create :pd_enrollment, workshop: @workshop, email: 'Person@example.net'
     teacher = create :teacher, email: 'person@example.net'
-    @workshop.section.add_student teacher, move_for_same_teacher: false
+    @workshop.section.add_student teacher
 
     serialized = ::Api::V1::Pd::SessionAttendanceSerializer.new(@workshop.sessions.first).attributes
     assert_equal 1, serialized[:attendance].count

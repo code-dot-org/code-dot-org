@@ -124,76 +124,28 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student adds student to section' do
-    # even when the student is in another section from a different teacher
-    create(:section).add_student @student, move_for_same_teacher: false
-
     assert_creates(Follower) do
-      @section.add_student @student, move_for_same_teacher: false
+      @section.add_student @student
     end
     assert @section.students.exists?(@student.id)
-    assert_equal 2, Follower.where(student_user_id: @student.id).count
-  end
-
-  test 'add_student in another section from the same teacher moves student' do
-    @section.add_student @student, move_for_same_teacher: true
-    new_section = create :section, user: @teacher
-
-    # Initially, student is in original_section
-    assert @section.students.exists?(@student.id)
-    refute new_section.students.exists?(@student.id)
-
-    assert_does_not_create(Follower) do
-      new_section.add_student @student, move_for_same_teacher: true
-    end
-
-    # Verify student has been moved to new_section
-    refute @section.students.exists?(@student.id)
-    assert new_section.students.exists?(@student.id)
   end
 
   test 'add_student is idempotent' do
-    another_student = create :student
-
     2.times do
-      @section.add_student @student, move_for_same_teacher: true
-      @section.add_student another_student, move_for_same_teacher: false
+      @section.add_student @student
     end
 
-    assert_equal 2, @section.followers.count
-    assert_equal [@student.id, another_student.id], @section.followers.all.map(&:student_user_id)
+    assert_equal 1, @section.followers.count
+    assert_equal [@student.id], @section.followers.all.map(&:student_user_id)
   end
 
-  test 'add_student with move_for_same_teacher: false does not move student' do
-    # This option is used for pd-workshop sections.
-    # A workshop attendee, unlike students in a classroom section, can remain enrolled
-    # in multiple sections owned by the same user (i.e. workshop organizer).
-    organizer = create :teacher
-    attendee = create :teacher
-    original_section = create :section, user: organizer
-    original_section.add_student attendee, move_for_same_teacher: false
-    new_section = create :section, user: organizer
-
-    # Initially, student is in original_section
-    assert original_section.students.exists?(attendee.id)
-    refute new_section.students.exists?(attendee.id)
-
-    assert_creates(Follower) do
-      new_section.add_student attendee, move_for_same_teacher: false
-    end
-
-    # Verify student is in both sections
-    assert original_section.students.exists?(attendee.id)
-    assert new_section.students.exists?(attendee.id)
-  end
-
-<<<<<<< HEAD
   test 'add student undeletes existing follower' do
     follower = create :follower, section: @section, student_user: @student
     follower.destroy
 
     assert_no_change('Follower.with_deleted.count') do
       assert_creates(Follower) do
-        @section.add_student @student, move_for_same_teacher: false
+        @section.add_student @student
       end
     end
     refute follower.reload.deleted?
@@ -210,7 +162,7 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 2, followers.count
     assert_equal old_section, followers.first.section
     assert followers.first.deleted?
-    assert_equal new_section, followers.section.section
+    assert_equal new_section, followers.second.section
   end
 
   test 'add_and_remove_student noops unless old follower is found' do
@@ -247,7 +199,7 @@ class SectionTest < ActiveSupport::TestCase
     def verify(actual, expected)
       section = create :section
       actual.each do |name|
-        section.add_student create(:student, name: name), move_for_same_teacher: false
+        section.add_student create(:student, name: name)
       end
       result = section.name_safe_students.map(&:name)
       assert_equal expected, result

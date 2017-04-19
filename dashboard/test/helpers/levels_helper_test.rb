@@ -474,7 +474,7 @@ class LevelsHelperTest < ActionView::TestCase
     Experiment.update_cache
     section = create(:section, user: teacher)
     student = create(:student)
-    section.add_student(student, move_for_same_teacher: false)
+    section.add_student(student)
 
     sign_in student
 

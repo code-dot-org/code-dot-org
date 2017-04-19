@@ -74,20 +74,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert_select 'input#section_code'
   end
 
-  test "student_user_new when already followed by a teacher switches sections" do
-    sign_in @laurel_student_1.student_user
-
-    assert_does_not_create(Follower) do
-      get :student_user_new, params: {section_code: @laurel_section_2.code}
-    end
-
-    assert_redirected_to '/'
-    assert_equal "You've registered for #{@laurel_section_2.name}.", flash[:notice]
-
-    assert_equal [@laurel_student_2.student_user], @laurel_section_1.reload.students # removed from old section
-    assert_equal [@laurel_student_1.student_user], @laurel_section_2.reload.students # added to new section
-  end
-
   test "student user new with existing user with messed up email" do
     # use update_attribute to bypass validations
     @student.update_attribute(:email, '')
@@ -261,21 +247,6 @@ class FollowersControllerTest < ActionController::TestCase
 
     assert_redirected_to '/'
     assert_equal "#{@laurel.name} added as your teacher", flash[:notice]
-  end
-
-  test "create when already followed by a teacher switches sections" do
-    sign_in @laurel_student_1.student_user
-
-    post :create, params: {
-      section_code: @laurel_section_2.code,
-      redirect: '/'
-    }
-
-    assert_redirected_to '/'
-    assert_equal "#{@laurel.name} added as your teacher", flash[:notice]
-
-    assert_equal [@laurel_student_2.student_user], @laurel_section_1.reload.students # removed from old section
-    assert_equal [@laurel_student_1.student_user], @laurel_section_2.reload.students # added to new section
   end
 
   test "create does not allow joining your own section" do
