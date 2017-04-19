@@ -27,9 +27,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-
-- **Events (Spring/Summer)**
-	- [Events Intern, Professional Learning Team](#intern)
+- **Finance & Administration**
+	 - [Executive Assistant (temporary)](#ea)
 - **Marketing**
 	- [Director of Marketing & Communications](#director)
 	- [Marketing Associate](#associate)
@@ -39,8 +38,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Product Designer](#design)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
-- **Internships**
-	- [Events Intern, Professional Learning Team](#intern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
@@ -48,35 +45,35 @@ To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a h
 
 
 
-## <a name="intern"href="#intern">Events Intern, Professional Learning Team (Seattle, WA)</a>
+## <a name="ea"href="#ea">Executive Assistant (temporary; Seattle, WA)</a>
 
-**Internship Summary:** 
+**Job Summary:** 
 
-Code.org is looking for an Events Intern to work with and support Code.org’s professional learning team. Our Professional Learning and Community (PLC) team is responsible for the success of Code.org professional development across the U.S. This is a spring/summer internship, part-time, approximately 20-30 hours per week. 
+Code.org is looking for an experienced Executive Assistant to join our administrative team. This is a full-time, short-term assignment, to cover the maternity leave of one of our staff members.  
 
-Intern’s responsibilities would include:
+We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team for the next 3-4 months (tentative start date: May 2). You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Successful candidates will have prior experience in a fast-paced or start up environment. 
 
-- Provide planning and on-site event support    
-- Formatting, printing and organizing materials, packing and mailing supplies, proofreading and checking information (rooming lists, flight information, attendee lists and program tracks), and more. 
-- Utilizing our customer service system to respond to events-related as well as professional development questions from teachers and facilitators in a timely manner.
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate.
-- Responding to requests for information, distributing materials externally.
-- Special projects (enter, clean, or analyze simple data, prepare documentation, develop templates, etc.)
-- Opportunity to travel to and support up to three nine-day events this summer
+The primary responsibility of the person filling this role will be supporting three C-level Leadership Team members in day-to-day administrative tasks. 
 
-**Experience and Qualifications:**
+Typical duties will include: 
 
-Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+- Managing individual Leadership Team member’s calendars
+- Coordinating travel and submitting expense reports for LT members  
+- Assisting in event planning and order catering, as needed
+- Other duties, as assigned 
 
-- 2 years of undergraduate studies preferred (no Computer Science background necessary) 
-- 1 year of work experience preferred 
-- Experience with Google Sheets and suite of products
-- Ability to work legally in the United States
-- Ability to and willingness to travel to support events in the United States, if needed
+**Experience and Qualifications**
 
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+The ideal candidate has the following qualifications:
 
- 
+- 2-4 years experience in supporting C-level executives 
+- Excellent written and verbal communications skills 
+- Proficiency using Google Apps for email and calendaring
+- Proactive problem solver with strong attention to detail
+- Experience learning and using current tech tools
+
+To apply, please email cover letter and resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 ## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
 **Job Summary:**

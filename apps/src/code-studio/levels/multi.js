@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 import { sourceForLevel } from '../clientState';
+import Sounds from '../../Sounds';
 
 var Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
@@ -56,7 +57,7 @@ Multi.prototype.choiceClicked = function (button) {
   }
 
   var index = parseInt($(button).attr('index'));
-  window.CDOSounds.play('click');
+  Sounds.getSingleton().play('click');
 
   this.clickItem(index);
 

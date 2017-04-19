@@ -8,6 +8,22 @@ nav: employee_engagement_nav
 
 # Host an Hour of Code!
 
+<div class="col-50" style="float:left; padding:10px">
+
+  <img src="/images/employee-engagement/hoc-kids.jpg" style="max-width: 100%">
+</div>
+
+<div class="col-50" style="float:left; padding:10px">
+
+  <strong>Company lift</strong>: Medium-high<br>
+  <strong>Employee lift</strong>: Low<br>
+  <strong>Cadence</strong>: One time event anytime of year. Most popular during CS Education Week in December.
+  
+</div>
+ 
+
+<div style="clear: both;"></div>
+
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code”, to show that anybody can learn the basics, and to broaden participation in the field of computer science. Since 2013, the Hour of Code has been part of Computer Science Education Week, an annual celebration of the computing field and its heritage. Now a global movement, the Hour of Code has served almost 400 million Hours of Code in 180+ countries! 
 
 Hosting an Hour of Code event is a great way to get your company and employees involved in your local communities. Hosting an event can take many forms. Some examples include helping a local school host an assembly to inspire students about CS, inviting a local school to your offices to do an Hour of Code with your employees, inviting your employees and their families to an office hosted event, etc.
@@ -23,6 +39,7 @@ Learn more about the Hour of Code [here](https://www.hourofcode.com).
 5. **Celebrate!** Share on social media and other marketing channels about the success of your event.
 
 ### Here's the **[how-to guide](https://hourofcode.com/how-to)** for hosting an Hour of Code!
+
 _____________________________________________
 
 <a name="school"></a>
