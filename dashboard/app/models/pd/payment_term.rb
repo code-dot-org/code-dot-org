@@ -26,6 +26,8 @@ class Pd::PaymentTerm < ApplicationRecord
   validates_presence_of :start_date
   validate :sufficient_contract_terms
 
+  before_create :truncate_previous_term
+
   serialized_attrs %w(
     per_attendee_payment
     fixed_payment
@@ -71,6 +73,20 @@ class Pd::PaymentTerm < ApplicationRecord
   def sufficient_contract_terms
     unless per_attendee_payment? || fixed_payment
       errors.add(:base, 'Must have either per attendee payment or fixed payment')
+    end
+  end
+
+  def truncate_previous_term
+    # When we create a new payment term, see if there are any payment terms for the exact
+    # criteria. If there is one, truncate it.
+    old_payment_term = Pd::PaymentTerm.find_by(
+      regional_partner: regional_partner,
+      course: course,
+      subject: subject
+    )
+
+    if old_payment_term
+      old_payment_term.update(end_date: start_date)
     end
   end
 end

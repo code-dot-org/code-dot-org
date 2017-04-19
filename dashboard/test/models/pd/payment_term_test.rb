@@ -70,4 +70,30 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
     assert_equal ['Start date is required'], term_3.errors.full_messages
   end
+
+  test 'Old payment terms get truncated' do
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today)
+
+    # A term for a specific course should not truncate this
+    term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 1.month, course: Pd::Workshop::COURSE_CSF)
+
+    term_1.reload
+    assert_nil term_1.end_date
+
+    # this should not truncate term 1 or 2
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 2.month, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
+
+    [term_1, term_2].map(&:reload)
+    assert_empty [term_1, term_2].map(&:end_date).compact
+
+    # this should truncate term 2
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 3.months, course: Pd::Workshop::COURSE_CSF)
+    term_2.reload
+    assert_equal Date.today + 3.months, term_2.end_date
+
+    # this should truncate term 1
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 4.months)
+    term_1.reload
+    assert_equal Date.today + 4.months, term_1.end_date
+  end
 end
