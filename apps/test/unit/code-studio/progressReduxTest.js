@@ -1,7 +1,6 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
-import _ from 'lodash';
 
 import reducer, {
   initProgress,

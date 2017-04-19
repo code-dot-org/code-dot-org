@@ -51,6 +51,7 @@ const ToggleGroup = React.createClass({
           last={index === children.length - 1}
           activeColor={this.props.activeColor}
           title={child.props.title}
+          style={child.props.style}
           onClick={isSelected ? undefined : this.setSelected.bind(this, child.props.value)}
         >
           {child.props.children}

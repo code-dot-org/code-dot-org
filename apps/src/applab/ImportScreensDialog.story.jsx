@@ -23,6 +23,7 @@ export default storybook => {
               canBeImported: true,
               willReplace: false,
               assetsToReplace: [],
+              assetsToImport: [],
               conflictingIds: [],
               html: exampleHtml,
             }}
@@ -37,6 +38,7 @@ export default storybook => {
               canBeImported: true,
               willReplace: false,
               assetsToReplace: ['hadi.png', 'code-logo.png'],
+              assetsToImport: [],
               conflictingIds: [],
               html: exampleHtml,
             }}
@@ -51,6 +53,7 @@ export default storybook => {
               canBeImported: true,
               willReplace: true,
               assetsToReplace: ['hadi.png'],
+              assetsToImport: [],
               conflictingIds: [],
               html: exampleHtml,
             }}
@@ -64,6 +67,7 @@ export default storybook => {
               id: 'screen1',
               willReplace: false,
               assetsToReplace: [],
+              assetsToImport: [],
               canBeImported: false,
               conflictingIds: ['img1', 'img2'],
               html: exampleHtml,
@@ -78,6 +82,7 @@ export default storybook => {
     id: 'main_screen',
     willReplace: true,
     assetsToReplace: [],
+    assetsToImport: [],
     canBeImported: true,
     conflictingIds: [],
     html: exampleHtml
@@ -86,6 +91,7 @@ export default storybook => {
     id: 'screen1',
     willReplace: false,
     assetsToReplace: [],
+    assetsToImport: [],
     canBeImported: true,
     conflictingIds: [],
     html: exampleHtml
@@ -94,6 +100,7 @@ export default storybook => {
     id: 'gameover_screen',
     willReplace: false,
     assetsToReplace: [],
+    assetsToImport: [],
     canBeImported: false,
     conflictingIds: ['label1', 'label2'],
     html: exampleHtml

@@ -4,24 +4,78 @@ require_relative '../src/env'
 require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
-
-# 'section_helpers.rb' gets included by section_api_helpers
+require_relative 'fixtures/fake_dashboard'
+require_relative 'sequel_test_case'
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
 end
 
-class SectionApiHelperTest < Minitest::Test
-  describe SectionHelpers do
-    describe 'random code' do
-      it 'does not generate the same code twice' do
-        codes = 10.times.map {SectionHelpers.random_code}
-        assert_equal 10, codes.uniq.length
+class SectionApiHelperTest < SequelTestCase
+  describe DashboardStudent do
+    before do
+      FakeDashboard.use_fake_database
+    end
+
+    describe 'fetch_user_students' do
+      it 'returns followers' do
+        students = DashboardStudent.fetch_user_students(FakeDashboard::TEACHER[:id])
+        assert_equal 1, students.length
+        assert_equal FakeDashboard::STUDENT[:id], students.first[:id]
       end
 
-      it 'does not generate vowels' do
-        codes = 10.times.map {SectionHelpers.random_code}
-        assert codes.grep(/[AEIOU]/).empty?
+      it 'does not return followers of deleted sections' do
+        students = DashboardStudent.fetch_user_students FakeDashboard::TEACHER_DELETED_SECTION[:id]
+        assert_equal [], students
+      end
+
+      it 'does not return deleted followers' do
+        students = DashboardStudent.fetch_user_students FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        assert_equal [], students
+      end
+
+      it 'does not return deleted users' do
+        students = DashboardStudent.fetch_user_students FakeDashboard::TEACHER_DELETED_USER[:id]
+        assert_equal [], students
+      end
+    end
+
+    describe 'update_if_allowed' do
+      # TODO(asher): Fix this test so that the DB change does not pollute other tests.
+      # it 'updates students' do
+      #   params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
+      #   updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
+      #   assert_equal 'Updated User', updated_student[:name]
+      # end
+
+      it 'noops for students in deleted sections' do
+        params = {id: FakeDashboard::STUDENT_DELETED_SECTION[:id], name: 'Updated User'}
+        updated_student = DashboardStudent.update_if_allowed(
+          params, FakeDashboard::TEACHER_DELETED_SECTION[:id]
+        )
+        assert_nil updated_student
+        assert_equal FakeDashboard::STUDENT_DELETED_SECTION[:name],
+          Dashboard::User.get(FakeDashboard::STUDENT_DELETED_SECTION[:id]).to_hash[:name]
+      end
+
+      it 'noops for deleted followers' do
+        params = {id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id], name: 'Updated User'}
+        updated_student = DashboardStudent.update_if_allowed(
+          params, FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        )
+        assert_nil updated_student
+        assert_equal FakeDashboard::STUDENT_DELETED_FOLLOWER[:name],
+          Dashboard::User.get(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).to_hash[:name]
+      end
+
+      it 'noops for deleted students' do
+        params = {id: FakeDashboard::STUDENT_DELETED[:id], name: 'Updated User'}
+        updated_student = DashboardStudent.update_if_allowed(
+          params, FakeDashboard::TEACHER_DELETED_USER[:id]
+        )
+        assert_nil updated_student
+        assert_equal FakeDashboard::STUDENT_DELETED[:name],
+          Dashboard::User.get_with_deleted(FakeDashboard::STUDENT_DELETED[:id]).to_hash[:name]
       end
     end
   end
@@ -43,6 +97,7 @@ class SectionApiHelperTest < Minitest::Test
         assert DashboardSection.valid_grade?("12")
         assert DashboardSection.valid_grade?("Other")
       end
+
       it 'does not accept invalid numbers and strings' do
         assert !DashboardSection.valid_grade?("Something else")
         assert !DashboardSection.valid_grade?("56")
@@ -96,7 +151,7 @@ class SectionApiHelperTest < Minitest::Test
           user: {id: 15, user_type: 'teacher'}
         }
         DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
+        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `stage_extras`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', 0, DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
 
       it 'creates a row in the database with name' do
@@ -105,14 +160,31 @@ class SectionApiHelperTest < Minitest::Test
           name: 'My cool section'
         }
         DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
+        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `stage_extras`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', 0, DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
     end
   end
 
-  describe DashboardStudent do
+  describe 'DashboardSectionMore' do
+    before do
+      FakeDashboard.use_fake_database
+    end
+
+    describe 'remove_student' do
+      # TODO(asher): After making tests not pollute each other, uncomment this test case and write
+      # additional test cases.
+      # it 'soft-deletes follower' do
+      #   pegasus_section = DashboardSection.fetch_if_teacher(
+      #     FakeDashboard::SECTION_NORMAL[:id],
+      #     FakeDashboard::TEACHER[:id]
+      #   )
+      #   removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
+      #   assert removed
+      # end
+    end
   end
 
   describe DashboardUserScript do
+    # TODO(asher): Add tests here.
   end
 end

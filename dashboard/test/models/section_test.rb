@@ -10,6 +10,48 @@ class SectionTest < ActiveSupport::TestCase
     @default_attrs = {user: @teacher, name: 'test-section'}
   end
 
+  test "sections are soft-deleted" do
+    assert_no_change("Section.with_deleted.count") do
+      @section.destroy
+      assert @section.reload.deleted?
+    end
+  end
+
+  test "destroying section destroys appropriate followers" do
+    delete_time = Time.now - 1.day
+    already_deleted_follower = create :follower, section: @section
+    Timecop.travel(delete_time) do
+      already_deleted_follower.destroy
+    end
+    follower = create :follower, section: @section
+
+    @section.reload.destroy
+
+    assert @section.reload.deleted?
+    assert follower.reload.deleted?
+    assert already_deleted_follower.reload.deleted?
+    assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
+  end
+
+  test "restoring section restores appropriate followers" do
+    old_deleted_follower = create :follower, section: @section
+    Timecop.travel(Time.now - 1.day) do
+      old_deleted_follower.reload.destroy
+    end
+    new_deleted_follower = create :follower, section: @section
+
+    @section.reload.destroy
+    assert @section.reload.deleted?
+    assert new_deleted_follower.reload.deleted?
+    assert old_deleted_follower.reload.deleted?
+
+    Section.with_deleted.find_by_id(@section.id).restore(recursive: true, recovery_window: 5.minutes)
+
+    refute @section.reload.deleted?
+    refute new_deleted_follower.reload.deleted?
+    assert old_deleted_follower.reload.deleted?
+  end
+
   test "create assigns unique section codes" do
     sections = 3.times.map do
       # Repeatedly seed the RNG so we get the same "random" codes.
@@ -66,13 +108,13 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot destroy section with students" do
+  test "can destroy section with students" do
     follower = create :follower
-
     section = follower.section
 
-    refute section.destroy
-    assert Section.exists?(section.id)
+    assert section.destroy
+    refute Section.exists?(section.id)
+    refute Follower.exists?(follower.id)
   end
 
   test "can destroy section without students" do
@@ -142,6 +184,18 @@ class SectionTest < ActiveSupport::TestCase
     # Verify student is in both sections
     assert original_section.students.exists?(attendee.id)
     assert new_section.students.exists?(attendee.id)
+  end
+
+  test 'add student undeletes existing follower' do
+    follower = create :follower, section: @section, student_user: @student
+    follower.destroy
+
+    assert_no_change('Follower.with_deleted.count') do
+      assert_creates(Follower) do
+        @section.add_student @student, move_for_same_teacher: false
+      end
+    end
+    refute follower.reload.deleted?
   end
 
   test 'section_type validation' do
