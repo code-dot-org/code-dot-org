@@ -35,10 +35,6 @@
 #  teacher_prize_id           :integer
 #  teacher_bonus_prize_earned :boolean          default(FALSE)
 #  teacher_bonus_prize_id     :integer
-#  confirmation_token         :string(255)
-#  confirmed_at               :datetime
-#  confirmation_sent_at       :datetime
-#  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
@@ -59,7 +55,7 @@
 # Indexes
 #
 #  index_users_on_birthday                               (birthday)
-#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
+#  index_users_on_confirmation_token_and_deleted_at      (deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
@@ -72,7 +68,7 @@
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
-#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
+#  index_users_on_unconfirmed_email_and_deleted_at       (deleted_at)
 #  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
