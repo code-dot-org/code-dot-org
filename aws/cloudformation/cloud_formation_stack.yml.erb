@@ -351,7 +351,8 @@ Resources:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <% end -%>
-<% if environment == :production -%>
+<% if frontends -%>
+<%   cache_node = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -363,9 +364,28 @@ Resources:
       ReplicationGroupDescription: Geocoder Replication Group
       NumCacheClusters: 3
       Engine: redis
-      CacheNodeType: cache.r3.large
+      CacheNodeType: <%= cache_node %>
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+  MemcachedParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: memcached1.4
+      Description: Memcached modified max_item_size.
+      Properties:
+        max_item_size: <%=64.megabytes%>
+  Memcached:
+    Type: AWS::ElastiCache::CacheCluster
+    Properties:
+      CacheNodeType: <%= cache_node %>
+      CacheParameterGroupName: !Ref MemcachedParameterGroup
+      CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+      ClusterName: memcached-<%=stack_name%>
+      Engine: memcached
+      NumCacheNodes: 2
+      AZMode: cross-az
+      PreferredAvailabilityZones: <%= azs.first(2).to_json %>
+      VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
