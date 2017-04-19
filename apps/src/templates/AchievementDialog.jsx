@@ -167,7 +167,6 @@ const AchievementDialog = Radium(React.createClass({
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
     const tooManyHints = this.props.hintsUsed > 1;
-
     const params = {
       puzzleNumber: this.props.puzzleNumber,
       numBlocks: this.props.idealBlocks,
