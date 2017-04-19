@@ -15,7 +15,9 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {}
+        levels: {},
+        # second stage because first is unplugged
+        current_stage: script.stages[1].id
       },
       summarize_user_progress(script, user)
     )
@@ -42,7 +44,8 @@ class UsersHelperTest < ActionView::TestCase
         levels: {
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
-        }
+        },
+        current_stage: script.stages[1].id
       },
       summarize_user_progress(script, user)
     )
@@ -121,7 +124,7 @@ class UsersHelperTest < ActionView::TestCase
     level.save!
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true
+    script_level = create :script_level, script: script, levels: [level], assessment: true
 
     # The Activity record will point at a LevelSource with JSON data in which
     # page one has all valid answers and page two has no valid answers.
@@ -151,7 +154,9 @@ class UsersHelperTest < ActionView::TestCase
           },
           "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT},
           "#{ul.level_id}_1" => {}
-        }
+        },
+        # second stage because first is unplugged
+        current_stage: script_level.stage.id
       },
       summarize_user_progress(script, user)
     )
