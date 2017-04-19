@@ -134,6 +134,8 @@
     %br/
 
 %script{src: minifiable_asset_path('js/signup.js')}
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/devise/registrations/new.js'), data: {}}
 
 :javascript
 
@@ -159,7 +161,3 @@
     }
   });
 
-  $(document).ready(function() {
-    var schoolInfoElement = document.getElementById('schooldropdown-block');
-    ReactDOM.render(React.createElement(window.dashboard.schoolInfoBox), schoolInfoElement);
-  });

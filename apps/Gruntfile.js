@@ -429,7 +429,8 @@ testsContext.keys().forEach(testsContext);
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
+    'devise/registrations/new':     './src/sites/studio/pages/devise/registrations/new.js'
   };
 
   var otherEntries = {
