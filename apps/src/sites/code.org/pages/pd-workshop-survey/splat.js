@@ -69,19 +69,10 @@ $(document).ready(function () {
 });
 
 function processResponse() {
-
-  // TODO: remove this redirect, and re-enable #materials-order in the pd-workshop-survey form,
-  // once we're satisfied with the Mimeo SSO feature.
-  if (window.pdWorkshopSurvey.course === "CS Fundamentals") {
-    window.location.href = "/pd-workshop-survey/materials/" + window.pdWorkshopSurvey.enrollmentCode;
-    return;
-  }
-
   $("#btn-submit").removeAttr('disabled');
   $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
   $('#pd-workshop-survey-form').hide();
   $('#thanks').show();
-  $('#materials-order').show();
 }
 
 function processError(data) {

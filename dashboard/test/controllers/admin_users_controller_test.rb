@@ -7,9 +7,9 @@ class AdminUsersControllerTest < ActionController::TestCase
   setup do
     @admin = create(:admin)
 
-    @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
-    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx', deleted_at: '2016-01-01 12:00:00')
+    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
+    @deleted_student.destroy
     @malformed = create :teacher, email: 'malformed@example.com'
     @malformed.update_column(:email, '')  # Bypasses validation!
 
@@ -108,66 +108,22 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  generate_admin_only_tests_for :confirm_email_form
-
-  test "should not confirm_email if not admin" do
-    refute @unconfirmed.confirmed_at # not confirmed
-
-    sign_in @not_admin
-    post :confirm_email, params: {email: @admin.email}
-    assert_response :forbidden
-
-    @admin.reload
-    refute @unconfirmed.confirmed_at
-  end
-
-  test "should not confirm_email if not signed in" do
-    refute @unconfirmed.confirmed_at # not confirmed
-
-    post :confirm_email, params: {email: @unconfirmed.email}
-
-    assert_redirected_to_sign_in
-
-    @unconfirmed.reload
-    refute @unconfirmed.confirmed_at
-  end
-
-  test "should confirm_email by email" do
-    refute @unconfirmed.confirmed_at # not confirmed
-
-    sign_in @admin
-
-    post :confirm_email, params: {email: @unconfirmed.email}
-    assert_redirected_to confirm_email_form_path
-
-    @unconfirmed.reload
-    assert @unconfirmed.confirmed_at
-  end
-
-  test "confirm_email should flash error if email is invalid" do
-    sign_in @admin
-
-    post :confirm_email, params: {email: 'asdasdasdasdasd'}
-    assert_response :success
-    assert_select '.container .alert-danger', 'User not found -- email not confirmed'
-  end
-
   test "undelete_user should undelete deleted user" do
     sign_in @admin
 
     post :undelete_user, params: {user_id: @deleted_student.id}
 
     @deleted_student.reload
-    assert @deleted_student.deleted_at.nil?
+    refute @deleted_student.deleted?
   end
 
   test "undelete_user should noop for normal user" do
     sign_in @admin
 
-    assert_no_difference('@unconfirmed.reload.updated_at') do
-      post :undelete_user, params: {user_id: @unconfirmed.id}
+    assert_no_difference('@user.reload.updated_at') do
+      post :undelete_user, params: {user_id: @user.id}
     end
-    assert @unconfirmed.deleted_at.nil?
+    refute @user.deleted?
   end
 
   test "should not undelete_user if not admin" do
@@ -177,7 +133,7 @@ class AdminUsersControllerTest < ActionController::TestCase
       post :undelete_user, params: {user_id: @deleted_student.id}
     end
     assert_response :forbidden
-    assert @deleted_student.deleted_at.present?
+    assert @deleted_student.deleted?
   end
 
   generate_admin_only_tests_for :manual_pass_form

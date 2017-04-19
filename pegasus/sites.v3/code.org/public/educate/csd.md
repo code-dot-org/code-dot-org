@@ -188,6 +188,9 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 | **Unit 2 - The Internet: Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
 | **Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
 | **Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
+| **Unit 5 - The Internet: Data and Society** | [Lesson plans](https://curriculum.code.org/csd/unit5) | [Code Studio](https://studio.code.org/s/csd5) |
+| **Unit 6 - Programming: The Internet of Things** | [Lesson plans](https://curriculum.code.org/csd/unit6) | [Code Studio](https://studio.code.org/s/csd6) |
+
 
 
 

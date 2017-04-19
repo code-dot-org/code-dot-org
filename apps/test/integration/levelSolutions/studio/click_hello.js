@@ -1,6 +1,4 @@
-var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-var _ = require('lodash');
 
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 

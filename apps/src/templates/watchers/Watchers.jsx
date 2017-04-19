@@ -8,10 +8,10 @@ import AutocompleteSelector from './AutocompleteSelector';
 
 const WATCH_VALUE_NOT_RUNNING = "undefined";
 const DEFAULT_AUTOCOMPLETE_OPTIONS = [
-  'Game.mouseX',
-  'Game.mouseY',
-  'Game.frameRate',
-  'Game.frameCount',
+  'World.mouseX',
+  'World.mouseY',
+  'World.frameRate',
+  'World.frameCount',
   'camera.x',
   'camera.y',
   'sprite.x',

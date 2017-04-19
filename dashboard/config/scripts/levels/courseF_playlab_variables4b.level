@@ -32,7 +32,7 @@
       "upButton"
     ],
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
+    "timeout_after_when_run": "true",
     "markdown_instructions": "Now, Pirate Pegleg has some questions for Brian.\r\n\r\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \r\n\r\nPut the variables in the correct places to create this conversation.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
@@ -46,6 +46,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

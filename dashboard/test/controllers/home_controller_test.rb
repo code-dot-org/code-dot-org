@@ -187,7 +187,6 @@ class HomeControllerTest < ActionController::TestCase
     Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
       UserLevel.find_or_create_by(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
-    user.backfill_user_scripts
 
     assert_equal [], user.working_on_scripts # if you finish a script you are not working on it!
 
@@ -240,15 +239,14 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "{}", session.inspect
   end
 
-  test 'index shows alert for unconfirmed email for teachers' do
+  test 'index does not show alert for unconfirmed email for teachers' do
     user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :index
 
     assert_response :success
-    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert .btn[value="Resend confirmation instructions"]'
+    assert_select '.alert', false
   end
 
   test 'index does not show alert for unconfirmed email for teachers if already confirmed' do

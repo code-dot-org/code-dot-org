@@ -1,6 +1,7 @@
 /** @file Playground Component setup tests */
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
+import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
@@ -22,12 +23,31 @@ process.hrtime = require('browser-process-hrtime');
 describe('Circuit Playground Components', () => {
   let board, clock;
 
+  // Use this value as the fake initial value for all analog sensors in unit tests.
+  // 235 raw sensor value = 0C = 32F for the thermometer
+  const INITIAL_ANALOG_VALUE = 235;
+
   beforeEach(() => {
+    // Fake timers to avoid memory leaks in tests from components that don't
+    // clean up their setInterval calls properly.
     clock = sinon.useFakeTimers();
+
     board = newBoard();
+
+    // Our sensors and thermometer block initialization until they receive data
+    // over the wire.  That's not great for unit tests, so here we stub waiting
+    // for data to resolve immediately.
+    sinon.stub(EventEmitter.prototype, 'once');
+    EventEmitter.prototype.once.withArgs('data').callsFake(function (_, callback) {
+      // Pretend we got a real analog value back on the component's pin.
+      setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
+      callback();
+    });
+    EventEmitter.prototype.once.callThrough();
   });
 
   afterEach(() => {
+    EventEmitter.prototype.once.restore();
     clock.restore();
   });
 
@@ -36,46 +56,50 @@ describe('Circuit Playground Components', () => {
       // This test is here to warn us if we add a new component but
       // don't cover it with new tests.  If that happens, make sure you
       // add matching tests below!
-      const components = createCircuitPlaygroundComponents(board);
-      expect(Object.keys(components)).to.deep.equal([
-         'colorLeds',
-          'led',
-          'toggleSwitch',
-          'buzzer',
-          'soundSensor',
-          'lightSensor',
-          'tempSensor',
-          'accelerometer',
-          'buttonL',
-          'buttonR',
-          // TODO (captouch): Restore when we re-enable
-          // 'touchPad0',
-          // 'touchPad1',
-          // 'touchPad2',
-          // 'touchPad3',
-          // 'touchPad6',
-          // 'touchPad9',
-          // 'touchPad10',
-          // 'touchPad12',
-      ]);
+      return createCircuitPlaygroundComponents(board).then(components => {
+        expect(Object.keys(components)).to.deep.equal([
+           'colorLeds',
+            'led',
+            'toggleSwitch',
+            'buzzer',
+            'soundSensor',
+            'lightSensor',
+            'tempSensor',
+            'accelerometer',
+            'buttonL',
+            'buttonR',
+            // TODO (captouch): Restore when we re-enable
+            // 'touchPad0',
+            // 'touchPad1',
+            // 'touchPad2',
+            // 'touchPad3',
+            // 'touchPad6',
+            // 'touchPad9',
+            // 'touchPad10',
+            // 'touchPad12',
+        ]);
+      });
     });
 
     it('can initialize a second set of components with a second board', () => {
       // Checks a necessary condition for a true johnny-five level reset.
       const boardOne = newBoard();
-      const componentsOne = createCircuitPlaygroundComponents(boardOne);
-      expect(componentsOne.led.board === boardOne).to.be.true;
-
       const boardTwo = newBoard();
-      const componentsTwo = createCircuitPlaygroundComponents(boardTwo);
-      expect(componentsTwo.led.board === boardTwo).to.be.true;
+      return Promise.all([
+        createCircuitPlaygroundComponents(boardOne),
+        createCircuitPlaygroundComponents(boardTwo),
+      ]).then(([componentsOne, componentsTwo]) => {
+        expect(componentsOne.led.board === boardOne).to.be.true;
+        expect(componentsTwo.led.board === boardTwo).to.be.true;
+      });
     });
 
     describe('colorLeds', () => {
       it('creates an array of controllers', () => {
-        const {colorLeds} = createCircuitPlaygroundComponents(board);
-        expect(colorLeds).to.be.an.instanceOf(Array);
-        expect(colorLeds).to.have.length(10);
+        return createCircuitPlaygroundComponents(board).then(({colorLeds}) => {
+          expect(colorLeds).to.be.an.instanceOf(Array);
+          expect(colorLeds).to.have.length(10);
+        });
       });
 
       // Describe each Led by key/pin
@@ -84,7 +108,8 @@ describe('Circuit Playground Components', () => {
           let led;
 
           beforeEach(() => {
-            led = createCircuitPlaygroundComponents(board).colorLeds[pin];
+            return createCircuitPlaygroundComponents(board)
+              .then(({colorLeds}) => led = colorLeds[pin]);
           });
 
           it('creates a five.Led.RGB', () => {
@@ -100,13 +125,134 @@ describe('Circuit Playground Components', () => {
           });
         });
       });
+
+      // Note: The Mozilla color value documentation was very
+      // helpful when writing these tests:
+      // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+      describe('that each accept color formats', () => {
+        let led;
+        beforeEach(() => {
+          return createCircuitPlaygroundComponents(board)
+            .then(({colorLeds}) => led = colorLeds[0]);
+        });
+
+        it('hexadecimal color "#306090"', () => {
+          led.color('#306090');
+          expect(led.color()).to.deep.equal({
+            red: 0x30,
+            green: 0x60,
+            blue: 0x90,
+          });
+        });
+
+        it('CSS1 color keywords "lime"', () => {
+          led.color('lime');
+          expect(led.color()).to.deep.equal({
+            red: 0x00,
+            green: 0xff,
+            blue: 0x00,
+          });
+        });
+
+        it('CSS2 color keywords "orange"', () => {
+          led.color('orange');
+          expect(led.color()).to.deep.equal({
+            red: 0xff,
+            green: 0xa5,
+            blue: 0x00,
+          });
+        });
+
+        it('CSS3 color keywords "chocolate"', () => {
+          led.color('chocolate');
+          expect(led.color()).to.deep.equal({
+            red: 0xd2,
+            green: 0x69,
+            blue: 0x1e,
+          });
+        });
+
+        it('CSS4 color keywords "rebeccapurple"', () => {
+          // See: https://codepen.io/trezy/post/honoring-a-great-man
+          led.color('rebeccapurple');
+          expect(led.color()).to.deep.equal({
+            red: 0x66,
+            green: 0x33,
+            blue: 0x99,
+          });
+        });
+
+        it('CSS functional notation "rgb(30, 60, 90)"', () => {
+          led.color('rgb(30, 60, 90)');
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
+          led.color('rgba(30, 60, 90, 0.5)');
+          expect(led.color()).to.deep.equal({
+            red: 15,
+            green: 30,
+            blue: 45,
+          });
+        });
+
+        it('CSS4 functional notation "rgb(30, 60, 90, 0.5)"', () => {
+          led.color('rgb(30, 60, 90, 0.5)');
+          expect(led.color()).to.deep.equal({
+            red: 15,
+            green: 30,
+            blue: 45,
+          });
+        });
+
+        it('CSS4 functional notation "rgba(30, 60, 90)"', () => {
+          led.color('rgba(30, 60, 90)');
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('Array of color values [30, 60, 90]', () => {
+          led.color([30, 60, 90]);
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('Color object {red: 30, green: 60, blue: 90}', () => {
+          led.color({red: 30, green: 60, blue: 90});
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+
+        it('Separate color arguments (30, 60, 90)', () => {
+          led.color(30, 60, 90);
+          expect(led.color()).to.deep.equal({
+            red: 30,
+            green: 60,
+            blue: 90,
+          });
+        });
+      });
     });
 
     describe('led', () => {
       let led;
 
       beforeEach(() => {
-        led = createCircuitPlaygroundComponents(board).led;
+        return createCircuitPlaygroundComponents(board)
+          .then((components) => led = components.led);
       });
 
       it('creates a five.Led', () => {
@@ -126,7 +272,8 @@ describe('Circuit Playground Components', () => {
       let toggleSwitch;
 
       beforeEach(() => {
-        toggleSwitch = createCircuitPlaygroundComponents(board).toggleSwitch;
+        return createCircuitPlaygroundComponents(board)
+          .then((components) => toggleSwitch = components.toggleSwitch);
       });
 
       it('creates a five.Switch', () => {
@@ -149,7 +296,8 @@ describe('Circuit Playground Components', () => {
       let buzzer;
 
       beforeEach(() => {
-        buzzer = createCircuitPlaygroundComponents(board).buzzer;
+        return createCircuitPlaygroundComponents(board)
+          .then((components) => buzzer = components.buzzer);
       });
 
       it('creates a Piezo (our own wrapper around five.Piezo)', () => {
@@ -169,11 +317,12 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('soundSensor', () => {
-      let soundSensor, pin;
+      let soundSensor;
 
       beforeEach(() => {
-        soundSensor = createCircuitPlaygroundComponents(board).soundSensor;
-        pin = soundSensor.pin;
+        return createCircuitPlaygroundComponents(board).then((components) => {
+          soundSensor = components.soundSensor;
+        });
       });
 
       it('creates a five.Sensor', () => {
@@ -194,57 +343,62 @@ describe('Circuit Playground Components', () => {
         expect(soundSensor).to.haveOwnProperty('setScale');
       });
 
+      it('with a non-null value immediately after initialization', () => {
+        expect(soundSensor.value).not.to.be.null;
+        expect(soundSensor.value).to.equal(INITIAL_ANALOG_VALUE);
+      });
+
       describe('setScale', () => {
         it('adjusts the range of values provided by .value', () => {
           // Before setting scale, raw values are passed through to .value
-          setRawAnalogValue(pin, 0);
+          setSensorAnalogValue(soundSensor, 0);
           expect(soundSensor.value).to.equal(0);
-          setRawAnalogValue(pin, 500);
+          setSensorAnalogValue(soundSensor, 500);
           expect(soundSensor.value).to.equal(500);
-          setRawAnalogValue(pin, 1023);
+          setSensorAnalogValue(soundSensor, 1023);
           expect(soundSensor.value).to.equal(1023);
 
           soundSensor.setScale(0, 100);
 
           // After setting scale, raw values are mapped to the new range
-          setRawAnalogValue(pin, 0);
+          setSensorAnalogValue(soundSensor, 0);
           expect(soundSensor.value).to.equal(0);
-          setRawAnalogValue(pin, 512);
+          setSensorAnalogValue(soundSensor, 512);
           expect(soundSensor.value).to.equal(50);
-          setRawAnalogValue(pin, 1023);
+          setSensorAnalogValue(soundSensor, 1023);
           expect(soundSensor.value).to.equal(100);
         });
 
         it('clamps values provided by .value to the given range', () => {
           // Before setting scale, values are not clamped
           // (although this should not be necessary)
-          setRawAnalogValue(pin, -1);
+          setSensorAnalogValue(soundSensor, -1);
           expect(soundSensor.value).to.equal(-1);
-          setRawAnalogValue(pin, 1024);
+          setSensorAnalogValue(soundSensor, 1024);
           expect(soundSensor.value).to.equal(1024);
 
           soundSensor.setScale(0, 100);
 
           // Afterward, values ARE clamped
-          setRawAnalogValue(pin, -1);
+          setSensorAnalogValue(soundSensor, -1);
           expect(soundSensor.value).to.equal(0);
-          setRawAnalogValue(pin, 1024);
+          setSensorAnalogValue(soundSensor, 1024);
           expect(soundSensor.value).to.equal(100);
         });
 
         it('rounds values provided by .value to integers', () => {
           // Before setting scale, raw values are not rounded
           // (although this should not be necessary)
-          setRawAnalogValue(pin, Math.PI);
+          setSensorAnalogValue(soundSensor, Math.PI);
           expect(soundSensor.value).to.equal(Math.PI);
-          setRawAnalogValue(pin, 543.21);
+          setSensorAnalogValue(soundSensor, 543.21);
           expect(soundSensor.value).to.equal(543.21);
 
           soundSensor.setScale(0, 100);
 
           // Afterward, only integer values are returned
           for (let i = 0; i < 1024; i++) {
-            setRawAnalogValue(pin, i);
+            setSensorAnalogValue(soundSensor, i);
             expect(soundSensor.value % 1).to.equal(0);
           }
         });
@@ -255,7 +409,8 @@ describe('Circuit Playground Components', () => {
       let tempSensor;
 
       beforeEach(() => {
-        tempSensor = createCircuitPlaygroundComponents(board).tempSensor;
+        return createCircuitPlaygroundComponents(board)
+          .then((components) => tempSensor = components.tempSensor);
       });
 
       it('creates a five.Thermometer', () => {
@@ -277,14 +432,25 @@ describe('Circuit Playground Components', () => {
       it('and a C (celsius) property', () => {
         expect(tempSensor).to.have.ownProperty('C');
       });
+
+      it('with non-null values immediately after initialization', () => {
+        // This test depends on the fake initial thermometer reading
+        // set up in the beforeEach block at the top  of this file.
+        expect(tempSensor.F).not.to.be.null;
+        expect(tempSensor.F).to.equal(32);
+        expect(tempSensor.C).not.to.be.null;
+        expect(tempSensor.C).to.equal(0);
+      });
+
     });
 
     describe('lightSensor', () => {
-      let lightSensor, pin;
+      let lightSensor;
 
       beforeEach(() => {
-        lightSensor = createCircuitPlaygroundComponents(board).lightSensor;
-        pin = lightSensor.pin;
+        return createCircuitPlaygroundComponents(board).then((components) => {
+          lightSensor = components.lightSensor;
+        });
       });
 
       it('creates a five.Sensor', () => {
@@ -305,57 +471,62 @@ describe('Circuit Playground Components', () => {
         expect(lightSensor).to.haveOwnProperty('setScale');
       });
 
+      it('with a non-null value immediately after initialization', () => {
+        expect(lightSensor.value).not.to.be.null;
+        expect(lightSensor.value).to.equal(INITIAL_ANALOG_VALUE);
+      });
+
       describe('setScale', () => {
         it('adjusts the range of values provided by .value', () => {
           // Before setting scale, raw values are passed through to .value
-          setRawAnalogValue(pin, 0);
+          setSensorAnalogValue(lightSensor, 0);
           expect(lightSensor.value).to.equal(0);
-          setRawAnalogValue(pin, 500);
+          setSensorAnalogValue(lightSensor, 500);
           expect(lightSensor.value).to.equal(500);
-          setRawAnalogValue(pin, 1023);
+          setSensorAnalogValue(lightSensor, 1023);
           expect(lightSensor.value).to.equal(1023);
 
           lightSensor.setScale(0, 100);
 
           // After setting scale, raw values are mapped to the new range
-          setRawAnalogValue(pin, 0);
+          setSensorAnalogValue(lightSensor, 0);
           expect(lightSensor.value).to.equal(0);
-          setRawAnalogValue(pin, 512);
+          setSensorAnalogValue(lightSensor, 512);
           expect(lightSensor.value).to.equal(50);
-          setRawAnalogValue(pin, 1023);
+          setSensorAnalogValue(lightSensor, 1023);
           expect(lightSensor.value).to.equal(100);
         });
 
         it('clamps values provided by .value to the given range', () => {
           // Before setting scale, values are not clamped
           // (although this should not be necessary)
-          setRawAnalogValue(pin, -1);
+          setSensorAnalogValue(lightSensor, -1);
           expect(lightSensor.value).to.equal(-1);
-          setRawAnalogValue(pin, 1024);
+          setSensorAnalogValue(lightSensor, 1024);
           expect(lightSensor.value).to.equal(1024);
 
           lightSensor.setScale(0, 100);
 
           // Afterward, values ARE clamped
-          setRawAnalogValue(pin, -1);
+          setSensorAnalogValue(lightSensor, -1);
           expect(lightSensor.value).to.equal(0);
-          setRawAnalogValue(pin, 1024);
+          setSensorAnalogValue(lightSensor, 1024);
           expect(lightSensor.value).to.equal(100);
         });
 
         it('rounds values provided by .value to integers', () => {
           // Before setting scale, raw values are not rounded
           // (although this should not be necessary)
-          setRawAnalogValue(pin, Math.PI);
+          setSensorAnalogValue(lightSensor, Math.PI);
           expect(lightSensor.value).to.equal(Math.PI);
-          setRawAnalogValue(pin, 543.21);
+          setSensorAnalogValue(lightSensor, 543.21);
           expect(lightSensor.value).to.equal(543.21);
 
           lightSensor.setScale(0, 100);
 
           // Afterward, only integer values are returned
           for (let i = 0; i < 1024; i++) {
-            setRawAnalogValue(pin, i);
+            setSensorAnalogValue(lightSensor, i);
             expect(lightSensor.value % 1).to.equal(0);
           }
         });
@@ -366,7 +537,8 @@ describe('Circuit Playground Components', () => {
       let buttonL;
 
       beforeEach(() => {
-        buttonL = createCircuitPlaygroundComponents(board).buttonL;
+        return createCircuitPlaygroundComponents(board)
+          .then(components => buttonL = components.buttonL);
       });
 
       it('creates a five.Button', () => {
@@ -391,7 +563,8 @@ describe('Circuit Playground Components', () => {
       let buttonR;
 
       beforeEach(() => {
-        buttonR = createCircuitPlaygroundComponents(board).buttonR;
+        return createCircuitPlaygroundComponents(board)
+          .then(components => buttonR = components.buttonR);
       });
 
       it('creates a five.Button', () => {
@@ -416,7 +589,8 @@ describe('Circuit Playground Components', () => {
       let accelerometer;
 
       beforeEach(() => {
-        accelerometer = createCircuitPlaygroundComponents(board).accelerometer;
+        return createCircuitPlaygroundComponents(board)
+          .then(components => accelerometer = components.accelerometer);
       });
 
       it('creates a five.Accelerometer', () => {
@@ -458,11 +632,12 @@ describe('Circuit Playground Components', () => {
     // TODO (captouch): Un-skip when we re-enable
     describe.skip('touchPads', () => {
       it('only creates one five.Touchpad for all the TouchSensors', () => {
-        const components = createCircuitPlaygroundComponents(board);
-        const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
-        expect(theOnlyTouchpadController.board).to.equal(board);
-        TOUCH_PINS.forEach(pin => {
-          expect(components[`touchPad${pin}`].touchpadsController_).to.equal(theOnlyTouchpadController);
+        return createCircuitPlaygroundComponents(board).then(components => {
+          const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
+          expect(theOnlyTouchpadController.board).to.equal(board);
+          TOUCH_PINS.forEach(pin => {
+            expect(components[`touchPad${pin}`].touchpadsController_).to.equal(theOnlyTouchpadController);
+          });
         });
       });
 
@@ -471,7 +646,9 @@ describe('Circuit Playground Components', () => {
           let touchPad;
 
           beforeEach(() => {
-            touchPad = createCircuitPlaygroundComponents(board)[`touchPad${pin}`];
+            return createCircuitPlaygroundComponents(board).then(components => {
+              touchPad = components[`touchPad${pin}`];
+            });
           });
 
           it('creates a TouchSensor', () => {
@@ -492,7 +669,8 @@ describe('Circuit Playground Components', () => {
     let components;
 
     beforeEach(() => {
-      components = createCircuitPlaygroundComponents(board);
+      return createCircuitPlaygroundComponents(board)
+        .then(c => components = c);
     });
 
     it('can be safely called on empty object', () => {
@@ -597,28 +775,28 @@ describe('Circuit Playground Components', () => {
 
       it('stops Piezo.play()', function () {
         // Make a new one since we're spying on a 'prototype'
-        const {buzzer} = createCircuitPlaygroundComponents(board);
+        return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
+          // Set up a song
+          const tempoBPM = 120;
+          buzzer.play(['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
+          expect(frequencySpy).to.have.been.calledOnce;
 
-        // Set up a song
-        const tempoBPM = 120;
-        buzzer.play(['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
-        expect(frequencySpy).to.have.been.calledOnce;
+          // Make sure the song is playing
+          const msPerBeat = 15000 / tempoBPM;
+          clock.tick(msPerBeat);
+          expect(frequencySpy).to.have.been.calledTwice;
+          clock.tick(msPerBeat);
+          expect(frequencySpy).to.have.been.calledThrice;
 
-        // Make sure the song is playing
-        const msPerBeat = 15000 / tempoBPM;
-        clock.tick(msPerBeat);
-        expect(frequencySpy).to.have.been.calledTwice;
-        clock.tick(msPerBeat);
-        expect(frequencySpy).to.have.been.calledThrice;
+          // Now destroy the component(s)
+          destroyCircuitPlaygroundComponents({buzzer});
 
-        // Now destroy the component(s)
-        destroyCircuitPlaygroundComponents({buzzer});
-
-        // And ensure the song has stopped
-        clock.tick(msPerBeat);
-        expect(frequencySpy).to.have.been.calledThrice;
-        clock.tick(msPerBeat);
-        expect(frequencySpy).to.have.been.calledThrice;
+          // And ensure the song has stopped
+          clock.tick(msPerBeat);
+          expect(frequencySpy).to.have.been.calledThrice;
+          clock.tick(msPerBeat);
+          expect(frequencySpy).to.have.been.calledThrice;
+        });
       });
     });
 
@@ -638,20 +816,21 @@ describe('Circuit Playground Components', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
       const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
-      const components = createCircuitPlaygroundComponents(board);
-      destroyCircuitPlaygroundComponents(components);
+      return createCircuitPlaygroundComponents(board).then(components => {
+        destroyCircuitPlaygroundComponents(components);
 
-      let assertionError;
-      try {
-        expect(spy).to.have.been.calledOnce;
-      } catch (e) {
-        assertionError = e;
-      }
+        let assertionError;
+        try {
+          expect(spy).to.have.been.calledOnce;
+        } catch (e) {
+          assertionError = e;
+        }
 
-      spy.restore();
-      if (assertionError) {
-        throw assertionError;
-      }
+        spy.restore();
+        if (assertionError) {
+          throw assertionError;
+        }
+      });
     });
   });
 
@@ -662,7 +841,6 @@ describe('Circuit Playground Components', () => {
 
     it('contains a constructor for every created component', () => {
       const constructors = Object.values(componentConstructors);
-      const components = createCircuitPlaygroundComponents(board);
 
       function isPlainObject(obj) {
         // Check whether the constructor is native object
@@ -680,7 +858,9 @@ describe('Circuit Playground Components', () => {
         }
       }
 
-      hasNeededConstructors(components);
+      return createCircuitPlaygroundComponents(board).then(components => {
+        hasNeededConstructors(components);
+      });
     });
 
     it('uses the constructor name', () => {
@@ -691,12 +871,13 @@ describe('Circuit Playground Components', () => {
   });
 
   /**
-   * Simulate a raw value coming back from the board on the given pin.
-   * @param {number} pin
+   * Simulate a raw value coming back from the board on the given component's pin.
+   * @param {five.Sensor|five.Thermometer} component
    * @param {number} rawValue - usually in range 0-1023.
    * @throws if nothing is monitoring the given analog pin
    */
-  function setRawAnalogValue(pin, rawValue) {
+  function setSensorAnalogValue(component, rawValue) {
+    const {board, pin} = component;
     const readCallback = board.io.analogRead.args.find(callArgs => callArgs[0] === pin)[1];
     readCallback(rawValue);
   }

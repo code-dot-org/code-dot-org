@@ -215,6 +215,20 @@ module LevelsHelper
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
 
+    if current_user
+      if @script
+        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+          current_user.sections_as_student.first
+      else
+        section = current_user.sections_as_student.first
+      end
+      if section && section.first_activity_at.nil?
+        section.update!(first_activity_at: DateTime.now)
+      end
+      @app_options[:experiments] =
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+    end
+
     @app_options
   end
 

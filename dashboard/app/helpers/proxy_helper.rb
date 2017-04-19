@@ -64,7 +64,7 @@ module ProxyHelper
     end
   rescue URI::InvalidURIError
     render_error_response 400, "Invalid URI #{location}"
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => e
     render_error_response 400, "Network error #{e.class} #{e.message}"
   end
 

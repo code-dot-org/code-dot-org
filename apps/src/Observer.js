@@ -1,7 +1,7 @@
-/** @file Helper for consuming ObservableEvents. */
+/** @file Helper for consuming ObservableEventDEPRECATEDs. */
 
 /**
- * Helper object for consuming ObservableEvents, designed for composition into
+ * Helper object for consuming ObservableEventDEPRECATEDs, designed for composition into
  * other classes.  Remembers what it's observing and provides safer ways to
  * stop observing those things.
  * @constructor
@@ -17,7 +17,7 @@ var Observer = module.exports = function () {
 /**
  * Begin observing the given event, forwarding it to the provided callback
  * whenever the event occurs.
- * @param {!ObservableEvent} event
+ * @param {!ObservableEventDEPRECATED} event
  * @param {!function} callback
  */
 Observer.prototype.observe = function (event, callback) {

@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage';
 import {expect} from 'chai';
-import _ from 'lodash';
 
 describe("Tests for Professional Learning Landing Page", () => {
   const generateLandingPage = (landingPageProps = []) => {
@@ -22,7 +21,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       });
 
       expect(landingPage.childAt(2).is('TwoPartBanner')).to.be.true;
-      expect(landingPage.childAt(2).shallow().text().indexOf('Order Supplies') >= 0).to.be.true;
+      expect(landingPage.childAt(2).shallow().text().indexOf('Submit feedback and order free course kit') >= 0).to.be.true;
       expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
@@ -35,7 +34,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       });
 
       expect(landingPage.childAt(2).is('TwoPartBanner')).to.be.true;
-      expect(landingPage.childAt(2).shallow().text().indexOf('Order Supplies')).to.equal(-1);
+      expect(landingPage.childAt(2).shallow().text().indexOf('Submit feedback and order free course kit')).to.equal(-1);
       expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });

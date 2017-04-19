@@ -1,4 +1,4 @@
-/* global addToHome CDOSounds trackEvent Applab Blockly */
+/* global addToHome trackEvent Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -16,7 +16,7 @@ var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
 var project = require('@cdo/apps/code-studio/initApp/project');
 var createCallouts = require('@cdo/apps/code-studio/callouts');
 var reporting = require('@cdo/apps/code-studio/reporting');
-var Dialog = require('@cdo/apps/code-studio/dialog');
+var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
 import {
   lockContainedLevelAnswers,
@@ -24,14 +24,11 @@ import {
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
 import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
-import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
 const SHARE_IMAGE_NAME = '_share_image.png';
-const POINTS_KEY = 'tempPoints';
 
 /**
  * When we have a publicly cacheable script, the server does not send down the
@@ -83,31 +80,9 @@ export function setupApp(appOptions) {
     }
   }
 
-  if (experiments.isEnabled('g.bannermode')) {
-    var pointsData = JSON.parse(localStorage.getItem(POINTS_KEY) || '{}');
-    var totalPoints = 0;
-    for (var id in pointsData) {
-      totalPoints += pointsData[id];
-    }
-    var setPoints = function () {
-      var menuItem = $('.points_menu_item');
-      if (menuItem.length === 0) {
-        // TODO(ram): This is a hack, remove this code when points are removed
-        // or moved to the server, by 5/1/2017 at the lastest
-        setTimeout(setPoints, 200);
-        return;
-      }
-      menuItem.text(i18n.nPoints({numPoints: totalPoints}));
-      menuItem.css('display', 'block');
-    };
-    setPoints();
-  }
-
   // Sets up default options and initializes blockly
   var baseOptions = {
     containerId: 'codeApp',
-    Dialog: Dialog,
-    cdoSounds: CDOSounds,
     position: {blockYCoordinateInterval: 25},
     onInitialize: function () {
       createCallouts(this.level.callouts || this.callouts);
@@ -196,7 +171,7 @@ export function setupApp(appOptions) {
           />,
           body
         );
-        const dialog = new Dialog({
+        const dialog = new LegacyDialog({
           body: body,
           width: 800,
           redirect: lastServerResponse.nextRedirect

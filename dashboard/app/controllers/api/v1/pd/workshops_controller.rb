@@ -18,6 +18,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
+    if current_user.admin? && params[:workshop_id]
+      @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
+    end
+
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
 

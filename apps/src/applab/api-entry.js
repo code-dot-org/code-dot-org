@@ -16,7 +16,7 @@ import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/init
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import {getExportedGlobals} from './export';
-window.CDOSounds = new Sounds();
+window.CDOSounds = Sounds.getSingleton();
 
 const noop = function () {};
 
@@ -25,7 +25,7 @@ window.Applab.JSInterpreter = {
   getNearestUserCodeLine: function () {return 0;},
   deinitialize: noop
 };
-studioApp.highlight = noop;
+studioApp().highlight = noop;
 Applab.render = noop;
 
 // window.APP_OPTIONS gets generated on the fly by the exporter and appended to this file.

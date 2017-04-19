@@ -9,9 +9,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
-      "Game.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,
@@ -76,7 +76,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}"
+    "start_blocks": "var sprite = createSprite(200, 200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

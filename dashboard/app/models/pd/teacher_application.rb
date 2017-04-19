@@ -9,7 +9,6 @@
 #  primary_email             :string(255)      not null
 #  secondary_email           :string(255)      not null
 #  application               :text(65535)      not null
-#  accepted_workshop         :string(255)
 #  regional_partner_override :string(255)
 #
 # Indexes
@@ -22,12 +21,12 @@
 class Pd::TeacherApplication < ActiveRecord::Base
   PROGRAM_DETAILS_BY_COURSE = {
     'csd' => {
-      name: 'CS Discoveries',
+      name: Pd::Workshop::COURSE_CSD,
       url: 'https://code.org/educate/professional-learning/cs-discoveries',
       approval_form_id: '1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A'
     },
     'csp' => {
-      name: 'CS Principles',
+      name: Pd::Workshop::COURSE_CSP,
       url: 'https://code.org/educate/professional-learning/cs-principles',
       approval_form_id: '1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ'
     }
@@ -66,6 +65,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   ]
 
   belongs_to :user
+  has_one :accepted_program, class_name: 'Pd::AcceptedProgram', foreign_key: :teacher_application_id
 
   validates_presence_of :user
   validates_presence_of :application
@@ -131,6 +131,30 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   def application_hash
     application ? JSON.parse(application) : {}
+  end
+
+  def accepted_workshop=(workshop_name)
+    if workshop_name.nil?
+      accepted_program.try(:destroy)
+      return
+    end
+
+    params = {
+      workshop_name: workshop_name,
+      course: selected_course,
+      user_id: user_id,
+      teacher_application_id: id
+    }
+
+    if accepted_program
+      accepted_program.update! params
+    else
+      self.accepted_program = Pd::AcceptedProgram.find_or_create_by! params
+    end
+  end
+
+  def accepted_workshop
+    accepted_program.try(:workshop_name)
   end
 
   def teacher_first_name

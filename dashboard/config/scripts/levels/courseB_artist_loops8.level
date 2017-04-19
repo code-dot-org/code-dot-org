@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Time to head home. Can you fix this ladder to help the artist get down?",
+    "instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
     "x": "75",
     "y": "75",
     "start_direction": "180",
@@ -35,6 +35,8 @@
     "ideal": "6",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3947bcb7fca8d3d9a817904f2d5985b9-image-1478642066737.png\", \"position\": [0,0]}\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

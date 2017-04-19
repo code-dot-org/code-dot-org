@@ -44,28 +44,10 @@ class AdminUsersController < ApplicationController
     end
   end
 
-  def confirm_email_form
-  end
-
-  def confirm_email
-    user = User.find_by_email_or_hashed_email(params[:email])
-
-    if user
-      user.confirm
-      user.save!
-      flash[:alert] = 'Email confirmed!'
-      redirect_to confirm_email_form_path
-    else
-      flash[:alert] = 'User not found -- email not confirmed'
-      render :confirm_email_form
-    end
-  end
-
   def undelete_user
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
-      user.deleted_at = nil
-      user.save!
+      user.restore
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"

@@ -1,0 +1,21 @@
+name 'Longitudinal study description'
+css 'unplugged'
+markdown <<MARKDOWN
+# Participate in a Long-Range Study!
+
+## Are you 18 years or older?
+If you're 18 years or older, you can choose to participate in a longitudinal study with us - a long-range study that will try to capture the decisions, stories, and paths of students, such as yourself, in your post-high school life.
+
+### If you want to participate, [please fill out this simple form (it will take 1 minute or less)](https://docs.google.com/forms/d/e/1FAIpQLScfLsr5G1HI1PFZOtShBnP6uIKG4c4N_HC_TUyKftzLKzk3-Q/viewform) 
+
+If you choose to participate, Code.org will contact you 2-3 times per year over the next few years. As a thank you, we will give you a &#36;10 gift card each time you participate.
+
+## Not yet 18?
+*Unfortunately, we are only conducting longitudinal studies with students who are already at least 18 years old. If you are interested in participating you can contact us once you turn 18.*
+
+
+
+
+
+
+MARKDOWN

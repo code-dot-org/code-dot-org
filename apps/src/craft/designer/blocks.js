@@ -676,7 +676,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   function onSoundSelected(soundValue) {
     const soundName = stripQuotes(soundValue).trim();
-    studioApp.playAudio(soundName);
+    studioApp().playAudio(soundName);
   }
 
   blockly.Blocks.craft_playSound = {
