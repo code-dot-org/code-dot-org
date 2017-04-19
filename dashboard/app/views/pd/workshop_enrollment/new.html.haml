@@ -16,11 +16,11 @@
         = render partial: 'workshop_details'
         %h2
           Your Information
-        - unless @signed_in
+        - unless current_user
           %div.info-box-teal
-            %div.left
-              =image_tag image_url("info.png")
-            %div.right
+            %div.info-box-left
+              =image_tag image_url("info_icon.png")
+            %div.info-box-right
               %p
                 %span.message
                   Already have a Code.org account?

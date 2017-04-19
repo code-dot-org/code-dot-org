@@ -13,7 +13,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
-        @signed_in = true
         @enrollment.full_name = current_user.name
         @enrollment.email = current_user.email
         @enrollment.email_confirmation = current_user.email
