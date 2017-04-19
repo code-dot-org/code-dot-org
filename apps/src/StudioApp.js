@@ -2892,6 +2892,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
   }, appSpecificConstants);
 
