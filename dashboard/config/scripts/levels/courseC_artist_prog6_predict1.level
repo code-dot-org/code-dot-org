@@ -129,8 +129,5 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml/>
-    </recommended_blocks>
   </blocks>
 </Artist>

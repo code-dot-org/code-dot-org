@@ -57,8 +57,7 @@ var ExecutionInfo = require('./executionInfo');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 var TurnDirection = tiles.TurnDirection;
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 var SVG_NS = require('../constants').SVG_NS;
 
