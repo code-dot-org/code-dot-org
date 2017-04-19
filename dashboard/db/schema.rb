@@ -427,6 +427,15 @@ ActiveRecord::Schema.define(version: 20170421012552) do
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
+  create_table "pd_regional_partner_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535
+    t.integer  "teachercon",               null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id", "teachercon"], name: "index_pd_reg_part_prog_reg_on_user_id_and_teachercon", using: :btree
+  end
+
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_workshop_id"
     t.datetime "start",          null: false
