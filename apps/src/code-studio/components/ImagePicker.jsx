@@ -7,7 +7,7 @@ var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 var extensionFilter = {
   image: '.jpg, .jpeg, .gif, .png',
   audio: '.mp3',
-  document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx'
+  document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx, .txt'
 };
 
 /**
