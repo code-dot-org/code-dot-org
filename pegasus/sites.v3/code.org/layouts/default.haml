@@ -2,9 +2,7 @@
 
 .wrapper
   = view :unsupported_browser
-  -if request.cookies['pm'] == 'new_header'
-    = view :header2
-  -elsif header['theme'] == 'responsive'
+  -if header['theme'] == 'responsive'
     #desktop-header.desktop-feature
       = view :header
     #mobile-header.mobile-headers.mobile-feature

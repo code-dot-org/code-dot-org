@@ -151,6 +151,7 @@ class Section < ActiveRecord::Base
     self.followers_attributes = follower_params
   end
 
+  # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
   # @param move_for_same_teacher [Boolean] Whether the student should be unenrolled from other
   #   sections belonging to the same teacher.
@@ -171,7 +172,15 @@ class Section < ActiveRecord::Base
       end
     end
 
-    Follower.find_or_create_by!(student_user: student, section: self)
+    follower = Follower.with_deleted.find_by(section: self, student_user: student)
+    if follower
+      if follower.deleted?
+        follower.restore
+      end
+      return follower
+    end
+
+    Follower.create!(section: self, student_user: student)
   end
 
   private

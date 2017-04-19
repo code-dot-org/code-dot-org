@@ -26,6 +26,7 @@
 class CurriculumReference < Level
   serialized_attrs %w(
     reference
+    teacher_markdown
   )
 
   def self.create_from_level_builder(params, level_params)
