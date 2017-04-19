@@ -186,6 +186,18 @@ class SectionTest < ActiveSupport::TestCase
     assert new_section.students.exists?(attendee.id)
   end
 
+  test 'add student undeletes existing follower' do
+    follower = create :follower, section: @section, student_user: @student
+    follower.destroy
+
+    assert_no_change('Follower.with_deleted.count') do
+      assert_creates(Follower) do
+        @section.add_student @student, move_for_same_teacher: false
+      end
+    end
+    refute follower.reload.deleted?
+  end
+
   test 'section_type validation' do
     section = create :section
 
