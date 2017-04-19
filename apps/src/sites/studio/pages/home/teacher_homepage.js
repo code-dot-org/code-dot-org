@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GradientNavCard from '@cdo/apps/templates/teacherDashboard/GradientNavCard';
+import GradientNavCard from '@cdo/apps/templates/teacherHomepage/GradientNavCard';
 
 $(document).ready(showContent);
 
