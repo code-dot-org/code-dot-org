@@ -3,6 +3,11 @@
 
 .user_menu {
   padding: 7px 14px;
+
+  .user_name {
+    user-select: none;
+  }
+
   .user_options {
     background-color: white;
     border: 1px solid $charcoal;
