@@ -1687,6 +1687,7 @@ en:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
             CSP Student Post Survey Staging: CSP Student Post Survey Staging
             CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
+            Participate in a longitudinal study!: Participate in a longitudinal study!
           description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
@@ -2896,3 +2897,12 @@ en:
           description_audience: ''
           description_short: 2016/2017 Draft of CSD Unit 1
           description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1 and will only remain available until July 1, 2017.
+        csd2-draft:
+          stage:
+            Text on the Web: Text on the Web
+            Digital Footprint: Digital Footprint
+            Images in HTML: Images in HTML
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
