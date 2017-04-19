@@ -22,8 +22,7 @@ var Jigsaw = module.exports;
 var level;
 var skin;
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 studioApp().setCheckForEmptyBlocks(true);
 
