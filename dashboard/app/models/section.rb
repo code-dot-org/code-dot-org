@@ -183,6 +183,19 @@ class Section < ActiveRecord::Base
     Follower.create!(section: self, student_user: student)
   end
 
+  # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
+  # student from old section.
+  # @param student [User] The student to enroll in this section.
+  # @param old_section [Section] The section from which to remove the student.
+  # @return [Follower | nil] The newly created follower enrollment (possibly nil).
+  def add_and_remove_student(student, old_section)
+    old_follower = old_section.followers.where(student_user: student).first
+    return nil unless old_follower
+
+    old_follower.destroy
+    add_student(student, move_for_same_teacher: false)
+  end
+
   private
 
   def unused_random_code
