@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[1,1,1,4,1,1,1,1],[1,1,1,1,1,1,1,4],[1,1,1,1,1,3,1,1],[1,1,1,1,1,1,1,1],[4,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,2,1,1,1,1,1,1],[1,1,1,1,1,1,1,4]]",
+    "maze": "[[4,4,4,4,4,4,4,4],[1,1,1,1,1,1,1,4],[1,1,1,1,1,3,1,4],[1,1,1,1,1,1,1,4],[4,1,1,1,1,1,1,4],[4,1,1,1,1,1,1,4],[4,2,1,1,1,1,1,4],[4,4,4,4,4,4,4,4]]",
     "skin": "birds",
     "instructions": "Get the pig any way you can!",
     "start_direction": "1",
@@ -29,6 +29,7 @@
     "instructions_important": "false",
     "step_speed": "3",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
