@@ -387,7 +387,7 @@ Resources:
       CacheNodeType: <%= cache_node_type %>
       CacheParameterGroupName: !Ref MemcachedParameterGroup
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
-      ClusterName: memcached-<%=stack_name%>
+      ClusterName: <%=stack_name[0..19]%> # Max 20 chars
       Engine: memcached
       NumCacheNodes: 2
       AZMode: cross-az
