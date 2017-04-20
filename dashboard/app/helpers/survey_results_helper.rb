@@ -1,5 +1,17 @@
 module SurveyResultsHelper
   def show_diversity_survey?(kind)
+    # Disable diversity survey
+    false
+  end
+
+  def show_nps_survey?(kind)
+    # Disable NPS survey
+    false
+  end
+
+  # For archival purposes, this is the working implementation of
+  # show_diversity_survey? for when the survey is active.
+  def show_diversity_survey_active?(kind)
     return false unless current_user
     return false unless language == "en"
     return false if current_user.under_13?
@@ -12,11 +24,6 @@ module SurveyResultsHelper
 
     # There is no reason not to show the survey, so show the survey.
     return true
-  end
-
-  def show_nps_survey?(kind)
-    # Disable NPS survey
-    false
   end
 
   def account_existed_14_days?
