@@ -14,7 +14,16 @@ class Pd::MimeoRestClient
     Expired: 104
   }
 
-  def initialize
+  STATUS_SHIPPED = 'Shipped'.freeze
+
+  RETRYABLE_ERROR_TEXT = 'An unexpected error occurred while processing the request. '\
+      'Information related to the error has been logged and will be reviewed. '\
+      'Please attempt to submit your request again at a future time.'
+
+  # @param max_attempts [Integer] Number of attempts on known retryable errors
+  #   (Default 2, i.e. one retry)
+  def initialize(max_attempts: 2)
+    @max_attempts = max_attempts
     @document_name = get_config_value :document_name
     @document_id = get_config_value :document_id
     @shipping_method_id = get_config_value :shipping_method_id
@@ -142,6 +151,29 @@ class Pd::MimeoRestClient
 
   private
 
+  # Determines if the error is a known retriable error,
+  # a spurious internal server error in the Mimeo API
+  # @param [RestClient::ExceptionWithResponse] error
+  # @return [Boolean] true if the error is retryable, otherwise false
+  def retryable_error?(error)
+    error.try(:response).try(:body).try(:include?, RETRYABLE_ERROR_TEXT)
+  end
+
+  # Executes the block with retries for retriable errors
+  def with_retries
+    # get or post
+    calling_method_name = caller_locations(1, 1)[0].label
+
+    exception_cb = ->(exception) do
+      raise exception unless retryable_error?(exception)
+      CDO.log.info("Retrying Pd::MimeoRestClient.#{calling_method_name} after receiving error: #{exception}")
+    end
+
+    Retryable.retryable(tries: @max_attempts, exception_cb: exception_cb) do
+      yield
+    end
+  end
+
   # Makes a POST call to the specified path with params
   # @param path [String]
   # @param params [Hash]
@@ -149,7 +181,9 @@ class Pd::MimeoRestClient
   # @raises [RestClient::ExceptionWithResponse] on known error codes.
   # See https://github.com/rest-client/rest-client#exceptions-see-httpwwww3orgprotocolsrfc2616rfc2616-sec10html
   def post(path, params)
-    @resource[path].post params.to_json
+    with_retries do
+      @resource[path].post params.to_json
+    end
   end
 
   # Makes a GET call to the specified path
@@ -158,7 +192,9 @@ class Pd::MimeoRestClient
   # @raises [RestClient::ExceptionWithResponse] on known error codes.
   # See https://github.com/rest-client/rest-client#exceptions-see-httpwwww3orgprotocolsrfc2616rfc2616-sec10html
   def get(path)
-    @resource[path].get
+    with_retries do
+      @resource[path].get
+    end
   end
 
   def get_config_value(key)
