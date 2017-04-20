@@ -23,7 +23,8 @@ import {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
-  setIsSummaryView
+  setIsSummaryView,
+  setCurrentStageId,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -139,11 +140,16 @@ progress.renderCourseProgress = function (scriptData) {
  * @param {string} scriptName - name of current script
  * @param {string} currentLevelId - Level that we're current on.
  * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
+ * @param {bool} student_detail_progress_view - Should we default to progress view
  *   user has
  */
 progress.renderMiniView = function (element, scriptName, currentLevelId,
-    linesOfCodeText) {
+    linesOfCodeText, student_detail_progress_view) {
   const store = getStore();
+  if (student_detail_progress_view) {
+    store.dispatch(setIsSummaryView(false));
+  }
+
   ReactDOM.render(
     <Provider store={store}>
       <MiniView linesOfCodeText={linesOfCodeText}/>
@@ -224,6 +230,9 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       store.dispatch(mergeProgress(levelProgress));
       if (data.peerReviewsPerformed) {
         store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+      if (data.current_stage) {
+        store.dispatch(setCurrentStageId(data.current_stage));
       }
     }
   });
