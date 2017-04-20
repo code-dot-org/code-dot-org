@@ -126,7 +126,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
-  loadApp({
+  let loadedApp = loadApp({
     skinId: skinId,
     level: level,
     baseUrl: '/base/build/package/',
@@ -181,6 +181,9 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     },
     onAttempt: onAttempt
   });
+  if (app === 'gamelab') {
+    window.Gamelab = loadedApp;
+  }
 }
 
 function setAppSpecificGlobals(app) {
