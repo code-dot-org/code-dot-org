@@ -37,7 +37,7 @@ export function init() {
  * @returns {boolean}
  */
 export function isCaptureComplete() {
-  return !isCapturePending;
+  return lastCaptureTimeMs > 0 && !isCapturePending;
 }
 
 export function captureScreenshot() {

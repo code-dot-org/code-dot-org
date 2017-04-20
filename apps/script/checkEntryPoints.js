@@ -40,8 +40,6 @@
 
 const chalk = require('chalk');
 const child_process = require('child_process');
-const path = require('path');
-const fs = require('fs');
 
 const SILENCED = [
   'applab',
@@ -62,7 +60,6 @@ const SILENCED = [
   'levelbuilder_applab',
   'levelbuilder_edit_script',
   'levelbuilder_gamelab',
-  'levelbuilder_markdown',
   'levelbuilder_studio',
   'levelbuilder_pixelation',
   'levels/contract_match',
@@ -84,6 +81,7 @@ const SILENCED = [
   'studio',
   'turtle',
   'tutorialExplorer',
+  'hamburger',
   'weblab',
   'learn/index'
 ];

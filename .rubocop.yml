@@ -10,6 +10,9 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
+Rails:
+  Enabled: true
+
 # BEGIN CODE.ORG OVERRIDES
 
 Style/AlignParameters:
