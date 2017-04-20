@@ -574,6 +574,9 @@ en:
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
+      CSD U3 Describe the Picture:
+        description here: description here
+        title: title
       CSD U3 Draw Loop Map: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Entertainment: {}
