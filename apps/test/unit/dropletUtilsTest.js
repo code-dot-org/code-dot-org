@@ -136,29 +136,29 @@ describe('dropletUtils', () => {
     });
 
     it('returns a number if I enter a number', () => {
-      var prompt = sinon.stub(window, 'prompt');
+      const prompt = sinon.stub(window, 'prompt');
       prompt.returns('123');
 
-      var val = dropletUtils.promptNum('Enter a value');
+      const val = dropletUtils.globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 1);
       assert.strictEqual(val, 123);
     });
 
     it('can handle non-integer numbers', () => {
-      var prompt = sinon.stub(window, 'prompt');
+      const prompt = sinon.stub(window, 'prompt');
       prompt.returns('1.23');
 
-      var val = dropletUtils.promptNum('Enter a value');
+      const val = dropletUtils.globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 1);
       assert.strictEqual(val, 1.23);
     });
 
     it('reprompts if I enter a non-numerical value', () => {
-      var prompt = sinon.stub(window, 'prompt');
+      const prompt = sinon.stub(window, 'prompt');
       prompt.onCall(0).returns('onetwothree');
       prompt.onCall(1).returns('123');
 
-      var val = dropletUtils.promptNum('Enter a value');
+      const val = dropletUtils.globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 2);
       assert.strictEqual(val, 123);
     });
