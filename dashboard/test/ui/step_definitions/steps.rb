@@ -1181,3 +1181,29 @@ def refute_site_unreachable
   # This error message is specific to Chrome
   expect(first_header_text).not_to eq('This site can’t be reached')
 end
+
+Then /^I wait until the image within element "([^"]*)" has loaded$/ do |selector|
+  image_status_selector = "#{selector} div[data-image-status=loaded]"
+  wait_until do
+    @browser.execute_script("return $(#{image_status_selector.dump}).length > 0;")
+  end
+end
+
+Then /^I wait until initial thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialCaptureComplete();')
+  end
+end
+
+Then /^I wait for initial project save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
+end
+
+When /^I switch to text mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet text mode
+  STEPS
+end

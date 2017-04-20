@@ -29,9 +29,11 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   namespace :full_stack do
     task :environment do
       ENV['TEMPLATE'] = 'cloud_formation_stack.yml.erb'
+      ENV['CDN_ENABLED'] = '1'
     end
 
-    desc 'Launch a full-stack adhoc environment.
+    desc 'Launch a full-stack adhoc environment with auto-scaling frontends,
+daemon CI server, cache clusters and CDN.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
     task start: :environment do
       Rake::Task['adhoc:start'].invoke
