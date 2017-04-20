@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,4,4,4,4,4,4,0],[0,2,1,1,1,1,4,0],[0,0,0,4,4,1,0,0],[0,0,0,0,4,1,0,0],[0,4,4,0,4,1,0,0],[0,3,1,1,1,1,4,0],[0,0,0,4,4,4,4,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,4,4,4,4,4,4,0],[0,2,1,1,1,1,1,0],[0,0,0,4,4,1,1,0],[0,0,0,0,4,1,1,0],[3,1,4,0,4,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,4,4,4,4,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "instructions": "Time for one last puzzle to pull it all together!",
-    "ideal": "5",
+    "instructions": "Time for another Angry Birds puzzle to pull it all together!",
+    "ideal": "8",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,8 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use the \\\"Step\\\" button to go through block by block and look for errors.\",\"hint_id\":\"courseD_maze_ramp11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c38b1ee74ef68dd1a5ce2efb5d1c1f46/courseE_maze_ramp13.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use repeat blocks to run either a single block or a chunk of code over and over.\",\"hint_id\":\"courseD_maze_ramp11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7078b030e0e4326975a53a8b7ae7039f/courseE_maze_ramp13.mp3\"}]",
-    "markdown_instructions": "Time for one last puzzle to pull it all together!\r\n\r\nUse nested loops to get the bird to the pig.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use the \\\"Step\\\" button to go through block by block and look for errors.\",\"hint_id\":\"courseF_maze_ramp11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c38b1ee74ef68dd1a5ce2efb5d1c1f46/courseF_maze_ramp13.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use repeat blocks to run either a single block or a chunk of code over and over.\",\"hint_id\":\"courseF_maze_ramp11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7078b030e0e4326975a53a8b7ae7039f/courseF_maze_ramp13.mp3\"}]",
+    "markdown_instructions": "Time for another Angry Birds puzzle to pull it all together!\r\n\r\nUse nested loops to get the bird to the pig.",
     "callout_json": "[]",
     "instructions_important": "true",
     "hide_share_and_remix": "false",
@@ -74,6 +74,18 @@
                   </next>
                 </block>
               </statement>
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
