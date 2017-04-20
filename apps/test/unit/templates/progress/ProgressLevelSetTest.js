@@ -47,4 +47,18 @@ describe('ProgressLevelSet', function () {
     assert.equal(wrapper.find('ProgressPill').props().text, '');
   });
 
+  it('renders a pill with no text when last level is unplugged', () => {
+    const wrapper = shallow(
+      <ProgressLevelSet
+        name={undefined}
+        levels={[
+          ...fakeLevels(5),
+          fakeLevel({isUnplugged: true}),
+        ].map(level => ({...level, name: undefined }))}
+        disabled={false}
+      />
+    );
+    assert.equal(wrapper.find('ProgressPill').props().text, '');
+  });
+
 });

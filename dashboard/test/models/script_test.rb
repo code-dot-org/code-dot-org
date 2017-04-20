@@ -440,6 +440,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'should generate a short summary' do
+    script = create(:script, name: 'single-stage-script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    expected = {
+      name: 'single-stage-script',
+      disablePostMilestone: false,
+      isHocScript: false,
+      student_detail_progress_view: false
+    }
+    assert_equal expected, script.summarize_short
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])

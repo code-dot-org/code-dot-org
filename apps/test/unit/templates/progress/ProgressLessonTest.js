@@ -165,4 +165,17 @@ describe('ProgressLesson', () => {
     wrapper.setProps({currentStageId: 1});
     assert.equal(wrapper.state('collapsed'), false);
   });
+
+  it('does not change collapse state when other props are updated', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        currentStageId={null}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), true);
+
+    wrapper.setProps({foo: 'bar'});
+    assert.equal(wrapper.state('collapsed'), true);
+  });
 });
