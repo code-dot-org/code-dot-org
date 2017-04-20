@@ -22,12 +22,12 @@ Resources:
   WebServerAMI:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
+      ImageId: <%=IMAGE_ID%>
+      InstanceType: <%=INSTANCE_TYPE%>
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
       SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
-      KeyName: <%=ssh_key_name%>
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
