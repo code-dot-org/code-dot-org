@@ -83,7 +83,7 @@ class Pd::PaymentTerm < ApplicationRecord
       regional_partner: regional_partner,
       course: course,
       subject: subject
-    ).where('end_date > ? or end_date IS NULL', start_date)
+    ).where('end_date > ? or end_date IS NULL', start_date).where('start_date >= ?', end_date)
 
     raise 'Only one payment term should exist per time range' unless old_payment_terms.size <= 1
 
