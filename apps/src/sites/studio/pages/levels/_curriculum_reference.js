@@ -42,6 +42,4 @@ function resizeIFrame(iframe) {
   iframe.height = height;
 }
 
-window.curriculumReference = {
-  onload: onload
-};
+window.curriculumReference = { onload };
