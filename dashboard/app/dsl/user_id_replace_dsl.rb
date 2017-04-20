@@ -1,0 +1,2 @@
+class UserIdReplaceDSL < ExternalDSL
+end
