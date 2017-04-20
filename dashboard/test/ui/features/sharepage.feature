@@ -12,6 +12,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   Then I press "rightButton"
   And I wait to see "#x-close"
   Then I navigate to the share URL
+  And I wait for the page to fully load
 
   Then ensure Flappy gameState is WAITING
   Then I press "runButton"
@@ -23,6 +24,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
 
   And I select the "How it works" small footer item
   And I get redirected to "/edit" via "dashboard"
+  And I wait for the page to fully load
   And I wait to see "#codeWorkspace"
   And ensure Flappy gameState is WAITING
   When I press "runButton"
