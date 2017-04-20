@@ -10,8 +10,8 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "start_direction": "0",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,0,4,1,0,0],[0,0,1,4,0,1,0,0],[0,0,2,0,0,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "start_direction": "3",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,4,4,3,0,0],[0,0,1,4,4,4,4,4],[0,0,1,1,2,4,4,4],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern. \",\"hint_id\":\"courseC_maze_loops9_1\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05cd96bdcbfecd91645c457fcf01598f/courseC_maze_loops9.mp3\"}]",
     "never_autoplay_video": "false",
@@ -29,6 +29,8 @@
     "disable_examples": "false",
     "step_speed": "5",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -67,11 +69,10 @@
                   <next>
                     <block type="maze_moveForward">
                       <next>
-                        <block type="maze_moveForward">
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
                           <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnRight</title>
-                            </block>
+                            <block type="maze_moveForward"/>
                           </next>
                         </block>
                       </next>
