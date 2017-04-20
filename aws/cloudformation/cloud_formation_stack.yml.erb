@@ -9,13 +9,13 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 
 ami = commit[0..4]
 unless dry_run
-  update_certs.call unless cdn_enabled
   update_cookbooks.call
   update_bootstrap_script.call
 end
 
 frontends = %i(production adhoc).include?(rack_env)
 require 'cdo/cron'
+image_id = IMAGE_ID
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -34,11 +34,11 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
+      InstanceType: <%=INSTANCE_TYPE%>
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
       SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
-      KeyName: <%=ssh_key_name%>
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -136,10 +136,10 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
-      InstanceType: <%=instance_type%>
+      InstanceType: <%=INSTANCE_TYPE%>
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
-      KeyName: <%=ssh_key_name%>
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -390,9 +390,9 @@ Resources:
         Timeout: PT60M
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
+      InstanceType: <%=INSTANCE_TYPE%>
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
-      KeyName: <%=ssh_key_name%>
+      KeyName: <%=SSH_KEY_NAME%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -406,6 +406,7 @@ Resources:
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
+          commit: nil, # track branch
           shutdown: false,
           daemon: true
         )%>
