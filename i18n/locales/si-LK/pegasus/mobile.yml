@@ -674,7 +674,8 @@
   dashboard_students_auto_generated: "ස්වයංක්රීය-ජනනය"
   dashboard_students_reset_secret: "රහස තිබූ පරිදිම සකසන්න"
   dashboard_students_reset_password: "මුර පදය නැවත සකස් කරන්න"
-  dashboard_students_share_section: 'මෙම කොටසේ පිවිසුම් පිටුව ඔබේ සිසුන් සමඟ බෙදා ගන්න:'
+  dashboard_students_share_section: "මෙම කොටසේ පිවිසුම් පිටුව ඔබේ සිසුන් සමඟ බෙදා ගන්න:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "ඔබේ සිසුන්ගේ පිවිසුම් තොරතුරු සමඟ කාඩ්පත් මුද්‍රණය කරන්න."
   dashboard_students_secret_picture_title: "රහස් පින්තූරය"
   dashboard_students_secret_picture: "මෙම කොටසේ දී රහස්‍ය සංකේතය ලෙස <b>පින්තුරයක් </b> භාවිතා කරයි. එනම්, ඔබගේ සෑම සිසුවෙකුටම sign-in වීමට යාමේදී  password යන තැනට පාවිච්චි කිරීම සඳහා රහස්‍ය පින්තුරයක් තිබේ, සිසුන් මෙයට ඇතුළු වීමට, ඉහත සඳහන් sign-in වෙබ් ලිපිනය පාවිච්චි කල යුතුයි."
@@ -685,6 +686,7 @@
   dashboard_students_join_link: "ඔවුන්ගේම ගිණුම් සාදාගෙන ඔබේ කොටස වෙත එක් වීම ට ඔබේ සිසුන්ට නියම කරන්න"
   dashboard_students_no_email: "ඔබේ සිසුන් ඊ-මේල් ලිපින නැත්නම්, හෝ ඔබ ඔවුන්ට සඳහා වන ගිණුම් නිර්මාණය කිරීමට කැමති නම්,\nවෙනස් කරන්න මෙම අංශයෙහි රහස් ආකාරය <b>වචන</b> හෝ <b>පින්තුර</b> වෙත."
   dashboard_students_print_page: "මෙම පිටුව මුද්‍රණය කරන්න"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "ඔබේ සිසුන් සඳහා බෙදාගත හැකි හෝ මුද්‍රණය කළ හැකි අපගේ රහස්‍යතා ලේඛනය සඳහා <a href=\"/privacy/student-privacy\", target=\"_blank\">මෙතැන ක්ලික් කරන්න</a>."
   dashboard_curriculum_k5_title: "පෙරපාසල් සිට 5 ශ්‍රේණිය දක්වා අධ්‍යාපක සම්පත්"
@@ -880,6 +882,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'

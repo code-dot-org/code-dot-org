@@ -7246,10 +7246,8 @@ en:
       courseC_multi_artist_prog6_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.: Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.
         Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
         Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
-        The artist draws a shape with four equal sides tilted on its corner, making a diamond.: The artist draws a shape with four equal sides tilted on its corner, making a diamond.
         The artist draws a square.: The artist draws a square.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
@@ -8046,7 +8044,6 @@ en:
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  Laurel continues to collect treasure in 4 different spaces.: Incorrect.  Laurel continues to collect treasure in 4 different spaces.
         Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.

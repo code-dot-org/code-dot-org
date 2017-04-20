@@ -30,16 +30,10 @@ module Pd::Payment
       assert_equal 500, PaymentCalculator.instance.calculate(workshop)
     end
 
-    test 'Calculate CSF Workshop with insufficient attendees' do
-      insufficient_workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 5)
-
-      assert_equal 0, PaymentCalculator.instance.calculate(insufficient_workshop)
-    end
-
-    test 'Calculate CSF Workshop with insufficient teachers who did puzzles' do
+    test 'Calculate CSF Workshop with only some teachers who did puzzles' do
       insufficient_puzzles = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
       create_passed_levels(insufficient_puzzles.enrollments[0..5])
-      assert_equal 0, PaymentCalculator.instance.calculate(insufficient_puzzles)
+      assert_equal 300, PaymentCalculator.instance.calculate(insufficient_puzzles)
     end
 
     test 'Error raised if there is no payment term for workshop' do

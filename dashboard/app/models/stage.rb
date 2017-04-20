@@ -152,19 +152,9 @@ class Stage < ActiveRecord::Base
           position: script_level.position,
           named_level: script_level.named_level?,
           path: script_level.path,
-          level_id: level.id,
-          type: level.class.to_s,
-          name: level.name
         }
 
-        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
-          value = level.properties[key] || level.try(key)
-          level_json[key] = value if value
-        end
-        if level.video_key
-          level_json[:video_youtube] = level.specified_autoplay_video.youtube_url
-          level_json[:video_download] = level.specified_autoplay_video.download
-        end
+        level_json.merge!(level.summary_for_lesson_plans)
 
         level_json
       end

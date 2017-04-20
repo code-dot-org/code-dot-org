@@ -23,7 +23,7 @@ The Code.org Advocacy Coalition supports the implementation of the following pol
 * Fund computer science professional development and support course development
 * Implement a clear certification pathway for computer science teachers
 * Incentivize higher education institutions to offer computer science to pre-service teachers
-* Establish dedicated computer science positions in state and local education authorities
+* Establish dedicated computer science positions in state and local education agencies
 * Require that all high schools offer computer science with an appropriate implementation timeline and financial resources
 * Allow computer science to satisfy a core graduation requirement
 * Clearly define computer science education in federal policy and programs
