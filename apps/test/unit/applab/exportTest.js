@@ -1,7 +1,7 @@
 import {assert} from '../../util/configuredChai';
 import {blocks as applabBlocks} from '@cdo/apps/applab/dropletConfig';
 import {getExportedGlobals} from '@cdo/apps/applab/export';
-const dropletUtilsBlocks = require('@cdo/apps/dropletUtils').dropletGlobalConfigBlocks;
+import {dropletGlobalConfigBlocks} from '@cdo/apps/dropletUtils';
 
 describe("the export module", () => {
   describe("the getExportedGlobals function", () => {
@@ -32,7 +32,7 @@ describe("the export module", () => {
     }
 
     testIncludesBlocks(applabBlocks);
-    testIncludesBlocks(dropletUtilsBlocks);
+    testIncludesBlocks(dropletGlobalConfigBlocks);
 
   });
 });
