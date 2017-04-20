@@ -1,4 +1,5 @@
-var _ = require('lodash');
+import _ from 'lodash';
+import color from './util/color';
 
 /**
  * @name DropletBlock
@@ -7,6 +8,7 @@ var _ = require('lodash');
  * @property {string} blockPrefix Prepend this string before the normal block name in the palette
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
+ * @property {String} color block color, overriding category and type if present
  * @property {String} type type of the block (e.g. value, either, property, readonlyproperty)
  * @property {Object[]} dropdown array of dropdown info for arguments (see Droplet docs)
  * @property {Object|string[]|Function} objectDropdown dropdown info for object on the left side of member expression (assumes wildcard in name)
@@ -29,7 +31,12 @@ var _ = require('lodash');
  * @name DropletConfig
  * @description Configuration information for Droplet
  * @property {DropletBlock[]} blocks list of blocks
- * @property {Object} categories configuration of categories within which to place blocks
+ * @property {Object} categories configuration of categories within which to
+ *   place blocks
+ * @property {boolean} autocompleteFunctionsWithParens If set, we will append
+ *   "();" after functions
+ * @property {string[]} additionalPredefValues Additional keywords to add to
+ *   autocomplete and consider 'defined' for linting purposes.
  */
 
 var COLOR_PURPLE = '#BB77C7';
@@ -527,7 +534,9 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
     }
 
     var category = mergedCategories[block.category];
-    if (category) {
+    if (typeof block.color === 'string' && block.color.length > 0) {
+      newFunc.color = block.color;
+    } else if (category) {
       newFunc.color = category.rgb || category.color;
     }
 
@@ -711,6 +720,37 @@ function getParamFromCodeAtIndex(index, methodName, code) {
   }
   return null;
 }
+
+/**
+ * Given a stating config, generates a "disabled" droplet config that has the
+ * following properties:
+ *  - Removes all categories
+ *  - Removes all blocks from categories
+ *  - Turns all blocks gray
+ *  - Removes all blocks from autocomplete
+ *  - Removes all additional defines
+ * @param {DropletConfig} originalConfig
+ */
+module.exports.makeDisabledConfig = function makeDisabledConfig(originalConfig) {
+  return {
+    // Start with existing config
+    ...originalConfig,
+
+    // No categories
+    categories: {},
+
+    // No extra predefined values
+    additionalPredefValues: [],
+
+    // Turn all blocks gray and disable autocomplete
+    blocks: originalConfig.blocks.map(block => ({
+      ...block,
+      category: undefined,
+      color: color.light_gray,
+      noAutocomplete: true,
+    }))
+  };
+};
 
 exports.__TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig,
