@@ -74,6 +74,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render_404
     else
       @cancel_url = url_for action: :cancel, code: @enrollment.code
+      @account_exists = User.find_by_email_or_hashed_email(
+        @enrollment.email
+        ).present?
     end
   end
 
