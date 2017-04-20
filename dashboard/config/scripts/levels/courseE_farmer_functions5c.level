@@ -33,10 +33,9 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"A staircase pattern will be helpful here!\",\"hint_id\":\"courseE_farmer_functions5c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e5a2353dcb065a1ed9a80fdaf85ff77f/courseE_farmer_functions5c.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -33,9 +33,9 @@
     "fast_get_nectar_animation": "true",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Edit the function so that it solves the puzzle without having to change the main program.\",\"hint_id\":\"courseE_bee_functions5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c13234808ee1de49bfd6d6b901e590fa/courseE_bee_functions5.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your function should make the bee: \\n- turn\\n- move forward\\n- collect all of the nectar\\n- turn around\\n- move back to the main path\\n- turn back to the direction that the bee started from\",\"hint_id\":\"courseE_bee_functions5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/15d37752eff9a504cd996a40812e8ed9/courseE_bee_functions5.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

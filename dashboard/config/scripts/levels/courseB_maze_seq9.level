@@ -11,7 +11,7 @@
     "is_k1": "true",
     "skip_instructions_popup": "true",
     "start_direction": "3",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,0,4,4,0,0],[0,0,3,1,4,2,0,0],[0,0,4,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,1,1,1,0,0],[0,0,4,1,1,1,0,0],[0,0,3,1,4,2,0,0],[0,0,4,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,7 +29,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble, try writing down the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f77a1ec169a93c73e0c324f31c61fb4d/courseB_maze_seq9.mp3\"}]",
     "markdown_instructions": "**Challenge:** Move around the TNT to get the bird to the pig.",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

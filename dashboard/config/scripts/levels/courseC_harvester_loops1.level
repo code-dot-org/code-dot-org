@@ -31,7 +31,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "ideal": "4",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_harvester_loops1_callout1\",\r\n  \"callout_text\": \"The number four on the pumpkin tells you that there are four pumpkins available to pick.\",\r\n  \"element_id\": \"#cropClip_4_4\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_harvester_loops1_callout1\",\r\n  \"callout_text\": \"The number four on the pumpkin tells you that there are four pumpkins available to pick.\",\r\n  \"element_id\": \"#cropClip_4_4\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -10,\r\n     \"y\": 30\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": null
