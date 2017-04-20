@@ -256,7 +256,8 @@ group :staging, :test, :production, :adhoc, :levelbuilder do
   # Ref: https://github.com/ignisf/image_compressor_pack/pull/3
   gem 'image_compressor_pack', github: 'wjordan/image_compressor_pack', ref: 'cdo', require: false
   # Ref: https://github.com/toy/image_optim/pull/145
-  gem 'image_optim', github: 'wjordan/image_optim', ref: 'guetzli'
+  # Also include sRGB color profile conversion.
+  gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
   gem 'image_optim_rails'
 end
 
