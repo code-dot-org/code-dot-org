@@ -537,6 +537,11 @@ en:
       CSD U1 Input Output Intro:
         description here: description here
         title: title
+      CSD U1 Lesson 5 Overview: {}
+      CSD U1 Lesson 6 Overview: {}
+      CSD U1 Lesson 7 Overview: {}
+      CSD U1 Lesson 8 Overview: {}
+      CSD U1 Lesson 9 Overview: {}
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
         description here: description here
@@ -2723,6 +2728,7 @@ en:
         Binary Drawing: Binary Drawing
       courseE_external_ramp14:
         Good Job!: Good Job!
+      courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
       coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
@@ -7237,9 +7243,9 @@ en:
       courseC_multi_artist_prog6_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.: Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
         Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
-        The artist draws a shape with four equal sides tilted on its corner, making a diamond.: The artist draws a shape with four equal sides tilted on its corner, making a diamond.
+        The artist draws a square.: The artist draws a square.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
       courseC_multi_harvester_loops11_predict1:
@@ -8035,7 +8041,7 @@ en:
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  Laurel continues to collect treasure in 4 different spaces.: Incorrect.  Laurel continues to collect treasure in 4 different spaces.
+        Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will not collect any treasure.: Laurel will not collect any treasure.

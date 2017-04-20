@@ -674,7 +674,8 @@
   dashboard_students_auto_generated: "Само-генерисано"
   dashboard_students_reset_secret: "Ресетуј тајну"
   dashboard_students_reset_password: "Ресетуј лозинку"
-  dashboard_students_share_section: 'Поделите страницу за пријаву ове групе са својим ученицима:'
+  dashboard_students_share_section: "Поделите страницу за пријаву ове групе са својим ученицима:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Отштампајте картице са подацима за пријављивање ученика/це."
   dashboard_students_secret_picture_title: "Тајна слика"
   dashboard_students_secret_picture: "Тајна слика"
@@ -685,6 +686,7 @@
   dashboard_students_join_link: "Реците вашим ученицима да направе сопствене налоге и придруже се вашој групи на"
   dashboard_students_no_email: "Ако ваши студенти немају имејл адресе, или бисте желели да направите налоге за њих, промените тајну за групу у <b>реч</b> или <b>слику</b>."
   dashboard_students_print_page: "Одштампај ову страницу"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "УРЛ адреса странице"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Кликните овде</a>да би добили наш документ о приватности који можете да поделите или одштампате са вашим ученицима."
   dashboard_curriculum_k5_title: "К-5 наставнички извори"
@@ -880,6 +882,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

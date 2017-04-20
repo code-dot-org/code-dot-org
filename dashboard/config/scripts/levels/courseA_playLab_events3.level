@@ -46,7 +46,7 @@
     ],
     "timeout_failure_tick": "250",
     "callout_json": "[]",
-    "markdown_instructions": "Help Jorge the Dog get moving by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png) event block that is already in the workspace. Finish the level by getting Jorge to the flag!",
+    "markdown_instructions": "Help Jorge the Dog get moving by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png) event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)\",\"hint_id\":\"courseA_playLab_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c780c19ef4ef3c820a81af31c5155963/courseA_playLab_events3.mp3\"}]",
     "tts_instructions_override": "Help Jorge the Dog get moving by connecting the move block to the when event block that is already in the workspace. Finish the level by getting Jorge to the flag!",
     "hide_share_and_remix": "false",

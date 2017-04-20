@@ -1683,6 +1683,8 @@ zh-TW:
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: 計算機科學原理最終評估
+            CSP Student Post Survey Staging: CSP Student Post Survey Staging
+            CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
           description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: 計算機科學原理最終評估 - 第 1 部分
@@ -2421,6 +2423,7 @@ zh-TW:
             Artist Binary: 小藝術家 - 二進制（Binary）
             Nested Loops in Bee: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Nested Loops: 巢狀迴圈
+            Introduction: 介紹
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2696,6 +2699,8 @@ zh-TW:
             Analog Input: 模擬輸入
             Polling Events: 輪詢事件
             Sensor Applications: 傳感器應用
+            'Project: Prototype an Innovation': '專案：原型創新'
+            Map: 地圖
           title: 實驗單元 6
           description_audience: ''
           description_short: ''
@@ -2716,6 +2721,18 @@ zh-TW:
             Interpreting Data: 解譯數據
             Data in the Real World: Data in the Real World
             Combining Representations: 組合表示
+            Representing Images: 表示圖像
+            Representation Matters: 表示事項
+            Patterns and Representation: 模式和標記法
+            ASCII and Binary Representation: ASCII 和 二進位表示法
+            Representing Numbers Part 1: 數字表示法 第 1 部分
+            Representing Numbers Part 2: 數字表示法 第 2 部分
+            Project - Create a Representation: 專案 - 創建標記法
+            Problem Solving and Data: 問題解決與數據
+            Making Decisions with Data: 依數據來做決定
+            Automating Data Decisions: 自動化數據決策
+            Problem Solving with Big Data: 用大數據解決問題
+            Project - Solve a Data Problem: 專案 - 解決數據問題
           title: ''
           description_audience: ''
           description_short: ''
@@ -2766,7 +2783,114 @@ zh-TW:
         coursee-ramp:
           stage:
             Introduction: 介紹
-          title: ''
+            Conditionals: 條件判斷（Conditionals）
+            'Real Life Algorithms: Dice Race': 'Real Life Algorithms: Dice Race'
+          title: coursee-ramp
           description_audience: ''
           description_short: ''
           description: ''
+        csd6:
+          stage:
+            Computing Innovations: 計算創新（Computing Innovations）
+            Input Unplugged: 不插電介紹輸入（Input）
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            The Circuit Playground: 電路（Circuit ）遊樂場
+            Lists: 清單
+            Lights: 燈光
+            For Loops: 計數迴圈（For Loops）
+            Lists and For Loops: 清單和計數迴圈
+            Timed Loops: 計時迴圈
+            'Project: Board Output': 'Project: Board Output'
+            Physical Input: Physical Input
+            Analog Input: 模擬輸入
+            Sensor Applications: 傳感器應用
+            'Project: Prototype an Innovation': '專案：原型創新'
+          title: CSD 單元 6 - 物理運算
+          description_audience: ''
+          description_short: 在物理裝置上開發程式
+          description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
+        csd3-draft:
+          stage:
+            Shapes and Randomess: 形狀與隨機性
+            Shapes and Randomness: 形狀與隨機性
+            Drawing in Game Lab: Drawing in Game Lab
+            Variables: 變數
+            Programming for Entertainment: 娛樂用途的程式設計
+            Sprites: 角色
+            Plotting Shapes: 幾何繪圖
+            Sprite Movement: Sprite Movement
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: 條件判斷（Conditionals）
+            Taking Input: Taking Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+          title: CSD 單元 3 - 程式設計：動畫與遊戲
+          description_audience: ''
+          description_short: 動畫和遊戲
+          description: ''
+        csd5:
+          stage:
+            Representation Matters: 表示事項
+            Patterns and Representation: 模式和標記法
+            ASCII and Binary Representation: ASCII 和 二進位表示法
+            Representing Images: 表示圖像
+            Representing Numbers Part 1: 數字表示法 第 1 部分
+            Representing Numbers Part 2: 數字表示法 第 2 部分
+            Combining Representations: 組合表示
+            Project - Create a Representation: 專案 - 創建標記法
+            Problem Solving and Data: 問題解決與數據
+            Making Decisions with Data: 依數據來做決定
+            Interpreting Data: 解譯數據
+            Automating Data Decisions: 自動化數據決策
+            Problem Solving with Big Data: 用大數據解決問題
+            Project - Solve a Data Problem: 專案 - 解決數據問題
+            Representing Numbers: 數字表示法
+            8-bit Numbers: 8 位元數字
+          title: CSD 單元 5 - 數據和社會
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-old:
+          stage:
+            Drawing in Game Lab: Drawing in Game Lab
+            Draw Loop and Randomization: Draw Loop and Randomization
+            Variables Unplugged: Variables Unplugged
+            Variables and Animation: Variables and Animation
+            Sprites and Properties: Sprites and Properties
+            Sprites and Images: Sprites and Images
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals and Keyboard Input: Conditionals and Keyboard Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: 速度
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: 函式
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: 使用遊戲設計流程
+            'Project: Design a Game': '專案：設計一個遊戲'
+          title: CSD Unit 3 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 3
+          description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3 - this original draft will remain available until July 1, 2017.
+        csd1-old:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: 電腦是什麼？
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs Computer Processing: Human vs Computer Processing
+            Processing with Apps: Processing with Apps
+            'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
+          title: CSD Unit 1 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 1
+          description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1 and will only remain available until July 1, 2017.
