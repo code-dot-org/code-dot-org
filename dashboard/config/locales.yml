@@ -238,6 +238,13 @@
   native: "Kurdí"
   debug: true
 
+"ky": "ky-KG"
+"ky-KG":
+  english: "Kyrgyz"
+  native: "Кыргызча"
+  webfonts: false
+  debug: true
+
 "lt": "lt-LT"
 "lt-LT":
   english: "Lithuanian"
