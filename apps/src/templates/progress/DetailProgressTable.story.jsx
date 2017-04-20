@@ -33,8 +33,6 @@ const levelsByLesson = [
   fakeLevels(2)
 ];
 
-console.log(levelsByLesson);
-
 export default storybook => {
   storybook
     .storiesOf('DetailProgressTable', module)
