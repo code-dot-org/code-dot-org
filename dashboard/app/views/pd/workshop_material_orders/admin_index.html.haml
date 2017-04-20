@@ -1,14 +1,14 @@
 %h1 Workshop Material Orders
 
-- if @stats
+- if @counts
   %h3 Stats
   %table.table.table-hover.table-condensed
     %thead
-      - @stats.keys.each do |key|
+      - @counts.keys.each do |key|
         %td= key.to_s.titleize
     %tbody
       %tr
-        - @stats.values.each do |value|
+        - @counts.values.each do |value|
           %td= value
 
 %h3 Orders
