@@ -2,7 +2,6 @@ module Pd::Payment
   class PaymentCalculator
     include Singleton
     MINIMUM_PUZZLES_FOR_CSF_QUALIFICATION = 10
-    MINIMUM_QUALIFIED_TEACHERS_FOR_CSF = 10
     PAYMENT_PER_TEACHER_CSF = 50
 
     def calculate(workshop)
@@ -27,17 +26,11 @@ module Pd::Payment
       qualified_teacher_count = 0
 
       # We can probably improve the performance here by doing a group by
-      if attending_teachers.size >= 10
-        attending_teachers.each do |teacher|
-          qualified_teacher_count += 1 if UserLevel.where(user: teacher).passing.count >= MINIMUM_PUZZLES_FOR_CSF_QUALIFICATION
-        end
+      attending_teachers.each do |teacher|
+        qualified_teacher_count += 1 if UserLevel.where(user: teacher).passing.count >= MINIMUM_PUZZLES_FOR_CSF_QUALIFICATION
       end
 
-      if qualified_teacher_count >= MINIMUM_QUALIFIED_TEACHERS_FOR_CSF
-        qualified_teacher_count * PAYMENT_PER_TEACHER_CSF
-      else
-        0
-      end
+      qualified_teacher_count * PAYMENT_PER_TEACHER_CSF
     end
 
     def calculate_workshop_payment(workshop)
