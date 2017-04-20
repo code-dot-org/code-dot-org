@@ -118,10 +118,12 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
 
-      script_level[:properties] = {}
-      script_level[:properties][:progression] = progression if progression
-      script_level[:properties][:target] = true if target
-      script_level[:properties][:challenge] = true if challenge
+      if progression || target || challenge
+        script_level[:properties] = {}
+        script_level[:properties][:progression] = progression if progression
+        script_level[:properties][:target] = true if target
+        script_level[:properties][:challenge] = true if challenge
+      end
 
       @scriptlevels << script_level
     end
