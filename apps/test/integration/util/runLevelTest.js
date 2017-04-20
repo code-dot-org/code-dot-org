@@ -105,7 +105,7 @@ const appLoaders = {
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
   eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
-  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  gamelab: require('../../util/gamelab/loadTestableGamelab'),
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
