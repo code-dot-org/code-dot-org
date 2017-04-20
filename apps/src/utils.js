@@ -359,13 +359,24 @@ export function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
 }
 
-export function tryGetLocalStorage(key, defaultValue) {
+
+/**
+ * Simple wrapper around Storage.getItem that catches any exceptions (for
+ * example when we call getItem in Safari's private mode)
+ *
+ * @param {Storage} the instance of the WebStorage interface on which to call
+ *        getItem
+ * @param {string} keyName - to be passed to getItem
+ * @param {} defaultValue - the value to return if an exception would be thrown
+ * @return {} the item stored by the given key, or defaultValue
+ */
+function tryGetStorage(storage, keyName, defaultValue) {
   if (defaultValue === undefined) {
-    throw "tryGetLocalStorage requires defaultValue";
+    throw "tryGetStorage requires defaultValue";
   }
   let returnValue = defaultValue;
   try {
-    returnValue = localStorage.getItem(key);
+    returnValue = storage.getItem(keyName);
   } catch (e) {
     // Ignore, return default
   }
@@ -373,36 +384,40 @@ export function tryGetLocalStorage(key, defaultValue) {
 }
 
 /**
- * Simple wrapper around localStorage.setItem that catches any exceptions (for
+ * Simple wrapper around Storage.setItem that catches any exceptions (for
  * example when we call setItem in Safari's private mode)
- * @return {boolean} True if we set successfully
+ *
+ * @param {Storage} the instance of the WebStorage interface on which to call
+ *        setItem
+ * @param {string} keyName - to be passed to setItem
+ * @param {string} keyValue - to be passed to setItem
+ * @return {boolean} True if we set successfully, False otherwise
  */
-export function trySetLocalStorage(item, value) {
+function trySetStorage(storage, keyName, keyValue) {
   try {
-    localStorage.setItem(item, value);
+    storage.setItem(keyName, keyValue);
     return true;
   } catch (e) {
     return false;
   }
-
 }
 
-/**
- * Simple wrapper around sessionStorage.setItem that catches the quota exceeded
- * exceptions we get when we call setItem in Safari's private mode.
- * @return {boolean} True if we set successfully
- */
-export function trySetSessionStorage(item, value) {
-  try {
-    sessionStorage.setItem(item, value);
-    return true;
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-    return false;
-  }
+export function tryGetLocalStorage(keyName, defaultValue) {
+  tryGetStorage(localStorage, keyName, defaultValue);
 }
+
+export function trySetLocalStorage(keyName, keyValue) {
+  trySetStorage(localStorage, keyName, keyValue);
+}
+
+export function tryGetSessionStorage(keyName, defaultValue) {
+  tryGetStorage(sessionStorage, keyName, defaultValue);
+}
+
+export function trySetSessionStorage(keyName, keyValue) {
+  trySetStorage(sessionStorage, keyName, keyValue);
+}
+
 
 /**
  * Generates a simple enum object
