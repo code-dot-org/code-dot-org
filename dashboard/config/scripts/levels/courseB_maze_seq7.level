@@ -29,10 +29,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There is 1 block that you need to add to move the bird to the pig.\",\"hint_id\":\"courseB_maze_seq7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/21d7dcd6e12d6f15ea5b4727b9ac2c4d/courseB_maze_seq7.mp3\"}]",
     "callout_json": "[]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

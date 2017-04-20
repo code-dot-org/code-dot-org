@@ -83,6 +83,7 @@ level 'CSD U3 - Simple Counter Predict', progression: 'Movement with the Counter
 level 'CSD U3 Sprite Movement Right', progression: 'Movement with the Counter Pattern'
 level 'CSD U3 Sprite Movement Left', progression: 'Movement with the Counter Pattern'
 level 'CSD U3 Sprite Movement Predict', progression: 'Movement with the Counter Pattern'
+level 'CSD U3 Diagonal Movement', progression: 'Movement with the Counter Pattern'
 named_level 'CSD U3 Watchers Map'
 level 'CSD U3 Watcher Predict', progression: 'Animating Sprites'
 level 'CSD U3 Watcher Debug', progression: 'Animating Sprites'
