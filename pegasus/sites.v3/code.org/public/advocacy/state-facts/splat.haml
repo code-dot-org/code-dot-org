@@ -390,13 +390,13 @@ theme: pdf
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            has a dedicated computer science position in the state education authority.
+            has a dedicated computer science position in the state education agency.
         - elsif state_info[:state_position_s] == 'No'
           %div
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have dedicated computer science positions in state or local education authorities. Creating a statewide computer science leadership position within the state education authority can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
+            have dedicated computer science positions in state or local education agencies. Creating a statewide computer science leadership position within the state education agency can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
         - elsif state_info[:state_position_s] == 'Other'
           %div
             %i.fa.fa-square-o
