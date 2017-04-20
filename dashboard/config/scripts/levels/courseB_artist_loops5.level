@@ -35,7 +35,10 @@
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/505d619f0e0dda1847614770164c345e-image-1478587486468.png\", \"position\": [0,0]}\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseB_artist_loops5_1\",\r\n  \"callout_text\": \"This number means that there are no more of this block left in the toolbox.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right top\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
@@ -55,7 +58,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="simple_move_up" limit="1"/>
+        <block type="simple_move_up" limit="1" id="callMe"/>
         <block type="simple_move_down"/>
         <block type="simple_move_right" limit="1"/>
         <block type="simple_move_left"/>
