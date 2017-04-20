@@ -68,6 +68,10 @@ class Pd::PaymentTerm < ApplicationRecord
     found_payment_terms[0]
   end
 
+  def date_range
+    start_date..(end_date || Date::Infinity.new)
+  end
+
   private
 
   def sufficient_contract_terms
@@ -77,16 +81,59 @@ class Pd::PaymentTerm < ApplicationRecord
   end
 
   def truncate_previous_term
-    # When we create a new payment term, see if there are any payment terms for the exact
-    # criteria. If there is one, truncate it.
-    old_payment_terms = Pd::PaymentTerm.where(
+    extant_payment_terms = Pd::PaymentTerm.where(
       regional_partner: regional_partner,
       course: course,
       subject: subject
-    ).where('end_date > ? or end_date IS NULL', start_date).where('start_date >= ?', end_date)
+    )
 
-    raise 'Only one payment term should exist per time range' unless old_payment_terms.size <= 1
+    # Payment terms that conflict with the start date
+    new_term_range = start_date..(end_date || Date::Infinity.new)
+    extant_payment_terms.each do |old_payment_term|
+      old_term_range = old_payment_term.start_date..(old_payment_term.end_date || Date::Infinity.new)
 
-    old_payment_terms.update_all(end_date: start_date)
+      # Four possible overlaps, illustrated by this ascii art
+      # Case 1
+      #  <---Old--->
+      #       <---New--->
+
+      # Case 2
+      #  <---Old------------>
+      #       <---New--->
+
+      # Case 3
+      #       <---Old--->
+      #  <---New--->
+
+      # Case 4
+      #      <---Old--->
+      #  <----------New--->
+      next unless new_term_range.overlaps?(old_term_range)
+      if old_payment_term.start_date < start_date
+        if end_date.nil? || (old_payment_term.end_date && old_payment_term.end_date < end_date)
+          # Case 1
+          old_payment_term.update(end_date: start_date)
+        else
+          # Case 2
+          Pd::PaymentTerm.create!(
+            start_date: end_date,
+            end_date: old_payment_term.end_date,
+            regional_partner: regional_partner,
+            course: course,
+            subject: subject,
+            properties: old_payment_term.properties
+          )
+          old_payment_term.update(end_date: start_date)
+        end
+      else
+        if end_date && end_date < (old_payment_term.end_date || Date::Infinity.new)
+          # case 3
+          old_payment_term.update(start_date: end_date)
+        else
+          # case 4
+          old_payment_term.destroy
+        end
+      end
+    end
   end
 end
