@@ -73,14 +73,15 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "markdown_instructions": "<img src=\"https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif\" style=\"float: right; margin-left: 20px;\">\r\n\r\n# Debug: Watching the Counter Pattern\r\n\r\nLet's practice using watchers to debug your code. This program should move the motorcycle from the bottom left to the top right, like the image to the right. Unfortunately the motorcycle moves off screen too quickly to see what's going wrong.\r\n\r\nUsing the provided watchers for `cycle.x` and `cycle.y`, figure out which on is moving in the wrong direction and fix the program.",
-    "start_blocks": "var cycle = createSprite(0, 400);\r\ncycle.setAnimation(\"motorcycle\");\r\ncycle.rotation = 45;\r\n\r\nfunction draw() {\r\n  background(\"lightgrey\");\r\n  cycle.x = cycle.x + 10;\r\n  cycle.y = cycle.y + 10;\r\n  drawSprites();\r\n}",
-    "watchers_prepopulated": "[\"cycle.x\", \"cycle.y\"]",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"cf18249f-b61e-4aef-b32c-3bc053e4e1ce\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"cf18249f-b61e-4aef-b32c-3bc053e4e1ce\": {\r\n      \"name\": \"motorcycle\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/Ym.a6IChdRPRv48wbyOgxcF_lhRPLoo_/category_vehicles/motorcycle.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Ym.a6IChdRPRv48wbyOgxcF_lhRPLoo_\"\r\n    }\r\n  }\r\n}",
+    "markdown_instructions": "<img src=\"https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif\" style=\"float: right; margin-left: 20px;\">\r\n\r\n# Diagonal Movement\r\n\r\nUpdating only the `x` or `y` properties of a sprite can only make it move straight up and down or left and right. If you want a sprite to move on a diagonal path you'll need to updated _both_ of those properties.\r\n\r\nThis program currently makes the mouse move straight down the screen - can you update it so that it moves diagonally across the screen like the image to the right?\r\n\r\n_Challenge: Can you make the mouse point in the same direction as the image?_",
+    "start_blocks": "var mouse = createSprite(50, 50);\r\nmouse.setAnimation(\"mouse\");\r\nmouse.scale = 0.5;\r\n\r\nfunction draw() {\r\n  background(\"lightgreen\");\r\n  mouse.y = mouse.y + 2;\r\n  drawSprites();\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7cdd7bcc-4ea9-4570-9a65-43920e96c1a3\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7cdd7bcc-4ea9-4570-9a65-43920e96c1a3\": {\r\n      \"name\": \"mouse\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS/category_animals/mouse_gray.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 296\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS\"\r\n    }\r\n  }\r\n}",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
