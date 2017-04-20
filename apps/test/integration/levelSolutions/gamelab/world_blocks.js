@@ -1,5 +1,5 @@
-var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import tickWrapper from '../../util/tickWrapper';
+import {TestResults} from '@cdo/apps/constants';
 /* global Gamelab */
 
 var levelDefinition = {
@@ -120,7 +120,6 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.tickAppUntil(Gamelab, function () {
           var debugOutput = document.getElementById('debug-output');
-          console.log(debugOutput.textContent);
           return debugOutput.textContent !== "";
         }).then(function () {
           Gamelab.onPuzzleComplete();
