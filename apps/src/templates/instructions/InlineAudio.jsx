@@ -191,7 +191,7 @@ export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
-    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled,
+    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
   };
 })(Radium(InlineAudio));
