@@ -114,13 +114,13 @@ export const blocks = [
   // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'holdtime', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
-  {func: 'soundSensor.start', category: CIRCUIT_CATEGORY},
+  {func: 'soundSensor.start', category: CIRCUIT_CATEGORY, noAutocomplete: true},
   {func: 'soundSensor.value', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
   {func: 'soundSensor.getAveragedValue', category: CIRCUIT_CATEGORY, params: ['500'], paletteParams: ['ms'], type: 'value'},
   {func: 'soundSensor.setScale', category: CIRCUIT_CATEGORY, params: ['0', '100'], paletteParams: ['low', 'high']},
   {func: 'soundSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property' },
 
-  {func: 'lightSensor.start', category: CIRCUIT_CATEGORY},
+  {func: 'lightSensor.start', category: CIRCUIT_CATEGORY, noAutocomplete: true},
   {func: 'lightSensor.value', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
   {func: 'lightSensor.getAveragedValue', category: CIRCUIT_CATEGORY, params: ['500'], paletteParams: ['ms'], type: 'value'},
   {func: 'lightSensor.setScale', category: CIRCUIT_CATEGORY, params: ['0', '100'], paletteParams: ['low', 'high']},

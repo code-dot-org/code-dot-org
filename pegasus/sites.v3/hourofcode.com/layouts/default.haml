@@ -2,13 +2,16 @@
 
 .wrapper
   = view :unsupported_browser
-  -if header['theme'] == 'responsive'
-    #desktop-header.desktop-feature
+  - if request.cookies['pm'] == 'new_header'
+    = view :header2
+  - else
+    -if header['theme'] == 'responsive'
+      #desktop-header.desktop-feature
+        = view :header
+      #mobile-header.mobile-headers.mobile-feature
+        = view :mobile_header_responsive
+    -else
       = view :header
-    #mobile-header.mobile-headers.mobile-feature
-      = view :mobile_header_responsive
-  -else
-    = view :header
 
   -if header['theme'] == 'responsive'
     -if request.path_info =~ /^\/learn/
