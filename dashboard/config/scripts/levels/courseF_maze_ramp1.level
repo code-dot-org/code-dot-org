@@ -12,7 +12,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "3",
+    "ideal": "6",
     "video_key": "C2_maze_intro",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
