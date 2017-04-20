@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,1,1,3,0,0,0],[0,0,1,4,4,0,0,0],[0,0,1,4,4,2,0,0],[0,0,1,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
-    "start_direction": "1",
+    "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "5",
+    "ideal": "6",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,6 +29,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.\",\"hint_id\":\"courseC_maze_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aa8c6df62c10fd0c84a8cc9a58692e71/courseC_maze_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\"hint_id\":\"courseC_maze_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e8757e2e6d8010905633101f14343b19/courseC_maze_loops6.mp3\"}]",
     "markdown_instructions": "*\"This pig is ruffling my feathers!\"*\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -41,12 +43,16 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_turn" deletable="false">
-              <title name="DIR">turnRight</title>
+            <block type="maze_moveForward" deletable="false">
               <next>
-                <block type="maze_moveForward" deletable="false">
+                <block type="maze_turn" deletable="false">
+                  <title name="DIR">turnRight</title>
                   <next>
-                    <block type="maze_moveForward" deletable="false"/>
+                    <block type="maze_moveForward" deletable="false">
+                      <next>
+                        <block type="maze_moveForward" deletable="false"/>
+                      </next>
+                    </block>
                   </next>
                 </block>
               </next>
@@ -76,12 +82,16 @@
             <block type="controls_repeat">
               <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                <block type="maze_moveForward">
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                       <next>
-                        <block type="maze_moveForward"/>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward"/>
+                          </next>
+                        </block>
                       </next>
                     </block>
                   </next>
