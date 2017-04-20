@@ -3,6 +3,8 @@ import logToCloud from '../logToCloud';
 import {singleton as studioApp} from '../StudioApp';
 import {PaneButton} from './PaneHeader';
 import msg from '@cdo/locale';
+import UserPreferences from '../lib/util/UserPreferences';
+import experiments from '../util/experiments';
 
 const BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 const BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -125,13 +127,20 @@ class DropletCodeToggle extends Component {
     }
   }
 
+  onClick = () => {
+    this.toggle();
+    if (experiments.isEnabled('saveBlockMode')) {
+      new UserPreferences().setUsingTextMode(!studioApp().editor.currentlyUsingBlocks);
+    }
+  }
+
   render() {
     return (
       <ShowCodeButton
         hasFocus={this.props.hasFocus}
         isRtl={this.props.isRtl}
         isMinecraft={this.props.isMinecraft}
-        onClick={this.toggle}
+        onClick={this.onClick}
         hidden={!studioApp().enableShowCode}
         showingBlocks={this.state.showingBlocks}
         showCodeLabel={msg.showTextHeader()}
