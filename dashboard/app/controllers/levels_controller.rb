@@ -267,6 +267,8 @@ class LevelsController < ApplicationController
       :dsl_text,
       :encrypted,
       :published,
+      :title,
+      :description,
       {poems: []},
       {concept_ids: []},
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
