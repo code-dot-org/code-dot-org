@@ -87,6 +87,8 @@
     forgot_password: "هل نسيت كلمة المرور؟"
     need_confirmation: "لم تستلم تعليمات تأكيد الحساب؟"
     need_unlock: "لم تتلقى تعليمات فتح الحساب؟"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "عدد الطلاب المسجلين حالياً هو %{count}."
     teacher_count: "عدد المعلّمين المسجلين حالياً هو %{count}."
@@ -198,6 +200,14 @@
       وتقدم لكم مجموعة من المفاهيم الأساسية لعلوم الكمبيوتر الآلي باستخدام التبسيط
       \ والارشادات. تعلم البرمجة من بيل جيتس ومارك زوكربيرج، الطيور الغاضبة والنباتات
       ضد الزومبيز! :-)\n\n%{name}\n"
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "تم إرسال الدعوة"
     added_teacher: "%{name} تم اضافتك كمعلم"
@@ -212,8 +222,6 @@
       blank_code: "الرجاء إدخال رمز الفرع"
       cant_join_own_section: "عذراً، لا يمكنك الانضمام إلى القسم الخاص بك."
     mail:
-      invite_student:
-        subject: "أنضم إلى الصف مع %{teacher_name} في Code.org!"
       student_disassociated:
         subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
   reports:
@@ -460,6 +468,7 @@
       الكمبيوتر."
     announcement_petition_button: "أضف أسمك"
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: "ابق على اطلاع على المزايا الجديدة والتحديثات عبر مدونتنا للأساتذة.
       <a href='%{teacher_blog_url}' target='_blank'>اطلع على المنشورات السابقة.</a>"
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -522,16 +531,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال
       كود قسم مختلف."
-    section_code_not_entered: "ويرجى تقديم كود القسم الحالي."
     section_code_cant_be_current_section: "القسم الحالي لا يمكن أن يكون مثل القسم
       الجديد."
     current_section_dne: "عذراً, ولكن قسم %{current_section_code} غير موجود. لطفاً
       أدخل كود قسم مختلف."
-    students_not_yours: "لا يمكنك نقل طلاب من قسم لا يتنمي إليك."
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: "الرجاء تقديم معرفات_الطالب."
     student_not_found: "لا يمكن إيجاد الطالب أو مجموعة الطلاب."
     all_students_must_be_in_current_section: "يجب على جميع الطلاب أن تلتحق بقسمك في

@@ -440,6 +440,8 @@
         csd_gamelab_velocity: "速度"
         csd_weblab_intro_1: Web Lab 介紹 - 第 1 部分
         csd_weblab_intro_2: Web Lab 介紹 - 第 2 部分
+        csd_weblab_css_1: CSS 介紹 -  第 1 部分
+        csd_weblab_css_2: CSS 介紹 -  第 2 部分
         csd_weblab_intro_3: Web Lab 介紹 - 第 3 部分
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1

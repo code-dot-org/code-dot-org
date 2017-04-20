@@ -91,6 +91,8 @@
     forgot_password: Hai dimenticato la tua password?
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} studenti si sono già iscritti."
     teacher_count: "%{count} insegnanti si sono già iscritti."
@@ -146,9 +148,9 @@
     field_is_required: "è un dato obbligatorio"
     accept_terms: Devi accettare le condizioni per creare un account
   school_info:
-    title: School Information (optional)
+    title: Informazioni sulla scuola (opzionale)
     school_country: School Country
-    select_school_type: School Type
+    select_school_type: Tipo di scuola
     charter: Charter
     private: Privata
     public: Pubblica
@@ -206,6 +208,14 @@
       e piacevoli, e insegnano i concetti base dell'informatica utilizzando un approccio
       semplice e basato sui giochi. Impara a programmare da Bill Gates, Mark Zuckerberg,
       Angry Birds e Plants vs Zombies! :-) \n\n%{name}\n"
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Invito spedito
     added_teacher: "%{name} è stato aggiunto come tuo insegnante"
@@ -220,8 +230,6 @@
       blank_code: Inserisci un codice-classe
       cant_join_own_section: Siamo spiacenti, non puoi far parte della tua classe.
     mail:
-      invite_student:
-        subject: Unisciti ad una classe con %{teacher_name} su Code.org!
       student_disassociated:
         subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo
           studente.'
@@ -491,6 +499,7 @@
       programma di informatica K-12.
     announcement_petition_button: Aggiungi il tuo nome
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org
       attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti
       (in inglese)</a>.
@@ -556,23 +565,22 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Ci dispiace, la classe col codice %{new_section_code} non esiste.
       Inserisci un codice di classe esistente.
-    section_code_not_entered: Inserisci il codice di classe.
     section_code_cant_be_current_section: La nuova classe non può essere la stessa.
     current_section_dne: Ci dispiace, la classe col codice %{current_section_code}
       non esiste. Inserisci un codice di classe esistente.
-    students_not_yours: Non è possibile spostare gli studenti da una classe che non
-      appartiene a te.
-    stay_enrolled_not_entered: Indica per piacere se vuoi che gli studenti appartengano
-      ad entrambe le classi oppure no.
     student_ids_not_entered: Inserisci per piacere l'identificativo dello studente.
     student_not_found: Non sono stati trovati uno o più studenti.
     all_students_must_be_in_current_section: Tutti gli studenti da spostare devono
       appartenere alla tua classe.
-    already_enrolled_in_new_section: Non puoi spostare questi studenti perché appartengono
-      già ad una classe di questo insegnante.
+    already_enrolled_in_new_section: Non è possibile spostare questi studenti perché
+      questo insegnante li ha già in un'altra sezione.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -700,12 +708,12 @@
       unused: LIvelli non usati
   upsell:
     applab:
-      title: Laboratorio per le App
+      title: Sviluppo App
       body: App Lab è un ambiente di programmazione dove puoi creare semplici applicazioni.
         Sviluppa un app, programmala con i blocchi o il JavaScript per farla funzionare,
         e infine condividila in pochi secondi.
-      body_short: Progetta una app, programmala con i blocchi o con Javascript per
-        farla funzionare, poi condividi la tua app in pochi istanti.
+      body_short: Progetta una App, programmala con i blocchi o con Javascript, e
+        poi condividila.
       audience: Eta' 13+
       cta: Scopri come
     hoc:
@@ -787,7 +795,7 @@
     help_resources: Aiuto e Risorse
     help_support: Aiuto e supporto
     documentation: Documentazione
-    tutorials: Tutorials
+    tutorials: Tutorial
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
@@ -1030,14 +1038,16 @@
       no_icons_found: Non ho trovato alcun'icona
     playzone:
       artist_description: Disegna fantastiche immagini e decorazioni con l'artista!
-      artist_title: Nuovo disegno
-      continue_button: Andiamo alla fase successiva
+      artist_title: Disegno
+      continue_button: Vai alla prossima lezione
       playlab_description: Crea una storia o inventa un gioco col Laboratorio!
-      playlab_title: Nuova App
+      playlab_title: Storia/Gioco
       primary_header: Congratulazioni! Hai finito %{stageName}!
-      projects_description: Rivisita uno dei tuoi progetti esistenti.
-      projects_title: Aprire un progetto
-      secondary_header: Chiedi al tuo insegnante che cosa fare dopo
+      projects_description: Modifica uno dei tuoi precedenti progetti oppure creane
+        uno nuovo
+      projects_title: Progetto
+      secondary_header: 'Chiedi al tuo insegnante se proseguire con la prossima lezione
+        o svolgere una di queste attività:'
   flex_category:
     required: Panoramica
     content: Contenuto

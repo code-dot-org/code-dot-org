@@ -746,7 +746,7 @@ tr:
         text: "Algoritmanızı resimleri parçalara keserek oluşturacaksınız. İkinci olarak da uçak yapmayı gösteren altı resmi doğru sıraya düzenleyeceksiniz. Herşeyi yoluna koyduktan sonra başka bir takımla algoritmanızı takas edip nasıl çalıştığını deneyeceksiniz. En iyi uçağı yapabilmek en iyi tasarlanmış algoritmayı gerektirir."
       4:
         image: 'notes/C2_paper_airplanes_4.png'
-        text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
+        text: "Çikolata yapmak istediğimiz zaman, bu süreçte birçok büyük adım vardır. Her bir büyük adım kendi küçük adımlarına sahiptir. Nasıl bir çikolata tatmak istediğimize bağlı şekilde, değişik tarifler yada algoritmalar vardır. Her adım önemlidir, küçük olanları dahi. Bu nedenle herhangi bir adım olmadan, geri kalan tamamlanamaz. Başkalarının anlayabildiği algoritmaları oluşturmak gerçekten önemlidir. Her adımın not edilmesinin gereklilik nedeni de budur, böylece kimin yaptığının önemi yoktur, sonuç aynıdır."
     C2_playlab_createastory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
@@ -760,7 +760,7 @@ tr:
         text: "Bugün programlama bayrak yarışı yapacağız. Amacımız baskı altında programlama yapmak ve böyle hızlı çalışırken veya takım çalışmalarında yapılan hataları ayıklamak. Grafik kağıdı programlama metodu ile kod yazmayı ve bayrak yarışları ile son tarih kapsamlarını taslayacağız."
       2:
         image: 'notes/C2_relay_programming_2.png'
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: "Bayrak yarışı programlamasında, takımlar kareli kağıt programını bitirmek için yarışacak. Takım arkadaşlarının çalışmalarını kontrol etmeli yada hatalarını bulmalısın, eğer çalışmalarda bir hata varsa düzeltmelisin, kendi okunu ekle, koşarak geri gel ve takım arkadaşlarını etiketle."
       3:
         image: 'notes/C2_relay_programming_3.png'
         text: "Programcılar algoritmalarındaki ve kodlarındaki hataları düzeltmek için hata ayıklama tekniğini kullanırlar. Bunu uygulamanın birçok yolu vardır. En kolayı programı adım adım çalıstırıp doğru çalışmayan kısmı bulmak ve düzeltmektir."
@@ -892,62 +892,62 @@ tr:
     C3_dice_race:
       1:
         image: 'notes/C3_dice_race_1.png'
-        text: "This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning."
+        text: "Bu ders zar yarışı olarak adlandırılmıştır. Neredeyse herkes bilgisayar oyunları oynamayı sever. Bilgisayar programcılarının oyunların adımlarını bir programa nasıl dönüştürdüğünü hiç düşündün mü? Bilgisayar oyunlarının oluşturulmasında yada herhangi bir problemin çözülmesinde ilk adım düşünmeyi ve planlamayı gerektirir."
       2:
         image: 'notes/C3_dice_race_2.png'
-        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+        text: "Problem çözmenin düşünme adımı bir algoritma üretir, bu problemi çözmek yada görevi bitirmek için adım adım bir plandır. Bu derste, zar yarışı için bir algoritma üreteceksin. Ardından, arkadaşlarının oyunu oynamak için adımları takip edebiliyor olduklarını görmek için, arkadaşlarından bu planı denemelerini isteyeceksin. Programcı adımların doğru olduğundan emin olduktan sonra, algoritmayı bilgisayarın anlayabileceği bir dilde programa çevirmenin zamanı gelmiştir."
       3:
         image: 'notes/C3_dice_race_3.png'
-        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+        text: "Hemen hemen her gün yaptığımız her şey algoritma gerektirir, algoritma görevi bitirmek adına izlenen adımların listesidir. Okul için hazırlanmayı, arkadaşlarınla keyifli bir gün planlamayı veya onlarla bir şeyler atıştırmayı bir düşün. Tüm bu işlerden herhangi birini tamamlayabilmek için, işleri daha küçük parçalara ayırman gerekecek ve bazen bu adımlar kendine özgü tarzda olmak zorundadır."
       4:
         image: 'notes/C3_dice_race_4.png'
-        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+        text: "Bir sandviç yapma hakkında düşün. Hangi dolaptan hangi malzemeyi ilk aldığın önemli değil. Ama siz kavanozu açmadan fıstık ezmesi yayamazsınız. Bilgisayar yapacakları herşey için algoritmalar ve programlara ihtiyaç duyar."
       5:
         image: 'notes/C3_dice_race_5.png'
-        text: "An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice."
+        text: "Bir algoritma ile bilgisayara gerçekleşmesi için gerekn yönergeler düşünülüyor. Bir algoritmanın önce bir programa çevrilmesi gerekiyor. Bir görevi adımlara bölme olan algoritma bazen zor olabiliyor. Ama herhangi bir yeni beceri gibi zamanla kolaylaşır ve uygulama ile daha kolay hale gelir."
     C3_farmer_while:
       1:
         image: 'notes/C3_farmer_while_1.png'
         text: "Süresince döngüleri günlük hayatta yaptıklarımıza çok benziyor. Arabamızı yıkadığımızı düşünelim tam olarak temiz olana kadar yıkamaya devam ederiz. Ve yıkanan her kısım sonrasında tam olarak yıkanıp yıkanmadığını kontrol ederiz, temizlenmiş ise temizleme işlemini sonlandırırız."
       2:
         image: 'notes/C3_farmer_while_2.png'
-        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+        text: "Çiftçiye yardım etmek için yeni bir görünüm var. Ona sürece bloğu denir. Bu aslında oldukça kolaydır. Üstteki koşul doğru olduğu sürece bir şeyler yap. Örneğin, yığında birşeyler var olduğu sürece yığından al. Devam edin çiftçi ile deneyin."
     C3_functional_suncatchers:
       1:
         image: 'notes/C3_functional_suncatchers_1.png'
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: "Bu derste fonksiyonel vitray var. Bu güzel vitrayı fonksiyon kullanarak oluşturacaksın. Bir vitray oluşturmak için birkaç adım var. Bazı adımları birçok kez tekrarlamak gerekir."
       2:
         image: 'notes/C3_functional_suncatchers_2.png'
-        text: "The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function."
+        text: "Bir vitray yapma sürecini basitleştirerek rekrar tekrar tekrarlamak zorunda olduğumuz blokları belirleyebiliriz. Bu adımları fonksiyon içinde gruplandırabilirsiniz."
       3:
         image: 'notes/C3_functional_suncatchers_3.png'
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: "Ama adımları izleyerek daha güzel bir vitray oluşturmak için daha fazla şey yapmak gerekir. Bazen yaratıcı olup boncuk rengini değiştirmek istiyebilirsin. Farklı renkli boncuklar kullanırsanız vitrayınız benzersiz yapabilirsiniz."
       4:
         image: 'notes/C3_functional_suncatchers_4.png'
-        text: "Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!"
+        text: "Boncukları değişken olarak düşünebilirsiniz. Fonksiyon ve değişkenleri kullanarak vitrayol uşturmanın tadını çıkar!"
     C3_internet:
       1:
         image: 'notes/C3_internet_1.png'
-        text: "This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly."
+        text: "Bu ders hakkındadır. İnternet çok meşgul bir yol gibidir. Arabalar gibi mesajlar hedeflerine ulaşmak için kullanır. İletiler Internet üzerinden çok hızlı bir şekilde taşınır."
       2:
         image: 'notes/C3_internet_2.png'
-        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+        text: "Lnternet nasıl çalışır bunu anlaman internet kullanırken neler olduğunuanlamanıza yardımcı olacaktır. Sevdiğiniz bir Web sitesinden yada bir arkadaşınızdan bir e-postanıza mesaj nasıl iletilir bunu nasıl öğreneceksiniz. Sahne arkasında neler olduğunu anladığınızda göreceksiniz ki internet çok karmaşık değildir."
       3:
         image: 'notes/C3_internet_3.png'
-        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+        text: "İnternette iletileri gönderme iletileri posta ile gönderme gibidir. Google.com sitesindeyim. Bu Web sitesinin IP adresini bu sayıdır. IP adresini mektubun dönüş adresi olarak düşünebilirsiniz. Aşağıda ofiste birine postayla bir mesaj göndermek istediğimizi hayal edelim. URL ve IP adresi görüyor musun? Bu mesajı yazdım ve Gönder'e bastım."
       4:
         image: 'notes/C3_internet_4.png'
-        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+        text: "Posta Servisi tersine İleti daha kolay gönderilebilir bu yüzden daha küçük parçalar halinde gönderir. Bu küçük parçalara paket denir. Her paket iletinin hedefine teker teker teslim edilir. Böylece alıcı iletiyi doğru okuyabilir Bu paketlerin tümü doğru sırayla bir araya gelir. Tabii ki, internetin nasıl çalıştığı hakkında bilgi edinmek için çok daha fazla şey bilmek lazım ama bu harika bir başlangıç. Bir internet kullanıcısı olma yolundasın! Aileniz ve arkadaşlarınızla ne öğrendiğinizi paylaşın!"
       5:
         image: 'notes/C3_internet_5.png'
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: "Benim adım Amanda Camp ve Google yazılım mühendisiyim. Profilleri ve kişileri depolayan bir arka sunucuda çalışıyorum. Benim işimde kişiler telefon gibi diğer aygıtlara nasıl gönderilebilir bunu çözüyoruz. Çoğu insanın bir sürü kişisi var, 1000 kişilik rehber olabilir ve biz bir ileti çok büyük olacağından bu kişilerin tümünü aynı anda telefonunuza göndermek istemiyorum. Benzer şekilde Internet büyük iletileri paketlere böler. Biz sayfa kavramıyla 100 kişiyi bir anda göndeririz ve sonraki 100 adresi telefonun istemesini bekleriz."
       6:
         image: 'notes/C3_internet_6.png'
-        text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
+        text: "Yazılım hakkında en heyecan verici şey tüm dünyaya etkisi olmasıdır. Ben ilk on dokuz yaşındayken programlama öğrendim. İkinci sınıf ya da ilk yılımda olduğumu düşünüyorum. İlk program ile sıcaklığı Celsius biriminden Fahrenheit birimine dönüştürdüğümü hatırlıyorum. Programlamayı seviyorum Çünkü insanlara yardım etmeyi seviyorum. Google da tüm dünyadaki insanlara yardım edecek programlarınızı yazabilirsiniz. Bu gerçekten akıllara durgunluk veren ve heyecan verici bir olay."
     C3_maze_conditionals:
       1:
         image: 'notes/C3_maze_conditionals_1.png'
-        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+        text: "İnsanlar her gün karar alırlarlar. Dışarı gitmeden önce Örneğin, eğerYağmur yağıyor ise, ceketimi almak gerekir diyorum. Bilgisayarlar güvenilir bir şekilde karar vermede inanılmaz hızlıdır. Bir bilgisayar programı biraz matematik ve biraz Eğer komutudur."
       2:
         image: 'notes/C3_maze_conditionals_2.png'
         text: "Eğer bloğu zombinin karar vermesine yardımcı olur. Bir şeyi kontrol eder. Örneğin, eğer bloğunu kullanalım ve eğer sola yol var ise sola dönmesi için sola dön bloğunu eğer bloğu içine yerleştirelim. Zombiye etrafına bakmasını ve eğer sola yol var ise sola dönmesini söylüyoruz."
@@ -980,7 +980,7 @@ tr:
         text: "Bu koro diyoruz. Bir bilgisayar programı içinde tekrar tekrar kullanılan programın bazı bölümlere fonksiyon denir. Şarkı sözlerini okurken koro (nakarat) yazıyorsa, koro der misiniz? Hayır, hangi sözler koro (nakarat) olarak tanımlanır."
       3:
         image: 'notes/C3_songwriting_with_parameters_3.png'
-        text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"
+        text: "Bu derste, küçük tavşan foo foo adlı bir küçük şarkı öğreneceksiniz. Şarkıka birkaç kez tekrareden nakarat vardır. Fonksiyonlar tekrar tekrar kullanabileceğiniz kod parçasıdır. Fonksiyon adımlarını tekrar tekrar yazmak zorunda değilsiniz Bu yüzden daha kolay ve verimli programlama yaparsınız. Sadece bir kez yazabilirsiniz!"
     C4_bee_conditional:
       1:
         image: 'notes/C4_bee_conditional_1.png'
@@ -1087,26 +1087,26 @@ tr:
     C4_unplugged_algorithms:
       1:
         image: 'notes/C4_unplugged_algorithms_1.png'
-        text: "This lesson is called Tangram Algorithms. A tangram is a puzzle with seven pieces that can be put together to make other shapes. You'll be using an algorithm to explain to your partner how to put the puzzle together."
+        text: "Bu derse Tangram algoritmaları denir. Bir tangram yedi adet şekilden oluşur ve bunlarla şekiller oluşturulur. Sen algoritma kullanarak ortağınıza bulmacayı anlatacaksın."
       2:
         image: 'notes/C4_unplugged_algorithms_2.png'
-        text: "An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific."
+        text: "Algoritmadır bir görevi tamamlamak için gerekli adımları listeleyen bir adımdır. Onları her gün alışveriş listeleri ve tarifler gibi şeyler için kullanıyoruz. Bir algoritmayı basit tutarsanız, onu yorumlamanın birçok yolu vardır ve her kim bu algoritmayı gerçekleştirirmeye çalıştığına tam olarak ne istediğini anlamama ihtimali vardır. Emin olmak isterseniz algoritmanızın ayrıntılı ve çok özel olması gerekir."
       3:
         image: 'notes/C4_unplugged_algorithms_3.png'
-        text: "I'm using an algorithm today to complete a painting. I wanted to try doing a painting of some wolves but I'm not the most amazing painter. Luckily for people by me, there is paint by numbers. There are forty colors and it has little letters and numbers that tell you which color to paint each section. Paint by numbers tells me exactly what color to use and where."
+        text: "Bir resimi tamamlamak için bir algoritma kullanıyorum. Kurt resmini yapmayı denemek istedim ama ressam değilim. Neyse ki tam bana göre numaralı resm var. Kırk renk ve küçük harfler her bölümü boyamak için hangi rengkullanacağımı söylüyor. Boyayı numaraları ile kullanmak tam olarak hangi renkleri nerede kullanmam gerekiğini söylüyor."
       4:
         image: 'notes/C4_unplugged_algorithms_4.png'
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: "Bu yüzden yönergeleri izliyorum ve resim harika oldu. Harika bir algoritma. Yönergeleri yeterince belirli olmasaydı, benim kurtlariyi görünmezdi. Gerçekten istediğin şeyi almak için son derece hassas olmak en iyisidir."
     C4_unplugged_binary:
       1:
         image: 'notes/C4_unplugged_binary_1.png'
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: "Her takım, bu kağıt tutan kişi talimat verirken kapalı ve açık işaretini bilmeleri gerekir. İkili sistem, iki harfli bir alfabe gibidir. A ve B yerine 0 ve 1 vardır."
       2:
         image: 'notes/C4_unplugged_binary_2.png'
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: "İkili sistemi en yaygın kullandığınız yer eğer komutudur. Programlama için klasik bir şeydir. Program çalışır ve bir şey doğru olup olmadığını deniyor, ve doğruysa yapıyor. Ya da doğru değilse başka bir iş yapıyor. Peki biraz daha karmaşık bir şey yapmak istiyorsam. Eğer komutu yerine görüntü veya ses kullanacaksın."
       3:
         image: 'notes/C4_unplugged_binary_3.png'
-        text: 'A computer only knows binary but an image, it''s not binary, it''s not ones and zeros so how do you do that? Here''s an example: You have this beautiful picture. Now a picture is basically a form of information. All information can be encoded in binary one way or another, you just have to figure out how to do it.'
+        text: 'Bir bilgisayar sadece ikili sistem bilir, fakat resim ikili değil, sıfırlar ve birler değil bu durumda nasıl anlayacak? İşte bir örnek: Bu güzel resim var. Şimdi bir resim temelde bir bilgi şeklidir. Bu bilgiyi ikili formda tutabilirsin.'
       4:
         image: 'notes/C4_unplugged_binary_4.png'
         text: "You imagine that we're going to put a grid over this panda bear and for each square, we're going to decide whether that square is more black or more white. And then we're going to color it that way. Now each cell on the grid is either black or white and then the black squares we say those are zeros (binary digit) and the white squares are ones, the other binary digit. At the end, you're left with just a bunch of ones and zeros. That's how you represent this image in binary."
@@ -1119,7 +1119,7 @@ tr:
         text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
       3:
         image: 'notes/C4_unplugged_forloops_3.png'
-        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+        text: "Burada ne kadar rüzgar olacağını anlamaya çalışıyoruz böylece ne kadar enerji üretilebileceğini biliriz. Bu bilgiyi gerçek enerji tüccarlarına veririz. Onlar, bizim söylediğimiz olabilecek enerji miktarına bağlı olarak enerji nakil hatları şebekesinin, ışıklarınızın bulunduğu, dengelenmiş olduğundan emin olmak için enerjiyi alırlar ve satarlar ve çiftliklerimizden sağladığımız enerji miktarını en üst seviyeye çıkarırız."
       4:
         image: 'notes/C4_unplugged_forloops_4.png'
         text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
@@ -1176,7 +1176,7 @@ tr:
     infinity_playlab_events:
       1:
         image: 'notes/infinity_playlab_events_1.png'
-        text: "Now we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. And then when it does, it performs an action. Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen."
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
       2:
         image: 'notes/infinity_playlab_events_2.png'
         text: "Here, we're going to make Baymax move up to touch Hiro and move down to touch Rapunzel when the player uses the up/down arrow keys or the up/down buttons. We'll use the when up arrow block and attach the move actor up block to it, so when the player presses the up arrow key, everything attached to the \"when up arrow\" block is run. We'll do the same thing to make Baymax move down. Step by step your game is getting more interactive."
@@ -1205,7 +1205,7 @@ tr:
     infinity_playlab_repeat_forever:
       1:
         image: 'notes/infinity_playlab_repeat_forever_1.png'
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
+        text: "Bir şeyi sonsuza dek tekrarlamak zorunda olduğunu hayal edebiliyor musun? Bilgisayarlar şeyler yinelemekte gerçekten çok iyi olduğu için sen yapmak zorunda değilsin. Bu sürece bloğu var. Bu blok içindeki herşey sonsuza kadar oyunda olacak."
       2:
         image: 'notes/infinity_playlab_repeat_forever_2.png'
         text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."
@@ -1267,18 +1267,18 @@ tr:
         text: "In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing."
       2:
         image: 'notes/unplug4_2.png'
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: "Etkinliğin ikinci yarısında, kağıda katlayıp biz kaç farklı şekilde altı aynı dikdörtgen oluşturacağız. O zaman nasıl birden çok çözümün aynı sonuça nasıl ulaşabileceğini ele alacağız. Ayrıca bazı durumlarda bazı çözümler daha iyi olabilir."
     unplug5:
       1:
         image: 'notes/unplug5_1.png'
         text: "In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing."
       2:
         image: 'notes/unplug5_2.png'
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: "Etkinliğin ikinci yarısında, kağıda katlayıp biz kaç farklı şekilde altı aynı dikdörtgen oluşturacağız. O zaman nasıl birden çok çözümün aynı sonuça nasıl ulaşabileceğini ele alacağız. Ayrıca bazı durumlarda bazı çözümler daha iyi olabilir."
     unplug6:
       1:
         image: 'notes/unplug6_1.png'
-        text: "This activity is called coding with cards and it's great for any age. Like you learned with the if statements in earlier lessons,  during Blockly, if statements have a piece about them you have to evaluate to find out if it's true or false. That's the conditional and it can be used in lots of different ways."
+        text: "Bu aktiviteye kartlarla kodlama adı verilir ve her bir yaş için harika.  Eğer bloğunu öğrendiğin gibi, burada doğru veya yanlış olup olmadığını değerlendiriyoruz. Bu koşullar  farklı şekillerde kullanılabilir."
       2:
         image: 'notes/unplug6_2.png'
         text: "We take advantage of that by creating programs on paper that you run using a random draw of playing cards. You might have an if statement that says something like if the card you draw is greater than 8, you get a point. Otherwise, your opponent gets a point. You can make it as simple or as complicated as you feel comfortable."
@@ -1388,25 +1388,25 @@ tr:
     starwars_events:
       1:
         image: 'notes/starwars_events_1.JPG'
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: "Merhaba, benim adım Charia Carter. Ben bir kıdemli yaratıcı yapımcı olarak Walt Disney Imagineering firmasında çalışıyorum. Aslında Disney parklarındaki eğlence oyunlarından sorumluyum. Biz her zaman kendimizi geliştirmek ve daha iyi bir deneyim sağlamak için teknolojinin kalbine yolculuk ediyoruz."
       2:
         image: 'notes/starwars_events_2.JPG'
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
+        text: "Tebrikler, başardın! BB-8 programladın. Şimdi daha zor bir şey için hazır olduğumuzu düşünüyorum. Hadi bakalım. Programlama temellerini öğrendin, kendi oyunumuzu tasarlıyacağız ve R2-D2 ve C-3PO oyunun yıldızı olacak."
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: 'To make a game, we need to learn about something that game programmers use every day: they''re called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action.'
+        text: Şimdi oyun programcılarının her zaman kullandığı "Olay" kavramını öğreneceğiz. Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.
       4:
         image: 'notes/starwars_events_4.JPG'
         text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
       5:
         image: 'notes/starwars_events_5.JPG'
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: "R2-D2 yukarı hareket edip asi pilota mesaj iletecek ve aşağı ilerleyip diğer asi pilota gidecek. Biz onu taşımak için olayları kullanacağız. Oyuncu yukarı/aşağı ok tuşlarını veya yukarı/aşağı düğmelerini kullabilir."
       6:
         image: 'notes/starwars_events_6.JPG'
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: "Biz whenUp() olay bloğuna goUp() (Yukari git) bloğü ekleyebilirsin. Oyuncu yukarı ok tuşuna bastığında, whenUp() olayına iliştirilmiş kod çalıştırılır. Ve biz R2-D2 yu aşağı taşımak için aynı şeyi yapacağız."
       7:
         image: 'notes/starwars_events_7.JPG'
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: "Bunu yapmak için whenUp() denilen bir komutunu kullanacağız. Komut araç dışına sürüklediğinizde, bir noktalı virgül yerine küme parantezi ile başlar ve biter. Bu bizi diğer komutları araya koymak için alan sağlar. Yukarı ok tuşuna her basıldığında bu parantez içindeki komutlar çalışır."
       8:
         image: 'notes/starwars_events_8.JPG'
         text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
@@ -1463,19 +1463,19 @@ tr:
     starwars_blocks_events:
       1:
         image: 'notes/starwars_blocks_events_1.JPG'
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: "Merhaba, benim adım Charia Carter. Ben bir kıdemli yaratıcı yapımcı olarak Walt Disney Imagineering firmasında çalışıyorum. Aslında Disney parklarındaki eğlence oyunlarından sorumluyum. Biz her zaman kendimizi geliştirmek ve daha iyi bir deneyim sağlamak için teknolojinin kalbine yolculuk ediyoruz."
       2:
         image: 'notes/starwars_blocks_events_2.JPG'
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
+        text: "Tebrikler, başardın! BB-8 programladın. Şimdi daha zor bir şey için hazır olduğumuzu düşünüyorum. Hadi bakalım. Programlama temellerini öğrendin, kendi oyunumuzu tasarlıyacağız ve R2-D2 ve C-3PO oyunun yıldızı olacak."
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: 'To make a game, we need to learn about something that game programmers use every day: they''re called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action.'
+        text: Şimdi oyun programcılarının her zaman kullandığı "Olay" kavramını öğreneceğiz. Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
         text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
       5:
         image: 'notes/starwars_blocks_events_5.JPG'
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: "R2-D2 yukarı hareket edip asi pilota mesaj iletecek ve aşağı ilerleyip diğer asi pilota gidecek. Biz onu taşımak için olayları kullanacağız. Oyuncu yukarı/aşağı ok tuşlarını veya yukarı/aşağı düğmelerini kullabilir."
       6:
         image: 'notes/starwars_blocks_events_6.JPG'
         text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
@@ -1602,10 +1602,10 @@ tr:
         text: "Kendi oyununuzu yapmak istiyorsanız, gerçekten kolaydır. Tüm ihtiyacınız sadece birkaç programlama temeli ve ardından oluşturduğunuz bir oyunu oynamaya başlayabilirsiniz."
       2:
         image: 'notes/gumball_intro_2.JPG'
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı eğlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak "
       3:
         image: 'notes/gumball_intro_3.JPG'
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: "Bugün tüm bunları nasıl yapacağımızı Ağlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
       4:
         image: 'notes/gumball_intro_4.JPG'
         text: "Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır."
@@ -1653,10 +1653,10 @@ tr:
         text: "Kendi oyununuzu yapmak istiyorsanız, gerçekten kolaydır. Tüm ihtiyacınız sadece birkaç programlama temeli ve ardından oluşturduğunuz bir oyunu oynamaya başlayabilirsiniz."
       2:
         image: 'notes/iceage_intro_2.JPG'
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı eğlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak "
       3:
         image: 'notes/iceage_intro_3.JPG'
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: "Bugün tüm bunları nasıl yapacağımızı Ağlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
       4:
         image: 'notes/iceage_intro_4.JPG'
         text: "Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır."

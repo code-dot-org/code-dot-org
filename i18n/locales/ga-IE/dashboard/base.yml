@@ -79,6 +79,7 @@ ga:
     forgot_password: 'Focal faire dearmadta?'
     need_confirmation: "Nach bhfuair tú na treoracha deimhnithe?"
     need_unlock: "Nach bhfuair tú na treoracha díghlasála?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: 'Tá %{count} dalta cláraithe cheana.'
     teacher_count: 'Tá %{count} múinteoir cláraithe cheana.'
@@ -173,6 +174,14 @@ ga:
       Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Seoladh an cuireadh'
     added_teacher: 'Is é/í %{name} do mhúinteoir anois'
@@ -186,8 +195,6 @@ ga:
       blank_code: "Cuir isteach cód an rannáin"
       cant_join_own_section: "Ár leithscéal, níl cead agat dul isteach i do rannán féin."
     mail:
-      invite_student:
-        subject: "Cláraigh le rang de chuid %{teacher_name} ar Code.org!"
       student_disassociated:
         subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
   reports:
@@ -386,6 +393,7 @@ ga:
     announcement_petition: "Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim. Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo, tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú."
     announcement_petition_button: "Cuir d'ainm leis"
     announcement_go_beyond_button: "An chéad chéim eile"
+    announcement_apply_now: "Apply now"
     announcement_all: "Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach ar fhógraí roimhe seo.</a>"
     announcement_hoc_launch: "Tosóidh na mílte múinteoir i níos mó ná 180 tír ar fud an domhain ag múineadh na ríomheolaíochta mar chuid den Uair Chódála idir an 5ú lá agus an 11ú lá de mhí na Nollag. Táimid ag brath ort chun cabhrú linn níos mó daltaí ná riamh a shroicheadh. <a href='%{signup_url}' target='_blank'>Cláraigh d'ócáid féin don Uair Chódála</a> agus cuir in iúl do mhúinteoir eile gur féidir le héinne an ríomheolaíocht a mhúineadh."
     announcement_mc_launch: "Tá cúrsa nua againn a leanann ceann de na cúrsaí is mó a thaitníonn le daoine! Leis an Dearthóir Minecraft úrnua don Uair Chódála, is féidir le daltaí na rialacha sa domhan Minecraft a leagan síos, agus eispéireas go hiomlán uathúil a chruthú. Ansin, is féidir leo an cluiche a chomhroinnt le cairde, nó a imirt ar a nguthán. Bainfidh do chuid daltaí taitneamh as!"
@@ -398,13 +406,11 @@ ga:
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin eile."
-    section_code_not_entered: "Tabhair cód an rannáin reatha."
     section_code_cant_be_current_section: "Is ionann iad an rannán reatha agus an rannán nua."
     current_section_dne: "Níl rannán %{current_section_code} ann. Cuir isteach cód rannáin eile."
-    students_not_yours: "Níl cead agat daltaí a bhogadh as rannán nach bhfuil agatsa."
-    stay_enrolled_not_entered: "Tabhair \"fág cláraithe leis an rannán reatha\"."
     student_ids_not_entered: "Tabhair uimhreacha aitheantais."
     student_not_found: "Níor aimsíodh dalta nó daltaí de do chuid."
     all_students_must_be_in_current_section: "Ní mór do na daltaí go léir a bheith cláraithe le do rannánsa."

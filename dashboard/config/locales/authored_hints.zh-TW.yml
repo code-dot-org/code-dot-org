@@ -312,70 +312,6 @@
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: "每個項目都需要有自己的`當…`迴圈。"
-      aE1_authored_hint: []
-      aE2_authored_hint:
-        aE2_a: "注意，由於餐巾是 20 像素長，你需要跳躍 20 像素，在你開始你的下一個迴圈之前。"
-      aE3_authored_hint:
-        aE3_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
-        aE3_b: |-
-          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
-
-          移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
-        aE3_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
-        aE3_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
-      aE3alternate_authored_hint:
-        aE3alternate_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
-        aE3alternate_b: |-
-          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
-
-          移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
-        aE3alternate_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
-        aE3alternate_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
-      aE3alternateB_authored_hint:
-        aE4alternateB_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
-        aE4alternateB_b: |-
-          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
-
-          移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
-        aE4alternateB_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
-        aE4alternateB_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
-      aE4_authored_hint:
-        aE4_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
-        aE4_b: |-
-          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
-
-          移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
-        aE4_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
-        aE4_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
-      aE5_authored_hint: []
-      aE6_authored_hint:
-        aE6_a: |-
-          如果有個 180 度角的半圓形，每次循環小藝術家會轉 3 度，你需要循環幾次（轉多少次）才能畫出一個半圓？
-
-          **180 ÷ 3 = ?**
-      aE7_authored_hint:
-        aE7_a: "畫出這個半圓的下半部，然後再畫出上半部，就可以製造出分割的圖形。"
-        aE7_b: "你需要 4 個來完成這個關卡。"
-      aE8_authored_hint:
-        aE8_a: |-
-          要製作出一個正方形，你需要：
-          - 畫出線條
-
-          - 使用轉向來轉彎
-
-          重複這些步驟 4 次。
       Artist Inspiration_authored_hint:
         brush_width: "在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。"
         double_loop: "試著放置一個`計數迴圈`到`重複`積木裡頭。"
@@ -389,33 +325,6 @@
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
-      artistDebugVideo1_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
-      artistFunctionsVideo1_authored_hint: []
-      artistLoopsK2_authored_hint:
-        artistLoopsK2_a: "如果你想要重複程式 4 次以上，你可以修改積木上的數字。"
-      artistLoopsK2gradek_artist_loops3_authored_hint:
-        artistLoopsK2_a: "如果你想要重複程式 4 次以上，你可以修改積木上的數字。"
-      artistLoopsK3_authored_hint:
-        artistLoopsK3_a: "試著用你學到的重複積木來完成這個關卡！"
-      artistLoopsK4_authored_hint:
-        artistLoopsK4_a: "卡關了嗎？試試運行程式，看看哪個積木不正確。"
-      artistLoopsK5_authored_hint:
-        artistLoopsK5_a: "開始的 4 個積木應該放到重複積木裡頭，這樣就可以完成關卡了。"
-      artistLoopsK6_authored_hint:
-        artistLoopsK6_a: "試著運行它，看看哪裡有 bug。"
-      artistLoopsK7_authored_hint:
-        artistLoopsK7_a: "要完成這個關卡所需要的積木通通都在工作區裡了！"
-      artistLoopsK8_authored_hint:
-        artistLoopsK8_a: "試著運行它，看看哪裡有 bug。"
-      artistLoopsK9_authored_hint:
-        artistLoopsK9_a: "這個挑戰用了 4 個迴圈，一個接著一個！"
-      artistLoopsKA_authored_hint:
-        artistLoopsKA_a: "使用跳躍積木可以向前移動但不會畫線。"
-      artistLoopsKB_authored_hint:
-        artistLoopsKB_a: "要完成關卡的話，你的迴圈裡應該要有 3 個積木。"
-      artistLoopsKFP_authored_hint: []
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: "要使用`移動-向前`積木的方式是，從工具箱把它拖曳到工作區中，並把它連接在`當運行時`積木下方。"
       Course 4 Artist 11_authored_hint:
@@ -484,17 +393,17 @@
           **解決方案：**
 
           ![Solution](https://images.code.org/418dfd57794706de541f1c162911a6e2-image-1469641233597.png)
-      Course 4 Artist Functions challenge_authored_hint:
-        Course_4_Artist_Functions_challenge_a: "要掌握函式的使用方式，就是確定出哪些是你需要的，哪些是你不需要的。"
-        Course_4_Artist_Functions_challenge_b: "使用一個`計數迴圈`，然後在巢狀式的`重複`迴圈裡頭，使用它的計數變數。"
-        Course_4_Artist_Functions_challenge_c: "每次的循環，你都要畫個正方形然後向前跳躍。"
-        Course_4_Artist_Functions_challenge_d: "你需要在`重複`積木的外面添加向左轉 90 度的指令，不過指令還是要在`計數迴圈`裡頭。"
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: "利用上個關卡的程式，再添加額外的`轉向-右方 3 度`積木到重複迴圈裡頭。"
         Course_4_Artist_Functions_Inspiration_b: "試試把`重複迴圈`之外的轉向角度改成比 90 度大，轉向的指令還是要放在`計數迴圈`裡。"
         Course_4_Artist_Functions_Inspiration_c: |-
           **解決方案：**
           ![Solution](https://images.code.org/0c94bcde33a00595aa099fea964ca80e-image-1469641309381.png)
+      Course 4 Artist Functions challenge_authored_hint:
+        Course_4_Artist_Functions_challenge_a: "要掌握函式的使用方式，就是確定出哪些是你需要的，哪些是你不需要的。"
+        Course_4_Artist_Functions_challenge_b: "使用一個`計數迴圈`，然後在巢狀式的`重複`迴圈裡頭，使用它的計數變數。"
+        Course_4_Artist_Functions_challenge_c: "每次的循環，你都要畫個正方形然後向前跳躍。"
+        Course_4_Artist_Functions_challenge_d: "你需要在`重複`積木的外面添加向左轉 90 度的指令，不過指令還是要在`計數迴圈`裡頭。"
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: "在你完成一個正方形後（轉向製作下一個之前）向前跳躍，跳的距離是邊長的一半。"
         Course_4_Artist_Inspire_b: "畫出一個正方形然後跳躍，共重複 4 次（每次之間又用了向左轉），就可以做出這個像風車一樣的圖案。"
@@ -749,6 +658,237 @@
           **解決方案：**
 
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+      Farmer for Authored Hint testing_authored_hint:
+        first_hint: |-
+          這是第一個提示。
+
+          它有*某種* **基本的** `標記`
+        second_hint: |-
+          這是第二個提示，我們用圖來說明。
+
+          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        last_hint: "這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。"
+      Farmer for TTS testing_authored_hint:
+        first_hint: |-
+          這是第一個提示。
+
+          它有*某種* **基本的** `標記`
+        second_hint: |-
+          這是第二個提示，我們用圖來說明。
+
+          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        last_hint: "這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。"
+      Harvesting_authored_hint:
+        pointer_harvester_test: "哪種積木可以幫助我判斷（檢查還有做決定）？"
+      Inspirational Artwork_authored_hint:
+        brush_width: "在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。"
+        double_loop: "試著放置一個`計數迴圈`到`重複`積木裡頭。"
+        specifics: |-
+          畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。
+
+          `設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。
+        after: "當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。"
+        solution: |-
+          **解決方案：**
+
+
+          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      InspirationalArtwork_authored_hint: []
+      K2.0 sequence 1_authored_hint:
+        K2.0_sequence_1_a: This program is missing one block. Can you figure out which
+          one?
+      K2.0 sequence 10_authored_hint:
+        K2.0_sequence_10_a: If you're having trouble, try writing down the steps on
+          a piece of paper first.
+        K2.0_sequence_10_b: You will need three different kinds of arrows to solve
+          this puzzle.
+      K2.0 sequence 12_authored_hint:
+        K2.0_sequence_12_a: If the pig isn't moving far enough, try adding another
+          block.
+      K2.0 sequence 2_authored_hint:
+        K2.0_sequence_2_a: One of the blocks is moving the bird in the wrong direction.
+          Can you figure out which one and replace it with the correct block?
+      K2.0 sequence 3_authored_hint:
+        K2.0_sequence_3_a: If you are having trouble, try to figure out what the correct
+          path is and then remove the block that doesn't fit.
+      K2.0 sequence 4_authored_hint:
+        K2.0_sequence_4_a: Use 2 different arrow blocks to solve this puzzle!
+      K2.0 sequence 5_authored_hint:
+        K2.0_sequence_5: Your final code should have three movement blocks.
+      K2.0 sequence 6_authored_hint:
+        K2.0_sequence_6_a: There is 1 block that you need to add to move the bird
+          to the pig.
+        K2.0_sequence_6_b: If you can't figure out what to do, try drawing the puzzle
+          on paper and use your finger to figure out which way to move.
+      K2.0 sequence 7_authored_hint:
+        K2.0_sequence_7_a: If you're stuck, try drawing the image on paper to see
+          how the bird should move.
+      K2.0 sequence 8_authored_hint:
+        K2.0_sequence_8_a: Stuck? Try tracing the bird's path with your finger.
+      K2.0 sequence 9_authored_hint:
+        K2.0_sequence_9_a: If you're having trouble, try writing down the steps on
+          a piece of paper first.
+        K2.0_sequence_9_b: You will need to go three different directions to solve
+          this puzzle.
+      K2.0 sequence FP_authored_hint:
+        K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace
+          your way from the bird to the pig.
+      K2.0 sequence pre_authored_hint:
+        K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
+          sure blocks are connected under `when run`.
+      MikeStar_authored_hint:
+        hint1: Don't give up!
+      MikeStarHard_authored_hint:
+        hint1: Don't give up!
+      MikeStarNested_authored_hint:
+        hint1: Don't give up!
+      NEW Course 4 Artist Functions 13_authored_hint:
+        NEW_Course_4_Artist_Functions_13_a: "編輯 `draw a line of squares`（畫出方格邊）函式，這樣一來，你就不必呼叫它兩次。"
+        NEW_Course_4_Artist_Functions_13_b: "注意，你必須向前移動 60 像素還有轉向 144 度。"
+        NEW_Course_4_Artist_Functions_13_c: "如果你要製作一個有固定線條的星星圖像，需要怎麼編程呢？"
+      NEW Course 4 Artist Functions 4_authored_hint:
+        NEW_Course_4_Artist_Functions_4_a: "你必須在畫出每個正方形之後使用 `轉向-右方 120 度`積木。"
+      NEW Course 4 Artist Functions 9_authored_hint:
+        NEW_Course_4_Artist_Functions_9_a: "在你開始添加積木前，運行這個程式看看。是什麼地方讓圖案不大對勁？"
+        NEW_Course_4_Artist_Functions_9_b: "如果你不能明確的指出錯誤的地方，試著把滑桿往左調，讓程式的運行速度變慢。"
+      NEW Course 4 Artist Params 11_authored_hint:
+        NEW_Course_4_Artist_Params_11_a: "只需要把函式裡頭的數字換成一個變數就可以了。"
+      NEW Course 4 Artist Params 13_authored_hint:
+        NEW_Course_4_Artist_Params_13_a: "用 perimeter 除以 sides（周長除以邊數）的方式，就可以讓每個形狀都能有相同的尺寸。 "
+      NEW Course 4 Artist Params 14_authored_hint:
+        NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times
+          to figure out how the function works with different parameters.
+      NEW Course 4 Artist Params inspire_authored_hint:
+        brush_width: "在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。"
+        double_loop: "試著放置一個`計數迴圈`到`重複`積木裡頭。"
+        specifics: |-
+          畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。
+
+          `設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。
+        after: "當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。"
+        solution: |-
+          **解決方案：**
+
+
+          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      NEW Course 4 Bee For Loops 10a_authored_hint:
+        NEW_Course_4_Bee_For_Loops_10a_a: Can you find a pattern between the number
+          of steps you need to take and the number of nectars to gather?
+        NEW_Course_4_Bee_For_Loops_10a_b: You'll need to have 2 repeats, one will
+          use a math block.
+      NEW Course 4 Bee For Loops 7_authored_hint:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          Try doing some math with the counter variable.
+
+          What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
+      NEW Course 4 Bee For Loops 8_authored_hint:
+        NEW_Course_4_Bee_For_Loops_8_a: |-
+          如果循環的數字是由小排到大，每次循環就會從計數器變量中加上間隔的值。
+
+          如果要依序收集花蜜，間隔數需要設成多少？
+      Pattern Bee 1_authored_hint:
+        conditional_pointer: |-
+          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你*判斷*你是在花朵還是在蜂窩上？
+
+          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+        turn_at_honeycomb_pointer: "除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？"
+      Planning Farmer_authored_hint:
+        conditional_pointer: |-
+          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你*判斷*你是在花朵還是在蜂窩上？
+
+          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+        turn_at_honeycomb_pointer: "除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？"
+      aE1_authored_hint: []
+      aE2_authored_hint:
+        aE2_a: "注意，由於餐巾是 20 像素長，你需要跳躍 20 像素，在你開始你的下一個迴圈之前。"
+      aE3_authored_hint:
+        aE3_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
+        aE3_b: |-
+          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
+
+          移動小藝術家，並讓他面對正確的方向：
+          - 轉向 90 度（讓他面朝下）
+          - 跳躍 20 像素（讓他到新的一列）
+          - 轉回 90 度（讓他再次面朝右）
+        aE3_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
+        aE3_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
+      aE3alternate_authored_hint:
+        aE3alternate_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
+        aE3alternate_b: |-
+          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
+
+          移動小藝術家，並讓他面對正確的方向：
+          - 轉向 90 度（讓他面朝下）
+          - 跳躍 20 像素（讓他到新的一列）
+          - 轉回 90 度（讓他再次面朝右）
+        aE3alternate_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
+        aE3alternate_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
+      aE3alternateB_authored_hint:
+        aE4alternateB_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
+        aE4alternateB_b: |-
+          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
+
+          移動小藝術家，並讓他面對正確的方向：
+          - 轉向 90 度（讓他面朝下）
+          - 跳躍 20 像素（讓他到新的一列）
+          - 轉回 90 度（讓他再次面朝右）
+        aE4alternateB_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
+        aE4alternateB_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
+      aE4_authored_hint:
+        aE4_a: "在運行你在上個關卡做的**巢狀迴圈**之後，你需要往後跳回起始處。"
+        aE4_b: |-
+          別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
+
+          移動小藝術家，並讓他面對正確的方向：
+          - 轉向 90 度（讓他面朝下）
+          - 跳躍 20 像素（讓他到新的一列）
+          - 轉回 90 度（讓他再次面朝右）
+        aE4_c: "當你都做完了，你的**巢狀迴圈**應該會有三層深。"
+        aE4_d: "如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！"
+      aE5_authored_hint: []
+      aE6_authored_hint:
+        aE6_a: |-
+          如果有個 180 度角的半圓形，每次循環小藝術家會轉 3 度，你需要循環幾次（轉多少次）才能畫出一個半圓？
+
+          **180 ÷ 3 = ?**
+      aE7_authored_hint:
+        aE7_a: "畫出這個半圓的下半部，然後再畫出上半部，就可以製造出分割的圖形。"
+        aE7_b: "你需要 4 個來完成這個關卡。"
+      aE8_authored_hint:
+        aE8_a: |-
+          要製作出一個正方形，你需要：
+          - 畫出線條
+
+          - 使用轉向來轉彎
+
+          重複這些步驟 4 次。
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: []
+      artistLoopsK2_authored_hint:
+        artistLoopsK2_a: "如果你想要重複程式 4 次以上，你可以修改積木上的數字。"
+      artistLoopsK2gradek_artist_loops3_authored_hint:
+        artistLoopsK2_a: "如果你想要重複程式 4 次以上，你可以修改積木上的數字。"
+      artistLoopsK3_authored_hint:
+        artistLoopsK3_a: "試著用你學到的重複積木來完成這個關卡！"
+      artistLoopsK4_authored_hint:
+        artistLoopsK4_a: "卡關了嗎？試試運行程式，看看哪個積木不正確。"
+      artistLoopsK5_authored_hint:
+        artistLoopsK5_a: "開始的 4 個積木應該放到重複積木裡頭，這樣就可以完成關卡了。"
+      artistLoopsK6_authored_hint:
+        artistLoopsK6_a: "試著運行它，看看哪裡有 bug。"
+      artistLoopsK7_authored_hint:
+        artistLoopsK7_a: "要完成這個關卡所需要的積木通通都在工作區裡了！"
+      artistLoopsK8_authored_hint:
+        artistLoopsK8_a: "試著運行它，看看哪裡有 bug。"
+      artistLoopsK9_authored_hint:
+        artistLoopsK9_a: "這個挑戰用了 4 個迴圈，一個接著一個！"
+      artistLoopsKA_authored_hint:
+        artistLoopsKA_a: "使用跳躍積木可以向前移動但不會畫線。"
+      artistLoopsKB_authored_hint:
+        artistLoopsKB_a: "要完成關卡的話，你的迴圈裡應該要有 3 個積木。"
+      artistLoopsKFP_authored_hint: []
       courseA_artist_loops10_authored_hint:
         courseA_artist_loops10_a: "使用跳躍積木可以向前移動但不會畫線。"
       courseA_artist_loops11_authored_hint:
@@ -782,6 +922,27 @@
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: 'You don''t have to delete everything!  Some of the
           code is good. Use it to build the rest of the stairs. '
+      courseA_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_a: |
+          You can use loops like this to create the walls and the roof. Try repeating different blocks.
+
+
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Design your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      courseA_artist_loops_challenge2_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml>
+          will let your artist move at a slant!'
+        courseA_artist_loops_challenge2_b: When you finish one bird house, `jump`
+          to the next!
+        courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the
+          loop for this challenge.
+      courseA_artist_loops_challenge3_authored_hint:
+        harvey_tictactoe: "你可以利用 `跳躍` 積木移動到其它的空格。"
       courseA_collector_loops10_authored_hint:
         courseA_collector_loops10_a: If you can't figure out where to put the loops,
           try writing the code out step-by-step and look for a pattern.
@@ -813,6 +974,22 @@
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: Does the code feel really long?  Try putting two
           of your `repeat` loops inside of another loop to make it much shorter!
+        courseA_collector_loops9_b: Does the code feel really long?  Try putting two
+          of your `repeat` loops inside of another loop to make it much shorter!
+      courseA_collector_loops_challenge1_authored_hint:
+        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop
+          if something goes wrong.
+        courseA_collector_loops_challenge1_b: You don't need to use a loop if you
+          are only doing something one time.
+        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of
+          the cave, but you only need to move and collect 5 times. Do you know why?
+      courseA_collector_loops_challenge2_authored_hint:
+        courseA_collector_loops_challenge2_b: |
+          只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
+        courseA_collector_loops_challenge2_a: |-
+          在往南移動之前，你可以重複移動到相同路徑。
+
+          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: If you are having trouble getting the bird to move, make
           sure blocks are clicked in under the `when run` event.
@@ -856,6 +1033,10 @@
           how the bird should move.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
+      courseA_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: "路上可能會碰上 TNT 炸藥。"
+      courseA_maze_seq_challenge2_authored_hint:
+        courseA_maze_seq_challenge2_a: "試著用你的手指頭點出要移動的空格數（你站的那一格不要算！）"
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
@@ -888,6 +1069,31 @@
           Here is the block you would use to play a random sound:
 
           ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
+      courseA_playlab_challengeTemplate_authored_hint: []
+      courseA_playlab_events_challenge1_authored_hint:
+        courseB_playlab_events7_a: "Make the other animals move down when you press
+          `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title
+          name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events7_b: |
+          Change the speed of the animals by using this block:
+          <xml>
+          <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          </block></xml>
+        courseB_playlab_events7_c: |-
+          What will the everyone say when the race is over? Make them talk with this event:
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">Woo hoo!</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops10_authored_hint: []
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: "如果你想要重複程式 4 次以上，你可以修改積木上的數字。"
@@ -912,6 +1118,15 @@
           the ladder?
       courseB_artist_loops8_predict1_authored_hint: []
       courseB_artist_loops9_authored_hint: []
+      courseB_artist_loops_challenge1_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml>
+          will let your artist move at a slant!'
+        courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump`
+          to the next!
+        courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over
+          some of the same lines twice. '
+      courseB_artist_loops_challenge2_authored_hint:
+        harvey_tictactoe: "你可以利用 `跳躍` 積木移動到其它的空格。"
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: "你需要使用 3 個`重複`迴圈才能完成這個關卡。"
       courseB_collector_loops3_authored_hint:
@@ -938,9 +1153,32 @@
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_a: |
           Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
+      courseB_collector_loops_challenge1_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
+        courseB_collector_loops_challenge1_a: |
+          You can move back over the path a second time before moving east.
+      courseB_collector_loops_challenge2_authored_hint:
+        courseB_collector_loops_challenge2_a: Try changing the numbers in each loop
+          if something goes wrong.
+        courseB_collector_loops_challenge2_b: If you miss any treasure, you might
+          need to move back west one extra space.
+        courseB_collector_loops_challenge2_c: Don't forget to use a loop to collect
+          the final pile of treasure!
+      courseB_collector_loops_challenge`_authored_hint:
+        courseA_collector_loops_challenge2_b: |
+          只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
+        courseA_collector_loops_challenge2_a: |-
+          在往南移動之前，你可以重複移動到相同路徑。
+
+          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
-      courseB_maze_seq1_authored_hint: []
+      courseB_maze_seq1_authored_hint:
+        courseB_maze_seq1_a: |-
+          拖曳三個往`南`移動的積木，然後把它們連接到`當運行時`積木下，讓憤怒鳥可以抓到這頭豬。
+
+          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
       courseB_maze_seq10_authored_hint:
         courseB_maze_seq10_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
@@ -1033,6 +1271,62 @@
           This is the block you need to make the knight vanish:
 
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+      courseB_playlab_events_challenge1_authored_hint:
+        courseB_playlab_events7_a: |-
+          This is the event block that you will need:
+
+          ![](https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)
+        courseB_playlab_events7_b: |-
+          This is the block you need to play a sound.
+
+          ![](https://images.code.org/58e9b9a146a4ca3a8eee25845110b805-image-1475624550269.42.00.png)
+        courseB_playlab_events7_c: |-
+          This is the block you need to make the knight vanish:
+
+          ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+      courseC_PlayLab_events3_authored_hint:
+        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about
+          25 pixels to solve this puzzle.
+      courseC_PlayLab_events4_authored_hint:
+        courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach the
+          cat.
+        courseC_PlayLab_events4_a: You will need to attach a block to the `when actor
+          touches` event to solve this puzzle.
+      courseC_PlayLab_events5_authored_hint:
+        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the
+          `actor say` block to find the text "What's new?"
+      courseC_PlayLab_events7_authored_hint:
+        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block
+          and the `move actor 2 down 400 pixels` block inside the `repeat forever`
+          loop to solve this puzzle. '
+      courseC_PlayLab_events8_authored_hint:
+        courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor
+          touches` block to make this happen correctly.
+        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the
+          toolbox should help you out!
+      courseC_PlayLab_events9_authored_hint:
+        courseC_PlayLab_events9_a: The `score point` block will help you to solve
+          this puzzle.
+      courseC_PlayLab_eventsA_authored_hint:
+        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor
+          to a ____ speed` block to solve this puzzle.
+      courseC_PlayLab_eventsFP_authored_hint:
+        idea1: |-
+          *Need an idea?*
+
+          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          *Need an idea?*
+
+          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          *Need an idea?*
+
+          **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
       courseC_artist_prog1_authored_hint: []
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: "如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。"
@@ -1126,6 +1420,10 @@
           the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
+          Once you've found and fixed the first bug, go through the debugging process again to find the second one.
+
+          Repeat the process until the program works!
+        courseC_maze_debugging6_b: |-
           Once you've found and fixed the first bug, go through the debugging process again to find the second one.
 
           Repeat the process until the program works!
@@ -1223,55 +1521,14 @@
           line by line. Can you figure out what you need to do next?
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: "有 2 個方法可以完成這個關卡！"
+        courseC_maze_programming6_b: Follow your finger from the bird to the pig,
+          which steps did you take?
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
       courseC_maze_programming8_authored_hint: []
       courseC_maze_programming8_predict1_authored_hint: []
       courseC_maze_programming9_authored_hint: []
-      courseC_PlayLab_events3_authored_hint:
-        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about
-          25 pixels to solve this puzzle.
-      courseC_PlayLab_events4_authored_hint:
-        courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach the
-          cat.
-        courseC_PlayLab_events4_a: You will need to attach a block to the `when actor
-          touches` event to solve this puzzle.
-      courseC_PlayLab_events5_authored_hint:
-        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the
-          `actor say` block to find the text "What's new?"
-      courseC_PlayLab_events7_authored_hint:
-        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block
-          and the `move actor 2 down 400 pixels` block inside the `repeat forever`
-          loop to solve this puzzle. '
-      courseC_PlayLab_events8_authored_hint:
-        courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor
-          touches` block to make this happen correctly.
-        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the
-          toolbox should help you out!
-      courseC_PlayLab_events9_authored_hint:
-        courseC_PlayLab_events9_a: The `score point` block will help you to solve
-          this puzzle.
-      courseC_PlayLab_eventsA_authored_hint:
-        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor
-          to a ____ speed` block to solve this puzzle.
-      courseC_PlayLab_eventsFP_authored_hint:
-        idea1: |-
-          *Need an idea?*
-
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          *Need an idea?*
-
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
-        idea3: |-
-          *Need an idea?*
-
-          **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: I need to move two or three time between each turn.
       courseC_puppy_loops11_authored_hint: []
@@ -1350,6 +1607,8 @@
       courseD_artist_nestedLoops10_authored_hint:
         courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from
           the second half of the last puzzle.
+        courseD_artist_nestedLoops10_c: Remember, each square has a side length of
+          50 pixels.
         courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set
           to run 7 times and remove the outer turn.
       courseD_artist_nestedLoops1a_authored_hint:
@@ -1649,29 +1908,6 @@
         courseD_debugging_6_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
-      courseD_farmer_conditionals10_authored_hint: []
-      courseD_farmer_conditionals4_authored_hint:
-        courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
-          loop to keep digging until the pile is gone.
-      courseD_farmer_conditionals5_authored_hint:
-        courseD_farmer_conditionals5a: Try nesting a `while` loop inside of a `repeat`
-          loop.
-      courseD_farmer_conditionals6_authored_hint:
-        courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to
-          figure out how many times to fill each hole.
-        courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward
-          and down several times in a stair-step pattern.
-      courseD_farmer_conditionals7_authored_hint:
-        courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep
-          going, even if you don't know how many squares are in a path.
-      courseD_farmer_conditionals8_authored_hint:
-        courseD_farmer_conditionals8_a: You are going to need to use more than one
-          `while` loop.
-        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use
-          `while path ahead` before using `while there is a hole`.
-        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
-          path ahead`, `while there is a hole` code six times.
-      courseD_farmer_conditionals9_authored_hint: []
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using
           a repeat loop.
@@ -1722,6 +1958,29 @@
       courseD_farmer_condLoops9_predict1_authored_hint:
         courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop
           this time.
+      courseD_farmer_conditionals10_authored_hint: []
+      courseD_farmer_conditionals4_authored_hint:
+        courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
+          loop to keep digging until the pile is gone.
+      courseD_farmer_conditionals5_authored_hint:
+        courseD_farmer_conditionals5a: Try nesting a `while` loop inside of a `repeat`
+          loop.
+      courseD_farmer_conditionals6_authored_hint:
+        courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to
+          figure out how many times to fill each hole.
+        courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward
+          and down several times in a stair-step pattern.
+      courseD_farmer_conditionals7_authored_hint:
+        courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep
+          going, even if you don't know how many squares are in a path.
+      courseD_farmer_conditionals8_authored_hint:
+        courseD_farmer_conditionals8_a: You are going to need to use more than one
+          `while` loop.
+        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use
+          `while path ahead` before using `while there is a hole`.
+        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
+          path ahead`, `while there is a hole` code six times.
+      courseD_farmer_conditionals9_authored_hint: []
       courseD_farmer_while10_authored_hint: []
       courseD_farmer_while10_predict2_authored_hint: []
       courseD_farmer_while4_authored_hint:
@@ -1938,11 +2197,19 @@
           line.
       courseE_artist_functions_predict1_authored_hint: []
       courseE_artist_functions_predict2_authored_hint: []
+      courseE_artist_predict1_authored_hint: []
+      courseE_artist_ramp10_authored_hint:
+        courseD_artist_ramp10_a: "別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？"
       courseE_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: "若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。"
         courseD_artist_ramp11b: "若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。"
       courseE_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: "你也可以先畫出正方形，然後再畫三角形。調換畫的順序也可以！"
+      courseE_artist_ramp8_authored_hint:
+        courseE_artist_ramp8_a: "若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。"
+        courseE_artist_ramp8_b: "若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。"
+      courseE_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: "這和正方形有什麼類似的地方？又有哪些不同呢？"
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_a: If you don't understand how to use nested loops here,
           try writing out the instructions step by step on a piece of paper.  Circle
@@ -2006,6 +2273,17 @@
         courseE_bee_functions9_a: You can use the exact same function for this puzzle
           as you did in the last puzzle.  All you need to do is create a function
           that collects all of the nectar when you get to each flower.
+      courseE_bee_ramp14_authored_hint:
+        courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle.
+          Buzz along the path and collect nectar if there is nectar, otherwise make
+          honey!
+      courseE_bee_ramp17_authored_hint:
+        courseE_bee_ramp17_a: Because we don't have a repeat block to do something
+          a certain number of times, what block should we use to get us along the
+          path?
+        courseE_bee_ramp17: If you were to solve this puzzle without a while block,
+          where would you see repeated code? How can you use this repeated code to
+          shape how you must use a while block to solve the problem?
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
@@ -2081,10 +2359,40 @@
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
       courseE_farmer_functions9b_authored_hint: []
+      courseE_farmer_predict1_authored_hint:
+        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
+          a reminder of how to pick produce only **while** there is produce to pick.
+      courseE_farmer_predict2_authored_hint: []
+      courseE_farmer_ramp11_authored_hint:
+        courseE_farmer_ramp11_a: "如果你在編寫迴圈程式時有困難，可以試試先把所有的程式寫出來，然後找找裡面有哪些地方是重複執行的，找到模式（Pattern）把它放到迴圈裡。"
+        courseE_farmer_ramp11_b: "除了用 5 個`收集生菜`積木之外，要怎麼使用`重複`迴圈來收成生菜呢？"
+        courseE_farmer_ramp11_c: "你不必用 5 個重複迴圈來收集所有的生菜。我們可以把收集生菜的迴圈（連同`移動-向前`積木一起）放到另一個迴圈裡頭。"
+      courseE_farmer_ramp11a_authored_hint:
+        courseE_farmer_ramp12_a: "除了用`重複`迴圈來告訴農夫要收集生菜多少次，現在我們還可以用`當有生菜時`積木來讓關卡順利完成。"
+      courseE_farmer_ramp12_authored_hint:
+        courseE_farmer_ramp12_a: "除了用`重複`迴圈來告訴農夫要收集生菜多少次，現在我們還可以用`當有生菜時`積木來讓關卡順利完成。"
+        courseE_farmer_ramp12_b: "你還是需要用一個`重複`迴圈包在外面，這樣一來農夫才知道要執行向前走並收集生菜的指令多少次。"
+      courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
+          a reminder of how to pick produce only **while** there is produce to pick.
+      courseE_farmer_ramp13_authored_hint: []
+      courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: Use the 'repeat until at pumpkin' block to make it
+          to the end of the path.
+        courseE_farmer_ramp15_b: What else needs to be done while moving along the
+          path to the pumpkin?
+      courseE_farmer_ramp16_authored_hint:
+        courseE_farmer_ramp16_a: If we are moving along the path to the pumpkin, what
+          do we have to repeatedly do? When do we stop repeating?
+      courseE_maze_predict1_authored_hint: []
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
           all three of the blocks have been fully clicked together, then click "Run"
           again.
+      courseE_maze_ramp13_authored_hint:
+        courseD_maze_ramp11_b: Don't forget to use the "Step" button to go through
+          block by block and look for errors.
+        courseD_maze_ramp11_a: "使用重複積木來不停的運作同一個或是多個指令。"
       courseE_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the
           toolbox out into the workspace and connect it to the `when run` block.
@@ -2109,6 +2417,10 @@
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through
           block by block and look for errors.
         courseD_maze_ramp7_a: "使用重複積木來不停的運作同一個或是多個指令。"
+      courseE_maze_ramp_predict1_authored_hint: []
+      courseE_multi_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code
+          line by line. Can you figure out what you need to do next?
       courseE_playLab_scaffold2_authored_hint:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow`
           event to change the direction the block controls.
@@ -2307,30 +2619,13 @@
       courseF_playlab_variables3b_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All
           you have to do is put them where they belong!
+      courseF_playlab_variables3bEdit_authored_hint:
+        courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All
+          you have to do is put them where they belong!
       drawings!_authored_hint:
         triangle_geometry_hint: "請記住：一個正三角形有 3 條等長的邊，每個角是 60 度！"
         repeat_pointer: "你要畫出一條邊，然後轉向，共做 3 次…要執行一連串的指令多次，可以用什麼積木呢？"
         repeat_bottom_out: "使用一個`重複 3 次`積木！"
-      Farmer for Authored Hint testing_authored_hint:
-        first_hint: |-
-          這是第一個提示。
-
-          它有*某種* **基本的** `標記`
-        second_hint: |-
-          這是第二個提示，我們用圖來說明。
-
-          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: "這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。"
-      Farmer for TTS testing_authored_hint:
-        first_hint: |-
-          這是第一個提示。
-
-          它有*某種* **基本的** `標記`
-        second_hint: |-
-          這是第二個提示，我們用圖來說明。
-
-          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: "這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。"
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: "你需要使用 3 個`重複`迴圈才能完成這個關卡。"
       grade1_adventurer_loops2_authored_hint:
@@ -2464,9 +2759,6 @@
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
-      grade2_collector_2_authored_hint:
-        hint1: You can use four `move forward` blocks or use the `repeat 4 times`
-          block to make your program shorter.
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: "如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。"
         2-3_Artist_1_new_b: "要如何才能轉彎？試試`轉向-右方 90 度`積木。"
@@ -2496,6 +2788,35 @@
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
         2-3_Artist_Loops_New_11_b: "你的下一個轉彎動作應該要在迴圈中程式碼的**最後面**。"
       grade2_MakeDogTag_BFP_authored_hint: []
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          我的形狀重複了幾次？
+
+          形狀 *應該* 要重複幾次？
+
+          怎樣在你的程式裡做出對應的改變？
+      grade2_PuppyLoops_3_authored_hint:
+        hint1: This puzzle is very similar to the last one.
+        hint2: Use a `repeat 5 times` block to create the loop.
+        hint3: Place a `move forward` block inside the `repeat block`.
+      grade2_PuppyLoops_5_authored_hint:
+        hint1: The best solution uses two `move forward` commands and one loop.
+      grade2_PuppyLoops_6_authored_hint:
+        2-3_Maze_16_a: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
+        2-3_Maze_16_b: |-
+          如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。
+
+          把它們放到`當運行時`積木就大功告成囉！
+      grade2_PuppyLoops_7_authored_hint:
+        2-3_Maze_Loops_17_a: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
+        2-3_Maze_Loops_17_b: "你把預先建立好的程式給刪除了嗎？點擊`重新開始`按鈕把程式找回來吧！"
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: "提示：每個鬍鬚長度為 75 像素。"
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: "如果你讓藝術家畫完第一條線之後就向後移動或跳躍的話，會發生什麼？"
+      grade2_collector_2_authored_hint:
+        hint1: You can use four `move forward` blocks or use the `repeat 4 times`
+          block to make your program shorter.
       grade2_maze_debuggingFP_authored_hint: []
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.
@@ -2540,68 +2861,21 @@
           把它們放到`當運行時`積木就大功告成囉！
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
-      grade2_PuppyLoops_10_authored_hint:
-        2-3_Artist_Debugging_8_a: |-
-          我的形狀重複了幾次？
-
-          形狀 *應該* 要重複幾次？
-
-          怎樣在你的程式裡做出對應的改變？
-      grade2_PuppyLoops_3_authored_hint:
-        hint1: This puzzle is very similar to the last one.
-        hint2: Use a `repeat 5 times` block to create the loop.
-        hint3: Place a `move forward` block inside the `repeat block`.
-      grade2_PuppyLoops_5_authored_hint:
-        hint1: The best solution uses two `move forward` commands and one loop.
-      grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
-        2-3_Maze_16_b: |-
-          如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。
-
-          把它們放到`當運行時`積木就大功告成囉！
-      grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
-        2-3_Maze_Loops_17_b: "你把預先建立好的程式給刪除了嗎？點擊`重新開始`按鈕把程式找回來吧！"
-      grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: "提示：每個鬍鬚長度為 75 像素。"
-      grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: "如果你讓藝術家畫完第一條線之後就向後移動或跳躍的話，會發生什麼？"
-      grade3_bee_conditionals_new1a_authored_hint:
-        grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check
-          each space to see if it has a flower or nothing.
-      grade3_bee_conditionals_new2a_authored_hint:
-        grade3_bee_conditionals_new2a_a: You can still treat every space as if there
-          is a cloud over it, even though you can see the whole path.
-        grade3_bee_conditionals_new2a_b: 'Use an `if` statement inside your loop to
-          check each space. '
-      grade3_bee_conditionals_new3a_authored_hint:
-        grade3_bee_conditionals_new3a_a: In this puzzle, you know that each square
-          has either a flower or a honeycomb.  That means you can repeat your `if/else`
-          conditional at each square.
-      grade3_bee_Conditionals_new4_authored_hint:
-        grade3_bee_Conditionals_new4_a: Don't forget that you can use loops for shorter
-          code!
-      grade3_bee_conditionals_quantum1_authored_hint:
-        grade3_bee_conditionals_quantum1_a: You will need to use an `if` block to
-          check to see if there is a flower beneath the cloud before you try to get
-          nectar.
-      grade3_bee_conditionals_quantum2_authored_hint:
-        grade3_bee_conditionals_quantum2_a: Sometimes a flower will be there, sometimes
-          it won't.  If you want your code to run in both cases, make sure to use
-          an `if` statement.
-      grade3_bee_conditionals_quantum3_authored_hint:
-        grade3_bee_conditionals_quantum3: Make sure to use an `if` statement to check
-          for honeycomb beneath each cloud.
-      grade3_bee_conditionals_quantum4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll
-          want to use a conditional block (`if/else`) to solve the challenge."
-      grade3_bee_conditionals_quantum5_authored_hint:
+      grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: |-
           **記住：**這個關卡在每次運行時都會有變化。
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
-        grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't
-          check blank squares, nectar *and* honey with a single conditional.
+      grade3_ConditionalsElse_5_authored_hint:
+        remember_quantum: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+      grade3_ConditionalsElse_TeacherIDo_authored_hint:
+        remember_quantum: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: "這就像個長方形，蜜蜂要往前移動、向左轉，總共多少次才能走完這個圖形。"
       grade3_Conditionals_11_authored_hint:
@@ -2620,21 +2894,6 @@
         2-3_Bee_Conditionals_6_a: "請記住：當你運行程式後，紫花的花蜜數會變成 0 或 1！"
       grade3_Conditionals_TeacherIDo_authored_hint:
         2-3_Bee_Conditionals_6_a: "請記住：當你運行程式後，紫花的花蜜數會變成 0 或 1！"
-      grade3_ConditionalsElse_4_authored_hint:
-        remember_quantum: |-
-          **記住：**這個關卡在每次運行時都會有變化。
-
-          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
-      grade3_ConditionalsElse_5_authored_hint:
-        remember_quantum: |-
-          **記住：**這個關卡在每次運行時都會有變化。
-
-          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
-      grade3_ConditionalsElse_TeacherIDo_authored_hint:
-        remember_quantum: |-
-          **記住：**這個關卡在每次運行時都會有變化。
-
-          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
       grade3_Debugging_1_authored_hint:
         2-3_Bee_Debugging_1_a: "在你找到並修正了不正確的積木的過程中，有發現哪些地方可以用一個`重複`迴圈讓程式變得更簡單嗎？"
       grade3_Debugging_10_authored_hint:
@@ -2713,51 +2972,6 @@
         2-3_Bee_Loops_2_a: "你的迴圈中應該要有 4 個積木。"
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: "你的迴圈中應該要有 6 個積木。"
-      grade3_maze_loops1_authored_hint:
-        grade3_maze_loops1_a: Try using the "Step" button to find errors.
-      grade3_maze_loops2_authored_hint:
-        grade3_maze_loops2_a: |-
-          Try using this path through the maze.
-
-          ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        grade3_maze_loops2_b: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
-        grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
-          down on the amount of code you need.
-      grade3_maze_loops2a_authored_hint:
-        grade3_maze_loops2a_a: To solve this puzzle, you will need to "nest" one `repeat`
-          loop inside of another `repeat` loop.
-      grade3_maze_loops3_authored_hint:
-        2-3_Maze_Loops_19_a: If you are stuck, try writing out the code out on paper
-          without loops first and look for patterns.
-        2-3_Maze_Loops_19_b: Nesting `repeat` loops can help decrease the number of
-          blocks used.
-        2-3_Maze_Loops_19_c: It will take two sets of nested `repeat` loops to solve
-          this puzzle.
-      grade3_maze_loops4_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
-          a nested loop can be used.
-      grade3_maze_loops5_authored_hint:
-        2-3_Maze_Loops_21_a: "如果你一時之間找不到樓梯的組合模式，試試用手蓋住被擋住的路徑。"
-      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: []
-      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: []
-      grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_5a: Try nesting a `while` loop inside
-          of a `repeat` loop.
-      grade3_robotFarmer_ConditionalsIntro_7_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_7_a: Make sure you're using the `while`
-          loop to figure out how many times to fill each hole.
-        grade3_robotFarmer_ConditionalsIntro_7_b: Notice that the farmer needs to
-          move forward and down several times in a stair-step pattern.
-      grade3_robotFarmer_ConditionalsIntro_8_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
-          you keep going, even if you don't know how many squares are in a path.
-      grade3_robotFarmer_ConditionalsIntro_9_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_9_a: You are going to need to use more
-          than one `while` loop.
-        grade3_robotFarmer_ConditionalsIntro_9_b: Every hole is at the end of a path,
-          so use `while path ahead` before using `while there is a hole`.
-        grade3_robotFarmer_ConditionalsIntro_9_c: Notice that you need to repeat the
-          `while path ahead`, `while there is a hole` code six times.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat
           loop.
@@ -2804,6 +3018,87 @@
         grade3_RunningFarm_7_c: 'Use nested `if` statements and `while there is` loops
           to check each space for corn and lettuce, then pick only a single pumpkin
           at the end. '
+      grade3_bee_Conditionals_new4_authored_hint:
+        grade3_bee_Conditionals_new4_a: Don't forget that you can use loops for shorter
+          code!
+      grade3_bee_conditionals_new1a_authored_hint:
+        grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check
+          each space to see if it has a flower or nothing.
+      grade3_bee_conditionals_new2a_authored_hint:
+        grade3_bee_conditionals_new2a_a: You can still treat every space as if there
+          is a cloud over it, even though you can see the whole path.
+        grade3_bee_conditionals_new2a_b: 'Use an `if` statement inside your loop to
+          check each space. '
+      grade3_bee_conditionals_new3a_authored_hint:
+        grade3_bee_conditionals_new3a_a: In this puzzle, you know that each square
+          has either a flower or a honeycomb.  That means you can repeat your `if/else`
+          conditional at each square.
+      grade3_bee_conditionals_quantum1_authored_hint:
+        grade3_bee_conditionals_quantum1_a: You will need to use an `if` block to
+          check to see if there is a flower beneath the cloud before you try to get
+          nectar.
+      grade3_bee_conditionals_quantum2_authored_hint:
+        grade3_bee_conditionals_quantum2_a: Sometimes a flower will be there, sometimes
+          it won't.  If you want your code to run in both cases, make sure to use
+          an `if` statement.
+      grade3_bee_conditionals_quantum3_authored_hint:
+        grade3_bee_conditionals_quantum3: Make sure to use an `if` statement to check
+          for honeycomb beneath each cloud.
+      grade3_bee_conditionals_quantum4_authored_hint:
+        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll
+          want to use a conditional block (`if/else`) to solve the challenge."
+      grade3_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't
+          check blank squares, nectar *and* honey with a single conditional.
+      grade3_maze_loops1_authored_hint:
+        grade3_maze_loops1_a: Try using the "Step" button to find errors.
+      grade3_maze_loops2_authored_hint:
+        grade3_maze_loops2_a: |-
+          Try using this path through the maze.
+
+          ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
+        grade3_maze_loops2_b: "如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。"
+        grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
+          down on the amount of code you need.
+      grade3_maze_loops2a_authored_hint:
+        grade3_maze_loops2a_a: To solve this puzzle, you will need to "nest" one `repeat`
+          loop inside of another `repeat` loop.
+      grade3_maze_loops3_authored_hint:
+        2-3_Maze_Loops_19_a: If you are stuck, try writing out the code out on paper
+          without loops first and look for patterns.
+        2-3_Maze_Loops_19_b: Nesting `repeat` loops can help decrease the number of
+          blocks used.
+        2-3_Maze_Loops_19_c: It will take two sets of nested `repeat` loops to solve
+          this puzzle.
+      grade3_maze_loops4_authored_hint:
+        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
+          a nested loop can be used.
+      grade3_maze_loops5_authored_hint:
+        2-3_Maze_Loops_21_a: "如果你一時之間找不到樓梯的組合模式，試試用手蓋住被擋住的路徑。"
+      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: []
+      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: []
+      grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_5a: Try nesting a `while` loop inside
+          of a `repeat` loop.
+      grade3_robotFarmer_ConditionalsIntro_7_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_7_a: Make sure you're using the `while`
+          loop to figure out how many times to fill each hole.
+        grade3_robotFarmer_ConditionalsIntro_7_b: Notice that the farmer needs to
+          move forward and down several times in a stair-step pattern.
+      grade3_robotFarmer_ConditionalsIntro_8_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
+          you keep going, even if you don't know how many squares are in a path.
+      grade3_robotFarmer_ConditionalsIntro_9_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_9_a: You are going to need to use more
+          than one `while` loop.
+        grade3_robotFarmer_ConditionalsIntro_9_b: Every hole is at the end of a path,
+          so use `while path ahead` before using `while there is a hole`.
+        grade3_robotFarmer_ConditionalsIntro_9_c: Notice that you need to repeat the
+          `while path ahead`, `while there is a hole` code six times.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           這個圖案會循環 10 次，在一圈 360 度裡。
@@ -2842,6 +3137,16 @@
       grade4_artist_functions3b_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
           create a `draw hexagon` function and call that multiple times.
+      grade4_artist_functionsChallenge0_authored_hint:
+        grade4_artist_functionsChallenge0_a: |-
+          Start by making a function for a square, then try making a function for a line of squares.
+
+          How would you use the `draw a line of squares` function to make this image?
+        grade4_artist_functionsChallenge0_b: After your first line of squares, you
+          need to move the artist down and back before you start your second line
+          of squares.
+        grade4_artist_functionsChallenge0_c: You should move the artist back a different
+          number of pixels for even lines than for odd ones.
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: "每個六邊形的邊長都是 40 像素。"
         Course_4_SCF_1_b: "每個六邊形之間的水平距離是 120 像素。"
@@ -2893,16 +3198,9 @@
         grade4_artist_functions_windows2_b: You shouldn't need to add any extra repeat
           loops.  Just jump the artist 100 pixels forward for each top window, and
           150 pixels down to get the bottom windows.
-      grade4_artist_functionsChallenge0_authored_hint:
-        grade4_artist_functionsChallenge0_a: |-
-          Start by making a function for a square, then try making a function for a line of squares.
-
-          How would you use the `draw a line of squares` function to make this image?
-        grade4_artist_functionsChallenge0_b: After your first line of squares, you
-          need to move the artist down and back before you start your second line
-          of squares.
-        grade4_artist_functionsChallenge0_c: You should move the artist back a different
-          number of pixels for even lines than for odd ones.
+      grade4_artist_nestedLoops_challenge2_authored_hint:
+        Course_4_Artist_11_a: "這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  "
+        Course_4_Artist_11_b: "這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120 度**。 "
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           這個圖案會循環 10 次，在一圈 360 度裡。
@@ -2923,9 +3221,6 @@
           **6 x ? = 360**
       grade4_artist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
-      grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: "這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  "
-        Course_4_Artist_11_b: "這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120 度**。 "
       grade4_bee_conditionals_new1a_authored_hint:
         grade4_bee_conditionals_new1a_a: An `if` block will help you out in this puzzle.
       grade4_bee_conditionals_new2_authored_hint:
@@ -3251,6 +3546,8 @@
           once, turn right, call the function again, then turn left.
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: "確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。"
+      gradeK_sequence_4_authored_hint:
+        gradeK_sequence_4_a: Try writing down the steps on paper to find a solution!
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: To change how far the adventurer goes, change
           the number of times that the loop runs.
@@ -3354,66 +3651,8 @@
           2) Play a random sound when you click the actor.
 
           Now, make sure both of those actions are attached underneath the same event!
-      gradeK_sequence_4_authored_hint:
-        gradeK_sequence_4_a: Try writing down the steps on paper to find a solution!
-      Harvesting_authored_hint:
-        pointer_harvester_test: "哪種積木可以幫助我判斷（檢查還有做決定）？"
-      Inspirational Artwork_authored_hint:
-        brush_width: "在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。"
-        double_loop: "試著放置一個`計數迴圈`到`重複`積木裡頭。"
-        specifics: |-
-          畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。
-
-          `設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。
-        after: "當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。"
-        solution: |-
-          **解決方案：**
-
-
-          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
-      InspirationalArtwork_authored_hint: []
-      K2.0 sequence 1_authored_hint:
-        K2.0_sequence_1_a: This program is missing one block. Can you figure out which
-          one?
-      K2.0 sequence 10_authored_hint:
-        K2.0_sequence_10_a: If you're having trouble, try writing down the steps on
-          a piece of paper first.
-        K2.0_sequence_10_b: You will need three different kinds of arrows to solve
-          this puzzle.
-      K2.0 sequence 12_authored_hint:
-        K2.0_sequence_12_a: If the pig isn't moving far enough, try adding another
-          block.
-      K2.0 sequence 2_authored_hint:
-        K2.0_sequence_2_a: One of the blocks is moving the bird in the wrong direction.
-          Can you figure out which one and replace it with the correct block?
-      K2.0 sequence 3_authored_hint:
-        K2.0_sequence_3_a: If you are having trouble, try to figure out what the correct
-          path is and then remove the block that doesn't fit.
-      K2.0 sequence 4_authored_hint:
-        K2.0_sequence_4_a: Use 2 different arrow blocks to solve this puzzle!
-      K2.0 sequence 5_authored_hint:
-        K2.0_sequence_5: Your final code should have three movement blocks.
-      K2.0 sequence 6_authored_hint:
-        K2.0_sequence_6_a: There is 1 block that you need to add to move the bird
-          to the pig.
-        K2.0_sequence_6_b: If you can't figure out what to do, try drawing the puzzle
-          on paper and use your finger to figure out which way to move.
-      K2.0 sequence 7_authored_hint:
-        K2.0_sequence_7_a: If you're stuck, try drawing the image on paper to see
-          how the bird should move.
-      K2.0 sequence 8_authored_hint:
-        K2.0_sequence_8_a: Stuck? Try tracing the bird's path with your finger.
-      K2.0 sequence 9_authored_hint:
-        K2.0_sequence_9_a: If you're having trouble, try writing down the steps on
-          a piece of paper first.
-        K2.0_sequence_9_b: You will need to go three different directions to solve
-          this puzzle.
-      K2.0 sequence FP_authored_hint:
-        K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace
-          your way from the bird to the pig.
-      K2.0 sequence pre_authored_hint:
-        K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
-          sure blocks are connected under `when run`.
+      harvey_tictactoe_authored_hint:
+        harvey_tictactoe: "你可以利用 `跳躍` 積木移動到其它的空格。"
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: "你的迴圈中應該要有 5 個積木。"
       level 'grade3_Loops_11_authored_hint:
@@ -3434,68 +3673,6 @@
         2-3_Bee_Loops_2_a: "你的迴圈中應該要有 4 個積木。"
       level 'grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: "你的迴圈中應該要有 6 個積木。"
-      MikeStar_authored_hint:
-        hint1: Don't give up!
-      MikeStarHard_authored_hint:
-        hint1: Don't give up!
-      MikeStarNested_authored_hint:
-        hint1: Don't give up!
-      NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: "編輯 `draw a line of squares`（畫出方格邊）函式，這樣一來，你就不必呼叫它兩次。"
-        NEW_Course_4_Artist_Functions_13_b: "注意，你必須向前移動 60 像素還有轉向 144 度。"
-        NEW_Course_4_Artist_Functions_13_c: "如果你要製作一個有固定線條的星星圖像，需要怎麼編程呢？"
-      NEW Course 4 Artist Functions 4_authored_hint:
-        NEW_Course_4_Artist_Functions_4_a: "你必須在畫出每個正方形之後使用 `轉向-右方 120 度`積木。"
-      NEW Course 4 Artist Functions 9_authored_hint:
-        NEW_Course_4_Artist_Functions_9_a: "在你開始添加積木前，運行這個程式看看。是什麼地方讓圖案不大對勁？"
-        NEW_Course_4_Artist_Functions_9_b: "如果你不能明確的指出錯誤的地方，試著把滑桿往左調，讓程式的運行速度變慢。"
-      NEW Course 4 Artist Params 11_authored_hint:
-        NEW_Course_4_Artist_Params_11_a: "只需要把函式裡頭的數字換成一個變數就可以了。"
-      NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: "用 perimeter 除以 sides（周長除以邊數）的方式，就可以讓每個形狀都能有相同的尺寸。 "
-      NEW Course 4 Artist Params 14_authored_hint:
-        NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times
-          to figure out how the function works with different parameters.
-      NEW Course 4 Artist Params inspire_authored_hint:
-        brush_width: "在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。"
-        double_loop: "試著放置一個`計數迴圈`到`重複`積木裡頭。"
-        specifics: |-
-          畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。
-
-          `設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。
-        after: "當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。"
-        solution: |-
-          **解決方案：**
-
-
-          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
-      NEW Course 4 Bee For Loops 10a_authored_hint:
-        NEW_Course_4_Bee_For_Loops_10a_a: Can you find a pattern between the number
-          of steps you need to take and the number of nectars to gather?
-        NEW_Course_4_Bee_For_Loops_10a_b: You'll need to have 2 repeats, one will
-          use a math block.
-      NEW Course 4 Bee For Loops 7_authored_hint:
-        NEW_Course_4_Bee_For_Loops_7_a: |-
-          Try doing some math with the counter variable.
-
-          What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
-      NEW Course 4 Bee For Loops 8_authored_hint:
-        NEW_Course_4_Bee_For_Loops_8_a: |-
-          如果循環的數字是由小排到大，每次循環就會從計數器變量中加上間隔的值。
-
-          如果要依序收集花蜜，間隔數需要設成多少？
-      Pattern Bee 1_authored_hint:
-        conditional_pointer: |-
-          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你*判斷*你是在花朵還是在蜂窩上？
-
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: "除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？"
-      Planning Farmer_authored_hint:
-        conditional_pointer: |-
-          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你*判斷*你是在花朵還是在蜂窩上？
-
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: "除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？"
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"

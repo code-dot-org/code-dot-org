@@ -1875,6 +1875,8 @@
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
+            CSP Student Post Survey Staging: CSP Student Post Survey Staging
+            CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
           description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
@@ -2684,6 +2686,7 @@
             Artist Binary: 'Taiteilija: binääri'
             Nested Loops in Bee: Nested Loops in Bee
             Nested Loops: Sisäkkäiset silmukat
+            Introduction: Johdanto
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2987,6 +2990,8 @@
             Analog Input: Analog Input
             Polling Events: Polling Events
             Sensor Applications: Sensor Applications
+            'Project: Prototype an Innovation': 'Project: Prototype an Innovation'
+            Map: Map
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
@@ -3011,6 +3016,18 @@
             Interpreting Data: Interpreting Data
             Data in the Real World: Data in the Real World
             Combining Representations: Combining Representations
+            Representing Images: Representing Images
+            Representation Matters: Representation Matters
+            Patterns and Representation: Patterns and Representation
+            ASCII and Binary Representation: ASCII and Binary Representation
+            Representing Numbers Part 1: Representing Numbers Part 1
+            Representing Numbers Part 2: Representing Numbers Part 2
+            Project - Create a Representation: Project - Create a Representation
+            Problem Solving and Data: Problem Solving and Data
+            Making Decisions with Data: Making Decisions with Data
+            Automating Data Decisions: Automating Data Decisions
+            Problem Solving with Big Data: Problem Solving with Big Data
+            Project - Solve a Data Problem: Project - Solve a Data Problem
           title: ''
           description_audience: ''
           description_short: ''
@@ -3069,7 +3086,122 @@
         coursee-ramp:
           stage:
             Introduction: Johdanto
+            Conditionals: Ehtolausekkeet
+            'Real Life Algorithms: Dice Race': 'Real Life Algorithms: Dice Race'
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csd6:
+          stage:
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            The Circuit Playground: The Circuit Playground
+            Lists: Listat
+            Lights: Lights
+            For Loops: Silmukat
+            Lists and For Loops: Lists and For Loops
+            Timed Loops: Timed Loops
+            'Project: Board Output': 'Project: Board Output'
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+            Sensor Applications: Sensor Applications
+            'Project: Prototype an Innovation': 'Project: Prototype an Innovation'
+          title: CSD Unit 6 - Physical Computing
+          description_audience: ''
+          description_short: Programming with physical devices
+          description: The sixth unit of CS Discoveries, in which students use App
+            Lab and the Maker Toolkit to develop programs that communicate with a
+            physical board.
+        csd3-draft:
+          stage:
+            Shapes and Randomess: Shapes and Randomess
+            Shapes and Randomness: Shapes and Randomness
+            Drawing in Game Lab: Drawing in Game Lab
+            Variables: Muuttujat
+            Programming for Entertainment: Programming for Entertainment
+            Sprites: Sprites
+            Plotting Shapes: Plotting Shapes
+            Sprite Movement: Sprite Movement
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Ehtolausekkeet
+            Taking Input: Taking Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+          title: 'CSD Unit 3 - Programming: Animations and Games'
+          description_audience: ''
+          description_short: Animations and Games
+          description: ''
+        csd5:
+          stage:
+            Representation Matters: Representation Matters
+            Patterns and Representation: Patterns and Representation
+            ASCII and Binary Representation: ASCII and Binary Representation
+            Representing Images: Representing Images
+            Representing Numbers Part 1: Representing Numbers Part 1
+            Representing Numbers Part 2: Representing Numbers Part 2
+            Combining Representations: Combining Representations
+            Project - Create a Representation: Project - Create a Representation
+            Problem Solving and Data: Problem Solving and Data
+            Making Decisions with Data: Making Decisions with Data
+            Interpreting Data: Interpreting Data
+            Automating Data Decisions: Automating Data Decisions
+            Problem Solving with Big Data: Problem Solving with Big Data
+            Project - Solve a Data Problem: Project - Solve a Data Problem
+            Representing Numbers: Representing Numbers
+            8-bit Numbers: 8-bit Numbers
+          title: CSD Unit 5 - Data and Society
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-old:
+          stage:
+            Drawing in Game Lab: Drawing in Game Lab
+            Draw Loop and Randomization: Draw Loop and Randomization
+            Variables Unplugged: Variables Unplugged
+            Variables and Animation: Variables and Animation
+            Sprites and Properties: Sprites and Properties
+            Sprites and Images: Sprites and Images
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals and Keyboard Input: Conditionals and Keyboard Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Funktiot
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
+          title: CSD Unit 3 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 3
+          description: This is the original draft of CSD Unit 3, released in the fall
+            of 2016. Unless you have students currently using this course, you should
+            instead use the updated version of this unit at studio.code.org/s/csd3
+            - this original draft will remain available until July 1, 2017.
+        csd1-old:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs Computer Processing: Human vs Computer Processing
+            Processing with Apps: Processing with Apps
+            'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
+          title: CSD Unit 1 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 1
+          description: This is the original draft of CSD Unit 1, originally published
+            in the fall of 2016. This version has been replaced with an updated unit
+            at studio.code.org/s/csd1 and will only remain available until July 1,
+            2017.
