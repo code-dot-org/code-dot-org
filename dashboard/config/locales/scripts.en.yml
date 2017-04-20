@@ -2832,6 +2832,14 @@ en:
             'Project: Interactive Card': 'Project: Interactive Card'
             Keyboard Input: Keyboard Input
             Other Forms of Input: Other Forms of Input
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games
@@ -2906,3 +2914,54 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd1-draft:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Inputs and Outputs: Inputs and Outputs
+            Processing: Processing
+            Storage: Storage
+            Apps and Problem Solving: Apps and Problem Solving
+            Project - Propose an App: Project - Propose an App
+            Input and Output: Input and Output
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-chapters:
+          stage:
+            Programming for Entertainment: Programming for Entertainment
+            Plotting Shapes: Plotting Shapes
+            Drawing in Game Lab: Drawing in Game Lab
+            Shapes and Randomness: Shapes and Randomness
+            Variables: Variables
+            Sprites: Sprites
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Sprite Movement: Sprite Movement
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Conditionals
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
+            'Chapter 1: Images and Animation': 'Chapter 1: Images and Animation'
+            'null': 'null'
+            temp: temp
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        coursef-ramp:
+          stage:
+            'Algorithms: Tangrams': 'Algorithms: Tangrams'
+            Introduction: Introduction

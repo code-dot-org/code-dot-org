@@ -14,7 +14,7 @@ Born in Tehran, Iran, Hadi grew up during the Iran-Iraq war. His school did not 
 
 In 2013 Hadi and his twin brother Ali launched the education nonprofit Code.org, which Hadi continues to lead full-time as CEO. Code.org has established computer science classes in 15% of US classrooms, created the most broadly used curriculum platform for K-12 computer science, and launched the global [Hour of Code](http://hourofcode.com) movement that has reached over 100 million students.
 
-Hadi has served as an early advisor to numerous startups including [Facebook](http://www.facebook.com) and [Dropbox](http://www.dropbox.com), and as a tech investor his portfolio also includes [airbnb](http://www.airbnb.com), [Uber](http://www.uber.com), [Zappos](http://www.zappos.com), [IndieGogo](http://www.indiegogo.com), [Change.org](http://change.org), and others. Hadi also serves as a Director on the boards of [TASER International](http://taser.com) and [Convoy](http://www.convoy.com).
+Hadi has served as an early advisor or investor at many tech startups including [Facebook](http://www.facebook.com), [Dropbox](http://www.dropbox.com), [airbnb](http://www.airbnb.com), and [Uber](http://www.uber.com). He currently serves on the Board of Directors of [Axon](http://axon.com) and [Convoy](http://www.convoy.com).
 
 <hr/>
 Educators: [Request a visit to your school assembly](/visit)

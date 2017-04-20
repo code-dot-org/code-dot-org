@@ -1,0 +1,81 @@
+- extra_items_class = (defined? @level) ? "show-always" : "show-mobile"
+
+:ruby
+  teacher_entries = [
+    { title: "Home", url: "/teacher" },
+    { title: "Courses", url: "/educate" },
+    { title: "Projects Gallery", url: "/gallery" },
+    { title: "Sections", url: "/sections" },
+    { title: "Professional learning", url: "/pd" }
+  ].freeze
+
+  student_entries = [
+    { title: "Home", url: "/student" },
+    { title: "Courses", url: "/educate" },
+    { title: "Projects Gallery", url: "/gallery" }
+  ]
+
+  educate_entries = [
+    { title: "Educator Overview", url: "/educate" },
+    { title: "Elementary School", url: "/educate/curriculum/elementary-school'" },
+    { title: "Middle School", url: "/educate/curriculum/middle-school" },
+    { title: "High School", url: "/educate/curriculum/high-school" },
+    { title: "Hour of Code", url: "https://hourofcode.com" },
+    { title: "Partner with Us", url: "/educate/partner" },
+    { title: "Beyond Code.org", url: "/educate/curriculum/3rd-party" },
+    { title: "Inspire a Student", url: "/educate/resources/inspire" },
+    { title: "Online Community", url: "/educate/community" },
+    { title: "Tools and Videos", url: "/educate/resources/videos" },
+  ]
+
+  about_entries = [
+    { title: "About Us", url: "/about" },
+    { title: "Leadership", url: "/about/leadership" },
+    { title: "Donors", url: "/about/donors" },
+    { title: "Partners", url: "/about/partners" },
+    { title: "Full Team", url: "/about/team" },
+    { title: "Newsroom", url: "/about/news" },
+    { title: "Evaluation", url: "/about/evaluation" },
+    { title: "Jobs", url: "/about/jobs" },
+    { title: "Contact Us", url: "/contact" },
+    { title: "FAQs", url: "/faq" },
+  ]
+#hamburger
+  %ul.hide-responsive-menu
+    -# If we're a teacher, then we have special items showing here.
+    - if user_type == "teacher"
+      - teacher_entries.each do |entry|
+        %li{class: extra_items_class}
+          %a{href: entry[:url]}= entry[:title]
+    - elsif user_type == "student"
+      - student_entries.each do |entry|
+        %li{class: extra_items_class}
+          %a{href: entry[:url]}= entry[:title]
+
+    %li
+      %a{href: '/student'} Learn
+    %li
+      #educate-more
+        Teach
+        %i#educate-down{class: "fa fa-caret-down"}
+        %i#educate-up{class: "fa fa-caret-up"}
+    .educate-nav.hide-educate
+      - educate_entries.each do |entry|
+        %li
+          %a{href: entry[:url]}= entry[:title]
+    %li
+      %a{href: '/promote'} Stats
+    %li
+      %a{href: '/help'} Help Us
+    %li
+      #about-more
+        About
+        %i#about-down{class: "fa fa-caret-down"}
+        %i#about-up{class: "fa fa-caret-up"}
+    .about-nav.hide-about
+      - about_entries.each do |entry|
+        %li{class: extra_items_class}
+          %a{href: entry[:url]}= entry[:title]
+
+  #hamburger-icon
+    %span

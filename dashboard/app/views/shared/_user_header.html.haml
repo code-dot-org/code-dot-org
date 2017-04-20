@@ -4,7 +4,7 @@
       %i.fa.fa-users
       %span= t('nav.user.label', username: t('nav.user.team'))
     - else
-      %span= t('nav.user.label', username: h(current_user.short_name))
+      %span.user_name= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
       &#x25BC;
     %div{style: 'position: relative; top: 3px;'}
@@ -42,16 +42,19 @@
 
 :javascript
   function hideUserOptions() {
-    $('.user_options').hide();
+    $('.user_options').slideUp();
     $('.user_menu_glyph').html('&#x25BC;');
     $(document).off('click', hideUserOptions);
   }
   $('.user_menu').click(function (e) {
     if ($('.user_options').is(':hidden')) {
       e.stopPropagation();
-      $('.user_options').show();
+      $('.user_options').slideDown();
       $('.user_menu_glyph').html('&#x25B2;');
       $(document).on('click', hideUserOptions);
+
+      $("#hamburger-icon").removeClass('active');
+      $('#hamburger ul').slideUp();
     }
   });
   $('.user_options').click(function (e) {

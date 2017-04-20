@@ -45,11 +45,13 @@
       "upButton"
     ],
     "timeout_failure_tick": "0",
-    "callout_json": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_playLab_events5_1\",\r\n  \"callout_text\": \"Click here to change the direction of the event arrow.\",\r\n  \"element_id\": \"#callMeUp\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "gradek_playlab_events5c_template",
     "markdown_instructions": "Add events to have Jorge move up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png) and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png) buttons are pressed.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here are the event blocks that you will need to use to move Jorge up and down:\\n\\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\\nand \\n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)\",\"hint_id\":\"courseA_playLab_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/70fee5262f5d30bcc6c116d04bba04b0/courseA_playLab_events5.mp3\"}]",
-    "contained_level_names": null
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here are the event blocks that you will need to use to move Jorge up and down:\\n\\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\\nand \\n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)\",\"hint_id\":\"courseA_playLab_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/70fee5262f5d30bcc6c116d04bba04b0/courseA_playLab_events5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?\\n\\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)\",\"hint_id\":\"courseA_playLab_events5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4826a4c9a589619d30b858f3e9a26d2a/courseA_playLab_events5.mp3\"}]",
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
@@ -60,7 +62,7 @@
     <toolbox_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" id="callMeUp">
           <title name="VALUE">up</title>
         </block>
         <block type="studio_whenSpriteClicked">
