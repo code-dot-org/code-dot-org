@@ -1938,7 +1938,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
-    textModeAtStart: config.level.textModeAtStart
+    textModeAtStart: (
+      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === false ? config.usingTextModePref :
+      config.level.textModeAtStart
+    ),
   });
 
   if (config.level.paletteCategoryAtStart) {
