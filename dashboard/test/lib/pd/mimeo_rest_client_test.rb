@@ -177,6 +177,11 @@ class Pd::MimeoRestClientTest < ActiveSupport::TestCase
       mock_subresource.expects(method).raises(error).twice.in_sequence(retry_sequence)
       mock_subresource.expects(method).returns(expected_success_response).in_sequence(retry_sequence)
 
+      # Verify that it logs the retried errors
+      mock_log = mock
+      mock_log.expects(:info).with(includes("Retrying Pd::MimeoRestClient.#{method} after receiving error")).twice
+      CDO.expects(:log).returns(mock_log).twice
+
       # send message to private get and post methods
       actual_response = (
         case method

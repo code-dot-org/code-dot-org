@@ -31,8 +31,8 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
   # GET /pd/workshop_materials
   def admin_index
     @workshop_material_orders = Pd::WorkshopMaterialOrder.order(created_at: :desc)
-    @stats = {
-      total_count: @workshop_material_orders.count,
+    @counts = {
+      total: @workshop_material_orders.count,
       succesfully_ordered: @workshop_material_orders.successfully_ordered.count,
       shipped: @workshop_material_orders.shipped.count,
       order_errors: @workshop_material_orders.with_order_errors.count

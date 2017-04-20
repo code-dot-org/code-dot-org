@@ -161,7 +161,14 @@ class Pd::MimeoRestClient
 
   # Executes the block with retries for retriable errors
   def with_retries
-    exception_cb = ->(exception) {raise exception unless retryable_error?(exception)}
+    # get or post
+    calling_method_name = caller_locations(1, 1)[0].label
+
+    exception_cb = ->(exception) do
+      raise exception unless retryable_error?(exception)
+      CDO.log.info("Retrying Pd::MimeoRestClient.#{calling_method_name} after receiving error: #{exception}")
+    end
+
     Retryable.retryable(tries: @max_attempts, exception_cb: exception_cb) do
       yield
     end
