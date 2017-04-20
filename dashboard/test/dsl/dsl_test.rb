@@ -408,6 +408,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
