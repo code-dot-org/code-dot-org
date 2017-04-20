@@ -1,0 +1,49 @@
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
+
+%link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
+%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+%script{src: minifiable_asset_path("js/hamburger.js")}
+
+#pageheader2-wrapper
+  #pageheader
+    .content
+      #left
+        #logo-wrapper
+          %a{:href=>"/"}
+            %img#logo{:src=>'/images/logo.png'}
+        - if page_translated? && !partner_site?
+        - else
+          #headerlinks.desktop-feature
+            - if user_type == "teacher"
+              %a.headerlink{:href=>"/student"}Home
+              %a.headerlink{:href=>"/educate"}Courses
+              %a.headerlink{:href=>"/promote"}Projects Gallery
+              %a.headerlink{:href=>"/help"}Sections
+              %a.headerlink{:href=>"/about"}Professional Learning
+            - elsif user_type == "student"
+              %a.headerlink{:href=>"/student"}Home
+              %a.headerlink{:href=>"/educate"}Courses
+              %a.headerlink{:href=>"/promote"}Projects Gallery
+            - else
+              %a.headerlink{:href=>"/student"}Learn
+              %a.headerlink{:href=>"/educate"}Teach
+              %a.headerlink{:href=>"/promote"}Stats
+              %a.headerlink{:href=>"/help"}Help us
+              %a.headerlink{:href=>"/about"}About
+
+      #right
+        #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
+        - hamburger_class = (user_type == "student" || user_type == "teacher" ? "" : "mobile-feature")
+        %span{class: hamburger_class}
+          &nbsp;
+          &nbsp;
+          = view :hamburger, user_type: user_type
+
+    #clear{:style=>'clear:both'}
+
+    #loc.desktop-feature
+      -if banner = @header['banner']
+        =view banner
+
+#clear{:style=>'clear:both'}
