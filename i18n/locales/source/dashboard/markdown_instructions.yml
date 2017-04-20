@@ -804,6 +804,38 @@ en:
         property in \"style.css\" in the `p` rule-set.\r\n* Change the text-align
         value to `center` or `right`.\r\n* Add a `text-align` rule in the `body` rule
         set"
+      CSD U2 Headers_markdown_instruction: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are headers?**</summary>\r\nHeaders are the different sized section titles
+        throughout a web page. Headers add structure to your web page by breaking
+        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I create a header?**</summary>\r\nYou can make something a header element
+        by surrounding it by header tags.  For example:\r\n<pre> &lt;h1&gt; Header
+        Text &lt;/h1&gt; </pre> <br> <br>\r\n\r\nNotice how there is a the opening
+        tag (&lt;h1&gt;) and closing tag (&lt;/h1&gt;). The closing tag is the same
+        as the opening tag except it has `/` after the opening angle bracket. The
+        text you want to show as the header goes in the middle of the two tags.\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nStands for Hypertext Markup Language. HTML is used
+        to add structure to the content of a web page. HTML uses tags to specify where
+        certain structures start and end. These tags are sets of characters not found
+        in the English language so that the content and structure can be differentiated.
+        \r\n</details>\r\n<details>\r\n<summary>**What is an HTML element?**</summary>\r\nA
+        piece of a website. Marked by a start tag and sometimes closed with an end
+        tag. Also includes the content of the element as well. For example: \r\n<img
+        src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nThe special set of characters that tells the machine
+        where the start or end of an HTML element is and what type it is. HTML tags
+        add structure to the content of a web page.\r\n</details>\r\n<details>\r\n<summary>**Why
+        do you need an opening and closing tag?**</summary>\r\nYou need both an opening
+        and closing tag for many HTML elements because it marks where that structure
+        starts and stops. You don't want all the text on your web page to be a title.\r\n</details>\r\n</div>\r\n\r\n#
+        Headers\r\n\r\nYou may have noticed on the last level that everything you
+        type into the editor is getting smashed together. In order to differentiate
+        between these different parts we use HTML elements to mark the different parts
+        of a web page. In your investigation with the inspector did you come across
+        something that made headers?\r\n\r\n# Do This\r\n\r\n* Make your header \"Animals\"
+        stand out using the `<h1>` header element."
       CSD U2 RGB intro_markdown_instruction: "# RGB Colors\r\n\r\nAll colors, whether
         they have names or not, can be described by the level of red, green, and blue
         light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You
@@ -2469,6 +2501,12 @@ en:
         style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
         if block to add an else.\r\n* Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed."
+      CSD U3 Entertainment Sample 1_markdown_instruction: "Press \"Run\" to play
+        the game on the left.  You can make the alien jump with the up arrow, and
+        move it to the left and right with the arrow keys.  You score by collecting
+        stars, and if you score high enough, the background will change."
+      CSD U3 Entertainment Sample 2_markdown_instruction: "Use the space bar to jump.
+        Collect food and avoid bugs."
       CSD U3 Expressions calculator_markdown_instruction: "# Adding and Multiplying\r\n\r\nYour
         computer can calculate the results of many math problems. Try out this example,
         where we add and multiply a few numbers. Then extend it yourself to the numbers
@@ -2579,7 +2617,7 @@ en:
         Times\r\n\r\nYou'll often want to use the same code at many places in your
         program. Once you've created a function you can call it as many times as
         you like.\r\n\r\n# Do This\r\n\r\nThis code creates a sprite that moves across
-        the screen once. How can you make it go back across the screen.\r\n\r\n* **Note:**
+        the screen once. How can you make it go back across the screen?\r\n\r\n* **Note:**
         The function is already called once at the beginning of your program\r\n*
         Read the condition of the **if-statement** inside the draw loop. Why do you
         think it's there?\r\n* Use this if-statement and the function written for
@@ -6542,8 +6580,8 @@ en:
         Add a title, viewport, and description\r\n* Link the style sheet for your
         website to the cause page"
       CSDU2 IP Research Content_markdown_instruction: "# Adding Your Content\r\n\r\nYou
-        should now have found a handful of website that you can use to help make your
-        case for the cause you've chosen. If not, keep on researching! Otherwise
+        should now have found a handful of websites that you can use to help make
+        your case for the cause you've chosen. If not, keep on researching! Otherwise
         it's time to start structuring the content of your page.\r\n\r\n## Hyperlinks
         to Websites\r\n\r\nEarlier in the unit you learned how to use the `<a>` element
         to link between pages on your website. You can also use this element to link
@@ -25630,7 +25668,8 @@ en:
       courseA_playLab_events3_markdown_instruction: "Help Jorge the Dog get moving
         by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
         block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-        event block that is already in the workspace."
+        event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag
+        to finish this level!"
       courseA_playLab_events4_markdown_instruction: "Now, get Jorge to move right
         when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
         button is clicked."
@@ -25747,7 +25786,7 @@ en:
       courseC_collector_progB_markdown_instruction: "You're almost done!  \r\n\r\nCollect
         as many coins as you can to finish the stage!"
       courseC_harvester_loops1_markdown_instruction: "Loops can be used to repeat
-        more than moves.  \r\n\r\nUse loops to collect all of the pumpkins."
+        more than moves.  \r\n\r\nUse loops to collect all four of the pumpkins."
       courseC_harvester_loops10_markdown_instruction: "Collect all of the corn and
         all of the pumpkins."
       courseC_harvester_loops11_markdown_instruction: "Collect all of the corn and
@@ -25772,10 +25811,9 @@ en:
         the code to help get Skrat get to the acorn."
       courseC_maze_debugging3_markdown_instruction: "Something is not quite right.
         \r\n\r\nRemove blocks to get Skrat to the acorn!"
-      courseC_maze_loops2_markdown_instruction: "Suddenly, a magical block appears!  \r\nWith
-        the `repeat` block, you can loop code over and over.\r\n\r\nCan you get the
-        bird to the pig by creating a loop that uses only one `move forward` block
-        inside of a `repeat`?"
+      courseC_maze_loops2_markdown_instruction: "With the `repeat` block, you can
+        loop code over and over.\r\n\r\nCan you get the bird to the pig by creating
+        a loop that uses only one `move forward` block inside of a `repeat`?"
       courseC_maze_loops2_predict1_markdown_instruction: "Suddenly, a magical block
         appears!  \r\nWith the `repeat` block, you can loop code over and over.\r\n\r\nCan
         you get the bird to the pig by creating a loop that uses only one `move forward`
@@ -25875,14 +25913,17 @@ en:
         turn 90 degrees between circles?\r\n\r\n(To get this image, you still need
         to jump 50 pixels between circles)"
       courseD_artist_nestedLoops7_markdown_instruction: "Use what you've learned
-        to make this drawing.\r\n\r\n- The squares each have 100 pixel sides and 90
-        degree angles\r\n- You will need to turn 60 degrees between each square\r\n-
-        Make sure you jump 50 pixels to get to the next square"
+        to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and
+        **90 degree angles**\r\n- You will need to turn **60 degrees between each
+        square**. Why? Because there are 6 squares, and 360 degrees (a full turn around)
+        divided by 6 is 60 degrees.\r\n- Make sure you jump **50 pixels to get to
+        the next square**"
       courseD_artist_nestedLoops8_markdown_instruction: "Using what you have learned
         in the last couple of puzzles, build this image from the beginning.\r\n\r\n-
-        Each hexagon has 50 pixel sides and 60 degree angles"
+        Each hexagon has **50 pixel sides** and **60 degree angles**"
       courseD_artist_nestedLoops9_markdown_instruction: "**Challenge:** Can you figure
-        out how to make a picture like this?\r\n\r\n- Both shapes have 50 pixel sides"
+        out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel
+        sides**"
       courseD_artist_nestedLoops9_predict1_markdown_instruction: "**Challenge:**
         Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have
         50 pixel sides"
@@ -25970,8 +26011,8 @@ en:
         each flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_markdown_instruction: "Make all of the honey."
       courseD_bee_nestedLoops9_predict2_markdown_instruction: "Make all of the honey."
-      courseD_collector_ramp10_markdown_instruction: "Take the same path as before,
-        but this time collect all of the treasure as you find it.\r\n"
+      courseD_collector_ramp10_markdown_instruction: "Walk Laurel around this square
+        collecting the treasure as you find it.\r\n"
       courseD_collector_ramp8_markdown_instruction: "This puzzle is a lot like the
         last one, but now it stars Laurel the Adventurer!\r\n<hr/>\r\n\r\nTake the
         same path as before, but this time, use a repeat loop to collect treasure
@@ -26090,13 +26131,16 @@ en:
         blocks to the correct events to get Pegleg moving.\r\n\r\nGet Pegleg to the
         dragon to solve this puzzle."
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  Give Pegleg
-        (actor 1) a point when he makes it to the dragon. "
+        (actor 1) a point when he makes it to the dragon (actor 2). "
       courseD_playLab_cond3_markdown_instruction: "It's time to use what we've
         learned about conditionals to make this game amazing. This challenge has two
         parts:\r\n\r\n  1) Use a `repeat forever` loop to make the dragon (actor 2)
         change between random emotions every second.  \r\n \r\n  2) Add code so that
         when Pegleg gets to the dragon, he gets two points *if* the dragon is happy.
         Otherwise, he should get only one point added to his score."
+      courseD_playLab_cond3b_markdown_instruction: "Use a `repeat forever` loop to
+        make the dragon (actor 2) move up and down forever! Add a `wait for 1 second`
+        block in between the `move up` and `move down` blocks for the dragon."
       courseD_playLab_cond4_markdown_instruction: "This is about to get interesting!\r\n\r\nAdd
         some code so that the ninja (actor 3) starts chasing Pegleg as soon as the
         game begins.  End the game as a loss if the ninja catches him."
@@ -26118,7 +26162,8 @@ en:
         The hexagons have sides of 50 pixels\r\n- The hexagons are 100 pixels apart\r\n-
         The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
       courseE_artist_concept4_markdown_instruction: "Recreate this drawing using
-        13 blocks or fewer."
+        13 blocks or fewer. Each square has a side length of **20 pixels** and there
+        are **15 squares per row**."
       courseE_artist_functions1_markdown_instruction: "*\"Me zombie artist. Me love
         drawing!\"*\r\n\r\nHelp the zombie draw glasses using squares with sides of
         100 pixels.  \r\nThe bridge between the glasses is 75 pixels long.\r\n\r\n"
@@ -26154,8 +26199,9 @@ en:
         that you can call functions from *inside* other functions?!\r\n\r\nCreate
         as many functions as you think you need to make this drawing of 50 pixel squares."
       courseE_artist_functions9_markdown_instruction: "Create this image using only
-        the blocks provided.\r\n\r\n- To draw a diamond, you will need to alternate
-        between turning 60 degrees and 120 degrees."
+        the blocks provided. Each triangle has a side length of **50 pixels**\r\n\r\n-
+        To draw a diamond, you will need to alternate between turning **60 degrees
+        and 120 degrees**."
       courseE_artist_functions_predict1_markdown_instruction: "Here is a puzzle that
         uses a function that we have defined. \r\n"
       courseE_artist_ramp10_markdown_instruction: "Did you know you can put loops
@@ -26401,6 +26447,18 @@ en:
       courseF_artist_fwp9_markdown_instruction: "**Freeplay:** Below there are functions
         you've written, and more for you to play with. Play with the pen width to
         see how different your drawings look!"
+      courseF_artist_ramp10_markdown_instruction: "Did you know you can put loops
+        inside of other loops to make them more powerful?  That's called making a
+        \"nested loop\".\r\n\r\n<hr/>\r\n\r\nDrag the code for the last triangle into
+        a new loop to spin it around and make a snowflake!\r\n\r\n*(You will need
+        to spin it 6 times at 60 degrees to get this pattern.)*"
+      courseF_artist_ramp8_markdown_instruction: "Great!  Now let's make a square
+        using Artist!  The blocks for artist are a little different than other puzzles,
+        but the idea is the same.\r\n<hr/>\r\nEach side of the square has a length
+        of 200 pixels, and you will need to turn 90 degrees to make each angle."
+      courseF_artist_ramp9_markdown_instruction: "Use what you've learned to draw
+        this triangle.\r\n<hr/>\r\nThe sides are each 100 pixels long. You will need
+        to turn 120 degrees at each corner."
       courseF_artist_variables10_markdown_instruction: "Here's your code from the
         last puzzle.  Try editing the variable in other ways.  \r\n-  What happens
         if you start out with `length` less than 150? \r\n-  What if you multiply
@@ -26516,6 +26574,24 @@ en:
         to this puzzle?"
       courseF_bee_fwp7_markdown_instruction: "**Challenge:** Something looks a little
         different. Modify your function to make honey as well."
+      courseF_maze_ramp1_markdown_instruction: "For this puzzle, connect all of the
+        blocks from the workspace together below the `when run` event and click \"Run\"
+        to watch it go!"
+      courseF_maze_ramp13_markdown_instruction: "Time for one last puzzle to pull
+        it all together!\r\n\r\nUse nested loops to get the bird to the pig."
+      courseF_maze_ramp2_markdown_instruction: "Drag a `repeat` block out of the
+        toolbox and attach it to the `when run` event.   \r\n\r\nPlace the `move forward`
+        block inside to finish your code."
+      courseF_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to
+        the silly pig.\"* \r\n\r\nAvoid TNT or feathers will fly!"
+      courseF_maze_ramp5_markdown_instruction: "*\"Follow this path to get me to
+        the pig!\"*\r\n\r\nAvoid the TNT."
+      courseF_maze_ramp6_markdown_instruction: "*\"Keep calm and help me find the
+        bad pig. Otherwise I might get angry!\"*\r\n\r\nWhen you have several blocks
+        in a row, try moving them inside of a `repeat` loop.  This will do the same
+        thing with less code!"
+      courseF_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
+        Use what you've learned to get the bird to the pig!"
       courseF_playlab_variables0_markdown_instruction: "This is Pirate Pegleg.  He's
         awfully hard to understand these days!  \r\n\r\nDecode his speech by changing
         these pieces of text in the code:\r\n- \"arrrg\" should be \"a\" \r\n- \"ye\"
@@ -26569,7 +26645,8 @@ en:
         for you. Join them together and put them in the title screen to make a fun
         story."
       courseF_playlab_variables7b_markdown_instruction: "Time to make your own project!  \r\n\r\nCreate
-        some questions and weave the answers together into your very own story."
+        some questions and weave the answers together into your very own story.\r\n\r\nIf
+        you need ideas, click the hints icon."
       courseF_playlab_variables8b_markdown_instruction: "Use what you've learned
         to create an improv scene between the actors.\r\n\r\n**Improv:** *A scene
         that actors make up on stage using information from the audience.*"
@@ -26583,6 +26660,9 @@ en:
       course_playlab_variables3_markdown_instruction: "Now, decode Pirate Pegleg's
         speech by changing the value of the variables in just two places!   \r\n-
         \"arrrg\" should be \"a\" \r\n- \"ye\" should be \"e\"\r\n\r\n"
+      coursef_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere
+        is one extra block that is going to cause the bird to crash.  \r\nThrow it
+        away by dragging it back to the toolbox."
       cspu3_assess1_filltable_markdown_instruction: "Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
         many or as few rows in the table as you see fit.\r\n\r\n_NOTE: Use a new line
@@ -28005,6 +28085,9 @@ en:
       post-assessment survey q32_markdown_instruction: "(Optional): Please explain
         why you would/would not recommend this computer science course to another
         student."
+      post-assessment survey q37_markdown_instruction: "(Optional) If you did not
+        take the AP exam, what, if anything, would have made the difference for you
+        to take it?"
       pre-assessment survey q24A_markdown_instruction: "What computer science skills
         do you use in your everyday life? "
       pre-assessment survey q25A_markdown_instruction: "If yes, what computer science
