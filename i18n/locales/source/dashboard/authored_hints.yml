@@ -727,6 +727,25 @@ en:
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: 'You don''t have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. '
+      courseA_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_a: |+
+          You can use loops like this to create the walls and the roof. Try repeating different blocks.
+
+
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Design your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!
+
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      courseA_artist_loops_challenge2_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!'
+        courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
+        courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the loop for this challenge.
+      courseA_artist_loops_challenge3_authored_hint:
+        harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops10_authored_hint:
         courseA_collector_loops10_a: If you can't figure out where to put the loops, try writing the code out step-by-step and look for a pattern.
       courseA_collector_loops11_authored_hint:
@@ -749,6 +768,10 @@ en:
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'If you can''t spot the best places to use loops, try coding it out step-by-step and look for a pattern. '
         courseA_collector_loops9_b: Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!
+      courseA_collector_loops_challenge1_authored_hint:
+        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something goes wrong.
+        courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
+        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave, but you only need to move and collect 5 times. Do you know why?
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: |+
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
@@ -820,6 +843,29 @@ en:
           Here is the block you would use to play a random sound:
 
           ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
+      courseA_playlab_challengeTemplate_authored_hint: {}
+      courseA_playlab_events_challenge1_authored_hint:
+        courseB_playlab_events7_a: "Make the other animals move down when you press `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events7_b: |
+          Change the speed of the animals by using this block:
+          <xml>
+            <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+            </block></xml>
+        courseB_playlab_events7_c: |-
+          What will the everyone say when the race is over? Make them talk with this event:
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">2</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">2</title>
+                  <title name="VALUE">Woo hoo!</title>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_artist_loops10_authored_hint: {}
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
@@ -840,6 +886,10 @@ en:
         courseB_artist_loops8_a: How many times should you repeat the pattern to make the ladder?
       courseB_artist_loops8_predict1_authored_hint: {}
       courseB_artist_loops9_authored_hint: {}
+      courseB_artist_loops_challenge1_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!'
+        courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump` to the next!
+        courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over some of the same lines twice. '
       courseB_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseB_collector_loops10_authored_hint:
@@ -862,6 +912,24 @@ en:
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_a: |
           Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
+      courseB_collector_loops_challenge1_authored_hint:
+        courseB_collector_loops_challenge1_b: |+
+          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+
+        courseB_collector_loops_challenge1_a: |
+          You can move back over the path a second time before moving east.
+      courseB_collector_loops_challenge2_authored_hint:
+        courseB_collector_loops_challenge2_a: Try changing the numbers in each loop if something goes wrong.
+        courseB_collector_loops_challenge2_b: If you miss any treasure, you might need to move back west one extra space.
+        courseB_collector_loops_challenge2_c: Don't forget to use a loop to collect the final pile of treasure!
+      courseB_collector_loops_challenge`_authored_hint:
+        courseA_collector_loops_challenge2_b: |+
+          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+
+        courseA_collector_loops_challenge2_a: |-
+          You can move back over the path a second time before moving south.
+
+          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_maze_seq1_authored_hint:
@@ -936,6 +1004,19 @@ en:
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseB_playlab_eventsTemplate_authored_hint: {}
       courseB_playlab_eventsToolbox_authored_hint:
+        courseB_playlab_events7_a: |-
+          This is the event block that you will need:
+
+          ![](https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)
+        courseB_playlab_events7_b: |-
+          This is the block you need to play a sound.
+
+          ![](https://images.code.org/58e9b9a146a4ca3a8eee25845110b805-image-1475624550269.42.00.png)
+        courseB_playlab_events7_c: |-
+          This is the block you need to make the knight vanish:
+
+          ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+      courseB_playlab_events_challenge1_authored_hint:
         courseB_playlab_events7_a: |-
           This is the event block that you will need:
 
@@ -1052,6 +1133,10 @@ en:
         courseC_maze_debugging5_b: Try saying what Skrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
+          - What is Skrat supposed to do?
+          - What does Skrat do?
+          - What does that tell you?
+        courseC_maze_debugging6_b: |-
           Once you've found and fixed the first bug, go through the debugging process again to find the second one.
 
           Repeat the process until the program works!
@@ -1120,6 +1205,7 @@ en:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_b: Follow your finger from the bird to the pig, which steps did you take?
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
       courseC_maze_programming8_authored_hint: {}
@@ -1177,6 +1263,7 @@ en:
         courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
       courseD_artist_nestedLoops10_authored_hint:
         courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the first half of the last puzzle.
+        courseD_artist_nestedLoops10_c: Remember, each square has a side length of 50 pixels.
         courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set to run 7 times and remove the outer turn.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles, each rotated 60 degrees.  '
@@ -1603,6 +1690,7 @@ en:
         courseD_artist_functions9_b: This drawing is made by creating a line of triangles and turning either 60 or 120 degrees after each time you draw the triangle line.
       courseE_artist_functions_predict1_authored_hint: {}
       courseE_artist_functions_predict2_authored_hint: {}
+      courseE_artist_predict1_authored_hint: {}
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
       courseE_artist_ramp11_authored_hint:
@@ -1657,6 +1745,11 @@ en:
         courseE_bee_functions8_b: Use `while nectar > 0` to make sure you get all of the nectar.
       courseE_bee_functions9_authored_hint:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
+      courseE_bee_ramp14_authored_hint:
+        courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar if there is nectar, otherwise make honey!
+      courseE_bee_ramp17_authored_hint:
+        courseE_bee_ramp17_a: Because we don't have a repeat block to do something a certain number of times, what block should we use to get us along the path?
+        courseE_bee_ramp17: If you were to solve this puzzle without a while block, where would you see repeated code? How can you use this repeated code to shape how you must use a while block to solve the problem?
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
@@ -1717,16 +1810,32 @@ en:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
       courseE_farmer_functions9b_authored_hint: {}
+      courseE_farmer_predict1_authored_hint:
+        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.
+      courseE_farmer_predict2_authored_hint: {}
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
         courseE_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce, instead of dragging out 5 `pick lettuce` blocks?
         courseE_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)
+      courseE_farmer_ramp11a_authored_hint:
+        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  '
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  '
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+      courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.
       courseE_farmer_ramp13_authored_hint: {}
+      courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: Use the 'repeat until at pumpkin' block to make it to the end of the path.
+        courseE_farmer_ramp15_b: What else needs to be done while moving along the path to the pumpkin?
+      courseE_farmer_ramp16_authored_hint:
+        courseE_farmer_ramp16_a: If we are moving along the path to the pumpkin, what do we have to repeatedly do? When do we stop repeating?
+      courseE_maze_predict1_authored_hint: {}
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
+      courseE_maze_ramp13_authored_hint:
+        courseD_maze_ramp11_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseD_maze_ramp11_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseE_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
       courseE_maze_ramp3_authored_hint:
@@ -1741,6 +1850,9 @@ en:
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+      courseE_maze_ramp_predict1_authored_hint: {}
+      courseE_multi_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
       courseE_playLab_scaffold2_authored_hint:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
       courseE_playLab_scaffold3_authored_hint:
@@ -1881,6 +1993,8 @@ en:
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block that is connected to the purple `set shout to` block.
       courseF_playlab_variables3b_authored_hint:
+        courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
+      courseF_playlab_variables3bEdit_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
       drawings!_authored_hint:
         triangle_geometry_hint: 'Remember: an equilateral triangle has three sides, with a 60 degree turn between each!'

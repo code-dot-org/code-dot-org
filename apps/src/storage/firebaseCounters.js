@@ -49,31 +49,50 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
     return Promise.resolve(config);
   }).then(config => {
     const tableRef = getDatabase().child(`counters/tables/${tableName}`);
-    return tableRef.transaction(tableData => {
-      tableData = tableData || {};
-      if (updateNextId) {
-        if (rowCountChange !== 1) {
-          throw new Error('expected rowCountChange to equal 1 when updateNextId is true');
+    return updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config)
+      .catch(error => {
+        if (String(error).includes('disconnect')) {
+          // Sometimes a transaction fails because the response from the
+          // server is lost on the network, so we don't know whether the
+          // transaction succeeded or not. Retry once in this case, since
+          // the consequences of double-incrementing are relatively low.
+          setTimeout(() => {
+            // Make this event visible in UI test output and New Relic.
+            throw new Error('retrying updateTableCountersHelper after network disconnect');
+          }, 0);
+          return updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config);
+        } else {
+          return Promise.reject(error);
         }
-        tableData.lastId = (tableData.lastId || 0) + 1;
+      });
+  });
+}
+
+function updateTableCountersHelper(tableRef, updateNextId, rowCountChange, config) {
+  return tableRef.transaction(tableData => {
+    tableData = tableData || {};
+    if (updateNextId) {
+      if (rowCountChange !== 1) {
+        throw new Error('expected rowCountChange to equal 1 when updateNextId is true');
       }
-      if (tableData.rowCount + rowCountChange > config.maxTableRows)  {
-        // Abort the transaction.
-        return;
+      tableData.lastId = (tableData.lastId || 0) + 1;
+    }
+    if (tableData.rowCount + rowCountChange > config.maxTableRows) {
+      // Abort the transaction.
+      return;
+    }
+    tableData.rowCount = Math.max(0, (tableData.rowCount || 0) + rowCountChange);
+    return tableData;
+  }).then(transactionData => {
+    if (!transactionData.committed) {
+      const rowCount = transactionData.snapshot.child('rowCount').val();
+      if (rowCount + rowCountChange > config.maxTableRows) {
+        return Promise.reject(`The record could not be created. ` +
+          `A table may only contain ${config.maxTableRows} rows.`);
       }
-      tableData.rowCount = Math.max(0, (tableData.rowCount || 0) + rowCountChange);
-      return tableData;
-    }).then(transactionData => {
-      if (!transactionData.committed) {
-        const rowCount = transactionData.snapshot.child('rowCount').val();
-        if (rowCount + rowCountChange > config.maxTableRows) {
-          return Promise.reject(`The record could not be created. ` +
-            `A table may only contain ${config.maxTableRows} rows.`);
-        }
-        throw new Error('An unexpected error occurred while updating table counters.');
-      }
-      return updateNextId ? transactionData.snapshot.child('lastId').val() : null;
-    });
+      throw new Error('An unexpected error occurred while updating table counters.');
+    }
+    return updateNextId ? transactionData.snapshot.child('lastId').val() : null;
   });
 }
 
@@ -164,6 +183,16 @@ export function incrementRateLimitCounters() {
             // occasionally fail with max_retry. It's possible these would succeed on
             // a second attempt, but we want to discourage this so give an error instead.
             return Promise.reject(`${tooFrequentMsg} Error code: maxretry`);
+          } else if (String(error).includes('disconnect')) {
+            // Sometimes a transaction fails because the response from the
+            // server is lost on the network, so we don't know whether the
+            // transaction succeeded or not. Retry once in this case, since
+            // the consequences of double-incrementing are relatively low.
+            setTimeout(() => {
+              // Make this event visible in UI test output and New Relic.
+              throw new Error('retrying incrementIntervalCounters after network disconnect');
+            }, 0);
+            return incrementIntervalCounters(maxWriteCount, interval, currentTimeMs);
           } else {
             return Promise.reject(error);
           }

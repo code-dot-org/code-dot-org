@@ -72,10 +72,14 @@ en:
       CSD U3 Compound Nested Challenge_callout: {}
       CSD U3 Compound Nested Examples_callout: {}
       CSD U3 Conditional Project_callout: {}
+      CSD U3 Conditionals Apple 2_callout: {}
+      CSD U3 Conditionals Apple_callout: {}
       CSD U3 Direction Animations_callout: {}
       CSD U3 Direction Arrows_callout: {}
+      CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Else_callout: {}
       CSD U3 If Else_callout: {}
+      CSD U3 Keyboard Input Challenge_callout: {}
       CSD U3 Keypress Boolean_callout: {}
       CSD U3 Keypress Watchers_callout: {}
       CSD U3 Property Conditional Multi_callout: {}
@@ -99,6 +103,7 @@ en:
       CSD U3 Variables TEMPLATE square_callout: {}
       CSD U3 Variables make a big square_callout: {}
       CSD U3 Variables make a square_callout: {}
+      CSD U3 Watcher Debug_callout: {}
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Add your code here.
       CSD U3 abstraction accelerateY_callout:
@@ -629,6 +634,7 @@ en:
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions_predict1_callout: {}
+      courseE_artist_predict1_callout: {}
       courseE_artist_ramp10_callout: {}
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
@@ -663,8 +669,10 @@ en:
       courseE_farmer_functions7b_callout: {}
       courseE_farmer_functions8b_callout: {}
       courseE_farmer_functions9b_callout: {}
+      courseE_maze_predict1_callout: {}
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseE_maze_ramp13_callout: {}
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
@@ -676,6 +684,8 @@ en:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_maze_ramp_predict1_callout: {}
+      courseE_multi_maze_ramp5_callout: {}
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
       courseF_artist_for1_callout:
@@ -731,6 +741,10 @@ en:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_playLab_func2_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:

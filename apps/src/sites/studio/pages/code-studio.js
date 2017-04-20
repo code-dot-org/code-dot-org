@@ -26,6 +26,7 @@ require('@cdo/apps/code-studio/components/SendToPhone');
 require('@cdo/apps/code-studio/components/SmallFooter');
 require('@cdo/apps/code-studio/components/GridEditor');
 require('@cdo/apps/code-studio/components/Attachments');
+require('selectize');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -91,4 +92,6 @@ setTimeout(function () {
 
 activateReferenceAreaOnLoad();
 
-window.CDOSounds = new Sounds();
+// CDOSounds is currently used in a few haml files so we need
+// to put it on window :(
+window.CDOSounds = Sounds.getSingleton();

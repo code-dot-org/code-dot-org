@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75,\"sprite\":2},{\"tileType\":0},{\"tileType\":0,\"sprite\":0},{\"tileType\":0,\"sprite\":2},{\"tileType\":16,\"size\":0.75,\"sprite\":3},{\"tileType\":0,\"sprite\":1},{\"tileType\":16,\"size\":0.75,\"sprite\":4},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Can you add a block to score a point when Waddles (actor1) runs into Octavia (actor 3)? \r\nPlay the game and move Waddles with the arrows until you score!",
+    "instructions": "Can you add a block to score a point when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)? \r\nPlay the game and move Waddles with the arrows until you score!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,6 +46,8 @@
     "project_template_level_name": "grade2_playlab_project_template",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `score point` block will help you to solve this puzzle.\",\"hint_id\":\"courseC_PlayLab_events9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfa3a19c0d3577ae24fe04a843ba4ad7/courseC_PlayLab_events9.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

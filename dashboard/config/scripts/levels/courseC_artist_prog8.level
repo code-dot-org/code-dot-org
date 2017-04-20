@@ -36,6 +36,8 @@
     "discard_background": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/7aff3b778eeb9c7845e094292a48eab4-image-1475814545170.png\", \"position\": [0,0]}\r\n]\r\n\r\n",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -52,11 +54,11 @@
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="15,30,45,60,90,120">120</title>
+          <title name="VALUE" config="90,120">120</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="15,30,45,60,90,120">120</title>
+          <title name="VALUE" config="90,120">120</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>

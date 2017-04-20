@@ -4,9 +4,9 @@ import {
   FormGroup,
 } from 'react-bootstrap';
 
-import ProgramRegistrationComponent from './ProgramRegistrationComponent';
+import FormComponent from '../form_components/FormComponent';
 
-class DeclineTrainingDate extends ProgramRegistrationComponent {
+class DeclineTrainingDate extends FormComponent {
   renderNext() {
     let followup;
     if (this.props.data.declineTrainingDate === 'I want to participate in the program, but I\'m no longer able to attend these dates.') {
@@ -44,7 +44,7 @@ class DeclineTrainingDate extends ProgramRegistrationComponent {
   }
 }
 
-class TrainingDateConfirm extends ProgramRegistrationComponent {
+class TrainingDateConfirm extends FormComponent {
   render() {
     let followup;
     if (this.props.data.confirmTrainingDate === "No") {
@@ -77,7 +77,7 @@ class TrainingDateConfirm extends ProgramRegistrationComponent {
   }
 }
 
-class TeacherconDateConfirm extends ProgramRegistrationComponent {
+class TeacherconDateConfirm extends FormComponent {
   render() {
     let followup;
     if (this.props.data.confirmTeacherconDate === 'No - but I need to attend a different date.') {
@@ -123,7 +123,7 @@ class TeacherconDateConfirm extends ProgramRegistrationComponent {
   }
 }
 
-export default class DateConfirm extends ProgramRegistrationComponent {
+export default class DateConfirm extends FormComponent {
   render() {
     return (
       <FormGroup>
@@ -152,21 +152,24 @@ export default class DateConfirm extends ProgramRegistrationComponent {
   }
 }
 
-DateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
-  attendanceDates: React.PropTypes.object.isRequired,
-  teacherconLocation: React.PropTypes.string.isRequired,
-  course: React.PropTypes.string,
-});
-
-TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
-  attendanceDates: React.PropTypes.object.isRequired,
-  teacherconLocation: React.PropTypes.string.isRequired,
-});
-
-TrainingDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+DateConfirm.propTypes = {
+  ...FormComponent.propTypes,
   attendanceDates: React.PropTypes.object.isRequired,
   course: React.PropTypes.string,
-});
+  teacherconLocation: React.PropTypes.string.isRequired,
+};
+
+TeacherconDateConfirm.propTypes = {
+  ...FormComponent.propTypes,
+  attendanceDates: React.PropTypes.object.isRequired,
+  teacherconLocation: React.PropTypes.string.isRequired,
+};
+
+TrainingDateConfirm.propTypes = {
+  ...FormComponent.propTypes,
+  attendanceDates: React.PropTypes.object.isRequired,
+  course: React.PropTypes.string,
+};
 
 DateConfirm.associatedFields = [
   "confirmTeacherconDate",

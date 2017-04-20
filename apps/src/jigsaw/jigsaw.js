@@ -12,6 +12,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
+import {getStore} from '../redux';
 
 /**
  * Create a namespace for the application.
@@ -21,8 +22,7 @@ var Jigsaw = module.exports;
 var level;
 var skin;
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 studioApp().setCheckForEmptyBlocks(true);
 
@@ -170,7 +170,7 @@ Jigsaw.init = function (config) {
   });
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<JigsawVisualizationColumn/>}
         onMount={onMount}

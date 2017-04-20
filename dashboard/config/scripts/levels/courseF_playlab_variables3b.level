@@ -108,7 +108,7 @@
         <block type="variables_get" editable="false">
           <title name="VAR">A1</title>
         </block>
-        <block type="variables_get">
+        <block type="variables_get" editable="false">
           <title name="VAR">A1</title>
         </block>
       </xml>
@@ -310,8 +310,13 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="studio_saySpriteParams" inline="true">
+        <block type="studio_saySpriteParams" inline="true" movable="false" editable="false">
           <title name="SPRITE">1</title>
+          <value name="TEXT">
+            <block type="variables_get" editable="false">
+              <title name="VAR">A1</title>
+            </block>
+          </value>
         </block>
       </xml>
     </required_blocks>

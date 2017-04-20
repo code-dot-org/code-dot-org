@@ -34,9 +34,9 @@ var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
 var utils = require('../utils');
+import {getStore} from '../redux';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 import canvg from 'canvg';
 // tests don't have svgelement
@@ -143,7 +143,7 @@ Eval.init = function (config) {
   studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<EvalVisualizationColumn/>}
         onMount={studioApp().init.bind(studioApp(), config)}

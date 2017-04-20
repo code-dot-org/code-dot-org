@@ -14,7 +14,7 @@
     "skip_instructions_popup": "false",
     "ideal": "3",
     "video_key": "C2_zuck_repeat_loop",
-    "markdown_instructions": "Suddenly, a magical block appears!  \r\nWith the `repeat` block, you can loop code over and over.\r\n\r\nCan you get the bird to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
+    "markdown_instructions": "With the `repeat` block, you can loop code over and over.\r\n\r\nCan you get the bird to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

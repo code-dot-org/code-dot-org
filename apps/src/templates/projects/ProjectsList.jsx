@@ -4,6 +4,7 @@ import color from "../../util/color";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import {ImageWithStatus} from '../ImageWithStatus';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -80,8 +81,9 @@ function dateFormatter(dateString) {
 }
 
 function thumbnailFormatter(thumbnailUrl) {
+  const size = THUMBNAIL_SIZE;
   return thumbnailUrl ?
-    <img src={thumbnailUrl} width={THUMBNAIL_SIZE} height={THUMBNAIL_SIZE}/> :
+    <ImageWithStatus src={thumbnailUrl} width={size} height={size}/> :
     '';
 }
 

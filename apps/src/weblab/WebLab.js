@@ -14,6 +14,8 @@ var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import {getStore} from '../redux';
+import {TestResults} from '../constants';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -138,7 +140,7 @@ WebLab.prototype.init = function (config) {
   this.loadFileEntries();
 
   const onMount = () => {
-    this.setupReduxSubscribers(this.studioApp_.reduxStore);
+    this.setupReduxSubscribers(getStore());
 
     // TODO: understand if we need to call studioApp
     // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
@@ -185,7 +187,7 @@ WebLab.prototype.init = function (config) {
   function onAddFileImage() {
     project.autosave(() => {
       dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
-        showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
+        showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
         useFilesApi: config.useFilesApi
       });
     });
@@ -213,7 +215,7 @@ WebLab.prototype.init = function (config) {
     } else {
       this.brambleHost.disableInspector();
     }
-    this.studioApp_.reduxStore.dispatch(actions.changeInspectorOn(inspectorOn));
+    getStore().dispatch(actions.changeInspectorOn(inspectorOn));
   }
 
   function onFinish() {
@@ -222,7 +224,7 @@ WebLab.prototype.init = function (config) {
         app: 'weblab',
         level: this.level.id,
         result: true,
-        testResult: this.studioApp_.TestResults.FREE_PLAY,
+        testResult: TestResults.FREE_PLAY,
         program: this.getCurrentFilesVersionId() || '',
         submitted: false,
         onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
@@ -231,7 +233,7 @@ WebLab.prototype.init = function (config) {
   }
 
   ReactDOM.render((
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <WebLabView
         hideToolbar={!!config.share}
         onAddFileHTML={onAddFileHTML.bind(this)}
@@ -424,7 +426,7 @@ WebLab.prototype.setBrambleHost = function (obj) {
 
 // Called by Bramble host to get page constants
 WebLab.prototype.getPageConstants = function () {
-  return this.studioApp_.reduxStore.getState().pageConstants;
+  return getStore().getState().pageConstants;
 };
 
 /**

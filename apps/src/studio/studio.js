@@ -37,7 +37,6 @@ import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
 import paramLists from './paramLists.js';
-import sharedConstants from '../constants';
 import studioCell from './cell';
 import studioMsg from './locale';
 import { GridMove, GridMoveAndCancel } from './spriteActions';
@@ -53,6 +52,8 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
+import Sounds from '../Sounds';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -63,12 +64,7 @@ var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
 
-var KeyCodes = sharedConstants.KeyCodes;
-
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
-
-var SVG_NS = sharedConstants.SVG_NS;
+import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -1844,7 +1840,7 @@ Studio.init = function (config) {
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp().cdoSounds, skin.assetUrl, levelTracks);
+      Sounds.getSingleton(), skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -1878,9 +1874,7 @@ Studio.init = function (config) {
 
   // Add a post-video hook to start the background music, if available.
   config.level.afterVideoBeforeInstructionsFn = showInstructions => {
-    if (studioApp().cdoSounds) {
-      studioApp().cdoSounds.whenAudioUnlocked(() => Studio.musicController.play());
-    }
+    Sounds.getSingleton().whenAudioUnlocked(() => Studio.musicController.play());
     showInstructions();
   };
 
@@ -2006,7 +2000,7 @@ Studio.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={onMount}
@@ -4842,11 +4836,9 @@ Studio.setSprite = function (opts) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
-    if (studioApp().cdoSounds) {
-      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp().cdoSounds, audioOption);
-      });
-    }
+    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+      return new ThreeSliceAudio(Sounds.getSingleton(), audioOption);
+    });
   }
   Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 

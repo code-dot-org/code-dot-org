@@ -50,14 +50,14 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
 
 var ExecutionInfo = require('./executionInfo');
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 var TurnDirection = tiles.TurnDirection;
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 var SVG_NS = require('../constants').SVG_NS;
 
@@ -474,7 +474,7 @@ Maze.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={studioApp().init.bind(studioApp(), config)}

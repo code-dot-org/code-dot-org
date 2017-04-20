@@ -19,6 +19,7 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
       "Form data howTraveling",
       "Form data needHotel",
       "Form data needAda",
+      "Form data photoRelease",
       "Form data liabilityWaiver",
       "Form data gender",
       "Form data race",

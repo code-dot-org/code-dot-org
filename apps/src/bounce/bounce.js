@@ -17,12 +17,12 @@ var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
+import {getStore} from '../redux';
 var KeyCodes = constants.KeyCodes;
 
 var SquareType = tiles.SquareType;
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
 
@@ -759,7 +759,7 @@ Bounce.init = function (config) {
   studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<BounceVisualizationColumn/>}
         onMount={onMount}

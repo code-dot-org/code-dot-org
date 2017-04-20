@@ -62,10 +62,11 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
-var project = require('@cdo/apps/code-studio/initApp/project');
+import project from '../code-studio/initApp/project';
+import * as applabThumbnail from './applabThumbnail';
+import Sounds from '../Sounds';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 /**
  * Create a namespace for the application.
@@ -299,6 +300,9 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
+  if (Applab.tickCount === applabThumbnail.CAPTURE_TICK_COUNT) {
+    applabThumbnail.captureScreenshot();
+  }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
   }
@@ -333,6 +337,9 @@ Applab.init = function (config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
+
+  // Necessary for tests.
+  applabThumbnail.init();
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
@@ -639,10 +646,10 @@ function setupReduxSubscribers(store) {
     // new tables are added and removed.
     const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
     tablesRef.on('child_added', snapshot => {
-      store.dispatch(addTableName(snapshot.key()));
+      store.dispatch(addTableName(typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key));
     });
     tablesRef.on('child_removed', snapshot => {
-      store.dispatch(deleteTableName(snapshot.key()));
+      store.dispatch(deleteTableName(typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key));
     });
   }
 }
@@ -778,9 +785,7 @@ Applab.reset = function () {
     divApplab.removeChild(divApplab.firstChild);
   }
 
-  if (studioApp().cdoSounds) {
-    studioApp().cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
@@ -943,7 +948,7 @@ Applab.execute = function () {
   codeWhenRun = studioApp().getCode();
   Applab.currentExecutionLog = [];
 
-  if (codeWhenRun) {
+  if (typeof codeWhenRun === 'string') {
     // Create a new interpreter for this run
     Applab.JSInterpreter = new JSInterpreter({
       studioApp: studioApp(),
@@ -1171,7 +1176,7 @@ Applab.onPuzzleComplete = function (submit) {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    Applab.testResults = studioApp().TestResults.ALL_PASS;
+    Applab.testResults = TestResults.ALL_PASS;
     Applab.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly

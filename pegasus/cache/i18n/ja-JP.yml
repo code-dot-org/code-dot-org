@@ -706,6 +706,8 @@
   dashboard_students_reset_secret: "秘密のリセット"
   dashboard_students_reset_password: "パスワードのリセット"
   dashboard_students_share_section: "このセクションのサインインページを生徒達と共有する："
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: "学生用のログイン情報でカードを印刷する"
   dashboard_students_secret_picture_title: "秘密の画像"
   dashboard_students_secret_picture: "このセクションでは、各生徒が秘密の<b>画像</b>をパスワードの変わりに使用してログインします。ログインする際は上記のWebアドレスにログインしてください。"
@@ -716,6 +718,7 @@
   dashboard_students_join_link: "あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう"
   dashboard_students_no_email: "生徒がEメールアドレスを持っていない場合、もしくはあなたが生徒のアカウントを作りたい場合、セクションの秘密の種類を<b>単語</b>か<b>画像</b>にしてください。"
   dashboard_students_print_page: "このページを印刷"
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: 個人情報の扱いを参照したり印刷したりする場合は<a href="/privacy/student-privacy",
     target="_blank">ここをクリック</a>
@@ -929,6 +932,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: "第 1 章: インターネット"
   csp2_name: "第 2 章: デジタル情報"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1414,6 +1419,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

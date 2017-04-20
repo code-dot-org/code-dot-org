@@ -71,6 +71,7 @@ module AWS
       # or prints the template description (if valid).
       def validate
         template = render_template(dry_run: true)
+        CDO.log.info template if ENV['VERBOSE']
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         params = parameters(template)
@@ -292,9 +293,6 @@ module AWS
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
           stack_name: stack_name,
-          ssh_key_name: SSH_KEY_NAME,
-          image_id: IMAGE_ID,
-          instance_type: INSTANCE_TYPE,
           branch: branch,
           region: CDO.aws_region,
           environment: rack_env,
@@ -309,11 +307,8 @@ module AWS
           availability_zones: AVAILABILITY_ZONES,
           azs: azs,
           s3_bucket: S3_BUCKET,
-          file: method(:file),
-          js: method(:js),
-          erb: method(:erb),
-          subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
-          public_subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
+          subnets: azs.map {|az| {'Fn::ImportValue': "VPC-Subnet#{az}"}},
+          public_subnets: azs.map {|az| {'Fn::ImportValue': "VPC-PublicSubnet#{az}"}},
           lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
@@ -323,30 +318,11 @@ module AWS
         erb_eval(template_string, filename)
       end
 
-      # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
-      def source(str, filename, vars={})
-        local_vars = @@local_variables.dup
-        vars.each {|k, v| local_vars[k] = v}
-        lines = erb_eval(str, filename, local_vars).each_line.map do |line|
-          # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
-          line.split(/(%{.*})/).map do |x|
-            x =~ /%{.*}/ ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
-          end
-        end.flatten
-        {'Fn::Join' => ['', lines]}.to_json
-      end
-
       # Inline a file into a CloudFormation template.
       def file(filename, vars={})
         str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
-        source(str, filename, vars)
-      end
-
-      def erb(filename, vars={})
-        local_vars = @@local_variables.dup
-        vars.each {|k, v| local_vars[k] = v}
-        str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
-        erb_eval(str, filename, vars)
+        vars = @@local_variables.dup.to_h.merge(vars)
+        {'Fn::Sub': erb_eval(str, filename, vars)}.to_json
       end
 
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
@@ -361,7 +337,7 @@ module AWS
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        source(str, filename)
+        file(str, filename)
       end
 
       def js_zip

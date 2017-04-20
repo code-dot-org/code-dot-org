@@ -38,8 +38,11 @@
     "all_animations_single_frame": "false",
     "encrypted_examples": "RMksjdQi61erSRnPO5A6cIFiAvaGt3Ib3RNt1nwqYVwveJPH0u05WgyOgEEr\nGPi2\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

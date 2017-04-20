@@ -90,7 +90,9 @@ module.exports = function (testCollection, testData, dataItem, done) {
 };
 
 sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
-  finished();
+  if (!LegacyDialog.levelTestDontFinishOnShow) {
+    finished();
+  }
 });
 
 sinon.stub(LegacyDialog.prototype, 'hide');
@@ -122,7 +124,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   setAppSpecificGlobals(app);
 
   project.useFirebase.returns(!!testData.useFirebase);
-  project.isOwner.returns(true);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 

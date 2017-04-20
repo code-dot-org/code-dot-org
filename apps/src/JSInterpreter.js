@@ -1,9 +1,10 @@
 var codegen = require('./codegen');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 var utils = require('./utils');
 var Interpreter = require('@code-dot-org/js-interpreter');
 var acorn = require('@code-dot-org/js-interpreter/acorn');
 import patchInterpreter from './lib/tools/jsinterpreter/patchInterpreter';
+import {getStore} from './redux';
 
 import { setIsDebuggerPaused } from './redux/runState';
 
@@ -30,23 +31,23 @@ var JSInterpreter = module.exports = function (options) {
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
 
-  /** @type {ObservableEvent} */
-  this.onNextStepChanged = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onNextStepChanged = new ObservableEventDEPRECATED();
   this._runStateUpdater = this.onNextStepChanged.register(() => {
-    this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    getStore().dispatch(setIsDebuggerPaused(
       this.paused,
       this.nextStep
     ));
   });
 
-  /** @type {ObservableEvent} */
-  this.onPause = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onPause = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.onExecutionError = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onExecutionError = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.onExecutionWarning = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onExecutionWarning = new ObservableEventDEPRECATED();
 
   this.paused = false;
   this.yieldExecution = false;
@@ -1202,7 +1203,7 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));
@@ -1211,7 +1212,7 @@ JSInterpreter.prototype.handlePauseContinue = function () {
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));
@@ -1220,7 +1221,7 @@ JSInterpreter.prototype.handleStepOver = function () {
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));
@@ -1229,7 +1230,7 @@ JSInterpreter.prototype.handleStepIn = function () {
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+  getStore().dispatch(setIsDebuggerPaused(
     this.paused,
     this.nextStep
   ));

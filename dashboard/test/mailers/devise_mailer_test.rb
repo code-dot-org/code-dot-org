@@ -6,19 +6,6 @@ class DeviseMailerTest < ActionMailer::TestCase
     assert matchdata.nil?, "Expected no http urls, found #{matchdata.try(:[], 0)}"
   end
 
-  test "confirmation instructions" do
-    user = create :teacher
-
-    mail = Devise::Mailer.confirmation_instructions(user, 'faketoken')
-
-    assert_equal "Code.org confirmation instructions", mail.subject
-    assert_equal [user.email], mail.to
-    assert_equal ["noreply@code.org"], mail.from
-    assert_match 'https://test-studio.code.org/users/confirmation?confirmation_token=faketoken', mail.body.encoded
-
-    assert_no_http_urls mail.body.encoded
-  end
-
   test "invitation instructions" do
     user = create :teacher
 

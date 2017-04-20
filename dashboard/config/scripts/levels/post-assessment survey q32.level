@@ -5,14 +5,13 @@
   "level_num": "custom",
   "user_id": 684,
   "properties": {
-    "instructions": "(Optional): Please explain why you would/would not recommend this computer science course to another student. ",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "tts_instructions_override": "(Optional): Please explain why you would/would not recommend this computer science course to another student. "
+    "markdown_instructions": "(Optional): Please explain why you would/would not recommend this computer science course to another student."
   },
   "published": true,
   "notes": "",

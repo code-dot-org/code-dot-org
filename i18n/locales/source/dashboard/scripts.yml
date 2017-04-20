@@ -1685,6 +1685,8 @@ en:
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
+            CSP Student Post Survey Staging: CSP Student Post Survey Staging
+            CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
           description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
@@ -2783,6 +2785,8 @@ en:
         coursee-ramp:
           stage:
             Introduction: Introduction
+            Conditionals: Conditionals
+            'Real Life Algorithms: Dice Race': 'Real Life Algorithms: Dice Race'
           title: coursee-ramp
           description_audience: ''
           description_short: ''
@@ -2817,6 +2821,16 @@ en:
             Programming for Entertainment: Programming for Entertainment
             Sprites: Sprites
             Plotting Shapes: Plotting Shapes
+            Sprite Movement: Sprite Movement
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Conditionals
+            Taking Input: Taking Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games
@@ -2843,3 +2857,42 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd3-old:
+          stage:
+            Drawing in Game Lab: Drawing in Game Lab
+            Draw Loop and Randomization: Draw Loop and Randomization
+            Variables Unplugged: Variables Unplugged
+            Variables and Animation: Variables and Animation
+            Sprites and Properties: Sprites and Properties
+            Sprites and Images: Sprites and Images
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals and Keyboard Input: Conditionals and Keyboard Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
+          title: CSD Unit 3 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 3
+          description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3 - this original draft will remain available until July 1, 2017.
+        csd1-old:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs Computer Processing: Human vs Computer Processing
+            Processing with Apps: Processing with Apps
+            'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
+          title: CSD Unit 1 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 1
+          description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1 and will only remain available until July 1, 2017.

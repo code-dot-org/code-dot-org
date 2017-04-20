@@ -323,9 +323,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
 
     assert_response :success
-    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert input[value="my_email@test.xx"]'
-    assert_select '.alert .btn[value="Resend confirmation instructions"]'
+    assert_select '.alert', false
   end
 
   test 'edit does not show alert for unconfirmed email for students' do

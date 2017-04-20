@@ -32,6 +32,7 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
+  has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
 
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info

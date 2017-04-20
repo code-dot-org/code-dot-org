@@ -7,6 +7,11 @@ require 'cdo/aws/cloudfront'
 require 'sshkit'
 SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
 
+unless CDO.daemon
+  CDO.log.error 'This script must be run on production-daemon'
+  exit 1
+end
+
 varnish_ban_cmd = "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
 CDO.log.info 'Flushing Varnish cache on daemon...'
 RakeUtils.system varnish_ban_cmd
@@ -14,9 +19,15 @@ RakeUtils.system varnish_ban_cmd
 app_servers = CDO.app_servers.values
 
 unless app_servers.empty?
-  CDO.log.info 'Flushing Varnish caches on frontends...'
-  SSHKit::Coordinator.new(app_servers).each do
-    execute varnish_ban_cmd, raise_on_non_zero_exit: false
+  begin
+    CDO.log.info 'Flushing Varnish caches on frontends...'
+    SSHKit::Coordinator.new(app_servers).each do
+      execute varnish_ban_cmd, raise_on_non_zero_exit: false
+    end
+  rescue
+    # TODO: (eric) update the SSH configuration to avoid this manual step post-deploy
+    CDO.log.error 'SSH connection failed - please run "cp ~/.ssh/config_fanout ~/.ssh/config" and run this script again'
+    exit 1
   end
 end
 CDO.log.info 'Flushing CloudFront caches (up to 15 min)...'
