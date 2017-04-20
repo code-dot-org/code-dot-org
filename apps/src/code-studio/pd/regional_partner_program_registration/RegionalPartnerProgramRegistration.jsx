@@ -44,7 +44,6 @@ export default class RegionalPartnerProgramRegistration extends FormController {
    * @override
    */
   onSuccessfulSubmit() {
-    // Let the server display a confirmation page as appropriate
     this.setState({
       successfulSubmit: true
     });
@@ -69,7 +68,7 @@ export default class RegionalPartnerProgramRegistration extends FormController {
             Thanks for registering.
           </p>
           <p>
-            We’re excited you're joining TeacherCon 2017! You will receive more
+            We're excited you're joining TeacherCon 2017! You will receive more
             information about travel approximately six weeks before TeacherCon.
           </p>
           <p>
@@ -87,7 +86,6 @@ export default class RegionalPartnerProgramRegistration extends FormController {
 
 RegionalPartnerProgramRegistration.propTypes = {
   ...FormController.propTypes,
-  options: React.PropTypes.object.isRequired,
   teachercon: React.PropTypes.number.isRequired,
   teacherconLocation: React.PropTypes.string.isRequired,
   teacherconDates: React.PropTypes.string.isRequired,

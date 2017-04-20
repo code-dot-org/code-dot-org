@@ -12,7 +12,7 @@ export default class TravelInformation extends FormComponent {
       <FormGroup>{/* Travel Information */}
         <h4>Travel Information</h4>
 
-        <FormGroup>{/* Contact Info */}
+        <FormGroup>{/* Attendee Info */}
           {this.buildFieldGroup({
             name: "fullName",
             label: "Full legal name of TeacherCon Attendee:",
@@ -27,7 +27,7 @@ export default class TravelInformation extends FormComponent {
           })}
         </FormGroup>
 
-        <FormGroup>{/* Contact */}
+        <FormGroup>{/* Contact Info */}
           <ControlLabel>
             Please provide the name and phone number of someone we can contact in
             case of an emergency.
@@ -109,10 +109,8 @@ TravelInformation.propTypes = {
 };
 
 TravelInformation.associatedFields = [
-  "addressStreet",
-  "addressCity",
-  "addressState",
-  "addressZip",
+  "fullName",
+  "email",
   "contactName",
   "contactRelationship",
   "contactPhone",

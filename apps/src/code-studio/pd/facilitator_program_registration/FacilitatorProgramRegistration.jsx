@@ -63,7 +63,8 @@ export default class FacilitatorProgramRegistration extends FormController {
 
 FacilitatorProgramRegistration.propTypes = {
   ...FormController.propTypes,
-  options: React.PropTypes.object.isRequired,
+  attendanceDates: React.PropTypes.object.isRequired,
+  course: React.PropTypes.string.isRequired,
   teachercon: React.PropTypes.number.isRequired,
   teacherconLocation: React.PropTypes.string.isRequired,
 };
