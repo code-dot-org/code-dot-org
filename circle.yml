@@ -68,7 +68,7 @@ dependencies:
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "sync_assets: false" >> locals.yml'
     - 'echo "dashboard_enable_pegasus: true" >> locals.yml'
-    - 'echo "dashboard_workers: 7" >> locals.yml'
+    - 'echo "dashboard_workers: 4" >> locals.yml'
     # Avoid double-seeding. `rake install` runs a dashboard seed, this stops
     # `rake build` from doing the same.
     - 'echo "skip_seed_all: true" >> locals.yml'
