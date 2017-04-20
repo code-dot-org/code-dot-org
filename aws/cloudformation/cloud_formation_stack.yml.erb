@@ -15,6 +15,7 @@ end
 
 frontends = %i(production adhoc).include?(rack_env)
 require 'cdo/cron'
+image_id = IMAGE_ID
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
