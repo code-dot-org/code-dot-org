@@ -1,11 +1,12 @@
 - level ||= @level
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - in_level_group ||= false
+- level_props = level.properties_with_replaced_markdown(current_user)
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
   :javascript
-    var options = #{level.properties['options'].to_json}
+    var options = #{level_props['options'].to_json}
 
 .external
   - postcontent = capture_haml do
@@ -15,10 +16,10 @@
       - elsif !@level.has_submit_button?
         %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
 
-  = render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css'), postcontent: postcontent}
-  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+  = render partial: 'levels/content', locals: {app: 'external', data: level_props, content_class: level_props['options'].try(:[], 'css'), postcontent: postcontent}
+  = render partial: 'levels/teacher_markdown', locals: {data: level_props}
 
 - if in_level_group
   -# This partial will take care of milestone posts in the contexts of levelgroups,
   -# otherwise it's handled by external.js
-  = render partial: 'levels/dialog', locals: {app: 'external', data: level.properties}
+  = render partial: 'levels/dialog', locals: {app: 'external', data: level_props}
