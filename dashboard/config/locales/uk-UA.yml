@@ -87,6 +87,8 @@
     forgot_password: "Забули свій пароль?"
     need_confirmation: "Не отримали вказівок підтвердження?"
     need_unlock: "Не отримали вказівок розблокування?"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} учнів вже зареєструвались."
     teacher_count: "%{count} вчителів вже зареєструвались."
@@ -205,6 +207,14 @@
       Уроки - цікаві, візуально привабливі і навчають основних понять комп'ютерних наук за допомогою простого керованого ігрового інтерфейсу. Вивчайте код від Білла Гейтса, Марка Цукерберга, Злих Пташок та Рослин проти Зомбі! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "Запрошення надіслано"
     added_teacher: "%{name} додано як Вашого учителя"
@@ -220,8 +230,6 @@
       blank_code: "Будь ласка, введіть код групи"
       cant_join_own_section: "На жаль, не можна приєднатись до своєї власної групи."
     mail:
-      invite_student:
-        subject: "Приєднуйтеся до класу з %{teacher_name} на Code.org!"
       student_disassociated:
         subject: "Повідомлення Code.org: %{student_name} відтепер не є вашим учнем."
   reports:
@@ -477,6 +485,7 @@
       фінансування інформатичної освіти у школі."
     announcement_petition_button: "Додайте своє ім'я"
     announcement_go_beyond_button: "Вийти за межі"
+    announcement_apply_now: Apply now
     announcement_all: "Слідкуйте за новими функціями та оновленнями у нашому вчительському
       блозі. <a href='%{teacher_blog_url}' target='_blank'>Переглянути попередні оголошення.</a>"
     announcement_hoc_launch: "Тисячі вчителів у більш, як 180 країнах світу розпочнуть
@@ -539,16 +548,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший
       код групи."
-    section_code_not_entered: "Будь ласка, вкажіть current_section_code."
     section_code_cant_be_current_section: "Поточна група не може бути такою ж, як
       нова."
     current_section_dne: "Вибачте, але групи %{current_section_code} не існує. Вкажіть
       інший код групи."
-    students_not_yours: "Ви не можете перемістити учнів з групи, якою не керуєте."
-    stay_enrolled_not_entered: "Вкажіть stay_enrolled_in_current_section."
     student_ids_not_entered: "Вкажіть student_ids."
     student_not_found: "Одного чи більше учнів не знайдено."
     all_students_must_be_in_current_section: "Всі учні повинні бути зараховані у ваші

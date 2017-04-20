@@ -88,6 +88,8 @@
     forgot_password: Keni harruar fjalëkalimin?
     need_confirmation: Nuk i keni marr instruksionet e konfirmimit?
     need_unlock: Nuk keni marre instruksionet e zhbllokimit?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} nxënës janë regjistruar tashmë."
     teacher_count: "%{count}  mesues janë regjistruar tashmë."
@@ -200,6 +202,14 @@
       janë zbavitës, tërheqës, dhe të mësojnë konceptet bazë të shkencave kompjuterike
       duke përdorur një përvojë loje të thjeshtë. Mëso të kodosh nga Bill Gates, Mark
       Zuckerberg, Angry Birds dhe Plants vs. Zombies! :-)\n\n%{name}\n"
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Ftesa u dërgua
     added_teacher: "%{name} u shtua si mësuesi juaj"
@@ -214,8 +224,6 @@
       blank_code: Të lutem fut një kod seksioni
       cant_join_own_section: Më vjen keq, ti nuk mund t'i bashkohesh seksionit tënd.
     mail:
-      invite_student:
-        subject: Bashkohu në një klasë me %{teacher_name} tek Code.org!
       student_disassociated:
         subject: 'Lajmërim nga Code.org: %{student_name} nuk është më studenti yt.'
   reports:
@@ -469,6 +477,7 @@
       shkolla të shkencave kompjuterike.
     announcement_petition_button: Shto emrin tuaj
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: |-
       Mbahuni të përditësuar me veçoritë e reja dhe përditësimet në blogun e mësuesve tanë. <a href='%{teacher_blog_url}' target='_blank'> Shihni njoftimet e kaluara. </a>
        
@@ -531,18 +540,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju
       lutem, jepni një tjetër kod seksioni.
-    section_code_not_entered: Ju lutem jepni kodin e seksionit aktual.
     section_code_cant_be_current_section: Seksioni aktual nuk mund të jetë i njëjtë
       me seksionin e ri.
     current_section_dne: Na vjen keq, por seksioni %{current_section_code} nuk ekziston.
       Ju lutem, jepni një tjetër kod seksioni.
-    students_not_yours: Ju nuk mund të lëvizin studentët në një seksion që nuk ju
-      përket.
-    stay_enrolled_not_entered: Ju lutem sigurohuni që të qendroni brenda seksionit
-      aktual.
     student_ids_not_entered: Ju lutem jepni id-të e studenteve.
     student_not_found: Një ose më shumë studentë nuk mund të gjendet.
     all_students_must_be_in_current_section: Të gjithë studentët aktualisht duhet

@@ -12,7 +12,7 @@ cs:
     attributes:
       user:
         name: 'Zobrazit jméno'
-        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'Zobrazované jméno <br/> (např. Cool kodér nebo Jana S.)'
         email: 'E-mail'
         username: 'uživatelské jméno'
         password: 'heslo'
@@ -79,13 +79,14 @@ cs:
     forgot_password: 'Zapomněl jsi heslo?'
     need_confirmation: "Nedostal jsi instrukce pro potvrzení?"
     need_unlock: "Nezískal si instrukce pro odemčení?"
+    not_linked: "Váš účet Code.org není propojen s %{provider}. Budete se muset přihlásit zadáním vašeho hesla níže."
   signup_form:
     student_count: 'Již se zaregistrovalo %{count} studentů.'
     teacher_count: 'Již se přihlásilo %{count} učitelů.'
     overview: 'Přihlaš se na účet, aby jsi mohl/a sledovat svůj pokrok nebo spravovat svoji třídu <a href="/">Můžeš procházet jednotlivé stupně a puzzle</a> i bez účtu, ale pokud chceš uložit svoje pokroky a projekty musíš se přihlásit.'
     hoc_already_signed_up_heading: 'Začít bez přihlášení'
     hoc_already_signed_up_content: 'Jsi přihlášen/a jako učitel Hodiny kódu! Není třeba se přihlašovat do Studia kódu, aby jste se mohli zúčastnit této akce. Začněte <a href="https://code.org/learn">vyberte si kurz</a> pro svou třídu a sdílejte s nimi odkaz.<br/><br/>Pokud se vám Hodina kódu líbila a chcete pokračovat, můžete si nastavit heslo a vytvořit Studio kódu niže k přihlášení vašich studentů do kterékoli z našičh<a href="https://code.org/educate">delších kurzů</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Díky za hostování hodiny kódu. Pro přihlášení do Code Studio si musíte nastavit heslo pro svůj účet. To vám umožní ukládat vaše řešení a spravovat vaši třídu. Budete moci přiřazovat kurzy studentům a sledovat jejich průběh. <a href="%{studio_url}">Můžete také i nadále procházet různé fáze a hádanky</a> bez vytvoření účtu.'
     teacher_educator_guide: 'Viz přiručka pedagoga'
     title: "Registrace na Code.org"
     school_name: 'Název školy (volitelné)'
@@ -112,30 +113,30 @@ cs:
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
   school_info:
-    title: 'School Information (optional)'
-    school_country: 'School Country'
-    select_school_type: 'School Type'
-    charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
-    homeschool: 'Homeschool'
-    after_school: 'After School'
+    title: 'Název školy (nepovinné)'
+    school_country: 'Země školy'
+    select_school_type: 'Typ školy'
+    charter: 'Poloprivátní (Charter)'
+    private: 'Privátní'
+    public: 'Veřejná'
+    homeschool: 'Domácí'
+    after_school: 'Mimoškolní'
     other: 'Ostatní'
-    state: 'State'
-    district: 'District'
-    other_district_not_listed: 'Other district not listed above'
-    district_name: 'District Name'
-    school: 'School'
-    other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    state: 'Stát (USA)'
+    district: 'Okres'
+    other_district_not_listed: 'Jiný okres neuvedený v seznamu'
+    district_name: 'Název okresu'
+    school: 'Škola'
+    other_school_not_listed: 'Jiná škola neuvedená v seznamu'
+    school_name: 'Název školy'
+    school_zip: 'PSČ školy'
+    school_address: 'Adresa školy'
+    school_organization_name: 'Název školy/organizace'
+    school_organization_zip: 'PSČ školy/organizace'
   signin_form:
     title: 'Máš již účet? Přihlaš se'
     login: 'E-mail'
-    login_username: 'Email or Username'
+    login_username: 'Uživatelské jméno nebo e-mail'
     password: 'Heslo'
     remember: 'Zapamatuj si mne'
     submit: 'Přihlásit'
@@ -151,7 +152,7 @@ cs:
     login: 'Přihlásit'
     invalid_login: 'Neplatné přihlašovací jméno, zkuste to prosím znovu'
     pair_programming: 'Mám partnera u počítače'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "Další informace o tom, proč se nezobrazuje celé vaše jméno najdete <a href='%{student_privacy_blog}' target='_blank'> zde</a>."
   password:
     reset_form:
       title: 'Zapomněl jsi heslo?'
@@ -173,6 +174,14 @@ cs:
       Cvičení jsou zábavná, vzhledově poutavá a učí základy počítačových věd pomocí jednoduchých, řízených herních hádanek. Naučíš se programovat s pomocí Billa Gatese, Marka Zuckerberga, Angry Birds a Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Vaše sekce:'
+      other: 'Vaše sekce:'
+    code_with_teacher: '%{section_code} s učitelem %{teacher_name}'
+    confirm:
+      remove: 'Jste si jisti, že chcete opustit tuto sekci?'
+    remove: '(odstranit sekci)'
   follower:
     invite_sent: 'Pozvánka odeslána'
     added_teacher: '%{name} přidán jako tvůj učitel'
@@ -186,8 +195,6 @@ cs:
       blank_code: "Zadej prosím kód sekce"
       cant_join_own_section: "Lituji, ale nemůžete se připojit s vlastní sekcí."
     mail:
-      invite_student:
-        subject: "Přidat třídu s %{teacher_name} na Code.org!"
       student_disassociated:
         subject: 'Code.org upozornění: %{student_name} už není vašim studentem.'
   reports:
@@ -327,8 +334,8 @@ cs:
     delete_text: "Klepnutím na následující tlačítko se vymaže váš účet."
     delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské účty.'
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
-    deleted_user: 'deleted user'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    deleted_user: 'odstraněný uživatel'
+    no_password_because_oauth: 'Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Dokončeno'
@@ -386,6 +393,7 @@ cs:
     announcement_petition: "Jako učitel patříte mezi propagátory hnutí za to, aby každý student v každé škole dostal příležitost učit se informatiku. A teď je čas, aby vaši zástupci vyslechli Váš názor. Tento týden se zástupci učitelů, 28 guvernérů a generální ředitelé největších amerických společností spojili v otevřeném dopise, kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní docházky na základních i středních školách."
     announcement_petition_button: "Přidej své jméno"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Udržuj krok s novými funkcemi a aktualizacemi na našem blogu učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé oznámení.</a>"
     announcement_hoc_launch: "Tisíce pedagogů ve více než 180 zemích začne vyučovat informatiku během Týdne Hodiny kódu. Spoléháme na vás, aby jste nám pomohli se dostat k ještě více studentům než kdy předtím. <a href='%{signup_url}' target='_blank'> Zaregistrujt vaši Hodinu kódu </a> a upozněte i ostatní pedagogy, že i oni mohou začít vyučovat informatiku."
     announcement_mc_launch: "Jeden z našich nejpopulárnějších kurzů má nyní pokračování! Zcela nová Hodina kódu Minecraft Designer umožňuje studentům ovlivňovat pravidla světu Minecraft. Mohou vytvořit naprosto unikátní verzi Minecraftu a pak ji sdílet s přáteli nebo hrát na svých telefonech. Vytvořte si je ve své třídě na Hodině kódu."
@@ -398,13 +406,11 @@ cs:
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte jiný kód sekce."
-    section_code_not_entered: "Zadejte current_section_code."
     section_code_cant_be_current_section: "Aktuální sekce nemůže být stejná jako nová sekce."
     current_section_dne: "Omlouvám se, ale sekce %{current_section_code} neexistuje. Zadejte jiný sekční kód."
-    students_not_yours: "Nemůžeš přesunout studenty ze sekce, která ti nepatří."
-    stay_enrolled_not_entered: "Zadejte stay_enrolled_in_current_section."
     student_ids_not_entered: "Zadejte prosím student_ids."
     student_not_found: "Nelze nalézt jednoho nebo více studentů."
     all_students_must_be_in_current_section: "Všichni studenti musí být zapsáni v tvoji v sekci."

@@ -88,6 +88,8 @@
     forgot_password: "დაგავიწყდათ თქვენი პაროლი?"
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
     need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "უკვე დარეგისტრირდა %{count} სტუდენტი."
     teacher_count: "უკვე დარეგისტრირდა %{count} მასწავლებელი."
@@ -205,6 +207,14 @@
       ტუტორიალები სახალისოა და პროგრამირების საფუძვლებს გასწავლით მარტივი, თამაშის მსგავსი მეთედებით. ისწავლეთ კოდის წერა ბილ გეითსისგან, მარკ ცუკერბერგისგან, Angry Birds, და Plants vs. Zombies! თამაშებით! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "მოწვევა გაგზავნილია"
     added_teacher: "%{name} გიმატებთ, როგორც მასწავლებელს"
@@ -219,8 +229,6 @@
       blank_code: "შეიყვანეთ სექციის კოდი"
       cant_join_own_section: "ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით."
     mail:
-      invite_student:
-        subject: "შეურთდით %{teacher_name}-ს კლასს  Code.org-ზე!"
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
   reports:
@@ -472,6 +480,7 @@
       K-12 კომპიუტერული მეცნიერების სწავლება."
     announcement_petition_button: "დაამატეთ თქვენი სახელი"
     announcement_go_beyond_button: "გააგრძელეთ"
+    announcement_apply_now: Apply now
     announcement_all: "მიიღეთ ინფორმაცია ახალი ფუნქციონალის შესახებ და მასწავლებლის
       განახლებადი ბლოგი. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა
       განცხადებები.</a>"
@@ -535,17 +544,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ,
       შეიყვანოთ სხვა სექციის კოდი."
-    section_code_not_entered: "გთხოვთ წარმოადგინოით current_section_code."
     section_code_cant_be_current_section: "მიმდინარე სექცია ვერ იქნება იგივე, რაც
       ახალი სექცია."
     current_section_dne: "სამწუხაროდ, სექცია %{current_section_code} არ არსებობს.
       გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
-    students_not_yours: "თქვენ არ შეგიძლიათ მოსწავლეების გადაყვანა იმ სექციიდან, რომელიც
-      თქვენ არ გეკუთვნით."
-    stay_enrolled_not_entered: "გთხოვთ, წარმოადგინოთ stay_enrolled_in_current_section."
     student_ids_not_entered: "გთხოვთ, წარმოადგინოთ student_ids."
     student_not_found: "ერთი ან მეტი მოსწავლე ვერ მოიძებნა."
     all_students_must_be_in_current_section: "ყველა სტუდენტი ამჟამად უნდა ირიცხებოდეს

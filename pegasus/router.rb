@@ -366,6 +366,15 @@ class Documents < Sinatra::Base
           end
         end
       end
+
+      # Also look for shared items.
+      extnames.each do |extname|
+        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
+        if File.file?(path)
+          return path
+        end
+      end
+
       nil
     end
 
