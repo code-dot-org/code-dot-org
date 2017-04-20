@@ -71,6 +71,7 @@ module AWS
       # or prints the template description (if valid).
       def validate
         template = render_template(dry_run: true)
+        CDO.log.info template if ENV['VERBOSE']
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         params = parameters(template)
@@ -292,9 +293,6 @@ module AWS
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
           stack_name: stack_name,
-          ssh_key_name: SSH_KEY_NAME,
-          image_id: IMAGE_ID,
-          instance_type: INSTANCE_TYPE,
           branch: branch,
           region: CDO.aws_region,
           environment: rack_env,
