@@ -1,12 +1,10 @@
-const _ = require('lodash');
-import {assert} from '../util/configuredChai';
-var sinon = require('sinon');
-
-var testUtils = require('./../util/testUtils');
-
-var dropletUtils = require('@cdo/apps/dropletUtils');
-
-var mazeDropletConfig = require('@cdo/apps/maze/dropletConfig');
+import _ from 'lodash';
+import {assert, expect} from '../util/configuredChai';
+import sinon from 'sinon';
+import * as testUtils from './../util/testUtils';
+import * as dropletUtils from '@cdo/apps/dropletUtils';
+import * as mazeDropletConfig from '@cdo/apps/maze/dropletConfig';
+import color from '@cdo/apps/util/color';
 
 const BASE_DROPLET_CATEGORIES = Object.freeze({
   "Control": {
@@ -382,6 +380,70 @@ describe('getParamFromCodeAtIndex', () => {
   it('works with non-quoted strings (variable names)', () => {
     const code = "myProperty(object1, ";
     assert.equal(getParamFromCodeAtIndex(0, 'myProperty', code), 'object1');
+  });
+});
+
+describe('makeDisabledConfig', () => {
+  let originalConfig;
+
+  beforeEach(() => {
+    originalConfig = {
+      categories: {
+        'A category': {
+          color: 'cyan',
+          rgb: '#00cccc',
+          blocks: []
+        },
+      },
+      blocks: [
+        {func: 'pinMode', parent: {}, category: 'A category', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
+        {func: 'digitalWrite', parent: {}, category: 'A category', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
+        {func: 'digitalRead', parent: {}, category: 'A category', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
+      ],
+      additionalPredefValues: [
+        'buttonL',
+        'buttonR',
+      ],
+      autocompleteFunctionsWithParens: true,
+    };
+  });
+
+  // Given a stating config, generates a "disabled" droplet config that has the
+  // following properties:
+  it('does not mutate the original config', () => {
+    const originalConfigCopy = _.cloneDeep(originalConfig);
+    dropletUtils.makeDisabledConfig(originalConfig);
+    expect(originalConfigCopy).to.deep.equal(originalConfig);
+  });
+
+  it('removes all categories', () => {
+    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+    expect(Object.keys(originalConfig.categories)).not.to.be.empty;
+    expect(Object.keys(disabledConfig.categories)).to.be.empty;
+  });
+
+  it('removes all blocks from categories', () => {
+    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+    assert(originalConfig.blocks.some(block => block.category !== undefined));
+    assert(disabledConfig.blocks.every(block => block.category === undefined));
+  });
+
+  it('turns all blocks gray', () => {
+    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+    assert(originalConfig.blocks.some(block => block.color !== color.light_gray));
+    assert(disabledConfig.blocks.every(block => block.color === color.light_gray));
+  });
+
+  it('removes all blocks from autocomplete', () => {
+    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+    assert(originalConfig.blocks.some(block => !block.noAutocomplete));
+    assert(disabledConfig.blocks.every(block => block.noAutocomplete));
+  });
+
+  it('removes all additional defines', () => {
+    const disabledConfig = dropletUtils.makeDisabledConfig(originalConfig);
+    expect(originalConfig.additionalPredefValues).not.to.be.empty;
+    expect(disabledConfig.additionalPredefValues).to.be.empty;
   });
 });
 

@@ -1921,23 +1921,13 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     }
   }
 
-  // Remove maker API blocks from palette and autocomplete, unless maker APIs are enabled.
-  // We didn't have access to project.useMakerAPIs() when dropletConfig
-  // was initialized, so include it initially, and conditionally remove it here.
+  // Remove maker API blocks from palette, unless maker APIs are enabled.
   if (!project.useMakerAPIs()) {
-    //// Remove maker blocks from the palette
+    // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
       makerDropletBlocks.forEach(block => {
         delete config.level.codeFunctions[block.func];
       });
-    }
-
-    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
-    const block = config.dropletConfig.blocks.find(block => {
-      return makerDropletBlocks.find(makerBlock => makerBlock.func === block.func);
-    });
-    if (block) {
-      block.noAutocomplete = true;
     }
   }
 
