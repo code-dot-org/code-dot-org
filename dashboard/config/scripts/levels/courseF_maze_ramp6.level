@@ -49,8 +49,8 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="controls_repeat_dropdown" id="callMe">
-          <title name="TIMES" config="3-10">???</title>
+        <block type="controls_repeat" id="callMe">
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>

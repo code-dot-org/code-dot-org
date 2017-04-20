@@ -31,9 +31,9 @@
     "instructions_important": "false",
     "ideal": "10",
     "markdown_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop to easily fill them all!",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
