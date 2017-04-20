@@ -79,6 +79,8 @@
     forgot_password: "忘记密码？"
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
@@ -118,14 +120,14 @@
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
   school_info:
-    title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
+    title: "学校信息（可选）"
+    school_country: "学校所在国家"
+    select_school_type: "学校类型"
     charter: Charter
     private: Private
     public: Public
-    homeschool: Homeschool
-    after_school: After School
+    homeschool: "在家教育"
+    after_school: "课后"
     other: "其他"
     state: "省/直辖市/自治区"
     district: "区"
@@ -136,8 +138,8 @@
     school_name: "校名"
     school_zip: "学校邮编代号"
     school_address: "校址"
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    school_organization_name: "学校/组织名称"
+    school_organization_zip: "学校/组织的邮编"
   signin_form:
     title: "已经有账号了？登录"
     login: "电子邮件"
@@ -177,6 +179,14 @@
       %{link}
       本教程轻松有趣吸引眼球，它将教导您如何使用一个简单的、 指导性的、 类似游戏经验的计算机科学的基本概念。快来学习从比尔 · 盖茨、 马克 · 扎克伯格到愤怒的小鸟、 植物大战僵尸的代码吧 ！:-)
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "邀请已发送"
     added_teacher: "添加%{name}为你的老师"
@@ -190,8 +200,6 @@
       blank_code: "请输入一节代码"
       cant_join_own_section: "对不起，你不能加入你自己的部分."
     mail:
-      invite_student:
-        subject: "加入 %{teacher_name} 老师的班级吧！"
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
   reports:
@@ -407,6 +415,7 @@
       28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
     announcement_go_beyond_button: "超越"
+    announcement_apply_now: Apply now
     announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
       看以前的公告。</a>"
     announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a
@@ -452,13 +461,14 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
-    section_code_not_entered: "请提供 current_section_code。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
     current_section_dne: "抱歉，章节%{current_section_code} 不存在。请输入不同的章节代码。"
-    students_not_yours: "您不能移动不属于您的章节的学生。"
-    stay_enrolled_not_entered: "请提供 stay_enrolled_in_current_section。"
     student_ids_not_entered: "请提供 student_ids。"
     student_not_found: "无法找到这一个或多个学生。"
     all_students_must_be_in_current_section: "所有的学生都必须注册到您的章节中。"
@@ -537,9 +547,7 @@
       weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
         with loading Web Lab on this browser. You may want to use a different browser
         until this is resolved. Sorry for the inconvenience.
-      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
-        Private Browsing mode. Please reload your project in normal mode. Sorry for
-        the inconvenience.
+      weblab_unsupported_locale_storage: "在私密浏览模式下使用 Web Lab可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。"
   slow_loading: "请再多等一会儿..."
   try_reloading: "请重新刷新页面"
   next_stage: "完成 ！继续下一个阶段"
@@ -634,9 +642,9 @@
     support: "获取帮助"
     support_url: "//support.code.org"
     help_resources: "帮助和资源"
-    help_support: Help and Support
-    documentation: Documentation
-    tutorials: Tutorials
+    help_support: "帮助与支持"
+    documentation: "使用文档"
+    tutorials: "使用教程"
   multi:
     wrong_title: "不正确的答案"
     wrong_body: "你已输入的答案不正确。请再试一次 ！"
@@ -848,8 +856,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
-    main_course: Main Course
-    extra_course_content: Extra Course Content
+    main_course: "主要课程"
+    extra_course_content: "额外的课程内容"
   external_links:
     disclaimer: "免责声明"
     leaving_domain: "你现在正在离开code.org，访问一个不由我们创建的站点。"

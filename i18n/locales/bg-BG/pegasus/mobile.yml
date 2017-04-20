@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "Автоматично генерирана"
   dashboard_students_reset_secret: "Смяна на тайната дума"
   dashboard_students_reset_password: "Възстанови парола"
-  dashboard_students_share_section: 'Споделете този код за раздел с вашите ученици:'
+  dashboard_students_share_section: "Споделете този код за раздел с вашите ученици:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Отпечатайте карти с информация за влизане в сайта на вашите ученици."
   dashboard_students_secret_picture_title: "Тайна картинка"
   dashboard_students_secret_picture: "Този раздел използва <b>картина</b> като начин за достъп.  Това означава, че всеки от вашите ученици има тайна картина, която използва вместо парола за влизане.  Учениците трябва да използват посочения уеб адрес за достъп."
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "Кажете на вашите ученици да си създат свои собствени акаунти и да се присъединят към вашият раздел "
   dashboard_students_no_email: "Ако учениците ви нямат свой имейл адрес, но искате да създадете акаунти за тях, променете начина на влизане в този раздел на <b>дума</b> или <b>картина</b>."
   dashboard_students_print_page: "Печат на тази страница"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL АДРЕС"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> Щракнете тук</a> за нашата декларация за поверителност, която може да се сподели или да се отпечата за вашите ученици."
   dashboard_curriculum_k5_title: "K-5 ресурси за учителя"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Раздел 1: Интернет'
   csp2_name: Част 1 - Дигитална информация
   csp3_name: 'Unit 3: Algorithms and Programming'

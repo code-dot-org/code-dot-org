@@ -87,6 +87,8 @@
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} sinh viên đã đăng ký."
     teacher_count: "%{count} giáo viên đã đăng ký."
@@ -204,6 +206,14 @@
       máy tính bằng cách sử dụng ví dụ, hướng dẫn, trờ chơi - giống trải nghiệm. Học
       lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, Angry Birds và Plants
       vs. Zombies! :-) \n\n%{name}\n"
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Gửi lời mời
     added_teacher: "%{name} được thêm như giáo viên của bạn"
@@ -218,8 +228,6 @@
       blank_code: Vui lòng nhập một phần mã
       cant_join_own_section: Xin lỗi, bạn không thể tham gia phần riêng của bạn.
     mail:
-      invite_student:
-        subject: Tham gia một lớp học với %{teacher_name} tại Code.org!
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
           là học viên của bạn.'
@@ -483,6 +491,7 @@
       khoa học máy tính.
     announcement_petition_button: Thêm tên của bạn
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Cập nhật những tính năng và cập nhật trên blog của giáo viên
       của chúng tôi.<a href='%{teacher_blog_url}' target='_blank'>Xem thông báo cũ.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -545,17 +554,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui
       lòng nhập một mã khác cho phần học.
-    section_code_not_entered: Please provide current_section_code.
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Vui lòng cung cấp student_ids.
     student_not_found: Không thể tìm thấy một hoặc vài sinh viên.
     all_students_must_be_in_current_section: All the students must currently be enrolled

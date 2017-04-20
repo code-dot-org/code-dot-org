@@ -19,7 +19,7 @@
     attributes:
       user:
         name: Nome para exibição
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: E-mail
         username: Nome de usuário
         password: Senha
@@ -90,6 +90,8 @@
     forgot_password: Esqueceu sua senha?
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} alunos já se registraram."
     teacher_count: "%{count} professores já se registraram."
@@ -169,7 +171,7 @@
   signin_form:
     title: Já tem uma conta? Entre
     login: E-mail
-    login_username: Email or Username
+    login_username: Nome utilizador ou e-mail
     password: Senha
     remember: Lembrar de mim
     submit: Entrar
@@ -209,6 +211,14 @@
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
@@ -223,8 +233,6 @@
       blank_code: Insira um código de seção
       cant_join_own_section: Desculpe, você não pode entrar em sua própria seção.
     mail:
-      invite_student:
-        subject: Entre na turma de %{teacher_name} na Code.org!
       student_disassociated:
         subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
   reports:
@@ -486,6 +494,7 @@
       ao Ensino médio.
     announcement_petition_button: Adicione seu nome
     announcement_go_beyond_button: Ir além
+    announcement_apply_now: Apply now
     announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
       blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
       últimas novidades.</a>
@@ -551,17 +560,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
-    section_code_not_entered: Forneça o current_section_code.
     section_code_cant_be_current_section: A seção atual não pode ser igual à nova
       seção.
     current_section_dne: A seção %{current_section_code} não existe. Insira outro
       código de seção.
-    students_not_yours: Não é possível mover alunos de uma seção que não pertence
-      a você.
-    stay_enrolled_not_entered: Forneça stay_enrolled_in_current_section.
     student_ids_not_entered: Forneça students_ids.
     student_not_found: Não foi possível encontrar um ou mais alunos.
     all_students_must_be_in_current_section: Todos os alunos devem estar inscritos
@@ -779,7 +788,7 @@
     support: Obter ajuda
     support_url: "//support.code.org"
     help_resources: Ajuda e recursos
-    help_support: Help and Support
+    help_support: Suporte
     documentation: Documentation
     tutorials: Tutorials
   multi:
