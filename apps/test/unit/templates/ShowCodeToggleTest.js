@@ -79,7 +79,7 @@ describe('ShowCodeToggle', () => {
   describe("when initially mounted", () => {
     beforeEach(() => {
       toggle = mount(
-        <ShowCodeToggle />
+        <ShowCodeToggle onToggle={sinon.spy()}/>
       );
     });
 
@@ -163,7 +163,7 @@ describe('ShowCodeToggle', () => {
     beforeEach(() => {
       studioApp().editCode = false;
       toggle = mount(
-        <ShowCodeToggle />
+        <ShowCodeToggle onToggle={sinon.spy()}/>
       );
     });
 
@@ -195,7 +195,7 @@ describe('ShowCodeToggle', () => {
     beforeEach(() => {
       studioApp().enableShowCode = false;
       toggle = mount(
-        <ShowCodeToggle />
+        <ShowCodeToggle onToggle={sinon.spy()}/>
       );
     });
 
@@ -216,7 +216,7 @@ describe('ShowCodeToggle', () => {
   describe("when studioApp() is initialized again", () => {
     beforeEach(() => {
       toggle = mount(
-        <ShowCodeToggle />
+        <ShowCodeToggle onToggle={sinon.spy()}/>
       );
       config.enableShowCode = false;
       studioApp().init(config);
