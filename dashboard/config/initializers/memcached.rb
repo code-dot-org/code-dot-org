@@ -5,7 +5,7 @@
 # end
 
 if CDO.memcached_hosts.present?
-  Rails::Application.config.cache_store =
+  Rails.application.config.cache_store =
     :mem_cache_store,
       CDO.memcached_hosts,
       {value_max_bytes: 64.megabytes}
