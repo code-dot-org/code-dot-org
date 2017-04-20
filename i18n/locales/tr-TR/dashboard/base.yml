@@ -79,6 +79,7 @@ tr:
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
     need_unlock: "Kilit açma talimatlarını almadınız mı?"
+    not_linked: "Üzgünüz, senin Code.org rapor için senin %{provider} bağlı değildir. Parolanızı yazarak oturum açmanız gerekir."
   signup_form:
     student_count: '%{count}öğrenciler çoktan giriş yaptı.'
     teacher_count: '%{count}öğrenciler zaten giriş yaptı.'
@@ -130,8 +131,8 @@ tr:
     school_name: 'Okulun Adı'
     school_zip: 'Okul alan kodu'
     school_address: 'Okulun Adresi'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_organization_name: 'Okul veya kuruluşun ismi'
+    school_organization_zip: 'Okul veya kuruluşun posta kodu'
   signin_form:
     title: 'Zaten bir hesabınız var mı? Oturum Aç'
     login: 'E-posta'
@@ -170,6 +171,14 @@ tr:
       %{link}
       Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
+  section:
+    your_section:
+      one: 'Bölüm:'
+      other: 'Bölümlerin:'
+    code_with_teacher: '%{teacher_name} ile %{section_code}'
+    confirm:
+      remove: 'Bu bölümü bırakmak istediğinden emin misin?'
+    remove: 'Bölümü kaldır'
   follower:
     invite_sent: 'Davetiye gönderildi'
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
@@ -183,8 +192,6 @@ tr:
       blank_code: "Lütfen bir bölge kodu girin"
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
     mail:
-      invite_student:
-        subject: "Code.org'ta %{teacher_name} ile bir sınıfa katıl!"
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
   reports:
@@ -383,25 +390,24 @@ tr:
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
     announcement_petition_button: "Adınızı Ekleyin"
     announcement_go_beyond_button: "Ötesine geçin"
+    announcement_apply_now: "Şimdi uygula"
     announcement_all: "Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>"
     announcement_hoc_launch: "180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde, ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini öğretmeye başlayabileceğini söyleyin."
     announcement_mc_launch: "En popüler eğitimlerimizden birinin şimdi devamı var! Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde sınıfınla birlikte yap."
     announcement_how_code_studio: "Bilgisayar Bilimlerini, sınıf içinde öğretmeye başlamak için herhangi bir deneyime ihtiyacın yok. Code.org sunar: müfredat, ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar.Tüm sınıf düzeyleri için &mdash; Nereden başlıyacağını merak ediyorsan<a href='%{video_download_url}'> Bu video</a> indir!"
     announcement_go_beyond: "Kod saatinin ötesine gidip  bilgisayar bilimi kavramlarını öğrenciler ile her hafta keşfedin. Code.org sunar: müfredat, ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar. Tüm düzeyler için &mdash; ve hepsi ücretsiz. :) Bilgisayar Bilimleri, sınıf içinde öğretim başlamak için herhangi bir deneyime ihtiyacın yok. <b>Sınıf için uygun olan adım.</b>"
     announcement_teacher_recruitment: "Sizin öğretmenler bilişim hareketinin liderisiniz. Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak ve profesyonel öğretme için uygulayabilirsiniz."
-    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_teacher_recruitment2: "Sizin öğretmenler bilişim hareketinin liderisiniz. Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak ve profesyonel öğretme için uygulayabilirsiniz."
+    announcement_csf_pilot: "<strong>İlköğretim Okulu öğretmenleri:</strong> CS Temelleri kurslarımız güncelleştirme bir parçası olun! Güncellenme Zamanı bir CS Temelleri müfredat kış ve 2017 yılının baharında sırasında pilot için öğretmen arıyoruz. Biz bu güncelleştirmeleri Ağustos 2017 yılında canlı gitmeden önce görüşlerinizi duymak arzu ediyoruz."
     announcement_student_privacy: "Code.org biz öğrencinin gizliliğini çok ciddiye alıyoruz. Senin öğrencilerin gizliliğini korumak için biz tam adlarınnı görüntülemesini önlemek için bölümün giriş sayfasına bir değişiklik yaptık. Bu güncelleştirme gizlilik seviyesini arttırsa bile <i>öğrencilerin tam adlarını kullanmamasını teşvik ediyoruz."
     announcement_apcsp_recruitment: "<strong>Bilgisayar bilim ilkeleri.öğretmenler:</strong> Öğrencilerin Bilgisayar Bilimleri İlkeleri sınavına bu yıl öğrencilerinizi teşvik edin. Code.org'ın sonraki viral özellikli video. 10-20 saniye arası video göndermeleri için öğrencileri davet ediyoruz. Instagram veya Facebook üzerinde video klip vr \"Ben #APCSP çünkü sınava gireceğim...\" diye paylaşm yapın. Code.org dan swag kazanın!"
-    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
-    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_apcsp_recruitment2: "Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek her CS ilkeleri öğrenci teşvik ve <a href='%{gift_url}' target='_blank'> bir hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href='%{challenge_url}' target='_blank'> #APCSP video challenge</a> ülke genelinde eş teşvik edebilir."
+    announcement_apcsp_recruitment3: "Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek her CS ilkeleri öğrenci teşvik ve n <a href='%{gift_url}' target='_blank'>a  bir hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href='%{video_url}' target='_blank'> P video challenge</a> ülke genelinde eş teşvik edebilir."
+    announcement_csp_deadline: "Lise öğretmenleri için son çağrı! Bilgisayar bilimi ile okulunuzda öncülük et ve eğrenme programlarımıza katıl. Hiçbir ücret ödemeden yüksek kaliteli profesyonel eğitim al. 14 Nisan da başvurular kapanıyor."
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
-    section_code_not_entered: "Lütfen current_section_code giriniz."
     section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."
     current_section_dne: "Üzgünüm, ama %{current_section_code} yok. Lütfen başka bir bölüm kodu girin."
-    students_not_yours: "Öğrencileri size ait olmayan bir bölüme taşıyamazsınız."
-    stay_enrolled_not_entered: "Lütfen stay_enrolled_in_current_section girin."
     student_ids_not_entered: "Lütfen students_ids girin."
     student_not_found: "Öğrenci ve öğretmen bulunamadı."
     all_students_must_be_in_current_section: "Bütün öğrenciler şu anda sınıfınıza kayıtlı olmalıdır."
@@ -458,10 +464,10 @@ tr:
     upgrade:
       unsupported_message: "Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir."
       link: "Daha fazlasını öğren"
-      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
-      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
+      applab_unsupported_tablet: "App Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
+      gamelab_unsupported_tablet: "Game Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
+      weblab_unsupported_browser: "Ne yazık ki, şu anda Web Lab bu tarayıcı yükleme ile ilgili sorunlar yaşıyorsanız. Bu çözülene kadar farklı bir tarayıcı kullanmak isteyebilirsiniz. Rahatsız ettiğim için özür dilerim."
+      weblab_unsupported_locale_storage: "Web Lab Özel tarama modunda kullanma sorunlarla karşılaşabilirsiniz. Lütfen projenize normal modda yeniden yükleyin. Rahatsız ettiğim için özür dilerim."
   slow_loading: 'Bu normalden uzun sürüyor...'
   try_reloading: 'Sayfayı yeniden yüklemeyi deneyin'
   next_stage: 'Bitti! Bir sonraki aşamaya geç'

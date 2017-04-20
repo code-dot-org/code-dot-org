@@ -239,15 +239,14 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "{}", session.inspect
   end
 
-  test 'index shows alert for unconfirmed email for teachers' do
+  test 'index does not show alert for unconfirmed email for teachers' do
     user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :index
 
     assert_response :success
-    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert .btn[value="Resend confirmation instructions"]'
+    assert_select '.alert', false
   end
 
   test 'index does not show alert for unconfirmed email for teachers if already confirmed' do

@@ -9,22 +9,19 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 
 ami = commit[0..4]
 unless dry_run
-  update_certs.call unless cdn_enabled
   update_cookbooks.call
   update_bootstrap_script.call
 end
 
 frontends = %i(production adhoc).include?(rack_env)
 require 'cdo/cron'
+image_id = IMAGE_ID
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
 <% if frontends -%>
-  IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
-  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   # Signal when the instance is fully provisioned and ready for AMI creation.
   AMICreate<%=ami%>:
     Type: AWS::CloudFormation::WaitCondition
@@ -37,20 +34,20 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
-      SecurityGroupIds: [!GetAtt [VPC, FrontendSecurityGroup]]
-      SubnetId: !GetAtt [VPC, Subnet<%=azs.first%>]
-      KeyName: <%=ssh_key_name%>
+      InstanceType: <%=INSTANCE_TYPE%>
+      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
+      SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
+        Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: "AMICreate#{ami}",
-          node_name: 'ami-${INSTANCE_ID}',
+          node_name: 'ami-$INSTANCE_ID',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
           ],
@@ -81,7 +78,7 @@ Resources:
     Properties:
       LoadBalancerName: <%=stack_name%>
       CrossZone: true
-      SecurityGroups: [!GetAtt [VPC, ELBSecurityGroup]]
+      SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
       Subnets: <%= public_subnets.to_json %>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
@@ -139,20 +136,20 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
-      SecurityGroups: [!GetAtt [VPC, FrontendSecurityGroup]]
-      KeyName: <%=ssh_key_name%>
+      InstanceType: <%=INSTANCE_TYPE%>
+      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_frontend.sh.erb',
+        Fn::Base64: <%=file('bootstrap_frontend.sh.erb',
           resource_id: 'Frontends',
           hook: 'WebServerHookNew',
-          node_name: 'fe-${INSTANCE_ID}',
+          node_name: 'fe-$INSTANCE_ID',
           commit: commit)%>
 # Create associated resources for old and new Auto Scaling Groups.
 # TODO remove old resources after migration complete.
@@ -248,7 +245,7 @@ Resources:
       DefaultResult: ABANDON
       HeartbeatTimeout: 3000 # seconds = 50 minutes
       NotificationTargetARN: !Ref WebServerHookTopicNew
-      RoleARN: !GetAtt [IAM, LifecycleHookRoleARN]
+      RoleARN: !ImportValue IAM-LifecycleHookRoleARN
   WebServerHookEventRule:
     Type: AWS::Events::Rule
     Properties:
@@ -367,7 +364,7 @@ Resources:
       NumCacheClusters: 3
       Engine: redis
       CacheNodeType: cache.r3.large
-      SecurityGroupIds: [!GetAtt [VPC, RedisSecurityGroup]]
+      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
 <% end -%>
   ActivitiesQueue:
@@ -393,9 +390,9 @@ Resources:
         Timeout: PT60M
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
-      KeyName: <%=ssh_key_name%>
+      InstanceType: <%=INSTANCE_TYPE%>
+      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      KeyName: <%=SSH_KEY_NAME%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -403,12 +400,13 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
+        Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: 'Daemon',
-          node_name: '${ENVIRONMENT}-daemon',
+          node_name: '$ENVIRONMENT-daemon',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
+          commit: nil, # track branch
           shutdown: false,
           daemon: true
         )%>
@@ -416,9 +414,9 @@ Resources:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
           GroupSet:
-            - !GetAtt [VPC, FrontendSecurityGroup]
-            - !GetAtt [VPC, GatewaySecurityGroup]
-          SubnetId: !GetAtt [VPC, PublicSubnet<%=azs.first%>]
+            - !ImportValue VPC-FrontendSecurityGroup
+            - !ImportValue VPC-GatewaySecurityGroup
+          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
 <% end -%>
 Outputs:
   DashboardURL:

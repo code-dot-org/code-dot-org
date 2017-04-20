@@ -14,11 +14,10 @@
       "fill": null,
       "randomNumber_min_max": null
     },
-    "show_d_pad": "true",
+    "show_d_pad": "false",
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
+    "contained_level_names": [
+      "CSD U3 Draw Loop Plugged predict 1 embed"
     ],
     "embed": "false",
     "instructions_important": "false",
@@ -42,7 +41,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
-    "free_play": "false",
+    "free_play": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",

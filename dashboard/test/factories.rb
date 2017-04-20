@@ -40,11 +40,6 @@ FactoryGirl.define do
     user_type User::TYPE_STUDENT
     confirmed_at Time.now
 
-    # Child of :user factory, since it's in the `factory :user` block
-    factory :admin do
-      admin true
-    end
-
     factory :levelbuilder do
       after(:create) do |levelbuilder|
         levelbuilder.permission = UserPermission::LEVELBUILDER
@@ -56,7 +51,7 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       admin false
-      factory :admin_teacher do
+      factory :admin do
         admin true
       end
       factory :terms_of_service_teacher do
@@ -95,7 +90,7 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
+          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
           evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
@@ -109,7 +104,6 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-      admin false
     end
 
     factory :young_student do
@@ -577,6 +571,8 @@ FactoryGirl.define do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
       num_enrollments 0
+      enrolled_and_attending_users 0
+      enrolled_unattending_users 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
@@ -585,6 +581,17 @@ FactoryGirl.define do
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
+      end
+      evaluator.enrolled_and_attending_users.times do
+        teacher = create :teacher
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.sessions.each do |session|
+          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
+        end
+      end
+      evaluator.enrolled_unattending_users.times do
+        teacher = create :teacher
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
   end
@@ -618,6 +625,7 @@ FactoryGirl.define do
       user nil
       association :school, factory: :public_school, strategy: :build
       association :school_district, strategy: :build
+      course 'csd'
     end
 
     initialize_with do
@@ -632,7 +640,7 @@ FactoryGirl.define do
         principalFirstName: 'Minerva',
         principalLastName: 'McGonagall',
         principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: 'csd',
+        selectedCourse: course,
         phoneNumber: '555-555-5555',
         gradesAtSchool: [10],
         genderIdentity: 'Male',
@@ -653,6 +661,11 @@ FactoryGirl.define do
         whatTeachingSteps: 'learn and practice'
       }.stringify_keys
     end
+  end
+
+  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
+    start_date {Date.today}
+    fixed_payment 50
   end
 
   factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
@@ -812,6 +825,12 @@ FactoryGirl.define do
     association :school_info, factory: :school_info_without_country
     school 'Example School'
     code {SecureRandom.hex(10)}
+
+    trait :from_user do
+      user
+      full_name {user.name} # sets first_name and last_name
+      email {user.email}
+    end
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -834,6 +853,17 @@ FactoryGirl.define do
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
     association :facilitator
     course Pd::Workshop::COURSES.first
+  end
+
+  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
+    association :enrollment, factory: :pd_enrollment
+    association :user, factory: :teacher
+    street '1501 4th Ave'
+    apartment_or_suite 'Suite 900'
+    city 'Seattle'
+    state 'WA'
+    add_attribute :zip_code, '98101'
+    phone_number '555-111-2222'
   end
 
   factory :school_district do

@@ -4,13 +4,14 @@ import SoundCategory from './SoundCategory';
 import * as color from "../../util/color";
 
 const SOUND_CATEGORIES = {
+  category_animals: 'Animals',
+  category_background: 'Background',
+  category_board_games: 'Board games',
   category_digital: 'Digital',
-  category_gameplay: 'Game play',
-  category_jingles: 'Jingles',
   category_female_voiceover: 'Female voiceovers',
+  category_instrumental: 'Instrumental',
   category_male_voiceover: 'Male voiceovers',
   category_objects: 'Objects',
-  category_ui: 'User interfaces',
   category_all: 'All'
 };
 

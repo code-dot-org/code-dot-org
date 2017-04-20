@@ -47,6 +47,8 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
+import {TestResults} from '../constants';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -219,7 +221,7 @@ Artist.prototype.init = function (config) {
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
   ReactDOM.render(
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={this.studioApp_.init.bind(this.studioApp_, config)}
@@ -736,7 +738,7 @@ Artist.prototype.handleExecutionError = function (err, lineNumber) {
   this.executionError = { err: err, lineNumber: lineNumber };
 
   if (err instanceof SyntaxError) {
-    this.testResults = this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+    this.testResults = TestResults.SYNTAX_ERROR_FAIL;
   }
 
   this.finishExecution_();
@@ -1437,19 +1439,19 @@ Artist.prototype.checkAnswer = function () {
   if (level.isK1 && !levelComplete && !this.studioApp_.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
-    this.testResults = this.studioApp_.TestResults.APP_SPECIFIC_ERROR;
+    this.testResults = TestResults.APP_SPECIFIC_ERROR;
     this.message = turtleMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      this.testResults === this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.testResults = this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL;
+      this.testResults === TestResults.TOO_MANY_BLOCKS_FAIL) {
+    this.testResults = TestResults.TOO_MANY_BLOCKS_FAIL;
 
   } else if ((this.testResults ===
-      this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (this.testResults === this.studioApp_.TestResults.ALL_PASS)) {
+      TestResults.TOO_MANY_BLOCKS_FAIL) ||
+      (this.testResults === TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
@@ -1457,7 +1459,7 @@ Artist.prototype.checkAnswer = function () {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') === -1) {
         this.testResults =
-            this.studioApp_.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+            TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
         this.message = commonMsg.tooMuchWork();
       }
     }
@@ -1476,13 +1478,13 @@ Artist.prototype.checkAnswer = function () {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+    this.testResults = TestResults.FREE_PLAY;
   }
 
   // Play sound
   this.studioApp_.stopLoopingAudio('start');
-  if (this.testResults === this.studioApp_.TestResults.FREE_PLAY ||
-      this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (this.testResults === TestResults.FREE_PLAY ||
+      this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
@@ -1510,7 +1512,7 @@ Artist.prototype.checkAnswer = function () {
     var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
     // Get the canvas data for feedback.
-    if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
+    if (this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
       !isFrozen && (level.freePlay || level.impressive)) {
       reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
     }

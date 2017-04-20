@@ -1,6 +1,6 @@
 ---
 from: 'Sarah Fairweather (Code.org) <teacher@code.org>'  
-subject: "Congratulations from Code.org! Respond by April 21st"
+subject: "Congratulations from Code.org! Respond by May 5th"
 ---
 Hi <%= preferred_first_name_s %>,
 
@@ -28,7 +28,7 @@ As a reminder, to participate in the Professional Learning Program we ask that y
 
 * Share the good news with your school! Start talking with your administration, colleagues, students, and parents now about the course you will be teaching next year, and encourage a diverse group of students to enroll. Once you accept your space in the program, you will receive a welcome kit complete with recruitment tips and tools. In the meantime, please help yourself to these [videos and resources](https://code.org/educate/resources/videos).
 
-Your Regional Partner, <%= regional_partner_name_s %>, will share more information over the next few months about plans for your quarterly one-day workshops. In the meantime, please contact [teacher@code.org](mailto:teacher@code.org) with any additional questions. We look forward to hearing from you by April 21, 2017!
+Your Regional Partner, <%= regional_partner_name_s %>, will share more information over the next few months about plans for your quarterly one-day workshops. In the meantime, please contact [teacher@code.org](mailto:teacher@code.org) with any additional questions. We look forward to hearing from you by May 5, 2017!
 
 Thank you,  
 Sarah Fairweather  

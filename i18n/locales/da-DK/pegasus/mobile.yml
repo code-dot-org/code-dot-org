@@ -665,7 +665,8 @@
   dashboard_students_auto_generated: "Auto genereret"
   dashboard_students_reset_secret: "Nulstil hemmeligt"
   dashboard_students_reset_password: "Nulstil adgangskode"
-  dashboard_students_share_section: 'Del dette holds loginside med dine elever:'
+  dashboard_students_share_section: "Del dette holds loginside med dine elever:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Udskrive kort med dine elever login-oplysninger."
   dashboard_students_secret_picture_title: "Hemmeligt billede"
   dashboard_students_secret_picture: "Dette afsnit bruger <b>billede</b> som dets hemmelige type.  Det betyder, at hver af dine elever har et hemmelig billede i stedet for en adgangskode til at logge på.  Eleverne skal bruge tegnet i webadressen angivet ovenfor til at logge på."
@@ -676,6 +677,7 @@
   dashboard_students_join_link: "Dine elever kan oprette deres egne konti og deltage i dit kursus på"
   dashboard_students_no_email: "Hvis dine elever har ikke mailadresser, eller du ønsker at oprette konti til dem, kan du ændre dette holds hemmelige <b>ord</b> eller <b>billede</b>."
   dashboard_students_print_page: "Udskriv denne side"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "Web-adresse"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> Klik her</a> for vores privatlivspolitik, der kan deles eller udskrives til dine elever."
   dashboard_curriculum_k5_title: "K-5 Ressourcer for Undervisere"
@@ -871,6 +873,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

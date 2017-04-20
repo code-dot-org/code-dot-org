@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Can you draw a house? Make it look just the way you like it!",
+    "instructions": "You can use a loop to draw many lines in a row.\r\n\r\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!",
     "instructions_important": "false",
     "is_k1": "true",
     "skip_instructions_popup": "false",

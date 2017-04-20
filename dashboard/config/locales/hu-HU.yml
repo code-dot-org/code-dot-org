@@ -89,6 +89,8 @@
     forgot_password: Elfelejtette jelszavát?
     need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} tanuló iratkozott már fel."
     teacher_count: "%{count} tanár iratkozott már fel."
@@ -138,32 +140,32 @@
     user_type_teacher: Tanár
     user_type_student: Diák
     field_is_required: szükséges
-    accept_terms: You must agree to create an account
+    accept_terms: El kell fogadnia, hogy létre hozzon egy fiókot
   school_info:
-    title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
+    title: Az iskolai információ (opcionális)
+    school_country: Iskola országa
+    select_school_type: Iskola típusa
     charter: Charter
-    private: Private
-    public: Public
+    private: Magán
+    public: Nyilvános
     homeschool: Homeschool
     after_school: After School
     other: Egyéb
-    state: State
-    district: District
-    other_district_not_listed: Other district not listed above
-    district_name: District Name
-    school: School
-    other_school_not_listed: Other school not listed above
-    school_name: School Name
-    school_zip: School Zip Code
-    school_address: School Address
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    state: "Állam"
+    district: Kerület
+    other_district_not_listed: Más, fel nem sorolt kerület
+    district_name: Kerület neve
+    school: Iskola
+    other_school_not_listed: Más, fel nem sorolt iskola
+    school_name: Iskola neve
+    school_zip: Iskola irányítószám
+    school_address: Iskola címe
+    school_organization_name: Iskola vagy szervezet neve
+    school_organization_zip: Iskola/szervezet irányítószáma
   signin_form:
     title: Már van felhasználói fiókod? Jelentkezz be
     login: E-mail cím vagy felhasználónév
-    login_username: Email or Username
+    login_username: E-mail cím vagy felhasználónév
     password: Jelszó
     remember: Emlékezz rám
     submit: Bejelentkezés
@@ -179,13 +181,13 @@
     login: Bejelentkezés
     invalid_login: "Érvénytelen bejelentkezés, kérjük próbáld meg újra"
     pair_programming: Van egy társam a számítógépnél
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: Tudjon meg többet, hogy miért nem jelenik meg a teljes neve <a
+      href='%{student_privacy_blog}' target='_blank'> itt</a>.
   password:
     reset_form:
       title: Elfelejtette jelszavát?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Adja meg e-mail címét alul, és elküldjük Önnek jelszó visszaállítási
+        utasításokat.
       email: E-mail cím
       submit: Elküldés
     change_form:
@@ -200,6 +202,14 @@
       látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított,
       játékos módon tanítják. Tanulj programozni olyan tanároktól, mint Bill Gates,
       Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}\n"
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Meghívó elküldve
     added_teacher: "%{name} hozzáadva mint a tanárod"
@@ -214,8 +224,6 @@
       blank_code: Add meg a szakasz kódját
       cant_join_own_section: Sajnáljuk, de nem csatlakozhatsz a saját szakaszodhoz.
     mail:
-      invite_student:
-        subject: Csatlakozz %{teacher_name} osztályához a Code.org-on!
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
   reports:
@@ -325,7 +333,7 @@
       prizes: Díjak
       logout: Kijelentkezés
       signin: Bejelentkezés
-      signup: Regisztrálás
+      signup: Hozzon létre egy fiókot
       already_registered: Már regisztráltál?
       pair_programming: Páros programozás
       team: Csapat
@@ -469,6 +477,7 @@
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add meg a nevedet
     announcement_go_beyond_button: Menj tovább
+    announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -531,17 +540,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled

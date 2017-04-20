@@ -1685,6 +1685,9 @@ en:
           description_short: Culminating
           stage:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
+            CSP Student Post Survey Staging: CSP Student Post Survey Staging
+            CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
+            Participate in a longitudinal study!: Participate in a longitudinal study!
           description_audience: ''
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
@@ -2822,6 +2825,21 @@ en:
             Sprite Movement: Sprite Movement
             The Draw Loop: The Draw Loop
             The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Conditionals
+            Taking Input: Taking Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games
@@ -2848,3 +2866,102 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd3-old:
+          stage:
+            Drawing in Game Lab: Drawing in Game Lab
+            Draw Loop and Randomization: Draw Loop and Randomization
+            Variables Unplugged: Variables Unplugged
+            Variables and Animation: Variables and Animation
+            Sprites and Properties: Sprites and Properties
+            Sprites and Images: Sprites and Images
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals and Keyboard Input: Conditionals and Keyboard Input
+            Complex Conditionals: Complex Conditionals
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
+          title: CSD Unit 3 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 3
+          description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3 - this original draft will remain available until July 1, 2017.
+        csd1-old:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Representing Information: Representing Information
+            Processing with Bits: Processing with Bits
+            Human vs Computer Processing: Human vs Computer Processing
+            Processing with Apps: Processing with Apps
+            'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
+          title: CSD Unit 1 (DEPRECATED)
+          description_audience: ''
+          description_short: 2016/2017 Draft of CSD Unit 1
+          description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1 and will only remain available until July 1, 2017.
+        csd2-draft:
+          stage:
+            Text on the Web: Text on the Web
+            Digital Footprint: Digital Footprint
+            Images in HTML: Images in HTML
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd1-draft:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Inputs and Outputs: Inputs and Outputs
+            Processing: Processing
+            Storage: Storage
+            Apps and Problem Solving: Apps and Problem Solving
+            Project - Propose an App: Project - Propose an App
+            Input and Output: Input and Output
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-chapters:
+          stage:
+            Programming for Entertainment: Programming for Entertainment
+            Plotting Shapes: Plotting Shapes
+            Drawing in Game Lab: Drawing in Game Lab
+            Shapes and Randomness: Shapes and Randomness
+            Variables: Variables
+            Sprites: Sprites
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Sprite Movement: Sprite Movement
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Conditionals
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
+            'Chapter 1: Images and Animation': 'Chapter 1: Images and Animation'
+            'null': 'null'
+            temp: temp
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        coursef-ramp:
+          stage:
+            'Algorithms: Tangrams': 'Algorithms: Tangrams'
+            Introduction: Introduction

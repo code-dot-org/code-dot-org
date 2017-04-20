@@ -17,8 +17,10 @@ import {Provider} from 'react-redux';
 import AppView from '../../templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
+import {getStore} from '../../redux';
+import Sounds from '../../Sounds';
 
-const TestResults = studioApp().TestResults;
+import {TestResults} from '../../constants';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -220,7 +222,7 @@ Craft.init = function (config) {
   }
 
   Craft.musicController = new MusicController(
-      studioApp().cdoSounds,
+      Sounds.getSingleton(),
       function (filename) {
         return config.skin.assetUrl(`music/${filename}`);
       },
@@ -230,13 +232,11 @@ Craft.init = function (config) {
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function () {
-    if (studioApp().cdoSounds) {
-      studioApp().cdoSounds.whenAudioUnlocked(function () {
-        var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-        var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-        Craft.musicController.play(songToPlayFirst);
-      });
-    }
+    Sounds.getSingleton().whenAudioUnlocked(function () {
+      var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
+      Craft.musicController.play(songToPlayFirst);
+    });
   };
 
   const character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
@@ -369,7 +369,7 @@ Craft.init = function (config) {
   });
 
   ReactDOM.render(
-    <Provider store={studioApp().reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={
           <CraftVisualizationColumn showScore={!!config.level.useScore}/>

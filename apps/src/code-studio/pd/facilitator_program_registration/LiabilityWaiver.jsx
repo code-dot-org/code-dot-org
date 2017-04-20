@@ -1,8 +1,8 @@
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
-import ProgramRegistrationComponent from './ProgramRegistrationComponent';
+import FormComponent from '../form_components/FormComponent';
 
-export default class LiabilityWaiver extends ProgramRegistrationComponent {
+export default class LiabilityWaiver extends FormComponent {
   render() {
     return (
       <FormGroup>

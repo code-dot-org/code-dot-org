@@ -27,10 +27,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-
-- **Events (Spring/Summer)**
-	- [Event Manager, Professional Learning Team (Contract)](#events)
-	- [Events Intern, Professional Learning Team](#intern)
+- **Finance & Administration**
+	 - [Executive Assistant (temporary)](#ea)
 - **Marketing**
 	- [Director of Marketing & Communications](#director)
 	- [Marketing Associate](#associate)
@@ -40,75 +38,42 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Product Designer](#design)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
-- **Internships**
-	- [Events Intern, Professional Learning Team](#intern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="events"href="#events">Events Manager, Professional Learning Team (Seattle, WA; looking to fill contract role immediately)</a>
 
-**Scope of Work:**
+## <a name="ea"href="#ea">Executive Assistant (temporary; Seattle, WA)</a>
 
-Code.org is looking for a Event Coordinator to manage logistics for Code.org’s Professional Learning & Community (PLC) team’s 2017 summer conference-style events. The event manager will work collaboratively with a team of program managers and coordinators. We are looking for someone able to start immediately; this is a full-time, contract role through mid-August. 
+**Job Summary:** 
 
-The PLC team is responsible for the success of Code.org professional development for teachers. This summer, Code.org is hosting three 8-day summer professional development conferences for middle and high school computer science teachers and facilitators from across the country. Venues are already booked in Houston, Phoenix, and Philadelphia; attendance at each of the three events will be 500+ participants. These conferences are intensive, hands-on, in-person workshops providing foundational experiences with computer science and the Code.org suite of tools. Participants will explore Code.org’s curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum.
+Code.org is looking for an experienced Executive Assistant to join our administrative team. This is a full-time, short-term assignment, to cover the maternity leave of one of our staff members.  
 
-The event manager will: 
+We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team for the next 3-4 months (tentative start date: May 2). You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Successful candidates will have prior experience in a fast-paced or start up environment. 
 
-- Manage all event logistics (travel, accommodations, catering, and swag/supplies); act as primary logistics point-of-contact 
-- Provide on-site coordination and support for all events 
-- Draft communications to stakeholders and respond to requests for information
-- Update and managing event attendee lists and track numbers and teacher activity across programs
-- Provide excellent internal and external customer service and support 
+The primary responsibility of the person filling this role will be supporting three C-level Leadership Team members in day-to-day administrative tasks. 
 
-**Experience Required:**
+Typical duties will include: 
 
-We are looking for a self-starter who can hit the ground running; you should be skilled in successfully managing large conference-style events, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented and tech-savvy. Proficiency with Google Apps (Docs, Sheets, Slides, Forms) is required. You should be flexible and willing to work in a fast-paced, start-up environment. 
+- Managing individual Leadership Team member’s calendars
+- Coordinating travel and submitting expense reports for LT members  
+- Assisting in event planning and order catering, as needed
+- Other duties, as assigned 
 
+**Experience and Qualifications**
 
-Additional requirements:
+The ideal candidate has the following qualifications:
 
-- Proven experience as an events planner or organizer 
-- Excellent time management and communication skills
-- Ability to submit references or referrals from previous clients 
-- Ability and willingness to travel for all three events: June 16-25, July 14-23, and July 28-August 6 
+- 2-4 years experience in supporting C-level executives 
+- Excellent written and verbal communications skills 
+- Proficiency using Google Apps for email and calendaring
+- Proactive problem solver with strong attention to detail
+- Experience learning and using current tech tools
 
-**To Apply:**
+To apply, please email cover letter and resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-If you are interested please submit resume or application materials to <a href="mailto:megan@code.org">megan@code.org</a>. Position is open immediately. Applications must be received by COB Wednesday, April 12th, 2017.  
-
-## <a name="intern"href="#intern">Events Intern, Professional Learning Team (Seattle, WA)</a>
-
-**Internship Summary:** 
-
-Code.org is looking for an Events Intern to work with and support Code.org’s professional learning team. Our Professional Learning and Community (PLC) team is responsible for the success of Code.org professional development across the U.S. This is a spring/summer internship, part-time, approximately 20-30 hours per week. 
-
-Intern’s responsibilities would include:
-
-- Provide planning and on-site event support    
-- Formatting, printing and organizing materials, packing and mailing supplies, proofreading and checking information (rooming lists, flight information, attendee lists and program tracks), and more. 
-- Utilizing our customer service system to respond to events-related as well as professional development questions from teachers and facilitators in a timely manner.
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate.
-- Responding to requests for information, distributing materials externally.
-- Special projects (enter, clean, or analyze simple data, prepare documentation, develop templates, etc.)
-- Opportunity to travel to and support up to three nine-day events this summer
-
-**Experience and Qualifications:**
-
-Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-- 2 years of undergraduate studies preferred (no Computer Science background necessary) 
-- 1 year of work experience preferred 
-- Experience with Google Sheets and suite of products
-- Ability to work legally in the United States
-- Ability to and willingness to travel to support events in the United States, if needed
-
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
- 
 
 ## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
 **Job Summary:**

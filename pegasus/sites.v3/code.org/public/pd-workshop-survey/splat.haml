@@ -31,20 +31,10 @@ title: "Professional Development Workshop Survey"
   course = workshop[:course]
   subject = workshop[:subject]
 
-  mimeo_url = nil
-  if course == 'CS Fundamentals'
-    mimeo_url = CDO.studio_url "pd/mimeo/#{enrollment_code}"
-  end
-
   def local_view(name, options = {})
     options[:form] = PdWorkshopSurvey
     view "pd_survey_controls/#{name.to_s}", options
   end
-
-  # Temporarily, don't use Mimeo SSO redirect.
-  # TODO: Once we're satisfied with the Mimeo SSO feature, remove the below line and the following javascript,
-  #       and address the related TODO in pd-workshop-survey.js
-  mimeo_url = nil
 
   facilitator_specific_questions = {
     sourceName: 'who_facilitated_ss[]',
@@ -107,13 +97,8 @@ title: "Professional Development Workshop Survey"
 %script{type: "text/javascript", src: minifiable_asset_path('js/pd-workshop-survey/splat.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
-- if previous_response
-  %h1 Thank you
-  %h3 You have already completed this survey.
-
-- else
-
-  %form#pd-workshop-survey-form{role: 'form'}
+%div
+  %form#pd-workshop-survey-form{role: 'form', style: previous_response ? 'display: none;' : ''}
     %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
     %input{name: 'email_s', type: 'hidden', value: email}
     %input{name: 'name_s', type: 'hidden', value: name}
@@ -203,6 +188,9 @@ title: "Professional Development Workshop Survey"
         = local_view :single_select,
           name: 'how_motivating_s',
           label: 'During your workshop, how motivating were the activities that this program had you do?'
+
+      - facilitators.each do |name|
+        %input{name: 'facilitator_names_s[]', type: 'hidden', value: name}
 
       .form-group#facilitator-specific-questions
 
@@ -326,19 +314,26 @@ title: "Professional Development Workshop Survey"
       .form-group.submit-btn
         %button#btn-submit.btn.btn-primary{type: "submit"} Submit
 
-  #thanks{style: 'display: none;'}
-    %h1 Thank you for your submission
-    %h3 We appreciate your feedback.
+  #thanks{style: previous_response ? '' : 'display: none;'}
+    %h1 Thank you for your survey submission!
 
-- if mimeo_url
-  #materials-order{style: 'display: none;'}
-    %h1 Order Supplies
-    %p
-      Click below if you'd like to be connected with our partner Mimeo to order free materials for the unplugged
-      lessons in CS Fundamentals, or to check on an existing order (US attendees only).
-    %p
-      %a{href: mimeo_url}
-        %button#btn.btn-primary Order Supplies
+    - if course == 'CS Fundamentals'
+      - order_url = CDO.studio_url("/pd/workshop_materials/#{enrollment_code}", CDO.default_scheme)
 
-- if previous_response && mimeo_url
-  %script{type: 'text/javascript'}$('#materials-order').show();
+      %h2 Request your free course kit (US attendees only)
+
+      %p
+        As part of Code.org K-5 professional development programs, attendees are provided one free course kit
+        containing supplies for the unplugged lessons in Courses 1-4. If you’d like to request your free course kit,
+        click the button below. You will have to log in to your Code Studio account to complete your order.
+
+      %p
+        %a{href: order_url}
+          %button
+            Click here to log in and order your free course kit.
+
+      %h2
+        If you are not interested in requesting a course kit, you can close this window.
+
+    - else
+      %h3 We appreciate your feedback.

@@ -1,30 +1,26 @@
-import {getStore} from './redux';
-var utils = require('./utils');
-var _ = require('lodash');
-var requiredBlockUtils = require('./required_block_utils');
-var studioApp = require('./StudioApp').singleton;
-var authoredHintUtils = require('./authoredHintUtils');
+import {getStore, registerReducers} from './redux';
+import {wrapNumberValidatorsForLevelBuilder} from './utils';
+import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
+import {singleton as studioApp} from './StudioApp';
+import {generateAuthoredHints} from './authoredHintUtils';
+import {addReadyListener} from './dom';
+import * as blocksCommon from './blocksCommon';
+import * as commonReducers from './redux/commonReducers';
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioApp().loadBlocks, studioApp()),
-  arrangeBlockPosition: _.bind(studioApp().arrangeBlockPosition, studioApp()),
-  getDropletContents: function () {
-    return _.bind(studioApp().editor.getValue, studioApp().editor)();
-  },
-  getDroplet: function () {
-    return studioApp().editor;
-  },
+  loadBlocks: (...args) => studioApp().loadBlocks(...args),
+  arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
+  getDropletContents: () => studioApp().editor.getValue(),
+  getDroplet: () => studioApp().editor,
   // Set to true to ignore onBeforeUnload events
   ignoreOnBeforeUnload: false,
   getStore,
 };
 
-var addReadyListener = require('./dom').addReadyListener;
-var blocksCommon = require('./blocksCommon');
 
-module.exports = function (app, levels, options) {
+export default function (app, levels, options) {
 
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
@@ -44,23 +40,27 @@ module.exports = function (app, levels, options) {
     }
 
     if (options.level.levelBuilderRequiredBlocks) {
-      level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+      level.requiredBlocks = makeTestsFromBuilderRequiredBlocks(
           options.level.levelBuilderRequiredBlocks);
     }
     if (options.level.levelBuilderRecommendedBlocks) {
-      level.recommendedBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+      level.recommendedBlocks = makeTestsFromBuilderRequiredBlocks(
           options.level.levelBuilderRecommendedBlocks);
     }
 
     if (options.level.authoredHints) {
-      level.authoredHints = authoredHintUtils.generateAuthoredHints(options.level.authoredHints);
+      level.authoredHints = generateAuthoredHints(options.level.authoredHints);
     }
 
     options.level = level;
   }
 
+  registerReducers(commonReducers);
+  if (app.getAppReducers) {
+    registerReducers(app.getAppReducers());
+  }
+
   studioApp().configure(options);
-  studioApp().configureRedux(app.getAppReducers ? app.getAppReducers() : null);
 
   options.skin = options.skinsModule.load(studioApp().assetUrl, options.skinId);
 
@@ -72,7 +72,7 @@ module.exports = function (app, levels, options) {
     };
 
     if (options.level && options.level.edit_blocks) {
-      utils.wrapNumberValidatorsForLevelBuilder();
+      wrapNumberValidatorsForLevelBuilder();
     }
 
     blocksCommon.install(Blockly, blockInstallOptions);
@@ -101,4 +101,4 @@ module.exports = function (app, levels, options) {
   } else {
     addReadyListener(onReady);
   }
-};
+}

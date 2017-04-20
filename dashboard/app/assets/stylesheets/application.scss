@@ -29,9 +29,6 @@
  *= require course-blocks
  *= require details-polyfill
  *= require warning-banner
- *
- *= require selectize
- *= require selectize.default
  */
 
 @import "color";
@@ -294,7 +291,13 @@ img.video_thumbnail {
     display: inline-block;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 971px) {
+    .show_on_tablet {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 970px) {
     .hide_on_tablet {
       display: none;
     }
@@ -327,6 +330,10 @@ img.video_thumbnail {
       text-decoration: none;
       background-color: $orange;
     }
+  }
+
+  .button-signin {
+    text-decoration: none;
   }
 
   .project_updated_at {
@@ -1798,6 +1805,7 @@ a.download-video {
 .text-match,
 .free-response,
 .standalone-video,
+.curriculum-reference,
 .multi,
 .match {
   #markdown.teacher {

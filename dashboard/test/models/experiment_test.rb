@@ -99,5 +99,6 @@ end
 class CachedExperimentTest < ExperimentTest
   setup do
     Experiment.stubs(:should_cache?).returns true
+    Experiment.update_cache
   end
 end

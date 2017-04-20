@@ -4,6 +4,7 @@ submittable 'true'
 anonymous 'true'
 
 page
+text 'post-assessment survey heading1'
 level 'post-assessment survey q1'
 level 'post-assessment survey q2'
 level 'post-assessment survey q3'
@@ -14,6 +15,7 @@ level 'post-assessment survey q7'
 level 'post-assessment survey q8'
 
 page
+text 'post-assessment survey heading2'
 level 'post-assessment survey q9'
 level 'post-assessment survey q10'
 level 'post-assessment survey q11'
@@ -33,13 +35,19 @@ level 'post-assessment survey q24'
 level 'post-assessment survey q25'
 
 page
+text 'post-assessment survey heading3'
 level 'post-assessment survey q26'
 level 'post-assessment survey q27'
 level 'post-assessment survey q28'
 level 'post-assessment survey q29'
 level 'post-assessment survey q30'
 level 'post-assessment survey q31'
+level 'post-assessment survey q31-a'
 level 'post-assessment survey q32'
+
+page
+text 'post-assessment survey heading4'
 level 'post-assessment survey q34'
 level 'post-assessment survey q35'
 level 'post-assessment survey q36'
+level 'post-assessment survey q37'

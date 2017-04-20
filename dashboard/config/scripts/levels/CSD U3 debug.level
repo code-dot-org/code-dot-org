@@ -7,15 +7,33 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "rect": null,
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
       "fill": null,
-      "ellipse": null
+      "ellipse": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "rect(175, 175, 50,50);\r\nfill(\"orange\");\r\nellipse(150,150,50,50);\r\nellipse(200,150,50,50);\r\nfill(\"purple\");",
+    "start_blocks": "rect(175, 175);\r\nfill(\"orange\");\r\nellipse(150,150);\r\nellipse(200,150);\r\nfill(\"purple\");",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

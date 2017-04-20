@@ -4,9 +4,9 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 
-import ProgramRegistrationComponent from './ProgramRegistrationComponent';
+import FormComponent from '../form_components/FormComponent';
 
-export default class TravelInformation extends ProgramRegistrationComponent {
+export default class TravelInformation extends FormComponent {
   render() {
     return (
       <FormGroup>{/* Travel Information */}
@@ -20,6 +20,7 @@ export default class TravelInformation extends ProgramRegistrationComponent {
             type: "text",
             required: true
           })}
+          <p>We are unable to ship to PO boxes, so please share your physical street address.</p>
           {this.buildFieldGroup({
             name: "addressCity",
             type: "text",
@@ -116,9 +117,10 @@ export default class TravelInformation extends ProgramRegistrationComponent {
   }
 }
 
-TravelInformation.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+TravelInformation.propTypes = {
+  ...FormComponent.propTypes,
   teacherconLocation: React.PropTypes.string.isRequired,
-});
+};
 
 TravelInformation.associatedFields = [
   "addressStreet",

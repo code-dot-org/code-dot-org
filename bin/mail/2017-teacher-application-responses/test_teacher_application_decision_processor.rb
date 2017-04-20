@@ -131,7 +131,6 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_process_decisions_row_accept_partner
     partner_workshop = 'Code Partner: June 1 - 5, 2017'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csp', partner_workshop)
-
     @processor.expects(:lookup_workshop).with(partner_workshop).returns(
       {
         id: 1234,
@@ -282,6 +281,17 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     end
 
     assert_equal 'Missing regional partner name for application id: 1', e.message
+  end
+
+  def partner_override_name_is_applied_to_params
+    params = {
+      regional_partner_name_s: 'Share Fair Nation and Colorado Education Initiative'
+    }
+    result = @processor.process 'decision', @mock_teacher_application, params
+    assert_equal(
+      'mindSpark Learning (formerly Share Fair Nation) and Colorado Education Initiative',
+      result[:regional_partner_name_s]
+    )
   end
 
   private

@@ -20,7 +20,7 @@
     attributes:
       user:
         name: Nome a apresentar
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: E-mail
         username: Nome de utilizador
         password: Palavra-passe
@@ -91,13 +91,15 @@
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} alunos já criaram uma conta."
     teacher_count: "%{count} professores já criaram uma conta."
-    overview: Cadastre-se para uma conta para acompanhar o seu progresso ou gerenciar
-      a sua sala de aula. <a href="/"> você pode consultar as várias fases e quebra-cabeças</a>
-      sem uma conta, mas você precisará inscrever-se para salvar o seu progresso e
-      projetos.
+    overview: És um aluno? Cria uma conta para guardares o teu progresso. Podes <a
+      href="/">explorar as várias etapas dos nossos desafios</a> sem criares uma conta,
+      mas não poderás guardar o teu progresso nem os teus projetos.<br/><br/>É um
+      professor? Crie uma conta para gerir a sua sala de aula e os seus alunos.
     hoc_already_signed_up_heading: Começar sem se registar
     hoc_already_signed_up_content: Você inscreveu-se para ensinar uma hora de código!
       Você e seus alunos não precisam de entrar no estúdio de código para participar
@@ -129,14 +131,13 @@
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    student_terms: Concordo em ficar vinculado pelos <a href='http://code.org/tos'>
-      termos de serviço</a> Code.org. Se eu sou menor de 13 anos de idade, confirmo
-      ao enviar este formulário que eu tenho dos meus pais ou autorização do tutor
-      legal para usar os serviços de Code.org. <br/> <br/> Endereços de e-mail não
-      são armazenados num formulário que nos permita entrar em contato com os alunos.
-      Os alunos nunca irão receber e-mails de Code.org exceto para recuperação de
-      senha. Consulte nossa <a href='http://code.org/privacy'> política de privacidade</a>
-      para obter mais informações.
+    student_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
+      do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário,
+      que tenho autorização dos meus pais para usar os serviços do Code.org.<br/><br/>Os
+      endereços de e-mail não são armazenados, o que impede o Code.org de entrar em
+      contacto com os alunos, exceto quando for necessário repor palavras-passe de
+      contas do Code.org. Consulta a nossa <a href='http://code.org/privacy'>Política
+      de privacidade</a> para saberes mais.
     teacher_terms: Eu concordo em respeitar os termos de Code.org de serviço. Para
       obter mais informações sobre privacidade, consulte nossa <a href='http://code.org/privacy'>
       política de privacidade</a>.
@@ -171,7 +172,7 @@
   signin_form:
     title: Já tens uma conta? Inicia sessão
     login: E-mail
-    login_username: Email or Username
+    login_username: Nome utilizador ou e-mail
     password: Palavra-passe
     remember: Manter sessão iniciada
     submit: Iniciar sessão
@@ -212,6 +213,14 @@
       Os tutoriais são divertidos, intuitivos e ensinam os conceitos básicos da informática de forma muito simples. É como se fossem jogos. Aprende a programar com Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como teu professor"
@@ -226,8 +235,6 @@
       blank_code: Por favor, digita um código de turma
       cant_join_own_section: Não podes entrar na tua própria turma.
     mail:
-      invite_student:
-        subject: Junta-te a uma aula com %{teacher_name} em Code.org!
       student_disassociated:
         subject: 'Notificação de Code.org: %{student_name} deixou de ser seu aluno.'
   reports:
@@ -342,7 +349,7 @@
       prizes: Prémios
       logout: Terminar sessão
       signin: Iniciar sessão
-      signup: Crie uma conta
+      signup: Criar uma conta
       already_registered: Já criaste uma conta?
       pair_programming: Programação em duplas
       team: Equipa
@@ -486,6 +493,7 @@
       ciência de computador K-12.
     announcement_petition_button: Adicionar o teu nome
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Mantenha-se atualizado com novos recursos e atualizações em
       nosso blog de professor. <a href='%{teacher_blog_url}' target='_blank'> Ver
       passado anúncios.</a>
@@ -550,16 +558,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Desculpe, mas não existe secção %{new_section_code}. Por favor
       insira um código de seção diferente.
-    section_code_not_entered: Por favor forneça current_section_code.
     section_code_cant_be_current_section: A secção atual não pode ser a mesma que
       a nova seção.
     current_section_dne: Desculpe, mas não existe secção %{current_section_code}.
       Por favor insira um código de seção diferente.
-    students_not_yours: Você não pode mover os alunos de uma seção que não lhe pertença.
-    stay_enrolled_not_entered: Forneça por favor stay_enrolled_in_current_section.
     student_ids_not_entered: Por favor forneça student_ids.
     student_not_found: Um ou mais alunos não podem ser encontrados.
     all_students_must_be_in_current_section: Todos os alunos, actualmente, devem estar
@@ -777,7 +786,7 @@
     support: Obter ajuda
     support_url: "//support.code.org"
     help_resources: Ajuda e recursos
-    help_support: Help and Support
+    help_support: Suporte
     documentation: Documentation
     tutorials: Tutorials
   multi:

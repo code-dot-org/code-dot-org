@@ -33,6 +33,8 @@
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -45,23 +47,23 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
+            <block type="controls_repeat" movable="false">
               <title name="TIMES">5</title>
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_moveForward" movable="false">
                   <next>
-                    <block type="procedures_callnoreturn">
+                    <block type="procedures_callnoreturn" movable="false">
                       <mutation name="check and pick"/>
                       <next>
-                        <block type="maze_turn">
+                        <block type="maze_turn" movable="false">
                           <title name="DIR">turnLeft</title>
                           <next>
-                            <block type="maze_moveForward">
+                            <block type="maze_moveForward" movable="false">
                               <next>
-                                <block type="procedures_callnoreturn">
+                                <block type="procedures_callnoreturn" movable="false">
                                   <mutation name="check and pick"/>
                                   <next>
-                                    <block type="maze_turn">
+                                    <block type="maze_turn" movable="false">
                                       <title name="DIR">turnRight</title>
                                     </block>
                                   </next>
