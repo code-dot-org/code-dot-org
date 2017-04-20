@@ -8,7 +8,7 @@ var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
-var dropletUtils = require('./dropletUtils');
+import * as dropletUtils from './dropletUtils';
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
