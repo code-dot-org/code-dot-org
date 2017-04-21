@@ -31,10 +31,6 @@ npm-debug.log
 /apps/test/entry-tests.js
 /apps/test/interpreter/test-results-new*.json
 /apps/yarn-error.log
-/aws/.code-studio-built
-/aws/.code-studio-commit-built
-/aws/.shared-built
-/aws/.shared-commit-built
 /bin/cron/log
 /bin/cron/with_pg/Gemfile.lock
 /build-started
