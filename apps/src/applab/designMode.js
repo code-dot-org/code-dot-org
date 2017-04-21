@@ -163,14 +163,6 @@ function appendPx(input) {
 }
 
 /**
- * While in design mode, elements get wrapped in a ui-draggable container.
- * @returns {true} If element is currently wrapped
- */
-function isDraggableContainer(element) {
-  return $(element).hasClass('ui-draggable');
-}
-
-/**
  * Handle a change from our properties table.
  * @param element {Element}
  * @param name {string}
@@ -208,14 +200,14 @@ designMode.updateProperty = function (element, name, value) {
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = newLeft;
       }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.top = newTop;
       }
       break;
@@ -228,14 +220,14 @@ designMode.updateProperty = function (element, name, value) {
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
       }
       break;
@@ -335,7 +327,7 @@ designMode.updateProperty = function (element, name, value) {
         var resizeElement = function (width, height) {
           element.style.width = width + 'px';
           element.style.height = height + 'px';
-          if (isDraggableContainer(element.parentNode)) {
+          if (gridUtils.isDraggableContainer(element.parentNode)) {
             element.parentNode.style.width = width + 'px';
             element.parentNode.style.height = height + 'px';
           }
