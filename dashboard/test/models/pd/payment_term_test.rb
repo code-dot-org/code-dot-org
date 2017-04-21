@@ -85,7 +85,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     assert_nil term_1.end_date
 
     # this should not truncate term 1 or 2
-    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 2.month, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 2.month, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
 
     [term_1, term_2].map(&:reload)
     assert_empty [term_1, term_2].map(&:end_date).compact
@@ -102,9 +102,9 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   end
 
   test 'Truncate on all overlap cases' do
-    # Case 1 as detailed in payment_term.rb has been handled by the above test case
+    # Old ends new as detailed in payment_term.rb has been handled by the above test case
 
-    # Case 2
+    # Old contains new
     term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today)
     term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, end_date: 2.months.from_now.to_date)
 
@@ -116,7 +116,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
     [term_1, term_2, new_terms.first].map(&:destroy)
 
-    # Case 3
+    # New ends during old
     term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date)
     term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, end_date: 2.months.from_now.to_date)
 
@@ -125,10 +125,18 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
     [term_1, term_2].map(&:destroy)
 
-    # Case 4
+    # New contains old
     term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, end_date: 2.months.from_now.to_date)
     create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today)
 
     refute Pd::PaymentTerm.exists?(term_1.id)
+  end
+
+  test 'No overlap means no changes' do
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, end_date: 1.month.from_now)
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 2.months.from_now)
+
+    term_1.reload
+    assert_equal Date.today..1.month.from_now.to_date, term_1.date_range
   end
 end
