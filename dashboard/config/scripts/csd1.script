@@ -3,28 +3,28 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 
-stage 'Intro to Problem Solving', flex_category: 'Chapter 1: The Problem Solving Process'
+stage 'Intro to Problem Solving'
 named_level 'Unit 1 Lesson 1 Overview'
 
-stage 'The Problem Solving Process', flex_category: 'Chapter 1: The Problem Solving Process'
+stage 'The Problem Solving Process'
 named_level 'Unit 1 Lesson 2 Overview'
 
-stage 'Exploring Problem Solving', flex_category: 'Chapter 1: The Problem Solving Process'
+stage 'Exploring Problem Solving'
 named_level 'Unit 1 Lesson 3 Overview'
 
-stage 'What is a Computer?', flex_category: 'Chapter 2: Computers and Problem Solving'
+stage 'What is a Computer?'
 named_level 'Unit 1 Lesson 4 Overview'
 
-stage 'Input and Output', flex_category: 'Chapter 2: Computers and Problem Solving'
+stage 'Input and Output'
 named_level 'CSD U1 Lesson 5 Overview'
 
-stage 'Processing', flex_category: 'Chapter 2: Computers and Problem Solving'
+stage 'Processing'
 named_level 'CSD U1 Lesson 6 Overview'
 
-stage 'Storage', flex_category: 'Chapter 2: Computers and Problem Solving'
+stage 'Storage'
 named_level 'CSD U1 Lesson 7 Overview'
 
-stage 'Apps and Problem Solving', flex_category: 'Chapter 2: Computers and Problem Solving'
+stage 'Apps and Problem Solving'
 named_level 'CSD U1 Lesson 8 Overview'
 level 'CSD U1 Input Output Intro', progression: 'Input/Output Challenges'
 level 'CSD U1 Input Output C1', progression: 'Input/Output Challenges'
@@ -32,5 +32,5 @@ level 'CSD U1 Input Output C2', progression: 'Input/Output Challenges'
 level 'CSD U1 Input Output C3', progression: 'Input/Output Challenges'
 level 'CSD U1 Input Output C4', progression: 'Input/Output Challenges'
 
-stage 'Project - Propose an App', flex_category: 'Chapter 2: Computers and Problem Solving'
+stage 'Project - Propose an App'
 named_level 'CSD U1 Lesson 9 Overview'
