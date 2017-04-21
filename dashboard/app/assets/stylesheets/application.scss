@@ -2741,3 +2741,27 @@ code {
     }
   }
 }
+
+.info-box-teal {
+  border: 1px solid $teal;
+  height: 46px;
+  margin-bottom: 10px;
+  .info-box-left {
+    float: left;
+    background-color: $teal;
+    height: 42px;
+    padding-top: 4px;
+  }
+  .info-box-right {
+    .info-box-message {
+      font-weight: bold;
+      color: $teal;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    max-width: 400px;
+    float: left;
+    padding: 5px;
+  }
+}
