@@ -88,33 +88,30 @@ class Pd::PaymentTerm < ApplicationRecord
     )
 
     # Payment terms that conflict with the start date
-    new_term_range = start_date..(end_date || Date::Infinity.new)
+    date_range = start_date..(end_date || Date::Infinity.new)
     extant_payment_terms.each do |old_payment_term|
       old_term_range = old_payment_term.start_date..(old_payment_term.end_date || Date::Infinity.new)
 
       # Four possible overlaps, illustrated by this ascii art
-      # Case 1
+      # Old ends during now
       #  <---Old--->
       #       <---New--->
 
-      # Case 2
+      # Old contains new
       #  <---Old------------>
       #       <---New--->
 
-      # Case 3
+      # New ends during old
       #       <---Old--->
       #  <---New--->
 
-      # Case 4
+      # New contains old
       #      <---Old--->
       #  <----------New--->
-      next unless new_term_range.overlaps?(old_term_range)
+      next unless date_range.overlaps?(old_term_range)
       if old_payment_term.start_date < start_date
-        if end_date.nil? || (old_payment_term.end_date && old_payment_term.end_date < end_date)
-          # Case 1
-          old_payment_term.update(end_date: start_date)
-        else
-          # Case 2
+        unless end_date.nil? || (old_payment_term.end_date && old_payment_term.end_date < end_date)
+          # Old contains new means we have to create a new payment term
           Pd::PaymentTerm.create!(
             start_date: end_date,
             end_date: old_payment_term.end_date,
@@ -123,14 +120,16 @@ class Pd::PaymentTerm < ApplicationRecord
             subject: subject,
             properties: old_payment_term.properties
           )
-          old_payment_term.update(end_date: start_date)
         end
+        # in both old ends during new and old contains new, update
+        # the old payment term
+        old_payment_term.update!(end_date: start_date)
       else
         if end_date && end_date < (old_payment_term.end_date || Date::Infinity.new)
-          # case 3
+          # New ends during old, move the old start date up
           old_payment_term.update(start_date: end_date)
         else
-          # case 4
+          # New contains old - no need for the old term
           old_payment_term.destroy
         end
       end
