@@ -54,7 +54,7 @@ import {
 } from '../containedLevels';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
-import {captureScreenshot} from './studioThumbnail';
+import {captureThumbnailFromSvg} from '../util/thumbnail';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -1021,18 +1021,15 @@ Studio.callApiCode = function (name, func) {
   Studio.executeQueue(name);
 };
 
-// Take the screenshot almost immediately, hopefully catching the
-// title screen and any characters in their initial positions.
-const CAPTURE_TICK_COUNT = 20;
-
 Studio.onTick = function () {
   Studio.tickCount++;
   var i;
 
   Studio.clearDebugElements();
 
-  if (Studio.tickCount === CAPTURE_TICK_COUNT) {
-    captureScreenshot();
+  if (Studio.tickCount === constants.CAPTURE_TICK_COUNT) {
+    const svg = document.getElementById('svgStudio');
+    captureThumbnailFromSvg(svg, constants.MIN_CAPTURE_INTERVAL_MS);
   }
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
