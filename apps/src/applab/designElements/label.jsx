@@ -154,7 +154,7 @@ export default {
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
-    element.style.fontSize = '28px';
+    element.style.fontSize = '14px';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
@@ -277,7 +277,7 @@ export default {
  * This allows for rounding errors for adjusting center aligned labels, as well as allowing users
  * to have a chance of returning to an exact fit.
  */
-const STILL_FITS = 3;
+const STILL_FITS = 5;
 
 
 /**
