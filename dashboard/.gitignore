@@ -2,6 +2,7 @@
 /.bundle
 /config/application.yml
 /config/locales/*en-PLOC.yml
+/config/newrelic.yml
 /config/real_secret_words.csv
 
 # build dependency accounting stuff
@@ -24,5 +25,9 @@
 /public/coverage
 /public/ui_test
 
-/public/code-studio-package
+/public/blockly
 /public/apps-package
+/public/code-studio
+/public/code-studio-package
+/public/shared
+/public/styleguide
