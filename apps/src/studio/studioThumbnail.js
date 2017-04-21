@@ -23,7 +23,7 @@ export function captureScreenshot() {
   svgToDataURI(svg)
     .then(imageFromURI)
     .then(canvasFromImage)
-    .then(canvas => createThumbnail(canvas, 180))
+    .then(createThumbnail)
     .then(canvasToBlob)
     .then(project.saveThumbnail);
 }
