@@ -16,7 +16,7 @@ describe('ProgressLevelSet', function () {
 
     assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubbleSet').length, 0);
-    assert.equal(wrapper.find('ProgressPill').props().text, 'LEVEL 1');
+    assert.equal(wrapper.find('ProgressPill').props().text, '1');
   });
 
   it('has a pill and bubbles when we have multiple levels', () => {
@@ -30,10 +30,10 @@ describe('ProgressLevelSet', function () {
 
     assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubbleSet').length, 1);
-    assert.equal(wrapper.find('ProgressPill').props().text, 'LEVEL 1-3');
+    assert.equal(wrapper.find('ProgressPill').props().text, '1-3');
   });
 
-  it('renders a pill that says UNPLUGGED when first level is unplugged', () => {
+  it('renders a pill with no text when first level is unplugged', () => {
     const wrapper = shallow(
       <ProgressLevelSet
         name={undefined}
@@ -44,7 +44,21 @@ describe('ProgressLevelSet', function () {
         disabled={false}
       />
     );
-    assert.equal(wrapper.find('ProgressPill').props().text, 'UNPLUGGED');
+    assert.equal(wrapper.find('ProgressPill').props().text, '');
+  });
+
+  it('renders a pill with no text when last level is unplugged', () => {
+    const wrapper = shallow(
+      <ProgressLevelSet
+        name={undefined}
+        levels={[
+          ...fakeLevels(5),
+          fakeLevel({isUnplugged: true}),
+        ].map(level => ({...level, name: undefined }))}
+        disabled={false}
+      />
+    );
+    assert.equal(wrapper.find('ProgressPill').props().text, '');
   });
 
 });
