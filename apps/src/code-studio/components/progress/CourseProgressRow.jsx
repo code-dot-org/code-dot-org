@@ -20,7 +20,9 @@ const styles = {
     borderRadius: 5,
     background: color.lightest_gray,
     width: '100%',
-    display: 'table'
+    display: 'table',
+    // without this, IE doesnt size descendants that are at 100% height correctly
+    minHeight: 1,
   },
   teacherRow: {
     margin: '14px 0'
