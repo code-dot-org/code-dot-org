@@ -5,9 +5,6 @@ import * as thumbnailUtils from '../util/thumbnail';
 // Needed by html2canvas in SVGContainer.hasFabric to work on IE 11.
 window.html2canvas = thumbnailUtils.html2canvas;
 
-// The width and height in pixels of the thumbnail image to capture.
-export const THUMBNAIL_SIZE = 180;
-
 // Number of ticks after which to capture a thumbnail image of the play space.
 // 300 ticks equates to approximately 1-1.5 seconds in apps that become idle
 // after the first few ticks, or 10-15 seconds in apps that draw constantly.
@@ -80,7 +77,7 @@ export function captureScreenshot() {
 
     // Center-crop and scale the image down so we don't send so much data over
     // the network.
-    const thumbnailCanvas = thumbnailUtils.createThumbnail(canvas, THUMBNAIL_SIZE);
+    const thumbnailCanvas = thumbnailUtils.createThumbnail(canvas);
 
     return new Promise((resolve, reject) => {
       thumbnailCanvas.toBlob(pngBlob => {
