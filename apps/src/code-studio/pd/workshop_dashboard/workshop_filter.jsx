@@ -16,6 +16,8 @@ import {
   Row,
   Col,
   FormGroup,
+  FormControl,
+  InputGroup,
   ControlLabel,
   DropdownButton,
   Button,
@@ -54,7 +56,9 @@ const WorkshopFilter = React.createClass({
         state: React.PropTypes.string,
         course: React.PropTypes.string,
         subject: React.PropTypes.string,
-        organizer_id: React.PropTypes.string
+        organizer_id: React.PropTypes.string,
+        teacher_email: React.PropTypes.string,
+        only_attended: React.PropTypes.string,
       })
     })
   },
@@ -135,6 +139,16 @@ const WorkshopFilter = React.createClass({
     this.updateLocationAndSetFilters({organizer_id});
   },
 
+  handleTeacherEmailChange(data) {
+    const teacher_email = data.target.value;
+    this.updateLocationAndSetFilters({teacher_email});
+  },
+
+  handleOnlyAttendedChange(data) {
+    const only_attended = data.target.checked;
+    this.updateLocationAndSetFilters({only_attended});
+  },
+
   handleLimitChange(limit) {
     this.setState({limit});
   },
@@ -203,7 +217,9 @@ const WorkshopFilter = React.createClass({
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
-      organizer_id: urlParams.organizer_id
+      organizer_id: urlParams.organizer_id,
+      teacher_email: urlParams.teacher_email,
+      only_attended: urlParams.only_attended,
     });
   },
 
@@ -332,6 +348,32 @@ const WorkshopFilter = React.createClass({
                   placeholder={null}
                   {...selectStyleProps}
                 />
+              </FormGroup>
+            </Col>
+          }
+          {
+            isAdmin &&
+            <Col md={4}>
+              <FormGroup>
+                <ControlLabel>Teacher Email</ControlLabel>
+                <InputGroup>
+                  <FormControl
+                    type="text"
+                    value={filters.teacher_email || ''}
+                    placeholder="Enter email"
+                    onChange={this.handleTeacherEmailChange}
+                  />
+                  <InputGroup.Addon>
+                    <FormControl.Static componentClass="span">
+                      Only Attended? &nbsp;
+                    </FormControl.Static>
+                    <input
+                      type="checkbox"
+                      checked={filters.only_attended === "true"}
+                      onChange={this.handleOnlyAttendedChange}
+                    />
+                  </InputGroup.Addon>
+                </InputGroup>
               </FormGroup>
             </Col>
           }
