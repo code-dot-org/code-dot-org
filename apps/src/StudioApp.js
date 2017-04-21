@@ -3,15 +3,15 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {EventEmitter} from 'events';
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
-var dropletUtils = require('./dropletUtils');
+import * as dropletUtils from './dropletUtils';
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require("./util/experiments");
 var KeyCodes = constants.KeyCodes;
 var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
@@ -39,9 +39,10 @@ import project from './code-studio/initApp/project';
 import * as assets from './code-studio/assets';
 import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
+import {TestResults} from './constants';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
-import { getStore, registerReducers } from './redux';
+import { getStore } from './redux';
 import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
@@ -53,7 +54,7 @@ import {
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 import { setVisualizationScale } from './redux/layout';
-var commonReducers = require('./redux/commonReducers');
+import Sounds from './Sounds';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -82,142 +83,132 @@ var MAX_PHONE_WIDTH = 500;
  *           (such as when they are not signed in).
  */
 
-function StudioApp() {
-  this.feedback_ = new FeedbackUtils(this);
-  this.authoredHintsController_ = new AuthoredHints(this);
+class StudioApp extends EventEmitter {
+  constructor() {
+    super();
+    this.feedback_ = new FeedbackUtils(this);
+    this.authoredHintsController_ = new AuthoredHints(this);
 
-  /**
-  * The parent directory of the apps. Contains common.js.
-  */
-  this.BASE_URL = undefined;
+    /**
+     * The parent directory of the apps. Contains common.js.
+     */
+    this.BASE_URL = undefined;
 
-  this.enableShowCode = true;
-  this.editCode = false;
-  this.usingBlockly_ = true;
+    this.enableShowCode = true;
+    this.editCode = false;
+    this.usingBlockly_ = true;
 
-  /**
-   * @type {AudioPlayer}
-   */
-  this.cdoSounds = null;
-  /**
-   * @type {?Droplet.Editor}
-   */
-  this.editor = null;
-  /**
-   * @type {?DropletTooltipManager}
-   */
-  this.dropletTooltipManager = null;
+    /**
+     * @type {?Droplet.Editor}
+     */
+    this.editor = null;
+    /**
+     * @type {?DropletTooltipManager}
+     */
+    this.dropletTooltipManager = null;
 
-  // @type {string} for all of these
-  this.icon = undefined;
-  this.winIcon = undefined;
-  this.failureIcon = undefined;
+    // @type {string} for all of these
+    this.icon = undefined;
+    this.winIcon = undefined;
+    this.failureIcon = undefined;
 
-  // The following properties get their non-default values set by the application.
+    // The following properties get their non-default values set by the application.
 
-  /**
-   * Whether to alert user to empty blocks, short-circuiting all other tests.
-   * @member {boolean}
-   */
-  this.checkForEmptyBlocks_ = false;
+    /**
+     * Whether to alert user to empty blocks, short-circuiting all other tests.
+     * @member {boolean}
+     */
+    this.checkForEmptyBlocks_ = false;
 
-  /**
-  * The ideal number of blocks to solve this level.  Users only get 2
-  * stars if they use more than this number.
-  * @type {number}
-  */
-  this.IDEAL_BLOCK_NUM = undefined;
+    /**
+     * The ideal number of blocks to solve this level.  Users only get 2
+     * stars if they use more than this number.
+     * @type {number}
+     */
+    this.IDEAL_BLOCK_NUM = undefined;
 
-  /**
-   * @typedef {Object} TestableBlock
-   * @property {string|function} test - A test whether the block is
-   *           present, either:
-   *           - A string, in which case the string is searched for in
-   *             the generated code.
-   *           - A single-argument function is called on each user-added
-   *             block individually.  If any call returns true, the block
-   *             is deemed present.  "User-added" blocks are ones that are
-   *             neither disabled or undeletable.
-   * @property {string} type - The type of block to be produced for
-   *           display to the user if the test failed.
-   * @property {Object} [titles] - A dictionary, where, for each
-   *           KEY-VALUE pair, this is added to the block definition:
-   *           <title name="KEY">VALUE</title>.
-   * @property {Object} [value] - A dictionary, where, for each
-   *           KEY-VALUE pair, this is added to the block definition:
-   *           <value name="KEY">VALUE</value>
-   * @property {string} [extra] - A string that should be blacked
-   *           between the "block" start and end tags.
-   */
+    /**
+     * @typedef {Object} TestableBlock
+     * @property {string|function} test - A test whether the block is
+     *           present, either:
+     *           - A string, in which case the string is searched for in
+     *             the generated code.
+     *           - A single-argument function is called on each user-added
+     *             block individually.  If any call returns true, the block
+     *             is deemed present.  "User-added" blocks are ones that are
+     *             neither disabled or undeletable.
+     * @property {string} type - The type of block to be produced for
+     *           display to the user if the test failed.
+     * @property {Object} [titles] - A dictionary, where, for each
+     *           KEY-VALUE pair, this is added to the block definition:
+     *           <title name="KEY">VALUE</title>.
+     * @property {Object} [value] - A dictionary, where, for each
+     *           KEY-VALUE pair, this is added to the block definition:
+     *           <value name="KEY">VALUE</value>
+     * @property {string} [extra] - A string that should be blacked
+     *           between the "block" start and end tags.
+     */
 
-  /**
-  * @type {!TestableBlock[]}
-  */
-  this.requiredBlocks_ = [];
+    /**
+     * @type {!TestableBlock[]}
+     */
+    this.requiredBlocks_ = [];
 
-  /**
-  * The number of required blocks to give hints about at any one time.
-  * Set this to Infinity to show all.
-  * @type {number}
-  */
-  this.maxRequiredBlocksToFlag_ = 1;
+    /**
+     * The number of required blocks to give hints about at any one time.
+     * Set this to Infinity to show all.
+     * @type {number}
+     */
+    this.maxRequiredBlocksToFlag_ = 1;
 
-  /**
-  * @type {!TestableBlock[]}
-  */
-  this.recommendedBlocks_ = [];
+    /**
+     * @type {!TestableBlock[]}
+     */
+    this.recommendedBlocks_ = [];
 
-  /**
-  * The number of recommended blocks to give hints about at any one time.
-  * Set this to Infinity to show all.
-  * @type {number}
-  */
-  this.maxRecommendedBlocksToFlag_ = 1;
+    /**
+     * The number of recommended blocks to give hints about at any one time.
+     * Set this to Infinity to show all.
+     * @type {number}
+     */
+    this.maxRecommendedBlocksToFlag_ = 1;
 
-  /**
-  * The number of attempts (how many times the run button has been pressed)
-  * @type {?number}
-  */
-  this.attempts = 0;
+    /**
+     * The number of attempts (how many times the run button has been pressed)
+     * @type {?number}
+     */
+    this.attempts = 0;
 
-  /**
-  * Stores the time at init. The delta to current time is used for logging
-  * and reporting to capture how long it took to arrive at an attempt.
-  * @type {?number}
-  */
-  this.initTime = undefined;
+    /**
+     * Stores the time at init. The delta to current time is used for logging
+     * and reporting to capture how long it took to arrive at an attempt.
+     * @type {?number}
+     */
+    this.initTime = undefined;
 
-  /**
-  * Enumeration of user program execution outcomes.
-  */
-  this.ResultType = constants.ResultType;
+    /**
+     * If true, we don't show blockspace. Used when viewing shared levels
+     */
+    this.hideSource = false;
 
-  /**
-  * Enumeration of test results.
-  */
-  this.TestResults = constants.TestResults;
+    /**
+     * If true, we're viewing a shared level.
+     */
+    this.share = false;
 
-  /**
-   * If true, we don't show blockspace. Used when viewing shared levels
-   */
-  this.hideSource = false;
+    this.onAttempt = undefined;
+    this.onContinue = undefined;
+    this.onResetPressed = undefined;
+    this.backToPreviousLevel = undefined;
+    this.sendToPhone = undefined;
+    this.enableShowBlockCount = true;
 
-  /**
-   * If true, we're viewing a shared level.
-   */
-  this.share = false;
+    this.disableSocialShare = false;
+    this.noPadding = false;
 
-  this.onAttempt = undefined;
-  this.onContinue = undefined;
-  this.onResetPressed = undefined;
-  this.backToPreviousLevel = undefined;
-  this.sendToPhone = undefined;
-  this.enableShowBlockCount = true;
+    this.MIN_WORKSPACE_HEIGHT = undefined;
 
-  this.disableSocialShare = false;
-  this.noPadding = false;
-
-  this.MIN_WORKSPACE_HEIGHT = undefined;
+  }
 }
 
 /**
@@ -237,41 +228,12 @@ StudioApp.prototype.configure = function (options) {
     this.usingBlockly_ = false;
   }
 
-  this.cdoSounds = options.cdoSounds;
-
   // Bind assetUrl to the instance so that we don't need to depend on callers
   // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 
   this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
-};
-
-/**
- * Creates a redux store for this app, while caching the set of app specific
- * reducers, so that we can recreate the store from scratch at any point if need
- * be
- * @param {object} reducers - App specific reducers, or null if the app is not
- *   providing any.
- */
-StudioApp.prototype.configureRedux = function (reducers) {
-  this.reducers_ = reducers;
-  this.createReduxStore_();
-};
-
-/**
- * Creates our redux store by combining the set of app specific reducers that
- * we stored along with a set of common reducers used by every app. Creation
- * should happen once on app load (tests will also recreate our store between
- * runs).
- */
-StudioApp.prototype.createReduxStore_ = function () {
-  registerReducers(_.assign({}, commonReducers, this.reducers_));
-
-  if (experiments.isEnabled('reduxGlobalStore')) {
-    // Expose our store globally, to make debugging easier
-    window.reduxStore = getStore();
-  }
 };
 
 /**
@@ -542,6 +504,8 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
+
+  this.emit('afterInit');
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
@@ -853,31 +817,19 @@ StudioApp.prototype.isRunning = function () {
 
 /**
  * Attempts to associate a set of audio files to a given name
- * Handles the case where cdoSounds does not exist, e.g. in tests
- * and grunt dev preview mode
  * @param {Object} audioConfig sound configuration
  */
 StudioApp.prototype.registerAudio = function (audioConfig) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
-  this.cdoSounds.register(audioConfig);
+  Sounds.getSingleton().register(audioConfig);
 };
 
 /**
  * Attempts to associate a set of audio files to a given name
- * Handles the case where cdoSounds does not exist, e.g. in tests
- * and grunt dev preview mode
  * @param {Array.<string>} filenames file paths for sounds
  * @param {string} name ID to associate sound effect with
  */
 StudioApp.prototype.loadAudio = function (filenames, name) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
-  this.cdoSounds.registerByFilenamesAndID(filenames, name);
+  Sounds.getSingleton().registerByFilenamesAndID(filenames, name);
 };
 
 /**
@@ -888,14 +840,10 @@ StudioApp.prototype.loadAudio = function (filenames, name) {
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function (name, options) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  this.cdoSounds.play(name, newOptions);
+  Sounds.getSingleton().play(name, newOptions);
 };
 
 /**
@@ -903,11 +851,7 @@ StudioApp.prototype.playAudio = function (name, options) {
  * @param {string} name ID of sound
  */
 StudioApp.prototype.stopLoopingAudio = function (name) {
-  if (!this.cdoSounds) {
-    return;
-  }
-
-  this.cdoSounds.stopLoopingAudio(name);
+  Sounds.getSingleton().stopLoopingAudio(name);
 };
 
 /**
@@ -930,7 +874,7 @@ StudioApp.prototype.inject = function (div, options) {
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
-  Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
+  Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
 /**
@@ -1442,7 +1386,7 @@ StudioApp.prototype.clearHighlighting = function () {
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
 * @param {{feedbackType: number}} Test results (a constant property of
-*     this.TestResults).
+*     TestResults).
 */
 StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
@@ -1451,7 +1395,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
-    options.feedbackType = this.TestResults.EDIT_BLOCKS;
+    options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
   this.onFeedback(options);
@@ -1478,7 +1422,7 @@ StudioApp.prototype.displayFeedback = function (options) {
  * into the top instructions
  * @param {Object} options
  * @param {number} options.feedbackType Test results (a constant property
- *     of this.TestResults).false
+ *     of TestResults).false
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If we show instructions when collapsed, we only use dialogs for
@@ -1964,7 +1908,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // was initialized, so include it initially, and conditionally remove it here.
   if (!project.useFirebase()) {
     // Remove onRecordEvent from the palette
-    delete config.level.codeFunctions.onRecordEvent;
+    if (config.level.codeFunctions) {
+      delete config.level.codeFunctions.onRecordEvent;
+    }
 
     // Remove onRecordEvent from autocomplete, while still recognizing it as a command
     const block = config.dropletConfig.blocks.find(block => {
@@ -1975,21 +1921,13 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     }
   }
 
-  // Remove maker API blocks from palette and autocomplete, unless maker APIs are enabled.
-  // We didn't have access to project.useMakerAPIs() when dropletConfig
-  // was initialized, so include it initially, and conditionally remove it here.
+  // Remove maker API blocks from palette, unless maker APIs are enabled.
   if (!project.useMakerAPIs()) {
-    //// Remove maker blocks from the palette
-    makerDropletBlocks.forEach(block => {
-      delete config.level.codeFunctions[block.func];
-    });
-
-    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
-    const block = config.dropletConfig.blocks.find(block => {
-      return makerDropletBlocks.find(makerBlock => makerBlock.func === block.func);
-    });
-    if (block) {
-      block.noAutocomplete = true;
+    // Remove maker blocks from the palette
+    if (config.level.codeFunctions) {
+      makerDropletBlocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
     }
   }
 
@@ -2004,7 +1942,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
-    textModeAtStart: config.level.textModeAtStart
+    textModeAtStart: (
+      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === false ? config.usingTextModePref :
+      config.level.textModeAtStart
+    ),
   });
 
   if (config.level.paletteCategoryAtStart) {
@@ -2835,6 +2777,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
   }, appSpecificConstants);
 
@@ -2886,6 +2829,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance.removeAllListeners();
     instance = __oldInstance;
     __oldInstance = null;
   };

@@ -260,8 +260,8 @@ class ScriptLevelsController < ApplicationController
       if section.user == current_user
         @section = section
       end
-    elsif current_user.try(:non_deleted_sections).try(:count) == 1
-      @section = current_user.non_deleted_sections.first
+    elsif current_user.try(:sections).try(:count) == 1
+      @section = current_user.sections.first
     end
   end
 
@@ -341,7 +341,7 @@ class ScriptLevelsController < ApplicationController
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden stages in that section
     if current_user.try(:teacher?)
-      sections = current_user.sections.select {|s| s.deleted_at.nil?}
+      sections = current_user.sections
       hidden_by_section = {}
       sections.each do |section|
         hidden_by_section[section.id] = section.section_hidden_stages.map(&:stage_id)
@@ -352,7 +352,7 @@ class ScriptLevelsController < ApplicationController
     # if we're a student, we want to look through each of the sections in which
     # we're a member, and use those to figure out which stages should be hidden
     # for us
-    sections = current_user.sections_as_student.select {|s| s.deleted_at.nil?}
+    sections = current_user.sections_as_student
     return [] if sections.empty?
     script_sections = sections.select {|s| s.script.try(:name) == script_name}
 

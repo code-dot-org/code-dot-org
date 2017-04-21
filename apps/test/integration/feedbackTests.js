@@ -4,6 +4,7 @@ import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 var testCollectionUtils = require('./util/testCollectionUtils');
 var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
+import {TestResults} from '@cdo/apps/constants';
 
 /**
  * Loads blocks into the workspace, then calls
@@ -12,7 +13,6 @@ var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
  */
 describe("checkForEmptyContainerBlockFailure_", function () {
   var studioApp;
-  var TestResults;
 
   testUtils.setExternalGlobals();
 
@@ -24,7 +24,6 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     blocksCommon.install(Blockly, blockInstallOptions);
 
     studioApp = getStudioAppSingleton();
-    TestResults = studioApp.TestResults;
   });
 
   var checkResultForBlocks = function (args) {
@@ -747,7 +746,6 @@ describe("getCountableBlocks_", function () {
 
 describe("unusedBlocks", function () {
   var studioApp;
-  var TestResults;
   var blockXml= '<xml><block type="text_print"></block></xml>';
 
   // create our environment
@@ -758,7 +756,6 @@ describe("unusedBlocks", function () {
     blocksCommon.install(Blockly, blockInstallOptions);
 
     studioApp = getStudioAppSingleton();
-    TestResults = studioApp.TestResults;
   });
 
   afterEach(function () {

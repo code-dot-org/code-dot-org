@@ -1048,6 +1048,7 @@ en:
         commands print true"
       CSD U3 Keypress Watchers_instruction: "Modify the code so that all of the console.log
         commands print true"
+      CSD U3 Mouse Input Bee 2_instruction: "Do this"
       CSD U3 Random Animation_instruction: "Use randomNumber() to animate Gary's
         mouth."
       CSD U3 Random Choice_instruction: "Use the randomNumber() block to generate
@@ -1143,6 +1144,13 @@ en:
         results of each expression. Then create your own."
       CSD U4 - Events Template_instruction: "Add a large red button to your screen
         using Design Mode. (Click for full instructions.)"
+      CSD U5 black white images pixelation 2_instruction: "Draw a smiley face (click
+        here to see image)"
+      CSD U5 black white images pixelation 3_instruction: "Change the width and height
+        sliders to find the image (click here to see more)"
+      CSD U5 black white images pixelation 4_instruction: "Add eyebrows to the smiley
+        face (click here to see the image)"
+      CSD U5 black white images pixelation 5_instruction: "Draw anything you like"
       CSD U5 black white images pixelation_instruction: "Complete the X shape by
         typing 0s and 1s"
       CSDU4 - AppLab - 1_instruction: "Read the documentation for penColor() and
@@ -1241,6 +1249,7 @@ en:
       CSP U4 - Objects - createObject_instruction: "Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) "
+      CSP student contact info_instruction: "Please enter your email address."
       CSPU5 Add Screens to Chaser Game_instruction: "Recreate the game from the \"Chaser
         Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)"
       CSPU5 Add a 2nd Screen_instruction: "Make a 2 screen app with a black screen
@@ -3174,6 +3183,7 @@ en:
       Kiki_StarWars_Test_3_instruction: "Text"
       Kiki_StarWars_Test_4_instruction: "Text"
       Kiki_StarWars_Test_5_instruction: "Text"
+      Kiki_StarWars_Test_5_Example_instruction: "Text"
       LaurelDebugging4Video1_instruction: "Move Laurel around and get as much gold
         as you can!"
       Limited Quantity of Blocks Test_instruction: "Get me to the pig by adding only
@@ -3687,6 +3697,8 @@ en:
       PDK5 Loops 3_instruction: "Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?"
+      PS - test - pixelation_instruction: "Complete the X shape by typing 0s and
+        1s"
       PS FR test 7-25_instruction: "Here are your instructions for this free response.  "
       PS Log test - Define and use turnAround_instruction: "Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to
@@ -3697,6 +3709,9 @@ en:
       PS predictive Applab level test_instruction: "Here are some instructions. "
       Pattern Bee 1_instruction: "What a strange field of goodies! I wonder if there's
         a pattern here..."
+      Pixelation - AllTheThings 4_instruction: "This pixelation level demonstrates
+        the use of the `hide_encoding_controls` option.  Notice that the level displays
+        the image data in hexadecimal and does not let you change it back to binary."
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: "Something happened
         to the bits in this image! Find the error and fix it! Hint: a few extra bits
         were added. You should only need to remove some bits."
@@ -5431,6 +5446,13 @@ en:
         water."
       courseA_artist_loops8_instruction: "We need a ladder up to the boat."
       courseA_artist_loops9_instruction: "Challenge: Fix the stairs."
+      courseA_artist_loops_challenge1_instruction: "You can use a loop to draw many
+        lines in a row.\r\n\r\nCan you draw a house? Make it look just the way you
+        like it!  Try looking for patterns that repeat!"
+      courseA_artist_loops_challenge2_instruction: "Tweet tweet! Can you help me
+        make two bird houses?"
+      courseA_artist_loops_challenge3_instruction: "Let's play a game! Draw as many
+        X's as you can! Can you get 3 in a row?"
       courseA_collector_loops1_instruction: "Move Laurel around and get as much treasure
         as you can!"
       courseA_collector_loops10_instruction: "Help Laurel get all of the treasure
@@ -5453,6 +5475,8 @@ en:
       courseA_collector_loops8_instruction: "Write the code to get all of this treasure."
       courseA_collector_loops9_instruction: "**Challenge:** The treasure goes all
         the way up these stairs!  Write the code to help Laurel get it all."
+      courseA_collector_loops_challenge1_instruction: "Can you help me spot some
+        bugs? I know which way I want to go, but I'm not sure how many steps to take."
       courseA_collector_loops_challenge2_instruction: "This time you can only use
         one of each arrow block. Get all of the treasure! "
       courseA_maze_seq1_instruction: "Get the bird to the bad pig!"
@@ -5491,6 +5515,8 @@ en:
         the background and playing a random sound when Jorge is clicked."
       courseA_playLab_events7_instruction: "Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?"
+      courseA_playlab_events_challenge1_instruction: "It's time for the Great Animal
+        Race! Make the animals move down when you press ▼. Who will run the fastest?"
       courseA_video_events_instruction: "Need a better playlab/events combo"
       courseB_artist_loops1_instruction: "This is a new type of puzzle called \"Artist\".
         Play with the level and draw something fun."
@@ -5508,9 +5534,11 @@ en:
       courseB_artist_loops7_instruction: "**Challenge:**  It's a hidden garden!
         Let's walk around."
       courseB_artist_loops8_instruction: "Time to head home. Can you fix this ladder
-        to help the artist get down?"
+        using only one block to help the artist get down?"
       courseB_artist_loops9_instruction: "Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?"
+      courseB_artist_loops_challenge1_instruction: "It's time to toss the dice!
+        Can you help me draw these?"
       courseB_artist_loops_challenge2_instruction: "Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?"
       courseB_collector_loops1_instruction: "This is Laurel the Adventurer!  Can
@@ -5535,6 +5563,12 @@ en:
         the way down these stairs!  Write the code to help Laurel get it all."
       courseB_collector_loops9_instruction: "*\"Help me get the treasure from this
         deep valley.\"*"
+      courseB_collector_loops_challenge1_instruction: "This time you can only use
+        one of each arrow block. Get all of the treasure! "
+      courseB_collector_loops_challenge2_instruction: "Let's get the treasure! Help
+        me across each row then come back to start the next row. Can you find a pattern?"
+      courseB_collector_loops_challenge`_instruction: "This time you can only use
+        one of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: "This is Laurel the Adventurer!  Can you
         move her around and get gold?"
       courseB_collector_prog2_instruction: "Four piles of gold!  Collect all four."
@@ -5582,19 +5616,31 @@ en:
         to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: "Finish by playing a sound and making
         the knight vanish when he runs into the dragon!"
+      courseB_playlab_events_challenge1_instruction: "Make this game fun by setting
+        the knight to vanish when he runs into the dragon on his way to get the flags!  Play
+        a sound when they collide to make it feel more real."
+      courseB_playlab_events_challenge2_instruction: "Let's make the animals disappear
+        when you click on them! You can also add sounds and score points to create
+        a fun game of Animal Tag!"
+      courseB_playlab_events_challenge2_embed_instruction: "Here is your finished
+        game!"
+      courseB_playlab_events_challenge2_template_instruction: "Let's make the animals
+        disappear when you click on them! You can also add sounds and score points
+        to create a fun game of Animal Tag!"
       courseC_PlayLab_events1_instruction: "Make Jorge the Dog (actor 1) say \"Hi
         there.\""
-      courseC_PlayLab_events2_instruction: "Can you make Jorge (actor 1) say something,
-        then have Olive the Cat (actor 2) say something afterward?"
+      courseC_PlayLab_events2_instruction: "Can you make Jorge the Dog (actor 1)
+        say something, then have Olive the Cat (actor 2) say something afterward?"
       courseC_PlayLab_events3_instruction: "Can you write a program to make Jorge
         (actor 1) move toward Olive the Cat?"
       courseC_PlayLab_events4_instruction: "Can you write a program that makes Jorge
         (actor 1) move to Olive the Cat, and have Olive say \"Hi there.\" when Jorge
         reaches her?"
       courseC_PlayLab_events5_instruction: "Can you write a program to make Octavia
-        say \"What's new?\" when she is clicked?"
+        the Octopus say \"What's new?\" when she is clicked?"
       courseC_PlayLab_events6_instruction: "Now, write a program to make Waddles
-        move around using the up / down / left / right keys to hit all of the targets!"
+        the Penguin move around using the up / down / left / right keys to hit all
+        of the targets!"
       courseC_PlayLab_events7_instruction: "The `repeat forever` block allows you
         to run code over and over forever.  Use this block to move Chomp the Dino
         (actor 2) up and down by 400 pixels forever."
@@ -5602,13 +5648,13 @@ en:
         and play a \"hit\" sound if he runs into Chomp? \r\nWhen you're done, play
         the game to make that happen."
       courseC_PlayLab_events9_instruction: "Can you add a block to score a point
-        when Waddles (actor1) runs into Octavia (actor 3)? \r\nPlay the game and move
-        Waddles with the arrows until you score!"
+        when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
+        \r\nPlay the game and move Waddles with the arrows until you score!"
       courseC_PlayLab_eventsA_instruction: "Add blocks to the `when run` event to
-        change the background scene and the speed of Waddles.\r\n\r\nPlay the game
-        and move Waddles with the arrows until you score."
+        change the background scene and the speed of Waddles the Penguin.\r\n\r\nPlay
+        the game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
-        done, click \"Finish\" to share with friends."
+        done, click \"Finish\" to share with friends. See story ideas in the hints."
       courseC_artist_prog1_instruction: "Play with the blocks in the toolbox to see
         what they do!"
       courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the
@@ -5673,7 +5719,7 @@ en:
         to the acorn."
       courseC_maze_debugging3_instruction: "Remove blocks to get Skrat to the acorn!"
       courseC_maze_debugging4_instruction: "Someone has their directions mixed up!
-        Can you help?"
+        Can you help? Watch out for the ice blocks that blow up!"
       courseC_maze_debugging5_instruction: "Debug this level by rearranging and changing
         blocks."
       courseC_maze_debugging6_instruction: "Figure out what is wrong and get Skrat
@@ -5971,6 +6017,9 @@ en:
       courseD_playLab_cond3_instruction: "1) Make the dragon change between random
         emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon,
         he gets 2 points if the dragon is happy and 1 otherwise."
+      courseD_playLab_cond3b_instruction: "1) Make the dragon change between random
+        emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon,
+        he gets 2 points if the dragon is happy and 1 otherwise."
       courseD_playLab_cond4_instruction: "Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
         if the ninja catches him."
@@ -6047,6 +6096,9 @@ en:
         the nectar from each flower."
       courseE_bee_functions9_instruction: "Create a function to collect all of the
         nectar from each flower."
+      courseE_bee_ramp14_instruction: "Get nectar while there is nectar, **else**
+        make the honey. "
+      courseE_bee_ramp17_instruction: "Use what you have learned to solve this puzzle."
       courseE_collector_ramp10_instruction: "Help Laurel collect all of the treasure."
       courseE_collector_ramp8_instruction: "Help Laurel collect all of the treasure."
       courseE_collector_ramp9_instruction: "Help Laurel collect all of the treasure."
@@ -6115,14 +6167,27 @@ en:
       courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the
         pumpkin and collect all of the lettuce and corn along the way. "
       courseE_farmer_functions9_instruction: "Use conditionals to simplify your program."
+      courseE_farmer_predict1_instruction: "Pick lettuce if there is lettuce. Otherwise,
+        pick corn."
       courseE_farmer_ramp11_instruction: "This puzzle also uses nested loops.  Can
         you figure out how?"
-      courseE_farmer_ramp12_instruction: "Pick lettuce only while there is still
+      courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still
         lettuce to pick. "
+      courseE_farmer_ramp12_instruction: "Now use nested loops (`repeat` and `while`)
+        to solve this puzzle."
+      courseE_farmer_ramp12a_instruction: "Pick lettuce if there is lettuce. Otherwise,
+        pick corn."
       courseE_farmer_ramp13_instruction: "Pick corn if there is corn, and pick lettuce
         while there is lettuce."
+      courseE_farmer_ramp15_instruction: "Solve this puzzle using only the blocks
+        available."
+      courseE_farmer_ramp16_instruction: "**Challenge:** Solve this puzzle with the
+        fewest number of blocks."
+      courseE_maze_predict1_instruction: "This code includes a new block. What do
+        you think would happen if you press the \"Run\" block?"
       courseE_maze_ramp1_instruction: "For this puzzle, drag all of the blocks together
         and click \"Run\" to watch it go!"
+      courseE_maze_ramp13_instruction: "Time for one last puzzle to pull it all together!"
       courseE_maze_ramp2_instruction: "Drag an extra `move forward` block out of
         the toolbox, then attach all blocks to `when run` to finish your code."
       courseE_maze_ramp3_instruction: "There is one extra block that is going to
@@ -6133,6 +6198,9 @@ en:
         Otherwise I might get angry!\""
       courseE_maze_ramp7_instruction: "Use what you've learned to get the bird to
         the pig!"
+      courseE_maze_ramp_predict1_instruction: "This code includes a new block. What
+        do you think would happen if you press the \"Run\" block?"
+      courseE_multi_maze_ramp5_instruction: "Avoid the TNT."
       courseE_playLab_exampleProject2_instruction: "Here's all of your code to choose
         a card - try adding some other fun features!"
       courseE_playLab_scaffold1_instruction: "Choose a background and map, and pick
@@ -6191,6 +6259,10 @@ en:
         using the function that you just created?"
       courseF_artist_fwp9_instruction: "Freeplay: Draw something awesome! Play with
         the pen width to see how different your drawings look!"
+      courseF_artist_ramp10_instruction: "Now, drag the code for the last triangle
+        into a new loop to spin it around and make a snowflake!"
+      courseF_artist_ramp8_instruction: "Now make a square using Artist!"
+      courseF_artist_ramp9_instruction: "Use what you've learned to draw this triangle."
       courseF_artist_variables1_instruction: "Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side."
       courseF_artist_variables10_instruction: "Here's your code from the last puzzle.  Try
@@ -6272,6 +6344,23 @@ en:
       courseF_bee_fwp9_instruction: "Use your new function to solve this puzzle."
       courseF_bee_fwp9_predict1_instruction: "Use your new function to solve this
         puzzle."
+      courseF_farmer_ramp11_instruction: "This puzzle also uses nested loops.  Can
+        you figure out how?"
+      courseF_maze_predict1_instruction: "This code includes a new block. What do
+        you think would happen if you press the \"Run\" block?"
+      courseF_maze_ramp1_instruction: "For this puzzle, connect all of the blocks
+        from the workspace together below the `when run` event and click \"Run\" to
+        watch it go!"
+      courseF_maze_ramp13_instruction: "Time for one last puzzle to pull it all together!"
+      courseF_maze_ramp2_instruction: "Drag a `repeat` block out of the toolbox and
+        attach it to the `when run` event.   Place the `move forward` block inside
+        to finish your code."
+      courseF_maze_ramp4_instruction: "Avoid TNT or feathers will fly!"
+      courseF_maze_ramp5_instruction: "Avoid the TNT."
+      courseF_maze_ramp6_instruction: "\"Keep calm and help me find the bad pig.
+        Otherwise I might get angry!\""
+      courseF_maze_ramp7_instruction: "Use what you've learned to get the bird to
+        the pig!"
       courseF_playlab_variables0_instruction: "This is Pirate Pegleg.  He's awfully
         hard to understand these days!"
       courseF_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
@@ -6290,6 +6379,9 @@ en:
       courseF_playlab_variables3b_instruction: "Help Kiki have a conversation with
         Brian by using the variable `A1` in all of the places where age `12` should
         be used. "
+      courseF_playlab_variables3bEdit_instruction: "Help Kiki have a conversation
+        with Brian by using the variable `A1` in all of the places where age `12`
+        should be used. "
       courseF_playlab_variables4_instruction: "Can you find the correct variable
         in the toolbox to fill in the slot?"
       courseF_playlab_variables4b_instruction: "Put the variables in the correct
@@ -6317,6 +6409,8 @@ en:
         lab! Here's an example of story in play lab."
       coursef_explore_playlab_cat_game_instruction: "You can do whatever you want
         in play lab! Here's an example of game you can make."
+      coursef_maze_ramp3_instruction: "There is one extra block that is going to
+        cause the bird to crash. Throw it away by dragging it back to the toolbox."
       drawings!_instruction: "Draw the equilateral triangle - all the sides are the
         same!"
       eventsIntro_instruction: "Need a better playlab/events combo"

@@ -53,7 +53,7 @@ def puts_script_intro
       #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
 
       Known Issues
-      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
 
   EOS
 end

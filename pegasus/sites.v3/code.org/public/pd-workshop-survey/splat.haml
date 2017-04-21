@@ -189,6 +189,9 @@ title: "Professional Development Workshop Survey"
           name: 'how_motivating_s',
           label: 'During your workshop, how motivating were the activities that this program had you do?'
 
+      - facilitators.each do |name|
+        %input{name: 'facilitator_names_s[]', type: 'hidden', value: name}
+
       .form-group#facilitator-specific-questions
 
       .form-group

@@ -50,6 +50,7 @@ We are interested in seeing what's happening in computer science education inter
 
 - A [new report](http://www.sreb.org/sites/main/files/file-attachments/cs_commission_2016_0.pdf) by the SREB recommends 5 policy actions states can take to expand access to computer science education.
 - A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduation requirements.  
+- The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band. 
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education."
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
 - [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report](http://burning-glass.com/research/coding-skills/) by Burning Glass.

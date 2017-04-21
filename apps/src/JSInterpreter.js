@@ -1,5 +1,5 @@
 var codegen = require('./codegen');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 var utils = require('./utils');
 var Interpreter = require('@code-dot-org/js-interpreter');
 var acorn = require('@code-dot-org/js-interpreter/acorn');
@@ -31,8 +31,8 @@ var JSInterpreter = module.exports = function (options) {
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
 
-  /** @type {ObservableEvent} */
-  this.onNextStepChanged = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onNextStepChanged = new ObservableEventDEPRECATED();
   this._runStateUpdater = this.onNextStepChanged.register(() => {
     getStore().dispatch(setIsDebuggerPaused(
       this.paused,
@@ -40,14 +40,14 @@ var JSInterpreter = module.exports = function (options) {
     ));
   });
 
-  /** @type {ObservableEvent} */
-  this.onPause = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onPause = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.onExecutionError = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onExecutionError = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.onExecutionWarning = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.onExecutionWarning = new ObservableEventDEPRECATED();
 
   this.paused = false;
   this.yieldExecution = false;

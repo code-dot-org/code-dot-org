@@ -444,7 +444,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 老师们需要志愿者。<br>%{num_volunteers} 志愿者已经报名了。加入他们的行列。"
   volunteer_engineer_submission_intro_background: "编程一小时是一次全球范围的活动，尝试在一个小时的时间里为数以千万计的 180 多个国家的学生介绍计算机科学方面的知识。请在计算机科学教育周（12 月 7-13 日）积极参与本次活动。"
   volunteer_engineer_submission_intro_recruit: '这些教师希望有<span style="font-family: ''Gotham 7r'', sans-serif;"> 热衷于计算机科学教育的人士</span> 能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性 （也可以通过视频聊天的方式讨论）<span style="font-family: ''Gotham 7r'', sans-serif;">激发 </span> 他们学生的热情。'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "了解更多我们的 <a href=\"%{volunteer_guide}\">志愿者项目</a>。"
   volunteer_engineer_submission_intro_signup: "如果您是计算机科学专业的学生或软件专家，请输入以下信息。用 <span class=\"form-required-field\"> *</span> 标记的字段是必填项。"
   volunteer_engineer_submission_intro_links: "需要找志愿者吗? 用<a href=\"%{volunteer_local}\"> 志愿者地图</a> 找到本地的志愿者。"
   volunteer_engineer_submission_update_information: "更新你的信息"
@@ -473,7 +473,7 @@
   volunteer_engineer_submission_field_email_placeholder: "电子邮件地址"
   volunteer_engineer_submission_final_paragraph: "作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。"
   volunteer_engineer_submission_checkbox_contact: '我同意教师们可以就志愿者服务机会联系我 （注: 您的电子邮件地址不会泄漏）'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "我保证，我已满18周岁。"
   volunteer_engineer_submission_submit: "提交"
   volunteer_engineer_submission_thankyou: "非常感谢！你的志愿者信息已成功提交。老师们会用<a href=\"%{url}\">这张地图</a>来搜索并联系更多像你一样的志愿者。48小时内你的信息就会正确的出现在地图上。"
   volunteer_engineer_submission_commitment_uncertain: "不确定"
@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "自动生成"
   dashboard_students_reset_secret: "重置密钥"
   dashboard_students_reset_password: "重置密码"
-  dashboard_students_share_section: '与您的学生共享此学习小组的登录页面：'
+  dashboard_students_share_section: "与您的学生共享此学习小组的登录页面："
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "打印出包含学生登录信息的卡片"
   dashboard_students_secret_picture_title: "秘密图片"
   dashboard_students_secret_picture: "这一节使用 <b>图片</b> 作为密钥的类型。 即您的每位学生都有一张密钥图片来代替密码用于登录。 学生需要它来完成上面的登录。"
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "告诉您的学生来创建他们自己的账号并在此加入您的学习小组"
   dashboard_students_no_email: "如果您的学生没有电子邮件地址，或您想为其创建帐户，请将学习小组的密钥类型更改为 <b>单词</b> 或 <b>图片</b>。"
   dashboard_students_print_page: "打印此页面"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">点击这里</a>以获取我们的隐私文件，您可以跟您的学生共享此文件或打印分发给他们的。"
   dashboard_curriculum_k5_title: "K-5 教育人才资源"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 第1单元：互联网
   csp2_name: 第2单元︰ 数字信息
   csp3_name: 'Unit 3: Algorithms and Programming'

@@ -4,7 +4,9 @@ submittable 'true'
 anonymous 'true'
 
 page
+text 'Longitudinal study description'
 level 'CSP verify 18'
+level 'CSP longitudinal agree to contact'
 
 page
 level 'CSP student contact info'

@@ -49,6 +49,9 @@ import {
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import project from '../code-studio/initApp/project';
+import {createThumbnail} from '../util/thumbnail';
+import Sounds from '../Sounds';
+import {TestResults, ResultType} from '../constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -458,9 +461,7 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
-  if (this.studioApp_.cdoSounds) {
-    this.studioApp_.cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
 
@@ -500,21 +501,21 @@ GameLab.prototype.reset = function (ignore) {
 
 GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (this.executionError) {
-    this.result = this.studioApp_.ResultType.ERROR;
+    this.result = ResultType.ERROR;
   } else {
     // In most cases, submit all results as success
-    this.result = this.studioApp_.ResultType.SUCCESS;
+    this.result = ResultType.SUCCESS;
   }
 
   // If we know they succeeded, mark levelComplete true
-  const levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+  const levelComplete = (this.result === ResultType.SUCCESS);
 
   if (this.executionError) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
   } else {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+    this.testResults = TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
@@ -526,7 +527,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.testResults = TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
@@ -539,7 +540,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     this.message = null;
   }
 
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+  if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
@@ -761,8 +762,8 @@ GameLab.prototype.onMouseUp = function (e) {
  * Execute the user's code.  Heaven help us...
  */
 GameLab.prototype.execute = function () {
-  this.result = this.studioApp_.ResultType.UNSET;
-  this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
+  this.result = ResultType.UNSET;
+  this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
   this.response = null;
 
@@ -1096,16 +1097,7 @@ function captureImage(thumbnailSize) {
   }
 
   // Scale the image down so we don't send so much data over the network.
-  const thumbnailCanvas = document.createElement('canvas');
-  thumbnailCanvas.width = thumbnailSize;
-  thumbnailCanvas.height = thumbnailSize;
-
-  // Make sure any empty areas appear white.
-  const thumbnailContext = thumbnailCanvas.getContext('2d');
-  thumbnailContext.fillStyle = 'white';
-  thumbnailContext.fillRect(0, 0, thumbnailSize, thumbnailSize);
-
-  thumbnailContext.drawImage(p5Canvas, 0, 0, thumbnailSize, thumbnailSize);
+  const thumbnailCanvas = createThumbnail(p5Canvas, thumbnailSize);
 
   thumbnailCanvas.toBlob(blob => {
     project.saveThumbnail(blob);

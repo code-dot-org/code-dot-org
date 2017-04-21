@@ -2,13 +2,13 @@ import {assert} from '../util/configuredChai';
 
 describe("Observer", function () {
   var Observer = require('@cdo/apps/Observer');
-  var ObservableEvent = require('@cdo/apps/ObservableEvent');
+  var ObservableEventDEPRECATED = require('@cdo/apps/ObservableEventDEPRECATED');
   var observer, eventA, eventB, log, funcX, funcY;
 
   beforeEach(function () {
     observer = new Observer();
-    eventA = new ObservableEvent();
-    eventB = new ObservableEvent();
+    eventA = new ObservableEventDEPRECATED();
+    eventB = new ObservableEventDEPRECATED();
     log = "";
     funcX = function () { log += "X"; };
     funcY = function () { log += "Y"; };

@@ -95,6 +95,10 @@ const VariableFormGroup = React.createClass({
     rowVariableQuestions: React.PropTypes.arrayOf(questionPropType),
   },
 
+  hasNoSourceValues() {
+    return this.props.sourceValues.length === 0;
+  },
+
   hasSingleSourceValue() {
     return this.props.sourceValues.length === 1;
   },
@@ -116,6 +120,12 @@ const VariableFormGroup = React.createClass({
   },
 
   render() {
+    if (this.hasNoSourceValues()) {
+      // If we have no source values, we have nothing to render. Return an empty
+      // form group
+      return (<div className="form-group" />);
+    }
+
     const columnQuestions = this.props.columnVariableQuestions.map(question => (
       <ColumnVariableQuestion
         key={question.name}

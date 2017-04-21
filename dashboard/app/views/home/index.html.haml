@@ -11,8 +11,6 @@
 = render partial: 'home/survey_nps' if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
 = render partial: 'home/survey_diversity' if show_diversity_survey? SurveyResult::DIVERSITY_2017
 
-= render partial: 'devise/confirmations/alert'
-
 #landingpage
   .row
     .span12

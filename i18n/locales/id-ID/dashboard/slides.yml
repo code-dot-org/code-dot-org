@@ -388,17 +388,17 @@ id:
         text: "Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke sarang lebah untuk membuat madu. Kamu akan memakai balok \"dapatkan nektar\" dan balok \"buat madu\" untuk latihan ini."
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Setiap bunga memiliki jumlah nektar yang berbeda: 1, 2, 3, atau lebih. Kita mengetahui berapa banyak nektar di bunga-bunga merah, dengan jumlah kecil di sudut. Jadi pastikan untuk mendapatkan semua madu dari bunga sebelum anda bergerak maju. Juga, setiap sarang lebah hanya dapat menampung begitu banyak madu: 1, 2, 3, atau lebih. Jadi pastikan untuk membuat madu sebanyak yang dapat ditampung oleh sarang lebah.'
       3:
         image: 'notes/C1_bee_level_intro_3.png'
-        text: "If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to \"bee\" a programmer!"
+        text: "Jika anda dapat memperoleh semua nektar dan membuat semua madu, anda telah berhasil dan pergi ke tingkat berikutnya. Jika tidak, anda perlu mencoba teka-teki ini lagi. Bermain-main untuk sementara waktu dan lihat apa rasanya menjadi \"lebah\" programmer!"
     C1_bee_loops:
       1:
         image: 'notes/C1_bee_loops_1.png'
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: "Sebuah loop adalah pengulangan aktivitas. Jadi akan menjadi sarang untuk memeriksa, saya melihat sebuah frame dan kemudian saya meletakkannya kembali, jadi saya ulangi bahwa aktivitas yang sama beberapa kali. Ini perulangan sekitar, melakukan kegiatan yang sama beberapa kali."
       2:
         image: 'notes/C1_bee_loops_2.png'
-        text: "In this level, we want the bee to collect three nectars from the flower. Instead of using three \"get nectar\" blocks, you're going to use the repeat block to get nectar three times. Hit \"Run\" and see if you got it right. Nice!"
+        text: "Dalam level ini, kami ingin lebah mengumpulkan tiga nektar dari bunga. Alih-alih menggunakan tiga \"mendapatkan nektar\" blok, anda akan menggunakan blok berulang untuk mendapatkan nektar tiga kali. Pencet \"Jalankan\" dan lihat apakah anda sudah benar. Bagus!"
     C1_bigevent_unplugged:
       1:
         image: 'notes/C1_bigevent_unplugged_1.png'

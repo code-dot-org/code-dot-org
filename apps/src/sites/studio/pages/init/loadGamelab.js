@@ -13,4 +13,6 @@ export default function loadGamelab(options) {
 
   gamelab.injectStudioApp(studioApp());
   appMain(gamelab, levels, options);
+
+  return gamelab;
 }

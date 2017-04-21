@@ -45,10 +45,12 @@
       "upButton"
     ],
     "timeout_failure_tick": "0",
-    "callout_json": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_playlab_events4_callout1\",\r\n  \"callout_text\": \"This is a callout\",\r\n  \"element_id\": \"#whenArrow\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "gradek_playlab_events5c_template",
     "markdown_instructions": "Now, get Jorge to move right when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png) button is clicked.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)\",\"hint_id\":\"courseA_playLab_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/321ffeed9aa0b3f8cf96ac440e650672/courseA_playLab_events4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the block you should connect to the `when right` event:\\n\\n![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)\",\"hint_id\":\"courseA_playLab_events4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be92fc2b8339b9e5650d9fe356b36ce0/courseA_playLab_events4.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

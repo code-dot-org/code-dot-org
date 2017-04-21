@@ -383,14 +383,9 @@ var selfClosing = (
 );
 ```
 
-
 ### In /apps
 
 Use lodash and jQuery libraries in `/apps`.
-
-### In /blockly-core
-
-Use Google Closure Tools in `/blockly-core`, especially for color conversion and keyboard identifiers. Prefer raw HTML over Closure Tools UI constructs for new code.
 
 ## CSS
 
@@ -419,4 +414,3 @@ Default: https://google.github.io/styleguide/htmlcssguide.xml
 - Avoid inline styles in markup.
 - Prefer double quotes for attributes.
 - Use dashes instead of underscores, camel casing, etc for separating words in IDs and classes.
-

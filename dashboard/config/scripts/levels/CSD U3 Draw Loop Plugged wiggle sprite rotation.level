@@ -17,13 +17,14 @@
       "var sprite = createSprite": null,
       "x": null,
       "y": null,
-      "rotation": null
+      "rotation": null,
+      "World.frameRate": null
     },
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "// Creating Alien Sprites\r\n\r\nvar greenAlien = createSprite(100, 200);\r\ngreenAlien.setAnimation(\"greenAlien\");\r\n\r\nvar pinkAlien = createSprite(300, 200);\r\npinkAlien.setAnimation(\"pinkAlien\");\r\n\r\n// Setting Up Drawing\r\nnoStroke();\r\nfill(\"white\");\r\n\r\nfunction draw() {\r\n  background(\"black\");\r\n  ellipse(randomNumber(0,400),randomNumber(0,400),5,5);\r\n  \r\n  greenAlien.rotation = randomNumber(-5,5);\r\n  drawSprites();\r\n}",
+    "start_blocks": "// Setting Frame Rate\r\n\r\nWorld.frameRate = 10;\r\n\r\n// Creating Alien Sprites\r\n\r\nvar greenAlien = createSprite(100, 200);\r\ngreenAlien.setAnimation(\"greenAlien\");\r\n\r\nvar pinkAlien = createSprite(300, 200);\r\npinkAlien.setAnimation(\"pinkAlien\");\r\n\r\n// Setting Up Drawing\r\nnoStroke();\r\nfill(\"white\");\r\n\r\nfunction draw() {\r\n  background(\"black\");\r\n  ellipse(randomNumber(0,400),randomNumber(0,400),5,5);\r\n  \r\n  greenAlien.rotation = randomNumber(-5,5);\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

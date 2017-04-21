@@ -1,0 +1,9 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+
+stage 'Text on the Web'
+level 'CSD U2 Headers'
+
+stage 'Digital Footprint'
+level 'CSD U2 Social Sleuth'

@@ -961,7 +961,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {Object} options
  * @param {number} options.feedbackType Test results (a constant property
- *     of this.TestResults).false
+ *     of TestResults).false
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -1454,13 +1454,13 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
   options = options || {};
   if (this.studioApp_.editCode) {
     if (levelComplete) {
-      return this.studioApp_.TestResults.ALL_PASS;
+      return TestResults.ALL_PASS;
     } else if (options.executionError && options.executionError.err instanceof SyntaxError) {
-      return this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+      return TestResults.SYNTAX_ERROR_FAIL;
     } else if (options.executionError) {
-      return this.studioApp_.TestResults.RUNTIME_ERROR_FAIL;
+      return TestResults.RUNTIME_ERROR_FAIL;
     } else {
-      return this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
+      return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
   }
   if (shouldCheckForEmptyBlocks) {

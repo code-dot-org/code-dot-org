@@ -4,7 +4,22 @@ theme: responsive
 nav: employee_engagement_nav
 ---
 
-# After School Coding
+# After School Club
+
+<div class="col-50" style="float:left; padding:10px">
+
+ <img src="/images/employee-engagement/after-school-kid.jpg" style="max-width: 100%">
+</div>
+
+<div class="col-50" style="float:left; padding:10px">
+
+ <strong>Company lift</strong>: Low<br>
+ <strong>Employee lift</strong>: High<br>
+ <strong>Cadence</strong>: After school clubs can be started any time of the year.
+ 
+</div>
+
+<div style="clear: both;"></div>
 
 Every 21st-century student should have the opportunity to learn computer science. The basics help nurture creativity and problem-solving skills, and prepare students for future careers. Your company, in partnership with a local after school organization (i.e. YMCA, Girl Scouts, Boys and Girls Club, etc.), can help bring computer science opportunities to youth in your area.
 
@@ -22,7 +37,7 @@ Your employees are the feet on the ground, reaching out to after school organiza
 
 Code.org has developed computer science curriculum that allows even the youngest students to explore the limitless world of computing. Our courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer – which is an important consideration in places where access to technology or an internet-connected computer isn’t available. Each course consists of 20 lessons and can be adapted depending on the length of the program. 
 
-Code.org offers a variety of [resources](/employee-engagement/after-school-1) to make sure that your employees have everything they need to go out into their communities and start an after school computer science program. 
+Code.org offers a variety of [resources](/volunteer/after-school-1) to make sure that your employees have everything they need to go out into their communities and start an after school computer science program. 
 
 * Templates for flyers and messaging for community outreach
 * Fun and innovative computer science curriculum

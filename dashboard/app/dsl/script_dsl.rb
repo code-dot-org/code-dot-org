@@ -10,7 +10,6 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
     @scriptlevels = []
     @stages = []
-    @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
@@ -79,6 +78,8 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
+    target = properties.delete(:target)
+    challenge = properties.delete(:challenge)
 
     level = {
       name: name,
@@ -115,8 +116,12 @@ class ScriptDSL < BaseDSL
         stage: @stage,
         levels: [level]
       }
-      if progression
-        script_level[:properties] = {progression: progression}
+
+      if progression || target || challenge
+        script_level[:properties] = {}
+        script_level[:properties][:progression] = progression if progression
+        script_level[:properties][:target] = true if target
+        script_level[:properties][:challenge] = true if challenge
       end
 
       @scriptlevels << script_level
@@ -133,12 +138,12 @@ class ScriptDSL < BaseDSL
   end
 
   def i18n_strings
-    @i18n_strings['stage'] = {}
+    i18n_strings = {}
     @stages.each do |stage|
-      @i18n_strings['stage'][stage[:stage]] = stage[:stage]
+      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => @i18n_strings}}
+    {'name' => {@name => {'stages' => i18n_strings}}}
   end
 
   def self.parse_file(filename)
@@ -193,7 +198,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
         end
       end
       s << ''
@@ -201,7 +206,7 @@ class ScriptDSL < BaseDSL
     s.join("\n")
   end
 
-  def self.serialize_level(level, type, active = nil, progression = nil)
+  def self.serialize_level(level, type, active = nil, progression = nil, target = nil, challenge = nil)
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
@@ -216,6 +221,8 @@ class ScriptDSL < BaseDSL
     l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
     l += ', active: false' unless active.nil? || active
     l += ", progression: '#{progression}'" if progression
+    l += ', target: true' if target
+    l += ', challenge: true' if challenge
     s << l
     s
   end

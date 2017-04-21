@@ -20,8 +20,7 @@ var constants = require('./constants');
 var utils = require('../utils');
 import {getStore} from '../redux';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 /**
  * Create a namespace for the application.
