@@ -6,6 +6,12 @@ import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
 import { levelType, lessonType } from './progressTypes';
 
+const styles = {
+  hidden: {
+    display: 'none'
+  }
+};
+
 const ProgressTable = React.createClass({
   propTypes: {
     isSummaryView: PropTypes.bool.isRequired,
@@ -37,14 +43,24 @@ const ProgressTable = React.createClass({
   render() {
     const { isSummaryView, categorizedLessons } = this.props;
 
-    const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
-
     if (categorizedLessons.length === 1) {
+      // Render both tables, and toggle hidden state via CSS as this has better
+      // perf implications than rendering just one at a time when toggling.
       return (
-        <TableType
-          lessons={categorizedLessons[0].lessons}
-          levelsByLesson={categorizedLessons[0].levels}
-        />
+        <div>
+          <div style={isSummaryView ? {} : styles.hidden}>
+            <SummaryProgressTable
+              lessons={categorizedLessons[0].lessons}
+              levelsByLesson={categorizedLessons[0].levels}
+            />
+          </div>
+          <div style={isSummaryView ? styles.hidden : {}}>
+            <DetailProgressTable
+              lessons={categorizedLessons[0].lessons}
+              levelsByLesson={categorizedLessons[0].levels}
+            />
+          </div>
+        </div>
       );
     } else {
       return (

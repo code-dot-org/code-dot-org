@@ -27,8 +27,6 @@ module UsersHelper
       end
     end
 
-    user_data[:current_stage] = user.next_unpassed_progression_level(script).stage.id unless exclude_level_progress
-
     user_data.compact
   end
 

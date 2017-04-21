@@ -64,6 +64,7 @@ sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic)
 sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish
 ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil
+te,te,te,te-IN,తెలుగు,Telugu,FALSE,FALSE,te,Telugu
 tg,tg,tg,tg-TJ,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik
 th,th,th,th-TH,ภาษาไทย,Thai,TRUE,FALSE,th,Thai
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish
