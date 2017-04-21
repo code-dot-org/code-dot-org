@@ -8,6 +8,11 @@ import {
 const REQUIRED = (<span style={{color: 'red'}}> *</span>);
 
 export default class FieldGroup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   handleChange(event) {
     const value = event.target.value;
     this.props.onChange && this.props.onChange({
@@ -31,7 +36,7 @@ export default class FieldGroup extends React.Component {
       <FormGroup controlId={id} validationState={validationState}>
         <ControlLabel>{label} {required && REQUIRED}</ControlLabel>
         <FormControl
-          onChange={this.handleChange.bind(this)}
+          onChange={this.handleChange}
           {...props}
         >
           {children}
