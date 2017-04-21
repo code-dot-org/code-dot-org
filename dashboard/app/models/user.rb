@@ -108,12 +108,12 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
-  devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
@@ -181,9 +181,13 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  # TODO: I think we actually want to do this.
-  # You can be associated with districts through cohorts
-  # has_many :districts, through: :cohorts.
+  validate :admins_must_be_teachers
+
+  def admins_must_be_teachers
+    if admin
+      errors.add(:admin, 'must be a teacher') unless teacher?
+    end
+  end
 
   def facilitator?
     permission? UserPermission::FACILITATOR
@@ -346,7 +350,6 @@ class User < ActiveRecord::Base
   # NOTE: Order is important here.
   before_save :make_teachers_21,
     :normalize_email,
-    :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students,
     :hide_school_info_for_students,
@@ -362,16 +365,6 @@ class User < ActiveRecord::Base
     self.email = email.strip.downcase
   end
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # We make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed.
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
@@ -384,7 +377,6 @@ class User < ActiveRecord::Base
   def hide_email_and_full_address_for_students
     if student?
       self.email = ''
-      self.unconfirmed_email = nil
       self.full_address = nil
     end
   end
@@ -527,7 +519,7 @@ class User < ActiveRecord::Base
   end
 
   def email_required?
-    return true if teacher? || admin?
+    return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?

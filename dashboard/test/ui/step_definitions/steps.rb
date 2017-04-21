@@ -930,7 +930,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
-    And I wait to see "#schoolname-block"
+    And I wait to see "#schooldropdown-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -1180,4 +1180,30 @@ def refute_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   # This error message is specific to Chrome
   expect(first_header_text).not_to eq('This site can’t be reached')
+end
+
+Then /^I wait until the image within element "([^"]*)" has loaded$/ do |selector|
+  image_status_selector = "#{selector} div[data-image-status=loaded]"
+  wait_until do
+    @browser.execute_script("return $(#{image_status_selector.dump}).length > 0;")
+  end
+end
+
+Then /^I wait until initial thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialCaptureComplete();')
+  end
+end
+
+Then /^I wait for initial project save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
+end
+
+When /^I switch to text mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet text mode
+  STEPS
 end

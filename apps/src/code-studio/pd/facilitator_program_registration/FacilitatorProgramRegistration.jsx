@@ -36,6 +36,16 @@ export default class FacilitatorProgramRegistration extends FormController {
   /**
    * @override
    */
+  serializeFormData() {
+    return {
+      ...super.serializeFormData(),
+      teachercon: this.props.teachercon
+    };
+  }
+
+  /**
+   * @override
+   */
   shouldShowSubmit() {
     return super.shouldShowSubmit() ||
         this.state.data.confirmTrainingDate === "No" ||

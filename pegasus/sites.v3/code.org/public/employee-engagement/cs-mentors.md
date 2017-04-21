@@ -6,6 +6,22 @@ theme: responsive
 
 # Employees become CS Mentors
 
+<div class="col-50" style="float:left; padding:10px">
+
+  <img src="/images/employee-engagement/teals.jpg" style="max-width: 100%">
+</div>
+
+<div class="col-50" style="float:left; padding:10px">
+
+  <strong>Company lift</strong>: Low<br>
+  <strong>Employee lift</strong>: High<br>
+  <strong>Cadence</strong>: Sign up in Spring and volunteer in the Fall for the entire school year (2 times per week)
+  
+</div>
+ 
+
+<div style="clear: both;"></div>
+
 If you have software engineers looking for a bigger commitment, our CS Mentors program (in partnership with TEALS) allows them to volunteer two days a week throughout the school year in a local high school computer science class.
 
 [TEALS](http://r.tealsk12.org/tbz7xx) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Volunteers make an impact in local schools by helping teachers teach Intro and AP CS classes.

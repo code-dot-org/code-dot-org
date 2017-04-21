@@ -97,8 +97,6 @@ module LtiHelper
           user.name      = full_name
           user.user_type = user_type
 
-          user.skip_confirmation!
-          user.skip_reconfirmation!
           user.save
 
           User.uncached do

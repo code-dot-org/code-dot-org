@@ -77,26 +77,31 @@ const styles = {
 
 const AchievementDialog = Radium(React.createClass({
   propTypes: {
-    puzzleNumber: React.PropTypes.number,
-    idealBlocks: React.PropTypes.number,
-    actualBlocks: React.PropTypes.number,
-    hintsUsed: React.PropTypes.number,
+    achievements: React.PropTypes.arrayOf(React.PropTypes.shape({
+      check: React.PropTypes.bool,
+      msg: React.PropTypes.string,
+      progress: React.PropTypes.number,
+    })),
     assetUrl: React.PropTypes.func,
-    onContinue: React.PropTypes.func,
-    showStageProgress: React.PropTypes.bool,
+    feedbackMessage: React.PropTypes.string,
+    handleClose: React.PropTypes.func,
+    isOpen: React.PropTypes.bool,
     oldStageProgress: React.PropTypes.number,
-    newPassedProgress: React.PropTypes.number,
-    newPerfectProgress: React.PropTypes.number,
-    newHintUsageProgress: React.PropTypes.number,
+    onContinue: React.PropTypes.func,
     showPuzzleRatingButtons: React.PropTypes.bool,
+    showStageProgress: React.PropTypes.bool,
+    encourageRetry: React.PropTypes.bool,
   },
 
   getInitialState() {
-    return {isOpen: true};
+    return {
+      isOpen: this.props.isOpen === undefined ? true : this.props.isOpen,
+    };
   },
 
-  handleClose(nextPuzzle = true) {
+  handleClose(nextPuzzle) {
     this.setState({isOpen: false});
+    this.props.handleClose && this.props.handleClose();
     nextPuzzle && this.props.onContinue();
   },
 
@@ -127,71 +132,29 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRowGenerator(show, successful, message) {
-    if (!show) {
-      return null;
-    }
-
-    return (style, index) => {
-      return (
-        <p style={{...styles.achievement.row, ...style}} key={index}>
-          {this.icon(successful)}
-          <span style={styles.achievement.text}>{message}</span>
-        </p>
-      );
-    };
-  },
-
-  blocksUsedMessage(blockDelta, params) {
-    if (blockDelta > 0) {
-      return locale.usingTooManyBlocks(params);
-    } else if (blockDelta === 0) {
-      return locale.exactNumberOfBlocks(params);
-    } else {
-      return locale.fewerNumberOfBlocks(params);
-    }
-  },
-
-  hintsMessage(numHints) {
-    if (numHints === 0) {
-      return locale.withoutHints();
-    } else if (numHints === 1) {
-      return locale.usingOneHint();
-    } else {
-      return locale.usingHints();
-    }
+  achievementRow(successful, message, style, index) {
+    return (
+      <p style={{...styles.achievement.row, ...style}} key={index}>
+        {this.icon(successful)}
+        <span style={styles.achievement.text}>{message}</span>
+      </p>
+    );
   },
 
   render() {
-    const showNumBlocksRow = isFinite(this.props.idealBlocks);
-    const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
-    const tooManyBlocks = blockDelta > 0;
-    const tooManyHints = this.props.hintsUsed > 1;
-
-    const params = {
-      puzzleNumber: this.props.puzzleNumber,
-      numBlocks: this.props.idealBlocks,
-    };
-    const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
-
-    const achievementRowGenerators = [
-      this.achievementRowGenerator(true /* show */, true /* success */,
-          locale.puzzleCompleted()),
-      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks,
-          this.blocksUsedMessage(blockDelta, params)),
-      this.achievementRowGenerator(true /* show */, !tooManyHints,
-          this.hintsMessage(this.props.hintsUsed)),
-    ].filter(row => row);
+    const baseDialogProps = {...this.props};
+    delete baseDialogProps.handleClose;
 
     return (
       <BaseDialog
         useUpdatedStyles
         isOpen={this.state.isOpen}
-        handleClose={this.handleClose.bind(this, !tooManyBlocks)}
+        handleClose={this.handleClose.bind(this, !this.props.encourageRetry)}
         assetUrl={this.props.assetUrl}
+        {...baseDialogProps}
       >
         <StaggeredMotion
-          defaultStyles={Array(achievementRowGenerators.length + 1).fill({ progress: 0 })}
+          defaultStyles={Array(this.props.achievements.length + 1).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
               { progress: spring(1, { stiffness: 100, damping: 25 }) } :
@@ -206,17 +169,20 @@ const AchievementDialog = Radium(React.createClass({
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
                 <div style={styles.checkmarks}>
-                  {achievementRowGenerators.map((generator, index) =>
-                          generator(interpolatingStyles[index + 1], index))}
+                  {this.props.achievements.map((achievement, index) =>
+                    this.achievementRow(
+                        achievement.check,
+                        achievement.msg,
+                        interpolatingStyles[index + 1],
+                        index))}
                 </div>
                 {this.props.showStageProgress &&
                   <StageProgressBar
                     stageProgress={
-                        this.props.oldStageProgress +
-                        (interpolatingValues[1].progress * this.props.newPassedProgress) +
-                        (interpolatingValues[2].progress * this.props.newPerfectProgress) +
-                        (interpolatingValues[showNumBlocksRow ? 3 : 2].progress *
-                          this.props.newHintUsageProgress)
+                        this.props.achievements.reduce((totalProgress, achievement, index) => {
+                          return totalProgress +
+                            (achievement.progress * interpolatingValues[index + 1].progress);
+                        }, this.props.oldStageProgress)
                     }
                   />
                 }
@@ -225,19 +191,19 @@ const AchievementDialog = Radium(React.createClass({
           }
         </StaggeredMotion>
         <div style={styles.footer}>
-          <p style={styles.feedbackMessage}>{feedbackMessage}</p>
+          <p style={styles.feedbackMessage}>{this.props.feedbackMessage}</p>
 
           {this.props.showPuzzleRatingButtons && <PuzzleRatingButtons/>}
           <button
-            onClick={this.handleClose}
+            onClick={this.handleClose.bind(this, true)}
             style={[
               styles.buttonPrimary,
-              tooManyBlocks && styles.buttonSecondary
+              this.props.encourageRetry && styles.buttonSecondary
             ]}
           >
             {locale.continue()}
           </button>
-          {tooManyBlocks &&
+          {this.props.encourageRetry &&
             <button
               onClick={this.handleClose.bind(this, false)}
               style={styles.buttonPrimary}

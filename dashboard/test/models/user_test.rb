@@ -5,8 +5,24 @@ class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @good_data = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
-    @good_data_young = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
+    @good_data = {
+      email: 'foo@bar.com',
+      password: 'foosbars',
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 28
+    }
+    @good_data_young = {
+      email: 'foo@bar.com',
+      password: 'foosbars',
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 8
+    }
+
+    @admin = create :admin
+    @teacher = create :teacher
+    @student = create :student
   end
 
   test 'make_teachers_21' do
@@ -70,10 +86,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'hash_email' do
-    teacher = create :teacher
-    teacher.update!(email: 'hash_email@example.com')
+    @teacher.update!(email: 'hash_email@example.com')
     assert_equal User.hash_email('hash_email@example.com'),
-      teacher.hashed_email
+      @teacher.hashed_email
   end
 
   test "log in with password with pepper" do
@@ -303,16 +318,16 @@ class UserTest < ActiveSupport::TestCase
     refute user.save
   end
 
-  test "cannot make an account without email an admin" do
-    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+  test "cannot make a student admin" do
+    student = create :student
+    student.admin = true
+    refute student.valid?
+    refute student.save
 
-    user.admin = true
-    refute user.save
-  end
-
-  test "cannot create admin without email" do
-    assert_does_not_create(User) do
-      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+    assert_raises(ActiveRecord::RecordInvalid) do
+      assert_does_not_create(User) do
+        create :student, admin: true
+      end
     end
   end
 
@@ -579,17 +594,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'students have hashed email not plaintext email' do
-    student = create :student, email: 'will_be_hashed@email.xx'
-
-    assert student.email.blank?
-    assert student.hashed_email.present?
+    assert @student.email.blank?
+    assert @student.hashed_email.present?
   end
 
   test 'teachers have hashed email and plaintext email' do
-    teacher = create :teacher, email: 'email@email.xx'
-
-    assert teacher.email.present?
-    assert teacher.hashed_email.present?
+    assert @teacher.email.present?
+    assert @teacher.hashed_email.present?
   end
 
   test 'cannot create duplicate hashed and plaintext email' do
@@ -664,22 +675,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'changing user from teacher to student removes full_address' do
     user = create :teacher
-    user.update(full_address: 'fake address')
+    user.update!(full_address: 'fake address')
 
     user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.full_address.nil?
-  end
-
-  test 'changing user from teacher to student removed unconfirmed_email' do
-    user = create :teacher
-    user.update(email: 'unconfirmed_email@example.com')
-
-    assert user.unconfirmed_email.present?
-    user.update(user_type: User::TYPE_STUDENT)
-
-    assert_nil user.unconfirmed_email
   end
 
   test 'changing user from student to teacher saves email' do
@@ -696,27 +697,23 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'sanitize_race_data sanitizes closed_dialog' do
-    user = create :student
-    user.update!(races: %w(white closed_dialog))
-    assert_equal %w(closed_dialog), user.reload.races
+    @student.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), @student.reload.races
   end
 
   test 'sanitize_race_data sanitizes too many races' do
-    user = create :student
-    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
-    assert_equal %w(nonsense), user.reload.races
+    @student.reload.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), @student.reload.races
   end
 
   test 'sanitize_race_data sanitizes non-races' do
-    user = create :student
-    user.update!(races: %w(not_a_race white))
-    assert_equal %w(nonsense), user.reload.races
+    @student.update!(races: %w(not_a_race white))
+    assert_equal %w(nonsense), @student.reload.races
   end
 
   test 'sanitize_race_data noops valid responses' do
-    user = create :student
-    user.update!(races: %w(black hispanic))
-    assert_equal %w(black hispanic), user.reload.races
+    @student.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), @student.reload.races
   end
 
   test 'under 13' do
@@ -929,8 +926,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is true for user with password' do
-    user = create :student
-    assert user.can_edit_password?
+    assert @student.can_edit_password?
   end
 
   test 'can_edit_password? is false for user without password' do
@@ -940,8 +936,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is true for user with password' do
-    user = create :student
-    assert user.can_edit_email?
+    assert @student.can_edit_email?
   end
 
   test 'can_edit_email? is false for user without password' do
@@ -1248,14 +1243,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-    refute user.confirmation_required?
-    refute user.confirmed_at
+    refute @student.confirmation_required?
   end
 
   test 'student and teacher relationships' do
-    student = create :student
     teacher = create :teacher
+    student = create :student
     section = create :section, user_id: teacher.id
 
     follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
@@ -1307,7 +1300,7 @@ class UserTest < ActiveSupport::TestCase
 
     # can_pair_with? method
     classmate = create :student
-    section.add_student classmate, move_for_same_teacher: false
+    section.add_student classmate
     assert classmate.can_pair_with?(student)
     assert student.can_pair_with?(classmate)
     refute student.can_pair_with?(other_user)
@@ -1318,9 +1311,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
-    fake_teacher = create :teacher
-    assert fake_teacher.teacher?
-    refute fake_teacher.authorized_teacher?
+    assert @teacher.teacher?
+    refute @teacher.authorized_teacher?
 
     # you have to be in a cohort
     c = create :cohort
@@ -1335,11 +1327,8 @@ class UserTest < ActiveSupport::TestCase
     assert plc_teacher.authorized_teacher?
 
     # admins should be authorized teachers too
-    admin = create :teacher
-    admin.admin = true
-    admin.save!
-    assert admin.teacher?
-    assert admin.authorized_teacher?
+    assert @admin.teacher?
+    assert @admin.authorized_teacher?
   end
 
   test "can_edit_account?" do
@@ -1392,8 +1381,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for teacher without version' do
-    teacher = create :teacher
-    assert_nil teacher.terms_version
+    assert_nil @teacher.terms_version
   end
 
   test 'terms_of_service_version for teacher with version' do
@@ -1402,8 +1390,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for student without teachers' do
-    student = create :student
-    assert_nil student.terms_version
+    assert_nil @student.terms_version
   end
 
   test 'terms_of_service_version for student with teachers without version' do
@@ -1459,16 +1446,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do
-    user = create :user
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    assert user.should_see_inline_answer?(nil)
-    assert user.should_see_inline_answer?(create(:script_level))
+    assert @student.should_see_inline_answer?(nil)
+    assert @student.should_see_inline_answer?(create(:script_level))
   end
 
   test 'should_see_inline_answer? returns false for non teachers' do
-    user = create :student
-    assert_not user.should_see_inline_answer?(create(:script_level))
+    assert_not @student.should_see_inline_answer?(create(:script_level))
   end
 
   test 'should_see_inline_answer? returns true for authorized teachers in csp' do
@@ -1582,22 +1567,19 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_or_create_teacher creates new teacher' do
-    admin = create :admin
-
     params = {
       email: 'email@example.net',
       name: 'test user'
     }
 
     user = assert_creates(User) do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert user.teacher?
-    assert_equal admin, user.invited_by
+    assert_equal @admin, user.invited_by
   end
 
   test 'find_or_create_teacher finds existing teacher' do
-    admin = create :admin
     teacher = create :teacher
 
     params = {
@@ -1606,21 +1588,19 @@ class UserTest < ActiveSupport::TestCase
     }
 
     found = assert_does_not_create(User) do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert_equal teacher, found
   end
 
   test 'find_or_create_teacher with an invalid email raises ArgumentError' do
-    admin = create :admin
-
     params = {
       email: 'invalid',
       name: 'test user'
     }
 
     e = assert_raises ArgumentError do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end

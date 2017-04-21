@@ -1,25 +1,23 @@
 name 'unique level name here'
-title 'title'
+title 'CSD U3 Variables name match'
 description 'description here'
-question 'Question'
-answer 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
-question 'Question'
-answer 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
-question 'Question'
-answer 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
-question 'Question'
-answer 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
-question 'Question'
-answer 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+question 'Labels can\'t have spaces.'
+answer 'size of circle
+var yLocation = 200;'
+question 'Labels can\'t start with a number.'
+answer '1dimension
+var yLocation = 200;'
+question 'Labels should have the same capitalization.'
+answer 'YLocation'
 
 markdown <<MARKDOWN
-<img src="https://images.code.org/df57f48c0d94b62115c4d6b984f8d62d-image-1481646886873.31.47 AM.png" style="width:200px">
+# Debug: Naming Variables
 
-<img src="https://images.code.org/5efa885b485e138b02545527939637cb-image-1481646886872.32.20 AM.png" style="width:200px">
+This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.
 
-<img src="https://images.code.org/224bf3c749053ef7468d1f91b7d99e4a-image-1481646886873.34.18 AM.png" style="width:200px">
+# Do This
 
-<img src="https://images.code.org/0b5450ed4d93ad827725e8d0410b10f1-image-1481646886871.32.27 AM.png" style="width:200px">
-
-<img src="https://images.code.org/678eeff4ee550e5134a69c14d473b38c-image-1481646886873.32.34 AM.png" style="width:200px">
+* Match the variable label to the rule that it violates.
+* **Correct the errors by picking new names that follow the rules listed above.**
+* If your program works it should draw the image on the right.
 MARKDOWN

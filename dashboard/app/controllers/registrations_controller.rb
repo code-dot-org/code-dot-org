@@ -9,12 +9,6 @@ class RegistrationsController < Devise::RegistrationsController
   def update
     @user = User.find(current_user.id)
 
-    # If email has changed for a non-teacher: clear confirmed_at but don't send notification email
-    if  !@user.confirmation_required? && params[:user] && params[:user][:email].present?
-      @user.skip_reconfirmation!
-      @user.confirmed_at = nil
-    end
-
     successfully_updated =
       if forbidden_change?(@user, params)
         false
@@ -34,7 +28,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in @user
 
         format.html do
-          set_flash_message :notice, @user.pending_reconfirmation? ? :update_needs_confirmation : :updated
+          set_flash_message :notice, :updated
           begin
             redirect_back fallback_location: after_update_path_for(@user)
           rescue ActionController::RedirectBackError

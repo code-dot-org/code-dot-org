@@ -64,9 +64,10 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
+import Sounds from '../Sounds';
+import {makeDisabledConfig} from '../dropletUtils';
 
-var ResultType = studioApp().ResultType;
-var TestResults = studioApp().TestResults;
+import {TestResults, ResultType} from '../constants';
 
 /**
  * Create a namespace for the application.
@@ -491,12 +492,6 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerToolkit.dropletConfig);
-
-  // Set the custom set of blocks (may have had maker blocks merged in) so
-  // we can later pass the custom set to the interpreter.
-  config.level.levelBlocks = config.dropletConfig.blocks;
-
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -591,9 +586,24 @@ Applab.init = function (config) {
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
   });
 
+  config.dropletConfig = dropletConfig;
+
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
+    config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.dropletConfig);
+  } else {
+    // Push gray, no-autocomplete versions of maker blocks for display purposes.
+    const disabledMakerDropletConfig = makeDisabledConfig(makerToolkit.dropletConfig);
+    config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        disabledMakerDropletConfig);
   }
+
+  // Set the custom set of blocks (may have had maker blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
 
   getStore().dispatch(actions.changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
@@ -785,9 +795,7 @@ Applab.reset = function () {
     divApplab.removeChild(divApplab.firstChild);
   }
 
-  if (studioApp().cdoSounds) {
-    studioApp().cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
@@ -950,7 +958,7 @@ Applab.execute = function () {
   codeWhenRun = studioApp().getCode();
   Applab.currentExecutionLog = [];
 
-  if (codeWhenRun) {
+  if (typeof codeWhenRun === 'string') {
     // Create a new interpreter for this run
     Applab.JSInterpreter = new JSInterpreter({
       studioApp: studioApp(),
@@ -1178,7 +1186,7 @@ Applab.onPuzzleComplete = function (submit) {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    Applab.testResults = studioApp().TestResults.ALL_PASS;
+    Applab.testResults = TestResults.ALL_PASS;
     Applab.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
