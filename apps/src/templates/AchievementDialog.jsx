@@ -84,6 +84,8 @@ const AchievementDialog = Radium(React.createClass({
     })),
     assetUrl: React.PropTypes.func,
     feedbackMessage: React.PropTypes.string,
+    handleClose: React.PropTypes.func,
+    isOpen: React.PropTypes.bool,
     oldStageProgress: React.PropTypes.number,
     onContinue: React.PropTypes.func,
     showPuzzleRatingButtons: React.PropTypes.bool,
@@ -92,12 +94,15 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   getInitialState() {
-    return {isOpen: true};
+    return {
+      isOpen: this.props.isOpen === undefined ? true : this.props.isOpen,
+    };
   },
 
-  handleClose() {
+  handleClose(nextPuzzle) {
     this.setState({isOpen: false});
-    this.props.encourageRetry && this.props.onContinue();
+    this.props.handleClose && this.props.handleClose();
+    nextPuzzle && this.props.onContinue();
   },
 
   icon(flag) {
@@ -137,13 +142,16 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   render() {
+    const baseDialogProps = {...this.props};
+    delete baseDialogProps.handleClose;
+
     return (
       <BaseDialog
         useUpdatedStyles
         isOpen={this.state.isOpen}
-        handleClose={this.handleClose}
+        handleClose={this.handleClose.bind(this, !this.props.encourageRetry)}
         assetUrl={this.props.assetUrl}
-        {...this.props}
+        {...baseDialogProps}
       >
         <StaggeredMotion
           defaultStyles={Array(this.props.achievements.length + 1).fill({ progress: 0 })}
@@ -187,7 +195,7 @@ const AchievementDialog = Radium(React.createClass({
 
           {this.props.showPuzzleRatingButtons && <PuzzleRatingButtons/>}
           <button
-            onClick={this.handleClose}
+            onClick={this.handleClose.bind(this, true)}
             style={[
               styles.buttonPrimary,
               this.props.encourageRetry && styles.buttonSecondary
@@ -197,7 +205,7 @@ const AchievementDialog = Radium(React.createClass({
           </button>
           {this.props.encourageRetry &&
             <button
-              onClick={this.handleClose}
+              onClick={this.handleClose.bind(this, false)}
               style={styles.buttonPrimary}
             >
               {locale.tryAgain()}
