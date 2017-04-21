@@ -4603,6 +4603,34 @@ en:
               name: 'Project: Build a Game'
             'Project: Design a Game':
               name: 'Project: Design a Game'
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Shapes and Randomness:
+              name: Shapes and Randomness
+            Variables:
+              name: Variables
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Conditionals:
+              name: Conditionals
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Project - Design a Game:
+              name: Project - Design a Game
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4815,6 +4843,16 @@ en:
               name: 'Project: Apps and Problem Solving'
             Human vs Computer Processing:
               name: Human vs Computer Processing
+            Input and Output:
+              name: Input and Output
+            Processing:
+              name: Processing
+            Storage:
+              name: Storage
+            Apps and Problem Solving:
+              name: Apps and Problem Solving
+            Project - Propose an App:
+              name: Project - Propose an App
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -6677,6 +6715,12 @@ en:
               name: 'Algorithms: Tangrams'
             Introduction:
               name: Introduction
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Functions in Farmer:
+              name: Functions in Farmer
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
           title: ''
           description_audience: ''
           description_short: ''
