@@ -9,10 +9,8 @@ markdown <<MARKDOWN
 - <u><strong title="The action of doing something over and over again.">Loops</strong></u>
 - <u><strong title="Loops contained inside of other loops.">Nested Loops</strong></u>
 
-<big>In the next stage, you will get to use <u><strong title="Instructions that run only under certain conditions.">conditionals</strong></u> to make your code more powerful.  Conditionals include ideas like:</big>
+<big>In the next stage, you will get to use <u><strong title="Blocks that run certain actions when something special happens.">Event blocks</strong></u> to make a game!</big>
 
-- <u><strong title="Loops that run `while` something is true.">Events</strong></u>
-- <u><strong title="Structure that runs some code if something is true, but runs different code if it is false. ">If/Else Statements</strong></u>
 
 
 MARKDOWN

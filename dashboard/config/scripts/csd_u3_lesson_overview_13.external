@@ -1,0 +1,23 @@
+name 'CSD U3 Lesson Overview 13'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+
+In this lesson students continue to explore ways to use conditional statements to take user input. In addition to the simple keyDown() command learned yesterday, students will learn about several other keyboard input commands as well as ways to take mouse input.
+# Vocabulary
+
+* **Conditionals** - Statements that only run under certain conditions.
+
+# New Blocks
+
+*  **[keyWentUp()](//docs.code.org/gamelab/keyWentUp/)** - `keyWentUp(code)`
+*  **[mouseWentDown()](//docs.code.org/gamelab/mouseWentDown/)** - `mouseWentDown(button)`
+*  **[mouseWentUp()](//docs.code.org/gamelab/mouseWentUp/)** - `mouseWentUp(button)`
+*  **[keyWentDown()](//docs.code.org/gamelab/keyWentDown/)** - `keyWentDown(code)`
+*  **[mouseDown()](//docs.code.org/gamelab/mouseDown/)** - `mouseDown(button)`
+*  **[mouseDidMove()](//docs.code.org/gamelab/mouseDidMove/)** - `mouseDidMove()`
+*  **[sprite.visible](//docs.code.org/gamelab/visible/)** - `sprite.visible`
+*  **[If/else statement](//docs.code.org/gamelab/ifElseBlock/)** - `If/else statement`
+
+MARKDOWN
