@@ -16,16 +16,13 @@ const levelsByLesson = [
     {
       status: LevelStatus.not_tried,
       url: '/step1/level1',
-      name: 'First progression',
-      levelNumber: 1
-
+      name: 'First progression'
     },
-    ...fakeLevels(5, {startLevel: 2}).map(level => ({...level, progression: 'Second Progression'})),
+    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
     {
       status: LevelStatus.not_tried,
       url: '/step3/level1',
-      name: 'Last progression',
-      levelNumber: 7
+      name: 'Last progression'
     },
   ],
   fakeLevels(2),
