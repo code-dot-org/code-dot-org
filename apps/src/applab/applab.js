@@ -583,6 +583,7 @@ Applab.init = function (config) {
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
     showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch,
+    appType: 'applab'
   });
 
   config.dropletConfig = dropletConfig;

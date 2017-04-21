@@ -308,6 +308,7 @@ GameLab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
+    appType: 'gamelab'
   });
 
   if (startInAnimationTab(getStore().getState())) {
