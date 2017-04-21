@@ -2,7 +2,6 @@ import React from "react";
 import SchoolCountry from "./SchoolCountry";
 import SchoolType from "./SchoolType";
 import SchoolState from "./SchoolState";
-// import i18n from '@cdo/locale'; // TODO
 
 const SchoolInfoBox = React.createClass({
   getInitialState: function () {

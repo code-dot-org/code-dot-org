@@ -8,12 +8,10 @@ const ASSIGNED_COUNTRY_FILTER = countryData => {
   return countryData.status === "assigned"; // limit to countries in the ISO 3166 standard
 };
 
-const COUNTRY_CODE_AND_NAME_EXTRACTOR = countryData => {
-  return {
-    countryCode: countryData.alpha2,
-    countryName: countryData.name
-  };
-};
+const COUNTRY_CODE_AND_NAME_EXTRACTOR = countryData => ({
+  countryCode: countryData.alpha2,
+  countryName: countryData.name
+});
 
 /**
  * Comparator to sort by countryName field
@@ -57,10 +55,19 @@ function SchoolCountry(props) {
   return (
     <div className="itemblock">
       <div className="labelblock">School Country</div>
-      <select className="form-control fieldblock" id="school-country" name="user[school_info_attributes][country]" type="select" value={props.country} onChange={props.onChange}>
+      <select
+        className="form-control fieldblock"
+        id="school-country"
+        name="user[school_info_attributes][country]"
+        type="select" value={props.country}
+        onChange={props.onChange}
+      >
         {
           allCountriesAndCodes.map(countryData =>
-            <option value={countryData.countryCode} key={countryData.countryCode}>
+            <option
+              value={countryData.countryCode}
+              key={countryData.countryCode}
+            >
               {countryData.countryName}
             </option>
           )
