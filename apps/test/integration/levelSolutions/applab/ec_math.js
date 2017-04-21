@@ -2,8 +2,8 @@ import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var dropletUtils = require('@cdo/apps/dropletUtils');
-var sinon = require('sinon');
+import {globalFunctions} from '@cdo/apps/dropletUtils';
+import sinon from 'sinon';
 
 module.exports = {
   app: "applab",
@@ -77,7 +77,7 @@ module.exports = {
         '  if (val < 0 || val > MAX) throw new Error("fail");\n' +
         '}\n',
       runBeforeClick: function (assert) {
-        var randomNumberSpy = sinon.spy(dropletUtils, 'randomNumber');
+        var randomNumberSpy = sinon.spy(globalFunctions, 'randomNumber');
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.strictEqual(randomNumberSpy.callCount, 100);
