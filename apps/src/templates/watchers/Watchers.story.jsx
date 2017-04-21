@@ -21,7 +21,7 @@ export default storybook => {
               {...defaultProps}
               watchedExpressions={Immutable.List()}
               isRunning={true}
-              appType={'gamelab'}
+              appType="gamelab"
             />
           </div>
         )
@@ -34,7 +34,7 @@ export default storybook => {
               {...defaultProps}
               watchedExpressions={Immutable.fromJS([{expression: 'cool', uuid: 1234}])}
               isRunning={true}
-              appType={'gamelab'}
+              appType="gamelab"
             />
           </div>
         )
