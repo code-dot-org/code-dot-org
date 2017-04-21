@@ -51,7 +51,7 @@ class TrainingDateConfirm extends FormComponent {
       followup = (
         <DeclineTrainingDate
           options={this.props.options}
-          onChange={this.handleChange.bind(this)}
+          onChange={this.handleChange}
           errors={this.props.errors}
           data={this.props.data}
         />
@@ -130,7 +130,7 @@ export default class DateConfirm extends FormComponent {
         {this.props.attendanceDates.teachercon &&
           <TeacherconDateConfirm
             options={this.props.options}
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             errors={this.props.errors}
             data={this.props.data}
             attendanceDates={this.props.attendanceDates}
@@ -140,7 +140,7 @@ export default class DateConfirm extends FormComponent {
         {this.props.attendanceDates.training &&
           <TrainingDateConfirm
             options={this.props.options}
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             errors={this.props.errors}
             data={this.props.data}
             course={this.props.course}
