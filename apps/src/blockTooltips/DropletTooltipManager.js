@@ -3,7 +3,7 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
-var dropletUtils = require('../dropletUtils');
+import {getAllAvailableDropletBlocks} from '../dropletUtils';
 import LegacyDialog from '../code-studio/LegacyDialog';
 
 /**
@@ -99,7 +99,7 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
  * codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
-  var blocks = dropletUtils.getAllAvailableDropletBlocks(
+  var blocks = getAllAvailableDropletBlocks(
     this.dropletConfig,
     this.codeFunctions,
     this.autocompletePaletteApisOnly);

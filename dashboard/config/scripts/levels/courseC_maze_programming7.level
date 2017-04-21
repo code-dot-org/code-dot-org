@@ -30,10 +30,9 @@
     "markdown_instructions": "*\"It's time to get angry!\"*\r\n\r\n**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming7_1\",\r\n  \"callout_text\": \"This is your first challenge puzzle! These are meant to be hard and may take several tries.\",\r\n  \"element_id\": \"#prompt\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"courseC_maze_programming7_2\",\r\n  \"callout_text\": \"These blocks are made of stone and can't be thrown away.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 50\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

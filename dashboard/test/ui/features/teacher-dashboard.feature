@@ -87,6 +87,26 @@ Feature: Using the teacher dashboard
     # Wait for the thumbnail URL to be sent to the server.
     And I wait until element ".project_updated_at" contains text "Saved"
 
+    # Create an artist project and generate a thumbnail.
+    #
+    # Ensure the predraw layer is included in the thumbnail, and that a project
+    # with that thumbnail appears in the projects list, by running and then
+    # remixing a project-backed script level which has a predraw layer.
+    #
+    # We can't simply share the script level, because that doesn't make it
+    # show up in the projects list. We can't just run the remixed project to
+    # generate the thumbnail, because it will have lost the predraw layer.
+    # Whether losing the predraw layer on remix is ok is a different issue, and
+    # until it is resolved we want to make sure thumbnails include predraw.
+
+    When I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/8"
+    And I wait for the page to fully load
+    And I press "runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
+    And I wait until initial thumbnail capture is complete
+    And I press the first ".project_remix" element to load a new page
+    And I wait for the page to fully load
+
     And I sign out
 
     # Load the section projects page
@@ -98,6 +118,7 @@ Feature: Using the teacher dashboard
     And I wait until element "#projects-list" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
+    And I wait until the image within element "tr:eq(3)" has loaded
 
     Then I see no difference for "projects list view"
     And I close my eyes

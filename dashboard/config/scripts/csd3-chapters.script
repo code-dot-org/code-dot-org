@@ -61,7 +61,7 @@ named_level 'CSD U3 Sprites scene challenge'
 
 stage 'The Draw Loop', flex_category: 'Chapter 1: Images and Animation'
 named_level 'CSD: Introduction to the Draw Loop'
-level 'CSD U3 Draw Loop Map'
+level 'CSD U3 Draw Loop Map 1'
 level 'CSD U3 Draw Loop Plugged predict 1', progression: 'Shapes and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged predict 2', progression: 'Shapes and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged orange and green', progression: 'Shapes and the Draw Loop'

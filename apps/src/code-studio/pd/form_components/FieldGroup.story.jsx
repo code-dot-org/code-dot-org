@@ -7,6 +7,7 @@ class TestWrapper extends React.Component {
     this.state = {
       data: '',
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(newState) {
@@ -27,7 +28,7 @@ class TestWrapper extends React.Component {
         type="text"
         label="this is a more full-featured example that errors if you type non-alpha characters"
         validationState={valid}
-        onChange={this.handleChange.bind(this)}
+        onChange={this.handleChange}
         value={this.state.data}
         required={true}
       />

@@ -104,6 +104,11 @@ module Pd
       end
     end
 
+    scope :active, -> {where(tracking_id: nil)}
+    scope :successfully_ordered, -> {where.not(order_id: nil)}
+    scope :shipped, -> {where(order_status: MimeoRestClient::STATUS_SHIPPED)}
+    scope :with_order_errors, -> {where.not(order_error: nil)}
+
     def full_address
       [street, apartment_or_suite, city, state, zip_code].compact.join(', ')
     end
@@ -141,7 +146,7 @@ module Pd
     end
 
     def shipped?
-      order_status == 'Shipped'
+      order_status == MimeoRestClient::STATUS_SHIPPED
     end
 
     # Place order with the Mimeo API, based on shipping info in a valid model
@@ -188,10 +193,13 @@ module Pd
     end
 
     # Update status and tracking info.
+    # @param max_attempts [Integer] Number of attempts on known retryable errors for each API call
+    #   (Default 2, i.e. one retry)
     # @return [Pd::WorkshopMaterialOrder] this object (with updated status and tracking)
-    def refresh
-      check_status
-      update_tracking_info
+    def refresh(max_attempts: 2)
+      client_params = {max_attempts: max_attempts}
+      check_status(client_params)
+      update_tracking_info(client_params)
 
       self
     end
@@ -203,13 +211,14 @@ module Pd
     #   order_status and order_status_changed_at
     # See MimeoRestClient::STATUS for available status strings.
     # Once 'Shipped', it will not be checked again.
-    def check_status
+    # @param client_params [Hash] params for the client initialization
+    def check_status(client_params)
       return nil unless order_id
       return order_status if MimeoRestClient.final_status? order_status
 
       self.order_status_last_checked_at = Time.zone.now
       begin
-        new_status = MimeoRestClient.new.get_status order_id
+        new_status = MimeoRestClient.new(client_params).get_status order_id
 
         if new_status != order_status
           self.order_status = new_status
@@ -224,12 +233,13 @@ module Pd
     # Set tracking_id and tracking_url, if present
     # This is idempotent. Once a tracking id is received, it will be kept on
     #   subsequent calls (without contacting Mimeo)
-    def update_tracking_info
+    # @param client_params [Hash] params for the client initialization
+    def update_tracking_info(client_params)
       return nil unless shipped?
 
       unless tracking_id.present?
         begin
-          response = MimeoRestClient.new.track order_id
+          response = MimeoRestClient.new(client_params).track order_id
           update!(
             tracking_id: response['TrackingNumber'],
             tracking_url: response['TrackingUrl']

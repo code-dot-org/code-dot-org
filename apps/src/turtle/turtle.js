@@ -49,6 +49,7 @@ import {
 } from '../containedLevels';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import project from '../code-studio/initApp/project';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -263,6 +264,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
   this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
   this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
+  this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
 
   // Create display canvas.
   var displayCanvas = this.createCanvas_('display', 400, 400);
@@ -1481,6 +1483,10 @@ Artist.prototype.checkAnswer = function () {
     this.testResults = TestResults.FREE_PLAY;
   }
 
+  if (project.getCurrentId() && project.isOwner()) {
+    this.getThumbnailPngBlob_(project.saveThumbnail);
+  }
+
   // Play sound
   this.studioApp_.stopLoopingAudio('start');
   if (this.testResults === TestResults.FREE_PLAY ||
@@ -1537,11 +1543,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   this.ctxFeedback.canvas.height = height || origHeight;
 
   // Clear the feedback layer
-  var style = this.ctxFeedback.fillStyle;
-  this.ctxFeedback.fillStyle = color.white;
-  this.ctxFeedback.clearRect(0, 0, this.ctxFeedback.canvas.width,
-    this.ctxFeedback.canvas.height);
-  this.ctxFeedback.fillStyle = style;
+  this.clearImage_(this.ctxFeedback);
 
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // For frozen skins, show everything - including background,
@@ -1550,22 +1552,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
     this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
-    // Draw the images layer.
-    if (!this.level.discardBackground) {
-      this.ctxFeedback.globalCompositeOperation = 'source-over';
-      this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
-          this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-    }
-
-    // Draw the predraw layer.
-    this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-
-    // Draw the user layer.
-    this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    this.drawImage_(this.ctxFeedback);
   }
 
   // Save the canvas as a png
@@ -1576,6 +1563,45 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   this.ctxFeedback.canvas.height = origHeight;
 
   return image;
+};
+
+/**
+ * Renders the artist's image as a Blob in PNG format. Relies on this.ctxImages,
+ * this.ctxPredraw, and this.ctxScratch to have already been drawn.
+ * @param {function(Blob)} callback Function to call with the PNG Blob.
+ * @private
+ */
+Artist.prototype.getThumbnailPngBlob_ = function (callback) {
+  this.clearImage_(this.ctxThumbnail);
+  this.drawImage_(this.ctxThumbnail);
+  this.ctxThumbnail.canvas.toBlob(callback);
+};
+
+Artist.prototype.clearImage_ = function (context) {
+  var style = context.fillStyle;
+  context.fillStyle = color.white;
+  context.clearRect(0, 0, context.canvas.width,
+    context.canvas.height);
+  context.fillStyle = style;
+};
+
+Artist.prototype.drawImage_ = function (context) {
+  // Draw the images layer.
+  if (!this.level.discardBackground) {
+    context.globalCompositeOperation = 'source-over';
+    context.drawImage(this.ctxImages.canvas, 0, 0,
+      context.canvas.width, context.canvas.height);
+  }
+
+  // Draw the predraw layer.
+  context.globalCompositeOperation = 'source-over';
+  context.drawImage(this.ctxPredraw.canvas, 0, 0,
+    context.canvas.width, context.canvas.height);
+
+  // Draw the user layer.
+  context.globalCompositeOperation = 'source-over';
+  context.drawImage(this.ctxScratch.canvas, 0, 0,
+    context.canvas.width, context.canvas.height);
 };
 
 // Helper for creating canvas elements.
