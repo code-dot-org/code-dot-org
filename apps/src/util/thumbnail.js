@@ -69,6 +69,20 @@ export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
 }
 
 /**
+ * Copies the image from the canvas, shrinks it to width and height equal to
+ * THUMBNAIL_SIZE, and saves it to the server.
+ * @param {HTMLCanvasElement} canvas
+ */
+export function captureThumbnailFromCanvas(canvas) {
+  if (!canvas) {
+    console.warn(`Thumbnail capture failed: element not found.`);
+    return;
+  }
+  const thumbnailCanvas = createThumbnail(canvas);
+  canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
+}
+
+/**
  * Paint an image of an existing canvas onto a new thumbnail canvas. If the
  * existing canvas is taller than it is wide, capture a square center region.
  * The new canvas has a white background, and width and height equal to
