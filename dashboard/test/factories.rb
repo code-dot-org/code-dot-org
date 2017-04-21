@@ -566,6 +566,7 @@ FactoryGirl.define do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
+    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     capacity 10
     transient do
       num_sessions 0
