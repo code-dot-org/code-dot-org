@@ -38,10 +38,20 @@ export default class ShowCodeToggle extends Component {
     showingBlocks: true,
   };
 
+  afterInit = () => {
+    this.forceUpdate();
+  };
+
   componentWillMount() {
     if (studioApp().editor) {
       this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
     }
+
+    studioApp().on('afterInit', this.afterInit);
+  }
+
+  componentWillUnmount() {
+    studioApp().removeListener('afterInit', this.afterInit);
   }
 
   onClick = () => {

@@ -77,7 +77,6 @@ testsContext.keys().forEach(testsContext);
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -410,7 +409,6 @@ testsContext.keys().forEach(testsContext);
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
-    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
@@ -424,12 +422,14 @@ testsContext.keys().forEach(testsContext);
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
+    'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
+    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js'
   };
 
   var otherEntries = {
@@ -449,6 +449,9 @@ testsContext.keys().forEach(testsContext);
 
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
+
+    // Hamburger for header on dashboard & pegasus.
+    hamburger: './src/hamburger/hamburger.js',
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 

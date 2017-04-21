@@ -38,7 +38,7 @@
     "all_animations_single_frame": "false",
     "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_L17_S7_C1\",\r\n  \"callout_text\": \"Score is printed here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"text(\\\"Score: \\\",10, 10, 80, 20);\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "encrypted_examples": "bGqivtttuskk8yVmknI6JMfFQVpgUozzAxLvUen7Ob53bIfAE225C9oL7mmX\nqwHv\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

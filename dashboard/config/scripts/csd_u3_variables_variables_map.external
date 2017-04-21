@@ -40,10 +40,10 @@ Good variable labels **indicate how the variable will be used in the program**. 
 There are a **few rules** when choosing labels:
 
 * Labels **cannot include spaces**. For example, `size of rectangle` would generate an error.
-* Labels with multiple words can be easier to read in **camelCase**. CamelCase looks like `sizeOfRectangle` or `aReallyLongLabelName`
-* Labels **cannot begin with a number**. `4sides` and `2morrow` will generate errors.
+* Labels with multiple words can be easier to read in **camelCase**. Good examples of camelCase are `sizeOfRectangle` or `aReallyLongLabelName`
+* Labels **cannot begin with a number**. For example, `4sides` and `2morrow` will generate errors.
 * Be very careful with **spelling**.
-* Labels are **case-sensitive**. `size` is not the same as `Size` or `SIZE`.
+* Labels are **case-sensitive**. This means `size` is not the same as `Size` or `SIZE`.
 
 
 MARKDOWN

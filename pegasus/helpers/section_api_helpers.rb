@@ -351,7 +351,6 @@ class DashboardSection
       select(*fields).
       where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
-
     section = new(row)
     return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
     nil
@@ -400,10 +399,14 @@ class DashboardSection
     return student_ids
   end
 
+  # @param student_id [Integer] The user ID of the student to unenroll.
+  # @return [Boolean] Whether the student's enrollment was removed.
   def remove_student(student_id)
     # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
 
-    rows_deleted = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
+    rows_deleted = Dashboard.db[:followers].
+      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
+      update(deleted_at: DateTime.now)
     rows_deleted > 0
   end
 
@@ -428,6 +431,7 @@ class DashboardSection
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
+      where(followers__deleted_at: nil).
       map do |row|
         row.merge(
           {

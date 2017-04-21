@@ -12,7 +12,7 @@ import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog'
 import {getStore} from '../redux';
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
-var ObservableEvent = require('../ObservableEvent');
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var RunLoop = require('../RunLoop');
 var Provider = require('react-redux').Provider;
 var NetSimView = require('./NetSimView');
@@ -138,9 +138,9 @@ var NetSim = module.exports = function () {
   /**
    * Event: Connected to, or disconnected from, a shard.
    * Specifically, added or removed our client node from the shard's node table.
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.shardChange = new ObservableEvent();
+  this.shardChange = new ObservableEventDEPRECATED();
   this.shardChange.register(this.onShardChange_.bind(this));
 
   /**

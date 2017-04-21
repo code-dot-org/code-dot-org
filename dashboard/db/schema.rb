@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413183424) do
+ActiveRecord::Schema.define(version: 20170417182609) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -416,7 +416,7 @@ ActiveRecord::Schema.define(version: 20170413183424) do
   end
 
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "regional_partner_id"
+    t.integer  "regional_partner_id",               null: false
     t.date     "start_date",                        null: false
     t.date     "end_date"
     t.string   "course"
@@ -563,25 +563,6 @@ ActiveRecord::Schema.define(version: 20170413183424) do
     t.index ["plc_course_unit_id"], name: "enrollment_unit_assignment_course_unit_index", using: :btree
     t.index ["plc_user_course_enrollment_id"], name: "enrollment_unit_assignment_course_enrollment_index", using: :btree
     t.index ["user_id"], name: "index_plc_enrollment_unit_assignments_on_user_id", using: :btree
-  end
-
-  create_table "plc_evaluation_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "answer"
-    t.integer  "plc_evaluation_question_id"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.integer  "plc_learning_module_id"
-    t.integer  "weight",                     default: 1, null: false
-    t.index ["plc_evaluation_question_id"], name: "index_plc_evaluation_answers_on_plc_evaluation_question_id", using: :btree
-    t.index ["plc_learning_module_id"], name: "index_plc_evaluation_answers_on_plc_learning_module_id", using: :btree
-  end
-
-  create_table "plc_evaluation_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "question"
-    t.integer  "plc_course_unit_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.index ["plc_course_unit_id"], name: "index_plc_evaluation_questions_on_plc_course_unit_id", using: :btree
   end
 
   create_table "plc_learning_modules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

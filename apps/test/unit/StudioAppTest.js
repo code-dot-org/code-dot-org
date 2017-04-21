@@ -4,6 +4,8 @@ import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps
 import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 
 describe('StudioApp.singleton', () => {
   throwOnConsoleErrors();
@@ -34,12 +36,17 @@ describe('StudioApp.singleton', () => {
     document.body.removeChild(containerDiv);
   });
 
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+  });
+  afterEach(restoreRedux);
+
   describe("the init() method", () => {
     let files;
     beforeEach(() => {
       files = [];
       sinon.stub(studioApp(), 'configureDom');
-      studioApp().configureRedux({});
       sinon.stub(assetsApi, 'getFiles').callsFake(cb => cb({files}));
       sinon.spy(listStore, 'reset');
     });
@@ -66,6 +73,26 @@ describe('StudioApp.singleton', () => {
 
       expect(assetsApi.getFiles).to.have.been.calledOnce;
       expect(listStore.reset).to.have.been.calledWith(files);
+    });
+
+    it("will emit an afterInit event", () => {
+      const listener = sinon.spy();
+      studioApp().on('afterInit', listener);
+      studioApp().init({
+        usesAssets: true,
+        enableShowCode: true,
+        containerId: 'foo',
+        level: {
+          editCode: true,
+          codeFunctions: {},
+        },
+        dropletConfig: {
+          blocks: [],
+        },
+        skin: {},
+      });
+
+      expect(listener).to.have.been.calledOnce;
     });
   });
 });

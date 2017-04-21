@@ -6,14 +6,21 @@ import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
 
 describe('ShowCodeToggle', () => {
-  let toggle, containerDiv, codeWorkspaceDiv;
+  let config, toggle, containerDiv, codeWorkspaceDiv;
 
   beforeEach(stubStudioApp);
   afterEach(restoreStudioApp);
   beforeEach(() => sinon.stub(LegacyDialog.prototype, 'show'));
   afterEach(() => LegacyDialog.prototype.show.restore());
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+  });
+  afterEach(restoreRedux);
 
   beforeEach(() => sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
     this.editor = {
@@ -29,7 +36,7 @@ describe('ShowCodeToggle', () => {
   }));
 
   beforeEach(() => {
-    const config = {
+    config = {
       enableShowCode: true,
       containerId: 'foo',
       level: {
@@ -56,7 +63,6 @@ describe('ShowCodeToggle', () => {
 `;
     document.body.appendChild(containerDiv);
 
-    studioApp().configureRedux({});
     studioApp().configure(config);
     studioApp().init(config);
   });
@@ -194,6 +200,29 @@ describe('ShowCodeToggle', () => {
     });
 
     it("will appear hidden", () => {
+      expect(toggle.containsMatchingElement(
+        <PaneButton
+          id="show-code-header"
+          headerHasFocus={false}
+          isRtl={false}
+          iconClass="fa fa-code"
+          label="Show Text"
+          style={{display: 'none'}}
+        />
+      )).to.be.true;
+    });
+  });
+
+  describe("when studioApp() is initialized again", () => {
+    beforeEach(() => {
+      toggle = mount(
+        <ShowCodeToggle />
+      );
+      config.enableShowCode = false;
+      studioApp().init(config);
+    });
+
+    it("will reflect the most recent config passed to studioApp().init()", () => {
       expect(toggle.containsMatchingElement(
         <PaneButton
           id="show-code-header"

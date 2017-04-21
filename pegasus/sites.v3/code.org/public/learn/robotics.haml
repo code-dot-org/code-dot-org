@@ -43,11 +43,14 @@ social:
     height: 222px;
   }
 
-#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
-  #desktop-header.desktop-feature
-    = view :header, variant: "desktop"
-  #mobile-header.mobile-feature
-    = view :header, variant: "mobile"
+#fullwidth{style: "background-color: #2799a4"}
+  - if request.cookies['pm'] == 'new_header'
+    = view :header2
+  - else
+    #desktop-header.desktop-feature
+      = view :header, variant: "desktop"
+    #mobile-header.mobile-headers.mobile-feature
+      = view :mobile_header_responsive
 
   .banner.container_responsive
     .col-50
@@ -55,6 +58,8 @@ social:
       .bannerRobotics= hoc_s(:learn_robotics_banner_blurb)
     .col-50.tablet-feature
       %img#robotImage{src: "/images/learn/robotics.png"}
+
+  .clear{style: "clear: both"}
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')

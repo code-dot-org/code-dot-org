@@ -66,6 +66,7 @@ var currentAbuseScore = 0;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
+let initialCaptureComplete = false;
 
 /**
  * Current state of our sources API data
@@ -312,6 +313,12 @@ var projects = module.exports = {
     // Used by UI tests
     isInitialSaveComplete() {
       return initialSaveComplete;
+    },
+    isInitialCaptureComplete() {
+      return initialCaptureComplete;
+    },
+    setCurrentData(data) {
+      current = data;
     },
   },
 
@@ -631,7 +638,21 @@ var projects = module.exports = {
       return;
     }
 
-    current = data;
+    // The following race condition can lead to thumbnail URLs not being stored
+    // in the project metadata:
+    //   1. Run button is pressed
+    //   2. channel.update() is called during project.save()
+    //   3. project.saveThumbnail() completes
+    //   4. updateCurrentData_ is called in the callback from channel.update
+    //
+    // Work around this by merging in new data into the existing data rather
+    // than overwriting it, preserving any newly-added thumbnail url. Revisit
+    // this if we ever change the thumbnail url, since the same race condition
+    // would clobber any changes to existing fields.
+
+    current = current || {};
+    Object.assign(current, data);
+
     if (isNewChannel) {
       // We have a new channel, meaning either we had no channel before, or
       // we've changed channels. If we aren't at a /projects/<appname> link,
@@ -860,19 +881,29 @@ var projects = module.exports = {
   },
 
   /**
-   * Uploads a thumbnail image to the thumbnail path in the files API, and
-   * stores a URL to access the thumbnail in current.thumbnailUrl.
+   * Uploads a thumbnail image to the thumbnail path in the files API. If
+   * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   * @returns {Promise} A promise indicating whether the upload was successful.
    */
   saveThumbnail(pngBlob) {
-    if (current && current.isOwner) {
+    if (!current) {
+      return Promise.reject('Project not initialized.');
+    }
+    if (!current.isOwner) {
+      return Promise.reject('Project not owned by current user.');
+    }
+
+    return new Promise((resolve, reject) => {
       const thumbnailPath = '.metadata/thumbnail.png';
       filesApi.putFile(thumbnailPath, pngBlob, () => {
         current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+        initialCaptureComplete = true;
+        resolve();
       }, error => {
-        console.warn(`error saving thumbnail image: ${error}`);
+        reject(`error saving thumbnail image: ${error}`);
       });
-    }
+    });
   },
 };
 

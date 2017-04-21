@@ -105,7 +105,7 @@ const appLoaders = {
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
   eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
-  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  gamelab: require('../../util/gamelab/loadTestableGamelab'),
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
@@ -124,7 +124,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   setAppSpecificGlobals(app);
 
   project.useFirebase.returns(!!testData.useFirebase);
-  project.isOwner.returns(true);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 

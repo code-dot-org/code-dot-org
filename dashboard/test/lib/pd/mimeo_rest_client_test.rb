@@ -2,6 +2,8 @@ require 'test_helper'
 require 'pd/mimeo_rest_client'
 
 class Pd::MimeoRestClientTest < ActiveSupport::TestCase
+  KNOWN_RETRYABLE_ERROR_FILENAME = 'mimeo_rest_client_known_retryable_errors.json'
+
   ORDER_ID = '00-1111-22222-33333'.freeze
 
   # This is the subset of fields we care about. The actual response has additional data.
@@ -152,7 +154,84 @@ class Pd::MimeoRestClientTest < ActiveSupport::TestCase
     assert_equal TRACKING_DATA, client.track(ORDER_ID)
   end
 
+  test 'retry known retriable errors' do
+    client = Pd::MimeoRestClient.new(max_attempts: 3)
+
+    # Load known retryable errors from file, and test each one
+    known_retryable_error_path = File.join(File.dirname(__FILE__), KNOWN_RETRYABLE_ERROR_FILENAME)
+    known_errors = JSON.parse(File.read(known_retryable_error_path))
+    known_errors.each do |known_error_details|
+      method = known_error_details['method']
+      path = known_error_details['path']
+
+      error = new_exception_with_response(
+        known_error_details['code'],
+        known_error_details['body'].to_json
+      )
+      mock_subresource = mock('RestClient::Resource')
+      @mock_resource.stubs(:[]).with(path).returns(mock_subresource)
+      expected_success_response = mock('RestClient::Response')
+
+      # Raise the error twice (due to max_attempts: 3 above), then succeed
+      retry_sequence = sequence('retries')
+      mock_subresource.expects(method).raises(error).twice.in_sequence(retry_sequence)
+      mock_subresource.expects(method).returns(expected_success_response).in_sequence(retry_sequence)
+
+      # Verify that it logs the retried errors
+      mock_log = mock
+      mock_log.expects(:info).with(includes("Retrying Pd::MimeoRestClient.#{method} after receiving error")).twice
+      CDO.expects(:log).returns(mock_log).twice
+
+      # send message to private get and post methods
+      actual_response = (
+        case method
+          when 'get'
+            client.send :get, path
+          when 'post'
+            client.send :post, path, {} # empty params
+          else
+            fail "Unexpected method in #{KNOWN_RETRYABLE_ERROR_FILENAME}: #{method}"
+        end
+      )
+
+      assert_equal(
+        expected_success_response,
+        actual_response,
+        "Unexpected response for known error #{known_error_details}"
+      )
+    end
+  end
+
+  test 'does not retry non-retriable error' do
+    client = Pd::MimeoRestClient.new
+
+    error = new_exception_with_response(400, 'This is an unexpected error')
+    mock_subresource = mock('RestClient::Resource')
+    @mock_resource.stubs(:[]).returns(mock_subresource)
+
+    mock_subresource.expects(:get).raises(error).once
+    actual_error = assert_raises RestClient::ExceptionWithResponse do
+      client.send :get, 'a path'
+    end
+    assert_equal error, actual_error
+
+    mock_subresource.expects(:post).raises(error).once
+    actual_error = assert_raises RestClient::ExceptionWithResponse do
+      client.send :post, 'a path', {}
+    end
+    assert_equal error, actual_error
+  end
+
   private
+
+  def new_exception_with_response(code, body)
+    RestClient::ExceptionWithResponse.new(
+      OpenStruct.new(
+        code: code,
+        body: body
+      )
+    )
+  end
 
   def mock_response(body)
     mock.tap do |mock_response|

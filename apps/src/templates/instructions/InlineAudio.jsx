@@ -76,7 +76,7 @@ const InlineAudio = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     locale: React.PropTypes.string,
-    isK1: React.PropTypes.bool,
+    textToSpeechEnabled: React.PropTypes.bool,
     src: React.PropTypes.string,
     message: React.PropTypes.string
   },
@@ -165,7 +165,7 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (this.props.isK1 && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
+    if (this.props.textToSpeechEnabled && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
       return (
         <div className="inline-audio">
           <div style={[styles.button, styles.volumeButton]}>
@@ -191,7 +191,7 @@ export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
-    isK1: state.pageConstants.isK1,
+    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
   };
 })(Radium(InlineAudio));

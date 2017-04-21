@@ -39,7 +39,9 @@
     "encrypted_examples": "oWrJ65sfN2v8hHbGp+Ut0Twf5445KHL7mzFWOZKowgOll6VJjpA3JnCvNkiC\nz4ye\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

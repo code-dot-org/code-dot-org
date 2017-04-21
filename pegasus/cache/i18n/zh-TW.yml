@@ -388,7 +388,7 @@
   minecraft_specs: "多種語言 | 最新瀏覽器或平板電腦 | 年級 2+"
   minecraft_designer_description: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
   minecraft_designer_button: "開始"
-  minecraft_adventurer_description: "使用程式積木讓 Steve 或 Alex 完成探險。"
+  minecraft_adventurer_description: "使用程式積木與 Steve 或 Alex 一起完成冒險。"
   minecraft_adventurer_button: "開始"
   minecraft_no_internet: "沒有網路嗎？"
   minecraft_download_adventurer: "下載離線版的 Minecraft 探險家。"
@@ -675,7 +675,9 @@
   dashboard_students_auto_generated: "自動生成"
   dashboard_students_reset_secret: "重設通關密錀"
   dashboard_students_reset_password: "重設密碼"
-  dashboard_students_share_section: "分享學習小組的登入頁面給你的學生："
+  dashboard_students_share_section: "告訴你的學生連結到 <a href=%{join_url}>%{join_url}</a>
+    並輸入學習小組代碼（%{section_code}）"
+  dashboard_students_share_section_secondary: "或者，分享學習小組的登入頁面給你的學生："
   dashboard_students_print_info: "列印學生登入卡片"
   dashboard_students_secret_picture_title: "通關圖片"
   dashboard_students_secret_picture: "這個學習小組用了<b>通關圖片</b>作為通關方式。意思是說你的每個學生有個取代登入密碼的秘密圖片，可以透過上方的網址，用它來登入。"
@@ -686,7 +688,8 @@
   dashboard_students_join_link: "告訴你的學生建立自己的帳戶並加入你的學習小組"
   dashboard_students_no_email: "如果你的學生沒有電子信箱，或是你想要為他們建立帳戶，可以將這個學習小組的通關類型改成<b>通關密語</b>或是<b>通關圖片</b>。"
   dashboard_students_print_page: "列印此頁"
-  dashboard_students_url: "網址"
+  dashboard_students_signin_card: "造訪 %{join_url} 並輸入 %{section_code}"
+  dashboard_students_url: "直連網址"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     點擊此處</a> 觀看我們的隱私聲明文件，你可以分享或列印給學生。
   dashboard_curriculum_k5_title: K-5 教師資源
@@ -886,6 +889,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: "單元 1：網際網路"
   csp2_name: "單元 2：數位資訊"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1376,6 +1381,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

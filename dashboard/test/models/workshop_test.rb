@@ -228,4 +228,10 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal string_500, workshop.location
     assert_equal string_500, workshop.instructions
   end
+
+  test "get attending teachers gets attending teachers" do
+    workshop = create(:pd_workshop, num_sessions: 2, enrolled_and_attending_users: 10, enrolled_unattending_users: 5)
+    assert_equal 15, workshop.enrollments.size
+    assert_equal 10, workshop.attending_teachers.size
+  end
 end

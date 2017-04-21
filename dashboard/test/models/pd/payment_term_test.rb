@@ -53,4 +53,21 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     assert_equal term_2, Pd::PaymentTerm.for_workshop(create(:pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.months, regional_partner: @regional_partner_1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP))
     assert_equal term_3, Pd::PaymentTerm.for_workshop(create(:pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.months, regional_partner: @regional_partner_1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1))
   end
+
+  test 'validations for payment terms' do
+    term_1 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, properties: {})
+    refute term_1.valid?
+
+    assert_equal ['Must have either per attendee payment or fixed payment'], term_1.errors.full_messages
+
+    term_2 = build(:pd_payment_term, start_date: Date.today)
+    term_2.save
+
+    assert_equal ['Regional partner is required'], term_2.errors.full_messages
+
+    term_3 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: nil)
+    term_3.save
+
+    assert_equal ['Start date is required'], term_3.errors.full_messages
+  end
 end

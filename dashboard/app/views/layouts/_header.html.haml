@@ -8,9 +8,17 @@
 
 - show_bug_links = script_level || (level && level.try(:is_project_level))
 
+- user_type = nil
+
 - show_header2 = request.cookies['pm'] == 'new_header'
 - header_class = show_header2 ? 'header2-wrapper' : 'header-wrapper'
 - header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
+
+- if show_header2
+  %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+  %script{src: minifiable_asset_path("js/hamburger.js")}
+  - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+  - user_type = request.cookies[cookie_key]
 
 .hide_on_mobile{class: header_class}
   - if show_bug_links
@@ -43,25 +51,24 @@
             - elsif @edit_blocks
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
             - elsif show_header2
-              - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-              - user_type = request.cookies[cookie_key]
-              .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
-                - if user_type == "teacher"
-                  %a.headerlink{:href=>"/student"}Home
-                  %a.headerlink{:href=>"/educate"}Courses
-                  %a.headerlink{:href=>"/promote"}Projects Gallery
-                  %a.headerlink{:href=>"/help"}Sections
-                  %a.headerlink{:href=>"/about"}Professional Learning
-                - elsif user_type == "student"
-                  %a.headerlink{:href=>"/student"}Home
-                  %a.headerlink{:href=>"/educate"}Courses
-                  %a.headerlink{:href=>"/promote"}Projects Gallery
-                - else
-                  %a.headerlink{:href=>"/student"}Learn
-                  %a.headerlink{:href=>"/educate"}Teach
-                  %a.headerlink{:href=>"/promote"}Stats
-                  %a.headerlink{:href=>"/help"}Help us
-                  %a.headerlink{:href=>"/about"}About
+              - unless defined? @level
+                .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
+                  - if user_type == "teacher"
+                    %a.headerlink{:href=>"/student"}Home
+                    %a.headerlink{:href=>"/educate"}Courses
+                    %a.headerlink{:href=>"/promote"}Projects Gallery
+                    %a.headerlink{:href=>"/help"}Sections
+                    %a.headerlink{:href=>"/about"}Professional Learning
+                  - elsif user_type == "student"
+                    %a.headerlink{:href=>"/student"}Home
+                    %a.headerlink{:href=>"/educate"}Courses
+                    %a.headerlink{:href=>"/promote"}Projects Gallery
+                  - else
+                    %a.headerlink{:href=>"/student"}Learn
+                    %a.headerlink{:href=>"/educate"}Teach
+                    %a.headerlink{:href=>"/promote"}Stats
+                    %a.headerlink{:href=>"/help"}Help us
+                    %a.headerlink{:href=>"/about"}About
 
           .header_right
             %span.freeplay_links
@@ -76,7 +83,17 @@
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
-              = render partial: 'shared/user_header_ajax'
+              - if show_header2
+                %span#sign_in_or_user
+              - else
+                = render partial: 'shared/user_header_ajax'
+
+              - if show_header2
+                - hamburger_class = current_user ? '' : 'show_on_tablet'
+                %span{class: hamburger_class}
+                  &nbsp;
+                  &nbsp;
+                  = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: {user_type: user_type}
 
 - if script_level
   - view_as = @user || current_user
@@ -86,7 +103,7 @@
   - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
   - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
 
-  - script_data = { disablePostMilestone: script.disable_post_milestone?, isHocScript: script.hoc?, name: script.name }
+  - script_data = script.summarize_short
   -# If caching, we don't know the sign in state, and should be nil
   - signed_in = @public_caching ? 'null' : !current_user.nil?
   :javascript

@@ -16,13 +16,14 @@
       "drawSprites": null,
       "var sprite = createSprite": null,
       "x": null,
-      "y": null
+      "y": null,
+      "World.frameRate": null
     },
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "var salt = createSprite(100,200);\r\nsalt.setAnimation(\"salt\");\r\n\r\nvar pepper = createSprite(300,200);\r\npepper.setAnimation(\"pepper\");\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  salt.y = randomNumber(200,210);\r\n\r\n  drawSprites();\r\n}",
+    "start_blocks": "World.frameRate = 10;\r\n\r\nvar salt = createSprite(100,200);\r\nsalt.setAnimation(\"salt\");\r\n\r\nvar pepper = createSprite(300,200);\r\npepper.setAnimation(\"pepper\");\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  salt.y = randomNumber(200,210);\r\n\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -53,7 +54,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/133ce86d945135b129a983bba03aa4ac-image-1492039159454.gif\", style=\"float:right;height:150px\">\r\n# Updating Properties\r\n\r\nThis level is almost identical to the last. You'll need to update sprite properties to make them seem like they're shaking.\r\n\r\n# Do This\r\n\r\nThis animation already is updating one sprite's y property to make it look like it's shaking\r\n\r\n* Run the program to see how it works.\r\n* Add code to this program to make the pepper shake just like the salt\r\n* Hint: This time you'll need to pull out the `sprite.y` block yourself. Where should it go?\r\n* Move on when your program looks like the picture to the right",
+    "markdown_instructions": "<img src=\"https://images.code.org/133ce86d945135b129a983bba03aa4ac-image-1492039159454.gif\", style=\"float:right;height:150px\">\r\n# Updating Properties\r\n\r\nThis level is almost identical to the last. One big change is that at the beginning of the program the `World.frameRate` block has been used to set the frame rate to 10. Usually this would be 30. Feel free to explore different frame rates.\r\n\r\n# Do This\r\n\r\nThis animation already is updating one sprite's y property to make it look like it's shaking\r\n\r\n* Run the program to see how it works.\r\n* Add code to this program to make the pepper shake just like the salt\r\n* Hint: This time you'll need to pull out the `sprite.y` block yourself. Where should it go?\r\n* Move on when your program looks like the picture to the right",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"3137e593-371e-4a11-bcdb-9c22374a7a36\",\r\n    \"371ec0e8-bdb6-4b08-84b1-80b1b3c73c01\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"3137e593-371e-4a11-bcdb-9c22374a7a36\": {\r\n      \"name\": \"pepper\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/_BVSyGoXu4sGSkXHYn6MfiG4bK12c7Po/category_generic_items/pepper.png\",\r\n      \"frameSize\": {\r\n        \"x\": 47,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_BVSyGoXu4sGSkXHYn6MfiG4bK12c7Po\"\r\n    },\r\n    \"371ec0e8-bdb6-4b08-84b1-80b1b3c73c01\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/DjTAusYmtcWJjN5diEbVQNihCih7yArz/category_generic_items/salt.png\",\r\n      \"frameSize\": {\r\n        \"x\": 46,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"DjTAusYmtcWJjN5diEbVQNihCih7yArz\"\r\n    }\r\n  }\r\n}",
     "contained_level_names": null
   },

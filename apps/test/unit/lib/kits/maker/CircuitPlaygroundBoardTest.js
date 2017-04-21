@@ -38,6 +38,13 @@ describe('CircuitPlaygroundBoard', () => {
       return playground;
     });
 
+    // Our sensors and thermometer block initialization until they receive data
+    // over the wire.  That's not great for unit tests, so here we stub waiting
+    // for data to resolve immediately.
+    sinon.stub(EventEmitter.prototype, 'once');
+    EventEmitter.prototype.once.withArgs('data').callsArg(1);
+    EventEmitter.prototype.once.callThrough();
+
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
   });
@@ -46,6 +53,7 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
+    EventEmitter.prototype.once.restore();
   });
 
   it('is an EventEmitter', () => {
@@ -115,11 +123,12 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('initializes a set of components', () => {
-      return board.connectToFirmware().then(() => {
-        board.initializeComponents();
-        // TODO (captouch): Add 8 when we re-enable
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
-      });
+      return board.connectToFirmware()
+        .then(() => board.initializeComponents())
+        .then(() => {
+          // TODO (captouch): Add 8 when we re-enable
+          expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        });
     });
   });
 

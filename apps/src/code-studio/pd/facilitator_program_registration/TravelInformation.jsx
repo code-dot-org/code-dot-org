@@ -4,9 +4,9 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 
-import ProgramRegistrationComponent from './ProgramRegistrationComponent';
+import FormComponent from '../form_components/FormComponent';
 
-export default class TravelInformation extends ProgramRegistrationComponent {
+export default class TravelInformation extends FormComponent {
   render() {
     return (
       <FormGroup>{/* Travel Information */}
@@ -117,9 +117,10 @@ export default class TravelInformation extends ProgramRegistrationComponent {
   }
 }
 
-TravelInformation.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+TravelInformation.propTypes = {
+  ...FormComponent.propTypes,
   teacherconLocation: React.PropTypes.string.isRequired,
-});
+};
 
 TravelInformation.associatedFields = [
   "addressStreet",
