@@ -6,10 +6,11 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "reference": "/csd/shape_size_map/index.html"
+    "reference": "/csd/shape_size_map/index.html",
+    "display_name": "Shapes and Parameters"
   },
   "published": true,
-  "notes": "",
+  "notes": "#",
   "level_concept_difficulty": {
   }
 }]]></config>
