@@ -157,6 +157,9 @@ def load_configuration
     # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
     ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
     ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']
+
+    # AWS Ruby SDK doesn't auto-detect region from EC2 Instance Metadata.
+    # Ref: https://github.com/aws/aws-sdk-ruby/issues/1455
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
