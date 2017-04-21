@@ -46,8 +46,6 @@ npm-debug.log
 /globals.yml
 /levelbuilder_ci_last_run
 /locals.yml
-/pegasus/config/newrelic.yml
-/pegasus/.sass-cache
 /rebuild
 /rebuild-apps
 /rebuild-shared

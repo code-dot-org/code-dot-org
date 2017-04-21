@@ -1,2 +1,7 @@
 /.bundle
+/.sass-cache
+
+/config/newrelic.yml
+
+# Can show up different places, so no leading slash
 fake_dashboard_for_tests.db
