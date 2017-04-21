@@ -89,14 +89,18 @@ Resources:
             Resource: 'arn:aws:s3:::*'
           - Effect: Allow
             Action:
-            - "cloudformation:SignalResource"
-            - "cloudformation:DescribeStackResources"
+            - "cloudformation:*"
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/adhoc-*"
+          - Effect: Allow
+            Action:
+            - "cloudformation:ValidateTemplate"
             - "autoscaling:CompleteLifecycleAction"
             - "ec2:DescribeImages"
             - "logs:Create*"
             - "logs:PutLogEvents"
             - "logs:PutRetentionPolicy"
             - "cloudwatch:PutMetricData"
+            - "acm:ListCertificates"
             Resource: "*"
           - Effect: Allow
             Action: ["dynamodb:*"]

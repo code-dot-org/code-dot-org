@@ -89,7 +89,10 @@ module AWS
             change_set = {changes: []}
             loop do
               sleep 1
-              change_set = cfn.describe_change_set(change_set_name: change_set_id)
+              change_set = cfn.describe_change_set(
+                change_set_name: change_set_id,
+                stack_name: stack_name
+              )
               break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
             end
             change_set.changes.each do |change|
@@ -102,7 +105,10 @@ module AWS
             CDO.log.info 'No changes' if change_set.changes.empty?
 
           ensure
-            cfn.delete_change_set(change_set_name: change_set_id)
+            cfn.delete_change_set(
+              change_set_name: change_set_id,
+              stack_name: stack_name
+            )
           end
         end
       end
