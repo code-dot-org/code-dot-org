@@ -237,6 +237,15 @@ module RakeUtils
     RakeUtils.system(*commands)
   end
 
+  def self.npm_rebuild(*args)
+    sudo = CDO.npm_use_sudo ? 'sudo' : ''
+    commands = []
+    commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
+    commands += "#{sudo} npm rebuild".split
+    commands += args
+    RakeUtils.system(*commands)
+  end
+
   # Installs list of global npm packages if not already installed
   def self.npm_install_g(*args)
     output = `npm list --global --parseable --long --depth=0 #{args.join ' '}`.strip

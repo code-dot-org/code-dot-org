@@ -37,9 +37,11 @@
     "encrypted_examples": "pe1Q/wNGt9tsPSqJzQcUyQO3dYi7omzj/TlVaekx7vuN5lBDX3LENRUtQ9QI\niKEr\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

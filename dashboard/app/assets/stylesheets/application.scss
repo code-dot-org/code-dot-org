@@ -291,7 +291,13 @@ img.video_thumbnail {
     display: inline-block;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 971px) {
+    .show_on_tablet {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 970px) {
     .hide_on_tablet {
       display: none;
     }
@@ -324,6 +330,10 @@ img.video_thumbnail {
       text-decoration: none;
       background-color: $orange;
     }
+  }
+
+  .button-signin {
+    text-decoration: none;
   }
 
   .project_updated_at {
@@ -1795,6 +1805,7 @@ a.download-video {
 .text-match,
 .free-response,
 .standalone-video,
+.curriculum-reference,
 .multi,
 .match {
   #markdown.teacher {
@@ -2728,5 +2739,29 @@ code {
     #noanswer {
       cursor: pointer;
     }
+  }
+}
+
+.info-box-teal {
+  border: 1px solid $teal;
+  height: 46px;
+  margin-bottom: 10px;
+  .info-box-left {
+    float: left;
+    background-color: $teal;
+    height: 42px;
+    padding-top: 4px;
+  }
+  .info-box-right {
+    .info-box-message {
+      font-weight: bold;
+      color: $teal;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    max-width: 400px;
+    float: left;
+    padding: 5px;
   }
 }

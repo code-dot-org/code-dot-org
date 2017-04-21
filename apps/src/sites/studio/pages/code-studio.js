@@ -92,4 +92,6 @@ setTimeout(function () {
 
 activateReferenceAreaOnLoad();
 
-window.CDOSounds = new Sounds();
+// CDOSounds is currently used in a few haml files so we need
+// to put it on window :(
+window.CDOSounds = Sounds.getSingleton();

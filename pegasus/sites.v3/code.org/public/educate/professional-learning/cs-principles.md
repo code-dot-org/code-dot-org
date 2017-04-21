@@ -14,7 +14,7 @@ We are still accepting applicants in the following regions:
 
 * Arizona
 * Bay Area and Central Coast, CA
-* Sacramento Valley and Nort Coast, CA
+* Sacramento Valley and North Coast, CA
 * San Joaquin Valley, CA
 * Colorado
 * Northeast Florida
@@ -23,6 +23,7 @@ We are still accepting applicants in the following regions:
 * Illinois
 * Indiana
 * Maine
+* Maryland
 * Montana
 * New Jersey
 * Nevada
@@ -32,6 +33,7 @@ We are still accepting applicants in the following regions:
 * Tennessee
 * Austin, TX
 * Dallas, TX
+* Utah
 * Virginia
 * Wisconsin
 

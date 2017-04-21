@@ -196,7 +196,7 @@
   just_did_course4: "Ders4'ü yeni bitirdim. @codeorg ile kontrol et"
   just_did_accelerated: "Hızlandırılmış Kursu yeni bitirdim. @codeorg ile kontrol et"
   twitter_teach_cs: "10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.\nhttp://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/."
-  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
+  twitter_cs_foundational: "Bilgisayar bilimi öğrenmek her öğrenci için temel bir bilgi olmalı. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Bir Saat Kodu öğrenin"
   beyond_hoc: "Bir saat boyunca"
   what_gender: "Cinsiyetiniz nedir?"
@@ -451,7 +451,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} öğretmenler Aralık ayında gerçekleşecek olan Hour of Code etkinliğinde onlara yardım edecek bilgisayar bilimlerine tutkulu gönüllüler arıyorlar. %{num_volunteers} Gönüllüler kaydoldu. Onlara katıl."
   volunteer_engineer_submission_intro_background: "Hour of code 180'den fazla ülkede on milyonlarca öğrenciye erişen ve bir saatliğine bilgisayar bilimleri eğitimi veren küresel bir hareket. Lütfen 7-13 Aralık tarihlerinde gerçekleşecek olan Bilgisayar Bilimleri Eğitimi Haftasına katılın."
   volunteer_engineer_submission_intro_recruit: Öğretmenler sınıfta veya hangi görüntülü sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri Eğitimi hakkında tutkulu kişileri arıyor.
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "Bizim <a href=\"%{volunteer_guide}\"> gönüllü programımız</a> hakkında daha fazla bilgi edinin."
   volunteer_engineer_submission_intro_signup: "Bir bilgisayar bilimleri öğrencisi veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class=\"form-required-field\"> *</span> ile işaretlenmiş alanların doldurulması zorunludur."
   volunteer_engineer_submission_intro_links: "Kendi Kod Saati etkinliğini düzenlemek ve <a href=\"%{volunteer_local}\">yerel gönüllü haritamızdan</a> gönüllü bulmak için <a href=\"%{learn_more}\">daha fazlasını öğren.</a>."
   volunteer_engineer_submission_update_information: "Bilgilerinizi güncelleyin"
@@ -480,7 +480,7 @@
   volunteer_engineer_submission_field_email_placeholder: "E-posta adresi"
   volunteer_engineer_submission_final_paragraph: "Kod Saati ve diğer gönüllü fırsatlarında sizinle temasa geçilebilmesi için, yerel öğretmenler için olan bir haritada kayıt edileceksiniz. Tam adresiniz ve e-postanız bizim tarafımızdan ASLA paylaşılmayacaktır. Fakat diğer bilgileriniz (yaklaşık konumunuz dahil) yerel öğretmenlerce açıkça görülebilir şekilde yayınlanacaktır."
   volunteer_engineer_submission_checkbox_contact: 'Öğretmenlerin gönüllülük fırsatları için benimle iletişime geçmesini kabul ediyorum (Not: Mail adresiniz paylaşılmaz)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "En az 18 yaşında olduğumu bildiririm."
   volunteer_engineer_submission_submit: "Gönder"
   volunteer_engineer_submission_thankyou: "Hour of Code gönüllüsü olduğunuz için teşekkür ederiz. Hour of Code 'a hazırlanmak ve diğer projelere gönüllü olmak için daha fazlasını <a href=\"%{url}\">buradan</a> öğrenebilirsiniz."
   volunteer_engineer_submission_commitment_uncertain: "Belirsiz"
@@ -663,7 +663,8 @@
   dashboard_students_auto_generated: "Otomatik olarak oluşturulan"
   dashboard_students_reset_secret: "Gizi sıfırla"
   dashboard_students_reset_password: "Şifreyi Sıfırlayın"
-  dashboard_students_share_section: 'Bu bölümün oturum açma sayfasını öğrencilerinizle paylaşın:'
+  dashboard_students_share_section: "Bu bölümün oturum açma sayfasını öğrencilerinizle paylaşın:"
+  dashboard_students_share_section_secondary: 'Bu bölümün oturum açma sayfasını öğrencilerinizle paylaşın:'
   dashboard_students_print_info: "Öğrencinizin kullanıcı giriş bilgilerinin bulunduğu kartlar yazdırın."
   dashboard_students_secret_picture_title: "Gizli Resim"
   dashboard_students_secret_picture: "Gizli resim"
@@ -674,6 +675,7 @@
   dashboard_students_join_link: "Öğrencilerinize, bir hesap oluşturmalarını ve sizin bölümünüze katılmalarını söyleyin"
   dashboard_students_no_email: "Eğer öğrencilerinizin e-posta adresleri yoksa, veya onlar için hesap oluşturmak istiyorsanız, bu bölümün Giz tipini <b>sözcük</b> veya <b>resim</b> olarak değiştirebilirsiniz."
   dashboard_students_print_page: "Bu Sayfayı Yazdır"
+  dashboard_students_signin_card: "%{join_url} ziyaret edin ve %{section_code} girin"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "Gizlilik dökümanımızı öğrencileriniz ile paylaşmak ya da yazdırmak için <a href=\"/privacy/student-privacy\", target=\"_blank\">buraya tıklayın.</a>"
   dashboard_curriculum_k5_title: "K-5 Eğitimci Kaynakları"
@@ -869,6 +871,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Ünite 5: Veri ve toplum'
+  csd6_name: 'Ünite 6: Fiziksel bilişim'
   csp1_name: 'Ünite 1: Internet'
   csp2_name: 'Ünite 2: Sayısal bilgi'
   csp3_name: 'Unit 3: Algorithms and Programming'

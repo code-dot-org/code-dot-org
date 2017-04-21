@@ -3716,6 +3716,7 @@ en:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
             CSP Student Post Survey Staging: CSP Student Post Survey Staging
             CSP Longitudinal Contact Request: CSP Longitudinal Contact Request
+            Participate in a longitudinal study!: Participate in a longitudinal study!
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -3724,6 +3725,8 @@ en:
               name: CSP Student Post Survey Staging
             CSP Longitudinal Contact Request:
               name: CSP Longitudinal Contact Request
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
@@ -4524,8 +4527,8 @@ en:
               name: Test stage with bubbles
         csd3:
           title: CSD Unit 3 - Interactive Games and Animations
-          description: U3 of Discoveries
-          description_short: Programming
+          description: ''
+          description_short: Introduction to Programming in Game Lab
           stage:
             Booleans and Conditionals: Booleans and Conditionals
             Complex Conditionals: Complex Conditionals
@@ -4546,6 +4549,20 @@ en:
             Using the Game Design Process: Using the Game Design Process
             'Project: Build a Game': 'Project: Build a Game'
             'Project: Design a Game': 'Project: Design a Game'
+            Programming for Entertainment: Programming for Entertainment
+            Plotting Shapes: Plotting Shapes
+            Shapes and Randomness: Shapes and Randomness
+            Variables: Variables
+            Sprites: Sprites
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Sprite Movement: Sprite Movement
+            Conditionals: Conditionals
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            Booleans Unplugged: Booleans Unplugged
+            Project - Interactive Card: Project - Interactive Card
+            Project - Design a Game: Project - Design a Game
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -4586,6 +4603,34 @@ en:
               name: 'Project: Build a Game'
             'Project: Design a Game':
               name: 'Project: Design a Game'
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Shapes and Randomness:
+              name: Shapes and Randomness
+            Variables:
+              name: Variables
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Conditionals:
+              name: Conditionals
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Project - Design a Game:
+              name: Project - Design a Game
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4771,6 +4816,11 @@ en:
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+            Input and Output: Input and Output
+            Processing: Processing
+            Storage: Storage
+            Apps and Problem Solving: Apps and Problem Solving
+            Project - Propose an App: Project - Propose an App
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4793,6 +4843,16 @@ en:
               name: 'Project: Apps and Problem Solving'
             Human vs Computer Processing:
               name: Human vs Computer Processing
+            Input and Output:
+              name: Input and Output
+            Processing:
+              name: Processing
+            Storage:
+              name: Storage
+            Apps and Problem Solving:
+              name: Apps and Problem Solving
+            Project - Propose an App:
+              name: Project - Propose an App
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -6295,6 +6355,14 @@ en:
             'Project: Interactive Card': 'Project: Interactive Card'
             Keyboard Input: Keyboard Input
             Other Forms of Input: Other Forms of Input
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games
@@ -6334,6 +6402,22 @@ en:
               name: Keyboard Input
             Other Forms of Input:
               name: Other Forms of Input
+            Velocity:
+              name: Velocity
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Functions
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            'Project: Design a Game':
+              name: 'Project: Design a Game'
         csd5:
           stage:
             Representation Matters: Representation Matters
@@ -6484,3 +6568,160 @@ en:
               name: Processing with Apps
             'Project: Apps and Problem Solving':
               name: 'Project: Apps and Problem Solving'
+        csd2-draft:
+          stage:
+            Text on the Web: Text on the Web
+            Digital Footprint: Digital Footprint
+            Images in HTML: Images in HTML
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          stages:
+            Text on the Web:
+              name: Text on the Web
+            Digital Footprint:
+              name: Digital Footprint
+            Images in HTML:
+              name: Images in HTML
+        csd1-draft:
+          stage:
+            Intro to Problem Solving: Intro to Problem Solving
+            The Problem Solving Process: The Problem Solving Process
+            Exploring Problem Solving: Exploring Problem Solving
+            What is a Computer?: What is a Computer?
+            Inputs and Outputs: Inputs and Outputs
+            Processing: Processing
+            Storage: Storage
+            Apps and Problem Solving: Apps and Problem Solving
+            Project - Propose an App: Project - Propose an App
+            Input and Output: Input and Output
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          stages:
+            Intro to Problem Solving:
+              name: Intro to Problem Solving
+            The Problem Solving Process:
+              name: The Problem Solving Process
+            Exploring Problem Solving:
+              name: Exploring Problem Solving
+            What is a Computer?:
+              name: What is a Computer?
+            Inputs and Outputs:
+              name: Inputs and Outputs
+            Processing:
+              name: Processing
+            Storage:
+              name: Storage
+            Apps and Problem Solving:
+              name: Apps and Problem Solving
+            Project - Propose an App:
+              name: Project - Propose an App
+            Input and Output:
+              name: Input and Output
+        csd3-chapters:
+          stage:
+            Programming for Entertainment: Programming for Entertainment
+            Plotting Shapes: Plotting Shapes
+            Drawing in Game Lab: Drawing in Game Lab
+            Shapes and Randomness: Shapes and Randomness
+            Variables: Variables
+            Sprites: Sprites
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Sprite Movement: Sprite Movement
+            Booleans and Conditionals: Booleans and Conditionals
+            Conditionals: Conditionals
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Functions
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Design a Game': 'Project: Design a Game'
+            'Chapter 1: Images and Animation': 'Chapter 1: Images and Animation'
+            'null': 'null'
+            temp: temp
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+            Shapes and Randomness:
+              name: Shapes and Randomness
+            Variables:
+              name: Variables
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans and Conditionals:
+              name: Booleans and Conditionals
+            Conditionals:
+              name: Conditionals
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            'Project: Interactive Card':
+              name: 'Project: Interactive Card'
+            Velocity:
+              name: Velocity
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Functions
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            'Project: Design a Game':
+              name: 'Project: Design a Game'
+            'Chapter 1: Images and Animation':
+              name: 'Chapter 1: Images and Animation'
+            'null':
+              name: 'null'
+            temp:
+              name: temp
+        coursef-ramp:
+          stage:
+            'Algorithms: Tangrams': 'Algorithms: Tangrams'
+            Introduction: Introduction
+            Ice Age Play Lab: Ice Age Play Lab
+            Functions in Farmer: Functions in Farmer
+            Conditionals and Functions in Bee: Conditionals and Functions in Bee
+          stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: Introduction
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Functions in Farmer:
+              name: Functions in Farmer
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

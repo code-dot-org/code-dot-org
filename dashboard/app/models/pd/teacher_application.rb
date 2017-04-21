@@ -21,12 +21,12 @@
 class Pd::TeacherApplication < ActiveRecord::Base
   PROGRAM_DETAILS_BY_COURSE = {
     'csd' => {
-      name: 'CS Discoveries',
+      name: Pd::Workshop::COURSE_CSD,
       url: 'https://code.org/educate/professional-learning/cs-discoveries',
       approval_form_id: '1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A'
     },
     'csp' => {
-      name: 'CS Principles',
+      name: Pd::Workshop::COURSE_CSP,
       url: 'https://code.org/educate/professional-learning/cs-principles',
       approval_form_id: '1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ'
     }

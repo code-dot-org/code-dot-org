@@ -1,7 +1,25 @@
 name 'post-assessment survey heading1'
 
 markdown <<MARKDOWN
-First, we have some questions for you about your schoolwork in general.
+# Welcome to the CS Principles post-course survey!
+
+
+
+This questionnaire will be used to help Code.org understand and improve its work in schools across the country, and to make the CS Principles course better. 
+
+Please note this is NOT a student evaluation, nor is it an evaluation of your school or your teacher.
+
+**Your honesty and privacy are important to us**: 
+
+(1) Your personal responses on this survey are *anonymous* and will never be revealed publicly.
+
+(2) Your responses will *never* be tied back to you personally.
+
+(3) Your teacher can see results for the whole class, but *without names* associated with responses.
+
+(4) Please answer honestly and thoughtfully. Code.org takes your responses seriously.
+
+## First, we have some questions for you about your schoolwork in general.
 
 **How much do you agree or disagree with the following statements?**
 MARKDOWN

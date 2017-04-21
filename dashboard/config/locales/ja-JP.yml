@@ -81,6 +81,8 @@
     forgot_password: "パスワードをお忘れですか？"
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} 人の生徒がサインアップ済みです。"
     teacher_count: "%{count} 人の教師がサインアップ済みです。"
@@ -184,6 +186,14 @@
       チュートリアルは、見た目にも楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータサイエンスの基本的な概念を学びます。ビル ・ ゲイツ氏、マーク・ザッカーバーグ氏、アングリーバード、Plants vs. Zombiesからコードを学ぼう ！:-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "招待状を送信しました"
     added_teacher: "%{name} あなたの先生として追加"
@@ -197,8 +207,6 @@
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
     mail:
-      invite_student:
-        subject: "%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}"
       student_disassociated:
         subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
   reports:
@@ -415,6 +423,7 @@
       知事とアメリカ最大企業のCEOが、 米議会に、学生のコンピューターサイエンス教育への資金供給を求める公開書簡に参加しています。"
     announcement_petition_button: "あなたの名前を追加します"
     announcement_go_beyond_button: "超えて行く"
+    announcement_apply_now: Apply now
     announcement_all: "先生用ブログで、新しい機能や最新情報をアップデートします。<a href='%{teacher_blog_url}'
       target='_blank'> 過去のお知らせを参照する。</a>"
     announcement_hoc_launch: "この 12 月 5-11 日、180 カ国以上で数千の教育者がHour of Code によってコンピュータ
@@ -448,14 +457,15 @@
     announcement_apcsp_recruitment3: "今年の AP CS 原理試験は記録を破る態勢を整えています。AP コンピューターサイエンスでは、試験に参加する学生は、劇的に多様化していますが、あなたの助けが必要です。すべての
       CS 原理学生が、AP CSP 試験を受けるのを奨励して、 <a href='%{gift_url}' target='_blank'> ギフトカード、ラップトップ、その他の素晴らしい景品</a>を獲得するチャンスです！<a
       href='%{video_url}' target='_blank'>ビデオ</a> をシェアして学生が、試験を受けた全国の仲間の声を聞けるようにしましょう。"
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
-    section_code_not_entered: Current_section_code を入力してください。
     section_code_cant_be_current_section: "現在のセクションを、新しいセクションと同じにすることはできません。"
     current_section_dne: "申し訳ありませんが、セクション %{current_section_code} は存在しません。別のセクション
       コードを入力してください。"
-    students_not_yours: "あなたに属していないセクションから、学生を移動することはできません。"
-    stay_enrolled_not_entered: Stay_enrolled_in_current_section を入力してください。
     student_ids_not_entered: "学生番号を入力してください。"
     student_not_found: "学生は見つかりませんでした。"
     all_students_must_be_in_current_section: "すべての学生は、現在あなたのセクションに在籍している必要があります。"

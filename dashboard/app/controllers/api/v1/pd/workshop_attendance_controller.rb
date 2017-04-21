@@ -46,7 +46,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     if teacher.nil? && current_user.admin? && params[:admin_override]
       # Still the teacher account must exist.
       teacher = User.find_by!(id: user_id, user_type: User::TYPE_TEACHER)
-      @workshop.section.add_student teacher, move_for_same_teacher: false
+      @workshop.section.add_student teacher
     end
 
     # renders a 404 (not found)

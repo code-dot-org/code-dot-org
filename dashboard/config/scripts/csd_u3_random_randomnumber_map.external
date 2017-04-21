@@ -1,5 +1,5 @@
 name 'CSD U3 Random randomNumber Map'
-css 'unplugged'
+display_name 'Random Numbers'
 markdown <<MARKDOWN
 # Random Numbers
 

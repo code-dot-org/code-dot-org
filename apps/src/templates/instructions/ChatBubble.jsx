@@ -40,9 +40,9 @@ const styles = {
   }
 };
 
-const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage, isK1 }) => {
+const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage, textToSpeechEnabled }) => {
   borderColor = borderColor || 'white';
-  const showAudioControls = isK1 && (ttsUrl || ttsMessage);
+  const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 
   return (
     <div style={styles.container}>
@@ -73,13 +73,13 @@ ChatBubble.propTypes = {
   skinId: React.PropTypes.string,
   ttsUrl: React.PropTypes.string,
   ttsMessage: React.PropTypes.string,
-  isK1: React.PropTypes.bool,
+  textToSpeechEnabled: React.PropTypes.bool,
 };
 
 export default connect(state => {
   return {
     skinId: state.pageConstants.skinId,
     isMinecraft: !!state.pageConstants.isMinecraft,
-    isK1: state.pageConstants.isK1,
+    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
   };
 })(Radium(ChatBubble));

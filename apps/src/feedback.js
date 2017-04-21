@@ -204,24 +204,37 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
     const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
+    const isPerfect = actualBlocks <= idealBlocks;
 
-    const progress = experiments.isEnabled('gamification') ?
-      FeedbackUtils.calculateStageProgress(
-        actualBlocks <= idealBlocks,
+    const progress = FeedbackUtils.calculateStageProgress(
+        isPerfect,
         hintsUsed,
         options.response.level_id,
-        isFinite(idealBlocks)) :
-      {};
+        isFinite(idealBlocks));
+
+    const achievements = FeedbackUtils.getAchievements(
+        isPerfect,
+        hintsUsed,
+        idealBlocks,
+        actualBlocks,
+        progress);
+    const msgParams = {
+      puzzleNumber: options.level.puzzle_number || 0,
+      numBlocks: idealBlocks,
+    };
+    const feedbackMessage = isPerfect ?
+        msg.nextLevel(msgParams) :
+        msg.numBlocksNeeded(msgParams);
 
     let onContinue = options.onContinue;
-    if (experiments.isEnabled('gamification') && lastInStage) {
+    if (lastInStage) {
       onContinue = () => {
         ReactDOM.render(
           <StageAchievementDialog
             stageName={stageName}
             assetUrl={this.studioApp_.assetUrl}
             onContinue={onContinue}
-            showStageProgress={experiments.isEnabled('gamification')}
+            showStageProgress={true}
             newStageProgress={progress.newStageProgress}
             numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
           />,
@@ -230,9 +243,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       };
     }
 
-    let showPuzzleRatingButtons = false;
-    if (options.response && options.response.puzzle_ratings_enabled) {
-      showPuzzleRatingButtons = true;
+    const showPuzzleRatingButtons =
+        options.response && options.response.puzzle_ratings_enabled;
+    if (showPuzzleRatingButtons) {
       const prevOnContinue = onContinue;
       onContinue = () => {
         puzzleRatingUtils.cachePuzzleRating(container, {
@@ -246,18 +259,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
-        puzzleNumber={options.level.puzzle_number || 0}
-        idealBlocks={idealBlocks}
-        actualBlocks={actualBlocks}
-        hintsUsed={hintsUsed}
+        achievements={achievements}
         assetUrl={this.studioApp_.assetUrl}
-        onContinue={onContinue}
-        showStageProgress={experiments.isEnabled('gamification')}
+        encourageRetry={!isPerfect}
+        feedbackMessage={feedbackMessage}
         oldStageProgress={progress.oldStageProgress}
-        newPassedProgress={progress.newPassedProgress}
-        newPerfectProgress={progress.newPerfectProgress}
-        newHintUsageProgress={progress.newHintUsageProgress}
+        onContinue={onContinue}
         showPuzzleRatingButtons={showPuzzleRatingButtons}
+        showStageProgress={true}
       />, container);
     return;
   }
@@ -418,6 +427,54 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
+  }
+};
+
+FeedbackUtils.getAchievements = function (
+    isPerfect,
+    hintsUsed,
+    idealNumBlocks,
+    numBlocks,
+    stageProgress) {
+  const achievements = [{
+    check: true,
+    msg: msg.puzzleCompleted(),
+    progress: stageProgress.newPassedProgress,
+  }];
+  if (isFinite(idealNumBlocks)) {
+    achievements.push({
+      check: numBlocks <= idealNumBlocks,
+      msg: FeedbackUtils.blocksUsedMessage(numBlocks, idealNumBlocks),
+      progress: stageProgress.newPerfectProgress,
+    });
+  }
+  if (hintsUsed < 2) {
+    achievements.push({
+      check: true,
+      msg: FeedbackUtils.hintsMessage(hintsUsed),
+      progress: stageProgress.newHintUsageProgress,
+    });
+  }
+  return achievements;
+};
+
+FeedbackUtils.blocksUsedMessage = function (numBlocks, idealNumBlocks) {
+  if (numBlocks > idealNumBlocks) {
+    return msg.usingTooManyBlocks({numBlocks});
+  } else if (numBlocks === idealNumBlocks) {
+    return msg.exactNumberOfBlocks({numBlocks});
+  } else {
+    return msg.fewerNumberOfBlocks({numBlocks});
+  }
+};
+
+FeedbackUtils.hintsMessage = function (numHints) {
+  if (numHints === 0) {
+    return msg.withoutHints();
+  } else if (numHints === 1) {
+    return msg.usingOneHint();
+  } else {
+    return msg.usingHints();
   }
 };
 
@@ -961,7 +1018,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {Object} options
  * @param {number} options.feedbackType Test results (a constant property
- *     of this.TestResults).false
+ *     of TestResults).false
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -1454,13 +1511,13 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
   options = options || {};
   if (this.studioApp_.editCode) {
     if (levelComplete) {
-      return this.studioApp_.TestResults.ALL_PASS;
+      return TestResults.ALL_PASS;
     } else if (options.executionError && options.executionError.err instanceof SyntaxError) {
-      return this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+      return TestResults.SYNTAX_ERROR_FAIL;
     } else if (options.executionError) {
-      return this.studioApp_.TestResults.RUNTIME_ERROR_FAIL;
+      return TestResults.RUNTIME_ERROR_FAIL;
     } else {
-      return this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
+      return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
   }
   if (shouldCheckForEmptyBlocks) {

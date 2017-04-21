@@ -23,17 +23,22 @@ class Pd::PaymentTerm < ApplicationRecord
   belongs_to :regional_partner
 
   validates_presence_of :regional_partner
+  validates_presence_of :start_date
+  validate :sufficient_contract_terms
+
+  before_create :truncate_previous_term
 
   serialized_attrs %w(
     per_attendee_payment
     fixed_payment
     minimum_attendees_for_payment
     maximum_attendees_for_payment
+    facilitator_payment
     pay_facilitators
   )
 
   def self.for_workshop(workshop)
-    return nil unless workshop.regional_partner
+    raise "Cannot calculate payment for workshop #{workshop.id} because there is no regional partner" unless workshop.regional_partner
 
     found_payment_terms = nil # Should always be exactly one term, otherwise we are in bad state
 
@@ -61,5 +66,73 @@ class Pd::PaymentTerm < ApplicationRecord
     end
 
     found_payment_terms[0]
+  end
+
+  def date_range
+    start_date..(end_date || Date::Infinity.new)
+  end
+
+  private
+
+  def sufficient_contract_terms
+    unless per_attendee_payment? || fixed_payment
+      errors.add(:base, 'Must have either per attendee payment or fixed payment')
+    end
+  end
+
+  def truncate_previous_term
+    extant_payment_terms = Pd::PaymentTerm.where(
+      regional_partner: regional_partner,
+      course: course,
+      subject: subject
+    )
+
+    # Payment terms that conflict with the start date
+    extant_payment_terms.each do |old_payment_term|
+      old_term_range = old_payment_term.start_date..(old_payment_term.end_date || Date::Infinity.new)
+
+      next unless date_range.overlaps?(old_term_range)
+
+      # Four possible overlaps, illustrated by this ascii art
+      # Old ends during new
+      #  <---Old--->
+      #       <---New--->
+
+      # Old contains new
+      #  <---Old------------>
+      #       <---New--->
+
+      # New ends during old
+      #       <---Old--->
+      #  <---New--->
+
+      # New contains old
+      #      <---Old--->
+      #  <----------New--->
+      if old_payment_term.start_date < start_date
+        unless end_date.nil? || (old_payment_term.end_date && old_payment_term.end_date < end_date)
+          # Old contains new means we have to create a new payment term
+          Pd::PaymentTerm.create!(
+            start_date: end_date,
+            end_date: old_payment_term.end_date,
+            regional_partner: regional_partner,
+            course: course,
+            subject: subject,
+            properties: old_payment_term.properties
+          )
+        end
+        # in both old ends during new and old contains new, update
+        # the old payment term
+        old_payment_term.update!(end_date: start_date)
+      else
+        if end_date && end_date < (old_payment_term.end_date || Date::Infinity.new)
+          # New ends during old, move the old start date up
+          old_payment_term.update(start_date: end_date)
+        else
+          # New contains old - no need for the old term
+          old_payment_term.destroy
+        end
+      end
+    end
   end
 end

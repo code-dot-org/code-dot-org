@@ -88,6 +88,12 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming',
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps',
       SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'
+    ],
+    COURSE_CSD => [
+      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development',
+      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games',
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society',
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'
     ]
   }
 
@@ -461,5 +467,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def associated_online_course
     Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+  end
+
+  # Get all the teachers that have actually attended this workshop via the attendence.
+  def attending_teachers
+    sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 end

@@ -91,7 +91,7 @@ FactoryGirl.define do
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
@@ -566,6 +566,7 @@ FactoryGirl.define do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
+    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     capacity 10
     transient do
       num_sessions 0
@@ -591,7 +592,7 @@ FactoryGirl.define do
       end
       evaluator.enrolled_unattending_users.times do
         teacher = create :teacher
-        workshop.enrollment << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
   end
@@ -625,6 +626,7 @@ FactoryGirl.define do
       user nil
       association :school, factory: :public_school, strategy: :build
       association :school_district, strategy: :build
+      course 'csd'
     end
 
     initialize_with do
@@ -639,7 +641,7 @@ FactoryGirl.define do
         principalFirstName: 'Minerva',
         principalLastName: 'McGonagall',
         principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: 'csd',
+        selectedCourse: course,
         phoneNumber: '555-555-5555',
         gradesAtSchool: [10],
         genderIdentity: 'Male',
@@ -663,12 +665,8 @@ FactoryGirl.define do
   end
 
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    regional_partner nil
-    start_date "2017-04-06"
-    end_date nil
-    course nil
-    subject nil
-    properties {{}}
+    start_date {Date.today}
+    fixed_payment 50
   end
 
   factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do

@@ -297,23 +297,23 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="studio_saySpriteParams" inline="true" deletable="false">
+        <block type="studio_saySpriteParams" inline="true" deletable="false" movable="false">
           <title name="SPRITE">0</title>
           <value name="TEXT">
-            <block type="text_join_simple" inline="false" deletable="false" movable="false" editable="false" inputcount="3">
+            <block type="text_join_simple" inline="false" deletable="false" movable="false" inputcount="3">
               <value name="ADD0">
-                <block type="text" deletable="false" editable="false">
-                  <title name="TEXT">???</title>
+                <block type="text" deletable="false" movable="false">
+                  <title name="TEXT">Today, I'm wearing my </title>
                 </block>
               </value>
               <value name="ADD1">
                 <block type="variables_get">
-                  <title name="VAR">???</title>
+                  <title name="VAR">color</title>
                 </block>
               </value>
               <value name="ADD2">
-                <block type="text" deletable="false" movable="false" editable="false">
-                  <title name="TEXT">???</title>
+                <block type="text" deletable="false" movable="false">
+                  <title name="TEXT"> jersey!</title>
                 </block>
               </value>
             </block>
