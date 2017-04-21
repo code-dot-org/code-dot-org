@@ -36,9 +36,6 @@ npm-debug.log
 /build-started
 /coverage
 /crontab
-/i18n/code.org/crowdin.yaml
-/i18n/curriculum/crowdin.yaml
-/i18n/hourofcode.com/crowdin.yaml
 /globals.yml
 /levelbuilder_ci_last_run
 /locals.yml
