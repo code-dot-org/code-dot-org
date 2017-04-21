@@ -3,7 +3,7 @@ import $ from 'jquery';
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
 var dom = require('../dom');
-var dropletUtils = require('../dropletUtils');
+import {getAllAvailableDropletBlocks} from '../dropletUtils';
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -91,7 +91,7 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
 DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ = function (editor, paramInfo) {
   // Check the dropletConfig to see if we can find dropdown info for this parameter
   var dropdownList;
-  dropletUtils.getAllAvailableDropletBlocks(
+  getAllAvailableDropletBlocks(
     this.dropletTooltipManager.dropletConfig,
     this.dropletTooltipManager.codeFunctions,
     this.autocompletePaletteApisOnly).forEach(function (block) {

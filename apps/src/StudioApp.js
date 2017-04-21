@@ -8,7 +8,7 @@ var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
-var dropletUtils = require('./dropletUtils');
+import * as dropletUtils from './dropletUtils';
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
@@ -1908,7 +1908,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // was initialized, so include it initially, and conditionally remove it here.
   if (!project.useFirebase()) {
     // Remove onRecordEvent from the palette
-    delete config.level.codeFunctions.onRecordEvent;
+    if (config.level.codeFunctions) {
+      delete config.level.codeFunctions.onRecordEvent;
+    }
 
     // Remove onRecordEvent from autocomplete, while still recognizing it as a command
     const block = config.dropletConfig.blocks.find(block => {
@@ -1922,9 +1924,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Remove maker API blocks from palette, unless maker APIs are enabled.
   if (!project.useMakerAPIs()) {
     // Remove maker blocks from the palette
-    makerDropletBlocks.forEach(block => {
-      delete config.level.codeFunctions[block.func];
-    });
+    if (config.level.codeFunctions) {
+      makerDropletBlocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
+    }
   }
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
@@ -1938,7 +1942,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
-    textModeAtStart: config.level.textModeAtStart
+    textModeAtStart: (
+      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === false ? config.usingTextModePref :
+      config.level.textModeAtStart
+    ),
   });
 
   if (config.level.paletteCategoryAtStart) {
