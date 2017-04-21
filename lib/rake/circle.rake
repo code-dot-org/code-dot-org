@@ -131,7 +131,7 @@ def browsers_to_run
 end
 
 def test_eyes?
-  CircleUtils.tagged?(TEST_EYES)
+  !CircleUtils.tagged?(SKIP_EYES)
 end
 
 def start_sauce_connect
