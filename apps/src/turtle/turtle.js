@@ -49,8 +49,7 @@ import {
 } from '../containedLevels';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
-import project from '../code-studio/initApp/project';
-import {shouldCapture} from '../util/thumbnail';
+import {captureThumbnailFromCanvas, shouldCapture} from '../util/thumbnail';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -1485,7 +1484,7 @@ Artist.prototype.checkAnswer = function () {
   }
 
   if (shouldCapture()) {
-    this.getThumbnailPngBlob_(project.saveThumbnail);
+    captureThumbnailFromCanvas(this.getThumbnailCanvas_());
   }
 
   // Play sound
@@ -1567,15 +1566,15 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
 };
 
 /**
- * Renders the artist's image as a Blob in PNG format. Relies on this.ctxImages,
+ * Renders the artist's image onto a canvas. Relies on this.ctxImages,
  * this.ctxPredraw, and this.ctxScratch to have already been drawn.
- * @param {function(Blob)} callback Function to call with the PNG Blob.
+ * @returns {HTMLCanvasElement} A canvas containing the thumbnail.
  * @private
  */
-Artist.prototype.getThumbnailPngBlob_ = function (callback) {
+Artist.prototype.getThumbnailCanvas_ = function () {
   this.clearImage_(this.ctxThumbnail);
   this.drawImage_(this.ctxThumbnail);
-  this.ctxThumbnail.canvas.toBlob(callback);
+  return this.ctxThumbnail.canvas;
 };
 
 Artist.prototype.clearImage_ = function (context) {
