@@ -71,12 +71,6 @@ const WorkshopFilter = React.createClass({
     };
   },
 
-  componentWillUnmount() {
-    if (this.organizersLoadRequest) {
-      this.organizersLoadRequest.abort();
-    }
-  },
-
   componentDidMount() {
     this.organizersLoadRequest = $.ajax({
       method: 'GET',
@@ -95,6 +89,12 @@ const WorkshopFilter = React.createClass({
         alert("We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again");
       }
     });
+  },
+
+  componentWillUnmount() {
+    if (this.organizersLoadRequest) {
+      this.organizersLoadRequest.abort();
+    }
   },
 
   handleStartChange(date) {
@@ -350,4 +350,5 @@ const WorkshopFilter = React.createClass({
     );
   }
 });
+
 export default WorkshopFilter;
