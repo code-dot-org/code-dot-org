@@ -55,9 +55,6 @@ import {TestResults, ResultType} from '../constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
-// The width and height in pixels of the thumbnail image to capture.
-const THUMBNAIL_SIZE = 180;
-
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
 
@@ -1082,14 +1079,13 @@ GameLab.prototype.captureInitialImage = function () {
     return;
   }
   this.initialCaptureComplete = true;
-  captureImage(THUMBNAIL_SIZE);
+  captureImage();
 };
 
 /**
  * Capture a thumbnail image of the play space.
- * @param {number} thumbnailSize The width and height in pixels of the captured image.
  */
-function captureImage(thumbnailSize) {
+function captureImage() {
   const p5Canvas = document.getElementById('defaultCanvas0');
   if (!p5Canvas) {
     console.warn(`Thumbnail capture failed: p5 canvas not found.`);
@@ -1097,7 +1093,7 @@ function captureImage(thumbnailSize) {
   }
 
   // Scale the image down so we don't send so much data over the network.
-  const thumbnailCanvas = createThumbnail(p5Canvas, thumbnailSize);
+  const thumbnailCanvas = createThumbnail(p5Canvas);
 
   thumbnailCanvas.toBlob(blob => {
     project.saveThumbnail(blob);
