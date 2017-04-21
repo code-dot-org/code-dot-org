@@ -16,7 +16,6 @@ import reducer, {
   categorizedLessons,
   statusForLevel,
   processedStages,
-  setCurrentStageId,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -278,11 +277,6 @@ describe('progressReduxTest', () => {
 
       const stateDetail = reducer(initialState, setIsSummaryView(false));
       assert.strictEqual(stateDetail.isSummaryView, false);
-    });
-
-    it('can setCurrentStageId', () => {
-      const nextState = reducer(initialState, setCurrentStageId(1234));
-      assert.strictEqual(nextState.currentStageId, 1234);
     });
 
     describe('statusForLevel', () => {

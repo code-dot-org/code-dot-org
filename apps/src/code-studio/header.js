@@ -92,7 +92,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
     progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId,
-      progressData.linesOfCodeText, scriptData.student_detail_progress_view);
+      progressData.linesOfCodeText);
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup(event) {
