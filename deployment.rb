@@ -140,7 +140,7 @@ def load_configuration
     # the logic for setting config.assets.* under dashboard/config/.
     ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
     config['pretty_js'] = [:development, :staging].include?(rack_env) || (rack_env == :test && ci_test)
-    config['image_optim'] = !(config['chef_managed'] || ci_test)
+    config['image_optim'] = config['chef_managed'] && !ci_test
 
     config.merge! global_config
     config.merge! local_config
