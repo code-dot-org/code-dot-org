@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
@@ -9,24 +8,9 @@ import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('ShowCodeToggle', () => {
-  let config, toggle, containerDiv, codeWorkspaceDiv, server;
-
-  before(() => experiments.setEnabled('saveBlockMode', true));
-  after(() => experiments.setEnabled('saveBlockMode', false));
-
-  beforeEach(() => {
-    server = sinon.fakeServerWithClock.create();
-    sinon.spy($, 'post');
-    sinon.spy($, 'getJSON');
-  });
-  afterEach(() => {
-    server.restore();
-    $.post.restore();
-    $.getJSON.restore();
-  });
+  let config, toggle, containerDiv, codeWorkspaceDiv;
 
   beforeEach(stubStudioApp);
   afterEach(restoreStudioApp);
@@ -95,7 +79,7 @@ describe('ShowCodeToggle', () => {
   describe("when initially mounted", () => {
     beforeEach(() => {
       toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
+        <ShowCodeToggle />
       );
     });
 
@@ -132,10 +116,6 @@ describe('ShowCodeToggle', () => {
         expect(studioApp().editor.currentlyUsingBlocks).to.be.false;
       });
 
-      it("saves the text mode setting to the user's preferences", () => {
-        expect($.post).to.have.been.calledWith('/api/v1/users/me/using_text_mode', {using_text_mode: true});
-      });
-
       describe("and after being clicked again", () => {
         beforeEach(() => toggle.simulate('click'));
 
@@ -154,10 +134,6 @@ describe('ShowCodeToggle', () => {
 
         it("will make the editor start using blocks", () => {
           expect(studioApp().editor.currentlyUsingBlocks).to.be.true;
-        });
-
-        it("save the text mode setting to the user's preferences again", () => {
-          expect($.post).to.have.been.calledWith('/api/v1/users/me/using_text_mode', {using_text_mode: false});
         });
       });
     });
@@ -187,7 +163,7 @@ describe('ShowCodeToggle', () => {
     beforeEach(() => {
       studioApp().editCode = false;
       toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
+        <ShowCodeToggle />
       );
     });
 
@@ -219,7 +195,7 @@ describe('ShowCodeToggle', () => {
     beforeEach(() => {
       studioApp().enableShowCode = false;
       toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
+        <ShowCodeToggle />
       );
     });
 
@@ -240,7 +216,7 @@ describe('ShowCodeToggle', () => {
   describe("when studioApp() is initialized again", () => {
     beforeEach(() => {
       toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
+        <ShowCodeToggle />
       );
       config.enableShowCode = false;
       studioApp().init(config);
