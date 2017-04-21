@@ -9,6 +9,7 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
+import * as gridUtils from '../gridUtils';
 
 var LabelProperties = React.createClass({
   propTypes: {
@@ -225,7 +226,7 @@ export default {
       }
       // Don't move text past the left side
       element.style.left = Math.max(0, left) + 'px';
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = element.style.left;
       }
     }
@@ -277,13 +278,3 @@ export default {
  * to have a chance of returning to an exact fit.
  */
 const STILL_FITS = 5;
-
-
-/**
- * While in design mode, elements get wrapped in a ui-draggable container.
- * @returns {true} If element is currently wrapped
- */
-function isDraggableContainer(element) {
-  return $(element).hasClass('ui-draggable');
-}
-
