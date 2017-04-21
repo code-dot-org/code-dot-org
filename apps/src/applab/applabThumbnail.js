@@ -1,4 +1,3 @@
-import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
 import * as thumbnailUtils from '../util/thumbnail';
 
@@ -38,9 +37,7 @@ export function isCaptureComplete() {
 }
 
 export function captureScreenshot() {
-  const isOwner = project.isOwner();
-  const {isShareView, isEmbedView} = getStore().getState().pageConstants;
-  if (isShareView || isEmbedView || !isOwner) {
+  if (!thumbnailUtils.shouldCapture()) {
     return;
   }
 

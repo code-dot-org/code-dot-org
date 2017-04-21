@@ -20,6 +20,19 @@ const THUMBNAIL_SIZE = 180;
 let lastCaptureTimeMs = 0;
 
 /**
+ * Returns true if this level is a project level owned by this user, and is
+ * not a shared or embedded level.
+ * @returns {boolean}
+ */
+export function shouldCapture() {
+  const {isShareView, isEmbedView} = getStore().getState().pageConstants;
+  if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
+    return false;
+  }
+  return true;
+}
+
+/**
  * Converts the contents of an SVG element into an image, shrinks it to
  * width and height equal to THUMBNAIL_SIZE, and saves it to
  * @param {SVGElement} svg Svg element to capture the contents of.
@@ -27,8 +40,7 @@ let lastCaptureTimeMs = 0;
  *   thumbnail image captures in milliseconds.
  */
 export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
-  const {isShareView, isEmbedView} = getStore().getState().pageConstants;
-  if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
+  if (!shouldCapture()) {
     return;
   }
 

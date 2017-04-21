@@ -50,6 +50,7 @@ import {
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import project from '../code-studio/initApp/project';
+import {shouldCapture} from '../util/thumbnail';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -1483,7 +1484,7 @@ Artist.prototype.checkAnswer = function () {
     this.testResults = TestResults.FREE_PLAY;
   }
 
-  if (project.getCurrentId() && project.isOwner()) {
+  if (shouldCapture()) {
     this.getThumbnailPngBlob_(project.saveThumbnail);
   }
 
