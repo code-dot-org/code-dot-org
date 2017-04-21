@@ -97,7 +97,7 @@ module Cdo
         cache.write(cache_key, false)
         pixels = ImageSize.new(data).size.inject(&:*) rescue 0
         if pixels > IMAGE_PIXEL_MAX
-          data
+          raise ArgumentError, 'Image too large to be optimized'
         else
           IMAGE_OPTIM.optimize_image_data(data) || data
         end
