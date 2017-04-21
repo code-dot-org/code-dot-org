@@ -88,7 +88,6 @@ class Pd::PaymentTerm < ApplicationRecord
     )
 
     # Payment terms that conflict with the start date
-    date_range = start_date..(end_date || Date::Infinity.new)
     extant_payment_terms.each do |old_payment_term|
       old_term_range = old_payment_term.start_date..(old_payment_term.end_date || Date::Infinity.new)
 
