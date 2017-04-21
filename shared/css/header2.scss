@@ -9,7 +9,7 @@
 
   #pageheader {
     width: 100%;
-    background-color: $lighesque_teal;
+    background-color: $light_teal;
     height: 50px;
     margin: 0 0 40px 0;
 
@@ -106,10 +106,18 @@
       float: left;
       padding-left: 5px;
     }
+
+    .user_options {
+      top: 37px;
+    }
   }
 
   #hamburger {
     padding-top: 4px;
     padding-left: 4px;
+
+    .hide-responsive-menu {
+      top: 55px;
+    }
   }
 }
