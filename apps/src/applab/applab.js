@@ -22,7 +22,6 @@ import AppStorage from './appStorage';
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
 import { getDatabase } from '../storage/firebaseUtils';
-import experiments from "../util/experiments";
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -583,7 +582,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
+    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch,
   });
 
   config.dropletConfig = dropletConfig;
