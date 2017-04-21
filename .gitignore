@@ -1,36 +1,10 @@
 # Documentation at https://git-scm.com/docs/gitignore.
+# See subdirectories for additional ignore rules.
 
 \#*#
-*.pid
-*.pid.oldbin
-*_temp.json
-*~
-**/.bundle
-.DS_Store
-.dropbox
-.tmputils
-.idea/
-crowdin.yaml
-npm-debug.log
 /.dropbox.cache
 /.gdrive_session
 /.ruby-version
-/apps/.babel-cache
-/apps/build
-/apps/build-times.log
-/apps/build-times-to-upload.log
-/apps/coverage
-/apps/newrelic_agent.log
-/apps/node_modules/
-/apps/npm-debug.log
-/apps/src/util/color.js
-/apps/src/util/sharedConstants.js
-/apps/src/applab/sharedApplabBlocks.js
-/apps/src/gamelab/sharedGamelabBlocks.js
-/apps/src/styleConstants.js
-/apps/test/entry-tests.js
-/apps/test/interpreter/test-results-new*.json
-/apps/yarn-error.log
 /bin/cron/log
 /bin/cron/with_pg/Gemfile.lock
 /build-started
@@ -44,3 +18,17 @@ npm-debug.log
 /rebuild-shared
 /rebuild-code-studio
 /tools/scripts/brokenLinkChecker/node_modules/
+
+# Ignored anywhere
+*.pid
+*.pid.oldbin
+*_temp.json
+*~
+**/.bundle
+.DS_Store
+.dropbox
+.tmputils
+.idea/
+crowdin.yaml
+npm-debug.log
+yarn-error.log
