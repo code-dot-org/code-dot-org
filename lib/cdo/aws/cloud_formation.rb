@@ -36,6 +36,8 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
+    CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
+
     AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
@@ -220,7 +222,7 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{branch}.tar.gz",
+                key: "#{CHEF_KEY}/#{branch}.tar.gz",
                 body: tmp.read
               )
             end
@@ -231,7 +233,7 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: "chef/bootstrap-#{stack_name}.sh",
+          key: "#{CHEF_KEY}/bootstrap-#{stack_name}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
