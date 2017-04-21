@@ -170,6 +170,14 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     store.dispatch(setIsSummaryView(false));
   }
 
+  // If we've cached that we're a teacher, update view type immediately rather
+  // than waiting on API
+  // TODO interaction with query param?
+  if (clientState.getUserIsTeacher()) {
+    store.dispatch(setViewType(ViewType.Teacher));
+    store.dispatch(setIsSummaryView(false));
+  }
+
   $.ajax(
     '/api/user_progress/' + scriptData.name,
     {
@@ -196,6 +204,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       store.dispatch(showTeacherInfo());
       store.dispatch(setViewType(ViewType.Teacher));
       renderTeacherPanel(store, scriptData.id);
+      clientState.cacheUserIsTeacher(true);
 
       store.dispatch(setIsSummaryView(false));
     }
