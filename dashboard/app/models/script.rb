@@ -429,7 +429,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -771,17 +771,6 @@ class Script < ActiveRecord::Base
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
-  end
-
-  # Similar to summarize, but returns an even more narrow set of fields, in particular
-  # bypasses stage summaries
-  def summarize_short
-    {
-      name: name,
-      disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
-      student_detail_progress_view: student_detail_progress_view?
-    }
   end
 
   def summarize_i18n

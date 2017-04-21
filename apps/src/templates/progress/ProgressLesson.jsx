@@ -18,7 +18,6 @@ const styles = {
     position: 'relative',
     display: 'table',
     width: '100%',
-    height: '100%',
     marginBottom: 12,
     background: color.lightest_gray,
     borderWidth: 1,
@@ -67,7 +66,6 @@ const ProgressLesson = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
-    currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
@@ -76,16 +74,8 @@ const ProgressLesson = React.createClass({
 
   getInitialState() {
     return {
-      collapsed: this.props.currentStageId !== this.props.lesson.id
+      collapsed: false
     };
-  },
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.currentStageId !== this.props.currentStageId) {
-      this.setState({
-        collapsed: nextProps.currentStageId !== this.props.lesson.id
-      });
-    }
   },
 
   toggleCollapsed() {
@@ -190,7 +180,6 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.stageLock.viewAs,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),

@@ -17,8 +17,7 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
     paddingTop: 5,
-    paddingBottom: 5,
-    minWidth: 60
+    paddingBottom: 5
   },
   hoverStyle: {
     ':hover': {
@@ -27,12 +26,14 @@ const styles = {
       backgroundColor: color.level_current
     }
   },
+  icon: {
+    marginRight: 10,
+  },
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
-    letterSpacing: -0.12,
-    marginLeft: 10
+    letterSpacing: -0.12
   },
 };
 
@@ -46,12 +47,13 @@ const ProgressPill = React.createClass({
     url: PropTypes.string,
     status: PropTypes.string.isRequired,
     icon: PropTypes.string,
-    text: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    width: PropTypes.number,
     fontSize: PropTypes.number
   },
 
   render() {
-    const { url, status, icon, text, fontSize } = this.props;
+    const { url, status, icon, text, width, fontSize } = this.props;
 
     return (
       <a href={url}>
@@ -59,20 +61,19 @@ const ProgressPill = React.createClass({
           style={{
             ...styles.levelPill,
             ...BUBBLE_COLORS[status],
-            ...(url && styles.hoverStyle)
+            ...(url && styles.hoverStyle),
+            width
           }}
         >
-          {icon && <FontAwesome icon={icon}/>}
-          {text && (
-            <div
-              style={{
-                ...styles.text,
-                fontSize
-              }}
-            >
-              {text}
-            </div>
-          )}
+          {icon && <FontAwesome icon={icon} style={styles.icon}/>}
+          <div
+            style={{
+              ...styles.text,
+              fontSize
+            }}
+          >
+            {text}
+          </div>
         </div>
       </a>
     );
