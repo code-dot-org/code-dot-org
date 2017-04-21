@@ -236,7 +236,7 @@ describe('determineInstructionsConstants', () => {
     const hasInlineImages = false;
     const showInstructionsInTopPane = true;
     const hasContainedLevels = false;
-    const overlayVisible = true;
+    const overlayVisible = false;
 
     it('sets long and short instructions for english locale', () => {
       // en_us and undefined should both be treated as english
@@ -251,8 +251,7 @@ describe('determineInstructionsConstants', () => {
           noInstructionsWhenCollapsed,
           hasInlineImages,
           showInstructionsInTopPane,
-          hasContainedLevels,
-          overlayVisible
+          hasContainedLevels
         });
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
