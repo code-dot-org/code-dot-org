@@ -1,3 +1,4 @@
+/* global appOptions */
 import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
@@ -7,7 +8,7 @@ import TetherComponent from 'react-tether';
 import AutocompleteSelector from './AutocompleteSelector';
 
 const WATCH_VALUE_NOT_RUNNING = "undefined";
-const DEFAULT_AUTOCOMPLETE_OPTIONS = [
+const OPTIONS_GAMELAB = [
   'World.mouseX',
   'World.mouseY',
   'World.frameRate',
@@ -92,6 +93,7 @@ export const Watchers = React.createClass({
   },
 
   getInitialState: function () {
+    this.defaultAutocompleteOptions = appOptions.app === 'gamelab' ? OPTIONS_GAMELAB : [];
     return {
       text: "",
       history: [],
@@ -99,7 +101,7 @@ export const Watchers = React.createClass({
       autocompleteSelecting: false,
       autocompleteOpen: false,
       autocompleteIndex: 0,
-      autocompleteOptions: DEFAULT_AUTOCOMPLETE_OPTIONS,
+      autocompleteOptions: this.defaultAutocompleteOptions,
       historyIndex: -1
     };
   },
@@ -304,7 +306,7 @@ export const Watchers = React.createClass({
 
   filterOptions() {
     const text = this.state.text;
-    const filteredOptions = DEFAULT_AUTOCOMPLETE_OPTIONS.filter((option) => option.match(new RegExp(text, 'i')));
+    const filteredOptions = this.defaultAutocompleteOptions.filter((option) => option.match(new RegExp(text, 'i')));
     const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
     const navigatingHistory = this.state.historyIndex >= 0;
     const historyTextModified = navigatingHistory && this.state.history[this.state.historyIndex] !== text;
