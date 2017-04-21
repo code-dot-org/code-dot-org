@@ -220,7 +220,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         progress);
     const msgParams = {
       puzzleNumber: options.level.puzzle_number || 0,
-      numBlocksNeeded: idealBlocks,
+      numBlocks: idealBlocks,
     };
     const feedbackMessage = isPerfect ?
         msg.nextLevel(msgParams) :
