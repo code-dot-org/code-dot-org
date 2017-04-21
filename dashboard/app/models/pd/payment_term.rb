@@ -92,8 +92,10 @@ class Pd::PaymentTerm < ApplicationRecord
     extant_payment_terms.each do |old_payment_term|
       old_term_range = old_payment_term.start_date..(old_payment_term.end_date || Date::Infinity.new)
 
+      next unless date_range.overlaps?(old_term_range)
+
       # Four possible overlaps, illustrated by this ascii art
-      # Old ends during now
+      # Old ends during new
       #  <---Old--->
       #       <---New--->
 
@@ -108,7 +110,6 @@ class Pd::PaymentTerm < ApplicationRecord
       # New contains old
       #      <---Old--->
       #  <----------New--->
-      next unless date_range.overlaps?(old_term_range)
       if old_payment_term.start_date < start_date
         unless end_date.nil? || (old_payment_term.end_date && old_payment_term.end_date < end_date)
           # Old contains new means we have to create a new payment term
