@@ -36,11 +36,13 @@
     "ideal": "6",
     "authored_hints": "[]",
     "contained_level_names": [
-      "courseE_multi_artist_predict1"
+      "courseF_multi_artist_predict1"
     ]
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

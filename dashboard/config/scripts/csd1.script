@@ -3,41 +3,34 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 
-stage 'Intro to Problem Solving'
+stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 named_level 'Unit 1 Lesson 1 Overview'
 
-stage 'The Problem Solving Process'
+stage 'The Problem Solving Process', flex_category: 'csd1_1'
 named_level 'Unit 1 Lesson 2 Overview'
 
-stage 'Exploring Problem Solving'
+stage 'Exploring Problem Solving', flex_category: 'csd1_1'
 named_level 'Unit 1 Lesson 3 Overview'
 
-stage 'What is a Computer?'
+stage 'What is a Computer?', flex_category: 'csd1_2'
 named_level 'Unit 1 Lesson 4 Overview'
 
-stage 'Representing Information'
-named_level 'Unit 1 Lesson 5 Overview'
+stage 'Input and Output', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 5 Overview'
 
-stage 'Processing with Bits'
-named_level 'Unit 1 Lesson 6 Overview'
-level 'CSD U1 - PixFilter 1x1 intro'
-level 'CSD U1 - PixFilter Filter Intro'
-level 'CSD U1 - PixFilter Mushroom'
-level 'CSD U1 - PixFilter Filter Revisit'
-level 'CSD U1 - PixFilter Mario'
-level 'CSD U1 - PixFilter UnFilter'
-level 'CSD U1 - PixFilter FreePlay'
+stage 'Processing', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 6 Overview'
 
-stage 'Human vs Computer Processing'
-named_level 'Unit 1 Lesson 7 Overview'
+stage 'Storage', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 7 Overview'
 
-stage 'Processing with Apps'
-named_level 'Unit 1 Lesson 8 Overview'
-level 'CSD U1 Input Output Intro'
-level 'CSD U1 Input Output C1'
-level 'CSD U1 Input Output C2'
-level 'CSD U1 Input Output C3'
-level 'CSD U1 Input Output C4'
+stage 'Apps and Problem Solving', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 8 Overview'
+level 'CSD U1 Input Output Intro', progression: 'Input/Output Challenges'
+level 'CSD U1 Input Output C1', progression: 'Input/Output Challenges'
+level 'CSD U1 Input Output C2', progression: 'Input/Output Challenges'
+level 'CSD U1 Input Output C3', progression: 'Input/Output Challenges'
+level 'CSD U1 Input Output C4', progression: 'Input/Output Challenges'
 
-stage 'Project: Apps and Problem Solving'
-named_level 'Unit 1 Lesson 9 Overview'
+stage 'Project - Propose an App', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 9 Overview'

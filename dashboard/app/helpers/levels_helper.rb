@@ -227,6 +227,7 @@ module LevelsHelper
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+      @app_options[:usingTextModePref] = !!current_user.using_text_mode
     end
 
     @app_options

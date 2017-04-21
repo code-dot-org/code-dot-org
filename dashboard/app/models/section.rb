@@ -153,25 +153,8 @@ class Section < ActiveRecord::Base
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
-  # @param move_for_same_teacher [Boolean] Whether the student should be unenrolled from other
-  #   sections belonging to the same teacher.
   # @return [Follower] The newly created follower enrollment.
-  # TODO(asher): Eliminate this option.
-  def add_student(student, move_for_same_teacher:)
-    if move_for_same_teacher
-      sections_with_same_teacher = student.sections_as_student.where(user_id: user_id)
-      unless sections_with_same_teacher.empty?
-        # If this student is already in another section owned by the
-        # same teacher, move them to this section instead of creating a
-        # new one.
-        # TODO(asher): Presently, this only unenrolls the student from one of the existing sections.
-        # Change this to unenroll the student from all sections.
-        follower = sections_with_same_teacher.first.
-          followers.where(student_user_id: student.id).first
-        return follower.update_attributes!(section: self)
-      end
-    end
-
+  def add_student(student)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?
@@ -181,6 +164,19 @@ class Section < ActiveRecord::Base
     end
 
     Follower.create!(section: self, student_user: student)
+  end
+
+  # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
+  # student from old section.
+  # @param student [User] The student to enroll in this section.
+  # @param old_section [Section] The section from which to remove the student.
+  # @return [Follower | nil] The newly created follower enrollment (possibly nil).
+  def add_and_remove_student(student, old_section)
+    old_follower = old_section.followers.where(student_user: student).first
+    return nil unless old_follower
+
+    old_follower.destroy
+    add_student student
   end
 
   private

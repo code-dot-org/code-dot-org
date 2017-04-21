@@ -29,11 +29,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\"hint_id\":\"courseA_maze_seq4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dfb0b2e1814398280569bc8dcff64283/courseA_maze_seq4.mp3\"}]",
     "markdown_instructions": "*\"Something is not quite right.\"* \r\n\r\nREMOVE a block to get the bird to the pig!\r\n\r\n<img src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\" width=\"200px\"/>",
     "instructions_important": "true",
-    "contained_level_names": null,
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_maze_seq4_1\",\r\n  \"callout_text\": \"These blocks are made of stone.  You can move them, but you can't delete them!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
