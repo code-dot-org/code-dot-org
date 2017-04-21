@@ -575,7 +575,7 @@ EOS
 
   test 'create unplugged level from level builder' do
     Unplugged.any_instance.stubs(:update_i18n).with do |name, new_strings|
-      I18n.backend.store_translations I18n.locale, {'en' => {'data' => {'unplugged' => {name => new_strings}}}}
+      I18n.backend.store_translations I18n.locale, {'data' => {'unplugged' => {name => new_strings}}}
     end
 
     data = {name: 'New Unplugged Name', title: 'Test Unplugged Level', description: 'This is a test.'}
