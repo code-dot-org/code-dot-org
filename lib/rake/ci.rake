@@ -61,8 +61,6 @@ namespace :ci do
   multitask deploy_multi: [:deploy_console, :deploy_stack]
 
   task :deploy_stack do
-    # adhoc environments can't update their own CloudFormation stacks from CI.
-    next if rack_env?(:adhoc)
     ChatClient.wrap('CloudFormation stack update') {RakeUtils.rake_stream_output 'stack:start'}
   end
 
