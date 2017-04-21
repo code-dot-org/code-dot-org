@@ -28,6 +28,10 @@ const WorkshopTableLoader = React.createClass({
     };
   },
 
+  componentWillMount() {
+    this.load = _.debounce(this.load, 200);
+  },
+
   componentDidMount() {
     this.load();
   },
