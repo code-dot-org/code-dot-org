@@ -117,4 +117,4 @@ stage 'Presentation Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation'
 
 stage 'Try programming with Khan Academy', flex_category: 'extra_course_content'
-named_level 'Learn Javascript with Khan Academy!'
+level 'Learn Javascript with Khan Academy!'

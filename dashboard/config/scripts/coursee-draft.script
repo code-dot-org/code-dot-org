@@ -107,7 +107,7 @@ stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation'
 
 stage 'More Programming with Scratch', flex_category: 'extra_course_content'
-named_level 'More programming with Scratch!'
+level 'More programming with Scratch!'
 
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet'
