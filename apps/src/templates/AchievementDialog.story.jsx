@@ -48,11 +48,11 @@ export default storybook => {
             onContinue={storybook.action('continue')}
             showPuzzleRatingButtons={true}
             showStageProgress={true}
-            tooManyBlocks={false}
+            encourageRetry={false}
           />
         )
       }, {
-        name: 'Got some achievements wrong',
+        name: 'Failed to get one achievement, encourage retry',
         description: `2 checked boxes, 1 unchcked box`,
         story: () => (
           <ExampleDialogButton
@@ -64,7 +64,7 @@ export default storybook => {
               }, {
                 check: false,
                 msg: 'Using too many blocks',
-                progress: 0.04,
+                progress: 0.0,
               }, {
                 check: true,
                 msg: 'Bonus: Using no hints',
@@ -78,7 +78,7 @@ export default storybook => {
             onContinue={storybook.action('continue')}
             showPuzzleRatingButtons={true}
             showStageProgress={true}
-            tooManyBlocks={false}
+            encourageRetry={true}
           />
         )
       }, {
@@ -104,7 +104,7 @@ export default storybook => {
             onContinue={storybook.action('continue')}
             showPuzzleRatingButtons={true}
             showStageProgress={true}
-            tooManyBlocks={false}
+            encourageRetry={false}
           />
         )
       }
