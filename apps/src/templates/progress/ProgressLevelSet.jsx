@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
 import { getIconForLevel } from './progressHelpers';
 import ProgressPill from './ProgressPill';
@@ -21,7 +20,7 @@ const styles = {
     letterSpacing: -0.12
   },
   col2: {
-    paddingLeft: 30
+    paddingLeft: 20
   },
   linesAndDot: {
     whiteSpace: 'nowrap',
@@ -76,31 +75,25 @@ const ProgressLevelSet = React.createClass({
 
     let pillText;
     if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
-      pillText = i18n.unplugged();
+      // We explicitly don't want any text in this case
+      pillText = '';
     } else {
-      let levelNumber = levels[0].levelNumber;
+      pillText = levels[0].levelNumber.toString();
       if (multiLevelStep) {
-        levelNumber += `-${levels[levels.length - 1].levelNumber}`;
+        pillText += `-${levels[levels.length - 1].levelNumber}`;
       }
-      pillText = i18n.levelN({levelNumber});
     }
 
     return (
       <table style={styles.table}>
         <tbody>
           <tr>
-            <td>
-              {/*
-                TODO - fixed width isn't great for i18n. likely want to come up with some
-                way of having this be dynamic, but the same size across all instances
-                width: 110,
-              */}
+            <td style={styles.col1}>
               <ProgressPill
                 url={multiLevelStep ? undefined : url}
                 status={status}
                 icon={getIconForLevel(levels[0])}
                 text={pillText}
-                width={130}
               />
             </td>
             <td style={styles.col2}>

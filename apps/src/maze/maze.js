@@ -32,7 +32,7 @@ var AppView = require('../templates/AppView');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
-var dropletUtils = require('../dropletUtils');
+import {generateCodeAliases} from '../dropletUtils';
 var mazeUtils = require('./mazeUtils');
 var dropletConfig = require('./dropletConfig');
 
@@ -845,7 +845,7 @@ Maze.execute = function (stepMode) {
 
     code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   } else {
-    code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
+    code = generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp().editor.getValue();
   }
 

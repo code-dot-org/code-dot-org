@@ -170,6 +170,7 @@ describe('Level tests', function () {
     }
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
+    studioApp().removeAllListeners();
 
     // Clean up some state that is meant to be per level. This is an issue
     // because we're using the same window for all tests.
