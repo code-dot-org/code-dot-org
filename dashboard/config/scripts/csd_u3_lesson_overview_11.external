@@ -1,0 +1,20 @@
+name 'CSD U3 Lesson Overview 11'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Students start by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, students add conditional if statements to write code that responds to those boolean comparisons.
+# Vocabulary
+
+* **Boolean Expression** - in programming, an expression that evaluates to True or False. 
+* **If-Statement** - The common programming structure that implements "conditional statements".
+
+# New Blocks
+
+*  **[If statement](//docs.code.org/gamelab/ifBlock/)** - `if(condition){ // code to run }`
+*  **[Less than operator](//docs.code.org/gamelab/lessThanOperator/)** - `<`
+*  **[Inequality operator](//docs.code.org/gamelab/inequalityOperator/)** - `!=`
+*  **[Greater than operator](//docs.code.org/gamelab/greaterThanOperator/)** - `>`
+*  **[Equality operator](//docs.code.org/gamelab/equalityOperator/)** - `==`
+
+MARKDOWN

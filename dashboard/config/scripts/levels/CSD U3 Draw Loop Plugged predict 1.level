@@ -16,9 +16,6 @@
     },
     "show_d_pad": "false",
     "edit_code": true,
-    "contained_level_names": [
-      "CSD U3 Draw Loop Plugged predict 1 embed"
-    ],
     "embed": "false",
     "instructions_important": "false",
     "start_blocks": "noStroke();\r\nfill(\"SeaGreen\");\r\n\r\nfunction draw(){\r\n  ellipse(randomNumber(0,400), randomNumber(0,400));\r\n}",
@@ -51,7 +48,9 @@
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "markdown_instructions": "# Draw Loop\r\n\r\nHere's an example of the draw loop at work.\r\n\r\n# Do this\r\n* Run the code and see how it works.\r\n* Discuss with your partner whether this looks like the flip book you saw in the video.  Why or why not?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
