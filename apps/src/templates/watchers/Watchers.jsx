@@ -1,4 +1,3 @@
-/* global appOptions */
 import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
@@ -90,10 +89,11 @@ export const Watchers = React.createClass({
     update: React.PropTypes.func.isRequired,
     remove: React.PropTypes.func.isRequired,
     style: React.PropTypes.object,
+    appType: React.PropTypes.string.isRequired
   },
 
   getInitialState: function () {
-    this.defaultAutocompleteOptions = appOptions.app === 'gamelab' ? OPTIONS_GAMELAB : [];
+    this.defaultAutocompleteOptions = this.props.appType === 'gamelab' ? OPTIONS_GAMELAB : [];
     return {
       text: "",
       history: [],
@@ -410,7 +410,8 @@ export const Watchers = React.createClass({
 export const ConnectedWatchers = connect(
   state => ({
     watchedExpressions: state.watchedExpressions,
-    isRunning: state.runState.isRunning
+    isRunning: state.runState.isRunning,
+    appType: state.pageConstants.appType
   }),
   {add, update, remove},
   null,
