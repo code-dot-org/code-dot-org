@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCase
   setup do
-    @csf_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, subject: nil
-    @csd_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, subject: nil
-    @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    @csf_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSF
+    @csd_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSD
+    @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP
 
     @teacher = create(:teacher, email: 'test_email@foo.com', user_type: 'teacher')
     other_teacher = create :teacher

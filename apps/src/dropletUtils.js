@@ -39,53 +39,55 @@ import color from './util/color';
  *   autocomplete and consider 'defined' for linting purposes.
  */
 
-var COLOR_PURPLE = '#BB77C7';
-var COLOR_GREEN = '#68D995';
-var COLOR_WHITE = '#FFFFFF';
-var COLOR_BLUE = '#64B5F6';
-var COLOR_ORANGE = '#FFB74D';
+const COLOR_PURPLE = '#BB77C7';
+const COLOR_GREEN = '#68D995';
+const COLOR_WHITE = '#FFFFFF';
+const COLOR_BLUE = '#64B5F6';
+const COLOR_ORANGE = '#FFB74D';
 
-exports.randomNumber = function (min, max) {
-  if (typeof max === 'undefined') {
-    // If only one parameter is specified, use it as the max with zero as min:
-    max = min;
-    min = 0;
-  }
-  // Use double-tilde to ensure we are dealing with integers:
-  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
-};
+export const globalFunctions = {
+  randomNumber(min, max) {
+    if (typeof max === 'undefined') {
+      // If only one parameter is specified, use it as the max with zero as min:
+      max = min;
+      min = 0;
+    }
+    // Use double-tilde to ensure we are dealing with integers:
+    return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
+  },
 
-exports.getTime = function () {
-  return (new Date()).getTime();
-};
+  getTime() {
+    return (new Date()).getTime();
+  },
 
-/**
- * Use native window.prompt to ask for a value, but continue prompting until we
- * get a numerical value.
- * @returns {number} User value, converted to a number
- */
-exports.promptNum = function (text) {
-  var val;
-  do {
-    val = Number(window.prompt(text));
-  } while (isNaN(val));
-  return val;
+  /**
+   * Use native window.prompt to ask for a value, but continue prompting until we
+   * get a numerical value.
+   * @returns {number} User value, converted to a number
+   */
+  promptNum(text) {
+    let val;
+    do {
+      val = Number(window.prompt(text));
+    } while (isNaN(val));
+    return val;
+  },
 };
 
 /**
  * @type {DropletBlock[]}
  */
-exports.dropletGlobalConfigBlocks = [
-  {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
-  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
+export const dropletGlobalConfigBlocks = [
+  {func: 'getTime', parent: globalFunctions, category: 'Control', type: 'value' },
+  {func: 'randomNumber', parent: globalFunctions, category: 'Math', type: 'value' },
   {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
-  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
+  {func: 'promptNum', parent: globalFunctions, category: 'Variables', type: 'value' }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
-exports.dropletBuiltinConfigBlocks = [
+export const dropletBuiltinConfigBlocks = [
   {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound' },
   {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs' },
   {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax' },
@@ -96,7 +98,7 @@ exports.dropletBuiltinConfigBlocks = [
 /**
  * @type {DropletConfig|*}}
  */
-var standardConfig = {};
+let standardConfig = {};
 
 standardConfig.blocks = [
   // Control
@@ -202,14 +204,14 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
 
   options = options || {};
 
-  var blocks = [];
+  let blocks = [];
   if (otherConfig) {
     blocks = blocks.concat(otherConfig.blocks);
   }
   blocks = blocks.concat(dropletConfig.blocks);
 
-  var docFunctions = {};
-  blocks.forEach(function (block) {
+  const docFunctions = {};
+  blocks.forEach(block => {
     if (!(block.func in codeFunctions)) {
       return;
     }
@@ -217,19 +219,19 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
     if (!options.ignoreDocFunc) {
       // For cases where we use a different block for our tooltips, make sure that
       // the target block ends up in the list of blocks we want
-      var docFunc = block.docFunc;
+      const docFunc = block.docFunc;
       if (docFunc && !(docFunc in codeFunctions)) {
         docFunctions[docFunc] = null;
       }
     }
   });
 
-  return blocks.filter(function (block) {
-    return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
-  }).map(function (block) {
+  return blocks.filter(block => (
+    !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions
+  )).map(block => (
     // We found this particular block, now override the defaults with extend
-    return Object.assign({}, block, codeFunctions[block.func]);
-  });
+    {...block, ...codeFunctions[block.func]}
+  ));
 }
 
 /**
@@ -240,11 +242,14 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
 function mergeCategoriesWithConfig(dropletConfig) {
   // Clone our merged categories so that as we mutate it, we're not mutating
   // our original config
-  var dropletCategories = dropletConfig && dropletConfig.categories;
+  const dropletCategories = dropletConfig && dropletConfig.categories;
   // We include dropletCategories twice so that (a) it's ordering of categories
   // gets preference and (b) it's value override anything in standardConfig
-  return _.cloneDeep(Object.assign({}, dropletCategories, standardConfig.categories,
-    dropletCategories));
+  return _.cloneDeep({
+    ...dropletCategories,
+    ...standardConfig.categories,
+    ...dropletCategories,
+  });
 }
 
 /**
@@ -254,13 +259,13 @@ function mergeCategoriesWithConfig(dropletConfig) {
  *  a property
  * @returns {String} code
  */
-exports.generateCodeAliases = function (dropletConfig, parentObjName) {
-  var code = '';
-  var aliasFunctions = dropletConfig.blocks;
+export function generateCodeAliases(dropletConfig, parentObjName) {
+  let code = '';
+  const aliasFunctions = dropletConfig.blocks;
 
   // Insert aliases from aliasFunctions into code
-  for (var i = 0; i < aliasFunctions.length; i++) {
-    var cf = aliasFunctions[i];
+  for (let i = 0; i < aliasFunctions.length; i++) {
+    const cf = aliasFunctions[i];
     code += "var " + cf.func + " = function() { ";
     if (cf.idArgNone) {
       code += "return " + parentObjName + "." + cf.func + ".apply(" +
@@ -273,12 +278,12 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
     }
   }
   return code;
-};
+}
 
 function buildFunctionPrototype(prefix, params) {
-  var proto = prefix + "(";
+  let proto = prefix + "(";
   if (params) {
-    for (var i = 0; i < params.length; i++) {
+    for (let i = 0; i < params.length; i++) {
       if (i !== 0) {
         proto += ", ";
       }
@@ -290,7 +295,7 @@ function buildFunctionPrototype(prefix, params) {
 
 // Generate a read-write property expansion function:
 function generatePropertyExpansion(propname) {
-  return function (block) {
+  return block => {
     if (!block || block.type === 'socket') {
       return propname;
     } else {
@@ -306,28 +311,28 @@ function generatePropertyExpansion(propname) {
  * @param {function} dropletConfig.getBlocks
  * @param {object} dropletConfig.categories
  */
-exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
-  var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = filteredBlocksFromConfig(
+export function generateDropletPalette(codeFunctions, dropletConfig) {
+  const mergedCategories = mergeCategoriesWithConfig(dropletConfig);
+  const mergedFunctions = filteredBlocksFromConfig(
       codeFunctions,
       dropletConfig,
       standardConfig,
       { paletteOnly: true, ignoreDocFunc: true }
   );
 
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var funcInfo = mergedFunctions[i];
-    var block = funcInfo.block;
-    var expansion = funcInfo.expansion;
+  for (let i = 0; i < mergedFunctions.length; i++) {
+    const funcInfo = mergedFunctions[i];
+    let block = funcInfo.block;
+    let expansion = funcInfo.expansion;
     if (!block) {
-      var nameWithPrefix = funcInfo.func;
+      let nameWithPrefix = funcInfo.func;
       if (funcInfo.blockPrefix) {
         nameWithPrefix = funcInfo.blockPrefix + nameWithPrefix;
       }
       if (funcInfo.type === 'property' || funcInfo.type === 'readonlyproperty') {
         block = nameWithPrefix;
       } else {
-        var paletteParams = funcInfo.paletteParams || funcInfo.params;
+        const paletteParams = funcInfo.paletteParams || funcInfo.params;
         block = buildFunctionPrototype(nameWithPrefix, paletteParams);
         if (funcInfo.paletteParams) {
           // If paletteParams were specified and used for the 'block', then use
@@ -348,7 +353,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
      * Here we set the title attribute to the function shortname,
      * this is later used as a key for function documentation and tooltips
      */
-    var blockPair = {
+    const blockPair = {
       block: block,
       expansion: expansion,
       title: funcInfo.modeOptionName || funcInfo.func
@@ -357,8 +362,8 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   }
 
   // Convert to droplet's expected palette format:
-  var addedPalette = [];
-  for (var category in mergedCategories) {
+  const addedPalette = [];
+  for (let category in mergedCategories) {
     if (mergedCategories[category].blocks.length > 0) {
       mergedCategories[category].name = category;
       addedPalette.push(mergedCategories[category]);
@@ -366,15 +371,15 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   }
 
   return addedPalette;
-};
+}
 
 function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    var block = configBlocks[i];
+  for (let i = 0; i < configBlocks.length; i++) {
+    const block = configBlocks[i];
     if (!block.noAutocomplete) {
       // Use score value of 100 to ensure that our APIs are not replaced by
       // other completers that are suggesting the same name
-      var newApi = {
+      const newApi = {
         name: 'api',
         value: block.modeOptionName || block.func,
         score: 100,
@@ -386,8 +391,8 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
             // Remove the filterText that was already typed (ace's built-in
             // insertMatch would normally do this automatically)
             if (editor.completer.completions.filterText) {
-              var ranges = editor.selection.getAllRanges();
-              for (var i = 0, range; !!(range = ranges[i]); i++) {
+              const ranges = editor.selection.getAllRanges();
+              for (let i = 0, range; !!(range = ranges[i]); i++) {
                 range.start.column -= editor.completer.completions.filterText.length;
                 editor.session.remove(range);
               }
@@ -396,7 +401,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
             editor.execCommand("insertstring", value + '();');
             if (this.params) {
               // Move the selection back so parameters can be entered:
-              var curRange = editor.selection.getRange();
+              const curRange = editor.selection.getRange();
               curRange.start.column -= 2;
               curRange.end.column -= 2;
               editor.selection.setSelectionRange(curRange);
@@ -424,7 +429,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
 
 function populateCompleterFromPredefValues(apis, predefValues) {
   if (predefValues) {
-    predefValues.forEach(function (val) {
+    predefValues.forEach(val => {
       // Use score value of 100 to ensure that our APIs are not replaced by
       // other completers that are suggesting the same name
       apis.push({
@@ -445,9 +450,9 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  * @return {boolean} true if position is at the start of a method or property
  */
 function isPositionAfterDot(session, pos) {
-  var acUtil = window.ace.require("ace/autocomplete/util");
-  var line = session.getLine(pos.row);
-  var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
+  const acUtil = window.ace.require("ace/autocomplete/util");
+  const line = session.getLine(pos.row);
+  const identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
   // If we're typing a valid identifier, inspect the preceeding
   // character to see if it is a period and ensure there's at least one
   // character before
@@ -455,7 +460,7 @@ function isPositionAfterDot(session, pos) {
     // We have an identifier and it is shorter than our column position in
     // this line, which means it is safe to check the line[] before the
     // identifier
-    var posBeforeIdentifier = pos.column - identifier.length - 1;
+    const posBeforeIdentifier = pos.column - identifier.length - 1;
     return line[posBeforeIdentifier] === '.';
   }
   return false;
@@ -467,26 +472,26 @@ function isPositionAfterDot(session, pos) {
  * If functionFilter is non-null, use it to filter the dropletConfig
  * APIs to be set in autocomplete and create no other autocomplete entries
  */
-exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
-  var apis = [];
-  var methodsAndProperties = [];
-  var opts = {};
+export function generateAceApiCompleter(functionFilter, dropletConfig) {
+  const apis = [];
+  const methodsAndProperties = [];
+  const opts = {};
 
   // If autocompleteFunctionsWithParens is set, we will append "();" after functions
   opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
-    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
+    const mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
     populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, mergedBlocks);
   } else {
-    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletBuiltinConfigBlocks);
     populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, dropletConfig.blocks);
     populateCompleterFromPredefValues(apis, dropletConfig.additionalPredefValues);
   }
 
   return {
-    getCompletions: function (editor, session, pos, prefix, callback) {
+    getCompletions(editor, session, pos, prefix, callback) {
       if (prefix.length === 0) {
         callback(null, []);
         return;
@@ -499,7 +504,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
       }
     }
   };
-};
+}
 
 /**
  * Given a droplet config, create a mode option functions object
@@ -509,14 +514,14 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
  * @param {codeFunctions|null} codeFunctions with block overrides, may be null
  */
 function getModeOptionFunctionsFromConfig(config, codeFunctions) {
-  var mergedCategories = mergeCategoriesWithConfig(config);
-  var mergedFuncs = filteredBlocksFromConfig(codeFunctions, config, null, null);
+  const mergedCategories = mergeCategoriesWithConfig(config);
+  const mergedFuncs = filteredBlocksFromConfig(codeFunctions, config, null, null);
 
-  var modeOptionFunctions = {};
+  const modeOptionFunctions = {};
 
-  for (var i = 0; i < mergedFuncs.length; i++) {
-    var block = mergedFuncs[i];
-    var newFunc = {};
+  for (let i = 0; i < mergedFuncs.length; i++) {
+    const block = mergedFuncs[i];
+    const newFunc = {};
 
     switch (block.type) {
       case 'value':
@@ -533,7 +538,7 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
         break;
     }
 
-    var category = mergedCategories[block.category];
+    const category = mergedCategories[block.category];
     if (typeof block.color === 'string' && block.color.length > 0) {
       newFunc.color = block.color;
     } else if (category) {
@@ -547,7 +552,7 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
       newFunc.maxArgs = block.paramButtons.maxArgs;
     }
 
-    var modeOptionName = block.modeOptionName || block.func;
+    const modeOptionName = block.modeOptionName || block.func;
     newFunc.title = modeOptionName;
 
     modeOptionFunctions[modeOptionName] = newFunc;
@@ -558,9 +563,15 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (config) {
-  var modeOptions = {
+export function generateDropletModeOptions(config) {
+  return {
     functions: {
+      ...getModeOptionFunctionsFromConfig(
+          { blocks: dropletGlobalConfigBlocks }, config.level.codeFunctions),
+      ...getModeOptionFunctionsFromConfig(
+          { blocks: dropletBuiltinConfigBlocks }, config.level.codeFunctions),
+      ...getModeOptionFunctionsFromConfig(
+          config.dropletConfig, config.level.codeFunctions),
     },
     categories: {
       arithmetic: { color: COLOR_ORANGE },
@@ -582,18 +593,7 @@ exports.generateDropletModeOptions = function (config) {
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
     paramButtonsForUnknownFunctions: true
   };
-
-  Object.assign(modeOptions.functions,
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks },
-      config.level.codeFunctions),
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks },
-      config.level.codeFunctions),
-    getModeOptionFunctionsFromConfig(config.dropletConfig,
-      config.level.codeFunctions)
-  );
-
-  return modeOptions;
-};
+}
 
 /**
  * Returns a set of all blocks
@@ -604,9 +604,9 @@ exports.generateDropletModeOptions = function (config) {
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, paletteOnly) {
-  var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
-  var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+export function getAllAvailableDropletBlocks(dropletConfig, codeFunctions, paletteOnly) {
+  const hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
+  let configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
     configuredBlocks = filteredBlocksFromConfig(
         codeFunctions,
@@ -615,11 +615,11 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
         { paletteOnly: paletteOnly }
     );
   }
-  return exports.dropletGlobalConfigBlocks
-    .concat(exports.dropletBuiltinConfigBlocks)
+  return dropletGlobalConfigBlocks
+    .concat(dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
     .concat(configuredBlocks);
-};
+}
 
 /**
  * Gets the first parameter of the given function name, given either that
@@ -633,9 +633,9 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
  * @return {string|null} found parameter (without quotes) or null if none found
  * @throws {Error} encountered unexpected Droplet token
  */
-exports.getFirstParam = function (methodName, block, editor) {
+export function getFirstParam(methodName, block, editor) {
   return getParamAtIndex(0, methodName, block, editor);
-};
+}
 
 /**
  * Gets the second parameter of the given function name, given either that
@@ -647,9 +647,9 @@ exports.getFirstParam = function (methodName, block, editor) {
  * @return {string|null} found parameter (without quotes) or null if none found
  * @throws {Error} encountered unexpected Droplet token
  */
-exports.getSecondParam = function (methodName, block, editor) {
+export function getSecondParam(methodName, block, editor) {
   return getParamAtIndex(1, methodName, block, editor);
-};
+}
 
 /**
  * Gets the parameter at a given index of a given function name, given either that
@@ -666,14 +666,14 @@ exports.getSecondParam = function (methodName, block, editor) {
 function getParamAtIndex(index, methodName, block, editor) {
   if (!block) {
     // If we're not given a block, assume that we're in text mode
-    var cursor = editor.session.selection.getCursor();
-    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
+    const cursor = editor.session.selection.getCursor();
+    const contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
 
     return getParamFromCodeAtIndex(index, methodName, contents);
   }
   // We have a block. Parse it to find our first socket.
-  var token = block.start;
-  var paramNumber = -1;
+  let token = block.start;
+  let paramNumber = -1;
   do {
     if (token.type === 'socketStart') {
       paramNumber++;
@@ -681,7 +681,7 @@ function getParamAtIndex(index, methodName, block, editor) {
         token = token.next;
         continue;
       }
-      var textToken = token.next;
+      const textToken = token.next;
       if (textToken.type === 'text') {
         return textToken.value;
       } else if (textToken.type === 'blockStart') {
@@ -705,7 +705,7 @@ function formatParamString(index, params) {
 }
 
 function getParamFromCodeAtIndex(index, methodName, code) {
-  var prefix = `${methodName}(`;
+  const prefix = `${methodName}(`;
   code = code.slice(code.lastIndexOf(prefix));
   // quote, followed by param, followed by end quote, comma, and optional whitespace
   const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
@@ -731,7 +731,7 @@ function getParamFromCodeAtIndex(index, methodName, code) {
  *  - Removes all additional defines
  * @param {DropletConfig} originalConfig
  */
-module.exports.makeDisabledConfig = function makeDisabledConfig(originalConfig) {
+export function makeDisabledConfig(originalConfig) {
   return {
     // Start with existing config
     ...originalConfig,
@@ -750,9 +750,9 @@ module.exports.makeDisabledConfig = function makeDisabledConfig(originalConfig) 
       noAutocomplete: true,
     }))
   };
-};
+}
 
-exports.__TestInterface = {
+export const __TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig,
   filteredBlocksFromConfig: filteredBlocksFromConfig,
   getParamFromCodeAtIndex: getParamFromCodeAtIndex

@@ -20,6 +20,8 @@ export default class FormComponent extends React.Component {
         FormComponent is an abstract class; cannot construct instances directly
       `);
     }
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   /**
@@ -60,7 +62,7 @@ export default class FormComponent extends React.Component {
         componentClass="select"
         label={label}
         validationState={this.getValidationState(name)}
-        onChange={this.handleChange.bind(this)}
+        onChange={this.handleChange}
         value={this.props.data[name] || ''}
         required={required}
       >
@@ -89,7 +91,7 @@ export default class FormComponent extends React.Component {
         type={type}
         label={label}
         validationState={this.getValidationState(name)}
-        onChange={this.handleChange.bind(this)}
+        onChange={this.handleChange}
         value={this.props.data[name] || ''}
         required={required}
         {...props}
@@ -119,7 +121,7 @@ export default class FormComponent extends React.Component {
         answers={this.props.options[name]}
         groupName={name}
         label={label}
-        onChange={this.handleChange.bind(this)}
+        onChange={this.handleChange}
         selectedItems={this.props.data[name]}
         validationState={this.getValidationState(name)}
         required={required}
