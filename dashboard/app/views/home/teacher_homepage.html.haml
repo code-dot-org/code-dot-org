@@ -1,6 +1,11 @@
-%script{ src: minifiable_asset_path('js/home/teacher_homepage.js')}
+- teacherHomepageData = { teacherHomepageData: current_user.in_progress_and_completed_scripts }
+
+
 
 %h1
   The new and improved Teacher Homepage!
 
 #container
+
+
+%script{ src: minifiable_asset_path('js/home/teacher_homepage.js'),  data: {teacherhomepage: teacherHomepageData.to_json }}
