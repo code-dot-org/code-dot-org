@@ -1,25 +1,26 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GradientNavCard from '@cdo/apps/templates/teacherHomepage/GradientNavCard';
+import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
+import Notification from '@cdo/apps/templates/Notification';
+// import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+// import CourseCard from '@cdo/apps/templates/CourseCard';
 
 $(document).ready(showContent);
 
 
-const EXAMPLE_CARD_DATA = {
-  title: "Teacher Community",
-  description: "Ask questions about curriculum, share ideas from your lessons, and get help from other teachers",
-  image: "../../static/navcard-placeholder.png",
-  buttonText: "Connect Today",
-  link: "link to wherever"
-};
-
 function showContent() {
 
   ReactDOM.render (
-    <GradientNavCard
-      cardData={EXAMPLE_CARD_DATA}
-    />,
+    <TeacherHomepage>
+      <Notification
+        type="information"
+        notice="Teacher Homepage has been redesigned"
+        details="Check out how snazzy it looks and how easy it is to find everything you need."
+        dismissible={true}
+      />
+
+    </TeacherHomepage>,
     document.getElementById('container')
   );
 }

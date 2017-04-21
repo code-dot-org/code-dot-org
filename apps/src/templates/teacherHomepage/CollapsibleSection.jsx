@@ -5,7 +5,8 @@ import _ from 'lodash';
 
 const styles = {
   section: {
-    width: 1000,
+    width: 960,
+    marginBottom: 50,
   },
   heading: {
     paddingLeft: 20,
@@ -17,7 +18,7 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     zIndex: 2,
     color: color.charcoal,
-    width: 1000
+    width: 960
   },
   arrowIcon: {
     paddingRight: 8
@@ -43,8 +44,10 @@ const styles = {
     textDecoration: 'none'
   },
   content: {
-    marginBottom: 50,
-    marginLeft: 10
+    marginLeft: 10,
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
@@ -55,8 +58,8 @@ const CollapsibleSection = React.createClass({
       React.PropTypes.arrayOf(React.PropTypes.node)
     ]),
     header: React.PropTypes.string.isRequired,
-    linkText: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired,
+    linkText: React.PropTypes.string,
+    link: React.PropTypes.string,
   },
 
   getInitialState() {
@@ -69,7 +72,7 @@ const CollapsibleSection = React.createClass({
 
   renderContent() {
     const content = this.props.children;
-    const childItems = _.isArray(this.props.children) ? this.props.children.slice(0, 2) : [this.props.children];
+    const childItems = _.isArray(this.props.children) ? this.props.children : [this.props.children];
 
     if (this.state.open) {
       return (
@@ -85,6 +88,7 @@ const CollapsibleSection = React.createClass({
   },
 
   render() {
+
     const { header, link, linkText }= this.props;
     let icon = this.state.open ? 'caret-up' : 'caret-down';
 
@@ -93,14 +97,16 @@ const CollapsibleSection = React.createClass({
         <div style={styles.heading}>
           <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleContent}/>
           {header}
-          <a href={link} style={styles.linkBox}>
-            <div style={styles.linkToViewAll}>
-              {linkText}
-            </div>
+          {link &&
+            <a href={link} style={styles.linkBox}>
+              <div style={styles.linkToViewAll}>
+                {linkText}
+              </div>
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
-          </a>
+            </a>}
         </div>
         {this.renderContent()}
+        <div style={styles.clear}/>
       </div>
     );
   }
