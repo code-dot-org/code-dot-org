@@ -5,7 +5,7 @@
  * off of those actions.
  */
 
-import { trySetSessionStorage, tryGetSessionStorage } from '../utils';
+import { trySetLocalStorage, tryGetLocalStorage } from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
 const TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
@@ -18,7 +18,7 @@ const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
 
 const ENGLISH_LOCALE = 'en_us';
 
-const STORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
+const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
 /**
  * Some scenarios:
@@ -306,11 +306,11 @@ export const determineInstructionsConstants = config => {
   // instructions or if it is the first level in the stage, always show
   // the overlay. Otherwise, show it exactly once on the very first
   // level a user looks at.
-  let overlaySeen = tryGetSessionStorage(STORAGE_OVERLAY_SEEN_FLAG, false);
+  let overlaySeen = tryGetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, false);
   let shouldShowOverlay = hasInstructionsToShow &&
       (config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen);
   if (shouldShowOverlay) {
-    trySetSessionStorage(STORAGE_OVERLAY_SEEN_FLAG, true);
+    trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
   }
 
   return {
