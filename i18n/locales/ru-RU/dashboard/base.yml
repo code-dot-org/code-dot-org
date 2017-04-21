@@ -79,6 +79,7 @@ ru:
     forgot_password: 'Забыли пароль?'
     need_confirmation: "Не получили инструкции по подтверждению?"
     need_unlock: "Не получили инструкции для разблокированию?"
+    not_linked: "Извините, но вам надо ввести ваш пароль внизу, чтобы продолжить. Ваша учётная запись не зарегистрирована в %{provider}."
   signup_form:
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
@@ -173,6 +174,14 @@ ru:
       Веселые и визуально захватывающие уроки знакомят с основными понятиями информатики посредством простой и управляемой игры. Учитесь программировать с Биллом Гейтсом, Марком Цукербергом, персонажами Angry Birds и Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Твой раздел:'
+      other: 'Твои разделы:'
+    code_with_teacher: '%{section_code} с %{teacher_name}'
+    confirm:
+      remove: 'Вы хотите выйти из раздела?'
+    remove: '(удалить раздел)'
   follower:
     invite_sent: 'Приглашение отправлено'
     added_teacher: '%{name} добавлен как твой учитель'
@@ -186,8 +195,6 @@ ru:
       blank_code: "Введите код раздела"
       cant_join_own_section: "К сожалению, вы не можете присоединиться к своему разделу."
     mail:
-      invite_student:
-        subject: "Присоединяйтесь к классу с %{teacher_name} на Code.org!"
       student_disassociated:
         subject: 'Уведомление от Code.org: %{student_name} больше не является вашим учеником.'
   reports:
@@ -386,6 +393,7 @@ ru:
     announcement_petition: "Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки."
     announcement_petition_button: "Добавьте ваше имя"
     announcement_go_beyond_button: "Выйти за пределы"
+    announcement_apply_now: "Apply now"
     announcement_all: "Будьте в курсе новых возможностей, читая наш блог учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые объявления.</a>"
     announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут урок информатики с помощью Часа Кода с 5 по 11 декабря. Мы рассчитываем на вас, чтобы помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}' target='_blank'>Зарегистрируйте Ваш Час Кода</a> и покажите своим примеров, что любой желающий учитель может начать преподавать информатику."
     announcement_mc_launch: "Один из самых популярных учебников теперь имеет продолжение! Новый Редактор для Часа Кода Minecraft позволяет студентам создать правила мира Minecraft. Они могут создать совершенно уникальную игру, а затем поделиться ею с друзьями или играть в эту игру на своих телефонах. Занимайтесь этим во время Часа Кода."
@@ -398,13 +406,11 @@ ru:
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста, введите код другой группы."
-    section_code_not_entered: "Просьба представить current_section_code."
     section_code_cant_be_current_section: "Текущий раздел не может быть таким же, как и новый раздел."
     current_section_dne: "Извините, но группа %{current_section_code} не существует. Пожалуйста, введите код другогой группы."
-    students_not_yours: "Вы не можете переместить студентов из группы, которая вам не принадлежит."
-    stay_enrolled_not_entered: "Пожалуйста представьте stay_enrolled_in_current_section."
     student_ids_not_entered: "Просьба предоставить student_ids."
     student_not_found: "Один или несколько учеников не могут быть найдены."
     all_students_must_be_in_current_section: "Все ученики должны быть зачислены в вашу группу."
@@ -559,7 +565,7 @@ ru:
     support: "Получить помощь"
     support_url: "support.code.org"
     help_resources: "Помощь и ресурсы"
-    help_support: "Help and Support"
+    help_support: "Помощь и поддержка"
     documentation: "Документация"
     tutorials: "Обучающие материалы"
   multi:
@@ -775,7 +781,7 @@ ru:
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Основной курс'
-    extra_course_content: 'Extra Course Content'
+    extra_course_content: 'Дополнительный материал для курса'
   external_links:
     disclaimer: Отказ от ответственности
     leaving_domain: Сейчас вы переходите на сайт, который не управляется Code.org.

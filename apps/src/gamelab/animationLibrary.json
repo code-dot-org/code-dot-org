@@ -2471,8 +2471,8 @@
         "y": 406
       }
     },
-    "category_characters/flyMan": {
-      "name": "flyMan",
+    "category_characters/fly_bot": {
+      "name": "fly_bot",
       "frameCount": 2,
       "frameSize": {
         "x": 124,
@@ -2480,10 +2480,10 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:15:16 UTC",
-      "pngLastModified": "2016-12-01 21:15:17 UTC",
-      "version": "PEAJgVv70HnO3XaBZNsoEePd.8vbs1Lz",
-      "sourceUrl": "/api/v1/animation-library/PEAJgVv70HnO3XaBZNsoEePd.8vbs1Lz/category_characters/flyMan.png",
+      "jsonLastModified": "2017-04-20 18:19:08 UTC",
+      "pngLastModified": "2017-04-20 18:19:08 UTC",
+      "version": "MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT",
+      "sourceUrl": "/api/v1/animation-library/MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT/category_characters/fly_bot.png",
       "sourceSize": {
         "x": 248,
         "y": 141
@@ -4109,8 +4109,8 @@
         "y": 333
       }
     },
-    "category_characters/spikeMan": {
-      "name": "spikeMan",
+    "category_characters/spike_bot": {
+      "name": "spike_bot",
       "frameCount": 2,
       "frameSize": {
         "x": 116,
@@ -4118,17 +4118,17 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:15:23 UTC",
-      "pngLastModified": "2016-12-01 21:15:24 UTC",
-      "version": "_GwTx5I0YyZxliim6KBtq6hPdJzj0xGH",
-      "sourceUrl": "/api/v1/animation-library/_GwTx5I0YyZxliim6KBtq6hPdJzj0xGH/category_characters/spikeMan.png",
+      "jsonLastModified": "2017-04-20 18:19:11 UTC",
+      "pngLastModified": "2017-04-20 18:19:11 UTC",
+      "version": "byKmuyd3J8uw_LqYWhgqtyr0PrisoAlY",
+      "sourceUrl": "/api/v1/animation-library/byKmuyd3J8uw_LqYWhgqtyr0PrisoAlY/category_characters/spike_bot.png",
       "sourceSize": {
         "x": 232,
         "y": 157
       }
     },
-    "category_characters/spikeMan_walk": {
-      "name": "spikeMan_walk",
+    "category_characters/spike_bot_walk": {
+      "name": "spike_bot_walk",
       "frameCount": 2,
       "frameSize": {
         "x": 122,
@@ -4136,17 +4136,17 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:15:22 UTC",
-      "pngLastModified": "2016-12-01 21:15:23 UTC",
-      "version": "LYU2zzinHy8MHHbDLRCzbTvLZxtZpmoN",
-      "sourceUrl": "/api/v1/animation-library/LYU2zzinHy8MHHbDLRCzbTvLZxtZpmoN/category_characters/spikeMan_walk.png",
+      "jsonLastModified": "2017-04-20 18:19:09 UTC",
+      "pngLastModified": "2017-04-20 18:19:10 UTC",
+      "version": "0485vr0zX6xCtoRkX3nRQ9Xyk.Zl54Fu",
+      "sourceUrl": "/api/v1/animation-library/0485vr0zX6xCtoRkX3nRQ9Xyk.Zl54Fu/category_characters/spike_bot_walk.png",
       "sourceSize": {
         "x": 122,
         "y": 322
       }
     },
-    "category_characters/springMan": {
-      "name": "springMan",
+    "category_characters/spring_bot": {
+      "name": "spring_bot",
       "frameCount": 2,
       "frameSize": {
         "x": 112,
@@ -4154,10 +4154,10 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-08 18:45:46 UTC",
-      "pngLastModified": "2016-12-08 18:45:47 UTC",
-      "version": "1xDLu5b.9OTZ_7W8Rovk14RCnzMEvcY6",
-      "sourceUrl": "/api/v1/animation-library/1xDLu5b.9OTZ_7W8Rovk14RCnzMEvcY6/category_characters/springMan.png",
+      "jsonLastModified": "2017-04-20 18:19:12 UTC",
+      "pngLastModified": "2017-04-20 18:19:13 UTC",
+      "version": "eEETOBUA.rznDzcNXrFqnK3RE67UhnVm",
+      "sourceUrl": "/api/v1/animation-library/eEETOBUA.rznDzcNXrFqnK3RE67UhnVm/category_characters/spring_bot.png",
       "sourceSize": {
         "x": 224,
         "y": 143
@@ -4217,8 +4217,8 @@
         "y": 300
       }
     },
-    "category_characters/wingMan": {
-      "name": "wingMan",
+    "category_characters/wing_bot": {
+      "name": "wing_bot",
       "frameCount": 8,
       "frameSize": {
         "x": 218,
@@ -4226,10 +4226,10 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:15:30 UTC",
-      "pngLastModified": "2016-12-01 21:15:30 UTC",
-      "version": "bgC.gOGQDSVKsaRqeal_moj0Ss2scfSF",
-      "sourceUrl": "/api/v1/animation-library/bgC.gOGQDSVKsaRqeal_moj0Ss2scfSF/category_characters/wingMan.png",
+      "jsonLastModified": "2017-04-20 18:19:13 UTC",
+      "pngLastModified": "2017-04-20 18:19:15 UTC",
+      "version": "x3HT06Rck2p6sv89qW5VbjE2Vr8R0eDk",
+      "sourceUrl": "/api/v1/animation-library/x3HT06Rck2p6sv89qW5VbjE2Vr8R0eDk/category_characters/wing_bot.png",
       "sourceSize": {
         "x": 1744,
         "y": 128
@@ -6411,6 +6411,24 @@
       "sourceSize": {
         "x": 330,
         "y": 396
+      }
+    },
+    "category_food/pizza_slice": {
+      "name": "pizza_slice",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 300,
+        "y": 200
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:32 UTC",
+      "pngLastModified": "2017-04-20 18:20:34 UTC",
+      "version": "Z7BrGwO9mda6ugl49sxHpXKTFkVsW81F",
+      "sourceUrl": "/api/v1/animation-library/Z7BrGwO9mda6ugl49sxHpXKTFkVsW81F/category_food/pizza_slice.png",
+      "sourceSize": {
+        "x": 300,
+        "y": 200
       }
     },
     "category_food/purple_onoin": {
@@ -13037,6 +13055,24 @@
         "y": 88
       }
     },
+    "category_music/bass_clef": {
+      "name": "bass_clef",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:52 UTC",
+      "pngLastModified": "2017-04-20 18:19:52 UTC",
+      "version": "bcpl_w5_TZL4EJ3n6CmbVBcZjBX8n9PI",
+      "sourceUrl": "/api/v1/animation-library/bcpl_w5_TZL4EJ3n6CmbVBcZjBX8n9PI/category_music/bass_clef.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
     "category_music/bugle": {
       "name": "bugle",
       "frameCount": 1,
@@ -13109,6 +13145,114 @@
         "y": 229
       }
     },
+    "category_music/eighth_note": {
+      "name": "eighth_note",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:54 UTC",
+      "pngLastModified": "2017-04-20 18:19:55 UTC",
+      "version": "3tq_IMWLQa6AvDN6b2TE8_GaDNDx7uU_",
+      "sourceUrl": "/api/v1/animation-library/3tq_IMWLQa6AvDN6b2TE8_GaDNDx7uU_/category_music/eighth_note.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/eighth_note_down": {
+      "name": "eighth_note_down",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:53 UTC",
+      "pngLastModified": "2017-04-20 18:19:53 UTC",
+      "version": "nqR.lO9Qhi9271C_pKsZDWVrDeTQICiB",
+      "sourceUrl": "/api/v1/animation-library/nqR.lO9Qhi9271C_pKsZDWVrDeTQICiB/category_music/eighth_note_down.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/electric_guitar": {
+      "name": "electric_guitar",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 96,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:55 UTC",
+      "pngLastModified": "2017-04-20 18:19:56 UTC",
+      "version": "yTtr2GeHgiwGk.AeCWyaHbYFoqnXWJOn",
+      "sourceUrl": "/api/v1/animation-library/yTtr2GeHgiwGk.AeCWyaHbYFoqnXWJOn/category_music/electric_guitar.png",
+      "sourceSize": {
+        "x": 96,
+        "y": 300
+      }
+    },
+    "category_music/guitar_speaker": {
+      "name": "guitar_speaker",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 214,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:56 UTC",
+      "pngLastModified": "2017-04-20 18:19:57 UTC",
+      "version": "qwR9SAOtQm4dUj_cj5SUmAjAirsY1mPD",
+      "sourceUrl": "/api/v1/animation-library/qwR9SAOtQm4dUj_cj5SUmAjAirsY1mPD/category_music/guitar_speaker.png",
+      "sourceSize": {
+        "x": 214,
+        "y": 300
+      }
+    },
+    "category_music/half_note": {
+      "name": "half_note",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:58 UTC",
+      "pngLastModified": "2017-04-20 18:19:58 UTC",
+      "version": "5QiiK32agf0gjXfC6gMf7mb2bmmEzqgy",
+      "sourceUrl": "/api/v1/animation-library/5QiiK32agf0gjXfC6gMf7mb2bmmEzqgy/category_music/half_note.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/half_note_down": {
+      "name": "half_note_down",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:57 UTC",
+      "pngLastModified": "2017-04-20 18:19:58 UTC",
+      "version": "I6W_ltKOs6STlMhNRWfnAF1UMzoU7hvG",
+      "sourceUrl": "/api/v1/animation-library/I6W_ltKOs6STlMhNRWfnAF1UMzoU7hvG/category_music/half_note_down.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
     "category_music/harp": {
       "name": "harp",
       "frameCount": 1,
@@ -13127,6 +13271,24 @@
         "y": 300
       }
     },
+    "category_music/microphone_icon": {
+      "name": "microphone_icon",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 97,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:19:59 UTC",
+      "pngLastModified": "2017-04-20 18:19:59 UTC",
+      "version": "6D4_JDKi9NGM5kG5bIwpqTGAaxiLsXR2",
+      "sourceUrl": "/api/v1/animation-library/6D4_JDKi9NGM5kG5bIwpqTGAaxiLsXR2/category_music/microphone_icon.png",
+      "sourceSize": {
+        "x": 97,
+        "y": 300
+      }
+    },
     "category_music/piano": {
       "name": "piano",
       "frameCount": 1,
@@ -13142,6 +13304,60 @@
       "sourceUrl": "/api/v1/animation-library/p06C8e37vCJqh_Bx5gdlXI7QkpIkogNb/category_music/piano.png",
       "sourceSize": {
         "x": 290,
+        "y": 300
+      }
+    },
+    "category_music/quarter_note": {
+      "name": "quarter_note",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:01 UTC",
+      "pngLastModified": "2017-04-20 18:20:01 UTC",
+      "version": "ROsaM4GXFhELntEZlmBNo.mXc7gBL3h6",
+      "sourceUrl": "/api/v1/animation-library/ROsaM4GXFhELntEZlmBNo.mXc7gBL3h6/category_music/quarter_note.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/quarter_note_down": {
+      "name": "quarter_note_down",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:00 UTC",
+      "pngLastModified": "2017-04-20 18:20:00 UTC",
+      "version": "HsoQWjgtHWS7HXmY2HY5gkqBjwf00cqm",
+      "sourceUrl": "/api/v1/animation-library/HsoQWjgtHWS7HXmY2HY5gkqBjwf00cqm/category_music/quarter_note_down.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/quarter_rest": {
+      "name": "quarter_rest",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:02 UTC",
+      "pngLastModified": "2017-04-20 18:20:02 UTC",
+      "version": "1g6wrczOtdehwRDijd1uViK7Sv7BL9ny",
+      "sourceUrl": "/api/v1/animation-library/1g6wrczOtdehwRDijd1uViK7Sv7BL9ny/category_music/quarter_rest.png",
+      "sourceSize": {
+        "x": 212,
         "y": 300
       }
     },
@@ -13176,6 +13392,60 @@
       "pngLastModified": "2017-04-18 06:08:29 UTC",
       "version": "B7PCqKFBF7uBuD1QkK9FwXyB4FlDg0K1",
       "sourceUrl": "/api/v1/animation-library/B7PCqKFBF7uBuD1QkK9FwXyB4FlDg0K1/category_music/saxophone.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/sixteenth_note": {
+      "name": "sixteenth_note",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:04 UTC",
+      "pngLastModified": "2017-04-20 18:20:04 UTC",
+      "version": "9X_cK6l1OsSQCorhs_1v1R3cJjCTXrvk",
+      "sourceUrl": "/api/v1/animation-library/9X_cK6l1OsSQCorhs_1v1R3cJjCTXrvk/category_music/sixteenth_note.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/sixteenth_note_down": {
+      "name": "sixteenth_note_down",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:03 UTC",
+      "pngLastModified": "2017-04-20 18:20:03 UTC",
+      "version": "O0IEe3JCQ1SucaZ36zP7etbdsM4.CWj_",
+      "sourceUrl": "/api/v1/animation-library/O0IEe3JCQ1SucaZ36zP7etbdsM4.CWj_/category_music/sixteenth_note_down.png",
+      "sourceSize": {
+        "x": 212,
+        "y": 300
+      }
+    },
+    "category_music/treble-clef": {
+      "name": "treble-clef",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 212,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2017-04-20 18:20:05 UTC",
+      "pngLastModified": "2017-04-20 18:20:05 UTC",
+      "version": ".yLnFpq4MGOdH2Ido2jYRrykFvQRpeGE",
+      "sourceUrl": "/api/v1/animation-library/.yLnFpq4MGOdH2Ido2jYRrykFvQRpeGE/category_music/treble-clef.png",
       "sourceSize": {
         "x": 212,
         "y": 300
@@ -16111,16 +16381,16 @@
       "category_characters/box2",
       "category_characters/bubble",
       "category_characters/bubbly",
-      "category_characters/flyMan",
+      "category_characters/fly_bot",
       "category_characters/ghost",
       "category_characters/ghost_standing",
       "category_characters/gnome",
-      "category_characters/spikeMan",
-      "category_characters/spikeMan_walk",
-      "category_characters/springMan",
+      "category_characters/spike_bot",
+      "category_characters/spike_bot_walk",
+      "category_characters/spring_bot",
       "category_characters/sun",
       "category_characters/sun2",
-      "category_characters/wingMan"
+      "category_characters/wing_bot"
     ],
     "alienyellow": [
       "category_characters/alienYellow"
@@ -16199,8 +16469,7 @@
       "category_animals/snail",
       "category_animals/snake",
       "category_animals/snake_square",
-      "category_animals/snake_token",
-      "category_characters/springMan"
+      "category_animals/snake_token"
     ],
     "annoyed": [
       "category_characters/kid_11",
@@ -16275,6 +16544,9 @@
     ],
     "bannana": [
       "category_food/bannana"
+    ],
+    "bass_clef": [
+      "category_music/bass_clef"
     ],
     "beaker": [
       "category_generic_items/beaker",
@@ -17156,8 +17428,7 @@
       "category_animals/snake_token",
       "category_animals/turtle",
       "category_animals/tyrannosaurus",
-      "category_animals/zebra",
-      "category_characters/springMan"
+      "category_animals/zebra"
     ],
     "category_backgrounds": [
       "category_backgrounds/city",
@@ -17229,7 +17500,7 @@
       "category_characters/bubbly",
       "category_characters/crowned_creature",
       "category_characters/floating_alien",
-      "category_characters/flyMan",
+      "category_characters/fly_bot",
       "category_characters/ghost",
       "category_characters/ghost_standing",
       "category_characters/gnome",
@@ -17320,13 +17591,13 @@
       "category_characters/popsicle_monster",
       "category_characters/purple_monster",
       "category_characters/red_alien",
-      "category_characters/spikeMan",
-      "category_characters/spikeMan_walk",
-      "category_characters/springMan",
+      "category_characters/spike_bot",
+      "category_characters/spike_bot_walk",
+      "category_characters/spring_bot",
       "category_characters/sun",
       "category_characters/sun2",
       "category_characters/tall_robot",
-      "category_characters/wingMan"
+      "category_characters/wing_bot"
     ],
     "category_environment": [
       "category_environment/brick_grey",
@@ -17452,6 +17723,7 @@
       "category_food/orange",
       "category_food/pear",
       "category_food/pepper",
+      "category_food/pizza_slice",
       "category_food/purple_onoin",
       "category_food/red_apple",
       "category_food/sliced_watermelon",
@@ -17826,14 +18098,28 @@
       "category_generic_items/wrench_simple"
     ],
     "category_music": [
+      "category_music/bass_clef",
       "category_music/bugle",
       "category_music/cello",
       "category_music/double_bass",
       "category_music/drum_set",
+      "category_music/eighth_note",
+      "category_music/eighth_note_down",
+      "category_music/electric_guitar",
+      "category_music/guitar_speaker",
+      "category_music/half_note",
+      "category_music/half_note_down",
       "category_music/harp",
+      "category_music/microphone_icon",
       "category_music/piano",
+      "category_music/quarter_note",
+      "category_music/quarter_note_down",
+      "category_music/quarter_rest",
       "category_music/recorder",
       "category_music/saxophone",
+      "category_music/sixteenth_note",
+      "category_music/sixteenth_note_down",
+      "category_music/treble-clef",
       "category_music/ukulele",
       "category_music/voilin"
     ],
@@ -18045,16 +18331,16 @@
       "category_characters/box2",
       "category_characters/bubble",
       "category_characters/bubbly",
-      "category_characters/flyMan",
+      "category_characters/fly_bot",
       "category_characters/ghost",
       "category_characters/ghost_standing",
       "category_characters/gnome",
-      "category_characters/spikeMan",
-      "category_characters/spikeMan_walk",
-      "category_characters/springMan",
+      "category_characters/spike_bot",
+      "category_characters/spike_bot_walk",
+      "category_characters/spring_bot",
       "category_characters/sun",
       "category_characters/sun2",
-      "category_characters/wingMan"
+      "category_characters/wing_bot"
     ],
     "cherry": [
       "category_food/cherry"
@@ -18708,6 +18994,15 @@
     "eggplant": [
       "category_food/eggplant"
     ],
+    "eighth_note": [
+      "category_music/eighth_note"
+    ],
+    "eighth_note_down": [
+      "category_music/eighth_note_down"
+    ],
+    "electric_guitar": [
+      "category_music/electric_guitar"
+    ],
     "elephant": [
       "category_animals/elephant"
     ],
@@ -19027,8 +19322,8 @@
       "category_vehicles/playerShip3_orange",
       "category_vehicles/playerShip3_red"
     ],
-    "flyman": [
-      "category_characters/flyMan"
+    "fly_bot": [
+      "category_characters/fly_bot"
     ],
     "folder": [
       "category_generic_items/folder"
@@ -19703,6 +19998,15 @@
     ],
     "groundsnow": [
       "category_obstacles/groundSnow"
+    ],
+    "guitar_speaker": [
+      "category_music/guitar_speaker"
+    ],
+    "half_note": [
+      "category_music/half_note"
+    ],
+    "half_note_down": [
+      "category_music/half_note_down"
     ],
     "hammer_bronze": [
       "category_tools/hammer_bronze"
@@ -20804,6 +21108,9 @@
       "category_generic_items/microphone",
       "category_tools/microphone"
     ],
+    "microphone_icon": [
+      "category_music/microphone_icon"
+    ],
     "microscope": [
       "category_generic_items/microscope",
       "category_tools/microscope"
@@ -21162,7 +21469,7 @@
       "category_characters/box",
       "category_characters/box2",
       "category_characters/bubbly",
-      "category_characters/flyMan",
+      "category_characters/fly_bot",
       "category_characters/ghost_standing"
     ],
     "paint_brush": [
@@ -21690,6 +21997,9 @@
     "pink_monster": [
       "category_characters/pink_monster"
     ],
+    "pizza_slice": [
+      "category_food/pizza_slice"
+    ],
     "planeblue1": [
       "category_vehicles/planeBlue1"
     ],
@@ -21882,6 +22192,15 @@
     ],
     "purse": [
       "category_generic_items/purse"
+    ],
+    "quarter_note": [
+      "category_music/quarter_note"
+    ],
+    "quarter_note_down": [
+      "category_music/quarter_note_down"
+    ],
+    "quarter_rest": [
+      "category_music/quarter_rest"
     ],
     "rabbit": [
       "category_animals/rabbit"
@@ -22099,6 +22418,12 @@
     "shovel_silver": [
       "category_tools/shovel_silver"
     ],
+    "sixteenth_note": [
+      "category_music/sixteenth_note"
+    ],
+    "sixteenth_note_down": [
+      "category_music/sixteenth_note_down"
+    ],
     "sliced_watermelon": [
       "category_food/sliced_watermelon"
     ],
@@ -22127,6 +22452,12 @@
       "category_generic_items/spatula",
       "category_tools/spatula"
     ],
+    "spike_bot": [
+      "category_characters/spike_bot"
+    ],
+    "spike_bot_walk": [
+      "category_characters/spike_bot_walk"
+    ],
     "spike_bottom": [
       "category_obstacles/spike_bottom"
     ],
@@ -22137,20 +22468,14 @@
       "category_characters/kid_26",
       "category_characters/kid_26_side"
     ],
-    "spikeman": [
-      "category_characters/spikeMan"
-    ],
-    "spikeman_walk": [
-      "category_characters/spikeMan_walk"
-    ],
     "spring": [
       "category_obstacles/spring"
     ],
+    "spring_bot": [
+      "category_characters/spring_bot"
+    ],
     "spring_in_out": [
       "category_obstacles/spring_in_out"
-    ],
-    "springman": [
-      "category_characters/springMan"
     ],
     "sprites": [
       "category_obstacles/groundDirt",
@@ -22804,6 +23129,9 @@
       "category_generic_items/water_glass",
       "category_generic_items/wide_screen_monitor"
     ],
+    "treble-clef": [
+      "category_music/treble-clef"
+    ],
     "tree_island": [
       "category_backgrounds/tree_island"
     ],
@@ -23024,8 +23352,8 @@
     "wide_screen_monitor": [
       "category_generic_items/wide_screen_monitor"
     ],
-    "wingman": [
-      "category_characters/wingMan"
+    "wing_bot": [
+      "category_characters/wing_bot"
     ],
     "woman": [
       "category_characters/kid_1",

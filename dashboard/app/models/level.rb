@@ -374,6 +374,29 @@ class Level < ActiveRecord::Base
     end
   end
 
+  def summary_for_lesson_plans
+    summary = {
+      level_id: id,
+      type: self.class.to_s,
+      name: name,
+    }
+
+    %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
+      value = properties[key] || try(key)
+      summary[key] = value if value
+    end
+    if video_key
+      summary[:video_youtube] = specified_autoplay_video.youtube_url
+      summary[:video_download] = specified_autoplay_video.download
+    end
+
+    unless contained_levels.empty?
+      summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
+    end
+
+    summary
+  end
+
   private
 
   def write_to_file?

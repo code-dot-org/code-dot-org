@@ -27,10 +27,12 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using the `while` loop to figure out how many times to fill each hole.\",\"hint_id\":\"courseD_farmer_conditionals6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c44e00dc533b0ae359d374e23dc345a/courseD_farmer_conditionals6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the farmer needs to move forward and down several times in a stair-step pattern.\",\"hint_id\":\"courseD_farmer_conditionals6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d6430ae7dff887a4cb06283eb1707d8/courseD_farmer_conditionals6.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using the `while` loop to figure out how many times to fill each hole.\",\"hint_id\":\"courseD_farmer_conditionals6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c44e00dc533b0ae359d374e23dc345a/courseD_farmer_while6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the farmer needs to move forward and down several times in a stair-step pattern.\",\"hint_id\":\"courseD_farmer_conditionals6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d6430ae7dff887a4cb06283eb1707d8/courseD_farmer_while6.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The stair step pattern uses the following blocks\\n - move forward\\n - fill hole\\n - turn right\\n - move forward\\n - fill hole\\n - turn left\\n\\nHow many times do you need to use this stair step pattern?\\n\\nMake sure you are using the `while there is a hole` to fill the hole.\",\"hint_id\":\"courseD_farmer_conditionals6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4b39631ec4f223bcf9f8b25073d202c/courseD_farmer_while6.mp3\"}]",
     "instructions_important": "false",
     "ideal": "10",
     "markdown_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop to easily fill them all!",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -65,6 +65,7 @@ import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
 import Sounds from '../Sounds';
+import {makeDisabledConfig} from '../dropletUtils';
 
 import {TestResults, ResultType} from '../constants';
 
@@ -491,12 +492,6 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerToolkit.dropletConfig);
-
-  // Set the custom set of blocks (may have had maker blocks merged in) so
-  // we can later pass the custom set to the interpreter.
-  config.level.levelBlocks = config.dropletConfig.blocks;
-
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -591,9 +586,24 @@ Applab.init = function (config) {
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
   });
 
+  config.dropletConfig = dropletConfig;
+
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
+    config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.dropletConfig);
+  } else {
+    // Push gray, no-autocomplete versions of maker blocks for display purposes.
+    const disabledMakerDropletConfig = makeDisabledConfig(makerToolkit.dropletConfig);
+    config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        disabledMakerDropletConfig);
   }
+
+  // Set the custom set of blocks (may have had maker blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
 
   getStore().dispatch(actions.changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
