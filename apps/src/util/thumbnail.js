@@ -17,15 +17,24 @@ const THUMBNAIL_SIZE = 180;
 let lastCaptureTimeMs = 0;
 
 /**
- * Returns true if this level is a project level owned by this user, and is
- * not a shared or embedded level.
+ * Returns true if this level is a project level owned by this user, it is not a
+ * shared or embedded level, and enough time has passed since the last capture.
+ * @param {number} minCaptureIntervalMs Only capture if it has been at least
+ *   this many milliseconds since the last capture. Optional.
  * @returns {boolean}
  */
-export function shouldCapture() {
+export function shouldCapture(minCaptureIntervalMs) {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
   if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
     return false;
   }
+
+  // Skip capturing a screenshot if we just captured one recently.
+  const intervalMs = Date.now() - lastCaptureTimeMs;
+  if (minCaptureIntervalMs > 0 && intervalMs < minCaptureIntervalMs) {
+    return;
+  }
+
   return true;
 }
 
@@ -37,12 +46,7 @@ export function shouldCapture() {
  *   thumbnail image captures in milliseconds.
  */
 export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
-  if (!shouldCapture()) {
-    return;
-  }
-
-  // Skip capturing a screenshot if we just captured one recently.
-  if (Date.now() - lastCaptureTimeMs < minCaptureIntervalMs) {
+  if (!shouldCapture(minCaptureIntervalMs)) {
     return;
   }
   lastCaptureTimeMs = Date.now();
@@ -75,6 +79,8 @@ export function captureThumbnailFromCanvas(canvas) {
     console.warn(`Thumbnail capture failed: element not found.`);
     return;
   }
+  lastCaptureTimeMs = Date.now();
+
   const thumbnailCanvas = createThumbnail(canvas);
   canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
 }
@@ -87,6 +93,7 @@ let isCapturePending = false;
 
 export function init() {
   isCapturePending = false;
+  lastCaptureTimeMs = 0;
 }
 
 /**

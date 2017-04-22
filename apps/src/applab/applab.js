@@ -64,6 +64,7 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
 import * as applabThumbnail from './applabThumbnail';
+import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 
@@ -340,7 +341,7 @@ Applab.init = function (config) {
   jsInterpreterLogger = null;
 
   // Necessary for tests.
-  applabThumbnail.init();
+  thumbnailUtils.init();
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
