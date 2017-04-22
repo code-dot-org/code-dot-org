@@ -151,9 +151,15 @@ module AWS
       def stack_options(template)
         {
           stack_name: stack_name,
-          capabilities: ['CAPABILITY_IAM'],
           parameters: parameters(template)
-        }.merge(string_or_url(template))
+        }.merge(string_or_url(template)).tap do |options|
+          if stack_name == 'IAM'
+            options[:capabilities] = %w[
+              CAPABILITY_IAM
+              CAPABILITY_NAMED_IAM
+            ]
+          end
+        end
       end
 
       def create_or_update

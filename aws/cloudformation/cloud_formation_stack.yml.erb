@@ -429,7 +429,7 @@ Resources:
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: 'Daemon',
-          node_name: '$ENVIRONMENT-daemon',
+          node_name: stack_name,
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],

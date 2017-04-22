@@ -1,6 +1,8 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
-Description: IAM layer including roles and access permissions for Code.org infrastructure.
+Description: >-
+  IAM layer including roles and access permissions for Code.org infrastructure.
+  Note: Admin permissions are required to manage this stack.
 Resources:
   FrontendRole:
     Type: AWS::IAM::Role
@@ -201,6 +203,26 @@ Resources:
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  CloudFormationRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [cloudformation.amazonaws.com]}
+      Path: /
+      Policies:
+      - PolicyName: passRole
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - 'iam:PassRole'
+            Resource: '*'
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/PowerUserAccess"
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
