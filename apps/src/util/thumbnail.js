@@ -7,10 +7,6 @@ import {canvasFromImage, canvasToBlob, imageFromURI, svgToDataURI} from '../imag
 import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
 
-// Export html2canvas as a non-default so that it can be stubbed by tests.
-import html2canvas from 'html2canvas';
-export {html2canvas};
-
 // Thumbnail image width and height in pixels.
 const THUMBNAIL_SIZE = 180;
 
