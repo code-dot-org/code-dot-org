@@ -50,7 +50,7 @@ class ExperimentTest < ActiveSupport::TestCase
   test "teacher based experiment is disabled if start time is too late" do
     create :teacher_based_experiment,
       percentage: 100,
-      earliest_section_at: DateTime.now + 1.days
+      earliest_section_at: DateTime.now + 1.day
     section = create :section,
       first_activity_at: DateTime.now
     assert_empty Experiment.get_all_enabled(section: section)
@@ -59,7 +59,7 @@ class ExperimentTest < ActiveSupport::TestCase
   test "teacher based experiment is disabled if end_time is too early" do
     create :teacher_based_experiment,
       percentage: 100,
-      latest_section_at: DateTime.now - 1.days
+      latest_section_at: DateTime.now - 1.day
     section = create :section,
       first_activity_at: DateTime.now
     assert_empty Experiment.get_all_enabled(section: section)
