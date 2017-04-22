@@ -62,7 +62,7 @@ export function isMouseEventInBounds(mouseEvent, container) {
  * While in design mode, elements get wrapped in a ui-draggable container.
  * @returns {true} If element is currently wrapped
  */
-function isDraggableContainer(element) {
+export function isDraggableContainer(element) {
   return $(element).hasClass('ui-draggable');
 }
 
