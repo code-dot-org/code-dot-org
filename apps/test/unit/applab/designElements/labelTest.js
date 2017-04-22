@@ -1,9 +1,8 @@
 import React from 'react';
 
 import {expect} from '../../../util/configuredChai';
-
-const label = require('@cdo/apps/applab/designElements/label');
-const library = require('@cdo/apps/applab/designElements/library');
+import label from '@cdo/apps/applab/designElements/label';
+import library from '@cdo/apps/applab/designElements/library';
 
 function getRect(e) {
   return {
