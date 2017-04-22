@@ -6,6 +6,7 @@
 import {canvasFromImage, canvasToBlob, imageFromURI, svgToDataURI} from '../imageUtils';
 import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
+import {html2canvas} from '../util/htmlToCanvasWrapper';
 
 // Thumbnail image width and height in pixels.
 const THUMBNAIL_SIZE = 180;
@@ -76,6 +77,71 @@ export function captureThumbnailFromCanvas(canvas) {
   }
   const thumbnailCanvas = createThumbnail(canvas);
   canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
+}
+
+/**
+ * @type {boolean} Whether a screenshot capture is pending.
+ * Used only by captureThumbnailFromElement.
+ */
+let isCapturePending = false;
+
+export function init() {
+  isCapturePending = false;
+}
+
+/**
+ * Whether the thumbnail screenshot capture is complete. Needed for testing.
+ * Used only by captureThumbnailFromElement.
+ * @returns {boolean}
+ */
+export function isCaptureComplete() {
+  return !isCapturePending;
+}
+
+
+/**
+ * Copies the image from the element, crops a square center section, shrinks it
+ * to width and height equal to THUMBNAIL_SIZE, and saves it to the server.
+ * @param {HTMLElement} element
+ */
+
+export function captureThumbnailFromElement(element) {
+  if (!element) {
+    console.warn(`element not found. skipping screenshot.`);
+    return;
+  }
+
+  isCapturePending = true;
+
+  const options = {
+    background: '#eee',
+  };
+
+  // html2canvas can take up to 2 seconds to capture the element contents
+  // onto the canvas.
+  return html2canvas(element, options).then(canvas => {
+    if (!isCapturePending) {
+      // We most likely got here because a level test triggered a screenshot
+      // capture, the test completed, and then another test started before the
+      // capture completed.
+      console.log('not saving screenshot because no capture is pending');
+      return;
+    }
+
+    // Center-crop and scale the image down so we don't send so much data over
+    // the network.
+    const thumbnailCanvas = createThumbnail(canvas);
+
+    return new Promise((resolve, reject) => {
+      thumbnailCanvas.toBlob(pngBlob => {
+        project.saveThumbnail(pngBlob).then(resolve, reject);
+      });
+    });
+  }).catch(e => {
+    console.log(`error capturing screenshot: ${e}`);
+  }).then(() => {
+    isCapturePending = false;
+  });
 }
 
 /**
