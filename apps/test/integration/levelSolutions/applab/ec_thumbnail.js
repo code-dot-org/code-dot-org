@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import * as htmlToCanvasWrapper from '@cdo/apps/util/htmlToCanvasWrapper';
-import {CAPTURE_TICK_COUNT} from '@cdo/apps/applab/applabThumbnail';
+import {CAPTURE_TICK_COUNT} from '@cdo/apps/applab/constants';
 import {isCaptureComplete} from '@cdo/apps/util/thumbnail';
 
 export default {

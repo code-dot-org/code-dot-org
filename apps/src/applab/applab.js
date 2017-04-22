@@ -63,7 +63,6 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
-import * as applabThumbnail from './applabThumbnail';
 import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
@@ -302,8 +301,10 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
-  if (Applab.tickCount === applabThumbnail.CAPTURE_TICK_COUNT) {
-    applabThumbnail.captureScreenshot();
+  if (Applab.tickCount === applabConstants.CAPTURE_TICK_COUNT) {
+    const visualization = document.getElementById('visualization');
+    const interval = applabConstants.MIN_CAPTURE_INTERVAL_MS;
+    thumbnailUtils.captureThumbnailFromElement(visualization, interval);
   }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
