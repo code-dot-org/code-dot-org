@@ -10,9 +10,7 @@ export const CAPTURE_TICK_COUNT = 300;
 const MIN_CAPTURE_INTERVAL_MS = 60000;
 
 export function captureScreenshot() {
-  if (!thumbnailUtils.shouldCapture(MIN_CAPTURE_INTERVAL_MS)) {
-    return;
-  }
   const visualization = document.getElementById('visualization');
-  thumbnailUtils.captureThumbnailFromElement(visualization);
+  const interval = MIN_CAPTURE_INTERVAL_MS;
+  thumbnailUtils.captureThumbnailFromElement(visualization, interval);
 }

@@ -23,7 +23,7 @@ let lastCaptureTimeMs = 0;
  *   this many milliseconds since the last capture. Optional.
  * @returns {boolean}
  */
-export function shouldCapture(minCaptureIntervalMs) {
+ function shouldCapture(minCaptureIntervalMs) {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
   if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
     return false;
@@ -79,6 +79,9 @@ export function captureThumbnailFromCanvas(canvas) {
     console.warn(`Thumbnail capture failed: element not found.`);
     return;
   }
+  if (!shouldCapture()) {
+    return;
+  }
   const thumbnailCanvas = createThumbnail(canvas);
   canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
 }
@@ -110,9 +113,12 @@ export function isCaptureComplete() {
  * @param {HTMLElement} element
  */
 
-export function captureThumbnailFromElement(element) {
+export function captureThumbnailFromElement(element, minCaptureIntervalMs) {
   if (!element) {
     console.warn(`element not found. skipping screenshot.`);
+    return;
+  }
+  if (!shouldCapture(minCaptureIntervalMs)) {
     return;
   }
   lastCaptureTimeMs = Date.now();

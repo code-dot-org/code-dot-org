@@ -48,7 +48,7 @@ import {
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import {captureThumbnailFromCanvas, shouldCapture} from '../util/thumbnail';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 
@@ -1074,7 +1074,7 @@ GameLab.prototype.onP5Draw = function () {
  * for long enough and we have not done so already.
  */
 GameLab.prototype.captureInitialImage = function () {
-  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT || !shouldCapture()) {
+  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
     return;
   }
   this.initialCaptureComplete = true;

@@ -49,7 +49,7 @@ import {
 } from '../containedLevels';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
-import {captureThumbnailFromCanvas, shouldCapture} from '../util/thumbnail';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -1483,9 +1483,7 @@ Artist.prototype.checkAnswer = function () {
     this.testResults = TestResults.FREE_PLAY;
   }
 
-  if (shouldCapture()) {
-    captureThumbnailFromCanvas(this.getThumbnailCanvas_());
-  }
+  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
   this.studioApp_.stopLoopingAudio('start');
