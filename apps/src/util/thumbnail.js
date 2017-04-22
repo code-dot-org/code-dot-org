@@ -40,26 +40,24 @@ let lastCaptureTimeMs = 0;
 
 /**
  * Converts the contents of an SVG element into an image, shrinks it to
- * width and height equal to THUMBNAIL_SIZE, and saves it to
- * @param {SVGElement} svg Svg element to capture the contents of.
+ * width and height equal to THUMBNAIL_SIZE, and saves it to the server.
+ * @param {SVGElement} svg SVG element to capture the contents of.
  * @param {number} minCaptureIntervalMs Minimum allowable time between
  *   thumbnail image captures in milliseconds.
  */
 export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
+  if (!svg) {
+    console.warn(`Thumbnail capture failed: svg element not found.`);
+    return;
+  }
+  if (!SVGElement.prototype.toDataURL) {
+    console.warn('Thumbnail capture failed: SVGElement.prototype.toDataURL undefined.');
+    return;
+  }
   if (!shouldCapture(minCaptureIntervalMs)) {
     return;
   }
   lastCaptureTimeMs = Date.now();
-
-  if (!svg) {
-    console.warn(`Thumbnail capture failed: svgStudio not found.`);
-    return;
-  }
-
-  if (!svg.toDataURL) {
-    console.warn('Thumbnail capture failed: svg.toDataURL undefined.');
-    return;
-  }
 
   svgToDataURI(svg)
     .then(imageFromURI)
@@ -76,7 +74,7 @@ export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
  */
 export function captureThumbnailFromCanvas(canvas) {
   if (!canvas) {
-    console.warn(`Thumbnail capture failed: element not found.`);
+    console.warn(`Thumbnail capture failed: canvas element not found.`);
     return;
   }
   if (!shouldCapture()) {
@@ -115,7 +113,7 @@ export function isCaptureComplete() {
 
 export function captureThumbnailFromElement(element, minCaptureIntervalMs) {
   if (!element) {
-    console.warn(`element not found. skipping screenshot.`);
+    console.warn(`Thumbnail capture failed: html element not found.`);
     return;
   }
   if (!shouldCapture(minCaptureIntervalMs)) {
