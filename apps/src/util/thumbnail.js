@@ -79,8 +79,6 @@ export function captureThumbnailFromCanvas(canvas) {
     console.warn(`Thumbnail capture failed: element not found.`);
     return;
   }
-  lastCaptureTimeMs = Date.now();
-
   const thumbnailCanvas = createThumbnail(canvas);
   canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
 }
@@ -102,7 +100,7 @@ export function init() {
  * @returns {boolean}
  */
 export function isCaptureComplete() {
-  return !isCapturePending;
+  return lastCaptureTimeMs > 0 && !isCapturePending;
 }
 
 
@@ -117,7 +115,7 @@ export function captureThumbnailFromElement(element) {
     console.warn(`element not found. skipping screenshot.`);
     return;
   }
-
+  lastCaptureTimeMs = Date.now();
   isCapturePending = true;
 
   const options = {
