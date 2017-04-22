@@ -1224,19 +1224,7 @@ Applab.onPuzzleComplete = function (submit) {
     }
   };
 
-  var divApplab = document.getElementById('divApplab');
-  if (!divApplab || typeof divApplab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divApplab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        Applab.feedbackImage = pngDataUrl;
-        Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }
-    });
-  }
+  sendReport();
 };
 
 Applab.executeCmd = function (id, name, opts) {

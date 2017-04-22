@@ -570,19 +570,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     }
   };
 
-  const divGameLab = document.getElementById('divGameLab');
-  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divGameLab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        this.feedbackImage = pngDataUrl;
-        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }.bind(this)
-    });
-  }
+  sendReport();
 };
 
 /**
