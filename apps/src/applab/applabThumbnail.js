@@ -1,8 +1,6 @@
 import project from '../code-studio/initApp/project';
 import * as thumbnailUtils from '../util/thumbnail';
-
-// Needed by html2canvas in SVGContainer.hasFabric to work on IE 11.
-window.html2canvas = thumbnailUtils.html2canvas;
+import {html2canvas} from '../util/htmlToCanvasWrapper';
 
 // Number of ticks after which to capture a thumbnail image of the play space.
 // 300 ticks equates to approximately 1-1.5 seconds in apps that become idle
@@ -63,7 +61,7 @@ export function captureScreenshot() {
 
   // html2canvas can take up to 2 seconds to capture the visualization contents
   // onto the canvas.
-  thumbnailUtils.html2canvas(visualization, options).then(canvas => {
+  html2canvas(visualization, options).then(canvas => {
     if (!isCapturePending) {
       // We most likely got here because a level test triggered a screenshot
       // capture, the test completed, and then another test started before the

@@ -3,7 +3,7 @@ import { TestResults } from '@cdo/apps/constants';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
-import * as thumbnailUtils from '@cdo/apps/util/thumbnail';
+import * as htmlToCanvasWrapper from '@cdo/apps/util/htmlToCanvasWrapper';
 import {CAPTURE_TICK_COUNT, isCaptureComplete} from '@cdo/apps/applab/applabThumbnail';
 
 export default {
@@ -88,15 +88,15 @@ export default {
       useFirebase: true,
       xml: `write('hello');`,
       runBeforeClick(assert) {
-        sinon.stub(thumbnailUtils, 'html2canvas').rejects('foobar');
+        sinon.stub(htmlToCanvasWrapper, 'html2canvas').rejects('foobar');
         sinon.stub(console, 'log');
         tickWrapper.runOnAppTick(Applab, CAPTURE_TICK_COUNT + 1, () => {
           expect(isCaptureComplete()).to.be.false;
           tickWrapper.tickAppUntil(Applab, isCaptureComplete).then(() => {
             expect(project.saveThumbnail).not.to.have.been.called;
 
-            expect(thumbnailUtils.html2canvas).to.have.been.calledOnce;
-            thumbnailUtils.html2canvas.restore();
+            expect(htmlToCanvasWrapper.html2canvas).to.have.been.calledOnce;
+            htmlToCanvasWrapper.html2canvas.restore();
 
             expect(console.log).to.have.been.calledOnce;
             expect(console.log.getCall(0).args[0]).to.contain('foobar');
