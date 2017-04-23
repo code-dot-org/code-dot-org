@@ -1,8 +1,7 @@
-import React from 'react';
-
 import {expect} from '../../../util/configuredChai';
 import label from '@cdo/apps/applab/designElements/label';
 import library from '@cdo/apps/applab/designElements/library';
+import * as applabConstants from '@cdo/apps/applab/constants';
 
 function getRect(e) {
   return {
@@ -23,6 +22,13 @@ function setFontSize(e, newFontSize) {
   const before = label.beforePropertyChange(e, 'fontSize');
   e.style.fontSize = newFontSize + 'px';
   label.onPropertyChange(e, 'fontSize', newFontSize, before);
+}
+
+function expectSameWidth(newRect, oldRect) {
+  expect(newRect.top).is.equal(oldRect.top, 'top should be the same');
+  expect(newRect.left).is.equal(oldRect.left, 'left should be the same');
+  expect(newRect.width).is.equal(oldRect.width, 'width should be the same');
+  // Don't care about height, which is why we aren't using deep equals.
 }
 
 function expectWider(newRect, oldRect) {
@@ -52,6 +58,7 @@ describe('Applab designElements/label component', function () {
 
   let e;
   const NEW_TEXT = 'longer text';
+  const LONG_TEXT = 'very long text string that is almost certainly guaranteed to wrap the screen width';
 
   beforeEach(() => {
     e = library.createElement(library.ElementType.LABEL, 50 /* left */, 40 /* top */, true /* withoutId */);
@@ -69,6 +76,18 @@ describe('Applab designElements/label component', function () {
     expectWiderAlignLeft(getRect(e), oldRect);
   });
 
+  it('greatly increasing text length wraps at edge of screen', () => {
+    const oldRect = getRect(e);
+    setText(e, LONG_TEXT);
+    const expectedRect = {
+      top: oldRect.top,
+      left: oldRect.left,
+      width: applabConstants.APP_WIDTH - oldRect.left,
+      height: 0 // not used
+    };
+    expectSameWidth(getRect(e), expectedRect);
+  });
+
   it('changing text while center aligned retains alignment', () => {
     e.style.textAlign = 'center';
     const oldRect = getRect(e);
@@ -83,6 +102,19 @@ describe('Applab designElements/label component', function () {
     expectWiderAlignCenter(getRect(e), oldRect);
   });
 
+  it('greatly increasing text length while center aligned wraps to size of screen', () => {
+    e.style.textAlign = 'center';
+    const oldRect = getRect(e);
+    setText(e, LONG_TEXT);
+    const expectedRect = {
+      top: oldRect.top,
+      left: 0,
+      width: applabConstants.APP_WIDTH,
+      height: 0 // not used
+    };
+    expectSameWidth(getRect(e), expectedRect);
+  });
+
   it('changing text while right aligned retains alignment', () => {
     e.style.textAlign = 'right';
     const oldRect = getRect(e);
@@ -95,6 +127,19 @@ describe('Applab designElements/label component', function () {
     const oldRect = getRect(e);
     setFontSize(e, 28);
     expectWiderAlignRight(getRect(e), oldRect);
+  });
+
+  it('greatly increasing text length while right aligned wraps to retain alignment', () => {
+    e.style.textAlign = 'right';
+    const oldRect = getRect(e);
+    setText(e, LONG_TEXT);
+    const expectedRect = {
+      top: oldRect.top,
+      left: 0,
+      width: oldRect.left + oldRect.width,
+      height: 0 // not used
+    };
+    expectSameWidth(getRect(e), expectedRect);
   });
 
   it('after resizing, changing text does not change size to fit', () => {

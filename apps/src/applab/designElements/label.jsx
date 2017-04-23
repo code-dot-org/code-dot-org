@@ -11,7 +11,7 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 
-var LabelProperties = React.createClass({
+const LabelProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired,
@@ -19,7 +19,7 @@ var LabelProperties = React.createClass({
   },
 
   render: function () {
-    var element = this.props.element;
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -102,7 +102,7 @@ var LabelProperties = React.createClass({
   }
 });
 
-var LabelEvents = React.createClass({
+const LabelEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired,
@@ -110,8 +110,8 @@ var LabelEvents = React.createClass({
   },
 
   getClickEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
       '});\n';
@@ -123,9 +123,9 @@ var LabelEvents = React.createClass({
   },
 
   render: function () {
-    var element = this.props.element;
-    var clickName = 'Click';
-    var clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
+    const element = this.props.element;
+    const clickName = 'Click';
+    const clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -151,7 +151,7 @@ export default {
   EventTab: LabelEvents,
 
   create: function () {
-    var element = document.createElement('label');
+    const element = document.createElement('label');
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
@@ -180,23 +180,37 @@ export default {
    */
   getBestSize: function (element) {
     // Start by assuming best fit is current size
-    var size = this.getCurrentSize(element);
+    const size = this.getCurrentSize(element);
 
     // Change the size to fit the text.
     if (element.textContent) {
-      var clone = $(element).clone().css({
+      // Max width depends on alignment.
+      let maxWidth;
+      debugger;
+      if (element.style.textAlign === 'center') {
+        maxWidth = applabConstants.APP_WIDTH;
+      } else {
+        // Note that left may not be defined yet, if this is just now being created.
+        const left = parseInt(element.style.left || '0', 10);
+        if (element.style.textAlign === 'right') {
+          maxWidth = left + size.width;
+        } else {
+          maxWidth = applabConstants.APP_WIDTH - left;
+        }
+      }
+      const clone = $(element).clone().css({
         position: 'absolute',
         visibility: 'hidden',
         width: 'auto',
         height: 'auto',
-        maxWidth: (applabConstants.APP_WIDTH - parseInt(element.style.left, 10)) + 'px',
+        maxWidth: maxWidth + 'px',
       }).appendTo($(document.body));
 
-      var padding = parseInt(element.style.padding, 10);
+      const padding = parseInt(element.style.padding, 10);
 
       if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
         // Truncate the width before it runs off the edge of the screen
-        size.width = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left);
+        size.width = Math.min(clone.width() + 1 + 2 * padding, maxWidth);
       }
       if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
         size.height = clone.height() + 1 + 2 * padding;
@@ -210,21 +224,21 @@ export default {
   },
 
   resizeToFitText: function (element) {
-    var size = this.getBestSize(element);
+    const size = this.getBestSize(element);
 
     // For center or right alignment, we should adjust the left side to effectively retain that alignment.
     if (element.style.textAlign === 'center' || element.style.textAlign === 'right') {
-      var left = parseInt(element.style.left, 10);
-      var width = parseInt(element.style.width, 10);
+      let left = parseInt(element.style.left, 10);
+      const width = parseInt(element.style.width, 10);
       // Positive delta means that it is getting wider
-      var delta = size.width - width;
+      const delta = size.width - width;
       if (element.style.textAlign === 'right') {
         left -= delta;
       } else {
         // must be centered
         left -= delta / 2;
       }
-      // Don't move text past the left side
+      // Don't move text past the left side.
       element.style.left = Math.max(0, left) + 'px';
       if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = element.style.left;
@@ -241,8 +255,8 @@ export default {
     if (name !== 'text' && name !== 'fontSize') {
       return null;
     }
-    var currentSize = this.getCurrentSize(element);
-    var bestSize = this.getBestSize(element);
+    const currentSize = this.getCurrentSize(element);
+    const bestSize = this.getBestSize(element);
     return Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
         Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
   },
