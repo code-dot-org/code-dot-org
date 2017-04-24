@@ -20,10 +20,10 @@ let lastCaptureTimeMs = 0;
  * Returns true if this level is a project level owned by this user, it is not a
  * shared or embedded level, and enough time has passed since the last capture.
  * @param {number} minCaptureIntervalMs Only capture if it has been at least
- *   this many milliseconds since the last capture. Optional.
+ *   this many milliseconds since the last capture. Default: 0 (no minimum).
  * @returns {boolean}
  */
- function shouldCapture(minCaptureIntervalMs) {
+ function shouldCapture(minCaptureIntervalMs=0) {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
   if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
     return false;
@@ -31,7 +31,7 @@ let lastCaptureTimeMs = 0;
 
   // Skip capturing a screenshot if we just captured one recently.
   const intervalMs = Date.now() - lastCaptureTimeMs;
-  if (minCaptureIntervalMs > 0 && intervalMs < minCaptureIntervalMs) {
+  if (intervalMs < minCaptureIntervalMs) {
     return;
   }
 
