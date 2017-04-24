@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import _ from 'lodash';
+import queryString from 'query-string';
 import clientState from './clientState';
 import StageProgress from './components/progress/StageProgress.jsx';
 import CourseProgress from './components/progress/CourseProgress.jsx';
@@ -172,10 +173,15 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
   // If we've cached that we're a teacher, update view type immediately rather
   // than waiting on API
-  // TODO interaction with query param?
   if (clientState.getUserIsTeacher()) {
-    store.dispatch(setViewType(ViewType.Teacher));
-    store.dispatch(setIsSummaryView(false));
+    const query = queryString.parse(location.search);
+    if (query.viewAs === ViewType.Student) {
+      // query param viewAs takes precedence over user being a student
+      store.dispatch(setViewType(ViewType.Student));
+    } else {
+      store.dispatch(setViewType(ViewType.Teacher));
+      store.dispatch(setIsSummaryView(false));
+    }
   }
 
   $.ajax(
@@ -202,11 +208,16 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
       store.dispatch(showTeacherInfo());
-      store.dispatch(setViewType(ViewType.Teacher));
+
+      // If we have viewAs=Student in query params, we dont want to change
+      // student/teache or summary/detail toggles
+      const viewAs = queryString.parse(location.search).viewAs || ViewType.Teacher;
+      if (viewAs === ViewType.Teacher) {
+        store.dispatch(setViewType(viewAs));
+        store.dispatch(setIsSummaryView(false));
+      }
       renderTeacherPanel(store, scriptData.id);
       clientState.cacheUserIsTeacher(true);
-
-      store.dispatch(setIsSummaryView(false));
     }
 
     if (data.focusAreaPositions) {
