@@ -1,8 +1,6 @@
 class Pd::RegionalPartnerProgramRegistrationController < ApplicationController
   def new
-    session[:return_to] = pd_regional_partner_program_registration_path
     authorize! :create, Pd::RegionalPartnerProgramRegistration
-    session.delete :return_to
 
     begin
       @teachercon = params.require(:teachercon).to_i

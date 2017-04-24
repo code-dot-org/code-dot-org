@@ -2,10 +2,10 @@ class Api::V1::Pd::RegionalPartnerProgramRegistrationsController < ApplicationCo
   authorize_resource class: 'Pd::RegionalPartnerProgramRegistration', only: :create
 
   def create
-    form_data_hash = params.try(:[], :form_data) || {}
+    form_data_hash = params[:form_data] || {}
     form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
 
-    teachercon = params.try(:[], :teachercon)
+    teachercon = params.require(:teachercon)
 
     regional_partner_program_registration = ::Pd::RegionalPartnerProgramRegistration.create(
       user: current_user,
