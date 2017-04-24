@@ -213,6 +213,25 @@ describe('ShowCodeToggle', () => {
         expect(studioApp().showGeneratedCode).to.have.been.called;
       });
     });
+
+    describe("And studioApp() is subsequently initialized with enableShowCode turned off", () => {
+      beforeEach(() => {
+        config.enableShowCode = false;
+        studioApp().init(config);
+      });
+      it("will reflect the most recent config passed to studioApp().init()", () => {
+        expect(toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass="fa fa-code"
+            label="Show Code"
+            style={{display: 'none'}}
+          />
+        )).to.be.true;
+      });
+    });
   });
 
   describe("when studioApp() is configured with enableShowCode turned off", () => {
@@ -237,7 +256,7 @@ describe('ShowCodeToggle', () => {
     });
   });
 
-  describe("when studioApp() is initialized again", () => {
+  describe("when studioApp() is initialized with enableShowCode=false, after the component has been mounted", () => {
     beforeEach(() => {
       toggle = mount(
         <ShowCodeToggle onToggle={sinon.spy()}/>
