@@ -30,14 +30,14 @@ class OpsMailerTest < ActionMailer::TestCase
 
   test "workshop_in_2_weeks_reminder" do
     # Create a workshop that starts 14 days from now. Include other segments for authenticity
-    workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today + 14.day)
+    workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today + 14.days)
 
     # Create a workshop that starts 13 days from now but which includes a later segment 14 days from now to verify
     # that users are not incorrectly notified.
-    create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', 'district_contact_2@code.org', Date.today + 13.day)
+    create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', 'district_contact_2@code.org', Date.today + 13.days)
 
     # Create a workshop that starts entirely after 14 days from now to verify that users are not incorrectly notified.
-    create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', 'district_contact_3@code.org', Date.today + 30.day)
+    create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', 'district_contact_3@code.org', Date.today + 30.days)
 
     ActionMailer::Base.deliveries.clear
     Workshop.send_automated_emails
@@ -71,14 +71,14 @@ class OpsMailerTest < ActionMailer::TestCase
 
   test "workshop_in_3_days_reminder" do
     # Create a workshop that starts 3 days from now. Include other segments for authenticity
-    workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today + 3.day)
+    workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today + 3.days)
 
     # Create a workshop that starts 2 days from now but which includes a later segment 3 days from now to verify
     # that users are not incorrectly notified.
-    create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', 'district_contact_2@code.org', Date.today + 2.day)
+    create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', 'district_contact_2@code.org', Date.today + 2.days)
 
     # Create a workshop that ends completely before 3 days from now to verify that users are not incorrectly notified.
-    create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', 'district_contact_3@code.org', Date.today - 30.day)
+    create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', 'district_contact_3@code.org', Date.today - 30.days)
 
     ActionMailer::Base.deliveries.clear
     Workshop.send_automated_emails
@@ -112,13 +112,13 @@ class OpsMailerTest < ActionMailer::TestCase
 
   test "exit_survey_information" do
     # Create a workshop that ends today. Include other segments for authenticity
-    workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today - 2.day)
+    workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', 'district_contact_1@code.org', Date.today - 2.days)
 
     # Create a workshop that ends tomorrow but which includes a segment today to verify that users are not incorrectly notified.
     create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', 'district_contact_2@code.org', Date.today - 1.day)
 
     # Create a workshop that starts well after today to verify that users are not incorrectly notified.
-    create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', 'district_contact_3@code.org', Date.today + 30.day)
+    create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', 'district_contact_3@code.org', Date.today + 30.days)
 
     ActionMailer::Base.deliveries.clear
     Workshop.send_automated_emails
@@ -157,9 +157,9 @@ class OpsMailerTest < ActionMailer::TestCase
     cohort = create(:cohort, teachers: [create(:teacher, email: teachers[0]), create(:teacher, email: teachers[1])], districts: [district])
     workshop = create(:workshop, phase: 2, cohorts: [cohort], facilitators: [create(:facilitator, email: facilitator)])
     workshop.segments.clear
-    workshop.segments << create(:segment, workshop_id: workshop.id, start: start_date + 9.hour, end: DateTime.now + 10.hour)
-    workshop.segments << create(:segment, workshop_id: workshop.id, start: start_date + 1.day + 9.hour, end: DateTime.now + 1.day + 10.hour)
-    workshop.segments << create(:segment, workshop_id: workshop.id, start: start_date + 2.day + 9.hour, end: DateTime.now + 2.day + 10.hour)
+    workshop.segments << create(:segment, workshop_id: workshop.id, start: start_date + 9.hours, end: DateTime.now + 10.hours)
+    workshop.segments << create(:segment, workshop_id: workshop.id, start: start_date + 1.day + 9.hours, end: DateTime.now + 1.day + 10.hours)
+    workshop.segments << create(:segment, workshop_id: workshop.id, start: start_date + 2.days + 9.hours, end: DateTime.now + 2.days + 10.hours)
     workshop
   end
 end

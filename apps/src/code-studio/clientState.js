@@ -277,6 +277,28 @@ clientState.getUserSignedIn = function () {
 };
 
 /**
+ * Cache whether the user is a teacher, so that we can appropriately update the
+ * UI on future pageloads without waiting on API
+ * @param {boolean} isTeacher
+ */
+clientState.cacheUserIsTeacher = function (isTeacher) {
+  trySetSessionStorage('isTeacher', isTeacher);
+};
+
+/**
+ * Get the cached state of whether the user is a teacher.
+ */
+clientState.getUserIsTeacher = function () {
+  let isTeacher = false;
+  try {
+    isTeacher = JSON.parse(sessionStorage.getItem('isTeacher'));
+  } catch (e) {
+    isTeacher = false;
+  }
+  return isTeacher;
+};
+
+/**
  * Private helper for videos and callouts - looks in local storage to see if the element has been seen
  * @param visualElementType
  * @param visualElementId

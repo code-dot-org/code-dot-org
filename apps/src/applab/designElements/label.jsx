@@ -9,8 +9,9 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
+import * as gridUtils from '../gridUtils';
 
-var LabelProperties = React.createClass({
+const LabelProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired,
@@ -18,7 +19,7 @@ var LabelProperties = React.createClass({
   },
 
   render: function () {
-    var element = this.props.element;
+    const element = this.props.element;
 
     return (
       <div id="propertyRowContainer">
@@ -101,7 +102,7 @@ var LabelProperties = React.createClass({
   }
 });
 
-var LabelEvents = React.createClass({
+const LabelEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired,
@@ -109,8 +110,8 @@ var LabelEvents = React.createClass({
   },
 
   getClickEventCode: function () {
-    var id = elementUtils.getId(this.props.element);
-    var code =
+    const id = elementUtils.getId(this.props.element);
+    const code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
       '});\n';
@@ -122,9 +123,9 @@ var LabelEvents = React.createClass({
   },
 
   render: function () {
-    var element = this.props.element;
-    var clickName = 'Click';
-    var clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
+    const element = this.props.element;
+    const clickName = 'Click';
+    const clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
@@ -145,12 +146,19 @@ var LabelEvents = React.createClass({
   }
 });
 
+/**
+ * This represents the amount of error allowed before we consider a label's size to "fit exactly".
+ * This allows for rounding errors for adjusting center aligned labels, as well as allowing users
+ * to have a chance of returning to an exact fit.
+ */
+const STILL_FITS = 5;
+
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
 
   create: function () {
-    var element = document.createElement('label');
+    const element = document.createElement('label');
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
@@ -166,42 +174,109 @@ export default {
     return element;
   },
 
-  resizeToFitText: function (element) {
-    // Resize the label to fit the text, unless there is no text in which case make it 15 x 15 so the user has something to drag around
+  getCurrentSize: function (element) {
+    return {
+      width: parseInt(element.style.width, 10),
+      height: parseInt(element.style.height, 10)
+    };
+  },
+
+  /**
+   * @returns {{width: number, height: number}} Size that this element should be if it were fitted exactly. If there is
+   * no text, then the best size is 15 x 15 so that the user has something to drag around.
+   */
+  getBestSize: function (element) {
+    // Start by assuming best fit is current size
+    const size = this.getCurrentSize(element);
+
+    // Change the size to fit the text.
     if (element.textContent) {
-      var clone = $(element).clone().css({
+      // Max width depends on alignment.
+      let maxWidth;
+      if (element.style.textAlign === 'center') {
+        maxWidth = applabConstants.APP_WIDTH;
+      } else {
+        // Note that left may not be defined yet, if this is just now being created.
+        const left = parseInt(element.style.left || '0', 10);
+        if (element.style.textAlign === 'right') {
+          maxWidth = left + size.width;
+        } else {
+          maxWidth = applabConstants.APP_WIDTH - left;
+        }
+      }
+      const clone = $(element).clone().css({
         position: 'absolute',
         visibility: 'hidden',
         width: 'auto',
         height: 'auto',
-        maxWidth: (applabConstants.APP_WIDTH - parseInt(element.style.left, 10)) + 'px',
+        maxWidth: maxWidth + 'px',
       }).appendTo($(document.body));
 
-      var padding = parseInt(element.style.padding, 10);
+      const padding = parseInt(element.style.padding, 10);
 
       if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-        //Truncate the width before it runs off the edge of the screen
-        element.style.width = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left) + 'px';
+        // Truncate the width before it runs off the edge of the screen
+        size.width = Math.min(clone.width() + 1 + 2 * padding, maxWidth);
       }
       if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-        element.style.height = clone.height() + 1 + 2 * padding + 'px';
+        size.height = clone.height() + 1 + 2 * padding;
       }
 
       clone.remove();
     } else {
-      element.style.width = '15px';
-      element.style.height = '15px';
+      size.width = size.height = 15;
     }
+    return size;
+  },
+
+  resizeToFitText: function (element) {
+    const size = this.getBestSize(element);
+
+    // For center or right alignment, we should adjust the left side to effectively retain that alignment.
+    if (element.style.textAlign === 'center' || element.style.textAlign === 'right') {
+      let left = parseInt(element.style.left, 10);
+      const width = parseInt(element.style.width, 10);
+      // Positive delta means that it is getting wider
+      const delta = size.width - width;
+      if (element.style.textAlign === 'right') {
+        left -= delta;
+      } else {
+        // must be centered
+        left -= delta / 2;
+      }
+      // Don't move text past the left side.
+      element.style.left = Math.max(0, left) + 'px';
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.left = element.style.left;
+      }
+    }
+    element.style.width = size.width + 'px';
+    element.style.height = size.height + 'px';
+  },
+
+  /**
+   * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
+   */
+  beforePropertyChange: function (element, name) {
+    if (name !== 'text' && name !== 'fontSize') {
+      return null;
+    }
+    const currentSize = this.getCurrentSize(element);
+    const bestSize = this.getBestSize(element);
+    return Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
+        Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
   },
 
   /**
    * @returns {boolean} True if it modified the backing element
    */
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function (element, name, value, previouslyFitExactly) {
     switch (name) {
       case 'text':
       case 'fontSize':
-        this.resizeToFitText(element);
+        if (previouslyFitExactly) {
+          this.resizeToFitText(element);
+        }
         break;
       case 'lock-width':
         $(element).data('lock-width', value);

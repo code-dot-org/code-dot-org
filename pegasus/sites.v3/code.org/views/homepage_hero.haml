@@ -43,7 +43,7 @@
     .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
-    - if request.cookies['pm'] == 'new_header'
+    - if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
       = view :header2
     - else
       #desktop-header.desktop-feature

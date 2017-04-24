@@ -120,6 +120,13 @@ export default class FormController extends React.Component {
   }
 
   /**
+   * Called when we get a successful response from the API submission
+   */
+  onSuccessfulSubmit() {
+    // Intentional noop; overridden by child classes
+  }
+
+  /**
    * Submit serialized form data to the specified API Endpoint and handle server
    * response
    *
@@ -140,7 +147,7 @@ export default class FormController extends React.Component {
       dataType: "json",
       data: JSON.stringify(this.serializeFormData())
     }).done(() => {
-      window.location.reload(true);
+      this.onSuccessfulSubmit();
     }).fail(data => {
       this.setState({
         errors: data.responseJSON.errors.form_data
