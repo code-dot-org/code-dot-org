@@ -227,6 +227,7 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
 
+  # internal support tools
   get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
   post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
@@ -234,6 +235,9 @@ Dashboard::Application.routes.draw do
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
   get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
   post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
+  get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+  post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
+  post '/admin/revoke_all_permissions', to: 'admin_users#revoke_all_permissions', as: 'revoke_all_permissions'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
