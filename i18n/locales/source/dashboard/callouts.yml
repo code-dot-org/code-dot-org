@@ -74,6 +74,7 @@ en:
       CSD U3 Conditional Project_callout: {}
       CSD U3 Conditionals Apple 2_callout: {}
       CSD U3 Conditionals Apple_callout: {}
+      CSD U3 Diagonal Movement_callout: {}
       CSD U3 Direction Animations_callout: {}
       CSD U3 Direction Arrows_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
@@ -100,6 +101,8 @@ en:
       CSD U3 Sprites text debug_callout: {}
       CSD U3 Sprites text_callout: {}
       CSD U3 UP_ARROW_callout: {}
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: Change the number here
       CSD U3 Variables TEMPLATE square_callout: {}
       CSD U3 Variables make a big square_callout: {}
       CSD U3 Variables make a square_callout: {}
@@ -756,6 +759,10 @@ en:
       courseF_artist_variables_8_callout: {}
       courseF_artist_variables_9_callout: {}
       courseF_artist_variables_FP_callout: {}
+      courseF_bee_conditionals2_callout:
+        courseF_bee_conditionals2_1: Remember, check EACH cloud to see if it has a FLOWER.
+      courseF_bee_conditionals5_callout:
+        courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: {}
@@ -763,6 +770,8 @@ en:
       courseF_bee_for6_callout: {}
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_functions2_callout:
+        courseF_bee_functions2_1: This block calls a function.  Click this "edit" button to see what is inside!
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp3_callout:
@@ -773,6 +782,8 @@ en:
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseF_maze_ramp13_callout: {}
+      courseF_maze_ramp15_callout:
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp4_callout:
@@ -781,7 +792,7 @@ en:
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseF_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
