@@ -12,8 +12,8 @@ import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import experiments from '@cdo/apps/util/experiments';
 import project from '@cdo/apps/code-studio/initApp/project';
 
-describe('ShowCodeToggle', () => {
-  let config, toggle, containerDiv, codeWorkspaceDiv, server;
+describe('The ShowCodeToggle component', () => {
+  let config, toggle, containerDiv, codeWorkspaceDiv, server, editor;
 
   before(() => experiments.setEnabled('saveBlockMode', true));
   after(() => experiments.setEnabled('saveBlockMode', false));
@@ -41,8 +41,8 @@ describe('ShowCodeToggle', () => {
   });
   afterEach(restoreRedux);
 
-  beforeEach(() => sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
-    this.editor = {
+  beforeEach(() => {
+    editor = {
       currentlyUsingBlocks: true,
       getValue: () => '',
       toggleBlocks() {
@@ -52,7 +52,10 @@ describe('ShowCodeToggle', () => {
         focus(){},
       },
     };
-  }));
+    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
+      this.editor = editor;
+    });
+  });
 
   beforeEach(() => {
     config = {
@@ -94,6 +97,29 @@ describe('ShowCodeToggle', () => {
   beforeEach(() => sinon.stub(studioApp(), 'onDropletToggle'));
 
   beforeEach(() => sinon.stub(studioApp(), 'showGeneratedCode'));
+
+  describe("when the studioApp editor has currentlyUsingBlocks=false", () => {
+    beforeEach(() => {
+      toggle = mount(
+        <ShowCodeToggle onToggle={sinon.spy()}/>
+      );
+      editor.currentlyUsingBlocks = false;
+      studioApp().init(config);
+    });
+
+    it("will render with the 'Show Blocks' label", () => {
+      expect(toggle.containsMatchingElement(
+        <PaneButton
+          id="show-code-header"
+          headerHasFocus={false}
+          isRtl={false}
+          iconClass=""
+          label="Show Blocks"
+          style={{display: 'inline-block'}}
+        />
+      )).to.be.true;
+    });
+  });
 
   describe("when initially mounted", () => {
     beforeEach(() => {
