@@ -4,13 +4,29 @@ function processVolunteerUnsubscribeResponse(data) {
 }
 
 function processVolunteerUnsubscribeError(data) {
-  $('#error-message').text('An error occurred. Please try again or contact us if you continue to receive this error.').show();
+  var errorMessage = null;
+
+  var errors = Object.keys(data.responseJSON);
+
+  for (var i = 0; i < errors.length; i++) {
+    if (errors[i] === "age_18_plus_b") {
+      errorMessage = 'An error occurred.  Please indicate whether you are at least 18, below.';
+    }
+  }
+
+  if (!errorMessage) {
+    errorMessage = 'An error occurred. Please try again or ' +
+      '<a href="https://support.code.org/hc/en-us/requests/new" target="_blank">' +
+      'contact us</a> if you continue to receive this error.';
+  }
+
+  $('#error-message').html(errorMessage).show();
   $('body').scrollTop(0);
   $('#btn-submit').removeAttr('disabled');
   $('#btn-submit').removeClass('button_disabled').addClass('button_enabled');
 }
 
-function unsubscribeVolunteerList() {
+window.unsubscribeVolunteerList = function () {
   $('#btn-submit').attr('disabled','disabled');
   $('#btn-submit').removeClass('button_enabled').addClass('button_disabled');
 
@@ -30,4 +46,4 @@ function unsubscribeVolunteerList() {
   }).done(processVolunteerUnsubscribeResponse).fail(processVolunteerUnsubscribeError);
 
   return false;
-}
+};
