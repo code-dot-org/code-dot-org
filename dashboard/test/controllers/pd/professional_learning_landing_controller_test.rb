@@ -14,7 +14,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     end
 
     create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
-    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop, survey_sent_at: Date.today - 1.days
+    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop, survey_sent_at: Date.today - 1.day
     other_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop, survey_sent_at: Date.today - 2.days
     create :pd_enrollment, email: @teacher.email, workshop: @csp_workshop
 

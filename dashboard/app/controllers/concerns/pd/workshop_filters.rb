@@ -57,6 +57,8 @@ module Pd::WorkshopFilters
   # - course
   # - subject
   # - organizer_id
+  # - teacher_email
+  # - only_attended
   # - order_by (field followed by optional asc|desc)
   #   - location_name
   #   - workshop_type
@@ -79,6 +81,19 @@ module Pd::WorkshopFilters
       workshops = workshops.where(course: params[:course]) if params[:course]
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
+
+      if current_user.admin? && params[:teacher_email]
+        teacher = User.find_by(email: params[:teacher_email])
+        if teacher
+          if params[:only_attended]
+            workshops = workshops.attended_by(teacher)
+          else
+            workshops = workshops.enrolled_in_by(teacher)
+          end
+        else
+          workshops = workshops.none
+        end
+      end
 
       order_by = params[:order_by]
       if order_by
@@ -118,6 +133,8 @@ module Pd::WorkshopFilters
       :course,
       :subject,
       :organizer_id,
+      :teacher_email,
+      :only_attended,
       :order_by
     )
   end

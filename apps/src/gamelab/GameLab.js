@@ -48,15 +48,11 @@ import {
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import project from '../code-studio/initApp/project';
-import {createThumbnail} from '../util/thumbnail';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
-
-// The width and height in pixels of the thumbnail image to capture.
-const THUMBNAIL_SIZE = 180;
 
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
@@ -307,7 +303,7 @@ GameLab.prototype.init = function (config) {
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted,
+    isSubmitted: !!config.level.submitted
   });
 
   if (startInAnimationTab(getStore().getState())) {
@@ -574,19 +570,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     }
   };
 
-  const divGameLab = document.getElementById('divGameLab');
-  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divGameLab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        this.feedbackImage = pngDataUrl;
-        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }.bind(this)
-    });
-  }
+  sendReport();
 };
 
 /**
@@ -1078,31 +1062,13 @@ GameLab.prototype.onP5Draw = function () {
  * for long enough and we have not done so already.
  */
 GameLab.prototype.captureInitialImage = function () {
-  if (!project.isOwner() || this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
+  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
     return;
   }
   this.initialCaptureComplete = true;
-  captureImage(THUMBNAIL_SIZE);
+  captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
 };
 
-/**
- * Capture a thumbnail image of the play space.
- * @param {number} thumbnailSize The width and height in pixels of the captured image.
- */
-function captureImage(thumbnailSize) {
-  const p5Canvas = document.getElementById('defaultCanvas0');
-  if (!p5Canvas) {
-    console.warn(`Thumbnail capture failed: p5 canvas not found.`);
-    return;
-  }
-
-  // Scale the image down so we don't send so much data over the network.
-  const thumbnailCanvas = createThumbnail(p5Canvas, thumbnailSize);
-
-  thumbnailCanvas.toBlob(blob => {
-    project.saveThumbnail(blob);
-  });
-}
 
 GameLab.prototype.completeRedrawIfDrawComplete = function () {
   if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {

@@ -6,7 +6,7 @@ export default class PhotoRelease extends FormComponent {
   render() {
     return (
       <FormGroup>
-        <h4>Part 2 of 4: Photo Release</h4>
+        <h4>Photo Release</h4>
         <p>
           Photos from Code.org workshops are commonly posted to social media
           by other workshop attendees, by workshop facilitators, or even
