@@ -55,6 +55,7 @@ var ALLOWED_KEYS = new Set([
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
+  'appType'
 ]);
 
 const initialState = {
