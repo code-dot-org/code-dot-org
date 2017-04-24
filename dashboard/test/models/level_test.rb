@@ -572,4 +572,18 @@ EOS
     assert_equal callouts[0].callout_text, "first english markdown"
     assert_equal callouts[1].callout_text, "second english markdown"
   end
+
+  test 'create unplugged level from level builder' do
+    Unplugged.any_instance.stubs(:update_i18n).with do |name, new_strings|
+      I18n.backend.store_translations I18n.locale, {'data' => {'unplugged' => {name => new_strings}}}
+    end
+
+    data = {name: 'New Unplugged Name', title: 'Test Unplugged Level', description: 'This is a test.'}
+    level = Unplugged.create_from_level_builder({}, data)
+
+    assert_equal data[:name], level.name
+    assert_equal data[:title], level.title
+    assert_equal data[:description], level.description
+    assert_equal data[:description], I18n.t("data.unplugged.#{data[:name]}.desc")
+  end
 end

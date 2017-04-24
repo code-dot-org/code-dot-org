@@ -17,6 +17,7 @@ const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
+const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 const PEER_REVIEW_ID = -1;
@@ -24,6 +25,7 @@ const PEER_REVIEW_ID = -1;
 const initialState = {
   // These first fields never change after initialization
   currentLevelId: null,
+  currentStageId: null,
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
@@ -139,6 +141,20 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_CURRENT_STAGE_ID) {
+    // if we already have a currentStageId, that means we're on a puzzle page,
+    // and we want currentStageId to remain the same (rather than reflecting
+    // the last stage the user has made progress on).
+    if (state.currentStageId) {
+      return state;
+    }
+
+    return {
+      ...state,
+      currentStageId: action.stageId
+    };
+  }
+
   return state;
 }
 
@@ -232,6 +248,7 @@ export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
 export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
+export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stageId });
 
 // Selectors
 

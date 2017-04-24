@@ -3,8 +3,8 @@ import React from 'react';
 import FormController from '../form_components/FormController';
 import DateConfirm from './DateConfirm';
 import TravelInformation from './TravelInformation';
-import PhotoRelease from './PhotoRelease';
-import LiabilityWaiver from './LiabilityWaiver';
+import PhotoRelease from '../program_registration/PhotoRelease';
+import LiabilityWaiver from '../program_registration/LiabilityWaiver';
 import Demographics from './Demographics';
 
 export default class FacilitatorProgramRegistration extends FormController {
@@ -46,6 +46,14 @@ export default class FacilitatorProgramRegistration extends FormController {
   /**
    * @override
    */
+  onSuccessfulSubmit() {
+    // Let the server display a confirmation page as appropriate
+    window.location.reload(true);
+  }
+
+  /**
+   * @override
+   */
   shouldShowSubmit() {
     return super.shouldShowSubmit() ||
         this.state.data.confirmTrainingDate === "No" ||
@@ -55,7 +63,8 @@ export default class FacilitatorProgramRegistration extends FormController {
 
 FacilitatorProgramRegistration.propTypes = {
   ...FormController.propTypes,
-  options: React.PropTypes.object.isRequired,
+  attendanceDates: React.PropTypes.object.isRequired,
+  course: React.PropTypes.string.isRequired,
   teachercon: React.PropTypes.number.isRequired,
   teacherconLocation: React.PropTypes.string.isRequired,
 };

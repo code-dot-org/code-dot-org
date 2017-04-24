@@ -89,7 +89,6 @@
   .col-26 { width: 100%; }
   .col-32 { width: 100%; }
   .col-33 { width: 100% }
-  .col-33 img { margin-left: 25px; }
   .col-36 { width: 100% }
   .col-40 { width: 100% }
   .col-45 { width: 100%; float:left; }
@@ -113,6 +112,7 @@
   .mobile-pad-edge { padding: 20px; }
   .avatar_container { max-height: 550px; }
   .avatar_container p { padding-right: 0px; }
+  .avatar_container img { margin-left: 25px; }
 
 }
 

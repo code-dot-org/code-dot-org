@@ -4,7 +4,7 @@ require 'tzinfo'
 
 module InfraTestTopic
   def self.set_green_commit(commit)
-    msg = "#{commit} is :greenbeer: :robot_face: @ #{current_time_pacific}"
+    msg = "#{commit} is :greenbeer: @ #{current_time_pacific}"
     Slack.update_topic 'infra-test', msg
   end
 

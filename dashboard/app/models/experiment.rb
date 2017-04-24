@@ -25,7 +25,7 @@
 #  index_experiments_on_section_id            (section_id)
 #
 
-MAX_CACHE_AGE = 1.minutes
+MAX_CACHE_AGE = 1.minute
 
 class Experiment < ApplicationRecord
   belongs_to :script, optional: true
