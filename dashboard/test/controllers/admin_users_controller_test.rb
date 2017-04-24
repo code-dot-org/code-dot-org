@@ -13,7 +13,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     @malformed = create :teacher, email: 'malformed@example.com'
     @malformed.update_column(:email, '')  # Bypasses validation!
 
-    @user = create :user
+    @user = create :user, email: 'test_user@example.com'
     @script = Script.first
     @level = @script.script_levels.first.level
     @manual_pass_params = {
@@ -200,5 +200,48 @@ class AdminUsersControllerTest < ActionController::TestCase
       post :manual_pass, params: @manual_pass_params
     end
     assert_response :forbidden
+  end
+
+  generate_admin_only_tests_for :permissions_form
+
+  test 'grant_permission grants admin status' do
+    sign_in @admin
+    post :grant_permission, params: {email: @not_admin.email, permission: 'admin'}
+    assert @not_admin.reload.admin
+  end
+
+  test 'grant_permission grants user_permission' do
+    sign_in @admin
+    post :grant_permission, params: {email: @not_admin.email, permission: UserPermission::LEVELBUILDER}
+    assert [UserPermission::LEVELBUILDER], @not_admin.reload.permissions
+  end
+
+  test 'grant_permission noops for student user' do
+    sign_in @admin
+    post(
+      :grant_permission,
+      params: {email: 'test_user@example.com', permission: UserPermission::LEVELBUILDER}
+    )
+    assert [], @user.reload.permissions
+    assert_response :redirect
+    assert @response.redirect_url.include?('/admin/permissions')
+    assert_equal(
+      'FAILED: user test_user@example.com could not be found or was not a teacher',
+      flash[:alert]
+    )
+  end
+
+  test 'revoke_all_permissions revokes admin status' do
+    sign_in @admin
+    post :revoke_all_permissions, params: {email: @admin.email}
+    refute @admin.reload.admin
+  end
+
+  test 'revoke_all_permissions revokes user permissions' do
+    sign_in @admin
+    @not_admin.permission = UserPermission::RESET_ABUSE
+    @not_admin.permission = UserPermission::PLC_REVIEWER
+    post :revoke_all_permissions, params: {email: @not_admin.email}
+    assert [], @not_admin.reload.permissions
   end
 end
