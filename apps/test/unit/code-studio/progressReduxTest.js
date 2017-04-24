@@ -285,6 +285,15 @@ describe('progressReduxTest', () => {
       assert.strictEqual(nextState.currentStageId, 1234);
     });
 
+    it('does not allow setCurrentStageId to replace an existing stage id', () => {
+      const state = {
+        ...initialState,
+        currentStageId: 111
+      };
+      const nextState = reducer(state, setCurrentStageId(222));
+      assert.strictEqual(nextState.currentStageId, 111);
+    });
+
     describe('statusForLevel', () => {
       it('returns LevelStatus.locked for locked assessment level', () => {
         const level = {

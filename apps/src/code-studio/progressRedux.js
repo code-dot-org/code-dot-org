@@ -142,6 +142,13 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_CURRENT_STAGE_ID) {
+    // if we already have a currentStageId, that means we're on a puzzle page,
+    // and we want currentStageId to remain the same (rather than reflecting
+    // the last stage the user has made progress on).
+    if (state.currentStageId) {
+      return state;
+    }
+
     return {
       ...state,
       currentStageId: action.stageId
