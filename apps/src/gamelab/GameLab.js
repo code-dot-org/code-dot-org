@@ -304,7 +304,7 @@ GameLab.prototype.init = function (config) {
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted,
+    isSubmitted: !!config.level.submitted
   });
 
   if (startInAnimationTab(getStore().getState())) {
