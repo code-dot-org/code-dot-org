@@ -28,12 +28,12 @@
     #logo-wrapper {
       background-color: $teal;
       display: inline-block;
-      padding: 13px 16px 13px 16px;
+      padding: 13px 16px;
       float: left;
 
       #logo {
-        width: 45px;
-        height: 45px;
+        width: 43px;
+        height: 43px;
       }
 
       #logo-uk {
@@ -55,7 +55,7 @@
         display: inline-block;
         font-size: 14px;
         margin: 14px 0 0 30px;
-        font-family: 'Gotham 4r', sans-serif;
+        font-family: 'Gotham 5r', sans-serif;
         color: $white;
         text-decoration: none;
 
@@ -93,6 +93,7 @@
     margin-top: -4px;
 
     .user_name {
+      font-family: 'Gotham 5r', sans-serif;
       max-width: 120px;
       display: inline-block;
       text-overflow: ellipsis;
@@ -114,7 +115,7 @@
 
   #hamburger {
     padding-top: 4px;
-    padding-left: 4px;
+    padding-left: 20px;
 
     .hide-responsive-menu {
       top: 55px;
