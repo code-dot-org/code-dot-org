@@ -3,8 +3,8 @@ import {isUnsupportedBrowser, isIE11, isMobileDevice, isStorageAvailable} from '
 
 export var checkForUnsupportedBrowsersOnLoad = function () {
   $(document).ready(function () {
-    var textDivId = null;
-    var dismissable = false;
+    let textDivId = null;
+    let dismissable = false;
 
     if (isUnsupportedBrowser()) {
       textDivId = '#unsupported-browser';

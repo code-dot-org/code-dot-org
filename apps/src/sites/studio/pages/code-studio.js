@@ -83,11 +83,7 @@ window.onerror = function (msg, url, ln) {
 if (window.newrelic) {
   window.newrelic.setErrorHandler(function (err) {
     // Remove errors from unsupportenewrelicnd IE versions
-    if (isUnsupportedBrowser()) {
-      return true;
-    } else {
-      return false;
-    }
+    return !!isUnsupportedBrowser();
   });
 }
 
