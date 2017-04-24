@@ -27,6 +27,11 @@ namespace :lint do
       # also do our standard apps lint
       RakeUtils.system 'npm run lint'
     end
+    Dir.chdir(shared_js_dir) do
+      ChatClient.log 'Linting <b>shared</b> JavaScript...'
+      # Use vanilla eslint parser, because babel-eslint always allows es6
+      RakeUtils.system '../../apps/node_modules/eslint/bin/eslint.js *.js'
+    end
   end
 
   task all: [:ruby, :haml, :scss, :javascript]
