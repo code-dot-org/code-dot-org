@@ -1,6 +1,5 @@
 import React from 'react';
 import FontAwesome from '../FontAwesome';
-import i18n from "@cdo/locale";
 import color from "../../util/color";
 
 const styles = {
@@ -42,14 +41,23 @@ const styles = {
     float: 'right',
     textDecoration: 'none'
   },
+  content: {
+    marginBottom: 50,
+    marginLeft: 10
+  }
 };
 
-const RecentCourses = React.createClass({
+const CollapsibleSection = React.createClass({
   propTypes: {
     children: React.PropTypes.oneOfType([
       React.PropTypes.node,
       React.PropTypes.arrayOf(React.PropTypes.node)
-    ])
+    ]),
+    sectionData: React.PropTypes.shape({
+      header: React.PropTypes.string.isRequired,
+      linkText: React.PropTypes.string.isRequired,
+      link: React.PropTypes.string.isRequired,
+    })
   },
 
   getInitialState() {
@@ -91,14 +99,17 @@ const RecentCourses = React.createClass({
   },
 
   render() {
+
+    const sectionData = this.props.sectionData;
+
     return (
       <div style={styles.section}>
         <div style={styles.heading}>
           {this.renderArrowIcon()}
-          {i18n.recentCourses()}
-          <a href={"to view all the courses"} style={styles.linkBox}>
+          {sectionData.header}
+          <a href={sectionData.link} style={styles.linkBox}>
             <div style={styles.linkToViewAll}>
-              {i18n.viewAllCourses()}
+              {sectionData.linkText}
             </div>
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
           </a>
@@ -109,4 +120,4 @@ const RecentCourses = React.createClass({
   }
 });
 
-export default RecentCourses;
+export default CollapsibleSection;
