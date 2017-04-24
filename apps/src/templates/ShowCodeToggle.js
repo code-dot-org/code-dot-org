@@ -182,6 +182,14 @@ export default class ShowCodeToggle extends Component {
     onToggle: PropTypes.func.isRequired,
   };
 
+  afterInit = () => {
+    this.forceUpdate();
+  };
+
+  componentWillMount() {
+    studioApp().on('afterInit', this.afterInit);
+  }
+
   render() {
     return (
       studioApp().editCode ?
