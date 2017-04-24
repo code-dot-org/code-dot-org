@@ -49,7 +49,7 @@ const ProgressBubbleSet = React.createClass({
   propTypes: {
     levels: PropTypes.arrayOf(
       PropTypes.shape({
-        level: PropTypes.string,
+        level: PropTypes.levelType,
         url: PropTypes.string
       })
     ).isRequired,
@@ -84,7 +84,7 @@ const ProgressBubbleSet = React.createClass({
                 <ProgressPill
                   url={level.url}
                   status={level.status}
-                  text={i18n.unpluggedActivity()}
+                  text={level.isGoBeyond ? i18n.goBeyond() : i18n.unpluggedActivity()}
                   fontSize={12}
                 />
               }
