@@ -6733,3 +6733,8 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          stages:
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!

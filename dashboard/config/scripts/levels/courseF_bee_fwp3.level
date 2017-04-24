@@ -37,9 +37,9 @@
     "instructions_important": "false",
     "markdown_instructions": "Time to put the function to the test! \r\n\r\nLet's see if it makes collecting these three rows of nectar any easier.",
     "instructions": "Let's see if the function makes collecting these three rows of nectar any easier.",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

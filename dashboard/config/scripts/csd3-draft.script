@@ -20,6 +20,7 @@ level 'CSD U3 fill'
 level 'CSD U3 sequence'
 level 'CSD U3 ellipse'
 level 'CSD U3 debug'
+level 'CSD U3 plotting shapes map'
 level 'CSD U3 picture'
 level 'CSD U3 L2 Challenges'
 
