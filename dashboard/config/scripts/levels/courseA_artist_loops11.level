@@ -36,7 +36,9 @@
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/4adb0ff9bf619119908abfe1b3fade7d-image-1477125526950.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",

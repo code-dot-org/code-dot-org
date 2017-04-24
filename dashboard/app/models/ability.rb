@@ -60,6 +60,7 @@ class Ability
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :read, SectionHiddenStage
       can :create, Pd::TeacherApplication, user_id: user.id
+      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
 
       if user.teacher?
         can :read, Section, user_id: user.id

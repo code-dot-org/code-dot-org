@@ -6309,6 +6309,23 @@ en:
       courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned
         and make your own drawing. \r\n\r\nHow can you use variables with squares,
         pentagons, or hexagons?"
+      courseF_bee_conditionals10_instruction: "Collect all of the nectar and make
+        all of the honey."
+      courseF_bee_conditionals1_predict1_instruction: "Check to see if there's a
+        flower under the cloud. If there's a flower, get nectar."
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see
+        if it is hiding a flower before you get nectar.  \r\n"
+      courseF_bee_conditionals3_instruction: "Help the bee collect all of the nectar.
+        \r\n\r\nYou can only collect nectar from flowers, but you can check any space
+        to see if there is a flower."
+      courseF_bee_conditionals4_instruction: "Get all of the nectar using as few
+        blocks as possible."
+      courseF_bee_conditionals5_instruction: "Collect all of the nectar using as
+        few blocks as possible"
+      courseF_bee_conditionals7_predict2_instruction: "Use the `if/else` block to
+        collect nectar at flowers and make honey at honeycomb."
+      courseF_bee_conditionals8_instruction: "Collect nectar if there is a flower.\r\nOtherwise,
+        make honey (because there is a honeycomb)."
       courseF_bee_for1_instruction: "Collect the nectar from each flower using the
         fewest blocks possible."
       courseF_bee_for10_instruction: "**Challenge:** Take what you've learned about
@@ -6330,6 +6347,22 @@ en:
         be to collect 3, 6, 9, 12, 15 nectar?"
       courseF_bee_for9_instruction: "Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible."
+      courseF_bee_functions2_instruction: "Use the `get only nectar` function to
+        collect the nectar from each flower."
+      courseF_bee_functions3_instruction: "Click \"edit\" to put code inside the
+        `only make honey` function, then use it to solve this puzzle."
+      courseF_bee_functions3a_instruction: "Write a function that gets nectar if
+        the bee is at a flower, otherwise it gets honey.  Use your function to solve
+        the puzzle!"
+      courseF_bee_functions4_instruction: "Use the `move and get nectar` function
+        to collect all of the nectar."
+      courseF_bee_functions5_instruction: "Now write the function to collect nectar
+        from the flowers."
+      courseF_bee_functions6_instruction: "Create a function and call it to collect
+        nectar at each flower and make honey at each honeycomb."
+      courseF_bee_functions7_instruction: "Create your own function that goes down
+        a path, gets nectar, makes honey, and then returns the bee to the top of the
+        path. Collect all the nectar and make all the honey!"
       courseF_bee_fwp2_instruction: "Pull this code into a function, then call the
         function to check this row for nectar."
       courseF_bee_fwp3_instruction: "Let's see if the function makes collecting
@@ -6351,7 +6384,10 @@ en:
       courseF_maze_ramp1_instruction: "For this puzzle, connect all of the blocks
         from the workspace together below the `when run` event and click \"Run\" to
         watch it go!"
-      courseF_maze_ramp13_instruction: "Time for one last puzzle to pull it all together!"
+      courseF_maze_ramp13_instruction: "Time for another Angry Birds puzzle to pull
+        it all together!"
+      courseF_maze_ramp15_instruction: "Use what you've learned to get the bird
+        to the pig!"
       courseF_maze_ramp2_instruction: "Drag a `repeat` block out of the toolbox and
         attach it to the `when run` event.   Place the `move forward` block inside
         to finish your code."
@@ -6397,6 +6433,8 @@ en:
         answers together into your very own story."
       courseF_playlab_variables8b_instruction: "Use what you've learned to create
         an improv scene between the actors."
+      courseF_video_createFunctions_instruction: "We don't have a video for creating
+        functions, yet. This is a placeholder."
       course_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
         hard to understand these days!"
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech

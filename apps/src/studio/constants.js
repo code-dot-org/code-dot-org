@@ -413,7 +413,3 @@ export const BEHAVIOR_WANDER = 'roam';
 // Take the screenshot almost immediately, hopefully catching the
 // title screen and any characters in their initial positions.
 export const CAPTURE_TICK_COUNT = 20;
-
-// Minimum time to wait after capturing a thumbnail image before capturing
-// another thumbnail.
-export const MIN_CAPTURE_INTERVAL_MS = 60000;

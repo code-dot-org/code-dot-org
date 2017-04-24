@@ -32,10 +32,12 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out how to draw a line?  Start attaching blocks to the `when run` block to see what happens.\",\"hint_id\":\"courseA_artist_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9aa19fefc048e0b590af31fc9a6ffdf0/courseA_artist_loops2.mp3\"}]",
-    "markdown_instructions": "Help the artist draw this line two times forward.\r\n\r\n![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)",
+    "markdown_instructions": "Help the artist draw this line two times forward.\r\n\r\n<img src=\"https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif\" style=\"clip: rect(100px,0px,300px,0px);\" />",
     "ideal": "3",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
