@@ -3,7 +3,7 @@
 .wrapper
   = view :unsupported_browser
   -unless header['theme'] == 'responsive_wide'
-    - if request.cookies['pm'] == 'new_header'
+    - if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
       = view :header2
     - else
       = view :header
