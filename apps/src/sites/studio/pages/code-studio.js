@@ -14,6 +14,7 @@ require('@cdo/apps/code-studio/consoleShim')(window);
 var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
 import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
+import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -77,6 +78,18 @@ window.onerror = function (msg, url, ln) {
     return windowOnError.apply(this, arguments);
   }
 };
+
+// Prevent filtered errors from being passed to New Relic.
+if (window.newrelic) {
+  window.newrelic.setErrorHandler(function (err) {
+    // Remove errors from unsupportenewrelicnd IE versions
+    if (isUnsupportedBrowser()) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+}
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
