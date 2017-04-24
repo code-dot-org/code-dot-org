@@ -11,6 +11,8 @@ import {html2canvas} from '../util/htmlToCanvasWrapper';
 // Thumbnail image width and height in pixels.
 const THUMBNAIL_SIZE = 180;
 
+// Minimum time to wait after capturing a thumbnail image before capturing
+// another thumbnail.
 const MIN_CAPTURE_INTERVAL_MS = 60000;
 
 /**
