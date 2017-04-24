@@ -163,14 +163,6 @@ function appendPx(input) {
 }
 
 /**
- * While in design mode, elements get wrapped in a ui-draggable container.
- * @returns {true} If element is currently wrapped
- */
-function isDraggableContainer(element) {
-  return $(element).hasClass('ui-draggable');
-}
-
-/**
  * Handle a change from our properties table.
  * @param element {Element}
  * @param name {string}
@@ -189,6 +181,11 @@ designMode.onPropertyChange = function (element, name, value) {
  * @param value
  */
 designMode.updateProperty = function (element, name, value) {
+  // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
+  // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
+  // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
+  // ignored.
+  var preChangeData = elementLibrary.getPreChangeData(element, name);
   var handled = true;
   switch (name) {
     case 'id':
@@ -203,14 +200,14 @@ designMode.updateProperty = function (element, name, value) {
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = newLeft;
       }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.top = newTop;
       }
       break;
@@ -223,14 +220,14 @@ designMode.updateProperty = function (element, name, value) {
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      if (isDraggableContainer(element.parentNode)) {
+      if (gridUtils.isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
       }
       break;
@@ -330,7 +327,7 @@ designMode.updateProperty = function (element, name, value) {
         var resizeElement = function (width, height) {
           element.style.width = width + 'px';
           element.style.height = height + 'px';
-          if (isDraggableContainer(element.parentNode)) {
+          if (gridUtils.isDraggableContainer(element.parentNode)) {
             element.parentNode.style.width = width + 'px';
             element.parentNode.style.height = height + 'px';
           }
@@ -445,7 +442,10 @@ designMode.updateProperty = function (element, name, value) {
       handled = false;
   }
 
-  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+  // For labels, this is what snaps to fit. We need to not snap to fit if the element has previously been resized,
+  // which we approximate by determining if it fit perfectly before the property change. Also needs to work on first
+  // time creation.
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value, preChangeData)) {
     handled = true;
   }
 
