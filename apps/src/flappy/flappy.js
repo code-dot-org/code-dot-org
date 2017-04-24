@@ -19,6 +19,7 @@ var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
 import {getStore} from '../redux';
+import {isRtl} from '@cdo/apps/code-studio/utils';
 
 import {TestResults, ResultType} from '../constants';
 
@@ -575,7 +576,7 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        isRtl={studioApp().isRtl()}
+        isRtl={isRtl()}
         visualizationColumn={<FlappyVisualizationColumn/>}
         onMount={onMount}
       />
