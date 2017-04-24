@@ -62,7 +62,7 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
-import * as applabThumbnail from './applabThumbnail';
+import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 
@@ -300,8 +300,9 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
-  if (Applab.tickCount === applabThumbnail.CAPTURE_TICK_COUNT) {
-    applabThumbnail.captureScreenshot();
+  if (Applab.tickCount === applabConstants.CAPTURE_TICK_COUNT) {
+    const visualization = document.getElementById('visualization');
+    thumbnailUtils.captureThumbnailFromElement(visualization);
   }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
@@ -339,7 +340,7 @@ Applab.init = function (config) {
   jsInterpreterLogger = null;
 
   // Necessary for tests.
-  applabThumbnail.init();
+  thumbnailUtils.init();
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
@@ -1221,19 +1222,7 @@ Applab.onPuzzleComplete = function (submit) {
     }
   };
 
-  var divApplab = document.getElementById('divApplab');
-  if (!divApplab || typeof divApplab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divApplab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        Applab.feedbackImage = pngDataUrl;
-        Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }
-    });
-  }
+  sendReport();
 };
 
 Applab.executeCmd = function (id, name, opts) {
