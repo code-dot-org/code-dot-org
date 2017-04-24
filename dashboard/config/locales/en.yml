@@ -478,7 +478,7 @@ en:
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
-    teacher: 'See the solution'
+    teacher: 'See a solution'
     auth_error: 'You are not authorized to see the solution.'
     submit: 'Update Artist Location'
     direction: 'Start Direction (in degrees)'
