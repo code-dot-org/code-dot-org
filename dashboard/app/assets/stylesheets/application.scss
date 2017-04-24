@@ -323,7 +323,7 @@ img.video_thumbnail {
     margin-top: 15px;
 
     .headerlink {
-      font-family: 'Gotham 5r', sans-serif;
+      font-family: 'Gotham 4r', sans-serif;
       margin-left: 30px;
       font-size: 14px;
       line-height: 22px;
@@ -343,7 +343,7 @@ img.video_thumbnail {
     &.header_button_light {
       background-color: $lightish_teal;
     }
-    font-family: 'Gotham 5r', sans-serif;
+    font-family: 'Gotham 4r', sans-serif;
     display: inline-block;
     color: $white;
     background-color: transparent;
@@ -362,6 +362,15 @@ img.video_thumbnail {
 
   .user_menu {
     margin-top: 6px;
+
+    .user_name {
+      max-width: 120px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      float: left;
+    }
   }
 
   .button-signin {
