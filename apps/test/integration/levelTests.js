@@ -124,7 +124,7 @@ describe('Level tests', function () {
 
     wrappedEventListener.attach();
 
-    sinon.stub(project, 'saveThumbnail');
+    sinon.stub(project, 'saveThumbnail').returns(Promise.resolve());
     sinon.stub(project, 'isOwner').returns(true);
 
     // For some reason, svg rendering is taking a long time in phantomjs. None

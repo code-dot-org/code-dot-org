@@ -39,6 +39,8 @@
       dashboard.createCallouts(appOptions.callouts);
     - if @level.is_a?(Widget)
       = render partial: 'levels/widget'
+    - elsif @level.is_a?(GoBeyond)
+      = render partial: 'levels/external_link'
     - else
       = render partial: "levels/#{@level.class.to_s.underscore}"
     - unless @level.is_a?(StandaloneVideo)

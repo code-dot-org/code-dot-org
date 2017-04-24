@@ -42,6 +42,7 @@ level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:c2_1'
 level 'Course 4 Play Labs For Loops 1'
 level 'Course 4 Play Lab Params 2'
+level 'allthethings-playlab-project-backed'
 
 stage 'Farmer'
 level '4-5 While Loops 4'
