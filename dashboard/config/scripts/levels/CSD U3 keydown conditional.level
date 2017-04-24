@@ -67,10 +67,7 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"a5e9d4d5-d69d-44fa-b0b0-90e005cad061\",\r\n    \"0b73c54b-961a-45db-a456-5ef296e3aebc\",\r\n    \"f7c55aea-467c-4ac0-aabd-401b61fa9fb0\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"a5e9d4d5-d69d-44fa-b0b0-90e005cad061\": {\r\n      \"name\": \"hippo\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FzvWL_vLN3Vli95LPrzNqEB8i10ZmNET3ILwEGCo-bBs%2Fa5e9d4d5-d69d-44fa-b0b0-90e005cad061.png%3Fversion%3D0vAhTR1Jd87S5TTcHR4BFB0WXgKn0JqI\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"0vAhTR1Jd87S5TTcHR4BFB0WXgKn0JqI\"\r\n    },\r\n    \"0b73c54b-961a-45db-a456-5ef296e3aebc\": {\r\n      \"name\": \"rabbit\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FzvWL_vLN3Vli95LPrzNqEB8i10ZmNET3ILwEGCo-bBs%2F0b73c54b-961a-45db-a456-5ef296e3aebc.png%3Fversion%3DkBaC68QKKtWefPlp0qXJT89bCh3uu3nU\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"kBaC68QKKtWefPlp0qXJT89bCh3uu3nU\"\r\n    },\r\n    \"f7c55aea-467c-4ac0-aabd-401b61fa9fb0\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FzvWL_vLN3Vli95LPrzNqEB8i10ZmNET3ILwEGCo-bBs%2Ff7c55aea-467c-4ac0-aabd-401b61fa9fb0.png%3Fversion%3D_44_raUBu.fspgzhBbxKBKy1cxhxpZaL\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 62\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"_44_raUBu.fspgzhBbxKBKy1cxhxpZaL\"\r\n    }\r\n  }\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
