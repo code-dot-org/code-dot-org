@@ -83,7 +83,8 @@ const SILENCED = [
   'tutorialExplorer',
   'hamburger',
   'weblab',
-  'learn/index'
+  'learn/index',
+  'pegasusCommon'
 ];
 const SITES_CONFIG = {
   'studio': {
