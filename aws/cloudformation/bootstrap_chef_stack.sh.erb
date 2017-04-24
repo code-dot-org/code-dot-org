@@ -45,6 +45,9 @@ cat <<JSON > $FIRST_BOOT
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
+<% if environment == :adhoc -%>
+    "db_writer": "${Database.Endpoint.Address}:${Database.Endpoint.Port}",
+<% end -%>
     "stack_name": "$STACK"
   },
 <% if local_mode -%>

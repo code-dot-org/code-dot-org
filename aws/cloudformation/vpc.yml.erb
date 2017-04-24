@@ -250,6 +250,10 @@ Outputs:
     Description: Security group for DB
     Value: {'Fn::GetAtt': [DBSecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-DBSecurityGroup"}
+  DBSubnetGroup:
+    Description: Subnet group for DB
+    Value: {Ref: DBSubnetGroup}
+    Export: {Name: !Sub "${AWS::StackName}-DBSubnetGroup"}
   RedshiftSubnetGroup:
     Description: Subnet group for Redshift
     Value: {Ref: RedshiftSubnetGroup}
