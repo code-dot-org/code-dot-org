@@ -379,15 +379,23 @@ class DashboardSection
   end
 
   def add_student(student)
-    return nil unless student_id = student[:id] || DashboardStudent.create(student)
+    student_id = student[:id] || DashboardStudent.create(student)
+    return nil unless student_id
 
-    created_at = DateTime.now
+    time_now = DateTime.now
+
+    existing_follower = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).first
+    if existing_follower
+      Dashboard.db[:followers].where(id: existing_follower[:id]).update(deleted_at: nil, updated_at: time_now)
+      return student_id
+    end
+
     Dashboard.db[:followers].insert(
       {
         section_id: @row[:id],
         student_user_id: student_id,
-        created_at: created_at,
-        updated_at: created_at,
+        created_at: time_now,
+        updated_at: time_now
       }
     )
     student_id
