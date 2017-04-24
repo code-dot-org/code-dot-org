@@ -2081,6 +2081,28 @@ en:
       courseF_artist_variables_8_authored_hint:
         courseF_artist_variables_8_a: |
           Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+      courseF_bee_conditionals1_predict1_authored_hint:
+        courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
+      courseF_bee_conditionals2_authored_hint:
+        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
+      courseF_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
+      courseF_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
+        courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
+        courseD_bee_conditionals4_c: Using the block `while there is a path ahead`, you should `move forward` and check for a flower. `if there is a flower` what should the bee do?
+      courseF_bee_conditionals5_authored_hint:
+        courseF_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseF_bee_conditionals5_b: Inside the `while there is a path ahead` block, you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
+        courseF_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
+      courseF_bee_conditionals7_predict2_authored_hint:
+        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
+      courseF_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        courseD_bee_conditionals8_b: |-
+          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+
+          Only check for nectar and honey at the end of your path.
       courseF_bee_for1_authored_hint:
         courseF_bee_for1_a: A loop will help you here.
       courseF_bee_for10_authored_hint:
@@ -2112,13 +2134,36 @@ en:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
+      courseF_bee_functions2_authored_hint:
+        courseF_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
+      courseF_bee_functions3_authored_hint:
+        courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
+      courseF_bee_functions3a_authored_hint:
+        courseF_bee_functions3_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
+      courseF_bee_functions4_authored_hint:
+        courseE_bee_functions4_a: Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
+      courseF_bee_functions5_authored_hint:
+        courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
+        courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
+      courseF_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      courseF_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_b: |-
+          Remember to build your code inside of the green function block.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar from a flower.
+        courseF_bee_fwp1_b: Continue along the path using a `repeat` block. Make sure you are using a `move forward` block and checking if there is a flower using a `if` statement.
       courseF_bee_fwp2_authored_hint:
         courseF_bee_fwp2_a: "To turn this into a function, simply drag the code into the existing function block.  \n\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)"
         courseF_bee_fwp2_b: Don't forget to connect the `rowOfNectar` block to `when run` to call the function that you just built.
       courseF_bee_fwp3_authored_hint:
         courseF_bee_fwp3_a: Your function will run no matter which direction you're facing.
+        courseF_bee_fwp3_b: There are 3 rows of nectar, what kind of turns and movements do you need to make between each row?
+        courseF_bee_fwp3_c: To solve this puzzle, you'll need to call your function 3 times. In between each call, you need to `turn right`, `move forward` 2 times, then `turn right` again. OR, you need to `turn left`, `move forward` 2 times, then `turn left again`.
       courseF_bee_fwp4_authored_hint:
         courseF_bee_fwp4_a: You will need to add a parameter and use the resulting variable in your loop.
       courseF_bee_fwp5_authored_hint:
@@ -2139,8 +2184,11 @@ en:
       courseF_maze_ramp1_authored_hint:
         courseF_maze_programming1_0: If the bird isn't getting to the pig, make sure all of the blocks have been fully clicked together, then click "Run" again.
       courseF_maze_ramp13_authored_hint:
-        courseD_maze_ramp11_b: Don't forget to use the "Step" button to go through block by block and look for errors.
-        courseD_maze_ramp11_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+        courseF_maze_ramp11_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseF_maze_ramp11_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+      courseF_maze_ramp15_authored_hint:
+        courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseF_maze_ramp2_authored_hint:
         courseF_maze_programming2_a: To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the `when run` block.
       courseF_maze_ramp4_authored_hint:
@@ -2151,8 +2199,8 @@ en:
       courseF_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: There are two ways to solve this puzzle!
       courseF_maze_ramp7_authored_hint:
-        courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+        courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block that is connected to the purple `set shout to` block.
       courseF_playlab_variables3b_authored_hint:
