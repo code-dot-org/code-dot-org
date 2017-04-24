@@ -11,6 +11,8 @@ import {html2canvas} from '../util/htmlToCanvasWrapper';
 // Thumbnail image width and height in pixels.
 const THUMBNAIL_SIZE = 180;
 
+const MIN_CAPTURE_INTERVAL_MS = 60000;
+
 /**
  * @type {number} The last time at which a screenshot capture was attempted.
  */
@@ -19,11 +21,11 @@ let lastCaptureTimeMs = 0;
 /**
  * Returns true if this level is a project level owned by this user, it is not a
  * shared or embedded level, and enough time has passed since the last capture.
- * @param {number} minCaptureIntervalMs Only capture if it has been at least
- *   this many milliseconds since the last capture. Default: 0 (no minimum).
+ * Only capture if it has been at least MIN_CAPTURE_INTERVAL_MS milliseconds
+ * since the last capture.
  * @returns {boolean}
  */
- function shouldCapture(minCaptureIntervalMs=0) {
+ function shouldCapture() {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
   if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
     return false;
@@ -31,7 +33,7 @@ let lastCaptureTimeMs = 0;
 
   // Skip capturing a screenshot if we just captured one recently.
   const intervalMs = Date.now() - lastCaptureTimeMs;
-  if (intervalMs < minCaptureIntervalMs) {
+  if (intervalMs < MIN_CAPTURE_INTERVAL_MS) {
     return;
   }
 
@@ -42,10 +44,8 @@ let lastCaptureTimeMs = 0;
  * Converts the contents of an SVG element into an image, shrinks it to
  * width and height equal to THUMBNAIL_SIZE, and saves it to the server.
  * @param {SVGElement} svg SVG element to capture the contents of.
- * @param {number} minCaptureIntervalMs Minimum allowable time between
- *   thumbnail image captures in milliseconds.
  */
-export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
+export function captureThumbnailFromSvg(svg) {
   if (!svg) {
     console.warn(`Thumbnail capture failed: svg element not found.`);
     return;
@@ -54,7 +54,7 @@ export function captureThumbnailFromSvg(svg, minCaptureIntervalMs) {
     console.warn('Thumbnail capture failed: SVGElement.prototype.toDataURL undefined.');
     return;
   }
-  if (!shouldCapture(minCaptureIntervalMs)) {
+  if (!shouldCapture()) {
     return;
   }
   lastCaptureTimeMs = Date.now();
@@ -111,12 +111,12 @@ export function isCaptureComplete() {
  * @param {HTMLElement} element
  */
 
-export function captureThumbnailFromElement(element, minCaptureIntervalMs) {
+export function captureThumbnailFromElement(element) {
   if (!element) {
     console.warn(`Thumbnail capture failed: html element not found.`);
     return;
   }
-  if (!shouldCapture(minCaptureIntervalMs)) {
+  if (!shouldCapture()) {
     return;
   }
   lastCaptureTimeMs = Date.now();

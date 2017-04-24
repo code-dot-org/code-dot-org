@@ -303,8 +303,7 @@ Applab.onTick = function () {
 
   if (Applab.tickCount === applabConstants.CAPTURE_TICK_COUNT) {
     const visualization = document.getElementById('visualization');
-    const interval = applabConstants.MIN_CAPTURE_INTERVAL_MS;
-    thumbnailUtils.captureThumbnailFromElement(visualization, interval);
+    thumbnailUtils.captureThumbnailFromElement(visualization);
   }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
