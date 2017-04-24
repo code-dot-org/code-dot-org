@@ -2779,6 +2779,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isSignedIn: config.isSignedIn,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
+    appType: config.app
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));
