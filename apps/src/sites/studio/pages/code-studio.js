@@ -13,6 +13,7 @@ require('@cdo/apps/code-studio/consoleShim')(window);
 
 var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -95,3 +96,5 @@ activateReferenceAreaOnLoad();
 // CDOSounds is currently used in a few haml files so we need
 // to put it on window :(
 window.CDOSounds = Sounds.getSingleton();
+
+checkForUnsupportedBrowsersOnLoad();
