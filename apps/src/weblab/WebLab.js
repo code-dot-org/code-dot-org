@@ -7,6 +7,10 @@ import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
 import weblabMsg from '@cdo/weblab/locale';
 import commonMsg from '@cdo/locale';
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
 import * as actions from './actions';
@@ -163,6 +167,17 @@ WebLab.prototype.init = function (config) {
     if (config.share) {
       this.renderFooterInSharedMode(container, config.copyrightStrings);
     }
+
+    let finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
+    }
+
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onFinish.bind(this),
+      unsubmitUrl: this.level.unsubmitUrl
+    });
   };
 
   // Push initial level properties into the Redux store
@@ -172,6 +187,8 @@ WebLab.prototype.init = function (config) {
     visualizationInWorkspace: true,
     documentationUrl: 'https://docs.code.org/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
   });
 
   this.readOnly = config.readonlyWorkspace;
@@ -218,20 +235,6 @@ WebLab.prototype.init = function (config) {
     getStore().dispatch(actions.changeInspectorOn(inspectorOn));
   }
 
-  function onFinish() {
-    project.autosave(() => {
-      this.studioApp_.report({
-        app: 'weblab',
-        level: this.level.id,
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-        program: this.getCurrentFilesVersionId() || '',
-        submitted: false,
-        onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
-      });
-    });
-  }
-
   ReactDOM.render((
     <Provider store={getStore()}>
       <WebLabView
@@ -243,7 +246,6 @@ WebLab.prototype.init = function (config) {
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
-        onFinish={onFinish.bind(this)}
         onMount={onMount}
       />
     </Provider>
@@ -254,6 +256,22 @@ WebLab.prototype.init = function (config) {
       return weblabMsg.confirmExitWithUnsavedChanges();
     }
   };
+};
+
+WebLab.prototype.onFinish = function (submit) {
+  const onComplete = submit ? onSubmitComplete : this.studioApp_.onContinue.bind(this.studioApp_);
+
+  project.autosave(() => {
+    this.studioApp_.report({
+      app: 'weblab',
+      level: this.level.id,
+      result: true,
+      testResult: TestResults.FREE_PLAY,
+      program: this.getCurrentFilesVersionId() || '',
+      submitted: submit,
+      onComplete: onComplete,
+    });
+  });
 };
 
 WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
@@ -418,6 +436,11 @@ WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost.onBrambleReady(() => {
     if (this.hideSource) {
       this.brambleHost.enableFullscreenPreview();
+    }
+    // Enable the Finish/Submit/Unsubmit button if it is present:
+    let shareCell = document.getElementById('share-cell');
+    if (shareCell) {
+      shareCell.className = 'share-cell-enabled';
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
