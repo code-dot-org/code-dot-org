@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 ## Using Random Numbers
 
-The `randomNumber()` block can be used to generate random numbers in your programs. The parameters set the minimum and maximum value that could be generated.
+The `randomNumber()` block can be used to generate random numbers in your programs. The parameters set the minimum and maximum value that could be generated.  You can use this block anywhere that you could write a number.
 
 ![](https://images.code.org/e43e4920325f2e8b2d633de9cd24066b-image-1491707176403.05.46 PM.png)
 
