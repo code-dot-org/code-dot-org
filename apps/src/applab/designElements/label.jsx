@@ -146,6 +146,13 @@ const LabelEvents = React.createClass({
   }
 });
 
+/**
+ * This represents the amount of error allowed before we consider a label's size to "fit exactly".
+ * This allows for rounding errors for adjusting center aligned labels, as well as allowing users
+ * to have a chance of returning to an exact fit.
+ */
+const STILL_FITS = 5;
+
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
@@ -186,7 +193,6 @@ export default {
     if (element.textContent) {
       // Max width depends on alignment.
       let maxWidth;
-      debugger;
       if (element.style.textAlign === 'center') {
         maxWidth = applabConstants.APP_WIDTH;
       } else {
@@ -284,11 +290,3 @@ export default {
     return true;
   }
 };
-
-
-/**
- * This represents the amount of error allowed before we consider a label's size to "fit exactly".
- * This allows for rounding errors for adjusting center aligned labels, as well as allowing users
- * to have a chance of returning to an exact fit.
- */
-const STILL_FITS = 5;
