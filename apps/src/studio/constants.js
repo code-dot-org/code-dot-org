@@ -409,3 +409,7 @@ export const BEHAVIOR_CHASE = 'chase';
 export const BEHAVIOR_FLEE = 'flee';
 export const BEHAVIOR_STOP = 'none';
 export const BEHAVIOR_WANDER = 'roam';
+
+// Take the screenshot almost immediately, hopefully catching the
+// title screen and any characters in their initial positions.
+export const CAPTURE_TICK_COUNT = 20;

@@ -9,6 +9,7 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 describe('ProgressLesson', () => {
   const defaultProps = {
+    currentStageId: 1,
     lesson: fakeLesson('lesson1', 1),
     levels: fakeLevels(3),
     lessonNumber: 3,
@@ -131,5 +132,50 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
     assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'eye-slash');
     assert.equal(wrapper.find('FontAwesome').at(2).props().icon, 'lock');
+  });
+
+  it('starts collapsed if it is not the current stage', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        currentStageId={2}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), true);
+  });
+
+  it('starts uncollapsed if it is the current stage', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), false);
+  });
+
+  it('uncollapses itself when currentStage gets updated', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        currentStageId={null}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), true);
+
+    wrapper.setProps({currentStageId: 1});
+    assert.equal(wrapper.state('collapsed'), false);
+  });
+
+  it('does not change collapse state when other props are updated', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        currentStageId={null}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), true);
+
+    wrapper.setProps({foo: 'bar'});
+    assert.equal(wrapper.state('collapsed'), true);
   });
 });

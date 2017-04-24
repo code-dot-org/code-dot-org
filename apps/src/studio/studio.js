@@ -54,6 +54,7 @@ import {
 } from '../containedLevels';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
+import {captureThumbnailFromSvg} from '../util/thumbnail';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -602,7 +603,9 @@ Studio.removeGoalEffect = function () {
 /**
  * @param scope Object :  The scope in which to execute the delegated function.
  * @param func Function : The function to execute
- * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
+ * @param data Object or Array : The data to pass to the function. If the
+ *   function is also passed arguments, the data is appended to the arguments
+ *   list. If the data is an Array, each item is appended as a new argument.
  */
 var delegate = function (scope, func, data) {
   return function () {
@@ -1023,6 +1026,10 @@ Studio.onTick = function () {
   var i;
 
   Studio.clearDebugElements();
+
+  if (Studio.tickCount === constants.CAPTURE_TICK_COUNT) {
+    captureThumbnailFromSvg(document.getElementById('svgStudio'));
+  }
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowExecutionFactor);

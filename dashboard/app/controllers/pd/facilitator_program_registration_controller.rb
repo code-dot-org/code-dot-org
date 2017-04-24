@@ -31,7 +31,7 @@ class Pd::FacilitatorProgramRegistrationController < ApplicationController
     end
 
     @script_data = {
-      options: Pd::FacilitatorProgramRegistration::OPTIONS.camelize_keys.to_json,
+      options: Pd::FacilitatorProgramRegistration.options.camelize_keys.to_json,
       attendanceDates: dates.camelize_keys.to_json,
       teachercon: @teachercon,
       course: Pd::FacilitatorProgramRegistration.course(current_user, @teachercon).to_json,

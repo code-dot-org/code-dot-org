@@ -138,6 +138,21 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.filter_workshops @workshop_query
   end
 
+  test 'filter_workshops with teacher_email' do
+    teacher = create :teacher, email: "test@example.net"
+    expects(:enrolled_in_by).with(teacher)
+    params teacher_email: teacher.email
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with teacher_email and only_attended' do
+    teacher = create :teacher, email: "test@example.net"
+    expects(:attended_by).with(teacher)
+    params teacher_email: teacher.email
+    params only_attended: true
+    @controller.filter_workshops @workshop_query
+  end
+
   # Normal sort fields
   %w(location_name workshop_type course subject).each do |sort_field|
     test "filter_workshops with order_by #{sort_field}" do
@@ -208,7 +223,9 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :course,
       :subject,
       :organizer_id,
-      :order_by
+      :teacher_email,
+      :only_attended,
+      :order_by,
     ]
 
     params expected_keys.map {|k| [k, 'some value']}.to_h
