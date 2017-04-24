@@ -199,7 +199,11 @@ class ScriptLevel < ActiveRecord::Base
 
   def level_display_text
     if level.unplugged?
-      I18n.t('unplugged_activity')
+      if level.is_a?(GoBeyond)
+        I18n.t('go_beyond')
+      else
+        I18n.t('unplugged_activity')
+      end
     elsif stage.unplugged?
       position - 1
     else

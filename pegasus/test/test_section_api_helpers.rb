@@ -41,12 +41,13 @@ class SectionApiHelperTest < SequelTestCase
     end
 
     describe 'update_if_allowed' do
-      # TODO(asher): Fix this test so that the DB change does not pollute other tests.
-      # it 'updates students' do
-      #   params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
-      #   updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
-      #   assert_equal 'Updated User', updated_student[:name]
-      # end
+      it 'updates students' do
+        params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
+        Dashboard.db.transaction(rollback: :always) do
+          updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
+          assert_equal 'Updated User', updated_student[:name]
+        end
+      end
 
       it 'noops for students in deleted sections' do
         params = {id: FakeDashboard::STUDENT_DELETED_SECTION[:id], name: 'Updated User'}
@@ -171,16 +172,25 @@ class SectionApiHelperTest < SequelTestCase
     end
 
     describe 'remove_student' do
-      # TODO(asher): After making tests not pollute each other, uncomment this test case and write
-      # additional test cases.
-      # it 'soft-deletes follower' do
-      #   pegasus_section = DashboardSection.fetch_if_teacher(
-      #     FakeDashboard::SECTION_NORMAL[:id],
-      #     FakeDashboard::TEACHER[:id]
-      #   )
-      #   removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
-      #   assert removed
-      # end
+      it 'soft-deletes follower' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+          removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
+          assert removed
+        end
+      end
+
+      it 'noops for soft-deleted followers' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+          FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        )
+        removed = pegasus_section.remove_student(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id])
+        refute removed
+      end
     end
   end
 

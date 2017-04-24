@@ -1028,8 +1028,7 @@ Studio.onTick = function () {
   Studio.clearDebugElements();
 
   if (Studio.tickCount === constants.CAPTURE_TICK_COUNT) {
-    const svg = document.getElementById('svgStudio');
-    captureThumbnailFromSvg(svg, constants.MIN_CAPTURE_INTERVAL_MS);
+    captureThumbnailFromSvg(document.getElementById('svgStudio'));
   }
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
