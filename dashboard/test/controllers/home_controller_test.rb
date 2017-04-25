@@ -239,6 +239,36 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "{}", session.inspect
   end
 
+  test 'index does not show alert for unconfirmed email for teachers' do
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
+
+    sign_in user
+    get :index
+
+    assert_response :success
+    assert_select '.alert', false
+  end
+
+  test 'index does not show alert for unconfirmed email for teachers if already confirmed' do
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
+
+    sign_in user
+    get :index
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
+
+  test 'index does not show alert for unconfirmed email for students' do
+    user = create :student, email: 'my_email@test.xx'
+
+    sign_in user
+    get :index
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
+
   test 'no more debug' do
     # this action is now in AdminReportsController and requires admin privileges
     assert_raises ActionController::UrlGenerationError do
