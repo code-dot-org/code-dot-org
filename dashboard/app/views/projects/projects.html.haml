@@ -50,9 +50,9 @@
           = t('project.really_delete')
           %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
-  -if CDO.project_gallery
+  -if CDO.project_gallery && !@gallery_activities.empty?
     .row
-      - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
+      - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
         = render partial: 'shared/gallery'
   .row
     .span12
@@ -67,3 +67,24 @@
     = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
     = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
     = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+
+:javascript
+  $(document).ready(function () {
+    console.log('document ready', $('#gallery').length)
+    // Set up gallery pagination.
+    $('#gallery').on('click', '.pagination a', function () {
+      console.log('gallery click')
+      $.ajax({
+        url: $(this).attr('href'),
+        data: {},
+        success: function (result) {
+          $('#gallery').animate({opacity: '25%'},
+            500,
+            function () {
+              $('#gallery').html(result);
+            });
+        }
+      });
+      return false;
+    });
+  });

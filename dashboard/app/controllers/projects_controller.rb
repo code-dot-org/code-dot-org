@@ -98,6 +98,14 @@ class ProjectsController < ApplicationController
     render template: "projects/projects", layout: nil
   end
 
+  def gallery_activities
+    if current_user
+      @gallery_activities =
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+    end
+    render partial: 'shared/gallery_content'
+  end
+
   def load
     if current_user.try(:admin)
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}

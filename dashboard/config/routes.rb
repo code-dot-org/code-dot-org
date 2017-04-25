@@ -121,6 +121,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
       get '/angular', to: 'projects#angular'
+      get 'gallery_activities', action: 'gallery_activities'
     end
   end
 
