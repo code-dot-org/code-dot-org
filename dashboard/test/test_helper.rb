@@ -3,8 +3,9 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when runni
   SimpleCov.start :rails
   SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
   if ENV['CIRCLECI']
-    require 'codecov'
-    SimpleCov.formatter = SimpleCov::Formatter::Codecov
+    require 'simplecov-lcov'
+    SimpleCov::Formatter::LcovFormatter.report_with_single_file = true
+    SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
   end
 elsif ENV['CI'] # this is set by circle
   # TODO(bjordan): Temporarily disabled, re-enable with proper handling for

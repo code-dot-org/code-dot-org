@@ -106,7 +106,7 @@ database:
 test:
   override:
     - bundle exec rake lint:javascript
-    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; *) bundle exec rake circle:run_ui_tests ;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests && bash <(curl -s https://codecov.io/bash) -cF ruby ;; *) bundle exec rake circle:run_ui_tests ;; esac:
         parallel: true
         timeout:
             7200

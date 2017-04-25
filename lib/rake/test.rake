@@ -243,6 +243,7 @@ def run_tests_if_changed(test_name, changed_globs)
   relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs)
   if relevant_changed_files.empty?
     ChatClient.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
+    yield
   else
     ChatClient.log "Files affecting #{justified_test_name} tests *modified* from #{base_branch}. Starting tests. Changed files:"
     padding = ' ' * 4

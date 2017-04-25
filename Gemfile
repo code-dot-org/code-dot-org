@@ -75,6 +75,7 @@ group :development, :test do
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'simplecov', '~> 0.9', require: false
+  gem 'simplecov-lcov', require: false
   gem 'sqlite3'
   gem 'timecop'
 
