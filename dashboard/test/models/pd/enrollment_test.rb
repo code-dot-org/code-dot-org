@@ -316,7 +316,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment_not_attended = create :pd_enrollment
     enrollment_attended = create :pd_enrollment, workshop: workshop
     workshop.sessions.each do |session|
-      create :pd_attendance, session: session, teacher: teacher, enrollment: attended
+      create :pd_attendance, session: session, teacher: teacher, enrollment: enrollment_attended
     end
 
     assert_equal [enrollment_attended], Pd::Enrollment.attended
