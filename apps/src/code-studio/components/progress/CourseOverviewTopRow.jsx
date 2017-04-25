@@ -7,9 +7,6 @@ import HrefButton from '@cdo/apps/templates/HrefButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
-// TODO - get this from redux instead?
-import {isRtl} from '@cdo/apps/code-studio/utils';
-
 const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
 
 const styles = {
@@ -42,6 +39,7 @@ const CourseOverviewTopRow = React.createClass({
     hasLevelProgress: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
   },
 
   render() {
@@ -49,7 +47,8 @@ const CourseOverviewTopRow = React.createClass({
       professionalLearningCourse,
       hasLevelProgress,
       scriptName,
-      viewAs
+      viewAs,
+      isRtl
     } = this.props;
 
     let headerButtons;
@@ -92,7 +91,7 @@ const CourseOverviewTopRow = React.createClass({
     return (
       <div style={styles.buttonRow}>
         {!professionalLearningCourse && headerButtons}
-        <div style={isRtl() ? styles.left : styles.right}>
+        <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
             <span style={styles.sectionSelector}>
               <SectionSelector/>
