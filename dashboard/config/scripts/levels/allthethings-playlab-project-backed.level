@@ -39,8 +39,8 @@
     "disable_sharing": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null,
-    "project_template_level_name": "allthethings-playlab-project-backed"
+    "project_template_level_name": "allthethings-playlab-project-backed",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

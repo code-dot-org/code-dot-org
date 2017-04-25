@@ -28,10 +28,9 @@
     "examples_required": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try adding one instruction at a time until you get to the pig.\",\"hint_id\":\"courseB_maze_seq4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/704382be770ee2fae428030758fffc8d/courseB_maze_seq4.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

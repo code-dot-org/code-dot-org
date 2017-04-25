@@ -28,10 +28,9 @@
     "examples_required": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're stuck, try adding one block at a time until you solve the puzzle.\",\"hint_id\":\"courseB_maze_seq8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ced8621269fe40dca4a7c2d18b4d9306/courseB_maze_seq8.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
