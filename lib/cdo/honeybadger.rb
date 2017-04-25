@@ -90,7 +90,7 @@ module Honeybadger
   def self.get_recent_issues
     issues = []
 
-    midnight_epoch = DateTime.now.to_i / 86400 * 86400
+    midnight_epoch = Time.now.to_i / 86400 * 86400
     {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
       response = `curl -u #{CDO.honeybadger_api_token}: https://app.honeybadger.io/v2/projects/#{project_id}/faults?occurred_after=#{midnight_epoch}`
       parsed_response = JSON.parse response
@@ -103,7 +103,7 @@ module Honeybadger
           message: issue['message'],
           environment: issue['environment'],
           project: project,
-          assignee: issue['assignee'].try(:[], 'email')
+          assignee: issue['assignee'] ? issue['assignee']['email'] : nil
         }
       end
     end

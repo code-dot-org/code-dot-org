@@ -12,6 +12,7 @@ require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
+require_relative '../lib/cdo/honeybadger'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -236,6 +237,26 @@ def print_dtp_message
   end
 end
 
+# Retrieves recent Honeybadger issues, displaying them on the console.
+def get_honeybadger_issues
+  issues = Honeybadger.get_recent_issues
+
+  if issues.count > 0
+    puts ''
+  end
+  issues.each do |issue|
+    message = "(#{issue[:url]} [#{issue[:environment]}, #{issue[:project]}]) #{issue[:message]}"
+    if issue[:assignee]
+      puts dim message
+    else
+      puts message
+    end
+  end
+  if issues.count > 0
+    puts ''
+  end
+end
+
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
   print_dtt_message
@@ -278,6 +299,10 @@ def main
 
   should_i 'reset DTT message to yes' do
     DevelopersTopic.set_dtt 'yes'
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   do_dtt_subroutine
@@ -339,6 +364,10 @@ def main
     end
 
     puts_after_dtp_tasks
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   puts_script_conclusion
