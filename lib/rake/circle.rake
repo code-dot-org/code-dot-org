@@ -139,7 +139,7 @@ def start_sauce_connect
   RakeUtils.system_stream_output 'tar -xzf sc-build-3265-linux.tar.gz'
   Dir.chdir(Dir.glob('sc-build-3265')[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
-    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"
+    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org --wait-tunnel-shutdown && break; done"
   end
 end
 
