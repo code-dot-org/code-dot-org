@@ -52,8 +52,12 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">3</title>
+            <block type="controls_repeat_ext">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
               <statement name="DO">
                 <block type="maze_moveForward"/>
               </statement>
