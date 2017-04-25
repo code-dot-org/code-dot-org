@@ -35,7 +35,14 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   setup do
-    Geocoder.stubs(:search).returns([stub(postal_code: '98101')])
+    Geocoder.stubs(:search).returns(
+      [OpenStruct.new(
+        postal_code: '98101',
+        address_components: [
+          {'types' => %w[street_number]}
+        ]
+      )]
+    )
     @mock_mimeo_rest_client = mock('Pd::MimeoRestClient')
     Pd::MimeoRestClient.stubs(:new).returns(@mock_mimeo_rest_client)
   end
@@ -95,40 +102,6 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['State is not included in the list'], order.errors.full_messages
   end
 
-  test 'street must not be a PO box' do
-    order = build :pd_workshop_material_order, street: 'P.O. Box 123'
-    refute order.valid?
-    assert_equal ['Street must be a street address, not a PO Box'], order.errors.full_messages
-  end
-
-  test 'street PO box validation regex' do
-    po_boxes = [
-      'p.o box',
-      'P.O.',
-      'PO box',
-      'Post office box',
-      ' Po'
-    ]
-
-    non_po_boxes = [
-      '1501 4th Ave',
-      '1 Post Alley',
-
-      # This one is obviously not a valid address and will fail in valid_address?
-      'ppppoooo'
-    ]
-
-    po_boxes.each do |po_box|
-      assert (po_box =~ Pd::WorkshopMaterialOrder::PO_BOX_REGEX),
-        "expected #{po_box} to match the PO box regex"
-    end
-
-    non_po_boxes.each do |non_po_box|
-      refute (non_po_box =~ Pd::WorkshopMaterialOrder::PO_BOX_REGEX),
-        "expected #{non_po_box} not to match the PO box regex"
-    end
-  end
-
   test 'phone number must be a valid format' do
     order = build :pd_workshop_material_order, phone_number: 'invalid'
     refute order.valid?
@@ -168,17 +141,45 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['Zip code is invalid'], order.errors.full_messages
   end
 
-  test 'address validation' do
+  test 'address validation fails for nonexistent address' do
     Geocoder.expects(:search).with("i don't exist, Suite 900, Seattle, WA, 98101").returns([])
-    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns([stub(postal_code: 98101)])
-
     order = build :pd_workshop_material_order, street: "i don't exist"
     refute order.valid?
     assert_equal ['Address could not be verified. Please double-check.'], order.errors.full_messages
+  end
 
-    order.assign_attributes(street: '1501 4th Ave', zip_code: '99999')
+  test 'address validation fails for incorrect zip code' do
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(
+      [OpenStruct.new(
+        postal_code: '98101',
+        address_components: [
+          {'short_name' => '900', 'types' => %w[subpremise]},
+          {'short_name' => '1501', 'types' => %w[street_number]},
+          {'short_name' => '4th Ave', 'types' => %w[route]},
+          {'short_name' => 'Seattle', 'types' => %w[locality political]}
+        ]
+      )]
+    )
+
+    order = build :pd_workshop_material_order, street: '1501 4th Ave', zip_code: '99999'
     refute order.valid?
     assert_equal ["Zip code doesn't match the address. Did you mean 98101?"], order.errors.full_messages
+  end
+
+  test 'address validation fails for PO boxes' do
+    Geocoder.expects(:search).with('PO Box 123, Seattle, WA, 98155').returns(
+      [OpenStruct.new(
+        postal_code: '98155',
+        address_components: [
+          {'short_name' => '98155', 'types' => %w[postal_code]},
+          {'short_name' => 'Seattle', 'types' => %w[locality political]}
+        ]
+      )]
+    )
+
+    order = build :pd_workshop_material_order, street: 'PO Box 123', apartment_or_suite: nil, zip_code: '98155'
+    refute order.valid?
+    assert_equal ['Street must be a valid street address (no PO boxes)'], order.errors.full_messages
   end
 
   test 'known user correctable error validation: apartment or suite required' do
