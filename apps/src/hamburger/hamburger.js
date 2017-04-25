@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export const setupHamburgerMenu = function () {
+export const initHamburger = function () {
   $(function () {
 
     $('#hamburger-icon').click(function (e){
