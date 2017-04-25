@@ -14,7 +14,7 @@ def create_branch(branch)
   require 'eyes_selenium'
   require_relative '../../dashboard/test/ui/utils/selenium_browser'
   EyesUtils.check_eyes_set
-  eyes = Applitools::Selenium::Eyes.new
+  eyes = Applitools::Eyes.new
   eyes.api_key = CDO.applitools_eyes_api_key
   eyes.branch_name = branch
   driver = SeleniumBrowser.local_browser
