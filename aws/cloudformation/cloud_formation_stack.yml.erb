@@ -456,6 +456,7 @@ Resources:
   Database:
     Type: AWS::RDS::DBInstance
     Properties:
+      DBInstanceIdentifier: !Ref AWS::StackName
       DBInstanceClass: db.t2.micro
       AllocatedStorage: 64
       StorageType: gp2

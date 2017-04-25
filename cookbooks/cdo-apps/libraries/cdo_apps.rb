@@ -25,6 +25,8 @@ module CdoApps
     # Bootstrap `setup_db` on a new system.
     # Runs only once on initial install.
     file "#{app_name}_setup" do
+      # Re-run bootstrap if db-writer path has changed.
+      content node['cdo-secrets']['db_writer'] if node['cdo-apps']['daemon'] && node['cdo-secrets']
       path "#{Chef::Config[:file_cache_path]}/#{app_name}_setup"
       notifies :run, "execute[setup-#{app_name}]", :immediately
       only_if {node['cdo-apps']['local_mysql'] || node['cdo-apps']['daemon']}
