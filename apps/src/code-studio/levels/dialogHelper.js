@@ -74,7 +74,7 @@ function showAchievementDialog(onContinue, progress, assetUrl) {
     progress: progress.newStageProgress - progress.oldStageProgress,
   }];
   const feedbackMessage = msg.nextLevel({
-    puzzleNumber: appOptions.level.puzzle_number,
+    puzzleNumber: appOptions.levelPosition,
   });
 
   const container = document.createElement('div');
