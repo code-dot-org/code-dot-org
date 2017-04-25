@@ -34,9 +34,9 @@
     "markdown_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.\",\"hint_id\":\"courseD_bee_conditionals3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c10edac069ecbd8f953ccbd28a1801b3/courseD_bee_conditionals3.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
