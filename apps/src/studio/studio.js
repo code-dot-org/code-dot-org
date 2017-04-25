@@ -55,6 +55,8 @@ import {
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
+import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -2510,6 +2512,8 @@ var displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
+    const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
+      project.getStandaloneApp();
     studioApp().displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
@@ -2525,6 +2529,8 @@ var displayFeedback = function () {
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      // save to the project gallery instead of the legacy gallery
+      saveToProjectGallery: saveToProjectGallery,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting

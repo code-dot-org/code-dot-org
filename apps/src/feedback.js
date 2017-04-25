@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
+import project from './code-studio/initApp/project';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -399,7 +400,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   // set up the Save To Gallery button if necessary
   var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
-  if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
+  if (saveToGalleryButton && options.saveToProjectGallery) {
+    dom.addClickTouchEvent(saveToGalleryButton, () => {
+      project.copy(project.getNewProjectName(), () => {
+        $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
+      });
+    });
+  } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
     dom.addClickTouchEvent(saveToGalleryButton, function () {
       $.post(options.response.save_to_gallery_url,
              function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });

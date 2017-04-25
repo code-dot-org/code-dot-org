@@ -484,6 +484,44 @@ var projects = module.exports = {
     return this.isOwner() && hasProjectChanged;
   },
   /**
+   * @returns {string} A UI string containing the name of a new project, which
+   *   varies based on the app type and skin.
+   */
+  getNewProjectName() {
+    switch (appOptions.app) {
+      case 'applab':
+        return 'App Lab Project';
+      case 'gamelab':
+        return 'Game Lab Project';
+      case 'weblab':
+        return 'Web Lab Project';
+      case 'turtle':
+        switch (appOptions.skinId) {
+          case 'artist':
+            return 'Artist Project';
+          case 'anna':
+          case 'elsa':
+            return 'Frozen Project';
+        }
+        break;
+      case 'studio':
+        if (appOptions.level.useContractEditor) {
+          return 'Big Game';
+        }
+        switch (appOptions.skinId) {
+          case 'studio':
+            return 'Play Lab Project';
+          case 'infinity':
+            return 'Infinity Project';
+          case 'gumball':
+            return 'Gumball Project';
+          case 'iceage':
+            return 'Ice Age Project';
+        }
+    }
+    return 'My Project';
+  },
+  /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
    */
@@ -741,6 +779,7 @@ var projects = module.exports = {
    * @param {boolean} shouldNavigate Whether to navigate to the project URL.
    */
   copy(newName, callback, shouldNavigate) {
+    current = current || {};
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel,
         this.copyAnimations.bind(this, srcChannel, callback));
