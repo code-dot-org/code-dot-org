@@ -19,6 +19,7 @@ const defaultProps = {
   ],
   showTeacherInfo: false,
   viewAs: ViewType.Teacher,
+  hasSelectedSection: true,
   lessonIsVisible: () => true,
   lessonLockedForSection: () => false
 };
