@@ -61,7 +61,9 @@
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
           .error_in_field
 
-        #schooldropdown-block.itemblock{style: "display: none;"}
+        #schooldropdown-block.itemblock
+
+        #schooldropdown-block-old.itemblock{style: "display: none;"}
           = render partial: 'shared/school_info_registration', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
 
         #age-block.itemblock
@@ -120,6 +122,8 @@
     %br/
 
 %script{src: minifiable_asset_path('js/signup.js')}
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/devise/registrations/new.js'), data: {}}
 
 :javascript
 
@@ -144,3 +148,4 @@
       });
     }
   });
+
