@@ -120,10 +120,19 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersHidden: false,
       open: this.props.isOpen,
       openedHeight: 120,
+      labelDisplay: 'inline'
     };
   },
 
+  handleWindowResize() {
+    let hideLabel = ($(window).width() <= 1275) && !this.state.watchersHidden;
+    let labelDisplay= hideLabel ? 'none' : 'inline';
+    this.setState({ labelDisplay: labelDisplay });
+  },
+
   componentDidMount() {
+    window.addEventListener('resize', this.handleWindowResize);
+
     this.props.setStepSpeed(this.props.stepSpeed);
     if (this.props.isOpen) {
       this.slideOpen();
@@ -395,7 +404,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
           style={styles.debugAreaHeader}
         >
           <span
-            style={styles.noUserSelect}
+            style={[{display: this.state.labelDisplay}, styles.noUserSelect]}
             className="header-text"
           >
             {i18n.debugConsoleHeader()}
