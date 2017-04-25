@@ -95,6 +95,40 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['State is not included in the list'], order.errors.full_messages
   end
 
+  test 'street must not be a PO box' do
+    order = build :pd_workshop_material_order, street: 'P.O. Box 123'
+    refute order.valid?
+    assert_equal ['Street must be a street address, not a PO Box'], order.errors.full_messages
+  end
+
+  test 'street PO box validation regex' do
+    po_boxes = [
+      'p.o box',
+      'P.O.',
+      'PO box',
+      'Post office box',
+      ' Po'
+    ]
+
+    non_po_boxes = [
+      '1501 4th Ave',
+      '1 Post Alley',
+
+      # This one is obviously not a valid address and will fail in valid_address?
+      'ppppoooo'
+    ]
+
+    po_boxes.each do |po_box|
+      assert (po_box =~ Pd::WorkshopMaterialOrder::PO_BOX_REGEX),
+        "expected #{po_box} to match the PO box regex"
+    end
+
+    non_po_boxes.each do |non_po_box|
+      refute (non_po_box =~ Pd::WorkshopMaterialOrder::PO_BOX_REGEX),
+        "expected #{non_po_box} not to match the PO box regex"
+    end
+  end
+
   test 'phone number must be a valid format' do
     order = build :pd_workshop_material_order, phone_number: 'invalid'
     refute order.valid?
