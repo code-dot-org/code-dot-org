@@ -12,7 +12,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
-  batch = Applitools::Base::BatchInfo.new(ENV['BATCH_NAME'])
+  batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
   batch.id = ENV['BATCH_ID']
   @eyes.batch = batch
 
@@ -34,8 +34,8 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     config[:viewport_size] = {width: 1024, height: 690}
   end
   @browser.capabilities[:takes_screenshot] = true
-  @eyes.force_fullpage_screenshot = true
-  @eyes.use_css_transition = true
+  @eyes.force_full_page_screenshot = true
+  @eyes.stitch_mode = :css
   @browser = @eyes.open(config)
 end
 
@@ -55,7 +55,7 @@ end
 
 def ensure_eyes_available
   return if @eyes
-  @eyes = Applitools::Eyes.new
+  @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
