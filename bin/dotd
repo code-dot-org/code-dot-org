@@ -241,17 +241,19 @@ end
 def get_honeybadger_issues
   issues = Honeybadger.get_recent_issues
   issues.sort_by! do |issue|
-    [issue[:project], issue[:environment], issue[:assignee] ? issue[:assignee] : 'ZZZ']
+    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
   end
 
   puts '' if issues.count > 0
   issues.each do |issue|
-    environment = issue[:environment] == 'production' ? "#{red issue[:environment]}" : "#{bold issue[:environment]}"
+    environment = issue[:environment] == 'production' ? (red issue[:environment]).to_s : (bold issue[:environment]).to_s
     project = bold issue[:project]
     message = <<-EOS.unindent
       [#{project}, #{environment}]: #{issue[:message]}
           #{issue[:url]}
     EOS
+    # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
+    # the end of the message. This seems correlated with environment and project.
     message = message.strip
     if issue[:assignee]
       puts dim message
