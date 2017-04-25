@@ -50,7 +50,10 @@
           = t('project.really_delete')
           %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
-
+  -if CDO.project_gallery
+    .row
+      - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
+        = render partial: 'shared/gallery'
   .row
     .span12
       = t('project.thumbnail_help')

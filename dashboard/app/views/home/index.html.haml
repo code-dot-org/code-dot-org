@@ -70,7 +70,7 @@
       %br/
       %br/
       = render partial: 'home/projects'
-      - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
+      - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty? && !CDO.project_gallery
       = render partial: 'shared/gallery'
 
 %br/
