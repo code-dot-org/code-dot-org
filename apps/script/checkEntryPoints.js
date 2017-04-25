@@ -81,7 +81,6 @@ const SILENCED = [
   'studio',
   'turtle',
   'tutorialExplorer',
-  'hamburger',
   'weblab',
   'learn/index',
   'pegasusCommon'
