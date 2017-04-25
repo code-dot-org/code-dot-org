@@ -12,6 +12,7 @@ level 'CSD U3 Entertainment Sample 2', progression: 'Sample Programs'
 
 stage 'Plotting Shapes', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 2'
+named_level 'CSD U3 Describe the Picture'
 
 stage 'Drawing in Game Lab', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 3'
@@ -22,6 +23,7 @@ level 'CSD U3 fill', progression: 'Drawing'
 level 'CSD U3 sequence', progression: 'Drawing'
 level 'CSD U3 ellipse', progression: 'Drawing'
 level 'CSD U3 debug', progression: 'Drawing'
+level 'CSD U3 plotting shapes map', progression: 'Drawing'
 level 'CSD U3 picture', progression: 'Drawing'
 level 'CSD U3 L2 Challenges', progression: 'Drawing'
 
@@ -126,6 +128,7 @@ level 'CSD U3 - conditionals - first conditional 2', progression: 'Basic Conditi
 stage 'Keyboard Input', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 12'
 level 'CSD U3 Keypress Boolean', progression: 'Keyboard Input'
+level 'CSD U3 keydown conditional', progression: 'Keyboard Input'
 level 'CSD U3 UP_ARROW', progression: 'Keyboard Input'
 level 'CSD U3 Input Fish', progression: 'Keyboard Input'
 level 'CSD U3 Input Gears', progression: 'Keyboard Input'

@@ -1,5 +1,6 @@
 name 'CSD U3 Describe the Picture'
-title 'title'
+display_name 'Describe the Picture'
+title 'Describe the Picture'
 description 'description here'
 markdown <<MARKDOWN
 # Describe the Picture

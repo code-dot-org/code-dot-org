@@ -15,7 +15,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,1,0],[0,1,0,0,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-3,0,0,-3,0,-3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "15",
+    "ideal": "16",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -52,8 +52,12 @@
             <block type="procedures_callnoreturn">
               <mutation name="move and make honey"/>
               <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">3</title>
+                <block type="controls_repeat_ext">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
                   <statement name="DO">
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
