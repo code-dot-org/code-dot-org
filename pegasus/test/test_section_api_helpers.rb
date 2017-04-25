@@ -192,6 +192,45 @@ class SectionApiHelperTest < SequelTestCase
         refute removed
       end
     end
+
+    describe 'add_student' do
+      it 'creates a follower for new student' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+
+          pegasus_section.add_student(FakeDashboard::STUDENT_SELF)
+
+          assert_equal(
+            1,
+            Dashboard.db[:followers].where(student_user_id: FakeDashboard::STUDENT_SELF[:id]).count
+          )
+        end
+      end
+
+      it 'restores deleted follower' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+            FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+          )
+
+          pegasus_section.add_student(FakeDashboard::STUDENT_DELETED_FOLLOWER)
+
+          assert_equal(
+            1,
+            Dashboard.db[:followers].
+              where(student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).
+              count
+          )
+          assert_nil Dashboard.db[:followers].
+            where(student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).
+            first[:deleted_at]
+        end
+      end
+    end
   end
 
   describe DashboardUserScript do

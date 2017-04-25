@@ -575,8 +575,8 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
       CSD U3 Describe the Picture:
+        Describe the Picture: Describe the Picture
         description here: description here
-        title: title
       CSD U3 Draw Loop Map 1: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Entertainment: {}
@@ -7296,13 +7296,13 @@ en:
       courseC_multi_maze_debugging8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect. Skrat goes the wrong way after his final turn.: Incorrect. Skrat goes the wrong way after his final turn.
-        Incorrect. Taking one too few steps happens after Skrat turns the wrong way.: Incorrect. Taking one too few steps happens after Skrat turns the wrong way.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
         'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
-        Skrat takes one too few steps and ends up short of the acorn.: Skrat takes one too few steps and ends up short of the acorn.
-        Skrat will go the wrong way after his final turn.: Skrat will go the wrong way after his final turn.
-        'The first error is that Skrat goes the wrong way after his final turn. ': 'The first error is that Skrat goes the wrong way after his final turn. '
-        The program won't fail. Skrat will get to the acorn.: The program won't fail. Skrat will get to the acorn.
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat takes one too few steps and ends up short of the acorn.
+        Scrat will go the wrong way after his final turn.: Scrat will go the wrong way after his final turn.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'The first error is that Scrat goes the wrong way after his final turn. '
+        The program won't fail. Scrat will get to the acorn.: The program won't fail. Scrat will get to the acorn.
       courseC_multi_maze_loops10_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7383,8 +7383,8 @@ en:
         Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
         Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
         The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
-        The bee will get 3 units of nectar.: The bee will get 3 units of nectar.
         The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
         The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'

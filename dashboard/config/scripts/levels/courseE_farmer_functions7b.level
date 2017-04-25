@@ -30,10 +30,12 @@
     "instructions_important": "false",
     "ideal": "25",
     "markdown_instructions": "Make a second function that lets the farmer get all of the produce down a path, then brings her back to where she began.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the `check and pick` function inside your new function to collect all of the produce.\",\"hint_id\":\"courseE_farmer_functions7b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b77459bd8790e239b464885337e2aa1/courseE_farmer_functions7b.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the `check and pick` function inside your new function to collect all of the produce.\",\"hint_id\":\"courseE_farmer_functions7b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b77459bd8790e239b464885337e2aa1/courseE_farmer_functions7b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each of the side paths are to the left. Your function to take the farmer down these paths will involve checking if there is a path to the left, turning to the left, checking for plants along the path, then turning around and getting back on the main path.\",\"hint_id\":\"courseE_farmer_functions7b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db14d5a908fbfcb719e1ea22879eb0b6/courseE_farmer_functions7b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Once the farmer reaches the end of one of the side paths, she will need to return to the main path. To do this, turn right twice, move to the main path using a `while path ahead` block, then turn to the left to face the right way on the main path.\",\"hint_id\":\"courseE_farmer_functions7b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fed90c77e14fc76753def4e5c42ac605/courseE_farmer_functions7b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To move along the main path, use the `while path ahead` block. Inside this loop, `move forward` and use your function to harvest side paths if there is a path to the left.\",\"hint_id\":\"courseE_farmer_functions7b_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e34c43429b8d9beebc13b8106e341aac/courseE_farmer_functions7b.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",

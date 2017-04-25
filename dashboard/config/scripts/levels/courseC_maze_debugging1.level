@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Fix the code to help get Skrat get to the acorn.",
+    "instructions": "Fix the code to help get Scrat get to the acorn.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "instructions_important": "false",
-    "markdown_instructions": "This code isn't quite right!  \r\n\r\nFix the code to help get Skrat get to the acorn.",
+    "markdown_instructions": "This code isn't quite right!  \r\n\r\nFix the code to help get Scrat get to the acorn.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- Does everything work after the first step?\\n- Does it still work after the second?\\n- Where does it go wrong?\",\"hint_id\":\"courseC_maze_debugging1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a392e31b2e1a92859e9c223c1e50584b/courseC_maze_debugging1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
