@@ -27,7 +27,7 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are lots of helpful blocks in the workspace already.  Don't delete them all! \\n\\nUse the \\\"Step\\\" button to go through and figure out where the code goes wrong.\",\"hint_id\":\"courseC_maze_debugging5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e72f349ebb18190e5a24825667121c1/courseC_maze_debugging5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try saying what Skrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?\",\"hint_id\":\"courseC_maze_debugging5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ad2d74dbd001e6dbd8d9a6a8e765ac9a/courseC_maze_debugging5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are lots of helpful blocks in the workspace already.  Don't delete them all! \\n\\nUse the \\\"Step\\\" button to go through and figure out where the code goes wrong.\",\"hint_id\":\"courseC_maze_debugging5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e72f349ebb18190e5a24825667121c1/courseC_maze_debugging5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?\",\"hint_id\":\"courseC_maze_debugging5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ad2d74dbd001e6dbd8d9a6a8e765ac9a/courseC_maze_debugging5.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
