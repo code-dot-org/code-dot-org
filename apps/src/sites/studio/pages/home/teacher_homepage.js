@@ -3,31 +3,40 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import GradientNavCard from '@cdo/apps/templates/teacherHomepage/GradientNavCard';
 import CourseCard from '@cdo/apps/templates/teacherHomepage/CourseCard';
+import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
 
 $(document).ready(showContent);
 
-const ExampleCourseCard = {
-  courseName: "CSP Unit 2 - Digital Information",
-  description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-  image: "this is where there will be the source for the photo",
-  link: "link to wherever you want the button to go...",
-  assignedSections: ["Section 1",]
-};
-
-
 function showContent() {
-  //go get this specific data off the script
+
   const teacherHomepageData = document.querySelector('script[data-teacherhomepage]');
-  console.log(teacherHomepageData);
   const config = JSON.parse(teacherHomepageData.dataset.teacherhomepage);
-  console.log(config);
-  console.log(config.teacherHomepageData);
-  console.log(config.teacherHomepageData[0].script);
+
+  const CourseCard1 = {
+    courseName: config.course1name,
+    description: config.course1description,
+    image: "this is where there will be the source for the photo",
+    link: config.course1link,
+    assignedSections: ["Section 1", "Section 2"]
+  };
+
+  const CourseCard2 = {
+    courseName: config.course2name,
+    description: config.course2description,
+    image: "this is where there will be the source for the photo",
+    link: config.course2link,
+    assignedSections: ["Section 1"]
+  };
 
   ReactDOM.render (
-    <CourseCard
-      cardData={ExampleCourseCard}
-    />,
+    <TeacherHomepage>
+      <CourseCard
+        cardData={CourseCard1}
+      />
+      <CourseCard
+        cardData={CourseCard2}
+      />
+  </TeacherHomepage>,
     document.getElementById('container')
   );
 }

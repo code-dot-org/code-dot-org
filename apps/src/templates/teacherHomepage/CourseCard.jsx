@@ -56,6 +56,7 @@ const styles = {
     height: 130,
     position: 'absolute',
     zIndex: 2,
+    width: 520
   },
   checkIcon: {
     position: 'absolute',
@@ -125,6 +126,7 @@ const CourseCard = React.createClass({
         </span>
       );
     }
+    return null;
   },
 
   tooltipContent() {
