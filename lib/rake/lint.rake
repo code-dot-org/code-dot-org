@@ -22,9 +22,6 @@ namespace :lint do
   task :javascript do
     Dir.chdir(apps_dir) do
       ChatClient.log 'Linting <b>apps</b> JavaScript...'
-      # lint all js/jsx files in dashboard/app/assets/javascript
-      RakeUtils.system './node_modules/.bin/eslint -c .eslintrc.js ../dashboard/app/ --ext .js,.jsx'
-      # also do our standard apps lint
       RakeUtils.system 'npm run lint'
     end
     Dir.chdir(shared_js_dir) do
