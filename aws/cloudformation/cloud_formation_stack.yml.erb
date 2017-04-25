@@ -24,6 +24,15 @@ image_id = rack_env?(:adhoc) ? "!ImportValue AMI-#{environment}-ImageId" : IMAGE
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
+<% if environment == :adhoc -%>
+Parameters:
+  DatabaseUsername:
+    Type: String
+    Default: master
+  DatabasePassword:
+    Type: String
+    NoEcho: true
+<% end -%>
 Resources:
 <% if frontends -%>
   # Signal when the instance is fully provisioned and ready for AMI creation.
@@ -455,8 +464,8 @@ Resources:
       DBParameterGroupName: !Ref DatabaseParameters
       VPCSecurityGroups: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
-      MasterUsername: root
-      MasterUserPassword: ''
+      MasterUsername: !Ref DatabaseUsername
+      MasterUserPassword: !Ref DatabasePassword
   DatabaseParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:
