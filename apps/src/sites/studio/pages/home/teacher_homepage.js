@@ -1,9 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import GradientNavCard from '@cdo/apps/templates/teacherHomepage/GradientNavCard';
 import CourseCard from '@cdo/apps/templates/teacherHomepage/CourseCard';
-import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
 
 $(document).ready(showContent);
 
@@ -29,14 +27,14 @@ function showContent() {
   };
 
   ReactDOM.render (
-    <TeacherHomepage>
+    <div>
       <CourseCard
         cardData={CourseCard1}
       />
       <CourseCard
         cardData={CourseCard2}
       />
-  </TeacherHomepage>,
+    </div>,
     document.getElementById('container')
   );
 }
