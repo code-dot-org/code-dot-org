@@ -1016,6 +1016,10 @@ ActiveRecord::Schema.define(version: 20170421012552) do
     t.integer  "teacher_prize_id"
     t.boolean  "teacher_bonus_prize_earned",               default: false
     t.integer  "teacher_bonus_prize_id"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.integer  "prize_teacher_id"
     t.integer  "secret_picture_id"
     t.boolean  "active",                                   default: true,    null: false
@@ -1033,8 +1037,7 @@ ActiveRecord::Schema.define(version: 20170421012552) do
     t.integer  "invitations_count",                        default: 0
     t.integer  "terms_of_service_version"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
-    t.index ["deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
-    t.index ["deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
+    t.index ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
@@ -1047,6 +1050,7 @@ ActiveRecord::Schema.define(version: 20170421012552) do
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
     t.index ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
+    t.index ["unconfirmed_email", "deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
   end
 
