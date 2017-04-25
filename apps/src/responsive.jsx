@@ -1,7 +1,7 @@
 /* A very simple responsive layout system.
  */
 
-import * as utils from '../utils';
+import * as utils from './utils';
 
 /**
  * Gets the container width.
