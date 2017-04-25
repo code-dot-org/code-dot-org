@@ -38,6 +38,7 @@ FactoryGirl.define do
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
+    confirmed_at Time.now
 
     factory :levelbuilder do
       after(:create) do |levelbuilder|
