@@ -60,7 +60,7 @@
   -# Don't allow editing user type unless we can also edit email, because
   -# changing from a student (encrypted email) to a teacher (plaintext email)
   -# requires entering an email address.
-  - if f.object.can_edit_email?
+  - if f.object.can_edit_email? && Section.where(user_id: f.object.id).empty?
     .field
       = f.label t('signup_form.user_type')
       = f.select :user_type, user_type_options
