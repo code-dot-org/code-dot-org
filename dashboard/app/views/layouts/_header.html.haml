@@ -16,7 +16,6 @@
 
 - if show_header2
   %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
-  %script{src: minifiable_asset_path("js/hamburger.js")}
   - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
   - user_type = request.cookies[cookie_key]
 
