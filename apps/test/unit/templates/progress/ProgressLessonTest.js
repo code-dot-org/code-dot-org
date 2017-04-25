@@ -15,6 +15,7 @@ describe('ProgressLesson', () => {
     lessonNumber: 3,
     showTeacherInfo: false,
     viewAs: ViewType.Teacher,
+    hasSelectedSection: true,
     lessonIsVisible: () => true,
     lessonLockedForSection: () => false
   };
@@ -132,6 +133,18 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
     assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'eye-slash');
     assert.equal(wrapper.find('FontAwesome').at(2).props().icon, 'lock');
+  });
+
+  it('does not have an unlocked icon if we dont have a section selected', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        hasSelectedSection={false}
+        lesson={fakeLesson('lesson1', 1, true)}
+      />
+    );
+    assert.equal(wrapper.find('FontAwesome').length, 1);
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
   });
 
   it('starts collapsed if it is not the current stage', () => {
