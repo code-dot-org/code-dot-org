@@ -82,7 +82,7 @@ group :development, :test do
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
   gem 'cucumber', '~> 2.0.2'
-  gem 'eyes_selenium', '3.2.1'
+  gem 'eyes_selenium', '3.2.2'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters'
