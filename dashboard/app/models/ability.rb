@@ -1,3 +1,5 @@
+# this comment will force dashboard unit tests to run which will have
+# coverage reports flagged with "dashboard"
 class Ability
   include CanCan::Ability
 
