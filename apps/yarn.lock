@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/johnny-five@0.9.62-cdo.2":
-  version "0.9.62-cdo.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.2.tgz#66e4e597b3f454257ab52bb85e98d6be72697d07"
+"@code-dot-org/johnny-five@0.10.10-cdo.0":
+  version "0.10.10-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.10.10-cdo.0.tgz#bf2d2316cc897d0fd8ba5e8e6b348cdb0f5aeedb"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
@@ -60,7 +60,7 @@
     temporal latest
   optionalDependencies:
     browser-serialport latest
-    firmata "^0.12.0"
+    firmata latest
     serialport "^4.0.0"
 
 "@code-dot-org/js-interpreter":
@@ -3062,7 +3062,7 @@ es6-promise@3.0.2, es6-promise@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.0.2.tgz#010d5858423a5f118979665f46486a95c6ee2bb6"
 
-es6-promise@^3.1.2, es6-promise@^3.2.1:
+es6-promise@^3.2.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613"
 
@@ -3713,13 +3713,13 @@ firmata@^0.11.3:
     es6-shim "^0.33.6"
     serialport "^2.0.1"
 
-firmata@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.12.0.tgz#5d97dd122f5f77fec922604e074209d856d776b1"
+firmata@latest:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.16.0.tgz#6f2a759b1a98de234ced010fa3d4d9534d62b2e7"
   dependencies:
-    browser-serialport "*"
-    es6-shim "^0.33.6"
-    serialport "^3.0.0"
+    browser-serialport latest
+    es6-shim latest
+    serialport "^4.0.0"
 
 first-chunk-stream@^1.0.0:
   version "1.0.0"
@@ -6478,7 +6478,7 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
-nan@2.4.x, nan@^2.3.0, nan@^2.3.2, nan@^2.3.3, nan@^2.3.5:
+nan@2.4.x, nan@^2.3.0, nan@^2.3.2, nan@^2.3.5:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
@@ -8698,18 +8698,6 @@ serialport@^2.0.1:
     object.assign "^4.0.3"
     optimist "~0.6.1"
     sf "0.1.7"
-
-serialport@^3.0.0:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/serialport/-/serialport-3.1.2.tgz#9bc17b2edbce7b3a9d06ea8c99137816f31103f5"
-  dependencies:
-    bindings "1.2.1"
-    commander "^2.9.0"
-    debug "^2.1.1"
-    es6-promise "^3.1.2"
-    nan "^2.3.3"
-    node-pre-gyp "^0.6.26"
-    object.assign "^4.0.3"
 
 serialport@^4.0.0:
   version "4.0.5"
