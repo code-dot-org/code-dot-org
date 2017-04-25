@@ -28,10 +28,9 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your final code should have three movement blocks.\",\"hint_id\":\"courseB_maze_seq6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5a5bc67e23d9c38768ae2b3ed144025/courseB_maze_seq6.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

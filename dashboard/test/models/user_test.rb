@@ -1622,4 +1622,34 @@ class UserTest < ActiveSupport::TestCase
     assert follower.reload.deleted?
     assert student.reload.deleted?
   end
+
+  test 'assign_script creates UserScript if necessary' do
+    assert_creates(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script reuses UserScript if available' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(user: @student, script: Script.first)
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script does not overwrite assigned_at if pre-existing' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+    end
+  end
 end

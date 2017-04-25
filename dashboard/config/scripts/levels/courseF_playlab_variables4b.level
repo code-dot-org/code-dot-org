@@ -62,13 +62,13 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">name</title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
                   <title name="SPRITE">1</title>
                   <value name="TEXT">
                     <block type="variables_get">
-                      <title name="VAR">A1</title>
+                      <title name="VAR">name</title>
                     </block>
                   </value>
                   <next>
@@ -83,7 +83,7 @@
                           </value>
                           <value name="ADD1">
                             <block type="variables_get">
-                              <title name="VAR">A1</title>
+                              <title name="VAR">name</title>
                             </block>
                           </value>
                           <value name="ADD2">
@@ -96,7 +96,7 @@
                       <next>
                         <block type="studio_ask">
                           <title name="TEXT">How old are you?</title>
-                          <title name="VAR">A2</title>
+                          <title name="VAR">age</title>
                           <next>
                             <block type="studio_saySpriteParams" inline="true">
                               <title name="SPRITE">1</title>
@@ -136,13 +136,13 @@
           </next>
         </block>
         <block type="variables_get">
-          <title name="VAR">A2</title>
+          <title name="VAR">age</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A2</title>
+          <title name="VAR">age</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A1</title>
+          <title name="VAR">name</title>
         </block>
       </xml>
     </start_blocks>
@@ -347,13 +347,13 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">name</title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
                   <title name="SPRITE">1</title>
                   <value name="TEXT">
                     <block type="variables_get">
-                      <title name="VAR">A1</title>
+                      <title name="VAR">name</title>
                     </block>
                   </value>
                   <next>
@@ -368,7 +368,7 @@
                           </value>
                           <value name="ADD1">
                             <block type="variables_get">
-                              <title name="VAR">A1</title>
+                              <title name="VAR">name</title>
                             </block>
                           </value>
                           <value name="ADD2">
@@ -381,13 +381,13 @@
                       <next>
                         <block type="studio_ask">
                           <title name="TEXT">How old are you?</title>
-                          <title name="VAR">A2</title>
+                          <title name="VAR">age</title>
                           <next>
                             <block type="studio_saySpriteParams" inline="true">
                               <title name="SPRITE">1</title>
                               <value name="TEXT">
                                 <block type="variables_get">
-                                  <title name="VAR">A2</title>
+                                  <title name="VAR">age</title>
                                 </block>
                               </value>
                               <next>
@@ -402,7 +402,7 @@
                                       </value>
                                       <value name="ADD1">
                                         <block type="variables_get">
-                                          <title name="VAR">A2</title>
+                                          <title name="VAR">age</title>
                                         </block>
                                       </value>
                                       <value name="ADD2">
@@ -412,7 +412,7 @@
                                       </value>
                                       <value name="ADD3">
                                         <block type="variables_get">
-                                          <title name="VAR">A1</title>
+                                          <title name="VAR">name</title>
                                         </block>
                                       </value>
                                       <value name="ADD4">

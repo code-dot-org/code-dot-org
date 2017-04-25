@@ -11,5 +11,5 @@ markdown <<MARKDOWN
 
 The `ask` block stops the program and prompts the user to enter some text. 
 
-Whatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it\'s the variable `A1`.
+Whatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it\'s the variable `name`.
 MARKDOWN
