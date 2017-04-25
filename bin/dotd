@@ -240,21 +240,28 @@ end
 # Retrieves recent Honeybadger issues, displaying them on the console.
 def get_honeybadger_issues
   issues = Honeybadger.get_recent_issues
-
-  if issues.count > 0
-    puts ''
+  issues.sort_by! do |issue|
+    [issue[:project], issue[:environment], issue[:assignee] ? issue[:assignee] : 'ZZZ']
   end
+
+  puts '' if issues.count > 0
   issues.each do |issue|
-    message = "(#{issue[:url]} [#{issue[:environment]}, #{issue[:project]}]) #{issue[:message]}"
+    environment = issue[:environment] == 'production' ? "#{red issue[:environment]}" : "#{bold issue[:environment]}"
+    project = bold issue[:project]
+    message = <<-EOS.unindent
+      [#{project}, #{environment}]: #{issue[:message]}
+          #{issue[:url]}
+    EOS
+    message = message.strip
     if issue[:assignee]
       puts dim message
+      puts ''
     else
       puts message
+      puts ''
     end
   end
-  if issues.count > 0
-    puts ''
-  end
+  puts '' if issues.count > 0
 end
 
 # Asks if the DTT subroutine should be performed, doing so if requested.
