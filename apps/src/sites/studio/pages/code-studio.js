@@ -13,6 +13,8 @@ require('@cdo/apps/code-studio/consoleShim')(window);
 
 var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
+import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -77,6 +79,14 @@ window.onerror = function (msg, url, ln) {
   }
 };
 
+// Prevent filtered errors from being passed to New Relic.
+if (window.newrelic) {
+  window.newrelic.setErrorHandler(function (err) {
+    // Remove errors from unsupportenewrelicnd IE versions
+    return !!isUnsupportedBrowser();
+  });
+}
+
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
 $(document).keydown(function (e) {
@@ -95,3 +105,5 @@ activateReferenceAreaOnLoad();
 // CDOSounds is currently used in a few haml files so we need
 // to put it on window :(
 window.CDOSounds = Sounds.getSingleton();
+
+checkForUnsupportedBrowsersOnLoad();

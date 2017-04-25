@@ -26,8 +26,8 @@
     "step_mode": "1",
     "ideal": "17",
     "step_speed": "2",
-    "markdown_instructions": "**For Loops Super Challenge:** Can you get Skrat to his acorn using as few blocks as possible?\r\n\r\n",
-    "instructions": "Can you get Skrat to his acorn using as few blocks as possible?",
+    "markdown_instructions": "**For Loops Super Challenge:** Can you get Scrat to his acorn using as few blocks as possible?\r\n\r\n",
+    "instructions": "Can you get Scrat to his acorn using as few blocks as possible?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You may have to travel farther overall to use the smallest number of blocks.\",\r\n  \"hint_id\": \"Course_4_SCFL_1a_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Take a look at this option for movement:  \\n\\n![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_1a_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"A `for loop` will help you execute the same pattern, but with a changing number of steps.  Notice that the number of steps needed decreases from 7 to 5 by 1.\",\r\n  \"hint_id\": \"Course_4_SCFL_1a_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n\\n![Solution Blocks\\t](https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_1a_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
