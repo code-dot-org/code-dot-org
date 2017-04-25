@@ -4,9 +4,6 @@ require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
-# TODO(asher): Though the APIs below mostly respect soft-deletes, edge cases may
-#   remain (e.g., if the user making the API call is soft-deleted). Fix these
-#   and make the API more consistent in its edge case handling.
 class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
