@@ -1,21 +1,21 @@
 import React from 'react';
 import CourseCard from './CourseCard';
 
-const EXAMPLE_CARD_DATA = {
+const ExampleCard = {
   courseName: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
   image: "this is where there will be the source for the photo",
-  link: "link to wherever you want the button to go...",
-  assignedSections: [] //<-- this info will be used in the tooltip
+  link: "link to the course",
+  assignedSections: []
 };
 
-const ENROLLED_ONE = {
-   ...EXAMPLE_CARD_DATA,
+const EnrolledOne = {
+   ...ExampleCard,
    assignedSections: ["Section 1"]
  };
 
- const ENROLLED_MANY = {
-    ...EXAMPLE_CARD_DATA,
+ const EnrolledMany = {
+    ...ExampleCard,
     assignedSections: ["Section 1", "Section 2", "Section 3"]
   };
 
@@ -28,7 +28,11 @@ export default storybook => {
         description: `This is an example course card where the teacher does not have sections enrolled in the course.`,
         story: () => (
           <CourseCard
-            cardData={EXAMPLE_CARD_DATA}
+            courseName={ExampleCard.courseName}
+            description={ExampleCard.description}
+            image={ExampleCard.image}
+            link={ExampleCard.link}
+            assignedSections={ExampleCard.assignedSections}
           />
         )
       },
@@ -37,7 +41,11 @@ export default storybook => {
         description: `This is an example course card where the teacher does have a section enrolled in the course.`,
         story: () => (
           <CourseCard
-            cardData={ENROLLED_ONE}
+            courseName={EnrolledOne.courseName}
+            description={EnrolledOne.description}
+            image={EnrolledOne.image}
+            link={EnrolledOne.link}
+            assignedSections={EnrolledOne.assignedSections}
           />
         )
       },
@@ -46,7 +54,11 @@ export default storybook => {
         description: `This is an example course card where the teacher has multiple sections enrolled in the course.`,
         story: () => (
           <CourseCard
-            cardData={ENROLLED_MANY}
+            courseName={EnrolledMany.courseName}
+            description={EnrolledMany.description}
+            image={EnrolledMany.image}
+            link={EnrolledMany.link}
+            assignedSections={EnrolledMany.assignedSections}
           />
         )
       },
