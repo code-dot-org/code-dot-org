@@ -619,14 +619,17 @@ class User < ActiveRecord::Base
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
-    user_levels = user_levels_by_level.values.flatten.select do |user_level|
-      # we want to ignore levels that dont have an associated script_level (such
-      # as multis within a LevelGroup)
-      user_level.level.script_levels.where(script_id: script.id).present?
-    end
 
-    # Find the user level that we've most recently had progress on
-    user_level = user_levels.sort_by!(&:updated_at).last
+    # some of our user_levels may be for levels within level_groups, or for levels
+    # that are no longer in this script. we want to ignore those, and only look
+    # user_levels that have matching script_levels
+    levels = script.script_levels.map(&:level_ids).flatten
+    user_levels_by_level = user_levels.
+      where(script_id: script.id, level: levels).
+      index_by(&:level_id)
+
+    # Find the user_level that we've most recently had progress on
+    user_level = user_levels_by_level.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
