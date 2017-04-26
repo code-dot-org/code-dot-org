@@ -43,10 +43,8 @@ import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
-import {isRtl} from '@cdo/apps/code-studio/utils';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
-import {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -866,7 +864,7 @@ StudioApp.prototype.stopLoopingAudio = function (name) {
 StudioApp.prototype.inject = function (div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
-    rtl: isRtl(),
+    rtl: getStore().getState().isRtl,
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
@@ -887,7 +885,7 @@ StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: isRtl(),
+    rtl: getStore().getState().isRtl,
     scrollbars: false
   });
   this.loadBlocks(options.blocks);
@@ -1217,7 +1215,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
-  if (isRtl()) {
+  if (getStore().getState().isRtl) {
     offset = window.innerWidth -
       (window.pageXOffset + rect.left + (rect.width / 2)) -
       parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
@@ -1251,7 +1249,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
-  if (isRtl()) {
+  if (getStore().getState().isRtl) {
     visualizationResizeBar.style.right = newVizWidthString;
     editorColumn.css('right', newVizWidthString);
   } else {
@@ -2762,8 +2760,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
-
-  getStore().dispatch(setRtl(isRtl()));
 };
 
 StudioApp.prototype.showRateLimitAlert = function () {
