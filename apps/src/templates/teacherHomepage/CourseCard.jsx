@@ -95,20 +95,20 @@ const styles = {
 
 const CourseCard = React.createClass({
   propTypes: {
-    cardData: React.PropTypes.shape({
-      courseName: React.PropTypes.string.isRequired,
-      description: React.PropTypes.string.isRequired,
-      image: React.PropTypes.string.isRequired,
-      link: React.PropTypes.string.isRequired,
-      assignedSections: React.PropTypes.array.isRequired
-    })
+    courseName: React.PropTypes.string.isRequired,
+    description: React.PropTypes.string.isRequired,
+    image: React.PropTypes.string.isRequired,
+    link: React.PropTypes.string.isRequired,
+    assignedSections: React.PropTypes.array.isRequired
   },
 
   renderEnrollmentIcon() {
-    const { cardData } = this.props;
+    const { assignedSections } = this.props;
     const tooltipId = _.uniqueId();
+    const sections = assignedSections.slice(0,2).join(", ");
+    const ellipsis = (assignedSections.length > 2 ? " ..." : "");
 
-    if (cardData.assignedSections.length > 0) {
+    if (assignedSections.length > 0) {
       return (
         <span>
           <FontAwesome icon="check" style={styles.checkIcon} data-tip data-for={tooltipId}/>
@@ -120,26 +120,17 @@ const CourseCard = React.createClass({
             effect="solid"
             place="top"
           >
-            {this.tooltipContent()}
+            <span style={styles.tooltip}>
+              {i18n.assignedTo()} {sections}{ellipsis}
+            </span>
           </ReactTooltip>
         </span>
       );
     }
   },
 
-  tooltipContent() {
-    const { cardData } = this.props;
-    const sections = cardData.assignedSections.slice(0,2).join(", ");
-    const ellipsis = (cardData.assignedSections.length > 2 ? " ..." : "");
-    return (
-      <span style={styles.tooltip}>
-        {i18n.assignedTo()} {sections}{ellipsis}
-      </span>
-    );
-  },
-
   render() {
-    const { cardData } = this.props;
+    const { courseName, description, link } = this.props;
 
     return (
       <div style={styles.card}>
@@ -148,13 +139,13 @@ const CourseCard = React.createClass({
         {this.renderEnrollmentIcon()}
 
         <div style={styles.courseName}>
-          {cardData.courseName}
+          {courseName}
         </div>
 
         <div style={styles.description}>
-          {cardData.description}
+          {description}
 
-          <a href={cardData.link} style={styles.linkBox}>
+          <a href={link} style={styles.linkBox}>
             <h3 style={styles.continueLink}>
               {i18n.viewCourse()}
             </h3>
