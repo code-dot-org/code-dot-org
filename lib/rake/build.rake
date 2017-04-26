@@ -45,7 +45,7 @@ namespace :build do
 
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
-        RakeUtils.rake 'db:migrate'
+        RakeUtils.rake 'db:setup_or_migrate'
 
         # Update the schema cache file, except for production which always uses the cache.
         unless rack_env?(:production)
@@ -107,17 +107,9 @@ namespace :build do
       ChatClient.log 'Installing <b>pegasus</b> bundle...'
       RakeUtils.bundle_install
       if CDO.daemon
-        ChatClient.log 'Migrating <b>pegasus</b> database...'
+        ChatClient.log 'Updating <b>pegasus</b> database...'
         begin
-          RakeUtils.rake 'db:migrate'
-        rescue => e
-          ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
-          raise e
-        end
-
-        ChatClient.log 'Seeding <b>pegasus</b>...'
-        begin
-          RakeUtils.rake 'seed:migrate'
+          RakeUtils.rake 'pegasus:setup_db'
         rescue => e
           ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
           raise e
