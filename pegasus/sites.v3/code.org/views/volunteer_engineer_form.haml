@@ -19,7 +19,7 @@
   - else
     %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  .alert.alert-danger#error-message{style: 'display: none', role: 'alert'}
+  .alert.alert-danger.error-message{style: 'display: none', role: 'alert'}
 
   .form-group
     %label.control-label{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
@@ -169,7 +169,7 @@
       $(error_id).parents('.form-group').addClass('has-error');
     }
 
-    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+    $('#volunteer-engineer-submit-form .error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
 
     $('html, body').animate({
       scrollTop: $('#volunteer-engineer-submit-form').offset().top
