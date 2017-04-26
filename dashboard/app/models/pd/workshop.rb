@@ -143,6 +143,8 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CS_IN_S => 'CS in Science Support'
   }.freeze
 
+  before_save :set_on_map_and_funded_from_workshop_type
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -474,5 +476,24 @@ class Pd::Workshop < ActiveRecord::Base
   # Get all the teachers that have actually attended this workshop via the attendence.
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
+  end
+
+  # temporary data transformation method that sets values for new on_map and
+  # funded columns from old workshop_type, for that transitional period where we
+  # temporarily have both sets on our way to removing workshop_type
+  # TODO elijah: remove this method and the before_validation that calls it once
+  # its no longer necessary
+  def set_on_map_and_funded_from_workshop_type
+    case workshop_type
+      when Pd::Workshop::TYPE_PUBLIC
+        self.on_map = true
+        self.funded = true
+      when Pd::Workshop::TYPE_PRIVATE
+        self.on_map = false
+        self.funded = true
+      when Pd::Workshop::TYPE_DISTRINCT
+        self.on_map = false
+        self.funded = false
+    end
   end
 end
