@@ -36,8 +36,6 @@
         #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
         - hamburger_class = (user_type == "student" || user_type == "teacher" ? "" : "mobile-feature")
         %span{class: hamburger_class}
-          &nbsp;
-          &nbsp;
           = view :hamburger, user_type: user_type
 
     #clear{:style=>'clear:both'}

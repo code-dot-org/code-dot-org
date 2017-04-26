@@ -163,7 +163,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -171,7 +171,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 2: Second Stage',
+        'stage' => 'Lesson 2: Second Stage',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -179,7 +179,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -682,8 +682,9 @@ class ApiControllerTest < ActionController::TestCase
     stage_response = stages_response[stage.id.to_s]
     assert_equal 5, stage_response.length, "entry for each student in section"
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
-      student_response = stage_response[index]
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+      student_response = stage_response.find {|r| r['user_level_data']['user_id'] == student.id}
+      assert_not_nil student_response
       assert_equal(
         {
           "user_id" => student.id,

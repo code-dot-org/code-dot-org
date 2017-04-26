@@ -10,9 +10,9 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     end
 
     last_enrollment_with_pending_survey = Pd::Enrollment.filter_for_survey_completion(
-      Pd::Enrollment.where(email: current_user.email).where.not(survey_sent_at: nil),
+      Pd::Enrollment.where(email: current_user.email).with_surveys,
       false
-    ).try(:max_by, &:survey_sent_at)
+    ).max_by {|e| e.workshop.ended_at}
 
     summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize).sort_by do |enrollment|
       PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size

@@ -13,3 +13,5 @@ If you are interested in licensing our materials for commercial purposes, [conta
 
 Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra.
 
+If you appreciate our policy around free and open curriculum, please thank our generous donors, especially Microsoft, Facebook, Infosys Foundation, Omidyar Network, and Google, without whose financial support this open policy would not be possible.
+

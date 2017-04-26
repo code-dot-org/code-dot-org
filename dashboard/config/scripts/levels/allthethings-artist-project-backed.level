@@ -29,8 +29,8 @@
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "contained_level_names": null,
-    "project_template_level_name": "allthethings-artist-project-backed"
+    "project_template_level_name": "allthethings-artist-project-backed",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
