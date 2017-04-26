@@ -1,7 +1,7 @@
 import React from 'react';
 import CourseCard from './CourseCard';
 
-const ExampleCard = {
+const exampleCard = {
   courseName: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
   image: "this is where there will be the source for the photo",
@@ -9,13 +9,13 @@ const ExampleCard = {
   assignedSections: []
 };
 
-const EnrolledOne = {
-   ...ExampleCard,
+const enrolledOne = {
+   ...exampleCard,
    assignedSections: ["Section 1"]
  };
 
- const EnrolledMany = {
-    ...ExampleCard,
+ const enrolledMany = {
+    ...exampleCard,
     assignedSections: ["Section 1", "Section 2", "Section 3"]
   };
 
@@ -28,11 +28,11 @@ export default storybook => {
         description: `This is an example course card where the teacher does not have sections enrolled in the course.`,
         story: () => (
           <CourseCard
-            courseName={ExampleCard.courseName}
-            description={ExampleCard.description}
-            image={ExampleCard.image}
-            link={ExampleCard.link}
-            assignedSections={ExampleCard.assignedSections}
+            courseName={exampleCard.courseName}
+            description={exampleCard.description}
+            image={exampleCard.image}
+            link={exampleCard.link}
+            assignedSections={exampleCard.assignedSections}
           />
         )
       },
@@ -41,11 +41,11 @@ export default storybook => {
         description: `This is an example course card where the teacher does have a section enrolled in the course.`,
         story: () => (
           <CourseCard
-            courseName={EnrolledOne.courseName}
-            description={EnrolledOne.description}
-            image={EnrolledOne.image}
-            link={EnrolledOne.link}
-            assignedSections={EnrolledOne.assignedSections}
+            courseName={enrolledOne.courseName}
+            description={enrolledOne.description}
+            image={enrolledOne.image}
+            link={enrolledOne.link}
+            assignedSections={enrolledOne.assignedSections}
           />
         )
       },
@@ -54,11 +54,11 @@ export default storybook => {
         description: `This is an example course card where the teacher has multiple sections enrolled in the course.`,
         story: () => (
           <CourseCard
-            courseName={EnrolledMany.courseName}
-            description={EnrolledMany.description}
-            image={EnrolledMany.image}
-            link={EnrolledMany.link}
-            assignedSections={EnrolledMany.assignedSections}
+            courseName={enrolledMany.courseName}
+            description={enrolledMany.description}
+            image={enrolledMany.image}
+            link={enrolledMany.link}
+            assignedSections={enrolledMany.assignedSections}
           />
         )
       },
