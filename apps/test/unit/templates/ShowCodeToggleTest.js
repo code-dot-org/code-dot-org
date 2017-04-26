@@ -59,6 +59,7 @@ describe('ShowCodeToggle', () => {
       enableShowCode: true,
       containerId: 'foo',
       level: {
+        id: 'some-level-id',
         editCode: true,
         codeFunctions: {},
       },
@@ -140,6 +141,7 @@ describe('ShowCodeToggle', () => {
           '/api/v1/users/me/using_text_mode',
           {
             project_id: 'some-project-id',
+            level_id: 'some-level-id',
             using_text_mode: true
           }
         );
@@ -169,6 +171,7 @@ describe('ShowCodeToggle', () => {
           expect($.post).to.have.been.calledWith(
             '/api/v1/users/me/using_text_mode',
             {
+              level_id: 'some-level-id',
               project_id: 'some-project-id',
               using_text_mode: false
             }
