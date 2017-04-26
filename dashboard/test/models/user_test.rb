@@ -1435,6 +1435,20 @@ class UserTest < ActiveSupport::TestCase
     refute user.permission?(UserPermission::LEVELBUILDER)
   end
 
+  test 'revoke_all_permissions revokes admin status' do
+    admin_user = create :admin
+    admin_user.revoke_all_permissions
+    assert_nil admin_user.reload.admin
+  end
+
+  test 'revoke_all_permissions revokes user permissions' do
+    teacher = create :teacher
+    teacher.permission = UserPermission::FACILITATOR
+    teacher.permission = UserPermission::LEVELBUILDER
+    teacher.revoke_all_permissions
+    assert_equal [], teacher.reload.permissions
+  end
+
   test 'should_see_inline_answer? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
