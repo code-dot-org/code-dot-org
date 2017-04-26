@@ -91,7 +91,6 @@
     "eslint-plugin-react": "^5.2.2",
     "exports-loader": "^0.6.3",
     "express": "4.11.2",
-    "factor-bundle": "2.5.0",
     "fast-memoize": "2.0.2",
     "file-loader": "^0.8.5",
     "firebase": "^2.4.2",
