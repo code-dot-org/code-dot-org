@@ -113,7 +113,7 @@
           = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
 
   .form-group
-    %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
+    %button.primary.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
   .alert.alert-success{role:"alert"}
@@ -175,14 +175,14 @@
       scrollTop: $('#volunteer-engineer-submit-form').offset().top
     }, 1000);
 
-    $("#btn-submit").removeAttr('disabled');
-    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    $('#volunteer-engineer-submit-form .btn-submit').removeAttr('disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_disabled").addClass("button_enabled");
   }
 
   function volunteerEngineerFormSubmit()
   {
-    $("#volunteer-engineer-submit-form #btn-submit").attr('disabled','disabled');
-    $("#volunteer-engineer-submit-form #btn-submit").removeClass("button_enabled").addClass("button_disabled");
+    $('#volunteer-engineer-submit-form .btn-submit').attr('disabled','disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_enabled").addClass("button_disabled");
 
     var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
 
