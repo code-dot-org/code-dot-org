@@ -192,6 +192,10 @@
         function() {
             return {"name": this.name, "value": null}
         }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-allow-contact').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
       $('input[type=checkbox]:not(:checked)#volunteer-age-18-plus').map(
         function() {
             return {"name": this.name, "value": null}
