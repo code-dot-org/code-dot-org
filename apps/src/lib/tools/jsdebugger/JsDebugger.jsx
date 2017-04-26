@@ -81,6 +81,9 @@ var styles = {
       cursor: 'pointer',
       color: 'white'
     }
+  },
+  hidden: {
+    display: 'none'
   }
 };
 
@@ -120,14 +123,12 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersHidden: false,
       open: this.props.isOpen,
       openedHeight: 120,
-      labelDisplay: 'inline'
+      windowWidth: $(window).width()
     };
   },
 
   handleWindowResize() {
-    let hideLabel = ($(window).width() <= 1275) && !this.state.watchersHidden;
-    let labelDisplay= hideLabel ? 'none' : 'inline';
-    this.setState({ labelDisplay: labelDisplay });
+    this.setState({ windowWidth: $(window).width() });
   },
 
   componentDidMount() {
@@ -404,7 +405,10 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
           style={styles.debugAreaHeader}
         >
           <span
-            style={[{display: this.state.labelDisplay}, styles.noUserSelect]}
+            style={[
+              this.state.windowWidth <= 1275 && !this.state.watchersHidden && styles.hidden,
+              styles.noUserSelect
+            ]}
             className="header-text"
           >
             {i18n.debugConsoleHeader()}
