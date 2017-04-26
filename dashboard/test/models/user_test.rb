@@ -576,8 +576,7 @@ class UserTest < ActiveSupport::TestCase
     assert(user_level1.updated_at < user_level2.updated_at)
 
     next_script_level = user.next_unpassed_progression_level(script)
-    puts next_script_level
-    assert !next_script_level.nil?
+    refute next_script_level.nil?
   end
 
   test 'script with inactive level completed is completed' do
