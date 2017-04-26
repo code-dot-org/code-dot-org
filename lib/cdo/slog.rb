@@ -1,4 +1,4 @@
-require 'net/http'
+require 'open-uri'
 require 'json'
 require 'date'
 require 'le'
@@ -41,7 +41,7 @@ module Slog
     end
 
     def http_get(uri)
-      Net::HTTP.get(@api_host, uri)
+      URI.parse("https://#{@api_host}#{uri}").read
     end
 
     def key_for(host)
