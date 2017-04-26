@@ -24,7 +24,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Got all achievements',
-        description: `3 checked boxes`,
+        description: '3 checked boxes',
         story: () => (
           <ExampleDialogButton
             achievements={[
@@ -43,7 +43,7 @@ export default storybook => {
               },
             ]}
             assetUrl={url => '/blockly/' + url}
-            feedbackMessage={'Congratulations! You completed Puzzle 3.'}
+            feedbackMessage={'Congratulations! You completed Puzzle 1.'}
             oldStageProgress={0.25}
             onContinue={storybook.action('continue')}
             showPuzzleRatingButtons={true}
@@ -53,7 +53,7 @@ export default storybook => {
         )
       }, {
         name: 'Failed to get one achievement, encourage retry',
-        description: `2 checked boxes, 1 unchcked box`,
+        description: '2 checked boxes, 1 unchcked box',
         story: () => (
           <ExampleDialogButton
             achievements={[
@@ -73,7 +73,7 @@ export default storybook => {
             ]}
             actualBlocks={5}
             assetUrl={url => '/blockly/' + url}
-            feedbackMessage={'Congratulations! You completed Puzzle 3.'}
+            feedbackMessage={'Congratulations! You completed Puzzle 2.'}
             oldStageProgress={0.25}
             onContinue={storybook.action('continue')}
             showPuzzleRatingButtons={true}
@@ -83,7 +83,7 @@ export default storybook => {
         )
       }, {
         name: 'Not showing some achievements',
-        description: `2 checked boxes`,
+        description: '2 checked boxes',
         story: () => (
           <ExampleDialogButton
             achievements={[
@@ -103,6 +103,32 @@ export default storybook => {
             oldStageProgress={0.25}
             onContinue={storybook.action('continue')}
             showPuzzleRatingButtons={true}
+            showStageProgress={true}
+            encourageRetry={false}
+          />
+        )
+      }, {
+        name: 'No puzzle rating buttons',
+        description: 'The funometer is optional',
+        story: () => (
+          <ExampleDialogButton
+            achievements={[
+              {
+                check: true,
+                msg: 'Puzzle completed!',
+                progress: 0.02,
+              }, {
+                check: false,
+                msg: 'Using too many blocks',
+                progress: 0.04,
+              },
+            ]}
+            actualBlocks={5}
+            assetUrl={url => '/blockly/' + url}
+            feedbackMessage={'Congratulations! You completed Puzzle 4.'}
+            oldStageProgress={0.25}
+            onContinue={storybook.action('continue')}
+            showPuzzleRatingButtons={false}
             showStageProgress={true}
             encourageRetry={false}
           />
