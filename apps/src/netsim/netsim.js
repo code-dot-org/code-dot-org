@@ -39,6 +39,7 @@ var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
 var NetSimGlobals = require('./NetSimGlobals');
+import { isRtl } from '@cdo/apps/code-studio/utils';
 
 /**
  * The top-level Internet Simulator controller.
@@ -224,7 +225,7 @@ NetSim.prototype.init = function (config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        localeDirection: this.studioApp_.localeDirection(),
+        localeDirection: isRtl() ? 'rtl' : 'ltr',
         instructions: this.level.instructions
       }
     });
