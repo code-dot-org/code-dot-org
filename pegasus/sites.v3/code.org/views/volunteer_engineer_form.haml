@@ -102,13 +102,13 @@
   .form-group{style: "margin-bottom: 0px"}
     %p= I18n.t(:volunteer_engineer_submission_final_paragraph)
     %div
-      %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
+      %label{style: 'font-weight: normal; cursor: pointer', for: 'volunteer-allow-contact'}
         %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
 
   .form-group
     %div
-      %label{style: 'font-weight: normal;', for: 'volunteer-age-18-plus'}
+      %label{style: 'font-weight: normal; cursor: pointer'}
         %input#volunteer-age-18-plus{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
 
@@ -191,7 +191,11 @@
       $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
         function() {
             return {"name": this.name, "value": null}
-        }).get()
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-age-18-plus').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
     );
 
     $.ajax({
