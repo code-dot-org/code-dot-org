@@ -4,14 +4,14 @@ import progress from './progressRedux';
 import sections from './sectionsRedux';
 import stageLock from './stageLockRedux';
 import hiddenStage from './hiddenStageRedux';
-import locale from './localeRedux';
+import isRtl from './isRtlRedux';
 
 registerReducers({
   progress,
   sections,
   stageLock,
   hiddenStage,
-  locale
+  isRtl,
 });
 
 export {getStore};
