@@ -46,7 +46,7 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" movable="false">
           <mutation/>
           <title name="NAME">harvest path</title>
           <statement name="STACK">
@@ -98,7 +98,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" movable="false">
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">

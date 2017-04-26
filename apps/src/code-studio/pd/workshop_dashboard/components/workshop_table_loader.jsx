@@ -28,8 +28,19 @@ const WorkshopTableLoader = React.createClass({
     };
   },
 
+  componentWillMount() {
+    this.load = _.debounce(this.load, 200);
+  },
+
   componentDidMount() {
     this.load();
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(this.props, nextProps)) {
+      this.abortPendingRequests();
+      this.load(nextProps);
+    }
   },
 
   componentDidUpdate() {
@@ -37,6 +48,10 @@ const WorkshopTableLoader = React.createClass({
       // Save child element rendered height, to preserve during reload for a smoother transition.
       this.childHeight = ReactDOM.findDOMNode(this.childElement).offsetHeight;
     }
+  },
+
+  componentWillUnmount() {
+    this.abortPendingRequests();
   },
 
   load(props = this.props) {
@@ -55,17 +70,6 @@ const WorkshopTableLoader = React.createClass({
         workshops: data
       });
     });
-  },
-
-  componentWillReceiveProps(nextProps) {
-    if (!_.isEqual(this.props, nextProps)) {
-      this.abortPendingRequests();
-      this.load(nextProps);
-    }
-  },
-
-  componentWillUnmount() {
-    this.abortPendingRequests();
   },
 
   abortPendingRequests() {
@@ -92,7 +96,7 @@ const WorkshopTableLoader = React.createClass({
       return (
         // While reloading, preserve the height of the previous child component so the refresh is smoother.
         <div style={{height: this.childHeight}}>
-          <Spinner/>
+          <Spinner />
         </div>
       );
     }
@@ -114,4 +118,5 @@ const WorkshopTableLoader = React.createClass({
     );
   }
 });
+
 export default WorkshopTableLoader;

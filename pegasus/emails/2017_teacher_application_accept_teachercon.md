@@ -18,7 +18,7 @@ As a reminder, to participate in the Professional Learning Program we ask that y
 
 <h3>Here are your important next steps</h3>
 
-* **By April 21, 2017:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take five minutes to let us know your decision via this [form](https://code.org/pd-program-registration). **Completing this form is the only way we will know if you have accepted your space in the program; if we don’t hear from you by April 21, 2017, we will need to give your space to someone on our waitlist.**
+* **By May 5, 2017:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take five minutes to let us know your decision via this [form](https://code.org/pd-program-registration). **Completing this form is the only way we will know if you have accepted your space in the program; if we don’t hear from you by May 5, 2017, we will need to give your space to someone on our waitlist.**
 
 <h3>If you decide to accept your space in the Professional Learning Program</h3>
 

@@ -35,10 +35,6 @@
 #  teacher_prize_id           :integer
 #  teacher_bonus_prize_earned :boolean          default(FALSE)
 #  teacher_bonus_prize_id     :integer
-#  confirmation_token         :string(255)
-#  confirmed_at               :datetime
-#  confirmation_sent_at       :datetime
-#  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
@@ -59,7 +55,6 @@
 # Indexes
 #
 #  index_users_on_birthday                               (birthday)
-#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
@@ -72,7 +67,6 @@
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
-#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
 #  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
@@ -1085,12 +1079,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # @param script [Script] The script to assign.
+  # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.assigned_at = Time.now
-
-      user_script.save!
+      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
       return user_script
     end
   end

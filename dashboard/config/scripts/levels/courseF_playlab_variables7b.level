@@ -63,7 +63,7 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT"/>
-              <title name="VAR">A1</title>
+              <title name="VAR">variable</title>
             </block>
           </next>
         </block>

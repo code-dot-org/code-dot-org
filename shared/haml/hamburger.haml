@@ -74,7 +74,7 @@
         %i#about-up{class: "fa fa-caret-up"}
     .about-nav.hide-about
       - about_entries.each do |entry|
-        %li{class: extra_items_class}
+        %li
           %a{href: entry[:url]}= entry[:title]
 
   #hamburger-icon
