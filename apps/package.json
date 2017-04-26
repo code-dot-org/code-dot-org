@@ -139,7 +139,6 @@
     "linklocal": "2.5.2",
     "load-grunt-tasks": "3.5.0",
     "lodash": "4.15.0",
-    "loose-envify": "^1.1.0",
     "marked": "0.3.2",
     "messageformat": "0.2.2",
     "mkdirp": "0.5.1",
