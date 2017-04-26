@@ -9,6 +9,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * @param {Object} [context] - additional information regarding the context in which this
    *        change is occuring. Only used for logging/analysis.
    * @param {string} [context.project_id] - id of the project the user is working on
+   * @param {string} [context.level_id] - id of the level the user is working on
    */
   setUsingTextMode(usingTextMode, context={}) {
     return $.post(

@@ -134,7 +134,8 @@ class DropletCodeToggle extends Component {
       new UserPreferences().setUsingTextMode(
         !studioApp().editor.currentlyUsingBlocks,
         {
-          project_id: project.getCurrentId()
+          project_id: project.getCurrentId(),
+          level_id: studioApp().config.level.id,
         }
       );
     }
