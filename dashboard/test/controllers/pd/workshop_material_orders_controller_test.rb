@@ -12,9 +12,7 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
     Geocoder.stubs(:search).returns(
       [OpenStruct.new(
         postal_code: '98101',
-        address_components: [
-          {'types' => %w[street_number]}
-        ]
+        street_number: '1501'
       )]
     )
   end

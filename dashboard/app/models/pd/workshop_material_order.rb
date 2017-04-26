@@ -73,7 +73,7 @@ module Pd
         if found.first.postal_code != zip_code
           errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
         end
-        unless found.first.address_components.any? {|c| c['types'].include? 'street_number'}
+        unless found.first.street_number
           errors.add(:street, 'must be a valid street address (no PO boxes)')
         end
       end
@@ -189,7 +189,7 @@ module Pd
         self.order_id = response['OrderFriendlyId']
       rescue RestClient::ExceptionWithResponse => error
         is_correctable = USER_CORRECTABLE_ORDER_ERRORS.any? do |uce|
-          error.response.try(:body).include?(uce[:match_text])
+          error.response.try(:body).try(:include?, uce[:match_text])
         end
         self.order_error = report_error(:place_order, error, notify_honeybadger: !is_correctable).to_json
       end
