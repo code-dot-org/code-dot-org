@@ -153,7 +153,10 @@ Code.org does not directly collect or store payment instruments. Donations to Co
 
 When students create accounts on Code Studio, Code.org does not store the email address provided by those Users in a retrievable format. Instead, we immediately create and store only a one-way hashed version of the email address (which cannot be converted back into the original address), and use it only for the purposes of login, account management, and password recovery. In fact, when creating a student account or during login, the actual account email address is never even transmitted to Code.org's servers. The only circumstance when Code.org's servers receive a student's Code Studio account email address is if the student forgets their password and asks to reset it. At that point, the student is prompted to enter their email, which is used to send them a password reset link.
 
+### Exceptions
 If a student contacts us via our customer support pages, we will store and use their email address in order to respond to them. If a student over the age of 13 signs our online petitions, or a student creates a teacher account on Code Studio or offers to help us as a software industry volunteer, we will store and use their email address just as we do for other advocates of our nonprofit mission.
+
+For a small minority of our students, and only if they are over the age of 18, we may offer the opportunity to participate in a "longitudinal" study to understand the multi-year impact of learning computer science. Participation in such a study would be entirely optional. Students who receive an offer and choose to participate will be asked to provide their contact information (email address and optionally other forms of contact that may be more convenient for the student). This contact information will not be shared with third parties, nor used in any way outside the purpose of such a study – to ask students to participate in surveys. If we learn that we have inadvertently collected this information from a child under 18, we will delete such information immediately.
 
 ## Children Under the Age 13
 
