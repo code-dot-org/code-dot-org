@@ -12,6 +12,7 @@ require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
+require_relative '../lib/cdo/honeybadger'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -236,6 +237,30 @@ def print_dtp_message
   end
 end
 
+# Retrieves recent Honeybadger issues, displaying them on the console.
+def get_honeybadger_issues
+  issues = Honeybadger.get_recent_issues
+  issues.sort_by! do |issue|
+    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
+  end
+
+  puts '' if issues.count > 0
+  issues.each do |issue|
+    environment = issue[:environment] == 'production' ? (red issue[:environment]).to_s : (bold issue[:environment]).to_s
+    project = bold issue[:project]
+    message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
+    output = <<-EOS.unindent
+      [#{project}, #{environment}]: #{message}
+          #{dim issue[:url]}
+    EOS
+    # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
+    # the end of the output. This seems correlated with environment and project.
+    puts output.strip
+    puts ''
+  end
+  puts '' if issues.count > 0
+end
+
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
   print_dtt_message
@@ -278,6 +303,10 @@ def main
 
   should_i 'reset DTT message to yes' do
     DevelopersTopic.set_dtt 'yes'
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   do_dtt_subroutine
@@ -339,6 +368,10 @@ def main
     end
 
     puts_after_dtp_tasks
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   puts_script_conclusion

@@ -243,14 +243,14 @@ img.video_thumbnail {
 
 .header2-wrapper {
   padding-top: 0;
-  min-height: 70px;
+  min-height: 85px;
   position: relative;
 
   .header {
     padding-top: 0;
     padding-bottom: 0;
-    height: 44px;
-    background-color: $bkgnd_color;
+    height: 50px;
+    background-color: $light_teal;
     color: $header_text;
     a:link {
       color: $header_text;
@@ -263,6 +263,22 @@ img.video_thumbnail {
       @media screen and (max-width: 1024px) {
         font-size: 13px;
       }
+    }
+
+    .header_left,
+    .header_right {
+      margin-top: 0;
+    }
+
+    .header_left {
+      left: 10px;
+    }
+
+    .header_logo {
+      width: 43px;
+      padding: 13px 16px;
+      background-color: $teal;
+      margin-top: 0;
     }
   }
 
@@ -307,8 +323,19 @@ img.video_thumbnail {
     margin-top: 15px;
 
     .headerlink {
+      font-family: 'Gotham 4r', sans-serif;
       margin-left: 30px;
       font-size: 14px;
+      line-height: 22px;
+      display: inline-block;
+
+      &:link, &:visited {
+        text-decoration: none;
+      }
+
+      &:hover, &:active {
+        border-bottom: solid 2px $orange;
+      }
     }
   }
 
@@ -316,6 +343,7 @@ img.video_thumbnail {
     &.header_button_light {
       background-color: $lightish_teal;
     }
+    font-family: 'Gotham 4r', sans-serif;
     display: inline-block;
     color: $white;
     background-color: transparent;
@@ -332,12 +360,30 @@ img.video_thumbnail {
     }
   }
 
+  .user_menu {
+    margin-top: 6px;
+
+    .user_name {
+      max-width: 120px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      float: left;
+    }
+  }
+
   .button-signin {
     text-decoration: none;
   }
 
   .project_updated_at {
     font-size: 10px;
+  }
+
+  #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
   }
 }
 
