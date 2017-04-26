@@ -59,9 +59,7 @@ def load_configuration
     'dashboard_unicorn_name'      => 'dashboard',
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
-    'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',
-    'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -145,6 +143,9 @@ def load_configuration
 
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
+
+    config['db_reader']           ||= config['db_writer']
+    config['reporting_db_reader'] ||= config['reporting_db_writer']
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['dashboard_reporting_db_reader'] ||= config['reporting_db_reader'] + config['dashboard_db_name']
