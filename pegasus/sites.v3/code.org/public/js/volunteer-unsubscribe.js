@@ -10,7 +10,10 @@ function processVolunteerUnsubscribeError(data) {
 
   for (var i = 0; i < errors.length; i++) {
     if (errors[i] === "age_18_plus_b") {
-      errorMessage = 'An error occurred.  Please indicate whether you are at least 18, below.';
+      errorMessage = 'An error occurred. You must be 18 to volunteer. ' +
+      'Please certify that you are at least 18 years old to update your preferences. ' +
+      'If you are not yet 18, please request to remove yourself from the volunteer list by ' +
+      '<a href="https://support.code.org/hc/en-us/requests/new" target="_blank">contacting support</a>.';
     }
   }
 

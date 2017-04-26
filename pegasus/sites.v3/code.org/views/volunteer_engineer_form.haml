@@ -105,12 +105,14 @@
       %label{style: 'font-weight: normal; cursor: pointer', for: 'volunteer-allow-contact'}
         %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
+        %span.form-required-field *
 
   .form-group
     %div
       %label{style: 'font-weight: normal; cursor: pointer'}
         %input#volunteer-age-18-plus{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
+        %span.form-required-field *
 
   .form-group
     %button.primary.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
