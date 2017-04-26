@@ -450,7 +450,8 @@ testsContext.keys().forEach(testsContext);
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
-    pegasusCommon: './src/sites/code.org/pages/pegasusCommon.js',
+    'codedotorg-common': './src/sites/code.org/codedotorg-common.js',
+    'hourofcode-common': './src/sites/hourofcode.com/hourofcode-common.js',
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
