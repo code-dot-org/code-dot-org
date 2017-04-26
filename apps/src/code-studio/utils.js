@@ -48,17 +48,3 @@ export function updateQueryParam(param, value) {
   }
   window.history.pushState(null, document.title, newLocation);
 }
-
-/**
- * We indicate that a page is Rtl by setting the dir attribute on the root element
- * @returns {boolean} True if the current HTML page is in right-to-left language mode.
- */
-export function isRtl() {
-  const head = document.getElementsByTagName('head')[0];
-  if (head && head.parentElement) {
-    const dir = head.parentElement.getAttribute('dir');
-    return !!(dir && dir.toLowerCase() === 'rtl');
-  } else {
-    return false;
-  }
-}

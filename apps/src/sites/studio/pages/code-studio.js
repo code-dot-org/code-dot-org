@@ -9,10 +9,9 @@
 import $ from 'jquery';
 
 import { getStore } from '@cdo/apps/code-studio/redux';
-import { setRtl } from '@cdo/apps/code-studio/isRtlRedux';
-import { isRtl } from '@cdo/apps/code-studio/utils';
+import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
 const store = getStore();
-store.dispatch(setRtl(isRtl()));
+store.dispatch(setRtlFromDOM());
 
 // Shim window.console to be safe in IE
 require('@cdo/apps/code-studio/consoleShim')(window);
