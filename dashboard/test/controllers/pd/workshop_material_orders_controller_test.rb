@@ -9,7 +9,14 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
 
   setup do
     Pd::Enrollment.any_instance.stubs(completed_survey?: true)
-    Geocoder.stubs(:search).returns([stub(postal_code: '98101')])
+    Geocoder.stubs(:search).returns(
+      [OpenStruct.new(
+        postal_code: '98101',
+        address_components: [
+          {'types' => %w[street_number]}
+        ]
+      )]
+    )
   end
 
   test_redirect_to_sign_in_for :new, params: -> {{enrollment_code: @enrollment.code}}
