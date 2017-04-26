@@ -130,9 +130,6 @@ class AdminUsersController < ApplicationController
     hashed_email = User.hash_email params[:email]
     # Though in theory a hashed email specifies a unique account, in practice it may not. As this is
     # security related, we therefore iterate rather than use find_by_hashed_email.
-    User.with_deleted.where(hashed_email: hashed_email).each do |user|
-      user.update!(admin: nil) if user.admin
-      UserPermission.where(user_id: user.id).map(&:destroy)
-    end
+    User.with_deleted.where(hashed_email: hashed_email).each(&:revoke_all_permissions)
   end
 end

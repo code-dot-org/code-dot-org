@@ -222,6 +222,15 @@ class User < ActiveRecord::Base
     return @permissions.include? permission
   end
 
+  # Revokes all escalated permissions associated with the user, including admin status and any
+  # granted UserPermission's.
+  def revoke_all_permissions
+    self.admin = nil
+    save(validate: false)
+
+    UserPermission.where(user_id: id).each(&:destroy)
+  end
+
   def district_contact?
     district_as_contact.present?
   end
