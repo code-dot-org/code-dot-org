@@ -121,7 +121,7 @@ const SummaryProgressRow = React.createClass({
         <td
           style={{
           ...styles.col1,
-          ...((hiddenForStudents || locked)  && styles.fadedCol),
+          ...((hiddenForStudents || locked) && viewAs === ViewType.Student && styles.fadedCol),
           }}
         >
           <div style={styles.colText}>
@@ -168,7 +168,7 @@ const SummaryProgressRow = React.createClass({
         <td
           style={{
           ...styles.col2,
-          ...((hiddenForStudents || locked)  && styles.fadedCol),
+          ...((hiddenForStudents || locked) && viewAs === ViewType.Student && styles.fadedCol),
           }}
         >
           <ProgressBubbleSet
