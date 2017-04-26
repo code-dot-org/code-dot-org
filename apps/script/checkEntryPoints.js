@@ -83,8 +83,8 @@ const SILENCED = [
   'tutorialExplorer',
   'weblab',
   'learn/index',
-  'codedotorg-common',
-  'hourofcode-common'
+  'code.org/views/theme_common_head_after',
+  'hourofcode.com/views/theme_common_head_after'
 ];
 const SITES_CONFIG = {
   'studio': {
@@ -93,7 +93,12 @@ const SITES_CONFIG = {
     templateExtensions: ['erb', 'haml'],
   },
   'code.org': {
-    templateRoot: '../pegasus/sites.v3/code.org/public',
+    templateRoot: '../pegasus/sites.v3/code.org',
+    templateGlobs: ['**/*.erb', '**/*.haml'],
+    templateExtensions: ['erb', 'haml'],
+  },
+  'hourofcode.com': {
+    templateRoot: '../pegasus/sites.v3/hourofcode.com',
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
   },

@@ -450,8 +450,9 @@ testsContext.keys().forEach(testsContext);
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
-    'codedotorg-common': './src/sites/code.org/codedotorg-common.js',
-    'hourofcode-common': './src/sites/hourofcode.com/hourofcode-common.js',
+    // common entry points for pegasus js
+    'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
@@ -460,8 +461,8 @@ testsContext.keys().forEach(testsContext);
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
-    'teacher-dashboard/index': './src/sites/code.org/pages/teacher-dashboard/index.js',
-    'pd-workshop-survey/splat': './src/sites/code.org/pages/pd-workshop-survey/splat.js',
+    'public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
+    'public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
