@@ -47,8 +47,8 @@ theme: responsive
   - if form.data['age_18_plus_b'] != '1'
     .form-group
       %div
-        %label{style: 'font-weight: normal;', for: 'volunteer-age-18-plus'}
-          %input#volunteer-age-18-plus{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: true}
+        %label{style: 'font-weight: normal; cursor: pointer'}
+          %input#volunteer-age-18-plus-unsubscribe{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: true}
             = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
 
   #volunteer-secret{style: 'display: none'}= secret
