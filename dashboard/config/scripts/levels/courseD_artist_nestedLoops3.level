@@ -35,9 +35,9 @@
     "instructions_important": "false",
     "discard_background": "false",
     "video_key": "C3_artist_nested_loops",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
