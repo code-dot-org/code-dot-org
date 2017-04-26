@@ -30,7 +30,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_conditionals2_1\",\r\n  \"callout_text\": \"Remember, check EACH cloud to see if it has a FLOWER.\",\r\n  \"element_id\": \"#Flower\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -10,\r\n     \"y\": 7\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_conditionals2_2\",\r\n  \"callout_text\": \"The toolbox is now in category mode.  All of the blocks you need are beneath these labels!\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "markdown_instructions": "*\"It's too cloudy to see any flowers!\"*\r\n\r\nCheck underneath each cloud to see if it is hiding a flower. If it is, get nectar.  \r\n\r\nRemember: Not all clouds hide the same thing!",
     "step_speed": "1",
@@ -80,7 +80,7 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn">
+          <block type="procedures_callnoreturn" id="callMe">
             <mutation name="do something"/>
           </block>
         </category>

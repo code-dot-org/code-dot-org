@@ -548,12 +548,37 @@ en:
       CSD U2 Classes Introduction:
         Classes Introduction: Classes Introduction
         description here: description here
+      CSD U2 Design Project:
+        description here: description here
+        title: title
+      CSD U2 L1 Overview:
+        description here: description here
+        title: title
+      CSD U2 L2 Overview:
+        description here: description here
+        title: title
+      CSD U2 L3 Overview:
+        description here: description here
+        title: title
+      CSD U2 L4 Overview:
+        description here: description here
+        title: title
+      CSD U2 L5 Overview:
+        description here: description here
+        title: title
+      CSD U2 L6 Overview:
+        description here: description here
+        title: title
+      CSD U2 PSP Programming:
+        description here: description here
+        title: title
       CSD U2 RGB Colors:
         'STOP: RGB Colors': 'STOP: RGB Colors'
         description here: description here
       CSD U2 Social Sleuth:
         description here: description here
         title: title
+      CSD U2 Top Websites: {}
       CSD U2 layout style review:
         description here: description here
         title: title
@@ -740,9 +765,7 @@ en:
       CSDU2 - Pick Elements Styled: {}
       CSDU2 - Rating Quality Websites: {}
       CSDU2 - further styling suggestions: {}
-      CSDU2 IP Fair Use:
-        Fair Use: Fair Use
-        description here: description here
+      CSDU2 IP Fair Use: {}
       CSDU2 L07 SFLP: {}
       CSDU2 images stop level: {}
       CSDU2- home page examples: {}
@@ -2506,6 +2529,9 @@ en:
       Unit 1 Teaching Philosophy and Commentary: {}
       Unit 1 Vocab and Concept Review Activity: {}
       Unit 2 Lesson 1 Overview: {}
+      Unit 2 Lesson 1 Overview Clone:
+        description here: description here
+        title: title
       Unit 2 Lesson 10 Overview: {}
       Unit 2 Lesson 11 Overview: {}
       Unit 2 Lesson 12 Overview: {}
@@ -4721,6 +4747,11 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CSD Header Size MC:
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
       CSD Header Size Prediction:
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
