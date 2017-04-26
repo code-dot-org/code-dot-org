@@ -38,9 +38,7 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     Geocoder.stubs(:search).returns(
       [OpenStruct.new(
         postal_code: '98101',
-        address_components: [
-          {'types' => %w[street_number]}
-        ]
+        street_number: '1501'
       )]
     )
     @mock_mimeo_rest_client = mock('Pd::MimeoRestClient')
@@ -152,12 +150,7 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(
       [OpenStruct.new(
         postal_code: '98101',
-        address_components: [
-          {'short_name' => '900', 'types' => %w[subpremise]},
-          {'short_name' => '1501', 'types' => %w[street_number]},
-          {'short_name' => '4th Ave', 'types' => %w[route]},
-          {'short_name' => 'Seattle', 'types' => %w[locality political]}
-        ]
+        street_number: '1501'
       )]
     )
 
@@ -169,11 +162,7 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   test 'address validation fails for PO boxes' do
     Geocoder.expects(:search).with('PO Box 123, Seattle, WA, 98155').returns(
       [OpenStruct.new(
-        postal_code: '98155',
-        address_components: [
-          {'short_name' => '98155', 'types' => %w[postal_code]},
-          {'short_name' => 'Seattle', 'types' => %w[locality political]}
-        ]
+        postal_code: '98155'
       )]
     )
 
