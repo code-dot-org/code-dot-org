@@ -19,6 +19,9 @@ require 'json'
 # Run all unit/integration tests, not just a subset based on changed files.
 RUN_ALL_TESTS_TAG = 'test all'.freeze
 
+# Only run apps tests on container 0
+RUN_APPS_TESTS_TAG = 'test apps'.freeze
+
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
@@ -50,6 +53,10 @@ namespace :circle do
     if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
+    elsif CircleUtils.tagged?(RUN_APPS_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
+      RakeUtils.rake_stream_output 'test:apps'
+      RakeUtils.rake_stream_output 'test:changed:all_but_apps'
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
