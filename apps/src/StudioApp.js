@@ -40,7 +40,8 @@ import * as assets from './code-studio/assets';
 import i18n from './code-studio/i18n';
 import AbuseError from './code-studio/components/abuse_error';
 import {TestResults} from './constants';
-import {isRtl} from '@cdo/apps/code-studio/utils';
+import { isRtl } from '@cdo/apps/code-studio/utils';
+import { setRtl } from '@cdo/apps/code-studio/isRtlRedux';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore } from './redux';
@@ -2736,7 +2737,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,
-    localeDirection: isRtl() ? 'rtl' : 'ltr',
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
@@ -2767,6 +2767,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
+
+  getStore().dispatch(setRtl(isRtl()));
 };
 
 StudioApp.prototype.showRateLimitAlert = function () {
