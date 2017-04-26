@@ -3,12 +3,13 @@ require_relative 'hooks_utils.rb'
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 
 # Returns whether a filename should be prohibited from a staging commit. Reasons for this:
-#   * any mp4 extension file
+#   * any file with a .mp4 extension
+#   * any file with a .mov extension
+#   * any file with a .PNG extension (note that .png is allowed)
 # @param filename [String] A filename.
 # @return [Boolean] Whether the filename should be prohibited in a commit.
 def prohibited?(filename)
-  return true if Filename.extname(filename) == '.mp4'
-  false
+  ['.mp4', '.mov', '.PNG'].include? File.extname(filename)
 end
 
 def main
