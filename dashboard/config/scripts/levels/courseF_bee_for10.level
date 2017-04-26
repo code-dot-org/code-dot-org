@@ -31,11 +31,13 @@
     "disable_examples": "false",
     "step_speed": "1",
     "markdown_instructions": "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. \r\n\r\nRemember: You may have to run through solutions multiple times before you figure out all of the steps.\r\n",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you find a pattern between the number of steps you need to take and the number of nectars to gather?\",\"hint_id\":\"courseF_bee_for10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2daba0767cda0014c6bb04ced801e864/courseF_bee_for10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to have 2 repeats, one will use a math block.\",\"hint_id\":\"courseF_bee_for10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08b57dcd84e1657648c96bd7457c1f40/courseF_bee_for10.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you find a pattern between the number of steps you need to take and the number of nectars to gather?\",\"hint_id\":\"courseF_bee_for10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2daba0767cda0014c6bb04ced801e864/courseF_bee_for10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The first set of flowers has a total of **14 flowers**. To get to this first set, the bee must buzz down 7 squares, or **14 divided by 2 squares**. How many flowers are in the next set and how many squares will be the bee have to travel to get there?\",\"hint_id\":\"courseF_bee_for10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/00f945e24a0892fa64165e4c65eec84d/courseF_bee_for10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"In the puzzle, the first set of flowers has **14** flowers, the second set has **10** flowers, third set has **6** flowers, and the fourth set has **2** flowers.\\n\\nIn this drawing, notice there are **7** red squares, **5** orange squares, **3** green squares, and **1** blue block. \\n\\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\\n\\nHow do the numbers relate?\",\"hint_id\":\"courseF_bee_for10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb8e148d8253ea8614d7254854a116d7/courseF_bee_for10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to have 2 repeats, one will use a math block.\",\"hint_id\":\"courseF_bee_for10_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08b57dcd84e1657648c96bd7457c1f40/courseF_bee_for10.mp3\"}]",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
