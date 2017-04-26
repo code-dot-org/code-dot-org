@@ -6308,34 +6308,64 @@ en:
           stages:
             Computing Innovations:
               name: Computing Innovations
+              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Input Unplugged:
               name: Input Unplugged
+              description_student: Explore some of the different ways that an app can take input from a user, and learn more about the event-driven programming model used in App Lab.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite and asynchronous events) to gain a better understanding of how they work.
             Event Types:
               name: Event Types
+              description_student: Review the basics of programming in App Lab and explore some new event types that can be used in your programs.
+              description_teacher: In this lesson students review the material they learned about creating apps in App Lab from Unit 4 in order to prepare for a return to App Lab in this unit. This review should be modified to best meet the needs of your students and their experience and familiarity with programming in App Lab. In addition to the review the students will also experiment with a variety of new event types that they likely have not seen before.
             Getters and Setters:
               name: Getters and Setters
+              description_student: To expand the kinds of interactions that students can use in App Lab we introduce the concept of "getters" and "setters", commands which can get and set (or change) the content and properties of various design elements.
+              description_teacher: To expand the kinds of interactions that students can use in App Lab we introduce the concept of "getters" and "setters", commands which can get and set (or change) the content and properties of various design elements.
             The Circuit Playground:
               name: The Circuit Playground
+              description_student: Students are introduced to the Circuit Playground, a microcomputer that will be the platform used throughout the rest of this unit.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground for output. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that blink an LED and make noise with a buzzer.
             Lists:
               name: Lists
+              description_student: Students learn to use lists to store a series of related values in a single variable.
+              description_teacher: Students learn to use lists to store a series of related values in a single variable. From there, students will explore ways to extract either a specific or random value from a list using its index.
             Lights:
               name: Lights
+              description_student: 'Now that students have learned how lists can be used to deal with groups of related values, we''ll return to the board and look at the color LEDs, which are accessed through the list `colorLeds`. '
+              description_teacher: Now that students have learned how lists can be used to deal with groups of related values, we'll return to the board and look at the color LEDs, which are accessed through the list `colorLeds`.
             For Loops:
               name: For Loops
+              description_student: Students are introduced to the for loop in this lesson as a way to repeat some code a certain numbers of times. They spend time practicing in an unplugged context with simple robot commands and then take their knowledge into App Lab.
+              description_teacher: Students are introduced to the for loop in this lesson as a way to repeat some code a certain numbers of times. They spend time practicing in an unplugged context with simple robot commands and then take their knowledge into App Lab.
             Lists and For Loops:
               name: Lists and For Loops
+              description_student: 'In this lesson students combine what they have learned about lists and for loops. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the colorLed list on the board. '
+              description_teacher: 'In this lesson students combine what they have learned about lists and for loops. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the colorLed list on the board. '
             Timed Loops:
               name: Timed Loops
+              description_student: In this lesson we build on students understanding of for loops to learn about a more sophisticated structure called a timed loop. Unlike for loops, you can control how quickly a timed loop repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
+              description_teacher: In this lesson we build on students understanding of _for loops_ to learn about a more sophisticated structure called a _timed loop_. Unlike _for loops_, you can control how quickly a _timed loop_ repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
             'Project: Board Output':
               name: 'Project: Board Output'
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Physical Input:
               name: Physical Input
+              description_student: Using the hardware buttons and switch, students learn to use onBoardEvent(), analogously to onEvent(), in order to take input from their Circuit Playgrounds.
+              description_teacher: Using the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Analog Input:
               name: Analog Input
+              description_student: Students explore the three analog sensors on the Circuit Playground which measure sound, light, and temperature.
+              description_teacher: Students explore the three analog sensors on the Circuit Playground which measure sound, light, and temperature.
             Sensor Applications:
               name: Sensor Applications
+              description_student: Following up on the sensor investigations from the previous day, students will work to develop three simple applications - one for each of the analog sensors.
+              description_teacher: Following up on the sensor investigations from the previous day, students will work to develop three simple applications - one for each of the analog sensors.
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
+              description_student: In this final project for the course, student team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions.
+              description_teacher: In this final project for the course, student team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions.
         csd3-draft:
           stage:
             Shapes and Randomess: Shapes and Randomess
@@ -6584,6 +6614,32 @@ en:
               name: Digital Footprint
             Images in HTML:
               name: Images in HTML
+            Exploring Websites:
+              name: Exploring Websites
+            'Websites for Expression ':
+              name: 'Websites for Expression '
+            Intro to HTML:
+              name: Intro to HTML
+            Headers and Lists:
+              name: Headers and Lists
+            Intellectual Property:
+              name: Intellectual Property
+            Images:
+              name: Images
+            Clean Code and Debugging:
+              name: Clean Code and Debugging
+            Project - Multi-Page Websites:
+              name: Project - Multi-Page Websites
+            Styling Text with CSS:
+              name: Styling Text with CSS
+            Styling Elements with CSS:
+              name: Styling Elements with CSS
+            Sources and Search Engines:
+              name: Sources and Search Engines
+            RGB Colors and Classes:
+              name: RGB Colors and Classes
+            Project - Personal Portfolio Website:
+              name: Project - Personal Portfolio Website
         csd1-draft:
           stage:
             Intro to Problem Solving: Intro to Problem Solving
