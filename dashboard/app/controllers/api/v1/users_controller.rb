@@ -27,6 +27,8 @@ class Api::V1::UsersController < ApplicationController
         study: 'project_block_and_text_switching',
         event: @user.using_text_mode ? 'block_to_text' : 'text_to_block',
         project_id: params[:project_id],
+        user_id: @user.id,
+        level_id: params[:level_id],
       }
     )
 
