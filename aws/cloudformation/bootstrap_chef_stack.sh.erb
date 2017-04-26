@@ -46,7 +46,7 @@ cat <<JSON > $FIRST_BOOT
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
 <% if environment == :adhoc -%>
-    "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}",
+    "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
 <% end -%>
     "stack_name": "$STACK"
   },
