@@ -35,10 +35,10 @@
     "discard_background": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to draw a total of 6 triangles, each rotated 60 degrees.  \",\"hint_id\":\"courseD_artist_nestedLoops1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d53bb58d52c6c862a8502330bc387f3d/courseD_artist_nestedLoops1a.mp3\"}]",
-    "contained_level_names": null,
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_nestedLoops1a_1\",\r\n  \"callout_text\": \"You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

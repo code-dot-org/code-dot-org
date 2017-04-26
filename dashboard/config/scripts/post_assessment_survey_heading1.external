@@ -1,7 +1,7 @@
 name 'post-assessment survey heading1'
 
 markdown <<MARKDOWN
-# Welcome to the CS Principles post-course survey!
+# Welcome to Code.org's CS Principles post-course survey!
 
 
 
@@ -22,4 +22,14 @@ Please note this is NOT a student evaluation, nor is it an evaluation of your sc
 ## First, we have some questions for you about your schoolwork in general.
 
 **How much do you agree or disagree with the following statements?**
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Post-Course Survey for teachers
+
+There is a CSP teacher post course survey intended for teachers who used most or all of Code.org's CSP curriculum to teach a full CSP course.
+
+Please [click this link to take the CSP Teacher Post-Course Survey](http://)
+
+Thanks!
 MARKDOWN

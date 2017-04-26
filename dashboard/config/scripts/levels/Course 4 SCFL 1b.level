@@ -29,9 +29,8 @@
     "markdown_instructions": "**For Loops Super Challenge:** Can you get Scrat to his acorn using as few blocks as possible?\r\n",
     "instructions": "Can you get Scrat to his acorn using as few blocks as possible?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using a `for loop`.\",\r\n  \"hint_id\": \"Course_4_SCFL_1b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Take a look at this option for movement:  \\n\\n![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_1b_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n\\n![](https://images.code.org/349a0baf93e00a679cf7ed348f8309b4-image-1469642354856.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_1b_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
     "instructions_important": "true",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
