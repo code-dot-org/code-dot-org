@@ -72,22 +72,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "should not show link to lesson plans if logged in as a student" do
-    sign_in create(:student)
-
-    get :show, params: {id: 'cspunit1'}
-    assert_response :success
-    assert_select 'a', text: 'Lesson plans', count: 0
-  end
-
-  test "should show link to lesson plans if logged in as a teacher" do
-    sign_in create(:teacher)
-
-    get :show, params: {id: 'cspunit1'}
-    assert_response :success
-    assert_select 'a', text: 'Lesson plans'
-  end
-
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
     sign_in create(:student)
 

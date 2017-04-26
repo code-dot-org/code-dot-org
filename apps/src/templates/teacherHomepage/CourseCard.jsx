@@ -13,7 +13,7 @@ const styles = {
     position: 'relative',
     height: 245,
     width: 520,
-    margin: 25,
+    marginLeft: 25,
     float: 'left'
   },
   overlay: {

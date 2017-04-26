@@ -98,7 +98,7 @@ class TeacherApplicationDecisionProcessor
       when DECISIONS[:accept]
         process_accept teacher_application, program, workshop_string, regional_partner_override
       when DECISIONS[:decline]
-        process_decline teacher_application
+        process_decline teacher_application, regional_partner_override
       when DECISIONS[:waitlist]
         process_waitlist teacher_application
       else
@@ -220,9 +220,11 @@ class TeacherApplicationDecisionProcessor
     process :waitlist, teacher_application, {teacher_application_id_s: teacher_application.id}
   end
 
-  def process_decline(teacher_application)
+  def process_decline(teacher_application, regional_partner_override)
     decision = get_decline_decision(teacher_application)
-    process decision, teacher_application, {regional_partner_name_s: teacher_application.regional_partner_name}
+
+    partner_name = regional_partner_override || teacher_application.regional_partner_name
+    process decision, teacher_application, {regional_partner_name_s: partner_name}
   end
 
   def get_decline_decision(teacher_application)
