@@ -2,6 +2,7 @@ require 'cdo/firehose'
 
 class Api::V1::UsersController < ApplicationController
   before_action :load_user
+  skip_before_action :verify_authenticity_token
 
   def load_user
     user_id = params[:user_id]
