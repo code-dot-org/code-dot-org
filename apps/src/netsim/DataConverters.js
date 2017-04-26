@@ -9,13 +9,6 @@
 var utils = require('../utils'); // For String.prototype.repeat polyfill
 var NetSimUtils = require('./NetSimUtils');
 
-// window.{btoa, atob} polyfills
-if (!(window.atob && window.btoa)) {
-  var base64 = require('Base64');
-  window.btoa = window.btoa || base64.btoa;
-  window.atob = window.atob || base64.atob;
-}
-
 /**
  * @typedef {string} AddressHeaderFormat
  * A string indicating the parts of an address field in the packet header,

@@ -50,7 +50,6 @@
     "@code-dot-org/piskel": "0.10.0-cdo.0",
     "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.33.0",
-    "Base64": "0.3.0",
     "aws-sdk": "2.28.0",
     "babel-core": "6.9.0",
     "babel-eslint": "^7.1.1",
