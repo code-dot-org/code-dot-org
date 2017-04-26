@@ -19,7 +19,7 @@ theme: responsive
 %form#unsubscribe-volunteer-form{role: "form", onsubmit: "event.preventDefault(); unsubscribeVolunteerList();"}
   %h2 Update email preferences
 
-  .alert.alert-danger#error-message{style: 'display: none'}
+  .alert.alert-danger.error-message{style: 'display: none'}
   %p
     - if unsubscribed == 'until2016' || unsubscribed == 'untilhoc'
       You've <strong>unsubscribed</strong> from teacher requests <strong>until the next Hour of Code</strong>.

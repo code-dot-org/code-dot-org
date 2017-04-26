@@ -20,7 +20,7 @@ function processVolunteerUnsubscribeError(data) {
       'contact us</a> if you continue to receive this error.';
   }
 
-  $('#error-message').html(errorMessage).show();
+  $('#unsubscribe-volunteer-form .error-message').html(errorMessage).show();
   $('body').scrollTop(0);
   $('#btn-submit').removeAttr('disabled');
   $('#btn-submit').removeClass('button_disabled').addClass('button_enabled');
