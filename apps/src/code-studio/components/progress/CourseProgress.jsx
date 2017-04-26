@@ -119,5 +119,5 @@ export default connect(state => ({
   stages: state.progress.stages,
   peerReviewStage: state.progress.peerReviewStage,
   viewAs: state.stageLock.viewAs,
-  isRtl: state.locale.isRtl,
+  isRtl: state.isRtl,
 }))(Radium(CourseProgress));

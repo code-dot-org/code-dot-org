@@ -9,7 +9,7 @@
 import $ from 'jquery';
 
 import { getStore } from '@cdo/apps/code-studio/redux';
-import { setRtl } from '@cdo/apps/code-studio/localeRedux';
+import { setRtl } from '@cdo/apps/code-studio/isRtlRedux';
 import { isRtl } from '@cdo/apps/code-studio/utils';
 const store = getStore();
 store.dispatch(setRtl(isRtl()));
