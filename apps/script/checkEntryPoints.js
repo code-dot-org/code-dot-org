@@ -83,7 +83,8 @@ const SILENCED = [
   'tutorialExplorer',
   'weblab',
   'learn/index',
-  'pegasusCommon'
+  'codedotorg-common',
+  'hourofcode-common'
 ];
 const SITES_CONFIG = {
   'studio': {
