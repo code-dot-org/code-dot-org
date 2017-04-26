@@ -38,7 +38,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_functions2_1\",\r\n  \"callout_text\": \"This block calls a function.  Click this \\\"edit\\\" button to see what is inside!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_functions2_1\",\r\n  \"callout_text\": \"This block calls a function.  Click this \\\"edit\\\" button to see what is inside!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -15,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -50,6 +50,9 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_callnoreturn" id="callMe">
+          <mutation name="get only nectar"/>
+        </block>
         <block type="procedures_defnoreturn" editable="false">
           <mutation/>
           <title name="NAME">get only nectar</title>
@@ -61,9 +64,6 @@
               </statement>
             </block>
           </statement>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="get only nectar"/>
         </block>
       </xml>
     </start_blocks>
@@ -106,7 +106,7 @@
           <block type="procedures_callnoreturn">
             <mutation name="do something"/>
           </block>
-          <block type="procedures_callnoreturn" id="callMe">
+          <block type="procedures_callnoreturn">
             <mutation name="get only nectar"/>
           </block>
         </category>

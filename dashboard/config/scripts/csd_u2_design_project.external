@@ -1,0 +1,6 @@
+name 'CSD U2 Design Project'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Design Your Page
+MARKDOWN

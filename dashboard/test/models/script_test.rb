@@ -557,9 +557,9 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     # Everything has Stage <number> when nothing is lockable
-    assert /^Stage 1:/.match(script.stages[0].localized_title)
-    assert /^Stage 2:/.match(script.stages[1].localized_title)
-    assert /^Stage 3:/.match(script.stages[2].localized_title)
+    assert /^Lesson 1:/.match(script.stages[0].localized_title)
+    assert /^Lesson 2:/.match(script.stages[1].localized_title)
+    assert /^Lesson 3:/.match(script.stages[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Lockable1', lockable: true
@@ -576,9 +576,9 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
-    assert /^Stage/.match(script.stages[0].localized_title).nil?
-    assert /^Stage 1:/.match(script.stages[1].localized_title)
-    assert /^Stage 2:/.match(script.stages[2].localized_title)
+    assert /^Lesson/.match(script.stages[0].localized_title).nil?
+    assert /^Lesson 1:/.match(script.stages[1].localized_title)
+    assert /^Lesson 2:/.match(script.stages[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'NonLockable1'
@@ -595,9 +595,9 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     # When only second stage is lockable, we count non-lockable stages appropriately
-    assert /^Stage 1:/.match(script.stages[0].localized_title)
-    assert /^Stage/.match(script.stages[1].localized_title).nil?
-    assert /^Stage 2:/.match(script.stages[2].localized_title)
+    assert /^Lesson 1:/.match(script.stages[0].localized_title)
+    assert /^Lesson/.match(script.stages[1].localized_title).nil?
+    assert /^Lesson 2:/.match(script.stages[2].localized_title)
   end
 
   test 'Script DSL fails when creating invalid lockable stages' do

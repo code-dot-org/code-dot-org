@@ -31,7 +31,7 @@
 #  index_pd_workshop_material_orders_on_user_id           (user_id) UNIQUE
 #
 
-require 'pd/mimeo_rest_client'
+require_dependency 'pd/mimeo_rest_client'
 require 'state_abbr'
 module Pd
   class WorkshopMaterialOrder < ActiveRecord::Base
@@ -58,7 +58,7 @@ module Pd
     validates_presence_of :phone_number
     validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
 
-    validates :phone_number, format: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
+    validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
 
     validate :valid_address?, if: :address_fields_changed?
@@ -69,8 +69,13 @@ module Pd
       found = Geocoder.search(full_address)
       if found.empty?
         errors.add(:base, 'Address could not be verified. Please double-check.')
-      elsif found.first.postal_code != zip_code
-        errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
+      else
+        if found.first.postal_code != zip_code
+          errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
+        end
+        unless found.first.street_number
+          errors.add(:street, 'must be a valid street address (no PO boxes)')
+        end
       end
     end
 
@@ -184,7 +189,7 @@ module Pd
         self.order_id = response['OrderFriendlyId']
       rescue RestClient::ExceptionWithResponse => error
         is_correctable = USER_CORRECTABLE_ORDER_ERRORS.any? do |uce|
-          error.response.try(:body).include?(uce[:match_text])
+          error.response.try(:body).try(:include?, uce[:match_text])
         end
         self.order_error = report_error(:place_order, error, notify_honeybadger: !is_correctable).to_json
       end
