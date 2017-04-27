@@ -682,9 +682,8 @@ class ApiControllerTest < ActionController::TestCase
     stage_response = stages_response[stage.id.to_s]
     assert_equal 5, stage_response.length, "entry for each student in section"
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
-      student_response = stage_response.find {|r| r['user_level_data']['user_id'] == student.id}
-      assert_not_nil student_response
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
+      student_response = stage_response[index]
       assert_equal(
         {
           "user_id" => student.id,
