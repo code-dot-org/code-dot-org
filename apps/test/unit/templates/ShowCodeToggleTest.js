@@ -10,6 +10,7 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import experiments from '@cdo/apps/util/experiments';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('ShowCodeToggle', () => {
   let config, toggle, containerDiv, codeWorkspaceDiv, server;
@@ -21,11 +22,13 @@ describe('ShowCodeToggle', () => {
     server = sinon.fakeServerWithClock.create();
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
+    sinon.stub(project, 'getCurrentId').returns('some-project-id');
   });
   afterEach(() => {
     server.restore();
     $.post.restore();
     $.getJSON.restore();
+    project.getCurrentId.restore();
   });
 
   beforeEach(stubStudioApp);
@@ -56,6 +59,7 @@ describe('ShowCodeToggle', () => {
       enableShowCode: true,
       containerId: 'foo',
       level: {
+        id: 'some-level-id',
         editCode: true,
         codeFunctions: {},
       },
@@ -133,7 +137,14 @@ describe('ShowCodeToggle', () => {
       });
 
       it("saves the text mode setting to the user's preferences", () => {
-        expect($.post).to.have.been.calledWith('/api/v1/users/me/using_text_mode', {using_text_mode: true});
+        expect($.post).to.have.been.calledWith(
+          '/api/v1/users/me/using_text_mode',
+          {
+            project_id: 'some-project-id',
+            level_id: 'some-level-id',
+            using_text_mode: true
+          }
+        );
       });
 
       describe("and after being clicked again", () => {
@@ -157,7 +168,14 @@ describe('ShowCodeToggle', () => {
         });
 
         it("save the text mode setting to the user's preferences again", () => {
-          expect($.post).to.have.been.calledWith('/api/v1/users/me/using_text_mode', {using_text_mode: false});
+          expect($.post).to.have.been.calledWith(
+            '/api/v1/users/me/using_text_mode',
+            {
+              level_id: 'some-level-id',
+              project_id: 'some-project-id',
+              using_text_mode: false
+            }
+          );
         });
       });
     });
@@ -265,7 +283,7 @@ describe('ShowCodeToggle', () => {
       studioApp().init(config);
     });
 
-    it("will reflect the most recent config passed to studioApp().init()", () => {
+    it("will reflect the most recent config passed to studioApp().init(). i.e. it will be hidden", () => {
       expect(toggle.containsMatchingElement(
         <PaneButton
           id="show-code-header"

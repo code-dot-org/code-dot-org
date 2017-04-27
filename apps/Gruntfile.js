@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
@@ -680,7 +679,7 @@ testsContext.keys().forEach(testsContext);
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
-    mkdirp.sync(current);
+    child_process.execSync('mkdir -p ' + current);
     appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +

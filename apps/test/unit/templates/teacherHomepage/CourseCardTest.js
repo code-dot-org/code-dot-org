@@ -25,7 +25,11 @@ describe('CourseCard', () => {
   it('does not show an enrollement icon if there are no sections enrolled in the course', () => {
     const wrapper = shallow(
       <CourseCard
-        cardData={noneEnrolled}
+        courseName={noneEnrolled.courseName}
+        description={noneEnrolled.description}
+        image={noneEnrolled.image}
+        link={noneEnrolled.link}
+        assignedSections={noneEnrolled.assignedSections}
       />
     );
     const enrollementIconContainer = wrapper.props().children[1];
@@ -35,7 +39,11 @@ describe('CourseCard', () => {
   it('shows a check icon if at least one section is enrolled in the course', () => {
     const wrapper = shallow(
       <CourseCard
-        cardData={enrolledOne}
+        courseName={enrolledOne.courseName}
+        description={enrolledOne.description}
+        image={enrolledOne.image}
+        link={enrolledOne.link}
+        assignedSections={enrolledOne.assignedSections}
       />
     );
     const enrollementIconContainer = wrapper.props().children[1];
@@ -47,7 +55,11 @@ describe('CourseCard', () => {
   it('shows a tooltip with the section name if one section is enrolled in the course', () => {
     const wrapper = shallow(
       <CourseCard
-        cardData={enrolledOne}
+        courseName={enrolledOne.courseName}
+        description={enrolledOne.description}
+        image={enrolledOne.image}
+        link={enrolledOne.link}
+        assignedSections={enrolledOne.assignedSections}
       />
     );
     const enrollementIconContainer = wrapper.props().children[1];
@@ -60,7 +72,11 @@ describe('CourseCard', () => {
   it('shows a tooltip with the first 2 section names if multiple sections are enrolled in the course', () => {
     const wrapper = shallow(
       <CourseCard
-        cardData={enrolledMany}
+        courseName={enrolledMany.courseName}
+        description={enrolledMany.description}
+        image={enrolledMany.image}
+        link={enrolledMany.link}
+        assignedSections={enrolledMany.assignedSections}
       />
     );
     const enrollementIconContainer = wrapper.props().children[1];
