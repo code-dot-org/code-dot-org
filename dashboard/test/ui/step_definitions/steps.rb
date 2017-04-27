@@ -1207,3 +1207,8 @@ When /^I switch to text mode$/ do
     And I wait to see Droplet text mode
   STEPS
 end
+
+Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('table.projects td.name').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
