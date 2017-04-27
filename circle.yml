@@ -38,7 +38,7 @@ dependencies:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
     - ".tmputils"
-    - "~/.yarn-cache"
+    - "~/.cache/yarn"
   override:
     # Install any dependencies not covered by rake install
     # When installing moreutils, make sure it does not overwrite GNU parallel,
