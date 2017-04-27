@@ -46,6 +46,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -60,19 +62,19 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">Name a sport</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">sport</title>
               <next>
                 <block type="studio_ask">
                   <title name="TEXT">Name a type of flower</title>
-                  <title name="VAR">A2</title>
+                  <title name="VAR">flower</title>
                   <next>
                     <block type="studio_ask">
                       <title name="TEXT">Enter a verb</title>
-                      <title name="VAR">A3</title>
+                      <title name="VAR">verb</title>
                       <next>
                         <block type="studio_ask">
                           <title name="TEXT">Enter a plural noun</title>
-                          <title name="VAR">A4</title>
+                          <title name="VAR">noun</title>
                           <next>
                             <block type="studio_showTitleScreenParams" inline="false">
                               <value name="TITLE">
@@ -84,7 +86,7 @@
                                   </value>
                                   <value name="ADD1">
                                     <block type="variables_get">
-                                      <title name="VAR">A1</title>
+                                      <title name="VAR">sport</title>
                                     </block>
                                   </value>
                                 </block>
@@ -130,16 +132,16 @@
           </next>
         </block>
         <block type="variables_get">
-          <title name="VAR">A3</title>
+          <title name="VAR">verb</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A4</title>
+          <title name="VAR">noun</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A1</title>
+          <title name="VAR">sport</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A2</title>
+          <title name="VAR">flower</title>
         </block>
       </xml>
     </start_blocks>
@@ -344,19 +346,19 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">Name a sport</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">sport</title>
               <next>
                 <block type="studio_ask">
                   <title name="TEXT">Name a type of flower</title>
-                  <title name="VAR">A2</title>
+                  <title name="VAR">flower</title>
                   <next>
                     <block type="studio_ask">
                       <title name="TEXT">Enter a verb</title>
-                      <title name="VAR">A3</title>
+                      <title name="VAR">verb</title>
                       <next>
                         <block type="studio_ask">
                           <title name="TEXT">Enter a plural noun</title>
-                          <title name="VAR">A4</title>
+                          <title name="VAR">noun</title>
                           <next>
                             <block type="studio_showTitleScreenParams" inline="false">
                               <value name="TITLE">
@@ -368,7 +370,7 @@
                                   </value>
                                   <value name="ADD1">
                                     <block type="variables_get">
-                                      <title name="VAR">A1</title>
+                                      <title name="VAR">sport</title>
                                     </block>
                                   </value>
                                 </block>
@@ -377,7 +379,7 @@
                                 <block type="text_join_simple" inline="false" inputcount="11">
                                   <value name="ADD0">
                                     <block type="variables_get">
-                                      <title name="VAR">A1</title>
+                                      <title name="VAR">sport</title>
                                     </block>
                                   </value>
                                   <value name="ADD1">
@@ -392,7 +394,7 @@
                                   </value>
                                   <value name="ADD3">
                                     <block type="variables_get">
-                                      <title name="VAR">A2</title>
+                                      <title name="VAR">flower</title>
                                     </block>
                                   </value>
                                   <value name="ADD4">
@@ -407,7 +409,7 @@
                                   </value>
                                   <value name="ADD6">
                                     <block type="variables_get">
-                                      <title name="VAR">A3</title>
+                                      <title name="VAR">verb</title>
                                     </block>
                                   </value>
                                   <value name="ADD7">
@@ -422,7 +424,7 @@
                                   </value>
                                   <value name="ADD9">
                                     <block type="variables_get">
-                                      <title name="VAR">A4</title>
+                                      <title name="VAR">noun</title>
                                     </block>
                                   </value>
                                   <value name="ADD10">

@@ -10,7 +10,11 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 describe('ProgressLesson', () => {
   const defaultProps = {
     currentStageId: 1,
-    lesson: fakeLesson('lesson1', 1),
+    lesson: {
+      ...fakeLesson('lesson1', 1),
+      description_teacher: 'Teacher description here',
+      description_student: 'Student description here'
+    },
     levels: fakeLevels(3),
     lessonNumber: 3,
     showTeacherInfo: false,
@@ -190,5 +194,25 @@ describe('ProgressLesson', () => {
 
     wrapper.setProps({foo: 'bar'});
     assert.equal(wrapper.state('collapsed'), true);
+  });
+
+  it('shows student description when viewing as student', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Student}
+      />
+    );
+    assert.equal(wrapper.find('ProgressLessonContent').props().description, 'Student description here');
+  });
+
+  it('shows teacher description when viewing as teacher', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+      />
+    );
+    assert.equal(wrapper.find('ProgressLessonContent').props().description, 'Teacher description here');
   });
 });

@@ -240,8 +240,11 @@ FactoryGirl.define do
     game {Game.gamelab}
   end
 
-  factory :multi, parent: :level, class: Applab do
+  factory :multi, parent: :level, class: Multi do
     game {create(:game, app: "multi")}
+    transient do
+      submittable false
+    end
     properties do
       {
         question: 'question text',
@@ -252,7 +255,8 @@ FactoryGirl.define do
           {text: 'answer4', correct: false}
         ],
         questions: [{text: 'question text'}],
-        options: {hide_submit: false}
+        options: {hide_submit: false},
+        submittable: submittable
       }
     end
   end

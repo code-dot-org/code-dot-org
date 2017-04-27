@@ -258,12 +258,13 @@ Slider.prototype.setValueOverride_  = function (from, to) {
 Slider.prototype.mouseToSvg_ = function (e) {
   var svgPoint = this.SVG_.createSVGPoint();
   // Most browsers provide clientX/Y. iOS only provides pageX/Y.
-  // Android Chrome only provides coordinates within e.changedTouches.
+  // Chrome only provides coordinates within e.changedTouches if this is a
+  // touch event (unless it's just a tap, that mimics a normal mouse event).
   if (this.isWindowsTouch_) {
     // Only screenX/Y properly accounts for zooming in on windows touch.
     svgPoint.x = e.screenX;
     svgPoint.y = e.screenY;
-  } else if (this.isAndroid_) {
+  } else if (e.changedTouches && e.changedTouches.length > 0) {
     svgPoint.x = e.changedTouches[0].pageX;
     svgPoint.y = e.changedTouches[0].pageY;
   } else if (this.isIOS_) {

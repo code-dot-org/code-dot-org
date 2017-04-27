@@ -268,7 +268,15 @@ const lessonFromStageAtIndex = (state, stageIndex) => ({
   ...lessonFromStage(state.stages[stageIndex]),
   isFocusArea: state.focusAreaPositions.includes(state.stages[stageIndex].position)
 });
-const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
+const lessonFromStage = stage => _.pick(stage, [
+  'name',
+  'id',
+  'lockable',
+  'stageNumber',
+  'lesson_plan_html_url',
+  'description_student',
+  'description_teacher',
+]);
 export const lessons = state => state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**

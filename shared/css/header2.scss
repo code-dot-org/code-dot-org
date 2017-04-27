@@ -10,7 +10,7 @@
   #pageheader {
     width: 100%;
     background-color: $light_teal;
-    height: 40px;
+    height: 50px;
     margin: 0 0 40px 0;
 
     .content {
@@ -28,13 +28,12 @@
     #logo-wrapper {
       background-color: $teal;
       display: inline-block;
-      margin-top: -5px;
-      padding: 10px;
+      padding: 13px 16px;
       float: left;
 
       #logo {
-        width: 60px;
-        height: 60px;
+        width: 43px;
+        height: 43px;
       }
 
       #logo-uk {
@@ -55,7 +54,7 @@
       .headerlink {
         display: inline-block;
         font-size: 14px;
-        margin: 0.5em 0 0 30px;
+        margin: 14px 0 0 30px;
         font-family: 'Gotham 4r', sans-serif;
         color: $white;
         text-decoration: none;
@@ -91,6 +90,35 @@
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
-    height: 34px;
+    margin-top: -4px;
+
+    .user_name {
+      font-family: 'Gotham 4r', sans-serif;
+      max-width: 120px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      float: left;
+    }
+
+    .user_menu_glyph {
+      display: inline-block;
+      float: left;
+      padding-left: 5px;
+    }
+
+    .user_options {
+      top: 37px;
+    }
+  }
+
+  #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
+
+    .hide-responsive-menu {
+      top: 55px;
+    }
   }
 }

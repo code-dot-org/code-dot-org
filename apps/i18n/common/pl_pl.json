@@ -383,5 +383,13 @@
   "whenRun": "po uruchomieniu",
   "withoutHints": "Bez użycia wskazówek!",
   "workspaceHeaderShort": "Obszar roboczy: ",
-  "yes": "Tak"
+  "yes": "Tak",
+  "assignACourse": "Assign a course to your classroom or start your own course.",
+  "createNewClassroom": "Create a new classroom section to start assigning courses and seeing your student progress.",
+  "createSection": "Create Section",
+  "recentCourses": "Recent Courses",
+  "setUpClassroom": "Set up your classroom",
+  "startLearning": "Start learning",
+  "viewAllCourses": "View all courses",
+  "viewCourses": "View Courses"
 }
