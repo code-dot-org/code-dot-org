@@ -1,0 +1,28 @@
+%h1 Permissions Form
+
+%h2 Grant Permission
+
+=form_tag(grant_permission_path, method: :post) do
+  email
+  =text_field_tag 'email', ''
+  %br
+
+  permission
+  =text_field_tag 'permission', ''
+  %br
+
+  =submit_tag 'Grant Permission'
+
+%h2 Revoke All Permissions
+
+=form_tag(revoke_all_permissions_path, method: :post) do
+  email
+  =text_field_tag 'email', ''
+  %br
+
+  = submit_tag 'Revoke All Permissions'
+
+-# TODO(asher).
+%h2 Revoke Permission
+
+Coming soon.

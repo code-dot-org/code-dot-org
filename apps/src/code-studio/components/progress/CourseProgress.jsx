@@ -35,6 +35,7 @@ const CourseProgress = React.createClass({
     stages: React.PropTypes.arrayOf(stageShape),
     peerReviewStage: stageShape,
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
   },
 
   render() {
@@ -45,6 +46,7 @@ const CourseProgress = React.createClass({
       focusAreaPositions,
       scriptName,
       viewAs,
+      isRtl,
       onOverviewPage
     } = this.props;
     const groups = _.groupBy(stages, stage => (stage.flex_category || 'Content'));
@@ -69,6 +71,7 @@ const CourseProgress = React.createClass({
             hasLevelProgress={hasLevelProgress}
             scriptName={scriptName}
             viewAs={viewAs}
+            isRtl={isRtl}
           />
         )}
 
@@ -115,5 +118,6 @@ export default connect(state => ({
   focusAreaPositions: state.progress.focusAreaPositions,
   stages: state.progress.stages,
   peerReviewStage: state.progress.peerReviewStage,
-  viewAs: state.stageLock.viewAs
+  viewAs: state.stageLock.viewAs,
+  isRtl: state.isRtl,
 }))(Radium(CourseProgress));

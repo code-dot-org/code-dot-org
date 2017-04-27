@@ -21,11 +21,15 @@ class ApiControllerTest < ActionController::TestCase
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
-    @student_1 = create(:follower, section: @section).student_user
-    @student_2 = create(:follower, section: @section).student_user
-    @student_3 = create(:follower, section: @section).student_user
-    @student_4 = create(:follower, section: @section).student_user
-    @student_5 = create(:follower, section: @section).student_user
+
+    # some of our tests depend on sorting of students by name, thus we name them ourselves
+    @students = []
+    5.times do |i|
+      student = create(:user, name: "student_#{i}")
+      @students << student
+      create(:follower, section: @section, student_user: student)
+    end
+    @student_1, @student_2, @student_3, @student_4, @student_5 = @students
 
     flappy = Script.get_from_cache(Script::FLAPPY_NAME)
     @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
@@ -277,7 +281,7 @@ class ApiControllerTest < ActionController::TestCase
     updated_at = Time.now
 
     # All students did the LevelGroup.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+    @students.each do |student|
       create :user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
@@ -442,7 +446,7 @@ class ApiControllerTest < ActionController::TestCase
     updated_at = Time.now
 
     # All students did the LevelGroup, and the free response part of the survey.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+    @students.each_with_index do |student, student_index|
       create :user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
@@ -554,7 +558,7 @@ class ApiControllerTest < ActionController::TestCase
     create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 through student_5 did the survey, just submitting a free response.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+    @students.each_with_index do |student, student_index|
       create(
         :activity,
         user: student,
@@ -569,7 +573,7 @@ class ApiControllerTest < ActionController::TestCase
 
     updated_at = Time.now
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+    @students.each do |student|
       create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
     end
 
@@ -682,9 +686,8 @@ class ApiControllerTest < ActionController::TestCase
     stage_response = stages_response[stage.id.to_s]
     assert_equal 5, stage_response.length, "entry for each student in section"
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
-      student_response = stage_response.find {|r| r['user_level_data']['user_id'] == student.id}
-      assert_not_nil student_response
+    @students.each_with_index do |student, index|
+      student_response = stage_response[index]
       assert_equal(
         {
           "user_id" => student.id,

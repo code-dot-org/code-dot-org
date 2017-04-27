@@ -37,9 +37,9 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_fwp4_1\",\r\n  \"callout_text\": \"Press the \\\"edit\\\" button to add a parameter to this function.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add a parameter and use the resulting variable in your loop.\",\"hint_id\":\"courseF_bee_fwp4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/efa23ce77c1d25fd855e288d5bc89e14/courseF_bee_fwp4.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The parameter you create for your function will be used to in the repeat loop to determine how many times the bee will move forward and check for nectar.\",\"hint_id\":\"courseF_bee_fwp4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e7017ff8e93e1f8394565969365dc524/courseF_bee_fwp4.mp3\"}]",
     "instructions": "Add a `length` parameter to the function so that it will still work when the row is a different length.",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

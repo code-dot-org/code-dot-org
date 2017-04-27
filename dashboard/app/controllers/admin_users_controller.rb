@@ -100,4 +100,36 @@ class AdminUsersController < ApplicationController
     flash[:alert] = "UserLevel (ID: #{user_level.id}) updated"
     redirect_to :manual_pass_form
   end
+
+  def permissions_form
+  end
+
+  # Grants the indicated permission to the indicated user. Expects params[:email] and
+  # params[:permission] to be populated.
+  def grant_permission
+    permission = params[:permission]
+    user = User.find_by_email_or_hashed_email params[:email]
+
+    unless user && user.teacher?
+      flash[:alert] = "FAILED: user #{params[:email]} could not be found or was not a teacher"
+      redirect_to :permissions_form
+      return
+    end
+
+    if permission == 'admin'
+      user.update!(admin: true)
+      flash[:alert] = "User #{user.id} granted admin status"
+    else
+      user.permission = permission
+      flash[:alert] = "User #{user.id} granted #{permission} permission"
+    end
+    redirect_to :permissions_form
+  end
+
+  def revoke_all_permissions
+    hashed_email = User.hash_email params[:email]
+    # Though in theory a hashed email specifies a unique account, in practice it may not. As this is
+    # security related, we therefore iterate rather than use find_by_hashed_email.
+    User.with_deleted.where(hashed_email: hashed_email).each(&:revoke_all_permissions)
+  end
 end

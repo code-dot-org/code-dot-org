@@ -106,6 +106,8 @@ class Stage < ActiveRecord::Base
         flex_category: localized_category,
         lockable: !!lockable,
         levels: cached_script_levels.map(&:summarize),
+        description_student: (I18n.t "data.script.name.#{script.name}.stages.#{name}.description_student", default: ''),
+        description_teacher: (I18n.t "data.script.name.#{script.name}.stages.#{name}.description_teacher", default: '')
       }
 
       # Use to_a here so that we get access to the cached script_levels.
