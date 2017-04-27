@@ -75,6 +75,11 @@ class ScriptDSL < BaseDSL
     level(name, properties)
   end
 
+  def bonus(name, properties = {})
+    properties[:bonus] = true
+    level(name, properties)
+  end
+
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
@@ -190,6 +195,7 @@ class ScriptDSL < BaseDSL
         type = 'level'
         type = 'assessment' if sl.assessment
         type = 'named_level' if sl.named_level
+        type = 'bonus' if sl.bonus
 
         if sl.levels.count > 1
           s << 'variants'
