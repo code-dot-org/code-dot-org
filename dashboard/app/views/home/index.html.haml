@@ -49,7 +49,7 @@
       - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
         .row
           - course_pair.each do |user_script|
-            = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+            = render partial: 'shared/course_progress_block', locals: { script: user_script.script }
 
   = render partial: 'home/all_courses'
 
