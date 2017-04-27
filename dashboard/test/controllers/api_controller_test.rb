@@ -21,11 +21,18 @@ class ApiControllerTest < ActionController::TestCase
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
-    @student_1 = create(:follower, section: @section).student_user
-    @student_2 = create(:follower, section: @section).student_user
-    @student_3 = create(:follower, section: @section).student_user
-    @student_4 = create(:follower, section: @section).student_user
-    @student_5 = create(:follower, section: @section).student_user
+
+    # some of our tests depend on sorting of students by name, thus we name them ourselves
+    @student_1 = create(:user, name: 'student_1')
+    create(:follower, section: @section, student_user: @student_1)
+    @student_2 = create(:user, name: 'student_2')
+    create(:follower, section: @section, student_user: @student_2)
+    @student_3 = create(:user, name: 'student_3')
+    create(:follower, section: @section, student_user: @student_3)
+    @student_4 = create(:user, name: 'student_4')
+    create(:follower, section: @section, student_user: @student_4)
+    @student_5 = create(:user, name: 'student_5')
+    create(:follower, section: @section, student_user: @student_5)
 
     flappy = Script.get_from_cache(Script::FLAPPY_NAME)
     @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
