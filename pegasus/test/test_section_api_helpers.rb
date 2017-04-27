@@ -234,6 +234,94 @@ class SectionApiHelperTest < SequelTestCase
   end
 
   describe DashboardUserScript do
-    # TODO(asher): Add tests here.
+    before do
+      FakeDashboard.use_fake_database
+      @script_id = 1
+    end
+
+    describe 'assign_script_to_user' do
+      it 'creates a new user_scripts if not pre-existing' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::STUDENT[:id]
+
+          DashboardUserScript.assign_script_to_user(@script_id, user_id)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_id, script_id: @script_id).
+            all
+          assert_equal 1, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # assert user_scripts.first[:assigned_at]
+        end
+      end
+
+      it 'does not update user_scripts if one exists' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::STUDENT[:id]
+          Dashboard.db[:user_scripts].
+            insert(user_id: user_id, script_id: @script_id, created_at: '2017-01-02 00:00:00')
+
+          DashboardUserScript.assign_script_to_user(@script_id, user_id)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_id, script_id: @script_id).
+            all
+          assert_equal 1, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # assert user_scripts.first[:assigned_at]
+        end
+      end
+    end
+
+    describe 'assign_script_to_users' do
+      it 'noops if user_ids is empty' do
+        Dashboard.db.transaction(rollback: :always) do
+          DashboardUserScript.assign_script_to_users(@script_id, [])
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: [], script_id: @script_id).
+            all
+          assert_equal 0, user_scripts.count
+        end
+      end
+
+      it 'creates new user_scripts if not pre-existing' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_ids = [FakeDashboard::STUDENT[:id], FakeDashboard::STUDENT_SELF[:id]]
+
+          DashboardUserScript.assign_script_to_users(@script_id, user_ids)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_ids, script_id: @script_id).
+            all
+          assert_equal 2, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # user_scripts.each do |user_script|
+          #   assert user_script[:assigned_at]
+          # end
+        end
+      end
+
+      it 'does not update user_scripts if already exists' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_ids = [FakeDashboard::STUDENT[:id], FakeDashboard::STUDENT_SELF[:id]]
+          user_ids.each do |user_id|
+            Dashboard.db[:user_scripts].
+              insert(user_id: user_id, script_id: @script_id, created_at: '2017-01-02 00:00:00')
+          end
+
+          DashboardUserScript.assign_script_to_users(@script_id, user_ids)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_ids, script_id: @script_id).
+            all
+          assert_equal 2, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # user_scripts.each do |user_script|
+          #   assert user_script[:assigned_at]
+          # end
+        end
+      end
+    end
   end
 end
