@@ -62,7 +62,6 @@ const styles = {
 
 const ProgressLesson = React.createClass({
   propTypes: {
-    description: PropTypes.string,
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
 
@@ -97,7 +96,6 @@ const ProgressLesson = React.createClass({
 
   render() {
     const {
-      description,
       lesson,
       levels,
       showTeacherInfo,
@@ -123,6 +121,8 @@ const ProgressLesson = React.createClass({
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
+
+    const description = viewAs === ViewType.Teacher ? lesson.description_teacher : lesson.description_student;
     return (
       <div
         style={{

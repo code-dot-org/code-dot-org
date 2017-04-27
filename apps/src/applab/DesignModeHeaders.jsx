@@ -11,7 +11,7 @@ const DesignModeHeaders = React.createClass({
     handleVersionHistory: React.PropTypes.func.isRequired,
     onToggleToolbox: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
-    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
   },
 
@@ -91,7 +91,6 @@ const DesignModeHeaders = React.createClass({
       }
     };
 
-    const isRtl = this.props.localeDirection === 'rtl';
     const hasFocus = !this.props.isRunning;
 
     const settingsCog = <SettingsCog isRunning={this.props.isRunning} runModeIndicators/>;
@@ -99,7 +98,7 @@ const DesignModeHeaders = React.createClass({
     return (
       <PaneHeader
         id="design-headers"
-        dir={this.props.localeDirection}
+        dir={this.props.isRtl ? 'rtl' : 'ltr'}
         hasFocus={hasFocus}
         style={{color: 'white'}}
       >
@@ -128,7 +127,7 @@ const DesignModeHeaders = React.createClass({
           iconClass="fa fa-clock-o"
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
-          isRtl={isRtl}
+          isRtl={this.props.isRtl}
           onClick={this.props.handleVersionHistory}
         />
         <PaneSection id="design-workspace-header" className="workspace-header">

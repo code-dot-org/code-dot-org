@@ -224,7 +224,7 @@ NetSim.prototype.init = function (config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        localeDirection: this.studioApp_.localeDirection(),
+        localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
         instructions: this.level.instructions
       }
     });

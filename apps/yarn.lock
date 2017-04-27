@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/johnny-five@0.9.62-cdo.2":
-  version "0.9.62-cdo.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.2.tgz#66e4e597b3f454257ab52bb85e98d6be72697d07"
+"@code-dot-org/johnny-five@0.10.10-cdo.0":
+  version "0.10.10-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.10.10-cdo.0.tgz#bf2d2316cc897d0fd8ba5e8e6b348cdb0f5aeedb"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
@@ -60,7 +60,7 @@
     temporal latest
   optionalDependencies:
     browser-serialport latest
-    firmata "^0.12.0"
+    firmata latest
     serialport "^4.0.0"
 
 "@code-dot-org/js-interpreter":
@@ -196,10 +196,6 @@
     react-komposer "^2.0.0"
     react-modal "^1.2.1"
     redux "^3.5.2"
-
-Base64@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/Base64/-/Base64-0.3.0.tgz#6da261a4e80d4fa0f5c684254e5bccd16bbdce9f"
 
 Base64@~0.2.0:
   version "0.2.1"
@@ -1517,10 +1513,6 @@ bluebird@^2.10.2, bluebird@^2.9.27:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
 
-bluebird@^3.3.5:
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
-
 board-io@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/board-io/-/board-io-3.0.5.tgz#b9801aa81ac8bd5dd7a1d06627e4f79d6fa31a84"
@@ -1615,7 +1607,7 @@ browser-process-hrtime@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-0.1.2.tgz#425d68a58d3447f02a04aa894187fce8af8b7b8e"
 
-browser-serialport@*, browser-serialport@^2.0.1, browser-serialport@latest:
+browser-serialport@^2.0.1, browser-serialport@latest:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/browser-serialport/-/browser-serialport-2.0.3.tgz#3890aad440dc364540ad9f86f1e251d1b2011d73"
 
@@ -2067,7 +2059,7 @@ commander@2.0.x:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.0.0.tgz#d1b86f901f8b64bd941bdeadaf924530393be928"
 
-commander@2.8.x, commander@~2.8.1:
+commander@2.8.x:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
   dependencies:
@@ -3062,7 +3054,7 @@ es6-promise@3.0.2, es6-promise@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.0.2.tgz#010d5858423a5f118979665f46486a95c6ee2bb6"
 
-es6-promise@^3.1.2, es6-promise@^3.2.1:
+es6-promise@^3.2.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613"
 
@@ -3079,10 +3071,6 @@ es6-set@~0.1.3:
     es6-iterator "2"
     es6-symbol "3"
     event-emitter "~0.3.4"
-
-es6-shim@^0.33.6:
-  version "0.33.13"
-  resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.33.13.tgz#894fb83d2c2e9378c8ec23659f2b62b28f994225"
 
 es6-shim@^0.35.1, es6-shim@latest:
   version "0.35.1"
@@ -3705,21 +3693,13 @@ firebase@^2.4.2:
   dependencies:
     faye-websocket ">=0.6.0"
 
-firmata@^0.11.3:
-  version "0.11.3"
-  resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.11.3.tgz#e122e4598aa1c67cd82165bf0fb727e5b89314f4"
+firmata@0.16.0, "firmata@>=0.11.3 <1.0", firmata@latest:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.16.0.tgz#6f2a759b1a98de234ced010fa3d4d9534d62b2e7"
   dependencies:
-    browser-serialport "*"
-    es6-shim "^0.33.6"
-    serialport "^2.0.1"
-
-firmata@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.12.0.tgz#5d97dd122f5f77fec922604e074209d856d776b1"
-  dependencies:
-    browser-serialport "*"
-    es6-shim "^0.33.6"
-    serialport "^3.0.0"
+    browser-serialport latest
+    es6-shim latest
+    serialport "^4.0.0"
 
 first-chunk-stream@^1.0.0:
   version "1.0.0"
@@ -3942,12 +3922,6 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-github@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/github/-/github-0.2.4.tgz#24fa7f0e13fa11b946af91134c51982a91ce538b"
-  dependencies:
-    mime "^1.2.11"
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -4033,7 +4007,7 @@ glob@7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^4.3.1, glob@^4.4.2:
+glob@^4.3.1:
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-4.5.3.tgz#c6cb73d3226c1efef04de3c56d012f03377ee15f"
   dependencies:
@@ -5619,16 +5593,6 @@ liftoff@^2.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-linklocal@2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/linklocal/-/linklocal-2.5.2.tgz#6aab40558448f001b6f26e7db510fd459a254051"
-  dependencies:
-    commander "~2.8.1"
-    debug "~2.2.0"
-    map-limit "0.0.1"
-    mkdirp "~0.5.1"
-    rimraf "~2.3.3"
-
 livereload-js@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/livereload-js/-/livereload-js-2.2.2.tgz#6c87257e648ab475bc24ea257457edcc1f8d0bc2"
@@ -6149,12 +6113,6 @@ map-cache@^0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
 
-map-limit@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/map-limit/-/map-limit-0.0.1.tgz#eb7961031c0f0e8d001bf2d56fab685d58822f38"
-  dependencies:
-    once "~1.3.0"
-
 map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
@@ -6478,13 +6436,9 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
-nan@2.4.x, nan@^2.3.0, nan@^2.3.2, nan@^2.3.3, nan@^2.3.5:
+nan@2.4.x, nan@^2.3.0, nan@^2.3.2, nan@^2.3.5:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
-
-nan@~2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.2.1.tgz#d68693f6b34bb41d66bc68b3a4f9defc79d7149b"
 
 nanotimer@0.3.10:
   version "0.3.10"
@@ -6604,13 +6558,6 @@ node-notifier@^4.1.0:
     semver "^5.1.0"
     shellwords "^0.1.0"
     which "^1.0.5"
-
-node-pre-gyp-github@^1.1.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp-github/-/node-pre-gyp-github-1.3.1.tgz#c6965303995b5b083eca64a1aa35fd2b511dcbb3"
-  dependencies:
-    commander "^2.9.0"
-    github "^0.2.4"
 
 node-pre-gyp@^0.6.26, node-pre-gyp@^0.6.29:
   version "0.6.31"
@@ -7201,12 +7148,12 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@code-dot-org/playground-io#v0.4.0-cdo.1:
-  version "0.4.0-cdo.1"
-  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/8a476b8d99f300940542b7ddbed81cff735cca99"
+playground-io@code-dot-org/playground-io#v0.4.0-cdo.2:
+  version "0.4.0-cdo.2"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/f4cd809e789683b4de059d7e80a5955f3a3269f9"
   dependencies:
     buffer "^4.6.0"
-    firmata "^0.11.3"
+    firmata ">=0.11.3 <1.0"
     lodash.debounce "^4.0.3"
 
 plur@^1.0.0:
@@ -8118,7 +8065,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@1.1, "readable-stream@>=1.1.13-1 <1.2.0-0", readable-stream@^1.0.27-1, readable-stream@^1.1.13, readable-stream@~1.1.8, readable-stream@~1.1.9:
+readable-stream@1.1, readable-stream@^1.0.27-1, readable-stream@^1.1.13, readable-stream@~1.1.8, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -8505,12 +8452,6 @@ rimraf@~2.1.4:
   optionalDependencies:
     graceful-fs "~1"
 
-rimraf@~2.3.3:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.3.4.tgz#82d9bc1b2fcf31e205ac7b28138a025d08e9159a"
-  dependencies:
-    glob "^4.4.2"
-
 ripemd160@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-0.2.0.tgz#2bf198bde167cacfa51c0a928e84b68bbe171fce"
@@ -8685,32 +8626,6 @@ sequencify@~0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/sequencify/-/sequencify-0.0.7.tgz#90cff19d02e07027fd767f5ead3e7b95d1e7380c"
 
-serialport@^2.0.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/serialport/-/serialport-2.1.2.tgz#493af176ac59043e7da5f2d7978fa30d1a8cb353"
-  dependencies:
-    bindings "1.2.1"
-    bluebird "^3.3.5"
-    debug "^2.1.1"
-    nan "~2.2.1"
-    node-pre-gyp "^0.6.26"
-    node-pre-gyp-github "^1.1.0"
-    object.assign "^4.0.3"
-    optimist "~0.6.1"
-    sf "0.1.7"
-
-serialport@^3.0.0:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/serialport/-/serialport-3.1.2.tgz#9bc17b2edbce7b3a9d06ea8c99137816f31103f5"
-  dependencies:
-    bindings "1.2.1"
-    commander "^2.9.0"
-    debug "^2.1.1"
-    es6-promise "^3.1.2"
-    nan "^2.3.3"
-    node-pre-gyp "^0.6.26"
-    object.assign "^4.0.3"
-
 serialport@^4.0.0:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/serialport/-/serialport-4.0.5.tgz#68908a6fb85a4728fe52e5de438cc4ba0b3bba9b"
@@ -8801,10 +8716,6 @@ setimmediate@^1.0.5:
 setprototypeof@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.0.1.tgz#52009b27888c4dc48f591949c0a8275834c1ca7e"
-
-sf@0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/sf/-/sf-0.1.7.tgz#806ed032d7225c7fb6394b0bdbfe1ea936fe6d74"
 
 sha.js@2.2.6:
   version "2.2.6"
@@ -9398,12 +9309,12 @@ throttleit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
 
-through2@*:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-1.1.1.tgz#0847cbc4449f3405574dbdccd9bb841b83ac3545"
+through2@*, through2@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
   dependencies:
-    readable-stream ">=1.1.13-1 <1.2.0-0"
-    xtend ">=4.0.0 <4.1.0-0"
+    readable-stream "~2.0.0"
+    xtend "~4.0.0"
 
 through2@^0.5.0:
   version "0.5.1"
@@ -9418,13 +9329,6 @@ through2@^0.6.1, through2@^0.6.3:
   dependencies:
     readable-stream ">=1.0.33-1 <1.1.0-0"
     xtend ">=4.0.0 <4.1.0-0"
-
-through2@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
-  dependencies:
-    readable-stream "~2.0.0"
-    xtend "~4.0.0"
 
 through@^2.3.4, through@^2.3.6:
   version "2.3.8"
