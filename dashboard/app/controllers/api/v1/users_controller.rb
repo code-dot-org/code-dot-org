@@ -1,5 +1,8 @@
+require 'cdo/firehose'
+
 class Api::V1::UsersController < ApplicationController
   before_action :load_user
+  skip_before_action :verify_authenticity_token
 
   def load_user
     user_id = params[:user_id]
@@ -18,6 +21,18 @@ class Api::V1::UsersController < ApplicationController
   def post_using_text_mode
     @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
     @user.save
+
+    FirehoseClient.instance.put_record(
+      'analysis-events',
+      {
+        study: 'project_block_and_text_switching',
+        event: @user.using_text_mode ? 'block_to_text' : 'text_to_block',
+        project_id: params[:project_id],
+        user_id: @user.id,
+        level_id: params[:level_id],
+      }
+    )
+
     render json: {using_text_mode: !!@user.using_text_mode}
   end
 end
