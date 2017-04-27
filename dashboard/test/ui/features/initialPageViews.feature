@@ -30,3 +30,4 @@ Feature: Looking at a few things with Applitools Eyes - Part 1
       | http://studio.code.org/s/allthethings/stage/24/puzzle/2?noautoplay=true | star wars blocks |
       | http://studio.code.org/s/allthethings/stage/25/puzzle/1?noautoplay=true | minecraft |
       | http://studio.code.org/s/course1/stage/11/puzzle/1?noautoplay=true      | wordsearch level |
+      | http://studio.code.org/s/mc/stage/1/puzzle/6                       | minecraft house dialog     |
