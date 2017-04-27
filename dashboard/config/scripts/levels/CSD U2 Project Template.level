@@ -5,9 +5,6 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n\\n\\n </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
     "hide_share_and_remix": "false"

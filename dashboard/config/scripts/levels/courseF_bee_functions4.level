@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Use the `move and get nectar` function to collect all of the nectar.",
+    "instructions": "Create a new `move and check` function to collect all of the nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

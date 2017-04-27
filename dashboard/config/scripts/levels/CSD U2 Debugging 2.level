@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2016-09-13T02:22:59.000Z",
+  "created_at": "2017-04-26T21:04:13.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -12,8 +12,6 @@
     "hide_share_and_remix": "false"
   },
   "published": true,
-  "notes": "",
-  "level_concept_difficulty": {
-  }
+  "notes": ""
 }]]></config>
 </Weblab>
