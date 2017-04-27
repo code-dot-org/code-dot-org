@@ -39,6 +39,11 @@ export default class FormController extends React.Component {
       currentPage: 0,
       submitting: false
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.nextPage = this.nextPage.bind(this);
+    this.prevPage = this.prevPage.bind(this);
   }
 
   /**
@@ -115,6 +120,13 @@ export default class FormController extends React.Component {
   }
 
   /**
+   * Called when we get a successful response from the API submission
+   */
+  onSuccessfulSubmit() {
+    // Intentional noop; overridden by child classes
+  }
+
+  /**
    * Submit serialized form data to the specified API Endpoint and handle server
    * response
    *
@@ -135,7 +147,7 @@ export default class FormController extends React.Component {
       dataType: "json",
       data: JSON.stringify(this.serializeFormData())
     }).done(() => {
-      window.location.reload(true);
+      this.onSuccessfulSubmit();
     }).fail(data => {
       this.setState({
         errors: data.responseJSON.errors.form_data
@@ -177,7 +189,7 @@ export default class FormController extends React.Component {
     return {
       key: this.state.currentPage,
       options: this.props.options,
-      onChange: this.handleChange.bind(this),
+      onChange: this.handleChange,
       errors: this.state.errors,
       data: this.state.data
     };
@@ -250,7 +262,7 @@ export default class FormController extends React.Component {
       backButton = (
         <Button
           key="back"
-          onClick={this.prevPage.bind(this)}
+          onClick={this.prevPage}
         >
           Back
         </Button>
@@ -261,7 +273,7 @@ export default class FormController extends React.Component {
       <Button
         bsStyle="primary"
         key="next"
-        onClick={this.nextPage.bind(this)}
+        onClick={this.nextPage}
       >
         Next
       </Button>
@@ -284,7 +296,7 @@ export default class FormController extends React.Component {
         style={styles.pageButtons}
         items={this.getPageComponents().length}
         activePage={this.state.currentPage + 1}
-        onSelect={i => this.setPage(i - 1)}
+        onSelect={i => this.setPage(i - 1)} // eslint-disable-line react/jsx-no-bind
       />
     );
 
@@ -304,7 +316,7 @@ export default class FormController extends React.Component {
     return (
       <form
         ref={form => {this.form = form;}}
-        onSubmit={this.handleSubmit.bind(this)}
+        onSubmit={this.handleSubmit}
       >
         {this.renderErrorFeedback()}
         {this.renderCurrentPage()}

@@ -885,6 +885,8 @@
   dashboard_students_reset_password: Reinicialitza la contrasenya
   dashboard_students_share_section: 'Comparteix la pàgina d''inici de sessió amb els
     vostres alumnes:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Imprimeix targetes amb la informació d'accés dels
     vostres alumnes.
   dashboard_students_secret_picture_title: Imatge secreta
@@ -911,6 +913,7 @@
     o voldries crear comptes per a ells, canvia el tipus secret d aquesta secció a
     <b>paraula</b> o <b>fotografia</b>.
   dashboard_students_print_page: Imprimeix aquesta pàgina
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Fes clic aquí</a> per veure el nostre document de privacitat, que pot ser compartit
@@ -1133,6 +1136,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1901,6 +1906,3 @@
   infinity_shortcode: inf
   playlab_shortcode: reprodueix
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

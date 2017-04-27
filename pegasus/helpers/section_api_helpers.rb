@@ -4,9 +4,6 @@ require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
-# TODO(asher): Though the APIs below mostly respect soft-deletes, edge cases may
-#   remain (e.g., if the user making the API call is soft-deleted). Fix these
-#   and make the API more consistent in its edge case handling.
 class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
@@ -379,15 +376,23 @@ class DashboardSection
   end
 
   def add_student(student)
-    return nil unless student_id = student[:id] || DashboardStudent.create(student)
+    student_id = student[:id] || DashboardStudent.create(student)
+    return nil unless student_id
 
-    created_at = DateTime.now
+    time_now = DateTime.now
+
+    existing_follower = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).first
+    if existing_follower
+      Dashboard.db[:followers].where(id: existing_follower[:id]).update(deleted_at: nil, updated_at: time_now)
+      return student_id
+    end
+
     Dashboard.db[:followers].insert(
       {
         section_id: @row[:id],
         student_user_id: student_id,
-        created_at: created_at,
-        updated_at: created_at,
+        created_at: time_now,
+        updated_at: time_now
       }
     )
     student_id

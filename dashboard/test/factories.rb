@@ -38,7 +38,6 @@ FactoryGirl.define do
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
-    confirmed_at Time.now
 
     factory :levelbuilder do
       after(:create) do |levelbuilder|
@@ -91,7 +90,7 @@ FactoryGirl.define do
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
@@ -241,8 +240,11 @@ FactoryGirl.define do
     game {Game.gamelab}
   end
 
-  factory :multi, parent: :level, class: Applab do
+  factory :multi, parent: :level, class: Multi do
     game {create(:game, app: "multi")}
+    transient do
+      submittable false
+    end
     properties do
       {
         question: 'question text',
@@ -253,7 +255,8 @@ FactoryGirl.define do
           {text: 'answer4', correct: false}
         ],
         questions: [{text: 'question text'}],
-        options: {hide_submit: false}
+        options: {hide_submit: false},
+        submittable: submittable
       }
     end
   end
@@ -566,6 +569,7 @@ FactoryGirl.define do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
+    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     capacity 10
     transient do
       num_sessions 0

@@ -537,6 +537,11 @@ en:
       CSD U1 Input Output Intro:
         description here: description here
         title: title
+      CSD U1 Lesson 5 Overview: {}
+      CSD U1 Lesson 6 Overview: {}
+      CSD U1 Lesson 7 Overview: {}
+      CSD U1 Lesson 8 Overview: {}
+      CSD U1 Lesson 9 Overview: {}
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
         description here: description here
@@ -546,6 +551,9 @@ en:
       CSD U2 RGB Colors:
         'STOP: RGB Colors': 'STOP: RGB Colors'
         description here: description here
+      CSD U2 Social Sleuth:
+        description here: description here
+        title: title
       CSD U2 layout style review:
         description here: description here
         title: title
@@ -566,7 +574,10 @@ en:
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
-      CSD U3 Draw Loop Map: {}
+      CSD U3 Describe the Picture:
+        description here: description here
+        title: title
+      CSD U3 Draw Loop Map 1: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Entertainment: {}
       CSD U3 Expressions STOP writing 10: {}
@@ -576,6 +587,20 @@ en:
       CSD U3 L2 Challenges:
         description here: description here
         title: title
+      CSD U3 Lesson Overview 1: {}
+      CSD U3 Lesson Overview 10: {}
+      CSD U3 Lesson Overview 11: {}
+      CSD U3 Lesson Overview 12: {}
+      CSD U3 Lesson Overview 13: {}
+      CSD U3 Lesson Overview 14: {}
+      CSD U3 Lesson Overview 2: {}
+      CSD U3 Lesson Overview 3: {}
+      CSD U3 Lesson Overview 4: {}
+      CSD U3 Lesson Overview 5: {}
+      CSD U3 Lesson Overview 6: {}
+      CSD U3 Lesson Overview 7: {}
+      CSD U3 Lesson Overview 8: {}
+      CSD U3 Lesson Overview 9: {}
       CSD U3 Movement Challenges: {}
       CSD U3 Project Build a Game SFLP: {}
       CSD U3 Random randomNumber Map: {}
@@ -1844,6 +1869,9 @@ en:
       PS - Responding to User Input:
         description here: description here
         title: title
+      PS - draft - Longitudinal study description:
+        description here: description here
+        title: title
       Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
@@ -2717,6 +2745,7 @@ en:
         Binary Drawing: Binary Drawing
       courseE_external_ramp14:
         Good Job!: Good Job!
+      courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
       coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
@@ -2849,6 +2878,9 @@ en:
       post-assessment survey heading1: {}
       post-assessment survey heading2: {}
       post-assessment survey heading3: {}
+      post-assessment survey heading4:
+        description here: description here
+        title: title
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
@@ -3493,6 +3525,29 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD U3 Variables name match:
+        1dimension: 1dimension
+        ? |-
+          1dimension
+          var yLocation = 200;
+        : |-
+          1dimension
+          var yLocation = 200;
+        CSD U3 Variables name match: CSD U3 Variables name match
+        'Debug: Naming Variables': 'Debug: Naming Variables'
+        Labels can't have spaces.: Labels can't have spaces.
+        Labels can't start with a number.: Labels can't start with a number.
+        Labels should have the same capitalization.: Labels should have the same capitalization.
+        This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.: This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.
+        YLocation: YLocation
+        description here: description here
+        size of circle: size of circle
+        ? |-
+          size of circle
+          var yLocation = 200;
+        : |-
+          size of circle
+          var yLocation = 200;
       CSD U3 keyinput match:
         Answer 1: Answer 1
         CSD U3 keyinput match: CSD U3 keyinput match
@@ -4214,13 +4269,30 @@ en:
         blue: blue
         salt: salt
       unique level name here:
+        ? |-
+          1dimension
+          var yLocation = 200;
+        : |-
+          1dimension
+          var yLocation = 200;
+        CSD U3 Variables name match: CSD U3 Variables name match
+        Labels can't have spaces.: Labels can't have spaces.
+        Labels can't start with a number.: Labels can't start with a number.
+        Labels should have the same capitalization.: Labels should have the same capitalization.
         Question: Question
+        YLocation: YLocation
         description here: description here
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
         'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
         'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
         'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
         'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
+        ? |-
+          size of circle
+          var yLocation = 200;
+        : |-
+          size of circle
+          var yLocation = 200;
         title: title
     multi:
       2-3 Algorithms Multi 1:
@@ -4883,8 +4955,11 @@ en:
         gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
         kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
         megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP longitudinal agree to contact:
+        'no': 'no'
+        'yes': 'yes'
       CSP verify 18:
-        Are you over 18?: Are you over 18?
+        Are you 18 years old (or older)?: Are you 18 years old (or older)?
         'No': 'No'
         'Yes': 'Yes'
       CSPFinal_Question_1:
@@ -7225,9 +7300,9 @@ en:
       courseC_multi_artist_prog6_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.: Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
         Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
-        The artist draws a shape with four equal sides tilted on its corner, making a diamond.: The artist draws a shape with four equal sides tilted on its corner, making a diamond.
+        The artist draws a square.: The artist draws a square.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
       courseC_multi_harvester_loops11_predict1:
@@ -7318,7 +7393,8 @@ en:
         I don't know.: I don't know.
         Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
         Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.: Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.
-        Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?: Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?
+        ? 'Look closely at the code below.  Why won''t the bee collect all of the nectar when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+        : 'Look closely at the code below.  Why won''t the bee collect all of the nectar when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
         The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.: The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.
         The bee will turn the wrong way when making a square.: The bee will turn the wrong way when making a square.
         'The loop does not run long enough for the bee to get to all flower bunches. ': 'The loop does not run long enough for the bee to get to all flower bunches. '
@@ -7425,10 +7501,16 @@ en:
         I don't know.: I don't know.
         ? Incorrect. Notice that the 'repeat 3' loop is inside the 'repeat 4' loop. This means that the drawing will be a three sided shape drawn four times.
         : Incorrect. Notice that the 'repeat 3' loop is inside the 'repeat 4' loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
         ? Incorrect. Notice that there is a 'turn 90 degrees' block inside the outer loop. This means that the artist will turn after drawing each triangle.
         : Incorrect. Notice that there is a 'turn 90 degrees' block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
         ? The 'repeat 3' loop is inside the 'repeat 4' loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
         : The 'repeat 3' loop is inside the 'repeat 4' loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
         The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
         The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
         The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
@@ -7516,6 +7598,19 @@ en:
         The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
         The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
         What will happen when you run this program?: What will happen when you run this program?
+      courseF_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
       courseF_multi_artist_variables3a_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7527,6 +7622,31 @@ en:
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
         The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
         We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
+      courseF_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+      courseF_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
       courseF_multi_bee_for3_predict1:
         Correct!: Correct!
         Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
@@ -7535,6 +7655,16 @@ en:
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
         'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+      courseF_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
+        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
       courseF_multi_bee_fwp9_predict1:
         ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
         : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
@@ -8023,7 +8153,6 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
-        Incorrect.  Two of the spaces that Laurel tries to collect treasure from are empty!: Incorrect.  Two of the spaces that Laurel tries to collect treasure from are empty!
         Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will not collect any treasure.: Laurel will not collect any treasure.
@@ -8285,7 +8414,7 @@ en:
       post-assessment survey q28:
         Agree: Agree
         Disagree: Disagree
-        I feel that I am accepted in this computer science class.: I feel that I am accepted in this computer science class.
+        I like my computer science class.: I like my computer science class.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8322,13 +8451,20 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      post-assessment survey q31-a:
+        Agree: Agree
+        Disagree: Disagree
+        I would recommend this computer science class to another student.: I would recommend this computer science class to another student.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       post-assessment survey q33:
-        I took the AP CS Principles Exam and submitted the Performance Tasks.: I took the AP CS Principles Exam and submitted the Performance Tasks.
-        'No': 'No'
-        'Yes': 'Yes'
+        ok: ok
       post-assessment survey q34:
         Easy: Easy
         Hard: Hard
+        I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
         If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.
         Kinda easy: Kinda easy
         Kinda hard: Kinda hard
@@ -8336,17 +8472,21 @@ en:
         Really easy: Really easy
         Really hard: Really hard
       post-assessment survey q35:
-        I don't think I got any questions right: I don't think I got any questions right
-        I feel like I got about half right and half wrong: I feel like I got about half right and half wrong
-        I feel like I only got a few right: I feel like I only got a few right
-        I got a lot of questions right, but some wrong: I got a lot of questions right, but some wrong
-        I got most of the questions right: I got most of the questions right
-        If you DID take the CS Principles AP exam, how do you think you did?: If you DID take the CS Principles AP exam, how do you think you did?
+        "...I didn't get any questions right": "...I didn't get any questions right"
+        "...I got a lot of questions right, but some wrong": "...I got a lot of questions right, but some wrong"
+        "...I got about half right and half wrong": "...I got about half right and half wrong"
+        "...I got most of the questions right": "...I got most of the questions right"
+        "...I only got a few right": "...I only got a few right"
+        I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
+        If you DID take the CS Principles AP exam, how do you think you did? I feel like...: If you DID take the CS Principles AP exam, how do you think you did? I feel like...
       post-assessment survey q36:
+        A friend recommended I not take the exam: A friend recommended I not take the exam
+        Another person at my school recommended I not take the exam: Another person at my school recommended I not take the exam
         Cost of exam: Cost of exam
         I didn't know it was an option: I didn't know it was an option
         I didn't think I'd do well: I didn't think I'd do well
         If you DID NOT take the CS Principles AP exam, why not?: If you DID NOT take the CS Principles AP exam, why not?
+        Not applicable. I DID take the exam: Not applicable. I DID take the exam
         Wasn't offered at my school: Wasn't offered at my school
       post-assessment survey q4:
         Agree: Agree

@@ -5534,7 +5534,7 @@ en:
       courseB_artist_loops7_instruction: "**Challenge:**  It's a hidden garden!
         Let's walk around."
       courseB_artist_loops8_instruction: "Time to head home. Can you fix this ladder
-        to help the artist get down?"
+        using only one block to help the artist get down?"
       courseB_artist_loops9_instruction: "Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?"
       courseB_artist_loops_challenge1_instruction: "It's time to toss the dice!
@@ -5619,19 +5619,28 @@ en:
       courseB_playlab_events_challenge1_instruction: "Make this game fun by setting
         the knight to vanish when he runs into the dragon on his way to get the flags!  Play
         a sound when they collide to make it feel more real."
+      courseB_playlab_events_challenge2_instruction: "Let's make the animals disappear
+        when you click on them! You can also add sounds and score points to create
+        a fun game of Animal Tag!"
+      courseB_playlab_events_challenge2_embed_instruction: "Here is your finished
+        game!"
+      courseB_playlab_events_challenge2_template_instruction: "Let's make the animals
+        disappear when you click on them! You can also add sounds and score points
+        to create a fun game of Animal Tag!"
       courseC_PlayLab_events1_instruction: "Make Jorge the Dog (actor 1) say \"Hi
         there.\""
-      courseC_PlayLab_events2_instruction: "Can you make Jorge (actor 1) say something,
-        then have Olive the Cat (actor 2) say something afterward?"
+      courseC_PlayLab_events2_instruction: "Can you make Jorge the Dog (actor 1)
+        say something, then have Olive the Cat (actor 2) say something afterward?"
       courseC_PlayLab_events3_instruction: "Can you write a program to make Jorge
         (actor 1) move toward Olive the Cat?"
       courseC_PlayLab_events4_instruction: "Can you write a program that makes Jorge
         (actor 1) move to Olive the Cat, and have Olive say \"Hi there.\" when Jorge
         reaches her?"
       courseC_PlayLab_events5_instruction: "Can you write a program to make Octavia
-        say \"What's new?\" when she is clicked?"
+        the Octopus say \"What's new?\" when she is clicked?"
       courseC_PlayLab_events6_instruction: "Now, write a program to make Waddles
-        move around using the up / down / left / right keys to hit all of the targets!"
+        the Penguin move around using the up / down / left / right keys to hit all
+        of the targets!"
       courseC_PlayLab_events7_instruction: "The `repeat forever` block allows you
         to run code over and over forever.  Use this block to move Chomp the Dino
         (actor 2) up and down by 400 pixels forever."
@@ -5639,13 +5648,13 @@ en:
         and play a \"hit\" sound if he runs into Chomp? \r\nWhen you're done, play
         the game to make that happen."
       courseC_PlayLab_events9_instruction: "Can you add a block to score a point
-        when Waddles (actor1) runs into Octavia (actor 3)? \r\nPlay the game and move
-        Waddles with the arrows until you score!"
+        when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
+        \r\nPlay the game and move Waddles with the arrows until you score!"
       courseC_PlayLab_eventsA_instruction: "Add blocks to the `when run` event to
-        change the background scene and the speed of Waddles.\r\n\r\nPlay the game
-        and move Waddles with the arrows until you score."
+        change the background scene and the speed of Waddles the Penguin.\r\n\r\nPlay
+        the game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
-        done, click \"Finish\" to share with friends."
+        done, click \"Finish\" to share with friends. See story ideas in the hints."
       courseC_artist_prog1_instruction: "Play with the blocks in the toolbox to see
         what they do!"
       courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the
@@ -6008,6 +6017,9 @@ en:
       courseD_playLab_cond3_instruction: "1) Make the dragon change between random
         emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon,
         he gets 2 points if the dragon is happy and 1 otherwise."
+      courseD_playLab_cond3b_instruction: "1) Make the dragon change between random
+        emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon,
+        he gets 2 points if the dragon is happy and 1 otherwise."
       courseD_playLab_cond4_instruction: "Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
         if the ninja catches him."
@@ -6247,6 +6259,10 @@ en:
         using the function that you just created?"
       courseF_artist_fwp9_instruction: "Freeplay: Draw something awesome! Play with
         the pen width to see how different your drawings look!"
+      courseF_artist_ramp10_instruction: "Now, drag the code for the last triangle
+        into a new loop to spin it around and make a snowflake!"
+      courseF_artist_ramp8_instruction: "Now make a square using Artist!"
+      courseF_artist_ramp9_instruction: "Use what you've learned to draw this triangle."
       courseF_artist_variables1_instruction: "Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side."
       courseF_artist_variables10_instruction: "Here's your code from the last puzzle.  Try
@@ -6293,6 +6309,23 @@ en:
       courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned
         and make your own drawing. \r\n\r\nHow can you use variables with squares,
         pentagons, or hexagons?"
+      courseF_bee_conditionals10_instruction: "Collect all of the nectar and make
+        all of the honey."
+      courseF_bee_conditionals1_predict1_instruction: "Check to see if there's a
+        flower under the cloud. If there's a flower, get nectar."
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see
+        if it is hiding a flower before you get nectar.  \r\n"
+      courseF_bee_conditionals3_instruction: "Help the bee collect all of the nectar.
+        \r\n\r\nYou can only collect nectar from flowers, but you can check any space
+        to see if there is a flower."
+      courseF_bee_conditionals4_instruction: "Get all of the nectar using as few
+        blocks as possible."
+      courseF_bee_conditionals5_instruction: "Collect all of the nectar using as
+        few blocks as possible"
+      courseF_bee_conditionals7_predict2_instruction: "Use the `if/else` block to
+        collect nectar at flowers and make honey at honeycomb."
+      courseF_bee_conditionals8_instruction: "Collect nectar if there is a flower.\r\nOtherwise,
+        make honey (because there is a honeycomb)."
       courseF_bee_for1_instruction: "Collect the nectar from each flower using the
         fewest blocks possible."
       courseF_bee_for10_instruction: "**Challenge:** Take what you've learned about
@@ -6314,6 +6347,22 @@ en:
         be to collect 3, 6, 9, 12, 15 nectar?"
       courseF_bee_for9_instruction: "Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible."
+      courseF_bee_functions2_instruction: "Use the `get only nectar` function to
+        collect the nectar from each flower."
+      courseF_bee_functions3_instruction: "Click \"edit\" to put code inside the
+        `only make honey` function, then use it to solve this puzzle."
+      courseF_bee_functions3a_instruction: "Write a function that gets nectar if
+        the bee is at a flower, otherwise it gets honey.  Use your function to solve
+        the puzzle!"
+      courseF_bee_functions4_instruction: "Use the `move and get nectar` function
+        to collect all of the nectar."
+      courseF_bee_functions5_instruction: "Now write the function to collect nectar
+        from the flowers."
+      courseF_bee_functions6_instruction: "Create a function and call it to collect
+        nectar at each flower and make honey at each honeycomb."
+      courseF_bee_functions7_instruction: "Create your own function that goes down
+        a path, gets nectar, makes honey, and then returns the bee to the top of the
+        path. Collect all the nectar and make all the honey!"
       courseF_bee_fwp2_instruction: "Pull this code into a function, then call the
         function to check this row for nectar."
       courseF_bee_fwp3_instruction: "Let's see if the function makes collecting
@@ -6328,6 +6377,26 @@ en:
       courseF_bee_fwp9_instruction: "Use your new function to solve this puzzle."
       courseF_bee_fwp9_predict1_instruction: "Use your new function to solve this
         puzzle."
+      courseF_farmer_ramp11_instruction: "This puzzle also uses nested loops.  Can
+        you figure out how?"
+      courseF_maze_predict1_instruction: "This code includes a new block. What do
+        you think would happen if you press the \"Run\" block?"
+      courseF_maze_ramp1_instruction: "For this puzzle, connect all of the blocks
+        from the workspace together below the `when run` event and click \"Run\" to
+        watch it go!"
+      courseF_maze_ramp13_instruction: "Time for another Angry Birds puzzle to pull
+        it all together!"
+      courseF_maze_ramp15_instruction: "Use what you've learned to get the bird
+        to the pig!"
+      courseF_maze_ramp2_instruction: "Drag a `repeat` block out of the toolbox and
+        attach it to the `when run` event.   Place the `move forward` block inside
+        to finish your code."
+      courseF_maze_ramp4_instruction: "Avoid TNT or feathers will fly!"
+      courseF_maze_ramp5_instruction: "Avoid the TNT."
+      courseF_maze_ramp6_instruction: "\"Keep calm and help me find the bad pig.
+        Otherwise I might get angry!\""
+      courseF_maze_ramp7_instruction: "Use what you've learned to get the bird to
+        the pig!"
       courseF_playlab_variables0_instruction: "This is Pirate Pegleg.  He's awfully
         hard to understand these days!"
       courseF_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
@@ -6364,6 +6433,8 @@ en:
         answers together into your very own story."
       courseF_playlab_variables8b_instruction: "Use what you've learned to create
         an improv scene between the actors."
+      courseF_video_createFunctions_instruction: "We don't have a video for creating
+        functions, yet. This is a placeholder."
       course_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
         hard to understand these days!"
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech
@@ -6376,6 +6447,8 @@ en:
         lab! Here's an example of story in play lab."
       coursef_explore_playlab_cat_game_instruction: "You can do whatever you want
         in play lab! Here's an example of game you can make."
+      coursef_maze_ramp3_instruction: "There is one extra block that is going to
+        cause the bird to crash. Throw it away by dragging it back to the toolbox."
       drawings!_instruction: "Draw the equilateral triangle - all the sides are the
         same!"
       eventsIntro_instruction: "Need a better playlab/events combo"

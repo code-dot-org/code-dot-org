@@ -22,12 +22,16 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     get :new, params: {workshop_id: @workshop.id}
     assert_response :success
     assert_template :new
+    # Should see this message if not logged in
+    assert_select 'span.info-box-message', text: 'Already have a Code.org account?'
   end
 
   test 'logged-in users can enroll' do
     sign_in create :teacher
     get :new, params: {workshop_id: @workshop.id}
     assert_template :new
+    # Should NOT see this message if logged in
+    assert_select 'span.info-box-message', count: 0
   end
 
   test 'workshop organizers can see enrollment form' do

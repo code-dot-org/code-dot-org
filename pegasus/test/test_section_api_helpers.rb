@@ -41,12 +41,13 @@ class SectionApiHelperTest < SequelTestCase
     end
 
     describe 'update_if_allowed' do
-      # TODO(asher): Fix this test so that the DB change does not pollute other tests.
-      # it 'updates students' do
-      #   params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
-      #   updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
-      #   assert_equal 'Updated User', updated_student[:name]
-      # end
+      it 'updates students' do
+        params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
+        Dashboard.db.transaction(rollback: :always) do
+          updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
+          assert_equal 'Updated User', updated_student[:name]
+        end
+      end
 
       it 'noops for students in deleted sections' do
         params = {id: FakeDashboard::STUDENT_DELETED_SECTION[:id], name: 'Updated User'}
@@ -171,20 +172,156 @@ class SectionApiHelperTest < SequelTestCase
     end
 
     describe 'remove_student' do
-      # TODO(asher): After making tests not pollute each other, uncomment this test case and write
-      # additional test cases.
-      # it 'soft-deletes follower' do
-      #   pegasus_section = DashboardSection.fetch_if_teacher(
-      #     FakeDashboard::SECTION_NORMAL[:id],
-      #     FakeDashboard::TEACHER[:id]
-      #   )
-      #   removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
-      #   assert removed
-      # end
+      it 'soft-deletes follower' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+          removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
+          assert removed
+        end
+      end
+
+      it 'noops for soft-deleted followers' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+          FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        )
+        removed = pegasus_section.remove_student(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id])
+        refute removed
+      end
+    end
+
+    describe 'add_student' do
+      it 'creates a follower for new student' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+
+          pegasus_section.add_student(FakeDashboard::STUDENT_SELF)
+
+          assert_equal(
+            1,
+            Dashboard.db[:followers].where(student_user_id: FakeDashboard::STUDENT_SELF[:id]).count
+          )
+        end
+      end
+
+      it 'restores deleted follower' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+            FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+          )
+
+          pegasus_section.add_student(FakeDashboard::STUDENT_DELETED_FOLLOWER)
+
+          assert_equal(
+            1,
+            Dashboard.db[:followers].
+              where(student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).
+              count
+          )
+          assert_nil Dashboard.db[:followers].
+            where(student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).
+            first[:deleted_at]
+        end
+      end
     end
   end
 
   describe DashboardUserScript do
-    # TODO(asher): Add tests here.
+    before do
+      FakeDashboard.use_fake_database
+      @script_id = 1
+    end
+
+    describe 'assign_script_to_user' do
+      it 'creates a new user_scripts if not pre-existing' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::STUDENT[:id]
+
+          DashboardUserScript.assign_script_to_user(@script_id, user_id)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_id, script_id: @script_id).
+            all
+          assert_equal 1, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # assert user_scripts.first[:assigned_at]
+        end
+      end
+
+      it 'does not update user_scripts if one exists' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::STUDENT[:id]
+          Dashboard.db[:user_scripts].
+            insert(user_id: user_id, script_id: @script_id, created_at: '2017-01-02 00:00:00')
+
+          DashboardUserScript.assign_script_to_user(@script_id, user_id)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_id, script_id: @script_id).
+            all
+          assert_equal 1, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # assert user_scripts.first[:assigned_at]
+        end
+      end
+    end
+
+    describe 'assign_script_to_users' do
+      it 'noops if user_ids is empty' do
+        Dashboard.db.transaction(rollback: :always) do
+          DashboardUserScript.assign_script_to_users(@script_id, [])
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: [], script_id: @script_id).
+            all
+          assert_equal 0, user_scripts.count
+        end
+      end
+
+      it 'creates new user_scripts if not pre-existing' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_ids = [FakeDashboard::STUDENT[:id], FakeDashboard::STUDENT_SELF[:id]]
+
+          DashboardUserScript.assign_script_to_users(@script_id, user_ids)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_ids, script_id: @script_id).
+            all
+          assert_equal 2, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # user_scripts.each do |user_script|
+          #   assert user_script[:assigned_at]
+          # end
+        end
+      end
+
+      it 'does not update user_scripts if already exists' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_ids = [FakeDashboard::STUDENT[:id], FakeDashboard::STUDENT_SELF[:id]]
+          user_ids.each do |user_id|
+            Dashboard.db[:user_scripts].
+              insert(user_id: user_id, script_id: @script_id, created_at: '2017-01-02 00:00:00')
+          end
+
+          DashboardUserScript.assign_script_to_users(@script_id, user_ids)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_ids, script_id: @script_id).
+            all
+          assert_equal 2, user_scripts.count
+          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
+          # user_scripts.each do |user_script|
+          #   assert user_script[:assigned_at]
+          # end
+        end
+      end
+    end
   end
 end

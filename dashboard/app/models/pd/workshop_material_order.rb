@@ -31,7 +31,7 @@
 #  index_pd_workshop_material_orders_on_user_id           (user_id) UNIQUE
 #
 
-require 'pd/mimeo_rest_client'
+require_dependency 'pd/mimeo_rest_client'
 require 'state_abbr'
 module Pd
   class WorkshopMaterialOrder < ActiveRecord::Base
@@ -58,7 +58,7 @@ module Pd
     validates_presence_of :phone_number
     validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
 
-    validates :phone_number, format: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
+    validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
     validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
 
     validate :valid_address?, if: :address_fields_changed?
@@ -69,8 +69,13 @@ module Pd
       found = Geocoder.search(full_address)
       if found.empty?
         errors.add(:base, 'Address could not be verified. Please double-check.')
-      elsif found.first.postal_code != zip_code
-        errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
+      else
+        if found.first.postal_code != zip_code
+          errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
+        end
+        unless found.first.street_number
+          errors.add(:street, 'must be a valid street address (no PO boxes)')
+        end
       end
     end
 
@@ -103,6 +108,11 @@ module Pd
         end
       end
     end
+
+    scope :active, -> {where(tracking_id: nil)}
+    scope :successfully_ordered, -> {where.not(order_id: nil)}
+    scope :shipped, -> {where(order_status: MimeoRestClient::STATUS_SHIPPED)}
+    scope :with_order_errors, -> {where.not(order_error: nil)}
 
     def full_address
       [street, apartment_or_suite, city, state, zip_code].compact.join(', ')
@@ -141,7 +151,7 @@ module Pd
     end
 
     def shipped?
-      order_status == 'Shipped'
+      order_status == MimeoRestClient::STATUS_SHIPPED
     end
 
     # Place order with the Mimeo API, based on shipping info in a valid model
@@ -179,7 +189,7 @@ module Pd
         self.order_id = response['OrderFriendlyId']
       rescue RestClient::ExceptionWithResponse => error
         is_correctable = USER_CORRECTABLE_ORDER_ERRORS.any? do |uce|
-          error.response.try(:body).include?(uce[:match_text])
+          error.response.try(:body).try(:include?, uce[:match_text])
         end
         self.order_error = report_error(:place_order, error, notify_honeybadger: !is_correctable).to_json
       end
@@ -188,10 +198,13 @@ module Pd
     end
 
     # Update status and tracking info.
+    # @param max_attempts [Integer] Number of attempts on known retryable errors for each API call
+    #   (Default 2, i.e. one retry)
     # @return [Pd::WorkshopMaterialOrder] this object (with updated status and tracking)
-    def refresh
-      check_status
-      update_tracking_info
+    def refresh(max_attempts: 2)
+      client_params = {max_attempts: max_attempts}
+      check_status(client_params)
+      update_tracking_info(client_params)
 
       self
     end
@@ -203,13 +216,14 @@ module Pd
     #   order_status and order_status_changed_at
     # See MimeoRestClient::STATUS for available status strings.
     # Once 'Shipped', it will not be checked again.
-    def check_status
+    # @param client_params [Hash] params for the client initialization
+    def check_status(client_params)
       return nil unless order_id
       return order_status if MimeoRestClient.final_status? order_status
 
       self.order_status_last_checked_at = Time.zone.now
       begin
-        new_status = MimeoRestClient.new.get_status order_id
+        new_status = MimeoRestClient.new(client_params).get_status order_id
 
         if new_status != order_status
           self.order_status = new_status
@@ -224,12 +238,13 @@ module Pd
     # Set tracking_id and tracking_url, if present
     # This is idempotent. Once a tracking id is received, it will be kept on
     #   subsequent calls (without contacting Mimeo)
-    def update_tracking_info
+    # @param client_params [Hash] params for the client initialization
+    def update_tracking_info(client_params)
       return nil unless shipped?
 
       unless tracking_id.present?
         begin
-          response = MimeoRestClient.new.track order_id
+          response = MimeoRestClient.new(client_params).track order_id
           update!(
             tracking_id: response['TrackingNumber'],
             tracking_url: response['TrackingUrl']

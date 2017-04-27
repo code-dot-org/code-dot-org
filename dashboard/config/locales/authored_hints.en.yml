@@ -726,7 +726,7 @@ en:
         courseA_artist_loops8_b: How would you loop the code that has been given to you?
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
-        courseA_artist_loops9_a: 'You don''t have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. '
+        courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
       courseA_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           You can use loops like this to create the walls and the roof. Try repeating different blocks.
@@ -830,6 +830,10 @@ en:
           ![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand \n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)"
+        courseA_playLab_events5_b: |-
+          Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
@@ -887,7 +891,7 @@ en:
       courseB_artist_loops8_predict1_authored_hint: {}
       courseB_artist_loops9_authored_hint: {}
       courseB_artist_loops_challenge1_authored_hint:
-        courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!'
+        courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
         courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump` to the next!
         courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over some of the same lines twice. '
       courseB_artist_loops_challenge2_authored_hint:
@@ -1029,6 +1033,75 @@ en:
           This is the block you need to make the knight vanish:
 
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+      courseB_playlab_events_challenge2_authored_hint:
+        courseB_playlab_events_challenge2_a: Each animal in the game should vanish when tapped. It should also come back after a second or two!
+        courseB_playlab_events_challenge2_b: |-
+          Use other event blocks to make the other animals disappear!
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block>
+            </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Use extra commands to play sounds or score points when you click the animals!
+          <xml>
+            <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+            <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          Mix it up!
+
+          Make some animals give more points than others.
+          Use different sounds.
+          Change the animals' moods!
+      courseB_playlab_events_challenge2_embed_authored_hint:
+        courseB_playlab_events_challenge2_a: Each animal in the game should vanish when tapped. It should also come back after a second or two!
+        courseB_playlab_events_challenge2_b: |-
+          Use other event blocks to make the other animals disappear!
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block>
+            </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Use extra commands to play sounds or score points when you click the animals!
+          <xml>
+            <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+            <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          Mix it up!
+
+          Make some animals give more points than others.
+          Use different sounds.
+          Change the animals' moods!
+      courseB_playlab_events_challenge2_template_authored_hint:
+        courseB_playlab_events_challenge2_a: Each animal in the game should vanish when tapped. It should also come back after a second or two!
+        courseB_playlab_events_challenge2_b: |-
+          Use other event blocks to make the other animals disappear!
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block>
+            </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Use extra commands to play sounds or score points when you click the animals!
+          <xml>
+            <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+            <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          Mix it up!
+
+          Make some animals give more points than others.
+          Use different sounds.
+          Change the animals' moods!
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
       courseC_PlayLab_events4_authored_hint:
@@ -1288,23 +1361,42 @@ en:
             - make a cirlce
             - jump forward 50 pixels
             - turn right 90 degrees
+        courseD_artist_nestedLoops5_b: To make a circle set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.
       courseD_artist_nestedLoops6_authored_hint:
         courseD_artist_nestedLoops6_a: You'll need to repeat your outer loop 6 times now, instead of only 4.
         courseD_artist_nestedLoops6_b: 'Now that you''re breaking 360 degrees into six pieces instead of only four, you will only need to turn 60 degrees between circles. '
       courseD_artist_nestedLoops7_authored_hint:
-        courseD_artist_nestedLoops7_a: |-
+        courseD_artist_nestedLoops7_a: You'll need to use nested loops here. First, make a loop to draw a square. What will the outer loop need to be if the inner loop is to draw a square?
+        courseD_artist_nestedLoops7_b: |-
           Use a nested loop, where the inner loop is the code for a square.
 
           - repeat 6 times
             - make square
-            - jump forward by 50 pixels
-            - turn 60 degrees
+            - jump forward by **50 pixels**
+            - turn **60 degrees**
       courseD_artist_nestedLoops8_authored_hint:
-        courseD_artist_nestedLoops8_d: To have 8 hexagons in your drawing, you'll need to turn 45 degrees between each of them.
-        courseD_artist_nestedLoops8_a: If you're stuck, start by looking at the last puzzle, then change the things that are different.
+        courseD_artist_nestedLoops8_a: To have 8 hexagons in your drawing, you'll need to turn **45 degrees** between each of them. Why? Because 360 degrees (a full turn around) divided by 8 (the number of hexagons) is 45 degrees.
+        courseD_artist_nestedLoops8_b: If you're stuck, start by looking at the last puzzle, then change the things that are different.
+        courseD_artist_nestedLoops8_c: |-
+          Use a nested loop:
+
+           - Repeat 8 times
+              - draw a hexagon
+              - jump forward 50 pixels
+              - turn right 45 degrees
       courseD_artist_nestedLoops9_authored_hint:
         courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before, but this time, make it with squares.
         courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end of the first set, but this time use triangles.
+        courseD_artist_nestedLoops9_c: |-
+          Use two nested loops:
+           - Repeat 8 times
+              - draw a square
+              - jump forward 50 pixels
+              - turn right by 45 degrees
+           - Repeat 8 times
+              - draw a triangle
+              - jump forward 50 pixels
+              - turn right by 45 degrees
       courseD_artist_nestedLoops9_predict1_authored_hint:
         courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before, but this time, make it with squares.
         courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end of the first set, but this time use triangles.
@@ -1340,7 +1432,12 @@ en:
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
-        courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space. '
+        courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
+        courseD_bee_conditionals4_c: Using the block `while there is a path ahead`, you should `move forward` and check for a flower. `if there is a flower` what should the bee do?
+      courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block, you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
       courseD_bee_conditionals7_authored_hint:
@@ -1553,10 +1650,24 @@ en:
         courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while` loop to keep digging until the pile is gone.
       courseD_farmer_while4_predict1_authored_hint: {}
       courseD_farmer_while5_authored_hint:
-        courseD_farmer_conditionals5a: Try nesting a `while` loop inside of a `repeat` loop.
+        courseD_farmer_conditionals5a_a: Try nesting a `while` loop inside of a `repeat` loop.
+        courseD_farmer_conditionals5a_b: The farmer needs to move forward a total of five times to get to the end of the row. What else does the farmer need to do?
+        courseD_farmer_conditionals5a_c: Move forward 5 times. Each time you move forward, remove the pile of dirt by using the `while there is a pile` block.
       courseD_farmer_while6_authored_hint:
         courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to figure out how many times to fill each hole.
         courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward and down several times in a stair-step pattern.
+        courseD_farmer_conditionals6_c: |-
+          The stair step pattern uses the following blocks
+           - move forward
+           - fill hole
+           - turn right
+           - move forward
+           - fill hole
+           - turn left
+
+          How many times do you need to use this stair step pattern?
+
+          Make sure you are using the `while there is a hole` to fill the hole.
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
       courseD_farmer_while8_authored_hint:
@@ -1630,6 +1741,8 @@ en:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
         courseD_playLab_cond3_b: 'You will need to use an `if / else` block for the second half of this challenge. '
         courseD_playLab_cond3_c: "`If` the dragon is happy `score point`, `score point`.\n<br/>\n \n`Else` `score point`."
+      courseD_playLab_cond3b_authored_hint:
+        courseD_playLab_cond3b_a: You will need to add blocks to your `repeat forever` loop to make the dragon continue to move up and down
       courseD_playLab_cond4_authored_hint:
         courseD_playLab_cond4_a: You will want to use the `when run` event to get the ninja to chase the pirate.
         courseD_playLab_cond4_b: There is a special block called `set every masked ninja to chase actor` that will keep the ninja hot on the pirate's trail!
@@ -1686,8 +1799,24 @@ en:
         courseD_artist_functions8_b: After your first line of squares, you need to move the artist down and back before you start your second line of squares.
         courseD_artist_functions8_c: You should move the artist back a different number of pixels for even lines than for odd ones.
       courseE_artist_functions9_authored_hint:
-        courseD_artist_functions9_a: To get around the need to have multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
-        courseD_artist_functions9_b: This drawing is made by creating a line of triangles and turning either 60 or 120 degrees after each time you draw the triangle line.
+        courseD_artist_functions9_a: |-
+          This puzzle can be broken into three parts:
+           - draw a triangle
+           - draw a line of triangles
+           - draw the diamond made up of lines of triangles
+        courseD_artist_functions9_b: This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.
+        courseD_artist_functions9_c: |-
+          To draw a line of triangles:
+           - repeat 4 times
+              - draw a triangle
+              - jump forward 50 pixels
+        courseD_artist_functions9_d: |-
+          To draw the diamond:
+           - repeat 2 times
+              - draw a line of triangles
+              - turn 120 degrees
+              - draw a line of triangles
+              - turn 60 degrees
       courseE_artist_functions_predict1_authored_hint: {}
       courseE_artist_functions_predict2_authored_hint: {}
       courseE_artist_predict1_authored_hint: {}
@@ -1797,7 +1926,8 @@ en:
       courseE_farmer_functions5a_authored_hint: {}
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a `while lettuce` and a `while pumpkin` to make sure you get everything.
-      courseE_farmer_functions5c_authored_hint: {}
+      courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_a: A staircase pattern will be helpful here!
       courseE_farmer_functions6_authored_hint: {}
       courseE_farmer_functions6b_authored_hint: {}
       courseE_farmer_functions6c_authored_hint: {}
@@ -1918,6 +2048,17 @@ en:
       courseF_artist_fwp8_authored_hint:
         courseF_artist_fwp8_a: If your function is correct, you shouldn't need to change it for this puzzle.
         courseF_artist_fwp8_b: The only thing you should need to do between function calls is change the color of the line.
+      courseF_artist_predict1_authored_hint: {}
+      courseF_artist_ramp10_authored_hint:
+        courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
+      courseF_artist_ramp8_authored_hint:
+        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+      courseF_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to jump forward again.
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
@@ -1940,6 +2081,28 @@ en:
       courseF_artist_variables_8_authored_hint:
         courseF_artist_variables_8_a: |
           Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+      courseF_bee_conditionals1_predict1_authored_hint:
+        courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
+      courseF_bee_conditionals2_authored_hint:
+        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
+      courseF_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
+      courseF_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
+        courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
+        courseD_bee_conditionals4_c: Using the block `while there is a path ahead`, you should `move forward` and check for a flower. `if there is a flower` what should the bee do?
+      courseF_bee_conditionals5_authored_hint:
+        courseF_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseF_bee_conditionals5_b: Inside the `while there is a path ahead` block, you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
+        courseF_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
+      courseF_bee_conditionals7_predict2_authored_hint:
+        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
+      courseF_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        courseD_bee_conditionals8_b: |-
+          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+
+          Only check for nectar and honey at the end of your path.
       courseF_bee_for1_authored_hint:
         courseF_bee_for1_a: A loop will help you here.
       courseF_bee_for10_authored_hint:
@@ -1971,13 +2134,36 @@ en:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
+      courseF_bee_functions2_authored_hint:
+        courseF_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
+      courseF_bee_functions3_authored_hint:
+        courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
+      courseF_bee_functions3a_authored_hint:
+        courseF_bee_functions3_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
+      courseF_bee_functions4_authored_hint:
+        courseE_bee_functions4_a: Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
+      courseF_bee_functions5_authored_hint:
+        courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
+        courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
+      courseF_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      courseF_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_b: |-
+          Remember to build your code inside of the green function block.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar from a flower.
+        courseF_bee_fwp1_b: Continue along the path using a `repeat` block. Make sure you are using a `move forward` block and checking if there is a flower using a `if` statement.
       courseF_bee_fwp2_authored_hint:
         courseF_bee_fwp2_a: "To turn this into a function, simply drag the code into the existing function block.  \n\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)"
         courseF_bee_fwp2_b: Don't forget to connect the `rowOfNectar` block to `when run` to call the function that you just built.
       courseF_bee_fwp3_authored_hint:
         courseF_bee_fwp3_a: Your function will run no matter which direction you're facing.
+        courseF_bee_fwp3_b: There are 3 rows of nectar, what kind of turns and movements do you need to make between each row?
+        courseF_bee_fwp3_c: To solve this puzzle, you'll need to call your function 3 times. In between each call, you need to `turn right`, `move forward` 2 times, then `turn right` again. OR, you need to `turn left`, `move forward` 2 times, then `turn left again`.
       courseF_bee_fwp4_authored_hint:
         courseF_bee_fwp4_a: You will need to add a parameter and use the resulting variable in your loop.
       courseF_bee_fwp5_authored_hint:
@@ -1990,12 +2176,42 @@ en:
       courseF_bee_fwp8_authored_hint: {}
       courseF_bee_fwp9_authored_hint: {}
       courseF_bee_fwp9_predict1_authored_hint: {}
+      courseF_farmer_ramp11_authored_hint:
+        courseE_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
+        courseE_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce, instead of dragging out 5 `pick lettuce` blocks?
+        courseE_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)
+      courseF_maze_predict1_authored_hint: {}
+      courseF_maze_ramp1_authored_hint:
+        courseF_maze_programming1_0: If the bird isn't getting to the pig, make sure all of the blocks have been fully clicked together, then click "Run" again.
+      courseF_maze_ramp13_authored_hint:
+        courseF_maze_ramp11_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseF_maze_ramp11_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+      courseF_maze_ramp15_authored_hint:
+        courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+      courseF_maze_ramp2_authored_hint:
+        courseF_maze_programming2_a: To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the `when run` block.
+      courseF_maze_ramp4_authored_hint:
+        courseF_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_programming4_b: To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.
+      courseF_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+      courseF_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+      courseF_maze_ramp7_authored_hint:
+        courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block that is connected to the purple `set shout to` block.
       courseF_playlab_variables3b_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
       courseF_playlab_variables3bEdit_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
+      courseF_playlab_variables7b_authored_hint:
+        courseF_playlab_variables7b_a: Have a cat and a dog talk about their favorite foods. Use the ask block to find out the favorite food, then display the text to the screen!
+        courseF_playlab_variables7b_b: Have your favorite character ask if you want to hear a joke. If the answer to your ask bot is yes, display a joke to the screen.
+      coursef_maze_ramp3_authored_hint:
+        courseF_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
       drawings!_authored_hint:
         triangle_geometry_hint: 'Remember: an equilateral triangle has three sides, with a 60 degree turn between each!'
         repeat_pointer: You have to draw a side and turn 3 times...what block can you use to run the same instructions many times?

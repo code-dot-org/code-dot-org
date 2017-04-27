@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
@@ -457,6 +456,7 @@ testsContext.keys().forEach(testsContext);
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
+    'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
@@ -679,7 +679,7 @@ testsContext.keys().forEach(testsContext);
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
-    mkdirp.sync(current);
+    child_process.execSync('mkdir -p ' + current);
     appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +

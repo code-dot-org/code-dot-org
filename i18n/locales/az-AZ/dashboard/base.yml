@@ -79,6 +79,7 @@ az:
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} müəllim artıq qeydiyyatdan keçib.'
@@ -173,6 +174,14 @@ az:
       Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Dəvətnamə göndərildi'
     added_teacher: '%{name} müəlliminiz kimi əlavə olundu'
@@ -186,8 +195,6 @@ az:
       blank_code: "Seçilmiş kodu daxil edin"
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
-      invite_student:
-        subject: "Code.org-da %{teacher_name} ilə dərsə qoşulun!"
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
   reports:
@@ -302,7 +309,7 @@ az:
     students:
       dashboard: 'Go to Teacher Dashboard'
     user_not_found: 'The teacher could not be found.'
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'You have left section %{section_code} with %{teacher_name}.'
     panel:
       answer_viewer: 'Müəllim Paneli'
       student: 'şagird'
@@ -386,6 +393,7 @@ az:
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Adınızı əlavə edin"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
@@ -398,17 +406,15 @@ az:
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
-    section_code_not_entered: "Please provide current_section_code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
     current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
-    students_not_yours: "You cannot move students from a section that does not belong to you."
-    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
     student_ids_not_entered: "Please provide student_ids."
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
-    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
+    already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
   share:
     title: "Learn on Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."

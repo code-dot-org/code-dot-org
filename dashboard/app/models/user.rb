@@ -35,10 +35,6 @@
 #  teacher_prize_id           :integer
 #  teacher_bonus_prize_earned :boolean          default(FALSE)
 #  teacher_bonus_prize_id     :integer
-#  confirmation_token         :string(255)
-#  confirmed_at               :datetime
-#  confirmation_sent_at       :datetime
-#  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
@@ -59,7 +55,6 @@
 # Indexes
 #
 #  index_users_on_birthday                               (birthday)
-#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
@@ -72,7 +67,6 @@
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
-#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
 #  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
@@ -108,7 +102,7 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -220,6 +214,15 @@ class User < ActiveRecord::Base
     end
     # Return the cached results.
     return @permissions.include? permission
+  end
+
+  # Revokes all escalated permissions associated with the user, including admin status and any
+  # granted UserPermission's.
+  def revoke_all_permissions
+    self.admin = nil
+    save(validate: false)
+
+    UserPermission.where(user_id: id).each(&:destroy)
   end
 
   def district_contact?
@@ -618,10 +621,19 @@ class User < ActiveRecord::Base
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
-    user_levels_by_level = user_levels_by_level(script)
+    # some of our user_levels may be for levels within level_groups, or for levels
+    # that are no longer in this script. we want to ignore those, and only look
+    # user_levels that have matching script_levels
+    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # the script in multiple places (i.e. via level swapping) there's some potential
+    # for strange behavior.
+    levels = script.script_levels.map(&:level_ids).flatten
+    user_levels_by_level = user_levels.
+      where(script_id: script.id, level: levels).
+      index_by(&:level_id)
 
-    # Find the user level that we've most recently had progress on
-    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+    # Find the user_level that we've most recently had progress on
+    user_level = user_levels_by_level.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
@@ -1085,12 +1097,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # @param script [Script] The script to assign.
+  # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.assigned_at = Time.now
-
-      user_script.save!
+      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
       return user_script
     end
   end

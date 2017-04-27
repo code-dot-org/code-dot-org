@@ -22,7 +22,6 @@ import AppStorage from './appStorage';
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
 import { getDatabase } from '../storage/firebaseUtils';
-import experiments from "../util/experiments";
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -63,8 +62,9 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import project from '../code-studio/initApp/project';
-import * as applabThumbnail from './applabThumbnail';
+import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
+import {makeDisabledConfig} from '../dropletUtils';
 
 import {TestResults, ResultType} from '../constants';
 
@@ -300,8 +300,9 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
-  if (Applab.tickCount === applabThumbnail.CAPTURE_TICK_COUNT) {
-    applabThumbnail.captureScreenshot();
+  if (Applab.tickCount === applabConstants.CAPTURE_TICK_COUNT) {
+    const visualization = document.getElementById('visualization');
+    thumbnailUtils.captureThumbnailFromElement(visualization);
   }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
@@ -339,7 +340,7 @@ Applab.init = function (config) {
   jsInterpreterLogger = null;
 
   // Necessary for tests.
-  applabThumbnail.init();
+  thumbnailUtils.init();
 
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
@@ -491,12 +492,6 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerToolkit.dropletConfig);
-
-  // Set the custom set of blocks (may have had maker blocks merged in) so
-  // we can later pass the custom set to the interpreter.
-  config.level.levelBlocks = config.dropletConfig.blocks;
-
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -588,12 +583,27 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
+    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch
   });
+
+  config.dropletConfig = dropletConfig;
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
+    config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.dropletConfig);
+  } else {
+    // Push gray, no-autocomplete versions of maker blocks for display purposes.
+    const disabledMakerDropletConfig = makeDisabledConfig(makerToolkit.dropletConfig);
+    config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        disabledMakerDropletConfig);
   }
+
+  // Set the custom set of blocks (may have had maker blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
 
   getStore().dispatch(actions.changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
@@ -1212,19 +1222,7 @@ Applab.onPuzzleComplete = function (submit) {
     }
   };
 
-  var divApplab = document.getElementById('divApplab');
-  if (!divApplab || typeof divApplab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divApplab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        Applab.feedbackImage = pngDataUrl;
-        Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }
-    });
-  }
+  sendReport();
 };
 
 Applab.executeCmd = function (id, name, opts) {

@@ -3,60 +3,56 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var aceMode = require('./acemode/mode-javascript_codeorg');
-var color = require("./util/color");
-var parseXmlElement = require('./xml').parseElement;
-var utils = require('./utils');
-var dropletUtils = require('./dropletUtils');
-var _ = require('lodash');
-var dom = require('./dom');
-var constants = require('./constants.js');
-var KeyCodes = constants.KeyCodes;
-var msg = require('@cdo/locale');
-var blockUtils = require('./block_utils');
-var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
-var url = require('url');
-var FeedbackUtils = require('./feedback');
-var VersionHistory = require('./templates/VersionHistory');
-var Alert = require('./templates/alert');
-var codegen = require('./codegen');
-var puzzleRatingUtils = require('./puzzleRatingUtils');
-var logToCloud = require('./logToCloud');
-var AuthoredHints = require('./authoredHints');
-var DialogButtons = require('./templates/DialogButtons');
-import WireframeButtons from './templates/WireframeButtons';
-import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
-import DialogInstructions from './templates/instructions/DialogInstructions';
-var assetsApi = require('./clientApi').assets;
-import * as assetPrefix from './assetManagement/assetPrefix';
-var annotationList = require('./acemode/annotationList');
-var shareWarnings = require('./shareWarnings');
-import { setPageConstants } from './redux/pageConstants';
-import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
-import SmallFooter from './code-studio/components/SmallFooter';
-import project from './code-studio/initApp/project';
-import * as assets from './code-studio/assets';
-import i18n from './code-studio/i18n';
-import AbuseError from './code-studio/components/abuse_error';
-import {TestResults} from './constants';
+import {EventEmitter} from 'events';
+import _ from 'lodash';
+import url from 'url';
+import {Provider} from 'react-redux';
 
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
+import * as aceMode from './acemode/mode-javascript_codeorg';
+import * as assetPrefix from './assetManagement/assetPrefix';
+import * as assets from './code-studio/assets';
+import * as blockUtils from './block_utils';
+import * as codegen from './codegen';
+import * as dom from './dom';
+import * as dropletUtils from './dropletUtils';
+import * as shareWarnings from './shareWarnings';
+import * as utils from './utils';
+import AbuseError from './code-studio/components/abuse_error';
+import Alert from './templates/alert';
+import AuthoredHints from './authoredHints';
+import DialogButtons from './templates/DialogButtons';
+import DialogInstructions from './templates/instructions/DialogInstructions';
+import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
+import FeedbackUtils from './feedback';
+import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import SmallFooter from './code-studio/components/SmallFooter';
+import Sounds from './Sounds';
+import VersionHistory from './templates/VersionHistory';
+import WireframeButtons from './templates/WireframeButtons';
+import annotationList from './acemode/annotationList';
+import color from "./util/color";
+import i18n from './code-studio/i18n';
+import logToCloud from './logToCloud';
+import msg from '@cdo/locale';
+import project from './code-studio/initApp/project';
+import puzzleRatingUtils from './puzzleRatingUtils';
+import {KeyCodes, TestResults} from './constants';
+import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
-import { getStore } from './redux';
-import { Provider } from 'react-redux';
+import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
+import {getStore} from './redux';
+import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
+import {parseElement as parseXmlElement} from './xml';
+import {setIsRunning} from './redux/runState';
+import {setPageConstants} from './redux/pageConstants';
+import {setVisualizationScale} from './redux/layout';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
-import {
-  closeDialog as closeInstructionsDialog
-} from './redux/instructionsDialog';
-import { setIsRunning } from './redux/runState';
-import { setVisualizationScale } from './redux/layout';
-import Sounds from './Sounds';
-
-// Make sure polyfills are available in all code studio apps and level tests.
-import './polyfills';
 
 var copyrightStrings;
 
@@ -82,128 +78,132 @@ var MAX_PHONE_WIDTH = 500;
  *           (such as when they are not signed in).
  */
 
-function StudioApp() {
-  this.feedback_ = new FeedbackUtils(this);
-  this.authoredHintsController_ = new AuthoredHints(this);
+class StudioApp extends EventEmitter {
+  constructor() {
+    super();
+    this.feedback_ = new FeedbackUtils(this);
+    this.authoredHintsController_ = new AuthoredHints(this);
 
-  /**
-  * The parent directory of the apps. Contains common.js.
-  */
-  this.BASE_URL = undefined;
+    /**
+     * The parent directory of the apps. Contains common.js.
+     */
+    this.BASE_URL = undefined;
 
-  this.enableShowCode = true;
-  this.editCode = false;
-  this.usingBlockly_ = true;
+    this.enableShowCode = true;
+    this.editCode = false;
+    this.usingBlockly_ = true;
 
-  /**
-   * @type {?Droplet.Editor}
-   */
-  this.editor = null;
-  /**
-   * @type {?DropletTooltipManager}
-   */
-  this.dropletTooltipManager = null;
+    /**
+     * @type {?Droplet.Editor}
+     */
+    this.editor = null;
+    /**
+     * @type {?DropletTooltipManager}
+     */
+    this.dropletTooltipManager = null;
 
-  // @type {string} for all of these
-  this.icon = undefined;
-  this.winIcon = undefined;
-  this.failureIcon = undefined;
+    // @type {string} for all of these
+    this.icon = undefined;
+    this.winIcon = undefined;
+    this.failureIcon = undefined;
 
-  // The following properties get their non-default values set by the application.
+    // The following properties get their non-default values set by the application.
 
-  /**
-   * Whether to alert user to empty blocks, short-circuiting all other tests.
-   * @member {boolean}
-   */
-  this.checkForEmptyBlocks_ = false;
+    /**
+     * Whether to alert user to empty blocks, short-circuiting all other tests.
+     * @member {boolean}
+     */
+    this.checkForEmptyBlocks_ = false;
 
-  /**
-  * The ideal number of blocks to solve this level.  Users only get 2
-  * stars if they use more than this number.
-  * @type {number}
-  */
-  this.IDEAL_BLOCK_NUM = undefined;
+    /**
+     * The ideal number of blocks to solve this level.  Users only get 2
+     * stars if they use more than this number.
+     * @type {number}
+     */
+    this.IDEAL_BLOCK_NUM = undefined;
 
-  /**
-   * @typedef {Object} TestableBlock
-   * @property {string|function} test - A test whether the block is
-   *           present, either:
-   *           - A string, in which case the string is searched for in
-   *             the generated code.
-   *           - A single-argument function is called on each user-added
-   *             block individually.  If any call returns true, the block
-   *             is deemed present.  "User-added" blocks are ones that are
-   *             neither disabled or undeletable.
-   * @property {string} type - The type of block to be produced for
-   *           display to the user if the test failed.
-   * @property {Object} [titles] - A dictionary, where, for each
-   *           KEY-VALUE pair, this is added to the block definition:
-   *           <title name="KEY">VALUE</title>.
-   * @property {Object} [value] - A dictionary, where, for each
-   *           KEY-VALUE pair, this is added to the block definition:
-   *           <value name="KEY">VALUE</value>
-   * @property {string} [extra] - A string that should be blacked
-   *           between the "block" start and end tags.
-   */
+    /**
+     * @typedef {Object} TestableBlock
+     * @property {string|function} test - A test whether the block is
+     *           present, either:
+     *           - A string, in which case the string is searched for in
+     *             the generated code.
+     *           - A single-argument function is called on each user-added
+     *             block individually.  If any call returns true, the block
+     *             is deemed present.  "User-added" blocks are ones that are
+     *             neither disabled or undeletable.
+     * @property {string} type - The type of block to be produced for
+     *           display to the user if the test failed.
+     * @property {Object} [titles] - A dictionary, where, for each
+     *           KEY-VALUE pair, this is added to the block definition:
+     *           <title name="KEY">VALUE</title>.
+     * @property {Object} [value] - A dictionary, where, for each
+     *           KEY-VALUE pair, this is added to the block definition:
+     *           <value name="KEY">VALUE</value>
+     * @property {string} [extra] - A string that should be blacked
+     *           between the "block" start and end tags.
+     */
 
-  /**
-  * @type {!TestableBlock[]}
-  */
-  this.requiredBlocks_ = [];
+    /**
+     * @type {!TestableBlock[]}
+     */
+    this.requiredBlocks_ = [];
 
-  /**
-  * The number of required blocks to give hints about at any one time.
-  * Set this to Infinity to show all.
-  * @type {number}
-  */
-  this.maxRequiredBlocksToFlag_ = 1;
+    /**
+     * The number of required blocks to give hints about at any one time.
+     * Set this to Infinity to show all.
+     * @type {number}
+     */
+    this.maxRequiredBlocksToFlag_ = 1;
 
-  /**
-  * @type {!TestableBlock[]}
-  */
-  this.recommendedBlocks_ = [];
+    /**
+     * @type {!TestableBlock[]}
+     */
+    this.recommendedBlocks_ = [];
 
-  /**
-  * The number of recommended blocks to give hints about at any one time.
-  * Set this to Infinity to show all.
-  * @type {number}
-  */
-  this.maxRecommendedBlocksToFlag_ = 1;
+    /**
+     * The number of recommended blocks to give hints about at any one time.
+     * Set this to Infinity to show all.
+     * @type {number}
+     */
+    this.maxRecommendedBlocksToFlag_ = 1;
 
-  /**
-  * The number of attempts (how many times the run button has been pressed)
-  * @type {?number}
-  */
-  this.attempts = 0;
+    /**
+     * The number of attempts (how many times the run button has been pressed)
+     * @type {?number}
+     */
+    this.attempts = 0;
 
-  /**
-  * Stores the time at init. The delta to current time is used for logging
-  * and reporting to capture how long it took to arrive at an attempt.
-  * @type {?number}
-  */
-  this.initTime = undefined;
+    /**
+     * Stores the time at init. The delta to current time is used for logging
+     * and reporting to capture how long it took to arrive at an attempt.
+     * @type {?number}
+     */
+    this.initTime = undefined;
 
-  /**
-   * If true, we don't show blockspace. Used when viewing shared levels
-   */
-  this.hideSource = false;
+    /**
+     * If true, we don't show blockspace. Used when viewing shared levels
+     */
+    this.hideSource = false;
 
-  /**
-   * If true, we're viewing a shared level.
-   */
-  this.share = false;
+    /**
+     * If true, we're viewing a shared level.
+     */
+    this.share = false;
 
-  this.onAttempt = undefined;
-  this.onContinue = undefined;
-  this.onResetPressed = undefined;
-  this.backToPreviousLevel = undefined;
-  this.sendToPhone = undefined;
-  this.enableShowBlockCount = true;
+    this.onAttempt = undefined;
+    this.onContinue = undefined;
+    this.onResetPressed = undefined;
+    this.backToPreviousLevel = undefined;
+    this.sendToPhone = undefined;
+    this.enableShowBlockCount = true;
 
-  this.disableSocialShare = false;
-  this.noPadding = false;
+    this.disableSocialShare = false;
+    this.noPadding = false;
 
-  this.MIN_WORKSPACE_HEIGHT = undefined;
+    this.MIN_WORKSPACE_HEIGHT = undefined;
+
+  }
 }
 
 /**
@@ -262,6 +262,7 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
+  this.config = config;
 
   this.hasContainedLevels = config.hasContainedLevels;
 
@@ -346,34 +347,6 @@ StudioApp.prototype.init = function (config) {
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
     this.fixViewportForSmallScreens_(viewport, config);
-  }
-
-  var showCode = document.getElementById('show-code-header');
-  if (showCode && this.enableShowCode) {
-    dom.addClickTouchEvent(showCode, _.bind(function () {
-      if (this.editCode) {
-        var result;
-        var nonDropletError = false;
-        // are we trying to toggle from blocks to text (or the opposite)
-        var fromBlocks = this.editor.currentlyUsingBlocks;
-        try {
-          result = this.editor.toggleBlocks();
-        } catch (err) {
-          nonDropletError = true;
-          result = {error: err};
-        }
-        if (result && result.error) {
-          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
-            dropletError: !nonDropletError,
-            fromBlocks: fromBlocks
-          });
-          this.feedback_.showToggleBlocksError();
-        }
-        this.onDropletToggle_();
-      } else {
-        this.feedback_.showGeneratedCode(config.appStrings);
-      }
-    }, this));
   }
 
   var blockCount = document.getElementById('blockCounter');
@@ -526,6 +499,8 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
+
+  this.emit('afterInit');
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
@@ -889,32 +864,12 @@ StudioApp.prototype.stopLoopingAudio = function (name) {
 StudioApp.prototype.inject = function (div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
-    rtl: this.isRtl(),
+    rtl: getStore().getState().isRtl,
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
-};
-
-/**
- * @returns {boolean} True if the current HTML page is in right-to-left language mode.
- */
-StudioApp.prototype.isRtl = function () {
-  var head = document.getElementsByTagName('head')[0];
-  if (head && head.parentElement) {
-    var dir = head.parentElement.getAttribute('dir');
-    return !!(dir && dir.toLowerCase() === 'rtl');
-  } else {
-    return false;
-  }
-};
-
-/**
- * @return {string} Locale direction string based on app direction.
- */
-StudioApp.prototype.localeDirection = function () {
-  return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
 StudioApp.prototype.showNextHint = function () {
@@ -930,7 +885,7 @@ StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: this.isRtl(),
+    rtl: getStore().getState().isRtl,
     scrollbars: false
   });
   this.loadBlocks(options.blocks);
@@ -989,6 +944,14 @@ StudioApp.prototype.arrangeBlockPosition = function (startBlocks, arrangement) {
 
 StudioApp.prototype.createModalDialog = function (options) {
   return this.feedback_.createModalDialog(options);
+};
+
+StudioApp.prototype.showToggleBlocksError = function () {
+  this.feedback_.showToggleBlocksError(this.Dialog);
+};
+
+StudioApp.prototype.showGeneratedCode = function () {
+  this.feedback_.showGeneratedCode(this.Dialog, this.config.appStrings);
 };
 
 /**
@@ -1252,7 +1215,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
-  if (this.isRtl()) {
+  if (getStore().getState().isRtl) {
     offset = window.innerWidth -
       (window.pageXOffset + rect.left + (rect.width / 2)) -
       parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
@@ -1286,7 +1249,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
-  if (this.isRtl()) {
+  if (getStore().getState().isRtl) {
     visualizationResizeBar.style.right = newVizWidthString;
     editorColumn.css('right', newVizWidthString);
   } else {
@@ -1727,9 +1690,6 @@ function runButtonClickWrapper(callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  if (!this.enableShowCode) {
-    document.getElementById('show-code-header').style.display = 'none';
-  }
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
@@ -1923,7 +1883,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // was initialized, so include it initially, and conditionally remove it here.
   if (!project.useFirebase()) {
     // Remove onRecordEvent from the palette
-    delete config.level.codeFunctions.onRecordEvent;
+    if (config.level.codeFunctions) {
+      delete config.level.codeFunctions.onRecordEvent;
+    }
 
     // Remove onRecordEvent from autocomplete, while still recognizing it as a command
     const block = config.dropletConfig.blocks.find(block => {
@@ -1934,21 +1896,13 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     }
   }
 
-  // Remove maker API blocks from palette and autocomplete, unless maker APIs are enabled.
-  // We didn't have access to project.useMakerAPIs() when dropletConfig
-  // was initialized, so include it initially, and conditionally remove it here.
+  // Remove maker API blocks from palette, unless maker APIs are enabled.
   if (!project.useMakerAPIs()) {
-    //// Remove maker blocks from the palette
-    makerDropletBlocks.forEach(block => {
-      delete config.level.codeFunctions[block.func];
-    });
-
-    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
-    const block = config.dropletConfig.blocks.find(block => {
-      return makerDropletBlocks.find(makerBlock => makerBlock.func === block.func);
-    });
-    if (block) {
-      block.noAutocomplete = true;
+    // Remove maker blocks from the palette
+    if (config.level.codeFunctions) {
+      makerDropletBlocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
     }
   }
 
@@ -1963,7 +1917,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
-    textModeAtStart: config.level.textModeAtStart
+    textModeAtStart: (
+      config.level.textModeAtStart === 'block' ? false :
+      config.level.textModeAtStart === false ? config.usingTextModePref :
+      config.level.textModeAtStart
+    ),
   });
 
   if (config.level.paletteCategoryAtStart) {
@@ -2092,7 +2050,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // droplet may now be in code mode if it couldn't parse the code into
   // blocks, so update the UI based on the current state (don't autofocus
   // if we have already created an instructionsDialog at this stage of init)
-  this.onDropletToggle_(!this.instructionsDialog);
+  this.onDropletToggle(!this.instructionsDialog);
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
@@ -2345,45 +2303,10 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 };
 
 /**
- * Modify the workspace header after a droplet blocks/code or palette toggle
- */
-StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
-  // Update header titles:
-  var showCodeHeader = document.getElementById('show-code-header');
-  var contentSpan = showCodeHeader.firstChild;
-  var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bfa\b/.test(node.className);
-  });
-  var imgBlocksGlyph = document.getElementById('blocks_glyph');
-
-  // Change glyph
-  if (usingBlocks) {
-    if (fontAwesomeGlyph && imgBlocksGlyph) {
-      fontAwesomeGlyph.style.display = 'inline-block';
-      imgBlocksGlyph.style.display = 'none';
-    }
-    contentSpan.lastChild.textContent = msg.showTextHeader();
-  } else {
-    if (fontAwesomeGlyph && imgBlocksGlyph) {
-      fontAwesomeGlyph.style.display = 'none';
-      imgBlocksGlyph.style.display = 'inline-block';
-    }
-    contentSpan.lastChild.textContent = msg.showBlocksHeader();
-  }
-
-  var blockCount = document.getElementById('blockCounter');
-  if (blockCount) {
-    blockCount.style.display =
-      (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
-  }
-};
-
-/**
  * Handle updates after a droplet toggle between blocks/code has taken place
  */
-StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
+StudioApp.prototype.onDropletToggle = function (autoFocus) {
   autoFocus = utils.valueOr(autoFocus, true);
-  this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
   if (!this.editor.currentlyUsingBlocks) {
     if (autoFocus) {
       this.editor.aceEditor.focus();
@@ -2807,7 +2730,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,
-    localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
@@ -2829,7 +2751,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
+    appType: config.app
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));
@@ -2880,6 +2804,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance.removeAllListeners();
     instance = __oldInstance;
     __oldInstance = null;
   };

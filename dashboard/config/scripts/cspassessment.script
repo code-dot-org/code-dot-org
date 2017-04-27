@@ -3,9 +3,3 @@ login_required true
 stage 'CS Principles Culminating Assessment'
 level 'CSP_Final_instructions'
 assessment 'CSP Culminating Assessment'
-
-stage 'CSP Student Post Survey Staging'
-assessment 'CSP post-assessment survey'
-
-stage 'Participate in a longitudinal study!'
-level 'Longitudinal study description'

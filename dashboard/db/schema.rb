@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170417182609) do
+ActiveRecord::Schema.define(version: 20170426001230) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -427,6 +427,15 @@ ActiveRecord::Schema.define(version: 20170417182609) do
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
+  create_table "pd_regional_partner_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535
+    t.integer  "teachercon",               null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id", "teachercon"], name: "index_pd_reg_part_prog_reg_on_user_id_and_teachercon", using: :btree
+  end
+
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_workshop_id"
     t.datetime "start",          null: false
@@ -494,6 +503,8 @@ ActiveRecord::Schema.define(version: 20170417182609) do
     t.datetime "processed_at"
     t.datetime "deleted_at"
     t.integer  "regional_partner_id"
+    t.boolean  "on_map",                                         comment: "Should this workshop appear on the 'Find a Workshop' map?"
+    t.boolean  "funded",                                         comment: "Should this workshop's attendees be reimbursed?"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id", using: :btree
   end
@@ -1007,10 +1018,6 @@ ActiveRecord::Schema.define(version: 20170417182609) do
     t.integer  "teacher_prize_id"
     t.boolean  "teacher_bonus_prize_earned",               default: false
     t.integer  "teacher_bonus_prize_id"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
     t.integer  "prize_teacher_id"
     t.integer  "secret_picture_id"
     t.boolean  "active",                                   default: true,    null: false
@@ -1028,7 +1035,6 @@ ActiveRecord::Schema.define(version: 20170417182609) do
     t.integer  "invitations_count",                        default: 0
     t.integer  "terms_of_service_version"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
-    t.index ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
@@ -1041,7 +1047,6 @@ ActiveRecord::Schema.define(version: 20170417182609) do
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
     t.index ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
-    t.index ["unconfirmed_email", "deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
   end
 

@@ -1,4 +1,3 @@
-import {THUMBNAIL_SIZE} from '@cdo/apps/applab/applabThumbnail';
 import {createThumbnail} from '@cdo/apps/util/thumbnail';
 import {canvasFromImage, dataURIFromURI, imageFromURI} from '@cdo/apps/imageUtils';
 import {expect} from '../../util/configuredChai';
@@ -12,7 +11,7 @@ describe('createThumbnail', () => {
     dataURIFromURI(squarePlayspaceThumbnail).then(expectedDataURI => {
       imageFromURI(squarePlayspaceImage).then(image => {
         const canvas = canvasFromImage(image);
-        const thumbnailCanvas = createThumbnail(canvas, THUMBNAIL_SIZE);
+        const thumbnailCanvas = createThumbnail(canvas);
         const actualDataURI = thumbnailCanvas.toDataURL();
         expect(actualDataURI).to.equal(expectedDataURI);
         done();
@@ -24,7 +23,7 @@ describe('createThumbnail', () => {
     dataURIFromURI(tallPlayspaceThumbnail).then(expectedDataURI => {
       imageFromURI(tallPlayspaceImage).then(image => {
         const canvas = canvasFromImage(image);
-        const thumbnailCanvas = createThumbnail(canvas, THUMBNAIL_SIZE);
+        const thumbnailCanvas = createThumbnail(canvas);
         const actualDataURI = thumbnailCanvas.toDataURL();
         expect(actualDataURI).to.equal(expectedDataURI);
         done();

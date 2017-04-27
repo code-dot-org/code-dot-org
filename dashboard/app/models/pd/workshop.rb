@@ -20,6 +20,8 @@
 #  processed_at        :datetime
 #  deleted_at          :datetime
 #  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
@@ -88,6 +90,12 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming',
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps',
       SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'
+    ],
+    COURSE_CSD => [
+      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development',
+      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games',
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society',
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'
     ]
   }
 

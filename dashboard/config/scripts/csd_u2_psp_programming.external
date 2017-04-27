@@ -1,0 +1,7 @@
+name 'CSD U2 PSP Programming'
+display_name 'Problem Solving Process for Programming'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# PSP4P
+MARKDOWN

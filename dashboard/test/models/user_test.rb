@@ -541,6 +541,44 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
+  test 'can get next_unpassed_progression_level when last updated user_level is inside a level group' do
+    user = create :user
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'sublevel1'
+    create :text_match, name: 'sublevel2'
+
+    level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
+
+    create(:script_level, script: script, levels: [level_group])
+    create :user_script, user: user, script: script
+
+    # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
+    user_level1 = UserLevel.create(
+      user: user,
+      level: level_group,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now - 1
+    )
+
+    user_level2 = UserLevel.create(
+      user: user,
+      level: sub_level1,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now
+    )
+
+    assert(user_level1.updated_at < user_level2.updated_at)
+
+    next_script_level = user.next_unpassed_progression_level(script)
+    refute next_script_level.nil?
+  end
+
   test 'script with inactive level completed is completed' do
     user = create :user
     level = create :maze, name: 'maze 1'
@@ -1236,16 +1274,6 @@ class UserTest < ActiveSupport::TestCase
     create(:user, name: 'Same Name')
   end
 
-  test 'email confirmation not required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-    refute user.confirmation_required?
-    refute user.confirmed_at
-  end
-
-  test 'email confirmation not required for students' do
-    refute @student.confirmation_required?
-  end
-
   test 'student and teacher relationships' do
     teacher = create :teacher
     student = create :student
@@ -1300,7 +1328,7 @@ class UserTest < ActiveSupport::TestCase
 
     # can_pair_with? method
     classmate = create :student
-    section.add_student classmate, move_for_same_teacher: false
+    section.add_student classmate
     assert classmate.can_pair_with?(student)
     assert student.can_pair_with?(classmate)
     refute student.can_pair_with?(other_user)
@@ -1443,6 +1471,20 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.permission?(UserPermission::FACILITATOR)
     refute user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'revoke_all_permissions revokes admin status' do
+    admin_user = create :admin
+    admin_user.revoke_all_permissions
+    assert_nil admin_user.reload.admin
+  end
+
+  test 'revoke_all_permissions revokes user permissions' do
+    teacher = create :teacher
+    teacher.permission = UserPermission::FACILITATOR
+    teacher.permission = UserPermission::LEVELBUILDER
+    teacher.revoke_all_permissions
+    assert_equal [], teacher.reload.permissions
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do
@@ -1631,5 +1673,35 @@ class UserTest < ActiveSupport::TestCase
     refute section.reload.deleted?
     assert follower.reload.deleted?
     assert student.reload.deleted?
+  end
+
+  test 'assign_script creates UserScript if necessary' do
+    assert_creates(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script reuses UserScript if available' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(user: @student, script: Script.first)
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script does not overwrite assigned_at if pre-existing' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+    end
   end
 end

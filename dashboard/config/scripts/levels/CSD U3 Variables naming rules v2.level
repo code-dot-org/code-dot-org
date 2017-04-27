@@ -16,7 +16,6 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Change the value of petalSize multiple times. How does it change your drawing?",
-    "markdown_instructions": "# Debug: Naming Variables\r\n\r\nVariable labels should be meaningful but you can choose almost any label you like. There's just a few rules to be aware of.\r\n\r\n<details><Summary>Naming Rules (click to expand)</Summary>\r\n\r\nThere are a **few rules** when choosing labels:\r\n<ul>\r\n<li>Labels **cannot include spaces**. For example, `size of rectangle` would generate an error.</li>\r\n<li>Labels with multiple words can be easier to read in **camelCase**. CamelCase looks like `sizeOfRectangle` or `aReallyLongLabelName`</li>\r\n<li>Labels **cannot begin with a number**. `4sides` and `2morrow` will generate errors.</li>\r\n<li>Be very careful with **spelling**.</li>\r\n<li>Labels are **case-sensitive**. `size` is not the same as `Size` or `SIZE`.</li>\r\n</ul>\r\n</details>\r\n\r\n\r\n\r\n# Do This\r\n\r\nThis program has multiple errors caused by bad label names.\r\n\r\n* **Correct the errors by picking new names that follow the rules listed above.**\r\n* **Note:** The errors prevent the program from being viewed in block mode.\r\n* If your program works it should draw the image on the right.",
     "start_blocks": "var size of circle = 150;\r\nvar 1dimension = 100;\r\nvar yLocation = 200;\r\n\r\nfill(\"OrangeRed\");\r\nellipse(1dimension, YLocation, size of circle, size of circle);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -50,6 +49,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "markdown_instructions": "<img style=\"float: right\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png\">\r\n# Debug: Naming Variables\r\n\r\nThis program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode, so the code is in text.\r\n\r\n# Do This\r\n\r\n* Find the rule each variable label violates.\r\n* **Correct the errors by picking new names that follow the rules you learned in the last level.**\r\n* If your program works it should draw the image on the right.\r\n\r\n<summary><em>Hint: Click the arrow for a quick review of the rules.</em><details><ul>\r\n<li>Labels can't have spaces.</li>\r\n<li>Labels can't start with a number.</li>\r\n<li>Capitalization and spelling must be exactly the same.</li>\r\n</ul></details></summary>",
     "contained_level_names": null
   },
   "published": true,

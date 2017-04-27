@@ -3,6 +3,7 @@
 
 Feature: Basic appearance for Workshop Certificates
 
+@no_circle
 Scenario: Simple Workshop Certificate
   Given I am a teacher who has just followed a workshop certificate link
   And I open my eyes to test "workshop certificate"

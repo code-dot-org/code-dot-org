@@ -39,6 +39,10 @@ title: "Code.org Professional Learning Program Registration"
       phone_number: application_json['phoneNumber'],
       school_district: application_json['school-district']
     )
+
+    # Use primary email from teacher application if the teacher account doesn't have one
+    # e.g. accidental student account
+    email = application_json['primaryEmail'] if email.blank?
   end
 
   previous_response = DB[:forms].where(kind: 'PdProgramRegistration', user_id: user_id).first
@@ -93,7 +97,7 @@ title: "Code.org Professional Learning Program Registration"
   - else
     %script{type: 'text/javascript'}$('#not-attending').show();
 
-- elsif teachercon_program.nil?
+- elsif teachercon_program.nil? || email.blank?
   %p
     You must first complete a
     %a{href: 'https://studio.code.org/pd/teacher_application'}teacher application.
@@ -131,7 +135,7 @@ title: "Code.org Professional Learning Program Registration"
 
     %h1 Code.org Professional Learning Program Registration
     %h2
-      Please complete this form by April 21, 2017. Contact
+      Please complete this form by May 5, 2017. Contact
       %a{href:'mailto:teacher@code.org'}teacher@code.org
       with any questions.
 

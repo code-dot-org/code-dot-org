@@ -62,7 +62,7 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">name</title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
                   <title name="SPRITE">0</title>
@@ -75,7 +75,7 @@
                       </value>
                       <value name="ADD1">
                         <block type="variables_get">
-                          <title name="VAR">A1</title>
+                          <title name="VAR">name</title>
                         </block>
                       </value>
                       <value name="ADD2">

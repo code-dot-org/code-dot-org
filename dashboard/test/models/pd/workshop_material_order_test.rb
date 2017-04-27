@@ -35,7 +35,12 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   setup do
-    Geocoder.stubs(:search).returns([stub(postal_code: '98101')])
+    Geocoder.stubs(:search).returns(
+      [OpenStruct.new(
+        postal_code: '98101',
+        street_number: '1501'
+      )]
+    )
     @mock_mimeo_rest_client = mock('Pd::MimeoRestClient')
     Pd::MimeoRestClient.stubs(:new).returns(@mock_mimeo_rest_client)
   end
@@ -134,17 +139,36 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['Zip code is invalid'], order.errors.full_messages
   end
 
-  test 'address validation' do
+  test 'address validation fails for nonexistent address' do
     Geocoder.expects(:search).with("i don't exist, Suite 900, Seattle, WA, 98101").returns([])
-    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns([stub(postal_code: 98101)])
-
     order = build :pd_workshop_material_order, street: "i don't exist"
     refute order.valid?
     assert_equal ['Address could not be verified. Please double-check.'], order.errors.full_messages
+  end
 
-    order.assign_attributes(street: '1501 4th Ave', zip_code: '99999')
+  test 'address validation fails for incorrect zip code' do
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(
+      [OpenStruct.new(
+        postal_code: '98101',
+        street_number: '1501'
+      )]
+    )
+
+    order = build :pd_workshop_material_order, street: '1501 4th Ave', zip_code: '99999'
     refute order.valid?
     assert_equal ["Zip code doesn't match the address. Did you mean 98101?"], order.errors.full_messages
+  end
+
+  test 'address validation fails for PO boxes' do
+    Geocoder.expects(:search).with('PO Box 123, Seattle, WA, 98155').returns(
+      [OpenStruct.new(
+        postal_code: '98155'
+      )]
+    )
+
+    order = build :pd_workshop_material_order, street: 'PO Box 123', apartment_or_suite: nil, zip_code: '98155'
+    refute order.valid?
+    assert_equal ['Street must be a valid street address (no PO boxes)'], order.errors.full_messages
   end
 
   test 'known user correctable error validation: apartment or suite required' do

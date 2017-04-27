@@ -467,14 +467,14 @@ class LevelsHelperTest < ActionView::TestCase
     Experiment.stubs(:should_cache?).returns true
     teacher = create(:teacher)
     experiment = create(:teacher_based_experiment,
-      earliest_section_at: DateTime.now - 1.days,
-      latest_section_at: DateTime.now + 1.days,
+      earliest_section_at: DateTime.now - 1.day,
+      latest_section_at: DateTime.now + 1.day,
       percentage: 100,
     )
     Experiment.update_cache
     section = create(:section, user: teacher)
     student = create(:student)
-    section.add_student(student, move_for_same_teacher: false)
+    section.add_student(student)
 
     sign_in student
 
