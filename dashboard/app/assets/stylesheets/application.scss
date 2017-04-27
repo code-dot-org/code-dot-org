@@ -193,13 +193,6 @@ img.video_thumbnail {
     }
   }
 
-  .header.hide_on_mobile,
-  .header-wrapper.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
-    }
-  }
-
   .header_status_bar {
     background-color: $dark_color;
     border-radius: 5px;
@@ -263,13 +256,6 @@ img.video_thumbnail {
       @media screen and (max-width: 1024px) {
         font-size: 13px;
       }
-    }
-  }
-
-  .header.hide_on_mobile,
-  .header-wrapper.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
     }
   }
 
@@ -338,15 +324,6 @@ img.video_thumbnail {
 
   .project_updated_at {
     font-size: 10px;
-  }
-}
-
-.sign_in.show_only_on_mobile {
-  float: right;
-  margin-bottom: 10px;
-
-  @media screen and (min-device-width: 501px) {
-    display: none;
   }
 }
 
