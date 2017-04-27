@@ -495,7 +495,6 @@ ActiveRecord::Schema.define(version: 20170428002439) do
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "workshop_type",                     null: false
     t.integer  "organizer_id",                      null: false
     t.string   "location_name"
     t.string   "location_address"

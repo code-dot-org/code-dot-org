@@ -13,7 +13,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       :pd_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
-      workshop_type: Pd::Workshop::TYPE_PUBLIC,
       on_map: true,
       funded: true
     )
