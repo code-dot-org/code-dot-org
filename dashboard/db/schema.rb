@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424010203) do
+ActiveRecord::Schema.define(version: 20170426001230) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -503,6 +503,8 @@ ActiveRecord::Schema.define(version: 20170424010203) do
     t.datetime "processed_at"
     t.datetime "deleted_at"
     t.integer  "regional_partner_id"
+    t.boolean  "on_map",                                         comment: "Should this workshop appear on the 'Find a Workshop' map?"
+    t.boolean  "funded",                                         comment: "Should this workshop's attendees be reimbursed?"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id", using: :btree
   end
