@@ -36,6 +36,8 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
+    CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
+
     AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
@@ -89,7 +91,10 @@ module AWS
             change_set = {changes: []}
             loop do
               sleep 1
-              change_set = cfn.describe_change_set(change_set_name: change_set_id)
+              change_set = cfn.describe_change_set(
+                change_set_name: change_set_id,
+                stack_name: stack_name
+              )
               break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
             end
             change_set.changes.each do |change|
@@ -102,7 +107,10 @@ module AWS
             CDO.log.info 'No changes' if change_set.changes.empty?
 
           ensure
-            cfn.delete_change_set(change_set_name: change_set_id)
+            cfn.delete_change_set(
+              change_set_name: change_set_id,
+              stack_name: stack_name
+            )
           end
         end
       end
@@ -143,9 +151,15 @@ module AWS
       def stack_options(template)
         {
           stack_name: stack_name,
-          capabilities: ['CAPABILITY_IAM'],
           parameters: parameters(template)
-        }.merge(string_or_url(template))
+        }.merge(string_or_url(template)).tap do |options|
+          if stack_name == 'IAM'
+            options[:capabilities] = %w[
+              CAPABILITY_IAM
+              CAPABILITY_NAMED_IAM
+            ]
+          end
+        end
       end
 
       def create_or_update
@@ -214,7 +228,7 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{branch}.tar.gz",
+                key: "#{CHEF_KEY}/#{branch}.tar.gz",
                 body: tmp.read
               )
             end
@@ -225,7 +239,7 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: "chef/bootstrap-#{stack_name}.sh",
+          key: "#{CHEF_KEY}/bootstrap-#{stack_name}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
