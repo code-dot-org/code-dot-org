@@ -41,7 +41,6 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
-    'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_dashboard'             => true,
@@ -143,6 +142,7 @@ def load_configuration
 
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
+    config['cdn_enabled']         ||= config['chef_managed']
 
     config['db_reader']           ||= config['db_writer']
     config['reporting_db_reader'] ||= config['reporting_db_writer']

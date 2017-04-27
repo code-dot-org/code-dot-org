@@ -56,6 +56,11 @@ Resources:
           - Effect: Allow
             Action: ['s3:GetObject']
             Resource: 'arn:aws:s3:::*'
+            Action:
+            - "s3:PutObject"
+            - "s3:PutObjectAcl"
+            Resource:
+            - "arn:aws:s3:::cdo-dist/adhoc/*"
           - Effect: Allow
             Action:
             - 'cloudformation:SignalResource'

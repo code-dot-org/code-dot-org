@@ -48,6 +48,9 @@ cat <<JSON > $FIRST_BOOT
 <% if environment == :adhoc -%>
     "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
 <% end -%>
+<% unless cdn_enabled -%>
+    "cdn_enabled": false,
+<% end -%>
     "stack_name": "$STACK"
   },
 <% if local_mode -%>
