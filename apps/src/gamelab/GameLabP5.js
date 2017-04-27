@@ -455,6 +455,7 @@ GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
 GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
+      this.p5.useQuadTree(false);
       this.gameLabWorld = new GameLabWorld(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
