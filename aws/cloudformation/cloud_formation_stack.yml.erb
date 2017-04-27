@@ -398,7 +398,10 @@ Resources:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
-<% if environment == :adhoc -%>
+<%
+   if environment == :adhoc
+   self.daemon = true
+-%>
   Daemon:
     Type: AWS::EC2::Instance
     CreationPolicy:
