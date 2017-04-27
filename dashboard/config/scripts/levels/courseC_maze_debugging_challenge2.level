@@ -1,13 +1,13 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2017-04-25T21:19:37.000Z",
+  "created_at": "2017-04-27T00:13:51.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,3,1,1,1,1,4,0],[0,1,1,1,0,1,1,0],[0,0,1,1,1,0,1,0],[0,1,0,1,1,1,1,0],[0,1,1,0,1,1,1,0],[0,1,1,1,0,1,2,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "birds",
-    "instructions": "*\"If I turn too often, I might get dizzy! Help me reach the pig with only four `turn` commands.\"*",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,3,1,1,1,1,0,0],[0,1,1,1,0,1,1,0],[0,0,1,1,1,0,1,0],[0,1,0,1,1,1,1,0],[0,1,1,0,1,1,1,0],[0,1,1,1,0,1,2,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "scrat",
+    "instructions": "*\"If I turn too often, I might get dizzy! Help me reach the acorn with only four `turn` commands.\"*",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
@@ -30,7 +30,8 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",

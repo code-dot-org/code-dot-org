@@ -6,9 +6,12 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "reference": "/csd/images-in-html/index.html"
+    "reference": "/csd/images-in-html/index.html",
+    "display_name": "Images in HTML"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>
