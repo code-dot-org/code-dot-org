@@ -579,6 +579,9 @@ en:
         description here: description here
         title: title
       CSD U2 Top Websites: {}
+      CSD U2 expand project:
+        description here: description here
+        title: title
       CSD U2 layout style review:
         description here: description here
         title: title
@@ -8373,8 +8376,8 @@ en:
         Strongly disagree: Strongly disagree
       post-assessment survey q23:
         Agree: Agree
-        Because of Computer Science Principles, I am interested in learning more computer science.: Because of Computer Science Principles, I am interested in learning more computer science.
         Disagree: Disagree
+        I am interested in learning more computer science.: I am interested in learning more computer science.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8383,6 +8386,14 @@ en:
         Agree: Agree
         Disagree: Disagree
         I am interested in taking more computer science classes (in high school or after high school): I am interested in taking more computer science classes (in high school or after high school)
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q24-a:
+        Agree: Agree
+        Disagree: Disagree
+        I am interested in studying computer science after I graduate high school: I am interested in studying computer science after I graduate high school
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8462,15 +8473,15 @@ en:
       post-assessment survey q33:
         ok: ok
       post-assessment survey q34:
-        Easy: Easy
-        Hard: Hard
+        1 -Very easy: 1 -Very easy
+        2- Easy: 2- Easy
+        3- Sort of  easy: 3- Sort of  easy
+        4 - Neutral: 4 - Neutral
+        5 - Sort of hard: 5 - Sort of hard
+        6 -Hard: 6 -Hard
+        7 -Very hard: 7 -Very hard
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
-        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.
-        Kinda easy: Kinda easy
-        Kinda hard: Kinda hard
-        Neutral: Neutral
-        Really easy: Really easy
-        Really hard: Really hard
+        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was on a scale from 1-7: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was on a scale from 1-7
       post-assessment survey q35:
         "...I didn't get any questions right": "...I didn't get any questions right"
         "...I got a lot of questions right, but some wrong": "...I got a lot of questions right, but some wrong"

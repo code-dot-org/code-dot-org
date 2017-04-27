@@ -1,4 +1,5 @@
 name 'CSD U2 Design Project'
+display_name 'Design Your Page'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
