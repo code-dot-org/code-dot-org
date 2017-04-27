@@ -31,7 +31,7 @@ var styles = {
 
 var CodeWorkspace = React.createClass({
   propTypes: {
-    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool.isRequired,
@@ -150,13 +150,13 @@ var CodeWorkspace = React.createClass({
       hasFocus = false;
     }
 
-    var isRtl = props.localeDirection === 'rtl';
+    const isRtl = this.props.isRtl;
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
         <PaneHeader
           id="headers"
-          dir={props.localeDirection}
+          dir={isRtl ? 'rtl' : 'ltr'}
           hasFocus={hasFocus}
           className={props.isRunning ? 'is-running' : ''}
         >
@@ -218,7 +218,7 @@ var CodeWorkspace = React.createClass({
 
 module.exports = connect(state => ({
   editCode: state.pageConstants.isDroplet,
-  localeDirection: state.pageConstants.localeDirection,
+  isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isRunning: !!state.runState.isRunning,
   showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),

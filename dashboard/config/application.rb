@@ -145,7 +145,6 @@ module Dashboard
 
     if CDO.newrelic_logging
       require 'newrelic_rpm'
-      require 'newrelic_ignore_downlevel_browsers'
     end
   end
 end

@@ -39,6 +39,6 @@ ChatBubbleTip.propTypes = {
 
 export default connect(state => {
   return {
-    isRtl: state.pageConstants.localeDirection === 'rtl',
+    isRtl: state.isRtl,
   };
 })(Radium(ChatBubbleTip));

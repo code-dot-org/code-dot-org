@@ -16,11 +16,10 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I close my eyes
     And I sign out
     Examples:
-      | url                                                               | test_name                  |
-      | http://studio.code.org/projects/applab/new                         | new applab project         |
-      | http://studio.code.org/                                           | logged in studio homepage  |
-      | http://studio.code.org/s/allthethings                             | logged in script progress  |
-      | http://studio.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |
-      | http://studio.code.org/s/mc/stage/1/puzzle/6                       | minecraft house dialog     |
-      | http://studio.code.org/s/allthethings/stage/18/puzzle/14           | embed video |
-      | http://studio.code.org/s/allthethings/stage/27/puzzle/1            | free response |
+      | url                                                      | test_name                 |
+      | http://studio.code.org/projects/applab/new               | new applab project        |
+      | http://studio.code.org/                                  | logged in studio homepage |
+      | http://studio.code.org/s/allthethings                    | logged in script progress |
+      | http://studio.code.org/s/course4/stage/1/puzzle/1        | unplugged video level     |
+      | http://studio.code.org/s/allthethings/stage/18/puzzle/14 | embed video               |
+      | http://studio.code.org/s/allthethings/stage/27/puzzle/1  | free response             |

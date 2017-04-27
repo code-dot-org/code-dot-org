@@ -98,7 +98,7 @@ var CodeWorkspaceContainer = React.createClass({
 });
 module.exports = connect(state => ({
   hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
-  isRtl: state.pageConstants.localeDirection === 'rtl',
+  isRtl: state.isRtl,
   noVisualization: state.pageConstants.noVisualization,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }), undefined, null, { withRef: true }

@@ -864,32 +864,12 @@ StudioApp.prototype.stopLoopingAudio = function (name) {
 StudioApp.prototype.inject = function (div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
-    rtl: this.isRtl(),
+    rtl: getStore().getState().isRtl,
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
-};
-
-/**
- * @returns {boolean} True if the current HTML page is in right-to-left language mode.
- */
-StudioApp.prototype.isRtl = function () {
-  var head = document.getElementsByTagName('head')[0];
-  if (head && head.parentElement) {
-    var dir = head.parentElement.getAttribute('dir');
-    return !!(dir && dir.toLowerCase() === 'rtl');
-  } else {
-    return false;
-  }
-};
-
-/**
- * @return {string} Locale direction string based on app direction.
- */
-StudioApp.prototype.localeDirection = function () {
-  return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
 StudioApp.prototype.showNextHint = function () {
@@ -905,7 +885,7 @@ StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: this.isRtl(),
+    rtl: getStore().getState().isRtl,
     scrollbars: false
   });
   this.loadBlocks(options.blocks);
@@ -1235,7 +1215,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
-  if (this.isRtl()) {
+  if (getStore().getState().isRtl) {
     offset = window.innerWidth -
       (window.pageXOffset + rect.left + (rect.width / 2)) -
       parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
@@ -1269,7 +1249,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
-  if (this.isRtl()) {
+  if (getStore().getState().isRtl) {
     visualizationResizeBar.style.right = newVizWidthString;
     editorColumn.css('right', newVizWidthString);
   } else {
@@ -2750,7 +2730,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,
-    localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,

@@ -541,6 +541,44 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
+  test 'can get next_unpassed_progression_level when last updated user_level is inside a level group' do
+    user = create :user
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'sublevel1'
+    create :text_match, name: 'sublevel2'
+
+    level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
+
+    create(:script_level, script: script, levels: [level_group])
+    create :user_script, user: user, script: script
+
+    # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
+    user_level1 = UserLevel.create(
+      user: user,
+      level: level_group,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now - 1
+    )
+
+    user_level2 = UserLevel.create(
+      user: user,
+      level: sub_level1,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now
+    )
+
+    assert(user_level1.updated_at < user_level2.updated_at)
+
+    next_script_level = user.next_unpassed_progression_level(script)
+    refute next_script_level.nil?
+  end
+
   test 'script with inactive level completed is completed' do
     user = create :user
     level = create :maze, name: 'maze 1'
@@ -1433,6 +1471,20 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.permission?(UserPermission::FACILITATOR)
     refute user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'revoke_all_permissions revokes admin status' do
+    admin_user = create :admin
+    admin_user.revoke_all_permissions
+    assert_nil admin_user.reload.admin
+  end
+
+  test 'revoke_all_permissions revokes user permissions' do
+    teacher = create :teacher
+    teacher.permission = UserPermission::FACILITATOR
+    teacher.permission = UserPermission::LEVELBUILDER
+    teacher.revoke_all_permissions
+    assert_equal [], teacher.reload.permissions
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do

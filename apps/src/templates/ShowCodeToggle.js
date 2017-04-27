@@ -5,6 +5,7 @@ import {PaneButton} from './PaneHeader';
 import msg from '@cdo/locale';
 import UserPreferences from '../lib/util/UserPreferences';
 import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 const BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 const BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -84,19 +85,11 @@ class DropletCodeToggle extends Component {
     onToggle: PropTypes.func.isRequired,
   };
 
-  state = {
-    showingBlocks: true,
-  };
-
   afterInit = () => {
     this.forceUpdate();
   };
 
   componentWillMount() {
-    if (studioApp().editor) {
-      this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
-    }
-
     studioApp().on('afterInit', this.afterInit);
   }
 
@@ -122,7 +115,7 @@ class DropletCodeToggle extends Component {
       studioApp().showToggleBlocksError();
     } else {
       studioApp().onDropletToggle();
-      this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
+      this.forceUpdate();
       this.props.onToggle(studioApp().editor.currentlyUsingBlocks);
     }
   }
@@ -130,7 +123,13 @@ class DropletCodeToggle extends Component {
   onClick = () => {
     this.toggle();
     if (experiments.isEnabled('saveBlockMode')) {
-      new UserPreferences().setUsingTextMode(!studioApp().editor.currentlyUsingBlocks);
+      new UserPreferences().setUsingTextMode(
+        !studioApp().editor.currentlyUsingBlocks,
+        {
+          project_id: project.getCurrentId(),
+          level_id: studioApp().config.level.id,
+        }
+      );
     }
   }
 
@@ -142,7 +141,7 @@ class DropletCodeToggle extends Component {
         isMinecraft={this.props.isMinecraft}
         onClick={this.onClick}
         hidden={!studioApp().enableShowCode}
-        showingBlocks={this.state.showingBlocks}
+        showingBlocks={studioApp().editor && studioApp().editor.currentlyUsingBlocks}
         showCodeLabel={msg.showTextHeader()}
       />
     );
