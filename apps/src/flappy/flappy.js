@@ -575,7 +575,6 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        isRtl={studioApp().isRtl()}
         visualizationColumn={<FlappyVisualizationColumn/>}
         onMount={onMount}
       />
