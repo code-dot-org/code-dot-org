@@ -34,7 +34,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/public/teacher-dashboard/index.js'), data: {studiourlprefix: CDO.studio_url}}
+%script{src: minifiable_asset_path('js/code.org/public/teacher-dashboard/index.js'), data: {studiourlprefix: CDO.studio_url}}
 
 %div{'ng-view' => ''}
 
