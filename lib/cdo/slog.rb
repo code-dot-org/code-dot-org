@@ -34,13 +34,13 @@ module Slog
     end
 
     def get(params=nil)
-      logs = @hosts.map {|host| parse(http_get(uri_for(host, params)))}
+      logs = @hosts.map {|host| parse(https_get(uri_for(host, params)))}
       logs.flatten!
       logs.sort! {|a, b| a[:timestamp] <=> b[:timestamp]}
       logs
     end
 
-    def http_get(uri)
+    def https_get(uri)
       URI.parse("https://#{@api_host}#{uri}").read
     end
 
@@ -50,7 +50,7 @@ module Slog
       return key unless key.nil?
 
       uri = File.join('/', @secret, 'hosts', log)
-      raw = http_get(uri)
+      raw = https_get(uri)
       json = JSON.parse(raw)
       @log_keys[log] = json['key']
     end
