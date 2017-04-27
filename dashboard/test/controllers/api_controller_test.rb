@@ -732,7 +732,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 5, student_responses.length
 
     # student_1 is unlocked
-    student_1_response = student_responses[0]
+    student_1_response = student_responses.
+      find {|response| response['user_level_data']['user_id'] == @student_1.id}
     assert_equal(
       {
         "user_id" => @student_1.id,
@@ -745,7 +746,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, student_1_response['readonly_answers']
 
     # student_2 is unlocked
-    student_2_response = student_responses[1]
+    student_2_response = student_responses.
+      find {|response| response['user_level_data']['user_id'] == @student_2.id}
     assert_equal(
       {
         "user_id" => @student_2.id,
@@ -758,7 +760,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal true, student_2_response['readonly_answers']
 
     # student_3 has a user_level, but is still locked
-    student_3_response = student_responses[2]
+    student_3_response = student_responses.
+      find {|response| response['user_level_data']['user_id'] == @student_3.id}
     assert_equal(
       {
         "user_id" => @student_3.id,
@@ -771,7 +774,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, student_3_response['readonly_answers']
 
     # student_4 got autolocked while editing
-    student_4_response = student_responses[3]
+    student_4_response = student_responses.
+      find {|response| response['user_level_data']['user_id'] == @student_4.id}
     assert_equal(
       {
         "user_id" => @student_4.id,
@@ -784,7 +788,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, student_4_response['readonly_answers']
 
     # student_5 got autolocked while viewing answers
-    student_5_response = student_responses[4]
+    student_5_response = student_responses.
+      find {|response| response['user_level_data']['user_id'] == @student_5.id}
     assert_equal(
       {
         "user_id" => @student_5.id,
