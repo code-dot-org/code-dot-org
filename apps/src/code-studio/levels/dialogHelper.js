@@ -1,7 +1,7 @@
 /* globals appOptions */
-import * as msg from '@cdo/locale';
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
+import msg from '@cdo/locale';
 import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
@@ -67,7 +67,6 @@ export function showInstructionsDialog() {
 }
 
 function showAchievementDialog(onContinue, progress, assetUrl) {
-  console.log(progress);
   const achievements = [{
     check: true,
     msg: msg.puzzleCompleted(),
