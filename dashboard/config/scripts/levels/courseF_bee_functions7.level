@@ -6,22 +6,22 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Create your own function that goes down a path, gets nectar, makes honey, and then returns the bee to the top of the path. Collect all the nectar and make all the honey!",
+    "instructions": "Collect all the nectar and make all the honey!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
-    "nectar_goal": "14",
-    "honey_goal": "14",
+    "nectar_goal": "13",
+    "honey_goal": "13",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,1,0],[0,0,0,1,0,0,1,0],[0,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,7,0,0,7,0],[0,0,0,-7,0,0,-7,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "20",
+    "ideal": "21",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -36,6 +36,9 @@
     "instructions_important": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "step_speed": "1",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":7,\"range\":7,\"featureType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":7,\"range\":7,\"featureType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "markdown_instructions": "Create your own function that goes down a path, gets all of the nectar or makes all of the honey, then returns the bee to the top of the path.  \r\n\r\nCollect all the nectar and make all the honey!",
     "contained_level_names": null
   },
   "published": true,
@@ -75,6 +78,11 @@
             <title name="NUM">1</title>
           </block>
           <block type="maze_untilBlocked"/>
+          <block type="bee_whileNectarAmount">
+            <title name="ARG1">nectarRemaining</title>
+            <title name="OP">&gt;</title>
+            <title name="ARG2">0</title>
+          </block>
         </category>
         <category name="Conditionals">
           <block type="bee_ifFlower">
@@ -84,6 +92,11 @@
             <title name="LOC">atFlower</title>
           </block>
           <block type="maze_untilBlocked"/>
+          <block type="bee_whileNectarAmount">
+            <title name="ARG1">nectarRemaining</title>
+            <title name="OP">&gt;</title>
+            <title name="ARG2">0</title>
+          </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn">
@@ -115,80 +128,43 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_move">
-              <title name="DIR">moveForward</title>
-              <next>
-                <block type="procedures_callnoreturn">
-                  <mutation name="get 7 make 7"/>
-                  <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">3</title>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="get 7 make 7"/>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
-          <title name="NAME">get 7 make 7</title>
+          <title name="NAME">move and check</title>
           <statement name="STACK">
-            <block type="maze_turn">
-              <title name="DIR">turnRight</title>
-              <next>
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+            <block type="maze_if">
+              <title name="DIR">isPathRight</title>
+              <statement name="DO">
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
                   <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">7</title>
-                        </block>
-                      </value>
+                    <block type="maze_untilBlocked">
                       <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
-                      <next>
                         <block type="maze_move">
                           <title name="DIR">moveForward</title>
                           <next>
-                            <block type="controls_repeat_ext">
-                              <value name="TIMES">
-                                <block type="math_number">
-                                  <title name="NUM">7</title>
-                                </block>
-                              </value>
-                              <statement name="DO">
-                                <block type="maze_honey"/>
-                              </statement>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="get nectar make honey"/>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
                               <next>
-                                <block type="maze_move">
-                                  <title name="DIR">moveBackward</title>
-                                  <next>
+                                <block type="maze_untilBlocked">
+                                  <statement name="DO">
                                     <block type="maze_move">
-                                      <title name="DIR">moveBackward</title>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
-                                        </block>
-                                      </next>
+                                      <title name="DIR">moveForward</title>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnRight</title>
                                     </block>
                                   </next>
                                 </block>
@@ -200,7 +176,51 @@
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_untilBlocked">
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="move and check"/>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <title name="NAME">get nectar make honey</title>
+          <statement name="STACK">
+            <block type="bee_ifElseFlower">
+              <title name="LOC">atFlower</title>
+              <statement name="DO">
+                <block type="bee_whileNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="bee_whileNectarAmount">
+                  <title name="ARG1">honeyAvailable</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
+                  <statement name="DO">
+                    <block type="maze_honey"/>
+                  </statement>
+                </block>
+              </statement>
             </block>
           </statement>
         </block>

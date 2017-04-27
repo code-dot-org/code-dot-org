@@ -34,10 +34,10 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/e0f14e9c984bceea33d09ca9ad8ac673-image-1493224047761.26.09 AM.png)\",\"hint_id\":\"courseF_artist_fwp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/90dc1bd62d98d1634353cf186f6adf14-image-1493224937939.37.45 AM.png)\",\"hint_id\":\"courseF_artist_fwp9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/9a112d0b48b689a132cd3bcc9b2e7281-image-1493224954407.41.34 AM.png)\",\"hint_id\":\"courseF_artist_fwp9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp9.mp3\"}]",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
