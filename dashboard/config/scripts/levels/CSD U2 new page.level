@@ -8,7 +8,10 @@
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# Create a New Page"
+    "markdown_instructions": "# Create a New Page for Your Website.\r\n\r\nHere's your project from before.  You'll be adding another page.  Your new page can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n* Add a new HTML file by clicking  ![](https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38 PM.png).  The new file will appear in the file list on the left side of the workspace.\r\n* Rename the file, either by right clicking it and choosing \"Rename\", or by clicking on it when it's already highlighted.  **Make sure the name is unique, descriptive and ends in \".html\"**.\r\n* Use HTML to fill out your new page.  It should include:\r\n * a list\r\n * an image\r\n * a header\r\n\r\n",
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
