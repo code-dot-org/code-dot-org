@@ -141,7 +141,6 @@
     "lodash": "4.15.0",
     "marked": "0.3.2",
     "messageformat": "0.2.2",
-    "mkdirp": "0.5.1",
     "mocha": "^3.1.2",
     "mock-firmata": "0.1.0",
     "moment": "2.14.1",
