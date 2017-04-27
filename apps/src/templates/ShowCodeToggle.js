@@ -85,19 +85,11 @@ class DropletCodeToggle extends Component {
     onToggle: PropTypes.func.isRequired,
   };
 
-  state = {
-    showingBlocks: true,
-  };
-
   afterInit = () => {
     this.forceUpdate();
   };
 
   componentWillMount() {
-    if (studioApp().editor) {
-      this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
-    }
-
     studioApp().on('afterInit', this.afterInit);
   }
 
@@ -123,7 +115,7 @@ class DropletCodeToggle extends Component {
       studioApp().showToggleBlocksError();
     } else {
       studioApp().onDropletToggle();
-      this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
+      this.forceUpdate();
       this.props.onToggle(studioApp().editor.currentlyUsingBlocks);
     }
   }
@@ -149,7 +141,7 @@ class DropletCodeToggle extends Component {
         isMinecraft={this.props.isMinecraft}
         onClick={this.onClick}
         hidden={!studioApp().enableShowCode}
-        showingBlocks={this.state.showingBlocks}
+        showingBlocks={studioApp().editor && studioApp().editor.currentlyUsingBlocks}
         showCodeLabel={msg.showTextHeader()}
       />
     );

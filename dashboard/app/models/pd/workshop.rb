@@ -20,6 +20,8 @@
 #  processed_at        :datetime
 #  deleted_at          :datetime
 #  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
