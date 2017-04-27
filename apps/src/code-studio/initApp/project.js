@@ -551,6 +551,12 @@ var projects = module.exports = {
     }
   },
   /**
+   * @returns {boolean} Whether a project can be created for this level type.
+   */
+  isSupportedLevelType() {
+    return !!this.getStandaloneApp();
+  },
+  /**
    * @returns {string} The path to the app capable of running
    * this project as a standalone app.
    * @throws {Error} If no standalone app exists.

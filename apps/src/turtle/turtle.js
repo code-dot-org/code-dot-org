@@ -1350,7 +1350,7 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
   const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
-    project.getStandaloneApp() && !level.impressive;
+    project.isSupportedLevelType() && !level.impressive;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',

@@ -2513,7 +2513,7 @@ var displayFeedback = function () {
 
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
-      project.getStandaloneApp();
+      project.isSupportedLevelType();
     studioApp().displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
