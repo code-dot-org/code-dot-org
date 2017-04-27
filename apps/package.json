@@ -135,7 +135,6 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack-with-fast-source-maps": "^1.10.0",
-    "linklocal": "2.5.2",
     "load-grunt-tasks": "3.5.0",
     "lodash": "4.15.0",
     "marked": "0.3.2",
