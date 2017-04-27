@@ -51,6 +51,7 @@ group :development do
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
+  gem 'rb-readline'
 end
 
 group :development, :test do

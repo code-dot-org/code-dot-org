@@ -528,6 +528,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    rb-readline (0.5.4)
     rdoc (4.2.2)
       json (~> 1.4)
     redcarpet (3.3.4)
@@ -782,6 +783,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-controller-testing
   rambling-trie
+  rb-readline
   redcarpet (~> 3.3.4)
   redis (~> 3.3.1)
   redis-slave-read!
