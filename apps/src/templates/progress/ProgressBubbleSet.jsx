@@ -9,6 +9,7 @@ import ProgressPill from './ProgressPill';
 import color from "@cdo/apps/util/color";
 import { getIconForLevel } from './progressHelpers';
 import i18n from '@cdo/locale';
+import { levelType } from './progressTypes';
 
 const styles = {
   main: {
@@ -47,12 +48,7 @@ const styles = {
 
 const ProgressBubbleSet = React.createClass({
   propTypes: {
-    levels: PropTypes.arrayOf(
-      PropTypes.shape({
-        level: PropTypes.levelType,
-        url: PropTypes.string
-      })
-    ).isRequired,
+    levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
   },
