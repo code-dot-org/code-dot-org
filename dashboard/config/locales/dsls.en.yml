@@ -8376,7 +8376,6 @@ en:
         Strongly disagree: Strongly disagree
       post-assessment survey q23:
         Agree: Agree
-        Because of Computer Science Principles, I am interested in learning more computer science.: Because of Computer Science Principles, I am interested in learning more computer science.
         Disagree: Disagree
         I am interested in learning more computer science.: I am interested in learning more computer science.
         Slightly agree: Slightly agree
@@ -8481,17 +8480,8 @@ en:
         5 - Sort of hard: 5 - Sort of hard
         6 -Hard: 6 -Hard
         7 -Very hard: 7 -Very hard
-        Easy: Easy
-        Hard: Hard
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
-        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was
         If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was on a scale from 1-7: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was on a scale from 1-7
-        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.
-        Kinda easy: Kinda easy
-        Kinda hard: Kinda hard
-        Neutral: Neutral
-        Really easy: Really easy
-        Really hard: Really hard
       post-assessment survey q35:
         "...I didn't get any questions right": "...I didn't get any questions right"
         "...I got a lot of questions right, but some wrong": "...I got a lot of questions right, but some wrong"
