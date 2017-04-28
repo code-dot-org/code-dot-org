@@ -169,6 +169,13 @@ img.video_thumbnail {
 }
 
 .header-wrapper {
+  &.hide_on_mobile,
+  header.hide_on_mobile {
+    @media screen and (max-device-width: 500px) {
+      display: none;
+    }
+  }
+
   padding-top: 15px;
   min-height: 70px;
   position: relative;
@@ -190,13 +197,6 @@ img.video_thumbnail {
       @media screen and (max-width: 1024px) {
         font-size: 13px;
       }
-    }
-  }
-
-  .header.hide_on_mobile,
-  .header-wrapper.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
     }
   }
 
@@ -242,6 +242,13 @@ img.video_thumbnail {
 }
 
 .header2-wrapper {
+  &.hide_on_mobile,
+  header.hide_on_mobile {
+    @media screen and (max-device-width: 500px) {
+      display: none;
+    }
+  }
+
   padding-top: 0;
   min-height: 85px;
   position: relative;
@@ -279,13 +286,6 @@ img.video_thumbnail {
       padding: 13px 16px;
       background-color: $teal;
       margin-top: 0;
-    }
-  }
-
-  .header.hide_on_mobile,
-  .header-wrapper.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
     }
   }
 
