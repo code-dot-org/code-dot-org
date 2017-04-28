@@ -4525,8 +4525,8 @@ ca:
               name: Test stage with bubbles
         csd3:
           title: CSD Unit 3 - Interactive Games and Animations
-          description: U3 of Discoveries
-          description_short: Programming
+          description: ''
+          description_short: Introduction to Programming in Game Lab
           stage:
             Booleans and Conditionals: Booleans and Conditionals
             Complex Conditionals: Complex Conditionals
@@ -4547,6 +4547,20 @@ ca:
             Using the Game Design Process: Using the Game Design Process
             'Project: Build a Game': 'Project: Build a Game'
             'Project: Design a Game': 'Project: Design a Game'
+            Programming for Entertainment: Programming for Entertainment
+            Plotting Shapes: Plotting Shapes
+            Shapes and Randomness: Shapes and Randomness
+            Variables: Variables
+            Sprites: Sprites
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Sprite Movement: Sprite Movement
+            Conditionals: Condicionals
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            Booleans Unplugged: Booleans Unplugged
+            Project - Interactive Card: Project - Interactive Card
+            Project - Design a Game: Project - Design a Game
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -4587,6 +4601,34 @@ ca:
               name: 'Project: Build a Game'
             'Project: Design a Game':
               name: 'Project: Design a Game'
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Shapes and Randomness:
+              name: Shapes and Randomness
+            Variables:
+              name: Variables
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Conditionals:
+              name: Condicionals
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Project - Design a Game:
+              name: Project - Design a Game
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4772,6 +4814,11 @@ ca:
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+            Input and Output: Input and Output
+            Processing: Processing
+            Storage: Storage
+            Apps and Problem Solving: Apps and Problem Solving
+            Project - Propose an App: Project - Propose an App
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4794,6 +4841,16 @@ ca:
               name: 'Project: Apps and Problem Solving'
             Human vs Computer Processing:
               name: Human vs Computer Processing
+            Input and Output:
+              name: Input and Output
+            Processing:
+              name: Processing
+            Storage:
+              name: Storage
+            Apps and Problem Solving:
+              name: Apps and Problem Solving
+            Project - Propose an App:
+              name: Project - Propose an App
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -6648,8 +6705,21 @@ ca:
           stage:
             'Algorithms: Tangrams': 'Algorithms: Tangrams'
             Introduction: Introducció
+            Ice Age Play Lab: Ice Age Play Lab
+            Functions in Farmer: Functions in Farmer
+            Conditionals and Functions in Bee: Conditionals and Functions in Bee
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
               name: Introducció
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Functions in Farmer:
+              name: Functions in Farmer
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

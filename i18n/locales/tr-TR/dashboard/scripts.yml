@@ -3714,7 +3714,7 @@ tr:
             CS Principles Culminating Assessment: CS Principles Culminating Assessment
             CSP Student Post Survey Staging: CSP öğrenci  anket hazırlama
             CSP Longitudinal Contact Request: CSP boylam contak isteği
-            Participate in a longitudinal study!: Participate in a longitudinal study!
+            Participate in a longitudinal study!: Boyuna bir araştırmaya katılın!
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -3724,7 +3724,7 @@ tr:
             CSP Longitudinal Contact Request:
               name: CSP boylam contak isteği
             Participate in a longitudinal study!:
-              name: Participate in a longitudinal study!
+              name: Boyuna bir araştırmaya katılın!
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
@@ -4525,7 +4525,7 @@ tr:
               name: Test stage with bubbles
         csd3:
           title: CSD Unit 3 - Interactive Games and Animations
-          description: U3 of Discoveries
+          description: ''
           description_short: Programlama
           stage:
             Booleans and Conditionals: Booleans and Conditionals
@@ -4547,6 +4547,20 @@ tr:
             Using the Game Design Process: Using the Game Design Process
             'Project: Build a Game': 'Project: Build a Game'
             'Project: Design a Game': 'Project: Design a Game'
+            Programming for Entertainment: Eğlence için programlama
+            Plotting Shapes: Şekiller çizme
+            Shapes and Randomness: Şekiller ve Rastgelelik
+            Variables: Değişkenler
+            Sprites: Sprites
+            The Draw Loop: Döngü çiz
+            The Counter Pattern Unplugged: Sayaç deseni
+            Sprite Movement: Sprite hareket
+            Conditionals: Koşullar
+            Keyboard Input: Klavye girişi
+            Other Forms of Input: ' Diğer girdi yöntemi'
+            Booleans Unplugged: Booleans Unplugged
+            Project - Interactive Card: Project - Interactive Card
+            Project - Design a Game: Project - Design a Game
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -4587,6 +4601,34 @@ tr:
               name: 'Project: Build a Game'
             'Project: Design a Game':
               name: 'Project: Design a Game'
+            Programming for Entertainment:
+              name: Eğlence için programlama
+            Plotting Shapes:
+              name: Şekiller çizme
+            Shapes and Randomness:
+              name: Şekiller ve Rastgelelik
+            Variables:
+              name: Değişkenler
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: Döngü çiz
+            The Counter Pattern Unplugged:
+              name: Sayaç deseni
+            Sprite Movement:
+              name: Sprite hareket
+            Conditionals:
+              name: Koşullar
+            Keyboard Input:
+              name: Klavye girişi
+            Other Forms of Input:
+              name: ' Diğer girdi yöntemi'
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Project - Design a Game:
+              name: Project - Design a Game
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4772,6 +4814,11 @@ tr:
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+            Input and Output: Girdiler ve çıktılar
+            Processing: İşleme
+            Storage: Depolama
+            Apps and Problem Solving: Uygulamalar ve Problem çözme
+            Project - Propose an App: Proje - bir uygulama önermek
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4794,6 +4841,16 @@ tr:
               name: 'Project: Apps and Problem Solving'
             Human vs Computer Processing:
               name: Human vs Computer Processing
+            Input and Output:
+              name: Girdiler ve çıktılar
+            Processing:
+              name: İşleme
+            Storage:
+              name: Depolama
+            Apps and Problem Solving:
+              name: Uygulamalar ve Problem çözme
+            Project - Propose an App:
+              name: Proje - bir uygulama önermek
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -6531,12 +6588,12 @@ tr:
             The Problem Solving Process: The Problem Solving Process
             Exploring Problem Solving: Exploring Problem Solving
             What is a Computer?: What is a Computer?
-            Inputs and Outputs: Inputs and Outputs
-            Processing: Processing
-            Storage: Storage
-            Apps and Problem Solving: Apps and Problem Solving
-            Project - Propose an App: Project - Propose an App
-            Input and Output: Input and Output
+            Inputs and Outputs: Girdiler ve çıktılar
+            Processing: İşleme
+            Storage: Depolama
+            Apps and Problem Solving: Uygulamalar ve Problem çözme
+            Project - Propose an App: Proje - bir uygulama önermek
+            Input and Output: Girdiler ve çıktılar
           title: ''
           description_audience: ''
           description_short: ''
@@ -6551,17 +6608,17 @@ tr:
             What is a Computer?:
               name: What is a Computer?
             Inputs and Outputs:
-              name: Inputs and Outputs
+              name: Girdiler ve çıktılar
             Processing:
-              name: Processing
+              name: İşleme
             Storage:
-              name: Storage
+              name: Depolama
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: Uygulamalar ve Problem çözme
             Project - Propose an App:
-              name: Project - Propose an App
+              name: Proje - bir uygulama önermek
             Input and Output:
-              name: Input and Output
+              name: Girdiler ve çıktılar
         csd3-chapters:
           stage:
             Programming for Entertainment: Eğlence için programlama
@@ -6586,9 +6643,9 @@ tr:
             The Game Design Process: The Game Design Process
             Using the Game Design Process: Using the Game Design Process
             'Project: Design a Game': 'Project: Design a Game'
-            'Chapter 1: Images and Animation': 'Chapter 1: Images and Animation'
+            'Chapter 1: Images and Animation': 'Bölüm 1: Resim ve animasyon'
             'null': 'boş'
-            temp: temp
+            temp: geçici
           title: ''
           description_audience: ''
           description_short: ''
@@ -6639,17 +6696,30 @@ tr:
             'Project: Design a Game':
               name: 'Project: Design a Game'
             'Chapter 1: Images and Animation':
-              name: 'Chapter 1: Images and Animation'
+              name: 'Bölüm 1: Resim ve animasyon'
             'null':
               name: 'boş'
             temp:
-              name: temp
+              name: geçici
         coursef-ramp:
           stage:
-            'Algorithms: Tangrams': 'Algorithms: Tangrams'
+            'Algorithms: Tangrams': 'Algoritmalar: Tangramlar'
             Introduction: Giriş
+            Ice Age Play Lab: Buz Devri Oyun Laboratuvarı
+            Functions in Farmer: Functions in Farmer
+            Conditionals and Functions in Bee: Conditionals and Functions in Bee
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 'Algoritmalar: Tangramlar'
             Introduction:
               name: Giriş
+            Ice Age Play Lab:
+              name: Buz Devri Oyun Laboratuvarı
+            Functions in Farmer:
+              name: Functions in Farmer
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

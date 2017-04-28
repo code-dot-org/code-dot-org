@@ -14,12 +14,24 @@ unless dry_run
 end
 
 frontends = %i(production adhoc).include?(rack_env)
+@frontends = frontends
 require 'cdo/cron'
-image_id = IMAGE_ID
+
+# Branch off existing AMI for adhoc.
+image_id = rack_env?(:adhoc) ? "!ImportValue AMI-#{environment}-ImageId" : IMAGE_ID
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
+<% if environment == :adhoc -%>
+Parameters:
+  DatabaseUsername:
+    Type: String
+    Default: master
+  DatabasePassword:
+    Type: String
+    NoEcho: true
+<% end -%>
 Resources:
 <% if frontends -%>
   # Signal when the instance is fully provisioned and ready for AMI creation.
@@ -351,7 +363,8 @@ Resources:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <% end -%>
-<% if environment == :production -%>
+<% if frontends -%>
+<%   cache_node_type = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -362,8 +375,11 @@ Resources:
     Properties:
       ReplicationGroupDescription: Geocoder Replication Group
       NumCacheClusters: 3
+<%  if cache_node_type.include? 'cache.t2' %>
+      AutomaticFailoverEnabled: false
+<%  end-%>
       Engine: redis
-      CacheNodeType: cache.r3.large
+      CacheNodeType: <%= cache_node_type %>
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
 <% end -%>
@@ -382,7 +398,10 @@ Resources:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
-<% if environment == :adhoc -%>
+<%
+   if environment == :adhoc
+   self.daemon = true
+-%>
   Daemon:
     Type: AWS::EC2::Instance
     CreationPolicy:
@@ -402,7 +421,7 @@ Resources:
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: 'Daemon',
-          node_name: '$ENVIRONMENT-daemon',
+          node_name: stack_name,
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
@@ -417,6 +436,35 @@ Resources:
             - !ImportValue VPC-FrontendSecurityGroup
             - !ImportValue VPC-GatewaySecurityGroup
           SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+  Database:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: !Ref AWS::StackName
+      DBInstanceClass: db.t2.micro
+      AllocatedStorage: 64
+      StorageType: gp2
+      Engine: mysql
+      EngineVersion: 5.6.29
+      DBParameterGroupName: !Ref DatabaseParameters
+      VPCSecurityGroups: [!ImportValue VPC-DBSecurityGroup]
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      MasterUsername: !Ref DatabaseUsername
+      MasterUserPassword: !Ref DatabasePassword
+  DatabaseParameters:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Sub "Parameters for ${AWS::StackName}."
+      Family: mysql5.6
+      Parameters:
+        innodb_autoinc_lock_mode: 2
+        innodb_flush_log_at_trx_commit: 0
+        innodb_flush_method: O_DIRECT
+        sync_binlog: 0
+        tx_isolation: READ-COMMITTED
+        skip_name_resolve: 1
+        performance_schema: 1
+        innodb_buffer_pool_dump_at_shutdown: 1
+        innodb_buffer_pool_load_at_startup: 1
 <% end -%>
 Outputs:
   DashboardURL:

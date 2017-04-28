@@ -6,7 +6,8 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "reference": "/csd/lists/index.html"
+    "reference": "/csd/lists/index.html",
+    "display_name": "Lists in HTML"
   },
   "published": true,
   "notes": "",
