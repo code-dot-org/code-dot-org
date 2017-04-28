@@ -48,7 +48,7 @@ namespace :build do
 
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
-        RakeUtils.rake_stream_output 'db:setup_or_migrate'
+        RakeUtils.rake 'db:setup_or_migrate'
 
         # Update the schema cache file, except for production which always uses the cache.
         unless rack_env?(:production)

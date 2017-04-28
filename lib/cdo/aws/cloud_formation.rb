@@ -44,6 +44,8 @@ module AWS
     LOG_NAME = '/var/log/bootstrap.log'.freeze
 
     class << self
+      attr_accessor :daemon
+
       def branch
         ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
       end
@@ -168,7 +170,12 @@ module AWS
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
         options = stack_options(template)
-        options[:on_failure] = 'DO_NOTHING' if action == :create
+        if action == :create
+          options[:on_failure] = 'DO_NOTHING'
+          if daemon
+            options[:role_arn] = "arn:aws:iam::#{Aws::STS::Client.new.get_caller_identity.account}:role/CloudFormationRole"
+          end
+        end
         begin
           updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
         rescue Aws::CloudFormation::Errors::ValidationError => e
