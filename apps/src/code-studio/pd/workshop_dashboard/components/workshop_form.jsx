@@ -23,6 +23,7 @@ import {
   HelpBlock,
   Button,
   ButtonToolbar,
+  Checkbox,
   Alert
 } from 'react-bootstrap';
 import {
@@ -59,7 +60,8 @@ const WorkshopForm = React.createClass({
       location_name: React.PropTypes.string.isRequired,
       location_address: React.PropTypes.string.isRequired,
       capacity: React.PropTypes.number.isRequired,
-      workshop_type: React.PropTypes.string.isRequired,
+      on_map: React.PropTypes.bool.isRequired,
+      funded: React.PropTypes.bool.isRequired,
       course: React.PropTypes.string.isRequired,
       subject: React.PropTypes.string,
       notes: React.PropTypes.string,
@@ -80,7 +82,8 @@ const WorkshopForm = React.createClass({
       location_name: '',
       location_address: '',
       capacity: '',
-      workshop_type: '',
+      on_map: false,
+      funded: false,
       course: '',
       subject: '',
       notes:'',
@@ -97,7 +100,8 @@ const WorkshopForm = React.createClass({
           'location_name',
           'location_address',
           'capacity',
-          'workshop_type',
+          'on_map',
+          'funded',
           'course',
           'subject',
           'notes'
@@ -255,26 +259,38 @@ const WorkshopForm = React.createClass({
     );
   },
 
-  renderWorkshopTypeSelect(validation) {
-    const options = window.dashboard.workshop.TYPES.map((workshopType, i) => {
-      return (<option key={i} value={workshopType}>{workshopType}</option>);
-    });
-    const placeHolder = this.state.workshop_type ? null : <option />;
+  renderOnMapCheckbox(validation) {
     return (
-      <FormGroup validationState={validation.style.workshop_type}>
-        <ControlLabel>Workshop Type</ControlLabel>
-        <FormControl
-          componentClass="select"
-          value={this.state.workshop_type || ''}
-          name="workshop_type"
-          onChange={this.handleFieldChange}
+      <FormGroup validationState={validation.style.on_map}>
+        <ControlLabel>
+          Show on "Find a Workshop" map?
+        </ControlLabel>
+        <Checkbox
+          checked={this.state.on_map}
+          name="on_map"
+          onChange={this.handleCheckboxChange}
           style={this.getInputStyle()}
-          disabled={this.props.readOnly}
-        >
-          {placeHolder}
-          {options}
-        </FormControl>
-        <HelpBlock>{validation.help.workshop_type}</HelpBlock>
+          readOnly={this.props.readOnly}
+        />
+        <HelpBlock>{validation.help.on_map}</HelpBlock>
+      </FormGroup>
+    );
+  },
+
+  renderFundedCheckbox(validation) {
+    return (
+      <FormGroup validationState={validation.style.funded}>
+        <ControlLabel>
+          Is this workshop funded?
+        </ControlLabel>
+        <Checkbox
+          checked={this.state.funded}
+          name="funded"
+          onChange={this.handleCheckboxChange}
+          style={this.getInputStyle()}
+          readOnly={this.props.readOnly}
+        />
+        <HelpBlock>{validation.help.funded}</HelpBlock>
       </FormGroup>
     );
   },
@@ -387,6 +403,18 @@ const WorkshopForm = React.createClass({
     return value;
   },
 
+  handleCheckboxChange(event) {
+    const fieldName = $(event.target).attr('name');
+    if (!fieldName) {
+      console.error("Expected name attribute on handleFieldChange target.");
+      return null;
+    }
+
+    const checked = event.target.checked;
+    this.setState({[fieldName]: checked});
+    return checked;
+  },
+
   handleCourseChange(event) {
     const course = this.handleFieldChange(event);
 
@@ -401,7 +429,8 @@ const WorkshopForm = React.createClass({
       location_name: this.state.location_name,
       location_address: this.state.location_address,
       capacity: this.state.capacity,
-      workshop_type: this.state.workshop_type,
+      on_map: this.state.on_map,
+      funded: this.state.funded,
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
@@ -518,11 +547,6 @@ const WorkshopForm = React.createClass({
         validation.style.capacity = "error";
         validation.help.capacity = "Must be a positive integer.";
       }
-      if (!this.state.workshop_type) {
-        validation.isValid = false;
-        validation.style.workshop_type = "error";
-        validation.help.workshop_type = "Required.";
-      }
       if (!this.state.course) {
         validation.isValid = false;
         validation.style.course = "error";
@@ -607,7 +631,10 @@ const WorkshopForm = React.createClass({
               </FormGroup>
             </Col>
             <Col sm={2}>
-              {this.renderWorkshopTypeSelect(validation)}
+              {this.renderOnMapCheckbox(validation)}
+            </Col>
+            <Col sm={2}>
+              {this.renderFundedCheckbox(validation)}
             </Col>
             <Col sm={3}>
               {this.renderCourseSelect(validation)}
