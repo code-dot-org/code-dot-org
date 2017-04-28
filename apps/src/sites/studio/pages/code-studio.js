@@ -20,6 +20,7 @@ var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
 import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
 import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
+import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -112,3 +113,4 @@ activateReferenceAreaOnLoad();
 window.CDOSounds = Sounds.getSingleton();
 
 checkForUnsupportedBrowsersOnLoad();
+initHamburger();
