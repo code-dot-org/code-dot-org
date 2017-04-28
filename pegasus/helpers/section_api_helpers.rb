@@ -1,5 +1,6 @@
-require 'cdo/user_helpers'
+require 'cdo/activity_constants'
 require 'cdo/script_constants'
+require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
