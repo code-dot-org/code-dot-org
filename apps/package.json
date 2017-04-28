@@ -152,7 +152,7 @@
     "react": "15.3.2",
     "react-addons-test-utils": "15.3.0",
     "react-bootstrap": "0.30.1",
-    "react-color": "2.2.5",
+    "react-color": "^2.11.7",
     "react-datepicker": "0.37.0",
     "react-dom": "15.3.0",
     "react-idle-timer": "1.3.3",
@@ -198,6 +198,7 @@
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
     "query-string": "4.1.0",
+    "react-addons-shallow-compare": "^0.14.0 || ^15.0.0",
     "react-hot-loader": "^1.3.1",
     "selectize": "^0.12.4"
   }
