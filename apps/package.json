@@ -144,7 +144,6 @@
     "moment": "2.14.1",
     "newrelic": "^1.27.2",
     "node-sass": "^4.0.0",
-    "npm-which": "2.0.0",
     "phantomjs-prebuilt": "^2.1.14",
     "playground-io": "code-dot-org/playground-io#v0.4.0-cdo.2",
     "progress-bar-webpack-plugin": "^1.8.0",
