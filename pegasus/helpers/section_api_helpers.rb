@@ -433,7 +433,7 @@ class DashboardSection
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path
       ).
-      distinct(:student_user_id).
+      group_by(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       where(followers__deleted_at: nil).
