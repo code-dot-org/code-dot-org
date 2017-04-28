@@ -102,3 +102,7 @@ export function canvasToBlob(canvas) {
     canvas.toBlob(resolve);
   });
 }
+
+export function dataURIToBlob(uri) {
+  return imageFromURI(uri).then(canvasFromImage).then(canvasToBlob);
+}

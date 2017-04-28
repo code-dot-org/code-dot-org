@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
+import {dataURIToBlob} from './imageUtils';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -402,8 +403,18 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
   if (saveToGalleryButton && options.saveToProjectGallery) {
     dom.addClickTouchEvent(saveToGalleryButton, () => {
+      $('#save-to-gallery-button').prop('disabled', true).text("Saving...");
       project.copy(project.getNewProjectName(), () => {
-        $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
+        dataURIToBlob(options.feedbackImage)
+          .then(project.saveThumbnail)
+          .then(() => {
+            return new Promise(resolve => {
+              // Save the thumbnail url to the server.
+              project.save(resolve);
+            });
+          }).then(() => {
+            $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
+          });
       });
     });
   } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
