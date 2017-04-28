@@ -32,7 +32,9 @@
     "ideal": "4",
     "step_speed": "2",
     "authored_hints": "[]",
-    "contained_level_names": null
+    "contained_level_names": [
+      "courseE_multi_farmer_predict2"
+    ]
   },
   "published": true,
   "notes": "",

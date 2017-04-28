@@ -90,7 +90,9 @@ module.exports = function (testCollection, testData, dataItem, done) {
 };
 
 sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
-  finished();
+  if (!LegacyDialog.levelTestDontFinishOnShow) {
+    finished();
+  }
 });
 
 sinon.stub(LegacyDialog.prototype, 'hide');
@@ -103,7 +105,7 @@ const appLoaders = {
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
   eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
-  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  gamelab: require('../../util/gamelab/loadTestableGamelab'),
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
@@ -122,7 +124,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   setAppSpecificGlobals(app);
 
   project.useFirebase.returns(!!testData.useFirebase);
-  project.isOwner.returns(true);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
@@ -146,7 +147,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
-      if (level.editCode && !studioApp.editor) {
+      if (level.editCode && !studioApp().editor) {
         timeout = 500;
       }
 

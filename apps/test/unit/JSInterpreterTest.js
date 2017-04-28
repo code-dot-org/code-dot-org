@@ -1,5 +1,4 @@
 import {expect, assert} from '../util/configuredChai';
-import {getStore} from '@cdo/apps/redux';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 
@@ -13,7 +12,7 @@ describe("JSInterpreter", function () {
     // needed.
     jsInterpreter = new JSInterpreter({
       shouldRunAtMaxSpeed: function () { return false; },
-      studioApp: {hideSource: true, reduxStore: getStore()}
+      studioApp: {hideSource: true}
     });
 
     // Initialize a test program

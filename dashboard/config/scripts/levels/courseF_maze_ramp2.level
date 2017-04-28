@@ -1,0 +1,74 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-04-20T16:59:09.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,4,0,0,0,0,0],[2,1,1,1,1,1,1,3],[0,0,1,1,1,1,1,0],[0,0,0,1,1,1,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "Drag a `repeat` block out of the toolbox and attach it to the `when run` event.   Place the `move forward` block inside to finish your code.",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "3",
+    "video_key": "C2_maze_intro",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the `when run` block.\",\"hint_id\":\"courseF_maze_programming2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bde668049e8ebec622262995f2af7a2e/courseF_maze_ramp2.mp3\"}]",
+    "markdown_instructions": "Drag a `repeat` block out of the toolbox and attach it to the `when run` event.   \r\n\r\nPlace the `move forward` block inside to finish your code.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming2_1\",\r\n  \"callout_text\": \"This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": null,
+    "maze_data": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="maze_moveForward"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="1"/>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">7</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">7</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

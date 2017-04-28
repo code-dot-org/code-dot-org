@@ -31,9 +31,8 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "maze_data": null,
-    "tts_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?"
+    "tts_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

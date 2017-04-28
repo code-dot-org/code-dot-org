@@ -1,0 +1,29 @@
+name 'CSD U2 expand project'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Expanding Your Website
+
+In the next level, you'll be expanding your website by adding a second page.  You will discuss your plan with your partner, but you'll be working on your own site.
+
+You'll need to do three things in the next level.
+
+1. Create a new page.
+2. Name the new page.
+3. Put content on the new page.
+
+The new page you add should include:
+
+* at least one list
+* at least one header
+
+Before you start coding, you should have a plan for what you want the website to be about.  Here are some ideas.
+
+**Recipe** <br />
+You can share your favorite recipe, like someone else did with the scotcheroos.
+
+**Top Ten List** <br />
+You can share a top ten list.  This could be your top ten things to do on the weekend, your top favorite songs, or the top places you would like to visit.
+
+
+MARKDOWN

@@ -24,7 +24,6 @@ require 'active_support/core_ext/hash'
 if rack_env?(:production)
   require 'newrelic_rpm'
   NewRelic::Agent.after_fork(force_reconnect: true)
-  require 'newrelic_ignore_downlevel_browsers'
 end
 
 require 'honeybadger'
@@ -366,6 +365,15 @@ class Documents < Sinatra::Base
           end
         end
       end
+
+      # Also look for shared items.
+      extnames.each do |extname|
+        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
+        if File.file?(path)
+          return path
+        end
+      end
+
       nil
     end
 

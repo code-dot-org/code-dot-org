@@ -5,8 +5,9 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
+require_relative 'sequel_test_case'
 
-class V2UserRoutesTest < Minitest::Test
+class V2UserRoutesTest < SequelTestCase
   describe 'User Routes' do
     before do
       FakeDashboard.use_fake_database

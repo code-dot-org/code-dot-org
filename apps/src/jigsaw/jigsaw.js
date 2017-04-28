@@ -12,6 +12,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
+import {getStore} from '../redux';
 
 /**
  * Create a namespace for the application.
@@ -21,10 +22,9 @@ var Jigsaw = module.exports;
 var level;
 var skin;
 
-var ResultType = studioApp.ResultType;
-var TestResults = studioApp.TestResults;
+import {TestResults, ResultType} from '../constants';
 
-studioApp.setCheckForEmptyBlocks(true);
+studioApp().setCheckForEmptyBlocks(true);
 
 // Never bump neighbors for Jigsaw
 Blockly.BUMP_UNCONNECTED = false;
@@ -124,9 +124,9 @@ Jigsaw.init = function (config) {
 
   // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function () {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp().loadAudio(skin.winSound, 'win');
+    studioApp().loadAudio(skin.startSound, 'start');
+    studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function () {
@@ -149,7 +149,7 @@ Jigsaw.init = function (config) {
   config.enableShowBlockCount = false;
 
   var onMount = function () {
-    studioApp.init(config);
+    studioApp().init(config);
 
     document.getElementById('runButton').style.display = 'none';
     Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function (evt) {
@@ -165,12 +165,12 @@ Jigsaw.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config, {
+  studioApp().setPageConstants(config, {
     noVisualization: true
   });
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<JigsawVisualizationColumn/>}
         onMount={onMount}
@@ -192,11 +192,11 @@ function checkForSuccess() {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
   if (!Jigsaw.waitingForReport) {
-    studioApp.displayFeedback({
+    studioApp().displayFeedback({
       app: 'Jigsaw',
       skin: skin.id,
       feedbackType: Jigsaw.testResults,
@@ -213,7 +213,7 @@ var displayFeedback = function () {
 Jigsaw.onReportComplete = function (response) {
   Jigsaw.response = response;
   Jigsaw.waitingForReport = false;
-  studioApp.onReportComplete(response);
+  studioApp().onReportComplete(response);
   displayFeedback();
 };
 
@@ -230,14 +230,14 @@ Jigsaw.onPuzzleComplete = function () {
   // Note that we have not yet animated the succesful run
   var levelComplete = (Jigsaw.result === ResultType.SUCCESS);
 
-  Jigsaw.testResults = studioApp.getTestResults(levelComplete, {
+  Jigsaw.testResults = studioApp().getTestResults(levelComplete, {
     allowTopBlocks: true
   });
 
   if (Jigsaw.testResults >= TestResults.FREE_PLAY) {
-    studioApp.playAudio('win');
+    studioApp().playAudio('win');
   } else {
-    studioApp.playAudio('failure');
+    studioApp().playAudio('failure');
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -246,7 +246,7 @@ Jigsaw.onPuzzleComplete = function () {
   Jigsaw.waitingForReport = true;
 
   // Report result to server.
-  studioApp.report({
+  studioApp().report({
      app: 'Jigsaw',
      level: level.id,
      result: Jigsaw.result === ResultType.SUCCESS,

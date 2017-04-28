@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,4,0,0],[0,0,0,4,1,1,0,0],[0,0,0,0,4,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,3,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,0,0],[0,1,1,4,1,1,0,0],[0,0,0,0,4,1,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,3,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "instructions": "**Challenge:**  Get the bird to the pig!",
-    "ideal": "12",
+    "instructions": "Get the bird to the pig!",
+    "ideal": "8",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,8 +27,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use the \\\"Step\\\" button to go through block by block and look for errors.\",\"hint_id\":\"courseD_maze_ramp7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c38b1ee74ef68dd1a5ce2efb5d1c1f46/courseD_maze_ramp7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use repeat blocks to run either a single block or a chunk of code over and over.\",\"hint_id\":\"courseD_maze_ramp7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7078b030e0e4326975a53a8b7ae7039f/courseD_maze_ramp7.mp3\"}]",
-    "markdown_instructions": "*\"It's time to get angry!\"*\r\n\r\n**Challenge:** Use what you've learned to get the bird to the pig!",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_maze_ramp7_1\",\r\n  \"callout_text\": \"This is your first challenge puzzle! These are meant to be hard and may take several tries.\",\r\n  \"element_id\": \"#prompt\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "markdown_instructions": "*\"It's time to get angry!\"*  \r\n\r\n\r\nUse what you've learned to get the bird to the pig!",
+    "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -43,7 +43,7 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="5"/>
+        <block type="maze_moveForward" limit="3"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
@@ -60,7 +60,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">3</title>
+              <title name="TIMES">4</title>
               <statement name="DO">
                 <block type="maze_moveForward"/>
               </statement>
@@ -68,34 +68,16 @@
                 <block type="maze_turn">
                   <title name="DIR">turnRight</title>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
                       <next>
                         <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
+                          <title name="DIR">turnRight</title>
                           <next>
-                            <block type="maze_moveForward">
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
-                                  <next>
-                                    <block type="controls_repeat">
-                                      <title name="TIMES">3</title>
-                                      <statement name="DO">
-                                        <block type="maze_moveForward"/>
-                                      </statement>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnRight</title>
-                                          <next>
-                                            <block type="maze_moveForward"/>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
+                            <block type="maze_moveForward"/>
                           </next>
                         </block>
                       </next>

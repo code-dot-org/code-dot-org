@@ -12,7 +12,7 @@ pt-BR:
     attributes:
       user:
         name: 'Nome para exibição'
-        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: 'E-mail'
         username: 'Nome de usuário'
         password: 'Senha'
@@ -79,6 +79,7 @@ pt-BR:
     forgot_password: 'Esqueceu sua senha?'
     need_confirmation: "Não recebeu as instruções de confirmação?"
     need_unlock: "Não recebeu as instruções de desbloqueio?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} alunos já se registraram.'
     teacher_count: '%{count} professores já se registraram.'
@@ -135,7 +136,7 @@ pt-BR:
   signin_form:
     title: 'Já tem uma conta? Entre'
     login: 'E-mail'
-    login_username: 'Email or Username'
+    login_username: 'Nome utilizador ou e-mail'
     password: 'Senha'
     remember: 'Lembrar de mim'
     submit: 'Entrar'
@@ -173,6 +174,14 @@ pt-BR:
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como seu professor'
@@ -186,8 +195,6 @@ pt-BR:
       blank_code: "Insira um código de seção"
       cant_join_own_section: "Desculpe, você não pode entrar em sua própria seção."
     mail:
-      invite_student:
-        subject: "Entre na turma de %{teacher_name} na Code.org!"
       student_disassociated:
         subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
   reports:
@@ -386,6 +393,7 @@ pt-BR:
     announcement_petition: "Como professor, você está abrindo as portas de um movimento que dará a cada aluno de todas as escolas a oportunidade de aprender ciência da computação. Agora chegou a hora de seus representantes ouvirem o que você tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola ao Ensino médio."
     announcement_petition_button: "Adicione seu nome"
     announcement_go_beyond_button: "Ir além"
+    announcement_apply_now: "Apply now"
     announcement_all: "Fique por dentro dos novos recursos e atualizações em nosso blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas novidades.</a>"
     announcement_hoc_launch: "Milhares de professores em mais de 180 países começarão a ensinar ciência da computação durante a Hora do Código, de 5 a 11 de dezembro. Estamos contando com você para nos ajudar a atingir mais alunos do que nunca. <a href='%{signup_url}' target='_blank'>Registre seu evento da Hora do Código</a> e avise outro professor que ele também pode começar a ensinar ciência da computação."
     announcement_mc_launch: "Um de nossos tutoriais mais populares ganhou uma sequência! O novo Designer para a Hora do Código Minecraft permite que os alunos façam as regras do mundo Minecraft. Eles podem criar uma experiência completamente única de Minecraft e compartilhar com seus amigos ou jogar em seus aparelhos. Faça isso com sua turma na Hora do Código."
@@ -398,13 +406,11 @@ pt-BR:
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "A seção %{new_section_code} não existe. Insira outro código de seção."
-    section_code_not_entered: "Forneça o current_section_code."
     section_code_cant_be_current_section: "A seção atual não pode ser igual à nova seção."
     current_section_dne: "A seção %{current_section_code} não existe. Insira outro código de seção."
-    students_not_yours: "Não é possível mover alunos de uma seção que não pertence a você."
-    stay_enrolled_not_entered: "Forneça stay_enrolled_in_current_section."
     student_ids_not_entered: "Forneça students_ids."
     student_not_found: "Não foi possível encontrar um ou mais alunos."
     all_students_must_be_in_current_section: "Todos os alunos devem estar inscritos em sua seção atualmente."
@@ -559,7 +565,7 @@ pt-BR:
     support: "Obter ajuda"
     support_url: "//support.code.org"
     help_resources: "Ajuda e recursos"
-    help_support: "Help and Support"
+    help_support: "Suporte"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:

@@ -242,4 +242,45 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     assert accidental_student.teacher?
     assert_equal email, accidental_student.email
   end
+
+  test 'setting accepted_workshop creates an accepted program entry' do
+    application = create :pd_teacher_application
+    assert_creates Pd::AcceptedProgram do
+      application.accepted_workshop = 'workshop name'
+    end
+
+    accepted_program = application.accepted_program
+    assert accepted_program
+    assert_equal 'workshop name', accepted_program.workshop_name
+    assert_equal application.selected_course, accepted_program.course
+    assert_equal application.user_id, accepted_program.user_id
+    assert_equal application.id, accepted_program.teacher_application_id
+  end
+
+  test 'reassigning accepted_workshop updates existing accepted program entry' do
+    application = create :pd_teacher_application
+    accepted_program = create :pd_accepted_program, workshop_name: 'a workshop', teacher_application: application
+    assert_does_not_create Pd::AcceptedProgram do
+      application.accepted_workshop = 'another workshop'
+    end
+
+    accepted_program.reload
+    assert_equal 'another workshop', accepted_program.workshop_name
+    assert_equal 'another workshop', application.accepted_workshop
+  end
+
+  test 'setting accepted_workshop to nil destroys existing accepted program entry' do
+    application = create :pd_teacher_application
+    accepted_program = create :pd_accepted_program, teacher_application: application
+
+    assert_difference 'Pd::AcceptedProgram.count', -1 do
+      application.accepted_workshop = nil
+    end
+    refute Pd::AcceptedProgram.exists?(accepted_program.id)
+
+    # idempotence
+    assert_no_difference 'Pd::AcceptedProgram.count' do
+      application.accepted_workshop = nil
+    end
+  end
 end

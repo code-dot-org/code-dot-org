@@ -32,7 +32,7 @@
     "instructions": "Get nectar while there is nectar, **else** make the honey. ",
     "ideal": "8",
     "step_speed": "2",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar if there is nectar, otherwise make honey!\",\"hint_id\":\"courseE_bee_ramp14_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b1a0feedca16aa04ac00b95f9080404f/courseE_bee_ramp14.mp3\"}]",
     "markdown_instructions": "The same technique works with nectar and honey!  \r\n\r\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.  Use the `if at flower / else` block to get nectar while there is nectar, **else** make the honey. \r\n\r\n\r\n\r\n",
     "contained_level_names": null
   },

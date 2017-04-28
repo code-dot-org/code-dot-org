@@ -13,6 +13,6 @@ export default function loadweblab(options) {
   // Bind helper that provides project metadata for gamelab autosave
   // options.getAnimationMetadata = gamelab.getAnimationMetadata.bind(gamelab);
 
-  weblab.injectStudioApp(studioApp);
+  weblab.injectStudioApp(studioApp());
   appMain(weblab, levels, options);
 }

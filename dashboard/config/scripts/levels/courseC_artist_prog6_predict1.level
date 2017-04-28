@@ -6,9 +6,9 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "x": "209",
-    "y": "331",
-    "start_direction": "45",
+    "x": "100",
+    "y": "100",
+    "start_direction": "180",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "scrollbars": "false",
@@ -129,8 +129,5 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml/>
-    </recommended_blocks>
   </blocks>
 </Artist>

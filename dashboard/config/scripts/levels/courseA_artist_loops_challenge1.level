@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Can you draw a house? Make it look just the way you like it!",
+    "instructions": "You can use a loop to draw many lines in a row.\r\n\r\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!",
     "instructions_important": "false",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -33,8 +33,8 @@
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use loops like this to create the walls and the roof. Try repeating different blocks.\\n\\n\\n\\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\\n\\nDesign your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!\\n\\n\",\"hint_id\":\"courseA_artist_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2f3647257f5a07200cf50e77a8e339fb/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use loops like this to create the walls and the roof. Try repeating different blocks.\\n\\n\\n\\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\\n\\nDesign your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!\\n\\n\",\"hint_id\":\"courseA_artist_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2f3647257f5a07200cf50e77a8e339fb/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

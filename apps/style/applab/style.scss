@@ -308,6 +308,12 @@ div#visualizationResizeBar {
   z-index: -1;
 }
 
+#divApplab.running {
+  label {
+    cursor: default;
+  }
+}
+
 /* When not running, show default arrow cursor for all UI elements
    so that they do not look active. */
 #divApplab.notRunning {

@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
@@ -77,7 +76,6 @@ testsContext.keys().forEach(testsContext);
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -262,6 +260,7 @@ testsContext.keys().forEach(testsContext);
       },
       files: _.fromPairs([
         ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/code-studio.css', 'style/code-studio/code-studio.scss'],
         ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
         ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
@@ -409,7 +408,6 @@ testsContext.keys().forEach(testsContext);
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
-    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
@@ -423,12 +421,14 @@ testsContext.keys().forEach(testsContext);
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
+    'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
+    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js'
   };
 
   var otherEntries = {
@@ -449,14 +449,20 @@ testsContext.keys().forEach(testsContext);
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
+    // common entry points for pegasus js
+    'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+    'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
+    'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
-    'teacher-dashboard/index': './src/sites/code.org/pages/teacher-dashboard/index.js',
-    'pd-workshop-survey/splat': './src/sites/code.org/pages/pd-workshop-survey/splat.js',
+    'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
+    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
@@ -674,7 +680,7 @@ testsContext.keys().forEach(testsContext);
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
-    mkdirp.sync(current);
+    child_process.execSync('mkdir -p ' + current);
     appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
@@ -798,17 +804,6 @@ testsContext.keys().forEach(testsContext);
     'concat',
     'karma:all'
   ]);
-
-  // We used to use 'mochaTest' as our test command.  Alias to be friendly while
-  // we transition away from it.  This can probably be removed in a month or two.
-  // - Brad (16 May 2016)
-  grunt.registerTask('showMochaTestWarning', function () {
-    console.log(chalk.yellow('Warning: ') + 'The ' + chalk.italic('mochaTest') +
-        ' task is deprecated.  Use ' + chalk.italic('test') + ' instead, or' +
-        ' directly invoke its subtasks ' + chalk.italic('unitTest') + ' and ' +
-        chalk.italic('integrationTest') + '.');
-  });
-  grunt.registerTask('mochaTest', ['showMochaTestWarning', 'test']);
 
   grunt.registerTask('logBuildTimes', function () {
     var done = this.async();

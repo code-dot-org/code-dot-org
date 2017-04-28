@@ -28,7 +28,7 @@ const styles = {
  */
 const MiniView = React.createClass({
   propTypes: {
-    linesOfCodeText: PropTypes.string.isRequired,
+    linesOfCodeText: PropTypes.string,
 
     // redux backed
     isSummaryView: PropTypes.bool.isRequired,

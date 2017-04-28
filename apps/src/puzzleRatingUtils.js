@@ -90,7 +90,7 @@ puzzleRatingUtils.removePuzzleRating_ = function (rating) {
  *        rating. Usually script_id and level_id
  */
 puzzleRatingUtils.cachePuzzleRating = function (container, options) {
-  var selectedButton = container.querySelector('.puzzle-rating-btn.enabled');
+  var selectedButton = container.querySelector('.enabled');
   if (selectedButton) {
     var rating = Object.assign({}, options, { rating: selectedButton.getAttribute('data-value') });
     var ratings = puzzleRatingUtils.getPuzzleRatings_();

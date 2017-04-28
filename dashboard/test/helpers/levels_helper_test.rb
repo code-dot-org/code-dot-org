@@ -462,4 +462,22 @@ class LevelsHelperTest < ActionView::TestCase
     standalone = false
     assert_not include_multi_answers?(standalone)
   end
+
+  test 'section first_activity_at should not be nil when finding experiments' do
+    Experiment.stubs(:should_cache?).returns true
+    teacher = create(:teacher)
+    experiment = create(:teacher_based_experiment,
+      earliest_section_at: DateTime.now - 1.day,
+      latest_section_at: DateTime.now + 1.day,
+      percentage: 100,
+    )
+    Experiment.update_cache
+    section = create(:section, user: teacher)
+    student = create(:student)
+    section.add_student(student)
+
+    sign_in student
+
+    assert_includes app_options[:experiments], experiment.name
+  end
 end

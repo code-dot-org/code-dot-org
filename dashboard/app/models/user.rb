@@ -35,10 +35,6 @@
 #  teacher_prize_id           :integer
 #  teacher_bonus_prize_earned :boolean          default(FALSE)
 #  teacher_bonus_prize_id     :integer
-#  confirmation_token         :string(255)
-#  confirmed_at               :datetime
-#  confirmation_sent_at       :datetime
-#  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
@@ -59,7 +55,6 @@
 # Indexes
 #
 #  index_users_on_birthday                               (birthday)
-#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
@@ -72,7 +67,6 @@
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
-#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
 #  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
@@ -108,12 +102,12 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
-  devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
@@ -181,9 +175,13 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  # TODO: I think we actually want to do this.
-  # You can be associated with districts through cohorts
-  # has_many :districts, through: :cohorts.
+  validate :admins_must_be_teachers
+
+  def admins_must_be_teachers
+    if admin
+      errors.add(:admin, 'must be a teacher') unless teacher?
+    end
+  end
 
   def facilitator?
     permission? UserPermission::FACILITATOR
@@ -216,6 +214,15 @@ class User < ActiveRecord::Base
     end
     # Return the cached results.
     return @permissions.include? permission
+  end
+
+  # Revokes all escalated permissions associated with the user, including admin status and any
+  # granted UserPermission's.
+  def revoke_all_permissions
+    self.admin = nil
+    save(validate: false)
+
+    UserPermission.where(user_id: id).each(&:destroy)
   end
 
   def district_contact?
@@ -288,20 +295,13 @@ class User < ActiveRecord::Base
   has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections
+  has_many :sections, dependent: :destroy
   has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
 
-  # sections will include those that have been deleted until/unless we do the work
-  # to enable the paranoia gem. This method will return only sections that have
-  # not been deleted
-  def non_deleted_sections
-    sections.where(deleted_at: nil)
-  end
-
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
@@ -353,7 +353,6 @@ class User < ActiveRecord::Base
   # NOTE: Order is important here.
   before_save :make_teachers_21,
     :normalize_email,
-    :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students,
     :hide_school_info_for_students,
@@ -369,16 +368,6 @@ class User < ActiveRecord::Base
     self.email = email.strip.downcase
   end
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # We make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed.
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
@@ -391,7 +380,6 @@ class User < ActiveRecord::Base
   def hide_email_and_full_address_for_students
     if student?
       self.email = ''
-      self.unconfirmed_email = nil
       self.full_address = nil
     end
   end
@@ -534,7 +522,7 @@ class User < ActiveRecord::Base
   end
 
   def email_required?
-    return true if teacher? || admin?
+    return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
@@ -633,10 +621,19 @@ class User < ActiveRecord::Base
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
-    user_levels_by_level = user_levels_by_level(script)
+    # some of our user_levels may be for levels within level_groups, or for levels
+    # that are no longer in this script. we want to ignore those, and only look
+    # user_levels that have matching script_levels
+    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # the script in multiple places (i.e. via level swapping) there's some potential
+    # for strange behavior.
+    levels = script.script_levels.map(&:level_ids).flatten
+    user_levels_by_level = user_levels.
+      where(script_id: script.id, level: levels).
+      index_by(&:level_id)
 
-    # Find the user level that we've most recently had progress on
-    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+    # Find the user_level that we've most recently had progress on
+    user_level = user_levels_by_level.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
@@ -742,7 +739,7 @@ class User < ActiveRecord::Base
   end
 
   def confirmation_required?
-    teacher? && !confirmed?
+    false
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -1100,12 +1097,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # @param script [Script] The script to assign.
+  # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.assigned_at = Time.now
-
-      user_script.save!
+      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
       return user_script
     end
   end

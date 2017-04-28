@@ -1,4 +1,4 @@
-/* globals appOptions, CDOSounds */
+/* globals appOptions */
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 import React from 'react';
@@ -8,6 +8,7 @@ import StageAchievementDialog from '@cdo/apps/templates/StageAchievementDialog';
 import Feedback from '@cdo/apps/feedback';
 import { getResult } from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import Sounds from '../../Sounds';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -111,11 +112,11 @@ export function processResults(onComplete, beforeHook) {
     if (!result) {
       showDialog(errorType || "error");
       if (!appOptions.dialog.skipSound) {
-        CDOSounds.play('failure');
+        Sounds.getSingleton().play('failure');
       }
     } else {
       if (!appOptions.dialog.skipSound) {
-        CDOSounds.play('success');
+        Sounds.getSingleton().play('success');
       }
     }
 
@@ -158,7 +159,7 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            if (experiments.isEnabled('g.endstage') && Feedback.isLastLevel()) {
+            if (experiments.isEnabled('gamification') && Feedback.isLastLevel()) {
               const stageInfo = lastServerResponse.previousStageInfo;
               const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
               showDialog("success", () => {
@@ -175,7 +176,7 @@ export function processResults(onComplete, beforeHook) {
                     // This is a hack
                     assetUrl={path => '/blockly/' + path}
                     onContinue={dialogHidden}
-                    showStageProgress={experiments.isEnabled('g.stageprogress')}
+                    showStageProgress={experiments.isEnabled('gamification')}
                     newStageProgress={progress.newStageProgress}
                     numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
                   />,

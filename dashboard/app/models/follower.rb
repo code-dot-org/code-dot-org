@@ -18,6 +18,8 @@
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :section
   has_one :user, through: :section
   belongs_to :student_user, foreign_key: "student_user_id", class_name: User
@@ -35,7 +37,7 @@ class Follower < ActiveRecord::Base
 
   validate :cannot_follow_yourself, :teacher_must_be_teacher
 
-  validates_presence_of :user, :student_user, :section
+  validates_presence_of :student_user, :section
 
   after_create :assign_script
   def assign_script

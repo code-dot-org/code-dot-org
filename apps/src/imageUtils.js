@@ -1,4 +1,5 @@
 import artistShareFrame from '../static/turtle/blank_sharing_drawing.png';
+import './util/svgelement-polyfill';
 
 export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
@@ -37,13 +38,18 @@ export function imageDataFromURI(uri) {
   });
 }
 
+export function canvasFromImage(image) {
+  const canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+  const context = canvas.getContext('2d');
+  context.drawImage(image, 0, 0, image.width, image.height);
+  return canvas;
+}
+
 export function dataURIFromURI(uri) {
   return imageFromURI(uri).then(image => {
-    const canvas = document.createElement('canvas');
-    canvas.width = image.width;
-    canvas.height = image.height;
-    const context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0, image.width, image.height);
+    const canvas = canvasFromImage(image);
     return canvas.toDataURL();
   });
 }
@@ -75,11 +81,24 @@ export function dataURIToFramedBlob(dataURI, callback) {
   frame.src = artistShareFrame;
 }
 
-function imageFromURI(uri) {
+export function imageFromURI(uri) {
   return new Promise((resolve, reject) => {
     let image = new Image();
     image.onload = () => resolve(image);
     image.onerror = err => reject(err);
     image.src = uri;
+  });
+}
+
+export function svgToDataURI(svg, imageType) {
+  imageType = imageType || 'image/png';
+  return new Promise(resolve => {
+    svg.toDataURL(imageType, {callback: resolve});
+  });
+}
+
+export function canvasToBlob(canvas) {
+  return new Promise(resolve => {
+    canvas.toBlob(resolve);
   });
 }

@@ -789,8 +789,8 @@ input[type="radio"] {
 #puzzleRatingButtons {
 
   $red: #FF3014;
-  $dark-red: #D62911;
-  $dark-blue: #00647F;
+  $dark-red: $dark_red;
+  $dark-blue: $dark_blue;
   $gray: #333333;
   $dark-gray: #4D4D4D;
   $light-gray: $light_gray;

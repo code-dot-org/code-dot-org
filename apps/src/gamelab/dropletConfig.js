@@ -5,6 +5,7 @@ import color from '../util/color';
 var consoleApi = require('../consoleApi');
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
+import {getStore} from '../redux';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -31,7 +32,7 @@ exports.injectGameLab = function (gamelab) {
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !gameLab.studioApp_.reduxStore.getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }
 
@@ -384,7 +385,7 @@ module.exports.categories = {
 };
 
 module.exports.additionalPredefValues = [
-  'Game', 'World',
+  'World',
   'P2D', 'WEBGL', 'ARROW', 'CROSS', 'HAND', 'MOVE',
   'TEXT', 'WAIT', 'HALF_PI', 'PI', 'QUARTER_PI', 'TAU', 'TWO_PI', 'DEGREES',
   'RADIANS', 'CORNER', 'CORNERS', 'RADIUS', 'RIGHT', 'LEFT', 'CENTER', 'TOP',

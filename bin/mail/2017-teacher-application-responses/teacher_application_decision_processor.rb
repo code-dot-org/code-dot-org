@@ -51,6 +51,11 @@ class TeacherApplicationDecisionProcessor
     'July 30 - August 4, 2017: Philadelphia'
   ].freeze
 
+  # Array of string tuples. Replace any of the first strings with the second in partner names.
+  PARTNER_NAME_OVERRIDES = [
+    ['Share Fair Nation', 'mindSpark Learning (formerly Share Fair Nation)']
+  ]
+
   attr_reader :results
   def initialize
     # Change working dir to this directory so all file names are local
@@ -93,7 +98,7 @@ class TeacherApplicationDecisionProcessor
       when DECISIONS[:accept]
         process_accept teacher_application, program, workshop_string, regional_partner_override
       when DECISIONS[:decline]
-        process_decline teacher_application
+        process_decline teacher_application, regional_partner_override
       when DECISIONS[:waitlist]
         process_waitlist teacher_application
       else
@@ -146,6 +151,11 @@ class TeacherApplicationDecisionProcessor
 
   def process(decision, teacher_application, params = {})
     raise "Unexpected decision: #{decision}" unless @results.key? decision
+
+    # Make sure regional partner names have overrides applied before sending
+    if params.key? :regional_partner_name_s
+      params[:regional_partner_name_s] = apply_partner_name_overrides(params[:regional_partner_name_s])
+    end
 
     # Construct result hash, add to appropriate list, and return the new result
     {
@@ -210,9 +220,11 @@ class TeacherApplicationDecisionProcessor
     process :waitlist, teacher_application, {teacher_application_id_s: teacher_application.id}
   end
 
-  def process_decline(teacher_application)
+  def process_decline(teacher_application, regional_partner_override)
     decision = get_decline_decision(teacher_application)
-    process decision, teacher_application, {regional_partner_name_s: teacher_application.regional_partner_name}
+
+    partner_name = regional_partner_override || teacher_application.regional_partner_name
+    process decision, teacher_application, {regional_partner_name_s: partner_name}
   end
 
   def get_decline_decision(teacher_application)
@@ -241,5 +253,13 @@ class TeacherApplicationDecisionProcessor
   def lookup_workshop(workshop_string)
     raise "Unexpected workshop: #{workshop_string}" unless @workshop_map.key? workshop_string
     @workshop_map[workshop_string]
+  end
+
+  def apply_partner_name_overrides(partner_name)
+    mutated_partner_name = partner_name.dup
+    PARTNER_NAME_OVERRIDES.each do |override|
+      mutated_partner_name.gsub!(override[0], override[1])
+    end
+    mutated_partner_name
   end
 end

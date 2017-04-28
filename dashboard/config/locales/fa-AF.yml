@@ -87,6 +87,8 @@
     forgot_password: "کلمه عبور خود را فراموش کرده اید؟"
     need_confirmation: "دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟"
     need_unlock: "دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} دانش آموز تا حالا ثبت نام کرده اند."
     teacher_count: "%{count} معلم تا حالا ثبت نام کرده اند."
@@ -196,6 +198,14 @@
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
 
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "دعوتنامه ارسال شد"
     added_teacher: "%{name} به عنوان معلم شما افزوده شد"
@@ -211,8 +221,6 @@
       blank_code: "لطفا بخش کد را وارد کنید"
       cant_join_own_section: "با عرض پوزش  ، شما نمی توانید ملحق شوید به بخش خود."
     mail:
-      invite_student:
-        subject: "در یک کلاس با %{teacher_name} در Code.org شرکت کنید!"
       student_disassociated:
         subject: "اعلان Code.org: %{student_name} دیگر به عنوان دانش‌آموز شما شناخته
           نمی‌شود."
@@ -469,6 +477,7 @@
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add your name
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -531,17 +540,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
@@ -598,7 +607,7 @@
   reference_area:
     title: "کمک نیاز دارید؟"
     subtitle: "دیدن این فیلم ها و نکات"
-    teacher: "مشاهده راه حل"
+    teacher: See the solution
     auth_error: "شما مجاز به دیدن راه حل نیستید."
     submit: "بروزرسانی موقعیت هنرمند"
     direction: "جهت شروع ( به درجه)"

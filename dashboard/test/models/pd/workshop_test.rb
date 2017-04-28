@@ -213,7 +213,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop_already_ended = create :pd_workshop
     workshop_already_ended.started_at = Time.now
-    workshop_already_ended.ended_at = Time.now - 1.hours
+    workshop_already_ended.ended_at = Time.now - 1.hour
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_already_ended.save!
 
@@ -378,7 +378,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_enrollment_count' do
     # Deleted enrollment should not be counted
-    create :pd_enrollment, workshop: @workshop, deleted_at: Time.now
+    pd_enrollment = create :pd_enrollment, workshop: @workshop
+    pd_enrollment.destroy
 
     # Workshops with 0 (not counting deleted), 1 and 2 enrollments
     workshops = [

@@ -18,9 +18,9 @@ var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+import {getStore} from '../redux';
 
-var ResultType = studioApp.ResultType;
-var TestResults = studioApp.TestResults;
+import {TestResults, ResultType} from '../constants';
 
 /**
  * Create a namespace for the application.
@@ -49,7 +49,7 @@ Flappy.obstacles = [];
 var infoText;
 
 //TODO: Make configurable.
-studioApp.setCheckForEmptyBlocks(true);
+studioApp().setCheckForEmptyBlocks(true);
 
 var randomObstacleHeight = function () {
   var min = Flappy.MIN_OBSTACLE_HEIGHT;
@@ -472,9 +472,9 @@ Flappy.onMouseDown = function (e) {
  * Initialize Blockly and the Flappy app.  Called on page load.
  */
 Flappy.init = function (config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  // replace studioApp() methods with our own
+  studioApp().reset = this.reset.bind(this);
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   Flappy.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -485,24 +485,24 @@ Flappy.init = function (config) {
   loadLevel();
 
   config.loadAudio = function () {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.obstacleSound, 'obstacle');
+    studioApp().loadAudio(skin.winSound, 'win');
+    studioApp().loadAudio(skin.startSound, 'start');
+    studioApp().loadAudio(skin.failureSound, 'failure');
+    studioApp().loadAudio(skin.obstacleSound, 'obstacle');
 
-    studioApp.loadAudio(skin.dieSound, 'sfx_die');
-    studioApp.loadAudio(skin.hitSound, 'sfx_hit');
-    studioApp.loadAudio(skin.pointSound, 'sfx_point');
-    studioApp.loadAudio(skin.swooshingSound, 'sfx_swooshing');
-    studioApp.loadAudio(skin.wingSound, 'sfx_wing');
-    studioApp.loadAudio(skin.winGoalSound, 'winGoal');
-    studioApp.loadAudio(skin.jetSound, 'jet');
-    studioApp.loadAudio(skin.jingleSound, 'jingle');
-    studioApp.loadAudio(skin.crashSound, 'crash');
-    studioApp.loadAudio(skin.laserSound, 'laser');
-    studioApp.loadAudio(skin.splashSound, 'splash');
-    studioApp.loadAudio(skin.wallSound, 'wall');
-    studioApp.loadAudio(skin.wall0Sound, 'wall0');
+    studioApp().loadAudio(skin.dieSound, 'sfx_die');
+    studioApp().loadAudio(skin.hitSound, 'sfx_hit');
+    studioApp().loadAudio(skin.pointSound, 'sfx_point');
+    studioApp().loadAudio(skin.swooshingSound, 'sfx_swooshing');
+    studioApp().loadAudio(skin.wingSound, 'sfx_wing');
+    studioApp().loadAudio(skin.winGoalSound, 'winGoal');
+    studioApp().loadAudio(skin.jetSound, 'jet');
+    studioApp().loadAudio(skin.jingleSound, 'jingle');
+    studioApp().loadAudio(skin.crashSound, 'crash');
+    studioApp().loadAudio(skin.laserSound, 'laser');
+    studioApp().loadAudio(skin.splashSound, 'splash');
+    studioApp().loadAudio(skin.wallSound, 'wall');
+    studioApp().loadAudio(skin.wall0Sound, 'wall0');
   };
 
   config.afterInject = function () {
@@ -528,7 +528,7 @@ Flappy.init = function (config) {
 
   config.makeString = commonMsg.makeYourOwnFlappy();
   config.makeUrl = "http://code.org/flappy";
-  config.makeImage = studioApp.assetUrl('media/flappy_promo.png');
+  config.makeImage = studioApp().assetUrl('media/flappy_promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
@@ -564,18 +564,17 @@ Flappy.init = function (config) {
   }
 
   var onMount = function () {
-    studioApp.init(config);
+    studioApp().init(config);
 
     var rightButton = document.getElementById('rightButton');
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
 
-  studioApp.setPageConstants(config);
+  studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
-        isRtl={studioApp.isRtl()}
         visualizationColumn={<FlappyVisualizationColumn/>}
         onMount={onMount}
       />
@@ -665,10 +664,10 @@ Flappy.runButtonClick = function () {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  studioApp.toggleRunReset('reset');
+  studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  // studioApp.reset(false);
-  studioApp.attempts++;
+  // studioApp().reset(false);
+  studioApp().attempts++;
   Flappy.execute();
 
   if (level.freePlay) {
@@ -683,11 +682,11 @@ Flappy.runButtonClick = function () {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
   if (!Flappy.waitingForReport) {
-    studioApp.displayFeedback({
+    studioApp().displayFeedback({
       app: 'flappy', //XXX
       skin: skin.id,
       feedbackType: Flappy.testResults,
@@ -710,7 +709,7 @@ var displayFeedback = function () {
 Flappy.onReportComplete = function (response) {
   Flappy.response = response;
   Flappy.waitingForReport = false;
-  studioApp.onReportComplete(response);
+  studioApp().onReportComplete(response);
   displayFeedback();
 };
 
@@ -737,7 +736,7 @@ Flappy.execute = function () {
     Flappy[hook.name] = hook.func;
   });
 
-  studioApp.playAudio('start');
+  studioApp().playAudio('start');
 
   Flappy.tickCount = 0;
   Flappy.firstActiveTick = -1;
@@ -765,7 +764,7 @@ Flappy.onPuzzleComplete = function () {
   if (level.freePlay) {
     Flappy.testResults = TestResults.FREE_PLAY;
   } else {
-    Flappy.testResults = studioApp.getTestResults(levelComplete);
+    Flappy.testResults = studioApp().getTestResults(levelComplete);
   }
 
   // Special case for Flappy level 1 where you have the right blocks, but you
@@ -779,9 +778,9 @@ Flappy.onPuzzleComplete = function () {
   }
 
   if (Flappy.testResults >= TestResults.FREE_PLAY) {
-    studioApp.playAudio('win');
+    studioApp().playAudio('win');
   } else {
-    studioApp.playAudio('failure');
+    studioApp().playAudio('failure');
   }
 
   if (level.editCode) {
@@ -796,7 +795,7 @@ Flappy.onPuzzleComplete = function () {
   Flappy.waitingForReport = true;
 
   // Report result to server.
-  studioApp.report({
+  studioApp().report({
                      app: 'flappy',
                      level: level.id,
                      result: Flappy.result === ResultType.SUCCESS,

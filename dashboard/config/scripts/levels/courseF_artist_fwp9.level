@@ -29,11 +29,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look!",
+    "markdown_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look! Suggestions are in the hints!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/e0f14e9c984bceea33d09ca9ad8ac673-image-1493224047761.26.09 AM.png)\",\"hint_id\":\"courseF_artist_fwp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/90dc1bd62d98d1634353cf186f6adf14-image-1493224937939.37.45 AM.png)\",\"hint_id\":\"courseF_artist_fwp9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/9a112d0b48b689a132cd3bcc9b2e7281-image-1493224954407.41.34 AM.png)\",\"hint_id\":\"courseF_artist_fwp9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp9.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -412,7 +415,6 @@
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="length"/>
-            <arg name="sides"/>
           </mutation>
           <title name="NAME">draw a square</title>
           <statement name="STACK">

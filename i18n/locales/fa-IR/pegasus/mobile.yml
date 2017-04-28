@@ -665,7 +665,8 @@
   dashboard_students_auto_generated: "تولید شده به صورت خودکار"
   dashboard_students_reset_secret: "تنظیم مجدد عکس مخفی"
   dashboard_students_reset_password: "تنظیم مجدد گذرواژه"
-  dashboard_students_share_section: 'صفحه ورود به این بخش را با دانش آموزان خود به اشتراک بگذارید:'
+  dashboard_students_share_section: "صفحه ورود به این بخش را با دانش آموزان خود به اشتراک بگذارید:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید."
   dashboard_students_secret_picture_title: "تصویر محرمانه"
   dashboard_students_secret_picture: "عکس مخفی"
@@ -676,6 +677,7 @@
   dashboard_students_join_link: "به دانش آموزان خود بگویید که حساب کاربری خود را ایجاد کنند و بپیوندند به بخش شما در"
   dashboard_students_no_email: "اگر دانش آموزان شما آدرس ایمیل ندارند، و یا شما می خواهید برای آنها حساب کاربری ایجاد کنید، نوع رمز این بخش را به <b>کلمه</b> یا <b>تصویر</b> تغییر دهید."
   dashboard_students_print_page: "چاپ این صفحه"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "آدرس اینترنتی"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> اینجا را کلیک کنید</a> برای مشاهده سند حریم خصوصی ما، که می توانید آن رابرای دانش آموزان خود به اشتراک بگذارید یا چاپ نمایید."
   dashboard_curriculum_k5_title: "منابع آموزشی پیش از دبستان"
@@ -871,6 +873,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

@@ -29,6 +29,7 @@ gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'dalli' # memcached
+gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive', '~> 1.0.0'
 gem 'le', '~> 2.2'
 gem 'os'
@@ -191,10 +192,13 @@ gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
 gem 'font-awesome-rails', '~> 4.6.3'
-gem 'sequel', '~> 4.10'
+gem 'sequel', '~> 4.30'
 gem 'user_agent_parser'
 
-gem "paranoia", "~> 2.2.0.pre" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
+# As of 2017-04-13, the recovery_window option for restores is available in the specified commit
+# but not any released version. After version 2.2.2 is released, change to using an official
+# release.
+gem 'paranoia', github: 'rubysherpas/paranoia', ref: '9e43d569abf077aa95ac11f3151fbdde7dd219b5'
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
@@ -235,7 +239,6 @@ gem 'addressable'
 gem 'bcrypt'
 gem 'firebase'
 gem 'firebase_token_generator'
-gem 'selectize-rails'
 gem 'sshkit'
 gem 'validates_email_format_of'
 

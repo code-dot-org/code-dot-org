@@ -228,7 +228,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'most_recent_driver returns deleted user if driver is deleted' do
-    @driver.update(deleted_at: DateTime.now)
+    @driver.destroy
     assert_equal 'deleted user',
       UserLevel.most_recent_driver(nil, @level, @navigator)
   end

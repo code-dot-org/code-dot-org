@@ -21,8 +21,8 @@ module.exports = {
         result: false
       },
       runBeforeClick: function (assert) {
-        assert(studioApp.enableShowCode === false);
-        assert(studioApp.enableShowBlockCount === false);
+        assert(studioApp().enableShowCode === false);
+        assert(studioApp().enableShowBlockCount === false);
 
         // manually complete rather than wait for timeout
         setTimeout(function () {

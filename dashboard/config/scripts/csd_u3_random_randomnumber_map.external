@@ -1,15 +1,15 @@
 name 'CSD U3 Random randomNumber Map'
-css 'unplugged'
+display_name 'Random Numbers'
 markdown <<MARKDOWN
 # Random Numbers
 
 ## Using Random Numbers
 
-The `randomNumber()` block can be used to generate random numbers in your programs. The parameters set the minimum and maximum value that could be generated.
+The `randomNumber()` block can be used to generate random numbers in your programs. The parameters set the minimum and maximum value that could be generated.  You can use this block anywhere that you could write a number.
 
 ![](https://images.code.org/e43e4920325f2e8b2d633de9cd24066b-image-1491707176403.05.46 PM.png)
 
-*This example is like a dice that could randomly generate any number between 1 and 6*
+*This example is like a die that could randomly generate any number from 1 to 6*
 
 ## Drawing and Random Numbers
 
@@ -23,7 +23,7 @@ You can use `randomNumber()` as a parameter in drawing commands to make random d
 
 ## Multiple Random Numbers
 
-If you use `randomNumber()` multiple times in your program it will generate new random numbers every time. You can think of each `randomNumber()` like a new roll of a dice.
+If you use `randomNumber()` multiple times in your program it will generate new random numbers every time. You can think of each `randomNumber()` like a new roll of a die.
 
 ![](https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33 PM.png)
 

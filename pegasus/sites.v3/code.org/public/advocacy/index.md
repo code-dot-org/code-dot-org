@@ -5,7 +5,7 @@ theme: responsive
 <link href="/css/interactive_map.css", rel="stylesheet"></link>
 
 # Code.org Advocacy Coalition
-The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](https://drive.google.com/open?id=0B58r1w66kPdsbmJTaWVhSWRaM0E).
+The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](http://code.org/files/CoalitionOnePager.pdf).
 
 
 <%= view :interactive_map, use_url: false %>
@@ -23,7 +23,7 @@ The Code.org Advocacy Coalition supports the implementation of the following pol
 * Fund computer science professional development and support course development
 * Implement a clear certification pathway for computer science teachers
 * Incentivize higher education institutions to offer computer science to pre-service teachers
-* Establish dedicated computer science positions in state and local education authorities
+* Establish dedicated computer science positions in state and local education agencies
 * Require that all high schools offer computer science with an appropriate implementation timeline and financial resources
 * Allow computer science to satisfy a core graduation requirement
 * Clearly define computer science education in federal policy and programs
@@ -53,6 +53,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://access-ca.org/">Alliance for California Computing Education for Students and Schools (ACCESS)</a>
 * <a href="http://www.aauw.org/">American Association for University Women</a>
 * <a href="http://anitaborg.org/">Anita Borg Institute</a>
+* <a href="https://www.aztechcouncil.org/">Arizona Technology Council</a>
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Public Schools</a>
@@ -60,22 +61,32 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a>
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
 * <a href="http://cra.org/">Computing Research Association</a>
+* <a href="http://ct.org/">Connecticut Technology Council</a>
 * <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>
+* <a href="http://cs4tx.org/">CS4TX</a>
 * <a href="http://csta.acm.org/">CSTA</a>
+* <a href="https://sites.google.com/a/csta-hq.org/new-mexico/">CSTA-New Mexico</a>
+* <a href="https://cyberinnovationcenter.org/">Cyber Innovation Center</a>
 * <a href="https://www.google.com/edu/">Google</a>
 * <a href="http://expandingcomputing.cs.umass.edu/">Expanding Computing Education Pathways (ECEP)</a>
 * <a href="https://www.facebook.com/facebookdiversity">Facebook</a>  
 * <a href="https://www.ieee.org/index.html">IEEE</a>
+* <a href="https://www.illinoistech.org/">Illinois Technology Association</a>
+* <a href="http://www.kctechcouncil.com/">KC Tech Council</a> 
 * <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a>
 * <a href="https://www.nms.org/">National Math and Science Initiative</a>
 * <a href="https://www.ncwit.org/">NCWIT</a>
 * <a href="http://nextech.org/">Nextech</a>
+* <a href="https://nhhtc.org/">NH High Tech Council</a>
+* <a href="https://nmtechcouncil.org/">New Mexico Tehnology Council</a>
 * <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a>
 * <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a>
 * <a href="http://www.technet.org/">TechNet</a>
+* <a href="http://www.talklou.com/wp/">Technology Association of Louisville Kentucky</a>
+* <a href="http://www.techoregon.org/">Technology Association of Oregon</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
 
 [#tools-section]

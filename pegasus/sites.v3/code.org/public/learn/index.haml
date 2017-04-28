@@ -62,14 +62,17 @@ social:
     height: 278px;
   }
 
-#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
-  #desktop-header.desktop-feature
-    = view :header, variant: "desktop"
-  #mobile-header.mobile-feature
-    - if request.site == 'csedweek.org'
-      = view :mobile_header_responsive
-    - else
-      = view :header, variant: "mobile"
+#fullwidth{style: "background-color: #2799a4"}
+  - if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
+    = view :header2
+  - else
+    #desktop-header.desktop-feature
+      = view :header, variant: "desktop"
+    #mobile-header.mobile-headers.mobile-feature
+      - if request.site == 'csedweek.org'
+        = view :mobile_header_responsive
+      - else
+        = view :mobile_header_responsive
 
   .banner.container_responsive
     .col-50
@@ -81,6 +84,8 @@ social:
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
         = hoc_s(:learn_banner_teachers)
     #studentImage.col-50.tablet-feature
+
+  .clear{style: "clear:both"}
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')

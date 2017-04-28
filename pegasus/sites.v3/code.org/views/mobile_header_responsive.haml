@@ -1,5 +1,7 @@
-%link{:href=>'/css/mobile_header.css', :rel=>'stylesheet'}
-%script{src: '/js/mobile_header.js'}
+%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
 
 #pageheader-wrapper
   - pageheader_class = request.path_info == '/' ? 'pageheader-translucent' : ''
@@ -8,67 +10,6 @@
       #left
         %a{:href=>'/'}
           %img#logo{:src=>'/images/logo.png'}
-    -if request.language == "en"
-      #nav
-        %ul.hide-responsive-menu
-          %li
-            %a{href: '/student'} Learn
-          %li
-            #educate-more
-              Teach
-              %i#educate-down{class: "fa fa-caret-down"}
-              %i#educate-up{class: "fa fa-caret-up"}
-          %span.educate-nav.hide-educate
-            %li
-              %a{:href => '/educate'} Educator Overview
-            %li
-              %a{:href => '/educate/curriculum/elementary-school'} Elementary School
-            %li
-              %a{:href => '/educate/curriculum/middle-school'} Middle School
-            %li
-              %a{:href => '/educate/curriculum/high-school'} High School
-            %li
-              %a{:href => 'https://hourofcode.com'} Hour of Code
-            %li
-              %a{:href => '/educate/partner'} Partner with Us
-            %li
-              %a{:href => '/educate/curriculum/3rd-party'} Beyond Code.org
-            %li
-              %a{:href => '/educate/resources/inspire'} Inspire a Student
-            %li
-              %a{:href => '/educate/community'} Online Community
-            %li
-              %a{:href => '/educate/resources/videos'} Tools and Videos
-          %li
-            %a{href: '/promote'} Stats
-          %li
-            %a{href: '/help'} Help Us
-          %li
-            #about-more
-              About
-              %i#about-down{class: "fa fa-caret-down"}
-              %i#about-up{class: "fa fa-caret-up"}
-          %span.about-nav.hide-about
-            %li
-              %a{:href => '/about'} About Us
-            %li
-              %a{:href => '/about/leadership'} Leadership
-            %li
-              %a{:href => '/about/donors'} Donors
-            %li
-              %a{:href => '/about/partners'} Partners
-            %li
-              %a{:href => '/about/team'} Full Team
-            %li
-              %a{:href => '/about/news'} Newsroom
-            %li
-              %a{:href => '/about/evaluation'} Evaluation
-            %li
-              %a{:href => '/about/jobs'} Jobs
-            %li
-              %a{:href => '/contact'} Contact Us
-            %li
-              %a{:href => '/faq'} FAQs
 
-        #nav-hamburger
-          %span
+      - if request.language == "en"
+        = view :hamburger, user_type: user_type
