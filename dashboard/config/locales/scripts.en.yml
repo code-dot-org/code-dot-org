@@ -4704,6 +4704,8 @@ en:
               name: RGB Colors and Classes
             Project - Personal Portfolio Website:
               name: Project - Personal Portfolio Website
+            Headers:
+              name: Headers
         csd1-draft:
           title: ''
           description_audience: ''
@@ -4812,3 +4814,13 @@ en:
               name: CSP Student Post Survey Staging
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
+        fmscsd3preview:
+          stages:
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+          title: CSD - Drawing in Game Lab
+          description_audience: Falmouth Middle School (Mike Harvey)
+          description_short: ''
+          description: ''

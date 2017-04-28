@@ -125,21 +125,23 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_move">
-              <title name="DIR">moveForward</title>
+            <block type="maze_moveForward">
               <next>
                 <block type="maze_turn">
                   <title name="DIR">turnRight</title>
                   <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">2</title>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
                       <statement name="DO">
                         <block type="procedures_callnoreturn">
                           <mutation name="only make honey"/>
                           <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveForward</title>
-                            </block>
+                            <block type="maze_moveForward">
+                      </block>
                           </next>
                         </block>
                       </statement>
@@ -147,8 +149,7 @@
                         <block type="maze_turn">
                           <title name="DIR">turnLeft</title>
                           <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveForward</title>
+                            <block type="maze_moveForward">
                               <next>
                                 <block type="procedures_callnoreturn">
                                   <mutation name="only make honey"/>
@@ -164,18 +165,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
-          <mutation/>
-          <title name="NAME">only make honey</title>
-          <statement name="STACK">
-            <block type="bee_ifFlower">
-              <title name="LOC">atHoneycomb</title>
-              <statement name="DO">
-                <block type="maze_honey"/>
-              </statement>
-            </block>
-          </statement>
         </block>
       </xml>
     </solution_blocks>
