@@ -171,6 +171,38 @@ class SectionApiHelperTest < SequelTestCase
       FakeDashboard.use_fake_database
     end
 
+    describe 'teachers' do
+      it 'returns an array of hashes of information' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_NORMAL[:id],
+          FakeDashboard::TEACHER[:id]
+        )
+        teachers = pegasus_section.teachers
+        assert_equal(
+          [{id: FakeDashboard::TEACHER[:id], location: "/v2/users/#{FakeDashboard::TEACHER[:id]}"}],
+          teachers
+        )
+      end
+    end
+
+    describe 'teacher?' do
+      it 'returns false for a teacher of a different section' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_NORMAL[:id],
+          FakeDashboard::TEACHER[:id]
+        )
+        refute pegasus_section.teacher?(FakeDashboard::TEACHER_SELF[:id])
+      end
+
+      it 'returns true for a teacher of the section' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_NORMAL[:id],
+          FakeDashboard::TEACHER[:id]
+        )
+        assert pegasus_section.teacher?(FakeDashboard::TEACHER[:id])
+      end
+    end
+
     describe 'remove_student' do
       it 'soft-deletes follower' do
         Dashboard.db.transaction(rollback: :always) do
