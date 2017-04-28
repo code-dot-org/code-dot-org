@@ -49,6 +49,7 @@ Scenario: Share and save an artist level to the project gallery
   Then I am on "http://studio.code.org/projects/"
   And I wait until element "table.projects" is visible
   And the project list contains 1 entry
+  And the project at index 0 is named "Artist Project"
 
 @as_student
 Scenario: Share and save a playlab level to the project gallery
@@ -65,3 +66,4 @@ Scenario: Share and save a playlab level to the project gallery
   Then I am on "http://studio.code.org/projects/"
   And I wait until element "table.projects" is visible
   And the project list contains 1 entry
+  And the project at index 0 is named "Play Lab Project"

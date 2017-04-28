@@ -1212,3 +1212,8 @@ Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
   actual_num = @browser.execute_script("return $('table.projects td.name').length;")
   expect(actual_num).to eq(expected_num.to_i)
 end
+
+Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
+  actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
+  expect(actual_name).to eq(expected_name)
+end
