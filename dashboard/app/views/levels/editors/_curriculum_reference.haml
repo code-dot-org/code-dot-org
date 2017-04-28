@@ -1,0 +1,22 @@
+:scss
+  $cyan: #0094ca;
+  $lightest_cyan: #d9eff7;
+
+  #level_teacher_markdown_preview {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    padding: 10px;
+  }
+
+.field
+  = f.label :reference, 'Curriculum Reference'
+  %p String representing the URL on docs.code.org you want to embed, i.e. "/csd/maker_leds/index.html"
+  = f.text_field :reference, placeholder: 'i.e /csd/maker_leds/index.html', style: 'width: 100%'
+
+.field
+  %p Edit Teacher Only Markdown:
+  = f.text_area :teacher_markdown, placeholder: 'Teacher Only Markdown'
+  #level_teacher_markdown_preview
+
+:javascript
+  var mdEditor = levelbuilder.initializeCodeMirror('level_teacher_markdown', 'markdown');

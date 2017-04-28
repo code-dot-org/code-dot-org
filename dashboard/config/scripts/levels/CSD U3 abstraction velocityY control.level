@@ -61,7 +61,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"6d737dc8-7730-4698-bd52-6ddb0b11b714\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"6d737dc8-7730-4698-bd52-6ddb0b11b714\": {\r\n      \"name\": \"flyMan\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/F42_XAhtODbZNGMo3uGqQQ/6d737dc8-7730-4698-bd52-6ddb0b11b714.png?version=wAM2giwWTxh3SIPYgm7zts5dYeibC1Hs\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 139\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"wAM2giwWTxh3SIPYgm7zts5dYeibC1Hs\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"6d737dc8-7730-4698-bd52-6ddb0b11b714\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"6d737dc8-7730-4698-bd52-6ddb0b11b714\": {\r\n      \"name\": \"flyMan\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/T6Ov8ELOA6HlliJ3S8Q15A/6d737dc8-7730-4698-bd52-6ddb0b11b714.png?version=cWUWICFH1NfHW3DDusUWMcSBBoKsgByO\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 139\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"cWUWICFH1NfHW3DDusUWMcSBBoKsgByO\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var flyMan = createSprite(200, 350);\r\nflyMan.setAnimation(\"flyMan\");\r\n\r\nfunction draw() {\r\n  background(\"skyblue\");\r\n\r\n  drawSprites();\r\n}",
     "markdown_instructions": "# Controlling Speed\r\n\r\nYour code before the draw loop sets up the beginning of your game.  Your code inside the draw loop controls how the game will change while it's being played.  In this game, the helicopter man starts off at the bottom of the screen, but when the space key is pressed, he flies up.\r\n\r\n# Do This\r\n\r\n* Use an `if` statement inside the draw loop to check when the space bar is pressed.\r\n* Use the `velocityY` block to make the sprite fly up when the user presses the space bar.",
     "palette_category_at_start": "sprites",
@@ -72,6 +72,9 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "encrypted_examples": "xzi2haAq36Zvf/N3k78VJ352bpGvWdDyQJCGHuqclWdJ7fVJQ9qaOXH80wsd\nD1CM\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -568,6 +568,8 @@
     einhvern sem getur <span style="font-family: ''Gotham 7r'', sans-serif;">hvatt</span>
     nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta
     gæti farið fram með netspjalli).'
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
   volunteer_engineer_submission_intro_signup: Vinsamlegast skráðu eftirfarandi upplýsingar
     ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span
     class="form-required-field">*</span> þarf að fylla út.
@@ -617,6 +619,8 @@
   volunteer_engineer_submission_checkbox_contact: "Ég samþykki að kennarar megi hafa
     samband við mig vegna mögulegra sjálfboðaliðastarfa (Ath. netfangi þínu verður
     ekki deilt)"
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.
   volunteer_engineer_submission_submit: Senda inn
   volunteer_engineer_submission_thankyou: Takk fyrir að bjóða liðveislu. Kennarar
     munu nota <a href="%{url}">þetta kort</a> til að leita að og hafa samband við
@@ -875,6 +879,8 @@
   dashboard_students_reset_password: Endurstilla leyniorð
   dashboard_students_share_section: 'Deila innskráningarsíðu þessa hóps með nemendum
     þínum:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Prenta út spjöld með innskráningarupplýsingum nemenda
     þinna.
   dashboard_students_secret_picture_title: Leynimynd
@@ -898,6 +904,7 @@
     aðgang fyrir þá, breyttu þá gerð leyndarmáls fyrir þennan hóp í <b>leyniorð</b>
     eða <b>leynimynd</b>.
   dashboard_students_print_page: Prenta þessa síðu
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: Vefslóð
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Smelltu
     hér</a> til að sækja persónuverndarskjal okkar sem þú getur deilt eða prentað
@@ -972,73 +979,6 @@
     hvernig aðgang þú vilt nota fyrir hóp: <b>mynd, orð eða netfang</b>."
   dashboard_faq: Algengar spurningar
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
-  dashboard_announcements: Tilkynningar
-  dashboard_announce_message_fall2016_features: Við eyddum sumrinu í að búa til nýjungar
-    úr endurgjöfinni frá ykkur notendunum. Nú er hægt að <a href="%{pp_url}" target="_blank">fylgjast
-    með framvindu margra nemenda</a> jafnvel þó þeir séu í félagaforritun á einu tæki.
-    Einnig nota <a href="%{csp_widgets_url}" target="_blank">bestu gagnvirku tækin</a>
-    af námskeiðinu CS Principles með <i>hvaða bekk sem er</i>. Og nemendur þína geta
-    <a href="%{unused_code_url}" target="_blank">geymt ónotaðan kóða</a> á vinnusvæði
-    sínu til að ýta undir að þeir geri tilraunir! Kannaðu allar þessar nýjungar og
-    láttu okkur vita hvað þér finnst.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Læra meira
-  dashboard_announce_try_now_button: Prófa núna
-  dashboard_announce_host_an_hour_button: Sjá um Klukkustund
-  dashboard_announce_watch_video_button: Horfa á myndband
-  dashboard_announce_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill
-    gefa öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn
-    tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar,
-    28 fylkisstjórar og forstjórar stærstu fyrirtækja í Bandaríkjunum ritað opið bréf
-    sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði í grunnskólum.
-  dashboard_announce_petition_button: Bættu nafni þínu við
-  dashboard_announce_go_beyond_button: Halda lengra
-  dashboard_announce_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
-    kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
-  dashboard_announce_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja
-    að kenna tölvunarfræði í Klukkustund kóðunar dagana 5. - 11. desember. Við treystum
-    á þig að hjálpa okkur að ná til fleiri nemenda en nokkru sinni áður. <a href='%{signup_url}'
-    target='_blank'>Skráðu þinn Klukkustund kóðunar-viðburð</a> og láttu aðra kennara
-    vita að það geti hver sem er byrjað að kenna tölvunarfræði."
-  dashboard_announce_mc_launch: Eitt vinsælasta kennsluefnið okkar er nú komið með
-    framhald! Með glænýjum Minecraft Hour of Code Designer (Minecraft hönnuði) geta
-    nemendur búið til reglur fyrir Minecraft heiminn. Þeir geta skapað alveg einstaka
-    Minecraft upplifun og deilt henni síðan með vinum eða spilað hana í síma. Láttu
-    bekkinn prófa þetta fyrir Klukkustund kóðunar.
-  dashboard_announce_hoc_scaling_progress: Taktu vinsamlegast eftir að við vistum
-    ekki framvindu nemenda á þessu námskeiði frá 3. til 11. desember þar sem álagið
-    á vef okkar er mikið vegna Klukkastundar kóðunar. Þú getur samt séð framvindu
-    nemenda fram að 3. desember. Við munum fara að vista framvinduna aftur þegar þessi
-    vika er liðin.
-  dashboard_announce_how_code_studio: "Þú þarft ekki að hafa reynslu til að byrja
-    að kenna tölvunarfræði í bekknum þínum. Hjá Code.org færðu námsefni, kennsluáætlanir,
-    hágæða fræðslu fyrir kennara og fjöldann allan af góðum verkfærum fyrir alla aldurhópa
-    &mdash;allt sem þú munt þarfnast, og allt frítt. Hvar er best að byrja? Sæktu
-    \ <a href='%{video_download_url}'>þetta myndband</a>!"
-  dashboard_announce_go_beyond: Haltu áfram eftir Klukkustund kóðunar og kannaðu hugtök
-    tölvunarfræði með nemendum þínum í hverri viku. Code.org er með námsefni, kennsluáætlanir,
-    hágæða þjálfun fyrir kennara og fullt af fínum verkfærum fyrir alla árganga&mdash;og
-    allt ókeypis. :) Þú þarft ekki að hafa neina fyrri reynslu til að geta byrjað
-    að kenna nemendum þínum tölvunarfræði. <b>Finndu næsta áfanga sem hentar bekknum
-    þínum.</b>
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-    Your students could be featured in Code.org''s next viral video encouraging students
-    to take the AP CS Principles exam this year. We''re inviting all CS Principles
-    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
-    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
-    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   host_an_hour: Sjá um klukkustund
@@ -1186,6 +1126,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Kafli 1: Internetið'
   csp2_name: Kafli 2 - Stafrænar upplýsingar
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1917,9 +1859,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

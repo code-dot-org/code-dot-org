@@ -53,7 +53,7 @@ var AppLabView = React.createClass({
           className="fa fa-ellipsis-v"
         />
         <InstructionsWithWorkspace>
-          <CodeWorkspace style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
+          <CodeWorkspace withSettingsCog style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
           {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}
           {this.props.hasDataMode && <DataWorkspace handleVersionHistory={this.props.handleVersionHistory}/>}
         </InstructionsWithWorkspace>

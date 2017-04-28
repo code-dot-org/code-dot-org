@@ -21,6 +21,15 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal Script.all, assigns(:scripts)
   end
 
+  test "should redirect when script has a redirect_to property" do
+    script = create :script
+    new_script = create :script
+    script.update(redirect_to: new_script.name)
+
+    get :show, params: {id: script.name}
+    assert_redirected_to "/s/#{new_script.name}"
+  end
+
   test "should not get index if not signed in" do
     get :index
 
@@ -61,22 +70,6 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not get show of ECSPD if not signed in" do
     get :show, params: {id: 'ECSPD'}
     assert_redirected_to_sign_in
-  end
-
-  test "should not show link to lesson plans if logged in as a student" do
-    sign_in create(:student)
-
-    get :show, params: {id: 'cspunit1'}
-    assert_response :success
-    assert_select 'a', text: 'Lesson plans', count: 0
-  end
-
-  test "should show link to lesson plans if logged in as a teacher" do
-    sign_in create(:teacher)
-
-    get :show, params: {id: 'cspunit1'}
-    assert_response :success
-    assert_select 'a', text: 'Lesson plans'
   end
 
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
@@ -222,7 +215,7 @@ class ScriptsControllerTest < ActionController::TestCase
       wrapup_video 'hoc_wrapup'
 
     TEXT
-    File.stubs(:write).with{ |filename, _| filename.end_with? 'scripts.en.yml' }.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder

@@ -20,6 +20,8 @@
 #  processed_at        :datetime
 #  deleted_at          :datetime
 #  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
@@ -83,11 +85,17 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop',
-      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
-      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
-      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
-      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'
+      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer',
+      SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information',
+      SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming',
+      SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps',
+      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'
+    ],
+    COURSE_CSD => [
+      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development',
+      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games',
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society',
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'
     ]
   }
 
@@ -128,6 +136,13 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
   }
 
+  WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
+    COURSE_CSP => 'CSP Support',
+    COURSE_ECS => 'ECS Support',
+    COURSE_CS_IN_A => 'CS in Algebra Support',
+    COURSE_CS_IN_S => 'CS in Science Support'
+  }.freeze
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -149,7 +164,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
-      unless sessions.map{|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
+      unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
         errors.add(:sessions, 'must start on separate days.')
       end
     else
@@ -425,7 +440,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
   # @return [Integer] number of payment days, after applying constraints
   def effective_num_days
-    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_days]}
+    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_days]}
     [sessions.count, max_days].compact.min
   end
 
@@ -433,7 +448,7 @@ class Pd::Workshop < ActiveRecord::Base
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
-    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_hours]}
+    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_hours]}
     [actual_hours, max_hours].compact.min
   end
 
@@ -450,5 +465,14 @@ class Pd::Workshop < ActiveRecord::Base
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
     Rails.application.routes.url_helpers.pd_workshop_dashboard_url + "/workshops/#{id}"
+  end
+
+  def associated_online_course
+    Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+  end
+
+  # Get all the teachers that have actually attended this workshop via the attendence.
+  def attending_teachers
+    sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 end

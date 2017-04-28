@@ -15,7 +15,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       teacher_name: 'Tracy Teacher',
       primary_email: 'tracy.teacher@example.net',
       teacher_first_name: 'Tracy',
-      program_name: 'CS Principles'
+      program_name: Pd::Workshop::COURSE_CSP
     )
     Pd::TeacherApplication.stubs(:find).with(is_a(Integer)).returns(@mock_teacher_application)
   end
@@ -74,6 +74,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
+    @mock_teacher_application.program_name = Pd::Workshop::COURSE_CSD
     @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
 
     result = @processor.process_decision_row(
@@ -89,7 +90,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSD,
       teachercon_location_s: 'Houston',
       teachercon_dates_s: 'June 18 - 23, 2017',
       regional_partner_name_s: 'Code Partner'
@@ -118,7 +119,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
       teachercon_location_s: 'Houston',
       teachercon_dates_s: 'June 18 - 23, 2017',
       regional_partner_name_s: 'manually selected partner override'
@@ -130,7 +131,6 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_process_decisions_row_accept_partner
     partner_workshop = 'Code Partner: June 1 - 5, 2017'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csp', partner_workshop)
-
     @processor.expects(:lookup_workshop).with(partner_workshop).returns(
       {
         id: 1234,
@@ -154,7 +154,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
       regional_partner_name_s: 'Code Partner',
       regional_partner_contact_person_s: 'Mr. Contact',
       regional_partner_contact_person_email_s: 'partner.contact@example.net',
@@ -179,7 +179,10 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     assert_equal 'Unexpected workshop: nonexistent', e.message
   end
 
-  def test_process_decisions_row_decline
+  def test_process_decisions_row_decline_csp
+    @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
+    @mock_teacher_application.expects(:selected_course).returns('csp')
+
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
@@ -192,13 +195,39 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
+      regional_partner_name_s: 'Code Partner'
     }
     assert_equal expected, result
-    assert_result_in_set :decline, result
+    assert_result_in_set :decline_csp, result
+  end
+
+  def test_process_decisions_row_decline_csd
+    @mock_teacher_application.program_name = Pd::Workshop::COURSE_CSD
+    @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
+    @mock_teacher_application.expects(:selected_course).returns('csd')
+
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Decline',
+        'Workshop' => "doesn't matter"
+      }
+    )
+
+    expected = {
+      name: 'Tracy Teacher',
+      email: 'tracy.teacher@example.net',
+      preferred_first_name_s: 'Tracy',
+      course_name_s: Pd::Workshop::COURSE_CSD,
+      regional_partner_name_s: 'Code Partner'
+    }
+    assert_equal expected, result
+    assert_result_in_set :decline_csd, result
   end
 
   def test_process_decisions_row_waitlist
+    @mock_teacher_application.id = 12345
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
@@ -211,7 +240,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
+      teacher_application_id_s: 12345
     }
     assert_equal expected, result
     assert_result_in_set :waitlist, result
@@ -224,9 +254,9 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       {
         'Application ID' => 1,
         # It doesn't matter which decision: any will update the primary_email.
-        # Using Decline so we don't need a matching workshop, as that
+        # Using Waitlist so we don't need a matching workshop, as that
         # functionality is tested separately.
-        'Decision' => 'Decline',
+        'Decision' => 'Waitlist',
         'Workshop' => "doesn't matter",
         'Primary Email' => new_primary_email
       }
@@ -251,6 +281,17 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     end
 
     assert_equal 'Missing regional partner name for application id: 1', e.message
+  end
+
+  def partner_override_name_is_applied_to_params
+    params = {
+      regional_partner_name_s: 'Share Fair Nation and Colorado Education Initiative'
+    }
+    result = @processor.process 'decision', @mock_teacher_application, params
+    assert_equal(
+      'mindSpark Learning (formerly Share Fair Nation) and Colorado Education Initiative',
+      result[:regional_partner_name_s]
+    )
   end
 
   private

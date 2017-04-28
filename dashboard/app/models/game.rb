@@ -51,6 +51,10 @@ class Game < ActiveRecord::Base
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
 
+  def self.unplugged
+    @@game_unplugged ||= find_by_name("Unplugged")
+  end
+
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
@@ -129,6 +133,10 @@ class Game < ActiveRecord::Base
 
   def self.external_link
     @@game_external_link ||= find_by_name('ExternalLink')
+  end
+
+  def self.curriculum_reference
+    @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
   def unplugged?
@@ -248,6 +256,8 @@ class Game < ActiveRecord::Base
         EvaluationMulti:evaluation_multi
         PublicKeyCryptography:public_key_cryptography
         Weblab:weblab
+        CurriculumReference:curriculum_reference
+        Map:map
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

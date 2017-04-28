@@ -1,6 +1,7 @@
 ---
 title: CSP Facilitator Program
 nav: educate_nav
+theme: responsive
 ---
 # Become a Computer Science Principles Facilitator
 

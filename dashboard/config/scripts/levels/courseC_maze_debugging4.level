@@ -5,9 +5,9 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,2,0,0,0],[0,0,3,1,4,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,2,0,0,0],[0,0,3,1,0,0,0,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Someone has their directions mixed up! Can you help?",
+    "instructions": "Someone has their directions mixed up! Can you help? Watch out for the ice blocks that blow up!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
@@ -28,6 +28,8 @@
     "examples_required": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the \\\"Step\\\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?\",\"hint_id\":\"courseC_maze_debugging4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a86bee99d6ebd2a418c4ce480d6c77f/courseC_maze_debugging4.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

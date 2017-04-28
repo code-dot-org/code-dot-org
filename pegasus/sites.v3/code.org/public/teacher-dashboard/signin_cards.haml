@@ -13,6 +13,8 @@ content-type: text/ng-template
 
   %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
     %dl
+      %dd= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
+    %dl
       %dt= I18n.t('dashboard_students_url')
       %dd
         https:#{CDO.studio_url('/sections/{{section.code}}')}

@@ -749,6 +749,10 @@
         C4_unplugged_forloops: Bucle Pentru
         C4_unplugged_parameters: Compoziții muzicale cu parametri
         C4_unplugged_binary: Binar
+        CSF_EF_cs_matters: Computer Science Matters
+        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Introducere în Ora de Programare
         frozen_loops: Introducere în Bucle
         frozen_functions: Introducere în Funcții
@@ -766,6 +770,11 @@
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

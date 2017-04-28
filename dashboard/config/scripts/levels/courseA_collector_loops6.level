@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Add blocks to this code to collect all of the treasure.",
+    "instructions": "Add blocks to this code to get all of the treasure.",
     "ideal": "7",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out what's wrong? Try running the code a couple of times to see what happens.\",\"hint_id\":\"courseA_collector_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/788f7c187d8a4cb486a3616f73ced6c9/courseA_collector_loops6.mp3\"}]",
     "instructions_important": "false",

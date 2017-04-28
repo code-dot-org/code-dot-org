@@ -170,7 +170,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'pull review from pool handles stale reviews' do
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
+      3.times {teachers << create(:teacher)}
     end
 
     level_source = create(:level_source, data: 'Some answer')
@@ -181,10 +181,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
     PeerReview.pull_review_from_pool(@script_level.script, reviewer_2)
 
-    #Let's say reviewer 1 doesn't finish their review - AKA the created date was more than a day ago
+    # Let's say reviewer 1 doesn't finish their review - AKA the created date was more than a day ago
     first_review.update(created_at: 2.days.ago)
 
-    #Now when reviewer 3 pulls a review, they should get the first review but updated with them as the reviewer now
+    # Now when reviewer 3 pulls a review, they should get the first review but updated with them as the reviewer now
     new_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
     assert_equal first_review.id, new_review.id
     assert_equal reviewer_3, new_review.reviewer
@@ -195,7 +195,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
+      3.times {teachers << create(:teacher)}
     end
 
     level_source = create(:level_source, data: 'Some answer')
@@ -272,7 +272,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review.update!(status: 'accepted')
     second_review = PeerReview.pull_review_from_pool(@script, @user)
 
-    #Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
+    # Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
     expected_reviews = [
       {
         id: first_review.id,

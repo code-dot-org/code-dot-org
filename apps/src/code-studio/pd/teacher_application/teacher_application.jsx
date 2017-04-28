@@ -17,6 +17,7 @@ import {otherString, ButtonList} from '../form_components/button_list.jsx';
 import {validateDistrictData} from './district_dropdown_helper.js';
 import SummerProgramContent from './SummerProgramContent';
 import {getWorkshopForState} from './applicationConstants.js';
+import MD5 from 'crypto-js/md5';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
@@ -43,7 +44,10 @@ FieldGroup.propTypes = {
   id: React.PropTypes.string.isRequired,
   label: React.PropTypes.string,
   validationState: React.PropTypes.string,
-  errorText: React.PropTypes.string,
+  errorText: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.element
+  ]),
   required: React.PropTypes.bool,
   maxLength: React.PropTypes.number
 };
@@ -83,27 +87,53 @@ const isUnder1000Chars = (value) => {
   }
 };
 
-const fieldValidationErrors = {
-  primaryEmail: isEmail,
-  secondaryEmail: isEmail,
-  principalEmail: isEmail,
-  phoneNumber: isPhoneNumber,
-  whyCsIsImportant: isUnder1000Chars,
-  whatTeachingSteps: isUnder1000Chars,
-};
-
 const TeacherApplication = React.createClass({
-
   propTypes: {
     regionalPartnerGroup: React.PropTypes.number,
     regionalPartnerName: React.PropTypes.string,
     workshopDays: React.PropTypes.string,
     schoolDistrictData: React.PropTypes.object.isRequired,
-    districtErrorMessageHandler: React.PropTypes.func.isRequired
+    districtErrorMessageHandler: React.PropTypes.func.isRequired,
+    accountEmail: React.PropTypes.string,
+    hashedAccountEmail: React.PropTypes.string.isRequired
+  },
+
+  componentWillMount() {
+    // Validate primary email is a valid email string, and that it matches the account email.
+    // In case it's an accidental student account (which will be converted to teacher on submit)
+    // compare with the hashed email.
+    // Note: this function relies on the props.hashedAccountEmail, so it must be created in a lifecycle method.
+    const validatePrimaryEmail = (value) => {
+      const isEmailError = isEmail(value);
+      if (isEmailError) {
+        return isEmailError;
+      }
+
+      if (MD5(value.toLowerCase()).toString() !== this.props.hashedAccountEmail) {
+        return (
+          <div>
+            Primary email must match your login.
+            If you want to use this email instead, first update it in&nbsp;
+            <a href="/users/edit">
+              account settings.
+            </a>
+          </div>
+        );
+      }
+    };
+
+    this.fieldValidationErrors = {
+      primaryEmail: validatePrimaryEmail,
+      secondaryEmail: isEmail,
+      principalEmail: isEmail,
+      phoneNumber: isPhoneNumber,
+      whyCsIsImportant: isUnder1000Chars,
+      whatTeachingSteps: isUnder1000Chars,
+    };
   },
 
   getInitialState() {
-    return {};
+    return this.props.accountEmail ? {primaryEmail: this.props.accountEmail} : {};
   },
 
   handleSubformDataChange(changedData) {
@@ -125,8 +155,8 @@ const TeacherApplication = React.createClass({
   getRequiredValidationErrorMessage(key) {
     if (this.state[key] !== undefined) {
       if (this.state[key].length > 0) {
-        if (fieldValidationErrors[key]) {
-          return fieldValidationErrors[key](this.state[key]);
+        if (this.fieldValidationErrors[key]) {
+          return this.fieldValidationErrors[key](this.state[key]);
         }
       } else {
         return 'This field is required';
@@ -237,6 +267,7 @@ const TeacherApplication = React.createClass({
           onChange={this.handleTextChange}
           required={true}
           errorText={this.getRequiredValidationErrorMessage('primaryEmail')}
+          defaultValue={this.props.accountEmail}
         />
         <FieldGroup
           id="secondaryEmail"
@@ -625,8 +656,8 @@ const TeacherApplication = React.createClass({
     }
 
     _.forEach(fieldsToValidate, (field) => {
-      if (fieldValidationErrors[field] && this.state[field]) {
-        if (fieldValidationErrors[field](this.state[field])) {
+      if (this.fieldValidationErrors[field] && this.state[field]) {
+        if (this.fieldValidationErrors[field](this.state[field])) {
           topInvalidElementId = topInvalidElementId || field;
         }
       } else if (this.state[field] === undefined || this.state[field].length === 0) {

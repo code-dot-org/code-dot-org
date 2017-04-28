@@ -47,6 +47,7 @@ module.exports = function (config) {
       "test/integration-tests.js": ["webpack", "sourcemap"],
       "test/unit-tests.js": ["webpack"],
       "test/code-studio-tests.js": ["webpack", "sourcemap"],
+      "test/storybook-tests.js": ["webpack", "sourcemap"],
     },
 
     webpack: webpackConfig,
@@ -68,6 +69,7 @@ module.exports = function (config) {
 
     junitReporter: {
       outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+      outputFile: 'all.xml',
     },
     coverageReporter: {
       dir: 'coverage',

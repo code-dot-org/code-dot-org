@@ -51,6 +51,11 @@ class TeacherApplicationDecisionProcessor
     'July 30 - August 4, 2017: Philadelphia'
   ].freeze
 
+  # Array of string tuples. Replace any of the first strings with the second in partner names.
+  PARTNER_NAME_OVERRIDES = [
+    ['Share Fair Nation', 'mindSpark Learning (formerly Share Fair Nation)']
+  ]
+
   attr_reader :results
   def initialize
     # Change working dir to this directory so all file names are local
@@ -63,7 +68,8 @@ class TeacherApplicationDecisionProcessor
     @results = {
       accept_teachercon: [],
       accept_partner: [],
-      decline: [],
+      decline_csd: [],
+      decline_csp: [],
       waitlist: []
     }
   end
@@ -92,9 +98,9 @@ class TeacherApplicationDecisionProcessor
       when DECISIONS[:accept]
         process_accept teacher_application, program, workshop_string, regional_partner_override
       when DECISIONS[:decline]
-        process :decline, teacher_application
+        process_decline teacher_application, regional_partner_override
       when DECISIONS[:waitlist]
-        process :waitlist, teacher_application
+        process_waitlist teacher_application
       else
         raise "Unexpected decision #{decision} for application #{application_id}"
     end
@@ -113,7 +119,7 @@ class TeacherApplicationDecisionProcessor
       CSV.open(out_filename, 'wb') do |csv|
         csv << columns
         results.each do |result|
-          csv << columns.map{|column| result[column]}
+          csv << columns.map {|column| result[column]}
         end
       end
     end
@@ -146,6 +152,11 @@ class TeacherApplicationDecisionProcessor
   def process(decision, teacher_application, params = {})
     raise "Unexpected decision: #{decision}" unless @results.key? decision
 
+    # Make sure regional partner names have overrides applied before sending
+    if params.key? :regional_partner_name_s
+      params[:regional_partner_name_s] = apply_partner_name_overrides(params[:regional_partner_name_s])
+    end
+
     # Construct result hash, add to appropriate list, and return the new result
     {
       name: teacher_application.teacher_name,
@@ -158,7 +169,7 @@ class TeacherApplicationDecisionProcessor
   end
 
   def teachercon?(workshop_string)
-    TEACHER_CONS.any?{|tc| workshop_string.include? tc}
+    TEACHER_CONS.any? {|tc| workshop_string.include? tc}
   end
 
   def process_accept(teacher_application, program, accepted_workshop, regional_partner_override)
@@ -205,11 +216,33 @@ class TeacherApplicationDecisionProcessor
     process :accept_partner, teacher_application, params
   end
 
+  def process_waitlist(teacher_application)
+    process :waitlist, teacher_application, {teacher_application_id_s: teacher_application.id}
+  end
+
+  def process_decline(teacher_application, regional_partner_override)
+    decision = get_decline_decision(teacher_application)
+
+    partner_name = regional_partner_override || teacher_application.regional_partner_name
+    process decision, teacher_application, {regional_partner_name_s: partner_name}
+  end
+
+  def get_decline_decision(teacher_application)
+    case teacher_application.selected_course
+      when 'csd'
+        :decline_csd
+      when 'csp'
+        :decline_csp
+      else
+        raise "Unrecognized course: #{teacher_application.selected_course} for teacher application #{teacher_application.id}"
+    end
+  end
+
   def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override = nil)
     teacher_application.update_application_hash('selectedCourse': program)
     teacher_application.accepted_workshop = accepted_workshop
     teacher_application.regional_partner_override = regional_partner_override if regional_partner_override.present?
-    teacher_application.save!
+    teacher_application.save!(validate: false)
   end
 
   def update_primary_email(teacher_application, primary_email)
@@ -220,5 +253,13 @@ class TeacherApplicationDecisionProcessor
   def lookup_workshop(workshop_string)
     raise "Unexpected workshop: #{workshop_string}" unless @workshop_map.key? workshop_string
     @workshop_map[workshop_string]
+  end
+
+  def apply_partner_name_overrides(partner_name)
+    mutated_partner_name = partner_name.dup
+    PARTNER_NAME_OVERRIDES.each do |override|
+      mutated_partner_name.gsub!(override[0], override[1])
+    end
+    mutated_partner_name
   end
 end

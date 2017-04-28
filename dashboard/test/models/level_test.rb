@@ -37,6 +37,22 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
 
+  test "karel checks total value" do
+    json = [[
+      {tileType: 1, value: 1},
+      {tileType: 1, value: 2},
+      {tileType: 1, value: 3},
+    ]].to_json
+
+    assert_nothing_raised do
+      Karel.parse_maze(json, 6)
+    end
+
+    assert_raises ArgumentError do
+      Karel.parse_maze(json, 7)
+    end
+  end
+
   test "cannot create two custom levels with same name" do
     assert_no_difference('Level.count') do
       level2 = Level.create(@custom_maze_data)
@@ -555,5 +571,19 @@ EOS
 
     assert_equal callouts[0].callout_text, "first english markdown"
     assert_equal callouts[1].callout_text, "second english markdown"
+  end
+
+  test 'create unplugged level from level builder' do
+    Unplugged.any_instance.stubs(:update_i18n).with do |name, new_strings|
+      I18n.backend.store_translations I18n.locale, {'data' => {'unplugged' => {name => new_strings}}}
+    end
+
+    data = {name: 'New Unplugged Name', title: 'Test Unplugged Level', description: 'This is a test.'}
+    level = Unplugged.create_from_level_builder({}, data)
+
+    assert_equal data[:name], level.name
+    assert_equal data[:title], level.title
+    assert_equal data[:description], level.description
+    assert_equal data[:description], I18n.t("data.unplugged.#{data[:name]}.desc")
   end
 end

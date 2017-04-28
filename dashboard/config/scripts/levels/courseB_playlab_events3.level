@@ -42,6 +42,9 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block you should use to add the event:\\n\\n![](https://images.code.org/5ccb483d5a5ccc80692716728d7a0e6e-image-1475698549442.03.08.png)\",\r\n  \"hint_id\": \"courseB_playlab_events3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block you need to switch Daisy's mood:\\n\\n![](https://images.code.org/209bad7062fa2821a7dcf000072ec7bf-image-1475698952158.22.11.png)\",\r\n  \"hint_id\": \"courseB_playlab_events3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
     "markdown_instructions": "Use an event to make Daisy the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) mood when you click on her.\r\n\r\n",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

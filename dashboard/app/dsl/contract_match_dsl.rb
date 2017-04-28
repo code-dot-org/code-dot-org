@@ -2,7 +2,7 @@
 # Success only if the contract exactly matches one of the provided answers.
 class ContractMatchDSL < ContentDSL
   def initialize
-    @hash = { answers: [] }
+    @hash = {answers: []}
   end
 
   def answer(text) @hash[:answers] << text end

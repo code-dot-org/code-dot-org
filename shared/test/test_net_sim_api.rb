@@ -172,7 +172,7 @@ class NetSimApiTest < Minitest::Test
     assert_equal [VALIDATION_ERRORS[:malformed]], last_error_details
     assert_equal 4, read_records.length
   ensure
-    created_ids.each { |id| delete_record(id) }
+    created_ids.each {|id| delete_record(id)}
     assert read_records.first.nil?, 'Table was not empty'
   end
 
@@ -477,14 +477,14 @@ class NetSimApiTest < Minitest::Test
 
   def test_many_node_delete_cascading_generates_minimum_invalidations_via_delete
     many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
-      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      query_string = node_ids.map {|id| "id[]=#{id}"}.join('&')
       @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?#{query_string}"
     end
   end
 
   def test_many_node_delete_cascading_generates_minimum_invalidations_via_post
     many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
-      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      query_string = node_ids.map {|id| "id[]=#{id}"}.join('&')
       @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?#{query_string}"
     end
   end
@@ -637,7 +637,7 @@ class NetSimApiTest < Minitest::Test
     node_c = create_client_node(name: 'nodeC')
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
 
-    query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
+    query_string = [node_a['id'], node_c['id']].map {|id| "id[]=#{id}"}.join('&')
     yield query_string # Performs delete using block provided by caller
     assert_equal 204, @net_sim_api.last_response.status
 

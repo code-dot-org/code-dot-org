@@ -1,5 +1,6 @@
 ---
 title: Bring Computer Science to Your School (Clark County)
+theme: responsive
 ---
 
 # Teach Computer Science at Your School

@@ -12,6 +12,7 @@ mi:
     attributes:
       user:
         name: 'Ingoa Whakaatu'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Īmēra'
         username: 'Ingoa Kaiwhakamahi'
         password: 'Kupuhipa'
@@ -78,6 +79,7 @@ mi:
     forgot_password: 'Kua wareware i a koe tō kupuhipa?'
     need_confirmation: "Kāore koe i whiwhi ki ngā tohutohu whakaū?"
     need_unlock: "Kāore koe i whiwhi ki ngā tohutohu wetemaukati?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} ngā ākonga kua waitohu kē.'
     teacher_count: '%{count} ngā pouako kua waitohu kē.'
@@ -110,9 +112,31 @@ mi:
     user_type_student: "Student"
     field_is_required: "me mātua"
     accept_terms: "Me mātua whakaae koe ki te waihanga pūkete"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Other'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'He pūkete kē tāu? Takiuru'
     login: 'Īmēra'
+    login_username: 'Email or Username'
     password: 'Kupuhipa'
     remember: 'Maumahara i ahau'
     submit: 'Takiuru'
@@ -150,6 +174,14 @@ mi:
       He ngahau, he pai ā-tirohanga hoki ngā whakaakoranga, ā, ka whakaakona ngā ariā waiwai o te pūtaiao rorohiko mā ētahi wheako māmā, ārahi, rite ki te kēmu te hanga. Ka ako i ngā mahi waehere i a Bill Gates, a Mark Zuckerberg, i te kēmu Manu Takariri me Ngā Tipu ki Ngā Kairoro. :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'I tukuna te tono'
     added_teacher: 'i tāpiritia a %{name} hei pouako mōu'
@@ -163,8 +195,6 @@ mi:
       blank_code: "Tēnā tāurutia tētahi waehere wāhanga"
       cant_join_own_section: "Kia manawanui mai, tē taea e koe te hono atu ki tō wāhanga ake."
     mail:
-      invite_student:
-        subject: "Hono atu ki tētahi whakaakoranga me %{teacher_name} ki Code.org!"
       student_disassociated:
         subject: 'Whakamōhiotanga Code.org: Kāore a %{student_name} e whai hononga hei ākonga mōu ināianei.'
   reports:
@@ -363,21 +393,24 @@ mi:
     announcement_petition: "Ko tāu mahi hei pouako, he para i te huarahi kia whai wāhi ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi o ngā kaiurungi mātauranga, ngā kaikāwana 28, rātou ko ngā Kaihautū o ngā umanga mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki te tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko."
     announcement_petition_button: "Tāpiritia tō ingoa"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā āhuahira me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia ngā whakapāohotanga o mua.</a>"
     announcement_hoc_launch: "Hei te 5-11 o tēnei Hakihea i te wiki Hour of Code, ka tīmataria te whakaako pūtaiao rorohiko e te manomano pouako nō ngā whenua 180 neke atu. Ko koutou hei pou whirinaki mō mātou kia whānui ake te toro atu ki ngā tini ākonga. <a href='%{signup_url}' target='_blank'> Rēhitatia mai tō takunetanga Hour of Code</a>, kātahi ka whakamōhiotia tētahi atu pouako, ka taea te whakaako mātauranga rorohiko te tangata ahakoa ko wai."
     announcement_mc_launch: "Kua whai tānga tuarua tētahi o ā mātou whakaakoranga i tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code."
     announcement_how_code_studio: "Ehara i te mea me tangata mōhio koe ki te pūtaiao rorohiko e āhei ai koe ki te whakaako i tō akomanga. He marau, he mahere ako, he akoranga ngaio kounga, me ētahi tini rauemi ka whakaratoa e Code.org mō ngā taumata ako katoa &mdash; ngā mea katoa kei te hiahiatia, ā, he utu kore. E whakaaro ana koe ki hea tīmata ai? Tikina ake <a href='%{video_download_url}'>tēnei ataata</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā whakaurua he waehere wāhanga rerekē."
-    section_code_not_entered: "Tēnā whakaratoa mai he waehere_wāhanga_onāianei."
     section_code_cant_be_current_section: "Kāore e whakaae ana kia rite tonu te wāhanga onāianei ki te wāhanga hou."
     current_section_dne: "Kia manawanui mai, kāore tēnei wāhanga %{current_section_code}. Tēnā whakaurua he waehere wāhanga rerekē."
-    students_not_yours: "Tē taea e koe ngā ākonga o tētahi wāhanga ehara i a koe, te whakawhiti."
-    stay_enrolled_not_entered: "Tēnā whakaratoa mai te noho_kaiuru_ki_te wāhanga_onāianei."
     student_ids_not_entered: "Tēnā whakaratoa mai ngā id_ākonga."
     student_not_found: "Kotahi neke atu rānei ngā ākonga kāore i kitea."
     all_students_must_be_in_current_section: "Me mātua noho ngā ākonga katoa hei kaiwhakauru onāianei i tō wāhanga."
@@ -434,6 +467,10 @@ mi:
     upgrade:
       unsupported_message: "Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga."
       link: "Me ako tonu"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'E takaroa ana...'
   try_reloading: 'Me ngana ki te uta anō i te whārangi'
   next_stage: 'Kua mutu! E koke ki te wāhanga o muri'

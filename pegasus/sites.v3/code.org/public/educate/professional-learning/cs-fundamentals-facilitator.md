@@ -1,6 +1,7 @@
 ---
 title: K-5 Program
 nav: educate_nav
+theme: responsive
 ---
 # Computer Science Fundamentals Facilitator Program
 

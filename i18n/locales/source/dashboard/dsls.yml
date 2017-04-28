@@ -407,6 +407,40 @@ en:
         How do you typically organize students in your classes?: How do you typically organize students in your classes?
         Students usually work in small groups: Students usually work in small groups
         Students usually work independently: Students usually work independently
+      U5 evaluation q1:
+        Are you new to even-drive programming?: Are you new to even-drive programming?
+        'No': 'No'
+        'Yes': 'Yes'
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: Conditionals and Boolean Logic
+        Creating Functions that Return Values: Creating Functions that Return Values
+        ? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        : Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        Processing Arrays: Processing Arrays
+        Simple Arrays: Simple Arrays
+        Variables and Strings: Variables and Strings
+        While Loops: While Loops
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U5 evaluation q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U5 evaluation q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
@@ -420,6 +454,11 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      5.1 - 5.3 Lesson Connections: {}
+      5.11 - 5.14 Lesson Connections: {}
+      5.15 - 5.17 Lesson Connections: {}
+      5.4 - 5.6 Lesson Connections: {}
+      5.7- 5.10 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -441,6 +480,7 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Arrays Overview: {}
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
       Assessing Student Learning in Unit 4: {}
@@ -461,6 +501,7 @@ en:
       Boolean Expressions and Comparison Operators:
         description here: description here
         title: title
+      Boolean Logic and Expression Overview: {}
       Building a UI with Design Mode: {}
       CSD - Event Types: {}
       CSD - Functions Review: {}
@@ -471,6 +512,14 @@ en:
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
+      'CSD Map: Board Buttons': {}
+      'CSD Map: Board Sensors': {}
+      'CSD Map: Polling Events': {}
+      'CSD Map: Set Scale': {}
+      'CSD Map: Timed For Loop': {}
+      'CSD Map: Timed Loop': {}
+      'CSD Map: onBoardEvent': {}
+      CSD Placeholder: {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
@@ -488,6 +537,11 @@ en:
       CSD U1 Input Output Intro:
         description here: description here
         title: title
+      CSD U1 Lesson 5 Overview: {}
+      CSD U1 Lesson 6 Overview: {}
+      CSD U1 Lesson 7 Overview: {}
+      CSD U1 Lesson 8 Overview: {}
+      CSD U1 Lesson 9 Overview: {}
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
         description here: description here
@@ -497,6 +551,9 @@ en:
       CSD U2 RGB Colors:
         'STOP: RGB Colors': 'STOP: RGB Colors'
         description here: description here
+      CSD U2 Social Sleuth:
+        description here: description here
+        title: title
       CSD U2 layout style review:
         description here: description here
         title: title
@@ -517,12 +574,36 @@ en:
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
+      CSD U3 Describe the Picture:
+        description here: description here
+        title: title
+      CSD U3 Draw Loop Map 1: {}
       CSD U3 Draw Loop Stop: {}
+      CSD U3 Entertainment: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
       CSD U3 Functions SFLP: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 L2 Challenges:
+        description here: description here
+        title: title
+      CSD U3 Lesson Overview 1: {}
+      CSD U3 Lesson Overview 10: {}
+      CSD U3 Lesson Overview 11: {}
+      CSD U3 Lesson Overview 12: {}
+      CSD U3 Lesson Overview 13: {}
+      CSD U3 Lesson Overview 14: {}
+      CSD U3 Lesson Overview 2: {}
+      CSD U3 Lesson Overview 3: {}
+      CSD U3 Lesson Overview 4: {}
+      CSD U3 Lesson Overview 5: {}
+      CSD U3 Lesson Overview 6: {}
+      CSD U3 Lesson Overview 7: {}
+      CSD U3 Lesson Overview 8: {}
+      CSD U3 Lesson Overview 9: {}
+      CSD U3 Movement Challenges: {}
       CSD U3 Project Build a Game SFLP: {}
+      CSD U3 Random randomNumber Map: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
       CSD U3 SFLP Sprites and Images:
@@ -537,6 +618,7 @@ en:
       CSD U3 Variables STOP showing value: {}
       CSD U3 Variables STOP using value: {}
       CSD U3 Variables console write: {}
+      CSD U3 Variables variables map: {}
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
       CSD U3 Variables2 STOP variables in expressions: {}
@@ -546,6 +628,9 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 combining rep:
+        description here: description here
+        title: title
       CSD U3 complex sprite movement SFLP: {}
       CSD U3 game intro:
         Create Your Own Game: Create Your Own Game
@@ -556,6 +641,7 @@ en:
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD U3L02 SFLP: {}
       CSD U4L01 SFLP: {}
       CSD U4L02 SFLP: {}
       CSD U4L03 SFLP: {}
@@ -580,6 +666,31 @@ en:
       CSD U4L22 SFLP: {}
       CSD U4L23 SFLP: {}
       CSD U4L24 SFLP: {}
+      CSD U5 Real World Data Waze: {}
+      CSD U5 Representing Information:
+        description here: description here
+        title: title
+      CSD U5 collection UPS2:
+        description here: description here
+        title: title
+      CSD U5 collection ads2:
+        description here: description here
+        title: title
+      CSD U5 data visualization:
+        description here: description here
+        title: title
+      CSD U5 data visualization sheet:
+        description here: description here
+        title: title
+      CSD U5 fixed-bits:
+        Find the Numbers: Find the Numbers
+        description here: description here
+      CSD U5 student record:
+        description here: description here
+        title: title
+      CSD U5 video2:
+        description here: description here
+        title: title
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -593,16 +704,37 @@ en:
       CSD-U1-SFLP The Problem Solving Process: {}
       CSD-U1-SFLP What is a Computer?: {}
       CSD-U3-SFLP Draw Loop: {}
+      CSD-U3-SFLP Drawing:
+        description here: description here
+        title: title
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSD-U5-SFLP ASCII and Binary Representation: {}
+      CSD-U5-SFLP Automating Data Decisions: {}
+      CSD-U5-SFLP Combining Representations: {}
+      CSD-U5-SFLP Create a Representation: {}
+      CSD-U5-SFLP Interpreting Data: {}
+      CSD-U5-SFLP Making Decisions with Data: {}
+      CSD-U5-SFLP Patterns and Representation: {}
+      CSD-U5-SFLP Problem Solving and Data: {}
+      CSD-U5-SFLP Problem Solving with Big Data: {}
+      CSD-U5-SFLP Representation Matters: {}
+      CSD-U5-SFLP Representing Images: {}
+      CSD-U5-SFLP Representing Numbers Part 1: {}
+      CSD-U5-SFLP Representing Numbers Part 2: {}
+      CSD-U5-SFLP Solve a Data Problem: {}
       'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
+      'CSD: For Loops': {}
       'CSD: List Length': {}
       'CSD: Lists': {}
+      'CSD: Lists with For Loops': {}
       'CSD: Review Events': {}
+      'CSD: Stop': {}
       'CSD: colorLed list': {}
+      'CSD: getText vs getNumber': {}
       'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
@@ -619,6 +751,10 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - button check for understanding: {}
+      CSDU6 - sensor projects challenge: {}
+      CSDU6 - timed loop stop board: {}
+      CSDU6 Innovation: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
@@ -928,6 +1064,7 @@ en:
         description here: description here
         title: title
       Common Misconceptions about Functions: {}
+      Conditionals Overview: {}
       Conditions and Logic: {}
       Controlling Memory - Other ways to assign values:
         description here: description here
@@ -942,6 +1079,8 @@ en:
       Debugging with Console.log:
         description here: description here
         title: title
+      Design Mode Overview: {}
+      Design Mode Practice: {}
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -964,6 +1103,8 @@ en:
       Digital Footprint instantframe wiz_kid_liz:
         description here: description here
         title: title
+      DigitalCitizenship2:
+        Digital Citizenship: Digital Citizenship
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
       Downloading the Data Set: {}
@@ -1343,6 +1484,8 @@ en:
       Event-Driven Programming Patterns:
         description here: description here
         title: title
+      Events Overview: {}
+      Events Practice: {}
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1364,6 +1507,10 @@ en:
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Functions that Return Values: {}
+      'Game Lab Workshop: Draw Loop': {}
+      'Game Lab Workshop: Introduction': {}
+      'Game Lab Workshop: Variables to Sprites': {}
       Getting Better User Input: {}
       Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
@@ -1443,6 +1590,7 @@ en:
       Introduction to Unit 2: {}
       Introduction to Unit 3: {}
       Introduction to Unit 4: {}
+      Introduction to Unit 5: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1458,6 +1606,7 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Longitudinal study description: {}
       Looking at More Encryption Algorithms: {}
       Lossy vs. Lossless Compression: {}
       Make a Hypothesis: {}
@@ -1541,8 +1690,15 @@ en:
       Overview of File Sizes and Metrics: {}
       'Overview: Balancing Teachers and Tools': {}
       'Overview: Capturing Student Learning': {}
+      'Overview: Design Mode': {}
       'Overview: Discovery Learning': {}
       'Overview: Group Work and Peer Learning': {}
+      'Overview: If Statements': {}
+      'Overview: Images': {}
+      'Overview: onEvent': {}
+      'Overview: setPosition': {}
+      'Overview: setScreen': {}
+      'Overview: setText and getText': {}
       PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
@@ -1713,6 +1869,9 @@ en:
       PS - Responding to User Input:
         description here: description here
         title: title
+      PS - draft - Longitudinal study description:
+        description here: description here
+        title: title
       Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
@@ -1746,12 +1905,19 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Practice Performance Task in Unit 5: {}
       Practice Performance Tasks in Unit 1: {}
       Practice Performance Tasks in Unit 2: {}
       Practice Performance Tasks in Unit 3: {}
       Prepare for your presentation:
         description here: description here
         title: title
+      Processing Arrays: {}
+      'Project Breakdown: Building a Canvas Painter': {}
+      'Project Breakdown: Clicker Game': {}
+      'Project Breakdown: Color Sleuth': {}
+      'Project Breakdown: Image Scroller': {}
+      'Project Breakdown: Multi-Screen App': {}
       Public Key Crypto Widget Instructions:
         description here: description here
         title: title
@@ -1780,6 +1946,7 @@ en:
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: Check with Teacher': {}
       'Stop: Classes': {}
       'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
@@ -1790,6 +1957,8 @@ en:
       'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
+      Strings Overview: {}
+      Strings Practice: {}
       Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
@@ -2376,6 +2545,7 @@ en:
       Unit 4 Lesson 9 Introduction: {}
       Unit 4 Tool Talk: {}
       'Unit 4: Practice PT highlights': {}
+      Unit 5 Concepts and AP Assessments: {}
       Unit 5 Lesson 1:
         description here: description here
         title: title
@@ -2431,12 +2601,15 @@ en:
       Unit 5 Lesson 9 Introduction:
         description here: description here
         title: title
+      Unit 5 Teaching Philosophy and Commentary: {}
       Update your Hypothesis - Part 1: {}
       Update your Hypothesis - Part 2: {}
       'Using Output from Functions: The return Command': {}
       'Variable Scope: Local vs. Global':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
+      Variables Overview: {}
+      Variables Practice: {}
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
@@ -2446,6 +2619,7 @@ en:
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
+      While Loops Overview: {}
       Why Teach Number Systems?: {}
       'Worked Example: If-statements and Robot':
         description here: description here
@@ -2453,6 +2627,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      boolean logic and expressions overview: {}
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -2568,10 +2743,11 @@ en:
         title: title
       courseD_external_binary1:
         Binary Drawing: Binary Drawing
+      courseE_external_ramp14:
+        Good Job!: Good Job!
+      courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
-      coursee-privateandpersonalinformation:
-        description here: description here
-        title: title
+      coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2693,11 +2869,18 @@ en:
         description here: description here
       onlineNeighbors:
         Your Online Neighborhood: Your Online Neighborhood
+      'placeholder text: submit and warning about longitudinal study request': {}
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
       plc csp1 philosophy and commentary: {}
+      post-assessment survey heading1: {}
+      post-assessment survey heading2: {}
+      post-assessment survey heading3: {}
+      post-assessment survey heading4:
+        description here: description here
+        title: title
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
@@ -3112,6 +3295,7 @@ en:
       name:
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
+        CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
@@ -3124,6 +3308,7 @@ en:
         CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP Unit 5 Cumulative Assessment 3 MC: {}
         CSP Unit 5 Cumulative Assessment 4 MC: {}
+        CSP post-assessment survey: {}
         CSP pre-assessment survey: {}
         HOC post-survey 2016 levelgroup: {}
         HOC pre-survey 2016 levelgroup: {}
@@ -3142,6 +3327,7 @@ en:
         Unit 2 Self-Assessment: {}
         Unit 3 Self-Assessment: {}
         Unit 4 Self-Assessment: {}
+        Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -3307,15 +3493,15 @@ en:
         RGB Colors: RGB Colors
         rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
-        Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
-        Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
-        Is the x of the dog sprite equal to the x of the cat sprite?: Is the x of the dog sprite equal to the x of the cat sprite?
-        Is the x of the dog sprite greater than the x of the cat sprite?: Is the x of the dog sprite greater than the x of the cat sprite?
-        Is the x of the dog sprite less than the x of the cat sprite?: Is the x of the dog sprite less than the x of the cat sprite?
+        Is the dog sprite's rotation less than the cat sprite's rotation?: Is the dog sprite's rotation less than the cat sprite's rotation?
+        Is the dog sprite's scale greater than the cat sprite's scale?: Is the dog sprite's scale greater than the cat sprite's scale?
+        Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
+        Is the dog sprite's x greater than the cat sprite's x?: Is the dog sprite's x greater than the cat sprite's x?
+        Is the dog sprite's x less than the cat sprite's x?: Is the dog sprite's x less than the cat sprite's x?
         Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
-        dog.width &gt; cat.width: dog.width &gt; cat.width
-        dog.width &lt; cat.width: dog.width &lt; cat.width
+        dog.rotation &lt; cat.rotation: dog.rotation &lt; cat.rotation
+        dog.scale &gt; cat.scale: dog.scale &gt; cat.scale
         dog.x &gt; cat.x: dog.x &gt; cat.x
         dog.x &lt; cat.x: dog.x &lt; cat.x
         dog.x == cat.x: dog.x == cat.x
@@ -3339,6 +3525,29 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD U3 Variables name match:
+        1dimension: 1dimension
+        ? |-
+          1dimension
+          var yLocation = 200;
+        : |-
+          1dimension
+          var yLocation = 200;
+        CSD U3 Variables name match: CSD U3 Variables name match
+        'Debug: Naming Variables': 'Debug: Naming Variables'
+        Labels can't have spaces.: Labels can't have spaces.
+        Labels can't start with a number.: Labels can't start with a number.
+        Labels should have the same capitalization.: Labels should have the same capitalization.
+        This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.: This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.
+        YLocation: YLocation
+        description here: description here
+        size of circle: size of circle
+        ? |-
+          size of circle
+          var yLocation = 200;
+        : |-
+          size of circle
+          var yLocation = 200;
       CSD U3 keyinput match:
         Answer 1: Answer 1
         CSD U3 keyinput match: CSD U3 keyinput match
@@ -3354,6 +3563,15 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      'CSD: Variables Matching':
+        "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)": "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)"
+        "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)": "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)"
+        "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)": "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)"
+        <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">: <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">
+        Program 1: Program 1
+        Program 2: Program 2
+        Program 3: Program 3
+        Program 4: Program 4
       CSDU2 Match RGB Colors:
         Question: Question
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
@@ -4051,13 +4269,30 @@ en:
         blue: blue
         salt: salt
       unique level name here:
+        ? |-
+          1dimension
+          var yLocation = 200;
+        : |-
+          1dimension
+          var yLocation = 200;
+        CSD U3 Variables name match: CSD U3 Variables name match
+        Labels can't have spaces.: Labels can't have spaces.
+        Labels can't start with a number.: Labels can't start with a number.
+        Labels should have the same capitalization.: Labels should have the same capitalization.
         Question: Question
+        YLocation: YLocation
         description here: description here
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
         'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
         'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
         'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
         'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
+        ? |-
+          size of circle
+          var yLocation = 200;
+        : |-
+          size of circle
+          var yLocation = 200;
         title: title
     multi:
       2-3 Algorithms Multi 1:
@@ -4530,7 +4765,7 @@ en:
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
       CSD U3 Boolean MC:
-        "  200<br>10<br>-20": "  200<br>10<br>-20"
+        "  0<br>200<br>100": "  0<br>200<br>100"
         "  false<br>true<br>false": "  false<br>true<br>false"
         "  true<br>error<br>true": "  true<br>error<br>true"
         Which result will be printed in the console by this program?: Which result will be printed in the console by this program?
@@ -4543,6 +4778,22 @@ en:
         Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
         The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
         The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
+      CSD U3 Sprite Movement Predict Multi:
+        "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+        Read this program and predict which of the following animations will be produced.: Read this program and predict which of the following animations will be produced.
+      CSD U3 Sprites intro predict multi:
+        ? '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
+        When run, where will the sprite <code>mySprite</code> be located?: When run, where will the sprite <code>mySprite</code> be located?
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
@@ -4558,11 +4809,25 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 - timed loop predict counter multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        How many times with the word 'looped' be printed in the console?: How many times with the word 'looped' be printed in the console?
+        inifinite: inifinite
+      CSDU6 - timed loop question for:
+        The button background will be violet: The button background will be violet
+        The button background will change to each of the colors in the list: The button background will change to each of the colors in the list
+        The button background will not change: The button background will not change
+        The button will change background color each time it is clicked: The button will change background color each time it is clicked
+        When you run this code, what will you see?: When you run this code, what will you see?
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly
-        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
-        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
+        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
         Never turn on: Never turn on
         Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
@@ -4690,6 +4955,13 @@ en:
         gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
         kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
         megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP longitudinal agree to contact:
+        'no': 'no'
+        'yes': 'yes'
+      CSP verify 18:
+        Are you 18 years old (or older)?: Are you 18 years old (or older)?
+        'No': 'No'
+        'Yes': 'Yes'
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
@@ -5138,8 +5410,8 @@ en:
         "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
         What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 4a - block:
+        "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
         "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
-        "<pre>The word is just right</pre>": "<pre>The word is just right</pre>"
         "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
         "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
         "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
@@ -6943,6 +7215,486 @@ en:
         '50': '50'
         How many times will the comparison c > 5 be tested when this code is run?: How many times will the comparison c > 5 be tested when this code is run?
         it will be different each time you run it: it will be different each time you run it
+      courseA_multi_artist_loops11_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist repeats `South` and `East` four times to make a staircase.: Incorrect.  The artist repeats `South` and `East` four times to make a staircase.
+        Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
+        The artist repeats `South` and `East` four times to make a staircase.: The artist repeats `South` and `East` four times to make a staircase.
+        The artist will draw a square: The artist will draw a square
+        The artist will draw a stair pattern.: The artist will draw a stair pattern.
+        The artist won't move at all.: The artist won't move at all.
+      courseA_multi_collector_loops11_predict2:
+        Correct.: Correct.
+        I don't know.: I don't know.
+        ? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        : Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        Laurel will get all of the treasure along the top and side, but not along the bottom.: Laurel will get all of the treasure along the top and side, but not along the bottom.
+        Laurel will get all of the treasure.: Laurel will get all of the treasure.
+        Laurel will not get any treasure at all.: Laurel will not get any treasure at all.
+        ? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        : The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        The code below uses loops.  What will happen when you click "Run"?: The code below uses loops.  What will happen when you click "Run"?
+      courseA_multi_collector_loops3_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.
+        Laurel will move forward and get treasure five times in a row.: Laurel will move forward and get treasure five times in a row.
+        Laurel will move forward and get treasure one time.: Laurel will move forward and get treasure one time.
+        Laurel won't move at all.: Laurel won't move at all.
+        Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
+        The program uses a `repeat` loop to get Laurel to move forward five times.: The program uses a `repeat` loop to get Laurel to move forward five times.
+      courseA_multi_maze_seq12_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The bird turns the wrong way at the end.: Incorrect. The bird turns the wrong way at the end.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird should go North at the end, not South.: The bird should go North at the end, not South.
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will only go straight.: The bird will only go straight.
+        The bird will turn the wrong way at the end.: The bird will turn the wrong way at the end.
+      courseA_multi_maze_seq2_predict1:
+        Correct.: Correct.
+        I don't know.: I don't know.
+        Incorrect. The program needs one more block to get to the pig.: Incorrect. The program needs one more block to get to the pig.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not reach the pig.: The bird will not reach the pig.
+        The program needs one more block to get to the pig.: The program needs one more block to get to the pig.
+      courseB_multi_artist_loops8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.: Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.
+        Run through the code below in your mind.  What will happen when you click "Run"?: Run through the code below in your mind.  What will happen when you click "Run"?
+        The artist draws lines back and forth, then jumps down, creating a ladder.: The artist draws lines back and forth, then jumps down, creating a ladder.
+        The artist will draw a ladder with 6 steps.: The artist will draw a ladder with 6 steps.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square with 4 sides.: The artist will draw a square with 4 sides.
+      courseB_multi_collector_loops3_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.
+        Laurel will move forward and get all of the treasure.: Laurel will move forward and get all of the treasure.
+        Laurel will move forward and get treasure three times in a row.: Laurel will move forward and get treasure three times in a row.
+        Laurel won't move at all.: Laurel won't move at all.
+        Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
+        The program uses a `repeat` loop to get Laurel to move forward three times.: The program uses a `repeat` loop to get Laurel to move forward three times.
+      courseB_multi_maze_seq10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The bird runs into the TNT with his first move.: Incorrect. The bird runs into the TNT with his first move.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird runs into the TNT with his first move.: The bird runs into the TNT with his first move.
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not move at all.: The bird will not move at all.
+        The bird will run into the TNT right away.: The bird will run into the TNT right away.
+      courseB_multi_maze_seq1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The program has all of the blocks needed to get to the pig.: Incorrect. The program has all of the blocks needed to get to the pig.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not reach the pig.: The bird will not reach the pig.
+        The program has all of the blocks needed to get to the pig.: The program has all of the blocks needed to get to the pig.
+      courseC_multi_artist_prog6_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
+        Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
+        The artist draws a square.: The artist draws a square.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_maze_debugging8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Skrat goes the wrong way after his final turn.: Incorrect. Skrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Skrat turns the wrong way.: Incorrect. Taking one too few steps happens after Skrat turns the wrong way.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        Skrat takes one too few steps and ends up short of the acorn.: Skrat takes one too few steps and ends up short of the acorn.
+        Skrat will go the wrong way after his final turn.: Skrat will go the wrong way after his final turn.
+        'The first error is that Skrat goes the wrong way after his final turn. ': 'The first error is that Skrat goes the wrong way after his final turn. '
+        The program won't fail. Skrat will get to the acorn.: The program won't fail. Skrat will get to the acorn.
+      courseC_multi_maze_loops10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The bird will not travel far enough in the first loop.: The bird will not travel far enough in the first loop.
+        The bird will reach the pig with no problems.: The bird will reach the pig with no problems.
+        The bird will travel too far in the first loop.: The bird will travel too far in the first loop.
+        The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
+      courseC_multi_maze_loops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.: Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.
+        Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
+        The bird will move forward only one space.: The bird will move forward only one space.
+        The bird will not move.: The bird will not move.
+        The bird will repeat `move forward` 5 times, taking him to the pig.: The bird will repeat `move forward` 5 times, taking him to the pig.
+        The repeat block will `move the bird forward` 5 times, taking him to the pig.: The repeat block will `move the bird forward` 5 times, taking him to the pig.
+      courseC_multi_maze_programming8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird run into the TNT.: The bird run into the TNT.
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        D: D
+        Incorrect.: Incorrect.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Take a close look at the code below.  Which image will it create after you click "Run"?
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+      courseD_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+      courseD_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseD_multi_bee_debugging9_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
+        Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.: Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.
+        ? 'Look closely at the code below.  Why won''t the bee collect all of the nectar when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+        : 'Look closely at the code below.  Why won''t the bee collect all of the nectar when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+        The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.: The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.
+        The bee will turn the wrong way when making a square.: The bee will turn the wrong way when making a square.
+        'The loop does not run long enough for the bee to get to all flower bunches. ': 'The loop does not run long enough for the bee to get to all flower bunches. '
+      courseD_multi_bee_nestedLoops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get 3 units of nectar.: The bee will get 3 units of nectar.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Look closely at the code below. How much honey will the bee make when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_farmer_condLoops9_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        Incorrect. There is no code here for collecting the pumpkin.: Incorrect. There is no code here for collecting the pumpkin.
+        Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
+        ? The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The farmer will collect all of the produce, except the pumpkin.: The farmer will collect all of the produce, except the pumpkin.
+        The farmer will collect all of the produce.: The farmer will collect all of the produce.
+        The farmer will not collect any of the produce with the path she is taking.: The farmer will not collect any of the produce with the path she is taking.
+      courseD_multi_farmer_ramp13:
+        " ": " "
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        : Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
+        The farmer will walk four spaces, then try to pick one pumpkin.: The farmer will walk four spaces, then try to pick one pumpkin.
+        The farmer will walk to the end of the path and harvest the pumpkin.: The farmer will walk to the end of the path and harvest the pumpkin.
+      courseD_multi_farmer_ramp14:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.: Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.
+        ? Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        : Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?: Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?
+        ? The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        : The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        The farmer will collect 4 pumpkins.: The farmer will collect 4 pumpkins.
+        The farmer will collect 5 pumpkins.: The farmer will collect 5 pumpkins.
+        The farmer will collect all 8 pumpkins.: The farmer will collect all 8 pumpkins.
+      courseD_multi_farmer_while10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrect. There is no code to remove dirt from the pile.
+        Nothing.  This code will leave only level ground.: Nothing.  This code will leave only level ground.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Take a good look at the code below. What will be left at the end of this puzzle?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
+        This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
+      courseD_multi_farmer_while4_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        Look closely at the code below.  What will happen after you click "Run"?: Look closely at the code below.  What will happen after you click "Run"?
+        Nothing will happen.: Nothing will happen.
+        The farmer will never stop removing dirt.: The farmer will never stop removing dirt.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+      courseD_multi_maze_until10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
+        The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
+        The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
+        The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
+      courseD_multi_maze_until2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
+        The bird will not move at all.: The bird will not move at all.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseE_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the 'repeat 3' loop is inside the 'repeat 4' loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the 'repeat 3' loop is inside the 'repeat 4' loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a 'turn 90 degrees' block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a 'turn 90 degrees' block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The 'repeat 3' loop is inside the 'repeat 4' loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The 'repeat 3' loop is inside the 'repeat 4' loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
+      courseE_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
+        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
+      courseE_multi_farmer_functions11_predict:
+        Correct!: Correct!
+        Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
+        Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
+        The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
+        The farmer will harvest the corn.: The farmer will harvest the corn.
+        The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
+        The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+      courseE_multi_farmer_predict1:
+        Correct!: Correct!
+        I don't know: I don't know
+        ? Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
+        : Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
+        Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
+        The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn: The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn
+        The farmer will go to the sprout and try to pick lettuce no matter what.: The farmer will go to the sprout and try to pick lettuce no matter what.
+        ? The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
+        : The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
+        ? We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
+        : We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
+      courseE_multi_farmer_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        The farmer will not anywhere because there's no pumpkin in the first place.: The farmer will not anywhere because there's no pumpkin in the first place.
+        The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
+        The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
+        What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?
+      courseE_multi_farmer_ramp12:
+        " ": " "
+        right answer: right answer
+        wrong answer: wrong answer
+      courseE_multi_maze_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
+        Nothing. The bird will not move at all.: Nothing. The bird will not move at all.
+        ? Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        : Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        The bird will move forward three times, turn, then move forward three more times, making it to the pig!: The bird will move forward three times, turn, then move forward three more times, making it to the pig!
+        The bird will move forward, then turn and crash into a wall.: The bird will move forward, then turn and crash into a wall.
+        This code uses a new block. What do you think would happen if you pressed 'Run'?: This code uses a new block. What do you think would happen if you pressed 'Run'?
+      courseE_prediction_artistFunction1:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseF_multi_artist_for10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_fwp2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        The artist will use the same function to draw two different sized boxes.: The artist will use the same function to draw two different sized boxes.
+        The artist will use two different functions to draw the same sized box twice.: The artist will use two different functions to draw the same sized box twice.
+        The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
+        The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
+        What will happen when you run this program?: What will happen when you run this program?
+      courseF_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
+      courseF_multi_artist_variables3a_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        : The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
+      courseF_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+      courseF_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseF_multi_bee_for3_predict1:
+        Correct!: Correct!
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+      courseF_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
+        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
+      courseF_multi_bee_fwp9_predict1:
+        ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
+        I don't know.: I don't know.
+        Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
+        Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
+        'The bee will collect only one nectar or honey in each iteration of the loop. ': 'The bee will collect only one nectar or honey in each iteration of the loop. '
+        'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
+        The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_playlab_variables4c_predictive1:
+        'Correct. ': 'Correct. '
+        I don't know.: I don't know.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
+        The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.: The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.
+        The pirate would say, "It be a pleasure meetin' ya." and that is all.: The pirate would say, "It be a pleasure meetin' ya." and that is all.
+        What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
+      coursee_prediction_artistfunction2:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
       csp_ap_exam_signup:
         'No': 'No'
         'Yes': 'Yes'
@@ -7209,9 +7961,9 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
-        " “Time to start studying again!” ": " “Time to start studying again!” "
-        " “You passed!” ": " “You passed!” "
-        " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
+        "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
+        "<code>You passed!</code>": "<code>You passed!</code>"
+        "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
@@ -7274,11 +8026,11 @@ en:
         <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
         <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
       cspu5_assess3_bakeSale:
-        'Add after line 3:     numItems = numItems - 1;': 'Add after line 3:     numItems = numItems - 1;'
-        'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
-        'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
-        'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
-        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
+        'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
+        'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
+        'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
+        'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
+        'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>': 'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>'
       cspu5_assess3_counter:
         '0': '0'
         '1': '1'
@@ -7397,6 +8149,15 @@ en:
         <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
         <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
         <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+      grade2_multi_collector_A_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
+        Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will not collect any treasure.: Laurel will not collect any treasure.
+        Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
+        Look closely at the code below.  How many pieces of treasure will Laurel successfully collect after you click "Run"?: Look closely at the code below.  How many pieces of treasure will Laurel successfully collect after you click "Run"?
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
@@ -7405,6 +8166,12 @@ en:
         "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      kiki_multi_test:
+        The bird will crash immediately into a wall: The bird will crash immediately into a wall
+        The bird will not move at all: The bird will not move at all
+        The bird will reach the pig: The bird will reach the pig
+        The bird will stop one space short of the pig: The bird will stop one space short of the pig
+        What will happen when you run this code?: What will happen when you run this code?
       msm variables multi 1:
         '15': '15'
         What is the value of x?: What is the value of x?
@@ -7484,6 +8251,291 @@ en:
         What is f(2)?: What is f(2)?
         f(x) = x + 3: f(x) = x + 3
         x: x
+      post-assessment survey q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q10:
+        Agree: Agree
+        Disagree: Disagree
+        I think I am better at computer science than most of the other kids at my school.: I think I am better at computer science than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q11:
+        Agree: Agree
+        Disagree: Disagree
+        I think I am very good at computer science.: I think I am very good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q12:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in my computer science class if I try.: I can figure out how to solve the most difficult problems in my computer science class if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q13:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q14:
+        Agree: Agree
+        Disagree: Disagree
+        I think computer science is interesting.: I think computer science is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q15:
+        Agree: Agree
+        Disagree: Disagree
+        I like doing computer science activities.: I like doing computer science activities.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q17:
+        Agree: Agree
+        Disagree: Disagree
+        Kids like me do computer science.: Kids like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q18:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science more than other kids at my school.: I like computer science more than other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q19:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q20:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q21:
+        Agree: Agree
+        Computer Science applies to most aspects of real life.: Computer Science applies to most aspects of real life.
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q22:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q23:
+        Agree: Agree
+        Because of Computer Science Principles, I am interested in learning more computer science.: Because of Computer Science Principles, I am interested in learning more computer science.
+        Disagree: Disagree
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q24:
+        Agree: Agree
+        Disagree: Disagree
+        I am interested in taking more computer science classes (in high school or after high school): I am interested in taking more computer science classes (in high school or after high school)
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q25:
+        Agree: Agree
+        Disagree: Disagree
+        I am interested in doing computer science outside of school time.: I am interested in doing computer science outside of school time.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q26:
+        Agree: Agree
+        Disagree: Disagree
+        I feel that I am accepted in this computer science class.: I feel that I am accepted in this computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q27:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q28:
+        Agree: Agree
+        Disagree: Disagree
+        I like my computer science class.: I like my computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q29:
+        Agree: Agree
+        Disagree: Disagree
+        I think my computer science class is interesting.: I think my computer science class is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q30:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time in computer science class.: I enjoy my time in computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q31:
+        Agree: Agree
+        Disagree: Disagree
+        I like doing the activities we do in my computer science class.: I like doing the activities we do in my computer science class.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q31-a:
+        Agree: Agree
+        Disagree: Disagree
+        I would recommend this computer science class to another student.: I would recommend this computer science class to another student.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q33:
+        ok: ok
+      post-assessment survey q34:
+        Easy: Easy
+        Hard: Hard
+        I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
+        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was.
+        Kinda easy: Kinda easy
+        Kinda hard: Kinda hard
+        Neutral: Neutral
+        Really easy: Really easy
+        Really hard: Really hard
+      post-assessment survey q35:
+        "...I didn't get any questions right": "...I didn't get any questions right"
+        "...I got a lot of questions right, but some wrong": "...I got a lot of questions right, but some wrong"
+        "...I got about half right and half wrong": "...I got about half right and half wrong"
+        "...I got most of the questions right": "...I got most of the questions right"
+        "...I only got a few right": "...I only got a few right"
+        I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
+        If you DID take the CS Principles AP exam, how do you think you did? I feel like...: If you DID take the CS Principles AP exam, how do you think you did? I feel like...
+      post-assessment survey q36:
+        A friend recommended I not take the exam: A friend recommended I not take the exam
+        Another person at my school recommended I not take the exam: Another person at my school recommended I not take the exam
+        Cost of exam: Cost of exam
+        I didn't know it was an option: I didn't know it was an option
+        I didn't think I'd do well: I didn't think I'd do well
+        If you DID NOT take the CS Principles AP exam, why not?: If you DID NOT take the CS Principles AP exam, why not?
+        Not applicable. I DID take the exam: Not applicable. I DID take the exam
+        Wasn't offered at my school: Wasn't offered at my school
+      post-assessment survey q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q5:
+        Agree: Agree
+        Disagree: Disagree
+        I like my schoolwork.: I like my schoolwork.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q6:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q7:
+        Agree: Agree
+        Disagree: Disagree
+        I enjoy my time at school.: I enjoy my time at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q8:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my school work.: It is important for me to be good at my school work.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q9:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       pre-assessment survey q1:
         Agree: Agree
         Disagree: Disagree
@@ -7853,12 +8905,10 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        '1': '1'
-        '2': '2'
-        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
-        CSS: CSS
-        Stylesheet: Stylesheet
-        description here: description here
+        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+        When run, where will the sprite `my_sprite` be located?: When run, where will the sprite `my_sprite` be located?
+        right answer: right answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

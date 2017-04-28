@@ -11,7 +11,7 @@
     The application should take 10 - 15 minutes to complete. We will require your principal's approval; after you submit
     your application, your principal will receive an e-mail about their next steps.
     %b
-      The deadline to apply is April 17, 2017.
+      The deadline to apply is April 14, 2017.
   %label
     If you need more information on the program before you apply, please visit
     = link_to 'CS Discoveries', 'https://code.org/educate/professional-learning/cs-discoveries', target: '_blank'
@@ -35,4 +35,4 @@
 = render partial: 'shared/school_info', locals: {form_name: "school_info", suppress_scrolling: true, assume_usa: true}
 
 %div#application-container
-%script{src: minifiable_asset_path('js/pd/teacher_application/new.js')}
+%script{src: minifiable_asset_path('js/pd/teacher_application/new.js'), data: {applicationData: @application_data.to_json}}

@@ -47,13 +47,13 @@ end
 
 raise "#{error_count} Errors. Not importing districts." if error_count > 0
 
-# # Second pass, import the data.
+# Second pass, import the data.
 district_list.each do |district|
   user = district[:contact]
   user.permission = UserPermission::WORKSHOP_ORGANIZER
   user.save!
 
-  #TODO: Create the district with this user as the contact (after facilitator summit)
+  # TODO: Create the district with this user as the contact (after facilitator summit)
 end
 
 puts "#{district_list.length} Districts Imported."

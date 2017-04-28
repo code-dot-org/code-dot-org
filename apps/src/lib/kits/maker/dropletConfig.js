@@ -4,7 +4,6 @@ import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
   N_COLOR_LEDS,
-  SENSOR_VARS,
   BUTTON_VARS,
   COMPONENT_EVENTS,
   SONG_CHARGE
@@ -61,6 +60,19 @@ export function getBoardEventDropdownForParam(firstParam) {
     .value();
 }
 
+// We don't want these to show up as blocks (because that interferes with
+// parameter dropdowns) but we also don't want them to generate "_ is not
+// defined" warnings from the linter.
+export const additionalPredefValues = [
+  'accelerometer',
+  'buttonL',
+  'buttonR',
+  'lightSensor',
+  'soundSensor',
+  'tempSensor',
+  'toggleSwitch',
+];
+
 export const blocks = [
   /**
    * Generic Johnny-Five / Firmata blocks
@@ -80,7 +92,11 @@ export const blocks = [
   {func: 'led', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: CIRCUIT_CATEGORY},
   {func: 'led.off', category: CIRCUIT_CATEGORY},
+  {func: 'led.blink', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100']},
+  {func: 'led.toggle', category: CIRCUIT_CATEGORY},
+  {func: 'led.pulse', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100']},
 
+  {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'on', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},
   {func: 'off', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.off', objectDropdown: {options: colorPixelVariables}},
 
@@ -97,27 +113,31 @@ export const blocks = [
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
 
-  // TODO(bjordan): re-add when dropdowns work with object refs
-  //{func: 'accelerometer', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'accelerometer.getOrientation', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},
   {func: 'accelerometer.sensitivity', category: CIRCUIT_CATEGORY, type: 'property' },
 
-  // TODO(bjordan): re-add when dropdowns work with object refs
-  //{func: 'buttonL', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
-  //{func: 'buttonR', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
+  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'isPressed', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
+  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'holdtime', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
-  {func: 'value', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.value", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'readonlyproperty', tipPrefix: '[Sensor].'},
-  {func: 'getAveragedValue', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.getAveragedValue", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
-  {func: 'start', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.start", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].'},
-  {func: 'setScale', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.setScale", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
-  {func: 'threshold', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.threshold", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'property', tipPrefix: '[Sensor].' },
+  {func: 'soundSensor.start', category: CIRCUIT_CATEGORY, noAutocomplete: true},
+  {func: 'soundSensor.value', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
+  {func: 'soundSensor.getAveragedValue', category: CIRCUIT_CATEGORY, params: ['500'], paletteParams: ['ms'], type: 'value'},
+  {func: 'soundSensor.setScale', category: CIRCUIT_CATEGORY, params: ['0', '100'], paletteParams: ['low', 'high']},
+  {func: 'soundSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property' },
 
-  // TODO(bjordan): re-add when dropdowns work with object refs
-  //{func: 'toggleSwitch', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'lightSensor.start', category: CIRCUIT_CATEGORY, noAutocomplete: true},
+  {func: 'lightSensor.value', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
+  {func: 'lightSensor.getAveragedValue', category: CIRCUIT_CATEGORY, params: ['500'], paletteParams: ['ms'], type: 'value'},
+  {func: 'lightSensor.setScale', category: CIRCUIT_CATEGORY, params: ['0', '100'], paletteParams: ['low', 'high']},
+  {func: 'lightSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property' },
+
+  {func: 'tempSensor.F', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
+  {func: 'tempSensor.C', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
+
   {func: 'toggleSwitch.isOpen', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
 ];
 

@@ -4,6 +4,7 @@ import color from "@cdo/apps/util/color";
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import _ from 'lodash';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -53,7 +54,9 @@ const ProgressBubble = React.createClass({
   },
 
   render() {
-    const { number, status, url, disabled, levelName, levelIcon } = this.props;
+    const { number, status, url, levelName, levelIcon } = this.props;
+
+    const disabled = this.props.disabled || levelIcon === 'lock';
 
     const style = {
       ...styles.main,
@@ -66,23 +69,23 @@ const ProgressBubble = React.createClass({
       href = url + location.search;
     }
 
-    let bubble = (
+    const tooltipId = _.uniqueId();
+    const interior = levelIcon === 'lock' ? <FontAwesome icon="lock"/> : number;
 
-      <div style={style} data-tip data-for={url} aria-describedby={url}>
-        {number}
+    let bubble = (
+      <div style={style} data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+        {interior}
         <ReactTooltip
-          id={url}
+          id={tooltipId}
           role="tooltip"
+          wrapper="span"
           effect="solid"
         >
           <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
           {levelName}
         </ReactTooltip>
       </div>
-
     );
-
-
 
     // If we have an href, wrap in an achor tag
     if (href) {

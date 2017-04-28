@@ -444,6 +444,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} õpetajat otsib vabatahtlikke, kes armastavad arvutiteaduse õpetamist, et nad aitaks neid sellel detsembril KoodiTunniga.<br>%{num_volunteers} vabatahtlikku on juba registreerinud. Liitu nendega."
   volunteer_engineer_submission_intro_background: "KoodiTund on globaalne liikumine, mille eesmärk on anda tunnine sissejuhatus arvutiteadusesse. See üritus jõuab sadade miljonite õpilasteni enam kui 180 riigis. Palun tule samuti osalema arvutiteaduse õppe nädala raames, mis toimub 7.-13. detsembril."
   volunteer_engineer_submission_intro_recruit: 'Need õpetajad otsivad kedagi, <span style="font-family: ''Gotham 7r'', sans-serif;">kes armastab arvutiteaduse õpetamist</span> ja kes aitaks neid klassiruumis või kes <span style="font-family: ''Gotham 7r'', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse arvukatest võimalustest (seda saab teha ka videovestluse teel). Kui Sa ei soovi olla vabatahtlik, loe <a href="%{url}">lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta.'
+  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_signup: "Palun sisesta järgnev info, kui oled arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class=\"form-required-field\">*</span> on kohustuslikud."
   volunteer_engineer_submission_intro_links: "Sa ei soovi olla vabatahtlik? <a href=\"%{learn_more}\">Loe lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta ja selle kohta, kuidas leida kohalik vabatahtlik meie <a href=\"%{volunteer_local}\">vabatahtlike kaardilt</a>."
   volunteer_engineer_submission_update_information: "Uuendage oma andmeid"
@@ -472,6 +473,7 @@
   volunteer_engineer_submission_field_email_placeholder: "E-posti aadress"
   volunteer_engineer_submission_final_paragraph: "Sind märgitakse kaardil kohalike õpetajate jaoks, kes võtavad Sinuga ühendust seoses KoodiTunni või muu vabatahtliku võimaluste raames. Sinu email ja täpset aadressi ei jagata KUNAGI meie poolt. Kuid kõik muu info (Kaasa arvatud ligikaudne asukoht) on avalikult nähtav kohalikele õpetajatele."
   volunteer_engineer_submission_checkbox_contact: 'Ma olen nõus, et kohalikud õpetajad võivad minuga ühendust võtta vabatahtlikute tegevuste võimalustega (Märkus: Sinu e-posti ei jagata)'
+  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "Esita"
   volunteer_engineer_submission_thankyou: "Tänan, et osalesid vabatahtlikuna KoodiTunnis. Valmistu KoodiTunniks ja kutsu ka teisi programmeerijaid osalema,<a href=\"%{url}\">loe lisaks siit.</a>"
   volunteer_engineer_submission_commitment_uncertain: "Ebakindel"
@@ -654,7 +656,8 @@
   dashboard_students_auto_generated: "Automaatselt genereeritud"
   dashboard_students_reset_secret: "Lähtesta saladus"
   dashboard_students_reset_password: "Vaheta salasõna"
-  dashboard_students_share_section: 'Levita selle lehe sisselogimise aadressi oma õpilastega:'
+  dashboard_students_share_section: "Levita selle lehe sisselogimise aadressi oma õpilastega:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Prindi välja kaardid oma õpilaste sisselogimise infoga."
   dashboard_students_secret_picture_title: "Salajane pilt"
   dashboard_students_secret_picture: "See sektroon kasutab <b>pilti</b> mis on saladus. See tähendab, et kõigil sinu õpilastel on salajane pilt, mida kasutatakse salasõna asemel sisselogimisel. Õpilased peaksid kasutama sisselogimise aadressi, mis on toodud üleval pool."
@@ -665,6 +668,7 @@
   dashboard_students_join_link: "Öelge oma õpilastele, et nad teeksid endale kasutajakonto ja liituks teie sektsiooniga"
   dashboard_students_no_email: "Kui su õpilastel ei ole e-posti aadresse või sa soovid neile kasutajakontod luua, siis määra saladuse tüübiks <b>sõna</b> või <b>pilt</b>."
   dashboard_students_print_page: "Prindi see lehekülg"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Kliki siia</a> meie privaatsusreeglite vaatamiseks, mida saate õpilastele saata või välja printida."
   dashboard_curriculum_k5_title: "K-5 Koolitaja materjalid"
@@ -732,25 +736,6 @@
   dashboard_sections_login_type_explanation: "See tabel selgitab, mis sisselogimise tüübi, <b>pilt, sõna, või e-post</b>, peaksid selles osas valima."
   dashboard_faq: "Korduma kippuvad küsimused"
   dashboard_faq_k5: "K-5 korduma kippuvad küsimused"
-  dashboard_announcements: "Teated"
-  dashboard_announce_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
-  dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-  dashboard_announce_learn_more_button: "Lisateave"
-  dashboard_announce_try_now_button: "Proovi nüüd"
-  dashboard_announce_host_an_hour_button: "Vii läbi KoodiTund"
-  dashboard_announce_watch_video_button: "Vaata videot"
-  dashboard_announce_petition: "Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu esindajad sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri, ameerika suurimate ettevõtete juhid ühise avatud kirja, kus palusid, et U.S.A. kongress rahastaks K-12 hariduse arvutiteaduse programmi."
-  dashboard_announce_petition_button: "Lisa oma nimi"
-  dashboard_announce_go_beyond_button: "Go beyond"
-  dashboard_announce_all: "Hoia end kursis uute funktsioonide ja uudistega meie õpetajate blogis. <a href='%{teacher_blog_url}' target='_blank'>Vaata vanemaid teadaandeid.</a>"
-  dashboard_announce_hoc_launch: "Tuhanded õpetajad rohkem kui 180 riigis hakkavad 5.-11. detsembril toimuva KoodiTunni jooksul arvutiteadusi õpetama. Me loodame, et aitate meil jõuda rohkemate õpilasteni kui kunagi varem. <a href='%{signup_url}' target='_blank'> Registreeri oma KoodiTund</a> ja andke ja teistele õpetajatele teada, et igaühest võib saada arvutiteaduste õpetaja."
-  dashboard_announce_mc_launch: "Ühel meie kõige populaarsemal juhendil on nüüd järg! Uus KoodiTunni Minecraft Designer laseb õpilastel ise luua Minecrafti maailma reegleid. Nad saavad luua täiesti unikaalse Minecrafti kogemuse ning jagada seda sõpradega, kes saavad seda oma telefonides mängida. Kasuta seda oma klassi KoodiTunnis."
-  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
-  dashboard_announce_how_code_studio: "Selleks, et arvutiteadusi oma klassis õpetada ei ole teil vaja eelnevat kogemust. Code.org pakub õppe- ja tunnikavasid, kõrge kvaliteediga õppeprogramme ja hulgaliselt vahendeid kõikidele tasemetele&mdash; kõike, mida vajate, ja seda täiesti tasuta. Kust alustada? Lae alla<a href='%{video_download_url}'>see video</a>!"
-  dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
-  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "KoodiTund on siin - 8.-14. detsember!"
   code_sign_up: "Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal"
   host_an_hour: "Host an hour"
@@ -879,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

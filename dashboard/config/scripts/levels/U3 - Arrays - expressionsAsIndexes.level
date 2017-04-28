@@ -56,7 +56,8 @@
     "markdown_instructions": "# Expressions as Indexes: Using Variables\r\n\r\nWe can use **any expression that evaluates to a number** as an index in an array. Here are some examples:\r\n\r\n![](https://images.code.org/6d4ecc9249dc9f3a845196b04d833c1a-image-1447268711944.24.53 PM.png)\r\n\r\n# Do This:\r\n\r\n* **Starter code** has been provided which creates an array of colors.\r\n* **Write code** that logs **a random color from this list** to the console by generating a value for a random index. Try to write your program using `list.length` rather than hard-coding the length of the list.\r\n\r\n![](https://images.code.org/d0463c0f2528e04c396f3b9cf219c3ed-image-1447370139548.gif)",
     "slider_speed": "1",
     "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Write code that logs a random color from this array to the console",
-    "encrypted_examples": "jS/uBFxm8iLhqXr4hBGUX3sbt7+IwJ0gLzM048a7armpvHgNCKtyNeoQEfZc\nVsE/\n"
+    "encrypted_examples": "jS/uBFxm8iLhqXr4hBGUX3sbt7+IwJ0gLzM048a7armpvHgNCKtyNeoQEfZc\nVsE/\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

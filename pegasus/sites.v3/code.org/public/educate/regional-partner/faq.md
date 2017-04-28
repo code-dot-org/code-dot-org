@@ -22,7 +22,7 @@ Still have questions? See below for answers to commonly asked questions or email
 **Questions about in-person workshops:**<br/>
 
 - [Does my organization need to provide facilitators for the programs?](#facilitators)
-- [Can I recruit teachers from local districts to become a part of the 2017-18  professional learning programs in my area?](#recruit)
+- [Can I recruit teachers from local districts to become a part of the 2018-19 professional learning programs in my area?](#recruit)
 - [What is counselor/administrator professional development?](#ca)
 	
 
@@ -34,7 +34,7 @@ ________________
 
 ### **My region is already served by another organization, can I stil apply to be a Regional Partner?**
 
-For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2017-18 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
+For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2018-19 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
 
 [**Back to the top**](#top)
 <br/>
@@ -45,7 +45,7 @@ ________________
 
 ### **Do you have an example job description for the Regional Partner Program Manager?**
 
-See <a href="https://docs.google.com/document/d/1RTNpMGhGRdeeqB47vmEOw6xBy-UOFMigqt-pGKRHrZI/view" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require up to 0.5 of an FTE’s time - this can be shared across one or more staff members of your organization.
+See <a href="https://docs.google.com/document/d/1vQ2wN6TnE7gllni-hW1zNzQ_WiKPDUGb2ycSi4_-rVg/view" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require at least 0.5 of an FTE’s time - this can be shared across one or more staff members of your organization.
 
 [**Back to the top**](#top)
 <br/>
@@ -68,7 +68,7 @@ ________________
 
 ### **Can several organizations submit a joint application to be a Regional Partner in a region?**
 
-Yes, some of our current partners have a joint partnership where one organization is the funding arm and the other focuses on professional learning and outreach. 
+Yes, some of our current partners have a joint partnership where one organization is the funding and advocacy arm and the other focuses on professional learning and outreach. 
 <br/>
 
 [**Back to the top**](#top)
@@ -104,7 +104,7 @@ ________________
 
 ### **Does my organization need to provide facilitators for the programs?**
 
-Your organization does not need to have its own facilitators. Code.org Regional Partners can  opt to contract with local Code.org approved facilitators instead.
+Your organization does not need to have its own facilitators. Code.org will work with Regional Partners to find or contract with local Code.org-approved facilitators instead.
 <br/>
 
 
@@ -115,7 +115,7 @@ ______________________________
 <br/>
 <br/>
 
-### **Can I recruit teachers from local districts to become a part of the 2017-18  professional learning programs in my area?**
+### **Can I recruit teachers from local districts to become a part of the 2018-19  professional learning programs in my area?**
 
 Yes, we will be asking each partner to recruit districts and schools for the Computer Science Principles and Computer Science Discoveries programs as part of this partnership.
 

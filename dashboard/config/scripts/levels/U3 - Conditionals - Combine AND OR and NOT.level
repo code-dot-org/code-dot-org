@@ -60,7 +60,8 @@
     "instructions": "Write an if statement that uses AND and OR to display \"Time to go to school!\" if it's not the weekend and the user is under 18. (Click to see full instructions.)",
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false",
-    "encrypted_examples": "sjtZ0AfIxlfgg4yCm2TSnXBB7lORqo4t95G9ynqgPDhBlek3cng1FS71NwxC\nZwzj2YQmQUD4uNMmumWT9Q3QkcDLg0WQJF21L/MRcuZL1tkChHYD68zEfCNQ\nrRFE+Ftl\n"
+    "encrypted_examples": "sjtZ0AfIxlfgg4yCm2TSnXBB7lORqo4t95G9ynqgPDhBlek3cng1FS71NwxC\nZwzj2YQmQUD4uNMmumWT9Q3QkcDLg0WQJF21L/MRcuZL1tkChHYD68zEfCNQ\nrRFE+Ftl\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""

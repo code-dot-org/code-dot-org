@@ -1,0 +1,14 @@
+%footer#pagefooter
+  .content
+    .left{:style=>"float:left; max-width: 100%;"}
+      %a.footerlink{:href=>studio_url()} Built on Code Studio
+      .dim &nbsp; | &nbsp;
+      %a.footerlink{:href=>studio_url("report_abuse"), :target=>"blank"} Report Abuse
+      .dim &nbsp; | &nbsp;
+      %a.footerlink{:href=>studio_url("projects/weblab"), :id=>"pagefooter_view_code"} View Code
+      .dim &nbsp; | &nbsp;
+      %a.footerlink{:href=>code_org_url("tos")} Terms of Service
+      .dim &nbsp; | &nbsp;
+      %a.footerlink{:href=>code_org_url("privacy")} Privacy Policy
+      .dim &nbsp; | &nbsp;
+      !="&copy; Code.org, #{Time.now.year}."

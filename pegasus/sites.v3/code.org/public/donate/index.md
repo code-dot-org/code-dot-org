@@ -3,11 +3,12 @@
 ---
 title: Donate to Code.org
 require_https: true
+theme: responsive
 ---
 
 # Donate to Code.org
 
-<img src="/images/fit-800/donate-wide.jpg" alt="Kids at computers"/>
+<img src="/images/fit-800/donate-wide.jpg" alt="Kids at computers" width="100%"/>
 
 <br/>
 [<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL) &nbsp;  [<button>Donate by Amazon</button>](/donate/amazon)

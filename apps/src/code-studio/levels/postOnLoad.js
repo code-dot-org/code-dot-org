@@ -18,11 +18,18 @@ export function postMilestoneForPageLoad() {
   // this will just be { response: 'ok', result: true }
   const result = getResult();
 
+  // callback here really means "url that we post to"
+  const postUrl = appOptions.dialog.callback;
+  if (!postUrl) {
+    // Don't bother trying to post if we don't have a url to post to. One known
+    // case where this happens is if I go to a /levels/<levelnum> page
+    return;
+  }
+
   sendReport({
     program: result.response,
     fallbackResponse: appOptions.dialog.fallbackResponse,
-    // callback here really means "url that we post to"
-    callback: appOptions.dialog.callback,
+    callback: postUrl,
     // expect this to always be standalone_video here
     app: appOptions.dialog.app,
     level: appOptions.dialog.level,

@@ -345,50 +345,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     test_logged_in_milestone
   end
 
-  test "logged in milestone should backfill userscript for old users" do
-    @user.update(created_at: Date.new(2014, 9, 10))
-
-    # do all the logging
-    @controller.expects :log_milestone
-    @controller.expects :slog
-
-    # existing level
-    script_start_date = Time.now - 5.days
-    existing_sl = @script_level.script.script_levels.last
-    UserLevel.record_timestamps = false
-    UserLevel.create!(
-      user_id: @user.id,
-      level_id: existing_sl.level.id,
-      script_id: existing_sl.script_id,
-      best_result: 100,
-      created_at: script_start_date,
-      updated_at: script_start_date
-    )
-    UserLevel.record_timestamps = true
-
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, params: @milestone_params
-        end
-      end
-    end
-
-    assert_response :success
-
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    # created a user script that we started in the past with the other userlevel
-    user_script = UserScript.last
-    assert_equal @script_level.script, user_script.script
-    assert_equal @user, user_script.user
-    assert_equal script_start_date.to_i, user_script.started_at.to_i
-    assert user_script.started_at != user_script.last_progress_at
-    assert user_script.assigned_at.nil?
-    assert user_script.completed_at.nil?
-  end
-
   test "logged in milestone should save to gallery when passing an impressive level" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
       async_activity_writes: false
@@ -1013,7 +969,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
     assert_response :success
-    expected_response = {'level_source' => nil }
+    expected_response = {'level_source' => nil}
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -1024,7 +980,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
-    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
+    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
       post :milestone,
@@ -1044,7 +1000,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && !params[:level_source_id].nil?
     end
-    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
+    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
       post :milestone,
@@ -1073,7 +1029,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
     assert_response :success
-    expected_response = {'level_source' => nil }
+    expected_response = {'level_source' => nil}
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -1133,7 +1089,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone changes to next stage in default script' do
-    last_level_in_stage = @script_level.script.script_levels.reverse.find{|x| x.level.game.name == 'Artist'}
+    last_level_in_stage = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
     post :milestone,
       params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
@@ -1144,12 +1100,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    (1..3).each { |n| create(:level, name: "Level #{n}", game: game) }
+    (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map {|stage| stage[:scriptlevels]}.flatten)
 
     last_level_in_first_stage = script.stages.first.script_levels.last
     post :milestone,
@@ -1192,26 +1148,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     sign_out @user
     assert_equal true, new_level
-  end
-
-  test 'does not backfill new users who submit unsuccessful first attempt' do
-    refute @user.needs_to_backfill_user_scripts?
-
-    # do all the logging
-    @controller.expects :log_milestone
-
-    assert_creates(LevelSource, Activity, UserLevel) do
-      assert_does_not_create(GalleryActivity) do
-        assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone,
-            params: @milestone_params.merge(result: 'false', testResult: 10)
-        end
-      end
-    end
-
-    assert_response :success
-    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
-    refute @user.needs_to_backfill_user_scripts?
   end
 
   test "milestone with one pairing creates new user levels" do

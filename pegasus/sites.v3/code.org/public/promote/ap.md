@@ -1,5 +1,6 @@
 ---
 title: Dig Deeper into AP Computer Science
+theme: responsive
 social: 
   "og:title": "Dig Deeper into AP Computer Science"
   "og:description": "View data about the AP Computer Science exam by state"

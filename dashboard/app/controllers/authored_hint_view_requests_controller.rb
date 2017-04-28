@@ -35,7 +35,7 @@ class AuthoredHintViewRequestsController < ApplicationController
       # Add :user.
       hint[:user] = current_user
       # Convert camelCase strings to snake_case symbols.
-      hint.transform_keys!{|key| key.underscore.to_sym}
+      hint.transform_keys! {|key| key.underscore.to_sym}
     end
 
     objects = AuthoredHintViewRequest.create(hints)
@@ -44,7 +44,7 @@ class AuthoredHintViewRequestsController < ApplicationController
     pairing_user_ids.each do |paired_user_id|
       # Ignore errors here.
       AuthoredHintViewRequest.create(
-        hints.map{ |hint| hint.merge(user_id: paired_user_id) }
+        hints.map {|hint| hint.merge(user_id: paired_user_id)}
       )
     end
 

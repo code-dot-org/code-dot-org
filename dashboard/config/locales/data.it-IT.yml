@@ -29,11 +29,11 @@
         Jigsaw: Puzzle
         MazeStep: Modalità "a passi" del Labirinto
         Wordsearch: Ricerca di parole
-        Webapp: Laboratorio per le App
+        Webapp: Sviluppo App
         ArtistEC: L'artista
         TextMatch: Esercizio di Verifica (Associazioni)
         StudioEC: Laboratorio
-        Applab: Laboratorio per le App
+        Applab: Sviluppo App
         NetSim: Simulatore di Internet
         Custom: Artista
         CustomStudio: Laboratorio
@@ -325,9 +325,9 @@
           contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
           dinamite (TNT) ed arrivare al maiale.
-        bounce_1_basketball: Collega un blocco a "quando si preme la freccia verso
-          sinistra" e premi "Esegui". Muovere la mano usando la freccia a sinistra
-          per raggiungere l'obiettivo finale.
+        bounce_1_basketball: Collega un blocco al blocco "quando freccia a sinistra"
+          e premi "Esegui". Muovi la mano usando la freccia a sinistra per raggiungere
+          l'obiettivo finale.
         bounce_2_basketball: Collega un blocco ai blocchi "quando si preme la freccia
           a destra" e "quando si preme la freccia a sinistra". Muovere la mano per
           raggiungere entrambi gli obiettivi finali.
@@ -351,10 +351,11 @@
         bounce_12_basketball: Creare il proprio gioco di basket. È possibile modificare
           tutte le regole. Quando hai finito, fai clic su fine per consentire agli
           amici di provare il tuo gioco sui loro telefoni.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_1_sports: Raggiungi la bandiera! Collega un blocco al blocco "quando
+          freccia a sinistra" e premi "Esegui" per muovere il giocatore verso la bandiera.
+        bounce_2_sports: Ora ci sono due bandiere! Collega un blocco ai blocchi "quando
+          freccia a sinistra" e "quando freccia a destra" per fare muovere il tuo
+          giocatore in due direzioni.
         bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
           a block to the "when ball hits player" block to hit the flag.
         bounce_6_sports: Ora la bandierina è in alto. Per risolvere questo puzzle
@@ -489,15 +490,16 @@
           / a destra in modo da fargli raggiungere tutte le bandierine?
         studio_c2_7: Il blocco "ripeti per sempre" permette di eseguire il codice
           senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro
-          in continuazione in su e in giù?
-        studio_c2_8: Riesci a far dire "Ahi!" al pinguino e a riprodurre il "suono
-          di un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i
-          tasti freccia per far sì che questo accada?
-        studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino sbatte
-          contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai
-          un punto.
+          (personaggio 2) in continuazione in su e in giù?
+        studio_c2_8: Riesci a far dire "Ahi!" al pinguino (personaggio 1) e a riprodurre
+          il "suono di un colpo" se esso sbatte contro il dinosauro (personaggio 2),
+          e poi a spostarlo con i tasti freccia per far sì che questo accada?
+        studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino (personaggio
+          1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i
+          tasti freccia fino a che fai un punto.
         studio_c2_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del
-          pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
+          pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai
+          un punto.
         studio_c2_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi"
           per far provare la storia ai tuoi amici sui loro smartphone.
         studio_c3_story_1: Riesci a far dire a questo cane "Ciao a tutti"?
@@ -518,15 +520,16 @@
           / a destra in modo da fargli raggiungere tutte le bandierine?
         studio_c3_game_3: Il blocco "ripeti per sempre" permette di eseguire il codice
           senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro
-          in continuazione in su e in giù?
+          (personaggio 2) in continuazione in su e in giù?
         studio_c3_game_4: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
           di "un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con
           i tasti freccia per far sì che questo accada?
         studio_c3_game_5: Aggiungi un blocco che segna un punto quando il pinguino
-          sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino
-          a che fai un punto.
+          (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino
+          con i tasti freccia fino a che fai un punto.
         studio_c3_game_6: Aggiungi dei blocchi per cambiare lo sfondo e la velocità
-          del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
+          del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che
+          fai un punto.
         studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: Il pinguino vuole dire "ciao" - puoi aiutarlo?
@@ -771,6 +774,10 @@
         C4_unplugged_forloops: Cicli con Contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
+        CSF_EF_cs_matters: L'informatica conta
+        CSF_stevie_big_project: Stevie e il grande progetto
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
         frozen_functions: Introduzione alle Funzioni
@@ -781,13 +788,18 @@
         infinity_playlab_intro: Laboratorio - Introduzione
         infinity_playlab_events: Laboratorio - Eventi
         infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_animation_tab: La scheda dell'animazione
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

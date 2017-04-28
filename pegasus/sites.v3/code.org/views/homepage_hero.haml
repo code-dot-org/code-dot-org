@@ -43,12 +43,14 @@
     .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
-    .thegap{style: "height: 1px"}
-      &nbsp;
-    #desktop-header.desktop-feature
-      = view :header, variant: "desktop"
-    #mobile-header.mobile-feature
-      = view :header, variant: "mobile"
+    - if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
+      = view :header2
+    - else
+      #desktop-header.desktop-feature
+        = view :header
+      #mobile-header.mobile-headers.mobile-feature
+        = view :mobile_header_responsive
+
 
   #caption_container.container_responsive
     .col-66.desktop-feature{style: "position:relative;"}
@@ -106,6 +108,8 @@
             %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
 
     #blankspaceleftmobile.mobile-feature
+
+  .clear{style: "clear: both"}
 
 :javascript
   var petition;

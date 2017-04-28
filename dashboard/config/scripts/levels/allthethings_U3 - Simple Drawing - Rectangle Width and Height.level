@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-28T19:28:40.788Z",
+  "created_at": "2016-04-28T19:28:40.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -50,7 +50,8 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#runButton\",\r\n  \"callout_text\": \"Don't forget to click run to test your program\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"bottom left\",\r\n      \"at\": \"top right\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Do This",
     "start_blocks": "rect(0,0,30,50);",
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

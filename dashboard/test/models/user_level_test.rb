@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class UserLevelTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+
+  setup_all do
     @user = create(:user)
     @level = create(:level)
 
@@ -10,8 +12,6 @@ class UserLevelTest < ActiveSupport::TestCase
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
     @driver_user_level.navigator_user_levels << @navigator_user_level
-    @navigator_user_level.reload
-    @driver_user_level.reload
   end
 
   test "best? perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
@@ -228,7 +228,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'most_recent_driver returns deleted user if driver is deleted' do
-    @driver.update(deleted_at: DateTime.now)
+    @driver.destroy
     assert_equal 'deleted user',
       UserLevel.most_recent_driver(nil, @level, @navigator)
   end

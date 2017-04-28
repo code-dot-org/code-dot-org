@@ -42,7 +42,7 @@ namespace :ci do
   # Update CloudFront distribution with any changes to the http cache configuration.
   # If there are changes to be applied, the update can take 15 minutes to complete.
   task :cloudfront do
-    if CDO.daemon && CDO.chef_managed
+    if CDO.daemon && CDO.chef_managed && !rack_env?(:adhoc)
       ChatClient.wrap('Update CloudFront') do
         AWS::CloudFront.create_or_update
       end
@@ -53,15 +53,15 @@ namespace :ci do
   # Additionally run the lint task if specified for the environment.
   task build: [:chef_update] do
     Dir.chdir(deploy_dir) do
-      ChatClient.wrap('rake lint') { Rake::Task['lint'].invoke } if CDO.lint
-      ChatClient.wrap('rake build') { Rake::Task['build'].invoke }
+      ChatClient.wrap('rake lint') {Rake::Task['lint'].invoke} if CDO.lint
+      ChatClient.wrap('rake build') {Rake::Task['build'].invoke}
     end
   end
 
   multitask deploy_multi: [:deploy_console, :deploy_stack]
 
   task :deploy_stack do
-    ChatClient.wrap('CloudFormation stack update') { RakeUtils.rake_stream_output 'stack:start' }
+    ChatClient.wrap('CloudFormation stack update') {RakeUtils.rake_stream_output 'stack:start'}
   end
 
   task :deploy_console do
@@ -96,7 +96,7 @@ end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  ChatClient.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
+  ChatClient.wrap('CI build') {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
 end
 
 # Returns true if upgrade succeeded, false if failed.

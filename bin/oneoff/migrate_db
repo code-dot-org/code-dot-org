@@ -27,7 +27,7 @@ end
 
 # Executes `cmd` in a subprocess, streaming the output to stdout.
 def run(cmd)
-  IO.popen(cmd) { |output| output.each { |line| puts line.chomp } }
+  IO.popen(cmd) {|output| output.each {|line| puts line.chomp}}
 end
 
 # Use the `pdsh` utility and `ls_frontend_servers` script to 'fan out' a command via ssh to all front-ends.

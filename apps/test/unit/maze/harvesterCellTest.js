@@ -1,5 +1,4 @@
 import {assert} from '../../util/configuredChai';
-import testUtils from '../../util/testUtils';
 import HarvesterCell from '@cdo/apps/maze/harvesterCell';
 import tiles from '@cdo/apps/maze/tiles';
 

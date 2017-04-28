@@ -2,6 +2,7 @@
 title: Student Recruitment
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 # Offering computer science in your school? 
 ### Here are some tips for recruiting students into your computer science class. 

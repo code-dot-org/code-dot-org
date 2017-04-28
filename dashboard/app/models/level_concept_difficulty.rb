@@ -36,7 +36,7 @@ class LevelConceptDifficulty < ActiveRecord::Base
   # All unspecified attributes default to nil; otherwise, attempting to remove
   # an already-assigned concept won't work.
   def assign_attributes(attrs)
-    defaults = Hash[CONCEPTS.map { |concept| [concept, nil] }]
+    defaults = Hash[CONCEPTS.map {|concept| [concept, nil]}]
     super(defaults.merge(attrs))
   end
 

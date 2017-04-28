@@ -70,7 +70,7 @@ module Rack
           [status, headers, body]
         when nil
           message = "An acceptable encoding for the requested resource #{request.fullpath} could not be found."
-          bp = Rack::BodyProxy.new([message]) { body.close if body.respond_to?(:close) }
+          bp = Rack::BodyProxy.new([message]) {body.close if body.respond_to?(:close)}
           [406, {'Content-Type' => "text/plain", 'Content-Length' => message.length.to_s}, bp]
       end
     end
@@ -122,7 +122,7 @@ module Rack
 
       def each
         deflator = ::Zlib::Deflate.new(*DEFLATE_ARGS)
-        @body.each { |part| yield deflator.deflate(part, Zlib::SYNC_FLUSH) }
+        @body.each {|part| yield deflator.deflate(part, Zlib::SYNC_FLUSH)}
         yield deflator.finish
       ensure
         deflator.close

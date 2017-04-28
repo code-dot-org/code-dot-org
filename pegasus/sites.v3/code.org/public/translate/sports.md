@@ -1,6 +1,7 @@
 ---
 title: "Translate Sports Tutorials"
 nav: translate_nav
+theme: responsive
 ---
 
 # Translating Sports Tutorials
@@ -13,7 +14,7 @@ This page outlines how to translate the [Make a basketball game](https://studio.
 1. From the [main project page](https://crowdin.com/project/codeorg), select your language.
 1. Note your language code in the URL, you'll need this for later. If it's a 4 letter code like "zh-TW" note that the code you'll use later will be in the format "zhTW".
 
-<img src="/images/fit-500/translate-find-code.jpg"> 
+<img src="/images/fit-500/translate-find-code.jpg" style="max-width: 100%;"> 
 
 ## Translating the tutorial progression
 The following links all lead directly to the Spanish tutorial. Replace the "es" in the URL with the language code you got earlier. Your translations will be updated on the site at the end of each week. You can watch this [demo video](/files/crowdin.swf) for how to use Crowdin.

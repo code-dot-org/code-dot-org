@@ -21,6 +21,7 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
   else
     # Recursive merge for subtree.
     new_translation.each_key do |key|
+      next unless en_translation.is_a?(Hash) && prev_translation.is_a?(Hash)
       next unless en_translation.key?(key) && prev_translation.key?(key)
       new_translation[key] = merge_translation_tree(
         en_translation[key],

@@ -142,7 +142,7 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
       Name: data['name_s'],
       User_ID: workshop[:user_id],
       Email: data['email_s'],
-      Date: data['dates'].map{|i| i['date_s']}.join('<br />'),
+      Date: data['dates'].map {|i| i['date_s']}.join('<br />'),
       Location: data['location_name_s'] + ' (' + data['location_address_s'] + ')',
       Type: data['type_s'],
       Signups: signup_count.to_s + '/' + data['capacity_s'],

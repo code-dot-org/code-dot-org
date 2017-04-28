@@ -1,10 +1,10 @@
 import { assert } from '../../../util/configuredChai';
 import Immutable from 'immutable';
-import sinon from 'sinon';
 import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {
   lessonIsVisible,
-  lessonIsLockedForAllStudents
+  lessonIsLockedForAllStudents,
+  getIconForLevel
 } from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
@@ -14,53 +14,51 @@ describe('progressHelpers', () => {
     const hiddenLesson = fakeLesson('hidden lesson', '3', false);
     const lockableLesson = fakeLesson('lockable lesson', '4', true);
 
-    const stateWithViewAs = viewAs => ({
+    const state = {
       sections: {
         selectedSectionId: '11',
       },
-      stageLock: { viewAs },
       hiddenStage: Immutable.fromJS({
         bySection: {
           '11': { '3': true }
         }
       })
-    });
+    };
 
     it('returns false for hidden lessons while viewing as student', () => {
-      const state = stateWithViewAs(ViewType.Student);
-      assert.strictEqual(lessonIsVisible(hiddenLesson, state, undefined), false);
-    });
-
-    it('returns true for hidden lessons while viewing as a teacher', () => {
-      const state = stateWithViewAs(ViewType.Teacher);
-      assert.strictEqual(lessonIsVisible(hiddenLesson, state, undefined), true);
-    });
-
-    it('returns false for hidden lessons while viewing as a teacher, if we ask about students', () => {
-      const state = stateWithViewAs(ViewType.Teacher);
       assert.strictEqual(lessonIsVisible(hiddenLesson, state, ViewType.Student), false);
     });
 
+    it('returns true for hidden lessons while viewing as a teacher', () => {
+      assert.strictEqual(lessonIsVisible(hiddenLesson, state, ViewType.Teacher), true);
+    });
+
     it('returns true for non-hidden lessons while viewing as a student', () => {
-      const state = stateWithViewAs(ViewType.Student);
-      assert.strictEqual(lessonIsVisible(visibleLesson, state, undefined), true);
+      assert.strictEqual(lessonIsVisible(visibleLesson, state, ViewType.Student), true);
     });
 
     it('returns true for non-hidden lessons while viewing as a teacher', () => {
-      const state = stateWithViewAs(ViewType.Teacher);
-      assert.strictEqual(lessonIsVisible(visibleLesson, state, undefined), true);
+      assert.strictEqual(lessonIsVisible(visibleLesson, state, ViewType.Teacher), true);
     });
 
     it('returns false for a lockable stage when not authorized', () => {
-      let state = stateWithViewAs(ViewType.Teacher);
-      state.stageLock.lockableAuthorized = false;
-      assert.strictEqual(lessonIsVisible(lockableLesson, state, undefined), false);
+      const localState = {
+        ...state,
+        stageLock: {
+          lockableAuthorized: false
+        }
+      };
+      assert.strictEqual(lessonIsVisible(lockableLesson, localState, ViewType.Teacher), false);
     });
 
-    it('returns true for a lockable stage when not authorized', () => {
-      let state = stateWithViewAs(ViewType.Teacher);
-      state.stageLock.lockableAuthorized = true;
-      assert.strictEqual(lessonIsVisible(lockableLesson, state, undefined), true);
+    it('returns true for a lockable stage when authorized', () => {
+      const localState = {
+        ...state,
+        stageLock: {
+          lockableAuthorized: true
+        }
+      };
+      assert.strictEqual(lessonIsVisible(lockableLesson, localState, ViewType.Teacher), true);
     });
   });
 
@@ -108,6 +106,29 @@ describe('progressHelpers', () => {
     it('returns true when the selected section has no unlocked students', () => {
       const state = stateForSelectedSection(11);
       assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), true);
+    });
+  });
+
+  describe('getIconForLevel', () => {
+    it('strips fa- from level.icon if one is provided', () => {
+      const level = {
+        icon: 'fa-file-text'
+      };
+      assert.equal(getIconForLevel(level), 'file-text');
+    });
+
+    it('uses desktop icon if no icon on level', () => {
+      const level = {};
+      assert.equal(getIconForLevel(level), 'desktop');
+    });
+
+    it('throws if icon is invalid', () => {
+      assert.throws(function () {
+        const level = {
+          icon: 'asdf'
+        };
+        getIconForLevel(level);
+      }, /Unknown iconType: /);
     });
   });
 });

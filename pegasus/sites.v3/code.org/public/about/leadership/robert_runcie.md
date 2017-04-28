@@ -1,6 +1,7 @@
 ---
 title: Robert Runcie
 nav: about_nav
+theme: responsive
 ---
 # Robert Runcie
 

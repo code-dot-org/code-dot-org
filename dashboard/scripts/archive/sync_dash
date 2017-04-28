@@ -17,8 +17,8 @@ def there_can_be_only_one_pid(name)
     end
     raise "#{pidfile} => #{oldpid} is running" if exists
   end
-  File.open(pidfile, "w") { |f| f.puts $$ }
-  at_exit { File.unlink(pidfile) }
+  File.open(pidfile, "w") {|f| f.puts $$}
+  at_exit {File.unlink(pidfile)}
 end
 
 there_can_be_only_one_pid("sync_dash")
@@ -26,7 +26,7 @@ there_can_be_only_one_pid("sync_dash")
 DIR = '/mnt/backups/'
 SSH = "ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/production-code-org.pem"
 
-servers = ["1b", "1c", "1d"].map {|i| "production-#{i}" }
+servers = ["1b", "1c", "1d"].map {|i| "production-#{i}"}
 servers.each do |m|
   `mkdir -p #{DIR}#{m}/log`
   `rsync -avz -e "#{SSH}" #{m}.code.org:/home/ubuntu/website-ci/dashboard/log/*.gz #{DIR}#{m}/log`

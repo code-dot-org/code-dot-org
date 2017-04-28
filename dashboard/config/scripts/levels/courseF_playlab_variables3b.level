@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return Studio.sayComplete > 2;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":24},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":25},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
@@ -14,7 +14,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "free_play": "false",
@@ -32,7 +32,7 @@
       "upButton"
     ],
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
+    "timeout_after_when_run": "true",
     "markdown_instructions": "Help Kiki have a conversation with Brian by using the variable `A1` in all of the places where age `12` should be used. ",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
@@ -47,6 +47,8 @@
     "block_moving_into_walls": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The variable blocks are already in the workspace.  All you have to do is put them where they belong!\",\"hint_id\":\"courseF_playlab_variables3b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f6034fa00ec7b1a5e257de642f98e309/courseF_playlab_variables3b.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -59,8 +61,8 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="variables_set" inline="false">
-              <title name="VAR">A1</title>
+            <block type="variables_set" inline="false" editable="false">
+              <title name="VAR">age</title>
               <value name="VALUE">
                 <block type="text">
                   <title name="TEXT">12</title>
@@ -75,20 +77,20 @@
                     </block>
                   </value>
                   <next>
-                    <block type="studio_saySpriteParams" inline="true">
+                    <block type="studio_saySpriteParams" inline="true" movable="false" editable="false">
                       <title name="SPRITE">1</title>
                       <next>
-                        <block type="studio_saySpriteParams" inline="true">
+                        <block type="studio_saySpriteParams" inline="true" movable="false" editable="false">
                           <title name="SPRITE">0</title>
                           <value name="TEXT">
-                            <block type="text_join_simple" inline="false" inputcount="3">
+                            <block type="text_join_simple" inline="false" movable="false" editable="false" inputcount="3">
                               <value name="ADD0">
-                                <block type="text">
+                                <block type="text" movable="false">
                                   <title name="TEXT">Wow! I'm </title>
                                 </block>
                               </value>
                               <value name="ADD2">
-                                <block type="text">
+                                <block type="text" movable="false">
                                   <title name="TEXT"> too!</title>
                                 </block>
                               </value>
@@ -103,11 +105,11 @@
             </block>
           </next>
         </block>
-        <block type="variables_get">
-          <title name="VAR">A1</title>
+        <block type="variables_get" editable="false">
+          <title name="VAR">age</title>
         </block>
-        <block type="variables_get">
-          <title name="VAR">A1</title>
+        <block type="variables_get" editable="false">
+          <title name="VAR">age</title>
         </block>
       </xml>
     </start_blocks>
@@ -306,12 +308,24 @@
   </category>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_saySpriteParams" inline="true" movable="false" editable="false">
+          <title name="SPRITE">1</title>
+          <value name="TEXT">
+            <block type="variables_get" editable="false">
+              <title name="VAR">age</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run">
           <next>
             <block type="variables_set" inline="false">
-              <title name="VAR">A1</title>
+              <title name="VAR">age</title>
               <value name="VALUE">
                 <block type="text">
                   <title name="TEXT">12</title>
@@ -330,7 +344,7 @@
                       <title name="SPRITE">1</title>
                       <value name="TEXT">
                         <block type="variables_get">
-                          <title name="VAR">A1</title>
+                          <title name="VAR">age</title>
                         </block>
                       </value>
                       <next>
@@ -345,7 +359,7 @@
                               </value>
                               <value name="ADD1">
                                 <block type="variables_get">
-                                  <title name="VAR">A1</title>
+                                  <title name="VAR">age</title>
                                 </block>
                               </value>
                               <value name="ADD2">

@@ -174,49 +174,23 @@
         maze_3_2: "ブタのいるとこにいけるプログラムをかいてください"
         maze_3_3: "ブタのところまでどうやっていけばいい？ばくだんにぶつからないようにきをつけてね"
         maze_3_4: "うわーん！ばくだんにぶつからずにブタをつかまえるプログラムをかいてよ！"
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
+        bounce_1_basketball: "「左向き矢印が押されたとき」のブロックに、べつのブロックをつなげて「実行」ボタンを押してください。左向き矢印を押して、手を、最終目標まで動かしましょう。"
+        bounce_2_basketball: "「右矢印のとき」と「左矢印のとき」ブロックに、ブロックをつなげます。両方の最終目標に到達するように、手を動かします。"
+        bounce_5_basketball: "ボールを手の中に落ちるように飛ばします。「ボールが手に当たった場合」ブロックにブロックをくっつけて、ボールが旗に届くようにしてください。"
+        bounce_6_basketball: "旗がいちばん上にあります。両方の「ボールが～に当たった場合」ブロックに、ブロックをつなげて、パズルを解いてください。"
+        bounce_7_basketball: "それぞれの「〜の場合」ブロックに、ブロックをつなげます。ボールが旗に当たるまで、ボールをバウンドします。"
+        bounce_10_basketball: "一番上に、ゴールがあります！ゲームを作るには「ポイントを採点する」と「相手のポイントを採点する」ブロックを、「ボールがゴールに入った場合」と「ボールが手を外れた場合」ブロックにつなげます。相手が2回得点する前に、何点とれるか見てみよう。"
+        bounce_11_basketball: "さあ、「実行した時」ブロックに、ブロックをつなげて行きましょう。「新しいボールを投げる」ブロックを、どこかに使う必要があります。手やボールの、画像やスピードを変えたりして、相手が二回スコアを決める前に、何ポイント得点できるか見てみましょう！"
+        bounce_12_basketball: "君のバスケットボール ゲームを作ろう。ルールは自由に変更できるよ。完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。"
+        bounce_1_sports: "旗を取ろう！「左向き矢印が押されたとき」ブロックに、ブロックをつなげて、「実行」を押し、プレイヤーを旗まで動かそう。"
+        bounce_2_sports: "旗が 2 つあります!「左向き矢印が押された場合」と「右矢印キーが押された場合」にブロックをつなげて、プレイヤーが、2
+          方向に移動できるようにしよう。"
+        bounce_5_sports: "ホッケー パックが、プレイヤーに向かって投げられます！「ボールが当たった場合」ブロックにブロックをつなげて、旗に当ててください。"
+        bounce_6_sports: "旗がいちばん上にあります。両方の「ボールが～に当たった場合」ブロックに、ブロックをつなげて、パズルを解いてください。"
+        bounce_7_sports: "それぞれの「〜の場合」ブロックに、ブロックをつなげます。ボールが旗に当たるまで、ボールをバウンドします。"
+        bounce_10_sports: "一番上に、ゴールがあります！「ポイントを採点する」と「相手のポイントを採点する」ブロックを、「ボールがゴールに入った場合」と「ボールが手を外れた場合」ブロックにつなげます。相手が2回得点する前に、何点とれるか見てみよう！"
+        bounce_11_sports: "さあ、「実行した時」ブロックに、ブロックをつなげてください。「新しいボールを投げる」ブロックを、どこかに使う必要があります。手やボールの、画像やスピードを変えたりして、相手が二回スコアを決める前に、何ポイント得点できるか見てみましょう！"
+        bounce_12_sports: "君の ゲームを作ろう。あなたが全部きめてください。ルールは自由に変更できるし、スポーツをミックスしたり、自由にやろう！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。"
         bounce_1: "「左向きのブロックが押されたとき」のブロックにべつのブロックをつなげて、「実行」ボタンを押してください。左向き矢印を押してパドルをゴールまで動かしましょう"
         bounce_2: "「右矢印のとき」と「左矢印のとき」ブロックにブロックを接続します。両方の最終目標に到達するためにラケットを移動します"
         bounce_3: "「上矢印のとき」ブロックと似たことを試しましょう。頂上の最終目標にラケットを移動します"
@@ -314,44 +288,26 @@
         studio_iceage_warn_ice_age: "氷河期が来ているので、みんなが高速に移動する必要があります！背景を氷の背景に変更して、シドの速度を高速に設定してください。そして実行して、ディエゴを警告するためにシドを彼へうごかします。"
         studio_iceage_throw_hearts: "シドは彼の祖母、おばあちゃん、に彼が彼女を愛していることをおしえてあげたいです。「キャラが撃つ」コマンドを使用して、シド(キャラ1)
           がおばあちゃん (キャラ2) にハートを投げます！ハートに撃たれたときにおばあちゃんの気分を幸せに設定してください。"
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_free_play: "君の ゲームやお話を作る時間です！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホや、タブレット、コンピューターで試せるようにしよう。"
+        studio_gumball_hello1: "アナイスは新しい友だちが作りたいです。彼女が「こんにちは」というのを助けられますか？「言う」ブロックをワーク
+          スペースにドラッグして、「こんにちは」と入力してください。"
+        studio_gumball_hello2: ダーウィン (キャラ 1) と、彼の兄弟のガムボール (キャラ 2) は、学校に向かっています。 "キャラが言う"ブロックを
+          2 回使って、お互いに、あいさつをさせてください。
+        studio_gumball_move_to_flag: "バナナ ジョーは、野外活動レースで勝ちそうです！ 「うごかす」ブロックを使って、あと 200
+          ピクセル行くのを助けてください。"
+        studio_gumball_move_to_actor: "ガムボール(キャラ 1) とダーウィン (キャラ 2) は、野外活動に遅刻です！「キャラをうごかす」ブロックを使って、ガムボールが
+          200 ピクセル下のダーウィンのところへ行くのを助けてください。次に、「キャラにさわる」イベントにブロックをつなげて、お互いを見つけたときに、音をならします。"
+        studio_gumball_repeat: "「ずっとやること」ブロックは、プログラムをずっと動かしつづけます。ブロックをつなげて、ガムボールが左右に動かし、レースのウォーミングアップができるようにしてください。"
+        studio_gumball_click_hello: "レースを始めるために、アントンが「よーい、ドン！」と言うのを助けてください！プログラムを動かすときは、「実行」をクリックしたあと、アントンをクリックして下さい！"
+        studio_gumball_move_events: "ダーウィンは、はた を集めるコンテストに さんかしました！それぞれのイベントに「うごかす」ブロックをくっつけて、かれが走れるようにしてください。じゅんびが出来たら、「実行」をクリックして、すべての、はた
+          を集めてください。"
+        studio_gumball_sound_and_points: "アントン(キャラ 2) を左右にうごかすプログラムと、バナナジョー(キャラ 1)
+          ががめんを動きまわるプログラムが、すでに出来ています。「キャラにさわる」イベントにブロックをつなげて、アントンにバナナジョーがさわったとき、音をならして、ポイントを加えるようにできますか？「
+          実行」をおしてゲームをプレイしてください。"
+        studio_gumball_warn_food_fight: "ダーウィンは、フードファイトを脱出！背景を「キャラクター」に、ダーウィンを「はやいスピード」にセットして、ペニーのところへいって、彼女に警告してください。"
+        studio_gumball_join_food_fight: "フードファイトにさんか！「キャラが撃つ～右」コマンドを使って、バナナ ジョー (キャラ
+          1) がアントン(キャラ 2) に、食べものをなげます！アントンに当たったら、気分を「（おこって）プンプンで」にセットしよう。"
+        studio_gumball_free_play: "君の ゲームやお話を作ろう。できあがったら、「完了」ボタンをクリックして、友だちが君のゲームをスマホや、タブレット、コンピューターで遊べるようにしよう！"
         studio_full_sandbox: "自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。"
         studio_k1_1: "いぬに「こんにちは」といわせてみましょう。"
         studio_k1_2: "いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。"
@@ -369,12 +325,9 @@
         maze_wordsearch_k_15: "わたしをうごかして、ABOVEとかいてください。"
         maze_wordsearch_k_16: "わたしをうごかして、BELOWとかいてください。"
         maze_wordsearch_k_20: "これはテストです。わたしをうごかして、STORYとかいてください。"
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
+        applab_ec_simple: "アプリを作るには、[ツールボックス] で、ブロックをつかいます。"
+        turtle_ec_1_2: "四角形をかきます。注: 「ペンの色」ブロックで、すきな色をえらんで、使います。"
+        turtle_ec_1_10: "よく出来ました！かきたいものを、自由にかきましょう。いくつかのアイデア： ひとふでがき、スノーフレーク、うずまき。あたらしい「ペンのはば」ブロックもためしてみてください。楽しんで！"
         studio_ec_sandbox: "自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。"
     video:
       name:
@@ -471,8 +424,12 @@
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: "封筒内の変数"
         C4_unplugged_forloops: "ループ用"
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: "パラメーターで歌や曲をつくる"
         C4_unplugged_binary: "２しんすう"
+        CSF_EF_cs_matters: "コンピュータ科学の問題"
+        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Hour of Codeの概要
         frozen_loops: "ループ"
         frozen_functions: "関数"
@@ -482,14 +439,19 @@
         tutorial_puzzle_challenge: "パズル チャレンジのチュートリアル"
         infinity_playlab_intro: "プレイラボ：イントロダクション"
         infinity_playlab_events: "ゲームラボ - イベント"
-        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
-        csd_gamelab_animation_tab: The Animation Tab
+        infinity_playlab_repeat_forever: "プレイラボ - ずっとくりかえす"
+        csd_gamelab_animation_tab: "[アニメーション] タブ"
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -564,10 +526,10 @@
         mc_if_statements: Minecraft - IF文(もし...)
         mc_congrats_share: Minecraft - クリア
         mc_congrats_no_share: Minecraft - クリア
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
-        iceage_intro: Ice Age Hour of Code - Introduction
+        gumball_intro: "おかしなガムボール Hour of Code - イントロダクション"
+        gumball_events: "おかしなガムボール Hour of Code - イベント"
+        gumball_repeat: "おかしなガムボール Hour of Code - くりかえし"
+        iceage_intro: "アイス・エイジ Hour of Code - イントロダクション"
         iceage_events: "氷河期Hour of Code（コーディングを学ぶ時間） - イベント"
         iceage_repeat: "氷河期Hour of Code（コーディングを学ぶ時間） - 繰り返し文"
         mc_2016_intro: Minecraft Hour of Code - イントロダクション
@@ -584,39 +546,31 @@
         show_code_explanation: "自分で書いたプログラムコードを表示する"
         instructions_repeat_explanation: "各パズルの説明はここに再度表示されます"
         category_explanation: "前と同じブロックがすべてそろっていますが、種類別になっています"
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
+        set_sprite_image: "「キャラをイメージに設定」のブロックを「お話をはじめる」ブロックにつなげて、キャラがお話をはじめます。"
         studio_say_text: "アクターの発言をこちらの引用符の間に入力しよう"
         jigsaw_click: "このブロックをクリックして！"
         move_elsa_forward: エルサをまえにすすませるために、"まえにうごく"ブロックをドラッグして"実行時"ブロックにくっつけてください。
         turn_elsa: '"回転"ブロックを使ってエルサの向きを変えてください。ドロップダウンの数字でどれくらいエルサを回転させるかを決めます。'
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
         replace_questions_degree: ドロップダウンを使って"???"を回転するための正しい角度に変えてください
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
+        repeat_blocks: "ワークスペースのブロックたちを、「くりかえし」ブロックを使って、かこみます。"
         repeat_blocks_1: "(1)このブロックを使います。作業領域にある灰色のブロック達のあたりに置いてください"
         repeat_blocks_2: (2)"繰り返し"ブロックをここに移動させて、灰色のブロック達を内側に置いてください
         snowflake_dropdown: "このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!"
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        degrees_per_side: 360度を辺の数で割って、各角度の大きさを度で求めます。
+        set_sides: "このブロックを使い、「面」に必要な数をセットして、パズルを完成させます。"
+        set_length: "このブロックを使い、「長さ」を適切な値にセットします。"
+        which_equation: "どの方程式によって、より多くの辺を持つ図形の各辺が短くなりますか？"
+        get_nectar: "新しい「みつを集める」ブロックを使います。"
+        actions_category: "ツール ボックスが新しくなりました！「アクション」ブロックがここにあります。"
+        draw_square_hint: "ヒント: さっきのパズルで作った、正方形のループをつかいます。"
         edit_function: "ここをクリックしてあなたの関数を編集します。"
         create_function: "ここをクリックして「関数」ポップアップを開き、「関数の作成」ボタンをクリックします。"
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
+        house_hint: "絵が家に見えなくても、オーケーです。次のパズルでそれを直しましょう。"
+        edit_draw_square: "関数を編集して、ループを追加するには、このボタンを使います。"
+        edit_get_nectar: "関数を編集し、はちが みつを集めるために方向を変えるには、このボタンを使います。"
+        logic_category: "「もし／そうでなければ」ブロックをみつけるには、「ロジック」ポップアップを開きます。"
+        length_parameter: "「長さ」パラメーターを使うよう、関数を変更できますか？"
         frozen_diamond_repeat: "繰り返しブロックを使ってこの形を作ってください"
         frozen_circle_function_in_circle_turn: "円を描くたびに向きを変えることを忘れないでください。"
         frozen_circle_function_with_parameter_circle: '"円を描く"ブロックを使い、そして大きさを変えてください。'

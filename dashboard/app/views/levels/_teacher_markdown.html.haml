@@ -1,5 +1,5 @@
 / Teacher only markdown
-- if data['teacher_markdown'].present? && current_user.try(:authorized_teacher?)
+- if data['teacher_markdown'].present? && can_view_teacher_markdown?
   #markdown.teacher.hide-as-student
     %h3= t('teacher.for_teachers_only')
     / Render markdown text through the ActionView template engine.

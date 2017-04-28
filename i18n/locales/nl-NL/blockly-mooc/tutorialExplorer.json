@@ -1,6 +1,6 @@
 {
-  "filterGrades":"Rangen",
-  "filterGradesPre":"Voorlezer",
+  "filterGrades":"Cijfers",
+  "filterGradesPre":"Kind 3-5jr",
   "filterGrades25":"Rang 2-5",
   "filterGrades68":"Rang 6-8",
   "filterGrades9":"Rangen 9+",
@@ -52,10 +52,10 @@
   "tutorialDetailInternationalLanguages":"Taal",
   "tutorialDetailStandards":"Normen",
   "tutorialDetailDisabled":"Deze handleiding is tijdelijk niet beschikbaar.",
-  "headingTutorialsYourLanguage":"Activities in your language",
-  "showAllTutorialsButton":"Show activities for many languages",
-  "hideAllTutorialsButton":"Hide activities for many languages",
-  "noTutorialsYourLanguage":"There are no activities supported in your language. Try activities in other languages by clicking the button below.",
-  "bottomGuidelinesLink":"Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
-  "bottomSpecialNeedsLink":"Click here for more information on supporting special needs students."
+  "headingTutorialsYourLanguage":"Opdrachten in jouw taal",
+  "showAllTutorialsButton":"Toon activiteiten voor andere talen",
+  "hideAllTutorialsButton":"Verberg activiteiten voor andere talen",
+  "noTutorialsYourLanguage":"Er zijn geen activiteiten ondersteund in jouw taal. Probeer activiteiten in andere talen door te klikken op de knop hieronder.",
+  "bottomGuidelinesLink":"Klik hier voor onze criteria en de richtlijnen voor Hour of Code tutorials.",
+  "bottomSpecialNeedsLink":"Klik hier voor meer informatie over ondersteuning voor studenten met functionele beperkingen."
 }

@@ -1,6 +1,7 @@
 ---
 title: Translate Tutorials
 nav: translate_nav
+theme: responsive
 ---
 
 # Translating the site and tutorials
@@ -94,7 +95,7 @@ And, Star Wars will be coming soon for translation.
 
 ## How to Use CrowdIn
 
-<embed src="/files/crowdin.swf" width=800 height=550 />
+<embed src="/files/crowdin.swf" style="max-width: 100%; max-height: 550px;"/>
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
 

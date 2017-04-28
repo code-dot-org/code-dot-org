@@ -38,7 +38,7 @@ class Level < ActiveRecord::Base
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
+  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -97,7 +97,7 @@ class Level < ActiveRecord::Base
   end
 
   def self.key_list
-    @@all_level_keys ||= Level.all.map{ |l| [l.id, l.key] }.to_h
+    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
     @@all_level_keys
   end
 
@@ -107,7 +107,7 @@ class Level < ActiveRecord::Base
   end
 
   def summarize_concepts
-    concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')
+    concepts.pluck(:name).map {|c| "'#{c}'"}.join(', ')
   end
 
   def summarize_concept_difficulty
@@ -212,7 +212,7 @@ class Level < ActiveRecord::Base
   def self.write_custom_levels
     level_paths = Dir.glob(Rails.root.join('config/scripts/**/*.level'))
     written_level_paths = Level.custom_levels.map(&:write_custom_level_file)
-    (level_paths - written_level_paths).each { |path| File.delete path }
+    (level_paths - written_level_paths).each {|path| File.delete path}
   end
 
   def should_write_custom_level_file?
@@ -250,7 +250,7 @@ class Level < ActiveRecord::Base
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject!{|_, v| v.nil?}
+    level_hash.reject! {|_, v| v.nil?}
     level_hash
   end
 
@@ -372,6 +372,29 @@ class Level < ActiveRecord::Base
     properties["contained_level_names"].map do |contained_level_name|
       Script.cache_find_level(contained_level_name)
     end
+  end
+
+  def summary_for_lesson_plans
+    summary = {
+      level_id: id,
+      type: self.class.to_s,
+      name: name,
+    }
+
+    %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
+      value = properties[key] || try(key)
+      summary[key] = value if value
+    end
+    if video_key
+      summary[:video_youtube] = specified_autoplay_video.youtube_url
+      summary[:video_download] = specified_autoplay_video.download
+    end
+
+    unless contained_levels.empty?
+      summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
+    end
+
+    summary
   end
 
   private

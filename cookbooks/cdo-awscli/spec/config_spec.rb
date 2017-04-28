@@ -9,7 +9,7 @@ describe 'cdo-awscli::default' do
       }
     end.converge(described_recipe)
   end
-  let(:node) { chef_run.node }
+  let(:node) {chef_run.node}
 
   it 'sets default but not backup' do
     file = "/home/#{node[:current_user]}/.aws/config"

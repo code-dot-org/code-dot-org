@@ -26,7 +26,7 @@ class String
   def self.multiply_concat(left, right)
     left = [left] unless left.is_a?(Enumerable)
     right = [right] unless right.is_a?(Enumerable)
-    left.map{|l| right.map{|r| l.to_s + r.to_s}}.flatten
+    left.map {|l| right.map {|r| l.to_s + r.to_s}}.flatten
   end
 
   # squish and squish! copied from rails:

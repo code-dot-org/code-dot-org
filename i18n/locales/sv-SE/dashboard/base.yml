@@ -12,6 +12,7 @@ sv:
     attributes:
       user:
         name: 'Visat namn'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-post'
         username: "användarnamn\n"
         password: 'Lösenord'
@@ -78,6 +79,7 @@ sv:
     forgot_password: 'Glömt ditt lösenord?'
     need_confirmation: "Har du inte fått bekräftelseinstruktioner?"
     need_unlock: "Har du inte fått instruktioner för att låsa upp?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} elever har redan kommit med.'
     teacher_count: '%{count} lärare har redan kommit med.'
@@ -110,9 +112,31 @@ sv:
     user_type_student: "Student"
     field_is_required: "krävs"
     accept_terms: "Du måste godkänna för att skapa ett konto"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'Skolans land'
+    select_school_type: 'Skoltyp'
+    charter: 'Charter'
+    private: 'Privat'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Annat'
+    state: 'State'
+    district: 'Distrikt'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'Distriktsnamn'
+    school: 'Skola'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'Skolnamn'
+    school_zip: 'School Zip Code'
+    school_address: 'Skolans adress'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Har du redan ett konto? Logga in'
     login: 'E-post'
+    login_username: 'Email or Username'
     password: 'Lösenord'
     remember: 'Kom ihåg mig'
     submit: 'Logga in'
@@ -150,6 +174,14 @@ sv:
       Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
       
       %{name}
+  section:
+    your_section:
+      one: 'Din sektion:'
+      other: 'Dina sektioner:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(ta bort sektion)'
   follower:
     invite_sent: 'Inbjuda skickades'
     added_teacher: '%{name} är tillagd som din lärare'
@@ -163,8 +195,6 @@ sv:
       blank_code: "Ange en sektion kod"
       cant_join_own_section: "Tyvärr, du kan inte ansluta till ditt eget avsnitt."
     mail:
-      invite_student:
-        subject: "Gå med i en klass med %{teacher_name} på Code.org!"
       student_disassociated:
         subject: 'Code.org anmälan: %{student_name} är inte längre associerat som din student.'
   reports:
@@ -363,21 +393,24 @@ sv:
     announcement_petition: "Som lärare är du en del av en rörelse som syftar till att ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap."
     announcement_petition_button: "Ange ditt namn"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Håll dig uppdaterad med nya funktioner och uppdateringar på vår lärarblogg. <a href='%{teacher_blog_url}' target='_blank'> Se tidigare meddelanden.</a>"
     announcement_hoc_launch: "Tusentals lärare i mer än 180 länder börjar undervisningen i datavetenskap under Hour of Code de5-11 December. Vi räknar med dig för att kunna nå fler studenter än någonsin tidigare. <a href='%{signup_url}' target='_blank'> registrera evenemanget Hour of Code</a> och låta en annan lärare veta att någon kan börja undervisningen i datavetenskap."
     announcement_mc_launch: "En av våra mest populära tutorials nu har nu fått en uppföljare! Den helt nya Minecraft Hour of Code Designer låter elever sätta reglerna för Minecraft världen. De kan skapa en helt unik Minecraftupplevelse, och sedan dela den med vänner och spela i den på sina telefoner. Gör det med dina elever under Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Ledsen, men avsnittet %{new_section_code} existerar inte. Ange koden för ett annat avsnitt."
-    section_code_not_entered: "Ange koden för önskat avsnitt."
     section_code_cant_be_current_section: "Det aktuella avsnittet kan inte vara samma som det nya avsnittet."
     current_section_dne: "Ledsen, men avsnittet %{current_section_code} existerar inte. Ange koden för ett annat avsnitt."
-    students_not_yours: "Du kan inte flytta elever från ett avsnitt som inte tillhör dig."
-    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
     student_ids_not_entered: "Vänligen ange elevernas id."
     student_not_found: "En eller flera elever kunde inte hittas."
     all_students_must_be_in_current_section: "Alla elever måste vara inskrivna i din grupp."
@@ -434,6 +467,10 @@ sv:
     upgrade:
       unsupported_message: "Din webbläsare stöds inte. Uppgradera din webbläsare till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar fullt ut."
       link: "Lär dig mer"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Det här tar längre tid  än vanligt...'
   try_reloading: 'Försök ladda sidan igen'
   next_stage: 'Klar! Fortsätt till nästa nivå'
@@ -528,8 +565,8 @@ sv:
     support: "Få hjälp"
     support_url: "//support.code.org"
     help_resources: "Hjälp och resurser"
-    help_support: "Help and Support"
-    documentation: "Documentation"
+    help_support: "Hjälp och support"
+    documentation: "Dokumentation"
     tutorials: "Tutorials"
   multi:
     wrong_title: "Felaktigt svar"
@@ -613,9 +650,9 @@ sv:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: Vit
       - 
-        black: Black or African American
+        black: Svart eller afroamerikansk
       - 
         hispanic: Hispanic or Latino
       - 
@@ -753,52 +790,52 @@ sv:
     title: 'Hour of Code downloads'
     capsule_title: 'Har du Internet?'
     capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: 'No Internet?'
+    instructions_headline: 'Inget Internet?'
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
     minecraft_name: 'Minecraft Hour Of Code'
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
     download_message: 'Hämta %{app_name} för offlineanvändning (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
+    download_in_Albanian: 'Ladda ner på albanska:'
     download_in_Arabic: 'Download in Arabic:'
     download_in_Azerbaijani: 'Download in Azerbaijani:'
     download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bosnian: 'Ladda ner på bosniska:'
     download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
+    download_in_Catalan: 'Ladda ner på katalanska:'
     download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
+    download_in_Chinese: 'Ladda ner på kinesiska:'
+    download_in_Croatian: 'Ladda ner på kroatiska:'
     download_in_Czech: 'Download in Czech:'
     download_in_Danish: 'Download in Danish:'
     download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
+    download_in_English: 'Ladda ner på engelska:'
+    download_in_Finnish: 'Ladda ner på finska:'
     download_in_French: 'Download in French:'
     download_in_German: 'Download in German:'
     download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hebrew: 'Ladda ner på hebreiska:'
     download_in_Hungarian: 'Download in Hungarian:'
     download_in_Icelandic: 'Download in Icelandic:'
     download_in_Indonesian: 'Download in Indonesian:'
     download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
+    download_in_Italian: 'Ladda ner på italienska:'
+    download_in_Japanese: 'Ladda ner på japanska:'
+    download_in_Korean: 'Ladda ner på koreanska:'
+    download_in_Latvian: 'Ladda ner på lettiska:'
     download_in_Lithuanian: 'Download in Lithuanian:'
     download_in_Norwegian: 'Download in Norwegian:'
     download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
+    download_in_Polish: 'Ladda ner på polska:'
     download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
     download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
+    download_in_Romanian: 'Ladda ner på rumänska:'
+    download_in_Russian: 'Ladda ner på ryska:'
+    download_in_Serbian: 'Ladda ner på serbiska:'
     download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
+    download_in_Spanish: 'Ladda ner på spanska:'
+    download_in_Swedish: 'Ladda ner på svenska:'
+    download_in_Turkish: 'Ladda ner på turkiska:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows (64-bitars)'

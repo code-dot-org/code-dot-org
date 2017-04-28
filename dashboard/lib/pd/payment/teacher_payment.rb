@@ -15,7 +15,7 @@ module Pd::Payment
     # @return [DistrictPaymentTerm] payment details, if any, for this teacher's district
     attr_reader :district_payment_term
 
-    #@return [Numeric] total payment amount
+    # @return [Numeric] total payment amount
     attr_reader :amount
 
     def type

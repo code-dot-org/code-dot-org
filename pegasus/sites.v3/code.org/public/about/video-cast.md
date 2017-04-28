@@ -1,5 +1,6 @@
 ---
 title: Video Cast
+theme: responsive
 ---
 # Meet the Video Cast
 

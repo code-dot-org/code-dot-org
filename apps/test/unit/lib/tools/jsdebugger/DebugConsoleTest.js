@@ -133,7 +133,7 @@ describe('The DebugConsole component', () => {
     beforeEach(() => {
       let interpreter = new JSInterpreter({
         shouldRunAtMaxSpeed: () => false,
-        studioApp: {reduxStore: getStore(), hideSource: true}
+        studioApp: {hideSource: true}
       });
       const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
       interpreter.calculateCodeInfo(code);
@@ -187,7 +187,7 @@ describe('The DebugConsole component', () => {
       selection = '';
       inputEl = debugInput().get(0);
       sinon.spy(inputEl, 'focus');
-      sinon.stub(window, 'getSelection', () => selection);
+      sinon.stub(window, 'getSelection').callsFake(() => selection);
     });
 
     afterEach(() => {

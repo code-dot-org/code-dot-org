@@ -1,55 +1,11 @@
-:css
+---
+title: Student Overview
+theme: responsive
+---
 
-  .full-resource-block {
-    width: 100%;
-    margin-bottom: 30px;
-    height: 244px;
-  }
-  .description {
-    padding-bottom: 10px;
-    color: #fff;
-  }
-  .resource-title {
-    padding: 0px;
-    margin: 0px;
-    font-size: 24px;
-    color: #FFFFFF;
-    padding-bottom: 10px;
-  }
-  .side-image {
-    width: 485px;
-    height: 244px;
-  }
-  .left, .right {
-    height: 100%;
-    float: left;
-  }
-  .right .side-image, .right .side-description-area {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .left .side-image, .left .side-description-area {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  .side-description-area {
-    width: 485px;
-    height: 100%;
-    background-color: #00adbc;
-    padding: 30px 30px;
-  }
-  .gray-button {
-    background-color: #e7e8ea;
-    border-color: #c6cacd;
-    color: #5b6770;
-    text-decoration: none;
-  }
-  .orange-button {
-    text-decoration: none;
-    background-color: #ffa400;
-  }
+%link{:href=>"/css/student.css", :rel=>"stylesheet"}
 
-.space{style: "height: 20px"}
+%h1 Learn Computer Science
 
 - hoc_picture = capture_haml do
   %img.side-image{src: "/images/fit-485/student/hour_of_code.jpg"}
@@ -57,7 +13,7 @@
 - hoc_text = capture_haml do
   .side-description-area
     .description
-      %h2.resource-title{style: "padding-bottom: 10px;"} Hour of Code
+      %h2.resource-title Hour of Code
       Get started by choosing a tutorial from over 100 one hour computer science activities from Code.org and partners. Join 10% of the world's students; it's your turn to try!
     %a{href: "/learn"}
       %button.orange-button Start
@@ -82,7 +38,7 @@
 - other_text = capture_haml do
   .side-description-area
     .description
-      %h2.resource-title{style: "padding-bottom: 10px;"} Courses from 3rd parties
+      %h2.resource-title Courses from 3rd parties
       Check out some of the 3rd party online courses we recommend, or find a local workshop, school, or summer camp to learn in a classroom.
     %a{href: "/learn/beyond"}
       %button.orange-button Learn online
@@ -93,21 +49,25 @@
 -# Show Hour of Code first when soon or actually Hour of Code time.  Otherwise, show Code Studio first.
 - if ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
   .full-resource-block
-    .left= hoc_picture
-    .right= hoc_text
-  .full-resource-block
-    .left= studio_text
-    .right= studio_picture
+    .left.col-50-student= hoc_picture
+    .right.col-50-student= hoc_text
+  .full-resource-block.desktop-feature
+    .left.col-50-student= studio_text
+    .right.col-50-student= studio_picture
+  .full-resource-block.mobile-feature
+    .left.col-50-student= studio_picture
+    .right.col-50-student= studio_text
 - else
   .full-resource-block
-    .left= studio_picture
-    .right= studio_text
-  .full-resource-block
-    .left= hoc_text
-    .right= hoc_picture
+    .left.col-50-student= studio_picture
+    .right.col-50-student= studio_text
+  .full-resource-block#2.desktop-feature
+    .left.col-50-student= hoc_text
+    .right.col-50-student= hoc_picture
+  .full-resource-block.mobile-feature
+    .left.col-50-student= hoc_picture
+    .right.col-50-student= hoc_text
 
 .full-resource-block
-  .left= other_picture
-  .right= other_text
-
-
+  .left.col-50-student= other_picture
+  .right.col-50-student= other_text

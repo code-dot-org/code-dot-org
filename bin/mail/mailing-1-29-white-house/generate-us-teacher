@@ -11,7 +11,7 @@ query_subscribed_contacts(q: 'kind_s:user && role_s:teacher')
 query_subscribed_contacts(q: 'kind_s:HocSignup2015 || kind_s:HocSignup2014')
 
 # Filter to US-only
-us_teachers = ALL.select{|_, contact| contact[:international] == 'false'}
+us_teachers = ALL.select {|_, contact| contact[:international] == 'false'}
 
 puts "#{us_teachers.count} US teachers"
 export_contacts_to_csv us_teachers, 'us-teacher.csv'

@@ -18,22 +18,20 @@
 class SurveyResult < ActiveRecord::Base
   include SerializedProperties
 
-  ETHNICITIES = {}
-  ETHNICITIES["american_indian"] =  "American Indian or Alaska Native"
-  ETHNICITIES["asian"] = "Asian"
-  ETHNICITIES["black"] = "Black or African American"
-  ETHNICITIES["hispanic"] = "Hispanic or Latino"
-  ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander"
-  ETHNICITIES["white"] = "White"
-  ETHNICITIES["other"] = "Other"
-  ETHNICITIES.freeze
+  ETHNICITIES = {
+    "white" => "White",
+    "black" => "Black or African American",
+    "hispanic" => "Hispanic or Latino",
+    "asian" => "Asian",
+    "native" => "Native Hawaiian or Other Pacific Islander",
+    "american_indian" => "American Indian or Alaska Native",
+    "other" => "Other/Unknown"
+  }.freeze
 
-  DIVERSITY_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
-  DIVERSITY_ATTRS << "survey2016_foodstamps"
-  DIVERSITY_ATTRS.freeze
+  DIVERSITY_ATTRS = ETHNICITIES.keys.map {|key| "diversity_#{key}"}
+  DIVERSITY_ATTRS << "diversity_farm"
 
-  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
-  NET_PROMOTER_SCORE_ATTRS.freeze
+  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment).freeze
 
   ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
 
@@ -42,6 +40,7 @@ class SurveyResult < ActiveRecord::Base
 
   KINDS = [
     DIVERSITY_2016 = 'Diversity2016'.freeze,
+    DIVERSITY_2017 = 'Diversity2017'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze
   ].freeze

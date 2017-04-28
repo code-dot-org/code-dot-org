@@ -29,7 +29,7 @@ def page_load(wait_until_unload)
   if wait_until_unload
     html = @browser.find_element(tag_name: 'html')
     yield
-    wait_until { element_stale?(html) }
+    wait_until {element_stale?(html)}
   else
     yield
   end
@@ -89,7 +89,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until { @browser.find_element(selection_criteria) }
+  wait_until {@browser.find_element(selection_criteria)}
 end
 
 When /^I go to the newly opened tab$/ do
@@ -122,7 +122,7 @@ When /^I close the React alert$/ do
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
-  wait_until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+  wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
 
 When /^I reset the puzzle to the starting version$/ do
@@ -149,7 +149,7 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait_until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
+  wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
 def jquery_is_element_visible(selector)
@@ -158,7 +158,7 @@ end
 
 When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
   wait_for_jquery
-  wait_until { @browser.execute_script(jquery_is_element_visible(selector)) == negation.nil? }
+  wait_until {@browser.execute_script(jquery_is_element_visible(selector)) == negation.nil?}
 end
 
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
@@ -178,21 +178,21 @@ end
 
 When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
   wait_for_jquery
-  wait_until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
+  wait_until {@browser.execute_script("return $(#{selector.dump}).length > 0")}
 end
 
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until { @browser.find_elements(selection_criteria).empty? }
+  wait_until {@browser.find_elements(selection_criteria).empty?}
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
-  wait_until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+  wait_until {@browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')")}
 end
 
 When /^I wait until jQuery Ajax requests are finished$/ do
-  wait_short_until { @browser.execute_script("return $.active == 0") }
+  wait_short_until {@browser.execute_script("return $.active == 0")}
 end
 
 Then /^I make all links open in the current tab$/ do
@@ -210,12 +210,12 @@ end
 
 Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_until { @browser.current_url.include? url }
+  wait_until {@browser.current_url.include? url}
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_until { @browser.current_url == url }
+  wait_until {@browser.current_url == url}
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -252,7 +252,7 @@ When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
   wait_short_until do
     @button = @browser.find_element(id: button)
   end
-  page_load(load) { @button.click }
+  page_load(load) {@button.click}
 end
 
 When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
@@ -274,7 +274,7 @@ When /^I press the "([^"]*)" button( to load a new page)?$/ do |button_text, loa
   wait_short_until do
     @button = @browser.find_element(:css, "input[value='#{button_text}']")
   end
-  page_load(load) { @button.click }
+  page_load(load) {@button.click}
 end
 
 When /^I press "([^"]*)" using jQuery( to load a new page)?$/ do |selector, load|
@@ -302,6 +302,22 @@ end
 
 When /^I press menu item "([^"]*)"$/ do |menu_item_text|
   menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
+    And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I press the settings cog$/ do
+  cog_selector = '.settings-cog:visible'
+  steps %{
+    Then I wait until element "#{cog_selector}" is visible
+    And I click selector "#{cog_selector}"
+  }
+end
+
+When /^I press the settings cog menu item "([^"]*)"$/ do |item_text|
+  menu_item_selector = ".settings-cog-menu:visible .pop-up-menu-item:contains(#{item_text})"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
@@ -575,7 +591,7 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
 end
 
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
-  wait_until(15) { element_contains_text?(selector, expected_text) }
+  wait_until(15) {element_contains_text?(selector, expected_text)}
 end
 
 Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
@@ -677,7 +693,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
-  wait_until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
+  wait_until {@browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")}
 end
 
 Then /^I click an image "([^"]*)"$/ do |path|
@@ -914,7 +930,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
-    And I wait to see "#schoolname-block"
+    And I wait to see "#schooldropdown-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -932,11 +948,11 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
 end
 
 And(/^I save the section url$/) do
-  wait_short_until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
+  wait_short_until {/\/manage$/.match(@browser.execute_script("return location.hash"))}
   steps %Q{
     And I wait until element ".jumbotron" is visible
   }
-  wait_short_until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
+  wait_short_until {"" != @browser.execute_script("return $('.jumbotron a').text().trim()")}
   @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
 end
 
@@ -944,7 +960,7 @@ And(/^I navigate to the section url$/) do
   steps %Q{
     Given I am on "#{@section_url}"
   }
-  wait_short_until { /^\/join/.match(@browser.execute_script("return location.pathname")) }
+  wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
 
 # TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
@@ -1047,22 +1063,22 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
-  wait_short_until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_short_until {!/#{old_path}/.match(@browser.execute_script("return location.pathname"))}
 end
 
 Then /^my query params match "(.*)"$/ do |matcher|
-  wait_short_until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
+  wait_short_until {/#{matcher}/.match(@browser.execute_script("return location.search;"))}
 end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
-  wait_short_until { @browser.find_element(id: element_id_to_seek) }
+  wait_short_until {@browser.find_element(id: element_id_to_seek)}
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait_short_until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_short_until {/#{new_path}/.match(@browser.execute_script("return location.pathname"))}
 
   if redirect_source == 'pushState'
-    state = { "modified" => true }
+    state = {"modified" => true}
   elsif redirect_source == 'dashboard' || redirect_source == 'none'
     state = nil
   end
@@ -1071,7 +1087,7 @@ end
 
 last_shared_url = nil
 Then /^I navigate to the share URL$/ do
-  wait_short_until { @button = @browser.find_element(id: 'sharing-input') }
+  wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
   wait_for_jquery
@@ -1130,12 +1146,12 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 end
 
 Then /^I scroll our lockable stage into view$/ do
-  wait_short_until { @browser.execute_script('return $(".uitest-locked").length') > 0 }
+  wait_short_until {@browser.execute_script('return $(".uitest-locked").length') > 0}
   @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
-  wait_short_until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
+  wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').click()")
 end
 
@@ -1164,4 +1180,30 @@ def refute_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   # This error message is specific to Chrome
   expect(first_header_text).not_to eq('This site can’t be reached')
+end
+
+Then /^I wait until the image within element "([^"]*)" has loaded$/ do |selector|
+  image_status_selector = "#{selector} div[data-image-status=loaded]"
+  wait_until do
+    @browser.execute_script("return $(#{image_status_selector.dump}).length > 0;")
+  end
+end
+
+Then /^I wait until initial thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialCaptureComplete();')
+  end
+end
+
+Then /^I wait for initial project save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
+end
+
+When /^I switch to text mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet text mode
+  STEPS
 end

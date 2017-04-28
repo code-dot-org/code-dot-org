@@ -14,11 +14,11 @@ markdown <<MARKDOWN
 
 <p style="text-align: center"> MICHAEL</p>
 
-<p>I was thinking the same thing.  The way we specify color is just a string.  A string with 3 numbers in it.</p>
+<p>I was thinking the same thing.  We can use the `rgb` command with 3 random numbers</p>
 
 <p style="text-align: center"> ALEXIS</p>
 
-<p>Right, so rather than hard-coding the string like <code>var color = "rgb(230, 155, 0)";</code> we can make 3 random numbers between 0-255, put each in a variable, and then string them all together to make the string for <code>color</code>.  </p>
+<p>Right, so rather than hard-coding the string like <code>var color = rgb(230, 155, 0);</code> we can make 3 random numbers between 0-255, put each in a variable, and then use them to make the <code>color</code>.  </p>
 
 <p style="text-align: center"> MICHAEL</p>
 
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
 var G = randomNumber(0,255);
 var B = randomNumber(0,255);
 
-var color = "rgb("+R+", "+G+", "+B+")";
+var color = rgb(R, G, B);
 </code></pre>
 
 <p style="text-align: center"> ALEXIS </p>
@@ -47,7 +47,8 @@ var color = "rgb("+R+", "+G+", "+B+")";
 G = G+20;
 B = B+20;
 
-var diffColor = "rgb("+R+", "+G+", "+B+")";
+var diffColor = rgb(R, G, B);
+
 </code></pre>
 
 <p style="text-align: center"> MICHAEL</p>
@@ -76,7 +77,7 @@ var diffColor = "rgb("+R+", "+G+", "+B+")";
 var G = randomNumber(0,235);
 var B = randomNumber(0,235);
 
-var color = "rgb("+R+", "+G+", "+B+")";
+var color = rgb(R, G, B);
 </code></pre>
 
 <p style="text-align: center"> ALEXIS</p>

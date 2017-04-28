@@ -7,6 +7,11 @@ class ScriptsController < ApplicationController
   before_action :set_script_file, only: [:edit, :update]
 
   def show
+    if @script.redirect_to?
+      redirect_to Script.get_from_cache(@script.redirect_to)
+      return
+    end
+
     if request.path != (canonical_path = script_path(@script))
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -66,7 +71,7 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: { stages: script.stages }
+    render 'levels/instructions', locals: {stages: script.stages}
   end
 
   private
@@ -102,6 +107,7 @@ class ScriptsController < ApplicationController
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
+      :student_detail_progress_view
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
@@ -116,6 +122,7 @@ class ScriptsController < ApplicationController
       :description_audience,
       :description_short,
       :description,
+      :stage_descriptions
     ).to_h
   end
 end

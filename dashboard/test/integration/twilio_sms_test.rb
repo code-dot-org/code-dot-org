@@ -66,7 +66,7 @@ class TwilioSmsTest < ActionDispatch::IntegrationTest
       break if @client.messages.list(
         to: SMS_TEST_FORWARD,
         date_sent: DateTime.now.utc.strftime('%F')
-      ).detect { |message| message.body.include? test_body }
+      ).detect {|message| message.body.include? test_body}
       num_tries += 1
       if num_tries > TOTAL_TRIES
         raise "SMS test failed. To: #{SMS_TEST_TO}, forward: #{SMS_TEST_FORWARD}, message: #{test_body}"

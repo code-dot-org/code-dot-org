@@ -46,7 +46,7 @@
       "off": null,
       "led.on": null,
       "led.off": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "color": null,
       "buzzer.frequency": null
     },
@@ -84,9 +84,11 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "<img src=\"https://images.code.org/a2b5050f76bdb262713ce52f0356fb04-image-1486151096632.JPG\" style=\"width:250px; float:right\">\r\n# Debug: colorLeds\r\n\r\nCan you debug the index values so that the rainbow shows up on the board like in the picture?\r\n\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png\" style=\"width:250px; float:right\">\r\n\r\n# Debug: colorLeds\r\n\r\nCan you debug the index values so that the rainbow shows up on the board like in the picture?",
     "start_blocks": "colorLeds[1].color(\"red\");\r\ncolorLeds[10].color(\"orange\");\r\ncolorLeds[1].color(\"yellow\");\r\ncolorLeds[4].color(\"green\");\r\ncolorLeds[3].color(\"blue\");\r\ncolorLeds[7].color(\"purple\");",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -818,6 +818,7 @@
   "whenUpTooltip": "Fai as accións que se mostran abaixo, cando se preme a tecla de frecha hacia arriba.",
   "winMessage": " Gañaches!",
   "witch": "meiga",
+  "withColor": "with color",
   "wizard": "mago",
   "yes": "Si",
   "zombie": "zombi",
@@ -858,6 +859,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Necesitas conseguir 20 Droides Rato. Usa o comando \"agregar un Droide Rato\" dentro do evento \"cando consegues Droide Rato\" para agregar dous ou máis Droides Rato cada vez que consegues un.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, engadiches código para facer Droides Rato. Podes ir ao seguinte crebacabezas ou tentar outra vez conseguir 20 Droides Rato. Trata de facelo máis fácil agregando máis! (Preme e mantén premidas as teclas do teu teclado (ou pantalla) para moverte máis lixeiro.)",
   "failedChangeSettingTimeout": "Consegue tres pilotos rebeldes para continuar.",
-  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
-  "withColor": "with color"
+  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade."
 }

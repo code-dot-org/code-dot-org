@@ -8,15 +8,10 @@
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "getText": null,
-      "setText": null,
-      "setScreen": null,
+      "setPosition": null,
+      "declareAssign_x_prompt": null,
       "ifBlock": null,
-      "equalityOperator": null,
-      "randomNumber_min_max": null,
-      "declareAssign_x": null,
-      "declareAssign_x_promptNum": null,
-      "console.log": null
+      "equalityOperator": null
     },
     "edit_code": true,
     "embed": "false",
@@ -57,11 +52,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Checking the Secret Code\r\n\r\nNow that you are collecting the secret code from the user you will need to check if it is correct! We can do this using an if statement. An if statement checks if a condition is true, in this case it will check if the number the user entered is equal to the secret code\r\n\r\n# Do This\r\n\r\n* Add an if statement inside the `onEvent` block for the safe, below the prompt command\r\n* Create the condition by pulling out the `==` block which will check if two things are equal\r\n* On one side of `==` put the name of the value you used to save the user guess\r\n* On the other side put the value for your secret code",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Checking the Secret Code\r\n\r\nNow that you have collected a guess of the secret code from the user you will need to check if it is correct! We can do this using an `if` statement. An if statement checks if a condition is true, in this case it will check if the number the user entered is equal to the secret code\r\n\r\n# Do This\r\n\r\n* Inside the `onEvent` block for the safe below the prompt command add an <img src=\"https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01 AM.png\" style=\"width:100px\"> statement \r\n* Create the condition by pulling out the <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png\" style=\"width:100px\"> block which will check if two things are equal\r\n* On one side of <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png\" style=\"width:100px\"> put *guess* (the name of the value we used to store the users guess)\r\n* On the other side put the value for your secret code",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

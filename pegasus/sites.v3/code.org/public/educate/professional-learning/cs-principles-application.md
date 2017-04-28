@@ -1,6 +1,7 @@
 ---
 title: CSP Educator Application
 nav: plc_csp_nav
+theme: responsive
 ---
 
 # Computer Science Principles Application  

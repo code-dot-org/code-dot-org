@@ -37,7 +37,7 @@ describe(`Testing promise chains`, () => {
 
   it(`and when creating new Promises this doesn't seem like an issue`, () => {
     // because a new promise's callback gets called immediately
-    const _ = new Promise(resolve => {
+    new Promise(resolve => {
       sequence.push('A'); // Invoked immediately
       setTimeout(() => {
         sequence.push('C');

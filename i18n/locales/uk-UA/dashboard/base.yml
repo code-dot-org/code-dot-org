@@ -12,6 +12,7 @@ uk:
     attributes:
       user:
         name: 'Ім''я користувача'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Електронна пошта'
         username: 'ім''я користувача'
         password: 'пароль'
@@ -78,6 +79,7 @@ uk:
     forgot_password: 'Забули свій пароль?'
     need_confirmation: "Не отримали вказівок підтвердження?"
     need_unlock: "Не отримали вказівок розблокування?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} учнів вже зареєструвались.'
     teacher_count: '%{count} вчителів вже зареєструвались.'
@@ -110,9 +112,31 @@ uk:
     user_type_student: "учень"
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Інше'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Вже маєте обліковий запис? Увійдіть'
     login: 'Електронна пошта'
+    login_username: 'Email or Username'
     password: 'Пароль'
     remember: 'Запам''ятати мене'
     submit: 'Вхід'
@@ -150,6 +174,14 @@ uk:
       Уроки - цікаві, візуально привабливі і навчають основних понять комп'ютерних наук за допомогою простого керованого ігрового інтерфейсу. Вивчайте код від Білла Гейтса, Марка Цукерберга, Злих Пташок та Рослин проти Зомбі! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Запрошення надіслано'
     added_teacher: '%{name} додано як Вашого учителя'
@@ -163,8 +195,6 @@ uk:
       blank_code: "Будь ласка, введіть код групи"
       cant_join_own_section: "На жаль, не можна приєднатись до своєї власної групи."
     mail:
-      invite_student:
-        subject: "Приєднуйтеся до класу з %{teacher_name} на Code.org!"
       student_disassociated:
         subject: 'Повідомлення Code.org: %{student_name} відтепер не є вашим учнем.'
   reports:
@@ -363,21 +393,24 @@ uk:
     announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
     announcement_petition_button: "Додайте своє ім'я"
     announcement_go_beyond_button: "Вийти за межі"
+    announcement_apply_now: "Apply now"
     announcement_all: "Слідкуйте за новими функціями та оновленнями у нашому вчительському блозі. <a href='%{teacher_blog_url}' target='_blank'>Переглянути попередні оголошення.</a>"
     announcement_hoc_launch: "Тисячі вчителів у більш, як 180 країнах світу розпочнуть викладати інформатику протягом Години коду 5-11 грудня цього року. Ми розраховуємо на вашу допомогу в охопленні більше учнів, ніж раніше. <a href='%{signup_url}' target='_blank'>Зареєструйте свою подію Години коду</a> та покажіть іншим вчителям, що кожен може почати викладати інформатику."
     announcement_mc_launch: "Один із наших найпопулярніших підручників отримав продовження! Зовсім нова Година коду від Майнкрафт - Розробник дозволяє створити власні правила світу Майнкрафт. Можна створити абсолютно унікальний досвід Майнкрафт, а тоді поділитись ним із друзями, або пограти на своєму телефоні. Зробіть це зі своїм класом на Годині коду."
     announcement_how_code_studio: "Для того, щоб почати використовувати інформатику на своїх уроках, не потрібен попередній досвід. Code.org пропонує навчальні програми, плани уроків, високоякісні програми підвищення кваліфікації та море чудових інструментів для всіх класів &mdash; все, що потрібно, і безкоштовно. Думаєте звідки починати? Завантажте <a href='%{video_download_url}'>цей ролик</a>!"
     announcement_go_beyond: "Підіть далі Години коду, і щотижня пізнавайте поняття інформатики разом зі своїми учнями. Code.org пропонує курс навчання, плани уроків, високоякісні професійні навчальні програми, та безліч чудових інструментів для всіх рівнів навчання — і все це безкоштовно. :) Вам не потрібно мати жодного досвіду, щоби почати вчити інформатики в своєму класі. <b>Підберіть наступний крок, який найбільше підходить вашому класові.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший код групи."
-    section_code_not_entered: "Будь ласка, вкажіть current_section_code."
     section_code_cant_be_current_section: "Поточна група не може бути такою ж, як нова."
     current_section_dne: "Вибачте, але групи %{current_section_code} не існує. Вкажіть інший код групи."
-    students_not_yours: "Ви не можете перемістити учнів з групи, якою не керуєте."
-    stay_enrolled_not_entered: "Вкажіть stay_enrolled_in_current_section."
     student_ids_not_entered: "Вкажіть student_ids."
     student_not_found: "Одного чи більше учнів не знайдено."
     all_students_must_be_in_current_section: "Всі учні повинні бути зараховані у ваші групи."
@@ -434,6 +467,10 @@ uk:
     upgrade:
       unsupported_message: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
       link: "Дізнайтеся більше"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Це займає більше часу, ніж звичайно...'
   try_reloading: 'Спробуйте перезавантажити сторінку'
   next_stage: 'Завершено! Перейти до наступного етапу'

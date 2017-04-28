@@ -1,6 +1,6 @@
 ---
 title: Letter from parents to teachers
-
+theme: responsive
 ---
 
 # Letter to your teacher, principal or district administrator 

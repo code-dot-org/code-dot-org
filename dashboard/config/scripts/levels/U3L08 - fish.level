@@ -124,7 +124,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "encrypted_examples": "GPXFnF+1wV0v9rwXPd0VYlBfXKUCc+LQo4fBvFOBPV05iBekTaW0yMm3cBn2\noDoi\n",

@@ -40,7 +40,7 @@ module SchoolInfoDeduplicator
 
     # Remove empty attributes.  Notably school_district_id can come through
     # as an empty string when we don't want anything.
-    attr.delete_if { |_, e| e.blank? }
+    attr.delete_if {|_, e| e.blank?}
 
     # The checkbox comes through as "true" when we really want true.
     attr[:school_district_other] &&= attr[:school_district_other].to_bool

@@ -406,36 +406,36 @@
   sports_all_sports_title: "Mix and match across sports"
   sports_featured_athletes: "注目の選手を参照"
   sports_athletes_title: "注目の選手"
-  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
-  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
-  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
-  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
-  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
-  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
-  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
-  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
-  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
-  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
-  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
-  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
-  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
-  sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
-  sports_athlete_Chris: "Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami Heat"
-  sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
+  sports_athlete_Draymond: "ドレイモンド・グリーン、オリンピック金メダリストでNBAチャンピオン、ゴールデンステート・ウォリアーズ"
+  sports_athlete_Serena: "セリーナ ・ ウィリアムズ、オリンピック金メダリストでテニス チャンピオン"
+  sports_athlete_Russell: "ラッセル・オコング、スーパー ボウル チャンピオンおよび NFL 選手、デンバー ・ ブロンコス"
+  sports_athlete_Sergio: "セルヒオ・ラモス、ワールド カップ チャンピオンおよびサッカー選手、レアル マドリード"
+  sports_athlete_Sue: "スー ・ バード、オリンピック金メダリストおよびWNBAチャンピオン、シアトル・ストーム"
+  sports_athlete_Alana: "アラナ・ビアード、金メダリストおよび WNBA オールスター、ロサンゼルス ・ スパークス"
+  sports_athlete_Angelo: "アンジェロ ・ マシューズ、スリランカ クリケット チームのキャプテン"
+  sports_athlete_Nneka: "Nneka Ogwumike、金メダリスト、WNBA のチャンピオン、 2016 MVP、ロサンゼルス ・ スパークス"
+  sports_athlete_Carmelo: "カーメロ ・ アンソニー、オリンピック金メダリストおよびNBA オールスター, ニューヨーク ・ ニックス"
+  sports_athlete_Marco: "マルコ ・ ベリネッリ、NBA チャンピオン、 シャーロット ・ ホーネッツ"
+  sports_athlete_Neymar: "ネイマール、オリンピック金メダリストでサッカー選手、FC バルセロナおよびブラジル・ナショナル・チーム"
+  sports_athlete_Sarah: "Sarah Quita Offringa、ウィンド サーフィンのチャンピオン"
+  sports_athlete_Marcelo: "マルセロ、サッカー チャンピオン、レアル マドリード、ブラジル・ナショナル・チーム"
+  sports_athlete_Erika: "エリカ オリベラ、チャンピオン マラソン ランナー"
+  sports_athlete_John: "ジョン・ウォール、NBA オールスター、 ワシントン ・ ウィザーズ"
+  sports_athlete_Chris: "クリス ・ ボッシュ、オリンピック金メダリストおよびNBA チャンピオン、マイアミ ・ ヒート"
+  sports_athlete_Harrison: "ハリソン ・ バーンズ、オリンピック金メダリストおよびNBA チャンピオン、ダラス · マーベリックス"
   watch_inspirational_videos: "始める前に、以下のビデオのうち1つを見てみましょう"
   video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "女子生徒を応援する"
-  video_title_cs_intro: "Computer Science intro"
-  video_title_schools_dont_teach: "What Most Schools Don't Teach"
-  video_title_obama: "President Obama on computer science"
-  video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
-  video_title_anybody_can_learn: "Anybody Can Learn"
-  video_title_draymond_green: "Hour of Code with Draymond Green"
-  video_title_russell_okung: "Hour of Code with Russell Okung"
-  video_title_real_madrid: "Hour of Code with Real Madrid"
-  video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
-  video_title_chris_bosh: "Chris Bosh on Computer Science"
+  video_title_cs_intro: "コンピュータサイエンス入門"
+  video_title_schools_dont_teach: "多くの学校が教えていないこと"
+  video_title_obama: "オバマ大統領もコンピューターサイエンスを"
+  video_title_hoc_is_here: "Hour of Code - 誰でも学べるプログラミング"
+  video_title_anybody_can_learn: "誰もが学ぶことができます"
+  video_title_draymond_green: "ドレイモンド・グリーンとHour of Code"
+  video_title_russell_okung: "ラッセル・オコングとHour of Code"
+  video_title_real_madrid: "レアル マドリードとHour of Code"
+  video_title_marco_belinelli: "マルコ ・ ベリネッリとHour of Code"
+  video_title_chris_bosh: "クリス ・ ボッシュのコンピュータ ・ サイエンス"
   video_1min: "1 分"
   video_2min: "2 分"
   video_5min: "5 分"
@@ -450,6 +450,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 人の教師が、ボランティアを求めています。<br>%{num_volunteers} 人がボランティア登録をしています。あなたも参加してください。"
   volunteer_engineer_submission_intro_background: "Hour of Code は1時間のコンピューター・サイエンス入門の世界的な運動です。180以上の国で数千万人の生徒に提供されています。12 月 7-13 日のコンピューター・サイエンス学習週間に参加しましょう。"
   volunteer_engineer_submission_intro_recruit: '教師は、クラスルームを助けてくれる <span style="font-family: ''Gotham 7r'', sans-serif;"> コンピューターサイエンス教育に情熱的な</span> 誰かを求めています。または、コンピューターサイエンスの持つ可能性の幅広さについて生徒を <span style="font-family: ''Gotham 7r'', sans-serif;"> 励ます</span> ことができる人を求めています。 (これはビデオ チャットで行うことができます)'
+  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_signup: "コンピュータ サイエンスの学生やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。 <span class=\"form-required-field\">*</span> とマークされているフィールドは必須です。"
   volunteer_engineer_submission_intro_links: "あなたはボランティアをお探しの先生ですか？<a href=\"%{volunteer_local}\">ボランティア マップ</a> で地域のボランティアを探してください。"
   volunteer_engineer_submission_update_information: "あなたの情報を更新する"
@@ -478,6 +479,7 @@
   volunteer_engineer_submission_field_email_placeholder: "Eメールアドレス"
   volunteer_engineer_submission_final_paragraph: "地域の教師が Hour of Code やその他のボランティアのために連絡できるよう、あなたは地図上に表示されます。あなたのメール アドレスと詳細な住所は決して公開される事はありません。しかし、その他の情報(おおよその所在地など) は地域の教師に公開されます。"
   volunteer_engineer_submission_checkbox_contact: '私は、教師がボランティアについて私に連絡することに同意します (注: あなたのメール アドレスが公開されることはありません)'
+  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "送信"
   volunteer_engineer_submission_thankyou: "ボランティアへの登録ありがとうございます。教師は <a href=\"%{url}\"> このマップ</a> を使用して、あなたのようなボランティアを検索して連絡を取ります。"
   volunteer_engineer_submission_commitment_uncertain: "その他"
@@ -660,7 +662,8 @@
   dashboard_students_auto_generated: "自動生成"
   dashboard_students_reset_secret: "秘密のリセット"
   dashboard_students_reset_password: "パスワードのリセット"
-  dashboard_students_share_section: 'このセクションのサインインページを生徒達と共有する：'
+  dashboard_students_share_section: "このセクションのサインインページを生徒達と共有する："
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "学生用のログイン情報でカードを印刷する"
   dashboard_students_secret_picture_title: "秘密の画像"
   dashboard_students_secret_picture: "このセクションでは、各生徒が秘密の<b>画像</b>をパスワードの変わりに使用してログインします。ログインする際は上記のWebアドレスにログインしてください。"
@@ -671,6 +674,7 @@
   dashboard_students_join_link: "あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう"
   dashboard_students_no_email: "生徒がEメールアドレスを持っていない場合、もしくはあなたが生徒のアカウントを作りたい場合、セクションの秘密の種類を<b>単語</b>か<b>画像</b>にしてください。"
   dashboard_students_print_page: "このページを印刷"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "個人情報の扱いを参照したり印刷したりする場合は<a href=\"/privacy/student-privacy\", target=\"_blank\">ここをクリック</a>"
   dashboard_curriculum_k5_title: "幼稚園／小学校教師向けの資料"
@@ -738,25 +742,6 @@
   dashboard_sections_login_type_explanation: "この表は、セクションを選択するとき、<b>画像、単語、またはEメール</b>、などのログイン タイプ説明するのに役立ちます。"
   dashboard_faq: "よくある質問"
   dashboard_faq_k5: "よくある質問（幼稚園/小学生対象コース）"
-  dashboard_announcements: "お知らせ"
-  dashboard_announce_message_fall2016_features: "私たちはひと夏をかけて、あなたのフィードバックを新機能に追加しました。今では、生徒が1 つのデバイスを使ってペア プログラミングをしている場合でも、<a href=\"%{pp_url}\" target=\"_blank\">それぞれの学生の進捗状況を追跡</a>できます。CS 原則コースから <a href=\"%{csp_widgets_url}\" target=\"_blank\">最高のインタラクティブなツール</a> を <i>すべて</i> の教室で使用できます。さらに生徒たちは、作業画面に <a href=\"%{unused_code_url}\" target=\"_blank\">未使用のプログラムを保持</a> することで、もっと実験がしやすくなりました！すべての新機能をチェックして、ご意見をお寄せください。"
-  dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-  dashboard_announce_learn_more_button: "もっと詳しく知る"
-  dashboard_announce_try_now_button: "今すぐ試す"
-  dashboard_announce_host_an_hour_button: "開催する"
-  dashboard_announce_watch_video_button: "ビデオを見る"
-  dashboard_announce_petition: "教師として、すべての学校のすべての学生にコンピューターサイエンスを学ぶ機会を与える運動をリードしています。今、代表者はあなたから聞くときです。今週、教育指導者、28 知事とアメリカ最大企業のCEOが、 米議会に、学生のコンピューターサイエンス教育への資金供給を求める公開書簡に参加しています。"
-  dashboard_announce_petition_button: "あなたの名前を追加します"
-  dashboard_announce_go_beyond_button: "超えて行く"
-  dashboard_announce_all: "先生用ブログで、新しい機能や最新情報をアップデートします。<a href='%{teacher_blog_url}' target='_blank'> 過去のお知らせを参照する。</a>"
-  dashboard_announce_hoc_launch: "この 12 月 5-11 日、180 カ国以上で数千の教育者がHour of Code によってコンピュータ ・ サイエンスの教育を始めます。より多くの学生に届けられるかは、あなたの助けに掛かっています。<a href='%{signup_url}' target='_blank'> あなたのHour of Code イベントを登録</a> して、他の先生にも、コンピューターサイエンスを教えることができることを、伝えてください。"
-  dashboard_announce_mc_launch: "もっとも人気のチュートリアルに、続編が出来ました! マインクラフトHour of Code デザイナーで、学生は、マインクラフト世界のルールを作ることができます。完全にユニークなマインクラフト経験を作り出し、それを友人と共有したり、スマホでプレイが出来ます。あなたのクラスのHour of Codeで、やってみてください。"
-  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
-  dashboard_announce_how_code_studio: "あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。Code.org は、すべての学年向けのカリキュラム、レッスン プラン、質の高い専門的な学習プログラム、および多くの優れたツール &mdash; あなたが必要なすべてを、無料で提供します。どこから始めるのか? <a href='%{video_download_url}'> このビデオ</a> をダウンロード!"
-  dashboard_announce_go_beyond: "Hour of Code を超えて、毎週、生徒とコンピュータサイエンスの概念を探索しましょう。Code.org は、すべての学年向けのカリキュラム、授業、質の高い専門的な学習プログラム、多くの素晴らしいツールを提供しています &mdash; しかも無料です :)あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。<b>あなたの教室にぴったりな、次のステップを見つける。</b>"
-  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Hour of Codeはこちら - 12月8日 - 14日です！"
   code_sign_up: "コンピュタサイエンス教育週間の間に参加する"
   host_an_hour: "開催する"
@@ -868,12 +853,12 @@
   course2_name: "コース2"
   course3_name: "コース3"
   course4_name: "コース4"
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
+  coursea-draft_name: コース A
+  courseb-draft_name: コース B
+  coursec-draft_name: コース C
+  coursed-draft_name: コース D
+  coursee-draft_name: コース E
+  coursef-draft_name: コース F
   accelerated_name: "上級コース"
   cspunit1_name: '(old) Unit 1: デジタル情報'
   cspunit2_name: '(old) Unit 2: インターネット'
@@ -885,13 +870,15 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: '第 1 章: インターネット'
   csp2_name: '第 2 章: デジタル情報'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csppostap_name: 'Post AP: Databases in Apps'
+  csppostap_name: 'ポストAP: アプリ内でのデータベース'
   cspassessment_name: "完全なテスト - 50 の質問"
   cspexam1-mWU7ilDYM9_name: テストその1 - 25 の質問
   cspexam2-AKwgAh1ac5_name: テストその2 - 25 の質問
@@ -913,7 +900,7 @@
   math_category_name: "数値"
   hoc_category_name: "Hour of Code"
   csf_category_name: "コンピューター・サイエンスの基礎"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf2_draft_category_name: '開発中: コース A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 コンピューター・サイエンス原理"
   csp17_category_name: "'16-'17 コンピューター・サイエンス原理"

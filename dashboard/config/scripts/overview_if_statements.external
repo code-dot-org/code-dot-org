@@ -1,28 +1,12 @@
 name 'Overview: If Statements'
 markdown <<MARKDOWN
-## Understanding Program Flow
-Programs are said to have a "flow of execution". You start by executing some line of code and then the next and so on.
-
-<img src="https://images.code.org/9475539704f7fc8d13092a5706fb3bba-image-1479311514103.png" style="float: right">
-
-A flow chart is a common visual that's used to represent the various paths of execution that your program might take.  Many people use them to help plan.  
-
-<span style="color: #00adbc; font-size: 150%">1.</span>
-This flow chart depicts a program executing one line after another until it gets to a point where it needs to make a decision.
-
-<span style="color: #00adbc; font-size: 150%">2.</span>
-In order to determine which path to take you state some **condition**. It should be a **Boolean expression** - something that evaluates to **true** or **false**.  Here we have a simple **comparsion** of two values: the person's age and the number 18.
-
-<span style="color: #00adbc; font-size: 150%">3.</span> The program does one thing if the condition is true, and something else if the condition is false.
-
-<span style="color: #00adbc; font-size: 150%">4.</span> The program can continue a single thread of execution after the condition as well.
-
+# If Statement
 
 ## How If-statements work
 
 <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
 
-`if` statements are the lines of code you need to change the flow while you're program is running. You can write code that *makes a decision that determines which lines of code should be run next.*
+If statements allow you to *make a decision that determines which lines of code should be run next.*
 
 At the right is a diagram showing the elements of a basic `if` statement in JavaScript.
 

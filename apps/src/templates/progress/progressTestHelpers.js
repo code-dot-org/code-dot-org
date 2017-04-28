@@ -14,14 +14,31 @@ export const fakeLesson = (name, id, lockable=false, stageNumber=undefined) => (
   name,
   id,
   lockable,
-  stageNumber
+  stageNumber,
+  isFocusArea: false
 });
 
-export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
-  status: LevelStatus.not_tried,
-  url: `/level${index + 1}`,
-  name: `Level ${index + 1}`
-}));
+export const fakeLevel = overrides => {
+  const levelNumber = overrides.levelNumber;
+  return {
+    status: LevelStatus.not_tried,
+    url: `/level${levelNumber}`,
+    name: `Level ${levelNumber}`,
+    ...overrides
+  };
+};
+
+export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
+  _.range(numLevels).map(index => {
+    let overrideData = {
+      levelNumber: index + startLevel
+    };
+    if (!named) {
+      overrideData['name'] = undefined;
+    }
+    return fakeLevel(overrideData);
+  });
+
 
 /**
  * Creates the shell of a redux store with the provided lessonId being hidden

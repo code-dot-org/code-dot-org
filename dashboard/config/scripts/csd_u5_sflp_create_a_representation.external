@@ -1,0 +1,14 @@
+name 'CSD-U5-SFLP Create a Representation'
+display_name 'Unit 5 Lesson 8 Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# The Internet - Data and Society: Lesson 8 - Create a Representation
+
+## Background
+
+Design a structure to represent your perfect day using the binary representation systems they've learned in this chapter. You'll need to use ASCII, binary numbers, and images as you design a punch card format.
+
+# Resources
+
+* [Create a Representation](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=doc))
+MARKDOWN

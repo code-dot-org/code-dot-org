@@ -1,6 +1,7 @@
 ---
 title: Help Translate
 nav: translate_nav
+theme: responsive
 ---
 
 # Help Translate

@@ -11,15 +11,12 @@ teacher_markdown <<MARKDOWN
 | Second User   | Haley G  | @flyinghail | desertrider  |
 | Third User    | Lizzie Dell| @lillizard | photolizzie  |
 
-tip!!!tip-timing
 
-!!!tip <tip-timing>
+**Tip:**
 
     Students are asked to choose two users from the available profiles, but if you are short on time, you can ask students to complete just one of the footprints.
 
 **Step 2:** Once they've looked through the pages, students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms - they represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users, or may have different levels of details (full street address for one user, but only a city and state for another).
-
-[/guide]
 
 **Share:** Have the class share the digital footprints that they developed through the activity.
 
@@ -50,7 +47,7 @@ Click on the picture for each profile to open it.
 
 | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
 | ---------  | ------ |  ------ |
-| <a href="https://thimbleprojects.org/danimcavoy/115281" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://thimbleprojects.org/elizabethbacon/140840/chirpr.html" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://thimbleprojects.org/danimcavoy/115302" target="_blank">  <img src="https://images.code.org/397bee2978a6efb62b49c7d91202a654-image-1480625449582.50.34 PM.png" style="width:400px"> </a> |
+| <a href="https://thimbleprojects.org/danimcavoy/115281" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://thimbleprojects.org/elizabethbacon/140840/chirpr.html" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://thimbleprojects.org/danimcavoy/115302" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
 
 
 ### instantframe

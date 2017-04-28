@@ -1,6 +1,7 @@
 ---
 title: CS Discoveries Professional Learning Program Application
 nav: plc_csd_nav
+theme: responsive
 ---
 
 # Let’s get started!

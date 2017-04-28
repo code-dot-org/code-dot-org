@@ -22,6 +22,10 @@ Forget your login information or don't have an account? Email partner@code.org.
 ## Ordering Welcome Kits
 Group 1 partners will be able to order Welcome Kits for local CS Principles teachers from the Mimeo Marketplace on **February 28, 2017**. 
 
+See this demo on how to order welcome kits:<br/>
+
+![](/files/order-welcome-kit.gif)
+
 ### Tips
 
 - Welcome Kits are bundled in groups of 10. 

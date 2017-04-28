@@ -3,12 +3,12 @@
     messages:
       not_saved: 'Zuzendu hurrengo akatsak mesedez:'
       too_young: Eduki honek adin murriztapenak ditu eta ikasle gazteenentzat ez dago
-        eskuragarri
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+        eskuragarri.
+      teacher_must_accept_terms: Eduki honek adin-murrizketak ditu eta ez da ikasle
+        gazteagoentzat erabilgarri. Eska iezaiozu zure irakasleari onartzeko Zerbitzuaren
+        Zehaztapen eguneratuak eduki honetarako sarrera zuri emateko. Zure irakasleak
+        hori egin dezake Code Studioan sartuz eta orri nagusiaren goialdetik hurbil
+        dagoen "Review updated terms" botoian klik eginez.
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -19,6 +19,7 @@
     attributes:
       user:
         name: Izena Erakutsi
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-posta
         username: Erabiltzaile-izena
         password: Pasahitza
@@ -87,6 +88,8 @@
     forgot_password: Pasahitza ahaztu duzu?
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
     need_unlock: Ez dituzu liberatzeko argibideak jaso?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} ikasleek izena eman dute."
     teacher_count: "%{count} irakaslek izena eman dute."
@@ -137,9 +140,31 @@
     user_type_student: Ikaslea
     field_is_required: beharrezkoa da
     accept_terms: You must agree to create an account
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Beste bat
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Kontua daukazu? Hasi saioa
     login: E-posta
+    login_username: Email or Username
     password: Pasahitza
     remember: Kontua daukazu? Hasi saioa
     submit: Hasi saioa
@@ -179,6 +204,14 @@
       Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Gonbidapena bidalita
     added_teacher: "%{name} zure irakasle moduan gehituta"
@@ -195,8 +228,6 @@
       cant_join_own_section: Barkatu, baina ezin duzu parte hartu zuk sortutako atal
         batean.
     mail:
-      invite_student:
-        subject: Har ezazu parte klase batean %{teacher_name}-rekin Code.org-n!
       student_disassociated:
         subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
   reports:
@@ -447,6 +478,7 @@
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add your name
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -475,6 +507,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -487,17 +528,30 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
@@ -583,6 +637,18 @@
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
       link: Ikasi gehiago
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Normalean baino denbora gehiago behar izaten ari da...
   try_reloading: Saiatu webgunea eguneratzen
   next_stage: Amaituta! Jarraitu hurrengo atalera

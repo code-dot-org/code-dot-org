@@ -174,7 +174,7 @@ end
 
 # Returns the contents of the file at path.
 def read_file(path)
-  File.open(path) { |f| return f.read }
+  File.open(path) {|f| return f.read}
 end
 
 # Returns a tempfile containing str.

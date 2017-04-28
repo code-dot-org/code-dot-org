@@ -83,8 +83,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   test 'filter_workshops with start and end' do
     start_date = Date.today.to_s
     end_date = (Date.today + 1.day).to_s
-    expects(:start_on_or_after).with(start_date)
-    expects(:start_on_or_before).with(end_date)
+    expects(:scheduled_start_on_or_after).with(start_date)
+    expects(:scheduled_start_on_or_before).with(end_date)
 
     params start: start_date, end: end_date
     @controller.filter_workshops @workshop_query
@@ -135,6 +135,21 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   test 'filter_workshops with organizer id' do
     expects(:where).with(organizer_id: 123)
     params organizer_id: 123
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with teacher_email' do
+    teacher = create :teacher, email: "test@example.net"
+    expects(:enrolled_in_by).with(teacher)
+    params teacher_email: teacher.email
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with teacher_email and only_attended' do
+    teacher = create :teacher, email: "test@example.net"
+    expects(:attended_by).with(teacher)
+    params teacher_email: teacher.email
+    params only_attended: true
     @controller.filter_workshops @workshop_query
   end
 
@@ -208,10 +223,12 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :course,
       :subject,
       :organizer_id,
-      :order_by
+      :teacher_email,
+      :only_attended,
+      :order_by,
     ]
 
-    params expected_keys.map{|k| [k, 'some value']}.to_h
+    params expected_keys.map {|k| [k, 'some value']}.to_h
     assert_equal expected_keys.map(&:to_s), @controller.filter_params.keys
   end
 

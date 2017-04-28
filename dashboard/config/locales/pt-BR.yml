@@ -19,6 +19,7 @@
     attributes:
       user:
         name: Nome para exibição
+        name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: E-mail
         username: Nome de usuário
         password: Senha
@@ -89,6 +90,8 @@
     forgot_password: Esqueceu sua senha?
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} alunos já se registraram."
     teacher_count: "%{count} professores já se registraram."
@@ -144,9 +147,31 @@
     user_type_student: Estudante
     field_is_required: "é obrigatório"
     accept_terms: Você precisa aceitar criar uma conta
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Outros
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Já tem uma conta? Entre
     login: E-mail
+    login_username: Nome utilizador ou e-mail
     password: Senha
     remember: Lembrar de mim
     submit: Entrar
@@ -186,6 +211,14 @@
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
@@ -200,8 +233,6 @@
       blank_code: Insira um código de seção
       cant_join_own_section: Desculpe, você não pode entrar em sua própria seção.
     mail:
-      invite_student:
-        subject: Entre na turma de %{teacher_name} na Code.org!
       student_disassociated:
         subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
   reports:
@@ -463,6 +494,7 @@
       ao Ensino médio.
     announcement_petition_button: Adicione seu nome
     announcement_go_beyond_button: Ir além
+    announcement_apply_now: Apply now
     announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
       blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
       últimas novidades.</a>
@@ -494,6 +526,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -506,17 +547,30 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
-    section_code_not_entered: Forneça o current_section_code.
     section_code_cant_be_current_section: A seção atual não pode ser igual à nova
       seção.
     current_section_dne: A seção %{current_section_code} não existe. Insira outro
       código de seção.
-    students_not_yours: Não é possível mover alunos de uma seção que não pertence
-      a você.
-    stay_enrolled_not_entered: Forneça stay_enrolled_in_current_section.
     student_ids_not_entered: Forneça students_ids.
     student_not_found: Não foi possível encontrar um ou mais alunos.
     all_students_must_be_in_current_section: Todos os alunos devem estar inscritos
@@ -601,6 +655,18 @@
         compatíveis</a>. Você pode tentar visualizar a página, mas é possível que
         algumas funcionalidades não funcionem.
       link: Saiba mais
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
   next_stage: Concluído! Continuar para a próxima fase
@@ -722,7 +788,7 @@
     support: Obter ajuda
     support_url: "//support.code.org"
     help_resources: Ajuda e recursos
-    help_support: Help and Support
+    help_support: Suporte
     documentation: Documentation
     tutorials: Tutorials
   multi:

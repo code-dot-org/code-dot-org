@@ -23,7 +23,7 @@ env = {
   'BUNDLE_APP_CONFIG' => "#{Chef::Config[:file_cache_path]}/.bundle"
 }
 node.default['cdo-apps']['bundle_env'] = env
-directory(env['BUNDLE_APP_CONFIG']) { owner user; group user }
+directory(env['BUNDLE_APP_CONFIG']) {owner user; group user}
 
 # Export bundler environment to global config ($HOME/.bundle/config).
 # Used in case we run 'bundle' manually without the provided environment.

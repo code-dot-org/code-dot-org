@@ -57,7 +57,7 @@ class TestFlakiness
 
     @@test_flakiness = calculate_test_flakiness
 
-    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness)) }
+    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness))}
 
     @@test_flakiness
   end

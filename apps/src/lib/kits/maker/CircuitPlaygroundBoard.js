@@ -1,7 +1,7 @@
 /** @file Board controller for Adafruit Circuit Playground */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import Firmata from 'firmata';
 import {
@@ -81,6 +81,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * Initialize a set of johnny-five component controllers.
    * Exposed as a separate step here for the sake of the setup page; generally
    * it'd be better to just call connect(), above.
+   * @return {Promise}
    * @throws {Error} if called before connecting to firmware
    */
   initializeComponents() {
@@ -88,11 +89,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       throw new Error('Cannot initialize components: Not connected to board firmware.');
     }
 
-    this.prewiredComponents_ = {
-      board: this.fiveBoard_,
-      ...createCircuitPlaygroundComponents(this.fiveBoard_),
-      ...J5_CONSTANTS
-    };
+    return createCircuitPlaygroundComponents(this.fiveBoard_).then(components => {
+      this.prewiredComponents_ = {
+        board: this.fiveBoard_,
+        ...components,
+        ...J5_CONSTANTS
+      };
+    });
   }
 
   /**

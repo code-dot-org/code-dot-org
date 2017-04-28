@@ -28,7 +28,7 @@ class SqlTable
     dataset = metadata_dataset
     if dataset && dataset.first
       # dynamo gives us stringified keys rather than symbols, so convert to the same
-      Hash[dataset.first.map{ |k, v| [k.to_s, v] }]
+      Hash[dataset.first.map {|k, v| [k.to_s, v]}]
     end
   end
 

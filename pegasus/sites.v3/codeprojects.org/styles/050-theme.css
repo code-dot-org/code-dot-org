@@ -1,0 +1,43 @@
+body {
+  padding-bottom: 28px;
+}
+
+#pagefooter {
+  width: 100%;
+  height: 28px;
+  padding: 5px 20px;
+  overflow: hidden;
+  background-color: #ddd;
+  box-sizing: border-box;
+  font-family: 'Gotham 4r', sans-serif;
+  line-height: 18px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: #aaa;
+  z-index: 2147483647;
+}
+
+#pagefooter .content {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+#pagefooter .dim {
+  display: inline-block;
+  opacity: 0.5;
+}
+
+#pagefooter .footerlink:link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+#pagefooter .footerlink:hover {
+  color: #777
+}
+
+#pagefooter .footerlink:visited {
+  color: #aaa;
+}

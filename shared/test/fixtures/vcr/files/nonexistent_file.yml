@@ -19,16 +19,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 25 Jan 2017 17:40:40 GMT
+      - Wed, 05 Apr 2017 15:23:46 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>7497D1B2027C7E52</RequestId><HostId>I9u1GG+Ro6WqZLhkHbbYubNijqZ9EUxkcIJC79JpLKkYS0wKrh6GlN+gD+rqnGtWhkrb0sOY9f0=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>B3539609D65C9E37</RequestId><HostId>2wa9Jm/bHnfCsGX362g1tpQPQcd9BaI7n5VJhxZInaEuVJcBEPJS+5K5jdMw1iUjszCQbThNHtw=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:41 GMT
+  recorded_at: Wed, 05 Apr 2017 15:23:57 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/nonexistentac0a7f8c2faac49775a6.png&versions
@@ -44,7 +44,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:42 GMT
+      - Wed, 05 Apr 2017 15:23:48 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -57,7 +57,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/nonexistentac0a7f8c2faac49775a6.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:41 GMT
+  recorded_at: Wed, 05 Apr 2017 15:23:57 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/dogc0cc21d843b34e9afb52.png&versions
@@ -73,7 +73,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:42 GMT
+      - Wed, 05 Apr 2017 15:23:48 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -84,9 +84,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/dogc0cc21d843b34e9afb52.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>files_test/1/1/dogc0cc21d843b34e9afb52.png</Key><VersionId>4p.spM5OD5QxNh6bBwmKFhNdTm1V6i04</VersionId><IsLatest>true</IsLatest><LastModified>2017-01-25T17:14:11.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>files_test/1/1/dogc0cc21d843b34e9afb52.png</Key><VersionId>zu_zd2kWsolYk8nXHplzk1HKQpCddZ2B</VersionId><IsLatest>false</IsLatest><LastModified>2017-01-25T17:14:09.000Z</LastModified><ETag>&quot;9160eba6c235a365f87537a742b11586&quot;</ETag><Size>17</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/dogc0cc21d843b34e9afb52.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>files_test/1/1/dogc0cc21d843b34e9afb52.png</Key><VersionId>m5wgDIQVjP.O1_I2fErboWfAY9r_5fJZ</VersionId><IsLatest>true</IsLatest><LastModified>2017-04-05T15:13:44.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>files_test/1/1/dogc0cc21d843b34e9afb52.png</Key><VersionId>IZaM43cO9aYuKbfFuBgt22Fz9JQw_yRU</VersionId><IsLatest>false</IsLatest><LastModified>2017-04-05T15:13:41.000Z</LastModified><ETag>&quot;9160eba6c235a365f87537a742b11586&quot;</ETag><Size>17</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:42 GMT
+  recorded_at: Wed, 05 Apr 2017 15:23:58 GMT
 - request:
     method: post
     uri: https://cdo-v3-files.s3.amazonaws.com/?delete
@@ -96,11 +96,11 @@ http_interactions:
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
           <Object>
             <Key>files_test/1/1/dogc0cc21d843b34e9afb52.png</Key>
-            <VersionId>zu_zd2kWsolYk8nXHplzk1HKQpCddZ2B</VersionId>
+            <VersionId>IZaM43cO9aYuKbfFuBgt22Fz9JQw_yRU</VersionId>
           </Object>
           <Object>
             <Key>files_test/1/1/dogc0cc21d843b34e9afb52.png</Key>
-            <VersionId>4p.spM5OD5QxNh6bBwmKFhNdTm1V6i04</VersionId>
+            <VersionId>m5wgDIQVjP.O1_I2fErboWfAY9r_5fJZ</VersionId>
           </Object>
           <Quiet>true</Quiet>
         </Delete>
@@ -108,7 +108,7 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - VYGkIE79dgyhR6wZg+ZB/w==
+      - 137GUQDAsMzpmMZorEik2w==
       Content-Length:
       - '371'
   response:
@@ -117,7 +117,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:43 GMT
+      - Wed, 05 Apr 2017 15:23:49 GMT
       Connection:
       - close
       Content-Type:
@@ -132,7 +132,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:42 GMT
+  recorded_at: Wed, 05 Apr 2017 15:23:58 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
@@ -148,7 +148,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:44 GMT
+      - Wed, 05 Apr 2017 15:23:49 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -161,7 +161,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:43 GMT
+  recorded_at: Wed, 05 Apr 2017 15:23:59 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/nonexistentac0a7f8c2faac49775a6.png
@@ -181,16 +181,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 25 Jan 2017 17:40:43 GMT
+      - Wed, 05 Apr 2017 15:23:48 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/nonexistentac0a7f8c2faac49775a6.png</Key><RequestId>A0FCBFD5A755DDD1</RequestId><HostId>aly98ShEql0ibSfsKiSWzp13H0jajh//5871bjSNUZEk+sOo1TJ9m3awb/IpywjWULfpUWch/TM=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/nonexistentac0a7f8c2faac49775a6.png</Key><RequestId>05C6F36C05CC7687</RequestId><HostId>Agw2CBVwqqyBNUnm5Hl13/4b6EXBllyQVhXdw6McOgy9Jnh2zN3tryenNpAMDFWib9ercaJ71sM=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:43 GMT
+  recorded_at: Wed, 05 Apr 2017 15:23:59 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -210,16 +210,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 25 Jan 2017 17:40:43 GMT
+      - Wed, 05 Apr 2017 15:23:49 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>E8B4870B679FB516</RequestId><HostId>mOcT04G6ggFh0GedugmAvtJxQpCwbldNZ4Bh2PNIPEDdxIZCaIy1Gq3tR90zH+ihntuOb3Hztu8=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>0E7FF03B094570E9</RequestId><HostId>dcxoBylDipAZJqDiXAprle/KPtv6fYqxw+lTTVaZ38xrtt/xjlRCKZgQQN4+dDERi9jy+Crb9Yg=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:44 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:00 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
@@ -235,7 +235,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:45 GMT
+      - Wed, 05 Apr 2017 15:23:51 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -250,7 +250,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:44 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:00 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/dogc0cc21d843b34e9afb52.png
@@ -272,9 +272,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:45 GMT
+      - Wed, 05 Apr 2017 15:23:51 GMT
       X-Amz-Version-Id:
-      - 3nJsdliHvFHepm01vGOZ0RVeb4Mh8meB
+      - Z3obwXYqaLpyimodZRmrRqaP1Y55Xq.b
       Etag:
       - '"9160eba6c235a365f87537a742b11586"'
       Content-Length:
@@ -285,20 +285,20 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:45 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:01 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
     body:
       encoding: UTF-8
-      string: '[{"filename":"dogc0cc21d843b34e9afb52.png","category":"image","size":17,"versionId":"3nJsdliHvFHepm01vGOZ0RVeb4Mh8meB"}]'
+      string: '[{"filename":"dogc0cc21d843b34e9afb52.png","category":"image","size":17,"versionId":"Z3obwXYqaLpyimodZRmrRqaP1Y55Xq.b"}]'
     headers:
       X-Amz-Meta-Abuse-Score:
       - '0'
       Expect:
       - 100-continue
       Content-Md5:
-      - Rn3SV1K9xux6Cdx0/N9oAA==
+      - kqZQnZKFHPQBw8J17hWDXg==
       Content-Length:
       - '120'
   response:
@@ -307,11 +307,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:46 GMT
+      - Wed, 05 Apr 2017 15:23:52 GMT
       X-Amz-Version-Id:
-      - NgLhClwWBa5yXst9Fz16mvclEceQTxps
+      - dzUbWa2srRGipfFKpRkKIYpVRm6bBzYv
       Etag:
-      - '"467dd25752bdc6ec7a09dc74fcdf6800"'
+      - '"92a6509d92851cf401c3c275ee15835e"'
       Content-Length:
       - '0'
       Server:
@@ -320,7 +320,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:45 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:01 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/nonexistentac0a7f8c2faac49775a6.png
@@ -340,16 +340,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 25 Jan 2017 17:40:45 GMT
+      - Wed, 05 Apr 2017 15:23:51 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/nonexistentac0a7f8c2faac49775a6.png</Key><RequestId>0B912D93B17AFF04</RequestId><HostId>UG7YA/8GhAju/KRJfmolEYQLuJbg+bpqFPCuYMbv/NrfEbcn3CbE8MH3cGj6mup8B2LWDggWTko=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/nonexistentac0a7f8c2faac49775a6.png</Key><RequestId>892EEF463CCD6FDD</RequestId><HostId>jdDa98t2Os+MuK+MqyhPyJfFJV0696RflkErnqLrZ0ZVHLuMWB/5gneE3OxePvOmMecwczPk000=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:46 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:02 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -365,15 +365,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:47 GMT
+      - Wed, 05 Apr 2017 15:23:52 GMT
       Last-Modified:
-      - Wed, 25 Jan 2017 17:40:46 GMT
+      - Wed, 05 Apr 2017 15:23:52 GMT
       Etag:
-      - '"467dd25752bdc6ec7a09dc74fcdf6800"'
+      - '"92a6509d92851cf401c3c275ee15835e"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - NgLhClwWBa5yXst9Fz16mvclEceQTxps
+      - dzUbWa2srRGipfFKpRkKIYpVRm6bBzYv
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -384,9 +384,9 @@ http_interactions:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: '[{"filename":"dogc0cc21d843b34e9afb52.png","category":"image","size":17,"versionId":"3nJsdliHvFHepm01vGOZ0RVeb4Mh8meB"}]'
+      string: '[{"filename":"dogc0cc21d843b34e9afb52.png","category":"image","size":17,"versionId":"Z3obwXYqaLpyimodZRmrRqaP1Y55Xq.b"}]'
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:46 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:02 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -408,9 +408,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:47 GMT
+      - Wed, 05 Apr 2017 15:23:53 GMT
       X-Amz-Version-Id:
-      - raCPgvn9C_DPMZIuElhY_7LS4JQZNNxr
+      - c2jX4_kQi.XwIqIYa.gjb1.9vKO8n_JM
       Etag:
       - '"d751713988987e9331980363e24189ce"'
       Content-Length:
@@ -421,7 +421,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:47 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:03 GMT
 - request:
     method: delete
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/dogc0cc21d843b34e9afb52.png
@@ -437,9 +437,9 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:48 GMT
+      - Wed, 05 Apr 2017 15:23:53 GMT
       X-Amz-Version-Id:
-      - AqlcU4gAle8Ql4lOl9uYOAxy_GykHKho
+      - bNfngPiYZL6G8dP1MClrq9Z_bresh3sY
       X-Amz-Delete-Marker:
       - 'true'
       Server:
@@ -448,7 +448,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:47 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:03 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
@@ -464,7 +464,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:48 GMT
+      - Wed, 05 Apr 2017 15:23:54 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -475,9 +475,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>raCPgvn9C_DPMZIuElhY_7LS4JQZNNxr</VersionId><IsLatest>true</IsLatest><LastModified>2017-01-25T17:40:47.000Z</LastModified><ETag>&quot;d751713988987e9331980363e24189ce&quot;</ETag><Size>2</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>NgLhClwWBa5yXst9Fz16mvclEceQTxps</VersionId><IsLatest>false</IsLatest><LastModified>2017-01-25T17:40:46.000Z</LastModified><ETag>&quot;467dd25752bdc6ec7a09dc74fcdf6800&quot;</ETag><Size>120</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>c2jX4_kQi.XwIqIYa.gjb1.9vKO8n_JM</VersionId><IsLatest>true</IsLatest><LastModified>2017-04-05T15:23:53.000Z</LastModified><ETag>&quot;d751713988987e9331980363e24189ce&quot;</ETag><Size>2</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>dzUbWa2srRGipfFKpRkKIYpVRm6bBzYv</VersionId><IsLatest>false</IsLatest><LastModified>2017-04-05T15:23:52.000Z</LastModified><ETag>&quot;92a6509d92851cf401c3c275ee15835e&quot;</ETag><Size>120</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:47 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:04 GMT
 - request:
     method: post
     uri: https://cdo-v3-files.s3.amazonaws.com/?delete
@@ -487,11 +487,11 @@ http_interactions:
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
           <Object>
             <Key>files_test/1/1/manifest.json</Key>
-            <VersionId>raCPgvn9C_DPMZIuElhY_7LS4JQZNNxr</VersionId>
+            <VersionId>c2jX4_kQi.XwIqIYa.gjb1.9vKO8n_JM</VersionId>
           </Object>
           <Object>
             <Key>files_test/1/1/manifest.json</Key>
-            <VersionId>NgLhClwWBa5yXst9Fz16mvclEceQTxps</VersionId>
+            <VersionId>dzUbWa2srRGipfFKpRkKIYpVRm6bBzYv</VersionId>
           </Object>
           <Quiet>true</Quiet>
         </Delete>
@@ -499,7 +499,7 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - TiAomOpCxt44Gmej0vYW/A==
+      - iufmkJs5Zbr9KWhiPl423g==
       Content-Length:
       - '343'
   response:
@@ -508,11 +508,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Jan 2017 17:40:49 GMT
-      Connection:
-      - close
-      Content-Type:
-      - application/xml
+      - Wed, 05 Apr 2017 15:23:54 GMT
       Transfer-Encoding:
       - chunked
       Server:
@@ -523,7 +519,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:48 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:04 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -543,14 +539,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 25 Jan 2017 17:40:48 GMT
+      - Wed, 05 Apr 2017 15:23:53 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>D240574E217FDA2D</RequestId><HostId>iFjT+mFvSCvtc2ip124EORfrnrmqZ6c2jhD51vJyKWeQcLrg1FRsoJ8FDnf5kFg1w5eeQg0XiPg=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>411B3EE353DAEDB0</RequestId><HostId>Aqvt3+4iwHqFvnOrP/tcI8J23XDBaFm8euyfqUAV2OBO3Xmmtu/ckwPlmI5H6ZYa9jt97yV7njg=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 25 Jan 2017 17:40:48 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:05 GMT
 recorded_with: VCR 3.0.3

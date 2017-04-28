@@ -69,7 +69,7 @@ describe Cdo::GoogleCredentials do
         :assume_role_with_web_identity,
         credentials: credentials
       )
-      @system = Object.any_instance.stubs(:system).with { |x| x.match /aws configure set / }
+      @system = Object.any_instance.stubs(:system).with {|x| x.match /aws configure set /}
       @oauth_default = Google::Auth.stubs(:get_application_default).returns(oauth)
     end
 
@@ -87,8 +87,8 @@ describe Cdo::GoogleCredentials do
       config[:client].stub_responses(
         :assume_role_with_web_identity,
         [
-          {credentials: credentials.dup.tap{|c| c[:expiration] = 1.hour.from_now}},
-          {credentials: credentials.dup.tap{|c| c[:expiration] = 2.hours.from_now}}
+          {credentials: credentials.dup.tap {|c| c[:expiration] = 1.hour.from_now}},
+          {credentials: credentials.dup.tap {|c| c[:expiration] = 2.hours.from_now}}
         ]
       )
       service = Aws::STS::Client.new

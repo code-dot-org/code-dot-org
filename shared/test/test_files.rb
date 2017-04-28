@@ -89,6 +89,38 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_escaping_insensitivity
+    filename = @api.randomize_filename('has space.html')
+    escaped_filename = URI.escape(filename)
+    filename2 = @api.randomize_filename('another has spaces.html')
+    escaped_filename2 = URI.escape(filename2)
+    delete_all_file_versions(filename)
+    delete_all_file_versions(escaped_filename)
+    delete_all_file_versions(filename2)
+    delete_all_file_versions(escaped_filename2)
+    delete_all_manifest_versions
+
+    post_file_data(@api, filename, 'stub-contents', 'test/html')
+    assert successful?
+
+    @api.get_object(escaped_filename)
+    assert successful?
+
+    @api.delete_object(escaped_filename)
+    assert successful?
+
+    post_file_data(@api, escaped_filename2, 'stub-contents-2', 'test/html')
+    assert successful?
+
+    @api.get_object(escaped_filename2)
+    assert successful?
+
+    @api.delete_object(escaped_filename2)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_case_insensitivity
     filename = @api.randomize_filename('casesensitive.PNG')
     different_case_filename = filename.gsub(/PNG$/, 'png')
@@ -200,11 +232,86 @@ class FilesTest < FilesApiTestBase
     assert_equal [], file_infos['files']
   end
 
+  def test_thumbnail
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-dog-contents'
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+  end
+
+  def test_metadata_auth
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+    other_body = 'stub-other-contents'
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+
+      # non-owner can view
+      assert_equal thumbnail_body, non_owner_api.get_object(thumbnail_filename)
+
+      # non-owner cannot put
+      non_owner_api.put_object(thumbnail_filename, other_body)
+      refute successful?
+
+      # non-owner cannot delete
+      non_owner_api.delete_object(thumbnail_filename)
+      refute successful?
+    end
+
+    # file contents has not changed
+    assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+  end
+
+  def test_bogus_metadata
+    bogus_metadata_filename = '.metadata/bogus.png'
+    bogus_metadata_body = 'stub-bogus-metadata-contents'
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+
+    @api.put_object(bogus_metadata_filename, bogus_metadata_body)
+    assert bad_request?
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+
+    @api.delete_object(bogus_metadata_filename)
+    assert bad_request?
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+  end
+
   private
 
   def post_file(api, uploaded_file)
-    body = { files: [uploaded_file] }
-    headers = { 'CONTENT_TYPE' => 'multipart/form-data' }
+    body = {files: [uploaded_file]}
+    headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 

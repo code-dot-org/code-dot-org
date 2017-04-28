@@ -1,0 +1,6 @@
+name 'courseE_multi_maze_predict1'
+question 'This code uses a new block. What do you think would happen if you pressed \'Run\'?'
+wrong 'Nothing. The bird will not move at all.', feedback: 'Incorrect. Putting the \'move forward\' block inside the \'repeat\' block will cause the bird to move forward three times.'
+right 'The bird will move forward three times, turn, then move forward three more times, making it to the pig!', feedback: 'Correct!'
+wrong 'The bird will move forward, then turn and crash into a wall.', feedback: 'Incorrect. Putting the \'move forward\' block inside the \'repeat\' block will cause the bird to move forward three times.'
+wrong 'I don\'t know.', feedback: 'Putting the \'move forward\' block inside the \'repeat\' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'

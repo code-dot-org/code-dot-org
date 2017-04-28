@@ -327,7 +327,7 @@ class TablesTest < Minitest::Test
     assert_equal ['table1', 'table2'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     # Now add a data that has no records (but should have metadata)
-    populate_table({ 'new_table' => [] }, false)
+    populate_table({'new_table' => []}, false)
     assert_equal ['table1', 'table2', 'new_table'], TABLE_TYPE.table_names(decrypted_channel_id)
 
     delete_channel
@@ -335,14 +335,14 @@ class TablesTest < Minitest::Test
 
   def test_metadata_generate_column_info
     records = [
-      { "id" => 1, "col1" => 1, "col2" => 2 }
+      {"id" => 1, "col1" => 1, "col2" => 2}
     ]
     expected = ["col1", "col2"]
     assert_equal expected, TableMetadata.generate_column_list(records)
 
     records = [
-      { "id" => 1, "col1" => 1, "col2" => 2 },
-      { "id" => 2, "col2" => 3, "col3" => 4 }
+      {"id" => 1, "col1" => 1, "col2" => 2},
+      {"id" => 2, "col2" => 3, "col3" => 4}
     ]
     expected = ["col1", "col2", "col3"]
     assert_equal expected, TableMetadata.generate_column_list(records)

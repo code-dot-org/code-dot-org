@@ -6,7 +6,7 @@
   "user_id": 285,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,13 +22,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "1",
+    "start_direction": "2",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "These blocks are in the wrong order. Can you fix them?",
     "markdown_instructions": "*\"Help me collect each bit of treasure!\"*\r\n\r\nThese blocks are in the wrong order. Can you fix them?",
-    "ideal": "10",
+    "ideal": "9",
     "instructions_important": "false",
     "min_collected": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Where does this program go wrong?\\n\\n- Does it work at the first step?\\n- Does it work at the second step? \\n- Where do things go wrong?\",\"hint_id\":\"courseC_collector_prog5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e77b78d5953222469af5a3e832adb14/courseC_collector_prog5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.\",\"hint_id\":\"courseC_collector_prog5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/28bcbdbc7241b4953d89560c561f8ced/courseC_collector_prog5.mp3\"}]",
@@ -49,28 +49,24 @@
             <block type="maze_move">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                <block type="collector_collect">
                   <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnRight</title>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
                       <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                        <block type="collector_collect">
                           <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveForward</title>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
                               <next>
                                 <block type="maze_move">
                                   <title name="DIR">moveForward</title>
                                   <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnLeft</title>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="collector_collect">
-                                          <next>
-                                            <block type="collector_collect"/>
-                                          </next>
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
                                         </block>
                                       </next>
                                     </block>
@@ -102,7 +98,7 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
         <block type="collector_collect"/>
       </xml>
@@ -126,17 +122,12 @@
                             <block type="maze_move">
                               <title name="DIR">moveForward</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
+                                <block type="collector_collect">
                                   <next>
-                                    <block type="collector_collect">
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="maze_move">
-                                          <title name="DIR">moveForward</title>
-                                          <next>
-                                            <block type="collector_collect"/>
-                                          </next>
-                                        </block>
+                                        <block type="collector_collect"/>
                                       </next>
                                     </block>
                                   </next>

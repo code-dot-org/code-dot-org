@@ -13,8 +13,7 @@ import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';
 import {ConnectedWatchers} from '../../../templates/watchers/Watchers';
-import PaneHeader from '../../../templates/PaneHeader';
-const {PaneSection, PaneButton} = PaneHeader;
+import PaneHeader, {PaneSection, PaneButton} from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
 import {setStepSpeed} from '../../../redux/runState';
@@ -82,6 +81,9 @@ var styles = {
       cursor: 'pointer',
       color: 'white'
     }
+  },
+  hidden: {
+    display: 'none'
   }
 };
 
@@ -121,10 +123,17 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersHidden: false,
       open: this.props.isOpen,
       openedHeight: 120,
+      windowWidth: $(window).width()
     };
   },
 
+  handleWindowResize() {
+    this.setState({ windowWidth: $(window).width() });
+  },
+
   componentDidMount() {
+    window.addEventListener('resize', this.handleWindowResize);
+
     this.props.setStepSpeed(this.props.stepSpeed);
     if (this.props.isOpen) {
       this.slideOpen();
@@ -396,7 +405,10 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
           style={styles.debugAreaHeader}
         >
           <span
-            style={styles.noUserSelect}
+            style={[
+              this.state.windowWidth <= 1275 && !this.state.watchersHidden && styles.hidden,
+              styles.noUserSelect
+            ]}
             className="header-text"
           >
             {i18n.debugConsoleHeader()}
@@ -502,10 +514,10 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
 export default connect(
   (state) => ({
-    debugButtons: state.pageConstants.showDebugButtons,
-    debugConsole: state.pageConstants.showDebugConsole,
-    debugWatch: state.pageConstants.showDebugWatch,
-    debugSlider: state.pageConstants.showDebugSlider,
+    debugButtons: !!state.pageConstants.showDebugButtons,
+    debugConsole: !!state.pageConstants.showDebugConsole,
+    debugWatch: !!state.pageConstants.showDebugWatch,
+    debugSlider: !!state.pageConstants.showDebugSlider,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     stepSpeed: state.runState.stepSpeed,
     isOpen: isOpen(state),

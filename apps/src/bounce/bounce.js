@@ -17,12 +17,12 @@ var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
+import {getStore} from '../redux';
 var KeyCodes = constants.KeyCodes;
 
 var SquareType = tiles.SquareType;
 
-var ResultType = studioApp.ResultType;
-var TestResults = studioApp.TestResults;
+import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
 
@@ -59,7 +59,7 @@ var level;
 var skin;
 
 //TODO: Make configurable.
-studioApp.setCheckForEmptyBlocks(true);
+studioApp().setCheckForEmptyBlocks(true);
 
 // Default Scalings
 Bounce.scale = {
@@ -638,9 +638,9 @@ Bounce.onMouseUp = function (e) {
  * Initialize Blockly and the Bounce app.  Called on page load.
  */
 Bounce.init = function (config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  // replace studioApp() methods with our own
+  studioApp().reset = this.reset.bind(this);
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   Bounce.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -651,12 +651,12 @@ Bounce.init = function (config) {
   window.addEventListener("keyup", Bounce.onKey, false);
 
   config.loadAudio = function () {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp().loadAudio(skin.winSound, 'win');
+    studioApp().loadAudio(skin.startSound, 'start');
+    studioApp().loadAudio(skin.failureSound, 'failure');
 
     for (var sound in skin.customSounds) {
-      studioApp.loadAudio(skin.customSounds[sound].urls, sound);
+      studioApp().loadAudio(skin.customSounds[sound].urls, sound);
     }
   };
 
@@ -744,22 +744,22 @@ Bounce.init = function (config) {
 
   config.makeString = bounceMsg.makeYourOwn();
   config.makeUrl = "http://code.org/bounce";
-  config.makeImage = studioApp.assetUrl('media/promo.png');
+  config.makeImage = studioApp().assetUrl('media/promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
   var onMount = function () {
-    studioApp.init(config);
+    studioApp().init(config);
 
     var finishButton = document.getElementById('finishButton');
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
 
-  studioApp.setPageConstants(config);
+  studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<BounceVisualizationColumn/>}
         onMount={onMount}
@@ -809,7 +809,7 @@ Bounce.moveBallOffscreen = function (i) {
  */
 Bounce.playSoundAndResetBall = function (i) {
   Bounce.resetBall(i, { randomPosition: true } );
-  studioApp.playAudio('ballstart');
+  studioApp().playAudio('ballstart');
 };
 
 /**
@@ -977,13 +977,13 @@ Bounce.runButtonClick = function () {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  studioApp.toggleRunReset('reset');
+  studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioApp.reset(false);
-  studioApp.attempts++;
+  studioApp().reset(false);
+  studioApp().attempts++;
   Bounce.execute();
 
-  if (level.freePlay && !studioApp.hideSource) {
+  if (level.freePlay && !studioApp().hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -995,11 +995,11 @@ Bounce.runButtonClick = function () {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
   if (!Bounce.waitingForReport) {
-    studioApp.displayFeedback({
+    studioApp().displayFeedback({
       app: 'bounce', //XXX
       skin: skin.id,
       feedbackType: Bounce.testResults,
@@ -1023,7 +1023,7 @@ var displayFeedback = function () {
 Bounce.onReportComplete = function (response) {
   Bounce.response = response;
   Bounce.waitingForReport = false;
-  studioApp.onReportComplete(response);
+  studioApp().onReportComplete(response);
   displayFeedback();
 };
 
@@ -1050,8 +1050,8 @@ Bounce.execute = function () {
     whenGameStarts: {code: generator('when_run')}
   };
 
-  studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
-  studioApp.reset(false);
+  studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
+  studioApp().reset(false);
 
   codegen.evalWithEvents({Bounce: api}, events).forEach(hook => {
     Bounce[hook.name] = hook.func;
@@ -1078,13 +1078,13 @@ Bounce.onPuzzleComplete = function () {
   if (level.freePlay) {
     Bounce.testResults = TestResults.FREE_PLAY;
   } else {
-    Bounce.testResults = studioApp.getTestResults(levelComplete);
+    Bounce.testResults = studioApp().getTestResults(levelComplete);
   }
 
   if (Bounce.testResults >= TestResults.FREE_PLAY) {
-    studioApp.playAudio('win');
+    studioApp().playAudio('win');
   } else {
-    studioApp.playAudio('failure');
+    studioApp().playAudio('failure');
   }
 
   if (level.editCode) {
@@ -1100,7 +1100,7 @@ Bounce.onPuzzleComplete = function () {
 
   const sendReport = function () {
     // Report result to server.
-    studioApp.report({
+    studioApp().report({
       app: 'bounce',
       level: level.id,
       result: Bounce.result === ResultType.SUCCESS,
@@ -1318,7 +1318,7 @@ Bounce.allFinishesComplete = function () {
     }
     if (playSound && finished !== Bounce.paddleFinishCount) {
       // Play a sound unless we've hit the last flag
-      studioApp.playAudio('flag');
+      studioApp().playAudio('flag');
     }
     return (finished === Bounce.paddleFinishCount);
   }

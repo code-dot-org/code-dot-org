@@ -15,7 +15,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @section = create :section, user_id: @teacher.id
-    Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
+    Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
     @custom_script = create(:script, name: 'laurel', hideable_stages: true)
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
@@ -128,8 +128,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
-    netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
+    netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
+    netsim_script_level = allthethings_script.script_levels.find {|script_level| script_level.level_id == netsim_level.id}
     get :show, params: {
       script_id: allthethings_script,
       stage_position: netsim_script_level.stage.relative_position,
@@ -1136,6 +1136,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'button', I18n.t('teacher.panel.example')
   end
 
+  test "logged out can not view teacher markdown" do
+    refute can_view_teacher_markdown?
+  end
+
+  test "can view CSF teacher markdown as non-authorized teacher" do
+    stubs(:current_user).returns(@teacher)
+    @script.stubs(:k5_course?).returns(true)
+    assert can_view_teacher_markdown?
+  end
+
+  test "students can not view CSF teacher markdown" do
+    stubs(:current_user).returns(@student)
+    @script.stubs(:k5_course?).returns(true)
+    refute can_view_teacher_markdown?
+  end
+
   test "should present single available level for single-level scriptlevels" do
     level = create :maze
     get_show_script_level_page(create(:script_level, levels: [level]))
@@ -1232,7 +1248,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   def put_student_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
-    Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+    Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
   end
 
@@ -1470,5 +1486,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 403
 
     assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
+  end
+
+  test "should redirect when script has a redirect_to property" do
+    script = create :script
+    new_script = create :script
+    create(:script_level, script: script)
+    create(:script_level, script: script)
+    create(:script_level, script: new_script)
+    script.update(redirect_to: new_script.name)
+
+    get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
+    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
   end
 end

@@ -32,6 +32,8 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
+  has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
+  has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
 
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
@@ -48,6 +50,9 @@ class Pd::Enrollment < ActiveRecord::Base
 
   validate :validate_school_name, unless: :created_before_school_info?
   validates_presence_of :school_info, unless: :created_before_school_info?
+
+  before_validation :autoupdate_user_field
+  after_create :enroll_in_corresponding_online_learning
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -77,6 +82,13 @@ class Pd::Enrollment < ActiveRecord::Base
     joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
+  scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
+  scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
+  scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
+
+  # Any enrollment with attendance, for an ended workshop, has a survey
+  scope :with_surveys, -> {for_ended_workshops.attended}
+
   def has_user?
     user_id
   end
@@ -97,18 +109,23 @@ class Pd::Enrollment < ActiveRecord::Base
   # @return [Enumerable<Pd::Enrollment>]
   def self.filter_for_survey_completion(enrollments, select_completed = true)
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
-      enrollments.is_a?(Enumerable) && enrollments.all?{|e| e.is_a?(Pd::Enrollment)}
+      enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
     ids_with_processed_surveys, ids_without_processed_surveys =
-      enrollments.partition{|e| e.completed_survey_id.present?}.map{|list| list.map(&:id)}
+      enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
 
-    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: ids_without_processed_surveys).map(:id)
+    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
+      kind: 'PdWorkshopSurvey',
+      source_id: ids_without_processed_surveys
+    ).map do |survey|
+      survey[:source_id].to_i
+    end
 
     filtered_ids = select_completed ?
       ids_with_processed_surveys + ids_with_unprocessed_surveys :
       ids_without_processed_surveys - ids_with_unprocessed_surveys
 
-    enrollments.select{|e| filtered_ids.include? e.id}
+    enrollments.select {|e| filtered_ids.include? e.id}
   end
 
   before_create :assign_code
@@ -182,6 +199,16 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   protected
+
+  def autoupdate_user_field
+    self.user = user || resolve_user
+  end
+
+  def enroll_in_corresponding_online_learning
+    if user && workshop.associated_online_course
+      Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
+    end
+  end
 
   def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)

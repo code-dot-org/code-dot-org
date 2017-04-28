@@ -818,6 +818,7 @@
   "whenUpTooltip": "Kia pēhia te kī pere runga, whakatutukihia ngā hohenga kei raro iho nei.",
   "winMessage": "Kua wini koe!",
   "witch": "witi",
+  "withColor": "with color",
   "wizard": "ruānuku",
   "yes": "Āe",
   "zombie": "kairoro",
@@ -858,6 +859,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Me whiwhi kia 20 ngā Droid Kiore. Whakamahia te tono \"add a Mouse Droid\" i te takahanga \"when get Mouse Droid\" kia tāpiritia kia rua, neke atu rānei ia wā ka whiwhi tētahi.",
   "failedMultiplyCharactersTimeoutGotSome": "Koia kei a koe! Kua whakauru koe i te waehere hei hanga i nga Droid Kiore. Kei a koe te tikanga, kia neke ki te kēmu whai ake, kia hoki anō kia whiwhi koe i ngā Droid Kiore 20. Kia ngāwari ake te mahi, hangaia te maha. (Kia tere ake te neke, pēhia kia mau tonu ngā pātuhi neke i te papapātuhi, mata rānei.)",
   "failedChangeSettingTimeout": "Tikina kia toru ngā Rebel Pilots kia kōkiri ki mua.",
-  "failedChangeSettingSettings": "Whakamaua tō kēmu kia tīna. Kia tutuki tēnei wahanga, me huri te droid, tautuhia hoki te tere.",
-  "withColor": "with color"
+  "failedChangeSettingSettings": "Whakamaua tō kēmu kia tīna. Kia tutuki tēnei wahanga, me huri te droid, tautuhia hoki te tere."
 }

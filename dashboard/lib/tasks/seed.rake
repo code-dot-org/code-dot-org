@@ -28,10 +28,10 @@ namespace :seed do
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
     begin
-      custom_scripts = SCRIPTS_GLOB.select { |script| File.mtime(script) > scripts_seeded_mtime }
+      custom_scripts = SCRIPTS_GLOB.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts)
-      Script.update_i18n(custom_i18n)
+      Script.merge_and_write_i18n(custom_i18n)
     rescue
       rm SEEDED # if we failed to do any of that stuff we didn't seed anything, did we
       raise
@@ -50,7 +50,7 @@ namespace :seed do
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti LevelGroup)
-  DSLS_GLOB = DSL_TYPES.map{|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort }.flatten
+  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
@@ -62,7 +62,7 @@ namespace :seed do
       i18n_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
-        dsl_class = DSL_TYPES.detect{|type| filename.include?(".#{type.underscore}") }.try(:constantize)
+        dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
@@ -196,7 +196,7 @@ namespace :seed do
       if level_sources_count > MAX_LEVEL_SOURCES
         puts "...skipped, too many possible solutions"
       else
-        times = Benchmark.measure { level.calculate_ideal_level_source_id }
+        times = Benchmark.measure {level.calculate_ideal_level_source_id}
         puts "... analyzed #{level_sources_count} in #{times.real.round(2)}s"
       end
     end
@@ -223,7 +223,7 @@ namespace :seed do
   end
 
   task :import_users, [:file] => :environment do |_t, args|
-    CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: "\t", headers: true}).each do |row|
       User.create!(
         provider: User::PROVIDER_MANUAL,
         name: row['Name'],
@@ -237,7 +237,7 @@ namespace :seed do
 
   def import_prize_from_text(file, provider_id, col_sep)
     Rails.logger.info "Importing prize codes from: " + file + " for provider id " + provider_id.to_s
-    CSV.read(file, { col_sep: col_sep, headers: false }).each do |row|
+    CSV.read(file, {col_sep: col_sep, headers: false}).each do |row|
       if row[0].present?
         Prize.create!(prize_provider_id: provider_id, code: row[0])
       end
@@ -278,7 +278,7 @@ namespace :seed do
 
   task :import_donorschoose_750, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher prize codes from: " + args[:file] + " for provider id 8"
-    CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: ",", headers: true}).each do |row|
       if row['Gift Code'].present?
         TeacherPrize.create!(prize_provider_id: 8, code: row['Gift Code'])
       end
@@ -287,7 +287,7 @@ namespace :seed do
 
   task :import_donorschoose_250, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher bonus prize codes from: " + args[:file] + " for provider id 9"
-    CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: ",", headers: true}).each do |row|
       if row['Gift Code'].present?
         TeacherBonusPrize.create!(prize_provider_id: 9, code: row['Gift Code'])
       end

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":24},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
@@ -14,7 +14,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "free_play": "false",
@@ -32,7 +32,7 @@
       "upButton"
     ],
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
+    "timeout_after_when_run": "true",
     "markdown_instructions": "We can make sentences more interesting by mixing pieces of text with variables.\r\n\r\nInsert the variable `color` into the middle of a sentence by putting it into the empty slot in the `join` block.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
@@ -46,6 +46,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -56,27 +58,27 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" deletable="false" movable="false">
               <title name="VAR">color</title>
               <value name="VALUE">
-                <block type="text">
+                <block type="text" deletable="false" movable="false">
                   <title name="TEXT">blue</title>
                 </block>
               </value>
               <next>
-                <block type="studio_saySpriteParams" inline="true">
+                <block type="studio_saySpriteParams" inline="true" deletable="false" movable="false">
                   <title name="SPRITE">0</title>
                   <value name="TEXT">
-                    <block type="text_join_simple" inline="false" inputcount="3">
+                    <block type="text_join_simple" inline="false" deletable="false" movable="false" inputcount="3">
                       <value name="ADD0">
-                        <block type="text">
+                        <block type="text" deletable="false">
                           <title name="TEXT">Today, I'm wearing my </title>
                         </block>
                       </value>
                       <value name="ADD2">
-                        <block type="text">
+                        <block type="text" deletable="false" movable="false">
                           <title name="TEXT"> jersey!</title>
                         </block>
                       </value>
@@ -87,7 +89,7 @@
             </block>
           </next>
         </block>
-        <block type="variables_get" y="20px" x="250px">
+        <block type="variables_get">
           <title name="VAR">color</title>
         </block>
       </xml>
@@ -283,10 +285,42 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
+        <category name="Variables ">
+          <block type="variables_set" inline="false">
+            <title name="VAR">color</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">color</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_saySpriteParams" inline="true" deletable="false" movable="false">
+          <title name="SPRITE">0</title>
+          <value name="TEXT">
+            <block type="text_join_simple" inline="false" deletable="false" movable="false" inputcount="3">
+              <value name="ADD0">
+                <block type="text" deletable="false" movable="false">
+                  <title name="TEXT">Today, I'm wearing my </title>
+                </block>
+              </value>
+              <value name="ADD1">
+                <block type="variables_get">
+                  <title name="VAR">color</title>
+                </block>
+              </value>
+              <value name="ADD2">
+                <block type="text" deletable="false" movable="false">
+                  <title name="TEXT"> jersey!</title>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run">

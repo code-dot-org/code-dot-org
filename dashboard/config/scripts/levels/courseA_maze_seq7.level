@@ -41,7 +41,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveWest" movable="false">
+            <block type="maze_moveWest">
               <next>
                 <block type="maze_moveNorth" deletable="false" editable="false">
                   <next>

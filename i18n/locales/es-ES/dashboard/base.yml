@@ -12,6 +12,7 @@ es:
     attributes:
       user:
         name: 'Nombre a mostrar'
+        name_example: 'Nombre para mostrar <br/> (codificador fresco o Jane S.)'
         email: 'Correo electrónico'
         username: 'nombre de usuario'
         password: 'contraseña'
@@ -78,6 +79,7 @@ es:
     forgot_password: '¿Olvidaste tu contraseña?'
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} estudiantes ya se han registrado.'
     teacher_count: '%{count} profesores ya se han registrado.'
@@ -110,9 +112,31 @@ es:
     user_type_student: "estudiante"
     field_is_required: "es requerido"
     accept_terms: "Debes estar de acuerdo para crear una cuenta"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Otros'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: '¿Ya tienes una cuenta? Inicia sesión'
     login: 'Correo electrónico'
+    login_username: 'Email or Username'
     password: 'Contraseña'
     remember: 'Recordarme'
     submit: 'Iniciar Sesión'
@@ -144,6 +168,14 @@ es:
     subject: 'Unirme a mi clase (en Code.org)'
     body: |
       Haz clic en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "profesor"): %{link} Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia sencilla y guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombis! :-) %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Invitación enviada'
     added_teacher: '%{name} añadido como tu profesor'
@@ -157,8 +189,6 @@ es:
       blank_code: "Introduce un código de sección"
       cant_join_own_section: "Lo sentimos, no te puedes unir a tu propia sección."
     mail:
-      invite_student:
-        subject: "Únete a una clase con %{teacher_name} en Code.org!"
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como tu estudiante.'
   reports:
@@ -357,21 +387,24 @@ es:
     announcement_petition: "Como profesor, está liderando el camino de un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática. Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana, los líderes de la educación, los 28 gobernadores y CEO's de las compañías más grandes de América se unieron en una carta abierta pidiendo al congreso de los Estados Unidos financiar la educación en informática para K-12."
     announcement_petition_button: "Agrega tu nombre"
     announcement_go_beyond_button: "Ve más allá"
+    announcement_apply_now: "Apply now"
     announcement_all: "Manténte al día con las nuevas características y actualizaciones en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver anuncios anteriores.</a>"
     announcement_hoc_launch: "Miles de educadores en más de 180 países comenzarán a enseñar informática durante la hora del código del 5 al 11 de diciembre. Nosotros estamos contando contigo para que nos ayudes a llegar a más estudiantes que nunca antes. <a href='%{signup_url}' target='_blank'> Registre su evento hora del código</a> y haga saber a otros profesores que cualquiera puede empezar a enseñar informática."
     announcement_mc_launch: "¡Uno de nuestros más populares tutoriales tiene ahora una secuela! El totalmente nuevo Diseñador de Hora del código de Minecraft le permite a los estudiantes hacer las reglas del mundo de Minecraft. Ellos pueden crear una experiencia Minecraft totalmente única, y luego compartirla con amigos o jugarla en sus teléfonos. Hazlo con tu clase para la Hora del código."
     announcement_how_code_studio: "No necesita ninguna experiencia para empezar a enseñar informática en el aula. Code.org ofrece plan de estudios, planificaciones, programas de aprendizaje profesional de alta calidad y toneladas de excelentes herramientas para todos los niveles&mdash; todo lo que necesita, sin costo. ¿Se pregunta dónde empezar? Descarga <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Ve mas allá de Hour of Code y explora las ciencias de la computación con tus estudiantes cada semana. Code.org ofrece currículum, planes de enseñanza, planes profesionales de aprendizaje, y toneladas de buenas herramientas para todos los niveles&mdash;y es todo gratis. :) No necesitas ninguna experiencia para empezar a enseñar ciencias de la computación en tu clase.<b>Encuentra el proximo paso que es correcto para tu clase.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Lo sentimos, pero no existe la sección %{new_section_code}. Introduce un código de sección diferente."
-    section_code_not_entered: "Por favor, provee el código de sección actual."
     section_code_cant_be_current_section: "La sección actual no puede ser la misma que la de la nueva sección."
     current_section_dne: "Lo sentimos, pero no existe la sección %{current_section_code}. Introduzca un código de sección diferente."
-    students_not_yours: "No puedes mover estudiantes de una sección que no te pertenece."
-    stay_enrolled_not_entered: "Por favor, proporcione stay_enrolled_in_current_section."
     student_ids_not_entered: "Por favor, proporcione los student_ids."
     student_not_found: "No se encontró uno o más estudiantes."
     all_students_must_be_in_current_section: "Todos los estudiantes actualmente deben estar inscritos en su sección."
@@ -428,6 +461,10 @@ es:
     upgrade:
       unsupported_message: "Su navegador no es compatible. Por favor, actualice su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una funcionalidad rota."
       link: "Aprende más"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Esto está tardando más tiempo de lo habitual...'
   try_reloading: 'Intenta volver a cargar la página'
   next_stage: '¡Finalizado! Sigue a la siguiente etapa'

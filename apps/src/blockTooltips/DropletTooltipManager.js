@@ -3,7 +3,8 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
-var dropletUtils = require('../dropletUtils');
+import {getAllAvailableDropletBlocks} from '../dropletUtils';
+import LegacyDialog from '../code-studio/LegacyDialog';
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -13,7 +14,7 @@ var dropletUtils = require('../dropletUtils');
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly, Dialog, appType) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly, appType) {
   /**
     * App type, ie 'applab' or 'gamelab' used to point to documentation.
     * @type {String}
@@ -74,7 +75,6 @@ function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocomplet
    */
   this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
 
-  this.Dialog = Dialog;
 }
 
 /**
@@ -99,7 +99,7 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
  * codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
-  var blocks = dropletUtils.getAllAvailableDropletBlocks(
+  var blocks = getAllAvailableDropletBlocks(
     this.dropletConfig,
     this.codeFunctions,
     this.autocompletePaletteApisOnly);
@@ -133,7 +133,7 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
   }
 
   $('.tooltipstered').tooltipster('hide');
-  var dialog = new this.Dialog({
+  var dialog = new LegacyDialog({
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')

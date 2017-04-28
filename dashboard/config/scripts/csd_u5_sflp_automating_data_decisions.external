@@ -1,0 +1,15 @@
+name 'CSD-U5-SFLP Automating Data Decisions'
+display_name 'Unit 5 Lesson 12 Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# The Internet - Data and Society: Lesson 12 - Automating Data Decisions
+
+## Background
+
+You'll see an example of how a computer could be used to complete essentially every step of the data problem solving process. You'll create rules, or an algorithm, that a computer could use to make a decision automatically.
+
+# Resources
+
+* [Automating Data Decisions](https://docs.google.com/document/d/171qhxBWGgePPCebKUOUq3VbAQVoQ8rBmTHxx1i5ZZ7U/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/171qhxBWGgePPCebKUOUq3VbAQVoQ8rBmTHxx1i5ZZ7U/export?format=pdf) | [DOCX](https://docs.google.com/document/d/171qhxBWGgePPCebKUOUq3VbAQVoQ8rBmTHxx1i5ZZ7U/export?format=doc))
+* [Test Case Ice Cream Survey Results](https://docs.google.com/spreadsheets/d/1-DZMUA06aCyfRHVBzv1b-uhKM_WJSObHOgFkOF0n-7s/edit?usp=sharing)
+MARKDOWN

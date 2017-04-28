@@ -141,7 +141,7 @@ Google ID: #{token_params['sub']}"
         access_key_id
         secret_access_key
         session_token
-      ).map{|x| ["aws_#{x}", @credentials.send(x)]}.
+      ).map {|x| ["aws_#{x}", @credentials.send(x)]}.
         to_h.
         merge(expiration: @expiration).each do |key, value|
         system("aws configure set #{key} #{value} --profile #{@profile}")

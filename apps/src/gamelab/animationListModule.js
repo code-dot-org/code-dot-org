@@ -229,11 +229,15 @@ export function isNameUnique(name, animationListProps) {
 function generateAnimationName(baseName, animationList) {
   let unavailableNumbers = [];
   // Match names with the form baseName_#
-  const re = new RegExp(`^${baseName}_(\\d+)$`);
   for (let animation in animationList) {
-    let match = re.exec(animationList[animation].name);
-    if (match !== null) {
-      unavailableNumbers.push(parseInt(match[1]));
+    let animationName = animationList[animation].name;
+    if (animationName.substring(0, baseName.length) === baseName) {
+      animationName = animationName.replace(baseName, '');
+      if (animationName[0] === '_') {
+        const brokenUpString = animationName.split('_');
+        const number = parseInt(brokenUpString.pop());
+        unavailableNumbers.push(number);
+      }
     }
   }
   unavailableNumbers.sort((a, b) => a - b);
@@ -293,7 +297,7 @@ export function setInitialAnimationList(serializedAnimationList) {
     for (let j = i + 1; j < numberAnimations; j++) {
       const otherKey = serializedAnimationList.orderedKeys[j];
       if (name === serializedAnimationList.propsByKey[otherKey].name) {
-        serializedAnimationList.propsByKey[key].name = generateAnimationName(name, serializedAnimationList.propsByKey);
+        serializedAnimationList.propsByKey[otherKey].name = generateAnimationName(name, serializedAnimationList.propsByKey);
       }
     }
   }

@@ -40,7 +40,7 @@ module UserHelpers
 
     # Increment the current maximum integer suffix. Though it may leave holes,
     # it is guaranteed to be (currently) unique.
-    suffix = similar_usernames.map{|n| n[prefix.length..-1]}.map(&:to_i).max + 1
+    suffix = similar_usernames.map {|n| n[prefix.length..-1]}.map(&:to_i).max + 1
     return "#{prefix}#{suffix}"
   end
 

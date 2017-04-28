@@ -5,6 +5,7 @@ bg,bg,bg,bg-BG,български,Bulgarian,TRUE,TRUE,bg,Bulgarian
 bn,bn,bn,bn-BD,বাংলা,Bengali,FALSE,FALSE,bn,Bengali
 bs,bs,bs,bs-BA,Bosanski,Bosnian,TRUE,FALSE,bs,Bosnian
 ca,ca,ca,ca-ES,Català,Catalan,TRUE,TRUE,ca,Catalan
+co,co,co,co-CO,Corsu,Corsican,FALSE,FALSE,co,Corsican
 cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech
 da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German
@@ -37,6 +38,7 @@ kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,FALSE,kk,Kazakh
 km,km,km,km-KH,ភាសាខ្មែរ,Khmer,FALSE,FALSE,km,Khmer
 ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean
 ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish
+ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,FALSE,FALSE,ky,Kyrgyz
 lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian
 mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori
@@ -62,6 +64,7 @@ sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic)
 sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish
 ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil
+te,te,te,te-IN,తెలుగు,Telugu,FALSE,FALSE,te,Telugu
 tg,tg,tg,tg-TJ,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik
 th,th,th,th-TH,ภาษาไทย,Thai,TRUE,FALSE,th,Thai
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish

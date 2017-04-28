@@ -330,7 +330,7 @@ fr:
         'C1_moveitmoveit_unplugged': 'Bouge, Bouge'
         'C1_bigevent_unplugged': 'Le Grand Evénement'
         'C1_getting_loopy': 'Tourner en rond'
-        'C1_pair_programming': 'Programmation à deux'
+        'C1_pair_programming': 'Programmation en Binôme'
         'C1_maze_intro_sequencing': 'Introduction au séquencement du labyrinthe'
         'C1_maze_debugging': 'Débogage du labyrinthe'
         'C1_bee_level_intro': 'Niveau abeille - Introduction'
@@ -356,7 +356,7 @@ fr:
         'C2_conditionals_with_cards': 'Instructions conditionnelles'
         'C2_binary_bracelets': 'Bracelets binaires'
         'C2_relay_programming': 'Programmation de relais'
-        'C2_paper_airplanes': 'Avions en papier'
+        'C2_paper_airplanes': 'Avions en Papier'
         'C2_digital_footprint': 'Ton empreinte numérique'
         'C2_digital_footprint_v2': 'Ton empreinte numérique'
         'C3_maze_level_4': 'Labyrinthe et boucles'
@@ -365,7 +365,7 @@ fr:
         'C3_bee_functions': 'Abeilles et fonctions'
         'C3_bee_conditionals': 'Abeilles et instructions conditionnelles'
         'C3_maze_conditionals': 'Labyrinthe : instructions conditionnelles'
-        'C3_artist_nested_loops': 'Boucles imbriquées'
+        'C3_artist_nested_loops': 'Boucles Imbriquées'
         'C3_farmer_while': 'Boucles « Tant que »'
         'C3_bee_nested_loops': 'Boucles imbriquées'
         'C3_bee_debugging': 'Abeilles et debugging'
@@ -396,9 +396,13 @@ fr:
         'C4_unplugged_forloops': 'Boucles « Pour »'
         'C4_unplugged_parameters': 'La composition de chansons avec des paramètres'
         'C4_unplugged_binary': 'Binaire'
+        'CSF_EF_cs_matters': 'Computer Science Matters'
+        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_unspotted_bugs': 'Unspotted Bugs'
+        'CSF_zuck_loops_short': 'Repeat Loops'
         'frozen_intro': 'Introduction à l''Heure de Code'
-        'frozen_loops': 'Introduction aux boucles'
-        'frozen_functions': 'Introduction aux fonctions'
+        'frozen_loops': 'Introduction aux Boucles'
+        'frozen_functions': 'Introduction aux Fonctions'
         'playlab_intro': 'Introduction au Labo de jeux'
         'playlab_events': 'Évènements du Labo de jeux'
         'playlab_repeat_forever': 'Répétition à l’infinie du Labo de jeux'
@@ -413,6 +417,11 @@ fr:
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
         'csd_gamelab_velocity': 'Velocity'
+        'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
+        'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
+        'csd_weblab_css_1': 'Intro to CSS - Part 1'
+        'csd_weblab_css_2': 'Intro to CSS - Part 2'
+        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -430,7 +439,7 @@ fr:
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'
         'csp_applab_variables_2': 'Introduction to Variables - Part 2'
-        'csp_applab_functions': 'Introduction aux fonctions'
+        'csp_applab_functions': 'Introduction aux Fonctions'
         'csp_applab_functions_parameters': 'Fonctions avec Paramètres'
         'csp_applab_loops': 'Boucles'
         'csp_applab_turtle': 'Turtle Programming'
@@ -555,7 +564,7 @@ fr:
         edit_add_parameter: "Clique sur » Modifier » pour ajouter un paramètre à ta fonction"
         add_and_drag_parameter: "Écris le nom de ton paramètre ici, clique sur «Ajouter», et glisse-le ensuite dans la définition de ta fonction."
         fill_in_actor: "Remplace les ??? par les nombres qui correspondent à chacun des acteurs (1, 2, et 3)"
-        repeat: "Mets des blocs à l'intérieur de la boucle pour répéter les commandes"
+        repeat: "Place des blocs à l'intérieur de la boucle pour répéter les commandes"
         if_bee_nectar: "Utilise le bloc « Si » pour décider si l'abeille doit obtenir du nectar ou non"
         if_else_bee: "Utilise le bloc «Si/Sinon» pour que l'abeille butine le nectar d'une fleur, ou fasse du miel si ce n'est pas une fleur"
         repeat_full_circle: "Entre le nombre de fois que le zombie doit se déplacer pour faire un cercle complet"

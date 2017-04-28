@@ -1,6 +1,7 @@
 ---
 title: Donate to Code.org
 require_https: true
+theme: responsive
 ---
 
 # Donate to Code.org

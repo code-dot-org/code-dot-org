@@ -1,6 +1,7 @@
 ---
 title: Newsroom
 nav: about_nav
+theme: responsive
 ---
 # Newsroom
 

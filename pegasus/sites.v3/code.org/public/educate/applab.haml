@@ -14,10 +14,10 @@ video_player: true
   .col-50
     %h2 Try the course that introduces App Lab
     - img_src =  CDO.code_org_url("/shared/images/courses/logo_cspunit3.jpg")
-    .courseblock-span6.courseblock-wide-large{style: "height: 363px;"}
+    .courseblock-span6.courseblock-wide-large{style: "height: 363px; max-width: 100%"}
       %a{:href=>CDO.studio_url("/s/csp3")}
         %img{src: img_src, style: "width: 100%"}
-        .courseblock-span5{style: "margin-left: 20px; margin-top: 20px;"}
+        .courseblock-span5{style: "padding: 0 20px 0 20px;"}
           %h3= I18n.t("csp3_name")
           %h4= I18n.t("cspunit3_gradelevel")
           .smalltext= I18n.t("cspunit3_shortdescription_congrats")
@@ -29,13 +29,13 @@ video_player: true
     = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4"
   .clear
   %h2 See how to use App Lab and build your own app with these 10 minute demos
-  .col-25{style: "padding-right: 10px;"}
+  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
     = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px;"}
+  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
     = view :display_video_thumbnail, id: "how_to_make_an_app", video_code: "tDnoxkOSfQw", play_button: 'center', download_path: "//videos.code.org/applab/how-to-make-an-app.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px;"}
+  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
     = view :display_video_thumbnail, id: "choose_adventure", video_code: "ZhgBSYKWL2A", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4", letterbox: 'false', play_button: 'center'
-  .col-25{style: "padding-right: 10px;"}
+  .col-25{style: "padding-right: 10px; margin-bottom: 20px;"}
     = view :display_video_thumbnail, id: "whack_e_moji", video_code: "WZVAA3ajZxc", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4", letterbox: 'false', play_button: 'center'
   .clear
 

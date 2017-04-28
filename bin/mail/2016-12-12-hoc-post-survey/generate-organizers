@@ -50,7 +50,7 @@ US_VALUES = {
 def us?(row)
   US_VALUES.each do |key, values|
     row_value = row[key.to_s]
-    return true if row_value && values.any? {|v| v.casecmp(row_value).zero? }
+    return true if row_value && values.any? {|v| v.casecmp(row_value).zero?}
   end
 
   false

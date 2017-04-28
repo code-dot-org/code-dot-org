@@ -30,9 +30,11 @@
     "instructions_important": "false",
     "ideal": "27",
     "markdown_instructions": "**Challenge:** Get the farmer to the pumpkin and collect all of the lettuce and corn along the way. ",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The farmer will reach the pumpkin at the very end of this puzzle, so using the `repeat until at pumpkin` block will be helpful.\",\"hint_id\":\"courseE_farmer_functions8b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/70265f73aaf046fb911b271317094e40/courseE_farmer_functions8b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Just like the last puzzle, think of a main path and side paths. Below is a picture where the main path is the yellow blocks and the side paths are the blue blocks.\\n\\n![](https://images.code.org/9b544ac0fca84eead7a0952286284c7b-image-1493151031070.6.10 Hint Drawing.png)\\n\\nBecause all of the side paths are to the left, you can use your function made from the last puzzle.\",\"hint_id\":\"courseE_farmer_functions8b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42dcd8ad971e4119977916f28160f24c/courseE_farmer_functions8b.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To finish this puzzle, use the following blocks.\\n\\nrepeat until at pumpkin\\n - while path ahead\\n    - move forward\\n    - harvest path\\n - turn right\\n \\nHarvest path references the function you made in the last puzzle.\",\"hint_id\":\"courseE_farmer_functions8b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6bb861dc234d3da9072fc18bde28390a/courseE_farmer_functions8b.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -44,42 +46,42 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" movable="false">
           <mutation/>
           <title name="NAME">harvest path</title>
           <statement name="STACK">
-            <block type="maze_if">
+            <block type="maze_if" movable="false">
               <title name="DIR">isPathLeft</title>
               <statement name="DO">
-                <block type="maze_turn">
+                <block type="maze_turn" movable="false">
                   <title name="DIR">turnLeft</title>
                   <next>
-                    <block type="maze_untilBlocked">
+                    <block type="maze_untilBlocked" movable="false">
                       <statement name="DO">
-                        <block type="maze_move">
+                        <block type="maze_move" movable="false">
                           <title name="DIR">moveForward</title>
                           <next>
-                            <block type="procedures_callnoreturn">
+                            <block type="procedures_callnoreturn" movable="false">
                               <mutation name="check and pick"/>
                             </block>
                           </next>
                         </block>
                       </statement>
                       <next>
-                        <block type="maze_turn">
+                        <block type="maze_turn" movable="false">
                           <title name="DIR">turnRight</title>
                           <next>
-                            <block type="maze_turn">
+                            <block type="maze_turn" movable="false">
                               <title name="DIR">turnRight</title>
                               <next>
-                                <block type="maze_untilBlocked">
+                                <block type="maze_untilBlocked" movable="false">
                                   <statement name="DO">
-                                    <block type="maze_move">
+                                    <block type="maze_move" movable="false">
                                       <title name="DIR">moveForward</title>
                                     </block>
                                   </statement>
                                   <next>
-                                    <block type="maze_turn">
+                                    <block type="maze_turn" movable="false">
                                       <title name="DIR">turnLeft</title>
                                     </block>
                                   </next>
@@ -96,39 +98,39 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" movable="false">
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">
-            <block type="harvester_ifAtCropElse">
+            <block type="harvester_ifAtCropElse" movable="false">
               <title name="LOC">Corn</title>
               <statement name="DO">
-                <block type="harvester_whileHasCrop">
+                <block type="harvester_whileHasCrop" movable="false">
                   <title name="LOC">Corn</title>
                   <statement name="DO">
-                    <block type="harvester_corn"/>
+                    <block type="harvester_corn" movable="false"/>
                   </statement>
                 </block>
               </statement>
               <statement name="ELSE">
-                <block type="harvester_ifAtCropElse">
+                <block type="harvester_ifAtCropElse" movable="false">
                   <title name="LOC">Lettuce</title>
                   <statement name="DO">
-                    <block type="harvester_whileHasCrop">
+                    <block type="harvester_whileHasCrop" movable="false">
                       <title name="LOC">Lettuce</title>
                       <statement name="DO">
-                        <block type="harvester_lettuce"/>
+                        <block type="harvester_lettuce" movable="false"/>
                       </statement>
                     </block>
                   </statement>
                   <statement name="ELSE">
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifAtCrop" movable="false">
                       <title name="LOC">Pumpkin</title>
                       <statement name="DO">
-                        <block type="harvester_whileHasCrop">
+                        <block type="harvester_whileHasCrop" movable="false">
                           <title name="LOC">Pumpkin</title>
                           <statement name="DO">
-                            <block type="harvester_pumpkin"/>
+                            <block type="harvester_pumpkin" movable="false"/>
                           </statement>
                         </block>
                       </statement>

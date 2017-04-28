@@ -12,6 +12,7 @@ ga:
     attributes:
       user:
         name: 'Ainm Taispeána'
+        name_example: 'Ainm Taispeána<br/>(m.sh. Sárchódálaí nó Sinéad S.)'
         email: 'Seoladh ríomhphoist'
         username: 'Ainm úsáideora'
         password: 'Focal faire'
@@ -78,13 +79,14 @@ ga:
     forgot_password: 'Focal faire dearmadta?'
     need_confirmation: "Nach bhfuair tú na treoracha deimhnithe?"
     need_unlock: "Nach bhfuair tú na treoracha díghlasála?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: 'Tá %{count} dalta cláraithe cheana.'
     teacher_count: 'Tá %{count} múinteoir cláraithe cheana.'
     overview: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a> a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
     hoc_already_signed_up_heading: 'Tosú gan logáil isteach'
     hoc_already_signed_up_content: 'Chláraigh tú chun Uair Chódála a mhúineadh! Ní gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a> don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Go raibh maith agat as Uair Chódála a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála. Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí a leanúint. Nó más fearr leat, is féidir <a href="%{studio_url}">na céimeanna agus na dúshláin éagsúla a bhrabhsáil</a> gan cuntas a chruthú.'
     teacher_educator_guide: 'Féach an lámhleabhar do mhúinteoirí'
     title: "Cláraigh le Code.org"
     school_name: 'Ainm do Scoile (roghnach)'
@@ -110,9 +112,31 @@ ga:
     user_type_student: "Dalta"
     field_is_required: "riachtanach"
     accept_terms: "Caithfidh tú glacadh leis chun cuntas a chruthú"
+  school_info:
+    title: 'Eolas faoin scoil (roghnach)'
+    school_country: 'Tír na Scoile'
+    select_school_type: 'Roghnaigh cineál na scoile'
+    charter: 'Cairtscoil'
+    private: 'Príobháideach'
+    public: 'Poiblí'
+    homeschool: 'Scoil bhaile'
+    after_school: 'Iarscoil'
+    other: 'Eile'
+    state: 'Stát'
+    district: 'Ceantar'
+    other_district_not_listed: 'Ceantar eile nach bhfuil luaite'
+    district_name: 'Ainm an Cheantair'
+    school: 'Scoil'
+    other_school_not_listed: 'Scoil eile nach bhfuil luaite'
+    school_name: 'Ainm na Scoile'
+    school_zip: 'Cód Poist na Scoile'
+    school_address: 'Seoladh na Scoile'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'An bhfuil cuntas agat cheana? Logáil isteach'
     login: 'Seoladh ríomhphoist'
+    login_username: 'Seoladh ríomhphoist nó ainm úsáideora'
     password: 'Focal faire'
     remember: 'Cuimhnigh orm'
     submit: 'Logáil isteach'
@@ -128,7 +152,7 @@ ga:
     login: 'Logáil isteach'
     invalid_login: 'Theip ar an logáil isteach, bain triail eile as'
     pair_programming: 'Tá comhpháirtí in éineacht liom anseo'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "Foghlaim cén fáth nach bhfeiceann tú d'ainm iomlán <a href='%{student_privacy_blog}' target='_blank'>anseo</a>."
   password:
     reset_form:
       title: 'Focal faire dearmadta?'
@@ -150,6 +174,14 @@ ga:
       Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Seoladh an cuireadh'
     added_teacher: 'Is é/í %{name} do mhúinteoir anois'
@@ -163,8 +195,6 @@ ga:
       blank_code: "Cuir isteach cód an rannáin"
       cant_join_own_section: "Ár leithscéal, níl cead agat dul isteach i do rannán féin."
     mail:
-      invite_student:
-        subject: "Cláraigh le rang de chuid %{teacher_name} ar Code.org!"
       student_disassociated:
         subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
   reports:
@@ -305,8 +335,8 @@ ga:
     delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais do chuid daltaí.'
     delete_confirm: 'An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?'
     deleted_user: 'úsáideoir scriosta'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    no_password_because_oauth: 'Ní gá focal faire a roghnú. Logálfaidh tú isteach trí sholáthraí tríú páirtí.'
+    no_password_because_sponsored: 'Cabhróidh do mhúinteoir leat d''fhocal faire a bhainistiú.'
   user_level:
     completed: 'Críochnaithe'
     tried: 'Iarracht déanta'
@@ -363,21 +393,24 @@ ga:
     announcement_petition: "Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim. Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo, tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú."
     announcement_petition_button: "Cuir d'ainm leis"
     announcement_go_beyond_button: "An chéad chéim eile"
+    announcement_apply_now: "Apply now"
     announcement_all: "Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach ar fhógraí roimhe seo.</a>"
     announcement_hoc_launch: "Tosóidh na mílte múinteoir i níos mó ná 180 tír ar fud an domhain ag múineadh na ríomheolaíochta mar chuid den Uair Chódála idir an 5ú lá agus an 11ú lá de mhí na Nollag. Táimid ag brath ort chun cabhrú linn níos mó daltaí ná riamh a shroicheadh. <a href='%{signup_url}' target='_blank'>Cláraigh d'ócáid féin don Uair Chódála</a> agus cuir in iúl do mhúinteoir eile gur féidir le héinne an ríomheolaíocht a mhúineadh."
     announcement_mc_launch: "Tá cúrsa nua againn a leanann ceann de na cúrsaí is mó a thaitníonn le daoine! Leis an Dearthóir Minecraft úrnua don Uair Chódála, is féidir le daltaí na rialacha sa domhan Minecraft a leagan síos, agus eispéireas go hiomlán uathúil a chruthú. Ansin, is féidir leo an cluiche a chomhroinnt le cairde, nó a imirt ar a nguthán. Bainfidh do chuid daltaí taitneamh as!"
     announcement_how_code_studio: "Is féidir leat an ríomheolaíocht a mhúineadh i do sheomra ranga fiú mura bhfuil aon taithí agat. Gheobhaidh tú curaclam iomlán, pleananna ceachta, cláracha foghlamtha den chéad scoth, agus neart uirlisí iontacha le haghaidh gach leibhéil &mdash; gach a dteastaíonn uait, saor in aisce. Níl tú cinnte cá dtosóidh tú? Íoslódáil <a href='%{video_download_url}'>an físeán seo</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
-    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment: "Is múinteoirí cosúil leatsa atá ar thús cadhnaíochta sa ngluaiseacht ar son oideachais ríomheolaíochta. Is féidir leat páirt a ghlacadh i gcúrsaí teagaisc gairmiúla den chéad scoth <strong>go hiomlán saor in aisce</strong>. Cuir iarratas isteach ar chúrsa gairmiúil, agus cuir an ríomheolaíocht chun cinn i do scoil."
+    announcement_teacher_recruitment2: "Is múinteoirí cosúil leatsa atá ar thús cadhnaíochta sa ngluaiseacht ar son oideachais ríomheolaíochta. Is féidir leat páirt a ghlacadh i gcúrsaí teagaisc gairmiúla den chéad scoth <strong>go hiomlán saor in aisce</strong>. Cuir iarratas isteach ar chúrsa gairmiúil, agus cuir an ríomheolaíocht chun cinn i do scoil. Is é Lá 'le Pádraig an spriocdháta do mhúinteoirí i meánscoileanna agus i scoileanna dara leibhéal."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin eile."
-    section_code_not_entered: "Tabhair cód an rannáin reatha."
     section_code_cant_be_current_section: "Is ionann iad an rannán reatha agus an rannán nua."
     current_section_dne: "Níl rannán %{current_section_code} ann. Cuir isteach cód rannáin eile."
-    students_not_yours: "Níl cead agat daltaí a bhogadh as rannán nach bhfuil agatsa."
-    stay_enrolled_not_entered: "Tabhair \"fág cláraithe leis an rannán reatha\"."
     student_ids_not_entered: "Tabhair uimhreacha aitheantais."
     student_not_found: "Níor aimsíodh dalta nó daltaí de do chuid."
     all_students_must_be_in_current_section: "Ní mór do na daltaí go léir a bheith cláraithe le do rannánsa."
@@ -434,6 +467,10 @@ ga:
     upgrade:
       unsupported_message: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."
       link: "Tuilleadh eolais"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Moill as an ngnáth air seo...'
   try_reloading: 'Déan iarracht an leathanach a lódáil arís'
   next_stage: 'Críochnaithe! Ar aghaidh go dtí an chéad chéim eile'
@@ -528,9 +565,9 @@ ga:
     support: "Cabhair"
     support_url: "//support.code.org"
     help_resources: "Cabhair agus Acmhainní"
-    help_support: "Help and Support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "Cabhair agus Tacaíocht"
+    documentation: "Doiciméadú"
+    tutorials: "Cúrsaí Teagaisc"
   multi:
     wrong_title: "Freagra mícheart"
     wrong_body: "Faraor, ní é sin an freagra ceart. Déan iarracht eile!"
@@ -743,8 +780,8 @@ ga:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'Príomhchúrsa'
+    extra_course_content: 'Ábhar Breise'
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.

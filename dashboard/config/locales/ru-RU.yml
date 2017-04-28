@@ -18,6 +18,7 @@
     attributes:
       user:
         name: "Отобразить имя"
+        name_example: "Отображаемое имя<br/>(например, Крутой Кодер или Джейн С.)"
         email: "Электронная почта"
         username: "имя пользователя"
         password: "пароль"
@@ -86,6 +87,8 @@
     forgot_password: "Забыли пароль?"
     need_confirmation: "Не получили инструкции по подтверждению?"
     need_unlock: "Не получили инструкции для разблокированию?"
+    not_linked: "Извините, но вам надо ввести ваш пароль внизу, чтобы продолжить.
+      Ваша учётная запись не зарегистрирована в %{provider}."
   signup_form:
     student_count: "Зарегистрировано учеников: %{count}."
     teacher_count: "Зарегистрировано учителей: %{count}."
@@ -141,9 +144,31 @@
     user_type_student: "Ученик"
     field_is_required: "требуется"
     accept_terms: "Вы должны принять условия перед созданием учетной записи"
+  school_info:
+    title: "Школьная информация (по желанию)"
+    school_country: "Страна твоей школы"
+    select_school_type: "Выбери тип школы"
+    charter: "Правила"
+    private: "Личное"
+    public: "Публичное"
+    homeschool: "На домашнем обучении"
+    after_school: "После школы"
+    other: "Другое"
+    state: "Штат (регион, область)"
+    district: "Район"
+    other_district_not_listed: "Другой район (штат, регион), не указанный выше"
+    district_name: "Название района"
+    school: "Факультет"
+    other_school_not_listed: "Другая школа, не указанная выше"
+    school_name: "Название школы"
+    school_zip: "Почтовый индекс школы"
+    school_address: "Адрес школы"
+    school_organization_name: "Название школы/организации"
+    school_organization_zip: "Почтовый индекс школы/организации"
   signin_form:
     title: "Уже зарегистрированы? Вход"
     login: "Электронная почта"
+    login_username: "Электронная почта или имя пользователя"
     password: "Пароль"
     remember: "Запомнить меня"
     submit: "Вход"
@@ -159,8 +184,8 @@
     login: "Вход"
     invalid_login: "Неверный логин, пожалуйста, попробуйте снова"
     pair_programming: "У меня есть партнер на моем компьютере"
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: "Узнайте больше о том, почему вы не видите полное имя <a href='%{student_privacy_blog}'
+      target='_blank'> здесь </a>."
   password:
     reset_form:
       title: "Забыли Ваш пароль?"
@@ -183,6 +208,14 @@
       Веселые и визуально захватывающие уроки знакомят с основными понятиями информатики посредством простой и управляемой игры. Учитесь программировать с Биллом Гейтсом, Марком Цукербергом, персонажами Angry Birds и Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: "Твой раздел:"
+      other: "Твои разделы:"
+    code_with_teacher: "%{section_code} с %{teacher_name}"
+    confirm:
+      remove: "Вы хотите выйти из раздела?"
+    remove: "(удалить раздел)"
   follower:
     invite_sent: "Приглашение отправлено"
     added_teacher: "%{name} добавлен как твой учитель"
@@ -198,8 +231,6 @@
       blank_code: "Введите код раздела"
       cant_join_own_section: "К сожалению, вы не можете присоединиться к своему разделу."
     mail:
-      invite_student:
-        subject: "Присоединяйтесь к классу с %{teacher_name} на Code.org!"
       student_disassociated:
         subject: "Уведомление от Code.org: %{student_name} больше не является вашим
           учеником."
@@ -374,8 +405,7 @@
       удалит учетные записи ваших учеников."
     delete_confirm: "Вы действительно хотите удалить свою учетную запись?"
     deleted_user: "пользователь удален"
-    no_password_because_oauth: No password because you sign in with a third-party
-      provider.
+    no_password_because_oauth: "Нет пароля, поскольку вы вошли с другого компьютера."
     no_password_because_sponsored: "Обратитесь к учителю для управления вашим паролем."
   user_level:
     completed: "Завершено"
@@ -460,6 +490,7 @@
       компьютерной науки."
     announcement_petition_button: "Добавьте ваше имя"
     announcement_go_beyond_button: "Выйти за пределы"
+    announcement_apply_now: Apply now
     announcement_all: "Будьте в курсе новых возможностей, читая наш блог учителей.
       <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые объявления.</a>"
     announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут
@@ -488,6 +519,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -500,17 +540,30 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста,
       введите код другой группы."
-    section_code_not_entered: "Просьба представить current_section_code."
     section_code_cant_be_current_section: "Текущий раздел не может быть таким же,
       как и новый раздел."
     current_section_dne: "Извините, но группа %{current_section_code} не существует.
       Пожалуйста, введите код другогой группы."
-    students_not_yours: "Вы не можете переместить студентов из группы, которая вам
-      не принадлежит."
-    stay_enrolled_not_entered: "Пожалуйста представьте stay_enrolled_in_current_section."
     student_ids_not_entered: "Просьба предоставить student_ids."
     student_not_found: "Один или несколько учеников не могут быть найдены."
     all_students_must_be_in_current_section: "Все ученики должны быть зачислены в
@@ -596,6 +649,18 @@
         поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницу,
         но будьте готовы к тому, что функциональность может быть нарушена."
       link: "Узнать больше"
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: "Это занимает больше времени, чем обычно..."
   try_reloading: "Попробуйте перезагрузить страницу"
   next_stage: "Готово! Перейти к следующему этапу"
@@ -713,9 +778,9 @@
     support: "Получить помощь"
     support_url: support.code.org
     help_resources: "Помощь и ресурсы"
-    help_support: Help and Support
-    documentation: Documentation
-    tutorials: Tutorials
+    help_support: "Помощь и поддержка"
+    documentation: "Документация"
+    tutorials: "Обучающие материалы"
   multi:
     wrong_title: "Неправильный ответ"
     wrong_body: "Вы ввели неправильный ответ.  Попробуйте еще раз!"
@@ -976,8 +1041,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
-    main_course: Main Course
-    extra_course_content: Extra Course Content
+    main_course: "Основной курс"
+    extra_course_content: "Дополнительный материал для курса"
   external_links:
     disclaimer: "Отказ от ответственности"
     leaving_domain: "Сейчас вы переходите на сайт, который не управляется Code.org."

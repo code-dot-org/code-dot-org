@@ -28,6 +28,6 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
   end
 
   def facilitators
-    object.facilitators.map{|f| "#{f.name} <#{f.email}>"}.join("\n")
+    object.facilitators.map {|f| "#{f.name} <#{f.email}>"}.join("\n")
   end
 end

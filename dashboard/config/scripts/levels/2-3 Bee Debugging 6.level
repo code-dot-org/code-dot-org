@@ -31,7 +31,8 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "What a sweet challenge!\r\n\r\nFix the error(s) to collect all of the nectar."
+    "markdown_instructions": "What a sweet challenge!\r\n\r\nFix the error(s) to collect all of the nectar.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -7,8 +7,7 @@ class CourseUnitTest < ActionView::TestCase
   end
 
   test 'Launching course units works with no created unit assignments' do
-    #Simulates a unit that was created after people were enrolled
-
+    # Simulates a unit that was created after people were enrolled
     @enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
     @course_unit = create(:plc_course_unit, plc_course: @course, started: false)
 

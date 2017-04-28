@@ -6,20 +6,21 @@ module Cdo
   class Cron
     DEFAULT_TIME_ZONE = 'Pacific Time (US & Canada)'.freeze
 
-    # Convert 'weekdays at [time_str]' (Pacific Time) to UTC cron syntax.
+    # Convert 'weekdays at [time_str]' in specified time zone to UTC cron syntax.
     def self.weekdays_at(time_str, time_zone: DEFAULT_TIME_ZONE)
       Time.use_zone(time_zone) do
-        times = DateTime.now.
-          all_week.
+        week = [Time.current.beginning_of_week]
+        week << week.last.next_day while week.last.next_day < Time.current.end_of_week
+        times = week.
           select(&:on_weekday?).
-          map{|day| Chronic.parse(time_str, now: day)}.
+          map {|day| Chronic.parse(time_str, now: day)}.
           map(&:utc)
-        day_names = times.map{|day| Time::RFC2822_DAY_NAME[day.wday].upcase}
+        day_names = times.map {|day| Time::RFC2822_DAY_NAME[day.wday].upcase}
         "0 #{times.first.hour} * * #{day_names.first}-#{day_names.last}"
       end
     end
 
-    # Convert 'weekly at [time_str]' (Pacific Time) to UTC cron syntax.
+    # Convert 'weekly at [time_str]' in specified time zone to UTC cron syntax.
     def self.weekly_at(time_str, time_zone: DEFAULT_TIME_ZONE)
       Time.use_zone(time_zone) do
         Chronic.time_class = Time.zone

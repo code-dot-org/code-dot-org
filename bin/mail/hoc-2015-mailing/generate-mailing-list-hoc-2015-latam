@@ -14,7 +14,7 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end
@@ -91,10 +91,10 @@ CSEDWEEK_COUNTRIES = %w(
 ).freeze
 
 HOC_SIGNUP_QUERY = HOC_SIGNUP_COUNTRIES.
-  map {|country| %Q|(kind_s:"HocSignup2014" && location_country_s:"#{country}")| }.
+  map {|country| %Q|(kind_s:"HocSignup2014" && location_country_s:"#{country}")|}.
   join(" || ")
 CSEDWEEK_QUERY = CSEDWEEK_COUNTRIES.
-  map {|country| %Q|(kind_s:"CSEdWeekEvent2013" && country_s:"#{country}")| }.
+  map {|country| %Q|(kind_s:"CSEdWeekEvent2013" && country_s:"#{country}")|}.
   join(" || ")
 
 QUERY = HOC_SIGNUP_QUERY + " || " + CSEDWEEK_QUERY

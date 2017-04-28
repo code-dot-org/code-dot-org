@@ -15,6 +15,7 @@
     attributes:
       user:
         name: "사용자 이름"
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "이메일"
         username: username
         password: password
@@ -81,6 +82,8 @@
     forgot_password: "비밀번호를 잊으셨나요?"
     need_confirmation: "확인 메일을 받지 못 했나요?"
     need_unlock: "잠김 해제 메일을 받지 못 했나요?"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} 학생 들은 이미 가입했습니다."
     teacher_count: "%{count} 선생님들은 이미 가입했습니다."
@@ -123,9 +126,31 @@
     user_type_student: student
     field_is_required: "이(가) 필요합니다."
     accept_terms: "회원가입에 동의해야 합니다."
+  school_info:
+    title: "학교 정보(선택사항)"
+    school_country: "학교 국가정보"
+    select_school_type: School Type
+    charter: Charter
+    private: "비공개"
+    public: "공개"
+    homeschool: "홈스쿨"
+    after_school: "방과 후"
+    other: "기타"
+    state: "상태"
+    district: "구역"
+    other_district_not_listed: "위 리스트에 없는 다른 지역"
+    district_name: "지역 이름"
+    school: "학교"
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: "학교 우편 번호"
+    school_address: "학교 주소"
+    school_organization_name: "학교/단체 이름"
+    school_organization_zip: "학교/단체 우편 번호"
   signin_form:
     title: "계정이 있으면? 로그인"
     login: "이메일"
+    login_username: "이메일 또는 아이디"
     password: "비밀번호"
     remember: "아이디 기억하기"
     submit: "로그인"
@@ -164,6 +189,14 @@
       이 과정에서는 재미있는 퍼즐들을 통해, 컴퓨터과학(Computer Science, 정보과학)의 몇가지 기초 개념들을 배울 수 있습니다. Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies 등과 함께 경험해 보세요! :)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "초대 메일을 발송하였습니다"
     added_teacher: "%{name} 가 선생님으로 추가되었습니다"
@@ -178,8 +211,6 @@
       blank_code: "섹션 코드를 입력하세요."
       cant_join_own_section: "섹션에 참여할 수 없습니다."
     mail:
-      invite_student:
-        subject: "%{teacher_name} 선생님의 학급에 참여하세요. Code.org!"
       student_disassociated:
         subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
   reports:
@@ -307,7 +338,7 @@
     user_not_found: "선생님을 찾을 수 없습니다."
     student_teacher_disassociated: "%{teacher_name} 선생님을 삭제하였습니다."
     panel:
-      answer_viewer: "선생님 패널"
+      answer_viewer: "선생님 메뉴"
       student: student
       viewing_solution: "솔루션 살펴보기"
       try_it_yourself: "혼자 힘으로 해보세요"
@@ -402,6 +433,7 @@
       미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
     announcement_petition_button: "이름을 입력하세요"
     announcement_go_beyond_button: "넘어서"
+    announcement_apply_now: Apply now
     announcement_all: "교사 블로그에서 새로운 내용이나 추가사항을 확인할 수 있습니다. <a href='%{teacher_blog_url}'
       target='_blank'>지난 공지사항 보기</a>"
     announcement_hoc_launch: 12월 5일부터 11일까지 180개 이상의 나라에서 수많은 교육자가 Hour of Code 를
@@ -422,6 +454,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -434,13 +475,27 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
-    section_code_not_entered: Current_section_code를 입력 하십시오.
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."
     current_section_dne: "죄송합니다. %{current_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
-    students_not_yours: "여러분에게 속해 있지 않은 학생들을 섹션에서 이동시킬 수 없습니다."
-    stay_enrolled_not_entered: "'현재 섹션에 등록'을 입력하십시오."
     student_ids_not_entered: "학생의 ID를 입력하세요."
     student_not_found: "한 명 이상의 학생을 찾을 수 없습니다."
     all_students_must_be_in_current_section: "모든 학생들은 당신의 섹션에 등록되어야 합니다."
@@ -518,6 +573,18 @@
         target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게
         동작하지 않을 수 있습니다."
       link: "더 알아보기"
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: "연결이 느립니다."
   try_reloading: "페이지를 다시 로드 해 보세요."
   next_stage: "모두 완료했습니다! 다음 단계를 계속하세요"

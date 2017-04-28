@@ -28,8 +28,8 @@ module Seeded
     def parse_csv(csv, col_sep=',', column_to_key={}, &block)
       CSV.parse(csv, {col_sep: col_sep, headers: true}).map do |row|
         hash = row.to_hash
-        hash.keys.each { |key| hash[column_to_key[key]] = hash.delete(key) if column_to_key[key] }
-        hash.delete_if { |_, value| value.nil? }
+        hash.keys.each {|key| hash[column_to_key[key]] = hash.delete(key) if column_to_key[key]}
+        hash.delete_if {|_, value| value.nil?}
         yield hash if block
         hash
       end
@@ -41,12 +41,12 @@ module Seeded
       data = YAML.load_file(file)
 
       # Set Options and remove element from hash
-      data, options = data.partition { |x| x['Options'].nil? }
+      data, options = data.partition {|x| x['Options'].nil?}
       options = options.empty? ? {} : options[0]['Options']
 
       [%W(TSV \t), %w(CSV ,)].each do |xsv, sep|
-        data, xsv_data = data.partition { |x| !x || x[xsv].nil? }
-        var = xsv_data.flat_map { |entry| parse_csv(entry[xsv], sep, column_to_key) }
+        data, xsv_data = data.partition {|x| !x || x[xsv].nil?}
+        var = xsv_data.flat_map {|entry| parse_csv(entry[xsv], sep, column_to_key)}
         data += var unless var.nil?
       end
       [options, data]

@@ -46,7 +46,7 @@ class PropertyBag
         row[:id] = @table.insert(row)
       rescue Sequel::DatabaseError => e
         if e.message.start_with?("Mysql2::Error: Data too long for column")
-          return { status: 'TOO_LARGE' }
+          return {status: 'TOO_LARGE'}
         else
           raise e
         end
@@ -129,7 +129,7 @@ class DynamoPropertyBag
     value
   rescue Aws::DynamoDB::Errors::ValidationException => e
     if e.message == 'Item size has exceeded the maximum allowed size'
-      { status: 'TOO_LARGE' }
+      {status: 'TOO_LARGE'}
     else
       raise e
     end
@@ -164,6 +164,6 @@ class DynamoPropertyBag
   end
 
   def name_exists(id)
-    { "name" => { value: id, comparison_operator: 'EQ', } }
+    {"name" => {value: id, comparison_operator: 'EQ',}}
   end
 end

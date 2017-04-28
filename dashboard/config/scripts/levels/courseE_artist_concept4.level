@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Recreate this drawing using 13 blocks or fewer.",
+    "markdown_instructions": "Recreate this drawing using 13 blocks or fewer. Each square has a side length of **20 pixels** and there are **15 squares per row**.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,10 +31,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are several ways to solve this puzzle. Can you make a plan?\",\"hint_id\":\"courseE_artist_concept4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7b4d6eb3c00bfceeb79c910dda4f224d/courseE_artist_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating one square. Then make a line of squares.  What comes next?\",\"hint_id\":\"courseE_artist_concept4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e0caa9dc20dbf2d70a2d73aec988fb03/courseE_artist_concept4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are several ways to solve this puzzle. Can you make a plan?\",\"hint_id\":\"courseE_artist_concept4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7b4d6eb3c00bfceeb79c910dda4f224d/courseE_artist_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating one square. Then make a line of squares.  What comes next?\",\"hint_id\":\"courseE_artist_concept4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e0caa9dc20dbf2d70a2d73aec988fb03/courseE_artist_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?\",\"hint_id\":\"courseE_artist_concept4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3149d601cc3ebbdbdc40c52259577e76/courseE_artist_concept4.mp3\"}]",
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -47,19 +49,19 @@
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
+          <title name="VALUE">20</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">60</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">120</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
-          <title name="VALUE">25</title>
+          <title name="VALUE">300</title>
         </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>

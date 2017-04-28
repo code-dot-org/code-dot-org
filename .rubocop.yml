@@ -10,6 +10,9 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
+Rails:
+  Enabled: true
+
 # BEGIN CODE.ORG OVERRIDES
 
 Style/AlignParameters:
@@ -38,6 +41,13 @@ Style/NumericLiterals:
 
 Style/Semicolon:
   AllowAsExpressionSeparator: true
+
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+  SpaceBeforeBlockParameters: false
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
 
 Style/WordArray:
   MinSize: 5
@@ -68,6 +78,9 @@ Style/AsciiComments:
 Style/BarePercentLiterals:
   Enabled: false
 
+Style/BracesAroundHashParameters:
+  Enabled: false
+
 Style/ClosingParenthesisIndentation:
   Enabled: false
 
@@ -78,6 +91,9 @@ Style/IdenticalConditionalBranches:
   Enabled: false
 
 Style/IfInsideElse:
+  Enabled: false
+
+Style/LeadingCommentSpace:
   Enabled: false
 
 Style/NumericPredicate:

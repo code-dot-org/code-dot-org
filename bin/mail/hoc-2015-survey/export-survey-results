@@ -74,7 +74,7 @@ CSV.open('HocSurvey2015-results.csv', 'wb') do |csv|
 
     emails.add form[:email]
     skipped_emails.delete form[:email]
-    csv << columns.map{|column| data[column]}
+    csv << columns.map {|column| data[column]}
   end
 end
 

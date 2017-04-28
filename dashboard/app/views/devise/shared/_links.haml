@@ -1,5 +1,5 @@
 -# Unless we're already on the Sign in page, show a Sign in link
-- unless controller_name == 'sessions'
+- unless ['sessions', 'registrations'].include? controller_name
   = t('auth.already_signedup')
   = link_to t('nav.user.signin'), new_session_path(resource_name)
   %br/

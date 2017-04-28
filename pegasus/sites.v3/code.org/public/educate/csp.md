@@ -2,21 +2,17 @@
 title: Computer Science Principles
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 # Computer Science Principles #
 
-## <a name="what"></a>Apply for Professional Learning
-
-Applications for the 2017-18 CS Principles Professional Learning Program are now open! We are accepting applications until April 14, 2017, so apply now if you're ready to get started. 
-
-[<button>Apply now!</button>](/educate/professional-learning/cs-principles)
 
 ## <a name="whatis"></a>What is CS Principles?
 
 [col-50]
 
-In fall 2016, the College Board launched its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+In fall 2016, the College Board launched its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities. 
 
 For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
@@ -34,9 +30,43 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="clear: both;"></div>
 
+## <a name="what"></a>Apply for Professional Learning
+
+ **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
+ 
+And, we still have a number of openings for applicants in the following regions:
+
+* Arizona
+* Bay Area and Central Coast, CA
+* Sacramento Valley and North Coast, CA
+* San Joaquin Valley, CA
+* Colorado
+* Northeast Florida
+* Miami, FL
+* Iowa
+* Illinois
+* Indiana
+* Maine
+* Maryland
+* Montana
+* New Jersey
+* Nevada
+* Oklahoma
+* Pennsylvania
+* South Carolina
+* Tennessee
+* Austin, TX
+* Dallas, TX
+* Utah
+* Virginia
+* Wisconsin
+
+[<button>See your region above? Apply now!</button>](/educate/professional-learning/cs-principles-apply)
+
+
 ## Code.org's AP CS Principles Curriculum
 
-<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles.
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles. Our curriculum is available at no cost for anyone, anywhere to teach.
 
  * [Code.org 2016-17 AP CS Principles Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
@@ -91,19 +121,19 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
-<div style="width: 30%; float: left; margin-right: 12px;">
+<div class="col-25" style="float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "images_pixels", video_code: "15aqFQQVBWU", play_button: 'center' %>
 
 </div>
 
-<div style="width: 30%; float: left; margin-right: 12px;">
+<div class="col-25" style="float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "digital_compression", video_code: "By30SCp-Tsw", play_button: 'center' %>
 
 </div>
 
-<div style="width: 30%; float: left; margin-right: 12px;">
+<div class="col-25" style="float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "the_internet", video_code: "ZhEf7e4kopM", play_button: 'center' %>
 

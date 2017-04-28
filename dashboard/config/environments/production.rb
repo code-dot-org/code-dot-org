@@ -26,7 +26,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.public_file_server.enabled = true
-  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=86400, s-maxage=43200" }
+  config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
   # Compress JavaScripts and CSS.
   # webpack handles js compression for us

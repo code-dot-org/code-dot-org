@@ -57,8 +57,8 @@ class FilesApiTestHelper
   end
 
   def post_file(filename, file_contents, content_type)
-    body = { files: [create_uploaded_file(filename, file_contents, content_type)] }
-    headers = { 'CONTENT_TYPE' => content_type }
+    body = {files: [create_uploaded_file(filename, file_contents, content_type)]}
+    headers = {'CONTENT_TYPE' => content_type}
     post_object filename, body, headers
   end
 
@@ -117,8 +117,8 @@ class FilesApiTestHelper
   end
 
   def post_file_version(filename, version_id, file_contents, content_type)
-    body = { files: [create_uploaded_file(filename, file_contents, content_type)] }
-    headers = { 'CONTENT_TYPE' => content_type }
+    body = {files: [create_uploaded_file(filename, file_contents, content_type)]}
+    headers = {'CONTENT_TYPE' => content_type}
     post_object_version filename, version_id, body, headers
   end
 

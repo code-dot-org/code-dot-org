@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 const DesignWorkspace = React.createClass({
   propTypes: {
-    handleManageAssets: React.PropTypes.func.isRequired,
     handleVersionHistory: React.PropTypes.func.isRequired,
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
@@ -20,7 +19,7 @@ const DesignWorkspace = React.createClass({
 
     // provided by redux
     isRunning: React.PropTypes.bool.isRequired,
-    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -38,11 +37,10 @@ const DesignWorkspace = React.createClass({
   render: function () {
     return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
-        handleManageAssets={this.props.handleManageAssets}
         handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}
-        localeDirection={this.props.localeDirection}
+        isRtl={this.props.isRtl}
         isRunning={this.props.isRunning}
       />
       <DesignModeBox
@@ -62,6 +60,6 @@ const DesignWorkspace = React.createClass({
   }
 });
 export default connect(state => ({
-  localeDirection: state.pageConstants.localeDirection,
+  isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
 }))(DesignWorkspace);

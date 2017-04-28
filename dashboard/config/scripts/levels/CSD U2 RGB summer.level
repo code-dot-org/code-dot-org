@@ -138,7 +138,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "true",
@@ -177,6 +178,10 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Summer Color\r\n\r\nFind the RGB values for a summery yellow color.\r\n\r\n* Click \"Run\" to start the widget.\r\n* Adjust the levels until you match the summery yellow at the bottom of the widget.\r\n* Write the RGB values on your activity guide.  You will need them in the next activity.\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n<br />\r\n<summary>**Why do red and green make yellow?**</summary>\r\n<p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\">Wikipedia - Additive Color</a></p> </details>\r\n<details>\r\n<summary>**How many colors can I make with RGB color mixing?**</summary>\r\n<p>You can make make over sixteen million different colors with RGB color mixing.</p></details>\r\n</div>",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "Color solution for Summer Yellow: (red, green, blue) = (255, 230, 100)",
     "contained_level_names": null
   },
   "published": true,

@@ -412,7 +412,7 @@
         flappy_k1_9: Prøv å endre spilleren ved å legge ved en "sett spilleren" blokk
           til "når kjørt"-blokken.
         jigsaw_1: Klikk blokken
-        jigsaw_2: Dra blokken til målet
+        jigsaw_2: Dra klossen til målet
         jigsaw_3: Ordne blokkene for å danne bildet
         jigsaw_4: Ordne blokkene for å danne bildet
         jigsaw_5: Ordne blokkene for å danne bildet
@@ -699,6 +699,10 @@
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parametere
         C4_unplugged_binary: Binær
+        CSF_EF_cs_matters: Computer Science Matters
+        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Kodetimen Intro
         frozen_loops: Introduksjon til løkker
         frozen_functions: Introduksjon til funksjoner
@@ -716,6 +720,11 @@
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -827,7 +836,7 @@
         repeat_blocks_1: "(1) Bruk denne blokken og legg den rundt de grå blokkene
           i arbeidsområdet"
         repeat_blocks_2: (2) Flytt "Gjenta"-blokken og plasser de grå blokkene inni
-        snowflake_dropdown: Bruk dene rullegardinlisten for å lage forskjellige snøflak!
+        snowflake_dropdown: Bruk denne rullegardinlisten for å lage forskjellige snøflak!
         degrees_per_side: Del 360 på antall sider for å få størrelsen på hver vinkel
           i grader.
         set_sides: Bruk denne blokken for å angi antall "sider" som er nødvendig for

@@ -24,11 +24,16 @@
 #
 
 class External < DSLDefined
-  serialized_attrs :icon_type
+  # This string gets replaced with the user's id in markdown.
+  USER_ID_REPLACE_STRING = '<user_id/>'
 
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?
     properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
+  end
+
+  def supports_markdown?
+    true
   end
 
   def dsl_default
@@ -40,12 +45,17 @@ class External < DSLDefined
   end
 
   def icon
-    if icon_type == "Stop"
-      'fa-stop-circle'
-    elsif icon_type == "Map"
-      'fa-map'
-    else
-      'fa-file-text'
-    end
+    'fa-file-text'
+  end
+
+  # returns a properties hash in which USER_ID_REPLACE_STRING is replaced by the current user's id
+  # in markdown
+  def properties_with_replaced_markdown(user)
+    user_id = user.try(:id).to_s
+    properties.merge({'markdown' => properties['markdown'].gsub(USER_ID_REPLACE_STRING, user_id)})
+  end
+
+  def update(params)
+    super(params)
   end
 end

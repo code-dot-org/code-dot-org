@@ -314,7 +314,7 @@
           This is where conditionals are needed...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
+        title: Aimsiú Imbhuailte agus an teoirim Phíotagarásach
         desc: Determining when objects on the screen touch is an important aspect
           of most games. In this lesson we'll look at how the Pythagorean Theorem
           and the Distance Formula can be used to measure the distance between two

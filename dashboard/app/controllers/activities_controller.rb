@@ -159,8 +159,6 @@ class ActivitiesController < ApplicationController
 
     lines = params[:lines].to_i
 
-    current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
-
     # Create the activity.
     attributes = {
       user: current_user,

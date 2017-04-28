@@ -56,7 +56,7 @@
       "led.blink": null,
       "led.stop": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.frequency": null,
       "buzzer.play": null,
       "timedLoop": null,

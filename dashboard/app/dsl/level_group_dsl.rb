@@ -42,7 +42,7 @@ class LevelGroupDSL < BaseDSL
 
     # Record the name of the external level, as well as the index of the actual level
     # it appears immediately before.
-    @hash[:texts] << { level_name: name, index: @level_names.length }
+    @hash[:texts] << {level_name: name, index: @level_names.length}
   end
 
   def level(name)

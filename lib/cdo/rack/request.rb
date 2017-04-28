@@ -9,7 +9,7 @@ module Cdo
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip rescue false}
+      super(ip) || TRUSTED_PROXIES.any? {|proxy| proxy === ip rescue false}
     end
 
     def json_body
@@ -47,7 +47,7 @@ module Cdo
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = (%w(studio learn i18n) + CDO.partners).map{|x| x + '.code.org'}
+        domains = (%w(studio learn i18n) + CDO.partners).map {|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end

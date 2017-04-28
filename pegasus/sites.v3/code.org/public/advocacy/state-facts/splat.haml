@@ -91,7 +91,7 @@ theme: pdf
             computer science graduate
           - else
             computer science graduates
-        in 2014;
+        in 2015;
         - if state_info[:percent_female_cs_grad_i] == 0
           %b none
         - else
@@ -390,13 +390,13 @@ theme: pdf
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            has a dedicated computer science position in the state education authority.
+            has a dedicated computer science position in the state education agency.
         - elsif state_info[:state_position_s] == 'No'
           %div
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have dedicated computer science positions in state or local education authorities. Creating a statewide computer science leadership position within the state education authority can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
+            have dedicated computer science positions in state or local education agencies. Creating a statewide computer science leadership position within the state education agency can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
         - elsif state_info[:state_position_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -428,7 +428,7 @@ theme: pdf
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
             = succeed "." do
-              %a{href: "http://bit.ly/1Is6YXS"} http://bit.ly/1Is6YXS
+              %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
         - elsif state_info[:cs_counts_t] == 'No'
           %div
             %i.fa.fa-square-o
@@ -436,7 +436,7 @@ theme: pdf
             %b does not yet
             allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities. Find out how other states allow computer science to count towards graduation at
             = succeed "." do
-              %a{href: "http://bit.ly/1Is6YXS"} http://bit.ly/1Is6YXS
+              %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
         - elsif state_info[:cs_counts_t] == 'Other'
           %div
             %i.fa.fa-check-square-o
@@ -445,7 +445,7 @@ theme: pdf
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
             = succeed "." do
-              %a{href: "http://bit.ly/1Is6YXS"} http://bit.ly/1Is6YXS
+              %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
 
       .policy-item
         - if state_info[:higher_ed_entrance_s] == 'Yes'

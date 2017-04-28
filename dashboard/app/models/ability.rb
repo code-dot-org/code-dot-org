@@ -35,12 +35,14 @@ class Ability
       Plc::CourseUnit,
       # PD models
       Pd::Workshop,
+      Pd::Enrollment,
       Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
       Pd::TeacherApplication,
-      :workshop_organizer_survey_report
+      :workshop_organizer_survey_report,
+      Pd::WorkshopMaterialOrder
     ]
 
     if user.persisted?
@@ -58,6 +60,7 @@ class Ability
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :read, SectionHiddenStage
       can :create, Pd::TeacherApplication, user_id: user.id
+      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
 
       if user.teacher?
         can :read, Section, user_id: user.id
@@ -74,9 +77,9 @@ class Ability
           !script.professional_learning_course?
         end
         can :manage, SectionHiddenStage do |hidden_stage|
-          userid == hidden_stage.section.user_id
+          user.id == hidden_stage.section.user_id
         end
-        can :create, Pd::TeacherApplication, user_id: user.id
+        can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
       end
 
       if user.facilitator?
@@ -93,6 +96,7 @@ class Ability
         end
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
+        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
       end
 
       if user.district_contact?

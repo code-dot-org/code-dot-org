@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n   return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":24},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
@@ -32,7 +32,7 @@
       "upButton"
     ],
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
+    "timeout_after_when_run": "true",
     "markdown_instructions": "Variables can be used to store text that you want to use later.  \r\n\r\nHave Kiki, the soccer player,  scream \"Goal!\" by assigning that text to the `shout` variable.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
@@ -48,6 +48,8 @@
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Put the word \\\"Goal!\\\" inside the green block that is connected to the purple `set shout to` block.\",\"hint_id\":\"courseF_playlab_variables1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7a622c1da530ca1b766c2eadbc15ef92/courseF_playlab_variables1a.mp3\"}]",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_playlab_variables1a_1\",\r\n  \"callout_text\": \"The toolbox has been organized into categories to make it easier to find the blocks you need.\",\r\n  \"element_id\": \"[id=':1.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": null,\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -62,11 +64,6 @@
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">shout</title>
-              <value name="VALUE">
-                <block type="text">
-                  <title name="TEXT">What should I shout?</title>
-                </block>
-              </value>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
                   <title name="SPRITE">0</title>
@@ -79,6 +76,9 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="text" x="200px" y="40px">
+          <title name="TEXT">What should I shout?</title>
         </block>
       </xml>
     </start_blocks>

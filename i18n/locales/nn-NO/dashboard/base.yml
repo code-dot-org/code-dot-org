@@ -12,6 +12,7 @@ nn:
     attributes:
       user:
         name: 'Vis namn'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-post'
         username: 'Brukarnamn'
         password: 'Passord'
@@ -78,6 +79,7 @@ nn:
     forgot_password: 'Har du gløymt passordet ditt?'
     need_confirmation: "Har du ikkje motteke instruksjonar om korleis du stadfester?"
     need_unlock: "Har du ikkje motteke instruksjonar om korleis du låser opp?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} studentar har allereie registrert seg.'
     teacher_count: '%{count} lærarar har allereie registrert seg.'
@@ -110,9 +112,31 @@ nn:
     user_type_student: "Elev"
     field_is_required: "er påkreva"
     accept_terms: "Du må gå med på å opprette ein konto"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Anna'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Har du alt ein konto? Logg på'
     login: 'E-post'
+    login_username: 'Email or Username'
     password: 'Passord'
     remember: 'Hugs meg'
     submit: 'Logg inn'
@@ -150,6 +174,14 @@ nn:
       Kursa er morosame, visuelt stimulerande og lærer deg dei grunnleggjande konsepta innan informatikk ved å nytte ein enkel, spill-liknande oppleving som du blir losa igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Invitasjon er sendt'
     added_teacher: '%{name} er lagt til som læraren din'
@@ -163,8 +195,6 @@ nn:
       blank_code: "Oppgi ein seksjonskode"
       cant_join_own_section: "Beklager, du kan ikkje bli med i din eigen seksjon."
     mail:
-      invite_student:
-        subject: "Bli med i ei av klassene til %{teacher_name} på Code.org!"
       student_disassociated:
         subject: 'Melding fra Code.org: %{student_name} er ikkje lenger tilknytta som din elev.'
   reports:
@@ -363,21 +393,24 @@ nn:
     announcement_petition: "Som lærar, er du del av ei rørsle som ynskjer å gje alle elevar, i alle skular, høve til å lære programmering. No er det på tide å la myndigheitene høyre frå deg. Denne veka gjekk leiarar innan utdanning, 28 guvernørar og administrerande direktørar i dei største selskapa i USA saman og leverte eit ope brev, kor dei ba kongressen finansiere K-12 programmeringsutdanning."
     announcement_petition_button: "Legg til namnet ditt"
     announcement_go_beyond_button: "Fortsett videre"
+    announcement_apply_now: "Apply now"
     announcement_all: "Held deg oppdatert med oppdateringar og ny funksjonalitet på lærarbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Sjå tidligare kunngjeringar.</a>"
     announcement_hoc_launch: "Tusener av lærarar i meir enn 180 land vil undervise i programmering under Kodetimen 5.-11. desember. Me reknar med at du vil hjelpe oss å nå fleire elevar enn nokon sinne. <a href='%{signup_url}' target='_blank'>Registrer din Kodetime</a> og la andre lærarar vite at kven som helst kan lære bort programmering."
     announcement_mc_launch: "Eit av våre mest populære opplegg har fått ein oppfølgjar! Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft. Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime."
     announcement_how_code_studio: "Du treng inga erfaring for å undervise i programmering i ditt klasserom. Code.org har læreplanar, timeplanar, høykvalitetslæreprogram og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!"
     announcement_go_beyond: "Fortsette videre fra Kodetimen og utforsk konsepter fra datateknikk med dine elever hver uke. Code.org tilby pensum, timeplaner, profesjoneller høykvalitets læreplaner og tilby tonnevis av gode verktøy for alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste steget som passer for ditt klasserom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn ein annan seksjonskode."
-    section_code_not_entered: "Legg inn gjeldande_seksjons_kode."
     section_code_cant_be_current_section: "Gjeldande seksjon kan ikkje vere den same som den nye seksjonen."
     current_section_dne: "Beklagar, men seksjon %{current_section_code} finns ikkje. Legg inn ein annan seksjonskode."
-    students_not_yours: "Du kan ikkje flytte studentar frå ein seksjon som ikkje høyrar til deg."
-    stay_enrolled_not_entered: "Ver vennleg å oppgi stay_enrolled_in_current_section."
     student_ids_not_entered: "Ver vennleg å oppgi student_ids."
     student_not_found: "Kunne ikkje finne ein eller fleire elevar."
     all_students_must_be_in_current_section: "Alle elevar må vere registert i di gruppe."
@@ -434,6 +467,10 @@ nn:
     upgrade:
       unsupported_message: "Nettleseran din blir ikkje støtta. Ver vennleg å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje vil virke slik det er meint."
       link: "Lær meir"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Dette tar lengre tid enn vanleg...'
   try_reloading: 'Last sida på nytt'
   next_stage: 'Ferdig! Fortsett til neste nivå'

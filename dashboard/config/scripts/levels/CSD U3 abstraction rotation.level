@@ -41,7 +41,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"a7893b0c-b4c9-4af8-b8f0-bad6e4f8af85\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"a7893b0c-b4c9-4af8-b8f0-bad6e4f8af85\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/8uORD81zGjUhRH6Ev__RTw/a7893b0c-b4c9-4af8-b8f0-bad6e4f8af85.png?version=l5gamwo1Mw0Dh4Ct58HLWyAR_TKgjLFq\",\r\n      \"frameSize\": {\r\n        \"x\": 150,\r\n        \"y\": 150\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 10,\r\n      \"version\": \"l5gamwo1Mw0Dh4Ct58HLWyAR_TKgjLFq\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"sun\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"sun\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/nfUk4Qpbn68_IT-Cri9ZfA/sun.png?version=TmYjW1.fxMqhOKou3lpHlye3MaD9w61N\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"TmYjW1.fxMqhOKou3lpHlye3MaD9w61N\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var sun = createSprite(200, 200);\r\nsun.setAnimation(\"sun\");\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  drawSprites();\r\n}\r\n",
     "markdown_instructions": "# rotationSpeed\r\n\r\nYou've already learned how to make your sprite spin by using the `rotation` block.  For example, when you wanted your sprite to rotate by two degrees each time it was drawn, you put `sprite.rotation = sprite.rotation + 2` inside the draw loop.\r\n\r\nNow, you can use `rotationSpeed` to make your sprites rotate by a certain amount each time they are drawn. If you want your sun to rotate by two degrees each time it's drawn, you can use `sun.rotationSpeed = 2` before the draw loop, after you create your sprite.\r\n\r\n# Do This\r\n\r\nMake the sun rotate by 3 degrees each time using the `rotationSpeed` block. [Show me where](#triggercallout=callout1)",
     "palette_category_at_start": "sprites",
@@ -52,6 +52,9 @@
     "encrypted_examples": "MjmG0SqGl2eZ0iZ8Z/IwGOV/THg1bGMPsdSfFst58z3lXlgh41LC7VEYs4Zr\nBYhi\n",
     "show_debug_watch": "false",
     "callout_json": "[\r\n  {\r\n  \"localization_key\": \"CSD_U3_L11_S4_C1\",\r\n  \"callout_text\": \"Use the rotationSpeed block here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"callout1\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"sun.setAnimation(\\\"sun\\\");\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -33,7 +33,7 @@ raise "Unable to find click through url (#{CLICK_THROUGH_URL})" unless url_id
 test_query_succeeded = false
 results = {}
 teachers.keys.each_slice(10000) do |teacher_emails|
-  email_list = teacher_emails.map{|email| "\"#{email}\""}.join(',')
+  email_list = teacher_emails.map {|email| "\"#{email}\""}.join(',')
 
   # Run a test query with inner join to make sure we have click-through results before filtering
   unless test_query_succeeded

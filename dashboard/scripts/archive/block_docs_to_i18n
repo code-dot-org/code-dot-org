@@ -91,7 +91,7 @@ def update_docs_i18n_file(functions, i18n_json_filename)
   File.write(i18n_json_filename, JSON.pretty_generate(sorted_data_hash) + "\n")
 end
 
-doc_files = Dir.glob(FILE_LIST).select { |e| File.file? e }
+doc_files = Dir.glob(FILE_LIST).select {|e| File.file? e}
 puts "Processing #{doc_files.count} doc files..."
 function_infos = parse_function_docs(doc_files)
 puts 'Updating i18n lines...'

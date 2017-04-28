@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n   return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":19},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":25},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
@@ -32,7 +32,7 @@
       "upButton"
     ],
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
+    "timeout_after_when_run": "true",
     "markdown_instructions": "Now, Pirate Pegleg has some questions for Brian.\r\n\r\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \r\n\r\nPut the variables in the correct places to create this conversation.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
@@ -46,6 +46,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -60,13 +62,13 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">name</title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
                   <title name="SPRITE">1</title>
                   <value name="TEXT">
                     <block type="variables_get">
-                      <title name="VAR">A1</title>
+                      <title name="VAR">name</title>
                     </block>
                   </value>
                   <next>
@@ -81,7 +83,7 @@
                           </value>
                           <value name="ADD1">
                             <block type="variables_get">
-                              <title name="VAR">A1</title>
+                              <title name="VAR">name</title>
                             </block>
                           </value>
                           <value name="ADD2">
@@ -94,7 +96,7 @@
                       <next>
                         <block type="studio_ask">
                           <title name="TEXT">How old are you?</title>
-                          <title name="VAR">A2</title>
+                          <title name="VAR">age</title>
                           <next>
                             <block type="studio_saySpriteParams" inline="true">
                               <title name="SPRITE">1</title>
@@ -134,13 +136,13 @@
           </next>
         </block>
         <block type="variables_get">
-          <title name="VAR">A2</title>
+          <title name="VAR">age</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A2</title>
+          <title name="VAR">age</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">A1</title>
+          <title name="VAR">name</title>
         </block>
       </xml>
     </start_blocks>
@@ -345,13 +347,13 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">name</title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
                   <title name="SPRITE">1</title>
                   <value name="TEXT">
                     <block type="variables_get">
-                      <title name="VAR">A1</title>
+                      <title name="VAR">name</title>
                     </block>
                   </value>
                   <next>
@@ -366,7 +368,7 @@
                           </value>
                           <value name="ADD1">
                             <block type="variables_get">
-                              <title name="VAR">A1</title>
+                              <title name="VAR">name</title>
                             </block>
                           </value>
                           <value name="ADD2">
@@ -379,13 +381,13 @@
                       <next>
                         <block type="studio_ask">
                           <title name="TEXT">How old are you?</title>
-                          <title name="VAR">A2</title>
+                          <title name="VAR">age</title>
                           <next>
                             <block type="studio_saySpriteParams" inline="true">
                               <title name="SPRITE">1</title>
                               <value name="TEXT">
                                 <block type="variables_get">
-                                  <title name="VAR">A2</title>
+                                  <title name="VAR">age</title>
                                 </block>
                               </value>
                               <next>
@@ -400,7 +402,7 @@
                                       </value>
                                       <value name="ADD1">
                                         <block type="variables_get">
-                                          <title name="VAR">A2</title>
+                                          <title name="VAR">age</title>
                                         </block>
                                       </value>
                                       <value name="ADD2">
@@ -410,7 +412,7 @@
                                       </value>
                                       <value name="ADD3">
                                         <block type="variables_get">
-                                          <title name="VAR">A1</title>
+                                          <title name="VAR">name</title>
                                         </block>
                                       </value>
                                       <value name="ADD4">

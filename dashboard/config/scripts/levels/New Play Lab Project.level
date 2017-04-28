@@ -284,6 +284,23 @@
               </block>
             </value>
           </block>
+          <block type="studio_setSpriteXY" inline="true">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="XPOS">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+            <value name="YPOS">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+          </block>
           <block type="studio_setMap">
             <title name="VALUE">random</title>
           </block>

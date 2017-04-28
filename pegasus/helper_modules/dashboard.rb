@@ -26,9 +26,18 @@ module Dashboard
       @row = user_row
     end
 
+    # Retrieves the indicated user from the database, respecting soft-deletes.
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
       row = Dashboard.db[:users].where(id: user_id, deleted_at: nil).first
+      return nil unless row
+      Dashboard::User.new(row)
+    end
+
+    # Retrieves the indicated user from the database, ignoring soft-deletes.
+    # @returns [User] for given user_id, or nil if not found in database
+    def self.get_with_deleted(user_id)
+      row = Dashboard.db[:users].where(id: user_id).first
       return nil unless row
       Dashboard::User.new(row)
     end
@@ -82,11 +91,12 @@ module Dashboard
     # @return [Array[Integer]] the subset of other_user_ids that are followeds
     #   of the user encapsulated by this class.
     def get_followed_bys(other_user_ids)
-      Dashboard.db[:followers].
+      Dashboard.db[:sections].
+        join(:followers, section_id: :sections__id).
         join(:users, id: :followers__student_user_id).
-        where(followers__student_user_id: other_user_ids).
-        where(followers__user_id: id).
-        where(users__deleted_at: nil, followers__deleted_at: nil).
+        where(sections__user_id: id, sections__deleted_at: nil).
+        where(followers__student_user_id: other_user_ids, followers__deleted_at: nil).
+        where(users__deleted_at: nil).
         select_map(:followers__student_user_id)
     end
 
@@ -94,11 +104,12 @@ module Dashboard
     # @return [Boolean] whether other_user_id is a followed of the user
     #   encapsulated by this class.
     def followed_by?(other_user_id)
-      Dashboard.db[:followers].
+      Dashboard.db[:sections].
+        join(:followers, section_id: :sections__id).
         join(:users, id: :followers__student_user_id).
-        where(followers__student_user_id: other_user_id).
-        where(followers__user_id: id).
-        where(users__deleted_at: nil, followers__deleted_at: nil).
+        where(sections__user_id: id, sections__deleted_at: nil).
+        where(followers__student_user_id: other_user_id, followers__deleted_at: nil).
+        where(users__deleted_at: nil).
         any?
     end
 

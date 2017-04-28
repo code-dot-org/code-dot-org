@@ -47,6 +47,8 @@
     "markdown_instructions": "It's time to use what we've learned about conditionals to make this game amazing. This challenge has two parts:\r\n\r\n  1) Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  \r\n \r\n  2) Add code so that when Pegleg gets to the dragon, he gets two points *if* the dragon is happy. Otherwise, he should get only one point added to his score.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.\",\"hint_id\":\"courseD_playLab_cond3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/31df6b617885d906b85fb399810d7e59/courseD_playLab_cond3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use an `if / else` block for the second half of this challenge. \",\"hint_id\":\"courseD_playLab_cond3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/84127626228cbe26f55e7892c586534a/courseD_playLab_cond3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"`If` the dragon is happy `score point`, `score point`.\\n<br/>\\n \\n`Else` `score point`.\",\"hint_id\":\"courseD_playLab_cond3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e4696b6d909209936119159f1ea5b869/courseD_playLab_cond3.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -117,6 +119,12 @@
               </value>
             </block>
           </value>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation else="1"/>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation elseif="1" else="1"/>
         </block>
       </xml>
     </toolbox_blocks>

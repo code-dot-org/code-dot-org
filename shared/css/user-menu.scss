@@ -3,6 +3,11 @@
 
 .user_menu {
   padding: 7px 14px;
+
+  .user_name {
+    user-select: none;
+  }
+
   .user_options {
     background-color: white;
     border: 1px solid $charcoal;
@@ -18,7 +23,7 @@
       display: block;
       padding: 10px;
       font-family: $gotham-bold;
-      color: $charcoal;
+      color: $charcoal !important;
 
       $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
       transition: $transition;

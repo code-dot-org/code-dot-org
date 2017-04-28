@@ -13,16 +13,5 @@
       .header_popup_link_text= t(:more)
 .header_popup
   .header_popup_scrollable
-    .header_popup_header
-      %span
-        - if @user
-          = t('nav.popup.progress_for_user', name: @user.name)
-        - else
-          = t('nav.popup.progress')
-      .header_text{style: 'float: right;'}
     .header_popup_body
       .user-stats-block
-        .loading
-  .header_popup_footer
-    .header_popup_close
-      = t('nav.popup.close')

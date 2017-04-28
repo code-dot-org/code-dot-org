@@ -20,70 +20,77 @@ body {
   padding-top: 30px;
 }
 
-#pageheader {
+#pageheader-wrapper #pageheader {
   width: 100%;
   background-color: rgb(0, 178, 192);
-  height: 4em;
+  height: 3em;
   margin: 0 0 30px 0;
 }
 
-.pageheader-translucent {
+#pageheader-wrapper .pageheader-translucent {
   background-color: rgba(0, 178, 192, 0.5) ! important;
 }
 
-#pageheader .content {
+#pageheader-wrapper #pageheader .content {
   width: 970px;
   margin: 0 auto;
   overflow: visible;
   box-sizing: border-box;
 }
 
-#pageheader #left {
+#pageheader-wrapper #pageheader #left {
   width: 87px;
   float: left;
   margin: -1.0625em 0 0 0;
 }
 
-#pageheader img#logo {
+#pageheader-wrapper #pageheader img#logo {
   width: 87px;
   height: 87px;
   display: block;
+  margin-top: -5px;
+  margin-left: 5px;
 }
 
-#pageheader img#logo-uk {
+#pageheader-wrapper #pageheader img#logo-uk {
   width: 364px;
   height: 87px;
   display: block;
 }
 
-#pageheader #right {
+#pageheader-wrapper #pageheader #right {
   width: 880px;
   float: right;
   text-align: right;
 }
 
-.headerlink {
+#pageheader-wrapper #pageheader .headerlinks {
+  float: right;
+  position: relative;
+}
+
+#pageheader-wrapper .headerlink {
   display: inline-block;
   font-size: 18px;
-  margin: 0.9375em 0 0 30px;
+  margin: 0.5em 0 0 30px;
   font-family: 'Gotham 4r', sans-serif;
   color: white;
   text-decoration: none;
 }
 
-.headerlink:link,
-.headerlink:visited {
+#pageheader-wrapper .headerlink:link,
+#pageheader-wrapper .headerlink:visited {
   color: white;
   text-decoration: none;
 }
 
-.headerlink:hover,
-.headerlink:active {
+#pageheader-wrapper .headerlink:hover,
+#pageheader-wrapper .headerlink:active {
   color: white;
   border-bottom: solid 2px rgb(255, 164, 0);
 }
 
-.learnoption:hover {
+#pageheader-wrapper .learnoption:hover {
   text-decoration: underline;
 }
 
@@ -127,12 +134,15 @@ body {
   font-family: 'Gotham 4r', sans-serif;
 }
 
-
 /* styling for the embedded dashboard components... */
 #user_hero #contents {
   margin: 10px 0px;
   padding-left: 5px;
   width: 100%;
+}
+
+#sign_in_or_user {
+  margin: .6875em 0 0 30px;
 }
 
 #sign_in_or_user .button-signin {
@@ -174,7 +184,7 @@ body {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-top: 0px;
+  margin-top: -6px;
   padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
@@ -192,25 +202,27 @@ body {
 /* ...end styling */
 
 /* For mobile */
-.mobile-headers #pageheader {
-  height: 21px;
+.mobile-headers #pageheader-wrapper #pageheader {
+  height: 40px;
   margin: 15px 0 0 0;
 }
 
-.mobile-headers #pageheader .content,
-.mobile-headers #pagefooter .content {
+.mobile-headers #pageheader-wrapper #pageheader .content,
+.mobile-headers #pageheader-wrapper #pagefooter .content {
   width: 100%;
 }
 
-.mobile-headers #pageheader #left {
+.mobile-headers #pageheader-wrapper #pageheader #left {
   margin: -8px 0 5px 0px;
 }
-.mobile-headers #pageheader img#logo {
-  width: 37px;
-  height: 37px;
+.mobile-headers #pageheader-wrapper #pageheader img#logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 3px;
+  margin-left: 5px;
 }
 
-.mobile-headers #pageheader img#logo-uk {
+.mobile-headers #pageheader-wrapper #pageheader img#logo-uk {
   width: 155px;
   height: 37px;
 }

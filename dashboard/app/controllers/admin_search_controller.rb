@@ -31,7 +31,7 @@ class AdminSearchController < ApplicationController
         end
         if teachers.first
           array_of_student_ids = Follower.
-            where(user_id: teachers.first[:id]).pluck('student_user_id').to_a
+            where(user: teachers.first).pluck('student_user_id').to_a
           users = users.where(id: array_of_student_ids)
         end
       end
@@ -55,9 +55,9 @@ class AdminSearchController < ApplicationController
   end
 
   def undelete_section
-    section = Section.find_by_code params[:section_code]
-    if section && section.deleted_at
-      section.update!(deleted_at: nil)
+    section = Section.with_deleted.find_by_code params[:section_code]
+    if section.try(:deleted?)
+      section.restore(recursive: true, recovery_window: 5.minutes)
       flash[:alert] = "Section (CODE: #{params[:section_code]}) undeleted!"
     else
       flash[:alert] = "Section (CODE: #{params[:section_code]}) not found or undeleted."

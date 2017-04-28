@@ -114,7 +114,7 @@ fi:
         'turtle_2_4': "Hienostellaanpa vähän. Muuta ohjelma piirtämään 36 neliötä, jotka ovat leveydeltään 100 kuvapistettä ja 10 asteen etäisyydellä toisistaan. Vihje: voit käyttää liukusäädintä tehdäksesi minusta nopeamman."
         'turtle_2_5': "Piirrä neliöt kooltaan 50, 60, 70, 80 ja 90 kuvapistettä. Sinun pitää käyttää \"piirrä neliö\" -funktiota viisi kertaa."
         'turtle_2_6': "Hienoa! Tämä ohjelma tulee käyttämään laskuria piirtämään samat neliöt, kuin viimeksi. Sinun täytyy saada neliöstä laskurin osoittaman arvon kokoinen, joten käytä \"laskuri\"-lohkoa. Vihje: löydät sen \"Muuttujat\"-valikosta."
-        'turtle_2_7': "Tässä on ohjelma, joka piirtää spiraalin. Lohkon eivät ole vielä käytössä, joten ohjelma ei vielä aja. Tee uusi vastaavan spiraalin piirtävä ohjelma käyttäen \"laske\"-lohkoa (\"Silmukat\"-valikossa) ja \"laskuri\"-lohkoa (\"Muuttujat\"-valikossa)."
+        'turtle_2_7': "Tässä on ohjelma, joka piirtää spiraalin. Lohkot eivät ole vielä käytössä, joten ohjelma ei vielä aja. Tee uusi vastaavan spiraalin piirtävä ohjelma käyttäen \"laske\"-lohkoa (\"Silmukat\"-valikossa) ja \"laskuri\"-lohkoa (\"Muuttujat\"-valikossa)."
         'turtle_2_7_5': "\"Funktiot\"-valikossa on lisätty uusi \"piirrä lumiukko\"-funktio. Piirrä kaksi lumiukkoa, korkeudet 250 ja 100."
         'turtle_2_8': "Tämä voi olla hieman haastava. Käytä \"piirrä lumiukko\" -funktiota ja uutta \"hyppää taaksepäin\" -lohkoa (Toiminnot-valikossa). Piirrä 3 lumiukkoa eri väreissä, 100 kuvapisteen etäisyydellä toisistaan."
         'turtle_2_9': "Käytä \"laske\" silmukkaa piirtämään lumiukkoperhe, jossa lumiukkojen pituudet ovat 110, 100, 90, 80 ja 70 kuvapistettä. Lumiukkojen pitäisi kaikkien olla 60 kuvapisteen etäisyydellä toisistaan."
@@ -396,6 +396,10 @@ fi:
         'C4_unplugged_forloops': 'Silmukat'
         'C4_unplugged_parameters': 'Parametroitu sävellys'
         'C4_unplugged_binary': 'Binääri'
+        'CSF_EF_cs_matters': 'Computer Science Matters'
+        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_unspotted_bugs': 'Unspotted Bugs'
+        'CSF_zuck_loops_short': 'Repeat Loops'
         'frozen_intro': 'Koodaustunnin esittely'
         'frozen_loops': 'Johdanto silmukoihin'
         'frozen_functions': 'Johdanto funktioihin'
@@ -413,6 +417,11 @@ fi:
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
         'csd_gamelab_velocity': 'Velocity'
+        'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
+        'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
+        'csd_weblab_css_1': 'Intro to CSS - Part 1'
+        'csd_weblab_css_2': 'Intro to CSS - Part 2'
+        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'

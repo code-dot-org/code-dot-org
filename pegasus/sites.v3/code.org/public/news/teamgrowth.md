@@ -1,5 +1,6 @@
 ---
 title: Code.org partners with ACM, grows team
+theme: responsive
 ---
 
 

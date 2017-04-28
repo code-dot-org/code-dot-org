@@ -36,7 +36,7 @@ require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 
-Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
+Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
 require 'rails/test_help'
@@ -144,7 +144,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
-      e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
       # rubocop:enable Lint/Eval
     end
     before = exps.map(&:call)
@@ -165,7 +165,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
-      e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
       # rubocop:enable Lint/Eval
     end
     before = exps.map(&:call)

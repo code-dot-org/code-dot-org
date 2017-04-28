@@ -3,7 +3,7 @@ fil:
     messages:
       not_saved: 'Pakiwasto ang mga sumusunod na error:'
       too_young: 'May limitadong edad ito at hindi pwedeng ibigay sa nakababatang mga estudyante.'
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      teacher_must_accept_terms: 'Ang content na ito ay may nakalagay na restrikyon sa edad at hindi available para sa mga mas batang mag-aaral. Pakisabihan ang iyong guro na tanggapin ang updated na Terms of Service para mabigyan ka ng access sa content na ito. Magagawa ito ng iyong guro sa pag-login sa Code Studio at pag-click sa "I-review ang updated terms" button malapit sa itaas ng Code Studio homepage.'
       pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
@@ -12,6 +12,7 @@ fil:
     attributes:
       user:
         name: 'Ipapakita na Pangalan'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
         username: 'Username'
         password: 'Password'
@@ -29,18 +30,18 @@ fil:
   see_your_learning_plan: "See your learning plan"
   submit: Ipasa
   unsubmit: Unsubmit
-  previous_page: Previous page
-  next_page: Next page
-  next_resource: Next resource
+  previous_page: Dating pahina
+  next_page: Susunod na pahina
+  next_resource: Susunod na resource
   done_with_module: Done with this Learning Module
   cancel: "Kanselahin"
   okay: "Okay"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
   add_teacher_form:
     code:
       label: 'Magdagdag ng guro:'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+      instructions: "Pakipasok ang code na ibinahagi sa iyo ng iyong guro. Ito ay 6 na letrang code tulad ng \"ABCDEF\"."
     submit: 'Magdagdag ng guro'
   add_hint_form:
     placeholder: 'Maaaring ilagay ang iyong hint dito'
@@ -51,7 +52,7 @@ fil:
   puzzle: "Palaisipan"
   trophies: "Tropeo"
   courses: 'Mga kurso'
-  unplugged_activity: 'Unplugged Activity'
+  unplugged_activity: 'Unplugged na Aktibidad'
   of: "ng"
   more: "MARAMI"
   less: "KAUNTI"
@@ -78,15 +79,16 @@ fil:
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
     need_unlock: "Hindi nakatanggap kung paano mag unlock?"
+    not_linked: "Paumanhin, ang iyong Code.org account ay hindi naka-link sa iyong %{provider}. Kailangan mong mag-sign in sa pamamagitan ng pag-type ng iyong password sa ibaba."
   signup_form:
     student_count: '%{count} na istudyante na sumali dito.'
     teacher_count: '%{count} na guro na sumali dito.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    overview: 'Mag-sign up para sa isang account upang masundan ang iyong progreso o i-manage ang iyong silid-aralan. <a href="/">Pwede kang mag-browse ng iba''t ibang stages at palaisipan</a> nang walang account, pero kailangan mong mag-sign up para i-save ang iyong progreso at mga proyekto.'
+    hoc_already_signed_up_heading: 'Magsimula nang hindi nagla-login'
+    hoc_already_signed_up_content: 'Ikaw ay naka-sign up para magturo ng Hour of Code! Ikaw at ang iyong mga mag-aaral ay hindi kailangang mag-sign in sa Code Studio para lumahok sa event na ito. Para magsimula <a href="%{learn_url}">pumili ng tutorial</a> para sa iyong silid-aralan at ibahagi ang link sa kanila.<br/><br/>Kung na-enjoy mo ang Hour of Code at gusto pang dagdagan, pwede kang mag-set up ng password at gumawa ng Code studio account sa ibaba para i-enroll ang iyong mga mag-aaral sa anumang <a href="%{educate_url}">mahahabang kurso</a> namin.'
+    hoc_already_signed_up_content_post_hoc: 'Salamat sa pag-host ng Hour of Code. Para mag-sign in sa Code Studio, kailangan mong mag-set up ng password para sa iyong account. Magagawa nitong i-save ang iyong progreso at i-manage ang iyong silid-aralan. Makapagtatalaga ka ng mga kurso para sa mga mag-aaral at masusundan ang kanilang progreso. <a href="%{studio_url}">Pwede ka ring magpatuloy sa pag-browse ng iba''t ibang stages at palaisipan</a> nang hindi gumagawa ng account.'
     teacher_educator_guide: 'Bisitahin ang gabay para sa mga guro'
-    title: "Sign up for Code.org"
+    title: "Mag-sign up para sa Code.org"
     school_name: 'Pangalan ng Paaralan (optional)'
     school_address: 'Lugar ng Paaralan (optional)'
     address_placeholder: 'Address, Cuidad, Probinsya, Zip Code'
@@ -104,35 +106,57 @@ fil:
     mismatch_password: "Ang passwords na iyong inenter ay hindi tugma sa isa't isa"
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
-    additional_information: "We need some additional information to continue signing you up."
-    user_type_label: "Account Type"
+    additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
+    user_type_label: "Uri ng Account"
     user_type_teacher: "Teacher"
     user_type_student: "Estudyante"
     field_is_required: "ay kailangan"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Pribado'
+    public: 'Publiko'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Iba'
+    state: 'Estado'
+    district: 'Distrito'
+    other_district_not_listed: 'Ibang distrito na hindi nakalista sa itaas'
+    district_name: 'Pangalan ng Distrito'
+    school: 'Paaralan'
+    other_school_not_listed: 'Ibang paaralan na hindi nakalista sa itaas'
+    school_name: 'Pangalan ng Paaralan'
+    school_zip: 'Zip Code ng Paaralan'
+    school_address: 'Address ng Paaralan'
+    school_organization_name: 'Pangalan ng Paaralan/Organisasyon'
+    school_organization_zip: 'Zip Code ng Paaralan/Organisasyon'
   signin_form:
     title: 'May account ka na? Sign in'
     login: 'Email'
+    login_username: 'Email o Username'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
   signin:
-    try_heading: 'Want to try coding without signing up?'
+    try_heading: 'Gusto mo bang subukang mag-code nang hindi nagsa-sign up?'
     try_hoc: 'Subukan muna ang one Hour of Code'
     try_20hours: 'Subukan ang 20 oras Intro to Computer Science'
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: 'Welcome sa %{section_name}'
     name: 'Piliin ang iyong pangalan'
     picture: 'Hanapin ngayon ang iyong sikretong larawan'
     words: 'Ilagay ngayon ang iyong mga sikretong salita'
     login: 'Sign in'
-    invalid_login: 'Invalid login, please try again'
-    pair_programming: 'I have a partner at my computer'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    invalid_login: 'Imbalidong login, pakisubukang muli'
+    pair_programming: 'May partner ako sa aking kompyuter'
+    student_privacy: "Alamin pa kung bakit hindi mo nakikita ang buo mong pangalan <a href='%{student_privacy_blog}' target='_blank'>dito</a>."
   password:
     reset_form:
       title: 'Hindi matandaan ang password?'
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: "Ipasok ang iyong email address sa ibaba at padadalhan ka namin ng mga instruksyon sa pag-reset ng iyong password."
       email: 'Email address'
       submit: 'Ipasa'
     change_form:
@@ -143,13 +167,21 @@ fil:
   welcome_email:
     subject: 'Sumali sa aking klase (sa Code.org)'
     body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      I-click ang link sa ibaba para mag-sign up para sa mga computer science tutorials sa Code.org (kasama ako bilang "guro" mo):
       
       %{link}
       
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      Ang mga tutorials ay masaya, nakatatawag-pansin at itinuturo ang mga pangunahing konsepto ng computer science gamit ang simple, ginagabayan, mala-larong karanasan. Matutong mag-code mula kay Bill Gates, Mark Zuckerberg, Angry Birds, at Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Imbitasyon napadala na'
     added_teacher: '%{name} dinagdag ka bilang guro'
@@ -163,8 +195,6 @@ fil:
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
-      invite_student:
-        subject: "Join a class with %{teacher_name} at Code.org!"
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
   reports:
@@ -216,9 +246,9 @@ fil:
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
         not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-          earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
-          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+          not_earned_title: 'Pwede ka pa ring kumita ng karagdagang $250 na <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (mga guro sa U.S. lang)'
+          earned: '7 o higit pa sa mga mag-aaral na nakakolekta sa lahat ng %{num_trophies} tropeo ay babae. Nanalo ka ng bonus na premyo! (mga guro sa U.S. lang)'
+          not_earned: 'Kung 7 man lang sa mga mag-aaral mo na nakakamit sa lahat ng %{num_trophies} tropeo ay babae, ang iyong premyo ay karagdagang $250 na <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Ang <a target="_blank" href="http://DonorsChoose.org">DonorChoose.org</a> credits ay pwede lang gamitin ng mga guro ng pampublikong paaralan sa U.S.'
   crud:
     new_model: 'New %{model}'
     show: 'Ipakita'
@@ -228,14 +258,14 @@ fil:
     destroy: 'Destroy'
     back: 'Bumalik'
     confirm: 'Sigurado ka?'
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: 'You do not have access to this %{model}.'
+    created: '%{model} ay matagumpay na nagawa.'
+    updated: '%{model} ay matagumpay na na-update.'
+    destroyed: '%{model} ay matagumpay na tinanggal.'
+    access_denied: 'Wala kang access sa %{model} na ito.'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
-      sign_in_to_save: 'Sign in to save progress'
+      finished_hoc: "Natapos ko ang aking Hour of Code"
+      sign_in_to_save: 'Mag-sign in para i-save ang progreso'
       free_play:
         playlab: 'Lumikha ng App'
         artist: 'Gumuhit ng isang bagay'
@@ -243,61 +273,61 @@ fil:
         applab: 'Lumikha ng App'
     user:
       classroom: 'Home Page ng Teacher'
-      district_dashboard: 'District Dashboard'
+      district_dashboard: 'Dashboard ng Distrito'
       label: 'Mabuhay %{username}'
       stats: 'Code Studio'
-      settings: 'My account'
+      settings: 'Account Ko'
       prizes: 'Mga Premyo'
-      logout: 'Sign out'
+      logout: 'Mag-sign out'
       signin: 'Sign in'
-      signup: 'Create an account'
-      already_registered: 'Already registered?'
+      signup: 'Gumawa ng account'
+      already_registered: 'Nakarehistro na?'
       pair_programming: 'Pair Programming'
-      team: 'Team'
+      team: 'Koponan'
       driver: 'Driver'
       navigator: 'Navigator'
     popup:
-      progress_for_user: "%{name}'s progress"
-      progress: 'Your progress'
-      lines: 'Total lines of code: %{lines}'
-      close: 'CLOSE'
-      mastery: 'Concepts'
-      puzzle_map: 'Stages'
-      prizes: 'Collect all %{total_trophies} trophies and win prizes!'
-      prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
-      prize_us_only: '(U.S. students only)'
+      progress_for_user: "Progreso ni %{name}"
+      progress: 'Progreso mo'
+      lines: 'Kabuuang dami nang linya ng code: %{lines}'
+      close: 'ISARA'
+      mastery: 'Mga Konsepto'
+      puzzle_map: 'Mga Stage'
+      prizes: 'Kolektahin ang lahat ng %{total_trophies} tropeo at manalo ng mga premyo!'
+      prize_earned: 'Nakolekta ang lahat ng %{total_trophies} tropeo. Nanalo ng Premyo!'
+      prize_us_only: '(mga mag-aaral sa U.S. lang)'
       prizes_link: 'Para sa maraming kaalaman'
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Sagot
+    for_teachers_only: Para sa mga Guro Lang
     title:
       one: 'Ang iyong guro:'
       other: 'Ang iyong mga guro:'
     remove: '(tanggalin ang guro)'
     confirm:
-      remove: 'Are you sure you want to remove this teacher?'
+      remove: 'Gusto mo ba talagang alisin ang gurong ito?'
     students:
-      dashboard: 'Go to Teacher Dashboard'
-    user_not_found: 'The teacher could not be found.'
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+      dashboard: 'Pumunta sa Dashboard ng Guro'
+    user_not_found: 'Ang guro ay hindi mahanap.'
+    student_teacher_disassociated: 'Iniwan mo ang seksyon %{section_code} ni %{teacher_name}.'
     panel:
       answer_viewer: 'Teacher Panel'
       student: 'Estudyante'
       viewing_solution: 'Viewing Solution'
-      try_it_yourself: 'Try it yourself'
+      try_it_yourself: 'Subukan sa sarili mo'
       section: 'Bahagi'
-      example: 'Example Solution'
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on:'
+      example: 'Halimbawang Solusyon'
+      example_with_number: 'Halimbawang Solusyon %{solution_number}'
+      submitted_on: 'Isinumite noong:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
-      update_lock_settings: 'Update lock settings here.'
+      update_lock_settings: 'I-update ang settings sa lock dito.'
       clear_response: 'Clear response'
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: '(Wrong email address?)'
-    email_resend_confirm: 'Resend confirmation instructions'
+    email_confirm_needed: 'Hindi pa kumpirmado ang email address:'
+    email_confirm_needed_required: 'Ang email address mong %{email} ay hindi pa nakukumpirma:'
+    email_confirm_wrong_email: '(Maling email address?)'
+    email_resend_confirm: 'Ipadalang muli ang mga instruksyon sa pag-kumpirma'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete your account'
@@ -344,44 +374,47 @@ fil:
     test_videos_help: 'Test our new video player at your school'
     try_beta_courses: 'New! Try our beta courses for K-5 students'
     use_as_teacher: 'Use this site as a teacher'
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
+    heading_hoc2014: "<h2>Ang Hour of Code para sa</h2><h1>Lahat ng Edad</h1>"
+    heading_elementary: "<h2>20 oras na mga kurso para sa</h2><h1>Pangunahing Kaalaman sa Computer Science (lahat ng edad)</h1>"
+    heading_apps: "<h2>Masaya para sa</h2><h1>Lahat</h1>"
+    heading_tools: "<h2>Handa na ba para sa susunod na hakbang?</h2><h1>JavaScript Tools para sa mga High School</h1>"
+    heading_legacy: "<h2>Ang aming pinabilis na kurso para sa</h2><h1>Lahat ng Edad</h1>"
     your_gallery: Gallery
-    no_primary_course: "Try a Code Studio course"
-    choose_next_course: "Try a Code Studio course by choosing one below"
-    print_certificate: "Print Certificate"
-    announcement_title: "Announcements"
+    no_primary_course: "Subukan ang Code Studio na kurso"
+    choose_next_course: "Subukan ang isang Code Studio na kurso sa pagpili ng isa sa ibaba"
+    print_certificate: "Mag-print ng Certificate"
+    announcement_title: "Mga Anunsiyo"
     announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
-    announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
+    announcement_csp_widgets_message: "Naghahanap ba ng mga masasayang paraan para ituro sa iyong klase kung paano gumagana ang internet, paano nagagawang i-secure ng cryptography ang data mo, at iba pang mga konsepto? Kinuha namin ang mga pinakamagandang interactive tools mula sa aming curriculum na Prinsipiyo ng Computer Science at nag-release ng mga standalone widgets na pwede mong gamitin anumang oras!"
     announcement_learn_more_button: "Matuto nang higit pa"
     announcement_try_now_button: "Subukan ngayon"
-    announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: "Add your name"
+    announcement_host_an_hour_button: "Mag-host ng Isang Oras"
+    announcement_watch_video_button: "Manood ng video"
+    announcement_petition: "Bilang guro, ikaw ay nangunguna sa laban para bigyan ang bawat mag-aaral sa lahat ng paaralan ng oportunidad na matuto ng computer science. Ngayon, oras na para makarinig mula sa iyo ang iyong mga kinatawan. Ngayong linggong ito, ang mga lider ng edukasyon, 28 gobernador, at mga CEO ng mga pinakamalalaking kompanya sa Amerika ay nagsama-sama sa isang open letter na hinihingi sa Kongreso ng U.S. na pondohan ang K-12 computer science na edukasyon."
+    announcement_petition_button: "Idagdag ang pangalan mo"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
-    section_code_not_entered: "Please provide current_section_code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
     current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
-    students_not_yours: "You cannot move students from a section that does not belong to you."
-    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
     student_ids_not_entered: "Please provide student_ids."
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
-    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
+    already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
   share:
     title: "Learn on Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."
@@ -405,7 +438,7 @@ fil:
     copyright: 'Copyright'
     more: 'More'
     feedback: 'Provide feedback'
-    translate: 'Help us translate to your language'
+    translate: 'Volunteer to translate our content'
     support: 'Support'
     support_url: 'http://support.code.org/'
     tos_short: 'Terms'
@@ -434,6 +467,10 @@ fil:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
       link: "Matuto nang higit pa"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next stage'

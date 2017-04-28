@@ -4,12 +4,14 @@ import sinon from 'sinon';
 import {expect} from 'chai';
 import {TeacherApplication, likertAnswers} from '@cdo/apps/code-studio/pd/teacher_application/teacher_application';
 import {shallow} from 'enzyme';
-import ButtonList from '@cdo/apps/code-studio/pd/form_components/button_list';
+import MD5 from 'crypto-js/md5';
+import * as districtDropdownHelper from '@cdo/apps/code-studio/pd/teacher_application/district_dropdown_helper';
 
 describe("Tests for Teacher Application", () => {
   let form;
-  let districtErrorMessage;
-  const districtErrorMessageHandler = function (message) { districtErrorMessage = message;};
+
+  const validateDistrictData = sinon.stub(districtDropdownHelper, 'validateDistrictData').returns(true);
+  const districtErrorMessageHandler = sinon.spy();
   const regionalPartnerExample = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready'};
   const regionalPartnerWithWorkshopDates = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready', workshopDays: 'OverriddenDates'};
 
@@ -52,12 +54,19 @@ describe("Tests for Teacher Application", () => {
     ['school-zipcode']: '10000'
   });
 
+  const defaultAccountEmail = 'ben@upenn.edu';
+  const getEmailHash = email => MD5(email.toLowerCase()).toString();
+  const defaultAccountInfo = {
+    email: defaultAccountEmail,
+    hashedEmail: getEmailHash(defaultAccountEmail)
+  };
+
   const defaultUser = {
     textFields: {
       firstName: 'Benjamin',
       preferredFirstName: 'Ben',
       lastName: 'Franklin',
-      primaryEmail: 'ben@upenn.edu',
+      primaryEmail: defaultAccountEmail,
       secondaryEmail: 'ben@gmail.com',
       phoneNumber: '2127365000',
       principalFirstName: 'George',
@@ -162,9 +171,11 @@ describe("Tests for Teacher Application", () => {
 
   const assertNoFormErrors = () => {
     expect(form.instance().errorData).to.deep.equal({});
+    expect(districtErrorMessageHandler.calledWithExactly(''));
   };
 
-  const completeApplication = (application, workshopString) => {
+  const defaultWorkshopString = 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)';
+  const completeApplication = (application, workshopString = defaultWorkshopString) => {
     _.forEach(application['textFields'], (value, label) => {
       write(label, value);
     });
@@ -187,12 +198,19 @@ describe("Tests for Teacher Application", () => {
     button.simulate('click');
   };
 
-  const createTeacherApplication = (schoolDistrictData, regionalPartnerInformation = []) => {
+  // accountInfo may include: email, hashedEmail
+  const createTeacherApplication = (
+    schoolDistrictData,
+    regionalPartnerInformation = [],
+    accountInfo = defaultAccountInfo
+  ) => {
     return shallow(
       <TeacherApplication
         schoolDistrictData={schoolDistrictData}
         districtErrorMessageHandler={districtErrorMessageHandler}
         {...regionalPartnerInformation}
+        accountEmail={accountInfo.email}
+        hashedAccountEmail={accountInfo.hashedEmail}
       />
     );
   };
@@ -253,6 +271,11 @@ describe("Tests for Teacher Application", () => {
       assertSummerContentAndWarningExistance(true);
       expect(form.find('SummerProgramContent').prop('selectedWorkshop')).to.equal('OverriddenDates');
     });
+
+    it("Displays account email in primaryEmail field", () => {
+      form = createTeacherApplication(defaultSchoolDistrictData);
+      expect(form.find('#primaryEmail').prop('defaultValue')).to.equal(defaultAccountEmail);
+    });
   });
 
   describe("Tests for completed applications", () => {
@@ -272,7 +295,7 @@ describe("Tests for Teacher Application", () => {
 
       pickCourse('csd');
       let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
-      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      completeApplication(application);
 
       assertNoFormErrors();
       assertSummerContentAndWarningExistance(true);
@@ -334,64 +357,78 @@ describe("Tests for Teacher Application", () => {
   });
 
   describe("Tests for expected failure cases", () => {
-    it("Applications missing required data are not submitted", () => {
-      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+    let application;
 
+    beforeEach(() => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
       pickCourse('csd');
-      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+    });
+
+    it("Applications missing required data are not submitted", () => {
       delete application['textFields']['firstName'];
 
-      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      completeApplication(application);
       expect(form.state('submitting')).to.be.false;
       expect(form.find('#firstName').prop('errorText')).to.equal('This field is required');
     });
 
     it("Applications with missing likert answers are not submitted", () => {
-      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
-
-      pickCourse('csd');
-      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
       delete application['likertList']['csCreativity'];
-      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      completeApplication(application);
       expect(form.state('submitting')).to.be.false;
       expect(form.find('#csCreativity').prop('validationState')).to.equal('error');
     });
 
     it("Applications with missing survey answers are not submitted", () => {
-      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
-
-      pickCourse('csd');
-      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
       delete application['selectionFields']['currentCsOpportunities'];
-      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      completeApplication(application);
       expect(form.state('submitting')).to.be.false;
       expect(form.find('[groupName="currentCsOpportunities"]').prop('validationState')).to.equal('error');
     });
 
     it("Applications with non emails in email fields are not submitted", () => {
-      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
-
-      pickCourse('csd');
-      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
       application['textFields']['primaryEmail'] = 'not an email';
 
-      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      completeApplication(application);
       expect(form.state('submitting')).to.be.false;
       expect(form.find('#primaryEmail').prop('errorText')).to.equal(
         'Please enter a valid email address, like name@example.com');
     });
 
     it("Applications with non phone numbers in phone number fields are not submitted", () => {
-      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
-
-      pickCourse('csd');
-      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
       application['textFields']['phoneNumber'] = 'not a number';
 
-      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      completeApplication(application);
       expect(form.state('submitting')).to.be.false;
       expect(form.find('#phoneNumber').prop('errorText')).to.equal(
         'Phone numbers must have at least 10 digits, like (123) 456-7890');
+    });
+
+    it("Sends expected error to callback when district dropdown validation fails", () => {
+      validateDistrictData.returns(false);
+
+      completeApplication(application);
+      expect(form.state('submitting')).to.be.false;
+      expect(districtErrorMessageHandler.calledWithExactly(
+        "Please complete this section with your school's information"
+      ));
+    });
+
+    it("Fails for primary emails that don't match the account email hash", () => {
+      application['textFields']['primaryEmail'] = 'mismatch@example.net';
+      completeApplication(application);
+
+      expect(form.state('submitting')).to.be.false;
+      expect(form.find('#primaryEmail').prop('errorText')).to.eql(
+        <div>
+          Primary email must match your login.
+          If you want to use this email instead, first update it in&nbsp;
+          <a href="/users/edit">
+            account settings.
+          </a>
+        </div>
+      );
     });
   });
 });

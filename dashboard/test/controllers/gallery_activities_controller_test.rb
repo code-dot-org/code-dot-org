@@ -238,7 +238,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   test "cannot create gallery activity for invalid user_level id" do
     assert_does_not_create(GalleryActivity) do
       post :create,
-        params: {gallery_activity: { user_level_id: UserLevel.last.id + 1 }},
+        params: {gallery_activity: {user_level_id: UserLevel.last.id + 1}},
         format: :json
     end
 

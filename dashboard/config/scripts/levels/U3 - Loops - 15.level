@@ -56,7 +56,8 @@
     "start_blocks": "var die1 = -1;\r\nvar die2 = -1;\r\nvar loopNum = 0; //use to count number of loops\r\nvar twelveCount = 0; //use to count 12's\r\n\r\nwhile(loopNum < 1000){ \r\n  loopNum++;\r\n  die1 = randomNumber(1, 6);\r\n  die2 = randomNumber(1, 6);\r\n  console.log(\"Rolled a \" + die1 + \" and a \" + die2 + \" for a total of \" + (die1 + die2));\r\n}\r\nconsole.log(\"The number of times 12 was rolled was: \" + twelveCount);\r\nconsole.log(\"Done.\");",
     "instructions": "Count the number of times the sum of the dice is 12. (Click to see full instructions)",
     "slider_speed": "1.0",
-    "encrypted_examples": "cMRggYshTuMQmTYJpVVzci7Yio+y+OEhJbCvvgemsLYUams6ulBJKykyL8Om\nndP8\n"
+    "encrypted_examples": "cMRggYshTuMQmTYJpVVzci7Yio+y+OEhJbCvvgemsLYUams6ulBJKykyL8Om\nndP8\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>

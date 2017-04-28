@@ -26,7 +26,7 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
     workshop_days: 'workshop_days'
   }.freeze
 
-  CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true}
+  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}
 
   NO_PARTNER = 'NO PARTNER'
 

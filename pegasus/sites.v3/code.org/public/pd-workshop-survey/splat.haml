@@ -8,7 +8,13 @@ title: "Professional Development Workshop Survey"
   pass unless enrollment
 
   workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
+
   pass unless workshop && workshop[:ended_at]
+
+  workshops_facilitators = DASHBOARD_DB[:pd_workshops_facilitators].where(pd_workshop_id: enrollment[:pd_workshop_id])
+  facilitators = workshops_facilitators.map do |wf|
+    DASHBOARD_DB[:users].where(id: wf[:user_id]).first[:name]
+  end
 
   teacher_id = enrollment[:user_id]
   teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
@@ -25,41 +31,74 @@ title: "Professional Development Workshop Survey"
   course = workshop[:course]
   subject = workshop[:subject]
 
-  mimeo_url = nil
-  if course == 'CS Fundamentals'
-    mimeo_url = CDO.studio_url "pd/mimeo/#{enrollment_code}"
-  end
-
   def local_view(name, options = {})
     options[:form] = PdWorkshopSurvey
     view "pd_survey_controls/#{name.to_s}", options
   end
 
-  # Temporarily, don't use Mimeo SSO redirect.
-  # TODO: Once we're satisfied with the Mimeo SSO feature, remove the below line and the following javascript,
-  #       and address the related TODO in pd-workshop-survey.js
-  mimeo_url = nil
+  facilitator_specific_questions = {
+    sourceName: 'who_facilitated_ss[]',
+    sourceLabel: 'Who facilitated your workshop today? (check at least one)',
+    sourceValues: facilitators,
+
+    columnVariableQuestions: [{
+      name: 'how_clearly_presented_s',
+      type: 'single_select',
+      label: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+    }, {
+      name: 'how_interesting_s',
+      type: 'single_select',
+      label: 'How interesting did your facilitator make what you learned in the workshop?'
+    }, {
+      name: 'how_often_given_feedback_s',
+      type: 'single_select',
+      label: 'How often did your facilitator give you feedback that helped you learn?'
+    }, {
+      name: 'help_quality_s',
+      type: 'single_select',
+      label: 'When you needed extra help, how good was your facilitator at giving you that help?'
+    }, {
+      name: 'how_comfortable_asking_questions_s',
+      type: 'single_select',
+      label: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+    }, {
+      name: 'how_often_taught_new_things_s',
+      type: 'single_select',
+      label: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+    }],
+
+    rowVariableQuestions: [{
+      name: 'things_facilitator_did_well_s',
+      type: 'free_response',
+      label: "What were two things {value} did well?"
+    }, {
+      name: 'things_facilitator_could_improve_s',
+      type: 'free_response',
+      label: "What were two things {value} could do better?"
+    }]
+  }
+
+  facilitator_specific_questions[:columnVariableQuestions].each do |question|
+     question[:values] = PdWorkshopSurvey.options_for(question[:name])
+     question[:required] = true
+  end
 
 :javascript
   window.pdWorkshopSurvey = {
     enrollmentCode: "#{enrollment_code}",
-    course: "#{course}"
+    course: "#{course}",
+    facilitatorSpecificQuestions: #{facilitator_specific_questions.to_json}
   };
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
-%script{type: "text/javascript", src: "/js/pd-workshop-survey.js"}
+%script{type: "text/javascript", src: minifiable_asset_path('js/code.org/public/pd-workshop-survey/splat.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
-- if previous_response
-  %h1 Thank you
-  %h3 You have already completed this survey.
-
-- else
-
-  %form#pd-workshop-survey-form{role: 'form'}
+%div
+  %form#pd-workshop-survey-form{role: 'form', style: previous_response ? 'display: none;' : ''}
     %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
     %input{name: 'email_s', type: 'hidden', value: email}
     %input{name: 'name_s', type: 'hidden', value: name}
@@ -150,47 +189,10 @@ title: "Professional Development Workshop Survey"
           name: 'how_motivating_s',
           label: 'During your workshop, how motivating were the activities that this program had you do?'
 
-      .form-group
-        = local_view :single_select,
-          name: 'how_clearly_presented_s',
-          label: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      - facilitators.each do |name|
+        %input{name: 'facilitator_names_s[]', type: 'hidden', value: name}
 
-      .form-group
-        = local_view :single_select,
-          name: 'how_interesting_s',
-          label: 'How interesting did your facilitator make what you learned in the workshop?'
-
-      .form-group
-        = local_view :single_select,
-          name: 'how_often_given_feedback_s',
-          label: 'How often did your facilitator give you feedback that helped you learn?'
-
-      .form-group
-        = local_view :single_select,
-          name: 'help_quality_s',
-          label: 'When you needed extra help, how good was your facilitator at giving you that help?'
-
-      .form-group
-        = local_view :single_select,
-          name: 'how_comfortable_asking_questions_s',
-          label: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
-
-      .form-group
-        = local_view :single_select,
-          name: 'how_often_taught_new_things_s',
-          label: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
-
-      .form-group
-        %label.control-label{for: 'things_facilitator_did_well_s'}
-          What were two things your facilitator(s) did well?
-          (Please name and comment on them separately if you had more than one)
-        %textarea.form-control{name: 'things_facilitator_did_well_s', rows: 4, type: 'text'}
-
-      .form-group
-        %label.control-label{for: 'things_facilitator_could_improve_s'}
-          What were two things your facilitator(s) could do better?
-          (Please name and comment on them separately if you had more than one)
-        %textarea.form-control{name: 'things_facilitator_could_improve_s', rows: 4, type: 'text'}
+      .form-group#facilitator-specific-questions
 
       .form-group
         = local_view :single_select,
@@ -312,19 +314,26 @@ title: "Professional Development Workshop Survey"
       .form-group.submit-btn
         %button#btn-submit.btn.btn-primary{type: "submit"} Submit
 
-  #thanks{style: 'display: none;'}
-    %h1 Thank you for your submission
-    %h3 We appreciate your feedback.
+  #thanks{style: previous_response ? '' : 'display: none;'}
+    %h1 Thank you for your survey submission!
 
-- if mimeo_url
-  #materials-order{style: 'display: none;'}
-    %h1 Order Supplies
-    %p
-      Click below if you'd like to be connected with our partner Mimeo to order free materials for the unplugged
-      lessons in CS Fundamentals, or to check on an existing order (US attendees only).
-    %p
-      %a{href: mimeo_url}
-        %button#btn.btn-primary Order Supplies
+    - if course == 'CS Fundamentals'
+      - order_url = CDO.studio_url("/pd/workshop_materials/#{enrollment_code}", CDO.default_scheme)
 
-- if previous_response && mimeo_url
-  %script{type: 'text/javascript'}$('#materials-order').show();
+      %h2 Request your free course kit (US attendees only)
+
+      %p
+        As part of Code.org K-5 professional development programs, attendees are provided one free course kit
+        containing supplies for the unplugged lessons in Courses 1-4. If you’d like to request your free course kit,
+        click the button below. You will have to log in to your Code Studio account to complete your order.
+
+      %p
+        %a{href: order_url}
+          %button
+            Click here to log in and order your free course kit.
+
+      %h2
+        If you are not interested in requesting a course kit, you can close this window.
+
+    - else
+      %h3 We appreciate your feedback.

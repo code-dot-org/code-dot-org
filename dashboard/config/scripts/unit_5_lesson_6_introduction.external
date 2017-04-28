@@ -19,7 +19,7 @@ Strings are a data type found inside of most programming languages. Strings are 
 ## Vocabulary
 
 *   **String** - Any sequence of characters between quotation marks (ex: "hello", "42", "this is a string!").
-*   **Concatentate** - to link together or join. Typically used when joining together text Strings in programming (e.g. "Hello, "+name)
+*   **Concatenate** - to link together or join. Typically used when joining together text Strings in programming (e.g. "Hello, "+name)
 
 ## Resources
 

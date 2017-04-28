@@ -1,0 +1,213 @@
+@import 'color';
+@import 'font';
+
+//colors
+$color_blue_chill_80_approx: rgba(3, 147, 158, 0.8);
+$color_pacific_blue_approx: #00b2c0;
+
+#pageheader-wrapper {
+  z-index: 99;
+}
+
+@media (max-width: 970px) {
+  #pageheader-wrapper {
+    padding-top: 5px;
+  }
+}
+
+#hamburger {
+
+  .show-mobile {
+    display: none;
+  }
+
+  .show-always {
+    display: block;
+  }
+
+  display: inline-block;
+  float: right;
+  z-index: 99;
+  position: relative;
+  font-size: 14px;
+
+  #hamburger-icon {
+    cursor: pointer;
+    padding: 10px 35px 16px 0;
+    height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+    float: right;
+    margin-top: 8px;
+    display: inline-block;
+
+    %extend_burger {
+      cursor: pointer;
+      height: 3px;
+      width: 25px;
+      border-radius: 2px;
+      background: $white;
+      position: absolute;
+      display: block;
+      content: '';
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+    span {
+      @extend %extend_burger;
+      transition: all 500ms ease-in-out;
+      &::before {
+        @extend %extend_burger;
+        transition: all 500ms ease-in-out;
+        top: -10px;
+      }
+      &::after {
+        @extend %extend_burger;
+        transition: all 500ms ease-in-out;
+        bottom: -10px;
+      }
+    }
+    &.active span {
+      background-color: transparent;
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  ul {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    right: 0;
+    position: absolute;
+    top: 3em;
+    background-color: $color_pacific_blue_approx;
+    z-index: 99;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    li {
+      color: $white;
+      line-height: 30px;
+      padding: 0.25em;
+      text-indent: 0;
+      list-style-type: none;
+      max-width: 250px;
+      text-overflow: ellipsis;
+      border-bottom: solid 2px $color_blue_chill_80_approx;
+      border-radius: 2px;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-left: 25px;
+      display: block;
+      float: none;
+      white-space: normal;
+      overflow: visible;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+      &::before {
+        content: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        font-family: $gotham-regular;
+        color: $white;
+        text-decoration: none;
+      }
+
+      #about-more {
+        font-family: $gotham-regular;
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #educate-more {
+        font-family: $gotham-regular;
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #about-down {
+        font-size: 30px;
+        float: right;
+      }
+      #about-up {
+        font-size: 30px;
+        float: right;
+        display: none;
+      }
+      #educate-up {
+        font-size: 30px;
+        float: right;
+        display: none;
+      }
+      #educate-down {
+        font-size: 30px;
+        float: right;
+      }
+
+    }
+    &.hide-responsive-menu {
+      display: none;
+    }
+
+    .hide-about {
+      display: none;
+    }
+    .hide-educate {
+      display: none;
+    }
+
+  }
+  .educate-nav ul li:last-of-type {
+    border-bottom: solid 2px $color_blue_chill_80_approx;
+  }
+
+  @media(max-width: 970px) {
+    .show-mobile {
+      display: block;
+    }
+
+    ul {
+      font-size: 18px;
+    }
+  }
+
+  @media(max-width: 400px) {
+    #nav {
+      ul {
+        max-width: 245px;
+        li {
+          max-width: 200px;
+        }
+      }
+      .educate-nav li {
+        max-width: 180px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+  .about-nav li a {
+    padding-left: 20px;
+  }
+  .educate-nav li a {
+    padding-left: 20px;
+  }
+
+}

@@ -4,7 +4,7 @@ def solr_query_to_param(q)
   params = []
   q.each_pair do |key, value|
     if value.is_a?(Array)
-      value.each{|subvalue| params << {key => subvalue}.to_query}
+      value.each {|subvalue| params << {key => subvalue}.to_query}
     else
       params << {key => value}.to_query
     end

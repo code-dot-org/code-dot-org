@@ -7,7 +7,7 @@ nav: regional_partner_playbook_nav
 
 # Workshop Planning
 
-Each Code.org Regional Partner will work with the districts in its region to select a date for each middle school and high school workshop 
+Each Code.org Regional Partner will work with the districts and schools in its region to select a date for each workshop. 
 
 ## Quick Links 
 
@@ -31,7 +31,7 @@ ________________
 
 ## **Computer Science Fundamentals**
 
-Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
+Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 [**Back to the top**](#top)
 <br/>
@@ -255,6 +255,16 @@ ________________
 <a id="csp"></a>
 
 ## **Computer Science Principles**
+<details>
+  <summary>**Process Documents**</summary>
+  <p>
+
+- [Local Summer Workshop Process Document](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit) - Everything you need to know to plan and run a local summer workshop.
+- [Survey Report Process](https://docs.google.com/document/d/1nC9wEPnTkYO6tzZM6QIHnVzSSNySEVykIFlADdS_xEM/edit) - How to navigate to and view the surveys sent at the end of a workshop.
+
+</p>
+</details>
+
 <details>
   <summary>**Workshop Preparation Process**</summary>
   <p> 

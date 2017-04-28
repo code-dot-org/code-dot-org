@@ -60,7 +60,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"1bc96d65-d668-4bd9-91ff-bb12b6c0a294\",\r\n    \"9fb18f3c-2689-4ec9-8477-7d3bc55a3ab0\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"1bc96d65-d668-4bd9-91ff-bb12b6c0a294\": {\r\n      \"name\": \"gold_coin\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FjnWPw1JtY0d2pW6UPTzp51XLROU2PieY%2Fcoin_gold.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"jnWPw1JtY0d2pW6UPTzp51XLROU2PieY\"\r\n    },\r\n    \"9fb18f3c-2689-4ec9-8477-7d3bc55a3ab0\": {\r\n      \"name\": \"silver_coin\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FD5N4R1W7uIKRfA7TyV5UFGw8Xs_wwwvZ%2Fcoin_silver.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"D5N4R1W7uIKRfA7TyV5UFGw8Xs_wwwvZ\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"1bc96d65-d668-4bd9-91ff-bb12b6c0a294\",\r\n    \"9fb18f3c-2689-4ec9-8477-7d3bc55a3ab0\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"1bc96d65-d668-4bd9-91ff-bb12b6c0a294\": {\r\n      \"name\": \"gold_coin\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/ZtP7o6AvMTCHykV29oKNmg/1bc96d65-d668-4bd9-91ff-bb12b6c0a294.png?version=SgyfAr837PXV6kQpKo35NAWqCIjmTP7x\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"SgyfAr837PXV6kQpKo35NAWqCIjmTP7x\"\r\n    },\r\n    \"9fb18f3c-2689-4ec9-8477-7d3bc55a3ab0\": {\r\n      \"name\": \"silver_coin\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/ZtP7o6AvMTCHykV29oKNmg/9fb18f3c-2689-4ec9-8477-7d3bc55a3ab0.png?version=TBhq3q3PGY1uBx74bTIhEH9RpiN.SZ6A\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"TBhq3q3PGY1uBx74bTIhEH9RpiN.SZ6A\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var goldCoin = createSprite(49,50);\r\ngoldCoin.setAnimation(\"gold_coin\");\r\ngoldCoin.velocityX = 2;\r\ngoldCoin.velocityY = 2;\r\ngoldCoin.debug = true;\r\ngoldCoin.setCollider(\"rectangle\");\r\n\r\nvar silverCoin = createSprite(350,350);\r\nsilverCoin.setAnimation(\"silver_coin\");\r\nsilverCoin.velocityX = -2;\r\nsilverCoin.velocityY = -2;\r\nsilverCoin.debug = true;\r\n\r\nfunction draw() {\r\n  goldCoin.bounce(silverCoin);\r\n  \r\n  background(\"darkgreen\");\r\n  drawSprites();\r\n}",
     "palette_category_at_start": "sprites",
     "start_in_animation_tab": "false",
@@ -68,6 +68,9 @@
     "instructions_important": "false",
     "encrypted_examples": "lVBBdLkXxxk1BvvVHMrP+0yjL1PjUKG8NX82Wor6QaoLQRh/MFILigORwLtc\n16KK\n",
     "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

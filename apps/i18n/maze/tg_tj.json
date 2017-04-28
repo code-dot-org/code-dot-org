@@ -45,7 +45,7 @@
   "honeyAvailable": "honey",
   "honeyTooltip": "Make honey from nectar",
   "honeycombFullError": "This honeycomb does not have room for more honey.",
-  "ifCode": "if",
+  "ifCode": "агар",
   "ifFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do some actions.",
   "ifInRepeatError": "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked.",
   "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",

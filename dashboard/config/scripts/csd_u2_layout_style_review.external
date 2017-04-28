@@ -11,8 +11,6 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 ## Review: Properties Posters
 
-[guide]
-
 #### Properties Posters
 
 **Group:** Divide the class into 8 groups.
@@ -36,6 +34,4 @@ Have each group make a diagram which explains how their properties works. It sho
 * Short explanation of what happens when you use this property
 
 This can be done on a poster sized paper or normal sized paper depending on how you want to display them and what you have available.
-
-[/guide]
 MARKDOWN

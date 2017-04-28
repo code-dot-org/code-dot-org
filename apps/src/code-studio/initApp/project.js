@@ -1,6 +1,8 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
+import msg from '@cdo/locale';
 import {CIPHER, ALPHABET} from '../../constants';
+import {files as filesApi} from '../../clientApi';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -64,6 +66,7 @@ var currentAbuseScore = 0;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
+let initialCaptureComplete = false;
 
 /**
  * Current state of our sources API data
@@ -311,6 +314,12 @@ var projects = module.exports = {
     isInitialSaveComplete() {
       return initialSaveComplete;
     },
+    isInitialCaptureComplete() {
+      return initialCaptureComplete;
+    },
+    setCurrentData(data) {
+      current = data;
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -531,32 +540,23 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    */
-  save(sourceAndHtml, callback, forceNewVersion, preparingRemix) {
+  save(...args) {
+    let [sourceAndHtml, callback, forceNewVersion, preparingRemix] = args;
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
     }
 
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+    $('.project_updated_at').text(msg.saving());
 
-    if (typeof arguments[0] === 'function' || !sourceAndHtml) {
-      // If no source is provided, shift the arguments and ask for the source
-      // ourselves.
-      var args = Array.prototype.slice.apply(arguments);
-      callback = args[0];
-      forceNewVersion = args[1];
-      preparingRemix = args[2];
+    if (typeof args[0] === 'function' || !sourceAndHtml) {
+      // If no save data is provided, shift the arguments and ask for the
+      // latest save data ourselves.
+      [callback, forceNewVersion, preparingRemix] = args;
 
-      let completeAsyncSave = function () {
-        this.sourceHandler.getAnimationList(animations => {
-          this.sourceHandler.getLevelSource().then(response => {
-            const source = response;
-            const html = this.sourceHandler.getLevelHtml();
-            const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-            this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
-          });
-        });
-      }.bind(this);
+      let completeAsyncSave = () =>
+        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
+          this.save(sourceAndHtml, callback, forceNewVersion));
 
       if (preparingRemix) {
         this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -594,13 +594,65 @@ var projects = module.exports = {
       }.bind(this));
     }.bind(this));
   },
+
+  /**
+   * Ask the configured sourceHandler for the latest project save data and
+   * pass it to the provided callback.
+   * @param {function} callback
+   * @private
+   */
+  getUpdatedSourceAndHtml_(callback) {
+    this.sourceHandler.getAnimationList(animations =>
+      this.sourceHandler.getLevelSource().then(response => {
+        const source = response;
+        const html = this.sourceHandler.getLevelHtml();
+        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+        callback({source, html, animations, makerAPIsEnabled});
+      }));
+  },
+
+  /**
+   * Save the project with the maker API state toggled, then reload the page
+   * so that the toolbox gets re-initialized.
+   * @returns {Promise} (mostly useful for tests)
+   */
+  toggleMakerEnabled() {
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.save(
+          {
+            ...sourceAndHtml,
+            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
+          },
+          () => {
+            resolve();
+            window.location.reload();
+          }
+        );
+      });
+    });
+  },
   updateCurrentData_(err, data, isNewChannel) {
     if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
     }
 
-    current = data;
+    // The following race condition can lead to thumbnail URLs not being stored
+    // in the project metadata:
+    //   1. Run button is pressed
+    //   2. channel.update() is called during project.save()
+    //   3. project.saveThumbnail() completes
+    //   4. updateCurrentData_ is called in the callback from channel.update
+    //
+    // Work around this by merging in new data into the existing data rather
+    // than overwriting it, preserving any newly-added thumbnail url. Revisit
+    // this if we ever change the thumbnail url, since the same race condition
+    // would clobber any changes to existing fields.
+
+    current = current || {};
+    Object.assign(current, data);
+
     if (isNewChannel) {
       // We have a new channel, meaning either we had no channel before, or
       // we've changed channels. If we aren't at a /projects/<appname> link,
@@ -826,7 +878,33 @@ var projects = module.exports = {
       pathName += '/' + action;
     }
     return pathName;
-  }
+  },
+
+  /**
+   * Uploads a thumbnail image to the thumbnail path in the files API. If
+   * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   * @returns {Promise} A promise indicating whether the upload was successful.
+   */
+  saveThumbnail(pngBlob) {
+    if (!current) {
+      return Promise.reject('Project not initialized.');
+    }
+    if (!current.isOwner) {
+      return Promise.reject('Project not owned by current user.');
+    }
+
+    return new Promise((resolve, reject) => {
+      const thumbnailPath = '.metadata/thumbnail.png';
+      filesApi.putFile(thumbnailPath, pngBlob, () => {
+        current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+        initialCaptureComplete = true;
+        resolve();
+      }, error => {
+        reject(`error saving thumbnail image: ${error}`);
+      });
+    });
+  },
 };
 
 /**

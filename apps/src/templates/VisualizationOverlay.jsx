@@ -116,5 +116,6 @@ export default connect((state) => ({
 }))(VisualizationOverlay);
 
 export function shouldOverlaysBeVisible(state) {
-  return !(state.runState.isRunning || state.pageConstants.isShareView);
+  return !state.pageConstants.hideCoordinateOverlay &&
+    !(state.runState.isRunning || state.pageConstants.isShareView);
 }

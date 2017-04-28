@@ -190,17 +190,18 @@ December 2016:
 
 January 2017:                                            
 
-- How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4)
-- How to Review Teacher Applications [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
-- CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4)
-- CSP Teacher Application Process for Local Workshops [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
-- Guest Speaker Series: TEALS [Video - Coming Soon!]
-- Guest Speaker Series: TEALS [Slides](https://docs.google.com/presentation/d/1IgAynJuCVKy1EW5vZBpNvVn4xOIADDISNfg-LKLli5M/edit?usp=sharing)
+- How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4), [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
+- CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4), [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
+- Guest Speaker Series: TEALS [Video](http://videos.code.org/plp/Guest+Speaker_TEALS.mp4), [Slides](https://docs.google.com/presentation/d/1IgAynJuCVKy1EW5vZBpNvVn4xOIADDISNfg-LKLli5M/edit?usp=sharing)
 
 March 2017:
 
-- Guest Speaker Series: NCWIT [Video - Coming soon!]
-- Guest Speaker Series: NCWIT [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
+- Guest Speaker Series: NCWIT [Video](http://videos.code.org/plp/NCWIT_March17.mp4), [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
+- CS Principles Webinar for Teachers [Video](http://videos.code.org/plp/3-28-2017_CSPrinciples_Webinar.mp4)
+
+April 2017:
+
+- Reviewing the CSP Local Leads Training [Video](http://videos.code.org/plp/Reviewing_the_CSP_Local_Leads_Training.mp4), [Slides](https://docs.google.com/presentation/d/1KlRbs_u-tZ3s0_vp61pvqPOi3HyxbNTBSmfJ4syqvaY/view#)
 
 [**Back to the top**](#top)
 <br/>

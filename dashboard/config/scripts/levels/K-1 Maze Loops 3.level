@@ -26,7 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Get me to the pig!  \r\nBe sure to use `repeat` loops."
+    "markdown_instructions": "Get me to the pig!  \r\nBe sure to use `repeat` loops.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

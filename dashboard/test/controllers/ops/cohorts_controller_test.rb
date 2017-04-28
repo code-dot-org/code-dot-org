@@ -27,7 +27,7 @@ module Ops
       sign_in new_district.contact
       #87054720 (part 1)
       #can click "Add Teacher" button to add a teacher
-      assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/cohorts/1", method: :patch}, {controller: 'ops/cohorts', action: 'update', id: '1'})
 
       teacher_params = [
         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district: new_district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'},
@@ -65,7 +65,7 @@ module Ops
       sign_in @district.contact
       #87054720 (part 1)
       #can click "Add Teacher" button to add a teacher
-      assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/cohorts/1", method: :patch}, {controller: 'ops/cohorts', action: 'update', id: '1'})
 
       existing_email = "existing@email.xx"
       under_13_user = create(:student, age: 10, email: existing_email)
@@ -166,7 +166,7 @@ module Ops
       sign_in @admin
 
       cohorts = [create(:cohort), create(:cohort), create(:cohort)]
-      assert_routing({ path: "#{API}/cohorts", method: :get }, { controller: 'ops/cohorts', action: 'index' })
+      assert_routing({path: "#{API}/cohorts", method: :get}, {controller: 'ops/cohorts', action: 'index'})
 
       get :index
       assert_response :success
@@ -280,7 +280,7 @@ module Ops
     test 'Ops team can create Cohorts' do
       sign_in @admin
       #87054348
-      assert_routing({ path: "#{API}/cohorts", method: :post }, { controller: 'ops/cohorts', action: 'create' })
+      assert_routing({path: "#{API}/cohorts", method: :post}, {controller: 'ops/cohorts', action: 'create'})
 
       assert_difference 'Cohort.count' do
         post :create, params: {cohort: {name: 'Cohort name'}}
@@ -438,7 +438,7 @@ module Ops
       extra_teacher_params = [{ops_first_name: 'Hey', ops_last_name: 'Blah', email: teacher.email, district: teacher.district.name}]
 
       # Only 5 new teachers created, not 6
-      assert_difference ->{User.count}, 5 do
+      assert_difference -> {User.count}, 5 do
         assert_creates(Cohort, CohortsDistrict) do
           post :create, params: {
             cohort: {
@@ -456,8 +456,8 @@ module Ops
       assert_equal teacher.name, teacher.reload.name
 
       # Existing teacher added to cohort along with new teachers
-      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_first_name]}.sort, teachers.map(&:ops_first_name).sort
-      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_last_name]}.sort, teachers.map(&:ops_last_name).sort
+      assert_equal (teacher_params + extra_teacher_params).map {|x| x[:ops_first_name]}.sort, teachers.map(&:ops_first_name).sort
+      assert_equal (teacher_params + extra_teacher_params).map {|x| x[:ops_last_name]}.sort, teachers.map(&:ops_last_name).sort
       cd = CohortsDistrict.last
       assert_equal @district, cd.district
       assert_equal Cohort.last, cd.cohort
@@ -467,14 +467,14 @@ module Ops
     test 'read cohort info' do
       sign_in @admin
 
-      assert_routing({ path: "#{API}/cohorts/1", method: :get }, { controller: 'ops/cohorts', action: 'show', id: '1' })
+      assert_routing({path: "#{API}/cohorts/1", method: :get}, {controller: 'ops/cohorts', action: 'show', id: '1'})
 
       get :show, params: {id: @cohort.id}
       assert_response :success
       response = JSON.parse(@response.body)
       assert_equal response['id'], @cohort.id
       # Ensure extra association info is provided in the right format
-      assert_equal response['districts'].map{|d| d['id']}, @cohort.district_ids
+      assert_equal response['districts'].map {|d| d['id']}, @cohort.district_ids
     end
 
     test 'ops team can list teachers in a cohort as a csv' do
@@ -486,7 +486,7 @@ module Ops
 
       sign_in @admin
 
-      assert_routing({ path: "#{API}/cohorts/1/teachers.csv", method: :get }, { controller: 'ops/cohorts', action: 'teachers', id: '1',  format: 'csv'})
+      assert_routing({path: "#{API}/cohorts/1/teachers.csv", method: :get}, {controller: 'ops/cohorts', action: 'teachers', id: '1',  format: 'csv'})
       get :teachers, params: {id: @cohort.id}, format: 'csv'
 
       expected_response = <<EOS
@@ -500,7 +500,7 @@ EOS
     test 'update cohort info' do
       sign_in @admin
 
-      assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/cohorts/1", method: :patch}, {controller: 'ops/cohorts', action: 'update', id: '1'})
 
       new_name = 'New cohort name'
       script = Script.find_by_name('ECSPD')
@@ -518,7 +518,7 @@ EOS
     test 'delete cohort' do
       sign_in @admin
 
-      assert_routing({ path: "#{API}/cohorts/1", method: :delete }, { controller: 'ops/cohorts', action: 'destroy', id: '1' })
+      assert_routing({path: "#{API}/cohorts/1", method: :delete}, {controller: 'ops/cohorts', action: 'destroy', id: '1'})
 
       assert_difference 'Cohort.count', -1 do
         delete :destroy, params: {id: @cohort.id}

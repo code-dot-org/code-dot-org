@@ -60,11 +60,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Hide the Code\r\n\r\n<img src=\"https://images.code.org/11fc50efd77b7245198dddc2f11c2e6f-image-1489606362106.32.21 PM.png\" style=\"width:200px;float:right\">\r\n\r\n<img src=\"https://images.code.org/b957534ed691290bdba5f2e1b9dd4e23-image-1489606362105.32.02 PM.png\" style=\"width:200px;float:right\">\r\n\r\nNow make it so the user can find the secret code by clicking the picture. When they click the picture it should move up and out of the way.\r\n\r\n# Do This\r\n\r\n* Pull out an `onEvent` block\r\n* Change the id spot in the `onEvent` block to picture (which is the ID of the picture element)\r\n* Inside the `onEvent` block add the `setPosition` block with the following inputs\r\n\t* ID: picture\r\n    * The next two inputs are x and y values - test out some numbers to try to get the picture to move like in the pictures on the right",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Move Picture\r\n\r\nNow make it so the user can find the secret code by clicking the picture. When they click the picture it should move up and out of the way.\r\n\r\n# Do This\r\n\r\n* Pull out an `onEvent` block\r\n* Change the id spot in the `onEvent` block to picture (which is the ID of the picture element)\r\n* Inside the `onEvent` block add the `setPosition` block with the following inputs\r\n\t* ID: picture\r\n    * The next two inputs are x and y values - test out some numbers to try to get the picture to move like in the pictures on the right",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

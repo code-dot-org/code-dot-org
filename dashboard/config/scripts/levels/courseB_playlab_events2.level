@@ -41,6 +41,9 @@
     "protaganist_sprite_index": "1",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block to have Daisy say something:\\n\\n![](https://images.code.org/6d8944bb38eac46c02a601660e8a3562-image-1475625777800.02.48.png)\",\r\n  \"hint_id\": \"courseB_playlab_events2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

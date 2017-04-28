@@ -1,8 +1,8 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
 
-var Interpreter = require('@code-dot-org/js-interpreter');
-var dropletUtils = require('./dropletUtils');
-var utils = require('./utils');
+import Interpreter from '@code-dot-org/js-interpreter';
+import {dropletGlobalConfigBlocks} from './dropletUtils';
+import * as utils from './utils';
 
 /*
  * Note: These are defined to match the state.mode of the interpreter. The
@@ -598,7 +598,7 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
   }
   populateGlobalFunctions(
       interpreter,
-      dropletUtils.dropletGlobalConfigBlocks,
+      dropletGlobalConfigBlocks,
       blockFilter,
       scope);
   if (blocks) {

@@ -1,6 +1,7 @@
 ---
 title: Pat Yongpradit
 nav: about_nav
+theme: responsive
 ---
 # Pat Yongpradit
 

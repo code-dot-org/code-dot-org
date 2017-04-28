@@ -11,9 +11,15 @@ const SurveyResults = React.createClass({
   },
 
   render() {
+    let queryUrl = '/api/v1/pd/workshops/?state=Ended&facilitator_view=1';
+
+    if (window.dashboard.workshop.permission === 'admin' && this.props.params.workshopId) {
+      queryUrl += `&workshop_id=${this.props.params.workshopId}`;
+    }
+
     return (
       <div>
-        <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended&facilitator_view=1">
+        <WorkshopTableLoader queryUrl={queryUrl}>
           <SurveyResultsHeader
             preselectedWorkshopId={this.props.params && this.props.params['workshopId']}
           />

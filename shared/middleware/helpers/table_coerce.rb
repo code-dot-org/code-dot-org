@@ -39,9 +39,9 @@ module TableCoerce
     return columns.map do |col|
       if records.empty?
         :string
-      elsif !records.any? { |record| !TableCoerce.boolean?(record[col]) }
+      elsif !records.any? {|record| !TableCoerce.boolean?(record[col])}
         :boolean
-      elsif !records.any? { |record| !TableCoerce.number?(record[col]) }
+      elsif !records.any? {|record| !TableCoerce.number?(record[col])}
         :number
       else
         :string

@@ -1,5 +1,6 @@
 ---
 chart: true
+theme: responsive
 ---
 # Make Your Own Advocacy Materials
 
@@ -9,6 +10,8 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Code.org blog posts
 ### Miscellaneous
 
+* University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
+* Computer science counts as a core requirement in [95% of BS degrees](https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg) in the University of California system.
 * AP Computer Science A is the [fastest-growing](http://blog.code.org/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
 * Code.org [updated our position](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 * [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
@@ -34,6 +37,9 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * [Progress](http://blog.code.org/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
 
 
+## Other Code.org Resources
+* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
+* Code.org partnered with MassCAN, EDC, ECEP, SageFox, and ECS to create the [State of the States Landscape Report](http://code.org/files/State_of_the_states.pdf) on state-level policies that support equitable K-12 computer science education.
 
 
 ## International K-12 computer science
@@ -44,6 +50,7 @@ We are interested in seeing what's happening in computer science education inter
 
 - A [new report](http://www.sreb.org/sites/main/files/file-attachments/cs_commission_2016_0.pdf) by the SREB recommends 5 policy actions states can take to expand access to computer science education.
 - A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduation requirements.  
+- The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band. 
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education."
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
 - [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report](http://burning-glass.com/research/coding-skills/) by Burning Glass.

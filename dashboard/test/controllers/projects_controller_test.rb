@@ -180,10 +180,21 @@ class ProjectsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'applab project level goes to edit if admin' do
+  test 'admins get redirected away' do
     sign_in create(:admin)
-    get :load, params: {key: 'applab'}
-    assert @response.headers['Location'].ends_with? '/edit'
+
+    get :index
+    assert_redirected_to '/'
+
+    %w(applab gamelab).each do |lab|
+      get :load, params: {key: lab}
+      assert_redirected_to '/'
+    end
+
+    %w(applab gamelab).each do |lab|
+      get :show, params: {key: lab, share: true, channel_id: 'fake_channel_id'}
+      assert_redirected_to '/'
+    end
   end
 
   test 'applab project level goes to edit if teacher' do
@@ -202,11 +213,5 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_out :user
     get :load, params: {key: 'gamelab'}
     assert_redirected_to_sign_in
-  end
-
-  test 'gamelab project level goes to edit if admin' do
-    sign_in create(:admin)
-    get :load, params: {key: 'gamelab'}
-    assert @response.headers['Location'].ends_with? '/edit'
   end
 end

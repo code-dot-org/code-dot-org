@@ -12,7 +12,7 @@
     "markdown_instructions": "Now try creating the function from scratch!  \r\n\r\nCreate a function called `draw a square` and use it to outline these four boxes.  \r\nMake sure to add a parameter for `length`!\r\n\r\n<hr/>\r\nStarting from the upper right, the box widths are 50, 100, 150, and 200.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
@@ -35,6 +35,8 @@
     "ideal": "22",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This gets easier if you put it all in a `for` loop.\",\"hint_id\":\"courseF_artist_fwp3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a6115dc142fbde2ffff04d6c436eec55/courseF_artist_fwp3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Be sure to turn 90 degrees between each square!\\n\\n![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)\",\"hint_id\":\"courseF_artist_fwp3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/51d060bd4f73728efdd1ab2fe7dfa587/courseF_artist_fwp3.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

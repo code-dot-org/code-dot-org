@@ -1,4 +1,3 @@
-var testUtils = require('../../../util/testUtils');
 var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 module.exports = {
@@ -22,8 +21,8 @@ module.exports = {
         {'test': 'flap', 'type': 'flappy_flap'}
       ],
       runBeforeClick: function (assert) {
-        assert(studioApp.enableShowCode === false);
-        assert(studioApp.enableShowBlockCount === false);
+        assert(studioApp().enableShowCode === false);
+        assert(studioApp().enableShowBlockCount === false);
 
         // manually complete rather than wait for timeout
         setTimeout(function () {

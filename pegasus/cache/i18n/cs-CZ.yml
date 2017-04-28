@@ -578,6 +578,8 @@
     možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete
     přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat
     svoji vlastní Hodinu kódu.'
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
   volunteer_engineer_submission_intro_signup: Zadejte následující informace, pokud
     jste počítačové vědy student nebo software profesionál, prosím. Pole označená
     <span class="form-required-field"> *</span> jsou požadovaná.
@@ -624,6 +626,8 @@
   volunteer_engineer_submission_checkbox_contact: 'Souhlasím, že učitelé mě mohou
     kontaktovat na příležitosti pro dobrovolníky (Poznámka: vaše e-mailová adresa
     nebude sdílená)'
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.
   volunteer_engineer_submission_submit: Odeslat
   volunteer_engineer_submission_thankyou: Děkujeme vám za dobrovolnictví pro Hodinu
     kódu. Připravte se na Hodinu kódu a získejte další inženýři <a href="%{url}">
@@ -885,6 +889,8 @@
   dashboard_students_reset_password: Obnovit heslo
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
   dashboard_students_secret_picture_title: Tajný obrázek
   dashboard_students_secret_picture: Tato část používá  <b>obrázek</b>jako svůj tajný
@@ -904,6 +910,7 @@
     ně chcete vytvořit účty sami, změňte typ tajemství v této sekci na <b>slovo</b>
     nebo <b>obrázek</b>.
   dashboard_students_print_page: Vytisknout stránku
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Klikněte
     zde</a> pro dokument o ochraně soukromých údajů, který můžete sdílet nebo vytisknout
@@ -978,74 +985,6 @@
     pro vaši skupinu.
   dashboard_faq: "Často kladené dotazy"
   dashboard_faq_k5: K-5, nejčastější dotazy
-  dashboard_announcements: Oznámení
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Zjisti více
-  dashboard_announce_try_now_button: Vyzkoušej hned
-  dashboard_announce_host_an_hour_button: Hostit hodinu
-  dashboard_announce_watch_video_button: Přehrát Video
-  dashboard_announce_petition: Jako učitel patříte mezi propagátory hnutí za to, aby
-    každý student v každé škole dostal příležitost učit se informatiku. A teď je čas,
-    aby vaši zástupci vyslechli Váš názor. Tento týden se zástupci učitelů, 28 guvernérů
-    a generální ředitelé největších amerických společností spojili v otevřeném dopise,
-    kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní
-    docházky na základních i středních školách.
-  dashboard_announce_petition_button: Přidej své jméno
-  dashboard_announce_go_beyond_button: Go beyond
-  dashboard_announce_all: Udržuj krok s novými funkcemi a aktualizacemi na našem blogu
-    učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé oznámení.</a>
-  dashboard_announce_hoc_launch: Tisíce pedagogů ve více než 180 zemích začne vyučovat
-    informatiku během Týdne Hodiny kódu. Spoléháme na vás, aby jste nám pomohli se
-    dostat k ještě více studentům než kdy předtím. <a href='%{signup_url}' target='_blank'>
-    Zaregistrujt vaši Hodinu kódu </a> a upozněte i ostatní pedagogy, že i oni mohou
-    začít vyučovat informatiku.
-  dashboard_announce_mc_launch: Jeden z našich nejpopulárnějších kurzů má nyní pokračování!
-    Zcela nová Hodina kódu Minecraft Designer umožňuje studentům ovlivňovat pravidla
-    světu Minecraft. Mohou vytvořit naprosto unikátní verzi Minecraftu a pak ji sdílet
-    s přáteli nebo hrát na svých telefonech. Vytvořte si je ve své třídě na Hodině
-    kódu.
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  dashboard_announce_how_code_studio: Nepotřebujete žádné zkušenosti začít učit informatiku
-    ve své třídě. Code.org nabízí učební osnovy, učební plány, vysoce kvalitní profesionální
-    vzdělávací programy a tuny skvělých nástrojů pro všechny stupně úrovně &mdash;
-    vše, co potřebujete, bez příplatku. Nevíte, kde začít? Stáhněte <a href='%{video_download_url}'>
-    Toto video</a>!
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-    Your students could be featured in Code.org''s next viral video encouraging students
-    to take the AP CS Principles exam this year. We''re inviting all CS Principles
-    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
-    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
-    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   host_an_hour: Hostit hodinu
@@ -1191,6 +1130,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: '1. lekce: Internet'
   csp2_name: '2. lekce: Digitální informace'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1912,9 +1853,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

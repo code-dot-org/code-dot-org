@@ -2,6 +2,7 @@
 title: About Us
 nav: about_nav
 video_player: true
+theme: responsive
 ---
 
 <%
@@ -10,7 +11,7 @@ video_player: true
 
 # About Us
 
-<div style="float: left; width: 280px;">
+<div style="float: left; width: 280px; margin-right: 5%;">
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>'Meet the team at @codeorg and see how much they’ve done in just a few years!'} %>
@@ -19,7 +20,7 @@ video_player: true
 
 </div>
 
-<div style="margin-left: 300px;">
+<div class="col-50">
 
 Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
 
@@ -28,23 +29,26 @@ Code.org&reg; is a non-profit dedicated to expanding access to computer science,
 
 <div style="clear: both;"></div>
 
-## Diversity of students in our courses
-![image](/images/infographics/fit-800/diversity-courses.png)
+## Diversity of students in our courses</h2>
 
-Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
+<img src="/images/infographics/fit-800/diversity-courses.png" class ="col-95">
+
+Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about <a href="/diversity">our efforts to increase diversity in computer science</a>.
+
 
 <br />
+
 
 ## Code.org in the News
 See all past [news and announcements](/about/news).
 
-<div style="float: left; width: 50%; padding-right: 10px;">
+<div class=col-45 style="float: left; margin: 1%">
 
 <%=view :display_video_thumbnail, id: "Nasdaq", video_code: "zxcBZg7jYlc", caption: "Nasdaq interviews Code.org founder Hadi Partovi", play_button: "center", letterbox: "false" %>
 
 </div>
 
-<div style="float: left; width: 50%; padding-left: 10px;">
+<div class=col-45 style="float: left; margin: 1%">
 
 <%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
@@ -60,20 +64,15 @@ See all past [news and announcements](/about/news).
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 51,100 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate). |
+| Prep new CS teachers | We've prepared 56,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate). |
 | Change school district curriculum | We've partnered with [120 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | Policy changed in [20 states](/action) including CA, NY, FL, IL, OH.|
+| Set up policies to support CS | Policies changed in over 20 U.S. states (see [details](https://docs.google.com/document/d/1vaTFV641qBhvOXpchMK5igs8kSAxk8cLCv9Ra-I5DL8/edit)), with ongoing work in over 30 states (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit)) |
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
-<br/>
-<br/>
 
 <!-- Teachers Trained: 2679 + K-5 -->
 
 <%= view :testimonials %>
-
-<br/>
-<br/>
 
 ## More information, history, and philosophy
 In 2013, Code.org was launched by twin brothers [Hadi](/about/leadership/hadi_partovi) and [Ali Partovi](https://www.crunchbase.com/person/ali-partovi#/entity) with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
@@ -84,6 +83,7 @@ Our work builds upon [decades of effort, by countless organizations and individu
 
 - [Code.org 2015 Annual Report](/about/2015)
 - [Code.org core values and messaging guidelines](/about/values)
+- [Our curriculum and pedagogy philosophy](/educate/curriculum/values)
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 
 ## Our commitment to free curriculum and open source technology
@@ -150,4 +150,3 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
     <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
 </a> [![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
-

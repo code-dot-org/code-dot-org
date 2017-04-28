@@ -14,7 +14,7 @@ import {
   getPreferredPort
 } from '@cdo/apps/lib/kits/maker/portScanning';
 
-describe("Maker Toolkit", function () {
+describe("maker/portScanning.js", function () {
   describe(`findPortWithViableDevice()`, () => {
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
@@ -38,7 +38,8 @@ describe("Maker Toolkit", function () {
           .catch(err => {
             expect(err).to.be.an.instanceOf(ConnectionFailedError);
             expect(err.message).to.equal('Failed to establish a board connection.');
-            expect(err.reason).to.equal('Did not find a usable device on a serial port.');
+            expect(err.reason).to.include('Did not find a usable device on a serial port.');
+            expect(err.reason).to.include(JSON.stringify(OTHER_BAD_SERIALPORTS));
             done();
           })
           .catch(done);

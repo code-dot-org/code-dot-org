@@ -12,6 +12,7 @@ ja:
     attributes:
       user:
         name: '表示名'
+        name_example: '表示名<br/>( 例: Cool Coder、ジェーン)'
         email: 'Eメール'
         username: 'ユーザー名'
         password: 'パスワード'
@@ -78,11 +79,12 @@ ja:
     forgot_password: 'パスワードをお忘れですか？'
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} 人の生徒がサインアップ済みです。'
     teacher_count: '%{count} 人の教師がサインアップ済みです。'
     overview: 'あなたの進捗状況を追跡したり、あなたの教室を管理するには、アカウントにサインアップします。アカウント無しでも<a href="/">様々なステージとパズルを参照できます</a>が、あなたの進捗状況とプロジェクトを保存するにはサインアップが必要です。'
-    hoc_already_signed_up_heading: '直ぐに始める'
+    hoc_already_signed_up_heading: 'すぐに始める'
     hoc_already_signed_up_content: '教師用の Hour of Code にサインアップしました! あなたとあなたの学生は、このイベントに参加するために、コード スタジオにサインインする必要はありません。始めるには、あなたの教室のために <a href="%{learn_url}"> チュートリアルを選択</a> して、リンクを共有します。<br/> <br/>もし、Hour of Codeを気に入って、もっと続けたければ、パスワードを設定して、コード スタジオ アカウントを作成して、 <a href="%{educate_url}"> 長いコース</a> にあなたの学生を参加させることが出来ます。'
     hoc_already_signed_up_content_post_hoc: 'Hour of Codeを開催いただき、ありがとうございます。コードのスタジオにサインインするには、アカウントにパスワードを設定する必要があります。これにより、進歩の保存と、教室の管理ができるようになります。学生にコースを割り当て、その進捗状況を追跡することができます。アカウントを作成しなくても <a href="%{studio_url}"> 引き続き、さまざまな段階やパズルを試せます</a>。'
     teacher_educator_guide: '教育者のガイドを参照する'
@@ -110,9 +112,31 @@ ja:
     user_type_student: "生徒"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
+  school_info:
+    title: '学校名(任意)'
+    school_country: '学校のある国'
+    select_school_type: '学校の種類を選択'
+    charter: '研究開発校'
+    private: '私立'
+    public: '公立'
+    homeschool: 'ホームスクール'
+    after_school: 'アフタースクール'
+    other: 'その他'
+    state: '都道府県'
+    district: '市区町村'
+    other_district_not_listed: 'その他の地域'
+    district_name: '地域名'
+    school: '学校'
+    other_school_not_listed: 'その他の学校'
+    school_name: '学校名'
+    school_zip: '学校の郵便番号'
+    school_address: '学校の住所'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'すでにアカウントをお持ちですか？サインイン'
     login: 'Eメール'
+    login_username: 'Eメールアドレスまたはユーザー名'
     password: 'パスワード'
     remember: 'ログイン情報を保存する'
     submit: 'ログイン'
@@ -126,9 +150,9 @@ ja:
     picture: 'あなたの秘密の画像を見つけてください'
     words: 'あなたの秘密の言葉を入力してください'
     login: 'ログイン'
-    invalid_login: 'ログインに失敗（しっぱい）しました。もう一度（いちど）入力（にゅうりょく）してください。'
+    invalid_login: 'ログインに失敗（しっぱい）しました。もう一度（いちど）入力してください。'
     pair_programming: 'このコンピューターで、パートナーがいます'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "あなたのフルネームが表示されない理由について、詳しくは <a href='%{student_privacy_blog}' target='_blank'> こちら</a>。"
   password:
     reset_form:
       title: 'パスワードをお忘れですか？'
@@ -150,6 +174,14 @@ ja:
       チュートリアルは、見た目にも楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータサイエンスの基本的な概念を学びます。ビル ・ ゲイツ氏、マーク・ザッカーバーグ氏、アングリーバード、Plants vs. Zombiesからコードを学ぼう ！:-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: '招待状を送信しました'
     added_teacher: '%{name} あなたの先生として追加'
@@ -163,8 +195,6 @@ ja:
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
     mail:
-      invite_student:
-        subject: "%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}"
       student_disassociated:
         subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
   reports:
@@ -279,7 +309,7 @@ ja:
     students:
       dashboard: '先生用のダッシュボードへ'
     user_not_found: '先生が見つかりませんでした。'
-    student_teacher_disassociated: 'あなたの先生として %{teacher_name} を削除しました。'
+    student_teacher_disassociated: 'あなたの先生の %{teacher_name} を削除しました。'
     panel:
       answer_viewer: '教員用パネル'
       student: '生徒'
@@ -290,7 +320,7 @@ ja:
       example_with_number: '解答例 %{solution_number}'
       submitted_on: '提出日時:'
       unsubmit: '取り消す'
-      worked_with: '共に動く'
+      worked_with: 'いっしょにする'
       update_lock_settings: 'ここでロックの設定を更新します。'
       clear_response: '明確な応答'
   user:
@@ -305,8 +335,8 @@ ja:
     delete_text_teacher_note: '注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。'
     delete_confirm: 'このアカウントを削除しますか？'
     deleted_user: '削除されたユーザー'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    no_password_because_oauth: 'サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。'
+    no_password_because_sponsored: 'あなたのパスワードの管理については、あなたの先生に聞いてください。'
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -347,7 +377,7 @@ ja:
     heading_hoc2014: "<h2>Hour of Code</h2> <h1>全年齢対象</h1>"
     heading_elementary: "<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>"
     heading_apps: "<h2>お楽しみ</h2><h1>みんなの</h1>"
-    heading_tools: "次のステップへの準備はできましたか? JavaScript ツール （高校生向け）"
+    heading_tools: "<h2>次のステップへの準備はできましたか?</h2><h1> JavaScript ツール （高校生向け）</h1>"
     heading_legacy: "<h1>全年齢対象のコース</h1>"
     your_gallery: ギャラリー
     no_primary_course: "コード スタジオ でコースを見る"
@@ -355,7 +385,7 @@ ja:
     print_certificate: "証書を印刷"
     announcement_title: "お知らせ"
     announcement_message_fall2016_features: "私たちはひと夏をかけて、あなたのフィードバックを新機能に追加しました。今では、生徒が1 つのデバイスを使ってペア プログラミングをしている場合でも、<a href=\"%{pp_url}\" target=\"_blank\">それぞれの学生の進捗状況を追跡</a>できます。CS 原則コースから <a href=\"%{csp_widgets_url}\" target=\"_blank\">最高のインタラクティブなツール</a> を <i>すべて</i> の教室で使用できます。さらに生徒たちは、作業画面に <a href=\"%{unused_code_url}\" target=\"_blank\">未使用のプログラムを保持</a> することで、もっと実験がしやすくなりました！すべての新機能をチェックして、ご意見をお寄せください。"
-    announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
+    announcement_csp_widgets_message: "インターネットはどうやって動いているのか、暗号化技術がどうやってデータの安全性を保っているのか、その他の概念も、どうやって授業で楽しく教えられるか、お困りではないですか？私たちは、コンピューターサイエンス基本講座から、素晴らしいツールを提供します。これは単独で動くウィジェットなので、いつでも自由に使えます。"
     announcement_learn_more_button: "もっと詳しく知る"
     announcement_try_now_button: "今すぐ試す"
     announcement_host_an_hour_button: "開催する"
@@ -363,21 +393,24 @@ ja:
     announcement_petition: "教師として、すべての学校のすべての学生にコンピューターサイエンスを学ぶ機会を与える運動をリードしています。今、代表者はあなたから聞くときです。今週、教育指導者、28 知事とアメリカ最大企業のCEOが、 米議会に、学生のコンピューターサイエンス教育への資金供給を求める公開書簡に参加しています。"
     announcement_petition_button: "あなたの名前を追加します"
     announcement_go_beyond_button: "超えて行く"
+    announcement_apply_now: "Apply now"
     announcement_all: "先生用ブログで、新しい機能や最新情報をアップデートします。<a href='%{teacher_blog_url}' target='_blank'> 過去のお知らせを参照する。</a>"
     announcement_hoc_launch: "この 12 月 5-11 日、180 カ国以上で数千の教育者がHour of Code によってコンピュータ ・ サイエンスの教育を始めます。より多くの学生に届けられるかは、あなたの助けに掛かっています。<a href='%{signup_url}' target='_blank'> あなたのHour of Code イベントを登録</a> して、他の先生にも、コンピューターサイエンスを教えることができることを、伝えてください。"
     announcement_mc_launch: "もっとも人気のチュートリアルに、続編が出来ました! マインクラフトHour of Code デザイナーで、学生は、マインクラフト世界のルールを作ることができます。完全にユニークなマインクラフト経験を作り出し、それを友人と共有したり、スマホでプレイが出来ます。あなたのクラスのHour of Codeで、やってみてください。"
     announcement_how_code_studio: "あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。Code.org は、すべての学年向けのカリキュラム、レッスン プラン、質の高い専門的な学習プログラム、および多くの優れたツール &mdash; あなたが必要なすべてを、無料で提供します。どこから始めるのか? <a href='%{video_download_url}'> このビデオ</a> をダウンロード!"
     announcement_go_beyond: "Hour of Code を超えて、毎週、生徒とコンピュータサイエンスの概念を探索しましょう。Code.org は、すべての学年向けのカリキュラム、授業、質の高い専門的な学習プログラム、多くの素晴らしいツールを提供しています &mdash; しかも無料です :)あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。<b>あなたの教室にぴったりな、次のステップを見つける。</b>"
-    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_teacher_recruitment: "あなたのような教師は、コンピューターサイエンス教育運動をリードしています。 <strong>あなたやあなたの学校は無償で</strong> 高品質な、幼稚園から高校生までの専門学習プログラムに参加することができます。あなたの学校で、コンピューター科学をリードし、専門的な学習に参加しましょう。"
+    announcement_teacher_recruitment2: "あなたのような教師は、コンピューターサイエンス教育運動をリードしています。高品質な、幼稚園から高校生までの専門学習プログラムに <strong>あなたやあなたの学校は無償で</strong> 参加することができます。あなたの学校で、コンピューター科学をリードし、専門的な学習に参加しましょう。\n中学校、高校の先生は3月17日までに応募してください。"
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_student_privacy: "Code.org では、学生のプライバシーを非常に大切にしています。学生のプライバシーを守るため、フルネームが表示されないように、セクションのログイン ページを変更しました。この更新によって、ログイン ページのプライバシーへの懸念が減少しますが、引き続き <i>学生のフルネームは使用しない</i> よう、お勧めします。"
+    announcement_apcsp_recruitment: "<strong>コンピューターサイエンス原則 教師:</strong>あなたの生徒は、生徒たちが今年の AP CS 原則テストを受験する事を応援するための、Code.org の次の流行りのビデオに出演する事ができます。全てのCS 原則の学生は、10-20 秒の「私は #APCSP 試験を受けました、なぜなら・・・」と言うビデオクリップを、ツイッター、インスタグラム、フェイスブックに応募してください。最高の応募は、私たちのビデオで紹介され、受賞の学生には Code.org 粗品を進呈します！"
+    announcement_apcsp_recruitment2: "今年の AP CS 原理試験は記録を破る態勢を整えています。AP コンピューターサイエンスでは、試験に参加する学生は、劇的に多様化していますが、あなたの助けが必要です。すべての CS 原理学生が、AP CSP 試験を受けるのを奨励するため、我々は <a href='%{gift_url}' target='_blank'> 贈り物を</a>準備しています。学生も私たちの <a href='%{challenge_url}' target='_blank'> #APCSP ビデオの挑戦</a> で、全国の仲間を励ますことができます。"
+    announcement_apcsp_recruitment3: "今年の AP CS 原理試験は記録を破る態勢を整えています。AP コンピューターサイエンスでは、試験に参加する学生は、劇的に多様化していますが、あなたの助けが必要です。すべての CS 原理学生が、AP CSP 試験を受けるのを奨励して、 <a href='%{gift_url}' target='_blank'> ギフトカード、ラップトップ、その他の素晴らしい景品</a>を獲得するチャンスです！<a href='%{video_url}' target='_blank'>ビデオ</a> をシェアして学生が、試験を受けた全国の仲間の声を聞けるようにしましょう。"
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
-    section_code_not_entered: "Current_section_code を入力してください。"
     section_code_cant_be_current_section: "現在のセクションを、新しいセクションと同じにすることはできません。"
     current_section_dne: "申し訳ありませんが、セクション %{current_section_code} は存在しません。別のセクション コードを入力してください。"
-    students_not_yours: "あなたに属していないセクションから、学生を移動することはできません。"
-    stay_enrolled_not_entered: "Stay_enrolled_in_current_section を入力してください。"
     student_ids_not_entered: "学生番号を入力してください。"
     student_not_found: "学生は見つかりませんでした。"
     all_students_must_be_in_current_section: "すべての学生は、現在あなたのセクションに在籍している必要があります。"
@@ -405,7 +438,7 @@ ja:
     copyright: '著作権'
     more: '表示'
     feedback: 'フィードバックする'
-    translate: 'あなたの言語の翻訳にご協力ください'
+    translate: '翻訳にご協力ください'
     support: 'サポート'
     support_url: 'http://support.code.org'
     tos_short: '利用規約'
@@ -434,6 +467,10 @@ ja:
     upgrade:
       unsupported_message: "お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}', target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。"
       link: "もっと詳しく知る"
+      applab_unsupported_tablet: "App Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
+      gamelab_unsupported_tablet: "Game Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
+      weblab_unsupported_browser: "残念ながら、あなたがお使いのブラウザでは、Web Labを正しく読み込めない問題があります。この問題が解決するまでは他のブラウザをお使いください。ご不便をおかけして申し訳ありません。"
+      weblab_unsupported_locale_storage: "Web Labは、ブラウザのプライベートモードでは正しくお使いいただけません。通常モードで読み込み直してください。ご不便をおかけして申し訳ありません。"
   slow_loading: '通常よりも長くかかっている...'
   try_reloading: 'ページを再読み込みする'
   next_stage: '完成 ！次のステージへ'
@@ -528,9 +565,9 @@ ja:
     support: "説明を見る"
     support_url: "//support.code.org"
     help_resources: "ヘルプとリソース"
-    help_support: "Help and Support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "ヘルプとサポート"
+    documentation: "ドキュメント"
+    tutorials: "チュートリアル"
   multi:
     wrong_title: "不正解"
     wrong_body: "不正解です。やりなおしてみてください。"
@@ -743,8 +780,8 @@ ja:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'メイン コース'
+    extra_course_content: '追加のコース内容'
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。

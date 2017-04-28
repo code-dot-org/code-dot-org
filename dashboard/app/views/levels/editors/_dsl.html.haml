@@ -25,25 +25,9 @@
 .script_text
   = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
-- if @level.is_a?(External)
-  .field
-    = f.label :icon_type, 'Icon'
-    %p
-      Override the icon that shows up for this level
-      %div
-        Default:
-        %i.fa.fa-file-text
-        Stop:
-        %i.fa.fa-stop-circle
-        Map:
-        %i.fa.fa-map
-
-    = f.select :icon_type, options_for_select(["Default", "Stop", "Map"], @level.icon_type)
-
-- if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
-
+- if @level.supports_markdown?
   - content_for(:head) do
-    %script{src: minifiable_asset_path('js/levelbuilder_markdown.js')}
+    %script{src: minifiable_asset_path('js/levels/editors/_dsl.js')}
 
   .markdown
     %p Edit Markdown:

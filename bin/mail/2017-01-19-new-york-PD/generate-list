@@ -115,7 +115,7 @@ query_teachers_no_pd
 
 puts "#{@results.count} total contacts:"
 CATEGORIES.each do |category|
-  puts "  #{category}: #{@results.values.count{|v| v[:category] == category}}"
+  puts "  #{category}: #{@results.values.count {|v| v[:category] == category}}"
 end
 
 export_contacts_to_csv @results, 'contacts.csv'

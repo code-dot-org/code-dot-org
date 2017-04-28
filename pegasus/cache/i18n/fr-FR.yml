@@ -594,6 +594,8 @@
     ou quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span>
     leurs élèves en leur parlant des nombreuses possibilités qu’offre l''informatique
     (ce qui pourrait se faire par un chat vidéo).'
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
   volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
     si vous êtes étudiant en informatique ou professionnel des logiciels. Les champs
     marqués d'un <span class="form-required-field">*</span> sont obligatoires.
@@ -647,6 +649,8 @@
   volunteer_engineer_submission_checkbox_contact: 'Je suis d''accord pour que les
     enseignants me contactent pour faire du bénévolat (Note : votre adresse e-mail
     ne sera pas partagée).'
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.
   volunteer_engineer_submission_submit: Envoyer
   volunteer_engineer_submission_thankyou: Nous vous remercions de vous être inscrit
     en tant que bénévole. Les enseignants utiliseront <a href="%{url}">cette carte</a>
@@ -923,6 +927,8 @@
   dashboard_students_reset_password: Réinitialiser le mot de passe
   dashboard_students_share_section: 'Partagez la page de connexion de cette section
     avec vos élèves&#160;:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Imprimez des cartes avec les données de connexion
     de vos élèves.
   dashboard_students_secret_picture_title: Image secrète
@@ -949,6 +955,7 @@
     si vous souhaitez créer les comptes pour eux, changez le type de secret de cette
     section en <b>mot</b> ou <b>image</b>.
   dashboard_students_print_page: Imprimer cette page
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Cliquez
     ici</a> pour consulter notre politique de confidentialité, qui peut être partagée
@@ -1026,79 +1033,6 @@
     section.
   dashboard_faq: Foire aux Questions
   dashboard_faq_k5: Foire aux Questions CM2
-  dashboard_announcements: Annonces
-  dashboard_announce_message_fall2016_features: Nous avons passer l'été à transformer
-    vos retours en de nouvelles fonctionnalités. Maintenant, vous pouvez <a href="%{pp_url}"
-    target="_blank">suivre l'avancé de plusieurs élèves</a> même si ils développent
-    sur le même appareil. Vous pouvez utiliser <a href="%{csp_widgets_url}" target="_blank">les
-    meilleurs outils interactifs</a> venant de nos cours de Principes de CS dans <i>toutes</i>
-    les classes. Et vos élèves peuvent <a href="%{unused_code_url}" target="_blank">garder
-    le code inutilisé</a> dans leur espace de travail pour les encourager à expérimenter!
-    Découvrez toutes nos nouveautés et laissez-nous savoir ce que vous pensez.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Pour en savoir plus
-  dashboard_announce_try_now_button: Essaie maintenant
-  dashboard_announce_host_an_hour_button: Organiser une Heure du Code
-  dashboard_announce_watch_video_button: Voir la vidéo
-  dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
-    visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
-    Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
-    les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises
-    d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès
-    américain de financer l’enseignement de l'informatique pour les élèves jusque
-    18 ans.
-  dashboard_announce_petition_button: Ajoutez votre nom
-  dashboard_announce_go_beyond_button: Aller au-delà
-  dashboard_announce_all: Tenez-vous au courant des nouvelles fonctionnalités et des
-    mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
-    les anciennes annonces.</a>
-  dashboard_announce_hoc_launch: Des milliers d’enseignants de plus de 180 pays commenceront
-    à enseigner l'informatique pendant l’Heure du Code ce 5 décembre 2011. Nous comptons
-    sur vous pour nous permettre d’atteindre plus d'élèves que jamais auparavant.
-    <a href='%{signup_url}' target='_blank'>Enregistrer votre événement Heure de Code</a>
-    pour faire savoir aux autres enseignants que n’importe qui peut commencer à enseigner
-    l'informatique.
-  dashboard_announce_mc_launch: Un de nos didacticiels les plus populaires a maintenant
-    une suite! Le tout nouveau Designer pour l'Heure du Code Minecraft permet aux
-    étudiants de créer leurs propres règles dans le monde Minecraft. Ils peuvent créer
-    une expérience unique de Minecraft, puis le partager avec des amis ou jouer sur
-    leurs téléphones. Faites-le avec votre classe pour l'Heure du Code.
-  dashboard_announce_hoc_scaling_progress: Veuillez noter que nous n'enregistrons
-    pas les progression des étudiants dans ce cours du 3 au 11 décembre en raison
-    du niveau de traffic que notre site atteint pour l'Heure du Code à cette période.
-    Vous pourrez toujours voir les progressions des étudiants d'avant le 3 décembre.
-    Nous sauverons à nouveau les progressions comme d'habitude après cette semaine.
-  dashboard_announce_how_code_studio: Vous n’avez besoin d’aucune expérience préalable
-    pour commencer à enseigner l’informatique à votre classe. Code.org propose des
-    programmes d’études, des plans de cours, des programmes d’apprentissage professionnels
-    de haute qualité et des tonnes d’excellents outils pour touts les niveaux niveaux
-    — tout ce dont vous avez besoin, gratuitement. Vous vous demandez où commencer ?
-    Téléchargez <a href='%{video_download_url}'> cette vidéo</a> !
-  dashboard_announce_go_beyond: Dépasser Une Heure De Code et explorer les concepts
-    des sciences de l’informatique avec vos élèves chaque semaine. Code.org propose
-    des programmes d’études, plans de leçon, programmes de formation professionnelle
-    de haute qualité et tonnes d’excellents outils pour tous les niveaux niveaux &mdash;
-    et tout est gratuit. :) Vous n’avez pas besoin d’expérience pour commencer à enseigner
-    l’informatique à votre salle de classe. <b>Trouver la prochaine étape qui convient
-    à votre classe.</b>
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-    Your students could be featured in Code.org''s next viral video encouraging students
-    to take the AP CS Principles exam this year. We''re inviting all CS Principles
-    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
-    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
-    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
@@ -1253,6 +1187,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -2061,9 +1997,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

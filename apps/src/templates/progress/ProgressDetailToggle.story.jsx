@@ -10,7 +10,8 @@ export default storybook => {
         {
           levels: []
         }
-      ]
+      ],
+      focusAreaPositions: []
     }
   };
 
@@ -25,7 +26,8 @@ export default storybook => {
           flex_category: 'cat2',
           levels: []
         }
-      ]
+      ],
+      focusAreaPositions: []
     }
   };
 

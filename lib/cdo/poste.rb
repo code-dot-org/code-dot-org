@@ -113,7 +113,7 @@ module Poste2
 
   # Returns true if address is a valid email address.
   def self.email_address?(address)
-    EmailValidator.email_address?(address)
+    Cdo::EmailValidator.email_address?(address)
   end
 
   def self.find_or_create_url(href)
@@ -214,7 +214,7 @@ module Poste2
     {}.tap do |saved|
       attachments.each do |name, content|
         filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
-        File.open(filename, 'w+b'){|f| f.write content}
+        File.open(filename, 'w+b') {|f| f.write content}
         saved[name] = filename
       end
     end

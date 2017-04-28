@@ -10,16 +10,16 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert_creates(SurveyResult) do
       post :create,
         params: {
-          survey: {kind: 'Diversity2016', survey2016_ethnicity_asian: 22, survey2016_foodstamps: 3}
+          survey: {kind: 'Diversity2017', diversity_asian: 22, diversity_farm: 3}
         },
         format: :json
     end
 
     survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
-    assert_equal 'Diversity2016', survey_result.kind
-    assert_equal 22, survey_result["properties"]["survey2016_ethnicity_asian"].to_i
-    assert_equal 3, survey_result["properties"]["survey2016_foodstamps"].to_i
+    assert_equal 'Diversity2017', survey_result.kind
+    assert_equal 22, survey_result["properties"]["diversity_asian"].to_i
+    assert_equal 3, survey_result["properties"]["diversity_farm"].to_i
   end
 
   test 'post net promoter score survey results' do
@@ -44,14 +44,14 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert_creates(SurveyResult) do
       post :create,
         params: {
-          survey: {kind: 'Diversity2016', nonwhitelisted: 'untrusted data'}
+          survey: {kind: 'Diversity2017', nonwhitelisted: 'untrusted data'}
         },
         format: :json
     end
 
     survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
-    assert_equal 'Diversity2016', survey_result.kind
+    assert_equal 'Diversity2017', survey_result.kind
     assert survey_result['properties']['nonwhitelisted'].nil?
   end
 

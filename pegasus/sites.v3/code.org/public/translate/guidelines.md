@@ -1,6 +1,7 @@
 ---
 title: Guidelines for Translations
 nav: translate_nav
+theme: responsive
 ---
 
 # Tips and Guidelines for Consistent Translations

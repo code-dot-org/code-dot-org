@@ -1,6 +1,7 @@
 ---
 title: Bring Computer Science to Your School (NYC)
 nav: educate_nav
+theme: responsive
 ---
 # K-5 Workshop Recruitment Resources
 

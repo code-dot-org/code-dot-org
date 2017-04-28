@@ -74,6 +74,7 @@ export default storybook => {
             hideBackdrop={true}
             i18n={fakei18n}
             shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+            isAbusive={false}
             channelId="some-id"
             canShareSocial={false}
             appType="gamelab"

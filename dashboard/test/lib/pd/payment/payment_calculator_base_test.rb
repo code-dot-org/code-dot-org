@@ -101,7 +101,7 @@ module Pd::Payment
       assert_equal 4, workshop_summary.teacher_summaries.count
 
       # Below min attendance
-      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_below_min_attendance}.tap do |teacher_summary|
+      workshop_summary.teacher_summaries.find {|t| t.teacher == teacher_below_min_attendance}.tap do |teacher_summary|
         assert teacher_summary
         assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 1, teacher_summary.raw_days
@@ -111,7 +111,7 @@ module Pd::Payment
       end
 
       # Attend 2 days
-      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_last_2_days}.tap do |teacher_summary|
+      workshop_summary.teacher_summaries.find {|t| t.teacher == teacher_last_2_days}.tap do |teacher_summary|
         assert teacher_summary
         assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 2, teacher_summary.raw_days
@@ -121,7 +121,7 @@ module Pd::Payment
       end
 
       # Attend 3 days
-      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_first_3_days}.tap do |teacher_summary|
+      workshop_summary.teacher_summaries.find {|t| t.teacher == teacher_first_3_days}.tap do |teacher_summary|
         assert teacher_summary
         assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 3, teacher_summary.raw_days
@@ -131,7 +131,7 @@ module Pd::Payment
       end
 
       # Above max attendance
-      workshop_summary.teacher_summaries.find{|t| t.teacher == teacher_above_cap}.tap do |teacher_summary|
+      workshop_summary.teacher_summaries.find {|t| t.teacher == teacher_above_cap}.tap do |teacher_summary|
         assert teacher_summary
         assert_equal workshop_summary, teacher_summary.workshop_summary
         assert_equal 4, teacher_summary.raw_days
@@ -175,7 +175,7 @@ module Pd::Payment
       assert_equal 4, teacher_summaries.count
 
       # Unqualified
-      teacher_summaries.find{|p| p.teacher == teacher_unqualified}.tap do |teacher_summary|
+      teacher_summaries.find {|p| p.teacher == teacher_unqualified}.tap do |teacher_summary|
         refute teacher_summary.qualified?
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
@@ -183,7 +183,7 @@ module Pd::Payment
       end
 
       # No pay
-      teacher_summaries.find{|p| p.teacher == teacher_no_pay}.tap do |teacher_summary|
+      teacher_summaries.find {|p| p.teacher == teacher_no_pay}.tap do |teacher_summary|
         assert teacher_summary.qualified?
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
@@ -194,7 +194,7 @@ module Pd::Payment
       end
 
       # Hourly pay
-      teacher_summaries.find{|p| p.teacher == teacher_hourly}.tap do |teacher_summary|
+      teacher_summaries.find {|p| p.teacher == teacher_hourly}.tap do |teacher_summary|
         assert teacher_summary.qualified?
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
@@ -205,7 +205,7 @@ module Pd::Payment
       end
 
       # Daily pay
-      teacher_summaries.find{|p| p.teacher == teacher_daily}.tap do |teacher_summary|
+      teacher_summaries.find {|p| p.teacher == teacher_daily}.tap do |teacher_summary|
         assert teacher_summary.qualified?
         assert_equal 2, teacher_summary.days
         assert_equal 12, teacher_summary.hours
@@ -221,12 +221,12 @@ module Pd::Payment
     test 'teacher summaries with deleted teacher account' do
       workshop = create :pd_ended_workshop, num_sessions: 1
 
-      create :pd_workshop_participant,
+      pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
         enrolled: true,
         in_section: true,
-        attended: true,
-        deleted_at: DateTime.now
+        attended: true
+      pd_workshop_participant.destroy
 
       calculator = PaymentCalculatorBase.instance
 

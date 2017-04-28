@@ -10,7 +10,7 @@ module SerializedProperties
     self.serialized_properties ||= {}
 
     after_initialize :init_properties
-    before_save { properties.select! { |_, v| v.present? } }
+    before_save {properties.select! {|_, v| v.present?}}
   end
 
   def assign_attributes(new_attributes)
@@ -52,13 +52,13 @@ module SerializedProperties
     end
 
     def permitted_params
-      serialized_properties.values.flatten.map{ |s| s.to_s.gsub(ENCRYPTED_PROPERTY_REGEX, '') }
+      serialized_properties.values.flatten.map {|s| s.to_s.gsub(ENCRYPTED_PROPERTY_REGEX, '')}
     end
 
     def define_methods_for_property(property_name)
-      define_method(property_name) { read_attribute('properties')[property_name] }
-      define_method("#{property_name}=") { |value| read_attribute('properties')[property_name] = value }
-      define_method("#{property_name}?") { !!JSONValue.value(read_attribute('properties')[property_name]) }
+      define_method(property_name) {read_attribute('properties')[property_name]}
+      define_method("#{property_name}=") {|value| read_attribute('properties')[property_name] = value}
+      define_method("#{property_name}?") {!!JSONValue.value(read_attribute('properties')[property_name])}
     end
 
     ENCRYPTED_PROPERTY_REGEX = /^encrypted_/
@@ -84,7 +84,7 @@ module SerializedProperties
     end
 
     def init_internals
-      sti_hierarchy.map { |x| serialized_properties[x.to_s] || [] }.flatten.each do |property|
+      sti_hierarchy.map {|x| serialized_properties[x.to_s] || []}.flatten.each do |property|
         property = property.to_s
         if property =~ ENCRYPTED_PROPERTY_REGEX
           define_methods_for_encrypted_property property

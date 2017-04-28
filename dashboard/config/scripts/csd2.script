@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Quality Websites'
 named_level 'Unit 2 Lesson 1 Overview'
@@ -18,7 +19,6 @@ stage 'Text on the Web'
 named_level 'Unit 2 Lesson 4 Overview'
 named_level 'Intro to Web Lab - Part 1'
 level 'CSDU2 - Type Anything'
-named_level 'Intro to Web Lab - Part 3'
 named_level 'CSDU2 - Inspector Warm Up'
 named_level 'Introduction to HTML'
 named_level 'Intro to Web Lab - Part 2'
@@ -35,6 +35,7 @@ level 'CSDU2 - Recipe Page Start'
 level 'CSDU2 - Unordered Lists'
 level 'CSDU2 - ordered Lists'
 named_level 'CSDU2 - Finish Recipe'
+named_level 'Intro to Web Lab - Part 3'
 
 stage 'Images in HTML'
 named_level 'Unit 2 Lesson 5 Overview'
@@ -55,6 +56,7 @@ level 'CSD Creating Debugging Strat'
 
 stage 'Styling Text with CSS'
 named_level 'Unit 2 Lesson 7 Overview'
+named_level 'Video: Intro to CSS'
 level 'CSD U2 text style h1'
 level 'CSD U2 text style h3'
 named_level 'CSD U2 CSS explain'
@@ -63,6 +65,7 @@ level 'CSD U2 text style font family'
 level 'CSD U2 text style decoration'
 level 'CSD U2 text style text align'
 named_level 'CSD U2 text style review'
+named_level 'Video: Intro to CSS Part 2'
 level 'CSD U2 add file'
 level 'CSD U2 text style freeplay'
 

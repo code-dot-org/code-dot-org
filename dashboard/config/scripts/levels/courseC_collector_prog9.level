@@ -22,7 +22,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "0",
+    "start_direction": "3",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
@@ -60,7 +60,7 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
         <block type="collector_collect"/>
       </xml>
@@ -78,7 +78,7 @@
                     <block type="collector_collect">
                       <next>
                         <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
+                          <title name="DIR">turnRight</title>
                           <next>
                             <block type="maze_move">
                               <title name="DIR">moveForward</title>
@@ -89,7 +89,7 @@
                                     <block type="collector_collect">
                                       <next>
                                         <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
+                                          <title name="DIR">turnRight</title>
                                           <next>
                                             <block type="maze_move">
                                               <title name="DIR">moveForward</title>

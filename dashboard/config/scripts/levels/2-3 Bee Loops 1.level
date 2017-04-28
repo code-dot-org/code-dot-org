@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible."
+    "markdown_instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

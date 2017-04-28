@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/commands';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 
-describe('maker commands', () => {
+describe('maker/commands.js', () => {
   let stubBoardController;
 
   beforeEach(() => {

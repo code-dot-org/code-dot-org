@@ -2,6 +2,7 @@
 title: An note on privacy and data collection
 rightbar: blank
 nav: blank
+theme: responsive
 social:
   "og:title": "A personal note on student privacy by Code.org founder & CEO Hadi Partovi"
   "og:description": "We consider student safety and privacy of utmost importance. Nothing has changed, but I'm outlining measures we’ve always taken to protect student data and privacy here."

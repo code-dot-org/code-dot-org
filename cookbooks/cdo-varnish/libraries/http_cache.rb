@@ -3,11 +3,17 @@
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
   # Paths for files that are always cached based on their extension.
-  STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map{|ext| "/*.#{ext}"}
+  STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}
 
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language)
-  LANGUAGE_COOKIES = %w(language_ pm)
+
+  DEFAULT_COOKIES = [
+    # Language drop-down selection.
+    'language_',
+    # Page mode, for A/B experiments and feature-flag rollouts.
+    'pm'
+  ]
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
@@ -41,19 +47,23 @@ class HttpCache
     session_key = "_learn_session#{env_suffix}"
     storage_id = "storage_id#{env_suffix}"
 
+    # Signed-in user type (student/teacher), or signed-out if cookie is not present.
+    user_type = "_user_type#{env_suffix}"
+    default_cookies = DEFAULT_COOKIES.concat([user_type])
+
+    # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
       'hour_of_code',
-      'language_',
       'progress',
       'lines',
       'scripts',
       'videos_seen',
       'callouts_seen',
-      'pm',
       'rack.session',
       session_key,
       storage_id,
-    ]
+    ].concat(default_cookies)
+
     {
       pegasus: {
         behaviors: [
@@ -69,7 +79,7 @@ class HttpCache
             headers: [],
             cookies: 'none'
           },
-          # Dashboard-based API paths in Pegasus are session-specific, whitelist all session cookies and language header.
+          # Dashboard-based API paths in Pegasus are session-specific, whitelist all cookies.
           {
             path: %w(
               /v2/*
@@ -95,25 +105,12 @@ class HttpCache
             proxy: 'dashboard',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
-          },
-          {
-            path: %w(
-              /
-              /learn*
-              /congrats
-              /minecraft
-              /starwars
-              /playlab
-              /athletes
-            ),
-            headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIES,
           }
         ],
-        # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.
+        # Remaining Pegasus paths are cached, and vary only on language and default cookies.
         default: {
-          headers: [],
-          cookies: 'none'
+          headers: LANGUAGE_HEADER,
+          cookies: default_cookies
         }
       },
       dashboard: {
@@ -150,7 +147,7 @@ class HttpCache
           {
             path: CACHED_SCRIPTS_MAP.values,
             headers: LANGUAGE_HEADER,
-            cookies: LANGUAGE_COOKIES
+            cookies: default_cookies
           },
           {
             path: '/api/*',

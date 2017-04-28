@@ -1,7 +1,15 @@
--# an ultra-simple mobile header
+%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
-#pageheader
-  .container_responsive
-    #left
-      %a{:href=>"/"}
-        %img#logo{:src=>'/images/logo.png'}
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
+
+#pageheader-wrapper
+  - pageheader_class = request.path_info == '/' ? 'pageheader-translucent' : ''
+  #pageheader{class: pageheader_class}
+    .container_responsive
+      #left
+        %a{:href=>'/'}
+          %img#logo{:src=>'/images/logo.png'}
+
+      - if request.language == "en"
+        = view :hamburger, user_type: user_type

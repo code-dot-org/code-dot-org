@@ -32,7 +32,7 @@ module Ops
     test "Facilitators can list all teachers in their workshop's cohorts" do
       #87055150 (part 2)
       # first name, last name, email, district, gender and any workshop details that are available for teachers
-      assert_routing({ path: "#{API}/workshops/1/teachers", method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
+      assert_routing({path: "#{API}/workshops/1/teachers", method: :get}, {controller: 'ops/workshops', action: 'teachers', id: '1'})
 
       sign_in @workshop.facilitators.first
       get :teachers, params: {id: @workshop.id}
@@ -89,7 +89,7 @@ module Ops
     test 'list all workshops' do
       sign_in @admin
 
-      assert_routing({ path: "#{API}/workshops", method: :get }, { controller: 'ops/workshops', action: 'index' })
+      assert_routing({path: "#{API}/workshops", method: :get}, {controller: 'ops/workshops', action: 'index'})
 
       get :index
       assert_response :success
@@ -100,7 +100,7 @@ module Ops
     test 'Ops team can create workshops' do
       sign_in @admin
       #87054134
-      assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
+      assert_routing({path: "#{API}/workshops", method: :post}, {controller: 'ops/workshops', action: 'create'})
 
       facilitator_params = [
         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}
@@ -129,7 +129,7 @@ module Ops
     test 'ops team can add facilitators to workshops' do
       sign_in @admin
 
-      assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/workshops/1", method: :patch}, {controller: 'ops/workshops', action: 'update', id: '1'})
 
       facilitator_params = @workshop.facilitators.map {|facilitator| {ops_first_name: facilitator.name, email: facilitator.email, id: facilitator.id}}
       facilitator_params += [
@@ -154,7 +154,7 @@ module Ops
 
     test 'read workshop info' do
       sign_in @admin
-      assert_routing({ path: "#{API}/workshops/1", method: :get }, { controller: 'ops/workshops', action: 'show', id: '1' })
+      assert_routing({path: "#{API}/workshops/1", method: :get}, {controller: 'ops/workshops', action: 'show', id: '1'})
 
       get :show, params: {id: @workshop.id}
       assert_response :success
@@ -162,7 +162,7 @@ module Ops
 
     test 'update workshop info' do
       sign_in @admin
-      assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/workshops/1", method: :patch}, {controller: 'ops/workshops', action: 'update', id: '1'})
 
       new_name = 'New workshop name'
       patch :update, params: {id: @workshop.id, workshop: {name: new_name}}
@@ -174,7 +174,7 @@ module Ops
 
     test 'delete workshop' do
       sign_in @admin
-      assert_routing({ path: "#{API}/workshops/1", method: :delete }, { controller: 'ops/workshops', action: 'destroy', id: '1' })
+      assert_routing({path: "#{API}/workshops/1", method: :delete}, {controller: 'ops/workshops', action: 'destroy', id: '1'})
 
       assert_difference 'Workshop.count', -1 do
         get :destroy, params: {id: @workshop.id}

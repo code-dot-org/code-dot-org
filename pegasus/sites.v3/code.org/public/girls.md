@@ -2,6 +2,7 @@
 title: Recruit Girls to Computer Science
 nav: blank
 rightbar: blank
+theme: responsive
 ---
 
 # 4 Ways to Recruit Girls to Try Computer Science

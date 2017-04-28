@@ -32,10 +32,12 @@
     "disable_examples": "false",
     "examples_required": "false",
     "video_key": "C4_for_loops_no_bee",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `counter` for the length of your triangles inside your `repeat` loop.\\n\\n![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)\",\"hint_id\":\"courseF_artist_for2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1a5b3642ec3cb13875844827af5570f3/courseF_artist_for2.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

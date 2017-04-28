@@ -98,9 +98,9 @@ Code.org designs the Hour of Code tutorials as games and puzzles to engage stude
 
 ## <a name="teals"></a>Volunteer at TEALS
 
-If you are a software engineer who is available for a bigger commitment, consider volunteering with TEALS. [TEALS](http://c.tealsk12.org/l/667) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. You can make an impact in local schools by helping teachers teach Intro and AP CS classes 2 days a week.
+If you are a software engineer who is available for a bigger commitment, consider volunteering with TEALS. [TEALS](http://r.tealsk12.org/tbz7xx) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. You can make an impact in local schools by helping teachers teach Intro and AP CS classes 2 days a week.
 
-[<button>Learn more</button>](http://c.tealsk12.org/l/667)
+[<button>Learn more</button>](http://r.tealsk12.org/tbz7xx)
 
 <%= view :three_circles, circles: [
 {img: '/images/teals/fit-150/atul-hatalkar.jpg', text: '"Yes, teaching in my living room helps young people. But TEALS has enabled me to make an even larger impact on the kids in my town." - Atul Hatalkar, Principal Engineer'},

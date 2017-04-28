@@ -9,10 +9,10 @@ module RequireBacktrace
   mattr_accessor :regex
   def require(*args)
     super(*args).tap do |required|
-      if required && args.any? { |x| x.to_s.match regex }
+      if required && args.any? {|x| x.to_s.match regex}
         puts "Require #{args}", CDO.filter_backtrace(
-          caller.reject{|b| b =~ /active_support\/dependencies/}.
-            reject{|b| b =~ /#{File.basename(__FILE__)}/}
+          caller.reject {|b| b =~ /active_support\/dependencies/}.
+            reject {|b| b =~ /#{File.basename(__FILE__)}/}
         )
       end
     end

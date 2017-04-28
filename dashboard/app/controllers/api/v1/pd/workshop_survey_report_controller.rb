@@ -23,7 +23,7 @@ module Api::V1::Pd
         format.csv do
           # Kind of lame but we need to do this - Ruby orders hashes based on insertion order. We want to rename the first
           # key, but that's not really supported in a way to preserve insertion order. So we have to make a new hash
-          ordered_survey_report = survey_report.transform_keys.with_index { |k, i| i == 0 ? @workshop.friendly_name : k}
+          ordered_survey_report = survey_report.transform_keys.with_index {|k, i| i == 0 ? @workshop.friendly_name : k}
           send_as_csv_attachment(convert_to_csv(ordered_survey_report), 'workshop_survey_report.csv', titleize: false)
         end
       end

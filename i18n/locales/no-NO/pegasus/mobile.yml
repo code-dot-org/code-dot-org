@@ -65,10 +65,10 @@
   congratulations: "Gratulerer!"
   congratulations_on_completing_hoc: "Gratulerer med å ha fullført Kodetimen"
   congratulations_volunteer: 'Gratulerer: nå har du prøvd ut Kodetimen,<a href="https://code.org/volunteer"> meld deg på for å hjelpe til i et klasserom</a> og hjelp flere elever med å gjennomføre Kodetimen!'
-  congratulations_on_completing_course1: "Gratulerer med å fullføre Kurs 1"
-  congratulations_on_completing_course2: "Gratulerer med å fullføre Kurs 2"
-  congratulations_on_completing_course3: "Gratulerer med å fullføre Kurs 3"
-  congratulations_on_completing_course4: "Gratulerer med å fullføre Kurs 4"
+  congratulations_on_completing_course1: "Gratulerer med fullført Kurs 1"
+  congratulations_on_completing_course2: "Gratulerer med fullført Kurs 2"
+  congratulations_on_completing_course3: "Gratulerer med fullført Kurs 3"
+  congratulations_on_completing_course4: "Gratulerer med fullført Kurs 4"
   congratulations_on_completing_accelerated: "Gratulerer med å fullføre det Akselererte Kurs"
   congrats_next_tutorials_title: "Prøv disse kursene"
   congrats_next_tutorials_desc: "Prøv disse kortere, 1-timers-kursene eller prøv et kurs fra våre <a href=\"%{current_path}/next\">samarbeidspartenere</a>."
@@ -452,6 +452,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lærere trenger frivillige som er lidenskapelig opptatt av informatikk til å hjelpe til med Kodetimen i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med."
   volunteer_engineer_submission_intro_background: "Kodetimen er en global bevegelse for å gi en times introduksjon til informatikk og programmering, som når ut til titalls millioner elever i 180+ land. Bli gjerne med under Computer Science Education Week, 7.-13. desember."
   volunteer_engineer_submission_intro_recruit: 'Disse lærerne vil gjerne ha noen <span style="font-family: ''Gotham 7r'', sans-serif;">tekonologer</span> som kan hjelpe til i klasserommet, eller noe som kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat. Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a href="%{url}">Lær mer her</a>.'
+  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_signup: "Angi følgende informasjon hvis du er en informatikkelev eller jobber med programmering. Feltene markert med en <span class=\"form-required-field\">*</span> er obligatoriske."
   volunteer_engineer_submission_intro_links: "Ser du ikke etter en frivillig? <a href=\"%{learn_more}\"> Lær mer</a> om å organisere din egen \"Hour of code\" begivenhet og finne en lokal frivillig på våre <a href=\"%{volunteer_local}\"> frivillige kart</a>."
   volunteer_engineer_submission_update_information: "Oppdater din informasjon"
@@ -480,6 +481,7 @@
   volunteer_engineer_submission_field_email_placeholder: "E-postadresse"
   volunteer_engineer_submission_final_paragraph: "Du vil vises på et kart slik at lokale lærere kan kontakte deg for å få hjelp til Kodetimen eller andre frivillighetstilbud. Din epostadresse og nøyaktige posisjon vil ikke bli delt, men andre opplysninger (inkludert omtrentlig plassering) vil være synlig for lokale lærere."
   volunteer_engineer_submission_checkbox_contact: 'Jeg godtar at lærere kan kontakte meg for å hjelpe til med Kodetimen (Obs: din epostadresse vil ikke bli delt)'
+  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "Send"
   volunteer_engineer_submission_thankyou: "Takk for at du melder deg til Kodetimen. Sjekk <a href=\"%{url}\"> her</a> for å forberede deg til Kodetimen og rekruttere flere veiledere."
   volunteer_engineer_submission_commitment_uncertain: "Usikker"
@@ -662,7 +664,8 @@
   dashboard_students_auto_generated: "Automatisk generert"
   dashboard_students_reset_secret: "Tilbakestille hemmelig"
   dashboard_students_reset_password: "Tilbakestill passord"
-  dashboard_students_share_section: 'Del denne gruppens påloggingsside med elevene:'
+  dashboard_students_share_section: "Del denne gruppens påloggingsside med elevene:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Skriv ut kort med elevenes påloggingsinformasjon."
   dashboard_students_secret_picture_title: "Hemmelig bilde"
   dashboard_students_secret_picture: "Hemmelig bilde"
@@ -673,6 +676,7 @@
   dashboard_students_join_link: "Fortell elevene at de skal opprette sin egen konto og bli med i din gruppe på"
   dashboard_students_no_email: "Om elevene dine ikke har epostadresser eller du vil opprette kontoene for dem, andre denne gruppens hemmelige pålogging til <b>ord</b> eller <b>bilde</b>."
   dashboard_students_print_page: "Skriv ut denne siden"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/elev-privacy\", target=\"_blank\"> Klikk her</a> for vårt personverndokument som kan deles digitalt eller skrives ut til elevene."
   dashboard_curriculum_k5_title: "K-5 lærerressurser"
@@ -740,25 +744,6 @@
   dashboard_sections_login_type_explanation: "Denne tabellen forklarer hvilken av disse innloggingstypene, <b>bilde, ord eller e-post</b>, du bør velge for et avsnitt."
   dashboard_faq: "Ofte stilte spørsmål"
   dashboard_faq_k5: "K-5 Ofte stilte spørsmål"
-  dashboard_announcements: "Kunngjøringer"
-  dashboard_announce_message_fall2016_features: "We har brukt sommeren på å gjøre om tilbakemeldingene vi har fått til nye funksjoner. Nå kan du <a href=\"%{pp_url}\" target=\"_blank\">følge flere elevers fremgang</a>, selv om de jobber i par på en maskin. Du kan bruke <a href=\"%{csp_widgets_url}\" target=\"_blank\">de beste interaktive verktøyene</a> fra CS prinsipper-kurset i <i>hvilket som helst</i> klasserom. Elevene dine kan <a href=\"%{unused_code_url}\" target=\"_blank\">beholde ubrukt kode</a> på arbeidsområdet for å fremme utprøving! Se på de nye funksjonene og la oss få vite hva du tenker."
-  dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-  dashboard_announce_learn_more_button: "Lær mer"
-  dashboard_announce_try_now_button: "Prøv nå"
-  dashboard_announce_host_an_hour_button: "Inviter til en kodetime"
-  dashboard_announce_watch_video_button: "Se video"
-  dashboard_announce_petition: "Som lærer, er du del av en bevegelse som ønsker å gi alle elever, i alle skoler, muligheten til å lære programmering. Nå er det på tide å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning, 28 guvernører og administrerende direktører i de største selskapene i USA sammen og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning."
-  dashboard_announce_petition_button: "Legg til navnet ditt"
-  dashboard_announce_go_beyond_button: "Fortsett videre"
-  dashboard_announce_all: "Hold deg oppdatert med oppdateringer og ny funksjonalitet på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere kunngjøringer.</a>"
-  dashboard_announce_hoc_launch: "Tusener av lærere i mer enn 180 land vil undervise programmering under Kodetimen, 5-11 desember. Vi regner med at du vil hjelpe oss å nå flere elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer din kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise programmering."
-  dashboard_announce_mc_launch: "Et av våre mest populære opplegg har fått en oppfølger! Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft. De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime."
-  dashboard_announce_hoc_scaling_progress: "Merk at vi ikke lagrer elevenes progresjon i dette kurset fra 3. - 11. desember på grunn av mengden trafikk på våre sider under Kodetimen-uka. Du kan fortsatt se elevenes progresjon fra før 3. desember. Etter denne uka kommer vi til å gå tilbake til å lagre progresjon som normalt."
-  dashboard_announce_how_code_studio: "Du trenger ingen erfaring for å lære bort datateknikk i klasserommet ditt. Code.org tilbyr pensum, timeplaner, høykvalitets læreplaner og tonnevis av verktøy for alle klassenivåer&mdash;alt du trenger, helt gratis. Lurer du på hvordan du kan komme i gang? Last ned <a href='%{video_download_url}'>denne videoen</a>!"
-  dashboard_announce_go_beyond: "Fortsette videre fra Kodetimen og utforsk konsepter fra datateknikk med dine elever hver uke. Code.org tilby pensum, timeplaner, profesjoneller høykvalitets læreplaner og tilby tonnevis av gode verktøy for alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste steget som passer for ditt klasserom.</b>"
-  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Kodetimen er her - 8. til 14. desember!"
   code_sign_up: "Registrer deg for å delta under CS Education Week"
   host_an_hour: "Hold en Kodetime"
@@ -887,6 +872,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Enhet 1: Internett'
   csp2_name: 'Enhet 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'

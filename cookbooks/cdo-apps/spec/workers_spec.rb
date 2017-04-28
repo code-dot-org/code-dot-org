@@ -3,9 +3,9 @@ require 'chefspec/berkshelf'
 
 def run_test(context, cpu, memory, dashboard_workers, pegasus_workers, varnish=0)
   context context do
-    let(:cpu){cpu}
-    let(:memory){memory}
-    let(:varnish){varnish}
+    let(:cpu) {cpu}
+    let(:memory) {memory}
+    let(:varnish) {varnish}
     it 'sets correct number of workers' do
       expect(node['cdo-secrets']['dashboard_workers']).to eq dashboard_workers
       expect(node['cdo-secrets']['pegasus_workers']).to eq pegasus_workers
@@ -22,8 +22,8 @@ describe 'cdo-apps::workers' do
     end.converge(described_recipe)
   end
   let(:varnish_suffix) {'G'}
-  let(:varnish) { 0 }
-  let(:node) { chef_run.node }
+  let(:varnish) {0}
+  let(:node) {chef_run.node}
 
   # Test various cpu/ram/varnish configurations and the number of workers calculated
   #        context          cpu mem dash peg varn
@@ -38,12 +38,12 @@ describe 'cdo-apps::workers' do
   run_test 'c4.8xlarge',    36, 60, 33,  16, 4
 
   context 'varnish mebibyte suffix' do
-    let(:varnish_suffix){'M'}
+    let(:varnish_suffix) {'M'}
     run_test 'varnish using mebibytes', 32, 8, 4, 2, 1024
   end
 
   context 'varnish no suffix' do
-    let(:varnish_suffix){''}
+    let(:varnish_suffix) {''}
     run_test 'varnish using bytes', 32, 8, 4, 2, 1024 * 1024 * 1024
   end
 end

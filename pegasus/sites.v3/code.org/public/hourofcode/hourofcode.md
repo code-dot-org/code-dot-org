@@ -1,11 +1,12 @@
 ---
 title: Teacher Resources - Write your first computer program
 nav: hoc_teacher_resources_nav
+theme: responsive
 ---
 
 # Write your first computer program: An Hour of Code Tutorial
 
-<center><iframe width="600" height="337" src="https://www.youtube.com/embed/bQilo5ecSX4" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe style="max-width:100%" width="600" height="337" src="https://www.youtube.com/embed/bQilo5ecSX4" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 

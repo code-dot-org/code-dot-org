@@ -1,5 +1,6 @@
 ---
 title: Hour of Code Role Models
+theme: responsive
 ---
 
 [solid-block-header]
@@ -22,11 +23,11 @@ We're Rory and Kieran...
 
 [/col-50]
 
-[col-50]
+<div class="col-50" style="padding-left: 15px">
 
-<img style="padding-left: 15px;" src="/images/careers/fit-470/rorykieran.png">
+<img src="/images/careers/fit-470/rorykieran.png" style="max-width: 100%">
 
-[/col-50]
+</div>
 
 <div style="clear:both;"></div>
 
@@ -49,7 +50,7 @@ We re-branded to <a href="https://gifs.com" target="_blank">gifs.com</a>, opened
 </br>
 </br>
 
-<img style="padding-left: 50px; padding-top: 25px;" src="/images/careers/fit-450/rorykieran-blockquote.png">
+<img style="padding-left: 50px; padding-top: 25px; max-width: 100%" src="/images/careers/fit-450/rorykieran-blockquote.png">
 
 [/col-50]
 

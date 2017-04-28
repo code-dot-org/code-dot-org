@@ -6,7 +6,7 @@ class MatchDSL < ContentDSL
 
   def height(text) @hash[:height] = text end
 
-  def question(text) @hash[:questions] << { text: text } end
+  def question(text) @hash[:questions] << {text: text} end
 
   def answer(text, correct=nil, feedback=nil)
     answer = {text: text}

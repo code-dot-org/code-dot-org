@@ -1,0 +1,59 @@
+hidden false
+login_required true
+hideable_stages true
+student_detail_progress_view true
+
+stage 'Representation Matters'
+named_level 'CSD-U5-SFLP Representation Matters'
+
+stage 'Patterns and Representation'
+named_level 'CSD-U5-SFLP Patterns and Representation'
+
+stage 'ASCII and Binary Representation'
+named_level 'CSD-U5-SFLP ASCII and Binary Representation'
+
+stage 'Representing Images'
+named_level 'CSD-U5-SFLP Representing Images'
+level 'CSD U5 black white images pixelation'
+level 'CSD U5 black white images pixelation 2'
+level 'CSD U5 black white images pixelation 3'
+level 'CSD U5 black white images pixelation 4'
+level 'CSD U5 black white images pixelation 5'
+
+stage 'Representing Numbers'
+named_level 'CSD-U5-SFLP Representing Numbers Part 1'
+
+stage '8-bit Numbers'
+named_level 'CSD-U5-SFLP Representing Numbers Part 2'
+level 'CSD U5 fixed-bits'
+
+stage 'Combining Representations'
+named_level 'CSD-U5-SFLP Combining Representations'
+level 'CSD U3 combining rep'
+level 'CSD U5 student record'
+
+stage 'Project - Create a Representation'
+named_level 'CSD-U5-SFLP Create a Representation'
+
+stage 'Problem Solving and Data'
+named_level 'CSD-U5-SFLP Problem Solving and Data'
+
+stage 'Making Decisions with Data'
+named_level 'CSD-U5-SFLP Making Decisions with Data'
+
+stage 'Interpreting Data'
+named_level 'CSD-U5-SFLP Interpreting Data'
+level 'CSD U5 data visualization'
+level 'CSD U5 data visualization sheet'
+
+stage 'Automating Data Decisions'
+named_level 'CSD-U5-SFLP Automating Data Decisions'
+
+stage 'Problem Solving with Big Data'
+named_level 'CSD-U5-SFLP Problem Solving with Big Data'
+level 'CSD U5 video2'
+level 'CSD U5 collection UPS2'
+level 'CSD U5 collection ads2'
+
+stage 'Project - Solve a Data Problem'
+named_level 'CSD-U5-SFLP Solve a Data Problem'

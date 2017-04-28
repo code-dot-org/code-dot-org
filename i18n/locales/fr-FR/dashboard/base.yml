@@ -12,6 +12,7 @@ fr:
     attributes:
       user:
         name: 'Nom à afficher'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-mail'
         username: 'nom d''utilisateur'
         password: 'mot de passe'
@@ -78,6 +79,7 @@ fr:
     forgot_password: 'Mot de passe oublié?'
     need_confirmation: "Pas reçu les instructions de confirmation ?"
     need_unlock: "Pas reçu les instructions de déverrouillage?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} élèves se sont déjà inscrits.'
     teacher_count: '%{count} enseignants se sont déjà inscrits.'
@@ -110,9 +112,31 @@ fr:
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Privé'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Autres'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'École'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Tu as déjà un compte ? Authentification'
     login: 'E-mail'
+    login_username: 'Email or Username'
     password: 'Mot de passe'
     remember: 'Se souvenir de moi'
     submit: 'Connexion'
@@ -150,6 +174,14 @@ fr:
       Les tutoriels sont amusants, visuellement attirants et enseignent les concepts de base de l'informatique à l'aide d'une expérience guidée qui reste ludique et simple. Apprends à coder avec Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies ! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Invitation envoyée'
     added_teacher: '%{name} ajouté en tant que ton enseignant'
@@ -163,8 +195,6 @@ fr:
       blank_code: "Saisis un code de section."
       cant_join_own_section: "Désolé, tu ne peux pas te joindre à ta propre section."
     mail:
-      invite_student:
-        subject: "Rejoins une classe avec %{teacher_name} sur Code.org !"
       student_disassociated:
         subject: 'Notification de Code.org: %{student_name} n''est plus considéré comme l''un de vos élèves.'
   reports:
@@ -252,7 +282,7 @@ fr:
       signin: 'Authentification'
       signup: 'Créer un compte'
       already_registered: 'Déjà enregistré ?'
-      pair_programming: 'Programmation à deux'
+      pair_programming: 'Programmation en Binôme'
       team: 'Équipe'
       driver: 'Pilote'
       navigator: 'Navigateur'
@@ -363,21 +393,24 @@ fr:
     announcement_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatique pour les élèves jusque 18 ans."
     announcement_petition_button: "Ajoutez votre nom"
     announcement_go_beyond_button: "Aller au-delà"
+    announcement_apply_now: "Apply now"
     announcement_all: "Tenez-vous au courant des nouvelles fonctionnalités et des mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir les anciennes annonces.</a>"
     announcement_hoc_launch: "Des milliers d’enseignants de plus de 180 pays commenceront à enseigner l'informatique pendant l’Heure du Code ce 5 décembre 2011. Nous comptons sur vous pour nous permettre d’atteindre plus d'élèves que jamais auparavant. <a href='%{signup_url}' target='_blank'>Enregistrer votre événement Heure de Code</a> pour faire savoir aux autres enseignants que n’importe qui peut commencer à enseigner l'informatique."
     announcement_mc_launch: "Un de nos didacticiels les plus populaires a maintenant une suite! Le tout nouveau Designer pour l'Heure du Code Minecraft permet aux étudiants de créer leurs propres règles dans le monde Minecraft. Ils peuvent créer une expérience unique de Minecraft, puis le partager avec des amis ou jouer sur leurs téléphones. Faites-le avec votre classe pour l'Heure du Code."
     announcement_how_code_studio: "Vous n’avez besoin d’aucune expérience préalable pour commencer à enseigner l’informatique à votre classe. Code.org propose des programmes d’études, des plans de cours, des programmes d’apprentissage professionnels de haute qualité et des tonnes d’excellents outils pour touts les niveaux niveaux — tout ce dont vous avez besoin, gratuitement. Vous vous demandez où commencer ? Téléchargez <a href='%{video_download_url}'> cette vidéo</a> !"
     announcement_go_beyond: "Dépasser Une Heure De Code et explorer les concepts des sciences de l’informatique avec vos élèves chaque semaine. Code.org propose des programmes d’études, plans de leçon, programmes de formation professionnelle de haute qualité et tonnes d’excellents outils pour tous les niveaux niveaux &mdash; et tout est gratuit. :) Vous n’avez pas besoin d’expérience pour commencer à enseigner l’informatique à votre salle de classe. <b>Trouver la prochaine étape qui convient à votre classe.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un code de section différent."
-    section_code_not_entered: "Veuillez donner le code de section de la section courante."
     section_code_cant_be_current_section: "La section courante ne peut pas être identique à la nouvelle section."
     current_section_dne: "Désolé, la section %{current_section_code} n’existe pas. Veuillez saisir un code de section différent."
-    students_not_yours: "Vous ne pouvez pas déplacer des élèves depuis une section qui ne vous appartient pas."
-    stay_enrolled_not_entered: "Veuillez fournir stay_enrolled_in_current_section."
     student_ids_not_entered: "Veuillez donner les id des élèves."
     student_not_found: "Un ou plusieurs élèves n'ont pas été trouvés."
     all_students_must_be_in_current_section: "Tous les étudiants doivent être inscrits dans votre section."
@@ -434,6 +467,10 @@ fr:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
       link: "Pour en savoir plus"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "Vous pourriez rencontrer des difficultés à utiliser le Web Lab en mode incognito. Veuillez recharger votre projet en mode normal. Désolé pour la gêne occasionnée."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
   try_reloading: 'Essaie de recharger la page'
   next_stage: 'Terminé! Continue vers l''étape suivante'
@@ -528,9 +565,9 @@ fr:
     support: "Obtenir de l'aide"
     support_url: "//support.code.org"
     help_resources: "Aide et ressources"
-    help_support: "Help and Support"
+    help_support: "Aide et Support"
     documentation: "Documentation"
-    tutorials: "Tutorials"
+    tutorials: "Tutoriels"
   multi:
     wrong_title: "Réponse incorrecte"
     wrong_body: "La réponse que tu as saisie est incorrecte.  Merci de réessayer !"
@@ -743,8 +780,8 @@ fr:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'Cours Principal'
+    extra_course_content: 'Contenu de Cours Supplémentaire'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas géré par Code.org.

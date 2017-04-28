@@ -20,6 +20,7 @@
     attributes:
       user:
         name: Name anzeigen
+        name_example: Angezeigter Name<br/>(z.B. Cooler Codierer oder Jana B.)
         email: E-Mail
         username: Benutzername
         password: Passwort
@@ -88,13 +89,15 @@
     forgot_password: Passwort vergessen?
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} Schüler haben sich bereits angemeldet."
     teacher_count: "%{count} Lehrer haben sich bereits angemeldet."
-    overview: Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte nachzuvollziehen
-      und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Sfugen</a> können
-      sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und Fortschritte
-      jedoch benötigen Sie ein Benutzerkonto.
+    overview: Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte zu
+      verfolgen und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Stufen
+      und Rätsel</a> können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer
+      Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.
     hoc_already_signed_up_heading: Starte ohne dich einzuloggen
     hoc_already_signed_up_content: "Sie haben sich angemeldet, eine 'Hour of Code'
       zu unterrichten. \n<br/> <br/>\nUm an diesem Event teilzunehmen, müssen weder
@@ -144,9 +147,31 @@
     user_type_student: Schüler
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
+  school_info:
+    title: Schulinformationen (optional)
+    school_country: Land der Schule
+    select_school_type: Wähle die Art der Schule
+    charter: Charta
+    private: Privat
+    public: "Öffentlich"
+    homeschool: Schule zu Hause
+    after_school: Nach Schule
+    other: Andere
+    state: Bundesland
+    district: Landkreis
+    other_district_not_listed: Anderer Landkreis der oben nicht gelistet ist
+    district_name: Name des Landkreises
+    school: Schule
+    other_school_not_listed: Nicht gelistete Schule
+    school_name: Schulname
+    school_zip: Postleitzahl der Schule
+    school_address: Adresse der Schule
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Hast du bereits einen Account? Anmelden
     login: E-Mail
+    login_username: E-Mail oder Benutzername
     password: Passwort
     remember: Merken
     submit: Anmelden
@@ -162,8 +187,8 @@
     login: Anmelden
     invalid_login: Ungültiger Login, bitte versuche es nochmal
     pair_programming: Ich habe einen Partner an meinem Computer
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: Erfahre warum du deinen vollstädigen Namen <a href='%{student_privacy_blog}'
+      target='_blank'>hier nicht sehen kannst</a>.
   password:
     reset_form:
       title: Passwort vergessen?
@@ -186,6 +211,14 @@
       Die Tutorials machen Spaß, sind visuell attraktiv und vermitteln spielend einfach die Grundlagen der Informatik. Lerne Programmieren mit Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Einladung gesendet
     added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
@@ -203,8 +236,6 @@
       cant_join_own_section: Es tut uns leid, aber du kannst nicht an deinem eigenen
         Abschnitt teilnehmen.
     mail:
-      invite_student:
-        subject: Besuche eine Klasse von %{teacher_name} auf Code.org!
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e)
           Schüler(in) zugeordnet.'
@@ -377,9 +408,9 @@
       die Accounts Ihrer Schüler.'
     delete_confirm: Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
     deleted_user: Benutzer entfernen
-    no_password_because_oauth: No password because you sign in with a third-party
-      provider.
-    no_password_because_sponsored: See your teacher to manage your password.
+    no_password_because_oauth: Kein Passwort, da du dich als Drittanbieter einloggst.
+    no_password_because_sponsored: Wende dich an deinen Lehrer um dich um dein Passwort
+      zu kümmern.
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -440,18 +471,20 @@
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
     print_certificate: Zertifikat drucken
     announcement_title: Ankündigungen
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class
-      how the Internet works, how cryptography keeps data secure, and other concepts?
-      We’ve taken the best interactive tools from our Computer Science Principles
-      curriculum and released standalone widgets you can use at any time!
+    announcement_message_fall2016_features: Wir verbrachten den Sommer damit Ihr Feedback
+      in neue Funktionen umzuwandeln. Jetzt können Sie <a href="%{pp_url}" target="_blank">
+      mehrere Schüler verfolgen</a>, auch wenn sie Paar-Programmierung auf einem Gerät
+      durchführen. Sie können die <a href="%{csp_widgets_url}" target="_blank">besten
+      interaktiven Werkzeuge</a> aus unserem Informatik-Grundlagen Kurs in <i>jeder</i>
+      Klasse verwenden. Und Ihre Schülerinnen und Schüler können in ihrem Arbeitsspeicher
+      <a href="%{unused_code_url}" target="_blank">unbenutzten Code speichern</a>um
+      später damit zu experimentieren! Schauen Sie sich unsere neuen Features an und
+      lassen Sie uns wissen Sie, was Sie denken.
+    announcement_csp_widgets_message: Sie suchen nach einem spaßigen Weg ihren Schülern
+      beizubringen wie das Internet funktioniert, wie Kryptographie Daten sicher macht,
+      und anderen Konzepten? Wir haben unserem Informatik-Lehrplan die besten interaktiven
+      Widgets entnommen und eigenständige Widgets veröffentlicht, die sie jederzeit
+      benutzen können!
     announcement_learn_more_button: Mehr erfahren
     announcement_try_now_button: Probiere es jetzt aus
     announcement_host_an_hour_button: Veranstalten Sie eine Stunde
@@ -464,6 +497,7 @@
       von "K-12 computer science education" zu erbitten.
     announcement_petition_button: Fügen Sie Ihren Namen ein
     announcement_go_beyond_button: Noch weiter gehen
+    announcement_apply_now: Apply now
     announcement_all: Informieren Sie sich über neue Funktionen und Aktualisierungen
       in unserem Lehrkräfte-Blog. <a href='%{teacher_blog_url}' target='_blank'>Vergangene
       Meldungen anzeigen.</a>
@@ -488,34 +522,56 @@
       Lernporgramme und jede Menge großartige Werkzeuge für jede Klassenstufe - und
       es ist kostenlos. :) Um Informatik in Ihren Klassenzimmer zu lehren, brauchen
       Sie keine Erfahrung. Finden Sie den nächsten richtigen Schritt für Ihr Klassenzimmer
-    announcement_teacher_recruitment: Teachers like you are leading the computer science
-      education movement. You can participate in high-quality K-12th grade professional
+    announcement_teacher_recruitment: Dank Lehrern wie Ihnen lernen Schüler die Informatik
+      richtig kennen und anzuwenden. Sie können sich an einem hochwertigen 12 Klassen-Lernprogramm
+      teilnehmen, <strong>das sie und Ihre Schule nichts kosten wird</strong>. Übernehmen
+      sie die Führung in Informatik und vertreten sie professionelles Lernen.
+    announcement_teacher_recruitment2: Dank Lehrern wie Ihnen lernen Schüler die Informatik
+      richtig kennen und anzuwenden. Sie können sich an einem hochwertigen 12 Klassen-Lernprogramm
+      teilnehmen, <strong>das sie und Ihre Schule nichts kosten wird</strong>. Übernehmen
+      sie die Führung in Informatik und vertreten sie professionelles Lernen.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_student_privacy: Wir von Code.org nehmen die Privatsphäre der Schüler
+      sehr ernst. Um diese zu schützen, haben wir eine Veränderung am Login-Abschnitt
+      der Anmeldeseite gemacht, um zu verhindern, dass der vollständige Name angezeigt
+      wird. Auch wenn dieses Update Bedenken hinsichtlich der Login-Seite beheben
+      sollte, bitten wir trotzdem darum, <i>keine vollständigen Namen für Schüler
+      zu verwenden</i>.
+    announcement_apcsp_recruitment: '<strong>Informatik Lehrer:</strong> Ihre Schüler
+      könnten im nächsten viralen Video von Code.org vorgestellt werden, in dem es
+      um die Prüfungen über die Informatik-Grundsätze geht. Wir laden dazu alle Informatik-Schüler
+      ein uns ein 10-20 Sekunden-Video auf Twitter, Instagram oder Facebook zu schicken,
+      in welchem ihr sagt "I''m taking the #APCSP exam because...". Die beste Einsendung
+      wird in unserem Video gezeigt und die gewinnenden Schüler erhalten ganz viel
+      Code.org Ehre und Swag!'
+    announcement_apcsp_recruitment2: Die diesjährigen Informatik Test sind darauf
+      ausgelegt Rekorde zu brechen. Die Teilnahme der Studierenden an der Prüfung
+      könnte die Vielfalt drastisch verschieben, aber wir brauchen ihre Hilfe. Ermutigen
+      sie ihre Schüler teilzunehmen und wir werden ihnen für jeden <a href='%{gift_url}'
+      target='_blank'>ein Geschenk schicken</a>. Schüler können auch ihre landesweiten
+      Freunde dazu einladen, an unserer <a href='%{challenge_url}' target='_blank'>#APCSP
+      Video Challenge</a> teilzunehmen.
+    announcement_apcsp_recruitment3: Die diesjährigen Informatik Test sind darauf
+      ausgelegt Rekorde zu brechen. Die Teilnahme der Studierenden an der Prüfung
+      könnte die Vielfalt drastisch verschieben, aber wir brauchen ihre Hilfe. Ermutigen
+      sie ihre Schüler teilzunehmen und gewinnen sie <a href='%{gift_url}' target='_blank'>Gutscheine,
+      Laptops und andere coole Preise</a>! Teilen sie dazu einfach <a href='%{video_url}'
+      target='_blank'>dieses Video</a>, sodass Schüler von ihren Kollegen erfahren,
+      dass sie an den Prüfungen teilnehmen.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Take the lead on computer science in your school, and apply for professional
-      learning.
-    announcement_student_privacy: At Code.org, we take student privacy very seriously.
-      To protect your students’ privacy, we have made a change to your section’s login
-      page to avoid displaying full names. Even though this update should reduce privacy
-      concerns for the login page, we still encourage users to <i>not use full names
-      for students</i>.
-    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-      Your students could be featured in Code.org''s next viral video encouraging
-      students to take the AP CS Principles exam this year. We''re inviting all CS
-      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
-      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
-      will be featured in our video and the winning students will receive Code.org
-      swag!'
+      Applications close on April 14th.
   move_students:
     new_section_dne: Entschuldigung, aber die Sektion %{new_section_code} existiert
       nicht. Bitte geben Sie einen anderen Sektionscode ein.
-    section_code_not_entered: Bitte current_section_code angeben.
     section_code_cant_be_current_section: Die derzeitige Sektion kann nicht gleich
       mit der neuen Sektion sein.
     current_section_dne: Entschuldigung, aber die Sektion %{current_section_code}
       existiert nicht. Bitte geben Sie einen anderen Sektionscode ein.
-    students_not_yours: Sie können keine Schüler aus einer Sektion bewegen, die Ihnen
-      nicht gehört.
-    stay_enrolled_not_entered: Bitte stay_enrolled_in_current_section angeben.
     student_ids_not_entered: Bitte student_ids angeben.
     student_not_found: Einer oder mehr Schüler konnte nicht gefunden werden.
     all_students_must_be_in_current_section: Alle Schüler müssen zur Zeit in Ihrer
@@ -599,6 +655,19 @@
         einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite
         zu betrachten, aber es können Fehler auftreten.
       link: Mehr erfahren
+      applab_unsupported_tablet: App Lab funktioniert am Besten auf einem Desktop-PC
+        oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe
+        auf deinem jetzigen Gerät geben.
+      gamelab_unsupported_tablet: Game Lab funktioniert am Besten auf einem Desktop-PC
+        oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe
+        auf deinem jetzigen Gerät geben.
+      weblab_unsupported_browser: Unglücklicherweise gibt es momentan ein Problem
+        beim Laden von Web Lab in diesem Browser. Sie können einen anderen Browser
+        verwenden bis das Problem gelöst ist. Wir entschuldigen uns vielmals für die
+        Unannehmlichkeiten.
+      weblab_unsupported_locale_storage: Es gibt möglicherweise Probleme beim benutzen
+        von Web Lab im privaten Browser-Modus. Bitte laden sie ihr Projekt nochmal
+        im normalen Modus. Wir entschuldigen uns für die Unannehmlichkeiten.
   slow_loading: Das benötigt länger als normal...
   try_reloading: Versuche die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
@@ -723,9 +792,9 @@
     support: Hilfe erhalten
     support_url: "//support.code.org"
     help_resources: Hilfe und Ressourcen
-    help_support: Help and Support
-    documentation: Documentation
-    tutorials: Tutorials
+    help_support: Hilfe und Support
+    documentation: Dokumentation
+    tutorials: Einführungen
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Deine Antwort ist nicht richtig.  Versuche es noch einmal!
@@ -811,12 +880,12 @@
       Wir empfinden das als eine wichtige Änderung und hoffen, damit einen neuen Standard
       im Umgang mit Schülerdaten in Bildungstechnologie zu setzen. Eine Zusammenfassung
       der Änderungen haben wir Dir per E-Mail  geschickt.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    intro_instructions: Sie müssen diese neuen Bedingungen akzeptieren, um ihren Schülern
+      unter 13 Jahren uneingeschränkten Zugriff auf die neuesten Funktionen von Code
+      Studio zu geben. Bei der Registrierung eines Accounts für einen Schüler unter
+      13 Jahren werden sie zum Bestätigen aufgefordert, dass die Schule die elterliche
+      Zustimmung hat Daten des Schülers zu sammeln und zu benutzen, einschließlich
+      für Bildungsprogramme wie Code Studio.
     tos: AGBs
     privacy: Datenschutzerklärung
     privacy_notice: Hinweis zur Privatsphäre
@@ -835,14 +904,14 @@
   race_interstitial:
     title: 'Optional: Helfen Sie uns, unsere Fortschritte zur Verbesserung der Vielfalt
       in der Informatik zu besser verfolgen'
-    message: Please tell us your race (check all that apply)
+    message: Bitte verrate uns deine Ethnie (Zutreffendes bitte ankreuzen)
     races:
     - white: Weiß
     - black: Schwarz
-    - hispanic: Hispanic or Latino
+    - hispanic: Spanisch oder Latino
     - asian: Asiatisch
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - hawaiian: Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner
+    - american_indian: Indianer oder eingeborener Alaskaner
     - other: Andere
     - opt_out: Das geht Euch nichts an
     submit: Absenden
@@ -986,30 +1055,30 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
-    main_course: Main Course
-    extra_course_content: Extra Course Content
+    main_course: Hauptkurs
+    extra_course_content: Extra Kurs Inhalte
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: |-
       Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser
       Link eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    disclaimer_text: Diese Seite enthält Datenschutzbestimmungen, die von Code.org's
+      abweichen könnten. Wir haben diese Drittanbieter Quelle hinzugefügt, da wir
+      denken, dass sie hilfreich sein könnte. Wir sind nicht für den Inhalt der Seite
+      verantwortlich, wenden sie sich bitte an den <a href='%{support_url}'>Support</a>,
+      wenn der Inhalt der Seite unangemessen oder nicht mehr verfügbar ist.
   hoc_download:
     title: '"Hour of Code" Downloads'
     capsule_title: Haben Sie eine Internetverbindung?
     capsule_desc: Verwenden Sie die online, Web-basierte <a href="%{url}">%{app_name}</a>.
     instructions_headline: Keine Internetverbindung?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
+    instructions: 'Einführung für Lehrer: Wenn sie über eine schlechte Internetverbindung
+      verfügen, können sie diese Hour of Code Tutorials downloaden und offline installieren.
+      Suchen sie die Sprache und das Betriebssystem aus und downloaden sie es, damit
+      sie es auf den Computern in den Klassenräumen installieren können. Sie können
+      dazu auch ein USB Speicher verwenden. Achtung: Die Schüler können sich nicht
+      einloggen, keinen Fortschritt speichern und keine Zertifikate ausdrucken. Die
+      Lehrer sollten diese möglicherweise vorher <a href="%{url}">hier</a> ausdrucken.'
     minecraft_name: Minecraft "Hour of Code"
     starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
@@ -1049,13 +1118,13 @@
     download_in_Portuguese: 'Download in Portugiesisch:'
     download_in_Romanian: 'Download auf Rumänisch:'
     download_in_Russian: 'Download in Russisch:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Serbian: 'Download auf Serbisch:'
+    download_in_Slovenian: 'Download auf Slowenisch:'
+    download_in_Spanish: 'Download in Spanisch:'
+    download_in_Swedish: 'Download in Schwedisch:'
+    download_in_Turkish: 'Download in Türkisch:'
+    download_in_Ukrainian: 'Download in Ukrainisch:'
+    download_in_Vietnamese: 'Download in Vietnamesisch:'
     windows: Windows
     mac: Mac OS X
   plc:

@@ -15,13 +15,13 @@ import groupDetailActive from './images/groupToggleDetailActive.png';
 import groupDetailInactive from './images/groupToggleDetailInactive.png';
 
 const imageSets = {
-  ungrouped: {
+  teal: {
     summaryActive,
     summaryInactive,
     detailActive,
     detailInactive
   },
-  grouped: {
+  purple: {
     summaryActive: groupSummaryActive,
     summaryInactive: groupSummaryInactive,
     detailActive: groupDetailActive,
@@ -30,6 +30,11 @@ const imageSets = {
 };
 
 const styles = {
+  whiteBorder: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.white
+  },
   icon: {
     fontSize: 20,
     paddingLeft: 3,
@@ -37,7 +42,7 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 3,
     // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1
+    opacity: 1,
   }
 };
 /**
@@ -46,6 +51,10 @@ const styles = {
  */
 const ProgressDetailToggle = React.createClass({
   propTypes: {
+    activeColor: PropTypes.string,
+    whiteBorder: PropTypes.bool,
+
+    // redux backed
     isSummaryView: PropTypes.bool.isRequired,
     hasGroups: PropTypes.bool.isRequired,
     setIsSummaryView: PropTypes.func.isRequired
@@ -56,21 +65,27 @@ const ProgressDetailToggle = React.createClass({
   },
 
   render() {
-    const { isSummaryView, hasGroups } = this.props;
-    const images = hasGroups ? imageSets.grouped : imageSets.ungrouped;
+    const { whiteBorder, isSummaryView, hasGroups } = this.props;
+
+    let activeColor = this.props.activeColor;
+    if (!activeColor) {
+      activeColor = hasGroups ? color.purple : color.cyan;
+    }
+
+    const images = activeColor === color.purple ? imageSets.purple : imageSets.teal;
     return (
       <ToggleGroup
         selected={isSummaryView ? "summary" : "detail"}
-        activeColor={hasGroups ? color.purple : color.cyan}
+        activeColor={activeColor}
         onChange={this.onChange}
       >
-        <button value="summary">
+        <button value="summary" style={whiteBorder ? styles.whiteBorder : undefined}>
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
           />
         </button>
-        <button value="detail">
+        <button value="detail" style={whiteBorder ? styles.whiteBorder : undefined}>
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}

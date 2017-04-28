@@ -3061,10 +3061,10 @@
       3:
         image: notes/mc_2016_events_3.jpg
         text: Ale co se stane, když předmět použiješ? V Minecraftu můžeš získat z
-          ovcí vlnu, když je ostříháš. Krávy utečou, pokud je uhodíš a popínavé rostliny
-          explodují, když se k nim přiblíš. Tyto reakce se dějí na základě funkce
-          události. Události řeknou tvému programu dávat pozor a čekat na něco až
-          se stane. A když se to stane, provedou akci.
+          ovcí vlnu, když je ostříháš. Krávy utečou, pokud je uhodíš a creepeři explodují,
+          když se k nim přiblížíš. Tyto reakce se dějí na základě funkce události.
+          Události řeknou tvému programu dávat pozor nebo čekat až se něco stane.
+          A když se to stane, provedou akci.
       4:
         image: notes/mc_2016_events_4.jpg
         text: |

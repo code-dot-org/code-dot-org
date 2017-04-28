@@ -4,10 +4,7 @@
 @no_safari
 Feature: Pixelation levels
   Scenario: Pixelation version 2 in black and white with no sliders
-    Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/1?noautoplay=true"
-    And I wait to see a visible dialog with title containing "Puzzle 1"
-    And I close the dialog
-    And I wait until pixelation data loads
+    Given I am on the 1st pixelation test level
     And pixelation data has text "0000 0011 0000 0010 0 1 0"
 
     When I press keys "1" for element "#pixel_data"
@@ -22,10 +19,7 @@ Feature: Pixelation levels
     Then pixelation data has text "0000 0011 0000 0010 0 1 0 1 1 1 1 1"
 
   Scenario: Pixelation version 3 in color with sliders
-    Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/2?noautoplay=true"
-    And I wait to see a visible dialog with title containing "Puzzle 2"
-    And I close the dialog
-    And I wait until pixelation data loads
+    Given I am on the 2nd pixelation test level
     And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
 
     When I press keys "111" for element "#pixel_data"
@@ -40,10 +34,7 @@ Feature: Pixelation levels
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
   Scenario: Pixelation version 3 in color with sliders starting in hex mode
-    Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/3?noautoplay=true"
-    And I wait to see a visible dialog with title containing "Puzzle 3"
-    And I close the dialog
-    And I wait until pixelation data loads
+    Given I am on the 3rd pixelation test level
     And pixelation data has text "04 04 18 FF0000 00AAAA"
 
     When I press keys "999999" for element "#pixel_data"
@@ -56,3 +47,9 @@ Feature: Pixelation levels
     And I press keys "110011001100110011111111" for element "#pixel_data"
     And I save pixelation data and reload
     Then pixelation data has text "04 04 18 FF0000 00AAAA 999999 CCCCFF"
+
+  Scenario: Pixelation with encoding controls hidden
+    Given I am on the 4th pixelation test level
+    And pixelation data has text "04 04 18 FF0000 00AAAA"
+    Then element "input[value='hex']" is not visible
+    And element "input[value='hex']" is not visible

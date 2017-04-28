@@ -38,6 +38,16 @@ def canonical_hostname(domain)
   CDO.canonical_hostname(domain)
 end
 
+def studio_url(path = '')
+  port = (!rack_env?(:development) || CDO.https_development) ? '' : ":#{CDO.dashboard_port}"
+  "//#{canonical_hostname('studio.code.org')}#{port}/#{path}"
+end
+
+def code_org_url(path = '')
+  port = (!rack_env?(:development) || CDO.https_development) ? '' : ":#{CDO.pegasus_port}"
+  "//#{canonical_hostname('code.org')}#{port}/#{path}"
+end
+
 def forbidden!
   halt(403, "Forbidden\n")
 end
@@ -89,4 +99,4 @@ def csrf_tag
   Rack::Csrf.csrf_tag(env)
 end
 
-Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| require path}
+Dir.glob(pegasus_dir('helpers/*.rb')).sort.each {|path| require path}

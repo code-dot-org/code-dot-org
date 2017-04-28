@@ -22,7 +22,7 @@ class EmailValidatorTest < Minitest::Test
     ]
 
     valid_addresses.each do |address|
-      assert EmailValidator.email_address?(address), "#{address} should be a valid email address"
+      assert Cdo::EmailValidator.email_address?(address), "#{address} should be a valid email address"
     end
   end
 
@@ -51,7 +51,7 @@ class EmailValidatorTest < Minitest::Test
     ]
 
     invalid_addresses.each do |address|
-      refute EmailValidator.email_address?(address), "#{address} should be an invalid email address"
+      refute Cdo::EmailValidator.email_address?(address), "#{address} should be an invalid email address"
     end
   end
 end

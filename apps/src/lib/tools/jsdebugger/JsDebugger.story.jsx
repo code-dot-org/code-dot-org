@@ -2,77 +2,123 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import commonReducers from '../../../redux/commonReducers';
+import {reducers as applabReducers} from '../../../applab/redux/applab';
 import {setPageConstants} from '../../../redux/pageConstants';
-import JsDebugger, {UnconnectedJsDebugger} from './JsDebugger';
+import JsDebugger from './JsDebugger';
+
+function createApplabStore() {
+  return createStore(combineReducers({
+    ...commonReducers,
+    ...applabReducers,
+  }));
+}
 
 export default storybook => {
   const storyTable = [];
 
   const storybookStyle = {
-    position: 'relative'
+    position: 'relative',
+    width: '100%',
   };
 
-  storyTable.push(
-    {
-      name: 'empty',
-      story: () => (
-        <UnconnectedJsDebugger style={storybookStyle}/>
-      )
-    });
+  storyTable.push({
+    name: 'empty',
+    story: () => (
+      <Provider store={createApplabStore()}>
+        <JsDebugger
+          style={storybookStyle}
+        />
+      </Provider>
+    )
+  });
 
-  storyTable.push(
-    {
-      name: 'empty paused',
-      story: () => (
-        <UnconnectedJsDebugger style={storybookStyle} isDebuggerPaused/>
-      )
-    });
-
-  storyTable.push(
-    {
-      name: 'with debug buttons',
-      story: () => (
-        <UnconnectedJsDebugger style={storybookStyle} debugButtons/>
-      )
-    });
-
-  storyTable.push(
-    {
-      name: 'with debug console',
-      story: () => (
+  storyTable.push({
+    name: 'with only debug console',
+    story: () => {
+      const withDebugConsoleStore = createApplabStore();
+      withDebugConsoleStore.dispatch(setPageConstants({
+        showDebugConsole: true,
+        appType: "gamelab"
+      }));
+      return (
         <div style={{height: 200}}>
-          <UnconnectedJsDebugger style={storybookStyle} debugConsole/>
+          <Provider store={withDebugConsoleStore}>
+            <JsDebugger style={storybookStyle}/>
+          </Provider>
         </div>
-      )
-    });
+      );
+    }
+  });
 
-  const emptyStore = createStore(combineReducers(commonReducers));
-  storyTable.push(
-    {
-      name: 'connected to redux stores with nothing enabled',
-      story: () => (
-        <Provider store={emptyStore}>
+  storyTable.push({
+    name: 'with speed slider',
+    story: () => {
+      const withDebugSliderStore = createApplabStore();
+      withDebugSliderStore.dispatch(setPageConstants({
+        showDebugConsole: true,
+        showDebugSlider: true,
+        appType: "gamelab"
+      }));
+      return (
+        <Provider store={withDebugSliderStore}>
           <JsDebugger style={storybookStyle}/>
         </Provider>
-      )
-    });
+      );
+    }
+  });
 
-  const showAllStore = createStore(combineReducers(commonReducers));
-  showAllStore.dispatch(setPageConstants({
-    showDebugButtons: true,
-    showDebugConsole: true,
-    showDebugWatch: true,
-    showDebugSlider: true
-  }));
-  storyTable.push(
-    {
-      name: 'connected to redux stores with everything enabled',
-      story: () => (
+  storyTable.push({
+    name: 'with debug buttons',
+    story: () => {
+      const withDebugButtonsStore = createApplabStore();
+      withDebugButtonsStore.dispatch(setPageConstants({
+        showDebugConsole: true,
+        showDebugButtons: true,
+        appType: "gamelab"
+      }));
+      return (
+        <Provider store={withDebugButtonsStore}>
+          <JsDebugger style={storybookStyle}/>
+        </Provider>
+      );
+    }
+  });
+
+  storyTable.push({
+    name: 'with debug watch',
+    story: () => {
+      const withDebugWatchStore = createApplabStore();
+      withDebugWatchStore.dispatch(setPageConstants({
+        showDebugConsole: true,
+        showDebugWatch: true,
+        appType: "gamelab"
+      }));
+      return (
+        <Provider store={withDebugWatchStore}>
+          <JsDebugger style={storybookStyle}/>
+        </Provider>
+      );
+    }
+  });
+
+  storyTable.push({
+    name: 'connected to redux stores with everything enabled',
+    story: () => {
+      const showAllStore = createApplabStore();
+      showAllStore.dispatch(setPageConstants({
+        showDebugButtons: true,
+        showDebugConsole: true,
+        showDebugWatch: true,
+        showDebugSlider: true,
+        appType: "gamelab"
+      }));
+      return (
         <Provider store={showAllStore}>
           <JsDebugger style={storybookStyle} debugWatch/>
         </Provider>
-      )
-    });
+      );
+    }
+  });
 
   storybook
     .storiesOf('JsDebugger', JsDebugger)

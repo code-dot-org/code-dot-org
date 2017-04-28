@@ -37,16 +37,19 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     dweet.io
+    enclout.com
     githubusercontent.com
     googleapis.com
     herokuapp.com
     isenseproject.org
     lakeside-cs.org
+    quandl.com
     query.yahooapis.com
     rejseplanen.dk
     noaa.gov
     rhcloud.com
     swapi.co
+    translate.yandex.net
     wikipedia.org
   ).freeze
 

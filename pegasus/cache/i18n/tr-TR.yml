@@ -275,8 +275,8 @@
   twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
+  twitter_cs_foundational: Bilgisayar bilimi öğrenmek her öğrenci için temel bir bilgi
+    olmalı. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Bir Saat Kodu öğrenin
   beyond_hoc: Bir saat boyunca
   what_gender: Cinsiyetiniz nedir?
@@ -513,41 +513,41 @@
   sports_select_theme: Kendi Rehber Temanızı Seçin
   sports_basketball_title: Besketbol oynayın
   sports_all_sports_title: Kendi sporunu kodla
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+  sports_featured_athletes: "Öne Çıkan Atletleri gör"
+  sports_athletes_title: "Öne Çıkan Atletler"
+  sports_athlete_Draymond: Draymond yeşil, Olimpiyat altın madalya ve NBA şampiyonu,
     Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+  sports_athlete_Serena: Serena Williams, Olimpiyat altın madalya ve tenis şampiyonu
+  sports_athlete_Russell: Russell Okung, Super Bowl şampiyonu ve NFL oyuncu, Denver
     Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+  sports_athlete_Sergio: Sergio Ramos, Dünya Kupası şampiyonu ve futbol/Futbol oyuncu,
     Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+  sports_athlete_Sue: Sue Bird, Olimpiyat altın madalya ve WNBA şampiyonu, Seattle
+    fırtına
+  sports_athlete_Alana: Alana Beard, altın madalya ve WNBA All-Star, Los Angeles Sparks
+  sports_athlete_Angelo: Angelo Matthews, Sri Lanka kriket takımının kaptanı
+  sports_athlete_Nneka: Nneka Ogwumike, altın madalya, WNBA şampiyonu ve 2016 MVP,
     Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+  sports_athlete_Carmelo: Carmelo Anthony, Olimpiyat altın madalya ve NBA All-Star,
     New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_Marco: Marco Belinelli, NBA şampiyonu, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olimpiyat altın madalya ve futbol/Futbol oyuncu,
+    FC Barcelona ve Brezilya Milli Futbol Takımı
+  sports_athlete_Sarah: Sarah Quita Offringa, Rüzgar Sörfü şampiyonu
+  sports_athlete_Marcelo: Marcelo, futbol/Futbol şampiyonu, Real Madrid ve Brezilya
+    Milli Futbol Takımı
+  sports_athlete_Erika: Erika Olivera, şampiyon maraton koşucusu
   sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+  sports_athlete_Chris: Chris Bosh, Olimpiyat altın madalya ve NBA şampiyonu, Miami
     Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+  sports_athlete_Harrison: Harrison Barnes, Olimpiyat altın madalya ve NBA şampiyonu,
     Dallas Mavericks
   watch_inspirational_videos: Başlamadan önce ilham veren bu videolardan birini izle
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Bir kıza ilham kaynağı ol
   video_title_cs_intro: Bilgisayar Bilimi Tanıtımı
   video_title_schools_dont_teach: "Çoğu okulların öğretmedikleri"
-  video_title_obama: President Obama on computer science
+  video_title_obama: Başkan Obama'nın bilgisayar bilimi hakkında konuşması
   video_title_hoc_is_here: Kod Saati Burada - Herkes Öğrenebilir
   video_title_anybody_can_learn: Herkes Öğrenebilir
   video_title_draymond_green: Draymond Green ile Hour of Code
@@ -580,6 +580,8 @@
   volunteer_engineer_submission_intro_recruit: "Öğretmenler sınıfta veya hangi görüntülü
     sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri
     Eğitimi hakkında tutkulu kişileri arıyor."
+  volunteer_engineer_submission_intro_guide: Bizim <a href="%{volunteer_guide}"> gönüllü
+    programımız</a> hakkında daha fazla bilgi edinin.
   volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
     yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
     *</span> ile işaretlenmiş alanların doldurulması zorunludur.
@@ -628,6 +630,7 @@
     görülebilir şekilde yayınlanacaktır.
   volunteer_engineer_submission_checkbox_contact: "Öğretmenlerin gönüllülük fırsatları
     için benimle iletişime geçmesini kabul ediyorum (Not: Mail adresiniz paylaşılmaz)"
+  volunteer_engineer_submission_checkbox_age_18_plus: En az 18 yaşında olduğumu bildiririm.
   volunteer_engineer_submission_submit: Gönder
   volunteer_engineer_submission_thankyou: Hour of Code gönüllüsü olduğunuz için teşekkür
     ederiz. Hour of Code 'a hazırlanmak ve diğer projelere gönüllü olmak için daha
@@ -873,6 +876,8 @@
   dashboard_students_reset_password: "Şifreyi Sıfırlayın"
   dashboard_students_share_section: 'Bu bölümün oturum açma sayfasını öğrencilerinizle
     paylaşın:'
+  dashboard_students_share_section_secondary: 'Bu bölümün oturum açma sayfasını öğrencilerinizle
+    paylaşın:'
   dashboard_students_print_info: "Öğrencinizin kullanıcı giriş bilgilerinin bulunduğu
     kartlar yazdırın."
   dashboard_students_secret_picture_title: Gizli Resim
@@ -891,6 +896,7 @@
     onlar için hesap oluşturmak istiyorsanız, bu bölümün Giz tipini <b>sözcük</b>
     veya <b>resim</b> olarak değiştirebilirsiniz.
   dashboard_students_print_page: Bu Sayfayı Yazdır
+  dashboard_students_signin_card: "%{join_url} ziyaret edin ve %{section_code} girin"
   dashboard_students_url: URL
   dashboard_privacy_document_link: Gizlilik dökümanımızı öğrencileriniz ile paylaşmak
     ya da yazdırmak için <a href="/privacy/student-privacy", target="_blank">buraya
@@ -967,73 +973,6 @@
     yardımcı olur.
   dashboard_faq: Sık sorulan sorular
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
-  dashboard_announcements: Bildirimler
-  dashboard_announce_message_fall2016_features: Görüşlerinize göre yeni özellikleri
-    geliştirerek yazı geçirdik. Şimdi, bir aygıtta programlama yapan birden fazla
-    kişinin ilerlemesini izleyebilirsiniz. <a href="%{pp_url}" target="_blank"> <i>Herhangi
-    bir</i> sınıfta <a href="%{csp_widgets_url}" target="_blank"> en iyi interaktif
-    araçları</a> bizim CS ilkeleri kursundan kullanabilirsiniz. Ve öğrencileri denemeye
-    teşvik etmek için kendi çalışma alanındaki <a href="%{unused_code_url}" target="_blank">
-    kullanılmayan kodları tutmalarını sağladık</a>! bizim yeni özellikleri kontrol
-    edinve bize ne düşündüğünüzü bildirin.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
-  dashboard_announce_learn_more_button: Daha fazlasını öğren
-  dashboard_announce_try_now_button: "Şimdi dene"
-  dashboard_announce_host_an_hour_button: Kodlama Saatine ev sahipliği yap
-  dashboard_announce_watch_video_button: Videoyu izle
-  dashboard_announce_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
-    bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
-    izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
-    gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
-    için bir açık mektup verdi."
-  dashboard_announce_petition_button: Adınızı Ekleyin
-  dashboard_announce_go_beyond_button: Go beyond
-  dashboard_announce_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
-    takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
-  dashboard_announce_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
-    ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki
-    organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a href='%{signup_url}'
-    target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine başvuruda bulunun ve lütfen
-    başka bir öğretmen arkadaşınıza bilgisayar bilimini öğretmeye başlayabileceğini
-    söyleyin.
-  dashboard_announce_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
-    Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
-    oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
-    paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde sınıfınla
-    birlikte yap.
-  dashboard_announce_hoc_scaling_progress: Aralık 3 - 11 arası sitemizin ulaştığı
-    yüksek talep trafiği dolayısıyla HourOfCode talebelerinin iilerleme etapları saklanmayacaktır.
-    Aralık 3 ten önceki ilerlemelere ulaşılabilir. Bu haftadan sonra normal saklama
-    uygulamamız tekrar başlayacaktır.
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-    Your students could be featured in Code.org''s next viral video encouraging students
-    to take the AP CS Principles exam this year. We''re inviting all CS Principles
-    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
-    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
-    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   host_an_hour: yaklaşık bir saat
@@ -1163,12 +1102,12 @@
   course2_name: Ders 2
   course3_name: Ders 3
   course4_name: Ders 4
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
+  coursea-draft_name: Ders A
+  courseb-draft_name: Ders B
+  coursec-draft_name: Ders C
+  coursed-draft_name: Ders D
+  coursee-draft_name: Ders E
+  coursef-draft_name: Ders F
   accelerated_name: Hızlandırılmış Kurs
   cspunit1_name: "Ünite 1: Sayısal bilgi"
   cspunit2_name: "Ünite 2: Internet"
@@ -1180,13 +1119,15 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: "Ünite 5: Veri ve toplum"
+  csd6_name: "Ünite 6: Fiziksel bilişim"
   csp1_name: "Ünite 1: Internet"
   csp2_name: "Ünite 2: Sayısal bilgi"
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csppostap_name: 'Post AP: Databases in Apps'
+  csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
   cspassessment_name: Tam test - 50 soru
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
   cspexam2-AKwgAh1ac5_name: Test Bölüm 2 / 25 soru
@@ -1212,7 +1153,7 @@
   math_category_name: Matematik
   hoc_category_name: Saat Kodu
   csf_category_name: Bilgisayar bilimleri temeller
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf2_draft_category_name: 'Geliştirme altında: kurslar A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "' 15 - 16' Bilgisayar bilimleri ilkeleri"
   csp17_category_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
@@ -1893,9 +1834,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

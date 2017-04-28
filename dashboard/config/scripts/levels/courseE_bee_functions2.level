@@ -19,7 +19,7 @@
     "ideal": "7",
     "video_key": "C3_bee_functions",
     "markdown_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -35,6 +35,8 @@
     "fast_get_nectar_animation": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The function has been written for you, but you will need to call it at each flower.\",\"hint_id\":\"courseE_bee_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d65619db4e352e999bd8ebeb33d549d3/courseE_bee_functions2.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

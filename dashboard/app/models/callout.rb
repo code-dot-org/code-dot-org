@@ -28,7 +28,7 @@ class Callout < ActiveRecord::Base
 
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
-  CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true, quote_char: "\x00" }.freeze
+  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
   def self.find_or_create_all_from_tsv!(filename)
     created = []

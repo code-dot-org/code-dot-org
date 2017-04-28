@@ -24,7 +24,6 @@ require 'active_support/core_ext/hash'
 if rack_env?(:production)
   require 'newrelic_rpm'
   NewRelic::Agent.after_fork(force_reconnect: true)
-  require 'newrelic_ignore_downlevel_browsers'
 end
 
 require 'honeybadger'
@@ -72,7 +71,7 @@ class Documents < Sinatra::Base
   def self.set_max_age(type, default)
     default = 60 if rack_env? :staging
     default = 0 if rack_env? :development
-    set "#{type}_max_age", proc { DCDO.get("pegasus_#{type}_max_age", default) }
+    set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
   ONE_HOUR = 3600
@@ -183,7 +182,7 @@ class Documents < Sinatra::Base
   end
 
   # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path), nil, path, 1)}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
 
   # Manipulated images
@@ -241,7 +240,7 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document(path).tap{dont_cache}
+    document(path).tap {dont_cache}
   end
 
   helpers(Dashboard) do
@@ -366,6 +365,15 @@ class Documents < Sinatra::Base
           end
         end
       end
+
+      # Also look for shared items.
+      extnames.each do |extname|
+        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
+        if File.file?(path)
+          return path
+        end
+      end
+
       nil
     end
 

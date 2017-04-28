@@ -9,7 +9,7 @@ class SharedResources < Sinatra::Base
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
-    set "#{type}_max_age", proc { [:development, :staging].include?(rack_env) ? 0 : DCDO.get("pegasus_#{type}_max_age", default) }
+    set "#{type}_max_age", proc {[:development, :staging].include?(rack_env) ? 0 : DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
   ONE_HOUR = 3600

@@ -14,7 +14,7 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport', () => {
+    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport').callsFake(() => {
       playground = new Playground({});
       playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
@@ -38,6 +38,13 @@ describe('CircuitPlaygroundBoard', () => {
       return playground;
     });
 
+    // Our sensors and thermometer block initialization until they receive data
+    // over the wire.  That's not great for unit tests, so here we stub waiting
+    // for data to resolve immediately.
+    sinon.stub(EventEmitter.prototype, 'once');
+    EventEmitter.prototype.once.withArgs('data').callsArg(1);
+    EventEmitter.prototype.once.callThrough();
+
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
   });
@@ -46,6 +53,7 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
+    EventEmitter.prototype.once.restore();
   });
 
   it('is an EventEmitter', () => {
@@ -55,7 +63,8 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
+        // TODO (captouch): Add eight more when we re-enable
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
@@ -67,14 +76,15 @@ describe('CircuitPlaygroundBoard', () => {
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
         expect(board.prewiredComponents_.buttonL).to.be.a('object');
         expect(board.prewiredComponents_.buttonR).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad0).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad1).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad2).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad3).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad6).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad9).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad10).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad12).to.be.a('object');
+        // TODO (captouch): Uncomment when we re-enable
+        // expect(board.prewiredComponents_.touchPad0).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad1).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad2).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad3).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad6).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad9).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad10).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad12).to.be.a('object');
         expect(board.prewiredComponents_.INPUT).to.be.a('number');
         expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
         expect(board.prewiredComponents_.ANALOG).to.be.a('number');
@@ -113,10 +123,12 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('initializes a set of components', () => {
-      return board.connectToFirmware().then(() => {
-        board.initializeComponents();
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
-      });
+      return board.connectToFirmware()
+        .then(() => board.initializeComponents())
+        .then(() => {
+          // TODO (captouch): Add 8 when we re-enable
+          expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        });
     });
   });
 

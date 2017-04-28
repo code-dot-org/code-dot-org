@@ -41,7 +41,6 @@ body.modal-open .supreme-container{
 #homepage #hero {
   position: relative;
   width: 100%;
-  overflow: hidden
 }
 
 #homepage #hero .widehero {
@@ -111,6 +110,9 @@ body.modal-open .supreme-container{
 }
 
 @media screen and (max-width: 970px)  {
+  #homepage #hero {
+    overflow: visible;
+  }
   #homepage #actions {
     margin-top: 300px;
   }

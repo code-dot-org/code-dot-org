@@ -1,25 +1,63 @@
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
-import FontAwesome from '../templates/FontAwesome';
+import commonStyles from '../commonStyles';
+import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
+import SettingsCog from '../lib/ui/SettingsCog';
 
 const DesignModeHeaders = React.createClass({
   propTypes: {
-    handleManageAssets: React.PropTypes.func.isRequired,
     handleVersionHistory: React.PropTypes.func.isRequired,
     onToggleToolbox: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
-    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
-  },
-
-  handleManageAssets: function () {
-    this.props.handleManageAssets();
   },
 
   onToggleToolbox: function () {
     this.props.onToggleToolbox();
+  },
+
+  chevronStyle(collapse) {
+    const style = {
+      display: 'inline-block',
+      position: 'absolute',
+      top: 0,
+      left: 8,
+      lineHeight: '30px',
+      fontSize: 18,
+      cursor: 'pointer',
+      color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
+      ':hover': {
+        color: color.white,
+      },
+    };
+
+    if (collapse) {
+      style.transform = 'scale(-1, 1)';
+    }
+
+    return style;
+  },
+
+  hideToolboxIcon() {
+    return (
+      <i
+        style={[commonStyles.hidden, this.chevronStyle(true)]}
+        className="hide-toolbox-icon fa fa-chevron-circle-right"
+        onClick={this.onToggleToolbox}
+      />
+    );
+  },
+
+  showToolboxIcon() {
+    return (
+      <i
+        style={[commonStyles.hidden, this.chevronStyle(false)]}
+        className="show-toolbox-icon fa fa-chevron-circle-right"
+      />
+    );
   },
 
   render: function () {
@@ -35,6 +73,12 @@ const DesignModeHeaders = React.createClass({
         display: this.props.isToolboxVisible ? 'none' : 'block',
         paddingLeft: 10
       },
+      showToolboxClickable: {
+        marginLeft: 18,
+        ':hover': {
+          color: color.white,
+        },
+      },
       iconContainer: {
         float: 'right',
         marginRight: 10,
@@ -47,48 +91,43 @@ const DesignModeHeaders = React.createClass({
       }
     };
 
-    var manageAssetsIcon = (
-      <span style={styles.iconContainer}>
-        <FontAwesome
-          icon="cog"
-          className="workspace-header-clickable"
-          id="manage-assets-button"
-          style={styles.assetsIcon}
-          onClick={this.handleManageAssets}
-          title={applabMsg.manageAssets()}
-        />
-      </span>
-    );
-
-    const isRtl = this.props.localeDirection === 'rtl';
     const hasFocus = !this.props.isRunning;
+
+    const settingsCog = <SettingsCog isRunning={this.props.isRunning} runModeIndicators/>;
 
     return (
       <PaneHeader
         id="design-headers"
-        dir={this.props.localeDirection}
+        dir={this.props.isRtl ? 'rtl' : 'ltr'}
         hasFocus={hasFocus}
         style={{color: 'white'}}
       >
         <PaneSection id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
-          {manageAssetsIcon}
+          {this.hideToolboxIcon()}
+          {settingsCog}
           <span>{applabMsg.designToolboxHeader()}</span>
-          <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
         </PaneSection>
         <PaneSection
           className="workspace-header"
-          onClick={this.onToggleToolbox}
           style={styles.showToolboxHeader}
         >
-          <span className="workspace-header-clickable">{msg.showToolbox()}</span>
-          {manageAssetsIcon}
+          <span
+            key="show-toolbox-clickable"
+            className="workspace-header-clickable"
+            style={styles.showToolboxClickable}
+            onClick={this.onToggleToolbox}
+          >
+            {this.showToolboxIcon()}
+            {msg.showToolbox()}
+          </span>
+          {settingsCog}
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"
           iconClass="fa fa-clock-o"
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
-          isRtl={isRtl}
+          isRtl={this.props.isRtl}
           onClick={this.props.handleVersionHistory}
         />
         <PaneSection id="design-workspace-header" className="workspace-header">

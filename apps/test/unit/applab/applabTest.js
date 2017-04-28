@@ -2,12 +2,10 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import {assert, expect} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
-import experiments from '@cdo/apps/util/experiments';
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
@@ -28,6 +26,8 @@ function setupVizDom() {
     '</div>';
   return $(sampleDom);
 }
+describe('applab', () => {
+  testUtils.setExternalGlobals();
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -565,10 +565,8 @@ describe('RecordListener', function () {
 });
 
 describe("Applab.init()", () => {
-  before(() => sinon.stub(Applab, 'render', () => undefined));
+  before(() => sinon.stub(Applab, 'render'));
   after(() => Applab.render.restore());
-  before(() => experiments.setEnabled('collapse-debugger', true));
-  after(() => experiments.setEnabled('collapse-debugger', false));
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -603,4 +601,6 @@ describe("Applab.init()", () => {
       expect(isDebuggerOpen(getStore().getState())).to.be.true;
     });
   });
+});
+
 });

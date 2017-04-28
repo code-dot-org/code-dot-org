@@ -12,6 +12,7 @@ sk:
     attributes:
       user:
         name: 'Zobrazované meno'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-mail'
         username: 'Používateľské meno'
         password: 'Heslo'
@@ -78,6 +79,7 @@ sk:
     forgot_password: 'Zabudli ste heslo?'
     need_confirmation: "Neprišli ti pokyny na potvrdenie?"
     need_unlock: "Neprišli ti pokyny na odomknutie?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} študentov sa už zaregistrovalo.'
     teacher_count: '%{count} učitelov sa už zaregistrovalo.'
@@ -110,9 +112,31 @@ sk:
     user_type_student: "Študent"
     field_is_required: "sa vyžaduje"
     accept_terms: "Musíte súhlasiť s vytvorením účtu"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Ostatné'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Máte už vytvorený účet? Prihláste sa'
     login: 'E-mail'
+    login_username: 'Email or Username'
     password: 'Heslo'
     remember: 'Zapamätať prihlásenie'
     submit: 'Prihlásiť sa'
@@ -150,6 +174,14 @@ sk:
       Kurzy sú zábavné, vizuálne pútavé a naučia základné pojmy počítačovej vedy pomocou jednoduchého, usmerňovaného, hre podobného zážitku. Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies, naučte sa s nimi kódovať!  :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Pozvanie odoslané'
     added_teacher: '%{name} pridaný ako váš učiteľ'
@@ -163,8 +195,6 @@ sk:
       blank_code: "Zadaj kód sekcie"
       cant_join_own_section: "Prepáč, nemôžeš sa pridať do vlastnej sekcie."
     mail:
-      invite_student:
-        subject: "Zúčastni sa hodiny s %{teacher_name} na Code.org!"
       student_disassociated:
         subject: 'Code.org upozornenie: %{student_name} už nie je tvoj študent.'
   reports:
@@ -304,9 +334,9 @@ sk:
     delete_text: "Klinutím na tlačítko nižšie, vymažete svoj účet."
     delete_text_teacher_note: 'Poznámka: vymazaním svojho účtu nevymažete účty Vašich študentov.'
     delete_confirm: 'Naozaj chcete odstrániť tento účet?'
-    deleted_user: 'deleted user'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    deleted_user: 'zmazaný používateľ'
+    no_password_because_oauth: 'Heslo nie je požadované, pretože ste prihlásený cez poskytovateľa služieb.'
+    no_password_because_sponsored: 'Vyhľadaj učiteľa pre správu hesla.'
   user_level:
     completed: 'Dokončené'
     tried: 'Vyskúšaný'
@@ -362,22 +392,25 @@ sk:
     announcement_watch_video_button: "Prehrať video"
     announcement_petition: "Ako učiteľ patríte medzi propagátorov hnutia za to, aby každý študent v každej škole dostal príležitosť učiť sa informatiku. A teraz je čas, aby si vaši zástupcovia vypočuli Váš názor. Tento týždeň sa zástupcovia učiteľov, 28 guvernérov a generálni riaditelia najväčších amerických spoločností spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku informatiky v rámci celej školskej dochádzky na základných i stredných školách."
     announcement_petition_button: "Pridaj svoje meno"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "Pokračovať ďalej"
+    announcement_apply_now: "Apply now"
     announcement_all: "Sleduj nové vlastnosti a aktualizácie na našom učiteľskom blogu. <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>"
     announcement_hoc_launch: "Tisíce vyučujúcich vo viac než 180 krajinách odštartuje výučbu počítačových technológii prostredníctvom Hodiny Kódovania 5-11 decembra. Počítame aj s vašou pomocou, zaangažovať ešte viac študentov než kedykoľvek predtým. <a href='%{signup_url}' target='_blank'>Zaregistruj si svoju vlastnú Hodinu Kódovania</a> a daj vedieť svojím kolegom o tom, že ktokoľvek môže začať s výučbou počítačových technológií."
     announcement_mc_launch: "Jeden z našich najpopulárnejších návodov má teraz pokračovanie! Celkom nový Minecraft Dizajnér Hodiny Kódu umožňuje študentom vytvoriť si pravidlá pre svet Minecraft-u. Môžu stvoriť totálne unikátne Minecraft-ové zážitky, následne ich zdieľať s priateľmi, či zahrať si ich na telefónoch. Vytvorte si ich vo svojej triede na Hodine Kódu."
     announcement_how_code_studio: "Nepotrebujete žiadne skúsenosti na to, aby ste začali učiť informatiku vo vašej triede. Code.org ponúka osnovy, ušebné plány, vysoko-kvalitné profesionálne vyučovacie programy a tonu skvelých nástrojov pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde začať? Stiahnite si <a href='%{video_download_url}'>toto video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje. Zadajte kód inej sekcie."
-    section_code_not_entered: "Uveďte, prosím, current_section_code."
     section_code_cant_be_current_section: "Aktuálna sekcia nemôže byť rovnaká ako nová sekcia."
     current_section_dne: "Ospravedlňujeme sa, ale sekcia %{current_section_code} neexistuje. Zadajte kód inej sekcie."
-    students_not_yours: "Nemôžeš presunúť študentov zo sekcie, ktorá nepatrí tebe."
-    stay_enrolled_not_entered: "Uveďte, prosím, stay_enrolled_in_current_section."
     student_ids_not_entered: "Uveďte, prosím, študentove ids."
     student_not_found: "Jeden alebo viac študentov nemožno nájsť."
     all_students_must_be_in_current_section: "Všetci študenti musia byť v súčasnosti zapísaní v sekcii."
@@ -434,6 +467,10 @@ sk:
     upgrade:
       unsupported_message: "Váš prehliadač internetu nepodporujeme. Prosím aktualizujte si váš prehliadač internetu, <a href='%{supported_browsers_url}', target='_blank'>podporované prehliadače</a>. Skúste obnoviť stránku."
       link: "Dozvedieť sa viac"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Trvá to dlhšie než zvyčajne...'
   try_reloading: 'Skúste načítať stránku znovu'
   next_stage: 'Hotovo! Pokračujte do ďalšej úrovne'
@@ -528,9 +565,9 @@ sk:
     support: "Získať pomoc"
     support_url: "support.code.org"
     help_resources: "Pomoc a Zdroje"
-    help_support: "Help and Support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "Pomoc a podpora"
+    documentation: "Dokumentácia"
+    tutorials: "Návody"
   multi:
     wrong_title: "Nesprávna odpoveď"
     wrong_body: "Zadaná odpoveď je nesprávna.  Prosím skúste to znova!"
@@ -743,8 +780,8 @@ sk:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'Hlavný kurz'
+    extra_course_content: 'Obsah ku kurzom navyše'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.

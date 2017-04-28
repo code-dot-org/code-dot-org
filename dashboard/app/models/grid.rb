@@ -51,12 +51,15 @@ class Grid < Blockly
   end
 
   def update_maze
+    min_total_value = properties['min_collected'].try(:to_i)
     if read_attribute(:maze).present?
-      properties.update(self.class.parse_maze(read_attribute(:maze)))
+      properties.update(self.class.parse_maze(read_attribute(:maze), min_total_value))
       write_attribute(:maze, nil)
     elsif maze_data.present?
-      properties.update(self.class.parse_maze(maze_data))
+      properties.update(self.class.parse_maze(maze_data, min_total_value))
       self.maze_data = nil
+    elsif property_changed?('min_collected')
+      self.class.parse_maze(serialized_maze, min_total_value)
     end
   end
 
@@ -72,9 +75,9 @@ class Grid < Blockly
   # If type is "Maze" return a single entry hash with 'maze' mapping to a 2d
   #   array that Blockly can render.
   # Throws ArgumentError if there is a non integer value in the array.
-  def self.parse_maze(maze_json)
+  def self.parse_maze(maze_json, _ = nil)
     maze_json = maze_json.to_json if maze_json.is_a? Array
-    { 'maze' => JSON.parse(maze_json).map { |row| row.map { |cell| Integer(cell) } }.to_json}
+    {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell)}}.to_json}
   end
 
   def filter_level_attributes(level_hash)

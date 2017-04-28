@@ -46,6 +46,12 @@
   english: "Catalan"
   native: "Català"
 
+"co": "co-CO"
+"co-CO":
+  english: "Corsican"
+  native: "Corsu"
+  debug: true
+
 "cs": "cs-CZ"
 "cs-CZ":
   english: "Czech"
@@ -232,6 +238,13 @@
   native: "Kurdí"
   debug: true
 
+"ky": "ky-KG"
+"ky-KG":
+  english: "Kyrgyz"
+  native: "Кыргызча"
+  webfonts: false
+  debug: true
+
 "lt": "lt-LT"
 "lt-LT":
   english: "Lithuanian"
@@ -381,6 +394,13 @@
 "ta-IN":
   english: "Tamil"
   native: "தமிழ்"
+  debug: true
+  webfonts: false
+
+"te": "te-IN"
+"te-IN":
+  english: "Telugu"
+  native: "తెలుగు"
   debug: true
   webfonts: false
 

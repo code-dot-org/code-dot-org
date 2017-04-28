@@ -34,7 +34,8 @@ export function findPortWithViableDevice() {
           return bestOption.comName;
         } else {
           return Promise.reject(new ConnectionFailedError(
-              'Did not find a usable device on a serial port.'));
+              'Did not find a usable device on a serial port.' +
+              'Found devices: ' + JSON.stringify(list)));
         }
       });
 }

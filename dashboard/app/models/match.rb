@@ -35,4 +35,8 @@ question 'Question'
 answer 'Answer 1'
 ruby
   end
+
+  def supports_markdown?
+    true
+  end
 end

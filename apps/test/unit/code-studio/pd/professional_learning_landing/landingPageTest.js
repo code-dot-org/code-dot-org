@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage';
 import {expect} from 'chai';
-import _ from 'lodash';
 
 describe("Tests for Professional Learning Landing Page", () => {
   const generateLandingPage = (landingPageProps = []) => {
@@ -13,96 +12,40 @@ describe("Tests for Professional Learning Landing Page", () => {
     );
   };
 
-  const getImmediateChildren = (landingPage) => {
-    return _.compact(landingPage.children().nodes.map( (node) => {return node.key;}));
-  };
-
   describe("Tests related to the initial state of the landing page for given teacher", () => {
-    it("page is as expected for CSF in progress teacher", () => {
+    it("page is as expected for a teacher with a pending survey", () => {
       const landingPage = generateLandingPage({
-        coursesTaught: ['CS Fundamentals'],
-        coursesCompleted: [],
-      });
-      const csFundamentalsSection = landingPage.find('CsFundamentalsSection');
-      expect(csFundamentalsSection).to.have.length(1);
-      expect(csFundamentalsSection.prop('lastWorkshopSurveyUrl')).to.equal(null);
-      expect(csFundamentalsSection.prop('printCsfCertificateUrl')).to.equal(undefined);
-      expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
-      expect(csFundamentalsSection.prop('csfCompleted')).to.be.false;
-      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csFundamentalsSection']);
-    });
-
-    it("page is as expected for a CSF completed teacher", () => {
-      const landingPage = generateLandingPage({
-        coursesTaught: ['CS Fundamentals'],
-        coursesCompleted: ['CS Fundamentals'],
-        printCsfCertificateUrl: 'certificateUrl'
-      });
-      const csFundamentalsSection = landingPage.find('CsFundamentalsSection');
-      expect(csFundamentalsSection).to.have.length(1);
-      expect(csFundamentalsSection.prop('printCsfCertificateUrl')).to.equal('certificateUrl');
-      expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
-      expect(csFundamentalsSection.prop('csfCompleted')).to.be.true;
-      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csFundamentalsSection']);
-    });
-
-    it("page is as expected for a CSD/CSP teacher", () => {
-      ['CS Principles', 'CS Discoveries'].forEach((course) => {
-        const landingPage = generateLandingPage({
-          coursesTaught: [course],
-          coursesCompleted: [course]
-        });
-
-        expect(landingPage.find('CsFundamentalsSection')).to.have.length(0);
-        const csPrinciplesAndDiscoveriesSection = landingPage.find('CsPrinciplesAndDiscoveriesSection');
-        expect(csPrinciplesAndDiscoveriesSection).to.have.length(1);
-        expect(csPrinciplesAndDiscoveriesSection.prop('lastWorkshopSurveyUrl')).to.equal(null);
-        expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csPrinciplesAndDiscoveriesSection']);
-      });
-
-      const landingPage = generateLandingPage({
-        coursesTaught: ['CS Discoveries'],
-        coursesCompleted: [],
         lastWorkshopSurveyUrl: 'url',
-        lastWorkshopSurveyCourse: 'CS Discoveries'
+        lastWorkshopSurveyCourse: 'CS Fundamentals',
+        professionalLearningCourseData: [{data: 'oh yeah'}]
       });
 
-      expect(landingPage.find('CsFundamentalsSection')).to.have.length(0);
-      const csPrinciplesAndDiscoveriesSection = landingPage.find('CsPrinciplesAndDiscoveriesSection');
-      expect(csPrinciplesAndDiscoveriesSection).to.have.length(1);
-      expect(csPrinciplesAndDiscoveriesSection.prop('lastWorkshopSurveyUrl')).to.equal('url');
-      expect(getImmediateChildren(landingPage)).to.deep.equal(['csPrinciplesAndDiscoveriesSection', 'upcomingWorkshops']);
+      expect(landingPage.childAt(2).is('TwoPartBanner')).to.be.true;
+      expect(landingPage.childAt(2).shallow().text().indexOf('Submit feedback and order free course kit') >= 0).to.be.true;
+      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
+      expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
 
-    it("page is as expected for a teacher in both CSF and CSD/CSP", () => {
+    it("page is as expected for a CSD/CSP teacher with a pending survey", () => {
       const landingPage = generateLandingPage({
-        coursesTaught: ['CS Fundamentals', 'CS Discoveries'],
-        coursesCompleted: ['CS Fundamentals', 'CS Discoveries']
+        lastWorkshopSurveyUrl: 'url',
+        lastWorkshopSurveyCourse: 'CS Discoveries',
+        professionalLearningCourseData: [{data: 'oh yeah'}]
       });
 
-      expect(landingPage.find('CsFundamentalsSection')).to.have.length(1);
-      expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(1);
-      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csFundamentalsSection', 'csPrinciplesAndDiscoveriesSection']);
+      expect(landingPage.childAt(2).is('TwoPartBanner')).to.be.true;
+      expect(landingPage.childAt(2).shallow().text().indexOf('Submit feedback and order free course kit')).to.equal(-1);
+      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
+      expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
 
-    it("page is as expected for a teacher who teaches neither CSF, CSD, nor CSP", () => {
-      const landingPage = generateLandingPage({coursesTaught: [], coursesCompleted: []});
-
-      expect(landingPage.find('CsFundamentalsSection')).to.have.length(0);
-      expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
-      expect(landingPage.find('UpcomingWorkshops')).to.have.length(1);
-      expect(landingPage.find('ProfessionalLearningCourseProgress')).to.have.length(0);
-      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops']);
-    });
-
-    it("page has section for professional learning if user is enrolled in professional learning courses", () => {
+    it("page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments", () => {
       const landingPage = generateLandingPage({
-        coursesTaught: [],
-        coursesCompleted: [],
-        professionalLearningCourseData: [{data: 'woohoo'}]
+        professionalLearningCourseData: [{data: 'oh yeah'}]
       });
-      expect(landingPage.find('ProfessionalLearningCourseProgress')).to.have.length(1);
-      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'plcData']);
+
+      expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;
+      expect(landingPage.childAt(3).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
   });
 });

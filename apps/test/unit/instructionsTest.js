@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setExternalGlobals();
 
 import instructions, {
   toggleInstructionsCollapsed,
@@ -12,8 +11,12 @@ import instructions, {
 
 const ENGLISH_LOCALE = 'en_us';
 
+describe('instructions', () => {
+  testUtils.setExternalGlobals();
+
 describe('instructions reducer', () => {
   var reducer = instructions;
+
 
   it('starts out uncollapsed', () => {
     var state = reducer(undefined, {});
@@ -375,4 +378,6 @@ describe('determineInstructionsConstants', () => {
       assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
     });
   });
+});
+
 });

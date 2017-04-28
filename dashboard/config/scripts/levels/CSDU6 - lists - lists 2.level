@@ -79,8 +79,10 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Create Your Own Lists\r\n\r\n**Write code:** to create the following lists:\r\n\r\n* The numbers from 1 to 10\r\n* A list of the names of 5 different shapes\r\n* The names of the months of the year",
+    "markdown_instructions": "# Create Your Own Lists\r\n\r\n**Write code:** to create and then log to the console _one or more_ of the following lists:\r\n\r\n* The numbers from 1 to 10\r\n* A list of the names of 5 different shapes\r\n* The names of the months of the year",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

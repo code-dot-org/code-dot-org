@@ -567,9 +567,9 @@
         studio_iceage_move_to_flag: Tá Scrat ag lorg a dhearcáin! Cabhraigh leis na
           200 picteilín deireanach a thaisteal leis an mbloc "téigh".
         studio_iceage_move_to_actor: Tá Diego (aisteoir 1) ar lorg Manny (aisteoir
-          2). Úsáid an bloc "aistrigh aisteoir" chun cabhrú le Diego siúl 200 picteilín
-          síos chuig Manny. Ansin, ceangail bloc eile le "nuair a theagmhaíonn aisteoir"
-          chun fuaim a sheinm nuair a chasann siad le chéile.
+          2). Úsáid an bloc "aistrigh aisteoir" chun cabhrú le Diego 200 picteilín
+          a shiúl síos chuig Manny. Ansin, ceangail bloc eile le "nuair a theagmhaíonn
+          aisteoir..." chun fuaim a sheinm nuair a chasann siad le chéile.
         studio_iceage_repeat: Is féidir leat an bloc "go deo na ndeor" a úsáid chun
           cód a rith go leanúnach. An féidir leat cabhrú le Mamó aclaíocht a dhéanamh
           trí bhogadh ar dheis agus ar chlé arís is arís eile?
@@ -775,6 +775,10 @@
         C4_unplugged_forloops: Lúba "Do Gach"
         C4_unplugged_parameters: Ceapadh Ceoil le Paraiméadair
         C4_unplugged_binary: Dénártha
+        CSF_EF_cs_matters: Tá an Ríomheolaíocht Fíorthábhachtach
+        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: An Uair Chódála - Réamhrá
         frozen_loops: Buneolas ar Lúba
         frozen_functions: Buneolas ar Fheidhmeanna
@@ -785,13 +789,18 @@
         infinity_playlab_intro: Súgradh is Dáiríre - Réamhrá
         infinity_playlab_events: Súgradh is Dáiríre - Teagmhais
         infinity_playlab_repeat_forever: Súgradh is Dáiríre - Athdhéan go deo
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_animation_tab: An Cluaisín Beochana
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -950,8 +959,7 @@
         playlab_play_sound: Cuir bloc "seinn fuaim" anseo
         playlab_arrow_keys: Úsáid iad seo chun an chailleach a aistriú tar éis duit
           "Rith" a chliceáil
-        playlab_add_move: Cuir blocanna "téigh ar aghaidh" taobh istigh den bhloc
-          "athdhéan" seo
+        playlab_add_move: Cuir blocanna "téigh..." taobh istigh den bhloc seo
         playlab_add_score: Cuir blocanna scóir anseo
         playlab_add_blocks: Cuir do chuid blocanna anseo
         set_variable: Tarraing bloc uimhreach anseo chun an athróg a shocrú

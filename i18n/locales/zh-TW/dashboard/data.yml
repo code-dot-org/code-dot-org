@@ -6,7 +6,7 @@ zh-TW:
         'Maze': '迷宮'
         'Multi': '多選項目'
         'Unplug2': '計算機式思維'
-        'Unplug3': '圖紙編程'
+        'Unplug3': '方格紙編程'
         'Artist': '藝術家'
         'Unplug4': '演算法'
         'Artist2': '藝術家 2 '
@@ -205,17 +205,17 @@ zh-TW:
         'flappy_k1_8': "接下來，試著附加另一個積木到「當運行時」積木的下方，讓場景改變。"
         'flappy_k1_9': "試著附加「設置角色」積木到「當運行時」積木的下方以變換玩家使用的角色。"
         'jigsaw_1': "點擊這個積木"
-        'jigsaw_2': "拖曳這個積木到目標位置"
-        'jigsaw_3': "排列積木以形成圖像"
-        'jigsaw_4': "排列積木以形成圖像"
-        'jigsaw_5': "排列積木以形成圖像"
-        'jigsaw_6': "排列積木以形成圖像"
-        'jigsaw_7': "排列積木以形成圖像"
-        'jigsaw_8': "排列積木以形成圖像"
-        'jigsaw_9': "排列積木以形成圖像"
-        'jigsaw_10': "排列積木以形成圖像"
-        'jigsaw_11': "排列積木以形成圖像"
-        'jigsaw_12': "排列積木以形成圖像"
+        'jigsaw_2': "拖曳積木並放到目標位置"
+        'jigsaw_3': "排列積木以組成圖像"
+        'jigsaw_4': "排列積木以組成圖像"
+        'jigsaw_5': "排列積木以組成圖像"
+        'jigsaw_6': "排列積木以組成圖像"
+        'jigsaw_7': "排列積木以組成圖像"
+        'jigsaw_8': "排列積木以組成圖像"
+        'jigsaw_9': "排列積木以組成圖像"
+        'jigsaw_10': "排列積木以組成圖像"
+        'jigsaw_11': "排列積木以組成圖像"
+        'jigsaw_12': "排列積木以組成圖像"
         'jigsaw_13': "解決這個難題！"
         'mazestep_1': "這是迷宮步驟說明"
         'mazestep_2': "這是迷宮步驟說明"
@@ -250,24 +250,24 @@ zh-TW:
         'studio_playlab_2': "洞穴男孩（角色 1）和洞穴女孩（角色 2）想互相說聲 hello。你能藉由使用 2 個「說出」積木來幫助他們嗎？"
         'studio_playlab_3': "你可幫幫網球女孩到達旗子那嗎？"
         'studio_playlab_4': "你可幫幫網球男孩（角色1）到網球女孩（角色2）那兒，並且在他抵達時播放一個音效嗎？"
-        'studio_playlab_5': "你可以幫幫太空寶寶嗎？當它被點一下時，讓它說出 greetings earthlings（地球你好），在點擊「運行」後別忘了點一下它。"
+        'studio_playlab_5': "你可以幫幫太空寶寶嗎？當牠被點一下時，讓它說出 greetings earthlings（地球你好），在點擊「運行」後，別忘了點牠一下。"
         'studio_playlab_6': "你可以用方向鍵幫助女巫四處移動，以獲得所有魔法火球嗎？"
         'studio_playlab_7': "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓巫師不停地左右移動嗎？"
         'studio_playlab_8': "添加一個積木，讓獨角獸撞上巫師時得到一分，另外添加一個積木來播放音效。\n運行遊戲並用方向鍵移動獨角獸，直到你得分為止！"
-        'studio_playlab_9': "將背景設為外星人入侵太空場景，並透過更改速度幫助太空機器人更快抓到外星人。使用方向鍵來移動太空機器人，並警告其它人。"
+        'studio_playlab_9': "將背景設為外星人入侵太空場景，並透過更改速度幫助太空寶寶更快抓到外星人。使用方向鍵來移動太空寶寶，並警告其他人。"
         'studio_playlab_10': "創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。"
         'studio_iceage_hello1': "喜德希望跟大家一起進行一次新的冒險。你可以幫他說 hello 嗎？只要把「說出」的積木拖曳到工作區，並在文字方塊上輸入 hello 就可以了。"
         'studio_iceage_hello2': "曼尼（角色1）找到喜德（角色2）了，他想要邀請他一塊冒險。用 2 個「角色說出」積木幫助他們互相打招呼。"
         'studio_iceage_move_to_flag': "鼠奎特正在尋找他的橡樹果實！使用「移動」積木幫助他移動到最後 200 像素位置。"
-        'studio_iceage_move_to_actor': "狄亞哥（角色1）正在找曼尼（角色2）。請幫助狄亞哥使用「移動角色」積木往下移動 200 個像素來找到曼尼，接著，將積木與「當角色碰到」的積木下方，讓他們找到對方時會播放一個音效。"
+        'studio_iceage_move_to_actor': "狄亞哥（角色1）正在找曼尼（角色2）。請幫助狄亞哥使用「移動角色」積木往下移動 200 像素來找到曼尼，接著，在「當角色碰到」積木下方連結一個積木，讓牠們找到對方時播放一個音效。"
         'studio_iceage_repeat': "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓葛瑞妮不斷地左右移動，以幫助她鍛鍊一下筋骨嗎？"
         'studio_iceage_click_hello': "你能讓喜德對朋友說 final call（最後呼叫）嗎？不要忘了在運行程式後，要點一下角色。"
         'studio_iceage_move_events': "鼠奎特就是要橡樹果實！在每個方向事件下添加移動積木，這樣牠就能到處亂跑了。完成後，點擊運行，然後試著操控牠收集橡樹果實。"
-        'studio_iceage_sound_and_points': "我們已經提供了大部分的程式碼讓土司（角色2）左右移動，也寫了程式讓蕉蕉（角色1）在畫面上四處移動。你可以完成這個程式嗎？添加一些積木到「當角色碰到」事件下，讓它在蕉蕉和土司互撞時播放一個音效，還有得到一分，然後點擊運行玩玩這個遊戲。"
+        'studio_iceage_sound_and_points': "我們已經提供了大部分的程式碼讓葛瑞妮（角色2）左右移動，也寫了程式讓喜德（角色1）在畫面上四處移動。你可以完成這個程式嗎？添加一些積木到「當角色碰到」事件下，讓它在葛瑞妮和喜德互撞時播放一個音效，還有得到一分，然後點擊運行玩玩這個遊戲。"
         'studio_iceage_warn_ice_age': "冰河時期即將來臨，大家必須加快腳步！改變背景為冰的背景，接著將喜德的移動速度變快，然後點擊「運行」並移動喜德去警告狄亞哥。"
         'studio_iceage_throw_hearts': "喜德想要讓他的奶奶，葛瑞妮，知道他很愛她。使用來命令喜德（角色1）丟愛心給奶奶（角色2），並設置當奶奶接到愛心時心情會變快樂。"
         'studio_iceage_free_play': "是時候創造你自己的遊戲或故事了！當你完成後，點擊完成，讓朋友也能在手機、平板、電腦上體驗你的遊戲！"
-        'studio_gumball_hello1': "陶安安想交新朋友。你可以拖曳「說道」積木到工作區，並在裡面輸入「hello」，來幫她跟朋友問好嗎？"
+        'studio_gumball_hello1': "陶安安想交新朋友。你可以拖曳「說出」積木到工作區，並在裡面輸入「hello」，來幫她跟朋友問好嗎？"
         'studio_gumball_hello2': "陶阿達（角色1）和他的哥哥陶阿甘（角色2）正要去學校。使用 2 個「角色說出」積木讓他們跟彼此打招呼吧！"
         'studio_gumball_move_to_flag': "蕉蕉就要在運動會比賽上獲勝啦！使用「移動」積木來幫助牠跑完這最後的 200 像素。"
         'studio_gumball_move_to_actor': "陶阿甘（角色1）及陶阿達（角色2）已經快趕不上體育表演會了！使用「移動角色」積木移動 200 像素，幫陶阿甘往陶阿達方向靠近。接著，連接某個程式積木到「當角色碰到」事件下，在他們找到彼此的時候能播放一個音效。"
@@ -335,13 +335,13 @@ zh-TW:
         'C1_maze_debugging': '迷宮 - 除錯（Debugging）'
         'C1_bee_level_intro': '蜜蜂關卡 - 簡介'
         'C1_artist_intro': '小藝術家簡介'
-        'C1_spelling_bee_intro': '拼字比賽簡介'
+        'C1_spelling_bee_intro': '拼字蜜蜂簡介'
         'C1_zuck_repeat_loop': '迷宮 - 迴圈（Loops）'
         'C1_bee_loops': '蜜蜂 - 迴圈（Loops）'
         'C1_maze_loops': '迷宮 - 迴圈（Loops）'
         'C1_playlab_storytelling': 'Play Lab - 創作一個故事'
         'C1_planting_seed': '植物種植'
-        'C1_building_foundation': '建立基礎'
+        'C1_building_foundation': '打好基礎'
         'C1_going_places_safely': '安全的到達地點'
         'C2_maze_intro': '迷宮簡介'
         'C2_artist_intro': '小藝術家簡介'
@@ -396,6 +396,10 @@ zh-TW:
         'C4_unplugged_forloops': '計數迴圈（For Loops）'
         'C4_unplugged_parameters': '用參數寫歌'
         'C4_unplugged_binary': '二進制（Binary）'
+        'CSF_EF_cs_matters': '計算機科學很重要'
+        'CSF_stevie_big_project': 'Stevie 和 Big Project'
+        'CSF_unspotted_bugs': 'Unspotted Bugs'
+        'CSF_zuck_loops_short': '重複迴圈'
         'frozen_intro': '一小時玩程式介紹'
         'frozen_loops': '迴圈（Loops）的介紹'
         'frozen_functions': '函式（Functions）的介紹'
@@ -406,13 +410,18 @@ zh-TW:
         'infinity_playlab_intro': 'Play Lab - 簡介'
         'infinity_playlab_events': 'Play Lab - 事件（Evnets）'
         'infinity_playlab_repeat_forever': 'Play Lab - 重複無限次'
-        'csd_gamelab_animation_tab': 'The Animation Tab'
+        'csd_gamelab_animation_tab': '動畫頁籤'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': '動畫角色'
         'csd_gamelab_velocity': '速度'
+        'csd_weblab_intro_1': 'Web Lab 介紹 - 第 1 部分'
+        'csd_weblab_intro_2': 'Web Lab 介紹 - 第 2 部分'
+        'csd_weblab_css_1': 'CSS 介紹 -  第 1 部分'
+        'csd_weblab_css_2': 'CSS 介紹 -  第 2 部分'
+        'csd_weblab_intro_3': 'Web Lab 介紹 - 第 3 部分'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'

@@ -1,6 +1,7 @@
 ---
 title: CS in Science Educator Application
 nav: plc_science_nav
+theme: responsive
 ---
 
 # Computer Science in Science Application 
@@ -16,4 +17,4 @@ Please note that this application is for teachers from districts that have partn
 **Note about Principal Approval.** This application requires your school’s principal to provide their electronic signature. We recommend reviewing the application with your principal and completing the application together in the same room. NOTE: You cannot save and return to the application later.
 
 
-<script type="text/javascript" src="http://form.jotform.us/jsform/60337527458158"></script>
+<script style="max-width: 100%" type="text/javascript" src="http://form.jotform.us/jsform/60337527458158"></script>

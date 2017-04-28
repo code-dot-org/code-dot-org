@@ -27,6 +27,7 @@ class ExternalLink < Level
   serialized_attrs %w(
     link_title
     url
+    teacher_markdown
   )
 
   validates_presence_of :url

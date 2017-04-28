@@ -1,17 +1,13 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setExternalGlobals();
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 
 import { StatelessMarkdownInstructions } from '@cdo/apps/templates/instructions/MarkdownInstructions';
 import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
 
-function shallowRender(element) {
-  var renderer = ReactTestUtils.createRenderer();
-  renderer.render(element);
-  return renderer.getRenderOutput();
-}
+describe('instructions components', () => {
+  testUtils.setExternalGlobals();
 
 describe('MarkdownInstructions', function () {
   testUtils.throwOnConsoleErrors();
@@ -81,4 +77,6 @@ describe('NonMarkdownInstructions', function () {
     assert.equal(element.children[1].textContent, "instructions");
     assert.equal(element.children[2].textContent, "instructions2");
   });
+});
+
 });

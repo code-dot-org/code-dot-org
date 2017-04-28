@@ -301,7 +301,7 @@ class ContactRollupsValidation
 
     output << "Overall result: #{pass_fail_string(overall_pass)}"
 
-    [overall_pass, output.join('\n')]
+    {pass: overall_pass, output: output.join("\n")}
   end
 
   # Returns "PASS" or "FAIL" based on Boolean value
@@ -314,7 +314,7 @@ class ContactRollupsValidation
   # Logs to CDO.log.info
   # @param s [String] string to log
   def self.log(s)
-    puts s unless Rails.env.test?
+    # puts s unless Rails.env.test?
     CDO.log.info s
   end
 end

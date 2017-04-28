@@ -20,6 +20,7 @@
     attributes:
       user:
         name: Numele afișat
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-mail
         username: nume de utilizator
         password: parolă
@@ -88,6 +89,8 @@
     forgot_password: Ai uitat parola?
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} studenţi s-au înregistrat deja."
     teacher_count: "%{count} profesori s-au înregistrat deja."
@@ -142,9 +145,31 @@
     user_type_student: elev
     field_is_required: este necesar
     accept_terms: Trebuie să fii de acord pentru a crea un cont
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Alte
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Ai deja un cont? Conectează-te
     login: E-mail
+    login_username: Email or Username
     password: Parolă
     remember: "Ține-mă minte"
     submit: Loghează-te
@@ -184,6 +209,14 @@
       Tutorialele sunt distractive, captivante vizual şi te învaţă conceptele de bază din informatică folosind o metodă simplă, ghidată, similară jocului. Învață să codezi de la Bill Gates, Mark Zuckerberg, Angry-Birds și Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Invitație trimisă
     added_teacher: "%{name} adăugat(ă) ca și profesorul tău"
@@ -198,8 +231,6 @@
       blank_code: Te rugăm să introduci un cod de secţiune
       cant_join_own_section: Ne pare rău, dar nu poţi intra în propria secţiune.
     mail:
-      invite_student:
-        subject: Alătură-te clasei cu %{teacher_name} la Code.org!
       student_disassociated:
         subject: 'Notificare Code.org: %{student_name} nu mai este asociat ca student
           al tău.'
@@ -461,6 +492,7 @@
       SUA pentru a finanta calculatorul de stiinta si educaţie k-12.
     announcement_petition_button: Adaugă-ți numele
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Fii la curent cu noutățile si actualizarile de pe blogul cadrelor
       noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea
       anunturile vechi.</a>
@@ -491,6 +523,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -503,16 +544,30 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
-    section_code_not_entered: Vă rugăm să furnizaţi current_section_code.
     section_code_cant_be_current_section: Secţiunea curentă nu poate fi la fel ca
       o secţiune nouă.
     current_section_dne: Ne pare rău, dar secțiunea %{current_section_code} nu există.
       Vă rugăm să introduceţi un cod aferent unei secţiuni diferite.
-    students_not_yours: Nu puteţi muta elevii dintr-o secţiune ce nu vă aparţine.
-    stay_enrolled_not_entered: Vă rugăm să furnizaţi stay_enrolled_in_current_section.
     student_ids_not_entered: Vă rugăm să furnizaţi student_ids.
     student_not_found: Unul sau mai mulți studenți nu au putut fi găsiți.
     all_students_must_be_in_current_section: Toţi studenţii trebuie să fie înscrişi
@@ -598,6 +653,18 @@
         din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii,
         dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare.
       link: Află mai mult
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Aceasta durează mai mult decât de obicei...
   try_reloading: "Încearcă să reîncarci pagina"
   next_stage: Ai terminat! Continuă cu următoarea etapă

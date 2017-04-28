@@ -28,7 +28,7 @@ def saucelabs_browser
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
-  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
+  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG']}
 
   browser_config.each do |key, value|
     capabilities[key] = value

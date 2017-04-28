@@ -36,7 +36,7 @@ class VarnishHelperTest < Minitest::Test
       '/[]/*',
       '/()/*',
     ].map do |path|
-      assert_raises(ArgumentError, "Path did not raise error: #{path}") { paths_to_regex path }
+      assert_raises(ArgumentError, "Path did not raise error: #{path}") {paths_to_regex path}
     end
   end
 
@@ -59,7 +59,7 @@ class VarnishHelperTest < Minitest::Test
       return nil if x == 'd'
       "#{x} == true"
     end
-    output = if_else(items, condition){|x| x}
+    output = if_else(items, condition) {|x| x}
     assert_equal <<STR.strip, output
 if (a == true) {
   a
@@ -70,7 +70,7 @@ if (a == true) {
 }
 STR
   end
-  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}.freeze
+  HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   BEHAVIOR = {
     dashboard: {
       behaviors: [],

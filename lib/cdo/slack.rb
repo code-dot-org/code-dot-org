@@ -133,6 +133,7 @@ class Slack
   # @return [nil | String] The Slack channel ID for the channel, nil if not
   #   found.
   private_class_method def self.get_channel_id(channel_name)
+    raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
     # Documentation at https://api.slack.com/methods/channels.list.
     slack_api_url = "https://slack.com/api/channels.list?token=#{SLACK_TOKEN}"
     channels = open(slack_api_url).read

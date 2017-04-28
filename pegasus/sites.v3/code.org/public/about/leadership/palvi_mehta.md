@@ -1,6 +1,7 @@
 ---
 title: Palvi Mehta
 nav: about_nav
+theme: responsive
 ---
 # Palvi Mehta
 

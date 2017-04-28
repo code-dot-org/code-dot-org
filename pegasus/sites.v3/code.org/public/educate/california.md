@@ -1,6 +1,7 @@
 ---
 title: California Bring Computer Science to Your School
 nav: educate_nav
+theme: responsive
 ---
 
 # Bring Computer Science To California Schools
@@ -34,7 +35,7 @@ Please help us spread the word to California principals and teachers, at all gra
 
 ## Computer Science Principles for grades 10-12
 
-<iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width: 100%" width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
 <br />
 
 The College Board has proposed a new AP® course called AP® Computer Science Principles.*  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment.
@@ -52,7 +53,7 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 
 ## Computer Science Discoveries for grades 7-9
 
-<img src="/images/csdiscoveries-montage.jpg" width="500px">
+<img src="/images/csdiscoveries-montage.jpg" width="500px" style="max-width: 100%">
 
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
 

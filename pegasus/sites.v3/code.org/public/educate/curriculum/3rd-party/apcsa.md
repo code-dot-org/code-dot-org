@@ -1,6 +1,7 @@
 ---
 title: 3rd Party AP Computer Science A Educator Resources
 nav: educate_nav
+theme: responsive
 ---
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
@@ -47,5 +48,8 @@ The following organizations make partnerships at the school or district level to
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE | In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-computer-science/pltw-computer-science-curriculum) | 3 courses, $2000/school | 5 or 10-day in-person training, $1200 or $2400, depending on course |
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
+
+<br>
+<br>
 
 

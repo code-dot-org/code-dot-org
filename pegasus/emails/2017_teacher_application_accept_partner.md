@@ -1,6 +1,6 @@
 ---
 from: 'Sarah Fairweather (Code.org) <teacher@code.org>'  
-subject: "Congratulations from <%= regional_partner_name_s %> and Code.org! Respond by April 21st"
+subject: "Congratulations from <%= regional_partner_name_s %> and Code.org! Respond by May 5th"
 ---
 <% regional_partner_name_possessive_s = regional_partner_name_s.end_with?('s') ? regional_partner_name_s + "'" : regional_partner_name_s + "'s" %>
 
@@ -31,13 +31,13 @@ As a reminder, to join the Professional Learning Program we ask that you commit 
 
 <h3>Let us know your plans!</h3>
 
-* **Due by April 21, 2017:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take two minutes to let us know if you accept your placement in the program. 
+* **Due by May 5, 2017:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take two minutes to let us know if you accept your placement in the program. 
 
 *  **If you want to accept your seat:**  
 
     * Log into your Code Studio account, using the email address you provided in your application.
 
-    * [Register now for your summer workshop](<%= workshop_registration_url_s %>). Completing this registration is the only way we will know if you have accepted your space in the program; if we don’t hear from you by April 21, 2017, we will need to give your space to someone on the waitlist.
+    * [Register now for your summer workshop](<%= workshop_registration_url_s %>). Completing this registration is the only way we will know if you have accepted your space in the program; if we don’t hear from you by May 5, 2017, we will need to give your space to someone on the waitlist.
 
   **If you want to decline your seat:** Email [teacher@code.org](mailto:teacher@code.org). Please provide your full name and email address, and a message saying you are declining your seat in <%= regional_partner_name_possessive_s %> Professional Learning Program for CS Principles.
   
@@ -49,7 +49,7 @@ As a reminder, to join the Professional Learning Program we ask that you commit 
 
 * Share the good news with your school! Start talking with your administration, colleagues, students, and parents now about the course you will be teaching next year, and encourage a diverse group of students to enroll. Once you accept your space in the program, you will receive a welcome kit complete with recruitment tips and tools. In the meantime, please help yourself to these [videos and resources](https://code.org/educate/resources/videos).
 
-Please contact [<%= regional_partner_contact_person_email_s %> ](<%= regional_partner_contact_person_email_s %>)for more information, including questions about the possible travel costs associated with your workshop. We look forward to hearing from you by April 21, 2017.
+Please contact [<%= regional_partner_contact_person_email_s %> ](<%= regional_partner_contact_person_email_s %>)for more information, including questions about the possible travel costs associated with your workshop. We look forward to hearing from you by May 5, 2017.
 
 Thank you,  
 Sarah Fairweather  

@@ -29,9 +29,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'resolve_user' do
     teacher1 = create :teacher
     teacher2 = create :teacher
-    enrollment_with_email = create :pd_enrollment, email: teacher1.email
-    enrollment_with_user = create :pd_enrollment, user: teacher2
-    enrollment_with_no_user = create :pd_enrollment
+    enrollment_with_email = build :pd_enrollment, email: teacher1.email
+    enrollment_with_user = build :pd_enrollment, user: teacher2
+    enrollment_with_no_user = build :pd_enrollment
 
     assert_nil enrollment_with_email.user
     assert_equal teacher1, enrollment_with_email.resolve_user
@@ -41,6 +41,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_nil enrollment_with_no_user.user
     assert_nil enrollment_with_no_user.resolve_user
+  end
+
+  test 'autoupdate_user_field called on validation' do
+    teacher = create :teacher
+    enrollment = build :pd_enrollment, email: teacher.email
+
+    enrollment.valid?
+
+    assert_equal teacher, enrollment.user
   end
 
   test 'required field validations without country' do
@@ -271,10 +280,74 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
     without_surveys = [enrollment_no_survey]
-    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where: stub(map: with_surveys.map(&:id))))
+    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
+        [
+          {source_id: enrollment_with_unprocessed_survey.id.to_s},
+          {source_id: enrollment_with_processed_survey.id.to_s}
+        ]
+      )
+    )
 
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
     assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
+  end
+
+  test 'enrolling in class automatically enrolls in online learning' do
+    Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
+      workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
+      plc_course = create :plc_course, name: plc_course_name
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: workshop
+
+      assert_equal 1, Plc::UserCourseEnrollment.where(user: teacher, plc_course: plc_course).size
+    end
+
+    workshop = create :pd_workshop, course: 'Counselor'
+    teacher = create :teacher
+    assert_no_difference('Plc::UserCourseEnrollment.count') do
+      create :pd_enrollment, user: teacher, workshop: workshop
+    end
+  end
+
+  test 'attendance scopes' do
+    workshop = create :pd_workshop, num_sessions: 2
+    teacher = create :teacher
+    enrollment_not_attended = create :pd_enrollment
+    enrollment_attended = create :pd_enrollment, workshop: workshop
+    workshop.sessions.each do |session|
+      create :pd_attendance, session: session, teacher: teacher, enrollment: enrollment_attended
+    end
+
+    assert_equal [enrollment_attended], Pd::Enrollment.attended
+    assert_equal [enrollment_not_attended], Pd::Enrollment.not_attended
+    assert_empty Pd::Enrollment.attended.not_attended
+  end
+
+  test 'ended workshop scope' do
+    # not ended
+    create :pd_enrollment
+    enrollment_ended = create :pd_enrollment, workshop: create(:pd_ended_workshop)
+
+    assert_equal [enrollment_ended], Pd::Enrollment.for_ended_workshops
+  end
+
+  test 'with_surveys scope' do
+    ended_workshop = create :pd_ended_workshop, num_sessions: 1
+    expected_enrollment = create :pd_enrollment, workshop: ended_workshop
+    create :pd_attendance, session: ended_workshop.sessions.first, enrollment: expected_enrollment
+
+    # Non-ended workshop, no attendance
+    non_ended_workshop = create :pd_workshop, num_sessions: 1
+    create :pd_enrollment, workshop: non_ended_workshop
+
+    # Non-ended workshop, with attendance
+    create :pd_enrollment, workshop: non_ended_workshop
+    create :pd_attendance, session: non_ended_workshop.sessions.first
+
+    # Ended workshop, no attendance
+    create :pd_enrollment, workshop: ended_workshop
+
+    assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
   end
 end

@@ -2,6 +2,7 @@
 title: CS Fundamentals for grades K-5
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 [solid-block-header]
@@ -12,7 +13,7 @@ Computer Science Fundamentals
 
 ### [No-Cost Teacher Workshops](#teach) | [Curriculum Overview](#overview) | [Other Resources](#other)
 
-Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate.
+Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate. Our curriculum is available at [no cost](/commitment) for anyone, anywhere in the world to teach. 
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -41,14 +42,14 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 ## High quality workshops for teachers, at no cost (US only)
 
-Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
+To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
 
 Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
 
 <br />
-[<button style="font-size: 22px; height: 50px">Learn more & find a local workshop</button>](/professional-development-workshops)<br />
+[<button>Learn more & find a local workshop</button>](/professional-development-workshops)<br />
 
-<img src="/images/k5teacherquotes.png" width="800"/>
+<img src="/images/k5teacherquotes.png" width="100%"/>
 
 ### <strong>No workshop in your area?</strong>
 [Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
@@ -61,7 +62,7 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 
 [/solid-block-header]
 
-Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This <strong>completely free</strong> curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
+Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
 
 [Download complete curriculum for Courses 1 - 4](/curriculum/docs/k-5/complete.pdf)
 
@@ -174,6 +175,3 @@ Thousands of engineers and individuals passionate about computer science have si
 
 ## Spread the word!
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
-
-
-

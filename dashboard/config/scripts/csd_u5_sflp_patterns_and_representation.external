@@ -1,0 +1,15 @@
+name 'CSD-U5-SFLP Patterns and Representation'
+display_name 'Unit 5 Lesson 2 Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# The Internet - Data and Society: Lesson 2 - Patterns and Representation
+
+## Background
+
+You'll build your own system for representing information and along the way learn some fundamental properties of systems for representing information.
+
+# Resources
+
+* [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc))
+
+MARKDOWN

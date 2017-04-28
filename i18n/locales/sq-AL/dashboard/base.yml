@@ -12,6 +12,7 @@ sq:
     attributes:
       user:
         name: 'Shfaq Emrin'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
         username: 'Emri i përdoruesit'
         password: 'Fjalëkalimi'
@@ -78,6 +79,7 @@ sq:
     forgot_password: 'Keni harruar fjalëkalimin?'
     need_confirmation: "Nuk i keni marr instruksionet e konfirmimit?"
     need_unlock: "Nuk keni marre instruksionet e zhbllokimit?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} nxënës janë regjistruar tashmë.'
     teacher_count: '%{count}  mesues janë regjistruar tashmë.'
@@ -110,9 +112,31 @@ sq:
     user_type_student: "student"
     field_is_required: "E domosdoshme"
     accept_terms: "Ju duhet të jeni dakord për të krijuar një llogari"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Tjetër'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Ke një llogari ekzistuese? Logohu'
     login: 'Email'
+    login_username: 'Email or Username'
     password: 'Fjalëkalimi'
     remember: 'Më mbaj mend'
     submit: 'Futu'
@@ -150,6 +174,14 @@ sq:
       Tutorialet janë zbavitës, tërheqës, dhe të mësojnë konceptet bazë të shkencave kompjuterike duke përdorur një përvojë loje të thjeshtë. Mëso të kodosh nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies! :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Ftesa u dërgua'
     added_teacher: '%{name} u shtua si mësuesi juaj'
@@ -163,8 +195,6 @@ sq:
       blank_code: "Të lutem fut një kod seksioni"
       cant_join_own_section: "Më vjen keq, ti nuk mund t'i bashkohesh seksionit tënd."
     mail:
-      invite_student:
-        subject: "Bashkohu në një klasë me %{teacher_name} tek Code.org!"
       student_disassociated:
         subject: 'Lajmërim nga Code.org: %{student_name} nuk është më studenti yt.'
   reports:
@@ -363,21 +393,24 @@ sq:
     announcement_petition: "Si mësues, ju jeni duke udhëhequr në mënyrë që t'i jepni çdo nxënësi në çdo shkollë mundësi për të mësuar shkencën kompjuterike. Tani, është koha që përfaqësuesit tuaj të dëgjojmë nga ju. Këtë javë, liderët e arsimit, 28 qeveritarët dhe CEOs të kompanive më të mëdha të Amerikës u bashkuan së bashku në një letër të hapur duke i kërkuar Kongresit SH.B.A. për të financuar K-12 shkolla të shkencave kompjuterike."
     announcement_petition_button: "Shto emrin tuaj"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Mbahuni të përditësuar me veçoritë e reja dhe përditësimet në blogun e mësuesve tanë. <a href='%{teacher_blog_url}' target='_blank'> Shihni njoftimet e kaluara. </a>\n "
     announcement_hoc_launch: "Mijëra mësues në më shumë se 180 vende do të fillojnë mësimin e shkencës kompjuterike gjatë Orës së Kodit, nga5-11 dhjetor. Ne jemi duke u mbështetur te ju për të na ndihmuar që të kemi më shumë studentë se kurrë më parë. <a href='%{signup_url}' target='_blank'> Regjistrohu në eventin tuaj të Orës së Kodimit </a> dhe bëjini të ditur një tjetër mësuesi se cdo kush mund të filloj të shpjegoj shkenca kompjuterike."
     announcement_mc_launch: "Një nga mësime tona më të njohura tani ka një vazhdim! Të gjithë dizenjuesit e rinj të Orës së Kodimit Minecraft lejojnë nxënësit të bëjnë rregullat e botës Minecraft. Ata mund të krijojnë një përvojë krejtësisht unike Minecraft, dhe pastaj të ndajnë atë me miqtë ose ta luajnë atë në telefonat e tyre. Bëjeni atë me klasën tuaj për Orën e Kodimit.\n ."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju lutem, jepni një tjetër kod seksioni."
-    section_code_not_entered: "Ju lutem jepni kodin e seksionit aktual."
     section_code_cant_be_current_section: "Seksioni aktual nuk mund të jetë i njëjtë me seksionin e ri."
     current_section_dne: "Na vjen keq, por seksioni %{current_section_code} nuk ekziston. Ju lutem, jepni një tjetër kod seksioni."
-    students_not_yours: "Ju nuk mund të lëvizin studentët në një seksion që nuk ju përket."
-    stay_enrolled_not_entered: "Ju lutem sigurohuni që të qendroni brenda seksionit aktual."
     student_ids_not_entered: "Ju lutem jepni id-të e studenteve."
     student_not_found: "Një ose më shumë studentë nuk mund të gjendet."
     all_students_must_be_in_current_section: "Të gjithë studentët aktualisht duhet të jenë regjistruar në seksionin tuaj."
@@ -434,6 +467,10 @@ sq:
     upgrade:
       unsupported_message: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
       link: "Mëso më shumë"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Kjo po zgjat më shumë seç duhet...'
   try_reloading: 'Provo të rifreskosh faqen'
   next_stage: 'Përfundoi! Vazhdo tek hapi tjetër'

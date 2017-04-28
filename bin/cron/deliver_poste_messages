@@ -24,7 +24,7 @@ RETRYABLE_ERROR_MESSAGES = [
   'Temporary authentication failure',
   'end of file reached'
 ].map(&:freeze).freeze
-RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map{|m| "(#{m})"}.join('|')
+RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
 
 SMTP_OPTIONS = {
   address: CDO.poste_smtp_server,
@@ -74,7 +74,7 @@ module Poste
         params.merge! form.processed_data
         params['form'] = form
       end
-      locals = OpenStruct.new(params).instance_eval{binding}
+      locals = OpenStruct.new(params).instance_eval {binding}
 
       header = @header.result(locals) unless @header.nil?
       # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
@@ -289,7 +289,7 @@ def main
   started_at = Time.now
 
   queue = Queue.new.tap do |results|
-    POSTE_DB[:poste_deliveries].where(sent_at: nil).limit(BATCH_SIZE).reverse_order(:id).each{|i| results << i}
+    POSTE_DB[:poste_deliveries].where(sent_at: nil).limit(BATCH_SIZE).reverse_order(:id).each {|i| results << i}
   end
 
   queue_count = queue.length

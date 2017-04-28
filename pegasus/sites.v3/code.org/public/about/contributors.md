@@ -1,6 +1,7 @@
 ---
 title: Contributors
 nav: about_nav
+theme: responsive
 ---
 # Contributors
 We especially want to recognize the engineers from Facebook, Google, Microsoft, Twitter and many others who helped create these materials.

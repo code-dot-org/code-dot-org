@@ -227,7 +227,7 @@ class NetSimApi < Sinatra::Base
 
     # If we get all the way down here without errors, insert everything
     table = get_table(shard_id, table_name)
-    result = values.map { |value| table.insert(value, request.ip) }
+    result = values.map {|value| table.insert(value, request.ip)}
 
     # Finally, if we are not performing a multi-insert, denormalize our
     # return value to a single item
@@ -240,7 +240,7 @@ class NetSimApi < Sinatra::Base
   end
 
   def validate_all(shard_id, table_name, values)
-    values.map { |value| validate_one(shard_id, table_name, value) }
+    values.map {|value| validate_one(shard_id, table_name, value)}
   end
 
   # @param [String] shard_id - The shard we're checking validation on.

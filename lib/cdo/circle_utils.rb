@@ -21,7 +21,7 @@ module CircleUtils
     # Only parse the commit message once
     @tags ||= circle_commit_message.
         scan(/(?<=\[)[\w\d\s]+(?=\])/).
-        map {|s| s.downcase.split.to_set }.
+        map {|s| s.downcase.split.to_set}.
         to_set
   end
 

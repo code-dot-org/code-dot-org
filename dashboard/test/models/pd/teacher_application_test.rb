@@ -13,10 +13,26 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
 
     teacher_application.user = create :teacher
     teacher_application.application = build(:pd_teacher_application_hash).to_json
-    teacher_application.primary_email = 'teacher@example.net'
+    teacher_application.primary_email = teacher_application.user.email
     teacher_application.secondary_email = 'teacher+tag@my.school.edu'
 
     assert teacher_application.valid?
+  end
+
+  test 'primary email must match user email' do
+    teacher = create :teacher
+    application = build :pd_teacher_application, user: teacher, primary_email: 'mismatch@example.net'
+
+    refute application.valid?
+    assert_equal 1, application.errors.count
+    assert_equal(
+      'Primary email must match your login. If you want to use this email instead, '\
+        'first update it in <a href="/users/edit">account settings</a>.',
+      application.errors.full_messages.first
+    )
+
+    application.primary_email = teacher.email
+    assert application.valid?
   end
 
   test 'required application field validations' do
@@ -25,7 +41,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     refute teacher_application.valid?
     # Three fields are validated outside the list of validated fields
     assert_equal Pd::TeacherApplication::REQUIRED_APPLICATION_FIELDS.count, teacher_application.errors.count
-    assert teacher_application.errors.full_messages.all?{|m| m.include? 'Application must contain'}
+    assert teacher_application.errors.full_messages.all? {|m| m.include? 'Application must contain'}
 
     teacher_application.application = build(:pd_teacher_application_hash).to_json
     assert teacher_application.valid?
@@ -48,7 +64,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_teacher_application, primary_email: 'invalid@ example.net'
     end
-    assert_equal 'Validation failed: Primary email does not appear to be a valid e-mail address', e.message
+    assert e.message.include? 'Validation failed: Primary email does not appear to be a valid e-mail address'
 
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_teacher_application, secondary_email: 'invalid@ example.net'
@@ -123,9 +139,8 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   end
 
   test 'validate selected course' do
-    application_hash = build :pd_teacher_application_hash
-    application_hash['selectedCourse'] = 'invalid'
-    teacher_application = build :pd_teacher_application, application_hash: application_hash
+    teacher_application = build :pd_teacher_application
+    teacher_application.update_application_hash(selectedCourse: 'invalid')
 
     refute teacher_application.valid?
     assert_equal 1, teacher_application.errors.count
@@ -214,5 +229,58 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     teacher_application.unstub(:regional_partner)
     teacher_application.expects(:regional_partner).never
     assert_equal new_partner_name, teacher_application.regional_partner_name
+  end
+
+  test 'accidental student accounts are upgraded to teacher on save' do
+    email = 'a_teacher@school.edu'
+    accidental_student = create :student, email: email
+    application = build :pd_teacher_application, user: accidental_student, primary_email: email
+    refute accidental_student.teacher?
+    assert accidental_student.email.blank?
+
+    application.save!
+    assert accidental_student.teacher?
+    assert_equal email, accidental_student.email
+  end
+
+  test 'setting accepted_workshop creates an accepted program entry' do
+    application = create :pd_teacher_application
+    assert_creates Pd::AcceptedProgram do
+      application.accepted_workshop = 'workshop name'
+    end
+
+    accepted_program = application.accepted_program
+    assert accepted_program
+    assert_equal 'workshop name', accepted_program.workshop_name
+    assert_equal application.selected_course, accepted_program.course
+    assert_equal application.user_id, accepted_program.user_id
+    assert_equal application.id, accepted_program.teacher_application_id
+  end
+
+  test 'reassigning accepted_workshop updates existing accepted program entry' do
+    application = create :pd_teacher_application
+    accepted_program = create :pd_accepted_program, workshop_name: 'a workshop', teacher_application: application
+    assert_does_not_create Pd::AcceptedProgram do
+      application.accepted_workshop = 'another workshop'
+    end
+
+    accepted_program.reload
+    assert_equal 'another workshop', accepted_program.workshop_name
+    assert_equal 'another workshop', application.accepted_workshop
+  end
+
+  test 'setting accepted_workshop to nil destroys existing accepted program entry' do
+    application = create :pd_teacher_application
+    accepted_program = create :pd_accepted_program, teacher_application: application
+
+    assert_difference 'Pd::AcceptedProgram.count', -1 do
+      application.accepted_workshop = nil
+    end
+    refute Pd::AcceptedProgram.exists?(accepted_program.id)
+
+    # idempotence
+    assert_no_difference 'Pd::AcceptedProgram.count' do
+      application.accepted_workshop = nil
+    end
   end
 end

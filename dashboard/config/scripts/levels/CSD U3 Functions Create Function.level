@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "embed": "false",
     "markdown_instructions": "# Creating Functions to Organize Code\r\n\r\nIn Game Lab all the action is happening in the draw loop, but too much complex code makes it really confusing to read. To keep your draw loop easy to read, begin by writing functions for larger chunks of code. You can then go write them below. This is a really good example of using **abstraction** to think about problems at a high level and worry about details later.\r\n\r\n<img src=\"https://images.code.org/1a5beeaad6e55c5b27a43604be4f039a-image-1475199750468.42.07 PM.png\" style=\"float:right;width:150px\">\r\n\r\n# Do This\r\n\r\nThis program should draw a daytime scene or a nighttime scene, depending on the location of the mouse. The draw loop describes what needs to happen but one of the functions hasn't been written yet.\r\n\r\n* **Write the `drawNight` function** which has been created but is empty\r\n* Hint: Look at the picture to the right for how your night image should look. Can you use the `drawDay` function to help you at all?",
-    "start_blocks": "function draw() {\r\n  if(Game.mouseY > 200){\r\n    drawDay();\r\n  } else {\r\n    drawNight();\r\n  }\r\n}\r\n\r\nfunction drawNight(){\r\n\r\n}\r\n\r\nfunction drawDay(){\r\n  noStroke();\r\n\r\n  //Sky\r\n  background(color(0,200,255));\r\n\r\n  //Water\r\n  fill(color(0,0,150));\r\n  rect(0,300,400,100);\r\n\r\n  //Sun\r\n  fill(color(255,255,0));\r\n  ellipse(100,100,50,50);\r\n\r\n  // Reflection\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);    \r\n}\r\n",
+    "start_blocks": "function draw() {\r\n  if(World.mouseY > 200){\r\n    drawDay();\r\n  } else {\r\n    drawNight();\r\n  }\r\n}\r\n\r\nfunction drawNight(){\r\n\r\n}\r\n\r\nfunction drawDay(){\r\n  noStroke();\r\n\r\n  //Sky\r\n  background(rgb(0,200,255));\r\n\r\n  //Water\r\n  fill(rgb(0,0,150));\r\n  rect(0,300,400,100);\r\n\r\n  //Sun\r\n  fill(rgb(255,255,0));\r\n  ellipse(100,100,50,50);\r\n\r\n  // Reflection\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);\r\n  ellipse(randomNumber(50,150),randomNumber(300,400),5,5);    \r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,7 +38,6 @@
       "text": null,
       "textAlign": null,
       "textSize": null,
-      "color": null,
       "functionParams_none": null,
       "callMyFunction": null,
       "ifBlock": null,
@@ -54,7 +53,8 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "setAnimation": null
+      "setAnimation": null,
+      "rgb": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -71,6 +71,9 @@
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
     "encrypted_examples": "4t6+D02dzy1tlnuy/KHLwqNNJ4Z48VbHOy7sbDkAhltUdJPbWfuRFVc4R1k1\nNKWT\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

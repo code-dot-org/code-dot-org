@@ -38,9 +38,9 @@ class UserLevel < ActiveRecord::Base
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
-  scope :attempted, -> { where.not(best_result: nil) }
-  scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
-  scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
+  scope :attempted, -> {where.not(best_result: nil)}
+  scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
+  scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
   def readonly_requires_submitted
     if readonly_answers? && !submitted?

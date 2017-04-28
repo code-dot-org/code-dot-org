@@ -67,6 +67,9 @@ var baseConfig = {
         }
       },
     ],
+    noParse: [
+      /html2canvas/,
+    ],
   },
 };
 
@@ -117,6 +120,11 @@ var devtool = process.env.CHEAP ?
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
+  resolve: _.extend({}, baseConfig.resolve, {
+    alias: _.extend({}, baseConfig.resolve.alias, {
+      '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
+    }),
+  }),
   externals: {
     "blockly": "this Blockly",
   },
@@ -130,6 +138,7 @@ var storybookConfig = _.extend({}, baseConfig, {
       BUILD_STYLEGUIDE: JSON.stringify(true),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
+    new webpack.IgnorePlugin(/^serialport$/),
   ]
 });
 
@@ -218,7 +227,7 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true)
+      new webpack.optimize.OccurrenceOrderPlugin(true),
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
@@ -231,7 +240,10 @@ function create(options) {
         new webpack.optimize.UglifyJsPlugin({
           compressor: {
             warnings: false
-          }
+          },
+          // Don't generate source maps for our minified code, as these are expensive
+          // and we haven't been using them.
+          sourceMap: false
         }),
         new UnminifiedWebpackPlugin(),
       ]

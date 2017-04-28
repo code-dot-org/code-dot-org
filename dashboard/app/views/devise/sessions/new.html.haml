@@ -13,13 +13,14 @@
       .itemblock
         .labelblock
           = t('signin_form.login_username')
-        = f.text_field :login, autofocus: true
+        - email = @email || ''
+        = f.text_field :login, value: email, autofocus: email == ''
 
       -# Password
       .itemblock
         .labelblock
           = t('signin_form.password')
-        = f.password_field :password
+        = f.password_field :password, autofocus: email != ''
         -# Forgot password?
         - if devise_mapping.recoverable?
           &nbsp;

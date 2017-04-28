@@ -746,6 +746,10 @@
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
+        CSF_EF_cs_matters: Computer Science Matters
+        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Prueba la Hora de Code
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
@@ -763,6 +767,11 @@
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
+        csd_weblab_intro_1: Intro to Web Lab - Part 1
+        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
+        csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -846,11 +855,11 @@
         iceage_intro: Hora de Code Era del Hielo - Introducción
         iceage_events: Hora de Code Era del Hielo - Eventos
         iceage_repeat: Hora de Code Era del Hielo - Repetir comando
-        mc_2016_intro: "《我的世界》编程一小时——介绍"
-        mc_2016_loops: "《我的世界》编程一小时——循环"
-        mc_2016_events: "《我的世界》编程一小时——事件"
-        mc_2016_spawn: "《我的世界》编程一小时——生成"
-        mc_2016_congrats: "《我的世界》编程一小时——祝贺！"
+        mc_2016_intro: Hora de Code de Minecraft - Introducción
+        mc_2016_loops: Hora de Code de Minecraft - Bucles
+        mc_2016_events: Hora de Code de Minecraft - Eventos
+        mc_2016_spawn: Hora de Code de Minecraft
+        mc_2016_congrats: Hora de Code de Minecraft - Felicitaciones
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

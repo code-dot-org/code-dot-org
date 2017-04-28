@@ -3,7 +3,7 @@ set :backend, :exec
 
 def cmd(exec, match)
   describe command(exec), sudo: false do
-    its(:stdout) { should match match }
+    its(:stdout) {should match match}
   end
 end
 

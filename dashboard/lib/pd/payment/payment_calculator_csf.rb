@@ -31,7 +31,7 @@ module Pd::Payment
 
       workshop_enrollments = workshop.enrollments.all
       enrollment_ids = teacher_ids.map do |teacher_id|
-        workshop_enrollments.find{|enrollment| enrollment.user_id == teacher_id}
+        workshop_enrollments.find {|enrollment| enrollment.user_id == teacher_id}
       end.compact.map(&:id)
 
       # Return exactly one session (day), with the raw hours from the session.

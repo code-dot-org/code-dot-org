@@ -1,6 +1,7 @@
 ---
 title: Bring Computer Science to Your School (Maryland)
 nav: educate_nav
+theme: responsive
 ---
 
 # Teach Computer Science at Your School

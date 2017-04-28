@@ -1,6 +1,6 @@
 ---
 title: Educator Information
-
+theme: responsive
 ---
 ## Step 1 of 2
 

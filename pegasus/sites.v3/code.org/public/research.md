@@ -2,6 +2,7 @@
 title: Data for Research
 nav: educate_nav
 rightbar: blank
+theme: responsive
 social:
   "og:description": "How students solve puzzles"
   "og:image": "/images/research.png"
@@ -65,7 +66,7 @@ If you're interested in working with us on these questions (and more), sign up b
 
 Our first foray in this space has been a partnership with a Stanford University research team led by [Mehran Sahami](http://robotics.stanford.edu/users/sahami/bio.html). Stanford researcher [Chris Piech](http://stanford.edu/~cpiech/bio/index.html) evaluated the various computer programs that students submitted to two computer programming puzzles from our popular Hour of Code tutorial. The dataset below was generated for the paper [Autonomously Generating Hints by Inferring Problem Solving Policies](http://stanford.edu/~cpiech/bio/papers/inferringProblemSolvingPolicies.pdf) by Piech, C. Mehran S. Huang J and Guibas L.
 
-[![image](/images/fit-600/research.png)](http://stanford.edu/~cpiech/demos/research/blossoms.html)
+[<img src="/images/fit-600/research.png" style="max-width: 100%">](http://stanford.edu/~cpiech/demos/research/blossoms.html)
 
 [<button>See the visualization</button>](http://stanford.edu/~cpiech/demos/research/blossoms.html)
 
@@ -84,7 +85,7 @@ This is a dataset of aggregate user interaction data for logged-in users working
 ### Description of the puzzles
 Schematic of the maze and example solution for [Hoc4](http://studio.code.org/hoc/4) (left) and [Hoc18](http://studio.code.org/hoc/18) (right). The arrow is the agent and the heart is the goal.
 
-<img src="/images/challengeSchematic.png"/ width="600">
+<img src="/images/challengeSchematic.png"/ width="600" style="max-width: 100%">
 
 ### Usage statistics on the puzzles:
 

@@ -1,6 +1,7 @@
 ---
 title: CS in Algebra
 nav: educate_nav
+theme: responsive
 ---
 
 # Computer Science in Algebra
@@ -141,7 +142,7 @@ None of the lessons from the original version of CS in Algebra have been removed
 
 <h2>Videos</h2>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>1. Why is Algebra so Hard?</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/5MbL4jxHTvY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -151,7 +152,7 @@ None of the lessons from the original version of CS in Algebra have been removed
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>2. Modeling and Coordinates</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/KSt_3ovWfjk?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -163,7 +164,7 @@ None of the lessons from the original version of CS in Algebra have been removed
 
 <div style="clear:both"></div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>3. Order of Operations</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/AMFaPKHp3Mg?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -173,7 +174,7 @@ None of the lessons from the original version of CS in Algebra have been removed
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float: left; padding: 10px;">
   <h3>4. Domain and Range</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/88WhYoMxrGw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -184,7 +185,7 @@ None of the lessons from the original version of CS in Algebra have been removed
 </div>
 
 <div style="clear:both"></div>
-<p><a href="algebra/videos"><button>See the complete collection of ten "CS in Algebra" videos</button></a></p>
+<p><a href="algebra/videos"><button>See the complete collection of videos</button></a></p>
 
 ## Try Bootstrap's Hour of Code tutorial
 The Computer Science in Algebra course was inspired by and developed in partnership with [Bootstrap](http://www.BootstrapWorld.org). If you enjoyed CS in Algebra and you want to go further with your students, Bootstrap uses WeScheme instead of block based programming and allows you and your students to explore more complex apps, games or algebraic concepts such as recursion. If you would like to try WeScheme, or you're looking for an Hour of Code tutorial for an algebra class, we recommend this short, 1 hour tutorial designed for beginners.
@@ -194,5 +195,6 @@ The Computer Science in Algebra course was inspired by and developed in partners
 <br/>
 <br/>
 
-![Code logo](algebra/img/codelogo.png) &nbsp;&nbsp; ![Bootstrap logo](algebra/img/bootstrapIconAndLogoSm.png)
+<img src="algebra/img/codelogo.png" style="margin-right: 20px; margin-bottom: 20px;">
+<img src="algebra/img/bootstrapIconAndLogoSm.png" style="max-width: 100%">
 

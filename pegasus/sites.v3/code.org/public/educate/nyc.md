@@ -1,6 +1,7 @@
 ---
 title: Bring Computer Science to Your School (NYC)
 nav: educate_nav
+theme: responsive
 ---
 
 # Teach Computer Science at Your School
@@ -11,7 +12,7 @@ Computer science opens more doors for students than any other discipline in toda
 
 <br />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width:100%" width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Professional development — at no cost to schools
 

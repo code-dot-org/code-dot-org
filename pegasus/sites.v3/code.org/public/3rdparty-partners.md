@@ -1,5 +1,6 @@
 ---
 title: Expanding computer science through partnerships
+theme: responsive
 social:
   "og:title": "Code.org announces 11 new partners to expand computer science"
   "og:description": "Each partner offers a different approach, but they all share one thing: a commitment to adding computer science into the formal curriculum in schools."

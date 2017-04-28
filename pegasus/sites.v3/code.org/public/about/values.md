@@ -1,6 +1,7 @@
 ---
 title: Our Values
 nav: about_nav
+theme: responsive
 ---
 
 # Our core values and how we talk about them:

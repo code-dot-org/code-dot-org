@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { TeacherContentToggle } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import { throwOnConsoleErrors } from '../../util/testUtils';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import React from 'react';
 import $ from 'jquery';
 

@@ -1745,7 +1745,7 @@ cs:
         text: "Pokud používáš dotykovou obrazovku, přejeď prstem nahoru, dolu, doleva a doprava. \nKlikni kamkoli do hry pro použití předmětu před tvým hráčem."
       3:
         image: 'notes/mc_2016_events_3.jpg'
-        text: "Ale co se stane, když předmět použiješ? V Minecraftu můžeš získat z ovcí vlnu, když je ostříháš. Krávy utečou, pokud je uhodíš a popínavé rostliny explodují, když se k nim přiblíš. Tyto reakce se dějí na základě funkce události. Události řeknou tvému programu dávat pozor a čekat na něco až se stane. A když se to stane, provedou akci."
+        text: "Ale co se stane, když předmět použiješ? V Minecraftu můžeš získat z ovcí vlnu, když je ostříháš. Krávy utečou, pokud je uhodíš a creepeři explodují, když se k nim přiblížíš. Tyto reakce se dějí na základě funkce události. Události řeknou tvému programu dávat pozor nebo čekat až se něco stane. A když se to stane, provedou akci."
       4:
         image: 'notes/mc_2016_events_4.jpg'
         text: "A když se to stane, provedou akci. Zatím jsme použili jen jednu událost. Vložením kódu \"Při stvoření\" se spustila akce, když se objevila zvířata nebo když začala hra. Během příštích několika úrovní budeš mít nové možnosti událostí jako jsou \"Při dotyku\", které se spustí, když se dotkneš zvířete. Nebo \"Při použití\", když použiješ předmět. Nebo když chceš, aby zombík zmizel při východu slunce. Vložíš kód \"Při východu slunce\".\n"

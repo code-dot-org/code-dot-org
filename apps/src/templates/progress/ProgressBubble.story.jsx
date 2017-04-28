@@ -17,6 +17,7 @@ export default storybook => {
             status={status}
             url="/foo/bar"
             disabled={false}
+            levelIcon="document"
           />
         )
       })).concat([{
@@ -26,6 +27,7 @@ export default storybook => {
             number={3}
             status={LevelStatus.perfect}
             disabled={false}
+            levelIcon="document"
           />
         )
       }, {
@@ -37,6 +39,7 @@ export default storybook => {
             status={LevelStatus.perfect}
             url="/foo/bar"
             disabled={true}
+            levelIcon="document"
           />
         )
       }])

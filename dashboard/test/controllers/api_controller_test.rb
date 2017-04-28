@@ -2,7 +2,7 @@ require 'test_helper'
 
 # Define this here to ensure that we don't incorrectly use the :pegasus version.
 def slog(h)
-  CDO.slog ({ application: :dashboard }).merge(h)
+  CDO.slog ({application: :dashboard}).merge(h)
 end
 
 class ApiControllerTest < ActionController::TestCase
@@ -21,16 +21,19 @@ class ApiControllerTest < ActionController::TestCase
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
-    @student_1 = create(:follower, section: @section).student_user
-    @student_2 = create(:follower, section: @section).student_user
-    @student_3 = create(:follower, section: @section).student_user
-    @student_4 = create(:follower, section: @section).student_user
-    @student_5 = create(:follower, section: @section).student_user
+
+    # some of our tests depend on sorting of students by name, thus we name them ourselves
+    @students = []
+    5.times do |i|
+      student = create(:user, name: "student_#{i}")
+      @students << student
+      create(:follower, section: @section, student_user: student)
+    end
+    @student_1, @student_2, @student_3, @student_4, @student_5 = @students
 
     flappy = Script.get_from_cache(Script::FLAPPY_NAME)
     @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
-    @student_flappy_1.backfill_user_scripts [flappy]
     @student_flappy_1.reload
   end
 
@@ -164,7 +167,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -172,7 +175,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 2: Second Stage',
+        'stage' => 'Lesson 2: Second Stage',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -180,7 +183,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -278,7 +281,7 @@ class ApiControllerTest < ActionController::TestCase
     updated_at = Time.now
 
     # All students did the LevelGroup.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+    @students.each do |student|
       create :user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
@@ -394,7 +397,21 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
 
-    assert_equal expected_response, JSON.parse(@response.body)
+    response_body = JSON.parse(@response.body)
+    # Since the order of the levelgroup_results with the response isn't defined, we manually
+    # compare the actual and expected responses.
+    # TODO(asher): Generalize this to somewhere where it can be reused.
+    assert_equal 1, response_body.length
+    assert_equal ['stage', 'levelgroup_results'], response_body[0].keys
+    assert_equal expected_response[0]['stage'], response_body[0]['stage']
+    assert_equal expected_response[0]['levelgroup_results'].count,
+      response_body[0]['levelgroup_results'].count
+    expected_response[0]['levelgroup_results'].each do |result|
+      assert response_body[0]['levelgroup_results'].include? result
+    end
+    response_body[0]['levelgroup_results'].each do |result|
+      assert expected_response[0]['levelgroup_results'].include? result
+    end
   end
 
   test "should get surveys for section with script with single page anonymous level_group assessment" do
@@ -429,7 +446,7 @@ class ApiControllerTest < ActionController::TestCase
     updated_at = Time.now
 
     # All students did the LevelGroup, and the free response part of the survey.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+    @students.each_with_index do |student, student_index|
       create :user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
@@ -541,7 +558,7 @@ class ApiControllerTest < ActionController::TestCase
     create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 through student_5 did the survey, just submitting a free response.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+    @students.each_with_index do |student, student_index|
       create(
         :activity,
         user: student,
@@ -556,7 +573,7 @@ class ApiControllerTest < ActionController::TestCase
 
     updated_at = Time.now
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+    @students.each do |student|
       create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
     end
 
@@ -669,7 +686,7 @@ class ApiControllerTest < ActionController::TestCase
     stage_response = stages_response[stage.id.to_s]
     assert_equal 5, stage_response.length, "entry for each student in section"
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
+    @students.each_with_index do |student, index|
       student_response = stage_response[index]
       assert_equal(
         {

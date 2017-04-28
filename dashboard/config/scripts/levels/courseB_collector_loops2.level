@@ -26,10 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Collect all four piles to pass this level.",
+    "instructions": "Get all four piles to pass this level.",
     "instructions_important": "false",
     "min_collected": "4",
-    "markdown_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.\r\n\r\nCollect all four piles to pass this level.",
+    "markdown_instructions": "Move Laurel to the treasure, then use the<xml><block type=\"collector_collect\"/></xml>block to pick it up.\r\n\r\nGet all four piles to pass this level.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": null

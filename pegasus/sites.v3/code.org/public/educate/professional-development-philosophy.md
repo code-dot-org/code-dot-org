@@ -1,6 +1,7 @@
 ---
 title: Professional Development Philosophy
 nav: educate_nav
+theme: responsive
 ---
 
 

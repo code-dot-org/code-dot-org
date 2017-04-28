@@ -76,7 +76,10 @@ experiments.setEnabled = function (key, shouldEnable) {
  */
 experiments.isEnabled = function (key) {
   let enabled = this.getStoredExperiments_()
-    .some(experiment => experiment.key === key);
+    .some(experiment => experiment.key === key) ||
+    !!(window.appOptions &&
+      window.appOptions.experiments &&
+      window.appOptions.experiments.includes(key));
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];

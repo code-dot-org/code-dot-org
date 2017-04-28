@@ -1,6 +1,7 @@
 ---
 title: Jeff Wilke
 nav: about_nav
+theme: responsive
 ---
 # Jeff Wilke
 

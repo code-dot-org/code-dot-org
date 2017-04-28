@@ -10,7 +10,7 @@ video_player: true
 
 Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
 
-If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
@@ -153,13 +153,13 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <div style="float:left; padding:25px; width:33%">
 
-<h4>Apply now for professional learning!</h4>
+<h4>Apply for professional learning!</h4>
 
-We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries! This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
+If you are interested in joining in 2018-19, sign up below to be added to our contact list. This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
 <br><br>
 
-<a href="/educate/professional-learning/cs-discoveries"><button>Apply now!</button></a>
+<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"> <button>Join our contact list</button> </a>
 
 </div>
 
@@ -188,6 +188,9 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 | **Unit 2 - The Internet: Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
 | **Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
 | **Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
+| **Unit 5 - The Internet: Data and Society** | [Lesson plans](https://curriculum.code.org/csd/unit5) | [Code Studio](https://studio.code.org/s/csd5) |
+| **Unit 6 - Programming: The Internet of Things** | [Lesson plans](https://curriculum.code.org/csd/unit6) | [Code Studio](https://studio.code.org/s/csd6) |
+
 
 
 

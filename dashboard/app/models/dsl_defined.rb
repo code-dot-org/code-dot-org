@@ -34,7 +34,7 @@ class DSLDefined < Level
   end
 
   def self.setup(data)
-    level = find_or_create_by({ name: data[:name] })
+    level = find_or_create_by({name: data[:name]})
     level.send(:write_attribute, 'properties', {})
 
     level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties])
@@ -137,6 +137,11 @@ class DSLDefined < Level
 
   def encrypted=(value)
     properties['encrypted'] = value
+  end
+
+  # don't allow markdown in DSL levels unless child class overrides this
+  def supports_markdown?
+    false
   end
 
   private

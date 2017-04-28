@@ -3,12 +3,12 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 # Hash of several common requirements file patterns. Note that not all
 # of these are currently used, but are included for future-proofing.
 REQUIREMENTS = {
-  "requirements.txt" => { cmd: "pip install -r requirements.txt", dir: "./" },
-  "package.json" => { cmd: "yarn", dir: "./apps" },
-  "bower.json" => { cmd: "bower install", dir: "./" },
-  "Gemfile" => { cmd: "bundle install", dir: "./" },
-  "Berksfile" => { cmd: "berks install", dir: "./" },
-  "schema.rb" => { cmd: "rake db:migrate", dir: "./dashboard" },
+  "requirements.txt" => {cmd: "pip install -r requirements.txt", dir: "./"},
+  "package.json" => {cmd: "yarn", dir: "./apps"},
+  "bower.json" => {cmd: "bower install", dir: "./"},
+  "Gemfile" => {cmd: "bundle install", dir: "./"},
+  "Berksfile" => {cmd: "berks install", dir: "./"},
+  "schema.rb" => {cmd: "rake db:migrate", dir: "./dashboard"},
 }
 
 def get_modified_files

@@ -15,11 +15,11 @@ el:
         'Unplug6': 'Έλεγχοι'
         'Artist3': 'Ο Καλλιτέχνης 3'
         'Unplug7': 'Συγγραφή τραγουδιού'
-        'Farmer2': 'Ο Γεωργός 2'
+        'Farmer2': 'Ο Αγρότης 2'
         'Unplug8': 'Αφαίρεση'
         'Artist4': 'Ο Καλλιτέχνης 4'
         'Unplug9': 'Προγραμματισμός Ρελέ'
-        'Farmer3': 'Ο Γεωργός 3'
+        'Farmer3': 'Ο Αγρότης 3'
         'Unplug10': 'Το Διαδίκτυο'
         'Artist5': 'Ο Καλλιτέχνης 5'
         'Unplug11': 'συνοψίζω'
@@ -303,7 +303,7 @@ el:
       name:
         'maze_intro': "Πρόλογος λαβυρίνθου"
         'artist_intro': "Πρόλογος καλλιτέχνη"
-        'farmer_intro': "Πρόλογος γεωργού"
+        'farmer_intro': "Εισαγωγή αγρότη"
         'flappy_intro': "\"Φτερογούλης\" - Εισαγωγικές έννοιες"
         'loop_times': "Πλακίδιο Επανάλαβε για"
         'loop_until': "Πλακίδιο Επανάλαβε μέχρι"
@@ -366,7 +366,7 @@ el:
         'C3_bee_conditionals': 'Συνθήκες της Μέλισσας'
         'C3_maze_conditionals': 'Συνθήκες λαβυρίνθου'
         'C3_artist_nested_loops': 'Φωλιασμένες Επαναλήψεις'
-        'C3_farmer_while': 'Επαναλήψεις με "Όσο.."'
+        'C3_farmer_while': 'Βρόχοι με «Όσο»'
         'C3_bee_nested_loops': 'Φωλιασμένες Επαναλήψεις'
         'C3_bee_debugging': 'Εκσφαλμάτωση της Μέλισσας'
         'C3_bounce': 'Αναπήδηση'
@@ -396,6 +396,10 @@ el:
         'C4_unplugged_forloops': 'Βρόχοι Για'
         'C4_unplugged_parameters': 'Γράφουμε τραγούδια με παραμέτρους'
         'C4_unplugged_binary': 'Δυαδικό'
+        'CSF_EF_cs_matters': 'Computer Science Matters'
+        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_unspotted_bugs': 'Unspotted Bugs'
+        'CSF_zuck_loops_short': 'Repeat Loops'
         'frozen_intro': 'Εισαγωγή στην Ώρα του Κώδικα'
         'frozen_loops': 'Εισαγωγή στους Βρόχους (Επαναλήψεις)'
         'frozen_functions': 'Εισαγωγή στις Συναρτήσεις'
@@ -413,6 +417,11 @@ el:
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
         'csd_gamelab_velocity': 'Velocity'
+        'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
+        'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
+        'csd_weblab_css_1': 'Intro to CSS - Part 1'
+        'csd_weblab_css_2': 'Intro to CSS - Part 2'
+        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'

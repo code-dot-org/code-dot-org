@@ -180,7 +180,7 @@ module ApplicationHelper
     # See also https://github.com/plataformatec/devise/blob/master/app/helpers/devise_helper.rb
     return "" if resource.errors.empty?
 
-    messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+    messages = resource.errors.full_messages.map {|msg| content_tag(:li, msg)}.join
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
       I18n.t(
@@ -226,13 +226,13 @@ module ApplicationHelper
 
   # Check to see if we disabled signin from Gatekeeper
   def signin_button_enabled
-    Gatekeeper.allows('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
+    Gatekeeper.allows('show_signin_button', where: {script_name: @script.try(:name)}, default: true)
   end
 
   # Check to see if the tracking pixel is enabled for this script
   def tracking_pixel_enabled
     return true if @script.nil?
-    Gatekeeper.allows('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
+    Gatekeeper.allows('tracking_pixel_enabled', where: {script_name: @script.name}, default: true)
   end
 
   def page_mode

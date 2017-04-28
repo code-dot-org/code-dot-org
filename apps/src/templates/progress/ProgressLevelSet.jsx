@@ -1,34 +1,14 @@
 import React, { PropTypes } from 'react';
-import FontAwesome from '../FontAwesome';
+import Radium from 'radium';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
-
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
+import { getIconForLevel } from './progressHelpers';
+import ProgressPill from './ProgressPill';
 
 const styles = {
   table: {
     marginTop: 12
-  },
-  stepButton: {
-    // TODO - fixed width isn't great for i18n. likely want to come up with some
-    // way of having this be dynamic, but the same size across all instances
-    width: 110,
-    textAlign: 'center',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
-    borderRadius: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  buttonText: {
-    marginLeft: 10
   },
   nameText: {
     color: color.charcoal
@@ -40,7 +20,7 @@ const styles = {
     letterSpacing: -0.12
   },
   col2: {
-    paddingLeft: 30
+    paddingLeft: 20
   },
   linesAndDot: {
     whiteSpace: 'nowrap',
@@ -80,59 +60,41 @@ const styles = {
  */
 const ProgressLevelSet = React.createClass({
   propTypes: {
-    start: PropTypes.number.isRequired,
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
   },
 
-  getIcon() {
-    const { levels } = this.props;
-    const level = levels[0];
-
-    // TODO - Once we know what peer reviews are going to look like in the
-    // redesign, we'll need add logic for those here.
-
-    if (level.icon) {
-      // Eventually I'd like to have dashboard return an icon type. For now, I'm just
-      // going to treat the css class it sends as a type, and map it to an icon name.
-      const match = /fa-(.*)/.exec(level.icon);
-      if (!match || !match[1]) {
-        throw new Error('Unknown iconType: ' + level.icon);
-      }
-      return match[1];
-    }
-
-    return 'desktop';
-  },
-
   render() {
-    const { name, levels, start, disabled } = this.props;
+    const { name, levels, disabled } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const status = multiLevelStep ? 'multi_level' : levels[0].status;
 
     const url = levels[0].url;
 
-    const lastStep = start + levels.length - 1;
-    let levelNumber = start;
-    if (multiLevelStep) {
-      levelNumber += `-${lastStep}`;
+    let pillText;
+    if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
+      // We explicitly don't want any text in this case
+      pillText = '';
+    } else {
+      pillText = levels[0].levelNumber.toString();
+      if (multiLevelStep) {
+        pillText += `-${levels[levels.length - 1].levelNumber}`;
+      }
     }
 
     return (
       <table style={styles.table}>
         <tbody>
           <tr>
-            <td>
-              <a href={multiLevelStep ? undefined : url}>
-                <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
-                  <FontAwesome icon={this.getIcon()}/>
-                  <div style={{...styles.buttonText, ...styles.text}}>
-                    {i18n.levelN({levelNumber})}
-                  </div>
-                </div>
-              </a>
+            <td style={styles.col1}>
+              <ProgressPill
+                url={multiLevelStep ? undefined : url}
+                status={status}
+                icon={getIconForLevel(levels[0])}
+                text={pillText}
+              />
             </td>
             <td style={styles.col2}>
               <a href={url}>
@@ -153,7 +115,6 @@ const ProgressLevelSet = React.createClass({
               </td>
               <td style={styles.col2}>
                 <ProgressBubbleSet
-                  start={start}
                   levels={levels}
                   disabled={disabled}
                 />
@@ -166,4 +127,4 @@ const ProgressLevelSet = React.createClass({
   }
 });
 
-export default ProgressLevelSet;
+export default Radium(ProgressLevelSet);

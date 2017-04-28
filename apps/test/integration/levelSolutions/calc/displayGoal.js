@@ -1,8 +1,4 @@
-var testUtils = require('../../../util/testUtils');
-
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
-var studioApp = require('@cdo/apps/StudioApp').singleton;
 var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');
 var Equation = require('@cdo/apps//calc/equation.js');

@@ -16,21 +16,21 @@ end
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile'].freeze
 def filter_rubocop(modified_files)
   modified_rb_rake_files = modified_files.select do |f|
-    RUBY_EXTENSIONS.any? {|ext| f.end_with? ext }
+    RUBY_EXTENSIONS.any? {|ext| f.end_with? ext}
   end
   modified_ruby_scripts = modified_files.select do |f|
-    first_line = File.exist?(f) ? File.open(f).first : nil
+    first_line = File.file?(f) ? File.open(f).first : nil
     first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
   end
   modified_ruby_scripts + modified_rb_rake_files
 end
 
 def filter_haml(modified_files)
-  modified_files.select { |f| f.end_with?(".haml") }
+  modified_files.select {|f| f.end_with?(".haml")}
 end
 
 def filter_scss(modified_files)
-  modified_files.select { |f| File.fnmatch(SCSS_GLOB, f) }
+  modified_files.select {|f| File.fnmatch(SCSS_GLOB, f)}
 end
 
 def run(cmd, working_dir)

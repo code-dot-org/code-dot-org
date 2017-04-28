@@ -4,7 +4,7 @@ require 'json'
 
 DIR = '/mnt/backups/'
 FILE = DIR + 'milestone_cache'
-sum_cache = (File.open(FILE, 'r') { |f| Marshal.load(f.read) }) rescue {}
+sum_cache = (File.open(FILE, 'r') {|f| Marshal.load(f.read)}) rescue {}
 today_sum = archive_sum = 0
 results = {}
 
@@ -26,4 +26,4 @@ results[:all] = today_sum + archive_sum # Append existing count.
 
 puts results.to_json
 
-File.open(FILE, "wb") { |f| f.write Marshal.dump(sum_cache) }
+File.open(FILE, "wb") {|f| f.write Marshal.dump(sum_cache)}

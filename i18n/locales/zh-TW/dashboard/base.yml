@@ -12,6 +12,7 @@ zh-TW:
     attributes:
       user:
         name: '顯示名稱'
+        name_example: '顯示名稱<br/>（例如 Cool Coder 或是 Jane S）'
         email: '電子信箱'
         username: '用戶名稱'
         password: '密碼'
@@ -47,11 +48,11 @@ zh-TW:
     submit: '添加提示'
   appname: "Code.org"
   stage: "階段"
-  stage_number: "階段 %{number}"
+  stage_number: "階段 %{number} "
   puzzle: "關卡"
   trophies: "獎盃"
   courses: '課程'
-  unplugged_activity: '不插電的活動'
+  unplugged_activity: '不插電活動'
   of: "／"
   more: "更多"
   less: "更少"
@@ -78,6 +79,7 @@ zh-TW:
     forgot_password: '忘了密碼？'
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
+    not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
   signup_form:
     student_count: '%{count} 名學生已經註冊。'
     teacher_count: '%{count} 名教師已經註冊。'
@@ -110,9 +112,31 @@ zh-TW:
     user_type_student: "學生"
     field_is_required: "必填"
     accept_terms: "你必須同意以建立一個帳戶"
+  school_info:
+    title: '學校資訊（非必填）'
+    school_country: '學校所屬國家'
+    select_school_type: '選擇學校類型'
+    charter: '實驗學校'
+    private: '私立學校'
+    public: '公立學校'
+    homeschool: '在家教育'
+    after_school: '課後學校'
+    other: '其它'
+    state: '州 / 省'
+    district: '行政區'
+    other_district_not_listed: '上面未列出的其它地區'
+    district_name: '地區名稱'
+    school: '學校'
+    other_school_not_listed: '上面未列出的其它學校'
+    school_name: '學校名稱'
+    school_zip: '學校郵遞區號'
+    school_address: '學校地址'
+    school_organization_name: '學校 / 組織名稱'
+    school_organization_zip: '學校 / 組織郵遞區號'
   signin_form:
     title: '已經有帳戶了？登入'
     login: '電子信箱'
+    login_username: '用戶名稱或信箱'
     password: '密碼'
     remember: '記住我'
     submit: '登入'
@@ -128,7 +152,7 @@ zh-TW:
     login: '登入'
     invalid_login: '登入失敗，請再試一次。'
     pair_programming: '我在我的電腦上有夥伴'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "若要進一步瞭解為何你無法看到你的全名，請<a href='%{student_privacy_blog}' target='_blank'>點擊此處</a>。"
   password:
     reset_form:
       title: '忘記了您的密碼嗎？'
@@ -150,6 +174,14 @@ zh-TW:
       這是一個絕對會引起你注意的有趣課程。透過遊戲式的簡易引導，你將學會有關資訊科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐克伯(Mark Zuckerberg)、憤怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
       
       %{name}
+  section:
+    your_section:
+      one: '你的學習小組：'
+      other: '你的學習小組：'
+    code_with_teacher: '%{section_code} - %{teacher_name}'
+    confirm:
+      remove: '你確定要退出這個學習小組？'
+    remove: '（移除學習小組）'
   follower:
     invite_sent: '已發送邀請'
     added_teacher: '%{name} 已成為你的老師'
@@ -163,8 +195,6 @@ zh-TW:
       blank_code: "請輸入學習小組代碼"
       cant_join_own_section: "抱歉, 你不能加入你自己的學習小組。"
     mail:
-      invite_student:
-        subject: "加入%{teacher_name}老師的班級！"
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
   reports:
@@ -234,7 +264,7 @@ zh-TW:
     access_denied: '你沒有使用 %{model}的權限。'
   nav:
     header:
-      finished_hoc: "我已完成我的一小時玩程式課程"
+      finished_hoc: "我完成了一小時玩程式活動"
       sign_in_to_save: '登入以儲存進度'
       free_play:
         playlab: '製作一個 Play Lab App'
@@ -258,7 +288,7 @@ zh-TW:
       navigator: '導航器'
     popup:
       progress_for_user: "%{name} 的進度"
-      progress: '您的進度'
+      progress: '你的學習進度'
       lines: 程式碼總計行數：%{lines}
       close: '關閉'
       mastery: '觀念'
@@ -363,21 +393,24 @@ zh-TW:
     announcement_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、 28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
     announcement_petition_button: "新增你的名字"
     announcement_go_beyond_button: "超越"
+    announcement_apply_now: "Apply now"
     announcement_all: "持續關注我們的教師部落格以追蹤最新特色和更新資訊。<a href='%{teacher_blog_url}' target='_blank'>查看過去公告。</a>"
     announcement_hoc_launch: "超過 180 個國家、數以千計的教師，在 12 月 5-11日開始用一小時玩程式課程來教導計算機科學，期待你幫助我們引進更多的學生。<a href='%{signup_url}' target='_blank'>登錄你舉辦的一小時玩程式活動</a>，讓其他老師知道他們也可以開始教導計算機科學。"
     announcement_mc_launch: "我們最受歡迎的一個教程現在推出續集了！全新的「一小時玩 Minecraft 設計師」，學生們可以自己設置 Minecraft 世界裡的規則，創造出獨一無二的 Minecraft 體驗，並可以將它分享給朋友，在他們的手機上玩玩你打造的世界。趕快與你的班級一起加入「一小時玩程式」活動吧。"
     announcement_how_code_studio: "你不需要有任何教授計算機科學的經驗。Code.org 裡提供了所有學習階段需要的東西，包含了課程、教學計畫、專業有品質的學習程序以及一堆的免費工具。不知道要從哪開始？下載<a href='%{video_download_url}'>這個影片吧</a>！"
     announcement_go_beyond: "超越一小時玩程式，每週和你的學生探索計算機科學概念。Code.org 提供了課程、教學計畫、高品質的專業學習用程式，和一堆超棒的工具給不同年級的人使用&mdash;全部免費 :)。您不需要有任何經驗在課堂教授計算機科學的經驗，</b>接下來只要找尋適合你的學生的課程。</b>"
-    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_teacher_recruitment: "和你一樣的老師們正主導著計算機科學教育運動，你可以將高品質且專業的 K-12 年級程式學習<strong>免費的帶到你的學校</strong>。成為你的學校裡的計算機科學的領頭羊，並申請專業學習。"
+    announcement_teacher_recruitment2: "像你這樣的老師正領先電腦科學教育運動。你可以參加高品質 K-12th 級專業程式學習計畫 <strong>您與您的學校機構完全無需付費</strong> 在電腦科學領域上取得領先，並申請專業學習。國中和高中老師們請3月17日前申請。"
+    announcement_csf_pilot: "<strong>小學教師：</strong> 加入我們的 CS 基礎課程！我們在冬季和春季正在尋找老師來試用更新的 CS 基礎課程。我們非常期盼在 2017 年 8 月的這些更新活動之前收到您的反饋。"
+    announcement_student_privacy: "在 Code.org 上，我們非常注重學生安全，為了保護你的學生的隱私，我們已經在你設定的學習小組登入頁面上做了些修改，以避免顯示全名。雖然這個更新可以降低登入頁面的隱私問題，我們還是希望用戶<strong>不要使用全名作為學生的用戶名稱</strong>。"
+    announcement_apcsp_recruitment: "<strong>CSP 的教師：</strong>你的學生可以在 Code.org 的下一個病毒介紹視頻中被鼓勵參加這個年度的 AP CS Principles 考試。我們將邀請所有 CS Principles 的學生在 Twitter、Instagram或是 Facebook ，上提交一個 10-20 秒的片段，影片內容說明為何要參加 APCSP 考式。最棒的提交內容會被放入我們的推薦影片中，並可以獲得 Code.org 提供的禮物！"
+    announcement_apcsp_recruitment2: "今年的 AP CS Principles 考試有望打破記錄。學生在考試中的參與可能急劇轉變多樣性在 AP 電腦科學中，但我們需要你的説明。鼓勵每個 CS Principles 學生選修 AP CSP 考試，我們會 <a href='%{gift_url}' target='_blank'> 送你一個禮物</a>。學生也可以到我們的 <a href='%{challenge_url}' target='_blank'> #APCSP 視頻的挑戰</a>，鼓勵在全國各地的同好。"
+    announcement_apcsp_recruitment3: "今年的 AP CS Principles考試有望打破記錄。參與 AP 電腦科學考試的學生中可能有極大轉變的多樣性，但我們需要您的幫助。鼓勵每個 CS Principles 學生參與 AP CSP 考試且你將可以贏得 <a href='%{gift_url}' target='_blank'> 一張禮品卡、 一台筆記本電腦或其他很酷的獎品</a> ！分享 <a href='%{video_url}' target='_blank'> 這部影片</a> 所以你的學生可以聽到來自全國各地參加考試的同年紀學生。"
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
-    section_code_not_entered: "請提供 current_section_code。"
     section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"
     current_section_dne: "抱歉， 學習小組 %{current_section_code} 不存在。請輸入其他的學習小組代碼。"
-    students_not_yours: "你不能將學生移動到一個不屬於你的學習小組裡。"
-    stay_enrolled_not_entered: "請提供 stay_enrolled_in_current_section。"
     student_ids_not_entered: "請提供 student_ids。"
     student_not_found: "無法找到其中的一個或多個學生。"
     all_students_must_be_in_current_section: "所有的學生都必須在你的學習小組中。"
@@ -405,15 +438,15 @@ zh-TW:
     copyright: '版權所有'
     more: '更多'
     feedback: '提供回饋'
-    translate: '協助我們翻譯成你的語言'
+    translate: '協助我們翻譯'
     support: '支援'
     support_url: 'http://support.code.org'
     tos_short: '條款'
     tos: '服務條款'
     privacy: '隱私政策'
     secure: '安全版本'
-    report_abuse: '濫用回報'
-    built_on_code_studio: '在 Code Studio 上建立'
+    report_abuse: '檢舉濫用'
+    built_on_code_studio: '創建自 Code Studio'
     make_my_own_app: '製作自己的 app'
     how_it_works: '它是如何運作的'
     try_hour_of_code: '試試「一小時玩程式」！'
@@ -434,9 +467,13 @@ zh-TW:
     upgrade:
       unsupported_message: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}', target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
       link: "繼續學習"
+      applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
+      gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
+      weblab_unsupported_browser: "很抱歉，在這個瀏覽器上讀取 Web Lab 時發生了一些問題，請換個瀏覽器試試，造成不便請見諒。"
+      weblab_unsupported_locale_storage: "很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。"
   slow_loading: '請再等等，這次讀取的時間比較久一點.......'
   try_reloading: '請重新載入頁面'
-  next_stage: '完成 ！繼續邁向下一個階段'
+  next_stage: '完成！繼續下個關卡'
   download_pdf: '觀看教學計畫'
   lesson_plan: '教學計畫'
   view_lesson_plan: '檢視教學計畫'
@@ -481,7 +518,7 @@ zh-TW:
       body: '想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！'
     20-hour:
       title: '速成課程'
-      body: '這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。'
+      body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
       body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
     hoc2014:
       try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
@@ -509,18 +546,18 @@ zh-TW:
       body_short: "如果你沒有電腦，不妨試試這些不插電教學活動。"
   gallery:
     students_drew_these_with_code: "學生是用程式畫出這些圖案的喔！"
-    students_made_these_with_code: "學生是用程式製作這些玩意的喔！"
-    picture_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式畫了 <b>%{count}</b> 張圖片。點擊圖片觀看每個程式是如何運作。"
-    activity_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個app以及圖畫。點擊圖片及螢幕截圖來觀看每個程式是如何運作。"
+    students_made_these_with_code: "學生是用程式做出這些玩意的喔！"
+    picture_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個圖畫。你可以點擊縮圖看看這些程式是如何運作的。"
+    activity_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了 <b>%{count}</b> 個 App 以及圖畫。你可以點擊縮圖看看這些程式是如何運作的。"
     want_to_make_your_own: "想要自己創作嗎？"
-    how_to_save: "在這些教程的最後，單擊「完成」和「儲存」，將你的作品留在藝廊裡。"
+    how_to_save: "在這些教程的最後一關裡單擊「完成」和「儲存」，你創作的作品就會像它們一樣留在藝廊裡。"
     more: "更多 &rarr;"
     caption_by_name_age: "%{name}, %{age} 歲"
     caption_time_ago: "%{time_ago} 前"
     header: "藝廊"
-    header_playlab: "故事和遊戲"
+    header_playlab: "故事與遊戲"
     header_artist: "代碼藝術"
-    report_abuse: "濫用回報"
+    report_abuse: "檢舉濫用"
   landing:
     prerelease: "此課程還在 <span class='betatext'>beta（測試）</span>階段。意思是它不是這個課程的最後版本，它會依據收到的回饋，作出修訂與改善。"
     prerelease_hoc2014: "這個教程還在 <span class='betatext'>beta（測試）</span>階段。它會依據收到的回饋，作出修訂與改善。"
@@ -528,9 +565,9 @@ zh-TW:
     support: "取得協助"
     support_url: "//support.code.org"
     help_resources: "幫助和資源"
-    help_support: "Help and Support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "幫助與支援"
+    documentation: "說明文件"
+    tutorials: "所有教程"
   multi:
     wrong_title: "不正確的答案"
     wrong_body: "答錯囉！別氣餒，再接再厲！"
@@ -625,7 +662,7 @@ zh-TW:
       - 
         american_indian: 美國印地安人/阿拉斯加原住民
       - 
-        other: 其他
+        other: 其它
       - 
         opt_out: 不想說
     submit: "提交"
@@ -685,19 +722,19 @@ zh-TW:
       contact_us: "如果你認為這確實是個錯誤，請<a href='Https://code.org/contact'>聯繫我們</a>。"
       go_to_code_studio: '前往 Code Studio'
       report_abuse_form:
-        intro: '若你發覺程式碼工作室製作出來的程式應用有冒犯性的內容、 威脅、 網路霸淩、 騷擾或侵犯版權的內容，請填寫下面的表格。我們將非常認真地看待你報告的內容，並進行相對應的調查及採取適當的行動。'
+        intro: '若你發覺 Code Studio 製作出來的應用程式中有像是威脅、網路霸淩、騷擾或侵犯版權的內容，請填寫下面的表格。我們非常重視你回報的內容，並會進行相關的調查及採取適當的行動。'
         validation:
           email: '請提供一個電子信箱'
           age: '請指定適用年齡'
           abuse_type: '請說明內容是如何違反服務條款。'
           abuse_detail: '請提供有關您所回報內容的詳細資訊'
-        abusive_url: '被回報的內容所在網址'
+        abusive_url: '要檢舉的網址'
         abuse_type:
-          question: '這個內容哪裡違反了%{link_start}服務條款%{link_end}？'
+          question: '這個內容違反了什麼%{link_start}服務條款%{link_end}？'
           harassment: '恐嚇、霸淩、騷擾'
           offensive: '冒犯性內容'
           infringement: '著作權侵權'
-          other: '其他'
+          other: '其它'
         detail: '依據您所回報的內容，請盡可能提供更詳盡的細節。'
         acknowledge: '通過提交此訊息，代表你已了解所有的處理及保管都將遵循%{link_start_privacy}隱私政策%{link_end}以及%{link_start_tos}服務條款%{link_end}。'
   peer_review:
@@ -729,7 +766,7 @@ zh-TW:
       artist_description: '和小藝術家一起畫出酷炫的圖案！'
       artist_title: '新的繪圖'
       continue_button: '繼續下一個階段'
-      playlab_description: '利用 Play Lab 來創作一個故事或是製作一個遊戲！'
+      playlab_description: '在 Play Lab 上創作故事或是遊戲！'
       playlab_title: '新的 App'
       primary_header: '恭喜你！你完成了 %{stageName}！'
       projects_description: '回顧你現有的一個專案。'
@@ -743,8 +780,8 @@ zh-TW:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: '主要課程'
+    extra_course_content: '額外的課程內容'
   external_links:
     disclaimer: 免責聲明
     leaving_domain: 你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。

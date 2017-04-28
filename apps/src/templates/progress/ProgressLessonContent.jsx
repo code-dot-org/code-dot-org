@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
+import ProgressBubbleSet from './ProgressBubbleSet';
 import { levelType } from './progressTypes';
 import { progressionsFromLevels } from '@cdo/apps/code-studio/progressRedux';
 
@@ -22,20 +23,34 @@ const ProgressLessonContent = React.createClass({
   render() {
     const { description, levels, disabled } = this.props;
     const progressions = progressionsFromLevels(levels);
+
+    let bubbles;
+    if (progressions.length === 1 && !progressions[0].name) {
+      bubbles = (
+        <ProgressBubbleSet
+          levels={progressions[0].levels}
+          disabled={disabled}
+        />
+      );
+    } else {
+      bubbles = (
+        progressions.map((progression, index) => (
+          <ProgressLevelSet
+            key={index}
+            name={progression.name}
+            levels={progression.levels}
+            disabled={disabled}
+          />
+        ))
+      );
+    }
+
     return (
       <div>
         <div style={styles.summary}>
           {description}
         </div>
-        {progressions.map((progression, index) => (
-          <ProgressLevelSet
-            key={index}
-            start={progression.start + 1}
-            name={progression.name}
-            levels={progression.levels}
-            disabled={disabled}
-          />
-        ))}
+        {bubbles}
       </div>
     );
   }

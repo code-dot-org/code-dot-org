@@ -90,7 +90,7 @@ const GameLabView = React.createClass({
           className="fa fa-ellipsis-v"
         />
         <InstructionsWithWorkspace>
-          <CodeWorkspace/>
+          <CodeWorkspace withSettingsCog/>
         </InstructionsWithWorkspace>
       </div>
     );

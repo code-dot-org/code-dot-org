@@ -307,7 +307,7 @@ const SurveyResultsHeader = React.createClass({
             <b>{question['text']}</b>
             {
               thisWorkshop[question['key']].map((answer, j) => {
-                return (
+                return !!(_.trim(answer)) && (
                   <li key={j}>
                     {answer}
                   </li>

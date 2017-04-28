@@ -28,8 +28,8 @@ class Script < ActiveRecord::Base
 
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('absolute_position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
+  has_many :stages, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -94,6 +94,8 @@ class Script < ActiveRecord::Base
     hideable_stages
     peer_reviews_to_complete
     professional_learning_course
+    redirect_to
+    student_detail_progress_view
   )
 
   def self.twenty_hour_script
@@ -359,7 +361,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    script_levels.find { |sl| sl.id == script_level_id.to_i }
+    script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
@@ -392,6 +394,10 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  def text_to_speech_enabled?
+    is_k1? || name == Script::COURSEC_DRAFT_NAME
+  end
+
   def hide_solutions?
     name == 'algebra'
   end
@@ -410,6 +416,10 @@ class Script < ActiveRecord::Base
     %w(course1 course2 course3 course4).include? name
   end
 
+  def k5_draft_course?
+    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
+  end
+
   def csf?
     k5_course? || twenty_hour?
   end
@@ -419,7 +429,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -431,6 +441,8 @@ class Script < ActiveRecord::Base
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
+    elsif name.start_with?('csd')
+      []
     else
       ['playlab', 'artist']
     end
@@ -460,11 +472,11 @@ class Script < ActiveRecord::Base
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
-        }, stages.map{|stage| stage[:scriptlevels]}.flatten]
+        }, stages.map {|stage| stage[:scriptlevels]}.flatten]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |args|
         add_script(*args)
       end
       [added_scripts, custom_i18n]
@@ -550,14 +562,14 @@ class Script < ActiveRecord::Base
       }
       script_level_attributes[:properties] = properties.to_json if properties
       script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
       end || ScriptLevel.create(script_level_attributes) do |sl|
         sl.levels = levels
       end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
-        stage = script.stages.detect{|s| s.name == stage_name} ||
+        stage = script.stages.detect {|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
             script: script,
@@ -640,9 +652,9 @@ class Script < ActiveRecord::Base
             wrapup_video: general_params[:wrapup_video],
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten
+          script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
         )
-        Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
+        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -667,12 +679,37 @@ class Script < ActiveRecord::Base
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
 
-  def self.update_i18n(stages_i18n, metadata_i18n = {})
+  # This method updates scripts.en.yml with i18n data from the scripts.
+  # There are three types of i18n data
+  # 1. Stage names, which we get from the script DSL, and is passed in as stages_i18n here
+  # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
+  # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
+  def self.merge_and_write_i18n(stages_i18n, script_name = '', metadata_i18n = {})
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(stages_i18n){|_, old, _| old}
-    i18n.deep_merge!(metadata_i18n)
-    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
+
+    updated_i18n = update_i18n(i18n, stages_i18n, script_name, metadata_i18n)
+    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + updated_i18n.to_yaml(line_width: -1))
+  end
+
+  def self.update_i18n(existing_i18n, stages_i18n, script_name = '', metadata_i18n = {})
+    if metadata_i18n != {}
+      stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      metadata_i18n['stages'] = {}
+      unless stage_descriptions.nil?
+        JSON.parse(stage_descriptions).each do |stage|
+          stage_name = stage['name']
+          metadata_i18n['stages'][stage_name] = {
+            'description_student' => stage['descriptionStudent'],
+            'description_teacher' => stage['descriptionTeacher']
+          }
+        end
+      end
+      # unlike stages_i18n, we don't expect meta_i18n to have the full tree
+      metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
+    end
+
+    existing_i18n.deep_merge(stages_i18n) {|_, old, _| old}.deep_merge!(metadata_i18n)
   end
 
   def hoc_finish_url
@@ -726,7 +763,8 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       stages: stages.map(&:summarize),
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_stage
+      peerReviewStage: peer_review_stage,
+      student_detail_progress_view: student_detail_progress_view?
     }
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
@@ -735,10 +773,30 @@ class Script < ActiveRecord::Base
     summary
   end
 
+  # Similar to summarize, but returns an even more narrow set of fields, in particular
+  # bypasses stage summaries
+  def summarize_short
+    {
+      name: name,
+      disablePostMilestone: disable_post_milestone?,
+      isHocScript: hoc?,
+      student_detail_progress_view: student_detail_progress_view?
+    }
+  end
+
   def summarize_i18n
-    %w(title description description_short description_audience).map do |key|
+    data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+
+    data['stageDescriptions'] = stages.map do |stage|
+      {
+        name: stage.name,
+        descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
+        descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+      }
+    end
+    data
   end
 
   def self.clear_cache
@@ -758,7 +816,8 @@ class Script < ActiveRecord::Base
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
+      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
+      student_detail_progress_view: script_data[:student_detail_progress_view] || false
     }.compact
   end
 end

@@ -7,13 +7,13 @@ import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
  * particular lesson is visible, or hidden entirely.
  * @param {number} lesson - the lesson we're querying
  * @param {object} state - State of our entire redux store
- * @param {ViewType?} viewAs - Optional param to determine whether the lesson
- *   would be visible if viewing as someone else
+ * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
+ *   for students or teachers
  * @returns {boolean} True if the provided lesson is visible
  */
 export function lessonIsVisible(lesson, state, viewAs) {
   if (!viewAs) {
-    viewAs = state.stageLock.viewAs;
+    throw new Error('missing param viewAs in lessonIsVisible');
   }
 
   // Don't show stage if not authorized to see lockable
@@ -42,4 +42,27 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSection = state.stageLock.stagesBySectionId[currentSectionId];
   const fullyLockedStages = fullyLockedStageMapping(currentSection);
   return !!fullyLockedStages[lessonId];
+}
+
+/**
+ * @returns A friendly name for the icon name (that can be passed to FontAwesome)
+ *   for the given level.
+ */
+export function getIconForLevel(level) {
+  if (level.icon) {
+    // Eventually I'd like to have dashboard return an icon type. For now, I'm just
+    // going to treat the css class it sends as a type, and map it to an icon name.
+    const match = /fa-(.*)/.exec(level.icon);
+    if (!match || !match[1]) {
+      throw new Error('Unknown iconType: ' + level.icon);
+    }
+    return match[1];
+  }
+
+  if (level.isUnplugged) {
+    return 'scissors';
+  }
+
+  // default to desktop
+  return 'desktop';
 }

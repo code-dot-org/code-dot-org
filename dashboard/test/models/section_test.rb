@@ -1,159 +1,180 @@
 require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
-  test "do not attempt to create sections with duplicate random codes" do
-    teacher = create(:teacher)
+  self.use_transactional_test_case = true
+  setup_all do
+    @student = create :student
+    @teacher = create :teacher
+    @section = create :section, teacher: @teacher
 
-    srand 1
-    s1 = Section.create!(user: teacher, name: "section 1")
+    @default_attrs = {user: @teacher, name: 'test-section'}
+  end
 
-    # seed the RNG with the same thing so we get the same "random" numbers
-    srand 1
-    s2 = Section.create!(user: teacher, name: "section 2")
+  test "sections are soft-deleted" do
+    assert_no_change("Section.with_deleted.count") do
+      @section.destroy
+      assert @section.reload.deleted?
+    end
+  end
 
-    assert_not_equal s1.code, s2.code
+  test "destroying section destroys appropriate followers" do
+    delete_time = Time.now - 1.day
+    already_deleted_follower = create :follower, section: @section
+    Timecop.travel(delete_time) do
+      already_deleted_follower.destroy
+    end
+    follower = create :follower, section: @section
 
+    @section.reload.destroy
+
+    assert @section.reload.deleted?
+    assert follower.reload.deleted?
+    assert already_deleted_follower.reload.deleted?
+    assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
+  end
+
+  test "restoring section restores appropriate followers" do
+    old_deleted_follower = create :follower, section: @section
+    Timecop.travel(Time.now - 1.day) do
+      old_deleted_follower.reload.destroy
+    end
+    new_deleted_follower = create :follower, section: @section
+
+    @section.reload.destroy
+    assert @section.reload.deleted?
+    assert new_deleted_follower.reload.deleted?
+    assert old_deleted_follower.reload.deleted?
+
+    Section.with_deleted.find_by_id(@section.id).restore(recursive: true, recovery_window: 5.minutes)
+
+    refute @section.reload.deleted?
+    refute new_deleted_follower.reload.deleted?
+    assert old_deleted_follower.reload.deleted?
+  end
+
+  test "create assigns unique section codes" do
+    sections = 3.times.map do
+      # Repeatedly seed the RNG so we get the same "random" codes.
+      srand 1
+      Section.create!(@default_attrs)
+    end
+
+    assert_equal 3, sections.map(&:code).uniq.count
+  end
+
+  test "create assigns vowelless section codes" do
     letters_without_vowels_regex = /^[A-Z&&[^AEIOU]]{6}$/
-    assert_match letters_without_vowels_regex, s1.code
-    assert_match letters_without_vowels_regex, s2.code
 
-    # now do it again
-    srand 1
-    s3 = Section.create!(user: teacher, name: "section 3")
-    assert_not_equal s1.code, s3.code
-    assert_not_equal s2.code, s3.code
-
-    assert_match letters_without_vowels_regex, s3.code
+    3.times do
+      section = create :section
+      assert_match letters_without_vowels_regex, section.code
+    end
   end
 
   test 'name is required' do
-    section = Section.new user: create(:teacher)
-    refute section.valid?
-    assert_equal ['Name is required'], section.errors.full_messages
+    assert_does_not_create(Section) do
+      section = Section.new user: @teacher
+      refute section.valid?
+      assert_equal ['Name is required'], section.errors.full_messages
+    end
   end
 
   test 'user is required' do
-    section = Section.new name: 'a section'
-    refute section.valid?
-    assert_equal ['User is required'], section.errors.full_messages
+    assert_does_not_create(Section) do
+      section = Section.new name: 'a section'
+      refute section.valid?
+      assert_equal ['User is required'], section.errors.full_messages
+    end
   end
 
   test "user must be teacher" do
-    teacher = create(:teacher)
-    student = create(:student)
+    assert_creates(Section) do
+      Section.create @default_attrs
+    end
 
-    teacher_section = Section.create(user: teacher, name: "a section")
-    assert teacher_section.persisted?
-
-    student_section = Section.create(user: student, name: "a section")
-
-    refute student_section.persisted?
-    assert_equal ["User must be a teacher"], student_section.errors.full_messages
+    assert_does_not_create(Section) do
+      student_attrs = @default_attrs.merge(user: @student)
+      student_section = Section.create student_attrs
+      refute student_section.valid?
+      assert_equal ["User must be a teacher"], student_section.errors.full_messages
+    end
   end
 
   test "can create section with duplicate name" do
-    teacher = create(:teacher)
-
-    section = Section.create(user: teacher, name: "a section")
-    assert section.persisted?
-
-    duplicate_section = Section.create(user: teacher, name: "a section")
-    assert duplicate_section.persisted?
+    assert_difference -> {Section.count}, 2 do
+      2.times do
+        Section.create! @default_attrs
+      end
+    end
   end
 
-  test "cannot destroy section with students" do
-    teacher = create(:teacher)
-    follower = create(:follower, user: teacher)
-
+  test "can destroy section with students" do
+    follower = create :follower
     section = follower.section
 
-    refute section.destroy
-    assert Section.exists?(section.id)
+    assert section.destroy
+    refute Section.exists?(section.id)
+    refute Follower.exists?(follower.id)
   end
 
   test "can destroy section without students" do
-    section = create(:section)
+    assert @section.destroy
 
-    assert section.destroy
-
-    refute Section.exists?(section.id)
+    refute Section.exists?(@section.id)
   end
 
   test 'add_student adds student to section' do
-    section = create :section
-    student = create :student
-
-    # even when the student is in another section from a different teacher
-    create(:section).add_student student
-
     assert_creates(Follower) do
-      section.add_student student
+      @section.add_student @student
     end
-    assert section.students.exists?(student.id)
-    assert_equal 2, Follower.where(student_user_id: student.id).count
-  end
-
-  test 'add_student in another section from the same teacher moves student' do
-    teacher = create :teacher
-    student = create :student
-    original_section = create :section, user: teacher
-    original_section.add_student student
-    new_section = create :section, user: teacher
-
-    # Initially, student is in original_section
-    assert original_section.students.exists?(student.id)
-    refute new_section.students.exists?(student.id)
-
-    assert_does_not_create(Follower) do
-      new_section.add_student student
-    end
-
-    # Verify student has been moved to new_section
-    refute original_section.students.exists?(student.id)
-    assert new_section.students.exists?(student.id)
+    assert @section.students.exists?(@student.id)
   end
 
   test 'add_student is idempotent' do
-    section = create :section
-    student1 = create :student
-    student2 = create :student
-
     2.times do
-      section.add_student student1, move_for_same_teacher: true
-      section.add_student student2, move_for_same_teacher: false
+      @section.add_student @student
     end
 
-    assert_equal 2, section.followers.count
-    assert_equal [student1.id, student2.id], section.followers.all.map(&:student_user_id)
+    assert_equal 1, @section.followers.count
+    assert_equal [@student.id], @section.followers.all.map(&:student_user_id)
   end
 
-  test 'add_student with move_for_same_teacher: false does not move student' do
-    # This option is used for pd-workshop sections.
-    # A workshop attendee, unlike students in a classroom section, can remain enrolled
-    # in multiple sections owned by the same user (i.e. workshop organizer).
-    organizer = create :teacher
-    attendee = create :teacher
-    original_section = create :section, user: organizer
-    original_section.add_student attendee
-    new_section = create :section, user: organizer
+  test 'add student undeletes existing follower' do
+    follower = create :follower, section: @section, student_user: @student
+    follower.destroy
 
-    # Initially, student is in original_section
-    assert original_section.students.exists?(attendee.id)
-    refute new_section.students.exists?(attendee.id)
-
-    assert_creates(Follower) do
-      new_section.add_student attendee, move_for_same_teacher: false
+    assert_no_change('Follower.with_deleted.count') do
+      assert_creates(Follower) do
+        @section.add_student @student
+      end
     end
+    refute follower.reload.deleted?
+  end
 
-    # Verify student is in both sections
-    assert original_section.students.exists?(attendee.id)
-    assert new_section.students.exists?(attendee.id)
+  test 'add_and_remove_student moves enrollment' do
+    old_section = create :section
+    new_section = create :section
+    student = (create :follower, section: old_section).student_user
+    new_section.add_and_remove_student(student, old_section)
+
+    followers = Follower.with_deleted.where(student_user: student).all
+
+    assert_equal 2, followers.count
+    assert_equal old_section, followers.first.section
+    assert followers.first.deleted?
+    assert_equal new_section, followers.second.section
+  end
+
+  test 'add_and_remove_student noops unless old follower is found' do
+    @section.add_and_remove_student(@student, create(:section))
+
+    assert_equal 0, Follower.where(student_user: @student).count
   end
 
   test 'section_type validation' do
     section = create :section
-    section.section_type = 'invalid_section_type'
 
+    section.section_type = 'invalid_section_type'
     refute section.valid?
     assert_equal 1, section.errors.count
     assert_equal 'Section type is not included in the list', section.errors.full_messages.first
@@ -178,7 +199,7 @@ class SectionTest < ActiveSupport::TestCase
     def verify(actual, expected)
       section = create :section
       actual.each do |name|
-        section.add_student(create(:student, name: name))
+        section.add_student create(:student, name: name)
       end
       result = section.name_safe_students.map(&:name)
       assert_equal expected, result

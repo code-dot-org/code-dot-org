@@ -7,7 +7,8 @@ require 'time'
 REPO_DIR = File.expand_path('../../', __FILE__).freeze
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).freeze
 
-#This file contains the time of the last completed test run, successful or unsuccessful
+# This file contains the time of the last completed test run, successful or
+# unsuccessful.
 LEVELBUILDER_CI_LAST_RUN_FILENAME = 'levelbuilder_ci_last_run'.freeze
 
 Dir.chdir(REPO_DIR)
@@ -39,7 +40,8 @@ puts "Modifications to levelbuilder files detected - running testing"
 
 Dir.chdir(REPO_DIR + '/dashboard')
 
-#This test suite can be modified - we can test a smaller set or add UI tests here
+# This test suite can be modified - we can test a smaller set or add UI tests
+# here.
 test_result = system 'rake seed:incremental'
 
 Dir.chdir REPO_DIR

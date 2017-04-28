@@ -1,5 +1,6 @@
 ---
-Title: Print Certificates
+title: Print Certificates
+theme: responsive
 allow_post: true
 <% if request.post? %>
 layout: page_print
@@ -27,7 +28,7 @@ theme: none
   %form{:method=>"post", :action=>'/custom-certificates'}
     -if course
       %input{:type=>"hidden", :name=>'course', :value=>course}
-    %textarea{:name=>'names', :rows=>"10", :cols=>"80"}
+    %textarea{:name=>'names', :rows=>"10", :cols=>"40"}
       -if request.params['names']
         - request.params['names'].each do |name|
           =CGI::unescape(name)

@@ -43,18 +43,27 @@ class Karel < Maze
 
   # If type is "Karel" return a 3 entry hash with keys 'maze', 'initial_dirt',
   # and 'raw', the keys map to 2d arrays blockly can render.
-  def self.parse_maze(maze_json)
+  def self.parse_maze(maze_json, min_total_value = nil)
+    total_value = 0
     maze_json = maze_json.to_json if maze_json.is_a? Array
     maze = JSON.parse(maze_json)
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
-        unless cell.is_a?(Hash) && cell.key?('tileType')
+        next unless cell.is_a?(Hash)
+        unless cell.key?('tileType')
           raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
+        end
+        if cell.key?('value')
+          total_value += cell['value']
         end
       end
     end
 
-    { 'serialized_maze' => maze_json }
+    if min_total_value && total_value < min_total_value
+      raise ArgumentError.new("Minimum to Collect is set to #{min_total_value} but there are only #{total_value} items on the map")
+    end
+
+    {'serialized_maze' => maze_json}
   end
 
   def toolbox(type)

@@ -50,7 +50,7 @@ ruby
       end
     end
 
-    Level.where(name: level_names).sort_by{ |l| level_names.index(l.name) }
+    Level.where(name: level_names).sort_by {|l| level_names.index(l.name)}
   end
 
   class LevelGroupPage
@@ -128,7 +128,7 @@ ruby
       end.compact.shuffle
 
       answers = sublevel.properties.try(:[], "answers")
-      answer_texts = answers.map{|answer| answer["text"]} if answers
+      answer_texts = answers.map {|answer| answer["text"]} if answers
 
       {
         type: sublevel.type.underscore,

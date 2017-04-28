@@ -3,4 +3,4 @@
 
 require_relative '../../config/environment'
 
-Level.all.select {|l| l.is_a?(Blockly) && l.skin == 'flappy'}.each{|l| l.properties = {skin: 'flappy'}; l.save!}
+Level.all.select {|l| l.is_a?(Blockly) && l.skin == 'flappy'}.each {|l| l.properties = {skin: 'flappy'}; l.save!}

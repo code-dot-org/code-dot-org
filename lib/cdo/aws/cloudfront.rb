@@ -4,6 +4,7 @@ require 'securerandom'
 require 'aws-sdk'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'active_support/core_ext/object/try'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -26,13 +27,13 @@ module AWS
     #   CloudFront does not allow the same domain to be used by multiple distributions.
     # - `origin`: default origin server endpoint. This should point to the load balancer domain.
     # - `log`: `log.bucket` and `log.prefix` specify where to store CloudFront access logs (or disable if `log` is not provided).
-    # - `ssl_cert`: IAM server certificate name for a SSL certificate previously uploaded to AWS.
+    # - `ssl_cert`: ACM domain name for an SSL certificate previously uploaded to AWS.
     #   If not provided, the default *.cloudfront.net SSL certificate is used.
     CONFIG = {
       pegasus: {
-        aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map{|x| CDO.canonical_hostname("#{x}.code.org")},
+        aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map {|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
-        # IAM server certificate name
+        # ACM domain name
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
@@ -51,7 +52,7 @@ module AWS
       hourofcode: {
         aliases: [CDO.hourofcode_hostname],
         origin: "#{ENV['RACK_ENV']}-origin.hourofcode.com",
-        ssl_cert: 'hourofcode-cloudfront',
+        ssl_cert: 'hourofcode.com',
         log: {
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-hourofcode-cdn"
@@ -71,15 +72,15 @@ module AWS
     # Manually sorts the array-types in the distribution config object,
     # so we can compare against the existing config to detect whether an update is needed.
     def self.sort_config!(config)
-      config[:cache_behaviors][:items].sort_by!{|item| item[:path_pattern]}
-      config[:cache_behaviors][:items].each do |item|
+      config[:cache_behaviors][:items].sort_by! {|item| item[:path_pattern]}
+      config[:cache_behaviors][:items].concat([config[:default_cache_behavior]]).each do |item|
         item[:forwarded_values][:headers][:items].sort!
         name = item[:forwarded_values][:cookies][:whitelisted_names]
         name[:items].sort! if name
       end
       config[:aliases][:items].sort!
-      config[:origins][:items].sort_by!{|o| o[:id]}
-      config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
+      config[:origins][:items].sort_by! {|o| o[:id]}
+      config[:custom_error_responses][:items].sort_by! {|e| e[:error_code]}
     end
 
     # File path for caching mappings from CloudFront Distribution id to alias CNAMEs.
@@ -119,7 +120,7 @@ module AWS
       invalidations.map do |app, id, invalidation|
         cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
           waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
-          waiter.before_wait { |_| puts "Waiting for #{app} cache invalidation.." }
+          waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
         end
         puts "#{app} cache invalidated!"
       end
@@ -170,7 +171,7 @@ module AWS
       ids.map do |app, id|
         cloudfront.wait_until(:distribution_deployed, id: id) do |waiter|
           waiter.max_attempts = 60 # wait up to an hour for CloudFront distribution to deploy
-          waiter.before_wait { |_| puts "Waiting for #{app} distribution to deploy.." }
+          waiter.before_wait {|_| puts "Waiting for #{app} distribution to deploy.."}
         end
         puts "#{app} distribution deployed!"
       end
@@ -207,7 +208,7 @@ module AWS
           IO.write(alias_cache, JSON.pretty_generate(out))
         end
       end
-      mapping.select{ |_, v| v.include? hostname }.keys.first
+      mapping.select {|_, v| v.include? hostname}.keys.first
     end
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.
@@ -216,10 +217,14 @@ module AWS
     def self.config(app, reference = nil)
       behaviors, cloudfront, config = get_app_config(app, method(:cache_behavior))
       ssl_cert = cloudfront[:ssl_cert]
-      # Lookup IAM Certificate ID from server certificate name
-      server_certificate_id = ssl_cert && Aws::IAM::Client.new.
-        get_server_certificate(server_certificate_name: ssl_cert).
-        server_certificate.server_certificate_metadata.server_certificate_id
+      # Lookup ACM Certificate ARN from server certificate name
+      acm = Aws::ACM::Client.new
+      certificate_arn = acm.
+        list_certificates(certificate_statuses: ['ISSUED']).
+        certificate_summary_list.
+        select {|cert| cert.domain_name == "*.#{ssl_cert}" || cert.domain_name == ssl_cert}.
+        max_by {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate.not_after}.
+        try(:certificate_arn)
       {
         aliases: {
           quantity: cloudfront[:aliases].length, # required
@@ -285,9 +290,9 @@ module AWS
         price_class: 'PriceClass_All', # accepts PriceClass_100, PriceClass_200, PriceClass_All
         enabled: true, # required
         viewer_certificate: ssl_cert ? {
-          certificate: server_certificate_id,
-          iam_certificate_id: server_certificate_id,
-          certificate_source: 'iam',
+          acm_certificate_arn: certificate_arn,
+          certificate: certificate_arn,
+          certificate_source: 'acm',
           ssl_support_method: 'sni-only', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {

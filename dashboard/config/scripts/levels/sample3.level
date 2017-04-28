@@ -30,7 +30,8 @@
     "ideal": "4",
     "honey_goal": "7",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample3_1\",\r\n  \"callout_text\": \"This is also only one available\",\r\n  \"element_id\": \"#callThis\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Try writing the code once and looping it seven times:\\n\\n![](https://images.code.org/2a116e75e31ee3a8a8683349c9460286-image-1464307689813.gif)\",\r\n  \"hint_id\": \"sample3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Try writing the code once and looping it seven times:\\n\\n![](https://images.code.org/2a116e75e31ee3a8a8683349c9460286-image-1464307689813.gif)\",\r\n  \"hint_id\": \"sample3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Level #3 transfer of immediate instruction to something just off of what they did last time",

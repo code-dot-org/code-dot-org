@@ -52,7 +52,7 @@ markdown <<MARKDOWN
 <p>Then we can add that into our existing code like this:</p>
 </div>
 
-	    var diffColor = "rgb(250, 175, 20)";					  // make different color
+	    var diffColor = rgb(250, 175, 20);					  // make different color
 	--> var randButtonId = "button"+randomNumber(1,4);  		  // make a random button ID
 	    setProperty(randButtonId, "background-color", diffColor); // set bgcolor of randomButtonId to diffColor
 

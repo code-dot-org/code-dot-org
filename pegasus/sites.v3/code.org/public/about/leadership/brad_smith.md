@@ -1,6 +1,7 @@
 ---
 title: Brad Smith
 nav: about_nav
+theme: responsive
 ---
 # Brad Smith
 

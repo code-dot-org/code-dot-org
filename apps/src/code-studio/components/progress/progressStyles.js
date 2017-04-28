@@ -22,17 +22,6 @@ const baseButtonStyle = {
 };
 
 const progressStyles = {
-  dotIcon: {
-    borderColor: 'transparent',
-    fontSize: 24,
-    verticalAlign: -4,
-    color: color.white,
-    textShadow: createOutline(color.lighter_gray),
-    ':hover': {
-      color: color.white,
-      backgroundColor: 'transparent'
-    }
-  },
   baseButton: baseButtonStyle,
   blueButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.cyan,

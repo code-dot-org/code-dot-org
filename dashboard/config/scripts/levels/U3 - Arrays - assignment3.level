@@ -53,7 +53,8 @@
     "start_blocks": "var myNumbers = [];\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\n\r\nconsole.log(\"Original numbers: \" + myNumbers);\r\n\r\n// Add your code here\r\n\r\nconsole.log(\"Final numbers: \" + myNumbers);",
     "slider_speed": "1",
     "encrypted_examples": "GkNvjQeaJ8oJPwOJD583hok9v4624cOWjTPRkFH3V4PH4zfI1w+195wa7bT8\npi59\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

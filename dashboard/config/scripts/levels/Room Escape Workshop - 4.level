@@ -8,8 +8,19 @@
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "declareAssign_x_promptNum": null,
-      "setPosition": null
+      "setPosition": {
+        "params": [
+          "id",
+          "0",
+          "0"
+        ],
+        "paletteParams": [
+          "id",
+          "x",
+          "y"
+        ]
+      },
+      "declareAssign_x_prompt": null
     },
     "edit_code": true,
     "embed": "false",
@@ -50,11 +61,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Setting Up the Safe\r\n\r\nYou have generated a secret code and made it so users can navigate to the second room. Lets give the user the ability to enter the secret code when they click on the sage\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for the safe image\r\n* Inside the `onEvent` block add a `prompt` block\r\n\t* On the left set the name of the variable to something like guess \r\n    * On the right change the prompt to ask the user to enter the code",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Setting Up the Safe\r\n\r\nYou have generated a secret code and made it so users can navigate to the second room. Lets give the user the ability to enter the secret code when they click on the safe\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block\r\n\t* Pick the ID for the safe\r\n* Inside the `onEvent` block add a <img src=\"https://images.code.org/c0964a8543728d018d5d9583319e22b9-image-1491060910093.34.36 AM.png\" style=\"width:300px\"> block\r\n\t* On the left side change the *x* (the name of the variable) to be *guess* \r\n    * On the right side change *\"Enter a value\"* (the prompt to ask the user) to *\"Enter the code\"*",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

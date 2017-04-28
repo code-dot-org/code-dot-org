@@ -62,7 +62,7 @@
       "led.off": null,
       "buzzer.frequency": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.play": null
     },
     "edit_code": true,

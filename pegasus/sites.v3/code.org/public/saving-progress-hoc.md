@@ -1,5 +1,6 @@
 ---
 title: Saving progress in HOC tutorials
+theme: responsive
 ---
 
 # Saving Progress in Hour of Code tutorials (December 3 - 11)

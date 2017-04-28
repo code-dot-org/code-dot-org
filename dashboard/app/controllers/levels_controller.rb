@@ -98,7 +98,7 @@ class LevelsController < ApplicationController
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.save!
-    render json: { redirect: level_url(@level) }
+    render json: {redirect: level_url(@level)}
   end
 
   # PATCH/PUT /levels/1
@@ -112,7 +112,7 @@ class LevelsController < ApplicationController
       render json: @level.errors, status: :unprocessable_entity
     elsif @level.update(level_params)
       redirect = params["redirect"] || level_url(@level, show_callouts: 1)
-      render json: { redirect: redirect }
+      render json: {redirect: redirect}
     else
       render json: @level.errors, status: :unprocessable_entity
     end
@@ -129,7 +129,7 @@ class LevelsController < ApplicationController
     if type_class <= Grid
       default_tile = type_class == Karel ? {"tileType": 0} : 0
       start_tile = type_class == Karel ? {"tileType": 2} : 2
-      params[:level][:maze_data] = Array.new(8){Array.new(8){default_tile}}
+      params[:level][:maze_data] = Array.new(8) {Array.new(8) {default_tile}}
       params[:level][:maze_data][0][0] = start_tile
     end
     if type_class <= Studio
@@ -150,7 +150,7 @@ class LevelsController < ApplicationController
       render(status: :not_acceptable, text: invalid) && return
     end
 
-    render json: { redirect: edit_level_path(@level) }
+    render json: {redirect: edit_level_path(@level)}
   end
 
   # DELETE /levels/1
@@ -186,6 +186,8 @@ class LevelsController < ApplicationController
         @game = Game.craft
       elsif @type_class == Weblab
         @game = Game.weblab
+      elsif @type_class == CurriculumReference
+        @game = Game.curriculum_reference
       end
       @level = @type_class.new
       render :edit
@@ -265,6 +267,8 @@ class LevelsController < ApplicationController
       :dsl_text,
       :encrypted,
       :published,
+      :title,
+      :description,
       {poems: []},
       {concept_ids: []},
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},

@@ -196,7 +196,7 @@
   just_did_course4: "Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo"
   just_did_accelerated: "Ho appena completato il Corso Rapido - Provalo! Su @codeorg @programmafuturo"
   twitter_teach_cs: "9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/."
-  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
+  twitter_cs_foundational: "L'apprendimento dell'informatica è fondamentale per ogni studente.\nhttps://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Fai l'Ora del Codice"
   beyond_hoc: "Dopo l'Ora del Codice"
   what_gender: "Di che sesso sei?"
@@ -372,8 +372,8 @@
   class_submission_level_college: "Università"
   class_submission_level_vocational: "Formazione professionale"
   class_submission_languages_other: "Altre lingue"
-  videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
-  careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
+  videos_more: "Ulteriori<a href='%{inspiring_videos_playlist}'> video ispiratori</a> con modelli di ruolo e celebrità"
+  careers_page_more: "Ulteriori <a href='%{careers_url}' target='_blank'> video ispiratori</a> con professionisti in settori tecnologici"
   playlab_choose_theme: "Scegli il tema del tuo Laboratorio"
   playlab_classic_title: "Classico"
   playlab_gumball_title: "Lo straordinario mondo di Gumball"
@@ -404,47 +404,47 @@
   minecraft_no_internet: "Non hai Internet?"
   minecraft_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un avventura con Minecraft\"."
   minecraft_subtitle: "L'Ora del Codice con Minecraft"
-  sports_page_title: "Hour of Code Sports"
-  sports_og_title: "Push yourself. Anybody can learn."
-  sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
-  sports_title: "Code your own sports game"
+  sports_page_title: "Ore sportive di codice"
+  sports_og_title: "Spingere se stessi. Chiunque può imparare."
+  sports_og_description: "Campioni e medalists dell'oro vi incoraggiamo a provare l'ora di codice. Codifica il tuo gioco sportivo."
+  sports_title: "Programma il tuo gioco di sport"
   sports_watch_video: "Guarda il video"
-  sports_video_title: "Push yourself. Anybody can learn."
-  sports_select_theme: "Select your tutorial theme"
-  sports_basketball_title: "Make a basketball game"
+  sports_video_title: "Spingere se stessi. Chiunque può imparare."
+  sports_select_theme: "Seleziona il tuo tema tutorial"
+  sports_basketball_title: "Crea una partita di basket"
   sports_all_sports_title: "Mix and match across sports"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
-  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
-  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
-  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
-  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
-  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
-  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
-  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
-  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
-  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
-  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
-  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
-  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
-  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
+  sports_featured_athletes: "Guarda gli atleti consigliati"
+  sports_athletes_title: "Atleti consigliati"
+  sports_athlete_Draymond: "Draymond Green, medaglia d'oro olimpica e campione NBA, Golden State Warriors"
+  sports_athlete_Serena: "Serena Williams, medaglia d'oro olimpica e campionessa di Tennis"
+  sports_athlete_Russell: "Russell Okung, campione del Super Bowl e giocatore NFL, Denver Broncos"
+  sports_athlete_Sergio: "Sergio Ramos, campione del mondo e giocatore di calcio/Futbol, Real Madrid"
+  sports_athlete_Sue: "Sue Bird, medaglia d'oro olimpica e campione WNBA, Seattle Storm"
+  sports_athlete_Alana: "Alana Beard, medaglia d'oro e WNBA All-Star, Los Angeles Sparks"
+  sports_athlete_Angelo: "Angelo Matthews, capitano della squadra di Sri Lanka Cricket"
+  sports_athlete_Nneka: "Nneka Ogwumike, medaglia d'oro, campione WNBA e 2016 MVP, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Carmelo Anthony, Medalist olimpico dell'oro e NBA All-Star, New York Knicks"
+  sports_athlete_Marco: "Marco Belinelli, campione NBA, Charlotte Hornets"
+  sports_athlete_Neymar: "Neymar Jr., medaglia d'oro olimpica e giocatore di calcio/Futbol, FC Barcelona e squadra nazionale Brasile"
+  sports_athlete_Sarah: "Sarah Quita Offringa, campione di windsurf"
+  sports_athlete_Marcelo: "Marcelo, campione del calcio/Futbol, Real Madrid e squadra nazionale Brasile"
+  sports_athlete_Erika: "Erika Olivera, campione maratoneta"
   sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
-  sports_athlete_Chris: "Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami Heat"
-  sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
+  sports_athlete_Chris: "Chris Bosh, medaglia d'oro olimpica e campione NBA, Miami Heat"
+  sports_athlete_Harrison: "Harrison Barnes, medaglia d'oro olimpica e campione NBA, Dallas Mavericks"
   watch_inspirational_videos: "Prima di iniziare, guarda uno di questi video stimolanti"
   video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Convinci una ragazza a partecipare"
-  video_title_cs_intro: "Computer Science intro"
-  video_title_schools_dont_teach: "What Most Schools Don't Teach"
-  video_title_obama: "President Obama on computer science"
-  video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
-  video_title_anybody_can_learn: "Anybody Can Learn"
-  video_title_draymond_green: "Hour of Code with Draymond Green"
-  video_title_russell_okung: "Hour of Code with Russell Okung"
-  video_title_real_madrid: "Hour of Code with Real Madrid"
-  video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
-  video_title_chris_bosh: "Chris Bosh on Computer Science"
+  video_title_cs_intro: "Intro Informatica"
+  video_title_schools_dont_teach: "Che cosa non insegnano la maggior parte delle Scuole"
+  video_title_obama: "Il Presidente Obama a proposito dell'informatica"
+  video_title_hoc_is_here: "L'Ora del Codice è Qui - Chiunque Può Imparare"
+  video_title_anybody_can_learn: "Chiunque può imparare"
+  video_title_draymond_green: "Ora di codice con Draymond Green"
+  video_title_russell_okung: "Ora di codice con Russell Okung"
+  video_title_real_madrid: "Ora di codice con il Real Madrid"
+  video_title_marco_belinelli: "Ora di codice con Marco Belinelli"
+  video_title_chris_bosh: "Chris Bosh a proposito dell'informatica"
   video_1min: "1 min"
   video_2min: "2 min"
   video_5min: "5 min"
@@ -459,6 +459,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} insegnanti cercano volontari appassionati di formazione informatica per aiutarli nella loro Ora del Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti a loro."
   volunteer_engineer_submission_intro_background: "L'Ora del Codice è un movimento globale per far provare un'ora di introduzione all'informatica, che raggiunge decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana di Educazione all'Informatica, dal 7-13 Dicembre 2015."
   volunteer_engineer_submission_intro_recruit: 'Questi insegnanti cercano <span style="font-family: ''Gotham 7r'', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham 7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell''informatica (che potrebbe essere fatto con una chat video). Se non siete in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento dell''Ora del Codice.'
+  volunteer_engineer_submission_intro_guide: "Scopri di più riguardo il nostro <a href=\"%{volunteer_guide}\">programma volontari</a>."
   volunteer_engineer_submission_intro_signup: "Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class=\"form-required-field\">*</span> sono obbligatori."
   volunteer_engineer_submission_intro_links: "Non vuoi offrirti volontario? <a href=\"%{learn_more}\">Scopri di più</a> riguardo organizzare il tuo evento dell' Ora del Codice e trova un volontario locale sulla nostra <a href=\"%{volunteer_local}\">Mappa Volontari</a>."
   volunteer_engineer_submission_update_information: "Aggiorna le tue informazioni"
@@ -487,6 +488,7 @@
   volunteer_engineer_submission_field_email_placeholder: "Indirizzo di posta elettronica"
   volunteer_engineer_submission_final_paragraph: "Sarai segnalato su una mappa così da poter essere contattato dagli insegnanti locali per l'Ora di Codice o altre opportunità di volontariato. Non comunicheremo MAI il tuo indirizzo di posta elettronica e l'indirizzo esatto. Le altre informazioni invece (inclusa la localizzazione approssimata) saranno pubblicamente accessibili dagli insegnanti locali."
   volunteer_engineer_submission_checkbox_contact: 'Sono d''accordo che gli insegnanti possano contattarmi per richiedere attività di volontariato (Nota: il tuo indirizzo di posta elettronica non sarà condiviso)'
+  volunteer_engineer_submission_checkbox_age_18_plus: "Certifico di avere più di 18 anni."
   volunteer_engineer_submission_submit: "Invia"
   volunteer_engineer_submission_thankyou: "Grazie per il l'attività di volontariato per l'Ora di Codice. Pre prepararsi all'Ora del Codice e reclutare altri appassionati, <a href=\"%{url}\"> per saperne di più.</a>"
   volunteer_engineer_submission_commitment_uncertain: "Incerto"
@@ -669,7 +671,8 @@
   dashboard_students_auto_generated: "Auto-generata"
   dashboard_students_reset_secret: "Reimposta la password"
   dashboard_students_reset_password: "Reimposta la password"
-  dashboard_students_share_section: 'Condividi la pagina di accesso di questa classe con i tuoi studenti:'
+  dashboard_students_share_section: "Condividi la pagina di accesso di questa classe con i tuoi studenti:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Stampa le schede con le informazioni di accesso dei tuoi studenti."
   dashboard_students_secret_picture_title: "Immagine segreta"
   dashboard_students_secret_picture: "Questa classe utilizza un'<b>immagine</b> come tipo di accesso.  Vuol dire che ognuno dei tuoi studenti ha un'immagine segreta, che usa come password per accedere.  Gli studenti devono prima accedere alla pagina web sopra indicata, poi selezionare il proprio nome ed infine scegliere la loro immagine segreta."
@@ -680,6 +683,7 @@
   dashboard_students_join_link: "I tuoi studenti possono partecipare a questa classe creando il loro account (se sei in Italia faglielo creare attraverso <a href=\"http://programmailfuturo.it/chi/iscrizione-per-studenti/\" target=\"_blank\">Programma il Futuro</a>) e poi accedendo alla pagina"
   dashboard_students_no_email: "Se i tuoi studenti non hanno indirizzi di posta elettronica, o tu vuoi creare gli account per loro, imposta il tipo di accesso di questa classe a <b>parola</b> o <b>immagine</b>."
   dashboard_students_print_page: "Stampa questa pagina"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Clicca qui</a> per il nostro documento sulla privacy che puoi stampare e distribuire ai tuoi studenti."
   dashboard_curriculum_k5_title: "Risorse per insegnanti K-5"
@@ -747,25 +751,6 @@
   dashboard_sections_login_type_explanation: "Questa tabella aiuta a spiegare quale tipo di accesso: <b>immagine</b>, <b>parola</b> oppure <b>e-mail</b>, scegliere per una classe."
   dashboard_faq: "FAQ - Domande e risposte"
   dashboard_faq_k5: "Domande frequenti FAQ K-5"
-  dashboard_announcements: "Annunci"
-  dashboard_announce_message_fall2016_features: "Abbiamo passato l'estate a trasformare le vostre segnalazioni in nuove funzionalità. Ora, potete <a href=\"%{pp_url}\" target=\"_blank\">monitorare i vari progressi degli studenti</a> anche se stanno programmando in coppia su un unico dispositivo. Potete utilizzare <a href=\"%{csp_widgets_url}\" target=\"_blank\">i migliori strumenti interattivi</a> dal nostro corso CS prinicipale in <i>qualsiasi</i> aula. E i vostri studenti possono <a href=\"%{unused_code_url}\" target=\"_blank\">tenere i codici inutilizzati</a> nella loro area di lavoro per incoraggiare la sperimentazione! Scoprite tutte le nostre nuove funzionalità e fateci sapere che ne pensate."
-  dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-  dashboard_announce_learn_more_button: "Ulteriori informazioni"
-  dashboard_announce_try_now_button: "Prova adesso"
-  dashboard_announce_host_an_hour_button: "Ospita un'ora"
-  dashboard_announce_watch_video_button: "Guarda video"
-  dashboard_announce_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
-  dashboard_announce_petition_button: "Aggiungi il tuo nome"
-  dashboard_announce_go_beyond_button: "Go beyond"
-  dashboard_announce_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
-  dashboard_announce_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 5-11 dicembre. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti mai prima verificatosi. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
-  dashboard_announce_mc_launch: "Uno delle nostre esercitazioni dell'Ora del Codice più popolari adesso ha un seguito! Il nuovissimo <b>Programma il tuo Minecraft</b> permette allo studente di definire le sue regole del mondo di Minecraft. Potrà così creare un'esperienza con Minecraft del tutto unica, e condividerla con i suoi amici e giocarci insieme a loro. Svolgila nella tua classe come Ora del Codice."
-  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
-  dashboard_announce_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
-  dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
-  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
   host_an_hour: "Ospita un'ora"
@@ -877,12 +862,12 @@
   course2_name: "Corso 2"
   course3_name: "Corso 3"
   course4_name: "Corso 4"
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
+  coursea-draft_name: Corso A
+  courseb-draft_name: Corso B
+  coursec-draft_name: Corso C
+  coursed-draft_name: Corso D
+  coursee-draft_name: Corso E
+  coursef-draft_name: Corso F
   accelerated_name: "Corso rapido"
   cspunit1_name: I principi dell'informatica - Unità 1
   cspunit2_name: I principi dell'informatica - Unità 2
@@ -894,13 +879,15 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csppostap_name: 'Post AP: Databases in Apps'
+  csppostap_name: 'Messaggio AP: Database in Apps'
   cspassessment_name: "Test completo - 50 domande"
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
@@ -922,15 +909,15 @@
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Fondamenti d'informatica"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "I principi dell'informatica"
   csp17_category_name: "'16-'17 principi d'informatica"
   cspexams_category_name: "Prova pratica di principi d'informatica"
   research_studies_category_name: "Research Studies"
-  applab_name: "Laboratorio per le App"
-  basketball_name: "Make a basketball game"
-  sports_name: "Code your own sports game"
+  applab_name: "Sviluppo App"
+  basketball_name: "Crea una partita di basket"
+  sports_name: "Programma il tuo gioco di sport"
   applab_gradelevel: "Eta' 13+"
   applab_shortdescription_congrats: "App Lab è un programma ambientale con cui puoi fare semplici app. Fare il design, scrivere il codice con blocchi o JavaScript per farla funzionare, quindi condividi la tua app in pochi secondi"
   codeorg_gradelevel: "Da 4 a 104 anni"

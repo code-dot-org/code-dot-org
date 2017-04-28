@@ -7,8 +7,9 @@ import _ from 'lodash';
 import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
-import Dialog from './dialog';
+import Dialog from './LegacyDialog';
 import {Provider} from 'react-redux';
+import {getStore} from '../redux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -63,9 +64,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
       $('.' + item + '_free_play').show();
     });
   }
-  if (progressData.linesOfCodeText) {
-    $('.header_popup .header_text').text(progressData.linesOfCodeText);
-  }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
   progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
@@ -87,16 +85,23 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
    */
   var isHeaderPopupVisible = false;
 
-  function showHeaderPopup(target) {
+  function showHeaderPopup() {
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
-    lazyLoadPopup();
+    progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId,
+      progressData.linesOfCodeText, scriptData.student_detail_progress_view);
     isHeaderPopupVisible = true;
   }
-  function hideHeaderPopup() {
+  function hideHeaderPopup(event) {
+    // Clicks inside the popup shouldn't close it, unless it's on close button
+    const target = event && event.target;
+    if ($(".header_popup").find(target).length > 0 &&
+        !$(event.target).hasClass('header_popup_close')) {
+      return;
+    }
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
     $('.header_popup_link_text').text(dashboard.i18n.t('more'));
@@ -108,10 +113,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
   });
-  $('.header_popup').click(function (e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it
-  });
-  $('.header_popup_close').click(hideHeaderPopup);
 
   $(window).resize(_.debounce(function () {
     if (isHeaderPopupVisible) {
@@ -130,24 +131,20 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     var popupTop = parseInt(headerWrapper.css('padding-top'), 10) +
         parseInt(headerPopup.css('top'), 10);
     var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
-    var footerHeight = headerPopup.find('.header_popup_footer').outerHeight();
     headerPopup.find('.header_popup_scrollable').css('max-height',
-        viewportHeight - (popupTop + popupBottom + footerHeight));
-  }
-
-  var popupLoaded = false;
-  function lazyLoadPopup() {
-    if (!popupLoaded) {
-      popupLoaded = true;
-      $.getJSON(`/api/script_structure/${scriptName}`, data => progress.renderCourseProgress(data, currentLevelId));
-    }
+        viewportHeight - (popupTop + popupBottom));
   }
 };
 
 function shareProject() {
   dashboard.project.save(function () {
-    var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.getPathName();
+    var shareUrl;
+    if (appOptions.baseShareUrl) {
+      shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
+    } else {
+      const origin = location.protocol + '//' + location.host;
+      shareUrl = origin + dashboard.project.getPathName();
+    }
 
     var i18n = window.dashboard.i18n;
 
@@ -161,12 +158,11 @@ function shareProject() {
     // TODO: ditch this in favor of react-redux connector
     // once more of code-studio is integrated into mainline react tree.
     const appType = dashboard.project.getStandaloneApp();
-    const studioApp = require('../StudioApp').singleton;
-    const pageConstants = studioApp.reduxStore.getState().pageConstants;
+    const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
     ReactDOM.render(
-      <Provider store={studioApp.reduxStore}>
+      <Provider store={getStore()}>
         <ShareDialog
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}

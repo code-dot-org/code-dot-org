@@ -1,6 +1,7 @@
 ---
 title: Bobby Schnabel
 nav: about_nav
+theme: responsive
 ---
 # Bobby Schnabel
 

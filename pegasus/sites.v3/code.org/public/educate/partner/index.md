@@ -1,6 +1,7 @@
 ---
 title: Partner with us
 nav: educate_nav
+theme: responsive
 ---
 # What is a Regional Partner?
 Code.org is selecting organizations to become Regional Partners.  These partners will help support and prepare local teachers to bring computer science to their classrooms in a sustainable fashion. The goal of the Regional Partner program is to help each organization establish itself as a local leader in the Code.org professional learning community, with an expectation that in the long-run each partner organization can sustain this work independently of Code.org.

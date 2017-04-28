@@ -11,7 +11,7 @@ module MarkdownHandler
     # Rewrite YouTube iframe elements to use the fallback-player iframe instead.
     def block_html(html)
       doc = ::Nokogiri::HTML(html)
-      nodes = doc.xpath(%w(youtube youtubeeducation).map{|x| "//iframe[@src[contains(.,'#{x}.com/embed')]]"}.join(' | '))
+      nodes = doc.xpath(%w(youtube youtubeeducation).map {|x| "//iframe[@src[contains(.,'#{x}.com/embed')]]"}.join(' | '))
       nodes.each do |node|
         next unless node['src']
         id = node['src'].match(Video::EMBED_URL_REGEX)[:id]

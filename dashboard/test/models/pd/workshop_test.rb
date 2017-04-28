@@ -213,7 +213,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop_already_ended = create :pd_workshop
     workshop_already_ended.started_at = Time.now
-    workshop_already_ended.ended_at = Time.now - 1.hours
+    workshop_already_ended.ended_at = Time.now - 1.hour
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_already_ended.save!
 
@@ -378,7 +378,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_enrollment_count' do
     # Deleted enrollment should not be counted
-    create :pd_enrollment, workshop: @workshop, deleted_at: Time.now
+    pd_enrollment = create :pd_enrollment, workshop: @workshop
+    pd_enrollment.destroy
 
     # Workshops with 0 (not counting deleted), 1 and 2 enrollments
     workshops = [
@@ -403,8 +404,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map{|w| w.enrollments.count}
-    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map{|w| w.enrollments.count}
+    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
+    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
   end
 
   test 'order_by_state' do
@@ -455,7 +456,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times{create :pd_enrollment, workshop: workshop}
+    3.times {create :pd_enrollment, workshop: workshop}
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -479,7 +480,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times{create :pd_enrollment, workshop: workshop}
+    3.times {create :pd_enrollment, workshop: workshop}
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -503,7 +504,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times{create :pd_enrollment, workshop: workshop}
+    3.times {create :pd_enrollment, workshop: workshop}
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do

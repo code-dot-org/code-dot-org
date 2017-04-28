@@ -125,7 +125,7 @@ module Dashboard
     config.autoload_paths << Rails.root.join('lib')
 
     # use https://(*-)studio.code.org urls in mails
-    config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
+    config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 
     MAX_CACHED_BYTES = 256.megabytes
     if CDO.memcached_hosts.present?
@@ -133,7 +133,7 @@ module Dashboard
         value_max_bytes: MAX_CACHED_BYTES
       }
     else
-      config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
+      config.cache_store = :memory_store, {size: MAX_CACHED_BYTES}
     end
 
     # turn off ActionMailer logging to avoid logging email addresses
@@ -145,7 +145,6 @@ module Dashboard
 
     if CDO.newrelic_logging
       require 'newrelic_rpm'
-      require 'newrelic_ignore_downlevel_browsers'
     end
   end
 end

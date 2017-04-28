@@ -1,9 +1,9 @@
-import {singleton as studioApp} from '../StudioApp';
+import {getStore} from '../redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
-var GameLabGame = require('./GameLabGame');
+var GameLabWorld = require('./GameLabWorld');
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -11,7 +11,7 @@ var GameLabGame = require('./GameLabGame');
  */
 var GameLabP5 = function () {
   this.p5 = null;
-  this.gameLabGame = null;
+  this.gameLabWorld = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
     'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
@@ -339,6 +339,26 @@ GameLabP5.prototype.init = function (options) {
     return this;
   };
 
+  // Save the original implementation to allow for optional parameters.
+  if (!window.p5.prototype.originalEllipse_) {
+    window.p5.prototype.originalEllipse_ = window.p5.prototype.ellipse;
+    window.p5.prototype.ellipse = function (x, y, w, h) {
+      w = (w) ? w : 50;
+      h = (w && !h) ? w : h;
+      this.originalEllipse_(x, y, w, h);
+    };
+  }
+
+  // Save the original implementation to allow for optional parameters.
+  if (!window.p5.prototype.originalRect_) {
+    window.p5.prototype.originalRect_ = window.p5.prototype.rect;
+    window.p5.prototype.rect = function (x, y, w, h) {
+      w = (w) ? w : 50;
+      h = (w && !h) ? w : h;
+      this.originalRect_(x, y, w, h);
+    };
+  }
+
   window.p5.prototype.rgb = function (r, g, b, a) {
     // convert a from 0 to 255 to 0 to 1
     if (!a) {
@@ -413,7 +433,7 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
-    this.gameLabGame = null;
+    this.gameLabWorld = null;
   }
 
   // Important to reset these after this.p5 has been removed above
@@ -435,7 +455,8 @@ GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
 GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
-      this.gameLabGame = new GameLabGame(p5obj);
+      this.p5.useQuadTree(false);
+      this.gameLabWorld = new GameLabWorld(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
@@ -704,7 +725,7 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
-    { instance: GameLabGame },
+    { instance: GameLabWorld },
     {
       instance: this.p5.Sprite,
       methodOpts: {
@@ -756,8 +777,12 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'p5' object in the global namespace:
   propList.p5 = [{ Vector: window.p5.Vector }, window];
 
-  // Create a 'Game' object in the global namespace:
-  propList.Game = [this.gameLabGame, this];
+  // Create a 'Game' object in the global namespace
+  // to make older blocks compatible:
+  propList.Game = [this.gameLabWorld, this];
+
+  // Create a 'World' object in the global namespace:
+  propList.World = [this.gameLabWorld, this];
 
   return propList;
 };
@@ -789,7 +814,7 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
   this.p5.projectAnimations = {};
   animationList.orderedKeys.forEach(key => {
     const props = animationList.propsByKey[key];
-    const frameCount = allAnimationsSingleFrameSelector(studioApp.reduxStore.getState()) ? 1 : props.frameCount;
+    const frameCount = allAnimationsSingleFrameSelector(getStore().getState()) ? 1 : props.frameCount;
     const image = this.p5.loadImage(props.dataURI, () => {
       const spriteSheet = this.p5.loadSpriteSheet(
           image,

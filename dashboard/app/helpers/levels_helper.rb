@@ -79,7 +79,7 @@ module LevelsHelper
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
+      autoplay_video = @level.related_videos.find {|video| !client_state.video_seen?(video.key)}
     elsif @level.specified_autoplay_video
       unless client_state.video_seen?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
@@ -108,7 +108,7 @@ module LevelsHelper
       !always_show && callouts_seen[c.localization_key] && !can_reappear
     end
     # Mark the callouts as seen
-    callouts_to_show.each { |c| client_state.add_callout_seen(c.localization_key) }
+    callouts_to_show.each {|c| client_state.add_callout_seen(c.localization_key)}
     # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
@@ -190,7 +190,7 @@ module LevelsHelper
       @app_options = blockly_options
     elsif @level.is_a? Weblab
       @app_options = weblab_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
+    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
@@ -214,6 +214,22 @@ module LevelsHelper
       level: @level.level_num,
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
+
+    if current_user
+      if @script
+        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+          current_user.sections_as_student.first
+      else
+        section = current_user.sections_as_student.first
+      end
+      if section && section.first_activity_at.nil?
+        section.first_activity_at = DateTime.now
+        section.save(validate: false)
+      end
+      @app_options[:experiments] =
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+      @app_options[:usingTextModePref] = !!current_user.using_text_mode
+    end
 
     @app_options
   end
@@ -432,9 +448,8 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    # TTS
-    # TTS is currently only enabled for k1
-    if script && script.is_k1?
+    # Text to speech
+    if script && script.text_to_speech_enabled?
       level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
       level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
@@ -478,6 +493,7 @@ module LevelsHelper
     end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
@@ -612,8 +628,8 @@ module LevelsHelper
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
   def instruction_gif_choices
-    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)){ Dir.glob(File.join("**", "*")) }
-    all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
+    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)) {Dir.glob(File.join("**", "*"))}
+    all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)]}
   end
 
   def instruction_gif_asset_path(filename)
@@ -690,13 +706,13 @@ module LevelsHelper
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
-      redirect_to '/', flash: { alert: error_message }
+      redirect_to '/', flash: {alert: error_message}
       return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', flash: { alert: I18n.t("errors.messages.pair_programmer") }
+        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
         return true
       end
     end
@@ -707,6 +723,16 @@ module LevelsHelper
   def can_view_solution?
     if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions? && @level.contained_levels.empty?
       Ability.new(current_user).can? :view_level_solutions, @script
+    end
+  end
+
+  def can_view_teacher_markdown?
+    if current_user.try(:authorized_teacher?)
+      true
+    elsif current_user.try(:teacher?) && @script
+      @script.k5_course? || @script.k5_draft_course?
+    else
+      false
     end
   end
 

@@ -55,6 +55,17 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :anything_else_s
   ]
 
+  FACILITATOR_SPECIFIC_QUESTIONS = [
+    :how_clearly_presented_s,
+    :how_interesting_s,
+    :how_often_given_feedback_s,
+    :help_quality_s,
+    :how_comfortable_asking_questions_s,
+    :how_often_taught_new_things_s,
+    :things_facilitator_did_well_s,
+    :things_facilitator_could_improve_s
+  ]
+
   def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false)
     report_rows = Hash.new(0).merge({number_teachers: 0, response_count: 0})
 
@@ -96,30 +107,15 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
         survey_response = JSON.parse(response[:data])
 
-        survey_response.symbolize_keys.each do |k, v|
-          if OVERALL_SUCCESS_QUESTIONS.include?(k)
-            score = ::PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(v) + 1
-          elsif FREE_RESPONSE_QUESTIONS.include?(k)
-            # Do nothing - no score to compute but don't skip this
+        survey_response.symbolize_keys.each do |question, answer|
+          if answer.is_a? Hash
+            # Then "answer" is actually a hash of answers for each
+            # facilitator name
+            answer.each do |facilitator_name, actual_answer|
+              process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, actual_answer, facilitator_name)
+            end
           else
-            next unless ::PdWorkshopSurvey::OPTIONS.key?(k) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
-            score = get_score_for_response(::PdWorkshopSurvey::OPTIONS, k, v)
-          end
-
-          if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(k)
-            add_score_to_hash(report_rows, :facilitator_effectiveness, workshop.facilitators, facilitator_scores, score)
-          elsif TEACHER_ENGAGEMENT_QUESTIONS.include?(k)
-            add_score_to_hash(report_rows, :teacher_engagement, workshop.facilitators, facilitator_scores, score)
-          elsif OVERALL_SUCCESS_QUESTIONS.include?(k)
-            add_score_to_hash(report_rows, :overall_success, workshop.facilitators, facilitator_scores, score)
-          end
-
-          if INDIVIDUAL_RESPONSE_QUESTIONS.include?(k)
-            add_score_to_hash(report_rows, k, workshop.facilitators, facilitator_scores, score)
-          end
-
-          if include_free_responses && FREE_RESPONSE_QUESTIONS.include?(k)
-            free_responses[k].append(v)
+            process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, answer)
           end
         end
       end
@@ -156,12 +152,52 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
   private
 
+  def process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, answer, facilitator_name=nil)
+    # if the response is for an individual facilitator, we expect to be
+    # getting once such response for each individual facilitator, so
+    # weight the score appropriately
+    if facilitator_name.nil?
+      score_weight = 1
+      facilitators = workshop.facilitators
+    else
+      score_weight = 1.0 / workshop.facilitators.length
+      facilitators = workshop.facilitators.select do |facilitator|
+        facilitator.name == facilitator_name
+      end
+    end
+
+    if OVERALL_SUCCESS_QUESTIONS.include?(question)
+      score = ::PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(answer) + 1
+    elsif FREE_RESPONSE_QUESTIONS.include?(question)
+      # Do nothing - no score to compute but don't skip this
+    else
+      return unless ::PdWorkshopSurvey::OPTIONS.key?(question) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(question)
+      score = get_score_for_response(::PdWorkshopSurvey::OPTIONS, question, answer)
+    end
+
+    if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(question)
+      add_score_to_hash(report_rows, :facilitator_effectiveness, facilitators, facilitator_scores, score, score_weight)
+    elsif TEACHER_ENGAGEMENT_QUESTIONS.include?(question)
+      add_score_to_hash(report_rows, :teacher_engagement, facilitators, facilitator_scores, score, score_weight)
+    elsif OVERALL_SUCCESS_QUESTIONS.include?(question)
+      add_score_to_hash(report_rows, :overall_success, facilitators, facilitator_scores, score, score_weight)
+    end
+
+    if INDIVIDUAL_RESPONSE_QUESTIONS.include?(question)
+      add_score_to_hash(report_rows, question, facilitators, facilitator_scores, score, score_weight)
+    end
+
+    if include_free_responses && FREE_RESPONSE_QUESTIONS.include?(question)
+      free_responses[question].append(answer)
+    end
+  end
+
   def get_score_for_response(questions, question, answer)
     questions[question].index(answer) + 1
   end
 
-  def add_score_to_hash(report_rows, key, facilitators, facilitator_scores, score)
-    report_rows[key] += score
+  def add_score_to_hash(report_rows, key, facilitators, facilitator_scores, score, score_weight)
+    report_rows[key] += score * score_weight
 
     if facilitator_scores
       facilitators.each do |facilitator|

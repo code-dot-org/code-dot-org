@@ -90,7 +90,7 @@ class Blockly < Level
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
-          xml.send(attr) { |x| x << send(attr)} if send(attr).present?
+          xml.send(attr) {|x| x << send(attr)} if send(attr).present?
         end
       end
     end
@@ -98,7 +98,7 @@ class Blockly < Level
   end
 
   def load_level_xml(xml_node)
-    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//' + x}.join(' | ')).map(&:remove) : []
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
     level_properties = super(xml_node)
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
@@ -107,7 +107,7 @@ class Blockly < Level
   end
 
   def filter_level_attributes(level_hash)
-    super(level_hash.tap{|hash| hash['properties'].except!(*xml_blocks)})
+    super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
   end
 
   before_save :update_contained_levels
@@ -304,7 +304,7 @@ class Blockly < Level
       level_prop['teacherMarkdown'] = nil
 
       # Set some values that Blockly expects on the root of its options string
-      level_prop.reject!{|_, value| value.nil?}
+      level_prop.reject! {|_, value| value.nil?}
     end
     options.freeze
   end
@@ -329,7 +329,7 @@ class Blockly < Level
         translated_text = translations.try(:[], hint['hint_id'].to_sym)
         original_text = hint['hint_markdown']
 
-        if translated_text != original_text
+        if !translated_text.nil? && translated_text != original_text
           hint['hint_markdown'] = translated_text
           hint["tts_url"] = tts_url(TTSSafeRenderer.render(translated_text))
         end

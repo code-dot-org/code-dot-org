@@ -3,9 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import _ from 'lodash';
+import queryString from 'query-string';
 import clientState from './clientState';
-import StageProgress from './components/progress/stage_progress.jsx';
-import CourseProgress from './components/progress/course_progress.jsx';
+import StageProgress from './components/progress/StageProgress.jsx';
+import CourseProgress from './components/progress/CourseProgress.jsx';
+import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
@@ -21,7 +23,9 @@ import {
   showTeacherInfo,
   disablePostMilestone,
   setUserSignedIn,
-  setIsHocScript
+  setIsHocScript,
+  setIsSummaryView,
+  setCurrentStageId,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -80,7 +84,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     name,
     stages: [stageData],
     disablePostMilestone
-  }, currentLevelId, saveAnswersBeforeNavigation);
+  }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
     level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
@@ -115,20 +119,75 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_stages
  * @param {boolean} scriptData.isHocScript
-
- * @param {string?} currentLevelId - Set when viewing course progress from our
- *   dropdown vs. the course progress page
+ * Render our progress on the course overview page.
  */
-progress.renderCourseProgress = function (scriptData, currentLevelId) {
+progress.renderCourseProgress = function (scriptData) {
   const store = getStore();
-  initializeStoreWithProgress(store, scriptData, currentLevelId);
+  initializeStoreWithProgress(store, scriptData, null, true);
+  queryUserProgress(store, scriptData, null);
 
+  const mountPoint = document.createElement('div');
+  $('.user-stats-block').prepend(mountPoint);
+  ReactDOM.render(
+    <Provider store={store}>
+      <CourseProgress onOverviewPage={true}/>
+    </Provider>,
+    mountPoint
+  );
+};
+
+/**
+ * @param {HTMLElement} element - DOM element we want to render into
+ * @param {string} scriptName - name of current script
+ * @param {string} currentLevelId - Level that we're current on.
+ * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
+ * @param {bool} student_detail_progress_view - Should we default to progress view
+ *   user has
+ */
+progress.renderMiniView = function (element, scriptName, currentLevelId,
+    linesOfCodeText, student_detail_progress_view) {
+  const store = getStore();
+  if (student_detail_progress_view) {
+    store.dispatch(setIsSummaryView(false));
+  }
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <MiniView linesOfCodeText={linesOfCodeText}/>
+    </Provider>,
+    element
+  );
+
+  $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+    initializeStoreWithProgress(store, scriptData, currentLevelId, true);
+    queryUserProgress(store, scriptData, currentLevelId);
+  });
+};
+
+/**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
 
-  var mountPoint = document.createElement('div');
+  if (onOverviewPage && scriptData.student_detail_progress_view) {
+    // If everyone has detail progress view, set that view immediately. Otherwise
+    // it might happen async when we determine you're a teacher.
+    store.dispatch(setIsSummaryView(false));
+  }
 
-  if (scriptData.hideable_stages) {
-    store.dispatch(getHiddenStages(scriptData.name, true));
+  // If we've cached that we're a teacher, update view type immediately rather
+  // than waiting on API
+  if (clientState.getUserIsTeacher()) {
+    const query = queryString.parse(location.search);
+    if (query.viewAs === ViewType.Student) {
+      // query param viewAs takes precedence over user being a student
+      store.dispatch(setViewType(ViewType.Student));
+    } else {
+      store.dispatch(setViewType(ViewType.Teacher));
+      store.dispatch(setIsSummaryView(false));
+    }
   }
 
   $.ajax(
@@ -155,8 +214,16 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
       store.dispatch(showTeacherInfo());
-      store.dispatch(setViewType(ViewType.Teacher));
+
+      // If we have viewAs=Student in query params, we dont want to change
+      // student/teache or summary/detail toggles
+      const viewAs = queryString.parse(location.search).viewAs || ViewType.Teacher;
+      if (viewAs === ViewType.Teacher) {
+        store.dispatch(setViewType(viewAs));
+        store.dispatch(setIsSummaryView(false));
+      }
       renderTeacherPanel(store, scriptData.id);
+      clientState.cacheUserIsTeacher(true);
     }
 
     if (data.focusAreaPositions) {
@@ -184,17 +251,12 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
       if (data.peerReviewsPerformed) {
         store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
       }
+      if (data.current_stage) {
+        store.dispatch(setCurrentStageId(data.current_stage));
+      }
     }
   });
-
-  $('.user-stats-block').prepend(mountPoint);
-  ReactDOM.render(
-    <Provider store={store}>
-      <CourseProgress onOverviewPage={onOverviewPage}/>
-    </Provider>,
-    mountPoint
-  );
-};
+}
 
 /**
  * Initializes our redux store with initial progress
@@ -205,10 +267,12 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
  * @param {string} currentLevelId
+ * @param {boolean} isFullProgress - True if this contains progress for the entire
+ *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
  */
 function initializeStoreWithProgress(store, scriptData, currentLevelId,
-    saveAnswersBeforeNavigation = false) {
+    isFullProgress, saveAnswersBeforeNavigation = false) {
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
@@ -216,6 +280,7 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     stages: scriptData.stages,
     peerReviewStage: scriptData.peerReviewStage,
     scriptName: scriptData.name,
+    isFullProgress: isFullProgress
   }));
 
   const postMilestoneDisabled = scriptData.disablePostMilestone ||
@@ -228,6 +293,11 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
   store.dispatch(mergeProgress(
     clientState.allLevelsProgress()[scriptData.name] || {}
   ));
+
+  if (scriptData.hideable_stages) {
+    // Note: This call is async
+    store.dispatch(getHiddenStages(scriptData.name, true));
+  }
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.

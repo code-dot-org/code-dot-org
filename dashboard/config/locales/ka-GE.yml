@@ -19,6 +19,7 @@
     attributes:
       user:
         name: "სახელი სისტემაში"
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "ელექტრონული ფოსტა"
         username: "მომხმარებლის სახელი"
         password: "პაროლი"
@@ -87,6 +88,8 @@
     forgot_password: "დაგავიწყდათ თქვენი პაროლი?"
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
     need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "უკვე დარეგისტრირდა %{count} სტუდენტი."
     teacher_count: "უკვე დარეგისტრირდა %{count} მასწავლებელი."
@@ -140,9 +143,31 @@
     user_type_student: "მოსწავლე"
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: "სხვა"
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: "უკვე გაქვთ ანგარიში? შემოდით"
     login: "ელექტრონული ფოსტა"
+    login_username: Email or Username
     password: "პაროლი"
     remember: "დამიმახსოვრე"
     submit: "შესვლა"
@@ -182,6 +207,14 @@
       ტუტორიალები სახალისოა და პროგრამირების საფუძვლებს გასწავლით მარტივი, თამაშის მსგავსი მეთედებით. ისწავლეთ კოდის წერა ბილ გეითსისგან, მარკ ცუკერბერგისგან, Angry Birds, და Plants vs. Zombies! თამაშებით! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: "მოწვევა გაგზავნილია"
     added_teacher: "%{name} გიმატებთ, როგორც მასწავლებელს"
@@ -196,8 +229,6 @@
       blank_code: "შეიყვანეთ სექციის კოდი"
       cant_join_own_section: "ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით."
     mail:
-      invite_student:
-        subject: "შეურთდით %{teacher_name}-ს კლასს  Code.org-ზე!"
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
   reports:
@@ -449,6 +480,7 @@
       K-12 კომპიუტერული მეცნიერების სწავლება."
     announcement_petition_button: "დაამატეთ თქვენი სახელი"
     announcement_go_beyond_button: "გააგრძელეთ"
+    announcement_apply_now: Apply now
     announcement_all: "მიიღეთ ინფორმაცია ახალი ფუნქციონალის შესახებ და მასწავლებლის
       განახლებადი ბლოგი. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა
       განცხადებები.</a>"
@@ -478,6 +510,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -490,17 +531,30 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ,
       შეიყვანოთ სხვა სექციის კოდი."
-    section_code_not_entered: "გთხოვთ წარმოადგინოით current_section_code."
     section_code_cant_be_current_section: "მიმდინარე სექცია ვერ იქნება იგივე, რაც
       ახალი სექცია."
     current_section_dne: "სამწუხაროდ, სექცია %{current_section_code} არ არსებობს.
       გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
-    students_not_yours: "თქვენ არ შეგიძლიათ მოსწავლეების გადაყვანა იმ სექციიდან, რომელიც
-      თქვენ არ გეკუთვნით."
-    stay_enrolled_not_entered: "გთხოვთ, წარმოადგინოთ stay_enrolled_in_current_section."
     student_ids_not_entered: "გთხოვთ, წარმოადგინოთ student_ids."
     student_not_found: "ერთი ან მეტი მოსწავლე ვერ მოიძებნა."
     all_students_must_be_in_current_section: "ყველა სტუდენტი ამჟამად უნდა ირიცხებოდეს
@@ -584,6 +638,18 @@
         მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი
         ფუნქციონალურობა დარღვეული იქნება."
       link: "გაიგეთ მეტი"
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: "ჰმ.. პროცესს ჩვეულებრივზე მეტი დრო მიაქვს..."
   try_reloading: "სცადეთ გვერდის გადატვირთვა"
   next_stage: "დასრულებულია! გადადით შემდეგ ეტაპზე"

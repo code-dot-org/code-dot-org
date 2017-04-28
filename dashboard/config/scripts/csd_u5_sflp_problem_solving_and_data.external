@@ -1,0 +1,14 @@
+name 'CSD-U5-SFLP Problem Solving and Data'
+display_name 'Unit 5 Lesson 9 Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# The Internet - Data and Society: Lesson 9 - Problem Solving and Data
+
+## Background
+
+You'll use the problem solving process to help solve a data problem.
+
+# Resources
+
+* [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw) - Activity Guide ([PDF](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=doc))
+MARKDOWN

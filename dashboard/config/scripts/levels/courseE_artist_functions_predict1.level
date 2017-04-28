@@ -31,7 +31,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "authored_hints": "[]",
     "discard_background": "false",
     "callout_json": "[]",

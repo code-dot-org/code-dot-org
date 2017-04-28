@@ -128,6 +128,7 @@ module RakeUtils
     # Using `with_clean_env` is necessary when shelling out to a different bundle.
     # Ref: http://bundler.io/man/bundle-exec.1.html#Shelling-out
     Bundler.with_clean_env do
+      ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
         bundle_install
         yield
@@ -176,12 +177,15 @@ module RakeUtils
   end
 
   def self.git_push
-    system 'git', 'pull', '--rebase', '--autostash', 'origin', git_branch # Rebase local commit(s) if any new commits on origin.
     system 'git', 'push', 'origin', git_branch
   end
 
   def self.git_revision
     `git rev-parse HEAD`.strip
+  end
+
+  def self.git_latest_stash
+    `git stash list --date=local`.lines.first.strip
   end
 
   def self.git_update_count
@@ -230,6 +234,15 @@ module RakeUtils
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
     commands += "#{sudo} yarn".split
+    commands += args
+    RakeUtils.system(*commands)
+  end
+
+  def self.npm_rebuild(*args)
+    sudo = CDO.npm_use_sudo ? 'sudo' : ''
+    commands = []
+    commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
+    commands += "#{sudo} npm rebuild".split
     commands += args
     RakeUtils.system(*commands)
   end
@@ -291,7 +304,7 @@ module RakeUtils
 
     destination_local_pathname = Pathname(destination_local_path)
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
-    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url) }
+    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url)}
     new_fetchable_url
   end
 

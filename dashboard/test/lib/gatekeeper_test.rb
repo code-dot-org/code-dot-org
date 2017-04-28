@@ -19,7 +19,7 @@ class GatekeeperTest < ActiveSupport::TestCase
 
   test "order of where conditions doesn't matter" do
     feature = "order test"
-    Gatekeeper.set(feature, where: { a: 2, b: 1 }, value: true)
+    Gatekeeper.set(feature, where: {a: 2, b: 1}, value: true)
     assert_equal Gatekeeper.allows(feature, where: {b: 1, a: 2}, default: false), true
   end
 
@@ -27,24 +27,24 @@ class GatekeeperTest < ActiveSupport::TestCase
     feature = "test_feature2"
     Gatekeeper.set(feature, value: true)
 
-    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), true
+    assert_equal Gatekeeper.allows(feature, where: {user_id: 4}), true
   end
 
   test "when feature and key match return the result of the where" do
     feature = "test_feature3"
     Gatekeeper.set(feature, value: true)
-    Gatekeeper.set(feature, where: { user_id: 4 }, value: false)
+    Gatekeeper.set(feature, where: {user_id: 4}, value: false)
 
-    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
+    assert_equal Gatekeeper.allows(feature, where: {user_id: 4}), false
   end
 
   test 'deleting a where clause' do
     feature = "test_feature4"
-    Gatekeeper.set(feature, where: { user_id: 4 }, value: true)
-    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), true
+    Gatekeeper.set(feature, where: {user_id: 4}, value: true)
+    assert_equal Gatekeeper.allows(feature, where: {user_id: 4}), true
 
     Gatekeeper.delete(feature, where: {user_id: 4})
-    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
+    assert_equal Gatekeeper.allows(feature, where: {user_id: 4}), false
   end
 
   test 'deleting a global clause' do
@@ -53,7 +53,7 @@ class GatekeeperTest < ActiveSupport::TestCase
     assert_equal Gatekeeper.allows(feature), true
 
     Gatekeeper.delete(feature)
-    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
+    assert_equal Gatekeeper.allows(feature, where: {user_id: 4}), false
   end
 
   test 'get script and feature names' do

@@ -131,7 +131,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "false",
@@ -168,7 +169,8 @@
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "AY0BH2ot/0SDzLegP3+OejWuwaaYDgO4eMhjJ9Pb3VFutXZxcq3sTjwhkEGZ\neXIo\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,6 +1,7 @@
 ---
 title: Sarah Filman
 nav: about_nav
+theme: responsive
 ---
 # Sarah Filman
 

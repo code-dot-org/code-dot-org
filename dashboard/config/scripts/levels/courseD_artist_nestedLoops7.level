@@ -32,8 +32,10 @@
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use a nested loop, where the inner loop is the code for a square.\\n\\n- repeat 6 times\\n  - make square\\n  - jump forward by 50 pixels\\n  - turn 60 degrees\",\"hint_id\":\"courseD_artist_nestedLoops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5535d40fdddcfcbf97eeb02774e64299/courseD_artist_nestedLoops7.mp3\"}]",
-    "markdown_instructions": "Use what you've learned to make this drawing.\r\n\r\n- The squares each have 100 pixel sides and 90 degree angles\r\n- You will need to turn 60 degrees between each square",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You'll need to use nested loops here. First, make a loop to draw a square. What will the outer loop need to be if the inner loop is to draw a square?\",\"hint_id\":\"courseD_artist_nestedLoops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aadeba10db5fa2dde8508c93e14c5071/courseD_artist_nestedLoops7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use a nested loop, where the inner loop is the code for a square.\\n\\n- repeat 6 times\\n  - make square\\n  - jump forward by **50 pixels**\\n  - turn **60 degrees**\",\"hint_id\":\"courseD_artist_nestedLoops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5535d40fdddcfcbf97eeb02774e64299/courseD_artist_nestedLoops7.mp3\"}]",
+    "markdown_instructions": "Use what you've learned to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and **90 degree angles**\r\n- You will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.\r\n- Make sure you jump **50 pixels to get to the next square**",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -49,7 +51,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant" limit="1">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>

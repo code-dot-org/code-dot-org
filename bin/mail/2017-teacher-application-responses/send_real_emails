@@ -7,7 +7,8 @@ send_to_mailing_list_path = File.expand_path "#{__dir__}/../send-to-mailing-list
 [
   :accept_teachercon,
   :accept_partner,
-  :decline,
+  :decline_csp,
+  :decline_csd,
   :waitlist
 ].each do |type|
   results_file = File.join __dir__, "results_#{type}.csv"

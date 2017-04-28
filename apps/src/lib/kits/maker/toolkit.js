@@ -24,6 +24,9 @@ let currentBoard = null;
  * Enable Maker Toolkit for the current level.
  */
 export function enable() {
+  if (!isAvailable()) {
+    throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
+  }
   getStore().dispatch(redux.enable());
 }
 
@@ -32,6 +35,14 @@ export function enable() {
  */
 export function isEnabled() {
   return redux.isEnabled(getStore().getState());
+}
+
+/**
+ * @returns {boolean} whether Maker Toolkit is usable with the current app at all
+ */
+export function isAvailable() {
+  const state = getStore().getState();
+  return !!(state && state.maker);
 }
 
 /**

@@ -23,7 +23,7 @@ class VideosControllerTest < ActionController::TestCase
   test "should create video" do
     assert_difference('Video.count') do
       post :create, params: {
-        video: { key: @video.key, youtube_code: @video.youtube_code }
+        video: {key: @video.key, youtube_code: @video.youtube_code}
       }
     end
 
@@ -43,7 +43,7 @@ class VideosControllerTest < ActionController::TestCase
   test "should update video" do
     patch :update, params: {
       id: @video,
-      video: { key: @video.key, youtube_code: @video.youtube_code }
+      video: {key: @video.key, youtube_code: @video.youtube_code}
     }
     assert_redirected_to video_path(assigns(:video))
   end

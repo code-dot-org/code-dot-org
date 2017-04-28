@@ -1,0 +1,124 @@
+@import 'color';
+
+#pageheader2-wrapper {
+  padding-top: 0;
+
+  .pageheader-translucent {
+    background-color: $light_teal !important;
+  }
+
+  #pageheader {
+    width: 100%;
+    background-color: $light_teal;
+    height: 50px;
+    margin: 0 0 40px 0;
+
+    .content {
+      max-width: 970px;
+      margin: 0 auto;
+      overflow: visible;
+      box-sizing: border-box;
+    }
+
+    #left {
+      float: left;
+      margin: 0;
+    }
+
+    #logo-wrapper {
+      background-color: $teal;
+      display: inline-block;
+      padding: 13px 16px;
+      float: left;
+
+      #logo {
+        width: 43px;
+        height: 43px;
+      }
+
+      #logo-uk {
+        width: 364px;
+        height: 87px;
+        display: block;
+      }
+    }
+
+    #right {
+      float: right;
+    }
+
+    #headerlinks {
+      float: left;
+      position: relative;
+
+      .headerlink {
+        display: inline-block;
+        font-size: 14px;
+        margin: 14px 0 0 30px;
+        font-family: 'Gotham 4r', sans-serif;
+        color: $white;
+        text-decoration: none;
+
+        &:link, &:visited {
+          color: $white;
+          text-decoration: none;
+        }
+
+        &:hover, &:active {
+          color: $white;
+          border-bottom: solid 2px $orange;
+        }
+      }
+    }
+
+    .learnoption:hover {
+      text-decoration: underline;
+    }
+
+    #sign_in_or_user {
+      margin: 5px 0 0 0;
+
+      .button-signin {
+        background-color: transparent;
+        border: 2px solid $white;
+        color: $white;
+      }
+    }
+  }
+
+  .user_menu {
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $white;
+    margin-top: -4px;
+
+    .user_name {
+      font-family: 'Gotham 4r', sans-serif;
+      max-width: 120px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      float: left;
+    }
+
+    .user_menu_glyph {
+      display: inline-block;
+      float: left;
+      padding-left: 5px;
+    }
+
+    .user_options {
+      top: 37px;
+    }
+  }
+
+  #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
+
+    .hide-responsive-menu {
+      top: 55px;
+    }
+  }
+}

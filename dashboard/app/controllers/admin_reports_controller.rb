@@ -49,7 +49,7 @@ class AdminReportsController < ApplicationController
 
       respond_to do |format|
         format.html
-        format.csv { return level_answers_csv }
+        format.csv {return level_answers_csv}
       end
     end
   end
@@ -105,7 +105,7 @@ class AdminReportsController < ApplicationController
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
-    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    data_array = data_array.select {|x| x['TotalAttempt'].to_i > 10}.sort_by {|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
     headers = [
       "Puzzle",
       "Total\nAttempts",
@@ -147,28 +147,6 @@ class AdminReportsController < ApplicationController
           status: 404
         )
       end
-    end
-  end
-
-  def admin_progress
-    SeamlessDatabasePool.use_persistent_read_connection do
-      stats = Properties.get(:admin_progress)
-      if stats.present?
-        @user_count = stats['user_count']
-        @levels_attempted = stats['levels_attempted']
-        @levels_attempted.default = 0
-        @levels_passed = stats['levels_passed']
-        @levels_passed.default = 0
-
-        @all_script_levels = Script.twenty_hour_script.script_levels.includes({level: :game})
-        @stage_map = @all_script_levels.group_by {|sl| sl.level.game}
-      end
-    end
-  end
-
-  def admin_stats
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @stats = Properties.get('admin_stats')
     end
   end
 

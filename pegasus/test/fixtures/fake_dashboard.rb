@@ -26,30 +26,43 @@ end
 # Provides a fake Dashboard database with some fake data to test against.
 #
 module FakeDashboard
-  DATABASE_FILENAME = './fake_dashboard_for_tests.db'
+  # TODO(asher): Many of the CONSTANTS in this module are not constants, being mutated later. Fix
+  # this.
+
+  DATABASE_FILENAME = './fake_dashboard_for_tests.db'.freeze
   @@fake_db = nil
 
   #
   # Fake Data: Users
   #
   UNUSED_USER_ID = 12345
-  STUDENT = {id: 1, name: 'Sally Student', user_type: 'student', admin: false}
-  TEACHER = {id: 2, name: 'Terry Teacher', user_type: 'teacher', admin: false}
-  ADMIN = {id: 3, name: 'Alice Admin', user_type: 'teacher', admin: true}
-  FACILITATOR = {id: 4, name: 'Fran Facilitator', user_type: 'teacher', admin: false}
-  SELF_STUDENT = {
-    id: 5, name: 'Self Studying Student', user_type: 'student', admin: false
+  STUDENT = {id: 1, name: 'Sally Student', user_type: 'student'}
+  STUDENT_SELF = {id: 2, name: 'Self Studying Student', user_type: 'student'}
+  STUDENT_DELETED = {
+    id: 3, name: 'Stricken Student', user_type: 'student', deleted_at: '2016-01-01 12:34:56'
   }
-  DELETED_STUDENT = {
-    id: 6, name: 'Stricken Student', user_type: 'student', admin: false,
-    deleted_at: '2016-01-01 12:34:56'
-  }
-  TEACHER_WITH_DELETED = {
-    id: 7, name: 'Temporary Teacher', user_type: 'teacher', admin: false
-  }
+  STUDENT_DELETED_FOLLOWER = {id: 4, name: 'S4 Student', user_type: 'student'}
+  STUDENT_DELETED_SECTION = {id: 5, name: 'S5 Student', user_type: 'student'}
+  TEACHER = {id: 6, name: 'Terry Teacher', user_type: 'teacher'}
+  TEACHER_SELF = {id: 7, name: 'Troglodyte Teacher', user_type: 'teacher'}
+  TEACHER_DELETED_SECTION = {id: 8, name: 'Temporary Teacher', user_type: 'teacher'}
+  TEACHER_DELETED_FOLLOWER = {id: 9, name: 'Transient Teacher', user_type: 'teacher'}
+  TEACHER_DELETED_USER = {id: 10, name: 'T Teacher', user_type: 'teacher'}
+  ADMIN = {id: 11, name: 'Alice Admin', user_type: 'teacher', admin: true}
+  FACILITATOR = {id: 12, name: 'Fran Facilitator', user_type: 'teacher'}
   USERS = [
-    STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, DELETED_STUDENT,
-    TEACHER_WITH_DELETED
+    STUDENT,
+    STUDENT_SELF,
+    STUDENT_DELETED,
+    STUDENT_DELETED_FOLLOWER,
+    STUDENT_DELETED_SECTION,
+    TEACHER,
+    TEACHER_SELF,
+    TEACHER_DELETED_SECTION,
+    TEACHER_DELETED_FOLLOWER,
+    TEACHER_DELETED_USER,
+    ADMIN,
+    FACILITATOR
   ]
 
   #
@@ -58,11 +71,6 @@ module FakeDashboard
   USER_PERMISSIONS = [
     {user_id: FACILITATOR[:id], permission: 'facilitator'}
   ]
-  # Possible permissions include
-  #   create_professional_development_workshop
-  #   district_contact
-  #   facilitator
-  #   hidden_script_access
 
   #
   # Fake Data: Sections
@@ -70,14 +78,21 @@ module FakeDashboard
   SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
   SECTION_EMPTY = {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'}
   SECTION_DELETED = {
-    id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C',
+    id: 150003, user_id: TEACHER_DELETED_SECTION[:id], name: 'Fake Section C',
     deleted_at: '2015-01-01 12:34:56'
   }
-  SECTION_DELETED_FOLLOWERS = {
-    id: 150004, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section D'
+  SECTION_DELETED_FOLLOWER = {
+    id: 150004, user_id: TEACHER_DELETED_FOLLOWER[:id], name: 'Fake Section D'
+  }
+  SECTION_DELETED_USER = {
+    id: 150005, user_id: TEACHER_DELETED_USER[:id], name: 'Fake Section E'
   }
   TEACHER_SECTIONS = [
-    SECTION_NORMAL, SECTION_EMPTY, SECTION_DELETED, SECTION_DELETED_FOLLOWERS
+    SECTION_NORMAL,
+    SECTION_EMPTY,
+    SECTION_DELETED,
+    SECTION_DELETED_FOLLOWER,
+    SECTION_DELETED_USER
   ]
 
   #
@@ -85,20 +100,21 @@ module FakeDashboard
   #
   FOLLOWERS = [
     {
-      user_id: TEACHER[:id],
-      student_user_id: STUDENT[:id],
-      section_id: SECTION_NORMAL[:id]
+      section_id: SECTION_NORMAL[:id],
+      student_user_id: STUDENT[:id]
     },
     {
-      user_id: TEACHER_WITH_DELETED[:id],
-      student_user_id: DELETED_STUDENT[:id],
-      section_id: SECTION_DELETED_FOLLOWERS[:id]
+      section_id: SECTION_DELETED[:id],
+      student_user_id: STUDENT_DELETED_SECTION[:id]
     },
     {
-      user_id: TEACHER_WITH_DELETED[:id],
-      student_user_id: SELF_STUDENT[:id],
-      section_id: SECTION_DELETED_FOLLOWERS[:id],
+      section_id: SECTION_DELETED_FOLLOWER[:id],
+      student_user_id: STUDENT_DELETED_FOLLOWER[:id],
       deleted_at: '2016-01-01 00:01:02'
+    },
+    {
+      section_id: SECTION_DELETED_USER[:id],
+      student_user_id: STUDENT_DELETED[:id]
     }
   ]
 
@@ -146,14 +162,14 @@ module FakeDashboard
       perm.merge! @@fake_db[:user_permissions][id: new_id]
     end
 
-    FOLLOWERS.each do |follower|
-      new_id = @@fake_db[:followers].insert(follower)
-      follower.merge! @@fake_db[:followers][id: new_id]
-    end
-
     TEACHER_SECTIONS.each do |section|
       new_id = @@fake_db[:sections].insert(section)
       section.merge! @@fake_db[:sections][id: new_id]
+    end
+
+    FOLLOWERS.each do |follower|
+      new_id = @@fake_db[:followers].insert(follower)
+      follower.merge! @@fake_db[:followers][id: new_id]
     end
   end
 

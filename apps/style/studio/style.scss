@@ -2,6 +2,7 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
 @import 'color';
+@import '../VisualizationOverlay';
 
 #svgStudio {
   overflow: hidden;

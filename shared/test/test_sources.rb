@@ -21,7 +21,7 @@ class SourcesTest < FilesApiTestBase
     # Upload a source file.
     filename = 'test.js'
     file_data = 'abc 123'
-    file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -54,7 +54,7 @@ class SourcesTest < FilesApiTestBase
     # Given a Play Lab program with a privacy violation
     filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
-    file_headers = { 'CONTENT_TYPE' => 'application/json' }
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -78,7 +78,7 @@ class SourcesTest < FilesApiTestBase
   def test_get_source_blocks_privacy_violations
     filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
-    file_headers = { 'CONTENT_TYPE' => 'application/json' }
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -123,7 +123,7 @@ class SourcesTest < FilesApiTestBase
   def test_policy_channel_api
     filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
-    file_headers = { 'CONTENT_TYPE' => 'application/json' }
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -140,7 +140,7 @@ class SourcesTest < FilesApiTestBase
     # Upload a source file.
     filename = 'replace_me.js'
     file_data = 'version 1'
-    file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?

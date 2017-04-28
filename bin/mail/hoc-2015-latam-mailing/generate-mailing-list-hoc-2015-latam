@@ -14,7 +14,7 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end
@@ -70,7 +70,7 @@ COUNTRIES = [
 ].freeze
 
 QUERY = COUNTRIES.
-  map {|country| %Q|(kind_s:"HocSignup2015" && location_country_s:"#{country}")| }.
+  map {|country| %Q|(kind_s:"HocSignup2015" && location_country_s:"#{country}")|}.
   join(" || ")
 
 puts QUERY

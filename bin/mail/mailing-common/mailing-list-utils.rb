@@ -28,7 +28,7 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end
@@ -120,7 +120,7 @@ end
 def include_indiegogo_donors(results)
   # read the indiegogo donors csv
   # headers
-  #Perk ID,Order No.,Pledge ID,Fulfillment Status,Funding Date,Payment Method,Appearance,Name,Email,Amount,Perk,Shipping Name,Shipping Address,Shipping Address 2,Shipping City,Shipping State/Province,Shipping Zip/Postal Code,Shipping Country
+  # Perk ID,Order No.,Pledge ID,Fulfillment Status,Funding Date,Payment Method,Appearance,Name,Email,Amount,Perk,Shipping Name,Shipping Address,Shipping Address 2,Shipping City,Shipping State/Province,Shipping Zip/Postal Code,Shipping Country
 
   # example rows:
   # "","",13620908,No Perk,2015-10-05 01:02:55 -0700,,Visible,Code.org Major Donors ,majordonors@code.org,$30,"","","","","","","",""
@@ -197,7 +197,7 @@ def query_from_list(queries)
     # query_subscribed_contacts dedupes by rejecting duplicate emails.
     queries.each do |category, query|
       new_contacts = query_subscribed_contacts(q: query)
-      new_contacts.each_value{|contact| contact[:category] = category}
+      new_contacts.each_value {|contact| contact[:category] = category}
       puts "#{category}: #{new_contacts.count} contacts"
       contacts.merge! new_contacts
     end

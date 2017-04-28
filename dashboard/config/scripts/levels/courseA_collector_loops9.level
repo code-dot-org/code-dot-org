@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't spot the best places to use loops, try coding it out step-by-step and look for a pattern. \",\"hint_id\":\"courseA_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9761876eae82d3a74e6d00f0fa2c771a/courseA_collector_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!\",\"hint_id\":\"courseA_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd6366be866cafd5322cc1d79da4f0d0/courseA_collector_loops9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't spot the best places to use loops, try coding it out step-by-step and look for a pattern. \",\"hint_id\":\"courseA_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9761876eae82d3a74e6d00f0fa2c771a/courseA_collector_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!\",\"hint_id\":\"courseA_collector_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd6366be866cafd5322cc1d79da4f0d0/courseA_collector_loops9.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "12",
     "ideal": "19",

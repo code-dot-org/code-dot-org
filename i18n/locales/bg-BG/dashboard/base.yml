@@ -12,6 +12,7 @@ bg:
     attributes:
       user:
         name: 'Показвано име'
+        name_example: 'Показвано име <br/> (например готин програмист или Джейн S.)'
         email: 'Имейл'
         username: 'Потребителско име'
         password: 'Парола'
@@ -78,6 +79,7 @@ bg:
     forgot_password: 'Забравили сте паролата си?'
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} ученици вече са се регистрирали.'
     teacher_count: '%{count} учители вече са се регистрирали.'
@@ -110,9 +112,31 @@ bg:
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
+  school_info:
+    title: 'Информацшя за училището (по избор)'
+    school_country: 'School Country'
+    select_school_type: 'Тип училище'
+    charter: 'Charter'
+    private: 'Частно'
+    public: 'Публично'
+    homeschool: 'Домашно'
+    after_school: 'След училище'
+    other: 'Друго'
+    state: 'Регион'
+    district: 'Област'
+    other_district_not_listed: 'Друга област, неупомената по-горе'
+    district_name: 'Име на областта'
+    school: 'Училище'
+    other_school_not_listed: 'Друго училище, неупоменато по-горе'
+    school_name: 'Име на училището'
+    school_zip: 'Пощенски код'
+    school_address: 'Адрес на училището'
+    school_organization_name: 'Име на училище или организация'
+    school_organization_zip: 'Организация/училище пощенски код'
   signin_form:
     title: 'Вече имате профил? Влизане'
     login: 'Имейл'
+    login_username: 'Имейл или потребителско име'
     password: 'Парола'
     remember: 'Запомни ме'
     submit: 'Вход'
@@ -128,7 +152,7 @@ bg:
     login: 'Вход'
     invalid_login: 'Невалидно влизане, моля опитайте отново'
     pair_programming: 'Имам партньор на моя компютър'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy: "Научете повече защо не виждате вашето пълно име <a href='%{student_privacy_blog}' target='_blank'> тук</a>."
   password:
     reset_form:
       title: 'Забравена парола?'
@@ -148,6 +172,14 @@ bg:
       
        Уроците са забавни, визуално привлекателни и ще ви научат на основните понятия в компютърните науки с помощта на прости съвети и игри. Научете се на програмиране от Бил Гейтс, Марк Зукерберг, Angry Birds, и Plants vs. Zombies! :-) 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Поканата изпратена'
     added_teacher: '%{name}, добавен като ваш учител'
@@ -161,8 +193,6 @@ bg:
       blank_code: "Моля въведете код за раздела"
       cant_join_own_section: "За съжаление, не можете да се присъедините към вашият собствен раздел."
     mail:
-      invite_student:
-        subject: "Присъединете се към класа на  %{teacher_name} в Code.org!"
       student_disassociated:
         subject: 'Code.org уведомление: %{student_name} вече не свързан като ваш ученик.'
   reports:
@@ -302,9 +332,9 @@ bg:
     delete_text: "Щракнете върху бутона по-долу, за да изтриете вашия акаунт."
     delete_text_teacher_note: 'Моля, обърнете внимание: изтриването на вашия акаунт няма да изтрие акаунтите на вашите ученици.'
     delete_confirm: 'Наистина ли искате да изтриете профила си?'
-    deleted_user: 'deleted user'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    deleted_user: 'изтрит потребител'
+    no_password_because_oauth: 'Без парола, защото можете да влезете от трета страна доставчик.'
+    no_password_because_sponsored: 'Потърсете вашия учител, за да ви предостави вашата парола.'
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -360,22 +390,25 @@ bg:
     announcement_watch_video_button: "Гледай видео"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование."
     announcement_petition_button: "Добавете името си"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "Излез извън"
+    announcement_apply_now: "Apply now"
     announcement_all: "Получавайте информация за нови функции и актуализации на нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните съобщения.</a>"
     announcement_hoc_launch: "Хиляди преподаватели в над 180 страни ще преподават компютърни науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}' target='_blank'> Регистрирайте Вашето \"час на кода\" събитие</a> и помогнете и на друг учител да научи, че всеки може да започне обучение по компютърни науки."
     announcement_mc_launch: "Един от нашите най-популярни уроци сега има продължение! Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света. Можете да създаде напълно уникален Minecraft опит, а след това да го споделите с приятели или да играете на телефоните си. Направете го с класа си за Hour of Code."
     announcement_how_code_studio: "Не е нужен опит, за да започнете да изучавате компютърни науки в класната стая. Code.org предлага учебни програми, учебни планове, висококачествени професионални обучителни програми и тонове страхотни инструменти за всички класове&mdash; всичко необходимо, безплатно. Чудите се откъде да започнете? Изтеглете <a href='%{video_download_url}'> това видео</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля, въведете код за друг раздел."
-    section_code_not_entered: "Моля, представете current_section_code."
     section_code_cant_be_current_section: "Текущият раздел не може да бъде същият като новия раздел."
     current_section_dne: "Съжалявам, но %{current_section_code} раздел не съществува. Моля, въведете код за друг раздел."
-    students_not_yours: "Не можете да преместите ученици от раздел, който не е ваш."
-    stay_enrolled_not_entered: "Моля, добавете stay_enrolled_in_current_section."
     student_ids_not_entered: "Моля, добавете student_ids."
     student_not_found: "Ученикът/учениците не могат да бъдат намерени."
     all_students_must_be_in_current_section: "Всички ученици трябва да бъдат включени в раздел."
@@ -432,6 +465,10 @@ bg:
     upgrade:
       unsupported_message: "Вашият браузър не се поддържа. Моля, надстройте браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е възможно да не функционира както трябва."
       link: "Научете повече"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Това отнема повече време от обичайното...'
   try_reloading: 'Опитайте да презаредите страницата'
   next_stage: 'Завършено! Продължете към следващия етап'

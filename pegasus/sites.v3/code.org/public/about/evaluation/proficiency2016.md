@@ -1,6 +1,7 @@
 ---
 title: Towards Measuring Basic Coding Proficiency
 nav: about_nav
+theme: responsive
 ---
 
 # Towards Measuring Basic Coding Proficiency
@@ -355,7 +356,8 @@ We found students associated with teachers<sup><a name="ftnt5ref" href="#ftnt5">
 <table>
   <tr>
     <td style="border: 0;" width="30%" valign="top"><strong>Fig. 5 - Students demonstrating proficiency with or without a teacher as % of all students</strong><br><br><img src="/images/proficiency/with-without-all-students.png" width="90%"/></td>
-    <td style="border: 0;" width="60%" valign="top"><strong>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group</strong><br><br><img src="/images/proficiency/teacher-age-group.png" width="90%"/></td>
+    <td style="border: 0;" width="60%" valign="top"><strong>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group</strong><br><br><img src="/images/proficiency/teacher-age-group.png" width="90%"/>
+</td>
   </tr>
 </table>
 

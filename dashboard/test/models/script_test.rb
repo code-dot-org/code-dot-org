@@ -4,11 +4,13 @@ require 'cdo/shared_constants'
 class ScriptTest < ActiveSupport::TestCase
   include SharedConstants
 
-  def setup
+  self.use_transactional_test_case = true
+
+  setup_all do
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map { |n| create(:level, name: "Level #{n}", game: @game) }
+    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -62,7 +64,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map{|stage| stage[:scriptlevels]}.flatten
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map {|stage| stage[:scriptlevels]}.flatten
 
     # Set different level name in tested script
     parsed_script[4][:levels][0]['name'] = "Level 1"
@@ -193,7 +195,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     script = Script.add_script(
       {name: 'test script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
@@ -243,7 +245,7 @@ class ScriptTest < ActiveSupport::TestCase
       20-hour flappy playlab infinity artist course1 course2 course3 course4
       frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
       cspunit6 starwarsblocks
-    }.map{|s| Script.find_by_name(s)}
+    }.map {|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
       refute s.hidden?, "#{s.name} is hidden when it should not be"
@@ -438,6 +440,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'should generate a short summary' do
+    script = create(:script, name: 'single-stage-script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    expected = {
+      name: 'single-stage-script',
+      disablePostMilestone: false,
+      isHocScript: false,
+      student_detail_progress_view: false
+    }
+    assert_equal expected, script.summarize_short
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
@@ -537,13 +553,13 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     # Everything has Stage <number> when nothing is lockable
-    assert /^Stage 1:/.match(script.stages[0].localized_title)
-    assert /^Stage 2:/.match(script.stages[1].localized_title)
-    assert /^Stage 3:/.match(script.stages[2].localized_title)
+    assert /^Lesson 1:/.match(script.stages[0].localized_title)
+    assert /^Lesson 2:/.match(script.stages[1].localized_title)
+    assert /^Lesson 3:/.match(script.stages[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Lockable1', lockable: true
@@ -556,13 +572,13 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
-    assert /^Stage/.match(script.stages[0].localized_title).nil?
-    assert /^Stage 1:/.match(script.stages[1].localized_title)
-    assert /^Stage 2:/.match(script.stages[2].localized_title)
+    assert /^Lesson/.match(script.stages[0].localized_title).nil?
+    assert /^Lesson 1:/.match(script.stages[1].localized_title)
+    assert /^Lesson 2:/.match(script.stages[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'NonLockable1'
@@ -575,13 +591,13 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     # When only second stage is lockable, we count non-lockable stages appropriately
-    assert /^Stage 1:/.match(script.stages[0].localized_title)
-    assert /^Stage/.match(script.stages[1].localized_title).nil?
-    assert /^Stage 2:/.match(script.stages[2].localized_title)
+    assert /^Lesson 1:/.match(script.stages[0].localized_title)
+    assert /^Lesson/.match(script.stages[1].localized_title).nil?
+    assert /^Lesson 2:/.match(script.stages[2].localized_title)
   end
 
   test 'Script DSL fails when creating invalid lockable stages' do
@@ -595,7 +611,59 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      Script.add_script({name: 'test_script'}, script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten)
     end
+  end
+
+  test "update_i18n without metdata" do
+    # This simulates us doing a seed after adding new stages to multiple of
+    # our script files. Doing so should update our object with the new stage
+    # names (which we would then persist to sripts.en.yml)
+    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+
+    course3_yml = {'stages' => {'course3' => {'name' => 'course3'}}}
+    course4_yml = {'stages' => {'course4' => {'name' => 'course4'}}}
+
+    stages_i18n = {'en' => {'data' => {'script' => {'name' => {
+      'course3' => course3_yml,
+      'course4' => course4_yml
+    }}}}}
+
+    # updated represents what will get written to scripts.en.yml
+    updated = Script.update_i18n(original_yml, stages_i18n)
+
+    assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
+    assert_equal course4_yml, updated['en']['data']['script']['name']['course4']
+  end
+
+  test "update_i18n with metadata" do
+    # In this case, we're modifying a stage description without changing any
+    # stage names
+    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+
+    # No updates to stage names
+    stages_i18n = {'en' => {'data' => {'name' => {}}}}
+
+    script_name = 'Report Script'
+
+    metadata = {
+      'title' => 'Report Script Name',
+      'description' => 'This is what Report Script is all about',
+      stage_descriptions: [{
+        'name' => 'Report Stage 1',
+        'descriptionStudent' => 'Stage 1 is pretty neat',
+        'descriptionTeacher' => 'This is what you should know as a teacher'
+      }].to_json
+    }
+
+    updated = Script.update_i18n(original_yml, stages_i18n, script_name, metadata)
+
+    updated_report_script = updated['en']['data']['script']['name']['Report Script']
+
+    assert_equal 'Report Script Name', updated_report_script['title']
+    assert_equal 'This is what Report Script is all about', updated_report_script['description']
+    assert_equal 'report-stage-1', updated_report_script['stages']['Report Stage 1']['name']
+    assert_equal 'Stage 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
+    assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
 end

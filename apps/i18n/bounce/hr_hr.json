@@ -30,7 +30,7 @@
   "incrementOpponentScoreTooltip": "Dodaj jedan protivničkim bodovima.",
   "incrementPlayerScore": "dodaj bod",
   "incrementPlayerScoreTooltip": "Povećava trenutni broj bodova za jedan.",
-  "isWall": "jeli ovo zid",
+  "isWall": "je li ovo zid",
   "isWallTooltip": "Vraća \"točno\" ako je ovdje zid",
   "launchBall": "ubaci novu loptu",
   "launchBallTooltip": "Ubacuje loptu u igru.",

@@ -1,11 +1,12 @@
 ---
 title: Teacher Resources - Play Lab
 nav: hoc_teacher_resources_nav
+theme: responsive
 ---
 
 # Play Lab: An Hour of Code Tutorial
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/c-Qz1mc3A-I" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe style="max-width:100%" width="560" height="315" src="https://www.youtube.com/embed/c-Qz1mc3A-I" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 

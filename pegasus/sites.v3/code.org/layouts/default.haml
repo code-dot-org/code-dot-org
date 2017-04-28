@@ -2,7 +2,9 @@
 
 .wrapper
   = view :unsupported_browser
-  -if header['theme'] == 'responsive'
+  -if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
+    = view :header2
+  -elsif header['theme'] == 'responsive'
     #desktop-header.desktop-feature
       = view :header
     #mobile-header.mobile-headers.mobile-feature
@@ -24,7 +26,17 @@
   %div{:class=>containerClass}
 
     -if header['theme'] == 'responsive'
-      =body
+      -if header['nav']
+        %div
+          .col-80-right
+            =body
+          .left-nav.desktop-feature
+            -if header['nav'].nil? || header['nav'] == 'blank'
+              &nbsp;
+            -else
+              = view(header['nav'])
+      -else
+        =body
 
       #clearboth{:style=>"clear:both"}
       .desktop-feature

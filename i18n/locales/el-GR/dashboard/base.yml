@@ -4,7 +4,7 @@ el:
       not_saved: 'Παρακαλώ διόρθωσε τα ακόλουθα σφάλματα:'
       too_young: 'Αυτό το περιεχόμενο έχει περιορισμούς ηλικίας στο περιεχόμενο και δεν είναι διαθέσιμο για τους νεότερους μαθητές.'
       teacher_must_accept_terms: 'Αυτό το περιεχόμενο έχει περιορισμό ηλικίας  και δεν είναι διαθέσιμο για τους μικρότερους  μαθητές. Ρωτήστε τον δάσκαλό  σας για την αποδοχή των ενημερωμένων όρων της υπηρεσίας για  να σας δώσει πρόσβαση σε αυτό το περιεχόμενο. Ο δάσκαλος σας  μπορεί να το κάνει αυτό, με την σύνδεση του στο Code Studio και κάνοντας κλικ στο κουμπί «Αναθεωρημένη ενημέρωση  όρων » στην κορυφή της αρχικής σελίδας  Code Studio.'
-      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
+      pair_programmer: 'Αυτή τη στιγμή κάνετε συνεργατικό προγραμματισμό μαζί με έναν μαθητή που δεν έχει ακόμη πρόσβαση σε αυτό το περιεχόμενο. Για να δείτε αυτό το περιεχόμενο, πρέπει να σταματήσετε τον συνεργατικό προγραμματισμό και να προσπαθήσετε ξανά.'
   activerecord:
     errors:
       messages:
@@ -12,6 +12,7 @@ el:
     attributes:
       user:
         name: 'Προβολή ονόματος'
+        name_example: 'Εμφανιζόμενο όνομα <br/> (π.χ. Προγραμματιστάκιας ή Μαρία)'
         email: 'Ηλεκτρονικό ταχυδρομείο'
         username: 'όνομα χρήστη '
         password: 'κωδικός'
@@ -31,7 +32,7 @@ el:
   unsubmit: Ανακλήθηκε
   previous_page: Προηγούμενη σελίδα
   next_page: Επόμενη σελίδα
-  next_resource: Next resource
+  next_resource: Επόμενος πόρος
   done_with_module: Done with this Learning Module
   cancel: "Άκυρο"
   okay: "Εντάξει"
@@ -78,13 +79,14 @@ el:
     forgot_password: 'Ξέχασες τον κωδικό σου;'
     need_confirmation: "Δεν έλαβες τις οδηγίες επιβεβαίωσης;"
     need_unlock: "Δεν έλαβες τις οδηγίες ξεκλειδώματος;"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} μαθητές έχουν ήδη εγγραφεί.'
     teacher_count: '%{count} καθηγητές έχουν ήδη εγγραφεί.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    overview: 'Δημιουργήστε έναν λογαριασμό για να παρακολουθείτε την πρόοδό σας ή να διαχειριστείτε την τάξη σας. <a href="/">Μπορείτε να περιηγηθείτε σε διάφορα επίπεδα και παζλ</a> χωρίς να διαθέτετε λογαριασμό, αλλά θα πρέπει να εγγραφείτε για να αποθηκεύσετε την πρόοδό και τα έργα σας.'
+    hoc_already_signed_up_heading: 'Ξεκινήστε χωρίς να κάνετε είσοδο'
+    hoc_already_signed_up_content: 'Έχετε εγγραφεί για να διδάξετε μια Ώρα Κώδικα! Εσείς και οι μαθητές σας δεν χρειάζεται να εγγραφείτε στο Code Studio για να συμμετάσχετε σε αυτή τη δραστηριότητα. Για να ξεκινήσετε, <a href="%{learn_url}">επιλέγξτε ένα σενάριο εκμάθησης</a> για την τάξη σας και μοιραστείτε τον υπερσύνδεσμο μαζί τους. <br/><br/>Εάν σας άρεσε η Ώρα του Κώδικα και θέλετε να προχωρήσετε περαιτέρω, μπορείτε να φτιάξετε έναν κωδικό και να δημιουργήσετε έναν λογαριασμό στο Code Studio παρακάτω ώστε να εγγράψετε τους μαθητές σας σε οποιοδήποτε από τα <a href="%{educate_url}">μεγαλύτερης διάρκειας μαθήματα</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Ευχαριστούμε που φιλοξενήσατε μια Ώρα του Κώδικα. Για να εγγραφείτε στο Code Studio θα χρειαστεί να φτιάξετε έναν κωδικό για τον λογαριασμό σας. Αυτό θα σας επιτρέψει να αποθηκεύσετε την πρόοδό σας και να διαχειρίζεστε την τάξη σας. Θα είστε σε θέση να αναθέτετε μαθήματα και να παρακολουθείτε την πορεία των μαθητών σας. <a href="%{studio_url}">Μπορείτε επίσης να συνεχίσετε την πλοήγησή σας στις διάφορες δραστηριότητες και παζλ</a> χωρίς να δημιουργήσετε λογαριασμό.'
     teacher_educator_guide: 'Δείτε τον οδηγό εκπαιδευτικού'
     title: "Εγγραφείτε στο Code.org"
     school_name: 'Όνομα Σχολείου (προαιρετικά)'
@@ -102,17 +104,39 @@ el:
     valid_password: "Έγκυρος κωδικός πρόσβασης!"
     invalid_password: "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6 χαρακτήρες"
     mismatch_password: "Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    student_terms: "Συμφωνώ με τους <a href='http://code.org/tos'>όρους χρήσης</a> του Code.org. Εάν είμαι κάτω των 13 ετών, με την υποβολή της παρούσας φόρμας επιβεβαιώνω ότι διαθέτω άδεια του γονέα ή κηδεμόνα μου για να χρησιμοποιήσω τις υπηρεσίες του Code.org.<br/><br/>Οι ηλεκτρονικές διευθύνσεις ταχυδρομείου δεν αποθηκεύονται σε μορφές που να επιτρέπουν την επικοινωνία με τους μαθητές. Οι μαθητές δεν θα λάβουν ποτέ ηλεκτρονικά μηνύματα από το Code.org εκτός εάν πρόκειται για τη διαδικασία ανάκτησης κωδικού. Δείτε την <a href='http://code.org/privacy'>πολιτική ιδιωτικότητας</a> για περισσότερες πληροφορίες."
+    teacher_terms: "Συμφωνώ με τους όρους χρήσης υποηρεσιών του Code.org. Για περισσότερες πληροφορίες σχετικά με την ιδιωτικότητα, δείτε την <a href='http://code.org/privacy'>πολιτική ιδιωτικότητας</a>."
     additional_information: "Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί η εγγραφή σας."
     user_type_label: "Τύπος λογαριασμού"
     user_type_teacher: "Καθηγητής"
     user_type_student: "φοιτητής/μαθητής"
     field_is_required: "απαιτείται"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό"
+  school_info:
+    title: 'Πληροφορίες σχολείου (προαιρετικό)'
+    school_country: 'Χώρα σχολείου'
+    select_school_type: 'Επιλέξτε τύπο σχολείου'
+    charter: 'Charter'
+    private: 'Ιδιωτικό'
+    public: 'Δημόσιο'
+    homeschool: 'Κατ'' οίκον διδασκαλία'
+    after_school: 'Ολοήμερο'
+    other: 'Άλλα'
+    state: 'Νομός'
+    district: 'Περιοχή'
+    other_district_not_listed: 'Άλλη περιοχή που δεν περιλαμβάνεται παραπάνω'
+    district_name: 'Όνομα περιοχής'
+    school: 'Σχολείο'
+    other_school_not_listed: 'Άλλο σχολείο που δεν περιλαμβάνεται παραπάνω'
+    school_name: 'Όνομα σχολείου'
+    school_zip: 'Ταχυδρομικός κώδικας σχολείου'
+    school_address: 'Ταχυδρομική διεύθυνση σχολείου'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Έχετε ήδη λογαριασμό; Συνδεθείτε'
     login: 'Ηλεκτρονικό ταχυδρομείο'
+    login_username: 'Διεύθυνση ηλεκτρονικού ταχυδρομείου ή όνομα χρήστη'
     password: 'Κωδικός πρόσβασης'
     remember: 'Να με θυμάσαι'
     submit: 'Σύνδεση'
@@ -126,13 +150,13 @@ el:
     picture: 'Τώρα βρείτε την μυστική σας εικόνα'
     words: 'Τώρα δώστε τις μυστικές σας λέξεις'
     login: 'Σύνδεση'
-    invalid_login: 'Invalid login, please try again'
-    pair_programming: 'I have a partner at my computer'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    invalid_login: 'Λανθασμένα στοιχεία εισόδου. Παρακαλούμε προσπαθήστε ξανά'
+    pair_programming: 'Έχω έναν συνεργάτη στον υπολογιστή μου'
+    student_privacy: "Μάθετε περισσότερα σχετικά με το γιατί δεν βλέπετε ολόκληρο το ονοματεπώνυμό σας <a href='%{student_privacy_blog}' target='_blank'>εδώ</a>."
   password:
     reset_form:
       title: 'Ξέχασες τον κωδικό σου;'
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: "Παρακαλούμε γράψτε παρακάτω τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας και θα σας στείλουμε οδηγίες για την ανάκτηση του κωδικού σας."
       email: 'Διεύθυνση email'
       submit: 'Υποβολή'
     change_form:
@@ -150,6 +174,14 @@ el:
       Τα μαθήματα είναι διασκεδαστικά, με όμορφα σχέδια, και η διδασκαλία των βασικών έννοιών της επιστήμης των υπολογιστών γίνεται με απλό, καθοδηγούμενο τρόπο, που μοιάζει με παιχνίδι. Μάθε να προγραμματίζεις με τον Bill Gates, το Mark Zuckerberg, τα Angry Birds και τα Plants vs Zombies :-)
       
        %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Η πρόσκληση στάλθηκε'
     added_teacher: 'Ο %{name} σε πρόσθεσε ως δάσκαλο'
@@ -163,8 +195,6 @@ el:
       blank_code: "Παρακαλώ δώστε μία ενότητα κώδικα"
       cant_join_own_section: "Λυπούμαι, δεν μπορείτε να συνδέσετε τη δική σας ενότητα."
     mail:
-      invite_student:
-        subject: "Μπες στην τάξη με τον %{teacher_name} στο Code.org!"
       student_disassociated:
         subject: 'Ειδοποίηση από την Code.org: ο μαθητής %{student_name} δεν είναι πλέον δικός σας.'
   reports:
@@ -254,8 +284,8 @@ el:
       already_registered: 'Έχετε εγγραφεί ήδη;'
       pair_programming: 'Προγραμματισμός κατά ζεύγη'
       team: 'Ομάδα'
-      driver: 'Driver'
-      navigator: 'Navigator'
+      driver: 'Οδηγός-αρχηγός'
+      navigator: 'Πλοηγός'
     popup:
       progress_for_user: "πρόοδος του %{name}"
       progress: 'Η πρόοδός σου'
@@ -290,9 +320,9 @@ el:
       example_with_number: 'Παράδειγμα λύσης %{solution_number}'
       submitted_on: 'Υποβλήθηκε στις %{date}'
       unsubmit: 'Ανακλήθηκε'
-      worked_with: 'Worked With'
-      update_lock_settings: 'Update lock settings here.'
-      clear_response: 'Clear response'
+      worked_with: 'Συνεργάστηκε με'
+      update_lock_settings: 'Ενημέρωση ρυθμίσεων κλειδώματος.'
+      clear_response: 'Εκκαθάριση απάντησης'
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'
@@ -304,9 +334,9 @@ el:
     delete_text: "Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό σας."
     delete_text_teacher_note: 'Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα διαγραφεί ο λογαριασμός των μαθητών σας.'
     delete_confirm: 'Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?'
-    deleted_user: 'deleted user'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    deleted_user: 'διεγραμμένος χρήστης'
+    no_password_because_oauth: 'Δεν απαιτείται κωδικός διότι εισέρχεστε με εξωτερικό πάροχο.'
+    no_password_because_sponsored: 'Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί τον κωδικό σας.'
   user_level:
     completed: 'Ολοκληρώθηκε'
     tried: 'Δοκιμάστηκε'
@@ -358,30 +388,33 @@ el:
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Μάθετε περισσότερα"
     announcement_try_now_button: "Δοκιμάστε τώρα"
-    announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
+    announcement_host_an_hour_button: "Φιλοξενήστε μια Ώρα"
+    announcement_watch_video_button: "Δείτε το βίντεο"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Προσθέστε το όνομά σας"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
-    section_code_not_entered: "Please provide current_section_code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
     current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
-    students_not_yours: "You cannot move students from a section that does not belong to you."
-    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
     student_ids_not_entered: "Please provide student_ids."
     student_not_found: "Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
-    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
+    already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
   share:
     title: "Μάθετε με κώδικα Studio"
     description: "Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα."
@@ -434,6 +467,10 @@ el:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
       link: "Μάθετε περισσότερα"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Αυτό διαρκεί περισσότερο από ότι συνήθως...'
   try_reloading: 'Δοκίμασε να φορτώσεις ξανά τη σελίδα'
   next_stage: 'Τελείωσε! Συνέχισε στο επόμενο στάδιο'

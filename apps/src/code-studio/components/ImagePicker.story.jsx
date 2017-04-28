@@ -8,7 +8,7 @@ export default storybook => {
       {
         name: 'with warning',
         story: () => (
-          <ImagePicker showWarning uploadsEnabled />
+          <ImagePicker showUnderageWarning uploadsEnabled />
         )
       },
     ]);

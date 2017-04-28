@@ -1,91 +1,82 @@
-- if show_survey?
-  - survey_url = "https://docs.google.com/forms/d/10Qebl7Gi9DTf-RDt-0v78jVFdzJN0mWTSHgAuk6V5gU/viewform?entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}&entry.1146050975&entry.796977513&entry.999252886"
-  .survey{style: "border: 4px solid #a69bc1; border-radius: 15px; padding:40px"}
-    #surveythanks{style: "display: none; font-size: 14px"}
-      Thank you for telling us about your students!
-      %br/
-      %br/
-      We're making changes to improve Code Studio. We'd love your feedback on how we can make it work best for your classroom.
-      %br/
-      %br/
-      %a{href: survey_url, target: "_blank"}
-        %button.btn-primary
-          Go to survey
+- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLSd7MppqXJi4FpURELDH3RyMG6PgevBVPaH373K0h-FSI_3FUg/viewform?usp=pp_url&entry.796977513&entry.999252886&entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}"
 
+#diversity_survey
+  #surveythanks{style: "display: none; "}
+    Thank you for telling us about your students!
+    %br/
+    %br/
+    We're making changes to improve Code Studio. We'd love your feedback on how we can make it work best for your classroom.
+    %br/
+    %br/
+    %a{href: survey_url, target: "_blank"}
+      %button.btn-primary
+        Go to survey
 
-    #surveybody
-      %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Code.org Program Improvement Survey
-      %div{style: "margin-left: 0px"}
-        One of our primary goals at Code.org is to improve overall diversity within computer science education. Please answer 2 questions about your classroom so we can estimate how we're doing. To protect their privacy, we will not ask your students for this information so that it is not linked to their specific accounts. (See our
+  #surveybody
+    #headingarea
+      %h1 Optional: Help us track our progress toward improving diversity in computer science
+      .subtext
+        To protect your students’ privacy, we will not ask students younger than 13 for this information. Therefore, this information will not be linked to their specific accounts.
+        (See our
         = succeed '.)' do
-          %a{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
-      %br/
-      = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
-        .survey_left{style: "width: 50%; float: left"}
-          %p{style: "padding-top: 10px; font-size:16px"}
-            %ol
-              %li{style: "font-size: 14px"}
-                Of your students using Code.org's courses, how many are
-          .dots{style: "padding-top: 10px; padding-left: 20px; padding-bottom: 20px"}
-            - SurveyResult::ETHNICITIES.each do |key, value|
-              %input.ethnicity_input{maxlength: "3", style: "width:40px; height: 24px; font-size: 14px; text-align: right; margin: 6px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()", placeholder: "0"}
-              =value
-              %br/
-        .survey_right{style: "width: 45%; float: left; border-left: 1px solid #ccc; padding-left:20px"}
+          %a#privacylink{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
 
-          %p{style: "padding-top: 7px; font-size:16px;;"}
-            %ol{start: 2}
-              %li{style: "font-size: 14px"}
-                What is the percentage of students with free and reduced meals (FARMs) at your school?
-                %div{style: "font-size: 12px; margin-top:7px"}
-                  Only answer this if you're using Code Studio during school hours.
-          .dots{style: "padding-top: 0px; padding-bottom: 0px; margin-left: 30px; font-size: 14px"}
-            - (0..9).each do |index|
-              - if index.between?(0,7)
-                - value = index * 10
-                - max_value = value == 70 ? 100 : (value+9)
-                - text = "#{value}-#{max_value}%"
-              - elsif index == 8
-                - text = "My school has a Title I designation, but I’m not sure what our rate of Free and Reduced lunch is."
-              - else
-                - text = "Other"
-              .dot{style: "margin-top:10px"}
-                %input{style: "margin-right:3px; vertical-align:top", id: "radio_#{index}", type: "radio", name: "survey[survey2016_foodstamps]", value: index, onclick: "enableSurveySubmit()" }
-                %label{style: "display: inline; margin-top:2px; font-size: 13px; padding-right:20px", for: "radio_#{index}"}= text
+    = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)"}) do |f|
+      .survey_left
+        %ol
+          %li
+            Of your students using Code.org's courses, how many are
+        .dots
+          - SurveyResult::ETHNICITIES.each do |key, value|
+            %input#ethnicity_input{maxlength: "3", name: "survey[diversity_#{key}]", placeholder: "0"}
+            = value
+            %br/
+      .survey_right
 
-        #submit{style: "text-align: right"}
-          %button.btn-primary#submitSurvey{type: "submit", disabled: true} Submit
-          %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
-  %br/
+        %ol{start: 2}
+          %li
+            What is the percentage of students with free and reduced meals (FARMs) at your school?
+            .subtext
+              Only answer this if you're using Code Studio during school hours.
+        .dots
+          - (0..9).each do |index|
+            - if index.between?(0,7)
+              - value = index * 10
+              - max_value = value == 70 ? 100 : (value+9)
+              - text = "#{value}-#{max_value}%"
+            - elsif index == 8
+              - text = "My school has a Title I designation, but I’m not sure what our rate of Free and Reduced lunch is."
+            - else
+              - text = "Other"
+            .dot
+              %input{id: "radio_#{index}", type: "radio", name: "survey[diversity_farm]", value: index}
+              %label{for: "radio_#{index}"}= text
+
+      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2017}
+
+      #submit
+        %button.btn-primary#submitSurvey{type: "submit"} Submit
+        %span#noanswer{onclick: "return submitSurvey(false)"} Prefer not to answer
+%br/
 
 :javascript
-
-  $.ready(function() {
-    // placeholder text for non-HTML5 browsers
-    $('input[type=text]').placeholder();
-  });
-
-  function enableSurveySubmit()
-  {
-    $("#submitSurvey").prop("disabled",false);
-  }
 
   function submitSurvey(submittedValue)
   {
     // make sure each ethnicity is a positive integer
-    $(".ethnicity_input").each(function(index) {
+    $("#ethnicity_input").each(function(index) {
       $(this).val($(this).val().replace(/[^0-9]/g, ''));
     });
 
     if (submittedValue)
     {
       $("#surveybody").hide();
-      $("#surveythanks").show();
+      $("#surveythanks").fadeIn();
     }
     else
     {
       $("#survey")[0].reset();
-      $(".survey").hide();
+      $("#diversity_survey").hide();
     }
 
     $.ajax({
