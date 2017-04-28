@@ -7322,10 +7322,6 @@ react-addons-create-fragment@^15.1.0, react-addons-create-fragment@^15.3.2:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.3.2.tgz#0e589c8c7add0e5db5db48367b5167cbed9c5852"
 
-"react-addons-shallow-compare@^0.14.0 || ^15.0.0":
-  version "15.3.0"
-  resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.3.0.tgz#4a411935a1cf07cea98e0e1cb22732293febfa34"
-
 react-addons-test-utils@15.3.0, "react-addons-test-utils@^0.14.8 || ^15.0.1":
   version "15.3.0"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.3.0.tgz#06d7affdbb729a48ebe0e27966d0cd0e82b57298"
@@ -7696,7 +7692,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@1.1, "readable-stream@>=1.1.13-1 <1.2.0-0", readable-stream@^1.0.27-1, readable-stream@^1.1.13, readable-stream@~1.1.9:
+readable-stream@1.1, readable-stream@^1.0.27-1, readable-stream@^1.1.13, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -8848,12 +8844,12 @@ throttleit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
 
-through2@*:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-1.1.1.tgz#0847cbc4449f3405574dbdccd9bb841b83ac3545"
+through2@*, through2@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
   dependencies:
-    readable-stream ">=1.1.13-1 <1.2.0-0"
-    xtend ">=4.0.0 <4.1.0-0"
+    readable-stream "~2.0.0"
+    xtend "~4.0.0"
 
 through2@^0.5.0:
   version "0.5.1"
@@ -8868,13 +8864,6 @@ through2@^0.6.1, through2@^0.6.3:
   dependencies:
     readable-stream ">=1.0.33-1 <1.1.0-0"
     xtend ">=4.0.0 <4.1.0-0"
-
-through2@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
-  dependencies:
-    readable-stream "~2.0.0"
-    xtend "~4.0.0"
 
 through@^2.3.4, through@^2.3.6:
   version "2.3.8"
