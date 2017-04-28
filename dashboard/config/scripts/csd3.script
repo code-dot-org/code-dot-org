@@ -6,6 +6,7 @@ student_detail_progress_view true
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 1'
 named_level 'CSD U3 Entertainment'
+level 'CSD U3 Entertainment Sample 4', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 3', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 1', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2', progression: 'Sample Programs'

@@ -33,6 +33,9 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"4-5_Artist_Patterns_Free_Play_1\",\r\n  \"callout_text\": \"All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -97,27 +100,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">25 pixel square</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">25</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
@@ -194,20 +176,20 @@
                                                             <title name="DIR">moveForward</title>
                                                             <title name="VALUE">15</title>
                                                             <next>
-                                                            <block type="draw_turn_by_constant">
-                                                            <title name="DIR">turnLeft</title>
-                                                            <title name="VALUE">50</title>
-                                                            <next>
                                                             <block type="jump_to_xy">
                                                             <title name="XPOS">175</title>
                                                             <title name="YPOS">75</title>
                                                             <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <title name="VALUE">50</title>
+                                                            <next>
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="draw eye"/>
                                                             <next>
-                                                            <block type="jump_by_constant">
-                                                            <title name="DIR">jumpForward</title>
-                                                            <title name="VALUE">50</title>
+                                                            <block type="jump_to_xy">
+                                                            <title name="XPOS">225</title>
+                                                            <title name="YPOS">75</title>
                                                             <next>
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="draw eye"/>
@@ -289,6 +271,27 @@
                   </next>
                 </block>
               </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">25 pixel square</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">25</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
             </block>
           </statement>
         </block>
@@ -746,27 +749,47 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="draw_move_by_constant">
+          <block type="draw_move" inline="true">
             <title name="DIR">moveForward</title>
-            <title name="VALUE">100</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
           </block>
-          <block type="draw_turn_by_constant">
+          <block type="draw_turn" inline="true">
             <title name="DIR">turnRight</title>
-            <title name="VALUE">90</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
           </block>
-          <block type="draw_turn_by_constant">
+          <block type="draw_turn" inline="true">
             <title name="DIR">turnLeft</title>
-            <title name="VALUE">90</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
           </block>
-          <block type="jump_by_constant">
+          <block type="jump" inline="true">
             <title name="DIR">jumpForward</title>
-            <title name="VALUE">100</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
           </block>
-          <block type="sticker">
-            <title name="VALUE">Elephant</title>
+          <block type="jump_to">
+            <title name="VALUE">7</title>
+          </block>
+          <block type="jump_to_xy">
+            <title name="XPOS">0</title>
+            <title name="YPOS">0</title>
           </block>
         </category>
-        <category name="Brush">
+        <category name="Brushes">
           <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
@@ -774,11 +797,12 @@
               </block>
             </value>
           </block>
-          <block type="colour_picker">
-            <title name="COLOUR">#7fffd4</title>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
           </block>
-          <block type="colour_random"/>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_rgb" inline="false">
                 <value name="RED">
@@ -799,10 +823,10 @@
               </block>
             </value>
           </block>
-          <block type="alpha" inline="true" id="alpha">
+          <block type="alpha" inline="true">
             <value name="VALUE">
-              <block type="math_number_dropdown">
-                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+              <block type="math_number">
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
@@ -816,13 +840,110 @@
           <block type="draw_line_style_pattern">
             <title name="VALUE">DEFAULT</title>
           </block>
-        </category>
-        <category name="Loops">
-          <block type="controls_repeat">
-            <title name="TIMES">4</title>
+          <block type="sticker">
+            <title name="VALUE">Elephant</title>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Loops">
+          <block type="controls_for" inline="true">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" inline="true">
+                <title name="OP">EQ</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a square">
+              <arg name="length"/>
+              <arg name="sides"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a triangle">
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a circle">
+              <arg name="radius"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a shape">
+              <arg name="sides"/>
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a house">
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a pinwheel">
+              <arg name="sides"/>
+              <arg name="length"/>
+              <arg name="repeat"/>
+            </mutation>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">sides</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">length</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
