@@ -2,30 +2,37 @@
 #
 # Table name: pd_workshops
 #
-#  id               :integer          not null, primary key
-#  workshop_type    :string(255)      not null
-#  organizer_id     :integer          not null
-#  location_name    :string(255)
-#  location_address :string(255)
-#  course           :string(255)      not null
-#  subject          :string(255)
-#  capacity         :integer          not null
-#  notes            :string(255)
-#  section_id       :integer
-#  started_at       :datetime
-#  ended_at         :datetime
-#  created_at       :datetime
-#  updated_at       :datetime
+#  id                  :integer          not null, primary key
+#  organizer_id        :integer          not null
+#  location_name       :string(255)
+#  location_address    :string(255)
+#  processed_location  :text(65535)
+#  course              :string(255)      not null
+#  subject             :string(255)
+#  capacity            :integer          not null
+#  notes               :text(65535)
+#  section_id          :integer
+#  started_at          :datetime
+#  ended_at            :datetime
+#  created_at          :datetime
+#  updated_at          :datetime
+#  processed_at        :datetime
+#  deleted_at          :datetime
+#  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
-#  index_pd_workshops_on_organizer_id  (organizer_id)
+#  index_pd_workshops_on_organizer_id         (organizer_id)
+#  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
-  attributes :id, :workshop_type, :organizer, :location_name, :location_address, :course,
-    :subject, :capacity, :notes, :section_id, :section_code, :state, :facilitators, :enrolled_teacher_count,
-    :sessions, :account_required_for_attendance?, :enrollment_code
+  attributes :id, :organizer, :location_name, :location_address, :course,
+    :subject, :capacity, :notes, :section_id, :section_code, :state, :facilitators,
+    :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
+    :enrollment_code, :on_map, :funded
 
   delegate :workshop_type, to: :object
 

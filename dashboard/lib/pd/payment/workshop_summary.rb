@@ -77,7 +77,7 @@ module Pd::Payment
         organizer_id: workshop.organizer.id,
         organizer_email: workshop.organizer.email,
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
-        workshop_type: workshop.workshop_type,
+        on_map: workshop.on_map,
         section_url: section_url,
         facilitators: workshop.facilitators.map(&:name).join(', '),
         num_facilitators: workshop.facilitators.count,
