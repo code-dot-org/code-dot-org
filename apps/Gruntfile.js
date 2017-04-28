@@ -804,17 +804,6 @@ testsContext.keys().forEach(testsContext);
     'karma:all'
   ]);
 
-  // We used to use 'mochaTest' as our test command.  Alias to be friendly while
-  // we transition away from it.  This can probably be removed in a month or two.
-  // - Brad (16 May 2016)
-  grunt.registerTask('showMochaTestWarning', function () {
-    console.log(chalk.yellow('Warning: ') + 'The ' + chalk.italic('mochaTest') +
-        ' task is deprecated.  Use ' + chalk.italic('test') + ' instead, or' +
-        ' directly invoke its subtasks ' + chalk.italic('unitTest') + ' and ' +
-        chalk.italic('integrationTest') + '.');
-  });
-  grunt.registerTask('mochaTest', ['showMochaTestWarning', 'test']);
-
   grunt.registerTask('logBuildTimes', function () {
     var done = this.async();
     buildTimeLogger.upload(console.log, done);
