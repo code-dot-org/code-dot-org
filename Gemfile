@@ -29,6 +29,7 @@ gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'dalli' # memcached
+gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive', '~> 1.0.0'
 gem 'le', '~> 2.2'
 gem 'os'
