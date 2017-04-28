@@ -151,30 +151,44 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
   });
 
-  it('starts collapsed if it is not the current stage', () => {
+  it('starts collapsed for student if it is not the current stage', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        viewAs={ViewType.Student}
         currentStageId={2}
       />
     );
     assert.equal(wrapper.state('collapsed'), true);
   });
 
-  it('starts uncollapsed if it is the current stage', () => {
+  it('starts uncollapsed for teacher even if not the current stage', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        viewAs={ViewType.Teacher}
+        currentStageId={2}
       />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('uncollapses itself when currentStage gets updated', () => {
+  it('starts uncollapsed for student if it is the current stage', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Student}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), false);
+  });
+
+  it('uncollapses itself for student when currentStage gets updated', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         currentStageId={null}
+        viewAs={ViewType.Student}
       />
     );
     assert.equal(wrapper.state('collapsed'), true);
@@ -187,6 +201,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        viewAs={ViewType.Student}
         currentStageId={null}
       />
     );

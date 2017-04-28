@@ -76,14 +76,18 @@ const ProgressLesson = React.createClass({
 
   getInitialState() {
     return {
-      collapsed: this.props.currentStageId !== this.props.lesson.id
+      // We want teachers to start with everything uncollapsed. For students we
+      // collapse everything except current stage
+      collapsed: this.props.viewAs !== ViewType.Teacher &&
+        this.props.currentStageId !== this.props.lesson.id
     };
   },
 
   componentWillReceiveProps(nextProps) {
+    // If we're assigned a stageId, and it is for this lesson, uncollapse
     if (nextProps.currentStageId !== this.props.currentStageId) {
       this.setState({
-        collapsed: nextProps.currentStageId !== this.props.lesson.id
+        collapsed: this.state.collapsed && nextProps.currentStageId !== this.props.lesson.id
       });
     }
   },
