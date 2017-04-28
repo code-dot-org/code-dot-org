@@ -269,6 +269,42 @@ class SectionApiHelperTest < SequelTestCase
     before do
       FakeDashboard.use_fake_database
       @script_id = 1
+      @time_in_past = Time.new(2017, 1, 2)
+    end
+
+    describe 'assign_script_to_section' do
+      it 'noops for an empty section' do
+        Dashboard.db.transaction(rollback: :always) do
+          DashboardUserScript.assign_script_to_section(
+            @script_id,
+            FakeDashboard::SECTION_EMPTY[:id]
+          )
+          assert_equal 0, Dashboard.db[:user_scripts].count
+        end
+      end
+
+      it 'assigns scripts to followers' do
+        Dashboard.db.transaction(rollback: :always) do
+          DashboardUserScript.assign_script_to_section(
+            @script_id,
+            FakeDashboard::SECTION_NORMAL[:id]
+          )
+          user_scripts = Dashboard.db[:user_scripts].all
+          assert_equal 1, user_scripts.count
+          assert_equal FakeDashboard::STUDENT[:id], user_scripts.first[:user_id]
+        end
+      end
+
+      it 'ignores deleted followers' do
+        Dashboard.db.transaction(rollback: :always) do
+          DashboardUserScript.assign_script_to_section(
+            @script_id,
+            FakeDashboard::SECTION_DELETED_FOLLOWER[:id]
+          )
+          user_scripts = Dashboard.db[:user_scripts].all
+          assert_equal 0, user_scripts.count
+        end
+      end
     end
 
     describe 'assign_script_to_user' do
@@ -282,16 +318,19 @@ class SectionApiHelperTest < SequelTestCase
             where(user_id: user_id, script_id: @script_id).
             all
           assert_equal 1, user_scripts.count
-          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
-          # assert user_scripts.first[:assigned_at]
+          assert user_scripts.first[:assigned_at]
         end
       end
 
-      it 'does not update user_scripts if one exists' do
+      it 'assigns user_scripts if one exists without assigned_at' do
         Dashboard.db.transaction(rollback: :always) do
           user_id = FakeDashboard::STUDENT[:id]
-          Dashboard.db[:user_scripts].
-            insert(user_id: user_id, script_id: @script_id, created_at: '2017-01-02 00:00:00')
+          Dashboard.db[:user_scripts].insert(
+            user_id: user_id,
+            script_id: @script_id,
+            created_at: @time_in_past,
+            updated_at: @time_in_past
+          )
 
           DashboardUserScript.assign_script_to_user(@script_id, user_id)
 
@@ -299,8 +338,31 @@ class SectionApiHelperTest < SequelTestCase
             where(user_id: user_id, script_id: @script_id).
             all
           assert_equal 1, user_scripts.count
-          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
-          # assert user_scripts.first[:assigned_at]
+          assert_equal @time_in_past, user_scripts.first[:created_at]
+          assert user_scripts.first[:updated_at] > @time_in_past
+          assert user_scripts.first[:assigned_at]
+        end
+      end
+
+      it 'does not update user_scripts if one exists with assigned_at' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_id = FakeDashboard::STUDENT[:id]
+          Dashboard.db[:user_scripts].insert(
+            user_id: user_id,
+            script_id: @script_id,
+            created_at: @time_in_past,
+            updated_at: @time_in_past,
+            assigned_at: @time_in_past
+          )
+
+          DashboardUserScript.assign_script_to_user(@script_id, user_id)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_id, script_id: @script_id).
+            all
+          assert_equal 1, user_scripts.count
+          assert_equal @time_in_past, user_scripts.first[:updated_at]
+          assert_equal @time_in_past, user_scripts.first[:assigned_at]
         end
       end
     end
@@ -327,19 +389,22 @@ class SectionApiHelperTest < SequelTestCase
             where(user_id: user_ids, script_id: @script_id).
             all
           assert_equal 2, user_scripts.count
-          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
-          # user_scripts.each do |user_script|
-          #   assert user_script[:assigned_at]
-          # end
+          user_scripts.each do |user_script|
+            assert user_script[:assigned_at]
+          end
         end
       end
 
-      it 'does not update user_scripts if already exists' do
+      it 'assigns user_scripts if exists without assigned_at' do
         Dashboard.db.transaction(rollback: :always) do
           user_ids = [FakeDashboard::STUDENT[:id], FakeDashboard::STUDENT_SELF[:id]]
           user_ids.each do |user_id|
-            Dashboard.db[:user_scripts].
-              insert(user_id: user_id, script_id: @script_id, created_at: '2017-01-02 00:00:00')
+            Dashboard.db[:user_scripts].insert(
+              user_id: user_id,
+              script_id: @script_id,
+              created_at: @time_in_past,
+              updated_at: @time_in_past
+            )
           end
 
           DashboardUserScript.assign_script_to_users(@script_id, user_ids)
@@ -348,10 +413,36 @@ class SectionApiHelperTest < SequelTestCase
             where(user_id: user_ids, script_id: @script_id).
             all
           assert_equal 2, user_scripts.count
-          # TODO(asher): Uncomment this assertion after fixing the method to set assigned_at.
-          # user_scripts.each do |user_script|
-          #   assert user_script[:assigned_at]
-          # end
+          user_scripts.each do |user_script|
+            assert user_script[:assigned_at]
+            assert user_script[:updated_at] > @time_in_past
+          end
+        end
+      end
+
+      it 'does not update user_scripts if exists with assigned_at' do
+        Dashboard.db.transaction(rollback: :always) do
+          user_ids = [FakeDashboard::STUDENT[:id], FakeDashboard::STUDENT_SELF[:id]]
+          user_ids.each do |user_id|
+            Dashboard.db[:user_scripts].insert(
+              user_id: user_id,
+              script_id: @script_id,
+              created_at: @time_in_past,
+              updated_at: @time_in_past,
+              assigned_at: @time_in_past
+            )
+          end
+
+          DashboardUserScript.assign_script_to_users(@script_id, user_ids)
+
+          user_scripts = Dashboard.db[:user_scripts].
+            where(user_id: user_ids, script_id: @script_id).
+            all
+          assert_equal 2, user_scripts.count
+          user_scripts.each do |user_script|
+            assert_equal @time_in_past, user_script[:assigned_at]
+            assert_equal @time_in_past, user_script[:updated_at]
+          end
         end
       end
     end
