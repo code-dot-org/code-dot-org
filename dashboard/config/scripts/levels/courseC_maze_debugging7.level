@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,2,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,1,2,0,0],[0,1,1,1,1,0,0,0],[1,1,1,0,1,1,0,0],[1,1,1,0,0,3,1,1],[0,1,1,0,0,0,1,1],[0,0,1,0,0,0,1,1]]",
     "skin": "scrat",
     "instructions": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
     "start_direction": "3",
@@ -28,6 +28,8 @@
     "examples_required": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- Does everything work at the first step?\\n- How about the second step?\\n- Where does it go wrong?\",\"hint_id\":\"courseC_maze_debugging7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/879d1e200e5e28e5c5d69b6a79c7ed32/courseC_maze_debugging7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use the \\\"Step\\\" button to run the program line by line!\",\"hint_id\":\"courseC_maze_debugging7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/142ae04e8acdab04481d851813f23f64/courseC_maze_debugging7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"After you find and fix the first bug, make sure to use the debugging process again to find the next one.\\n\\nRepeat the debugging process until the program works!\",\"hint_id\":\"courseC_maze_debugging7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6db2541db80e4e34e3a9765dbac7ae74/courseC_maze_debugging7.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
