@@ -490,36 +490,36 @@ var projects = module.exports = {
   getNewProjectName() {
     switch (appOptions.app) {
       case 'applab':
-        return 'App Lab Project';
+        return msg.defaultProjectNameAppLab();
       case 'gamelab':
-        return 'Game Lab Project';
+        return msg.defaultProjectNameGameLab();
       case 'weblab':
-        return 'Web Lab Project';
+        return msg.defaultProjectNameWebLab();
       case 'turtle':
         switch (appOptions.skinId) {
           case 'artist':
-            return 'Artist Project';
+            return msg.defaultProjectNameArtist();
           case 'anna':
           case 'elsa':
-            return 'Frozen Project';
+            return msg.defaultProjectNameFrozen();
         }
         break;
       case 'studio':
         if (appOptions.level.useContractEditor) {
-          return 'Big Game';
+          return msg.defaultProjectNameBigGame();
         }
         switch (appOptions.skinId) {
           case 'studio':
-            return 'Play Lab Project';
+            return msg.defaultProjectNamePlayLab();
           case 'infinity':
-            return 'Infinity Project';
+            return msg.defaultProjectNameInfinity();
           case 'gumball':
-            return 'Gumball Project';
+            return msg.defaultProjectNameGumball();
           case 'iceage':
-            return 'Ice Age Project';
+            return msg.defaultProjectNameIceAge();
         }
     }
-    return 'My Project';
+    return msg.defaultProjectName();
   },
   /**
    * @returns {string} The name of the standalone app capable of running
