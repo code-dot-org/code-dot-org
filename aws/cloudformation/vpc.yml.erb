@@ -142,6 +142,16 @@ Resources:
           FromPort: 6379
           ToPort: 6379
           SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
+  MemcachedSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Memcached access from frontends
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 11211
+          ToPort: 11211
+          SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
   EFSSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -232,6 +242,10 @@ Outputs:
     Description: Security group for Redis cache
     Value: {'Fn::GetAtt': [RedisSecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-RedisSecurityGroup"}
+  MemcachedSecurityGroup:
+    Description: Security group for Memcached
+    Value: {'Fn::GetAtt': [MemcachedSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-MemcachedSecurityGroup"}
   DBSecurityGroup:
     Description: Security group for DB
     Value: {'Fn::GetAtt': [DBSecurityGroup, GroupId]}
