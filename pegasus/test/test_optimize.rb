@@ -3,23 +3,10 @@ require 'active_support/cache'
 require 'active_job'
 require_relative '../router'
 
-module Cdo
-  class OptimizeJob < ActiveJob::Base
-  end
-end
-
-class ImageOptim
-end
-
 class OptimizeTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    # Stub image_optim dependencies not available in unit-test environment.
-    Cdo::OptimizeJob.stubs(:require)
-    @image_optim = mock('double')
-    ::ImageOptim.stubs(new: @image_optim)
-
     require 'cdo/optimizer'
     Cdo::Optimizer.stubs(cache: ActiveSupport::Cache::MemoryStore.new)
   end
@@ -33,19 +20,24 @@ class OptimizeTest < Minitest::Test
   end
 
   def test_optimize_image
-    compressed_image = 'compressed-image-data'
-    @image_optim.expects(:optimize_image_data).returns(compressed_image)
-
     # First request returns original image, begins optimization in background.
     get('/images/logo.png')
     assert_equal 3374, last_response.content_length
     assert_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
 
-    sleep(0.1)
+    # Ensure future request returns optimized image.
+    Timeout.timeout(10) do
+      begin
+        get('/images/logo.png')
+        raise 'not yet' unless last_response.content_length != 3374
+      rescue
+        sleep(0.1)
+        retry
+      end
+    end
 
-    # Second request returns optimized image.
     get('/images/logo.png')
-    assert_equal compressed_image.length, last_response.content_length
+    assert_equal 799, last_response.content_length
     refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
   end
 

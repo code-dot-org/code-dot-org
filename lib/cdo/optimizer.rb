@@ -5,6 +5,7 @@ require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/cache'
 require 'image_size'
+require 'image_optim'
 
 # Optimizes content on-the-fly based on provided content-type.
 # If the process takes longer than specified timeout, the original data will be returned
@@ -76,8 +77,6 @@ module Cdo
 
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
-    require 'image_optim'
-    require 'image_compressor_pack'
 
     # Don't optimize images larger than this threshold.
     IMAGE_PIXEL_MAX = 2.megabytes

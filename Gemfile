@@ -254,14 +254,11 @@ gem 'rambling-trie'
 
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
 
-# Install image-optim tools in all non-development environments.
-group :staging, :test, :production, :adhoc, :levelbuilder do
-  # Ref: https://github.com/ignisf/image_compressor_pack/pull/3
-  gem 'image_compressor_pack', github: 'wjordan/image_compressor_pack', ref: 'cdo', require: false
-  # Ref: https://github.com/toy/image_optim/pull/145
-  # Also include sRGB color profile conversion.
-  gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
-  gem 'image_optim_rails'
-end
+# Ref: https://github.com/toy/image_optim/pull/145
+# Also include sRGB color profile conversion.
+gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
+# Image-optimization tools and binaries.
+gem 'image_optim_pack', '~> 0.4.0'
+gem 'image_optim_rails'
 
 gem 'image_size', require: false
