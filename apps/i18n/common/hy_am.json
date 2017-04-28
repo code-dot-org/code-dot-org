@@ -383,13 +383,5 @@
   "whenRun": "երբ կսկսի",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "խաղային տարածք",
-  "yes": "այո",
-  "assignACourse": "Assign a course to your classroom or start your own course.",
-  "createNewClassroom": "Create a new classroom section to start assigning courses and seeing your student progress.",
-  "createSection": "Create Section",
-  "recentCourses": "Recent Courses",
-  "setUpClassroom": "Set up your classroom",
-  "startLearning": "Start learning",
-  "viewAllCourses": "View all courses",
-  "viewCourses": "View Courses"
+  "yes": "այո"
 }

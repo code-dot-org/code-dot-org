@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.6.17",
+    "@code-dot-org/blockly": "1.6.18",
     "@code-dot-org/bramble": "0.1.14",
     "@code-dot-org/johnny-five": "0.10.10-cdo.0",
     "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
@@ -146,7 +146,7 @@
     "node-sass": "^4.0.0",
     "npm-which": "2.0.0",
     "phantomjs-prebuilt": "^2.1.14",
-    "playground-io": "code-dot-org/playground-io#v0.4.0-cdo.2",
+    "playground-io": "code-dot-org/playground-io#v0.5.0-cdo.0",
     "progress-bar-webpack-plugin": "^1.8.0",
     "pusher-js": "3.2.1",
     "radium": "0.18.1",

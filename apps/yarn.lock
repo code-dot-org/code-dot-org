@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.17":
-  version "1.6.17"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.17.tgz#08d592aef3852d7b1d191dfe77866a5c512a24dd"
+"@code-dot-org/blockly@1.6.18":
+  version "1.6.18"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.18.tgz#9b17654add3a3d753b065d81bea5e329eea66792"
 
 "@code-dot-org/bramble@0.1.14":
   version "0.1.14"
@@ -3693,7 +3693,7 @@ firebase@^2.4.2:
   dependencies:
     faye-websocket ">=0.6.0"
 
-firmata@0.16.0, "firmata@>=0.11.3 <1.0", firmata@latest:
+firmata@0.16.0, firmata@>=0.11.3, firmata@latest:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.16.0.tgz#6f2a759b1a98de234ced010fa3d4d9534d62b2e7"
   dependencies:
@@ -7148,12 +7148,12 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@code-dot-org/playground-io#v0.4.0-cdo.2:
-  version "0.4.0-cdo.2"
-  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/f4cd809e789683b4de059d7e80a5955f3a3269f9"
+playground-io@code-dot-org/playground-io#v0.5.0-cdo.0:
+  version "0.5.0-cdo.0"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/693229a47fba288ac95b303bc23cde56804f23ee"
   dependencies:
     buffer "^4.6.0"
-    firmata ">=0.11.3 <1.0"
+    firmata ">=0.11.3"
     lodash.debounce "^4.0.3"
 
 plur@^1.0.0:
