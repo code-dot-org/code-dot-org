@@ -1351,6 +1351,7 @@ Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
   const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
     project.isSupportedLevelType() && !level.impressive;
+  const {isSignedIn} = getStore().getState().pageConstants;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',
@@ -1368,6 +1369,7 @@ Artist.prototype.displayFeedback_ = function () {
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     // save to the project gallery instead of the legacy gallery
     saveToProjectGallery: saveToProjectGallery,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
