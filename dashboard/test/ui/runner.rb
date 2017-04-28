@@ -173,6 +173,20 @@ def parse_options
     # Standardize: Drop leading dot-slash on feature paths
     options.features = ARGV + (options.features || []).
         map! {|feature| feature.gsub(/^\.\//, '')}
+
+    if options.force_db_access
+      options.pegasus_db_access = true
+      options.dashboard_db_access = true
+    elsif ENV['CI']
+      options.pegasus_db_access = true
+      options.dashboard_db_access = true
+    elsif rack_env?(:development)
+      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
+      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
+    elsif rack_env?(:test)
+      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
+      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
+    end
   end
 end
 
@@ -263,20 +277,6 @@ def run_tests(env, feature, arguments, log_prefix)
     succeeded = wait_thr.value.exitstatus == 0
     return succeeded, stdout, stderr, Time.now - start_time
   end
-end
-
-if $options.force_db_access
-  $options.pegasus_db_access = true
-  $options.dashboard_db_access = true
-elsif ENV['CI']
-  $options.pegasus_db_access = true
-  $options.dashboard_db_access = true
-elsif rack_env?(:development)
-  $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
-  $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
-elsif rack_env?(:test)
-  $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
-  $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
 all_features = Dir.glob('features/**/*.feature')
