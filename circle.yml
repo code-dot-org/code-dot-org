@@ -119,6 +119,6 @@ experimental:
         - staging
 deployment:
   storybook:
-    branch: staging
+    branch: production
     commands:
       - 'cd apps && npm run storybook:deploy'
