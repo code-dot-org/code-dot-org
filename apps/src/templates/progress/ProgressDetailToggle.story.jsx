@@ -11,7 +11,8 @@ export default storybook => {
           levels: []
         }
       ],
-      focusAreaPositions: []
+      focusAreaPositions: [],
+      professionalLearningCourse: false
     }
   };
 
@@ -27,7 +28,8 @@ export default storybook => {
           levels: []
         }
       ],
-      focusAreaPositions: []
+      focusAreaPositions: [],
+      professionalLearningCourse: false
     }
   };
 
