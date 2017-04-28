@@ -147,7 +147,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   def process_type(force: false)
-    type = workshop_params[:workshop_type]
+    type = params[:pd_workshop].delete(:workshop_type)
     if force || type != @workshop.workshop_type
       @workshop.set_on_map_and_funded_from_workshop_type(type)
     end
