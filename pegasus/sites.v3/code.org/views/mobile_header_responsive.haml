@@ -1,5 +1,4 @@
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
-%script{src: minifiable_asset_path("js/hamburger.js")}
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
