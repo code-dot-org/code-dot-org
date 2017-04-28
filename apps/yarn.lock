@@ -7666,7 +7666,7 @@ react-addons-create-fragment@^15.1.0, react-addons-create-fragment@^15.3.2:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.3.2.tgz#0e589c8c7add0e5db5db48367b5167cbed9c5852"
 
-react-addons-shallow-compare@15.3.0, "react-addons-shallow-compare@^0.14.0 || ^15.0.0":
+"react-addons-shallow-compare@^0.14.0 || ^15.0.0":
   version "15.3.0"
   resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.3.0.tgz#4a411935a1cf07cea98e0e1cb22732293febfa34"
 
