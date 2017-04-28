@@ -10,9 +10,6 @@
     "hide_share_and_remix": "false",
     "markdown_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**<span> How do I make multiple paragraphs? </span>**</summary>\r\nHere's an example of several paragraph tags in a row. This code would be placed inside of the body of your web page.\r\n\r\n<pre>\r\n`<p>This is a paragraph. It has two sentences.</p>`\r\n`<p>This is another paragraph.</p>`\r\n</pre>\r\n\r\n</details>\r\n\r\n</div>\r\n\r\n# Use Paragraph Tags\r\n\r\nThe `<p>` tag or \"paragraph\" tag is placed around text to indicate that it is part of a paragraph. Placing text in a paragraph tag lets the computer know that it should be displayed differently, usually just by spacing it out from other text.\r\n\r\n# Do This\r\n\r\n* Place the text you just wrote inside at least two separate paragraphs by surrounding it with `<p>` and `</p>` tags\r\n* Compare the results with a neighbor. What has changed about the way your text is displayed?",
     "project_template_level_name": "CSD U2 HTML Adding Paragraphs Template",
-    "encrypted_examples": [
-
-    ],
     "teacher_markdown": "This lesson has minimal programming in it. As you check students work, or better yet have them check one another's, all you need to be looking for is:\r\n\r\n* Students are writing their code inside of the body of the web page\r\n* Students are correctly using opening and closing `<p>` `</p>` tags\r\n* Students have made more than one paragraph\r\n* Students know how to use the Tips in the top right corner of the instructions"
   },
   "published": true,
