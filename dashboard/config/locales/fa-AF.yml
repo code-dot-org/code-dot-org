@@ -607,7 +607,7 @@
   reference_area:
     title: "کمک نیاز دارید؟"
     subtitle: "دیدن این فیلم ها و نکات"
-    teacher: "مشاهده راه حل"
+    teacher: See the solution
     auth_error: "شما مجاز به دیدن راه حل نیستید."
     submit: "بروزرسانی موقعیت هنرمند"
     direction: "جهت شروع ( به درجه)"
