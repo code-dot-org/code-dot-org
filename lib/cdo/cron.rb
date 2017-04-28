@@ -10,9 +10,7 @@ module Cdo
     def self.weekdays_at(time_str, time_zone: DEFAULT_TIME_ZONE)
       Time.use_zone(time_zone) do
         week = [Time.current.beginning_of_week]
-        while (week_day = week.last.advance(days: 1)) < Time.current.end_of_week
-          week << week_day
-        end
+        week << week.last.next_day while week.last.next_day < Time.current.end_of_week
         times = week.
           select(&:on_weekday?).
           map {|day| Chronic.parse(time_str, now: day)}.
