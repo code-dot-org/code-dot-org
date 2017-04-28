@@ -41,6 +41,7 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 def main
   $options = parse_options
+  $browsers = select_browser_configs($options)
 end
 
 def parse_options
@@ -175,6 +176,31 @@ def parse_options
   end
 end
 
+def select_browser_configs(options)
+  if options.local
+    SeleniumBrowser.ensure_chromedriver_running
+    return [{
+      'browser': 'local',
+      'name': 'ChromeDriver',
+      'browserName': 'chrome',
+      'version': 'latest'
+    }]
+  end
+
+  browsers = JSON.load(open("browsers.json"))
+  if options.config
+    browsers = options.config.map do |name|
+      browsers.detect {|b| b['name'] == name}.tap do |browser|
+        unless browser
+          puts "No config exists with name #{name}"
+          exit
+        end
+      end
+    end
+  end
+  browsers
+end
+
 # Upload the given log to the cucumber-logs s3 bucket.
 # @param [String] filename of log file to be uploaded.
 # @return [String] a public hyperlink to the uploaded log, or empty string.
@@ -188,7 +214,6 @@ rescue Exception => msg
 end
 
 main
-$browsers = JSON.load(open("browsers.json"))
 
 $lock = Mutex.new
 $suite_start_time = Time.now
@@ -198,27 +223,6 @@ $suite_fail_count = 0
 $total_flaky_reruns = 0
 $total_flaky_successful_reruns = 0
 $failures = []
-
-if $options.local
-  SeleniumBrowser.ensure_chromedriver_running
-  $browsers = [{
-    "browser": "local",
-    "name": "ChromeDriver",
-    "browserName": "chrome",
-    "version": "latest"
-  }]
-end
-
-if $options.config
-  $browsers = $options.config.map do |name|
-    $browsers.detect {|b| b['name'] == name}.tap do |browser|
-      unless browser
-        puts "No config exists with name #{name}"
-        exit
-      end
-    end
-  end
-end
 
 $logfile = File.open("success.log", "w")
 $errfile = File.open("error.log", "w")
