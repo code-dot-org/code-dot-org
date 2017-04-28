@@ -2514,6 +2514,8 @@ var displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
       project.isSupportedLevelType();
+    const {isSignedIn} = getStore().getState().pageConstants;
+
     studioApp().displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
@@ -2531,6 +2533,7 @@ var displayFeedback = function () {
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting
