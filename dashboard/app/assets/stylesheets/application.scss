@@ -193,13 +193,6 @@ img.video_thumbnail {
     }
   }
 
-  .header.hide_on_mobile,
-  .header-wrapper.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
-    }
-  }
-
   .header_status_bar {
     background-color: $dark_color;
     border-radius: 5px;
@@ -279,13 +272,6 @@ img.video_thumbnail {
       padding: 13px 16px;
       background-color: $teal;
       margin-top: 0;
-    }
-  }
-
-  .header.hide_on_mobile,
-  .header-wrapper.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
     }
   }
 
@@ -384,15 +370,6 @@ img.video_thumbnail {
   #hamburger {
     padding-top: 4px;
     padding-left: 20px;
-  }
-}
-
-.sign_in.show_only_on_mobile {
-  float: right;
-  margin-bottom: 10px;
-
-  @media screen and (min-device-width: 501px) {
-    display: none;
   }
 }
 
