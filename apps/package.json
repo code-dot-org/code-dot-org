@@ -193,8 +193,7 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-livereload-plugin": "^0.8.1",
-    "webpack-notifier": "^1.4.1",
-    "which": "1.1.1"
+    "webpack-notifier": "^1.4.1"
   },
   "dependencies": {
     "@code-dot-org/js-interpreter": "^1.1.1",
