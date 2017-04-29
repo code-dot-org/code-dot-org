@@ -615,6 +615,15 @@ Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
+Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
+  readonly = @browser.execute_script("return $(\"#{selector}\").attr(\"readonly\");")
+  if negation.nil?
+    expect(readonly).to eq('readonly')
+  else
+    expect(readonly.nil?).to eq(true)
+  end
+end
+
 # The second regex encodes that ids should not contain spaces or quotes.
 # While this is stricter than HTML5, it is looser than HTML4.
 Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
