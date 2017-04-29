@@ -77,7 +77,6 @@ module Cdo
 
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
-
     # Don't optimize images larger than this threshold.
     IMAGE_PIXEL_MAX = 2.megabytes
 
