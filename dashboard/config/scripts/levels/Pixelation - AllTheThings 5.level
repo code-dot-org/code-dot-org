@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "instructions": "This pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.",
-    "markdown_instructions": "# Pixelation: AllTheThings 4\r\n                                                                                                            This pixelation level demonstrates the use of the `hide_encoding_controls` option.  Notice that the level displays the image data in hexadecimal and does not let you change it back to binary.\r\n                                                                                                                        ",
+    "markdown_instructions": "# Pixelation: AllTheThings 5\r\nThis pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.",
     "version": "1",
     "hex": "true",
     "data": "FF0000 00AAAA",
