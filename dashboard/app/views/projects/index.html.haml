@@ -3,5 +3,34 @@
 = render partial: 'shared/angular'
 
 %script{src: asset_path('angularProjects.js') }
+%script{src: minifiable_asset_path('js/projects/index.js')}
 
-%div{'ng-app' => 'projectsApp', 'ng-view' => ''}
+.projects-page
+  .row
+    .span12
+      %h1= @page_title
+
+  .row
+    .span2
+    .span8.infobox= t('project.help_text').html_safe
+    .span2
+  %br
+  %br
+
+  .row
+    #angular-my-projects-wrapper
+      %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
+    #public-gallery-wrapper{'style' => 'display: none;'}
+      #public-gallery
+
+  .row
+    .span12
+      %h3.lesson{style: 'text-align:center'}
+        = t('project.need_help')
+  .row
+    .center{style: 'width: 720px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+
+= render partial: 'projects/admin'

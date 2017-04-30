@@ -422,6 +422,7 @@ testsContext.keys().forEach(testsContext);
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
+    'projects/index':               './src/sites/studio/pages/projects/index.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
