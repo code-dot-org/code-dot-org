@@ -12,7 +12,9 @@
     "hex": "false",
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
-    "instructions": "Draw a smiley face (click here to see image)"
+    "instructions": "Draw a smiley face (click here to see image)",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false"
   },
   "published": true,
   "notes": "",

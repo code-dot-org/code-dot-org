@@ -475,4 +475,23 @@ class Pd::Workshop < ActiveRecord::Base
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
+
+  # temporary data transformation method that sets values for new on_map and
+  # funded columns from old workshop_type, for that transitional period where we
+  # temporarily have both sets on our way to removing workshop_type
+  # TODO elijah: remove this method  once it is no longer necessary
+  def set_on_map_and_funded_from_workshop_type(type_override=nil)
+    type = type_override || workshop_type
+    case type
+      when Pd::Workshop::TYPE_PUBLIC
+        self.on_map = true
+        self.funded = true
+      when Pd::Workshop::TYPE_PRIVATE
+        self.on_map = false
+        self.funded = true
+      when Pd::Workshop::TYPE_DISTRICT
+        self.on_map = false
+        self.funded = false
+    end
+  end
 end

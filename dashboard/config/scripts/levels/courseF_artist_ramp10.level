@@ -36,7 +36,7 @@
     "disable_sharing": "false",
     "callout_json": "[]",
     "ideal": "9",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?\",\"hint_id\":\"courseD_artist_ramp10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb1f252c9933d6028e55386a5a63e0e3/courseE_artist_ramp10.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?\",\"hint_id\":\"courseF_artist_ramp10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb1f252c9933d6028e55386a5a63e0e3/courseF_artist_ramp10.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

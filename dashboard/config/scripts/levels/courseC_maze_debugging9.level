@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,3,0,1,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,1,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0],[0,0,3,0,1,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
     "instructions": "Debug this level to get Scrat to the acorn.",
     "start_direction": "3",
@@ -28,6 +28,8 @@
     "examples_required": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What is Scrat supposed to do?\\n- What does Scrat do?\\n- What does that tell you?\",\"hint_id\":\"courseC_maze_debugging9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/da19211b98963aaf602d1827cc9bdfc2/courseC_maze_debugging9.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
