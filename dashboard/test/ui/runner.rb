@@ -52,20 +52,13 @@ def main(options)
   # if we exceed a certain limit.  See options.abort_when_failures_exceed.
   $failed_features = 0
 
-  suite_start_time = Time.now
-  suite_success_count = 0
-  suite_fail_count = 0
-  # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
-  total_flaky_reruns = 0
-  total_flaky_successful_reruns = 0
-  failures = []
-
-  ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
+  start_time = Time.now
+  ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
   configure_for_eyes if eyes?
   report_tests_starting
-  generate_status_page(suite_start_time) if options.with_status_page
+  generate_status_page(start_time) if options.with_status_page
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
@@ -81,32 +74,8 @@ def main(options)
   # exit with a failure code.
   return 1 if run_results.nil?
 
-  run_results.each do |succeeded, message, reruns|
-    total_flaky_reruns += reruns
-    if succeeded
-      total_flaky_successful_reruns += reruns
-      suite_success_count += 1
-    else
-      suite_fail_count += 1
-      failures << message
-    end
-  end
-
-  suite_duration = Time.now - suite_start_time
-
-  ChatClient.log "#{suite_success_count} succeeded.  #{suite_fail_count} failed. " \
-  "Test count: #{(suite_success_count + suite_fail_count)}. " \
-  "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
-  "Total reruns of flaky tests: #{total_flaky_reruns}. " \
-  "Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
-  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
-
-  if suite_fail_count > 0
-    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
-  end
-
-  suite_fail_count
+  report_tests_finished start_time, run_results
+  run_results.count {|succeeded, _, _| !succeeded}
 ensure
   close_log_files
 end
@@ -377,6 +346,37 @@ def report_tests_starting
   ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
   if eyes?
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
+  end
+end
+
+def report_tests_finished(start_time, run_results)
+  suite_duration = Time.now - start_time
+
+  # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
+  total_flaky_reruns = 0
+  total_flaky_successful_reruns = 0
+  suite_success_count = 0
+  failures = []
+  run_results.each do |succeeded, message, reruns|
+    total_flaky_reruns += reruns
+    if succeeded
+      total_flaky_successful_reruns += reruns
+      suite_success_count += 1
+    else
+      failures << message
+    end
+  end
+
+  ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
+  "Test count: #{run_results.count}. " \
+  "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
+  "Total reruns of flaky tests: #{total_flaky_reruns}. " \
+  "Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
+  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
+
+  unless failures.empty?
+    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
   end
 end
 
