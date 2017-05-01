@@ -114,6 +114,12 @@ module ScriptConstants
     return CATEGORIES[category].include? script
   end
 
+  def self.script_in_any_category?(script)
+    CATEGORIES.keys.any? do |category|
+      script_in_category?(category, script)
+    end
+  end
+
   def self.categories(script)
     CATEGORIES.select {|_, scripts| scripts.include? script}.
         map {|category, _| category.to_s}
