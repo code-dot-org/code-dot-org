@@ -1,5 +1,6 @@
-require 'cdo/user_helpers'
+require 'cdo/activity_constants'
 require 'cdo/script_constants'
+require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
@@ -433,7 +434,7 @@ class DashboardSection
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path
       ).
-      distinct(:student_user_id).
+      group_by(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       where(followers__deleted_at: nil).
