@@ -56,7 +56,7 @@ const ProgressLessonContent = React.createClass({
       <div>
         <div
           style={styles.summary}
-          dangerouslySetInnerHTML={{ __html: marked(description, { renderer }) }}
+          dangerouslySetInnerHTML={{ __html: marked(description || '', { renderer }) }}
         />
         {bubbles}
       </div>
