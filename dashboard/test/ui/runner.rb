@@ -39,8 +39,8 @@ S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
-def main
-  $options = parse_options
+def main(options)
+  $options = options
   $browsers = select_browser_configs($options)
   $lock = Mutex.new
   $suite_start_time = Time.now
@@ -64,6 +64,51 @@ def main
   configure_for_eyes if eyes?
   report_tests_starting
   generate_status_page if $options.with_status_page
+
+  run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
+    run_feature browser, feature, $options
+  end
+
+  $logfile.close
+  $errfile.close
+  $errbrowserfile.close
+
+  # Produce a final report if we aborted due to excess failures
+  if $failed_features > $options.abort_when_failures_exceed
+    abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
+    ChatClient.log abandoned_message, color: 'red'
+  end
+
+  # If we aborted for some reason we may have no run results, and should
+  # exit with a failure code.
+  return 1 if run_results.nil?
+
+  run_results.each do |succeeded, message, reruns|
+    $total_flaky_reruns += reruns
+    if succeeded
+      $total_flaky_successful_reruns += reruns
+      $suite_success_count += 1
+    else
+      $suite_fail_count += 1
+      $failures << message
+    end
+  end
+
+  $suite_duration = Time.now - $suite_start_time
+
+  ChatClient.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
+  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
+  "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
+  "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
+  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
+
+  if $suite_fail_count > 0
+    ChatClient.log "Failed tests: \n #{$failures.join("\n")}"
+  end
+
+  $suite_fail_count
 end
 
 def parse_options
@@ -678,49 +723,11 @@ EOS
   [succeeded, message, reruns]
 end
 
-main
-
-run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
-  run_feature browser, feature, $options
-end
-
-$logfile.close
-$errfile.close
-$errbrowserfile.close
-
-# Produce a final report if we aborted due to excess failures
-if $failed_features > $options.abort_when_failures_exceed
-  abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
-  ChatClient.log abandoned_message, color: 'red'
-end
-
-# If we aborted for some reason we may have no run results, and should
-# exit with a failure code.
-exit 1 if run_results.nil?
-
-run_results.each do |succeeded, message, reruns|
-  $total_flaky_reruns += reruns
-  if succeeded
-    $total_flaky_successful_reruns += reruns
-    $suite_success_count += 1
-  else
-    $suite_fail_count += 1
-    $failures << message
-  end
-end
-
-$suite_duration = Time.now - $suite_start_time
-
-ChatClient.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
-  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
-  "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
-  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
-
-if $suite_fail_count > 0
-  ChatClient.log "Failed tests: \n #{$failures.join("\n")}"
-end
-
-exit $suite_fail_count
+#
+# This is the actual beginning of the script.
+# Please keep this simple!
+# Changes to the test procedure should live in main()
+#
+options = parse_options
+status = main(options)
+exit status
