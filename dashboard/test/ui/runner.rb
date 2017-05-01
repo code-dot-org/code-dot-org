@@ -59,6 +59,7 @@ def main
 
   configure_for_eyes if eyes?
   report_tests_starting
+  generate_status_page if $options.with_status_page
 end
 
 def parse_options
@@ -318,20 +319,27 @@ def report_tests_starting
   end
 end
 
-main
+def status_page_url
+  return nil unless $options.with_status_page
+  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
+end
 
-status_page_url = nil
-if $options.with_status_page
+def status_page_filename
+  "test_status_#{test_type}.html"
+end
+
+def scheme_for_environment
+  (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
+end
+
+def generate_status_page
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
-  status_page_filename = "test_status_#{test_type}.html"
-  scheme = (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
-  status_page_url = CDO.studio_url('/ui_test/' + status_page_filename, scheme)
   File.open(status_page_filename, 'w') do |file|
     file.write haml_engine.render(
       Object.new,
       {
-        api_origin: CDO.studio_url('', scheme),
+        api_origin: CDO.studio_url('', scheme_for_environment),
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
@@ -349,12 +357,14 @@ end
 def test_run_identifier(browser, feature)
   feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
+  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
 
 def browser_name_or_unknown(browser)
   browser['name'] || 'UnknownBrowser'
 end
+
+main
 
 $calculate_flakiness = true
 # Retrieves / calculates flakiness for given test run identifier, giving up for
@@ -469,8 +479,8 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   end
 
   arguments = ''
-  arguments += " -t #{$options.run_eyes_tests && !browser['mobile'] ? '' : '~'}@eyes"
-  arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
+  arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
+  arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_circle" if $options.is_circle
@@ -633,7 +643,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if $options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
-    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
+    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
     ChatClient.log message, color: 'red'
   end
   result_string =
@@ -652,7 +662,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
   - Do the feature or scenario tags exclude #{browser_name}?
 EOS
-    unless $options.run_eyes_tests
+    unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end
     unless $options.dashboard_db_access
