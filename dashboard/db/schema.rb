@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426010410) do
+ActiveRecord::Schema.define(version: 20170427233825) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -721,6 +721,7 @@ ActiveRecord::Schema.define(version: 20170426010410) do
     t.boolean  "assessment"
     t.text     "properties",  limit: 65535
     t.boolean  "named_level"
+    t.boolean  "bonus"
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end
