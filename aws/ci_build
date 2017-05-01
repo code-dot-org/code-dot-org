@@ -125,11 +125,7 @@ def main
     # Notify the ChatClient channels about what happened.
     if status == 0
       message = "<b>#{projects}</b> built." + time_message + log_link
-
       ChatClient.log message, color: 'green'
-
-      ChatClient.message 'server operations', message, color: 'green'
-      ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       truncated_log = <<-LOG
