@@ -364,20 +364,19 @@ def browser_name_or_unknown(browser)
   browser['name'] || 'UnknownBrowser'
 end
 
-main
-
-$calculate_flakiness = true
 # Retrieves / calculates flakiness for given test run identifier, giving up for
 # the rest of this script execution if an error occurs during calculation.
 # returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
 def flakiness_for_test(test_run_identifier)
-  return nil unless $calculate_flakiness
+  return nil if $stop_calculating_flakiness
   TestFlakiness.test_flakiness[test_run_identifier]
 rescue Exception => e
   puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
-  $calculate_flakiness = false
+  $stop_calculating_flakiness = true
   nil
 end
+
+main
 
 # Sort by flakiness (most flaky at end of array, will get run first)
 browser_features_left = browser_features.sort! do |browser_feature_a, browser_feature_b|
