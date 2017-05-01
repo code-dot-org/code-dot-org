@@ -3523,6 +3523,7 @@ en:
         rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U2 lists match:
         List Matching: List Matching
+        Lists Quick Check: Lists Quick Check
         Match the list to the code that makes it.: Match the list to the code that makes it.
         https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png
         https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png
@@ -4768,6 +4769,13 @@ en:
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
         <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
         <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
+        Headers Quick Check: Headers Quick Check
+        Look at the code below and predict how the headers will be displayed.  Choose from one of the three options on the right.: Look at the code below and predict how the headers will be displayed.  Choose from one of the three options on the right.
+        Look at the code on the left and predict how the headers will be displayed.  Choose from one of the three options on the right.: Look at the code on the left and predict how the headers will be displayed.  Choose from one of the three options on the right.
+        https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
+        https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
+        https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
+        https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png
       CSD Header Size Prediction:
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
@@ -7700,6 +7708,10 @@ en:
         The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
         The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.: The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.
         The pirate would say, "It be a pleasure meetin' ya." and that is all.: The pirate would say, "It be a pleasure meetin' ya." and that is all.
+        The pirate would say, "It's a pleasure to meet you, Ali." and that is all.: The pirate would say, "It's a pleasure to meet you, Ali." and that is all.
+        The pirate would say, "It's a pleasure to meet you." and that is all.: The pirate would say, "It's a pleasure to meet you." and that is all.
+        The pirate would say, "Pleasure to meet you, Ali." and that is all.: The pirate would say, "Pleasure to meet you, Ali." and that is all.
+        The pirate would say, "Pleasure to meet you." and that is all.: The pirate would say, "Pleasure to meet you." and that is all.
         What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
       coursee_prediction_artistfunction2:
         Correct!: Correct!

@@ -13,7 +13,9 @@
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
     "data": "1111111111111111111111111111111110110111111111111110111111011011111101110111101111100001111111111111",
-    "instructions": "Add eyebrows to the smiley face (click here to see the image)"
+    "instructions": "Add eyebrows to the smiley face (click here to see the image)",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false"
   },
   "published": true,
   "notes": "",
