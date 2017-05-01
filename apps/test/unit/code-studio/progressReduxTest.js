@@ -508,6 +508,7 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: true,
+            isGoBeyond: false,
             levelNumber: undefined
           },
           {
@@ -517,6 +518,7 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
+            isGoBeyond: false,
             levelNumber: 1
           },
           {
@@ -526,6 +528,7 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
+            isGoBeyond: false,
             levelNumber: 2
           }
         ],
@@ -537,6 +540,7 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
+            isGoBeyond: false,
             levelNumber: 1
           },
           {
@@ -546,6 +550,7 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
+            isGoBeyond: false,
             levelNumber: 2
           },
           {
@@ -555,6 +560,7 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
+            isGoBeyond: false,
             levelNumber: 3
           }
         ]
