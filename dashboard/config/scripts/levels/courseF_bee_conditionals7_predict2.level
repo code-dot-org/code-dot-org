@@ -32,7 +32,7 @@
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "markdown_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**Remember:** This puzzle changes each time it's run.  \\n\\nYou'll want to use a conditional block (`if/else`) to solve the challenge.\",\"hint_id\":\"courseD_bee_conditionals7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a0c1a3be070bd8bd64d3a9315141edce/courseD_bee_conditionals7.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -52,7 +52,8 @@
           <next>
             <block type="maze_untilBlocked">
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
                     <block type="bee_ifElseFlower">
                       <title name="LOC">atFlower</title>

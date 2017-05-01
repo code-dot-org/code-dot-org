@@ -14,23 +14,34 @@
 
 require_relative '../../../dashboard/config/environment'
 
+count = 0
+start_id = ARGV[0].try(:to_i) || 0
 begin
   ActiveRecord::Base.record_timestamps = false
 
-  User.only_deleted.find_each do |user|
+  User.only_deleted.where('user_id >= ?', start_id).find_each do |user|
     ActiveRecord::Base.transaction do
       # Manually execute the `dependent: :destroy` for `has_many :sections`, including its
       # `dependent: :destroy` for `has_many :followers`. Though only teachers should have sections,
       # our DB data fails this validation, so we perform this for all users.
       Section.where(user_id: user.id, deleted_at: nil).find_each do |section|
         section.update!(deleted_at: user.deleted_at)
-        Follower.where(section_id: section.id, deleted_at: nil).update!(deleted_at: user.deleted_at)
+        Follower.where(section_id: section.id, deleted_at: nil).
+          all.
+          update!(deleted_at: user.deleted_at)
       end
 
       # Manually execute the `dependent: :destroy` for `has_many :followeds`.
-      Follower.where(student_user_id: user.id, deleted_at: nil).update!(deleted_at: user.deleted_at)
+      Follower.where(student_user_id: user.id, deleted_at: nil).
+        all.
+        update!(deleted_at: user.deleted_at)
     end
+    count += 1
+    puts "PROCESSED: #{count} records." if count % 100 == 0
   end
+rescue Exception => e
+  puts "PROCESSED: #{count} records."
+  raise e
 ensure
   ActiveRecord::Base.record_timestamps = true
 end
