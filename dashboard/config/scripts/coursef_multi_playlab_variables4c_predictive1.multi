@@ -1,8 +1,8 @@
 name 'courseF_multi_playlab_variables4c_predictive1'
 
 question 'What would happen if the user entered the name "Ali" at the prompt?'
-right 'The pirate would say, "It be a pleasure meetin\' ya, Ali." and that is all.', feedback: 'Correct. '
-wrong 'The pirate would say, "It be a pleasure meetin\' ya." and that is all.', feedback: 'Incorrect. Notice that the `join` block inserts the provided name into the pirate\'s sentence.'
+right 'The pirate would say, "Pleasure to meet you, Ali." and that is all.', feedback: 'Correct. '
+wrong 'The pirate would say, "Pleasure to meet you." and that is all.', feedback: 'Incorrect. Notice that the `join` block inserts the provided name into the pirate\'s sentence.'
 wrong 'The pirate would say, "Ali" and that is all.', feedback: 'Incorrect. Notice that the `join` block inserts the provided name into the pirate\'s sentence.'
 wrong 'I don\'t know.', feedback: 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate\'s sentence. '
 

@@ -1,5 +1,5 @@
 name 'CSD U2 lists match'
-title 'List Matching'
+title 'Lists Quick Check'
 description 'Match the list to the code that makes it.'
 height '100'
 question 'https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png'
