@@ -418,6 +418,75 @@ def parallel_config(parallel_limit)
   }
 end
 
+# returns the first line of the first selenium error in the html output file.
+def first_selenium_error(filename)
+  html = File.read(filename)
+  error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
+  match = error_regex.match(html)
+  full_error = match && match[1]
+  full_error ? full_error.strip.split("\n").first : 'no selenium error found'
+end
+
+# return all text after "Failing Scenarios"
+def output_synopsis(output_text, log_prefix)
+  # example output:
+  # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
+  #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
+  #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
+  #  "\n",
+  #  "Failing Scenarios:\n",
+  #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
+  #  "\n",
+  #  "3 scenarios (1 failed, 2 skipped)\n",
+  #  "41 steps (1 failed, 38 skipped, 2 passed)\n",
+  #  "0m1.548s\n"]
+
+  lines = output_text.lines
+
+  failing_scenarios = lines.rindex("Failing Scenarios:\n")
+  if failing_scenarios
+    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
+  else
+    return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
+  end
+end
+
+def how_many_reruns?(test_run_string)
+  if $options.retry_count
+    puts "Retrying #{$options.retry_count} times"
+    return $options.retry_count
+  elsif $options.auto_retry
+    return 1
+  elsif $options.magic_retry
+    flakiness = flakiness_for_test(test_run_string)
+    if !flakiness
+      $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
+      return 1
+    elsif flakiness == 0.0
+      $lock.synchronize {puts "#{test_run_string} is not flaky".green}
+      return 1
+    else
+      flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
+      recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+      max_reruns = [1, [recommended_reruns, 5].min].max # Clamp rerun count to range 1-5
+
+      confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+      flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
+
+      if max_reruns < 2
+        $lock.synchronize {puts flakiness_message.green}
+      elsif max_reruns < 3
+        $lock.synchronize {puts flakiness_message.yellow}
+      else
+        $lock.synchronize {puts flakiness_message.red}
+      end
+      return max_reruns
+    end
+  else # no retry options
+    return 0
+  end
+end
+
 main
 
 run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
@@ -475,15 +544,6 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
     end
   end
 
-  # returns the first line of the first selenium error in the html output file.
-  def first_selenium_error(filename)
-    html = File.read(filename)
-    error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
-    match = error_regex.match(html)
-    full_error = match && match[1]
-    full_error ? full_error.strip.split("\n").first : 'no selenium error found'
-  end
-
   arguments = ''
   arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
   arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
@@ -501,66 +561,6 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
   arguments += " --format html --out #{html_output_filename} -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
-
-  # return all text after "Failing Scenarios"
-  def output_synopsis(output_text, log_prefix)
-    # example output:
-    # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
-    #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
-    #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
-    #  "\n",
-    #  "Failing Scenarios:\n",
-    #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
-    #  "\n",
-    #  "3 scenarios (1 failed, 2 skipped)\n",
-    #  "41 steps (1 failed, 38 skipped, 2 passed)\n",
-    #  "0m1.548s\n"]
-
-    lines = output_text.lines
-
-    failing_scenarios = lines.rindex("Failing Scenarios:\n")
-    if failing_scenarios
-      return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
-    else
-      return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
-    end
-  end
-
-  def how_many_reruns?(test_run_string)
-    if $options.retry_count
-      puts "Retrying #{$options.retry_count} times"
-      return $options.retry_count
-    elsif $options.auto_retry
-      return 1
-    elsif $options.magic_retry
-      flakiness = flakiness_for_test(test_run_string)
-      if !flakiness
-        $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
-        return 1
-      elsif flakiness == 0.0
-        $lock.synchronize {puts "#{test_run_string} is not flaky".green}
-        return 1
-      else
-        flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-        recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
-        max_reruns = [1, [recommended_reruns, 5].min].max # Clamp rerun count to range 1-5
-
-        confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
-        flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
-
-        if max_reruns < 2
-          $lock.synchronize {puts flakiness_message.green}
-        elsif max_reruns < 3
-          $lock.synchronize {puts flakiness_message.yellow}
-        else
-          $lock.synchronize {puts flakiness_message.red}
-        end
-        return max_reruns
-      end
-    else # no retry options
-      return 0
-    end
-  end
 
   max_reruns = how_many_reruns?(test_run_string)
 
