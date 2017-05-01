@@ -276,10 +276,12 @@ def run_tests(env, feature, arguments, log_prefix)
   end
 end
 
+def features_to_run
+  $features_to_run ||= $options.features.empty? ? Dir.glob('features/**/*.feature') : $options.features
+end
+
 main
 
-all_features = Dir.glob('features/**/*.feature')
-features_to_run = $options.features.empty? ? all_features : $options.features
 browser_features = $browsers.product features_to_run
 
 ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
