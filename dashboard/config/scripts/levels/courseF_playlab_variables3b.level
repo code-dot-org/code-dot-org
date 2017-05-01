@@ -6,11 +6,11 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return Studio.sayComplete > 2;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return (Studio.sayComplete > 2) && (Studio.sprite[0].bubbleText.includes(Studio.Globals.age)) && (Studio.sprite[1].bubbleText.includes(Studio.Globals.age));\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":24},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":25},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Help Kiki have a conversation with Brian by using the variable `A1` in all of the places where age `12` should be used. ",
+    "instructions": "Help Kiki have a conversation with Brian by using the variable `age` in all of the places where age `12` should be used. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "true",
-    "markdown_instructions": "Help Kiki have a conversation with Brian by using the variable `A1` in all of the places where age `12` should be used. ",
+    "markdown_instructions": "Help Kiki have a conversation with Brian by using the variable `age` in all of the places where age `12` should be used. ",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -309,16 +309,7 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml>
-        <block type="studio_saySpriteParams" inline="true" movable="false" editable="false">
-          <title name="SPRITE">1</title>
-          <value name="TEXT">
-            <block type="variables_get" editable="false">
-              <title name="VAR">age</title>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml/>
     </required_blocks>
     <solution_blocks>
       <xml>

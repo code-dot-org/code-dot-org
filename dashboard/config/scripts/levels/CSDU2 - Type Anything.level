@@ -9,7 +9,7 @@
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" \"\r\n    }\r\n  ]\r\n}",
     "instructions_important": "false",
     "encrypted_examples": "NG9IR4WS4w7st/79PLjuyQrSWOlEyOJDo2miHePA+el2ho1wD38Apuy5NvGY\nSF3BKBojC4oG3UJQdrupCxV+LA==\n",
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "true"
   },
   "published": true,
   "notes": "",

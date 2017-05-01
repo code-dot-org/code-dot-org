@@ -6,11 +6,11 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n    return (Studio.sayComplete > 1);\r\n\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":19},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0}]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"emotion\":1,\"sprite\":27},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "We have provided some starter questions and variables for you. Join them together and put them in the title screen to make a fun story.",
+    "instructions": "Join the variables together to make a fun story that takes more than one speech bubble to tell.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "You cannot fit much text in an actor's speech bubble.  Let's try building some text using the `show title screen` block.\r\n\r\nWe have provided some starter questions and variables for you. Join them together and put them in the title screen to make a fun story.",
+    "markdown_instructions": "You cannot fit much text in an actor's speech bubble, so sometimes you need to make the actor say something more than once.  \r\n\r\nWe have provided some starter questions and variables for you. Join them together to make a fun story that takes more than one speech bubble to tell.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -48,7 +48,9 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null,
+    "timeout_failure_tick": "400"
   },
   "published": true,
   "notes": "",
@@ -75,53 +77,6 @@
                         <block type="studio_ask">
                           <title name="TEXT">Enter a plural noun</title>
                           <title name="VAR">noun</title>
-                          <next>
-                            <block type="studio_showTitleScreenParams" inline="false">
-                              <value name="TITLE">
-                                <block type="text_join_simple" inline="false" inputcount="2">
-                                  <value name="ADD0">
-                                    <block type="text">
-                                      <title name="TEXT">The story of </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD1">
-                                    <block type="variables_get">
-                                      <title name="VAR">sport</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="TEXT">
-                                <block type="text_join_simple" inline="false" inputcount="9">
-                                  <value name="ADD0">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD2">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD4">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD6">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD8">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
                         </block>
                       </next>
                     </block>
@@ -142,6 +97,96 @@
         </block>
         <block type="variables_get">
           <title name="VAR">flower</title>
+        </block>
+        <block type="text_join_simple" inline="false" inputcount="2">
+          <value name="ADD0">
+            <block type="text">
+              <title name="TEXT">The story of </title>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="variables_get">
+              <title name="VAR">sport</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TEXT">
+            <block type="text">
+              <title name="TEXT"/>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TEXT">
+            <block type="text">
+              <title name="TEXT"/>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TEXT">
+            <block type="text">
+              <title name="TEXT"/>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="text_join_simple" inline="false" inputcount="9">
+          <value name="ADD0">
+            <block type="text">
+              <title name="TEXT"> </title>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="text">
+              <title name="TEXT"> </title>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="text">
+              <title name="TEXT"> </title>
+            </block>
+          </value>
+          <value name="ADD6">
+            <block type="text">
+              <title name="TEXT"> </title>
+            </block>
+          </value>
+          <value name="ADD8">
+            <block type="text">
+              <title name="TEXT"> </title>
+            </block>
+          </value>
         </block>
       </xml>
     </start_blocks>
@@ -360,8 +405,13 @@
                           <title name="TEXT">Enter a plural noun</title>
                           <title name="VAR">noun</title>
                           <next>
-                            <block type="studio_showTitleScreenParams" inline="false">
-                              <value name="TITLE">
+                            <block type="studio_saySpriteParamsTime" inline="true">
+                              <value name="SPRITE">
+                                <block type="math_number">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                              <value name="TEXT">
                                 <block type="text_join_simple" inline="false" inputcount="2">
                                   <value name="ADD0">
                                     <block type="text">
@@ -375,65 +425,84 @@
                                   </value>
                                 </block>
                               </value>
-                              <value name="TEXT">
-                                <block type="text_join_simple" inline="false" inputcount="11">
-                                  <value name="ADD0">
-                                    <block type="variables_get">
-                                      <title name="VAR">sport</title>
+                              <value name="TIME">
+                                <block type="math_number">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="studio_saySpriteParamsTime" inline="true">
+                                  <value name="SPRITE">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
                                     </block>
                                   </value>
-                                  <value name="ADD1">
-                                    <block type="text">
-                                      <title name="TEXT"> is the best.</title>
+                                  <value name="TEXT">
+                                    <block type="text_join_simple" inline="false" inputcount="11">
+                                      <value name="ADD0">
+                                        <block type="variables_get">
+                                          <title name="VAR">sport</title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD1">
+                                        <block type="text">
+                                          <title name="TEXT"> is the best.</title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD2">
+                                        <block type="text">
+                                          <title name="TEXT"> Even a </title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD3">
+                                        <block type="variables_get">
+                                          <title name="VAR">flower</title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD4">
+                                        <block type="text">
+                                          <title name="TEXT"> watches it. </title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD5">
+                                        <block type="text">
+                                          <title name="TEXT"> I like to </title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD6">
+                                        <block type="variables_get">
+                                          <title name="VAR">verb</title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD7">
+                                        <block type="text">
+                                          <title name="TEXT"> home and watch it on tv.</title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD8">
+                                        <block type="text">
+                                          <title name="TEXT"> It's even better than </title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD9">
+                                        <block type="variables_get">
+                                          <title name="VAR">noun</title>
+                                        </block>
+                                      </value>
+                                      <value name="ADD10">
+                                        <block type="text">
+                                          <title name="TEXT">!</title>
+                                        </block>
+                                      </value>
                                     </block>
                                   </value>
-                                  <value name="ADD2">
-                                    <block type="text">
-                                      <title name="TEXT"> Even a </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD3">
-                                    <block type="variables_get">
-                                      <title name="VAR">flower</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD4">
-                                    <block type="text">
-                                      <title name="TEXT"> watches it. </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD5">
-                                    <block type="text">
-                                      <title name="TEXT"> I like to </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD6">
-                                    <block type="variables_get">
-                                      <title name="VAR">verb</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD7">
-                                    <block type="text">
-                                      <title name="TEXT"> home and watch it on tv.</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD8">
-                                    <block type="text">
-                                      <title name="TEXT"> It's even better than </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD9">
-                                    <block type="variables_get">
-                                      <title name="VAR">noun</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD10">
-                                    <block type="text">
-                                      <title name="TEXT">!</title>
+                                  <value name="TIME">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
                                     </block>
                                   </value>
                                 </block>
-                              </value>
+                              </next>
                             </block>
                           </next>
                         </block>
