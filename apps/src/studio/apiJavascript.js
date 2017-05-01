@@ -186,17 +186,17 @@ exports.goDown = function () {
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
 exports.addPoints = function (value) {
-  Studio.queueCmd(null, 'changeScore', {'value': value});
+  Studio.changeScore({'value': value});
 };
 
 // removePoints is a wrapper for reduceScore (used by hoc2015)
 
 exports.removePoints = function (value) {
-  Studio.queueCmd(null, 'reduceScore', {'value': value});
+  Studio.reduceScore({'value': value});
 };
 
 exports.changeScore = function (value) {
-  Studio.queueCmd(null, 'changeScore', {'value': value});
+  Studio.changeScore({'value': value});
 };
 
 exports.getScore = function () {
