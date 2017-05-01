@@ -1127,6 +1127,8 @@ en:
               name: Standalone video
             Curriculum Reference:
               name: Curriculum Reference
+            Go Beyond:
+              name: Go Beyond
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
