@@ -123,16 +123,29 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersHidden: false,
       open: this.props.isOpen,
       openedHeight: 120,
-      windowWidth: $(window).width()
+      consoleWidth: 345
     };
   },
 
-  handleWindowResize() {
-    this.setState({ windowWidth: $(window).width() });
+  handleResizeConsole() {
+    let debuggerWidth = 0;
+    if (document.getElementById('debug-area-header')) {
+      debuggerWidth = document.getElementById('debug-area-header').offsetWidth;
+    }
+    let commandsWidth = 0;
+    if (document.getElementById('debug-commands-header')) {
+      commandsWidth = document.getElementById('debug-commands-header').offsetWidth;
+    }
+    let watchersWidth = 0;
+    if (document.getElementById('debug-watch-header')) {
+      watchersWidth = document.getElementById('debug-watch-header').offsetWidth;
+    }
+    const consoleWidth = debuggerWidth - commandsWidth - watchersWidth;
+    this.setState({consoleWidth: consoleWidth});
   },
 
   componentDidMount() {
-    window.addEventListener('resize', this.handleWindowResize);
+    window.addEventListener('resize', this.handleResizeConsole);
 
     this.props.setStepSpeed(this.props.stepSpeed);
     if (this.props.isOpen) {
@@ -195,6 +208,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       elements.debugConsoleDiv.style.removeProperty('right');
       elements.watchersResizeBar.style.removeProperty('right');
       elements.watchersHeaderDiv.style.removeProperty('width');
+
+      this.handleResizeConsole();
 
       watchersReferences = {};
     });
@@ -300,6 +315,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     codeTextbox.style.bottom = newDbgHeight + 'px';
     this.root.style.height = newDbgHeight + 'px';
 
+    this.handleResizeConsole();
+
     // Fire resize so blockly and droplet handle this type of resize properly:
     utils.fireResizeEvent();
   },
@@ -361,6 +378,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     const watchersLRBorderWidth = 2;
     const extraWidthForHeader = watchersLRBorderWidth - headerLBorderWidth;
     this._debugWatchHeader.root.style.width = newWatchersWidth + extraWidthForHeader + 'px';
+
+    this.handleResizeConsole();
   },
 
   onClearDebugOutput(event) {
@@ -406,7 +425,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
         >
           <span
             style={[
-              this.state.windowWidth <= 1275 && !this.state.watchersHidden && styles.hidden,
+              this.state.consoleWidth <= 345 && styles.hidden,
               styles.noUserSelect
             ]}
             className="header-text"
