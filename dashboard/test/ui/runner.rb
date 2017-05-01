@@ -312,11 +312,11 @@ def features_to_run
 end
 
 def browser_features
-  $browsers.product features_to_run.map do |browser, feature|
+  ($browsers.product features_to_run).map do |browser, feature|
     arguments = cucumber_arguments_for_browser(browser, $options)
     scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
     next if scenario_count.zero?
-    [browser, feature, arguments]
+    [browser, feature]
   end.compact
 end
 
@@ -407,8 +407,7 @@ def generate_status_page(suite_start_time)
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
-        browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
-        features: features_to_run
+        browser_features: browser_features
       }
     )
   end
