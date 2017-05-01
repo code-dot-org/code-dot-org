@@ -54,6 +54,11 @@ def main
   $logfile = File.open("success.log", "w")
   $errfile = File.open("error.log", "w")
   $errbrowserfile = File.open("errorbrowsers.log", "w")
+
+  ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
+
+  configure_for_eyes if eyes?
+  report_tests_starting
 end
 
 def parse_options
@@ -280,26 +285,40 @@ def features_to_run
   $features_to_run ||= $options.features.empty? ? Dir.glob('features/**/*.feature') : $options.features
 end
 
-main
+def browser_features
+  $browsers.product features_to_run
+end
 
-browser_features = $browsers.product features_to_run
+def test_type
+  eyes? ? 'Eyes' : 'UI'
+end
 
-ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
+def eyes?
+  $options.run_eyes_tests
+end
 
-test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
-applitools_batch_url = nil
-ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
-puts
-if test_type == 'Eyes'
+def configure_for_eyes
   # Generate a batch ID, unique to this test run.
   # Each Eyes instance will use the same one so that tests from this
   # run get grouped together. This gets used in eyes_steps.rb.
   # See "Aggregating tests from different processes"
   # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
   ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
-  applitools_batch_url = "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
-  ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
 end
+
+def applitools_batch_url
+  return nil unless eyes?
+  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+end
+
+def report_tests_starting
+  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+  if eyes?
+    ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
+  end
+end
+
+main
 
 status_page_url = nil
 if $options.with_status_page
@@ -351,7 +370,7 @@ rescue Exception => e
 end
 
 # Sort by flakiness (most flaky at end of array, will get run first)
-browser_features.sort! do |browser_feature_a, browser_feature_b|
+browser_features_left = browser_features.sort! do |browser_feature_a, browser_feature_b|
   (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
     (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
 end
@@ -368,8 +387,8 @@ next_feature = lambda do
     ChatClient.log message, color: 'red'
     return Parallel::Stop
   end
-  return Parallel::Stop if browser_features.empty?
-  browser_features.pop
+  return Parallel::Stop if browser_features_left.empty?
+  browser_features_left.pop
 end
 
 parallel_config = {
