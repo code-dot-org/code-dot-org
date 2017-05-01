@@ -48,27 +48,27 @@ def main(options)
   $options = options
   $browsers = select_browser_configs(options)
   $lock = Mutex.new
-  $suite_start_time = Time.now
-  $suite_success_count = 0
-  $suite_fail_count = 0
-  # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
-  $total_flaky_reruns = 0
-  $total_flaky_successful_reruns = 0
-  $failures = []
+  # We track the number of failed features in this test run so we can abort the run
+  # if we exceed a certain limit.  See options.abort_when_failures_exceed.
+  $failed_features = 0
 
   $logfile = File.open("success.log", "w")
   $errfile = File.open("error.log", "w")
   $errbrowserfile = File.open("errorbrowsers.log", "w")
 
-  # We track the number of failed features in this test run so we can abort the run
-  # if we exceed a certain limit.  See options.abort_when_failures_exceed.
-  $failed_features = 0
+  suite_start_time = Time.now
+  suite_success_count = 0
+  suite_fail_count = 0
+  # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
+  total_flaky_reruns = 0
+  total_flaky_successful_reruns = 0
+  failures = []
 
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
   configure_for_eyes if eyes?
   report_tests_starting
-  generate_status_page if options.with_status_page
+  generate_status_page(suite_start_time) if options.with_status_page
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
@@ -85,31 +85,31 @@ def main(options)
   return 1 if run_results.nil?
 
   run_results.each do |succeeded, message, reruns|
-    $total_flaky_reruns += reruns
+    total_flaky_reruns += reruns
     if succeeded
-      $total_flaky_successful_reruns += reruns
-      $suite_success_count += 1
+      total_flaky_successful_reruns += reruns
+      suite_success_count += 1
     else
-      $suite_fail_count += 1
-      $failures << message
+      suite_fail_count += 1
+      failures << message
     end
   end
 
-  $suite_duration = Time.now - $suite_start_time
+  suite_duration = Time.now - suite_start_time
 
-  ChatClient.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
-  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
-  "Total reruns of flaky tests: #{$total_flaky_reruns}. " \
-  "Total successful reruns of flaky tests: #{$total_flaky_successful_reruns}." \
+  ChatClient.log "#{suite_success_count} succeeded.  #{suite_fail_count} failed. " \
+  "Test count: #{(suite_success_count + suite_fail_count)}. " \
+  "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
+  "Total reruns of flaky tests: #{total_flaky_reruns}. " \
+  "Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
-  if $suite_fail_count > 0
-    ChatClient.log "Failed tests: \n #{$failures.join("\n")}"
+  if suite_fail_count > 0
+    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
   end
 
-  $suite_fail_count
+  suite_fail_count
 ensure
   $logfile.close if $logfile
   $errfile.close if $errfile
@@ -386,7 +386,7 @@ def scheme_for_environment
   (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
 end
 
-def generate_status_page
+def generate_status_page(suite_start_time)
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
   File.open(status_page_filename, 'w') do |file|
@@ -399,7 +399,7 @@ def generate_status_page
         type: test_type,
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
-        start_time: $suite_start_time,
+        start_time: suite_start_time,
         browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
         features: features_to_run
       }
