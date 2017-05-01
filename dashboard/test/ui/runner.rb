@@ -52,10 +52,6 @@ def main(options)
   # if we exceed a certain limit.  See options.abort_when_failures_exceed.
   $failed_features = 0
 
-  $logfile = File.open("success.log", "w")
-  $errfile = File.open("error.log", "w")
-  $errbrowserfile = File.open("errorbrowsers.log", "w")
-
   suite_start_time = Time.now
   suite_success_count = 0
   suite_fail_count = 0
@@ -66,6 +62,7 @@ def main(options)
 
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
+  open_log_files
   configure_for_eyes if eyes?
   report_tests_starting
   generate_status_page(suite_start_time) if options.with_status_page
@@ -111,9 +108,7 @@ def main(options)
 
   suite_fail_count
 ensure
-  $logfile.close if $logfile
-  $errfile.close if $errfile
-  $errbrowserfile.close if $errbrowserfile
+  close_log_files
 end
 
 def parse_options
@@ -301,6 +296,18 @@ end
 
 def prefix_string(msg, prefix)
   msg.to_s.lines.map {|line| "#{prefix}#{line}"}.join
+end
+
+def open_log_files
+  $logfile = File.open('success.log', 'w')
+  $errfile = File.open('error.log', 'w')
+  $errbrowserfile = File.open('errorbrowsers.log', 'w')
+end
+
+def close_log_files
+  $logfile.close if $logfile
+  $errfile.close if $errfile
+  $errbrowserfile.close if $errbrowserfile
 end
 
 def log_success(msg)
