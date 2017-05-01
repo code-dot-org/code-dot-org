@@ -14,10 +14,6 @@
     = javascript_include_tag "js/#{js_locale}/common_locale"
     %script{src: minifiable_asset_path('js/essential.js')}
     %script{src: minifiable_asset_path('js/code-studio-common.js')}
-
-    //Included early to prevent JS Errors from being sent to New Relic
-    %script{src: minifiable_asset_path('js/layouts/application.js')}
-
     %script{src: minifiable_asset_path('js/code-studio.js')}
     = csrf_meta_tags
     = yield :head

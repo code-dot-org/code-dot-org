@@ -426,13 +426,13 @@ testsContext.keys().forEach(testsContext);
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'layouts/application':          './src/sites/studio/pages/layouts/application.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js'
   };
 
   var otherEntries = {
+    essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
