@@ -55,6 +55,10 @@ def main
   $errfile = File.open("error.log", "w")
   $errbrowserfile = File.open("errorbrowsers.log", "w")
 
+  # We track the number of failed features in this test run so we can abort the run
+  # if we exceed a certain limit.  See $options.abort_when_failures_exceed.
+  $failed_features = 0
+
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
   configure_for_eyes if eyes?
@@ -378,26 +382,26 @@ end
 
 main
 
-# Sort by flakiness (most flaky at end of array, will get run first)
-browser_features_left = browser_features.sort! do |browser_feature_a, browser_feature_b|
-  (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
-    (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
-end
-
-# We track the number of failed features in this test run so we can abort the run
-# if we exceed a certain limit.  See $options.abort_when_failures_exceed.
-failed_features = 0
-
-# This lambda function is called by Parallel.map each time it needs a new work
+# Build a lambda function called by Parallel.map each time it needs a new work
 # item.  It should return Parallel::Stop when there is no more work to do.
-next_feature = lambda do
-  if failed_features > $options.abort_when_failures_exceed
-    message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
-    ChatClient.log message, color: 'red'
-    return Parallel::Stop
+def browser_feature_generator
+  return $browser_feature_generator if $browser_feature_generator
+
+  # Sort by flakiness (most flaky at end of array, will get run first)
+  browser_features_left = browser_features.sort! do |browser_feature_a, browser_feature_b|
+    (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
+      (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
   end
-  return Parallel::Stop if browser_features_left.empty?
-  browser_features_left.pop
+
+  $browser_feature_generator = lambda do
+    if $failed_features > $options.abort_when_failures_exceed
+      message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
+      ChatClient.log message, color: 'red'
+      return Parallel::Stop
+    end
+    return Parallel::Stop if browser_features_left.empty?
+    browser_features_left.pop
+  end
 end
 
 parallel_config = {
@@ -410,10 +414,10 @@ parallel_config = {
   finish: lambda do |_, _, result|
     succeeded, _, _ = result
     # Count failures so we can abort the whole test run if we exceed the limit
-    failed_features += 1 unless succeeded
+    $failed_features += 1 unless succeeded
   end
 }
-run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
+run_results = Parallel.map(browser_feature_generator, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
@@ -678,7 +682,7 @@ $errfile.close
 $errbrowserfile.close
 
 # Produce a final report if we aborted due to excess failures
-if failed_features > $options.abort_when_failures_exceed
+if $failed_features > $options.abort_when_failures_exceed
   abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
   ChatClient.log abandoned_message, color: 'red'
 end
