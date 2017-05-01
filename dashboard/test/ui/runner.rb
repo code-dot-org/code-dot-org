@@ -296,11 +296,6 @@ end
 
 def run_tests(env, feature, arguments, log_prefix)
   start_time = Time.now
-  scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
-  if scenario_count.zero?
-    return true, '0 scenarios', '', Time.now - start_time
-  end
-
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
   Open3.popen3(env, cmd) do |stdin, stdout, stderr, wait_thr|
@@ -317,7 +312,12 @@ def features_to_run
 end
 
 def browser_features
-  $browsers.product features_to_run
+  $browsers.product features_to_run.map do |browser, feature|
+    arguments = cucumber_arguments_for_browser(browser, $options)
+    scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
+    next if scenario_count.zero?
+    [browser, feature, arguments]
+  end.compact
 end
 
 def test_type
