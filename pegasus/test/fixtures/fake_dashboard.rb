@@ -118,6 +118,11 @@ module FakeDashboard
     }
   ]
 
+  #
+  # Fake Data: Secret Words
+  #
+  SECRET_WORDS = [{word: 'abracadabra'}]
+
   # Overrides the current database with a procedure that, given a query,
   # will return results appropriate to our test suite.
   #
@@ -170,6 +175,10 @@ module FakeDashboard
     FOLLOWERS.each do |follower|
       new_id = @@fake_db[:followers].insert(follower)
       follower.merge! @@fake_db[:followers][id: new_id]
+    end
+
+    SECRET_WORDS.each do |secret_word|
+      @@fake_db[:secret_words].insert(secret_word)
     end
   end
 
