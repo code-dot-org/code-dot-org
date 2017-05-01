@@ -42,6 +42,18 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 def main
   $options = parse_options
   $browsers = select_browser_configs($options)
+  $lock = Mutex.new
+  $suite_start_time = Time.now
+  $suite_success_count = 0
+  $suite_fail_count = 0
+  # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
+  $total_flaky_reruns = 0
+  $total_flaky_successful_reruns = 0
+  $failures = []
+
+  $logfile = File.open("success.log", "w")
+  $errfile = File.open("error.log", "w")
+  $errbrowserfile = File.open("errorbrowsers.log", "w")
 end
 
 def parse_options
@@ -227,21 +239,6 @@ rescue Exception => msg
   return ''
 end
 
-main
-
-$lock = Mutex.new
-$suite_start_time = Time.now
-$suite_success_count = 0
-$suite_fail_count = 0
-# How many flaky test reruns occurred across all tests (ignoring the initial attempt).
-$total_flaky_reruns = 0
-$total_flaky_successful_reruns = 0
-$failures = []
-
-$logfile = File.open("success.log", "w")
-$errfile = File.open("error.log", "w")
-$errbrowserfile = File.open("errorbrowsers.log", "w")
-
 def prefix_string(msg, prefix)
   msg.to_s.lines.map {|line| "#{prefix}#{line}"}.join
 end
@@ -278,6 +275,8 @@ def run_tests(env, feature, arguments, log_prefix)
     return succeeded, stdout, stderr, Time.now - start_time
   end
 end
+
+main
 
 all_features = Dir.glob('features/**/*.feature')
 features_to_run = $options.features.empty? ? all_features : $options.features
