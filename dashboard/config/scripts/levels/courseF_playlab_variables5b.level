@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.sayComplete > 0) && (Studio.sprite[0].bubbleText.includes(Studio.Globals.name2)) && (Studio.sprite[0].bubbleText.includes(Studio.Globals.age)) && (Studio.sprite[0].bubbleText.includes(Studio.Globals.animal));\r\n\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":19},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
@@ -70,46 +70,35 @@
                   <title name="VAR">age</title>
                   <next>
                     <block type="studio_ask">
-                      <title name="TEXT">What be yer favorite color?</title>
-                      <title name="VAR">color</title>
+                      <title name="TEXT">What be yer favorite animal?</title>
+                      <title name="VAR">animal</title>
                       <next>
-                        <block type="studio_ask">
-                          <title name="TEXT">What be yer favorite animal?</title>
-                          <title name="VAR">animal</title>
-                          <next>
-                            <block type="studio_saySpriteParams" inline="true">
-                              <title name="SPRITE">0</title>
-                              <value name="TEXT">
-                                <block type="text_join_simple" inline="false" inputcount="9">
-                                  <value name="ADD0">
-                                    <block type="text">
-                                      <title name="TEXT">I be  thinkin' </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD2">
-                                    <block type="text">
-                                      <title name="TEXT"> be a great name for a </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD4">
-                                    <block type="text">
-                                      <title name="TEXT"> year old </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD6">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD8">
-                                    <block type="text">
-                                      <title name="TEXT">.</title>
-                                    </block>
-                                  </value>
+                        <block type="studio_saySpriteParams" inline="true">
+                          <title name="SPRITE">0</title>
+                          <value name="TEXT">
+                            <block type="text_join_simple" inline="false" movable="false" inputcount="7">
+                              <value name="ADD0">
+                                <block type="text" movable="false">
+                                  <title name="TEXT">I think </title>
+                                </block>
+                              </value>
+                              <value name="ADD2">
+                                <block type="text" movable="false">
+                                  <title name="TEXT"> is a great name for a </title>
+                                </block>
+                              </value>
+                              <value name="ADD4">
+                                <block type="text" movable="false">
+                                  <title name="TEXT"> year old </title>
+                                </block>
+                              </value>
+                              <value name="ADD6">
+                                <block type="text" movable="false">
+                                  <title name="TEXT">.</title>
                                 </block>
                               </value>
                             </block>
-                          </next>
+                          </value>
                         </block>
                       </next>
                     </block>
@@ -120,13 +109,10 @@
           </next>
         </block>
         <block type="variables_get">
-          <title name="VAR">name</title>
-        </block>
-        <block type="variables_get">
           <title name="VAR">age</title>
         </block>
         <block type="variables_get">
-          <title name="VAR">color</title>
+          <title name="VAR">name</title>
         </block>
         <block type="variables_get">
           <title name="VAR">animal</title>
@@ -217,7 +203,7 @@
               </block>
             </value>
             <value name="TEXT">
-              <block type="text">
+              <block type="text" limit="4">
                 <title name="TEXT"/>
               </block>
             </value>
@@ -229,12 +215,12 @@
           </block>
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">
-              <block type="text">
+              <block type="text" limit="4">
                 <title name="TEXT"/>
               </block>
             </value>
             <value name="TEXT">
-              <block type="text">
+              <block type="text" limit="4">
                 <title name="TEXT"/>
               </block>
             </value>
@@ -324,8 +310,7 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
+        <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -344,63 +329,47 @@
                       <title name="TEXT">What be yer favorite color?</title>
                       <title name="VAR">color</title>
                       <next>
-                        <block type="studio_ask">
-                          <title name="TEXT">What be yer favorite animal?</title>
-                          <title name="VAR">animal</title>
-                          <next>
-                            <block type="studio_saySpriteParams" inline="true">
-                              <title name="SPRITE">0</title>
-                              <value name="TEXT">
-                                <block type="text_join_simple" inline="false" inputcount="9">
-                                  <value name="ADD0">
-                                    <block type="text">
-                                      <title name="TEXT">I be  thinkin' </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD1">
-                                    <block type="variables_get">
-                                      <title name="VAR">name</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD2">
-                                    <block type="text">
-                                      <title name="TEXT"> be a great name for a </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD3">
-                                    <block type="variables_get">
-                                      <title name="VAR">age</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD4">
-                                    <block type="text">
-                                      <title name="TEXT"> year old </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD5">
-                                    <block type="variables_get">
-                                      <title name="VAR">color</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD6">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD7">
-                                    <block type="variables_get">
-                                      <title name="VAR">animal</title>
-                                    </block>
-                                  </value>
-                                  <value name="ADD8">
-                                    <block type="text">
-                                      <title name="TEXT">.</title>
-                                    </block>
-                                  </value>
+                        <block type="studio_saySpriteParams" inline="true">
+                          <title name="SPRITE">0</title>
+                          <value name="TEXT">
+                            <block type="text_join_simple" inline="false" inputcount="7">
+                              <value name="ADD0">
+                                <block type="text">
+                                  <title name="TEXT">I be  thinkin' </title>
+                                </block>
+                              </value>
+                              <value name="ADD1">
+                                <block type="variables_get">
+                                  <title name="VAR">name</title>
+                                </block>
+                              </value>
+                              <value name="ADD2">
+                                <block type="text">
+                                  <title name="TEXT"> be a great name for a </title>
+                                </block>
+                              </value>
+                              <value name="ADD3">
+                                <block type="variables_get">
+                                  <title name="VAR">age</title>
+                                </block>
+                              </value>
+                              <value name="ADD4">
+                                <block type="text">
+                                  <title name="TEXT"> year old </title>
+                                </block>
+                              </value>
+                              <value name="ADD5">
+                                <block type="variables_get">
+                                  <title name="VAR">color</title>
+                                </block>
+                              </value>
+                              <value name="ADD6">
+                                <block type="text">
+                                  <title name="TEXT">.</title>
                                 </block>
                               </value>
                             </block>
-                          </next>
+                          </value>
                         </block>
                       </next>
                     </block>
