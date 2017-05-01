@@ -4485,7 +4485,7 @@ en:
             Timed Loops:
               name: Timed Loops
               description_student: In this lesson we build on students understanding of for loops to learn about a more sophisticated structure called a timed loop. Unlike for loops, you can control how quickly a timed loop repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
-              description_teacher: In this lesson we build on students understanding of _for loops_ to learn about a more sophisticated structure called a _timed loop_. Unlike _for loops_, you can control how quickly a _timed loop_ repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
+              description_teacher: In this lesson we build on students understanding of `for loops` to learn about a more sophisticated structure called a _timed loop_. Unlike _for loops_, you can control how quickly a _timed loop_ repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
             'Project: Board Output':
               name: 'Project: Board Output'
               description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
