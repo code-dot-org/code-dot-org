@@ -50,6 +50,8 @@ import {
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
+import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -1347,6 +1349,9 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  */
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
+  const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
+    project.isSupportedLevelType() && !level.impressive;
+  const {isSignedIn} = getStore().getState().pageConstants;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',
@@ -1362,6 +1367,9 @@ Artist.prototype.displayFeedback_ = function () {
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    // save to the project gallery instead of the legacy gallery
+    saveToProjectGallery: saveToProjectGallery,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
