@@ -39,9 +39,14 @@ S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
+#
+# Run a set of UI/Eyes tests according to the provided options.
+# @param [OpenStruct] options - the configuration for this test run. See parse_options for details.
+# @return [int] a status code
+#
 def main(options)
   $options = options
-  $browsers = select_browser_configs($options)
+  $browsers = select_browser_configs(options)
   $lock = Mutex.new
   $suite_start_time = Time.now
   $suite_success_count = 0
@@ -56,26 +61,22 @@ def main(options)
   $errbrowserfile = File.open("errorbrowsers.log", "w")
 
   # We track the number of failed features in this test run so we can abort the run
-  # if we exceed a certain limit.  See $options.abort_when_failures_exceed.
+  # if we exceed a certain limit.  See options.abort_when_failures_exceed.
   $failed_features = 0
 
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{Time.now}"
 
   configure_for_eyes if eyes?
   report_tests_starting
-  generate_status_page if $options.with_status_page
+  generate_status_page if options.with_status_page
 
-  run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
-    run_feature browser, feature, $options
+  run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
+    run_feature browser, feature, options
   end
 
-  $logfile.close
-  $errfile.close
-  $errbrowserfile.close
-
   # Produce a final report if we aborted due to excess failures
-  if $failed_features > $options.abort_when_failures_exceed
-    abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
+  if $failed_features > options.abort_when_failures_exceed
+    abandoned_message = "Test run abandoned; limit of #{options.abort_when_failures_exceed} failed features was exceeded."
     ChatClient.log abandoned_message, color: 'red'
   end
 
@@ -109,6 +110,10 @@ def main(options)
   end
 
   $suite_fail_count
+ensure
+  $logfile.close if $logfile
+  $errfile.close if $errfile
+  $errbrowserfile.close if $errbrowserfile
 end
 
 def parse_options
