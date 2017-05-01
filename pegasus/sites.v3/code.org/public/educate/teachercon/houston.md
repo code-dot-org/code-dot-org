@@ -44,7 +44,7 @@ TeacherCon accomodations as well as all conference sessions will take place at:
 <summary>**What if I choose to drive to TeacherCon?**</summary>
   <p>
   <br>
-If you choose to drive to TeacherCon instead of fly, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
+If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
 </p>
 </details>
 
@@ -64,7 +64,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 
 **These include:**
 
-* Flights to and from your assigned TeacherCon Location
+* Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
 * A room for you at the hotel
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
@@ -117,7 +117,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </details>
 
 ### **Contact Us**
-Check out our [FAQ's!](/public/files/teachercon2017_faqs_teachers.pdf)
+Check out our [FAQ's!](/educate/teachercon/teachercon2017_faqs_teachers.pdf)
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 

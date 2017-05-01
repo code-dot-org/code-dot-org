@@ -3522,32 +3522,8 @@ en:
         RGB Colors: RGB Colors
         rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U2 lists match:
-        "![](![](https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png)": "![](![](https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png)"
-        "![](https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png)": "![](https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png)"
-        "![](https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png)": "![](https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png)"
-        "![](https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png)": "![](https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png)"
-        "![](https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png)": "![](https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png)"
-        "![](https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png)": "![](https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png)"
-        "![](https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png)": "![](https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png)"
-        "![](https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png)": "![](https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png)"
-        "/images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png": "/images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png"
-        "/images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png>": "/images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png>"
-        <img src="https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png">: <img src="https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png">
-        <img src="https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png">: <img src="https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png">
-        <img src="https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png">: <img src="https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png">
-        '<img src="https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png" style="height: 75px">': '<img src="https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png" style="height: 75px">'
-        '<img src="https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png" style="height: 75px>': '<img src="https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png" style="height: 75px>'
-        <img src="https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png">: <img src="https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png">
-        '<img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png" style="height: 75px">': '<img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png" style="height: 75px">'
-        <img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png" style="height:75px;">: <img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png" style="height:75px;">
-        <img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png" style="width:100px;">: <img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png" style="width:100px;">
-        <img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png">: <img src="https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png">
-        <img src="https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png">: <img src="https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png">
-        <img src="https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png">: <img src="https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png">
-        <img src="https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png">: <img src="https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png">
         List Matching: List Matching
         Match the list to the code that makes it.: Match the list to the code that makes it.
-        description here: description here
         https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png
         https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png
         https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png
@@ -3558,7 +3534,6 @@ en:
         https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png
         https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png
         https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png
-        title: title
       CSD U3 - conditionals - Matching:
         Is the dog sprite's rotation less than the cat sprite's rotation?: Is the dog sprite's rotation less than the cat sprite's rotation?
         Is the dog sprite's scale greater than the cat sprite's scale?: Is the dog sprite's scale greater than the cat sprite's scale?
