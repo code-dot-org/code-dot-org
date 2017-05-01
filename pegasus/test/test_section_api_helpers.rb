@@ -201,6 +201,103 @@ class SectionApiHelperTest < SequelTestCase
         )
         assert pegasus_section.teacher?(FakeDashboard::TEACHER[:id])
       end
+
+      it 'returns false for soft-deleted enrollments' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+          FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        )
+        refute pegasus_section.student?(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id])
+      end
+    end
+
+    describe 'students' do
+      it 'returns hash for section with student without progress' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+          students = pegasus_section.students
+          assert_equal(
+            [
+              {
+                id: FakeDashboard::STUDENT[:id],
+                name: FakeDashboard::STUDENT[:name],
+                username: nil,
+                email: '',
+                hashed_email: nil,
+                user_type: 'student',
+                gender: nil,
+                birthday: nil,
+                prize_earned: false,
+                total_lines: 0,
+                secret_words: nil,
+                secret_picture_name: nil,
+                secret_picture_path: nil,
+                location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
+                age: nil,
+                completed_levels_count: 0
+              }
+            ],
+            students
+          )
+        end
+      end
+
+      it 'returns hash for section with student with progress' do
+        Dashboard.db.transaction(rollback: :always) do
+          Dashboard.db[:user_levels].insert(
+            user_id: FakeDashboard::STUDENT[:id],
+            level_id: 1,
+            best_result: 100
+          )
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+          students = pegasus_section.students
+          assert_equal(
+            [
+              {
+                id: FakeDashboard::STUDENT[:id],
+                name: FakeDashboard::STUDENT[:name],
+                username: nil,
+                email: '',
+                hashed_email: nil,
+                user_type: 'student',
+                gender: nil,
+                birthday: nil,
+                prize_earned: false,
+                total_lines: 0,
+                secret_words: nil,
+                secret_picture_name: nil,
+                secret_picture_path: nil,
+                location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
+                age: nil,
+                completed_levels_count: 1
+              }
+            ],
+            students
+          )
+        end
+      end
+
+      it 'ignores deleted followers' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+          FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        )
+        assert_equal [], pegasus_section.students
+      end
+
+      it 'returns empty array for empty section' do
+        pegasus_section = DashboardSection.fetch_if_teacher(
+          FakeDashboard::SECTION_EMPTY[:id],
+          FakeDashboard::TEACHER[:id]
+        )
+        assert_equal [], pegasus_section.students
+      end
     end
 
     describe 'remove_student' do

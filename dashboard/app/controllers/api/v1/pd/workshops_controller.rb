@@ -77,6 +77,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def update
     adjust_facilitators
     process_location
+    process_type
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -90,6 +91,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshop.organizer = current_user
     adjust_facilitators
     process_location force: true
+    process_type force: true
     if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -141,6 +143,13 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     location_address = workshop_params[:location_address]
     if force || location_address != @workshop.location_address
       @workshop.processed_location = Pd::Workshop.process_location(location_address)
+    end
+  end
+
+  def process_type(force: false)
+    type = workshop_params[:workshop_type]
+    if force || type != @workshop.workshop_type
+      @workshop.set_on_map_and_funded_from_workshop_type(type)
     end
   end
 

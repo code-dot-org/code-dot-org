@@ -1,4 +1,5 @@
 <%
+require 'active_support/core_ext/numeric/bytes'
 require 'cdo/aws/cloudfront'
 unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
   raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
@@ -382,6 +383,25 @@ Resources:
       CacheNodeType: <%= cache_node_type %>
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+  MemcachedParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: memcached1.4
+      Description: Memcached modified max_item_size.
+      Properties:
+        max_item_size: <%=64.megabytes%>
+  Memcached:
+    Type: AWS::ElastiCache::CacheCluster
+    Properties:
+      CacheNodeType: <%= cache_node_type %>
+      CacheParameterGroupName: !Ref MemcachedParameterGroup
+      CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+      ClusterName: <%=stack_name[0..19]%> # Max 20 chars
+      Engine: memcached
+      NumCacheNodes: 2
+      AZMode: cross-az
+      PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
+      VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
