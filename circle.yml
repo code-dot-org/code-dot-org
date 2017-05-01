@@ -68,7 +68,6 @@ dependencies:
         build_pegasus: true
         build_apps: true
         localize_apps: true
-        sync_assets: false
         dashboard_enable_pegasus: true
         dashboard_workers: 6
         skip_seed_all: true" >> locals.yml
@@ -120,7 +119,6 @@ experimental:
         - staging
 deployment:
   storybook:
-    branch: staging
+    branch: production
     commands:
-      - 'echo "sync_assets: false" >> locals.yml'
       - 'cd apps && npm run storybook:deploy'

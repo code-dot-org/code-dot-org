@@ -33,7 +33,6 @@ level 'courseF_playlab_variables4b'
 level 'courseF_playlab_variables5b'
 level 'courseF_playlab_variables6b'
 level 'courseF_playlab_variables7b'
-level 'courseF_playlab_variables8b'
 
 stage 'For Loop Fun'
 level 'ForLoopFun'
@@ -117,4 +116,4 @@ stage 'Presentation Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation'
 
 stage 'Try programming with Khan Academy', flex_category: 'extra_course_content'
-named_level 'Learn Javascript with Khan Academy!'
+level 'Learn Javascript with Khan Academy!'

@@ -25,7 +25,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One way to solve this is to add more steps forward in between the turns.\",\"hint_id\":\"courseC_maze_programming_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/617940ce622aa12bb10b388f27399387/courseC_maze_programming_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you are getting stuck, you can always start over or remove all the code and find your own way!\",\"hint_id\":\"courseC_maze_programming_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fbbbc016e15965e3a79872befbe21526/courseC_maze_programming_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"There are two different paths you can follow just using `move forward`, and only four turns. If you find a way to use the `repeat` block, there may be even more!\\n\\n![](https://images.code.org/b6b364829bece6786f3ed6e3eb99aef1-image-1493157258101.49.04 PM.png)\",\"hint_id\":\"courseC_maze_programming_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4fae2fe9e03e2915643b6cb2f63bfb9/courseC_maze_programming_challenge2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One way to solve this is to add more steps forward in between the turns.\",\"hint_id\":\"courseC_maze_debugging_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/617940ce622aa12bb10b388f27399387/courseC_maze_debugging_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you are getting stuck, you can always start over or remove all the code and find your own way!\",\"hint_id\":\"courseC_maze_debugging_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fbbbc016e15965e3a79872befbe21526/courseC_maze_debugging_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"There are two different paths you can follow just using `move forward`, and only four turns. If you find a way to use the `repeat` block, there may be even more!\\n\\n![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)\",\"hint_id\":\"courseC_maze_debugging_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4fae2fe9e03e2915643b6cb2f63bfb9/courseC_maze_debugging_challenge2.mp3\"}]",
     "markdown_instructions": "*\"If I turn too often, I might get dizzy! Help me reach the pig with only four `turn` commands.\"*",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -82,7 +82,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" limit="10"/>
         <block type="maze_turn" limit="4">
           <title name="DIR">turnLeft</title>
         </block>

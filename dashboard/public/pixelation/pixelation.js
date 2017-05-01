@@ -67,7 +67,7 @@ function customizeStyles() {
     }
 
     // Hide sliders option (only available to widget v1)
-    if (options.v1HideSliders) {
+    if (isHideSlidersLevel()) {
       $('#heightRange, #widthRange').hide();
       $('#height, #width').prop('readonly', true);
     }
@@ -168,6 +168,15 @@ function isHexSelected() {
 
 function isHexLevel() {
   return options.hex === true || options.hex === 'true';
+}
+
+function isHideSlidersLevel() {
+  if (parseInt(options.version, 10) === 1) {
+    return options.v1HideSliders === true || options.v1HideSliders === 'true';
+  } else if (parseInt(options.version, 10) === 2) {
+    return true;
+  }
+  return false;
 }
 
 function drawGraph(ctx, exportImage, updateControls) {

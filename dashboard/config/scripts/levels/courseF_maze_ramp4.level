@@ -12,7 +12,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "6",
+    "ideal": "7",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,13 +26,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.\",\"hint_id\":\"courseF_maze_programming4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78f7a5de9d06cfee703e11b4f0f4ce93/courseF_maze_ramp4.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.\",\"hint_id\":\"courseF_maze_programming4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/74c2a2ac70efc77134b98ad8a930cdc1/courseF_maze_ramp4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.\",\"hint_id\":\"courseF_maze_ramp4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78f7a5de9d06cfee703e11b4f0f4ce93/courseF_maze_ramp4.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.\",\"hint_id\":\"courseF_maze_ramp4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/74c2a2ac70efc77134b98ad8a930cdc1/courseF_maze_ramp4.mp3\"}]",
     "markdown_instructions": "*\"Trace the path and lead me to the silly pig.\"* \r\n\r\nAvoid TNT or feathers will fly!",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming4_1\",\r\n  \"callout_text\": \"This is your block limit.  It tells you how many of these blocks you have left to use.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -61,14 +62,20 @@
             <block type="maze_moveForward">
               <next>
                 <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
+                  <title name="DIR">turnRight</title>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward">
+                  </block>
+                      </statement>
                       <next>
                         <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
+                          <title name="DIR">turnLeft</title>
                           <next>
-                            <block type="maze_moveForward"/>
+                            <block type="maze_moveForward">
+                      </block>
                           </next>
                         </block>
                       </next>
