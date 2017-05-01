@@ -85,7 +85,7 @@
     "ejs-loader": "0.2.1",
     "enzyme": "2.4.1",
     "es6-promise": "3.0.2",
-    "eslint": "^3.7.1",
+    "eslint": "^3.19.0",
     "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-react": "^5.2.2",
     "exports-loader": "^0.6.3",

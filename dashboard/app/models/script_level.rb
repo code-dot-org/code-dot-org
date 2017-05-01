@@ -12,6 +12,7 @@
 #  assessment  :boolean
 #  properties  :text(65535)
 #  named_level :boolean
+#  bonus       :boolean
 #
 # Indexes
 #

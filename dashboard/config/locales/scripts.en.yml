@@ -4706,6 +4706,10 @@ en:
               name: Project - Personal Portfolio Website
             Headers:
               name: Headers
+            Intellectual Property and Images:
+              name: Intellectual Property and Images
+            Lists:
+              name: Lists
         csd1-draft:
           title: ''
           description_audience: ''
