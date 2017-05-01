@@ -487,27 +487,25 @@ def how_many_reruns?(test_run_string)
   end
 end
 
-main
-
-run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
+def run_feature(browser, feature, options)
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
 
-  if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
+  if options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
     ChatClient.log message, color: 'yellow'
     raise Parallel::Kill
   end
 
-  if $options.browser && browser['browser'] && $options.browser.casecmp(browser['browser']) != 0
-    next
+  if options.browser && browser['browser'] && options.browser.casecmp(browser['browser']) != 0
+    return
   end
-  if $options.os_version && browser['os_version'] && $options.os_version.casecmp(browser['os_version']) != 0
-    next
+  if options.os_version && browser['os_version'] && options.os_version.casecmp(browser['os_version']) != 0
+    return
   end
-  if $options.browser_version && browser['browser_version'] && $options.browser_version.casecmp(browser['browser_version']) != 0
-    next
+  if options.browser_version && browser['browser_version'] && options.browser_version.casecmp(browser['browser_version']) != 0
+    return
   end
 
   # Don't log individual tests because we hit ChatClient rate limits
@@ -518,13 +516,13 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
   run_environment['BROWSER_CONFIG'] = browser_name
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  run_environment['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
-  run_environment['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
-  run_environment['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
-  run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
-  run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
+  run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain
+  run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
+  run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
+  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
-  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : nil
+  run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
 
   # disable some stuff to make require_rails_env run faster within cucumber.
@@ -536,9 +534,9 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
-  if $options.html
-    if $options.out
-      html_output_filename = $options.out
+  if options.html
+    if options.out
+      html_output_filename = options.out
     else
       html_output_filename = test_run_string + "_output.html"
     end
@@ -547,20 +545,20 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
   arguments = ''
   arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
   arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
-  arguments += " -t ~@local_only" unless $options.local
+  arguments += " -t ~@local_only" unless options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
-  arguments += " -t ~@no_circle" if $options.is_circle
-  arguments += " -t ~@no_circle_ie" if $options.is_circle && browser['browserName'] == 'Internet Explorer'
+  arguments += " -t ~@no_circle" if options.is_circle
+  arguments += " -t ~@no_circle_ie" if options.is_circle && browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
-  arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
+  arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
-  arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
-  arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
+  arguments += " -t ~@pegasus_db_access" unless options.pegasus_db_access
+  arguments += " -t ~@dashboard_db_access" unless options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " --format html --out #{html_output_filename} -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --format html --out #{html_output_filename} -f pretty" if options.html # include the default (-f pretty) formatter so it does both
 
   max_reruns = how_many_reruns?(test_run_string)
 
@@ -594,8 +592,8 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if $options.html
-    ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if $options.output_synopsis
+    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if options.html
+    ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
     ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
 
@@ -645,8 +643,8 @@ run_results = Parallel.map(browser_feature_generator, parallel_config($options.p
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if $options.html
-    ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if $options.output_synopsis
+    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if options.html
+    ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
@@ -671,13 +669,19 @@ EOS
     unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end
-    unless $options.dashboard_db_access
+    unless options.dashboard_db_access
       skip_warning += "  - Do you need to run this test on the test instance or against localhost (-l) for @dashboard_db_access?\n"
     end
     print skip_warning
   end
 
   [succeeded, message, reruns]
+end
+
+main
+
+run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
+  run_feature browser, feature, $options
 end
 
 $logfile.close
