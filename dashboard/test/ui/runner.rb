@@ -380,8 +380,6 @@ rescue Exception => e
   nil
 end
 
-main
-
 # Build a lambda function called by Parallel.map each time it needs a new work
 # item.  It should return Parallel::Stop when there is no more work to do.
 def browser_feature_generator
@@ -404,20 +402,25 @@ def browser_feature_generator
   end
 end
 
-parallel_config = {
-  # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
-  in_threads: ENV['CI'] ? $options.parallel_limit : nil,
-  in_processes: ENV['CI'] ? nil : $options.parallel_limit,
+def parallel_config(parallel_limit)
+  {
+    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    in_threads: ENV['CI'] ? parallel_limit : nil,
+    in_processes: ENV['CI'] ? nil : parallel_limit,
 
-  # This 'finish' lambda runs on the main thread after each Parallel.map work
-  # item is completed.
-  finish: lambda do |_, _, result|
-    succeeded, _, _ = result
-    # Count failures so we can abort the whole test run if we exceed the limit
-    $failed_features += 1 unless succeeded
-  end
-}
-run_results = Parallel.map(browser_feature_generator, parallel_config) do |browser, feature|
+    # This 'finish' lambda runs on the main thread after each Parallel.map work
+    # item is completed.
+    finish: lambda do |_, _, result|
+      succeeded, _, _ = result
+      # Count failures so we can abort the whole test run if we exceed the limit
+      $failed_features += 1 unless succeeded
+    end
+  }
+end
+
+main
+
+run_results = Parallel.map(browser_feature_generator, parallel_config($options.parallel_limit)) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
