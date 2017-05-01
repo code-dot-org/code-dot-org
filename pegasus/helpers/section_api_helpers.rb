@@ -425,6 +425,8 @@ class DashboardSection
   end
 
   def students
+    return @students if @students
+
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -443,10 +445,24 @@ class DashboardSection
           {
             location: "/v2/users/#{row[:id]}",
             age: DashboardStudent.birthday_to_age(row[:birthday]),
-            completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
           }
         )
       end
+    # Though it would be simpler to query the level counts for each student via
+    # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
+    # querying all students together (as below) is significantly more performant.
+    student_ids = @students.map {|s| s[:id]}
+    level_counts = Dashboard.db[:user_levels].
+      group_and_count(:user_id).
+      where(user_id: student_ids).
+      where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+      all
+    @students.each do |datum|
+      level_count = level_counts.find {|x| x[:user_id] == datum[:id]}
+      datum[:completed_levels_count] = level_count ? level_count[:count] : 0
+    end
+
+    @students
   end
 
   def teacher?(user_id)
