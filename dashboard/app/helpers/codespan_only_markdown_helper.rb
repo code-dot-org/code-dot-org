@@ -2,8 +2,8 @@ require 'redcarpet'
 require 'redcarpet/render_strip'
 
 # A markdown renderer that strips everything, except for codespans (via backticks)
-module RestrictedMarkdownHelper
-  class CodeSpanOnly < Redcarpet::Render::StripDown
+module CodespanOnlyMarkdownHelper
+  class CodespanOnly < Redcarpet::Render::StripDown
     def codespan(code)
       "<code>#{code}</code>"
     end
@@ -30,9 +30,9 @@ module RestrictedMarkdownHelper
     end
   end
 
-  RestrictedRenderer = Redcarpet::Markdown.new(CodeSpanOnly)
+  CodespanOnlyRenderer = Redcarpet::Markdown.new(CodespanOnly)
 
-  def render_restricted_markdown(markdown)
-    RestrictedRenderer.render(markdown)
+  def render_codespan_only_markdown(markdown)
+    CodespanOnlyRenderer.render(markdown)
   end
 end
