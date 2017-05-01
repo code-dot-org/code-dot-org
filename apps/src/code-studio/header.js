@@ -185,13 +185,15 @@ function remixProject() {
   if (dashboard.project.getCurrentId()) {
     dashboard.project.serverSideRemix();
   } else {
-    // We don't have an id. This implies we are either a legacy /c/ share page,
-    // or we're on a blank project page that hasn't been saved for the first time
-    // yet. In both cases, copy will create a new project for us.
+    // We don't have an id. This implies we are either on a legacy /c/ share
+    // page, a script level, or a blank project page that hasn't been saved for
+    // the first time yet. In all of these cases, copy will create a new project
+    // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
+    const shouldNavigate = true;
     dashboard.project.copy(newName, function () {
       $(".project_name").text(newName);
-    });
+    }, shouldNavigate);
   }
 }
 
