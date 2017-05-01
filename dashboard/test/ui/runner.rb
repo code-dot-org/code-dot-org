@@ -544,6 +544,55 @@ def how_many_reruns?(test_run_string)
   end
 end
 
+def html_output_filename(test_run_string, options)
+  if options.html
+    options.out || (test_run_string + '_output.html')
+  end
+end
+
+def rerun_filename(test_run_string)
+  test_run_string + '.rerun'
+end
+
+def cucumber_arguments_for_browser(browser, options)
+  arguments = ' -S' # strict mode, so that we fail on undefined steps
+  arguments += ' -t ~@skip'
+  arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
+  arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
+  arguments += ' -t ~@local_only' unless options.local
+  arguments += ' -t ~@no_mobile' if browser['mobile']
+  arguments += ' -t ~@no_circle' if options.is_circle
+  arguments += ' -t ~@no_circle_ie' if options.is_circle && browser['browserName'] == 'Internet Explorer'
+  arguments += ' -t ~@no_ie' if browser['browserName'] == 'Internet Explorer'
+  arguments += ' -t ~@chrome' if browser['browserName'] != 'chrome' && !options.local
+  arguments += ' -t ~@no_safari' if browser['browserName'] == 'Safari'
+  arguments += ' -t ~@no_firefox' if browser['browserName'] == 'firefox'
+  arguments += ' -t ~@webpurify' unless CDO.webpurify_key
+  arguments += ' -t ~@pegasus_db_access' unless options.pegasus_db_access
+  arguments += ' -t ~@dashboard_db_access' unless options.dashboard_db_access
+  arguments
+end
+
+def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
+  arguments = ''
+  arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
+  arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
+
+  # if autorertrying, output a rerun file so on retry we only run failed tests
+  if max_reruns > 0
+    arguments += " --format rerun --out #{rerun_filename test_run_string}"
+  end
+
+  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # provide pretty test reports with success/fail/timing data upon completion.
+  # See: https://circleci.com/docs/test-metadata/#cucumber
+  if ENV['CI']
+    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
+  end
+
+  arguments
+end
+
 def run_feature(browser, feature, options)
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
@@ -591,53 +640,18 @@ def run_feature(browser, feature, options)
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
-  if options.html
-    if options.out
-      html_output_filename = options.out
-    else
-      html_output_filename = test_run_string + "_output.html"
-    end
-  end
-
-  arguments = ''
-  arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
-  arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
-  arguments += " -t ~@local_only" unless options.local
-  arguments += " -t ~@no_mobile" if browser['mobile']
-  arguments += " -t ~@no_circle" if options.is_circle
-  arguments += " -t ~@no_circle_ie" if options.is_circle && browser['browserName'] == 'Internet Explorer'
-  arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
-  arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !options.local
-  arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
-  arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
-  arguments += " -t ~@skip"
-  arguments += " -t ~@webpurify" unless CDO.webpurify_key
-  arguments += " -t ~@pegasus_db_access" unless options.pegasus_db_access
-  arguments += " -t ~@dashboard_db_access" unless options.dashboard_db_access
-  arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " --format html --out #{html_output_filename} -f pretty" if options.html # include the default (-f pretty) formatter so it does both
-
   max_reruns = how_many_reruns?(test_run_string)
 
-  # if autorertrying, output a rerun file so on retry we only run failed tests
-  rerun_filename = test_run_string + ".rerun"
-  if max_reruns > 0
-    arguments += " --format rerun --out #{rerun_filename}"
-  end
-
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
-  # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
-  if ENV['CI']
-    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
-  end
-
-  FileUtils.rm rerun_filename, force: true
+  html_log = html_output_filename(test_run_string, options)
+  rerun_file = rerun_filename test_run_string
+  FileUtils.rm rerun_file, force: true
 
   reruns = 0
+  arguments = cucumber_arguments_for_browser(browser, options)
+  arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
   log_link = upload_log_and_get_public_link(
-    html_output_filename,
+    html_log,
     {
       commit: COMMIT_HASH,
       success: succeeded.to_s,
@@ -649,16 +663,16 @@ def run_feature(browser, feature, options)
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if options.html
+    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
     ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
 
-    rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
+    rerun_arguments = File.exist?(rerun_file) ? " @#{rerun_file}" : ''
 
     succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
     log_link = upload_log_and_get_public_link(
-      html_output_filename,
+      html_log,
       {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,
@@ -700,7 +714,7 @@ def run_feature(browser, feature, options)
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if options.html
+    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
