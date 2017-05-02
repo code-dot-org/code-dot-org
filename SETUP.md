@@ -60,6 +60,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
+1. when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031).
 
 
 ### Ubuntu 14.04
@@ -149,7 +150,7 @@ Please also see our other documentation, including our:
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
 
 ---
-###Tips
+### Tips
 If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
 - `convert --version`
 - `gem install imagemagick@6`

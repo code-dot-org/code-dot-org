@@ -596,13 +596,8 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if $options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
-    short_message = message
-
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     ChatClient.log message, color: 'red'
-    if rack_env?(:test)
-      ChatClient.message 'server operations', short_message, color: 'red'
-    end
   end
   result_string =
     if scenario_count == 0

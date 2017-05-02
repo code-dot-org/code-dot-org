@@ -1,4 +1,4 @@
-<ExternalLink>
+<GoBeyond>
   <config><![CDATA[{
   "game_id": 55,
   "created_at": "2016-08-03T00:17:26.000Z",
@@ -13,4 +13,4 @@
   "level_concept_difficulty": {
   }
 }]]></config>
-</ExternalLink>
+</GoBeyond>
