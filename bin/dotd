@@ -349,6 +349,11 @@ def main
     should_i 'DTL' do
       # TODO(asher): Remove this wait step if it is truly unnecessary now.
       wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+
+      should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
+        content_push 'levelbuilder-staging', 'levelbuilder'
+      end
+
       view_commits base: 'levelbuilder', head: 'test'
       should_i 'merge from test to levelbuilder' do
         pr_number = GitHub.create_and_merge_pull_request(
