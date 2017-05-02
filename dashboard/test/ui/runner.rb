@@ -237,7 +237,7 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(open('browsers.json'))
+  browsers = JSON.parse(File.read('browsers.json'))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
