@@ -31,6 +31,8 @@ class Stage < ActiveRecord::Base
 
   validates_uniqueness_of :name, scope: :script_id
 
+  include CodespanOnlyMarkdownHelper
+
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
@@ -105,9 +107,9 @@ class Stage < ActiveRecord::Base
         title: localized_title,
         flex_category: localized_category,
         lockable: !!lockable,
-        levels: cached_script_levels.map(&:summarize),
-        description_student: (I18n.t "data.script.name.#{script.name}.stages.#{name}.description_student", default: ''),
-        description_teacher: (I18n.t "data.script.name.#{script.name}.stages.#{name}.description_teacher", default: '')
+        levels: cached_script_levels.reject(&:bonus).map(&:summarize),
+        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
 
       # Use to_a here so that we get access to the cached script_levels.
