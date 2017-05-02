@@ -8,7 +8,7 @@ theme: responsive
 # MINECRAFT Hour of Code
 
 <div style="width: 600px; max-width:100%">
-<%= view :display_video_thumbnail, id: "mc_video", video_code: "dfPF33rG9ms", play_button: 'center' %>
+<%= view :display_video_thumbnail, id: "mc_video", video_code: "55jADN4Y7Pg", play_button: 'center' %>
 </div>
 
 [col-50]
