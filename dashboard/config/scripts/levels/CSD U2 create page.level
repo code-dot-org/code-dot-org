@@ -1,0 +1,21 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2017-05-01T23:34:33.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template",
+    "hide_share_and_remix": "true",
+    "markdown_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at [Lesson 6 Puzzle 8](/s/csd2-draft/stage/6/puzzle/8) if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
