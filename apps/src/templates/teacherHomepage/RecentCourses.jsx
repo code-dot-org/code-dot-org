@@ -30,7 +30,7 @@ const RecentCourses = React.createClass({
           courses.map((course, index) =>
             <CourseCard
               key={index}
-              courseName={course.name}
+              courseName={course.courseName}
               description={course.description}
               image={course.image}
               link={course.link}
