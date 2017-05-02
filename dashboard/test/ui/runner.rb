@@ -237,9 +237,9 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.load(open("browsers.json"))
+  browsers = JSON.parse(open('browsers.json'))
   if options.config
-    browsers = options.config.map do |name|
+    options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
         unless browser
           puts "No config exists with name #{name}"
@@ -247,8 +247,9 @@ def select_browser_configs(options)
         end
       end
     end
+  else
+    browsers # Use all of them
   end
-  browsers
 end
 
 # Upload the given log to the cucumber-logs s3 bucket.
