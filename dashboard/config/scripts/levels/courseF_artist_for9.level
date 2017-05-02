@@ -35,10 +35,10 @@
     "discard_background": "false",
     "authored_hints": "[]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "project_template_level_name": "courseF_artist_for_Template"
+    "project_template_level_name": "courseF_artist_for_Template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

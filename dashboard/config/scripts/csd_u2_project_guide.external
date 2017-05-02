@@ -3,6 +3,8 @@ display_name 'Project Guide'
 title 'Your Personal Website'
 description 'description here'
 markdown <<MARKDOWN
+# Your Personal Website
+
 In the next few levels, you'll be completing and publishing your personal website.
 
 You've already done a lot of work on your website, but this is your chance to get creative and add a new page of something that you care about.
