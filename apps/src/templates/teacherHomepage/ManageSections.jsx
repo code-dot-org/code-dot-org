@@ -6,19 +6,19 @@ import i18n from "@cdo/locale";
 
 const ManageSections = React.createClass({
   propTypes: {
-    sectionName1: React.PropTypes.string,
+    sections: React.PropTypes.array,
   },
 
   render() {
-    const { sectionName1 } = this.props;
+    const { sections } = this.props;
 
     return (
       <CollapsibleSection
-        header={i18n.manageSections()}
-        linkText={i18n.addNewSection()}
+        header={i18n.mySections()}
+        linkText={i18n.editSections()}
         link="https://code.org/teacher-dashboard#/sections"
       >
-      {sectionName1 ? (
+      {sections ? (
         <div>
           This is where the sections table will go.
         </div>

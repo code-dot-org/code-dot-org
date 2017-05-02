@@ -10,7 +10,7 @@ export default storybook => {
         description: 'Manage Sections collapsible section for the teacher homepage that shows a table of sections',
         story: () => (
           <ManageSections
-            sectionName1="Section 1"
+            sections={[]}
           />
         )
       },
