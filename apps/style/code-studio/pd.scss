@@ -34,6 +34,14 @@
     white-space: normal;
     font-weight: normal;
   }
+
+  #error_explanation {
+    padding: 0;
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
 
 div[role=dialog] {
@@ -55,4 +63,20 @@ div[role=dialog] {
 
 .form-required-field {
   color: red;
+}
+
+table.table.table-auto-width {
+  width: auto !important;
+}
+
+form {
+  .field_with_errors input {
+    background-color: $realyellow !important;
+  }
+  .field_with_errors select {
+    background-color: $realyellow !important;
+  }
+  .field_with_errors textarea {
+    background-color: $realyellow !important;
+  }
 }

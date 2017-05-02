@@ -20,4 +20,10 @@ class Pd::AcceptedProgram < ActiveRecord::Base
   validates_inclusion_of :course, in: Pd::TeacherApplication::PROGRAM_DETAILS_BY_COURSE.keys, if: -> {course.present?}
   validates_presence_of :user
   validates_uniqueness_of :user_id, scope: :course, message: 'already has an entry for this course'
+
+  TEACHER_CONS_CITY_REGEX = /Houston|Phoenix|Philadelphia/
+
+  def teachercon?
+    !!(workshop_name =~ TEACHER_CONS_CITY_REGEX)
+  end
 end

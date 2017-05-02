@@ -41,4 +41,26 @@ class Pd::AcceptedProgramTest < ActiveSupport::TestCase
     refute dupe.valid?
     assert_equal ['User already has an entry for this course'], dupe.errors.full_messages
   end
+
+  test 'teachercon?' do
+    teachercons = [
+      'July 16 - 21, 2017: Phoenix',
+      'June 18 - 23, 2017: Houston (travel expenses paid)'
+    ]
+
+    non_teachercons = [
+      'Code Parther : July 1 - July 5, 2017',
+      'not teachercon'
+    ]
+
+    teachercons.each do |teachercon|
+      accepted_program = build(:pd_accepted_program, workshop_name: teachercon)
+      assert accepted_program.teachercon?, "Expected workshop name #{teachercon} to be a teachercon"
+    end
+
+    non_teachercons.each do |non_teachercon|
+      accepted_program = build(:pd_accepted_program, workshop_name: non_teachercon)
+      refute accepted_program.teachercon?, "Expected workshop name #{non_teachercon} to not be a teachercon"
+    end
+  end
 end
