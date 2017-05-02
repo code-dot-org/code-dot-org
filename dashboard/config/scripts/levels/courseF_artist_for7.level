@@ -33,8 +33,11 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The pen is thinner in this puzzle. You will need to set it to `1` before you start.\",\"hint_id\":\"courseF_artist_for7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67066f5dc49dfe87ebf5b917a5207885/courseF_artist_for7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that this spiral turns right instead of left!\",\"hint_id\":\"courseF_artist_for7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7b3dd844ba3ba867293815a08a1b205d/courseF_artist_for7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The increment for this puzzle is 2.\",\"hint_id\":\"courseF_artist_for7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7f211ed6b610ab63f79593003b4a92b7/courseF_artist_for7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The pen is thinner in this puzzle. You will need to set it to `1` before you start.\",\"hint_id\":\"courseF_artist_for7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67066f5dc49dfe87ebf5b917a5207885/courseF_artist_for7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that this spiral turns right instead of left!\",\"hint_id\":\"courseF_artist_for7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7b3dd844ba3ba867293815a08a1b205d/courseF_artist_for7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `for` loop in this puzzle goes from 15 to 300 by 2.\",\"hint_id\":\"courseF_artist_for7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f2cac9dd0866901093ece772dc87a1ca/courseF_artist_for7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This image is made by turning just 89 degrees.\",\"hint_id\":\"courseF_artist_for7_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ed66a259cf7c9253970b2b29c00099aa/courseF_artist_for7.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "project_template_level_name": "courseF_artist_for_Template",
     "contained_level_names": null
   },
   "published": true,
