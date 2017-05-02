@@ -269,29 +269,29 @@ def prefix_string(msg, prefix)
 end
 
 def open_log_files
-  $logfile = File.open('success.log', 'w')
-  $errfile = File.open('error.log', 'w')
-  $errbrowserfile = File.open('errorbrowsers.log', 'w')
+  $success_log = File.open('success.log', 'w')
+  $error_log = File.open('error.log', 'w')
+  $errorbrowsers_log = File.open('errorbrowsers.log', 'w')
 end
 
 def close_log_files
-  $logfile.close if $logfile
-  $errfile.close if $errfile
-  $errbrowserfile.close if $errbrowserfile
+  $success_log.close if $success_log
+  $error_log.close if $error_log
+  $errorbrowsers_log.close if $errorbrowsers_log
 end
 
 def log_success(msg)
-  $logfile.puts msg
+  $success_log.puts msg
   puts msg if $options.verbose
 end
 
 def log_error(msg)
-  $errfile.puts msg
+  $error_log.puts msg
   puts msg if $options.verbose
 end
 
 def log_browser_error(msg)
-  $errbrowserfile.puts msg
+  $errorbrowsers_log.puts msg
   puts msg if $options.verbose
 end
 
