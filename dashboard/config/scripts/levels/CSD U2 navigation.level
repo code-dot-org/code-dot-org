@@ -8,10 +8,7 @@
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template",
     "hide_share_and_remix": "true",
-    "markdown_instructions": "# Create a Navigation Bar\r\n\r\nHere's your project from before.  You'll be linking the two pages by creating a **navigation bar** at the top of the page.  Websites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site.\r\n\r\n# Do This\r\n* In your home page (index.html), add two hyperlinks at the top of the page, one to your lists page, and one to the home page.\r\n * *Even though it might seem strange to link a page to itself, it's less confusing if the navigation bar is exactly the same on every page.*\r\n* Copy the code for the navigation bar, then add it to the top of your lists page.\r\n* Test your links in the preview area by clicking on them.\r\n\r\n",
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Create a Navigation Bar\r\n\r\nHere's your project from before.  You'll be linking the two pages by creating a **navigation bar** at the top of the page.  Websites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site.\r\n\r\n# Do This\r\n* In your home page (index.html), add two hyperlinks at the top of the page, one to your lists page, and one to the home page.\r\n * *Even though it might seem strange to link a page to itself, it's less confusing if the navigation bar is exactly the same on every page.*\r\n* Copy the code for the navigation bar, then add it to the top of your lists page.\r\n* Test your links in the preview area by clicking on them.\r\n\r\n"
   },
   "published": true,
   "notes": "",

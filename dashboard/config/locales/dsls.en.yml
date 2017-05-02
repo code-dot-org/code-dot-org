@@ -7646,6 +7646,7 @@ en:
         The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
         The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
         We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
       courseF_multi_bee_conditionals1_predict1:
         Correct!: Correct!
