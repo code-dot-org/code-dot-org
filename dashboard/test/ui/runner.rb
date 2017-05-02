@@ -312,6 +312,19 @@ def features_to_run
   $features_to_run ||= $options.features.empty? ? Dir.glob('features/**/*.feature') : $options.features
 end
 
+#
+# Produce a list of browser-feature combinations to run, with combinations will
+# be skipped due to test tags already filtered out.
+# @return [Array[Array[browser:Hash, feature:String]]]
+# Example result:
+# [
+#   [
+#     { 'browser': 'local', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
+#     'features/bee.feature'
+#   ],
+#   ...
+# ]
+#
 def browser_features
   ($browsers.product features_to_run).map do |browser, feature|
     arguments = cucumber_arguments_for_browser(browser, $options)
