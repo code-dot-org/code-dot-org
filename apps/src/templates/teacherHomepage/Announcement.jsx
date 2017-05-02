@@ -2,25 +2,26 @@ import React from 'react';
 import color from "../../util/color";
 import ProgressButton from '../progress/ProgressButton';
 
-
 const styles = {
   container: {
     height: 250,
     width: 1000,
-    border: '1px solid lightGray',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: color.border_gray,
     borderRadius: 3,
     backgroundColor: color.white,
   },
   tealBar: {
     width: 1000,
-    height: 60,
+    height: 72,
     backgroundColor: color.light_teal,
   },
   headingBox: {
-    paddingTop: 20,
+    paddingTop: 35,
   },
   heading: {
-    marginLeft: 350,
+    marginLeft: 360,
     color: color.white,
     fontSize: 18,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -28,9 +29,9 @@ const styles = {
     textDecoration: 'none'
   },
   description: {
-    marginLeft: 350,
-    marginRight: 25,
-    marginTop: 25,
+    marginLeft: 360,
+    marginRight: 20,
+    marginTop: 20,
     fontSize: 14,
     fontFamily: '"Gotham 3r", sans-serif',
     lineHeight: 1.5,
@@ -38,11 +39,11 @@ const styles = {
   },
   button: {
     marginLeft: 350,
-    marginTop: 25
+    marginTop: 20
   },
   image: {
     height: 210,
-    width: 300,
+    width: 310,
     borderRadius: 3,
     margin: 20,
     position: 'absolute',
@@ -63,7 +64,7 @@ const Announcement = React.createClass({
 
     return (
       <div style={styles.container}>
-          <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
+        <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
         <div style={styles.tealBar}>
           <div style={styles.headingBox}>
             <a href={link} style={styles.heading} >
