@@ -278,7 +278,8 @@ ________________
 6. Four weeks prior - order catering
 7. Three to Four weeks prior (no later than 21 days) - [order your supplies](/educate/professional-learning-partner/playbook/ordering-supplies) from Mimeo.
 8. One and a half weeks prior - create a [facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators
-9. Two days prior - make sure all your supplies have arrived. Day of the workshop 
+9. Two days prior - make sure all your supplies have arrived. 
+10. Day of the workshop 
 	 - Login to the workshop organizer dashboard to [“Start Workshop”](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.wmocqedffowl) and have teachers join it.
 	- Decide if you or your facilitators take attendance. 
 	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.<br/>
