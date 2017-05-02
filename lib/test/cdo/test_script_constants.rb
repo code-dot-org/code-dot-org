@@ -8,8 +8,8 @@ class ScriptConstantsTest < Minitest::Test
     end
 
     it 'does not find other scripts in the hoc category' do
-      assert !ScriptConstants.script_in_category?(:hoc, 'csd1')
-      assert !ScriptConstants.script_in_category?(:hoc, 'foo')
+      refute ScriptConstants.script_in_category?(:hoc, 'csd1')
+      refute ScriptConstants.script_in_category?(:hoc, 'foo')
     end
   end
 
@@ -20,7 +20,7 @@ class ScriptConstantsTest < Minitest::Test
     end
 
     it 'does not find nonexistent scripts' do
-      assert !ScriptConstants.script_in_any_category?('foo')
+      refute ScriptConstants.script_in_any_category?('foo')
     end
   end
 end
