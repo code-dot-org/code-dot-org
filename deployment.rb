@@ -41,7 +41,6 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
-    'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_dashboard'             => true,
@@ -59,9 +58,7 @@ def load_configuration
     'dashboard_unicorn_name'      => 'dashboard',
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
-    'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',
-    'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -145,6 +142,10 @@ def load_configuration
 
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
+    config['cdn_enabled']         ||= config['chef_managed']
+
+    config['db_reader']           ||= config['db_writer']
+    config['reporting_db_reader'] ||= config['reporting_db_writer']
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['dashboard_reporting_db_reader'] ||= config['reporting_db_reader'] + config['dashboard_db_name']
@@ -157,6 +158,9 @@ def load_configuration
     # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
     ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
     ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']
+
+    # AWS Ruby SDK doesn't auto-detect region from EC2 Instance Metadata.
+    # Ref: https://github.com/aws/aws-sdk-ruby/issues/1455
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
@@ -390,6 +394,10 @@ end
 
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
+end
+
+def shared_js_dir(*dirs)
+  deploy_dir('shared/js', *dirs)
 end
 
 def lib_dir(*dirs)

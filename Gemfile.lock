@@ -235,6 +235,8 @@ GEM
       gherkin (~> 2.12.0)
     daemons (1.2.3)
     dalli (2.7.6)
+    dalli-elasticache (0.2.0)
+      dalli (>= 1.0.0)
     debug_inspector (0.0.2)
     devise (4.2.0)
       bcrypt (~> 3.0)
@@ -717,6 +719,7 @@ DEPENDENCIES
   cucumber (~> 2.0.2)
   daemons
   dalli
+  dalli-elasticache
   devise
   devise_invitable (~> 1.6.0)
   execjs
