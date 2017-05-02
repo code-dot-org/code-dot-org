@@ -3,6 +3,7 @@
 */
 import React from 'react';
 import {Table} from 'react-bootstrap';
+import _ from 'lodash';
 import ConfirmationDialog from './confirmation_dialog';
 
 const styles = {
@@ -79,7 +80,8 @@ const WorkshopEnrollment = React.createClass({
       );
     }
 
-    const enrollmentRows = this.props.enrollments.map((enrollment, i) => {
+    const sortedEnrollments = _.sortBy(this.props.enrollments, ['last_name', 'first_name']);
+    const enrollmentRows = sortedEnrollments.map((enrollment, i) => {
       let deleteCell;
       if (enrollment.in_section) {
         // Don't give the option to delete an enrollment once the teacher has joined the section.

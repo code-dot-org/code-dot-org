@@ -61,7 +61,7 @@ if (IN_UNIT_TEST) {
   };
 }
 
-if (IN_STORYBOOK) {
+if (IN_STORYBOOK || IN_UNIT_TEST) {
   // Storybooks need the ability to create multiple distinct stores instead of
   // using a singleton
   module.exports.createStoreWithReducers = createStoreWithReducers;
@@ -73,6 +73,10 @@ if (IN_STORYBOOK) {
 export function getStore() {
   if (!reduxStore) {
     reduxStore = createStoreWithReducers();
+    if (experiments.isEnabled('reduxGlobalStore')) {
+      // Expose our store globally, to make debugging easier
+      window.reduxStore = reduxStore;
+    }
   }
 
   return reduxStore;
@@ -87,8 +91,9 @@ function createStoreWithReducers() {
 }
 
 /**
- * Register multiple top-level reducers with the global store and get back
- * selector functions to access the state for each reducer.
+ * Register multiple top-level reducers with the global store. This does not remove
+ * any reducers that have been previously registered.
+ *
  * @param {object} reducers - an object mapping unique keys to reducer functions
  *     The keys will be used in the state object.
  * @returns void

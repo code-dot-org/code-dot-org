@@ -68,6 +68,7 @@
       cronjob at:'5 6 * * *', do:deploy_dir('bin', 'cron', 'send_workshop_reminder_emails')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
+      cronjob at:'10 */12 * * *', do:dashboard_dir('bin','refresh_pd_workshop_material_orders')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
@@ -89,7 +90,6 @@
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
     cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
-    cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
     cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')

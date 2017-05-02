@@ -48,6 +48,10 @@ class ProjectsController < ApplicationController
   @@project_level_cache = {}
 
   def index
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
   end
 
   # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
@@ -60,6 +64,10 @@ class ProjectsController < ApplicationController
   end
 
   def load
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -73,6 +81,10 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     return if redirect_under_13_without_tos_teacher(@level)
     redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
       request.ip,
@@ -86,6 +98,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
@@ -141,10 +157,18 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     show
   end
 
   def remix
+    if current_user.try(:admin)
+      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
+      return
+    end
     src_channel_id = params[:channel_id]
     new_channel_id = ChannelToken.create_channel(
       request.ip,

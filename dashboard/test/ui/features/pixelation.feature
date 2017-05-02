@@ -1,8 +1,8 @@
-@as_student
 @dashboard_db_access
 @no_mobile
 @no_safari
 Feature: Pixelation levels
+  @as_student
   Scenario: Pixelation version 2 in black and white with no sliders
     Given I am on the 1st pixelation test level
     And pixelation data has text "0000 0011 0000 0010 0 1 0"
@@ -18,6 +18,7 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0011 0000 0010 0 1 0 1 1 1 1 1"
 
+  @as_student
   Scenario: Pixelation version 3 in color with sliders
     Given I am on the 2nd pixelation test level
     And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
@@ -33,6 +34,7 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
+  @as_student
   Scenario: Pixelation version 3 in color with sliders starting in hex mode
     Given I am on the 3rd pixelation test level
     And pixelation data has text "04 04 18 FF0000 00AAAA"
@@ -48,8 +50,22 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "04 04 18 FF0000 00AAAA 999999 CCCCFF"
 
-  Scenario: Pixelation with encoding controls hidden
+  Scenario: Pixelation version 1 with encoding controls hidden but sliders visible
     Given I am on the 4th pixelation test level
-    And pixelation data has text "04 04 18 FF0000 00AAAA"
-    Then element "input[value='hex']" is not visible
-    And element "input[value='hex']" is not visible
+    And pixelation data has text "FF0000 00AAAA"
+    Then element "input[name='binHex'][value='bin']" is not visible
+    And element "input[name='binHex'][value='hex']" is not visible
+    And element "#widthRange" is visible
+    And element "#heightRange" is visible
+    And element "#width" is not readonly
+    And element "#height" is not readonly
+
+  Scenario: Pixelation version 1 with sliders hidden but encoding controls visible
+    Given I am on the 5th pixelation test level
+    And pixelation data has text "FF0000 00AAAA"
+    Then element "input[name='binHex'][value='bin']" is visible
+    And element "input[name='binHex'][value='hex']" is visible
+    And element "#widthRange" is not visible
+    And element "#heightRange" is not visible
+    And element "#width" is readonly
+    And element "#height" is readonly

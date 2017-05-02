@@ -1,5 +1,4 @@
 import {assert} from '../util/configuredChai';
-var testUtils = require('../util/testUtils');
 import {setupTestBlockly} from './util/testBlockly';
 
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');

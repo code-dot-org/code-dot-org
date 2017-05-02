@@ -15,7 +15,7 @@ var AssetUploader = React.createClass({
     onUploadError: React.PropTypes.func,
     allowedExtensions: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired
+    useFilesApi: React.PropTypes.bool
   },
 
   /**

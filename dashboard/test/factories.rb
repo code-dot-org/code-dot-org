@@ -2,6 +2,23 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :experiment do
+    name "fancyFeature"
+
+    factory :user_based_experiment, class: 'UserBasedExperiment' do
+      type "UserBasedExperiment"
+      percentage 50
+    end
+    factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
+      type "TeacherBasedExperiment"
+      percentage 50
+      script nil
+    end
+    factory :single_section_experiment, class: 'SingleSectionExperiment' do
+      type "SingleSectionExperiment"
+      section
+    end
+  end
   factory :section_hidden_stage do
     section nil
     stage nil
@@ -21,12 +38,6 @@ FactoryGirl.define do
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
-    confirmed_at Time.now
-
-    # Child of :user factory, since it's in the `factory :user` block
-    factory :admin do
-      admin true
-    end
 
     factory :levelbuilder do
       after(:create) do |levelbuilder|
@@ -39,7 +50,7 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       admin false
-      factory :admin_teacher do
+      factory :admin do
         admin true
       end
       factory :terms_of_service_teacher do
@@ -78,8 +89,8 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
+          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
@@ -92,7 +103,6 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-      admin false
     end
 
     factory :young_student do
@@ -230,8 +240,11 @@ FactoryGirl.define do
     game {Game.gamelab}
   end
 
-  factory :multi, parent: :level, class: Applab do
+  factory :multi, parent: :level, class: Multi do
     game {create(:game, app: "multi")}
+    transient do
+      submittable false
+    end
     properties do
       {
         question: 'question text',
@@ -242,7 +255,8 @@ FactoryGirl.define do
           {text: 'answer4', correct: false}
         ],
         questions: [{text: 'question text'}],
-        options: {hide_submit: false}
+        options: {hide_submit: false},
+        submittable: submittable
       }
     end
   end
@@ -554,12 +568,17 @@ FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
+    on_map true
+    funded true
     course Pd::Workshop::COURSES.first
+    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     capacity 10
     transient do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
       num_enrollments 0
+      enrolled_and_attending_users 0
+      enrolled_unattending_users 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
@@ -568,6 +587,17 @@ FactoryGirl.define do
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
+      end
+      evaluator.enrolled_and_attending_users.times do
+        teacher = create :teacher
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
+        workshop.sessions.each do |session|
+          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
+        end
+      end
+      evaluator.enrolled_unattending_users.times do
+        teacher = create :teacher
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
   end
@@ -601,6 +631,7 @@ FactoryGirl.define do
       user nil
       association :school, factory: :public_school, strategy: :build
       association :school_district, strategy: :build
+      course 'csd'
     end
 
     initialize_with do
@@ -615,7 +646,7 @@ FactoryGirl.define do
         principalFirstName: 'Minerva',
         principalLastName: 'McGonagall',
         principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: 'csd',
+        selectedCourse: course,
         phoneNumber: '555-555-5555',
         gradesAtSchool: [10],
         genderIdentity: 'Male',
@@ -636,6 +667,63 @@ FactoryGirl.define do
         whatTeachingSteps: 'learn and practice'
       }.stringify_keys
     end
+  end
+
+  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
+    start_date {Date.today}
+    fixed_payment 50
+  end
+
+  factory :pd_facilitator_program_registration, class: 'Pd::FacilitatorProgramRegistration' do
+    association :user, factory: :facilitator, strategy: :create
+    transient do
+      form_data {build :pd_facilitator_program_registration_hash, user: user}
+    end
+    form_data {from_data.to_json}
+  end
+
+  # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
+  factory :pd_facilitator_program_registration_hash, class: 'Hash' do
+    initialize_with do
+      {
+        confirmTeacherconDate: "Yes",
+        addressStreet: "123 Main st",
+        addressCity: "Anywhere",
+        addressState: "AK",
+        addressZip: "12345",
+        contactName: "Fred",
+        contactRelationship: "Imaginary Friend",
+        contactPhone: "123-456-7890",
+        liveFarAway: "Yes",
+        dietaryNeeds: ["Gluten Free"],
+        howTraveling: "Flying",
+        needHotel: "Yes",
+        needAda: "Yes",
+        photoRelease: ["Yes"],
+        gender: "Female",
+        race: ["Hispanic or Latino"],
+        age: "26-30",
+        yearsTaught: "1",
+        gradesTaught: ["Middle School/Junior High"],
+        gradesPlanningToTeach: ["Middle School/Junior High"],
+        subjectsTaught: ["Science"],
+        csYearsTaught: "1",
+        liabilityWaiver: ["Yes"]
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
+    workshop_name 'a workshop'
+    course 'csd'
+    association :user, factory: :teacher, strategy: :create
+    association :teacher_application, factory: :pd_teacher_application, strategy: :create
+  end
+
+  factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
+    association :user, factory: :facilitator, strategy: :create
+    tc1_arrive Date.new(2017, 8, 23)
+    tc1_depart Date.new(2017, 8, 29)
   end
 
   # school info
@@ -743,6 +831,12 @@ FactoryGirl.define do
     association :school_info, factory: :school_info_without_country
     school 'Example School'
     code {SecureRandom.hex(10)}
+
+    trait :from_user do
+      user
+      full_name {user.name} # sets first_name and last_name
+      email {user.email}
+    end
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -765,6 +859,17 @@ FactoryGirl.define do
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
     association :facilitator
     course Pd::Workshop::COURSES.first
+  end
+
+  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
+    association :enrollment, factory: :pd_enrollment
+    association :user, factory: :teacher
+    street '1501 4th Ave'
+    apartment_or_suite 'Suite 900'
+    city 'Seattle'
+    state 'WA'
+    add_attribute :zip_code, '98101'
+    phone_number '555-111-2222'
   end
 
   factory :school_district do

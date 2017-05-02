@@ -47,6 +47,8 @@
     "markdown_instructions": "This is about to get interesting!\r\n\r\nAdd some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the `when run` event to get the ninja to chase the pirate.\",\"hint_id\":\"courseD_playLab_cond4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/66538acdfa66cf19907535084a132b1a/courseD_playLab_cond4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There is a special block called `set every masked ninja to chase actor` that will keep the ninja hot on the pirate's trail!\",\"hint_id\":\"courseD_playLab_cond4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f0643fae4b1d32a771f4f0733b78ea84/courseD_playLab_cond4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Put the `end game as a loss` block underneath the `when actor 1 touches actor 3` event.\",\"hint_id\":\"courseD_playLab_cond4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b9e58591a0ec35dd89f90ac1cf23569/courseD_playLab_cond4.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -138,6 +140,12 @@
               </value>
             </block>
           </value>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation else="1"/>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation elseif="1" else="1"/>
         </block>
       </xml>
     </toolbox_blocks>

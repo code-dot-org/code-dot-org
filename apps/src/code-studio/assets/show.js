@@ -4,7 +4,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var ImagePicker = require('../components/ImagePicker');
 var SoundPicker = require('../components/SoundPicker');
-var Dialog = require('../dialog');
+var Dialog = require('../LegacyDialog');
 
 /**
  * Display the "Manage Assets" modal.

@@ -26,6 +26,8 @@ export const lessonType = (
     lockable: PropTypes.bool.isRequired,
     stageNumber: PropTypes.number,
     lesson_plan_html_url: PropTypes.string,
-    isFocusArea: PropTypes.bool.isRequired
+    isFocusArea: PropTypes.bool.isRequired,
+    description_student: PropTypes.string,
+    description_teacher: PropTypes.string,
   })
 );

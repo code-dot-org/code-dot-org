@@ -86,6 +86,8 @@
     forgot_password: Nie pamiętasz swojego hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} uczniów już się zarejestrowało."
     teacher_count: "%{count} nauczycieli już się zarejestrowało."
@@ -204,6 +206,14 @@
       Kursy są zabawne, mają ładną oprawę graficzną i uczą podstawowych pojęć z dziedziny informatyki przy użyciu prostych gier z instrukcjami. Naucz się kodowania od Billa Gatesa, Marka Zuckerberga, Angry Birds i Plants vs. Zombies! :)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Zaproszenie wysłane
     added_teacher: "%{name} dodany jako Twój nauczyciel"
@@ -219,8 +229,6 @@
       cant_join_own_section: Przepraszamy, ale nie możesz przyłączyć się do swojej
         własnej sekcji.
     mail:
-      invite_student:
-        subject: Dołącz do klasy z %{teacher_name} na Code.org!
       student_disassociated:
         subject: 'Powiadomienie Code.org: %{student_name} nie jest już powiązany z
           Tobą jako Twój uczeń.'
@@ -477,6 +485,7 @@
       się do Kongresu USA o sfinansowanie edukacji informatycznej w K-12.
     announcement_petition_button: Dodaj swoje imię
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Bądź na bieżąco z nowymi funkcjami i aktualizacjami na naszym
       blogu dla nauczycieli. <a href='%{teacher_blog_url}' target='_blank'>Zobacz
       poprzednie ogłoszenia.</a>
@@ -541,17 +550,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź
       kod innej sekcji.
-    section_code_not_entered: Podaj current_section_code.
     section_code_cant_be_current_section: Bieżąca sekcja nie może być taka sama, jak
       nowa sekcja.
     current_section_dne: Przepraszamy, sekcja %{current_section_code} nie istnieje.
       Wprowadź kod innej sekcji.
-    students_not_yours: Nie możesz przenieść uczniów z sekcji, która nie należy do
-      Ciebie.
-    stay_enrolled_not_entered: Podaj stay_enrolled_in_current_section.
     student_ids_not_entered: Podaj student_ids.
     student_not_found: Nie można odnaleźć jednego lub więcej uczniów.
     all_students_must_be_in_current_section: Wszyscy uczniowie muszą obecnie być włączeni

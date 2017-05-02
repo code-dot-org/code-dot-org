@@ -287,7 +287,7 @@
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
-  homepage_banner_emailprivacy_link: "Read more"
+  homepage_banner_emailprivacy_link: "বিস্তারিত পড়ুন"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "আরও জানুন"
   homepage_slot_text_title_hoc: "এক ঘন্টার কোড"
@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "স্বয়ং-প্রস্তুত হয়"
   dashboard_students_reset_secret: "গোপনে পুনরায় সেট করুন"
   dashboard_students_reset_password: "গুপ্ত-সংকেত পুনরায় সেট করুন"
-  dashboard_students_share_section: 'পৃষ্ঠার এই সেকশনে চিহ্ন আপনার ছাত্রের সাথে শেয়ার করুন:'
+  dashboard_students_share_section: "পৃষ্ঠার এই সেকশনে চিহ্ন আপনার ছাত্রের সাথে শেয়ার করুন:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "আপনার ছাত্র যুক্ত হওয়ার তথ্য কার্ড মুদ্রন করুন"
   dashboard_students_secret_picture_title: "গোপন ছবি"
   dashboard_students_secret_picture: "গুপ্ত ছবি"
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "আপনার ছাত্রদের বলুন তাদের নিজস্ব একাউন্ট তৈরি করতে এবং আপনার দিকের অংশে যোগ করুন"
   dashboard_students_no_email: "যদি আপনার ছাত্রদের  ই-মেইল ঠিকানা না থাকে, বা আপনি তাদের একাউন্ট তৈরি করতে চান, তাহলে এই বিভাগের গুপ্ত ধরনের <b>শব্দ</b> বা <b>ছবি</b>তে পরিবর্তন করুন।"
   dashboard_students_print_page: "এই পৃষ্ঠা মুদ্রণ করুন"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> এখানে ক্লিক করুন</a>আমাদের গোপনীয়তা নথির জন্য যা আপনার ছাত্রদের জন্য শেয়ার অথবা  মুদ্রণ (print) করতে পারবেন।"
   dashboard_curriculum_k5_title: "কে-৫ শিক্ষকদের জন্য তথ্য"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

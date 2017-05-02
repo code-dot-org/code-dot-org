@@ -804,6 +804,38 @@ en:
         property in \"style.css\" in the `p` rule-set.\r\n* Change the text-align
         value to `center` or `right`.\r\n* Add a `text-align` rule in the `body` rule
         set"
+      CSD U2 Headers_markdown_instruction: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are headers?**</summary>\r\nHeaders are the different sized section titles
+        throughout a web page. Headers add structure to your web page by breaking
+        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I create a header?**</summary>\r\nYou can make something a header element
+        by surrounding it by header tags.  For example:\r\n<pre> &lt;h1&gt; Header
+        Text &lt;/h1&gt; </pre> <br> <br>\r\n\r\nNotice how there is a the opening
+        tag (&lt;h1&gt;) and closing tag (&lt;/h1&gt;). The closing tag is the same
+        as the opening tag except it has `/` after the opening angle bracket. The
+        text you want to show as the header goes in the middle of the two tags.\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nStands for Hypertext Markup Language. HTML is used
+        to add structure to the content of a web page. HTML uses tags to specify where
+        certain structures start and end. These tags are sets of characters not found
+        in the English language so that the content and structure can be differentiated.
+        \r\n</details>\r\n<details>\r\n<summary>**What is an HTML element?**</summary>\r\nA
+        piece of a website. Marked by a start tag and sometimes closed with an end
+        tag. Also includes the content of the element as well. For example: \r\n<img
+        src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nThe special set of characters that tells the machine
+        where the start or end of an HTML element is and what type it is. HTML tags
+        add structure to the content of a web page.\r\n</details>\r\n<details>\r\n<summary>**Why
+        do you need an opening and closing tag?**</summary>\r\nYou need both an opening
+        and closing tag for many HTML elements because it marks where that structure
+        starts and stops. You don't want all the text on your web page to be a title.\r\n</details>\r\n</div>\r\n\r\n#
+        Headers\r\n\r\nYou may have noticed on the last level that everything you
+        type into the editor is getting smashed together. In order to differentiate
+        between these different parts we use HTML elements to mark the different parts
+        of a web page. In your investigation with the inspector did you come across
+        something that made headers?\r\n\r\n# Do This\r\n\r\n* Make your header \"Animals\"
+        stand out using the `<h1>` header element."
       CSD U2 RGB intro_markdown_instruction: "# RGB Colors\r\n\r\nAll colors, whether
         they have names or not, can be described by the level of red, green, and blue
         light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You
@@ -1599,6 +1631,17 @@ en:
         property in the paragraph tag.\r\n* Change the paragraph alignment.\r\n  *
         Choose from \"left\", \"right\", and \"center\""
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
+      CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
+        pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
+        PM.png)\r\n    \r\nIt is used to increase the value of a variable by 1. You
+        might call it the **counter pattern** since it can be used to make a variable
+        that counts up. You'll use this pattern a lot, especially with the draw loop.
+        Let's see what that looks like.\r\n\r\n# Do This\r\n\r\nThis program creates
+        a variable `counter` and then uses the **counter pattern** to make it count
+        up. When you run the program what do you think you'll see on the screen?\r\n\r\n*
+        **Read the program** and make a prediction of what the output will be.\r\n*
+        **Run the program** to check your prediction.\r\n* **Discuss with a neighbor**.
+        Can you explain what you observed?\r\n\r\n"
       CSD U3 - Sprites - Sprite v Rect_markdown_instruction: "# Sprites vs Rect\r\n\r\nCurently
         sprites and rectangles seem really similar. It will become clear later on
         why sprites are more powerful than basic shapes. Before you get there though
@@ -1696,20 +1739,14 @@ en:
         One that sets the `visible` property to show the pop sprite."
       CSD U3 - conditionals - first conditional_markdown_instruction: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
         PM.png\" style=\"float:right;width:100px\">\r\n# If Statement\r\n\r\nThe Boolean
-        expressions we tested on the last level allow us to ask questions.  In order
-        to use the answers we need to use something called an **if statement**. If
-        statements take a Boolean expression as input and check whether it is true
-        or false. If the Boolean expression is true, then the computer executes the
-        code inside the if statement.\r\n\r\nFor example, the code below checks whether
-        the sprite's width is greater than 100.  If it is, it prints \"This is a
-        wide sprite\" to the console log.\r\n\t\r\n\tif( sprite.width > 100 ){\r\n    \tconsole.log(\"This
-        is a wide sprite\");\r\n    }\r\n\r\nIf statements usually go inside your
-        draw loop because we want to check them each time the loop runs. \r\n\r\n#
-        Do This\r\n\r\nThe race car program you wrote earlier is loaded here for you.\r\n\r\n*
-        Add an `if` statement after you update the position of the race car. \r\n*
-        Move the boolean expression from the console.log statement to the input of
-        the if statement.\r\n* Inside the `if` statement add a statement to draw text
-        on the screen to say \"Winner\".\r\n"
+        expressions you used earlier allow us to ask questions, but in order to _respond
+        to those questions_ we need to use an _if statement_.\r\n\r\nIf statements
+        usually go inside your draw loop because we want to check them each time the
+        loop runs. \r\n\r\n# Do This\r\n\r\nThe race car program you wrote earlier
+        is loaded here for you.\r\n\r\n* Add an `if` statement after you update the
+        position of the race car.\r\n* Move the boolean expression from the console.log
+        statement to the input of the if statement.\r\n* Inside the `if` statement
+        add a statement to draw text on the screen to say \"Winner\".\r\n"
       CSD U3 - conditionals - transition 2_markdown_instruction: "# More Practice
         With Booleans\r\n\r\nLet's use one more Boolean expression to check the condition
         of a sprite.\r\n\r\n# Do This\r\nThere is a growing balloon sprite created
@@ -1726,10 +1763,8 @@ en:
         The sprites have all been set up for you.\r\n\r\n* Add a `console.log` statement
         inside the draw loop. [Show me where](#triggercallout=callout)\r\n* Add an
         Boolean expression inside the `console.log` that asks \"Is the x position
-        of the race car less than the x position of the finish line?\" (You can look
-        at [this level](/s/csd3/stage/8/puzzle/2) to see what the statement might
-        look like.)\r\n* Look at the output of the program as the car moves. When
-        does the output change? Why?"
+        of the race car less than the x position of the finish line?\"\r\n* Look at
+        the output of the program as the car moves. When does the output change? Why?"
       CSD U3 - images - Embed Project_markdown_instruction: "Example of the Final
         Project"
       CSD U3 - images - animations_markdown_instruction: "# Animations\r\n\r\nYou
@@ -2097,40 +2132,30 @@ en:
         to `true`?\r\n\r\n- Read through the entire program to see how `sprite1` and
         `sprite2` are being created and which properties are compared.\r\n- For each
         of the Boolean expressions, identify the sprite properties being compared.\r\n-
-        Change the code _in the first **13** lines only_ so that each of the `console.log()`
+        Change the code _in the first **11** lines only_ so that each of the `console.log()`
         statements print `true`."
-      CSD U3 Boolean Predict_markdown_instruction: "# Boolean Expressions\r\n\r\nDecision-making
-        in computers is based on statements called **boolean expressions**. A boolean
-        expression is **any expression that can only evaluate to either `TRUE` or
-        `FALSE`**. This can be particularly useful when used to compare the properties
-        of two sprites. For example, you could figure out which one is larger or placed
-        higher up. In the next few puzzles, we'll use simple boolean expressions
-        to compare sprite properties.\r\n\r\n# Predict\r\n\r\nRead the code below.
-        There are some new symbols in it which you haven't been introduced to. Take
-        a guess at what they mean and try to answer the following question.\r\n\r\nWhich
-        result will be printed in the console by this program?\r\n\r\n1.\r\n     \r\n    true\r\n    false\r\n    true\r\n2.\r\n
-        \r\n    200\r\n    10\r\n    -20\r\n    \r\n3.\r\n \r\n    true\r\n    error\r\n    true\r\n4.\r\n
-        \r\n    false\r\n    true\r\n    false"
       CSD U3 Complex Movement counter prediction_markdown_instruction: "# Velocity
         and the Counter Pattern\r\n\r\nUsing the counter pattern with a sprite's
         x and y property makes a sprite move smoothly across the screen. In this program
         **the counter pattern is being used with the `sprite.velocityX` property**
         instead.\r\n\r\n# Predict\r\n\r\nWhat do you think will happen when the code
         is run? Why? Once you're ready you can run the code to find out."
-      CSD U3 Compound Nested Challenge_markdown_instruction: "# Checking for Multiple
-        Conditions\r\n\r\nSo far we've looked at a lot of ways to check if a single
-        condition is true, but often a program needs to check the state of many conditions
-        simultaneously before making a decision. For this challenge, let's assume
-        the following scenario:\r\n\r\n- The sprite should move up, down, left, and
-        right if the corresponding arrow key is pressed.\r\n- The sprite should _not_
-        go all the way off the screen in any direction.\r\n\r\n# Do This Together\r\n\r\nBefore
-        you tackle writing this program, you'll need to figure out how to check multiple
-        conditions at once.\r\n\r\n* **Brainstorm** with your neighbors ways you might
-        check for more than one condition.\r\n* **Share** back with the whole class
-        so you can see other potential approaches.\r\n* **Explore** the toolbox for
-        blocks that might help (pay extra attention to the Math and Control drawers).\r\n*
-        **Program** your proposed solution.\r\n* **Test** your program to make sure
-        it's actually checking all of the conditions you intended.\r\n"
+      CSD U3 Compound Nested Challenge_markdown_instruction: "# Challenge: Checking
+        for Multiple Conditions\r\n_Check with your teacher before taking on this
+        challenge._\r\n\r\n\r\nSo far we've looked at a lot of ways to check if a
+        single condition is true, but often a program needs to check the state of
+        many conditions simultaneously before making a decision. For this challenge,
+        let's assume the following scenario:\r\n\r\n- The sprite should move up,
+        down, left, and right if the corresponding arrow key is pressed.\r\n- The
+        sprite should _not_ go all the way off the screen in any direction.\r\n\r\n#
+        Do This Together\r\n\r\nBefore you tackle writing this program, you'll need
+        to figure out how to check multiple conditions at once.\r\n\r\n* **Brainstorm**
+        with your neighbors ways you might check for more than one condition.\r\n*
+        **Share** back with the whole class so you can see other potential approaches.\r\n*
+        **Explore** the toolbox for blocks that might help (pay extra attention to
+        the Math and Control drawers).\r\n* **Program** your proposed solution.\r\n*
+        **Test** your program to make sure it's actually checking all of the conditions
+        you intended.\r\n"
       CSD U3 Compound Nested Examples_markdown_instruction: "# Multiple Paths to
         the Same Outcome\r\n\r\nYou may have seen several different approaches to
         solving the previous challenge - one of the beatiful things about programming
@@ -2171,6 +2196,18 @@ en:
         through conditionals\r\n\r\n_You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._"
+      CSD U3 Conditionals Apple 2_markdown_instruction: "# Turning Green\r\n\r\nNow
+        that we know how to use _if_ statements, you can do more than just check if
+        the apple has reached a scale of 2, you turn it red once it happens. Use a
+        conditional in the draw loop to check whether `apple.scale` is greater than
+        2 - if it is, set the apples new animation to \"apple_red\".\r\n\r\n_Challenge:
+        Can you also make the apple stop growing once it turns red?_\r\n"
+      CSD U3 Conditionals Apple_markdown_instruction: "# More Practice With Booleans\r\n\r\nLet's
+        use one more Boolean expression to check the condition of a sprite.\r\n\r\n#
+        Do This\r\nThere is a growing apple sprite created for you. It starts as green,
+        should turn red when it gets to a scale of 2.\r\n\r\n* Add a `console.log`
+        statement.\r\n* Add a Boolean expression inside the `console.log` that checks
+        whether the `apple.scale` is greater than 2."
       CSD U3 Counters assigning an expression_markdown_instruction: "# Assignment
         and Expressions\r\n\r\nYou know that **variables can hold a single value**.
         You also know that **expressions are always evaluated to a single value**.
@@ -2351,22 +2388,23 @@ en:
         Debug Console.\r\n* **Run the program** and observe the value of `size` change
         in the \"Watch\" window.\r\n* **Talk to a neighbor**. How large is `size`
         when the dot covers the whole screen?"
+      CSD U3 Diagonal Movement_markdown_instruction: "<img src=\"https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif\"
+        style=\"float: right; margin-left: 20px;\">\r\n\r\n# Diagonal Movement\r\n\r\nUpdating
+        only the `x` or `y` properties of a sprite can only make it move straight
+        up and down or left and right. If you want a sprite to move on a diagonal
+        path you'll need to updated _both_ of those properties.\r\n\r\nThis program
+        currently makes the mouse move straight down the screen - can you update it
+        so that it moves diagonally across the screen like the image to the right?\r\n\r\n_Challenge:
+        Can you make the mouse point in the same direction as the image?_"
       CSD U3 Direction Animations_markdown_instruction: "# Changing Images as you
         Move\r\nRight now your conditionals only do one thing (change your sprite's
         x or y), but you can actually put as much code as you want inside a conditional.
         A common thing to do in games is to change your character's image depending
         on which direction they're walking.\r\n\r\n# Do This\r\nUsing the provided
-        program and images:\r\n\r\n- Click on the bug image you are using.\r\n- Use
-        the Duplicate Button <img src=\"https://images.code.org/f8628b1d4393760d72ea625a93aceb66-image-1481036707819.04.47
-        AM.png\" style=\"width:30px\"> in the Animation Tab to make 4 copies of the
-        bug image you are using.\r\n- Make each copy face a different way and give
-        it a good descriptive name.\r\n- You should now have 4 images of the bug in
-        your animation tab, each facing a different way\r\n- Write code that uses
-        `sprite.setAnimation()` to change the image on your bug sprite when different
-        arrow keys are pressed\r\n\t- The up arrow should switch to up facing bug
-        image\r\n\t- The down arrow should switch to down facing bug image\r\n\t-
-        The left arrow should switch to left facing bug image\r\n\t- The right arrow
-        should switch to right facing bug image"
+        program and images:\r\n\r\n- Duplicate your chosen bug image 4 times\r\n-
+        Edit each of your images to point in one of the 4 directions\r\n- Write code
+        that uses `sprite.setAnimation()` to change the image on your bug sprite when
+        different arrow keys are pressed"
       CSD U3 Direction Arrows_markdown_instruction: "# Move in All Directions\r\nOnce
         you've got your sprite moving in one direction by responding to a `keyDown`,
         getting it to move in all four directions should be more of the same. The
@@ -2375,10 +2413,9 @@ en:
         sprite you made that responds to the up arrow has been brought to this level.
         Add the interaction for the other three arrow keys!\r\n\r\n- Add three if
         statements - one for each arrow.\r\n- Each if statement should move the sprite
-        in the direction of the arrow.\r\n- HINT: As you're working, make sure you
-        consider both which axis (x or y) your sprite should be moving depending on
-        the key, and whether or not you should be increasing or decreasing to go in
-        the desired direction."
+        in the direction of the arrow.\r\n\r\n_HINT: Make sure you consider both the
+        axis (x or y) of movement, **and** whether you need to increase or decrease
+        that value._"
       CSD U3 Draw Loop Discuss_markdown_instruction: "# Draw()ing\r\nHere's a program
         that looks pretty similar to what you've been writing, but may behave quite
         differently. You'll want to **stop and discuss** with the class before moving
@@ -2394,6 +2431,62 @@ en:
         when you use `randomNumber()` to generate some of the inputs?\r\n\r\n# Challenge\r\nExperiment
         with adding code before and after the `draw()` loop. Can you figure out what
         gets called when?"
+      CSD U3 Draw Loop Plugged orange and green_markdown_instruction: "<img src=\"https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45
+        PM.png\" style=\"float:right;width:150px\">\r\n\r\n# Using the Draw Loop\r\n\r\nNow
+        it's your turn to do some work with the draw loop. Remember that the code
+        inside the draw loop is run by Game Lab over and over again.\r\n\r\n# Do This\r\n\r\n*
+        Add code to this program so that your drawing has orange circles being drawn
+        too\r\n* Move on when your program looks like the picture to the right"
+      CSD U3 Draw Loop Plugged predict 1 embed_markdown_instruction: "# Predict\r\n\r\nThis
+        program has some code in the draw loop and some code outside of it. Remember:\r\n\r\n*
+        All your code outside the draw loop is run first, one time\r\n* All your code
+        inside the draw loop is run over and over forever\r\n\r\nWhat will this program
+        do? Write your prediction below."
+      CSD U3 Draw Loop Plugged predict 1_markdown_instruction: "# Draw Loop\r\n\r\nHere's
+        an example of the draw loop at work.\r\n\r\n# Do this\r\n* Run the code and
+        see how it works.\r\n* Discuss with your partner whether this looks like the
+        flip book you saw in the video.  Why or why not?"
+      CSD U3 Draw Loop Plugged predict 2 embed_markdown_instruction: "# Predict\r\n\r\nThis
+        program has one small difference that will make it run a little differently.
+        Again though, remember:\r\n\r\n* All your code outside the draw loop is run
+        first, one time\r\n* All your code inside the draw loop is run over and over
+        forever\r\n\r\nWhat will this program do? Write your prediction below."
+      CSD U3 Draw Loop Plugged update your scene_markdown_instruction: "# Extend
+        Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You'll
+        now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n<img
+        src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29
+        PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n* Add
+        a draw loop to your program (you should only have one)\r\n* Use the lasso
+        selector (click, hold and drag) to select all your code and place it inside
+        your draw loop. Crtl-Z will let you undo any mistakes you make.\r\n* Add code
+        to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation`
+        properties so that they move. You'll need to update them with `randomNumber()`\r\n\r\n"
+      CSD U3 Draw Loop Plugged wiggle sprite rotation_markdown_instruction: "<img
+        src=\"https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif\",
+        style=\"float:right;height:150px\">\r\n# Updating Properties\r\n\r\nThis level
+        combines some of the skills you've already seen. It's drawing ellipses in
+        the background and also updating sprite properties. This time it's changing
+        the sprite's `sprite.rotation` property.\r\n\r\n# Do This\r\n\r\nThis animation
+        already is updating one sprite's rotation property to make it look like it's
+        shaking\r\n\r\n* Run the program to see how it works.\r\n* Add code to this
+        program to make the other alien shake just like the first\r\n* Move on when
+        your program looks like the picture to the right"
+      CSD U3 Draw Loop Plugged wiggle sprite x_markdown_instruction: "<img src=\"https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif\",
+        style=\"float:right;height:150px\">\r\n# Updating Properties\r\n\r\nSprites
+        have properties that let the computer know where and how to draw them. Two
+        common properties to use are `sprite.x` and `sprite.y` which control the location
+        of the sprite. Assigning these properties a new value will move your sprite
+        to a new location on the screen.\r\n\r\n# Do This\r\n\r\nThis animation already
+        is updating one sprite's x property to make it look like it's shaking\r\n\r\n*
+        Run the program to see how it works.\r\n* Edit the code in this program to
+        make the second sprite shake like the first one\r\n* Move on when your program
+        looks like the picture to the right\r\n\r\n"
+      CSD U3 Draw Loop Plugged wiggle sprite y_markdown_instruction: "<img src=\"https://images.code.org/133ce86d945135b129a983bba03aa4ac-image-1492039159454.gif\",
+        style=\"float:right;height:150px\">\r\n# Updating Properties\r\n\r\nThis level
+        is very similar to the last, but this time, you'll add in the draw loop yourself.\r\n\r\n#
+        Do This\r\n* Add the draw loop block to the bottom of this program.\r\n* Move
+        any blocks that need to be inside the draw loop.\r\n* Move on when your program
+        looks like the picture to the right"
       CSD U3 Else_markdown_instruction: "# What If My Condition Isn't True?\r\n\r\n<img
         src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\"
         width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our
@@ -2408,6 +2501,15 @@ en:
         style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
         if block to add an else.\r\n* Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed."
+      CSD U3 Entertainment Sample 1_markdown_instruction: "Press \"Run\" to play
+        the game on the left.  You can make the alien jump with the up arrow, and
+        move it to the left and right with the arrow keys.  You score by collecting
+        stars, and if you score high enough, the background will change."
+      CSD U3 Entertainment Sample 2_markdown_instruction: "Use the space bar to jump.
+        Collect food and avoid bugs."
+      CSD U3 Entertainment Sample 3_markdown_instruction: "# Animated Comics\r\n\r\nCombining
+        images, text, and some subtle animation can make for really interesting comics
+        or graphic stories.\r\n"
       CSD U3 Expressions calculator_markdown_instruction: "# Adding and Multiplying\r\n\r\nYour
         computer can calculate the results of many math problems. Try out this example,
         where we add and multiply a few numbers. Then extend it yourself to the numbers
@@ -2422,8 +2524,8 @@ en:
         loop is run is called the **frame rate** - the number of times per second
         the screen is refreshed.\r\n\r\nThe default frame rate for Game Lab is 30
         frames per second (or FPS), which is great for a video game, but not so good
-        for our animation. We can slow down the frame rate using the `Game.frameRate`
-        block.\r\n\r\n# Do This\r\n\r\n* Use the `Game.frameRate` block at the very
+        for our animation. We can slow down the frame rate using the `World.frameRate`
+        block.\r\n\r\n# Do This\r\n\r\n* Use the `World.frameRate` block at the very
         beginning of your program, setting it to a number (frames per second) that
         slows the animation down a bit. \r\n* Test it out with different numbers to
         see which frame rate you like (the default is 30, and it can't go any higher
@@ -2518,7 +2620,7 @@ en:
         Times\r\n\r\nYou'll often want to use the same code at many places in your
         program. Once you've created a function you can call it as many times as
         you like.\r\n\r\n# Do This\r\n\r\nThis code creates a sprite that moves across
-        the screen once. How can you make it go back across the screen.\r\n\r\n* **Note:**
+        the screen once. How can you make it go back across the screen?\r\n\r\n* **Note:**
         The function is already called once at the beginning of your program\r\n*
         Read the condition of the **if-statement** inside the draw loop. Why do you
         think it's there?\r\n* Use this if-statement and the function written for
@@ -2567,6 +2669,16 @@ en:
         is on the side of the screen with the flower.\r\n* Set the `visible` property
         of each bee inside both the if and else statements appropriately to make the
         bees only show near the flower."
+      CSD U3 Input Fish_markdown_instruction: "# Fish With Arrows\r\n\r\nThe fish
+        are back. Can you make the fish move left only when the left arrow key is
+        pressed down?\r\n\r\n# Do This\r\n\r\n* Add an if statement to check when
+        the left arrow key is pressed down.\r\n* Move the commands for moving the
+        fish inside the if statement."
+      CSD U3 Input Gears_markdown_instruction: "# Gears with Conditionals\r\n\r\nLet's
+        make the gears spin only when the space key is being held down.\r\n\r\n# Do
+        This\r\n\r\n* Add an `if` statement.\r\n* Use `keyDown` as input to the if
+        statement to check when the space key is pressed.\r\n* Move the code that
+        makes the gears rotate inside the `if`."
       CSD U3 Interactive Card Background_markdown_instruction: "# Laying Out Your
         Background\r\nBefore beginning this project, you should have already completed
         the Interactive Card Planning activity, and you'll want to have that paper
@@ -2628,6 +2740,15 @@ en:
         `mouseDown()`).\r\n* Add the necessary actions inside the `if` block.\r\n\r\n**Challenge:**
         Can you create more sophisticated conditionals by nesting them or using compound
         booleans?"
+      CSD U3 Keyboard Input Challenge_markdown_instruction: "# Challenge\r\n_Check
+        with your teacher before pursuing this challenge._\r\n\r\nHere's the bug
+        program you've been working on for the past few levels. Choose one of more
+        of following challenges, or add new features of your own!\r\n\r\n* Use the
+        \"space\" key to control another properties of your bug sprite, like rotation
+        or scale.\r\n* Add some randomization to your movement.\r\n* Add a second
+        sprite and control it with a different set of keys (\"w\", \"a\", \"s\", and
+        \"d\" are common choices).\r\n* Add some shapes to your background to make
+        the scene more interesting."
       CSD U3 Keypress Boolean Predict_markdown_instruction: "# Make a Prediction:
         keyDown()\r\nThe `keyDown()` block is the first of a new set of blocks that
         will let us get input from the user. This is the first step on our road to
@@ -2666,6 +2787,58 @@ en:
         difference between `keyDown()`, `keyWentDown()`, and `keyWentUp()`?\r\n    *
         What do you think the exclamation mark (`!`) on line 10 does?\r\n    * How
         might you use the different keypress blocks in a game?"
+      CSD U3 Mouse Input Bee 1_markdown_instruction: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"
+        style=\"float:right\">\r\n\r\n# Mouse X and Y\r\n\r\nOne of the simplest ways
+        to take input is to just make a sprite follow the user's mouse position.
+        **You can get the x and y location of the mouse using `World.mouseX` and `World.mouseY`.**  This
+        follows the pattern you learned with sprite properties. `World` is the name
+        of the object. `mouseX` and `mouseY` are the names of the properties.\r\n\r\n#
+        Do This\r\n\r\nYou are going to make a bee sprite follow the mouse around
+        the game area.\r\n\r\n* The bee image is already loaded in the animation tab
+        for you.\r\n* Create a bee sprite that draws in the center of the window.\r\n*
+        Inside the draw loop update the position of the sprite to the position of
+        the mouse:\r\n\t* Set the x position of the sprite to the value of `World.mouseX`.\r\n    *
+        Set the y position of the sprite to the value of `World.mouseY`.\r\n* Run
+        the program to test that it works.\r\n"
+      CSD U3 Mouse Input Bee 2_markdown_instruction: "# Random Around Point\r\n\r\n<img
+        src=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"
+        style=\"float:right\">\r\n\r\nNow that you can make the bee follow the mouse
+        lets make a bunch of bees fly near the mouse like shown in the visual on the
+        right.  In order to do this you will need to **add a random amount between
+        -50 and 50 to the `mouseX` or `mouseY`.**  \r\n\r\n# Do This\r\nYou already
+        have one bee sprite that follows the mouse.\r\n\r\n* **Add 3 more bees** that
+        follow the mouse\r\n* Update the x and y location to be randomly close to
+        the mouse\r\n\t* Add a random number between -50 and 50 to the `World.mouseX`
+        and `World.mouseY` \r\n* If necessary, use the `World.frameRate` block to
+        slow down the animation and find the best frame rate\r\n"
+      CSD U3 Movement Fish_markdown_instruction: "<img src=\"https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif\"
+        style=\"float: right; margin-left: 20px;\">\r\n\r\n# Fish Animation\r\n\r\nUsing
+        the counter pattern, make all three of the fish move like the image to the
+        right. The blue fish should move the fastest, followed by the orange fish,
+        with the green fish being the slowest."
+      CSD U3 Movement Gears_markdown_instruction: "<img src=\"https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif\"
+        style=\"width:200px; float:right; margin-left: 20px;\">\r\n\r\n# Rotation
+        Direction\r\n\r\nWhen you use the counter pattern for the `rotation` property
+        with addition, the object will always rotate clockwise. Sometimes however
+        you will want your sprite to rotate the other direction. To do this you can
+        just use subtraction!\r\n\r\n# Do This\r\n\r\nThere are three gears set up
+        for you. You need to make the gears all look like they are rotating in sync
+        with each other.\r\n\r\n* Make the gears rotate so they look like they are
+        working as one system.\r\n* **Hint: They won't all rotate the same direction**."
+      CSD U3 Movement Your Own 1_markdown_instruction: "# Make an animation of your
+        own\r\n\r\nUsing the counter pattern and sprite properties, make an animation
+        all your own. You might consider building on the static images you've made
+        in the past, or come up with a new image to create or story to tell.\r\n\r\n#
+        Do This\r\n\r\nTo start, let's just get a static scene set up.\r\n\r\n* Add
+        images in the animation tab\r\n* Create sprites and assign images\r\n* Set
+        up the draw loop to draw a background and your sprites"
+      CSD U3 Movement Your Own 2_markdown_instruction: "# Add movement to your animation\r\n\r\nWith
+        your static scene set up, you can now add some movement. When you are satisfied
+        with your program, click the \"Submit\" button to turn it in. You can always
+        unsubmit and continue working if you want to add features.\r\n\r\n# Do This\r\n\r\nIn
+        the draw loop\r\n\r\n* Identify which sprite properties to change\r\n* Update
+        those properties using the counter pattern\r\n\r\n_Tip: If your counter pattern
+        isn't working like you expect, add watchers to help debug your program._"
       CSD U3 Property Conditional Multi_markdown_instruction: "# Get Creative\r\n\r\nNow
         that you've seen how we can use conditionals both to take input from the
         keyboard and to react to changes is sprite properties, it's time to come
@@ -2788,11 +2961,27 @@ en:
         a temperature below boiling but above freezing\r\n* Randomly generate a year
         you were alive in\r\n\r\nCan you come up with a range that includes negative
         numbers? What about both positive and negative ones?"
-      CSD U3 Random Taller Rectangle_markdown_instruction: "<img src=\"https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25
-        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write
-        code that makes a red rectangle that is taller than the one already in the
-        drawing.\r\n* Don't worry about the exact dimensions as long as your new
-        rectangle is taller."
+      CSD U3 Random Number Map_markdown_instruction: "# Random Numbers\r\n\r\n# Using
+        Random Numbers\r\n\r\nThe `randomNumber()` block can be used to generate random
+        numbers in your programs. It can be used in the place of a single number and
+        so can make your program run a little differently each time.\r\n\r\n![](https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09
+        PM.png)\r\n\r\n<img src=\"https://images.code.org/246e7ac850015aa830d469b7eeb5f00e-image-1491523022253.50.04
+        PM.png\" style=\"float:left;width:150px\">\r\n\r\n<img src=\"https://images.code.org/01b10dc034475fd5a90bd3c7bd0c51b8-image-1491523025607.50.17
+        PM.png\" style=\"float:left;width:150px\">\r\n\r\n<img src=\"https://images.code.org/0f0c3cc4d42923dc4321809daf189053-image-1491523028093.50.49
+        PM.png\" style=\"float:left;width:150px\">\r\n\r\n`randomNumber()` has two
+        parameters for the minimum and maximum numbers it can choose between. If you
+        want you can make these numbers negative.\r\n\r\n# Drawing and Random Numbers\r\n\r\nBelow
+        this program you can see three examples of possible output. Notice that even
+        though it's the same program it's a different image every time.\r\n\r\nYou
+        can use the `randomNumber()` command multiple times in your programs. Each
+        time it's used a new random number will be generated.\r\n\r\n![](https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33
+        PM.png)"
+      CSD U3 Random Taller Rectangle_markdown_instruction: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10
+        PM.png\" style=\"float:right;height:150px\">\r\n# Rectangle Size\r\n\r\nThese
+        `rect` blocks have two more parameters that you can use to control the size.\r\n\r\n#
+        Do This\r\n\r\n* Look at the code and try to figure out how the last two inputs
+        in the `rect` block work.\r\n* Change the numbers in the second `rect` block
+        to make red rectangle longer than the blue one.\r\n"
       CSD U3 Random Width Height_markdown_instruction: "# Randomized Shapes\r\n\r\nLet's
         see how we can use randomization in our drawings. Each of the inputs from
         the shape blocks you've seen can be replaced with calls to `randomNumber()`.
@@ -2804,20 +2993,40 @@ en:
         more of the inputs. Make sure you run it a few times so you can see the effect
         of randomization.\r\n\r\n_Notice that the `console.log()` block is now in
         the Variables drawer and the `randomNumber()` block is in the Math drawer._"
-      CSD U3 Random background_markdown_instruction: "<img src=\"https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
+      CSD U3 Random background_markdown_instruction: "# Background\r\n\r\nSometimes
+        you'll want to fill the entire screen with a color.  For that, you can use
+        the `background` block.  It covers everything on the screen with the color
+        you choose.\r\n\r\n# Do This\r\n\r\n* Run the code to see the background block
+        work.\r\n* Change the background from yellow to orange.\r\n\r\n*Challenge:
+        There is a purple square that is covered up by the background.  Can you change
+        the order of the blocks so you can see both the purple and blue squares?*"
+      CSD U3 Random background2_markdown_instruction: "<img src=\"https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Background\r\n\r\nThe
-        `background()` block fills the screen with a color of your choice. Careful
-        though! It will draw on top of everything already in your drawing so order
-        in your code is important.\r\n\r\n# Do This\r\n\r\n* Use the `background()`
+        background block will draw on top of everything already in your drawing, so
+        order in your code is important.\r\n\r\n# Do This\r\n\r\n* Use the `background()`
         block to make a \"black\" background behind the green circle."
-      CSD U3 Random random ellipse_markdown_instruction: "<img src=\"https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
-        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Random Numbers\r\n\r\nThe
-        `randomNumber()` block can be used to generate a new random number. If you
-        make your drawings with random numbers it will look a little bit different
-        every time you run your program.\r\n\r\n# Do This\r\n\r\n* Run the program
-        several times to see how it works.\r\n* Use `randomNumber()` for the ellipse's
-        Y parameter so the circle is drawn in a random Y position too.\r\n* As long
-        as your circle is appearing at random X and Y positions you can move on"
+      CSD U3 Random rainbow snake_markdown_instruction: "<img src=\"https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis
+        program draws a very rare breed of rainbow snake. To make the snake draw differently
+        every time you'll need to use random numbers.\r\n\r\n# Do This\r\n\r\n* Run
+        the program several times to see how the starter code works\r\n* Add at least
+        three new different colored circles to your rainbow snake\r\n* Use `randomNumber()`
+        to make the rest of the snake's body move up and down like the first three\r\n\r\n*Challenge:
+        Can you make size of some of the circles random, too?*"
+      CSD U3 Random random ellipse_markdown_instruction: "# Random Numbers\r\n\r\n`randomNumber()`
+        chooses a random number between a minimum and maximum value. You can use this
+        block instead of writing in the specific number.  If you make your drawings
+        with random numbers it will look a little bit different every time you run
+        your program.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see
+        how it works.\r\n* Change the numbers inside the `randomNumber` block and
+        run the code again a few times to see what changes."
+      CSD U3 Random random ellipse2_markdown_instruction: "<img src=\"https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Random Numbers\r\n\r\nHere's
+        the same sun from last time.  Right now only the x-coordinate is random, but
+        you can make the y-coordinate random, too.\r\n\r\n# Do This\r\n\r\n* Use `randomNumber()`
+        for the ellipse's Y parameter so the circle is drawn in a random Y position
+        too.\r\n* As long as your circle is appearing at random X and Y positions
+        you can move on"
       CSD U3 Scene Example_markdown_instruction: "# Sprite Scenes\r\n\r\nBy combining
         shapes, sprites, and a new block called `text`, you can create simple scenes,
         stories, or comics. While this example is fairly simple, you can combine as
@@ -2862,7 +3071,23 @@ en:
         Animation\r\n\r\nHere's the drawing you planned and started in the last lesson
         - let's animate it!\r\n\r\n# Do This\r\n\r\n* Move all of your code into
         a `draw()` loop\r\n* Use `randomNumber()` in the inputs of some of your shapes\r\n*
-        Set the speed of your animation using the `Game.frameRate` block\r\n"
+        Set the speed of your animation using the `World.frameRate` block\r\n"
+      CSD U3 Sprite Movement Left_markdown_instruction: "<img src=\"https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif\"
+        style=\"float: right; margin-left: 20px\">\r\n\r\n# Moving to the Left\r\n\r\nIf
+        adding to a sprite's x coordinate makes it move to the right, how could you
+        make it move to the left?\r\n\r\n# Do This\r\n\r\nMake your program animate
+        like the image to the right. Update `fly.x` inside the draw loop so that in
+        each frame the fly is drawn a little bit further to the left.\r\n\r\n_Tip:
+        You can make your sprites move faster by adding or subtracting larger numbers.
+        The fly in our example moves about twice as fast as the plane in the last
+        level._"
+      CSD U3 Sprite Movement Right_markdown_instruction: "<img src=\"https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif\"
+        style=\"float: right; margin-left: 20px\">\r\n\r\n# Sprite Movement\r\n\r\nUsing
+        the counter pattern, you can write programs that animate sprites smoothly.
+        Adding to or removing from a sprite's `x` or `y` property in the draw loop
+        makes your sprite move just a bit each time it is redrawn.\r\n\r\n# Do This\r\n\r\nMake
+        your program animate like the image to the right. We've already added a line
+        to update `plane.x` in the draw loop, but it needs to be finished.\r\n"
       CSD U3 Sprites Template race_markdown_instruction: "# Putting it All Together\r\n\r\nLet's
         put all of this together in a fun way. We're going to make three sprites
         \"race\" across the screen by combining the counter pattern, random numbers,
@@ -2899,11 +3124,12 @@ en:
         how it works.\r\n* Change the input to the `setAnimation` command to change
         the look of the sprite.\r\n* Try out all the different images."
       CSD U3 Sprites anitab 2_markdown_instruction: "# Upload your own image\r\n\r\nYou
-        can also use the Animation tab to upload your own image.\r\n\r\n# Do This\r\nYou
-        are going to make a flying kite. You can use <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:m,ic:trans,sur:f\"
+        can also use the Animation tab to upload or draw your own image.\r\n\r\n#
+        Do This\r\nYou are going to make a flying kite. You can use <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:s,ic:trans,sur:f\"
         target=\"_blank\">this link</a> to search Google images or find one on your
-        own.\r\n\r\n* Download your kite image. Images with transparent backgrounds
-        work best.\r\n* Open the animations tab.\r\n* Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
+        own. If you'd rather, you can also create a new animation from scratch and
+        draw your own kite.\r\n\r\n* Download your kite image. Images with transparent
+        backgrounds work best.\r\n* Open the animations tab.\r\n* Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
         PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
         PM.png\" style=\"width:50px\"> to upload an image.\r\n* Select the file from
         your computer.\r\n* Rename your image so it has a name that is easy to remember.
@@ -2913,7 +3139,7 @@ en:
         next level."
       CSD U3 Sprites anitab 3_markdown_instruction: "# Resizing with Scale\r\n\r\nIn
         the _Sprites_ drawer of the toolbox you'll see a new block called `sprite.scale`.
-        This command let's you change the size of a sprite in relation to its original
+        This command lets you change the size of a sprite in relation to its original
         size. `sprite.scale = 1` is the normal size. `sprite.scale = 0.5` would make
         your sprite half as big, while `sprite.scale = 2` would make it twice as big.\r\n\r\n#
         Do This\r\n\r\nAt this point the program should include your newly uploaded
@@ -3091,7 +3317,7 @@ en:
         going to start creating a scene of your own. If you haven't already, take
         a minute to sketch out a picture of your scene (consider using graph paper).
         Once you have an idea and plan for your scene, start drawing the background.\r\n\r\n#
-        Do This\r\n\r\n* Use a `backgound()` commands to set fill the screen with
+        Do This\r\n\r\n* Use a `background()` commands to set fill the screen with
         a color\r\n* Add any necessary shape commands to draw the non-sprite elements
         of your scene"
       CSD U3 Sprites scene sprites_markdown_instruction: "# Create Your Scene - Sprites\r\n\r\nWith
@@ -3156,7 +3382,7 @@ en:
         so that it entirely covers the green rectangle.\r\n* When your program works
         correctly, it should draw the image to the right."
       CSD U3 Sprites text debug_markdown_instruction: "<img src=\"https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png\"
-        style=\"float: right; width: 200px; margin-left: 20px;\">\r\n\r\n# Debug\r\n\r\nThis
+        style=\"float: right; width: 200px; margin-left: 20px;\">\r\n# Debug\r\n\r\nThis
         scene has all the right code, but it's not in the right order. The scene
         should look like the image to the right - can you reorder the blocks so that
         each part of the scene is drawn in the correct order?"
@@ -3243,7 +3469,7 @@ en:
         Times\r\n\r\nThis program has only one variable called `petalSize` but it
         uses it 8 different times. This makes it easy to quickly make lots of changes
         to how your picture is drawn.\r\n\r\n# Do This\r\n\r\n* Change the number
-        assigned to `petalSize` so the petals touch one another.\r\n* Try to find
+        assigned to `petalSize` so the red petals touch one another.\r\n* Try to find
         the size that makes the most sense. Compare your answer with someone around
         you."
       CSD U3 Variables Initialize_markdown_instruction: "# Using a Variable's Value\r\n\r\nThis
@@ -3258,6 +3484,11 @@ en:
         with a **name of your choosing**, as shown in the starter code."
       CSD U3 Variables Predict Where X Embed_markdown_instruction: "# Predict\r\n\r\nIn
         which corner of the screen will the circle be drawn?"
+      CSD U3 Variables Predict Where X_markdown_instruction: "# Using Variables\r\n\r\nIn
+        this program, the variable `xPosition` is used to store the x-coordinate of
+        the circle.\r\n\r\n# Do This\r\n* Run the program to see how it works.\r\n*
+        Change the number that is stored into the variable [Show me where](#triggercallout=code_triggered)
+        and run the code again."
       CSD U3 Variables Predict Where XY Embed_markdown_instruction: "# Predict\r\n\r\nIn
         which corner of the screen will the circle be drawn?"
       CSD U3 Variables Random_markdown_instruction: "# Variables random values\r\n\r\nYou
@@ -3403,23 +3634,17 @@ en:
         the program** \r\n* **Discuss / Reflect:**\r\n\t* Which lines is changing
         the rectangle drawn? How can you tell?\r\n    * Can you explain what you're
         seeing?"
-      CSD U3 Variables naming rules v2_markdown_instruction: "<img src=\"https://images.code.org/0beb5babf350fa484c8c97a7bbf852a2-image-1490915817392.16.35
-        PM.png\" style=\"float:right; height:150px\"> \r\n\r\n# Debug: Naming Variables\r\n\r\nGood
-        variable names **indicate how the variable will be used in the program**.
-        The label `size` is a good choice for a variable that controls the size of
-        something. You could always choose `potato` or `s`, but confusing or unclear
-        names make your program hard to read for you and others.\r\n\r\nThere are
-        a **few rules** when choosing labels:\r\n\r\n* Labels **cannot include spaces**.
-        For example, `size of rectangle` would generate an error.\r\n* Labels with
-        multiple words can be easier to read in **camelCase**. CamelCase looks like
-        `sizeOfRectangle` or `aReallyLongLabelName`\r\n* Labels **cannot begin with
-        a number**. `4sides` and `2morrow` will generate errors.\r\n* Be very careful
-        with **spelling**.\r\n* Labels are **case-sensitive**. `size` is not the same
-        as `Size` or `SIZE`.\r\n\r\n# Do This\r\n\r\nThis program has multiple errors
-        caused by bad label names.\r\n\r\n* **Correct the errors by picking new names
-        that follow the rules listed above.**\r\n* **Note:** The errors prevent the
-        program from being viewed in block mode.\r\n* If your program works it should
-        draw the image on the right."
+      CSD U3 Variables naming rules v2_markdown_instruction: "<img style=\"float:
+        right\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38
+        AM.png\">\r\n# Debug: Naming Variables\r\n\r\nThis program has multiple errors
+        caused by bad label names.  The errors prevent the program from being viewed
+        in block mode, so the code is in text.\r\n\r\n# Do This\r\n\r\n* Find the
+        rule each variable label violates.\r\n* **Correct the errors by picking new
+        names that follow the rules you learned in the last level.**\r\n* If your
+        program works it should draw the image on the right.\r\n\r\n<summary><em>Hint:
+        Click the arrow for a quick review of the rules.</em><details><ul>\r\n<li>Labels
+        can't have spaces.</li>\r\n<li>Labels can't start with a number.</li>\r\n<li>Capitalization
+        and spelling must be exactly the same.</li>\r\n</ul></details></summary>"
       CSD U3 Variables naming rules_markdown_instruction: "# Choosing Labels\r\n\r\nGood
         labels **indicate how the variable will be used in the program**. The label
         `size` is a good choice for a variable that controls the size of something.
@@ -3472,9 +3697,9 @@ en:
       CSD U3 Variables random with assignment_markdown_instruction: "<img src=\"https://images.code.org/38e13ea8eeb840516410797e01376d14-image-1490917477490.44.24
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug: Variables and
         Random Numbers\r\n\r\nVariables can be assigned a random number too. This
-        let's you save a single random value so that you can use it as many times
-        as you want in your program.\r\n\r\n# Do This\r\n\r\n`eyeSize` is assigned
-        a random number. Unfortunately only one of the eyes is currently using it.\r\n\r\n*
+        lets you save a single random value so that you can use it as many times as
+        you want in your program.\r\n\r\n# Do This\r\n\r\n`eyeSize` is assigned a
+        random number. Unfortunately only one of the eyes is currently using it.\r\n\r\n*
         **Run the program** to see how it works\r\n* **Change the program** so that
         both eyes are always the same random size. Hint: you'll only need to make
         changes to one line of code."
@@ -3508,6 +3733,19 @@ en:
       CSD U3 Variables2 expressions_markdown_instruction: "# Do This\r\n\r\n* Place
         each expression inside of a `console.log` command to display their results\r\n*
         What other expressions can you make? Try writing 3 of your own.\r\n"
+      CSD U3 Watcher Debug_markdown_instruction: "<img src=\"https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif\"
+        style=\"float: right; margin-left: 20px;\">\r\n\r\n# Debug: Watching the Counter
+        Pattern\r\n\r\nLet's practice using watchers to debug your code. This program
+        should move the motorcycle from the bottom left to the top right, like the
+        image to the right. Unfortunately the motorcycle moves off screen too quickly
+        to see what's going wrong.\r\n\r\nUsing the provided watchers for `cycle.x`
+        and `cycle.y`, figure out which on is moving in the wrong direction and fix
+        the program."
+      CSD U3 Watcher Predict response_markdown_instruction: "# Watching the Counter
+        Pattern\r\n\r\nWatchers are a really useful tool for debugging programs that
+        use the counter pattern.\r\n\r\n* **Read the program** and predict what the
+        program will do.\r\n* **Run the program** to check your prediction.\r\n* **Look
+        at the watchers** and explain to a neighbor what you are seeing.\r\n\r\n"
       CSD U3 abstraction accelerateX_markdown_instruction: "# Velocity and the Counter
         Pattern\r\n\r\nAs you just saw, using a `sprite.velocityX` property with the
         counter pattern will change a sprite's velocity during the program. This
@@ -4218,7 +4456,7 @@ en:
         #  (https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png)"
       CSD U3 collisions egg2_markdown_instruction: "# Making Sounds\r\n\r\nYou can
         also use code to play a blender sound.\r\n\r\n# Do This\r\n\r\nUse the `playSound`
-        block from the \"Game Lab\" drawer to play the \"https://docs.code.org/sounds/blender.mp3\"
+        block from the \"World\" drawer to play the \"https://docs.code.org/sounds/blender.mp3\"
         sound when the apple touches the blender.  You will need to paste the address
         of the sound into the block, so it looks like this: ![](https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png)\r\n\r\n[//]: #  (https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png)\r\n\r\n[//]:
@@ -4474,6 +4712,18 @@ en:
         model the basketball bouncing off the floor. [Show me where](#triggercallout=code_triggered)\r\n\r\n[//]:
         # (https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png)\r\n\r\n[//]:
         # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)"
+      CSD U3 counter example_markdown_instruction: "# The Counter Pattern\r\n\r\nIn
+        this program, the draw loop is used to make the sprites move across the screen.\r\n\r\n#
+        Do This\r\n\r\n* Run the code and discuss with your partner how you think
+        it works."
+      CSD U3 dancing alien_markdown_instruction: "# Sprites in the Draw Loop\r\n\r\nBy
+        changing sprite properties in the draw loop, you can animate your characters.
+        \r\n\r\nThis animation has also been slowed down.  At the beginning of the
+        program the `World.frameRate` block has been used to set the frame rate to
+        10. Usually the frame rate is 30. Feel free to explore different frame rates.\r\n\r\n#
+        Do This\r\n* Run the code to see how it works.\r\n* Discuss with your partner
+        why some code is inside the draw loop and some code is outside.\r\n* Try changing
+        the frame rate and running the code again."
       CSD U3 debug_markdown_instruction: "<img src=\"https://images.code.org/fcbc80c3eb15403e97c847bab68ed9ef-image-1491197563086.31.59
         PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# Debugging\r\n\r\nOften,
         code doesn't work the first time it runs, and programmers have to debug it.  This
@@ -4486,15 +4736,17 @@ en:
       CSD U3 ellipse_markdown_instruction: "<img src=\"https://images.code.org/852eb77e02e73f7a4b3f5e9c6516138f-image-1491197115428.24.42
         PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# ellipse\r\n\r\nYou can
         use the `ellipse` block to make a circle.\r\n\r\n# Do This\r\n\r\n* Look at
-        the code that makes the ellipse.\r\n* Add a new ellipse of a different color.\r\n"
+        the code that makes the ellipse.\r\n* Add a new ellipse of a different color.\r\n\r\n*Hint:
+        You can type in any color name from the list at [W3 Schools HTML Color Names](https://www.w3schools.com/colors/colors_names.asp).*\r\n"
       CSD U3 fill_markdown_instruction: "# fill(color)\r\n\r\n<img src=\"https://images.code.org/7e0916ccbab3e82e8fb913feb8039019-image-1491196847847.20.12
         PM.png\" style=\"float:right;width:200px;\">\r\n\r\nYou can also make your
         rectangles different colors with the `fill` block.  The `fill` block will
         set the color for every shape that comes after it in the code.\r\n\r\n# Do
         This\r\n\r\n* Look at the code that sets the color. ( [Show me where](#triggercallout=fill)
         )\r\n* Change the color from \"blue\" to \"yellow\"\r\n* Add a new square
-        by dragging a `rect` block into the code area ( [Show me where](#triggercallout=rect_block)
-        )  The new square can go wherever you want.\r\n"
+        by dragging a `rect` block into the code area bellow the fill command ( [Show
+        me where](#triggercallout=rect_block) )  The new square can go any location
+        on the screen you like you want.\r\n"
       CSD U3 finishing touches_markdown_instruction: "# Finishing Touches\r\n\r\nNow
         that you have the basis for your game, it's time to add some finishing touches.\r\n\r\nTo
         make your game even better, try making at least two improvements to it. You
@@ -4867,8 +5119,7 @@ en:
         you'll do the same with the display area on the left.\r\n\r\n# Do This\r\n\r\n*
         Look at the line of code in the workspace below these instructions ( [Show
         me where](#triggercallout=block_trigger) ) and discuss with your partner where
-        you think the shape will be dawn on the grid.  (insert picture of block here)
-        \r\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        you think the shape will be dawn on the grid.\r\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
         PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger)
         )\r\n* Change the numbers in the two different openings, then try running
         the program again. \r\n* Try to place the rectangle near the bottom right
@@ -4879,9 +5130,8 @@ en:
         up the shapes that are drawn first.  You can see the difference when you use
         more than one color in your code.\r\n\r\n# Do This\r\n\r\n* Look at the code
         that draws the two rectangles.  The first is drawn red, and the second is
-        drawn blue.\r\n* Change the red rectangle's color to green. (You can type
-        the color name into the block.)\r\n* Change the order of the blocks so the
-        green rectangle appears on top.\r\n\r\n"
+        drawn blue.\r\n* Change the red rectangle's color to green.\r\n* Change the
+        order of the blocks so the green rectangle appears on top.\r\n\r\n"
       CSD U4 - Design Mode Input Widgets_markdown_instruction: "# Input Elements\r\n\r\n<img
         src=\"https://images.code.org/108fcc6fc89bf88edde00353afb33d75-image-1469814642375.49.23.png\"
         style=\"float: right; width: 150px\"/>\r\nButtons are a great way to navigate
@@ -4921,13 +5171,22 @@ en:
         Change the id to \"titleLabel\"\r\n* Change the text to \"My App\"\r\n* Increase
         the font size\r\n* Choose a color you like for the title\r\n\r\n"
       CSD U5 black white images pixelation 2_markdown_instruction: "# Do This\r\n\r\nUse
-        the pixelation widget to draw something a smiley face"
-      CSD U5 black white images pixelation 3_markdown_instruction: "# Do This\r\n\r\nUse
-        the pixelation widget to draw something a smiley face"
-      CSD U5 black white images pixelation 4_markdown_instruction: "# Do This\r\n\r\nUse
-        the pixelation widget to draw something a smiley face"
+        the pixelation widget to draw a smiley face\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
+        PM.png)"
+      CSD U5 black white images pixelation 3_markdown_instruction: "# Do This\r\n\r\nThe
+        width and height sliders are set incorrectly for this image so it doesn't
+        look like anything. Change them until you find the image.\r\n\r\n![](https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
+        PM.png)"
+      CSD U5 black white images pixelation 4_markdown_instruction: "# Do This\r\n\r\nAdd
+        eyebrows to this smiley face. Remember to use the \"Readable Format\" if you
+        get stuck.\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        PM.png)"
+      CSD U5 black white images pixelation 5_markdown_instruction: "# Do This\r\n\r\nNow
+        it's your turn. Draw anything you want in the pixelation widget. Feel free
+        to change the width and height of your image if you wish."
       CSD U5 black white images pixelation_markdown_instruction: "# Do This\r\n\r\nComplete
-        the \"X\" shape by typing 0s and 1s"
+        the \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\"
+        if you want to clean up your work."
       CSD U5 collection UPS_markdown_instruction: "<img src=\"https://images.code.org/db7d21a8d28df27dee3449939038c7a9-image-1488501564775.jpg\"
         style=\"float:right;height:250px\">\r\n### Plan a Route\r\n\r\nRoutz is a
         company that helps people navigate traffic. It has maps of locations all around
@@ -5881,8 +6140,8 @@ en:
         use the most updated version\r\n    * Under the <img src=\"https://images.code.org/01e0d19ff0278ba750efc3b3824b31b0-image-1477075078800.37.19
         PM.png\" style=\"width:80px\"> section there is a preview of the Google Search
         results.\r\n    \r\n*Remember that the search engine might still decide to
-        use something else as your description. Its not a big deal and its still important
-        to have a description.*"
+        use something else as your description. It is not a big deal and it is still
+        important to have a description.*"
       CSDU2 - SEO 4_markdown_instruction: "# Search Engine Optimization: Keywords\r\n\r\n\r\n\r\n\r\n#
         Do This\r\n\r\n* Meta name =”keywords” content=”blah” (http://searchengineland.com/meta-keywords-tag-101-how-to-legally-hide-words-on-your-pages-for-search-engines-12099)"
       CSDU2 - SEO 5_markdown_instruction: "# Search Engine Optimization: Viewport\r\n\r\nYour
@@ -6352,8 +6611,8 @@ en:
         Add a title, viewport, and description\r\n* Link the style sheet for your
         website to the cause page"
       CSDU2 IP Research Content_markdown_instruction: "# Adding Your Content\r\n\r\nYou
-        should now have found a handful of website that you can use to help make your
-        case for the cause you've chosen. If not, keep on researching! Otherwise
+        should now have found a handful of websites that you can use to help make
+        your case for the cause you've chosen. If not, keep on researching! Otherwise
         it's time to start structuring the content of your page.\r\n\r\n## Hyperlinks
         to Websites\r\n\r\nEarlier in the unit you learned how to use the `<a>` element
         to link between pages on your website. You can also use this element to link
@@ -7175,7 +7434,7 @@ en:
         LEDs clockwise. Find and fix all of the bugs to get the program working again.\r\n\r\n_Challenge:
         Note that in the gif, the last LED on each side doesn't get toggled back.
         Can you update the program so that it doesn't leave an LED on when you change
-        directions?"
+        directions?_"
       CSDU6 - button on off_markdown_instruction: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_on_off.gif\"
         style=\"float: right; margin: 20px; width: 200px;\"/>\r\n\r\n# On and Off
         Buttons\r\n\r\nWrite a program that works like the image to the right. The
@@ -7398,9 +7657,9 @@ en:
         to print out the lettersList\r\n* Add the letter \"c\" to the letters list
         so it prints [a,b,c,d]"
       CSDU6 - lists - lists 2_markdown_instruction: "# Create Your Own Lists\r\n\r\n**Write
-        code:** to create _one or more_ of the following lists:\r\n\r\n* The numbers
-        from 1 to 10\r\n* A list of the names of 5 different shapes\r\n* The names
-        of the months of the year"
+        code:** to create and then log to the console _one or more_ of the following
+        lists:\r\n\r\n* The numbers from 1 to 10\r\n* A list of the names of 5 different
+        shapes\r\n* The names of the months of the year"
       CSDU6 - lists - lists 3 - out of bounds_markdown_instruction: "# Accessing
         Items in a List\r\n\r\n**Starter Code:** There is a list of days of the week
         provided as well as well as a console.log statement to access the spot that
@@ -7479,7 +7738,8 @@ en:
       CSDU6 - sensors predict question_markdown_instruction: "# Make a Prediction\r\n\r\nRead
         the code in this program and make a prediction below. What do you think this
         program will do when you run it? How is the user intended to interact with
-        the board?"
+        the board? You may need to use a flashlight or other bright light source to
+        see the full range of this app."
       CSDU6 - sensors rgb part 1_markdown_instruction: "# Displaying Sensor Readings
         in Color\r\n\r\nIn the previous prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
@@ -7519,15 +7779,14 @@ en:
         blocks, `tempSensor.F` and `tempSensor.C`.\r\n\r\n# Do This\r\n\r\nUsing an
         event handler, write a program that continuously updates the labels \"temp_c\"
         and \"temp_f\" with the appropriate temperature readings."
-      CSDU6 - sensors temp_markdown_instruction: "# Make a Thermometer App\r\n\r\nSimilar
-        to the sensors you saw in the previous levels, you can get the raw value of
-        the temperature sensor using `tempSensor.value`. For the temperature sensor,
-        however, there are some more interesting properties available. `tempSensor.F`
-        and `tempSensor.C` will convert the raw input value to either Fahrenheit or
-        Celsius.\r\n\r\n# Do This\r\n\r\nMake a simple thermometer app that reads
-        in values from the temperature sensor. Your app can display the temperature
-        in either Fahrenheit or Celsius (or both!)\r\n\r\n_Challenge: can you make
-        your app continually update the temperature readings?_"
+      CSDU6 - sensors temp_markdown_instruction: "# Make a Thermometer App\r\n\r\nWhile
+        the light and sound sensors have just a raw value with the `value` property,
+        the temperature sensor is a little bit smarter. Instead of `tempSensor.value`,
+        there are two properties `tempSensor.F` and `tempSensor.C` which convert the
+        raw input value to either Fahrenheit or Celsius.\r\n\r\n# Do This\r\n\r\nMake
+        a simple thermometer app that reads in values from the temperature sensor.
+        Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r\n\r\n_Challenge:
+        can you make your app continually update the temperature readings?_"
       CSDU6 - sensors theremin 1_markdown_instruction: "# Light Theremin: Collecting
         and Scaling Input\r\n\r\nWhich sensor do you need to take input from?\r\nWhat
         scale of input is appropriate for this app?\r\n\r\n# Do This\r\n\r\nAdd an
@@ -7577,7 +7836,9 @@ en:
         you set up a counter variable, increment it each time the loop is run, and
         use a conditional to determine when to exit the loop. Set up a _timed loop_
         to turn on each of the color LEDs one at a time and then exit. Refer back
-        to the previous page for examples."
+        to the previous page for examples.\r\n\r\n_Tip: If you're unsure whether
+        your loop has exited or not, consider adding a `console.log()` block or displaying
+        text on the screen in the same condition that calls `stopTimedLoop()`._"
       CSDU6 - timed loop helpers_markdown_instruction: "# Timed Loop Alternatives\r\n\r\nBlinking
         lights and playing notes are common enough activities that we've provided
         some helpers to do them more easily.\r\n\r\n# Do This\r\n\r\nRun this code
@@ -7614,9 +7875,9 @@ en:
         score, or adding additional event handlers._"
       CSDU6 - timed loop smiley rand y_markdown_instruction: "# Infinite Loop\r\n\r\nThe
         `timedLoop()` is really useful not only for looping code at a slower speed,
-        but also if you want to a loop to run infinitely. The provided program moves
-        the image \"smiley\" to a random x position every second, can you make the
-        image also move to a random y?"
+        but also to loop code infinitely. The provided program moves the image \"smiley\"
+        to a random x position every second, can you make the image also move to a
+        random y?"
       CSDU6 AppLab Input 1_markdown_instruction: "# Input in App Lab\r\n\r\n_You
         don't need to make any changes to the code here_\r\n\r\nTake a minute to
         read through the code and run the program. Discuss with a partner:\r\n\r\n1.
@@ -7721,9 +7982,10 @@ en:
         Light Pattern\r\n\r\nFind a partner and bring your light patterns together.\r\n\r\nSet
         up the app so the user can use what light pattern they want to see. You should
         put each of your light displays in a function to make this easier"
-      CSDU6L06 - lists and colorLeds - debug_markdown_instruction: "<img src=\"https://images.code.org/a2b5050f76bdb262713ce52f0356fb04-image-1486151096632.JPG\"
-        style=\"width:250px; float:right\">\r\n# Debug: colorLeds\r\n\r\nCan you debug
-        the index values so that the rainbow shows up on the board like in the picture?\r\n\r\n"
+      CSDU6L06 - lists and colorLeds - debug_markdown_instruction: "<img src=\"https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png\"
+        style=\"width:250px; float:right\">\r\n\r\n# Debug: colorLeds\r\n\r\nCan you
+        debug the index values so that the rainbow shows up on the board like in the
+        picture?"
       CSDU6L06 - lists and colorLeds - intensity_markdown_instruction: "# Changing
         Brightness\r\n\r\nSometimes you want to do more than just turn a light on
         or off, you might want to set a specific brightness. The `intensity()` command
@@ -7751,7 +8013,7 @@ en:
         style=\"float: right; margin: 10px;\">\r\n\r\n# colorLeds\r\n\r\nThe color
         LEDs can use the same basic commands that you used with the red LED, such
         as `on()` and `off()`. Using the provided buttons, write a program that turns
-        on and off the bottom two color LEDs (the one's furthest away from the USB
+        on and off the bottom two color LEDs (the ones furthest away from the USB
         cable.\r\n\r\n# Do This\r\n\r\nAdd event handlers to the provided buttons
         \"on_button\" and \"off_button\" that turn on and off the bottom two color
         LEDs. Which positions in the `colorLeds` list are those two LEDs?\r\n\r\n"
@@ -7771,7 +8033,7 @@ en:
         you can switch between the two light patterns."
       CSDu2 IP CC Search_markdown_instruction: "# Finding Media\r\n\r\nNow that your
         content is in place, it's time to find some good images and other media to
-        help make your page look better, and potentially strengthen your argument.\r\n\r\nBecuase
+        help make your page look better, and potentially strengthen your argument.\r\n\r\nBecause
         the Creative Commons provides such a simple way to know what media you can
         and can't use, a lot of search engines have integrated Creative Commons filtering
         to ensure they only give you results you can use. The Creative Commons search
@@ -11869,9 +12131,9 @@ en:
         the end of the lesson. Check in with your teacher to see if you should work
         on the challenge level before you start. This is an extra challenge to practice
         your skills if you have time. If you don't have time for it no big deal!\r\n\r\n#
-        Challenge\r\n\r\nGo to <a href=\"studio.code.org/p/gamelab\" target=\"_blank\">
-        Full Game Lab </a> and try to make your own profile creator like the example
-        program on this level."
+        Challenge\r\n\r\nGo to <a href=\"https://studio.code.org/p/gamelab\" target=\"_blank\">Full
+        Game Lab</a> and try to make your own profile creator like the example program
+        on this level."
       'Challenge: Lights Picker_markdown_instruction': "# Challenge: More Patterns\r\n\r\nAdd
         some more patterns to your app. Find a partner and add their pattern as an
         option. Make sure to put each pattern into its own function."
@@ -14343,6 +14605,9 @@ en:
         tile. \n\n![image](//code.org/images/strategiesforteachingcs.png)\n\n</br>\n\n\n\n"
       PDK5 Test5_markdown_instruction: "## What did you think about things?\n\nWhat
         are your thoughts?\n"
+      PS - test - pixelation_markdown_instruction: "# Do This\r\n\r\nComplete the
+        \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\"
+        if you want to clean up your work."
       PS FR test 7-25_markdown_instruction: "Here is *some* **markdown**"
       PS Log test - Define and use turnAround_markdown_instruction: "#Do This:\r\n**Define**
         a function called `turnAround` which turns the turtle around. Once you've
@@ -14368,6 +14633,10 @@ en:
         you are going to have other people look at your website and give feedback
         on it.\r\n\r\n# Do This\r\n\r\n* Leave this open on your screen so your peer
         reviewers can look at your work"
+      Pixelation - AllTheThings 4_markdown_instruction: "# Pixelation: AllTheThings
+        4\r\nThis pixelation level demonstrates the use of the `hide_encoding_controls`
+        option.  Notice that the level displays the image data in hexadecimal and
+        does not let you change it back to binary.\r\n            "
       Pixelation - Lesson 14 - Fix bit offset v.2_markdown_instruction: "Something
         happened to the bits in this image! Find the error and fix it! Hint: a few
         extra bits were added. You should only need to remove some bits."
@@ -14383,12 +14652,12 @@ en:
         to the bits in this image!  Find error and fix it!  Hint: a few extra bits
         were added.  You should only need to remove some bits."
       Pixelation - Lesson 14 - Make the Letter A_markdown_instruction: "<img align=\"right\"
-        src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\" hspace=\"20\">\n#
-        Task 1: Make a 3x5 letter 'A'\nStart by trying to recreate the 3x5 letter
-        \"A\" depicted (at right) using the pixelation widget. \n\nThe image is intially
-        setup with the *incorrect* dimensions. Your first task is to set the second
-        byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering
-        pixel data to make the A.\n"
+        src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\" hspace=\"20\">\r\n#
+        Task 1: Make a 3x5 letter 'A'\r\nStart by trying to recreate the 3x5 letter
+        \"A\" depicted (at right) using the pixelation widget. \r\n\r\nThe image is
+        intially setup with the *incorrect* dimensions. Your first task is to set
+        the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start
+        entering pixel data to make the A.\r\n"
       Pixelation - Lesson 14 - Make your own B and W Image_markdown_instruction: "#
         Make your own image of any size\r\n\r\n![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)\r\n![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)\r\n![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)\r\n![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)\r\n![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)\r\n![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)\r\n![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)\r\n\r\n\r\n**Directions:**\r\n\r\n*
         Encode an image of anything you like.\r\n* You might want to do some planning
@@ -18669,16 +18938,16 @@ en:
         Each game only has one Game object which is set up with initial properties
         for you and it is called Game.\r\n\r\nOne of the coolest properties that the
         Game has are the x and y location of the mouse! **You can get the x and y
-        location of the mouse using `Game.mouseX` and `Game.mouseY`.**  This follows
+        location of the mouse using `World.mouseX` and `World.mouseY`.**  This follows
         the pattern you learned before. `Game` is the name of the object. `mouseX`
         and `mouseY` are the names of the properties.\r\n\r\n# Do This\r\n\r\nYou
         are going to make a bee sprite follow the mouse around the game area.\r\n\r\n*
         The bee image is already loaded in the animation tab for you.\r\n* Create
         a bee sprite that draws in the center of the window.\r\n* Inside the draw
         loop update the position of the sprite to the position of the mouse:\r\n\t*
-        Set the x position of the sprite to the value of `Game.mouseX`.\r\n    * Set
-        the y position of the sprite to the value of `Game.mouseY`.\r\n* Run the program
-        to test that it works.\r\n"
+        Set the x position of the sprite to the value of `World.mouseX`.\r\n    *
+        Set the y position of the sprite to the value of `World.mouseY`.\r\n* Run
+        the program to test that it works.\r\n"
       U3 - Sprites and Mod - Move Across_markdown_instruction: "# Moving Animation\r\n\r\nYou
         are going to practice using the x and y properties of a sprite. Don't forget
         that they designate the center of the rectangle. This may seems strange right
@@ -25382,6 +25651,8 @@ en:
         1.6em; line-height: 1.4em;\" >\r\n**Challenge:** The stairs down to the dock
         are broken.  Help me fix them.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/53c68133f897895caa0369b4afa3ec3b-image-1470789463684.gif\"
         width=\"300\"/>\r\n"
+      courseA_artist_loops_challenge2_markdown_instruction: "Tweet! Can you help
+        me make two bird houses?"
       courseA_collector_loops1_markdown_instruction: "**Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag
         blocks into the workspace and try to figure out how to get treasure.  Get
@@ -25428,7 +25699,8 @@ en:
       courseA_playLab_events3_markdown_instruction: "Help Jorge the Dog get moving
         by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
         block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-        event block that is already in the workspace."
+        event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag
+        to finish this level!"
       courseA_playLab_events4_markdown_instruction: "Now, get Jorge to move right
         when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
         button is clicked."
@@ -25436,6 +25708,9 @@ en:
         up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
         and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
         buttons are pressed."
+      courseA_playlab_events_challenge1_markdown_instruction: "It's time for the
+        Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho
+        will run the fastest?\r\n"
       courseB_artist_loops10_markdown_instruction: "Use what you have learned to
         draw a picture of what you think the artist saw when he got home.\r\n\r\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img
         src=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"
@@ -25450,6 +25725,8 @@ en:
         vine full of flowers.  Can you climb the vine and see where it goes?"
       courseB_artist_loops7_markdown_instruction: "**Challenge:**  It's a hidden
         garden! Let's walk around."
+      courseB_artist_loops_challenge1_markdown_instruction: "It's time to toss the
+        dice! Can you help me draw these?"
       courseB_artist_loops_challenge2_markdown_instruction: "Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?"
       courseB_collector_loops1_markdown_instruction: "**Free Play:** This is Laurel
@@ -25482,6 +25759,10 @@ en:
       courseB_playlab_events7_markdown_instruction: "Make this game fun by setting
         the knight to vanish when he runs into the dragon on his way to get the flags!
         \r\n\r\nPlay a sound when they collide to make it feel more real."
+      courseB_playlab_events_challenge1_markdown_instruction: "Make this game fun
+        by setting the knight to vanish when he runs into the dragon on his way to
+        get the flags! \r\n\r\nPlay a sound when they collide to make it feel more
+        real."
       courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor
         1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen
         you're done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
@@ -25536,7 +25817,7 @@ en:
       courseC_collector_progB_markdown_instruction: "You're almost done!  \r\n\r\nCollect
         as many coins as you can to finish the stage!"
       courseC_harvester_loops1_markdown_instruction: "Loops can be used to repeat
-        more than moves.  \r\n\r\nUse loops to collect all of the pumpkins."
+        more than moves.  \r\n\r\nUse loops to collect all four of the pumpkins."
       courseC_harvester_loops10_markdown_instruction: "Collect all of the corn and
         all of the pumpkins."
       courseC_harvester_loops11_markdown_instruction: "Collect all of the corn and
@@ -25561,10 +25842,9 @@ en:
         the code to help get Skrat get to the acorn."
       courseC_maze_debugging3_markdown_instruction: "Something is not quite right.
         \r\n\r\nRemove blocks to get Skrat to the acorn!"
-      courseC_maze_loops2_markdown_instruction: "Suddenly, a magical block appears!  \r\nWith
-        the `repeat` block, you can loop code over and over.\r\n\r\nCan you get the
-        bird to the pig by creating a loop that uses only one `move forward` block
-        inside of a `repeat`?"
+      courseC_maze_loops2_markdown_instruction: "With the `repeat` block, you can
+        loop code over and over.\r\n\r\nCan you get the bird to the pig by creating
+        a loop that uses only one `move forward` block inside of a `repeat`?"
       courseC_maze_loops2_predict1_markdown_instruction: "Suddenly, a magical block
         appears!  \r\nWith the `repeat` block, you can loop code over and over.\r\n\r\nCan
         you get the bird to the pig by creating a loop that uses only one `move forward`
@@ -25664,13 +25944,17 @@ en:
         turn 90 degrees between circles?\r\n\r\n(To get this image, you still need
         to jump 50 pixels between circles)"
       courseD_artist_nestedLoops7_markdown_instruction: "Use what you've learned
-        to make this drawing.\r\n\r\n- The squares each have 100 pixel sides and 90
-        degree angles\r\n- You will need to turn 60 degrees between each square"
+        to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and
+        **90 degree angles**\r\n- You will need to turn **60 degrees between each
+        square**. Why? Because there are 6 squares, and 360 degrees (a full turn around)
+        divided by 6 is 60 degrees.\r\n- Make sure you jump **50 pixels to get to
+        the next square**"
       courseD_artist_nestedLoops8_markdown_instruction: "Using what you have learned
         in the last couple of puzzles, build this image from the beginning.\r\n\r\n-
-        Each hexagon has 50 pixel sides and 60 degree angles"
+        Each hexagon has **50 pixel sides** and **60 degree angles**"
       courseD_artist_nestedLoops9_markdown_instruction: "**Challenge:** Can you figure
-        out how to make a picture like this?\r\n\r\n- Both shapes have 50 pixel sides"
+        out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel
+        sides**"
       courseD_artist_nestedLoops9_predict1_markdown_instruction: "**Challenge:**
         Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have
         50 pixel sides"
@@ -25758,8 +26042,8 @@ en:
         each flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_markdown_instruction: "Make all of the honey."
       courseD_bee_nestedLoops9_predict2_markdown_instruction: "Make all of the honey."
-      courseD_collector_ramp10_markdown_instruction: "Take the same path as before,
-        but this time collect all of the treasure as you find it.\r\n"
+      courseD_collector_ramp10_markdown_instruction: "Walk Laurel around this square
+        collecting the treasure as you find it.\r\n"
       courseD_collector_ramp8_markdown_instruction: "This puzzle is a lot like the
         last one, but now it stars Laurel the Adventurer!\r\n<hr/>\r\n\r\nTake the
         same path as before, but this time, use a repeat loop to collect treasure
@@ -25878,13 +26162,16 @@ en:
         blocks to the correct events to get Pegleg moving.\r\n\r\nGet Pegleg to the
         dragon to solve this puzzle."
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  Give Pegleg
-        (actor 1) a point when he makes it to the dragon. "
+        (actor 1) a point when he makes it to the dragon (actor 2). "
       courseD_playLab_cond3_markdown_instruction: "It's time to use what we've
         learned about conditionals to make this game amazing. This challenge has two
         parts:\r\n\r\n  1) Use a `repeat forever` loop to make the dragon (actor 2)
         change between random emotions every second.  \r\n \r\n  2) Add code so that
         when Pegleg gets to the dragon, he gets two points *if* the dragon is happy.
         Otherwise, he should get only one point added to his score."
+      courseD_playLab_cond3b_markdown_instruction: "Use a `repeat forever` loop to
+        make the dragon (actor 2) move up and down forever! Add a `wait for 1 second`
+        block in between the `move up` and `move down` blocks for the dragon."
       courseD_playLab_cond4_markdown_instruction: "This is about to get interesting!\r\n\r\nAdd
         some code so that the ninja (actor 3) starts chasing Pegleg as soon as the
         game begins.  End the game as a loss if the ninja catches him."
@@ -25906,7 +26193,8 @@ en:
         The hexagons have sides of 50 pixels\r\n- The hexagons are 100 pixels apart\r\n-
         The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
       courseE_artist_concept4_markdown_instruction: "Recreate this drawing using
-        13 blocks or fewer."
+        13 blocks or fewer. Each square has a side length of **20 pixels** and there
+        are **15 squares per row**."
       courseE_artist_functions1_markdown_instruction: "*\"Me zombie artist. Me love
         drawing!\"*\r\n\r\nHelp the zombie draw glasses using squares with sides of
         100 pixels.  \r\nThe bridge between the glasses is 75 pixels long.\r\n\r\n"
@@ -25942,8 +26230,9 @@ en:
         that you can call functions from *inside* other functions?!\r\n\r\nCreate
         as many functions as you think you need to make this drawing of 50 pixel squares."
       courseE_artist_functions9_markdown_instruction: "Create this image using only
-        the blocks provided.\r\n\r\n- To draw a diamond, you will need to alternate
-        between turning 60 degrees and 120 degrees."
+        the blocks provided. Each triangle has a side length of **50 pixels**\r\n\r\n-
+        To draw a diamond, you will need to alternate between turning **60 degrees
+        and 120 degrees**."
       courseE_artist_functions_predict1_markdown_instruction: "Here is a puzzle that
         uses a function that we have defined. \r\n"
       courseE_artist_ramp10_markdown_instruction: "Did you know you can put loops
@@ -25985,6 +26274,13 @@ en:
       courseE_bee_functions8_markdown_instruction: "**Challenge:** These flowers
         can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate
         a function that collects all of the nectar from each flower."
+      courseE_bee_ramp14_markdown_instruction: "The same technique works with nectar
+        and honey!  \r\n\r\nLook at all of these clouds. Some of them will turn into
+        honey, and others into nectar.  Use the `if at flower / else` block to get
+        nectar while there is nectar, **else** make the honey. \r\n\r\n\r\n\r\n"
+      courseE_bee_ramp17_markdown_instruction: "For the final puzzle in this stage,
+        use what you have learned to collect all of the nectar and make all of the
+        honey.  \r\n\r\nYou'll need every block in the toolbox to complete this one!"
       courseE_collector_ramp10_markdown_instruction: "Take the same path as before,
         but this time collect all of the treasure as you find it.\r\n"
       courseE_collector_ramp8_markdown_instruction: "This puzzle is a lot like the
@@ -26039,16 +26335,36 @@ en:
         to the pumpkin and collect all of the lettuce and corn along the way. "
       courseE_farmer_functions9b_markdown_instruction: "Collect all of the produce
         to finish this stage."
-      courseE_farmer_ramp12_markdown_instruction: "Oh my!  These bundles of lettuce
+      courseE_farmer_predict1_markdown_instruction: "Now the farmer is growing more
+        than just lettuce!  \r\n\r\nIn this puzzle, the farmer is either growing lettuce,
+        or **else** she is growing corn.  Use the `if at lettuce / else` block to
+        pick lettuce while there is lettuce, **else** pick corn while there is corn.
+        \r\n\r\n\r\n\r\n"
+      courseE_farmer_ramp11a_markdown_instruction: "Oh my!  These bundles of lettuce
         are so close together that the farmer doesn't know how many there are! \r\n\r\n<hr/>\r\n\r\nWe've
         added a new block to the toolbox called the `while there is lettuce` block.  Use
         this to pick lettuce only while there is still lettuce to pick! \r\n\r\n\r\n"
+      courseE_farmer_ramp12_markdown_instruction: "Now use nested loops (`repeat`
+        and `while`) to solve this puzzle.\r\n\r\n\r\n\r\n"
+      courseE_farmer_ramp12a_markdown_instruction: "Now the farmer is growing more
+        than just lettuce!  \r\n\r\nIn this puzzle, the farmer is either growing lettuce,
+        or **else** she is growing corn.  Use the `if at lettuce / else` block to
+        pick lettuce while there is lettuce, **else** pick corn while there is corn.
+        \r\n\r\n\r\n\r\n"
       courseE_farmer_ramp13_markdown_instruction: "Goodness!  Look at all of these
         sprouts. Some of them will turn into corn, and others into lettuce.  Use the
         `if at corn / else` block to pick corn while there is corn, **else** pick
         lettuce while there is lettuce. \r\n\r\n\r\n\r\n"
+      courseE_farmer_ramp15_markdown_instruction: "Solve this puzzle using only the
+        blocks available.\r\n\r\nThis level will help give you practice with the `repeat
+        until` block.  Repeat your code until you reach the pumpkin.\r\n(Don't forget
+        to collect the pumpkin, too!)"
+      courseE_farmer_ramp16_markdown_instruction: "**Challenge:** Solve this puzzle
+        with the fewest number of blocks."
       courseE_maze_ramp1_markdown_instruction: "For this puzzle, drag all of the
         blocks together and click \"Run\" to watch it go!"
+      courseE_maze_ramp13_markdown_instruction: "Time for one last puzzle to pull
+        it all together!\r\n\r\nUse nested loops to get the bird to the pig."
       courseE_maze_ramp2_markdown_instruction: "Drag an extra `move forward` block
         out of the toolbox, then attach all blocks to `when run` to finish your code."
       courseE_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere
@@ -26064,9 +26380,11 @@ en:
         thing with less code!"
       courseE_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
         Use what you've learned to get the bird to the pig!"
+      courseE_multi_maze_ramp5_markdown_instruction: "*\"Follow this path to get
+        me to the pig!\"*\r\n\r\nAvoid the TNT."
       courseE_playLab_scaffold1_markdown_instruction: "It is amazing how much you
         have learned! Let's put it together to make a game, step by step. \r\n\r\nWe've
-        put these blocks in your tool box. Choose a random background, then pick an
+        put these blocks in your toolbox. Choose a random background, then pick an
         actor to be your game's hero.\r\n\r\n![](https://images.code.org/745931ce34b3c47de19c36009e4a9c48-image-1471464938470.14.47
         PM.png)"
       courseE_playLab_scaffold2_markdown_instruction: "Now let's get things moving!
@@ -26093,7 +26411,7 @@ en:
         until you meet one of those conditions.\r\n<hr/>\r\n*Don't forget: Keep testing
         your game as you code. You'll not only want a game that works, but one that
         is fun to play!*\r\n<hr/>\r\nYour toolbox has been re-organized to make it
-        easier to find what you need. We've also added these blocks:\r\n\r\n![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57
+        easier to find what you need. We've also added these blocks (and more):\r\n\r\n![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57
         PM.png)"
       courseE_playLab_scaffold6_markdown_instruction: "You've finished! Now you
         can play your game or share it with your friends and classmates!"
@@ -26160,6 +26478,18 @@ en:
       courseF_artist_fwp9_markdown_instruction: "**Freeplay:** Below there are functions
         you've written, and more for you to play with. Play with the pen width to
         see how different your drawings look!"
+      courseF_artist_ramp10_markdown_instruction: "Did you know you can put loops
+        inside of other loops to make them more powerful?  That's called making a
+        \"nested loop\".\r\n\r\n<hr/>\r\n\r\nDrag the code for the last triangle into
+        a new loop to spin it around and make a snowflake!\r\n\r\n*(You will need
+        to spin it 6 times at 60 degrees to get this pattern.)*"
+      courseF_artist_ramp8_markdown_instruction: "Great!  Now let's make a square
+        using Artist!  The blocks for artist are a little different than other puzzles,
+        but the idea is the same.\r\n<hr/>\r\nEach side of the square has a length
+        of 200 pixels, and you will need to turn 90 degrees to make each angle."
+      courseF_artist_ramp9_markdown_instruction: "Use what you've learned to draw
+        this triangle.\r\n<hr/>\r\nThe sides are each 100 pixels long. You will need
+        to turn 120 degrees at each corner."
       courseF_artist_variables10_markdown_instruction: "Here's your code from the
         last puzzle.  Try editing the variable in other ways.  \r\n-  What happens
         if you start out with `length` less than 150? \r\n-  What if you multiply
@@ -26230,6 +26560,28 @@ en:
       courseF_artist_variables_FP_markdown_instruction: "**Freeplay:** Take what
         you've learned and make your own drawing. \r\n\r\nHow can you use variables
         with squares, pentagons, or hexagons?"
+      courseF_bee_conditionals10_markdown_instruction: "Conditionals can be helpful,
+        even when you know exactly what is in each spot!\r\n\r\nCollect all of the
+        nectar and make all of the honey."
+      courseF_bee_conditionals1_predict1_markdown_instruction: "*\"This cloud is
+        blocking my view!\"*\r\n\r\nCheck to see if there's a flower under the cloud.
+        If there's a flower, get nectar."
+      courseF_bee_conditionals2_markdown_instruction: "*\"It's too cloudy to see
+        any flowers!\"*\r\n\r\nCheck underneath each cloud to see if it is hiding
+        a flower. If it is, get nectar.  \r\n\r\nRemember: Not all clouds hide the
+        same thing!"
+      courseF_bee_conditionals3_markdown_instruction: "You can only collect nectar
+        from flowers, but you can check any space to see if there is a flower."
+      courseF_bee_conditionals4_markdown_instruction: "In this puzzle, we know that
+        every flower has exactly one nectar, but the flowers aren't spaced evenly.\r\n\r\nGet
+        all of the nectar using as few blocks as possible."
+      courseF_bee_conditionals7_predict2_markdown_instruction: "Sometimes a cloud
+        covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else`
+        block to collect nectar at flowers and make honey at honeycomb."
+      courseF_bee_conditionals8_markdown_instruction: "**Challenge:** There will
+        be either a flower or a honeycomb under each of those clouds!\r\n\r\nCollect
+        nectar if there is a flower.\r\nOtherwise, make honey (because there is a
+        honeycomb)."
       courseF_bee_for10_markdown_instruction: "**Challenge:** Take what you've learned
         about `for` loops and try to solve this problem. \r\n\r\nRemember: You may
         have to run through solutions multiple times before you figure out all of
@@ -26256,6 +26608,24 @@ en:
       courseF_bee_for9_markdown_instruction: "Now, let's combine the `counter` variable
         with a `math` block! \r\n\r\nHow can you use the `counter` variable to navigate
         this garden with the fewest number of blocks possible?"
+      courseF_bee_functions2_markdown_instruction: "To make things easier, it's
+        time to learn about functions!\r\n\r\nFrom here out, you will be using a new
+        *function editor*.  This editor is a separate window that will appear when
+        you go to edit a function.  You won't see the all of the code from your function
+        while you're coding in the workspace, but don't worry...it's still there!  \r\n<hr/>\r\n\r\nLet's
+        practice with this function that gets nectar only if the bee is at a flower.  To
+        see the code inside, click the blue \"edit\" button!\r\n\r\nUse the `get only
+        nectar` function to collect the nectar from each flower."
+      courseF_bee_functions3_markdown_instruction: "Now it's your turn to build
+        a function to get some honey!  Click \"edit\" to put code inside the `only
+        make honey` function, then use it to solve this puzzle."
+      courseF_bee_functions3a_markdown_instruction: "Each cloud could be hiding either
+        a flower or a honeycomb!  Write a function that gets nectar if the bee is
+        at a flower, otherwise it gets honey.  \r\n\r\nUse your function to solve
+        the puzzle!"
+      courseF_bee_functions4_markdown_instruction: "The `move and get nectar` function
+        turns the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse
+        the `move and get nectar` function to collect all of the nectar."
       courseF_bee_fwp1_markdown_instruction: "Check beneath the clouds to see if
         the flowers have any nectar."
       courseF_bee_fwp2_markdown_instruction: "Here's some code that solves the last
@@ -26275,6 +26645,26 @@ en:
         to this puzzle?"
       courseF_bee_fwp7_markdown_instruction: "**Challenge:** Something looks a little
         different. Modify your function to make honey as well."
+      courseF_maze_ramp1_markdown_instruction: "For this puzzle, connect all of the
+        blocks from the workspace together below the `when run` event and click \"Run\"
+        to watch it go!"
+      courseF_maze_ramp13_markdown_instruction: "Time for another Angry Birds puzzle
+        to pull it all together!\r\n\r\nUse nested loops to get the bird to the pig."
+      courseF_maze_ramp15_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
+        Use what you've learned to get the bird to the pig!"
+      courseF_maze_ramp2_markdown_instruction: "Drag a `repeat` block out of the
+        toolbox and attach it to the `when run` event.   \r\n\r\nPlace the `move forward`
+        block inside to finish your code."
+      courseF_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to
+        the silly pig.\"* \r\n\r\nAvoid TNT or feathers will fly!"
+      courseF_maze_ramp5_markdown_instruction: "*\"Follow this path to get me to
+        the pig!\"*\r\n\r\nAvoid the TNT."
+      courseF_maze_ramp6_markdown_instruction: "*\"Keep calm and help me find the
+        bad pig. Otherwise I might get angry!\"*\r\n\r\nWhen you have several blocks
+        in a row, try moving them inside of a `repeat` loop.  This will do the same
+        thing with less code!"
+      courseF_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
+        Use what you've learned to get the bird to the pig!"
       courseF_playlab_variables0_markdown_instruction: "This is Pirate Pegleg.  He's
         awfully hard to understand these days!  \r\n\r\nDecode his speech by changing
         these pieces of text in the code:\r\n- \"arrrg\" should be \"a\" \r\n- \"ye\"
@@ -26304,6 +26694,9 @@ en:
       courseF_playlab_variables3b_markdown_instruction: "Help Kiki have a conversation
         with Brian by using the variable `A1` in all of the places where age `12`
         should be used. "
+      courseF_playlab_variables3bEdit_markdown_instruction: "Help Kiki have a conversation
+        with Brian by using the variable `A1` in all of the places where age `12`
+        should be used. "
       courseF_playlab_variables4_markdown_instruction: "Now we're going to join
         a variable to the beginning of Pegleg's next sentence using the `create text
         with` block. \r\n\r\nCan you find the correct variable in the toolbox to fill
@@ -26325,7 +26718,8 @@ en:
         for you. Join them together and put them in the title screen to make a fun
         story."
       courseF_playlab_variables7b_markdown_instruction: "Time to make your own project!  \r\n\r\nCreate
-        some questions and weave the answers together into your very own story."
+        some questions and weave the answers together into your very own story.\r\n\r\nIf
+        you need ideas, click the hints icon."
       courseF_playlab_variables8b_markdown_instruction: "Use what you've learned
         to create an improv scene between the actors.\r\n\r\n**Improv:** *A scene
         that actors make up on stage using information from the audience.*"
@@ -26339,6 +26733,9 @@ en:
       course_playlab_variables3_markdown_instruction: "Now, decode Pirate Pegleg's
         speech by changing the value of the variables in just two places!   \r\n-
         \"arrrg\" should be \"a\" \r\n- \"ye\" should be \"e\"\r\n\r\n"
+      coursef_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere
+        is one extra block that is going to cause the bird to crash.  \r\nThrow it
+        away by dragging it back to the toolbox."
       cspu3_assess1_filltable_markdown_instruction: "Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
         many or as few rows in the table as you see fit.\r\n\r\n_NOTE: Use a new line
@@ -27758,6 +28155,12 @@ en:
         - Make one sprite play a noise when the other runs into it.</li>\r\n            <li><strong>Arrows</strong>
         - Write a program so when each arrow key is pressed, the sprite moves in that
         direction!</li>\r\n        </ul>\r\n\t</h5>\r\n</details>\r\n</h5>"
+      post-assessment survey q32_markdown_instruction: "(Optional): Please explain
+        why you would/would not recommend this computer science course to another
+        student."
+      post-assessment survey q37_markdown_instruction: "(Optional) If you did not
+        take the AP exam, what, if anything, would have made the difference for you
+        to take it?"
       pre-assessment survey q24A_markdown_instruction: "What computer science skills
         do you use in your everyday life? "
       pre-assessment survey q25A_markdown_instruction: "If yes, what computer science

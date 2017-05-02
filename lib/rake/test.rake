@@ -220,13 +220,17 @@ namespace :test do
       end
     end
 
-    task all: [:apps,
-               # currently disabled because these tests take too long to run on circle
-               # :interpreter,
-               :dashboard,
-               :pegasus,
-               :shared,
-               :lib]
+    all_tasks = [:apps,
+                 # currently disabled because these tests take too long to run on circle
+                 # :interpreter,
+                 :dashboard,
+                 :pegasus,
+                 :shared,
+                 :lib]
+
+    task all_but_apps: all_tasks.reject {|t| t == :apps}
+
+    task all: all_tasks
   end
 
   task changed: ['changed:all']

@@ -2,7 +2,7 @@
 import queryString from 'query-string';
 
 function project() {
-  return window.dashboard.project;
+  return require('./code-studio/initApp/project');
 }
 
 function apiPath(endpoint, channelId, path) {

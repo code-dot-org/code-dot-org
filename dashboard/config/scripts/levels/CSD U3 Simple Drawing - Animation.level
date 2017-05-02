@@ -57,7 +57,7 @@
         "category": "Drawing"
       },
       "draw": null,
-      "Game.frameRate": null,
+      "World.frameRate": null,
       "randomNumber_min_max": null,
       "background": null,
       "console.log": null

@@ -359,6 +359,19 @@ export function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
 }
 
+export function tryGetLocalStorage(key, defaultValue) {
+  if (defaultValue === undefined) {
+    throw "tryGetLocalStorage requires defaultValue";
+  }
+  let returnValue = defaultValue;
+  try {
+    returnValue = localStorage.getItem(key);
+  } catch (e) {
+    // Ignore, return default
+  }
+  return returnValue;
+}
+
 /**
  * Simple wrapper around localStorage.setItem that catches any exceptions (for
  * example when we call setItem in Safari's private mode)

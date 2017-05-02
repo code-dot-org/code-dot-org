@@ -1,11 +1,10 @@
-#language{:style=>'width: 780px; padding: 0; margin: 0;'}
-  - Languages.get_crowdin_languages.each_slice(6) do |group|
-    .language_row{:style=>'width: 780px; padding: 0; margin: 0;'}
-      - group.each do |properties|
-        .language_column{:style=>'width: 130px; height: 130px; float: left; display: table;'}
-          %div
-            - project_url = "http://crowdin.com/project/codeorg/#{properties[:crowdin_code_s]}"
-            - image_url = "/images/flags/#{properties[:crowdin_code_s]}.png"
-            %a{:href=>project_url, :style=>'display: table-cell; text-decoration: none;'}
-              %img{:src=>image_url, :style=>'max-width: 130px; max-height: 130px;'}
-              %br{:style=>'clear: both;'}= properties[:crowdin_name_s]
+#language{:style=>'padding-left: 20px; margin: 0;'}
+  - Languages.get_crowdin_languages.each do |properties|
+    %div{:style => 'width: 100%;'}
+      .col-16{:style=>'float: left;'}
+        %div{:style => 'height: 130px; width: 130px; margin-right: 0p'}
+          - project_url = "http://crowdin.com/project/codeorg/#{properties[:crowdin_code_s]}"
+          - image_url = "/images/flags/#{properties[:crowdin_code_s]}.png"
+          %a{:href=>project_url, :style=>'text-decoration: none;'}
+            %img{:src=>image_url, :style=>'max-width: 130px; max-height: 130px;'}
+            %br{:style=>'clear: both;'}= properties[:crowdin_name_s]

@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+
+# TODO: this should probably live in rake_utils, but for HOC 2016 we're not
+# going to do another DTP, so it's embedded here to work standalone
+def fanout_sequential(command, delay_per_group, group_size)
+  require 'sshkit'
+  SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
+  SSHKit::Coordinator.new(CDO.app_servers.values).each(in: :groups, wait: delay_per_group, limit: group_size) do
+    CDO.log.info capture(command, raise_on_non_zero_exit: false)
+  end
+end
+
+delay = ARGV[0].to_f
+group_size = ARGV[1].to_i
+command = 'sudo service dashboard upgrade && sudo service pegasus upgrade'
+
+CDO.log.info "Restarting Dashboard and Pegasus on frontends with group size #{group_size} and delay #{delay}s..."
+fanout_sequential(command, delay, group_size)
+CDO.log.info 'Dashboard and Pegasus restarted on all frontends'

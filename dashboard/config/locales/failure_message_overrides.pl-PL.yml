@@ -39,15 +39,10 @@
         powinny dostać się do flag w tej samej liczbie ruchów!
       Course 4 Playlab For Loops 5b_failure_message_override: Pamiętaj, że obie postaci
         muszą się zatrzymać w tym samym miejscu.
-      courseE_playLab_scaffold3_failure_message_override: Należy dodać dwóch lub więcej
-        nowych aktorów do gry i zaprogramować ich tak, żeby się poruszali.
       Eval Strings Images .2_failure_message_override: 'Upewnij się, że użyłeś ciągu
         "wszechświat" w swoim kodzie, żeby napisać: "Witaj Wszechświecie"'
-      grade4_scaffolded_project3_failure_message_override: |-
-        You must add two or more
-        new actors that move to your game.
       Kiki_StarWars_Test_5_failure_message_override: Game over!
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
       MC HOC 2016 Level 1_failure_message_override: |-
         To go on, you’ll need to collect
         wool. To collect the wool, use the arrow keys to walk to the sheep and then
@@ -92,29 +87,35 @@
         Use the arrow keys to walk
         to the sheep and press space bar or click the game board to use the sheep.
         And, don’t forget to add the 'Drop' block to your code.
-      MC HOC 2016 New pn_failure_message_override: |-
-        To go on, you’ll need to collect
-        wool. To collect the wool, use the arrow keys to walk to the sheep and then
-        press the spacebar or click the game to shear the sheep. And, don’t forget
-        to add the “Drop Wool” block to your code.
       MC HOC 2016 New Spawn_failure_message_override: |-
         Place `spawn sheep` under
         `when run`.
       MC HOC 2016 New Walk_failure_message_override: |-
         To open the door, press the
         space bar or touch the game board while facing it. Walk inside to continue.
+      MC HOC 2016 New pn_failure_message_override: |-
+        To go on, you’ll need to collect
+        wool. To collect the wool, use the arrow keys to walk to the sheep and then
+        press the spacebar or click the game to shear the sheep. And, don’t forget
+        to add the “Drop Wool” block to your code.
       MC HOC 2016 SCORE LEVEL_failure_message_override: |-
         If you're having trouble
         tagging 5 Golems, try changing the score to 2 per tag.
       MC HOC 2016 Village Test_failure_message_override: |-
         You need to make the Iron
         Golem chase and attack the zombies to win.
+      WhileAdventure_failure_message_override: |-
+        Congratulations!  You gathered X
+        coins!
+      courseE_playLab_scaffold3_failure_message_override: Należy dodać dwóch lub więcej
+        nowych aktorów do gry i zaprogramować ich tak, żeby się poruszali.
+      grade4_scaffolded_project3_failure_message_override: |-
+        You must add two or more
+        new actors that move to your game.
+      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
       sample1_failure_message_override: Congratulations!  You gathered X coins!
       sample4_failure_message_override: Congratulations!  You gathered X coins!
       sample6_failure_message_override: |-
         Not quite.  Keep trying!  [Move to Play
         Zone]
       sample8_failure_message_override: Congratulations!  You gathered X coins!
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!

@@ -3,7 +3,6 @@
 const section1Id = 42;
 const section2Id = 43;
 const stage1Id = 12;
-const stage2Id = 13;
 
 const fakeSectionData = {
   [section1Id]: {

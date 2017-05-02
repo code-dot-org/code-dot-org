@@ -1,0 +1,18 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2017-05-02T16:20:08.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template",
+    "hide_share_and_remix": "true",
+    "markdown_instructions": "# Headers and Footer\r\n\r\nEach of your pages needs a header and a footer.\r\n\r\n# Do This\r\n* For each page, make sure it has a header that includes the title of the page and a navigation bar that links to other pages in your site.  For a review of the header, go to [Lesson 9 Level 3](/s/csd2/stage/9/puzzle/3).\r\n* For each page, make sure it has a footer that explains the copyright information for your page.\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

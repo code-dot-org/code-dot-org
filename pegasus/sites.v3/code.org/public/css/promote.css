@@ -10,7 +10,7 @@ h1 {
   margin-top:  0px;
 }
 
-.col-18-promote-tools {
+.promote-tools-resources {
   height: 260px;
   margin: 1%;
 }
@@ -64,7 +64,7 @@ a.whitefooterlink {
 
 @media screen and (min-width: 971px)
 {
-  .col-18-promote-tools { width: 18%; float:left; }
+  .promote-tools-resources { width: 31%; float:left; }
 
    #block a:first-of-type {
     font-size: 70px;
@@ -73,7 +73,7 @@ a.whitefooterlink {
 
 @media screen and (min-width: 0px) and (max-width: 970px)
 {
-  .col-18-promote-tools { width: 31%; float:left; }
+  .promote-tools-resources { width: 31%; float:left; }
 
   #block a:first-of-type {
     font-size: 50px;
@@ -82,16 +82,16 @@ a.whitefooterlink {
 
 @media screen and (min-width: 0px) and (max-width: 512px)
 {
-   .col-18-promote-tools {
+   .promote-tools-resources {
     width: 48%;
     float:left;
    }
 
-   #tools-section .col-18-promote-tools {
+   #tools-section .promote-tools-resources {
      height: 285px;
    }
 
-   #resources-section .col-18-promote-tools {
+   #resources-section .promote-tools-resources {
      height: 225px;
    }
 }

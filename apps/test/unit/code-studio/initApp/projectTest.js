@@ -1,5 +1,4 @@
 import {expect} from '../../../util/configuredChai';
-import React from 'react';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -99,7 +98,7 @@ describe('project.js', () => {
 
 describe('project.saveThumbnail', () => {
   const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
-  let updateTimestamp;
+  const STUB_BLOB = 'stub-binary-data';
 
   beforeEach(() => {
     sinon.stub(header, 'updateTimestamp');
@@ -120,14 +119,48 @@ describe('project.saveThumbnail', () => {
   });
 
   it('calls filesApi.putFile with correct parameters', () => {
-    const blob = 'stub-binary-data';
-
-    project.saveThumbnail(blob);
+    project.saveThumbnail(STUB_BLOB);
 
     expect(filesApi.putFile).to.have.been.calledOnce;
     const call = filesApi.putFile.getCall(0);
     expect(call.args[0]).to.equal('.metadata/thumbnail.png');
-    expect(call.args[1]).to.equal(blob);
+    expect(call.args[1]).to.equal(STUB_BLOB);
+  });
+
+  it('succeeds if filesApi.putFile succeeds', done => {
+    filesApi.putFile.callsFake((path, blob, success, error) => success());
+
+    project.saveThumbnail(STUB_BLOB).then(done);
+  });
+
+  it('fails if project is not initialized', done => {
+    project.__TestInterface.setCurrentData(undefined);
+
+    const promise = project.saveThumbnail(STUB_BLOB);
+    promise.catch(e => {
+      expect(e).to.contain('Project not initialized');
+      expect(filesApi.putFile).not.to.have.been.called;
+      done();
+    });
+  });
+
+  it('fails if project is not owned by the current user', done => {
+    project.__TestInterface.setCurrentData({});
+
+    project.saveThumbnail(STUB_BLOB).catch(e => {
+      expect(e).to.contain('Project not owned by current user');
+      expect(filesApi.putFile).not.to.have.been.called;
+      done();
+    });
+  });
+
+  it('fails if filesApi.putFile fails', done => {
+    filesApi.putFile.callsFake((path, blob, success, error) => error('foo'));
+
+    project.saveThumbnail(STUB_BLOB).catch(e => {
+      expect(e).to.contain('foo');
+      done();
+    });
   });
 });
 

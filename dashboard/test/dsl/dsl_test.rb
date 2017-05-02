@@ -45,9 +45,9 @@ class DslTest < ActiveSupport::TestCase
       peer_reviews_to_complete: nil
     }
 
-    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stage' => {
-      'Stage1' => 'Stage1',
-      'Stage2' => 'Stage2'
+    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
+      'Stage1' => {'name' => 'Stage1'},
+      'Stage2' => {'name' => 'Stage2'}
     }}}}}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
@@ -379,5 +379,41 @@ level 'Level 3'
     assert_raises do
       ScriptDSL.parse(input_dsl, 'test.script', 'test')
     end
+  end
+
+  test 'Script DSL with level target and challenge' do
+    input_dsl = <<DSL
+stage 'Stage1'
+level 'Level 1'
+level 'Level 2'
+level 'Level 3', challenge: true
+level 'Level 4', target: true
+level 'Level 5'
+DSL
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {stage: "Stage1", levels: [{name: "Level 2"}]},
+            {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
+            {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
+            {stage: "Stage1", levels: [{name: "Level 5"}]},
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      hideable_stages: false,
+      student_detail_progress_view: false,
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
+    }
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
   end
 end

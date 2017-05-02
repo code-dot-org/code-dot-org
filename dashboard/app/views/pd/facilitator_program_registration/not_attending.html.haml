@@ -1,0 +1,10 @@
+- @page_title = 'Code.org TeacherCon Registration for Facilitators'
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%p
+  This is the registration form for TeacherCon #{@teachercon} on
+  #{Pd::FacilitatorProgramRegistration::DATES[@teachercon - 1]}. We do not have
+  you scheduled for this event. Please email
+  %a{href:'mailto:facilitators@code.org'}facilitators@code.org
+  to get the correct registration form.

@@ -879,6 +879,8 @@
   dashboard_students_reset_password: Endurstilla leyniorð
   dashboard_students_share_section: 'Deila innskráningarsíðu þessa hóps með nemendum
     þínum:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Prenta út spjöld með innskráningarupplýsingum nemenda
     þinna.
   dashboard_students_secret_picture_title: Leynimynd
@@ -902,6 +904,7 @@
     aðgang fyrir þá, breyttu þá gerð leyndarmáls fyrir þennan hóp í <b>leyniorð</b>
     eða <b>leynimynd</b>.
   dashboard_students_print_page: Prenta þessa síðu
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: Vefslóð
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Smelltu
     hér</a> til að sækja persónuverndarskjal okkar sem þú getur deilt eða prentað
@@ -1123,6 +1126,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Kafli 1: Internetið'
   csp2_name: Kafli 2 - Stafrænar upplýsingar
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1854,6 +1859,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

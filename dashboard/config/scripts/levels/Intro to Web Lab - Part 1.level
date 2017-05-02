@@ -8,7 +8,8 @@
     "video_key": "csd_weblab_intro_1",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "Video: Intro to Web Lab - Part 1"
   },
   "published": true,
   "notes": "",

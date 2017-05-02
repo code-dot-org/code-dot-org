@@ -6,7 +6,7 @@
   "user_id": 285,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,7 +22,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "0",
+    "start_direction": "3",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",

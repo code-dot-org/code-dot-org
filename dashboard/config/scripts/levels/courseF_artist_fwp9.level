@@ -29,11 +29,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look!",
+    "markdown_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look! Suggestions are in the hints!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try one of these drawings.\\n![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)\",\"hint_id\":\"courseF_artist_fwp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e119d6422ddf18f674df3902b6e4ee13/courseF_artist_fwp9.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -412,7 +415,6 @@
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="length"/>
-            <arg name="sides"/>
           </mutation>
           <title name="NAME">draw a square</title>
           <statement name="STACK">

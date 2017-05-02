@@ -314,7 +314,7 @@
   homepage_slot_text_blurb_advocates: "Apoye nuestro trabajo"
   homepage_slot_text_link_stats: "Ver las estadísticas"
   homepage_slot_text_link_buy: "Involucrarse"
-  homepage_slot_text_link_donate: "Hacer una donación"
+  homepage_slot_text_link_donate: "Haga una donación"
   homepage_slot_text_link_shop: "Camisetas, sombreros y más"
   homepage_header_codestudio: "Creaciones de los estudiante de Code Studio"
   homepage_header_donors: "Code.org agradece a sus colaboradores"
@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "Generado automáticamente"
   dashboard_students_reset_secret: "Reiniciar secreto"
   dashboard_students_reset_password: "Restablecer contraseña"
-  dashboard_students_share_section: 'Comparte la página de registro de esta sección con tus alumnos:'
+  dashboard_students_share_section: "Comparte la página de registro de esta sección con tus alumnos:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Imprimir tarjetas con la información de registro de tus alumnos."
   dashboard_students_secret_picture_title: "Imagen secreta"
   dashboard_students_secret_picture: "Esta sección utiliza <b>imágenes</b> como tipo de letra secreto. Esto significa que cada uno de tus alumnos tiene una imagen secreta que utiliza en vez de una contraseña para iniciar la sesión. Los alumnos deben utilizar la dirección web indicada arriba para iniciar la sesión."
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "Pide a tus alumnos que creen sus propias cuentas y que se unan a tu sección en"
   dashboard_students_no_email: "Si tus alumnos no tienen direcciones de correo electrónico, o te gustaría crear cuentas para ellos, cambia el tipo de secreto de esta sección a <b>palabra</b> o <b>imagen</b>."
   dashboard_students_print_page: "Imprimir esta página"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Haz clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse o imprimirse para tus alumnos."
   dashboard_curriculum_k5_title: "Recursos del educador para K-5"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'

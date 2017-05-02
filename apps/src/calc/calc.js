@@ -32,6 +32,7 @@ var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = require('lodash');
 import * as timeoutList from '../lib/util/timeoutList';
+import {getStore} from '../redux';
 
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
@@ -39,13 +40,12 @@ var Equation = require('./equation');
 var Token = require('./token');
 var InputIterator = require('./inputIterator');
 
-var TestResults = studioApp.TestResults;
-var ResultType = studioApp.ResultType;
+import {TestResults, ResultType} from '../constants';
 
 var level;
 var skin;
 
-studioApp.setCheckForEmptyBlocks(false);
+studioApp().setCheckForEmptyBlocks(false);
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -126,8 +126,8 @@ function asExpressionNode(val) {
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function (config) {
-  // replace studioApp methods with our own
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  // replace studioApp() methods with our own
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
   level = config.level;
@@ -147,9 +147,9 @@ Calc.init = function (config) {
   config.skin.winAvatar = null;
 
   config.loadAudio = function () {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp().loadAudio(skin.winSound, 'win');
+    studioApp().loadAudio(skin.startSound, 'start');
+    studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function () {
@@ -186,7 +186,7 @@ Calc.init = function (config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's studioApp.resetButtonClick will be called first
+    // base's studioApp().resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
 
@@ -196,13 +196,13 @@ Calc.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config);
+  studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<CalcVisualizationColumn/>}
-        onMount={studioApp.init.bind(studioApp, config)}
+        onMount={studioApp().init.bind(studioApp(), config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -222,7 +222,7 @@ function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
 
-    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    studioApp().feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
     var actual = entireSet.evaluateWithExpression(actualEquation.expression);
@@ -310,14 +310,14 @@ function displayGoal(targetSet) {
  * Click the run button.  Start the program.
  */
 Calc.runButtonClick = function () {
-  studioApp.toggleRunReset('reset');
+  studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioApp.attempts++;
+  studioApp().attempts++;
   Calc.execute();
 };
 
 /**
- * App specific reset button click logic.  studioApp.resetButtonClick will be
+ * App specific reset button click logic.  studioApp().resetButtonClick will be
  * called first.
  */
 Calc.resetButtonClick = function () {
@@ -345,7 +345,7 @@ function generateEquationSetFromBlockXml(blockXml) {
         "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    studioApp.loadBlocks(blockXml);
+    studioApp().loadBlocks(blockXml);
   }
 
   var equationSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
@@ -654,7 +654,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     } else {
       outcome.result = ResultType.FAILURE;
       var levelComplete = (outcome.result === ResultType.SUCCESS);
-      outcome.testResults = studioApp.getTestResults(levelComplete);
+      outcome.testResults = studioApp().getTestResults(levelComplete);
       if (target && user.expression &&
           user.expression.isEquivalentTo(target.expression)) {
         outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
@@ -688,9 +688,9 @@ Calc.execute = function () {
     // it would otherwise make our preAnimationFailure not display feedback.
     appState.waitingForReport = true;
   }
-  studioApp.report(reportData);
+  studioApp().report(reportData);
 
-  studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
+  studioApp().playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
 
   // Display feedback immediately
   if (isPreAnimationFailure(appState.testResults)) {
@@ -726,26 +726,26 @@ Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
-  if (studioApp.hasUnwantedExtraTopBlocks()) {
+  if (studioApp().hasUnwantedExtraTopBlocks()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     return;
   }
 
-  if (studioApp.hasUnfilledFunctionalBlock()) {
+  if (studioApp().hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    appState.message = studioApp.getUnfilledFunctionalBlockError('functional_compute');
+    appState.message = studioApp().getUnfilledFunctionalBlockError('functional_compute');
     return;
   }
 
-  if (studioApp.hasQuestionMarksInNumberField()) {
+  if (studioApp().hasQuestionMarksInNumberField()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
     return;
   }
 
-  if (studioApp.hasEmptyFunctionOrVariableName()) {
+  if (studioApp().hasEmptyFunctionOrVariableName()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTION_NAME;
     appState.message = commonMsg.unnamedFunction();
@@ -785,7 +785,7 @@ Calc.generateResults_ = function () {
   }
 
   if (appState.result === ResultType.SUCCESS &&
-      studioApp.hasExtraTopBlocks() &&
+      studioApp().hasExtraTopBlocks() &&
       Blockly.showUnusedBlocks) {
     appState.testResults = TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   }
@@ -806,7 +806,7 @@ Calc.checkExamples_ = function () {
     return outcome;
   }
 
-  var exampleless = studioApp.getFunctionWithoutTwoExamples();
+  var exampleless = studioApp().getFunctionWithoutTwoExamples();
   if (exampleless) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -814,7 +814,7 @@ Calc.checkExamples_ = function () {
     return outcome;
   }
 
-  var unfilled = studioApp.getUnfilledFunctionalExample();
+  var unfilled = studioApp().getUnfilledFunctionalExample();
   if (unfilled) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -825,7 +825,7 @@ Calc.checkExamples_ = function () {
     return outcome;
   }
 
-  var failingBlockName = studioApp.checkForFailingExamples(getCalcExampleFailure);
+  var failingBlockName = studioApp().checkForFailingExamples(getCalcExampleFailure);
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -1061,7 +1061,7 @@ function animateUserExpression(maxNumSteps) {
       // and the deepest operation (that will be collapsed on the next line)
       var deepest = current.getDeepestOperation();
       if (deepest) {
-        studioApp.highlight('block_id_' + deepest.blockId);
+        studioApp().highlight('block_id_' + deepest.blockId);
       }
       tokenList = constructTokenList(current, null, true);
     } else {
@@ -1154,7 +1154,7 @@ function cloneNodeWithoutIds(elementId) {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 function displayFeedback() {
   if (appState.waitingForReport || appState.animating) {
@@ -1186,7 +1186,7 @@ function displayFeedback() {
     options.message = appState.message;
   }
 
-  studioApp.displayFeedback(options);
+  studioApp().displayFeedback(options);
 }
 
 /**
@@ -1199,7 +1199,7 @@ function onReportComplete(response) {
   runButton.disabled = false;
   appState.response = response;
   appState.waitingForReport = false;
-  studioApp.onReportComplete(response);
+  studioApp().onReportComplete(response);
   displayFeedback();
 }
 

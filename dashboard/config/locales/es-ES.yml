@@ -88,6 +88,8 @@
     forgot_password: "¿Olvidaste tu contraseña?"
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} estudiantes ya se han registrado."
     teacher_count: "%{count} profesores ya se han registrado."
@@ -200,6 +202,14 @@
     subject: Unirme a mi clase (en Code.org)
     body: |
       Haz clic en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "profesor"): %{link} Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia sencilla y guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombis! :-) %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Invitación enviada
     added_teacher: "%{name} añadido como tu profesor"
@@ -214,8 +224,6 @@
       blank_code: Introduce un código de sección
       cant_join_own_section: Lo sentimos, no te puedes unir a tu propia sección.
     mail:
-      invite_student:
-        subject: "Únete a una clase con %{teacher_name} en Code.org!"
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como
           tu estudiante.'
@@ -479,6 +487,7 @@
       congreso de los Estados Unidos financiar la educación en informática para K-12.
     announcement_petition_button: Agrega tu nombre
     announcement_go_beyond_button: Ve más allá
+    announcement_apply_now: Apply now
     announcement_all: Manténte al día con las nuevas características y actualizaciones
       en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver
       anuncios anteriores.</a>
@@ -543,16 +552,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduce
       un código de sección diferente.
-    section_code_not_entered: Por favor, provee el código de sección actual.
     section_code_cant_be_current_section: La sección actual no puede ser la misma
       que la de la nueva sección.
     current_section_dne: Lo sentimos, pero no existe la sección %{current_section_code}.
       Introduzca un código de sección diferente.
-    students_not_yours: No puedes mover estudiantes de una sección que no te pertenece.
-    stay_enrolled_not_entered: Por favor, proporcione stay_enrolled_in_current_section.
     student_ids_not_entered: Por favor, proporcione los student_ids.
     student_not_found: No se encontró uno o más estudiantes.
     all_students_must_be_in_current_section: Todos los estudiantes actualmente deben

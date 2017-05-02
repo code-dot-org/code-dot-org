@@ -13,7 +13,9 @@
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
     "data": "111111111111101111111111101111100111101111100001101111100001110000000111110000000111110000000111110111110111110111110111110111110111111111111111",
-    "instructions": "Change the width and height sliders to find the image (click here to see more)"
+    "instructions": "Change the width and height sliders to find the image (click here to see more)",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false"
   },
   "published": true,
   "notes": "",

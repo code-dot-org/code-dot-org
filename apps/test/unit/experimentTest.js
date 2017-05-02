@@ -7,9 +7,9 @@ describe('experiments', function () {
   let mockedQueryString = '';
   let date, now, expirationTime, clock;
 
+  setExternalGlobals();
 
   before(function () {
-    setExternalGlobals();
     experiments.getQueryString_ = function () {
       return mockedQueryString;
     };

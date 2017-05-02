@@ -3,7 +3,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from '@cdo/apps/templates/progress/SummaryProgressTable';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import Immutable from 'immutable';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('SummaryProgressTable', () => {

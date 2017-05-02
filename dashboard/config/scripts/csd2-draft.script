@@ -1,0 +1,87 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+
+stage 'Exploring Websites'
+named_level 'CSD U2 L1 Overview'
+named_level 'CSD U2 Top Websites'
+
+stage 'Websites for Expression '
+named_level 'CSD U2 L2 Overview'
+
+stage 'Intro to HTML'
+named_level 'CSD U2 L3 Overview'
+named_level 'Intro to Web Lab - Part 1'
+level 'CSDU2 - Type Anything', progression: 'Exploring HTML'
+named_level 'CSD U2 Inspector Warm Up', progression: 'Exploring HTML'
+named_level 'Intro to Web Lab - Part 2'
+named_level 'CSD U2 HTML Tags Map'
+level 'CSD U2 HTML Adding Paragraphs', progression: 'Using HTML Tags'
+level 'CSD U2 HTML Adding Paragraphs pt 2', progression: 'Using HTML Tags'
+
+stage 'Headers'
+named_level 'CSD U2 L4 Overview'
+named_level 'CSD U2 Pair Programming Video'
+level 'CSD U2 Header Demo', progression: 'Headers'
+level 'CSD U2 Header Sizes', progression: 'Headers'
+level 'CSD Header Size MC', progression: 'Headers'
+level 'CSD U2 Header Test', progression: 'Headers'
+named_level 'CSD U2 Headers map'
+named_level 'CSD U2 PSP Programming'
+level 'CSD U2 Design Project', progression: 'Your Personal Website'
+level 'CSD U2 Project Start', progression: 'Your Personal Website'
+
+stage 'Digital Footprint'
+named_level 'CSD U2 L5 Overview'
+
+stage 'Lists'
+named_level 'CSD U2 L6 Overview'
+level 'CSD U2 lists intro', progression: 'Lists'
+level 'CSD U2 ordered list', progression: 'Lists'
+level 'CSD U2 unordered list', progression: 'Lists'
+level 'CSD U2 lists match', progression: 'Lists'
+named_level 'CSD U2 lists map'
+level 'CSD U2 expand project', progression: 'Expanding Your Website'
+level 'CSD U2 new page', progression: 'Expanding Personal Website'
+
+stage 'Clean Code and Debugging'
+level 'CSD U2 Debugging 1', progression: 'Debugging'
+level 'CSD U2 Debugging 2', progression: 'Debugging'
+level 'CSD U2 Debugging 3', progression: 'Debugging'
+level 'CSD U2 Debugging 4', progression: 'Debugging'
+
+stage 'Intellectual Property and Images'
+named_level 'CSD U2 images map'
+level 'CSD U2 Image Tag 1', progression: 'Adding Images'
+level 'CSD U2 Image Tag Debug', progression: 'Adding Images'
+level 'CSD U2 Image Tag 2', progression: 'Adding Images'
+named_level 'CSDu2 IP CC Search'
+level 'CSD U2 Image Tag 2', progression: 'Attribution'
+level 'CSD U2 Info Page Final Touches', progression: 'Attribution'
+
+stage 'Project - Multi-Page Websites'
+named_level 'CSD Placeholder'
+level 'CSD U2 link demo'
+level 'CSD U2 navigation'
+named_level 'CSD U2 project guide'
+level 'CSD U2 create page'
+level 'CSD U2 upload images'
+level 'CSD U2 add content'
+level 'CSD U2 header footer'
+level 'CSD U2 project review'
+level 'CSD U2 project share'
+
+stage 'Styling Text with CSS'
+named_level 'CSD Placeholder'
+
+stage 'Styling Elements with CSS'
+named_level 'CSD Placeholder'
+
+stage 'Sources and Search Engines'
+named_level 'CSD Placeholder'
+
+stage 'RGB Colors and Classes'
+named_level 'CSD Placeholder'
+
+stage 'Project - Personal Portfolio Website'
+named_level 'CSD Placeholder'

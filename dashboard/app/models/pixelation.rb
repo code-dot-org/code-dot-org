@@ -29,6 +29,9 @@ class Pixelation < Widget
     data
     hex
     hide_encoding_controls
+    v1_initial_width
+    v1_initial_height
+    v1_hide_sliders
   )
 
   before_validation do

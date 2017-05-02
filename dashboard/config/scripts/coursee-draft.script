@@ -21,6 +21,9 @@ skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_13'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_14'
+skin 'hoc2015'
+video_key_for_next_level 'starwars_blocks_congrats'
+level 'blockly:Studio:hoc2015_blockly_15'
 
 stage 'Functions: Songwriting'
 level 'SongwritingParameters'
@@ -107,7 +110,7 @@ stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation'
 
 stage 'More Programming with Scratch', flex_category: 'extra_course_content'
-named_level 'More programming with Scratch!'
+level 'More programming with Scratch!'
 
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet'

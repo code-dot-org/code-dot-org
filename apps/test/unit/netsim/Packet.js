@@ -58,51 +58,51 @@ describe("Packet.Encoder", function () {
       var packetCountBits = 4;
       var headerFields = ["toAddress"];
       assert.throws(function () {
-        var format = new Packet.Encoder("", packetCountBits, headerFields);
+        new Packet.Encoder("", packetCountBits, headerFields);
       }, Error);
       assert.throws(function () {
-        var format = new Packet.Encoder("a.b.c", packetCountBits, headerFields);
+        new Packet.Encoder("a.b.c", packetCountBits, headerFields);
       }, Error);
     });
 
     it("ignores addressFormat when no address field is present", function () {
       var packetCountBits = 4;
       var headerFields = ["packetIndex"];
-      var format = new Packet.Encoder('', packetCountBits, headerFields);
-      format = new Packet.Encoder('a.b.c', packetCountBits, headerFields);
+      new Packet.Encoder('', packetCountBits, headerFields);
+      new Packet.Encoder('a.b.c', packetCountBits, headerFields);
     });
 
     it("throws on construction if packetCountBitWidth is zero and packet " +
         " fields are present", function () {
       var addressFormat = "4";
       assert.throws(function () {
-        var format = new Packet.Encoder(addressFormat, 0, ["packetIndex"]);
+        new Packet.Encoder(addressFormat, 0, ["packetIndex"]);
       }, Error);
       assert.throws(function () {
-        var format = new Packet.Encoder(addressFormat, 0, ["packetCount"]);
+        new Packet.Encoder(addressFormat, 0, ["packetCount"]);
       }, Error);
     });
 
     it("ignores zero packetCountBitWidth if no packet fields are used", function () {
       var addressFormat = "4";
-      var format = new Packet.Encoder(addressFormat, 0, []);
-      format = new Packet.Encoder(addressFormat, 0, ["toAddress"]);
+      new Packet.Encoder(addressFormat, 0, []);
+      new Packet.Encoder(addressFormat, 0, ["toAddress"]);
     });
 
     it("allows four header field types", function () {
       var addressFormat = '4';
       var packetFieldWidth = 4;
-      var format = new Packet.Encoder(addressFormat, packetFieldWidth, ["toAddress"]);
-      format = new Packet.Encoder(addressFormat, packetFieldWidth, ["fromAddress"]);
-      format = new Packet.Encoder(addressFormat, packetFieldWidth, ["packetIndex"]);
-      format = new Packet.Encoder(addressFormat, packetFieldWidth, ["packetCount"]);
+      new Packet.Encoder(addressFormat, packetFieldWidth, ["toAddress"]);
+      new Packet.Encoder(addressFormat, packetFieldWidth, ["fromAddress"]);
+      new Packet.Encoder(addressFormat, packetFieldWidth, ["packetIndex"]);
+      new Packet.Encoder(addressFormat, packetFieldWidth, ["packetCount"]);
     });
 
     it("throws if unknown header field type is passed", function () {
       var addressFormat = '4';
       var packetFieldWidth = 4;
       assert.throws(function () {
-        var format = new Packet.Encoder(addressFormat, packetFieldWidth, ["otherField"]);
+        new Packet.Encoder(addressFormat, packetFieldWidth, ["otherField"]);
       }, Error);
     });
 
@@ -110,7 +110,7 @@ describe("Packet.Encoder", function () {
       var addressFormat = '4';
       var packetFieldWidth = 4;
       assert.throws(function () {
-        var format = new Packet.Encoder(addressFormat, packetFieldWidth, [
+        new Packet.Encoder(addressFormat, packetFieldWidth, [
           "packetIndex",
           "packetIndex"
         ]);
@@ -120,7 +120,7 @@ describe("Packet.Encoder", function () {
     it("allows different valid fields together in the header", function () {
       var addressFormat = '4';
       var packetFieldWidth = 4;
-      var format = new Packet.Encoder(addressFormat, packetFieldWidth, [
+      new Packet.Encoder(addressFormat, packetFieldWidth, [
         "packetIndex",
         "packetCount"
       ]);

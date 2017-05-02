@@ -1,5 +1,4 @@
 import {expect} from '../../util/configuredChai';
-import {testUtils} from '../../util/testUtils';
 import CollisionMaskWalls from '@cdo/apps/studio/collisionMaskWalls';
 
 

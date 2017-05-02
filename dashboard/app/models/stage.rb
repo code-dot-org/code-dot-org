@@ -31,6 +31,8 @@ class Stage < ActiveRecord::Base
 
   validates_uniqueness_of :name, scope: :script_id
 
+  include CodespanOnlyMarkdownHelper
+
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
@@ -55,10 +57,10 @@ class Stage < ActiveRecord::Base
   def localized_title
     # The standard case for localized_title is something like "Stage 1: Maze".
     # In the case of lockable stages, we don't want to include the Stage 1
-    return I18n.t("data.script.name.#{script.name}.stage.#{name}") if lockable
+    return localized_name if lockable
 
     if script.stages.to_a.many?
-      I18n.t('stage_number', number: relative_position) + ': ' + I18n.t("data.script.name.#{script.name}.stage.#{name}")
+      I18n.t('stage_number', number: relative_position) + ': ' + localized_name
     else # script only has one stage/game, use the script name
       script.localized_title
     end
@@ -66,7 +68,7 @@ class Stage < ActiveRecord::Base
 
   def localized_name
     if script.stages.many?
-      I18n.t "data.script.name.#{script.name}.stage.#{name}"
+      I18n.t "data.script.name.#{script.name}.stages.#{name}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
@@ -105,7 +107,9 @@ class Stage < ActiveRecord::Base
         title: localized_title,
         flex_category: localized_category,
         lockable: !!lockable,
-        levels: cached_script_levels.map(&:summarize),
+        levels: cached_script_levels.reject(&:bonus).map(&:summarize),
+        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -152,19 +156,9 @@ class Stage < ActiveRecord::Base
           position: script_level.position,
           named_level: script_level.named_level?,
           path: script_level.path,
-          level_id: level.id,
-          type: level.class.to_s,
-          name: level.name
         }
 
-        %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages).each do |key|
-          value = level.properties[key] || level.try(key)
-          level_json[key] = value if value
-        end
-        if level.video_key
-          level_json[:video_youtube] = level.specified_autoplay_video.youtube_url
-          level_json[:video_download] = level.specified_autoplay_video.download
-        end
+        level_json.merge!(level.summary_for_lesson_plans)
 
         level_json
       end

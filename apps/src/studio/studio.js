@@ -37,7 +37,6 @@ import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
 import paramLists from './paramLists.js';
-import sharedConstants from '../constants';
 import studioCell from './cell';
 import studioMsg from './locale';
 import { GridMove, GridMoveAndCancel } from './spriteActions';
@@ -53,6 +52,11 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
+import Sounds from '../Sounds';
+import {captureThumbnailFromSvg} from '../util/thumbnail';
+import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -63,12 +67,7 @@ var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
 
-var KeyCodes = sharedConstants.KeyCodes;
-
-var ResultType = studioApp.ResultType;
-var TestResults = studioApp.TestResults;
-
-var SVG_NS = sharedConstants.SVG_NS;
+import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -116,7 +115,7 @@ var level;
 var skin;
 
 //TODO: Make configurable.
-studioApp.setCheckForEmptyBlocks(true);
+studioApp().setCheckForEmptyBlocks(true);
 
 var AUTO_HANDLER_MAP = {
   whenRun: 'whenGameStarts',
@@ -252,8 +251,8 @@ function loadLevel() {
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
-  studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
-  studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
+  studioApp().MAZE_WIDTH = Studio.MAZE_WIDTH;
+  studioApp().MAZE_HEIGHT = Studio.MAZE_HEIGHT;
 
   Studio.walls = loadWalls();
 }
@@ -316,7 +315,7 @@ var drawMap = function () {
   }
 
   if (level.coordinateGridBackground) {
-    studioApp.createCoordinateGridBackground({
+    studioApp().createCoordinateGridBackground({
       svg: 'backgroundLayer',
       origin: 0,
       firstLabel: 100,
@@ -421,7 +420,7 @@ var drawMap = function () {
     overlayGroup.appendChild(resetTextB);
     var touchDragIcon = document.createElementNS(SVG_NS, 'image');
     touchDragIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        studioApp.assetUrl('media/common_images/touch-drag.png'));
+        studioApp().assetUrl('media/common_images/touch-drag.png'));
     var touchIconSize = 300;
     touchDragIcon.setAttribute('width', touchIconSize);
     touchDragIcon.setAttribute('height', touchIconSize);
@@ -606,7 +605,9 @@ Studio.removeGoalEffect = function () {
 /**
  * @param scope Object :  The scope in which to execute the delegated function.
  * @param func Function : The function to execute
- * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
+ * @param data Object or Array : The data to pass to the function. If the
+ *   function is also passed arguments, the data is appended to the arguments
+ *   list. If the data is an Array, each item is appended as a new argument.
  */
 var delegate = function (scope, func, data) {
   return function () {
@@ -852,7 +853,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
   }
 
   Studio.eventHandlers.forEach(function (handler) {
-    if (studioApp.isUsingBlockly()) {
+    if (studioApp().isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (handler.name === name &&
@@ -1027,6 +1028,10 @@ Studio.onTick = function () {
   var i;
 
   Studio.clearDebugElements();
+
+  if (Studio.tickCount === constants.CAPTURE_TICK_COUNT) {
+    captureThumbnailFromSvg(document.getElementById('svgStudio'));
+  }
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowExecutionFactor);
@@ -1649,7 +1654,7 @@ Studio.onSvgClicked = function (e) {
   if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.WAITING) {
     Studio.runButtonClick();
   } else if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.OVER) {
-    studioApp.resetButtonClick();
+    studioApp().resetButtonClick();
   } else if (Studio.tickCount > 0) {
     // If we are "running", check the cmdQueues.
     // Check the first command in all of the cmdQueues to see if there is a
@@ -1718,7 +1723,7 @@ Studio.initSprites = function () {
 
   Object.assign(Studio.startAvatars, spriteOverrides);
 
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp().isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
@@ -1756,16 +1761,16 @@ Studio.initReadonly = function (config) {
 
   Studio.initSprites();
 
-  studioApp.initReadonly(config);
+  studioApp().initReadonly(config);
 };
 
 /**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function (config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  // replace studioApp() methods with our own
+  studioApp().reset = this.reset.bind(this);
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   // Set focus on the run button so key events can be handled
   // right from the start without requiring the user to adjust focus.
@@ -1844,7 +1849,7 @@ Studio.init = function (config) {
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp.cdoSounds, skin.assetUrl, levelTracks);
+      Sounds.getSingleton(), skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -1869,7 +1874,7 @@ Studio.init = function (config) {
     soundFileNames.forEach(function (sound) {
       sound = sound.toLowerCase();
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
-      studioApp.loadAudio(skin.soundFiles[sound], sound);
+      studioApp().loadAudio(skin.soundFiles[sound], sound);
     });
 
     // Handle music separately - the music controller does its own preloading.
@@ -1878,9 +1883,7 @@ Studio.init = function (config) {
 
   // Add a post-video hook to start the background music, if available.
   config.level.afterVideoBeforeInstructionsFn = showInstructions => {
-    if (studioApp.cdoSounds) {
-      studioApp.cdoSounds.whenAudioUnlocked(() => Studio.musicController.play());
-    }
+    Sounds.getSingleton().whenAudioUnlocked(() => Studio.musicController.play());
     showInstructions();
   };
 
@@ -1898,7 +1901,7 @@ Studio.init = function (config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    if (studioApp.isUsingBlockly()) {
+    if (studioApp().isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -1918,14 +1921,14 @@ Studio.init = function (config) {
   };
 
   config.afterClearPuzzle = function () {
-    studioApp.resetButtonClick();
+    studioApp().resetButtonClick();
   };
 
   // Since we allow "show code" for some blockly levels with move blocks,
   // we supply a polishCodeHook function here to make the generated code look
   // more readable:
   config.polishCodeHook = function (code) {
-    if (studioApp.isUsingBlockly()) {
+    if (studioApp().isUsingBlockly()) {
       var regexpMoveUpBlock = /Studio.move\('\S*', 0, 1\);/g;
       code = code.replace(regexpMoveUpBlock, "moveUp();");
       var regexpMoveRightBlock = /Studio.move\('\S*', 0, 2\);/g;
@@ -1945,12 +1948,12 @@ Studio.init = function (config) {
 
   config.makeString = studioMsg.makeYourOwn();
   config.makeUrl = "http://code.org/studio";
-  config.makeImage = studioApp.assetUrl('media/promo.png');
+  config.makeImage = studioApp().assetUrl('media/promo.png');
 
   // Disable "show code" button in feedback dialog and workspace if blockly,
   // unless the level specifically requests it
   config.enableShowCode =
-    studioApp.editCode ? true : utils.valueOr(level.enableShowCode, false);
+    studioApp().editCode ? true : utils.valueOr(level.enableShowCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
@@ -1978,7 +1981,7 @@ Studio.init = function (config) {
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
   var onMount = function () {
-    studioApp.init(config);
+    studioApp().init(config);
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -1995,7 +1998,7 @@ Studio.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config, {
+  studioApp().setPageConstants(config, {
     hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
   });
 
@@ -2006,7 +2009,7 @@ Studio.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={onMount}
@@ -2257,7 +2260,7 @@ Studio.reset = function (first) {
 
   // Reset execution state:
   Studio.yieldExecutionTicks = 0;
-  if (studioApp.editCode) {
+  if (studioApp().editCode) {
     Studio.executionError = null;
     if (Studio.JSInterpreter) {
       Studio.JSInterpreter.deinitialize();
@@ -2415,7 +2418,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
 
-    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    studioApp().feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
@@ -2447,8 +2450,8 @@ Studio.runButtonClick = function () {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  studioApp.toggleRunReset('reset');
-  if (studioApp.isUsingBlockly()) {
+  studioApp().toggleRunReset('reset');
+  if (studioApp().isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
 
@@ -2457,18 +2460,18 @@ Studio.runButtonClick = function () {
   // Remove goal filter effects the first time the run button is pressed
   Studio.removeGoalEffect();
 
-  studioApp.reset(false);
-  studioApp.attempts++;
+  studioApp().reset(false);
+  studioApp().attempts++;
   Studio.startTime = new Date();
   Studio.execute();
   Studio.gameState = Studio.GameStates.ACTIVE;
 
   if (level.freePlay && !level.isProjectLevel &&
-      (!studioApp.hideSource || level.showFinish)) {
+      (!studioApp().hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     if (shareCell.className !== 'share-cell-enabled') {
       shareCell.className = 'share-cell-enabled';
-      studioApp.onResize();
+      studioApp().onResize();
 
       // Fire a custom event on the document so that other code can respond
       // to the finish button being shown.
@@ -2485,7 +2488,7 @@ Studio.runButtonClick = function () {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
   var tryAgainText;
@@ -2509,7 +2512,11 @@ var displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    studioApp.displayFeedback({
+    const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
+      project.isSupportedLevelType();
+    const {isSignedIn} = getStore().getState().pageConstants;
+
+    studioApp().displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
@@ -2524,6 +2531,9 @@ var displayFeedback = function () {
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      // save to the project gallery instead of the legacy gallery
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting
@@ -2538,7 +2548,7 @@ var displayFeedback = function () {
 Studio.onReportComplete = function (response) {
   Studio.response = response;
   Studio.waitingForReport = false;
-  studioApp.onReportComplete(response);
+  studioApp().onReportComplete(response);
   displayFeedback();
 };
 
@@ -2691,25 +2701,25 @@ var defineProcedures = function (blockType) {
  * @returns {boolean} True if we have a pre-execution failure
  */
 Studio.checkForBlocklyPreExecutionFailure = function () {
-  if (studioApp.hasUnfilledFunctionalBlock()) {
+  if (studioApp().hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     // Some of our levels (i.e. big game) have a different top level block, but
     // those should be undeletable/unmovable and not hit this. If they do,
     // they'll still get the generic unfilled block message
-    Studio.message = studioApp.getUnfilledFunctionalBlockError('functional_start_setValue');
+    Studio.message = studioApp().getUnfilledFunctionalBlockError('functional_start_setValue');
     Studio.preExecutionFailure = true;
     return true;
   }
 
-  if (studioApp.hasUnwantedExtraTopBlocks()) {
+  if (studioApp().hasUnwantedExtraTopBlocks()) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     Studio.preExecutionFailure = true;
     return true;
   }
 
-  if (studioApp.hasEmptyFunctionOrVariableName()) {
+  if (studioApp().hasEmptyFunctionOrVariableName()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;
     Studio.message = commonMsg.unnamedFunction();
@@ -2739,7 +2749,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  var exampleless = studioApp.getFunctionWithoutTwoExamples();
+  var exampleless = studioApp().getFunctionWithoutTwoExamples();
   if (exampleless) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -2747,7 +2757,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  var unfilled = studioApp.getUnfilledFunctionalExample();
+  var unfilled = studioApp().getUnfilledFunctionalExample();
   if (unfilled) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -2758,7 +2768,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  var failingBlockName = studioApp.checkForFailingExamples(Studio.getStudioExampleFailure);
+  var failingBlockName = studioApp().checkForFailingExamples(Studio.getStudioExampleFailure);
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -2802,7 +2812,7 @@ Studio.checkForEditCodePreExecutionFailure = function () {
  * @returns {string} the name of the first unexpected function found
  */
 Studio.hasUnexpectedFunction_ = function () {
-  if (studioApp.editCode &&
+  if (studioApp().editCode &&
       level.preventUserDefinedFunctions &&
       Studio.JSInterpreter) {
     var funcNames = Studio.JSInterpreter.getGlobalFunctionNames();
@@ -2822,7 +2832,7 @@ Studio.hasUnexpectedFunction_ = function () {
  * @returns {string} the name of the first unexpected local function found
  */
 Studio.hasUnexpectedLocalFunction_ = function () {
-  if (studioApp.editCode &&
+  if (studioApp().editCode &&
       Studio.JSInterpreter) {
     var funcNames = Studio.JSInterpreter.getLocalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
@@ -2854,21 +2864,21 @@ function handleExecutionError(err, lineNumber) {
  * Execute the story
  */
 Studio.execute = function () {
-  Studio.result = studioApp.UNSET;
+  Studio.result = studioApp().UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
 
   var handlers = [];
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp().isUsingBlockly()) {
     if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
     }
 
     Studio.interpretedHandlers = {};
 
-    if (studioApp.initializationBlocks) {
-      studioApp.initializationBlocks.forEach(function (topBlock) {
+    if (studioApp().initializationBlocks) {
+      studioApp().initializationBlocks.forEach(function (topBlock) {
         // by default, blocks are queued to run once at game start.
         // Repeat forever blocks, however, need their own handler.
         const handlerType = (topBlock.type === 'studio_repeatForever') ?
@@ -2951,13 +2961,13 @@ Studio.execute = function () {
     Studio.playSound({ soundName: 'start' });
   }
 
-  studioApp.reset(false);
-  studioApp.clearAndAttachRuntimeAnnotations();
+  studioApp().reset(false);
+  studioApp().clearAndAttachRuntimeAnnotations();
 
   if (level.editCode) {
-    var codeWhenRun = studioApp.getCode();
+    var codeWhenRun = studioApp().getCode();
     Studio.JSInterpreter = new JSInterpreter({
-      studioApp: studioApp
+      studioApp: studioApp()
     });
     Studio.JSInterpreter.onExecutionError.register(handleExecutionError);
     if (consoleLogger) {
@@ -3040,7 +3050,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function () {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (studioApp.hasContainedLevels ||
+  } else if (studioApp().hasContainedLevels ||
       (level.freePlay && !Studio.preExecutionFailure)) {
     Studio.result = ResultType.SUCCESS;
   }
@@ -3064,7 +3074,7 @@ Studio.onPuzzleComplete = function () {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
-      studioApp.getTestResults(levelComplete, { executionError: Studio.executionError });
+      studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
@@ -3073,8 +3083,8 @@ Studio.onPuzzleComplete = function () {
     Studio.playSound({ soundName: 'failure' });
   }
 
-  if (studioApp.hasContainedLevels && !level.edit_blocks) {
-    postContainedLevelAttempt(studioApp);
+  if (studioApp().hasContainedLevels && !level.edit_blocks) {
+    postContainedLevelAttempt(studioApp());
     runAfterPostContainedLevel(() => {
       Studio.message = getContainedLevelResultInfo().feedback;
       Studio.onReportComplete();
@@ -3090,7 +3100,7 @@ Studio.onPuzzleComplete = function () {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.getCode();
+    program = studioApp().getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -3099,7 +3109,7 @@ Studio.onPuzzleComplete = function () {
   Studio.waitingForReport = true;
 
   var sendReport = function () {
-    studioApp.report({
+    studioApp().report({
       app: 'studio',
       level: level.id,
       result: Studio.result === ResultType.SUCCESS,
@@ -3808,7 +3818,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.isUsingBlockly() && Studio.currentCmdQueue) {
+  if (studioApp().isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -3861,140 +3871,140 @@ Studio.executeQueue = function (name, oneOnly) {
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
     case 'endGame':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.endGame(cmd.opts);
       break;
     case 'setBackground':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       Studio.trackedBehavior.hasSetBackground = true;
       break;
     case 'setMap':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setMap(cmd.opts);
       Studio.trackedBehavior.hasSetMap = true;
       break;
     case 'setMapAndColor':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setMap(cmd.opts);
       Studio.trackedBehavior.hasSetMap = true;
       break;
     case 'setSprite':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSprite(cmd.opts);
       Studio.trackedBehavior.hasSetSprite = true;
       break;
     case 'getSpriteValue':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.getSpriteValue(cmd.opts);
       break;
     case 'getSpriteVisibility':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.getSpriteVisibility(cmd.opts);
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
+        studioApp().highlight(cmd.id);
       }
       return Studio.saySprite(cmd.opts);
     case 'setSpriteEmotion':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
       Studio.trackedBehavior.hasSetEmotion = true;
       break;
     case 'getSpriteEmotion':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.getSpriteEmotion(cmd.opts);
       break;
     case 'setSpriteSpeed':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
     case 'setDroidSpeed':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setDroidSpeed(cmd.opts);
       Studio.trackedBehavior.hasSetDroidSpeed = true;
       break;
     case 'setSpriteSize':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpriteSize(cmd.opts);
       break;
     case 'setSpritePosition':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
     case 'setSpriteXY':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
       break;
     case 'getSpriteXY':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.getSpriteXY(cmd.opts);
       break;
     case 'setSpriteBehavior':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpriteBehavior(cmd.opts);
       break;
     case 'setSpritesWander':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpritesWander(cmd.opts);
       break;
     case 'setSpritesStop':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpritesStop(cmd.opts);
       break;
     case 'setSpritesChase':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpritesChase(cmd.opts);
       break;
     case 'setSpritesFlee':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpritesFlee(cmd.opts);
       break;
     case 'setSpritesSpeed':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setSpritesSpeed(cmd.opts);
       break;
     case 'addGoal':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.addGoal(cmd.opts);
       break;
     case 'playSound':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.playSound(cmd.opts);
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
+        studioApp().highlight(cmd.id);
       }
       return Studio.showTitleScreen(cmd.opts);
     case 'move':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
     case 'moveRight':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.EAST,
       });
       break;
     case 'moveLeft':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.WEST,
       });
       break;
     case 'moveUp':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.NORTH,
       });
       break;
     case 'moveDown':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.SOUTH,
@@ -4002,71 +4012,71 @@ Studio.callCmd = function (cmd) {
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
+        studioApp().highlight(cmd.id);
       }
       return Studio.moveDistance(cmd.opts);
     case 'stop':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.stop(cmd.opts);
       break;
     case 'throwProjectile':
       if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
+        studioApp().highlight(cmd.id);
       }
       Studio.trackedBehavior.hasThrownProjectile = true;
       return Studio.throwProjectile(cmd.opts);
     case 'makeProjectile':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.makeProjectile(cmd.opts);
       break;
     case 'changeScore':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.changeScore(cmd.opts);
       break;
     case 'reduceScore':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.reduceScore(cmd.opts);
       break;
     case 'setScoreText':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
       break;
     case 'showCoordinates':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.showCoordinates();
       break;
     case 'wait':
       if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
+        studioApp().highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     case 'vanish':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
     case 'addItem':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.addItem(cmd.opts);
       Studio.trackedBehavior.hasAddedItem = true;
       break;
     case 'setItemActivity':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setItemActivity(cmd.opts);
       break;
     case 'setItemSpeed':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.setItemSpeed(cmd.opts);
       break;
     case 'showDebugInfo':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.showDebugInfo(cmd.opts);
       break;
     case 'onEvent':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       Studio.onEvent(cmd.opts);
       break;
     case 'askForInput':
-      studioApp.highlight(cmd.id);
+      studioApp().highlight(cmd.id);
       if (Studio.paused) {
         return false;
       }
@@ -4077,7 +4087,7 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.makeThrottledPlaySound = function () {
-  Studio.throttledPlaySound = _.throttle(studioApp.playAudio.bind(studioApp),
+  Studio.throttledPlaySound = _.throttle(studioApp().playAudio.bind(studioApp()),
     constants.SOUND_THROTTLE_TIME);
 };
 
@@ -4842,11 +4852,9 @@ Studio.setSprite = function (opts) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
-    if (studioApp.cdoSounds) {
-      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption);
-      });
-    }
+    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+      return new ThreeSliceAudio(Sounds.getSingleton(), audioOption);
+    });
   }
   Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
@@ -5083,7 +5091,7 @@ Studio.askForInput = function (question, callback) {
     height: '400px',
   });
   viz.appendChild(target);
-  studioApp.resizeVisualization();
+  studioApp().resizeVisualization();
 
   Studio.inputPromptElement = target;
 
@@ -5951,7 +5959,7 @@ var checkFinished = function () {
       Studio.progressConditionTestResult = true;
     }
     var progressMessage = progressConditionResult.message;
-    if (studioApp.isUsingBlockly()) {
+    if (studioApp().isUsingBlockly()) {
       progressMessage = progressConditionResult.blocklyMessage || progressMessage;
     }
     Studio.message = utils.valueOr(progressMessage, null);

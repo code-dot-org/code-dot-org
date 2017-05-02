@@ -1,0 +1,18 @@
+name 'CSD U3 Lesson Overview 4'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson students continue to develop their drawing skills. At the beginning of the lesson a teacher-led discussion connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of ellipse() and rect() that include width and height parameters. They also learn to use the background() block. At the end of the progression students are introduced to the randomNumber() block. Combining all of these skills students will draw a randomized rainbow snake at the end of the lesson.
+# Vocabulary
+
+* **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.
+
+# New Blocks
+
+*  **[background()](//docs.code.org/gamelab/background/)** - `background(color)`
+*  **[ellipse()](//docs.code.org/gamelab/ellipse/)** - `ellipse(x, y, w, h);`
+*  **[rect()](//docs.code.org/gamelab/rect/)** - `rect(x, y, w, h);`
+*  **[randomNumber()](//docs.code.org/gamelab/randomNumber/)** - `randomNumber()`
+
+MARKDOWN

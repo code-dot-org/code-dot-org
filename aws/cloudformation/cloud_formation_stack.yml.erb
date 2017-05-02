@@ -1,4 +1,5 @@
 <%
+require 'active_support/core_ext/numeric/bytes'
 require 'cdo/aws/cloudfront'
 unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
   raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
@@ -9,22 +10,31 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 
 ami = commit[0..4]
 unless dry_run
-  update_certs.call unless cdn_enabled
   update_cookbooks.call
   update_bootstrap_script.call
 end
 
 frontends = %i(production adhoc).include?(rack_env)
+@frontends = frontends
 require 'cdo/cron'
+
+# Branch off existing AMI for adhoc.
+image_id = rack_env?(:adhoc) ? "!ImportValue AMI-#{environment}-ImageId" : IMAGE_ID
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
+<% if environment == :adhoc -%>
+Parameters:
+  DatabaseUsername:
+    Type: String
+    Default: master
+  DatabasePassword:
+    Type: String
+    NoEcho: true
+<% end -%>
 Resources:
-  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
 <% if frontends -%>
-  IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
-  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   # Signal when the instance is fully provisioned and ready for AMI creation.
   AMICreate<%=ami%>:
     Type: AWS::CloudFormation::WaitCondition
@@ -37,20 +47,20 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
-      SecurityGroupIds: [!GetAtt [VPC, FrontendSecurityGroup]]
-      SubnetId: !GetAtt [VPC, Subnet<%=azs.first%>]
-      KeyName: <%=ssh_key_name%>
+      InstanceType: <%=INSTANCE_TYPE%>
+      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
+      SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
+        Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: "AMICreate#{ami}",
-          node_name: 'ami-${INSTANCE_ID}',
+          node_name: 'ami-$INSTANCE_ID',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
           ],
@@ -81,7 +91,7 @@ Resources:
     Properties:
       LoadBalancerName: <%=stack_name%>
       CrossZone: true
-      SecurityGroups: [!GetAtt [VPC, ELBSecurityGroup]]
+      SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
       Subnets: <%= public_subnets.to_json %>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
@@ -139,20 +149,20 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
-      SecurityGroups: [!GetAtt [VPC, FrontendSecurityGroup]]
-      KeyName: <%=ssh_key_name%>
+      InstanceType: <%=INSTANCE_TYPE%>
+      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
+      KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_frontend.sh.erb',
+        Fn::Base64: <%=file('bootstrap_frontend.sh.erb',
           resource_id: 'Frontends',
           hook: 'WebServerHookNew',
-          node_name: 'fe-${INSTANCE_ID}',
+          node_name: 'fe-$INSTANCE_ID',
           commit: commit)%>
 # Create associated resources for old and new Auto Scaling Groups.
 # TODO remove old resources after migration complete.
@@ -248,7 +258,7 @@ Resources:
       DefaultResult: ABANDON
       HeartbeatTimeout: 3000 # seconds = 50 minutes
       NotificationTargetARN: !Ref WebServerHookTopicNew
-      RoleARN: !GetAtt [IAM, LifecycleHookRoleARN]
+      RoleARN: !ImportValue IAM-LifecycleHookRoleARN
   WebServerHookEventRule:
     Type: AWS::Events::Rule
     Properties:
@@ -354,7 +364,8 @@ Resources:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <% end -%>
-<% if environment == :production -%>
+<% if frontends -%>
+<%   cache_node_type = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -365,10 +376,32 @@ Resources:
     Properties:
       ReplicationGroupDescription: Geocoder Replication Group
       NumCacheClusters: 3
+<%  if cache_node_type.include? 'cache.t2' %>
+      AutomaticFailoverEnabled: false
+<%  end-%>
       Engine: redis
-      CacheNodeType: cache.r3.large
-      SecurityGroupIds: [!GetAtt [VPC, RedisSecurityGroup]]
+      CacheNodeType: <%= cache_node_type %>
+      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+  MemcachedParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: memcached1.4
+      Description: Memcached modified max_item_size.
+      Properties:
+        max_item_size: <%=64.megabytes%>
+  Memcached:
+    Type: AWS::ElastiCache::CacheCluster
+    Properties:
+      CacheNodeType: <%= cache_node_type %>
+      CacheParameterGroupName: !Ref MemcachedParameterGroup
+      CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+      ClusterName: <%=stack_name[0..19]%> # Max 20 chars
+      Engine: memcached
+      NumCacheNodes: 2
+      AZMode: cross-az
+      PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
+      VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
@@ -385,7 +418,10 @@ Resources:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
-<% if environment == :adhoc -%>
+<%
+   if environment == :adhoc
+   self.daemon = true
+-%>
   Daemon:
     Type: AWS::EC2::Instance
     CreationPolicy:
@@ -393,9 +429,9 @@ Resources:
         Timeout: PT60M
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
-      KeyName: <%=ssh_key_name%>
+      InstanceType: <%=INSTANCE_TYPE%>
+      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      KeyName: <%=SSH_KEY_NAME%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -403,12 +439,13 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
+        Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: 'Daemon',
-          node_name: '${ENVIRONMENT}-daemon',
+          node_name: stack_name,
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
+          commit: nil, # track branch
           shutdown: false,
           daemon: true
         )%>
@@ -416,9 +453,38 @@ Resources:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
           GroupSet:
-            - !GetAtt [VPC, FrontendSecurityGroup]
-            - !GetAtt [VPC, GatewaySecurityGroup]
-          SubnetId: !GetAtt [VPC, PublicSubnet<%=azs.first%>]
+            - !ImportValue VPC-FrontendSecurityGroup
+            - !ImportValue VPC-GatewaySecurityGroup
+          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+  Database:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: !Ref AWS::StackName
+      DBInstanceClass: db.t2.micro
+      AllocatedStorage: 64
+      StorageType: gp2
+      Engine: mysql
+      EngineVersion: 5.6.29
+      DBParameterGroupName: !Ref DatabaseParameters
+      VPCSecurityGroups: [!ImportValue VPC-DBSecurityGroup]
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      MasterUsername: !Ref DatabaseUsername
+      MasterUserPassword: !Ref DatabasePassword
+  DatabaseParameters:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Sub "Parameters for ${AWS::StackName}."
+      Family: mysql5.6
+      Parameters:
+        innodb_autoinc_lock_mode: 2
+        innodb_flush_log_at_trx_commit: 0
+        innodb_flush_method: O_DIRECT
+        sync_binlog: 0
+        tx_isolation: READ-COMMITTED
+        skip_name_resolve: 1
+        performance_schema: 1
+        innodb_buffer_pool_dump_at_shutdown: 1
+        innodb_buffer_pool_load_at_startup: 1
 <% end -%>
 Outputs:
   DashboardURL:

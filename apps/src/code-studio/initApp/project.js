@@ -66,6 +66,7 @@ var currentAbuseScore = 0;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
+let initialCaptureComplete = false;
 
 /**
  * Current state of our sources API data
@@ -313,6 +314,12 @@ var projects = module.exports = {
     isInitialSaveComplete() {
       return initialSaveComplete;
     },
+    isInitialCaptureComplete() {
+      return initialCaptureComplete;
+    },
+    setCurrentData(data) {
+      current = data;
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -477,6 +484,44 @@ var projects = module.exports = {
     return this.isOwner() && hasProjectChanged;
   },
   /**
+   * @returns {string} A UI string containing the name of a new project, which
+   *   varies based on the app type and skin.
+   */
+  getNewProjectName() {
+    switch (appOptions.app) {
+      case 'applab':
+        return msg.defaultProjectNameAppLab();
+      case 'gamelab':
+        return msg.defaultProjectNameGameLab();
+      case 'weblab':
+        return msg.defaultProjectNameWebLab();
+      case 'turtle':
+        switch (appOptions.skinId) {
+          case 'artist':
+            return msg.defaultProjectNameArtist();
+          case 'anna':
+          case 'elsa':
+            return msg.defaultProjectNameFrozen();
+        }
+        break;
+      case 'studio':
+        if (appOptions.level.useContractEditor) {
+          return msg.defaultProjectNameBigGame();
+        }
+        switch (appOptions.skinId) {
+          case 'studio':
+            return msg.defaultProjectNamePlayLab();
+          case 'infinity':
+            return msg.defaultProjectNameInfinity();
+          case 'gumball':
+            return msg.defaultProjectNameGumball();
+          case 'iceage':
+            return msg.defaultProjectNameIceAge();
+        }
+    }
+    return msg.defaultProjectName();
+  },
+  /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
    */
@@ -504,6 +549,12 @@ var projects = module.exports = {
       default:
         return null;
     }
+  },
+  /**
+   * @returns {boolean} Whether a project can be created for this level type.
+   */
+  isSupportedLevelType() {
+    return !!this.getStandaloneApp();
   },
   /**
    * @returns {string} The path to the app capable of running
@@ -625,23 +676,37 @@ var projects = module.exports = {
       });
     });
   },
-  updateCurrentData_(err, data, isNewChannel) {
+  updateCurrentData_(err, data, shouldNavigate) {
     if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
     }
 
-    current = data;
-    if (isNewChannel) {
-      // We have a new channel, meaning either we had no channel before, or
-      // we've changed channels. If we aren't at a /projects/<appname> link,
-      // always do a redirect (i.e. we're remix from inside a script)
+    // The following race condition can lead to thumbnail URLs not being stored
+    // in the project metadata:
+    //   1. Run button is pressed
+    //   2. channel.update() is called during project.save()
+    //   3. project.saveThumbnail() completes
+    //   4. updateCurrentData_ is called in the callback from channel.update
+    //
+    // Work around this by merging in new data into the existing data rather
+    // than overwriting it, preserving any newly-added thumbnail url. Revisit
+    // this if we ever change the thumbnail url, since the same race condition
+    // would clobber any changes to existing fields.
+
+    current = current || {};
+    Object.assign(current, data);
+
+    if (shouldNavigate) {
+      // If we are at a /projects/<appname> link, we can display the project
+      // without navigating and we just need to update the url.
       if (isEditing && parsePath().appName) {
         if (window.history.pushState) {
           window.history.pushState(null, document.title, this.getPathName('edit'));
         }
       } else {
-        // We're on a share page, and got a new channel id. Always do a redirect
+        // We're on a legacy share page or script level, so we must navigate
+        // in order to display the project.
         location.href = this.getPathName('edit');
       }
     }
@@ -715,8 +780,12 @@ var projects = module.exports = {
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
+   * @param {string} newName
+   * @param {function} callback
+   * @param {boolean} shouldNavigate Whether to navigate to the project URL.
    */
-  copy(newName, callback) {
+  copy(newName, callback, shouldNavigate) {
+    current = current || {};
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel,
         this.copyAnimations.bind(this, srcChannel, callback));
@@ -724,7 +793,7 @@ var projects = module.exports = {
     delete current.hidden;
     this.setName(newName);
     channels.create(current, function (err, data) {
-      this.updateCurrentData_(err, data, true);
+      this.updateCurrentData_(err, data, shouldNavigate);
       this.save(wrappedCallback);
     }.bind(this));
   },
@@ -860,19 +929,29 @@ var projects = module.exports = {
   },
 
   /**
-   * Uploads a thumbnail image to the thumbnail path in the files API, and
-   * stores a URL to access the thumbnail in current.thumbnailUrl.
+   * Uploads a thumbnail image to the thumbnail path in the files API. If
+   * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   * @returns {Promise} A promise indicating whether the upload was successful.
    */
   saveThumbnail(pngBlob) {
-    if (current && current.isOwner) {
+    if (!current) {
+      return Promise.reject('Project not initialized.');
+    }
+    if (!current.isOwner) {
+      return Promise.reject('Project not owned by current user.');
+    }
+
+    return new Promise((resolve, reject) => {
       const thumbnailPath = '.metadata/thumbnail.png';
       filesApi.putFile(thumbnailPath, pngBlob, () => {
         current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+        initialCaptureComplete = true;
+        resolve();
       }, error => {
-        console.warn(`error saving thumbnail image: ${error}`);
+        reject(`error saving thumbnail image: ${error}`);
       });
-    }
+    });
   },
 };
 

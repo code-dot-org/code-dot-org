@@ -8,7 +8,8 @@
     "video_key": "csd_gamelab_animation_tab",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "Video: The Animation Tab"
   },
   "published": true,
   "notes": "",

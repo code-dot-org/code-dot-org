@@ -1,0 +1,10 @@
+name 'CSP verify 18'
+question 'Are you 18 years old (or older)?'
+
+right 'Yes'
+right 'No'
+markdown <<MARKDOWN
+* You are 18 years or older...
+
+Are you 18 years old (or older)?
+MARKDOWN

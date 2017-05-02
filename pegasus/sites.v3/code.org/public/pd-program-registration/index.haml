@@ -5,17 +5,44 @@ title: "Code.org Professional Learning Program Registration"
 :ruby
   require 'state_abbr'
 
+  teachercon_city_regex = /Houston|Phoenix|Philadelphia/
+
   authentication_required!
   user_id = dashboard_user[:id]
-  application = DASHBOARD_DB[:pd_teacher_applications].where(user_id: user_id).first
+  email = dashboard_user[:email]
+  accepted_programs = DASHBOARD_DB[:pd_accepted_programs].where(user_id: user_id)
 
-  application_json, accepted_workshop, assigned_tc_city, selected_course, email = nil
+  # Teachers may have 2 accepted programs (one from a teacher application, one manually entered),
+  # but they will only have one teachercon workshop.
+  teachercon_program = accepted_programs.find{|p| p[:workshop_name] =~ teachercon_city_regex}
+
+  accepted_workshop, assigned_tc_city, selected_course = nil
+  if teachercon_program
+    accepted_workshop = teachercon_program[:workshop_name]
+    assigned_tc_city = teachercon_program.to_s.scan(teachercon_city_regex).first
+    selected_course = teachercon_program[:course]
+  end
+
+  # Fill application data, if an application is present.
+  # Manually entered accepted programs will not have a matching application.
+  # Some teachers have both an accepted teacher application, and a manually-entered acceptance.
+  # Only one teacher application can be submitted per user so in either case, grab the contact info from the
+  # single application if it exists.
+  application_data = {}
+  application = DASHBOARD_DB[:pd_teacher_applications].where(user_id: user_id).first
   if application
-    email = application[:primary_email]
     application_json = JSON.parse(application[:application])
-    accepted_workshop = application[:accepted_workshop]
-    assigned_tc_city = accepted_workshop.to_s.scan(/Houston|Phoenix|Philadelphia/).first
-    selected_course = application_json['selectedCourse']
+    application_data.merge!(
+      id: application[:id],
+      first_name: application_json['firstName'],
+      last_name: application_json['lastName'],
+      phone_number: application_json['phoneNumber'],
+      school_district: application_json['school-district']
+    )
+
+    # Use primary email from teacher application if the teacher account doesn't have one
+    # e.g. accidental student account
+    email = application_json['primaryEmail'] if email.blank?
   end
 
   previous_response = DB[:forms].where(kind: 'PdProgramRegistration', user_id: user_id).first
@@ -68,9 +95,9 @@ title: "Code.org Professional Learning Program Registration"
   - if previously_accepted
     %script{type: 'text/javascript'}$('#thanks').show();
   - else
-    %script{type: 'text/javascript'}$('#not_attending').show();
+    %script{type: 'text/javascript'}$('#not-attending').show();
 
-- elsif application.nil?
+- elsif teachercon_program.nil? || email.blank?
   %p
     You must first complete a
     %a{href: 'https://studio.code.org/pd/teacher_application'}teacher application.
@@ -83,7 +110,8 @@ title: "Code.org Professional Learning Program Registration"
 
 - elsif accepted_workshop.nil?
   %p
-    Thanks for completing a teacher application. We are processing your application, and will notify you by April 3, 2017.
+    Thanks for completing a teacher application. We are processing your application,
+    and will notify you by the end of April.
   %p
     If you have any questions, please contact
     %a{href:'mailto:teacher@code.org'}teacher@code.org
@@ -97,17 +125,17 @@ title: "Code.org Professional Learning Program Registration"
   %form#pd-program-registration-form{role: 'form'}
     %input{name: 'email_s', type: 'hidden', value: email}
     %input{name: 'user_id_i', type: 'hidden', value: user_id}
-    %input{name: 'pd_teacher_application_id_i', type: 'hidden', value: application[:id]}
-    %input{name: 'first_name_s', type: 'hidden', value: application_json['firstName']}
-    %input{name: 'last_name_s', type: 'hidden', value: application_json['lastName']}
-    %input{name: 'phone_number_s', type: 'hidden', value: application_json['phoneNumber']}
-    %input{name: 'school_district_s', type: 'hidden', value: application_json['school-district']}
+    %input{name: 'pd_teacher_application_id_i', type: 'hidden', value: application_data[:id]}
+    %input{name: 'first_name_s', type: 'hidden', value: application_data[:first_name]}
+    %input{name: 'last_name_s', type: 'hidden', value: application_data[:last_name]}
+    %input{name: 'phone_number_s', type: 'hidden', value: application_data[:phone_number]}
+    %input{name: 'school_district_s', type: 'hidden', value: application_data[:school_district]}
     %input{name: 'selected_course_s', type: 'hidden', value: selected_course}
     %input{name: 'accepted_workshop_s', type: 'hidden', value: accepted_workshop}
 
     %h1 Code.org Professional Learning Program Registration
     %h2
-      Please complete this form by April 21, 2017. Contact
+      Please complete this form by May 5, 2017. Contact
       %a{href:'mailto:teacher@code.org'}teacher@code.org
       with any questions.
 

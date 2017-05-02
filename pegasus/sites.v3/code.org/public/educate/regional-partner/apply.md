@@ -21,7 +21,7 @@ Step 3: Reference check
 *Second Round Application Deadline: June 2, 2017*<br/>
 *Third Round Application Deadline: July 21, 2017*<br/>
 
-Visit our <a href="/educate/regional-partner/faq"target=_blank>FAQ</a> for answers to common questions. Any additional questions can be emailed to partner@code.org. We recommend reading through the <a href="https://docs.google.com/document/d/1jLN9adlUakBPhCG_LJdBOSsRyd-D6pe5x05Nf0EXUcM/edit?usp=sharing" target=_blank>static version of the application</a> prior to compelting the application below.
+Visit our <a href="/educate/regional-partner/faq"target=_blank>FAQ</a> for answers to common questions. Any additional questions can be emailed to partner@code.org. We recommend making a copy of the <a href="https://docs.google.com/document/d/1jLN9adlUakBPhCG_LJdBOSsRyd-D6pe5x05Nf0EXUcM/edit?usp=sharing" target=_blank>static version of the application</a> and writing out your responses prior to completing the application below.
 
 
 ## Application ##

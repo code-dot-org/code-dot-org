@@ -1,39 +1,60 @@
 ---
-title: Volunteer in a Classroom
+title: Hour of Code
 require_https: true
 video_player: true
 theme: responsive
 nav: employee_engagement_nav
 ---
 
-# Employees volunteer for the Hour of Code
+# Host an Hour of Code!
 
+<div class="col-50" style="float:left; padding:10px">
 
-The Hour of Code volunteer in a classroom program gives your employees the opportunity to be a guest speaker and help students through online tutorials in their local classrooms or via video call. This opportunity is provided year-round, however, the demand for volunteers in our teachers' classrooms is much higher in December during Computer Science Education Week.
+  <img src="/images/employee-engagement/hoc-kids.jpg" style="max-width: 100%">
+</div>
+
+<div class="col-50" style="float:left; padding:10px">
+
+  <strong>Company lift</strong>: Medium-high<br>
+  <strong>Employee lift</strong>: Low<br>
+  <strong>Cadence</strong>: One time event anytime of year. Most popular during CS Education Week in December.
+  
+</div>
+ 
+
+<div style="clear: both;"></div>
+
+The Hour of Code is a one-hour introduction to computer science designed to demystify “code”, to show that anybody can learn the basics, and to broaden participation in the field of computer science. Since 2013, the Hour of Code has been part of Computer Science Education Week, an annual celebration of the computing field and its heritage. Now a global movement, the Hour of Code has served almost 400 million Hours of Code in 180+ countries! 
+
+Hosting an Hour of Code event is a great way to get your company and employees involved in your local communities. Hosting an event can take many forms. Some examples include helping a local school host an assembly to inspire students about CS, inviting a local school to your offices to do an Hour of Code with your employees, inviting your employees and their families to an office hosted event, etc.
 
 Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
-The general timeline shown below covers what to expect when running this program for Computer Science Education Week:
+## Steps:
 
-|Date|Action|
-|-----|------|
-|Mid-late August|Company administrators attend Code.org hosted Hour of Code Corporate Partner Call|
-|Mid September - early October|Company administrators send [first communication](#communication1) about program to employees|
-|Mid October|Company employees attend Code.org hosted Volunteer Training Webinar<br>Check out last year's [recording](https://www.youtube.com/watch?v=aZWz5XX5PXk)!|
-|Late October - mid November|Company administrators send [second communication](#communication2) to employees about program|
-|October - November|Teachers reach out to employees who have signed up|
-|Second week in December<br><strong>CS Education Week</strong>|Employees who were contacted by teachers volunteer in classrooms|
-|Mid December|Employee volunteers receive participation and feedback survey|
-|Late January - February|Companyies receive Hour of Code impact report and participation numbers|
-<br/>
-Code.org also offers this volunteer toolkit! It provides your employees with all the information they need to know before heading to a classroom. Code.org will send this out to employees once they sign up.
-<br/>
+1. **[Reach out](#school) to a local school.** You should do this 3-4 months prior to the event.
+2. **[Register](https://hourofcode.com) your event and plan and finalize event strategy**. Discuss with the school where the event should be held, agenda, and other logistics.
+3. **[Message](#communication) out to your employees.** Let them know about the event and how they can get involved.
+4. **Host the event!**
+5. **Celebrate!** Share on social media and other marketing channels about the success of your event.
 
-## <a name="communication1" href"communication1"> First communication to your employees: Volunteer in a classroom!</a>
+### Here's the **[how-to guide](https://hourofcode.com/how-to)** for hosting an Hour of Code!
+
 _____________________________________________
-**Purpose:** To announce to your employees about your company’s participation in the Hour of Code and how they can become a volunteer.<br/>
-**Subject:** Calling all Hour of Code Volunteers!<br/>
-**Audience:** Your employees
+
+<a name="school"></a>
+## How to connect with a school
+
+- Look into your existing connections. If your company has an existing relationship with a local school reach out! Tap your employees to see if their children's school is hosting an Hour of Code and how your company can get involved.
+-  If your office is located [near one of our regional partners](/educate/regional-partner/partners), we can put you in touch. Contact donate@code.org.
+-  Check out our [map](https://hourofcode.com/map) of Hour of Code events to find a school already participating in the Hour of Code
+
+<a name="communication"></a>
+## Sample messaging to your employees
+
+**Purpose:** To announce to your employees about your company’s participation in the Hour of Code and how they can get involved.<br/>
+**Subject:** The Hour of Code is here!<br/>
+**To:** Your employees
 <br/>
 
 [letter]
@@ -47,20 +68,14 @@ I am excited to announce that [COMPANY] will be joining Code.org this year to he
 Last year, we had over [X] employees volunteer and we hope to exceed our goal this year! 
 
 How you can get involved:
-<strong>Volunteer in a Classroom</strong><br/>
-Volunteer in-person or virtually and inspire students to learn an Hour of Code! 
-<ul>
-<li>[DATE TBD]: Volunteer Training Webinar— Sign up to volunteer [here](/volunteer)</li>
-<li>A recorded link will be available on Code.org's [Volunteer how-to page](https://hourofcode.com/us/how-to/volunteers)</li>
-<li>October - December: Teachers will reach out to you to plan</li> 
-<li>Second week in December (Computer Science Education Week): have fun volunteering at Hour of Code events!</li> 
-</ul>
-<strong>Participate in [COMPANY]’s Hour of Code event (if applicable)</strong><br/>
-Join us in hosting an Hour of Code! [INCLUDE EVENT DETAILS]
+Join us as [COMPANY]'s Hour of Code event! 
+[EVENT DETAILS]
+
+You can also volunteer in a classroom! To learn more about this opportunity, check out Code.org's [volunteer guide](https://code.org/volunteer/guide).
 
 [COMPANY] is proud to participate in this worldwide campaign. Our efforts will help introduce many students to computer science who might not have discovered it otherwise. Technology is transforming the globe—the Hour of Code is our opportunity to transform technology by promoting equity and diversity in the field’s education and career pathways.
 
-Sign up today to help lead this movement forward!
+Join us to help lead this movement forward!
 
 -SIGNED
 <br/>
@@ -68,66 +83,28 @@ P.s. Try an [Hour of Code tutorial](/learn) yourself!
 
 [/letter]
 
-## <a name="communication2" href"communication2"> Second communication to your employees: It's not too late to be a volunteer!</a>
-**Purpose:** To follow up with your employees and give them a look at past volunteer experience.<br/>
-**Subject:** It’s not too late to volunteer for the Hour of Code!<br/>
-**Audience:** Your employees
-
-[letter]
-
-Hello [NAME],
-
-There’s still time to sign up to volunteer for the Hour of Code! Join [COMPANY] and Code.org to help give every student in every school the opportunity to learn computer science!
-
-Many careers begin with one spark of inspiration early in life. Help inspire local students to learn via the Hour of Code—and support a passionate, diverse next generation of computer science professionals.
-
-**How to Volunteer:**
-Help out a school in your community. [Sign up NOW](/volunteer)!<br/>
-<i>Important Information:</i><br/>
-<ul>
-<li>Watch [Volunteer Training Webinar](https://www.youtube.com/watch?v=aZWz5XX5PXk): What to expect when volunteering in a classroom</li>
-<li>Second week of December: Computer Science Education Week - Hour of Code volunteer events will happen throughout this week</li>
-</ul>
-
-**Past volunteer testimony:**
-<ul>
-<li>“The best part of my experience was that the entire class were women and people of color. **It bodes well for the future of our industry** to have a chance to reach and excite these kids.”</li>
-<li>“Especially enjoyed getting to **encourage young girls in tech**. Felt like I was helping the next generation in my local area.”</li>
-<li>“I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the **students who didn’t do as well academically were excelling** at thinking like a developer and helping others - giving them a place to feel confident.”</li>
-</ul>
-
-Sign up today to help lead this movement forward!
-
--SIGNED
-
-[/letter]
 
 ## How can your company further support the Hour of Code?
 
-Your employees are volunteering in their communities and spreading the word about the Hour of Code. Here are some ways your company can help promote and highlight how you are getting involved:
+You and your employees are volunteering in your communities and spreading the word about the Hour of Code. Here are some ways your company can help promote and highlight how you are getting involved:
 
 ### Hour of Code general announcement
-<ul>
-<li>The #HourOfCode is coming again—join the movement</li>
-<li>Computer science is changing our world. Help students participate in this change with one #HourOfCode</li>
-<li>Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode</li>
-<li>Every leap forward in technology begins with one #HourOfCode. Help the next generation learn!</li>
-</ul>
+
+- [COMPANY] is passionate about diversity and equity in tech. Check out what we are doing with the #HourOfCode!
+- [COMPANY] is hosting an Hour of Code event! See how you can also get involved [here](https://hourofcode.com).
+- The #HourOfCode is coming again—join the movement!
+- Computer science is changing our world. Help students participate in this change with one #HourOfCode
+- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode
+- Every leap forward in technology begins with one #HourOfCode. Join [COMPANY] to help the next generation learn!
+- [Company] is proud to be a part of such an amazing worldwide movement. Join us to help every child have access to Compunter Science education!
 
 ### Stats
-<ul>
-<li>More girls have tried computer science through #HourofCode than in the last 70 years. Help us make history again</li>
-<li>Did you know only 1 in 4 schools teach computer science? Give every student the chance to learn one #HourOfCode </li>
-<li>Only 26% of software professionals are women. Support introducing girls to computer science with #HourOfCode </li>
-<li>67% of computing jobs are outside the tech sector. Help make computer science foundational learning with </li>
-</ul>
 
-### Create your own
-<ul>
-<li>[Company] is proud to be a part of such an amazing worldwide movement. Join us to help every child have access to Compunter Science education!
-<li>One #HourOfCode can turn into [fill in the blank]</li>
-<li>I’m supporting #HourofCode because [fill in the blank]. Join us!</li>
-</ul>
+- More girls have tried computer science through #HourofCode than in the last 70 years. Help us make history again
+- Did you know only 1 in 4 schools teach computer science? Give every student the chance to learn one #HourOfCode
+- Only 26% of software professionals are women. Support introducing girls to computer science with #HourOfCode
+- 67% of computing jobs are outside the tech sector. Help make computer science foundational learning with 
+
 
 ### Engineer-specific
 <ul>
@@ -172,6 +149,6 @@ Your employees are volunteering in their communities and spreading the word abou
 <div style="clear: both;"></div>
 
 ### Other resources:
-Hour of Code promotional resources: Includes brochures, one-pagers, images, stats, posters, etc.
+Hour of Code [promotional resources](https://hourofcode.com/promote/resources): Includes brochures, one-pagers, images, stats, posters, etc.
 About Code.org<br/><br/>
-Promote through Code.org SWAG (all proceeds go to supporting more students gain access to computer science education)
+Promote through Code.org [SWAG](https://store.code.org) (all proceeds go to supporting more students gain access to computer science education)

@@ -9,12 +9,13 @@ require 'singleton'
 #       study_group: 'control',             # OPTIONAL
 #       script_id: script.id,               # OPTIONAL
 #       level_id: level.id,                 # OPTIONAL
-#       project_id: project.id              # OPTIONAL
+#       project_id: project.id,             # OPTIONAL
+#       user_id: user.id,                   # OPTIONAL
 #       event: 'drowning',                  # REQUIRED
-#       data_int:                           # OPTIONAL
-#       data_float:                         # OPTIONAL
-#       data_string:                        # OPTIONAL
-#       data_json:                          # OPTIONAL
+#       data_int: 2,                        # OPTIONAL
+#       data_float: 1.8,                    # OPTIONAL
+#       data_string: 'hello world',         # OPTIONAL
+#       data_json: "{\"key\":\"value\"}"    # OPTIONAL
 #     }
 #   )
 class FirehoseClient

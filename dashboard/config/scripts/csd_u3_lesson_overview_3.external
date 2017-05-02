@@ -1,0 +1,19 @@
+name 'CSD U3 Lesson Overview 3'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Students are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students create an online version of the image they designed in the previous lesson.
+
+# Vocabulary
+
+* **Bug** - Part of a program that does not work correctly.
+* **Debugging** - Finding and fixing problems in your algorithm or program.
+* **Program** - An algorithm that has been coded into something that can be run by a machine.
+
+# New Blocks
+
+*  **[ellipse()](//docs.code.org/gamelab/ellipse/)** - `ellipse(x, y, w, h);`
+*  **[rect()](//docs.code.org/gamelab/rect/)** - `rect(x, y, w, h);`
+*  **[fill()](//docs.code.org/gamelab/fill/)** - `fill(color)`
+MARKDOWN

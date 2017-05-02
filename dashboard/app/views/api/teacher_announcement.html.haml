@@ -1,10 +1,5 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
-- code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
-- beyond_url = 'https://code.org/educate'
-- recruit_ap_students = 'http://teacherblog.code.org/post/156689658029/ask-your-cs-principles-students-to-star-in-our'
-- recruit_ap_students_gift_url = 'http://teacherblog.code.org/post/157254660224/lets-make-history-for-ap-computer-science'
-- recruit_ap_students_video_url = 'https://www.youtube.com/watch?v=ed_zuLHlMdQ'
-- csf_pilot_url = 'http://teacherblog.code.org/post/156904055219/were-making-cs-fundamentals-even-betterand-we'
+- applab_export_url = "http://teacherblog.code.org/post/159273548404/new-feature-export-your-app-lab-code"
 
 .teacher-announce
   .announce-heading{style: 'height: 20px; box-sizing: content-box'}
@@ -12,36 +7,26 @@
   #us-announcement{style: 'display: none;'}
 
     .announce-content
-      %a.track-link{href: csf_pilot_url, target: '_blank', data: {id: 'csf_pilot'}}
+      %a.track-link{href: applab_export_url, target: '_blank', data: {id: 'applab_export'}}
         .content-img-container
-          = image_tag(CDO.shared_image_url('/teacher-announcement/playlab-cropped.png'), width: '200px')
+          = image_tag(CDO.shared_image_url('/teacher-announcement/applab.jpg'), width: '200px')
       .content-text
-        != t('home.announcement_csf_pilot')
+        != t('home.announcement_applab_export')
       .announce-learn-more
-        %a.track-link{href: csf_pilot_url, target: '_blank', data: {id: 'csf_pilot'}}
+        %a.track-link{href: applab_export_url, target: '_blank', data: {id: 'applab_export'}}
           %button.primary= t('home.announcement_learn_more_button')
-
-    .announce-content
-      %a.track-link{href: recruit_ap_students_video_url, target: '_blank', data: {id: 'recruit_ap_students_video'}}
-        .content-img-container
-          = image_tag(CDO.shared_image_url('/teacher-announcement/recruit-ap-students-video.jpg'), width: '200px')
-      .content-text
-        != t('home.announcement_apcsp_recruitment3', gift_url: recruit_ap_students_gift_url, video_url: recruit_ap_students_video_url)
-      .announce-learn-more
-        %a.track-link{href: recruit_ap_students_video_url, target: '_blank', data: {id: 'recruit_ap_students_video'}}
-          %button.primary= t('home.announcement_watch_video_button')
 
   #non-us-announcement{style: 'display: none;'}
 
     .announce-content
-      %a.track-link{href: code_studio_video_url, target: '_blank', data: {id: 'code_studio_video'}}
+      %a.track-link{href: applab_export_url, target: '_blank', data: {id: 'applab_export'}}
         .content-img-container
-          = image_tag(CDO.shared_image_url('/teacher-announcement/how-code-studio.png'), width: '200px')
+          = image_tag(CDO.shared_image_url('/teacher-announcement/applab.jpg'), width: '200px')
       .content-text
-        != t('home.announcement_go_beyond')
+        != t('home.announcement_applab_export')
       .announce-learn-more
-        %a.track-link{href: beyond_url, target: '_blank', data: {id: 'code_studio_video'}}
-          %button.primary= t('home.announcement_go_beyond_button')
+        %a.track-link{href: applab_export_url, target: '_blank', data: {id: 'applab_export'}}
+          %button.primary= t('home.announcement_learn_more_button')
 
   .mini-announcement
     .content-text

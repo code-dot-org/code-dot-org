@@ -13,7 +13,9 @@
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
     "data": "01111111101011111101110111101111101101111111001111111100111111101101111101111011",
-    "instructions": "Complete the X shape by typing 0s and 1s"
+    "instructions": "Complete the X shape by typing 0s and 1s",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false"
   },
   "published": true,
   "notes": "",
