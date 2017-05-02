@@ -1027,6 +1027,25 @@ class User < ActiveRecord::Base
         new_csf_level_perfected = true
       end
 
+      # Log data (sampled) to AWS Firehose.
+      if user_id % 100 == 0
+        FirehoseClient.instance.put_record(
+          'analysis-events',
+          {
+            study: 'attempt_counts',
+            event: 'new_attempt',
+            user: user_id,
+            level_id: user_level.level_id,
+            script_id: user_level.script_id,
+            data_int: user_level.attempts + 1,
+            data_json: {
+              previous_best_result: user_level.best_result,
+              this_result: new_result,
+            }.to_json
+          }
+        )
+      end
+
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
