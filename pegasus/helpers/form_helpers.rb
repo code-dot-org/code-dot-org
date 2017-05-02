@@ -1,7 +1,7 @@
 require 'digest/md5'
 require File.join(CDO.root_dir, 'lib/forms/pegasus_form_validation')
 
-include PegasusFormValidation
+extend PegasusFormValidation
 
 def delete_form(kind, secret)
   form = DB[:forms].where(kind: kind, secret: secret).first
