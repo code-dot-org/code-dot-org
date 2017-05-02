@@ -17,6 +17,69 @@ class SectionApiHelperTest < SequelTestCase
       FakeDashboard.use_fake_database
     end
 
+    describe 'create' do
+      it 'adds row to DB' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            name: 'DashboardStudent#create',
+            gender: 'f',
+            age: 14
+          }
+          DashboardStudent.create params
+
+          new_user = Dashboard.db[:users].where(name: 'DashboardStudent#create').first
+          assert new_user
+          assert_equal 'DashboardStudent#create', new_user[:name]
+          assert_equal 'f', new_user[:gender]
+          assert_equal 'student', new_user[:user_type]
+          assert_equal 'abracadabra abracadabra', new_user[:secret_words]
+          assert_equal 'sponsored', new_user[:provider]
+        end
+      end
+    end
+
+    describe 'fetch_if_allowed' do
+      it 'returns nil if not authorized' do
+        row = DashboardStudent.fetch_if_allowed(
+          FakeDashboard::STUDENT[:id],
+          FakeDashboard::TEACHER_SELF[:id]
+        )
+        assert_nil row
+      end
+
+      it 'returns student if teacher' do
+        row = DashboardStudent.fetch_if_allowed(
+          FakeDashboard::STUDENT[:id],
+          FakeDashboard::TEACHER[:id]
+        )
+        assert row
+      end
+
+      it 'returns student if admin' do
+        row = DashboardStudent.fetch_if_allowed(
+          FakeDashboard::STUDENT[:id],
+          FakeDashboard::ADMIN[:id]
+        )
+        assert row
+      end
+
+      it 'does not return deleted students' do
+        row = DashboardStudent.fetch_if_allowed(
+          FakeDashboard::STUDENT_DELETED[:id],
+          FakeDashboard::TEACHER_DELETED_USER[:id]
+        )
+        assert_nil row
+      end
+
+      it 'returns nil for non-existent students' do
+        row = DashboardStudent.fetch_if_allowed(
+          FakeDashboard::UNUSED_USER_ID,
+          FakeDashboard::TEACHER[:id]
+        )
+        assert_nil row
+      end
+    end
+
     describe 'fetch_user_students' do
       it 'returns followers' do
         students = DashboardStudent.fetch_user_students(FakeDashboard::TEACHER[:id])
