@@ -82,6 +82,12 @@ module BrowserHelpers
         puts "DEBUG: [#{check_reason_description}] No JS errors found on current page."
       end
     end
+  rescue
+    # We're not currently failing any tests based on JS errors showing up, so
+    # this is just a debugging tool.
+    # We're getting intermittent timing errors that have to do with SauceLabs
+    # going away before we can check for JS errors.
+    # We don't want that to cause test runs to fail, so ignore exceptions for now.
   end
 
   def wait
