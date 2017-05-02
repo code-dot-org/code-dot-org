@@ -1,13 +1,13 @@
 <Map>
   <config><![CDATA[{
   "game_id": 59,
-  "created_at": "2017-04-28T19:48:02.000Z",
+  "created_at": "2017-05-01T22:08:20.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "display_name": "Headers in HTML",
-    "reference": "/csd/headers/index.html"
+    "display_name": "Functions",
+    "reference": "/csd/functions/index.html"
   },
   "published": true,
   "notes": "",

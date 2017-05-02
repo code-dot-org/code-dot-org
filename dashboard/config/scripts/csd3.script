@@ -235,7 +235,7 @@ level 'CSD U3 Functions Create Function'
 level 'CSD U3 Functions Write Reset'
 level 'CSD U3 Functions Add IsTouching'
 level 'CSD U3 Functions Add Change Background'
-named_level 'CSD U3 Functions Introduction'
+named_level 'CSD U3 functions map'
 
 stage 'The Game Design Process', flex_category: 'csd3_2'
 named_level 'CSD U3 Defender SFLP'
