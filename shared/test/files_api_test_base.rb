@@ -81,9 +81,17 @@ class FilesApiTestBase < Minitest::Test
     assert_equal(expected['size'], actual['size'])
   end
 
-  delegate :successful?, to: :last_response
-  delegate :bad_request?, to: :last_response
-  delegate :not_found?, to: :last_response
+  def successful?
+    last_response.successful?
+  end
+
+  def bad_request?
+    last_response.bad_request?
+  end
+
+  def not_found?
+    last_response.not_found?
+  end
 
   def unsupported_media_type?
     last_response.status == 415
