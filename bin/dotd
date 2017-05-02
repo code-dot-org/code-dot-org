@@ -56,6 +56,12 @@ def puts_script_intro
       Known Issues
       #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
 
+    #{bold 'Before You Get Started'}
+
+      Honeybadger: Join Slack#infra-honeybadger.
+
+      Robo-DTT: See Slack#infra-test. If green, run the slash command: /set-last-dtt-green yes
+
   EOS
 end
 
