@@ -15,6 +15,9 @@ class ProjectsController < ApplicationController
     playlab: {
       name: 'New Play Lab Project'
     },
+    infinity: {
+      name: 'New Infinity Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
