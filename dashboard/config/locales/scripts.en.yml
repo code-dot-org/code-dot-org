@@ -2626,7 +2626,7 @@ en:
               name: Turtle Programming
         cspassessment:
           title: CS Principles Culminating Assessment
-          description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
+          description: 'This assessment has been deprecated and is scheduled for removal in Summer of 2017.  Students may complete the test and see their own results, but a teacher will not be able to see results for students in a section.  Please use the official CSP practice exam from the College Board.  [This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.]'
           description_short: Culminating
           description_audience: ''
           stages:
@@ -2638,6 +2638,12 @@ en:
               name: CSP Longitudinal Contact Request
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
+            "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
+              name: "[Deprecated - teacher cannot see results] CSP Culminating Assessment"
+            'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
+              name: 'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment'
+            'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
+              name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
