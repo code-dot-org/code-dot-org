@@ -58,45 +58,46 @@ const ProgressBubbleSet = React.createClass({
 
     return (
       <div style={{...styles.main, ...style}}>
-        {levels.map((level, index) => (
-          <div
-            style={styles.withBackground}
-            key={index}
-          >
+        {levels.map((level, index) => {
+          const displayPill = level.isUnplugged || level.isGoBeyond;
+          return (
             <div
-              style={[
-                styles.background,
-                index === 0 && styles.backgroundFirst,
-                index === levels.length - 1 && styles.backgroundLast
-              ]}
-            />
-            <div
-              style={{
-                ...styles.container,
-                ...(level.isUnplugged && styles.pillContainer)
-              }}
+              style={styles.withBackground}
+              key={index}
             >
-              {level.isUnplugged &&
-                <ProgressPill
-                  url={level.url}
-                  status={level.status}
-                  text={level.isGoBeyond ? i18n.goBeyond() : i18n.unpluggedActivity()}
-                  fontSize={12}
-                />
-              }
-              {!level.isUnplugged &&
-                <ProgressBubble
-                  number={level.levelNumber}
-                  status={level.status}
-                  url={level.url}
-                  disabled={disabled}
-                  levelName={level.name || level.progression}
-                  levelIcon={getIconForLevel(level)}
-                />
-              }
+              <div
+                style={[
+                  styles.background,
+                  index === 0 && styles.backgroundFirst,
+                  index === levels.length - 1 && styles.backgroundLast
+                ]}
+              />
+              <div
+                style={{
+                  ...styles.container,
+                  ...(level.isUnplugged && styles.pillContainer)
+                }}
+              >
+                {displayPill ?
+                  <ProgressPill
+                    url={level.url}
+                    status={level.status}
+                    text={level.isGoBeyond ? i18n.goBeyond() : i18n.unpluggedActivity()}
+                    fontSize={12}
+                  /> :
+                  <ProgressBubble
+                    number={level.levelNumber}
+                    status={level.status}
+                    url={level.url}
+                    disabled={disabled}
+                    levelName={level.name || level.progression}
+                    levelIcon={getIconForLevel(level)}
+                  />
+                }
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     );
   }
