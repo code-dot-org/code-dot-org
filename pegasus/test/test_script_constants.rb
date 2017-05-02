@@ -56,4 +56,15 @@ class ScriptConstantsTest < Minitest::Test
     assert_nil ScriptConstants.position_in_category('script', :not_a_category)
     assert_nil ScriptConstants.position_in_category('not a script', :csp)
   end
+
+  describe 'ScriptConstants::script_in_any_category?' do
+    it 'finds artist and csd1' do
+      assert ScriptConstants.script_in_any_category?('artist')
+      assert ScriptConstants.script_in_any_category?('csd1')
+    end
+
+    it 'does not find nonexistent scripts' do
+      refute ScriptConstants.script_in_any_category?('foo')
+    end
+  end
 end
