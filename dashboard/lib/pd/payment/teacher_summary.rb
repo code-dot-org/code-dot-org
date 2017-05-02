@@ -45,9 +45,7 @@ module Pd::Payment
       enrollment.try(&:school)
     end
 
-    def workshop
-      workshop_summary.workshop
-    end
+    delegate :workshop, to: :workshop_summary
 
     def generate_teacher_progress_report_line_item(with_payment = false)
       line_item = {
