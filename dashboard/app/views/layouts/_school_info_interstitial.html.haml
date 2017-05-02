@@ -1,0 +1,11 @@
+#school-info-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false'}
+  .modal-dialog
+    .modal-content.no-modal-icon
+      %h2.custom-h2= t('school_info_interstitial.title')
+
+      %h3= t('school_info_interstitial.message')
+      .left.full-width
+        #schooldropdown-block.itemblock{style: "margin-left: -10px; background-color: #ffffff;  border-style: none;"}
+          = render partial: 'shared/school_info_interstitial', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
+        %button#save-button.btn.primary-button{style: 'float: left;'}
+          =t('school_info_interstitial.save')
