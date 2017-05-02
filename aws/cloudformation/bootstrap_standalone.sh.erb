@@ -83,6 +83,9 @@ jq "." <<JSON > $FIRST_BOOT
     "build_apps": true,
     "use_my_apps": true,
 <% end %>
+<% unless cdn_enabled -%>
+    "cdn_enabled": false,
+<% end -%>
     "override_dashboard": "dashboard-<%=subdomain%>",
     "override_pegasus": "<%=subdomain%>"
   },

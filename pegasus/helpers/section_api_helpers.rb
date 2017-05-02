@@ -1,5 +1,6 @@
-require 'cdo/user_helpers'
+require 'cdo/activity_constants'
 require 'cdo/script_constants'
+require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
@@ -424,6 +425,8 @@ class DashboardSection
   end
 
   def students
+    return @students if @students
+
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -433,7 +436,7 @@ class DashboardSection
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path
       ).
-      distinct(:student_user_id).
+      group_by(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       where(followers__deleted_at: nil).
@@ -442,10 +445,24 @@ class DashboardSection
           {
             location: "/v2/users/#{row[:id]}",
             age: DashboardStudent.birthday_to_age(row[:birthday]),
-            completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
           }
         )
       end
+    # Though it would be simpler to query the level counts for each student via
+    # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
+    # querying all students together (as below) is significantly more performant.
+    student_ids = @students.map {|s| s[:id]}
+    level_counts = Dashboard.db[:user_levels].
+      group_and_count(:user_id).
+      where(user_id: student_ids).
+      where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+      all
+    @students.each do |datum|
+      level_count = level_counts.find {|x| x[:user_id] == datum[:id]}
+      datum[:completed_levels_count] = level_count ? level_count[:count] : 0
+    end
+
+    @students
   end
 
   def teacher?(user_id)
@@ -526,38 +543,73 @@ class DashboardSection
 end
 
 class DashboardUserScript
+  # Assigns a script to all users enrolled in the section, creating a new user_scripts object if
+  # necessary. The method noops for those user_scripts that already exist with assigned_at set.
+  # WARNING: This method does not verify that the section and student_users exist (aren't deleted).
   def self.assign_script_to_section(script_id, section_id)
-    # create userscripts for users that don't have one yet
-    Dashboard.db[:user_scripts].
-      insert_ignore.
-      import(
-        [:user_id, :script_id],
-        Dashboard.db[:followers].
-          select(:student_user_id, script_id.to_s).
-          where(section_id: section_id, deleted_at: nil)
-      )
+    student_user_ids = Dashboard.db[:followers].
+      select(:student_user_id).
+      where(section_id: section_id, deleted_at: nil).
+      map {|f| f[:student_user_id]}
+    DashboardUserScript.assign_script_to_users(script_id, student_user_ids)
   end
 
+  # Assigns a script to the user via user_scripts, creating a new user_scripts object if necessary.
+  # The method noops if a user_scripts already exists with assigned_at set.
+  # @param script_id [Integer] The dashboard ID of the script.
+  # @param user_id [Integer] The dashboard ID of the user.
   def self.assign_script_to_user(script_id, user_id)
-    # creates a userscript for a user if they don't have it yet
-    Dashboard.db[:user_scripts].
-      insert_ignore.
-      import(
-        [:user_id, :script_id],
-        Dashboard.db[:users].
-          select(user_id, script_id.to_s).
-          where(id: user_id, deleted_at: nil)
+    time_now = Time.now
+    existing = Dashboard.db[:user_scripts].where(user_id: user_id, script_id: script_id).first
+    if existing
+      return if existing[:assigned_at]
+      Dashboard.db[:user_scripts].where(user_id: user_id, script_id: script_id).update(
+        updated_at: time_now,
+        assigned_at: time_now
       )
+    else
+      Dashboard.db[:user_scripts].insert(
+        user_id: user_id,
+        script_id: script_id,
+        created_at: time_now,
+        updated_at: time_now,
+        assigned_at: time_now
+      )
+    end
   end
 
+  # Assigns a script to a set of users via user_scripts, creating new user_scripts objects if
+  # necessary. The method noops for those user_scripts that already exist with assigned_at set.
+  # WARNING: This method does not verify that the users exist (aren't deleted).
   def self.assign_script_to_users(script_id, user_ids)
+    # NOTE: This method could be more simply written by iterating over user_ids, calling
+    # DashboardUserScript#assign_script_to_user for each. This (more complex) approach is used for
+    # its better DB performance.
     return if user_ids.empty?
-    # create userscripts for users that don't have one yet
+
+    time_now = Time.now
+    all_existing = Dashboard.db[:user_scripts].where(user_id: user_ids, script_id: script_id)
+    all_existing_user_ids = all_existing.map {|user_script| user_script[:user_id]}
+
+    missing_assigned_at = []
+    all_existing.each do |existing|
+      missing_assigned_at << existing[:id] unless existing[:assigned_at]
+    end
+    Dashboard.db[:user_scripts].where(id: missing_assigned_at).update(
+      updated_at: time_now,
+      assigned_at: time_now
+    )
+    missing_user_scripts = user_ids.select {|user_id| !all_existing_user_ids.include? user_id}
+    return if missing_user_scripts.empty?
     Dashboard.db[:user_scripts].
-      insert_ignore.
       import(
-        [:user_id, :script_id],
-        user_ids.zip([script_id] * user_ids.count)
+        [:user_id, :script_id, :created_at, :updated_at, :assigned_at],
+        missing_user_scripts.zip(
+          [script_id] * missing_user_scripts.count,
+          [time_now] * missing_user_scripts.count,
+          [time_now] * missing_user_scripts.count,
+          [time_now] * missing_user_scripts.count
+        )
       )
   end
 end

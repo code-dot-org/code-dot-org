@@ -128,6 +128,7 @@ module RakeUtils
     # Using `with_clean_env` is necessary when shelling out to a different bundle.
     # Ref: http://bundler.io/man/bundle-exec.1.html#Shelling-out
     Bundler.with_clean_env do
+      ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
         bundle_install
         yield

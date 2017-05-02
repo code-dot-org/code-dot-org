@@ -1514,7 +1514,7 @@ zh-CN:
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
             Standalone video: Standalone video
-            Curriculum Reference: 课程参考
+            Curriculum Reference: 教案参考
           description_audience: ''
           stages:
             Anonymous student survey:
@@ -1590,7 +1590,7 @@ zh-CN:
             Standalone video:
               name: Standalone video
             Curriculum Reference:
-              name: 课程参考
+              name: 教案参考
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 第二阶段在线：混合的暑期学习
@@ -4525,7 +4525,7 @@ zh-CN:
               name: Test stage with bubbles
         csd3:
           title: CSD Unit 3 - Interactive Games and Animations
-          description: U3 of Discoveries
+          description: ''
           description_short: 编程
           stage:
             Booleans and Conditionals: Booleans and Conditionals
@@ -4547,6 +4547,20 @@ zh-CN:
             Using the Game Design Process: Using the Game Design Process
             'Project: Build a Game': 'Project: Build a Game'
             'Project: Design a Game': 'Project: Design a Game'
+            Programming for Entertainment: Programming for Entertainment
+            Plotting Shapes: Plotting Shapes
+            Shapes and Randomness: Shapes and Randomness
+            Variables: 变量
+            Sprites: Sprites
+            The Draw Loop: The Draw Loop
+            The Counter Pattern Unplugged: The Counter Pattern Unplugged
+            Sprite Movement: Sprite Movement
+            Conditionals: 条件语句
+            Keyboard Input: Keyboard Input
+            Other Forms of Input: Other Forms of Input
+            Booleans Unplugged: Booleans Unplugged
+            Project - Interactive Card: Project - Interactive Card
+            Project - Design a Game: Project - Design a Game
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -4587,6 +4601,34 @@ zh-CN:
               name: 'Project: Build a Game'
             'Project: Design a Game':
               name: 'Project: Design a Game'
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Shapes and Randomness:
+              name: Shapes and Randomness
+            Variables:
+              name: 变量
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Conditionals:
+              name: 条件语句
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Project - Design a Game:
+              name: Project - Design a Game
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4772,6 +4814,11 @@ zh-CN:
             Processing with Apps: Processing with Apps
             'Project: Apps and Problem Solving': 'Project: Apps and Problem Solving'
             Human vs Computer Processing: Human vs Computer Processing
+            Input and Output: Input and Output
+            Processing: Processing
+            Storage: Storage
+            Apps and Problem Solving: Apps and Problem Solving
+            Project - Propose an App: Project - Propose an App
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4794,6 +4841,16 @@ zh-CN:
               name: 'Project: Apps and Problem Solving'
             Human vs Computer Processing:
               name: Human vs Computer Processing
+            Input and Output:
+              name: Input and Output
+            Processing:
+              name: Processing
+            Storage:
+              name: Storage
+            Apps and Problem Solving:
+              name: Apps and Problem Solving
+            Project - Propose an App:
+              name: Project - Propose an App
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -5994,11 +6051,11 @@ zh-CN:
             'Project: Board Output': 'Project: Board Output'
             For Loops with UI and Board: For Loops with UI and Board
             Lists and For Loops: Lists and For Loops
-            Analog Input: Analog Input
-            Polling Events: Polling Events
-            Sensor Applications: Sensor Applications
+            Analog Input: 模拟输入
+            Polling Events: 轮询事件
+            Sensor Applications: 传感器应用
             'Project: Prototype an Innovation': 'Project: Prototype an Innovation'
-            Map: Map
+            Map: 地图
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
@@ -6041,20 +6098,20 @@ zh-CN:
             Lists and For Loops:
               name: Lists and For Loops
             Analog Input:
-              name: Analog Input
+              name: 模拟输入
             Polling Events:
-              name: Polling Events
+              name: 轮询事件
             Sensor Applications:
-              name: Sensor Applications
+              name: 传感器应用
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
             Map:
-              name: Map
+              name: 地图
         workshop-gamelab:
           stage:
             Introduction: 介绍
             Sprites: Sprites
-            Input: Input
+            Input: 输入
             'Project: Interactive Card': 'Project: Interactive Card'
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6066,7 +6123,7 @@ zh-CN:
             Sprites:
               name: Sprites
             Input:
-              name: Input
+              name: 输入
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
         csd5-draft:
@@ -6074,17 +6131,17 @@ zh-CN:
             new stage: new stage
             Interpreting Data: Interpreting Data
             Data in the Real World: Data in the Real World
-            Combining Representations: Combining Representations
-            Representing Images: Representing Images
-            Representation Matters: Representation Matters
-            Patterns and Representation: Patterns and Representation
-            ASCII and Binary Representation: ASCII and Binary Representation
-            Representing Numbers Part 1: Representing Numbers Part 1
-            Representing Numbers Part 2: Representing Numbers Part 2
-            Project - Create a Representation: Project - Create a Representation
-            Problem Solving and Data: Problem Solving and Data
-            Making Decisions with Data: Making Decisions with Data
-            Automating Data Decisions: Automating Data Decisions
+            Combining Representations: 组合表示
+            Representing Images: 表示图像
+            Representation Matters: 表示事项
+            Patterns and Representation: 模式和表示法
+            ASCII and Binary Representation: ASCII 和二进制表示形式
+            Representing Numbers Part 1: 表示数字：第一部分
+            Representing Numbers Part 2: 表示数字：第二部分
+            Project - Create a Representation: 项目-创建表示
+            Problem Solving and Data: 解决问题和数据
+            Making Decisions with Data: 依靠数据做决定
+            Automating Data Decisions: 自动化数据决策
             Problem Solving with Big Data: Problem Solving with Big Data
             Project - Solve a Data Problem: Project - Solve a Data Problem
           title: ''
@@ -6099,27 +6156,27 @@ zh-CN:
             Data in the Real World:
               name: Data in the Real World
             Combining Representations:
-              name: Combining Representations
+              name: 组合表示
             Representing Images:
-              name: Representing Images
+              name: 表示图像
             Representation Matters:
-              name: Representation Matters
+              name: 表示事项
             Patterns and Representation:
-              name: Patterns and Representation
+              name: 模式和表示法
             ASCII and Binary Representation:
-              name: ASCII and Binary Representation
+              name: ASCII 和二进制表示形式
             Representing Numbers Part 1:
-              name: Representing Numbers Part 1
+              name: 表示数字：第一部分
             Representing Numbers Part 2:
-              name: Representing Numbers Part 2
+              name: 表示数字：第二部分
             Project - Create a Representation:
-              name: Project - Create a Representation
+              name: 项目-创建表示
             Problem Solving and Data:
-              name: Problem Solving and Data
+              name: 解决问题和数据
             Making Decisions with Data:
-              name: Making Decisions with Data
+              name: 依靠数据做决定
             Automating Data Decisions:
-              name: Automating Data Decisions
+              name: 自动化数据决策
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
@@ -6132,8 +6189,8 @@ zh-CN:
             Basic App Functionality: Basic App Functionality
             Event Types: Event Types
             Getters and Setters: Getters and Setters
-            Room Escape: Room Escape
-            Extra: Extra
+            Room Escape: 逃出房间
+            Extra: 额外
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
           description_short: ''
@@ -6152,9 +6209,9 @@ zh-CN:
             Getters and Setters:
               name: Getters and Setters
             Room Escape:
-              name: Room Escape
+              name: 逃出房间
             Extra:
-              name: Extra
+              name: 额外
         applab-2hour:
           stage:
             new stage: new stage
@@ -6166,7 +6223,7 @@ zh-CN:
           title: App Lab 2 Hour Workshop
           description_audience: Middle and High School Students
           description_short: ''
-          description: 这个工作坊计划在两个小时内给学生介绍应用实验室的基本情况。不同计算机背景的学生都应该参与，并且一起享受创新的乐趣。
+          description: 这个学习班计划在两个小时内给学生介绍应用实验室的基本情况。不同计算机背景的学生都可以参与，并且一起享受创新的乐趣。
           stages:
             new stage:
               name: new stage
@@ -6195,7 +6252,7 @@ zh-CN:
             App Lab Basics: App Lab Basics
             The Circuit Playground: The Circuit Playground
             Physical Input: Physical Input
-            Analog Input: Analog Input
+            Analog Input: 模拟输入
           title: Maker Toolkit Workshop
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
           description_short: Level progression to accompany an in-person Maker Toolkit Workshop
@@ -6208,7 +6265,7 @@ zh-CN:
             Physical Input:
               name: Physical Input
             Analog Input:
-              name: Analog Input
+              name: 模拟输入
         coursee-ramp:
           stage:
             Introduction: 介绍
@@ -6239,8 +6296,8 @@ zh-CN:
             Timed Loops: Timed Loops
             'Project: Board Output': 'Project: Board Output'
             Physical Input: Physical Input
-            Analog Input: Analog Input
-            Sensor Applications: Sensor Applications
+            Analog Input: 模拟输入
+            Sensor Applications: 传感器应用
             'Project: Prototype an Innovation': 'Project: Prototype an Innovation'
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -6272,9 +6329,9 @@ zh-CN:
             Physical Input:
               name: Physical Input
             Analog Input:
-              name: Analog Input
+              name: 模拟输入
             Sensor Applications:
-              name: Sensor Applications
+              name: 传感器应用
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
         csd3-draft:
@@ -6361,18 +6418,18 @@ zh-CN:
               name: 'Project: Design a Game'
         csd5:
           stage:
-            Representation Matters: Representation Matters
-            Patterns and Representation: Patterns and Representation
-            ASCII and Binary Representation: ASCII and Binary Representation
-            Representing Images: Representing Images
-            Representing Numbers Part 1: Representing Numbers Part 1
-            Representing Numbers Part 2: Representing Numbers Part 2
-            Combining Representations: Combining Representations
-            Project - Create a Representation: Project - Create a Representation
-            Problem Solving and Data: Problem Solving and Data
-            Making Decisions with Data: Making Decisions with Data
+            Representation Matters: 表示事项
+            Patterns and Representation: 模式和表示法
+            ASCII and Binary Representation: ASCII 和二进制表示形式
+            Representing Images: 表示图像
+            Representing Numbers Part 1: 表示数字：第一部分
+            Representing Numbers Part 2: 表示数字：第二部分
+            Combining Representations: 组合表示
+            Project - Create a Representation: 项目-创建表示
+            Problem Solving and Data: 解决问题和数据
+            Making Decisions with Data: 依靠数据做决定
             Interpreting Data: Interpreting Data
-            Automating Data Decisions: Automating Data Decisions
+            Automating Data Decisions: 自动化数据决策
             Problem Solving with Big Data: Problem Solving with Big Data
             Project - Solve a Data Problem: Project - Solve a Data Problem
             Representing Numbers: Representing Numbers
@@ -6383,29 +6440,29 @@ zh-CN:
           description: ''
           stages:
             Representation Matters:
-              name: Representation Matters
+              name: 表示事项
             Patterns and Representation:
-              name: Patterns and Representation
+              name: 模式和表示法
             ASCII and Binary Representation:
-              name: ASCII and Binary Representation
+              name: ASCII 和二进制表示形式
             Representing Images:
-              name: Representing Images
+              name: 表示图像
             Representing Numbers Part 1:
-              name: Representing Numbers Part 1
+              name: 表示数字：第一部分
             Representing Numbers Part 2:
-              name: Representing Numbers Part 2
+              name: 表示数字：第二部分
             Combining Representations:
-              name: Combining Representations
+              name: 组合表示
             Project - Create a Representation:
-              name: Project - Create a Representation
+              name: 项目-创建表示
             Problem Solving and Data:
-              name: Problem Solving and Data
+              name: 解决问题和数据
             Making Decisions with Data:
-              name: Making Decisions with Data
+              name: 依靠数据做决定
             Interpreting Data:
               name: Interpreting Data
             Automating Data Decisions:
-              name: Automating Data Decisions
+              name: 自动化数据决策
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
@@ -6648,8 +6705,21 @@ zh-CN:
           stage:
             'Algorithms: Tangrams': 'Algorithms: Tangrams'
             Introduction: 介绍
+            Ice Age Play Lab: 冰河世界游戏实验室
+            Functions in Farmer: Functions in Farmer
+            Conditionals and Functions in Bee: Conditionals and Functions in Bee
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
               name: 介绍
+            Ice Age Play Lab:
+              name: 冰河世界游戏实验室
+            Functions in Farmer:
+              name: Functions in Farmer
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
