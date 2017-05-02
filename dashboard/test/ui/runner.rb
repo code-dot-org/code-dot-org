@@ -559,12 +559,12 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    options.out || (test_run_string + '_output.html')
+    options.out || "#{test_run_string}_output.html"
   end
 end
 
 def rerun_filename(test_run_string)
-  test_run_string + '.rerun'
+  "#{test_run_string}.rerun"
 end
 
 def cucumber_arguments_for_browser(browser, options)
