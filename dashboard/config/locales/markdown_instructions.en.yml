@@ -804,6 +804,181 @@ en:
         property in \"style.css\" in the `p` rule-set.\r\n* Change the text-align
         value to `center` or `right`.\r\n* Add a `text-align` rule in the `body` rule
         set"
+      CSD U2 Debugging 1_markdown_instruction: "# Debugging\r\n\r\nComputer code
+        is written by humans and humans make mistakes. All computer scientists make
+        mistakes.  So part of being a good computer scientists is about being able
+        to find your mistakes and fix them. In computer science we call mistakes **bugs**.
+        Bugs can be anything in code which causes it not to work as planned. The process
+        of finding and fixing those bugs is called **debugging**.  Debugging is a
+        problem solving process so use your problem solving steps as you try to debug.
+        Over the next couple levels you are going to work on your debugging skills.\r\n\r\n<img
+        src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26
+        AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\r\n\r\nThe
+        desired web page is on the right. There are two issues with the starter web
+        page:\r\n\r\n1. The header won't show up as an h1 header.\r\n2. The list
+        doesn't seem to be formatting correctly.\r\n\r\n# Do This\r\n\r\n* Find and
+        fix all bugs in the starting HTML\r\n* Check that the final result matches
+        the image on the right."
+      CSD U2 Debugging 2_markdown_instruction: "# Debugging\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38
+        AM.png\" style=\"float:right;border:5px black solid;width:250px\">\r\n\r\nMore
+        debugging practice!  This page is a little more challenging to debug than
+        the last one.\r\n\r\n# Do This\r\n\r\nFix the HTML so that the web page makes
+        the example on the right.\r\n\r\n* Find and fix all bugs in the starting HTML\r\n*
+        You will know you have found all the bugs when your page matches the one on
+        the right."
+      CSD U2 Debugging 3_markdown_instruction: "# Debugging\r\n\r\nThis page has
+        images in it. Images make finding bugs a little more tricky. Can you debug
+        this page?\r\n\r\nAs you are debugging you may notice a new set of symbols
+        that look something like this:\r\n<pre>\r\n&lt;!-- this is a comment --&gt;\r\n</pre>\r\n\r\nThis
+        is a **comment**. Comments are written by computer scientists creating web
+        pages for themselves and other humans who might look at their HTML file. Comments
+        explain the different parts of the code and what it should create.  Comments
+        might be able to help you debug.\r\n\r\n# Do This\r\n\r\n* Find and fix all
+        bugs in the starting HTML\r\n* You know you’ve found all of the bugs when
+        your page matches the <a href=\"https://thimbleprojects.org/danimcavoy/103295/\"
+        target=\"_blank\"> Target Page</a>."
+      CSD U2 Debugging 4_markdown_instruction: "# Debugging\r\n\r\nSometimes bugs
+        in code aren't obvious in how the page displays. Remember that you want your
+        web page to display on any browser so even though it displays nicely in one
+        place may not mean that it works everywhere. \r\n\r\n# Do This\r\n\r\n* Find
+        and fix all bugs in the starting HTML\r\n* You know you’ve found all of the
+        bugs when your page matches the <a href=\"https://thimbleprojects.org/danimcavoy/103456\"
+        target=\"_blank\"> Target Page</a>"
+      CSD U2 HTML Add Content_markdown_instruction: "# Adding Content\r\n\r\nStart
+        creating your first web page! Try to create a page with a title and two paragraphs.\r\n\r\n#
+        Do This\r\n\r\n* Write a sentence about your favorite animal\r\n* On a separate
+        line write another sentence about your least favorite animal.\r\n* Above both
+        sentences try adding a title that says \"Animals\"\r\n* Don't forget to click
+        <img src=\"https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12
+        PM.png\" style=\"width:100px\">\r\n* **What do you notice about the structure
+        of your content?**"
+      CSD U2 HTML Adding Paragraphs Template_markdown_instruction: "# Add Text to
+        the Body\r\n\r\nWhen you start any Web Lab project it will automatically add
+        `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When
+        you add content to your projects you'll need to do it between the `<body>`
+        and `</body>` tags since it should be part of the body of your webpage.\r\n\r\n#
+        Do This\r\n\r\n* Write three separate sentences about any topic you like inside
+        of the body tags of your web page\r\n* Hit \"Refresh and Save\" if you don't
+        see the changes in the Preview area\r\n* Compare your work with a neighbor.
+        Make sure you're placing code in the same place.\r\n"
+      CSD U2 HTML Adding Paragraphs pt 2_markdown_instruction: "<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**<span>
+        How do I make multiple paragraphs? </span>**</summary>\r\nHere's an example
+        of several paragraph tags in a row. This code would be placed inside of the
+        body of your web page.\r\n\r\n<pre>\r\n`<p>This is a paragraph. It has two
+        sentences.</p>`\r\n`<p>This is another paragraph.</p>`\r\n</pre>\r\n\r\n</details>\r\n\r\n</div>\r\n\r\n#
+        Use Paragraph Tags\r\n\r\nThe `<p>` tag or \"paragraph\" tag is placed around
+        text to indicate that it is part of a paragraph. Placing text in a paragraph
+        tag lets the computer know that it should be displayed differently, usually
+        just by spacing it out from other text.\r\n\r\n# Do This\r\n\r\n* Place the
+        text you just wrote inside at least two separate paragraphs by surrounding
+        it with `<p>` and `</p>` tags\r\n* Compare the results with a neighbor. What
+        has changed about the way your text is displayed?"
+      CSD U2 HTML Adding Paragraphs_markdown_instruction: "# Add Text to the Body\r\n\r\nWhen
+        you start any Web Lab project it will automatically add `<!DOCTYPE>`, `<html>`,
+        `<head>`, and `<body>` tags to your project. When you add content to your
+        projects you'll need to do it between the `<body>` and `</body>` tags since
+        it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write
+        three separate sentences about any topic you like inside of the body tags
+        of your web page\r\n* Hit \"Refresh and Save\" if you don't see the changes
+        in the Preview area\r\n* Compare your work with a neighbor. Make sure you're
+        placing code in the same place.\r\n"
+      CSD U2 Header Demo_markdown_instruction: "# Headers\r\n\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are headers?**</summary>\r\nHeaders are the different sized section titles
+        throughout a web page. Headers add structure to your web page by breaking
+        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make different sized headers?**</summary>\r\nHeaders come in 6 different
+        sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
+        1 in the HTML tag designates that this is the biggest header. The smallest
+        header is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags which get smaller as the number gets larger.\r\n</h1>\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r\n</details>\r\n<details>\r\n<summary>**What is an HTML
+        element?**</summary>\r\nAn HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nAn HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r\n</details>\r\n</div>\r\n\r\nSo far, you've organized your content
+        into paragraphs.  Another way HTML allows you to organize your code is by
+        using **headers**.  A header is a short piece of text that goes at the top
+        of a section of content, like a title.\r\n\r\nDo This:\r\n* Find the headers
+        in the web page below and use the inspector tool to see that code that makes
+        them.\r\n* Make sure you and your partner agree on what the tags do.\r\n*
+        Change the code so that \"Drawing\" and \"2 years\" match the headers on the
+        rest of the page."
+      CSD U2 Header Sizes_markdown_instruction: "# Header Sizes\r\n\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are headers?**</summary>\r\nHeaders are the different sized section titles
+        throughout a web page. Headers add structure to your web page by breaking
+        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make different sized headers?**</summary>\r\nHeaders come in 6 different
+        sizes.  The most common header is &lt;h1&gt; The number 1 in the HTML tag
+        designates that this is the biggest header. The smallest header is &lt;h6&gt;.
+        You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags
+        which get smaller as the number gets larger.\r\n</h1>\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r\n</details>\r\n<details>\r\n<summary>**What is an HTML
+        element?**</summary>\r\nAn HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nAn HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r\n</details>\r\n\r\n</div>\r\n\r\nHeaders can come in different sizes.  In
+        this page, there are six different sized headers, but they are all mixed up.  Can
+        you and your partner figure out how to fix them?\r\n\r\n\r\n\r\nDo This:\r\n*
+        Use the inspector tool to figure out what makes the headers different sizes\r\n*
+        Make sure you and your partner agree on what the different header tags do.\r\n*
+        Change the tags so that the headers are in order from biggest to smallest,
+        and the text says the correct size, as in the picture below. \r\n\r\n<img
+        src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px\" style=\"float:left\">\r\n"
+      CSD U2 Header Test_markdown_instruction: "# Headers and Paragraphs\r\n\r\n<div
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\r\n<details>\r\n<summary>**What is a paragraph element?**</summary>\r\nParagraphs
+        are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs
+        in HTML can be any length of text from one word to a bunch of sentences. All
+        of your text in your web page should be contained in an HTML element (headers
+        or paragraphs). Paragraphs group together sets of sentences and put some space
+        between that group of text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I create multiple paragraphs?**</summary>\r\nParagraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. To create more than one paragraph you will
+        want multiple sets of opening and closing `<p>` tags. For example\r\n<pre>\r\n\t&lt;p&gt;\r\n    \tThis
+        is a paragraph.\r\n    &lt;/p&gt;\r\n\t&lt;p&gt;\r\n    \tThis is another
+        paragraph.\r\n    &lt;/p&gt;\r\n</pre>\r\n</details>\r\n<details>\r\n<summary>**What
+        are headers?**</summary>\r\nHeaders are the different sized section titles
+        throughout a web page. Headers add structure to your web page by breaking
+        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make different sized headers?**</summary>\r\nHeaders come in 6 different
+        sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
+        1 in the HTML tag designates that this is the biggest header. The smallest
+        header is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags which get smaller as the number gets larger.\r\n</h1>\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r\n</details>\r\n<details>\r\n<summary>**What is an HTML
+        element?**</summary>\r\nAn HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nAn HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r\n</details>\r\n\r\n</div>\r\n\r\nThe author of this page added in
+        a lot of content, but did not think about structure.  All of the text is mashed
+        together.\r\n\r\nDo This:\r\n* Look through the content with your partner
+        and decide what you think the best structure should be.\r\n* Use your header
+        and paragraph tags to code the structure into the page.\r\n"
       CSD U2 Headers_markdown_instruction: "<div style=\"float: right; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
         are headers?**</summary>\r\nHeaders are the different sized section titles
@@ -836,6 +1011,166 @@ en:
         of a web page. In your investigation with the inspector did you come across
         something that made headers?\r\n\r\n# Do This\r\n\r\n* Make your header \"Animals\"
         stand out using the `<h1>` header element."
+      CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
+        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
+        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
+        which file to use, extra information, called an **attribute**, is added to
+        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
+        and tell the name of the image. Image files names include extensions which
+        tell the computer which type of image they are working with. Common extensions
+        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
+        image elements also have the `alt` attribute which describe the image. This
+        is important in case the image doesn’t load or for people who have trouble
+        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing
+        tag** because it starts and closes in one tag. To mark this we put the `/`
+        which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why
+        does an image tag not have a closing tag?**</summary>\r\nAn image tag doesn't
+        need a closing tag because there is no text content which must be wrapped
+        in tags. The content that shows on the screen is specified through the tags
+        attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
+        are extra information included in a tag.  Attributes have names and values.
+        The name tells what type of information is being provided and then the value
+        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
+        tags have two attributes, src and alt. src specifies the name of the image
+        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
+        Images\r\n\r\nA Dog vs Cat web page has been started for you. The dog image
+        has already been added to the below web page. Use an image tag to add the
+        `cat.jpeg` image to the page below the cat header."
+      CSD U2 Image Tag 2_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
+        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
+        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
+        which file to use, extra information, called an **attribute**, is added to
+        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
+        and tell the name of the image. Image files names include extensions which
+        tell the computer which type of image they are working with. Common extensions
+        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
+        image elements also have the `alt` attribute which describe the image. This
+        is important in case the image doesn’t load or for people who have trouble
+        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing
+        tag** because it starts and closes in one tag. To mark this we put the `/`
+        which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why
+        does an image tag not have a closing tag?**</summary>\r\nAn image tag doesn't
+        need a closing tag because there is no text content which must be wrapped
+        in tags. The content that shows on the screen is specified through the tags
+        attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
+        are extra information included in a tag.  Attributes have names and values.
+        The name tells what type of information is being provided and then the value
+        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
+        tags have two attributes, src and alt. src specifies the name of the image
+        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
+        Uploading Images\r\n\r\nYou can upload images that you've found elsewhere
+        using the **Add Image** button. Go find an image of a different type of pet
+        that you like and download it to your computer (using right-click \"Save As\").\r\n\r\nOnce
+        you have your images, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        PM.png) and upload the image from your computer into your project, where you
+        can then use it in your page.\r\n\r\n# Do This\r\n\r\n* Upload at least one
+        image into your project\r\n* Use the `<img>` tag to display the image(s) in
+        your website.\r\n* Make sure to add an `alt` attribute."
+      CSD U2 Image Tag Debug_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
+        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
+        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
+        which file to use, extra information, called an **attribute**, is added to
+        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
+        and tell the name of the image. Image files names include extensions which
+        tell the computer which type of image they are working with. Common extensions
+        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
+        image elements also have the `alt` attribute which describe the image. This
+        is important in case the image doesn’t load or for people who have trouble
+        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing
+        tag** because it starts and closes in one tag. To mark this we put the `/`
+        which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why
+        does an image tag not have a closing tag?**</summary>\r\nAn image tag doesn't
+        need a closing tag because there is no text content which must be wrapped
+        in tags. The content that shows on the screen is specified through the tags
+        attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
+        are extra information included in a tag.  Attributes have names and values.
+        The name tells what type of information is being provided and then the value
+        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
+        tags have two attributes, src and alt. src specifies the name of the image
+        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
+        The Details Matter\r\n\r\nThe `src` attribute needs to point to the _exact_
+        filename of the image you want to use. That means you need to pay attention
+        to spelling, capitalization, and the file extension. Each of the three images
+        on this page is broken because of an improper `src` attribute. Using the file
+        menu for reference, fix each of the image tags.\r\n\r\n_Note: Even though
+        the images are loading properly, our website is still showing descriptive
+        text of what should be there because we used `alt` attributes. Cool!_"
+      CSD U2 Info Page Content_markdown_instruction: "# Adding Your Content\r\n\r\nYou
+        should now have found a handful of websites that you can use to help make
+        your case for the cause you've chosen. If not, keep on researching! Otherwise
+        it's time to start structuring the content of your page.\r\n\r\nFor all of
+        the content you find externally, you'll need to provide attribution to the
+        original creator. For now, just include the url of the site where you found
+        it in parenthesis. For example\r\n\r\n* According to the ASPCA only 10% of
+        animals entering shelters have been spayed or neutered (http://www.aspca.org/animal-homelessness).\r\n*
+        Kill shelters euthanize 2.7 million animals per year (http://www.aspca.org/animal-homelessness).\r\n\r\n#
+        Do This\r\n\r\nThe specifics of your page layout will depend on your topics
+        and goals, but in general you should create the following structure\r\n\r\n*
+        A first level header with a catchy title for your page\r\n* A second level
+        header for each separate argument to support your cause\r\n* Paragraphs of
+        content under each second level header\r\n* The urls of any sites where you
+        found information\r\n* Don't worry about styling right now you are just getting
+        the content\r\n"
+      CSD U2 Info Page Create_markdown_instruction: "# Informational Page\r\n\r\nLet's
+        start by setting up the page you will be using to create your informational
+        page.\r\n\r\n# Do This\r\n\r\n* Add a new HTML file to your project for your
+        informational page.\r\n* Add a title and description"
+      CSD U2 Info Page Final Touches_markdown_instruction: "<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<h2>\r\nChecklist\r\n</h2>\r\n\r\n<input
+        type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left:
+        20px; margin-bottom: 10px\">Ensure that your image is properly licensed</span>\r\n<input
+        type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left:
+        20px; margin-bottom: 10px\">Upload image into Web Lab</span>\r\n<input type=\"checkbox\"
+        style=\"float: left\"><span style=\"display: block; margin-left: 20px; margin-bottom:
+        10px\">Create an image tag with a descriptive alt attribute</span>\r\n<input
+        type=\"checkbox\" style=\"float: left\"><span style=\"display: block; margin-left:
+        20px; margin-bottom: 10px\">If the image isn't your own, add attribution
+        underneath<br/>\r\n\r\n</div>\r\n\r\n\r\n# Adding Images to Your Site\r\n\r\nYou've
+        already created some pages with great content on your website, now you can
+        add some images!\r\n\r\n# Do This\r\n\r\nUsing either your own images, or
+        those found through a Commons Search, add some images to the pages you've
+        already created. Get creative! Use the checklist to the right to keep track
+        of the steps you need to follow when adding images.\r\n"
+      CSD U2 Info Page Images_markdown_instruction: "# Adding Your Images\r\n\r\nWith
+        images and attribution information in hand, it's time to spruce up your new
+        page.\r\n\r\n# Do This\r\n\r\nUpload your images to Web Lab and, using `<img>`
+        tags, add them where you'd like them to go. For each image:\r\n\r\n* Add
+        a descriptive `alt` attribute\r\n* Add attribution underneath the image, including\r\n\t*
+        Name or screenname of author (if available)\r\n    * Title of image (if available)\r\n    *
+        Url to original site\r\n    * License image was published under either in
+        text (eg CC-BY) or using a badge from the [Creative Commons website](https://creativecommons.org/about/downloads/).\r\n\r\nFor
+        example\r\n\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\r\n\r\nLonghaired
+        Dachshund portrait by Flickr user Soggydan (ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)
+        - CC-BY"
+      CSD U2 Inspector Warm Up_markdown_instruction: "<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**<span>
+        How do I use the Inspector Tool? </span>**</summary>\r\nThe Inspector Tool
+        is a great way to figure out what unfamiliar code in Web Lab. To turn on the
+        Inspector Tool click the <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        PM.png\" style=\"width:100px\">. You will know that the Inspector Tool is
+        on because the button will turn white and say Inspector: On. Once you turn
+        on the Inspector Tool you can hover over any element in the preview area and
+        Web Lab will highlight the associated code.\r\n</details>\r\n\r\n</div>\r\n\r\n#
+        Explore HTML\r\n\r\nThis is a web page written in HTML, the language of the
+        web. You'll learn more about how it works, but first explore it by using
+        the Inspector Tool. \r\n\r\n# Do This\r\n\r\n* Click the Tip \"How do I use
+        the Inspector Tool?\" on the right to learn how to use the Inspector\r\n*
+        Follow the instructions in the web page to explore the web page and discuss
+        with a partner how it is working."
+      CSD U2 Project Start_markdown_instruction: "# Start Your Project\r\n\r\nNow
+        that you have a plan for your personal website, you can start coding it here.  Don't
+        worry if you can't do everything you want today.  You'll have plenty of
+        chances to improve your work as you learn more about developing websites.\r\n\r\n#
+        Do This\r\n* Use HTML to create the page that you sketched out.  Make sure
+        it includes\r\n * At least **two headers of different sizes**\r\n * At least
+        **one paragraph**\r\n* **Reflect** on your page by comparing to your sketch
+        and showing it to your partner"
       CSD U2 RGB intro_markdown_instruction: "# RGB Colors\r\n\r\nAll colors, whether
         they have names or not, can be described by the level of red, green, and blue
         light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You
@@ -941,6 +1276,12 @@ en:
         Create a new style sheet for your project.\r\n2. Rename the style sheet file.\r\n3.
         Add your style sheet to your HTML page.\r\n\r\n<img src=\"https://images.code.org/63ed91b7de4365f59f0f4d652f8dd8fc-image-1481639763979.png\"
         style=\"width:50%px\">"
+      CSD U2 add links_markdown_instruction: "# Missing Home Link\r\n\r\nCopying
+        your hyperlinks to all your pages allowed you to get to most of the pages
+        on your website from any other page. One hyperlink is missing - the one to
+        get you to your home page (index.html).\r\n\r\n**Add a hyperlink to your home
+        page from all the pages, even your home page itself.** Adding it to your home
+        page will keep your navigation header consistent on all pages."
       CSD U2 classes modify_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
         does the code work?**</summary>\r\nFor the code to work, you need to both
@@ -1055,6 +1396,76 @@ en:
         Add a rule to set the text in the summer class to your summer RGB color.\r\n*
         Add the summer class to the summer elements in the HTML page.\r\n* Do the
         same for the autumn class."
+      CSD U2 image tag_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
+        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
+        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
+        which file to use, extra information, called an **attribute**, is added to
+        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
+        and tell the name of the image. Image files names include extensions which
+        tell the computer which type of image they are working with. Common extensions
+        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
+        image elements also have the `alt` attribute which describe the image. This
+        is important in case the image doesn’t load or for people who have trouble
+        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **void
+        element** because it starts and closes in one tag. To mark this we put the
+        `/` which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**What
+        is a void tag?**</summary>\r\nAn `<img>` tag is an example of a  **void element**
+        because it starts and closes in one tag. To mark this we put the `/` which
+        usually goes in the close tag at the end of the image tag. Void tags do not
+        need a closing tag because there is no text content which must be wrapped
+        in tags. The content that shows on the screen is specified through the tags
+        attributes.\r\n</details>\r\n<details>\r\n<summary>**Why does an image tag
+        not have a closing tag?**</summary>\r\nAn image tag is a void tag and void
+        tags do not need a closing tag because there is no text content which must
+        be wrapped in tags. The content that shows on the screen is specified through
+        the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
+        are extra information included in a tag.  Attributes have names and values.
+        The name tells what type of information is being provided and then the value
+        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
+        tags have two attributes, src and alt. src specifies the name of the image
+        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
+        Images\r\n\r\nA Dog vs Cat web page has been started for you. The dog image
+        has already been added to the below web page. Use an image tag to add the
+        cat.jpeg image to the page below the cat header."
+      CSD U2 images intro_markdown_instruction: "# Images\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
+        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
+        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
+        which file to use, extra information, called an **attribute**, is added to
+        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
+        and tell the name of the image. Image files names include extensions which
+        tell the computer which type of image they are working with. Common extensions
+        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
+        image elements also have the `alt` attribute which describe the image. This
+        is important in case the image doesn’t load or for people who have trouble
+        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **void
+        element** because it starts and closes in one tag. To mark this we put the
+        `/` which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**What
+        is a void tag?**</summary>\r\nAn `<img>` tag is an example of a  **void element**
+        because it starts and closes in one tag. To mark this we put the `/` which
+        usually goes in the close tag at the end of the image tag. Void tags do not
+        need a closing tag because there is no text content which must be wrapped
+        in tags. The content that shows on the screen is specified through the tags
+        attributes.\r\n</details>\r\n<details>\r\n<summary>**Why does an image tag
+        not have a closing tag?**</summary>\r\nAn image tag is a void tag and void
+        tags do not need a closing tag because there is no text content which must
+        be wrapped in tags. The content that shows on the screen is specified through
+        the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
+        are extra information included in a tag.  Attributes have names and values.
+        The name tells what type of information is being provided and then the value
+        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
+        tags have two attributes, src and alt. src specifies the name of the image
+        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\nThe
+        recipe page would look a lot better with a picture of the scotcheroos, so
+        we added one onto this page.  It might look better somewhere else on the page,
+        though.\r\n\r\n# Do This\r\n* Look at the file list on the left of your workspace,
+        and find the file named \"scotcheroos.jpeg\"\r\n* Use the inspector tool to
+        find the code that made the image appear on the page.\r\n* Make sure you and
+        your partner agree on how the image tag works.\r\n* Try to move the picture
+        to the top of the page."
       CSD U2 layout style bgcolor_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
         does the code work?**</summary>\r\nHere is the code that is making the background
@@ -1312,6 +1723,90 @@ en:
         or smaller.\r\n* Create a new rule with a `height` property to control the
         height of the images.\r\n* Use the `width` property in the `p` rule-set to
         change the width of your paragraphs."
+      CSD U2 link demo_markdown_instruction: "# Making a Multi-page Site\r\n\r\nA
+        web site should include more than one web page, and they should connect to
+        each other.   Here's an example of a project with multiple pages that are
+        connected by hyperlinks (the blue underlined words that take you to another
+        page when you click on them).\r\n\r\n# Do This\r\n* Use the inspector tool
+        to see the code that creates the hyperlinks on the top of index.html.\r\n*
+        Discuss with your partner how you think that code works.\r\n* Click on recipe.html
+        in the file list on the left hand side.  Add a hyperlink to the top of this
+        page that will take you back to index.html."
+      CSD U2 lists intro_markdown_instruction: "# Lists\r\n<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are the two types of lists?**</summary>\r\n There are two types of lists in
+        HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an unordered list?**</summary>\r\nAn unordered list is just a set of bulleted
+        items.\r\n<br /><br />\r\nAn unordered list element has the tag &lt;ul&gt;
+        . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist.
+        Each item in the list is marked by a list item element &lt;li&gt;. This is
+        an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list
+        item element is a child element, which means that it goes inside of its parent
+        element, the unordered list (&lt;ul&gt;).\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make an unordered list?**</summary>\r\nMaking an unordered list has two
+        steps: making the list and adding the list items.  To make the unordered list,
+        write the unordered list tags `&lt;ul&gt; &lt;/ul&gt;`.  Next, add your list
+        items **inside** the unordered list tags.  To make each list item, use the
+        list item tags `&lt;li&gt; &lt;/li&gt;` and write the list item inside the
+        tags.\r\n<br /><br />\r\nIt can be helpful to indent your &lt;li&gt; tags
+        so it's clear they are contained in the &lt;ul&gt; tag.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an ordered list?**</summary>\r\nAn ordered list is a set of bulleted items
+        which are numbered.\r\n<br /><br />\r\nAn ordered list element has the tag
+        &lt;ol&gt; . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.
+        Each item in the list is marked by a list item element &lt;li&gt;. This is
+        an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list
+        item element is a child element, which means that it goes inside of its parent
+        element, the ordered list (&lt;ol&gt;).\r\n</details>\r\n\r\n<details>\r\n<summary>**How
+        do I make an ordered list?**</summary>\r\nMaking an ordered list has two steps:
+        making the list and adding the list items.  To make the ordered list, write
+        the ordered list tags `&lt;ol&gt; &lt;/ol&gt;`.  Next, add your list items
+        **inside** the ordered list tags.  To make each list item, use the list item
+        tags `&lt;li&gt; &lt;/li&gt;` and write the list item inside the tags.\r\n<br
+        /><br />\r\nIt can be helpful to indent your &lt;li&gt; tags so it's clear
+        they are contained in the &lt;ol&gt; tag.\r\n\r\n</details>\r\n</div>\r\n\r\nYou
+        can also use HTML to make different types of lists on your web page.  This
+        recipe includes two different types of lists, one ordered (with numbers) and
+        one unordered (with bullets).\r\n\r\n#  Do This\r\n\r\n* Use the inspector
+        tool to see the code that is making the two different kinds of lists.\r\n*
+        Make sure you and your partner agree on what the different tags do.\r\n* Fix
+        the code so that the second list items display correctly.\r\n"
+      CSD U2 new page_markdown_instruction: "# Create a New Page for Your Website.\r\n\r\nHere's
+        your project from before.  You'll be adding another page.  Your new page
+        can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n*
+        Add a new HTML file by clicking  ![](https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
+        PM.png).  The new file will appear in the file list on the left side of the
+        workspace.\r\n* Rename the file, either by right clicking it and choosing
+        \"Rename\", or by clicking on it when it's already highlighted.  **Make sure
+        the name is unique, descriptive and ends in \".html\"**.\r\n* Use HTML to
+        fill out your new page.  It should include:\r\n * a list\r\n * a header\r\n\r\n"
+      CSD U2 ordered list_markdown_instruction: "# Ordered Lists\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are the two types of lists?**</summary>\r\n There are two types of lists in
+        HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an ordered list?**</summary>\r\nAn ordered list is a set of bulleted items
+        which are numbered.\r\n<br /><br />\r\nAn ordered list element has the tag
+        &lt;ol&gt; . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.
+        Each item in the list is marked by a list item element &lt;li&gt;. This is
+        an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list
+        item element is a child element, which means that it goes inside of its parent
+        element, the ordered list (&lt;ol&gt;).\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**How
+        do I make an ordered list?**</summary>\r\nMaking an ordered list has two steps:
+        making the list and adding the list items.  To make the ordered list, write
+        the ordered list tags `&lt;ol&gt; &lt;/ol&gt;`.  Next, add your list items
+        **inside** the ordered list tags.  To make each list item, use the list item
+        tags `&lt;li&gt; &lt;/li&gt;` and write the list item inside the tags.\r\n<br
+        /><br />\r\nIt can be helpful to indent your &lt;li&gt; tags so it's clear
+        they are contained in the &lt;ol&gt; tag.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**Show
+        me working code.**</summary>\r\n<table border=\"1\">\r\n<tr>\r\n<td>Example</td>\r\n<td>Result</td>\r\n</tr>\r\n<tr>\r\n<td><pre>
+        &lt;ol&gt; <br>   &lt;li&gt;Step 1 &lt;/li&gt; <br>   &lt;li&gt;Step 2 &lt;/li&gt;
+        <br>   &lt;li&gt;Step 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\r\n<td><img
+        src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04
+        PM.png\" style=\"width:200px\"></td>\r\n</tr>\r\n</table>\r\n\r\n</details>\r\n</div>\r\n\r\nThis
+        page should include an ordered list, but it's missing the list tags.\r\n\r\n#
+        Do This\r\n\r\n* Use the `<ol>` and `<li>` tags to structure this content
+        into an ordered list that looks like the one below.\r\n\r\n*Hint: There will
+        be NO NUMBERS in your code.* \r\n\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03
+        PM.png)"
       CSD U2 style background_markdown_instruction: "<div style=\"float: right; height:
         150px; width: 400px; overflow-y: scroll; margin-left: 20px;\">\r\n<details>\r\n<summary>**What
         is a CSS rule-set?**</summary>\r\nBlah blah answer\r\n</details>\r\n<details>\r\n<summary>**What
@@ -1630,6 +2125,73 @@ en:
         to side) position of the text within each line.\r\n\r\n* Find the \"text-align\"
         property in the paragraph tag.\r\n* Change the paragraph alignment.\r\n  *
         Choose from \"left\", \"right\", and \"center\""
+      CSD U2 unordered list_markdown_instruction: "# Unordered Lists\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        are the two types of lists?**</summary>\r\n There are two types of lists in
+        HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an unordered list?**</summary>\r\nAn unordered list is just a set of bulleted
+        items.\r\n<br /><br />An unordered list element has the tag &lt;ul&gt; . This
+        is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each
+        item in the list is marked by a list item element &lt;li&gt;. This is an abbreviation
+        for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is
+        a child element, which means that it goes inside of its parent element, the
+        unordered list (&lt;ul&gt;).\r\n</details>\r\n\r\n<details>\r\n<summary>**How
+        do I make an unordered list?**</summary>\r\nMaking an unordered list has two
+        steps: making the list and adding the list items.  To make the unordered list,
+        write the unordered list tags `&lt;ul&gt; &lt;/ul&gt;`.  Next, add your list
+        items **inside** the unordered list tags.  To make each list item, use the
+        list item tags `&lt;li&gt; &lt;/li&gt;` and write the list item inside the
+        tags.\r\n<br /><br />\r\nIt can be helpful to indent your &lt;li&gt; tags
+        so it's clear they are contained in the &lt;ul&gt; tag.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**Show
+        me working code.**</summary>\r\n<table border=\"1\">\r\n<tr>\r\n<td>Example</td>\r\n<td>Result</td>\r\n</tr>\r\n<tr>\r\n<td><pre>
+        &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt;
+        <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\r\n<td><img
+        src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32
+        PM.png\" style=\"width:200px\"></td>\r\n</tr>\r\n</table>\r\n\r\n</details>\r\n</div>\r\n\r\nThis
+        page should have an unordered list, but it's missing the list tags.\r\n\r\n#
+        Do This\r\n\r\n* Use the `<ul>` and `<li>` tags to structure the content into
+        an unordered list like the picture below.\r\n\r\n![](https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
+        PM.png)"
+      CSD U2 upload image_markdown_instruction: "# Upload a new image\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
+        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
+        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
+        which file to use, extra information, called an **attribute**, is added to
+        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
+        and tell the name of the image. Image files names include extensions which
+        tell the computer which type of image they are working with. Common extensions
+        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
+        image elements also have the `alt` attribute which describe the image. This
+        is important in case the image doesn’t load or for people who have trouble
+        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **void
+        element** because it starts and closes in one tag. To mark this we put the
+        `/` which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**What
+        is a void tag?**</summary>\r\nAn `<img>` tag is an example of a  **void element**
+        because it starts and closes in one tag. To mark this we put the `/` which
+        usually goes in the close tag at the end of the image tag. Void tags do not
+        need a closing tag because there is no text content which must be wrapped
+        in tags. The content that shows on the screen is specified through the tags
+        attributes.\r\n</details>\r\n<details>\r\n<summary>**Why does an image tag
+        not have a closing tag?**</summary>\r\nAn image tag is a void tag and void
+        tags do not need a closing tag because there is no text content which must
+        be wrapped in tags. The content that shows on the screen is specified through
+        the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
+        are extra information included in a tag.  Attributes have names and values.
+        The name tells what type of information is being provided and then the value
+        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
+        tags have two attributes, src and alt. src specifies the name of the image
+        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\nYou
+        can now add your own images to your personal website.  If you don't have
+        the images that you want on your computer, you can search for them here and
+        download them.\r\n<form action=\"https://www.google.com/search\" method=\"GET\"
+        target=\"_blank\">\r\n<input type=hidden name=site value=\"imghp\" />\r\n<input
+        type=hidden name=tbm value=isch />\r\n<input type=hidden name=tbs value=\"sur:fmc\"
+        />\r\n<input name=q />\r\n<input type=submit value=\"search\">\r\n<br />\r\n</form>\r\n\r\nOnce
+        you have your images, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        PM.png) and upload the image from your computer into your project.\r\n\r\n#
+        Do This\r\n* Upload at least two images into your project\r\n* Use the `<img>`
+        tag to display the images in your website."
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
         pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
@@ -2481,12 +3043,12 @@ en:
         Run the program to see how it works.\r\n* Edit the code in this program to
         make the second sprite shake like the first one\r\n* Move on when your program
         looks like the picture to the right\r\n\r\n"
-      CSD U3 Draw Loop Plugged wiggle sprite y_markdown_instruction: "<img src=\"https://images.code.org/133ce86d945135b129a983bba03aa4ac-image-1492039159454.gif\",
+      CSD U3 Draw Loop Plugged wiggle sprite y_markdown_instruction: "<img src=\"https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif\",
         style=\"float:right;height:150px\">\r\n# Updating Properties\r\n\r\nThis level
         is very similar to the last, but this time, you'll add in the draw loop yourself.\r\n\r\n#
         Do This\r\n* Add the draw loop block to the bottom of this program.\r\n* Move
         any blocks that need to be inside the draw loop.\r\n* Move on when your program
-        looks like the picture to the right"
+        looks like the picture to the right\r\n"
       CSD U3 Else_markdown_instruction: "# What If My Condition Isn't True?\r\n\r\n<img
         src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\"
         width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our
@@ -2505,11 +3067,17 @@ en:
         the game on the left.  You can make the alien jump with the up arrow, and
         move it to the left and right with the arrow keys.  You score by collecting
         stars, and if you score high enough, the background will change."
-      CSD U3 Entertainment Sample 2_markdown_instruction: "Use the space bar to jump.
-        Collect food and avoid bugs."
+      CSD U3 Entertainment Sample 2_markdown_instruction: "# Hungry Bunny\r\n\r\nThe
+        bunny is hungry, and it's looking for mushrooms and carrots for dinner.\r\n\r\nTo
+        win, you'll need to find a dinner bowl, then collect at least ten carrots
+        and five mushrooms.\r\n\r\nMake sure to avoid the bugs.  Ladybugs and snails
+        will eat your food, and bees will sting you, making you drop everything!\r\n\r\nUse
+        the space bar to jump.  You can squash ladybugs and snails by jumping on them."
       CSD U3 Entertainment Sample 3_markdown_instruction: "# Animated Comics\r\n\r\nCombining
         images, text, and some subtle animation can make for really interesting comics
         or graphic stories.\r\n"
+      CSD U3 Entertainment Sample 4_markdown_instruction: "# Stamp Pad\r\n\r\nUse
+        this stamp pad to draw pictures with simple colors and animal stamps.\r\n"
       CSD U3 Expressions calculator_markdown_instruction: "# Adding and Multiplying\r\n\r\nYour
         computer can calculate the results of many math problems. Try out this example,
         where we add and multiply a few numbers. Then extend it yourself to the numbers
@@ -3418,19 +3986,15 @@ en:
         correctly.\r\n* **Note:** If you drag the property block onto a new line it
         will change to include the `=` command automatically.\r\n\r\n![](https://images.code.org/77d0a16f19a2a7b2c2f1f6b88cda17b3-image-1466006474149.41.53
         AM.png)"
-      CSD U3 UP_ARROW_markdown_instruction: "# Moving Sprites\r\n\r\nYou saw on the
-        last level that `keyDown` returns `true` while you are holding a key down
-        and `false` when the key is not pressed down.\r\n\r\nWe can use `keyDown`
-        as an input to an `if` statement to change our animations based on key presses!\r\n\r\nThe
-        input for the `keyDown` command is the name of key you want to check in quotes.
-        Some examples are \"x\", \"up\" and \"space\".\r\n\r\n# Do This\r\nYou have
-        been provided with the start of a bug sprite. You need to pick the bug picture
-        you want to use from the animation tab.\r\n\r\n* Set the animation of the
-        sprite to your favorite bug.\r\n* Add an `if` statement inside your draw loop\r\n*
-        Add a call to `keyDown` as the input to the `if` statement to check if the
-        **up** arrow was pressed\r\n* Add code inside the conditional to move the
-        sprite up if the up arrow is down.\r\n\r\n_Do you need to change sprite's
-        x or y property to move it up?_"
+      CSD U3 UP_ARROW_markdown_instruction: "# Moving Sprites\r\n\r\nYou can change
+        your sprite's position based on key presses in the same way you changed its
+        animations.\r\n\r\n# Do This\r\nYou have been provided with the start of a
+        bug sprite. You need to pick the bug picture you want to use from the animation
+        tab.\r\n\r\n* Set the animation of the sprite to your favorite bug.\r\n* Add
+        an `if` statement inside your draw loop\r\n* Add a call to `keyDown` as the
+        input to the `if` statement to check if the **up** arrow was pressed\r\n*
+        Add code inside the conditional to move the sprite up if the up arrow is down.\r\n\r\n_Do
+        you need to change sprite's x or y property to move it up?_"
       CSD U3 Variable Arithmetic pt2_markdown_instruction: "# Variable Arithmetic
         Pt2\r\n\r\nAs we saw in the last level, **you can add, subtract, multiply,
         or divide** your variable **without changing its value**. The only time a
@@ -3465,6 +4029,22 @@ en:
         Variables and Game Lab Gary\r\n\r\n* You've been provided code that draws
         a simple version of Game Lab Gary\r\n* **Use variables to animate Gary**.
         How can you extend them?\r\n* [[Question that leads towards incrementation]]"
+      CSD U3 Variables Challenge_markdown_instruction: "# Challenge: Updating Variables\r\n\r\n_Check
+        with your teacher before tackling this challenge level_\r\n\r\nSo far we've
+        only ever assigned a value to a variable once, but did you know you can update
+        a variable during a program? Read through the example program we've provided,
+        run it a few times to understand how it works, and then attempt to modify
+        the program to draw one of the following images.\r\n\r\n\r\n<img src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\"
+        style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\"
+        style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\"
+        style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n"
+      CSD U3 Variables Draw Challenge_markdown_instruction: "# Challenge: Draw an
+        Image\r\n\r\n_Check with your teacher before tackling this challenge level_\r\n\r\nUsing
+        variables, draw an image where many of the items rely on a common variable
+        for size or placement. For example, draw a face with variables controlling
+        the size and/or placement of both eyes, ears, and nostrils. Once you have
+        your drawing completed, try changing the values of your variables to make
+        sure that the whole image changes together.\r\n"
       CSD U3 Variables Draw Poppy_markdown_instruction: "# Using a Variable Many
         Times\r\n\r\nThis program has only one variable called `petalSize` but it
         uses it 8 different times. This makes it easy to quickly make lots of changes
@@ -4724,25 +5304,24 @@ en:
         Do This\r\n* Run the code to see how it works.\r\n* Discuss with your partner
         why some code is inside the draw loop and some code is outside.\r\n* Try changing
         the frame rate and running the code again."
-      CSD U3 debug_markdown_instruction: "<img src=\"https://images.code.org/fcbc80c3eb15403e97c847bab68ed9ef-image-1491197563086.31.59
-        PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# Debugging\r\n\r\nOften,
+      CSD U3 debug_markdown_instruction: "<img src=\"https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50
+        AM.png\" style=\"float:right;width:150px;\">\r\n\r\n# Debugging\r\n\r\nOften,
         code doesn't work the first time it runs, and programmers have to debug it.  This
         code is supposed to make the picture on the right, but the programmer got
         confused about which order the blocks should be in, as well as how to put
         a square in the right place on the screen.\r\n\r\n# Do This\r\n\r\n* Look
         at the code in the workspace.\r\n* Change the code so it makes the picture
         on the right.\r\n * (You'll need to move one block AND change the coordinates
-        of the square)\r\n"
-      CSD U3 ellipse_markdown_instruction: "<img src=\"https://images.code.org/852eb77e02e73f7a4b3f5e9c6516138f-image-1491197115428.24.42
+        of the square)"
+      CSD U3 ellipse_markdown_instruction: "<img src=\"https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44
         PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# ellipse\r\n\r\nYou can
         use the `ellipse` block to make a circle.\r\n\r\n# Do This\r\n\r\n* Look at
-        the code that makes the ellipse.\r\n* Add a new ellipse of a different color.\r\n\r\n*Hint:
-        You can type in any color name from the list at [W3 Schools HTML Color Names](https://www.w3schools.com/colors/colors_names.asp).*\r\n"
-      CSD U3 fill_markdown_instruction: "# fill(color)\r\n\r\n<img src=\"https://images.code.org/7e0916ccbab3e82e8fb913feb8039019-image-1491196847847.20.12
-        PM.png\" style=\"float:right;width:200px;\">\r\n\r\nYou can also make your
-        rectangles different colors with the `fill` block.  The `fill` block will
-        set the color for every shape that comes after it in the code.\r\n\r\n# Do
-        This\r\n\r\n* Look at the code that sets the color. ( [Show me where](#triggercallout=fill)
+        the code that makes the ellipse.\r\n* Add a new ellipse of a different color.\r\n"
+      CSD U3 fill_markdown_instruction: "<img src=\"https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19
+        PM.png\" style=\"float:right;width:200px;\">\r\n# fill(color)\r\n\r\nYou can
+        also make your rectangles different colors with the `fill` block.  The `fill`
+        block will set the color for every shape that comes after it in the code.\r\n\r\n#
+        Do This\r\n\r\n* Look at the code that sets the color. ( [Show me where](#triggercallout=fill)
         )\r\n* Change the color from \"blue\" to \"yellow\"\r\n* Add a new square
         by dragging a `rect` block into the code area bellow the fill command ( [Show
         me where](#triggercallout=rect_block) )  The new square can go any location
@@ -4826,6 +5405,17 @@ en:
         [Show me the area in the code](#triggercallout=callout2)\r\n\r\nDon't forget,
         each variable needs a label (name) and a starting value.  You can change the
         value of the variable later in your code."
+      CSD U3 keydown conditional_markdown_instruction: "# Changing Sprites\r\n\r\nYou
+        saw on the last level that `keyDown` returns `true` while you are holding
+        a key down and `false` when the key is not pressed down.   The input for the
+        `keyDown` command is the name of key you want to check in quotes. Some examples
+        are \"x\", \"up\" and \"space\".\r\n\r\nWe can use `keyDown` as an input to
+        an `if` statement to change our animations based on key presses!\r\n\r\n#
+        Do This\r\n* Run the code and try pressing the up and down arrows.\r\n* Look
+        inside the `if` statement to see how the code works.\r\n* Add a block inside
+        the third `if` statement to change the animation to a different animal.\r\n\r\n*Hint:
+        you can use the rabbit that's already in the Animations tab, or add a new
+        animation.*"
       CSD U3 my-rect_markdown_instruction: "# rect(x,y)\r\n\r\nWelcome to Game Lab,
         where you can create interactive animations and games!   \r\n\r\nIn class
         you already practiced the basics of putting shapes on a grid.  In Game Lab,
@@ -5119,19 +5709,20 @@ en:
         you'll do the same with the display area on the left.\r\n\r\n# Do This\r\n\r\n*
         Look at the line of code in the workspace below these instructions ( [Show
         me where](#triggercallout=block_trigger) ) and discuss with your partner where
-        you think the shape will be dawn on the grid.\r\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        you think the shape will be drawn on the grid.\r\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
         PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger)
         )\r\n* Change the numbers in the two different openings, then try running
         the program again. \r\n* Try to place the rectangle near the bottom right
         of the screen"
-      CSD U3 sequence_markdown_instruction: "# Order Matters\r\n<img src=\"https://images.code.org/9aa3056c12f1ed760562792e9e5685bf-image-1491196644846.16.54
-        PM.png\" style=\"float:right\">\r\nIn Game Lab, it matters what order your
-        code is in.  New shapes are drawn on top of the ones that came before, covering
-        up the shapes that are drawn first.  You can see the difference when you use
-        more than one color in your code.\r\n\r\n# Do This\r\n\r\n* Look at the code
-        that draws the two rectangles.  The first is drawn red, and the second is
-        drawn blue.\r\n* Change the red rectangle's color to green.\r\n* Change the
-        order of the blocks so the green rectangle appears on top.\r\n\r\n"
+      CSD U3 sequence_markdown_instruction: "<img src=\"https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05
+        PM.png\" style=\"float:right\">\r\n# Order Matters\r\n\r\nIn Game Lab, it
+        matters what order your code is in.  New shapes are drawn on top of the ones
+        that came before, covering up the shapes that are drawn first.  You can see
+        the difference when you use more than one color in your code.\r\n\r\n# Do
+        This\r\n\r\n* Look at the code that draws the two rectangles.  The first is
+        drawn red, and the second is drawn blue.\r\n* Change the red rectangle's
+        color to green.\r\n* Change the order of the blocks so the green rectangle
+        appears on top."
       CSD U4 - Design Mode Input Widgets_markdown_instruction: "# Input Elements\r\n\r\n<img
         src=\"https://images.code.org/108fcc6fc89bf88edde00353afb33d75-image-1469814642375.49.23.png\"
         style=\"float: right; width: 150px\"/>\r\nButtons are a great way to navigate
@@ -5387,7 +5978,7 @@ en:
         target=\"_blank\"> Target Page</a>."
       CSDU2 - Debugging 4_markdown_instruction: "# Debugging\r\n\r\nSometimes bugs
         in code aren't obvious in how the page displays. Remember that you want your
-        web page to display on any browswer so even though it displays nicely in one
+        web page to display on any browser so even though it displays nicely in one
         place may not mean that it works everywhere. \r\n\r\n# Do This\r\n\r\n* Find
         and fix all bugs in the starting HTML\r\n* You know you’ve found all of the
         bugs when your page matches the <a href=\"https://thimbleprojects.org/danimcavoy/103456\"
@@ -5752,7 +6343,7 @@ en:
         up your own personal website.\r\n\r\n# Do This\r\nYour personal website is
         back. So far you have just your personal home page.\r\n\r\n* Add html files
         for each of the Hobbies Page, Recipe Page, and About Me page\r\n* Copy the
-        code from the following levels <a href=\"https://studio.code.org/s/csd2/stage/4/puzzle/14\"
+        code from the following levels <a href=\"https://studio.code.org/s/csd2/stage/4/puzzle/13\"
         target=\"_blank\">Hobbies Page</a>, <a href=\"https://studio.code.org/s/csd2/stage/4/puzzle/17\"
         target=\"_blank\">Recipe Page</a>, and <a href=\"https://studio.code.org/s/csd2/stage/8/puzzle/12\"
         target=\"_blank\">About Me page</a> into the files you created.\r\n* Add a
@@ -6085,10 +6676,10 @@ en:
         was written in by adding DOCTYPE and &lt;html&gt; elements.\r\n\r\n![](https://images.code.org/f75e718b8e40870e7b6d87c0efdfc0ae-image-1481320053480.png)"
       CSDU2 - SEO 1_markdown_instruction: "# Personal Website: Search Engine Optimization\r\n\r\nYou
         are going to update your website to optimize for finding it on a search engine.
-        It is important to know that your website it might not be easy to find on
-        a search engine.  This might be partially a result of improvements you could
-        make to your website. However since your website is hosted by Code.org and
-        does not have a descriptive URL it might be harder to find.\r\n\r\n# Do This\r\n\r\n*
+        It is important to know that your website might not be easy to find on a search
+        engine.  This might be partially a result of improvements you could make to
+        your website. However since your website is hosted by Code.org and does not
+        have a descriptive URL it might be harder to find.\r\n\r\n# Do This\r\n\r\n*
         Run your website through the <a href=\"http://www.seocentro.com/tools/seo/seo-analyzer.html\"
         target=\"_blank\"> SEO </a>\r\n* Write down the issues it highlights with
         your website\r\n* We will learn how to fix some of those issues in the next
@@ -6266,12 +6857,12 @@ en:
         files into the pictures folder\r\n* Notice how all the pictures no longer
         show but the text in the alt attribute does.\r\n* Update the links to the
         images so they display again"
-      CSDU2 - Type Anything_markdown_instruction: "# Welcome to Web Lab!\r\n\r\n<img
-        src=\"https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg\"
-        style=\"width:700px; float:right\">\r\n\r\nThe platform you are in is called
-        Web Lab. There are three main parts of the screen in Web Lab.\r\n\r\n\r\n\r\n#
-        Do This\r\n\r\n* Try typing something in the Code Area\r\n* Press <img src=\"https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12
-        PM.png\" style=\"width:100px\"> to see it in the Preview Area!\r\n"
+      CSDU2 - Type Anything_markdown_instruction: "<img src=\"https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg\"
+        style=\"width:400px; float:right\">\r\n\r\n# Welcome to Web Lab!\r\n\r\nThe
+        platform you are in is called Web Lab. There are three main parts of the screen
+        in Web Lab.\r\n\r\n# Do This\r\n\r\n* Try typing something in the Code Area\r\n*
+        Press <img src=\"https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45
+        AM.png\" style=\"width:150px\"> to see it in the Preview Area!"
       CSDU2 - Unordered Lists_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
         are the two types of lists?**</summary>\r\n There are two types of lists in
@@ -6579,7 +7170,7 @@ en:
         from the [Creative Commons website](https://creativecommons.org/about/downloads/).\r\n\r\nFor
         example\r\n\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\r\n\r\n[Longhaired
         Dachshund portrait by Flickr user Soggydan](https://commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)
-        ![CC-BY](https://licensebuttons.net/l/by/3.0/88x31.png)"
+        - CC-BY"
       CSDU2 IP Final Touches_markdown_instruction: "# Finishing Touches\r\n\r\nYou
         have the content, you have pretty images, now put the finishing touches on
         your page.\r\n\r\n# Do This\r\n\r\nMake sure you page meets the checklist
@@ -8517,15 +9108,16 @@ en:
         the code** - This program has **two event handlers** listening for events
         on the same button?\r\n * **Force yourself to make a prediction!** - \"I don't
         know\" is not a prediction!. \r\n\r\nHere are some options to think about:\r\n\r\n*
-        There will be an error in the console immediately after hitting run\r\n* There
-        will be an error in the console but not until you hit the button\r\n* Program
-        does nothing\r\n* turtle only moves forward\r\n* turtle only turns left\r\n*
-        turtle move forward *then* turn left \r\n* turtle turn left *then* move forward?\r\n*
-        something else? \r\n\r\n**Observe:** Once you've made a prediction, close
-        these instructions and **run the program** to observe what happens.\r\n\r\n**Reflect:**
-        Was your prediction correct? If not what about your mental model might need
-        to change? Talk about it with a classmate and experiment with the code to
-        make sure you understand what is happening."
+        This is a new bullet\r\n\r\n* There will be an error in the console immediately
+        after hitting run\r\n* There will be an error in the console but not until
+        you hit the button\r\n* Program does nothing\r\n* turtle only moves forward\r\n*
+        turtle only turns left\r\n* turtle move forward *then* turn left \r\n* turtle
+        turn left *then* move forward?\r\n* something else? \r\n\r\n**Observe:** Once
+        you've made a prediction, close these instructions and **run the program**
+        to observe what happens.\r\n\r\n**Reflect:** Was your prediction correct?
+        If not what about your mental model might need to change? Talk about it with
+        a classmate and experiment with the code to make sure you understand what
+        is happening."
       CSPU5_FinalizeChaserGame_markdown_instruction: "# Add an Image and Make a Chaser
         Game!\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\"
         style=\"float: right\">\r\n\r\n**Now You Try it** - add an image to your app
@@ -12658,9 +13250,9 @@ en:
       Course 4 SCFL 1_markdown_instruction: "**For-Loops Super Challenge:** Solve
         this puzzle with the fewest number of blocks possible."
       Course 4 SCFL 1a_markdown_instruction: "**For Loops Super Challenge:** Can
-        you get Skrat to his acorn using as few blocks as possible?\r\n\r\n"
+        you get Scrat to his acorn using as few blocks as possible?\r\n\r\n"
       Course 4 SCFL 1b_markdown_instruction: "**For Loops Super Challenge:** Can
-        you get Skrat to his acorn using as few blocks as possible?\r\n"
+        you get Scrat to his acorn using as few blocks as possible?\r\n"
       Course 4 SCFL 2_markdown_instruction: "**For-Loops Super Challenge:** Solve
         this puzzle with the fewest number of blocks possible.  \r\n<br/>\r\n"
       Course 4 SCFL 3_markdown_instruction: "**For-Loops Super Challenge:** Can you
@@ -14637,6 +15229,10 @@ en:
         4\r\nThis pixelation level demonstrates the use of the `hide_encoding_controls`
         option.  Notice that the level displays the image data in hexadecimal and
         does not let you change it back to binary.\r\n            "
+      Pixelation - AllTheThings 5_markdown_instruction: "# Pixelation: AllTheThings
+        5\r\nThis pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice
+        that the width and height sliders are not available, and the width and height
+        fields are not editable."
       Pixelation - Lesson 14 - Fix bit offset v.2_markdown_instruction: "Something
         happened to the bits in this image! Find the error and fix it! Hint: a few
         extra bits were added. You should only need to remove some bits."
@@ -14741,6 +15337,25 @@ en:
         your final program in this level**."
       Predict Loop I_markdown_instruction: "# Predict\r\n\r\nWhat will print as a
         result of this loop?"
+      Project - Final Image Scroller_markdown_instruction: "# Final Image Scroller\r\n\r\nYou're
+        now ready to add key event functionality to your app! As you are doing so,
+        keep an eye out for places where you need to **refactor** old code in order
+        to prevent redundancy. **Create functions** that carry out repeated tasks
+        and make other changes to keep your code **readable and consistent**. \r\n\r\nIf
+        you want a reminder of how key events work, you can always go back to the
+        example from earlier in this lesson.  You will need to add `if` statements
+        to check for which keys were pressed, just as before.\r\n\r\n# Do This:\r\n\r\n*
+        Add the ability to respond to **key events** to your app.\r\n\r\n* **Refactor
+        your old code** to remove redundant portions.\r\n\r\n* Keeping adding to your
+        program. What other features do you want to include?"
+      Project - Finish your canvas app_markdown_instruction: "# Create Your Own Effect!\r\n\r\nYou've
+        just seen several ways that we can process our array `eventList` in order
+        to create different effects. Now it's time to make your own! **Extend the
+        functionality of one of the effects you just created, or create an entirely
+        new one**. What else could you do with the information you've stored in your
+        array? How else might you combine the programming tools you've developed?\r\n\r\n#
+        Do This:\r\n\r\n* **Extend the functionality of one of the effects, or create
+        an entirely new one of your own!**"
       Project - Make Your Own Clicker Game_markdown_instruction: "# Make Your Own
         \"Clicker\" Game\r\nYou will be creating your own “clicker” game similar to
         the Apple Grabber game you worked on in this lesson. \r\nThe general object
@@ -14773,6 +15388,37 @@ en:
         stuck” on any screen.**  It should always be possible to navigate from a screen
         in your app to some other screen. \r\n* Your program code should follow **good
         style**.\r\n* Your user interface should be **intuitive to use**."
+      'Project: Finish Color Sleuth_markdown_instruction': "# Challenge - Pick a
+        way for the game to end and implement it\r\n\r\nYour challenge now is to add
+        some code completely on your own.  Use what you've learned so far, and Alexis
+        and Michael's discussion to help you.\r\n\r\n**This is the last programming
+        level**\r\n\r\n* Make all changes and additions to the program that you want
+        here\r\n* When you're done hit **Submit**\r\n\r\n**Goal:** Add code that
+        provides a way for the game to end which:\r\n* Switches to the `gameOver_screen`\r\n*
+        Shows which player won the game by showing `player1Win_label` or `player2Win_label`\r\n\r\n*We've
+        provided `gameOver_screen` as part of the template for this project -- Switch
+        to Design Mode to take a look at what's there*\r\n\r\n**Suggestions**\r\n*
+        If you're stuck for ideas, try to implement the end game condition of \"first
+        to 10\" - first player to reach a score of 10 wins.\r\n* You should use the
+        suggestion from the discussion to add a function like `checkGameOver()` and
+        call it from `checkCorrect`\r\n\r\n<details><summary><strong>Above and Beyond:
+        optional extra options for your project [Click to expand]</strong></summary>\r\n\r\n<p>\r\nHere
+        are a bunch of ways you can add to or extend the project:\r\n\r\n</p>\r\n<ul>\r\n\r\n\r\n<li>Add
+        \"start over\" button on the last screen, which should reset everything, and
+        go back to the game play screen\r\n</li>\r\n<li>Add a welcome screen that
+        explains the rules and invites the player to start the game (make it the default
+        screen)\r\n</li>\r\n<li>Make the game more difficult:</li>\r\n<uL>\r\n<li>Make
+        the colors more similar (we added 20 to every RGB value, try 15 or 10).</li>\r\n    <li>Or
+        make the difficulty variable - you can generate a random number between 5
+        and 20 and add that to the RGB values. </li>\r\n    <li>Or make it get progressively
+        more difficult - use a variable to keep track of how much to add to each RGB
+        value and decrease it over time.</li>\r\n\t<li>Or on a welcome screen ask
+        if the player wants to play easy, medium, or hard.</li>\r\n</uL>\r\n\r\n<li>Add
+        a timing element - lookup the documentation for setTimeout which calls a function
+        after a certain amount of time. (Note: you may need to remix the project in
+        as a free-play App Lab project to do this).\r\n</li>\r\n<li>You can also use
+        <code>getTime()</code> at the beginning and end of your code to figure out
+        how long it took for the game to end, which you could use to adjust the score.</li>\r\n</ul>\r\n</details>\r\n"
       'Raw Data Podcast: Data Confidential_markdown_instruction': "## Raw Data Podcast:
         Data Confidential <i class=\"fa fa-volume-up\" aria-hidden=\"true\"></i>\r\n\r\nRaw
         Data is a podcast from the Stanford Cyber Initiative that explores the uses
@@ -14807,6 +15453,10 @@ en:
         your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\r\n\r\n\r\n\r\n"
       Repeat Predict Contained_markdown_instruction: "# Predict\r\n\r\nHow many times
         will the for loop below run?"
+      Robot Drawing_markdown_instruction: "**Project Idea:** Create a picture of
+        something familiar from the real world. This requires persistence and planning!"
+      Robot_markdown_instruction: "**Project Idea:** Create a picture of something
+        familiar from the real world. This requires persistence and planning!"
       Rocket Height Course A_markdown_instruction: "Follow the Design Recipe to create
         a function `rocket-height` which produces the height of a rocket traveling
         at 15 meters per second."
@@ -25626,7 +26276,7 @@ en:
         src=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"
         width=\"150\"/><br/>\r\n<h4>A Birthday Cake</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n"
       courseA_artist_loops2_markdown_instruction: "Help the artist draw this line
-        two times forward.\r\n\r\n![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)"
+        two times forward.\r\n\r\n<img src=\"https://images.code.org/10538bb51172d2b001334ed0e21c7996-image-1493071379295.gif\"/>\r\n"
       courseA_artist_loops3_markdown_instruction: "Our artist is trying to draw a
         line five times, but can't get it right. Can you help?\r\n\r\n![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
       courseA_artist_loops4_markdown_instruction: "Now, use a `repeat` loop to draw
@@ -25744,8 +26394,14 @@ en:
         piles of gold using only one `E -->` block?"
       courseB_maze_seq9_markdown_instruction: "**Challenge:** Move around the TNT
         to get the bird to the pig."
+      courseB_maze_seq9_challenge1_markdown_instruction: "*Where's that pig hiding
+        now?*"
       courseB_maze_seqCold_markdown_instruction: "**Challenge:** Debug this level
         by adding blocks to get the bird to the pig!"
+      courseB_maze_seq_challenge1_markdown_instruction: "You can only move up to
+        four times in each direction. Can you find a path before you run out of blocks?"
+      courseB_maze_seq_challenge2_markdown_instruction: "Debug this level. These
+        are the right blocks, but they're in the wrong order!"
       courseB_playLab_events1_markdown_instruction: "This game is called \"Play Lab\".  \r\n\r\n<br/>\r\nSee
         if you can figure out what each block does."
       courseB_playlab_events3_markdown_instruction: "Use an event to make Daisy the
@@ -25759,10 +26415,9 @@ en:
       courseB_playlab_events7_markdown_instruction: "Make this game fun by setting
         the knight to vanish when he runs into the dragon on his way to get the flags!
         \r\n\r\nPlay a sound when they collide to make it feel more real."
-      courseB_playlab_events_challenge1_markdown_instruction: "Make this game fun
-        by setting the knight to vanish when he runs into the dragon on his way to
-        get the flags! \r\n\r\nPlay a sound when they collide to make it feel more
-        real."
+      courseB_playlab_events_challenge1_markdown_instruction: "It's time for the
+        Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho
+        will run the fastest?\r\n"
       courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor
         1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen
         you're done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
@@ -25838,10 +26493,18 @@ en:
         any way you want, but it will either take a lot of work or a lot of thinking!"
       courseC_harvester_loops9_markdown_instruction: "Collect all of the corn and
         all of the pumpkins."
+      courseC_harvester_loops_challenge1_markdown_instruction: "Collect all of the
+        corn."
+      courseC_harvester_loops_challenge2_markdown_instruction: "Collect all of the
+        lettuce. Avoid the trees and fields!"
       courseC_maze_debugging1_markdown_instruction: "This code isn't quite right!  \r\n\r\nFix
-        the code to help get Skrat get to the acorn."
+        the code to help get Scrat get to the acorn."
       courseC_maze_debugging3_markdown_instruction: "Something is not quite right.
-        \r\n\r\nRemove blocks to get Skrat to the acorn!"
+        \r\n\r\nRemove blocks to get Scrat to the acorn!"
+      courseC_maze_debugging_challenge1_markdown_instruction: "*\"Am I just going
+        around in circles?\"*"
+      courseC_maze_debugging_challenge2_markdown_instruction: "*\"If I turn too often,
+        I might get dizzy! Help me reach the pig with only four `turn` commands.\"*"
       courseC_maze_loops2_markdown_instruction: "With the `repeat` block, you can
         loop code over and over.\r\n\r\nCan you get the bird to the pig by creating
         a loop that uses only one `move forward` block inside of a `repeat`?"
@@ -25883,6 +26546,11 @@ en:
         help me find the bad pig.\"*"
       courseC_maze_programming9_markdown_instruction: "*\"Now, help me sneak up on
         the pig any way you want to!\"*"
+      courseC_maze_programming_challenge1_markdown_instruction: "*\"The pig is hiding!
+        Can you help me find a way around?\"*"
+      courseC_maze_programming_challenge2_markdown_instruction: "Sometimes there
+        is more than one way to solve the same problem. Sometimes it's faster to
+        go backwards than it is to go forwards!"
       courseC_puppy_loops8_markdown_instruction: "**Challenge:** Combine ideas from
         the last few puzzles to complete this level."
       courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Challenge:**
@@ -26048,8 +26716,8 @@ en:
         last one, but now it stars Laurel the Adventurer!\r\n<hr/>\r\n\r\nTake the
         same path as before, but this time, use a repeat loop to collect treasure
         when you get to it.\r\n"
-      courseD_collector_ramp9_markdown_instruction: "Take the same path as before,
-        but this time collect all of the treasure as you find it.\r\n"
+      courseD_collector_ramp9_markdown_instruction: "Now there's more treasure.  Can
+        you help Laurel collect it all?"
       courseD_debugging_1_markdown_instruction: "*\"These blocks are really bugging
         me!\"*\r\n\r\nFix the error(s) to collect all of the nectar."
       courseD_debugging_2_markdown_instruction: "*\"Ooh, this one stings!\"*\r\n\r\nFix
@@ -26139,8 +26807,8 @@ en:
         bad pig. Otherwise I might get angry!\"*\r\n\r\nWhen you have several blocks
         in a row, try moving them inside of a `repeat` loop.  This will do the same
         thing with less code!"
-      courseD_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
-        Use what you've learned to get the bird to the pig!"
+      courseD_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*  \r\n\r\n\r\nUse
+        what you've learned to get the bird to the pig!"
       courseD_maze_until10_markdown_instruction: "Help the zombie get to the sunflower."
       courseD_maze_until10_predict2_markdown_instruction: "Help the zombie get to
         the sunflower."
@@ -26477,7 +27145,7 @@ en:
         The green spiral goes from 100 to 300 pixels\r\n"
       courseF_artist_fwp9_markdown_instruction: "**Freeplay:** Below there are functions
         you've written, and more for you to play with. Play with the pen width to
-        see how different your drawings look!"
+        see how different your drawings look! Suggestions are in the hints!"
       courseF_artist_ramp10_markdown_instruction: "Did you know you can put loops
         inside of other loops to make them more powerful?  That's called making a
         \"nested loop\".\r\n\r\n<hr/>\r\n\r\nDrag the code for the last triangle into
@@ -26616,16 +27284,28 @@ en:
         practice with this function that gets nectar only if the bee is at a flower.  To
         see the code inside, click the blue \"edit\" button!\r\n\r\nUse the `get only
         nectar` function to collect the nectar from each flower."
-      courseF_bee_functions3_markdown_instruction: "Now it's your turn to build
-        a function to get some honey!  Click \"edit\" to put code inside the `only
-        make honey` function, then use it to solve this puzzle."
+      courseF_bee_functions3_markdown_instruction: "Now it's your turn to make a
+        function to get some honey **only** if there is a honeycomb!  Click \"edit\"
+        to build the `only make honey` function, then use it to solve this puzzle."
       courseF_bee_functions3a_markdown_instruction: "Each cloud could be hiding either
         a flower or a honeycomb!  Write a function that gets nectar if the bee is
-        at a flower, otherwise it gets honey.  \r\n\r\nUse your function to solve
-        the puzzle!"
-      courseF_bee_functions4_markdown_instruction: "The `move and get nectar` function
-        turns the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse
-        the `move and get nectar` function to collect all of the nectar."
+        at a flower, otherwise it gets honey.\r\n\r\nUse your function to solve the
+        puzzle!"
+      courseF_bee_functions4_markdown_instruction: "Did you know that you can call
+        a function from *inside* another function?  \r\n\r\nUse your `check nectar
+        or honey` function inside the new `move and check` function to help the bee
+        turn, go get what's under the cloud, then back-up and turn back around!"
+      courseF_bee_functions5a_markdown_instruction: "Now, build `move and check`
+        so that it takes the bee to the cloud whenever there is a path to the right,
+        then use it to solve this puzzle!"
+      courseF_bee_functions7_markdown_instruction: "Create your own function that
+        goes down a path, gets all of the nectar or makes all of the honey, then returns
+        the bee to the top of the path.  \r\n\r\nCollect all the nectar and make all
+        the honey!"
+      courseF_bee_functions8a_markdown_instruction: "Underneath this cloud, there
+        might be a flower with an unknown amount of nectar, or a honeycomb with an
+        unknown amount of honey.  \r\n\r\nCan you write a program that can handle
+        either?"
       courseF_bee_fwp1_markdown_instruction: "Check beneath the clouds to see if
         the flowers have any nectar."
       courseF_bee_fwp2_markdown_instruction: "Here's some code that solves the last
@@ -26682,6 +27362,10 @@ en:
       courseF_playlab_variables2a_markdown_instruction: "Now, decode Pirate Pegleg's
         speech by changing the value of the variables in just two places!   \r\n-
         \"arrrg\" should be \"a\" \r\n- \"ye\" should be \"e\"\r\n\r\n"
+      courseF_playlab_variables2b RYAN CLONE_markdown_instruction: "We can make sentences
+        more interesting by mixing pieces of text with variables.\r\n\r\nInsert the
+        variable `color` into the middle of a sentence by putting it into the empty
+        slot in the `join` block."
       courseF_playlab_variables2b_markdown_instruction: "We can make sentences more
         interesting by mixing pieces of text with variables.\r\n\r\nInsert the variable
         `color` into the middle of a sentence by putting it into the empty slot in
@@ -26692,7 +27376,7 @@ en:
         answers into the variable of your choice.  \r\n\r\nRun this program and enter
         something for Pegleg to say.\r\n\r\n"
       courseF_playlab_variables3b_markdown_instruction: "Help Kiki have a conversation
-        with Brian by using the variable `A1` in all of the places where age `12`
+        with Brian by using the variable `age` in all of the places where age `12`
         should be used. "
       courseF_playlab_variables3bEdit_markdown_instruction: "Help Kiki have a conversation
         with Brian by using the variable `A1` in all of the places where age `12`
@@ -26713,10 +27397,10 @@ en:
         ask **you** some questions.\r\n\r\nPut all of the variables in the correct
         place so that his story makes sense."
       courseF_playlab_variables6b_markdown_instruction: "You cannot fit much text
-        in an actor's speech bubble.  Let's try building some text using the `show
-        title screen` block.\r\n\r\nWe have provided some starter questions and variables
-        for you. Join them together and put them in the title screen to make a fun
-        story."
+        in an actor's speech bubble, so sometimes you need to make the actor say
+        something more than once.  \r\n\r\nWe have provided some starter questions
+        and variables for you. Join them together to make a fun story that takes more
+        than one speech bubble to tell."
       courseF_playlab_variables7b_markdown_instruction: "Time to make your own project!  \r\n\r\nCreate
         some questions and weave the answers together into your very own story.\r\n\r\nIf
         you need ideas, click the hints icon."
@@ -28201,3 +28885,11 @@ en:
         a journal out of Australia that focuses on publishing scholarly research that
         investigates innovations in peer learning and the implementation and evaluations
         of peer learning programs:"
+      u3-old-drawing-view_markdown_instruction: "# Your Own Drawing\r\n\r\nIt is
+        your turn to create your own drawing. You should have drawn out your plan
+        on paper first.\r\n\r\n# Do This\r\nAs a reminder make sure you hit the objectives:\r\n\r\n*
+        Creates an identifiable and named object or design (i.e. no random splatters
+        of shapes)\r\n* Uses at least 10 shapes or text items (rect, ellipse, regularPolygon,
+        text)\r\n* Uses at least 4 different color fills\r\n* Uses at least 2 different
+        color outlines\r\n* Contains at least 3 different logical blocks of code with
+        comments\r\n"
