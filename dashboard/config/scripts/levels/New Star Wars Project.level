@@ -156,6 +156,8 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "free_play": "true",
+    "tap_svg_to_run_and_reset": "true",
+    "wall_map": "blank",
     "disable_sharing": "false",
     "wall_map_collisions": "true",
     "block_moving_into_walls": "true",
