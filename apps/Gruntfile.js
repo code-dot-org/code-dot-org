@@ -46,9 +46,6 @@ testsContext.keys().forEach(testsContext);
    */
   var DEV_WATCH_INTERVAL = parseInt(grunt.option('delay')) || 700;
 
-  /** @const {number} */
-  var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
-
   /** @const {string} */
   var SINGLE_APP = grunt.option('app') || envConstants.APP;
 
@@ -574,16 +571,6 @@ testsContext.keys().forEach(testsContext);
         'lib/blockly/javascript_' + ext + '.js',
       ],
       dest: 'build/package/js/blockly.js'
-    }
-  };
-
-  config.express = {
-    playground: {
-      options: {
-        port: PLAYGROUND_PORT,
-        bases: path.resolve(__dirname, 'build/package'),
-        server: path.resolve(__dirname, './src/dev/server.js')
-      }
     }
   };
 

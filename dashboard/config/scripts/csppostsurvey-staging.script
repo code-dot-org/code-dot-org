@@ -4,4 +4,4 @@ stage 'CSP Student Post Survey Staging'
 assessment 'CSP post-assessment survey'
 
 stage 'Participate in a longitudinal study!'
-level 'Longitudinal study description'
+named_level 'Longitudinal study description'
