@@ -17,11 +17,13 @@ export default storybook => {
         description: `Collapsible section that holds Recent Courses when the teacher has sections enrolled in only 1 course.`,
         story: () => (
           <RecentCourses
-            courseName1="Play Lab"
-            description1="Create a story or make a game with Play Lab!"
-            link1="https://code.org/playlab"
-            image1="photo source"
-            assignedSections1={["Section 1"]}
+            courses= {[{
+              name: "Play Lab",
+              description: "Create a story or make a game with Play Lab!",
+              link: "https://code.org/playlab",
+              image:"photo source",
+              assignedSections: ["Section 1"]
+            }]}
           />
         )
       },
@@ -30,16 +32,20 @@ export default storybook => {
         description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
         story: () => (
           <RecentCourses
-            courseName1="Play Lab"
-            description1="Create a story or make a game with Play Lab!"
-            link1="https://code.org/playlab"
-            image1="photo source"
-            assignedSections1={["Section 1"]}
-            courseName2="CSP Unit 2 - Digital Information"
-            description2="Explore how more complex digital information is represented and manipulated through computation and visualization"
-            link2="https://curriculum.code.org/csp/unit2/"
-            image2="photo source"
-            assignedSections2={[]}
+            courses= {[
+              { name: "Play Lab",
+                description: "Create a story or make a game with Play Lab!",
+                link: "https://code.org/playlab",
+                image:"photo source",
+                assignedSections: ["Section 1"]
+              },
+              { name: "CSP Unit 2 - Digital Information",
+                description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+                link: "https://curriculum.code.org/csp/unit2/",
+                image:"photo source",
+                assignedSections: ["Section 1"]
+              },
+            ]}
           />
         )
       },
