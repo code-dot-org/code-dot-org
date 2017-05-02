@@ -91,6 +91,7 @@ const MIN_DEBUG_AREA_HEIGHT = 120;
 const MAX_DEBUG_AREA_HEIGHT = 400;
 const MIN_WATCHERS_AREA_WIDTH = 120;
 const MAX_WATCHERS_AREA_WIDTH = 400;
+const MIN_CONSOLE_WIDTH = 345;
 
 /**
  * The parent JsDebugger component.
@@ -123,7 +124,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersHidden: false,
       open: this.props.isOpen,
       openedHeight: 120,
-      consoleWidth: 345
+      consoleWidth: 0
     };
   },
 
@@ -425,7 +426,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
         >
           <span
             style={[
-              this.state.consoleWidth <= 345 && styles.hidden,
+              this.state.consoleWidth <= MIN_CONSOLE_WIDTH && styles.hidden,
               styles.noUserSelect
             ]}
             className="header-text"
