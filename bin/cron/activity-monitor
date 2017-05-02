@@ -11,11 +11,11 @@
 #   LogEntries.
 #
 # including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
-require_relative '../../dashboard/config/environment'
+require_relative '../../deployment'
 require 'cdo/only_one'
 require 'cdo/chat_client'
 require 'cdo/user_agent_parser'
+CDO.log.level = Logger::WARN
 
 SECONDS_PER_MSEC = 1000
 ONE_HOUR_MSEC = 60 * 60 * SECONDS_PER_MSEC
@@ -134,20 +134,20 @@ class Monitor
 
   def reload(filename)
     return nil unless File.file?(filename)
-    puts "Loading..." if rack_env?(:development)
+    CDO.log.info 'Loading...'
     JSON.parse(IO.read(filename))
   end
 
   def cache(filename, dataset)
     if rack_env?(:development)
-      puts "Caching..."
+      CDO.log.info 'Caching...'
       File.open(filename, 'wb') {|f| f << dataset.to_json}
     end
     dataset
   end
 
   def fetch
-    puts "Fetching..." if rack_env?(:development)
+    CDO.log.info 'Fetching...'
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
   end

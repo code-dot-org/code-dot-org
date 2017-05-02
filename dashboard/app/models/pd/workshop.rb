@@ -20,6 +20,8 @@
 #  processed_at        :datetime
 #  deleted_at          :datetime
 #  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
@@ -83,11 +85,17 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop',
-      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
-      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
-      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
-      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'
+      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer',
+      SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information',
+      SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming',
+      SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps',
+      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'
+    ],
+    COURSE_CSD => [
+      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development',
+      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games',
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society',
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'
     ]
   }
 
@@ -461,5 +469,29 @@ class Pd::Workshop < ActiveRecord::Base
 
   def associated_online_course
     Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+  end
+
+  # Get all the teachers that have actually attended this workshop via the attendence.
+  def attending_teachers
+    sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
+  end
+
+  # temporary data transformation method that sets values for new on_map and
+  # funded columns from old workshop_type, for that transitional period where we
+  # temporarily have both sets on our way to removing workshop_type
+  # TODO elijah: remove this method  once it is no longer necessary
+  def set_on_map_and_funded_from_workshop_type(type_override=nil)
+    type = type_override || workshop_type
+    case type
+      when Pd::Workshop::TYPE_PUBLIC
+        self.on_map = true
+        self.funded = true
+      when Pd::Workshop::TYPE_PRIVATE
+        self.on_map = false
+        self.funded = true
+      when Pd::Workshop::TYPE_DISTRICT
+        self.on_map = false
+        self.funded = false
+    end
   end
 end

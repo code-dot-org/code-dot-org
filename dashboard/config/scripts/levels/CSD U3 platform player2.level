@@ -38,7 +38,7 @@
     "encrypted_examples": "USFSQxQu0idivnVKzGhnmjbyYBB1Z2RvNhBZSDTzQLvGgsbHTILg32ATSgW5\nHHnk\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

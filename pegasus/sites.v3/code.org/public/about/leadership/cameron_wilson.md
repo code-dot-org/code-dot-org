@@ -8,7 +8,7 @@ theme: responsive
 <img src='<%= avatar_image('Cameron Wilson') %>'/ width='320px'>
 <br/>
 <br/>
-Cameron Wilson is Chief Operating Officer and VP of Government Relations for Code.org. He oversees the advocacy, outreach and operations teams for Code.org and helps guide the organization's efforts to expand access to K-12 computer science education.
+Cameron Wilson is the Chief Operating Officer and President of <a href="/advocacy">Code.org Advocacy Coalition</a>. He oversees the advocacy and outreach teams for Code.org and helps guide the organization's efforts to expand access to K-12 computer science education.
  
 He helped create Computer Science Education Week, and has been deeply involved on education issues within the computing community having served on the AP Computer Science Principles Advisory Commission, coauthored a major study on K-12 computer science education – Running on Empty: The Failure to Teach K-12 Computer Science in the Digital Age and helped direct the University Of Chicago’s study Building an Operating System For Computer Science Education.
  

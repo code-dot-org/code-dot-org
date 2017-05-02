@@ -1,9 +1,13 @@
 # WARNING: This is explicitly not included in our root Gemfile for the reasons discussed in the PR
 # https://github.com/code-dot-org/code-dot-org/pull/14056. A separate gemfile should be created for
-# any scripts needing usage of this client. For example, see
-# https://github.com/code-dot-org/code-dot-org/pull/14207.
+# any scripts needing usage of this client and loaded via RakeUtils.with_bundle_dir.
+# @example:
+#   RakeUtils.with_bundle_dir(File.dirname(__FILE__)) do
+#     require 'cdo/redshift'
+#   end
 
 require 'pg'
+require 'singleton'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
 # instance.

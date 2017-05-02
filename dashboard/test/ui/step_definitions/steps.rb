@@ -615,6 +615,15 @@ Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
+Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
+  readonly = @browser.execute_script("return $(\"#{selector}\").attr(\"readonly\");")
+  if negation.nil?
+    expect(readonly).to eq('readonly')
+  else
+    expect(readonly.nil?).to eq(true)
+  end
+end
+
 # The second regex encodes that ids should not contain spaces or quotes.
 # While this is stricter than HTML5, it is looser than HTML4.
 Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
@@ -930,7 +939,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
-    And I wait to see "#schoolname-block"
+    And I wait to see "#schooldropdown-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -1180,4 +1189,40 @@ def refute_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   # This error message is specific to Chrome
   expect(first_header_text).not_to eq('This site can’t be reached')
+end
+
+Then /^I wait until the image within element "([^"]*)" has loaded$/ do |selector|
+  image_status_selector = "#{selector} div[data-image-status=loaded]"
+  wait_until do
+    @browser.execute_script("return $(#{image_status_selector.dump}).length > 0;")
+  end
+end
+
+Then /^I wait until initial thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialCaptureComplete();')
+  end
+end
+
+Then /^I wait for initial project save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
+end
+
+When /^I switch to text mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet text mode
+  STEPS
+end
+
+Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('table.projects td.name').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
+  actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
+  expect(actual_name).to eq(expected_name)
 end

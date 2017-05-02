@@ -89,12 +89,9 @@
     "markdown_instructions": "# Toggle\r\n\r\nThe `.toggle()` command works like a light switch - whenever you call it on an LED, the light will turn on if it was off, or off if it was on. This can be a really useful alternative to using both on and off.\r\n\r\n# Do This\r\n\r\nChoose a few LEDs and write a program that toggles them on and off when you click the Toggle button.\r\n",
     "hide_share_and_remix": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"toggleButton\" style=\"padding: 0px; margin: 0px; height: 250px; width: 250px; font-size: 50px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 35px; top: 100px;\">Toggle</button></div></div>",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

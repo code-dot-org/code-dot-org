@@ -11,8 +11,6 @@
 = render partial: 'home/survey_nps' if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
 = render partial: 'home/survey_diversity' if show_diversity_survey? SurveyResult::DIVERSITY_2017
 
-= render partial: 'devise/confirmations/alert'
-
 #landingpage
   .row
     .span12
@@ -51,7 +49,7 @@
       - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
         .row
           - course_pair.each do |user_script|
-            = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+            = render partial: 'shared/course_progress_block', locals: { script: user_script.script }
 
   = render partial: 'home/all_courses'
 

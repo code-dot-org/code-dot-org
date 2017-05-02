@@ -12,6 +12,7 @@ require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
+require_relative '../lib/cdo/honeybadger'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -53,7 +54,13 @@ def puts_script_intro
       #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
 
       Known Issues
-      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+
+    #{bold 'Before You Get Started'}
+
+      Honeybadger: Join Slack#infra-honeybadger.
+
+      Robo-DTT: See Slack#infra-test. If green, run the slash command: /set-last-dtt-green yes
 
   EOS
 end
@@ -63,7 +70,6 @@ def puts_after_dtp_tasks
   puts <<-EOS.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
     * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
     * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
@@ -237,6 +243,30 @@ def print_dtp_message
   end
 end
 
+# Retrieves recent Honeybadger issues, displaying them on the console.
+def get_honeybadger_issues
+  issues = Honeybadger.get_recent_issues
+  issues.sort_by! do |issue|
+    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
+  end
+
+  puts '' if issues.count > 0
+  issues.each do |issue|
+    environment = issue[:environment] == 'production' ? (red issue[:environment]).to_s : (bold issue[:environment]).to_s
+    project = bold issue[:project]
+    message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
+    output = <<-EOS.unindent
+      [#{project}, #{environment}]: #{message}
+          #{dim issue[:url]}
+    EOS
+    # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
+    # the end of the output. This seems correlated with environment and project.
+    puts output.strip
+    puts ''
+  end
+  puts '' if issues.count > 0
+end
+
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
   print_dtt_message
@@ -271,6 +301,19 @@ def main
 
   puts_script_intro
   ask_for_name
+
+  should_i 'mark robo-DTT as green' do
+    test_sha = GitHub.sha 'test'
+    InfraTestTopic.set_green_commit test_sha
+  end
+
+  should_i 'reset DTT message to yes' do
+    DevelopersTopic.set_dtt 'yes'
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
+  end
 
   do_dtt_subroutine
 
@@ -312,6 +355,11 @@ def main
     should_i 'DTL' do
       # TODO(asher): Remove this wait step if it is truly unnecessary now.
       wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+
+      should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
+        content_push 'levelbuilder-staging', 'levelbuilder'
+      end
+
       view_commits base: 'levelbuilder', head: 'test'
       should_i 'merge from test to levelbuilder' do
         pr_number = GitHub.create_and_merge_pull_request(
@@ -331,6 +379,10 @@ def main
     end
 
     puts_after_dtp_tasks
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   puts_script_conclusion

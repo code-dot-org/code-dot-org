@@ -1,7 +1,6 @@
 import React from 'react';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 
 import { StatusProgressDot } from
   '@cdo/apps/code-studio/components/progress/StatusProgressDot';

@@ -1,7 +1,6 @@
 import {assert} from '../../util/configuredChai';
 
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');
@@ -12,6 +11,9 @@ var ResultType = require('@cdo/apps/constants.js').ResultType;
 var calcMsg = require('@cdo/apps/calc/locale');
 
 describe('evaluateResults_/evaluateFunction_', function () {
+
+  testUtils.setExternalGlobals();
+
   it('fails when callers have different compute signatures', function () {
     // f(x, y) = x + y
     // f(2, 2)

@@ -2,7 +2,6 @@
 import chai from 'chai';
 import chaiSubset from 'chai-subset';
 import chaiEnzyme from 'chai-enzyme';
-import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 
 chai.use(sinonChai);

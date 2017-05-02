@@ -5,9 +5,9 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,1,1,1,0,0],[0,0,2,1,0,3,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,1],[0,0,0,1,1,1,1,1],[1,1,2,1,0,3,1,1],[1,1,1,1,0,1,1,1],[1,1,1,1,0,0,1,1],[1,1,1,1,0,0,0,1]]",
     "skin": "scrat",
-    "instructions": "Figure out what is wrong and get Skrat to the acorn.",
+    "instructions": "Figure out what is wrong and get Scrat to the acorn.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What is Skrat supposed to do?\\n- What does Skrat do?\\n- What does that tell you?\",\"hint_id\":\"courseC_maze_debugging6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f2f515c2c3d72a2a377e432d9489403/courseC_maze_debugging6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Once you've found and fixed the first bug, go through the debugging process again to find the second one.\\n\\nRepeat the process until the program works!\",\"hint_id\":\"courseC_maze_debugging6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f54db445c20a2ed2a1a3f657ceea6289/courseC_maze_debugging6.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What is Scrat supposed to do?\\n- What does Scrat do?\\n- What does that tell you?\",\"hint_id\":\"courseC_maze_debugging6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/da19211b98963aaf602d1827cc9bdfc2/courseC_maze_debugging6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Once you've found and fixed the first bug, go through the debugging process again to find the second one.\\n\\nRepeat the process until the program works!\",\"hint_id\":\"courseC_maze_debugging6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f54db445c20a2ed2a1a3f657ceea6289/courseC_maze_debugging6.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": null

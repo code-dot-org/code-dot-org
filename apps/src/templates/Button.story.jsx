@@ -31,6 +31,7 @@ export default storybook => {
           </ul>
           <h1>Types</h1>
           <table style={{backgroundColor: 'white', textAlign: 'center'}}>
+            <thead>
             <tr>
               <th>Type</th>
               <th style={{width: 300}}>Usage</th>
@@ -39,6 +40,8 @@ export default storybook => {
               <th>Left arrow</th>
               <th>Right arrow</th>
             </tr>
+            </thead>
+            <tbody>
             {Object.keys(BUTTON_TYPES).map(type => (
                <tr key={type}>
                  <td>{type}</td>
@@ -53,6 +56,7 @@ export default storybook => {
                  </td>
                </tr>
              ))}
+            </tbody>
           </table>
         </div>
       )

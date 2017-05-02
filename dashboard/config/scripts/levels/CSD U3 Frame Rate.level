@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "code_functions": {
       "draw": null,
-      "Game.frameRate": null,
+      "World.frameRate": null,
       "background": null,
       "fill": null,
       "noFill": null,
@@ -34,7 +34,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Slow down Gamelab Gary's animation with frameRate()",
-    "markdown_instructions": "# Too Fast, Slow Down!\r\n<img src=\"https://images.code.org/f249b981ead9d196b0f136c402dd0c41-image-1478803334302.gif\" style=\"float:right; width:200px\"/>\r\n\r\nThe animation is working, but it's a bit too fast. We're flipping the pages in our virtual flipbook too often, so we'll need to slow that down.\r\n\r\nThe frequency that our draw loop is run is called the **frame rate** - the number of times per second the screen is refreshed.\r\n\r\nThe default frame rate for Game Lab is 30 frames per second (or FPS), which is great for a video game, but not so good for our animation. We can slow down the frame rate using the `Game.frameRate` block.\r\n\r\n# Do This\r\n\r\n* Use the `Game.frameRate` block at the very beginning of your program, setting it to a number (frames per second) that slows the animation down a bit. \r\n* Test it out with different numbers to see which frame rate you like (the default is 30, and it can't go any higher than 60).",
+    "markdown_instructions": "# Too Fast, Slow Down!\r\n<img src=\"https://images.code.org/f249b981ead9d196b0f136c402dd0c41-image-1478803334302.gif\" style=\"float:right; width:200px\"/>\r\n\r\nThe animation is working, but it's a bit too fast. We're flipping the pages in our virtual flipbook too often, so we'll need to slow that down.\r\n\r\nThe frequency that our draw loop is run is called the **frame rate** - the number of times per second the screen is refreshed.\r\n\r\nThe default frame rate for Game Lab is 30 frames per second (or FPS), which is great for a video game, but not so good for our animation. We can slow down the frame rate using the `World.frameRate` block.\r\n\r\n# Do This\r\n\r\n* Use the `World.frameRate` block at the very beginning of your program, setting it to a number (frames per second) that slows the animation down a bit. \r\n* Test it out with different numbers to see which frame rate you like (the default is 30, and it can't go any higher than 60).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

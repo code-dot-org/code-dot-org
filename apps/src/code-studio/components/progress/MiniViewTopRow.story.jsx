@@ -13,7 +13,8 @@ export default storybook => {
           levels: []
         }
       ],
-      focusAreaPositions: []
+      focusAreaPositions: [],
+      isSummaryView: false,
     }
   };
 
@@ -31,6 +32,22 @@ export default storybook => {
                 <MiniViewTopRow
                   scriptName="course1"
                   linesOfCodeText="Total lines of code: 120"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'no lines of text',
+        story: () => {
+          const store = createStore(combineReducers({progress}), initialState);
+          experiments.setEnabled('progressRedesign', true);
+          return (
+            <Provider store={store}>
+              <div style={{width: 635, position: 'relative'}}>
+                <MiniViewTopRow
+                  scriptName="course1"
                 />
               </div>
             </Provider>

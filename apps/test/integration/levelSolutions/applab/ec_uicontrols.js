@@ -2,7 +2,6 @@
  * A set of tests for blocks in the UI controls section of the toolbox
  */
 import $ from 'jquery';
-var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 

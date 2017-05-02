@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Analysis of Design'
 level 'CSD U4L01 SFLP'

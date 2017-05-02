@@ -39,9 +39,11 @@
     "all_animations_single_frame": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_S17_L8_C1\",\r\n  \"callout_text\": \"This block creates a new sprite.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"var sprite = createSprite\\\"]\",\r\n  \"on\": \"callout\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"sprites\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "encrypted_examples": "siYPsk9nSmo28RSzbB/YObM6FFVVF0ydjO/clLkB+KRYASluBa3pFUjMt05g\n+0FU\n",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

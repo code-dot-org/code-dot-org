@@ -38,9 +38,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
-      "Game.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
       "keyDown": null,
       "keyWentUp": null,
       "keyWentDown": null,

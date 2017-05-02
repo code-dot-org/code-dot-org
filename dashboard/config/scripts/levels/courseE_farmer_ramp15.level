@@ -32,7 +32,7 @@
     "instructions": "Solve this puzzle using only the blocks available.",
     "ideal": "9",
     "step_speed": "2",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the 'repeat until at pumpkin' block to make it to the end of the path.\",\"hint_id\":\"courseE_farmer_ramp15_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a1400e9ef59330cb1810760c5996cd0e/courseE_farmer_ramp15.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What else needs to be done while moving along the path to the pumpkin?\",\"hint_id\":\"courseE_farmer_ramp15_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c763b2bd1a14edb995be161696d54756/courseE_farmer_ramp15.mp3\"}]",
     "markdown_instructions": "Solve this puzzle using only the blocks available.\r\n\r\nThis level will help give you practice with the `repeat until` block.  Repeat your code until you reach the pumpkin.\r\n(Don't forget to collect the pumpkin, too!)",
     "contained_level_names": null
   },

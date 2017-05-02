@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage';
 import {expect} from 'chai';
-import _ from 'lodash';
 
 describe("Tests for Professional Learning Landing Page", () => {
   const generateLandingPage = (landingPageProps = []) => {

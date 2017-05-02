@@ -1,6 +1,6 @@
 import {expect} from 'chai';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';

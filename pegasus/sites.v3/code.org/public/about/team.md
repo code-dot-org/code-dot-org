@@ -8,7 +8,9 @@ theme: responsive
 
 <img src="/images/fullteam.png" width="100%;" >
 
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'team'), :columns=>3 %>
+
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'team') %>
+
 
 <a id="extended"></a>
 # Our Extended Team
@@ -24,5 +26,3 @@ Our expert facilitators and professional learning partners are an extension of t
 
 ## Special Thanks to
 <%= view :about_people, people:DB[:cdo_team].where(kind_s:'extended_inactive') %>
-
-

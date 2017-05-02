@@ -5,9 +5,9 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,2,1,1,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,2,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Remove blocks to get Skrat to the acorn!",
+    "instructions": "Remove blocks to get Scrat to the acorn!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -28,7 +28,9 @@
     "examples_required": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To remove a block, pull the other blocks aside to get to the one you're trying to delete, then drag that one off to the trash.\\n\\nDon't forget to put your other blocks back!\\n\\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)\",\"hint_id\":\"courseC_maze_debugging3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/faf8cba15503f067b9e22c920329fc3c/courseC_maze_debugging3.mp3\"}]",
-    "markdown_instructions": "Something is not quite right. \r\n\r\nRemove blocks to get Skrat to the acorn!",
+    "markdown_instructions": "Something is not quite right. \r\n\r\nRemove blocks to get Scrat to the acorn!",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -196,6 +196,10 @@ window.SchoolInfoManager = function (existingOptions) {
     return $('#school-type').val() === 'afterschool';
   }
 
+  function isOther() {
+    return $('#school-type').val() === 'other';
+  }
+
   function isUs() {
     return $('#school-country').val() === 'US';
   }
@@ -283,7 +287,7 @@ window.SchoolInfoManager = function (existingOptions) {
         show('#school-address');
       }
     }
-    if (isAfterSchool()) {
+    if (isAfterSchool() || isOther()) {
       $("#school-name-title").hide();
       $("#school-organization-name-title").show();
       $("#school-zip-title").hide();

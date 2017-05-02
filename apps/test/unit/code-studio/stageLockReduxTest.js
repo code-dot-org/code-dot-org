@@ -1,5 +1,4 @@
 import { assert } from 'chai';
-import { combineReducers } from 'redux';
 import _ from 'lodash';
 import sinon from 'sinon';
 import fakeSectionData from './fakeSectionData';
@@ -246,7 +245,6 @@ describe('saveLockDialog', () => {
 
     store.dispatch(saveLockDialog(section1Id, newLockStatus));
 
-    const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
     const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
     const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
 

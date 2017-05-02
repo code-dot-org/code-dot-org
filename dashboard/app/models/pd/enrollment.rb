@@ -32,6 +32,8 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
+  has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
+  has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
 
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
@@ -79,6 +81,13 @@ class Pd::Enrollment < ActiveRecord::Base
   def self.for_school_district(school_district)
     joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
+
+  scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
+  scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
+  scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
+
+  # Any enrollment with attendance, for an ended workshop, has a survey
+  scope :with_surveys, -> {for_ended_workshops.attended}
 
   def has_user?
     user_id

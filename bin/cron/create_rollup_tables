@@ -60,7 +60,7 @@ def main
         contained_level = Level.find_by_name(contained_level_name)
         next unless contained_level.type == 'Multi'
         next if contained_levels.
-          select {|existing_contained_level| existing_contained_level.id == contained_level.id}.
+          select {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}.
           any?
 
         contained_question = get_contained_question(contained_level)

@@ -1,21 +1,18 @@
 import $ from 'jquery';
-var React = require('react');
+import React from 'react';
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-var PaneHeader = require('./PaneHeader');
-var PaneSection = PaneHeader.PaneSection;
-var PaneButton = PaneHeader.PaneButton;
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
 var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var color = require("../util/color");
 var utils = require('@cdo/apps/utils');
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
-
-var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
-var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
+import ShowCodeToggle from './ShowCodeToggle';
+import {singleton as studioApp} from '../StudioApp';
 
 var styles = {
   headerIcon: {
@@ -30,27 +27,11 @@ var styles = {
   runningIcon: {
     color: color.dark_charcoal
   },
-  blocksGlyph: {
-    display: 'none',
-    height: 18,
-    lineHeight: '24px',
-    verticalAlign: 'text-bottom',
-    paddingRight: 8
-  },
-  blocksGlyphRtl: {
-    paddingRight: 0,
-    paddingLeft: 8,
-    transform: 'scale(-1, 1)',
-    MozTransform: 'scale(-1, 1)',
-    WebkitTransform: 'scale(-1, 1)',
-    OTransform: 'scale(-1, 1)',
-    msTransform: 'scale(-1, 1)',
-  },
 };
 
 var CodeWorkspace = React.createClass({
   propTypes: {
-    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool.isRequired,
@@ -98,6 +79,7 @@ var CodeWorkspace = React.createClass({
       // an order of operations problem with regards to emitting
       // and listening to the resize events.
       textbox.style.bottom = debuggerHeight + 'px';
+      utils.fireResizeEvent();
     }
   },
 
@@ -153,6 +135,11 @@ var CodeWorkspace = React.createClass({
     ];
   },
 
+  onToggleShowCode(usingBlocks) {
+    this.blockCounterEl.style.display =
+        (usingBlocks && studioApp.enableShowBlockCount) ? 'inline-block' : 'none';
+  },
+
   render() {
     var props = this.props;
 
@@ -163,37 +150,23 @@ var CodeWorkspace = React.createClass({
       hasFocus = false;
     }
 
-    var isRtl = props.localeDirection === 'rtl';
-
-    var blocksGlyphImage = (
-      <img
-        id="blocks_glyph"
-        src={hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-        style={[
-          styles.blocksGlyph,
-          isRtl && styles.blocksGlyphRtl
-        ]}
-      />
-    );
+    const isRtl = this.props.isRtl;
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
         <PaneHeader
           id="headers"
-          dir={props.localeDirection}
+          dir={isRtl ? 'rtl' : 'ltr'}
           hasFocus={hasFocus}
           className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
             {this.renderToolboxHeaders()}
-            <PaneButton
-              id="show-code-header"
-              hiddenImage={blocksGlyphImage}
-              iconClass="fa fa-code"
-              label={msg.showCodeHeader()}
+            <ShowCodeToggle
               isRtl={isRtl}
+              hasFocus={hasFocus}
               isMinecraft={props.isMinecraft}
-              headerHasFocus={hasFocus}
+              onToggle={this.onToggleShowCode}
             />
             {!props.readonlyWorkspace &&
               <PaneButton
@@ -216,7 +189,7 @@ var CodeWorkspace = React.createClass({
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
-              <div id="blockCounter">
+              <div id="blockCounter" ref={el => this.blockCounterEl = el}>
                 <ProtectedStatefulDiv id="blockUsed" className="block-counter-default"/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
@@ -245,7 +218,7 @@ var CodeWorkspace = React.createClass({
 
 module.exports = connect(state => ({
   editCode: state.pageConstants.isDroplet,
-  localeDirection: state.pageConstants.localeDirection,
+  isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isRunning: !!state.runState.isRunning,
   showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),

@@ -7,7 +7,7 @@ nav: regional_partner_playbook_nav
 
 # Workshop Planning
 
-Each Code.org Regional Partner will work with the districts in its region to select a date for each middle school and high school workshop 
+Each Code.org Regional Partner will work with the districts and schools in its region to select a date for each workshop. 
 
 ## Quick Links 
 
@@ -31,7 +31,7 @@ ________________
 
 ## **Computer Science Fundamentals**
 
-Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
+Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 [**Back to the top**](#top)
 <br/>
@@ -256,6 +256,16 @@ ________________
 
 ## **Computer Science Principles**
 <details>
+  <summary>**Process Documents**</summary>
+  <p>
+
+- [Local Summer Workshop Process Document](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit) - Everything you need to know to plan and run a local summer workshop.
+- [Survey Report Process](https://docs.google.com/document/d/1nC9wEPnTkYO6tzZM6QIHnVzSSNySEVykIFlADdS_xEM/edit) - How to navigate to and view the surveys sent at the end of a workshop.
+
+</p>
+</details>
+
+<details>
   <summary>**Workshop Preparation Process**</summary>
   <p> 
 
@@ -268,7 +278,8 @@ ________________
 6. Four weeks prior - order catering
 7. Three to Four weeks prior (no later than 21 days) - [order your supplies](/educate/professional-learning-partner/playbook/ordering-supplies) from Mimeo.
 8. One and a half weeks prior - create a [facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators
-9. Two days prior - make sure all your supplies have arrived. Day of the workshop 
+9. Two days prior - make sure all your supplies have arrived. 
+10. Day of the workshop 
 	 - Login to the workshop organizer dashboard to [“Start Workshop”](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.wmocqedffowl) and have teachers join it.
 	- Decide if you or your facilitators take attendance. 
 	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.<br/>

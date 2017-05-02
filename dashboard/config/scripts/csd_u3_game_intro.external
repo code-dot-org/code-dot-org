@@ -1,5 +1,6 @@
 name 'CSD U3 game intro'
 title 'Create Your Own Game'
+display_name 'Design Your Game'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN

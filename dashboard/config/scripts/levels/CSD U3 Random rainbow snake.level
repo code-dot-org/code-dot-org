@@ -18,7 +18,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis program draws a very rare breed of rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see how the starter code works\r\n* Add at least three new different colored circles to your rainbow snake\r\n* Use `randomNumber()` to make the rest of the snake's body move up and down like the first three",
+    "markdown_instructions": "<img src=\"https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis program draws a very rare breed of rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see how the starter code works\r\n* Add at least three new different colored circles to your rainbow snake\r\n* Use `randomNumber()` to make the rest of the snake's body move up and down like the first three\r\n\r\n*Challenge: Can you make size of some of the circles random, too?*",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_blocks": "noStroke();\r\nbackground(\"skyBlue\");\r\n\r\nfill(\"red\");\r\nellipse(100, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"orange\");\r\nellipse(140, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"yellow\");\r\nellipse(180, randomNumber(190,210), 50, 50);",
@@ -51,10 +51,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

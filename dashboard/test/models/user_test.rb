@@ -2,9 +2,27 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  setup do
-    @good_data = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
-    @good_data_young = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
+  self.use_transactional_test_case = true
+
+  setup_all do
+    @good_data = {
+      email: 'foo@bar.com',
+      password: 'foosbars',
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 28
+    }
+    @good_data_young = {
+      email: 'foo@bar.com',
+      password: 'foosbars',
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 8
+    }
+
+    @admin = create :admin
+    @teacher = create :teacher
+    @student = create :student
   end
 
   test 'make_teachers_21' do
@@ -68,10 +86,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'hash_email' do
-    teacher = create :teacher
-    teacher.update!(email: 'hash_email@example.com')
+    @teacher.update!(email: 'hash_email@example.com')
     assert_equal User.hash_email('hash_email@example.com'),
-      teacher.hashed_email
+      @teacher.hashed_email
   end
 
   test "log in with password with pepper" do
@@ -301,16 +318,16 @@ class UserTest < ActiveSupport::TestCase
     refute user.save
   end
 
-  test "cannot make an account without email an admin" do
-    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+  test "cannot make a student admin" do
+    student = create :student
+    student.admin = true
+    refute student.valid?
+    refute student.save
 
-    user.admin = true
-    refute user.save
-  end
-
-  test "cannot create admin without email" do
-    assert_does_not_create(User) do
-      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+    assert_raises(ActiveRecord::RecordInvalid) do
+      assert_does_not_create(User) do
+        create :student, admin: true
+      end
     end
   end
 
@@ -524,6 +541,44 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
+  test 'can get next_unpassed_progression_level when last updated user_level is inside a level group' do
+    user = create :user
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'sublevel1'
+    create :text_match, name: 'sublevel2'
+
+    level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
+
+    create(:script_level, script: script, levels: [level_group])
+    create :user_script, user: user, script: script
+
+    # Create a UserLevel for our level_group and sublevel, the sublevel is more recent
+    user_level1 = UserLevel.create(
+      user: user,
+      level: level_group,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now - 1
+    )
+
+    user_level2 = UserLevel.create(
+      user: user,
+      level: sub_level1,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT,
+      updated_at: Time.now
+    )
+
+    assert(user_level1.updated_at < user_level2.updated_at)
+
+    next_script_level = user.next_unpassed_progression_level(script)
+    refute next_script_level.nil?
+  end
+
   test 'script with inactive level completed is completed' do
     user = create :user
     level = create :maze, name: 'maze 1'
@@ -577,17 +632,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'students have hashed email not plaintext email' do
-    student = create :student, email: 'will_be_hashed@email.xx'
-
-    assert student.email.blank?
-    assert student.hashed_email.present?
+    assert @student.email.blank?
+    assert @student.hashed_email.present?
   end
 
   test 'teachers have hashed email and plaintext email' do
-    teacher = create :teacher, email: 'email@email.xx'
-
-    assert teacher.email.present?
-    assert teacher.hashed_email.present?
+    assert @teacher.email.present?
+    assert @teacher.hashed_email.present?
   end
 
   test 'cannot create duplicate hashed and plaintext email' do
@@ -645,24 +696,29 @@ class UserTest < ActiveSupport::TestCase
     assert user.hashed_email.present?
   end
 
+  test 'changing user from teacher to student removes school_info' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: nil
+    }
+    user = create :teacher, school_info_attributes: school_attributes
+    assert user.school_info.present?
+
+    user.user_type = User::TYPE_STUDENT
+    user.save!
+
+    refute user.school_info.present?
+  end
+
   test 'changing user from teacher to student removes full_address' do
     user = create :teacher
-    user.update(full_address: 'fake address')
+    user.update!(full_address: 'fake address')
 
     user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.full_address.nil?
-  end
-
-  test 'changing user from teacher to student removed unconfirmed_email' do
-    user = create :teacher
-    user.update(email: 'unconfirmed_email@example.com')
-
-    assert user.unconfirmed_email.present?
-    user.update(user_type: User::TYPE_STUDENT)
-
-    assert_nil user.unconfirmed_email
   end
 
   test 'changing user from student to teacher saves email' do
@@ -679,27 +735,23 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'sanitize_race_data sanitizes closed_dialog' do
-    user = create :student
-    user.update!(races: %w(white closed_dialog))
-    assert_equal %w(closed_dialog), user.reload.races
+    @student.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), @student.reload.races
   end
 
   test 'sanitize_race_data sanitizes too many races' do
-    user = create :student
-    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
-    assert_equal %w(nonsense), user.reload.races
+    @student.reload.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), @student.reload.races
   end
 
   test 'sanitize_race_data sanitizes non-races' do
-    user = create :student
-    user.update!(races: %w(not_a_race white))
-    assert_equal %w(nonsense), user.reload.races
+    @student.update!(races: %w(not_a_race white))
+    assert_equal %w(nonsense), @student.reload.races
   end
 
   test 'sanitize_race_data noops valid responses' do
-    user = create :student
-    user.update!(races: %w(black hispanic))
-    assert_equal %w(black hispanic), user.reload.races
+    @student.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), @student.reload.races
   end
 
   test 'under 13' do
@@ -875,65 +927,15 @@ class UserTest < ActiveSupport::TestCase
   test 'user should prefer working on 20hour instead of hoc' do
     user = create :user
 
-    start_date = Time.now - 3.months
-
     twenty_hour = Script.twenty_hour_script
     hoc = Script.find_by(name: 'hourofcode')
 
     # do a level that is both in script 1 and hoc
     [twenty_hour, hoc].each do |script|
-      UserLevel.create!(
-        user_id: user.id,
-        level_id: Script.twenty_hour_script.script_levels[1].level.id,
-        script: script,
-        created_at: start_date,
-        updated_at: start_date
-      )
+      UserScript.create! user: user, script: script
     end
 
-    user.backfill_user_scripts([twenty_hour, hoc])
     assert_equal [twenty_hour, hoc], user.working_on_scripts
-  end
-
-  test "user scripts backfills started_at and completed_at" do
-    begin
-      start_date = Time.now - 15.days
-      progress_date = Time.now - 4.days
-
-      user = create(:student)
-      script = Script.find_by_name("course2")
-      sl1 = script.script_levels[1]
-      sl2 = script.script_levels[5]
-
-      UserLevel.record_timestamps = false # ooh
-      UserLevel.create!(
-        user_id: user.id,
-        level_id: sl1.level.id,
-        script: script,
-        created_at: start_date,
-        updated_at: start_date
-      )
-
-      UserLevel.create!(
-        user_id: user.id,
-        level_id: sl2.level.id,
-        script: script,
-        created_at: progress_date,
-        updated_at: progress_date
-      )
-
-      assert_creates(UserScript) do
-        user.backfill_user_scripts([script])
-      end
-
-      user_script = UserScript.last
-      assert_equal start_date.to_i, user_script.started_at.to_i
-      assert_equal progress_date.to_i, user_script.last_progress_at.to_i
-      assert_nil user_script.assigned_at
-      assert_nil user_script.completed_at
-    ensure
-      UserLevel.record_timestamps = true
-    end
   end
 
   def complete_script_for_user(user, script, completed_date = Time.now)
@@ -961,97 +963,8 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test "backfill user_scripts backfills completed_at" do
-    begin
-      UserLevel.record_timestamps = false
-
-      completed_date = Time.now - 20.days
-
-      student = create :student
-      script = Script.find_by_name('playlab')
-
-      complete_script_for_user(student, script, completed_date)
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts([script])
-      end
-
-      user_script = UserScript.last
-      assert_equal completed_date.to_i - 1.day, user_script.started_at.to_i
-      assert_equal completed_date.to_i, user_script.last_progress_at.to_i
-      assert_nil user_script.assigned_at
-      assert_equal completed_date.to_i, user_script.completed_at.to_i
-
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
-  test "backfill user_scripts does not backfill completed_at if last level not passed" do
-    begin
-      UserLevel.record_timestamps = false
-
-      completed_date = Time.now - 20.days
-
-      student = create :student
-      script = Script.find_by_name('playlab')
-
-      # complete the script
-      complete_script_for_user(student, script, completed_date)
-
-      # and then modify so the last level is...
-      sl = script.script_levels.last
-      ul = UserLevel.where(user_id: student.id, level_id: sl.level_id).first
-      ul.best_result = 10 # ... not passed
-      ul.save!
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts [script]
-      end
-
-      user_script = UserScript.last
-      assert_equal completed_date.to_i - 1.day, user_script.started_at.to_i
-      assert_equal completed_date.to_i, user_script.last_progress_at.to_i
-      assert_nil user_script.assigned_at
-      assert_nil user_script.completed_at
-
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
-  test "needs_to_backfill_user_scripts?" do
-    user = create :student, created_at: Date.new(2014, 9, 10)
-    refute user.needs_to_backfill_user_scripts?
-
-    script = Script.find_by_name("course2")
-
-    create :user_level, user: user, level: script.script_levels.first.level, script: script
-    # now has progress
-    assert user.needs_to_backfill_user_scripts?
-
-    assert_creates(UserScript) do
-      user.backfill_user_scripts [script]
-    end
-
-    # now is backfilled (has a user script)
-    user = user.reload
-    refute user.needs_to_backfill_user_scripts?
-  end
-
-  test "needs_to_backfill_user_scripts? is false for recent users" do
-    user = create :student, created_at: Date.new(2015, 9, 10)
-    refute user.needs_to_backfill_user_scripts?
-
-    script = Script.find_by_name("course2")
-    # In normal usage, UserScript will be created alongside UserLevel.
-    create :user_level, user: user, level: script.script_levels.first.level, script: script
-    refute user.needs_to_backfill_user_scripts?
-  end
-
   test 'can_edit_password? is true for user with password' do
-    user = create :student
-    assert user.can_edit_password?
+    assert @student.can_edit_password?
   end
 
   test 'can_edit_password? is false for user without password' do
@@ -1061,8 +974,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is true for user with password' do
-    user = create :student
-    assert user.can_edit_email?
+    assert @student.can_edit_email?
   end
 
   test 'can_edit_email? is false for user without password' do
@@ -1362,21 +1274,9 @@ class UserTest < ActiveSupport::TestCase
     create(:user, name: 'Same Name')
   end
 
-  test 'email confirmation required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-    assert user.confirmation_required?
-    refute user.confirmed_at
-  end
-
-  test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-    refute user.confirmation_required?
-    refute user.confirmed_at
-  end
-
   test 'student and teacher relationships' do
-    student = create :student
     teacher = create :teacher
+    student = create :student
     section = create :section, user_id: teacher.id
 
     follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
@@ -1428,7 +1328,7 @@ class UserTest < ActiveSupport::TestCase
 
     # can_pair_with? method
     classmate = create :student
-    section.add_student classmate, move_for_same_teacher: false
+    section.add_student classmate
     assert classmate.can_pair_with?(student)
     assert student.can_pair_with?(classmate)
     refute student.can_pair_with?(other_user)
@@ -1439,9 +1339,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
-    fake_teacher = create :teacher
-    assert fake_teacher.teacher?
-    refute fake_teacher.authorized_teacher?
+    assert @teacher.teacher?
+    refute @teacher.authorized_teacher?
 
     # you have to be in a cohort
     c = create :cohort
@@ -1456,11 +1355,8 @@ class UserTest < ActiveSupport::TestCase
     assert plc_teacher.authorized_teacher?
 
     # admins should be authorized teachers too
-    admin = create :teacher
-    admin.admin = true
-    admin.save!
-    assert admin.teacher?
-    assert admin.authorized_teacher?
+    assert @admin.teacher?
+    assert @admin.authorized_teacher?
   end
 
   test "can_edit_account?" do
@@ -1513,8 +1409,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for teacher without version' do
-    teacher = create :teacher
-    assert_nil teacher.terms_version
+    assert_nil @teacher.terms_version
   end
 
   test 'terms_of_service_version for teacher with version' do
@@ -1523,8 +1418,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for student without teachers' do
-    student = create :student
-    assert_nil student.terms_version
+    assert_nil @student.terms_version
   end
 
   test 'terms_of_service_version for student with teachers without version' do
@@ -1541,9 +1435,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for students with deleted teachers' do
-    time_now = DateTime.now
     follower = create :follower
-    follower.user.update(deleted_at: time_now, terms_of_service_version: 1)
+    follower.user.update(terms_of_service_version: 1)
+    follower.user.destroy
     assert_nil follower.student_user.terms_version
   end
 
@@ -1579,17 +1473,29 @@ class UserTest < ActiveSupport::TestCase
     refute user.permission?(UserPermission::LEVELBUILDER)
   end
 
+  test 'revoke_all_permissions revokes admin status' do
+    admin_user = create :admin
+    admin_user.revoke_all_permissions
+    assert_nil admin_user.reload.admin
+  end
+
+  test 'revoke_all_permissions revokes user permissions' do
+    teacher = create :teacher
+    teacher.permission = UserPermission::FACILITATOR
+    teacher.permission = UserPermission::LEVELBUILDER
+    teacher.revoke_all_permissions
+    assert_equal [], teacher.reload.permissions
+  end
+
   test 'should_see_inline_answer? returns true in levelbuilder' do
-    user = create :user
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    assert user.should_see_inline_answer?(nil)
-    assert user.should_see_inline_answer?(create(:script_level))
+    assert @student.should_see_inline_answer?(nil)
+    assert @student.should_see_inline_answer?(create(:script_level))
   end
 
   test 'should_see_inline_answer? returns false for non teachers' do
-    user = create :student
-    assert_not user.should_see_inline_answer?(create(:script_level))
+    assert_not @student.should_see_inline_answer?(create(:script_level))
   end
 
   test 'should_see_inline_answer? returns true for authorized teachers in csp' do
@@ -1703,22 +1609,19 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_or_create_teacher creates new teacher' do
-    admin = create :admin
-
     params = {
       email: 'email@example.net',
       name: 'test user'
     }
 
     user = assert_creates(User) do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert user.teacher?
-    assert_equal admin, user.invited_by
+    assert_equal @admin, user.invited_by
   end
 
   test 'find_or_create_teacher finds existing teacher' do
-    admin = create :admin
     teacher = create :teacher
 
     params = {
@@ -1727,37 +1630,78 @@ class UserTest < ActiveSupport::TestCase
     }
 
     found = assert_does_not_create(User) do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert_equal teacher, found
   end
 
   test 'find_or_create_teacher with an invalid email raises ArgumentError' do
-    admin = create :admin
-
     params = {
       email: 'invalid',
       name: 'test user'
     }
 
     e = assert_raises ArgumentError do
-      User.find_or_create_teacher params, admin
+      User.find_or_create_teacher params, @admin
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 
-  test 'non_deleted_sections doesnt return deleted sections' do
-    teacher = create :teacher
-    section1 = create :section, user_id: teacher.id
-    section2 = create :section, user_id: teacher.id
+  test 'deleting teacher deletes dependent sections and followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
 
-    assert_equal [section1, section2], teacher.sections
-    assert_equal [section1, section2], teacher.non_deleted_sections
+    teacher.destroy
 
-    section1.update!(deleted_at: Time.now)
+    assert teacher.reload.deleted?
+    assert section.reload.deleted?
+    assert follower.reload.deleted?
+    refute student.reload.deleted?
+  end
 
-    # sections still incldues our deleted section, but non_deleted_sections does not
-    assert_equal [section1, section2], teacher.sections
-    assert_equal [section2], teacher.non_deleted_sections
+  test 'deleting student deletes dependent followers' do
+    follower = create :follower
+    teacher = follower.user
+    section = follower.section
+    student = follower.student_user
+
+    student.destroy
+
+    refute teacher.reload.deleted?
+    refute section.reload.deleted?
+    assert follower.reload.deleted?
+    assert student.reload.deleted?
+  end
+
+  test 'assign_script creates UserScript if necessary' do
+    assert_creates(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script reuses UserScript if available' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(user: @student, script: Script.first)
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script does not overwrite assigned_at if pre-existing' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(Script.first)
+      assert_equal Script.first.id, user_script.script_id
+      assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+    end
   end
 end

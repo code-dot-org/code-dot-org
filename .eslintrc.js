@@ -3,7 +3,6 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  "parser": "babel-eslint",
   "plugins": [
     "react",
     "mocha",
@@ -16,16 +15,6 @@ module.exports = {
     "browser": true,
     "node": true,
     "mocha": true,
-    "es6": true
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true,
-      "ecmaVersion": 6,
-      "experimentalObjectRestSpread": true
-    }
   },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
@@ -48,7 +37,7 @@ module.exports = {
     "no-new-object": "error",
     "no-trailing-spaces": "error",
     "no-undef": "error",
-    "no-unused-vars": "off",
+    "no-unused-vars": ['error', {"args": 'none'}],
     "no-with": "error",
     "object-curly-spacing": "off",
     "react/display-name": "off",

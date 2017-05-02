@@ -22,7 +22,7 @@ class WorkshopTest < ActiveSupport::TestCase
   setup_all do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]
-    @tomorrow_workshop = create_workshop [[Time.now.utc + 1.days, Time.now.utc + 1.days + 1.hour]]
+    @tomorrow_workshop = create_workshop [[Time.now.utc + 1.day, Time.now.utc + 1.day + 1.hour]]
 
     now = Time.zone.today
     today_start = Time.new(now.year, now.month, now.mday, 9, 0, 0, 0)
@@ -227,5 +227,11 @@ class WorkshopTest < ActiveSupport::TestCase
 
     assert_equal string_500, workshop.location
     assert_equal string_500, workshop.instructions
+  end
+
+  test "get attending teachers gets attending teachers" do
+    workshop = create(:pd_workshop, num_sessions: 2, enrolled_and_attending_users: 10, enrolled_unattending_users: 5)
+    assert_equal 15, workshop.enrollments.size
+    assert_equal 10, workshop.attending_teachers.size
   end
 end

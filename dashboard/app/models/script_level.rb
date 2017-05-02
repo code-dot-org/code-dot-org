@@ -12,6 +12,7 @@
 #  assessment  :boolean
 #  properties  :text(65535)
 #  named_level :boolean
+#  bonus       :boolean
 #
 # Indexes
 #
@@ -76,9 +77,15 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def progression
-    return nil unless properties
-    properties_hash = JSON.parse(properties)
-    properties_hash['progression']
+    JSON.parse(properties)['progression'] if properties
+  end
+
+  def target
+    JSON.parse(properties)['target'] if properties
+  end
+
+  def challenge
+    JSON.parse(properties)['challenge'] if properties
   end
 
   def has_another_level_to_go_to?
@@ -193,7 +200,11 @@ class ScriptLevel < ActiveRecord::Base
 
   def level_display_text
     if level.unplugged?
-      I18n.t('unplugged_activity')
+      if level.is_a?(GoBeyond)
+        I18n.t('go_beyond')
+      else
+        I18n.t('unplugged_activity')
+      end
     elsif stage.unplugged?
       position - 1
     else
@@ -244,6 +255,7 @@ class ScriptLevel < ActiveRecord::Base
       icon: icon,
       title: level_display_text,
       url: build_script_level_url(self),
+      freePlay: level.try(:free_play) == "true",
     }
 
     summary[:progression] = progression if progression

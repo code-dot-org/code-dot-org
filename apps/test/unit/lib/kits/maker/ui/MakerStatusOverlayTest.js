@@ -4,7 +4,6 @@ import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 describe('MakerStatusOverlay', () => {
   it('renders nothing by default', () => {
@@ -14,6 +13,8 @@ describe('MakerStatusOverlay', () => {
         height={15}
         isConnecting={false}
         hasConnectionError={false}
+        handleTryAgain={() => {}}
+        handleDisableMaker={() => {}}
       />
     );
     expect(wrapper.html()).to.be.null;
@@ -28,6 +29,8 @@ describe('MakerStatusOverlay', () => {
           scale={0.65}
           isConnecting={true}
           hasConnectionError={false}
+          handleTryAgain={() => {}}
+          handleDisableMaker={() => {}}
         />
       );
       expect(wrapper).to.have.style('transform', 'scale(0.65)');
@@ -42,6 +45,8 @@ describe('MakerStatusOverlay', () => {
           height={10}
           isConnecting={true}
           hasConnectionError={false}
+          handleTryAgain={() => {}}
+          handleDisableMaker={() => {}}
         />
       );
       expect(wrapper).not.to.have.style('transform');
@@ -60,6 +65,8 @@ describe('MakerStatusOverlay', () => {
           height={15}
           isConnecting={true}
           hasConnectionError={false}
+          handleTryAgain={() => {}}
+          handleDisableMaker={() => {}}
         />
       );
     });
@@ -87,24 +94,21 @@ describe('MakerStatusOverlay', () => {
   });
 
   describe('on error', () => {
-    let wrapper;
+    let wrapper, handleTryAgain, handleDisableMaker;
 
     beforeEach(() => {
+      handleTryAgain = sinon.spy();
+      handleDisableMaker = sinon.spy();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           width={11}
           height={16}
           isConnecting={false}
           hasConnectionError={true}
+          handleTryAgain={handleTryAgain}
+          handleDisableMaker={handleDisableMaker}
         />
       );
-      sinon.stub(studioApp, 'resetButtonClick');
-      sinon.stub(studioApp, 'runButtonClick');
-    });
-
-    afterEach(() => {
-      studioApp.resetButtonClick.restore();
-      studioApp.runButtonClick.restore();
     });
 
     it('renders an overlay', () => {
@@ -120,7 +124,7 @@ describe('MakerStatusOverlay', () => {
       expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
     });
 
-    it('and waiting text', () => {
+    it('and error text', () => {
       expect(wrapper.text()).to.include('Make sure your board is plugged in.');
     });
 
@@ -129,12 +133,30 @@ describe('MakerStatusOverlay', () => {
       expect(wrapper.find('button').text()).to.include('Try Again');
     });
 
-    it('that triggers a reset and run when clicked', () => {
-      expect(studioApp.resetButtonClick).not.to.have.been.called;
-      expect(studioApp.runButtonClick).not.to.have.been.called;
+    it('that calls the provided try again handler', () => {
+      expect(handleTryAgain).not.to.have.been.called;
       wrapper.find('button').simulate('click');
-      expect(studioApp.resetButtonClick).to.have.been.calledOnce;
-      expect(studioApp.runButtonClick).to.have.been.calledOnce;
+      expect(handleTryAgain).to.have.been.calledOnce;
+    });
+
+    it('and a "Get Help" link', () => {
+      expect(wrapper).to.have.descendants('a[children="Get Help"]');
+    });
+
+    it('that opens the maker setup page in a new tab', () => {
+      const link = wrapper.find('a[children="Get Help"]');
+      expect(link).to.have.prop('href', '/maker/setup');
+      expect(link).to.have.prop('target', '_blank');
+    });
+
+    it('and a "Disable Maker Toolkit" link', () => {
+      expect(wrapper).to.have.descendants('a[children="Disable Maker Toolkit"]');
+    });
+
+    it('that calls the provided disable handler', () => {
+      expect(handleDisableMaker).not.to.have.been.called;
+      wrapper.find('a[children="Disable Maker Toolkit"]').simulate('click');
+      expect(handleDisableMaker).to.have.been.calledOnce;
     });
   });
 });

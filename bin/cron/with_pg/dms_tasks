@@ -9,8 +9,11 @@ require File.expand_path('../../../../deployment', __FILE__)
 require 'cdo/chat_client'
 require 'cdo/only_one'
 require 'cdo/rake_utils'
-require 'cdo/redshift'
 require 'cdo/slack'
+
+RakeUtils.with_bundle_dir(File.dirname(__FILE__)) do
+  require 'cdo/redshift'
+end
 
 REPLICATION_TASK_TYPE = 'reload-target'.freeze
 SECONDS_PER_MINUTE = 60
@@ -52,7 +55,7 @@ def main
   dms_client = Aws::DatabaseMigrationService::Client.new
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
-    next if task_name.start_with? 'test'
+    next unless task_name.start_with? 'cron'
 
     task_arn = replication_task.replication_task_arn
     # TODO(asher): Gracefully handle the case when the DMS task has never been run.
@@ -96,6 +99,4 @@ rescue Aws::DatabaseMigrationService::Errors::ServiceError => e
   raise e
 end
 
-RakeUtils.with_bundle_dir(File.dirname(__FILE__)) do
-  main if only_one_running?(__FILE__)
-end
+main if only_one_running?(__FILE__)

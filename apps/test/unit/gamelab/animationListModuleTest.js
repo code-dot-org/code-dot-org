@@ -20,8 +20,10 @@ import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 import {createStore} from '../../util/redux';
 import {expect} from '../../util/configuredChai';
 import {setExternalGlobals} from '../../util/testUtils';
+const project = require('@cdo/apps/code-studio/initApp/project');
 
 describe('animationListModule', function () {
+  setExternalGlobals(beforeEach, afterEach);
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
@@ -42,13 +44,11 @@ describe('animationListModule', function () {
     });
 
     it(`constructs a sourceUrl from key and project if one isn't provided in props`, function () {
-      setExternalGlobals();
       const props = {sourceUrl: null};
       expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png');
     });
 
     it(`appends version query param if props has a version id and version flag is passed`, function () {
-      setExternalGlobals();
       const props = {sourceUrl: null, version: 'baz'};
       expect(animationSourceUrl(key, props, true)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
     });
@@ -151,14 +151,9 @@ describe('animationListModule', function () {
   };
 
   describe('action: set initial animationList', function () {
-    let oldWindowDashboard, server, store;
+    let server, store;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(combineReducers({animationList: reducer, animationTab}), {});
@@ -166,7 +161,6 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
     });
 
     it('when animationList has 1 item, selectedAnimation should be the animation', function () {
@@ -186,7 +180,6 @@ describe('animationListModule', function () {
     });
 
     it('when animationList has 0 items, selectedAnimation should be the empty string', function () {
-      const key0 = 'animation_1';
       let animationList = {
         orderedKeys: [],
         propsByKey: {}
@@ -220,15 +213,10 @@ describe('animationListModule', function () {
   });
 
   describe('action: delete animation', function () {
-    let oldWindowDashboard, server;
+    let server;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';},
-          projectChanged() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
+      sinon.stub(project, 'projectChanged').returns('');
 
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
@@ -236,7 +224,7 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
+      project.projectChanged.restore();
     });
 
     it('deleting the first animation reselects the next animation in the animationList', function () {
@@ -272,15 +260,10 @@ describe('animationListModule', function () {
   });
 
   describe('action: clone animation', function () {
-    let oldWindowDashboard, server;
+    let server;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';},
-          projectChanged() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
+      sinon.stub(project, 'projectChanged').returns('');
 
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
@@ -288,7 +271,7 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
+      project.projectChanged.restore();
     });
 
     it('cloning animation creates an animation with the same props, and unique name', function () {
@@ -336,15 +319,11 @@ describe('animationListModule', function () {
   });
 
   describe('action: add blank animation', function () {
-    let oldWindowDashboard, server, store;
+    let server, store;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';},
-          projectChanged() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
+      sinon.stub(project, 'projectChanged').returns('');
+
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(combineReducers({animationList: reducer, animationTab}), {});
@@ -352,7 +331,7 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
+      project.projectChanged.restore();
     });
 
     it('new blank animations get name animation_1 when it is the first blank animation', function () {
@@ -362,8 +341,6 @@ describe('animationListModule', function () {
     });
 
     it('new blank animations get name next available number appended', function () {
-      const key0 = 'animation_1';
-      const key1 = 'animation_2';
       let animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(addBlankAnimation());
@@ -373,9 +350,7 @@ describe('animationListModule', function () {
     });
 
     it('new blank animations get name next available number appended when available number is in the middle of the list', function () {
-      const key0 = 'animation_1';
       const key1 = 'animation_2';
-      const key2 = 'animation_3';
       let animationList = createAnimationList(3);
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key1));
@@ -388,15 +363,10 @@ describe('animationListModule', function () {
   });
 
   describe('action: add library animation', function () {
-    let oldWindowDashboard, server, store;
+    let server, store;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';},
-          projectChanged() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
+      sinon.stub(project, 'projectChanged').returns('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(combineReducers({animationList: reducer, animationTab}), {});
@@ -404,7 +374,7 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
+      project.projectChanged.restore();
     });
 
     it('new animations get name _# appended to the name in order of numbers available', function () {
@@ -505,15 +475,10 @@ describe('animationListModule', function () {
   });
 
   describe('action: add blank frame', function () {
-    let oldWindowDashboard, server, store;
+    let server, store;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';},
-          projectChanged() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
+      sinon.stub(project, 'projectChanged').returns('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(combineReducers({animationList: reducer, animationTab}), {});
@@ -521,7 +486,7 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
+      project.projectChanged.restore();
     });
 
     it('new blank frame gets added to pendingFrames and original animation is unchanged', function () {
@@ -544,15 +509,10 @@ describe('animationListModule', function () {
   });
 
   describe('action: append non blank frames', function () {
-    let oldWindowDashboard, server, store, selectedAnimation, libraryAnimProps;
+    let server, store, selectedAnimation, libraryAnimProps;
     beforeEach(function () {
-      oldWindowDashboard = window.dashboard;
-      window.dashboard = {
-        project: {
-          getCurrentId() {return '';},
-          projectChanged() {return '';}
-        }
-      };
+      project.getCurrentId.returns('');
+      sinon.stub(project, 'projectChanged').returns('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(combineReducers({animationList: reducer, animationTab}), {});
@@ -572,7 +532,7 @@ describe('animationListModule', function () {
 
     afterEach(function () {
       server.restore();
-      window.dashboard = oldWindowDashboard;
+      project.projectChanged.restore();
     });
 
     it('append library frames adds props to pendingFrames for selectedAnimation', function () {

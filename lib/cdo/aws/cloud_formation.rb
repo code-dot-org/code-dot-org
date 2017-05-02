@@ -36,12 +36,16 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
+    CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
+
     AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'.freeze
 
     class << self
+      attr_accessor :daemon
+
       def branch
         ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
       end
@@ -71,6 +75,7 @@ module AWS
       # or prints the template description (if valid).
       def validate
         template = render_template(dry_run: true)
+        CDO.log.info template if ENV['VERBOSE']
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         params = parameters(template)
@@ -88,7 +93,10 @@ module AWS
             change_set = {changes: []}
             loop do
               sleep 1
-              change_set = cfn.describe_change_set(change_set_name: change_set_id)
+              change_set = cfn.describe_change_set(
+                change_set_name: change_set_id,
+                stack_name: stack_name
+              )
               break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
             end
             change_set.changes.each do |change|
@@ -101,7 +109,10 @@ module AWS
             CDO.log.info 'No changes' if change_set.changes.empty?
 
           ensure
-            cfn.delete_change_set(change_set_name: change_set_id)
+            cfn.delete_change_set(
+              change_set_name: change_set_id,
+              stack_name: stack_name
+            )
           end
         end
       end
@@ -142,9 +153,15 @@ module AWS
       def stack_options(template)
         {
           stack_name: stack_name,
-          capabilities: ['CAPABILITY_IAM'],
           parameters: parameters(template)
-        }.merge(string_or_url(template))
+        }.merge(string_or_url(template)).tap do |options|
+          if stack_name == 'IAM'
+            options[:capabilities] = %w[
+              CAPABILITY_IAM
+              CAPABILITY_NAMED_IAM
+            ]
+          end
+        end
       end
 
       def create_or_update
@@ -153,7 +170,12 @@ module AWS
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
         options = stack_options(template)
-        options[:on_failure] = 'DO_NOTHING' if action == :create
+        if action == :create
+          options[:on_failure] = 'DO_NOTHING'
+          if daemon
+            options[:role_arn] = "arn:aws:iam::#{Aws::STS::Client.new.get_caller_identity.account}:role/CloudFormationRole"
+          end
+        end
         begin
           updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
         rescue Aws::CloudFormation::Errors::ValidationError => e
@@ -213,7 +235,7 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{branch}.tar.gz",
+                key: "#{CHEF_KEY}/#{branch}.tar.gz",
                 body: tmp.read
               )
             end
@@ -224,7 +246,7 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: "chef/bootstrap-#{stack_name}.sh",
+          key: "#{CHEF_KEY}/bootstrap-#{stack_name}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
@@ -292,9 +314,6 @@ module AWS
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
           stack_name: stack_name,
-          ssh_key_name: SSH_KEY_NAME,
-          image_id: IMAGE_ID,
-          instance_type: INSTANCE_TYPE,
           branch: branch,
           region: CDO.aws_region,
           environment: rack_env,
@@ -309,11 +328,8 @@ module AWS
           availability_zones: AVAILABILITY_ZONES,
           azs: azs,
           s3_bucket: S3_BUCKET,
-          file: method(:file),
-          js: method(:js),
-          erb: method(:erb),
-          subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
-          public_subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
+          subnets: azs.map {|az| {'Fn::ImportValue': "VPC-Subnet#{az}"}},
+          public_subnets: azs.map {|az| {'Fn::ImportValue': "VPC-PublicSubnet#{az}"}},
           lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
@@ -323,30 +339,11 @@ module AWS
         erb_eval(template_string, filename)
       end
 
-      # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
-      def source(str, filename, vars={})
-        local_vars = @@local_variables.dup
-        vars.each {|k, v| local_vars[k] = v}
-        lines = erb_eval(str, filename, local_vars).each_line.map do |line|
-          # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
-          line.split(/(%{.*})/).map do |x|
-            x =~ /%{.*}/ ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
-          end
-        end.flatten
-        {'Fn::Join' => ['', lines]}.to_json
-      end
-
       # Inline a file into a CloudFormation template.
       def file(filename, vars={})
         str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
-        source(str, filename, vars)
-      end
-
-      def erb(filename, vars={})
-        local_vars = @@local_variables.dup
-        vars.each {|k, v| local_vars[k] = v}
-        str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
-        erb_eval(str, filename, vars)
+        vars = @@local_variables.dup.to_h.merge(vars)
+        {'Fn::Sub': erb_eval(str, filename, vars)}.to_json
       end
 
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
@@ -361,7 +358,7 @@ module AWS
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        source(str, filename)
+        file(str, filename)
       end
 
       def js_zip

@@ -3,7 +3,6 @@
 # Table name: followers
 #
 #  id              :integer          not null, primary key
-#  user_id         :integer
 #  student_user_id :integer          not null
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -14,12 +13,13 @@
 #
 #  index_followers_on_section_id_and_student_user_id  (section_id,student_user_id)
 #  index_followers_on_student_user_id                 (student_user_id)
-#  index_followers_on_user_id_and_student_user_id     (user_id,student_user_id)
 #
 
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :section
   has_one :user, through: :section
   belongs_to :student_user, foreign_key: "student_user_id", class_name: User
@@ -37,7 +37,7 @@ class Follower < ActiveRecord::Base
 
   validate :cannot_follow_yourself, :teacher_must_be_teacher
 
-  validates_presence_of :user, :student_user, :section
+  validates_presence_of :student_user, :section
 
   after_create :assign_script
   def assign_script

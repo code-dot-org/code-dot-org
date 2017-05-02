@@ -29,7 +29,7 @@ import {
 } from '../submitHelper';
 var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
-
+import {getStore} from '../redux';
 import {
   setInitialAnimationList,
   saveAnimations,
@@ -48,12 +48,11 @@ import {
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import project from '../code-studio/initApp/project';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
+import Sounds from '../Sounds';
+import {TestResults, ResultType} from '../constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
-
-// The width and height in pixels of the thumbnail image to capture.
-const THUMBNAIL_SIZE = 180;
 
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
@@ -118,7 +117,7 @@ var GameLab = function () {
   /** Expose for levelbuilders (usable on prod) */
   window.viewExportableAnimationList = () => {
     this.getExportableAnimationList(list => {
-      this.studioApp_.reduxStore.dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
+      getStore().dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
     });
   };
 };
@@ -131,7 +130,7 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  this.studioApp_.reduxStore.dispatch(jsDebugger.appendLog(object));
+  getStore().dispatch(jsDebugger.appendLog(object));
 };
 
 /**
@@ -199,7 +198,7 @@ GameLab.prototype.init = function (config) {
   });
 
   config.afterClearPuzzle = function () {
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -236,11 +235,11 @@ GameLab.prototype.init = function (config) {
   config.enableShowLinesCount = false;
 
   var onMount = function () {
-    this.setupReduxSubscribers(this.studioApp_.reduxStore);
+    this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {
         JSON.parse(config.level.watchersPrepopulated).forEach(option => {
-          this.studioApp_.reduxStore.dispatch(addWatcher(option));
+          getStore().dispatch(addWatcher(option));
         });
       } catch (e) {
         console.warn('Error pre-populating watchers.');
@@ -283,11 +282,11 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
+    getStore().dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
     if (config.level.expandDebugger) {
-      this.studioApp_.reduxStore.dispatch(jsDebugger.open());
+      getStore().dispatch(jsDebugger.open());
     }
   }
 
@@ -304,19 +303,19 @@ GameLab.prototype.init = function (config) {
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted,
+    isSubmitted: !!config.level.submitted
   });
 
-  if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
-    this.studioApp_.reduxStore.dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+  if (startInAnimationTab(getStore().getState())) {
+    getStore().dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
   }
 
   // Push project-sourced animation metadata into store
   const initialAnimationList = config.initialAnimationList || this.startAnimations;
-  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(initialAnimationList));
+  getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
@@ -360,7 +359,7 @@ GameLab.prototype.onIsRunningChange = function () {
  * this with React.
  */
 GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
-  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  var showOverlays = shouldOverlaysBeVisible(getStore().getState());
   $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
@@ -458,9 +457,7 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
-  if (this.studioApp_.cdoSounds) {
-    this.studioApp_.cdoSounds.stopAllAudio();
-  }
+  Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
 
@@ -471,7 +468,7 @@ GameLab.prototype.reset = function (ignore) {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  this.studioApp_.reduxStore.dispatch(jsDebugger.detach());
+  getStore().dispatch(jsDebugger.detach());
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -500,21 +497,21 @@ GameLab.prototype.reset = function (ignore) {
 
 GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (this.executionError) {
-    this.result = this.studioApp_.ResultType.ERROR;
+    this.result = ResultType.ERROR;
   } else {
     // In most cases, submit all results as success
-    this.result = this.studioApp_.ResultType.SUCCESS;
+    this.result = ResultType.SUCCESS;
   }
 
   // If we know they succeeded, mark levelComplete true
-  const levelComplete = (this.result === this.studioApp_.ResultType.SUCCESS);
+  const levelComplete = (this.result === ResultType.SUCCESS);
 
   if (this.executionError) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
   } else {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+    this.testResults = TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
@@ -526,7 +523,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
-    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.testResults = TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
   } else {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
@@ -539,7 +536,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     this.message = null;
   }
 
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+  if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
@@ -573,19 +570,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     }
   };
 
-  const divGameLab = document.getElementById('divGameLab');
-  if (!divGameLab || typeof divGameLab.toDataURL === 'undefined') { // don't try it if function is not defined
-    sendReport();
-  } else {
-    divGameLab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
-        this.feedbackImage = pngDataUrl;
-        this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
-
-        sendReport();
-      }.bind(this)
-    });
-  }
+  sendReport();
 };
 
 /**
@@ -761,8 +746,8 @@ GameLab.prototype.onMouseUp = function (e) {
  * Execute the user's code.  Heaven help us...
  */
 GameLab.prototype.execute = function () {
-  this.result = this.studioApp_.ResultType.UNSET;
-  this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
+  this.result = ResultType.UNSET;
+  this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
   this.response = null;
 
@@ -821,7 +806,7 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.studioApp_.reduxStore.dispatch(jsDebugger.attach(this.JSInterpreter));
+  getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
@@ -916,7 +901,7 @@ GameLab.prototype.onP5Preload = function () {
  * @private
  */
 GameLab.prototype.preloadAnimations_ = function () {
-  let store = this.studioApp_.reduxStore;
+  let store = getStore();
   return new Promise(resolve => {
     if (this.areAnimationsReady_()) {
       resolve();
@@ -942,7 +927,7 @@ GameLab.prototype.preloadAnimations_ = function () {
  * @private
  */
 GameLab.prototype.areAnimationsReady_ = function () {
-  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.every(key => animationList.propsByKey[key].loadedFromSource);
 };
 
@@ -1077,40 +1062,13 @@ GameLab.prototype.onP5Draw = function () {
  * for long enough and we have not done so already.
  */
 GameLab.prototype.captureInitialImage = function () {
-  if (!project.isOwner() || this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
+  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
     return;
   }
   this.initialCaptureComplete = true;
-  captureImage(THUMBNAIL_SIZE);
+  captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
 };
 
-/**
- * Capture a thumbnail image of the play space.
- * @param {number} thumbnailSize The width and height in pixels of the captured image.
- */
-function captureImage(thumbnailSize) {
-  const p5Canvas = document.getElementById('defaultCanvas0');
-  if (!p5Canvas) {
-    console.warn(`Thumbnail capture failed: p5 canvas not found.`);
-    return;
-  }
-
-  // Scale the image down so we don't send so much data over the network.
-  const thumbnailCanvas = document.createElement('canvas');
-  thumbnailCanvas.width = thumbnailSize;
-  thumbnailCanvas.height = thumbnailSize;
-
-  // Make sure any empty areas appear white.
-  const thumbnailContext = thumbnailCanvas.getContext('2d');
-  thumbnailContext.fillStyle = 'white';
-  thumbnailContext.fillRect(0, 0, thumbnailSize, thumbnailSize);
-
-  thumbnailContext.drawImage(p5Canvas, 0, 0, thumbnailSize, thumbnailSize);
-
-  thumbnailCanvas.toBlob(blob => {
-    project.saveThumbnail(blob);
-  });
-}
 
 GameLab.prototype.completeRedrawIfDrawComplete = function () {
   if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
@@ -1171,8 +1129,8 @@ GameLab.prototype.displayFeedback_ = function () {
  * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getSerializedAnimationList = function (callback) {
-  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  getStore().dispatch(saveAnimations(() => {
+    callback(getSerializedAnimationList(getStore().getState().animationList));
   }));
 };
 
@@ -1183,8 +1141,8 @@ GameLab.prototype.getSerializedAnimationList = function (callback) {
  * @param {function(SerializedAnimationList)} callback
  */
 GameLab.prototype.getExportableAnimationList = function (callback) {
-  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    const list = this.studioApp_.reduxStore.getState().animationList;
+  getStore().dispatch(saveAnimations(() => {
+    const list = getStore().getState().animationList;
     const serializedList = getSerializedAnimationList(list);
     const exportableList = withAbsoluteSourceUrls(serializedList);
     callback(exportableList);
@@ -1192,7 +1150,7 @@ GameLab.prototype.getExportableAnimationList = function (callback) {
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
-  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.map(key => {
     const name = animationList.propsByKey[key].name;
     return {
