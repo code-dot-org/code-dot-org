@@ -25,7 +25,7 @@ class ApiControllerTest < ActionController::TestCase
     # some of our tests depend on sorting of students by name, thus we name them ourselves
     @students = []
     5.times do |i|
-      student = create(:user, name: "student_#{i}")
+      student = create(:student, name: "student_#{i}")
       @students << student
       create(:follower, section: @section, student_user: student)
     end

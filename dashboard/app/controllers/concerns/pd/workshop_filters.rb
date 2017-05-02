@@ -104,7 +104,8 @@ module Pd::WorkshopFilters
           when 'location_name'
             workshops = workshops.order("location_name #{direction}".strip)
           when 'workshop_type'
-            workshops = workshops.order("workshop_type #{direction}".strip)
+            # TODO: elijah replace this with on_map and funded
+            workshops = workshops.order("on_map #{direction}".strip).order("funded #{direction}".strip)
           when 'course'
             workshops = workshops.order("course #{direction}".strip)
           when 'subject'
