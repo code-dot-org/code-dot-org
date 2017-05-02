@@ -19,7 +19,7 @@
   - else
     %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  .alert.alert-danger#error-message{style: 'display: none', role: 'alert'}
+  .alert.alert-danger.error-message{style: 'display: none', role: 'alert'}
 
   .form-group
     %label.control-label{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
@@ -102,18 +102,20 @@
   .form-group{style: "margin-bottom: 0px"}
     %p= I18n.t(:volunteer_engineer_submission_final_paragraph)
     %div
-      %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
+      %label{style: 'font-weight: normal; cursor: pointer', for: 'volunteer-allow-contact'}
         %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
+        %span.form-required-field *
 
   .form-group
     %div
-      %label{style: 'font-weight: normal;', for: 'volunteer-age-18-plus'}
+      %label{style: 'font-weight: normal; cursor: pointer'}
         %input#volunteer-age-18-plus{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
+        %span.form-required-field *
 
   .form-group
-    %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
+    %button.primary.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
   .alert.alert-success{role:"alert"}
@@ -169,20 +171,20 @@
       $(error_id).parents('.form-group').addClass('has-error');
     }
 
-    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+    $('#volunteer-engineer-submit-form .error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
 
     $('html, body').animate({
       scrollTop: $('#volunteer-engineer-submit-form').offset().top
     }, 1000);
 
-    $("#btn-submit").removeAttr('disabled');
-    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    $('#volunteer-engineer-submit-form .btn-submit').removeAttr('disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_disabled").addClass("button_enabled");
   }
 
   function volunteerEngineerFormSubmit()
   {
-    $("#volunteer-engineer-submit-form #btn-submit").attr('disabled','disabled');
-    $("#volunteer-engineer-submit-form #btn-submit").removeClass("button_enabled").addClass("button_disabled");
+    $('#volunteer-engineer-submit-form .btn-submit').attr('disabled','disabled');
+    $('#volunteer-engineer-submit-form .btn-submit').removeClass("button_enabled").addClass("button_disabled");
 
     var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
 
@@ -191,7 +193,15 @@
       $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
         function() {
             return {"name": this.name, "value": null}
-        }).get()
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-allow-contact').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
+      $('input[type=checkbox]:not(:checked)#volunteer-age-18-plus').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get(),
     );
 
     $.ajax({
