@@ -499,21 +499,20 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
-  # temporary data transformation method that sets values for new on_map and
-  # funded columns from old workshop_type, for that transitional period where we
-  # temporarily have both sets on our way to removing workshop_type
+  # temporary attribute assignment method; replaces old
+  # set_on_map_and_funded_from_workshop_type helper.
   # TODO elijah: remove this method  once it is no longer necessary
-  def set_on_map_and_funded_from_workshop_type(type)
-    case type
+  def workshop_type=(value)
+    case value
       when Pd::Workshop::TYPE_PUBLIC
-        self.on_map = true
-        self.funded = true
+        write_attribute :on_map, true
+        write_attribute :funded, true
       when Pd::Workshop::TYPE_PRIVATE
-        self.on_map = false
-        self.funded = true
+        write_attribute :on_map, false
+        write_attribute :funded, true
       when Pd::Workshop::TYPE_DISTRICT
-        self.on_map = false
-        self.funded = false
+        write_attribute :on_map, false
+        write_attribute :funded, false
     end
   end
 end
