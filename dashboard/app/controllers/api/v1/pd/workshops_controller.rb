@@ -62,7 +62,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def k5_public_map_index
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
       course: Pd::Workshop::COURSE_CSF,
-      workshop_type: Pd::Workshop::TYPE_PUBLIC
+      on_map: true
     ).where.not(processed_location: nil)
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
