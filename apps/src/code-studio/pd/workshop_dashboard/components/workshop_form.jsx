@@ -23,7 +23,9 @@ import {
   HelpBlock,
   Button,
   ButtonToolbar,
-  Checkbox,
+  Radio,
+  Table,
+  Clearfix,
   Alert
 } from 'react-bootstrap';
 import {
@@ -90,7 +92,8 @@ const WorkshopForm = React.createClass({
       sessions: [placeholderSession],
       destroyedSessions: [],
       availableFacilitators: [],
-      showSaveConfirmation: false
+      showSaveConfirmation: false,
+      showTypeOptionsHelpDisplay: false
     };
 
     if (this.props.workshop) {
@@ -259,37 +262,71 @@ const WorkshopForm = React.createClass({
     );
   },
 
-  renderOnMapCheckbox(validation) {
+  renderOnMapRadios(validation) {
     return (
       <FormGroup validationState={validation.style.on_map}>
         <ControlLabel>
-          Show on "Find a Workshop" map?
+          Should this appear on the K-5 workshop map?
         </ControlLabel>
-        <Checkbox
-          checked={this.state.on_map}
-          name="on_map"
-          onChange={this.handleCheckboxChange}
-          style={this.getInputStyle()}
-          readOnly={this.props.readOnly}
-        />
+        <FormGroup>
+          <Radio
+            checked={this.state.on_map}
+            inline
+            name="on_map"
+            value="yes"
+            onChange={this.handleCheckboxChange}
+            style={this.getInputStyle()}
+            readOnly={this.props.readOnly}
+          >
+            Yes
+          </Radio>
+          <Radio
+            checked={!this.state.on_map}
+            inline
+            name="on_map"
+            value="no"
+            onChange={this.handleCheckboxChange}
+            style={this.getInputStyle()}
+            readOnly={this.props.readOnly}
+          >
+            No
+          </Radio>
+        </FormGroup>
         <HelpBlock>{validation.help.on_map}</HelpBlock>
       </FormGroup>
     );
   },
 
-  renderFundedCheckbox(validation) {
+  renderFundedRadios(validation) {
     return (
       <FormGroup validationState={validation.style.funded}>
         <ControlLabel>
-          Is this workshop funded?
+          Is this a Code.org paid workshop?
         </ControlLabel>
-        <Checkbox
-          checked={this.state.funded}
-          name="funded"
-          onChange={this.handleCheckboxChange}
-          style={this.getInputStyle()}
-          readOnly={this.props.readOnly}
-        />
+        <FormGroup>
+          <Radio
+            checked={this.state.funded}
+            inline
+            name="funded"
+            value="yes"
+            onChange={this.handleCheckboxChange}
+            style={this.getInputStyle()}
+            readOnly={this.props.readOnly}
+          >
+            Yes
+          </Radio>
+          <Radio
+            checked={!this.state.funded}
+            inline
+            name="funded"
+            value="no"
+            onChange={this.handleCheckboxChange}
+            style={this.getInputStyle()}
+            readOnly={this.props.readOnly}
+          >
+            No
+          </Radio>
+        </FormGroup>
         <HelpBlock>{validation.help.funded}</HelpBlock>
       </FormGroup>
     );
@@ -411,7 +448,9 @@ const WorkshopForm = React.createClass({
     }
 
     const checked = event.target.checked;
-    this.setState({[fieldName]: checked});
+    console.log(event.target.value);
+
+    this.setState({[fieldName]: event.target.value === "yes"});
     return checked;
   },
 
@@ -508,6 +547,12 @@ const WorkshopForm = React.createClass({
         </Col>
       </Row>
     );
+  },
+
+  toggleTypeOptionsHelpDisplay() {
+    this.setState({
+      showTypeOptionsHelpDisplay: !this.state.showTypeOptionsHelpDisplay
+    });
   },
 
   render() {
@@ -630,17 +675,54 @@ const WorkshopForm = React.createClass({
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={2}>
-              {this.renderOnMapCheckbox(validation)}
-            </Col>
-            <Col sm={2}>
-              {this.renderFundedCheckbox(validation)}
-            </Col>
             <Col sm={3}>
               {this.renderCourseSelect(validation)}
             </Col>
             <Col sm={3}>
               {this.renderSubjectSelect(validation)}
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={10}>
+              <FormGroup>
+                <ControlLabel>
+                  Workshop Type Options
+                  &nbsp;<a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>
+                </ControlLabel>
+                {this.state.showTypeOptionsHelpDisplay &&
+                  <FormGroup>
+                    <p>These options have replaced the old "Workshop Type" dropdown. Here's how these options map to the old workshop types:</p>
+                    <Col sm={6}>
+                      <Table bordered condensed>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td><strong>Code.org Paid</strong></td>
+                            <td><strong>Not Code.org Paid</strong></td>
+                          </tr>
+                          <tr>
+                            <td><strong>On the map</strong></td>
+                            <td>Public</td>
+                            <td>New!</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Not on the map</strong></td>
+                            <td>Private</td>
+                            <td>District</td>
+                          </tr>
+                        </tbody>
+                      </Table>
+                    </Col>
+                    <Clearfix />
+                  </FormGroup>
+                }
+                <Row>
+                  <Col smOffset={1}>
+                    {this.renderOnMapRadios(validation)}
+                    {this.renderFundedRadios(validation)}
+                  </Col>
+                </Row>
+              </FormGroup>
             </Col>
           </Row>
           <Row>
