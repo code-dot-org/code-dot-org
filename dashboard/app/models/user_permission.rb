@@ -36,6 +36,8 @@ class UserPermission < ActiveRecord::Base
     BLOCK_SHARE = 'blockshare'.freeze,
     # Grants access to reseting (to 0) the abuse score for projects.
     RESET_ABUSE = 'reset_abuse'.freeze,
+    # Grants access to PLC workshop dashboards.
+    WORKSHOP_ADMIN = 'workshop_admin'.freeze,
     # Grants access to managing professional development workshops and
     # professional development workshop attendance.
     WORKSHOP_ORGANIZER = 'workshop_organizer'.freeze,
