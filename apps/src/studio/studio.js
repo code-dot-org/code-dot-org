@@ -4039,7 +4039,7 @@ Studio.callCmd = function (cmd) {
       break;
     case 'displayScore':
       studioApp().highlight(cmd.id);
-      Studio.displayScore();
+      Studio.displayScore(cmd.opts);
       break;
     case 'setScoreText':
       studioApp().highlight(cmd.id);
