@@ -18,7 +18,7 @@
     = @teacher_application.id
 
     - if @param_rules
-      = form_tag url_for(action: 'send_email'), enforce_utf8: false, class: 'form-horizontal' do
+      = form_tag url_for(action: 'send_email'), enforce_utf8: false, class: 'form-horizontal pd-admin' do
         - @param_rules.each do |key, param|
           - param_name = "email[#{key}]"
           %div{class: @errors.try(:key?, param[:label]) ? 'field_with_errors' : nil}

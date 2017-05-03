@@ -60,7 +60,7 @@
           %td{style: value ? '' : 'color: red' }
             = yes_no value
 
-  = form_for @teacher_application, url: {action: 'update'}, html: {class: 'form-horizontal'} do |form|
+  = form_for @teacher_application, url: {action: 'update'}, html: {class: 'form-horizontal pd-admin'} do |form|
     .form-group
       = form.label :move_to_user, 'Move to user (email or id):', class: 'col-sm-3'
       .col-sm-6
