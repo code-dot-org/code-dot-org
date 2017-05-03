@@ -170,13 +170,14 @@ module Poste2
     {id: contact[:id], email: email, name: name, ip_address: ip_address}
   end
 
+  DEFAULT_IP_ADDRESS = '127.0.0.1'.freeze
   def self.ensure_recipient(email, params={})
     email = email.to_s.strip.downcase
     hashed_email = Digest::MD5.hexdigest(email)
     raise ArgumentError, 'Invalid email address' unless email_address?(email)
 
     name = params[:name].strip if params[:name]
-    ip_address = params[:ip_address]
+    ip_address = params[:ip_address] || DEFAULT_IP_ADDRESS
     now = DateTime.now
 
     contact = POSTE_DB[:contacts].where(hashed_email: hashed_email).first
