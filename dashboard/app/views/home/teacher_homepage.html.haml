@@ -1,6 +1,27 @@
-%script{ src: minifiable_asset_path('js/home/teacher_homepage.js')}
+- if Gatekeeper.allows('logged_in_studio_homepage', default: true)
+  - script1 = current_user.in_progress_and_completed_scripts[0].script
+  - course1name = data_t_suffix('script.name', script1.name, 'title')
+  - course1description = data_t_suffix('script.name', script1.name, 'description_short')
+  - course1link = script_url(script1.id)
+
+  - script2 = current_user.in_progress_and_completed_scripts[1].script
+  - course2name = data_t_suffix('script.name', script2.name, 'title')
+  - course2description = data_t_suffix('script.name', script2.name, 'description_short')
+  - course2link = script_url(script2.id)
+
+- teacherHomepageData = { script1: script1,
+                          script2: script2,
+                          course1name: course1name,
+                          course1description: course1description,
+                          course1link: course1link,
+                          course2name: course2name,
+                          course2description: course2description,
+                          course2link: course2link }
 
 %h1
   The new and improved Teacher Homepage!
 
 #container
+
+
+%script{ src: minifiable_asset_path('js/home/teacher_homepage.js'),  data: {teacherhomepage: teacherHomepageData.to_json }}

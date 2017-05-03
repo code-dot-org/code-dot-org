@@ -6,7 +6,9 @@ const styles = {
     overflow: 'hidden',
     position: 'relative',
     height: 200,
-    width: 400
+    width: 400,
+    margin: 20,
+    float: 'left'
   },
   overlay: {
     background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
