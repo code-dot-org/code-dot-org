@@ -20,6 +20,7 @@ module ViewOptionsHelper
     :authored_hint_view_requests_url,
     :authored_hints_used_ids,
     :server_level_id,
+    :server_project_level_id,
     :game_display_name,
     :script_name,
     :stage_position,

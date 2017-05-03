@@ -160,7 +160,10 @@ module LevelsHelper
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
-    view_options(is_channel_backed: true) if @level.channel_backed?
+    if @level.channel_backed?
+      view_options(is_channel_backed: true)
+      view_options(server_project_level_id: @level.project_template_level.try(:id))
+    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
