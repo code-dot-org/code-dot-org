@@ -35,8 +35,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:read, @login_required_script_level)
   end
 
-  test "as member" do
-    ability = Ability.new(create(:user))
+  test "as student" do
+    ability = Ability.new(create(:student))
 
     assert ability.can?(:read, Game)
     assert ability.can?(:read, Level)
@@ -47,6 +47,32 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
 
     refute ability.can?(:read, Section)
+
+    assert ability.can?(:create, GalleryActivity)
+    assert ability.can?(:destroy, GalleryActivity)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_script)
+    assert ability.can?(:read, @login_required_script)
+
+    assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @login_required_script_level)
+  end
+
+  test "as teacher" do
+    ability = Ability.new(create(:teacher))
+
+    assert ability.can?(:read, Game)
+    assert ability.can?(:read, Level)
+    assert ability.can?(:read, Activity)
+
+    refute ability.can?(:destroy, Game)
+    refute ability.can?(:destroy, Level)
+    refute ability.can?(:destroy, Activity)
+
+    assert ability.can?(:read, Section)
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)

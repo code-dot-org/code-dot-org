@@ -41,10 +41,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -184,6 +184,13 @@ GEM
       sass (~> 3.2)
     builder (3.2.2)
     cancancan (1.15.0)
+    capybara (2.13.0)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     childprocess (0.5.9)
@@ -224,15 +231,17 @@ GEM
       gli (~> 2.9)
       i18n (~> 0.7, >= 0.7.0)
       rubyzip (~> 1.0)
-    cucumber (2.0.2)
+    cucumber (2.4.0)
       builder (>= 2.1.2)
-      cucumber-core (~> 1.2.0)
+      cucumber-core (~> 1.5.0)
+      cucumber-wire (~> 0.0.1)
       diff-lcs (>= 1.1.3)
-      gherkin (~> 2.12)
+      gherkin (~> 4.0)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    cucumber-core (1.2.0)
-      gherkin (~> 2.12.0)
+    cucumber-core (1.5.0)
+      gherkin (~> 4.0)
+    cucumber-wire (0.0.1)
     daemons (1.2.3)
     dalli (2.7.6)
     dalli-elasticache (0.2.0)
@@ -255,12 +264,16 @@ GEM
     eventmachine (1.2.0.1)
     execjs (2.7.0)
     extlib (0.9.16)
-    eyes_selenium (2.38.0)
+    eyes_core (3.2.2)
       chunky_png (= 1.3.6)
       faraday
       oily_png (~> 1.2)
       oj
-      selenium-webdriver (>= 2.45.0)
+    eyes_selenium (3.2.2)
+      capybara
+      eyes_core (= 3.2.2)
+      selenium-webdriver
+      watir
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.7.0)
@@ -281,8 +294,7 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     gemoji (2.1.0)
-    gherkin (2.12.2)
-      multi_json (~> 1.3)
+    gherkin (4.0.0)
     gli (2.14.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -672,6 +684,8 @@ GEM
     vcr (3.0.3)
     warden (1.2.6)
       rack (>= 1.0)
+    watir (6.2.1)
+      selenium-webdriver (~> 3.0)
     web-console (3.3.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -689,6 +703,8 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
 
@@ -716,14 +732,14 @@ DEPENDENCIES
   composite_primary_keys
   coveralls
   crowdin-cli
-  cucumber (~> 2.0.2)
+  cucumber (~> 2.4.0)
   daemons
   dalli
   dalli-elasticache
   devise
   devise_invitable (~> 1.6.0)
   execjs
-  eyes_selenium (~> 2.38.0)
+  eyes_selenium (= 3.2.2)
   factory_girl_rails
   fake_sqs
   fakeredis

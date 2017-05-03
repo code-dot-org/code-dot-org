@@ -19,7 +19,7 @@ module Pd::Payment
     private
 
     def calculate_csf_payment(workshop)
-      return 0 if workshop.workshop_type == Pd::Workshop::TYPE_DISTRICT
+      return 0 unless workshop.funded
 
       attending_teachers = workshop.attending_teachers
 
