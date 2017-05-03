@@ -460,6 +460,8 @@ ActiveRecord::Schema.define(version: 20170509100000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "code"
+    t.index ["code"], name: "index_pd_sessions_on_code", unique: true, using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
   end
 
