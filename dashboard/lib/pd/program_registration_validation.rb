@@ -1,5 +1,5 @@
-require File.join(CDO.root_dir, 'lib/forms/pegasus_form_validation')
-require File.join(CDO.root_dir, 'pegasus/forms/pd_program_registration')
+require lib_dir 'forms/pegasus_form_validation'
+require pegasus_dir 'forms/pd_program_registration'
 
 class Pd::ProgramRegistrationValidation
   extend PegasusFormValidation

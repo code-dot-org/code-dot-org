@@ -90,7 +90,7 @@ class Pd::TeacherApplicationEmailParamsTest < ActiveSupport::TestCase
       :workshop_dates_s,
       :regional_partner_contact_person_s,
       :regional_partner_contact_person_email_s,
-      :workshop_registration_url_s
+      :workshop_id_i
     ]
     assert_equal expected_rule_keys, rules.keys
     assert_equal [:accept_partner], rules[:decision][:options]
@@ -103,7 +103,7 @@ class Pd::TeacherApplicationEmailParamsTest < ActiveSupport::TestCase
       email: 'To',
       regional_partner_contact_person_s: 'Partner Contact',
       regional_partner_contact_person_email_s: 'Partner Email',
-      workshop_registration_url_s: 'Workshop Id'
+      workshop_id_i: 'Workshop Id'
     }
     assert_equal expected_ui_fields, ui_fields
 
@@ -111,16 +111,19 @@ class Pd::TeacherApplicationEmailParamsTest < ActiveSupport::TestCase
     expected_validated_keys = [
       :email,
       :regional_partner_contact_person_email_s,
-      :workshop_registration_url_s
+      :workshop_id_i
     ]
     assert_equal expected_validated_keys, validated_keys
 
     transformed_keys = rules.select {|_, v| v.key?(:transform)}.keys
-    assert_equal [:workshop_registration_url_s], transformed_keys
+    assert_equal [:workshop_id_i], transformed_keys
 
     assert_equal(
-      'https://studio.code.org/pd/workshops/12345/enroll',
-      rules[:workshop_registration_url_s][:transform].call(12345)
+      [
+        :workshop_registration_url_s,
+        'https://studio.code.org/pd/workshops/12345/enroll'
+      ],
+      rules[:workshop_id_i][:transform].call(:workshop_id_i, 12345)
     )
   end
 
@@ -133,7 +136,7 @@ class Pd::TeacherApplicationEmailParamsTest < ActiveSupport::TestCase
       decision: :accept_partner,
       regional_partner_contact_person_s: 'Perry Partner',
       regional_partner_contact_person_email_s: 'perry.partner@a.school.edu',
-      workshop_registration_url_s: 1234
+      workshop_id_i: 1234
     }
     email_params = Pd::TeacherApplicationEmailParams.new(@teacher_application, value_overrides)
 
@@ -159,7 +162,7 @@ class Pd::TeacherApplicationEmailParamsTest < ActiveSupport::TestCase
 
     value_overrides = {
       regional_partner_contact_person_email_s: 'invalid',
-      workshop_registration_url_s: 1234
+      workshop_id_i: 1234
     }
     email_params = Pd::TeacherApplicationEmailParams.new(@teacher_application, value_overrides)
 

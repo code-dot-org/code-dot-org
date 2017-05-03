@@ -151,13 +151,13 @@ class TeacherApplicationDecisionProcessor
 
   def process(decision, teacher_application, params = {})
     raise "Unexpected decision: #{decision}" unless @results.key? decision
-    params[:decision] = decision
 
-    email_params = Pd::TeacherApplicationEmailParams.new(teacher_application, params)
+    email_params = Pd::TeacherApplicationEmailParams.new(teacher_application, params.merge({decision: decision}))
     raise "Error: #{email_params.errors.inspect}" unless email_params.valid?
 
-    email_params.to_final_params.except(:decision).tap do |effective_params|
-      @results[decision] << effective_params
+    # Construct the final params, save to results, and return
+    email_params.to_final_params.except(:decision).tap do |final_params|
+      @results[decision] << final_params
     end
   end
 
@@ -188,7 +188,7 @@ class TeacherApplicationDecisionProcessor
       regional_partner_name_s: workshop_info[:partner_name],
       regional_partner_contact_person_s: workshop_info[:partner_contact],
       regional_partner_contact_person_email_s: workshop_info[:partner_email],
-      workshop_registration_url_s: workshop_info[:id],
+      workshop_id_i: workshop_info[:id],
       workshop_dates_s: workshop_info[:dates]
     }
     process :accept_partner, teacher_application, params
