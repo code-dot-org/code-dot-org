@@ -545,7 +545,7 @@ var projects = module.exports = {
         } else if (appOptions.skin === 'infinity') {
           return 'infinity';
         } else if (appOptions.skin === 'gumball') {
-            return 'bumball';
+          return 'gumball';
         } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) !== -1) {
           return null;
         }
