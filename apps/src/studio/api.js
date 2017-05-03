@@ -230,19 +230,19 @@ exports.moveDistance = function (id, spriteIndex, dir, distance) {
 
 exports.addPoints = function (id, value) {
   Studio.changeScore({'value': value});
-  Studio.queueCmd(id, 'displayScore');
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 // removePoints is a wrapper for reduceScore (used by hoc2015)
 
 exports.removePoints = function (id, value) {
   Studio.reduceScore({'value': value});
-  Studio.queueCmd(id, 'displayScore');
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 exports.changeScore = function (id, value) {
   Studio.changeScore({'value': value});
-  Studio.queueCmd(id, 'displayScore');
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 exports.getScore = function () {
