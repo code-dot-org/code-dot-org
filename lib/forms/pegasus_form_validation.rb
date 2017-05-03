@@ -1,4 +1,5 @@
 require_relative 'pegasus_form_errors'
+require 'validates_email_format_of'
 
 module PegasusFormValidation
   private
