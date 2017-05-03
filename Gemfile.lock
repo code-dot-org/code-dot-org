@@ -63,15 +63,6 @@ GIT
       openid_connect (~> 1.0, >= 1.0.3)
 
 GIT
-  remote: https://github.com/wjordan/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
   remote: https://github.com/wjordan/sass-rails.git
   revision: 06e833d92d083fbcb137364ffebc597b2577db23
   ref: frozen-array-fix
@@ -456,6 +447,9 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
+    omniauth-windowslive (0.0.12)
+      multi_json (~> 1.12)
+      omniauth-oauth2 (~> 1.4)
     open_uri_redirections (0.2.1)
     openid_connect (1.0.3)
       activemodel
@@ -784,7 +778,7 @@ DEPENDENCIES
   omniauth-facebook (~> 4.0.0.rc1)
   omniauth-google-oauth2 (~> 0.3.1)
   omniauth-openid-connect!
-  omniauth-windowslive (~> 0.0.11)!
+  omniauth-windowslive (~> 0.0.12)
   open_uri_redirections
   os
   parallel

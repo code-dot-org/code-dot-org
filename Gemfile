@@ -142,9 +142,7 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0.rc1'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
-# Ref: https://github.com/joel/omniauth-windowslive/pull/16
-# Ref: https://github.com/joel/omniauth-windowslive/pull/17
-gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
+gem 'omniauth-windowslive', '~> 0.0.12'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
