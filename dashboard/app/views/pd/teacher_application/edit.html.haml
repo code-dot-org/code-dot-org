@@ -16,22 +16,22 @@
 %h1
   Edit Teacher Application (admin only)
 
-#application-container.container
+- if @teacher_application.errors.any?
+  #error_explanation
+    %h2 Error
+    %ul
+      - @teacher_application.errors.each do |name, message|
+        - if name == :program_registration_json
+          - sub_message, sub_errors = message.split(':', 2)
+          %li= "Program registration JSON #{sub_message}"
+          - if sub_errors
+            %ul
+              - sub_errors.split(',').each do |sub_error|
+                %li= sub_error
+        - else
+          %li= raw @teacher_application.errors.full_message(name, message).html_safe
 
-  - if @teacher_application.errors.any?
-    #error_explanation
-      %h2 Error
-      %ul
-        - @teacher_application.errors.each do |name, message|
-          - if name == :program_registration_json
-            - sub_message, sub_errors = message.split(':', 2)
-            %li= "Program registration JSON #{sub_message}"
-            - if sub_errors
-              %ul
-                - sub_errors.split(',').each do |sub_error|
-                  %li= sub_error
-          - else
-            %li= raw @teacher_application.errors.full_message(name, message).html_safe
+#application-container.container
 
   - if @teacher_application.errors.any?
     = link_to 'Reset', {action: 'edit'}, class: 'btn btn-default btn-xs'

@@ -69,7 +69,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   PROGRAM_REGISTRATION_FORM_KIND = 'PdProgramRegistration'.freeze
 
   belongs_to :user
-  has_one :accepted_program, class_name: 'Pd::AcceptedProgram', foreign_key: :teacher_application_id
+  has_one :accepted_program, class_name: 'Pd::AcceptedProgram', foreign_key: :teacher_application_id, dependent: :destroy
 
   validates_presence_of :user
   validates_presence_of :application
@@ -347,7 +347,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
     begin
       Pd::ProgramRegistrationValidation.validate @program_registration
-    rescue PegasusFormErrors::FormError => e
+    rescue FormError => e
       error_text = e.errors.map {|key, error| "#{key}: #{error}"}.join(',')
       errors.add :program_registration_json, "contains errors: #{error_text}"
     end
@@ -363,13 +363,16 @@ class Pd::TeacherApplication < ActiveRecord::Base
   before_validation :save_move_to_user
   def save_move_to_user
     found_user = lookup_move_to_user
-    self.user = found_user if found_user
+    return unless found_user
+
+    self.user = found_user
+    accepted_program.update!(user: found_user) if accepted_program
   end
 
   def lookup_move_to_user
     return nil if move_to_user.blank?
 
-    if move_to_user.to_i.to_s == move_to_user
+    if move_to_user =~ /^\d+$/
       User.find move_to_user
     else
       User.find_by_email_or_hashed_email move_to_user

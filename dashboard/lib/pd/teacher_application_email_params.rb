@@ -29,10 +29,14 @@ class Pd::TeacherApplicationEmailParams
     raise 'Must be valid before constructing final params. See errors' unless valid?
 
     rules.map do |key, value|
-      [
-        key,
-        value.key?(:transform) ? value[:transform].call(value[:value]) : value[:value]
-      ]
+      if value.key?(:transform)
+        value[:transform].call(key, value[:value])
+      else
+        [
+          key,
+          value[:value]
+        ]
+      end
     end.to_h
   end
 
@@ -45,7 +49,9 @@ class Pd::TeacherApplicationEmailParams
   #   value: initial value, potentially overridden by @value_overrides
   #   label: label to display in the UI. Without a label, this does not appear in the UI
   #   options: list of available options to display in a select (dropdown)
-  #   transform: function to transform the value into the final format (not displayed in the UI)
+  #   transform: function to transform the key & value into the final format
+  #              (Note this may return a different key than the original,
+  #              and only the new key will appear in the final params)
   #   validation: function to validate the value format. Return nil to succeed or an error string
   def get_rules
     email_format_validation = ->(email) {ValidatesEmailFormatOf.validate_email_format(email).try(&:first)}
@@ -82,10 +88,15 @@ class Pd::TeacherApplicationEmailParams
           label: 'Partner Email',
           validation: email_format_validation
         }
-        rules[:workshop_registration_url_s] = {
+        rules[:workshop_id_i] = {
           label: 'Workshop Id',
           validation: ->(workshop_id) {Pd::Workshop.exists?(workshop_id) ? nil : 'does not exist'},
-          transform: ->(workshop_id) {"https://studio.code.org/pd/workshops/#{workshop_id}/enroll"}
+          transform: ->(_, workshop_id) do
+            [
+              :workshop_registration_url_s,
+              "https://studio.code.org/pd/workshops/#{workshop_id}/enroll"
+            ]
+          end
         }
       else # no program
         rules[:decision][:options] << :waitlist
