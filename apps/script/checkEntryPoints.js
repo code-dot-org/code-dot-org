@@ -52,6 +52,7 @@ const SILENCED = [
   'districtDropdown',
   'embedBlocks',
   'embedVideo',
+  'essential',
   'eval',
   'flappy',
   'gamelab',

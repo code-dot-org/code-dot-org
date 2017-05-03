@@ -61,23 +61,33 @@
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
         </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
         <block type="studio_saySpriteChoices">
           <title name="SPRITE">1</title>
           <title name="VALUE">Hi there.</title>
         </block>
-        <block type="studio_playSound">
-          <title name="SOUND">random</title>
+        <block type="studio_setBackground">
+          <title name="VALUE">"city"</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">1</title>
         </block>
         <block type="studio_setSprite">
           <title name="VALUE">"hidden"</title>
           <title name="SPRITE">1</title>
         </block>
-        <block type="studio_setSprite">
-          <title name="VALUE">"visible"</title>
-          <title name="SPRITE">0</title>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
         </block>
-        <block type="studio_setBackground">
-          <title name="VALUE">"city"</title>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
         </block>
       </xml>
     </toolbox_blocks>

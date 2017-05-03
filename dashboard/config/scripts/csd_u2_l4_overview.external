@@ -1,4 +1,5 @@
 name 'CSD U2 L4 Overview'
+display_name 'Lesson Overview'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
