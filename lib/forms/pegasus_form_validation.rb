@@ -1,6 +1,8 @@
 require_relative 'pegasus_form_errors'
 
 module PegasusFormValidation
+  private
+
   def csv_multivalue(value)
     return value if value.class == FieldError
     begin
@@ -74,7 +76,7 @@ module PegasusFormValidation
     return value if value.class == FieldError
     email = downcased stripped value
     return nil if email.nil_or_empty?
-    return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
+    return FieldError.new(value, :invalid) unless ValidatesEmailFormatOf.validate_email_format(email).nil?
     email
   end
 
