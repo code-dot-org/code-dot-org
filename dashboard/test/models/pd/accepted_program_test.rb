@@ -41,4 +41,15 @@ class Pd::AcceptedProgramTest < ActiveSupport::TestCase
     refute dupe.valid?
     assert_equal ['User already has an entry for this course'], dupe.errors.full_messages
   end
+
+  test 'teachercon?' do
+    Pd::TeacherConWorkshops.expects(:teachercon?).with('teachercon workshop').returns(true)
+    Pd::TeacherConWorkshops.expects(:teachercon?).with('non-teachercon workshop').returns(false)
+
+    teachercon = create :pd_accepted_program, workshop_name: 'teachercon workshop'
+    non_teachercon = create :pd_accepted_program, workshop_name: 'non-teachercon workshop'
+
+    assert teachercon.teachercon?
+    refute non_teachercon.teachercon?
+  end
 end
