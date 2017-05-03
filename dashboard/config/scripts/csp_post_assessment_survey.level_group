@@ -5,25 +5,25 @@ anonymous 'true'
 
 page
 text 'post-assessment survey heading1'
-level 'post-assessment survey q1'
-level 'post-assessment survey q2'
-level 'post-assessment survey q3'
-level 'post-assessment survey q4'
 level 'post-assessment survey q5'
+level 'post-assessment survey q4'
 level 'post-assessment survey q6'
 level 'post-assessment survey q7'
 level 'post-assessment survey q8'
+level 'post-assessment survey q1'
+level 'post-assessment survey q2'
+level 'post-assessment survey q3'
 
 page
 text 'post-assessment survey heading2'
-level 'post-assessment survey q9'
-level 'post-assessment survey q10'
-level 'post-assessment survey q11'
-level 'post-assessment survey q12'
 level 'post-assessment survey q13'
+level 'post-assessment survey q12'
 level 'post-assessment survey q14'
 level 'post-assessment survey q15'
 level 'post-assessment survey q16'
+level 'post-assessment survey q9'
+level 'post-assessment survey q10'
+level 'post-assessment survey q11'
 
 page
 level 'post-assessment survey q17'

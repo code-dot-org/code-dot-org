@@ -1,0 +1,12 @@
+name 'CSD U2 Expression Exemplars'
+display_name 'Exemplar Personal Websites'
+css 'unplugged'
+markdown <<MARKDOWN
+# Personal Website Exemplars
+
+Click the websites below to check out personal websites other students have made.
+
+<a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+<a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/ee1e4946cf7414fc2238f0e7fac49ad7-image-1493765032008.43.27 PM.png" style="width:200px;float:left"></a>
+MARKDOWN
