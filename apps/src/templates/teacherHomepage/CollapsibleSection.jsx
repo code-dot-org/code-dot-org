@@ -1,7 +1,6 @@
 import React from 'react';
 import FontAwesome from '../FontAwesome';
 import color from "../../util/color";
-import _ from 'lodash';
 
 const styles = {
   section: {
@@ -71,24 +70,22 @@ const CollapsibleSection = React.createClass({
   },
 
   renderContent() {
-    const content = this.props.children;
-    const childItems = _.isArray(this.props.children) ? this.props.children : [this.props.children];
-
     if (this.state.open) {
       return (
         <div style={styles.content}>
-          {childItems.map((content, index) =>
-            <div key={index}>
-              {content}
-            </div>
-          )}
+          {React.Children.map(this.props.children, (child, index) => {
+            return (
+              <div key={index}>
+                {child}
+              </div>
+            );
+          })}
         </div>
       );
     }
   },
 
   render() {
-
     const { header, link, linkText }= this.props;
     let icon = this.state.open ? 'caret-up' : 'caret-down';
 
