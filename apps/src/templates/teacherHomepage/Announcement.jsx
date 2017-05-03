@@ -11,6 +11,7 @@ const styles = {
     borderColor: color.border_gray,
     borderRadius: 3,
     backgroundColor: color.white,
+    marginLeft: 25
   },
   tealBar: {
     width: 1000,
