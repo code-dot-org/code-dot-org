@@ -429,6 +429,7 @@ testsContext.keys().forEach(testsContext);
   };
 
   var otherEntries = {
+    essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
