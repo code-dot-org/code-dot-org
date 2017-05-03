@@ -3,6 +3,7 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
+require 'cdo/poste'
 
 # Always rollback
 # Adapted from http://sequel.jeremyevans.net/rdoc/files/doc/testing_rdoc.html#label-without+minitest-hooks

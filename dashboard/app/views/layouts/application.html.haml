@@ -10,9 +10,10 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
+    // essential.js is ordered above application.js to filter new relic errors
+    %script{src: minifiable_asset_path('js/essential.js')}
     = javascript_include_tag 'application'
     = javascript_include_tag "js/#{js_locale}/common_locale"
-    %script{src: minifiable_asset_path('js/essential.js')}
     %script{src: minifiable_asset_path('js/code-studio-common.js')}
     %script{src: minifiable_asset_path('js/code-studio.js')}
     = csrf_meta_tags

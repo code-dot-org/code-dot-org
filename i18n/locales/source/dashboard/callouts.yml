@@ -212,6 +212,7 @@ en:
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional_callout: {}
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
@@ -485,6 +486,10 @@ en:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: {}
       Poorva copy U3L2 Using Simple Commands_callout: {}
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
@@ -626,6 +631,8 @@ en:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseD_artist_nestedLoops1a_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
@@ -648,8 +655,7 @@ en:
       courseD_maze_ramp5_callout: {}
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
-      courseD_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseD_maze_ramp7_callout: {}
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseE_artist_functions1_callout:
@@ -760,7 +766,7 @@ en:
       courseF_artist_variables_9_callout: {}
       courseF_artist_variables_FP_callout: {}
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_1: Remember, check EACH cloud to see if it has a FLOWER.
+        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of the blocks you need are beneath these labels!
       courseF_bee_conditionals5_callout:
         courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
       courseF_bee_for3_callout:
@@ -772,6 +778,8 @@ en:
         courseF_bee_for9_1: You will find the `math` block in here.
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: This block calls a function.  Click this "edit" button to see what is inside!
+      courseF_bee_functions6_callout:
+        courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp3_callout:

@@ -15,6 +15,10 @@ Rails:
 
 # BEGIN CODE.ORG OVERRIDES
 
+Rails/Delegate:
+  Include:
+    - dashboard/**/*
+
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 

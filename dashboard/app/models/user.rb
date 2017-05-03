@@ -73,6 +73,7 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
+require 'cdo/school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties, SchoolInfoDeduplicator
@@ -102,7 +103,16 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
+  serialized_attrs %w(
+    ops_first_name
+    ops_last_name
+    district_id
+    ops_school
+    ops_gender
+    races
+    using_text_mode
+    last_seen_school_info_interstitial
+  )
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -1197,5 +1207,9 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
+  end
+
+  def show_school_info_interstitial?
+    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
 end
