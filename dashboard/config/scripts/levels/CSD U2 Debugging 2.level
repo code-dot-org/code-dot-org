@@ -9,9 +9,11 @@
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <!DOCTYPE html>\\n<html>\\n\\t<head>\\n\\t\\t<h1>Buy Cat Toys!</h1>\\n\\t</head>\\n\\t<body>\\n\\t\\t<h1>Cat Supplies</h1>\\n\\t\\tCat Toys\\n\\t\\tKeep your cat entertained!\\n\\t\\t<li>Lasers, Catnip Toys</li>\\n\\t\\t<li>Kitty Chew Toys</li>\\n\\t</body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
     "encrypted_examples": "Hs2ZCDWRHEyYY2Wq3Mq8Vl+hdK2FY0s7c6sABetJUQNCvejn3ovt2ZMQGoSW\nH5+iVvim+w2HOyvCUXPAi2NXDw==\n",
     "instructions_important": "false",
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "true"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>
