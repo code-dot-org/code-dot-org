@@ -313,6 +313,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
 
   test 'program_registration override' do
     application = create :pd_teacher_application
+    application.stubs(:accepted_program).returns(stub(teachercon?: true))
     mock_query_result = mock_pegasus_program_registration_query application.id
 
     # never query

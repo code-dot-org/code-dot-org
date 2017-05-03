@@ -152,6 +152,8 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def accepted_workshop=(workshop_name)
+    reload_accepted_program
+
     if workshop_name.blank?
       accepted_program.try(:destroy)
       return
