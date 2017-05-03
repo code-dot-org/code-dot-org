@@ -47,11 +47,6 @@ Performance/TimesMap:
 Rails/Date:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Rails/Delegate:
-  Enabled: false
-
 # Offense count: 223
 # Cop supports --auto-correct.
 # Configuration parameters: Whitelist.

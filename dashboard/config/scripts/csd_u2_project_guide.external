@@ -1,0 +1,20 @@
+name 'CSD U2 project guide'
+display_name 'Project Guide'
+title 'Your Personal Website'
+description 'description here'
+markdown <<MARKDOWN
+# Your Personal Website
+
+In the next few levels, you'll be completing and publishing your personal website.
+
+You've already done a lot of work on your website, but this is your chance to get creative and add a new page of something that you care about.
+
+Here are some ideas for your new page, but you can do anything approved by your teacher.
+* A movie, television, or book review
+* Description of a favorite holiday tradition
+* A "cause" page that explains an issue that is important to you
+
+If you have more than one idea, you can add multiple pages to your site.
+
+Your Project Guide will help you remember everything you need to do.  Make sure you have completed the "Prepare" part of the guide before moving to the next level.
+MARKDOWN

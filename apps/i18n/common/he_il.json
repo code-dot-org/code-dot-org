@@ -384,6 +384,7 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "סביבת העבודה: ",
   "yes": "כן",
+  "announcements": "Announcements",
   "assignACourse": "Assign a course to your classroom or start your own course.",
   "createNewClassroom": "Create a new classroom section to start assigning courses and seeing your student progress.",
   "createSection": "Create Section",
@@ -398,9 +399,12 @@
   "defaultProjectNameGumball": "Gumball Project",
   "defaultProjectNameIceAge": "Ice Age Project",
   "defaultProjectName": "My Project",
+  "editSections": "Edit sections",
+  "mySections": "My Sections",
   "recentCourses": "Recent Courses",
   "setUpClassroom": "Set up your classroom",
   "startLearning": "Start learning",
+  "viewAllAnnouncements": "View all announcements",
   "viewAllCourses": "View all courses",
   "viewCourses": "View Courses"
 }
