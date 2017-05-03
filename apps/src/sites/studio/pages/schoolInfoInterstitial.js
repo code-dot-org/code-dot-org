@@ -447,4 +447,20 @@ window.SchoolInfoManager = function (existingOptions) {
       $('#school-address').val(existingOptions.full_address).change();
     }
   }
+
+  const editUser = $('#edit_user');
+  function submitData(form) {
+    $.ajax({
+      url: "/users.json",
+      type: "post",
+      dataType: "json",
+      data: form.serialize(),
+      success: data => $('#school-info-modal').modal('hide')
+    });
+  }
+
+  editUser.submit((event) => {
+    event.preventDefault();
+    submitData(editUser);
+  });
 };
