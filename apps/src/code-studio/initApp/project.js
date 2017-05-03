@@ -9,7 +9,7 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
-var NON_REMIXABLE_SKINS = ['hoc2015', 'iceage'];
+var NON_REMIXABLE_SKINS = ['hoc2015'];
 
 var hasProjectChanged = false;
 
@@ -540,6 +540,8 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
+        } else if (appOptions.skin === 'iceage') {
+            return 'iceage';
         } else if (appOptions.skin === 'infinity') {
           return 'infinity';
         } else if (appOptions.skin === 'gumball') {
