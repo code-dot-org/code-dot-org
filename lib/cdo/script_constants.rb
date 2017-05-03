@@ -108,6 +108,7 @@ module ScriptConstants
   CATEGORY_ORDERING_PRIORITY = {
     research_studies: 1,
     csp: 2,
+    other: 3,
   }.freeze
 
   def self.script_in_category?(category, script)

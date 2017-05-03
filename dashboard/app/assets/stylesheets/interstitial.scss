@@ -2,31 +2,40 @@
 @import 'font';
 
 #terms-modal,
+#school-info-modal,
 #race-modal {
   text-align: left;
   top: 20px;
 }
 #terms-modal .modal-content,
+#school-info-modal .modal-content,
 #race-modal .modal-content {
   margin: 0 20px;
   padding: 0 15px;
 }
 #terms-modal .modal-content p,
+#school-info-modal .modal-content p,
 #race-modal .modal-content p {
   font-size: 12px;
   color: $default_text;
   line-height: 18px;
 }
 #terms-modal .left,
+#school-info-modal .left,
 #race-modal .left {
   float: left;
 }
 #terms-modal .right {
   float: right;
 }
+#school-info-modal .right,
 #race-modal .right {
   float: right;
   margin-top: 20px;
+}
+#school-info-modal .full-width {
+  width: 100%;
+  padding-bottom: 20px;
 }
 #race-modal .full-width {
   width: 100%;
@@ -44,6 +53,7 @@
   margin: 0 5px 0 0;
 }
 #terms-modal .primary-button,
+#school-info-modal .primary-button,
 #race-modal .primary-button {
   background-color: $orange;
   border: 1px solid $orange;
@@ -74,12 +84,19 @@
   font-family: $gotham-regular;
   line-height: 20px;
 }
+#school-info-modal .disabled,
 #race-modal .disabled {
   color: $light-gray;
 }
 
+$almost_white: #eee;
+#school-info-modal .selectize-control .selectize-input.disabled {
+  opacity: 1;
+  background-color: $almost_white;
+}
+
 @media (max-width: 600px) {
-  #terms-modal, #race-modal {
+  #terms-modal, #race-modal, #school-info-modal {
     width: 400px;
     left: 70%;
   }

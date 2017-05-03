@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 const styles = {
   section: {
-    width: 1600,
+    width: 1000,
   },
   heading: {
     paddingLeft: 20,
@@ -17,7 +17,7 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     zIndex: 2,
     color: color.charcoal,
-    width: 1075
+    width: 1000
   },
   arrowIcon: {
     paddingRight: 8
