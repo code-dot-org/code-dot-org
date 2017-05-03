@@ -420,6 +420,7 @@ testsContext.keys().forEach(testsContext);
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
+    'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
