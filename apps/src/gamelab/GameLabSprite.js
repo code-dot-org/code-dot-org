@@ -41,20 +41,6 @@ module.exports.createSprite = function (x, y, width, height) {
    */
   s._verticalStretch = 1;
 
-  Object.defineProperty(s, 'frameDelay', {
-    enumerable: true,
-    get: function () {
-      if (s.animation) {
-        return s.animation.frameDelay;
-      }
-    },
-    set: function (value) {
-      if (s.animation) {
-        s.animation.frameDelay = value;
-      }
-    }
-  });
-
   // Overriding these allows users to set a width for
   // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'width', {
@@ -491,7 +477,8 @@ const ALIASED_PROPERTIES = {
   'velocity.x': 'velocityX',
   'velocity.y': 'velocityY',
   'life': 'lifetime',
-  "restitution": 'bounciness'
+  'restitution': 'bounciness',
+  'animation.frameDelay': 'frameDelay',
 };
 
 /**
