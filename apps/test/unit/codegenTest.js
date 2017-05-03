@@ -1,6 +1,7 @@
 import sinon from 'sinon';
 import {assert, expect} from '../util/configuredChai';
 import * as codegen from '@cdo/apps/codegen';
+import PatchedInterpreter from '@cdo/apps/lib/tools/jsinterpreter/PatchedInterpreter';
 
 describe("codegen", function () {
 
@@ -31,8 +32,13 @@ describe("codegen", function () {
         c: sinon.spy(),
       };
     });
+
     it("will return an empty array of hooks if no events are provided", () => {
-      expect(codegen.evalWithEvents({}, {})).to.deep.equal([]);
+      expect(codegen.evalWithEvents({}, {}).hooks).to.deep.equal([]);
+    });
+
+    it("will return the interpreter that was created to run the code", () => {
+      expect(codegen.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(PatchedInterpreter);
     });
 
     describe("when given event handlers that accept arguments", () => {
@@ -41,7 +47,8 @@ describe("codegen", function () {
           globals,
           {
             takesArgs: {code: 'c(foo*2, bar/3)', args: ['foo', 'bar']},
-          });
+          }
+        ).hooks;
       });
       it("will pass the args provided to the hook along to the event handler", () => {
         hooks[0].func(5, 6);
@@ -55,7 +62,8 @@ describe("codegen", function () {
           globals,
           {
             returnsValues: {code: 'return 5'},
-          });
+          }
+        ).hooks;
       });
       it("will return the values returned by the event handler back to the caller of the hook", () => {
         expect(hooks[0].func()).to.equal(5);
@@ -70,7 +78,7 @@ describe("codegen", function () {
             someEvent: {code: 'b()'},
           },
           'a();',
-        );
+        ).hooks;
       });
 
       it("will evaluate that code immediately", () => {
@@ -94,7 +102,8 @@ describe("codegen", function () {
           {
             someEvent: {code: ['a()', 'b()']},
             someOtherEvent: {code: 'c()'},
-          });
+          }
+        ).hooks;
       });
 
       it("will return a hook for each event handler of each event type that was given", () => {
