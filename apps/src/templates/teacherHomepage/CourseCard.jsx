@@ -12,8 +12,9 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 245,
-    width: 520,
-    marginLeft: 25,
+    width: 420,
+    marginRight: 25,
+    marginBottom: 25,
     float: 'left'
   },
   overlay: {
@@ -27,7 +28,7 @@ const styles = {
   },
   image: {
     position: 'absolute',
-    width: 520
+    width: 420
   },
   courseName: {
     paddingLeft: 25,
@@ -54,7 +55,8 @@ const styles = {
     color: color.gray,
     background: color.white,
     height: 130,
-    width: 520,
+    width: "100%",
+    boxSizing: "border-box",
     position: 'absolute',
     zIndex: 2,
   },

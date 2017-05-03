@@ -1,18 +1,26 @@
 import React from 'react';
+import color from "../util/color";
 
 const styles = {
   block: {
-    width: 100,
-    height: 100,
-    backgroundColor: "lightblue",
-    margin: 10,
-    float: "left"
+    width: 155,
+    height: 150,
+    backgroundColor: color.light_cyan,
+    marginRight: 25,
+    float: "left",
+    padding: 20,
+    borderRadius: 5,
+    fontSize: 20,
+    lineHeight: "24px"
+  },
+  link: {
+    color: color.white
   }
 };
 
 const BlockLink = ({text, link, linkText}) => (
   <div style={styles.block}>
-    <a href={link}>
+    <a style={styles.link} href={link}>
       {text}
     </a>
   </div>
