@@ -48,21 +48,33 @@ const styles = {
 
 const StageAchievementDialog = Radium(React.createClass({
   propTypes: {
-    stageName: React.PropTypes.string,
     assetUrl: React.PropTypes.func,
-    onContinue: React.PropTypes.func,
-    showStageProgress: React.PropTypes.bool,
+    handleClose: React.PropTypes.func,
+    isOpen: React.PropTypes.bool,
     newStageProgress: React.PropTypes.number,
     numStars: React.PropTypes.number,
+    onContinue: React.PropTypes.func,
+    showStageProgress: React.PropTypes.bool,
+    stageName: React.PropTypes.string,
   },
 
   getInitialState() {
-    return {isOpen: true};
+    return {
+      isOpen: this.props.isOpen === undefined ? true : this.props.isOpen,
+    };
   },
 
   handleClose() {
     this.setState({isOpen: false});
+    this.props.handleClose && this.props.handleClose();
     this.props.onContinue();
+  },
+
+  starBackgroundStyle() {
+    const starUrl = this.props.assetUrl(`media/dialog/${this.props.numStars}-star.png`);
+    return {
+      background: `center top url(${starUrl}) no-repeat`,
+    };
   },
 
   render() {
@@ -71,12 +83,8 @@ const StageAchievementDialog = Radium(React.createClass({
     };
     const feedbackMessage = locale['nextStage'](params);
 
-    const starImages = {};
-    [1, 2, 3].map(n => {
-      starImages[n] = {
-        background: `center top url(${this.props.assetUrl(`media/dialog/${n}-star.png`)}) no-repeat`,
-      };
-    });
+    const baseDialogProps = {...this.props};
+    delete baseDialogProps.handleClose;
 
     return (
       <BaseDialog
@@ -84,12 +92,13 @@ const StageAchievementDialog = Radium(React.createClass({
         isOpen={this.state.isOpen}
         handleClose={this.handleClose}
         assetUrl={this.props.assetUrl}
+        {...baseDialogProps}
       >
         <div>
           <div
             style={{
               ...styles.stars,
-              ...starImages[this.props.numStars],
+              ...this.starBackgroundStyle(),
             }}
           />
           {this.props.showStageProgress &&

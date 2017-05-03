@@ -4,7 +4,7 @@ require 'cdo/activity_constants'
 module Pd::Payment
   class PaymentCalculatorCSFTest < ActiveSupport::TestCase
     setup do
-      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, workshop_type: Pd::Workshop::TYPE_PUBLIC
+      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, on_map: true, funded: true
 
       # >= 10 passing levels: qualified
       @qualified_teacher = create :teacher, :with_puzzles, num_puzzles: 10

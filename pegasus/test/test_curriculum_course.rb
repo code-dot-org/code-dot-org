@@ -1,15 +1,15 @@
 require 'minitest/autorun'
 require_relative '../src/env'
-require src_dir 'course'
+require src_dir 'curriculum_course'
 
-class CourseTest < Minitest::Test
-  describe Course do
+class CurriculumCourseTest < Minitest::Test
+  describe CurriculumCourse do
     def setup
-      @course = Course.new('course1')
+      @course = CurriculumCourse.new('course1')
     end
 
     it 'should create with a type' do
-      assert Course.new('csp').is_a? Course
+      assert CurriculumCourse.new('csp').is_a? CurriculumCourse
     end
 
     it 'should verify directory names' do
@@ -37,8 +37,8 @@ class CourseTest < Minitest::Test
 
     describe 'with unit numbers' do
       def setup
-        @course_with_units = Course.new('csp')
-        @course_without_units = Course.new('course1')
+        @course_with_units = CurriculumCourse.new('csp')
+        @course_without_units = CurriculumCourse.new('course1')
       end
 
       it 'should get units when has units' do

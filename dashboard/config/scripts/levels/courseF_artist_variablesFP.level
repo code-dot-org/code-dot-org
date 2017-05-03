@@ -36,7 +36,10 @@
     "instructions_important": "false",
     "project_template_level_name": "courseF_artist_variables_template",
     "instructions": "**Freeplay:** Take what you've learned and make your own drawing. ",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try one of these three drawings.\\n![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)\",\"hint_id\":\"courseF_artist_variablesFP_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bc5dc7ad914b1961438646a1ca14919c/courseF_artist_variablesFP.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
