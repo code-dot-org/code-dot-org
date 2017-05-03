@@ -19,7 +19,6 @@ We are still accepting applicants in the following regions:
 * Colorado
 * Northeast Florida
 * Miami, FL
-* Iowa
 * Illinois
 * Indiana
 * Maine
@@ -27,12 +26,8 @@ We are still accepting applicants in the following regions:
 * Montana
 * New Jersey
 * Nevada
-* Oklahoma
 * Pennsylvania
-* South Carolina
-* Tennessee
 * Austin, TX
-* Dallas, TX
 * Utah
 * Virginia
 * Wisconsin

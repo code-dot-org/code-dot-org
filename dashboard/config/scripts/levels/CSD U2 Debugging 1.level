@@ -9,7 +9,7 @@
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html\\n<html>\\n\\t<head>\\n\\t\\t<title>Header Debugging</title>\\n\\t</head>\\n\\t<body>\\n\\t\\t<h3>Header </h1>\\n\\t\\t<ol> <li> Thing 1</li> Thing 2 <li> Thing 3</li> </ol>\\n\\t</body>\\n</html>\\n \"\r\n    }\r\n  ]\r\n}",
     "encrypted_examples": "SvByCtOkN7ft/V95WIseCITFnKC8fi7ZDV0PvU7G2IZyOWnhAOdXjN3WavR0\nMyq/dQV/6n9aQpnYD6JuWXfTYg==\n",
     "instructions_important": "false",
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "true"
   },
   "published": true,
   "notes": "",
