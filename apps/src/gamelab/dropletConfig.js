@@ -96,8 +96,8 @@ module.exports.blocks = [
   {func: 'comment_GameLab', block: '// Comment', expansion: '// ', category: 'World' },
 
   // Sprites
-  {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y'], params: ["200", "200"], type: 'either' },
-  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y'], params: ["200", "200"], noAutocomplete: true, docFunc: 'createSprite' },
+  {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 1, maxArgs: 4}, paletteParams: ['animation', 'x','y'], params: ["'animation'", "200", "200"], type: 'either' },
+  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['animation', 'x','y'], params: ["'animation'", "200", "200"], noAutocomplete: true, docFunc: 'createSprite' },
   {func: 'createEdgeSprites', category: 'Sprites'},
   {func: 'leftEdge', category: 'Sprites', type: 'readonlyproperty'},
   {func: 'rightEdge', category: 'Sprites', type: 'readonlyproperty'},

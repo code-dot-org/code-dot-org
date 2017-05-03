@@ -16,7 +16,20 @@ module.exports.injectLevel = function (lvl) {
   level = lvl;
 };
 
-module.exports.createSprite = function (x, y, width, height) {
+module.exports.createSprite = function (param1, param2, param3, param4, param5) {
+  let animationName, x, y, width, height;
+  if (typeof param1 === "string") {
+    animationName = param1;
+    x = param2;
+    y = param3;
+    width = param4;
+    height = param5;
+  } else {
+    x = param1;
+    y = param2;
+    width = param3;
+    height = param4;
+  }
   /*
    * Copied code from p5play from createSprite()
    *
@@ -244,6 +257,10 @@ module.exports.createSprite = function (x, y, width, height) {
     s.animation.play();
   };
 
+  // if an animation parameter was given, set it.
+  if (animationName) {
+    s.setAnimation(animationName);
+  }
   return s;
 };
 
