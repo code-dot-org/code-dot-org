@@ -5,7 +5,8 @@
 
       %h3= t('school_info_interstitial.message')
       .left.full-width
-        #schooldropdown-block.itemblock{style: "margin-left: -10px; background-color: #ffffff;  border-style: none;"}
-          = render partial: 'shared/school_info_interstitial', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
-        %button#save-button.btn.primary-button{style: 'float: left;'}
-          =t('school_info_interstitial.save')
+        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
+          #schooldropdown-block.itemblock{style: "margin-left: -10px; background-color: #ffffff;  border-style: none;"}
+            = render partial: 'shared/school_info_interstitial', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
+          = f.submit t('school_info_interstitial.save'), id: 'school-info-submit', class: 'btn primary-button'
+          = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)

@@ -8,7 +8,7 @@
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 - if (current_user && current_user.show_school_info_interstitial?) || @force_school_info_interstitial
-  = render partial: 'layouts/school_info_interstitial', locals: {show_header: false}
+  = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
 = render partial: 'home/survey_nps' if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
 = render partial: 'home/survey_diversity' if show_diversity_survey? SurveyResult::DIVERSITY_2017
