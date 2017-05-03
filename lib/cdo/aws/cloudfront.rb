@@ -260,10 +260,6 @@ module AWS
               s3_origin_config: {
                 origin_access_identity: ''
               },
-              custom_origin_config: {
-                origin_read_timeout: 5,
-                origin_keepalive_timeout: 30
-              },
               custom_headers: {
                 quantity: 0
               },
