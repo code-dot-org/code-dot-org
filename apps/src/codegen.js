@@ -1,6 +1,6 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
 
-import Interpreter from '@code-dot-org/js-interpreter';
+import PatchedInterpreter from './lib/tools/jsinterpreter/PatchedInterpreter';
 import {dropletGlobalConfigBlocks} from './dropletUtils';
 import * as utils from './utils';
 
@@ -25,11 +25,11 @@ exports.evalWith = function (code, options, legacy) {
     var initFunc = function (interpreter, scope) {
       exports.initJSInterpreter(interpreter, null, null, scope, options);
     };
-    var myInterpreter = new Interpreter(code, initFunc);
+    var myInterpreter = new PatchedInterpreter(code, initFunc);
     // interpret the JS program all at once:
     myInterpreter.run();
   } else if (!legacy) {
-    new Interpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+    new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, options, 5, scope);
     }).run();
   } else {
@@ -84,7 +84,7 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  interpreter = exports.interpreter = new Interpreter(evalCode + eventLoop, (interpreter, scope) => {
+  interpreter = exports.interpreter = new PatchedInterpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
