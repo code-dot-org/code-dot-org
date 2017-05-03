@@ -54,6 +54,7 @@ const styles = {
     color: color.gray,
     background: color.white,
     height: 130,
+    width: 520,
     position: 'absolute',
     zIndex: 2,
   },
