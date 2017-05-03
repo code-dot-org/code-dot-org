@@ -18,6 +18,9 @@ class ProjectsController < ApplicationController
     infinity: {
       name: 'New Infinity Project'
     },
+    gumball: {
+      name: 'New Gumball Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
