@@ -22,8 +22,6 @@ class Pd::AcceptedProgram < ActiveRecord::Base
   validates_presence_of :user
   validates_uniqueness_of :user_id, scope: :course, message: 'already has an entry for this course'
 
-  TEACHER_CONS_CITY_REGEX = /Houston|Phoenix|Philadelphia/
-
   def teachercon?
     Pd::TeacherConWorkshops.teachercon? workshop_name
   end
