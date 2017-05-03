@@ -41,50 +41,19 @@ module.exports.createSprite = function (x, y, width, height) {
    */
   s._verticalStretch = 1;
 
-  // Overriding these allows users to set a width for
+  // Overriding these allows users to set a width and height for
   // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'width', {
     enumerable: true,
     configurable: true,
-    get: function () {
-      if (s._internalWidth === undefined) {
-        return 100;
-      } else if (s.animation) {
-        return s._internalWidth * s._horizontalStretch;
-      } else {
-        return s._internalWidth;
-      }
-    },
-    set: function (value) {
-      if (s.animation) {
-        s._horizontalStretch = value / s._internalWidth;
-      } else {
-        s._internalWidth = value;
-      }
-    }
+    get: getWidth,
+    set: setWidth
   });
-
-  // Overriding these allows users to set a height for
-  // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'height', {
     enumerable: true,
     configurable: true,
-    get: function () {
-      if (s._internalHeight === undefined) {
-        return 100;
-      } else if (s.animation) {
-        return s._internalHeight * s._verticalStretch;
-      } else {
-        return s._internalHeight;
-      }
-    },
-    set: function (value) {
-      if (s.animation) {
-        s._verticalStretch = value / s._internalHeight;
-      } else {
-        s._internalHeight =  value;
-      }
-    }
+    get: getHeight,
+    set: setHeight
   });
 
   // Attach our custom/override methods to the sprite
@@ -116,6 +85,42 @@ module.exports.createSprite = function (x, y, width, height) {
 
   return s;
 };
+
+function getWidth() {
+  if (this._internalWidth === undefined) {
+    return 100;
+  } else if (this.animation) {
+    return this._internalWidth * this._horizontalStretch;
+  } else {
+    return this._internalWidth;
+  }
+}
+
+function setWidth(value) {
+  if (this.animation) {
+    this._horizontalStretch = value / this._internalWidth;
+  } else {
+    this._internalWidth = value;
+  }
+}
+
+function getHeight() {
+  if (this._internalHeight === undefined) {
+    return 100;
+  } else if (this.animation) {
+    return this._internalHeight * this._verticalStretch;
+  } else {
+    return this._internalHeight;
+  }
+}
+
+function setHeight(value) {
+  if (this.animation) {
+    this._verticalStretch = value / this._internalHeight;
+  } else {
+    this._internalHeight =  value;
+  }
+}
 
 function setAnimation(p5Inst, animationName) {
   if (animationName === this.getAnimationLabel()) {
