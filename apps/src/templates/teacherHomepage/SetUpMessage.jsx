@@ -7,7 +7,7 @@ const styles = {
   section: {
     width: 1075,
     backgroundColor: color.white,
-    marginLeft: 35,
+    marginLeft: 25,
     borderStyle: 'dashed',
     borderWidth: 1,
     borderColor: color.border_gray,
