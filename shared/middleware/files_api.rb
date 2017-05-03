@@ -467,8 +467,8 @@ class FilesApi < Sinatra::Base
 
   #
   # NOTE: The files API that we expose is case-insensitive, though AWS s3 is case-sensitive. As a
-  # result, we normalize s3 filenames to be downcased. That said, we maintain a case-sensitive
-  # manifest.
+  # result, we normalize s3 filenames to be downcased. Further, the manifest is displayed as
+  # case-sensitive but acts as case-insensitive.
   #
   def files_put_file(encrypted_channel_id, filename, body)
     downcased_filename = filename.downcase
@@ -478,14 +478,20 @@ class FilesApi < Sinatra::Base
     manifest = get_manifest(bucket, encrypted_channel_id)
     manifest_is_unchanged = true
 
-    # store the new file
+    # Store the new file (possibly copied from an existing file).
     if params['src']
-      new_entry_json = copy_file('files', encrypted_channel_id, downcased_filename, params['src'])
+      if filename.downcase == params['src'].downcase
+        # The rename is a case-only rename. As the filename is downcased on s3, there is no need to
+        # update s3.
+        new_entry_json = manifest.detect {|e| e['filename'].downcase == filename.downcase}.to_json
+      else
+        new_entry_json = copy_file('files', encrypted_channel_id, filename.downcase, params['src'])
+      end
     else
       new_entry_json = put_file('files', encrypted_channel_id, downcased_filename, body)
     end
     new_entry_hash = JSON.parse new_entry_json
-    # Replace downcased filename with original filename (to preserve case in the manifest)
+    # Replace downcased filename with original filename (to preserve case in the manifest).
     new_entry_hash['filename'] = CGI.unescape(filename)
 
     manifest_comparison_filename = new_entry_hash['filename'].downcase
@@ -498,14 +504,16 @@ class FilesApi < Sinatra::Base
       manifest_is_unchanged = false
     end
 
-    # if we're also deleting a file (on rename), remove it from the manifest
-    if params['delete']
+    # Handle any deletion request, unless a case-only rename is occuring.
+    if params['delete'] && params['delete'].downcase != downcased_filename
       manifest_delete_comparison_filename = CGI.unescape(params['delete']).downcase
       reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
       manifest_is_unchanged = false unless reject_result.nil?
+
+      bucket.delete(encrypted_channel_id, params['delete'].downcase) if params['delete']
     end
 
-    # write the manifest (assuming the entry changed)
+    # Write the manifest (assuming it was changed).
     unless manifest_is_unchanged
       response = bucket.create_or_replace(
         encrypted_channel_id,
@@ -515,10 +523,7 @@ class FilesApi < Sinatra::Base
       )
     end
 
-    # delete a file if requested (same as src file in a rename operation)
-    bucket.delete(encrypted_channel_id, params['delete'].downcase) if params['delete']
-
-    # return the new entry info
+    # Return the new manifest entry information.
     new_entry_hash['filesVersionId'] = response.version_id
     new_entry_hash.to_json
   end
