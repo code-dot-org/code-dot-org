@@ -30,28 +30,28 @@ const TeacherHomepage = React.createClass({
             description={i18n.teacherCommunityDescription()}
             image="../../static/navcard-placeholder.png"
             buttonText={i18n.connectToday()}
-            link="https://code.org/educate/community"
+            link="forum.code.org"
           />
           <GradientNavCard
             title={i18n.professionalLearning()}
             description={i18n.professionalLearningDescription()}
             image="../../static/navcard-placeholder.png"
             buttonText={i18n.learnMoreCap()}
-            link="https://code.org/educate/partner"
+            link="https://code.org/professional-development-workshops"
           />
           <GradientNavCard
             title={i18n.standardsAndFramework()}
             description={i18n.standardsAndFrameworkDescription()}
             image="../../static/navcard-placeholder.png"
             buttonText={i18n.connectToday()}
-            link="https://code.org/educate/community"
+            link="https://code.org/teacher-dashboard#/plan"
           />
           <GradientNavCard
             title={i18n.findGuestSpeaker()}
             description={i18n.findGuestSpeakerDescription()}
             image="../../static/navcard-placeholder.png"
             buttonText={i18n.learnMoreCap()}
-            link="https://code.org/educate/partner"
+            link="https://code.org/volunteer/local"
           />
         </CollapsibleSection>
       </div>
