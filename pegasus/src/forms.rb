@@ -1,3 +1,4 @@
+require 'cdo/poste'
 require 'cdo/regexp'
 require src_dir 'database'
 require File.join(CDO.root_dir, 'lib/forms/pegasus_form_errors')
