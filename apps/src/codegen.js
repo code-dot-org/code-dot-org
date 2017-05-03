@@ -54,7 +54,8 @@ export function evalWith(code, globals, legacy) {
  * @param {Object} events - Mapping of hook names to the corresponding handler code.
  *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
  * @param {string} [evalCode] - Optional extra code to evaluate.
- * @return {{}} Mapping of hook names to the corresponding event handler.
+ * @return {{hooks: Array<{name: string, func: Function}>, interpreter: PatchedInterpreter}} Mapping of
+ *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
  */
 export function evalWithEvents(apis, events, evalCode = '') {
   let interpreter, currentCallback, lastReturnValue;
@@ -83,9 +84,7 @@ export function evalWithEvents(apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  // TODO: Don't set exports.interpreter here. It makes code horribly confusing. Instead, just return
-  // the interpreter along with the hooks.
-  interpreter = exports.interpreter = new PatchedInterpreter(evalCode + eventLoop, (interpreter, scope) => {
+  interpreter = new PatchedInterpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
@@ -96,7 +95,7 @@ export function evalWithEvents(apis, events, evalCode = '') {
   });
   interpreter.run();
 
-  return hooks;
+  return {hooks, interpreter};
 }
 
 //

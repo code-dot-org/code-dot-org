@@ -3003,7 +3003,12 @@ Studio.execute = function () {
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
-      const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+      const {hooks, interpreter} = codegen.evalWithEvents(
+        {Studio: api, Globals: Studio.Globals},
+        Studio.interpretedHandlers,
+        code
+      );
+      Studio.interpreter = interpreter;
       hooks.forEach(hook => {
         if (hook.name === 'getGlobals') {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
@@ -5052,7 +5057,7 @@ Studio.queueCallback = function (callback, args) {
   // Shift a CallExpression node on the stack that already has its func_,
   // arguments, and other state populated:
   args = args || [''];
-  const intArgs = args.map(arg => codegen.interpreter.createPrimitive(arg));
+  const intArgs = args.map(arg => Studio.interpreter.createPrimitive(arg));
   var state = {
     node: {
       type: 'CallExpression',
@@ -5065,12 +5070,12 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = codegen.interpreter.stateStack.unshift(state);
-    codegen.interpreter.paused_ = false;
-    while (codegen.interpreter.stateStack.length >= depth) {
-      codegen.interpreter.step();
+    const depth = Studio.interpreter.stateStack.unshift(state);
+    Studio.interpreter.paused_ = false;
+    while (Studio.interpreter.stateStack.length >= depth) {
+      Studio.interpreter.step();
     }
-    codegen.interpreter.paused_ = true;
+    Studio.interpreter.paused_ = true;
   });
   callHandler(handlerName);
 };
