@@ -3,7 +3,7 @@ require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/tempfile'
 require 'pdf/conversion'
-require src_dir 'course'
+require src_dir 'curriculum_course'
 
 PDFConversionInfo = Struct.new(:url_path, :src_files, :output_pdf_path)
 
@@ -23,9 +23,9 @@ base_url = ENV['base_url']
 
 all_outfiles = []
 (
-  pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{Course::COURSES_WITH_PDF_GENERATION.join(',')}}/[0-9]*/[^_]*.md"), '') +
-  pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{Course::COURSES_WITH_PDF_GENERATION.join(',')}}/[0-9]*/[^_]*.html"), '.html') +
-  pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{Course::COURSES_WITH_PDF_GENERATION.join(',')}}/docs/[^_]*.md"), '') +
+  pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{CurriculumCourse::COURSES_WITH_PDF_GENERATION.join(',')}}/[0-9]*/[^_]*.md"), '') +
+  pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{CurriculumCourse::COURSES_WITH_PDF_GENERATION.join(',')}}/[0-9]*/[^_]*.html"), '.html') +
+  pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{CurriculumCourse::COURSES_WITH_PDF_GENERATION.join(',')}}/docs/[^_]*.md"), '') +
   pdf_conversions_for_files(sites_dir('virtual/curriculum-docs/**/[^_]*.md'), '')
 ).each do |pdf_conversion_info|
   pdf_v3_path = Course.virtual_to_v3_path(pdf_conversion_info.output_pdf_path)
