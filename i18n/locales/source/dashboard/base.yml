@@ -70,7 +70,7 @@ en:
     submit: 'Add hint'
   appname: "Code.org"
   stage: "Stage"
-  stage_number: "Stage %{number}"
+  stage_number: "Lesson %{number}"
   puzzle: "Puzzle"
   trophies: "Trophies"
   courses: 'Courses'
