@@ -384,6 +384,7 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Không gian làm việc:",
   "yes": "Đồng ý",
+  "announcements": "Announcements",
   "assignACourse": "Assign a course to your classroom or start your own course.",
   "createNewClassroom": "Create a new classroom section to start assigning courses and seeing your student progress.",
   "createSection": "Create Section",
@@ -401,6 +402,7 @@
   "recentCourses": "Recent Courses",
   "setUpClassroom": "Set up your classroom",
   "startLearning": "Start learning",
+  "viewAllAnnouncements": "View all announcements",
   "viewAllCourses": "View all courses",
   "viewCourses": "View Courses"
 }
