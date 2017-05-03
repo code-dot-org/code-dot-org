@@ -1,130 +1,7 @@
 require 'digest/md5'
+require File.join(CDO.root_dir, 'lib/forms/pegasus_form_validation')
 
-def csv_multivalue(value)
-  return value if value.class == FieldError
-  begin
-    CSV.parse_line(value.to_s) || []
-  rescue
-    return FieldError.new(value, :invalid)
-  end
-end
-
-def default_if_empty(value, default_value)
-  return value if value.class == FieldError
-  return default_value if value.nil_or_empty?
-  value
-end
-
-def downcased(value)
-  return value if value.class == FieldError
-  if value.is_a?(Enumerable)
-    value.map {|i| i.to_s.downcase}
-  else
-    value.to_s.downcase
-  end
-end
-
-def enum(value, allowed)
-  return value if value.class == FieldError
-  return FieldError.new(value, :invalid) unless allowed.include?(value)
-  value
-end
-
-def integer(value)
-  return value if value.class == FieldError
-  return nil if value.nil_or_empty?
-
-  s_value = value.to_s.strip
-  i_value = s_value.to_i
-  return FieldError.new(value, :invalid) unless i_value.to_s == s_value
-
-  i_value
-end
-
-def nil_if_empty(value)
-  return value if value.class == FieldError
-  return nil if value.nil_or_empty?
-  value
-end
-
-def required(value)
-  return value if value.class == FieldError
-  return value if value.is_a? Integer
-  return FieldError.new(value, :required) if value.nil_or_empty?
-  value
-end
-
-def stripped(value)
-  return value if value.class == FieldError
-  if value.is_a?(Enumerable)
-    value.map {|i| i.to_s.strip}
-  else
-    value.to_s.strip
-  end
-end
-
-def uploaded_file(value)
-  return value if value.class == FieldError
-  return nil if value.nil_or_empty?
-  AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], open(value[:tempfile]))
-end
-
-def email_address(value)
-  return value if value.class == FieldError
-  email = downcased stripped value
-  return nil if email.nil_or_empty?
-  return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
-  email
-end
-
-def zip_code(value)
-  return value if value.class == FieldError
-  value = stripped value
-  return nil if value.nil_or_empty?
-  return FieldError.new(value, :invalid) unless zip_code?(value)
-  value
-end
-
-def confirm_match(value, value2)
-  return value if value.class == FieldError
-  return FieldError.new(value, :mismatch) if value != value2
-  value
-end
-
-def us_phone_number(value)
-  return value if value.class == FieldError
-  value = stripped value
-  return nil if value.nil_or_empty?
-  return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
-  RegexpUtils.extract_us_phone_number_digits(value)
-end
-
-def data_to_errors(data)
-  errors = {}
-
-  data.each_pair do |key, value|
-    if value.class == FieldError
-      errors[key] = [value.message]
-    elsif value.class == Hash
-      suberrors = data_to_errors(value)
-      suberrors.each_pair do |subkey, subvalue|
-        newkey = "#{key}[#{subkey}]".to_sym
-        errors[newkey] = subvalue
-      end
-    end
-  end
-
-  errors
-end
-
-def validate_form(kind, data)
-  data = Object.const_get(kind).normalize(data)
-
-  errors = data_to_errors(data)
-  raise FormError.new(kind, errors) unless errors.empty?
-
-  data
-end
+include PegasusFormValidation
 
 def delete_form(kind, secret)
   form = DB[:forms].where(kind: kind, secret: secret).first
@@ -142,7 +19,7 @@ def insert_form(kind, data, options={})
     data[:name_s] ||= dashboard_user[:name]
   end
 
-  data = validate_form(kind, data)
+  data = validate_form(kind, data, Pegasus.logger)
 
   timestamp = DateTime.now
 
@@ -200,7 +77,7 @@ def update_form(kind, secret, data)
 
   prev_data = JSON.parse(form[:data], symbolize_names: true)
   symbolized_data = Hash[data.map {|k, v| [k.to_sym, v]}]
-  data = validate_form(kind, prev_data.merge(symbolized_data))
+  data = validate_form(kind, prev_data.merge(symbolized_data), Pegasus.logger)
 
   normalized_email = data[:email_s].to_s.strip.downcase if data.key?(:email_s)
 
