@@ -922,7 +922,7 @@ function displayCollidables(list) {
  * z-sorting.
  */
 function sortDrawOrder() {
-  if (!level.sortDrawOrder) {
+  if (!skin.sortDrawOrder) {
     return;
   }
 
