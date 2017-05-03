@@ -47,7 +47,7 @@ experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
-experiments.setEnabled = function (key, shouldEnable, expiration) {
+experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
   const allEnabled = this.getStoredExperiments_();
   const experimentIndex =
     allEnabled.findIndex(experiment => experiment.key === key);
