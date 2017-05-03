@@ -19,11 +19,11 @@ const styles = {
 };
 
 const BlockLink = ({text, link, linkText}) => (
-  <div style={styles.block}>
-    <a style={styles.link} href={link}>
+  <a style={styles.link} href={link}>
+    <div style={styles.block}>
       {text}
-    </a>
-  </div>
+    </div>
+  </a>
 );
 
 BlockLink.propTypes = {
