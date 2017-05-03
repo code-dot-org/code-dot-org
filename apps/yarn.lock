@@ -63,15 +63,9 @@
     firmata latest
     serialport "^4.0.0"
 
-"@code-dot-org/js-interpreter":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.1.1.tgz#2a7ccbb6b1f31353445f82f777573d1c38e11d37"
-  dependencies:
-    yargs "^7.0.1"
-
-"@code-dot-org/js-interpreter-tyrant":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter-tyrant/-/js-interpreter-tyrant-0.1.1.tgz#34153bc7620748f07c687849741bbd7ba3d420a7"
+"@code-dot-org/js-interpreter-tyrant@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter-tyrant/-/js-interpreter-tyrant-0.2.2.tgz#f40fdc6e0077bf26b7498d2fce2274ac0f07f95e"
   dependencies:
     chalk "^1.1.3"
     eshost "github:pcardune/eshost#f3fa7fa"
@@ -79,6 +73,12 @@
     progress "^1.1.8"
     test262-compiler "github:pcardune/test262-compiler#ffa0dff"
     test262-harness "^2.4.0"
+    yargs "^7.0.1"
+
+"@code-dot-org/js-interpreter@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.1.2.tgz#b621ca2af5983b98cc644aa4c15a8e555033bc3b"
+  dependencies:
     yargs "^7.0.1"
 
 "@code-dot-org/js-numbers@0.1.0-cdo.0":
