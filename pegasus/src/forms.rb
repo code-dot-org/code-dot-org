@@ -1,3 +1,4 @@
+require 'cdo/poste'
 require 'cdo/regexp'
 require src_dir 'database'
 require lib_dir 'forms/pegasus_form_errors'
