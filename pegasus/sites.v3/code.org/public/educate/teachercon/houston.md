@@ -117,7 +117,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </details>
 
 ### **Contact Us**
-Check out our [FAQ's!](/educate/teachercon/teachercon2017_faqs_teachers.pdf)
+Check out our [FAQ's!](https://goo.gl/udZKLR)
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 
