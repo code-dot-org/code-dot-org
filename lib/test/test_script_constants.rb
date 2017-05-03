@@ -13,12 +13,12 @@ class ScriptConstantsTest < Minitest::Test
 
   def test_minecraft?
     assert ScriptConstants.script_in_category?(:minecraft, ScriptConstants::MINECRAFT_NAME)
-    assert !ScriptConstants.script_in_category?(:minecraft, ScriptConstants::FROZEN_NAME)
+    refute ScriptConstants.script_in_category?(:minecraft, ScriptConstants::FROZEN_NAME)
   end
 
   def test_flappy?
     assert ScriptConstants.script_in_category?(:flappy, ScriptConstants::FLAPPY_NAME)
-    assert !ScriptConstants.script_in_category?(:flappy, ScriptConstants::FROZEN_NAME)
+    refute ScriptConstants.script_in_category?(:flappy, ScriptConstants::FROZEN_NAME)
   end
 
   def test_hoc?
@@ -34,7 +34,7 @@ class ScriptConstantsTest < Minitest::Test
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ARTIST_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::GUMBALL_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ICEAGE_NAME)
-    assert !ScriptConstants.script_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
+    refute ScriptConstants.script_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
   end
 
   def test_category
@@ -55,5 +55,16 @@ class ScriptConstantsTest < Minitest::Test
 
     assert_nil ScriptConstants.position_in_category('script', :not_a_category)
     assert_nil ScriptConstants.position_in_category('not a script', :csp)
+  end
+
+  describe 'ScriptConstants::script_in_any_category?' do
+    it 'finds artist and csd1' do
+      assert ScriptConstants.script_in_any_category?('artist')
+      assert ScriptConstants.script_in_any_category?('csd1')
+    end
+
+    it 'does not find nonexistent scripts' do
+      refute ScriptConstants.script_in_any_category?('foo')
+    end
   end
 end
