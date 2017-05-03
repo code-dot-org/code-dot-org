@@ -15,6 +15,9 @@ class ProjectsController < ApplicationController
     playlab: {
       name: 'New Play Lab Project'
     },
+    iceage: {
+      name: 'New Ice Age Project'
+    },
     infinity: {
       name: 'New Infinity Project'
     },
