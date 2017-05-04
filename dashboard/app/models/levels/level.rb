@@ -352,23 +352,33 @@ class Level < ActiveRecord::Base
   end
 
   def log_changes
+    return unless changed?
+
     log = JSON.parse(audit_log || "[]")
 
-    # serialize 'properties' changes
-    changed = self.changed
-    if changed.include?('properties')
-      changed.delete('properties')
+    # gather all field changes; if the properties JSON blob is one of the things
+    # that changed, rather than including just 'properties' in the list, include
+    # all of those attributes within properties that changed.
+    latest_changes = changed.dup
+    if latest_changes.include?('properties') && changed_attributes['properties']
+      latest_changes.delete('properties')
       changed_attributes['properties'].each do |key, value|
-        changed.push(key) if properties[key] != value
+        latest_changes.push(key) unless properties[key] == value
       end
     end
 
     log.push(
       {
         changed_at: Time.now,
-        changed: changed
+        changed: latest_changes
       }
     )
+
+    # Because this ever-growing log is stored in a limited column and because we
+    # will tend to care a lot less about older entries than newer ones, we will
+    # here drop older entries until this log gets down to a reasonable size
+    log.shift while JSON.dump(log).length >= 65535
+
     self.audit_log = JSON.dump(log)
   end
 
