@@ -336,3 +336,9 @@ named_level 'Practice Create Performance Task'
 
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
 assessment 'CSP Cumulative Assess A'
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'

@@ -341,6 +341,54 @@
         <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="text_join_simple" inline="false" inputcount="3">
+          <value name="ADD0">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="variables_get">
+              <title name="VAR">name</title>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="text_join_simple" inline="false" inputcount="5">
+          <value name="ADD0">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="variables_get">
+              <title name="VAR">age</title>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="variables_get">
+              <title name="VAR">name</title>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run">

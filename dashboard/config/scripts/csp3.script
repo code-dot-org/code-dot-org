@@ -100,5 +100,8 @@ level 'U3L08 - digitalScene'
 stage 'Unit 3 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
 
-stage 'Anonymous student survey: Taking the AP exam'
-assessment 'csp_ap_questions'
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'
