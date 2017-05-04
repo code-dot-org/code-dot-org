@@ -65,7 +65,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 **These include:**
 
 * Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
-* A room for you at the hotel
+* A room for you at the hotel -- No need to make a resrvation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
 All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.

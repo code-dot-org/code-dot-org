@@ -16,6 +16,7 @@
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
 #  notes                    :text(65535)
+#  audit_log                :text(65535)
 #
 # Indexes
 #
@@ -56,6 +57,8 @@ class Studio < Grid
     delay_completion
     floating_score
     goal_override
+    tap_svg_to_run_and_reset
+    wall_map
   )
 
   def self.create_from_level_builder(params, level_params)

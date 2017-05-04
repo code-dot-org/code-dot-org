@@ -41,7 +41,6 @@
       "upButton"
     ],
     "min_workspace_height": "900",
-    "contained_level_names": null,
     "instructions_important": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
@@ -49,7 +48,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
