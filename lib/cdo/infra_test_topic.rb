@@ -12,9 +12,7 @@ module InfraTestTopic
   #   topic (if one exists) or nil.
   def self.green_commit
     current_topic = Slack.get_topic('infra-test')
-    unless current_topic =~ /:greenbeer:/
-      return nil
-    end
+    return nil unless current_topic =~ /:greenbeer:/
     current_topic[0..7]
   end
 
