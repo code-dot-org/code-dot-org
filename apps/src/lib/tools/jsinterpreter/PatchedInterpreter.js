@@ -1,13 +1,6 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 
-module.exports = function patchInterpreter() {
-
-  const base = {
-    hasProperty: Interpreter.prototype.hasProperty,
-    getProperty: Interpreter.prototype.getProperty,
-    setProperty: Interpreter.prototype.setProperty,
-  };
-
+module.exports = class PatchedInterpreter extends Interpreter {
   // These methods need to be patched in order to support custom marshaling.
 
   // These changes revert a 10% speedup commit that bypassed hasProperty,
@@ -19,7 +12,7 @@ module.exports = function patchInterpreter() {
    * @param {!Object} name Name of variable.
    * @return {!Object} The value.
    */
-  Interpreter.prototype.getValueFromScope = function (name) {
+  getValueFromScope(name) {
     var scope = this.getScope();
     var nameStr = name.toString();
     while (scope) {
@@ -30,7 +23,7 @@ module.exports = function patchInterpreter() {
     }
     this.throwException('Unknown identifier: ' + nameStr);
     return this.UNDEFINED;
-  };
+  }
 
   /**
    * Sets a value to the current scope.
@@ -38,7 +31,7 @@ module.exports = function patchInterpreter() {
    * @param {!Object} value Value.
    * @param {boolean} declarator true if called from variable declarator.
    */
-  Interpreter.prototype.setValueToScope = function (name, value, declarator) {
+  setValueToScope(name, value, declarator) {
     var scope = this.getScope();
     var strict = scope.strict;
     var nameStr = name.toString();
@@ -46,7 +39,7 @@ module.exports = function patchInterpreter() {
       if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
         if (declarator) {
           // from a declarator, always call baseSetProperty
-          base.setProperty.call(this, scope, nameStr, value);
+          super.setProperty(scope, nameStr, value);
         } else {
           this.setProperty(scope, nameStr, value);
         }
@@ -55,7 +48,7 @@ module.exports = function patchInterpreter() {
       scope = scope.parentScope;
     }
     this.throwException('Unknown identifier: ' + nameStr);
-  };
+  }
 
   /**
    * Sets a value to the scope chain or to an object property.
@@ -63,7 +56,7 @@ module.exports = function patchInterpreter() {
    * @param {!Object} value Value.
    * @param {boolean} declarator true if called from variable declarator.
    */
-  Interpreter.prototype.setValue = function (left, value, declarator) {
+  setValue(left, value, declarator) {
     if (left.length) {
       var obj = left[0];
       var prop = left[1];
@@ -71,13 +64,13 @@ module.exports = function patchInterpreter() {
     } else {
       this.setValueToScope(left, value, declarator);
     }
-  };
+  }
 
   // Patched to add the 3rd "declarator" parameter on the setValue() call(s).
   // Also removed erroneous? call to hasProperty when there is node.init
   // Changed to call setValue with this.UNDEFINED when there is no node.init
   // and JSInterpreter.baseHasProperty returns false for current scope.
-  Interpreter.prototype['stepVariableDeclarator'] = function () {
+  stepVariableDeclarator() {
     var state = this.stateStack[0];
     var node = state.node;
     if (node.init && !state.done) {
@@ -87,13 +80,11 @@ module.exports = function patchInterpreter() {
       if (node.init) {
         this.setValue(this.createPrimitive(node.id.name), state.value, true);
       } else {
-        if (!base.hasProperty.call(this, this.getScope(), node.id.name)) {
+        if (!super.hasProperty(this.getScope(), node.id.name)) {
           this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
         }
       }
       this.stateStack.shift();
     }
-  };
-
-  return base;
+  }
 };
