@@ -1044,7 +1044,7 @@ class User < ActiveRecord::Base
           {
             study: 'attempt_counts',
             event: 'new_attempt',
-            user: user_id,
+            user_id: user_id,
             level_id: user_level.level_id,
             script_id: user_level.script_id,
             data_int: user_level.attempts + 1,
