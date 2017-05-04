@@ -2,14 +2,6 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
-:css
-  .field_with_errors input {
-    background-color: #ff0 !important;
-  }
-  .field_with_errors select {
-    background-color: #ff0 !important;
-  }
-
 =form_for @workshop_material_order, url: {action: :create} do |form|
 
   %h1 Thank you for your survey submission

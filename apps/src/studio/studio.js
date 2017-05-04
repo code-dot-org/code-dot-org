@@ -922,7 +922,7 @@ function displayCollidables(list) {
  * z-sorting.
  */
 function sortDrawOrder() {
-  if (!level.sortDrawOrder) {
+  if (!skin.sortDrawOrder) {
     return;
   }
 
@@ -4037,6 +4037,10 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.reduceScore(cmd.opts);
       break;
+    case 'displayScore':
+      studioApp().highlight(cmd.id);
+      Studio.displayScore(cmd.opts);
+      break;
     case 'setScoreText':
       studioApp().highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
@@ -4560,7 +4564,6 @@ Studio.paramAsNumber = function (value) {
 Studio.adjustScore = function (value) {
 
   Studio.playerScore += value;
-  Studio.displayScore();
 
   Studio.displayFloatingScore(value);
 
