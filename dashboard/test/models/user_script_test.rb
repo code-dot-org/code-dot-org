@@ -55,6 +55,12 @@ class UserScriptTest < ActiveSupport::TestCase
     assert @user_script.check_completed?
   end
 
+  test "check completed for soft-deleted users" do
+    complete_all_levels
+    @user.destroy
+    refute @user_script.reload.check_completed?
+  end
+
   test "empty?" do
     assert UserScript.new.empty?
 
