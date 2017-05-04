@@ -33,7 +33,6 @@ class UserScript < ActiveRecord::Base
   end
 
   def empty?
-    # a user script is empty if there is no progress
-    started_at.nil? && completed_at.nil? && assigned_at.nil? && last_progress_at.nil?
+    started_at.nil? && assigned_at.nil?
   end
 end

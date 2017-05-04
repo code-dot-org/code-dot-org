@@ -65,12 +65,6 @@ class UserScriptTest < ActiveSupport::TestCase
     refute UserScript.new(user_id: @user.id, script_id: 1, started_at: Time.now).empty?
     refute UserScript.new(user_id: @user.id, script_id: 1, assigned_at: Time.now).empty?
 
-    # the following should be impossible (since you can't complete or
-    # progress in a script without starting it, but being impossible
-    # doesn't always stop things from happening)
-    refute UserScript.new(user_id: @user.id, script_id: 1, completed_at: Time.now).empty?
-    refute UserScript.new(user_id: @user.id, script_id: 1, last_progress_at: Time.now).empty?
-
     # a more normal case:
     refute UserScript.new(
       user_id: @user.id,
