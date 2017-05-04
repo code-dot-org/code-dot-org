@@ -4,20 +4,18 @@ import color from "../../util/color";
 
 const styles = {
   section: {
-    width: 960,
+    width: 940,
     marginBottom: 50,
   },
   heading: {
-    paddingLeft: 20,
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
-    marginLeft: 15,
     fontSize: 24,
     fontFamily: '"Gotham 3r", sans-serif',
     zIndex: 2,
     color: color.charcoal,
-    width: 960
+    width: 940
   },
   arrowIcon: {
     paddingRight: 8
@@ -42,11 +40,13 @@ const styles = {
     float: 'right',
     textDecoration: 'none'
   },
-  content: {
-    marginLeft: 10,
-  },
   clear: {
     clear: 'both'
+  },
+  spacer: {
+    width: 20,
+    float: 'left',
+    color: color.white
   }
 };
 
@@ -72,13 +72,24 @@ const CollapsibleSection = React.createClass({
   renderContent() {
     if (this.state.open) {
       return (
-        <div style={styles.content}>
+        <div>
           {React.Children.map(this.props.children, (child, index) => {
-            return (
-              <div key={index}>
-                {child}
-              </div>
-            );
+            if (index % 2 === 0) {
+              return (
+                <div key={index}>
+                  {child}
+                    <div style={styles.spacer}>
+                      .
+                    </div>
+                </div>
+              );
+            } else {
+              return (
+                <div key={index}>
+                  {child}
+                </div>
+              );
+            }
           })}
         </div>
       );
