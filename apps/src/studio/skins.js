@@ -572,6 +572,7 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.twitterOptions = plainTwitterOptions;
   skin.preloadAssets = true;
+  skin.sortDrawOrder = true;
 
   skin.hideIconInClearPuzzle = true;
 

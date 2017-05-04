@@ -353,6 +353,11 @@ Dashboard::Application.routes.draw do
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
     get 'teacher_application/thanks', to: 'teacher_application#thanks'
+    get 'teacher_application/manage', to: 'teacher_application#manage'
+    get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
+    patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
+    get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
+    post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'

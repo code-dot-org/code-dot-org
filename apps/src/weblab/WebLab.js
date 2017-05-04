@@ -224,15 +224,12 @@ WebLab.prototype.init = function (config) {
     });
   }
 
-  let inspectorOn = false;
   function onToggleInspector() {
-    inspectorOn = !inspectorOn;
-    if (inspectorOn) {
-      this.brambleHost.enableInspector();
-    } else {
+    if (getStore().getState().inspectorOn) {
       this.brambleHost.disableInspector();
+    } else {
+      this.brambleHost.enableInspector();
     }
-    getStore().dispatch(actions.changeInspectorOn(inspectorOn));
   }
 
   ReactDOM.render((
@@ -426,6 +423,11 @@ WebLab.prototype.onProjectChanged = function () {
   }
 };
 
+// Called by Bramble when the inspector mode has changed
+WebLab.prototype.onInspectorChanged = function (inspectorOn) {
+  getStore().dispatch(actions.changeInspectorOn(inspectorOn));
+};
+
 /*
  * Called by Bramble host to set our reference to its interfaces
  * @param {!Object} bramble host interfaces
@@ -444,6 +446,7 @@ WebLab.prototype.setBrambleHost = function (obj) {
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+  this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
   return project.getCurrentId();
 };
 

@@ -4,8 +4,7 @@ title: "Code.org Professional Learning Program Registration"
 
 :ruby
   require 'state_abbr'
-
-  teachercon_city_regex = /Houston|Phoenix|Philadelphia/
+  require 'pd/teachercon_workshops'
 
   authentication_required!
   user_id = dashboard_user[:id]
@@ -14,12 +13,14 @@ title: "Code.org Professional Learning Program Registration"
 
   # Teachers may have 2 accepted programs (one from a teacher application, one manually entered),
   # but they will only have one teachercon workshop.
-  teachercon_program = accepted_programs.find{|p| p[:workshop_name] =~ teachercon_city_regex}
+  teachercon_program = accepted_programs.find{|p| Pd::TeacherConWorkshops.teachercon? p[:workshop_name]}
 
   accepted_workshop, assigned_tc_city, selected_course = nil
   if teachercon_program
     accepted_workshop = teachercon_program[:workshop_name]
-    assigned_tc_city = teachercon_program.to_s.scan(teachercon_city_regex).first
+
+    # TeacherCon workshop names are in the format 'dates: city'
+    assigned_tc_city = accepted_workshop.to_s.split(':', 2)[1].strip
     selected_course = teachercon_program[:course]
   end
 

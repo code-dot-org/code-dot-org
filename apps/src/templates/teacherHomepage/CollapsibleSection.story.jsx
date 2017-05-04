@@ -42,39 +42,6 @@ export default storybook => {
         )
       },
       {
-        name: 'Recent Courses - 3 courses ',
-        description: `Recent courses when the teacher has sections enrolled in more than 2 courses. Only the first 2 should render.`,
-        story: () => (
-          <CollapsibleSection
-            header="Recent Courses"
-            linkText="View all courses"
-            link="link to see all of the courses"
-          >
-            <CourseCard
-              courseName={exampleCard.courseName}
-              description={exampleCard.description}
-              image={exampleCard.image}
-              link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
-            />
-            <CourseCard
-              courseName={exampleCard.courseName}
-              description={exampleCard.description}
-              image={exampleCard.image}
-              link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
-            />
-            <CourseCard
-              courseName={exampleCard.courseName}
-              description={exampleCard.description}
-              image={exampleCard.image}
-              link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
-            />
-          </CollapsibleSection>
-        )
-      },
-      {
         name: 'Recent Courses - 1 course ',
         description: `Collapsible section that holds Recent Courses when the teacher has sections enrolled in only 1 course.`,
         story: () => (

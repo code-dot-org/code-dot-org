@@ -4,7 +4,7 @@ import CollapsibleSection from './CollapsibleSection';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
 
-const ManageSections = React.createClass({
+const ManageSectionsCollapsible = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
   },
@@ -14,7 +14,7 @@ const ManageSections = React.createClass({
 
     return (
       <CollapsibleSection
-        header={i18n.mySections()}
+        header={i18n.sectionsTitle()}
         linkText={i18n.editSections()}
         link="https://code.org/teacher-dashboard#/sections"
       >
@@ -30,4 +30,4 @@ const ManageSections = React.createClass({
   }
 });
 
-export default ManageSections;
+export default ManageSectionsCollapsible;

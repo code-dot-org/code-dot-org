@@ -16,6 +16,7 @@
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
 #  notes                    :text(65535)
+#  audit_log                :text(65535)
 #
 # Indexes
 #
@@ -50,6 +51,11 @@ class StudioEC < Studio
 
   def xml_blocks
     %w()
+  end
+
+  # List of possible palette categories
+  def self.palette_categories
+    %w(commands events)
   end
 
   def update_palette
