@@ -62,30 +62,30 @@ GameLabP5.prototype.init = function (options) {
     /*
      * Copied code from p5 from redraw()
      */
-    var userSetup = this.setup || window.setup;
-    var userDraw = this.draw || window.draw;
+    const userSetup = this.setup || window.setup;
+    const userDraw = this.draw || window.draw;
     if (typeof userDraw === 'function') {
       this.resetMatrix();
       if (typeof userSetup === 'undefined') {
         this.scale(this.pixelDensity, this.pixelDensity);
       }
-      var self = this;
-      this._registeredMethods.pre.forEach(function (f) {
-        f.call(self);
-      });
+      const preMethods = this._registeredMethods.pre;
+      for (let i = 0; i < preMethods.length; i++) {
+        preMethods[i].call(this);
+      }
       userDraw();
     }
   };
 
   // Create 2nd phase function afterUserDraw()
   window.p5.prototype.afterUserDraw = function () {
-    var self = this;
     /*
      * Copied code from p5 from redraw()
      */
-    this._registeredMethods.post.forEach(function (f) {
-      f.call(self);
-    });
+    const postMethods = this._registeredMethods.post;
+    for (let i = 0; i < postMethods.length; i++) {
+      postMethods[i].call(this);
+    }
   };
 
   // Disable fullscreen() method:
