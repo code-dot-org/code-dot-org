@@ -4,7 +4,7 @@ import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
 
-const RecentCourses = React.createClass({
+const RecentCoursesCollapsible = React.createClass({
   propTypes: {
     courses: PropTypes.arrayOf(
       PropTypes.shape({
@@ -22,7 +22,7 @@ const RecentCourses = React.createClass({
 
     return (
       <CollapsibleSection
-        header={i18n.recentCourses()}
+        header={i18n.courses()}
         linkText={i18n.viewAllCourses()}
         link="https://studio.code.org/"
       >
@@ -45,4 +45,4 @@ const RecentCourses = React.createClass({
   }
 });
 
-export default RecentCourses;
+export default RecentCoursesCollapsible;

@@ -1076,6 +1076,7 @@ en:
       'Circuit Playground Map: Buzzer': {}
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
+      Click Here!: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
       Color Sleuth - Epilogue:
@@ -8404,7 +8405,7 @@ en:
       post-assessment survey q24:
         Agree: Agree
         Disagree: Disagree
-        I am interested in taking more computer science classes (in high school or after high school): I am interested in taking more computer science classes (in high school or after high school)
+        I am interested in taking more computer science classes (in high school or after high school).: I am interested in taking more computer science classes (in high school or after high school).
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8412,7 +8413,7 @@ en:
       post-assessment survey q24-a:
         Agree: Agree
         Disagree: Disagree
-        I am interested in studying computer science after I graduate high school: I am interested in studying computer science after I graduate high school
+        I am interested in studying computer science after I graduate high school.: I am interested in studying computer science after I graduate high school.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
