@@ -8,6 +8,16 @@ module InfraTestTopic
     Slack.update_topic 'infra-test', msg
   end
 
+  # @return [String | nil] Returns the commit specified as :greenbeer: in the Slack#infra-test
+  #   topic (if one exists) or nil.
+  def self.green_commit
+    current_topic = Slack.get_topic('infra-test')
+    unless current_topic =~ /:greenbeer:/
+      return nil
+    end
+    current_topic[0..7]
+  end
+
   private_class_method def self.current_time_pacific
     timezone_name = 'US/Pacific'
 
