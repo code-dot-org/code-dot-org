@@ -29,7 +29,7 @@
 
 %h1 Find a course
 
-- if request.language  == 'en'
+- if current_user.teacher? && request.language  == 'en'
 
   %h2 Code.org Curriculum Pathway
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml')
@@ -49,4 +49,5 @@
     });
 
 - else
+
   = render partial: 'home/all_courses_no_gallery'
