@@ -147,11 +147,10 @@ ActiveRecord::Schema.define(version: 20170428002439) do
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
-    t.text     "properties",    limit: 65535
-    t.integer  "plc_course_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.index ["plc_course_id"], name: "index_courses_on_plc_course_id", using: :btree
+    t.text     "properties", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["name"], name: "index_courses_on_name", using: :btree
   end
 
   create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -561,6 +560,8 @@ ActiveRecord::Schema.define(version: 20170428002439) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "course_id"
+    t.index ["course_id"], name: "fk_rails_d5fc777f73", using: :btree
   end
 
   create_table "plc_enrollment_module_assignments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1112,6 +1113,7 @@ ActiveRecord::Schema.define(version: 20170428002439) do
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
+  add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
   add_foreign_key "school_infos", "school_districts"
