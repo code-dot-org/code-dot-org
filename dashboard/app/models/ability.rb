@@ -124,7 +124,7 @@ class Ability
 
       if user.permission?(UserPermission::WORKSHOP_ADMIN)
         can :manage, Pd::Workshop
-        can :manage, Pd::Workshop
+        can :manage, Pd::WorkshopMaterialOrder
         can :manage, Pd::CourseFacilitator
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
