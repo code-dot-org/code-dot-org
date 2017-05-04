@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseCard from '@cdo/apps/templates/teacherHomepage/CourseCard';
@@ -33,4 +32,4 @@ window.showContent = function (recentCourses, blockLinks) {
     </div>,
     document.getElementById('block-links-container')
   );
-}
+};
