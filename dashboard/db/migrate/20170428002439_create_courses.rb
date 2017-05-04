@@ -12,6 +12,7 @@ class CreateCourses < ActiveRecord::Migration[5.0]
 
     reversible do |dir|
       dir.up do
+        Plc::Course.reset_column_information
         Plc::Course.find_each do |plc_course|
           course = Course.create!(name: plc_course.name)
           plc_course.update!(course_id: course.id)
