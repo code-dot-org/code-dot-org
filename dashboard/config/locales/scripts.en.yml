@@ -2137,6 +2137,12 @@ en:
               name: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment:
               name: Unit 1 Chapter 2 Assessment
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
         csp2:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2177,6 +2183,12 @@ en:
               name: Unit 2 Chapter 1 Assessment
             Unit 2 Chapter 2 Assessment:
               name: Unit 2 Chapter 2 Assessment
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2207,6 +2219,12 @@ en:
               name: Unit 3 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -2241,6 +2259,12 @@ en:
               name: Practice PT - Big Data and Security Dilemmas
             Unit 4 Chapter 1 Assessment:
               name: Unit 4 Chapter 1 Assessment
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
         csp5:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2339,6 +2363,12 @@ en:
               name: Unit 5 Assessment 5 - Practice AP questions
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -2367,6 +2397,12 @@ en:
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            CSP Student Post Survey Staging:
+              name: CSP Student Post Survey Staging
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
@@ -2625,7 +2661,7 @@ en:
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
-          title: CS Principles Culminating Assessment
+          title: "[Deprecated] CS Principles Culminating Assessment"
           description: 'This assessment has been deprecated and is scheduled for removal in Summer of 2017.  Students may complete the test and see their own results, but a teacher will not be able to see results for students in a section.  Please use the official CSP practice exam from the College Board.  [This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.]'
           description_short: Culminating
           description_audience: ''
@@ -4815,10 +4851,10 @@ en:
           description_short: ''
           description: ''
         csppostsurvey-staging:
-          title: ''
+          title: "[Deprecated] CSP post survey staging area"
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Moved to /s/csp-post-survey.  Destory after 05.05.17
           stages:
             CSP Student Post Survey Staging:
               name: CSP Student Post Survey Staging
@@ -4832,5 +4868,33 @@ en:
               name: Drawing in Game Lab
           title: CSD - Drawing in Game Lab
           description_audience: Falmouth Middle School (Mike Harvey)
+          description_short: ''
+          description: ''
+        csppostsurvey:
+          stages:
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+          title: CSP Student Post-Course Survey
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 10 minutes to complete.  Your responses are private and anonymous.  '
+        csp-post-survey:
+          stages:
+            CSP Student Post-Course Survey:
+              name: CSP Student Post-Course Survey
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+          title: CSP Student Post-Course Survey
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 10 minutes to complete.  Your responses are private and anonymous.  '
+        public-key-cryptography:
+          stages:
+            Public Key Crypto Widgets:
+              name: Public Key Crypto Widgets
+          title: Public Key Cryptography Widgets
+          description_audience: ''
           description_short: ''
           description: ''

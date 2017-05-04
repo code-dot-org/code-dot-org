@@ -3,7 +3,7 @@ import ManageSectionsCollapsible from './ManageSectionsCollapsible';
 
 export default storybook => {
   return storybook
-    .storiesOf('ManageSections', module)
+    .storiesOf('ManageSectionsCollapsible', module)
     .addStoryTable([
       {
         name: 'Manage Sections - at least one section',
