@@ -107,10 +107,10 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "encrypted_examples": "ZlClHbF5i/CEVY1TV8sEMlzC+HosS+IHRla5s2QEhhu2tG6zXAe71i486q3M\n3AxH\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
