@@ -23,8 +23,7 @@ module.exports.createSprite = function (x, y, width, height) {
    * NOTE: this param not needed on this.Sprite() call as we're calling
    * through the bound constructor, which prepends the first arg.
    */
-  var s = new this.Sprite(x, y, width, height);
-  var p5Inst = this;
+  const s = new this.Sprite(x, y, width, height);
   addPropertyAliases(s);
   addMethodAliases(s);
 
@@ -42,210 +41,220 @@ module.exports.createSprite = function (x, y, width, height) {
    */
   s._verticalStretch = 1;
 
-  s.setAnimation = function (animationName) {
-    if (animationName === s.getAnimationLabel()) {
-      return;
-    }
-
-    var animation = p5Inst.projectAnimations[animationName];
-    if (typeof animation === 'undefined') {
-      throw new Error('Unable to find an animation named "' + animationName +
-          '".  Please make sure the animation exists.');
-    }
-    s.addAnimation(animationName, animation);
-    s.changeAnimation(animationName);
-    if (level.pauseAnimationsByDefault) {
-      s.pause();
-    }
-  };
-
-  s.frameDidChange = function () {
-    return s.animation ? s.animation.frameChanged : false;
-  };
-
-  s.pointTo = function (x, y) {
-    var yDelta = y - s.position.y;
-    var xDelta = x - s.position.x;
-    if (!isNaN(xDelta) && !isNaN(yDelta) && (xDelta !== 0 || yDelta !== 0)) {
-      var radiansAngle = Math.atan2(yDelta, xDelta);
-      s.rotation = 360 * radiansAngle / (2 * Math.PI);
-    }
-  };
-
-  // The scale value should include the horizontal stretch for animations.
-  s._getScaleX = function () {
-    return s.scale * s._horizontalStretch;
-  };
-
-  // The scale value should include the vertical stretch for animations.
-  s._getScaleY = function () {
-    return s.scale * s._verticalStretch;
-  };
-
-  /*
-   * @private
-   * For game lab, don't update the animation sizes because all frames are the same size.
-   */
-  s._syncAnimationSizes = function (animations, currentAnimation) {};
-
-  Object.defineProperty(s, 'frameDelay', {
-    enumerable: true,
-    get: function () {
-      if (s.animation) {
-        return s.animation.frameDelay;
-      }
-    },
-    set: function (value) {
-      if (s.animation) {
-        s.animation.frameDelay = value;
-      }
-    }
-  });
-
-  // Overriding these allows users to set a width for
+  // Overriding these allows users to set a width and height for
   // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'width', {
     enumerable: true,
     configurable: true,
-    get: function () {
-      if (s._internalWidth === undefined) {
-        return 100;
-      } else if (s.animation) {
-        return s._internalWidth * s._horizontalStretch;
-      } else {
-        return s._internalWidth;
-      }
-    },
-    set: function (value) {
-      if (s.animation) {
-        s._horizontalStretch = value / s._internalWidth;
-      } else {
-        s._internalWidth = value;
-      }
-    }
+    get: getWidth,
+    set: setWidth
   });
-
-  // Overriding these allows users to set a height for
-  // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'height', {
     enumerable: true,
     configurable: true,
-    get: function () {
-      if (s._internalHeight === undefined) {
-        return 100;
-      } else if (s.animation) {
-        return s._internalHeight * s._verticalStretch;
-      } else {
-        return s._internalHeight;
-      }
-    },
-    set: function (value) {
-      if (s.animation) {
-        s._verticalStretch = value / s._internalHeight;
-      } else {
-        s._internalHeight =  value;
-      }
-    }
+    get: getHeight,
+    set: setHeight
   });
 
-  // p5.play stores width unscaled, but users in
-  // Game Lab should have access to a scaled version.
-  s.getScaledWidth = function () {
-    return s.width * s.scale;
-  };
-
-  // p5.play stores height unscaled, but users in
-  // Game Lab should have access to a scaled version.
-  s.getScaledHeight = function () {
-    return s.height * s.scale;
-  };
-
-  s.shapeColor = this.color(127, 127, 127);
-
+  // Attach our custom/override methods to the sprite
+  s.setAnimation = setAnimation.bind(s, this);
+  s.frameDidChange = frameDidChange;
+  s.pointTo = pointTo;
+  s._getScaleX = _getScaleX;
+  s._getScaleY = _getScaleY;
+  s._syncAnimationSizes = _syncAnimationSizes;
+  s.getScaledWidth = getScaledWidth;
+  s.getScaledHeight = getScaledHeight;
   s._collideWith = _collideWith.bind(s, this);
   s._collideWithOne = _collideWithOne.bind(s, this);
-  s.createGroupState = function (type, target, callback) {
-    if (target instanceof Array) {
-      // Colliding with a group.
-      var state = jsInterpreter.getCurrentState();
-      if (!state.__i) {
-        state.__i = 0;
-        state.__didCollide = false;
-      }
-      if (state.__i < target.size()) {
-        if (!state.__subState) {
-          // Before we call _collideWith (another stateful function), hang a __subState
-          // off of state, so it can use that instead to track its state:
-          state.__subState = { doneExec: true };
-        }
-        var didTouch = this._collideWith(type, target[state.__i], callback);
-        if (state.__subState.doneExec) {
-          state.__didCollide = didTouch || state.__didCollide;
-          delete state.__subState;
-          state.__i++;
-        }
-        state.doneExec = false;
-      } else {
-        state.doneExec = true;
-        return state.__didCollide;
-      }
-    } else {
-      return this._collideWith(type, target, callback);
-    }
-  };
-
-  s.bounceOff = function (target, callback) {
-    return this.createGroupState('bounceOff', target, callback);
-  };
-
-  /**
-   * Returns whether or not this sprite will bounce or collide with another sprite
-   * or group. Modifies the sprite's touching property object.
-   * @method
-   */
-  s.isTouching = function (target) {
-    return this.createGroupState('overlap', target);
-  };
-
+  s.createGroupState = createGroupState;
+  s.bounceOff = bounceOff;
+  s.isTouching = isTouching;
   // Overriding overlap, collide, displace, bounce, to work with our group states.
-  s.overlap = function (target, callback) {
-    return this.createGroupState('overlap', target, callback);
-  };
+  s.overlap = overlap;
+  s.collide = collide;
+  s.displace = displace;
+  s.bounce = bounce;
+  s.play = play;
 
-  s.collide = function (target, callback) {
-    return this.createGroupState('collide', target, callback);
-  };
-
-  s.displace = function (target, callback) {
-    return this.createGroupState('displace', target, callback);
-  };
-
-  s.bounce = function (target, callback) {
-    return this.createGroupState('bounce', target, callback);
-  };
-
+  // Set some initial property values
+  s.shapeColor = this.color(127, 127, 127);
   s.depth = this.allSprites.maxDepth()+1;
-  this.allSprites.add(s);
 
-  /**
-   * Plays/resumes the sprite's current animation.
-   * If the animation is currently playing this has no effect.
-   * If the animation has stopped at its last frame, this will start it over
-   * at the beginning.
-   */
-  s.play = function () {
-   // Normally this just sets the 'playing' flag without changing the animation
-   // frame, which will cause the animation to continue on the next update().
-   // If the animation is non-looping and is stopped at the last frame
-   // we also rewind the animation to the beginning.
-    if (!s.animation.looping && !s.animation.playing && s.animation.getFrame() === s.animation.images.length - 1) {
-      s.animation.rewind();
-    }
-    s.animation.play();
-  };
+  this.allSprites.add(s);
 
   return s;
 };
+
+function getWidth() {
+  if (this._internalWidth === undefined) {
+    return 100;
+  } else if (this.animation) {
+    return this._internalWidth * this._horizontalStretch;
+  } else {
+    return this._internalWidth;
+  }
+}
+
+function setWidth(value) {
+  if (this.animation) {
+    this._horizontalStretch = value / this._internalWidth;
+  } else {
+    this._internalWidth = value;
+  }
+}
+
+function getHeight() {
+  if (this._internalHeight === undefined) {
+    return 100;
+  } else if (this.animation) {
+    return this._internalHeight * this._verticalStretch;
+  } else {
+    return this._internalHeight;
+  }
+}
+
+function setHeight(value) {
+  if (this.animation) {
+    this._verticalStretch = value / this._internalHeight;
+  } else {
+    this._internalHeight =  value;
+  }
+}
+
+function setAnimation(p5Inst, animationName) {
+  if (animationName === this.getAnimationLabel()) {
+    return;
+  }
+
+  const animation = p5Inst.projectAnimations[animationName];
+  if (typeof animation === 'undefined') {
+    throw new Error('Unable to find an animation named "' + animationName +
+        '".  Please make sure the animation exists.');
+  }
+  this.addAnimation(animationName, animation);
+  this.changeAnimation(animationName);
+  if (level.pauseAnimationsByDefault) {
+    this.pause();
+  }
+}
+
+function frameDidChange() {
+  return this.animation ? this.animation.frameChanged : false;
+}
+
+function pointTo(x, y) {
+  const yDelta = y - this.position.y;
+  const xDelta = x - this.position.x;
+  if (!isNaN(xDelta) && !isNaN(yDelta) && (xDelta !== 0 || yDelta !== 0)) {
+    const radiansAngle = Math.atan2(yDelta, xDelta);
+    this.rotation = 360 * radiansAngle / (2 * Math.PI);
+  }
+}
+
+// The scale value should include the horizontal stretch for animations.
+function _getScaleX() {
+  return this.scale * this._horizontalStretch;
+}
+
+// The scale value should include the vertical stretch for animations.
+function _getScaleY() {
+  return this.scale * this._verticalStretch;
+}
+
+/*
+ * @private
+ * For game lab, don't update the animation sizes because all frames are the same size.
+ */
+function _syncAnimationSizes(animations, currentAnimation) {}
+
+// p5.play stores width unscaled, but users in
+// Game Lab should have access to a scaled version.
+function getScaledWidth() {
+  return this.width * this.scale;
+}
+
+// p5.play stores height unscaled, but users in
+// Game Lab should have access to a scaled version.
+function getScaledHeight() {
+  return this.height * this.scale;
+}
+
+function createGroupState(type, target, callback) {
+  if (target instanceof Array) {
+    // Colliding with a group.
+    var state = jsInterpreter.getCurrentState();
+    if (!state.__i) {
+      state.__i = 0;
+      state.__didCollide = false;
+    }
+    if (state.__i < target.size()) {
+      if (!state.__subState) {
+        // Before we call _collideWith (another stateful function), hang a __subState
+        // off of state, so it can use that instead to track its state:
+        state.__subState = { doneExec: true };
+      }
+      var didTouch = this._collideWith(type, target[state.__i], callback);
+      if (state.__subState.doneExec) {
+        state.__didCollide = didTouch || state.__didCollide;
+        delete state.__subState;
+        state.__i++;
+      }
+      state.doneExec = false;
+    } else {
+      state.doneExec = true;
+      return state.__didCollide;
+    }
+  } else {
+    return this._collideWith(type, target, callback);
+  }
+}
+
+function bounceOff(target, callback) {
+  return this.createGroupState('bounceOff', target, callback);
+}
+
+/**
+ * Returns whether or not this sprite will bounce or collide with another sprite
+ * or group. Modifies the sprite's touching property object.
+ * @method
+ */
+function isTouching(target) {
+  return this.createGroupState('overlap', target);
+}
+
+function overlap(target, callback) {
+  return this.createGroupState('overlap', target, callback);
+}
+
+function collide(target, callback) {
+  return this.createGroupState('collide', target, callback);
+}
+
+function displace(target, callback) {
+  return this.createGroupState('displace', target, callback);
+}
+
+function bounce(target, callback) {
+  return this.createGroupState('bounce', target, callback);
+}
+
+/**
+ * Plays/resumes the sprite's current animation.
+ * If the animation is currently playing this has no effect.
+ * If the animation has stopped at its last frame, this will start it over
+ * at the beginning.
+ */
+function play() {
+  // Normally this just sets the 'playing' flag without changing the animation
+  // frame, which will cause the animation to continue on the next update().
+  // If the animation is non-looping and is stopped at the last frame
+  // we also rewind the animation to the beginning.
+  if (!this.animation.looping && !this.animation.playing && this.animation.getFrame() === this.animation.images.length - 1) {
+    this.animation.rewind();
+  }
+  this.animation.play();
+}
 
 /* eslint-disable */
 /*
@@ -473,7 +482,8 @@ const ALIASED_PROPERTIES = {
   'velocity.x': 'velocityX',
   'velocity.y': 'velocityY',
   'life': 'lifetime',
-  "restitution": 'bounciness'
+  'restitution': 'bounciness',
+  'animation.frameDelay': 'frameDelay',
 };
 
 /**

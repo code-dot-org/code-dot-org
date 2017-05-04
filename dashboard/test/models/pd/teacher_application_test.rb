@@ -283,4 +283,69 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
       application.accepted_workshop = nil
     end
   end
+
+  test 'program_registration data is retrieved and parsed from pegasus forms' do
+    application = create :pd_teacher_application
+    mock_query_result = mock_pegasus_program_registration_query application.id
+
+    mock_query_result.expects(:first).returns(nil).twice
+    2.times do
+      assert_nil application.program_registration
+    end
+
+    fake_form_data = '{"field1": "value1", "field2": "value2"}'
+    mock_query_result.expects(:first).returns({data: fake_form_data}).once
+    expected_result = {
+      field1: 'value1',
+      field2: 'value2'
+    }
+
+    # idempotence: once retrieved, it won't query again (tested by .once expectation above)
+    2.times do
+      assert_equal expected_result, application.program_registration
+    end
+
+    # after reload, it must be loaded again
+    application.reload
+    mock_query_result.expects(:first).returns({data: fake_form_data}).once
+    assert_equal expected_result, application.program_registration
+  end
+
+  test 'program_registration override' do
+    application = create :pd_teacher_application
+    application.stubs(:accepted_program).returns(stub(teachercon?: true))
+    mock_query_result = mock_pegasus_program_registration_query application.id
+
+    # never query
+    mock_query_result.expects(:first).never
+
+    application.program_registration = nil
+    assert_nil application.program_registration
+
+    mock_query_result.expects(:delete)
+    Pd::ProgramRegistrationValidation.expects(:validate).never
+    application.save!
+
+    registration_data = {key: 'value'}
+    application.program_registration = registration_data
+    assert_equal registration_data, application.program_registration
+    Pd::ProgramRegistrationValidation.expects(:validate).with(registration_data)
+    mock_query_result.expects(:update)
+    application.save!
+  end
+
+  private
+
+  # @param application_id [Integer] teacher application id
+  # @return [mock] mock pegasus query result for the PdProgramRegistration form associated with the
+  # supplied teacher application id (as source_id)
+  def mock_pegasus_program_registration_query(application_id)
+    mock_forms_table = mock
+    mock_query_result = mock
+    PEGASUS_DB.stubs(:[]).with(:forms).returns(mock_forms_table)
+    mock_forms_table.stubs(:where).with(kind: 'PdProgramRegistration', source_id: application_id).
+      returns(mock_query_result)
+
+    mock_query_result
+  end
 end

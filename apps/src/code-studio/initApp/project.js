@@ -9,8 +9,6 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
-var NON_REMIXABLE_SKINS = ['hoc2015'];
-
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
@@ -540,14 +538,14 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
+        } else if (appOptions.skinId === 'hoc2015') {
+          return 'starwars';
         } else if (appOptions.skin === 'iceage') {
             return 'iceage';
         } else if (appOptions.skin === 'infinity') {
           return 'infinity';
         } else if (appOptions.skin === 'gumball') {
           return 'gumball';
-        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) !== -1) {
-          return null;
         }
         return 'playlab';
       case 'weblab':
