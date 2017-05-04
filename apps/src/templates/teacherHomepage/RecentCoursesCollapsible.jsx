@@ -22,7 +22,7 @@ const RecentCoursesCollapsible = React.createClass({
 
     return (
       <CollapsibleSection
-        header={i18n.recentCourses()}
+        header={i18n.courses()}
         linkText={i18n.viewAllCourses()}
         link="https://studio.code.org/"
       >
