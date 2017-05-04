@@ -1,9 +1,8 @@
 var codegen = require('./codegen');
 var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 var utils = require('./utils');
-var Interpreter = require('@code-dot-org/js-interpreter');
 var acorn = require('@code-dot-org/js-interpreter/acorn');
-import patchInterpreter from './lib/tools/jsinterpreter/patchInterpreter';
+import PatchedInterpreter from './lib/tools/jsinterpreter/PatchedInterpreter';
 import {getStore} from './redux';
 
 import { setIsDebuggerPaused } from './redux/runState';
@@ -60,20 +59,11 @@ var JSInterpreter = module.exports = function (options) {
   this.stoppedAtBreakpointRows = [];
   this.logExecution = options.logExecution;
   this.executionLog = [];
-
-  this.patchInterpreterMethods_();
 };
 
-JSInterpreter.prototype.patchInterpreterMethods_ = function () {
-  const base = patchInterpreter();
-  if (!JSInterpreter.baseHasProperty &&
-      !JSInterpreter.baseGetProperty &&
-      !JSInterpreter.baseSetProperty) {
-    JSInterpreter.baseHasProperty = base.hasProperty;
-    JSInterpreter.baseGetProperty = base.getProperty;
-    JSInterpreter.baseSetProperty = base.setProperty;
-  }
-};
+JSInterpreter.baseHasProperty = PatchedInterpreter.prototype.hasProperty;
+JSInterpreter.baseGetProperty = PatchedInterpreter.prototype.getProperty;
+JSInterpreter.baseSetProperty = PatchedInterpreter.prototype.setProperty;
 
 /**
  * Initialize the JSInterpreter, parsing the provided code and preparing to
@@ -192,7 +182,7 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    new Interpreter('', initFunc);
+    new PatchedInterpreter('', initFunc);
     // We initialize with an empty program so that all of our global functions
     // can be injected before the user code is processed (thus allowing user
     // code to override globals of the same names)
@@ -1161,7 +1151,7 @@ JSInterpreter.prototype.getCurrentState = function () {
  */
 JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   var currentScope = this.interpreter.getScope();
-  var evalInterpreter = new Interpreter(expression);
+  var evalInterpreter = new PatchedInterpreter(expression);
   // Set scope to the current scope of the running program
   // NOTE: we are being a little tricky here (we are re-running
   // part of the Interpreter constructor with a different interpreter's

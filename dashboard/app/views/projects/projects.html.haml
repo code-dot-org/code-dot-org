@@ -1,67 +1,42 @@
 - @page_title = t('project.projects')
 
-.projects-page
-  .row
-    .span12
-      %h1= @page_title
+.projects-table-wrapper.center
+  = render partial: 'projects/links'
 
-  .row
-    .span2
-    .span8.infobox= t('project.help_text').html_safe
-    .span2
-  %br
-  %br
-  .row
-    .projects-table-wrapper.center
-      = render partial: 'projects/links'
+  %div.loading{'ng-show' => 'projects.length === 0'}
 
-      %div.loading{'ng-show' => 'projects.length === 0'}
+  %table.projects{'ng-show' => 'projects.length > 0'}
+    %colgroup
+      %col{width: "250"}
+      %col{width: "200"}
+      %col{width: "200"}
+    %tr
+      %th
+        %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
+          = t('projects.name')
+          %i.fa.fa-caret-down{'ng-show' => "order == 'name' && reverse == true"}
+          %i.fa.fa-caret-up{'ng-show' => "order == 'name' && reverse == false"}
+      %th
+        %a{href: "", "ng-click" => "order = 'updatedAt'; reverse=!reverse"}
+          = t('projects.updated')
+          %i.fa.fa-caret-down{'ng-show' => "order == 'updatedAt' && reverse == true"}
+          %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
+      %th
+    %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
+      %td.name
+        %span{'ng-hide' => 'project.editing'}
+          %a{href: '', "ng-href" => '{{ project.editUrl() }}'}
+            {{ project.name }}
+        %span{'ng-show' => 'project.editing'}
+          %input{"ng-model" => "project.name", type: 'text'}/
+      %td
+        {{ project.updatedAt | date: 'short' }}
+      %td
+        %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
+        %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
 
-      %table.projects{'ng-show' => 'projects.length > 0'}
-        %colgroup
-          %col{width: "250"}
-          %col{width: "200"}
-          %col{width: "200"}
-        %tr
-          %th
-            %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
-              = t('projects.name')
-              %i.fa.fa-caret-down{'ng-show' => "order == 'name' && reverse == true"}
-              %i.fa.fa-caret-up{'ng-show' => "order == 'name' && reverse == false"}
-          %th
-            %a{href: "", "ng-click" => "order = 'updatedAt'; reverse=!reverse"}
-              = t('projects.updated')
-              %i.fa.fa-caret-down{'ng-show' => "order == 'updatedAt' && reverse == true"}
-              %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
-          %th
-        %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
-          %td.name
-            %span{'ng-hide' => 'project.editing'}
-              %a{href: '', "ng-href" => '{{ project.editUrl() }}'}
-                {{ project.name }}
-            %span{'ng-show' => 'project.editing'}
-              %input{"ng-model" => "project.name", type: 'text'}/
-          %td
-            {{ project.updatedAt | date: 'short' }}
-          %td
-            %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
-            %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
-
-            %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
-            %span{'ng-show' => 'project.deleting'}
-              = t('project.really_delete')
-              %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
-              %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
-
-
-  .row
-    .span12
-      %h3.lesson{style: 'text-align:center'}
-        = t('project.need_help')
-  .row
-    .center{style: 'width: 720px;'}
-      = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
-      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
-
-= render partial: 'projects/admin'
+        %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
+        %span{'ng-show' => 'project.deleting'}
+          = t('project.really_delete')
+          %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
+          %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')

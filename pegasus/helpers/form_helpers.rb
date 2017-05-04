@@ -1,5 +1,5 @@
 require 'digest/md5'
-require File.join(CDO.root_dir, 'lib/forms/pegasus_form_validation')
+require lib_dir 'forms/pegasus_form_validation'
 
 include PegasusFormValidation
 
