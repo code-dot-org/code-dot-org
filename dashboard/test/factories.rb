@@ -526,8 +526,10 @@ FactoryGirl.define do
     module_type Plc::LearningModule::CONTENT_MODULE
   end
   factory :plc_course, class: 'Plc::Course' do
-    name "MyString"
-    course {create(:course, name: "MyString")}
+    transient do
+      name 'MyString'
+    end
+    course {create(:course, name: name)}
   end
 
   factory :level_group, class: LevelGroup do

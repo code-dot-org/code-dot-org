@@ -2,8 +2,8 @@ require 'test_helper'
 
 class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
   setup do
-    course = create :plc_course
-    @course_unit = create(:plc_course_unit, plc_course: course)
+    plc_course = create :plc_course
+    @course_unit = create(:plc_course_unit, plc_course: plc_course)
     learning_module = create(:plc_learning_module, plc_course_unit: @course_unit)
     @level1 = create(:external_link, url: 'some url')
     @level2 = create :maze
@@ -19,7 +19,7 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     end
 
     @user = create :teacher
-    user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: course)
+    user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: plc_course)
     @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @course_unit, user: @user)
     @enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules([learning_module])
     @enrollment_unit_assignment.reload
