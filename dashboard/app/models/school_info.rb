@@ -77,6 +77,10 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_without_country
   validate :validate_zip
 
+  def complete?
+    false # TODO: in progress (eric)
+  end
+
   def should_validate?
     validation_type != VALIDATION_NONE
   end

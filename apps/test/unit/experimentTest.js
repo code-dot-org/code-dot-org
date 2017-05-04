@@ -14,6 +14,12 @@ describe('experiments', function () {
       return mockedQueryString;
     };
 
+  });
+
+  beforeEach(function () {
+    mockedQueryString = ' ';
+    localStorage.removeItem('experimentsList');
+
     date = new Date(2009, 0, 20);
     now = date.getTime();
     const expriationDate = new Date(now);
@@ -22,13 +28,8 @@ describe('experiments', function () {
     clock = sinon.useFakeTimers(date.getTime());
   });
 
-  after(function () {
+  afterEach(function () {
     clock.restore();
-  });
-
-  beforeEach(function () {
-    mockedQueryString = ' ';
-    localStorage.removeItem('experimentsList');
   });
 
   it('can load experiment state from localStorage "experimentsList" key', function () {
@@ -43,9 +44,32 @@ describe('experiments', function () {
     experiments.setEnabled('awesome-feature', true);
     assert.sameDeepMembers(
       JSON.parse(localStorage.getItem('experimentsList')),
-      [{key: 'awesome-feature', expiration: expirationTime}]
+      [{key: 'awesome-feature'}]
     );
     experiments.setEnabled('better-feature', true);
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [
+        {key: 'better-feature'},
+        {key: 'awesome-feature'},
+      ]
+    );
+
+    experiments.setEnabled('awesome-feature', false);
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [{key: 'better-feature'}],
+    );
+  });
+
+  it('can persist temporary experiment state to local storage "experimentList" key', function () {
+    assert.isNull(localStorage.getItem('experimentsList'));
+    experiments.setEnabled('awesome-feature', true, expirationTime);
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [{key: 'awesome-feature', expiration: expirationTime}]
+    );
+    experiments.setEnabled('better-feature', true, expirationTime);
     assert.sameDeepMembers(
       JSON.parse(localStorage.getItem('experimentsList')),
       [
@@ -76,6 +100,8 @@ describe('experiments', function () {
     assert.isFalse(experiments.isEnabled('awesome-feature'));
     mockedQueryString = '?enableExperiments=awesome-feature';
     assert.isTrue(experiments.isEnabled('awesome-feature'));
+    clock.tick(13 * 60 * 60 * 1000);
+    assert.isTrue(experiments.isEnabled('awesome-feature'));
   });
 
   it('can enable multiple experiments with the enableExperiments query parameter', function () {
@@ -85,8 +111,23 @@ describe('experiments', function () {
     assert.isTrue(experiments.isEnabled('better-feature'));
   });
 
+  it('can temporarily enable experiments with the tempEnableExperiments query parameter', function () {
+    mockedQueryString = '?tempEnableExperiments=awesome-feature';
+    assert.isTrue(experiments.isEnabled('awesome-feature'));
+    mockedQueryString = '';
+    clock.tick(13 * 60 * 60 * 1000);
+    assert.isFalse(experiments.isEnabled('awesome-feature'));
+  });
+
   it('can disable an experiment with the disableExperiments query parameter', function () {
     experiments.setEnabled('awesome-feature', true);
+    assert.isTrue(experiments.isEnabled('awesome-feature'));
+    mockedQueryString = '?disableExperiments=awesome-feature';
+    assert.isFalse(experiments.isEnabled('awesome-feature'));
+  });
+
+  it('can disable a temporary experiment with the disableExperiments query parameter', function () {
+    experiments.setEnabled('awesome-feature', true, expirationTime);
     assert.isTrue(experiments.isEnabled('awesome-feature'));
     mockedQueryString = '?disableExperiments=awesome-feature';
     assert.isFalse(experiments.isEnabled('awesome-feature'));
@@ -102,26 +143,56 @@ describe('experiments', function () {
     assert.isFalse(experiments.isEnabled('better-feature'));
   });
 
-  it('still registers an experiment as enabled 11 hours after enabling it', function () {
-    experiments.setEnabled('best-feature', true);
+  it('can convert a temporary experiment to a permanent one with the enableExperiments query parameter', function () {
+    experiments.setEnabled('awesome-feature', true, expirationTime);
+    mockedQueryString = '?enableExperiments=awesome-feature';
+    assert.isTrue(experiments.isEnabled('awesome-feature'));
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [{key: 'awesome-feature'}]
+    );
+  });
+
+  it('can convert a permanent experiment to a temporary one with the tempEnableExperiments query parameter', function () {
+    experiments.setEnabled('awesome-feature', true);
+    mockedQueryString = '?tempEnableExperiments=awesome-feature';
+    assert.isTrue(experiments.isEnabled('awesome-feature'));
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [{key: 'awesome-feature', expiration: expirationTime}]
+    );
+  });
+
+  it('still registers a temporary experiment as enabled 11 hours after enabling it', function () {
+    experiments.setEnabled('best-feature', true, expirationTime);
     clock.tick(11 * 60 * 60 * 1000);
     assert.isTrue(experiments.isEnabled('best-feature'));
   });
 
-  it('no longer registers an experiment as enabled 13 hours after enabling it', function () {
-    experiments.setEnabled('best-feature', true);
+  it('no longer registers a temporary experiment as enabled 13 hours after enabling it', function () {
+    experiments.setEnabled('best-feature', true, expirationTime);
     clock.tick(13 * 60 * 60 * 1000);
     assert.isFalse(experiments.isEnabled('best-feature'));
   });
 
-  it('resets the expiration if setEnabled is called again', function () {
+  it('still registers a non-expiring experiment as enabled 13 hours after enabling it', function () {
     experiments.setEnabled('best-feature', true);
-    clock.tick(9 * 60 * 60 * 1000);
-    experiments.setEnabled('best-feature', true);
-    clock.tick(9 * 60 * 60 * 1000);
+    clock.tick(13 * 60 * 60 * 1000);
     assert.isTrue(experiments.isEnabled('best-feature'));
-    clock.tick(4 * 60 * 60 * 1000);
-    assert.isFalse(experiments.isEnabled('best-feature'));
+  });
+
+  it('resets the expiration if setEnabled is called again', function () {
+    experiments.setEnabled('awesome-feature', true, expirationTime);
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [{key: 'awesome-feature', expiration: expirationTime}]
+    );
+    const newExpirationTime = expirationTime + 10;
+    experiments.setEnabled('awesome-feature', true, newExpirationTime);
+    assert.sameDeepMembers(
+      JSON.parse(localStorage.getItem('experimentsList')),
+      [{key: 'awesome-feature', expiration: newExpirationTime}]
+    );
   });
 
   it('quietly returns false if localstorage throws an exception', function () {

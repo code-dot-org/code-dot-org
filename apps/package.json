@@ -14,7 +14,7 @@
     "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
     "test:entry": "grunt karma:entry",
-    "test:interpreter": "./node_modules/@code-dot-org/js-interpreter-tyrant/bin/run.js --run --diff --root ./test/interpreter --interpreter ./test/interpreter/patched-interpreter.js --progress",
+    "test:interpreter": "js-interpreter-tyrant --run --diff --root ./test/interpreter --interpreter ./test/interpreter/patched-interpreter.js --progress",
     "clean": "grunt clean",
     "build": "DEV=1 grunt build && grunt logBuildTimes",
     "build:blockly": "DEV=1 grunt preconcat && grunt concat",
@@ -44,7 +44,7 @@
     "@code-dot-org/blockly": "1.6.18",
     "@code-dot-org/bramble": "0.1.14",
     "@code-dot-org/johnny-five": "0.10.10-cdo.0",
-    "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
+    "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/p5.play": "1.1.6-cdo",
     "@code-dot-org/piskel": "0.10.0-cdo.0",
@@ -190,7 +190,7 @@
     "webpack-notifier": "^1.4.1"
   },
   "dependencies": {
-    "@code-dot-org/js-interpreter": "^1.1.1",
+    "@code-dot-org/js-interpreter": "1.1.2",
     "crypto-js": "^3.1.9-1",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",

@@ -73,6 +73,7 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
+require 'cdo/school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties, SchoolInfoDeduplicator
@@ -102,7 +103,16 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
+  serialized_attrs %w(
+    ops_first_name
+    ops_last_name
+    district_id
+    ops_school
+    ops_gender
+    races
+    using_text_mode
+    last_seen_school_info_interstitial
+  )
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -1027,6 +1037,25 @@ class User < ActiveRecord::Base
         new_csf_level_perfected = true
       end
 
+      # Log data (sampled) to AWS Firehose.
+      if user_id % 100 == 0
+        FirehoseClient.instance.put_record(
+          'analysis-events',
+          {
+            study: 'attempt_counts',
+            event: 'new_attempt',
+            user: user_id,
+            level_id: user_level.level_id,
+            script_id: user_level.script_id,
+            data_int: user_level.attempts + 1,
+            data_json: {
+              previous_best_result: user_level.best_result,
+              this_result: new_result,
+            }.to_json
+          }
+        )
+      end
+
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
@@ -1197,5 +1226,9 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
+  end
+
+  def show_school_info_interstitial?
+    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
 end

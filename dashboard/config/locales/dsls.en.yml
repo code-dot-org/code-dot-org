@@ -551,6 +551,7 @@ en:
       CSD U2 Design Project:
         description here: description here
         title: title
+      CSD U2 Expression Exemplars: {}
       CSD U2 L1 Overview:
         description here: description here
         title: title
@@ -1075,6 +1076,7 @@ en:
       'Circuit Playground Map: Buzzer': {}
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
+      Click Here!: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
       Color Sleuth - Epilogue:
@@ -8378,7 +8380,7 @@ en:
         Strongly disagree: Strongly disagree
       post-assessment survey q21:
         Agree: Agree
-        Computer Science applies to most aspects of real life.: Computer Science applies to most aspects of real life.
+        Computer science applies to most aspects of real life.: Computer science applies to most aspects of real life.
         Disagree: Disagree
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8403,7 +8405,7 @@ en:
       post-assessment survey q24:
         Agree: Agree
         Disagree: Disagree
-        I am interested in taking more computer science classes (in high school or after high school): I am interested in taking more computer science classes (in high school or after high school)
+        I am interested in taking more computer science classes (in high school or after high school).: I am interested in taking more computer science classes (in high school or after high school).
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8411,7 +8413,7 @@ en:
       post-assessment survey q24-a:
         Agree: Agree
         Disagree: Disagree
-        I am interested in studying computer science after I graduate high school: I am interested in studying computer science after I graduate high school
+        I am interested in studying computer science after I graduate high school.: I am interested in studying computer science after I graduate high school.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8491,15 +8493,14 @@ en:
       post-assessment survey q33:
         ok: ok
       post-assessment survey q34:
-        1 -Very easy: 1 -Very easy
-        2- Easy: 2- Easy
-        3- Sort of  easy: 3- Sort of  easy
-        4 - Neutral: 4 - Neutral
-        5 - Sort of hard: 5 - Sort of hard
-        6 -Hard: 6 -Hard
-        7 -Very hard: 7 -Very hard
+        Easy: Easy
+        Hard: Hard
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
-        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was on a scale from 1-7: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was on a scale from 1-7
+        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was
+        Sort of  easy: Sort of  easy
+        Sort of hard: Sort of hard
+        Very easy: Very easy
+        Very hard: Very hard
       post-assessment survey q35:
         "...I didn't get any questions right": "...I didn't get any questions right"
         "...I got a lot of questions right, but some wrong": "...I got a lot of questions right, but some wrong"
