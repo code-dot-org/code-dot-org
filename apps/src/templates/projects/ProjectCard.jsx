@@ -2,6 +2,7 @@ import React from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
+import placeholderImage from './placeholder.jpg';
 
 const styles = {
   card: {
@@ -196,16 +197,25 @@ const ProjectCard = React.createClass({
     }
   },
 
+  renderProjectName() {
+    const {type, channel, name} = this.props.projectData;
+    const url = `/projects/${type}/${channel}/view`;
+    return <a href={url} target="_blank">{name}</a>;
+  },
+
   render() {
     const { projectData } = this.props;
 
     return (
       <div>
         <div style={styles.card}>
-          <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
+          <img
+            src={projectData.thumbnailUrl || placeholderImage}
+            style={styles.thumbnail}
+          />
 
           <div style={styles.title}>
-            {projectData.name}
+            {this.renderProjectName()}
           </div>
 
           {this.renderStudentName()}
