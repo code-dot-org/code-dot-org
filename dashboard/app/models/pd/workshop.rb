@@ -60,6 +60,15 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN => 'Administrator'
   }
 
+  COURSE_URLS_MAP = {
+    COURSE_CSF => CDO.code_org_url('/educate/curriculum/elementary-school'),
+    COURSE_CSP => CDO.code_org_url('/educate/csp'),
+    COURSE_CSD => CDO.code_org_url('/educate/csd'),
+    COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
+    COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
+    COURSE_ECS => 'http://www.exploringcs.org/'
+  }
+
   STATES = [
     STATE_NOT_STARTED = 'Not Started',
     STATE_IN_PROGRESS = 'In Progress',
@@ -290,6 +299,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def course_name
     COURSE_NAMES_MAP[course]
+  end
+
+  def course_target
+    COURSE_URLS_MAP[course] if COURSE_URLS_MAP.key? course
   end
 
   def friendly_name
