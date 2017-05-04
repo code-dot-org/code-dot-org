@@ -51,4 +51,45 @@ class Pd::SessionTest < ActiveSupport::TestCase
     refute Pd::Attendance.exists? attendance.attributes
     assert Pd::Attendance.with_deleted.exists? attendance.attributes
   end
+
+  test 'assign unique codes' do
+    sessions = 2.times.map do
+      create(:pd_session).tap(&:assign_code)
+    end
+
+    assert sessions.all? {|s| s.code.present?}
+    assert_equal 2, sessions.map(&:code).uniq.size
+  end
+
+  test 'find by code' do
+    session = create(:pd_session).tap(&:assign_code)
+
+    found_session = Pd::Session.find_by_code session.code
+    assert_equal session, found_session
+
+    session.tap(&:remove_code)
+    assert_nil session.code
+    assert_nil Pd::Session.find_by_code nil
+  end
+
+  test 'open for attendance' do
+    Pd::Workshop.any_instance.stubs(:state).returns(Pd::Workshop::STATE_IN_PROGRESS)
+    workshop_not_started = create :pd_workshop
+    workshop_not_started.stubs(:state).returns(Pd::Workshop::STATE_NOT_STARTED)
+
+    session_open = create(:pd_session).tap(&:assign_code)
+    assert session_open.open_for_attendance?
+
+    session_no_code = create :pd_session
+    refute session_no_code.open_for_attendance?
+
+    session_not_started = create :pd_session, workshop: workshop_not_started
+    refute session_not_started.open_for_attendance?
+
+    session_future = create :pd_session, start: Time.now + 25.hours
+    refute session_future.open_for_attendance?
+
+    session_past = create :pd_session, start: Time.now - 26.hours, end: Time.now - 25.hours
+    refute session_past.open_for_attendance?
+  end
 end
