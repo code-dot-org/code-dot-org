@@ -53,4 +53,33 @@ class Pd::Session < ActiveRecord::Base
   def hours
     (self.end - start) / 1.hour
   end
+
+  def assign_code
+    update! code: unused_random_code
+  end
+
+  def remove_code
+    update! code: nil
+  end
+
+  def self.find_by_code(code)
+    return nil unless code
+    find_by(code: code)
+  end
+
+  def open_for_attendance?
+    code.present? &&
+      workshop.state == Pd::Workshop::STATE_IN_PROGRESS &&
+      start - 24.hours < Time.zone.now &&
+      self.end + 24.hours > Time.zone.now
+  end
+
+  private
+
+  def unused_random_code
+    loop do
+      code = SectionHelpers.random_code
+      return code unless Pd::Session.exists?(code: code)
+    end
+  end
 end

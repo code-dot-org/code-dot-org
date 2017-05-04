@@ -105,6 +105,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert returned_section
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
+    assert @workshop.sessions.first.code.present?
     assert @workshop.section
     assert_equal returned_section, @workshop.section
     assert @workshop.section.workshop_section?
@@ -113,6 +114,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
+    assert @workshop.sessions.first.code.nil?
   end
 
   test 'start is idempotent' do
