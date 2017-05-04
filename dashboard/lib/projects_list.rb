@@ -24,7 +24,7 @@ module ProjectsList
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(student_storage_id[:id], project[:id])
-            project_data = get_private_project_data(student, project, channel_id)
+            project_data = get_project_row_data(student, project, channel_id)
             projects_list_data << project_data if project_data
           end
         end
@@ -72,7 +72,7 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_private_project_data(student, project, channel_id)
+    def get_project_row_data(student, project, channel_id)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
