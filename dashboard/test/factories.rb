@@ -527,6 +527,7 @@ FactoryGirl.define do
   end
   factory :plc_course, class: 'Plc::Course' do
     name "MyString"
+    course {create(:course, name: "MyString")}
   end
 
   factory :level_group, class: LevelGroup do
