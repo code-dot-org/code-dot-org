@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427233825) do
+ActiveRecord::Schema.define(version: 20170504164217) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -143,6 +143,15 @@ ActiveRecord::Schema.define(version: 20170427233825) do
     t.text     "contained_level_text",     limit: 65535
     t.index ["contained_level_id"], name: "index_contained_levels_on_contained_level_id", using: :btree
     t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
+  end
+
+  create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.text     "properties",    limit: 65535
+    t.integer  "plc_course_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["plc_course_id"], name: "index_courses_on_plc_course_id", using: :btree
   end
 
   create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -548,7 +557,6 @@ ActiveRecord::Schema.define(version: 20170427233825) do
   end
 
   create_table "plc_courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
