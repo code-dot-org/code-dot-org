@@ -1,19 +1,25 @@
 class CreateCourses < ActiveRecord::Migration[5.0]
-  def up
+  def change
     create_table :courses do |t|
-      t.string :name
+      t.string :name, index: true
       t.text :properties
-      t.integer :plc_course_id, index: true, foreign_key: true
 
       t.timestamps
     end
 
-    Plc::Course.all.each do |plc_course|
-      Course.create!(name: plc_course.name, plc_course_id: plc_course.id)
-    end
-  end
+    add_column :plc_courses, :course_id, :integer
+    add_foreign_key :plc_courses, :courses
 
-  def down
-    drop_table :courses
+    reversible do |dir|
+      dir.up do
+        Plc::Course.find_each do |plc_course|
+          course = Course.create!(name: plc_course.name)
+          plc_course.update!(course_id: course.id)
+        end
+      end
+      dir.down do
+        # do nothing on a down as we'll already have deleted the new table/column
+      end
+    end
   end
 end
