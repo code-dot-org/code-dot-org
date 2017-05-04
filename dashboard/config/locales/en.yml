@@ -71,6 +71,10 @@ en:
   appname: "Code.org"
   stage: "Stage"
   stage_number: "Lesson %{number}"
+  stage_extras:
+    stage_number_completed: "You Completed Lesson %{number}!"
+    try_a_challenge: "Try a Challenge"
+    create_something: "Create Something"
   puzzle: "Puzzle"
   trophies: "Trophies"
   courses: 'Courses'

@@ -1,2 +1,4 @@
 .stage_extras
-  %h1 Stage Extras
+  %h1= t('stage_extras.stage_number_completed', number: @stage.relative_position)
+  %h2= t('stage_extras.try_a_challenge')
+  %h2= t('stage_extras.create_something')
