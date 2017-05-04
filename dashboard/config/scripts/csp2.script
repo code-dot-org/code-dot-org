@@ -100,3 +100,9 @@ level 'v2 U2L15 Student Lesson Introduction'
 
 stage 'Unit 2 Chapter 2 Assessment', lockable: true
 assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'
