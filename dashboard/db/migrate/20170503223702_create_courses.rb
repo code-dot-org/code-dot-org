@@ -1,5 +1,5 @@
 class CreateCourses < ActiveRecord::Migration[5.0]
-  def change
+  def up
     create_table :courses do |t|
       t.string :name
       t.text :properties
@@ -11,5 +11,9 @@ class CreateCourses < ActiveRecord::Migration[5.0]
     Plc::Course.all.each do |plc_course|
       Course.create!(name: plc_course.name, plc_course_id: plc_course.id)
     end
+  end
+
+  def down
+    drop_table :courses
   end
 end
