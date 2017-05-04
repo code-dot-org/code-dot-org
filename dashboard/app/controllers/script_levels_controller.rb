@@ -134,6 +134,11 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
+  def stage_extras
+    authorize! :read, ScriptLevel
+    render 'scripts/stage_extras'
+  end
+
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
