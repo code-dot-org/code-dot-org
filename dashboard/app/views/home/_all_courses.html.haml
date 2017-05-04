@@ -33,17 +33,3 @@
   = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, showState: show_state }
   = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, showState: show_state }
 %br/
-
-.row
-  .span12.twolineheader
-    %h2= t('gallery.header')
-.row
-  .span6.twolineheader
-    %h1= t('gallery.header_playlab')
-  .span6.twolineheader
-    %h1= t('gallery.header_artist')
-.row
-  .span6
-    = link_to image_tag('playlab_gallery_thumbnails.png', width: 460, height: 74), gallery_activities_path
-  .span6
-    = link_to image_tag('artist_gallery_thumbnails.png', width: 460, height: 74), gallery_activities_path(anchor: "artist")

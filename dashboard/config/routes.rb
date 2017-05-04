@@ -19,7 +19,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
   get '/teacher', to: 'home#teacher_homepage'
-  get '/courses', to: 'home#teacher_courses'
+  get '/courses', to: 'home#user_courses'
 
   resources :gallery_activities, path: '/gallery' do
     collection do

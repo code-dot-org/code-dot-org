@@ -426,7 +426,7 @@ testsContext.keys().forEach(testsContext);
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js',
-    'home/teacher_courses':         './src/sites/studio/pages/home/teacher_courses.js'
+    'home/user_courses':            './src/sites/studio/pages/home/user_courses.js'
   };
 
   var otherEntries = {

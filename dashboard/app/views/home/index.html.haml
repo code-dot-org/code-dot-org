@@ -52,6 +52,7 @@
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script }
 
   = render partial: 'home/all_courses'
+  = render partial: 'home/gallery_preview'
 
   - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
     .row#edit_teachers
