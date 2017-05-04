@@ -50,16 +50,16 @@ module ProjectsList
     # @param offset [Integer] Number of projects to skip. Default: 0.
     #   Must not be specified when requesting all project types.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_type, limit, offset)
+    def fetch_published_projects(project_type, limit:, offset:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_type == 'all'
         raise ArgumentError, 'Cannot specify offset when requesting all project types' if offset
-        return fetch_published_project_types(PUBLISHED_PROJECT_TYPES, limit)
+        return fetch_published_project_types(PUBLISHED_PROJECT_TYPES, limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_type}" unless PUBLISHED_PROJECT_TYPES.include?(project_type)
-      fetch_published_project_types([project_type], limit, offset)
+      fetch_published_project_types([project_type], limit: limit, offset: offset)
     end
 
     private
@@ -85,7 +85,7 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    def fetch_published_project_types(project_types, limit, offset = 0)
+    def fetch_published_project_types(project_types, limit:, offset: 0)
       {}.tap do |projects|
         project_types.map do |type|
           projects[type] = PEGASUS_DB[:storage_apps].
