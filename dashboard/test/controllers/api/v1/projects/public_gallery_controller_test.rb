@@ -13,10 +13,6 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     }
     stub_projects = [published_applab_project]
 
-    def db_result(result)
-      stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result)))))
-    end
-
     # return 1 applab project for initial DB request, then an empty set
     # for all subsequent db requests. Subsequent requests are only expected
     # when 'all' project types are requested.
@@ -107,9 +103,9 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
 
     assert_equal ProjectsList::PUBLISHED_PROJECT_TYPES.sort, categories_list.keys.sort
     assert_equal 1, categories_list['applab'].length
-    assert_equal 0, categories_list['gamelab'].length
-    assert_equal 0, categories_list['playlab'].length
-    assert_equal 0, categories_list['artist'].length
+    assert_empty categories_list['gamelab']
+    assert_empty categories_list['playlab']
+    assert_empty categories_list['artist']
 
     project_row = categories_list['applab'].first
     assert_equal 'Charlies App', project_row['name']
@@ -117,5 +113,11 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
+  end
+
+  private
+
+  def db_result(result)
+    stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result)))))
   end
 end
