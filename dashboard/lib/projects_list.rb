@@ -8,7 +8,7 @@ module ProjectsList
     gamelab
     playlab
     artist
-  )
+  ).freeze
 
   class << self
     # Look up every project of every student in the section which is not hidden or deleted.
@@ -48,7 +48,7 @@ module ProjectsList
     # @param limit [Integer] Maximum number of projects to retrieve of each type.
     #   Must be between 1 and MAX_LIMIT, inclusive.
     # @param offset [Integer] Number of projects to skip. Default: 0.
-    #   Must not specified when requesting all project types.
+    #   Must not be specified when requesting all project types.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
     def fetch_published_projects(project_type, limit, offset)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
@@ -56,10 +56,10 @@ module ProjectsList
       end
       if project_type == 'all'
         raise ArgumentError, 'Cannot specify offset when requesting all project types' if offset
-        return fetch_published_projects_all_types(limit)
+        return fetch_published_project_types(PUBLISHED_PROJECT_TYPES, limit)
       end
       raise ArgumentError, "invalid project type: #{project_type}" unless PUBLISHED_PROJECT_TYPES.include?(project_type)
-      [[project_type, fetch_published_projects_by_type(project_type, limit, offset)]].to_h
+      fetch_published_project_types([project_type], limit, offset)
     end
 
     private
@@ -85,20 +85,18 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    def fetch_published_projects_all_types(limit)
-      PUBLISHED_PROJECT_TYPES.map do |type|
-        [type, fetch_published_projects_by_type(type, limit)]
-      end.to_h
-    end
-
-    def fetch_published_projects_by_type(project_type, limit, offset = 0)
-      PEGASUS_DB[:storage_apps].
-        where(state: 'active', project_type: project_type).
-        exclude(published_at: nil).
-        order(Sequel.desc(:published_at)).
-        limit(limit).
-        offset(offset).
-        map(&method(:get_published_project_data))
+    def fetch_published_project_types(project_types, limit, offset = 0)
+      {}.tap do |projects|
+        project_types.map do |type|
+          projects[type] = PEGASUS_DB[:storage_apps].
+            where(state: 'active', project_type: type).
+            exclude(published_at: nil).
+            order(Sequel.desc(:published_at)).
+            limit(limit).
+            offset(offset).
+            map {|project| get_published_project_data project}
+        end
+      end
     end
 
     def get_published_project_data(project)
