@@ -9,7 +9,7 @@ require 'cdo/only_one'
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 
-def early_exit_if_appropriate
+def exit_unless_slack_permission
   no_branches = {DTP: DevelopersTopic.dtp?, DTT: DevelopersTopic.dtt?, DTS: DevelopersTopic.dts?}.
     select {|_branch, allowed| !allowed}
   return unless no_branches.empty?
@@ -22,8 +22,22 @@ def early_exit_if_appropriate
   exit
 end
 
+def exit_unless_last_dtt_green
+  current_sha = GitHub.sha('test')
+  green_sha = InfaTestTopic.green_commit
+  return unless current_sha == green_sha
+
+  ChatClient.message(
+    'infra-test',
+    "robo-DTT skipped (test (#{current_sha}) not marked :greenbeer:)",
+    color: 'yellow'
+  )
+  exit
+end
+
 def main
-  early_exit_if_appropriate
+  exit_unless_slack_permission
+  exit_unless_last_dtt_green
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
