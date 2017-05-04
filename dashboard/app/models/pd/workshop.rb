@@ -302,7 +302,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def course_target
-    COURSE_URLS_MAP[course] if COURSE_URLS_MAP.key? course
+    COURSE_URLS_MAP[course]
   end
 
   def friendly_name
