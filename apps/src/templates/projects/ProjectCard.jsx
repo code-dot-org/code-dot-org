@@ -111,7 +111,7 @@ const ProjectCard = React.createClass({
   renderStudentName() {
   // The student's name should only be visible in the classroom gallery.
     if (this.props.currentGallery === 'class'){
-      return (
+      return this.props.projectData.studentName && (
         <div style={styles.studentName}>
           {i18n.by()}: {this.props.projectData.studentName}
         </div>
@@ -121,7 +121,7 @@ const ProjectCard = React.createClass({
 
   renderFirstInitial() {
     if (this.props.currentGallery === 'public'){
-      return (
+      return this.props.projectData.studentName && (
         <span style={styles.firstInitial}>
           {i18n.by()}: {this.props.projectData.studentName[0]}
         </span>
@@ -144,7 +144,7 @@ const ProjectCard = React.createClass({
   renderStudentAgeRange(studentAge) {
   // The student's age range should only be visible in the public gallery.
     if (this.props.currentGallery === 'public') {
-      return (
+      return studentAge && (
         <span style={styles.ageRange}>
           {i18n.age()}: {this.checkStudentAge(studentAge)}+
         </span>
@@ -205,7 +205,7 @@ const ProjectCard = React.createClass({
           <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
 
           <div style={styles.title}>
-            {projectData.projectName}
+            {projectData.name}
           </div>
 
           {this.renderStudentName()}
@@ -217,7 +217,7 @@ const ProjectCard = React.createClass({
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            {i18n.lastEdited()}: {this.dateFormatter(projectData.updatedAt)} at {this.timeFormatter(projectData.updatedAt)}
+            {i18n.published()}: {this.dateFormatter(projectData.publishedAt)} at {this.timeFormatter(projectData.publishedAt)}
           </div>
         </div>
 
