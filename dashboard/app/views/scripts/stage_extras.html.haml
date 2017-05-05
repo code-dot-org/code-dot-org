@@ -1,4 +1,14 @@
 .stage_extras
   %h1= t('stage_extras.stage_number_completed', number: @stage.relative_position)
+
   %h2= t('stage_extras.try_a_challenge')
+  %p= t('stage_extras.no_bonus_levels')
+
   %h2= t('stage_extras.create_something')
+  .create-something
+  .clear
+
+  %h2= t('continue')
+  = link_to t('next_stage'), @stage.script_levels.last.next_level_or_redirect_path_for_user(current_user)
+
+%script{ src: minifiable_asset_path('js/scripts/stage_extras.js')}
