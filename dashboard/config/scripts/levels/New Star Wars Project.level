@@ -126,7 +126,6 @@
       "goalAnimation": null
     },
     "edit_code": true,
-    "contained_level_names": null,
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "instructions_important": "false",
@@ -167,7 +166,8 @@
       "downButton",
       "upButton"
     ],
-    "start_blocks": "setBackground(\"Endor\");\r\nsetMap(\"circle\");\r\nsetDroid(\"R2-D2\");\r\nsetDroidSpeed(\"normal\");\r\nplaySound(\"R2-D2random\");\r\nfunction whenUp() {\r\n  goUp();\r\n}\r\nfunction whenDown() {\r\n  goDown();\r\n}\r\nfunction whenLeft() {\r\n  goLeft();\r\n}\r\nfunction whenRight() {\r\n  goRight();\r\n}"
+    "start_blocks": "setBackground(\"Endor\");\r\nsetMap(\"circle\");\r\nsetDroid(\"R2-D2\");\r\nsetDroidSpeed(\"normal\");\r\nplaySound(\"R2-D2random\");\r\nfunction whenUp() {\r\n  goUp();\r\n}\r\nfunction whenDown() {\r\n  goDown();\r\n}\r\nfunction whenLeft() {\r\n  goLeft();\r\n}\r\nfunction whenRight() {\r\n  goRight();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
