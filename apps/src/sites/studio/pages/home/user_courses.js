@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseCard from '@cdo/apps/templates/teacherHomepage/CourseCard';
-import BlockLink from '@cdo/apps/templates/BlockLink';
+import GradientNavCard from '@cdo/apps/templates/teacherHomepage/GradientNavCard';
 
 window.showContent = function (recentCourses, blockLinks) {
   ReactDOM.render(
@@ -23,10 +23,13 @@ window.showContent = function (recentCourses, blockLinks) {
   ReactDOM.render(
     <div>
       {blockLinks.map((item, index) => (
-        <BlockLink
+        <GradientNavCard
           key={index}
-          text={item.text}
+          title={item.text}
           link={item.link}
+          description=""
+          image="http://code.org/img.png"
+          buttonText="Learn more"
         />
       ))}
     </div>,
