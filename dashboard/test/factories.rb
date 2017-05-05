@@ -2,6 +2,11 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :course do
+    name "MyCourseName"
+    properties nil
+    plc_course_id nil
+  end
   factory :experiment do
     name "fancyFeature"
 

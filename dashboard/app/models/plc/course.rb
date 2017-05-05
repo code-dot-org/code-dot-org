@@ -6,6 +6,11 @@
 #  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  course_id  :integer
+#
+# Indexes
+#
+#  fk_rails_d5fc777f73  (course_id)
 #
 
 class Plc::Course < ActiveRecord::Base
