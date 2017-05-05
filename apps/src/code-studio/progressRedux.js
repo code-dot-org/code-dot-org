@@ -327,7 +327,8 @@ export const levelsByLesson = state => (
         progression: level.progression,
         icon: level.icon,
         isUnplugged: level.kind === LevelKind.unplugged,
-        levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title
+        isGoBeyond: level.kind === LevelKind.go_beyond,
+        levelNumber: level.kind === (LevelKind.unplugged || LevelKind.go_beyond) ? undefined : level.title
       };
     })
   ))

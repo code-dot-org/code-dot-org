@@ -49,12 +49,23 @@ export default storybook => {
       },
       {
         name:'first level is unplugged',
-        description: 'Should still get a bubble (not a pill) for unplugged',
+        description: 'should be a pill for unplugged',
         story: () => (
           <ProgressBubbleSet
             levels={[
               fakeLevel({ isUnplugged: true }),
               ...fakeLevels(5)
+            ]}
+            disabled={false}
+          />
+        )
+      },
+      {
+        name:'level is go beyond',
+        story: () => (
+          <ProgressBubbleSet
+            levels={[
+              fakeLevel({ isUnplugged: true, isGoBeyond: true })
             ]}
             disabled={false}
           />

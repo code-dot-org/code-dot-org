@@ -233,7 +233,9 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summarize
-    if level.unplugged?
+    if level.is_a?(GoBeyond)
+      kind = LEVEL_KIND.go_beyond
+    elsif level.unplugged?
       kind = LEVEL_KIND.unplugged
     elsif assessment
       kind = LEVEL_KIND.assessment

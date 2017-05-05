@@ -225,3 +225,6 @@ level 'AllTheThings_StandaloneVideo'
 stage 'Curriculum Reference'
 level 'allthethings_curriculum_reference'
 level 'allthethings_map'
+
+stage 'Go Beyond'
+level 'AllTheThings_GoBeyond'

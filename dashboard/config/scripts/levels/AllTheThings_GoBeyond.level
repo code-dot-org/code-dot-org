@@ -1,0 +1,15 @@
+<GoBeyond>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2017-05-01T23:45:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "link_title": "Test Go Beyond Level",
+    "url": "http://code.org"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</GoBeyond>
