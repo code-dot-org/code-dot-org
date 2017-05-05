@@ -572,7 +572,6 @@ FactoryGirl.define do
 
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
-    workshop_type Pd::Workshop::TYPES.first
     on_map true
     funded true
     course Pd::Workshop::COURSES.first
