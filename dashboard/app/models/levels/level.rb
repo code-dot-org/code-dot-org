@@ -370,7 +370,10 @@ class Level < ActiveRecord::Base
       changed_at: Time.now,
       changed: latest_changes
     }
-    entry[:changed_by] = user.id unless user.nil?
+    unless user.nil?
+      entry[:changed_by_id] = user.id
+      entry[:changed_by_email] = user.email
+    end
     log.push(entry)
 
     # Because this ever-growing log is stored in a limited column and because we
