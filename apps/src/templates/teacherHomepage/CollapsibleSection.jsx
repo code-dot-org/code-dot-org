@@ -12,7 +12,7 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
     width: 940
@@ -22,9 +22,8 @@ const styles = {
   },
   linkToViewAll: {
     color: color.teal,
-    fontSize: 12,
-    fontFamily: '"Gotham", sans-serif',
-    fontWeight: 'bold',
+    fontSize: 14,
+    fontFamily: 'Gotham 4r',
     marginTop: -2,
     display: 'inline'
   },
@@ -74,22 +73,12 @@ const CollapsibleSection = React.createClass({
       return (
         <div>
           {React.Children.map(this.props.children, (child, index) => {
-            if (index % 2 === 0) {
-              return (
-                <div key={index}>
-                  {child}
-                    <div style={styles.spacer}>
-                      .
-                    </div>
-                </div>
-              );
-            } else {
-              return (
-                <div key={index}>
-                  {child}
-                </div>
-              );
-            }
+            return (
+              <div key={index}>
+                {child}
+                {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
+              </div>
+            );
           })}
         </div>
       );

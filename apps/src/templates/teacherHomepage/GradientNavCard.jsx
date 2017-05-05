@@ -6,7 +6,7 @@ const styles = {
     overflow: 'hidden',
     position: 'relative',
     height: 200,
-    width: 457,
+    width: 458,
     float: 'left',
     marginBottom: 20
   },

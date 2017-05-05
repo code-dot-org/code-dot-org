@@ -14,32 +14,32 @@ const styles = {
   },
   tealBar: {
     width: 940,
-    height: 72,
-    backgroundColor: color.light_teal,
+    height: 65,
+    backgroundColor: color.teal,
   },
   headingBox: {
-    paddingTop: 35,
+    paddingTop: 25,
   },
   heading: {
-    marginLeft: 360,
+    marginLeft: 350,
     color: color.white,
     fontSize: 18,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: 'Gotham 3r',
     fontWeight: 'bold',
     textDecoration: 'none'
   },
   description: {
-    marginLeft: 360,
+    marginLeft: 350,
     marginRight: 20,
-    marginTop: 20,
+    marginTop: 15,
     fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: 'Gotham 3r',
     lineHeight: 1.5,
     color: color.charcoal
   },
   button: {
     marginLeft: 350,
-    marginTop: 20
+    marginTop: 10
   },
   image: {
     height: 210,
