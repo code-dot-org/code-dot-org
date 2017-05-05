@@ -592,15 +592,13 @@ EOS
     data[:name] = "test audit log"
     level = Level.create(data)
     assert level.valid?
-
-    assert_equal 1, JSON.parse(level.audit_log).length
+    assert_nil level.audit_log
 
     level.skin = "bee"
-    level.save!
-    level.reload
+    level.log_changes
 
-    assert_equal 2, JSON.parse(level.audit_log).length
-    assert_equal ["skin"], JSON.parse(level.audit_log)[1]["changed"]
+    assert_equal 1, JSON.parse(level.audit_log).length
+    assert_equal ["skin"], JSON.parse(level.audit_log).first["changed"]
   end
 
   test "audit log will self-truncate" do
@@ -608,6 +606,7 @@ EOS
     data[:name] = "test audit log truncation"
     level = Level.create(data)
     assert level.valid?
+    assert_nil level.audit_log
 
     # Create an audit log that is almost the max length
     huge_array = ["test"] * 9360
@@ -618,8 +617,7 @@ EOS
 
     # add a new entry that will put us over the limit
     level.instructions = "new actual instructions"
-    level.save!
-    level.reload
+    level.log_changes
 
     # audit log should have dropped off several entries in order get back under
     # the limit, since the test entries are individually much smaller than the
