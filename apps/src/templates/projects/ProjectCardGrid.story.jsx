@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
+import _ from 'lodash';
 
 let projectTypes = [
   'applab',
@@ -31,59 +32,53 @@ function generateFakeProject(overrideData) {
 }
 
 function generateFakePublicProjectsWithStudentInfo() {
-  let date = new Date();
-  let publicProjects = {};
-  let i = 0;
+  const date = new Date();
+  const publicProjects = {};
     projectTypes.forEach(type => {
-      publicProjects[type] = [];
-      for (i=0; i < 5; i++) {
-        publicProjects[type].push(generateFakeProject({
+      publicProjects[type] = _.range(5).map(i => (
+        generateFakeProject({
           type: type,
           name: type,
           publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
           studentName: 'Penelope',
           studentAge: 6 + 3 * i
-        }));
-      }
+        })
+      ));
     });
   return publicProjects;
 }
 
 function generateFakePublicProjectsWithoutStudentInfo() {
-  let date = new Date();
-  let publicProjects = {};
-  let i = 0;
+  const date = new Date();
+  const publicProjects = {};
   projectTypes.forEach(type => {
-    publicProjects[type] = [];
-    for (i=0; i < 5; i++) {
-      publicProjects[type].push(generateFakeProject({
+    publicProjects[type] = _.range(5).map(i => (
+      generateFakeProject({
         type: type,
         name: type,
         publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
-      }));
-    }
+      })
+    ));
   });
   return publicProjects;
 }
 
 function generateFakePersonalProjects() {
-  let date = new Date();
-  let personalProjects = {};
-  personalProjects.applab = [];
-  let i = 1;
-  for (i=1; i < 8; i++) {
-    personalProjects.applab.push(generateFakeProject({
+  const date = new Date();
+  const personalProjects = {};
+  personalProjects.applab = _.range(7).map(i => (
+    generateFakeProject({
       name: "Personal " + i,
       updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
       studentName: 'Penelope',
       studentAge: 8,
-    }));
-  }
+    })
+  ));
   return personalProjects;
 }
 
 function generateFakeClassProjects() {
-  let classProjects = {};
+  const classProjects = {};
   classProjects.applab = [];
   classProjects.applab.push(generateFakeProject());
   classProjects.applab.push(generateFakeProject({
@@ -106,7 +101,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Class Gallery',
-        description: 'Class gallery sorted by recency of when the project was added.',
+        description: 'Class gallery, showing full names',
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakeClassProjects()}
@@ -116,7 +111,7 @@ export default storybook => {
       },
       {
         name: 'Public Gallery with student info',
-        description: 'Public gallery sorted by project type AND recency of when the project was added, without student name and age.',
+        description: 'Public gallery, with shortened student names and student age ranges.',
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakePublicProjectsWithStudentInfo()}
@@ -126,7 +121,7 @@ export default storybook => {
       },
       {
         name: 'Public Gallery without student info',
-        description: 'Public gallery sorted by project type AND recency of when the project was added, without student name and age.',
+        description: 'Public gallery, without student name and age.',
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
@@ -136,7 +131,7 @@ export default storybook => {
       },
       {
         name: 'Personal Gallery',
-        description: 'Personal gallery sorted by recency of when the project was added.',
+        description: 'Personal gallery, showing full names and the "quick action" dropdowns',
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakePersonalProjects()}
