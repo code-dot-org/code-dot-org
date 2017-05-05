@@ -20,6 +20,49 @@ class FilesTest < FilesApiTestBase
     @channel_id = nil
   end
 
+  def test_copy_object
+    file_data = 'fake-file-data'
+    old_filename = @api.randomize_filename 'old_file.html'
+    new_filename = @api.randomize_filename 'new_file.html'
+    delete_all_file_versions old_filename, URI.escape(old_filename),
+      new_filename, URI.escape(new_filename)
+    delete_all_manifest_versions
+    post_file_data @api, old_filename, file_data, 'test/html'
+
+    @api.copy_object old_filename, new_filename
+
+    assert successful?
+    @api.get_object(new_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+    @api.get_object(old_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+
+    delete_all_manifest_versions
+  end
+
+  def test_rename_object
+    file_data = 'fake-file-data'
+    old_filename = @api.randomize_filename 'old_file.html'
+    new_filename = @api.randomize_filename 'new_file.html'
+    delete_all_file_versions old_filename, URI.escape(old_filename),
+      new_filename, URI.escape(new_filename)
+    delete_all_manifest_versions
+    post_file_data @api, old_filename, file_data, 'test/html'
+
+    @api.rename_object old_filename, new_filename
+
+    assert successful?
+    @api.get_object(new_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+    @api.get_object(old_filename)
+    assert not_found?
+
+    delete_all_manifest_versions
+  end
+
   def test_upload_files
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
