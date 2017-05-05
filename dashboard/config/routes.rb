@@ -18,7 +18,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
-  get '/teacher', to: 'home#teacher_homepage'
   get '/courses', to: 'home#user_courses'
 
   resources :gallery_activities, path: '/gallery' do

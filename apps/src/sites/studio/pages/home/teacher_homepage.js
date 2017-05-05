@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
 
-$(document).ready(showContent);
+$(document).ready(showTeacherHomepage);
 
 
-function showContent() {
+function showTeacherHomepage() {
 
   ReactDOM.render (
     <TeacherHomepage
@@ -35,6 +35,6 @@ function showContent() {
         },
       ]}
     />,
-    document.getElementById('container')
+    document.getElementById('teacher-homepage-container')
   );
 }
