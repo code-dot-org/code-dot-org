@@ -274,7 +274,7 @@ const WorkshopForm = React.createClass({
             inline
             name="on_map"
             value="yes"
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleRadioChange}
             style={this.getInputStyle()}
             readOnly={this.props.readOnly}
           >
@@ -285,7 +285,7 @@ const WorkshopForm = React.createClass({
             inline
             name="on_map"
             value="no"
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleRadioChange}
             style={this.getInputStyle()}
             readOnly={this.props.readOnly}
           >
@@ -309,7 +309,7 @@ const WorkshopForm = React.createClass({
             inline
             name="funded"
             value="yes"
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleRadioChange}
             style={this.getInputStyle()}
             readOnly={this.props.readOnly}
           >
@@ -320,7 +320,7 @@ const WorkshopForm = React.createClass({
             inline
             name="funded"
             value="no"
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleRadioChange}
             style={this.getInputStyle()}
             readOnly={this.props.readOnly}
           >
@@ -440,18 +440,16 @@ const WorkshopForm = React.createClass({
     return value;
   },
 
-  handleCheckboxChange(event) {
+  handleRadioChange(event) {
     const fieldName = $(event.target).attr('name');
     if (!fieldName) {
-      console.error("Expected name attribute on handleFieldChange target.");
+      console.error("Expected name attribute on handleRadioChange target.");
       return null;
     }
 
-    const checked = event.target.checked;
-    console.log(event.target.value);
-
-    this.setState({[fieldName]: event.target.value === "yes"});
-    return checked;
+    const enabled = event.target.value === "yes";
+    this.setState({[fieldName]: enabled});
+    return enabled;
   },
 
   handleCourseChange(event) {
@@ -591,6 +589,16 @@ const WorkshopForm = React.createClass({
         validation.isValid = false;
         validation.style.capacity = "error";
         validation.help.capacity = "Must be a positive integer.";
+      }
+      if (!this.state.on_map) {
+        validation.isValid = false;
+        validation.style.on_map = "error";
+        validation.help.on_map = "Required.";
+      }
+      if (!this.state.funded) {
+        validation.isValid = false;
+        validation.style.funded = "error";
+        validation.help.funded = "Required.";
       }
       if (!this.state.course) {
         validation.isValid = false;
