@@ -20,7 +20,7 @@ module SchoolInfoInterstitialHelper
     return false if user.school_info_suggestion?
 
     user.last_seen_school_info_interstitial = DateTime.now
-    user.save!
+    user.save(validate: false)
 
     return true
   end
