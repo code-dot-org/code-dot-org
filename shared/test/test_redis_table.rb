@@ -164,8 +164,8 @@ class RedisTableTest < Minitest::Test
 
   def test_expiration
     # Test with a 1-second expire time
-    expire_time = 0.01
-    margin_time = 0.002
+    expire_time = 1
+    margin_time = 0.2
     table = RedisTable.new(@redis, @pubsub, 'shard1', 'table', expire_time)
     value1 = {'name' => 'alice', 'age' => 7, 'male' => false}
     row1 = table.insert(value1)
