@@ -1,4 +1,5 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
+- csp_survey_url = "http://teacherblog.code.org/post/160312119219/congratulations-on-reaching-the-end-of-the-first"
 - applab_export_url = "http://teacherblog.code.org/post/159273548404/new-feature-export-your-app-lab-code"
 
 .teacher-announce
@@ -7,13 +8,13 @@
   #us-announcement{style: 'display: none;'}
 
     .announce-content
-      %a.track-link{href: applab_export_url, target: '_blank', data: {id: 'applab_export'}}
+      %a.track-link{href: csp_survey_url, target: '_blank', data: {id: 'csp_survey'}}
         .content-img-container
-          = image_tag(CDO.shared_image_url('/teacher-announcement/applab.jpg'), width: '200px')
+          = image_tag(CDO.shared_image_url('/teacher-announcement/csp-survey.gif'), width: '200px')
       .content-text
-        != t('home.announcement_applab_export')
+        != t('home.announcement_csp_survey')
       .announce-learn-more
-        %a.track-link{href: applab_export_url, target: '_blank', data: {id: 'applab_export'}}
+        %a.track-link{href: csp_survey_url, target: '_blank', data: {id: 'csp_survey'}}
           %button.primary= t('home.announcement_learn_more_button')
 
   #non-us-announcement{style: 'display: none;'}
