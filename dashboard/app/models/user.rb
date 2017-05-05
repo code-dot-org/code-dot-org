@@ -1231,4 +1231,8 @@ class User < ActiveRecord::Base
   def show_school_info_interstitial?
     SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
+
+  def school_info_suggestion?
+    !(school.blank? && full_address.blank?)
+  end
 end
