@@ -12,6 +12,7 @@ import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
+import GridOverlay from './GridOverlay';
 
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -97,6 +98,7 @@ var GameLabVisualizationColumn = React.createClass({
             height={GAME_HEIGHT}
             onMouseMove={this.onMouseMove}
           >
+            <GridOverlay show={this.props.showGrid} />
             <CrosshairOverlay/>
             <TooltipOverlay providers={[coordinatesProvider()]}/>
           </VisualizationOverlay>
