@@ -37,7 +37,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def filter
     limit = params[:limit].try(:to_i)
     workshops = filter_workshops(@workshops)
-    limited_workshops = workshops.limit(limit)
 
     respond_to do |format|
       limited_workshops = workshops.limit(limit)
