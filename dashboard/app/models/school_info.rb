@@ -78,7 +78,11 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_zip
 
   def complete?
-    false # TODO: in progress (eric)
+    validation_type_original = validation_type
+    self.validation_type = VALIDATION_FULL
+    return_val = valid?
+    self.validation_type = validation_type_original
+    return_val
   end
 
   def should_validate?
