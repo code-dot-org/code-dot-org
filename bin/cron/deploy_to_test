@@ -24,7 +24,7 @@ end
 
 def exit_unless_last_dtt_green
   current_sha = GitHub.sha('test')
-  green_sha = InfaTestTopic.green_commit
+  green_sha = InfraTestTopic.green_commit
   return unless current_sha == green_sha
 
   ChatClient.message(
