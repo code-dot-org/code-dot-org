@@ -124,7 +124,6 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
   end
 
   workshop = Pd::Workshop.create!(
-    workshop_type: 'Public',
     on_map: true,
     funded: true,
     course: course,
