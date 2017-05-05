@@ -27,6 +27,9 @@ class ProjectsController < ApplicationController
     gumball: {
       name: 'New Gumball Project'
     },
+    mc: {
+      name: 'New Minecraft Simple Project'
+    },
     minecraft: {
       name: 'New Minecraft Designer Project'
     },

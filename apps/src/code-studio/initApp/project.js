@@ -537,7 +537,7 @@ var projects = module.exports = {
         if (appOptions.level.isEventLevel) {
           return 'minecraft';
         }
-        return null;
+        return 'mc';
       case 'eval':
         return 'eval';
       case 'studio':
