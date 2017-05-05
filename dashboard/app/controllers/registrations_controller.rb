@@ -89,8 +89,8 @@ class RegistrationsController < Devise::RegistrationsController
       school_info_attributes: [
         :country,
         :school_type,
-        :state,
-        :zip,
+        :state, :school_state,
+        :zip, :school_zip,
         :school_district_id,
         :school_district_other,
         :school_district_name,
