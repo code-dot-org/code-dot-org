@@ -27,6 +27,8 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     :subject, :capacity, :notes, :section_id, :section_code, :state, :facilitators, :enrolled_teacher_count,
     :sessions, :account_required_for_attendance?, :enrollment_code
 
+  delegate :workshop_type, to: :object
+
   def section_code
     return nil unless object.section
     object.section.code

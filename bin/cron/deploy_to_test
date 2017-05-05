@@ -6,28 +6,38 @@ require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/only_one'
 
-DEVELOPERS = 'developers'.freeze
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 
-def main
-  unless DevelopersTopic.dtt?
-    ChatClient.message(
-      'infra-test',
-      'robo-DTT skipped (DTT was not yes)',
-      color: 'yellow'
-    )
-    return
-  end
+def exit_unless_slack_permission
+  no_branches = {DTP: DevelopersTopic.dtp?, DTT: DevelopersTopic.dtt?, DTS: DevelopersTopic.dts?}.
+    select {|_branch, allowed| !allowed}
+  return unless no_branches.empty?
 
-  unless GitHub.behind?(base: 'staging', compare: 'test')
-    ChatClient.message(
-      'infra-test',
-      "robo-DTT skipped, nothing to DTT",
-      color: 'green'
-    )
-    return
-  end
+  ChatClient.message(
+    'infra-test',
+    "robo-DTT skipped (#{no_branches.keys.join(',')} was not yes)",
+    color: 'yellow'
+  )
+  exit
+end
+
+def exit_unless_last_dtt_green
+  current_sha = GitHub.sha('test')
+  green_sha = InfraTestTopic.green_commit
+  return unless current_sha == green_sha
+
+  ChatClient.message(
+    'infra-test',
+    "robo-DTT skipped (test (#{current_sha}) not marked :greenbeer:)",
+    color: 'yellow'
+  )
+  exit
+end
+
+def main
+  exit_unless_slack_permission
+  exit_unless_last_dtt_green
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
