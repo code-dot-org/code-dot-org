@@ -36,7 +36,6 @@ class Level < ActiveRecord::Base
   has_many :hint_view_requests
 
   before_validation :strip_name
-  before_save :log_changes
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
@@ -351,7 +350,7 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
-  def log_changes
+  def log_changes(user=nil)
     return unless changed?
 
     log = JSON.parse(audit_log || "[]")
@@ -367,12 +366,12 @@ class Level < ActiveRecord::Base
       end
     end
 
-    log.push(
-      {
-        changed_at: Time.now,
-        changed: latest_changes
-      }
-    )
+    entry = {
+      changed_at: Time.now,
+      changed: latest_changes
+    }
+    entry[:changed_by] = user.id unless user.nil?
+    log.push(entry)
 
     # Because this ever-growing log is stored in a limited column and because we
     # will tend to care a lot less about older entries than newer ones, we will
