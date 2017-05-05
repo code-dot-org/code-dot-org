@@ -115,10 +115,9 @@ class LevelsController < ApplicationController
     end
 
     @level.assign_attributes(level_params)
+    @level.log_changes(current_user)
 
-    if @level.valid?
-      @level.log_changes(current_user)
-      @level.save!
+    if @level.save
       redirect = params["redirect"] || level_url(@level, show_callouts: 1)
       render json: {redirect: redirect}
     else
