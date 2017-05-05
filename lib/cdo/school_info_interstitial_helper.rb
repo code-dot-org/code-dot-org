@@ -19,8 +19,10 @@ module SchoolInfoInterstitialHelper
     # We also do not want to show the interstitial if there is a school info suggestion
     return false if user.school_info_suggestion?
 
+    # We skip validation as some of our users (particularly teachers) do not pass our own
+    # validations (often because they are missing an email).
     user.last_seen_school_info_interstitial = DateTime.now
-    user.save!
+    user.save(validate: false)
 
     return true
   end
