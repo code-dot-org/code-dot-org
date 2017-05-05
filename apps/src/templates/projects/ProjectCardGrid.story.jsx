@@ -100,16 +100,6 @@ export default storybook => {
     .storiesOf('ProjectCardGrid', module)
     .addStoryTable([
       {
-        name: 'Class Gallery',
-        description: 'Class gallery, showing full names',
-        story: () => (
-          <ProjectCardGrid
-            projectLists = {generateFakeClassProjects()}
-            galleryType = "class"
-          />
-        )
-      },
-      {
         name: 'Public Gallery with student info',
         description: 'Public gallery, with shortened student names and student age ranges.',
         story: () => (
@@ -126,6 +116,16 @@ export default storybook => {
           <ProjectCardGrid
             projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
             galleryType = "public"
+          />
+        )
+      },
+      {
+        name: 'Class Gallery',
+        description: 'Class gallery, showing full names',
+        story: () => (
+          <ProjectCardGrid
+            projectLists = {generateFakeClassProjects()}
+            galleryType = "class"
           />
         )
       },
