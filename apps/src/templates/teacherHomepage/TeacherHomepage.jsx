@@ -37,7 +37,7 @@ const TeacherHomepage = React.createClass({
             description={i18n.professionalLearningDescription()}
             image="../../static/navcard-placeholder.png"
             buttonText={i18n.learnMore()}
-            link="https://studio.code.org/my-professional-learning"
+            link="/my-professional-learning"
           />
           <GradientNavCard
             title={i18n.standardsAndFramework()}
