@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayZone from './playzone';
+import CreateSomething from './stageExtras/CreateSomething';
 
 export default storybook => {
   storybook
@@ -12,6 +13,13 @@ export default storybook => {
           stageName="Test Stage"
           onContinue={() => {}}
         />
+      )
+    )
+    .addWithInfo(
+      'create something',
+      'This is the CreateSomething component.',
+      () => (
+        <CreateSomething />
       )
     );
 };
