@@ -3,8 +3,6 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
     :location_name, :on_map, :funded, :course, :subject, :enrollment_url,
     :enrolled_teacher_count, :capacity, :facilitators, :notes
 
-  delegate :workshop_type, to: :object
-
   def status
     object.state
   end
