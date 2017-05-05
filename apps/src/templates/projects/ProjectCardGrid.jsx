@@ -51,47 +51,40 @@ const ProjectCardGrid = React.createClass({
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
+  renderProjectCardList(projectList) {
+    const { galleryType } = this.props;
+    return  (
+      <div>
+        {
+          projectList && projectList.slice(0,4).map((project, index) => (
+            <div key={index} style={styles.card}>
+              <ProjectCard
+                projectData={project.projectData}
+                currentGallery={galleryType}
+              />
+            </div>
+          ))
+        }
+      </div>
+    );
+  },
+
   render() {
-    const { projectLists, galleryType } = this.props;
+    const { projectLists } = this.props;
 
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
-        {projectLists.applab && projectLists.applab.slice(0,4).map((project, index) => (
-          <div key={index} style={styles.card}>
-            <ProjectCard
-              projectData={project.projectData}
-              currentGallery={galleryType}
-            />
-          </div>
-        ))}
+        {this.renderProjectCardList(projectLists.applab)}
+
         <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
-        {projectLists.gamelab && projectLists.gamelab.slice(0,4).map((project, index) => (
-          <div key={index} style={styles.card}>
-            <ProjectCard
-              projectData={project.projectData}
-              currentGallery={galleryType}
-            />
-          </div>
-        ))}
+        {this.renderProjectCardList(projectLists.gamelab)}
+
         <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
-        {projectLists.artist && projectLists.artist.slice(0,4).map((project, index) => (
-          <div key={index} style={styles.card}>
-            <ProjectCard
-              projectData={project.projectData}
-              currentGallery={galleryType}
-            />
-          </div>
-        ))}
+        {this.renderProjectCardList(projectLists.gamelab)}
+
         <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
-        {projectLists.playlab && projectLists.playlab.slice(0,4).map((project, index) => (
-          <div key={index} style={styles.card}>
-            <ProjectCard
-              projectData={project.projectData}
-              currentGallery={galleryType}
-            />
-          </div>
-        ))}
+        {this.renderProjectCardList(projectLists.playlab)}
       </div>
     );
   }

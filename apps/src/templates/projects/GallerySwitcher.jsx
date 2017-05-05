@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ToggleGroup from '../ToggleGroup';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 
 export const Galleries = {
   PUBLIC: 'PUBLIC',
@@ -48,10 +48,10 @@ class GallerySwitcher extends Component {
           onChange={this.toggleGallery}
         >
           <button value={Galleries.PRIVATE}>
-            {msg.myProjects()}
+            {i18n.myProjects()}
           </button>
           <button value={Galleries.PUBLIC}>
-            {msg.publicGallery()}
+            {i18n.publicGallery()}
           </button>
         </ToggleGroup>
       </div>
