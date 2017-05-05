@@ -5,17 +5,23 @@ module UserHelpers
   # * uniqueness subject to race conditions. There's a unique
   # constraint in the db -- callers should retry
   USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
+  USERNAME_LANGUAGE_PREFIXES = %w(ada java karel logo perl ruby).freeze
 
   def self.generate_username(queryable, name)
+    language_prefix = nil
     prefix = name.downcase.
       gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].
       squish.
       tr(' ', '_')
 
     if prefix.empty? || prefix == ''
-      prefix = 'coder' + (rand(900000) + 100000).to_s
+      language_prefix = USERNAME_LANGUAGE_PREFIXES.sample
+      prefix = language_prefix + (rand(900000) + 100000).to_s
     end
-    prefix = "coder_#{prefix}" if prefix.length < 5
+    if prefix.length < 5
+      language_prefix = USERNAME_LANGUAGE_PREFIXES.sample
+      prefix = "#{language_prefix}_#{prefix}"
+    end
 
     return prefix if queryable.where(username: prefix).limit(1).empty?
 
@@ -23,10 +29,26 @@ module UserHelpers
     (0..2).each do |exponent|
       min_index = 10**exponent
       max_index = 10**(exponent + 1) - 1
-      3.times do |_i|
+      3.times do
         suffix = Random.rand(min_index..max_index)
         if queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
           return "#{prefix}#{suffix}"
+        end
+      end
+    end
+
+    # The darts missed, so if we haven't already added a language prefix, try adding one.
+    unless language_prefix
+      language_prefix = USERNAME_LANGUAGE_PREFIXES.sample
+      (0..2).each do |exponent|
+        min_index = 10**exponent
+        max_index = 10**(exponent + 1) - 1
+        3.times do
+          suffix = Random.rand(min_index..max_index)
+          candidate_username = "#{language_prefix}_#{prefix}#{suffix}"
+          if queryable.where(username: candidate_username).limit(1).empty?
+            return candidate_username
+          end
         end
       end
     end
