@@ -587,12 +587,18 @@ EOS
     assert_equal data[:description], I18n.t("data.unplugged.#{data[:name]}.desc")
   end
 
-  test "audit log will explode properties" do
+  test "audit log is initially null" do
     data = @custom_maze_data.dup
-    data[:name] = "test audit log"
+    data[:name] = "test audit log nul"
     level = Level.create(data)
     assert level.valid?
     assert_nil level.audit_log
+  end
+
+  test "audit log will explode properties" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log properties"
+    level = Level.create(data)
 
     level.skin = "bee"
     level.log_changes
@@ -605,8 +611,6 @@ EOS
     data = @custom_maze_data.dup
     data[:name] = "test audit log truncation"
     level = Level.create(data)
-    assert level.valid?
-    assert_nil level.audit_log
 
     # Create an audit log that is almost the max length
     huge_array = ["test"] * 9360
