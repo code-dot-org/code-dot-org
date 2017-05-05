@@ -96,11 +96,14 @@ class RedisTableTest < Minitest::Test
 
     # Test getting multiple tables
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 1, 'table2' => 1})
-    assert_equal(
-      {'table' => {'rows' => [row1, row3]},
-       'table2' => {'rows' => [table2_row1]}},
-      table_map
-    )
+    assert_equal(table_map.size, 2)
+    assert_equal(table_map['table'].size, 1)
+    assert_equal(table_map['table']['rows'].size, 2)
+    assert_includes(table_map['table']['rows'], row1)
+    assert_includes(table_map['table']['rows'], row3)
+    assert_equal(table_map['table2'].size, 1)
+    assert_equal(table_map['table2']['rows'].size, 1)
+    assert_includes(table_map['table2']['rows'], table2_row1)
 
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 3})
     assert_equal(
