@@ -23,6 +23,11 @@ class PublicGallery extends Component {
     }),
   }
 
+  /**
+   * Transform the projectsLists data from the format expected by the
+   * PublicGallery to the format expected by the ProjectCardGrid.
+   * See the PropTypes of each component for a definition of each format.
+   */
   mapProjectData(projectLists) {
     return _.mapValues(projectLists, projectList => {
       return projectList.map(projectData => {

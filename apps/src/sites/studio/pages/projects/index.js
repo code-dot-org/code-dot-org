@@ -26,8 +26,6 @@ $(document).ready(() => {
         <PublicGallery projectLists={projectLists}/>,
         publicGallery);
     });
-
-
   }
 });
 

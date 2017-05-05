@@ -48,7 +48,7 @@ const ProjectCardGrid = React.createClass({
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
     }).isRequired,
-    galleryType: React.PropTypes.oneOf(['personal', 'class', 'public']).isRequired
+    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
   render() {
