@@ -342,43 +342,46 @@ def main
   wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
 
   print_dtp_message
-  should_i 'DTP' do
-    should_i 'set DTP message to in progress' do
-      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
-    end
-    GitHub.open_pull_request_in_browser(
-      base: 'production',
-      head: 'test',
-      title: 'DTP (Test > Production)'
-    )
+  test_green_commit = InfraTestTopic.test_green_commit
+  if test_green_commit
+    should_i "DTP #{test_green_commit}" do
+      should_i 'set DTP message to in progress' do
+        DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+      end
+      GitHub.open_pull_request_in_browser(
+        base: 'production',
+        head: test_green_commit,
+        title: "DTP (#{test_green_commit})"
+      )
 
-    should_i 'DTL' do
-      # TODO(asher): Remove this wait step if it is truly unnecessary now.
-      wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+      should_i 'DTL' do
+        # TODO(asher): Remove this wait step if it is truly unnecessary now.
+        wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
 
-      should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
-        content_push 'levelbuilder-staging', 'levelbuilder'
+        should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
+          content_push 'levelbuilder-staging', 'levelbuilder'
+        end
+
+        view_commits base: 'levelbuilder', head: test_green_commit
+        should_i 'merge from test to levelbuilder' do
+          pr_number = GitHub.create_and_merge_pull_request(
+            base: 'levelbuilder', head: test_green_commit, title: 'DTL (Test > Levelbuilder)'
+          )
+          puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+        end
       end
 
-      view_commits base: 'levelbuilder', head: 'test'
-      should_i 'merge from test to levelbuilder' do
-        pr_number = GitHub.create_and_merge_pull_request(
-          base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
-        )
-        puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+      wait_for 'DTP to finish'
+      should_i 'reset DTP message to yes' do
+        DevelopersTopic.set_dtp 'yes'
       end
-    end
+      should_i 'update Slack#infra-production topic' do
+        sha = GitHub.sha 'production'
+        InfraProductionTopic.set_dtp_commit(sha)
+      end
 
-    wait_for 'DTP to finish'
-    should_i 'reset DTP message to yes' do
-      DevelopersTopic.set_dtp 'yes'
+      puts_after_dtp_tasks
     end
-    should_i 'update Slack#infra-production topic' do
-      sha = GitHub.sha 'production'
-      InfraProductionTopic.set_dtp_commit(sha)
-    end
-
-    puts_after_dtp_tasks
   end
 
   should_i 'retrieve recent honeybadger issues' do

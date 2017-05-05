@@ -8,7 +8,10 @@
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template",
     "hide_share_and_remix": "true",
-    "markdown_instructions": "# Review Your Project\r\n\r\nYou're almost ready to publish your project, but you should check one more time that you have \r\n\r\n# Do This\r\n* Check that you are comfortable sharing all the information that's on your site.\r\n* Check that all of your images are correctly attributed, and that you have the right to put them on your site.\r\n* Check that your project includes everything included in the project rubric.\r\n* Ask your partner to help you find any potential problems with your site.\r\n"
+    "markdown_instructions": "# Review Your Project\r\n\r\nYou're almost ready to publish your project, but you should check one more time that you have \r\n\r\n# Do This\r\n* Check that you are comfortable sharing all the information that's on your site.\r\n* Check that all of your images are correctly attributed, and that you have the right to put them on your site.\r\n* Check that your project includes everything included in the project rubric.\r\n* Use comments and whitespace to make your website readable.\r\n* Ask your partner to help you find any potential problems with your site.\r\n",
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
