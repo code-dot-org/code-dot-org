@@ -43,13 +43,16 @@ We realize that changing these units up mid-year can be disruptive for classroom
 
 **If you are teaching Unit 1**, take a look at the lessons you have taught and the lessons we have changed. Due of the unplugged nature of this unit, you should be able to transfer to the new version without much worry.
 
-**If you are teaching Unit 3** and have gotten past lesson 9 the only change between the old and new units will be a change in lesson numbering. If you are still in the first 9 lessons of the course, take a look at the version and decide whether to transfer your students over, and where you might pick it up.
+**If you are teaching Unit 2** many lessons have been rearranged, but most content has remained. Take a look at the new version and decide whether to transfer your students over, and where you might pick it up.
+
+**If you are teaching Unit 3** and have gotten past lesson 9 the only change between the old and new units will be a change in lesson numbering. If you are still in the first 9 lessons of the course, take a look at the new version and decide whether to transfer your students over, and where you might pick it up.
 
 <br>
 
 | Unit | Lesson Plans                   | Code Studio            |
 |------|--------------------------------|------------------------------------|------------------------|----------------------------|
 | 1    | [curriculum.code.org/csd-old/unit1/](https://curriculum.code.org/csd-old/unit1/) | [studio.code.org/s/csd1-old](https://studio.code.org/s/csd1-old) |
+| 2    | [curriculum.code.org/csd-old/unit2/](https://curriculum.code.org/csd-old/unit2/) | [studio.code.org/s/csd2-old](https://studio.code.org/s/csd2-old) |
 | 3    | [curriculum.code.org/csd-old/unit3/](https://curriculum.code.org/csd-old/unit3/) | [studio.code.org/s/csd3-old](https://studio.code.org/s/csd3-old) |
 
 <br>
