@@ -427,9 +427,10 @@ testsContext.keys().forEach(testsContext);
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
-    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js',
-    'home/recent_courses':          './src/sites/studio/pages/home/recent_courses.js',
-    'home/link_blocks':             './src/sites/studio/pages/home/link_blocks.js'
+    'home/_teacher_homepage':       './src/sites/studio/pages/home/_teacher_homepage.js',
+    'home/_recent_courses':         './src/sites/studio/pages/home/_recent_courses.js',
+    'home/_link_blocks':            './src/sites/studio/pages/home/_link_blocks.js',
+    'home/courses':                 './src/sites/studio/pages/home/courses.js'
   };
 
   var otherEntries = {
@@ -473,6 +474,8 @@ testsContext.keys().forEach(testsContext);
     'applab-api': './src/applab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
+
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js'
   };
 
   // Create a config for each of our bundles
