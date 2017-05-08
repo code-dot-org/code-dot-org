@@ -14,7 +14,9 @@
 #  index_pd_reg_part_prog_reg_on_user_id_and_teachercon  (user_id,teachercon)
 #
 
-class Pd::RegionalPartnerProgramRegistration < Pd::ProgramRegistration
+class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
+  include Pd::ProgramRegistrationForm
+
   def self.required_fields
     [
       :full_name,
