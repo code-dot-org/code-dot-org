@@ -63,10 +63,12 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course?
-      course = Plc::Course.find_or_create_by! name: professional_learning_course
+      course = Course.find_or_create_by!(name: professional_learning_course) do |new_course|
+        Plc::Course.create!(course: new_course)
+      end
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
-        plc_course_id: course.id,
+        plc_course_id: course.plc_course.id,
         unit_name: I18n.t("data.script.name.#{name}.title"),
         unit_description: I18n.t("data.script.name.#{name}.description")
       )

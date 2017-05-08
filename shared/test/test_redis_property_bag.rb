@@ -5,6 +5,7 @@
 
 require_relative 'test_helper'
 require 'fakeredis' unless use_real_redis?
+require 'timecop' unless use_real_redis?
 require_relative '../middleware/helpers/redis_property_bag'
 
 class RedisPropertyBagTest < Minitest::Test
@@ -96,6 +97,8 @@ class RedisPropertyBagTest < Minitest::Test
   end
 
   def test_expire
+    stop_time
+
     # Set an expiration time
     test_delay_seconds = 1
     bag = RedisPropertyBag.new(@redis, "bag_#{@suffix}", test_delay_seconds)
@@ -110,15 +113,19 @@ class RedisPropertyBagTest < Minitest::Test
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump to just before expiration
-    sleep test_delay_seconds - 0.1
+    time_travel test_delay_seconds - 0.1
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump forward in time to expiration
-    sleep 0.2 # 0.1s margin of error for real redis
+    time_travel 0.2 # 0.1s margin of error for real redis
     assert_equal({}, bag.to_hash)
+  ensure
+    resume_time
   end
 
   def test_deferred_expiration
+    stop_time
+
     # Set an expiration time
     test_delay_seconds = 1
     bag = RedisPropertyBag.new(@redis, "bag_#{@suffix}", test_delay_seconds)
@@ -133,7 +140,7 @@ class RedisPropertyBagTest < Minitest::Test
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump to just before expiration
-    sleep test_delay_seconds - 0.1
+    time_travel test_delay_seconds - 0.1
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Perform a write to reset the expire time
@@ -141,11 +148,11 @@ class RedisPropertyBagTest < Minitest::Test
     assert_equal({'foo1' => 'value4', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump forward in time to original expiration
-    sleep 0.1
+    time_travel 0.1
     assert_equal({'foo1' => 'value4', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump to just before new expiration
-    sleep test_delay_seconds - 0.2
+    time_travel test_delay_seconds - 0.2
     assert_equal({'foo1' => 'value4', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Perform a delete to reset the expire time
@@ -153,15 +160,37 @@ class RedisPropertyBagTest < Minitest::Test
     assert_equal({'foo1' => 'value4', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump forward in time to original expiration
-    sleep 0.1
+    time_travel 0.1
     assert_equal({'foo1' => 'value4', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump to just before new expiration
-    sleep test_delay_seconds - 0.2
+    time_travel test_delay_seconds - 0.2
     assert_equal({'foo1' => 'value4', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump forward in time to new expiration
-    sleep 0.2 # 0.1s margin of error for real redis
+    time_travel 0.2 # 0.1s margin of error for real redis
     assert_equal({}, bag.to_hash)
+  ensure
+    resume_time
+  end
+
+  private
+
+  # Set of helpers for using Timecop if we're using fakeredis, or passing
+  # real time if we're using real redis.
+  def stop_time
+    Timecop.freeze unless use_real_redis?
+  end
+
+  def resume_time
+    Timecop.return unless use_real_redis?
+  end
+
+  def time_travel(seconds)
+    if use_real_redis?
+      sleep seconds
+    else
+      Timecop.travel seconds
+    end
   end
 end

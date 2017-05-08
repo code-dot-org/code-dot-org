@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
 import i18n from "@cdo/locale";
 
@@ -23,97 +23,68 @@ const styles = {
   }
 };
 
+const projectDataPropType = PropTypes.shape({
+  channel: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  studentName: PropTypes.string,
+  studentAge: PropTypes.number,
+  thumbnailUrl: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  publishedToPublic: PropTypes.bool.isRequired,
+  publishedToClass: PropTypes.bool.isRequired,
+});
+
+const projectPropType = PropTypes.shape({
+  projectData: projectDataPropType.isRequired,
+  currentGallery: PropTypes.string.isRequired,
+});
+
 const ProjectCardGrid = React.createClass({
   propTypes: {
-    projects: React.PropTypes.array.isRequired,
-    galleryType: React.PropTypes.oneOf(['personal', 'class', 'public']).isRequired
+    projectLists: PropTypes.shape({
+      applab: PropTypes.arrayOf(projectPropType),
+      gamelab: PropTypes.arrayOf(projectPropType),
+      playlab: PropTypes.arrayOf(projectPropType),
+      artist: PropTypes.arrayOf(projectPropType),
+    }).isRequired,
+    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
-// Most recently edited projects should display 1st. This might not be needed dependent on whether the projects returned from the query are already sorted by recency or not. ****ASK DAVE****
-  sortByDate(projects) {
-
-    let sortedProjects = projects.sort((project1, project2) =>
-    new Date(project2.projectData.updatedAt) - new Date(project1.projectData.updatedAt));
-
-    return sortedProjects;
-  },
-
-  groupByType(projects) {
-    let projectLists = {};
-
-    projects.forEach(project => {
-      const type = project.projectData.type;
-      projectLists[type] = projectLists[type] || [];
-      projectLists[type].push(project);
-    });
-
-    return projectLists;
+  renderProjectCardList(projectList) {
+    const { galleryType } = this.props;
+    return  (
+      <div>
+        {
+          projectList && projectList.slice(0,4).map((project, index) => (
+            <div key={index} style={styles.card}>
+              <ProjectCard
+                projectData={project.projectData}
+                currentGallery={galleryType}
+              />
+            </div>
+          ))
+        }
+      </div>
+    );
   },
 
   render() {
-    const { projects, galleryType } = this.props;
+    const { projectLists } = this.props;
 
-    if (galleryType === 'public') {
-      return (
-        <div style={styles.grid}>
-          <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
-          {this.groupByType(projects).applab.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))}
-          <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
-          {this.groupByType(projects).gamelab.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))}
-          <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
-          {this.groupByType(projects).artist.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))}
-          <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
-          {this.groupByType(projects).playlab.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))}
-          <h2 style={styles.labHeading}> {i18n.projectTypeWeblab()} </h2>
-          {this.groupByType(projects).weblab.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))}
-        </div>
-      );
-    }
     return (
       <div style={styles.grid}>
-        {this.sortByDate(projects).map((project, index) => (
-          <div key={index} style={styles.card}>
-            <ProjectCard
-              projectData={project.projectData}
-              currentGallery={galleryType}
-            />
-          </div>
-        ))}
+        <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
+        {this.renderProjectCardList(projectLists.applab)}
+
+        <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
+        {this.renderProjectCardList(projectLists.gamelab)}
+
+        <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
+        {this.renderProjectCardList(projectLists.gamelab)}
+
+        <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
+        {this.renderProjectCardList(projectLists.playlab)}
       </div>
     );
   }

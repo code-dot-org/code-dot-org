@@ -3969,6 +3969,12 @@ en:
               name: Crowdsourcing
             Determine the Concept:
               name: Determine the Concept
+            Introduction:
+              name: Introduction
+            Conditionals:
+              name: Conditionals
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
         coursef-draft:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
@@ -4004,13 +4010,21 @@ en:
             Revise Your Project:
               name: Revise Your Project
             Presentation Your Project:
-              name: Presentation Your Project
+              name: Present Your Project
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             The Power of Words:
               name: The Power of Words
             Songwriting with Parameters:
               name: Songwriting with Parameters
+            Introduction:
+              name: Introduction
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
