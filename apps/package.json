@@ -46,7 +46,7 @@
     "@code-dot-org/johnny-five": "0.10.10-cdo.0",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
-    "@code-dot-org/p5.play": "1.1.6-cdo",
+    "@code-dot-org/p5.play": "1.1.9-cdo",
     "@code-dot-org/piskel": "0.10.0-cdo.0",
     "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.33.0",
