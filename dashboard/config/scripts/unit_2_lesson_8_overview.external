@@ -4,22 +4,17 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Overview
 
-## Background
-
 This lesson continues to introduce CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their About Me page.
 
-# New Code
+## New Properties
 
-*  `background-color: value;`
-*  `float: value;`
-*  `margin: value;`
-*  `width: value;`
-*  `height: value;`
-*  `border-style: value;`
-*  `border-width: value;`
-*  `border-color: value;`
+*  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
+*  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
+*  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
+*  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
+*  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
+*  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
+*  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
+*  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
 
-# Resources
-
-* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
 MARKDOWN

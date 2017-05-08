@@ -18,7 +18,6 @@ level 'courseD_artist_ramp11'
 level 'courseC_video_angles'
 level 'courseD_artist_ramp12'
 level 'courseD_farmer_ramp13'
-assessment 'courseD_farmer_ramp14'
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
