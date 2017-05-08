@@ -284,7 +284,7 @@ function loadAppAsync(appOptions) {
       );
     }
 
-    if (!appOptions.isChannelBacked && !isViewingSolution && !isViewingStudentAnswer) {
+    if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
 
       if (appOptions.publicCaching) {
         // Disable social share by default on publicly-cached pages, because we don't know
@@ -357,7 +357,7 @@ function loadAppAsync(appOptions) {
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else if (window.dashboard && project && appOptions.channel) {
+    } else if (window.dashboard && appOptions.channel) {
       project.load().then(function () {
         if (project.hideBecauseAbusive()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
