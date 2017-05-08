@@ -7,7 +7,8 @@
   "properties": {
     "instructions_important": "false",
     "reference": "/csd/lists/index.html",
-    "display_name": "Lists in HTML"
+    "display_name": "Lists in HTML",
+    "teacher_markdown": "This map level includes the information that students may have seen in the drop down tips on the programming levels.  Students can use this time to update their HTML tag lists with the tags included on this page, if they haven't already."
   },
   "published": true,
   "notes": "",

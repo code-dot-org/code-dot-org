@@ -123,6 +123,14 @@ We expect you to attend for the full conference. Make plans to be with us from R
   <br>
 [Click here](http://go.pardot.com/webmail/153401/175591515/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
 </p>
+</details>
+
+<details>
+<summary>**Courtesy Reminder: Your travel information for TeacherCon!**</summary>
+  <p>
+  <br>
+[Click here](http://go.pardot.com/webmail/153401/177440463/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
+</p>
 </details> 
 
 ### **Contact Us**
