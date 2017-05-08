@@ -153,22 +153,18 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
   status
 end
 
-def emit_deploy_metric(stage, successful)
-  cw = Aws::CloudWatch::Client.new
-
-  if cw
-    Aws::CloudWatch::Client.new.put_metric_data(
-      {
-        namespace: 'DEV/DEPLOYMENTS',
-        metric_data: [{
-          metric_name: "#{stage}#{successful ? 'Successful' : 'Failed'}",
-          value: 1
-        }]
-      }
-    )
-  else
-    ChatClient.log 'Unable to emit metrics - could not create CloudWatch client', color: 'red'
-  end
+def emit_deploy_metric(deployment_stage, successful)
+  Aws::CloudWatch::Client.new.new.put_metric_data(
+    {
+      namespace: 'DEPLOYMENTS',
+      metric_data: [{
+        metric_name: "#{deployment_stage}#{successful ? 'Successful' : 'Failed'}",
+        value: 1
+      }]
+    }
+  )
+rescue
+  ChatClient.log 'Unable to emit metrics', color: 'red'
 end
 
 main if only_one_running?(__FILE__)
