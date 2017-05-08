@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import MD5 from 'crypto-js/md5';
 
-var EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+var EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 module.exports = function hashEmail(options) {
   // Hash the email, if it is an email.

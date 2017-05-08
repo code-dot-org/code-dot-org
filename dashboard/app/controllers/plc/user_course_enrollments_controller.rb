@@ -5,7 +5,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   def index
     if user_course_enrollment_params[:course]
       course_name = user_course_enrollment_params[:course].tr('-', '_').titleize
-      @user_course_enrollments = [@user_course_enrollments.find_by(user: current_user, plc_course: Plc::Course.find_by(name: course_name))]
+      @user_course_enrollments = [@user_course_enrollments.find_by(user: current_user, plc_course: ::Course.find_by_name(course_name).try(:plc_course))]
     else
       @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
     end

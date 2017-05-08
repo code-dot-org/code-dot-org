@@ -2,6 +2,7 @@ import React from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
+import placeholderImage from './placeholder.jpg';
 
 const styles = {
   card: {
@@ -111,7 +112,7 @@ const ProjectCard = React.createClass({
   renderStudentName() {
   // The student's name should only be visible in the classroom gallery.
     if (this.props.currentGallery === 'class'){
-      return (
+      return this.props.projectData.studentName && (
         <div style={styles.studentName}>
           {i18n.by()}: {this.props.projectData.studentName}
         </div>
@@ -121,7 +122,7 @@ const ProjectCard = React.createClass({
 
   renderFirstInitial() {
     if (this.props.currentGallery === 'public'){
-      return (
+      return this.props.projectData.studentName && (
         <span style={styles.firstInitial}>
           {i18n.by()}: {this.props.projectData.studentName[0]}
         </span>
@@ -144,7 +145,7 @@ const ProjectCard = React.createClass({
   renderStudentAgeRange(studentAge) {
   // The student's age range should only be visible in the public gallery.
     if (this.props.currentGallery === 'public') {
-      return (
+      return studentAge && (
         <span style={styles.ageRange}>
           {i18n.age()}: {this.checkStudentAge(studentAge)}+
         </span>
@@ -196,16 +197,25 @@ const ProjectCard = React.createClass({
     }
   },
 
+  renderProjectName() {
+    const {type, channel, name} = this.props.projectData;
+    const url = `/projects/${type}/${channel}/view`;
+    return <a href={url} target="_blank">{name}</a>;
+  },
+
   render() {
     const { projectData } = this.props;
 
     return (
       <div>
         <div style={styles.card}>
-          <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
+          <img
+            src={projectData.thumbnailUrl || placeholderImage}
+            style={styles.thumbnail}
+          />
 
           <div style={styles.title}>
-            {projectData.projectName}
+            {this.renderProjectName()}
           </div>
 
           {this.renderStudentName()}
@@ -217,7 +227,7 @@ const ProjectCard = React.createClass({
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            {i18n.lastEdited()}: {this.dateFormatter(projectData.updatedAt)} at {this.timeFormatter(projectData.updatedAt)}
+            {i18n.published()}: {this.dateFormatter(projectData.publishedAt)} at {this.timeFormatter(projectData.publishedAt)}
           </div>
         </div>
 
