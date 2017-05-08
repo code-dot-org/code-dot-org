@@ -10,5 +10,5 @@ ReactDOM.render(
     stageNumber={config.stageNumber}
     nextLevelPath={config.nextLevelPath}
   />,
-  document.querySelector('.stage-extras')
+  document.querySelector('#stage-extras')
 );

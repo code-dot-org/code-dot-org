@@ -3,8 +3,9 @@ import msg from '@cdo/locale';
 import CreateSomething from './CreateSomething';
 
 export default class StageExtras extends React.Component {
-  constructor(props) {
-    super(props);
+  static propTypes = {
+    stageNumber: React.PropTypes.number.isRequired,
+    nextLevelPath: React.PropTypes.string.isRequired,
   }
 
   render() {
@@ -29,8 +30,3 @@ export default class StageExtras extends React.Component {
     );
   }
 }
-
-StageExtras.propTypes = {
-  stageNumber: React.PropTypes.number.isRequired,
-  nextLevelPath: React.PropTypes.string.isRequired,
-};
