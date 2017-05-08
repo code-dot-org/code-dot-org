@@ -342,7 +342,7 @@ def main
   wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
 
   print_dtp_message
-  test_green_commit = InfraTestTopic.test_green_commit
+  test_green_commit = InfraTestTopic.green_commit
   if test_green_commit
     should_i "DTP #{test_green_commit}" do
       should_i 'set DTP message to in progress' do
