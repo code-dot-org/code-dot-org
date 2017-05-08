@@ -15,6 +15,7 @@ export let VisualizationOverlay = React.createClass({
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     areOverlaysVisible: React.PropTypes.bool.isRequired,
+    areRunningOverlaysVisible: React.PropTypes.bool.isRequired,
     onMouseMove: React.PropTypes.func,
     children: React.PropTypes.node,
   },
@@ -85,13 +86,30 @@ export let VisualizationOverlay = React.createClass({
   },
 
   renderOverlays() {
-    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
-      key: index,
-      width: this.props.width,
-      height: this.props.height,
-      mouseX: this.state.mouseX,
-      mouseY: this.state.mouseY
-    }));
+    return React.Children.map(this.props.children, (child, index) => {
+      if (!child.props.showWhileRunning) {
+        return React.cloneElement(child, {
+          key: index,
+          width: this.props.width,
+          height: this.props.height,
+          mouseX: this.state.mouseX,
+          mouseY: this.state.mouseY
+        });
+      }
+    });
+  },
+  renderOverlaysWhenRunning() {
+    return React.Children.map(this.props.children, (child, index) => {
+      if (child.props.showWhileRunning) {
+        return React.cloneElement(child, {
+          key: index,
+          width: this.props.width,
+          height: this.props.height,
+          mouseX: this.state.mouseX,
+          mouseY: this.state.mouseY
+        });
+      }
+    });
   },
 
   render() {
@@ -107,16 +125,22 @@ export let VisualizationOverlay = React.createClass({
         pointerEvents="none"
       >
         {this.props.areOverlaysVisible && this.renderOverlays()}
+        {this.props.areRunningOverlaysVisible && this.renderOverlaysWhenRunning()}
       </svg>
     );
   }
 });
 export default connect((state) => ({
-  areOverlaysVisible: shouldOverlaysBeVisible(state)
+  areOverlaysVisible: shouldOverlaysBeVisible(state),
+  areRunningOverlaysVisible: shouldRunningOverlaysBeVisible(state)
 }))(VisualizationOverlay);
+
+export function shouldRunningOverlaysBeVisible(state) {
+  return !state.pageConstants.hideCoordinateOverlay &&
+    !state.pageConstants.isShareView;
+}
 
 export function shouldOverlaysBeVisible(state) {
   return !state.pageConstants.hideCoordinateOverlay &&
-    (!(state.runState.isRunning || state.pageConstants.isShareView)
-    || state.gridOverlay);
+    !(state.runState.isRunning || state.pageConstants.isShareView);
 }

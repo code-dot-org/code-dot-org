@@ -109,7 +109,7 @@ var GameLabVisualizationColumn = React.createClass({
             height={GAME_HEIGHT}
             onMouseMove={this.onMouseMove}
           >
-            <GridOverlay show={this.props.showGrid} />
+            <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
             <CrosshairOverlay/>
             <TooltipOverlay providers={[coordinatesProvider()]}/>
           </VisualizationOverlay>
