@@ -1,0 +1,16 @@
+name 'CSD U2 Lesson 9 Overview'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Web Development: Lesson 9 - Project: Personal Website
+
+## Background
+
+Students have spent a lot of time throughout the chapter working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the chapter, they will share their projects and also a overview of the process they took to get to that final design.
+
+
+# Resources
+
+* [Final Personal Website - Project Guide](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/edit)([PDF](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=doc))
+* [Personal Website - Peer Review]() ([PDF](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=doc))
+
+MARKDOWN

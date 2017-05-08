@@ -55,6 +55,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://anitaborg.org/">Anita Borg Institute</a>
 * <a href="https://www.aztechcouncil.org/">Arizona Technology Council</a>
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
+* <a href="https://www.battelle.org/">Battelle</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Public Schools</a>
 * <a href="http://www.codevirginia.org/">CodeVA</a>
@@ -86,6 +87,7 @@ For more information, please contact advocacy@code.org.
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a>
+* <a href="http://www.stemx.us/">STEMx</a>
 * <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a>
 * <a href="http://www.technet.org/">TechNet</a>
 * <a href="http://www.talklou.com/wp/">Technology Association of Louisville Kentucky</a>

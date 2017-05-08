@@ -9,9 +9,8 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n   // return ((Studio.sprite[0].isCollidingWith(1))&&(Studio.sprite[0].value === \"hidden\"));\r\n    //Studio.sprite[1].value == \"hidden\";\r\n}",
     "failure_condition": "function () {\r\n\r\n}",
     "timeout_after_when_run": "true",
-    "maze": "[[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"emotion\":0,\"sprite\":15},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":9},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":1},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":7},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5,\"sprite\":10},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":5}]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":1},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":7},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":1,\"sprite\":12},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":13},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":14},{\"tileType\":0},{\"tileType\":16,\"size\":1,\"sprite\":10},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "It's time for the Great Animal Race! Make the animals move down when you press ▼. Who will run the fastest?",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -39,9 +38,7 @@
     "timeout_failure_tick": "0",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make the other animals move down when you press `▼`. \\n<xml>\\n  <block type=\\\"studio_whenArrow\\\" movable=\\\"false\\\">\\n    <title name=\\\"VALUE\\\">down</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a56d3d5b5a316a50307a25c21dcad9b0/courseA_playlab_events_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Change the speed of the animals by using this block:\\n<xml>\\n  <block type=\\\"studio_setSpriteSpeed\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">Studio.SpriteSpeed.NORMAL</title>\\n  </block></xml>\\n\",\"hint_id\":\"courseB_playlab_events7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/61e1b1cb402ce75b55f9cef58929b563/courseA_playlab_events_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"What will the everyone say when the race is over? Make them talk with this event:\\n<xml>\\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">2</title>\\n    <next>\\n      <block type=\\\"studio_saySpriteChoices\\\">\\n        <title name=\\\"SPRITE\\\">2</title>\\n        <title name=\\\"VALUE\\\">Woo hoo!</title>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/72e0660561eb619f62e58f92d5e4f47b/courseA_playlab_events_challenge1.mp3\"}]",
-    "project_template_level_name": "courseA_playlab_challengeTemplate",
-    "markdown_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho will run the fastest?\r\n",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can make a bird sing.\\n<xml> \\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">2</title>\\n    <next>\\n\\n          <block type=\\\"studio_saySprite\\\">\\n            <title name=\\\"SPRITE\\\">2</title>\\n            <title name=\\\"TEXT\\\">Tweet</title>\\n          </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"courseA_playlab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e986bb35447ab58512bd1508438d2407/courseA_playlab_events_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can make a robot beep.\\n<xml>\\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">6</title>\\n    <next>\\n      \\n          <block type=\\\"studio_playSound\\\">\\n            <title name=\\\"SOUND\\\">winpoint</title>\\n          </block>\\n        </next>\\n\\n  </block></xml>\",\"hint_id\":\"courseA_playlab_events7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cf509b511603d0a54844ee238a9f4b76/courseA_playlab_events_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can make an angry monster growl.\\n\\n<xml>  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">5</title>\\n    <next>\\n      <block type=\\\"studio_setSpriteEmotion\\\">\\n        <title name=\\\"SPRITE\\\">5</title>\\n        <title name=\\\"VALUE\\\">2</title>\\n        <next>\\n          <block type=\\\"studio_saySprite\\\">\\n            <title name=\\\"SPRITE\\\">5</title>\\n            <title name=\\\"TEXT\\\">Roar!</title>\\n            <next>\\n              <block type=\\\"studio_setSpriteEmotion\\\">\\n                <title name=\\\"SPRITE\\\">5</title>\\n                <title name=\\\"VALUE\\\">0</title>\\n              </block>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"courseA_playlab_events7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/92964516e190d7a09c502be94c8bec5d/courseA_playlab_events_challenge1.mp3\"}]",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -51,8 +48,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest.",
-    "tts_markdown_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest.",
+    "instructions": "Let's have a party! Give each of my friends something to do when you click or tap them. What do the animals say? What else will happen?",
     "contained_level_names": null
   },
   "published": true,
@@ -66,31 +62,35 @@
         <block type="when_run">
           <next>
             <block type="studio_setBackground">
-              <title name="VALUE">"soccer"</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">down</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">2</title>
-              <title name="DIR">4</title>
-              <next>
-                <block type="studio_move">
-                  <title name="SPRITE">3</title>
-                  <title name="DIR">4</title>
-                </block>
-              </next>
+              <title name="VALUE">"hardcourt"</title>
             </block>
           </next>
         </block>
         <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">6</title>
+          <title name="SPRITE">1</title>
           <next>
-            <block type="studio_saySpriteChoices">
-              <title name="SPRITE">6</title>
-              <title name="VALUE">Great job!</title>
+            <block type="studio_saySprite">
+              <title name="SPRITE">1</title>
+              <title name="TEXT">Meow</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked" x="340px" y="0px">
+          <title name="SPRITE">7</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">7</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">7</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -98,37 +98,41 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="studio_whenArrow">
-          <title name="VALUE">down</title>
+        <block type="studio_setBackground">
+          <title name="VALUE">"soccer"</title>
         </block>
         <block type="studio_whenSpriteClicked">
           <title name="SPRITE">0</title>
         </block>
-        <block type="studio_move">
-          <title name="SPRITE">0</title>
-          <title name="DIR">4</title>
-        </block>
-        <block type="studio_setBackground">
-          <title name="VALUE">"soccer"</title>
-        </block>
-        <block type="studio_playSound">
-          <title name="SOUND">slap</title>
-        </block>
-        <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-        </block>
-        <block type="studio_changeScore"/>
         <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
           <title name="VALUE">Woo hoo!</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
         </block>
         <block type="studio_setSpriteEmotion">
           <title name="SPRITE">0</title>
           <title name="VALUE">0</title>
         </block>
+        <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+        </block>
         <block type="studio_vanish">
           <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">1000</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
         </block>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>
@@ -150,23 +154,8 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_saySpriteChoices">
-              <title name="SPRITE">0</title>
-              <title name="VALUE">Hi there.</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
-          <next>
-            <block type="studio_playSound">
-              <title name="SOUND">random</title>
-              <next>
-                <block type="studio_vanish">
-                  <title name="SPRITE">1</title>
-                </block>
-              </next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"hardcourt"</title>
             </block>
           </next>
         </block>
@@ -175,43 +164,134 @@
           <next>
             <block type="studio_setSpriteEmotion">
               <title name="SPRITE">0</title>
-              <title name="VALUE">random</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">0</title>
+                  <title name="TEXT">Woof!</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">up</title>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
           <next>
-            <block type="studio_move">
+            <block type="studio_setSpriteEmotion">
               <title name="SPRITE">1</title>
-              <title name="DIR">1</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">1</title>
+                  <title name="TEXT">Meow</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">left</title>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
           <next>
-            <block type="studio_move">
-              <title name="SPRITE">1</title>
-              <title name="DIR">8</title>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">2</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">2</title>
+                  <title name="TEXT">Tweet</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">right</title>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">3</title>
           <next>
-            <block type="studio_move">
-              <title name="SPRITE">1</title>
-              <title name="DIR">2</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">down</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">1</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">3</title>
               <title name="DIR">4</title>
+              <title name="DISTANCE">25</title>
+              <next>
+                <block type="studio_moveDistance">
+                  <title name="SPRITE">3</title>
+                  <title name="DIR">1</title>
+                  <title name="DISTANCE">25</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">4</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">4</title>
+              <title name="VALUE">2</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">4</title>
+                  <title name="TEXT">Boo!</title>
+                  <next>
+                    <block type="studio_vanish">
+                      <title name="SPRITE">4</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">5</title>
+              <title name="VALUE">2</title>
+              <next>
+                <block type="studio_saySprite">
+                  <title name="SPRITE">5</title>
+                  <title name="TEXT">Roar!</title>
+                  <next>
+                    <block type="studio_setSpriteEmotion">
+                      <title name="SPRITE">5</title>
+                      <title name="VALUE">0</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">6</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">6</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_playSound">
+                  <title name="SOUND">winpoint</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">7</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">7</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">7</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
