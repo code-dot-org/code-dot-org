@@ -38,7 +38,7 @@
       %th Assigned Summer Workshop
       %th Assigned Partner
       %th TeacherCon?
-      %th Registered?
+      %th Registered? (coming soon)
     %tbody
       - @teacher_applications.each do |application|
         %tr
@@ -52,4 +52,4 @@
           %td= application.accepted_workshop
           %td= application.regional_partner_name
           %td= yes_no application.accepted_program.try(:teachercon?)
-          %td= yes_no application.program_registration
+          %td
