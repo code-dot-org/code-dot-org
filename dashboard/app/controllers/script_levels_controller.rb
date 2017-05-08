@@ -137,7 +137,12 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
-    @stage = Script.get_from_cache(params[:script_id]).stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i}.first
+    stage = Script.get_from_cache(params[:script_id]).stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i}.first
+    @stage_extras = {
+      stage_number: stage.relative_position,
+      next_level_path: stage.script_levels.last.next_level_or_redirect_path_for_user(current_user),
+    }.camelize_keys
+
     render 'scripts/stage_extras'
   end
 
