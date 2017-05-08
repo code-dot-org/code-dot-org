@@ -375,7 +375,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     return nil if move_to_user.blank?
 
     if move_to_user =~ /^\d+$/
-      User.find move_to_user
+      User.find_by id: move_to_user
     else
       User.find_by_email_or_hashed_email move_to_user
     end

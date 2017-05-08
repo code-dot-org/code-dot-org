@@ -3,5 +3,15 @@ display_name 'Lesson Overview'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-# Exploring Websites
+# Overview
+
+Every website has a purpose, a reason someone created it and others use it. In this lesson, students will start to consider the purposes a website might serve, both for the users and the creators. Students will explore a handful of the most-used websites in the US and try to figure out how each of those sites is useful for users and how they might also serve their creators.
+## Vocabulary
+
+* **Website** - A location connected to the Internet that maintains one or more pages on the World Wide Web.
+
+
+## Resources
+
+* [The Purpose of Websites](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=doc))
 MARKDOWN
