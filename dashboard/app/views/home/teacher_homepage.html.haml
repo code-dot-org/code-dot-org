@@ -1,4 +1,21 @@
+:ruby
 
-#container
+  courses = current_user.in_progress_and_completed_scripts.slice(0,2).map do |script|
+    script_id = script[:script_id]
+    script_name = Script.find_by_id(script_id)[:name]
+    {
+      id: script_id,
+      script_name: script_name,
+      name: data_t_suffix('script.name', script_name, 'title'),
+      description: data_t_suffix('script.name', script_name, 'description_short'),
+      link: script_url(script_id),
+      image: ""
+    }
+  end
 
-%script{ src: minifiable_asset_path('js/home/teacher_homepage.js')}
+
+#teacher-homepage-container
+
+.clear{style: "clear: both"}
+
+%script{ src: minifiable_asset_path('js/home/teacher_homepage.js'), data: {courses: courses.to_json}}

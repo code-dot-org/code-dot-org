@@ -25,7 +25,10 @@ _Note that this only affects teachers using Units 1 - 3, revisions to Units 4 - 
 
 ### Unit 2
 
-* Currently undergoing revision. This page will be updated when we are prepared to release the updates.
+* Modified unit-wide project to remove logistical challenges and increase student choice
+* Decreased reliance on external tools
+* Dispersed unplugged lessons throughout the unit
+* Reduced to 2 chapters
 
 ### Unit 3
 

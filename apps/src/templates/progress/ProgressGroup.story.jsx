@@ -42,6 +42,7 @@ export default storybook => {
           <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
             <ProgressGroup
               groupName="My Group"
+              isPlc={false}
               isSummaryView={false}
               lessons={lessons}
               levelsByLesson={levelsByLesson}
@@ -56,7 +57,23 @@ export default storybook => {
           <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
             <ProgressGroup
               groupName="My Group"
+              isPlc={false}
               isSummaryView={true}
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+            />
+          </Provider>
+        )
+      },
+
+      {
+        name:'ProgressGroup in PLC',
+        story: () => (
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+            <ProgressGroup
+              groupName="My Group"
+              isPlc={true}
+              isSummaryView={false}
               lessons={lessons}
               levelsByLesson={levelsByLesson}
             />
