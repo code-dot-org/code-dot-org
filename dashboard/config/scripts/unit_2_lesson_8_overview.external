@@ -1,7 +1,8 @@
 name 'Unit 2 Lesson 8 Overview'
+display_name 'Lesson Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 8 - Styling Elements with CSS
+# Overview
 
 ## Background
 

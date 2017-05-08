@@ -1,7 +1,8 @@
 name 'Unit 2 Lesson 10 Overview'
+display_name 'Lesson Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 10 - RGB Colors and Classes
+# Overview
 
 ## Background
 
