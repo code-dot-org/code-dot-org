@@ -162,8 +162,9 @@ class Script < ActiveRecord::Base
   end
 
   # Find the lockable or non-locakble stage based on its relative position.
-  def stage_by_relative_position(position, lockable = false)
-    stages.where(lockable: lockable).find_by(relative_position: position)
+  # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
+  def stage_by_relative_position(position, lockable = [false, nil])
+    stages.where(lockable: lockable).find_by!(relative_position: position)
   end
 
   # For all scripts, cache all related information (levels, etc),
