@@ -183,6 +183,16 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), false);
   });
 
+  it('starts uncollapsed for teacher if it is the current stage', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+      />
+    );
+    assert.equal(wrapper.state('collapsed'), false);
+  });
+
   it('uncollapses itself for student when currentStage gets updated', () => {
     const wrapper = shallow(
       <ProgressLesson
