@@ -4,27 +4,21 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Overview
 
-## Background
+In this lesson, students first learn how to specify custom colors using their RGB (red, green, blue) values.  They then apply these colors to a new Four Seasons web page, which uses CSS classes.  CSS classes allow web developers to treat groups of elements they want styled differently than other elements of the same type. Using classes, students add more styles to the Four Seasons web page, then use them to style their personal websites.
 
-In this lesson, students first learn how to specify custom colors using their RGB (red, green, blue) values.  They then apply these colors to a new Four Seasons web page, which uses CSS classes.  CSS classes allow web developers great groups of elements they want styled differently than other elements of the same type. Using classes, students add more styles to the Four Seasons web page, then use them to style their personal websites.
-# Vocabulary
+## Vocabulary
 
 * **HTML Class** - Makes it possible to define equal styles for elements by giving them all the same class name.
 
-# New Blocks
+## New Properties
 
 *  **[RGB Color](//docs.code.org/weblab/rgb-color/)** - `RGB Color`
 
-# Resources
+## Resources
 
-* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
-
-* [Matching Review](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/export?format=doc))
-* [Classes](https://docs.google.com/document/d/1OuIzvizEwFYUsJZnbiRUG-zhz57wGcogWsnGAquQECI/edit) - Rubric ([PDF](https://docs.google.com/document/d/1OuIzvizEwFYUsJZnbiRUG-zhz57wGcogWsnGAquQECI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OuIzvizEwFYUsJZnbiRUG-zhz57wGcogWsnGAquQECI/export?format=doc))
-* [RGB Colors](https://docs.google.com/document/d/1EVz6j-6IAzV5gXIzYdl0onDsCHkQSJQU7FMSyJmBRWU/edit#heading=h.qkxa73ppb9k4) - Activity Guide ([PDF](https://docs.google.com/document/d/1EVz6j-6IAzV5gXIzYdl0onDsCHkQSJQU7FMSyJmBRWU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1EVz6j-6IAzV5gXIzYdl0onDsCHkQSJQU7FMSyJmBRWU/export?format=doc))
+* [RGB Colors](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/edit?copiedFromTrash) - Activity Guide ([PDF](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=doc))
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/1207vTrvxu447kf9QsE-bxDhpZhkI3QiM-faN4_7elEQ/edit"> Activity Guide KEY - Matching Review </a>
 
 MARKDOWN
