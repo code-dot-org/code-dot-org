@@ -2,11 +2,11 @@
 title: Courses
 ---
 
-%h2{style: "margin-top: 22px"} Overview of Code Studio Courses
+%link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
+%script{src: minifiable_asset_path("js/code.org/public/educate/curriculum/courses.js")}
 
+%h2{style: "margin-top: 22px"} Overview of Code Studio Courses
 = view :course_explorer_table
 
-
 %h2 Standalone Tools
-
-= view :tools_explorer_table
+= view :tool_explorer_table

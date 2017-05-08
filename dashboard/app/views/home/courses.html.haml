@@ -5,6 +5,9 @@
   link_blocks << {text: "Middle school", link: "http://code.org"}
   link_blocks << {text: "High school and older", link: "http://code.org"}
 
+%link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
+%script{src: minifiable_asset_path("js/home/courses.js")}
+
 %h1 Recent courses
 = render partial: 'home/recent_courses'
 
@@ -18,7 +21,7 @@
   = render partial: 'link_blocks', locals: { link_blocks: link_blocks }
 
   %h2 Standalone tools
-  = render file: Rails.root.join('..', 'shared', 'haml', 'tools_explorer_table.haml')
+  = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
 
 - else
   = render partial: 'home/all_courses'
