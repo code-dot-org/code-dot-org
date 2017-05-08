@@ -18,7 +18,7 @@ $(document).ready(() => {
 
     $.ajax({
       method: 'GET',
-      url: `/dashboardapi/v1/projects/gallery/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
       dataType: 'json'
     }).done(projectLists => {
       const publicGallery = document.getElementById('public-gallery');
