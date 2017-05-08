@@ -301,7 +301,6 @@ en:
       label: 'Hi %{username}'
       stats: 'Code Studio'
       settings: 'My account'
-      prizes: 'Prizes'
       logout: 'Sign out'
       signin: 'Sign in'
       signup: 'Create an account'

@@ -1298,13 +1298,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
   end
 
-  test "do not show prize link if you don't have a prize" do
-    sign_in create(:teacher)
-
-    get :user_menu
-    assert_select 'a[href="http://test.host/redeemprizes"]', 0
-  end
-
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
@@ -1325,15 +1318,6 @@ class ApiControllerTest < ActionController::TestCase
 
     refute assigns(:show_pairing_dialog)
     refute session[:show_pairing_dialog] # should only show once
-  end
-
-  test "do show prize link when you already have a prize" do
-    teacher = create(:teacher)
-    sign_in teacher
-    teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
-
-    get :user_menu
-    assert_select 'a[href="http://test.host/redeemprizes"]'
   end
 
   test 'student does not see links to ops dashboard or teacher dashboard' do
