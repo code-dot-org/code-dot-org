@@ -144,11 +144,27 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
     end
+
+    emit_deploy_metric(rack_env.to_s.titleize, status == 0)
   end
 
   # Return the same output and status code that BUILD returned.
   puts log
   status
+end
+
+def emit_deploy_metric(deployment_stage, successful)
+  Aws::CloudWatch::Client.new.new.put_metric_data(
+    {
+      namespace: 'DEPLOYMENTS',
+      metric_data: [{
+        metric_name: "#{deployment_stage}#{successful ? 'Successful' : 'Failed'}",
+        value: 1
+      }]
+    }
+  )
+rescue
+  ChatClient.log 'Unable to emit metrics', color: 'red'
 end
 
 main if only_one_running?(__FILE__)

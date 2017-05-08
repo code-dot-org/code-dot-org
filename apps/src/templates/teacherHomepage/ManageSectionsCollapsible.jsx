@@ -1,6 +1,6 @@
 import React from 'react';
 import CollapsibleSection from './CollapsibleSection';
-// import SectionsTable from './SectionsTable';
+import SectionsTable from './SectionsTable';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
 
@@ -20,7 +20,7 @@ const ManageSectionsCollapsible = React.createClass({
       >
       {sections ? (
         <div>
-          This is where the sections table will go.
+          <SectionsTable sections={sections}/>
         </div>
       ) : (
         <SetUpMessage type="sections"/>
