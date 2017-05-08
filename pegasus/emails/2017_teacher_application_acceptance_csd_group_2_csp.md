@@ -1,6 +1,8 @@
 ---
+<% deadline = Date.today + 7 %>
+<% deadline_string = deadline.strftime("%b %d, %Y") %>
 from: 'Sarah Fairweather (Code.org) <teacher@code.org>'  
-subject: "Congratulations from Code.org! Respond by April 21st"
+subject: "Congratulations from Code.org! Respond by <%= deadline_string %>"
 ---
 Hi <%= preferred_first_name_s %>,
 
@@ -18,7 +20,7 @@ As a reminder, to participate in the Professional Learning Program we ask that y
 
 Here are your important next steps
 
-* **By April 21, 2017:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take five minutes to let us know your decision via this form. **Completing this form is the only way we will know if you have accepted your space in the program; if we don’t hear from you by April 21, 2017, we will need to give your space to someone on our waitlist.**
+* **By <%= deadline_string %>:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take five minutes to let us know your decision via this form. **Completing this form is the only way we will know if you have accepted your space in the program; if we don’t hear from you by <%= deadline_string %>, we will need to give your space to someone on our waitlist.**
 
 If you decide to accept your space in the Professional Learning Program:
 
@@ -28,7 +30,7 @@ If you decide to accept your space in the Professional Learning Program:
 
 * Share the good news with your school! Start talking with your administration, colleagues, students, and parents now about the course you will be teaching next year, and encourage a diverse group of students to enroll. Once you accept your space in the program, you will receive a welcome kit complete with recruitment tips and tools. In the meantime, please help yourself to these [videos and resources](https://code.org/educate/resources/videos).
 
-Please contact [teacher@code.org](mailto:teacher@code.org) with any additional questions. We look forward to hearing from you by April 21, 2017!
+Please contact [teacher@code.org](mailto:teacher@code.org) with any additional questions. We look forward to hearing from you by <%= deadline_string %>!
 
 Thank you,
 
