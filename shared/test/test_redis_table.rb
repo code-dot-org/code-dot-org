@@ -7,7 +7,8 @@
 
 require_relative 'test_helper'
 require 'fakeredis' unless use_real_redis?
-require 'timecop' unless use_real_redis?
+require 'timecop'
+require_relative 'fake_timecop'
 require 'helpers/null_pub_sub_api'
 require 'helpers/redis_table'
 require_relative 'spy_pub_sub_api'
@@ -167,7 +168,8 @@ class RedisTableTest < Minitest::Test
   end
 
   def test_expiration
-    stop_time
+    timecop = use_real_redis? ? FakeTimecop : Timecop
+    timecop.freeze
 
     # Test with a 1-second expire time
     expire_time = 1
@@ -180,7 +182,7 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1], table.to_a
 
     # Jump to just before expiration
-    time_travel expire_time - margin_time
+    timecop.travel expire_time - margin_time
     assert_equal [row1], table.to_a
 
     # Reset expiration by inserting a new row
@@ -189,11 +191,11 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1, row2], table.to_a
 
     # Jump to original expiration time - nothing should be deleted
-    time_travel margin_time
+    timecop.travel margin_time
     assert_equal [row1, row2], table.to_a
 
     # Jump to just before expiration again
-    time_travel expire_time - (2 * margin_time)
+    timecop.travel expire_time - (2 * margin_time)
     assert_equal [row1, row2], table.to_a
 
     # Reset expiration by updating a row
@@ -202,11 +204,11 @@ class RedisTableTest < Minitest::Test
     assert_equal [row1, updated_row2], table.to_a
 
     # Jump to next expiration time - nothing should be deleted
-    time_travel margin_time
+    timecop.travel margin_time
     assert_equal [row1, updated_row2], table.to_a
 
     # Jump to just before expiration a third time
-    time_travel expire_time - (2 * margin_time)
+    timecop.travel expire_time - (2 * margin_time)
     assert_equal [row1, updated_row2], table.to_a
 
     # Reset expiration by deleting a row
@@ -214,18 +216,18 @@ class RedisTableTest < Minitest::Test
     assert_equal [updated_row2], table.to_a
 
     # Jump to expiration time - nothing should be deleted
-    time_travel margin_time
+    timecop.travel margin_time
     assert_equal [updated_row2], table.to_a
 
     # Jump to just before expiration a final time
-    time_travel expire_time - (2 * margin_time)
+    timecop.travel expire_time - (2 * margin_time)
     assert_equal [updated_row2], table.to_a
 
     # Jump to expiration time - this time, everything should be gone
-    time_travel margin_time
+    timecop.travel margin_time
     assert_equal [], table.to_a
   ensure
-    resume_time
+    timecop.return
   end
 
   def test_uuids
@@ -260,23 +262,5 @@ class RedisTableTest < Minitest::Test
 
   def make_pubsub_event(channel, event, data)
     {channel: channel, event: event, data: data}
-  end
-
-  # Set of helpers for using Timecop if we're using fakeredis, or passing
-  # real time if we're using real redis.
-  def stop_time
-    Timecop.freeze unless use_real_redis?
-  end
-
-  def resume_time
-    Timecop.return unless use_real_redis?
-  end
-
-  def time_travel(seconds)
-    if use_real_redis?
-      sleep seconds
-    else
-      Timecop.travel seconds
-    end
   end
 end
