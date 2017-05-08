@@ -59,11 +59,11 @@ const WorkshopIndex = React.createClass({
 
   render() {
     const permission = window.dashboard.workshop.permission;
-    const isAdmin = permission === "admin";
+    const isWorkshopAdmin = permission === "workshop_admin";
     const isFacilitator = permission.indexOf('facilitator') >= 0;
     const isOrganizer = permission.indexOf('organizer') >= 0;
     const isPlp = permission.indexOf('plp') >= 0;
-    const showOrganizer = isAdmin;
+    const showOrganizer = isWorkshopAdmin;
 
     return (
       <div>
@@ -72,7 +72,7 @@ const WorkshopIndex = React.createClass({
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
             New Workshop
           </Button>
-          {(isAdmin || isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
+          {(isWorkshopAdmin || isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {isPlp && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
           <Button
