@@ -37,17 +37,13 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 And, we still have a number of openings for applicants in the following regions:
 
 * Arizona
-* Bay Area and Central Coast, CA
-* Sacramento Valley and North Coast, CA
 * San Joaquin Valley, CA
-* Colorado
 * Northeast Florida
 * Miami, FL
 * Illinois
 * Indiana
 * Maine
 * Maryland
-* Montana
 * New Jersey
 * Nevada
 * Pennsylvania
