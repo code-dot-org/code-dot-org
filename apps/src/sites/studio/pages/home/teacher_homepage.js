@@ -3,10 +3,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
 
-$(document).ready(showContent);
+$(document).ready(showTeacherHomepage);
 
+function showTeacherHomepage() {
+  const coursesData = document.querySelector('script[data-courses]');
+  const configCourses = JSON.parse(coursesData.dataset.courses);
 
-function showContent() {
+  const courses = configCourses.map(course => (
+      {
+        key: course.id,
+        courseName: course.name,
+        description: course.description,
+        image: course.image,
+        link: course.link,
+        assignedSections: []
+      }
+  ));
 
   ReactDOM.render (
     <TeacherHomepage
@@ -18,22 +30,7 @@ function showContent() {
           link: "to wherever"
         }
       ]}
-      courses={[
-        {
-          courseName: "Play Lab",
-          description: "Create a story or make a game with Play Lab!",
-          link: "https://code.org/playlab",
-          image:"photo source",
-          assignedSections: []
-        },
-        {
-          courseName: "CSP Unit 2 - Digital Information",
-          description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-          link: "https://curriculum.code.org/csp/unit2/",
-          image:"photo source",
-          assignedSections: []
-        },
-      ]}
+      courses={courses}
       sections={[
         {
           name: "Algebra Period 1",
@@ -64,6 +61,6 @@ function showContent() {
         },
       ]}
     />,
-    document.getElementById('container')
+  document.getElementById('teacher-homepage-container')
   );
 }
