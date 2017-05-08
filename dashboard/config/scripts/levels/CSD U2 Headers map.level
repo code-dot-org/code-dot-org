@@ -7,7 +7,8 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Headers in HTML",
-    "reference": "/csd/headers/index.html"
+    "reference": "/csd/headers/index.html",
+    "teacher_markdown": "This map level includes the information that students may have seen in the drop down tips on previous levels.  Students may use this time to update their HTML tag lists."
   },
   "published": true,
   "notes": "",

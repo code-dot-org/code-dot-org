@@ -3,10 +3,10 @@ require 'test_helper'
 class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
   test_user_gets_response_for(
     :index,
-    name: 'admins can access the dashboard and get correct permission value',
-    user: :admin
+    name: 'workshop admins can access the dashboard and get correct permission value',
+    user: :workshop_admin
   ) do
-    assert_equal :admin, assigns(:permission)
+    assert_equal :workshop_admin, assigns(:permission)
   end
 
   [:facilitator, :workshop_organizer].each do |user_type|

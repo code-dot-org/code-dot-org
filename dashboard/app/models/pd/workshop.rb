@@ -3,7 +3,6 @@
 # Table name: pd_workshops
 #
 #  id                  :integer          not null, primary key
-#  workshop_type       :string(255)      not null
 #  organizer_id        :integer          not null
 #  location_name       :string(255)
 #  location_address    :string(255)
@@ -152,7 +151,6 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CS_IN_S => 'CS in Science Support'
   }.freeze
 
-  validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -481,7 +479,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -489,22 +487,32 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 
-  # temporary data transformation method that sets values for new on_map and
-  # funded columns from old workshop_type, for that transitional period where we
-  # temporarily have both sets on our way to removing workshop_type
+  # temporary data derivation method for recently-removed workshop_type column;
+  # can be removed as soon as client-facing features are updated to present
+  # on_map and funded.
   # TODO elijah: remove this method  once it is no longer necessary
-  def set_on_map_and_funded_from_workshop_type(type_override=nil)
-    type = type_override || workshop_type
-    case type
+  def workshop_type
+    if funded
+      on_map ? "Public" : "Private"
+    else
+      "District"
+    end
+  end
+
+  # temporary attribute assignment method; replaces old
+  # set_on_map_and_funded_from_workshop_type helper.
+  # TODO elijah: remove this method  once it is no longer necessary
+  def workshop_type=(value)
+    case value
       when Pd::Workshop::TYPE_PUBLIC
-        self.on_map = true
-        self.funded = true
+        write_attribute :on_map, true
+        write_attribute :funded, true
       when Pd::Workshop::TYPE_PRIVATE
-        self.on_map = false
-        self.funded = true
+        write_attribute :on_map, false
+        write_attribute :funded, true
       when Pd::Workshop::TYPE_DISTRICT
-        self.on_map = false
-        self.funded = false
+        write_attribute :on_map, false
+        write_attribute :funded, false
     end
   end
 end

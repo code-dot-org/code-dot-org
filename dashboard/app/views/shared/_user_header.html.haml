@@ -31,8 +31,6 @@
         - if current_user.can_edit_account?
           = link_to t('nav.user.settings'), edit_user_registration_url
         %a.points_menu_item{href: '#', style: 'display: none'}
-        - if current_user.teacher? && (current_user.teacher_prize || current_user.teacher_bonus_prize)
-          = link_to t('nav.user.prizes'), my_prizes_url
         = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank'
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else

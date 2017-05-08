@@ -470,6 +470,22 @@
           <block type="studio_endGame">
             <title name="VALUE">win</title>
           </block>
+          <block type="studio_getScore"/>
+          <block type="controls_if" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" inline="true" movable="false">
+                <title name="OP">EQ</title>
+                <value name="A">
+                  <block type="studio_getScore" movable="false"/>
+                </value>
+                <value name="B">
+                  <block type="math_number" movable="false">
+                    <title name="NUM">5</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
         </category>
       </xml>
     </toolbox_blocks>
