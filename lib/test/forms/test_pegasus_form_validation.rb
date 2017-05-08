@@ -46,10 +46,6 @@ class PegasusFormValidationTest < Minitest::Test
     assert_equal FIELD_ERROR, FormValidationMethods.enum(FIELD_ERROR, allowed)
 
     assert_field_error({value: 'zero'}, FormValidationMethods.enum('zero', allowed))
-    error = FormValidationMethods.enum('zero', allowed)
-    assert_instance_of FieldError, error
-    assert_equal 'zero', error.value
-    assert_equal :invalid, error.message
   end
 
   def test_integer
