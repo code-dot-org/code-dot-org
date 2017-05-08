@@ -8,7 +8,7 @@ import _ from 'lodash';
 const styles = {
   card: {
     overflow: 'hidden',
-    borderRadius: 2,
+    borderRadius: 3,
     border: '1px solid gray',
     position: 'relative',
     height: 245,
@@ -28,7 +28,7 @@ const styles = {
   },
   image: {
     position: 'absolute',
-    width: 465
+    width: 458
   },
   courseName: {
     paddingLeft: 25,
@@ -65,7 +65,7 @@ const styles = {
     zIndex: 3,
     fontSize: 18,
     color: color.white,
-    marginLeft: 400,
+    marginLeft: 350,
     background: color.teal,
     padding: 10,
     borderRadius: 100,

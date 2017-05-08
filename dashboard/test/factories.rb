@@ -2,6 +2,10 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :course do
+    name "MyCourseName"
+    properties nil
+  end
   factory :experiment do
     name "fancyFeature"
 
@@ -521,7 +525,10 @@ FactoryGirl.define do
     module_type Plc::LearningModule::CONTENT_MODULE
   end
   factory :plc_course, class: 'Plc::Course' do
-    name "MyString"
+    transient do
+      name 'MyString'
+    end
+    course {create(:course, name: name)}
   end
 
   factory :level_group, class: LevelGroup do
@@ -567,7 +574,6 @@ FactoryGirl.define do
 
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
-    workshop_type Pd::Workshop::TYPES.first
     on_map true
     funded true
     course Pd::Workshop::COURSES.first

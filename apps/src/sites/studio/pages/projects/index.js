@@ -5,6 +5,8 @@ import GallerySwitcher, {Galleries} from '@cdo/apps/templates/projects/GallerySw
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import experiments from '@cdo/apps/util/experiments';
 
+const MAX_PROJECTS_PER_CATEGORY = 100;
+
 $(document).ready(() => {
   if (experiments.isEnabled('publicGallery')) {
     const gallerySwitcher = document.getElementById('gallery-switcher');
@@ -14,8 +16,16 @@ $(document).ready(() => {
         showGallery={showGallery}
       />, gallerySwitcher);
 
-    const publicGallery = document.getElementById('public-gallery');
-    ReactDOM.render(<PublicGallery/>, publicGallery);
+    $.ajax({
+      method: 'GET',
+      url: `/dashboardapi/v1/projects/gallery/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      dataType: 'json'
+    }).done(projectLists => {
+      const publicGallery = document.getElementById('public-gallery');
+      ReactDOM.render(
+        <PublicGallery projectLists={projectLists}/>,
+        publicGallery);
+    });
   }
 });
 
