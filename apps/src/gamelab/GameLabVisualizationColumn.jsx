@@ -41,6 +41,17 @@ var GameLabVisualizationColumn = React.createClass({
     };
   },
 
+  componentWillReceiveProps(nextProps) {
+    // Use jQuery to turn on and off the grid since it lives in a protected div
+    if (nextProps.showGrid !== this.props.showGrid) {
+      if (nextProps.showGrid) {
+        $("#grid-overlay")[0].style.display = '';
+      } else {
+        $("#grid-overlay")[0].style.display = 'none';
+      }
+    }
+  },
+
   onMouseMove(mouseX, mouseY) {
     this.setState({mouseX, mouseY});
   },

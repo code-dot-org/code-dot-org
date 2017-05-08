@@ -40,7 +40,7 @@ const GridOverlay = React.createClass({
   render() {
     const shouldShow = this.props.show ? styles.show : styles.hide;
     return (
-      <g className="grid-overlay" style={shouldShow} >
+      <g id="grid-overlay" className="grid-overlay" style={shouldShow} >
         <text x={5} y={15}>
           (0,0)
         </text>
