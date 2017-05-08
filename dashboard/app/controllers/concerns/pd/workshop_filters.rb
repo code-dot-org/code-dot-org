@@ -27,7 +27,7 @@ module Pd::WorkshopFilters
     course = params[:course]
 
     workshops = Pd::Workshop.in_state(::Pd::Workshop::STATE_ENDED)
-    unless current_user.admin?
+    unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
       workshops = workshops.organized_by current_user
     end
 
@@ -82,7 +82,7 @@ module Pd::WorkshopFilters
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
 
-      if current_user.admin? && params[:teacher_email]
+      if current_user.permission?(UserPermission::WORKSHOP_ADMIN) && params[:teacher_email]
         teacher = User.find_by(email: params[:teacher_email])
         if teacher
           if params[:only_attended]

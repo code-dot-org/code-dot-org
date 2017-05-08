@@ -259,8 +259,7 @@ const WorkshopFilter = React.createClass({
       limit: this.state.limit.value
     };
 
-    const permission = window.dashboard.workshop.permission;
-    const isAdmin = permission === "admin";
+    const isWorkshopAdmin = window.dashboard.workshop.permission === "workshop_admin";
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
 
@@ -335,7 +334,7 @@ const WorkshopFilter = React.createClass({
           }
           <Clearfix visibleSmBlock />
           {
-            isAdmin &&
+            isWorkshopAdmin &&
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -352,7 +351,7 @@ const WorkshopFilter = React.createClass({
             </Col>
           }
           {
-            isAdmin &&
+            isWorkshopAdmin &&
             <Col md={4}>
               <FormGroup>
                 <ControlLabel>Teacher Email</ControlLabel>
@@ -384,7 +383,7 @@ const WorkshopFilter = React.createClass({
             queryParams={filters}
             canDelete
             showStatus
-            showOrganizer={isAdmin}
+            showOrganizer={isWorkshopAdmin}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
           />
         </Row>
