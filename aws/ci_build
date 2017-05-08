@@ -154,7 +154,7 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
 end
 
 def emit_deploy_metric(deployment_stage, successful)
-  Aws::CloudWatch::Client.new.new.put_metric_data(
+  Aws::CloudWatch::Client.new.put_metric_data(
     {
       namespace: 'DEPLOYMENTS',
       metric_data: [{
