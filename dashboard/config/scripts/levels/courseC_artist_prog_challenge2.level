@@ -80,7 +80,7 @@
           <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
