@@ -14,6 +14,7 @@ const styles = {
 
 const ProgressTable = React.createClass({
   propTypes: {
+    isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
     categorizedLessons: PropTypes.arrayOf(
       PropTypes.shape({
@@ -41,7 +42,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { isSummaryView, categorizedLessons } = this.props;
+    const { isSummaryView, isPlc, categorizedLessons } = this.props;
 
     if (categorizedLessons.length === 1) {
       // Render both tables, and toggle hidden state via CSS as this has better
@@ -68,6 +69,7 @@ const ProgressTable = React.createClass({
           {categorizedLessons.map(category => (
             <ProgressGroup
               key={category.category}
+              isPlc={isPlc}
               groupName={category.category}
               isSummaryView={isSummaryView}
               lessons={category.lessons}
@@ -81,6 +83,7 @@ const ProgressTable = React.createClass({
 });
 
 export default connect(state => ({
+  isPlc: state.progress.professionalLearningCourse,
   isSummaryView: state.progress.isSummaryView,
   categorizedLessons: categorizedLessons(state.progress)
 }))(ProgressTable);
