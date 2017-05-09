@@ -11,7 +11,7 @@ Sequel.migration do
 
         DateTime :updated_at, null: false
 
-        index [:channel_id, :storage_id, :table_name], unique: true
+        
       end
     end
   end
