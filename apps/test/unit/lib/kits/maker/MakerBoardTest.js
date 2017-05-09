@@ -64,24 +64,92 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
      * @param {JSInterpreter} jsInterpreter
      */
     describe('installOnInterpreter(codegen, jsInterpreter)', () => {
+      const CONSTRUCTOR_COUNT = 13;
+      const COMPONENT_COUNT = 16;
       let jsInterpreter;
 
       beforeEach(() => {
         jsInterpreter = {
-          createGlobalProperty: sinon.spy(),
+          globalProperties: {},
+          createGlobalProperty: function (key, value) {
+            jsInterpreter.globalProperties[key] = value;
+          },
           addCustomMarshalObject: sinon.spy(),
         };
-        return board.connect().then(() => {
+
+        return board.connect();
+      });
+
+      it(`doesn't return anything`, () => {
+        const retVal = board.installOnInterpreter(jsInterpreter);
+        expect(retVal).to.be.undefined;
+      });
+
+      describe('adds component constructors', () => {
+        beforeEach(() => {
           board.installOnInterpreter(jsInterpreter);
+        });
+
+        it(`${CONSTRUCTOR_COUNT} of them`, () => {
+          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(13);
+        });
+
+        [
+          'Led',
+          'Board',
+          'RGB',
+          'Button',
+          'Switch',
+          'Piezo',
+          'Sensor',
+          'Thermometer',
+          'Pin',
+          'Accelerometer',
+          'Animation',
+          'Servo',
+          'TouchSensor',
+        ].forEach(constructor => {
+          it(constructor, () => {
+            expect(jsInterpreter.globalProperties).to.have.ownProperty(constructor);
+            expect(jsInterpreter.globalProperties[constructor]).to.be.a('function');
+            const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(call => call[0].instance);
+            expect(passedObjects).to.include(jsInterpreter.globalProperties[constructor]);
+          });
         });
       });
 
-      it('adds component constructors to the customMarshalObjectList', () => {
-        expect(jsInterpreter.addCustomMarshalObject.callCount).to.equal(13);
-      });
+      describe('adds components', () => {
+        beforeEach(() => {
+          board.installOnInterpreter(jsInterpreter);
+        });
 
-      it('adds component constructors as global properties on the jsInterpreter', () => {
-        expect(jsInterpreter.createGlobalProperty).to.have.been.called;
+        it(`${COMPONENT_COUNT} of them`, () => {
+          expect(Object.keys(jsInterpreter.globalProperties))
+              .to.have.length(CONSTRUCTOR_COUNT + COMPONENT_COUNT);
+        });
+
+        [
+          'board',
+          'colorLeds',
+          'led',
+          'toggleSwitch',
+          'buzzer',
+          'soundSensor',
+          'lightSensor',
+          'tempSensor',
+          'accelerometer',
+          'buttonL',
+          'buttonR',
+          'INPUT',
+          'OUTPUT',
+          'ANALOG',
+          'PWM',
+          'SERVO',
+        ].forEach(componentName => {
+          it(componentName, () => {
+            expect(interpreter.globalProperties).to.have.ownProperty(componentName);
+          });
+        });
       });
     });
 
