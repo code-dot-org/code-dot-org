@@ -163,6 +163,12 @@ class Script < ActiveRecord::Base
     candidate_level
   end
 
+  # Find the lockable or non-locakble stage based on its relative position.
+  # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
+  def stage_by_relative_position(position, lockable = [false, nil])
+    stages.where(lockable: lockable).find_by!(relative_position: position)
+  end
+
   # For all scripts, cache all related information (levels, etc),
   # indexed by both id and name. This is cached both in a class
   # variable (ie. in memory in the worker process) and in a
@@ -518,7 +524,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         stage_flex_category = raw_level.delete(:stage_flex_category)
-        stage_lockable = raw_level.delete(:stage_lockable)
+        stage_lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
