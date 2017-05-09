@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
+import i18n from '@cdo/locale';
 import ProgressButton from '../progress/ProgressButton';
 
 const styles = {
@@ -40,7 +41,7 @@ export default class CourseScript extends Component {
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
           <ProgressButton
-            text="Go to Unit"
+            text={i18n.goToUnit()}
             href={`/s/${name}`}
             color={ProgressButton.ButtonColor.gray}
           />
