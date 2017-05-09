@@ -5,7 +5,7 @@
 #  id        :integer          not null, primary key
 #  course_id :integer          not null
 #  script_id :integer          not null
-#  position  :integer
+#  position  :integer          not null
 #
 # Indexes
 #

@@ -148,7 +148,7 @@ ActiveRecord::Schema.define(version: 20170505234020) do
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "course_id", null: false
     t.integer "script_id", null: false
-    t.integer "position"
+    t.integer "position",  null: false
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
