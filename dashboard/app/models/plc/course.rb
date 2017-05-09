@@ -3,7 +3,6 @@
 # Table name: plc_courses
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  course_id  :integer

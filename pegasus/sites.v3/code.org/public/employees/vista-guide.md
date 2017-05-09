@@ -43,11 +43,11 @@ Anyone passionate about computer science education and careers in tech can be a 
 
 Volunteers are most needed during the Hour of Code, but if you're also interested in a year-round commitment teachers are constantly looking for professionals and students alike to inspire their students.
 
-The more information you provide, the more likely a teacher will contact you. It's also helpful if you:
+The more information you provide, the more likely a teacher will contact you. In order to sign up:
 
-- Add your Vista Equity Partners company and use your company email. Your email address will never be shared.
+- Add your Vista Equity Partners company and use your **company email**. Your email address will never be shared.
 - Select the checkbox to "I’m interested in volunteering year-round" if you want to volunteer throughout the year, outside of the Hour of Code. If you do not select this checkbox, you will only be displayed on the map during September-December.
-- All Vista Equity Parnters professionals are welcome to volunteer! We want students to learn about all career paths in tech. Please provide a short description at the bottom of the form about your connection to computer science and careers in tech.
+- All Vista Equity Partners professionals are welcome to volunteer! We want students to learn about all career paths in tech. Please provide a short description at the bottom of the form about your connection to computer science and careers in tech.
 
 
 <a name="why"></a>
@@ -71,11 +71,11 @@ The more information you provide, the more likely a teacher will contact you. It
 
 |Date | Action|
 |--------|---------|
-|October - November| Sign up to be a volunteer!|
-|October - November| Classrooms select volunteers (Vista Equity Partner employees are contacted by teachers)|
+|Now| [Sign up](/volunteer) to be a volunteer in year-round Hour of Code sessions!|
 |TBD|2017 volunteer training webinar <br> Check out [2016's webinar](https://www.youtube.com/watch?v=aZWz5XX5PXk) and [slides](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)|
-|December 10-16 <br> *Computer Science Education Week*|Vista Equity Partner employees volunteer in classromms|
-|December - January|Complete Vista Equity Partners' participation survey|
+|After Training Webinar|Classrooms select volunteers (Vista Equity Partners employees are contacted by teachers)|
+|After Teaching|Complete Vista Equity Partners' participation survey|
+|December 10-16 <br> *Computer Science Education Week*|Vista Equity Partners employees volunteer in classromms for Computer Science Education Week|
 
 <a name="volunteer"></a>
 ## Volunteer in a classroom
@@ -117,7 +117,7 @@ Get the students excited! Pick out a <a href="videos">video</a> to help focus th
 |-----------------| ------------|
 |5-10 minutes | Introduce yourself: </ul><li>What do at Vista Equity Partners, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
 |1-5 minutes | Show an [inspirational video](#videos)|
-|5-10 minutes | Ask the students questions and leave time for Q&A </ul><li> WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul>|
+|5-10 minutes | Ask the students questions and leave time for Q&A. </ul><li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul>|
 |60 minutes | Code!|
 |1-3 minutes | Thank everyone and share inspirational parting words|
 

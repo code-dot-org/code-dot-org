@@ -126,7 +126,7 @@ const SectionsTable = React.createClass({
                 </a>
               </td>
               <td style={styles.col2}>
-                <a href={section.linktoCourse} style={styles.link}>
+                <a href={section.linkToCourse} style={styles.link}>
                   {section.course}
                 </a>
               </td>
