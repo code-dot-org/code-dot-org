@@ -785,17 +785,19 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def summarize_i18n
+  def summarize_i18n(include_stages=true)
     data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
-    data['stageDescriptions'] = stages.map do |stage|
-      {
-        name: stage.name,
-        descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
-      }
+    if include_stages
+      data['stageDescriptions'] = stages.map do |stage|
+        {
+          name: stage.name,
+          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        }
+      end
     end
     data
   end

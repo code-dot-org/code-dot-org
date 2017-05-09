@@ -12,8 +12,10 @@ function showCourseOverview() {
   ReactDOM.render(
     <div>
       <CourseOverview
-        friendlyName={configCourse.name}
-        viewAs="Student"
+        title={configCourse.title}
+        descriptionStudent={configCourse.description_student}
+        descriptionTeacher={configCourse.description_teacher}
+        viewAs="Teacher"
       />
     <pre>{JSON.stringify(configCourse, null, 2)}</pre>
     </div>
