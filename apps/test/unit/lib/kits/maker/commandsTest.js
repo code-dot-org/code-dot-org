@@ -85,17 +85,31 @@ describe('maker/commands.js', () => {
   });
 
   describe('onBoardEvent(pin)', () => {
-    it('delegates to makerController.onBoardEvent', () => {
-      const fakeComponent = {};
-      const eventName = 'data';
-      const fakeCallback = () => {};
-      onBoardEvent({
-        component: fakeComponent,
-        event: eventName,
-        callback: fakeCallback
+    it('forwards the call to the component', () => {
+      const component = { on: sinon.spy() };
+      const event = 'data';
+      const callback = () => {};
+      onBoardEvent({component, event, callback});
+      expect(component.on).to.have.been.calledWith(event, callback);
+    });
+
+    describe(`event aliases`, () => {
+      let component, callback;
+
+      beforeEach(function () {
+        component = { on: sinon.spy() };
+        callback = () => {};
       });
-      expect(stubBoardController.onBoardEvent).to.have.been
-        .calledWith(fakeComponent, eventName, fakeCallback);
+
+      it(`aliases 'tap:single' event to 'singleTap'`, function () {
+        onBoardEvent({component, event: 'singleTap', callback});
+        expect(component.on).to.have.been.calledWith('tap:single', callback);
+      });
+
+      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
+        onBoardEvent({component, event: 'doubleTap', callback});
+        expect(component.on).to.have.been.calledWith('tap:double', callback);
+      });
     });
   });
 });
