@@ -29,7 +29,6 @@ class Pd::TeacherApplicationController < ApplicationController
   def manage
     page = params[:page] || 1
     page_size = params[:page_size] || DEFAULT_MANAGE_PAGE_SIZE
-    @teacher_applications = @teacher_applications.includes(:user, :accepted_program).page(page).per(page_size)
 
     query = params[:q]
     if query
@@ -45,6 +44,9 @@ class Pd::TeacherApplicationController < ApplicationController
         "%#{query}%", "%#{query}%"
       )
     end
+
+    page_size = @teacher_applications.count if page_size == 'All'
+    @teacher_applications = @teacher_applications.includes(:user, :accepted_program).page(page).per(page_size)
 
     view_options(full_width: true)
   end
