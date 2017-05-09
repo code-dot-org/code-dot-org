@@ -9,16 +9,8 @@ function showTeacherHomepage() {
   const coursesData = document.querySelector('script[data-courses]');
   const configCourses = JSON.parse(coursesData.dataset.courses);
 
-  const courses = configCourses.map(course => (
-      {
-        key: course.id,
-        courseName: course.name,
-        description: course.description,
-        image: course.image,
-        link: course.link,
-        assignedSections: []
-      }
-  ));
+  const sectionsData = document.querySelector('script[data-sections]');
+  const configSections = JSON.parse(sectionsData.dataset.sections);
 
   ReactDOM.render (
     <TeacherHomepage
@@ -30,36 +22,8 @@ function showTeacherHomepage() {
           link: "to wherever"
         }
       ]}
-      courses={courses}
-      sections={[
-        {
-          name: "Algebra Period 1",
-          linkToProgress: "to Progress tab",
-          course: "CS in Algebra",
-          linkToCourse: "to Course",
-          numberOfStudents: 14,
-          linkToStudents: "to Manage Students tab",
-          sectionCode: "ABCDEF"
-        },
-        {
-          name: "Algebra Period 2",
-          linkToProgress: "to Progress tab",
-          course: "CS in Algebra",
-          linkToCourse: "to Course",
-          numberOfStudents: 19,
-          linkToStudents: "to Manage Students tab",
-          sectionCode: "EEB206"
-        },
-        {
-          name: "Period 3",
-          linkToProgress: "to Progress tab",
-          course: "Course 4",
-          linkToCourse: "to Course",
-          numberOfStudents: 22,
-          linkToStudents: "to Manage Students tab",
-          sectionCode: "HPRWHG"
-        },
-      ]}
+      courses={configCourses}
+      sections={configSections}
     />,
   document.getElementById('teacher-homepage-container')
   );
