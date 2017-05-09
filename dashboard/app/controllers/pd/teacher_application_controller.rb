@@ -27,9 +27,6 @@ class Pd::TeacherApplicationController < ApplicationController
   # GET /pd/teacher_application/manage
   # Admin only
   def manage
-    page = params[:page] || 1
-    page_size = params[:page_size] || DEFAULT_MANAGE_PAGE_SIZE
-
     query = params[:q]
     if query
       # It's a valid id. Navigate directly to that application.
@@ -45,9 +42,7 @@ class Pd::TeacherApplicationController < ApplicationController
       )
     end
 
-    page_size = @teacher_applications.count if page_size == 'All'
     @teacher_applications = @teacher_applications.includes(:user, :accepted_program).page(page).per(page_size)
-
     view_options(full_width: true)
   end
 
@@ -121,5 +116,14 @@ class Pd::TeacherApplicationController < ApplicationController
       :program_registration_json,
       :selected_course
     )
+  end
+
+  def page
+    params[:page] || 1
+  end
+
+  def page_size
+    return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
+    params[:page_size] == 'All' ? @teacher_applications.count : params[:page_size]
   end
 end
