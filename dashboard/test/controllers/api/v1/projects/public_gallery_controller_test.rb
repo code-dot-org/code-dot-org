@@ -97,7 +97,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
-    assert_equal 13, project_row['studentAgeRange']
+    assert_equal '13+', project_row['studentAgeRange']
     assert_equal 'C', project_row['studentName']
   end
 
@@ -118,7 +118,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
-    assert_equal 13, project_row['studentAgeRange']
+    assert_equal '13+', project_row['studentAgeRange']
     assert_equal 'C', project_row['studentName']
   end
 
