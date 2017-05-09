@@ -245,7 +245,9 @@ module AWS
                 origin_ssl_protocols: {
                   quantity: 2,
                   items: %w(SSLv3 TLSv1)
-                }
+                },
+                origin_read_timeout: 5,
+                origin_keepalive_timeout: 30
               },
               custom_headers: {
                 quantity: 0
