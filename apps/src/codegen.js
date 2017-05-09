@@ -242,8 +242,6 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
 };
 
 exports.customMarshalObjectList = [];
-exports.asyncFunctionList = [];
-exports.nativeCallsInterpreterFunctionList = [];
 
 // If this is on our list of "custom marshal" objects - or if it a property
 // on one of those objects (other than a function), return true
@@ -283,7 +281,14 @@ var getCustomMarshalMethodOptions = function (nativeParentObj) {
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+/**
+ * @param {PatchedInterpreter} interpreter - instance of the interpreter to marshal objects to
+ * @param {boolean|string|number|Object|Array|Function} [nativeVar] - the native object to marshal into the interpreter.
+ * @param {Object} [nativeParentObj] - optional native parent object that the given nativeVar is a member of
+ * @param {number} [maxDepth] - optional maximum depth to recurse down when marhsaling the given object. Defaults to Infinity
+ * @returns The interpreter's representation of the marshaled object.
+ */
+export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentObj, maxDepth) {
   if (maxDepth === 0 || typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
   }
@@ -314,14 +319,6 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
       nativeFunc: nativeVar,
       nativeParentObj: nativeParentObj,
     };
-    if (exports.asyncFunctionList.indexOf(nativeVar) !== -1) {
-      // Mark if this should be nativeIsAsync:
-      makeNativeOpts.nativeIsAsync = true;
-    }
-    if (exports.nativeCallsInterpreterFunctionList.indexOf(nativeVar) !== -1) {
-      // Mark if this should be nativeCallsBackInterpreter:
-      makeNativeOpts.nativeCallsBackInterpreter = true;
-    }
     var extraOpts = getCustomMarshalMethodOptions(nativeParentObj);
     // Add extra options if the parent of this function is in our custom marshal
     // modified object list:
@@ -354,7 +351,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     retVal = interpreter.createPrimitive(nativeVar);
   }
   return retVal;
-};
+}
 
 exports.createNativeFunctionFromInterpreterFunction = null;
 

@@ -23,6 +23,236 @@ describe("codegen", function () {
     });
   });
 
+  describe("marshalNativeToInterpreter function", () => {
+    let interpreter, globalScope, value;
+    beforeEach(() => {
+      interpreter = new PatchedInterpreter('', (interpreter, scope) => {
+        globalScope = scope;
+        interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
+          if (truthy !== interpreter.TRUE) {
+            console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
+            throw new Error(message);
+          }
+        }));
+      });
+      sinon.spy(interpreter, 'createPrimitive');
+    });
+
+    /**
+     * Given the params for the codegen.marshalNativeToInterpreter function, executed some code
+     * inside the interpreter that can make assertions about the marshaled object.
+     *
+     * @param {string} assertion - some code to run in the interpreter. This code will have
+     *     access to a global assert() function which will throw an error in native land if
+     *     the assertion fails.
+     * @param nativeVar - same as nativeVar param of marshalNativeToInterpreter
+     * @param nativeParentObj - same as nativeParentObj param of marshalNativeToInterpreter
+     * @param maxDepth - same as maxDepth param of marshalNativeToInterpreter
+     * @returns void
+     */
+    function makeAssertion(assertion, nativeVar, nativeParentObj, maxDepth) {
+      let interpreter = new PatchedInterpreter(assertion, (interpreter, scope) => {
+        globalScope = scope;
+        interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
+          if (truthy !== interpreter.TRUE) {
+            console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
+            throw new Error("failed assertion: " + assertion);
+          }
+        }));
+        const interpreterValue = codegen.marshalNativeToInterpreter(
+          interpreter,
+          nativeVar,
+          nativeParentObj,
+          maxDepth
+        );
+        interpreter.setProperty(globalScope, 'value', interpreterValue);
+      });
+      interpreter.run();
+    }
+
+    function makeAssertableObj(nativeVar, nativeParentObj, maxDepth) {
+      return {assert: assertion => makeAssertion(assertion, nativeVar, nativeParentObj, maxDepth)};
+    }
+
+    it("when given an undefined native variable, will return an undefined interpreter variable", () => {
+      expect(codegen.marshalNativeToInterpreter(interpreter, undefined)).to.equal(interpreter.UNDEFINED);
+    });
+
+    it("will delegate to the interpreter's createPrimitive function for booleans, numbers, and strings", () => {
+      codegen.marshalNativeToInterpreter(interpreter, true);
+      expect(interpreter.createPrimitive).to.have.been.calledWith(true);
+      codegen.marshalNativeToInterpreter(interpreter, 5);
+      expect(interpreter.createPrimitive).to.have.been.calledWith(5);
+      codegen.marshalNativeToInterpreter(interpreter, "some string");
+      expect(interpreter.createPrimitive).to.have.been.calledWith("some string");
+    });
+
+    describe("when given an empty object to marshal, the corresponding interpreter object", () => {
+      beforeEach(() => {
+        value = makeAssertableObj({});
+      });
+      it("will be an object", () => {
+        value.assert(`assert(typeof value === "object");`);
+      });
+
+      it("will contain no keys", () => {
+        value.assert(
+          `for (var key in value) {
+            assert(false);
+          }`
+        );
+      });
+    });
+
+    describe("when given an object with some keys, the corresponding interpreter object", () => {
+      beforeEach(() => {
+        value = makeAssertableObj({a: 1, b: true, c: "three"});
+      });
+      it("will be an object with those keys/values", () => {
+        value.assert(`assert(value.a === 1)`);
+        value.assert(`assert(value.b === true)`);
+        value.assert(`assert(value.c === "three")`);
+      });
+    });
+
+    describe("when given an object with more nested objects, the corresponding interpreter object", () => {
+      beforeEach(() => {
+        value = makeAssertableObj({a: {b: {c: "three"}}});
+      });
+      it("will be an object with the same set of nested objects", () => {
+        value.assert(`assert(value.a.b.c === "three")`);
+      });
+    });
+
+    describe("when given a maxDepth parameter, the corresponding interpreter object", () => {
+      let value0, value1, value2, value3, value4;
+      beforeEach(() => {
+        const nested = {level: 1, a: {level: 2, b: {level: 3, c: "three"}}};
+        value0 = makeAssertableObj(nested, null, 0);
+        value1 = makeAssertableObj(nested, null, 1);
+        value2 = makeAssertableObj(nested, null, 2);
+        value3 = makeAssertableObj(nested, null, 3);
+        value4 = makeAssertableObj(nested, null, 4);
+      });
+      it("will be limited to the depth specified by maxDepth", () => {
+        value0.assert(`assert(value === undefined)`);
+        value1.assert(`assert(value.a === undefined)`);
+        value2.assert(`assert(value.level === 1)`);
+        value2.assert(`assert(value.a.b === undefined)`);
+        value3.assert(`assert(value.a.level === 2)`);
+        value3.assert(`assert(value.a.b.c === undefined)`);
+        value4.assert(`assert(value.a.b.level === 3)`);
+      });
+    });
+
+    describe("when given a native array, the corresponding interpreter object", () => {
+      let value0, value1, value2;
+      beforeEach(() => {
+        const nested = [1, [2, [3, "four"]]];
+        value = makeAssertableObj(nested);
+        value0 = makeAssertableObj(nested, null, 0);
+        value1 = makeAssertableObj(nested, null, 1);
+        value2 = makeAssertableObj(nested, null, 2);
+      });
+
+      it("will be an array", () => {
+        value.assert(`assert(value instanceof Array)`);
+      });
+
+      it("will contain the same set of elements", () => {
+        value.assert(`assert(value[0] === 1)`);
+        value.assert(`assert(value[1][0] === 2)`);
+        value.assert(`assert(value[1][1][0] === 3)`);
+        value.assert(`assert(value[1][1][1] === 'four')`);
+      });
+
+      it("will be limited in depth specified by maxDepth", () => {
+        value0.assert(`assert(value === undefined)`);
+        value1.assert(`assert(value instanceof Array)`);
+        value1.assert(`assert(value.length === 2)`);
+        value1.assert(`assert(value[0] === undefined)`);
+        value1.assert(`assert(value[1] === undefined)`);
+        value2.assert(`assert(value[0] === 1)`);
+        value2.assert(`assert(value[1] instanceof Array)`);
+        value2.assert(`assert(value[1].length === 2)`);
+        value2.assert(`assert(value[1][0] === undefined)`);
+        value2.assert(`assert(value[1][1] === undefined)`);
+      });
+    });
+
+    describe("when given an interpreter function object", () => {
+      it("will just return the exact same interpreter function object it was given", () => {
+        const interpreterFunc = interpreter.getProperty(interpreter.getScope(), 'isNaN');
+        expect(codegen.marshalNativeToInterpreter(
+          interpreter,
+          interpreterFunc,
+        )).to.equal(interpreterFunc);
+      });
+    });
+
+    describe("when given canvas image data (Uint8ClampedArray instances), the corresponding interpreter object", () => {
+      beforeEach(() => {
+        value = makeAssertableObj(new Uint8ClampedArray(100));
+      });
+
+      it("will be an array", () => {
+        value.assert(`assert(value instanceof Array)`);
+        value.assert(`assert(value.length === 100)`);
+        value.assert(`for (var i = 0; i < value.length; i++) { assert(value[i] === 0); }`);
+      });
+    });
+
+    describe("when given a native function, the corresponding interpreter object", () => {
+      let nativeFunc;
+      beforeEach(() => {
+        nativeFunc = function (a, b) {
+          return a + b;
+        };
+        Object.defineProperty(
+          nativeFunc,
+          'foo',
+          {
+            enumerable: true,
+            value: 'bar'
+          }
+        );
+        Object.defineProperty(
+          nativeFunc,
+          'throwsOnRead',
+          {
+            enumerable: true,
+            get: () => {
+              throw new Error("can't read this");
+            }
+          }
+        );
+        nativeFunc['foo'] === 'bar';
+        value = makeAssertableObj(nativeFunc);
+      });
+
+      it("will be a function", () => {
+        value.assert(`assert(typeof value === 'function')`);
+        value.assert(`assert(value(1,2) === 3)`);
+      });
+
+      it("will have the same properties as the native function", () => {
+        value.assert(`assert(value.foo === 'bar')`);
+      });
+
+      it("will skip properties of the native function that cannot be read", () => {
+        value.assert(`assert(value.throwsOnRead === undefined)`);
+      });
+
+      it("will skip the inherits and trigger properties if present", () => {
+        expect(nativeFunc.inherits).to.be.defined;
+        value.assert(`assert(value.inherits === undefined)`);
+        expect(nativeFunc.trigger).to.be.defined;
+        value.assert(`assert(value.trigger === undefined)`);
+      });
+    });
+
+  });
+
   describe("evalWithEvents function", () => {
     let hooks, globals;
     beforeEach(() => {
