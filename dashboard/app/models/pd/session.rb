@@ -15,6 +15,8 @@
 #  index_pd_sessions_on_pd_workshop_id  (pd_workshop_id)
 #
 
+require_dependency 'cdo/code_generation'
+
 class Pd::Session < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -77,9 +79,6 @@ class Pd::Session < ActiveRecord::Base
   private
 
   def unused_random_code
-    loop do
-      code = SectionHelpers.random_code
-      return code unless Pd::Session.exists?(code: code)
-    end
+    CodeGeneration.random_code 4, reject_if: ->(code) {Pd::Session.exists?(code: code)}
   end
 end

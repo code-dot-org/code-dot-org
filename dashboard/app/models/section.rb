@@ -23,7 +23,6 @@
 #
 
 require 'cdo/section_helpers'
-
 require 'full-name-splitter'
 require 'rambling-trie'
 
@@ -182,9 +181,6 @@ class Section < ActiveRecord::Base
   private
 
   def unused_random_code
-    loop do
-      code = SectionHelpers.random_code
-      return code unless Section.exists?(code: code)
-    end
+    SectionHelpers.random_code reject_if: ->(code) {Section.exists?(code: code)}
   end
 end
