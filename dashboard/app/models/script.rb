@@ -785,6 +785,17 @@ class Script < ActiveRecord::Base
     summary
   end
 
+  # Similar to summarize, but returns an even more narrow set of fields, restricted
+  # to those needed in header.html.haml
+  def summarize_header
+    {
+      name: name,
+      disablePostMilestone: disable_post_milestone?,
+      isHocScript: hoc?,
+      student_detail_progress_view: student_detail_progress_view?
+    }
+  end
+
   def summarize_i18n(include_stages=true)
     data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
