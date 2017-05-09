@@ -16,11 +16,13 @@
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
-  has_many :course_scripts
+  has_many :course_scripts, -> {order('position ASC')}
 
   def summarize
     {
-      name: name
+      # TODO: i18n
+      name: name,
+      scripts: course_scripts.map(&:script).map {|script| script.summarize(false)}
     }
   end
 end

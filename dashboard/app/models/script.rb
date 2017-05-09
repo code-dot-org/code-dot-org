@@ -740,7 +740,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize
+  def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -772,27 +772,17 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      stages: stages.map(&:summarize),
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?
     }
 
+    summary[:stages] = stages.map(&:summarize) if include_stages
+
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
-  end
-
-  # Similar to summarize, but returns an even more narrow set of fields, in particular
-  # bypasses stage summaries
-  def summarize_short
-    {
-      name: name,
-      disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
-      student_detail_progress_view: student_detail_progress_view?
-    }
   end
 
   def summarize_i18n

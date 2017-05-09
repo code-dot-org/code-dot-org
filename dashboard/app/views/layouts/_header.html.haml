@@ -100,7 +100,7 @@
   - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
   - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
 
-  - script_data = script.summarize_short
+  - script_data = script.summarize(false)
   -# If caching, we don't know the sign in state, and should be nil
   - signed_in = @public_caching ? 'null' : !current_user.nil?
   :javascript
