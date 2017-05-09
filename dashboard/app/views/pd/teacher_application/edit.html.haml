@@ -73,6 +73,13 @@
           = form.text_field field, class: 'form-control'
 
     .form-group
+      = form.label :selected_course, 'Selected Course:', class: 'col-sm-3'
+      .col-sm-6
+        = form.select :selected_course, class: 'form-control' do
+          - course_options = Pd::TeacherApplication::PROGRAM_DETAILS_BY_COURSE.map {|k,v| [v[:name], k]}
+          = options_for_select course_options, selected: @teacher_application.selected_course
+
+    .form-group
       = label_tag nil, 'Teachercon?', class: 'col-sm-3'
       .col-sm-6
         = yes_no @teacher_application.accepted_program.try(:teachercon?)

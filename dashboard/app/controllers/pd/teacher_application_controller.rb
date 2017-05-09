@@ -1,5 +1,6 @@
 class Pd::TeacherApplicationController < ApplicationController
   EMAIL_TEMPLATE_PREFIX = '2017_teacher_application_'.freeze
+  DEFAULT_MANAGE_PAGE_SIZE = 25
 
   load_and_authorize_resource(
     :teacher_application,
@@ -26,6 +27,10 @@ class Pd::TeacherApplicationController < ApplicationController
   # GET /pd/teacher_application/manage
   # Admin only
   def manage
+    page = params[:page] || 1
+    page_size = params[:page_size] || DEFAULT_MANAGE_PAGE_SIZE
+    @teacher_applications = @teacher_applications.includes(:user, :accepted_program).page(page).per(page_size)
+
     query = params[:q]
     if query
       # It's a valid id. Navigate directly to that application.
@@ -111,7 +116,8 @@ class Pd::TeacherApplicationController < ApplicationController
       :secondary_email,
       :accepted_workshop,
       :regional_partner_name,
-      :program_registration_json
+      :program_registration_json,
+      :selected_course
     )
   end
 end
