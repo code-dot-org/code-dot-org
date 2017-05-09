@@ -4,6 +4,7 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/developers_topic'
 require 'cdo/github'
+require 'cdo/infra_test_topic'
 require 'cdo/only_one'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
