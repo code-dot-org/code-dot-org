@@ -174,7 +174,6 @@ export function processResults(onComplete, beforeHook) {
             <PlayZone
               stageName={stageName}
               onContinue={() => { dialog.hide(); }}
-              i18n={window.dashboard.i18n}
             />,
             body
           );

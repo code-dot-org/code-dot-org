@@ -35,10 +35,10 @@
     "never_autoplay_video": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The rectangle is 200 pixels wide and 100 pixels tall. \",\"hint_id\":\"courseC_artist_prog_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/393ded8e18185314369d371859ec7746/courseC_artist_prog_challenge1.mp3\"}]",
     "discard_background": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -55,6 +55,7 @@ const ProgressDetailToggle = React.createClass({
     whiteBorder: PropTypes.bool,
 
     // redux backed
+    isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
     hasGroups: PropTypes.bool.isRequired,
     setIsSummaryView: PropTypes.func.isRequired
@@ -65,11 +66,11 @@ const ProgressDetailToggle = React.createClass({
   },
 
   render() {
-    const { whiteBorder, isSummaryView, hasGroups } = this.props;
+    const { whiteBorder, isSummaryView, hasGroups, isPlc } = this.props;
 
     let activeColor = this.props.activeColor;
     if (!activeColor) {
-      activeColor = hasGroups ? color.purple : color.cyan;
+      activeColor = !isPlc && hasGroups ? color.purple : color.cyan;
     }
 
     const images = activeColor === color.purple ? imageSets.purple : imageSets.teal;
@@ -99,6 +100,7 @@ const ProgressDetailToggle = React.createClass({
 
 export default connect(
   state => ({
+    isPlc: state.progress.professionalLearningCourse,
     isSummaryView: state.progress.isSummaryView,
     hasGroups: hasGroups(state.progress)
   }),
