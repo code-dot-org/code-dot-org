@@ -3,10 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
 
-$(document).ready(showContent);
+$(document).ready(showTeacherHomepage);
 
+function showTeacherHomepage() {
+  const coursesData = document.querySelector('script[data-courses]');
+  const configCourses = JSON.parse(coursesData.dataset.courses);
 
-function showContent() {
+  const sectionsData = document.querySelector('script[data-sections]');
+  const configSections = JSON.parse(sectionsData.dataset.sections);
 
   ReactDOM.render (
     <TeacherHomepage
@@ -18,52 +22,9 @@ function showContent() {
           link: "to wherever"
         }
       ]}
-      courses={[
-        {
-          courseName: "Play Lab",
-          description: "Create a story or make a game with Play Lab!",
-          link: "https://code.org/playlab",
-          image:"photo source",
-          assignedSections: []
-        },
-        {
-          courseName: "CSP Unit 2 - Digital Information",
-          description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-          link: "https://curriculum.code.org/csp/unit2/",
-          image:"photo source",
-          assignedSections: []
-        },
-      ]}
-      sections={[
-        {
-          name: "Algebra Period 1",
-          linkToProgress: "to Progress tab",
-          course: "CS in Algebra",
-          linkToCourse: "to Course",
-          numberOfStudents: 14,
-          linkToStudents: "to Manage Students tab",
-          sectionCode: "ABCDEF"
-        },
-        {
-          name: "Algebra Period 2",
-          linkToProgress: "to Progress tab",
-          course: "CS in Algebra",
-          linkToCourse: "to Course",
-          numberOfStudents: 19,
-          linkToStudents: "to Manage Students tab",
-          sectionCode: "EEB206"
-        },
-        {
-          name: "Period 3",
-          linkToProgress: "to Progress tab",
-          course: "Course 4",
-          linkToCourse: "to Course",
-          numberOfStudents: 22,
-          linkToStudents: "to Manage Students tab",
-          sectionCode: "HPRWHG"
-        },
-      ]}
+      courses={configCourses}
+      sections={configSections}
     />,
-    document.getElementById('container')
+  document.getElementById('teacher-homepage-container')
   );
 }

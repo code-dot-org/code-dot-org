@@ -134,6 +134,18 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
+  def stage_extras
+    authorize! :read, ScriptLevel
+
+    stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
+    @stage_extras = {
+      stage_number: stage.relative_position,
+      next_level_path: stage.script_levels.last.next_level_or_redirect_path_for_user(current_user),
+    }.camelize_keys
+
+    render 'scripts/stage_extras'
+  end
+
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
@@ -143,9 +155,9 @@ class ScriptLevelsController < ApplicationController
     script = Script.get_from_cache(params[:script_id])
 
     if params[:stage_position]
-      stage = script.stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i}.first
+      stage = script.stage_by_relative_position(params[:stage_position])
     else
-      stage = script.stages.select {|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i}.first
+      stage = script.stage_by_relative_position(params[:lockable_stage_position], true)
     end
 
     render json: stage.summary_for_lesson_plans
