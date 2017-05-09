@@ -25,10 +25,9 @@ _Note that this only affects teachers using Units 1 - 3, revisions to Units 4 - 
 
 ### Unit 2
 
-* Modified unit-wide project to remove logistical challenges and increase student choice
+* Personal Web Site project revised to increase student choice and decrease logistical difficulties
 * Decreased reliance on external tools
 * Dispersed unplugged lessons throughout the unit
-* Reduced to 2 chapters
 
 ### Unit 3
 
@@ -61,5 +60,5 @@ The new units will be located at the same URLs as the old ones were, so if you c
 
 ## When will this all happen?
 
-The new versions of Units 1 and 3 will go live at the end of the day **Friday, April 21**, giving you that weekend to transfer your classes over to the old scripts if you need to. The publishing date for Unit 2 revisions has not yet been set - this page will be updated when we are closer to publishing.
+The new versions of Units 1 and 3 went live on **Friday, April 21**. The updated Unit 2 will go live at the end of the day **Friday, May 12**, giving you that weekend to transfer your classes over to the old script if you need to.
 

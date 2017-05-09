@@ -4912,3 +4912,41 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd2-old:
+          stages:
+            Quality Websites:
+              name: Quality Websites
+            Website Design:
+              name: Website Design
+            Describing Web pages:
+              name: Describing Web pages
+            Text on the Web:
+              name: Text on the Web
+            Images in HTML:
+              name: Images in HTML
+            Clean Code and Debugging:
+              name: Clean Code and Debugging
+            Styling Text with CSS:
+              name: Styling Text with CSS
+            Styling Elements with CSS:
+              name: Styling Elements with CSS
+            Multi-Page Websites:
+              name: Multi-Page Websites
+            Classes:
+              name: Classes
+            Peer Review:
+              name: Peer Review
+            Digital Footprint:
+              name: Digital Footprint
+            Publishing a Website:
+              name: Publishing a Website
+            Sources and Search Engines:
+              name: Sources and Search Engines
+            Intellectual Property:
+              name: Intellectual Property
+            'Project: Personal Portfolio Website':
+              name: 'Project: Personal Portfolio Website'
+          title: CSD Unit 2 (DEPRECATED)
+          description_audience: ''
+          description_short: Web Development
+          description: ''
