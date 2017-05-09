@@ -163,8 +163,9 @@ def emit_deploy_metric(deployment_stage, successful)
       }]
     }
   )
-rescue
+rescue => error
   ChatClient.log 'Unable to emit metrics', color: 'red'
+  ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
 end
 
 main if only_one_running?(__FILE__)
