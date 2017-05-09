@@ -1,40 +1,40 @@
 // Code for the Course/Tools Explorer.  Include it once on the page and it will
 // handle both CourseExplorer and ToolsExplorer on the same page.
 
-var detailRowShowing = -1;
-var toolShowing = -1;
+let detailRowShowing = -1;
+let toolShowingIndex = -1;
 
 module.exports.initCourseExplorer = function () {
   $('.tool').click(function () {
-    var row = ($(this).data('row'));
-    var index = ($(this).data('index'));
+    const row = ($(this).data('row'));
+    const index = ($(this).data('index'));
 
-    if (toolShowing === -1) {
+    if (toolShowingIndex === -1) {
       $('#detailrow-' + row).slideDown();
       $('#toolsextra-' + index).fadeIn();
       detailRowShowing = row;
-      toolShowing = index;
-    } else if (toolShowing === index) {
+      toolShowingIndex = index;
+    } else if (toolShowingIndex === index) {
       $('#detailrow-' + detailRowShowing).slideUp();
       $('#toolsextra-' + index).fadeOut();
       detailRowShowing = -1;
-      toolShowing = -1;
+      toolShowingIndex = -1;
     } else if (detailRowShowing === row) {
-      $('#toolsextra-' + toolShowing).fadeOut();
+      $('#toolsextra-' + toolShowingIndex).fadeOut();
       $('#toolsextra-' + index).fadeIn();
-      toolShowing = index;
+      toolShowingIndex = index;
     } else {
       $('#detailrow-' + detailRowShowing).slideUp();
-      $('#toolsextra-' + toolShowing).fadeOut();
+      $('#toolsextra-' + toolShowingIndex).fadeOut();
       $('#detailrow-' + row).slideDown();
       $('#toolsextra-' + index).fadeIn();
       detailRowShowing = row;
-      toolShowing = index;
+      toolShowingIndex = index;
     }
   });
 
   $('.tool_arrow_box_close').click(function () {
     $('.detailrow').slideUp();
-    toolShowing = -1;
+    toolShowingIndex = -1;
   });
 };
