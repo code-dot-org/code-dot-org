@@ -10,6 +10,6 @@ class CoursesController < ApplicationController
       return
     end
 
-    # once we have non-plc courses, we will render them here
+    render 'index'
   end
 end
