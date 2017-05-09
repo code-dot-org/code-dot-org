@@ -946,6 +946,11 @@ $height-to-width: 434 / 477;
       background: none !important;
       fill: white !important;
     }
+
+    html[dir=rtl] & div.sharing-content {
+      margin-left: 225px;
+      margin-right: 10px;
+    }
   }
 
   #puzzleRatingButtons a:hover.puzzle-rating-btn {
