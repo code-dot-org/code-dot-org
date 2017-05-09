@@ -10,14 +10,12 @@ function showCourseOverview() {
 
   // Eventually we want to do this all via redux
   ReactDOM.render(
-    <div>
-      <CourseOverview
-        title={configCourse.title}
-        descriptionStudent={configCourse.description_student}
-        descriptionTeacher={configCourse.description_teacher}
-        viewAs="Teacher"
-      />
-    <pre>{JSON.stringify(configCourse, null, 2)}</pre>
-    </div>
-  , document.getElementById('course_index'));
+    <CourseOverview
+      title={configCourse.title}
+      descriptionStudent={configCourse.description_student}
+      descriptionTeacher={configCourse.description_teacher}
+      viewAs="Teacher"
+      scripts={configCourse.scripts}
+    />,
+  document.getElementById('course_index'));
 }
