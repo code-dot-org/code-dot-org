@@ -21,9 +21,9 @@ class Course < ApplicationRecord
   def summarize
     {
       name: name,
-      title: I18n.t("data.course.name.#{name}.title"),
-      description_student: I18n.t("data.course.name.#{name}.description_student"),
-      description_teacher: I18n.t("data.course.name.#{name}.description_teacher"),
+      title: I18n.t("data.course.name.#{name}.title", default: name),
+      description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
+      description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       scripts: course_scripts.map(&:script).map do |script|
         include_stages = false
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
