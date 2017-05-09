@@ -9,7 +9,7 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #  flex_category     :string(255)
-#  lockable          :boolean
+#  lockable          :boolean          default(FALSE), not null
 #  relative_position :integer          not null
 #
 # Indexes

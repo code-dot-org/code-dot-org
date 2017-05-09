@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505231542) do
+ActiveRecord::Schema.define(version: 20170508234535) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -808,14 +808,14 @@ ActiveRecord::Schema.define(version: 20170505231542) do
   end
 
   create_table "stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",              null: false
+    t.string   "name",                              null: false
     t.integer  "absolute_position"
-    t.integer  "script_id",         null: false
+    t.integer  "script_id",                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "flex_category"
-    t.boolean  "lockable"
-    t.integer  "relative_position", null: false
+    t.boolean  "lockable",          default: false, null: false
+    t.integer  "relative_position",                 null: false
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
