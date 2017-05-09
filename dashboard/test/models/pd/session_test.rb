@@ -52,13 +52,14 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert Pd::Attendance.with_deleted.exists? attendance.attributes
   end
 
-  test 'assign unique codes' do
-    sessions = 2.times.map do
+  test 'assign unique 4 character codes' do
+    sessions = 10.times.map do
       create(:pd_session).tap(&:assign_code)
     end
 
-    assert sessions.all? {|s| s.code.present?}
-    assert_equal 2, sessions.map(&:code).uniq.size
+    codes = sessions.map(&:code)
+    assert codes.all? {|code| code.present? && code.length == 4}
+    assert_equal 10, codes.uniq.size
   end
 
   test 'find by code' do
