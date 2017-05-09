@@ -18,27 +18,21 @@ exports.ForStatementMode = {
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
+ *
+ * @param code {string} - the code to evaluation
+ * @param globals {Object} - An object of globals to be added to the scope of code being executed
+ * @param legacy {boolean} - If true, code will be run natively via an eval-like method,
+ *     otherwise it will use the js interpreter.
+ * @returns undefined unless legacy=true, in which case, it returns whatever the given code returns.
  */
-exports.evalWith = function (code, options, legacy) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function (interpreter, scope) {
-      exports.initJSInterpreter(interpreter, null, null, scope, options);
-    };
-    var myInterpreter = new PatchedInterpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else if (!legacy) {
-    new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
-      marshalNativeToInterpreterObject(interpreter, options, 5, scope);
-    }).run();
-  } else {
+export function evalWith(code, globals, legacy) {
+  if (legacy) {
     // execute JS code "natively"
     var params = [];
     var args = [];
-    for (var k in options) {
+    for (var k in globals) {
       params.push(k);
-      args.push(options[k]);
+      args.push(globals[k]);
     }
     params.push(code);
     var ctor = function () {
@@ -46,8 +40,12 @@ exports.evalWith = function (code, options, legacy) {
     };
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
+  } else {
+    new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+      marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
+    }).run();
   }
-};
+}
 
 /**
  * Generate code for each of the given events, and evaluate it using the
