@@ -37,9 +37,9 @@ class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
   NO = 'No'
 
   def self.options
-    Pd::ProgramRegistration::TRAVEL_OPTIONS.
-      merge(Pd::ProgramRegistration::PHOTO_RELEASE_OPTIONS).
-      merge(Pd::ProgramRegistration::LIABILITY_WAIVER_OPTIONS).
+    Pd::ProgramRegistrationForm::TRAVEL_OPTIONS.
+      merge(Pd::ProgramRegistrationForm::PHOTO_RELEASE_OPTIONS).
+      merge(Pd::ProgramRegistrationForm::LIABILITY_WAIVER_OPTIONS).
       merge(
         {
           confirm_teachercon_date: [
