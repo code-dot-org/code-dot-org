@@ -3,6 +3,7 @@ import {
   apiValidateType,
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
+import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;
@@ -82,5 +83,9 @@ export function analogRead(opts) {
  */
 export function onBoardEvent(opts) {
   // TODO (bbuchanan): Validate arguments?
-  return board.onBoardEvent(opts.component, opts.event, opts.callback);
+  let {component, event, callback} = opts;
+  if (BOARD_EVENT_ALIASES[event]) {
+    event = BOARD_EVENT_ALIASES[event];
+  }
+  component.on(event, callback);
 }

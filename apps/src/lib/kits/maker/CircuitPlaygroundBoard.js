@@ -10,7 +10,6 @@ import {
   componentConstructors
 } from './PlaygroundComponents';
 import {
-  BOARD_EVENT_ALIASES,
   SONG_CHARGE,
   CP_COMMAND
 } from './PlaygroundConstants';
@@ -202,13 +201,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   analogRead(pin, callback) {
     this.fiveBoard_.analogRead(pin, callback);
-  }
-
-  onBoardEvent(component, event, callback) {
-    if (BOARD_EVENT_ALIASES[event]) {
-      event = BOARD_EVENT_ALIASES[event];
-    }
-    component.on(event, callback);
   }
 
   /**
