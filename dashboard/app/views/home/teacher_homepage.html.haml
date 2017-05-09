@@ -6,10 +6,29 @@
     {
       id: script_id,
       script_name: script_name,
-      name: data_t_suffix('script.name', script_name, 'title'),
+      courseName: data_t_suffix('script.name', script_name, 'title'),
       description: data_t_suffix('script.name', script_name, 'description_short'),
       link: script_url(script_id),
-      image: ""
+      image: "",
+      assignedSections:[]
+    }
+  end
+
+  sections = current_user.sections.map do |section|
+
+    if section.script_id
+      courseName = Script.find_by_id(section.script_id)[:name]
+    end
+
+    {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "to Progress tab",
+      course: data_t_suffix('script.name', courseName, 'title'),
+      linkToCourse: "to Course",
+      numberOfStudents: section.students.length,
+      linkToStudents: "to Manage Students tab",
+      sectionCode: section.code
     }
   end
 
@@ -18,4 +37,4 @@
 
 .clear{style: "clear: both"}
 
-%script{ src: minifiable_asset_path('js/home/teacher_homepage.js'), data: {courses: courses.to_json}}
+%script{ src: minifiable_asset_path('js/home/teacher_homepage.js'), data: {courses: courses.to_json, sections: sections.to_json}}
