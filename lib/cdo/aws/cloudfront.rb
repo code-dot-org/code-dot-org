@@ -436,6 +436,9 @@ module AWS
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
         compress: true, # Serve gzip-compressed assets
+        lambda_function_associations: {
+          quantity: 0,
+        },
       }
       behavior[:path_pattern] = path if path
       behavior
