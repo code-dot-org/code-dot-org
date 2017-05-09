@@ -226,6 +226,7 @@ module AWS
         max_by {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate.not_after}.
         try(:certificate_arn)
       {
+        is_ipv6_enabled: false,
         aliases: {
           quantity: cloudfront[:aliases].length, # required
           items: cloudfront[:aliases].empty? ? nil : cloudfront[:aliases],
