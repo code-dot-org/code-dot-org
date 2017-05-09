@@ -47,17 +47,15 @@ table {width: 100%;}
 | All Month | Group 1 Budget Reviews |
 | May 1, 2017 | How to Run Traditional Programs (ECS, CS in Science, CS in Algebra) folder release |
 | May 1, 2017 | Annual Report template shared with Group 1 partners. |
-| May 5, 2017 | **Registration deadline for all TeacherCon 1 teachers accepted during cycles 6 & 7** |
 | May 8, 2017 | Code.org sends decline messages to all pending CS Discoveries and CS Principles TeacherCon teachers not on the waitlist |
-| May 10, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">Planning for the week: Create an amazing summer workshop experience  <br/> Click [here](https://code.zoom.us/j/7601459040) to join the Zoom Meeting. **(Recommended for G1)**</span> |
+| May 12, 2017 | **Registration deadline for all TeacherCon 1 teachers accepted during cycles 6 & 7** |
 | May 15, 2017 | Unclaimed seats for TeacherCon 2 released to waitlisted applicants |
 | May 15, 2017 | All quarterly workshops for the '17-'18 SY must be added to the workshop dashboard. |
-| May 17, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">Planning for the week: logistics and prep for summer workshops<br/> Click [here](https://code.zoom.us/j/7601459040) to join the Zoom Meeting. **(Recommended for G1)**</span> |
+| May 17, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">Planning for the week: summer workshops<br/> Click [here](https://code.zoom.us/j/821609800) to join the Zoom Meeting. **(Recommended for G1)**</span> |
 | May 19, 2017 | Wednesday night event plans due to Regional Manager for TeacherCon Houston |
 | May 19, 2017 | **Registration deadline for all TeacherCon 2 teachers accepted during cycles 6 & 7** |
 | May 20th - 21st, 2017 | <span style="color:green">All TeacherCon Leads Facilitator Training (arrive Friday night)<br/> Location: Chicago, IL<br/></span> |
 | May 30, 2017 | Unclaimed seats for TeacherCon 3 released to waitlisted applicants |
-| May 31, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">How to: debrief the day/week<br/> Click [here](https://code.zoom.us/j/7601459040) to join the Zoom Meeting. **(Recommended for G1)**</span> |
 
 ## June Areas of Focus
 

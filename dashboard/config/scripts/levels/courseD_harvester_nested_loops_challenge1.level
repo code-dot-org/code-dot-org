@@ -34,8 +34,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.\",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f63d2d7720e820a0bcb4b3d7a265df/courseD_harvester_nested_loops_challenge1.mp3\"}]",
-    "contained_level_names": null,
-    "ideal": "9"
+    "ideal": "9",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

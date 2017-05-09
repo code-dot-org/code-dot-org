@@ -9,6 +9,7 @@ def can_see_pd_workshop_dashboard?
 
   dashboard_admin? ||
     have_permission?('workshop_organizer') ||
+    have_permission?('workshop_admin') ||
     have_permission?('facilitator') ||
     have_permission?('district_contact')
 end

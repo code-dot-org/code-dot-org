@@ -10,7 +10,7 @@
 #  user_id                :integer          not null
 #  teacher_application_id :integer
 #
-require 'pd/teachercon_workshops'
+require_dependency 'pd/teachercon_workshops'
 
 class Pd::AcceptedProgram < ActiveRecord::Base
   belongs_to :teacher_application, class_name: 'Pd::TeacherApplication', foreign_key: :teacher_application_id
