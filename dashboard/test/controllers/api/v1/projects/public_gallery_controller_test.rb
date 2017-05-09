@@ -10,6 +10,9 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
         name: 'Charlies App',
         thumbnailUrl: 'https://studio.code.org/charlies_thumbnail.png'
       }.to_json,
+      name: 'Charlie Brown',
+      birthday: 13.years.ago.to_datetime,
+
     }
     stub_projects = [published_applab_project]
 
@@ -94,6 +97,8 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
+    assert_equal '13+', project_row['studentAgeRange']
+    assert_equal 'C', project_row['studentName']
   end
 
   test 'project details are correct listing all published projects' do
@@ -113,11 +118,13 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
+    assert_equal '13+', project_row['studentAgeRange']
+    assert_equal 'C', project_row['studentName']
   end
 
   private
 
   def db_result(result)
-    stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result)))))
+    stub(join: stub(join: stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result)))))))
   end
 end
