@@ -1,1 +1,7 @@
-%h1 Course Page
+- course = local_assigns[:course]
+- course_data = {name: course.name}
+
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/courses/index.js'), data: {courseData: course_data.to_json}}
+
+#course_index
