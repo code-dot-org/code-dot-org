@@ -518,7 +518,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         stage_flex_category = raw_level.delete(:stage_flex_category)
-        stage_lockable = raw_level.delete(:stage_lockable)
+        stage_lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
