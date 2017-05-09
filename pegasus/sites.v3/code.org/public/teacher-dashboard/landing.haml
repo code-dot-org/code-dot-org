@@ -13,7 +13,7 @@ content-type: text/ng-template
     %a{href:CDO.studio_url('/pd/workshop_dashboard')}
       %h3
         Manage PD Workshops
-  -if dashboard_admin? || have_permission?('create_professional_development_workshop')
+  -if dashboard_admin? || have_permission?('create_professional_development_workshop') || have_permission?('workshop_admin')
     %h1
       Old CSF Workshop Dashboard
     %a{href:'/manage-professional-development-workshops'}
