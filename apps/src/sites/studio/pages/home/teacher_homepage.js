@@ -11,8 +11,6 @@ function showTeacherHomepage() {
 
   const sectionsData = document.querySelector('script[data-sections]');
   const configSections = JSON.parse(sectionsData.dataset.sections);
-  console.log(configSections);
-
 
   ReactDOM.render (
     <TeacherHomepage
