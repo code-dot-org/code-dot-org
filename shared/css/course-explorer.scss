@@ -6,9 +6,10 @@ $white: #fff;
 $color_storm_dust_approx: #666;
 $color_gallery_approx: #eee;
 $color_suva_gray_approx: #888;
-$gray:  grey;
+$gray:  #808080;
 $color_alto_approx: #ddd;
-$color_humming_bird_approx: rgb(206,243,246);
+$color_humming_bird_approx: rgb(206, 243, 246);
+$color_border_invisible: rgba(170, 170, 170, 0);
 
 .courses {
   .grouprow {
@@ -31,7 +32,6 @@ $color_humming_bird_approx: rgb(206,243,246);
     cursor: pointer;
   }
   .courserow {
-    border: 0 solid $gray;
     background-color: $color_alto_approx;
     color: $white;
     border: 1px solid $white;
@@ -72,7 +72,6 @@ $color_humming_bird_approx: rgb(206,243,246);
   a {
     color: $white;
     font-size: 12px;
-    margin-left: 10px;
     margin-left: 0;
     font-family: $gotham-regular;
   }
@@ -87,7 +86,7 @@ $color_humming_bird_approx: rgb(206,243,246);
   position: relative;
   background: $color_gallery_approx;
   padding: 5px 10px 5px 5px;
-  &:after {
+  &::after {
     bottom: 100%;
     border: solid transparent;
     content: " ";
@@ -95,7 +94,7 @@ $color_humming_bird_approx: rgb(206,243,246);
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-color: rgba(170, 170, 170, 0);
+    border-color: $color_border_invisible;
     border-bottom-color: $color_gallery_approx;
     border-width: 10px;
     margin-left: -10px;
@@ -104,7 +103,7 @@ $color_humming_bird_approx: rgb(206,243,246);
 .detailcontainer {
   clear: both;
   width: 882px;
-  padding: 10px 0 5px;
+  padding: 10px 0 5px 0;
   box-sizing: border-box;
   .title {
     font-size: 18px;

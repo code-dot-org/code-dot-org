@@ -59,7 +59,7 @@
             - unless course[:starts] == 0
               %div{class: "bar-#{course[:starts]}"}
                 &nbsp;
-            %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "xopacity: #{course[:opacity] || 1}; background-color: #{"#1AC7D6" || course[:color] || '#00adbc'}"}
+            %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "background-color: #{"#1AC7D6" || course[:color] || '#00adbc'}"}
               .title
                 =course[:name]
               - if course[:group]

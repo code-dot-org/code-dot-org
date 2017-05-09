@@ -12,9 +12,7 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 245,
-    width: 420,
-    marginLeft: 25,
-    marginBottom: 25,
+    width: 458,
     float: 'left'
   },
   overlay: {
