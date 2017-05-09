@@ -245,7 +245,9 @@ module AWS
                 origin_ssl_protocols: {
                   quantity: 2,
                   items: %w(SSLv3 TLSv1)
-                }
+                },
+                origin_read_timeout: 5,
+                origin_keepalive_timeout: 30
               },
               custom_headers: {
                 quantity: 0
@@ -434,6 +436,9 @@ module AWS
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
         compress: true, # Serve gzip-compressed assets
+        lambda_function_associations: {
+          quantity: 0,
+        },
       }
       behavior[:path_pattern] = path if path
       behavior

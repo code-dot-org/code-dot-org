@@ -422,6 +422,7 @@ testsContext.keys().forEach(testsContext);
     'projects/index':               './src/sites/studio/pages/projects/index.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
+    'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
