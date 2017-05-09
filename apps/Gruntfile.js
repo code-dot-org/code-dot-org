@@ -460,6 +460,7 @@ testsContext.keys().forEach(testsContext);
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
+    'pd/local_summer_workshop_survey/new': './src/sites/studio/pages/pd/local_summer_workshop_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 

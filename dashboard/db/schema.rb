@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509100000) do
+ActiveRecord::Schema.define(version: 20170509020232) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -430,6 +430,15 @@ ActiveRecord::Schema.define(version: 20170509100000) do
     t.date    "fit3_depart"
     t.string  "fit3_course"
     t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
+  end
+
+  create_table "pd_local_summer_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535
+    t.integer  "day",                            null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id", "day"], name: "index_pd_ls_workshop_survey_on_pd_enrollment_id_and_day", unique: true, using: :btree
   end
 
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

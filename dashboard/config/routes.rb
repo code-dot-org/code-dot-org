@@ -374,6 +374,9 @@ Dashboard::Application.routes.draw do
     post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
+    get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey'
+    get 'workshop_survey/summer/:enrollment_code', action: 'new', controller: 'local_summer_workshop_survey'
+
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
   end
