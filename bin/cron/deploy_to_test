@@ -4,6 +4,7 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/developers_topic'
 require 'cdo/github'
+require 'cdo/infra_test_topic'
 require 'cdo/only_one'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
@@ -12,7 +13,7 @@ TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 def exit_unless_slack_permission
   no_branches = {DTP: DevelopersTopic.dtp?, DTT: DevelopersTopic.dtt?, DTS: DevelopersTopic.dts?}.
     select {|_branch, allowed| !allowed}
-  return unless no_branches.empty?
+  return if no_branches.empty?
 
   ChatClient.message(
     'infra-test',
@@ -25,7 +26,7 @@ end
 def exit_unless_last_dtt_green
   current_sha = GitHub.sha('test')
   green_sha = InfraTestTopic.green_commit
-  return unless current_sha == green_sha
+  return if current_sha == green_sha
 
   ChatClient.message(
     'infra-test',
