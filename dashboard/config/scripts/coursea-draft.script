@@ -90,8 +90,8 @@ level 'courseA_maze_seq10'
 level 'courseA_maze_seq11'
 level 'courseA_maze_seq12'
 level 'courseA_maze_seq13'
-bonus 'courseA_maze_seq_challenge1'
-bonus 'courseA_maze_seq_challenge2'
+bonus 'courseA_maze_seq_challenge1', challenge: true
+bonus 'courseA_maze_seq_challenge2', challenge: true
 
 stage 'Going Places Safely'
 level 'GoingPlacesSafely'
@@ -113,8 +113,8 @@ level 'courseA_collector_loops9'
 level 'courseA_collector_loops10'
 level 'courseA_collector_loops11'
 level 'courseA_collector_loops12'
-bonus 'courseA_collector_loops_challenge1'
-bonus 'courseA_collector_loops_challenge2'
+bonus 'courseA_collector_loops_challenge1', challenge: true
+bonus 'courseA_collector_loops_challenge2', challenge: true
 
 stage 'Loops in Artist'
 level 'courseA_artist_loops1'
@@ -130,8 +130,8 @@ level 'courseA_artist_loops9'
 level 'courseA_artist_loops10'
 level 'courseA_artist_loops11'
 level 'courseA_artist_loops12'
-bonus 'courseA_artist_loops_challenge1'
-bonus 'courseA_artist_loops_challenge2'
+bonus 'courseA_artist_loops_challenge1', challenge: true
+bonus 'courseA_artist_loops_challenge2', challenge: true
 
 stage 'Events: The Big Event'
 level 'BigEvent'
