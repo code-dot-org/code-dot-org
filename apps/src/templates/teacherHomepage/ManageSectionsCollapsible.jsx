@@ -18,7 +18,7 @@ const ManageSectionsCollapsible = React.createClass({
         linkText={i18n.editSections()}
         link="https://code.org/teacher-dashboard#/sections"
       >
-      {sections ? (
+      {sections.length > 0 ? (
         <div>
           <SectionsTable sections={sections}/>
         </div>
