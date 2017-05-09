@@ -1,5 +1,6 @@
-import {assert} from '../util/configuredChai';
-var codegen = require('@cdo/apps/codegen');
+import sinon from 'sinon';
+import {assert, expect} from '../util/configuredChai';
+import * as codegen from '@cdo/apps/codegen';
 
 describe("codegen", function () {
 
@@ -18,6 +19,56 @@ describe("codegen", function () {
     });
     it("with some lines empty", function () {
       assert.deepEqual([0, 3, 4, 6, 9, 10, 11], codegen.calculateCumulativeLength('1;\n\n\r\n2;\n\n'));
+    });
+  });
+
+  describe("evalWith function", () => {
+    let options;
+    beforeEach(() => {
+      options = {
+        add: sinon.spy(),
+        a: 3,
+      };
+      window.nativeAdd = sinon.spy();
+    });
+
+    afterEach(() => {
+      delete window.nativeAdd;
+    });
+
+    it("evaluates a string of code, prepopulating the scope with whatever is in options", () => {
+      expect(codegen.evalWith('add(1,2)', options)).to.be.undefined;
+      expect(options.add).to.have.been.calledWith(1,2);
+      expect(codegen.evalWith('add(a,2)', options)).to.be.undefined;
+      expect(options.add).to.have.been.calledWith(3,2);
+    });
+
+    it("does not give the evaluated code access to native functions", () => {
+      expect(() => codegen.evalWith('nativeAdd(1,2)', options)).to.throw('Unknown identifier: nativeAdd');
+    });
+
+    describe("when running with legacy=true", () => {
+
+      it("the evaluated code will have access to 'native' functions", () => {
+        expect(() => codegen.evalWith('nativeAdd(1,2)', options, true)).not.to.throw;
+        codegen.evalWith('nativeAdd(1,2)', options, true);
+        expect(window.nativeAdd).to.have.been.calledWith(1,2);
+        codegen.evalWith('nativeAdd(1,2)', options, true);
+        expect(window.nativeAdd).to.have.been.calledWith(1,2);
+      });
+
+      it("the evaluated code will have access to functions passed in through options", () => {
+        codegen.evalWith('add(1,2)', options, true);
+        expect(options.add).to.have.been.calledWith(1,2);
+      });
+
+      it("the evaluated code will have access to variables passed in through options", () => {
+        codegen.evalWith('add(a,2)', options, true);
+        expect(options.add).to.have.been.calledWith(3,2);
+        codegen.evalWith('nativeAdd(a,2)', options, true);
+        expect(window.nativeAdd).to.have.been.calledWith(3,2);
+      });
+
     });
   });
 
