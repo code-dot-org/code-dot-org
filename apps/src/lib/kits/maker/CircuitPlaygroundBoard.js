@@ -11,7 +11,8 @@ import {
 } from './PlaygroundComponents';
 import {
   SONG_CHARGE,
-  CP_COMMAND
+  CP_COMMAND,
+  J5_CONSTANTS
 } from './PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -19,14 +20,6 @@ process.hrtime = require('browser-process-hrtime');
 
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
-
-const J5_CONSTANTS = {
-  INPUT: 0,
-  OUTPUT: 1,
-  ANALOG: 2,
-  PWM: 3,
-  SERVO: 4
-};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
