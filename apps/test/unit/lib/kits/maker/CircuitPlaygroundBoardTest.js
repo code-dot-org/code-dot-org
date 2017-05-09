@@ -4,6 +4,7 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -56,9 +57,7 @@ describe('CircuitPlaygroundBoard', () => {
     EventEmitter.prototype.once.restore();
   });
 
-  it('is an EventEmitter', () => {
-    expect(board).to.be.an.instanceOf(EventEmitter);
-  });
+  itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
@@ -162,28 +161,6 @@ describe('CircuitPlaygroundBoard', () => {
           expect(Playground.hasRegisteredSysexResponse).to.be.true;
         });
       });
-    });
-  });
-
-  describe(`installOnInterpreter(jsInterpreter)`, () => {
-    let jsInterpreter;
-
-    beforeEach(() => {
-      jsInterpreter = {
-        createGlobalProperty: sinon.spy(),
-        addCustomMarshalObject: sinon.spy(),
-      };
-      return board.connect().then(() => {
-        board.installOnInterpreter(jsInterpreter);
-      });
-    });
-
-    it('adds component constructors to the customMarshalObjectList', () => {
-      expect(jsInterpreter.addCustomMarshalObject.callCount).to.equal(13);
-    });
-
-    it('adds component constructors as global properties on the jsInterpreter', () => {
-      expect(jsInterpreter.createGlobalProperty).to.have.been.called;
     });
   });
 
@@ -309,35 +286,6 @@ describe('CircuitPlaygroundBoard', () => {
         const arg2 = () => {};
         board.analogRead(pin, arg2);
         expect(playground.analogRead).to.have.been.calledWith(pin, arg2);
-      });
-    });
-  });
-
-  describe(`onBoardEvent(component, event, callback)`, () => {
-    it('forwards the call to the component', () => {
-      const fakeEventEmitter = { on: sinon.spy() };
-      const event = 'someEvent';
-      const callback = () => {};
-      board.onBoardEvent(fakeEventEmitter, event, callback);
-      expect(fakeEventEmitter.on).to.have.been.calledWith(event, callback);
-    });
-
-    describe(`event aliases`, () => {
-      let fakeEventEmitter, callback;
-
-      beforeEach(function () {
-        fakeEventEmitter = { on: sinon.spy() };
-        callback = () => {};
-      });
-
-      it(`aliases 'tap:single' event to 'singleTap'`, function () {
-        board.onBoardEvent(fakeEventEmitter, 'singleTap', callback);
-        expect(fakeEventEmitter.on).to.have.been.calledWith('tap:single', callback);
-      });
-
-      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
-        board.onBoardEvent(fakeEventEmitter, 'doubleTap', callback);
-        expect(fakeEventEmitter.on).to.have.been.calledWith('tap:double', callback);
       });
     });
   });
