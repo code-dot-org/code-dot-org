@@ -113,17 +113,24 @@ module ProjectsList
         # it from :value. :project_type might not be present in unpublished projects.
         type: project[:project_type],
         publishedAt: project[:published_at],
-        studentName: student_name(project),
-        studentAge: student_age(project),
+        # For privacy reasons, include only the first initial of the student's name.
+        studentName: student_initial(project),
+        studentAgeRange: student_age_range(project),
       }.with_indifferent_access
     end
 
-    def student_age(project)
-      ((Date.today - project[:birthday]) / 365).to_i
+    AGE_CUTOFFS = [18, 13, 8, 4].freeze
+
+    # Return the highest age range applicable to the student, e.g.
+    # 18+, 13+, 8+ or 4+
+    def student_age_range(project)
+      age = ((Date.today - project[:birthday]) / 365).to_i
+      age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
+      age_cutoff ? "#{age_cutoff}+" : nil
     end
 
-    def student_name(project)
-      project[:name] ? project[:name][0] : ''
+    def student_initial(project)
+      project[:name] ? project[:name][0].upcase : nil
     end
   end
 end
