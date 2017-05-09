@@ -19,9 +19,7 @@ const ManageSectionsCollapsible = React.createClass({
         link="https://code.org/teacher-dashboard#/sections"
       >
       {sections.length > 0 ? (
-        <div>
-          <SectionsTable sections={sections}/>
-        </div>
+        <SectionsTable sections={sections}/>
       ) : (
         <SetUpMessage type="sections"/>
       )}
