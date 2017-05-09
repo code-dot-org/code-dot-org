@@ -10,8 +10,6 @@ Sequel.migration do
         Text :column_list
 
         DateTime :updated_at, null: false
-
-        
       end
     end
   end
