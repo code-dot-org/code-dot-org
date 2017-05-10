@@ -35,7 +35,11 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    render text: "Edit me"
+    course = Course.find_by_name(params[:course_name])
+
+    # We don't support an edit experience for plc courses
+    raise ActiveRecord::ReadOnlyRecord if course.plc_course
+    render 'course_editor', locals: {course: course}
   end
 
   def course_params

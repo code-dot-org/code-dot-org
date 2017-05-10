@@ -1,0 +1,7 @@
+- course = local_assigns[:course]
+- course_editor_data = {name: course.name}
+
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/courses/course_editor.js'), data: {course_editor: course_editor_data.to_json}}
+
+#course_editor

@@ -430,6 +430,7 @@ testsContext.keys().forEach(testsContext);
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js',
     'courses/course_overview':      './src/sites/studio/pages/courses/course_overview.js',
+    'courses/course_editor':        './src/sites/studio/pages/courses/course_editor.js',
   };
 
   var otherEntries = {
