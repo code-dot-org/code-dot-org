@@ -48,6 +48,7 @@ class ChannelsTest < Minitest::Test
     assert_equal 456, result['abc']
 
     # Check timestamps.
+    puts "test_update_channel results: #{result.inspect}"
     assert_equal created, result['createdAt']
     refute_equal result['createdAt'], result['updatedAt']
     assert (start..DateTime.now).cover? DateTime.parse(result['updatedAt'])
@@ -111,6 +112,55 @@ class ChannelsTest < Minitest::Test
     assert_equal 123, response['abc']
     assert_equal false, response['hidden']
     assert_equal false, response['frozen']
+  end
+
+  def test_publish_and_unpublish_channel
+    start = DateTime.now - 1
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+
+    # initially the project is unpublished
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+
+    # publish the project and validate the result
+    project_type = 'foo'
+    post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+
+    # now the project should appear published
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    assert_equal result['projectType'], 'foo'
+
+    get "/v3/channels"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body).first
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    assert_equal result['projectType'], 'foo'
+
+    # unpublish the project
+    post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+
+    # now the project should appear unpublished
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
   end
 
   def test_abuse
