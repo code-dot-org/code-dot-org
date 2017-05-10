@@ -34,6 +34,7 @@ export default storybook => {
                 assignedSections: []
               },
             ]}
+            sections={[]}
           />
         )
       }

@@ -318,6 +318,7 @@ class Pd::Workshop < ActiveRecord::Base
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     self.started_at = Time.zone.now
+    sessions.each(&:assign_code)
     self.section = Section.create!(
       name: friendly_name,
       user_id: organizer_id,
@@ -332,6 +333,7 @@ class Pd::Workshop < ActiveRecord::Base
   def end!
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
+    sessions.each(&:remove_code)
     save!
   end
 

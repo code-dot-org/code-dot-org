@@ -41,7 +41,7 @@ function generateFakePublicProjectsWithStudentInfo() {
           name: type,
           publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
           studentName: 'Penelope',
-          studentAge: 6 + 3 * i
+          studentAgeRange: '13+'
         })
       ));
     });
@@ -71,7 +71,7 @@ function generateFakePersonalProjects() {
       name: "Personal " + i,
       updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
       studentName: 'Penelope',
-      studentAge: 8,
+      studentAgeRange: '8+',
     })
   ));
   return personalProjects;
@@ -84,12 +84,12 @@ function generateFakeClassProjects() {
   classProjects.applab.push(generateFakeProject({
     name: "Mouse Maze",
     studentName: "Maisy",
-    studentAge: 8,
+    studentAgeRange: '8+',
   }));
   classProjects.applab.push(generateFakeProject({
     name: "Furry Frenzy",
     studentName: "Felix",
-    studentAge: 8,
+    studentAgeRange: '8+',
   }));
   return classProjects;
 }
