@@ -88,6 +88,7 @@ module Honeybadger
   # Returns all issues (across cronjobs, dashboard, and pegasus) that have occured since midnight.
   # @return [Array[Hash]] An array of hashes summarizing the recent issues.
   def self.get_recent_issues
+    raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
     issues = []
     midnight_epoch = Time.now.to_i / 86400 * 86400
 

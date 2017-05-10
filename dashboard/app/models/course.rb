@@ -16,4 +16,5 @@
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
+  has_many :course_scripts
 end

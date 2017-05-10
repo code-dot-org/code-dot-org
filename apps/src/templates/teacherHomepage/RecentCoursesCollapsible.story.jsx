@@ -9,7 +9,9 @@ export default storybook => {
         name: "Recent Courses - no courses yet",
         description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
-          <RecentCoursesCollapsible/>
+          <RecentCoursesCollapsible
+            courses={[]}
+          />
         )
       },
       {

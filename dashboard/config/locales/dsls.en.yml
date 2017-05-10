@@ -555,6 +555,7 @@ en:
       CSD U2 L1 Overview:
         description here: description here
         title: title
+      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         description here: description here
         title: title
@@ -571,6 +572,9 @@ en:
         description here: description here
         title: title
       CSD U2 L7 Overview: {}
+      CSD U2 Lesson 6 Overview:
+        description here: description here
+      CSD U2 Lesson 9 Overview: {}
       CSD U2 PSP Programming:
         description here: description here
         title: title

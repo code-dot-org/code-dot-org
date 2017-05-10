@@ -1053,7 +1053,7 @@ Bounce.execute = function () {
   studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp().reset(false);
 
-  codegen.evalWithEvents({Bounce: api}, events).forEach(hook => {
+  codegen.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
     Bounce[hook.name] = hook.func;
   });
 

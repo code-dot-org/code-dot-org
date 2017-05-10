@@ -4,6 +4,8 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @teacher_application = create :pd_teacher_application
+    @workshop_admin = create :workshop_admin
+    @teacher = create :teacher
   end
 
   # Both teachers and students can see the teacher application form.
@@ -13,14 +15,14 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
   test_user_gets_response_for :new, user: :student
   test_redirect_to_sign_in_for :new
 
-  def self.test_admin_only(method, action, success_response, params = nil)
-    test_user_gets_response_for action, user: :teacher, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: :admin, method: method, params: params, response: success_response
+  def self.test_workshop_admin_only(method, action, success_response, params = nil)
+    test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden
+    test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: success_response
   end
 
-  test_admin_only :get, :manage, :success
-  test_admin_only :get, :edit, :success, -> {{teacher_application_id: @teacher_application.id}}
-  test_admin_only :patch, :update, :redirect, -> do
+  test_workshop_admin_only :get, :manage, :success
+  test_workshop_admin_only :get, :edit, :success, -> {{teacher_application_id: @teacher_application.id}}
+  test_workshop_admin_only :patch, :update, :redirect, -> do
     {
       teacher_application_id: @teacher_application.id,
 
@@ -31,6 +33,6 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
     }
   end
 
-  test_admin_only :get, :construct_email, :success, -> {{teacher_application_id: @teacher_application.id}}
-  test_admin_only :post, :send_email, :success, -> {{teacher_application_id: @teacher_application.id}}
+  test_workshop_admin_only :get, :construct_email, :success, -> {{teacher_application_id: @teacher_application.id}}
+  test_workshop_admin_only :post, :send_email, :success, -> {{teacher_application_id: @teacher_application.id}}
 end
