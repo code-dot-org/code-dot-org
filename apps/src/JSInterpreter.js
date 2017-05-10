@@ -7,59 +7,69 @@ import {getStore} from './redux';
 
 import { setIsDebuggerPaused } from './redux/runState';
 
-/**
- * Create a JSInterpreter object. This object wraps an Interpreter object and
- * adds stepping, batching of steps, code highlighting, error handling,
- * breakpoints, general debug capabilities (step in, step out, step over), and
- * an optional event queue.
- * @constructor
- * @param {!Object} options
- * @param {!StudioApp} options.studioApp
- * @param {function} [options.shouldRunAtMaxSpeed]
- * @param {number} [options.maxInterpreterStepsPerTick]
- * @param {Object} [options.customMarshalGlobalProperties]
- * @param {boolean} [options.logExecution] if true, executionLog[] be populated
- */
-var JSInterpreter = module.exports = function (options) {
-  this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function () { return true; };
-  this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
-  this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
-  this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
+export default class JSInterpreter {
+  /**
+   * Create a JSInterpreter object. This object wraps an Interpreter object and
+   * adds stepping, batching of steps, code highlighting, error handling,
+   * breakpoints, general debug capabilities (step in, step out, step over), and
+   * an optional event queue.
+   * @constructor
+   * @param {!Object} options
+   * @param {!StudioApp} options.studioApp
+   * @param {function} [options.shouldRunAtMaxSpeed]
+   * @param {number} [options.maxInterpreterStepsPerTick]
+   * @param {Object} [options.customMarshalGlobalProperties]
+   * @param {Object} [options.customMarshalBlockedProperties]
+   * @param {boolean} [options.logExecution] if true, executionLog[] be populated
+   */
+  constructor({
+    studioApp,
+    shouldRunAtMaxSpeed,
+    maxInterpreterStepsPerTick,
+    customMarshalGlobalProperties,
+    customMarshalBlockedProperties,
+    logExecution,
+  }) {
+    this.studioApp = studioApp;
+    this.shouldRunAtMaxSpeed = shouldRunAtMaxSpeed || function () { return true; };
+    this.maxInterpreterStepsPerTick = maxInterpreterStepsPerTick || 10000;
+    this.customMarshalGlobalProperties = customMarshalGlobalProperties || {};
+    this.customMarshalBlockedProperties = customMarshalBlockedProperties || [];
 
-  // Publicly-exposed events that anyone with access to the JSInterpreter can
-  // observe and respond to.
+    // Publicly-exposed events that anyone with access to the JSInterpreter can
+    // observe and respond to.
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onNextStepChanged = new ObservableEventDEPRECATED();
-  this._runStateUpdater = this.onNextStepChanged.register(() => {
-    getStore().dispatch(setIsDebuggerPaused(
-      this.paused,
-      this.nextStep
-    ));
-  });
+    /** @type {ObservableEventDEPRECATED} */
+    this.onNextStepChanged = new ObservableEventDEPRECATED();
+    this._runStateUpdater = this.onNextStepChanged.register(() => {
+      getStore().dispatch(setIsDebuggerPaused(
+        this.paused,
+        this.nextStep
+      ));
+    });
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onPause = new ObservableEventDEPRECATED();
+    /** @type {ObservableEventDEPRECATED} */
+    this.onPause = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onExecutionError = new ObservableEventDEPRECATED();
+    /** @type {ObservableEventDEPRECATED} */
+    this.onExecutionError = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onExecutionWarning = new ObservableEventDEPRECATED();
+    /** @type {ObservableEventDEPRECATED} */
+    this.onExecutionWarning = new ObservableEventDEPRECATED();
 
-  this.paused = false;
-  this.yieldExecution = false;
-  this.startedHandlingEvents = false;
-  this.executionError = null;
-  this.nextStep = StepType.RUN;
-  this.maxValidCallExpressionDepth = 0;
-  this.isExecuting = false;
-  this.callExpressionSeenAtDepth = [];
-  this.stoppedAtBreakpointRows = [];
-  this.logExecution = options.logExecution;
-  this.executionLog = [];
-};
+    this.paused = false;
+    this.yieldExecution = false;
+    this.startedHandlingEvents = false;
+    this.executionError = null;
+    this.nextStep = StepType.RUN;
+    this.maxValidCallExpressionDepth = 0;
+    this.isExecuting = false;
+    this.callExpressionSeenAtDepth = [];
+    this.stoppedAtBreakpointRows = [];
+    this.logExecution = logExecution;
+    this.executionLog = [];
+  }
+}
 
 JSInterpreter.baseHasProperty = PatchedInterpreter.prototype.hasProperty;
 JSInterpreter.baseGetProperty = PatchedInterpreter.prototype.getProperty;
