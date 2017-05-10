@@ -40,7 +40,7 @@
     %span.dropdown{style: 'position: absolute; right: 25px'}
       Show
       %button.btn.btn-default.dropdown-toggle{'data-toggle': 'dropdown'}
-        = @teacher_applications.limit_value
+        = params[:page_size] || @teacher_applications.limit_value
         %span.caret
       %ul.dropdown-menu
         - %w(25 50 All).each do |page_size|

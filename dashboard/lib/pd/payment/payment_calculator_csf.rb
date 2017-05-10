@@ -26,8 +26,8 @@ module Pd::Payment
     # @param workshop [Pd::Workshop]
     # @return [Array<SessionAttendanceSummary>] summary of attendance for each session.
     def get_session_attendance_summaries(workshop)
-      # Anyone in the section with an enrollment counts as attended for CSF
-      teacher_ids = workshop.section.students.pluck :id
+      # Anyone in the section (even if it's been deleted) with an enrollment counts as attended for CSF
+      teacher_ids = Follower.with_deleted.where(section_id: workshop.section_id).pluck(:student_user_id)
 
       workshop_enrollments = workshop.enrollments.all
       enrollment_ids = teacher_ids.map do |teacher_id|
