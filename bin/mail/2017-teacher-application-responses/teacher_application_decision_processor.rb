@@ -217,22 +217,24 @@ class TeacherApplicationDecisionProcessor
   end
 
   def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override)
-    if program.present? && program != teacher_application.selected_course
-      puts "  Updating selected course from #{teacher_application.selected_course} to #{program}"
-      teacher_application.update_application_hash('selectedCourse': program)
+    update_fields = {}
+
+    if program != teacher_application.selected_course
+      puts "  Updating selected course from '#{teacher_application.selected_course}' to '#{program}'"
+      update_fields[:selected_course] = program
     end
 
-    if accepted_workshop.present? && accepted_workshop != teacher_application.accepted_workshop
-      puts "  Updating selected course from #{teacher_application.accepted_workshop} to #{accepted_workshop}"
-      teacher_application.accepted_workshop = accepted_workshop
+    if accepted_workshop != teacher_application.accepted_workshop
+      puts "  Updating accepted workshop from '#{teacher_application.accepted_workshop}' to '#{accepted_workshop}'"
+      update_fields[:accepted_workshop] = accepted_workshop
     end
 
-    if regional_partner_override.present? && regional_partner_override != teacher_application.regional_partner_name
+    if regional_partner_override != teacher_application.regional_partner_name
       puts "  Updating regional partner from '#{teacher_application.regional_partner_name}' to '#{regional_partner_override}'"
-      teacher_application.regional_partner_override = regional_partner_override
+      update_fields[:regional_partner_override] = regional_partner_override
     end
 
-    teacher_application.save!(validate: false)
+    teacher_application.update! update_fields unless update_fields.empty?
   end
 
   def update_primary_email(teacher_application, primary_email)
