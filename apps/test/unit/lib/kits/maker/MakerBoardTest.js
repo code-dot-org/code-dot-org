@@ -2,6 +2,7 @@
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../util/configuredChai';
+import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -128,26 +129,149 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
               .to.have.length(CONSTRUCTOR_COUNT + COMPONENT_COUNT);
         });
 
-        [
-          'board',
-          'colorLeds',
-          'led',
-          'toggleSwitch',
-          'buzzer',
-          'soundSensor',
-          'lightSensor',
-          'tempSensor',
-          'accelerometer',
-          'buttonL',
-          'buttonR',
-          'INPUT',
-          'OUTPUT',
-          'ANALOG',
-          'PWM',
-          'SERVO',
-        ].forEach(componentName => {
-          it(componentName, () => {
-            expect(interpreter.globalProperties).to.have.ownProperty(componentName);
+        describe('led', () => {
+          function expectLedToHaveFunction(fnName) {
+            expect(jsInterpreter.globalProperties.led[fnName]).to.be.a('function');
+          }
+
+          // Set of required functions derived from our dropletConfig
+          ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
+            it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
+          });
+        });
+
+        describe('colorLeds[]', () => {
+          function expectEachColorLedToHaveFunction(fnName) {
+            jsInterpreter.globalProperties.colorLeds.forEach(led => {
+              expect(led[fnName]).to.be.a('function');
+            });
+          }
+
+          it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
+            expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to.be.true;
+            expect(jsInterpreter.globalProperties.colorLeds).to.have.length(N_COLOR_LEDS);
+          });
+
+          // Set of required functions derived from our dropletConfig
+          ['on', 'off', 'toggle', 'blink', 'stop', 'intensity', 'color'].forEach(fnName => {
+            it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
+          });
+        });
+
+        describe('buzzer', () => {
+          function expectBuzzerToHaveFunction(fnName) {
+            expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a('function');
+          }
+
+          // Set of required functions derived from our dropletConfig
+          ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
+            it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
+          });
+        });
+
+        describe('toggleSwitch', () => {
+          it('isOpen', () => {
+            expect(jsInterpreter.globalProperties.toggleSwitch.isOpen).to.be.a('boolean');
+          });
+        });
+
+        ['soundSensor', 'lightSensor'].forEach(sensorName => {
+          describe(sensorName, () => {
+            let component;
+
+            beforeEach(() => {
+              component = jsInterpreter.globalProperties[sensorName];
+            });
+
+            it('start()', () => {
+              expect(component.start).to.be.a('function');
+            });
+
+            it('value', () => {
+              expect(component).to.have.property('value');
+            });
+
+            it('getAveragedValue()', () => {
+              expect(component.getAveragedValue).to.be.a('function');
+              expect(component.getAveragedValue()).to.be.a('number');
+            });
+
+            it('setScale()', () => {
+              expect(component.setScale).to.be.a('function');
+            });
+
+            it('threshold', () => {
+              expect(component.threshold).to.be.a('number');
+            });
+          });
+        });
+
+        describe('tempSensor', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.tempSensor;
+          });
+
+          it('F', () => {
+            expect(component).to.have.property('F');
+          });
+
+          it('C', () => {
+            expect(component).to.have.property('C');
+          });
+        });
+
+        describe('accelerometer', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.accelerometer;
+          });
+
+          it('start()', () => expect(component.start).to.be.a('function'));
+          it('getOrientation()', () => expect(component.getOrientation).to.be.a('function'));
+          it('getAcceleration()', () => expect(component.getAcceleration).to.be.a('function'));
+        });
+
+        ['buttonL', 'buttonR'].forEach(button => {
+          describe(button, () => {
+            let component;
+
+            beforeEach(() => {
+              component = jsInterpreter.globalProperties[button];
+            });
+
+            it('isPressed', () => expect(component.isPressed).to.be.a('boolean'));
+            it('holdtime', () => expect(component.holdtime).to.be.a('number'));
+          });
+        });
+
+        describe('board', () => {
+          it('exists', () => {
+            expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
+          });
+        });
+
+        describe('Constants', () => {
+          it('INPUT', () => {
+            expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
+          });
+
+          it('OUTPUT', () => {
+            expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
+          });
+
+          it('ANALOG', () => {
+            expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
+          });
+
+          it('PWM', () => {
+            expect(jsInterpreter.globalProperties.PWM).to.equal(3);
+          });
+
+          it('SERVO', () => {
+            expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
           });
         });
       });
@@ -196,6 +320,8 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           expect(retVal).to.be.undefined;
         });
       });
+
+      // TODO: Test that callback is called
     });
 
     /**
@@ -226,6 +352,8 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           expect(retVal).to.be.undefined;
         });
       });
+
+      // TODO: Test that callback is called
     });
   });
 }
