@@ -13,7 +13,7 @@ export default storybook => {
           levels: []
         }
       ],
-      focusAreaPositions: [],
+      focusAreaStageIds: [],
       isSummaryView: false,
     }
   };

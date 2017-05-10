@@ -307,7 +307,7 @@ export const determineInstructionsConstants = config => {
   // the overlay. Otherwise, show it exactly once on the very first
   // level a user looks at.
   let overlaySeen = tryGetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, false);
-  let shouldShowOverlay = hasInstructionsToShow &&
+  let shouldShowOverlay = hasInstructionsToShow && !hasContainedLevels &&
       (config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen);
   if (shouldShowOverlay) {
     trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);

@@ -5,7 +5,7 @@ const defaultData = {
   channel: 'abcdef',
   name: 'Puppy Playdate',
   studentName: 'Penelope',
-  studentAge: 8,
+  studentAgeRange: '8+',
   type: 'applab',
   publishedAt: '2016-12-31T23:59:59.999-08:00',
   publishedToPublic: false,

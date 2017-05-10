@@ -31,7 +31,7 @@ const CourseProgress = React.createClass({
     perLevelProgress: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
     professionalLearningCourse: React.PropTypes.bool,
-    focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
+    focusAreaStageIds: React.PropTypes.arrayOf(React.PropTypes.number),
     stages: React.PropTypes.arrayOf(stageShape),
     peerReviewStage: stageShape,
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -43,7 +43,7 @@ const CourseProgress = React.createClass({
       stages,
       peerReviewStage,
       professionalLearningCourse,
-      focusAreaPositions,
+      focusAreaStageIds,
       scriptName,
       viewAs,
       isRtl,
@@ -97,7 +97,7 @@ const CourseProgress = React.createClass({
                   <CourseProgressRow
                     stage={stage}
                     key={stage.name}
-                    isFocusArea={focusAreaPositions.indexOf(count++) > -1}
+                    isFocusArea={focusAreaStageIds.includes(stage.id)}
                     professionalLearningCourse={professionalLearningCourse}
                   />
                 )}
@@ -115,7 +115,7 @@ export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,
   scriptName: state.progress.scriptName,
   professionalLearningCourse: state.progress.professionalLearningCourse,
-  focusAreaPositions: state.progress.focusAreaPositions,
+  focusAreaStageIds: state.progress.focusAreaStageIds,
   stages: state.progress.stages,
   peerReviewStage: state.progress.peerReviewStage,
   viewAs: state.stageLock.viewAs,
