@@ -79,6 +79,6 @@ class Pd::Session < ActiveRecord::Base
   private
 
   def unused_random_code
-    CodeGeneration.random_code 4, reject_if: ->(code) {Pd::Session.exists?(code: code)}
+    CodeGeneration.random_unique_code length: 4, model: Pd::Session
   end
 end
