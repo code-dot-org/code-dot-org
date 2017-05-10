@@ -1,11 +1,11 @@
 module DashboardHelpers
-  @@required_called = false
-
   # Requires the full rails environment. Use sparingly, known to take 20-30s.
   def require_rails_env
-    return if @@required_called = true
+    puts 'Requiring rails env'
+    start = Time.now
     require File.expand_path('../../../../config/environment.rb', __FILE__)
-    @@required_called = true
+    finish = Time.now
+    puts "Requiring rails env took #{finish - start} seconds"
   end
 end
 
