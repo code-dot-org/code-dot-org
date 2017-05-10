@@ -25,6 +25,8 @@
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
+require_dependency 'cdo/code_generation'
+
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
@@ -217,9 +219,6 @@ class Pd::Enrollment < ActiveRecord::Base
   private
 
   def unused_random_code
-    loop do
-      code = SecureRandom.hex(10)
-      return code unless Pd::Enrollment.exists?(code: code)
-    end
+    CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

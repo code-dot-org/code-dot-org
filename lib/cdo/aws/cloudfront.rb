@@ -247,8 +247,8 @@ module AWS
                   quantity: 2,
                   items: %w(SSLv3 TLSv1)
                 },
-                origin_read_timeout: 5,
-                origin_keepalive_timeout: 30
+                origin_read_timeout: 30,
+                origin_keepalive_timeout: 5
               },
               custom_headers: {
                 quantity: 0
