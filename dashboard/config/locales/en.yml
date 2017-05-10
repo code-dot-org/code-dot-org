@@ -182,6 +182,8 @@ en:
       instructions: "Enter your email address below and we'll send you password reset instructions."
       email: 'Email address'
       submit: 'Submit'
+    reset_errors:
+      invalid_email: '%{email} appears invalid. Please contact customer support at support@code.org for further assistance.'
     change_form:
       title: 'Change your password'
       new_password: 'New password'

@@ -789,6 +789,13 @@ class UserTest < ActiveSupport::TestCase
     assert ActionMailer::Base.deliveries.empty?
   end
 
+  test 'provides helpful error on bad email address' do
+    create :user, email: 'bounce@bounce.xyz'
+    error_user = User.send_reset_password_instructions(email: 'bounce@bounce.xyz')
+    assert error_user.errors[:email]
+    # Note that we do attempt to send the email, necessary to discover that the address is bad.
+  end
+
   test 'send reset password for student' do
     email = 'email@email.xx'
     student = create :student, password: 'oldone', email: email
