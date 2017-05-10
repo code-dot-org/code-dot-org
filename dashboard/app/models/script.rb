@@ -63,7 +63,7 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course?
-      course = Course.find_or_create_by!(name: professional_learning_course, skip_name_format_validation: true) do |new_course|
+      course = Course.find_or_create_by!(name: professional_learning_course) do |new_course|
         Plc::Course.create!(course: new_course)
       end
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
@@ -165,7 +165,7 @@ class Script < ActiveRecord::Base
 
   # Find the lockable or non-locakble stage based on its relative position.
   # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
-  def stage_by_relative_position(position, lockable = false)
+  def stage_by_relative_position(position, lockable = [false, nil])
     stages.where(lockable: lockable).find_by!(relative_position: position)
   end
 
@@ -598,7 +598,7 @@ class Script < ActiveRecord::Base
         script_level.save! if script_level.changed?
         (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
-          if stage_lockable
+          if stage_lockable == true
             stage.assign_attributes(relative_position: (lockable_count += 1))
           else
             stage.assign_attributes(relative_position: (non_lockable_count += 1))
