@@ -72,6 +72,11 @@ export default class JSInterpreter {
     this.logExecution = logExecution;
     this.executionLog = [];
   }
+
+  addCustomMarshalObject(config) {
+    // TODO (pcardune): validate config format.
+    this.customMarshalObjectList.push(config);
+  }
 }
 
 JSInterpreter.baseHasProperty = PatchedInterpreter.prototype.hasProperty;
