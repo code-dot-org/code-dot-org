@@ -165,31 +165,25 @@ describe('CircuitPlaygroundBoard', () => {
     });
   });
 
-  describe(`installOnInterpreter(codegen, jsInterpreter)`, () => {
-    it('adds component constructors to the customMarshalObjectList', () => {
+  describe(`installOnInterpreter(jsInterpreter)`, () => {
+    let jsInterpreter;
+
+    beforeEach(() => {
+      jsInterpreter = {
+        createGlobalProperty: sinon.spy(),
+        addCustomMarshalObject: sinon.spy(),
+      };
       return board.connect().then(() => {
-        const codegen = {
-          customMarshalObjectList: []
-        };
-        const interpreter = {
-          createGlobalProperty: sinon.spy()
-        };
-        board.installOnInterpreter(codegen, interpreter);
-        expect(codegen.customMarshalObjectList).to.have.length(13);
+        board.installOnInterpreter(jsInterpreter);
       });
     });
 
-    it('adds component constructors as global properties on the interpreter', () => {
-      return board.connect().then(() => {
-        const codegen = {
-          customMarshalObjectList: []
-        };
-        const interpreter = {
-          createGlobalProperty: sinon.spy()
-        };
-        board.installOnInterpreter(codegen, interpreter);
-        expect(interpreter.createGlobalProperty).to.have.been.called;
-      });
+    it('adds component constructors to the customMarshalObjectList', () => {
+      expect(jsInterpreter.addCustomMarshalObject.callCount).to.equal(13);
+    });
+
+    it('adds component constructors as global properties on the jsInterpreter', () => {
+      expect(jsInterpreter.createGlobalProperty).to.have.been.called;
     });
   });
 
