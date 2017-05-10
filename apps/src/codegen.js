@@ -29,9 +29,11 @@ exports.evalWith = function (code, options, legacy) {
     // interpret the JS program all at once:
     myInterpreter.run();
   } else if (!legacy) {
-    new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+    const myInterpreter = new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, options, 5, scope);
-    }).run();
+    });
+    myInterpreter.run();
+    return myInterpreter;
   } else {
     // execute JS code "natively"
     var params = [];
