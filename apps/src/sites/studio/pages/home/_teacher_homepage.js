@@ -8,6 +8,8 @@ $(document).ready(showTeacherHomepage);
 function showTeacherHomepage() {
   const coursesData = document.querySelector('script[data-courses]');
   const configCourses = JSON.parse(coursesData.dataset.courses);
+
+  const sectionsData = document.querySelector('script[data-sections]');
   const configSections = JSON.parse(sectionsData.dataset.sections);
 
   ReactDOM.render (

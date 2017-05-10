@@ -429,8 +429,7 @@ testsContext.keys().forEach(testsContext);
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/_teacher_homepage':       './src/sites/studio/pages/home/_teacher_homepage.js',
-    'home/_recent_courses':         './src/sites/studio/pages/home/_recent_courses.js',
-    'home/_link_blocks':            './src/sites/studio/pages/home/_link_blocks.js',
+    'home/_student_homepage':       './src/sites/studio/pages/home/_student_homepage.js',
     'home/courses':                 './src/sites/studio/pages/home/courses.js'
   };
 
