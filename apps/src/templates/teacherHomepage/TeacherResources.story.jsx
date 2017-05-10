@@ -1,15 +1,15 @@
 import React from 'react';
-import Resources from './Resources';
+import TeacherResources from './TeacherResources';
 
 export default storybook => {
   return storybook
-    .storiesOf('Resources', module)
+    .storiesOf('TeacherResources', module)
     .addStoryTable([
       {
         name: 'Resources for teachers',
-        description: `This is the Resources section that will be used on the teacher homepage.`,
+        description: `This is the TeacherResources section that will be used on the teacher homepage.`,
         story: () => (
-          <Resources/>
+          <TeacherResources/>
         )
       },
     ]);
