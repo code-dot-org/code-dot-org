@@ -34,7 +34,7 @@ const initialState = {
   // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
-  focusAreaPositions: [],
+  focusAreaStageIds: [],
   peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
@@ -102,7 +102,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       changeFocusAreaPath: action.changeFocusAreaPath,
-      focusAreaPositions: action.focusAreaPositions
+      focusAreaStageIds: action.focusAreaStageIds
     };
   }
 
@@ -236,10 +236,10 @@ export const mergePeerReviewProgress = peerReviewsPerformed => ({
   peerReviewsPerformed
 });
 
-export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
+export const updateFocusArea = (changeFocusAreaPath, focusAreaStageIds) => ({
   type: UPDATE_FOCUS_AREAS,
   changeFocusAreaPath,
-  focusAreaPositions
+  focusAreaStageIds
 });
 
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
@@ -266,7 +266,7 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  */
 const lessonFromStageAtIndex = (state, stageIndex) => ({
   ...lessonFromStage(state.stages[stageIndex]),
-  isFocusArea: state.focusAreaPositions.includes(state.stages[stageIndex].position)
+  isFocusArea: state.focusAreaStageIds.includes(state.stages[stageIndex].id)
 });
 const lessonFromStage = stage => _.pick(stage, [
   'name',

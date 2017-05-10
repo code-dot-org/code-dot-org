@@ -2,7 +2,7 @@
  * @file Static interface to Maker Toolkit, to simplify App Lab code interfacing
  * with maker and provide clean setup/cancel/reset patterns.
  */
-import codegen from '../../../codegen';
+import * as codegen from '../../../codegen';
 import {getStore} from '../../../redux';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 import * as commands from './commands';

@@ -17,6 +17,7 @@
 class Pd::RegionalPartnerProgramRegistration < Pd::ProgramRegistration
   def self.required_fields
     [
+      :confirm_teachercon_date,
       :full_name,
       :email,
       :contact_name,
