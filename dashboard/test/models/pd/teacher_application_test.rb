@@ -36,7 +36,8 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   end
 
   test 'required application field validations' do
-    teacher_application = build :pd_teacher_application, application: {}
+    teacher_application = build :pd_teacher_application
+    teacher_application.application_hash = {}
 
     refute teacher_application.valid?
     # Three fields are validated outside the list of validated fields
@@ -332,6 +333,37 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     Pd::ProgramRegistrationValidation.expects(:validate).with(registration_data)
     mock_query_result.expects(:update)
     application.save!
+  end
+
+  test 'email field assignments match application' do
+    primary_email_1 = 'primary1@school.edu'
+    secondary_email_1 = 'secondary1@school.edu'
+    application = build :pd_teacher_application, primary_email: primary_email_1, secondary_email: secondary_email_1
+
+    assert_equal primary_email_1, application.application_hash['primaryEmail']
+    assert_equal primary_email_1, application.primary_email
+    assert_equal secondary_email_1, application.application_hash['secondaryEmail']
+    assert_equal secondary_email_1, application.secondary_email
+
+    # Verify new direct fields values are reflected in the application
+    primary_email_2 = 'primary2@school.edu'
+    secondary_email_2 = 'secondary2@school.edu'
+    application.primary_email = primary_email_2
+    assert_equal primary_email_2, application.application_hash['primaryEmail']
+    application.secondary_email = secondary_email_2
+    assert_equal secondary_email_2, application.application_hash['secondaryEmail']
+
+    # Verify new application values are reflected in the direct fields
+    primary_email_3 = 'primary3@school.edu'
+    secondary_email_3 = 'secondary3@school.edu'
+    application.update_application_hash(primaryEmail: primary_email_3, secondaryEmail: secondary_email_3)
+    assert_equal primary_email_3, application.primary_email
+    assert_equal secondary_email_3, application.secondary_email
+
+    # Finally, verify non-email fields in the application do not modify the direct email fields
+    application.update_application_hash(selectedCourse: 'csp')
+    assert_equal primary_email_3, application.primary_email
+    assert_equal secondary_email_3, application.secondary_email
   end
 
   private
