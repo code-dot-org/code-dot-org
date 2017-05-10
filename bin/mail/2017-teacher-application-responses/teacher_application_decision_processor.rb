@@ -220,17 +220,17 @@ class TeacherApplicationDecisionProcessor
     update_fields = {}
 
     if program != teacher_application.selected_course
-      puts "  Updating selected course from '#{teacher_application.selected_course}' to '#{program}'"
+      puts "\tUpdating selected course from '#{teacher_application.selected_course}' to '#{program}'"
       update_fields[:selected_course] = program
     end
 
     if accepted_workshop != teacher_application.accepted_workshop
-      puts "  Updating accepted workshop from '#{teacher_application.accepted_workshop}' to '#{accepted_workshop}'"
+      puts "\tUpdating accepted workshop from '#{teacher_application.accepted_workshop}' to '#{accepted_workshop}'"
       update_fields[:accepted_workshop] = accepted_workshop
     end
 
     if regional_partner_override != teacher_application.regional_partner_name
-      puts "  Updating regional partner from '#{teacher_application.regional_partner_name}' to '#{regional_partner_override}'"
+      puts "\tUpdating regional partner from '#{teacher_application.regional_partner_name}' to '#{regional_partner_override}'"
       update_fields[:regional_partner_override] = regional_partner_override
     end
 
@@ -238,7 +238,7 @@ class TeacherApplicationDecisionProcessor
   end
 
   def update_primary_email(teacher_application, primary_email)
-    puts "  Updating primary email from #{teacher_application.primary_email} to #{primary_email}"
+    puts "\tUpdating primary email from #{teacher_application.primary_email} to #{primary_email}"
     teacher_application.update!(primary_email: primary_email)
   end
 
