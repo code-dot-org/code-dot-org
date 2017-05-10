@@ -15,7 +15,7 @@ export let VisualizationOverlay = React.createClass({
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     areOverlaysVisible: React.PropTypes.bool.isRequired,
-    areRunningOverlaysVisible: React.PropTypes.bool.isRequired,
+    areRunStateOverlaysVisible: React.PropTypes.bool.isRequired,
     onMouseMove: React.PropTypes.func,
     children: React.PropTypes.node,
   },
@@ -87,20 +87,7 @@ export let VisualizationOverlay = React.createClass({
 
   renderOverlays() {
     return React.Children.map(this.props.children, (child, index) => {
-      if (!child.props.showWhileRunning) {
-        return React.cloneElement(child, {
-          key: index,
-          width: this.props.width,
-          height: this.props.height,
-          mouseX: this.state.mouseX,
-          mouseY: this.state.mouseY
-        });
-      }
-    });
-  },
-  renderOverlaysWhenRunning() {
-    return React.Children.map(this.props.children, (child, index) => {
-      if (child.props.showWhileRunning) {
+      if ((child.props.showWhileRunning && this.props.areRunStateOverlaysVisible) || this.props.areOverlaysVisible) {
         return React.cloneElement(child, {
           key: index,
           width: this.props.width,
@@ -124,18 +111,17 @@ export let VisualizationOverlay = React.createClass({
         viewBox={"0 0 " + this.props.width + " " + this.props.height}
         pointerEvents="none"
       >
-        {this.props.areRunningOverlaysVisible && this.renderOverlaysWhenRunning()}
-        {this.props.areOverlaysVisible && this.renderOverlays()}
+        {this.renderOverlays()}
       </svg>
     );
   }
 });
 export default connect((state) => ({
   areOverlaysVisible: shouldOverlaysBeVisible(state),
-  areRunningOverlaysVisible: shouldRunningOverlaysBeVisible(state)
+  areRunStateOverlaysVisible: shouldRunStateOverlaysBeVisible(state)
 }))(VisualizationOverlay);
 
-export function shouldRunningOverlaysBeVisible(state) {
+export function shouldRunStateOverlaysBeVisible(state) {
   return !state.pageConstants.hideCoordinateOverlay &&
     !state.pageConstants.isShareView;
 }
