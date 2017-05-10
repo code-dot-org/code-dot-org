@@ -9,6 +9,9 @@ const MAX_PROJECTS_PER_CATEGORY = 100;
 
 $(document).ready(() => {
   if (experiments.isEnabled('publicGallery')) {
+    // We need to see whether the experiment is enabled from angularProjects.js,
+    // which isn't part of the apps js build pipeline.
+    $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
     const gallerySwitcher = document.getElementById('gallery-switcher');
     ReactDOM.render(
       <GallerySwitcher
