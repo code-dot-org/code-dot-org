@@ -270,21 +270,30 @@ class Level < ActiveRecord::Base
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
     'Applab', # freeplay
     'ContractMatch', # dsl defined, covered in dsl
+    'CurriculumReference', # no user submitted content
+    'EvaluationMulti', # unknown
     'EvaluationQuestion', # plc evaluation
     'External', # dsl defined, covered in dsl
+    'ExternalLink', # no user submitted content
+    'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
     'Gamelab', # freeplay
+    'GoBeyond', # unknown
     'LevelGroup', # dsl defined, covered in dsl
+    'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
-    'TextCompression', # widget
     'NetSim', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
     'Odometer', # widget
+    'ScriptCompletion', # unknown
+    'StandaloneVideo', # no user submitted content
+    'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
     'Unplugged', # no solutions
     'Vigenere', # widget
+    'Weblab', # no ideal solution
   ].freeze
   # TYPES_WITH_IDEAL_LEVEL_SOURCE = [
   #   'Artist',
