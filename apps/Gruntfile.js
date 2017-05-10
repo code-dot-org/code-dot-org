@@ -428,7 +428,8 @@ testsContext.keys().forEach(testsContext);
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
-    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js'
+    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js',
+    'courses/index':                './src/sites/studio/pages/courses/index.js',
   };
 
   var otherEntries = {
