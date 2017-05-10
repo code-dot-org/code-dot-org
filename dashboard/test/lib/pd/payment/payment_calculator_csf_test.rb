@@ -78,7 +78,7 @@ module Pd::Payment
 
     test 'handle workshops with deleted sections' do
       @workshop.section.destroy
-      assert_nil @workshop.reload.section
+      @workshop.reload
 
       summary = PaymentCalculatorCSF.instance.calculate(@workshop)
       assert_equal 2, summary.num_teachers
