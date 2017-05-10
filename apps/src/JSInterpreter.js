@@ -19,7 +19,8 @@ export default class JSInterpreter {
    * @param {function} [options.shouldRunAtMaxSpeed]
    * @param {number} [options.maxInterpreterStepsPerTick]
    * @param {Object} [options.customMarshalGlobalProperties]
-   * @param {Object} [options.customMarshalBlockedProperties]
+   * @param {Array} [options.customMarshalBlockedProperties]
+   * @param {Array} [options.customMarshalObjectList]
    * @param {boolean} [options.logExecution] if true, executionLog[] be populated
    */
   constructor({
@@ -28,6 +29,7 @@ export default class JSInterpreter {
     maxInterpreterStepsPerTick,
     customMarshalGlobalProperties,
     customMarshalBlockedProperties,
+    customMarshalObjectList,
     logExecution,
   }) {
     this.studioApp = studioApp;
@@ -35,6 +37,7 @@ export default class JSInterpreter {
     this.maxInterpreterStepsPerTick = maxInterpreterStepsPerTick || 10000;
     this.customMarshalGlobalProperties = customMarshalGlobalProperties || {};
     this.customMarshalBlockedProperties = customMarshalBlockedProperties || [];
+    this.customMarshalObjectList = customMarshalObjectList || [];
 
     // Publicly-exposed events that anyone with access to the JSInterpreter can
     // observe and respond to.
@@ -146,6 +149,7 @@ JSInterpreter.prototype.parse = function (options) {
       this.interpreter = interpreter;
       // Store globalScope on JSInterpreter
       this.globalScope = scope;
+      codegen.customMarshalObjectList_DEPRECATED = this.customMarshalObjectList;
       // Override Interpreter's get/has/set Property functions with JSInterpreter
       interpreter.getProperty = this.getProperty.bind(this, interpreter);
       interpreter.hasProperty = this.hasProperty.bind(this, interpreter);
@@ -976,7 +980,7 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
 
 /**
  * Creates a property in the interpreter's global scope. When a parent is
- * supplied and that parent object is in codegen's customMarshalObjectList,
+ * supplied and that parent object is in customMarshalObjectList,
  * property gets/sets in the interpreter will be reflected on the native parent
  * object. Functions can also be inserted into the global namespace using this
  * method. If a parent is supplied, they will be invoked natively with that
