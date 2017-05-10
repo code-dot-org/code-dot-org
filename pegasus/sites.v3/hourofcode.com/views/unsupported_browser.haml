@@ -5,7 +5,15 @@
 
 :javascript
   $(document).ready(function () {
+    if (!window.isUnsupportedBrowser) {
+      setTimeout(unsupportedBrowserCheck, 5000);
+    } else {
+      unsupportedBrowserCheck();
+    }
+  });
+
+  var unsupportedBrowserCheck = function () {
     if (isUnsupportedBrowser()) {
       $("#warning-banner").show();
     }
-  });
+  };
