@@ -13,7 +13,7 @@
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "4",
-    "video_key": "C1_maze_debugging",
+    "video_key": "CSF_debugging_k1_blocks",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -33,10 +33,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_maze_seqA_callout1\",\r\n  \"callout_text\": \"Use the step button to go step-by-step through the program. This will help you find the bug!\",\r\n  \"element_id\": \"#stepButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "debug: add command to end",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 19:08:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"video_key\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "debugging": 2
