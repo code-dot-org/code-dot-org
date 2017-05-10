@@ -2,7 +2,7 @@ import React from 'react';
 import AnnouncementsCollapsible from './AnnouncementsCollapsible';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import ManageSectionsCollapsible from './ManageSectionsCollapsible';
-import Resources from './Resources';
+import TeacherResources from './TeacherResources';
 
 const TeacherHomepage = React.createClass({
   propTypes: {
@@ -19,7 +19,7 @@ const TeacherHomepage = React.createClass({
         <AnnouncementsCollapsible announcements={announcements}/>
         <RecentCoursesCollapsible courses={courses}/>
         <ManageSectionsCollapsible sections={sections}/>
-        <Resources type="teacher"/>
+        <TeacherResources/>
       </div>
     );
   }
