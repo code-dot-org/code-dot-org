@@ -53,8 +53,9 @@ services.factory('projectsService', ['$resource',
 var controllers = angular.module('projectsApp.controllers', [])
     .value('version', '0.1');
 
-controllers.controller('ProjectsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'projectsService',
-    function ($scope, $route, $routeParams, $location, $window, projectsService) {
+controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'projectsService',
+    function ($scope, $http, $route, $routeParams, $location, $window, projectsService) {
+  $scope.isPublicGalleryEnabled = $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled');
   $scope.projectsLoaded = false;
 
   $scope.projects = projectsService.query();
@@ -80,4 +81,36 @@ controllers.controller('ProjectsController', ['$scope', '$route', '$routeParams'
       $scope.projects.splice($.inArray(project, $scope.projects), 1);
     });
   };
+
+  var PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'artist', 'playlab'];
+
+  $scope.publishProject = function (project) {
+    var type = getProjectType(project);
+    if (PROJECT_TYPES.indexOf(type) === -1) {
+      throw 'Cannot publish project of type "' + type + '"';
+    }
+    $http({
+      method:'POST',
+      url: '/v3/channels/' + project.id + '/publish/' + type,
+    }).then(function (response) {
+      if (response.data && response.data.publishedAt) {
+        project.publishedAt = response.data.publishedAt;
+      }
+    });
+  };
+
+  $scope.unpublishProject = function (project) {
+    $http({
+      method:'POST',
+      url: '/v3/channels/' + project.id + '/unpublish',
+    }).then(function (response) {
+      if (response.data) {
+        project.publishedAt = null;
+      }
+    });
+  };
 }]);
+
+function getProjectType(project) {
+  return project.level.split('/')[2];
+}
