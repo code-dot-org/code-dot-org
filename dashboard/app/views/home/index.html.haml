@@ -16,21 +16,13 @@
 - if request.cookies['pm'] == 'new_header'
 
   - if current_user
-    - if !current_user.teacher?
+    - if current_user.teacher?
       #landingpage
         = render partial: 'home/teacher_homepage'
 
     - else
       #landingpage
-        #user_hero
-          = render template: 'api/user_hero'
-
-        = render partial: 'home/recent_courses'
-
-        - link_blocks = []
-        - link_blocks << {text: "Hour of Code", link: "http://code.org"}
-        - link_blocks << {text: "Elementary school", link: "http://code.org"}
-        = render partial: 'home/link_blocks', locals: { link_blocks: link_blocks }
+        = render partial: 'home/student_homepage'
 
 - else
   #landingpage
