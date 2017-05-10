@@ -11,6 +11,8 @@ import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
+import {toggleGridOverlay} from './actions';
+import GridOverlay from './GridOverlay';
 
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -25,7 +27,9 @@ var GameLabVisualizationColumn = React.createClass({
   propTypes: {
     finishButton: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    awaitingContainedResponse: React.PropTypes.bool.isRequired
+    awaitingContainedResponse: React.PropTypes.bool.isRequired,
+    showGrid: React.PropTypes.bool.isRequired,
+    toggleShowGrid: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -35,6 +39,19 @@ var GameLabVisualizationColumn = React.createClass({
       mouseX: -1,
       mouseY: -1
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    // Use jQuery to turn on and off the grid since it lives in a protected div
+    if (nextProps.showGrid !== this.props.showGrid) {
+      if (nextProps.showGrid) {
+        $("#grid-checkbox")[0].className = "fa fa-check-square-o";
+        $("#grid-overlay")[0].style.display = '';
+      } else {
+        $("#grid-checkbox")[0].className = "fa fa-square-o";
+        $("#grid-overlay")[0].style.display = 'none';
+      }
+    }
   },
 
   onMouseMove(mouseX, mouseY) {
@@ -61,6 +78,17 @@ var GameLabVisualizationColumn = React.createClass({
     );
   },
 
+  renderGridCheckbox() {
+    return (
+      <div onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}>
+        <i id="grid-checkbox" className="fa fa-square-o"/>
+        <span style={{marginLeft: 5}}>
+          Show grid
+        </span>
+      </div>
+    );
+  },
+
   render() {
     var divGameLabStyle = {
       width: GAME_WIDTH,
@@ -76,12 +104,12 @@ var GameLabVisualizationColumn = React.createClass({
             height={GAME_HEIGHT}
             onMouseMove={this.onMouseMove}
           >
+            <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
             <CrosshairOverlay/>
             <TooltipOverlay providers={[coordinatesProvider()]}/>
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
-
           <div id="studio-dpad" className="studio-dpad-none">
             <button id="studio-dpad-button" className="arrow">
               <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
@@ -91,6 +119,8 @@ var GameLabVisualizationColumn = React.createClass({
           <ArrowButtons/>
 
           <CompletionButton />
+
+          {this.renderGridCheckbox()}
         </GameButtons>
         {this.renderAppSpaceCoordinates()}
         {this.props.awaitingContainedResponse && (
@@ -104,9 +134,10 @@ var GameLabVisualizationColumn = React.createClass({
   }
 });
 
-module.exports = connect(function propsFromStore(state) {
-  return {
-    isShareView: state.pageConstants.isShareView,
-    awaitingContainedResponse: state.runState.awaitingContainedResponse,
-  };
-})(GameLabVisualizationColumn);
+module.exports = connect(state => ({
+  isShareView: state.pageConstants.isShareView,
+  awaitingContainedResponse: state.runState.awaitingContainedResponse,
+  showGrid: state.gridOverlay
+}), dispatch => ({
+  toggleShowGrid: mode => dispatch(toggleGridOverlay(mode))
+}))(GameLabVisualizationColumn);
