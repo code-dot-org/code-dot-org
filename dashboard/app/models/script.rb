@@ -740,7 +740,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize
+  def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -772,11 +772,12 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      stages: stages.map(&:summarize),
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?
     }
+
+    summary[:stages] = stages.map(&:summarize) if include_stages
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
@@ -784,9 +785,9 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  # Similar to summarize, but returns an even more narrow set of fields, in particular
-  # bypasses stage summaries
-  def summarize_short
+  # Similar to summarize, but returns an even more narrow set of fields, restricted
+  # to those needed in header.html.haml
+  def summarize_header
     {
       name: name,
       disablePostMilestone: disable_post_milestone?,
@@ -795,17 +796,19 @@ class Script < ActiveRecord::Base
     }
   end
 
-  def summarize_i18n
+  def summarize_i18n(include_stages=true)
     data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
-    data['stageDescriptions'] = stages.map do |stage|
-      {
-        name: stage.name,
-        descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
-      }
+    if include_stages
+      data['stageDescriptions'] = stages.map do |stage|
+        {
+          name: stage.name,
+          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        }
+      end
     end
     data
   end
