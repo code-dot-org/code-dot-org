@@ -152,6 +152,10 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::PLAYLAB_NAME)
   end
 
+  def self.sports_script
+    Script.get_from_cache(Script::SPORTS_NAME)
+  end
+
   def self.artist_script
     Script.get_from_cache(Script::ARTIST_NAME)
   end

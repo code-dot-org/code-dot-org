@@ -569,6 +569,9 @@ en:
       audience: "Ages 4+"
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+    sports:
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"

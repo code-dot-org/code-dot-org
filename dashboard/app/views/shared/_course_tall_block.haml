@@ -25,6 +25,11 @@
   - title = t('upsell.applab.title')
   - body = t('upsell.applab.body_short')
 
+- elsif id == 'sports'
+  - url = CDO.code_org_url('/athletes')
+  - title = t('upsell.sports.title')
+  - body = t('upsell.sports.body')
+
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')
