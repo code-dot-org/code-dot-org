@@ -55,7 +55,7 @@ const styles = {
   }
 };
 
-const GradientNavCard = React.createClass({
+const ResourceCard = React.createClass({
   propTypes: {
     title: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
@@ -88,4 +88,4 @@ const GradientNavCard = React.createClass({
   }
 });
 
-export default GradientNavCard;
+export default ResourceCard;
