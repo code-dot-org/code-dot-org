@@ -1,7 +1,15 @@
 class CoursesController < ApplicationController
   def show
-    course_name = params[:course_name].tr('-', '_').titleize
-    course = Course.find_by_name!(course_name)
+    course = Course.find_by_name(params[:course_name])
+    unless course
+      # PLC courses have different ways of getting to name. ideally this goes
+      # away eventually
+      course_name = params[:course_name].tr('-', '_').titleize
+      course = Course.find_by_name!(course_name)
+      # only support this alternative course name for plc courses
+      raise ActiveRecord::RecordNotFound unless course.plc_course
+    end
+
     if course.plc_course
       authorize! :show, Plc::UserCourseEnrollment
       user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: course.plc_course)]
