@@ -75,5 +75,15 @@ module Pd::Payment
       assert_equal 1, summary.num_qualified_teachers
       assert_equal @qualified_teacher, summary.teacher_summaries.find(&:qualified?).teacher
     end
+
+    test 'handle workshops with deleted sections' do
+      @workshop.section.destroy
+      assert_nil @workshop.reload.section
+
+      summary = PaymentCalculatorCSF.instance.calculate(@workshop)
+      assert_equal 2, summary.num_teachers
+      assert_equal 1, summary.num_qualified_teachers
+      assert_equal 50, summary.payment.total
+    end
   end
 end
