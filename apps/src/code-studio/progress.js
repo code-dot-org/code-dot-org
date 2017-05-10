@@ -226,9 +226,9 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       clientState.cacheUserIsTeacher(true);
     }
 
-    if (data.focusAreaPositions) {
+    if (data.focusAreaStageIds) {
       store.dispatch(updateFocusArea(data.changeFocusAreaPath,
-        data.focusAreaPositions));
+        data.focusAreaStageIds));
     }
 
     if (data.lockableAuthorized) {

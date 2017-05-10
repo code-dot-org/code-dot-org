@@ -9,9 +9,11 @@
 #  created_at     :datetime
 #  updated_at     :datetime
 #  deleted_at     :datetime
+#  code           :string(255)
 #
 # Indexes
 #
+#  index_pd_sessions_on_code            (code) UNIQUE
 #  index_pd_sessions_on_pd_workshop_id  (pd_workshop_id)
 #
 

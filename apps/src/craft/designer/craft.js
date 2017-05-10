@@ -7,7 +7,7 @@ import Hammer from "hammerjs";
 
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
-import codegen from '../../codegen';
+import * as codegen from '../../codegen';
 import GameController from './game/GameController';
 import FacingDirection from './game/LevelMVC/FacingDirection';
 import dom from '../../dom';
