@@ -84,6 +84,8 @@ class TeacherApplicationDecisionProcessor
   def process_decision_row(row)
     application_id = row[DECISION_HEADERS[:application_id]]
     teacher_application = Pd::TeacherApplication.find(application_id)
+    decision = row[DECISION_HEADERS[:decision]]
+    puts "Processing application #{application_id}: #{decision}"
 
     primary_email = row[DECISION_HEADERS[:primary_email]]
     if primary_email.present? && primary_email != teacher_application.primary_email
@@ -93,12 +95,15 @@ class TeacherApplicationDecisionProcessor
     workshop_string = row[DECISION_HEADERS[:workshop_string]]
     program = row[DECISION_HEADERS[:program]].try(:downcase)
     regional_partner_override = row[DECISION_HEADERS[:partner_name]]
-    decision = row[DECISION_HEADERS[:decision]]
+
+    # First, update the dashboard DB with the fields from the spreadsheet
+    save_accepted_workshop teacher_application, program, workshop_string, regional_partner_override
+
     case decision
       when DECISIONS[:accept]
-        process_accept teacher_application, program, workshop_string, regional_partner_override
+        process_accept teacher_application
       when DECISIONS[:decline]
-        process_decline teacher_application, regional_partner_override
+        process_decline teacher_application
       when DECISIONS[:waitlist]
         process_waitlist teacher_application
       else
@@ -161,10 +166,7 @@ class TeacherApplicationDecisionProcessor
     end
   end
 
-  def process_accept(teacher_application, program, accepted_workshop, regional_partner_override)
-    # First, update the actual dashboard DB with this accepted workshop string.
-    save_accepted_workshop teacher_application, program, accepted_workshop, regional_partner_override
-
+  def process_accept(teacher_application)
     # There are 2 kinds of acceptance, TeacherCon (ours) and Regional Partner.
     if teacher_application.accepted_program.teachercon?
       process_accept_teachercon teacher_application
@@ -198,8 +200,7 @@ class TeacherApplicationDecisionProcessor
     process :waitlist, teacher_application
   end
 
-  def process_decline(teacher_application, regional_partner_override)
-    save_accepted_workshop teacher_application, nil, nil, regional_partner_override
+  def process_decline(teacher_application)
     decision = get_decline_decision(teacher_application)
     process decision, teacher_application
   end
@@ -215,15 +216,27 @@ class TeacherApplicationDecisionProcessor
     end
   end
 
-  def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override = nil)
-    teacher_application.update_application_hash('selectedCourse': program) if program
-    teacher_application.accepted_workshop = accepted_workshop if accepted_workshop
-    teacher_application.regional_partner_override = regional_partner_override if regional_partner_override.present?
+  def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override)
+    if program.present? && program != teacher_application.selected_course
+      puts "  Updating selected course from #{teacher_application.selected_course} to #{program}"
+      teacher_application.update_application_hash('selectedCourse': program)
+    end
+
+    if accepted_workshop.present? && accepted_workshop != teacher_application.accepted_workshop
+      puts "  Updating selected course from #{teacher_application.accepted_workshop} to #{accepted_workshop}"
+      teacher_application.accepted_workshop = accepted_workshop
+    end
+
+    if regional_partner_override.present? && regional_partner_override != teacher_application.regional_partner_name
+      puts "  Updating regional partner from '#{teacher_application.regional_partner_name}' to '#{regional_partner_override}'"
+      teacher_application.regional_partner_override = regional_partner_override
+    end
+
     teacher_application.save!(validate: false)
   end
 
   def update_primary_email(teacher_application, primary_email)
-    puts "Updating primary email for application #{teacher_application.id} from #{teacher_application.primary_email} to #{primary_email}"
+    puts "  Updating primary email from #{teacher_application.primary_email} to #{primary_email}"
     teacher_application.update!(primary_email: primary_email)
   end
 
