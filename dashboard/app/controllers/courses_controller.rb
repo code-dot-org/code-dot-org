@@ -9,8 +9,7 @@ class CoursesController < ApplicationController
       return
     end
 
-    # TODO: change name
-    render 'index', locals: {course: course}
+    render 'course_overview', locals: {course: course}
   end
 
   def new
