@@ -129,6 +129,7 @@ class Ability
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
+        can :manage, Pd::TeacherApplication
       end
     end
 

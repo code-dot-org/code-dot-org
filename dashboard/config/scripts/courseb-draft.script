@@ -93,8 +93,8 @@ level 'courseB_maze_seq9'
 level 'courseB_maze_seq10'
 level 'courseB_maze_seq11'
 level 'courseB_maze_seq12'
-bonus 'courseB_maze_seq_challenge1'
-bonus 'courseB_maze_seq_challenge2'
+bonus 'courseB_maze_seq_challenge1', challenge: true
+bonus 'courseB_maze_seq_challenge2', challenge: true
 
 stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_external_loopMRF'
@@ -112,8 +112,8 @@ level 'courseB_collector_loops8'
 level 'courseB_collector_loops9'
 level 'courseB_collector_loops10'
 level 'courseB_collector_loops11'
-bonus 'courseB_collector_loops_challenge1'
-bonus 'courseB_collector_loops_challenge2'
+bonus 'courseB_collector_loops_challenge1', challenge: true
+bonus 'courseB_collector_loops_challenge2', challenge: true
 
 stage 'Loops in Artist'
 level 'courseB_video_ArtistIntro'

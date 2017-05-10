@@ -122,32 +122,22 @@ const ProjectCard = React.createClass({
 
   renderFirstInitial() {
     if (this.props.currentGallery === 'public'){
+      // The server provides only a single letter for the student name in the
+      // public gallery for privacy reasons.
       return this.props.projectData.studentName && (
-        <span style={styles.firstInitial}>
-          {i18n.by()}: {this.props.projectData.studentName[0]}
+          <span style={styles.firstInitial}>
+          {i18n.by()}: {this.props.projectData.studentName}
         </span>
-      );
+        );
     }
   },
 
-  checkStudentAge(studentAge) {
-    const ageCutoffs = [4, 8, 13, 18]; //<--- ask Poorva, these might change
-    let ageCutoff = 0;
-
-    for (let i = 0; i < ageCutoffs.length; i++) {
-      if (studentAge >= ageCutoffs[i]) {
-        ageCutoff = ageCutoffs[i];
-      }
-    }
-    return ageCutoff;
-  },
-
-  renderStudentAgeRange(studentAge) {
+  renderStudentAgeRange(studentAgeRange) {
   // The student's age range should only be visible in the public gallery.
     if (this.props.currentGallery === 'public') {
-      return studentAge && (
+      return studentAgeRange && (
         <span style={styles.ageRange}>
-          {i18n.age()}: {this.checkStudentAge(studentAge)}+
+          {i18n.age()}: {studentAgeRange}
         </span>
       );
     }
@@ -222,7 +212,7 @@ const ProjectCard = React.createClass({
 
           <span>
             {this.renderFirstInitial()}
-            {this.renderStudentAgeRange(projectData.studentAge)}
+            {this.renderStudentAgeRange(projectData.studentAgeRange)}
           </span>
 
           <div style={styles.lastEdit}>

@@ -10,6 +10,7 @@
 #  secondary_email           :string(255)      not null
 #  application               :text(65535)      not null
 #  regional_partner_override :string(255)
+#  program_registration_id   :integer
 #
 # Indexes
 #
@@ -217,6 +218,10 @@ class Pd::TeacherApplication < ActiveRecord::Base
     application_hash['selectedCourse']
   end
 
+  def selected_course=(course)
+    update_application_hash(selectedCourse: course)
+  end
+
   def program_details
     PROGRAM_DETAILS_BY_COURSE[selected_course]
   end
@@ -285,6 +290,14 @@ class Pd::TeacherApplication < ActiveRecord::Base
         regionalPartner: regional_partner_name
       }
     ).stringify_keys
+  end
+
+  # Is there an associated program registration?
+  # Note: this field is only updated when the registration form is processed in Pegasus (bin/cron/process_forms),
+  #   so it might be delayed by ~ a minute. We intentionally avoid querying the Pegasus DB directly here for performance.
+  #   The #program_registration method below queries the Pegasus DB directly and is always up to date.
+  def program_registration?
+    program_registration_id.present?
   end
 
   def program_registration
@@ -375,7 +388,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     return nil if move_to_user.blank?
 
     if move_to_user =~ /^\d+$/
-      User.find move_to_user
+      User.find_by id: move_to_user
     else
       User.find_by_email_or_hashed_email move_to_user
     end
@@ -388,6 +401,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
     if @program_registration.blank?
       PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).delete
+      self.program_registration_id = nil
     else
       json_data = @program_registration.to_json
       PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).update(data: json_data)

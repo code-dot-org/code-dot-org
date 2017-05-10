@@ -1,5 +1,9 @@
-require_relative 'pegasus_form_errors'
+require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/object/try'
 require 'validates_email_format_of'
+require_relative 'pegasus_form_errors'
+require_relative '../cdo/regexp'
+require_relative '../cdo/geocoder'
 
 module PegasusFormValidation
   private
@@ -15,7 +19,7 @@ module PegasusFormValidation
 
   def default_if_empty(value, default_value)
     return value if value.class == FieldError
-    return default_value if value.nil_or_empty?
+    return default_value if value.blank?
     value
   end
 
@@ -36,7 +40,7 @@ module PegasusFormValidation
 
   def integer(value)
     return value if value.class == FieldError
-    return nil if value.nil_or_empty?
+    return nil if value.blank?
 
     s_value = value.to_s.strip
     i_value = s_value.to_i
@@ -47,14 +51,14 @@ module PegasusFormValidation
 
   def nil_if_empty(value)
     return value if value.class == FieldError
-    return nil if value.nil_or_empty?
+    return nil if value.blank?
     value
   end
 
   def required(value)
     return value if value.class == FieldError
     return value if value.is_a? Integer
-    return FieldError.new(value, :required) if value.nil_or_empty?
+    return FieldError.new(value, :required) if value.blank?
     value
   end
 
@@ -69,14 +73,14 @@ module PegasusFormValidation
 
   def uploaded_file(value)
     return value if value.class == FieldError
-    return nil if value.nil_or_empty?
+    return nil if value.blank?
     AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], open(value[:tempfile]))
   end
 
   def email_address(value)
     return value if value.class == FieldError
     email = downcased stripped value
-    return nil if email.nil_or_empty?
+    return nil if email.blank?
     return FieldError.new(value, :invalid) unless ValidatesEmailFormatOf.validate_email_format(email).nil?
     email
   end
@@ -84,8 +88,11 @@ module PegasusFormValidation
   def zip_code(value)
     return value if value.class == FieldError
     value = stripped value
-    return nil if value.nil_or_empty?
-    return FieldError.new(value, :invalid) unless zip_code?(value)
+    return nil if value.blank?
+
+    unless RegexpUtils.us_zip_code?(value) && Geocoder.search(value).try(:first).try(:postal_code)
+      return FieldError.new(value, :invalid)
+    end
     value
   end
 
@@ -98,7 +105,7 @@ module PegasusFormValidation
   def us_phone_number(value)
     return value if value.class == FieldError
     value = stripped value
-    return nil if value.nil_or_empty?
+    return nil if value.blank?
     return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
     RegexpUtils.extract_us_phone_number_digits(value)
   end
