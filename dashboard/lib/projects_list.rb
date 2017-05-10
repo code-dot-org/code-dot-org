@@ -114,7 +114,7 @@ module ProjectsList
         type: project[:project_type],
         publishedAt: project[:published_at],
         # For privacy reasons, include only the first initial of the student's name.
-        studentName: student_initial(project),
+        studentName: User.initial(project[:name]),
         studentAgeRange: student_age_range(project),
       }.with_indifferent_access
     end
@@ -127,10 +127,6 @@ module ProjectsList
       age = ((Date.today - project[:birthday]) / 365).to_i
       age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
       age_cutoff ? "#{age_cutoff}+" : nil
-    end
-
-    def student_initial(project)
-      project[:name] ? project[:name][0].upcase : nil
     end
   end
 end
