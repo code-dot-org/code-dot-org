@@ -2,7 +2,7 @@ require 'cdo/activity_constants'
 require 'cdo/script_constants'
 require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
-require 'cdo/section_helpers'
+require 'cdo/code_generation'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
@@ -290,7 +290,7 @@ class DashboardSection
           login_type: login_type,
           grade: grade,
           script_id: script_id,
-          code: SectionHelpers.random_code,
+          code: CodeGeneration.random_unique_code(length: 6),
           stage_extras: stage_extras,
           created_at: created_at,
           updated_at: created_at,
