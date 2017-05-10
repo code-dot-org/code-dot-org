@@ -268,25 +268,35 @@ class Level < ActiveRecord::Base
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
-    'Unplugged', # no solutions
-    'TextMatch', # dsl defined, covered in dsl
-    'Multi', # dsl defined, covered in dsl
-    'External', # dsl defined, covered in dsl
-    'Match', # dsl defined, covered in dsl
-    'ContractMatch', # dsl defined, covered in dsl
-    'LevelGroup', # dsl defined, covered in dsl
     'Applab', # freeplay
-    'Gamelab', # freeplay
+    'ContractMatch', # dsl defined, covered in dsl
     'EvaluationQuestion', # plc evaluation
-    'NetSim', # widget
-    'Odometer', # widget
-    'Vigenere', # widget
+    'External', # dsl defined, covered in dsl
     'FrequencyAnalysis', # widget
+    'Gamelab', # freeplay
+    'LevelGroup', # dsl defined, covered in dsl
+    'Match', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
     'TextCompression', # widget
+    'NetSim', # widget
     'Pixelation', # widget
-    'PublicKeyCryptography' # widget
+    'PublicKeyCryptography', # widget
+    'Odometer', # widget
+    'TextMatch', # dsl defined, covered in dsl
+    'Unplugged', # no solutions
+    'Vigenere', # widget
   ].freeze
-  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
+  # TYPES_WITH_IDEAL_LEVEL_SOURCE = [
+  #   'Artist',
+  #   'Blockly',
+  #   'Calc',
+  #   'Craft',
+  #   'Eval',
+  #   'Karel',
+  #   'Maze',
+  #   'Studio',
+  #   'StudioEC',
+  # ]
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
