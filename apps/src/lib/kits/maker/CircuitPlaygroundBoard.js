@@ -144,7 +144,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   installOnInterpreter(codegen, jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
-      codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+      // TODO (pcardune): don't mutate customMarshalObjectList directly, instead
+      // call a function to update it.
+      jsInterpreter.customMarshalObjectList.push({instance: componentConstructors[key]});
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
 
