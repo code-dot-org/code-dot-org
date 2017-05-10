@@ -181,6 +181,6 @@ class Section < ActiveRecord::Base
   private
 
   def unused_random_code
-    CodeGeneration.random_code 6, reject_if: ->(code) {Section.exists?(code: code)}
+    CodeGeneration.random_unique_code length: 6, model: Section
   end
 end

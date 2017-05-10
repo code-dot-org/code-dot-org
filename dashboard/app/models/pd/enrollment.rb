@@ -219,6 +219,6 @@ class Pd::Enrollment < ActiveRecord::Base
   private
 
   def unused_random_code
-    CodeGeneration.random_code 10, reject_if: ->(code) {Pd::Enrollment.exists?(code: code)}
+    CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end
