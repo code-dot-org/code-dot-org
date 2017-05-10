@@ -124,8 +124,8 @@ export let VisualizationOverlay = React.createClass({
         viewBox={"0 0 " + this.props.width + " " + this.props.height}
         pointerEvents="none"
       >
-        {this.props.areOverlaysVisible && this.renderOverlays()}
         {this.props.areRunningOverlaysVisible && this.renderOverlaysWhenRunning()}
+        {this.props.areOverlaysVisible && this.renderOverlays()}
       </svg>
     );
   }
