@@ -34,6 +34,11 @@ class CoursesController < ApplicationController
     end
   end
 
+  def update
+    # TODO
+    render json: params.to_json
+  end
+
   def edit
     course = Course.find_by_name(params[:course_name])
 
