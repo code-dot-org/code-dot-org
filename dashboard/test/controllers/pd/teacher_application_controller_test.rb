@@ -4,6 +4,8 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @teacher_application = create :pd_teacher_application
+    @workshop_admin = create :workshop_admin
+    @teacher = create :teacher
   end
 
   # Both teachers and students can see the teacher application form.
@@ -14,8 +16,8 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
   test_redirect_to_sign_in_for :new
 
   def self.test_workshop_admin_only(method, action, success_response, params = nil)
-    test_user_gets_response_for action, user: :teacher, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: :workshop_admin, method: method, params: params, response: success_response
+    test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden
+    test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: success_response
   end
 
   test_workshop_admin_only :get, :manage, :success

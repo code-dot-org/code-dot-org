@@ -732,7 +732,7 @@ Flappy.execute = function () {
     whenRunButton: {code: generator('when_run')}
   };
 
-  codegen.evalWithEvents({Flappy: api}, events).forEach(hook => {
+  codegen.evalWithEvents({Flappy: api}, events).hooks.forEach(hook => {
     Flappy[hook.name] = hook.func;
   });
 

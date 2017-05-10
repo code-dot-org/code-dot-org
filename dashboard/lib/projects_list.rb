@@ -86,9 +86,12 @@ module ProjectsList
     end
 
     def fetch_published_project_types(project_types, limit:, offset: 0)
+      users = "dashboard_#{CDO.rack_env}__users".to_sym
       {}.tap do |projects|
         project_types.map do |type|
           projects[type] = PEGASUS_DB[:storage_apps].
+            join(:user_storage_ids, id: :storage_id).
+            join(users, id: :user_id).
             where(state: 'active', project_type: type).
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
@@ -109,8 +112,25 @@ module ProjectsList
         # Note that we are using the new :project_type field rather than extracting
         # it from :value. :project_type might not be present in unpublished projects.
         type: project[:project_type],
-        publishedAt: project[:published_at]
+        publishedAt: project[:published_at],
+        # For privacy reasons, include only the first initial of the student's name.
+        studentName: student_initial(project),
+        studentAgeRange: student_age_range(project),
       }.with_indifferent_access
+    end
+
+    AGE_CUTOFFS = [18, 13, 8, 4].freeze
+
+    # Return the highest age range applicable to the student, e.g.
+    # 18+, 13+, 8+ or 4+
+    def student_age_range(project)
+      age = ((Date.today - project[:birthday]) / 365).to_i
+      age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
+      age_cutoff ? "#{age_cutoff}+" : nil
+    end
+
+    def student_initial(project)
+      project[:name] ? project[:name][0].upcase : nil
     end
   end
 end
