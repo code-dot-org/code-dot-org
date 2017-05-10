@@ -1,15 +1,15 @@
 import React from 'react';
-import GradientNavCard from './GradientNavCard';
+import ResourceCard from './ResourceCard';
 
 export default storybook => {
   return storybook
-    .storiesOf('GradientNavCard', module)
+    .storiesOf('ResourceCard', module)
     .addStoryTable([
       {
-        name: 'basic navigation card',
-        description: `This is an example navigation card with stub data.`,
+        name: 'basic resource card',
+        description: `This is an example resource card with fake data.`,
         story: () => (
-          <GradientNavCard
+          <ResourceCard
             title= "Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
             image="../../static/navcard-placeholder.png"

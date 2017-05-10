@@ -794,9 +794,13 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def initial
+  def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
+  end
+
+  def initial
+    User.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
