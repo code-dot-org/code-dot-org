@@ -181,7 +181,8 @@ Dashboard::Application.routes.draw do
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
-  get '/course/:course', to: 'courses#index', as: 'course'
+  resources :courses, path: "/course", param: 'course_name'
+  # get '/course/:course', to: 'courses#index', as: 'course'
 
   get '/beta', to: redirect('/')
 

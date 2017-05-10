@@ -18,6 +18,28 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
 
+  # We need this because of PLC courses with spaces in them. Ideally we would find
+  # a way to clean those up and remove this
+  attr_accessor :skip_name_format_validation
+
+  validates :name,
+    presence: true,
+    uniqueness: {case_sensitive: false},
+    format: {
+      unless: :skip_name_format_validation,
+      with: /\A[a-z0-9\_]+\z/,
+      message: 'can only contain lowercase letters, numbers, and underscores'
+    }
+  # As we read and write to files with the script name, to prevent directory
+  # traversal (for security reasons), we do not allow the name to start with a
+  # tilde or dot or contain a slash.
+  validates :name,
+    presence: true,
+    format: {
+      without: /\A~|\A\.|\//,
+      message: 'cannot start with a tilde or dot or contain slashes'
+    }
+
   def summarize
     {
       name: name,
