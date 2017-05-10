@@ -1,44 +1,14 @@
 import React, {PropTypes} from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
+import {projectPropType} from './projectConstants';
 import i18n from "@cdo/locale";
 
 const styles = {
   grid: {
     padding: 10,
     width: 1000
-  },
-  card: {
-    display: "inline-block",
-    padding: 10
-  },
-  labHeading: {
-    textAlign: "left",
-    fontSize: 24,
-    color: "#5b6770",
-    marginLeft: 10,
-    marginRight: 65,
-    borderBottom: "1px solid #bbbbbb",
-    paddingBottom: 10,
-    paddingTop: 40
   }
 };
-
-const projectDataPropType = PropTypes.shape({
-  channel: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  studentName: PropTypes.string,
-  studentAgeRange: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
-  publishedToPublic: PropTypes.bool.isRequired,
-  publishedToClass: PropTypes.bool.isRequired,
-});
-
-const projectPropType = PropTypes.shape({
-  projectData: projectDataPropType.isRequired,
-  currentGallery: PropTypes.string.isRequired,
-});
 
 const ProjectCardGrid = React.createClass({
   propTypes: {
@@ -51,40 +21,42 @@ const ProjectCardGrid = React.createClass({
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
-  renderProjectCardList(projectList) {
-    const { galleryType } = this.props;
-    return  (
-      <div>
-        {
-          projectList && projectList.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))
-        }
-      </div>
-    );
-  },
-
   render() {
     const { projectLists } = this.props;
 
     return (
       <div style={styles.grid}>
-        <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
-        {this.renderProjectCardList(projectLists.applab)}
+        <ProjectAppTypeArea
+          labName={i18n.projectTypeApplab()}
+          labViewMoreString="View more App Lab projects"
+          projectList={projectLists.applab}
+          numProjectsToShow={4}
+          galleryType={this.props.galleryType}
+        />
 
-        <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
-        {this.renderProjectCardList(projectLists.gamelab)}
+        <ProjectAppTypeArea
+          labName={i18n.projectTypeGamelab()}
+          labViewMoreString="View more Game Lab projects"
+          projectList={projectLists.gamelab}
+          numProjectsToShow={4}
+          galleryType={this.props.galleryType}
+        />
 
-        <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
-        {this.renderProjectCardList(projectLists.gamelab)}
+        <ProjectAppTypeArea
+          labName={i18n.projectTypeArtist()}
+          labViewMoreString="View more Artist projects"
+          projectList={projectLists.gamelab}
+          numProjectsToShow={4}
+          galleryType={this.props.galleryType}
+        />
 
-        <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
-        {this.renderProjectCardList(projectLists.playlab)}
+        <ProjectAppTypeArea
+          labName={i18n.projectTypePlaylab()}
+          labViewMoreString="View more Play Lab projects"
+          projectList={projectLists.playlab}
+          numProjectsToShow={4}
+          galleryType={this.props.galleryType}
+        />
       </div>
     );
   }
