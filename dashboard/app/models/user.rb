@@ -855,7 +855,7 @@ class User < ActiveRecord::Base
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
   rescue ArgumentError
-    errors.add :email, I18n.t('password.reset_errors.invalid_email', email: email)
+    errors.add :base, I18n.t('password.reset_errors.invalid_email')
     return nil
   end
 

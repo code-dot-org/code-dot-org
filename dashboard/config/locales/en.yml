@@ -183,7 +183,7 @@ en:
       email: 'Email address'
       submit: 'Submit'
     reset_errors:
-      invalid_email: '%{email} appears invalid. Please contact customer support at support@code.org for further assistance.'
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Change your password'
       new_password: 'New password'
