@@ -13,7 +13,7 @@ const styles = {
   main: {
     // common.scss provides an :after selector that ends up adding 18px of height
     // to gameButtons. We want to get rid of that
-    marginBottom: 0
+    marginBottom: -18
   },
 };
 

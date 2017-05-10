@@ -45,8 +45,10 @@ var GameLabVisualizationColumn = React.createClass({
     // Use jQuery to turn on and off the grid since it lives in a protected div
     if (nextProps.showGrid !== this.props.showGrid) {
       if (nextProps.showGrid) {
+        $("#grid-checkbox")[0].className = "fa fa-check-square-o";
         $("#grid-overlay")[0].style.display = '';
       } else {
+        $("#grid-checkbox")[0].className = "fa fa-square-o";
         $("#grid-overlay")[0].style.display = 'none';
       }
     }
@@ -79,14 +81,7 @@ var GameLabVisualizationColumn = React.createClass({
   renderGridCheckbox() {
     return (
       <div onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}>
-        {
-          this.props.showGrid === true &&
-          <i className="fa fa-check-square-o"/>
-        }
-        {
-          this.props.showGrid === false &&
-          <i className="fa fa-square-o"/>
-        }
+        <i id="grid-checkbox" className="fa fa-square-o"/>
         <span style={{marginLeft: 5}}>
           Show grid
         </span>
@@ -125,8 +120,8 @@ var GameLabVisualizationColumn = React.createClass({
 
           <CompletionButton />
 
+          {this.renderGridCheckbox()}
         </GameButtons>
-        {this.renderGridCheckbox()}
         {this.renderAppSpaceCoordinates()}
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
