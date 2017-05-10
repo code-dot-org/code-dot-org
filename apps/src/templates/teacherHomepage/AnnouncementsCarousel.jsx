@@ -41,30 +41,19 @@ const AnnouncementsCarousel = React.createClass({
   },
 
   getInitialState() {
-    const announcements = this.props.children;
-    return { previous: announcements.length-1, current: 0, next: 1  };
+    return {currentIndex: 0};
   },
 
   toNext() {
     const announcements = this.props.children;
-
-    if (this.state.current < announcements.length-1) {
-      this.setState({previous: this.state.current, current: this.state.next, next: this.state.next + 1 });
-    }
-    if (this.state.current === announcements.length-1) {
-      this.setState({previous: this.state.current, current: 0, next: 1});
-    }
+    const nextIndex = (this.state.currentIndex + 1 + announcements.length) % announcements.length;
+    this.setState({currentIndex: nextIndex});
   },
 
   toPrevious() {
     const announcements = this.props.children;
-    if (this.state.current === 0) {
-      this.setState({previous: announcements.length-2, current: announcements.length-1, next: 0});
-    } else if  (this.state.current === 1) {
-      this.setState({previous: 0, current: this.state.previous, next: announcements.length-1});
-    } else if (this.state.current <= announcements.length-1 ) {
-      this.setState({previous: this.state.current-2, current: this.state.current-1, next: this.state.current});
-    }
+    const nextIndex = (this.state.currentIndex - 1 + announcements.length) % announcements.length;
+    this.setState({currentIndex: nextIndex});
   },
 
   render() {
@@ -86,7 +75,7 @@ const AnnouncementsCarousel = React.createClass({
             />
           </div>
         }
-        {announcements[this.state.current]}
+        {announcements[this.state.currentIndex]}
       </div>
     );
   }

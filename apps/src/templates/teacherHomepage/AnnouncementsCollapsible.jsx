@@ -27,8 +27,7 @@ const AnnouncementsCollapsible = React.createClass({
         link="http://teacherblog.code.org/"
       >
         <AnnouncementsCarousel>
-          {announcements.length > 0 &&
-            announcements.map((announcement, index) =>
+          {announcements.map((announcement, index) =>
             <Announcement
               key={index}
               heading={announcement.heading}
