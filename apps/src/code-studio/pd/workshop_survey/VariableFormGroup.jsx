@@ -2,6 +2,13 @@ import React from 'react';
 
 import {ButtonList} from '../form_components/button_list';
 
+import {
+  FormGroup,
+  FormControl,
+  ControlLabel,
+  Table
+} from 'react-bootstrap';
+
 const SINGLE_SELECT = 'single_select';
 const MULTI_SELECT = 'multi_select';
 const FREE_RESPONSE = 'free_response';
@@ -13,6 +20,13 @@ const questionPropType = React.PropTypes.shape({
   type: React.PropTypes.oneOf([SINGLE_SELECT, MULTI_SELECT, FREE_RESPONSE]).isRequired,
   values: React.PropTypes.arrayOf(React.PropTypes.string),
 });
+
+const styles = {
+  tdLabel: {
+    padding: 15,
+    verticalAlign: 'inherit'
+  },
+};
 
 const ColumnVariableQuestion = React.createClass({
   propTypes: {
@@ -30,26 +44,40 @@ const ColumnVariableQuestion = React.createClass({
       type = 'check';
     }
 
-    const formGroup = (
-      <ButtonList
-        answers={this.props.question.values}
-        groupName={key}
-        label={""}
-        type={type}
-      />
-    );
 
-    return (<td key={key}>{formGroup}</td>);
+
+
+
+
+
+
+
+
+
+    return (
+      <td key={key}>
+        <FormGroup
+          controlId={key}
+        >
+          <ButtonList
+            answers={this.props.question.values}
+            groupName={key}
+            label={""}
+            type={type}
+          />
+        </FormGroup>
+      </td>
+    );
   },
 
   render() {
     return (
       <tr>
-        <td>
-          <label className="control-label">
+        <td style={styles.tdLabel}>
+          <ControlLabel>
             {this.props.question.label}
             {this.props.question.required && <span className="form-required-field"> *</span>}
-          </label>
+          </ControlLabel>
         </td>
         {this.props.selectedValues.map(this.buildColumn)}
       </tr>
@@ -68,12 +96,22 @@ const RowVariableQuestion = React.createClass({
     const key = `${this.props.question.name}[${selectedValue}]`;
 
     return (
-      <div className="form-group" key={key}>
-        <label className="control-label" htmlFor={key}>
+      <FormGroup
+        key={key}
+        controlId={key}
+
+      >
+        <ControlLabel>
           {label}
-        </label>
-        <textarea className="form-control" name={key} rows={4} type="text" />
-      </div>
+        </ControlLabel>
+        <FormControl
+          componentClass="textarea"
+          name={key}
+          rows={4}
+
+
+        />
+      </FormGroup>
     );
   },
 
@@ -123,7 +161,7 @@ const VariableFormGroup = React.createClass({
     if (this.hasNoSourceValues()) {
       // If we have no source values, we have nothing to render. Return an empty
       // form group
-      return (<div className="form-group" />);
+      return (<FormGroup />);
     }
 
     const columnQuestions = this.props.columnVariableQuestions.map(question => (
@@ -142,12 +180,17 @@ const VariableFormGroup = React.createClass({
       />
     ));
 
-    const tdStyle = {
-      width: `${100 / (this.state.selected.length + 1)}%`
+    const thStyle = {
+      width: `${100 / (this.state.selected.length + 1)}%`,
+      backgroundColor: "#00b2c0",
+      color: "white"
     };
 
     return (
-      <div className="form-group">
+      <FormGroup
+
+        controlId={this.props.sourceName}
+      >
         {this.hasSingleSourceValue() ?
           <input type="hidden" name={this.props.sourceName} value={this.props.sourceValues[0]} /> :
           <ButtonList
@@ -156,23 +199,23 @@ const VariableFormGroup = React.createClass({
             label={this.props.sourceLabel}
             onChange={this.setSelected}
             selectedItems={this.state.selected}
-            required={true}
+            required
             type={'check'}
           />
         }
-        <table>
+        <Table striped bordered>
           <thead>
             <tr>
-              <th style={tdStyle}></th>
-              {this.state.selected.map(value => <th key={value} style={tdStyle}><label>{value}</label></th>)}
+              <th style={thStyle}></th>
+              {this.state.selected.map(value => <th key={value} style={thStyle}><label>{value}</label></th>)}
             </tr>
           </thead>
           <tbody>
             {columnQuestions}
           </tbody>
-        </table>
+        </Table>
         {rowQuestions}
-      </div>
+      </FormGroup>
     );
   }
 });
