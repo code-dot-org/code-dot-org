@@ -14,6 +14,22 @@ class LevelTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
+  # Raises an exception if level_class or any of its descendants do not exist in either
+  # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
+  def raise_unless_specifies_ideal_level_source(level_class)
+    unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
+      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+      raise "#{level_class} does not specify if it has ideal level sources"
+    end
+    level_class.descendants.each do |descendant|
+      raise_unless_specifies_ideal_level_source(descendant)
+    end
+  end
+
+  test 'types marked as having ideal level sources' do
+    raise_unless_specifies_ideal_level_source(Level)
+  end
+
   test 'create level' do
     Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze')
   end
