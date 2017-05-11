@@ -102,11 +102,8 @@ class HomeController < ApplicationController
   end
 
   def courses
-    if current_user
-      @recent_courses = recent_courses
-
-      # Is the language english and the user a teacher?  (No, not are they actually an English teacher.)
-      @english_teacher = current_user.teacher? && request.language == 'en'
-    end
+    @recent_courses = current_user && recent_courses
+    @is_teacher = !!(current_user && current_user.teacher?)
+    @is_english = request.language == 'en'
   end
 end

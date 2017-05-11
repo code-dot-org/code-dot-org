@@ -10,17 +10,11 @@ const StudentHomepage = React.createClass({
     courses: shapes.courses
   },
 
-  componentDidMount() {
-    $('#user_hero').appendTo(this.refs.userHero).show();
-  },
-
   render() {
     const { courses } = this.props;
 
     return (
       <div>
-        <div ref="userHero"/>
-
         <RecentCoursesCollapsible courses={courses}/>
 
         <CollapsibleSection header={i18n.resources()}>

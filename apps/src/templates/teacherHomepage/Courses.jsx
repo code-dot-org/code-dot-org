@@ -1,36 +1,62 @@
 import $ from 'jquery';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import CollapsibleSection from './CollapsibleSection';
 import GradientNavCard from './GradientNavCard';
+import color from "../../util/color";
 import shapes from './shapes';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
+
+const styles = {
+  heading: {
+    paddingRight: 10,
+    paddingTop: 10,
+    paddingBottom: 20,
+    fontSize: 24,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 940
+  }
+};
 
 const Courses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    englishTeacher: React.PropTypes.bool.isRequired
+    isEnglish: React.PropTypes.bool.isRequired,
+    isTeacher: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
-    if (this.props.englishTeacher) {
-      $('.courseexplorer').appendTo(this.refs.courseExplorer).show();
-      $('.tools').appendTo(this.refs.toolExplorer).show();
+    // The components used here are are implemented in legacy HAML/CSS rather than React.
+    if (this.props.isEnglish && this.props.isTeacher) {
+      $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
+      $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
     } else {
-      $('.all-courses').appendTo(this.refs.allCourses).show();
+      $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
   },
 
   render() {
-    const { courses, englishTeacher } = this.props;
+    const { courses, isEnglish, isTeacher } = this.props;
 
     return (
       <div>
-        <RecentCoursesCollapsible courses={courses}/>
+        {courses && (
+          <RecentCoursesCollapsible courses={courses}/>
+        )}
 
-        {englishTeacher ? (
+        {isEnglish && isTeacher && (
           <div>
-            <div ref="courseExplorer"/>
+            <div style={styles.heading}>
+              {i18n.courseExplorerHeading()}
+            </div>
+            <div>
+              {i18n.courseExplorerDescription()}
+            </div>
+            <ProtectedStatefulDiv ref="courseExplorer"/>
 
             <CollapsibleSection header={i18n.resources()}>
               <GradientNavCard
@@ -63,11 +89,19 @@ const Courses = React.createClass({
               />
             </CollapsibleSection>
 
-            <div ref="toolExplorer"/>
+            <div style={styles.heading}>
+              {i18n.toolExplorerHeading()}
+            </div>
+            <div>
+              {i18n.toolExplorerDescription()}
+            </div>
+            <ProtectedStatefulDiv ref="toolExplorer"/>
           </div>
-        ) : (
+        )}
+
+        {!(isEnglish && isTeacher) && (
           <div>
-            <div ref="allCourses"/>
+            <ProtectedStatefulDiv ref="allCourses"/>
           </div>
         )}
       </div>

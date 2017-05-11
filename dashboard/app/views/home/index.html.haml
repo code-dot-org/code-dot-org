@@ -24,6 +24,9 @@
       #landingpage
         = render partial: 'home/student_homepage'
 
+  - else
+    = render partial: 'home/all_courses'
+
 - else
   #landingpage
     .row
