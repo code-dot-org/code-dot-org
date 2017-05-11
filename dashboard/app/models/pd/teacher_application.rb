@@ -19,8 +19,6 @@
 #  index_pd_teacher_applications_on_user_id          (user_id) UNIQUE
 #
 
-require_dependency 'pd/program_registration_validation'
-
 class Pd::TeacherApplication < ActiveRecord::Base
   PROGRAM_DETAILS_BY_COURSE = {
     'csd' => {
