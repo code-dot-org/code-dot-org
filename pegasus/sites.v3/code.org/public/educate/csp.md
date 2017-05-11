@@ -37,26 +37,17 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 And, we still have a number of openings for applicants in the following regions:
 
 * Arizona
-* Bay Area and Central Coast, CA
-* Sacramento Valley and North Coast, CA
 * San Joaquin Valley, CA
-* Colorado
 * Northeast Florida
 * Miami, FL
-* Iowa
 * Illinois
 * Indiana
 * Maine
 * Maryland
-* Montana
 * New Jersey
 * Nevada
-* Oklahoma
 * Pennsylvania
-* South Carolina
-* Tennessee
 * Austin, TX
-* Dallas, TX
 * Utah
 * Virginia
 * Wisconsin
@@ -68,8 +59,8 @@ And, we still have a number of openings for applicants in the following regions:
 
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles. Our curriculum is available at no cost for anyone, anywhere to teach.
 
- * [Code.org 2016-17 AP CS Principles Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
- * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
+ * [Code.org 2017-18 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2017.pdf)
+ * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
 
  [<button>View Curriculum</button>](#lessons)
 
@@ -146,7 +137,7 @@ And, we still have a number of openings for applicants in the following regions:
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- **New** [2016 AP Endorsed Syllabus and Overview](/files/CSPSyllabusApril2016.pdf)
+- **New** [2017 AP Endorsed Syllabus and Overview](/files/CSPSyllabusMay2017.pdf)
 - [Professional Development Overview](/educate/professional-learning/cs-principles)
 - [Course Materials List](#materials)
 
@@ -154,7 +145,7 @@ Several documents describe the overarching themes and direction of the course.
 
 ## <a name="lessons"></a>Lessons
 
-*After the '15-'16 pilot year, we revised and reorganized major portions of the curriculum. A document describing what we changed and why is here: [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ). All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
+*After the '15-'16 pilot year, we revised and reorganized major portions of the curriculum. All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
 
 All lessons are available at [curriculum.code.org/csp](https://curriculum.code.org/csp)
 
@@ -165,7 +156,9 @@ All lessons are available at [curriculum.code.org/csp](https://curriculum.code.o
 |  [![App Lab](csp/images/thumb_applab.png "Unit 3")](https://curriculum.code.org/csp/unit3) [Unit 3](https://curriculum.code.org/csp/unit3) | **Algorithms and Programming (Last updated: June 2016)** This unit introduces students to programming in the JavaScript language and creating small applications (apps) that live on the web. This introduction places a heavy emphasis on understanding general principles of computer programming and revealing those things that are universally applicable to any programming language.|
 |  [![Graph](csp/images/thumb_graph.png "Unit 4")](https://curriculum.code.org/csp/unit4) [Unit 4](https://curriculum.code.org/csp/unit4)| **Big Data and Privacy (Last updated: October 2016)** The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time. The major goals of the unit are 1) for students to develop a well ­rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works.|
 | [![App](csp/images/thumb_app.png "Unit 5")](https://curriculum.code.org/csp/unit5) [Unit 5](https://curriculum.code.org/csp/unit5)| **Building Apps (Last updated: December 2016)** This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event­-driven apps. The unit assumes that students have learned the concepts and skills from Unit 3, namely: writing and using functions, using simple repeat loops, being able to read documentation, collaborating, and using the Code Studio environment with App Lab. |
-|  [![survey](csp/images/thumb_survey.png "Unit 6")](https://curriculum.code.org/csp/unit6) [Unit 6](https://curriculum.code.org/csp/unit6) | **Create and Explore PT (Last updated: January 2017)** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. |
+|  [![survey](csp/images/thumb_survey.png "Unit 6")](https://curriculum.code.org/csp/unit6) [PTs](https://curriculum.code.org/csp/unit6) | **Create and Explore PT (Last updated: January 2017)** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. |
+|||
+|  [![data button](csp/images/data_button.png "Unit 6")](https://curriculum.code.org/csp/unit6) [post-AP](https://studio.code.org/s/csppostap) | **Post-AP material - Making Data-backed Apps** After the AP test, many people have a few weeks left of school. We have some material and lessons that teach students how to use App Lab's database capabilities to make apps that store data in the cloud so it can be retrieved later. |
 
 ### Chat about CS Principles in the forum
 We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles there are two forums that are most useful:

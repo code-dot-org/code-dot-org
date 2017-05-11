@@ -1,6 +1,19 @@
 name 'CSD U2 L5 Overview'
+display_name 'Lesson Overview'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-# Social Sleuth
+# Overview
+
+As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and to whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.
+
+## Vocabulary
+
+* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.
+
+
+## Resources
+
+* [When Does Your Privacy Matter?](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=doc))
+* [Social Sleuth](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/) - Activity Guide ([PDF](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=doc))
 MARKDOWN

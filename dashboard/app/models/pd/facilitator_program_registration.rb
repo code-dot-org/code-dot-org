@@ -17,6 +17,7 @@
 class Pd::FacilitatorProgramRegistration < Pd::ProgramRegistration
   def self.required_fields
     [
+      :confirm_teachercon_date,
       :address_street,
       :address_city,
       :address_state,

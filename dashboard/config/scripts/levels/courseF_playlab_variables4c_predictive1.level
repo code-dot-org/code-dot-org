@@ -61,7 +61,7 @@
         <block type="when_run">
           <next>
             <block type="studio_ask">
-              <title name="TEXT">What be yer name?</title>
+              <title name="TEXT">What is your name?</title>
               <title name="VAR">name</title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
@@ -70,7 +70,7 @@
                     <block type="text_join_simple" inline="false" inputcount="3">
                       <value name="ADD0">
                         <block type="text">
-                          <title name="TEXT">It be a pleasure meetin' ya, </title>
+                          <title name="TEXT">Pleasure to meet you, </title>
                         </block>
                       </value>
                       <value name="ADD1">

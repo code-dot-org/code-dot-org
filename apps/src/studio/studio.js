@@ -32,7 +32,7 @@ import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
-import codegen from '../codegen';
+import * as codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
@@ -55,6 +55,8 @@ import {
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
+import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -920,7 +922,7 @@ function displayCollidables(list) {
  * z-sorting.
  */
 function sortDrawOrder() {
-  if (!level.sortDrawOrder) {
+  if (!skin.sortDrawOrder) {
     return;
   }
 
@@ -2510,6 +2512,10 @@ var displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
+    const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
+      project.isSupportedLevelType();
+    const {isSignedIn} = getStore().getState().pageConstants;
+
     studioApp().displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
@@ -2525,6 +2531,9 @@ var displayFeedback = function () {
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      // save to the project gallery instead of the legacy gallery
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting
@@ -2994,7 +3003,12 @@ Studio.execute = function () {
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
-      const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+      const {hooks, interpreter} = codegen.evalWithEvents(
+        {Studio: api, Globals: Studio.Globals},
+        Studio.interpretedHandlers,
+        code
+      );
+      Studio.interpreter = interpreter;
       hooks.forEach(hook => {
         if (hook.name === 'getGlobals') {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
@@ -4028,6 +4042,10 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.reduceScore(cmd.opts);
       break;
+    case 'displayScore':
+      studioApp().highlight(cmd.id);
+      Studio.displayScore(cmd.opts);
+      break;
     case 'setScoreText':
       studioApp().highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
@@ -4551,7 +4569,6 @@ Studio.paramAsNumber = function (value) {
 Studio.adjustScore = function (value) {
 
   Studio.playerScore += value;
-  Studio.displayScore();
 
   Studio.displayFloatingScore(value);
 
@@ -5040,7 +5057,7 @@ Studio.queueCallback = function (callback, args) {
   // Shift a CallExpression node on the stack that already has its func_,
   // arguments, and other state populated:
   args = args || [''];
-  const intArgs = args.map(arg => codegen.interpreter.createPrimitive(arg));
+  const intArgs = args.map(arg => Studio.interpreter.createPrimitive(arg));
   var state = {
     node: {
       type: 'CallExpression',
@@ -5053,12 +5070,12 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = codegen.interpreter.stateStack.unshift(state);
-    codegen.interpreter.paused_ = false;
-    while (codegen.interpreter.stateStack.length >= depth) {
-      codegen.interpreter.step();
+    const depth = Studio.interpreter.stateStack.unshift(state);
+    Studio.interpreter.paused_ = false;
+    while (Studio.interpreter.stateStack.length >= depth) {
+      Studio.interpreter.step();
     }
-    codegen.interpreter.paused_ = true;
+    Studio.interpreter.paused_ = true;
   });
   callHandler(handlerName);
 };

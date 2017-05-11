@@ -182,6 +182,8 @@ en:
       instructions: "Enter your email address below and we'll send you password reset instructions."
       email: 'Email address'
       submit: 'Submit'
+    reset_errors:
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Change your password'
       new_password: 'New password'
@@ -301,7 +303,6 @@ en:
       label: 'Hi %{username}'
       stats: 'Code Studio'
       settings: 'My account'
-      prizes: 'Prizes'
       logout: 'Sign out'
       signin: 'Sign in'
       signup: 'Create an account'
@@ -432,6 +433,7 @@ en:
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
     announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
     announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
+    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
@@ -670,6 +672,11 @@ en:
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     review_terms: "Review updated terms"
+  school_info_interstitial:
+    title: "We want to bring Computer Science to every student - help us track our progress!"
+    message: "Please enter your school information below."
+    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    save: "Save"
   race_interstitial:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
@@ -779,16 +786,6 @@ en:
     icon_library:
       search_placeholder_text: 'Search for an icon...'
       no_icons_found: 'No icons found'
-    playzone:
-      artist_description: 'Draw cool pictures and designs with the Artist!'
-      artist_title: 'New Drawing'
-      continue_button: 'Go on to the next Stage'
-      playlab_description: 'Create a story or make a game with Play Lab!'
-      playlab_title: 'New App'
-      primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: 'Revisit one of your existing projects.'
-      projects_title: 'Open a project'
-      secondary_header: 'Ask your teacher what to do next'
   flex_category:
     required: 'Overview'
     content: 'Content'
@@ -801,8 +798,16 @@ en:
     extra_course_content: 'Extra Course Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
     csd3_1: 'Chapter 1: Images and Animations'
     csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

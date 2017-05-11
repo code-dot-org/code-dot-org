@@ -132,5 +132,111 @@
         <block type="studio_repeatForever"/>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"black"</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">0</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">0</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">1</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">2</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">2</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">3</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">3</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">3</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">4</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">4</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">1000</title>
+                  <next>
+                    <block type="studio_setSprite">
+                      <title name="VALUE">"visible"</title>
+                      <title name="SPRITE">4</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Studio>

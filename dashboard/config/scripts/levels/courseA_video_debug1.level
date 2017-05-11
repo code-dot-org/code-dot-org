@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 302,
   "properties": {
-    "video_key": "C1_maze_debugging",
+    "video_key": "CSF_debugging_k1_blocks",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false"

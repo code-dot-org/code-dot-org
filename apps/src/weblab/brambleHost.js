@@ -22,6 +22,8 @@ let webLab_ = null;
 let onProjectChangedCallback_ = null;
 // the registered onBrambleReady callback function
 let onBrambleReadyCallback_ = null;
+// the registered onInspectorChanged callback function
+let onInspectorChangedCallback_ = null;
 // the set of recent changes since the last syncFilesWithBramble() called
 let _recentBrambleChanges;
 // the version id of the project at the time of the last bramble file sync
@@ -399,6 +401,10 @@ function onBrambleReady(callback) {
   onBrambleReadyCallback_ = callback;
 }
 
+function onInspectorChanged(callback) {
+  onInspectorChangedCallback_ = callback;
+}
+
 function startInitialFileSync(callback, forceResetToStartSources) {
   const currentProjectVersion = webLab_.getCurrentFilesVersionId();
 
@@ -477,6 +483,7 @@ const brambleHost = {
   enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
   onBrambleReady: onBrambleReady,
+  onInspectorChanged: onInspectorChanged,
   startInitialFileSync: startInitialFileSync,
   syncFiles: syncFiles,
 };
@@ -501,6 +508,12 @@ function load(Bramble) {
 
   // Event listeners
   Bramble.once("ready", function (bramble) {
+
+    function handleInspectorChange(object) {
+      if (onInspectorChangedCallback_) {
+        onInspectorChangedCallback_(object && object.enabled);
+      }
+    }
 
     function handleFileChange(path) {
       // Remove leading project root path
@@ -536,6 +549,7 @@ function load(Bramble) {
       }
     }
 
+    bramble.on("inspectorChange", handleInspectorChange);
     bramble.on("fileChange", handleFileChange);
     bramble.on("fileDelete", handleFileDelete);
     bramble.on("fileRename", handleFileRename);

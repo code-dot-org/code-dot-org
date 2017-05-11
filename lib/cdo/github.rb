@@ -114,7 +114,7 @@ module GitHub
   #   recent commit to branch.
   def self.sha(branch)
     response = Octokit.branch(REPO, branch)
-    response.commit.sha[0, 7]
+    response.commit.sha[0..7]
   end
 
   # Opens a browser URL with a candidate pull request merging head into base.

@@ -12,7 +12,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "9",
+    "ideal": "8",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -66,20 +66,16 @@
                     <block type="maze_turn">
                       <title name="DIR">turnRight</title>
                       <next>
-                        <block type="maze_moveForward">
+                        <block type="controls_repeat">
+                          <title name="TIMES">3</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
                           <next>
-                            <block type="maze_moveForward">
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
                               <next>
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnRight</title>
-                                      <next>
-                                        <block type="maze_moveForward"/>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
+                                <block type="maze_moveForward"/>
                               </next>
                             </block>
                           </next>

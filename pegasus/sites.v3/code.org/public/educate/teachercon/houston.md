@@ -44,7 +44,7 @@ TeacherCon accomodations as well as all conference sessions will take place at:
 <summary>**What if I choose to drive to TeacherCon?**</summary>
   <p>
   <br>
-If you choose to drive to TeacherCon instead of fly, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
+If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
 </p>
 </details>
 
@@ -64,8 +64,8 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 
 **These include:**
 
-* Flights to and from your assigned TeacherCon Location
-* A room for you at the hotel
+* Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
+* A room for you at the hotel -- No need to make a resrvation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
 All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
@@ -116,8 +116,25 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
+### **Previous Email Updates**
+<details>
+<summary>**It's time to book your travel to TeacherCon. Complete by May 15!**</summary>
+  <p>
+  <br>
+[Click here](http://go.pardot.com/webmail/153401/175591515/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
+</p>
+</details>
+
+<details>
+<summary>**Courtesy Reminder: Your travel information for TeacherCon!**</summary>
+  <p>
+  <br>
+[Click here](http://go.pardot.com/webmail/153401/177440463/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
+</p>
+</details> 
+
 ### **Contact Us**
-Check out our [FAQ's!](/public/files/teachercon2017_faqs_teachers.pdf)
+Check out our [FAQ's!](https://goo.gl/udZKLR)
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 

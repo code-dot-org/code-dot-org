@@ -76,8 +76,9 @@ stage 'Programming: Happy Maps'
 level 'UnplugHappyMaps'
 
 stage 'Programming in Maze'
-level 'courseA_video_debug1'
+level 'courseAB_video_NewIntro'
 level 'courseA_maze_seq1'
+level 'courseA_video_debug1'
 level 'courseA_maze_seq2'
 level 'courseA_maze_seq3'
 level 'courseA_maze_seq4'
@@ -85,11 +86,13 @@ level 'courseA_maze_seq5'
 level 'courseA_maze_seq6'
 level 'courseA_maze_seq7'
 level 'courseA_maze_seq8'
-level 'courseA_maze_seq9'
-level 'courseA_maze_seq10'
+level 'courseA_maze_seq9', challenge: true
+level 'courseA_maze_seq10', challenge: true
 level 'courseA_maze_seq11'
 level 'courseA_maze_seq12'
 level 'courseA_maze_seq13'
+bonus 'courseA_maze_seq_challenge1', challenge: true
+bonus 'courseA_maze_seq_challenge2', challenge: true
 
 stage 'Going Places Safely'
 level 'GoingPlacesSafely'
@@ -98,6 +101,7 @@ stage 'Loops: Happy Loops'
 level 'gradeK_unplugged_loops'
 
 stage 'Loops in Collector'
+level 'courseAB_video_collector'
 level 'courseA_collector_loops1'
 level 'courseA_collector_loops2'
 level 'courseA_video_Loops'
@@ -107,12 +111,15 @@ level 'courseA_collector_loops5'
 level 'courseA_collector_loops6'
 level 'courseA_collector_loops7'
 level 'courseA_collector_loops8'
-level 'courseA_collector_loops9'
+level 'courseA_collector_loops9', challenge: true
 level 'courseA_collector_loops10'
 level 'courseA_collector_loops11'
 level 'courseA_collector_loops12'
+bonus 'courseA_collector_loops_challenge1', challenge: true
+bonus 'courseA_collector_loops_challenge2', challenge: true
 
 stage 'Loops in Artist'
+level 'courseB_video_ArtistIntro'
 level 'courseA_artist_loops1'
 level 'courseA_artist_loops2'
 level 'courseA_artist_loops3'
@@ -122,10 +129,12 @@ level 'courseA_artist_loops5'
 level 'courseA_artist_loops6'
 level 'courseA_artist_loops7'
 level 'courseA_artist_loops8'
-level 'courseA_artist_loops9'
+level 'courseA_artist_loops9', challenge: true
 level 'courseA_artist_loops10'
 level 'courseA_artist_loops11'
 level 'courseA_artist_loops12'
+bonus 'courseA_artist_loops_challenge1', challenge: true
+bonus 'courseA_artist_loops_challenge2', challenge: true
 
 stage 'Events: The Big Event'
 level 'BigEvent'
@@ -139,6 +148,3 @@ level 'courseA_playLab_events4'
 level 'courseA_playLab_events5'
 level 'courseA_playLab_events6'
 level 'courseA_playLab_events7'
-
-stage 'Fuzz Fiesta'
-level 'courseA_link_fuzzConditionals'

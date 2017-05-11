@@ -128,23 +128,23 @@ module Dashboard
       video-js/*.css
     )
     config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('app', 'models', 'levels')
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 
-    # TODO: enable memcached cluster in next deploy,
-    #   to separate infrastructure change from application change.
-    # if CDO.memcached_endpoint
-    #   CDO.memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
-    # end
+    if CDO.memcached_endpoint
+      CDO.memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
+    end
 
-    MAX_CACHED_BYTES = 256.megabytes
     if CDO.memcached_hosts.present?
       config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
-        value_max_bytes: MAX_CACHED_BYTES
+        value_max_bytes: 64.megabytes # max size of single value
       }
     else
-      config.cache_store = :memory_store, {size: MAX_CACHED_BYTES}
+      config.cache_store = :memory_store, {
+        size: 256.megabytes # max size of entire store
+      }
     end
 
     # turn off ActionMailer logging to avoid logging email addresses

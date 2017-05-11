@@ -1,43 +1,54 @@
 body {
-  padding-bottom: 28px;
+  padding-bottom: 28px !important;
 }
 
-#pagefooter {
+footer#codeprojects_pagefooter {
+  all: initial; /* blocking inheritance for all properties */
+  display: block;
   width: 100%;
   height: 28px;
   padding: 5px 20px;
   overflow: hidden;
   background-color: #ddd;
   box-sizing: border-box;
-  font-family: 'Gotham 4r', sans-serif;
-  line-height: 18px;
   position: fixed;
   left: 0;
   bottom: 0;
-  color: #aaa;
   z-index: 2147483647;
 }
 
-#pagefooter .content {
+#codeprojects_pagefooter div.codeprojects_pagefooter_content {
+  all: initial; /* blocking inheritance for all properties */
+  display: block;
+  margin: 0 auto;
+  float: left;
+  max-width: 100%;
+}
+
+#codeprojects_pagefooter div.codeprojects_pagefooter_dim {
+  all: initial; /* blocking inheritance for all properties */
   font-size: 12px;
   font-weight: normal;
-  margin: 0 auto;
-}
-
-#pagefooter .dim {
+  font-family: 'Gotham 4r', sans-serif;
+  line-height: 18px;
   display: inline-block;
   opacity: 0.5;
+  color: #aaa;
 }
 
-#pagefooter .footerlink:link {
+#codeprojects_pagefooter a.codeprojects_pagefooter_link {
+  all: initial; /* blocking inheritance for all properties */
+  font-size: 12px;
+  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
+  line-height: 18px;
   color: #aaa;
+}
+
+#codeprojects_pagefooter a.codeprojects_pagefooter_link:link {
   text-decoration: none;
 }
 
-#pagefooter .footerlink:hover {
+#codeprojects_pagefooter a.codeprojects_pagefooter_link:hover {
   color: #777
-}
-
-#pagefooter .footerlink:visited {
-  color: #aaa;
 }

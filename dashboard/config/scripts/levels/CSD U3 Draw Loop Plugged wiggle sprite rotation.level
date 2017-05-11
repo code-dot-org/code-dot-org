@@ -18,7 +18,8 @@
       "x": null,
       "y": null,
       "rotation": null,
-      "World.frameRate": null
+      "World.frameRate": null,
+      "declareAssign_x": null
     },
     "show_d_pad": "false",
     "edit_code": true,

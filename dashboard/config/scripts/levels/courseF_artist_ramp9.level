@@ -36,7 +36,7 @@
     "disable_sharing": "false",
     "callout_json": "[]",
     "ideal": "7",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseD_artist_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseE_artist_ramp9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseF_artist_ramp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseF_artist_ramp9.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

@@ -2,7 +2,7 @@ require 'cdo/activity_constants'
 require 'cdo/script_constants'
 require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
-require 'cdo/section_helpers'
+require 'cdo/code_generation'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
@@ -290,7 +290,7 @@ class DashboardSection
           login_type: login_type,
           grade: grade,
           script_id: script_id,
-          code: SectionHelpers.random_code,
+          code: CodeGeneration.random_unique_code(length: 6),
           stage_extras: stage_extras,
           created_at: created_at,
           updated_at: created_at,
@@ -425,6 +425,8 @@ class DashboardSection
   end
 
   def students
+    return @students if @students
+
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -434,7 +436,7 @@ class DashboardSection
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path
       ).
-      distinct(:student_user_id).
+      group_by(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       where(followers__deleted_at: nil).
@@ -443,10 +445,24 @@ class DashboardSection
           {
             location: "/v2/users/#{row[:id]}",
             age: DashboardStudent.birthday_to_age(row[:birthday]),
-            completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
           }
         )
       end
+    # Though it would be simpler to query the level counts for each student via
+    # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
+    # querying all students together (as below) is significantly more performant.
+    student_ids = @students.map {|s| s[:id]}
+    level_counts = Dashboard.db[:user_levels].
+      group_and_count(:user_id).
+      where(user_id: student_ids).
+      where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+      all
+    @students.each do |datum|
+      level_count = level_counts.find {|x| x[:user_id] == datum[:id]}
+      datum[:completed_levels_count] = level_count ? level_count[:count] : 0
+    end
+
+    @students
   end
 
   def teacher?(user_id)

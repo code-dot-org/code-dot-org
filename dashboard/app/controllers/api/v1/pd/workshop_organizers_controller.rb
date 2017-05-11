@@ -1,6 +1,11 @@
 class Api::V1::Pd::WorkshopOrganizersController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_admin
+  before_action :require_workshop_admin
+
+  def require_workshop_admin
+    return if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+    raise(CanCan::AccessDenied, 'user must be a workshop admin')
+  end
 
   # GET /api/v1/pd/workshop_organizers
   def index

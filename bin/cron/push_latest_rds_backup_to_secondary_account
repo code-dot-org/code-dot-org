@@ -65,7 +65,6 @@ def share_snapshot_with_account(backup_account_id, latest_snapshot)
   copied_snapshot = latest_snapshot.copy({target_db_snapshot_identifier: temp_snapshot_name})
 
   wait_for_snapshot_copy(copied_snapshot)
-  puts "Temporary snapshot #{copied_snapshot.snapshot_id} is ready - #{Time.now}"
 
   # Share the new snapshot with the backup account
   restore_attribute = copied_snapshot.attributes.find {|attr| attr.name == 'restore'}
@@ -89,7 +88,7 @@ end
 # Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
 # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
 def main
-  ChatClient.message 'server operations', 'Beginning cross-account RDS backup'
+  ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
   rds_primary = Aws::RDS::Resource.new
   credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
   rds_backup = Aws::RDS::Resource.new(credentials: credentials_backup)
@@ -116,7 +115,7 @@ def main
       )
       wait_for_snapshot_copy(backed_up_snapshot)
       ChatClient.message(
-        'server operations',
+        'cron-daily',
         "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
       )
     rescue Aws::RDS::Errors::DBSnapshotAlreadyExists
@@ -126,8 +125,6 @@ def main
       )
     end
   ensure
-    # Clean up the temporary snapshot
-    puts "Deleting temporary backup snapshot #{copied_snapshot.snapshot_id}"
     copied_snapshot.delete
   end
 end

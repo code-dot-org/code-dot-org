@@ -36,6 +36,5 @@ Students will be looking at a website included in the Code Studio level and answ
 
 **Discuss:** Once you have finished drawing the site, have students identify the common things they needed to express to someone how to represent the site (text on screen, centering, buttons, images, boxes, backgrounds, etc). 
 
-
-    Creating instructions to explain a website is difficult because there are lots of different things going on at once. First we have the actual text and images we want to be on the page. This is the CONTENT of the page. Second we have things like paragraphs, titles, lists and grids which group together content of the page. This is the STRUCTURE of the page. Lastly there is the color, font, and sizing of things. This is the STYLE of the page. These three things are being communicated at once in these instructions. Today we are going to focus in on how to communicate content and structure by creating our own languages.
+    Creating instructions to explain a website is difficult because there are lots of different things going on at once. First we have the actual text and images we want to be on the page. Without extra information about where and how to display this content, however, it's impossible to know what the web page is supposed to look like. Today we're going to learn about how computers structure web pages to communicate this extra information.
 MARKDOWN

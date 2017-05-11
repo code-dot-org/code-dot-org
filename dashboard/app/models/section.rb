@@ -22,10 +22,9 @@
 #  index_sections_on_user_id  (user_id)
 #
 
-require 'cdo/section_helpers'
-
 require 'full-name-splitter'
 require 'rambling-trie'
+require 'cdo/code_generation'
 
 class Section < ActiveRecord::Base
   acts_as_paranoid
@@ -182,9 +181,6 @@ class Section < ActiveRecord::Base
   private
 
   def unused_random_code
-    loop do
-      code = SectionHelpers.random_code
-      return code unless Section.exists?(code: code)
-    end
+    CodeGeneration.random_unique_code length: 6, model: Section
   end
 end

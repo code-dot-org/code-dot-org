@@ -76,7 +76,9 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="maze_moveForward"/>
+          <block type="maze_move">
+            <title name="DIR">moveForward</title>
+          </block>
           <block type="maze_turn">
             <title name="DIR">turnRight</title>
           </block>
@@ -187,14 +189,17 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
               <next>
                 <block type="procedures_callnoreturn">
                   <mutation name="move and check"/>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
                       <next>
-                        <block type="maze_moveForward">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
                           <next>
                             <block type="procedures_callnoreturn">
                               <mutation name="move and check"/>
@@ -206,8 +211,9 @@
                                     </block>
                                   </value>
                                   <statement name="DO">
-                                    <block type="maze_moveForward">
-                              </block>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                    </block>
                                   </statement>
                                   <next>
                                     <block type="procedures_callnoreturn">

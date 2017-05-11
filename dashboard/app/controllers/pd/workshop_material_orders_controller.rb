@@ -37,6 +37,8 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
       shipped: @workshop_material_orders.shipped.count,
       order_errors: @workshop_material_orders.with_order_errors.count
     }
+
+    view_options(full_width: true)
   end
 
   def workshop_material_order_params
