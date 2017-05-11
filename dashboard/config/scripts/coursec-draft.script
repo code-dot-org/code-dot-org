@@ -16,8 +16,6 @@ level 'courseC_maze_programming7', challenge: true
 level 'courseC_maze_programming8'
 assessment 'courseC_maze_programming8_predict1'
 level 'courseC_maze_programming9'
-bonus 'courseC_maze_programming_challenge1', challenge: true
-bonus 'courseC_maze_programming_challenge2', challenge: true
 
 stage 'Debugging in Maze'
 level 'courseC_video_debugging'
@@ -30,8 +28,6 @@ level 'courseC_maze_debugging6'
 level 'courseC_maze_debugging7', challenge: true
 assessment 'courseC_maze_debugging8_predict1'
 level 'courseC_maze_debugging9'
-bonus 'courseC_maze_debugging_challenge1', challenge: true
-bonus 'courseC_maze_debugging_challenge2', challenge: true
 
 stage 'Real-life Algorithms: Paper Planes'
 level 'PaperPlanes'
@@ -50,8 +46,6 @@ level 'courseC_collector_prog9'
 level 'grade2_collector_A'
 assessment 'grade2_collector_A_predict1'
 level 'grade2_collector_10'
-bonus 'courseC_collector_prog_challenge1', challenge: true
-bonus 'courseC_collector_prog_challenge2', challenge: true
 
 stage 'Programming in Artist'
 level 'courseC_video_artist'
@@ -64,7 +58,6 @@ level 'courseC_artist_prog6'
 level 'courseC_artist_prog7', challenge: true
 level 'courseC_artist_prog8'
 assessment 'courseC_artist_prog6_predict1'
-bonus 'courseC_artist_prog_challenge2', challenge: true
 
 stage 'Loops: Getting Loopy'
 level 'GettingLoopy'
@@ -97,8 +90,6 @@ level 'courseC_harvester_loops9'
 level 'courseC_harvester_loops10'
 level 'courseC_harvester_loops11'
 assessment 'courseC_harvester_loops11_predict1'
-bonus 'courseC_harvester_loops_challenge1'
-bonus 'courseC_harvester_loops_challenge2'
 
 stage 'Events: The Big Event'
 level 'BigEvent'
