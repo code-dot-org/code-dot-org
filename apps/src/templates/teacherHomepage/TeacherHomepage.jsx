@@ -4,11 +4,12 @@ import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import ManageSectionsCollapsible from './ManageSectionsCollapsible';
 import CollapsibleSection from './CollapsibleSection';
 import GradientNavCard from './GradientNavCard';
+import shapes from './shapes';
 import i18n from "@cdo/locale";
 
 const TeacherHomepage = React.createClass({
   propTypes: {
-    courses: React.PropTypes.array,
+    courses: shapes.courses,
     sections: React.PropTypes.array,
     announcements: React.PropTypes.array.isRequired,
   },
