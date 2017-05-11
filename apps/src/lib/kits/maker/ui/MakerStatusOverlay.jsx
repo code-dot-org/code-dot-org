@@ -205,10 +205,12 @@ class BoardNotFound extends Component {
         <Text>Make sure your board is plugged in.</Text>
         <OverlayButton
           text="Try Again"
+          className="try-again"
           onClick={this.props.handleTryAgain}
         />
         <OverlayButton
           text="Run Without Board"
+          className="run-without-board"
           onClick={this.handleRunWithoutBoard}
         />
       </Overlay>
