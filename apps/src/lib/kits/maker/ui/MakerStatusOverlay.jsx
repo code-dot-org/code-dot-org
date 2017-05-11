@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
-import {isConnecting, hasConnectionError} from '../redux';
+import {isConnecting, hasConnectionError, useFakeBoardOnNextRun} from '../redux';
 import OverlayButton from './OverlayButton';
 
 const overlayDimensionsPropTypes = {
@@ -25,6 +25,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func,
+    useFakeBoardOnNextRun: PropTypes.func,
   };
 
   render() {
@@ -39,6 +40,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
           {...dimensions}
           handleTryAgain={handleTryAgain}
           handleDisableMaker={handleDisableMaker}
+          useFakeBoardOnNextRun={this.props.useFakeBoardOnNextRun}
         />
       );
     }
@@ -50,7 +52,9 @@ export default connect(
     scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
     hasConnectionError: hasConnectionError(state),
-  })
+  }), {
+    useFakeBoardOnNextRun
+  }
 )(UnconnectedMakerStatusOverlay);
 
 const style = {
@@ -164,6 +168,12 @@ class BoardNotFound extends Component {
     ...overlayDimensionsPropTypes,
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func,
+    useFakeBoardOnNextRun: PropTypes.func,
+  };
+
+  handleRunWithoutBoard = () => {
+    this.props.useFakeBoardOnNextRun();
+    this.props.handleTryAgain();
   };
 
   renderFooter() {
@@ -196,6 +206,10 @@ class BoardNotFound extends Component {
         <OverlayButton
           text="Try Again"
           onClick={this.props.handleTryAgain}
+        />
+        <OverlayButton
+          text="Run Without Board"
+          onClick={this.handleRunWithoutBoard}
         />
       </Overlay>
     );
