@@ -29,7 +29,7 @@ export default storybook => {
         story: () => (
           <CourseScriptsEditor
             inputStyle={styles.input}
-            selectedScripts={[]}
+            scriptsInCourse={[]}
             scriptNames={scriptNames}
           />
         )
@@ -39,7 +39,7 @@ export default storybook => {
         story: () => (
           <CourseScriptsEditor
             inputStyle={styles.input}
-            selectedScripts={[scriptNames[1]]}
+            scriptsInCourse={[scriptNames[1]]}
             scriptNames={scriptNames}
           />
         )

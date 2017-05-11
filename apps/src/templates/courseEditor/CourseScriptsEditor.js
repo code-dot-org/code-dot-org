@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 
-export default class selectedScriptsEditor extends Component {
+export default class scriptsInCourseEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    selectedScripts: PropTypes.arrayOf(PropTypes.string).isRequired,
+    scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
@@ -15,7 +15,7 @@ export default class selectedScriptsEditor extends Component {
 
     this.state = {
       // want provided script names, plus one empty one
-      selectedScripts: props.selectedScripts.concat('')
+      scriptsInCourse: props.scriptsInCourse.concat('')
     };
   }
 
@@ -28,7 +28,7 @@ export default class selectedScriptsEditor extends Component {
       selected.push('');
     }
     this.setState({
-      selectedScripts: selected
+      scriptsInCourse: selected
     });
   }
 
@@ -36,7 +36,7 @@ export default class selectedScriptsEditor extends Component {
     const { scriptNames } = this.props;
     return (
       <div>
-        {this.state.selectedScripts.map((selectedScript, index) => (
+        {this.state.scriptsInCourse.map((selectedScript, index) => (
           <select
             name="scripts[]"
             style={{

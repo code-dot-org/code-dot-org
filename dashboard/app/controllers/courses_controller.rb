@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+  before_action :require_levelbuilder_mode, except: :show
+
   def show
     course = Course.find_by_name(params[:course_name])
     unless course
@@ -26,7 +28,7 @@ class CoursesController < ApplicationController
 
   # TODO: basic tests
   def create
-    course = Course.new(course_params)
+    course = Course.new(name: params.require(:course).require(:name))
     if course.save
       redirect_to action: :edit, course_name: course.name
     else
@@ -35,19 +37,32 @@ class CoursesController < ApplicationController
   end
 
   def update
-    # TODO
-    render json: params.to_json
+    course = Course.find_by_name!(params[:course_name])
+
+    Course.update_strings(course.name, i18n_params)
+
+    course.update_scripts(params[:scripts])
+
+    # serialization = course.serialize
+
+    # TODO: persist serialization to file if LB
+
+    redirect_to course
   end
 
   def edit
-    course = Course.find_by_name(params[:course_name])
+    course = Course.find_by_name!(params[:course_name])
 
     # We don't support an edit experience for plc courses
-    raise ActiveRecord::ReadOnlyRecord if course.plc_course
+    raise ActiveRecord::ReadOnlyRecord if course.try(:plc_course)
     render 'course_editor', locals: {course: course}
   end
 
-  def course_params
-    params.require(:course).permit(:name)
+  def i18n_params
+    params.permit(
+      :title,
+      :description_student,
+      :description_teacher
+    ).to_h
   end
 end

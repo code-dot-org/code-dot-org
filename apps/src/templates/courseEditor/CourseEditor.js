@@ -14,21 +14,26 @@ const styles = {
 
 export default class CourseEditor extends Component {
   static propTypes = {
+    name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
+    scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
     const {
+      name,
       title,
       descriptionStudent,
       descriptionTeacher,
-      scriptNames
+      scriptsInCourse,
+      scriptNames,
     } = this.props;
     return (
       <div>
+        <h1>{name}</h1>
         <label>
           Title
           <input
@@ -64,7 +69,7 @@ export default class CourseEditor extends Component {
           </div>
           <CourseScriptsEditor
             inputStyle={styles.input}
-            selectedScripts={[]}
+            scriptsInCourse={scriptsInCourse}
             scriptNames={scriptNames}
           />
         </label>
