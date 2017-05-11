@@ -5,26 +5,18 @@ class Pd::LocalSummerWorkshopSurveyController < ApplicationController
   def new
     #authorize! :create, Pd::LocalSummerWorkshopSurvey
 
-    begin
-      @day = params.require(:day).to_i
-    rescue ActionController::ParameterMissing
-      redirect_to day: 1
-      return
-    end
-
     # TODO: confirm enrollment is of the proper type
 
-    puts @pd_enrollment.code
-
-    if Pd::LocalSummerWorkshopSurvey.exists?(pd_enrollment_id: @pd_enrollment.id, day: @day)
-      @survey = Pd::LocalSummerWorkshopSurvey.find_by(pd_enrollment: @pd_enrollment, day: @day)
+    if Pd::LocalSummerWorkshopSurvey.exists?(pd_enrollment_id: @pd_enrollment.id)
+      #@survey = Pd::LocalSummerWorkshopSurvey.find_by(pd_enrollment: @pd_enrollment)
       render :submitted
       return
     end
 
     @script_data = {
       options: Pd::LocalSummerWorkshopSurvey.options.camelize_keys.to_json,
-      day: @day,
+      pdEnrollmentCode: @pd_enrollment.code.to_json,
+      facilitatorNames: @pd_enrollment.workshop.facilitators.map(&:name).to_json
     }
   end
 end

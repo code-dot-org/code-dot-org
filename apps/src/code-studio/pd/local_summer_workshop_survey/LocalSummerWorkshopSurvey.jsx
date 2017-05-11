@@ -1,28 +1,32 @@
 import React from 'react';
 
 import FormController from '../form_components/FormController';
-import DayOneQuestions from './DayOneQuestions';
-
-const PageComponentsByDay = [
-  [
-    DayOneQuestions
-  ],
-  [
-  ],
-  [
-  ],
-  [
-  ],
-  [
-  ],
-];
+import WorkshopQuality from './WorkshopQuality';
+import PersonalInvolvement from './PersonalInvolvement';
+import WorkshopResults from './WorkshopResults';
+import Demographics from './Demographics';
 
 export default class LocalSummerWorkshopSurvey extends FormController {
   /**
    * @override
    */
   getPageComponents() {
-    return PageComponentsByDay[this.props.day - 1];
+    return [
+      WorkshopQuality,
+      PersonalInvolvement,
+      WorkshopResults,
+      Demographics,
+    ];
+  }
+
+  /**
+   * @override
+   */
+  getPageProps() {
+    return {
+      ...super.getPageProps(),
+      facilitatorNames: this.props.facilitatorNames,
+    };
   }
 
   /**
@@ -31,7 +35,7 @@ export default class LocalSummerWorkshopSurvey extends FormController {
   serializeFormData() {
     return {
       ...super.serializeFormData(),
-      day: this.props.day
+      pd_enrollment_code: this.props.pdEnrollmentCode,
     };
   }
 
@@ -46,5 +50,6 @@ export default class LocalSummerWorkshopSurvey extends FormController {
 
 LocalSummerWorkshopSurvey.propTypes = {
   ...FormController.propTypes,
-  day: React.PropTypes.number.isRequired,
+  pdEnrollmentCode: React.PropTypes.string.isRequired,
+  facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 };

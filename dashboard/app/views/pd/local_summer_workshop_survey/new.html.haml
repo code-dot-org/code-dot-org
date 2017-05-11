@@ -1,15 +1,18 @@
-- @page_title = 'Code.org TeacherCon Registration for Facilitators'
+- course = @pd_enrollment.workshop.course
+- subject = @pd_enrollment.workshop.subject
+- @page_title = "Satisfaction Survey for Code.org's #{course} #{subject} Professional Development Workshop"
+
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
   %script{src: minifiable_asset_path('js/pd/local_summer_workshop_survey/new.js'), data: @script_data}
 
-#application-header
-  %h2
-    Code.org TeacherCon Registration for Facilitators
-  %h3
-    Please complete this form by April 28, 2017. Contact
-    = link_to 'facilitators@code.org', 'mailto:facilitators@code.org'
-    with any questions.
+%h1
+  = @page_title
 
-  #application-container
-    -# populated by React
+%p
+  Please note that the facilitator of your session will see your responses.
+  Your name and email will not be shared with your facilitator to protect your anonymity,
+  however, it’s possible your facilitator could identify you from your written responses.
+
+#application-container
+  -# populated by React

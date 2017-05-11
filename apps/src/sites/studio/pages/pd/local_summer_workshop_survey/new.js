@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   ReactDOM.render(
     <LocalSummerWorkshopSurvey
       options={getScriptData('options')}
-      day={getScriptData('day')}
+      facilitatorNames={getScriptData('facilitatorNames')}
+      pdEnrollmentCode={getScriptData('pdEnrollmentCode')}
       apiEndpoint="/api/v1/pd/local_summer_workshop_surveys"
     />,
     document.getElementById('application-container')
