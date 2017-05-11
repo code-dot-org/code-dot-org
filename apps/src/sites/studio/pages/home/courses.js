@@ -11,15 +11,15 @@ function showCourses() {
   initCourseExplorer();
 
   const coursesData = document.querySelector('script[data-courses]');
-  const configCourses = JSON.parse(coursesData.dataset.courses);
-
-  const englishTeacherData = document.querySelector('script[data-englishteacher]');
-  const configEnglishTeacher = JSON.parse(englishTeacherData.dataset.englishteacher);
+  const courses = JSON.parse(coursesData.dataset.courses);
+  const isEnglish = JSON.parse(coursesData.dataset.english);
+  const isTeacher = JSON.parse(coursesData.dataset.teacher);
 
   ReactDOM.render (
     <Courses
-      courses={configCourses}
-      englishTeacher={configEnglishTeacher}
+      courses={courses}
+      isEnglish={isEnglish}
+      isTeacher={isTeacher}
     />,
     document.getElementById('courses-container')
   );
