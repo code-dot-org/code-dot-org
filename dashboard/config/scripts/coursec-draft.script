@@ -37,6 +37,7 @@ stage 'Real-life Algorithms: Paper Planes'
 level 'PaperPlanes'
 
 stage 'Programming in Collector'
+level 'courseC_video_collector'
 level 'courseC_collector_prog1'
 level 'courseC_collector_prog2'
 level 'courseC_collector_prog3'

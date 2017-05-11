@@ -246,8 +246,6 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
-  get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
-
   get '/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
