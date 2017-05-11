@@ -25,11 +25,11 @@ module Pd::Form
   end
 
   def validate_required_fields
-    hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
+    hash = sanitize_form_data_hash
 
     # empty fields may come about when the user selects then unselects an
     # option. They should be treated as if they do not exist
-    hash.delete_if do |_key, value|
+    hash.delete_if do |_, value|
       value.empty?
     end
 
@@ -39,9 +39,9 @@ module Pd::Form
   end
 
   def validate_options
-    hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
+    hash = sanitize_form_data_hash
 
-    hash_with_options = hash.select do |key, _value|
+    hash_with_options = hash.select do |key, _|
       self.class.options.key? key
     end
 
@@ -57,7 +57,7 @@ module Pd::Form
   end
 
   def update_form_data_hash(update_hash)
-    self.form_data_hash = (form_data_hash || {}).merge update_hash
+    self.form_data_hash = form_data_hash.merge update_hash
   end
 
   def form_data_hash=(hash)
