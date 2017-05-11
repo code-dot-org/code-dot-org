@@ -3,6 +3,9 @@ import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {projectPropType} from './projectConstants';
 import i18n from "@cdo/locale";
 
+const NUM_PROJECTS_ON_PREVIEW = 4;
+const NUM_PROJECTS_IN_APP_VIEW = 12;
+
 const styles = {
   grid: {
     padding: 10,
@@ -38,7 +41,7 @@ const ProjectCardGrid = React.createClass({
 
   render() {
     const { projectLists } = this.props;
-    const numProjects = this.state.showAll ? 4 : 12;
+    const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
 
     return (
       <div style={styles.grid}>

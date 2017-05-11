@@ -1,14 +1,4 @@
 import {PropTypes} from 'react';
-var utils = require('../../utils');
-
-
-export const GameLabInterfaceMode = utils.makeEnum(
-  'APPLAB',
-  'GAMELAB',
-  'ARTIST',
-  'PLAYLAB',
-  'ALL'
-);
 
 export const projectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
