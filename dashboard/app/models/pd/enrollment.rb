@@ -25,7 +25,7 @@
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
-require_dependency 'cdo/code_generation'
+require 'cdo/code_generation'
 
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
