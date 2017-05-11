@@ -82,9 +82,13 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
     });
   };
 
+  $scope.showPublishProjectDialog = function (project) {
+    window.onShowConfirmPublishDialog(publishProject.bind(this, project));
+  };
+
   var PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'artist', 'playlab'];
 
-  $scope.publishProject = function (project) {
+  function publishProject(project) {
     var type = getProjectType(project);
     if (PROJECT_TYPES.indexOf(type) === -1) {
       throw 'Cannot publish project of type "' + type + '"';
@@ -97,7 +101,7 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
         project.publishedAt = response.data.publishedAt;
       }
     });
-  };
+  }
 
   $scope.unpublishProject = function (project) {
     $http({
