@@ -94,8 +94,6 @@ level 'courseB_maze_seq9', challenge: true
 level 'courseB_maze_seq10'
 level 'courseB_maze_seq11'
 level 'courseB_maze_seq12'
-bonus 'courseB_maze_seq_challenge1', challenge: true
-bonus 'courseB_maze_seq_challenge2', challenge: true
 
 stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_external_loopMRF'
@@ -113,8 +111,6 @@ level 'courseB_collector_loops8', challenge: true
 level 'courseB_collector_loops9'
 level 'courseB_collector_loops10'
 level 'courseB_collector_loops11'
-bonus 'courseB_collector_loops_challenge1', challenge: true
-bonus 'courseB_collector_loops_challenge2', challenge: true
 
 stage 'Loops in Artist'
 level 'courseB_video_ArtistIntro'
@@ -129,8 +125,6 @@ level 'courseB_artist_loops7', challenge: true
 level 'courseB_artist_loops8'
 level 'courseB_artist_loops9'
 level 'courseB_artist_loops10'
-bonus 'courseB_artist_loops_challenge1'
-bonus 'courseB_artist_loops_challenge2'
 
 stage 'Events: The Big Event'
 level 'BigEvent'
@@ -145,5 +139,3 @@ level 'courseB_playlab_events5'
 level 'courseB_playlab_events6'
 level 'courseB_playlab_events7'
 level 'courseB_playlab_eventsFP'
-bonus 'courseB_playlab_events_challenge1'
-bonus 'courseB_playlab_events_challenge2'
