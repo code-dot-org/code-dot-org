@@ -56,6 +56,8 @@ module Rack
         return false unless content_type.include_one_of?(@content_types)
       end
 
+      return false unless Gatekeeper.allows('optimize', default: true)
+
       true
     end
   end
