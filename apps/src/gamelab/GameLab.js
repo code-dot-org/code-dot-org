@@ -781,7 +781,6 @@ GameLab.prototype.execute = function () {
 };
 
 GameLab.prototype.initInterpreter = function () {
-  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
 
   var self = this;
   function injectGamelabGlobals() {
@@ -801,7 +800,8 @@ GameLab.prototype.initInterpreter = function () {
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
-    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties()
+    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
+    customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
   });
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));

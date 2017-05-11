@@ -366,6 +366,47 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     assert_equal secondary_email_3, application.secondary_email
   end
 
+  test 'primary email and user must match validation runs only when they change' do
+    teacher_1 = create :teacher
+    teacher_2 = create :teacher
+    extraneous_teacher = create :teacher
+    application = build :pd_teacher_application, user: teacher_1, primary_email: teacher_2.email
+
+    # Initially invalid because the emails don't match.
+    # Save without validating as if it were an old application before this rule existed
+    refute application.valid?
+    application.save(validate: false)
+
+    # Now, without changing anything, it should be valid
+    application.reload
+    assert application.valid?
+
+    # Changing move_to_user will run the validation
+    application.move_to_user = extraneous_teacher.id
+    refute application.valid?
+    application.move_to_user = teacher_2.id
+    assert application.valid?
+
+    # Same with changing the primary_email
+    application.reload
+    application.primary_email = extraneous_teacher.email
+    refute application.valid?
+    application.primary_email = teacher_1.email
+    assert application.valid?
+
+    # Or changing the user directly
+    application.reload
+    application.user = extraneous_teacher
+    refute application.valid?
+    application.user = teacher_2
+    assert application.valid?
+
+    # But changing other fields will skip the user / email validation
+    application.reload
+    application.secondary_email = 'another@email.com'
+    assert application.valid?
+  end
+
   private
 
   # @param application_id [Integer] teacher application id

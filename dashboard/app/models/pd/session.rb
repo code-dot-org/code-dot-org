@@ -17,7 +17,7 @@
 #  index_pd_sessions_on_pd_workshop_id  (pd_workshop_id)
 #
 
-require_dependency 'cdo/code_generation'
+require 'cdo/code_generation'
 
 class Pd::Session < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.

@@ -27,14 +27,11 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-- **Finance & Administration**
-	 - [Executive Assistant (temporary)](#ea)
 - **Marketing**
 	- [Director of Marketing & Communications](#director)
 	- [Marketing Associate](#associate)
 	- [Marketing Coordinator](#markcoordinator)
 - **Product and Engineering**
-	- [Director of Product](#drprod)
 	- [Product Designer](#design)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
@@ -42,37 +39,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-
-## <a name="ea"href="#ea">Executive Assistant (temporary; Seattle, WA)</a>
-
-**Job Summary:** 
-
-Code.org is looking for an experienced Executive Assistant to join our administrative team. This is a full-time, short-term assignment, to cover the maternity leave of one of our staff members.  
-
-We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team for the next 3-4 months (tentative start date: May 2). You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Successful candidates will have prior experience in a fast-paced or start up environment. 
-
-The primary responsibility of the person filling this role will be supporting three C-level Leadership Team members in day-to-day administrative tasks. 
-
-Typical duties will include: 
-
-- Managing individual Leadership Team member’s calendars
-- Coordinating travel and submitting expense reports for LT members  
-- Assisting in event planning and order catering, as needed
-- Other duties, as assigned 
-
-**Experience and Qualifications**
-
-The ideal candidate has the following qualifications:
-
-- 2-4 years experience in supporting C-level executives 
-- Excellent written and verbal communications skills 
-- Proficiency using Google Apps for email and calendaring
-- Proactive problem solver with strong attention to detail
-- Experience learning and using current tech tools
-
-To apply, please email cover letter and resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
@@ -175,42 +141,6 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="drprod"href="#drprod">Director of Product (Seattle, WA)</a>
-**Job Summary:**
-
-Code.org is looking for an experienced Director of Product with a shared passion for our mission--we are transforming computer science education and changing the world! Working at Code.org, you’ll be a leader in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-
-The Director of Product will be responsible for providing end-to-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms. Code.org curriculum spans from kindergarten to grade 12 and professional learning workshops for teachers. 
-
-In addition to our curriclum platform, the product team builds tools for advocacy, marketing, and partnerships. Some examples:
-
-- Tools and a <a href="https://code.org/educate/applab">development environment</a> for middle school and high school students to learn computer science (example)
-- <a href="https://studio.code.org/s/course2/stage/4/puzzle/4">Tutorials</a> to teach elementary students to code
-- Website tools to support <a href=https://code.org/promote>advocacy</a> and <a href="https://code.org/educate/curriculum/elementary-school#teach"">professional learning</a> 
- 
-
-The Director of Product will also be responsible for: 
-
-- Managing a team comprising product management, user experience, design, data science, and customer support.
-- Managing high visibility external partnerships 
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- 7+ years experience as a Product Manager, i.e. defining product, customer/competitive research, writing specs, working with engineering team
-- 3+ years experience as a manager of other PMs
-- Experience with building / managing a Web site and/or web services
-- Bachelor’s degree with a background in Computer Science (or equivalent experience)
-
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
-To apply, please email your resume (and/or LinkedIn profile), cover letter, and portfolio to <a href="mailto:jobs@code.org">jobs@code.org</a>. 
 
 ## <a name="design"href="#design">Product Designer (Seattle, WA)</a>
 **Job Summary:**
