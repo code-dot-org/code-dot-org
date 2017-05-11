@@ -35,7 +35,13 @@ const ProjectAppTypeArea = React.createClass({
     labViewMoreString: PropTypes.string.isRequired,
     projectList: PropTypes.arrayOf(projectPropType).isRequired,
     numProjectsToShow: PropTypes.number.isRequired,
-    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
+    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
+    navigateFunction: PropTypes.func.isRequired
+  },
+
+  viewMore() {
+    const appName = this.props.labName.toLowerCase().replace(' ', '');
+    this.props.navigateFunction(appName);
   },
 
   renderProjectCardList(projectList, max) {
@@ -60,7 +66,7 @@ const ProjectAppTypeArea = React.createClass({
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
-        <span style={styles.viewMore} > {this.props.labViewMoreString} </span>
+        <span style={styles.viewMore} onClick={this.viewMore}> {this.props.labViewMoreString} </span>
         <div style={{clear: 'both'}}></div>
         {this.renderProjectCardList(this.props.projectList, this.props.numProjectsToShow)}
       </div>
