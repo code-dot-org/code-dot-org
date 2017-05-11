@@ -1,4 +1,4 @@
-/** @file Fake Maker Board for running Maker apps without a board attached. */
+/** @file Fake for running Maker apps without an attached board. */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {J5_CONSTANTS, N_COLOR_LEDS} from './PlaygroundConstants';
@@ -22,9 +22,7 @@ export default class FakeBoard extends EventEmitter {
   /**
    * Disconnect and clean up the board controller and all components.
    */
-  destroy() {
-    // Included for compatability with MakerBoard interface
-  }
+  destroy() {}
 
   /**
    * Marshals the board component controllers and appropriate constants into the
@@ -49,11 +47,11 @@ export default class FakeBoard extends EventEmitter {
       TouchSensor: FakeComponent,
     };
 
-    Object.keys(constructors).forEach(constructorName => {
+    for (const constructorName in constructors) {
       const constructor = constructors[constructorName];
       jsInterpreter.addCustomMarshalObject({instance: constructor});
       jsInterpreter.createGlobalProperty(constructorName, constructor);
-    });
+    }
 
     const components = {
       board: new FakeComponent(),
@@ -70,24 +68,23 @@ export default class FakeBoard extends EventEmitter {
       ...J5_CONSTANTS,
     };
 
-    Object.keys(components).forEach(componentName => {
-      jsInterpreter.createGlobalProperty(componentName, components[componentName]);
-    });
+    for (const componentName in components) {
+      const component = components[componentName];
+      jsInterpreter.createGlobalProperty(componentName, component);
+    }
   }
 
   /**
    * @param {number} pin
    * @param {number} modeConstant
    */
-  pinMode(pin, modeConstant) {
-  }
+  pinMode(pin, modeConstant) {}
 
   /**
    * @param {number} pin
    * @param {number} value
    */
-  digitalWrite(pin, value) {
-  }
+  digitalWrite(pin, value) {}
 
   /**
    * @param {number} pin
@@ -101,8 +98,7 @@ export default class FakeBoard extends EventEmitter {
    * @param {number} pin
    * @param {number} value
    */
-  analogWrite(pin, value) {
-  }
+  analogWrite(pin, value) {}
 
   /**
    * @param {number} pin
@@ -113,15 +109,7 @@ export default class FakeBoard extends EventEmitter {
   }
 }
 
-/**
- * Fake board component for use with fake Board controller.
- */
-class FakeComponent extends EventEmitter {
-  constructor() {
-    super();
-    this.clazz = 'FakeComponent';
-  }
-}
+class FakeComponent extends EventEmitter {}
 
 class FakeLed extends FakeComponent {
   on() {}
@@ -160,8 +148,11 @@ class FakeSensor extends FakeComponent {
   }
 
   start() {}
-  getAveragedValue() { return 0; }
   setScale() {}
+
+  getAveragedValue() {
+    return 0;
+  }
 }
 
 class FakeThermometer extends FakeComponent {
@@ -174,8 +165,14 @@ class FakeThermometer extends FakeComponent {
 
 class FakeAccelerometer extends FakeComponent {
   start() {}
-  getAcceleration() { return 0; }
-  getOrientation() { return 0; }
+
+  getAcceleration() {
+    return 0;
+  }
+
+  getOrientation() {
+    return 0;
+  }
 }
 
 class FakeButton extends FakeComponent {

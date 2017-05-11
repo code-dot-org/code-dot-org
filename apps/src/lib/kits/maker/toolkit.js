@@ -117,13 +117,7 @@ function getBoard() {
     return Promise.resolve(new FakeBoard());
   } else {
     return findPortWithViableDevice()
-        .then(port => {
-          if (!isConnecting()) {
-            // Must've called reset() - exit the promise chain.
-            return Promise.reject(new ConnectionCanceledError());
-          }
-          return new CircuitPlaygroundBoard(port);
-        });
+        .then(port => new CircuitPlaygroundBoard(port));
   }
 }
 
