@@ -94,6 +94,17 @@ class ExperimentTest < ActiveSupport::TestCase
       section_id: section.id + 1
     assert_empty Experiment.get_all_enabled(section: section)
   end
+
+  test 'single facilitator experiment is enabled' do
+    facilitator_yes = User.first || create(:facilitator)
+    facilitator_no = User.second || create(:facilitator)
+    experiment = SingleFacilitatorExperiment.first || create(:single_facilitator_experiment, min_user_id: facilitator_yes.id)
+
+    assert_equal [experiment], Experiment.get_all_enabled(user: facilitator_yes)
+    assert_empty Experiment.get_all_enabled(user: facilitator_no)
+    assert experiment.enabled?(user: facilitator_yes)
+    refute experiment.enabled?(user: facilitator_no)
+  end
 end
 
 class CachedExperimentTest < ExperimentTest
