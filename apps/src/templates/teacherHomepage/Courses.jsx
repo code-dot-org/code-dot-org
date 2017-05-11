@@ -3,18 +3,22 @@ import React from 'react';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import CollapsibleSection from './CollapsibleSection';
 import GradientNavCard from './GradientNavCard';
+import shapes from './shapes';
 import i18n from "@cdo/locale";
 
 const Courses = React.createClass({
   propTypes: {
-    courses: React.PropTypes.array.isRequired,
+    courses: shapes.courses,
     englishTeacher: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
-    $('.courseexplorer').appendTo(this.refs.courseExplorer).show();
-    $('.tools').appendTo(this.refs.toolExplorer).show();
-    $('.all-courses').appendTo(this.refs.allCourses).show();
+    if (this.props.englishTeacher) {
+      $('.courseexplorer').appendTo(this.refs.courseExplorer).show();
+      $('.tools').appendTo(this.refs.toolExplorer).show();
+    } else {
+      $('.all-courses').appendTo(this.refs.allCourses).show();
+    }
   },
 
   render() {
@@ -24,7 +28,7 @@ const Courses = React.createClass({
       <div>
         <RecentCoursesCollapsible courses={courses}/>
 
-        {englishTeacher && (
+        {englishTeacher ? (
           <div>
             <div ref="courseExplorer"/>
 
@@ -61,9 +65,7 @@ const Courses = React.createClass({
 
             <div ref="toolExplorer"/>
           </div>
-        )}
-
-        {!englishTeacher && (
+        ) : (
           <div>
             <div ref="allCourses"/>
           </div>

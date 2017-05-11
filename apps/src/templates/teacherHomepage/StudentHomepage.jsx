@@ -2,11 +2,12 @@ import React from 'react';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import CollapsibleSection from './CollapsibleSection';
 import GradientNavCard from './GradientNavCard';
+import shapes from './shapes';
 import i18n from "@cdo/locale";
 
 const StudentHomepage = React.createClass({
   propTypes: {
-    courses: React.PropTypes.array
+    courses: shapes.courses
   },
 
   componentDidMount() {
@@ -24,7 +25,7 @@ const StudentHomepage = React.createClass({
 
         <CollapsibleSection header={i18n.resources()}>
           <GradientNavCard
-            title={i18n.coursesCard()}
+            title={i18n.courses()}
             description={i18n.coursesCardDescription()}
             image="../../static/navcard-placeholder.png"
             buttonText={i18n.coursesCardAction()}
