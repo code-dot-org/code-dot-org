@@ -241,14 +241,18 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
   return obj;
 };
 
-exports.customMarshalObjectList = [];
+
+/**
+ * @deprecated use customMarshalObjectList that is stored on JSInterpreter instead.
+ */
+exports.customMarshalObjectList_DEPRECATED = [];
 
 // If this is on our list of "custom marshal" objects - or if it a property
 // on one of those objects (other than a function), return true
 
 var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
-  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
-    var marshalObj = exports.customMarshalObjectList[i];
+  for (var i = 0; i < exports.customMarshalObjectList_DEPRECATED.length; i++) {
+    var marshalObj = exports.customMarshalObjectList_DEPRECATED[i];
     if ((nativeVar instanceof marshalObj.instance &&
           (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeVar[marshalObj.requiredMethod] !== undefined)) ||
@@ -264,8 +268,8 @@ var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
 // the marshaling options. This returns those options.
 
 var getCustomMarshalMethodOptions = function (nativeParentObj) {
-  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
-    var marshalObj = exports.customMarshalObjectList[i];
+  for (var i = 0; i < exports.customMarshalObjectList_DEPRECATED.length; i++) {
+    var marshalObj = exports.customMarshalObjectList_DEPRECATED[i];
     if (nativeParentObj instanceof marshalObj.instance) {
       if (typeof marshalObj.requiredMethod === 'undefined' ||
            nativeParentObj[marshalObj.requiredMethod] !== undefined) {

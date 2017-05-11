@@ -10,6 +10,6 @@ class CoursesController < ApplicationController
       return
     end
 
-    render 'index'
+    render 'index', locals: {course: course}
   end
 end
