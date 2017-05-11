@@ -36,6 +36,7 @@ export default class FormController extends React.Component {
     this.state = {
       data: {},
       errors: [],
+      errorHeader: null,
       currentPage: 0,
       submitting: false
     };
@@ -137,6 +138,7 @@ export default class FormController extends React.Component {
     // submitting flag so we can prevent duplicate submission
     this.setState({
       errors: [],
+      errorHeader: null,
       submitting: true
     });
 
@@ -149,9 +151,21 @@ export default class FormController extends React.Component {
     }).done(() => {
       this.onSuccessfulSubmit();
     }).fail(data => {
-      this.setState({
-        errors: data.responseJSON.errors.form_data
-      });
+      if (data.responseJSON &&
+          data.responseJSON.errors &&
+          data.responseJSON.errors.form_data) {
+        // if the failure was a result of an invalid form, highlight the errors
+        // and display the generic error header
+        this.setState({
+          errors: data.responseJSON.errors.form_data,
+          errorHeader: "Please correct the errors below."
+        });
+      } else {
+        // Otherwise, something unknown went wrong on the server
+        this.setState({
+          errorHeader: "Something went wrong on our end; please try again later."
+        });
+      }
     }).always(() => {
       this.setState({
         submitting: false
@@ -173,10 +187,10 @@ export default class FormController extends React.Component {
       `);
     }
 
-    if (pageFields.some(field => this.state.errors.includes(field))) {
+    if (this.state.errorHeader) {
       return (
         <Alert bsStyle="danger">
-          <h3>Please correct the errors below.</h3>
+          <h3>{this.state.errorHeader}</h3>
         </Alert>
       );
     }
