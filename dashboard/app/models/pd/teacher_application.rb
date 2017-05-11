@@ -19,8 +19,6 @@
 #  index_pd_teacher_applications_on_user_id          (user_id) UNIQUE
 #
 
-require_dependency 'pd/program_registration_validation'
-
 class Pd::TeacherApplication < ActiveRecord::Base
   PROGRAM_DETAILS_BY_COURSE = {
     'csd' => {
@@ -93,7 +91,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     end
   end
 
-  validate :primary_email_must_match_user_email, unless: -> {primary_email.blank?}
+  validate :primary_email_must_match_user_email, if: -> {primary_email_changed? || user_id_changed?}
   def primary_email_must_match_user_email
     return unless user
     unless primary_email_matches_user_email?
@@ -326,6 +324,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def reload
     @override_program_registration = false
     @program_registration = nil
+    @move_to_user = nil
     super
   end
 
@@ -394,7 +393,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def lookup_move_to_user
     return nil if move_to_user.blank?
 
-    if move_to_user =~ /^\d+$/
+    if move_to_user.is_a?(Integer) || move_to_user =~ /^\d+$/
       User.find_by id: move_to_user
     else
       User.find_by_email_or_hashed_email move_to_user
