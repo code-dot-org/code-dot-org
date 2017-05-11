@@ -307,8 +307,8 @@ en:
       already_registered: 'Already registered?'
       pair_programming: 'Pair Programming'
       team: 'Team'
-      driver: 'Driver'
-      navigator: 'Navigator'
+      driver: 'Logged in'
+      navigator: 'Partner'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
