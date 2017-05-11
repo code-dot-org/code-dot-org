@@ -18,14 +18,23 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
 
-  # TODO: we'd like to disallow spaces, but need to figure out what that means for PLC
   validates :name,
     presence: true,
-    uniqueness: {case_sensitive: false},
-    format: {
-      with: /\A[a-zA-Z0-9\_ ]+\z/,
-      message: 'can only contain spaces, numbers, and underscores'
-    }
+    uniqueness: {case_sensitive: false}
+
+  # TODO: write tests
+  class CourseNameValidator < ActiveModel::Validator
+    def validate(course)
+      return if course.plc_course
+
+      unless /\A[a-z0-9\-]+\z/ =~ course.name
+        course.errors[:base] << 'can only contain lowercase letters, numbers and dashes'
+      end
+    end
+  end
+
+  validates_with CourseNameValidator
+
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.

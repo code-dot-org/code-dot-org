@@ -7,12 +7,12 @@ class CoursesControllerTest < ActionController::TestCase
     @teacher = create :teacher
     sign_in @teacher
 
-    plc_course = create :plc_course
+    plc_course = create :plc_course, name: 'My PLC'
     @course_plc = plc_course.course
-    # avoid creation validation of name
-    @course_plc.name = "My PLC"
-    @course_plc.save(validate: false)
-    @course_regular = create :course, name: 'non_plc_course'
+    # # avoid creation validation of name
+    # @course_plc.name = "My PLC"
+    # @course_plc.save(validate: false)
+    @course_regular = create :course, name: 'non-plc-course'
   end
 
   test "plc courses get sent to user_course_enrollments_controller" do
@@ -21,7 +21,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "plc course names get titleized" do
-    get :show, params: {course_name: 'my-plc'}
+    get :show, params: {course_name: 'my_plc'}
     assert_template 'plc/user_course_enrollments/index'
   end
 
@@ -32,7 +32,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "regular courses do not get titlized" do
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {course_name: 'non-plc-course'}
+      get :show, params: {course_name: 'non_plc_course'}
     end
   end
 
