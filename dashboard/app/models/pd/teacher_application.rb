@@ -19,8 +19,6 @@
 #  index_pd_teacher_applications_on_user_id          (user_id) UNIQUE
 #
 
-require_dependency 'pd/program_registration_validation'
-
 class Pd::TeacherApplication < ActiveRecord::Base
   PROGRAM_DETAILS_BY_COURSE = {
     'csd' => {
@@ -93,7 +91,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     end
   end
 
-  validate :primary_email_must_match_user_email
+  validate :primary_email_must_match_user_email, if: -> {primary_email_changed? || user_id_changed?}
   def primary_email_must_match_user_email
     return unless user
     unless primary_email_matches_user_email?
@@ -116,6 +114,16 @@ class Pd::TeacherApplication < ActiveRecord::Base
     user && user.hashed_email == Digest::MD5.hexdigest(primary_email)
   end
 
+  def primary_email=(email)
+    update_application_hash(primaryEmail: email)
+    write_attribute(:primary_email, email)
+  end
+
+  def secondary_email=(email)
+    update_application_hash(secondaryEmail: email)
+    write_attribute(:secondary_email, email)
+  end
+
   after_create :ensure_user_is_a_teacher
   def ensure_user_is_a_teacher
     user.update!(user_type: User::TYPE_TEACHER, email: primary_email) if user.email.blank?
@@ -124,10 +132,8 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def application_json=(json)
     write_attribute :application, json
 
-    # Also set the primary and secondary email fields.
     hash = JSON.parse(json)
-    write_attribute :primary_email, hash['primaryEmail']
-    write_attribute :secondary_email, hash['secondaryEmail']
+    update_email_fields_from_application_hash hash
   end
 
   def application_json
@@ -136,16 +142,15 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   # Convenience method to set value(s) on the application JSON
   def update_application_hash(update_hash)
-    self.application_hash = (application_hash || {}).merge update_hash
+    write_attribute :application, (application_hash || {}).merge(update_hash).to_json
+    update_email_fields_from_application_hash update_hash
   end
 
   def application_hash=(hash)
     write_attribute :application, hash.to_json
 
     # Also set the primary and secondary email fields.
-    hash = hash.stringify_keys
-    write_attribute :primary_email, hash['primaryEmail']
-    write_attribute :secondary_email, hash['secondaryEmail']
+    update_email_fields_from_application_hash hash
   end
 
   def application_hash
@@ -319,6 +324,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def reload
     @override_program_registration = false
     @program_registration = nil
+    @move_to_user = nil
     super
   end
 
@@ -387,7 +393,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def lookup_move_to_user
     return nil if move_to_user.blank?
 
-    if move_to_user =~ /^\d+$/
+    if move_to_user.is_a?(Integer) || move_to_user =~ /^\d+$/
       User.find_by id: move_to_user
     else
       User.find_by_email_or_hashed_email move_to_user
@@ -423,5 +429,11 @@ class Pd::TeacherApplication < ActiveRecord::Base
       selected_course_s: selected_course,
       accepted_workshop_s: accepted_workshop
     }
+  end
+
+  def update_email_fields_from_application_hash(update_hash)
+    hash = update_hash.stringify_keys
+    write_attribute :primary_email, hash['primaryEmail'] if hash.key? 'primaryEmail'
+    write_attribute :secondary_email, hash['secondaryEmail'] if hash.key? 'secondaryEmail'
   end
 end

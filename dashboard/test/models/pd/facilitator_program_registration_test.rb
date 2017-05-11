@@ -7,6 +7,7 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
     assert_equal [
       "User is required",
       "Form data is required",
+      "Form data confirmTeacherconDate",
       "Form data addressStreet",
       "Form data addressCity",
       "Form data addressState",

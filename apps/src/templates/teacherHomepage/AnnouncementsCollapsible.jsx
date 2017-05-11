@@ -1,6 +1,7 @@
 import React, { PropTypes} from 'react';
 import CollapsibleSection from './CollapsibleSection';
 import Announcement from './Announcement';
+import AnnouncementsCarousel from './AnnouncementsCarousel';
 import i18n from "@cdo/locale";
 
 const AnnouncementsCollapsible = React.createClass({
@@ -18,7 +19,6 @@ const AnnouncementsCollapsible = React.createClass({
 
   render() {
     const { announcements } = this.props;
-    const announcement = announcements[0];
 
     return (
       <CollapsibleSection
@@ -26,13 +26,18 @@ const AnnouncementsCollapsible = React.createClass({
         linkText={i18n.viewAllAnnouncements()}
         link="http://teacherblog.code.org/"
       >
-        <Announcement
-          heading={announcement.heading}
-          description={announcement.description}
-          buttonText={announcement.buttonText}
-          link={announcement.link}
-          image={announcement.image}
-        />
+        <AnnouncementsCarousel>
+          {announcements.map((announcement, index) =>
+            <Announcement
+              key={index}
+              heading={announcement.heading}
+              description={announcement.description}
+              buttonText={announcement.buttonText}
+              link={announcement.link}
+              image={announcement.image}
+            />
+           )}
+        </AnnouncementsCarousel>
       </CollapsibleSection>
     );
   }

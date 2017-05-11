@@ -348,39 +348,57 @@ def main
       should_i 'set DTP message to in progress' do
         DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
       end
-      GitHub.open_pull_request_in_browser(
-        base: 'production',
-        head: test_green_commit,
-        title: "DTP (#{test_green_commit})"
-      )
 
-      should_i 'DTL' do
-        # TODO(asher): Remove this wait step if it is truly unnecessary now.
-        wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+      # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
+      # request from a commit hash (only a branch name), we create and push a branch.
+      branch_name = "dtp_candidate_#{test_green_commit}"
+      begin
+        run_on(
+          'test',
+          "cd test && git checkout test && git checkout -b #{branch_name} #{test_green_commit} && git push origin #{branch_name}"
+        )
+        production_pr_number = GitHub.create_pull_request(
+          base: 'production',
+          head: branch_name,
+          title: "DTP (Test > Production: #{test_green_commit})"
+        )
+        GitHub.open_url GitHub.url(production_pr_number)
 
-        should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
-          content_push 'levelbuilder-staging', 'levelbuilder'
+        should_i 'DTL' do
+          # TODO(asher): Remove this wait step if it is truly unnecessary now.
+          wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+
+          should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
+            content_push 'levelbuilder-staging', 'levelbuilder'
+          end
+
+          view_commits base: 'levelbuilder', head: test_green_commit
+          should_i 'merge from test to levelbuilder' do
+            pr_number = GitHub.create_and_merge_pull_request(
+              base: 'levelbuilder',
+              head: branch_name,
+              title: 'DTL (Test > Levelbuilder: #{test_green_commit})'
+            )
+            puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+          end
         end
 
-        view_commits base: 'levelbuilder', head: test_green_commit
-        should_i 'merge from test to levelbuilder' do
-          pr_number = GitHub.create_and_merge_pull_request(
-            base: 'levelbuilder', head: test_green_commit, title: 'DTL (Test > Levelbuilder)'
-          )
-          puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+        wait_for 'DTP to finish'
+        should_i 'reset DTP message to yes' do
+          DevelopersTopic.set_dtp 'yes'
         end
-      end
+        should_i 'update Slack#infra-production topic' do
+          sha = GitHub.sha 'production'
+          InfraProductionTopic.set_dtp_commit(sha)
+        end
 
-      wait_for 'DTP to finish'
-      should_i 'reset DTP message to yes' do
-        DevelopersTopic.set_dtp 'yes'
+        puts_after_dtp_tasks
+      ensure
+        run_on(
+          'test',
+          "cd test && git checkout test && git branch -D #{branch_name} && git push origin --delete #{branch_name}"
+        )
       end
-      should_i 'update Slack#infra-production topic' do
-        sha = GitHub.sha 'production'
-        InfraProductionTopic.set_dtp_commit(sha)
-      end
-
-      puts_after_dtp_tasks
     end
   end
 

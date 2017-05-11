@@ -440,7 +440,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
-  test 'should generate a short summary' do
+  test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
@@ -451,7 +451,15 @@ class ScriptTest < ActiveSupport::TestCase
       isHocScript: false,
       student_detail_progress_view: false
     }
-    assert_equal expected, script.summarize_short
+    assert_equal expected, script.summarize_header
+  end
+
+  test 'should exclude stages if include_stages is false' do
+    script = create(:script, name: 'single-stage-script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    assert_equal nil, script.summarize(false)[:stages]
   end
 
   test 'should generate PLC objects' do
