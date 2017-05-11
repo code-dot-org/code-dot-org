@@ -357,11 +357,12 @@ def main
           'test',
           "cd test && git checkout test && git checkout -b #{branch_name} #{test_green_commit} && git push origin #{branch_name}"
         )
-        GitHub.open_pull_request_in_browser(
+        production_pr_number = GitHub.create_pull_request(
           base: 'production',
           head: branch_name,
           title: "DTP (Test > Production: #{test_green_commit})"
         )
+        GitHub.open_url GitHub.url(production_pr_number)
 
         should_i 'DTL' do
           # TODO(asher): Remove this wait step if it is truly unnecessary now.
