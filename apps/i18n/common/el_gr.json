@@ -431,6 +431,8 @@
   "projectGalleryCard": "Project Gallery",
   "projectGalleryCardAction": "See the gallery",
   "projectGalleryCardDescription": "Share your own creations or find inspiration from creations made by students all around the world.",
+  "publish": "Publish",
+  "publishToPublicGalleryWarning": "You are about to publish your project to the public gallery, meaning anyone in the world can view your project. Make sure your project does not contain any personal information.",
   "published": "Published",
   "publicGallery": "Public Gallery",
   "resources": "Resources",
