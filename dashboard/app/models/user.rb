@@ -501,8 +501,8 @@ class User < ActiveRecord::Base
       else
         # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
         # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
-        # handle any necessary conversion, setting birthday from auth.info.db. The later shenanigans
-        # ensure that we store the user's age rather than birthday.
+        # handle any necessary conversion, setting birthday from auth.info.dob. The later
+        # shenanigans ensure that we store the user's age rather than birthday.
         user.birthday = auth.info.dob
         user_age = user.age
         user.birthday = nil
