@@ -497,12 +497,16 @@ class User < ActiveRecord::Base
 
       # clever provides us these fields
       if user.user_type == TYPE_TEACHER
-        # if clever told us that the user is a teacher, we just trust
-        # that they are adults; we don't actually care about age
         user.age = 21
       else
-        # student or unspecified type
+        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+        # handle any necessary conversion, setting birthday from auth.info.db. The later shenanigans
+        # ensure that we store the user's age rather than birthday.
         user.birthday = auth.info.dob
+        user_age = user.age
+        user.birthday = nil
+        user.age = user_age
       end
       user.gender = normalize_gender auth.info.gender
     end
