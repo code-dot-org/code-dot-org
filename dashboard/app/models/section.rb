@@ -24,7 +24,7 @@
 
 require 'full-name-splitter'
 require 'rambling-trie'
-require_dependency 'cdo/code_generation'
+require 'cdo/code_generation'
 
 class Section < ActiveRecord::Base
   acts_as_paranoid
