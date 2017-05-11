@@ -48,7 +48,6 @@ class ChannelsTest < Minitest::Test
     assert_equal 456, result['abc']
 
     # Check timestamps.
-    puts "test_update_channel results: #{result.inspect}"
     assert_equal created, result['createdAt']
     refute_equal result['createdAt'], result['updatedAt']
     assert (start..DateTime.now).cover? DateTime.parse(result['updatedAt'])
