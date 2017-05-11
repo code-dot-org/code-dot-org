@@ -8,7 +8,8 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     organizer_id
     organizer_email
     workshop_dates
-    workshop_type
+    on_map
+    funded
     section_url
     facilitators
     num_facilitators
