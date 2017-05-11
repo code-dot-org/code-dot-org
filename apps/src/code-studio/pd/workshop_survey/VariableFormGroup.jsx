@@ -12,12 +12,16 @@ import {
 const SINGLE_SELECT = 'single_select';
 const MULTI_SELECT = 'multi_select';
 const FREE_RESPONSE = 'free_response';
+const RADIO = 'radio';
+const CHECK = 'check';
 
 const questionPropType = React.PropTypes.shape({
   label: React.PropTypes.string.isRequired,
   name: React.PropTypes.string.isRequired,
   required: React.PropTypes.bool,
-  type: React.PropTypes.oneOf([SINGLE_SELECT, MULTI_SELECT, FREE_RESPONSE]).isRequired,
+  type: React.PropTypes.oneOf([
+    SINGLE_SELECT, MULTI_SELECT, FREE_RESPONSE, RADIO, CHECK
+  ]).isRequired,
   values: React.PropTypes.arrayOf(React.PropTypes.string),
 });
 
@@ -31,39 +35,49 @@ const styles = {
 const ColumnVariableQuestion = React.createClass({
   propTypes: {
     selectedValues: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    question: questionPropType
+    question: questionPropType,
+    onChange: React.PropTypes.func,
+    data: React.PropTypes.object,
+    errors: React.PropTypes.arrayOf(React.PropTypes.string),
   },
 
   buildColumn(selectedValue) {
     const key = `${this.props.question.name}[${selectedValue}]`;
 
-    let type;
+    // Support referring to checkboxes as either "single_select" or "check", and
+    // radios as either "radio" or "multi_select", to match the standards of
+    // both React-Bootstrap and the (soon-to-be-deprecated) Pegasus Forms.
+    // TODO (elijah) remove this compatibility once we remove the Pegasus Forms
+    let type = this.props.question.type;
     if (this.props.question.type === SINGLE_SELECT) {
-      type = 'radio';
+      type = RADIO;
     } else if (this.props.question.type === MULTI_SELECT) {
-      type = 'check';
+      type = CHECK;
     }
 
+    let selected = this.props.data && this.props.data[key];
+    if (selected && type === CHECK) {
+      selected = [selected];
+    }
 
-
-
-
-
-
-
-
-
+    let validationState;
+    if (this.props.errors && this.props.errors.includes(key)) {
+      validationState = 'error';
+    }
 
     return (
       <td key={key}>
         <FormGroup
           controlId={key}
+          validationState={validationState}
         >
           <ButtonList
             answers={this.props.question.values}
             groupName={key}
             label={""}
             type={type}
+            selectedItems={selected}
+            onChange={this.props.onChange}
           />
         </FormGroup>
       </td>
@@ -88,18 +102,26 @@ const ColumnVariableQuestion = React.createClass({
 const RowVariableQuestion = React.createClass({
   propTypes: {
     selectedValues: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    question: questionPropType
+    question: questionPropType,
+    onChange: React.PropTypes.func,
+    data: React.PropTypes.object,
+    errors: React.PropTypes.arrayOf(React.PropTypes.string),
   },
 
   buildRow(selectedValue) {
     const label = this.props.question.label.replace("{value}", selectedValue);
     const key = `${this.props.question.name}[${selectedValue}]`;
 
+    let validationState;
+    if (this.props.errors && this.props.errors.includes(key)) {
+      validationState = 'error';
+    }
+
     return (
       <FormGroup
         key={key}
         controlId={key}
-
+        validationState={validationState}
       >
         <ControlLabel>
           {label}
@@ -108,8 +130,8 @@ const RowVariableQuestion = React.createClass({
           componentClass="textarea"
           name={key}
           rows={4}
-
-
+          value={this.props.data && this.props.data[key]}
+          onChange={this.props.onChange}
         />
       </FormGroup>
     );
@@ -131,14 +153,9 @@ const VariableFormGroup = React.createClass({
     sourceValues: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     columnVariableQuestions: React.PropTypes.arrayOf(questionPropType),
     rowVariableQuestions: React.PropTypes.arrayOf(questionPropType),
-  },
-
-  hasNoSourceValues() {
-    return this.props.sourceValues.length === 0;
-  },
-
-  hasSingleSourceValue() {
-    return this.props.sourceValues.length === 1;
+    onChange: React.PropTypes.func,
+    data: React.PropTypes.object,
+    errors: React.PropTypes.arrayOf(React.PropTypes.string),
   },
 
   getInitialState() {
@@ -151,7 +168,19 @@ const VariableFormGroup = React.createClass({
     return {selected};
   },
 
+  hasNoSourceValues() {
+    return this.props.sourceValues.length === 0;
+  },
+
+  hasSingleSourceValue() {
+    return this.props.sourceValues.length === 1;
+  },
+
   setSelected(values) {
+    if (this.props.onChange) {
+      this.props.onChange(values);
+    }
+
     this.setState({
       selected: values[this.props.sourceName]
     });
@@ -169,6 +198,9 @@ const VariableFormGroup = React.createClass({
         key={question.name}
         question={question}
         selectedValues={this.state.selected}
+        data={this.props.data}
+        errors={this.props.errors}
+        onChange={this.props.onChange}
       />
     ));
 
@@ -177,6 +209,9 @@ const VariableFormGroup = React.createClass({
         key={question.name}
         question={question}
         selectedValues={this.state.selected}
+        data={this.props.data}
+        errors={this.props.errors}
+        onChange={this.props.onChange}
       />
     ));
 
@@ -186,9 +221,14 @@ const VariableFormGroup = React.createClass({
       color: "white"
     };
 
+    let validationState;
+    if (this.props.errors && this.props.errors.includes(this.props.sourceName)) {
+      validationState = 'error';
+    }
+
     return (
       <FormGroup
-
+        validationState={validationState}
         controlId={this.props.sourceName}
       >
         {this.hasSingleSourceValue() ?
