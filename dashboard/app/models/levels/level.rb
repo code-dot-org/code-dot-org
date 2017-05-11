@@ -28,7 +28,6 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :solution_level_source, class_name: "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_one :level_concept_difficulty, dependent: :destroy
@@ -268,25 +267,48 @@ class Level < ActiveRecord::Base
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
-    'Unplugged', # no solutions
-    'TextMatch', # dsl defined, covered in dsl
-    'Multi', # dsl defined, covered in dsl
-    'External', # dsl defined, covered in dsl
-    'Match', # dsl defined, covered in dsl
-    'ContractMatch', # dsl defined, covered in dsl
-    'LevelGroup', # dsl defined, covered in dsl
     'Applab', # freeplay
-    'Gamelab', # freeplay
+    'ContractMatch', # dsl defined, covered in dsl
+    'CurriculumReference', # no user submitted content
+    'DSLDefined', # dsl defined, covered in dsl
+    'EvaluationMulti', # unknown
     'EvaluationQuestion', # plc evaluation
-    'NetSim', # widget
-    'Odometer', # widget
-    'Vigenere', # widget
+    'External', # dsl defined, covered in dsl
+    'ExternalLink', # no user submitted content
+    'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
-    'TextCompression', # widget
+    'Gamelab', # freeplay
+    'GoBeyond', # unknown
+    'Level', # base class
+    'LevelGroup', # dsl defined, covered in dsl
+    'Map', # no user submitted content
+    'Match', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
+    'NetSim', # widget
     'Pixelation', # widget
-    'PublicKeyCryptography' # widget
+    'PublicKeyCryptography', # widget
+    'Odometer', # widget
+    'ScriptCompletion', # unknown
+    'StandaloneVideo', # no user submitted content
+    'TextCompression', # widget
+    'TextMatch', # dsl defined, covered in dsl
+    'Unplugged', # no solutions
+    'Vigenere', # widget
+    'Weblab', # no ideal solution
+    'Widget', # widget
   ].freeze
-  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
+  TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
+    Artist
+    Blockly
+    Calc
+    Craft
+    Eval
+    Grid
+    Karel
+    Maze
+    Studio
+    StudioEC
+  )
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
