@@ -87,6 +87,7 @@ stage 'Algorithms: Relay Programming'
 level 'RelayProgramming'
 
 stage 'Debugging in Bee'
+level 'courseC_video_debugging'
 level 'courseD_bee_debugging1'
 level 'courseD_bee_debugging2'
 level 'courseD_bee_debugging3'
