@@ -390,7 +390,7 @@
   "courses": "Courses",
   "course": "Course",
   "createNewClassroom": "Create a new classroom section to start assigning courses and seeing your student progress.",
-  "createSection": "Create Section",
+  "createSection": "Create section",
   "defaultProjectNameAppLab": "App Lab Project",
   "defaultProjectNameGameLab": "Game Lab Project",
   "defaultProjectNameWebLab": "Web Lab Project",
@@ -442,5 +442,5 @@
   "teacherCommunityDescription": "Ask questions about curriculum, share ideas from your lessons, and get help from other teachers",
   "viewAllAnnouncements": "View all announcements",
   "viewAllCourses": "View all courses",
-  "viewCourses": "View Courses"
+  "viewCourses": "View courses"
 }
