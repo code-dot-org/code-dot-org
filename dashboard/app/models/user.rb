@@ -300,7 +300,6 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-  has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
 
@@ -794,9 +793,13 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def initial
+  def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
+  end
+
+  def initial
+    User.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -854,6 +857,9 @@ class User < ActiveRecord::Base
 
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
+  rescue ArgumentError
+    errors.add :base, I18n.t('password.reset_errors.invalid_email')
+    return nil
   end
 
   def generate_secret_picture
@@ -1035,25 +1041,6 @@ class User < ActiveRecord::Base
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
-      end
-
-      # Log data (sampled) to AWS Firehose.
-      if user_id % 100 == 0
-        FirehoseClient.instance.put_record(
-          'analysis-events',
-          {
-            study: 'attempt_counts',
-            event: 'new_attempt',
-            user_id: user_id,
-            level_id: user_level.level_id,
-            script_id: user_level.script_id,
-            data_int: user_level.attempts + 1,
-            data_json: {
-              previous_best_result: user_level.best_result,
-              this_result: new_result,
-            }.to_json
-          }
-        )
       end
 
       # Update user_level with the new attempt.
