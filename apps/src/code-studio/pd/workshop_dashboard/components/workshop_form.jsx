@@ -700,7 +700,7 @@ const WorkshopForm = React.createClass({
                 {this.state.showTypeOptionsHelpDisplay &&
                   <FormGroup>
                     <p>These options have replaced the old "Workshop Type" dropdown. Here's how these options map to the old workshop types:</p>
-                    <Col sm={6}>
+                    <Col sm={7}>
                       <Table bordered condensed>
                         <tbody>
                           <tr>
@@ -710,13 +710,13 @@ const WorkshopForm = React.createClass({
                           </tr>
                           <tr>
                             <td><strong>On the map</strong></td>
-                            <td>Public</td>
+                            <td>Previously called Public</td>
                             <td>New!</td>
                           </tr>
                           <tr>
                             <td><strong>Not on the map</strong></td>
-                            <td>Private</td>
-                            <td>District</td>
+                            <td>Previously called Private</td>
+                            <td>Previously called District</td>
                           </tr>
                         </tbody>
                       </Table>
