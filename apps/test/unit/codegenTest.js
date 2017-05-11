@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import {assert, expect} from '../util/configuredChai';
 import * as codegen from '@cdo/apps/codegen';
-import PatchedInterpreter from '@cdo/apps/lib/tools/jsinterpreter/PatchedInterpreter';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 describe("codegen", function () {
 
@@ -26,7 +26,7 @@ describe("codegen", function () {
   describe("marshalNativeToInterpreter function", () => {
     let interpreter, globalScope, value;
     beforeEach(() => {
-      interpreter = new PatchedInterpreter('', (interpreter, scope) => {
+      interpreter = new CustomMarshalingInterpreter('', (interpreter, scope) => {
         globalScope = scope;
         interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
           if (truthy !== interpreter.TRUE) {
@@ -51,7 +51,7 @@ describe("codegen", function () {
      * @returns void
      */
     function makeAssertion(assertion, nativeVar, nativeParentObj, maxDepth) {
-      let interpreter = new PatchedInterpreter(assertion, (interpreter, scope) => {
+      let interpreter = new CustomMarshalingInterpreter(assertion, (interpreter, scope) => {
         globalScope = scope;
         interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
           if (truthy !== interpreter.TRUE) {
@@ -268,7 +268,7 @@ describe("codegen", function () {
     });
 
     it("will return the interpreter that was created to run the code", () => {
-      expect(codegen.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(PatchedInterpreter);
+      expect(codegen.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(CustomMarshalingInterpreter);
     });
 
     describe("when given event handlers that accept arguments", () => {

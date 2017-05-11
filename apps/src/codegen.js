@@ -1,6 +1,6 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
 
-import PatchedInterpreter from './lib/tools/jsinterpreter/PatchedInterpreter';
+import CustomMarshalingInterpreter from './lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {dropletGlobalConfigBlocks} from './dropletUtils';
 import * as utils from './utils';
 
@@ -41,7 +41,7 @@ export function evalWith(code, globals, legacy) {
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
   } else {
-    new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+    new CustomMarshalingInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
     }).run();
   }
@@ -54,7 +54,7 @@ export function evalWith(code, globals, legacy) {
  * @param {Object} events - Mapping of hook names to the corresponding handler code.
  *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
  * @param {string} [evalCode] - Optional extra code to evaluate.
- * @return {{hooks: Array<{name: string, func: Function}>, interpreter: PatchedInterpreter}} Mapping of
+ * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
  *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
  */
 export function evalWithEvents(apis, events, evalCode = '') {
@@ -84,7 +84,7 @@ export function evalWithEvents(apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  interpreter = new PatchedInterpreter(evalCode + eventLoop, (interpreter, scope) => {
+  interpreter = new CustomMarshalingInterpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
@@ -281,7 +281,7 @@ var getCustomMarshalMethodOptions = function (interpreter, nativeParentObj) {
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 /**
- * @param {PatchedInterpreter} interpreter - instance of the interpreter to marshal objects to
+ * @param {CustomMarshalingInterpreter} interpreter - instance of the interpreter to marshal objects to
  * @param {boolean|string|number|Object|Array|Function} [nativeVar] - the native object to marshal into the interpreter.
  * @param {Object} [nativeParentObj] - optional native parent object that the given nativeVar is a member of
  * @param {number} [maxDepth] - optional maximum depth to recurse down when marhsaling the given object. Defaults to Infinity

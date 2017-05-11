@@ -1,7 +1,7 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 
-module.exports = class PatchedInterpreter extends Interpreter {
-  // These methods need to be patched in order to support custom marshaling.
+module.exports = class CustomMarshalingInterpreter extends Interpreter {
+  // The following overridden methods need to be patched in order to support custom marshaling.
 
   // These changes revert a 10% speedup commit that bypassed hasProperty,
   // getProperty, and setProperty:
@@ -11,6 +11,7 @@ module.exports = class PatchedInterpreter extends Interpreter {
    * Retrieves a value from the scope chain.
    * @param {!Object} name Name of variable.
    * @return {!Object} The value.
+   * @override
    */
   getValueFromScope(name) {
     var scope = this.getScope();
@@ -30,6 +31,7 @@ module.exports = class PatchedInterpreter extends Interpreter {
    * @param {!Object} name Name of variable.
    * @param {!Object} value Value.
    * @param {boolean} declarator true if called from variable declarator.
+   * @override
    */
   setValueToScope(name, value, declarator) {
     var scope = this.getScope();
@@ -55,6 +57,7 @@ module.exports = class PatchedInterpreter extends Interpreter {
    * @param {!Object|!Array} left Name of variable or object/propname tuple.
    * @param {!Object} value Value.
    * @param {boolean} declarator true if called from variable declarator.
+   * @override
    */
   setValue(left, value, declarator) {
     if (left.length) {
@@ -66,10 +69,13 @@ module.exports = class PatchedInterpreter extends Interpreter {
     }
   }
 
-  // Patched to add the 3rd "declarator" parameter on the setValue() call(s).
-  // Also removed erroneous? call to hasProperty when there is node.init
-  // Changed to call setValue with this.UNDEFINED when there is no node.init
-  // and JSInterpreter.baseHasProperty returns false for current scope.
+  /**
+   * Patched to add the 3rd "declarator" parameter on the setValue() call(s).
+   * Also removed erroneous? call to hasProperty when there is node.init
+   * Changed to call setValue with this.UNDEFINED when there is no node.init
+   * and JSInterpreter.baseHasProperty returns false for current scope.
+   * @override
+   */
   stepVariableDeclarator() {
     var state = this.stateStack[0];
     var node = state.node;

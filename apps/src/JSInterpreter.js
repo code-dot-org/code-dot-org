@@ -2,7 +2,7 @@ var codegen = require('./codegen');
 var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 var utils = require('./utils');
 var acorn = require('@code-dot-org/js-interpreter/acorn');
-import PatchedInterpreter from './lib/tools/jsinterpreter/PatchedInterpreter';
+import CustomMarshalingInterpreter from './lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from './redux';
 
 import { setIsDebuggerPaused } from './redux/runState';
@@ -79,9 +79,9 @@ export default class JSInterpreter {
   }
 }
 
-JSInterpreter.baseHasProperty = PatchedInterpreter.prototype.hasProperty;
-JSInterpreter.baseGetProperty = PatchedInterpreter.prototype.getProperty;
-JSInterpreter.baseSetProperty = PatchedInterpreter.prototype.setProperty;
+JSInterpreter.baseHasProperty = CustomMarshalingInterpreter.prototype.hasProperty;
+JSInterpreter.baseGetProperty = CustomMarshalingInterpreter.prototype.getProperty;
+JSInterpreter.baseSetProperty = CustomMarshalingInterpreter.prototype.setProperty;
 
 /**
  * Initialize the JSInterpreter, parsing the provided code and preparing to
@@ -149,7 +149,7 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    new PatchedInterpreter('', (interpreter, scope) => {
+    new CustomMarshalingInterpreter('', (interpreter, scope) => {
       // Store Interpreter on JSInterpreter
       this.interpreter = interpreter;
       // Store globalScope on JSInterpreter
@@ -1158,7 +1158,7 @@ JSInterpreter.prototype.getCurrentState = function () {
  */
 JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   var currentScope = this.interpreter.getScope();
-  var evalInterpreter = new PatchedInterpreter(expression);
+  var evalInterpreter = new CustomMarshalingInterpreter(expression);
   // Set scope to the current scope of the running program
   // NOTE: we are being a little tricky here (we are re-running
   // part of the Interpreter constructor with a different interpreter's
