@@ -289,4 +289,23 @@ describe('CircuitPlaygroundBoard', () => {
       });
     });
   });
+
+  describe(`boardConnected()`, () => {
+    it('returns false at first', () => {
+      expect(board.boardConnected()).to.be.false;
+    });
+
+    it('returns true after connecting', () => {
+      return board.connect().then(() => {
+        expect(board.boardConnected()).to.be.true;
+      });
+    });
+
+    it('returns false after destroying the board', () => {
+      return board.connect().then(() => {
+        board.destroy();
+        expect(board.boardConnected()).to.be.false;
+      });
+    });
+  });
 });

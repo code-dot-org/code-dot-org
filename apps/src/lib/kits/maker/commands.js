@@ -76,6 +76,13 @@ export function analogRead(opts) {
 }
 
 /**
+ * @returns {boolean} Whether a real board is connected at the moment.
+ */
+export function boardConnected() {
+  return board.boardConnected();
+}
+
+/**
  * Add a handler for a maker board event from a particular board component.
  * @param {Object} opts.component
  * @param {string} opts.event

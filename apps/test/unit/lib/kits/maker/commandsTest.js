@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import {
   analogRead,
   analogWrite,
+  boardConnected,
   digitalRead,
   digitalWrite,
   injectBoardController,
@@ -81,6 +82,20 @@ describe('maker/commands.js', () => {
     it('delegates to makerController.analogRead', () => {
       analogRead({pin: 18});
       expect(stubBoardController.analogRead).to.have.been.calledWith(18);
+    });
+  });
+
+  describe('boardConnected()', () => {
+    it('delegates to makerController.boardConnected', () => {
+      boardConnected();
+      expect(stubBoardController.boardConnected).to.have.been.calledOnce;
+    });
+
+    it('returns whatever makerController returns', () => {
+      stubBoardController.boardConnected.returns(true);
+      expect(boardConnected()).to.be.true;
+      stubBoardController.boardConnected.returns(false);
+      expect(boardConnected()).to.be.false;
     });
   });
 
