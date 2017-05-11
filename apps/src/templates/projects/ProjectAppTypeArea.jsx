@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
 import {projectPropType} from './projectConstants';
+import color from "../../util/color";
 
 const styles = {
   grid: {
@@ -14,7 +15,7 @@ const styles = {
   labHeading: {
     textAlign: "left",
     fontSize: 24,
-    color: "#5b6770",
+    color: color.charcoal,
     marginLeft: 10,
     marginRight: 50,
     paddingBottom: 10,
@@ -22,7 +23,7 @@ const styles = {
     float: 'left'
   },
   viewMore: {
-    color: '#59cad3',
+    color: color.light_teal,
     float: 'right',
     marginTop: 75,
     cursor: 'pointer'
