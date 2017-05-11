@@ -25,11 +25,11 @@
 #  index_experiments_on_section_id            (section_id)
 #
 
-class SingleFacilitatorExperiment < Experiment
+class SingleUserExperiment < Experiment
   def self.get_enabled(user: nil, section: nil, script: nil)
     return Experiment.none unless user
 
-    Experiment.where(type: SingleFacilitatorExperiment.to_s, min_user_id: user.id)
+    Experiment.where(type: SingleUserExperiment.to_s, min_user_id: user.id)
   end
 
   def enabled?(user: nil, section: nil)
