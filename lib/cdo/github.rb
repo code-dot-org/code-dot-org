@@ -130,7 +130,7 @@ module GitHub
       "?expand=1&title=#{CGI.escape title}"
   end
 
-  private_class_method def self.open_url(url)
+  def self.open_url(url)
     # Based on http://stackoverflow.com/a/14053693/5000129
     if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
       system "sensible-browser \"#{url}\""
