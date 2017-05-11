@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from "../../util/color";
 import _ from 'lodash';
@@ -13,7 +14,11 @@ const styles = {
     lineHeight: "40px",
     color: color.white,
     marginRight: 15,
-    marginLeft: 15
+    marginLeft: 15,
+    ':hover': {
+      color: color.lightest_gray,
+      cursor: 'pointer',
+    },
   },
   arrowBox: {
     float: "right",
@@ -24,11 +29,7 @@ const styles = {
     borderColor: color.white,
     borderWidth: 1,
     borderRadius: 3,
-    borderStyle: "solid"
-  },
-  arrowBoxRight: {
-    marginTop: 25,
-    marginRight: 25
+    borderStyle: "solid",
   },
 };
 
@@ -81,4 +82,4 @@ const AnnouncementsCarousel = React.createClass({
   }
 });
 
-export default AnnouncementsCarousel;
+export default Radium(AnnouncementsCarousel);
