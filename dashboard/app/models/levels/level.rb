@@ -280,6 +280,7 @@ class Level < ActiveRecord::Base
     'FrequencyAnalysis', # widget
     'Gamelab', # freeplay
     'GoBeyond', # unknown
+    'Level', # base class
     'LevelGroup', # dsl defined, covered in dsl
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl

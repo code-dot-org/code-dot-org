@@ -27,9 +27,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'types marked as having ideal level sources' do
-    Level.descendants.each do |level_class|
-      raise_unless_specifies_ideal_level_source(level_class)
-    end
+    raise_unless_specifies_ideal_level_source(Level)
   end
 
   test 'create level' do
