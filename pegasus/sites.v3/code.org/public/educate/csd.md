@@ -6,13 +6,6 @@ video_player: true
 
 # Our newest course: CS Discoveries #
 
-## <a name="what"></a> Professional Learning Program
-
-Starting in 2017, Code.org is pleased to offer the CS Discoveries Professional Learning Program, a year-long professional development experience.
-
-[<button>Click here to learn more</button>](/educate/professional-learning/cs-discoveries)
-
-
 ## <a name="what"></a>What is CS Discoveries?
 
 CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
@@ -152,7 +145,7 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <div style="float:left; padding:25px; width:33%">
 
-<h4>Apply for professional learning!</h4>
+<h4>Learn more about professional learning!</h4>
 
 This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
@@ -213,6 +206,18 @@ this website frequently as we release drafted lesson plans!
 ### <a name="standards"></a>Will CS Discoveries be mapped to standards?
 
 We are developing the course using the K-12 CS Framework and the interim CSTA standards as guidance. Once the course is complete, and the revised CSTA standards have been released, we will provide a mapping to those standards.
+
+### <a name="supplies"></a>What materials and supplies are required for CS Discoveries?
+
+* Normal classroom supplies (pens, pencils, coloring, scissors, extra paper) 
+* Computers 
+* Worksheet Printing (There are worksheets with some lessons. Some teachers get around this by doing everything digitally) 
+* Couple Decks of Cards 
+* Aluminum Foil 
+* Containers that can hold water 
+* [Adafruit's Circuit Playground Boards](https://learn.adafruit.com/introducing-circuit-playground/overview) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
+
+\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing one [classroom kit](https://www.adafruit.com/product/3399) of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. The subsidized cost of the classroom kit will be less than $100 and further details about ordering kits will be sent to teachers in winter 2017. \***
 
 <!--
 #### Can I pilot the new course?
