@@ -39,6 +39,26 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+      @recent_courses = recent_courses.slice(0, 2)
+
+      if current_user.teacher?
+        base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+        @sections = current_user.sections.map do |section|
+          if section.script_id
+            course_name = Script.find_by_id(section.script_id)[:name]
+          end
+          {
+            id: section.id,
+            name: section.name,
+            linkToProgress: "#{base_url}#{section.id}/progress",
+            course: data_t_suffix('script.name', course_name, 'title'),
+            linkToCourse: script_url(section.script_id),
+            numberOfStudents: section.students.length,
+            linkToStudents: "#{base_url}#{section.id}/manage",
+            sectionCode: section.code
+          }
+        end
+      end
     end
   end
 
@@ -63,5 +83,27 @@ class HomeController < ApplicationController
   # This static page contains the teacher announcements for US and non-US visitors.
   def teacher_announcements
     render template: 'api/teacher_announcement', layout: false
+  end
+
+  def recent_courses
+    current_user.in_progress_and_completed_scripts.map do |script|
+      script_id = script[:script_id]
+      script_name = Script.find_by_id(script_id)[:name]
+      {
+        id: script_id,
+        script_name: script_name,
+        courseName: data_t_suffix('script.name', script_name, 'title'),
+        description: data_t_suffix('script.name', script_name, 'description_short'),
+        link: script_url(script_id),
+        image: "",
+        assignedSections: []
+      }
+    end
+  end
+
+  def courses
+    @recent_courses = current_user && recent_courses
+    @is_teacher = !!(current_user && current_user.teacher?)
+    @is_english = request.language == 'en'
   end
 end

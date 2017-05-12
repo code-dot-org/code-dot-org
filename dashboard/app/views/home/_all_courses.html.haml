@@ -1,49 +1,36 @@
 - show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
 
-.row
-  .span12.twolineheader!= t('home.heading_elementary')
-.row
-  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE1_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE2_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE3_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE4_NAME, showState: show_state }
-%br/
-%br/
-.row
-  = render partial: 'shared/course_wide_block', locals: { id: Script::TWENTY_HOUR_NAME, showState: show_state, view: "small" }
-  = render partial: 'shared/course_wide_block', locals: { id: "unplugged", view: "small" }
-%br/
-.row
-  .span12.twolineheader!= t('home.heading_tools')
-.row
-  = render partial: 'shared/course_wide_block', locals: { id: "applab" }
-%br/
-.row
-  .span12.twolineheader!= t('home.heading_hoc2014')
-.row
-  = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_DESIGNER_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: show_state }
-%br/
-%br/
-.row
-  = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, showState: show_state }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, showState: show_state }
-%br/
-
-.row
-  .span12.twolineheader
-    %h2= t('gallery.header')
-.row
-  .span6.twolineheader
-    %h1= t('gallery.header_playlab')
-  .span6.twolineheader
-    %h1= t('gallery.header_artist')
-.row
-  .span6
-    = link_to image_tag('playlab_gallery_thumbnails.png', width: 460, height: 74), gallery_activities_path
-  .span6
-    = link_to image_tag('artist_gallery_thumbnails.png', width: 460, height: 74), gallery_activities_path(anchor: "artist")
+.all-courses
+  .row
+    .span12.twolineheader!= t('home.heading_elementary')
+  .row
+    = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE1_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE2_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE3_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE4_NAME, showState: show_state }
+  %br/
+  %br/
+  .row
+    = render partial: 'shared/course_wide_block', locals: { id: Script::TWENTY_HOUR_NAME, showState: show_state, view: "small" }
+    = render partial: 'shared/course_wide_block', locals: { id: "unplugged", view: "small" }
+  %br/
+  .row
+    .span12.twolineheader!= t('home.heading_tools')
+  .row
+    = render partial: 'shared/course_wide_block', locals: { id: "applab" }
+  %br/
+  .row
+    .span12.twolineheader!= t('home.heading_hoc2014')
+  .row
+    = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_DESIGNER_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: show_state }
+  %br/
+  %br/
+  .row
+    = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, showState: show_state }
+    = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, showState: show_state }
+  %br/
