@@ -34,8 +34,6 @@ module LocaleHelper
     options
   end
 
-  private
-
   # Parses and ranks locale code strings from the Accept-Language header.
   def accepted_locales
     header = request.env.fetch('HTTP_X_VARNISH_ACCEPT_LANGUAGE', '')
