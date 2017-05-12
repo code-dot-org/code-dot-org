@@ -30,11 +30,6 @@ module ApplicationHelper
     "#{s} ago"
   end
 
-  def format_xml(xml)
-    doc = Nokogiri::XML(xml)
-    doc.to_xhtml
-  end
-
   def gender_options
     User::GENDER_OPTIONS.map do |key, value|
       [(key ? t(key) : ''), value]
