@@ -714,6 +714,8 @@ en:
     delete: "Delete"
     exit: "Return to Course"
     my_projects: "My Projects"
+    publish: "Publish"
+    unpublish: "Unpublish"
     share: "Share"
     share_title: Share your project
     share_copy_link: "Copy the link:"
