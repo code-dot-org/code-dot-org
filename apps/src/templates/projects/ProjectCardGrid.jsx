@@ -1,44 +1,17 @@
 import React, {PropTypes} from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
+import {projectPropType} from './projectConstants';
 import i18n from "@cdo/locale";
+
+const NUM_PROJECTS_ON_PREVIEW = 4;
+const NUM_PROJECTS_IN_APP_VIEW = 12;
 
 const styles = {
   grid: {
     padding: 10,
     width: 1000
-  },
-  card: {
-    display: "inline-block",
-    padding: 10
-  },
-  labHeading: {
-    textAlign: "left",
-    fontSize: 24,
-    color: "#5b6770",
-    marginLeft: 10,
-    marginRight: 65,
-    borderBottom: "1px solid #bbbbbb",
-    paddingBottom: 10,
-    paddingTop: 40
   }
 };
-
-const projectDataPropType = PropTypes.shape({
-  channel: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  studentName: PropTypes.string,
-  studentAgeRange: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
-  publishedToPublic: PropTypes.bool.isRequired,
-  publishedToClass: PropTypes.bool.isRequired,
-});
-
-const projectPropType = PropTypes.shape({
-  projectData: projectDataPropType.isRequired,
-  currentGallery: PropTypes.string.isRequired,
-});
 
 const ProjectCardGrid = React.createClass({
   propTypes: {
@@ -51,40 +24,109 @@ const ProjectCardGrid = React.createClass({
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
-  renderProjectCardList(projectList) {
-    const { galleryType } = this.props;
-    return  (
-      <div>
-        {
-          projectList && projectList.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))
-        }
-      </div>
-    );
+  getInitialState() {
+    return {
+      showAll: true,
+      showApp: ''
+    };
+  },
+
+  onSelectApp(appType) {
+    this.setState({showAll: false, showApp: appType});
+  },
+
+  viewAllProjects() {
+    this.setState({showAll: true, showApp: ''});
   },
 
   render() {
     const { projectLists } = this.props;
+    const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
 
     return (
       <div style={styles.grid}>
-        <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
-        {this.renderProjectCardList(projectLists.applab)}
+        {(this.state.showAll) &&
+          <div>
+            <ProjectAppTypeArea
+              labName={i18n.projectTypeApplab()}
+              labViewMoreString={i18n.projectTypeApplabViewMore()}
+              projectList={projectLists.applab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+            />
+            <ProjectAppTypeArea
+              labName={i18n.projectTypeGamelab()}
+              labViewMoreString={i18n.projectTypeGamelabViewMore()}
+              projectList={projectLists.gamelab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+            />
+            <ProjectAppTypeArea
+              labName={i18n.projectTypeArtist()}
+              labViewMoreString={i18n.projectTypeArtistViewMore()}
+              projectList={projectLists.artist}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+            />
+            <ProjectAppTypeArea
+              labName={i18n.projectTypePlaylab()}
+              labViewMoreString={i18n.projectTypePlaylabViewMore()}
+              projectList={projectLists.playlab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+            />
+          </div>
+        }
 
-        <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
-        {this.renderProjectCardList(projectLists.gamelab)}
+        {(!this.state.showAll) &&
+          <div>
+            {this.state.showApp === 'applab' &&
+              <ProjectAppTypeArea
+                labName={i18n.projectTypeAllProjectsApplab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.applab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+              />
+            }
+            {this.state.showApp === 'gamelab' &&
+              <ProjectAppTypeArea
+                labName={i18n.projectTypeAllProjectsGamelab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.gamelab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+              />
+            }
+            {this.state.showApp === 'artist' &&
+              <ProjectAppTypeArea
+                labName={i18n.projectTypeAllProjectsArtist()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.artist}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+              />
+            }
+            {this.state.showApp === 'playlab' &&
+              <ProjectAppTypeArea
+                labName={i18n.projectTypeAllProjectsPlaylab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.playlab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+              />
+            }
+          </div>
+        }
 
-        <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
-        {this.renderProjectCardList(projectLists.gamelab)}
-
-        <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
-        {this.renderProjectCardList(projectLists.playlab)}
       </div>
     );
   }
