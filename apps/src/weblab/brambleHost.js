@@ -341,7 +341,7 @@ function addFileHTML() {
   brambleProxy_.addNewFile({
     basenamePrefix: 'new',
     ext: 'html',
-    contents: '<!DOCTYPE html>\n<html>\n<body>\n\n</body>\n</html>',
+    contents: '<!DOCTYPE html>\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n  </body>\n</html>',
   }, err => {
     if (err) {
       throw err;
