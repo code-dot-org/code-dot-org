@@ -27,7 +27,7 @@ module UsersHelper
       end
     end
 
-    user_data[:current_stage] = user.next_unpassed_progression_level(script).stage.id unless exclude_level_progress
+    user_data[:current_stage] = user.next_unpassed_progression_level(script).stage.id unless exclude_level_progress || script.script_levels.empty?
 
     user_data.compact
   end
@@ -101,7 +101,7 @@ module UsersHelper
       user_data[:professionalLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
-        user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
+        user_data[:focusAreaStageIds] = unit_assignment.focus_area_stage_ids
         user_data[:changeFocusAreaPath] = script_preview_assignments_path script
       end
     end

@@ -34,6 +34,9 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
+    "project_template_level_name": "courseF_artist_for_Template",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

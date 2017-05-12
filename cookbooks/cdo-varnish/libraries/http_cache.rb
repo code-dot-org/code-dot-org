@@ -150,6 +150,11 @@ class HttpCache
             cookies: default_cookies
           },
           {
+            path: '/api/v1/projects/gallery/public/*',
+            headers: [],
+            cookies: 'none'
+          },
+          {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies

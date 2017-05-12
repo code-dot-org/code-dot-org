@@ -205,7 +205,7 @@ class ApiController < ApplicationController
         tag: 'activity_start',
         script_level_id: script_level.try(:id),
         level_id: level.id,
-        user_agent: request.user_agent,
+        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
         locale: locale
       )
     end

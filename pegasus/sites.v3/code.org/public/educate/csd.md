@@ -6,13 +6,12 @@ video_player: true
 
 # Our newest course: CS Discoveries #
 
-## <a name="what"></a>Apply for Professional Learning
+## <a name="what"></a> Professional Learning Program
 
-Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
+Starting in 2017, Code.org is pleased to offer the CS Discoveries Professional Learning Program, a year-long professional development experience.
 
-Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+[<button>Click here to learn more</button>](/educate/professional-learning/cs-discoveries)
 
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="what"></a>What is CS Discoveries?
 
@@ -155,11 +154,11 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <h4>Apply for professional learning!</h4>
 
-If you are interested in joining in 2018-19, sign up below to be added to our contact list. This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
+This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
 <br><br>
 
-<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"> <button>Join our contact list</button> </a>
+<a href="/educate/professional-learning/cs-discoveries"> <button>Click here to learn more</button> </a>
 
 </div>
 

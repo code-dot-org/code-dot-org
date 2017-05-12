@@ -4,7 +4,7 @@ require 'cdo/activity_constants'
 module Pd::Payment
   class PaymentCalculatorCSFTest < ActiveSupport::TestCase
     setup do
-      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, workshop_type: Pd::Workshop::TYPE_PUBLIC
+      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, on_map: true, funded: true
 
       # >= 10 passing levels: qualified
       @qualified_teacher = create :teacher, :with_puzzles, num_puzzles: 10
@@ -74,6 +74,16 @@ module Pd::Payment
       assert_equal 2, summary.num_teachers
       assert_equal 1, summary.num_qualified_teachers
       assert_equal @qualified_teacher, summary.teacher_summaries.find(&:qualified?).teacher
+    end
+
+    test 'handle workshops with deleted sections' do
+      @workshop.section.destroy
+      @workshop.reload
+
+      summary = PaymentCalculatorCSF.instance.calculate(@workshop)
+      assert_equal 2, summary.num_teachers
+      assert_equal 1, summary.num_qualified_teachers
+      assert_equal 50, summary.payment.total
     end
   end
 end

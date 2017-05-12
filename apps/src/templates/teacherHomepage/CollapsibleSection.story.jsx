@@ -1,7 +1,6 @@
 import React from 'react';
 import CollapsibleSection from './CollapsibleSection';
 import CourseCard from './CourseCard';
-import SetUpMessage from './SetUpMessage';
 
 const exampleCard = {
   courseName: "CSP Unit 2 - Digital Information",
@@ -11,13 +10,39 @@ const exampleCard = {
   assignedSections: []
 };
 
+// CollapsibleSections is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
+
 export default storybook => {
   return storybook
     .storiesOf('CollapsibleSections', module)
     .addStoryTable([
       {
-        name: 'Recent Courses - 2 courses ',
-        description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
+        name: 'no link and not collapsible ',
+        description: 'Example CollapsibleSection without a link and that is not collapsible',
+        story: () => (
+          <CollapsibleSection
+            header="Recent Courses"
+          >
+            <CourseCard
+              courseName={exampleCard.courseName}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              assignedSections={exampleCard.assignedSections}
+            />
+            <CourseCard
+              courseName={exampleCard.courseName}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              assignedSections={exampleCard.assignedSections}
+            />
+          </CollapsibleSection>
+        )
+      },
+      {
+        name: 'link, but not collapsible',
+        description: `Example CollapsibleSection with a link and that is not collapsible`,
         story: () => (
           <CollapsibleSection
             header="Recent Courses"
@@ -42,13 +67,12 @@ export default storybook => {
         )
       },
       {
-        name: 'Recent Courses - 3 courses ',
-        description: `Recent courses when the teacher has sections enrolled in more than 2 courses. Only the first 2 should render.`,
+        name: 'no link, but collapsible',
+        description: `Example CollapsibleSection without a link and that is collapsible.`,
         story: () => (
           <CollapsibleSection
             header="Recent Courses"
-            linkText="View all courses"
-            link="link to see all of the courses"
+            collapsible={true}
           >
             <CourseCard
               courseName={exampleCard.courseName}
@@ -64,6 +88,19 @@ export default storybook => {
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
+          </CollapsibleSection>
+        )
+      },
+      {
+        name: 'link and collapsible',
+        description: `Example CollapsibleSection with link and that is collapsible.`,
+        story: () => (
+          <CollapsibleSection
+            header="Recent Courses"
+            linkText="View all courses"
+            link="link to see all of the courses"
+            collapsible={true}
+          >
             <CourseCard
               courseName={exampleCard.courseName}
               description={exampleCard.description}
@@ -71,77 +108,13 @@ export default storybook => {
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
-          </CollapsibleSection>
-        )
-      },
-      {
-        name: 'Recent Courses - 1 course ',
-        description: `Collapsible section that holds Recent Courses when the teacher has sections enrolled in only 1 course.`,
-        story: () => (
-          <CollapsibleSection
-            header="Recent Courses"
-            linkText="View all courses"
-            link="link to see all of the courses"
-          >
-          <CourseCard
-            courseName={exampleCard.courseName}
-            description={exampleCard.description}
-            image={exampleCard.image}
-            link={exampleCard.link}
-            assignedSections={exampleCard.assignedSections}
-          />
-          </CollapsibleSection>
-        )
-      },
-      {
-        name: 'Recent Courses - 0 courses ',
-        description: `Collapsible section that holds Recent Courses when the teacher has not yet enrolled any sections in a course.`,
-        story: () => (
-          <CollapsibleSection
-            header="Recent Courses"
-            linkText="View all courses"
-            link="link to see all of the courses"
-          >
-            <SetUpMessage type="courses"/>
-          </CollapsibleSection>
-        )
-      },
-      {
-        name: 'Manage Sections - No sections yet',
-        description: `Collapsible section that holds Manage Sections when the teacher does not yet have any sections to manage.`,
-        story: () => (
-          <CollapsibleSection
-            header="Manage Sections"
-            linkText="Add new section"
-            link="link to add a new section"
-          >
-            <SetUpMessage type="sections"/>
-          </CollapsibleSection>
-        )
-      },
-      {
-        name: 'Manage Sections',
-        description: `Collapsible section that holds the Manage Sections Table.`,
-        story: () => (
-          <CollapsibleSection
-            header="Manage Sections"
-            linkText="Add new section"
-            link="link to add a new section"
-          >
-            <div>The new and improved Manage Sections React table will be here!</div>
-          </CollapsibleSection>
-        )
-      },
-      {
-        name: 'Announcements & News',
-        description: `Collapsible section that holds Announcements & News`,
-        story: () => (
-          <CollapsibleSection
-            header="Announcements & News"
-            linkText="View all announcements"
-            link="link to see all of the announcements"
-          >
-            <div>Annoucements and news will be displayed here!</div>
+            <CourseCard
+              courseName={exampleCard.courseName}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              assignedSections={exampleCard.assignedSections}
+            />
           </CollapsibleSection>
         )
       },

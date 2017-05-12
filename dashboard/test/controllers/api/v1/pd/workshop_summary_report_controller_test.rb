@@ -8,7 +8,8 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     organizer_id
     organizer_email
     workshop_dates
-    workshop_type
+    on_map
+    funded
     section_url
     facilitators
     num_facilitators
@@ -43,7 +44,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
 
   self.use_transactional_test_case = true
   setup_all do
-    @admin = create :admin
+    @workshop_admin = create :workshop_admin
     @organizer = create :workshop_organizer
 
     # CSF workshop for this organizer.
@@ -61,8 +62,8 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
 
   test_user_gets_response_for :index, response: :forbidden, user: :teacher
 
-  test 'admins get payment info' do
-    sign_in @admin
+  test 'workshop admins get payment info' do
+    sign_in @workshop_admin
 
     get :index
     assert_response :success
@@ -85,8 +86,8 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     refute_payment_fields response.first
   end
 
-  test 'admins see all workshops' do
-    sign_in @admin
+  test 'workshop admins see all workshops' do
+    sign_in @workshop_admin
 
     get :index
     assert_response :success
@@ -104,11 +105,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_equal @workshop.id, response.first['workshop_id']
   end
 
-  test 'Returns only workshops that have ended' do
+  test 'returns only workshops that have ended' do
     # New workshop, not ended, should not be returned.
     create :pd_workshop
 
-    sign_in @admin
+    sign_in @workshop_admin
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
@@ -126,7 +127,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     create :pd_ended_workshop, sessions_from: start_date - 1.day
     create :pd_ended_workshop, sessions_from: end_date + 1.day
 
-    sign_in @admin
+    sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'schedule'}
 
     assert_response :success
@@ -145,7 +146,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     create :pd_ended_workshop, ended_at: start_date - 1.day
     create :pd_ended_workshop, ended_at: end_date + 1.day
 
-    sign_in @admin
+    sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'end'}
 
     assert_response :success
@@ -155,7 +156,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'filter by course' do
-    sign_in @admin
+    sign_in @workshop_admin
 
     # @workshop is CSF; @other_workshop is not
     {
@@ -171,7 +172,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'csv' do
-    sign_in @admin
+    sign_in @workshop_admin
     get :index, format: :csv
     assert_response :success
     response = CSV.parse(@response.body)
@@ -185,7 +186,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     unpaid_workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSD
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
 
-    sign_in @admin
+    sign_in @workshop_admin
     get :index
     assert_response :success
     response = JSON.parse(@response.body)

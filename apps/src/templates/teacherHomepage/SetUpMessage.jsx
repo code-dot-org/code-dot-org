@@ -5,9 +5,8 @@ import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   section: {
-    width: 1075,
+    width: 940,
     backgroundColor: color.white,
-    marginLeft: 35,
     borderStyle: 'dashed',
     borderWidth: 1,
     borderColor: color.border_gray,
@@ -31,7 +30,6 @@ const styles = {
   button: {
     marginLeft: 50,
     marginBottom: 80
-
   }
 };
 
@@ -52,7 +50,12 @@ const SetUpMessage = React.createClass({
           <div style={styles.description}>
             {i18n.assignACourse()}
           </div>
-          <ProgressButton href="view all the courses" color="gray" text={i18n.viewCourses()} style={styles.button}/>
+          <ProgressButton
+            href="https://studio.code.org/"
+            color={ProgressButton.ButtonColor.gray}
+            text={i18n.viewCourses()}
+            style={styles.button}
+          />
         </div>
       );
     }
@@ -65,7 +68,12 @@ const SetUpMessage = React.createClass({
           <div style={styles.description}>
             {i18n.createNewClassroom()}
           </div>
-          <ProgressButton href="wherever we go to create sections" color="gray" text={i18n.createSection()} style={styles.button}/>
+          <ProgressButton
+            href="https://code.org/teacher-dashboard#/sections"
+            color={ProgressButton.ButtonColor.gray}
+            text={i18n.createSection()}
+            style={styles.button}
+          />
         </div>
       );
     }
