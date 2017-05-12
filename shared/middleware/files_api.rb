@@ -476,28 +476,26 @@ class FilesApi < Sinatra::Base
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
+    manifest_is_unchanged = true
 
     # store the new file
     if params['src']
-      new_entry_json = copy_file('files', encrypted_channel_id, downcased_filename, params['src'])
+      new_entry_json = copy_file('files', encrypted_channel_id, downcased_filename, params['src'].downcase)
     else
       new_entry_json = put_file('files', encrypted_channel_id, downcased_filename, body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
     new_entry_hash['filename'] = CGI.unescape(filename)
-    manifest_is_unchanged = false
 
     manifest_comparison_filename = new_entry_hash['filename'].downcase
     existing_entry = manifest.detect {|e| e['filename'].downcase == manifest_comparison_filename}
     if existing_entry.nil?
       manifest << new_entry_hash
-    else
-      if existing_entry == new_entry_hash
-        manifest_is_unchanged = true
-      else
-        existing_entry.merge!(new_entry_hash)
-      end
+      manifest_is_unchanged = false
+    elsif existing_entry != new_entry_hash
+      existing_entry.merge!(new_entry_hash)
+      manifest_is_unchanged = false
     end
 
     # if we're also deleting a file (on rename), remove it from the manifest

@@ -116,10 +116,22 @@ const WorkshopTable = React.createClass({
         transforms: [sortable]
       }
     }, {
-      property: 'workshop_type',
+      property: 'on_map',
       header: {
-        label: 'Type',
+        label: 'On Map',
         transforms: [sortable]
+      },
+      cell: {
+        format: this.formatBoolean
+      }
+    }, {
+      property: 'funded',
+      header: {
+        label: 'Funded',
+        transforms: [sortable]
+      },
+      cell: {
+        format: this.formatBoolean
       }
     }, {
       property: 'course',
@@ -229,6 +241,10 @@ const WorkshopTable = React.createClass({
 
   formatSessions(_ignored, {rowData}) {
     return <SessionTimesList sessions={rowData.sessions}/>;
+  },
+
+  formatBoolean(bool) {
+    return bool ? "Yes" : "No";
   },
 
   formatOrganizer(organizer) {
