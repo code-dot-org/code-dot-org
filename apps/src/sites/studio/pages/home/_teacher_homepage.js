@@ -25,6 +25,6 @@ function showTeacherHomepage() {
       courses={configCourses}
       sections={configSections}
     />,
-  document.getElementById('teacher-homepage-container')
+    document.getElementById('teacher-homepage-container')
   );
 }
