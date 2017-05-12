@@ -1,14 +1,11 @@
 name 'CSD-U5-SFLP Making Decisions with Data'
-display_name 'Unit 5 Lesson 10 Overview'
-css 'unplugged'
+display_name 'Level Overview'
 markdown <<MARKDOWN
-# The Internet - Data and Society: Lesson 10 - Making Decisions with Data
-
-## Background
+# Overview
 
 In this lesson you'll get some practice making decisions with data with some problems that might feel familiar.
 
-# Resources
+## Resources
 
 * [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=doc))
 MARKDOWN

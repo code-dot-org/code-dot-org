@@ -147,8 +147,11 @@ const TeacherAttendanceReport = React.createClass({
       property: 'workshop_name',
       header: {label: 'Workshop Name'},
     }, {
-      property: 'workshop_type',
-      header: {label: 'Workshop Type'},
+      property: 'on_map',
+      header: {label: 'Shown on Map'},
+    }, {
+      property: 'funded',
+      header: {label: 'Funded'},
     }, {
       property: 'organizer_name',
       header: {label: 'Organizer Name'},

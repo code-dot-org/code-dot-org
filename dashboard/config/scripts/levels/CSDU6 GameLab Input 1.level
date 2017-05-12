@@ -40,13 +40,10 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"52d75a8c-cbb1-4eec-bb46-20f1636a6b2e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"52d75a8c-cbb1-4eec-bb46-20f1636a6b2e\": {\r\n      \"name\": \"ghost_standing_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/Uv9ISNABQXLedEK4yvmqYohWphqG.0e5/category_characters/ghost_standing.png\",\r\n      \"frameSize\": {\r\n        \"x\": 72,\r\n        \"y\": 158\r\n      },\r\n      \"frameCount\": 7,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Uv9ISNABQXLedEK4yvmqYohWphqG.0e5\"\r\n    }\r\n  }\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
