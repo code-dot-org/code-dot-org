@@ -49,8 +49,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "instructions": "Let's have a party! Give each of my friends something to do when you click or tap them. What do the animals say? What else will happen?",
-    "contained_level_names": null,
-    "markdown_instructions": "Let's have a party! Give each of my friends something to do when you click or tap them. What do the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)"
+    "markdown_instructions": "Let's have a party! Give each of my friends something to do when you click or tap them. What do the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
