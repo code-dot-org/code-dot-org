@@ -724,9 +724,9 @@ class FilesApi < Sinatra::Base
   # Read a metadata file, caching the result for 1 hour.
   #
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+    file = get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
     cache_for 1 * 60 * 60 # 1 hour
-
-    get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+    file
   end
 
   #
