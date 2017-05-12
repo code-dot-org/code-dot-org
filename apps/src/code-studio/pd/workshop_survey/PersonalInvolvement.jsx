@@ -12,7 +12,6 @@ const LABELS = {
 
 export default class PersonalInvolvement extends FormComponent {
   render() {
-    console.log("rendering");
     return (
       <FormGroup>
         {Object.keys(LABELS).map(name =>
