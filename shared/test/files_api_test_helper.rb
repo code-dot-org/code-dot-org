@@ -72,13 +72,13 @@ class FilesApiTestHelper
     last_response.body
   end
 
-  def rename_object(old_filename, new_filename)
-    put "/v3/#{@endpoint}/#{@channel_id}/#{new_filename}?delete=#{CGI.escape(old_filename)}&src=#{CGI.escape(old_filename)}"
+  def copy_assets(source_channel_id, source_filenames)
+    post("/v3/copy-assets/#{@channel_id}?src_channel=#{source_channel_id}&src_files=#{JSON.generate(source_filenames)}", '', {})
     last_response.body
   end
 
-  def copy_assets(source_channel_id, source_filenames)
-    post("/v3/copy-assets/#{@channel_id}?src_channel=#{source_channel_id}&src_files=#{JSON.generate(source_filenames)}", '', {})
+  def rename_object(source_filename, dest_filename)
+    put "/v3/#{@endpoint}/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}&delete=#{CGI.escape(source_filename)}"
     last_response.body
   end
 
