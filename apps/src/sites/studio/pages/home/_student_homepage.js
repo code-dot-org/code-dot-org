@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudentHomepage from '@cdo/apps/templates/teacherHomepage/studentHomepage';
+import StudentHomepage from '@cdo/apps/templates/teacherHomepage/StudentHomepage';
 
 $(document).ready(showStudentHomepage);
 

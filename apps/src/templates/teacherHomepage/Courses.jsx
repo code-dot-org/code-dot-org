@@ -1,9 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
-import CollapsibleSection from './CollapsibleSection';
-import ResourceCard from './ResourceCard';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -58,36 +57,7 @@ const Courses = React.createClass({
             </div>
             <ProtectedStatefulDiv ref="courseExplorer"/>
 
-            <CollapsibleSection header={i18n.resources()}>
-              <ResourceCard
-                title={i18n.teacherCommunity()}
-                description={i18n.teacherCommunityDescription()}
-                image="../../static/navcard-placeholder.png"
-                buttonText={i18n.joinCommunity()}
-                link="https://forum.code.org"
-              />
-              <ResourceCard
-                title={i18n.professionalLearning()}
-                description={i18n.professionalLearningDescription()}
-                image="../../static/navcard-placeholder.png"
-                buttonText={i18n.learnMore()}
-                link="/my-professional-learning"
-              />
-              <ResourceCard
-                title={i18n.standardsAndFramework()}
-                description={i18n.standardsAndFrameworkDescription()}
-                image="../../static/navcard-placeholder.png"
-                buttonText={i18n.reviewDocuments()}
-                link="https://code.org/teacher-dashboard#/plan"
-              />
-              <ResourceCard
-                title={i18n.findGuestSpeaker()}
-                description={i18n.findGuestSpeakerDescription()}
-                image="../../static/navcard-placeholder.png"
-                buttonText={i18n.inspireStudents()}
-                link="https://code.org/volunteer/local"
-              />
-            </CollapsibleSection>
+            <TeacherCourses/>
 
             <div style={styles.heading}>
               {i18n.toolExplorerHeading()}
