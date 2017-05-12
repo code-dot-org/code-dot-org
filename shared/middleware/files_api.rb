@@ -479,7 +479,7 @@ class FilesApi < Sinatra::Base
 
     # store the new file
     if params['src']
-      new_entry_json = copy_file('files', encrypted_channel_id, filename.downcase, params['src'])
+      new_entry_json = copy_file('files', encrypted_channel_id, filename.downcase, params['src'].downcase)
     else
       new_entry_json = put_file('files', encrypted_channel_id, filename.downcase, body)
     end
