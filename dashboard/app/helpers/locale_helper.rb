@@ -72,10 +72,6 @@ module LocaleHelper
     I18n.t(dotted_path, {raise: true}.merge(params)) rescue nil
   end
 
-  def serve_fonts?
-    Dashboard::Application::LOCALES[locale.to_s].fetch(:webfonts, true)
-  end
-
   def i18n_dropdown
     # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
     # user input or to persist data without also updating it to enforce UTF-8
