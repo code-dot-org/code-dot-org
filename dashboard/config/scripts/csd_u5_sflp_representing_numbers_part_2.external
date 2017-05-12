@@ -1,10 +1,5 @@
 name 'CSD-U5-SFLP Representing Numbers Part 2'
-display_name 'Unit 5 Lesson 6 Overview'
-css 'unplugged'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# The Internet - Data and Society: Lesson 6 - 8-bit Numbers
-
-## Background
-
-
+# Overview
 MARKDOWN
