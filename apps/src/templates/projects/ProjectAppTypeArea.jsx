@@ -34,7 +34,7 @@ const ProjectAppTypeArea = React.createClass({
   propTypes: {
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
-    projectList: PropTypes.arrayOf(projectPropType).isRequired,
+    projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     navigateFunction: PropTypes.func.isRequired
