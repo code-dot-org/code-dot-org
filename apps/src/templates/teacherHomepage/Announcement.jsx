@@ -1,6 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
 import ProgressButton from '../progress/ProgressButton';
+import placeholderImage from '../../../static/navcard-placeholder.png';
 
 const styles = {
   container: {
@@ -65,7 +66,7 @@ const Announcement = React.createClass({
     return (
       <div style={styles.container}>
         <a href={link}>
-          <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
+          <img src={placeholderImage} style={styles.image}/>
         </a>
         <div style={styles.tealBar}>
           <div style={styles.headingBox}>
