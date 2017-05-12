@@ -1,14 +1,11 @@
 name 'CSD-U5-SFLP Interpreting Data'
-display_name 'Unit 5 Lesson 11 Overview'
-css 'unplugged'
+display_name 'Level Overview'
 markdown <<MARKDOWN
-# The Internet - Data and Society: Lesson 11 - Interpreting Data
-
-## Background
+# Overview
 
 Go further into the interpretation of data by cleaning and visualizing raw data sets. Look at how visualizations change the way you understand data and make decisions about it.
 
-# Resources
+## Resources
 
 * [Interpreting Data - Activity Guide](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y) ([PDF](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=doc))
 MARKDOWN

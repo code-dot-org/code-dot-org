@@ -674,4 +674,12 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Stage 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
+
+  test 'text_to_speech_enabled? when script k1? is true' do
+    assert Script.find_by_name('course1').text_to_speech_enabled?
+  end
+
+  test '!text_to_speech_enabled? by default' do
+    refute create(:script).text_to_speech_enabled?
+  end
 end
