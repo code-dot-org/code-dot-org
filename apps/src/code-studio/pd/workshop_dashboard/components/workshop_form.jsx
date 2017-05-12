@@ -23,9 +23,6 @@ import {
   HelpBlock,
   Button,
   ButtonToolbar,
-  Radio,
-  Table,
-  Clearfix,
   Alert
 } from 'react-bootstrap';
 import {
@@ -62,8 +59,7 @@ const WorkshopForm = React.createClass({
       location_name: React.PropTypes.string.isRequired,
       location_address: React.PropTypes.string.isRequired,
       capacity: React.PropTypes.number.isRequired,
-      on_map: React.PropTypes.bool.isRequired,
-      funded: React.PropTypes.bool.isRequired,
+      workshop_type: React.PropTypes.string.isRequired,
       course: React.PropTypes.string.isRequired,
       subject: React.PropTypes.string,
       notes: React.PropTypes.string,
@@ -84,16 +80,14 @@ const WorkshopForm = React.createClass({
       location_name: '',
       location_address: '',
       capacity: '',
-      on_map: false,
-      funded: false,
+      workshop_type: '',
       course: '',
       subject: '',
       notes:'',
       sessions: [placeholderSession],
       destroyedSessions: [],
       availableFacilitators: [],
-      showSaveConfirmation: false,
-      showTypeOptionsHelpDisplay: false
+      showSaveConfirmation: false
     };
 
     if (this.props.workshop) {
@@ -103,8 +97,7 @@ const WorkshopForm = React.createClass({
           'location_name',
           'location_address',
           'capacity',
-          'on_map',
-          'funded',
+          'workshop_type',
           'course',
           'subject',
           'notes'
@@ -262,72 +255,26 @@ const WorkshopForm = React.createClass({
     );
   },
 
-  renderOnMapRadios(validation) {
+  renderWorkshopTypeSelect(validation) {
+    const options = window.dashboard.workshop.TYPES.map((workshopType, i) => {
+      return (<option key={i} value={workshopType}>{workshopType}</option>);
+    });
+    const placeHolder = this.state.workshop_type ? null : <option />;
     return (
-      <FormGroup validationState={validation.style.on_map}>
-        <ControlLabel>
-          Should this appear on the K-5 workshop map?
-        </ControlLabel>
-        <FormGroup>
-          <Radio
-            checked={this.state.on_map}
-            inline
-            name="on_map"
-            value="yes"
-            onChange={this.handleRadioChange}
-            style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
-          >
-            Yes
-          </Radio>
-          <Radio
-            checked={!this.state.on_map}
-            inline
-            name="on_map"
-            value="no"
-            onChange={this.handleRadioChange}
-            style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
-          >
-            No
-          </Radio>
-        </FormGroup>
-        <HelpBlock>{validation.help.on_map}</HelpBlock>
-      </FormGroup>
-    );
-  },
-
-  renderFundedRadios(validation) {
-    return (
-      <FormGroup validationState={validation.style.funded}>
-        <ControlLabel>
-          Is this a Code.org paid workshop?
-        </ControlLabel>
-        <FormGroup>
-          <Radio
-            checked={this.state.funded}
-            inline
-            name="funded"
-            value="yes"
-            onChange={this.handleRadioChange}
-            style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
-          >
-            Yes
-          </Radio>
-          <Radio
-            checked={!this.state.funded}
-            inline
-            name="funded"
-            value="no"
-            onChange={this.handleRadioChange}
-            style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
-          >
-            No
-          </Radio>
-        </FormGroup>
-        <HelpBlock>{validation.help.funded}</HelpBlock>
+      <FormGroup validationState={validation.style.workshop_type}>
+        <ControlLabel>Workshop Type</ControlLabel>
+        <FormControl
+          componentClass="select"
+          value={this.state.workshop_type || ''}
+          name="workshop_type"
+          onChange={this.handleFieldChange}
+          style={this.getInputStyle()}
+          disabled={this.props.readOnly}
+        >
+          {placeHolder}
+          {options}
+        </FormControl>
+        <HelpBlock>{validation.help.workshop_type}</HelpBlock>
       </FormGroup>
     );
   },
@@ -440,18 +387,6 @@ const WorkshopForm = React.createClass({
     return value;
   },
 
-  handleRadioChange(event) {
-    const fieldName = $(event.target).attr('name');
-    if (!fieldName) {
-      console.error("Expected name attribute on handleRadioChange target.");
-      return null;
-    }
-
-    const enabled = event.target.value === "yes";
-    this.setState({[fieldName]: enabled});
-    return enabled;
-  },
-
   handleCourseChange(event) {
     const course = this.handleFieldChange(event);
 
@@ -466,8 +401,7 @@ const WorkshopForm = React.createClass({
       location_name: this.state.location_name,
       location_address: this.state.location_address,
       capacity: this.state.capacity,
-      on_map: this.state.on_map,
-      funded: this.state.funded,
+      workshop_type: this.state.workshop_type,
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
@@ -547,12 +481,6 @@ const WorkshopForm = React.createClass({
     );
   },
 
-  toggleTypeOptionsHelpDisplay() {
-    this.setState({
-      showTypeOptionsHelpDisplay: !this.state.showTypeOptionsHelpDisplay
-    });
-  },
-
   render() {
     if (this.state.loading) {
       return <Spinner/>;
@@ -590,15 +518,10 @@ const WorkshopForm = React.createClass({
         validation.style.capacity = "error";
         validation.help.capacity = "Must be a positive integer.";
       }
-      if (!this.state.on_map) {
+      if (!this.state.workshop_type) {
         validation.isValid = false;
-        validation.style.on_map = "error";
-        validation.help.on_map = "Required.";
-      }
-      if (!this.state.funded) {
-        validation.isValid = false;
-        validation.style.funded = "error";
-        validation.help.funded = "Required.";
+        validation.style.workshop_type = "error";
+        validation.help.workshop_type = "Required.";
       }
       if (!this.state.course) {
         validation.isValid = false;
@@ -683,54 +606,14 @@ const WorkshopForm = React.createClass({
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
+            <Col sm={2}>
+              {this.renderWorkshopTypeSelect(validation)}
+            </Col>
             <Col sm={3}>
               {this.renderCourseSelect(validation)}
             </Col>
             <Col sm={3}>
               {this.renderSubjectSelect(validation)}
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={10}>
-              <FormGroup>
-                <ControlLabel>
-                  Workshop Type Options
-                  &nbsp;<a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>
-                </ControlLabel>
-                {this.state.showTypeOptionsHelpDisplay &&
-                  <FormGroup>
-                    <p>These options have replaced the old "Workshop Type" dropdown. Here's how these options map to the old workshop types:</p>
-                    <Col sm={7}>
-                      <Table bordered condensed>
-                        <tbody>
-                          <tr>
-                            <td></td>
-                            <td><strong>Code.org Paid</strong></td>
-                            <td><strong>Not Code.org Paid</strong></td>
-                          </tr>
-                          <tr>
-                            <td><strong>On the map</strong></td>
-                            <td>Previously called Public</td>
-                            <td>New!</td>
-                          </tr>
-                          <tr>
-                            <td><strong>Not on the map</strong></td>
-                            <td>Previously called Private</td>
-                            <td>Previously called District</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </Col>
-                    <Clearfix />
-                  </FormGroup>
-                }
-                <Row>
-                  <Col smOffset={1}>
-                    {this.renderOnMapRadios(validation)}
-                    {this.renderFundedRadios(validation)}
-                  </Col>
-                </Row>
-              </FormGroup>
             </Col>
           </Row>
           <Row>

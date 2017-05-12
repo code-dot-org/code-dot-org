@@ -61,8 +61,7 @@ module Pd::WorkshopFilters
   # - only_attended
   # - order_by (field followed by optional asc|desc)
   #   - location_name
-  #   - on_map
-  #   - funded
+  #   - workshop_type
   #   - course
   #   - subject
   #   - date (scheduled start date)
@@ -104,10 +103,9 @@ module Pd::WorkshopFilters
         case field
           when 'location_name'
             workshops = workshops.order("location_name #{direction}".strip)
-          when 'on_map'
-            workshops = workshops.order("on_map #{direction}".strip)
-          when 'funded'
-            workshops = workshops.order("funded #{direction}".strip)
+          when 'workshop_type'
+            # TODO: elijah replace this with on_map and funded
+            workshops = workshops.order("on_map #{direction}".strip).order("funded #{direction}".strip)
           when 'course'
             workshops = workshops.order("course #{direction}".strip)
           when 'subject'
