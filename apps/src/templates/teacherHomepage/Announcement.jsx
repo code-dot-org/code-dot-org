@@ -64,10 +64,12 @@ const Announcement = React.createClass({
 
     return (
       <div style={styles.container}>
-        <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
+        <a href={link}>
+          <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
+        </a>
         <div style={styles.tealBar}>
           <div style={styles.headingBox}>
-            <a href={link} style={styles.heading} >
+            <a href={link} style={styles.heading}>
               {heading}
             </a>
           </div>
