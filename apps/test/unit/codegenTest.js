@@ -2,6 +2,7 @@ import sinon from 'sinon';
 import {assert, expect} from '../util/configuredChai';
 import * as codegen from '@cdo/apps/codegen';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
 
 describe("codegen", function () {
 
@@ -26,7 +27,7 @@ describe("codegen", function () {
   describe("marshalNativeToInterpreter function", () => {
     let interpreter, globalScope, value;
     beforeEach(() => {
-      interpreter = new CustomMarshalingInterpreter('', (interpreter, scope) => {
+      interpreter = new CustomMarshalingInterpreter('', new CustomMarshaler({}), (interpreter, scope) => {
         globalScope = scope;
         interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
           if (truthy !== interpreter.TRUE) {
@@ -51,7 +52,7 @@ describe("codegen", function () {
      * @returns void
      */
     function makeAssertion(assertion, nativeVar, nativeParentObj, maxDepth) {
-      let interpreter = new CustomMarshalingInterpreter(assertion, (interpreter, scope) => {
+      let interpreter = new CustomMarshalingInterpreter(assertion, new CustomMarshaler({}), (interpreter, scope) => {
         globalScope = scope;
         interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
           if (truthy !== interpreter.TRUE) {

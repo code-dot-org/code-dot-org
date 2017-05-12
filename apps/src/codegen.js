@@ -1,6 +1,5 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
-
-import CustomMarshalingInterpreter from './lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import Interpreter from '@code-dot-org/js-interpreter';
 import {dropletGlobalConfigBlocks} from './dropletUtils';
 import * as utils from './utils';
 
@@ -41,9 +40,12 @@ export function evalWith(code, globals, legacy) {
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
   } else {
-    new CustomMarshalingInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
-      marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
-    }).run();
+    new Interpreter(
+      `(function () { ${code} })()`,
+      (interpreter, scope) => {
+        marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
+      }
+    ).run();
   }
 }
 
@@ -84,15 +86,18 @@ export function evalWithEvents(apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  interpreter = new CustomMarshalingInterpreter(evalCode + eventLoop, (interpreter, scope) => {
-    marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
-    interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
-      currentCallback = callback;
-    }));
-    interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
-      lastReturnValue = exports.marshalInterpreterToNative(interpreter, returnValue);
-    }));
-  });
+  interpreter = new Interpreter(
+    evalCode + eventLoop,
+    (interpreter, scope) => {
+      marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
+      interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+        currentCallback = callback;
+      }));
+      interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
+        lastReturnValue = exports.marshalInterpreterToNative(interpreter, returnValue);
+      }));
+    }
+  );
   interpreter.run();
 
   return {hooks, interpreter};
@@ -214,69 +219,6 @@ function isCanvasImageData(nativeVar) {
   return nativeVar instanceof CanvasPixelArray;
 }
 
-
-/**
- * Create a new "custom marshal" interpreter object that corresponds to a native
- * object.
- * @param {Interpreter} interpreter Interpreter instance
- * @param {Object} nativeObj Object to wrap
- * @param {Object} nativeParentObj Parent of object to wrap
- * @return {!Object} New interpreter object.
- */
-var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentObj) {
-  if (nativeObj === undefined && interpreter.UNDEFINED) {
-    return interpreter.UNDEFINED;  // Reuse the same object.
-  }
-  var obj = {
-    data: nativeObj,
-    isPrimitive: false,
-    isCustomMarshal: true,
-    type: typeof nativeObj,
-    parent: nativeParentObj, // TODO (cpirich): replace with interpreter object?
-    toBoolean: function () {return Boolean(this.data);},
-    toNumber: function () {return Number(this.data);},
-    toString: function () {return String(this.data);},
-    valueOf: function () {return this.data;}
-  };
-  return obj;
-};
-
-
-// If this is on our list of "custom marshal" objects - or if it a property
-// on one of those objects (other than a function), return true
-
-var shouldCustomMarshalObject = function (interpreter, nativeVar, nativeParentObj) {
-  for (var i = 0; i < interpreter.customMarshalObjectList.length; i++) {
-    var marshalObj = interpreter.customMarshalObjectList[i];
-    if ((nativeVar instanceof marshalObj.instance &&
-          (typeof marshalObj.requiredMethod === 'undefined' ||
-            nativeVar[marshalObj.requiredMethod] !== undefined)) ||
-        (typeof nativeVar !== 'function' &&
-            nativeParentObj instanceof marshalObj.instance)) {
-      return true;
-    }
-  }
-  return false;
-};
-
-// When marshaling methods on "custom marshal" objects, we may need to augment
-// the marshaling options. This returns those options.
-
-var getCustomMarshalMethodOptions = function (interpreter, nativeParentObj) {
-  for (var i = 0; i < interpreter.customMarshalObjectList.length; i++) {
-    var marshalObj = interpreter.customMarshalObjectList[i];
-    if (nativeParentObj instanceof marshalObj.instance) {
-      if (typeof marshalObj.requiredMethod === 'undefined' ||
-           nativeParentObj[marshalObj.requiredMethod] !== undefined) {
-        return marshalObj.methodOpts || {};
-      } else {
-        return {};
-      }
-    }
-  }
-  return {};
-};
-
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
@@ -295,8 +237,12 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to infinite levels of depth
   }
-  if (shouldCustomMarshalObject(interpreter, nativeVar, nativeParentObj)) {
-    return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
+  // TODO (pcardune): remove circular dependency
+  const CustomMarshalingInterpreter = require('./lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+  if (interpreter instanceof CustomMarshalingInterpreter) {
+    if (interpreter.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+      return interpreter.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
+    }
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
@@ -318,11 +264,13 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
       nativeFunc: nativeVar,
       nativeParentObj: nativeParentObj,
     };
-    var extraOpts = getCustomMarshalMethodOptions(interpreter, nativeParentObj);
-    // Add extra options if the parent of this function is in our custom marshal
-    // modified object list:
-    for (var prop in extraOpts) {
-      makeNativeOpts[prop] = extraOpts[prop];
+    if (interpreter instanceof CustomMarshalingInterpreter) {
+      var extraOpts = interpreter.customMarshaler.getCustomMarshalMethodOptions(interpreter, nativeParentObj);
+      // Add extra options if the parent of this function is in our custom marshal
+      // modified object list:
+      for (var prop in extraOpts) {
+        makeNativeOpts[prop] = extraOpts[prop];
+      }
     }
     var wrapper = exports.makeNativeMemberFunction(makeNativeOpts);
     if (makeNativeOpts.nativeIsAsync) {
