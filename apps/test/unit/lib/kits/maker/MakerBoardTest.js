@@ -314,14 +314,21 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
      * @param {function.<number>} callback
      */
     describe(`digitalRead(pin, callback)`, () => {
-      it(`doesn't return anything`, () => {
-        return board.connect().then(() => {
-          const retVal = board.digitalRead(11, () => {});
-          expect(retVal).to.be.undefined;
-        });
+      beforeEach(() => {
+        return board.connect();
       });
 
-      // TODO: Test that callback is called
+      it(`doesn't return anything`, () => {
+        const retVal = board.digitalRead(11, () => {});
+        expect(retVal).to.be.undefined;
+      });
+
+      it(`calls callback with value`, done => {
+        board.digitalRead(11, value => {
+          expect(value).to.be.a('number');
+          done();
+        });
+      });
     });
 
     /**
@@ -346,14 +353,20 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
      * @param {function.<number>} callback
      */
     describe(`analogRead(pin, callback)`, () => {
+      beforeEach(() => {
+        return board.connect();
+      });
       it(`doesn't return anything`, () => {
-        return board.connect().then(() => {
-          const retVal = board.analogRead(11, () => {});
-          expect(retVal).to.be.undefined;
-        });
+        const retVal = board.analogRead(11, () => {});
+        expect(retVal).to.be.undefined;
       });
 
-      // TODO: Test that callback is called
+      it(`calls callback with value`, done => {
+        board.analogRead(11, value => {
+          expect(value).to.be.a('number');
+          done();
+        });
+      });
     });
   });
 }
