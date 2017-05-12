@@ -27,6 +27,7 @@ Rack server definition files:
 
 Web-application based on [`sinatra`](http://www.sinatrarb.com/) routing framework, with custom template and view-rendering layer.
 - [`pegasus/router.rb`](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/router.rb): - `class Documents < Sinatra::Base`
+  - Additional routes are in [`pegasus/routes/*.rb`](https://github.com/code-dot-org/code-dot-org/tree/staging/pegasus/routes), which are all [recursively inserted](https://github.com/code-dot-org/code-dot-org/blob/73afd7d4ad6a485bf22cac2656670d3816fd077c/pegasus/router.rb#L185) into the `Documents` class.
 - [`get_head_or_post '*'`](https://github.com/code-dot-org/code-dot-org/blob/73afd7d4ad6a485bf22cac2656670d3816fd077c/pegasus/router.rb#L200-L210) - `path` == `/` for root page request
 - [`document path`](https://github.com/code-dot-org/code-dot-org/blob/73afd7d4ad6a485bf22cac2656670d3816fd077c/pegasus/router.rb#L273-L310) - read path from filesystem and render output
   - Example: [`pegasus/sites.v3/code.org/public/index.haml`](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/sites.v3/code.org/public/index.haml)
