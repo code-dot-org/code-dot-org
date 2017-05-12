@@ -258,7 +258,7 @@ gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: '
 # Also include sRGB color profile conversion.
 gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
 # Image-optimization tools and binaries.
-gem 'image_optim_pack', '~> 0.4.0'
+gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
 gem 'image_optim_rails'
 
 gem 'image_size', require: false

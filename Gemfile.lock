@@ -56,6 +56,15 @@ GIT
       progress (~> 3.0, >= 3.0.1)
 
 GIT
+  remote: https://github.com/wjordan/image_optim_pack.git
+  revision: 41e063908e1b038a852f18504dd52721aac5ea6a
+  ref: guetzli
+  specs:
+    image_optim_pack (0.5.0)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+
+GIT
   remote: https://github.com/wjordan/ims-lti.git
   revision: 39203db48428ab943547363b13da56b02a19d905
   ref: oauth_051
@@ -369,9 +378,6 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     i18n (0.8.1)
-    image_optim_pack (0.4.0)
-      fspath (>= 2.1, < 4)
-      image_optim (~> 0.19)
     image_optim_rails (0.3.0)
       image_optim (~> 0.24.0)
       rails
@@ -784,7 +790,7 @@ DEPENDENCIES
   honeybadger
   httparty
   image_optim!
-  image_optim_pack (~> 0.4.0)
+  image_optim_pack (~> 0.5.0)!
   image_optim_rails
   image_size
   ims-lti!
