@@ -3,7 +3,7 @@ require 'digest/md5'
 require 'active_job'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/numeric/bytes'
-require 'active_support/cache'
+require 'cdo/shared_cache'
 require 'image_size'
 require 'image_optim'
 
@@ -20,17 +20,9 @@ module Cdo
     ].freeze
 
     # Since optimization steps can take a long time,
-    # cache results in persistent storage to avoid duplicate work.
-    # Default to Rails.cache if it's a File or MemCache store.
-    # Otherwise, create a new FileStore for local use.
+    # cache results in shared cache to avoid duplicate work.
     mattr_accessor :cache do
-      rails_cache = (defined?(Rails) && Rails.cache)
-      if rails_cache.is_a?(ActiveSupport::Cache::FileStore) ||
-        rails_cache.is_a?(ActiveSupport::Cache::MemCacheStore)
-        rails_cache
-      else
-        ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache'))
-      end
+      CDO.shared_cache
     end
 
     # Set timeout to non-zero to wait the specified number of seconds for the

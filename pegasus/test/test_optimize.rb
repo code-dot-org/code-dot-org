@@ -9,6 +9,7 @@ class OptimizeTest < Minitest::Test
 
   def setup
     require 'cdo/optimizer'
+    # Stub cache so content doesn't persist across tests.
     Cdo::Optimizer.stubs(cache: ActiveSupport::Cache::MemoryStore.new)
   end
 
