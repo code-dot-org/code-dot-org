@@ -45,30 +45,11 @@ module ScriptLevelsHelper
     end
   end
 
-  def twenty_hour_next_url
-    script_level_path(:show, twenty_hour_path_params)
-  end
-
-  def twenty_hour_path_params
-    {script_id: Script.twenty_hour_script.id, chapter: 'next'}
-  end
-
   def tracking_pixel_url(script)
     if script.name == Script::HOC_2013_NAME
       CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"
     end
-  end
-
-  def section_options
-    current_user.sections.map do |section|
-      content_tag 'option', section.name, value: url_for(
-        action: params[:action],
-        controller: params[:controller],
-        section_id: section.id,
-        user_id: nil
-      )
-    end.join(" ").html_safe
   end
 end
