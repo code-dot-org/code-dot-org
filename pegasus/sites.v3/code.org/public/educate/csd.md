@@ -27,10 +27,10 @@ CS Discoveries is designed from the ground up to be an accessible and engaging c
 We know that students engage differently with real world physical objects than with virtual software, and that the process of making physical artifacts is a powerful tool for fun, engaging, and lasting learning experiences. CS Discoveries has the Maker ethos embedded throughout, providing students the opportunity to see and participate in the physical act of creation alongside the more abstract elements of computer science.
 
 ### <a name="pathway"></a>Completing a K-12 pathway
-Our new course, CS Discoveries, is being designed to fit naturally between our [CS Fundamentals](/k5) course for K-5 and our [CS Principles](/csp) course for AP/Honors high school students. This allows us to offer districts, teachers and students a complete pathway of courses that build on each other and flow naturally together. 
+Our new course, CS Discoveries, is being designed to fit naturally between our [CS Fundamentals](/k5) course for K-5 and our [CS Principles](/csp) course for AP/Honors high school students. This allows us to offer districts, teachers and students a complete pathway of courses that build on each other and flow naturally together.
 
 ### <a name="tools"></a>Powerful tools with a high ceiling
-CS Discoveries aims to introduce students to tools and programming languages that are accessible for beginners, but which offer plenty of room to grow and create sophisticated projects. Using our App Lab programming environment, students will be able to transition from blocks to typed code at their own pace while learning JavaScript. New improvements to this tool will enable students to build simple animations, stories, or games as well as apps. Students will also develop Maker skills through the study of physical computing on the Arduino platform  at a very accessible cost. 
+CS Discoveries aims to introduce students to tools and programming languages that are accessible for beginners, but which offer plenty of room to grow and create sophisticated projects. Using our App Lab programming environment, students will be able to transition from blocks to typed code at their own pace while learning JavaScript. New improvements to this tool will enable students to build simple animations, stories, or games as well as apps. Students will also develop Maker skills through the study of physical computing on the Arduino platform  at a very accessible cost.
 
 ### <a name="flexible"></a>Designed for flexible implementation options
 CS Discoveries will be designed primarily for students in grades 7-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
@@ -87,7 +87,7 @@ Computers are all around us, and for students much of their everyday action is i
 
 <h4> Unit 2 - The Internet: Web Development </h4>
 
-Students will find empowerment through the realization that they too can take part in this creation and dissemination of information online by developing their own web pages from scratch using just HTML and CSS. By critically examining the web pages they visit every day, students will start to explore what makes a strong website and then use their new design process to implement parts of those designs. 
+Students will find empowerment through the realization that they too can take part in this creation and dissemination of information online by developing their own web pages from scratch using just HTML and CSS. By critically examining the web pages they visit every day, students will start to explore what makes a strong website and then use their new design process to implement parts of those designs.
 
 </div>
 
@@ -95,7 +95,7 @@ Students will find empowerment through the realization that they too can take pa
 
 <h4> Unit 3 - Programming: Interactive Games and Animations </h4>
 
-Starting off with simple primitive shapes and building up to more sophisticated sprite-based games, students will become familiar with the basic concepts that form the foundation of computer programming. The development of a personalized final project will engage students in design, testing, and iteration as they come to see that failure and debugging are an expected (and valuable) part of the programming process that make your end product better. 
+Starting off with simple primitive shapes and building up to more sophisticated sprite-based games, students will become familiar with the basic concepts that form the foundation of computer programming. The development of a personalized final project will engage students in design, testing, and iteration as they come to see that failure and debugging are an expected (and valuable) part of the programming process that make your end product better.
 
 </div>
 
@@ -148,7 +148,7 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <h4>Learn more about professional learning!</h4>
 
-This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
+This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms.
 
 <br><br>
 
@@ -196,7 +196,7 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 
 The CS Discoveries course is deeply inspired by the philosophy of ECS, based on our experience teaching ECS, scaling it to thousands of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches similar core concepts as ECS, and has a shared _**inquiry-based philosophy**_ and _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels.
 
-[Learn more](/educate/csd/ecs_and_csd) about Code.org's transition to CS Discoveries from Exploring Computer Science. 
+[Learn more](/educate/csd/ecs_and_csd) about Code.org's transition to CS Discoveries from Exploring Computer Science.
 
 
 ### <a name="timeline"></a>What is the timeline for CS Discoveries?
