@@ -307,6 +307,38 @@ class FilesTest < FilesApiTestBase
     assert not_found?
   end
 
+  def test_rename_operations
+    filename = @api.randomize_filename('Mixed Case With Space.html')
+    escaped_filename = URI.escape(filename)
+    filename2 = @api.randomize_filename('Another Name With Spaces.html')
+    escaped_filename2 = URI.escape(filename2)
+    delete_all_file_versions(filename)
+    delete_all_file_versions(filename2)
+    delete_all_manifest_versions
+
+    post_file_data(@api, filename, 'stub-contents', 'test/html')
+    assert successful?
+
+    @api.get_object(escaped_filename)
+    assert successful?
+    assert_equal 'stub-contents', last_response.body
+
+    @api.rename_object(filename, escaped_filename2)
+    assert successful?
+
+    @api.get_object(escaped_filename2)
+    assert successful?
+    assert_equal 'stub-contents', last_response.body
+
+    @api.get_object(escaped_filename)
+    assert not_found?
+
+    @api.delete_object(escaped_filename2)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   private
 
   def post_file(api, uploaded_file)
