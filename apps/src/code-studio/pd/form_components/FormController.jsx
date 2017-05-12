@@ -37,6 +37,7 @@ export default class FormController extends React.Component {
       data: {},
       errors: [],
       errorHeader: null,
+      globalError: false,
       currentPage: 0,
       submitting: false
     };
@@ -139,6 +140,7 @@ export default class FormController extends React.Component {
     this.setState({
       errors: [],
       errorHeader: null,
+      globalError: false,
       submitting: true
     });
 
@@ -163,6 +165,7 @@ export default class FormController extends React.Component {
       } else {
         // Otherwise, something unknown went wrong on the server
         this.setState({
+          globalError: true,
           errorHeader: "Something went wrong on our end; please try again later."
         });
       }
@@ -187,7 +190,10 @@ export default class FormController extends React.Component {
       `);
     }
 
-    if (this.state.errorHeader) {
+    const shouldShowError = this.state.errorHeader &&
+      (this.state.globalError ||pageFields.some(field => this.state.errors.includes(field)));
+
+    if (shouldShowError) {
       return (
         <Alert bsStyle="danger">
           <h3>{this.state.errorHeader}</h3>
