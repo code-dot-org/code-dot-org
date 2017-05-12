@@ -2,6 +2,7 @@
 title: CS Discoveries
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 # Our newest course: CS Discoveries #
