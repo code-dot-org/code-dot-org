@@ -155,6 +155,28 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # POST /v3/channels/<channel-id>/publish/<project-type>
+  #
+  # Marks the specified channel as published.
+  #
+  post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
+    # Once we have back-filled the project_type column for all channels,
+    # it will no longer be necessary to specify the project type here.
+    published_at = StorageApps.new(storage_id('user')).publish(channel_id, project_type)
+    {publishedAt: published_at}.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/unpublish
+  #
+  # Marks the specified channel as no longer published.
+  #
+  post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
+    StorageApps.new(storage_id('user')).unpublish(channel_id)
+    {publishedAt: nil}.to_json
+  end
+
+  #
   # GET /v3/channels/<channel-id>/privacy-profanity
   #
   # Get an indication of privacy/profanity violation.

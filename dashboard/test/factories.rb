@@ -24,6 +24,9 @@ FactoryGirl.define do
       type "SingleSectionExperiment"
       section
     end
+    factory :single_user_experiment, class: 'SingleUserExperiment' do
+      type "SingleUserExperiment"
+    end
   end
   factory :section_hidden_stage do
     section nil

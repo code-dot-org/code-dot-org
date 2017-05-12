@@ -314,10 +314,6 @@ class User < ActiveRecord::Base
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
-  has_one :prize
-  has_one :teacher_prize
-  has_one :teacher_bonus_prize
-
   belongs_to :secret_picture
   before_create :generate_secret_picture
 
@@ -341,10 +337,6 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
-
-  validates_uniqueness_of :prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_bonus_prize_id, allow_nil: true
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?

@@ -7,8 +7,6 @@ class AdminHocController < ApplicationController
   before_action :require_admin
   check_authorization
 
-  include LevelSourceHintsHelper
-
   def event_signups
     # A hash from HOC year to HOC data.
     event_signup_data = {2014 => nil, 2015 => nil, 2016 => nil}
