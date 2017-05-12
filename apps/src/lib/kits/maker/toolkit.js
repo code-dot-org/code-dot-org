@@ -9,6 +9,7 @@ import * as dropletConfig from './dropletConfig';
 import MakerError, {ConnectionCanceledError} from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
+/* global trackEvent */
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -93,6 +94,7 @@ export function connect({interpreter, onDisconnect}) {
           currentBoard.once('disconnect', onDisconnect);
         }
         dispatch(redux.reportConnected());
+        trackEvent('Maker', 'ConnectionSuccess');
       })
       .catch(error => {
         if (error instanceof ConnectionCanceledError) {
@@ -101,6 +103,7 @@ export function connect({interpreter, onDisconnect}) {
         } else {
           // Something went wrong, so show the error screen.
           dispatch(redux.reportConnectionError());
+          trackEvent('Maker', 'ConnectionError');
           return Promise.reject(error);
         }
       });
