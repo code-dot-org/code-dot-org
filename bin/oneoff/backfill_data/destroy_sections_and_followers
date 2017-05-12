@@ -9,9 +9,6 @@
 # executing the dependent destroys manually.
 # See https://github.com/rubysherpas/paranoia/issues/403 for this feature request.
 
-# NOTE: As this script can be safely run multiple times, we use `update!` rather than `update` or
-# `save(validate: false)` for visibility of models not passing our validations.
-
 require_relative '../../../dashboard/config/environment'
 
 count = 0
@@ -19,25 +16,26 @@ start_id = ARGV[0].try(:to_i) || 0
 begin
   ActiveRecord::Base.record_timestamps = false
 
-  User.only_deleted.where('user_id >= ?', start_id).find_each do |user|
+  User.only_deleted.where('id >= ?', start_id).find_each do |user|
+    puts "PROCESSED: #{count} records." if count % 100 == 0
     ActiveRecord::Base.transaction do
       # Manually execute the `dependent: :destroy` for `has_many :sections`, including its
       # `dependent: :destroy` for `has_many :followers`. Though only teachers should have sections,
       # our DB data fails this validation, so we perform this for all users.
       Section.where(user_id: user.id, deleted_at: nil).find_each do |section|
-        section.update!(deleted_at: user.deleted_at)
+        section.deleted_at = user.deleted_at
+        section.save(validate: false)
         Follower.where(section_id: section.id, deleted_at: nil).
           all.
-          update!(deleted_at: user.deleted_at)
+          update_all(deleted_at: user.deleted_at)
       end
 
       # Manually execute the `dependent: :destroy` for `has_many :followeds`.
       Follower.where(student_user_id: user.id, deleted_at: nil).
         all.
-        update!(deleted_at: user.deleted_at)
+        update_all(deleted_at: user.deleted_at)
     end
     count += 1
-    puts "PROCESSED: #{count} records." if count % 100 == 0
   end
 rescue Exception => e
   puts "PROCESSED: #{count} records."

@@ -60,7 +60,7 @@ class Game < ActiveRecord::Base
   end
 
   def self.studio_ec
-    @@game_custom_studio ||= find_by_name("StudioEC")
+    @@game_studio_ec ||= find_by_name("StudioEC")
   end
 
   def self.custom_artist

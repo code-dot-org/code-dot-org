@@ -5,13 +5,29 @@ class LevelTest < ActiveSupport::TestCase
 
   setup do
     @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
-    @custom_turtle_data = {solution_level_source_id: 4, user_id: 1}
+    @custom_turtle_data = {user_id: 1}
     @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
+
+  # Raises an exception if level_class or any of its descendants do not exist in either
+  # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
+  def raise_unless_specifies_ideal_level_source(level_class)
+    unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
+      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+      raise "#{level_class} does not specify if it has ideal level sources"
+    end
+    level_class.descendants.each do |descendant|
+      raise_unless_specifies_ideal_level_source(descendant)
+    end
+  end
+
+  test 'types marked as having ideal level sources' do
+    raise_unless_specifies_ideal_level_source(Level)
   end
 
   test 'create level' do

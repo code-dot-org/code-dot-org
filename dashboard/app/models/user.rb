@@ -73,6 +73,7 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
+require 'cdo/school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties, SchoolInfoDeduplicator
@@ -102,7 +103,16 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
+  serialized_attrs %w(
+    ops_first_name
+    ops_last_name
+    district_id
+    ops_school
+    ops_gender
+    races
+    using_text_mode
+    last_seen_school_info_interstitial
+  )
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -290,7 +300,6 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-  has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
 
@@ -784,9 +793,13 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def initial
+  def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
+  end
+
+  def initial
+    User.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -844,6 +857,9 @@ class User < ActiveRecord::Base
 
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
+  rescue ArgumentError
+    errors.add :base, I18n.t('password.reset_errors.invalid_email')
+    return nil
   end
 
   def generate_secret_picture
@@ -1197,5 +1213,13 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
+  end
+
+  def show_school_info_interstitial?
+    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
+  end
+
+  def school_info_suggestion?
+    !(school.blank? && full_address.blank?)
   end
 end

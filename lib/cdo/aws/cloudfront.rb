@@ -226,6 +226,7 @@ module AWS
         max_by {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate.not_after}.
         try(:certificate_arn)
       {
+        is_ipv6_enabled: false,
         aliases: {
           quantity: cloudfront[:aliases].length, # required
           items: cloudfront[:aliases].empty? ? nil : cloudfront[:aliases],
@@ -245,7 +246,9 @@ module AWS
                 origin_ssl_protocols: {
                   quantity: 2,
                   items: %w(SSLv3 TLSv1)
-                }
+                },
+                origin_read_timeout: 30,
+                origin_keepalive_timeout: 5
               },
               custom_headers: {
                 quantity: 0
@@ -434,6 +437,9 @@ module AWS
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
         compress: true, # Serve gzip-compressed assets
+        lambda_function_associations: {
+          quantity: 0,
+        },
       }
       behavior[:path_pattern] = path if path
       behavior

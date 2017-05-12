@@ -182,4 +182,17 @@ class PdProgramRegistration
   def self.receipt
     'pd_program_registration_receipt'
   end
+
+  def self.process_(form)
+    # Save this form id in the relevant dashboard pd_teacher_application row, if applicable
+    id = form[:id]
+    data = JSON.load(form[:data])
+    application_id = data['pd_teacher_application_id_i']
+    if application_id
+      DASHBOARD_DB[:pd_teacher_applications].where(id: application_id).update(program_registration_id: id)
+    end
+
+    # We don't actually need to save any processed data with the form, so return an empty hash.
+    {}
+  end
 end

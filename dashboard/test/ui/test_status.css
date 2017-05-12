@@ -11,6 +11,10 @@ h3 {
   margin-bottom: 0.1em;
 }
 
+a {
+  text-decoration: none;
+}
+
 table {
   width: 100%;
 }

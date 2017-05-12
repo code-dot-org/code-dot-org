@@ -10,10 +10,7 @@
     "instructions_important": "false",
     "teacher_markdown": "## HTML Discussion\r\n\r\nYou should bring students back together once they've spent a couple minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.\r\n\r\n* What text is appearing in both the code and the web page?\r\n* How is this language communicating extra information about the way to represent text?\r\n\r\nThe goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed.",
     "hide_share_and_remix": "true",
-    "display_name": "Explore HTML",
-    "encrypted_examples": [
-
-    ]
+    "display_name": "Explore HTML"
   },
   "published": true,
   "notes": "",

@@ -1,0 +1,8 @@
+hidden false
+login_required true
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'

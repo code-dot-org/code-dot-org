@@ -3,11 +3,11 @@ import ProjectCard from './ProjectCard';
 
 const defaultData = {
   channel: 'abcdef',
-  projectName: 'Puppy Playdate',
+  name: 'Puppy Playdate',
   studentName: 'Penelope',
-  studentAge: 8,
+  studentAgeRange: '8+',
   type: 'applab',
-  updatedAt: '2016-12-31T23:59:59.999-08:00',
+  publishedAt: '2016-12-31T23:59:59.999-08:00',
   publishedToPublic: false,
   publishedToClass: false
 };

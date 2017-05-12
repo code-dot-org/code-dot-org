@@ -13,7 +13,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       :pd_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
-      workshop_type: Pd::Workshop::TYPE_PUBLIC,
       on_map: true,
       funded: true
     )
@@ -242,20 +241,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     end
   end
 
-  test 'creating with workshop_type will set on_map and funded' do
-    sign_in @organizer
-
-    assert_creates(Pd::Workshop) do
-      post :create, params: {pd_workshop: workshop_params}
-      assert_response :success
-    end
-
-    id = JSON.parse(@response.body)['id']
-    workshop = Pd::Workshop.find id
-    assert_equal true, workshop.on_map
-    assert_equal true, workshop.funded
-  end
-
   test_user_gets_response_for(
     :create,
     name: 'facilitators cannot create workshops',
@@ -341,26 +326,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params[:location_address] = @workshop.location_address
     Pd::Workshop.expects(:process_location).never
     put :update, params: {id: @workshop.id, pd_workshop: params}
-  end
-
-  test 'updating with new workshop_type will re-set on_map and funded' do
-    sign_in @organizer
-    assert_equal Pd::Workshop::TYPE_PUBLIC, @workshop.workshop_type
-    params = workshop_params
-    params[:workshop_type] = Pd::Workshop::TYPE_PRIVATE
-    Pd::Workshop.any_instance.expects(:set_on_map_and_funded_from_workshop_type).once
-    put :update, params: {id: @workshop.id, pd_workshop: params}
-    assert_response :success
-  end
-
-  test 'updating with the same workshop_type will not re-set on_map and funded' do
-    sign_in @organizer
-    assert_equal Pd::Workshop::TYPE_PUBLIC, @workshop.reload.workshop_type
-    params = workshop_params
-    params[:workshop_type] = @workshop.reload.workshop_type
-    Pd::Workshop.any_instance.expects(:set_on_map_and_funded_from_workshop_type).never
-    put :update, params: {id: @workshop.id, pd_workshop: params}
-    assert_response :success
   end
 
   test 'updating with notify true sends detail change notification emails' do
@@ -590,7 +555,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_end = session_start + 8.hours
     {
       location_address: 'Seattle, WA',
-      workshop_type: Pd::Workshop::TYPE_PUBLIC,
+      on_map: true,
+      funded: true,
       course: Pd::Workshop::COURSE_CSF,
       capacity: 10,
       sessions_attributes: [

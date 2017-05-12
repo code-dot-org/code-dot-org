@@ -5,8 +5,8 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
     registration = Pd::FacilitatorProgramRegistration.new
     refute registration.valid?
     assert_equal [
-      "User is required",
       "Form data is required",
+      "Form data confirmTeacherconDate",
       "Form data addressStreet",
       "Form data addressCity",
       "Form data addressState",
@@ -27,6 +27,7 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
       "Form data gradesTaught",
       "Form data gradesPlanningToTeach",
       "Form data subjectsTaught",
+      "User is required",
       "Teachercon is not included in the list"
     ], registration.errors.full_messages
 

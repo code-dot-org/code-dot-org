@@ -37,26 +37,17 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 And, we still have a number of openings for applicants in the following regions:
 
 * Arizona
-* Bay Area and Central Coast, CA
-* Sacramento Valley and North Coast, CA
 * San Joaquin Valley, CA
-* Colorado
 * Northeast Florida
 * Miami, FL
-* Iowa
 * Illinois
 * Indiana
 * Maine
 * Maryland
-* Montana
 * New Jersey
 * Nevada
-* Oklahoma
 * Pennsylvania
-* South Carolina
-* Tennessee
 * Austin, TX
-* Dallas, TX
 * Utah
 * Virginia
 * Wisconsin
@@ -68,8 +59,8 @@ And, we still have a number of openings for applicants in the following regions:
 
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles. Our curriculum is available at no cost for anyone, anywhere to teach.
 
- * [Code.org 2016-17 AP CS Principles Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
- * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
+ * [Code.org 2017-18 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2017.pdf)
+ * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
 
  [<button>View Curriculum</button>](#lessons)
 
@@ -146,7 +137,7 @@ And, we still have a number of openings for applicants in the following regions:
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- **New** [2016 AP Endorsed Syllabus and Overview](/files/CSPSyllabusApril2016.pdf)
+- **New** [2017 AP Endorsed Syllabus and Overview](/files/CSPSyllabusMay2017.pdf)
 - [Professional Development Overview](/educate/professional-learning/cs-principles)
 - [Course Materials List](#materials)
 

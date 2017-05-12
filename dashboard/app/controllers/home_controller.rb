@@ -38,6 +38,7 @@ class HomeController < ApplicationController
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
+      @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
     end
   end
 
