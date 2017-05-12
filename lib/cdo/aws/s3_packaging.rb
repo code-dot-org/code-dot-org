@@ -1,6 +1,7 @@
 require 'active_support/core_ext/string' # Get String#underscore
 require 'aws-sdk'
 require 'logger'
+require 'fileutils'
 
 #
 # In the past, we've committed build outputs into our git repo. This has various
@@ -131,7 +132,32 @@ class S3Packaging
     end
 
     @logger.info 'Existing package on s3. Validating equivalence'
-    packages_equivalent(old_package, package)
+    equivalent = packages_equivalent(old_package, package)
+    stash_files(old_package, package) unless equivalent
+    equivalent
+  end
+
+  # Stashes packages to temp files that will not be cleaned up on process exit
+  # so that we can understand differences
+  private def stash_files(package1, package2)
+    `mktemp -d ~/stashed_packages` # we might have already created
+
+    # create a couple of temp files
+    file1 = `mktemp ~/stashed_packages/XXXXXXXXXX`
+    file2 = `mktemp ~/stashed_packages/XXXXXXXXXX`
+
+    # strip endlines
+    file1.gsub!("\n", "")
+    file2.gsub!("\n", "")
+
+    # copy over Ruby TempFiles (that will be cleaned up on process exit)
+    FileUtils.cp(package1.path, file1)
+    FileUtils.cp(package2.path, file2)
+
+    @logger.info "stashed old package to: ${file1}"
+    @logger.info "stashed new package to: ${file2}"
+  rescue
+    @logger.info 'stash_files failed'
   end
 
   # Checks to see if two packages are equivalent by unpacking them into tempfiles
