@@ -719,6 +719,17 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
+  #
+  # Read a metadata file, caching the result for 1 hour.
+  #
+  get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+    cache_for 1 * 60 * 60 # 1 hour
+
+    get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+  end
+
+  #
   # DELETE /v3/files/<channel-id>/.metadata/<filename>?files-version=<project-version-id>
   #
   # Delete a metadata file.

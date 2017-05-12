@@ -108,7 +108,7 @@ module ProjectsList
       {
         channel: channel_id,
         name: project_value['name'],
-        thumbnailUrl: project_value['thumbnailUrl'],
+        thumbnailUrl: make_cacheable(project_value['thumbnailUrl']),
         # Note that we are using the new :project_type field rather than extracting
         # it from :value. :project_type might not be present in unpublished projects.
         type: project[:project_type],
@@ -117,6 +117,10 @@ module ProjectsList
         studentName: User.initial(project[:name]),
         studentAgeRange: student_age_range(project),
       }.with_indifferent_access
+    end
+
+    def make_cacheable(url)
+      url.sub(%r{/v3/files/}, '/v3/files-public/')
     end
 
     AGE_CUTOFFS = [18, 13, 8, 4].freeze
