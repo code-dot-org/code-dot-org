@@ -1,7 +1,8 @@
 require 'state_abbr'
 
-class Pd::ProgramRegistration < ActiveRecord::Base
-  self.abstract_class = true
+module Pd::ProgramRegistrationForm
+  extend ActiveSupport::Concern
+  include Pd::Form
 
   LOCATIONS = [
     'Houston, TX',
@@ -124,75 +125,22 @@ class Pd::ProgramRegistration < ActiveRecord::Base
     ]
   }.freeze
 
-  belongs_to :user
-
-  validates_presence_of :user
-  validates_presence_of :form_data
-  validates_inclusion_of :teachercon, in: 1..3
-
-  def self.required_fields
-    self.class.options.keys
+  included do
+    belongs_to :user
+    validates_presence_of :user
+    validates_inclusion_of :teachercon, in: 1..3
   end
 
-  def self.options
-    TRAVEL_OPTIONS.
-      merge(PHOTO_RELEASE_OPTIONS).
-      merge(LIABILITY_WAIVER_OPTIONS).
-      merge(DEMOGRAPHICS_OPTIONS).freeze
-  end
-
-  def add_key_error(key)
-    key = key.to_s.camelize(:lower)
-    errors.add(:form_data, :invalid, message: key)
-  end
-
-  validate :validate_required_fields
-  def validate_required_fields
-    hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
-
-    # empty fields may come about when the user selects then unselects an
-    # option. They should be treated as if they do not exist
-    hash.delete_if do |_key, value|
-      value.empty?
+  module ClassMethods
+    def required_fields
+      self.class.options.keys
     end
 
-    self.class.required_fields.each do |key|
-      add_key_error(key) unless hash.key?(key)
+    def options
+      TRAVEL_OPTIONS.
+        merge(PHOTO_RELEASE_OPTIONS).
+        merge(LIABILITY_WAIVER_OPTIONS).
+        merge(DEMOGRAPHICS_OPTIONS).freeze
     end
-  end
-
-  validate :validate_options
-  def validate_options
-    hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
-
-    hash_with_options = hash.select do |key, _value|
-      self.class.options.key? key
-    end
-
-    hash_with_options.each do |key, value|
-      if value.is_a? Array
-        value.each do |subvalue|
-          add_key_error(key) unless self.class.options[key].include? subvalue
-        end
-      else
-        add_key_error(key) unless self.class.options[key].include? value
-      end
-    end
-  end
-
-  def update_form_data_hash(update_hash)
-    self.form_data_hash = (form_data_hash || {}).merge update_hash
-  end
-
-  def form_data_hash=(hash)
-    write_attribute :form_data, hash.to_json
-  end
-
-  def form_data_hash
-    form_data ? JSON.parse(form_data) : {}
-  end
-
-  def sanitize_form_data_hash
-    form_data_hash.transform_keys {|key| key.underscore.to_sym}
   end
 end
