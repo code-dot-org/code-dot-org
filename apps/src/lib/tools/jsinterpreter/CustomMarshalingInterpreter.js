@@ -1,6 +1,175 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
+const codegen = require('../../../codegen');
 
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
+
+  constructor(code, customMarshaler, opt_initFunc) {
+    super(code);
+    if (!customMarshaler) {
+      throw new Error("You must provide a CustomMarshaler to CustomMarshalingInterpreter");
+    }
+    this.customMarshaler = customMarshaler;
+
+    // TODO: because of the way the interpreter is written, we have to re-do
+    // this work from the parent class's constructor because it needs
+    // customMarshaler to have been set before-hand. Unfortunately, javascript
+    // does not allow us to set customMarshaler until after the parent constructor
+    // has finished.
+    this.initFunc_ = opt_initFunc;
+    const scope = this.createScope(this.ast, null);
+    this.stateStack = [{
+      node: this.ast,
+      scope: scope,
+      thisExpression: scope,
+      done: false
+    }];
+  }
+
+  /**
+   * Helper to determine if we should prevent custom marshalling from occurring
+   * in a situation where we normally would use it. Allows us to block from a
+   * specific list of properties and a hardcoded list of instance types that are
+   * not safe to return into the interpreter sandbox.
+   *
+   * @param {string} name Name of property.
+   * @param {!Object} obj Data object.
+   * @param {Object} nativeParent Native parent object (if parented).
+   * @return {boolean} true if property access should be blocked.
+   */
+  shouldBlockCustomMarshalling_(name, obj, nativeParent) {
+    if (-1 !== this.customMarshaler.customMarshalBlockedProperties.indexOf(name)) {
+      return true;
+    }
+    var value = obj.isCustomMarshal ? obj.data[name] : nativeParent[name];
+    if (value instanceof Node || value instanceof Window) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Wrapper to Interpreter's getProperty (extended for custom marshaling)
+   *
+   * Fetch a property value from a data object.
+   * @param {!Object} obj Data object.
+   * @param {*} name Name of property.
+   * @return {!Object} Property value (may be UNDEFINED).
+   * @override
+   */
+  getProperty(obj, name) {
+    name = name.toString();
+    var nativeParent;
+    var customMarshalValue;
+    if (obj.isCustomMarshal) {
+      if (this.shouldBlockCustomMarshalling_(name, obj)) {
+        return this.UNDEFINED;
+      } else {
+        customMarshalValue = obj.data[name];
+      }
+    } else {
+      var hasProperty = false;
+      if (!obj.isPrimitive) {
+        hasProperty = super.hasProperty(obj, name);
+      }
+      if (!hasProperty &&
+          obj === this.globalScope &&
+          !!(nativeParent = this.customMarshaler.customMarshalGlobalProperties[name]) &&
+          !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+        customMarshalValue = nativeParent[name];
+      } else {
+        return super.getProperty(obj, name);
+      }
+    }
+    var type = typeof customMarshalValue;
+    if (type === 'number' || type === 'boolean' || type === 'string' ||
+        type === 'undefined' || customMarshalValue === null) {
+      return this.createPrimitive(customMarshalValue);
+    } else {
+      return codegen.marshalNativeToInterpreter(this, customMarshalValue, obj.data);
+    }
+  }
+
+  /**
+   * Wrapper to Interpreter's hasProperty (extended for custom marshaling)
+   *
+   * Does the named property exist on a data object.
+   * @param {!Object} obj Data object.
+   * @param {*} name Name of property.
+   * @return {boolean} True if property exists.
+   * @override
+   */
+  hasProperty(obj, name) {
+    name = name.toString();
+    var nativeParent;
+    if (obj.isCustomMarshal) {
+      if (this.shouldBlockCustomMarshalling_(name, obj)) {
+        return false;
+      } else {
+        return name in obj.data;
+      }
+    } else {
+      var hasProperty = super.hasProperty(obj, name);
+      if (!hasProperty &&
+          obj === this.globalScope &&
+          !!(nativeParent = this.customMarshaler.customMarshalGlobalProperties[name]) &&
+          !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+        return true;
+      } else {
+        return hasProperty;
+      }
+    }
+  }
+
+  /**
+   * Wrapper to Interpreter's setProperty (extended for custom marshaling)
+   *
+   * Set a property value on a data object.
+   * @param {!Object} interpeter Interpreter instance.
+   * @param {!Object} obj Data object.
+   * @param {*} name Name of property.
+   * @param {*} value New property value.
+   * @param {boolean} opt_fixed Unchangeable property if true.
+   * @param {boolean} opt_nonenum Non-enumerable property if true.
+   * @override
+   */
+  setProperty(
+    obj,
+    name,
+    value,
+    opt_fixed,
+    opt_nonenum
+  ) {
+    name = name.toString();
+    var nativeParent;
+    if (obj.isCustomMarshal) {
+      if (!this.shouldBlockCustomMarshalling_(name, obj)) {
+        obj.data[name] = codegen.marshalInterpreterToNative(this, value);
+      }
+    } else {
+      var hasProperty = false;
+      if (!obj.isPrimitive) {
+        hasProperty = super.hasProperty(obj, name);
+      }
+      if (!hasProperty &&
+          obj === this.globalScope &&
+          !!(nativeParent = this.customMarshaler.customMarshalGlobalProperties[name]) &&
+          !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+        nativeParent[name] = codegen.marshalInterpreterToNative(this, value);
+      } else {
+        return super.setProperty(obj, name, value, opt_fixed, opt_nonenum);
+      }
+    }
+  }
+
+  /**
+   * provides access to the original setProperty method to avoid
+   * custom marshaling in certain very specific cases.
+   */
+  setPropertyWithoutCustomMarshaling(...args) {
+    return super.setProperty(...args);
+  }
+
+
   // The following overridden methods need to be patched in order to support custom marshaling.
 
   // These changes revert a 10% speedup commit that bypassed hasProperty,
