@@ -241,6 +241,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     end
   end
 
+  test 'creating with workshop_type will set on_map and funded' do
+    sign_in @organizer
+
+    assert_creates(Pd::Workshop) do
+      post :create, params: {pd_workshop: workshop_params}
+      assert_response :success
+    end
+
+    id = JSON.parse(@response.body)['id']
+    workshop = Pd::Workshop.find id
+    assert_equal true, workshop.on_map
+    assert_equal true, workshop.funded
+  end
+
   test_user_gets_response_for(
     :create,
     name: 'facilitators cannot create workshops',
@@ -326,6 +340,21 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params[:location_address] = @workshop.location_address
     Pd::Workshop.expects(:process_location).never
     put :update, params: {id: @workshop.id, pd_workshop: params}
+  end
+
+  test 'updating with new workshop_type will re-set on_map and funded' do
+    sign_in @organizer
+    assert_equal Pd::Workshop::TYPE_PUBLIC, @workshop.workshop_type
+    assert_equal true, @workshop.on_map
+
+    params = workshop_params
+    params[:workshop_type] = Pd::Workshop::TYPE_PRIVATE
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+
+    @workshop.reload
+    assert_equal Pd::Workshop::TYPE_PRIVATE, @workshop.workshop_type
+    assert_equal false, @workshop.on_map
   end
 
   test 'updating with notify true sends detail change notification emails' do
@@ -555,8 +584,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_end = session_start + 8.hours
     {
       location_address: 'Seattle, WA',
-      on_map: true,
-      funded: true,
+      workshop_type: Pd::Workshop::TYPE_PUBLIC,
       course: Pd::Workshop::COURSE_CSF,
       capacity: 10,
       sessions_attributes: [
