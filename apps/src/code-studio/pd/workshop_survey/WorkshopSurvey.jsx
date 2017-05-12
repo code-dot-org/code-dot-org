@@ -6,7 +6,7 @@ import PersonalInvolvement from './PersonalInvolvement';
 import WorkshopResults from './WorkshopResults';
 import Demographics from './Demographics';
 
-export default class LocalSummerWorkshopSurvey extends FormController {
+export default class WorkshopSurvey extends FormController {
   /**
    * @override
    */
@@ -48,7 +48,7 @@ export default class LocalSummerWorkshopSurvey extends FormController {
   }
 }
 
-LocalSummerWorkshopSurvey.propTypes = {
+WorkshopSurvey.propTypes = {
   ...FormController.propTypes,
   pdEnrollmentCode: React.PropTypes.string.isRequired,
   facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509020232) do
+ActiveRecord::Schema.define(version: 20170509100000) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -432,15 +432,6 @@ ActiveRecord::Schema.define(version: 20170509020232) do
     t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
   end
 
-  create_table "pd_local_summer_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "pd_enrollment_id",               null: false
-    t.text     "form_data",        limit: 65535
-    t.integer  "day",                            null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.index ["pd_enrollment_id", "day"], name: "index_pd_ls_workshop_survey_on_pd_enrollment_id_and_day", unique: true, using: :btree
-  end
-
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "regional_partner_id",               null: false
     t.date     "start_date",                        null: false
@@ -512,6 +503,14 @@ ActiveRecord::Schema.define(version: 20170509020232) do
     t.string   "tracking_url"
     t.index ["pd_enrollment_id"], name: "index_pd_workshop_material_orders_on_pd_enrollment_id", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_workshop_material_orders_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "pd_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", using: :btree
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

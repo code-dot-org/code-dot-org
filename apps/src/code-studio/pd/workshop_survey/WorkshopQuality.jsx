@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
-import VariableFormGroup from '../workshop_survey/VariableFormGroup';
+import VariableFormGroup from './VariableFormGroup';
 import FormComponent from '../form_components/FormComponent';
 
 export default class WorkshopQuality extends FormComponent {

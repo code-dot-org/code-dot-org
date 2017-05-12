@@ -8,7 +8,7 @@
 #thanks
   %h1 Thank you for your survey submission!
 
-  - if course == 'CS Fundamentals'
+  - if course == Pd::Workshop::COURSE_CSF
     - order_url = CDO.studio_url("/pd/workshop_materials/#{@pd_enrollment.code}", CDO.default_scheme)
 
     %h2 Request your free course kit (US attendees only)
