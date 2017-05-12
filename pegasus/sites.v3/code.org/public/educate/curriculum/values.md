@@ -1,6 +1,7 @@
 ---
 title: Curriculum Values
 nav: educate_nav
+theme: responsive
 ---
 
 # Curriculum Values

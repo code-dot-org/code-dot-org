@@ -174,7 +174,15 @@
     "debugger_disabled": "true",
     "instructions_important": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "App Project: Screen Design",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
