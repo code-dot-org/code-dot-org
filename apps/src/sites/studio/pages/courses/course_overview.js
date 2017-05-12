@@ -17,5 +17,5 @@ function showCourseOverview() {
       viewAs="Teacher"
       scripts={courseSummary.scripts}
     />,
-  document.getElementById('course_index'));
+  document.getElementById('course_overview'));
 }
