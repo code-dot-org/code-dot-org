@@ -52,16 +52,21 @@ import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
+import {parseElement} from '../xml';
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+const CANVAS_HEIGHT = 400;
+const CANVAS_WIDTH = 400;
 
-var MAX_STICKER_SIZE = 100;
+const DEFAULT_X = CANVAS_WIDTH / 2;
+const DEFAULT_Y = CANVAS_HEIGHT / 2;
+const DEFAULT_DIRECTION = 90;
 
-var JOINT_RADIUS = 4;
+const MAX_STICKER_SIZE = 100;
 
-var SMOOTH_ANIMATE_STEP_SIZE = 5;
-var FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
+const JOINT_RADIUS = 4;
+
+const SMOOTH_ANIMATE_STEP_SIZE = 5;
+const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 /**
 * Minimum joint segment length
@@ -199,6 +204,7 @@ Artist.prototype.init = function (config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
+  config.prepareForRemix = Artist.prototype.prepareForRemix.bind(Artist, config);
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;
@@ -232,6 +238,65 @@ Artist.prototype.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+Artist.prototype.prepareForRemix = function (appOptions) {
+  if (appOptions.level.initialX === undefined &&
+      appOptions.level.initialY === undefined &&
+      appOptions.level.startDirection === undefined) {
+    return;
+  }
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+  let whenRun = blocksDom.querySelector('BLOCK[type="when_run"]');
+  if (!whenRun) {
+    whenRun = blocksDocument.createElement('BLOCK');
+    whenRun.setAttribute('type', 'when_run');
+    blocksDom.getRootNode().appendChild(whenRun);
+  }
+  let next = whenRun.querySelector('next');
+  if (next) {
+    whenRun.removeChild(next);
+  }
+
+  if (appOptions.level.startDirection !== undefined) {
+    const direction = appOptions.level.startDirection - DEFAULT_DIRECTION;
+    const turn = parseElement(`<block type="draw_turn" inline="true">
+        <title name="DIR">turnRight</title>
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">${direction}</title>
+          </block>
+        </value>
+      </block>`).firstChild;
+    if (next) {
+      turn.appendChild(next);
+    }
+    next = blocksDocument.createElement('next');
+    next.appendChild(turn);
+  }
+
+  if (appOptions.level.initialX !== undefined || appOptions.level.initialY !== undefined) {
+    const x = appOptions.level.initialX === undefined ?
+      DEFAULT_X :
+      appOptions.level.initialX;
+    const y = appOptions.level.initialY === undefined ?
+      DEFAULT_Y :
+      appOptions.level.initialY;
+    const jumpTo = parseElement(`<block type="jump_to_xy">
+        <title name="XPOS">${x}</title>
+        <title name="YPOS">${y}</title>
+      </block>`).firstChild;
+    if (next) {
+      jumpTo.appendChild(next);
+    }
+    next = blocksDocument.createElement('next');
+    next.appendChild(jumpTo);
+  }
+  whenRun.appendChild(next);
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  return Promise.resolve();
 };
 
 Artist.prototype.loadAudio_ = function () {
@@ -562,10 +627,10 @@ Artist.prototype.drawDecorationAnimation = function (when) {
  */
 Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
-  this.x = CANVAS_HEIGHT / 2;
-  this.y = CANVAS_WIDTH / 2;
+  this.x = DEFAULT_X;
+  this.y = DEFAULT_Y;
   this.heading = this.level.startDirection !== undefined ?
-      this.level.startDirection : 90;
+      this.level.startDirection : DEFAULT_DIRECTION;
   this.penDownValue = true;
   this.visible = true;
 
