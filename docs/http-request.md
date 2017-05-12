@@ -23,7 +23,7 @@ Rack server definition files:
 - dashboard: [`dashboard/config.ru`](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/config.ru)
 - pegasus: [`pegasus/config.ru`](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/config.ru)
 
-### Pegasus application (`/pegasus`)
+### Pegasus web-application (`/pegasus` - [code.org](https://code.org))
 
 Web-application based on [`sinatra`](http://www.sinatrarb.com/) routing framework, with custom template and view-rendering layer.
 - [`pegasus/router.rb`](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/router.rb): - `class Documents < Sinatra::Base`
@@ -34,8 +34,12 @@ Web-application based on [`sinatra`](http://www.sinatrarb.com/) routing framewor
 - [`after do` (Sinatra `after` hook)](https://github.com/code-dot-org/code-dot-org/blob/73afd7d4ad6a485bf22cac2656670d3816fd077c/pegasus/router.rb#L212-L238) - load and render [`layouts/`](https://github.com/code-dot-org/code-dot-org/tree/staging/pegasus/sites.v3/code.org/layouts) and [`themes/`](https://github.com/code-dot-org/code-dot-org/tree/staging/pegasus/sites.v3/code.org/themes) templates from file:
   - layouts and themes 'wrap' themselves around the existing rendered body through the line: [`body render_template(template, @locals.merge({body: body.join('')}))`](https://github.com/code-dot-org/code-dot-org/blob/73afd7d4ad6a485bf22cac2656670d3816fd077c/pegasus/router.rb#L229), which calls [`#body`](https://github.com/sinatra/sinatra/blob/v2.0.0/lib/sinatra/base.rb#L252-L254), which first reads (passed as a local variable to `#render_template`) and then updates the template-rendered result.
 
-### Dashboard application (`/dashboard`)
+### Dashboard application (`/dashboard` - [studio.code.org](https://studio.code.org))
 
 Standard Rails application.
 - [`dashboard/config/routes.rb`](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/config/routes.rb) (run `rails routes` for fullly-rendered route map)
 - Uses standard Rails routing and layouts/rendering (see [Ruby on Rails Guides](http://guides.rubyonrails.org/v5.0/) for full documentation, e.g., ["Routing"](http://guides.rubyonrails.org/v5.0/routing.html) and ["Layouts and Rendering"](http://guides.rubyonrails.org/v5.0/layouts_and_rendering.html))
+
+### Shared middleware (`/shared`)
+
+We have several [Rack](http://rack.github.io/) middleware<sup>[spec](http://www.rubydoc.info/github/rack/rack/master/file/SPEC)</sup> modules that are inserted into both Pegasus (via [`config.ru`](https://github.com/code-dot-org/code-dot-org/blob/980e4629bc8829bd1cdc5c9f04a5b1a3010292db/pegasus/config.ru#L39-L52)) and Dashboard (via [`application.rb`](https://github.com/code-dot-org/code-dot-org/blob/2342c08cd969e05af884a42baaf38e0e5565c18e/dashboard/config/application.rb#L46-L63)), and provide 'shared' functionality to both web-applications. Some of these middleware apps are their own self-contained Sinatra apps (e.g., [`FilesApi`](https://github.com/code-dot-org/code-dot-org/blob/ceaeea0101eaf3ed5d68f63e8bcdbecd7bd46106/shared/middleware/files_api.rb#L6)) that handle their defined routes<sup>[example](https://github.com/code-dot-org/code-dot-org/blob/ceaeea0101eaf3ed5d68f63e8bcdbecd7bd46106/shared/middleware/files_api.rb#L109)</sup> when inserted into the middleware 'stack' for each web-app.
