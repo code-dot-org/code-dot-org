@@ -28,9 +28,9 @@ describe('CircuitPlaygroundBoard', () => {
       sinon.spy(playground, 'reset');
       sinon.spy(playground, 'pinMode');
       sinon.spy(playground, 'digitalWrite');
-      sinon.spy(playground, 'digitalRead');
+      sinon.stub(playground, 'digitalRead').callsArgWith(1, 0);
       sinon.spy(playground, 'analogWrite');
-      sinon.spy(playground, 'analogRead');
+      sinon.stub(playground, 'analogRead').callsArgWith(1, 0);
 
       // Pretend to be totally ready
       playground.emit('connect');
