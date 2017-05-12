@@ -88,7 +88,7 @@ class HomeController < ApplicationController
   def recent_courses
     current_user.in_progress_and_completed_scripts.map do |script|
       script_id = script[:script_id]
-      script_name = Script.find_by_id(script_id)[:name]
+      script_name = Script.get_from_cache(script_id)[:name]
       {
         id: script_id,
         script_name: script_name,
