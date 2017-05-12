@@ -122,7 +122,7 @@ module AWS
 
     # Returns a CloudFront DistributionConfig in CloudFormation syntax.
     # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
-    def self.config_cloudformation(app, origin, aliases, ssl_cert=nil)
+    def self.distribution_config(app, origin, aliases, ssl_cert=nil)
       behaviors, cloudfront, config = get_app_config(app)
       {
         Aliases: aliases,
