@@ -19,8 +19,7 @@ const styles = {
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
     backgroundColor: color.white,
-    color: color.gray,
-    minHeight: 18
+    color: color.gray
   },
   lastEdit: {
     paddingLeft: 15,
