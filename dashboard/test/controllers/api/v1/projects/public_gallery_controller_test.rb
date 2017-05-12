@@ -89,6 +89,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   test 'project details are correct listing published applab projects' do
     get :index, params: {project_type: 'applab', limit: 1}
     assert_response :success
+    assert_equal "max-age=60, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
     assert_equal 1, categories_list.length
     project_row = categories_list['applab'].first
@@ -104,6 +105,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   test 'project details are correct listing all published projects' do
     get :index, params: {project_type: 'all', limit: 1}
     assert_response :success
+    assert_equal "max-age=60, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
 
     assert_equal ProjectsList::PUBLISHED_PROJECT_TYPES.sort, categories_list.keys.sort
