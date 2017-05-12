@@ -52,13 +52,15 @@ class FilesTest < FilesApiTestBase
     post_file_data @api, old_filename, file_data, 'test/html'
 
     @api.rename_object old_filename, new_filename
-
     assert successful?
     @api.get_object(new_filename)
     assert successful?
     assert_equal file_data, last_response.body
     @api.get_object(old_filename)
     assert not_found?
+
+    @api.delete_object(new_filename)
+    assert successful?
 
     delete_all_manifest_versions
   end
@@ -344,13 +346,12 @@ class FilesTest < FilesApiTestBase
     assert not_found?
   end
 
-  def test_rename_operations
-    filename = @api.randomize_filename('Mixed Case With Space.html')
+  def test_rename_mixed_case
+    filename = @api.randomize_filename('Mixed Case With Spaces.html')
     escaped_filename = URI.escape(filename)
-    filename2 = @api.randomize_filename('Another Name With Spaces.html')
+    filename2 = @api.randomize_filename('Another Mixed Case Spaces Name.html')
     escaped_filename2 = URI.escape(filename2)
-    delete_all_file_versions(filename)
-    delete_all_file_versions(filename2)
+    delete_all_file_versions(filename, filename2)
     delete_all_manifest_versions
 
     post_file_data(@api, filename, 'stub-contents', 'test/html')
