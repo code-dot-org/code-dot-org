@@ -146,7 +146,7 @@ class Documents < Sinatra::Base
   # Page mode selection
   get '/private/pm/*' do |page_mode|
     dont_cache
-    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/', expires: Time.now + (7 * 24 * 3600)})
     redirect "/learn?r=#{rand(100000)}"
   end
 
