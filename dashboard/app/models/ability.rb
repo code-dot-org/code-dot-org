@@ -11,10 +11,6 @@ class Ability
     cannot :read, [
       Script, # see override below
       ScriptLevel, # see override below
-      PrizeProvider,
-      Prize,
-      TeacherPrize,
-      TeacherBonusPrize,
       :reports,
       User,
       UserPermission,
