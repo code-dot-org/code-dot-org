@@ -59,6 +59,8 @@ class Studio < Grid
     goal_override
     tap_svg_to_run_and_reset
     wall_map
+    grid_aligned_movement
+    item_grid_aligned_movement
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -94,7 +96,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    %w(studio infinity hoc2015)
+    %w(studio infinity hoc2015 hoc2015x)
   end
 
   def self.default_success_condition
