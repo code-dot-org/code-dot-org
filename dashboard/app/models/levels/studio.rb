@@ -60,6 +60,8 @@ class Studio < Grid
     tap_svg_to_run_and_reset
     wall_map
     grid_aligned_movement
+    grid_aligned_extra_pause_steps
+    slow_execution_factor
     item_grid_aligned_movement
   )
 
