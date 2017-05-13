@@ -12,6 +12,9 @@ function showTeacherHomepage() {
   const sectionsData = document.querySelector('script[data-sections]');
   const configSections = JSON.parse(sectionsData.dataset.sections);
 
+  const script = document.querySelector('script[data-urlprefix]');
+  const urlPrefix = script.dataset.urlprefix;
+
   ReactDOM.render (
     <TeacherHomepage
       announcements={[
@@ -24,6 +27,7 @@ function showTeacherHomepage() {
       ]}
       courses={configCourses}
       sections={configSections}
+      urlPrefix={urlPrefix}
     />,
     document.getElementById('teacher-homepage-container')
   );

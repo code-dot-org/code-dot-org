@@ -10,16 +10,20 @@ const TeacherHomepage = React.createClass({
     courses: shapes.courses,
     sections: React.PropTypes.array,
     announcements: React.PropTypes.array.isRequired,
+    urlPrefix: React.PropTypes.string.isRequired
   },
 
   render() {
-    const { courses, sections, announcements } = this.props;
+    const { courses, sections, announcements, urlPrefix } = this.props;
 
     return (
       <div>
         <AnnouncementsCollapsible announcements={announcements}/>
         <RecentCoursesCollapsible courses={courses}/>
-        <ManageSectionsCollapsible sections={sections}/>
+        <ManageSectionsCollapsible
+          sections={sections}
+          urlPrefix={urlPrefix}
+        />
         <TeacherResources/>
       </div>
     );

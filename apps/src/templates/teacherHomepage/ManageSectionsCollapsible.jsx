@@ -7,16 +7,18 @@ import i18n from "@cdo/locale";
 const ManageSectionsCollapsible = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
+    urlPrefix: React.PropTypes.string.isRequired
   },
 
   render() {
-    const { sections } = this.props;
+    const { sections, urlPrefix } = this.props;
+    const url = `${urlPrefix}/teacher-dashboard#/sections`;
 
     return (
       <CollapsibleSection
         header={i18n.sectionsTitle()}
         linkText={i18n.editSections()}
-        link="https://code.org/teacher-dashboard#/sections"
+        link={url}
       >
       {sections.length > 0 ? (
         <SectionsTable sections={sections}/>
