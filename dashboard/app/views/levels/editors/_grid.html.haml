@@ -98,9 +98,9 @@
   - if @level.is_a? Karel
     #gridEditor
     :javascript
-      var maze = eval(#{@level.properties['maze'].try(:to_json)});
-      var initialDirt = eval(#{@level.properties['initial_dirt'].try(:to_json)});
-      var serializedMaze = eval(#{@level.properties['serialized_maze'].try(:to_json)});
+      var maze = JSON.parse(#{@level.properties['maze'].try(:to_json) || 'null'});
+      var initialDirt = JSON.parse(#{@level.properties['initial_dirt'].try(:to_json) || 'null'});
+      var serializedMaze = JSON.parse(#{@level.properties['serialized_maze'].try(:to_json) || 'null'});
 
       var renderGridEditor = function () {
         var container = document.getElementById('gridEditor');
@@ -126,7 +126,7 @@
     #gridEditor
     :javascript
       var container = document.getElementById('gridEditor');
-      var maze = eval(#{@level.properties['maze'].try(:to_json)});
+      var maze = JSON.parse(#{@level.properties['maze'].try(:to_json) || 'null'});
       var serializedMaze = isNaN(maze[0][0]) ? maze : maze.map(function (row) {
         return row.map(function (cell) {
           return { tileType: cell };
@@ -157,7 +157,7 @@
           %li.path 1 = waypoint flag
 
     :javascript
-      var data = eval(#{@level.properties['maze'].try(:to_json)})
+      var data = JSON.parse(#{@level.properties['maze'].try(:to_json) || 'null'})
       function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
         var dataValues = ['border','path','start','end','obstacle'];
         if (parseInt(value) < 5 && parseInt(value) >= 0) {
