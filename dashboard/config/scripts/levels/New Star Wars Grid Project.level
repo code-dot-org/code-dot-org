@@ -39,7 +39,9 @@
     "wall_map_collisions": "true",
     "block_moving_into_walls": "true",
     "grid_aligned_movement": "true",
+    "grid_aligned_extra_pause_steps": "1",
     "item_grid_aligned_movement": "true",
+    "slow_execution_factor": "10",
     "contained_level_names": null
   },
   "published": true,
