@@ -1,3 +1,4 @@
+require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
@@ -725,7 +726,7 @@ class FilesApi < Sinatra::Base
   #
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     file = get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
-    cache_for 1 * 60 * 60 # 1 hour
+    cache_for 1.hour
     file
   end
 
