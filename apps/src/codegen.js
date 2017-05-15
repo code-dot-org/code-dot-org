@@ -17,6 +17,7 @@ exports.ForStatementMode = {
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
+ * Note that this does not currently support custom marshaling.
  *
  * @param code {string} - the code to evaluation
  * @param globals {Object} - An object of globals to be added to the scope of code being executed
@@ -51,7 +52,8 @@ export function evalWith(code, globals, legacy) {
 
 /**
  * Generate code for each of the given events, and evaluate it using the
- * provided APIs as context.
+ * provided APIs as context. Note that this does not currently support custom marshaling.
+ *
  * @param {Object} apis - Context to be set as globals in the interpreted runtime.
  * @param {Object} events - Mapping of hook names to the corresponding handler code.
  *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
