@@ -1,7 +1,7 @@
 import { createToolbox } from '../../block_utils';
 
-function craftBlock(type) {
-  return block(`craft_${type}`);
+function craftBlock(type, children = "") {
+  return block(`craft_${type}`, children);
 }
 
 function category(name, children, properties = "") {
@@ -37,6 +37,14 @@ module.exports = {
         craftBlock('getitemcount') +
         craftBlock('transfer') +
         craftBlock('tptoplayer'))+
+      category('Item',
+          craftBlock('block') +
+          craftBlock('miscellaneous') +
+          craftBlock('tool') +
+          craftBlock('decoration') +
+          craftBlock('getnameof') +
+          craftBlock('getdataof') +
+          craftBlock('createblock', `<value name='BLOCKTYPE'>${block('text')}</value><value name='BLOCKDATA'>${block('text')}</value>`)) +
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
