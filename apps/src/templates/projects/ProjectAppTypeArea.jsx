@@ -30,6 +30,8 @@ const styles = {
   }
 };
 
+const NUM_PROJECTS_TO_ADD = 12;
+
 const ProjectAppTypeArea = React.createClass({
   propTypes: {
     labName: PropTypes.string.isRequired,
@@ -38,6 +40,8 @@ const ProjectAppTypeArea = React.createClass({
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     navigateFunction: PropTypes.func.isRequired,
+
+    // Only show one project type.
     isDetailView: PropTypes.bool.isRequired,
   },
 
@@ -72,7 +76,7 @@ const ProjectAppTypeArea = React.createClass({
   },
 
   loadMore() {
-    this.setState({numProjects: this.state.numProjects + 12});
+    this.setState({numProjects: this.state.numProjects + NUM_PROJECTS_TO_ADD});
   },
 
   renderViewMoreButtons() {
@@ -80,7 +84,7 @@ const ProjectAppTypeArea = React.createClass({
       <div style={{float: "right"}}>
         {
           this.state.maxNumProjects >= this.state.numProjects &&
-          <a onClick={this.loadMore} ><button>View more</button></a>
+          <button onClick={this.loadMore} style={{cursor: 'pointer'}} >View more</button>
         }
         <a href="#gallery-switcher"><button>Back to top</button></a>
       </div>
