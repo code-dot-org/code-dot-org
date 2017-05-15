@@ -393,8 +393,7 @@ class Script < ActiveRecord::Base
     name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name.start_with?('csd')
   end
 
-  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
-  def is_k1?  # rubocop:disable PredicateName
+  private def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
@@ -403,7 +402,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    is_k1? || name == Script::COURSEC_DRAFT_NAME
+    k1? || name == Script::COURSEC_DRAFT_NAME
   end
 
   def hide_solutions?

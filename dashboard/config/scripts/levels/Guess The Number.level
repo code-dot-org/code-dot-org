@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "false",
-    "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005}]]",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -43,6 +43,8 @@
     ],
     "instructions": "Build whatever you want. This is an example of a number-guessing game!",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -52,23 +54,70 @@
   }
 }]]></config>
   <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setSpriteParams" inline="true">
+              <title name="VALUE">"hidden"</title>
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">2</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_setSpriteSize">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">Studio.SpriteSize.SMALL</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </initialization_blocks>
     <start_blocks>
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_setBackground">
-              <title name="VALUE">"underwater"</title>
+            <block type="studio_addGoal">
+              <title name="VALUE">17</title>
               <next>
-                <block type="studio_setSpriteParams" inline="true">
-                  <title name="VALUE">"penguin"</title>
-                  <value name="SPRITE">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
+                <block type="studio_setBackground">
+                  <title name="VALUE">"night"</title>
                   <next>
-                    <block type="studio_setSpritePosition">
-                      <title name="VALUE">17</title>
+                    <block type="studio_setSpriteParams" inline="true">
+                      <title name="VALUE">"witch"</title>
+                      <value name="SPRITE">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="studio_setSpritesWander">
+                          <title name="VALUE">"witch"</title>
+                          <next>
+                            <block type="studio_setSpriteParams" inline="true">
+                              <title name="VALUE">random</title>
+                              <value name="SPRITE">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="studio_setSpritePositionParams" inline="true">
+                                  <title name="VALUE">19</title>
+                                  <value name="SPRITE">
+                                    <block type="math_number">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -76,35 +125,83 @@
             </block>
           </next>
         </block>
-        <block type="studio_setSpriteParams" inline="true">
-          <title name="VALUE">"octopus"</title>
-          <value name="SPRITE">
-            <block type="math_number">
-              <title name="NUM">2</title>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_throw">
+              <title name="VALUE">"blue_fireball"</title>
+              <title name="DIR">4</title>
             </block>
-          </value>
+          </statement>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
           <next>
-            <block type="studio_setSpritePosition">
-              <title name="VALUE">19</title>
-              <next>
-                <block type="studio_saySpriteParamsTime" inline="true">
-                  <value name="SPRITE">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <value name="TEXT">
-                    <block type="text">
-                      <title name="TEXT">Collect more sandwiches than the octopus!</title>
-                    </block>
-                  </value>
-                  <value name="TIME">
-                    <block type="math_number">
-                      <title name="NUM">3</title>
-                    </block>
-                  </value>
+            <block type="studio_moveDistanceParamsSprite" inline="true">
+              <title name="DIR">1</title>
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
                 </block>
-              </next>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite" inline="true">
+              <title name="DIR">2</title>
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite" inline="true">
+              <title name="DIR">8</title>
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite" inline="true">
+              <title name="DIR">4</title>
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
             </block>
           </next>
         </block>
