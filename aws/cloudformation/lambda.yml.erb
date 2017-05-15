@@ -1,6 +1,8 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'Lambda layer for functions used in CloudFormation Custom Resources.'
+Description: >-
+  Lambda layer for functions used in CloudFormation Custom Resources.
+  Note: Admin permissions are required to manage this stack.
 Parameters:
   SlackEndpoint:
     Type: String
@@ -14,7 +16,7 @@ Resources:
       Code:
         ZipFile: <%=js 'ami-manager.js' %>
       Handler: index.handler
-      Runtime: nodejs
+      Runtime: nodejs6.10
       Timeout: 300
       Role: !GetAtt AMIManagerRole.Arn
   AMIManagerRole:
@@ -55,7 +57,7 @@ Resources:
       Code:
         ZipFile: <%=js 'vpcClassicLink.js' %>
       Handler: index.handler
-      Runtime: nodejs
+      Runtime: nodejs6.10
       Timeout: 300
       Role: !GetAtt VpcClassicLinkRole.Arn
   VpcClassicLinkRole:
@@ -89,7 +91,7 @@ Resources:
       Code:
         ZipFile: <%=js 'count_asg.js' %>
       Handler: index.handler
-      Runtime: nodejs
+      Runtime: nodejs6.10
       Timeout: 30
       Role: !GetAtt CountASGRole.Arn
   CountASGRole:
@@ -116,12 +118,12 @@ Resources:
     Properties:
       Description: 'Publish a CloudWatch Event to a Slack channel.'
       FunctionName: SlackEvent
-      Code: <%=js_zip%>
+      Code: <%=js_zip ['slackCloudWatchEvent.js']%>
       Environment:
         Variables:
           SLACK_ENDPOINT: !Ref SlackEndpoint
       Handler: slackCloudWatchEvent.handler
-      Runtime: nodejs4.3
+      Runtime: nodejs6.10
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
   BasicLambdaRole:

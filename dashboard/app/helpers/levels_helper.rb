@@ -39,20 +39,22 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
-  def set_channel
+  # Returns the channel associated with the given Level and User pair, or
+  # creates a new channel for the pair if one doesn't exist.
+  def get_channel_for(level, user = nil)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
 
-    if @user
+    if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
-      channel_token = ChannelToken.find_channel_token(@level, @user)
-      readonly_view_options
+      channel_token = ChannelToken.find_channel_token(level, user)
+      readonly_view_options # TODO: has side effects
     else
       channel_token = ChannelToken.find_or_create_channel_token(
-        @level,
+        level,
         current_user,
         request.ip,
         StorageApps.new(storage_id('user')),
@@ -63,7 +65,7 @@ module LevelsHelper
       )
     end
 
-    view_options(channel: channel_token.channel) if channel_token
+    channel_token.try :channel
   end
 
   def use_firebase
@@ -129,7 +131,7 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    set_channel if @level.channel_backed?
+    view_options(channel: get_channel_for(@level, @user)) if @level.channel_backed?
 
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
