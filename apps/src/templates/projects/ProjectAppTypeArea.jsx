@@ -37,7 +37,15 @@ const ProjectAppTypeArea = React.createClass({
     projectList: PropTypes.arrayOf(projectPropType).isRequired,
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func.isRequired
+    navigateFunction: PropTypes.func.isRequired,
+    isDetailView: PropTypes.bool.isRequired,
+  },
+
+  getInitialState() {
+    return {
+      maxNumProjects: this.props.projectList.length,
+      numProjects: this.props.numProjectsToShow
+    };
   },
 
   viewMore() {
@@ -63,13 +71,30 @@ const ProjectAppTypeArea = React.createClass({
     );
   },
 
+  loadMore() {
+    this.setState({numProjects: this.state.numProjects + 12});
+  },
+
+  renderViewMoreButtons() {
+    return (
+      <div style={{float: "right"}}>
+        {
+          this.state.maxNumProjects >= this.state.numProjects &&
+          <a onClick={this.loadMore} ><button>View more</button></a>
+        }
+        <a href="#gallery-switcher"><button>Back to top</button></a>
+      </div>
+    );
+  },
+
   render() {
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
         <span style={styles.viewMore} onClick={this.viewMore}> {this.props.labViewMoreString} </span>
         <div style={{clear: 'both'}}></div>
-        {this.renderProjectCardList(this.props.projectList, this.props.numProjectsToShow)}
+        {this.renderProjectCardList(this.props.projectList, this.state.numProjects)}
+        {this.props.isDetailView && this.renderViewMoreButtons()}
       </div>
     );
   }
