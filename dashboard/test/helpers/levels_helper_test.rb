@@ -173,16 +173,13 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    set_channel
-    channel = @view_options[:channel]
+    channel = get_channel_for(@level)
     # Request it again, should get the same channel
-    set_channel
-    assert_equal channel, @view_options[:channel]
+    assert_equal channel, get_channel_for(@level)
 
     # Request it for a different level, should get a different channel
-    @level = create :level, :blockly
-    set_channel
-    assert_not_equal channel, @view_options[:channel]
+    level = create(:level, :blockly)
+    assert_not_equal channel, get_channel_for(level)
   end
 
   test 'applab levels should have channels' do
@@ -190,9 +187,6 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in user
 
     @level = create :applab
-
-    set_channel
-
     assert_not_nil app_options['channel']
   end
 
@@ -204,8 +198,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel does not exist
-    set_channel
-    assert_nil app_options['channel']
+    assert_nil get_channel_for(@level, @user)
   end
 
   test 'applab levels should load channel when viewing student solution of a student with a channel' do
@@ -217,8 +210,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # channel exists
     ChannelToken.create!(level: @level, user: @user, channel: 'whatever')
-    set_channel
-    assert_equal 'whatever', app_options['channel']
+    assert_equal 'whatever', get_channel_for(@level, @user)
   end
 
   def stub_country(code)

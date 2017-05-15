@@ -14,14 +14,12 @@ We are still accepting applicants in the following regions:
 
 * Arizona
 * San Joaquin Valley, CA
-* Northeast Florida
 * Miami, FL
 * Illinois
 * Indiana
 * Maine
 * Maryland
 * New Jersey
-* Nevada
 * Pennsylvania
 * Austin, TX
 * Utah
