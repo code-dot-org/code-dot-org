@@ -15,7 +15,7 @@ const RecentCoursesCollapsible = React.createClass({
         assignedSections: React.PropTypes.array.isRequired
       })
     ),
-    showAllCoursesLink: React.PropTypes.array.isRequired
+    showAllCoursesLink: React.PropTypes.bool.isRequired
   },
 
   render() {
