@@ -56,16 +56,6 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
   end
 
-  test "is_k1? when current script returns true for is_k1?" do
-    @script = Script.find_by_name('course1')
-    assert is_k1?
-  end
-
-  test "!is_k1? by default" do
-    @level = Maze.create(@maze_data)
-    refute is_k1?
-  end
-
   test "windows phone 8.1 supported" do
     def request
       OpenStruct.new(

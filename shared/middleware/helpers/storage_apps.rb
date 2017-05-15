@@ -11,15 +11,16 @@ class StorageApps
     @table = PEGASUS_DB[:storage_apps]
   end
 
-  def create(value, ip_address)
+  def create(value, ip:, type: nil)
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
       value: value.to_json,
       created_at: timestamp,
       updated_at: timestamp,
-      updated_ip: ip_address,
-      abuse_score: 0
+      updated_ip: ip,
+      abuse_score: 0,
+      project_type: type,
     }
     row[:id] = @table.insert(row)
 
