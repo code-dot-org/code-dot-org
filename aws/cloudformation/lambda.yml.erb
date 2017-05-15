@@ -1,6 +1,8 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'Lambda layer for functions used in CloudFormation Custom Resources.'
+Description: >-
+  Lambda layer for functions used in CloudFormation Custom Resources.
+  Note: Admin permissions are required to manage this stack.
 Parameters:
   SlackEndpoint:
     Type: String
@@ -116,7 +118,7 @@ Resources:
     Properties:
       Description: 'Publish a CloudWatch Event to a Slack channel.'
       FunctionName: SlackEvent
-      Code: <%=js_zip%>
+      Code: <%=js_zip ['slackCloudWatchEvent.js']%>
       Environment:
         Variables:
           SLACK_ENDPOINT: !Ref SlackEndpoint
