@@ -18,7 +18,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
-  get '/teacher', to: 'home#teacher_homepage'
+  get '/courses', to: 'home#courses'
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -209,7 +209,6 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
-  get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'

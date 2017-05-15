@@ -1,5 +1,12 @@
 export const N_COLOR_LEDS = 10;
 export const TOUCH_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
+export const J5_CONSTANTS = {
+  INPUT: 0,
+  OUTPUT: 1,
+  ANALOG: 2,
+  PWM: 3,
+  SERVO: 4
+};
 
 export const SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
 export const BUTTON_VARS = ['buttonL', 'buttonR'];

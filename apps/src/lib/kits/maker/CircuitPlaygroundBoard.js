@@ -10,9 +10,9 @@ import {
   componentConstructors
 } from './PlaygroundComponents';
 import {
-  BOARD_EVENT_ALIASES,
   SONG_CHARGE,
-  CP_COMMAND
+  CP_COMMAND,
+  J5_CONSTANTS
 } from './PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -21,17 +21,11 @@ process.hrtime = require('browser-process-hrtime');
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
 
-const J5_CONSTANTS = {
-  INPUT: 0,
-  OUTPUT: 1,
-  ANALOG: 2,
-  PWM: 3,
-  SERVO: 4
-};
-
 /**
  * Controller interface for an Adafruit Circuit Playground board using
  * Circuit Playground Firmata firmware.
+ * @extends EventEmitter
+ * @implements MakerBoard
  */
 export default class CircuitPlaygroundBoard extends EventEmitter {
   constructor(portName) {
@@ -191,7 +185,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   digitalRead(pin, callback) {
-    return this.fiveBoard_.digitalRead(pin, callback);
+    this.fiveBoard_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {
@@ -199,14 +193,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   analogRead(pin, callback) {
-    return this.fiveBoard_.analogRead(pin, callback);
-  }
-
-  onBoardEvent(component, event, callback) {
-    if (BOARD_EVENT_ALIASES[event]) {
-      event = BOARD_EVENT_ALIASES[event];
-    }
-    component.on(event, callback);
+    this.fiveBoard_.analogRead(pin, callback);
   }
 
   /**

@@ -628,6 +628,7 @@ var projects = module.exports = {
     unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
+      current.projectType = this.getStandaloneApp();
     }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
