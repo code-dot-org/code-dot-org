@@ -402,6 +402,7 @@ class Level < ActiveRecord::Base
       level_id: id,
       type: self.class.to_s,
       name: name,
+      display_name: display_name
     }
 
     %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
