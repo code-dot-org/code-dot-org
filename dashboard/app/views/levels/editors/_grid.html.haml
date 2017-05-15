@@ -41,7 +41,7 @@
       });
       ReactDOM.render(React.createElement(dashboard.GridEditor, {
         serializedMaze: serializedMaze,
-        skin: 'playlab',
+        skin: '#{@level.skin === 'hoc2015x' ? 'starwarsgrid' : 'playlab'}',
         onUpdate: function (serializedData) {
           $('#level_maze_data').val(JSON.stringify(serializedData));
         }
