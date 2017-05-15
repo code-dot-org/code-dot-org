@@ -486,6 +486,8 @@ en:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: {}
       Poorva copy U3L2 Using Simple Commands_callout: {}
+      Robot Doodle_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Robot_callout:
@@ -572,6 +574,7 @@ en:
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: {}
+      courseA_forVideoTest_artist_callout: {}
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq2_callout:
@@ -586,6 +589,7 @@ en:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
@@ -601,6 +605,7 @@ en:
       courseB_maze_seq7_callout: {}
       courseC_artist_prog1_callout: {}
       courseC_artist_prog2_callout: {}
+      courseC_collector_loops_challenge2_callout: {}
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
@@ -609,11 +614,14 @@ en:
       courseC_collector_prog9_callout: {}
       courseC_collector_progA_callout: {}
       courseC_collector_progB_callout: {}
+      courseC_collector_prog_challenge1_callout: {}
+      courseC_collector_prog_challenge2_callout: {}
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: {}
+      courseC_maze_loops_challenge2_callout: {}
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
@@ -639,10 +647,20 @@ en:
       courseD_artist_ramp12_callout: {}
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_debugging_challenge2_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_nested_loops_challenge1_callout: {}
+      courseD_bee_nested_loops_challenge2_callout: {}
+      courseD_collector_debugging_challenge2_callout: {}
+      courseD_collector_nested_loops_challenge2_callout: {}
       courseD_collector_ramp10_callout: {}
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseD_collector_ramp9_callout: {}
+      courseD_harvester_nested_loops_challenge1-broken_callout: {}
+      courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseD_maze_ramp2_callout:
