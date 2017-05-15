@@ -233,6 +233,7 @@ class User < ActiveRecord::Base
     save(validate: false)
 
     UserPermission.where(user_id: id).each(&:destroy)
+    @permissions = []
   end
 
   def district_contact?
