@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import {expect} from '../../../util/configuredChai';
 import label from '@cdo/apps/applab/designElements/label';
 import library from '@cdo/apps/applab/designElements/library';
@@ -68,6 +69,20 @@ describe('Applab designElements/label component', function () {
     const oldRect = getRect(e);
     setText(e, NEW_TEXT);
     expectWiderAlignLeft(getRect(e), oldRect);
+  });
+
+  it('deleting text resizes to 15x15', () => {
+    setText(e, '');
+    const newRect = getRect(e);
+    expect(newRect.width).is.equal(15, 'width should be 15px');
+    expect(newRect.height).is.equal(15, 'height should be 15px');
+  });
+
+  it('deleting text when locked does not resize', () => {
+    const oldRect = getRect(e);
+    $(e).data('lock-width', 'LOCKED');
+    setText(e, '');
+    expect(getRect(e)).to.deep.equal(oldRect);
   });
 
   it('changing font size changes size to fit', () => {
