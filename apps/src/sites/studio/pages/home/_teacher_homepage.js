@@ -6,14 +6,10 @@ import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage
 $(document).ready(showTeacherHomepage);
 
 function showTeacherHomepage() {
-  const coursesData = document.querySelector('script[data-courses]');
-  const configCourses = JSON.parse(coursesData.dataset.courses);
-
-  const sectionsData = document.querySelector('script[data-sections]');
-  const configSections = JSON.parse(sectionsData.dataset.sections);
-
-  const script = document.querySelector('script[data-urlprefix]');
-  const urlPrefix = script.dataset.urlprefix;
+  const teacherHomepageData = document.querySelector('script[data-teacherHomepage]');
+  const courses = JSON.parse(teacherHomepageData.dataset.courses);
+  const sections = JSON.parse(teacherHomepageData.dataset.sections);
+  const urlPrefix = teacherHomepageData.dataset.urlprefix;
 
   ReactDOM.render (
     <TeacherHomepage
@@ -25,8 +21,8 @@ function showTeacherHomepage() {
           link: "http://teacherblog.code.org/"
         }
       ]}
-      courses={configCourses}
-      sections={configSections}
+      courses={courses}
+      sections={sections}
       urlPrefix={urlPrefix}
     />,
     document.getElementById('teacher-homepage-container')
