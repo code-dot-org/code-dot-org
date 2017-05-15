@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'The Need For Programming Languages'
 level 'v2 U3L01 Student Lesson Introduction'
