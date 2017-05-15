@@ -1,4 +1,5 @@
 import React from 'react';
+import { WallTypeMask, WallTypeShift } from '@cdo/apps/studio/constants';
 
 const options = {
   empty: 0x0,
@@ -29,12 +30,15 @@ export default class StarWarsGridCellEditor extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    this.props.onUpdate({tileType: event.target.value});
+  handleChange() {
+    this.props.onUpdate({
+      tileType: this.refs.zoom.checked << WallTypeShift | this.refs.type.value
+    });
   }
 
   render() {
-    const initialValue = 0xFF0000 & this.props.cell.tileType_;
+    const type = 0xFF0000 & this.props.cell.tileType_;
+    const zoom = WallTypeMask & this.props.cell.tileType_;
 
     return (
       <form className="span4 offset1">
@@ -43,11 +47,17 @@ export default class StarWarsGridCellEditor extends React.Component {
         </header>
 
         <label htmlFor="tileType">Tile Type (required):</label>
-        <select name="tileType" value={initialValue} onChange={this.handleChange}>
+        <select ref="type" name="tileType" value={type} onChange={this.handleChange}>
           {Object.entries(options).map(([name, value]) => (
             <option value={value} key={value}>{name}</option>
           ))}
         </select>
+        {type > 0xFFFF &&
+          <span>
+            <label htmlFor="zoom">Double size:</label>
+            <input ref="zoom" name="zoom" type="checkbox" checked={zoom} onChange={this.handleChange}/>
+          </span>
+        }
       </form>
     );
   }
