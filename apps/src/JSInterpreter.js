@@ -154,7 +154,7 @@ JSInterpreter.prototype.parse = function (options) {
       this.interpreter = interpreter;
       // Store globalScope on JSInterpreter
       this.globalScope = scope;
-      codegen.customMarshalObjectList_DEPRECATED = this.customMarshalObjectList;
+      interpreter.customMarshalObjectList = this.customMarshalObjectList;
       // Override Interpreter's get/has/set Property functions with JSInterpreter
       interpreter.getProperty = this.getProperty.bind(this, interpreter);
       interpreter.hasProperty = this.hasProperty.bind(this, interpreter);
