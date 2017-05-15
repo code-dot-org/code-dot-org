@@ -1,0 +1,87 @@
+#!/usr/bin/env ruby
+
+# This script sets the `project_type` and `standalone` columns of the `storage_apps` table, if not
+# already set, based on information from the `value` column.
+
+require File.expand_path('../../../../pegasus/src/env', __FILE__)
+require src_dir 'database'
+
+PROJECT_TYPES = %w(
+  algebra_game
+  applab
+  artist
+  calc
+  eval
+  gamelab
+  makerlab
+  playlab
+  starwars
+  weblab
+).freeze
+
+# @param [String] value_parsed the parsed JSON blob in `pegasus.storage_apps.value`.
+# @return [String | nil] the project type of the storage_app.
+def project_type_from_value(value_parsed)
+  level = value_parsed['level']
+  return nil unless level
+
+  PROJECT_TYPES.each do |type|
+    return type if level.include? type
+  end
+
+  level_id = value_parsed['levelId']
+  PROJECT_TYPES.each do |type|
+    return type if level_id.include? type
+  end
+
+  level_url = value_parsed['levelUrl']
+  PROJECT_TYPES.each do |type|
+    return type if level_url.include? type
+  end
+
+  nil
+end
+
+def main
+  if ARGV.length != 3
+    puts 'Usage: ./bin/oneoff/backfill_data/storage_apps_project_type_and_standalone '\
+      'start_index end_index batch_size'
+    exit 1
+  end
+
+  start_index = ARGV[0].to_i
+  end_index = ARGV[1].to_i
+  batch_size = ARGV[2].to_i
+
+  until start_index > end_index
+    puts "PROCESSING: #{start_index} to #{start_index + batch_size}..."
+
+    # Build the set of updates for this batch.
+    updates = []
+    DB[:storage_apps].where(id: start_index...(start_index + batch_size)).each do |storage_app|
+      value_parsed = JSON.parse storage_app[:value]
+
+      project_type = project_type_from_value(value_parsed)
+      hidden = value_parsed['hidden']
+
+      project_type = storage_app[:project_type] ? storage_app[:project_type] : project_type
+      standalone = storage_app[:standalone] ? storage_app[:standalone] : !hidden
+
+      updates << [storage_app[:id], project_type, standalone]
+    end
+
+    # Make the DB updates in a transaction (for performance reasons).
+    DB.transaction do
+      updates.each do |storage_app_id, project_type, standalone|
+        DB[:storage_apps].where(id: storage_app_id).update(
+          project_type: project_type,
+          standalone: standalone
+        )
+      end
+    end
+
+    start_index += batch_size
+  end
+end
+
+main
