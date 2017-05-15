@@ -24,6 +24,11 @@ export default class StarWarsGridCellEditor extends React.Component {
     onUpdate: React.PropTypes.func.isRequired,
   }
 
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   handleChange(event) {
     this.props.onUpdate({tileType: event.target.value});
   }
@@ -38,7 +43,7 @@ export default class StarWarsGridCellEditor extends React.Component {
         </header>
 
         <label htmlFor="tileType">Tile Type (required):</label>
-        <select name="tileType" value={initialValue} onChange={this.handleChange.bind(this)}>
+        <select name="tileType" value={initialValue} onChange={this.handleChange}>
           {Object.entries(options).map(([name, value]) => (
             <option value={value} key={value}>{name}</option>
           ))}
