@@ -8,7 +8,6 @@ theme: responsive
 
 <img src='<%= avatar_image('Amy Klement') %>'/ width='220px'>
 <br/>
-## Board Observer
 
 Amy is a partner at Omidyar Network and leads our Education initiative globally.
 Amy was previously responsible for our work in the Financial Inclusion, Property Rights, and Consumer Internet & Mobile initiatives in key geographies. She has held board seats or observer roles with Kiva, Living Goods, Bridge International Academies, Social Finance US, Mimoni, Andela, and Off Grid Electric.
