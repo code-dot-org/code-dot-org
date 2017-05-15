@@ -153,7 +153,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   # Normal sort fields
-  %w(location_name course subject).each do |sort_field|
+  %w(location_name on_map funded course subject).each do |sort_field|
     test "filter_workshops with order_by #{sort_field}" do
       expects(:order).with(sort_field)
       params order_by: sort_field
@@ -168,20 +168,6 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   # Specialty sort fields
-  test 'filter_workshops with order_by workshop_type' do
-    expects(:order).with("on_map")
-    expects(:order).with("funded")
-    params order_by: 'workshop_type'
-    @controller.filter_workshops @workshop_query
-  end
-
-  test 'filter_workshops with order_by workshop_type desc' do
-    expects(:order).with("on_map desc")
-    expects(:order).with("funded desc")
-    params order_by: 'workshop_type desc'
-    @controller.filter_workshops @workshop_query
-  end
-
   test 'filter_workshops with order_by date' do
     expects(:order_by_scheduled_start).with(desc: false)
     params order_by: 'date'
