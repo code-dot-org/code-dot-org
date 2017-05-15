@@ -32,7 +32,7 @@ SCHEMA_PERMISSIONS = {
 # @return [Boolean] Whether the task should be run.
 def run_task?(task_name, task_execution_time_sec)
   return false unless task_name.start_with? 'cron'
-  if task_execution_time_sec > 4500
+  if task_execution_time_sec > 4800
     return Time.now.saturday?
   end
   return true
@@ -66,7 +66,8 @@ def main
   dms_client = Aws::DatabaseMigrationService::Client.new
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
-    task_execution_time = replication_task.replication_task_stats.elapsed_time_millis / 1000
+    task_execution_time_sec = replication_task.replication_task_stats.elapsed_time_millis / 1000
+    task_delay = get_delay task_execution_time_sec
     next unless run_task?(task_name, task_execution_time_sec)
 
     ChatClient.message 'infra-dms',
@@ -75,11 +76,11 @@ def main
 
     dms_client.start_replication_task(
       {
-        replication_task_arn: replication_task.task_arn,
+        replication_task_arn: replication_task.replication_task_arn,
         start_replication_task_type: REPLICATION_TASK_TYPE
       }
     )
-    sleep(get_delay(task_execution_time))
+    sleep task_delay
   end
 
   SCHEMA_PERMISSIONS.each do |schema, groups|
