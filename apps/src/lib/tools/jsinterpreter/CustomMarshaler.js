@@ -1,20 +1,20 @@
 
 module.exports = class CustomMarshaler {
   constructor({
-    customMarshalGlobalProperties,
-    customMarshalBlockedProperties,
-    customMarshalObjectList,
+    globalProperties,
+    blockedProperties,
+    objectList,
   }) {
-    this.customMarshalGlobalProperties = customMarshalGlobalProperties || {};
-    this.customMarshalBlockedProperties = customMarshalBlockedProperties || [];
-    this.customMarshalObjectList = customMarshalObjectList || [];
+    this.globalProperties = globalProperties || {};
+    this.blockedProperties = blockedProperties || [];
+    this.objectList = objectList || [];
   }
 
   // If this is on our list of "custom marshal" objects - or if it a property
   // on one of those objects (other than a function), return true
   shouldCustomMarshalObject(nativeVar, nativeParentObj) {
-    for (var i = 0; i < this.customMarshalObjectList.length; i++) {
-      var marshalObj = this.customMarshalObjectList[i];
+    for (var i = 0; i < this.objectList.length; i++) {
+      var marshalObj = this.objectList[i];
       if ((nativeVar instanceof marshalObj.instance &&
            (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeVar[marshalObj.requiredMethod] !== undefined)) ||
@@ -29,8 +29,8 @@ module.exports = class CustomMarshaler {
   // When marshaling methods on "custom marshal" objects, we may need to augment
   // the marshaling options. This returns those options.
   getCustomMarshalMethodOptions(nativeParentObj) {
-    for (var i = 0; i < this.customMarshalObjectList.length; i++) {
-      var marshalObj = this.customMarshalObjectList[i];
+    for (var i = 0; i < this.objectList.length; i++) {
+      var marshalObj = this.objectList[i];
       if (nativeParentObj instanceof marshalObj.instance) {
         if (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeParentObj[marshalObj.requiredMethod] !== undefined) {

@@ -16,11 +16,11 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     // does not allow us to set customMarshaler until after the parent constructor
     // has finished.
     this.initFunc_ = opt_initFunc;
-    const scope = this.createScope(this.ast, null);
+    this.globalScope = this.createScope(this.ast, null);
     this.stateStack = [{
       node: this.ast,
-      scope: scope,
-      thisExpression: scope,
+      scope: this.globalScope,
+      thisExpression: this.globalScope,
       done: false
     }];
   }
@@ -37,7 +37,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @return {boolean} true if property access should be blocked.
    */
   shouldBlockCustomMarshalling_(name, obj, nativeParent) {
-    if (-1 !== this.customMarshaler.customMarshalBlockedProperties.indexOf(name)) {
+    if (-1 !== this.customMarshaler.blockedProperties.indexOf(name)) {
       return true;
     }
     var value = obj.isCustomMarshal ? obj.data[name] : nativeParent[name];
@@ -73,7 +73,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       }
       if (!hasProperty &&
           obj === this.globalScope &&
-          !!(nativeParent = this.customMarshaler.customMarshalGlobalProperties[name]) &&
+          !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
           !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
         customMarshalValue = nativeParent[name];
       } else {
@@ -111,7 +111,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       var hasProperty = super.hasProperty(obj, name);
       if (!hasProperty &&
           obj === this.globalScope &&
-          !!(nativeParent = this.customMarshaler.customMarshalGlobalProperties[name]) &&
+          !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
           !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
         return true;
       } else {
@@ -124,7 +124,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Wrapper to Interpreter's setProperty (extended for custom marshaling)
    *
    * Set a property value on a data object.
-   * @param {!Object} interpeter Interpreter instance.
    * @param {!Object} obj Data object.
    * @param {*} name Name of property.
    * @param {*} value New property value.
@@ -152,7 +151,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       }
       if (!hasProperty &&
           obj === this.globalScope &&
-          !!(nativeParent = this.customMarshaler.customMarshalGlobalProperties[name]) &&
+          !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
           !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
         nativeParent[name] = codegen.marshalInterpreterToNative(this, value);
       } else {

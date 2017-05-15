@@ -37,9 +37,9 @@ export default class JSInterpreter {
     this.shouldRunAtMaxSpeed = shouldRunAtMaxSpeed || function () { return true; };
     this.maxInterpreterStepsPerTick = maxInterpreterStepsPerTick || 10000;
     this.customMarshaler = new CustomMarshaler({
-      customMarshalGlobalProperties,
-      customMarshalBlockedProperties,
-      customMarshalObjectList,
+      globalProperties: customMarshalGlobalProperties,
+      blockedProperties: customMarshalBlockedProperties,
+      objectList: customMarshalObjectList,
     });
 
     // Publicly-exposed events that anyone with access to the JSInterpreter can
@@ -78,7 +78,7 @@ export default class JSInterpreter {
 
   addCustomMarshalObject(config) {
     // TODO (pcardune): validate config format.
-    this.customMarshaler.customMarshalObjectList.push(config);
+    this.customMarshaler.objectList.push(config);
   }
 }
 
