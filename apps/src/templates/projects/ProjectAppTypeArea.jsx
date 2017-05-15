@@ -43,7 +43,7 @@ const ProjectAppTypeArea = React.createClass({
 
   getInitialState() {
     return {
-      maxNumProjects: this.props.projectList.length,
+      maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
       numProjects: this.props.numProjectsToShow
     };
   },
