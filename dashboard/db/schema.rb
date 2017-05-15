@@ -510,7 +510,7 @@ ActiveRecord::Schema.define(version: 20170509100000) do
     t.text     "form_data",        limit: 65535, null: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", using: :btree
+    t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", unique: true, using: :btree
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
