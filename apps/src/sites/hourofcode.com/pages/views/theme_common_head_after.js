@@ -8,5 +8,8 @@ import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
    });
  }
 
-
-window.isUnsupportedBrowser = isUnsupportedBrowser;
+$(document).ready(function () {
+  if (isUnsupportedBrowser()) {
+    $("#warning-banner").show();
+  }
+});
