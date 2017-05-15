@@ -271,17 +271,25 @@ Artist.prototype.init = function (config) {
   );
 };
 
-Artist.prototype.prepareForRemix = function (appOptions) {
-  if (this.level.initialX === undefined &&
-      this.level.initialY === undefined &&
-      this.level.startDirection === undefined) {
+/**
+ * Add blocks that mimic level properties that are set on the current level
+ * but not set by default, in this case the artist's starting position and
+ * orientation.
+ */
+Artist.prototype.prepareForRemix = function () {
+  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+        this.level[prop] === undefined ||
+            this.level[prop] === group.defaultValues[prop]))) {
+    // If all of the level props we need to worry about are undefined or equal
+    // to the default value, we don't need to insert any new blocks.
     return;
   }
+
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   const blocksDocument = blocksDom.ownerDocument;
-  let whenRun = blocksDom.querySelector('BLOCK[type="when_run"]');
+  let whenRun = blocksDom.querySelector('block[type="when_run"]');
   if (!whenRun) {
-    whenRun = blocksDocument.createElement('BLOCK');
+    whenRun = blocksDocument.createElement('block');
     whenRun.setAttribute('type', 'when_run');
     blocksDom.getRootNode().appendChild(whenRun);
   }
