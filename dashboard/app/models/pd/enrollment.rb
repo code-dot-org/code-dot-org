@@ -167,11 +167,13 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
-    elsif local_summer?
-      pd_new_workshop_survey_url(code)
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
+
+    # TODO: elijah: once the route is fully ready, add the following codition above
+    #elsif local_summer?
+    #  pd_new_workshop_survey_url(code)
   end
 
   def send_exit_survey
