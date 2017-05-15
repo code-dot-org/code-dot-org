@@ -52,7 +52,7 @@ import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
-import {parseElement} from '../xml';
+import {blockAsXmlNode} from '../block_utils';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -96,6 +96,37 @@ var ELSA_DECORATION_DETAILS = [
   { x: 12, when: "before" },
   { x:  8, when: "after" },
   { x: 10, when: "after" }
+];
+
+const REMIX_PROPS = [
+  {
+    defaultValues: {
+      initialX: DEFAULT_X,
+      initialY: DEFAULT_Y,
+    },
+    generateBlock: args => blockAsXmlNode('jump_to_xy', {
+      titles: {
+        'XPOS': args.initialX,
+        'YPOS': args.initialY,
+      }
+    }),
+  }, {
+    defaultValues: {
+      startDirection: DEFAULT_DIRECTION
+    },
+    generateBlock: args => blockAsXmlNode('draw_turn', {
+      titles: {
+        'DIR': 'turnRight',
+      },
+      values: {
+        'VALUE': {
+          type: 'math_number',
+          titleName: 'NUM',
+          titleValue: args.startDirection - DEFAULT_DIRECTION,
+        },
+      },
+    }),
+  },
 ];
 
 /**
@@ -204,7 +235,7 @@ Artist.prototype.init = function (config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
-  config.prepareForRemix = Artist.prototype.prepareForRemix.bind(Artist, config);
+  config.prepareForRemix = Artist.prototype.prepareForRemix.bind(this);
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;
@@ -241,9 +272,9 @@ Artist.prototype.init = function (config) {
 };
 
 Artist.prototype.prepareForRemix = function (appOptions) {
-  if (appOptions.level.initialX === undefined &&
-      appOptions.level.initialY === undefined &&
-      appOptions.level.startDirection === undefined) {
+  if (this.level.initialX === undefined &&
+      this.level.initialY === undefined &&
+      this.level.startDirection === undefined) {
     return;
   }
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -259,40 +290,35 @@ Artist.prototype.prepareForRemix = function (appOptions) {
     whenRun.removeChild(next);
   }
 
-  if (appOptions.level.startDirection !== undefined) {
-    const direction = appOptions.level.startDirection - DEFAULT_DIRECTION;
-    const turn = parseElement(`<block type="draw_turn" inline="true">
-        <title name="DIR">turnRight</title>
-        <value name="VALUE">
-          <block type="math_number">
-            <title name="NUM">${direction}</title>
-          </block>
-        </value>
-      </block>`).firstChild;
+  const insertBeforeNext = block => {
     if (next) {
-      turn.appendChild(next);
+      block.appendChild(next);
     }
     next = blocksDocument.createElement('next');
-    next.appendChild(turn);
+    next.appendChild(block);
+  };
+
+  for (let group of REMIX_PROPS) {
+    let customized = false;
+    for (let prop in group.defaultValues) {
+      const value = this.level[prop];
+      if (value !== undefined && value !== group.defaultValues[prop]) {
+        customized = true;
+        break;
+      }
+    }
+    if (!customized) {
+      continue;
+    }
+    const blockArgs = {};
+    for (let prop in group.defaultValues) {
+      blockArgs[prop] = this.level[prop] !== undefined ?
+          this.level[prop] :
+          group.defaultValues[prop];
+    }
+    insertBeforeNext(group.generateBlock(blockArgs));
   }
 
-  if (appOptions.level.initialX !== undefined || appOptions.level.initialY !== undefined) {
-    const x = appOptions.level.initialX === undefined ?
-      DEFAULT_X :
-      appOptions.level.initialX;
-    const y = appOptions.level.initialY === undefined ?
-      DEFAULT_Y :
-      appOptions.level.initialY;
-    const jumpTo = parseElement(`<block type="jump_to_xy">
-        <title name="XPOS">${x}</title>
-        <title name="YPOS">${y}</title>
-      </block>`).firstChild;
-    if (next) {
-      jumpTo.appendChild(next);
-    }
-    next = blocksDocument.createElement('next');
-    next.appendChild(jumpTo);
-  }
   whenRun.appendChild(next);
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
