@@ -175,7 +175,8 @@ describe('FacilitatorProgramRegistration', function () {
     );
 
     wrapper.setState({
-      errors: ['liabilityWaiver']
+      errors: ['liabilityWaiver'],
+      errorHeader: "test error header"
     });
 
     // only this field should have an error, and only this page should show
@@ -191,6 +192,13 @@ describe('FacilitatorProgramRegistration', function () {
     // not be visible
     assert.lengthOf(wrapper.find('.has-error'), 0);
     assert.lengthOf(wrapper.find(".alert.alert-danger"), 0);
+
+    wrapper.setState({
+      globalError: true
+    });
+
+    // globally-visible errors should be visible no matter what page we're on
+    assert.lengthOf(wrapper.find(".alert.alert-danger"), 1);
   });
 
   it('correctly displays dynamic fields', function () {

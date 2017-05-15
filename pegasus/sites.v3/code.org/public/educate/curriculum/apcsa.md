@@ -6,7 +6,7 @@ theme: responsive
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
 
-# 3rd Party Educator Resources for Advanced Placement Computer Science A
+# Educator Resources for Advanced Placement Computer Science A
 
 There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science
 A course and exam focuses on computing skills related to programming in Java. The new AP Computer Science Principles

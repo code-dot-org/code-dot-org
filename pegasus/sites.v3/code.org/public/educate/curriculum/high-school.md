@@ -97,7 +97,7 @@ There are two AP computer science offerings, and students can take either course
 
 While Code.org does not have an AP Computer Science A curriculum, there already exists a number of great curricula and programs available to teacher and students.
 
-[<button>Learn more about AP CS A resources</button>](/educate/curriculum/3rd-party/apcsa)
+[<button>Learn more about AP CS A resources</button>](/educate/curriculum/apcsa)
 
 [solid-block-header]
 

@@ -39,6 +39,11 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+      @recent_courses = recent_courses.slice(0, 2)
+
+      if current_user.teacher?
+        @sections = []
+      end
     end
   end
 
@@ -63,5 +68,27 @@ class HomeController < ApplicationController
   # This static page contains the teacher announcements for US and non-US visitors.
   def teacher_announcements
     render template: 'api/teacher_announcement', layout: false
+  end
+
+  def recent_courses
+    current_user.in_progress_and_completed_scripts.map do |script|
+      script_id = script[:script_id]
+      script_name = Script.get_from_cache(script_id)[:name]
+      {
+        id: script_id,
+        script_name: script_name,
+        courseName: data_t_suffix('script.name', script_name, 'title'),
+        description: data_t_suffix('script.name', script_name, 'description_short'),
+        link: script_url(script_id),
+        image: "",
+        assignedSections: []
+      }
+    end
+  end
+
+  def courses
+    @recent_courses = current_user && recent_courses
+    @is_teacher = !!(current_user && current_user.teacher?)
+    @is_english = request.language == 'en'
   end
 end
