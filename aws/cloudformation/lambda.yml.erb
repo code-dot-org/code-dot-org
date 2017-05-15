@@ -16,7 +16,7 @@ Resources:
       Code:
         ZipFile: <%=js 'ami-manager.js' %>
       Handler: index.handler
-      Runtime: nodejs
+      Runtime: nodejs6.10
       Timeout: 300
       Role: !GetAtt AMIManagerRole.Arn
   AMIManagerRole:
@@ -57,7 +57,7 @@ Resources:
       Code:
         ZipFile: <%=js 'vpcClassicLink.js' %>
       Handler: index.handler
-      Runtime: nodejs
+      Runtime: nodejs6.10
       Timeout: 300
       Role: !GetAtt VpcClassicLinkRole.Arn
   VpcClassicLinkRole:
@@ -91,7 +91,7 @@ Resources:
       Code:
         ZipFile: <%=js 'count_asg.js' %>
       Handler: index.handler
-      Runtime: nodejs
+      Runtime: nodejs6.10
       Timeout: 30
       Role: !GetAtt CountASGRole.Arn
   CountASGRole:
@@ -123,7 +123,7 @@ Resources:
         Variables:
           SLACK_ENDPOINT: !Ref SlackEndpoint
       Handler: slackCloudWatchEvent.handler
-      Runtime: nodejs4.3
+      Runtime: nodejs6.10
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
   BasicLambdaRole:
