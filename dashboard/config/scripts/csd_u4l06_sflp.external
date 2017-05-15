@@ -1,12 +1,11 @@
 name 'CSD U4L06 SFLP'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 6 - Identifying User Needs
-
-## Background
+# Overview
 
 Up to this point we have focused on designing for users who are, to some degree, distanced from us. Whether through brainstorming, profiles, or text feedback, the connection to an end user has never been direct. In this lesson you'll directly interview one of your classmates as you look to design an app that meets their needs.
 
-# Resources
+## Resources
 
 * [User Interview](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=doc))
 * [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=doc))

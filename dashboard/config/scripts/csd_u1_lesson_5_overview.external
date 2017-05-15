@@ -1,20 +1,18 @@
 name 'CSD U1 Lesson 5 Overview'
-display_name 'Unit 1 Lesson 5 Overview'
+display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
-# Problem Solving - Computers and Logic: Lesson 5 - Inputs and Outputs
-
-## Background
+# Overview
 
 In this lesson you'll learn about the different types of input and output devices used by computers and the types of information they send and receive.
 
-# Vocabulary
+## Vocabulary
 
 * **Input** - A device or component that allows information to be given to a computer
 * **Output** - Any device or component that receives information from a computer
 
 
-# Resources
+## Resources
 
 * [Input and Output](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=doc))
 MARKDOWN

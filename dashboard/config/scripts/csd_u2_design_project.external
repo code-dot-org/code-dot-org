@@ -29,3 +29,11 @@ Once you have finished your web page, compare it to your sketch to make sure you
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Personal Website Project
+
+This level kicks off the personal website project that students will continue working on throughout the unit. You can require them to show you a journal sketch before getting back on Code Studio, or let them decide for themselves when they are ready.
+
+Students who finish early can be encouraged to add new content to the page or revise the content that they have.
+MARKDOWN

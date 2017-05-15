@@ -82,7 +82,11 @@ class ChannelsApi < Sinatra::Base
     end
 
     timestamp = Time.now
-    id = storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
+    id = storage_app.create(
+      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+      ip: request.ip,
+      type: data['projectType']
+    )
 
     redirect "/v3/channels/#{id}", 301
   end

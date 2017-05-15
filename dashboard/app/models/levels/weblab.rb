@@ -34,6 +34,7 @@ class Weblab < Level
     hide_share_and_remix
     is_project_level
     encrypted_examples
+    submittable
   )
 
   def self.create_from_level_builder(params, level_params)

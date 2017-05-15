@@ -25,7 +25,7 @@ class ChannelToken < ActiveRecord::Base
       # your own channel
       find_or_create_by!(level: level.host_level, user: user) do |ct|
         # Get a new channel_id.
-        ct.channel = create_channel ip, storage_app, data
+        ct.channel = create_channel ip, storage_app, data: data
       end
     end
   end
@@ -38,7 +38,7 @@ class ChannelToken < ActiveRecord::Base
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, storage_app, data = {}, src = nil, use_firebase = false)
+  def self.create_channel(ip, storage_app, data: {}, src: nil, use_firebase: false, type: nil)
     if src
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
@@ -51,6 +51,6 @@ class ChannelToken < ActiveRecord::Base
     end
 
     timestamp = Time.now
-    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), ip)
+    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), ip: ip, type: type)
   end
 end
