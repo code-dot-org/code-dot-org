@@ -38,15 +38,7 @@ class CoursesController < ApplicationController
 
   def update
     course = Course.find_by_name!(params[:course_name])
-
-    Course.update_strings(course.name, i18n_params)
-
-    course.update_scripts(params[:scripts])
-
-    # serialization = course.serialize
-
-    # TODO: persist serialization to file if LB
-
+    course.update_and_persist(params[:scripts], i18n_params)
     redirect_to course
   end
 
