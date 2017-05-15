@@ -95,7 +95,11 @@ const ProjectAppTypeArea = React.createClass({
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
-        <span style={styles.viewMore} onClick={this.viewMore}> {this.props.labViewMoreString} </span>
+        <span style={styles.viewMore} onClick={this.viewMore}>
+          {this.props.isDetailView && <i className="fa fa-angle-left" style={{paddingRight: 6}} ></i>}
+          {this.props.labViewMoreString}
+          {!this.props.isDetailView && <i className="fa fa-angle-right" style={{paddingLeft: 6}} ></i>}
+        </span>
         <div style={{clear: 'both'}}></div>
         {this.renderProjectCardList(this.props.projectList, this.state.numProjects)}
         {this.props.isDetailView && this.renderViewMoreButtons()}
