@@ -58,6 +58,7 @@ export default class FormComponent extends React.Component {
   buildSelectFieldGroupFromOptions({name, label, placeholder, required, ...props}) {
     return (
       <FieldGroup
+        key={name}
         id={name}
         componentClass="select"
         label={label}
@@ -87,6 +88,7 @@ export default class FormComponent extends React.Component {
   buildFieldGroup({name, label, type, required, ...props}) {
     return (
       <FieldGroup
+        key={name}
         id={name}
         type={type}
         label={label}
@@ -118,6 +120,7 @@ export default class FormComponent extends React.Component {
 
     return (
       <ButtonList
+        key={name}
         answers={this.props.options[name]}
         groupName={name}
         label={label}

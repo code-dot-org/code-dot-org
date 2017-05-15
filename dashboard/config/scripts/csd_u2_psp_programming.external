@@ -1,7 +1,5 @@
 name 'CSD U2 PSP Programming'
 display_name 'Problem Solving Process for Programming'
-title 'title'
-description 'description here'
 markdown <<MARKDOWN
 # The Problem Solving Process for Programming
 
@@ -36,4 +34,10 @@ markdown <<MARKDOWN
 * Identify a few incremental changes that you could make in the next iteration
 
 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Review the Problem Solving Process
+
+Review the four steps of the Problem Solving Process as a class.
 MARKDOWN

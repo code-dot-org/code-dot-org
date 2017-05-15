@@ -15,6 +15,7 @@ export default storybook => {
       ],
       focusAreaStageIds: [],
       isSummaryView: false,
+      professionalLearningCourse: false
     }
   };
 

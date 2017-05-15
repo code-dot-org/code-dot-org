@@ -12,29 +12,29 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 * University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
 * Computer science counts as a core requirement in [95% of BS degrees](https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg) in the University of California system.
-* AP Computer Science A is the [fastest-growing](http://blog.code.org/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
-* Code.org [updated our position](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
-* [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
-* Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
-* Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
-* Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).
-* What [percent of STEM](http://blog.code.org/post/89267280803/stem) should be Computer Science?
-* Is learning computer science linked to [improved learning](http://blog.code.org/post/125429946375/cs-other-subjects)  in other subjects?
+* AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
+* Code.org [updated our position](http:/codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
+* [More high school students](http://codeorg.tumblr.com/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
+* Computing occupations are the [#1 source of new wages](http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
+* Americans' perceptions of computer science are [changing](http://codeorg.tumblr.com/post/139445414968).
+* Computer science jobs account for the majority of "skilled worker" [immigration](http://codeorg.tumblr.com/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).
+* What [percent of STEM](http://codeorg.tumblr.com/post/89267280803/stem) should be Computer Science?
+* Is learning computer science linked to [improved learning](http://codeorg.tumblr.com/post/125429946375/cs-other-subjects)  in other subjects?
 
 
 ### Diversity
 
-* Students who learn computer science in high school are   [6 times](http://blog.code.org/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to major in it. Women: 10x more likely
-* [Maryland makes a simple policy change to boost diversity in computer science](http://blog.code.org/post/121123281798/md) 
-* Reporting on [our efforts](http://blog.code.org/post/98856300118/diversity) to increase diversity in computer science
-* Code.org's [team diversity](http://blog.code.org/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is
+* Students who learn computer science in high school are   [6 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to major in it. Women: 10x more likely
+* [Maryland makes a simple policy change to boost diversity in computer science](http://codeorg.tumblr.com/post/121123281798/md) 
+* Reporting on [our efforts](http://codeorg.tumblr.com/post/98856300118/diversity) to increase diversity in computer science
+* Code.org's [team diversity](http://codeorg.tumblr.com/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is
 
 ### Momentum
 
-* Seeing our impact: A [record year](http://blog.code.org/post/91961669383/ap-computer-science) for computer science (2013-2014)
-* The Hour of Code [reached](http://blog.code.org/post/70175643054/stats) 15 million users in 7 days (2014)
-* [15,000](http://blog.code.org/post/128786388333/15000-new-computer-science-teachers) new computer science teachers (2015)
-* [Progress](http://blog.code.org/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
+* Seeing our impact: A [record year](http://codeorg.tumblr.com/post/91961669383/ap-computer-science) for computer science (2013-2014)
+* The Hour of Code [reached](http://codeorg.tumblr.com/post/70175643054/stats) 15 million users in 7 days (2014)
+* [15,000](http://codeorg.tumblr.com/post/128786388333/15000-new-computer-science-teachers) new computer science teachers (2015)
+* [Progress](http://codeorg.tumblr.com/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
 
 
 ## Other Code.org Resources

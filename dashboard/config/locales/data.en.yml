@@ -415,6 +415,7 @@ en:
         'C4_unplugged_binary' : 'Binary'
         'CSF_artist_angles' : 'Angles in Artist'
         'CSF_collector_k1_blocks' : 'CS Fundamentals: The Collector'
+        'CSF_collector_repeat_loops' : 'Collector Repeat Loops'
         'CSF_collector_text_blocks' : 'CS Fundamentals: The Collector'
         'CSF_create_functions' : 'Create Functions'
         'CSF_debugging_k1_blocks' : 'Debugging'
