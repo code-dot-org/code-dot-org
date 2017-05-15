@@ -107,6 +107,13 @@ export default class FakeBoard extends EventEmitter {
   analogRead(pin, callback) {
     setTimeout(() => callback(0), 0);
   }
+
+  /**
+   * @return {boolean} whether a real board is connected
+   */
+  boardConnected() {
+    return false;
+  }
 }
 
 class FakeComponent extends EventEmitter {}

@@ -197,6 +197,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
+   * @returns {boolean} whether a real board is currently connected or not.
+   */
+  boardConnected() {
+    return !!this.fiveBoard_;
+  }
+
+  /**
    * Create a serial port controller and open the serial port immediately.
    * @param {string} portName
    * @return {SerialPort}
