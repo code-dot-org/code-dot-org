@@ -17,13 +17,13 @@
             - if user_type == "teacher"
               %a.headerlink{:href=>CDO.studio_url("/")} Home
               %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
-              %a.headerlink{:href=>CDO.studio_url("/projects#gallery")} Projects Gallery
+              %a.headerlink{:href=>CDO.studio_url("/projects#gallery")} Project Gallery
               %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
               %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
             - elsif user_type == "student"
               %a.headerlink{:href=>CDO.studio_url("/")} Home
               %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
-              %a.headerlink{:href=>CDO.studio_url("/projects#gallery")} Projects Gallery
+              %a.headerlink{:href=>CDO.studio_url("/projects#gallery")} Project Gallery
             - else
               %a.headerlink{:href=>"/student"} Learn
               %a.headerlink{:href=>"/educate"} Teach
