@@ -54,8 +54,11 @@ group :development do
   gem 'web-console'
 end
 
+# Rack::Cache middleware used in development/test;
+# Rack::Cache::Response used by Rack::Optimize in non-development environments.
+gem 'rack-cache'
+
 group :development, :test do
-  gem 'rack-cache'
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   # Use debugger
@@ -250,3 +253,12 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
 
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
+
+# Ref: https://github.com/toy/image_optim/pull/145
+# Also include sRGB color profile conversion.
+gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
+# Image-optimization tools and binaries.
+gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
+gem 'image_optim_rails'
+
+gem 'image_size', require: false

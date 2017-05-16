@@ -3,7 +3,15 @@ require 'uri'
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  def render_proxied_url(location, allowed_content_types:, allowed_hostname_suffixes:, expiry_time:, infer_content_type:, redirect_limit: 5)
+  def render_proxied_url(
+    location,
+    allowed_content_types:,
+    allowed_hostname_suffixes:,
+    expiry_time:,
+    infer_content_type:,
+    redirect_limit: 5,
+    no_transform: false
+  )
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
       return
@@ -60,6 +68,7 @@ module ProxyHelper
     else
       # Proxy successful responses.
       expires_in expiry_time, public: true
+      (response.cache_control[:extras] ||= []).push('no-transform') if no_transform
       send_data media.body, type: media.content_type, disposition: 'inline'
     end
   rescue URI::InvalidURIError

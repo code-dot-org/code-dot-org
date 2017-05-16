@@ -346,6 +346,18 @@ class FilesTest < FilesApiTestBase
     assert not_found?
   end
 
+  def test_metadata_cached
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    get "/v3/files-public/#{@channel_id}/#{thumbnail_filename}"
+    assert successful?
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+  end
+
   def test_rename_mixed_case
     filename = @api.randomize_filename('Mixed Case With Spaces.html')
     escaped_filename = URI.escape(filename)
