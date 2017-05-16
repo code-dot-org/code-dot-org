@@ -89,10 +89,4 @@ class HomeController < ApplicationController
   def teacher_announcements
     render template: 'api/teacher_announcement', layout: false
   end
-
-  def courses
-    @recent_courses = current_user.try(:recent_courses)
-    @is_teacher = !!(current_user && current_user.teacher?)
-    @is_english = request.language == 'en'
-  end
 end

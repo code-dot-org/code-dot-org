@@ -1,5 +1,5 @@
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
-%script{ src: minifiable_asset_path('js/home/courses.js'), data: {courses: @recent_courses.to_json, english: @is_english.to_json, teacher: @is_teacher.to_json}}
+%script{ src: minifiable_asset_path('js/courses/index.js'), data: {courses: @recent_courses.to_json, english: @is_english.to_json, teacher: @is_teacher.to_json}}
 
 - unless current_user
   #landingpage
