@@ -1,4 +1,12 @@
 class CoursesController < ApplicationController
+  def index
+    @recent_courses = current_user.try(:recent_courses)
+    @is_teacher = !!(current_user && current_user.teacher?)
+    @is_english = request.language == 'en'
+
+    render 'index'
+  end
+
   def show
     course_name = params[:course].tr('-', '_').titleize
     course = Course.find_by_name(course_name)

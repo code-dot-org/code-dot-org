@@ -18,8 +18,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
-  get '/courses', to: 'home#courses'
-
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -182,6 +180,7 @@ Dashboard::Application.routes.draw do
   end
 
   get '/course/:course', to: 'courses#show', as: 'course'
+  get '/courses', to: 'courses#index'
 
   get '/beta', to: redirect('/')
 
