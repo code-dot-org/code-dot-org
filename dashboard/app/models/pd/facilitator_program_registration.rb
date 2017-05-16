@@ -17,7 +17,7 @@
 class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   include Pd::ProgramRegistrationForm
 
-  def self.required_fields
+  def required_fields
     [
       :confirm_teachercon_date,
       :address_street,
