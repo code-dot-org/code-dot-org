@@ -16,13 +16,7 @@
 - if request.cookies['pm'] == 'new_header'
 
   - if current_user
-    - if current_user.teacher?
-      #landingpage
-        = render partial: 'home/teacher_homepage'
-
-    - else
-      #landingpage
-        = render partial: 'home/student_homepage'
+    = render partial: 'home/homepage'
 
   - else
     #landingpage
