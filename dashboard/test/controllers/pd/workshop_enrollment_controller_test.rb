@@ -226,7 +226,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   test 'join_section without login redirects to sign_in' do
     section = create :section
     get :join_section, params: {section_code: section.code}
-    assert_redirected_to "/users/sign_in?return_to=#{request.url}"
+    assert_redirected_to "/users/sign_in?user_return_to=#{request.url}"
   end
 
   test 'join_section with a nonexistent workshop code responds with 404' do
