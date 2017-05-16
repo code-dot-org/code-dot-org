@@ -4,8 +4,14 @@ import CollapsibleSection from './CollapsibleSection';
 import i18n from "@cdo/locale";
 
 const TeacherResources = React.createClass({
+  propTypes: {
+    urlPrefix: React.PropTypes.string.isRequired
+  },
 
   render() {
+    const { urlPrefix } = this.props;
+    const planUrl = `${urlPrefix}/teacher-dashboard#/plan`;
+    const volunteerUrl = `${urlPrefix}/volunteer/local`;
 
     return (
       <CollapsibleSection header={i18n.resources()}>
@@ -28,14 +34,14 @@ const TeacherResources = React.createClass({
           description={i18n.standardsAndFrameworkDescription()}
           image="../../static/navcard-placeholder.png"
           buttonText={i18n.reviewDocuments()}
-          link="https://code.org/teacher-dashboard#/plan"
+          link={planUrl}
         />
         <ResourceCard
           title={i18n.findGuestSpeaker()}
           description={i18n.findGuestSpeakerDescription()}
           image="../../static/navcard-placeholder.png"
           buttonText={i18n.inspireStudents()}
-          link="https://code.org/volunteer/local"
+          link={volunteerUrl}
         />
       </CollapsibleSection>
     );
