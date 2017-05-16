@@ -35,8 +35,7 @@
     "available_blocks": "[\"bedrock\", \"bricks\", \"oreCoal\", \"dirtCoarse\", \"cobblestone\", \"oreDiamond\", \"dirt\", \"oreEmerald\", \"farmlandWet\", \"glass\", \"oreGold\", \"grass\", \"gravel\", \"oreIron\", \"oreLapis\", \"logAcacia\", \"logBirch\", \"logJungle\", \"logOak\", \"logSpruce\", \"planksAcacia\", \"planksBirch\", \"planksJungle\", \"planksOak\", \"planksSpruce\", \"oreRedstone\", \"sand\", \"sandstone\", \"stone\", \"tnt\", \"wool\"]",
     "if_block_options": "[\"water\", \"lava\", \"\"]",
     "player_start_direction": "0",
-    "special_level_type": "freeplay",
-    "instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far."
+    "special_level_type": "freeplay"
   }
 }]]></config>
   <blocks>
