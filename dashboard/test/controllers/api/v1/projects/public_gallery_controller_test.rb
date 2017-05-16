@@ -8,7 +8,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
       project_type: 'applab',
       value: {
         name: 'Charlies App',
-        thumbnailUrl: 'https://studio.code.org/charlies_thumbnail.png'
+        thumbnailUrl: '/v3/files/charlies_thumbnail.png'
       }.to_json,
       name: 'Prince Charles',
       birthday: 13.years.ago.to_datetime,
@@ -89,12 +89,13 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   test 'project details are correct listing published applab projects' do
     get :index, params: {project_type: 'applab', limit: 1}
     assert_response :success
+    assert_equal "max-age=60, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
     assert_equal 1, categories_list.length
     project_row = categories_list['applab'].first
     assert_equal 'Charlies App', project_row['name']
     assert_equal 'STUB_CHANNEL_ID-1234', project_row['channel']
-    assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
+    assert_equal '/v3/files-public/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
     assert_equal '13+', project_row['studentAgeRange']
@@ -104,6 +105,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   test 'project details are correct listing all published projects' do
     get :index, params: {project_type: 'all', limit: 1}
     assert_response :success
+    assert_equal "max-age=60, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
 
     assert_equal ProjectsList::PUBLISHED_PROJECT_TYPES.sort, categories_list.keys.sort
@@ -115,7 +117,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     project_row = categories_list['applab'].first
     assert_equal 'Charlies App', project_row['name']
     assert_equal 'STUB_CHANNEL_ID-1234', project_row['channel']
-    assert_equal 'https://studio.code.org/charlies_thumbnail.png', project_row['thumbnailUrl']
+    assert_equal '/v3/files-public/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
     assert_equal '13+', project_row['studentAgeRange']

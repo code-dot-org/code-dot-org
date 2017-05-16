@@ -31,7 +31,7 @@ var stringBlockPrefix = 'str.';
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
 function applabExecuteCmd(...args) {
-  Applab.executeCmd.call(Applab, ...args);
+  return Applab.executeCmd.call(Applab, ...args);
 }
 audioApi.injectExecuteCmd(applabExecuteCmd);
 makerApi.injectExecuteCmd(applabExecuteCmd);

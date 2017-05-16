@@ -18,7 +18,8 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     workshop_id
     workshop_dates
     workshop_name
-    workshop_type
+    on_map
+    funded
     organizer_name
     organizer_email
     year

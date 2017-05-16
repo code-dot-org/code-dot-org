@@ -90,32 +90,13 @@
                       <title name="VALUE">"witch"</title>
                       <value name="SPRITE">
                         <block type="math_number">
-                          <title name="NUM">1</title>
+                          <title name="NUM">2</title>
                         </block>
                       </value>
                       <next>
-                        <block type="studio_setSpritesWander">
-                          <title name="VALUE">"witch"</title>
-                          <next>
-                            <block type="studio_setSpriteParams" inline="true">
-                              <title name="VALUE">random</title>
-                              <value name="SPRITE">
-                                <block type="math_number">
-                                  <title name="NUM">2</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="studio_setSpritePositionParams" inline="true">
-                                  <title name="VALUE">19</title>
-                                  <value name="SPRITE">
-                                    <block type="math_number">
-                                      <title name="NUM">2</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
+                        <block type="studio_setSpritePosition">
+                          <title name="SPRITE">1</title>
+                          <title name="VALUE">13</title>
                         </block>
                       </next>
                     </block>
@@ -125,11 +106,21 @@
             </block>
           </next>
         </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">anything</title>
+          <next>
+            <block type="studio_endGame">
+              <title name="VALUE">lose</title>
+            </block>
+          </next>
+        </block>
         <block type="studio_repeatForever">
           <statement name="DO">
             <block type="studio_throw">
+              <title name="SPRITE">1</title>
               <title name="VALUE">"blue_fireball"</title>
-              <title name="DIR">4</title>
+              <title name="DIR">random</title>
             </block>
           </statement>
         </block>

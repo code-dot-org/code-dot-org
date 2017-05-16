@@ -1,10 +1,5 @@
-require 'simplecov'
-SimpleCov.root(File.absolute_path('../..', __dir__))
-SimpleCov.start
-require 'rack/test'
-require 'minitest/autorun'
+require_relative './test_helper'
 require 'rmagick'
-ENV['RACK_ENV'] = 'test'
 
 class GraphicsTest < Minitest::Test
   include Rack::Test::Methods

@@ -10,6 +10,7 @@ import SetupStep, {
   FAILED,
   CELEBRATING,
 } from './SetupStep';
+/* global trackEvent */
 
 const STATUS_IS_CHROME = 'statusIsChrome';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -99,11 +100,13 @@ export default class SetupChecklist extends Component {
         .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
         .then(() => setupChecker.celebrate())
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
+        .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
         .catch(error => {
           this.setState({caughtError: error});
+          trackEvent('MakerSetup', 'ConnectionError');
           if (console && typeof console.error === 'function') {
             console.error(error);
           }
