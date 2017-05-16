@@ -3,7 +3,7 @@ import { WallTypeMask, WallTypeShift } from '@cdo/apps/studio/constants';
 
 const options = {
   empty: 0x0,
-  start: 0x0000010,
+  start: 0x000010,
   goal: 0x000001,
   crate_1: 0x010000,
   crate_2: 0x100000,
@@ -31,13 +31,14 @@ export default class StarWarsGridCellEditor extends React.Component {
   }
 
   handleChange() {
+    const zoom = this.refs.zoom && this.refs.zoom.checked;
     this.props.onUpdate({
-      tileType: this.refs.zoom.checked << WallTypeShift | this.refs.type.value
+      tileType: zoom << WallTypeShift | this.refs.type.value
     });
   }
 
   render() {
-    const type = 0xFF0000 & this.props.cell.tileType_;
+    const type = ~WallTypeMask & this.props.cell.tileType_;
     const zoom = WallTypeMask & this.props.cell.tileType_;
 
     return (
