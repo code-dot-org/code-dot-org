@@ -154,10 +154,15 @@ const VariableFormGroup = React.createClass({
   },
 
   getInitialState() {
-    // If we have only a single sourceValue, select it by default
     let selected = [];
+
     if (this.hasSingleSourceValue()) {
+      // If we have only a single sourceValue, select it by default
       selected = [this.props.sourceValues[0]];
+    } else if (this.props.data && this.props.data[this.props.sourceName]) {
+      // otherwise, if we're a controlled component, set our initial state from
+      // the data
+      selected = this.props.data[this.props.sourceName];
     }
 
     return {selected};
