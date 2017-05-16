@@ -132,15 +132,15 @@ module Pd::ProgramRegistrationForm
   end
 
   module ClassMethods
-    def required_fields
-      self.class.options.keys
-    end
-
     def options
       TRAVEL_OPTIONS.
         merge(PHOTO_RELEASE_OPTIONS).
         merge(LIABILITY_WAIVER_OPTIONS).
         merge(DEMOGRAPHICS_OPTIONS).freeze
     end
+  end
+
+  def required_fields
+    self.class.options.keys
   end
 end
