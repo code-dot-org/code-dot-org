@@ -282,7 +282,7 @@ Artist.prototype.prepareForRemix = function () {
             this.level[prop] === group.defaultValues[prop]))) {
     // If all of the level props we need to worry about are undefined or equal
     // to the default value, we don't need to insert any new blocks.
-    return;
+    return Promise.resolve();
   }
 
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
