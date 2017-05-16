@@ -28,12 +28,40 @@ describe('MakerStatusOverlay', () => {
     expect(wrapper.html()).to.be.null;
   });
 
+  describe('size properties', () => {
+    it('control the overlay size', () => {
+      const wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          {...testProps}
+          isConnecting
+          width={22}
+          height={42}
+        />
+      );
+      expect(wrapper).to.have.style('width', '22px');
+      expect(wrapper).to.have.style('height', '42px');
+    });
+
+    it('on the error overlay too', () => {
+      const wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          {...testProps}
+          hasConnectionError
+          width={22}
+          height={42}
+        />
+      );
+      expect(wrapper).to.have.style('width', '22px');
+      expect(wrapper).to.have.style('height', '42px');
+    });
+  });
+
   describe('scale property', () => {
     it('sets scale transform if scale property is provided', () => {
       const wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}
-          isConnecting={true}
+          isConnecting
           scale={0.65}
         />
       );
@@ -46,7 +74,7 @@ describe('MakerStatusOverlay', () => {
       const wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}
-          isConnecting={true}
+          isConnecting
         />
       );
       expect(wrapper).not.to.have.style('transform');
@@ -62,18 +90,13 @@ describe('MakerStatusOverlay', () => {
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}
-          isConnecting={true}
+          isConnecting
         />
       );
     });
 
     it('renders an overlay', () => {
       expect(wrapper).to.have.descendants('div');
-    });
-
-    it('of given size', () => {
-      expect(wrapper).to.have.style('width', '10px');
-      expect(wrapper).to.have.style('height', '15px');
     });
 
     it('with a spinning gear', () => {
@@ -98,7 +121,7 @@ describe('MakerStatusOverlay', () => {
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}
-          isWrongBrowser={true}
+          isWrongBrowser
           handleDisableMaker={handleDisableMaker}
           handleOpenSetupPage={handleOpenSetupPage}
         />
@@ -107,11 +130,6 @@ describe('MakerStatusOverlay', () => {
 
     it('renders an overlay', () => {
       expect(wrapper).to.have.descendants('div');
-    });
-
-    it('of given size', () => {
-      expect(wrapper).to.have.style('width', '10px');
-      expect(wrapper).to.have.style('height', '15px');
     });
 
     it('with a warning sign', () => {
@@ -160,7 +178,7 @@ describe('MakerStatusOverlay', () => {
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}
-          hasConnectionError={true}
+          hasConnectionError
           handleTryAgain={handleTryAgain}
           useFakeBoardOnNextRun={useFakeBoardOnNextRun}
           handleOpenSetupPage={handleOpenSetupPage}
@@ -170,11 +188,6 @@ describe('MakerStatusOverlay', () => {
 
     it('renders an overlay', () => {
       expect(wrapper).to.have.descendants('div');
-    });
-
-    it('of given size', () => {
-      expect(wrapper).to.have.style('width', '10px');
-      expect(wrapper).to.have.style('height', '15px');
     });
 
     it('with a warning sign', () => {
