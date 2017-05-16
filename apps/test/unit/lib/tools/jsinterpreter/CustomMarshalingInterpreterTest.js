@@ -100,6 +100,13 @@ describe("The CustomMarshalingInterpreter", () => {
     });
   });
 
+  describe("the constructor", () => {
+    it("requires passing in a custom marshaler instance", () => {
+      expect(() => new CustomMarshalingInterpreter('foo = true;')).to.throw(
+        "You must provide a CustomMarshaler to CustomMarshalingInterpreter"
+      );
+    });
+  });
 
   describe("setProperty method", () => {
     it("delegates to the base class's setProperty method under normal circumstances", () => {
@@ -199,6 +206,21 @@ describe("The CustomMarshalingInterpreter", () => {
         expect(player.name).to.equal("Paul");
       });
 
+      it("will correctly walk the scope chain if necessary to set the property", () => {
+        new CustomMarshalingInterpreter(
+          `function makeNameSetter(newName) {
+            return function() {
+              name = newName;
+            }
+          }
+          var setNameToPaul = makeNameSetter("Paul")
+          setNameToPaul();
+          `,
+          customMarshaler
+        ).run();
+        expect(player.name).to.equal("Paul");
+      });
+
       describe("when used to set properties that are blocked from custom marshaling", () => {
         beforeEach(() => {
           customMarshaler = new CustomMarshaler({
@@ -212,6 +234,45 @@ describe("The CustomMarshalingInterpreter", () => {
         });
       });
     });
+  });
+
+  it("will walk the scope chain if necessary to set a property", () => {
+    interpreter = new CustomMarshalingInterpreter(
+      `var name;
+       function makeNameSetter(newName) {
+         return function() {
+           name = newName;
+         }
+       }
+       var setNameToPaul = makeNameSetter("Paul")
+       setNameToPaul();`,
+      customMarshaler
+    );
+    interpreter.run();
+    expect(interpreter.getProperty(interpreter.globalScope, 'name').toString()).to.equal("Paul");
+  });
+
+  it("will throw an exception when trying to set an undeclared variabled in strict mode", () => {
+    interpreter = new CustomMarshalingInterpreter(
+      `"use strict";
+       function makeNameSetter(newName) {
+         return function() {
+           name = newName;
+         }
+       }
+       var setNameToPaul = makeNameSetter("Paul")
+       setNameToPaul();`,
+      customMarshaler
+    );
+    expect(() => interpreter.run()).to.throw('Unknown identifier: name');
+  });
+
+  it("will throw an exception when trying to reference an undeclared variable", () => {
+    interpreter = new CustomMarshalingInterpreter(
+      `parseInt(someUndeclaredVariable)`,
+      customMarshaler
+    );
+    expect(() => interpreter.run()).to.throw('Unknown identifier: someUndeclaredVariable');
   });
 
   describe("getProperty method", () => {
