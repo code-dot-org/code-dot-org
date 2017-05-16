@@ -103,12 +103,8 @@ class Pd::Enrollment < ActiveRecord::Base
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
   end
 
-  def local_summer?
-    workshop.course == Pd::Workshop::COURSE_CSP && workshop.subject == Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-  end
-
   def survey_class
-    if local_summer?
+    if workshop.local_summer?
       Pd::LocalSummerWorkshopSurvey
     else
       Pd::WorkshopSurvey
@@ -172,7 +168,7 @@ class Pd::Enrollment < ActiveRecord::Base
     end
 
     # TODO: elijah: once the route is fully ready, add the following codition above
-    #elsif local_summer?
+    #elsif workshop.local_summer?
     #  pd_new_workshop_survey_url(code)
   end
 
