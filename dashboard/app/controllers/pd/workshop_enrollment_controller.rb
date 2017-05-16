@@ -96,7 +96,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # GET /pd/workshops/join/:section_code
   def join_section
     unless current_user
-      redirect_to "/users/sign_in?return_to=#{request.url}"
+      redirect_to "/users/sign_in?user_return_to=#{request.url}"
       return
     end
 
