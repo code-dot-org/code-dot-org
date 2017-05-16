@@ -1,0 +1,38 @@
+-check_language ||= nil
+-international_layout ||= nil
+-subheading ||= nil
+-company = request.GET['company']
+
+- extra_info = {}
+- extra_info["khan"] = { extratext: "" }
+- extra_info["khanes"] = { extratext: " (Spanish)" }
+- extra_info["khanpt"] = { extratext: " (Portuguese)" }
+- extra_info["khanhe"] = { extratext: " (Hebrew)" }
+- extra_info["khanfr"] = { extratext: " (French)" }
+- extra_info["khanpl"] = { extratext: " (Polish)" }
+- extra_info["kodableapp"] = { extratext: " (iPad app)" }
+
+-items = tutorials.find_with_tag(tag)
+
+-if items.count > 0
+
+  %div{style: "clear:both"}
+
+  %h2{style: "clear:both; margin-top: 40px"}=heading
+
+  -count = 0
+  -items.each_pair do |key, tutorial|
+    -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
+    -url = tutorials.launch_url_for(key,request.host_with_port)
+    -url = url + "?company=#{company}" if company
+    -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
+    -styling = ""  # "display:none" unless count == 0
+
+    %div{style: "float:left; width: 33%"}
+      %a{href: tutorial[:url], target: "_blank"}
+        %h3
+          = tutorial[:name]
+          - if extra_info[tutorial[:code]]
+            = extra_info[tutorial[:code]][:extratext]
+
+        %img{:src=>tutorial[:image].sub("/images/", "/images/fill-520x391/").sub(".png", ".jpg"), style: "width: 90%"}

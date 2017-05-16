@@ -1,0 +1,88 @@
+---
+layout: none
+theme: none
+title: Hour of Code 2015
+---
+
+:css
+
+  body {
+    font: 16px sans-serif;
+  }
+
+  h2 {
+    padding-top:30px;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  h4 {
+    margin-bottom: 5px;
+    padding-top:40px;
+  }
+
+- tutorials = Tutorials.new(:tutorials)
+
+%img{src: "/images/logo.png", style: "float:left"}
+%h1{style: "float:left; padding-left:50px"} The Hour of Code 2015
+
+%div{style: "clear:both"}
+
+- code_tutorials = []
+- # Let's just have two "mc" entries, and we hide one of them (50% chance of which one) so that
+- # we have a random ordering of "mc" vs. "starwars"
+- code_tutorials << {div_id: "mc_before", tutorial_id:"mc", extratext: "", url: "https://hoc-static-all.code.org/en-us/mc/1.html"}
+- code_tutorials << {div_id: "starwarsblocks", tutorial_id:"starwars", extratext: " (Blocks)", url: "https://hoc-static-all.code.org/en-us/starwarsblocks/1.html"}
+- code_tutorials << {div_id: "starwars", tutorial_id:"starwars", extratext: " (JavaScript)", url: "https://hoc-static-all.code.org/en-us/starwars/1.html"}
+- code_tutorials << {div_id: "mc_after", tutorial_id:"mc", extratext: "", url: " https://hoc-static-all.code.org/en-us/mc/1.html"}
+- code_tutorials << {div_id: "classic", tutorial_id:"hourofcode", extratext: "", url: "https://hoc-static-all.code.org/en-us/hoc/1.html"}
+
+#code_tutorials{style: "opacity: 0"}
+  - code_tutorials.each do |tutorial|
+    %div{id: tutorial[:div_id], style: "float:left; width: 33%"}
+      %a{href: tutorial[:url], target: "_blank"}
+        %h3{style: "width: 90%"}
+          = I18n.t(:"#{tutorial[:tutorial_id]}_name")
+          = tutorial[:extratext]
+        %img{src: "/shared/images/courses/logo_tall_#{tutorial[:tutorial_id]}.jpg", style: "width: 90%;"}
+
+- learn_categories = []
+- learn_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}
+- learn_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}
+- learn_categories << {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}
+- learn_categories << {tag:"Apps", name: I18n.t(:carousel_heading_devices)}
+- learn_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}
+- learn_categories << {tag:"Teacherled", name: I18n.t(:teach_led_lesson_plans)}
+
+#all-tutorials{:style=>'clear:both;'}
+  %br/
+  - learn_categories.each do |category|
+    - id = "collection-" + category[:tag]
+    = view :learn_carousel_static, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+
+
+#carousel-ie8{:style=>'clear:both'}
+  = view :learn_carousel_static, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
+
+#carousel-mobile{:style=>'clear:both'}
+  = view :learn_carousel_static, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile', :check_language=>true
+
+#carousel-international{:style=>'clear:both'}
+  = view :learn_carousel_static, :heading=>"Partner tutorials in various languages", :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+
+:javascript
+
+  window.onload = function() {
+    var id = Math.random() >= 0.5 ? "mc_before" : "mc_after";
+    var element = document.getElementById(id);
+    element.parentNode.removeChild(element);
+
+    document.getElementById("code_tutorials").style.opacity = "1";
+  }
+
