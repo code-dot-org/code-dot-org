@@ -13,6 +13,7 @@ import {
   isConnecting,
   isConnected,
   hasConnectionError,
+  getConnectionError,
   shouldRunWithFakeBoard
 } from '@cdo/apps/lib/kits/maker/redux';
 
@@ -29,6 +30,7 @@ describe('maker/redux.js', () => {
       expect(isConnecting({})).to.be.false;
       expect(isConnected({})).to.be.false;
       expect(hasConnectionError({})).to.be.false;
+      expect(getConnectionError({})).to.be.null;
       expect(shouldRunWithFakeBoard({})).to.be.false;
     });
 
@@ -37,6 +39,7 @@ describe('maker/redux.js', () => {
       expect(isConnecting()).to.be.false;
       expect(isConnected()).to.be.false;
       expect(hasConnectionError()).to.be.false;
+      expect(getConnectionError({})).to.be.null;
       expect(shouldRunWithFakeBoard()).to.be.false;
     });
   });
@@ -89,8 +92,15 @@ describe('maker/redux.js', () => {
 
   describe('the reportConnectionError action', () => {
     it('sets the maker state to connection error', () => {
-      store.dispatch(reportConnectionError());
+      const error = new Error('test');
+      store.dispatch(reportConnectionError(error));
       expect(hasConnectionError(store.getState())).to.be.true;
+    });
+
+    it('stores the reported error', () => {
+      const error = new Error('test');
+      store.dispatch(reportConnectionError(error));
+      expect(getConnectionError(store.getState())).to.eq(error);
     });
   });
 
@@ -98,6 +108,14 @@ describe('maker/redux.js', () => {
     it('disconnects maker', () => {
       store.dispatch(disconnect());
       expect(isConnected(store.getState())).to.be.false;
+    });
+
+    it('clears any stored errors', () => {
+      const error = new Error('test');
+      store.dispatch(reportConnectionError(error));
+      expect(getConnectionError(store.getState())).to.eq(error);
+      store.dispatch(disconnect());
+      expect(getConnectionError(store.getState())).to.be.null;
     });
   });
 

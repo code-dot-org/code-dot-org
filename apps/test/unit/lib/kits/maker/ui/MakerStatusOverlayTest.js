@@ -13,6 +13,7 @@ describe('MakerStatusOverlay', () => {
     width: 10,
     height: 15,
     isConnecting: false,
+    isWrongBrowser: false,
     hasConnectionError: false,
     handleTryAgain: () => {},
     handleDisableMaker: () => {},
