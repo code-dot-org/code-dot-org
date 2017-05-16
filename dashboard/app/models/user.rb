@@ -405,11 +405,21 @@ class User < ActiveRecord::Base
 
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
+    normalized_email = email.downcase
 
-    # TODO(asher): Change this to always (primarily?) search by hashed_email,
-    # eliminating a DB query.
-    User.find_by_email(email.downcase) ||
-      User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+    user = User.find_by(hashed_email: User.hash_email(normalized_email))
+    return user if user
+    # TODO(asher): Determine the frequency of finding the user using the
+    # (plaintext) email after not finding the user by hashed_email. If
+    # appropriate, remove the search by (plaintext) email.
+    user = User.find_by(email: normalized_email)
+    if user
+      Honeybadger.notify(
+        "User#find_by_email_or_hashed_email fallthrough: #{user.id}"
+      )
+      return user
+    end
+    nil
   end
 
   def self.find_channel_owner(encrypted_channel_id)
