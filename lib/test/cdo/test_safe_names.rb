@@ -26,8 +26,8 @@ class SafeNamesTest < Minitest::Test
     # Handles names that have other names as their strict subset
     verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
 
-    # Returns one copy of identical names
-    verify(['John Smith', 'John Smith'], ['John'])
+    # Preserves duplicate names
+    verify(['John Smith', 'John Smith'], ['John', 'John'])
   end
 
   private
