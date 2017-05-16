@@ -1,0 +1,17 @@
+- error_messages = local_assigns[:error_messages]
+
+- if error_messages.try(:any?)
+  #error_explanation
+    %h2
+      = pluralize(error_messages.count, 'error')
+      prohibited this course from being saved:
+    %ul
+      - error_messages.each do |msg|
+        %li= msg
+
+%h1= t('crud.new_model', model: Course.model_name.human)
+= form_for(:course, {url: courses_path}) do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
