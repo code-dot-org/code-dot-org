@@ -83,7 +83,8 @@
     Showing most recently sent mail. Click to view all mail.
 
 :ruby
-  rows = DB.fetch("
+  POSTE_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+  rows = POSTE_REPORTING_DB_READONLY.fetch("
     SELECT
       poste_messages.name as message
     FROM poste_messages
