@@ -533,6 +533,11 @@ var projects = module.exports = {
         return 'artist';
       case 'calc':
         return 'calc';
+      case 'craft':
+        if (appOptions.level.isEventLevel) {
+          return 'minecraft_designer';
+        }
+        return 'minecraft_adventurer';
       case 'eval':
         return 'eval';
       case 'studio':
