@@ -35,11 +35,14 @@ const styles = {
 
 const SetUpMessage = React.createClass({
   propTypes: {
-    type: React.PropTypes.oneOf(['courses', 'sections']).isRequired
+    type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
+    urlPrefix: React.PropTypes.string.isRequired,
+    studioUrlPrefix: React.PropTypes.string.isRequired
   },
 
   render() {
-    const { type } = this.props;
+    const { type, urlPrefix, studioUrlPrefix } = this.props;
+    const sectionsUrl = `${urlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
       return (
@@ -51,7 +54,7 @@ const SetUpMessage = React.createClass({
             {i18n.assignACourse()}
           </div>
           <ProgressButton
-            href="https://studio.code.org/"
+            href={studioUrlPrefix}
             color={ProgressButton.ButtonColor.gray}
             text={i18n.viewCourses()}
             style={styles.button}
@@ -69,7 +72,7 @@ const SetUpMessage = React.createClass({
             {i18n.createNewClassroom()}
           </div>
           <ProgressButton
-            href="https://code.org/teacher-dashboard#/sections"
+            href={sectionsUrl}
             color={ProgressButton.ButtonColor.gray}
             text={i18n.createSection()}
             style={styles.button}
