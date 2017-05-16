@@ -36,10 +36,9 @@
     "markdown_instructions": "*\"This could be sweet!\"*\r\n\r\nFix the error(s) to make all of the honey.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the debugging process a couple of times in a row. \\n\\nWhat causes the first problem?\\n\\nOnce that problem is fixed, what goes wrong?\",\"hint_id\":\"courseD_bee_debugging4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e5e8bb10b917f8f0e6a334cd1d93d39e/courseD_bee_debugging4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \\n\\nDon't forget to point out the direction of the turns!\",\"hint_id\":\"courseD_bee_debugging4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/41ec685527cebf32e0a93aecc77262b7/courseD_bee_debugging4.mp3\"}]",
     "instructions": "Fix the error(s) to make all of the honey.",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
