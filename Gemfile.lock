@@ -768,7 +768,7 @@ DEPENDENCIES
   daemons
   dalli
   dalli-elasticache
-  devise
+  devise (~> 4.2.0)
   devise_invitable (~> 1.6.0)
   execjs
   eyes_selenium (= 3.5.4)
