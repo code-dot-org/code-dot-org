@@ -428,7 +428,10 @@ testsContext.keys().forEach(testsContext);
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
-    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js'
+    'home/_teacher_homepage':       './src/sites/studio/pages/home/_teacher_homepage.js',
+    'home/_student_homepage':       './src/sites/studio/pages/home/_student_homepage.js',
+    'home/courses':                 './src/sites/studio/pages/home/courses.js',
+    'courses/index':                './src/sites/studio/pages/courses/index.js'
   };
 
   var otherEntries = {
@@ -459,6 +462,7 @@ testsContext.keys().forEach(testsContext);
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
+    'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
@@ -472,6 +476,8 @@ testsContext.keys().forEach(testsContext);
     'applab-api': './src/applab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
+
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js'
   };
 
   // Create a config for each of our bundles

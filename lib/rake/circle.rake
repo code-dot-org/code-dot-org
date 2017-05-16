@@ -81,7 +81,7 @@ namespace :circle do
       start_sauce_connect
       RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
     end
-    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -89,7 +89,7 @@ namespace :circle do
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
           " --feature #{container_features.join(',')}" \
           " --pegasus localhost.code.org:3000" \
-          " --dashboard localhost.studio.code.org:3000" \
+          " --dashboard localhost-studio.code.org:3000" \
           " --circle" \
           " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
           " --parallel #{use_saucelabs ? 16 : 8}" \
@@ -103,7 +103,7 @@ namespace :circle do
             " --feature #{container_eyes_features.join(',')}" \
             " --config ChromeLatestWin7,iPhone" \
             " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost.studio.code.org:3000" \
+            " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
             " --parallel 10" \
             " --retry_count 1" \

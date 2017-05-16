@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "license": "apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.9.0"
+    "aws-sdk": "^2.50.0"
   },
   "devDependencies": {
-    "lambda-tester": "^2.7.0",
-    "mocha": "^3.2.0",
-    "nock": "^9.0.4"
+    "lambda-tester": "^3.0.2",
+    "mocha": "^3.4.1",
+    "nock": "^9.0.4",
+    "uglify-es": "^3.0.5"
   }
 }

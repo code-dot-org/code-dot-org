@@ -1,0 +1,728 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 12 May 2017 16:34:25 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>AD107EE855E71AE6</RequestId><HostId>j+vuYke6QALWY4/f3lrTdlIeCDgMd84+qDMxFtlflxl/JGK57SOY6nXoB+bTR/nfAQqbFHiIezE=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:26 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/Mixed%20Case%20With%20Spacesac0a7f8c2faac49775a6.html&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:27 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/Mixed+Case+With+Spacesac0a7f8c2faac49775a6.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:26 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/Another%20Mixed%20Case%20Spaces%20Namec0cc21d843b34e9afb52.html&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:28 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/Another+Mixed+Case+Spaces+Namec0cc21d843b34e9afb52.html</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:27 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:28 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:27 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 12 May 2017 16:34:27 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>061E05BF36512072</RequestId><HostId>l3x9TXBtTmv4QMX0nYoBacGWiymdr7oX8mrLj5SWqeyQMqAhTLmZ/3Ot9MrkeEEOp+f5jaPz16E=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:27 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:29 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:28 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/mixed%20case%20with%20spacesac0a7f8c2faac49775a6.html
+    body:
+      encoding: ASCII-8BIT
+      string: stub-contents
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - I11PqdtSga2eiIi8bjmCIQ==
+      Content-Length:
+      - '13'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:29 GMT
+      X-Amz-Version-Id:
+      - VEPkYOXVlIK_y1nSkwqTyvMcjI6BsYk.
+      Etag:
+      - '"235d4fa9db5281ad9e8888bc6e398221"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:29 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"Mixed Case With Spacesac0a7f8c2faac49775a6.html","category":"text","size":13,"versionId":"VEPkYOXVlIK_y1nSkwqTyvMcjI6BsYk."}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - WkCthz8qR5BxgLfqHJcLZA==
+      Content-Length:
+      - '139'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:31 GMT
+      X-Amz-Version-Id:
+      - dkHIloXNnK0mzZ4Wn0SVG4pzxuA9vEYl
+      Etag:
+      - '"5a40ad873f2a47907180b7ea1c970b64"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:30 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/mixed%20case%20with%20spacesac0a7f8c2faac49775a6.html
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:31 GMT
+      Last-Modified:
+      - Fri, 12 May 2017 16:34:29 GMT
+      Etag:
+      - '"235d4fa9db5281ad9e8888bc6e398221"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - VEPkYOXVlIK_y1nSkwqTyvMcjI6BsYk.
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '13'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: stub-contents
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:30 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:32 GMT
+      Last-Modified:
+      - Fri, 12 May 2017 16:34:31 GMT
+      Etag:
+      - '"5a40ad873f2a47907180b7ea1c970b64"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - dkHIloXNnK0mzZ4Wn0SVG4pzxuA9vEYl
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '139'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"Mixed Case With Spacesac0a7f8c2faac49775a6.html","category":"text","size":13,"versionId":"VEPkYOXVlIK_y1nSkwqTyvMcjI6BsYk."}]'
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:31 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:32 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/manifest.json</Key><LastModified>2017-05-12T16:34:31.000Z</LastModified><ETag>&quot;5a40ad873f2a47907180b7ea1c970b64&quot;</ETag><Size>139</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/mixed+case+with+spacesac0a7f8c2faac49775a6.html</Key><LastModified>2017-05-12T16:34:29.000Z</LastModified><ETag>&quot;235d4fa9db5281ad9e8888bc6e398221&quot;</ETag><Size>13</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:31 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/another%20mixed%20case%20spaces%20namec0cc21d843b34e9afb52.html
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files/files_test/1/1/mixed case with spacesac0a7f8c2faac49775a6.html
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:33 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - VEPkYOXVlIK_y1nSkwqTyvMcjI6BsYk.
+      X-Amz-Version-Id:
+      - HtPuuoFLwwVKfeTasCLPApAw5dwRxd73
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2017-05-12T16:34:33.000Z</LastModified><ETag>&quot;235d4fa9db5281ad9e8888bc6e398221&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:32 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"Another Mixed Case Spaces Namec0cc21d843b34e9afb52.html","category":"text","size":13,"versionId":"HtPuuoFLwwVKfeTasCLPApAw5dwRxd73"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - eVRUGlfXpwhbRJSk5bfndQ==
+      Content-Length:
+      - '147'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:33 GMT
+      X-Amz-Version-Id:
+      - _NXv_pZCG3XNRVuoSPfQu5rA4dZeYcnT
+      Etag:
+      - '"7954541a57d7a7085b4494a4e5b7e775"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:32 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/mixed%20case%20with%20spacesac0a7f8c2faac49775a6.html
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:34 GMT
+      X-Amz-Version-Id:
+      - ".HP1R0cpQ5HXEb4jTRXr3IVw39p2jYUk"
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:33 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/another%20mixed%20case%20spaces%20namec0cc21d843b34e9afb52.html
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:34 GMT
+      Last-Modified:
+      - Fri, 12 May 2017 16:34:33 GMT
+      Etag:
+      - '"235d4fa9db5281ad9e8888bc6e398221"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - HtPuuoFLwwVKfeTasCLPApAw5dwRxd73
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '13'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: stub-contents
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:33 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/mixed%20case%20with%20spacesac0a7f8c2faac49775a6.html
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Amz-Delete-Marker:
+      - 'true'
+      X-Amz-Version-Id:
+      - ".HP1R0cpQ5HXEb4jTRXr3IVw39p2jYUk"
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 12 May 2017 16:34:33 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/mixed case with spacesac0a7f8c2faac49775a6.html</Key><RequestId>021A9EDB38023424</RequestId><HostId>I7ShQG3JbhI383U9ZmvJNEesOrY86+iZ7Gj/qiO9BDqEQnQlcXVzPpNCrmqfToz5dqQx6kqI7m4=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:34 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:35 GMT
+      Last-Modified:
+      - Fri, 12 May 2017 16:34:33 GMT
+      Etag:
+      - '"7954541a57d7a7085b4494a4e5b7e775"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - _NXv_pZCG3XNRVuoSPfQu5rA4dZeYcnT
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '147'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"Another Mixed Case Spaces Namec0cc21d843b34e9afb52.html","category":"text","size":13,"versionId":"HtPuuoFLwwVKfeTasCLPApAw5dwRxd73"}]'
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:34 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: "[]"
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 11FxOYiYfpMxmANj4kGJzg==
+      Content-Length:
+      - '2'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:36 GMT
+      X-Amz-Version-Id:
+      - dQsKd3fUP7tq1_ohDDqDTOQ17tZalHH0
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:35 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/another%20mixed%20case%20spaces%20namec0cc21d843b34e9afb52.html
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:36 GMT
+      X-Amz-Version-Id:
+      - c_ngxES3S6g0ad.V0gCU7yoPZI2hNSF3
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:35 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:37 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>dQsKd3fUP7tq1_ohDDqDTOQ17tZalHH0</VersionId><IsLatest>true</IsLatest><LastModified>2017-05-12T16:34:36.000Z</LastModified><ETag>&quot;d751713988987e9331980363e24189ce&quot;</ETag><Size>2</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>_NXv_pZCG3XNRVuoSPfQu5rA4dZeYcnT</VersionId><IsLatest>false</IsLatest><LastModified>2017-05-12T16:34:33.000Z</LastModified><ETag>&quot;7954541a57d7a7085b4494a4e5b7e775&quot;</ETag><Size>147</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>dkHIloXNnK0mzZ4Wn0SVG4pzxuA9vEYl</VersionId><IsLatest>false</IsLatest><LastModified>2017-05-12T16:34:31.000Z</LastModified><ETag>&quot;5a40ad873f2a47907180b7ea1c970b64&quot;</ETag><Size>139</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:37 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>dQsKd3fUP7tq1_ohDDqDTOQ17tZalHH0</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>_NXv_pZCG3XNRVuoSPfQu5rA4dZeYcnT</VersionId>
+          </Object>
+          <Object>
+            <Key>files_test/1/1/manifest.json</Key>
+            <VersionId>dkHIloXNnK0mzZ4Wn0SVG4pzxuA9vEYl</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - lEfEhFLS+ReShL6YjMvorg==
+      Content-Length:
+      - '470'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 16:34:38 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:37 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 12 May 2017 16:34:37 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>B3E3ACB3135E3359</RequestId><HostId>jPwIlRYMEF8O2QpFtqeXMpvCVK/F7F+Sredy+0elnjVDeNgVk6J+/3xunOf5yDeiWojk7d3EJ/c=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 12 May 2017 16:34:38 GMT
+recorded_with: VCR 3.0.3
