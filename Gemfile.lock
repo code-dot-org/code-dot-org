@@ -44,6 +44,27 @@ GIT
     geocoder (1.3.7)
 
 GIT
+  remote: https://github.com/wjordan/image_optim.git
+  revision: 939996f7ad102227c73b42bfda0058f9c66698aa
+  ref: cdo
+  specs:
+    image_optim (0.24.2)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 3.0)
+      image_size (~> 1.5)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+
+GIT
+  remote: https://github.com/wjordan/image_optim_pack.git
+  revision: 41e063908e1b038a852f18504dd52721aac5ea6a
+  ref: guetzli
+  specs:
+    image_optim_pack (0.5.0)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+
+GIT
   remote: https://github.com/wjordan/ims-lti.git
   revision: 39203db48428ab943547363b13da56b02a19d905
   ref: oauth_051
@@ -265,6 +286,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.7.0)
+    exifr (1.2.5)
     extlib (0.9.16)
     eyes_core (3.5.4)
       chunky_png (= 1.3.6)
@@ -295,6 +317,7 @@ GEM
     firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
+    fspath (3.1.0)
     gemoji (2.1.0)
     gherkin (4.0.0)
     gli (2.14.0)
@@ -355,6 +378,12 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     i18n (0.8.1)
+    image_optim_rails (0.3.0)
+      image_optim (~> 0.24.0)
+      rails
+      sprockets
+    image_size (1.5.0)
+    in_threads (1.4.0)
     io-like (0.3.0)
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -485,6 +514,7 @@ GEM
       ttfunk
     phantomjs (1.9.7.1)
     powerpack (0.1.1)
+    progress (3.3.1)
     pusher (1.3.0)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
@@ -759,6 +789,10 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger
   httparty
+  image_optim!
+  image_optim_pack (~> 0.5.0)!
+  image_optim_rails
+  image_size
   ims-lti!
   jbuilder (~> 2.5)
   jquery-rails
