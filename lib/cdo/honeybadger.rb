@@ -97,7 +97,10 @@ module Honeybadger
         "?occurred_after=#{midnight_epoch}&q=-is:resolved%20-is:paused%20-is:ignored"
       while next_url
         response = `curl -u #{CDO.honeybadger_api_token}: #{next_url}`
+
         parsed_response = JSON.parse response
+        next unless parsed_response['results']
+
         parsed_response['results'].each do |issue|
           issues << {
             environment: issue['environment'] || 'unknown',
