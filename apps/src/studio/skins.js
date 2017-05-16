@@ -1176,7 +1176,6 @@ function loadHoc2015x(skin, assetUrl) {
   skin.gridAlignedMovement = true;
   skin.gridAlignedExtraPauseSteps = 1;
   skin.slowExecutionFactor = 10;
-  skin.itemGridAlignedMovement = true;
 
   skin.hideIconInClearPuzzle = true;
 
