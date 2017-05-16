@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'CS Principles Pre-survey', lockable: true
 assessment 'CSP pre-assessment survey'
@@ -113,3 +114,9 @@ level 'v2 U1L14 Student Lesson Introduction'
 
 stage 'Unit 1 Chapter 2 Assessment', lockable: true
 assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group'
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'

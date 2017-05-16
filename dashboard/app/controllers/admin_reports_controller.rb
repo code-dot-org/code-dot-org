@@ -8,7 +8,6 @@ class AdminReportsController < ApplicationController
   check_authorization
 
   before_action :set_script
-  include LevelSourceHintsHelper
 
   def directory
   end

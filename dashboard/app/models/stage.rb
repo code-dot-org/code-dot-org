@@ -9,7 +9,7 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #  flex_category     :string(255)
-#  lockable          :boolean
+#  lockable          :boolean          default(FALSE), not null
 #  relative_position :integer          not null
 #
 # Indexes
@@ -155,6 +155,7 @@ class Stage < ActiveRecord::Base
           id: script_level.id,
           position: script_level.position,
           named_level: script_level.named_level?,
+          progression: script_level.progression,
           path: script_level.path,
         }
 

@@ -30,11 +30,6 @@ module ApplicationHelper
     "#{s} ago"
   end
 
-  def format_xml(xml)
-    doc = Nokogiri::XML(xml)
-    doc.to_xhtml
-  end
-
   def gender_options
     User::GENDER_OPTIONS.map do |key, value|
       [(key ? t(key) : ''), value]
@@ -197,13 +192,6 @@ module ApplicationHelper
     HTML
 
     html.html_safe
-  end
-
-  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
-  def is_k1?  # rubocop:disable PredicateName
-    is_k1 = @script.try(:is_k1?)
-    is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
-    is_k1
   end
 
   def script_certificate_image_url(user, script)

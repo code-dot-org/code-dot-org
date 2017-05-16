@@ -150,6 +150,11 @@ class HttpCache
             cookies: default_cookies
           },
           {
+            path: '/api/v1/projects/gallery/public/*',
+            headers: [],
+            cookies: 'none'
+          },
+          {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
@@ -165,7 +170,12 @@ class HttpCache
             proxy: 'pegasus',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
-          }
+          },
+          {
+            path: '/v3/files-public/*',
+            headers: [],
+            cookies: 'none'
+          },
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
         default: {

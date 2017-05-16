@@ -8,26 +8,19 @@ import _ from 'lodash';
 const styles = {
   card: {
     overflow: 'hidden',
-    borderRadius: 2,
+    borderRadius: 3,
     border: '1px solid gray',
     position: 'relative',
     height: 245,
-    width: 448,
-    marginLeft: 25,
-    float: 'left'
+    width: 458,
+    float: 'left',
+    marginBottom: 20
   },
-  overlay: {
-    background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
-    bottom: 0,
-    left: 0,
+  tealBar: {
     position: 'absolute',
-    right: 0,
-    top: 0,
-    zIndex: 1,
-  },
-  image: {
-    position: 'absolute',
-    width: 465
+    width: 458,
+    backgroundColor: color.teal,
+    height: 130
   },
   courseName: {
     paddingLeft: 25,
@@ -37,7 +30,7 @@ const styles = {
     marginTop: 15,
     fontSize: 18,
     fontFamily: '"Gotham 3r", sans-serif',
-    color: 'rgba(255, 255, 255, .9)',
+    color: color.white,
     zIndex: 2,
     position: 'absolute',
     display: 'inline'
@@ -54,7 +47,8 @@ const styles = {
     color: color.gray,
     background: color.white,
     height: 130,
-    width: 465,
+    width: "100%",
+    boxSizing: "border-box",
     position: 'absolute',
     zIndex: 2,
   },
@@ -62,12 +56,14 @@ const styles = {
     position: 'absolute',
     zIndex: 3,
     fontSize: 18,
-    color: color.white,
+    color: color.teal,
     marginLeft: 400,
-    background: color.teal,
+    background: color.white,
     padding: 10,
     borderRadius: 100,
-    border: '1px solid white',
+    borderWidth: 1,
+    borderColor: color.gray,
+    borderStyle: 'solid',
     display: 'inline',
     marginTop: 15
   },
@@ -98,7 +94,6 @@ const CourseCard = React.createClass({
   propTypes: {
     courseName: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
     assignedSections: React.PropTypes.array.isRequired
   },
@@ -135,31 +130,23 @@ const CourseCard = React.createClass({
 
     return (
       <div style={styles.card}>
-        <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
-
+        <div style={styles.tealBar}/>
         {this.renderEnrollmentIcon()}
-
         <div style={styles.courseName}>
           {courseName}
         </div>
-
         <div style={styles.description}>
           {description}
-
           <a href={link} style={styles.linkBox}>
             <h3 style={styles.continueLink}>
               {i18n.viewCourse()}
             </h3>
-
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
           </a>
         </div>
-
-        <div style={styles.overlay}/>
       </div>
     );
   }
-
 });
 
 export default CourseCard;

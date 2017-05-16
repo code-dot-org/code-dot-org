@@ -55,8 +55,10 @@ For more information, please contact advocacy@code.org.
 * <a href="http://anitaborg.org/">Anita Borg Institute</a>
 * <a href="https://www.aztechcouncil.org/">Arizona Technology Council</a>
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
+* <a href="https://www.battelle.org/">Battelle</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Public Schools</a>
+* <a href="http://www.codevirginia.org/">CodeVA</a>
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a>
 * <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a>
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
@@ -73,7 +75,9 @@ For more information, please contact advocacy@code.org.
 * <a href="https://www.ieee.org/index.html">IEEE</a>
 * <a href="https://www.illinoistech.org/">Illinois Technology Association</a>
 * <a href="http://www.kctechcouncil.com/">KC Tech Council</a> 
+* <a href="http://masscan.net/">MassCAN</a> 
 * <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a>
+* <a href="https://technologycouncil.com/">Nashville Technology Council</a>
 * <a href="https://www.nms.org/">National Math and Science Initiative</a>
 * <a href="https://www.ncwit.org/">NCWIT</a>
 * <a href="http://nextech.org/">Nextech</a>
@@ -83,11 +87,13 @@ For more information, please contact advocacy@code.org.
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a>
+* <a href="http://www.stemx.us/">STEMx</a>
 * <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a>
 * <a href="http://www.technet.org/">TechNet</a>
 * <a href="http://www.talklou.com/wp/">Technology Association of Louisville Kentucky</a>
 * <a href="http://www.techoregon.org/">Technology Association of Oregon</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
+* <a href="http://www.washingtonstem.org/">Washington STEM</a>
 
 [#tools-section]
 

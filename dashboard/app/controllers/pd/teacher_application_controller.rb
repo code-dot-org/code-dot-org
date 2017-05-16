@@ -1,5 +1,6 @@
 class Pd::TeacherApplicationController < ApplicationController
   EMAIL_TEMPLATE_PREFIX = '2017_teacher_application_'.freeze
+  DEFAULT_MANAGE_PAGE_SIZE = 25
 
   load_and_authorize_resource(
     :teacher_application,
@@ -41,6 +42,7 @@ class Pd::TeacherApplicationController < ApplicationController
       )
     end
 
+    @teacher_applications = @teacher_applications.includes(:user, :accepted_program).page(page).per(page_size)
     view_options(full_width: true)
   end
 
@@ -111,7 +113,17 @@ class Pd::TeacherApplicationController < ApplicationController
       :secondary_email,
       :accepted_workshop,
       :regional_partner_name,
-      :program_registration_json
+      :program_registration_json,
+      :selected_course
     )
+  end
+
+  def page
+    params[:page] || 1
+  end
+
+  def page_size
+    return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
+    params[:page_size] == 'All' ? @teacher_applications.count : params[:page_size]
   end
 end

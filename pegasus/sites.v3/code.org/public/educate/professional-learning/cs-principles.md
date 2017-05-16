@@ -13,19 +13,13 @@ The Code.org Computer Science Principles Professional Learning Program is an int
 We are still accepting applicants in the following regions:
 
 * Arizona
-* Bay Area and Central Coast, CA
-* Sacramento Valley and North Coast, CA
 * San Joaquin Valley, CA
-* Colorado
-* Northeast Florida
 * Miami, FL
 * Illinois
 * Indiana
 * Maine
 * Maryland
-* Montana
 * New Jersey
-* Nevada
 * Pennsylvania
 * Austin, TX
 * Utah

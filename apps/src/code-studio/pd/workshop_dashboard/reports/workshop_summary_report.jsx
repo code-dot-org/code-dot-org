@@ -103,8 +103,8 @@ const WorkshopSummaryReport = React.createClass({
     return amount ? `$${Number(amount).toFixed(2)}` : null;
   },
 
-  isAdmin() {
-    return window.dashboard.workshop.permission === 'admin';
+  isWorkshopAdmin() {
+    return window.dashboard.workshop.permission === 'workshop_admin';
   },
 
   getColumns() {
@@ -175,7 +175,7 @@ const WorkshopSummaryReport = React.createClass({
       });
     }
 
-    if (this.isAdmin()) {
+    if (this.isWorkshopAdmin()) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}

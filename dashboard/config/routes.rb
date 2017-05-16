@@ -18,7 +18,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
-  get '/teacher', to: 'home#teacher_homepage'
+  get '/courses', to: 'home#courses'
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -154,6 +154,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
+      get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
@@ -180,7 +181,7 @@ Dashboard::Application.routes.draw do
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
-  get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
+  get '/course/:course', to: 'courses#index', as: 'course'
 
   get '/beta', to: redirect('/')
 
@@ -208,7 +209,6 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
-  get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
@@ -244,8 +244,6 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-
-  get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -424,6 +422,8 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
+
+      get 'projects/gallery/public/:project_type/:limit(/:offset)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

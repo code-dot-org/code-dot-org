@@ -87,4 +87,12 @@ module.exports = class PatchedInterpreter extends Interpreter {
       this.stateStack.shift();
     }
   }
+
+  get customMarshalObjectList() {
+    return this._customMarshalObjectList || [];
+  }
+  set customMarshalObjectList(customMarshalObjectList) {
+    // TODO: perform validation on this
+    this._customMarshalObjectList = customMarshalObjectList;
+  }
 };

@@ -8,7 +8,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.border_gray,
     borderRadius: 3,
-    marginTop: 25
+    width: 940
   },
   headerRow: {
     backgroundColor: color.table_header,
@@ -31,7 +31,7 @@ const styles = {
     color: color.charcoal,
     paddingLeft: 20,
     paddingRight: 20,
-    minWidth: 300
+    width: 310
   },
   col2: {
     borderRightWidth: 1,
@@ -41,7 +41,7 @@ const styles = {
     color: color.charcoal,
     paddingLeft: 20,
     paddingRight: 20,
-    minWidth: 300
+    width: 310
   },
   col3: {
     borderRightWidth: 1,
@@ -51,14 +51,14 @@ const styles = {
     color: color.charcoal,
     paddingLeft: 20,
     paddingRight: 20,
-    minWidth: 100
+    width: 110
   },
   col4: {
     lineHeight: '52px',
     color: color.charcoal,
     paddingLeft: 20,
     paddingRight: 20,
-    minWidth: 200
+    width: 210
   },
   colText: {
     color: color.charcoal,
@@ -94,7 +94,7 @@ const SectionsTable = React.createClass({
     return (
       <table style={styles.table}>
         <thead>
-          <tr style={[styles.row, styles.headerRow]}>
+          <tr style={styles.headerRow}>
             <td style={styles.col1}>
               <div style={styles.colText}>
                 {i18n.section()}
@@ -126,7 +126,7 @@ const SectionsTable = React.createClass({
                 </a>
               </td>
               <td style={styles.col2}>
-                <a href={section.linktoCourse} style={styles.link}>
+                <a href={section.linkToCourse} style={styles.link}>
                   {section.course}
                 </a>
               </td>

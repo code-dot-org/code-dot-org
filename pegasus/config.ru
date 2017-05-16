@@ -36,6 +36,11 @@ if CDO.throttle_data_apis
   use Rack::Attack
 end
 
+if CDO.image_optim
+  require 'cdo/rack/optimize'
+  use Rack::Optimize
+end
+
 require 'files_api'
 use FilesApi
 
