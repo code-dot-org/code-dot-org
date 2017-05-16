@@ -6,7 +6,7 @@ import i18n from "@cdo/locale";
 
 const RecentCoursesCollapsible = React.createClass({
   propTypes: {
-    courses: PropTypes.arrayOf(
+      courses: PropTypes.arrayOf(
       PropTypes.shape({
         courseName: React.PropTypes.string.isRequired,
         description: React.PropTypes.string.isRequired,
@@ -26,6 +26,11 @@ const RecentCoursesCollapsible = React.createClass({
       linkText = i18n.viewAllCourses();
       link = "/courses";
     }
+  },
+
+  render() {
+    const { courses, urlPrefix, studioUrlPrefix } = this.props;
+    const viewAllCoursesUrl = `${studioUrlPrefix}courses`;
 
     return (
       <CollapsibleSection
@@ -45,7 +50,11 @@ const RecentCoursesCollapsible = React.createClass({
             />
           )
         ) : (
-          <SetUpMessage type="courses"/>
+          <SetUpMessage
+            type="courses"
+            urlPrefix={urlPrefix}
+            studioUrlPrefix={studioUrlPrefix}
+          />
         )}
       </CollapsibleSection>
     );
