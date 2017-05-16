@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Buttons and Events'
 named_level 'Unit 5 Lesson 1 Introduction'

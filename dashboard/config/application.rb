@@ -42,6 +42,11 @@ module Dashboard
       config.autoload_paths << Rails.root.join('test/mailers/previews')
     end
 
+    if CDO.image_optim
+      require 'cdo/rack/optimize'
+      config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
+    end
+
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
