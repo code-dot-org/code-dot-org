@@ -25,7 +25,7 @@
                 %span.info-box-message
                   Already have a Code.org account?
               %p
-                = link_to 'Sign in', CDO.studio_url("/users/sign_in?return_to=#{request.url}")
+                = link_to 'Sign in', CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
                 first to pre-fill some information.
         %p
           Fields marked with a
