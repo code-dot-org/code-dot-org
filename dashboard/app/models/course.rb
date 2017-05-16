@@ -18,6 +18,32 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
 
+  validates :name,
+    presence: true,
+    uniqueness: {case_sensitive: false}
+
+  class CourseNameValidator < ActiveModel::Validator
+    def validate(course)
+      return if course.plc_course
+
+      unless /\A[a-z0-9\-]+\z/ =~ course.name
+        course.errors[:base] << 'can only contain lowercase letters, numbers and dashes'
+      end
+    end
+  end
+
+  validates_with CourseNameValidator
+
+  # As we read and write to files with the course name, to prevent directory
+  # traversal (for security reasons), we do not allow the name to start with a
+  # tilde or dot or contain a slash.
+  validates :name,
+    presence: true,
+    format: {
+      without: /\A~|\A\.|\//,
+      message: 'cannot start with a tilde or dot or contain slashes'
+    }
+
   def summarize
     {
       name: name,

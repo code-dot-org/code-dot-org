@@ -5,33 +5,35 @@ class CoursesControllerTest < ActionController::TestCase
 
   setup do
     @teacher = create :teacher
-    plc_course = create :plc_course, name: "My PLC"
+    sign_in @teacher
+
+    plc_course = create :plc_course, name: 'My PLC'
     @course_plc = plc_course.course
-    @course_regular = create :course, name: 'non plc course'
+    @course_regular = create :course, name: 'non-plc-course'
   end
 
   test "plc courses get sent to user_course_enrollments_controller" do
-    sign_in @teacher
-
     get :show, params: {course_name: @course_plc.name}
     assert_template 'plc/user_course_enrollments/index'
+  end
 
-    get :show, params: {course_name: 'my-plc'}
+  test "plc course names get titleized" do
+    get :show, params: {course_name: 'my_plc'}
     assert_template 'plc/user_course_enrollments/index'
   end
 
-  test "regular courses get sent to index" do
-    sign_in @teacher
-
+  test "regular courses get sent to show" do
     get :show, params: {course_name: @course_regular.name}
-    assert_template 'courses/show'
-
-    get :show, params: {course_name: 'non-plc-course'}
     assert_template 'courses/show'
   end
 
-  test "non exist course throws" do
-    sign_in @teacher
+  test "regular courses do not get titlized" do
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {course_name: 'non_plc_course'}
+    end
+  end
+
+  test "non existant course throws" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {course_name: 'nosuchcourse'}
     end
