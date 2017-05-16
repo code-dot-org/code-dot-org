@@ -896,8 +896,8 @@ class User < ActiveRecord::Base
   # very near future
   # TODO: Once this data is more real, we should be writing tests for it.
   def recent_courses
-    in_progress_and_completed_scripts.map do |script|
-      script_id = script[:script_id]
+    in_progress_and_completed_scripts.map do |user_script|
+      script_id = user_script[:script_id]
       script_name = Script.get_from_cache(script_id)[:name]
       {
         id: script_id,
