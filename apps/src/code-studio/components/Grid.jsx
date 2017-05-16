@@ -1,6 +1,13 @@
 import React from 'react';
-import { SquareType, WallTypeMask, WallCoordRowMask, WallCoordRowShift, WallCoordColMask, WallCoordColShift } from '@cdo/apps/studio/constants';
-var mazeUtils = require('@cdo/apps/maze/mazeUtils');
+import {
+  SquareType,
+  WallTypeMask,
+  WallCoordRowMask,
+  WallCoordRowShift,
+  WallCoordColMask,
+  WallCoordColShift
+} from '@cdo/apps/studio/constants';
+import mazeUtils from '@cdo/apps/maze/mazeUtils';
 
 const CELL_WIDTH = 48;
 const CELL_HEIGHT = 38;
