@@ -14,8 +14,8 @@
     margin: 0 0 40px 0;
 
     .content {
-      max-width: 970px;
-      margin: 0 auto;
+      width: 100%;
+      padding: 0 10px;
       overflow: visible;
       box-sizing: border-box;
     }
@@ -50,6 +50,7 @@
     #headerlinks {
       float: left;
       position: relative;
+      padding-left: 10px;
 
       .headerlink {
         display: inline-block;
