@@ -590,16 +590,6 @@ const WorkshopForm = React.createClass({
         validation.style.capacity = "error";
         validation.help.capacity = "Must be a positive integer.";
       }
-      if (!this.state.on_map) {
-        validation.isValid = false;
-        validation.style.on_map = "error";
-        validation.help.on_map = "Required.";
-      }
-      if (!this.state.funded) {
-        validation.isValid = false;
-        validation.style.funded = "error";
-        validation.help.funded = "Required.";
-      }
       if (!this.state.course) {
         validation.isValid = false;
         validation.style.course = "error";

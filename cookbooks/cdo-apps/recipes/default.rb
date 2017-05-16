@@ -39,6 +39,7 @@ apt_package %w(
   flex
   gettext
   ncurses-dev
+  cmake
 )
 
 #multipackage

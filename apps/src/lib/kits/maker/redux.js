@@ -11,6 +11,7 @@ const CONNECTION_ERROR = 'connectionState/CONNECTION_ERROR';
 const MakerState = Immutable.Record({
   enabled: false,
   connectionState: DISCONNECTED,
+  usingFakeBoardNextTime: false,
 });
 
 // Selectors
@@ -34,6 +35,10 @@ export function isConnected(state) {
 
 export function hasConnectionError(state) {
   return getRoot(state).connectionState === CONNECTION_ERROR;
+}
+
+export function shouldRunWithFakeBoard(state) {
+  return getRoot(state).usingFakeBoardNextTime;
 }
 
 // Actions
@@ -62,6 +67,11 @@ export function disconnect() {
   return {type: DISCONNECT};
 }
 
+const USE_FAKE_BOARD_ON_NEXT_RUN = 'maker/USE_FAKE_BOARD_ON_NEXT_RUN';
+export function useFakeBoardOnNextRun() {
+  return {type: USE_FAKE_BOARD_ON_NEXT_RUN};
+}
+
 // Reducer
 export function reducer(state = new MakerState(), action) {
   if (action.type === ENABLE) {
@@ -69,11 +79,16 @@ export function reducer(state = new MakerState(), action) {
   } else if (action.type === START_CONNECTING) {
     return state.set('connectionState', CONNECTING);
   } else if (action.type === REPORT_CONNECTED) {
-    return state.set('connectionState', CONNECTED);
+    return state.merge({
+      'connectionState': CONNECTED,
+      'usingFakeBoardNextTime': false,
+    });
   } else if (action.type === REPORT_CONNECTION_ERROR) {
     return state.set('connectionState', CONNECTION_ERROR);
   } else if (action.type === DISCONNECT) {
     return state.set('connectionState', DISCONNECTED);
+  } else if (action.type === USE_FAKE_BOARD_ON_NEXT_RUN) {
+    return state.set('usingFakeBoardNextTime', true);
   }
 
   return state;
