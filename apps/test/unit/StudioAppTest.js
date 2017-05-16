@@ -108,14 +108,21 @@ describe("StudioApp", () => {
       project.getUrl.restore();
     });
 
-    it("embed page with embed in url", () => {
+    const i18n = {
+      t: key => key
+    };
+
+    it("How It Works URL for game lab embed page", () => {
       project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/embed');
-      //i18n with t function
-      const i18n = {
-        t: key => key
-      };
       const footItems = makeFooterMenuItems(i18n, project);
-      expect(footItems).not.to.be.undefined;
+      const howItWorksItem = footItems.find(item =>
+          item.text === 'footer.how_it_works');
+      expect(howItWorksItem.link).to.equal('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit');
+    });
+
+    it("How It Works URL for game lab share page", () => {
+      project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/');
+      const footItems = makeFooterMenuItems(i18n, project);
       const howItWorksItem = footItems.find(item =>
           item.text === 'footer.how_it_works');
       expect(howItWorksItem.link).to.equal('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit');
