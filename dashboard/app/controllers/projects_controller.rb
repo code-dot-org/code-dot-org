@@ -27,10 +27,10 @@ class ProjectsController < ApplicationController
     gumball: {
       name: 'New Gumball Project'
     },
-    mc: {
-      name: 'New Minecraft Simple Project'
+    minecraft_adventurer: {
+      name: 'New Minecraft Adventurer Project'
     },
-    minecraft: {
+    minecraft_designer: {
       name: 'New Minecraft Designer Project'
     },
     applab: {
