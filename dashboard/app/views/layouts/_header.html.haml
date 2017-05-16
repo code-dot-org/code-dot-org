@@ -39,7 +39,10 @@
         .row.header_row
           .header_left
             .header_logo
-              = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+              - if current_page?(root_url)
+                = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+              - else
+                = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
           .header_middle
             - if script_level
