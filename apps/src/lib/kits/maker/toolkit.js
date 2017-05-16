@@ -7,9 +7,10 @@ import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 import FakeBoard from './FakeBoard';
 import * as commands from './commands';
 import * as dropletConfig from './dropletConfig';
-import MakerError, {ConnectionCanceledError} from './MakerError';
+import MakerError, {ConnectionCanceledError, UnsupportedBrowserError} from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
+import {isChrome, gtChrome33} from './util/browserChecks';
 /* global trackEvent */
 
 // Re-export some modules so consumers only need this 'toolkit' module
@@ -75,7 +76,8 @@ export function connect({interpreter, onDisconnect}) {
   const dispatch = store.dispatch.bind(store);
   dispatch(redux.startConnecting());
 
-  return getBoard()
+  return confirmSupportedBrowser()
+      .then(getBoard)
       .then(board => {
         if (!isConnecting()) {
           // Must've called reset() - exit the promise chain.
@@ -103,11 +105,23 @@ export function connect({interpreter, onDisconnect}) {
           return Promise.reject(error);
         } else {
           // Something went wrong, so show the error screen.
-          dispatch(redux.reportConnectionError());
+          dispatch(redux.reportConnectionError(error));
           trackEvent('Maker', 'ConnectionError');
           return Promise.reject(error);
         }
       });
+}
+
+/**
+ * Check that we are using a supported browser
+ * @returns {Promise}
+ */
+function confirmSupportedBrowser() {
+  if (isChrome() && gtChrome33()) {
+    return Promise.resolve();
+  } else {
+    return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));
+  }
 }
 
 /**

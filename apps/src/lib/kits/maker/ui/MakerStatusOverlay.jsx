@@ -4,7 +4,8 @@ import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
-import {isConnecting, hasConnectionError, useFakeBoardOnNextRun} from '../redux';
+import {isConnecting, hasConnectionError, getConnectionError, useFakeBoardOnNextRun} from '../redux';
+import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
 
 const overlayDimensionsPropTypes = {
@@ -21,7 +22,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     isConnecting: PropTypes.bool.isRequired,
-    isWrongBrowser: PropTypes.bool, // TODO: Make required when wired up
+    isWrongBrowser: PropTypes.bool.isRequired,
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func.isRequired,
@@ -61,6 +62,7 @@ export default connect(
   state => ({
     scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
+    isWrongBrowser: getConnectionError(state) instanceof UnsupportedBrowserError,
     hasConnectionError: hasConnectionError(state),
     handleOpenSetupPage: () => {
       window.open('/maker/setup', '_blank');
