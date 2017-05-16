@@ -1172,6 +1172,11 @@ function loadHoc2015(skin, assetUrl) {
 
 function loadHoc2015x(skin, assetUrl) {
   skin.preloadAssets = true;
+  skin.sortDrawOrder = true;
+  skin.gridAlignedMovement = true;
+  skin.gridAlignedExtraPauseSteps = 1;
+  skin.slowExecutionFactor = 10;
+  skin.itemGridAlignedMovement = true;
 
   skin.hideIconInClearPuzzle = true;
 
