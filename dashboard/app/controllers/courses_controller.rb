@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  def index
+  def show
     course_name = params[:course].tr('-', '_').titleize
     course = Course.find_by_name(course_name)
     raise ActiveRecord::RecordNotFound unless course
@@ -10,6 +10,6 @@ class CoursesController < ApplicationController
       return
     end
 
-    render 'index', locals: {course: course}
+    render 'show', locals: {course: course}
   end
 end
