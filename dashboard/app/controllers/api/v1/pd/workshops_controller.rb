@@ -18,7 +18,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
-    if current_user.admin? && params[:workshop_id]
+    if (current_user.admin? || current_user.permission?(UserPermission::WORKSHOP_ADMIN)) && params[:workshop_id]
       @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
     end
 
@@ -37,7 +37,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def filter
     limit = params[:limit].try(:to_i)
     workshops = filter_workshops(@workshops)
-    limited_workshops = workshops.limit(limit)
 
     respond_to do |format|
       limited_workshops = workshops.limit(limit)
@@ -77,7 +76,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def update
     adjust_facilitators
     process_location
-    process_type
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -91,7 +89,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshop.organizer = current_user
     adjust_facilitators
     process_location force: true
-    process_type force: true
     if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -146,13 +143,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
   end
 
-  def process_type(force: false)
-    type = workshop_params[:workshop_type]
-    if force || type != @workshop.workshop_type
-      @workshop.set_on_map_and_funded_from_workshop_type(type)
-    end
-  end
-
   def adjust_facilitators
     supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)
     return unless supplied_facilitator_ids
@@ -180,7 +170,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :location_name,
       :location_address,
       :capacity,
-      :workshop_type,
+      :on_map,
+      :funded,
       :course,
       :subject,
       :notes,

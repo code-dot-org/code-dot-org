@@ -5,13 +5,14 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "C1_maze_debugging",
+    "video_key": "CSF_debugging_text_blocks",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 00:06:10 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

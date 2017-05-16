@@ -22,11 +22,11 @@ const RecentCoursesCollapsible = React.createClass({
 
     return (
       <CollapsibleSection
-        header={i18n.recentCourses()}
+        header={i18n.courses()}
         linkText={i18n.viewAllCourses()}
         link="https://studio.code.org/"
       >
-        {courses ? (
+        {courses.length > 0 ? (
           courses.map((course, index) =>
             <CourseCard
               key={index}

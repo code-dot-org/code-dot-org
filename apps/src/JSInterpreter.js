@@ -7,59 +7,77 @@ import {getStore} from './redux';
 
 import { setIsDebuggerPaused } from './redux/runState';
 
-/**
- * Create a JSInterpreter object. This object wraps an Interpreter object and
- * adds stepping, batching of steps, code highlighting, error handling,
- * breakpoints, general debug capabilities (step in, step out, step over), and
- * an optional event queue.
- * @constructor
- * @param {!Object} options
- * @param {!StudioApp} options.studioApp
- * @param {function} [options.shouldRunAtMaxSpeed]
- * @param {number} [options.maxInterpreterStepsPerTick]
- * @param {Object} [options.customMarshalGlobalProperties]
- * @param {boolean} [options.logExecution] if true, executionLog[] be populated
- */
-var JSInterpreter = module.exports = function (options) {
-  this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function () { return true; };
-  this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
-  this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
-  this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
+export default class JSInterpreter {
+  /**
+   * Create a JSInterpreter object. This object wraps an Interpreter object and
+   * adds stepping, batching of steps, code highlighting, error handling,
+   * breakpoints, general debug capabilities (step in, step out, step over), and
+   * an optional event queue.
+   * @constructor
+   * @param {!Object} options
+   * @param {!StudioApp} options.studioApp
+   * @param {function} [options.shouldRunAtMaxSpeed]
+   * @param {number} [options.maxInterpreterStepsPerTick]
+   * @param {Object} [options.customMarshalGlobalProperties]
+   * @param {Array} [options.customMarshalBlockedProperties]
+   * @param {Array} [options.customMarshalObjectList]
+   * @param {boolean} [options.logExecution] if true, executionLog[] be populated
+   */
+  constructor({
+    studioApp,
+    shouldRunAtMaxSpeed,
+    maxInterpreterStepsPerTick,
+    customMarshalGlobalProperties,
+    customMarshalBlockedProperties,
+    customMarshalObjectList,
+    logExecution,
+  }) {
+    this.studioApp = studioApp;
+    this.shouldRunAtMaxSpeed = shouldRunAtMaxSpeed || function () { return true; };
+    this.maxInterpreterStepsPerTick = maxInterpreterStepsPerTick || 10000;
+    this.customMarshalGlobalProperties = customMarshalGlobalProperties || {};
+    this.customMarshalBlockedProperties = customMarshalBlockedProperties || [];
+    this.customMarshalObjectList = customMarshalObjectList || [];
 
-  // Publicly-exposed events that anyone with access to the JSInterpreter can
-  // observe and respond to.
+    // Publicly-exposed events that anyone with access to the JSInterpreter can
+    // observe and respond to.
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onNextStepChanged = new ObservableEventDEPRECATED();
-  this._runStateUpdater = this.onNextStepChanged.register(() => {
-    getStore().dispatch(setIsDebuggerPaused(
-      this.paused,
-      this.nextStep
-    ));
-  });
+    /** @type {ObservableEventDEPRECATED} */
+    this.onNextStepChanged = new ObservableEventDEPRECATED();
+    this._runStateUpdater = this.onNextStepChanged.register(() => {
+      getStore().dispatch(setIsDebuggerPaused(
+        this.paused,
+        this.nextStep
+      ));
+    });
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onPause = new ObservableEventDEPRECATED();
+    /** @type {ObservableEventDEPRECATED} */
+    this.onPause = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onExecutionError = new ObservableEventDEPRECATED();
+    /** @type {ObservableEventDEPRECATED} */
+    this.onExecutionError = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEventDEPRECATED} */
-  this.onExecutionWarning = new ObservableEventDEPRECATED();
+    /** @type {ObservableEventDEPRECATED} */
+    this.onExecutionWarning = new ObservableEventDEPRECATED();
 
-  this.paused = false;
-  this.yieldExecution = false;
-  this.startedHandlingEvents = false;
-  this.executionError = null;
-  this.nextStep = StepType.RUN;
-  this.maxValidCallExpressionDepth = 0;
-  this.isExecuting = false;
-  this.callExpressionSeenAtDepth = [];
-  this.stoppedAtBreakpointRows = [];
-  this.logExecution = options.logExecution;
-  this.executionLog = [];
-};
+    this.paused = false;
+    this.yieldExecution = false;
+    this.startedHandlingEvents = false;
+    this.executionError = null;
+    this.nextStep = StepType.RUN;
+    this.maxValidCallExpressionDepth = 0;
+    this.isExecuting = false;
+    this.callExpressionSeenAtDepth = [];
+    this.stoppedAtBreakpointRows = [];
+    this.logExecution = logExecution;
+    this.executionLog = [];
+  }
+
+  addCustomMarshalObject(config) {
+    // TODO (pcardune): validate config format.
+    this.customMarshalObjectList.push(config);
+  }
+}
 
 JSInterpreter.baseHasProperty = PatchedInterpreter.prototype.hasProperty;
 JSInterpreter.baseGetProperty = PatchedInterpreter.prototype.getProperty;
@@ -91,10 +109,9 @@ JSInterpreter.prototype.parse = function (options) {
     var session = this.studioApp.editor.aceEditor.getSession();
     this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
   } else {
-    this.isBreakpointRow = function () { return false; };
+    this.isBreakpointRow = () => false;
   }
 
-  var self = this;
   if (options.enableEvents) {
     this.eventQueue = [];
     // Append our mini-runtime after the user's code. This will spin and process
@@ -103,24 +120,15 @@ JSInterpreter.prototype.parse = function (options) {
       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                  'setCallbackRetVal(ret); }}';
 
-    codegen.createNativeFunctionFromInterpreterFunction = function (intFunc) {
-      return function () {
-        if (self.initialized()) {
-
-          // Convert arguments to array in fastest way possible and avoid
-          // "Bad value context for arguments variable" de-optimization
-          // http://jsperf.com/array-with-and-without-length/5
-          var args = new Array(arguments.length);
-          for (var i = 0; i < arguments.length; i++) {
-            args[i] = arguments[i];
-          }
-
-          self.eventQueue.push({
+    codegen.createNativeFunctionFromInterpreterFunction = (intFunc) => {
+      return (...args) => {
+        if (this.initialized()) {
+          this.eventQueue.push({
             fn: intFunc,
             arguments: args
           });
 
-          if (!self.isExecuting) {
+          if (!this.isExecuting) {
             // Execute the interpreter and if a return value is sent back from the
             // interpreter's event handler, pass that back in the native world
 
@@ -129,60 +137,59 @@ JSInterpreter.prototype.parse = function (options) {
             // will just see 'undefined' as the return value. The rest of the interpreter
             // event handler will run in the next onTick(), but the return value will
             // no longer have any effect.
-            self.executeInterpreter(false, true);
-            return self.lastCallbackRetVal;
+            this.executeInterpreter(false, true);
+            return this.lastCallbackRetVal;
           }
         }
       };
     };
   }
 
-  var initFunc = function (interpreter, scope) {
-    // Store Interpreter on JSInterpreter
-    self.interpreter = interpreter;
-    // Store globalScope on JSInterpreter
-    self.globalScope = scope;
-    // Override Interpreter's get/has/set Property functions with JSInterpreter
-    interpreter.getProperty = self.getProperty.bind(self, interpreter);
-    interpreter.hasProperty = self.hasProperty.bind(self, interpreter);
-    interpreter.setProperty = self.setProperty.bind(self, interpreter);
-    codegen.initJSInterpreter(
+  try {
+    // Return value will be stored as this.interpreter inside the supplied
+    // initFunc() (other code in initFunc() depends on this.interpreter, so
+    // we can't wait until the constructor returns)
+    new PatchedInterpreter('', (interpreter, scope) => {
+      // Store Interpreter on JSInterpreter
+      this.interpreter = interpreter;
+      // Store globalScope on JSInterpreter
+      this.globalScope = scope;
+      interpreter.customMarshalObjectList = this.customMarshalObjectList;
+      // Override Interpreter's get/has/set Property functions with JSInterpreter
+      interpreter.getProperty = this.getProperty.bind(this, interpreter);
+      interpreter.hasProperty = this.hasProperty.bind(this, interpreter);
+      interpreter.setProperty = this.setProperty.bind(this, interpreter);
+      codegen.initJSInterpreter(
         interpreter,
         options.blocks,
         options.blockFilter,
         scope,
         options.globalFunctions);
 
-    if (options.initGlobals) {
-      options.initGlobals();
-    }
+      if (options.initGlobals) {
+        options.initGlobals();
+      }
 
-    // Only allow five levels of depth when marshalling the return value
-    // since we will occasionally return DOM Event objects which contain
-    // properties that recurse over and over...
-    var wrapper = codegen.makeNativeMemberFunction({
+      // Only allow five levels of depth when marshalling the return value
+      // since we will occasionally return DOM Event objects which contain
+      // properties that recurse over and over...
+      var wrapper = codegen.makeNativeMemberFunction({
         interpreter: interpreter,
-        nativeFunc: self.nativeGetCallback.bind(self),
+        nativeFunc: this.nativeGetCallback.bind(this),
         maxDepth: 5
-    });
-    interpreter.setProperty(scope,
-                            'getCallback',
-                            interpreter.createNativeFunction(wrapper));
+      });
+      interpreter.setProperty(scope,
+                              'getCallback',
+                              interpreter.createNativeFunction(wrapper));
 
-    wrapper = codegen.makeNativeMemberFunction({
+      wrapper = codegen.makeNativeMemberFunction({
         interpreter: interpreter,
-        nativeFunc: self.nativeSetCallbackRetVal.bind(self),
+        nativeFunc: this.nativeSetCallbackRetVal.bind(this),
+      });
+      interpreter.setProperty(scope,
+                              'setCallbackRetVal',
+                              interpreter.createNativeFunction(wrapper));
     });
-    interpreter.setProperty(scope,
-                            'setCallbackRetVal',
-                            interpreter.createNativeFunction(wrapper));
-  };
-
-  try {
-    // Return value will be stored as this.interpreter inside the supplied
-    // initFunc() (other code in initFunc() depends on this.interpreter, so
-    // we can't wait until the constructor returns)
-    new PatchedInterpreter('', initFunc);
     // We initialize with an empty program so that all of our global functions
     // can be injected before the user code is processed (thus allowing user
     // code to override globals of the same names)
@@ -978,7 +985,7 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
 
 /**
  * Creates a property in the interpreter's global scope. When a parent is
- * supplied and that parent object is in codegen's customMarshalObjectList,
+ * supplied and that parent object is in customMarshalObjectList,
  * property gets/sets in the interpreter will be reflected on the native parent
  * object. Functions can also be inserted into the global namespace using this
  * method. If a parent is supplied, they will be invoked natively with that

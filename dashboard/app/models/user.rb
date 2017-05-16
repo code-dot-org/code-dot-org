@@ -300,7 +300,6 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-  has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
 
@@ -314,10 +313,6 @@ class User < ActiveRecord::Base
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
-
-  has_one :prize
-  has_one :teacher_prize
-  has_one :teacher_bonus_prize
 
   belongs_to :secret_picture
   before_create :generate_secret_picture
@@ -342,10 +337,6 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
-
-  validates_uniqueness_of :prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_bonus_prize_id, allow_nil: true
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
@@ -794,9 +785,13 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def initial
+  def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
+  end
+
+  def initial
+    User.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -854,6 +849,9 @@ class User < ActiveRecord::Base
 
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
+  rescue ArgumentError
+    errors.add :base, I18n.t('password.reset_errors.invalid_email')
+    return nil
   end
 
   def generate_secret_picture
@@ -1037,25 +1035,6 @@ class User < ActiveRecord::Base
         new_csf_level_perfected = true
       end
 
-      # Log data (sampled) to AWS Firehose.
-      if user_id % 100 == 0
-        FirehoseClient.instance.put_record(
-          'analysis-events',
-          {
-            study: 'attempt_counts',
-            event: 'new_attempt',
-            user: user_id,
-            level_id: user_level.level_id,
-            script_id: user_level.script_id,
-            data_int: user_level.attempts + 1,
-            data_json: {
-              previous_best_result: user_level.best_result,
-              this_result: new_result,
-            }.to_json
-          }
-        )
-      end
-
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
@@ -1230,5 +1209,9 @@ class User < ActiveRecord::Base
 
   def show_school_info_interstitial?
     SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
+  end
+
+  def school_info_suggestion?
+    !(school.blank? && full_address.blank?)
   end
 end

@@ -555,6 +555,7 @@ en:
       CSD U2 L1 Overview:
         description here: description here
         title: title
+      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         description here: description here
         title: title
@@ -570,9 +571,11 @@ en:
       CSD U2 L6 Overview:
         description here: description here
         title: title
-      CSD U2 PSP Programming:
+      CSD U2 L7 Overview: {}
+      CSD U2 Lesson 6 Overview:
         description here: description here
-        title: title
+      CSD U2 Lesson 9 Overview: {}
+      CSD U2 PSP Programming: {}
       CSD U2 RGB Colors:
         'STOP: RGB Colors': 'STOP: RGB Colors'
         description here: description here
@@ -1076,6 +1079,7 @@ en:
       'Circuit Playground Map: Buzzer': {}
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
+      Click Here!: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
       Color Sleuth - Epilogue:
@@ -8404,7 +8408,7 @@ en:
       post-assessment survey q24:
         Agree: Agree
         Disagree: Disagree
-        I am interested in taking more computer science classes (in high school or after high school): I am interested in taking more computer science classes (in high school or after high school)
+        I am interested in taking more computer science classes (in high school or after high school).: I am interested in taking more computer science classes (in high school or after high school).
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8412,7 +8416,7 @@ en:
       post-assessment survey q24-a:
         Agree: Agree
         Disagree: Disagree
-        I am interested in studying computer science after I graduate high school: I am interested in studying computer science after I graduate high school
+        I am interested in studying computer science after I graduate high school.: I am interested in studying computer science after I graduate high school.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree

@@ -1,7 +1,2 @@
-hidden false
+login_required true
 
-stage 'CSP Student Post Survey Staging'
-assessment 'CSP post-assessment survey'
-
-stage 'Participate in a longitudinal study!'
-named_level 'Longitudinal study description'

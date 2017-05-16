@@ -7,7 +7,7 @@
     value ? 'Yes' : 'No'
   end
 
-%h1 Manage Teacher Applications (admin only)
+%h1 Manage Teacher Applications
 
 #application-container.selectable
 
@@ -19,12 +19,33 @@
     %button.btn{type: 'submit'}
       %i.fa.fa-search
     - if params[:q]
-      = link_to 'Show All', nil, params: {}, class: 'btn btn-default'
+      = link_to 'Remove Filter', nil, params: {}, class: 'btn btn-default'
 
   - if params[:q]
     %h4
       Filter:
       = params[:q]
+
+  %h5
+    - base_params = params.permit(:q, :page_size)
+    - current_page = @teacher_applications.current_page
+    - total_pages = @teacher_applications.total_pages
+    - total_count = @teacher_applications.total_count
+    = "Page #{current_page} of #{total_pages}"
+    = "(#{@teacher_applications.count} of #{total_count} applications)"
+    = link_to '<<', base_params.merge(page: 1), class: 'btn btn-default', disabled: @teacher_applications.first_page?
+    = link_to '<', base_params.merge(page: current_page - 1), class: 'btn btn-default', disabled: @teacher_applications.first_page?
+    = link_to '>', base_params.merge(page: current_page + 1), class: 'btn btn-default', disabled: @teacher_applications.last_page?
+    = link_to '>>', base_params.merge(page: total_pages), class: 'btn btn-default', disabled: @teacher_applications.last_page?
+    %span.dropdown{style: 'position: absolute; right: 25px'}
+      Show
+      %button.btn.btn-default.dropdown-toggle{'data-toggle': 'dropdown'}
+        = params[:page_size] || @teacher_applications.limit_value
+        %span.caret
+      %ul.dropdown-menu
+        - %w(25 50 All).each do |page_size|
+          %li
+            = link_to page_size, base_params.merge(page_size: page_size)
 
   %table.table.table-hover.table-condensed.table-auto-width
     %thead
@@ -52,4 +73,4 @@
           %td= application.accepted_workshop
           %td= application.regional_partner_name
           %td= yes_no application.accepted_program.try(:teachercon?)
-          %td= yes_no application.program_registration
+          %td= yes_no application.program_registration?

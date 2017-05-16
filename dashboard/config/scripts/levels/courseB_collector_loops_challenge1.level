@@ -31,8 +31,8 @@
     "step_speed": "2",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.\\n\\n\",\"hint_id\":\"courseB_collector_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e5406e73f671a6c014b300ff7892ec0c/courseB_collector_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can move back over the path a second time before moving east.\\n\",\"hint_id\":\"courseB_collector_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c668ed550b87b7ae985fce3d3d4e17b/courseB_collector_loops_challenge1.mp3\"}]",
-    "ideal": "9",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Start by looping the commands `move south` and `get treasure`.\\n<xml>\\n  <block type=\\\"maze_moveSouth\\\"/><next>\\n  <block type=\\\"collector_collect\\\"/></next>\\n  </xml>\\n\",\"hint_id\":\"courseB_collector_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/caecf12dde867aed81b2a5a2fe4e3d07/courseB_collector_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The north pattern is a little different than the south pattern.\\n\",\"hint_id\":\"courseB_collector_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec36fcb5137e38ceff1271ce59fec442/courseB_collector_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can do this with only 8 blocks. You need to put `repeat` blocks inside another `repeat` block. Click for one more hint to see that solution. \\n<xml>\\n<block type=\\\"controls_repeat_simplified\\\">\\n        <title name=\\\"TIMES\\\">?</title>\\n        <statement name=\\\"DO\\\">\\n          \\n              <block type=\\\"controls_repeat_simplified\\\">\\n                <title name=\\\"TIMES\\\">?</title>\\n                <statement name=\\\"DO\\\">\\n                </statement></block><next><block type=\\\"controls_repeat_simplified\\\">\\n                <title name=\\\"TIMES\\\">?</title>\\n                <statement name=\\\"DO\\\">\\n                </statement></block></next></statement></block></xml>\",\"hint_id\":\"courseB_collector_loops_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/92707987fc5487cc20f26299b0a6bdf5/courseB_collector_loops_challenge1.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Try this!\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"controls_repeat_simplified\\\">\\n        <title name=\\\"TIMES\\\">5</title>\\n        <statement name=\\\"DO\\\">\\n          <block type=\\\"maze_moveSouth\\\">\\n            <next>\\n              <block type=\\\"controls_repeat_simplified\\\">\\n                <title name=\\\"TIMES\\\">5</title>\\n                <statement name=\\\"DO\\\">\\n                  <block type=\\\"collector_collect\\\">\\n                    <next>\\n                      <block type=\\\"maze_moveEast\\\"/>\\n                    </next>\\n                  </block>\\n                </statement>\\n                <next>\\n                  <block type=\\\"controls_repeat_simplified\\\">\\n                    <title name=\\\"TIMES\\\">5</title>\\n                    <statement name=\\\"DO\\\">\\n                      <block type=\\\"maze_moveWest\\\"/>\\n                    </statement>\\n                  </block>\\n                </next>\\n              </block>\\n            </next>\\n          </block>\\n        </statement>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_collector_loops_challenge1_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0674e2bfc969cef9fd1c832fa1d5bcf0/courseB_collector_loops_challenge1.mp3\"}]",
+    "ideal": "0",
     "contained_level_names": null
   },
   "published": true,
@@ -48,10 +48,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveEast" limit="1"/>
-        <block type="maze_moveWest" limit="1"/>
-        <block type="maze_moveNorth" limit="1"/>
-        <block type="maze_moveSouth" limit="1"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
         <block type="collector_collect"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">???</title>
@@ -66,35 +66,54 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified">
-              <title name="TIMES">3</title>
+              <title name="TIMES">5</title>
               <statement name="DO">
-                <block type="controls_repeat_simplified">
-                  <title name="TIMES">5</title>
-                  <statement name="DO">
-                    <block type="maze_moveSouth">
-                      <next>
-                        <block type="collector_collect"/>
-                      </next>
-                    </block>
-                  </statement>
+                <block type="maze_moveSouth">
                   <next>
-                    <block type="controls_repeat_simplified">
-                      <title name="TIMES">5</title>
-                      <statement name="DO">
-                        <block type="maze_moveNorth"/>
-                      </statement>
+                    <block type="collector_collect"/>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
                       <next>
                         <block type="controls_repeat_simplified">
-                          <title name="TIMES">2</title>
+                          <title name="TIMES">5</title>
                           <statement name="DO">
-                            <block type="maze_moveEast"/>
+                            <block type="collector_collect">
+                              <next>
+                                <block type="maze_moveNorth"/>
+                              </next>
+                            </block>
                           </statement>
+                          <next>
+                            <block type="maze_moveEast">
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="controls_repeat_simplified">
+                                      <title name="TIMES">5</title>
+                                      <statement name="DO">
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>

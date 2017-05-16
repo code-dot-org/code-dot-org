@@ -53,7 +53,7 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-15">???</title>
+          <title name="TIMES" config="2-15">???</title>
         </block>
         <block type="collector_collect" limit="2" id="callMe"/>
       </xml>

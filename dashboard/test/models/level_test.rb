@@ -5,13 +5,29 @@ class LevelTest < ActiveSupport::TestCase
 
   setup do
     @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
-    @custom_turtle_data = {solution_level_source_id: 4, user_id: 1}
+    @custom_turtle_data = {user_id: 1}
     @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
+
+  # Raises an exception if level_class or any of its descendants do not exist in either
+  # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
+  def raise_unless_specifies_ideal_level_source(level_class)
+    unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
+      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+      raise "#{level_class} does not specify if it has ideal level sources"
+    end
+    level_class.descendants.each do |descendant|
+      raise_unless_specifies_ideal_level_source(descendant)
+    end
+  end
+
+  test 'types marked as having ideal level sources' do
+    raise_unless_specifies_ideal_level_source(Level)
   end
 
   test 'create level' do
@@ -585,5 +601,48 @@ EOS
     assert_equal data[:title], level.title
     assert_equal data[:description], level.description
     assert_equal data[:description], I18n.t("data.unplugged.#{data[:name]}.desc")
+  end
+
+  test "audit log is initially null" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log nul"
+    level = Level.create(data)
+    assert level.valid?
+    assert_nil level.audit_log
+  end
+
+  test "audit log will explode properties" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log properties"
+    level = Level.create(data)
+
+    level.skin = "bee"
+    level.log_changes
+
+    assert_equal 1, JSON.parse(level.audit_log).length
+    assert_equal ["skin"], JSON.parse(level.audit_log).first["changed"]
+  end
+
+  test "audit log will self-truncate" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log truncation"
+    level = Level.create(data)
+
+    # Create an audit log that is almost the max length
+    huge_array = ["test"] * 9360
+    level.audit_log = JSON.dump(huge_array)
+
+    assert_equal 65521, level.audit_log.length
+    assert_equal 9360, JSON.parse(level.audit_log).length
+
+    # add a new entry that will put us over the limit
+    level.instructions = "new actual instructions"
+    level.log_changes
+
+    # audit log should have dropped off several entries in order get back under
+    # the limit, since the test entries are individually much smaller than the
+    # new actual entry
+    assert_equal 65533, level.audit_log.length
+    assert_equal 9351, JSON.parse(level.audit_log).length
   end
 end

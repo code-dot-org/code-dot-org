@@ -1,19 +1,16 @@
 name 'CSD U1 Lesson 6 Overview'
-display_name 'Unit 1 Lesson 6 Overview'
-css 'unplugged'
+display_name 'Lesson Overview'
 
 markdown <<MARKDOWN
-# Problem Solving - Computers and Logic: Lesson 6 - Processing
-
-## Background
+# Overview
 
 In this lesson you'll learn how processing is used by humans and computers to turn inputs into outputs.
 
-# Vocabulary
+## Vocabulary
 
 * **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
 
-# Resources
+## Resources
 
 * [Card Sorting Algorithm](https://docs.google.com/document/d/1nlXKlRGhokkGXYRdd2WMxgZbYkT0Nyi5lYmZZ66G-k8/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1nlXKlRGhokkGXYRdd2WMxgZbYkT0Nyi5lYmZZ66G-k8/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1nlXKlRGhokkGXYRdd2WMxgZbYkT0Nyi5lYmZZ66G-k8/export?format=doc))
 

@@ -4,29 +4,26 @@ import color from "../../util/color";
 
 const styles = {
   section: {
-    width: 960,
+    width: 940,
     marginBottom: 50,
   },
   heading: {
-    paddingLeft: 20,
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
-    marginLeft: 15,
     fontSize: 24,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: 960
+    width: 940
   },
   arrowIcon: {
     paddingRight: 8
   },
   linkToViewAll: {
     color: color.teal,
-    fontSize: 12,
-    fontFamily: '"Gotham", sans-serif',
-    fontWeight: 'bold',
+    fontSize: 14,
+    fontFamily: 'Gotham 4r',
     marginTop: -2,
     display: 'inline'
   },
@@ -42,11 +39,13 @@ const styles = {
     float: 'right',
     textDecoration: 'none'
   },
-  content: {
-    marginLeft: 10,
-  },
   clear: {
     clear: 'both'
+  },
+  spacer: {
+    width: 20,
+    float: 'left',
+    color: color.white
   }
 };
 
@@ -59,6 +58,7 @@ const CollapsibleSection = React.createClass({
     header: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
+    collapsible: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -72,11 +72,12 @@ const CollapsibleSection = React.createClass({
   renderContent() {
     if (this.state.open) {
       return (
-        <div style={styles.content}>
+        <div>
           {React.Children.map(this.props.children, (child, index) => {
             return (
               <div key={index}>
                 {child}
+                {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
               </div>
             );
           })}
@@ -86,13 +87,14 @@ const CollapsibleSection = React.createClass({
   },
 
   render() {
-    const { header, link, linkText }= this.props;
+    const { header, link, linkText, collapsible }= this.props;
     let icon = this.state.open ? 'caret-up' : 'caret-down';
 
     return (
       <div style={styles.section}>
         <div style={styles.heading}>
-          <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleContent}/>
+          {collapsible &&
+            <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleContent}/>}
           {header}
           {link &&
             <a href={link} style={styles.linkBox}>

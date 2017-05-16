@@ -203,5 +203,9 @@ April 2017:
 
 - Reviewing the CSP Local Leads Training [Video](http://videos.code.org/plp/Reviewing_the_CSP_Local_Leads_Training.mp4), [Slides](https://docs.google.com/presentation/d/1KlRbs_u-tZ3s0_vp61pvqPOi3HyxbNTBSmfJ4syqvaY/view#)
 
+May 2017:
+
+- Annual Report Q&A [Video](http://videos.code.org/Annual_Report_Template_QandA.mp4)
+
 [**Back to the top**](#top)
 <br/>

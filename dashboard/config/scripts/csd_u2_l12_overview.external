@@ -1,0 +1,20 @@
+name 'CSD U2 L12 Overview'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+After first completing a web search scavenger hunt, students will learn about the inner workings of search engines and have an opportunity to flex their analytical skills in a search for strange and unlikely animals.
+
+## Vocabulary
+
+* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
+* **Relevant** - closely connected or appropriate to the matter at hand.
+* **Search Engine** - A program that searches for and identifies items in a database that correspond to keywords or characters specified by the user, used especially for finding particular sites on the World Wide Web.
+* **Trustworthy** - able to be relied on as honest or truthful.
+
+
+## Resources
+
+* [Internet Scavenger Hunt](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=doc))
+* [Strange yet True Animals](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=doc))
+MARKDOWN

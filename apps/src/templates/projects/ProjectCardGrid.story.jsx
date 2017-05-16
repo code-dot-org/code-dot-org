@@ -1,22 +1,20 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
+import _ from 'lodash';
 
 let projectTypes = [
   'applab',
   'gamelab',
   'artist',
   'playlab',
-  'weblab'
 ];
 
 const defaultProject = {
   projectData: {
     channel: 'ABCDEFGHIJKLM01234',
-    projectName: 'Puppy Playdate',
-    studentName: 'Penelope',
-    studentAge: 8,
+    name: 'Puppy Playdate',
     type: 'applab',
-    updatedAt: '2016-10-31T23:59:59.999-08:00',
+    publishedAt: '2016-10-31T23:59:59.999-08:00',
     publishedToPublic: true,
     publishedToClass: true
   },
@@ -33,33 +31,66 @@ function generateFakeProject(overrideData) {
   };
 }
 
-function generateFakePublicProjects() {
-  let date = new Date();
-  let publicProjects = [];
-  let i = 0;
+function generateFakePublicProjectsWithStudentInfo() {
+  const date = new Date();
+  const publicProjects = {};
     projectTypes.forEach(type => {
-      for (i=0; i < 5; i++) {
-        publicProjects.push(generateFakeProject({type: type, projectName: type, updatedAt: date.setDate(date.getDate() - i ), studentAge: 6 + 3*i}));
-      }
+      publicProjects[type] = _.range(5).map(i => (
+        generateFakeProject({
+          type: type,
+          name: type,
+          publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
+          studentName: 'Penelope',
+          studentAgeRange: '13+'
+        })
+      ));
     });
   return publicProjects;
 }
 
+function generateFakePublicProjectsWithoutStudentInfo() {
+  const date = new Date();
+  const publicProjects = {};
+  projectTypes.forEach(type => {
+    publicProjects[type] = _.range(5).map(i => (
+      generateFakeProject({
+        type: type,
+        name: type,
+        publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
+      })
+    ));
+  });
+  return publicProjects;
+}
+
 function generateFakePersonalProjects() {
-  let date = new Date();
-  let personalProjects = [];
-  let i = 1;
-    for (i=1; i < 8; i++) {
-      personalProjects.push(generateFakeProject({projectName: "Personal " + i, updatedAt: date.setDate(date.getDate() - i ) }));
-    }
+  const date = new Date();
+  const personalProjects = {};
+  personalProjects.applab = _.range(7).map(i => (
+    generateFakeProject({
+      name: "Personal " + i,
+      updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
+      studentName: 'Penelope',
+      studentAgeRange: '8+',
+    })
+  ));
   return personalProjects;
 }
 
 function generateFakeClassProjects() {
-  let classProjects = [];
-  classProjects.push(generateFakeProject());
-  classProjects.push(generateFakeProject({projectName: "Mouse Maze", studentName: "Maisy"}));
-  classProjects.push(generateFakeProject({projectName: "Furry Frenzy", studentName: "Felix"}));
+  const classProjects = {};
+  classProjects.applab = [];
+  classProjects.applab.push(generateFakeProject());
+  classProjects.applab.push(generateFakeProject({
+    name: "Mouse Maze",
+    studentName: "Maisy",
+    studentAgeRange: '8+',
+  }));
+  classProjects.applab.push(generateFakeProject({
+    name: "Furry Frenzy",
+    studentName: "Felix",
+    studentAgeRange: '8+',
+  }));
   return classProjects;
 }
 
@@ -69,31 +100,41 @@ export default storybook => {
     .storiesOf('ProjectCardGrid', module)
     .addStoryTable([
       {
-        name: 'Class Gallery',
-        description: 'Class gallery sorted by recency of when the project was added.',
+        name: 'Public Gallery with student info',
+        description: 'Public gallery, with shortened student names and student age ranges.',
         story: () => (
           <ProjectCardGrid
-            projects = {generateFakeClassProjects()}
-            galleryType = "class"
-          />
-        )
-      },
-      {
-        name: 'Public Gallery',
-        description: 'Public gallery sorted by project type AND recency of when the project was added.',
-        story: () => (
-          <ProjectCardGrid
-            projects = {generateFakePublicProjects()}
+            projectLists = {generateFakePublicProjectsWithStudentInfo()}
             galleryType = "public"
           />
         )
       },
       {
-        name: 'Personal Gallery',
-        description: 'Personal gallery sorted by recency of when the project was added.',
+        name: 'Public Gallery without student info',
+        description: 'Public gallery, without student name and age.',
         story: () => (
           <ProjectCardGrid
-            projects = {generateFakePersonalProjects()}
+            projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
+            galleryType = "public"
+          />
+        )
+      },
+      {
+        name: 'Class Gallery',
+        description: 'Class gallery, showing full names',
+        story: () => (
+          <ProjectCardGrid
+            projectLists = {generateFakeClassProjects()}
+            galleryType = "class"
+          />
+        )
+      },
+      {
+        name: 'Personal Gallery',
+        description: 'Personal gallery, showing full names and the "quick action" dropdowns',
+        story: () => (
+          <ProjectCardGrid
+            projectLists = {generateFakePersonalProjects()}
             galleryType = "personal"
           />
         )

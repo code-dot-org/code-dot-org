@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Buttons and Events'
 named_level 'Unit 5 Lesson 1 Introduction'
@@ -336,3 +337,9 @@ named_level 'Practice Create Performance Task'
 
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
 assessment 'CSP Cumulative Assess A'
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'

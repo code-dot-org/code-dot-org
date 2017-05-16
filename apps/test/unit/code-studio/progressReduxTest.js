@@ -802,7 +802,7 @@ describe('progressReduxTest', () => {
           fakeStage('Content', 'stage3', 3)
         ],
         levelProgress: {},
-        focusAreaPositions: []
+        focusAreaStageIds: []
       };
 
       const categories = categorizedLessons(state);
@@ -818,7 +818,7 @@ describe('progressReduxTest', () => {
           fakeStage('cat1', 'stage3', 3)
         ],
         levelProgress: {},
-        focusAreaPositions: []
+        focusAreaStageIds: []
       };
 
       const categories = categorizedLessons(state);
