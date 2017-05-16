@@ -28,9 +28,7 @@ Dashboard::Application.configure do
   # unless it's being used for unit tests.
   ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
 
-  if ci_test
-    config.assets.image_optim = false
-  else
+  unless ci_test
     # Compress JavaScripts and CSS.
     # webpack handles js compression for us
     # config.assets.js_compressor = :uglifier

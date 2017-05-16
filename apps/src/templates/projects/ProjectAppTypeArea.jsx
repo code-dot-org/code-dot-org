@@ -30,6 +30,8 @@ const styles = {
   }
 };
 
+const NUM_PROJECTS_TO_ADD = 12;
+
 const ProjectAppTypeArea = React.createClass({
   propTypes: {
     labName: PropTypes.string.isRequired,
@@ -37,7 +39,17 @@ const ProjectAppTypeArea = React.createClass({
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func.isRequired
+    navigateFunction: PropTypes.func.isRequired,
+
+    // Only show one project type.
+    isDetailView: PropTypes.bool.isRequired,
+  },
+
+  getInitialState() {
+    return {
+      maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
+      numProjects: this.props.numProjectsToShow
+    };
   },
 
   viewMore() {
@@ -63,13 +75,30 @@ const ProjectAppTypeArea = React.createClass({
     );
   },
 
+  loadMore() {
+    this.setState({numProjects: this.state.numProjects + NUM_PROJECTS_TO_ADD});
+  },
+
+  renderViewMoreButtons() {
+    return (
+      <div style={{float: "right"}}>
+        {
+          this.state.maxNumProjects >= this.state.numProjects &&
+          <button onClick={this.loadMore} style={{cursor: 'pointer'}} >View more</button>
+        }
+        <a href="#gallery-switcher"><button>Back to top</button></a>
+      </div>
+    );
+  },
+
   render() {
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
         <span style={styles.viewMore} onClick={this.viewMore}> {this.props.labViewMoreString} </span>
         <div style={{clear: 'both'}}></div>
-        {this.renderProjectCardList(this.props.projectList, this.props.numProjectsToShow)}
+        {this.renderProjectCardList(this.props.projectList, this.state.numProjects)}
+        {this.props.isDetailView && this.renderViewMoreButtons()}
       </div>
     );
   }
