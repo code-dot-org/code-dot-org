@@ -77,10 +77,7 @@
     "start_blocks": "var cycle = createSprite(0, 400);\r\ncycle.setAnimation(\"motorcycle\");\r\ncycle.rotation = 45;\r\n\r\nfunction draw() {\r\n  background(\"lightgrey\");\r\n  cycle.x = cycle.x + 10;\r\n  cycle.y = cycle.y + 10;\r\n  drawSprites();\r\n}",
     "watchers_prepopulated": "[\"cycle.x\", \"cycle.y\"]",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"cf18249f-b61e-4aef-b32c-3bc053e4e1ce\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"cf18249f-b61e-4aef-b32c-3bc053e4e1ce\": {\r\n      \"name\": \"motorcycle\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/Ym.a6IChdRPRv48wbyOgxcF_lhRPLoo_/category_vehicles/motorcycle.png\",\r\n      \"frameSize\": {\r\n        \"x\": 71,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Ym.a6IChdRPRv48wbyOgxcF_lhRPLoo_\"\r\n    }\r\n  }\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

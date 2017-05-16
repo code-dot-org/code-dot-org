@@ -36,11 +36,8 @@
     "markdown_instructions": "Collect all of the nectar or make all the honey. You can only collect nectar from flowers and make honey from honeycombs. Check any space to see if there is a flower or honeycomb.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "nectar_goal": "6",
-    "honey_goal": "6",
     "step_speed": "1",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
