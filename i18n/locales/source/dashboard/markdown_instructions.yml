@@ -804,46 +804,92 @@ en:
         property in \"style.css\" in the `p` rule-set.\r\n* Change the text-align
         value to `center` or `right`.\r\n* Add a `text-align` rule in the `body` rule
         set"
-      CSD U2 Debugging 1_markdown_instruction: "# Debugging\r\n\r\nComputer code
-        is written by humans and humans make mistakes. All computer scientists make
-        mistakes.  So part of being a good computer scientists is about being able
-        to find your mistakes and fix them. In computer science we call mistakes **bugs**.
-        Bugs can be anything in code which causes it not to work as planned. The process
-        of finding and fixing those bugs is called **debugging**.  Debugging is a
-        problem solving process so use your problem solving steps as you try to debug.
-        Over the next couple levels you are going to work on your debugging skills.\r\n\r\n<img
-        src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26
-        AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\r\n\r\nThe
-        desired web page is on the right. There are two issues with the starter web
-        page:\r\n\r\n1. The header won't show up as an h1 header.\r\n2. The list
-        doesn't seem to be formatting correctly.\r\n\r\n# Do This\r\n\r\n* Find and
-        fix all bugs in the starting HTML\r\n* Check that the final result matches
-        the image on the right."
-      CSD U2 Debugging 2_markdown_instruction: "# Debugging\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38
-        AM.png\" style=\"float:right;border:5px black solid;width:250px\">\r\n\r\nMore
+      CSD U2 Debugging 1_markdown_instruction: "# Debugging\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is a bug?**</summary>\r\nBugs
+        are mistakes in code which causes it not to work as planned.\r\n</details>\r\n<details>\r\n<summary>**What
+        is debugging?**</summary>\r\nDebugging is the process of finding and fixing
+        bugs.  Debugging is a problem solving process so use your problem solving
+        steps as you try to debug. \r\n</details>\r\n<details>\r\n<summary>**What
+        are some examples of bugs?**</summary>\r\nBugs can be anything that causes
+        code not to work as planned.  Some examples are misspelling, putting code
+        in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n</details>\r\n</div>\r\n\r\nComputer
+        code is written by humans, and all humans make mistakes. Part of being a good
+        computer scientists is finding your mistakes and fix them. In computer science
+        we call mistakes **bugs**. The process of finding and fixing those bugs is
+        called **debugging**.  Over the next couple levels you are going to work on
+        your debugging skills.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26
+        AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\r\n\r\n*
+        Look at the web page code, and discuss with your partner what is causing the
+        following two bugs:\r\n\t* The header is not big enough.\r\n\t* The second
+        item on the list doesn't have a number.\r\n* Fix all the bugs in the code
+        so that the final result matches the image on the right."
+      CSD U2 Debugging 2_markdown_instruction: "# Debugging\r\n\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is a bug?**</summary>\r\nBugs
+        are mistakes in code which causes it not to work as planned.\r\n</details>\r\n<details>\r\n<summary>**What
+        is debugging?**</summary>\r\nDebugging is the process of finding and fixing
+        bugs.  Debugging is a problem solving process so use your problem solving
+        steps as you try to debug. \r\n</details>\r\n<details>\r\n<summary>**What
+        are some examples of bugs?**</summary>\r\nBugs can be anything that causes
+        code not to work as planned.  Some examples are misspelling, putting code
+        in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n</details>\r\n</div>\r\n\r\nMore
         debugging practice!  This page is a little more challenging to debug than
-        the last one.\r\n\r\n# Do This\r\n\r\nFix the HTML so that the web page makes
-        the example on the right.\r\n\r\n* Find and fix all bugs in the starting HTML\r\n*
-        You will know you have found all the bugs when your page matches the one on
-        the right."
-      CSD U2 Debugging 3_markdown_instruction: "# Debugging\r\n\r\nThis page has
-        images in it. Images make finding bugs a little more tricky. Can you debug
+        the last one.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38
+        AM.png\" style=\"float:right;border:5px black solid;width:250px\">\r\n\r\n*
+        Discuss with your partner what you think the bugs are in this page.\r\n* Find
+        and fix all the bugs so that your page matches the one on the right."
+      CSD U2 Debugging 3_markdown_instruction: "# Debugging\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is a bug?**</summary>\r\nBugs
+        are mistakes in code which causes it not to work as planned.\r\n</details>\r\n<details>\r\n<summary>**What
+        is debugging?**</summary>\r\nDebugging is the process of finding and fixing
+        bugs.  Debugging is a problem solving process so use your problem solving
+        steps as you try to debug. \r\n</details>\r\n<details>\r\n<summary>**What
+        are some examples of bugs?**</summary>\r\nBugs can be anything that causes
+        code not to work as planned.  Some examples are misspelling, putting code
+        in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n</details>\r\n</div>\r\n\r\nThis
+        page has images in it. Images make finding bugs a little more tricky. Can
+        you debug this page?\r\n\r\n# Do This\r\n\r\n* Discuss with your partner what
+        is causing the bugs in this page.\r\n* Fix the bugs so that your page matches
+        the <a href=\"https://codeprojects.org/dgobgP_Y66km4U-o969RUBcFBjfAlNSYIGfBkGPrnVQ/\"
+        target=\"_blank\"> Target Page</a>."
+      CSD U2 Debugging 4_markdown_instruction: "# Formatting\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is whitespace?**</summary>\r\nWhitespace
+        refers to any character that shows up as a blank space on the screen, such
+        as a space, a tab, or a new line. Whitespace helps separate different parts
+        of the document to make it easier to read.  For example, in HTML code new
+        elements are usually put on a new line, even though it doesn't make any difference
+        in how the page is displayed.\r\n</details>\r\n<details>\r\n<summary>**What
+        is indentation?**</summary>\r\nIndentation is the placement of text farther
+        to the right, or left, to separate it from surrounding text.  Indentation
+        helps to convey the program's structure.  In HTML, elements that are inside
+        other elements are usually indented.  Here is an example:\r\n<pre>\r\n   &lt;body&gt;\r\n      &lt;p&gt;This
+        paragraph is inside the \"body\" element.&lt;/p&gt;\r\n   &lt;/body&gt;\r\n</pre>\r\n\r\n</details>\r\n<details>\r\n<summary>**What
+        is formatting?**</summary>\r\nFormatting is arranging text in a way that makes
+        it easier to understand.  HTML is usually formatted using indentation.  That
+        means that elements that are inside other elements are further to the right
+        in code.  Here is an example:\r\n<pre>\r\n   &lt;body&gt;\r\n      &lt;p&gt;This
+        paragraph is inside the \"body\" element.&lt;/p&gt;\r\n   &lt;/body&gt;\r\n</pre>\r\n</details>\r\n</div>\r\n\r\nThe
+        way that you write your code can make it easier or harder to find bugs.  If
+        you use **whitespace** and **indentation**, it will make it easier to read
+        and easier to fix.\r\n\r\n# Do This\r\n\r\n* Look at the code with your partner
+        and discuss how you should format the code to make it easier to read.\r\n*
+        Make the code easier to read by adding new lines and indentation.\r\n* Fix
+        all the bugs so that your page matches the <a href=\"https://codeprojects.org/kh6WWXr6rbDWuSBzsug7CRIZ2eo-EwPgV4D0M6pvhF8/\"
+        target=\"_blank\"> Target Page</a>"
+      CSD U2 Debugging comments_markdown_instruction: "# Debugging\r\n\r\nThis page
+        has images in it. Images make finding bugs a little more tricky. Can you debug
         this page?\r\n\r\nAs you are debugging you may notice a new set of symbols
         that look something like this:\r\n<pre>\r\n&lt;!-- this is a comment --&gt;\r\n</pre>\r\n\r\nThis
         is a **comment**. Comments are written by computer scientists creating web
         pages for themselves and other humans who might look at their HTML file. Comments
         explain the different parts of the code and what it should create.  Comments
-        might be able to help you debug.\r\n\r\n# Do This\r\n\r\n* Find and fix all
-        bugs in the starting HTML\r\n* You know you’ve found all of the bugs when
-        your page matches the <a href=\"https://thimbleprojects.org/danimcavoy/103295/\"
-        target=\"_blank\"> Target Page</a>."
-      CSD U2 Debugging 4_markdown_instruction: "# Debugging\r\n\r\nSometimes bugs
-        in code aren't obvious in how the page displays. Remember that you want your
-        web page to display on any browser so even though it displays nicely in one
-        place may not mean that it works everywhere. \r\n\r\n# Do This\r\n\r\n* Find
-        and fix all bugs in the starting HTML\r\n* You know you’ve found all of the
-        bugs when your page matches the <a href=\"https://thimbleprojects.org/danimcavoy/103456\"
-        target=\"_blank\"> Target Page</a>"
+        might help you debug.\r\n\r\n# Do This\r\n\r\n* Find and fix all bugs in the
+        starting HTML\r\n* You know you’ve found all of the bugs when your page matches
+        the <a href=\"https://thimbleprojects.org/danimcavoy/103295/\" target=\"_blank\">
+        Target Page</a>."
       CSD U2 HTML Add Content_markdown_instruction: "# Adding Content\r\n\r\nStart
         creating your first web page! Try to create a page with a title and two paragraphs.\r\n\r\n#
         Do This\r\n\r\n* Write a sentence about your favorite animal\r\n* On a separate
@@ -862,7 +908,12 @@ en:
         see the changes in the Preview area\r\n* Compare your work with a neighbor.
         Make sure you're placing code in the same place.\r\n"
       CSD U2 HTML Adding Paragraphs pt 2_markdown_instruction: "<div style=\"float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**<span>
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is a paragraph element?**</summary>\r\nParagraphs
+        are marked by opening(`<p>`) and closing(`</p>`) tags. Paragraphs in HTML
+        can be any length of text from one word to a bunch of sentences. Paragraphs
+        group together sets of sentences and put some space between that group of
+        text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**<span>
         How do I make multiple paragraphs? </span>**</summary>\r\nHere's an example
         of several paragraph tags in a row. This code would be placed inside of the
         body of your web page.\r\n\r\n<pre>\r\n`<p>This is a paragraph. It has two
@@ -883,11 +934,29 @@ en:
         of your web page\r\n* Hit \"Refresh and Save\" if you don't see the changes
         in the Preview area\r\n* Compare your work with a neighbor. Make sure you're
         placing code in the same place.\r\n"
+      CSD U2 HTML Debug Paragraphs_markdown_instruction: "<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary><strong>What is a paragraph element?</strong></summary>\r\nParagraphs
+        are marked by opening( `<p>` ) and closing( `</p>` ) tags. Paragraphs in HTML
+        can be any length of text from one word to a bunch of sentences. Paragraphs
+        group together sets of sentences and put some space between that group of
+        text and the next group of text.\r\n</details>\r\n<details>\r\n<summary><strong>Why
+        does HTML seem to work even when it's broken?</strong></summary>\r\nHTML
+        is read by your web browser to generate web pages. Since people often make
+        little mistakes when writing their web pages, browsers often make a best guess
+        of what you intended to do. Sometimes different browsers even will make different
+        guesses! The only way to ensure your code looks like you intend is make sure
+        you're always using tags correctly.\r\n</details>\r\n</div>\r\n\r\n# Debug:
+        Fix the Broken Tags\r\n\r\nThis simple web page has some issues which are
+        preventing the content from being displayed correctly. Identify and fix the
+        issues. This practice is also called \"debugging\" your code.\r\n\r\n# Do
+        This\r\n\r\n* Fix the broken code so that the web page displays correctly\r\n*
+        Compare the problems you fixed with a neighbor"
       CSD U2 Header Demo_markdown_instruction: "# Headers\r\n\r\n<div style=\"float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        are headers?**</summary>\r\nHeaders are the different sized section titles
-        throughout a web page. Headers add structure to your web page by breaking
-        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are headers?**</summary>\r\nHeaders
+        are the different sized section titles throughout a web page. Headers add
+        structure to your web page by breaking it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
         do I make different sized headers?**</summary>\r\nHeaders come in 6 different
         sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
         1 in the HTML tag designates that this is the biggest header. The smallest
@@ -913,15 +982,15 @@ en:
         Change the code so that \"Drawing\" and \"2 years\" match the headers on the
         rest of the page."
       CSD U2 Header Sizes_markdown_instruction: "# Header Sizes\r\n\r\n<div style=\"float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        are headers?**</summary>\r\nHeaders are the different sized section titles
-        throughout a web page. Headers add structure to your web page by breaking
-        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are headers?**</summary>\r\nHeaders
+        are the different sized section titles throughout a web page. Headers add
+        structure to your web page by breaking it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
         do I make different sized headers?**</summary>\r\nHeaders come in 6 different
         sizes.  The most common header is &lt;h1&gt; The number 1 in the HTML tag
         designates that this is the biggest header. The smallest header is &lt;h6&gt;.
         You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags
-        which get smaller as the number gets larger.\r\n</h1>\r\n</details>\r\n<details>\r\n<summary>**What
+        which get smaller as the number gets larger.\r\n</details>\r\n<details>\r\n<summary>**What
         is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
         used to add structure to the content of a web page. HTML uses tags to specify
         where certain structures start and end. These tags are sets of characters
@@ -944,12 +1013,13 @@ en:
         PM.png\" style=\"width:100px\" style=\"float:left\">\r\n"
       CSD U2 Header Test_markdown_instruction: "# Headers and Paragraphs\r\n\r\n<div
         style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
-        20px; font-size:14px\">\r\n<details>\r\n<summary>**What is a paragraph element?**</summary>\r\nParagraphs
-        are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs
-        in HTML can be any length of text from one word to a bunch of sentences. All
-        of your text in your web page should be contained in an HTML element (headers
-        or paragraphs). Paragraphs group together sets of sentences and put some space
-        between that group of text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**How
+        20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**What is
+        a paragraph element?**</summary>\r\nParagraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of
+        text from one word to a bunch of sentences. All of your text in your web page
+        should be contained in an HTML element (headers or paragraphs). Paragraphs
+        group together sets of sentences and put some space between that group of
+        text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**How
         do I create multiple paragraphs?**</summary>\r\nParagraphs are marked by opening(`<p>`)
         and closing(`</p>`) tags as well. To create more than one paragraph you will
         want multiple sets of opening and closing `<p>` tags. For example\r\n<pre>\r\n\t&lt;p&gt;\r\n    \tThis
@@ -1012,95 +1082,132 @@ en:
         something that made headers?\r\n\r\n# Do This\r\n\r\n* Make your header \"Animals\"
         stand out using the `<h1>` header element."
       CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
-        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
-        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
-        which file to use, extra information, called an **attribute**, is added to
-        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
-        and tell the name of the image. Image files names include extensions which
-        tell the computer which type of image they are working with. Common extensions
-        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
-        image elements also have the `alt` attribute which describe the image. This
-        is important in case the image doesn’t load or for people who have trouble
-        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing
-        tag** because it starts and closes in one tag. To mark this we put the `/`
-        which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why
-        does an image tag not have a closing tag?**</summary>\r\nAn image tag doesn't
-        need a closing tag because there is no text content which must be wrapped
-        in tags. The content that shows on the screen is specified through the tags
-        attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
-        are extra information included in a tag.  Attributes have names and values.
-        The name tells what type of information is being provided and then the value
-        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
-        tags have two attributes, src and alt. src specifies the name of the image
-        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
-        Images\r\n\r\nA Dog vs Cat web page has been started for you. The dog image
-        has already been added to the below web page. Use an image tag to add the
-        `cat.jpeg` image to the page below the cat header."
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How do I add images?**</summary>\r\nThe
+        `<img>` tag allows you to show images on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img
+        src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to
+        tell the browser which file to use, extra information, called an **attribute**,
+        is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands
+        for **s**ou**rc**e and tell the name of the image. Image files names include
+        extensions which tell the computer which type of image they are working with.
+        Common extensions are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have
+        the src attribute, image elements also have the `alt` attribute which describe
+        the image. This is important in case the image doesn’t load or for people
+        who have trouble with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an
+        example of a  **self-closing tag** because it starts and closes in one tag.
+        To mark this we put the `/` which usually goes in the close tag at the end
+        of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why does an
+        image tag not have a closing tag?**</summary>\r\nAn image tag doesn't need
+        a closing tag because there is no text content which must be wrapped in tags.
+        The content that shows on the screen is specified through the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an attribute?**</summary>\r\nAttributes are extra information included
+        in a tag.  Attributes have names and values. The name tells what type of information
+        is being provided and then the value gives the specific information for that
+        tag. \r\n\r\nFor example &lt;img&gt; tags have two attributes, src and alt.
+        src specifies the name of the image file and alt tells the browser in readable
+        text what the image is.\r\n</details>\r\n</div>\r\n\r\n# Images\r\n\r\nA Dog
+        vs Cat web page has been started for you. The dog image has already been added
+        to the below web page. Use an image tag to add the `cat.jpeg` image to the
+        page below the cat header."
       CSD U2 Image Tag 2_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
-        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
-        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
-        which file to use, extra information, called an **attribute**, is added to
-        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
-        and tell the name of the image. Image files names include extensions which
-        tell the computer which type of image they are working with. Common extensions
-        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
-        image elements also have the `alt` attribute which describe the image. This
-        is important in case the image doesn’t load or for people who have trouble
-        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing
-        tag** because it starts and closes in one tag. To mark this we put the `/`
-        which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why
-        does an image tag not have a closing tag?**</summary>\r\nAn image tag doesn't
-        need a closing tag because there is no text content which must be wrapped
-        in tags. The content that shows on the screen is specified through the tags
-        attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
-        are extra information included in a tag.  Attributes have names and values.
-        The name tells what type of information is being provided and then the value
-        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
-        tags have two attributes, src and alt. src specifies the name of the image
-        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
-        Uploading Images\r\n\r\nYou can upload images that you've found elsewhere
-        using the **Add Image** button. Go find an image of a different type of pet
-        that you like and download it to your computer (using right-click \"Save As\").\r\n\r\nOnce
-        you have your images, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How do I add images?**</summary>\r\nThe
+        `<img>` tag allows you to show images on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img
+        src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to
+        tell the browser which file to use, extra information, called an **attribute**,
+        is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands
+        for **s**ou**rc**e and tell the name of the image. Image files names include
+        extensions which tell the computer which type of image they are working with.
+        Common extensions are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have
+        the src attribute, image elements also have the `alt` attribute which describe
+        the image. This is important in case the image doesn’t load or for people
+        who have trouble with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an
+        example of a  **self-closing tag** because it starts and closes in one tag.
+        To mark this we put the `/` which usually goes in the close tag at the end
+        of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why does an
+        image tag not have a closing tag?**</summary>\r\nAn image tag doesn't need
+        a closing tag because there is no text content which must be wrapped in tags.
+        The content that shows on the screen is specified through the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an attribute?**</summary>\r\nAttributes are extra information included
+        in a tag.  Attributes have names and values. The name tells what type of information
+        is being provided and then the value gives the specific information for that
+        tag. \r\n\r\nFor example &lt;img&gt; tags have two attributes, src and alt.
+        src specifies the name of the image file and alt tells the browser in readable
+        text what the image is.\r\n</details>\r\n</div>\r\n\r\n# Uploading Images\r\n\r\nYou
+        can upload images that you've found elsewhere using the **Add Image** button.
+        Go find an image of a different type of pet that you like and download it
+        to your computer (using right-click \"Save As\").\r\n\r\nOnce you have your
+        images, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
         PM.png) and upload the image from your computer into your project, where you
         can then use it in your page.\r\n\r\n# Do This\r\n\r\n* Upload at least one
-        image into your project\r\n* Use the `<img>` tag to display the image(s) in
-        your website.\r\n* Make sure to add an `alt` attribute."
+        image into this web page\r\n* Use the `<img>` tag to display the image(s)
+        in your website.\r\n* Make sure to add an `alt` attribute."
+      CSD U2 Image Tag Attribution_markdown_instruction: "<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How do I add images?**</summary>\r\nThe
+        `<img>` tag allows you to show images on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img
+        src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to
+        tell the browser which file to use, extra information, called an **attribute**,
+        is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands
+        for **s**ou**rc**e and tell the name of the image. Image files names include
+        extensions which tell the computer which type of image they are working with.
+        Common extensions are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have
+        the src attribute, image elements also have the `alt` attribute which describe
+        the image. This is important in case the image doesn’t load or for people
+        who have trouble with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an
+        example of a  **self-closing tag** because it starts and closes in one tag.
+        To mark this we put the `/` which usually goes in the close tag at the end
+        of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why does an
+        image tag not have a closing tag?**</summary>\r\nAn image tag doesn't need
+        a closing tag because there is no text content which must be wrapped in tags.
+        The content that shows on the screen is specified through the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an attribute?**</summary>\r\nAttributes are extra information included
+        in a tag.  Attributes have names and values. The name tells what type of information
+        is being provided and then the value gives the specific information for that
+        tag. \r\n\r\nFor example &lt;img&gt; tags have two attributes, src and alt.
+        src specifies the name of the image file and alt tells the browser in readable
+        text what the image is.\r\n</details>\r\n</div>\r\n\r\n# Giving Credit\r\n\r\nWhen
+        using a Creative Commons licensed image, you need to give credit to the original
+        creator (this is also called _attribution_). There are lots of ways to provide
+        attribution, but the easiest way is to add text below the image that identifies
+        the creator and website it came from.\r\n\r\nIn this page we've already added,
+        and attributed, an image of a frog. Use the Creative Commons search engine
+        to find another image of an amphibian. Add your found image to this page,
+        along with proper attribution, including:\r\n\r\n* The name of the creator
+        (if available)\r\n* The website it was found on (e.g. commons.wikimedia.org)\r\n*
+        The license it was published under (e.g. CC-BY)"
       CSD U2 Image Tag Debug_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
-        on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img src=\"dog.png\"
-        alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to tell the browser
-        which file to use, extra information, called an **attribute**, is added to
-        the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e
-        and tell the name of the image. Image files names include extensions which
-        tell the computer which type of image they are working with. Common extensions
-        are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute,
-        image elements also have the `alt` attribute which describe the image. This
-        is important in case the image doesn’t load or for people who have trouble
-        with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing
-        tag** because it starts and closes in one tag. To mark this we put the `/`
-        which usually goes in the close tag at the end of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why
-        does an image tag not have a closing tag?**</summary>\r\nAn image tag doesn't
-        need a closing tag because there is no text content which must be wrapped
-        in tags. The content that shows on the screen is specified through the tags
-        attributes.\r\n</details>\r\n<details>\r\n<summary>**What is an attribute?**</summary>\r\nAttributes
-        are extra information included in a tag.  Attributes have names and values.
-        The name tells what type of information is being provided and then the value
-        gives the specific information for that tag. \r\n\r\nFor example &lt;img&gt;
-        tags have two attributes, src and alt. src specifies the name of the image
-        file and alt tells the browser in readable text what the image is.\r\n</details>\r\n</div>\r\n\r\n#
-        The Details Matter\r\n\r\nThe `src` attribute needs to point to the _exact_
-        filename of the image you want to use. That means you need to pay attention
-        to spelling, capitalization, and the file extension. Each of the three images
-        on this page is broken because of an improper `src` attribute. Using the file
-        menu for reference, fix each of the image tags.\r\n\r\n_Note: Even though
-        the images are loading properly, our website is still showing descriptive
-        text of what should be there because we used `alt` attributes. Cool!_"
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How do I add images?**</summary>\r\nThe
+        `<img>` tag allows you to show images on your web page. <br><br>\r\n\r\nExample:\r\n<pre>&lt;img
+        src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\r\n\r\nIn order to
+        tell the browser which file to use, extra information, called an **attribute**,
+        is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands
+        for **s**ou**rc**e and tell the name of the image. Image files names include
+        extensions which tell the computer which type of image they are working with.
+        Common extensions are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have
+        the src attribute, image elements also have the `alt` attribute which describe
+        the image. This is important in case the image doesn’t load or for people
+        who have trouble with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an
+        example of a  **self-closing tag** because it starts and closes in one tag.
+        To mark this we put the `/` which usually goes in the close tag at the end
+        of the image tag.\r\n\r\n</details>\r\n<details>\r\n<summary>**Why does an
+        image tag not have a closing tag?**</summary>\r\nAn image tag doesn't need
+        a closing tag because there is no text content which must be wrapped in tags.
+        The content that shows on the screen is specified through the tags attributes.\r\n</details>\r\n<details>\r\n<summary>**What
+        is an attribute?**</summary>\r\nAttributes are extra information included
+        in a tag.  Attributes have names and values. The name tells what type of information
+        is being provided and then the value gives the specific information for that
+        tag. \r\n\r\nFor example &lt;img&gt; tags have two attributes, src and alt.
+        src specifies the name of the image file and alt tells the browser in readable
+        text what the image is.\r\n</details>\r\n</div>\r\n\r\n# The Details Matter\r\n\r\nThe
+        `src` attribute needs to point to the _exact_ filename of the image you want
+        to use. That means you need to pay attention to spelling, capitalization,
+        and the file extension. Each of the three images on this page is broken because
+        of an improper `src` attribute. Using the file menu for reference, fix each
+        of the image tags.\r\n\r\n_Note: Even though the images are loading properly,
+        our website is still showing descriptive text of what should be there because
+        we used `alt` attributes. Cool!_"
       CSD U2 Info Page Content_markdown_instruction: "# Adding Your Content\r\n\r\nYou
         should now have found a handful of websites that you can use to help make
         your case for the cause you've chosen. If not, keep on researching! Otherwise
@@ -1242,8 +1349,12 @@ en:
         - Additive Color</a></p> </details>\r\n<details>\r\n<summary>**How many colors
         can I make with RGB color mixing?**</summary>\r\n<p>You can make make over
         sixteen million different colors with RGB color mixing.</p></details>\r\n</div>"
+      CSD U2 add content_markdown_instruction: "# Add HTML\r\n\r\nNext, you should
+        add the HTML to your pages.\r\n\r\n# Do This\r\n* For each of the new pages
+        that you've created, add HTML to make the page you sketched in your project
+        guide.\r\n* You may also add more HTML to the pages you've already created.\r\n"
       CSD U2 add file_markdown_instruction: "<div style=\"float: right; height: 250px;
-        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**What
         is a style sheet?**</summary>\r\nA style sheet is a document that controls
         how a web page will appear.  External style sheets are separate files that
         are linked to the HTML page.\r\n</details>\r\n<details>\r\n<summary>**What
@@ -1270,28 +1381,35 @@ en:
         to a web page, open up the code for the web page.  Inside the head tag, add
         the following code `<link rel=\"stylesheet\" href=\"style.css\">`.  Then change
         \"style.css\" to the name of your style sheet.\r\n</details>\r\n</div>\r\n#
-        Adding a Style Sheet\r\n\r\nThis is your About Me page from before.  In the
-        next level, you'll have a chance to add some different styles to it, but
-        first, you need to add a style sheet, name it, and link it to your html page.\r\n\r\n1.
+        Adding a Style Sheet\r\n\r\nThis is your project from before.  In the next
+        level, you'll have a chance to add some different styles to it, but first,
+        you need to add a style sheet, name it, and link it to your html page.\r\n\r\n1.
         Create a new style sheet for your project.\r\n2. Rename the style sheet file.\r\n3.
-        Add your style sheet to your HTML page.\r\n\r\n<img src=\"https://images.code.org/63ed91b7de4365f59f0f4d652f8dd8fc-image-1481639763979.png\"
-        style=\"width:50%px\">"
+        Add your style sheet to your HTML page.\r\n\r\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png\"
+        style=\" max-width:500px\">"
       CSD U2 add links_markdown_instruction: "# Missing Home Link\r\n\r\nCopying
         your hyperlinks to all your pages allowed you to get to most of the pages
         on your website from any other page. One hyperlink is missing - the one to
         get you to your home page (index.html).\r\n\r\n**Add a hyperlink to your home
         page from all the pages, even your home page itself.** Adding it to your home
         page will keep your navigation header consistent on all pages."
+      CSD U2 challenge_markdown_instruction: "# Challenge\r\n\r\nCheck with your
+        teacher before starting on this challenge.\r\n\r\nThis page is only partially
+        finished, and it has some bugs.  Luckily, there are comments that should help
+        you to finish the page as the author intended.\r\n\r\n# Do This\r\n\r\n* Look
+        at the code and with your partner and discuss what the page should look like.\r\n*
+        Work together to finish the page, paying attention to formatting.\r\n* Compare
+        with another pair to see whether your pages are the same.\r\n\r\n"
       CSD U2 classes modify_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nFor the code to work, you need to both
-        create a winter class and add elements to the class.\r\n\r\nThe class is created
-        in the style sheet, with the following code.\r\n\r\n<pre>.winter {\r\n  color:
-        rgb(195,230,255);\r\n}</pre>\r\n\r\nThis code creates a class called `winter`
-        and makes everything in the class our winter blue, which has the RGB values
-        of (195,230,255).\r\n\r\nThe code that adds a `h5` element to the winter class
-        is `<h5 class=\"winter\">`.  The `class=winter` inside the opening tag adds
-        everything inside the tag to the class.\r\n</details>\r\n<details>\r\n<summary>**What
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nFor
+        the code to work, you need to both create a winter class and add elements
+        to the class.\r\n\r\nThe class is created in the style sheet, with the following
+        code.\r\n\r\n<pre>.winter {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nThis
+        code creates a class called `winter` and makes everything in the class our
+        winter blue, which has the RGB values of (195,230,255).\r\n\r\nThe code that
+        adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter`
+        inside the opening tag adds everything inside the tag to the class.\r\n</details>\r\n<details>\r\n<summary>**What
         rules can be added to a class rule-set?**</summary>\r\nA class rule-set can
         have the same rules as any other type of selector.  If a rule does not apply
         to the content of the class (for example, using `font-size` on an element
@@ -1314,15 +1432,15 @@ en:
         be any font, but it will need to be different from that of the other three
         seasons.\r\n* Add any other rules you'd like for your winter words."
       CSD U2 classes sample_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nFor the code to work, you need to both
-        create a winter class and add elements to the class.\r\n\r\nThe class is created
-        in the style sheet, with the following code.\r\n\r\n<pre>.winter {\r\n  color:
-        rgb(195,230,255);\r\n}</pre>\r\n\r\nThis code creates a class called `winter`
-        and makes everything in the class our winter blue, which has the RGB values
-        of (195,230,255).\r\n\r\nThe code that adds a `h5` element to the winter class
-        is `<h5 class=\"winter\">`.  The `class=winter` inside the opening tag adds
-        everything inside the tag to the class.\r\n</details>\r\n<details>\r\n<summary>**Why
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nFor
+        the code to work, you need to both create a winter class and add elements
+        to the class.\r\n\r\nThe class is created in the style sheet, with the following
+        code.\r\n\r\n<pre>.winter {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nThis
+        code creates a class called `winter` and makes everything in the class our
+        winter blue, which has the RGB values of (195,230,255).\r\n\r\nThe code that
+        adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter`
+        inside the opening tag adds everything inside the tag to the class.\r\n</details>\r\n<details>\r\n<summary>**Why
         does the selector have a period in front of it?**</summary>\r\nIn CSS, a period
         in front of a selector means that the selector is the name of a class.  If
         there is no period, it means that the selector is the name of an HTML tag.\r\n</details>\r\n<details>\r\n<summary>**Why
@@ -1342,23 +1460,24 @@ en:
         winter class blue, and check whether your RGB numbers are close to the ones
         in the style sheet.  \r\n* Discuss with your partner how the code works."
       CSD U2 classes spring_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nFor the code to work, you need to both
-        create a spring class and add elements to the class.\r\n\r\nThe spring class
-        is already created in the style sheet, but it doesn't have any rules.\r\n\r\n<pre>.spring
-        {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nLook at the rules in the
-        `winter` class for clues to how to make rules for the summer class.\r\n\r\nYou
-        will also need to add some elements to the spring class inside your HTML file.\r\n\r\nThe
-        code in the HTML file that adds a `h5` element to the winter class is `<h5
-        class=\"winter\">`.  Use this pattern to add elements to the spring class,
-        too.\r\n</details>\r\n<details>\r\n<summary>**What rules can be added to a
-        class rule-set?**</summary>\r\nA class rule-set can have the same rules as
-        any other type of selector.  If a rule does not apply to the content of the
-        class (for example, using `font-size` on an element with no text), then the
-        computer will ignore that rule, but still use the rules that work.\r\n</details>\r\n<details>\r\n<summary>**Why
-        does the selector have a period in front of it?**</summary>\r\nIn CSS, a period
-        in front of a selector means that the selector is the name of a class.  If
-        there is no period, it means that the selector is the name of an HTML tag.\r\n</details>\r\n<details>\r\n<summary>**Why
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nFor
+        the code to work, you need to both create a spring class and add elements
+        to the class.\r\n\r\nThe spring class is already created in the style sheet,
+        but it doesn't have any rules.\r\n\r\n<pre>.spring {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nLook
+        at the rules in the `winter` class for clues to how to make rules for the
+        summer class.\r\n\r\nYou will also need to add some elements to the spring
+        class inside your HTML file.\r\n\r\nThe code in the HTML file that adds a
+        `h5` element to the winter class is `<h5 class=\"winter\">`.  Use this pattern
+        to add elements to the spring class, too.\r\n</details>\r\n<details>\r\n<summary>**What
+        rules can be added to a class rule-set?**</summary>\r\nA class rule-set can
+        have the same rules as any other type of selector.  If a rule does not apply
+        to the content of the class (for example, using `font-size` on an element
+        with no text), then the computer will ignore that rule, but still use the
+        rules that work.\r\n</details>\r\n<details>\r\n<summary>**Why does the selector
+        have a period in front of it?**</summary>\r\nIn CSS, a period in front of
+        a selector means that the selector is the name of a class.  If there is no
+        period, it means that the selector is the name of an HTML tag.\r\n</details>\r\n<details>\r\n<summary>**Why
         would a web developer use classes?**</summary>\r\nA web developer uses classes
         when some elements should be styled differently than others, even if they
         are the same tag.  Classes can also be used to give elements that have different
@@ -1370,15 +1489,15 @@ en:
         size, or decoration.\r\n* Add the spring class to the spring elements in the
         HTML page."
       CSD U2 classes summer_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nFor the code for the winter class to work,
-        it needs to both create a winter class and add elements to the class.\r\n\r\nThe
-        class is created in the style sheet, with the following code.\r\n\r\n<pre>.winter
-        {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nThis code creates a class
-        called `winter` and makes everything in the class our winter blue, which has
-        the RGB values of (195,230,255).\r\n\r\nThe code that adds a `h5` element
-        to the winter class is `<h5 class=\"winter\">`.  The `class=winter` inside
-        the opening tag adds everything inside the tag to the class.\r\n</details>\r\n<details>\r\n<summary>**How
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nFor
+        the code for the winter class to work, it needs to both create a winter class
+        and add elements to the class.\r\n\r\nThe class is created in the style sheet,
+        with the following code.\r\n\r\n<pre>.winter {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nThis
+        code creates a class called `winter` and makes everything in the class our
+        winter blue, which has the RGB values of (195,230,255).\r\n\r\nThe code that
+        adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter`
+        inside the opening tag adds everything inside the tag to the class.\r\n</details>\r\n<details>\r\n<summary>**How
         do I create a new rule-set?**</summary>\r\nYou can create a new rule-set by
         following the pattern that the `winter` and `spring` classes used in the style
         sheet.\r\n<pre>.winter {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nThe
@@ -1396,6 +1515,53 @@ en:
         Add a rule to set the text in the summer class to your summer RGB color.\r\n*
         Add the summer class to the summer elements in the HTML page.\r\n* Do the
         same for the autumn class."
+      CSD U2 commenting_markdown_instruction: "# Comments\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is whitespace?**</summary>\r\nWhitespace
+        refers to any character that shows up as a blank space on the screen, such
+        as a space, a tab, or a new line. Whitespace helps separate different parts
+        of the document to make it easier to read.  For example, in HTML code new
+        elements are usually put on a new line, even though it doesn't make any difference
+        in how the page is displayed.\r\n</details>\r\n<details>\r\n<summary>**What
+        is indentation?**</summary>\r\nIndentation is the placement of text farther
+        to the right, or left, to separate it from surrounding text.  Indentation
+        helps to convey the program's structure.  In HTML, elements that are inside
+        other elements are usually indented.  Here is an example:\r\n<pre>\r\n   &lt;body&gt;\r\n      &lt;p&gt;This
+        paragraph is inside the \"body\" element.&lt;/p&gt;\r\n   &lt;/body&gt;\r\n</pre>\r\n\r\n</details>\r\n<details>\r\n<summary>**What
+        is formatting?**</summary>\r\nFormatting is arranging text in a way that makes
+        it easier to understand.  HTML is usually formatted using indentation.  That
+        means that elements that are inside other elements are further to the right
+        in code.  Here is an example:\r\n<pre>\r\n   &lt;body&gt;\r\n      &lt;p&gt;This
+        paragraph is inside the \"body\" element.&lt;/p&gt;\r\n   &lt;/body&gt;\r\n</pre>\r\n</details>\r\n</div>\r\n\r\nYou
+        can add **comments** to your code to explain the different parts of the code
+        and what it should create.  Comments can help you to debug, and will also
+        help other people who are trying to understand your code.\r\n\r\n<pre>\r\n&lt;!--
+        this is a comment --&gt;\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Look at the code
+        with your partner and find the comments.\r\n* Use the comments to help you
+        fix the bugs in the HTML."
+      CSD U2 create page_markdown_instruction: "# Create and Name Your New Page\r\n\r\nBefore
+        you start coding, you should make sure that you have all the pages that you
+        need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename
+        it. (Look at [Lesson 6 Puzzle 8](/s/csd2/stage/6/puzzle/8) if you've forgotten
+        how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n"
+      CSD U2 debug comments_markdown_instruction: "# Debugging\r\n\r\nThis page has
+        images in it. Images make finding bugs a little more tricky. Can you debug
+        this page?\r\n\r\nAs you are debugging you may notice a new set of symbols
+        that look something like this:\r\n<pre>\r\n&lt;!-- this is a comment --&gt;\r\n</pre>\r\n\r\nThis
+        is a **comment**. Comments are written by computer scientists creating web
+        pages for themselves and other humans who might look at their HTML file. Comments
+        explain the different parts of the code and what it should create.  Comments
+        might help you debug.\r\n\r\n# Do This\r\n\r\n* Find and fix all bugs in the
+        starting HTML\r\n* You know you’ve found all of the bugs when your page matches
+        the <a href=\"https://thimbleprojects.org/danimcavoy/103295/\" target=\"_blank\">
+        Target Page</a>."
+      CSD U2 header footer_markdown_instruction: "# Headers and Footer\r\n\r\nEach
+        of your pages needs a header and a footer.\r\n\r\n# Do This\r\n* For each
+        page, make sure it has a header that includes the title of the page and a
+        navigation bar that links to other pages in your site.  For a review of the
+        header, go to [Lesson 9 Level 3](/s/csd2/stage/9/puzzle/3).\r\n* For each
+        page, make sure it has a footer that explains the copyright information for
+        your page.\r\n\r\n"
       CSD U2 image tag_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
         do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
@@ -1467,16 +1633,16 @@ en:
         your partner agree on how the image tag works.\r\n* Try to move the picture
         to the top of the page."
       CSD U2 layout style bgcolor_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is making the background
-        of the page blue:\r\n\r\n<pre>body {\r\n  background-color: lightblue;\r\n}</pre>\r\n\r\n*
-        `body` is the _selector_.  It specifies which elements will have to follow
-        the rules inside the curly braces, in this case, the body element is the entire
-        page.\r\n* `background-color: lightblue;` is the rule that makes the entire
-        page light blue.\r\n * `background-color` is the _property_.  It explains
-        what the rule is about, in this case the color of the background.\r\n * `lightblue`
-        is the _value_.  It explains how the rule should be applied, in this case
-        making the background light blue.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is making the background of the page blue:\r\n\r\n<pre>body
+        {\r\n  background-color: lightblue;\r\n}</pre>\r\n\r\n* `body` is the _selector_.  It
+        specifies which elements will have to follow the rules inside the curly braces,
+        in this case, the body element is the entire page.\r\n* `background-color:
+        lightblue;` is the rule that makes the entire page light blue.\r\n * `background-color`
+        is the _property_.  It explains what the rule is about, in this case the color
+        of the background.\r\n * `lightblue` is the _value_.  It explains how the
+        rule should be applied, in this case making the background light blue.\r\n</details>\r\n<details>\r\n<summary>**What
         colors can I use in CSS?**</summary>\r\nCSS includes most common color names
         (red, blue, green, etc.), and many uncommon ones.  You can see a full list
         of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
@@ -1508,10 +1674,10 @@ en:
         of the entire page light blue.\r\n* Change the code to make the page a different
         color.\r\n* Try to change the background color of just the paragraphs."
       CSD U2 layout style body_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<details>\r\n<summary>**What
-        does the `body` selector do?**</summary>\r\nBecause the content of the web
-        page is all inside the `body` tag, the body selector gives style rules for
-        everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
+        do?**</summary>\r\nBecause the content of the web page is all inside the `body`
+        tag, the body selector gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `color` property do?**</summary>\r\nThe `color` property specifies
         the color of the text.  If there’s no text, it won’t do anything. Read more
         at <a href=\"http://www.w3schools.com/cssref/pr_text_color.asp\"> W3Schools
@@ -1550,10 +1716,10 @@ en:
         `color`, or other text properties to the `body` rule set.\r\n* Try out some
         different properties to check your guesses."
       CSD U2 layout style border_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        colors can I use in CSS?**</summary>\r\nCSS includes most common color names
-        (red, blue, green, etc.), and many uncommon ones.  You can see a full list
-        of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What colors can I use in CSS?**</summary>\r\nCSS
+        includes most common color names (red, blue, green, etc.), and many uncommon
+        ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
         - HTML Color Names</a>.  You can still use colors that are not included in
         the named list, but you will need to use their RGB values.  You can read more
         about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
@@ -1588,14 +1754,14 @@ en:
         Put a border on another type of page element, such as one of the headers or
         the paragraphs."
       CSD U2 layout style borderradius_markdown_instruction: "<div style=\"float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is making the image
-        borders:\r\n\r\n<pre>img {\r\n  border-color: saddlebrown;\r\n  border-width:
-        4px;\r\n  border-style: solid;\r\n  border-radius: 10px;\r\n}</pre>\r\n\r\n*
-        `img` is the _selector_.  It specifies which elements will have to follow
-        the rules inside the curly braces, in this case, the images.\r\n* `border-color:
-        saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius:
-        10px;` are the rules that make the border.\r\n</details>\r\n<details>\r\n<summary>**What
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is making the image borders:\r\n\r\n<pre>img {\r\n  border-color:
+        saddlebrown;\r\n  border-width: 4px;\r\n  border-style: solid;\r\n  border-radius:
+        10px;\r\n}</pre>\r\n\r\n* `img` is the _selector_.  It specifies which elements
+        will have to follow the rules inside the curly braces, in this case, the images.\r\n*
+        `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`,
+        and `border-radius: 10px;` are the rules that make the border.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `border-style` property do?**</summary>\r\nThe `border-style` property
         determines what kind of border (solid, dotted, etc.) the element has.  You
         can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_border-style.asp\">W3Schools
@@ -1617,38 +1783,41 @@ en:
         with your partner what you think the property does.\r\n* Try different values
         for border radius and decide which one you like the best."
       CSD U2 layout style float_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is making the image
-        float on the left hand side of the page:\r\n\r\n<pre>img {\r\n  float: left;\r\n}</pre>\r\n\r\n*
-        `img` is the _selector_.  It specifies which elements will have to follow
-        the rules inside the curly braces, in this case, the images.\r\n* `float:
-        left;` is the rule that makes the image float to the left.\r\n</details>\r\n<details>\r\n<summary>**What
-        does the `float` property do?**</summary>\r\nThe `float` property makes an
-        element \"float\", meaning that the elements that come after it all flow around
-        it.  If the `float` value is `left`, the element will float to the left, and
-        the elements after it will show up on its right.  If the `float` value is
-        `right`, the element will float to the right, and the elements after it will
-        show up on its left.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\">W3Schools
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is making the image float on the left hand side of the page:\r\n\r\n<pre>img
+        {\r\n  float: left;\r\n}</pre>\r\n\r\n* `img` is the _selector_.  It specifies
+        which elements will have to follow the rules inside the curly braces, in this
+        case, the images.\r\n* `float: left;` is the rule that makes the image float
+        to the left.\r\n</details>\r\n<details>\r\n<summary>**What does the `float`
+        property do?**</summary>\r\nThe `float` property makes an element \"float\",
+        meaning that the elements that come after it all flow around it.  If the `float`
+        value is `left`, the element will float to the left, and the elements after
+        it will show up on its right.  If the `float` value is `right`, the element
+        will float to the right, and the elements after it will show up on its left.  You
+        can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\">W3Schools
         - CSS float Property</a>\r\n</details>\r\n</div>\r\n\r\n# Float\r\n\r\n* Look
         at the `float` property inside your `img` rule-set\r\n* Discuss with your
         partner what you think the property does.\r\n* Change the value from `left`
         to `right`."
-      CSD U2 layout style freeplay_markdown_instruction: "# About Me Page\r\n\r\nTry
-        out these some new CSS properties on your About Me page.\r\n\r\n* Add styling
-        of your choice to your About Me Page. Be sure to use at least 3 new CSS properties.\r\n\r\n#
-        Checklist\r\n\r\n* At least 3 of the following CSS Properties are used:\r\n\r\n
-        * `background-color`\r\n * `height`\r\n * `width`\r\n * `border-style`\r\n
-        * `border-radius`\r\n * `border-width`\r\n * `float`\r\n * `margin`\r\n\r\n\r\nIf
-        you’ve used at least 3 of the properties from the checklist, you can explore
-        some additional CSS properties to add to your About Me page."
+      CSD U2 layout style freeplay_markdown_instruction: "# Personal Web Site\r\n\r\nTry
+        out these some new CSS properties on your personal web site.\r\n\r\n* Add
+        styling of your choice to your web site. Be sure to use at least 3 new CSS
+        properties.\r\n\r\n# Checklist\r\n\r\n* At least 3 of the following CSS Properties
+        are used:\r\n\r\n * `background-color`\r\n * `height`\r\n * `width`\r\n *
+        `border-style`\r\n * `border-radius`\r\n * `border-width`\r\n * `float`\r\n
+        * `margin`\r\n\r\n\r\nIf you’ve used at least 3 of the properties from the
+        checklist, you can explore some additional CSS properties to add to your About
+        Me page."
       CSD U2 layout style margin_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is putting extra
-        space around the images:\r\n\r\n<pre>img {\r\n\tmargin: 10px;\r\n}</pre>\r\n\r\n*
-        `img` is the _selector_.  It specifies which elements will have to follow
-        the rules inside the curly braces, in this case, the images.\r\n* `margin:
-        10px;` is the rule that puts 10 pixels of space around the image.\r\n</details>\r\n<details>\r\n<summary>**What
-        does the `margin` property do?**</summary>\r\nThe `margin` property determines
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is putting extra space around the images:\r\n\r\n<pre>img
+        {\r\n\tmargin: 10px;\r\n}</pre>\r\n\r\n* `img` is the _selector_.  It specifies
+        which elements will have to follow the rules inside the curly braces, in this
+        case, the images.\r\n* `margin: 10px;` is the rule that puts 10 pixels of
+        space around the image.\r\n</details>\r\n<details>\r\n<summary>**What does
+        the `margin` property do?**</summary>\r\nThe `margin` property determines
         how much space will be around the image.  Most of the time, you will define
         in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools
         - CSS margin Property</a>\r\n</details>\r\n<details>\r\n<summary>**What does
@@ -1660,10 +1829,10 @@ en:
         effect with a partner.\r\n* Choose another element type and give it a margin,
         too."
       CSD U2 layout style sample_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<details>\r\n<summary>**What
-        does the `body` selector do?**</summary>\r\nBecause the content of the web
-        page is all inside the `body` tag, the body selector gives style rules for
-        everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
+        do?**</summary>\r\nBecause the content of the web page is all inside the `body`
+        tag, the body selector gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `border-style` property do?**</summary>\r\nThe `border-style` property
         determines what kind of border (solid, dotted, dashed, etc.) the element has.  You
         can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_border-style.asp\">W3Schools
@@ -1688,13 +1857,13 @@ en:
         made the image corners rounded?\r\n\r\nIn the next few puzzles, you'll be
         changing and adding new styles on this page."
       CSD U2 layout style width_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is making the image
-        its current size:\r\n\r\n<pre>img {\r\n\twidth: 250px;\r\n}</pre>\r\n\r\n*
-        `img` is the _selector_.  It specifies which elements will have to follow
-        the rules inside the curly braces, in this case, the images.\r\n* `width:
-        250px` is the rule that makes the image 250 pixels wide.  It also changes
-        the height so that the image does not stretch.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is making the image its current size:\r\n\r\n<pre>img {\r\n\twidth:
+        250px;\r\n}</pre>\r\n\r\n* `img` is the _selector_.  It specifies which elements
+        will have to follow the rules inside the curly braces, in this case, the images.\r\n*
+        `width: 250px` is the rule that makes the image 250 pixels wide.  It also
+        changes the height so that the image does not stretch.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `width` property do?**</summary>\r\nThe `width` property determines
         how wide the element will be.  Most of the time, you will define in the width
         in pixels, which makes the element take up an exact amount of space on the
@@ -1723,19 +1892,48 @@ en:
         or smaller.\r\n* Create a new rule with a `height` property to control the
         height of the images.\r\n* Use the `width` property in the `p` rule-set to
         change the width of your paragraphs."
-      CSD U2 link demo_markdown_instruction: "# Making a Multi-page Site\r\n\r\nA
-        web site should include more than one web page, and they should connect to
-        each other.   Here's an example of a project with multiple pages that are
-        connected by hyperlinks (the blue underlined words that take you to another
-        page when you click on them).\r\n\r\n# Do This\r\n* Use the inspector tool
-        to see the code that creates the hyperlinks on the top of index.html.\r\n*
-        Discuss with your partner how you think that code works.\r\n* Click on recipe.html
-        in the file list on the left hand side.  Add a hyperlink to the top of this
-        page that will take you back to index.html."
+      CSD U2 link demo_markdown_instruction: "# Making a Multi-page Site\r\n\r\n<div
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**What are
+        hyperlinks?**</summary>\r\nHyperlinks can connect to local web pages or external
+        web pages. To add navigation to your website you will need to add hyperlinks
+        which connect your individual web pages. You can **add hyperlinks to your
+        web page using the `<a>` element**.  The text you want to display as the hyperlink
+        goes between the opening and closing hyperlink tags. The `<a>` element has
+        an attribute `href` which is the location to link to.  The location of a local
+        page is just the file path for that page. <br> <br>\r\n\r\nFor example to
+        link to the unique houses page you would add the following code inside your
+        `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a href=”houses.html”&gt; Unique
+        Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n<details>\r\n<summary>**How
+        do I add a hyperlink?**</summary>\r\nYou can **add hyperlinks to your web
+        page using the `<a>` element**.  The text you want to display as the hyperlink
+        goes between the opening and closing hyperlink tags. The `<a>` element has
+        an attribute `href` which is the location to link to.  The location of a local
+        page is just the file path for that page. <br> <br>\r\n\r\nFor example to
+        link to the unique houses page you would add the following code inside your
+        `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a href=”houses.html”&gt; Unique
+        Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n</div>\r\n\r\nA web site
+        should include more than one web page, and they should connect to each other.   Here's
+        an example of a project with multiple pages that are connected by hyperlinks
+        (the blue underlined words that take you to another page when you click on
+        them).\r\n\r\n# Do This\r\n* Use the inspector tool to see the code that creates
+        the hyperlinks on the top of index.html.\r\n* Discuss with your partner how
+        you think that code works.\r\n* Click on recipe.html in the file list on the
+        left hand side.  Add a hyperlink to the top of this page that will take you
+        back to index.html."
+      CSD U2 link pages_markdown_instruction: "# Create a New Page for Your Website.\r\n\r\nHere's
+        your project from before.  You'll be adding another page.  Your new page
+        can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n*
+        Add a new HTML file by clicking  ![](https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
+        PM.png).  The new file will appear in the file list on the left side of the
+        workspace.\r\n* Rename the file, either by right clicking it and choosing
+        \"Rename\", or by clicking on it when it's already highlighted.  **Make sure
+        the name is unique, descriptive and ends in \".html\"**.\r\n* Use HTML to
+        fill out your new page.  It should include:\r\n * a list\r\n * a header\r\n\r\n"
       CSD U2 lists intro_markdown_instruction: "# Lists\r\n<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        are the two types of lists?**</summary>\r\n There are two types of lists in
-        HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are the two types of lists?**</summary>\r\n
+        There are two types of lists in HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
         is an unordered list?**</summary>\r\nAn unordered list is just a set of bulleted
         items.\r\n<br /><br />\r\nAn unordered list element has the tag &lt;ul&gt;
         . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist.
@@ -1770,6 +1968,17 @@ en:
         tool to see the code that is making the two different kinds of lists.\r\n*
         Make sure you and your partner agree on what the different tags do.\r\n* Fix
         the code so that the second list items display correctly.\r\n"
+      CSD U2 navigation_markdown_instruction: "# Create a Navigation Bar\r\n\r\nHere's
+        your project from before.  You'll be linking the two pages by creating a
+        **navigation bar** at the top of the page.  Websites usually have the same
+        navigation bar across all of their pages so you can get back and forth between
+        things on the site.  You can see an example of a navigation bar on [this page](https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/).\r\n\r\n#
+        Do This\r\n* In your home page (index.html), add two hyperlinks at the top
+        of the page, one to your lists page, and one to the home page.\r\n * *Even
+        though it might seem strange to link a page to itself, it's less confusing
+        if the navigation bar is exactly the same on every page.*\r\n* Copy the code
+        for the navigation bar, then add it to the top of your lists page.\r\n* Test
+        your links in the preview area by clicking on them.\r\n\r\n"
       CSD U2 new page_markdown_instruction: "# Create a New Page for Your Website.\r\n\r\nHere's
         your project from before.  You'll be adding another page.  Your new page
         can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n*
@@ -1780,24 +1989,24 @@ en:
         the name is unique, descriptive and ends in \".html\"**.\r\n* Use HTML to
         fill out your new page.  It should include:\r\n * a list\r\n * a header\r\n\r\n"
       CSD U2 ordered list_markdown_instruction: "# Ordered Lists\r\n<div style=\"float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        are the two types of lists?**</summary>\r\n There are two types of lists in
-        HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are the two types of lists?**</summary>\r\n
+        There are two types of lists in HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
         is an ordered list?**</summary>\r\nAn ordered list is a set of bulleted items
         which are numbered.\r\n<br /><br />\r\nAn ordered list element has the tag
-        &lt;ol&gt; . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.
-        Each item in the list is marked by a list item element &lt;li&gt;. This is
-        an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list
-        item element is a child element, which means that it goes inside of its parent
-        element, the ordered list (&lt;ol&gt;).\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**How
+        `<ol>` . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.
+        Each item in the list is marked by a list item element `<li>`;. This is an
+        abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item
+        element is a child element, which means that it goes inside of its parent
+        element, the ordered list (`<ol>`).\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**How
         do I make an ordered list?**</summary>\r\nMaking an ordered list has two steps:
         making the list and adding the list items.  To make the ordered list, write
-        the ordered list tags `&lt;ol&gt; &lt;/ol&gt;`.  Next, add your list items
-        **inside** the ordered list tags.  To make each list item, use the list item
-        tags `&lt;li&gt; &lt;/li&gt;` and write the list item inside the tags.\r\n<br
-        /><br />\r\nIt can be helpful to indent your &lt;li&gt; tags so it's clear
-        they are contained in the &lt;ol&gt; tag.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**Show
-        me working code.**</summary>\r\n<table border=\"1\">\r\n<tr>\r\n<td>Example</td>\r\n<td>Result</td>\r\n</tr>\r\n<tr>\r\n<td><pre>
+        the ordered list tags `<ol></ol>`.  Next, add your list items **inside** the
+        ordered list tags.  To make each list item, use the list item tags `<li></li>`
+        and write the list item inside the tags.\r\n<br /><br />\r\nIt can be helpful
+        to indent your `<li>` tags so it's clear they are contained in the `<ol>`
+        tag.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>**Show me working code.**</summary>\r\n<table
+        border=\"1\">\r\n<tr>\r\n<td>Example</td>\r\n<td>Result</td>\r\n</tr>\r\n<tr>\r\n<td><pre>
         &lt;ol&gt; <br>   &lt;li&gt;Step 1 &lt;/li&gt; <br>   &lt;li&gt;Step 2 &lt;/li&gt;
         <br>   &lt;li&gt;Step 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\r\n<td><img
         src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04
@@ -1807,6 +2016,19 @@ en:
         into an ordered list that looks like the one below.\r\n\r\n*Hint: There will
         be NO NUMBERS in your code.* \r\n\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03
         PM.png)"
+      CSD U2 project review_markdown_instruction: "# Review Your Project\r\n\r\nYou're
+        almost ready to publish your project, but you should check one more time that
+        you have \r\n\r\n# Do This\r\n* Check that you are comfortable sharing all
+        the information that's on your site.\r\n* Check that all of your images are
+        correctly attributed, and that you have the right to put them on your site.\r\n*
+        Check that your project includes everything included in the project rubric.\r\n*
+        Use comments and whitespace to make your website readable.\r\n* Ask your partner
+        to help you find any potential problems with your site.\r\n"
+      CSD U2 project share_markdown_instruction: "# Share Your Project\r\n\r\nIt's
+        time to share your project with the world!\r\n\r\n# Do This\r\n* Click the
+        ![](https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
+        AM.png) button at the top of this page.\r\n* Copy the URL it gives you, and
+        email it to the people you want to see your page.\r\n\r\n"
       CSD U2 style background_markdown_instruction: "<div style=\"float: right; height:
         150px; width: 400px; overflow-y: scroll; margin-left: 20px;\">\r\n<details>\r\n<summary>**What
         is a CSS rule-set?**</summary>\r\nBlah blah answer\r\n</details>\r\n<details>\r\n<summary>**What
@@ -1844,15 +2066,16 @@ en:
         of the entire page light blue.\r\n* Change the code to make the page a different
         color.\r\n* Try to change the background color of just the paragraphs."
       CSD U2 text style decoration_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that makes the `h1` elements
-        underlined:\r\n\r\n<pre>h1 {\r\n  text-decoration: underline;\r\n}</pre>\r\n\r\n*
-        `h1` is the _selector_.  It specifies which elements will have to follow the
-        rules inside the curly braces. The `p` stands for paragraph.\r\n* `text-decoration:
-        underline;` is the rule that makes the text inside the `h1` tag underlined.\r\n
-        * `text-decoration` is the _property_.  It explains what the rule is about,
-        in this case where the line goes.\r\n * `underline` is the _value_.  It explains
-        how the rule should be applied, in this case making the test underlined.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that makes the `h1` elements underlined:\r\n\r\n<pre>h1 {\r\n  text-decoration:
+        underline;\r\n}</pre>\r\n\r\n* `h1` is the _selector_.  It specifies which
+        elements will have to follow the rules inside the curly braces. The `p` stands
+        for paragraph.\r\n* `text-decoration: underline;` is the rule that makes the
+        text inside the `h1` tag underlined.\r\n * `text-decoration` is the _property_.  It
+        explains what the rule is about, in this case where the line goes.\r\n * `underline`
+        is the _value_.  It explains how the rule should be applied, in this case
+        making the test underlined.\r\n</details>\r\n<details>\r\n<summary>**What
         are the possible values for text decoration?**</summary>\r\nYou can choose
         between \"underline\", \"overline\", and \"line-through\".  You can read more
         about the text-decoration property at <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools
@@ -1879,18 +2102,19 @@ en:
         Choose from \"underline\", \"overline\", and \"line-through\"\r\n* Add a text
         decoration rule for the paragraph or h3 tag."
       CSD U2 text style font family_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is controlling the
-        paragraph font:\r\n\r\n<pre>p {\r\n  font-family: cursive;\r\n}</pre>\r\n\r\n*
-        `p` is the _selector_.  It specifies which elements will have to follow the
-        rules inside the curly braces. The `p` stands for paragraph.\r\n* `font-family:
-        cursive;` is the rule that makes the text inside the `p` tags a particular
-        font.\r\n * `font-family` is the _property_.  It explains what the rule is
-        about, in this case the font.\r\n * `cursive` is the _value_.  It explains
-        how the rule should be applied, in this case making the text cursive.\r\n</details>\r\n<details>\r\n<summary>**What
-        are the possible values for font family?**</summary>\r\nYou can choose between
-        \"serif\", \"sans-serif\", \"cursive\", \"fantasy\", and \"monospace\".  You
-        can also try more specific fonts as described in <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is controlling the paragraph font:\r\n\r\n<pre>p {\r\n  font-family:
+        cursive;\r\n}</pre>\r\n\r\n* `p` is the _selector_.  It specifies which elements
+        will have to follow the rules inside the curly braces. The `p` stands for
+        paragraph.\r\n* `font-family: cursive;` is the rule that makes the text inside
+        the `p` tags a particular font.\r\n * `font-family` is the _property_.  It
+        explains what the rule is about, in this case the font.\r\n * `cursive` is
+        the _value_.  It explains how the rule should be applied, in this case making
+        the text cursive.\r\n</details>\r\n<details>\r\n<summary>**What are the possible
+        values for font family?**</summary>\r\nYou can choose between \"serif\", \"sans-serif\",
+        \"cursive\", \"fantasy\", and \"monospace\".  You can also try more specific
+        fonts as described in <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools
         - CSS Web Safe Font Combinations</a>\r\n</details>\r\n<details>\r\n<summary>**Why
         do I need all the punctuation?**</summary>\r\nThe punctuation, such as the
         curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
@@ -1914,19 +2138,19 @@ en:
         one you like the best.\r\n  * Choose from \"serif\", \"sans-serif\", \"cursive\",
         \"fantasy\", and \"monospace\"\r\n* Add a font family rule for the h1 or h3
         tags."
-      CSD U2 text style freeplay_markdown_instruction: "# About Me Page\r\n\r\nNow
-        you can style the text on your About Me page!\r\n\r\n* Open your style sheet
-        and add styling of your choice to your About Me Page. Be sure to use at least
+      CSD U2 text style freeplay_markdown_instruction: "# Adding Styles\r\n\r\nNow
+        you can style the text on your personal web site!\r\n\r\n* Open your style
+        sheet and add styling of your choice to your project. Be sure to use at least
         3 different CSS properties.\r\n\r\n# Checklist\r\n\r\n* At least 3 of the
         following CSS Properties are used:\r\n * `font-size`\r\n * `font-family`\r\n
         * `color`\r\n * `text-decoration`\r\n * `text-align`\r\n\r\nIf you’ve used
         at least 3 of the properties from the checklist, you can explore some additional
-        text properties to add to your About Me page."
+        text properties to add to your project."
       CSD U2 text style h1_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        colors can I use in CSS?**</summary>\r\nCSS includes most common color names
-        (red, blue, green, etc.), and many uncommon ones.  You can see a full list
-        of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What colors can I use in CSS?**</summary>\r\nCSS
+        includes most common color names (red, blue, green, etc.), and many uncommon
+        ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
         - HTML Color Names</a>.  You can still use colors that are not included in
         the named list, but you will need to use their RGB values.  You can read more
         about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
@@ -1962,10 +2186,10 @@ en:
         the h1 header red.\r\n* Change the code for the color of the h1 header from
         `red` to a different color."
       CSD U2 text style h3_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        colors can I use in CSS?**</summary>\r\nCSS includes most common color names
-        (red, blue, green, etc.), and many uncommon ones.  You can see a full list
-        of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What colors can I use in CSS?**</summary>\r\nCSS
+        includes most common color names (red, blue, green, etc.), and many uncommon
+        ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
         - HTML Color Names</a>.  You can still use colors that are not included in
         the named list, but you will need to use their RGB values.  You can read more
         about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
@@ -2051,23 +2275,23 @@ en:
         than before.\r\n\r\nIn the next few lessons, you'll be changing and adding
         new styles on this page.\r\n\r\n"
       CSD U2 text style size_markdown_instruction: "<div style=\"float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is controlling the
-        paragraph text size:\r\n\r\n<pre>p {\r\n  font-size: 14px;\r\n}</pre>\r\n\r\n*
-        `p` is the _selector_.  It specifies which elements will have to follow the
-        rules inside the curly braces. The `p` stands for paragraph.\r\n* `font-size:
-        14px;` is the rule that makes the text inside the `p` tags a particular size.\r\n
-        * `font-size` is the _property_.  It explains what the rule is about, in this
-        case the text size.\r\n * `14px` is the _value_.  It explains how the rule
-        should be applied, in this case making the text 14 pixels big.\r\n</details>\r\n<details>\r\n<summary>**What
-        does `px` mean / What is a pixel?**</summary>\r\nPixel, which is abbreviated
-        `px`, is how elements are measured in CSS.  It’s the size of a single point
-        of light on the screen.\r\n</details>\r\n<details>\r\n<summary>**Why do I
-        need all the punctuation?**</summary>\r\nThe punctuation, such as the curly
-        braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand
-        the rules in the style sheet.  The curly braces hold all the rules for a particular
-        selector.  Each rule should end in a semicolon, and the properties and values
-        are always separated by a colon.\r\n</details>\r\n<details>\r\n<summary>**What
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is controlling the paragraph text size:\r\n\r\n<pre>p {\r\n  font-size:
+        14px;\r\n}</pre>\r\n\r\n* `p` is the _selector_.  It specifies which elements
+        will have to follow the rules inside the curly braces. The `p` stands for
+        paragraph.\r\n* `font-size: 14px;` is the rule that makes the text inside
+        the `p` tags a particular size.\r\n * `font-size` is the _property_.  It explains
+        what the rule is about, in this case the text size.\r\n * `14px` is the _value_.  It
+        explains how the rule should be applied, in this case making the text 14 pixels
+        big.\r\n</details>\r\n<details>\r\n<summary>**What does `px` mean / What is
+        a pixel?**</summary>\r\nPixel, which is abbreviated `px`, is how elements
+        are measured in CSS.  It’s the size of a single point of light on the screen.\r\n</details>\r\n<details>\r\n<summary>**Why
+        do I need all the punctuation?**</summary>\r\nThe punctuation, such as the
+        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
+        to understand the rules in the style sheet.  The curly braces hold all the
+        rules for a particular selector.  Each rule should end in a semicolon, and
+        the properties and values are always separated by a colon.\r\n</details>\r\n<details>\r\n<summary>**What
         is a style sheet?**</summary>\r\nA style sheet is a document that controls
         how a web page will appear.  External style sheets are separate files that
         are linked to the HTML page.\r\n</details>\r\n<details>\r\n<summary>**What
@@ -2086,20 +2310,21 @@ en:
         to be bigger.\r\n* Add a new rule to your rule-set for your h3 tag to make
         the text bigger or smaller."
       CSD U2 text style text align_markdown_instruction: "<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
-        does the code work?**</summary>\r\nHere is the code that is controlling the
-        paragraph text alignment:\r\n\r\n<pre>p {\r\n  text-align: left;\r\n}</pre>\r\n\r\n*
-        `p` is the _selector_.  It specifies which elements will have to follow the
-        rules inside the curly braces. The `p` stands for paragraph.\r\n* `text-align:
-        left;` is the rule that makes the text inside the `p` tags align to the left
-        side of the paragraph.\r\n * `text-align` is the _property_.  It explains
-        what the rule is about, in this case the text alignment.\r\n * `left` is the
-        _value_.  It explains how the rule should be applied, in this case making
-        the text align to the left side of the paragraph.\r\n</details>\r\n<details>\r\n<summary>**Why
-        doesn't `text-align: left;` do anything?**</summary>\r\nMost properties have
-        default values.  The default values are the styles that an element will have
-        automatically, before you add your style sheet.  The default value for `text-align`
-        is `left`, so it doesn't change from how it already looked.\r\n</details>\r\n<details>\r\n<summary>**What
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
+        is the code that is controlling the paragraph text alignment:\r\n\r\n<pre>p
+        {\r\n  text-align: left;\r\n}</pre>\r\n\r\n* `p` is the _selector_.  It specifies
+        which elements will have to follow the rules inside the curly braces. The
+        `p` stands for paragraph.\r\n* `text-align: left;` is the rule that makes
+        the text inside the `p` tags align to the left side of the paragraph.\r\n
+        * `text-align` is the _property_.  It explains what the rule is about, in
+        this case the text alignment.\r\n * `left` is the _value_.  It explains how
+        the rule should be applied, in this case making the text align to the left
+        side of the paragraph.\r\n</details>\r\n<details>\r\n<summary>**Why doesn't
+        `text-align: left;` do anything?**</summary>\r\nMost properties have default
+        values.  The default values are the styles that an element will have automatically,
+        before you add your style sheet.  The default value for `text-align` is `left`,
+        so it doesn't change from how it already looked.\r\n</details>\r\n<details>\r\n<summary>**What
         are the possible values for text align?**</summary>\r\nYou can choose between
         \"left\", \"right\", and \"center\".  You can read more about the text-align
         property at <a href=\"http://www.w3schools.com/cssref/pr_text_text-align.asp\">W3Schools
@@ -2126,9 +2351,9 @@ en:
         property in the paragraph tag.\r\n* Change the paragraph alignment.\r\n  *
         Choose from \"left\", \"right\", and \"center\""
       CSD U2 unordered list_markdown_instruction: "# Unordered Lists\r\n<div style=\"float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
-        are the two types of lists?**</summary>\r\n There are two types of lists in
-        HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are the two types of lists?**</summary>\r\n
+        There are two types of lists in HTML, ordered and unordered lists.\r\n</details>\r\n<details>\r\n<summary>**What
         is an unordered list?**</summary>\r\nAn unordered list is just a set of bulleted
         items.\r\n<br /><br />An unordered list element has the tag &lt;ul&gt; . This
         is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each
@@ -2192,6 +2417,13 @@ en:
         PM.png) and upload the image from your computer into your project.\r\n\r\n#
         Do This\r\n* Upload at least two images into your project\r\n* Use the `<img>`
         tag to display the images in your website."
+      CSD U2 upload images_markdown_instruction: "# Upload Images\r\n\r\nNext, you'll
+        need to upload all of your images into your project.\r\n\r\n# Do This\r\n*
+        Download all the images you want onto your computer. Visit [Lesson 8 Level
+        5](/s/csd2/stage/8/puzzle/5) for help if you need it.\r\n * Make sure you
+        have the right to use these images.\r\n * Write down all of the attribution
+        information that you need.\r\n* Upload all of the images into your project.  Visit
+        [Lesson 8 Level 6](/s/csd2/stage/8/puzzle/6) if you've forgotten how.\r\n\r\n"
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
         pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
@@ -4274,15 +4506,14 @@ en:
         Random Drawing\r\n\r\nTo practice using **variables with the draw loop** you
         will be building your own **randomized art project**. Check out the exemplar
         to see one possible outcome. Then move on to get started building your own."
-      CSD U3 Variables random with assignment_markdown_instruction: "<img src=\"https://images.code.org/38e13ea8eeb840516410797e01376d14-image-1490917477490.44.24
-        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug: Variables and
-        Random Numbers\r\n\r\nVariables can be assigned a random number too. This
-        lets you save a single random value so that you can use it as many times as
-        you want in your program.\r\n\r\n# Do This\r\n\r\n`eyeSize` is assigned a
-        random number. Unfortunately only one of the eyes is currently using it.\r\n\r\n*
-        **Run the program** to see how it works\r\n* **Change the program** so that
-        both eyes are always the same random size. Hint: you'll only need to make
-        changes to one line of code."
+      CSD U3 Variables random with assignment_markdown_instruction: "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\"
+        style=\"float:right;height:150px\">\r\n\r\n# Debug: Variables and Random Numbers\r\n\r\nVariables
+        can be assigned a random number too. This lets you save a single random value
+        so that you can use it as many times as you want in your program.\r\n\r\n#
+        Do This\r\n\r\n`eyeSize` is assigned a random number. Unfortunately only one
+        of the eyes is currently using it.\r\n\r\n* **Run the program** to see how
+        it works\r\n* **Change the program** so that both eyes are always the same
+        random size. Hint: you'll only need to make changes to one line of code."
       CSD U3 Variables use value rect_markdown_instruction: "# Using a Variable's
         Value\r\n\r\nThis program creates a variable called `size`. You will need
         to **assign it a value**. It will then be used to set the size of a square
@@ -4319,7 +4550,7 @@ en:
         should move the motorcycle from the bottom left to the top right, like the
         image to the right. Unfortunately the motorcycle moves off screen too quickly
         to see what's going wrong.\r\n\r\nUsing the provided watchers for `cycle.x`
-        and `cycle.y`, figure out which on is moving in the wrong direction and fix
+        and `cycle.y`, figure out which one is moving in the wrong direction and fix
         the program."
       CSD U3 Watcher Predict response_markdown_instruction: "# Watching the Counter
         Pattern\r\n\r\nWatchers are a really useful tool for debugging programs that
@@ -6255,10 +6486,10 @@ en:
         link to the unique houses page you would add the following code inside your
         `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a href=”houses.html”&gt; Unique
         Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n</div>\r\n\r\n# Hyperlink
-        Element\r\n\r\n* In the index.html file, find the line of code that says that
-        says `<a href=\"houses.html\">Odd Houses</a>`.  This is a link that will take
-        you to the Odd Houses page at `houses.html`.\r\n* Discuss with a partner how
-        the code works.\r\n * Where does the file name go?\r\n * Where does the label
+        Element\r\n\r\n* In the index.html file, find the line of code that says `<a
+        href=\"houses.html\">Odd Houses</a>`.  This is a link that will take you to
+        the Odd Houses page at `houses.html`.\r\n* Discuss with a partner how the
+        code works.\r\n * Where does the file name go?\r\n * Where does the label
         of the link go?\r\n* Below the hyperlink to the Odd Houses page add two new
         hyperlinks (`<a>`) to the following pages:\r\n    * Crazy Signs Page\r\n    *
         Guinness Book of World Records Page\r\n* Test it out to see if clicking the
@@ -6369,12 +6600,10 @@ en:
       CSDU2 - PW - Class Style Personal Site_markdown_instruction: "# Free Play Styling\r\n\r\nYour
         turn to decide what you want to style! Play with the classes styling and RGB
         colors to improve your personal website.\r\n\r\n* Make sure you have completed
-        the checklist below \r\n* Take a screenshot of your home page and save it
-        somewhere on your computer so you can find it later (*Need help with how to
-        screenshot? Check out this <a href=\"http://www.take-a-screenshot.org/\">website
-        </a>.*)\r\n\r\n## Checklist\r\n\r\n* On your hobby page, give each hobby its
-        own text color using RGB values.\r\n* On your recipe page, give all the parts
-        of the ingredients list the same background color, including the title.\r\n*
+        the checklist below.\r\n* Take a screenshot of your home page and save it
+        somewhere on your computer so you can find it later.\r\n\r\n## Checklist\r\n\r\n*
+        Somewhere on your site, give text a particular color using RGB values.\r\n*
+        On your lists page, give all the list items the same background color.\r\n*
         Use classes to style at least 2 other elements of your personal website"
       CSDU2 - PW - Classes on Recipe_markdown_instruction: "# Classes on Recipe Page\r\n\r\nIn
         the next few levels, as a little more practice with style, you will style
@@ -8492,7 +8721,7 @@ en:
         don't need to make any changes to the code here_\r\n\r\nTake a minute to
         read through the code and run the program. Discuss with a partner:\r\n\r\n1.
         What is the source of input?\r\n2. Where and how does the program check for
-        input?\r\n3. What does the program do when it gets the right input?\r\n3.
+        input?\r\n3. What does the program do when it gets the correct input?\r\n3.
         What is the program doing when there is no input?"
       CSDU6 LED alarm silent_markdown_instruction: "# Silent Alarm\r\n\r\nHere's
         the alarm app that you started in the last lesson. Right now it doesn't do
@@ -12723,8 +12952,8 @@ en:
         the end of the lesson. Check in with your teacher to see if you should work
         on the challenge level before you start. This is an extra challenge to practice
         your skills if you have time. If you don't have time for it no big deal!\r\n\r\n#
-        Challenge\r\n\r\nGo to <a href=\"https://studio.code.org/p/gamelab\" target=\"_blank\">Full
-        Game Lab</a> and try to make your own profile creator like the example program
+        Challenge\r\n\r\nGo to <a href=\"https://studio.code.org/p/applab\" target=\"_blank\">Full
+        App Lab</a> and try to make your own profile creator like the example program
         on this level."
       'Challenge: Lights Picker_markdown_instruction': "# Challenge: More Patterns\r\n\r\nAdd
         some more patterns to your app. Find a partner and add their pattern as an
@@ -15453,6 +15682,8 @@ en:
         your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\r\n\r\n\r\n\r\n"
       Repeat Predict Contained_markdown_instruction: "# Predict\r\n\r\nHow many times
         will the for loop below run?"
+      Robot Doodle_markdown_instruction: "**Project Idea:** Create a picture of something
+        familiar from the real world. This requires persistence and planning!"
       Robot Drawing_markdown_instruction: "**Project Idea:** Create a picture of
         something familiar from the real world. This requires persistence and planning!"
       Robot_markdown_instruction: "**Project Idea:** Create a picture of something
@@ -24747,7 +24978,7 @@ en:
         one square slightly different\r\n\r\nAdd two lines to the bottom of the code
         you have that look like something like this.\r\n\r\n![](https://images.code.org/abec0079a632f5e6ad7be28beb30763a-image-1490105722035.png)\r\n\r\nWhat
         does this do? We're doing two things...\r\n\r\n1. Creating a variable to
-        hold the RGB string of a different color, and \r\n2. overwriting the background
+        hold the RGB string of a different color, and \r\n2. Overwriting the background
         color of one of the buttons after having just set it a few lines earlier\r\n\r\nYes,
         this means your code will change the background color of one of the buttons
         a few lines after you just set the color in the first place but it will happen
@@ -26310,6 +26541,8 @@ en:
       courseA_collector_loops2_markdown_instruction: "Move Laurel to the treasure,
         then use <xml><block type=\"collector_collect\"/></xml> to pick it up.\r\n\r\nGet
         all three piles to pass this level."
+      courseA_forVideoTest_artist_markdown_instruction: "Repeat loops work for Artist,
+        too!"
       courseA_maze_seq1_markdown_instruction: "*\"Play with these blocks and try
         to get me to the bad pig!\"*"
       courseA_maze_seq10_markdown_instruction: "**Challenge:** Go around the TNT
@@ -26358,9 +26591,23 @@ en:
         up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
         and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
         buttons are pressed."
-      courseA_playlab_events_challenge1_markdown_instruction: "It's time for the
-        Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho
-        will run the fastest?\r\n"
+      courseA_playlab_events_challenge1_markdown_instruction: "Where are my friends
+        hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
+        Olive will make Robin appear! Can you write code to show the rest of my friends
+        too?\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will
+        help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)"
+      courseA_playlab_events_challenge1a_markdown_instruction: "Where are my friends
+        hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
+        Olive will make Robin appear! Can you write code to show the rest of my friends
+        too?\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will
+        help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)"
+      courseA_playlab_events_challenge2_markdown_instruction: "Let's have a party!
+        Give each of my friends something to do when you click or tap them. What do
+        the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make
+        sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)"
       courseB_artist_loops10_markdown_instruction: "Use what you have learned to
         draw a picture of what you think the artist saw when he got home.\r\n\r\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img
         src=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"
@@ -26444,6 +26691,15 @@ en:
         is 150 pixels and each of the short sides are 75 pixels.)"
       courseC_artist_prog8_markdown_instruction: "One more tag.  This is a triangle
         for Pi.  \r\n(Each side is 150 pixels)"
+      courseC_artist_prog_challenge1-doghouse_markdown_instruction: "Let's build
+        a dog house for Jorge!"
+      courseC_artist_prog_challenge1_markdown_instruction: "Draw rooms for each of
+        the animals. There are many different ways to solve this puzzle, so have some
+        fun!"
+      courseC_artist_prog_challenge2_markdown_instruction: "*Let's draw a shining
+        star in the night sky!*"
+      courseC_collector_loops_challenge2_markdown_instruction: "Let's hunt for treasure
+        - using loops! Help the collector by debugging this code. Get all of the treasure!"
       courseC_collector_prog1_markdown_instruction: "**Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag
         blocks into the workspace and try to figure out how to get treasure.  Get
@@ -26471,6 +26727,10 @@ en:
         treasure."
       courseC_collector_progB_markdown_instruction: "You're almost done!  \r\n\r\nCollect
         as many coins as you can to finish the stage!"
+      courseC_collector_prog_challenge1_markdown_instruction: "*Look carefully! Can
+        you collect all **10** pieces of treasure?*"
+      courseC_collector_prog_challenge2_markdown_instruction: "*There are **20**
+        pieces of treasure in this cave. Collect at least half to finish the challenge!"
       courseC_harvester_loops1_markdown_instruction: "Loops can be used to repeat
         more than moves.  \r\n\r\nUse loops to collect all four of the pumpkins."
       courseC_harvester_loops10_markdown_instruction: "Collect all of the corn and
@@ -26524,6 +26784,8 @@ en:
         what you learned in other puzzles!"
       courseC_maze_loops8_markdown_instruction: "**Challenge:** Combine ideas from
         the last few puzzles to complete this level."
+      courseC_maze_loops_challenge2_markdown_instruction: "Let's hunt for treasure
+        - using loops! Help the collector by debugging this code. Get all of the treasure!"
       courseC_maze_programming1_markdown_instruction: "For this puzzle, drag all
         of the blocks together and click \"Run\" to watch it go!"
       courseC_maze_programming2_markdown_instruction: "Drag an extra `move forward`
@@ -26693,6 +26955,12 @@ en:
         the bee fix the code to get all the nectar."
       courseD_bee_debugging9_markdown_instruction: "*\"It's nectar-topia!\"*\r\n\r\nHelp
         the bee fix the code to get all the nectar."
+      courseD_bee_debugging_challenge1_markdown_instruction: "Watch how the bees
+        gets the nectar. Can you use the same kind of pattern to help the bee make
+        all of honey?"
+      courseD_bee_debugging_challenge2_markdown_instruction: "Watch how the bees
+        gets the nectar. Can you use the same kind of pattern to help the bee make
+        all of honey?"
       courseD_bee_nestedLoops1_markdown_instruction: "*\"This is going to **BEE**
         great!\"**\r\n\r\nHelp the bee collect all of the nectar."
       courseD_bee_nestedLoops2_markdown_instruction: "This time, help the bee collect
@@ -26710,6 +26978,19 @@ en:
         each flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_markdown_instruction: "Make all of the honey."
       courseD_bee_nestedLoops9_predict2_markdown_instruction: "Make all of the honey."
+      courseD_bee_nested_loops_challenge1_markdown_instruction: "Let's hunt for
+        treasure - using loops! Help the collector reach at least two piles of treasure
+        using only the blocks in your toolbox."
+      courseD_bee_nested_loops_challenge2_markdown_instruction: "Let's hunt for
+        treasure - using loops! Help the collector reach at least two piles of treasure
+        using only the blocks in your toolbox."
+      courseD_collector_debugging_challenge2_markdown_instruction: "Watch how the
+        bees gets the nectar. Can you use the same kind of pattern to help the bee
+        make all of honey?"
+      courseD_collector_nested_loops_challenge2_markdown_instruction: "Let's hunt
+        for treasure - using loops! Help the collector reach at least two piles of
+        treasure using only the blocks in your toolbox. It is possible to collect
+        all 3."
       courseD_collector_ramp10_markdown_instruction: "Walk Laurel around this square
         collecting the treasure as you find it.\r\n"
       courseD_collector_ramp8_markdown_instruction: "This puzzle is a lot like the
@@ -26786,6 +27067,15 @@ en:
         to easily fill them all!"
       courseD_farmer_while8_markdown_instruction: "**Challenge:** Fill all of these
         holes using as few blocks as possible. "
+      courseD_harvester_nested_loops_challenge1-broken_markdown_instruction: "*\"I
+        need some help on the farm! Help me harvest this corn using only the blocks
+        in your toolbox.\"*"
+      courseD_harvester_nested_loops_challenge1_markdown_instruction: "*\"I need
+        some help on the farm! Help me harvest this corn using only the blocks in
+        your toolbox.\"*"
+      courseD_maze_loops_challenge1_markdown_instruction: "Let's hunt for treasure
+        - using loops! Help the collector reach at least two piles of treasure using
+        only the blocks in your toolbox."
       courseD_maze_nestedLoops3_markdown_instruction: "*\"Zombie hungry!\"*\r\n\r\nGet
         the zombie to the sunflower using the fewest number of blocks possible."
       courseD_maze_nestedLoops4_markdown_instruction: "Get the zombie to the sunflower
@@ -26897,8 +27187,8 @@ en:
       courseE_artist_functions8_markdown_instruction: "**Challenge:** Did you know
         that you can call functions from *inside* other functions?!\r\n\r\nCreate
         as many functions as you think you need to make this drawing of 50 pixel squares."
-      courseE_artist_functions9_markdown_instruction: "Create this image using only
-        the blocks provided. Each triangle has a side length of **50 pixels**\r\n\r\n-
+      courseE_artist_functions9_markdown_instruction: "Create this image using the
+        limited blocks provided. \r\n\r\n- Each triangle has sides of **50 pixels**  \r\n-
         To draw a diamond, you will need to alternate between turning **60 degrees
         and 120 degrees**."
       courseE_artist_functions_predict1_markdown_instruction: "Here is a puzzle that
@@ -27105,9 +27395,13 @@ en:
         this twisted square spiral."
       courseF_artist_for7_markdown_instruction: "Make three small changes to the
         code from the last level to get this!  "
-      courseF_artist_for9_markdown_instruction: "Use the counter inside the `set
-        alpha` block to get this faded center.  \r\n(This hexagon pattern was made
-        using a 60 degree turn.)"
+      courseF_artist_for9_markdown_instruction: "**Inspiration:** Use the counter
+        inside the `set alpha` block to get something like this faded center.  \r\n(This
+        hexagon pattern was made using a 60 degree turn.)"
+      courseF_artist_for_Template_markdown_instruction: "If you turn a little bit
+        more or less than you normally would for a shape, it creates a neat effect.\r\n\r\nTry
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral."
       courseF_artist_fwp1_markdown_instruction: "Today, we're going to try out a
         powerful function editor. See if you can figure out how to edit the `draw
         a square` function to find the bugs."
@@ -27380,6 +27674,9 @@ en:
         should be used. "
       courseF_playlab_variables3bEdit_markdown_instruction: "Help Kiki have a conversation
         with Brian by using the variable `A1` in all of the places where age `12`
+        should be used. "
+      courseF_playlab_variables3b_josh_markdown_instruction: "Help Kiki have a conversation
+        with Brian by using the variable `age` in all of the places where age `12`
         should be used. "
       courseF_playlab_variables4_markdown_instruction: "Now we're going to join
         a variable to the beginning of Pegleg's next sentence using the `create text
