@@ -20,4 +20,12 @@ class CoursesController < ApplicationController
 
     render 'show', locals: {course: course}
   end
+
+  def new
+    render 'new'
+  end
+
+  def create
+    render text: 'Not yet implemented'
+  end
 end
