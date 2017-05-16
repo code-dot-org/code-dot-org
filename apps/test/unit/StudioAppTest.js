@@ -1,98 +1,124 @@
 import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
-import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
+import {singleton as studioApp, stubStudioApp, restoreStudioApp, makeFooterMenuItems} from '@cdo/apps/StudioApp';
 import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import project from '@cdo/apps/code-studio/initApp/project';
 
-describe('StudioApp.singleton', () => {
-  throwOnConsoleErrors();
-  throwOnConsoleWarnings();
+describe("StudioApp", () => {
+  describe('StudioApp.singleton', () => {
+    throwOnConsoleErrors();
+    throwOnConsoleWarnings();
 
-  beforeEach(stubStudioApp);
-  afterEach(restoreStudioApp);
+    beforeEach(stubStudioApp);
+    afterEach(restoreStudioApp);
 
-  let containerDiv, codeWorkspaceDiv;
-  beforeEach(() => {
-    codeWorkspaceDiv = document.createElement('div');
-    codeWorkspaceDiv.id = 'codeWorkspace';
-    document.body.appendChild(codeWorkspaceDiv);
-
-    containerDiv = document.createElement('div');
-    containerDiv.id = 'foo';
-    containerDiv.innerHTML = `
-<button id="runButton" />
-<button id="resetButton" />
-<div id="visualizationColumn" />
-<div id="toolbox-header" />
-`;
-    document.body.appendChild(containerDiv);
-  });
-
-  afterEach(() => {
-    document.body.removeChild(codeWorkspaceDiv);
-    document.body.removeChild(containerDiv);
-  });
-
-  beforeEach(() => {
-    stubRedux();
-    registerReducers(commonReducers);
-  });
-  afterEach(restoreRedux);
-
-  describe("the init() method", () => {
-    let files;
+    let containerDiv, codeWorkspaceDiv;
     beforeEach(() => {
-      files = [];
-      sinon.stub(studioApp(), 'configureDom');
-      sinon.stub(assetsApi, 'getFiles').callsFake(cb => cb({files}));
-      sinon.spy(listStore, 'reset');
+      codeWorkspaceDiv = document.createElement('div');
+      codeWorkspaceDiv.id = 'codeWorkspace';
+      document.body.appendChild(codeWorkspaceDiv);
+
+      containerDiv = document.createElement('div');
+      containerDiv.id = 'foo';
+      containerDiv.innerHTML = `
+  <button id="runButton" />
+  <button id="resetButton" />
+  <div id="visualizationColumn" />
+  <div id="toolbox-header" />
+  `;
+      document.body.appendChild(containerDiv);
     });
 
     afterEach(() => {
-      assetsApi.getFiles.restore();
-      listStore.reset.restore();
+      document.body.removeChild(codeWorkspaceDiv);
+      document.body.removeChild(containerDiv);
     });
 
-    it('will pre-populate assets for levels that use assets', () => {
-      studioApp().init({
-        usesAssets: true,
-        enableShowCode: true,
-        containerId: 'foo',
-        level: {
-          editCode: true,
-          codeFunctions: {},
-        },
-        dropletConfig: {
-          blocks: [],
-        },
-        skin: {},
+    beforeEach(() => {
+      stubRedux();
+      registerReducers(commonReducers);
+    });
+    afterEach(restoreRedux);
+
+    describe("the init() method", () => {
+      let files;
+      beforeEach(() => {
+        files = [];
+        sinon.stub(studioApp(), 'configureDom');
+        sinon.stub(assetsApi, 'getFiles').callsFake(cb => cb({files}));
+        sinon.spy(listStore, 'reset');
       });
 
-      expect(assetsApi.getFiles).to.have.been.calledOnce;
-      expect(listStore.reset).to.have.been.calledWith(files);
+      afterEach(() => {
+        assetsApi.getFiles.restore();
+        listStore.reset.restore();
+      });
+
+      it('will pre-populate assets for levels that use assets', () => {
+        studioApp().init({
+          usesAssets: true,
+          enableShowCode: true,
+          containerId: 'foo',
+          level: {
+            editCode: true,
+            codeFunctions: {},
+          },
+          dropletConfig: {
+            blocks: [],
+          },
+          skin: {},
+        });
+
+        expect(assetsApi.getFiles).to.have.been.calledOnce;
+        expect(listStore.reset).to.have.been.calledWith(files);
+      });
+
+      it("will emit an afterInit event", () => {
+        const listener = sinon.spy();
+        studioApp().on('afterInit', listener);
+        studioApp().init({
+          usesAssets: true,
+          enableShowCode: true,
+          containerId: 'foo',
+          level: {
+            editCode: true,
+            codeFunctions: {},
+          },
+          dropletConfig: {
+            blocks: [],
+          },
+          skin: {},
+        });
+
+        expect(listener).to.have.been.calledOnce;
+      });
+    });
+  });
+
+  describe('StudioApp.makeFooterMenuItems', () => {
+    beforeEach(() => {
+      sinon.stub(project, 'getUrl');
     });
 
-    it("will emit an afterInit event", () => {
-      const listener = sinon.spy();
-      studioApp().on('afterInit', listener);
-      studioApp().init({
-        usesAssets: true,
-        enableShowCode: true,
-        containerId: 'foo',
-        level: {
-          editCode: true,
-          codeFunctions: {},
-        },
-        dropletConfig: {
-          blocks: [],
-        },
-        skin: {},
-      });
+    afterEach(() => {
+      project.getUrl.restore();
+    });
 
-      expect(listener).to.have.been.calledOnce;
+    it("embed page with embed in url", () => {
+      project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/embed');
+      //i18n with t function
+      const i18n = {
+        t: key => key
+      };
+      const footItems = makeFooterMenuItems(i18n, project);
+      expect(footItems).not.to.be.undefined;
+      const howItWorksItem = footItems.find(item =>
+          item.text === 'footer.how_it_works');
+      expect(howItWorksItem.link).to.equal('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit');
     });
   });
 });
