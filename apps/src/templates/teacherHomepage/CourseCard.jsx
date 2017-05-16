@@ -13,7 +13,8 @@ const styles = {
     position: 'relative',
     height: 245,
     width: 458,
-    float: 'left'
+    float: 'left',
+    marginBottom: 20
   },
   tealBar: {
     position: 'absolute',
