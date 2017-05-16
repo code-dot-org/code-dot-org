@@ -8,7 +8,7 @@ class DummyForm
 end
 
 class DummyFormWithRequiredFields < DummyForm
-  def self.required_fields
+  def required_fields
     [
       :first_field,
       :second_field
