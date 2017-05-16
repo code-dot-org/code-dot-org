@@ -14,9 +14,12 @@
 #  index_pd_fac_prog_reg_on_user_id_and_teachercon  (user_id,teachercon) UNIQUE
 #
 
-class Pd::FacilitatorProgramRegistration < Pd::ProgramRegistration
-  def self.required_fields
+class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
+  include Pd::ProgramRegistrationForm
+
+  def required_fields
     [
+      :confirm_teachercon_date,
       :address_street,
       :address_city,
       :address_state,

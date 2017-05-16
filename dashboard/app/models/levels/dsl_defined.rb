@@ -124,7 +124,7 @@ class DSLDefined < Level
     self.class.decrypt_dsl_text_if_necessary(File.read(file_path)) if file_path && File.exist?(file_path)
   end
 
-  def update(params)
+  def assign_attributes(params)
     if params[:dsl_text].present?
       self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params, name)
     else

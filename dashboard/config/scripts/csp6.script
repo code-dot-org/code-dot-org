@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Tech Setup - Your AP Digital Portfolio and Other Tools'
 named_level 'U6 AP Performance Task Tech Setup - Student Links'

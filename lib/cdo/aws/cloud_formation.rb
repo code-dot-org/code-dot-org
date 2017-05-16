@@ -155,7 +155,7 @@ module AWS
           stack_name: stack_name,
           parameters: parameters(template)
         }.merge(string_or_url(template)).tap do |options|
-          if stack_name == 'IAM'
+          if %w[IAM lambda].include? stack_name
             options[:capabilities] = %w[
               CAPABILITY_IAM
               CAPABILITY_NAMED_IAM
@@ -349,31 +349,37 @@ module AWS
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
       LAMBDA_ZIPFILE_MAX = 4096
 
-      # Inline a javascript file into a CloudFormation template for a Lambda function resource.
+      # Inline a single javascript file into a CloudFormation template for a Lambda function resource.
       # Raises an error if the minified file is too large.
       # Use UglifyJS to compress code if `uglify` parameter is set.
       def js(filename, uglify=true)
         str = File.read(aws_dir('cloudformation', filename))
-        str = Uglifier.compile(str) if uglify
+        if uglify
+          str = Dir.chdir(aws_dir('cloudformation')) do
+            RakeUtils.npm_install
+            `$(npm bin)/uglifyjs --compress --mangle -- #{filename}`
+          end
+        end
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        file(str, filename)
+        {'Fn::Sub': erb_eval(str, filename)}.to_json
       end
 
-      def js_zip
+      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
+      def js_zip(files)
         hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
           RakeUtils.npm_install '--production'
           # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
           hash = Digest::MD5.hexdigest(
-            Dir['*.js', 'node_modules/**/*'].
+            Dir[*files, 'node_modules/**/*'].
               select(&File.method(:file?)).
               sort.
               map(&Digest::MD5.method(:file)).
               join
           )
-          `zip -qr - *.js node_modules`
+          `zip -qr - #{files.join(' ')} node_modules`
         end
         key = "lambdajs-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil

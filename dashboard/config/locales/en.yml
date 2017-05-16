@@ -182,6 +182,8 @@ en:
       instructions: "Enter your email address below and we'll send you password reset instructions."
       email: 'Email address'
       submit: 'Submit'
+    reset_errors:
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Change your password'
       new_password: 'New password'
@@ -224,55 +226,6 @@ en:
   reports:
     error:
       access_denied: "You don't have access to this person's stats"
-  redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: 'Register as a teacher on DonorsChoose.org'
-    donorschoose_project: 'Post a project'
-    donorschoose_how_to: 'How to use your code'
-    success: 'Your prize was succesfully redeemed, see code below.'
-    error: 'Your prize could not be redeemed, please try again.'
-    error_us_only: 'The prize offer is only valid for U.S. users.'
-    error_not_earned: 'You have not yet earned this prize.'
-    error_already_redeemed: 'Your prize has already been redeemed.'
-    no_prizes_available: "We're sorry, but we currently have no prizes available."
-    teacher_info_required: "Teacher prizes require school name and address information:"
-    teacher_email_required: "Teacher prizes require a confirmed email address:"
-    confirm:
-      title: 'Please Confirm'
-      'no': 'No'
-      'yes': 'Yes'
-      msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: 'Please confirm that you are a U.S. public school teacher.'
-      msg_visit_website: 'Visit website'
-    providers:
-      apple_itunes: '$10 iTunes Gift Card'
-      donors_choose: 'DonorsChoose.org $750 credit'
-      donors_choose_bonus: 'DonorsChoose.org $250 credit'
-      dropbox: '10GB of Dropbox Space'
-      valve: 'Portal 2 (PC or Mac game download)'
-      ea_bejeweled: 'Bejeweled 3 (PC game download)'
-      ea_fifa: 'FIFA Soccer 13 (PC game download)'
-      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
-      ea_pvz: 'Plants vs. Zombies (PC game download)'
-      skype: '$10 Skype credit'
-    msg:
-      choose: 'Choose a prize:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 'You have earned a prize! (U.S. students only)'
-      not_earned_title: 'Finish the tutorial, earn rewards (U.S. students only)'
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
-      teacher:
-        earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
-        bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-          earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
-          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
   crud:
     new_model: 'New %{model}'
     show: 'Show'
@@ -307,8 +260,8 @@ en:
       already_registered: 'Already registered?'
       pair_programming: 'Pair Programming'
       team: 'Team'
-      driver: 'Driver'
-      navigator: 'Navigator'
+      driver: 'Logged in'
+      navigator: 'Partner'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
@@ -712,6 +665,8 @@ en:
     delete: "Delete"
     exit: "Return to Course"
     my_projects: "My Projects"
+    publish: "Publish"
+    unpublish: "Unpublish"
     share: "Share"
     share_title: Share your project
     share_copy_link: "Copy the link:"
@@ -796,8 +751,16 @@ en:
     extra_course_content: 'Extra Course Content'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
     csd3_1: 'Chapter 1: Images and Animations'
     csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

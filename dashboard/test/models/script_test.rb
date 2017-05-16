@@ -440,7 +440,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
-  test 'should generate a short summary' do
+  test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
@@ -451,7 +451,15 @@ class ScriptTest < ActiveSupport::TestCase
       isHocScript: false,
       student_detail_progress_view: false
     }
-    assert_equal expected, script.summarize_short
+    assert_equal expected, script.summarize_header
+  end
+
+  test 'should exclude stages if include_stages is false' do
+    script = create(:script, name: 'single-stage-script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    assert_equal nil, script.summarize(false)[:stages]
   end
 
   test 'should generate PLC objects' do
@@ -665,5 +673,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'report-stage-1', updated_report_script['stages']['Report Stage 1']['name']
     assert_equal 'Stage 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
+  end
+
+  test 'text_to_speech_enabled? when script k1? is true' do
+    assert Script.find_by_name('course1').text_to_speech_enabled?
+  end
+
+  test '!text_to_speech_enabled? by default' do
+    refute create(:script).text_to_speech_enabled?
   end
 end

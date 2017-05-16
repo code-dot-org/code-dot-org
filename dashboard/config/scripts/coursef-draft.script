@@ -97,7 +97,7 @@ level 'courseF_bee_for7'
 level 'courseF_bee_for8'
 level 'courseF_bee_for5'
 level 'courseF_bee_for9'
-level 'courseF_bee_for10'
+level 'courseF_bee_for10', challenge: true
 level 'courseF_bee_for11'
 
 stage 'For Loops in Artist'
@@ -149,7 +149,7 @@ level 'courseF_video_createFunctionArtist'
 level 'courseF_artist_fwp3'
 level 'courseF_artist_fwp4'
 level 'courseF_artist_fwp5'
-level 'courseF_artist_fwp6'
+level 'courseF_artist_fwp6', challenge: true
 level 'courseF_artist_fwp7'
 level 'courseF_artist_fwp8'
 level 'courseF_artist_fwp9'
@@ -161,7 +161,7 @@ level 'courseF_bee_fwp3'
 level 'courseF_bee_fwp4'
 level 'courseF_bee_fwp5'
 level 'courseF_bee_fwp6'
-level 'courseF_bee_fwp7'
+level 'courseF_bee_fwp7', challenge: true
 level 'courseF_bee_fwp8'
 assessment 'courseF_bee_fwp9_predict1'
 

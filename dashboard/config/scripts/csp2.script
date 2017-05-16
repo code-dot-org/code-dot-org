@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Bytes and File Sizes'
 level 'v2 U2L1 Student Lesson Introduction'

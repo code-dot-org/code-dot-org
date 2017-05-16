@@ -82,7 +82,7 @@ And /^I wait to see Applab data mode$/ do
 end
 
 And /^I wait to see Applab code mode$/ do
-  wait = Selenium::WebDriver::Wait.new(timeout: 10)
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until {@browser.execute_script("return $('#codeWorkspaceWrapper').css('display') == 'block';")}
 end
 

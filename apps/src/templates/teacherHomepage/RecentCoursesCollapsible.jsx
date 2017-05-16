@@ -26,7 +26,7 @@ const RecentCoursesCollapsible = React.createClass({
         linkText={i18n.viewAllCourses()}
         link="https://studio.code.org/"
       >
-        {courses ? (
+        {courses.length > 0 ? (
           courses.map((course, index) =>
             <CourseCard
               key={index}

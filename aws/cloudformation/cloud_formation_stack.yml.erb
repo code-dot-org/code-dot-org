@@ -19,7 +19,7 @@ frontends = %i(production adhoc).include?(rack_env)
 require 'cdo/cron'
 
 # Branch off existing AMI for adhoc.
-image_id = rack_env?(:adhoc) ? "!ImportValue AMI-#{environment}-ImageId" : IMAGE_ID
+image_id = rack_env?(:adhoc) ? "!ImportValue AMI-#{environment}-ImageId2" : IMAGE_ID
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
