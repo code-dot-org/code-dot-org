@@ -33,7 +33,7 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 
 Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="196" src="https://www.youtube.com/embed/bQilo5ecSX4" frameborder="0" allowfullscreen></iframe>
 
 This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video instead.
 
