@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1,\"value\":5,\"range\":5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1,\"value\":6,\"range\":6},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,7 +32,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try changing the numbers in each loop if something goes wrong.\",\"hint_id\":\"courseB_collector_loops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a13819df4ce15f9b68103022b016adb2/courseB_collector_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you miss any treasure, you might need to move back west one extra space.\",\"hint_id\":\"courseB_collector_loops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eccbb2da3d67c5f7032db86771152246/courseB_collector_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use a loop to collect the final pile of treasure!\",\"hint_id\":\"courseB_collector_loops_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7b201709018f7649f130d85d6d492490/courseB_collector_loops_challenge2.mp3\"}]",
-    "ideal": "10",
+    "ideal": "9",
+    "min_collected": "10",
     "contained_level_names": null
   },
   "published": true,
@@ -69,23 +70,19 @@
             <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
-                  <statement name="DO">
-                    <block type="maze_moveEast">
-                      <next>
-                        <block type="collector_collect"/>
-                      </next>
-                    </block>
-                  </statement>
+                <block type="maze_moveEast">
                   <next>
-                    <block type="controls_repeat_simplified_dropdown">
-                      <title name="TIMES" config="3-10">4</title>
-                      <statement name="DO">
-                        <block type="maze_moveWest"/>
-                      </statement>
+                    <block type="collector_collect">
                       <next>
-                        <block type="maze_moveSouth"/>
+                        <block type="maze_moveWest">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveSouth"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
                       </next>
                     </block>
                   </next>
@@ -93,7 +90,7 @@
               </statement>
               <next>
                 <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">4</title>
+                  <title name="TIMES" config="3-10">6</title>
                   <statement name="DO">
                     <block type="collector_collect"/>
                   </statement>

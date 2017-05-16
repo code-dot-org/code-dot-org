@@ -55,8 +55,4 @@ class External < DSLDefined
     user_id = user.try(:id).to_s
     properties.merge({'markdown' => properties['markdown'].gsub(USER_ID_REPLACE_STRING, user_id)})
   end
-
-  def update(params)
-    super(params)
-  end
 end
