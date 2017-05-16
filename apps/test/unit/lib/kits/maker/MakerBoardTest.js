@@ -368,5 +368,16 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
         });
       });
     });
+
+    /**
+     * @function
+     * @name MakerBoard#boardConnected
+     * @return {boolean} whether a real board is connected
+     */
+    describe(`boardConnected()`, () => {
+      it(`returns a boolean`, () => {
+        expect(board.boardConnected()).to.be.a('boolean');
+      });
+    });
   });
 }
