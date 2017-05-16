@@ -1,6 +1,3 @@
-%script{src: "/js/videojs-ie8.min.js"}
-%script{src: "/js/video.min.js"}
-
 %link{href: "/css/video-js.css", rel: "stylesheet"}
 
 :javascript
@@ -8,6 +5,8 @@
   $(window).load(function() {
     if (window.location.search.indexOf("force_youtube_fallback") !== -1)
     {
+      $.getScript("/js/videojs-ie8.min.js");
+      $.getScript("/js/video.min.js");
       setupVideos("fallback");
     }
     else
