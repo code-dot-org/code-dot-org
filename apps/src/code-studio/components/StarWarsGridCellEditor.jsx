@@ -1,5 +1,6 @@
 import React from 'react';
 import { WallTypeMask, WallTypeShift } from '@cdo/apps/studio/constants';
+import tileGuide from '../../../static/code_studio/tile-guide.png';
 
 const options = {
   empty: 0x0,
@@ -43,6 +44,7 @@ export default class StarWarsGridCellEditor extends React.Component {
 
     return (
       <form className="span4 offset1">
+        <img src={tileGuide}/>
         <header>
           <strong>Editing Cell ({this.props.row}, {this.props.col})</strong>
         </header>
