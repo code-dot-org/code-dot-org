@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
 import {projectPropType} from './projectConstants';
 import color from "../../util/color";
+import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   grid: {
@@ -10,15 +11,18 @@ const styles = {
   },
   card: {
     display: "inline-block",
-    padding: 10
+    paddingTop: 10,
+    paddingBottom: 20,
+    paddingRight: 18,
+    paddingLeft: 10
   },
   labHeading: {
     textAlign: "left",
     fontSize: 24,
     color: color.charcoal,
     marginLeft: 10,
-    marginRight: 50,
-    paddingBottom: 10,
+    marginBottom: 0,
+    paddingBottom: 0,
     paddingTop: 40,
     float: 'left'
   },
@@ -26,7 +30,8 @@ const styles = {
     color: color.light_teal,
     float: 'right',
     marginTop: 75,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    marginRight: 22
   }
 };
 
@@ -81,12 +86,23 @@ const ProjectAppTypeArea = React.createClass({
 
   renderViewMoreButtons() {
     return (
-      <div style={{float: "right"}}>
+      <div style={{float: "right", marginRight: 22}}>
         {
           this.state.maxNumProjects >= this.state.numProjects &&
-          <button onClick={this.loadMore} style={{cursor: 'pointer'}} >View more</button>
+          <ProgressButton
+            onClick={this.loadMore}
+            color="gray"
+            icon="plus-circle"
+            text="View more"
+            style={{marginRight: 20}}
+          />
         }
-        <a href="#gallery-switcher"><button>Back to top</button></a>
+        <ProgressButton
+          href="#gallery-switcher"
+          color="gray"
+          icon="chevron-circle-up"
+          text="Back to top"
+        />
       </div>
     );
   },
