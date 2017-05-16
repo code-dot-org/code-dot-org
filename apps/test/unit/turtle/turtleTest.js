@@ -1,4 +1,5 @@
 import {expect} from '../../util/configuredChai';
+import {parseElement} from '@cdo/apps/xml';
 const Artist = require('@cdo/apps/turtle/turtle');
 const constants = require('@cdo/apps/constants');
 
@@ -91,5 +92,93 @@ describe('Artist', () => {
         expect(artist.y).to.equal(y);
       });
     });
+  });
+
+  describe('prepareForRemix', () => {
+    let artist, newDom;
+    const oldXml = `
+      <block type="when_run">
+        <next>
+          <block type="draw_move" inline="true">
+            <value name="VALUE">
+              <block type="math_nubmer">
+                <title name="NUM">40</title>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>`;
+
+    beforeEach(() => {
+      artist = new Artist();
+      window.Blockly = {
+        Xml: {
+          blockSpaceToDom() {
+            return parseElement(oldXml);
+          },
+          domToBlockSpace(blockspace, dom) {
+            newDom = dom;
+          }
+        },
+        mainBlockSpace: {
+          clear() {},
+        },
+      };
+    });
+
+    it('does nothing if the level specifies no start position or direction', () => {
+      artist.level = {};
+      artist.prepareForRemix();
+
+      // domToBlockSpace should not have been called
+      expect(newDom).to.be.undefined;
+    });
+
+    it('adds moveTo block if initialX is set', () => {
+      artist.level = {
+        initialX: 30,
+      };
+      artist.prepareForRemix();
+
+      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
+          .firstChild.wholeText).to.equal("30");
+    });
+
+    it('adds moveTo block if initialX and initialY are set', () => {
+      artist.level = {
+        initialX: 30,
+        initialY: 50,
+      };
+      artist.prepareForRemix();
+
+      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
+          .firstChild.wholeText).to.equal("30");
+      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
+          .firstChild.wholeText).to.equal("50");
+    });
+
+    it('adds a moveTo block with 200 for the y coordinate if initialY is not specified in the level', () => {
+      artist.level = {
+        initialX: 30,
+      };
+      artist.prepareForRemix();
+
+      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
+          .firstChild.wholeText).to.equal("200");
+    });
+
+    it('adds moveTo and turn blocks if initialX and startDirection are set', () => {
+      artist.level = {
+        initialX: 30,
+        startDirection: 45,
+      };
+      artist.prepareForRemix();
+
+      expect(newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
+          .firstChild.wholeText).to.equal("30");
+      expect(newDom.querySelector('block[type="draw_turn"] title[name="NUM"]')
+          .firstChild.wholeText).to.equal("-45");
+    });
+
   });
 });
