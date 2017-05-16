@@ -291,7 +291,7 @@ Artist.prototype.prepareForRemix = function () {
   if (!whenRun) {
     whenRun = blocksDocument.createElement('block');
     whenRun.setAttribute('type', 'when_run');
-    blocksDom.getRootNode().appendChild(whenRun);
+    blocksDom.appendChild(whenRun);
   }
   let next = whenRun.querySelector('next');
   if (next) {
