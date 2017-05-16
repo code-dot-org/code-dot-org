@@ -189,6 +189,9 @@ export default {
     // Start by assuming best fit is current size
     const size = this.getCurrentSize(element);
 
+    const widthLocked = $(element).data('lock-width') === PropertyRow.LockState.LOCKED;
+    const heightLocked = $(element).data('lock-height') === PropertyRow.LockState.LOCKED;
+
     // Change the size to fit the text.
     if (element.textContent) {
       // Max width depends on alignment.
@@ -214,16 +217,17 @@ export default {
 
       const padding = parseInt(element.style.padding, 10);
 
-      if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
+      if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
         size.width = Math.min(clone.width() + 1 + 2 * padding, maxWidth);
       }
-      if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
+      if (!heightLocked) {
         size.height = clone.height() + 1 + 2 * padding;
       }
 
       clone.remove();
-    } else {
+    } else if (!widthLocked && !heightLocked) {
+      // If either width or height are locked, then retain previous size.
       size.width = size.height = 15;
     }
     return size;

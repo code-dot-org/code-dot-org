@@ -49,6 +49,10 @@ Resources:
     InstanceId: {Ref: "WebServerAMI" } %>
 Outputs:
   ImageId:
+    Description: Image ID (old)
+    Value: ami-ee45d7f8
+    Export: {Name: !Sub "${AWS::StackName}-ImageId"}
+  ImageId2:
     Description: Image ID
     Value: {"Fn::GetAtt": [AMI<%=ami%>, ImageId]}
-    Export: {Name: !Sub "${AWS::StackName}-ImageId"}
+    Export: {Name: !Sub "${AWS::StackName}-ImageId2"}

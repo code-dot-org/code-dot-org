@@ -3,6 +3,7 @@ import {
   apiValidateType,
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
+import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;
@@ -75,6 +76,13 @@ export function analogRead(opts) {
 }
 
 /**
+ * @returns {boolean} Whether a real board is connected at the moment.
+ */
+export function boardConnected() {
+  return board.boardConnected();
+}
+
+/**
  * Add a handler for a maker board event from a particular board component.
  * @param {Object} opts.component
  * @param {string} opts.event
@@ -82,5 +90,9 @@ export function analogRead(opts) {
  */
 export function onBoardEvent(opts) {
   // TODO (bbuchanan): Validate arguments?
-  return board.onBoardEvent(opts.component, opts.event, opts.callback);
+  let {component, event, callback} = opts;
+  if (BOARD_EVENT_ALIASES[event]) {
+    event = BOARD_EVENT_ALIASES[event];
+  }
+  component.on(event, callback);
 }

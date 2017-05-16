@@ -94,11 +94,12 @@ describe('MakerStatusOverlay', () => {
   });
 
   describe('on error', () => {
-    let wrapper, handleTryAgain, handleDisableMaker;
+    let wrapper, handleTryAgain, handleDisableMaker, useFakeBoardOnNextRun;
 
     beforeEach(() => {
       handleTryAgain = sinon.spy();
       handleDisableMaker = sinon.spy();
+      useFakeBoardOnNextRun = sinon.spy();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           width={11}
@@ -107,6 +108,7 @@ describe('MakerStatusOverlay', () => {
           hasConnectionError={true}
           handleTryAgain={handleTryAgain}
           handleDisableMaker={handleDisableMaker}
+          useFakeBoardOnNextRun={useFakeBoardOnNextRun}
         />
       );
     });
@@ -129,14 +131,31 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and a "Try Again" button', () => {
-      expect(wrapper).to.have.descendants('button');
-      expect(wrapper.find('button').text()).to.include('Try Again');
+      const selector = 'button.try-again';
+      expect(wrapper).to.have.descendants(selector);
+      expect(wrapper.find(selector).text()).to.include('Try Again');
     });
 
     it('that calls the provided try again handler', () => {
+      const selector = 'button.try-again';
       expect(handleTryAgain).not.to.have.been.called;
-      wrapper.find('button').simulate('click');
+      wrapper.find(selector).simulate('click');
       expect(handleTryAgain).to.have.been.calledOnce;
+    });
+
+    it('and a "Run Without Board" button', () => {
+      const selector = 'button.run-without-board';
+      expect(wrapper).to.have.descendants(selector);
+      expect(wrapper.find(selector).text()).to.include('Run Without Board');
+    });
+
+    it('that calls the try again handler and useFakeBoardOnNextRun handler', () => {
+      const selector = 'button.run-without-board';
+      expect(handleTryAgain).not.to.have.been.called;
+      expect(useFakeBoardOnNextRun).not.to.have.been.called;
+      wrapper.find(selector).simulate('click');
+      expect(handleTryAgain).to.have.been.calledOnce;
+      expect(useFakeBoardOnNextRun).to.have.been.calledOnce;
     });
 
     it('and a "Get Help" link', () => {

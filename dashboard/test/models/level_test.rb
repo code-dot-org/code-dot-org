@@ -602,4 +602,47 @@ EOS
     assert_equal data[:description], level.description
     assert_equal data[:description], I18n.t("data.unplugged.#{data[:name]}.desc")
   end
+
+  test "audit log is initially null" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log nul"
+    level = Level.create(data)
+    assert level.valid?
+    assert_nil level.audit_log
+  end
+
+  test "audit log will explode properties" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log properties"
+    level = Level.create(data)
+
+    level.skin = "bee"
+    level.log_changes
+
+    assert_equal 1, JSON.parse(level.audit_log).length
+    assert_equal ["skin"], JSON.parse(level.audit_log).first["changed"]
+  end
+
+  test "audit log will self-truncate" do
+    data = @custom_maze_data.dup
+    data[:name] = "test audit log truncation"
+    level = Level.create(data)
+
+    # Create an audit log that is almost the max length
+    huge_array = ["test"] * 9360
+    level.audit_log = JSON.dump(huge_array)
+
+    assert_equal 65521, level.audit_log.length
+    assert_equal 9360, JSON.parse(level.audit_log).length
+
+    # add a new entry that will put us over the limit
+    level.instructions = "new actual instructions"
+    level.log_changes
+
+    # audit log should have dropped off several entries in order get back under
+    # the limit, since the test entries are individually much smaller than the
+    # new actual entry
+    assert_equal 65533, level.audit_log.length
+    assert_equal 9351, JSON.parse(level.audit_log).length
+  end
 end
