@@ -46,13 +46,18 @@ class HomeController < ApplicationController
         @sections = current_user.sections.map do |section|
           if section.script_id
             course_name = Script.find_by_id(section.script_id)[:name]
+            course = data_t_suffix('script.name', course_name, 'title')
+            link_to_course = script_url(section.script_id)
+          else
+            course = ""
+            link_to_course = base_url
           end
           {
             id: section.id,
             name: section.name,
             linkToProgress: "#{base_url}#{section.id}/progress",
-            course: data_t_suffix('script.name', course_name, 'title'),
-            linkToCourse: script_url(section.script_id),
+            course: course,
+            linkToCourse: link_to_course,
             numberOfStudents: section.students.length,
             linkToStudents: "#{base_url}#{section.id}/manage",
             sectionCode: section.code
@@ -88,7 +93,7 @@ class HomeController < ApplicationController
   def recent_courses
     current_user.in_progress_and_completed_scripts.map do |script|
       script_id = script[:script_id]
-      script_name = Script.find_by_id(script_id)[:name]
+      script_name = Script.get_from_cache(script_id)[:name]
       {
         id: script_id,
         script_name: script_name,

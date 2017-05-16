@@ -42,7 +42,8 @@ class MediaProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: nil, # allow any hostname
       expiry_time: EXPIRY_TIME,
-      infer_content_type: true
+      infer_content_type: true,
+      no_transform: true
     )
   end
 end

@@ -55,8 +55,8 @@ Here are some example command line options.  Run `./runner.rb --help` for a full
 
 Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-`./runner.rb -d localhost.studio.code.org:3000`
-Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
+`./runner.rb -d localhost-studio.code.org:3000`
+Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
 Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
 
