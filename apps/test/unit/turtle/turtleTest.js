@@ -95,22 +95,23 @@ describe('Artist', () => {
   });
 
   describe('prepareForRemix', () => {
-    let artist, newDom;
-    const oldXml = `
-      <block type="when_run">
-        <next>
-          <block type="draw_move" inline="true">
-            <value name="VALUE">
-              <block type="math_nubmer">
-                <title name="NUM">40</title>
-              </block>
-            </value>
-          </block>
-        </next>
-      </block>`;
+    let artist, newDom, oldXml;
 
     beforeEach(() => {
       artist = new Artist();
+
+      oldXml = `
+        <block type="when_run">
+          <next>
+            <block type="draw_move" inline="true">
+              <value name="VALUE">
+                <block type="math_nubmer">
+                  <title name="NUM">40</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>`;
       window.Blockly = {
         Xml: {
           blockSpaceToDom() {
@@ -178,6 +179,17 @@ describe('Artist', () => {
           .firstChild.wholeText).to.equal("30");
       expect(newDom.querySelector('block[type="draw_turn"] title[name="NUM"]')
           .firstChild.wholeText).to.equal("-45");
+    });
+
+    it('adds a whenRun block if none is present', () => {
+      artist.level = {
+        initialX: 30,
+      };
+      oldXml = '';
+
+      artist.prepareForRemix();
+
+      expect(newDom.querySelector('block[type="when_run"]')).to.be.defined;
     });
 
   });
