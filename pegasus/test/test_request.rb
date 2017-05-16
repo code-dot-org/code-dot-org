@@ -14,7 +14,7 @@ class RequestTest < Minitest::Test
       ['staging.code.org', 'code.org'],
       ['staging.studio.code.org', 'code.org'],
       ['localhost.code.org:3000', 'code.org'],
-      ['localhost.studio.code.org:3000', 'code.org'],
+      ['localhost-studio.code.org:3000', 'code.org'],
       ['localhost:3000', 'localhost'],
       ['3548dd72.ngrok.com', '3548dd72.ngrok.com'],
     ].each do |host, cookie_domain|
