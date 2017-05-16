@@ -50,21 +50,21 @@
               - unless defined? @level
                 .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
                   - if user_type == "teacher"
-                    %a.headerlink{:href=>"/student"}Home
-                    %a.headerlink{:href=>"/educate"}Courses
-                    %a.headerlink{:href=>"/promote"}Projects Gallery
-                    %a.headerlink{:href=>"/help"}Sections
-                    %a.headerlink{:href=>"/about"}Professional Learning
+                    %a.headerlink{:href=>"/"} Home
+                    %a.headerlink{:href=>"/courses"} Courses
+                    %a.headerlink{:href=>"/projects/public"} Project Gallery
+                    %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
+                    %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
                   - elsif user_type == "student"
-                    %a.headerlink{:href=>"/student"}Home
-                    %a.headerlink{:href=>"/educate"}Courses
-                    %a.headerlink{:href=>"/promote"}Projects Gallery
+                    %a.headerlink{:href=>"/"} Home
+                    %a.headerlink{:href=>"/courses"} Courses
+                    %a.headerlink{:href=>"/projects/public"} Project Gallery
                   - else
-                    %a.headerlink{:href=>"/student"}Learn
-                    %a.headerlink{:href=>"/educate"}Teach
-                    %a.headerlink{:href=>"/promote"}Stats
-                    %a.headerlink{:href=>"/help"}Help us
-                    %a.headerlink{:href=>"/about"}About
+                    %a.headerlink{:href=>CDO.code_org_url("/student")} Learn
+                    %a.headerlink{:href=>CDO.code_org_url("/educate")} Teach
+                    %a.headerlink{:href=>CDO.code_org_url("/promote")} Stats
+                    %a.headerlink{:href=>CDO.code_org_url("/help")} Help us
+                    %a.headerlink{:href=>CDO.code_org_url("/about")} About
 
           .header_right
             %span.freeplay_links
