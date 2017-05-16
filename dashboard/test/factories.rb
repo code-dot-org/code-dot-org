@@ -406,14 +406,6 @@ FactoryGirl.define do
     youtube_code 'Bogus text'
   end
 
-  factory :prize do
-    prize_provider
-    sequence(:code) {|n| "prize_code_#{n}"}
-  end
-
-  factory :prize_provider do
-  end
-
   factory :follower do
     association :student_user, factory: :student
 
