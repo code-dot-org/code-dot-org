@@ -799,7 +799,9 @@ var projects = module.exports = {
     this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, shouldNavigate);
-      this.save(wrappedCallback, false, true);
+      this.save(wrappedCallback,
+          false /* forceNewVersion */,
+          true /* preparingRemix */);
     }.bind(this));
   },
   copyAssets(srcChannel, callback) {
