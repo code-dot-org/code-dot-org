@@ -1,4 +1,6 @@
 
+// we use module.exports instead of export default to make this compatible with
+// node.js
 module.exports = class CustomMarshaler {
   constructor({
     globalProperties,

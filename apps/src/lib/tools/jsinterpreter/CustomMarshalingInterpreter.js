@@ -1,20 +1,23 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const codegen = require('../../../codegen');
+const CustomMarshaler = require('./CustomMarshaler');
 
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
 
   constructor(code, customMarshaler, opt_initFunc) {
     super(code);
-    if (!customMarshaler) {
+    if (!(customMarshaler instanceof CustomMarshaler)) {
       throw new Error("You must provide a CustomMarshaler to CustomMarshalingInterpreter");
     }
     this.customMarshaler = customMarshaler;
 
-    // TODO: because of the way the interpreter is written, we have to re-do
+    // Because of the way the interpreter is written, we have to re-do
     // this work from the parent class's constructor because it needs
     // customMarshaler to have been set before-hand. Unfortunately, javascript
     // does not allow us to set customMarshaler until after the parent constructor
     // has finished.
+    // TODO (pcardune): change the initialization process of the Interpreter
+    // class to make this work better.
     this.initFunc_ = opt_initFunc;
     this.globalScope = this.createScope(this.ast, null);
     this.stateStack = [{
@@ -58,7 +61,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    */
   getProperty(obj, name) {
     name = name.toString();
-    var nativeParent;
     var customMarshalValue;
     if (obj.isCustomMarshal) {
       if (this.shouldBlockCustomMarshalling_(name, obj)) {
@@ -67,14 +69,8 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         customMarshalValue = obj.data[name];
       }
     } else {
-      var hasProperty = false;
-      if (!obj.isPrimitive) {
-        hasProperty = super.hasProperty(obj, name);
-      }
-      if (!hasProperty &&
-          obj === this.globalScope &&
-          !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
-          !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      const nativeParent = this.getNativeParent_(obj, name);
+      if (nativeParent) {
         customMarshalValue = nativeParent[name];
       } else {
         return super.getProperty(obj, name);
@@ -90,6 +86,44 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   }
 
   /**
+   * Returns the native parent of a custom marshaled object, if one exists.
+   * Specific cases that are accounted for are detailed in the conditional below.
+   *
+   */
+  getNativeParent_(obj, name) {
+    var hasProperty = false;
+    if (obj && !obj.isPrimitive) {
+      hasProperty = super.hasProperty(obj, name);
+    }
+    var nativeParent;
+    if (
+      /**
+       * 1. the values of custom marshaled globals can be overridden into interpreter values
+       *    on the global scope. If a variable with the same name has been declared on the
+       *    global scope, then don't try to look up the native parent.
+       */
+      !hasProperty &&
+      /**
+       * 2. custom marshaled objects can only be mounted on the global scope. Therefore
+       *    only look up a native parent if we are asking for a property on the global scope.
+       */
+      obj === this.globalScope &&
+      /**
+       * 3. Assuming the above conditions pass, lookup the native parent among the list
+       * of global properties specified in the custom marshaler's configuration.
+       */
+      !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
+      /**
+       * 4. If the property being looked up has been explicitly blocked from custom
+       * marshalling, then don't return the native parent.
+       */
+      !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)
+    ) {
+      return nativeParent;
+    }
+  }
+
+  /**
    * Wrapper to Interpreter's hasProperty (extended for custom marshaling)
    *
    * Does the named property exist on a data object.
@@ -100,7 +134,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    */
   hasProperty(obj, name) {
     name = name.toString();
-    var nativeParent;
     if (obj.isCustomMarshal) {
       if (this.shouldBlockCustomMarshalling_(name, obj)) {
         return false;
@@ -108,15 +141,10 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         return name in obj.data;
       }
     } else {
-      var hasProperty = super.hasProperty(obj, name);
-      if (!hasProperty &&
-          obj === this.globalScope &&
-          !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
-          !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      if (this.getNativeParent_()) {
         return true;
-      } else {
-        return hasProperty;
       }
+      return super.hasProperty(obj, name);
     }
   }
 
@@ -139,20 +167,13 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     opt_nonenum
   ) {
     name = name.toString();
-    var nativeParent;
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
         obj.data[name] = codegen.marshalInterpreterToNative(this, value);
       }
     } else {
-      var hasProperty = false;
-      if (!obj.isPrimitive) {
-        hasProperty = super.hasProperty(obj, name);
-      }
-      if (!hasProperty &&
-          obj === this.globalScope &&
-          !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
-          !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      const nativeParent = this.getNativeParent_(obj, name);
+      if (nativeParent) {
         nativeParent[name] = codegen.marshalInterpreterToNative(this, value);
       } else {
         return super.setProperty(obj, name, value, opt_fixed, opt_nonenum);
@@ -250,23 +271,15 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     if (node.init && !state.done) {
       state.done = true;
       this.stateStack.unshift({node: node.init});
-    } else {
-      if (node.init) {
-        this.setValue(this.createPrimitive(node.id.name), state.value, true);
-      } else {
-        if (!super.hasProperty(this.getScope(), node.id.name)) {
-          this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
-        }
-      }
-      this.stateStack.shift();
+      return;
     }
+    if (!this.hasProperty(this, node.id.name) || node.init) {
+      if (node.init) {
+        var value = state.value;
+        this.setValue(this.createPrimitive(node.id.name), value, true);
+      }
+    }
+    this.stateStack.shift();
   }
 
-  get customMarshalObjectList() {
-    return this._customMarshalObjectList || [];
-  }
-  set customMarshalObjectList(customMarshalObjectList) {
-    // TODO: perform validation on this
-    this._customMarshalObjectList = customMarshalObjectList;
-  }
 };
