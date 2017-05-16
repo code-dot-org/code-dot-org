@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    course_name = params[:course].tr('-', '_').titleize
+    course_name = params[:course_name].tr('-', '_').titleize
     course = Course.find_by_name(course_name)
     raise ActiveRecord::RecordNotFound unless course
     if course.plc_course
