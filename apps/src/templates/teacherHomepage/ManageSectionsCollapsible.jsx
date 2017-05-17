@@ -19,6 +19,7 @@ const ManageSectionsCollapsible = React.createClass({
         header={i18n.sectionsTitle()}
         linkText={i18n.editSections()}
         link={editSectionsUrl}
+        showLink={true}
       >
       {sections.length > 0 ? (
         <SectionsTable sections={sections}/>

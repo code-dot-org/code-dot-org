@@ -14,7 +14,6 @@ const RecentCoursesCollapsible = React.createClass({
         link: React.PropTypes.string.isRequired,
         assignedSections: React.PropTypes.array.isRequired
       })
-<<<<<<< HEAD
     ),
     showAllCoursesLink: React.PropTypes.bool.isRequired
   },
@@ -22,21 +21,12 @@ const RecentCoursesCollapsible = React.createClass({
   render() {
     const { courses, showAllCoursesLink } = this.props;
 
-    let linkText, link;
-    if (showAllCoursesLink) {
-      linkText = i18n.viewAllCourses();
-      link = "/courses";
-    }
-  },
-
-  render() {
-    const { courses } = this.props;
-
     return (
       <CollapsibleSection
         header={i18n.courses()}
-        linkText={linkText}
-        link={link}
+        linkText={i18n.viewAllCourses()}
+        link="/courses"
+        showLink={showAllCoursesLink}
       >
         {courses.length > 0 ? (
           courses.map((course, index) =>
