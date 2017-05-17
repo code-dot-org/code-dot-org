@@ -23,7 +23,6 @@ const TeacherHomepage = React.createClass({
           courses={courses}
           showAllCoursesLink={true}
         />
-
         <ManageSectionsCollapsible
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
