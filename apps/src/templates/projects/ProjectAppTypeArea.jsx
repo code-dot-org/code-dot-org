@@ -31,7 +31,8 @@ const styles = {
     float: 'right',
     marginTop: 75,
     cursor: 'pointer',
-    marginRight: 22
+    marginRight: 22,
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };
 
@@ -91,7 +92,7 @@ const ProjectAppTypeArea = React.createClass({
           this.state.maxNumProjects >= this.state.numProjects &&
           <ProgressButton
             onClick={this.loadMore}
-            color="gray"
+            color={ProgressButton.ButtonColor.gray}
             icon="plus-circle"
             text="View more"
             style={{marginRight: 20}}
@@ -99,7 +100,7 @@ const ProjectAppTypeArea = React.createClass({
         }
         <ProgressButton
           href="#gallery-switcher"
-          color="gray"
+          color={ProgressButton.ButtonColor.gray}
           icon="chevron-circle-up"
           text="Back to top"
         />
