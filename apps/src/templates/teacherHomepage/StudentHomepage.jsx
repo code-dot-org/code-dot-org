@@ -15,7 +15,10 @@ const StudentHomepage = React.createClass({
 
     return (
       <div>
-        <RecentCoursesCollapsible courses={courses}/>
+        <RecentCoursesCollapsible
+          courses={courses}
+          showAllCoursesLink={true}
+        />
 
         <CollapsibleSection header={i18n.resources()}>
           <ResourceCard

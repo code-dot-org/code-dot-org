@@ -58,7 +58,8 @@ const CollapsibleSection = React.createClass({
     header: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
-    collapsible: React.PropTypes.bool
+    collapsible: React.PropTypes.bool,
+    showLink: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -87,7 +88,7 @@ const CollapsibleSection = React.createClass({
   },
 
   render() {
-    const { header, link, linkText, collapsible }= this.props;
+    const { header, link, linkText, collapsible, showLink }= this.props;
     let icon = this.state.open ? 'caret-up' : 'caret-down';
 
     return (
@@ -96,7 +97,7 @@ const CollapsibleSection = React.createClass({
           {collapsible &&
             <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleContent}/>}
           {header}
-          {link &&
+          {showLink &&
             <a href={link} style={styles.linkBox}>
               <div style={styles.linkToViewAll}>
                 {linkText}

@@ -27,6 +27,12 @@ class ProjectsController < ApplicationController
     gumball: {
       name: 'New Gumball Project'
     },
+    minecraft_adventurer: {
+      name: 'New Minecraft Adventurer Project'
+    },
+    minecraft_designer: {
+      name: 'New Minecraft Designer Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true

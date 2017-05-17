@@ -1,6 +1,14 @@
 class CoursesController < ApplicationController
   def index
-    course_name = params[:course].tr('-', '_').titleize
+    @recent_courses = current_user.try(:recent_courses)
+    @is_teacher = !!(current_user && current_user.teacher?)
+    @is_english = request.language == 'en'
+
+    render 'index'
+  end
+
+  def show
+    course_name = params[:course_name].tr('-', '_').titleize
     course = Course.find_by_name(course_name)
     raise ActiveRecord::RecordNotFound unless course
     if course.plc_course
@@ -10,6 +18,6 @@ class CoursesController < ApplicationController
       return
     end
 
-    render 'index', locals: {course: course}
+    render 'show', locals: {course: course}
   end
 end
