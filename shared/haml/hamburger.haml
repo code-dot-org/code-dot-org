@@ -1,46 +1,45 @@
 
 :ruby
   teacher_entries = [
-    { title: "Home", url: "/teacher" },
-    { title: "Courses", url: "/educate" },
-    { title: "Projects Gallery", url: "/gallery" },
-    { title: "Sections", url: "/sections" },
-    { title: "Professional learning", url: "/pd" }
+    { title: "Home", url: "#{studio_url_base}" },
+    { title: "Courses", url: "#{studio_url_base}/courses" },
+    { title: "Project Gallery", url: "#{studio_url_base}/projects/public" },
+    { title: "Sections", url: "#{code_org_url_base}/teacher-dashboard#/sections" },
+    { title: "Professional learning", url: "#{studio_url_base}/my-professional-learning" }
   ].freeze
 
   student_entries = [
-    { title: "Home", url: "/student" },
-    { title: "Courses", url: "/educate" },
-    { title: "Projects Gallery", url: "/gallery" }
+    { title: "Home", url: "#{studio_url_base}" },
+    { title: "Courses", url: "#{studio_url_base}/courses" },
+    { title: "Project Gallery", url: "#{studio_url_base}/projects/public" }
   ]
 
   educate_entries = [
-    { title: "Educator Overview", url: "/educate" },
-    { title: "Elementary School", url: "/educate/curriculum/elementary-school'" },
-    { title: "Middle School", url: "/educate/curriculum/middle-school" },
-    { title: "High School", url: "/educate/curriculum/high-school" },
-    { title: "Hour of Code", url: "https://hourofcode.com" },
-    { title: "Partner with Us", url: "/educate/partner" },
-    { title: "Beyond Code.org", url: "/educate/curriculum/3rd-party" },
-    { title: "Inspire a Student", url: "/educate/resources/inspire" },
-    { title: "Online Community", url: "/educate/community" },
-    { title: "Tools and Videos", url: "/educate/resources/videos" },
+    { title: "Educator Overview", url: "#{code_org_url_base}/educate" },
+    { title: "Elementary School", url: "#{code_org_url_base}/educate/curriculum/elementary-school'" },
+    { title: "Middle School", url: "#{code_org_url_base}/educate/curriculum/middle-school" },
+    { title: "High School", url: "#{code_org_url_base}/educate/curriculum/high-school" },
+    { title: "Hour of Code", url: "#{code_org_url_base}https://hourofcode.com" },
+    { title: "Partner with Us", url: "#{code_org_url_base}/educate/partner" },
+    { title: "Beyond Code.org", url: "#{code_org_url_base}/educate/curriculum/3rd-party" },
+    { title: "Inspire a Student", url: "#{code_org_url_base}/educate/resources/inspire" },
+    { title: "Online Community", url: "#{code_org_url_base}/educate/community" },
+    { title: "Tools and Videos", url: "#{code_org_url_base}/educate/resources/videos" },
   ]
 
   about_entries = [
-    { title: "About Us", url: "/about" },
-    { title: "Leadership", url: "/about/leadership" },
-    { title: "Donors", url: "/about/donors" },
-    { title: "Partners", url: "/about/partners" },
-    { title: "Full Team", url: "/about/team" },
-    { title: "Newsroom", url: "/about/news" },
-    { title: "Evaluation", url: "/about/evaluation" },
-    { title: "Jobs", url: "/about/jobs" },
-    { title: "Contact Us", url: "/contact" },
-    { title: "FAQs", url: "/faq" },
+    { title: "About Us", url: "#{code_org_url_base}/about" },
+    { title: "Leadership", url: "#{code_org_url_base}/about/leadership" },
+    { title: "Donors", url: "#{code_org_url_base}/about/donors" },
+    { title: "Partners", url: "#{code_org_url_base}/about/partners" },
+    { title: "Full Team", url: "#{code_org_url_base}/about/team" },
+    { title: "Newsroom", url: "#{code_org_url_base}/about/news" },
+    { title: "Evaluation", url: "#{code_org_url_base}/about/evaluation" },
+    { title: "Jobs", url: "#{code_org_url_base}/about/jobs" },
+    { title: "Contact Us", url: "#{code_org_url_base}/contact" },
+    { title: "FAQs", url: "#{code_org_url_base}/faq" },
   ]
 
-:ruby
   show_teacher_options = "hide-always"
   show_student_options = "hide-always"
   show_pegasus_options = "hide-always"
@@ -106,7 +105,7 @@
           %a{href: entry[:url]}= entry[:title]
 
     %li{class: show_pegasus_options}
-      %a{href: '/student'} Learn
+      %a{href: "#{code_org_url_base}/student"} Learn
     %li{class: show_pegasus_options}
       #educate-more
         Teach
@@ -117,9 +116,9 @@
         %li
           %a{href: entry[:url]}= entry[:title]
     %li{class: show_pegasus_options}
-      %a{href: '/promote'} Stats
+      %a{href: "#{code_org_url_base}/promote"} Stats
     %li{class: show_pegasus_options}
-      %a{href: '/help'} Help Us
+      %a{href: "#{code_org_url_base}/help"} Help Us
     %li{class: show_pegasus_options}
       #about-more
         About
