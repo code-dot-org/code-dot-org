@@ -65,6 +65,16 @@ GIT
       image_optim (~> 0.19)
 
 GIT
+  remote: https://github.com/wjordan/image_optim_rails.git
+  revision: fa264d81c952490708a1b95f66d4d253f9313aa8
+  ref: rails_root_config_path
+  specs:
+    image_optim_rails (0.3.0)
+      image_optim (~> 0.24.0)
+      rails
+      sprockets
+
+GIT
   remote: https://github.com/wjordan/ims-lti.git
   revision: 39203db48428ab943547363b13da56b02a19d905
   ref: oauth_051
@@ -378,10 +388,6 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     i18n (0.8.1)
-    image_optim_rails (0.3.0)
-      image_optim (~> 0.24.0)
-      rails
-      sprockets
     image_size (1.5.0)
     in_threads (1.4.0)
     io-like (0.3.0)
@@ -791,7 +797,7 @@ DEPENDENCIES
   httparty
   image_optim!
   image_optim_pack (~> 0.5.0)!
-  image_optim_rails
+  image_optim_rails!
   image_size
   ims-lti!
   jbuilder (~> 2.5)
