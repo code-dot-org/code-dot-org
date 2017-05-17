@@ -530,6 +530,24 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal expected_url, @workshop.workshop_dashboard_url
   end
 
+  test 'unattended_enrollments' do
+    session = create :pd_session, workshop: @workshop
+    @workshop.sessions << session
+
+    # 2 enrollments with attendance
+    2.times do
+      enrollment = create :pd_enrollment, workshop: @workshop
+      create :pd_attendance, session: session, enrollment: enrollment
+    end
+
+    # 2 enrollments without attendance
+    enrollments = 2.times.map do
+      create :pd_enrollment, workshop: @workshop
+    end
+
+    assert_equal enrollments.map(&:id).sort, @workshop.unattended_enrollments.all.map(&:id).sort
+  end
+
   private
 
   def session_on_day(day_offset)

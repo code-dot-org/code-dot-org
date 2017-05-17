@@ -8,6 +8,12 @@
     @include button-variant($white, $cyan, $light_gray);
     text-shadow: none;
   }
+
+  .btn-gray {
+    // color, background, border
+    @include button-variant($default_text, $background_gray, $lightest_gray);
+    text-shadow: none;
+  }
 }
 
 // Apply the latest bootstrap styles only to the workshop-container div so it
