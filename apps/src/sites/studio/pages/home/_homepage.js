@@ -9,7 +9,6 @@ $(document).ready(showHomepage);
 function showHomepage() {
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
-
   const isTeacher = !!homepageData.sections;
 
   ReactDOM.render (
@@ -26,6 +25,7 @@ function showHomepage() {
           ]}
           courses={homepageData.courses}
           sections={homepageData.sections}
+          codeOrgUrlPrefix={homepageData.codeOrgUrlPrefix}
         />
       )}
       {!isTeacher && (
