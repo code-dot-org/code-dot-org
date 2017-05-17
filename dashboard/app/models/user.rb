@@ -76,7 +76,10 @@ require 'cdo/race_interstitial_helper'
 require 'cdo/school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties, SchoolInfoDeduplicator
+  include SerializedProperties
+  include SchoolInfoDeduplicator
+  include LocaleHelper
+  include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -488,12 +491,16 @@ class User < ActiveRecord::Base
 
       # clever provides us these fields
       if user.user_type == TYPE_TEACHER
-        # if clever told us that the user is a teacher, we just trust
-        # that they are adults; we don't actually care about age
         user.age = 21
       else
-        # student or unspecified type
+        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+        # handle any necessary conversion, setting birthday from auth.info.dob. The later
+        # shenanigans ensure that we store the user's age rather than birthday.
         user.birthday = auth.info.dob
+        user_age = user.age
+        user.birthday = nil
+        user.age = user_age
       end
       user.gender = normalize_gender auth.info.gender
     end
@@ -881,6 +888,28 @@ class User < ActiveRecord::Base
         # In that case we should also reject this user_script.
         true
       end
+    end
+  end
+
+  # This method is meant to return a bunch of data about a user's recent courses.
+  # Right now, it just looks at recent scripts, but we expect it to change in the
+  # very near future
+  # TODO: Once this data is more real, we should be writing tests for it.
+  def recent_courses
+    in_progress_and_completed_scripts.map do |user_script|
+      script_id = user_script[:script_id]
+      script_name = Script.get_from_cache(script_id)[:name]
+      {
+        id: script_id,
+        script_name: script_name,
+        courseName: data_t_suffix('script.name', script_name, 'title'),
+        description: data_t_suffix('script.name', script_name, 'description_short'),
+        # TODO: This can probably be generated on the client. If it can, we can also
+        # get rid of include Rails.application.routes.url_helpers
+        link: script_url(script_id),
+        image: "",
+        assignedSections: []
+      }
     end
   end
 

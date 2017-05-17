@@ -44,7 +44,10 @@ const Courses = React.createClass({
     return (
       <div>
         {courses && (
-          <RecentCoursesCollapsible courses={courses}/>
+          <RecentCoursesCollapsible
+            courses={courses}
+            showAllCoursesLink={false}
+          />
         )}
 
         {isEnglish && isTeacher && (

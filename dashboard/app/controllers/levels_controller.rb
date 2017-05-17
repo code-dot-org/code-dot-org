@@ -97,6 +97,7 @@ class LevelsController < ApplicationController
     type = params[:type]
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
+    @level.log_changes(current_user)
     @level.save!
     render json: {redirect: level_url(@level)}
   end
@@ -110,7 +111,13 @@ class LevelsController < ApplicationController
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       render json: @level.errors, status: :unprocessable_entity
-    elsif @level.update(level_params)
+      return
+    end
+
+    @level.assign_attributes(level_params)
+    @level.log_changes(current_user)
+
+    if @level.save
       redirect = params["redirect"] || level_url(@level, show_callouts: 1)
       render json: {redirect: redirect}
     else

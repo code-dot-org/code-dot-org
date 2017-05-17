@@ -6,8 +6,8 @@ describe("collisionMaskWalls", function () {
 
   var walls;
   beforeEach(function (done) {
-    const level = {gridAlignedMovement: false};
     const skin = {
+      gridAlignedMovement: false,
       wallCollisionRectOffsetX: 0,
       wallCollisionRectOffsetY: 0,
       wallMaps: {
@@ -19,7 +19,7 @@ describe("collisionMaskWalls", function () {
     };
     const drawDebug = () => {};
 
-    walls = new CollisionMaskWalls(level, skin, drawDebug, drawDebug, 400, 400,
+    walls = new CollisionMaskWalls({}, skin, drawDebug, drawDebug, 400, 400,
         done);
     walls.setWallMapRequested('block');
   });

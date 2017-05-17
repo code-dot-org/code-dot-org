@@ -12,19 +12,26 @@ const RecentCoursesCollapsible = React.createClass({
         description: React.PropTypes.string.isRequired,
         image: React.PropTypes.string.isRequired,
         link: React.PropTypes.string.isRequired,
-        assignedSections: React.PropTypes.array.isRequired,
+        assignedSections: React.PropTypes.array.isRequired
       })
-    )
+    ),
+    showAllCoursesLink: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses } = this.props;
+    const { courses, showAllCoursesLink } = this.props;
+
+    let linkText, link;
+    if (showAllCoursesLink) {
+      linkText = i18n.viewAllCourses();
+      link = "/courses";
+    }
 
     return (
       <CollapsibleSection
         header={i18n.courses()}
-        linkText={i18n.viewAllCourses()}
-        link="https://studio.code.org/"
+        linkText={linkText}
+        link={link}
       >
         {courses.length > 0 ? (
           courses.map((course, index) =>

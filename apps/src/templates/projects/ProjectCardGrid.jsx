@@ -54,6 +54,7 @@ const ProjectCardGrid = React.createClass({
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
+              isDetailView={false}
             />
             <ProjectAppTypeArea
               labName={i18n.projectTypeGamelab()}
@@ -62,6 +63,7 @@ const ProjectCardGrid = React.createClass({
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
+              isDetailView={false}
             />
             <ProjectAppTypeArea
               labName={i18n.projectTypeArtist()}
@@ -70,6 +72,7 @@ const ProjectCardGrid = React.createClass({
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
+              isDetailView={false}
             />
             <ProjectAppTypeArea
               labName={i18n.projectTypePlaylab()}
@@ -78,6 +81,7 @@ const ProjectCardGrid = React.createClass({
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
+              isDetailView={false}
             />
           </div>
         }
@@ -92,6 +96,7 @@ const ProjectCardGrid = React.createClass({
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
+                isDetailView={true}
               />
             }
             {this.state.showApp === 'gamelab' &&
@@ -102,6 +107,7 @@ const ProjectCardGrid = React.createClass({
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
+                isDetailView={true}
               />
             }
             {this.state.showApp === 'artist' &&
@@ -112,6 +118,7 @@ const ProjectCardGrid = React.createClass({
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
+                isDetailView={true}
               />
             }
             {this.state.showApp === 'playlab' &&
@@ -122,6 +129,7 @@ const ProjectCardGrid = React.createClass({
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
+                isDetailView={true}
               />
             }
           </div>

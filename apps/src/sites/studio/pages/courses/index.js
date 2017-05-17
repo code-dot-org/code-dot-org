@@ -1,21 +1,26 @@
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
+import Courses from '@cdo/apps/templates/teacherHomepage/Courses';
+import {initCourseExplorer} from '@cdo/apps/courseExplorer/courseExplorer';
 
-$(document).ready(showCourseOverview);
+$(document).ready(showCourses);
 
-function showCourseOverview() {
-  const scriptData = document.querySelector('script[data-course-summary]');
-  const courseSummary = JSON.parse(scriptData.dataset.courseSummary);
+function showCourses() {
+  // Initialize the non-React Course/Tool Explorer component code.
+  initCourseExplorer();
 
-  // Eventually we want to do this all via redux
-  ReactDOM.render(
-    <CourseOverview
-      title={courseSummary.title}
-      descriptionStudent={courseSummary.description_student}
-      descriptionTeacher={courseSummary.description_teacher}
-      viewAs="Teacher"
-      scripts={courseSummary.scripts}
+  const coursesData = document.querySelector('script[data-courses]');
+  const courses = JSON.parse(coursesData.dataset.courses);
+  const isEnglish = JSON.parse(coursesData.dataset.english);
+  const isTeacher = JSON.parse(coursesData.dataset.teacher);
+
+  ReactDOM.render (
+    <Courses
+      courses={courses}
+      isEnglish={isEnglish}
+      isTeacher={isTeacher}
     />,
-  document.getElementById('course_index'));
+    document.getElementById('courses-container')
+  );
 }

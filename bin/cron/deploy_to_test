@@ -36,9 +36,17 @@ def exit_unless_last_dtt_green
   exit
 end
 
+def exit_unless_new_commits
+  return if GitHub.behind?(base: 'staging', compare: 'test')
+
+  ChatClient.message 'infra-test', "robo-DTT skipped (nothing to DTT)"
+  exit
+end
+
 def main
   exit_unless_slack_permission
   exit_unless_last_dtt_green
+  exit_unless_new_commits
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 

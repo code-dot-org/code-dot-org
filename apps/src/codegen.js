@@ -242,17 +242,12 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
 };
 
 
-/**
- * @deprecated use customMarshalObjectList that is stored on JSInterpreter instead.
- */
-exports.customMarshalObjectList_DEPRECATED = [];
-
 // If this is on our list of "custom marshal" objects - or if it a property
 // on one of those objects (other than a function), return true
 
-var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
-  for (var i = 0; i < exports.customMarshalObjectList_DEPRECATED.length; i++) {
-    var marshalObj = exports.customMarshalObjectList_DEPRECATED[i];
+var shouldCustomMarshalObject = function (interpreter, nativeVar, nativeParentObj) {
+  for (var i = 0; i < interpreter.customMarshalObjectList.length; i++) {
+    var marshalObj = interpreter.customMarshalObjectList[i];
     if ((nativeVar instanceof marshalObj.instance &&
           (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeVar[marshalObj.requiredMethod] !== undefined)) ||
@@ -267,9 +262,9 @@ var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
 // When marshaling methods on "custom marshal" objects, we may need to augment
 // the marshaling options. This returns those options.
 
-var getCustomMarshalMethodOptions = function (nativeParentObj) {
-  for (var i = 0; i < exports.customMarshalObjectList_DEPRECATED.length; i++) {
-    var marshalObj = exports.customMarshalObjectList_DEPRECATED[i];
+var getCustomMarshalMethodOptions = function (interpreter, nativeParentObj) {
+  for (var i = 0; i < interpreter.customMarshalObjectList.length; i++) {
+    var marshalObj = interpreter.customMarshalObjectList[i];
     if (nativeParentObj instanceof marshalObj.instance) {
       if (typeof marshalObj.requiredMethod === 'undefined' ||
            nativeParentObj[marshalObj.requiredMethod] !== undefined) {
@@ -300,7 +295,7 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to infinite levels of depth
   }
-  if (shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+  if (shouldCustomMarshalObject(interpreter, nativeVar, nativeParentObj)) {
     return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
   }
   if (nativeVar instanceof Array) {
@@ -323,7 +318,7 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
       nativeFunc: nativeVar,
       nativeParentObj: nativeParentObj,
     };
-    var extraOpts = getCustomMarshalMethodOptions(nativeParentObj);
+    var extraOpts = getCustomMarshalMethodOptions(interpreter, nativeParentObj);
     // Add extra options if the parent of this function is in our custom marshal
     // modified object list:
     for (var prop in extraOpts) {

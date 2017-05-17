@@ -12,11 +12,11 @@ module Pd::Form
       # should be overridden by including model
       {}
     end
+  end
 
-    def required_fields
-      # should be overridden by including model
-      []
-    end
+  def required_fields
+    # should be overridden by including model
+    []
   end
 
   def add_key_error(key)
@@ -33,7 +33,7 @@ module Pd::Form
       value.empty?
     end
 
-    self.class.required_fields.each do |key|
+    required_fields.each do |key|
       add_key_error(key) unless hash.key?(key)
     end
   end
