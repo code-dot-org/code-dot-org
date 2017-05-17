@@ -94,7 +94,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    %w(studio infinity hoc2015 hoc2015x)
+    %w(studio infinity hoc2015)
   end
 
   def self.default_success_condition
