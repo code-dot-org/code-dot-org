@@ -12,13 +12,6 @@
       %h1= @page_title
 
   .row
-    .span2
-    .span8.infobox= t('project.help_text').html_safe
-    .span2
-  %br
-  %br
-
-  .row
     #gallery-switcher
     #angular-my-projects-wrapper
       %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
