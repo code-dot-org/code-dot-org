@@ -105,6 +105,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|

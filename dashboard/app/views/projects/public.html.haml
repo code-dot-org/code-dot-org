@@ -1,0 +1,14 @@
+- @page_title = t('project.project_gallery')
+
+
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/projects/public.js')}
+
+.projects-page
+  .row
+    .span12
+      %h1= @page_title
+
+  .row
+    #public-gallery
+
