@@ -4700,6 +4700,7 @@ Studio.setMap = function (opts) {
 
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
+  Studio.wallMapCollisions = true;
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
