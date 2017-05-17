@@ -63,6 +63,15 @@ export default class Craft {
     studioApp().reset = Craft.reset;
     studioApp().runButtonClick = Craft.runButtonClick;
 
+    // Push initial level properties into the Redux store
+    studioApp().setPageConstants(config, {
+      isMinecraft: true
+    });
+
+    Craft.render(config);
+  }
+
+  static render(config) {
     const onMount = function () {
       studioApp().init({
         ...config
@@ -72,11 +81,6 @@ export default class Craft {
         preloadImage(url);
       });
     };
-
-    // Push initial level properties into the Redux store
-    studioApp().setPageConstants(config, {
-      isMinecraft: true
-    });
 
     ReactDOM.render(
       <Provider store={getStore()}>
