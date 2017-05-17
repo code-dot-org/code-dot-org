@@ -9,14 +9,20 @@ export default storybook => {
         name: 'Set Up Message for Courses',
         description: `Information box if the teacher doesn't have any courses yet`,
         story: () => (
-          <SetUpMessage type="courses"/>
+          <SetUpMessage
+            type="courses"
+            codeOrgUrlPrefix="http://localhost:3000/"
+          />
         )
       },
       {
         name: 'Set Up Message for Sections',
         description: `Information box if the teacher doesn't have any sections yet`,
         story: () => (
-          <SetUpMessage type="sections"/>
+          <SetUpMessage
+            type="sections"
+            codeOrgUrlPrefix="http://localhost:3000/"
+          />
         )
       },
     ]);
