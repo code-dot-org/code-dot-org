@@ -1,12 +1,13 @@
 class CoursesController < ApplicationController
   before_action :require_levelbuilder_mode, except: [:index, :show]
+  before_action :authenticate_user!, except: :show
+  check_authorization
+  authorize_resource
 
   def index
     @recent_courses = current_user.try(:recent_courses)
     @is_teacher = !!(current_user && current_user.teacher?)
     @is_english = request.language == 'en'
-
-    render 'index'
   end
 
   def show
@@ -15,9 +16,9 @@ class CoursesController < ApplicationController
       # PLC courses have different ways of getting to name. ideally this goes
       # away eventually
       course_name = params[:course_name].tr('-', '_').titleize
-      course = Course.find_by_name!(course_name)
+      course = Course.find_by_name(course_name)
       # only support this alternative course name for plc courses
-      raise ActiveRecord::RecordNotFound unless course.plc_course
+      raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
     end
 
     if course.plc_course
@@ -31,7 +32,6 @@ class CoursesController < ApplicationController
   end
 
   def new
-    render 'new'
   end
 
   def create
@@ -39,7 +39,7 @@ class CoursesController < ApplicationController
     if course.save
       redirect_to action: :edit, course_name: course.name
     else
-      render 'new', locals: {error_messages: course.errors.full_messages}
+      render 'new', locals: {course: course}
     end
   end
 
