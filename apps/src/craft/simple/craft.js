@@ -315,7 +315,11 @@ Craft.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        visualizationColumn={<CraftVisualizationColumn/>}
+        visualizationColumn={
+          <CraftVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+          />
+        }
         onMount={onMount}
       />
     </Provider>,
