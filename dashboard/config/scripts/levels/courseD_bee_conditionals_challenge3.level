@@ -1,0 +1,150 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-05-16T20:42:33.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "instructions": "Collect all of the nectar or make all the honey.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "start_direction": "1",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,2,1,\"P\",\"P\",\"P\",1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,98,1,98,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skip_instructions_popup": "false",
+    "ideal": "10",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true",
+    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":4,\"range\":4,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":2},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":1},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":1},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":1},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":1},{\"tileType\":1,\"value\":4,\"range\":4,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:\\n\\n<xml>  <block type=\\\"bee_whileNectarAmount\\\">\\n    <title name=\\\"ARG1\\\">nectarRemaining</title>\\n    <title name=\\\"OP\\\">&gt;</title>\\n    <title name=\\\"ARG2\\\">0</title>                    <statement name=\\\"DO\\\">\\n                      <block type=\\\"maze_nectar\\\"/>\\n                    </statement>\\n  </block></xml>\",\"hint_id\":\"courseD_bee_conditionals_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/161f9d655cb2c5a2ea25ad3e1a0b9789/courseD_bee_conditionals_challenge2.mp3\"}]",
+    "instructions_important": "false",
+    "markdown_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "step_speed": "1",
+    "nectar_goal": "4",
+    "honey_goal": "4",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_bee_conditionals_challenge3_1\",\r\n  \"callout_text\": \"Try repeating the move forward block using this loop.\",\r\n  \"element_id\": \"#whileNectar\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">==</title>
+              <title name="ARG2">0</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="2"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_nectar" limit="1"/>
+        <block type="maze_honey" limit="1"/>
+        <block type="bee_whileNectarAmount" limit="4" id="whileNectar">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">==</title>
+          <title name="ARG2">0</title>
+        </block>
+        <block type="maze_untilBlocked"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="bee_ifElseFlower">
+          <title name="LOC">atFlower</title>
+        </block>
+        <block type="bee_ifFlower">
+          <title name="LOC">atFlower</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">==</title>
+              <title name="ARG2">0</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="bee_whileNectarAmount">
+                      <title name="ARG1">nectarRemaining</title>
+                      <title name="OP">&gt;</title>
+                      <title name="ARG2">0</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                      <next>
+                        <block type="bee_whileNectarAmount">
+                          <title name="ARG1">honeyAvailable</title>
+                          <title name="OP">==</title>
+                          <title name="ARG2">0</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
+                          <next>
+                            <block type="bee_whileNectarAmount">
+                              <title name="ARG1">honeyAvailable</title>
+                              <title name="OP">&gt;</title>
+                              <title name="ARG2">0</title>
+                              <statement name="DO">
+                                <block type="maze_honey"/>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>
