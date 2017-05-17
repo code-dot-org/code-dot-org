@@ -3890,10 +3890,6 @@ Studio.callCmd = function (cmd) {
       Studio.setMap(cmd.opts);
       Studio.trackedBehavior.hasSetMap = true;
       break;
-    case 'setWallMapCollisions':
-      studioApp().highlight(cmd.id);
-      Studio.wallMapCollisions = cmd.opts.value;
-      break;
     case 'setSprite':
       studioApp().highlight(cmd.id);
       Studio.setSprite(cmd.opts);

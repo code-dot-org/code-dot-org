@@ -552,27 +552,6 @@ exports.install = function (blockly, blockInstallOptions) {
 
   generator.studio_whenSpriteCollided = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_setWallMapCollisions = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74); //TODO(ram): what color should settings blocks be?
-      this.appendDummyInput().appendTitle(new blockly.FieldDropdown([
-          [msg.allowCharactersToGoThroughWalls(), 'false'],
-          [msg.dontAllowCharactersToGoThroughWalls(), 'true'],
-      ]), 'VALUE');
-
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.wallMapCollisionsTooltip());
-    },
-  };
-
-  generator.studio_setWallMapCollisions = function () {
-    const wallMapCollisions = this.getTitleValue('VALUE') === 'true';
-    return `Studio.setWallMapCollisions('block_id_${this.id}',
-        ${wallMapCollisions});\n`;
-  };
-
   blockly.Blocks.studio_stop = {
     // Block for stopping the movement of a sprite.
     helpUrl: '',
