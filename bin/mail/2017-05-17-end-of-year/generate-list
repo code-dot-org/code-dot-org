@@ -37,21 +37,21 @@ query_2_csf_no_pd = "
     AND (country = 'United States' OR country IS NULL)
     AND (
       (
-        grades_taught LIKE '%K%'
-          OR grades_taught LIKE '%,1,%' OR grades_taught = '1' OR grades_taught LIKE '1,%' OR grades_taught LIKE '%,1'
-          OR grades_taught LIKE '%,2,%' OR grades_taught = '2' OR grades_taught LIKE '2,%' OR grades_taught LIKE '%,2'
-          OR grades_taught LIKE '%,3,%' OR grades_taught = '3' OR grades_taught LIKE '3,%' OR grades_taught LIKE '%,3'
-          OR grades_taught LIKE '%,4,%' OR grades_taught = '4' OR grades_taught LIKE '4,%' OR grades_taught LIKE '%,4'
-          OR grades_taught LIKE '%,5,%' OR grades_taught = '5' OR grades_taught LIKE '5,%' OR grades_taught LIKE '%,5'
+        FIND_IN_SET('K', grades_taught) > 0
+          OR FIND_IN_SET('1', grades_taught) > 0
+          OR FIND_IN_SET('2', grades_taught) > 0
+          OR FIND_IN_SET('3', grades_taught) > 0
+          OR FIND_IN_SET('4', grades_taught) > 0
+          OR FIND_IN_SET('5', grades_taught) > 0
       ) OR (
-        ages_taught LIKE '%,4,%' OR ages_taught = '4' OR ages_taught LIKE '4,%' OR ages_taught LIKE '%,4'
-          OR ages_taught LIKE '%,5,%' OR ages_taught = '5' OR ages_taught LIKE '5,%' OR ages_taught LIKE '%,5'
-          OR ages_taught LIKE '%,6,%' OR ages_taught = '6' OR ages_taught LIKE '6,%' OR ages_taught LIKE '%,6'
-          OR ages_taught LIKE '%,7,%' OR ages_taught = '7' OR ages_taught LIKE '7,%' OR ages_taught LIKE '%,7'
-          OR ages_taught LIKE '%,8,%' OR ages_taught = '8' OR ages_taught LIKE '8,%' OR ages_taught LIKE '%,8'
-          OR ages_taught LIKE '%,9,%' OR ages_taught = '9' OR ages_taught LIKE '9,%' OR ages_taught LIKE '%,9'
-          OR ages_taught LIKE '%,10,%' OR ages_taught = '10' OR ages_taught LIKE '10,%' OR ages_taught LIKE '%,10'
-          OR ages_taught LIKE '%,11,%' OR ages_taught = '11' OR ages_taught LIKE '11,%' OR ages_taught LIKE '%,11'
+        FIND_IN_SET('4', ages_taught) > 0
+          OR FIND_IN_SET('5', ages_taught) > 0
+          OR FIND_IN_SET('6', ages_taught) > 0
+          OR FIND_IN_SET('7', ages_taught) > 0
+          OR FIND_IN_SET('8', ages_taught) > 0
+          OR FIND_IN_SET('9', ages_taught) > 0
+          OR FIND_IN_SET('10', ages_taught) > 0
+          OR FIND_IN_SET('11', ages_taught) > 0
       )
     )
 "
@@ -80,16 +80,16 @@ query_3_csp = "
     AND (country = 'United States' OR country IS NULL)
     AND (
       (
-        grades_taught LIKE '%,9,%' OR grades_taught = '9' OR grades_taught LIKE '9,%' OR grades_taught LIKE '%,9'
-          OR grades_taught LIKE '%,10,%' OR grades_taught = '10' OR grades_taught LIKE '10,%' OR grades_taught LIKE '%,10'
-          OR grades_taught LIKE '%,11,%' OR grades_taught = '11' OR grades_taught LIKE '11,%' OR grades_taught LIKE '%,11'
-          OR grades_taught LIKE '%,12,%' OR grades_taught = '12' OR grades_taught LIKE '12,%' OR grades_taught LIKE '%,12'
+        FIND_IN_SET('9', grades_taught) > 0
+          OR FIND_IN_SET('10', grades_taught) > 0
+          OR FIND_IN_SET('11', grades_taught) > 0
+          OR FIND_IN_SET('12', grades_taught) > 0
       ) OR (
-        ages_taught LIKE '%,14,%' OR ages_taught = '14' OR ages_taught LIKE '14,%' OR ages_taught LIKE '%,14'
-          OR ages_taught LIKE '%,15,%' OR ages_taught = '15' OR ages_taught LIKE '15,%' OR ages_taught LIKE '%,15'
-          OR ages_taught LIKE '%,16,%' OR ages_taught = '16' OR ages_taught LIKE '16,%' OR ages_taught LIKE '%,16'
-          OR ages_taught LIKE '%,17,%' OR ages_taught = '17' OR ages_taught LIKE '17,%' OR ages_taught LIKE '%,17'
-          OR ages_taught LIKE '%,18,%' OR ages_taught = '18' OR ages_taught LIKE '18,%' OR ages_taught LIKE '%,18'
+        FIND_IN_SET('14', ages_taught) > 0
+          OR FIND_IN_SET('15', ages_taught) > 0
+          OR FIND_IN_SET('16', ages_taught) > 0
+          OR FIND_IN_SET('17', ages_taught) > 0
+          OR FIND_IN_SET('18', ages_taught) > 0
       )
     )
 "
@@ -116,12 +116,12 @@ query_4_csd = "
     AND (country = 'United States' OR country IS NULL)
     AND (
       (
-        grades_taught LIKE '%,6,%' OR grades_taught = '6' OR grades_taught LIKE '6,%' OR grades_taught LIKE '%,6'
-          OR grades_taught LIKE '%,7,%' OR grades_taught = '7' OR grades_taught LIKE '7,%' OR grades_taught LIKE '%,7'
-          OR grades_taught LIKE '%,8,%' OR grades_taught = '8' OR grades_taught LIKE '8,%' OR grades_taught LIKE '%,8'
+        FIND_IN_SET('6', grades_taught) > 0
+          OR FIND_IN_SET('7', grades_taught) > 0
+          OR FIND_IN_SET('8', grades_taught) > 0
       ) OR (
-        ages_taught LIKE '%,12,%' OR ages_taught = '12' OR ages_taught LIKE '12,%' OR ages_taught LIKE '%,12'
-          OR ages_taught LIKE '%,13,%' OR ages_taught = '13' OR ages_taught LIKE '13,%' OR ages_taught LIKE '%,13'
+        FIND_IN_SET('12', ages_taught) > 0
+          OR FIND_IN_SET('13', ages_taught) > 0
       )
     )
 "
