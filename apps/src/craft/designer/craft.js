@@ -372,7 +372,10 @@ Craft.init = function (config) {
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={
-          <CraftVisualizationColumn showScore={!!config.level.useScore}/>
+          <CraftVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+            showScore={!!config.level.useScore}
+          />
         }
         onMount={onMount}
       />

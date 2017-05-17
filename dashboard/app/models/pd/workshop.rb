@@ -482,4 +482,8 @@ class Pd::Workshop < ActiveRecord::Base
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
+
+  def local_summer?
+    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+  end
 end

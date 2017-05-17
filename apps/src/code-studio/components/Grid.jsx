@@ -1,6 +1,16 @@
 import React from 'react';
-import { SquareType } from '@cdo/apps/studio/constants';
-var mazeUtils = require('@cdo/apps/maze/mazeUtils');
+import {
+  SquareType,
+  WallTypeMask,
+  WallCoordRowMask,
+  WallCoordRowShift,
+  WallCoordColMask,
+  WallCoordColShift
+} from '@cdo/apps/studio/constants';
+import mazeUtils from '@cdo/apps/maze/mazeUtils';
+
+const CELL_WIDTH = 48;
+const CELL_HEIGHT = 38;
 
 var studioTiles = {
   [SquareType.OPEN]: 'none',
@@ -56,6 +66,20 @@ var Cell = React.createClass({
 
       if (cell.getTileType() === SquareType.SPRITESTART && cell.sprite_ !== undefined) {
         tdStyle.backgroundImage = "url('/blockly/media/skins/studio/" + studioAvatarList[cell.sprite_] + "_spritesheet_200px.png')";
+      }
+    } else if (this.props.skin === 'starwarsgrid') {
+      if (cell.tileType_ === 1) {
+        tdStyle.backgroundImage = "url('/blockly/media/skins/hoc2015x/goal.png')";
+      } else if (cell.tileType_ === 0x10) {
+        tdStyle.backgroundImage = "url('/blockly/media/skins/hoc2015x/instructions_bb8.png')";
+        tdStyle.backgroundSize = 'cover';
+      } else {
+        text = WallTypeMask & cell.tileType_ ? '2x' : '';
+        const x = (WallCoordColMask & cell.tileType_) >> WallCoordColShift;
+        const y = (WallCoordRowMask & cell.tileType_) >> WallCoordRowShift;
+        tdStyle.backgroundImage =  "url('/blockly/media/skins/hoc2015x/tiles_background1.png')";
+        tdStyle.backgroundSize = "800% 800%";
+        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y * CELL_HEIGHT}px`;
       }
     } else {
       classNames.push(karelTiles[cell.tileType_]);

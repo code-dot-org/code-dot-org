@@ -103,6 +103,14 @@ class Pd::Enrollment < ActiveRecord::Base
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
   end
 
+  def survey_class
+    if workshop.local_summer?
+      Pd::LocalSummerWorkshopSurvey
+    else
+      Pd::WorkshopSurvey
+    end
+  end
+
   # Filters a list of enrollments for survey completion, checking with Pegasus (in batch) to include
   # new unprocessed surveys that don't yet show up in this model.
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
@@ -158,6 +166,10 @@ class Pd::Enrollment < ActiveRecord::Base
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
+
+    # TODO: elijah: once the route is fully ready, add the following codition above
+    #elsif workshop.local_summer?
+    #  pd_new_workshop_survey_url(code)
   end
 
   def send_exit_survey

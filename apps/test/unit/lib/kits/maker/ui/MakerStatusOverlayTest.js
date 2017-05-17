@@ -3,34 +3,66 @@ import React from 'react';
 import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
+import {throwOnConsoleErrors} from '../../../../../util/testUtils';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
 
 describe('MakerStatusOverlay', () => {
+  throwOnConsoleErrors();
+
+  const testProps = {
+    width: 10,
+    height: 15,
+    isConnecting: false,
+    isWrongBrowser: false,
+    hasConnectionError: false,
+    handleTryAgain: () => {},
+    handleDisableMaker: () => {},
+    handleOpenSetupPage: () => {},
+    useFakeBoardOnNextRun: () => {},
+  };
+
   it('renders nothing by default', () => {
     const wrapper = mount(
-      <UnconnectedMakerStatusOverlay
-        width={10}
-        height={15}
-        isConnecting={false}
-        hasConnectionError={false}
-        handleTryAgain={() => {}}
-        handleDisableMaker={() => {}}
-      />
+      <UnconnectedMakerStatusOverlay {...testProps}/>
     );
     expect(wrapper.html()).to.be.null;
+  });
+
+  describe('size properties', () => {
+    it('control the overlay size', () => {
+      const wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          {...testProps}
+          isConnecting
+          width={22}
+          height={42}
+        />
+      );
+      expect(wrapper).to.have.style('width', '22px');
+      expect(wrapper).to.have.style('height', '42px');
+    });
+
+    it('on the error overlay too', () => {
+      const wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          {...testProps}
+          hasConnectionError
+          width={22}
+          height={42}
+        />
+      );
+      expect(wrapper).to.have.style('width', '22px');
+      expect(wrapper).to.have.style('height', '42px');
+    });
   });
 
   describe('scale property', () => {
     it('sets scale transform if scale property is provided', () => {
       const wrapper = mount(
         <UnconnectedMakerStatusOverlay
-          width={10}
-          height={10}
+          {...testProps}
+          isConnecting
           scale={0.65}
-          isConnecting={true}
-          hasConnectionError={false}
-          handleTryAgain={() => {}}
-          handleDisableMaker={() => {}}
         />
       );
       expect(wrapper).to.have.style('transform', 'scale(0.65)');
@@ -41,12 +73,8 @@ describe('MakerStatusOverlay', () => {
     it('sets no transform if scale property is absent', () => {
       const wrapper = mount(
         <UnconnectedMakerStatusOverlay
-          width={10}
-          height={10}
-          isConnecting={true}
-          hasConnectionError={false}
-          handleTryAgain={() => {}}
-          handleDisableMaker={() => {}}
+          {...testProps}
+          isConnecting
         />
       );
       expect(wrapper).not.to.have.style('transform');
@@ -61,23 +89,14 @@ describe('MakerStatusOverlay', () => {
     beforeEach(() => {
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
-          width={10}
-          height={15}
-          isConnecting={true}
-          hasConnectionError={false}
-          handleTryAgain={() => {}}
-          handleDisableMaker={() => {}}
+          {...testProps}
+          isConnecting
         />
       );
     });
 
     it('renders an overlay', () => {
       expect(wrapper).to.have.descendants('div');
-    });
-
-    it('of given size', () => {
-      expect(wrapper).to.have.style('width', '10px');
-      expect(wrapper).to.have.style('height', '15px');
     });
 
     it('with a spinning gear', () => {
@@ -93,22 +112,18 @@ describe('MakerStatusOverlay', () => {
     });
   });
 
-  describe('on error', () => {
-    let wrapper, handleTryAgain, handleDisableMaker, useFakeBoardOnNextRun;
+  describe('on unsupported browser', () => {
+    let wrapper, handleDisableMaker, handleOpenSetupPage;
 
     beforeEach(() => {
-      handleTryAgain = sinon.spy();
       handleDisableMaker = sinon.spy();
-      useFakeBoardOnNextRun = sinon.spy();
+      handleOpenSetupPage = sinon.spy();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
-          width={11}
-          height={16}
-          isConnecting={false}
-          hasConnectionError={true}
-          handleTryAgain={handleTryAgain}
+          {...testProps}
+          isWrongBrowser
           handleDisableMaker={handleDisableMaker}
-          useFakeBoardOnNextRun={useFakeBoardOnNextRun}
+          handleOpenSetupPage={handleOpenSetupPage}
         />
       );
     });
@@ -117,9 +132,62 @@ describe('MakerStatusOverlay', () => {
       expect(wrapper).to.have.descendants('div');
     });
 
-    it('of given size', () => {
-      expect(wrapper).to.have.style('width', '11px');
-      expect(wrapper).to.have.style('height', '16px');
+    it('with a warning sign', () => {
+      expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
+    });
+
+    it('and error text', () => {
+      expect(wrapper.text()).to.include('Maker Toolkit BETA requires');
+      expect(wrapper.text()).to.include('Chrome');
+    });
+
+    it('and a "Setup Instructions" button', () => {
+      const selector = 'button.setup-instructions';
+      expect(wrapper).to.have.descendants(selector);
+      expect(wrapper.find(selector).text()).to.include('Setup Instructions');
+    });
+
+    it('that navigates to the Maker Setup page', () => {
+      const selector = 'button.setup-instructions';
+      expect(handleOpenSetupPage).not.to.have.been.called;
+      wrapper.find(selector).simulate('click');
+      expect(handleOpenSetupPage).to.have.been.calledOnce;
+    });
+
+    it('and a "Disable Maker Toolkit" button', () => {
+      const selector = 'button.disable-maker-toolkit';
+      expect(wrapper).to.have.descendants(selector);
+      expect(wrapper.find(selector).text()).to.include('Disable Maker Toolkit');
+    });
+
+    it('that calls the disableMaker handler', () => {
+      const selector = 'button.disable-maker-toolkit';
+      expect(handleDisableMaker).not.to.have.been.called;
+      wrapper.find(selector).simulate('click');
+      expect(handleDisableMaker).to.have.been.calledOnce;
+    });
+  });
+
+  describe('on error', () => {
+    let wrapper, handleTryAgain, useFakeBoardOnNextRun, handleOpenSetupPage;
+
+    beforeEach(() => {
+      handleTryAgain = sinon.spy();
+      useFakeBoardOnNextRun = sinon.spy();
+      handleOpenSetupPage = sinon.spy();
+      wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          {...testProps}
+          hasConnectionError
+          handleTryAgain={handleTryAgain}
+          useFakeBoardOnNextRun={useFakeBoardOnNextRun}
+          handleOpenSetupPage={handleOpenSetupPage}
+        />
+      );
+    });
+
+    it('renders an overlay', () => {
+      expect(wrapper).to.have.descendants('div');
     });
 
     it('with a warning sign', () => {
@@ -158,24 +226,17 @@ describe('MakerStatusOverlay', () => {
       expect(useFakeBoardOnNextRun).to.have.been.calledOnce;
     });
 
-    it('and a "Get Help" link', () => {
-      expect(wrapper).to.have.descendants('a[children="Get Help"]');
+    it('and a "Setup Instructions" button', () => {
+      const selector = 'button.setup-instructions';
+      expect(wrapper).to.have.descendants(selector);
+      expect(wrapper.find(selector).text()).to.include('Setup Instructions');
     });
 
-    it('that opens the maker setup page in a new tab', () => {
-      const link = wrapper.find('a[children="Get Help"]');
-      expect(link).to.have.prop('href', '/maker/setup');
-      expect(link).to.have.prop('target', '_blank');
-    });
-
-    it('and a "Disable Maker Toolkit" link', () => {
-      expect(wrapper).to.have.descendants('a[children="Disable Maker Toolkit"]');
-    });
-
-    it('that calls the provided disable handler', () => {
-      expect(handleDisableMaker).not.to.have.been.called;
-      wrapper.find('a[children="Disable Maker Toolkit"]').simulate('click');
-      expect(handleDisableMaker).to.have.been.calledOnce;
+    it('that navigates to the Maker Setup page', () => {
+      const selector = 'button.setup-instructions';
+      expect(handleOpenSetupPage).not.to.have.been.called;
+      wrapper.find(selector).simulate('click');
+      expect(handleOpenSetupPage).to.have.been.calledOnce;
     });
   });
 });
