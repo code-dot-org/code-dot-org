@@ -1,7 +1,7 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
@@ -56,11 +56,16 @@ class ProjectsController < ApplicationController
 
   @@project_level_cache = {}
 
+  # GET /projects
   def index
     if current_user.try(:admin)
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+  end
+
+  # GET /projects/public
+  def public
   end
 
   # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
