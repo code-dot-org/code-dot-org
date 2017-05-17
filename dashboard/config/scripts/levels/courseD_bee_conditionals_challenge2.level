@@ -39,9 +39,8 @@
     "step_speed": "1",
     "nectar_goal": "11",
     "honey_goal": "11",
-    "contained_level_names": null,
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_bee_conditionals_challenge2_1\",\r\n  \"callout_text\": \"Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).\",\r\n  \"element_id\": \"#whileNectar\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
