@@ -161,6 +161,7 @@ class Ability
       can :manage, [
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel
       ]
@@ -183,6 +184,7 @@ class Ability
         Activity,
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel,
         UserLevel,

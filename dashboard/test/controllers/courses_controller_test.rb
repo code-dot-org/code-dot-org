@@ -7,7 +7,7 @@ class CoursesControllerTest < ActionController::TestCase
     @teacher = create :teacher
     sign_in @teacher
 
-    plc_course = create :plc_course, name: 'My PLC'
+    plc_course = create :plc_course, name: 'My Plc'
     @course_plc = plc_course.course
     @course_regular = create :course, name: 'non-plc-course'
   end

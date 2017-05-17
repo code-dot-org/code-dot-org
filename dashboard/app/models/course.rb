@@ -20,28 +20,11 @@ class Course < ApplicationRecord
 
   validates :name,
     presence: true,
-    uniqueness: {case_sensitive: false}
-
-  class CourseNameValidator < ActiveModel::Validator
-    def validate(course)
-      return if course.plc_course
-
-      unless /\A[a-z0-9\-]+\z/ =~ course.name
-        course.errors[:base] << 'can only contain lowercase letters, numbers and dashes'
-      end
-    end
-  end
-
-  validates_with CourseNameValidator
-
-  # As we read and write to files with the course name, to prevent directory
-  # traversal (for security reasons), we do not allow the name to start with a
-  # tilde or dot or contain a slash.
-  validates :name,
-    presence: true,
+    uniqueness: {case_sensitive: false},
     format: {
-      without: /\A~|\A\.|\//,
-      message: 'cannot start with a tilde or dot or contain slashes'
+      unless: :plc_course,
+      with: /\A[a-z0-9\-]+\z/,
+      message: 'can only contain lowercase letters, numbers and dashes'
     }
 
   def summarize
