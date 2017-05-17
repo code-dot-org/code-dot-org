@@ -10,12 +10,11 @@ const TeacherHomepage = React.createClass({
     courses: shapes.courses,
     sections: React.PropTypes.array,
     announcements: React.PropTypes.array.isRequired,
-    urlPrefix: React.PropTypes.string.isRequired,
-    studioUrlPrefix: React.PropTypes.string.isRequired
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
   },
 
   render() {
-    const { courses, sections, announcements, urlPrefix, studioUrlPrefix } = this.props;
+    const { courses, sections, announcements, codeOrgUrlPrefix } = this.props;
 
     return (
       <div>
@@ -24,9 +23,11 @@ const TeacherHomepage = React.createClass({
           courses={courses}
           showAllCoursesLink={true}
         />
-        <ManageSectionsCollapsible sections={sections}/>
-        <TeacherResources/>
+        <ManageSectionsCollapsible
+          sections={sections}
+          codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
+        <TeacherResources codeOrgUrlPrefix={codeOrgUrlPrefix}/>
       </div>
     );
   }

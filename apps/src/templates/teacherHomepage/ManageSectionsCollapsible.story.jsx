@@ -39,8 +39,7 @@ export default storybook => {
                 sectionCode: "HPRWHG"
               },
             ]}
-            urlPrefix = "http://localhost:3000/"
-            studioUrlPrefix = "http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix = "http://localhost:3000/"
           />
         )
       },
@@ -50,8 +49,7 @@ export default storybook => {
         story: () => (
           <ManageSectionsCollapsible
             sections={[]}
-            urlPrefix = "http://localhost:3000/"
-            studioUrlPrefix = "http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix = "http://localhost:3000/"
           />
         )
       },

@@ -7,13 +7,12 @@ import i18n from "@cdo/locale";
 const ManageSectionsCollapsible = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
-    urlPrefix: React.PropTypes.string.isRequired,
-    studioUrlPrefix: React.PropTypes.string.isRequired
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
   },
 
   render() {
-    const { sections, urlPrefix, studioUrlPrefix } = this.props;
-    const editSectionsUrl = `${urlPrefix}/teacher-dashboard#/sections`;
+    const { sections, codeOrgUrlPrefix } = this.props;
+    const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
       <CollapsibleSection
@@ -26,8 +25,7 @@ const ManageSectionsCollapsible = React.createClass({
       ) : (
         <SetUpMessage
           type="sections"
-          urlPrefix={urlPrefix}
-          studioUrlPrefix={studioUrlPrefix}
+          codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
       )}
       </CollapsibleSection>

@@ -14,6 +14,7 @@ const RecentCoursesCollapsible = React.createClass({
         link: React.PropTypes.string.isRequired,
         assignedSections: React.PropTypes.array.isRequired
       })
+<<<<<<< HEAD
     ),
     showAllCoursesLink: React.PropTypes.bool.isRequired
   },
@@ -29,8 +30,7 @@ const RecentCoursesCollapsible = React.createClass({
   },
 
   render() {
-    const { courses, urlPrefix, studioUrlPrefix } = this.props;
-    const viewAllCoursesUrl = `${studioUrlPrefix}courses`;
+    const { courses } = this.props;
 
     return (
       <CollapsibleSection
@@ -52,8 +52,6 @@ const RecentCoursesCollapsible = React.createClass({
         ) : (
           <SetUpMessage
             type="courses"
-            urlPrefix={urlPrefix}
-            studioUrlPrefix={studioUrlPrefix}
           />
         )}
       </CollapsibleSection>

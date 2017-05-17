@@ -11,8 +11,7 @@ export default storybook => {
         story: () => (
           <SetUpMessage
             type="courses"
-            urlPrefix="http://localhost:3000/"
-            studioUrlPrefix="http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
       },
@@ -22,8 +21,7 @@ export default storybook => {
         story: () => (
           <SetUpMessage
             type="sections"
-            urlPrefix="http://localhost:3000/"
-            studioUrlPrefix="http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
       },

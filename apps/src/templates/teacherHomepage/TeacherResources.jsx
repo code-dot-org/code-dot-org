@@ -5,13 +5,13 @@ import i18n from "@cdo/locale";
 
 const TeacherResources = React.createClass({
   propTypes: {
-    urlPrefix: React.PropTypes.string.isRequired
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired
   },
 
   render() {
-    const { urlPrefix } = this.props;
-    const planUrl = `${urlPrefix}/teacher-dashboard#/plan`;
-    const volunteerUrl = `${urlPrefix}/volunteer/local`;
+    const { codeOrgUrlPrefix } = this.props;
+    const planUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/plan`;
+    const volunteerUrl = `${codeOrgUrlPrefix}/volunteer/local`;
 
     return (
       <CollapsibleSection header={i18n.resources()}>

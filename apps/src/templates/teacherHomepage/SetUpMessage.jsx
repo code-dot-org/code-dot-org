@@ -36,13 +36,12 @@ const styles = {
 const SetUpMessage = React.createClass({
   propTypes: {
     type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
-    urlPrefix: React.PropTypes.string.isRequired,
-    studioUrlPrefix: React.PropTypes.string.isRequired
+    codeOrgUrlPrefix: React.PropTypes.string,
   },
 
   render() {
-    const { type, urlPrefix, studioUrlPrefix } = this.props;
-    const sectionsUrl = `${urlPrefix}/teacher-dashboard#/sections`;
+    const { type, codeOrgUrlPrefix } = this.props;
+    const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
       return (
@@ -54,7 +53,7 @@ const SetUpMessage = React.createClass({
             {i18n.assignACourse()}
           </div>
           <ProgressButton
-            href={studioUrlPrefix}
+            href="/courses"
             color={ProgressButton.ButtonColor.gray}
             text={i18n.viewCourses()}
             style={styles.button}

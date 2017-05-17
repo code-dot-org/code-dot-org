@@ -70,8 +70,7 @@ export default storybook => {
             announcements={announcements}
             courses={[]}
             sections={[]}
-            urlPrefix="http://localhost:3000/"
-            studioUrlPrefix="http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
       },
@@ -83,8 +82,7 @@ export default storybook => {
             announcements={announcements}
             courses={courses}
             sections={[]}
-            urlPrefix="http://localhost:3000/"
-            studioUrlPrefix="http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
       },
@@ -96,8 +94,7 @@ export default storybook => {
             announcements={announcements}
             courses={[]}
             sections={sections}
-            urlPrefix="http://localhost:3000/"
-            studioUrlPrefix="http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
       },
@@ -109,8 +106,7 @@ export default storybook => {
             announcements={announcements}
             courses={courses}
             sections={sections}
-            urlPrefix="http://localhost:3000/"
-            studioUrlPrefix="http://localhost-studio.code.org:3000/"
+            codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
       }
