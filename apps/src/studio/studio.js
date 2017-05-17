@@ -57,6 +57,7 @@ import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
 import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
+import {blockAsXmlNode} from '../block_utils';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -179,6 +180,130 @@ var twitterOptions = {
 
 /** @type {JsInterpreterLogger} */
 var consoleLogger = null;
+
+// Not actually the "default" map, just the map that's used in the "New Playlab
+// Project" level.
+const DEFAULT_MAP = [
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+];
+
+const REMIX_PROPS = [
+  {
+    defaultValues: {
+      map: DEFAULT_MAP,
+      firstSpriteIndex: 0,
+      spritesHiddenToStart: false,
+    },
+    generateBlocks: args => {
+      const blocks = [];
+      let spriteIndex = 0;
+      const getDefaultSpriteLocation = () => ({
+        x: spriteIndex % 3,
+        y: parseInt(spriteIndex / 3),
+      });
+      for (let y = 0; y < 8; y++) {
+        for (let x = 0; x < 8; x++) {
+          const cell = Studio.map[y][x].serialize();
+          if (cell.tileType & constants.SPRITESTART) {
+            const defaultSpriteLocation = getDefaultSpriteLocation();
+            if (x !== defaultSpriteLocation.x || y !== defaultSpriteLocation.y) {
+              blocks.push(blockAsXmlNode('studio_setSpriteXY', {
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'XPOS': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: x * Studio.SQUARE_SIZE,
+                  },
+                  'YPOS': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: y * Studio.SQUARE_SIZE,
+                  },
+                },
+              }));
+            }
+            if (level.firstSpriteIndex || cell.sprite) {
+              blocks.push(blockAsXmlNode('studio_setSpriteParams', {
+                titles: {
+                  'VALUE': cell.sprite,
+                },
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex + (level.firstSpriteIndex || 0),
+                  },
+                },
+              }));
+            }
+            if (cell.speed && cell.speed !== constants.DEFAULT_SPRITE_SPEED) {
+              blocks.push(blockAsXmlNode('studio_setSpriteSpeedParams', {
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'VALUE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: cell.speed,
+                  },
+                },
+              }));
+            }
+            if (cell.size && cell.size !== constants.DEFAULT_SPRITE_SIZE) {
+              blocks.push(blockAsXmlNode('studio_setSpriteSizeParams', {
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'VALUE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: cell.size,
+                  },
+                },
+              }));
+            }
+            if (cell.emotion && cell.emotion !== Emotions.NORMAL) {
+              blocks.push(blockAsXmlNode('studio_setSpriteEmotion', {
+                titles: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'VALUE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: cell.emotion,
+                  },
+                },
+              }));
+            }
+
+            spriteIndex++;
+          }
+        }
+      }
+    },
+  }
+];
 
 function loadLevel() {
   // Load maps.
@@ -1937,6 +2062,8 @@ Studio.init = function (config) {
     return code;
   };
 
+  config.prepareForRemix = Studio.prepareForRemix;
+
   config.twitter = skin.twitterOptions || twitterOptions;
 
   // for this app, show make your own button if on share page
@@ -2013,6 +2140,15 @@ Studio.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+Studio.prepareForRemix = function () {
+  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+        level[prop] === undefined ||
+            level[prop] === group.defaultValues[prop]))) {
+    return Promise.resolve();
+  }
+  return Promise.resolve();
 };
 
 /**
