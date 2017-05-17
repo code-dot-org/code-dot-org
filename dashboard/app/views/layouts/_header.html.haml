@@ -19,6 +19,11 @@
   - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
   - user_type = request.cookies[cookie_key]
 
+  - hamburger_options = {}
+  - hamburger_options[:script_level] = script_level
+  - hamburger_options[:user_type] = user_type
+  - hamburger_options[:language] = request.language
+
 .hide_on_mobile{class: header_class}
   - if show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
@@ -47,27 +52,24 @@
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
-            - elsif @edit_blocks
-              .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
             - elsif show_header2
-              - unless defined? @level
-                .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
-                  - if user_type == "teacher"
-                    %a.headerlink{:href=>"/"} Home
-                    %a.headerlink{:href=>"/courses"} Courses
-                    %a.headerlink{:href=>"/projects/public"} Project Gallery
-                    %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
-                    %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
-                  - elsif user_type == "student"
-                    %a.headerlink{:href=>"/"} Home
-                    %a.headerlink{:href=>"/courses"} Courses
-                    %a.headerlink{:href=>"/projects/public"} Project Gallery
-                  - else
-                    %a.headerlink{:href=>CDO.code_org_url("/student")} Learn
-                    %a.headerlink{:href=>CDO.code_org_url("/educate")} Teach
-                    %a.headerlink{:href=>CDO.code_org_url("/promote")} Stats
-                    %a.headerlink{:href=>CDO.code_org_url("/help")} Help us
-                    %a.headerlink{:href=>CDO.code_org_url("/about")} About
+              .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
+                - if user_type == "teacher"
+                  %a.headerlink{:href=>"/"} Home
+                  %a.headerlink{:href=>"/courses"} Courses
+                  %a.headerlink{:href=>"/projects/public"} Project Gallery
+                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
+                  %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
+                - elsif user_type == "student"
+                  %a.headerlink{:href=>"/"} Home
+                  %a.headerlink{:href=>"/courses"} Courses
+                  %a.headerlink{:href=>"/projects/public"} Project Gallery
+                - elsif request.language == "en"
+                  %a.headerlink{:href=>CDO.code_org_url("/student")} Learn
+                  %a.headerlink{:href=>CDO.code_org_url("/educate")} Teach
+                  %a.headerlink{:href=>CDO.code_org_url("/promote")} Stats
+                  %a.headerlink{:href=>CDO.code_org_url("/help")} Help us
+                  %a.headerlink{:href=>CDO.code_org_url("/about")} About
 
           .header_right
             %span.freeplay_links
@@ -88,9 +90,7 @@
                 = render partial: 'shared/user_header_ajax'
 
               - if show_header2
-                - hamburger_class = current_user ? '' : 'show_on_tablet'
-                %span{class: hamburger_class}
-                  = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: {user_type: user_type}
+                = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if script_level
   - view_as = @user || current_user

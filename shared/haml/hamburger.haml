@@ -1,4 +1,3 @@
-- extra_items_class = (defined? @level) ? "show-always" : "show-mobile"
 
 :ruby
   teacher_entries = [
@@ -40,42 +39,96 @@
     { title: "Contact Us", url: "/contact" },
     { title: "FAQs", url: "/faq" },
   ]
-#hamburger
+
+:ruby
+  show_teacher_options = "hide-always"
+  show_student_options = "hide-always"
+  show_pegasus_options = "hide-always"
+
+  hamburger_class = "none"
+
+  if script_level
+    # The header is taken over by level-related UI, so we need the hamburger
+    # to show whatever would show up in the header at desktop (and mobile) widths.
+    if user_type == "teacher"
+      show_teacher_options = "show-always"
+    elsif user_type == "student"
+      show_student_options = "show-always"
+    end
+
+    # Regardless of user type, if they are English, then they also need the pegasus
+    # options in the hamburger.
+    if language == "en"
+      show_pegasus_options = "show-always"
+    end
+
+  else
+
+    # The header is available for showing whichever options we want, but they should
+    # appear in the hamburger at mobile widths.
+
+    if user_type == "teacher"
+      show_teacher_options = "show-mobile"
+    elsif user_type == "student"
+      show_student_options = "show-mobile"
+    end
+
+    if language == "en"
+      # We want to show the pegasus options.  They're in the hamburger for desktop
+      # if they didn't fit on the header, or they're just in it for mobile if they did.
+      if user_type == "teacher" || user_type == "student"
+        show_pegasus_options = "show-desktop"
+      else
+        show_pegasus_options = "show-mobile"
+      end
+    end
+  end
+
+  # Do we show hamburger on all widths, only mobile, or not at all?
+  if show_teacher_options == "show-desktop" || show_student_options == "show-desktop" || show_pegasus_options == "show-desktop"
+    hamburger_class = "show-always"
+  elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
+    hamburger_class = "show-mobile"
+  else
+    hamburger_class = "hide-always"
+  end
+
+#hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
     -# If we're a teacher, then we have special items showing here.
     - if user_type == "teacher"
       - teacher_entries.each do |entry|
-        %li{class: extra_items_class}
+        %li{class: show_teacher_options}
           %a{href: entry[:url]}= entry[:title]
     - elsif user_type == "student"
       - student_entries.each do |entry|
-        %li{class: extra_items_class}
+        %li{class: show_student_options}
           %a{href: entry[:url]}= entry[:title]
 
-    %li
+    %li{class: show_pegasus_options}
       %a{href: '/student'} Learn
-    %li
+    %li{class: show_pegasus_options}
       #educate-more
         Teach
         %i#educate-down{class: "fa fa-caret-down"}
         %i#educate-up{class: "fa fa-caret-up"}
-    .educate-nav.hide-educate
+    .educate-nav.hide-educate{class: show_pegasus_options}
       - educate_entries.each do |entry|
         %li
           %a{href: entry[:url]}= entry[:title]
-    %li
+    %li{class: show_pegasus_options}
       %a{href: '/promote'} Stats
-    %li
+    %li{class: show_pegasus_options}
       %a{href: '/help'} Help Us
-    %li
+    %li{class: show_pegasus_options}
       #about-more
         About
         %i#about-down{class: "fa fa-caret-down"}
         %i#about-up{class: "fa fa-caret-up"}
-    .about-nav.hide-about
+    .about-nav.hide-about{class: show_pegasus_options}
       - about_entries.each do |entry|
         %li
           %a{href: entry[:url]}= entry[:title]
 
-  #hamburger-icon
+  #hamburger-icon{class: hamburger_class}
     %span
