@@ -431,7 +431,8 @@ testsContext.keys().forEach(testsContext);
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
-    'courses/show':                 './src/sites/studio/pages/courses/show.js'
+    'courses/show':                 './src/sites/studio/pages/courses/show.js',
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js'
   };
 
   var otherEntries = {
