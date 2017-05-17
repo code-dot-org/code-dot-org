@@ -308,6 +308,7 @@ class Level < ActiveRecord::Base
     Maze
     Studio
     StudioEC
+    StarWarsGrid
   )
 
   def self.where_we_want_to_calculate_ideal_level_source
