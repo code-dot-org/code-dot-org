@@ -157,7 +157,7 @@ class ContactRollupsValidation
       name: "Count of contacts with courses facilitated",
       query: "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE courses_facilitated IS NOT NULL",
-      min: 400,
+      min: 100,
       max: 40_000
     },
     {
