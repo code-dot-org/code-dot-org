@@ -163,6 +163,9 @@ class Studio < Grid
       <block type="colour_picker"></block>
     </value>
   </block>
+  <block type="studio_setWallMapCollisions">
+    <title name="VALUE">false</title>
+  </block>
   <block type="studio_showTitleScreenParams">
     <value name="TITLE">
       <block type="text" />

@@ -19,6 +19,9 @@ exports.setMapAndColor = function (color, value) {
   });
 };
 
+exports.setWallMapCollisions = function (value) {
+  Studio.queueCmd(null, 'setWallMapCollisions', {'value': value});
+};
 
 exports.setSprite = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSprite', {
