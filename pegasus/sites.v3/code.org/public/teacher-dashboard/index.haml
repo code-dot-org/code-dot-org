@@ -57,7 +57,9 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-        {templateUrl: '/teacher-dashboard/landing'});
+        {redirectTo: function() {
+          window.location = "https://studio.code.org/home"
+        }});
     $routeProvider.when('/plan',
         {templateUrl: '/teacher-dashboard/plan'});
     $routeProvider.when('/sections',
@@ -723,11 +725,13 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
+
       // TODO
       $scope.script_id = $scope.progress.script.id;
       $scope.progress_disabled = $scope.progress_disabled_scripts.indexOf($scope.script_id) !== -1
       var hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
       $scope.is_hoc_course = isInCategory($scope.script_list, $scope.script_id, hocCategoryName);
+
       // calculate width of each level in the progress bar assuming the overall width is 780 px
 
       // Takes the level's position in the script, and returns its level number in its stage
