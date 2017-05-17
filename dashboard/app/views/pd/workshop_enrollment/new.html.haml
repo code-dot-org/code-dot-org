@@ -27,12 +27,7 @@
               %p
                 = link_to 'Sign in', CDO.studio_url("/users/sign_in?return_to=#{request.url}")
                 first to pre-fill some information.
-        %p
-          Fields marked with a
-          %span.form-required-field
-            *
-          are required. Your email address will be shared
-          with the workshop organizer and facilitators.
+
         = render partial: 'enroll_form', locals: {action: 'create', submit_text: 'Register'}
 
       -# Right column

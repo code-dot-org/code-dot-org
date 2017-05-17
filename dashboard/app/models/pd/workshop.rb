@@ -486,4 +486,9 @@ class Pd::Workshop < ActiveRecord::Base
   def local_summer?
     course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
   end
+
+  # Get all enrollments for this workshop with no associated attendances
+  def unattended_enrollments
+    enrollments.left_outer_joins(:attendances).where(pd_attendances: {id: nil})
+  end
 end

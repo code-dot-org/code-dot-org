@@ -193,6 +193,8 @@ GEM
     arel (7.1.4)
     ast (2.3.0)
     attr_required (1.0.1)
+    auto_strip_attributes (2.1.0)
+      activerecord (>= 3.0)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
@@ -747,6 +749,7 @@ DEPENDENCIES
   acts_as_list
   addressable
   annotate
+  auto_strip_attributes (~> 2.1)
   aws-sdk (~> 2)
   bcrypt
   better_errors
