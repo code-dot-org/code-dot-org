@@ -1,9 +1,10 @@
 - homepageData = {courses: @recent_courses}
 - if current_user.teacher?
   - homepageData[:sections] = @sections
+- homepageData[:codeOrgUrlPrefix] = CDO.code_org_url()
 
--content_for(:head) do
-  %script{ src: minifiable_asset_path('js/home/_homepage.js'), data: {homepage: homepageData.to_json}}
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/home/_homepage.js'), data: {homepage: homepageData.to_json}}
 
 - unless current_user.teacher?
   #user_hero
