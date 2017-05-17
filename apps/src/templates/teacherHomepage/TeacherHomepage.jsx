@@ -18,7 +18,10 @@ const TeacherHomepage = React.createClass({
     return (
       <div>
         <AnnouncementsCollapsible announcements={announcements}/>
-        <RecentCoursesCollapsible courses={courses}/>
+        <RecentCoursesCollapsible
+          courses={courses}
+          showAllCoursesLink={true}
+        />
         <ManageSectionsCollapsible sections={sections}/>
         <TeacherResources/>
       </div>
