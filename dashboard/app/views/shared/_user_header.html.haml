@@ -9,7 +9,7 @@
       &#x25BC;
     %div{style: 'position: relative; top: 3px;'}
       .user_options{style: 'display: none;'}
-        - if current_user.teacher?
+        - if current_user.teacher? && !request.cookies['pm'] == 'new_header'
           = link_to t('nav.user.classroom'), teacher_dashboard_url
         - if current_user.can_pair?
           - if session[:pairings].present?
@@ -27,7 +27,8 @@
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
               %i.fa.fa-user-plus
               = t('nav.user.pair_programming')
-        = link_to t('nav.user.stats'), root_url
+        - if !request.cookies['pm'] == 'new_header'
+          = link_to t('nav.user.stats'), root_url
         - if current_user.can_edit_account?
           = link_to t('nav.user.settings'), edit_user_registration_url
         %a.points_menu_item{href: '#', style: 'display: none'}
