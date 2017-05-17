@@ -148,5 +148,7 @@ module Dashboard
     if CDO.newrelic_logging
       require 'newrelic_rpm'
     end
+
+    config.assets.image_optim = false unless CDO.image_optim
   end
 end

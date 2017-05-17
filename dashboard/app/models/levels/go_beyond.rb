@@ -25,10 +25,4 @@
 #
 
 class GoBeyond < ExternalLink
-  def icon
-  end
-
-  def unplugged?
-    true
-  end
 end
