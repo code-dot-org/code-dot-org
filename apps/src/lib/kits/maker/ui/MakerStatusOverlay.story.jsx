@@ -3,6 +3,18 @@ import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
 import {UnconnectedMakerStatusOverlay} from "./MakerStatusOverlay";
 
 export default storybook => {
+  const commonProps = {
+    width: APP_WIDTH,
+    height: APP_HEIGHT,
+    isConnecting: false,
+    isWrongBrowser: false,
+    hasConnectionError: false,
+    handleTryAgain: storybook.action('Try Again'),
+    useFakeBoardOnNextRun: storybook.action('Use fake board on next run'),
+    handleDisableMaker: storybook.action('Disable Maker Toolkit'),
+    handleOpenSetupPage: storybook.action('Open setup page'),
+  };
+
   storybook
     .storiesOf('MakerStatusOverlay')
     .addStoryTable([
@@ -10,12 +22,17 @@ export default storybook => {
         name: 'WaitingToConnect',
         story: () => wrapOverlay(
           <UnconnectedMakerStatusOverlay
-            width={APP_WIDTH}
-            height={APP_HEIGHT}
+            {...commonProps}
             isConnecting={true}
-            hasConnectionError={false}
-            handleTryAgain={storybook.action('Try Again')}
-            handleDisableMaker={storybook.action('Disable Maker Toolkit')}
+          />
+        ),
+      },
+      {
+        name: 'UnsupportedBrowser',
+        story: () => wrapOverlay(
+          <UnconnectedMakerStatusOverlay
+            {...commonProps}
+            isWrongBrowser={true}
           />
         ),
       },
@@ -23,12 +40,8 @@ export default storybook => {
         name: 'ConnectionError',
         story: () => wrapOverlay(
           <UnconnectedMakerStatusOverlay
-            width={APP_WIDTH}
-            height={APP_HEIGHT}
-            isConnecting={false}
+            {...commonProps}
             hasConnectionError={true}
-            handleTryAgain={storybook.action('Try Again')}
-            handleDisableMaker={storybook.action('Disable Maker Toolkit')}
           />
         ),
       },
