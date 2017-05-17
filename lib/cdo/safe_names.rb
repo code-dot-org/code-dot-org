@@ -19,9 +19,6 @@ module SafeNames
       first_name, last_name = first_last_name_proc.call(item).map {|n| n.try(:strip)}
       full_name = "#{first_name} #{last_name}".strip
 
-      # Skip identical names
-      next if trie.include? full_name
-
       trie.add full_name
       item_descriptions << {full_name: full_name, item: item, first_name: first_name}
     end

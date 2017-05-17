@@ -1,81 +1,133 @@
-- extra_items_class = (defined? @level) ? "show-always" : "show-mobile"
 
 :ruby
   teacher_entries = [
-    { title: "Home", url: "/teacher" },
-    { title: "Courses", url: "/educate" },
-    { title: "Projects Gallery", url: "/gallery" },
-    { title: "Sections", url: "/sections" },
-    { title: "Professional learning", url: "/pd" }
+    { title: "Home", url: "#{studio_url_base}" },
+    { title: "Courses", url: "#{studio_url_base}/courses" },
+    { title: "Project Gallery", url: "#{studio_url_base}/projects/public" },
+    { title: "Sections", url: "#{code_org_url_base}/teacher-dashboard#/sections" },
+    { title: "Professional learning", url: "#{studio_url_base}/my-professional-learning" }
   ].freeze
 
   student_entries = [
-    { title: "Home", url: "/student" },
-    { title: "Courses", url: "/educate" },
-    { title: "Projects Gallery", url: "/gallery" }
+    { title: "Home", url: "#{studio_url_base}" },
+    { title: "Courses", url: "#{studio_url_base}/courses" },
+    { title: "Project Gallery", url: "#{studio_url_base}/projects/public" }
   ]
 
   educate_entries = [
-    { title: "Educator Overview", url: "/educate" },
-    { title: "Elementary School", url: "/educate/curriculum/elementary-school'" },
-    { title: "Middle School", url: "/educate/curriculum/middle-school" },
-    { title: "High School", url: "/educate/curriculum/high-school" },
-    { title: "Hour of Code", url: "https://hourofcode.com" },
-    { title: "Partner with Us", url: "/educate/partner" },
-    { title: "Beyond Code.org", url: "/educate/curriculum/3rd-party" },
-    { title: "Inspire a Student", url: "/educate/resources/inspire" },
-    { title: "Online Community", url: "/educate/community" },
-    { title: "Tools and Videos", url: "/educate/resources/videos" },
+    { title: "Educator Overview", url: "#{code_org_url_base}/educate" },
+    { title: "Elementary School", url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
+    { title: "Middle School", url: "#{code_org_url_base}/educate/curriculum/middle-school" },
+    { title: "High School", url: "#{code_org_url_base}/educate/curriculum/high-school" },
+    { title: "Hour of Code", url: "#{code_org_url_base}https://hourofcode.com" },
+    { title: "Partner with Us", url: "#{code_org_url_base}/educate/partner" },
+    { title: "Beyond Code.org", url: "#{code_org_url_base}/educate/curriculum/3rd-party" },
+    { title: "Inspire a Student", url: "#{code_org_url_base}/educate/resources/inspire" },
+    { title: "Online Community", url: "#{code_org_url_base}/educate/community" },
+    { title: "Tools and Videos", url: "#{code_org_url_base}/educate/resources/videos" },
   ]
 
   about_entries = [
-    { title: "About Us", url: "/about" },
-    { title: "Leadership", url: "/about/leadership" },
-    { title: "Donors", url: "/about/donors" },
-    { title: "Partners", url: "/about/partners" },
-    { title: "Full Team", url: "/about/team" },
-    { title: "Newsroom", url: "/about/news" },
-    { title: "Evaluation", url: "/about/evaluation" },
-    { title: "Jobs", url: "/about/jobs" },
-    { title: "Contact Us", url: "/contact" },
-    { title: "FAQs", url: "/faq" },
+    { title: "About Us", url: "#{code_org_url_base}/about" },
+    { title: "Leadership", url: "#{code_org_url_base}/about/leadership" },
+    { title: "Donors", url: "#{code_org_url_base}/about/donors" },
+    { title: "Partners", url: "#{code_org_url_base}/about/partners" },
+    { title: "Full Team", url: "#{code_org_url_base}/about/team" },
+    { title: "Newsroom", url: "#{code_org_url_base}/about/news" },
+    { title: "Evaluation", url: "#{code_org_url_base}/about/evaluation" },
+    { title: "Jobs", url: "#{code_org_url_base}/about/jobs" },
+    { title: "Contact Us", url: "#{code_org_url_base}/contact" },
+    { title: "FAQs", url: "#{code_org_url_base}/faq" },
   ]
-#hamburger
+
+  show_teacher_options = "hide-always"
+  show_student_options = "hide-always"
+  show_pegasus_options = "hide-always"
+
+  hamburger_class = "none"
+
+  if script_level
+    # The header is taken over by level-related UI, so we need the hamburger
+    # to show whatever would show up in the header at desktop (and mobile) widths.
+    if user_type == "teacher"
+      show_teacher_options = "show-always"
+    elsif user_type == "student"
+      show_student_options = "show-always"
+    end
+
+    # Regardless of user type, if they are English, then they also need the pegasus
+    # options in the hamburger.
+    if language == "en"
+      show_pegasus_options = "show-always"
+    end
+
+  else
+
+    # The header is available for showing whichever options we want, but they should
+    # appear in the hamburger at mobile widths.
+
+    if user_type == "teacher"
+      show_teacher_options = "show-mobile"
+    elsif user_type == "student"
+      show_student_options = "show-mobile"
+    end
+
+    if language == "en"
+      # We want to show the pegasus options.  They're in the hamburger for desktop
+      # if they didn't fit on the header, or they're just in it for mobile if they did.
+      if user_type == "teacher" || user_type == "student"
+        show_pegasus_options = "show-desktop"
+      else
+        show_pegasus_options = "show-mobile"
+      end
+    end
+  end
+
+  # Do we show hamburger on all widths, only mobile, or not at all?
+  if show_teacher_options == "show-desktop" || show_student_options == "show-desktop" || show_pegasus_options == "show-desktop"
+    hamburger_class = "show-always"
+  elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
+    hamburger_class = "show-mobile"
+  else
+    hamburger_class = "hide-always"
+  end
+
+#hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
     -# If we're a teacher, then we have special items showing here.
     - if user_type == "teacher"
       - teacher_entries.each do |entry|
-        %li{class: extra_items_class}
+        %li{class: show_teacher_options}
           %a{href: entry[:url]}= entry[:title]
     - elsif user_type == "student"
       - student_entries.each do |entry|
-        %li{class: extra_items_class}
+        %li{class: show_student_options}
           %a{href: entry[:url]}= entry[:title]
 
-    %li
-      %a{href: '/student'} Learn
-    %li
+    %li{class: show_pegasus_options}
+      %a{href: "#{code_org_url_base}/student"} Learn
+    %li{class: show_pegasus_options}
       #educate-more
         Teach
         %i#educate-down{class: "fa fa-caret-down"}
         %i#educate-up{class: "fa fa-caret-up"}
-    .educate-nav.hide-educate
+    .educate-nav.hide-educate{class: show_pegasus_options}
       - educate_entries.each do |entry|
         %li
           %a{href: entry[:url]}= entry[:title]
-    %li
-      %a{href: '/promote'} Stats
-    %li
-      %a{href: '/help'} Help Us
-    %li
+    %li{class: show_pegasus_options}
+      %a{href: "#{code_org_url_base}/promote"} Stats
+    %li{class: show_pegasus_options}
+      %a{href: "#{code_org_url_base}/help"} Help Us
+    %li{class: show_pegasus_options}
       #about-more
         About
         %i#about-down{class: "fa fa-caret-down"}
         %i#about-up{class: "fa fa-caret-up"}
-    .about-nav.hide-about
+    .about-nav.hide-about{class: show_pegasus_options}
       - about_entries.each do |entry|
         %li
           %a{href: entry[:url]}= entry[:title]
 
-  #hamburger-icon
+  #hamburger-icon{class: hamburger_class}
     %span

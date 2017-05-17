@@ -6,25 +6,27 @@ import i18n from "@cdo/locale";
 
 const RecentCoursesCollapsible = React.createClass({
   propTypes: {
-    courses: PropTypes.arrayOf(
+      courses: PropTypes.arrayOf(
       PropTypes.shape({
         courseName: React.PropTypes.string.isRequired,
         description: React.PropTypes.string.isRequired,
         image: React.PropTypes.string.isRequired,
         link: React.PropTypes.string.isRequired,
-        assignedSections: React.PropTypes.array.isRequired,
+        assignedSections: React.PropTypes.array.isRequired
       })
-    )
+    ),
+    showAllCoursesLink: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses } = this.props;
+    const { courses, showAllCoursesLink } = this.props;
 
     return (
       <CollapsibleSection
         header={i18n.courses()}
         linkText={i18n.viewAllCourses()}
-        link="https://studio.code.org/"
+        link="/courses"
+        showLink={showAllCoursesLink}
       >
         {courses.length > 0 ? (
           courses.map((course, index) =>
@@ -38,7 +40,9 @@ const RecentCoursesCollapsible = React.createClass({
             />
           )
         ) : (
-          <SetUpMessage type="courses"/>
+          <SetUpMessage
+            type="courses"
+          />
         )}
       </CollapsibleSection>
     );

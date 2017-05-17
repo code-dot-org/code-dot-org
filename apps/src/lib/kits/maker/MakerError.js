@@ -5,6 +5,12 @@ export default class MakerError extends ExtendableError {
 
 }
 
+export class UnsupportedBrowserError extends MakerError {
+  constructor() {
+    super('Unsupported Browser.');
+  }
+}
+
 export class ConnectionCanceledError extends MakerError {
   constructor() {
     super('Connection attempt canceled.');
