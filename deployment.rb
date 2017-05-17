@@ -155,6 +155,8 @@ def load_configuration
     config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
     config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
 
+    config['image_optim'] ||= config['chef_managed'] && !ci_test
+
     # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
     ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
     ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']

@@ -194,6 +194,7 @@ module SharedConstants
       "digitalRead": null,
       "analogWrite": null,
       "analogRead": null,
+      "boardConnected": null,
 
       // Circuit Playground
       "on": null,

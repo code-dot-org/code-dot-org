@@ -13,27 +13,27 @@ class CoursesControllerTest < ActionController::TestCase
   test "plc courses get sent to user_course_enrollments_controller" do
     sign_in @teacher
 
-    get :index, params: {course: @course_plc.name}
+    get :show, params: {course_name: @course_plc.name}
     assert_template 'plc/user_course_enrollments/index'
 
-    get :index, params: {course: 'my-plc'}
+    get :show, params: {course_name: 'my-plc'}
     assert_template 'plc/user_course_enrollments/index'
   end
 
   test "regular courses get sent to index" do
     sign_in @teacher
 
-    get :index, params: {course: @course_regular.name}
-    assert_template 'courses/index'
+    get :show, params: {course_name: @course_regular.name}
+    assert_template 'courses/show'
 
-    get :index, params: {course: 'non-plc-course'}
-    assert_template 'courses/index'
+    get :show, params: {course_name: 'non-plc-course'}
+    assert_template 'courses/show'
   end
 
   test "non exist course throws" do
     sign_in @teacher
     assert_raises ActiveRecord::RecordNotFound do
-      get :index, params: {course: 'nosuchcourse'}
+      get :show, params: {course_name: 'nosuchcourse'}
     end
   end
 end
