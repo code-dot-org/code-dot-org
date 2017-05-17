@@ -34,12 +34,12 @@
     "raw_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,\"1\",1,1,1,1,\"1\",0],[0,\"2\",\"+1C\",\"-1C\",\"1C\",\"1Cany\",\"1\",0],[0,\"1\",\"+1\",\"+1,1\",\"+1,2\",\"1\",\"1\",0],[0,\"1\",\"+0\",\"+0,0\",\"+0,2\",1,\"1\",0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_values": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,2,\"+1C\",\"-2C\",\"3C\",\"4Cany\",\"5Cany\",0],[0,1,\"1\",\"1\",\"1\",1,1,0],[0,1,\"1\",\"1\",\"1\",1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":3},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":4},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "nectar_goal": "0",
-    "honey_goal": "0"
+    "honey_goal": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

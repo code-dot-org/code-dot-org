@@ -37,10 +37,9 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "step_speed": "1",
-    "contained_level_names": null,
     "nectar_goal": "7",
     "honey_goal": "7",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
