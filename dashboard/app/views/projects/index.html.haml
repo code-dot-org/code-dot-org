@@ -1,4 +1,4 @@
-- @page_title = "Projects"
+- @page_title = t('project.project_gallery')
 
 = render partial: 'shared/angular'
 
@@ -10,7 +10,6 @@
   .row
     .span12
       %h1= @page_title
-  %br
 
   .row
     #gallery-switcher
@@ -19,14 +18,5 @@
     #public-gallery-wrapper{'style' => 'display: none;'}
       #public-gallery
     #publish-confirm
-  .row
-    .span12
-      %h3.lesson{style: 'text-align:center'}
-        = t('project.need_help')
-  .row
-    .center{style: 'width: 720px;'}
-      = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
-      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
 
 = render partial: 'projects/admin'
