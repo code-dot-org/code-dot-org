@@ -74,7 +74,6 @@ group :development, :test do
   gem 'webmock', require: false
 
   gem 'codecov', require: false
-  gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'fake_sqs'
   gem 'fakeredis', require: false
   gem 'mocha', require: false
