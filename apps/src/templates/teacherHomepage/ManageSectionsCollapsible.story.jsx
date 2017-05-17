@@ -39,6 +39,7 @@ export default storybook => {
                 sectionCode: "HPRWHG"
               },
             ]}
+            codeOrgUrlPrefix = "http://localhost:3000/"
           />
         )
       },
@@ -48,6 +49,7 @@ export default storybook => {
         story: () => (
           <ManageSectionsCollapsible
             sections={[]}
+            codeOrgUrlPrefix = "http://localhost:3000/"
           />
         )
       },
