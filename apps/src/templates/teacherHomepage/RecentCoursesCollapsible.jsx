@@ -6,12 +6,11 @@ import i18n from "@cdo/locale";
 
 const RecentCoursesCollapsible = React.createClass({
   propTypes: {
-      courses: PropTypes.arrayOf(
+    courses: PropTypes.arrayOf(
       PropTypes.shape({
         courseName: React.PropTypes.string.isRequired,
         description: React.PropTypes.string.isRequired,
         image: React.PropTypes.string.isRequired,
-        link: React.PropTypes.string.isRequired,
         assignedSections: React.PropTypes.array.isRequired
       })
     ),
