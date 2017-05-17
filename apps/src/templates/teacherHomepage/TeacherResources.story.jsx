@@ -9,7 +9,7 @@ export default storybook => {
         name: 'Resources for teachers',
         description: `This is the TeacherResources section that will be used on the teacher homepage.`,
         story: () => (
-          <TeacherResources/>
+          <TeacherResources codeOrgUrlPrefix="http://localhost:3000/"/>
         )
       },
     ]);
