@@ -38,7 +38,8 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "nectar_goal": "0",
+    "honey_goal": "0"
   },
   "published": true,
   "notes": "",

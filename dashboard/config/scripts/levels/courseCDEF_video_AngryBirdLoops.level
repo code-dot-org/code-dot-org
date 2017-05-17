@@ -1,11 +1,11 @@
 <StandaloneVideo>
   <config><![CDATA[{
   "game_id": 54,
-  "created_at": "2016-11-30T21:40:27.000Z",
+  "created_at": "2017-05-16T20:28:48.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "CSF_collector_repeat_loops",
+    "video_key": "C2_zuck_repeat_loop",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true
