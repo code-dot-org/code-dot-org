@@ -276,7 +276,7 @@ const WorkshopForm = React.createClass({
             value="yes"
             onChange={this.handleRadioChange}
             style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
+            disabled={this.props.readOnly}
           >
             Yes
           </Radio>
@@ -287,7 +287,7 @@ const WorkshopForm = React.createClass({
             value="no"
             onChange={this.handleRadioChange}
             style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
+            disabled={this.props.readOnly}
           >
             No
           </Radio>
@@ -311,7 +311,7 @@ const WorkshopForm = React.createClass({
             value="yes"
             onChange={this.handleRadioChange}
             style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
+            disabled={this.props.readOnly}
           >
             Yes
           </Radio>
@@ -322,7 +322,7 @@ const WorkshopForm = React.createClass({
             value="no"
             onChange={this.handleRadioChange}
             style={this.getInputStyle()}
-            readOnly={this.props.readOnly}
+            disabled={this.props.readOnly}
           >
             No
           </Radio>

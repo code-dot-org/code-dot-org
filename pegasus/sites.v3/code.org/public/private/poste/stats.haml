@@ -9,33 +9,34 @@ title: Poste Stats
   = view :breadcrumbs, trail: [{text: 'Poste', url: './'}, {text: 'Messages', url: 'list'}, {text: params[:name]}]
 
   :ruby
-    message_id = DB[:poste_messages].where(name: params[:name]).first[:id]
+    POSTE_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+    message_id = POSTE_REPORTING_DB_READONLY[:poste_messages].where(name: params[:name]).first[:id]
 
-    sent_count = DB[:poste_deliveries].where(message_id: message_id).count
+    sent_count = POSTE_REPORTING_DB_READONLY[:poste_deliveries].where(message_id: message_id).count
 
-    opens_count = DB.fetch("
+    opens_count = POSTE_REPORTING_DB_READONLY.fetch("
       SELECT poste_opens.id
       FROM poste_opens
       INNER JOIN poste_deliveries ON poste_opens.delivery_id = poste_deliveries.id
       WHERE poste_deliveries.message_id = #{message_id}
      ").count
 
-    unique_opens_count = DB.fetch("
+    unique_opens_count = POSTE_REPORTING_DB_READONLY.fetch("
       SELECT DISTINCT poste_deliveries.id
       FROM poste_deliveries
       LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
       WHERE poste_deliveries.message_id = #{message_id} and poste_opens.id is not null
      ").count
 
-    clicks_count = DB[:poste_clicks].where(message_id: message_id).count
+    clicks_count = POSTE_REPORTING_DB_READONLY[:poste_clicks].where(message_id: message_id).count
 
-    unique_clicks_count = DB.fetch("
+    unique_clicks_count = POSTE_REPORTING_DB_READONLY.fetch("
       SELECT DISTINCT delivery_id
       FROM poste_clicks where message_id = #{message_id}
      ").count
 
-     first_sent_message = DB[:poste_deliveries].where(message_id: message_id).order(:id).first
-     last_sent_message = DB[:poste_deliveries].where(message_id: message_id).order(:id).last
+     first_sent_message = POSTE_REPORTING_DB_READONLY[:poste_deliveries].where(message_id: message_id).order(:id).first
+     last_sent_message = POSTE_REPORTING_DB_READONLY[:poste_deliveries].where(message_id: message_id).order(:id).last
      if first_sent_message && last_sent_message
        message_sent_dates = [first_sent_message[:created_at], last_sent_message[:created_at]]
      end
@@ -92,7 +93,7 @@ title: Poste Stats
         \%
 
   :ruby
-    click_rows = DB.fetch("
+    click_rows = POSTE_REPORTING_DB_READONLY.fetch("
     SELECT
       poste_urls.url as url,
       COUNT(poste_clicks.id) as clicks,
