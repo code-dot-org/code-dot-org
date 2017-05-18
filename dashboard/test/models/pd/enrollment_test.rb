@@ -350,4 +350,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
   end
+
+  test 'name fields are auto-stripped' do
+    enrollment = build :pd_enrollment, first_name: ' First  ', last_name: '  Last '
+    enrollment.validate
+    assert_equal 'First', enrollment.first_name
+    assert_equal 'Last', enrollment.last_name
+  end
+
+  test 'get safe names' do
+    # Here just verify all the enrollments are returned with safe names.
+    # The safe name logic itself (in #SafeNames) is tested in #SafeNamesTest
+    enrollments = 5.times.map {create :pd_enrollment}
+    safe_names = Pd::Enrollment.where(id: enrollments.map(&:id)).get_safe_names
+    assert_equal 5, safe_names.length
+    assert safe_names.all? {|n| n[0].present?}
+    assert_equal enrollments, safe_names.map(&:last)
+  end
 end

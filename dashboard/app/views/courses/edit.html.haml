@@ -1,0 +1,8 @@
+- course = local_assigns[:course]
+- course_editor_data = {course_summary: course.summarize,
+                        script_names: Script.all.map(&:name)}
+- content_for(:head) do
+  %script{ src: minifiable_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
+= form_for(course) do |f|
+  #course_editor
+  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes

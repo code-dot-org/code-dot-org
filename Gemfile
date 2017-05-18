@@ -262,3 +262,6 @@ gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'gu
 gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_config_path'
 
 gem 'image_size', require: false
+
+# Auto strip model attributes before validation (opt in)
+gem 'auto_strip_attributes', '~> 2.1'
