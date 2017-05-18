@@ -81,9 +81,9 @@ content-type: text/ng-template
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::valid_grades.inspect}"}
       %td
-        %span{"ng-hide" => "section.editing"} {{course_list | getNameById:section.course.id}}
+        %span{"ng-hide" => "section.editing"} {{script_list | getNameById:section.course.id}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.course.id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category_priority', 'category', 'position', 'name']"}
+          %select{"ng-model" => "section.course.id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']"}
             %option{value: ''}
       %td
         %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
