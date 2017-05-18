@@ -13,7 +13,7 @@ content-type: text/ng-template
 
 %div{'ng-show' => 'progressLoadedFirst'}
   = I18n.t('dashboard_progress_view')
-  %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(course_id)'}
+  %select{"ng-model" => "course_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(course_id)'}
 
 -# This is meant to be similar to teacher-announcements.haml and can be removed after HOC
 %div{'ng-show' => 'progress_disabled'}
