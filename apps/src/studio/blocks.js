@@ -82,7 +82,6 @@ var generateSetterCode = function (opts) {
 // These are set to the default values, but may be overridden
 var spriteCount = 6;
 var projectileCollisions = false;
-var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
 
@@ -94,10 +93,6 @@ exports.setSpriteCount = function (blockly, count) {
 
 exports.enableProjectileCollisions = function (blockly) {
   projectileCollisions = true;
-};
-
-exports.enableEdgeCollisions = function (blockly) {
-  edgeCollisions = true;
 };
 
 exports.enableSpritesOutsidePlayspace = function (blockly) {
@@ -516,10 +511,8 @@ exports.install = function (blockly, blockInstallOptions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
-        if (edgeCollisions) {
-          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
-          dropdownArray2 = dropdownArray2.concat(this.EDGES);
-        }
+        dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
+        dropdownArray2 = dropdownArray2.concat(this.EDGES);
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
         this.appendDummyInput().appendTitle(dropdown1, 'SPRITE1');
         this.appendDummyInput().appendTitle(dropdown2, 'SPRITE2');
@@ -551,6 +544,27 @@ exports.install = function (blockly, blockInstallOptions) {
        [msg.whenSpriteCollidedWithRightEdge(), 'right']];
 
   generator.studio_whenSpriteCollided = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_allowSpritesOutsidePlayspace = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput().appendTitle(new blockly.FieldDropdown([
+          [msg.allowActorsToLeaveThePlayspace(), 'true'],
+          [msg.dontAllowActorsToLeaveThePlayspace(), 'false'],
+      ]), 'VALUE');
+
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.allowActorsOutsidePlayspaceTooltip());
+    },
+  };
+
+  generator.studio_allowSpritesOutsidePlayspace = function () {
+    const allowSpritesOutsidePlayspace = this.getTitleValue('VALUE') === 'true';
+    return `Studio.setAllowSpritesOutsidePlayspace('block_id_${this.id}',
+        ${allowSpritesOutsidePlayspace});\n`;
+  };
 
   blockly.Blocks.studio_stop = {
     // Block for stopping the movement of a sprite.
