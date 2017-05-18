@@ -81,9 +81,9 @@ content-type: text/ng-template
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::valid_grades.inspect}"}
       %td
-        %span{"ng-hide" => "section.editing"} {{script_list | getNameById:section.course.id}}
+        %span{"ng-hide" => "section.editing"} {{script_list | getNameById:section.script.id}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.course.id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']"}
+          %select{"ng-model" => "section.script.id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']"}
             %option{value: ''}
       %td
         %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
@@ -105,7 +105,7 @@ content-type: text/ng-template
           %button.btn.btn-danger{"ng-show" => "!section.editing && section.students.length < 1", "ng-click" => "confirm_delete(section)", style:"width:48.5%"}= I18n.t('dashboard_action_delete')
         %form{:action=>"/certificates", :method=>"POST"}
           %input{"ng-repeat" => "student in section.students", :type=>'hidden', :name=>'names[]', :value=>'{{student.name}}'}
-          %input{:type=>'hidden', :name=>'course', :value=>'{{section.course.name}}'}
+          %input{:type=>'hidden', :name=>'script', :value=>'{{section.script.name}}'}
           %input.btn.btn-white{type:"submit", value: I18n.t('dashboard_action_print_certificates'), style:"margin-top:10px; width:100%"}
 
   %br/
