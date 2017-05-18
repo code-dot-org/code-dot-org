@@ -1,5 +1,8 @@
 class Pd::SessionAttendanceController < ApplicationController
   load_and_authorize_resource :session, class: 'Pd::Session', id_param: :session_code, find_by: :code
+  rescue_from ActiveRecord::RecordNotFound do
+    render :not_found, status: :not_found
+  end
 
   # GET pd/attend/:session_code
   def attend
