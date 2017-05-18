@@ -176,12 +176,12 @@ class FilesApi < Sinatra::Base
     unsupported_media_type unless buckets.allowed_file_type?(type)
     content_type type
 
-    # Unless this is hosted by codeprojects.org,
+    # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
     # will not render potential HTML content inline. User-generated content can
     # contain script that we don't want to host as authentic web content from
     # our domain.
-    unless code_projects_domain_root_route
+    unless code_projects_domain_root_route || safely_viewable_file_type?(type)
       response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
     end
 
@@ -200,6 +200,13 @@ class FilesApi < Sinatra::Base
     end
 
     result[:body]
+  end
+
+  # A list of some file types that are safe to view in the browser without
+  # risking script execution. Initially limited to images since it is useful
+  # to view these via the browser context menu.
+  def safely_viewable_file_type?(extension)
+    %w(.jpg .jpeg .gif .png).include? extension
   end
 
   CONTENT_TYPE = 'Content-Type'.freeze

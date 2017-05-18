@@ -99,21 +99,57 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(actual_dog_image_info, file_infos['files'][0])
     assert_fileinfo_equal(actual_cat_image_info, file_infos['files'][1])
 
-    # Verify that we download the file as an attachment when hitting the normal GET api
     @api.get_object(dog_image_filename)
     assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
-    assert_equal "attachment; filename=\"#{dog_image_filename}\"", last_response['Content-Disposition']
     assert_equal dog_image_body, last_response.body
 
-    # Verify that we download the file without Content-Disposition when hitting the codeprojects.org root URL
     @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
-    assert_nil last_response['Content-Disposition']
     assert_equal dog_image_body, last_response.body
 
     @api.delete_object(dog_image_filename)
     assert successful?
 
     @api.delete_object(cat_image_filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
+  def test_content_disposition
+    dog_image_filename = @api.randomize_filename('dog.png')
+    dog_image_body = 'stub-dog-contents'
+    html_filename = @api.randomize_filename('index.html')
+    html_body = 'stub-html-contents'
+
+    post_file_data(@api, dog_image_filename, dog_image_body, 'image/png')
+    post_file_data(@api, html_filename, html_body, 'text/html')
+
+    # Verify that we download non-whitelisted file types as an attachment when
+    # hitting the normal GET api.
+
+    @api.get_object(dog_image_filename)
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.get_object(html_filename)
+    assert successful?
+    assert_equal "attachment; filename=\"#{html_filename}\"", last_response['Content-Disposition']
+
+    # Verify that we download the files without Content-Disposition when hitting
+    # the codeprojects.org root URL.
+
+    @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.get_root_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.delete_object(dog_image_filename)
+    assert successful?
+
+    @api.delete_object(html_filename)
     assert successful?
 
     delete_all_manifest_versions
