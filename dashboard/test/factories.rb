@@ -5,7 +5,7 @@ FactoryGirl.define do
   factory :course_script do
   end
   factory :course do
-    name "MyCourseName"
+    name "my-course-name"
     properties nil
   end
   factory :experiment do
