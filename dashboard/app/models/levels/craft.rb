@@ -47,6 +47,7 @@ class Craft < Blockly
     :is_daytime,
     :use_score,
     :is_event_level,
+    :is_connection_level,
     :special_level_type,
     :grid_width,
     :grid_height,
