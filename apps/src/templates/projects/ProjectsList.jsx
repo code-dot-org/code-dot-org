@@ -51,6 +51,12 @@ const styles = {
     minWidth: THUMBNAIL_SIZE,
     padding: 0
   },
+  thumbnailWrapper: {
+    height: THUMBNAIL_SIZE,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 };
 
 /**
@@ -81,9 +87,12 @@ function dateFormatter(dateString) {
 }
 
 function thumbnailFormatter(thumbnailUrl) {
-  const size = THUMBNAIL_SIZE;
   return thumbnailUrl ?
-    <ImageWithStatus src={thumbnailUrl} width={size} height={size}/> :
+    <ImageWithStatus
+      src={thumbnailUrl}
+      width={THUMBNAIL_SIZE}
+      wrapperStyle={styles.thumbnailWrapper}
+    /> :
     '';
 }
 

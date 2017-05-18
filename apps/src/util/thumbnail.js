@@ -8,8 +8,8 @@ import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
 import {html2canvas} from '../util/htmlToCanvasWrapper';
 
-// Thumbnail image width and height in pixels.
-const THUMBNAIL_SIZE = 220;
+// Thumbnail image width in pixels.
+const THUMBNAIL_WIDTH = 220;
 
 // Minimum time to wait after capturing a thumbnail image before capturing
 // another thumbnail.
@@ -43,8 +43,9 @@ let lastCaptureTimeMs = 0;
 }
 
 /**
- * Converts the contents of an SVG element into an image, shrinks it to
- * width and height equal to THUMBNAIL_SIZE, and saves it to the server.
+ * Converts the contents of an SVG element into an image, shrinks it to a
+ * width equal to THUMBNAIL_WIDTH preserving aspect ratio, and saves it to
+ * the server.
  * @param {SVGElement} svg SVG element to capture the contents of.
  */
 export function captureThumbnailFromSvg(svg) {
@@ -70,8 +71,8 @@ export function captureThumbnailFromSvg(svg) {
 }
 
 /**
- * Copies the image from the canvas, shrinks it to width and height equal to
- * THUMBNAIL_SIZE, and saves it to the server.
+ * Copies the image from the canvas, shrinks it to a width equal to
+ * THUMBNAIL_WIDTH preserving aspect ratio, and saves it to the server.
  * @param {HTMLCanvasElement} canvas
  */
 export function captureThumbnailFromCanvas(canvas) {
@@ -110,8 +111,8 @@ export function isCaptureComplete() {
 
 
 /**
- * Copies the image from the element, crops a square center section, shrinks it
- * to width and height equal to THUMBNAIL_SIZE, and saves it to the server.
+ * Copies the image from the element, shrinks it to a width equal to
+ * THUMBNAIL_WIDTH preserving aspect ratio, and saves it to the server.
  * @param {HTMLElement} element
  */
 
@@ -158,53 +159,22 @@ export function captureThumbnailFromElement(element) {
 }
 
 /**
- * Paint an image of an existing canvas onto a new thumbnail canvas. If the
- * existing canvas is taller than it is wide, capture a square center region.
- * The new canvas has a white background, and width and height equal to
- * THUMBNAIL_SIZE.
+ * Paint an image of an existing canvas onto a new thumbnail canvas. The new
+ * canvas has a width equal to THUMBNAIL_WIDTH and the same aspect ratio as the
+ * original canvas.
  * @param {HTMLCanvasElement} canvas Canvas to copy from.
  * @returns {HTMLCanvasElement}
  */
 export function createThumbnail(canvas) {
   const thumbnailCanvas = document.createElement('canvas');
-  thumbnailCanvas.width = THUMBNAIL_SIZE;
-  thumbnailCanvas.height = THUMBNAIL_SIZE;
+  thumbnailCanvas.width = THUMBNAIL_WIDTH;
+  thumbnailCanvas.height = (canvas.height / canvas.width) * THUMBNAIL_WIDTH;
 
   // Make sure any empty areas appear white.
   const thumbnailContext = thumbnailCanvas.getContext('2d');
   thumbnailContext.fillStyle = 'white';
-  thumbnailContext.fillRect(0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
+  thumbnailContext.fillRect(0, 0, thumbnailCanvas.width, thumbnailCanvas.height);
 
-  // By default, specify a square region that will capture the entire image
-  // if it is square or shorter than it is wide.
-
-  const sx = 0;
-  let sy = 0;
-  const sWidth = canvas.width;
-  const sHeight = sWidth;
-
-  // If the canvas is taller than it is wide, capture a square center region.
-  //
-  //      canvas
-  // |--------------|  -------------                ----
-  // |              |        ^                       sy
-  // |--------------|        |        ------------  ----
-  // |              |        |              ^
-  // |    square    |        |              |
-  // |    center    |  canvas.height  canvas.width
-  // |    region    |        |              |
-  // |              |        |              v
-  // |--------------|        |        ------------
-  // |              |        v
-  // |--------------|  -------------
-  //
-  // | canvas.width |
-  //
-
-  if (canvas.height > canvas.width) {
-    sy = (canvas.height - canvas.width) / 2;
-  }
-
-  thumbnailContext.drawImage(canvas, sx, sy, sWidth, sHeight, 0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
+  thumbnailContext.drawImage(canvas, 0, 0, thumbnailCanvas.width, thumbnailCanvas.height);
   return thumbnailCanvas;
 }

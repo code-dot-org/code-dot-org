@@ -17,7 +17,8 @@ export class ImageWithStatus extends Component {
   static propTypes = {
     src: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
+    height: PropTypes.number,
+    wrapperStyle: PropTypes.object,
   }
 
   constructor(props) {
@@ -47,7 +48,7 @@ export class ImageWithStatus extends Component {
 
   render() {
     return (
-      <div>
+      <div style={this.props.wrapperStyle}>
         <img
           src={this.props.src}
           width={this.props.width}
