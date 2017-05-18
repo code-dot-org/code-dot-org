@@ -217,30 +217,32 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  scope :group_by_id, -> {group('pd_workshops.id')}
+
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
+    joins(:sessions).group_by_id.having('(DATE(MIN(start)) <= ?)', date)
   end
 
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+    joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
     joins(:sessions).
-    group('pd_workshops.id').
-    order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
+      group_by_id.
+      order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
   end
 
   # Orders by the number of active enrollments
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_enrollment_count(desc: false)
     left_outer_joins(:enrollments).
-    group('pd_workshops.id').
-    order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
+      group_by_id.
+      order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
   end
 
   # Orders by the workshop state, in order: Not Started, In Progress, Ended
@@ -257,20 +259,20 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_before(date)
-    joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) <= ?)", date)
+    joins(:sessions).group_by_id.having("(DATE(MAX(end)) <= ?)", date)
   end
 
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_after(date)
-    joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) >= ?)", date)
+    joins(:sessions).group_by_id.having("(DATE(MAX(end)) >= ?)", date)
   end
 
   def self.scheduled_start_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Date.today + days.days)
   end
 
   def self.scheduled_end_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Date.today + days.days)
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
