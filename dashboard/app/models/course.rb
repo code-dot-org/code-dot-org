@@ -18,6 +18,12 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
 
+  def skip_name_format_validation
+    !!plc_course
+  end
+
+  include SerializedToFileValidation
+
   def summarize
     {
       name: name,

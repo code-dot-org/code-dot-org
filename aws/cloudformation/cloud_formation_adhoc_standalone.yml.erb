@@ -52,7 +52,7 @@ Resources:
       ResourceSignal:
         Timeout: PT60M
     Properties:
-      ImageId: !ImportValue AMI-<%=environment%>-ImageId
+      ImageId: !ImportValue AMI-<%=environment%>-ImageId2
       InstanceType: <%=INSTANCE_TYPE%>
       IamInstanceProfile: !ImportValue IAM-StandaloneFrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>

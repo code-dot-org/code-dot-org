@@ -9,7 +9,7 @@ import project from '../code-studio/initApp/project';
 import {html2canvas} from '../util/htmlToCanvasWrapper';
 
 // Thumbnail image width and height in pixels.
-const THUMBNAIL_SIZE = 180;
+const THUMBNAIL_SIZE = 220;
 
 // Minimum time to wait after capturing a thumbnail image before capturing
 // another thumbnail.
@@ -82,6 +82,8 @@ export function captureThumbnailFromCanvas(canvas) {
   if (!shouldCapture()) {
     return;
   }
+  lastCaptureTimeMs = Date.now();
+
   const thumbnailCanvas = createThumbnail(canvas);
   canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
 }

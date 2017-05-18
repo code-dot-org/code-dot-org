@@ -25,6 +25,7 @@ const AnnouncementsCollapsible = React.createClass({
         header={i18n.announcements()}
         linkText={i18n.viewAllAnnouncements()}
         link="http://teacherblog.code.org/"
+        showLink={true}
       >
         <AnnouncementsCarousel>
           {announcements.map((announcement, index) =>
