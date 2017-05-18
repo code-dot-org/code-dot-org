@@ -58,6 +58,7 @@ import {captureThumbnailFromSvg} from '../util/thumbnail';
 import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
 import {blockAsXmlNode} from '../block_utils';
+import {parseElement, visitAll} from '../xml';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -2209,6 +2210,35 @@ Studio.prepareForRemix = function () {
       insertBeforeNext(newBlocks[i]);
     }
   }
+
+  if (level.initializationBlocks) {
+    parseElement(level.initializationBlocks).children.forEach(topBlock => {
+      if (topBlock.getAttribute('type') === 'when_run') {
+        let lastBlock = topBlock;
+        while (topBlock.children.some(block => block.tagName === 'NEXT')) {
+          lastBlock = topBlock.children.find(block => block.tagName === 'NEXT').firstChild;
+        }
+        if (lastBlock === topBlock) {
+          return;
+        }
+        const lastNext = blocksDocument.createElement('next');
+        lastNext.appendChild(next);
+        next = topBlock.querySelector('next');
+      } else {
+        blocksDom.appendchild(topBlock);
+      }
+    });
+  }
+
+  whenRun.appendChild(next);
+  visitAll(blocksDom, block => {
+    if (block.getAttribute('uservisible')) {
+      block.setAttribute('uservisible', "true");
+    }
+  });
+
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
   return Promise.resolve();
 };
 

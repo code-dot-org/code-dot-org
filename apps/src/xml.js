@@ -24,3 +24,9 @@ exports.parseElement = function (text) {
   }
   return element;
 };
+
+// Apply a function to a node and all of its descendants
+exports.visitAll = function (node, callback) {
+  callback(node);
+  node.children.forEach(exports.visitAll);
+};
