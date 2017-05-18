@@ -123,4 +123,12 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     post :confirm_upgrade_account, params: {session_code: @session.code, email: email}
     assert_template :upgrade_account
   end
+
+  test 'unrecognized session code renders custom not_found page' do
+    sign_in @teacher
+    get :attend, params: {session_code: 'nonexistent'}
+    assert_response :not_found
+    assert_template :not_found
+    assert_select 'h1', 'Attendance Code Not Recognized'
+  end
 end
