@@ -23,13 +23,13 @@ const styles = {
     marginLeft: 10,
     marginBottom: 0,
     paddingBottom: 0,
-    paddingTop: 40,
+    paddingTop: 0,
     float: 'left'
   },
   viewMore: {
     color: color.light_teal,
     float: 'right',
-    marginTop: 75,
+    marginTop: 35,
     cursor: 'pointer',
     marginRight: 22,
     fontFamily: '"Gotham 5r", sans-serif'
