@@ -82,6 +82,8 @@ export function captureThumbnailFromCanvas(canvas) {
   if (!shouldCapture()) {
     return;
   }
+  lastCaptureTimeMs = Date.now();
+
   const thumbnailCanvas = createThumbnail(canvas);
   canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
 }
