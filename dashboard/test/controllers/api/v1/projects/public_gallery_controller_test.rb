@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCase
+  published_applab_project = nil
   setup do
     published_applab_project = {
       id: 33,
@@ -100,6 +101,17 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
     assert_equal '13+', project_row['studentAgeRange']
     assert_equal 'P', project_row['studentName']
+  end
+
+  test 'project details are correct without thumbnail' do
+    published_applab_project[:value] = {name: 'App with no thumbnail'}.to_json
+    get :index, params: {project_type: 'applab', limit: 1}
+    assert_response :success
+    categories_list = JSON.parse(@response.body)
+    assert_equal 1, categories_list.length
+    project_row = categories_list['applab'].first
+    assert_equal 'App with no thumbnail', project_row['name']
+    assert_equal nil, project_row['thumbnailUrl']
   end
 
   test 'project details are correct listing all published projects' do
