@@ -4,7 +4,7 @@
 import React from 'react';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
-import { getResponsiveValue } from './responsive';
+import { getResponsiveValue } from '../responsive';
 import Image from './image';
 import LazyLoad from 'react-lazy-load';
 
