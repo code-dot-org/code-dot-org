@@ -84,6 +84,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+    @is_reminder = true
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -96,6 +97,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @user = user
     @workshop = workshop
     @cancel_url = '#'
+    @is_reminder = true
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -107,6 +109,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def organizer_enrollment_reminder(workshop)
     @workshop = workshop
     @cancel_url = '#'
+    @is_reminder = true
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -217,6 +220,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_enrollment_subject(workshop)
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
+    elsif workshop.local_summer?
+      'Your upcoming CS Principles workshop and next steps'
     else
       'Your upcoming Code.org workshop and next steps'
     end
