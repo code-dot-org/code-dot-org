@@ -2,7 +2,7 @@
 - resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
 
 -#
-  Retrieve the user return_to value from the session, which will also delete it.
+  Retrieve the user_return_to value from the session, which will also delete it.
   It means that a failed attempted to sign up here will no longer take the
   user to the recorded return_to URL upon a future attempt at sign-in/up, but
   that should be alright because it's really only a best-attempt, and not
