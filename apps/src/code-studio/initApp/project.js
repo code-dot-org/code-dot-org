@@ -533,6 +533,11 @@ var projects = module.exports = {
         return 'artist';
       case 'calc':
         return 'calc';
+      case 'craft':
+        if (appOptions.level.isEventLevel) {
+          return 'minecraft_designer';
+        }
+        return 'minecraft_adventurer';
       case 'eval':
         return 'eval';
       case 'studio':
@@ -628,6 +633,7 @@ var projects = module.exports = {
     unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
+      current.projectType = this.getStandaloneApp();
     }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');

@@ -28,7 +28,6 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :solution_level_source, class_name: "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_one :level_concept_difficulty, dependent: :destroy
@@ -268,25 +267,48 @@ class Level < ActiveRecord::Base
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
-    'Unplugged', # no solutions
-    'TextMatch', # dsl defined, covered in dsl
-    'Multi', # dsl defined, covered in dsl
-    'External', # dsl defined, covered in dsl
-    'Match', # dsl defined, covered in dsl
-    'ContractMatch', # dsl defined, covered in dsl
-    'LevelGroup', # dsl defined, covered in dsl
     'Applab', # freeplay
-    'Gamelab', # freeplay
+    'ContractMatch', # dsl defined, covered in dsl
+    'CurriculumReference', # no user submitted content
+    'DSLDefined', # dsl defined, covered in dsl
+    'EvaluationMulti', # unknown
     'EvaluationQuestion', # plc evaluation
-    'NetSim', # widget
-    'Odometer', # widget
-    'Vigenere', # widget
+    'External', # dsl defined, covered in dsl
+    'ExternalLink', # no user submitted content
+    'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
-    'TextCompression', # widget
+    'Gamelab', # freeplay
+    'GoBeyond', # unknown
+    'Level', # base class
+    'LevelGroup', # dsl defined, covered in dsl
+    'Map', # no user submitted content
+    'Match', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
+    'NetSim', # widget
     'Pixelation', # widget
-    'PublicKeyCryptography' # widget
+    'PublicKeyCryptography', # widget
+    'Odometer', # widget
+    'ScriptCompletion', # unknown
+    'StandaloneVideo', # no user submitted content
+    'TextCompression', # widget
+    'TextMatch', # dsl defined, covered in dsl
+    'Unplugged', # no solutions
+    'Vigenere', # widget
+    'Weblab', # no ideal solution
+    'Widget', # widget
   ].freeze
-  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
+  TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
+    Artist
+    Blockly
+    Calc
+    Craft
+    Eval
+    Grid
+    Karel
+    Maze
+    Studio
+    StudioEC
+  )
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
@@ -350,6 +372,40 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
+  def log_changes(user=nil)
+    return unless changed?
+
+    log = JSON.parse(audit_log || "[]")
+
+    # gather all field changes; if the properties JSON blob is one of the things
+    # that changed, rather than including just 'properties' in the list, include
+    # all of those attributes within properties that changed.
+    latest_changes = changed.dup
+    if latest_changes.include?('properties') && changed_attributes['properties']
+      latest_changes.delete('properties')
+      changed_attributes['properties'].each do |key, value|
+        latest_changes.push(key) unless properties[key] == value
+      end
+    end
+
+    entry = {
+      changed_at: Time.now,
+      changed: latest_changes
+    }
+    unless user.nil?
+      entry[:changed_by_id] = user.id
+      entry[:changed_by_email] = user.email
+    end
+    log.push(entry)
+
+    # Because this ever-growing log is stored in a limited column and because we
+    # will tend to care a lot less about older entries than newer ones, we will
+    # here drop older entries until this log gets down to a reasonable size
+    log.shift while JSON.dump(log).length >= 65535
+
+    self.audit_log = JSON.dump(log)
+  end
+
   def remove_empty_script_levels
     script_levels.each do |script_level|
       if script_level.levels.length == 1 && script_level.levels[0] == self
@@ -380,6 +436,7 @@ class Level < ActiveRecord::Base
       level_id: id,
       type: self.class.to_s,
       name: name,
+      display_name: display_name
     }
 
     %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|

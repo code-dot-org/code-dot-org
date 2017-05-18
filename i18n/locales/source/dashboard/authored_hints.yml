@@ -780,6 +780,7 @@ en:
           You can move back over the path a second time before moving south.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseA_forVideoTest_artist_authored_hint: {}
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: If you are having trouble getting the bird to move, make sure blocks are clicked in under the `when run` event.
         courseA_maze_seq1_b: The bird will need to move `W <--` three times to get to the pig.
@@ -849,27 +850,66 @@ en:
           ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
       courseA_playlab_challengeTemplate_authored_hint: {}
       courseA_playlab_events_challenge1_authored_hint:
-        courseB_playlab_events7_a: "Make the other animals move down when you press `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
-        courseB_playlab_events7_b: |
-          Change the speed of the animals by using this block:
-          <xml>
-            <block type="studio_setSpriteSpeed">
-              <title name="SPRITE">0</title>
-              <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-            </block></xml>
-        courseB_playlab_events7_c: |-
-          What will the everyone say when the race is over? Make them talk with this event:
-          <xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">2</title>
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1a_authored_hint:
+        courseA_playlab_events_challenge1_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: |-
+          You can make an angry monster growl.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
               <next>
-                <block type="studio_saySpriteChoices">
-                  <title name="SPRITE">2</title>
-                  <title name="VALUE">Woo hoo!</title>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
-            </block>
-          </xml>
+            </block></xml>
+      courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          You can make an angry monster growl.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_toMakeLoopsVideo_Collector_authored_hint: {}
       courseB_artist_loops10_authored_hint: {}
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
@@ -1152,6 +1192,30 @@ en:
           *Need an idea?*
 
           **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
+      courseC_PlayLab_events_challenge1_authored_hint:
+        courseC_PlayLab_events_challenge_a: Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!
+      courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
+        courseC_PlayLab_events_challenge_a: The two values on this block allow you to move an actor to any pixel in the game area. You can choose any number from 0-400.
+        courseC_PlayLab_events_challenge_b: |-
+          You can decide which numbers to use, by thinking about how far over from the top left corner you'd like to move. The first number is the number of pixels from the left. The second number is the number of pixels from the top.
+          <xml><block type="studio_setSpriteXY" inline="true">
+              <value name="SPRITE">
+                <block type="math_number" movable="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="XPOS">
+                <block type="math_number" movable="false">
+                  <title name="NUM">37</title>
+                </block>
+              </value>
+              <value name="YPOS">
+                <block type="math_number" movable="false">
+                  <title name="NUM">187</title>
+                </block>
+              </value>
+            </block></xml>
+          ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_prog1_authored_hint: {}
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
@@ -1181,6 +1245,16 @@ en:
         courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
       courseC_artist_prog8_authored_hint:
         courseC_artist_prog7_a: The exterior angles on this triangle are 120 degrees each.
+      courseC_artist_prog_challenge1-doghouse_authored_hint:
+        courseC_artist_prog7_a: Use 60 degree angles to make the roof.
+      courseC_artist_prog_challenge1_authored_hint:
+        courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100 pixels tall. '
+      courseC_artist_prog_challenge2_authored_hint:
+        courseC_artist_prog_challenge2_a: ''
+        courseC_artist_prog_challenge2_b: "To find the shortest solution, try moving the artist backwards instead of turning all the way around. \n <xml><block type=\"draw_move_by_constant_dropdown\">\n                            <title name=\"DIR\">moveBackward</title>\n                            <title name=\"VALUE\" config=\"50,100,150,200,300\"></title>\n                          </block></xml> "
+      courseC_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
+        courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_a: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       courseC_collector_prog3_authored_hint:
@@ -1198,6 +1272,10 @@ en:
         courseC_collector_prog9_a: If you're having a hard time, try saying the steps you need to take outloud first.
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your code line by line.
+      courseC_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+      courseC_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Don't even think about try about trying this without loops!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need to, then `turn right` at each corner.
@@ -1334,6 +1412,16 @@ en:
         courseC_puppy_loops8courseC_maze_loops8_c: "There are different ways to solve this. \n\nYou will want to use at least two loops, and repeat a set of actions in the first one, then a single `move forward` in the other."
       courseC_maze_loops9_authored_hint:
         courseC_maze_loops9_1: 'If you''re having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern. '
+      courseC_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being three different pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: In between each `repeat` block, you will need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+        courseC_maze_loops_challenge1_c: |-
+          If you make it this far, you just need to `turn left` then `move forward` a few times. Don't give up!
+
+          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      courseC_maze_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
+        courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_maze_programming1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
       courseC_maze_programming2_authored_hint:
@@ -1491,7 +1579,7 @@ en:
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
         courseD_artist_ramp11b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          To draw 4 sides, put a `move forward by 200 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
           Don't forget to turn afterward!
       courseD_artist_ramp12_authored_hint:
@@ -1580,6 +1668,26 @@ en:
         courseD_bee_debugging9_a: There are several ways to solve this problem...but they all involve turns!
         courseD_bee_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
       courseD_bee_debugging9_predict1_authored_hint: {}
+      courseD_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+           * Move forward
+           * Make 3 honey
+          * Move backward
+      courseD_bee_debugging_challenge2_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+           * Move forward
+           * Make 3 honey
+          * Move backward
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see what happens line by line.
       courseD_bee_nestedLoops2_authored_hint:
@@ -1614,6 +1722,67 @@ en:
           Altogether, you should be using 3 loops.
       courseD_bee_nestedLoops9_authored_hint: {}
       courseD_bee_nestedLoops9_predict2_authored_hint: {}
+      courseD_bee_nested_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+      courseD_bee_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+      courseD_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Here is the complete solution for this puzzle.
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">2</title>
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseD_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
@@ -1749,6 +1918,14 @@ en:
         courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       courseD_farmer_while9_authored_hint: {}
+      courseD_harvester_nested_loops_challenge1-broken_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
+      courseD_harvester_nested_loops_challenge1_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
+      courseD_maze_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge1_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge1_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
       courseD_maze_nestedLoops3_authored_hint:
         courseD_maze_nestedLoops3_a: To solve this puzzle, you will need to "nest" one `repeat` loop inside of another `repeat` loop.
       courseD_maze_nestedLoops4_authored_hint:
@@ -2064,7 +2241,7 @@ en:
 
           ![](https://images.code.org/9b544ac0fca84eead7a0952286284c7b-image-1493151031070.6.10 Hint Drawing.png)
 
-          Because all of the side paths are to the left, you can use your function made from the last puzzle.
+          Because all of the side paths are to the left, you can use a function like the one you made from the last puzzle.
         courseE_farmer_functions8b_c: "To finish this puzzle, use the following blocks.\n\nrepeat until at pumpkin\n - while path ahead\n    - move forward\n    - harvest path\n - turn right\n \nHarvest path references the function you made in the last puzzle."
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
@@ -2144,8 +2321,10 @@ en:
       courseF_artist_for5_authored_hint:
         courseF_artist_for5_a: You don't need the `repeat` loop inside when making this spiral!
       courseF_artist_for7_authored_hint:
-        courseF_artist_for7_a: The increment for this puzzle is 2.
+        courseF_artist_for7_a: The pen is thinner in this puzzle. You will need to set it to `1` before you start.
         courseF_artist_for7_b: Notice that this spiral turns right instead of left!
+        courseF_artist_for7_c: The `for` loop in this puzzle goes from 15 to 300 by 2.
+        courseF_artist_for7_d: This image is made by turning just 89 degrees.
       courseF_artist_for8_authored_hint: {}
       courseF_artist_for9_authored_hint: {}
       courseF_artist_fwp1_authored_hint:
@@ -2178,9 +2357,9 @@ en:
         courseF_artist_fwp8_a: If your function is correct, you shouldn't need to change it for this puzzle.
         courseF_artist_fwp8_b: The only thing you should need to do between function calls is change the color of the line.
       courseF_artist_fwp9_authored_hint:
-        courseF_artist_fwp9_a: "![](https://images.code.org/e0f14e9c984bceea33d09ca9ad8ac673-image-1493224047761.26.09 AM.png)"
-        courseF_artist_fwp9_b: "![](https://images.code.org/90dc1bd62d98d1634353cf186f6adf14-image-1493224937939.37.45 AM.png)"
-        courseF_artist_fwp9_c: "![](https://images.code.org/9a112d0b48b689a132cd3bcc9b2e7281-image-1493224954407.41.34 AM.png)"
+        courseF_artist_fwp9_a: |-
+          Try one of these drawings.
+          ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
       courseF_artist_predict1_authored_hint: {}
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
@@ -2204,6 +2383,10 @@ en:
       courseF_artist_variables8_authored_hint:
         courseF_artist_variables8_a: |
           Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+      courseF_artist_variablesFP_authored_hint:
+        courseF_artist_variablesFP_a: |-
+          Try one of these three drawings.
+          ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
       courseF_artist_variables_4_authored_hint:
         courseF_artist_variables_4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to move down, then turn him back to get ready to move forward again.
         courseF_artist_variables_4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
@@ -2350,6 +2533,8 @@ en:
       courseF_playlab_variables3b_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
       courseF_playlab_variables3bEdit_authored_hint:
+        courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
+      courseF_playlab_variables3b_josh_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All you have to do is put them where they belong!
       courseF_playlab_variables7b_authored_hint:
         courseF_playlab_variables7b_a: Have a cat and a dog talk about their favorite foods. Use the ask block to find out the favorite food, then display the text to the screen!

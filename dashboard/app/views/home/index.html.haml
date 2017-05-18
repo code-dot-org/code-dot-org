@@ -13,73 +13,78 @@
 = render partial: 'home/survey_nps' if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
 = render partial: 'home/survey_diversity' if show_diversity_survey? SurveyResult::DIVERSITY_2017
 
-#landingpage
-  .row
-    .span12
-      - unless current_user
-        .row
-          .sign_in.show_only_on_mobile
-            %a{href: CDO.studio_url('/users/sign_in')}
-              %button.primary= t('nav.user.signin')
-        #welcome_hero.welcome
-          .row
-            .welcomeleft.span2
-              = image_tag('codeorg-studio-logo-white.png', style: "height:120px")
-            .welcomeright.span9
-              .lines_of_code_header
-                %a.lines_of_code_link{href: CDO.code_org_url('/loc')}
-                  - loc = fetch_metrics['lines_of_code']
-                  - loc = number_with_delimiter(loc, :delimiter => ',')
-                  - students = fetch_user_metrics['number_students']
-                  - students /= 1000000
-                  != t('home.lines_of_code_linebreak', lines_count: loc, students_count: students)
-                .description
-                  = t('home.description')
-
-  .clear
+- if request.cookies['pm'] == 'new_header'
 
   - if current_user
     - if current_user.teacher?
-      #teacher_announcement
-        - unless current_user.accepted_latest_terms?
-          = render template: 'api/accept_terms_reminder'
-        = render template: 'api/teacher_announcement'
+      #landingpage
+        = render partial: 'home/teacher_homepage'
 
-    #user_hero
-      = render template: 'api/user_hero'
-    - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
-      - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
-        .row
-          - course_pair.each do |user_script|
-            = render partial: 'shared/course_progress_block', locals: { script: user_script.script }
+    - else
+      #landingpage
+        = render partial: 'home/student_homepage'
 
-  = render partial: 'home/all_courses'
+  - else
+    #landingpage
+      = render partial: 'home/studio_banner'
+      = render partial: 'home/all_courses'
 
-  - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
-    .row#edit_teachers
+- else
+  #landingpage
+    .row
       .span12
-        .padtopbottom
-          - current_user_sections_as_student = current_user.sections_as_student
-          - if current_user_sections_as_student.empty?
-            = form_for([Follower.new], html: {class: 'form-inline'}) do |f|
-              %label= t('add_teacher_form.code.label')
-              = text_field_tag :section_code, nil, class: 'form-control', placeholder: t('add_teacher_form.code.placeholder'), :required => true
-              = hidden_field_tag :redirect, root_path
-              %button.btn.btn-default{type: 'submit', style: 'margin-top:0'}= t('add_teacher_form.submit')
+        - unless current_user
+          .row
+            .sign_in.show_only_on_mobile
+              %a{href: CDO.studio_url('/users/sign_in')}
+                %button.primary= t('nav.user.signin')
+          = render partial: 'home/studio_banner'
 
-          - else
-            = t('section.your_section', count: current_user_sections_as_student.length)
-            - if current_user.encrypted_password?
-              = raw current_user_sections_as_student.map {|section| t('section.code_with_teacher', section_code: section.code, teacher_name: section.teacher.try(:name) || I18n.t('user.deleted_user')) + ' ' + link_to(t('section.remove'), remove_follower_path(section_code: section[:code], student_user_id: current_user.id), confirm: t('section.confirm.remove'), method: :post)}.join(', ')
+    .clear
+
+    - if current_user
+      - if current_user.teacher?
+        #teacher_announcement
+          - unless current_user.accepted_latest_terms?
+            = render template: 'api/accept_terms_reminder'
+          = render template: 'api/teacher_announcement'
+
+      #user_hero
+        = render template: 'api/user_hero'
+      - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
+        - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
+          .row
+            - course_pair.each do |user_script|
+              = render partial: 'shared/course_progress_block', locals: { script: user_script.script }
+
+    = render partial: 'home/all_courses'
+    = render partial: 'home/gallery_preview'
+
+    - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
+      .row#edit_teachers
+        .span12
+          .padtopbottom
+            - current_user_sections_as_student = current_user.sections_as_student
+            - if current_user_sections_as_student.empty?
+              = form_for([Follower.new], html: {class: 'form-inline'}) do |f|
+                %label= t('add_teacher_form.code.label')
+                = text_field_tag :section_code, nil, class: 'form-control', placeholder: t('add_teacher_form.code.placeholder'), :required => true
+                = hidden_field_tag :redirect, root_path
+                %button.btn.btn-default{type: 'submit', style: 'margin-top:0'}= t('add_teacher_form.submit')
+
             - else
-              = raw current_user_sections_as_student.map {|section| t('section.code_with_teacher', section_code: section.code, teacher_name: section.teacher.try(:name) || I18n.t('user.deleted_user'))}.join(', ')
-  - if current_user
-    %br/
-    %br/
-    %br/
-    = render partial: 'home/projects'
-    - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
-      = render partial: 'home/gallery'
+              = t('section.your_section', count: current_user_sections_as_student.length)
+              - if current_user.encrypted_password?
+                = raw current_user_sections_as_student.map {|section| t('section.code_with_teacher', section_code: section.code, teacher_name: section.teacher.try(:name) || I18n.t('user.deleted_user')) + ' ' + link_to(t('section.remove'), remove_follower_path(section_code: section[:code], student_user_id: current_user.id), confirm: t('section.confirm.remove'), method: :post)}.join(', ')
+              - else
+                = raw current_user_sections_as_student.map {|section| t('section.code_with_teacher', section_code: section.code, teacher_name: section.teacher.try(:name) || I18n.t('user.deleted_user'))}.join(', ')
+    - if current_user
+      %br/
+      %br/
+      %br/
+      = render partial: 'home/projects'
+      - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
+        = render partial: 'home/gallery'
 
 %br/
 %br/

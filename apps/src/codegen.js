@@ -18,29 +18,21 @@ exports.ForStatementMode = {
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
+ *
+ * @param code {string} - the code to evaluation
+ * @param globals {Object} - An object of globals to be added to the scope of code being executed
+ * @param legacy {boolean} - If true, code will be run natively via an eval-like method,
+ *     otherwise it will use the js interpreter.
+ * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
  */
-exports.evalWith = function (code, options, legacy) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function (interpreter, scope) {
-      exports.initJSInterpreter(interpreter, null, null, scope, options);
-    };
-    var myInterpreter = new PatchedInterpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else if (!legacy) {
-    const myInterpreter = new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
-      marshalNativeToInterpreterObject(interpreter, options, 5, scope);
-    });
-    myInterpreter.run();
-    return myInterpreter;
-  } else {
+export function evalWith(code, globals, legacy) {
+  if (legacy) {
     // execute JS code "natively"
     var params = [];
     var args = [];
-    for (var k in options) {
+    for (var k in globals) {
       params.push(k);
-      args.push(options[k]);
+      args.push(globals[k]);
     }
     params.push(code);
     var ctor = function () {
@@ -48,18 +40,26 @@ exports.evalWith = function (code, options, legacy) {
     };
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
+  } else {
+    const interpreter = new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+      marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
+    });
+    interpreter.run();
+    return interpreter;
   }
-};
+}
 
 /**
  * Generate code for each of the given events, and evaluate it using the
  * provided APIs as context.
- * @param apis Context to be set as globals in the interpreted runtime.
- * @param events Mapping of hook names to the corresponding handler code.
- * @param evalCode Optional extra code to evaluate.
- * @return {{}} Mapping of hook names to the corresponding event handler.
+ * @param {Object} apis - Context to be set as globals in the interpreted runtime.
+ * @param {Object} events - Mapping of hook names to the corresponding handler code.
+ *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
+ * @param {string} [evalCode] - Optional extra code to evaluate.
+ * @return {{hooks: Array<{name: string, func: Function}>, interpreter: PatchedInterpreter}} Mapping of
+ *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
  */
-exports.evalWithEvents = function (apis, events, evalCode = '') {
+export function evalWithEvents(apis, events, evalCode = '') {
   let interpreter, currentCallback, lastReturnValue;
   const hooks = [];
 
@@ -86,7 +86,7 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  interpreter = exports.interpreter = new PatchedInterpreter(evalCode + eventLoop, (interpreter, scope) => {
+  interpreter = new PatchedInterpreter(evalCode + eventLoop, (interpreter, scope) => {
     marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
     interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
       currentCallback = callback;
@@ -97,8 +97,8 @@ exports.evalWithEvents = function (apis, events, evalCode = '') {
   });
   interpreter.run();
 
-  return hooks;
-};
+  return {hooks, interpreter};
+}
 
 //
 // Blockly specific codegen functions:
@@ -243,16 +243,13 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
   return obj;
 };
 
-exports.customMarshalObjectList = [];
-exports.asyncFunctionList = [];
-exports.nativeCallsInterpreterFunctionList = [];
 
 // If this is on our list of "custom marshal" objects - or if it a property
 // on one of those objects (other than a function), return true
 
-var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
-  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
-    var marshalObj = exports.customMarshalObjectList[i];
+var shouldCustomMarshalObject = function (interpreter, nativeVar, nativeParentObj) {
+  for (var i = 0; i < interpreter.customMarshalObjectList.length; i++) {
+    var marshalObj = interpreter.customMarshalObjectList[i];
     if ((nativeVar instanceof marshalObj.instance &&
           (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeVar[marshalObj.requiredMethod] !== undefined)) ||
@@ -267,9 +264,9 @@ var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
 // When marshaling methods on "custom marshal" objects, we may need to augment
 // the marshaling options. This returns those options.
 
-var getCustomMarshalMethodOptions = function (nativeParentObj) {
-  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
-    var marshalObj = exports.customMarshalObjectList[i];
+var getCustomMarshalMethodOptions = function (interpreter, nativeParentObj) {
+  for (var i = 0; i < interpreter.customMarshalObjectList.length; i++) {
+    var marshalObj = interpreter.customMarshalObjectList[i];
     if (nativeParentObj instanceof marshalObj.instance) {
       if (typeof marshalObj.requiredMethod === 'undefined' ||
            nativeParentObj[marshalObj.requiredMethod] !== undefined) {
@@ -285,7 +282,14 @@ var getCustomMarshalMethodOptions = function (nativeParentObj) {
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+/**
+ * @param {PatchedInterpreter} interpreter - instance of the interpreter to marshal objects to
+ * @param {boolean|string|number|Object|Array|Function} [nativeVar] - the native object to marshal into the interpreter.
+ * @param {Object} [nativeParentObj] - optional native parent object that the given nativeVar is a member of
+ * @param {number} [maxDepth] - optional maximum depth to recurse down when marhsaling the given object. Defaults to Infinity
+ * @returns The interpreter's representation of the marshaled object.
+ */
+export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentObj, maxDepth) {
   if (maxDepth === 0 || typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
   }
@@ -293,7 +297,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to infinite levels of depth
   }
-  if (shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+  if (shouldCustomMarshalObject(interpreter, nativeVar, nativeParentObj)) {
     return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
   }
   if (nativeVar instanceof Array) {
@@ -316,15 +320,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
       nativeFunc: nativeVar,
       nativeParentObj: nativeParentObj,
     };
-    if (exports.asyncFunctionList.indexOf(nativeVar) !== -1) {
-      // Mark if this should be nativeIsAsync:
-      makeNativeOpts.nativeIsAsync = true;
-    }
-    if (exports.nativeCallsInterpreterFunctionList.indexOf(nativeVar) !== -1) {
-      // Mark if this should be nativeCallsBackInterpreter:
-      makeNativeOpts.nativeCallsBackInterpreter = true;
-    }
-    var extraOpts = getCustomMarshalMethodOptions(nativeParentObj);
+    var extraOpts = getCustomMarshalMethodOptions(interpreter, nativeParentObj);
     // Add extra options if the parent of this function is in our custom marshal
     // modified object list:
     for (var prop in extraOpts) {
@@ -356,7 +352,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     retVal = interpreter.createPrimitive(nativeVar);
   }
   return retVal;
-};
+}
 
 exports.createNativeFunctionFromInterpreterFunction = null;
 

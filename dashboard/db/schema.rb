@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508234536) do
+ActiveRecord::Schema.define(version: 20170509100000) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -460,6 +460,8 @@ ActiveRecord::Schema.define(version: 20170508234536) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "code"
+    t.index ["code"], name: "index_pd_sessions_on_code", unique: true, using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
   end
 
@@ -471,6 +473,7 @@ ActiveRecord::Schema.define(version: 20170508234536) do
     t.string   "secondary_email",                         null: false
     t.text     "application",               limit: 65535, null: false
     t.string   "regional_partner_override"
+    t.integer  "program_registration_id",                              comment: "Id in the Pegasus forms table for the associated registration (kind: PdProgramRegistration), populated when that form is processed."
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
@@ -500,6 +503,14 @@ ActiveRecord::Schema.define(version: 20170508234536) do
     t.string   "tracking_url"
     t.index ["pd_enrollment_id"], name: "index_pd_workshop_material_orders_on_pd_enrollment_id", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_workshop_material_orders_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "pd_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", unique: true, using: :btree
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

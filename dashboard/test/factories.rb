@@ -24,6 +24,9 @@ FactoryGirl.define do
       type "SingleSectionExperiment"
       section
     end
+    factory :single_user_experiment, class: 'SingleUserExperiment' do
+      type "SingleUserExperiment"
+    end
   end
   factory :section_hidden_stage do
     section nil
@@ -401,14 +404,6 @@ FactoryGirl.define do
   factory :video do
     sequence(:key) {|n| "concept_#{n}"}
     youtube_code 'Bogus text'
-  end
-
-  factory :prize do
-    prize_provider
-    sequence(:code) {|n| "prize_code_#{n}"}
-  end
-
-  factory :prize_provider do
   end
 
   factory :follower do

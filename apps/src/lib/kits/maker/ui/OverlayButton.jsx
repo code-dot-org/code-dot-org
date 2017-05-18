@@ -32,6 +32,7 @@ class OverlayButton extends Component {
   render() {
     return (
       <button
+        className={this.props.className}
         style={style}
         onClick={this.props.onClick}
       >
@@ -41,6 +42,7 @@ class OverlayButton extends Component {
   }
 }
 OverlayButton.propTypes = {
+  className: PropTypes.string,
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };

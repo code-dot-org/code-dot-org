@@ -6,13 +6,13 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun!",
+    "instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun. The shortest possible solution is 6 blocks, but use as many as you like!",
     "x": "100",
-    "y": "250",
+    "y": "150",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "images": "[{\"filename\":\"https://images.code.org/92ea9ba17e7c6b8bef3080d2dae80245-image-1494100317729.png\",\"position\":[110,160]},{\"filename\":\"https://images.code.org/c5c973256685f64b74432c62fbdf6772-image-1494100317731.png\",\"position\":[210,160]}]\r\n\r\n\r\n\r\n",
+    "images": "[{\"filename\":\"https://images.code.org/92ea9ba17e7c6b8bef3080d2dae80245-image-1494100317729.png\",\"position\":[110,160]},{\"filename\":\"https://images.code.org/c5c973256685f64b74432c62fbdf6772-image-1494100317731.png\",\"position\":[210,160]}]\r\n//,{\"filename\":\"https://images.code.org/c5c973256685f64b74432c62fbdf6772-image-1494100317731.png\",\"position\":[110,260]},{\"filename\":\"https://images.code.org/92ea9ba17e7c6b8bef3080d2dae80245-image-1494100317729.png\",\"position\":[210,260]}]\r\n\r\n\r\n\r\n",
     "scrollbars": "false",
     "free_play": "false",
     "slider_speed": "0.4",
@@ -67,6 +67,9 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">2</title>
+        </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_picker">
@@ -93,7 +96,7 @@
               <title name="VALUE">200</title>
               <next>
                 <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnLeft</title>
+                  <title name="DIR">turnRight</title>
                   <title name="VALUE" config="45,60,90,120,180">90</title>
                   <next>
                     <block type="draw_move_by_constant">
@@ -101,7 +104,7 @@
                       <title name="VALUE">100</title>
                       <next>
                         <block type="draw_turn_by_constant_dropdown">
-                          <title name="DIR">turnLeft</title>
+                          <title name="DIR">turnRight</title>
                           <title name="VALUE" config="45,60,90,120,180">90</title>
                           <next>
                             <block type="draw_move_by_constant">
@@ -109,7 +112,7 @@
                               <title name="VALUE">200</title>
                               <next>
                                 <block type="draw_turn_by_constant_dropdown">
-                                  <title name="DIR">turnLeft</title>
+                                  <title name="DIR">turnRight</title>
                                   <title name="VALUE" config="45,60,90,120,180">90</title>
                                   <next>
                                     <block type="draw_move_by_constant">
@@ -117,7 +120,7 @@
                                       <title name="VALUE">100</title>
                                       <next>
                                         <block type="draw_turn_by_constant_dropdown">
-                                          <title name="DIR">turnLeft</title>
+                                          <title name="DIR">turnRight</title>
                                           <title name="VALUE" config="45,60,90,120,180">90</title>
                                           <next>
                                             <block type="jump_by_constant">
@@ -125,7 +128,7 @@
                                               <title name="VALUE">100</title>
                                               <next>
                                                 <block type="draw_turn_by_constant_dropdown">
-                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="DIR">turnRight</title>
                                                   <title name="VALUE" config="45,60,90,120,180">90</title>
                                                   <next>
                                                     <block type="draw_move_by_constant">
@@ -160,37 +163,25 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="jump_by_constant">
-              <title name="DIR">jumpBackward</title>
-              <title name="VALUE">45</title>
+            <block type="jump_to_xy">
+              <title name="XPOS">55</title>
+              <title name="YPOS">160</title>
               <next>
                 <block type="draw_turn_by_constant">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
+                  <title name="VALUE">15</title>
                   <next>
-                    <block type="jump_by_constant">
-                      <title name="DIR">jumpForward</title>
-                      <title name="VALUE">90</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">150</title>
                       <next>
                         <block type="draw_turn_by_constant">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE">75</title>
+                          <title name="VALUE">30</title>
                           <next>
                             <block type="draw_move_by_constant">
                               <title name="DIR">moveForward</title>
                               <title name="VALUE">150</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnRight</title>
-                                  <title name="VALUE">30</title>
-                                  <next>
-                                    <block type="draw_move_by_constant">
-                                      <title name="DIR">moveForward</title>
-                                      <title name="VALUE">150</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>

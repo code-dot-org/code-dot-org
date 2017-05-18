@@ -15,3 +15,11 @@ markdown <<MARKDOWN
 &lt;h6&gt; Waffles &lt;/h6&gt;
 </pre>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+ <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+    
+**Level Types:** This multiple choice question that asks students to choose how HTML headers will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side.  Students who have successfully answered the question will have a green bubble.  Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.
+
+<div class="clear"></div>
+MARKDOWN

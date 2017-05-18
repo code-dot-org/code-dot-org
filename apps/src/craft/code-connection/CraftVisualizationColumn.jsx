@@ -1,13 +1,13 @@
 import React from 'react';
 
-import {default as GameButtons} from '../../templates/GameButtons';
+import GameButtons from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 
-export default React.createClass({
-  propTypes: {
+export default class CraftVisualizationColumn extends React.Component {
+  static propTypes = {
     showScore: React.PropTypes.bool.isRequired
-  },
+  }
 
   render() {
     return (
@@ -23,4 +23,4 @@ export default React.createClass({
       </span>
     );
   }
-});
+}

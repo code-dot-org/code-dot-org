@@ -34,8 +34,6 @@ module LocaleHelper
     options
   end
 
-  private
-
   # Parses and ranks locale code strings from the Accept-Language header.
   def accepted_locales
     header = request.env.fetch('HTTP_X_VARNISH_ACCEPT_LANGUAGE', '')
@@ -72,10 +70,6 @@ module LocaleHelper
   # Tries to access translation, returning nil if not found
   def try_t(dotted_path, params = {})
     I18n.t(dotted_path, {raise: true}.merge(params)) rescue nil
-  end
-
-  def serve_fonts?
-    Dashboard::Application::LOCALES[locale.to_s].fetch(:webfonts, true)
   end
 
   def i18n_dropdown

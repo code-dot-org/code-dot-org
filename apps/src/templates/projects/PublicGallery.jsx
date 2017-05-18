@@ -6,7 +6,7 @@ export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
   studentName: PropTypes.string,
-  studentAge: PropTypes.number,
+  studentAgeRange: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,

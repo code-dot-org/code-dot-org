@@ -9,5 +9,10 @@ import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
    });
  }
 
-window.isUnsupportedBrowser = isUnsupportedBrowser;
+$(document).ready(function () {
+  if (isUnsupportedBrowser()) {
+    $("#warning-banner").show();
+  }
+});
+
 initHamburger();

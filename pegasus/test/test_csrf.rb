@@ -1,11 +1,4 @@
-require 'sinatra'
-require_relative '../src/env'
-require_relative '../router'
-require 'rack/csrf'
-require 'rack/test'
-require 'minitest/autorun'
-require 'mocha/mini_test'
-require 'webmock/minitest'
+require_relative './test_helper'
 
 # Test for the router CSRF logic.
 class CsrfTest < Minitest::Test
@@ -16,6 +9,7 @@ class CsrfTest < Minitest::Test
   end
 
   def test_poste_send_message_csrf
+    rack_mock_session
     # Pretend to be an admin user
     fake_admin = FakeAdminUserHelper.new
     ::Documents.any_instance.stubs(:dashboard_user_helper).returns(fake_admin)
