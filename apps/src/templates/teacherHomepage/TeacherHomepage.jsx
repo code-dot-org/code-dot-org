@@ -1,9 +1,11 @@
 import React from 'react';
+import HeadingBanner from '../HeadingBanner';
 import AnnouncementsCollapsible from './AnnouncementsCollapsible';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import ManageSectionsCollapsible from './ManageSectionsCollapsible';
 import TeacherResources from './TeacherResources';
 import shapes from './shapes';
+import i18n from "@cdo/locale";
 
 const TeacherHomepage = React.createClass({
   propTypes: {
@@ -17,6 +19,10 @@ const TeacherHomepage = React.createClass({
 
     return (
       <div>
+        <HeadingBanner
+          headingText={i18n.teacherHomepageHeadingText()}
+          subHeadingText={i18n.teacherHomepageSubHeadingText()}
+        />
         <AnnouncementsCollapsible announcements={announcements}/>
         <RecentCoursesCollapsible
           courses={courses}

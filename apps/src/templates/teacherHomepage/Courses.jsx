@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HeadingBanner from '../HeadingBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import color from "../../util/color";
@@ -29,7 +30,7 @@ const Courses = React.createClass({
   },
 
   componentDidMount() {
-    // The components used here are are implemented in legacy HAML/CSS rather than React.
+    // The components used here are implemented in legacy HAML/CSS rather than React.
     if (this.props.isEnglish && this.props.isTeacher) {
       $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
       $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
@@ -43,6 +44,11 @@ const Courses = React.createClass({
 
     return (
       <div>
+        <HeadingBanner
+          headingText={i18n.coursesHeadingText()}
+          subHeadingText={i18n.coursesHeadingSubText()}
+        />
+
         {courses && (
           <RecentCoursesCollapsible
             courses={courses}

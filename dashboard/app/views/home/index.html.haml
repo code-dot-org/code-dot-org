@@ -20,7 +20,11 @@
 
   - else
     #landingpage
-      = render partial: 'home/studio_banner'
+      %h1#heading-banner-text
+        = I18n.t("home.signed_out_banner_heading")
+      %p#heading-banner-subtext
+        = I18n.t("home.signed_out_banner_subheading")
+
       = render partial: 'home/all_courses'
 
 - else
