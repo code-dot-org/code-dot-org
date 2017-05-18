@@ -2161,7 +2161,53 @@ Studio.prepareForRemix = function () {
   if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
         level[prop] === undefined ||
             level[prop] === group.defaultValues[prop]))) {
+    // Do nothing if all the props match the defaults
     return Promise.resolve();
+  }
+
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+
+  let whenRun = blocksDom.querySelector('block[type="when_run"]');
+  if (!whenRun) {
+    whenRun = blocksDocument.createElement('block');
+    whenRun.setAttribute('type', 'when_run');
+    blocksDom.appendChild(whenRun);
+  }
+  let next = whenRun.querySelector('next');
+  if (next) {
+    whenRun.removeChild(next);
+  }
+
+  const insertBeforeNext = block => {
+    if (next) {
+      block.appendChild(next);
+    }
+    next = blocksDocument.createElement('next');
+    next.appendChild(block);
+  };
+
+  for (let group of REMIX_PROPS) {
+    let customized = false;
+    const blockArgs = {};
+    for (let prop in group.defaultValues) {
+      const value = level[prop];
+      if (value !== undefined && value !== group.defaultValues[prop]) {
+        customized = true;
+        blockArgs[prop] = value;
+      } else {
+        blockArgs[prop] = group.defaultValues[prop];
+      }
+    }
+    if (!customized) {
+      continue;
+    }
+    const newBlocks = group.generateBlocks(blockArgs);
+    // insertBeforeNext adds blocks to the top, just below when_run. Insert the
+    // blocks in reverse order so that they stay in the same order as newBlocks
+    for (let i = newBlocks.length - 1; i >= 0; i--) {
+      insertBeforeNext(newBlocks[i]);
+    }
   }
   return Promise.resolve();
 };
