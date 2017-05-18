@@ -100,7 +100,7 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(actual_cat_image_info, file_infos['files'][1])
 
     @api.get_object(dog_image_filename)
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
     assert_equal dog_image_body, last_response.body
 
     @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
@@ -272,7 +272,7 @@ class FilesTest < FilesApiTestBase
     assert_equal v2_file_data, @api.get_object_version(filename, versions[0]['versionId'])
 
     # Check cache headers
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
 
     # List project versions.
     project_versions = @api.list_files_versions

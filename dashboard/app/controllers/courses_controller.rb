@@ -43,7 +43,25 @@ class CoursesController < ApplicationController
     end
   end
 
+  def update
+    course = Course.find_by_name!(params[:course_name])
+    course.persist_strings_and_scripts_changes(params[:scripts], i18n_params)
+    redirect_to course
+  end
+
   def edit
-    render text: 'Not yet implemented'
+    course = Course.find_by_name!(params[:course_name])
+
+    # We don't support an edit experience for plc courses
+    raise ActiveRecord::ReadOnlyRecord if course.try(:plc_course)
+    render 'edit', locals: {course: course}
+  end
+
+  def i18n_params
+    params.permit(
+      :title,
+      :description_student,
+      :description_teacher
+    ).to_h
   end
 end

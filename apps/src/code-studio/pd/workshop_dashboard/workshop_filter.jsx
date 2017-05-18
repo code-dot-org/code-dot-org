@@ -76,6 +76,14 @@ const WorkshopFilter = React.createClass({
   },
 
   componentDidMount() {
+    this.isWorkshopAdmin = window.dashboard.workshop.permission === "workshop_admin";
+
+    if (this.isWorkshopAdmin) {
+      this.loadOrganizers();
+    }
+  },
+
+  loadOrganizers() {
     this.organizersLoadRequest = $.ajax({
       method: 'GET',
       url: '/api/v1/pd/workshop_organizers',
@@ -259,7 +267,6 @@ const WorkshopFilter = React.createClass({
       limit: this.state.limit.value
     };
 
-    const isWorkshopAdmin = window.dashboard.workshop.permission === "workshop_admin";
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
 
@@ -334,7 +341,7 @@ const WorkshopFilter = React.createClass({
           }
           <Clearfix visibleSmBlock />
           {
-            isWorkshopAdmin &&
+            this.isWorkshopAdmin &&
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -351,7 +358,7 @@ const WorkshopFilter = React.createClass({
             </Col>
           }
           {
-            isWorkshopAdmin &&
+            this.isWorkshopAdmin &&
             <Col md={4}>
               <FormGroup>
                 <ControlLabel>Teacher Email</ControlLabel>
@@ -383,7 +390,7 @@ const WorkshopFilter = React.createClass({
             queryParams={filters}
             canDelete
             showStatus
-            showOrganizer={isWorkshopAdmin}
+            showOrganizer={this.isWorkshopAdmin}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
           />
         </Row>
