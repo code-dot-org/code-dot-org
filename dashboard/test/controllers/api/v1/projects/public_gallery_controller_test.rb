@@ -4,7 +4,8 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   published_applab_project = nil
   setup do
     published_applab_project = {
-      id: 33,
+      storage_id: 22,
+      channel_id: 33,
       published_at: '2017-03-03T00:00:00.000-08:00',
       project_type: 'applab',
       value: {
@@ -95,7 +96,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 1, categories_list.length
     project_row = categories_list['applab'].first
     assert_equal 'Charlies App', project_row['name']
-    assert_equal 'STUB_CHANNEL_ID-1234', project_row['channel']
+    assert_equal 'STUB_CHANNEL_ID-22-33', project_row['channel']
     assert_equal '/v3/files-public/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
@@ -128,7 +129,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
 
     project_row = categories_list['applab'].first
     assert_equal 'Charlies App', project_row['name']
-    assert_equal 'STUB_CHANNEL_ID-1234', project_row['channel']
+    assert_equal 'STUB_CHANNEL_ID-22-33', project_row['channel']
     assert_equal '/v3/files-public/charlies_thumbnail.png', project_row['thumbnailUrl']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-03-03T00:00:00.000-08:00', project_row['publishedAt']
