@@ -78,9 +78,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
         {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
+    $routeProvider.when('/sections/:sectionid/student/:studentid/script/',
+        {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
+    $routeProvider.when('/sections/:sectionid/student/:studentid/script/:scriptid',
+        {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
+    // We have legacy /course routes from a time when course was used synonomously with script
     $routeProvider.when('/sections/:sectionid/student/:studentid/course/',
         {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
-    $routeProvider.when('/sections/:sectionid/student/:studentid/course/:courseid',
+    $routeProvider.when('/sections/:sectionid/student/:studentid/course/:scriptid',
         {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
@@ -273,13 +278,13 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                                              function($scope, $routeParams, sectionsService) {
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
-    $scope.course_id = parseInt($routeParams.courseid);
+    $scope.script_id = parseInt($routeParams.scriptid);
     $scope.script_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
     $scope.changeProgress = function() {
-      $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid, script_id: $scope.course_id});
+      $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid, script_id: $scope.script_id});
     };
   }]);
 
@@ -719,10 +724,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
       // TODO
-      $scope.course_id = $scope.progress.script.id;
-      $scope.progress_disabled = $scope.progress_disabled_courses.indexOf($scope.course_id) !== -1
+      $scope.script_id = $scope.progress.script.id;
+      $scope.progress_disabled = $scope.progress_disabled_courses.indexOf($scope.script_id) !== -1
       var hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
-      $scope.is_hoc_course = isInCategory($scope.script_list, $scope.course_id, hocCategoryName);
+      $scope.is_hoc_course = isInCategory($scope.script_list, $scope.script_id, hocCategoryName);
       // calculate width of each level in the progress bar assuming the overall width is 780 px
 
       // Takes the level's position in the script, and returns its level number in its stage
@@ -785,7 +790,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     // fill in the course dropdown with the section's default course
     $scope.section.$promise.then(
       function(section) {
-        $scope.course_id = section.course.id;
+        // TODO: section.course
+        $scope.script_id = section.course.id;
       }
     );
 
@@ -872,7 +878,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     // Fill in the course dropdown with the section's default course.
     $scope.section.$promise.then(
       function(section) {
-        $scope.course_id = section.course.id;
+        $scope.scriptid = section.course.id;
       }
     );
 

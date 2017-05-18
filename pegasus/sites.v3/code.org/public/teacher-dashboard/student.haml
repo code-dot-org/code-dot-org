@@ -19,7 +19,7 @@ content-type: text/ng-template
 
 %div
   = I18n.t('dashboard_progress_view')
-  %select{"id" => "course-dropdown", "ng-model" => "course_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(course_id)'}
+  %select{"id" => "course-dropdown", "ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(script_id)'}
 %br
 
 %div{'ng-bind-html' => 'progress.progressHtml | htmlSafe'}
