@@ -184,7 +184,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                                        function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
-    $scope.script_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
 
     $scope.sections = sectionsService.query();
 
@@ -279,7 +279,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
-    $scope.script_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
@@ -644,7 +644,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
 
-    $scope.script_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
     $scope.progress_disabled_courses = #{DashboardSection::progress_disabled_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
@@ -805,7 +805,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.responsesLoaded = false;
     $scope.stages = [];
 
-    $scope.script_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
@@ -855,8 +855,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
 
-    // TODO: valid_courses -> valid_scripts?
-    $scope.script_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
 
     $scope.assessmentsLoaded = false;
     $scope.assessmentStages = [];

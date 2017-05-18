@@ -216,7 +216,7 @@ class DashboardSection
 
   @@script_cache = {}
   # TODO: rename
-  def self.valid_courses(user_id = nil)
+  def self.valid_scripts(user_id = nil)
     # some users can see all scripts, even those marked hidden
     script_cache_key = I18n.locale.to_s +
       ((user_id && Dashboard.hidden_script_access?(user_id)) ? "-all" : "-valid")
@@ -259,7 +259,7 @@ class DashboardSection
   # the gatekeeper key postMilestone.
   # TODO: rename
   def self.progress_disabled_courses(user_id = nil)
-    disabled_scripts = valid_courses(user_id).select do |script|
+    disabled_scripts = valid_scripts(user_id).select do |script|
       !Gatekeeper.allows('postMilestone', where: {script_name: script[:script_name]}, default: true)
     end
     disabled_scripts.map {|script| script[:id]}
@@ -267,7 +267,7 @@ class DashboardSection
 
   # TODO: rename
   def self.valid_course_id?(script_id)
-    valid_courses.find {|script| script[:id] == script_id.to_i}
+    valid_scripts.find {|script| script[:id] == script_id.to_i}
   end
 
   def self.create(params)
