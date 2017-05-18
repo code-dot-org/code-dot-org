@@ -207,11 +207,11 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.save = function(section) {
-      if (section.course) {
-        var course = null;
+      if (section.script) {
+        var script = null;
         for (var i = 0; i < $scope.script_list.length; i++) {
-          if ($scope.script_list[i].id === section.course.id) {
-            course = $scope.script_list[i];
+          if ($scope.script_list[i].id === section.script.id) {
+            script = $scope.script_list[i];
             break;
           }
         }
@@ -790,8 +790,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     // fill in the course dropdown with the section's default course
     $scope.section.$promise.then(
       function(section) {
-        // TODO: section.course
-        $scope.script_id = section.course.id;
+        $scope.script_id = section.script.id;
       }
     );
 
@@ -875,10 +874,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.sections.$promise.catch($scope.genericError);
     $scope.assessments.$promise.catch($scope.genericError);
 
-    // Fill in the course dropdown with the section's default course.
+    // Fill in the course dropdown with the section's default script.
     $scope.section.$promise.then(
       function(section) {
-        $scope.scriptid = section.course.id;
+        $scope.scriptid = section.script.id;
       }
     );
 
