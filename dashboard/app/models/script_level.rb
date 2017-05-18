@@ -50,6 +50,18 @@ class ScriptLevel < ActiveRecord::Base
     super
   end
 
+  def named_level
+    type == NAMED_LEVEL
+  end
+
+  def assessment
+    type == ASSESSMENT
+  end
+
+  def bonus
+    type == BONUS
+  end
+
   # TODO(ram): stop using and delete these four convenience methods
   def level
     levels[0]
