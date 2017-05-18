@@ -127,7 +127,6 @@ class CourseTest < ActiveSupport::TestCase
       name: 'this-course',
       script_names: ['script1', 'script2']
     }.to_json
-    # File.any_instance.stub(:read) { serialization }
     File.stubs(:read).returns(serialization)
 
     Course.load_from_path('file_path')

@@ -18,6 +18,8 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
 
+  after_save :write_serialization
+
   def skip_name_format_validation
     !!plc_course
   end
@@ -68,10 +70,10 @@ class Course < ApplicationRecord
   # the set of scripts that are in the course, then writes out our serialization
   # @param scripts [Array<String>] - Updated list of names of scripts in this course
   # @param course_strings[Hash{String => String}]
-  def update_and_persist(scripts, course_strings)
+  def persist_strings_and_scripts_changes(scripts, course_strings)
     Course.update_strings(name, course_strings)
     update_scripts(scripts)
-    write_serialization
+    save!
   end
 
   def write_serialization
@@ -81,7 +83,7 @@ class Course < ApplicationRecord
 
   # @param new_scripts [Array<String>]
   def update_scripts(new_scripts)
-    new_scripts.reject!(&:empty?)
+    new_scripts = new_scripts.reject(&:empty?)
     # we want to delete existing course scripts that aren't in our new list
     scripts_to_delete = course_scripts.map(&:script).map(&:name) - new_scripts
 

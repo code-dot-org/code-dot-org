@@ -45,7 +45,7 @@ class CoursesController < ApplicationController
 
   def update
     course = Course.find_by_name!(params[:course_name])
-    course.update_and_persist(params[:scripts], i18n_params)
+    course.persist_strings_and_scripts_changes(params[:scripts], i18n_params)
     redirect_to course
   end
 
