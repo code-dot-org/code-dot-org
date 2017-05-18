@@ -20,9 +20,8 @@ module Rack
       if body.respond_to?(:read)
         content = body.read
       else
-        str = StringIO.new ''
-        body.each {|x| str.write x}
-        content = str.string
+        content = ''
+        body.each {|x| content << x}
       end
       body.close if body.respond_to? :close
 
