@@ -193,8 +193,8 @@ function loadLevel() {
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Studio.slowExecutionFactor = level.slowExecutionFactor || 1;
-  Studio.gridAlignedExtraPauseSteps = level.gridAlignedExtraPauseSteps || 0;
+  Studio.slowExecutionFactor = skin.slowExecutionFactor || 1;
+  Studio.gridAlignedExtraPauseSteps = skin.gridAlignedExtraPauseSteps || 0;
   Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
       utils.valueOr(level.ticksBeforeFaceSouth,
           constants.IDLE_TICKS_BEFORE_FACE_SOUTH);
@@ -2272,7 +2272,7 @@ Studio.reset = function (first) {
     x: 0,
     y: 0
   };
-  if (level.gridAlignedMovement) {
+  if (skin.gridAlignedMovement) {
     renderOffset.x = skin.gridSpriteRenderOffsetX || 0;
     renderOffset.y = skin.gridSpriteRenderOffsetY || 0;
   }
@@ -3064,7 +3064,7 @@ Studio.onPuzzleComplete = function () {
   Studio.clearEventHandlersKillTickLoop();
   Studio.movementAudioOff();
 
-  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+  if (skin.gridAlignedMovement && Studio.JSInterpreter) {
     // If we've been selecting code as we run, we need to call selectCurrentCode()
     // one last time to remove the highlight on the last line of code:
     Studio.JSInterpreter.selectCurrentCode();
@@ -4224,7 +4224,7 @@ Studio.addItem = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // Create stationary, grid-aligned items when skin.gridAlignedMovement,
   // otherwise, create randomly placed items travelling in a random direction.
   // Assumes that sprite[0] is in use, and avoids placing the item too close
   // to that sprite.
@@ -4817,7 +4817,7 @@ Studio.setSprite = function (opts) {
   sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
   // Reset height and width:
-  if (level.gridAlignedMovement) {
+  if (skin.gridAlignedMovement) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
     sprite.size = sprite.width / skin.spriteWidth;
@@ -5532,7 +5532,7 @@ Studio.addGoal = function (opts) {
 Studio.getPlayspaceBoundaries = function (sprite) {
   var boundaries;
 
-  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !level.gridAlignedMovement) {
+  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !skin.gridAlignedMovement) {
     boundaries = {
       top:    0 - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
       right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
@@ -5567,7 +5567,7 @@ Studio.getSkin = function () {
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
-  var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
+  var distance = skin.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
   var deltaX = 0, deltaY = 0;
@@ -5606,13 +5606,13 @@ Studio.moveSingle = function (opts) {
     playspaceEdgeCollision = true;
   }
 
-  if (level.gridAlignedMovement) {
+  if (skin.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new GridMoveAndCancel(
-          deltaX, deltaY, level.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor));
     } else {
       sprite.addAction(new GridMove(
-          deltaX, deltaY, level.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor));
     }
 
     Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
@@ -5648,7 +5648,7 @@ Studio.moveSingle = function (opts) {
 Studio.moveDistance = function (opts) {
   if (!opts.started) {
     opts.started = true;
-    if (level.gridAlignedMovement) {
+    if (skin.gridAlignedMovement) {
       opts.distance =
         Math.ceil(opts.distance / Studio.SQUARE_SIZE) * Studio.SQUARE_SIZE;
     }
