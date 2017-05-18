@@ -937,6 +937,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 
   steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
     Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
     And I wait to see "#schooldropdown-block"
