@@ -9,7 +9,7 @@ subject: "An amazing statistic. And together we can do more."
       } 
   }
 </style>
-  
+
 Hello teachers!
 
 The days are longer, the sun’s brighter, and students (and teachers) can’t wait to start summer break! 
@@ -18,13 +18,15 @@ I want to share an amazing end-of-year stat about our collective movement to spr
 
 I hope you can take steps to broaden participation in computer science before your summer break. Some ideas:
 
-### Try an end of year activity or guest speaker to inspire students
+### Invite a guest speaker to inspire students
 
 Ten thousand passionate technologists worldwide are eager to share their love of computer science with your students and help them learn more about what a career in tech could look like. [Invite a guest speaker to your classroom today and use our online map](https://code.org/volunteer/local) to find and contact volunteers in your area to visit your classroom or host a webinar for your class.* 
 
 <img class="pattern" src="https://s3.amazonaws.com/cdo-email-images/amy_teaching.png" alt="Volunteer in a classroom" width="400" style="display: block; border: 0;" />
 
-Did your students enjoy Hour of Code? The activities are up year round. We have [over 200 tutorials and lesson plans](https://hourofcode.com/us) ready for any classroom. No matter your subject area, hardware need, or experience level, every student can find a new challenge. If you’ve hosted an Hour of Code but want to go further, check out our [follow-on courses for beginners](http://studio.code.org).
+### Registration for summer professional learning workshops is open
+
+Led by experienced Code.org facilitators, [we offer K-5 teachers a no cost, one-day workshop in Computer Science Fundamentals](https://code.org/professional-development-workshops). Our workshops receive rave reviews, and are open to any K-5 teacher - no computer background needed. Integrate computer science once a week in your classroom with our 20-hour courses for beginners. You’ll learn how to introduce computer science basics in a format that's fun and accessible to the youngest learners and you’ll also receive all the supplies you need to teach!
 
 Computer science is key to opening so many doors for students in today’s world, and this movement is just getting started, thanks to you! Half a million passionate teachers like you have already [signed up on Code.org](https://code.org/) to make sure students have every opportunity to succeed. Take another step to grow K-12 computer science today!
 
@@ -42,3 +44,5 @@ It is entirely your responsibility to thoroughly check references or perform any
 <p> <hr/> <small> You’re receiving this email because you signed up on Code Studio or signed the petition at Code.org and let us know you’re an educator. Code.org is a 501c3 non-profit. Our address is 1501 4th Ave, Suite 900, Seattle, WA, 98101.
 
 <strong>Don't want these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
+
+![](<%= tracking_pixel %>)
