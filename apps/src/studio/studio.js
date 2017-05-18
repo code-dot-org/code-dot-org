@@ -283,24 +283,46 @@ const REMIX_PROPS = [
             if (cell.emotion && cell.emotion !== Emotions.NORMAL) {
               blocks.push(blockAsXmlNode('studio_setSpriteEmotion', {
                 titles: {
-                  'SPRITE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: spriteIndex,
-                  },
-                  'VALUE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: cell.emotion,
-                  },
+                  'SPRITE':  spriteIndex,
+                  'VALUE':  cell.emotion,
                 },
               }));
             }
 
             spriteIndex++;
           }
+          if (cell.tileType & constants.SPRITEFINISH) {
+            blocks.push(blockAsXmlNode('sudio_addGoalXY', {
+              values: {
+                'XPOS': {
+                  type: 'math_number',
+                  titleName: 'NUM',
+                  titleValue: x * Studio.SQUARE_SIZE,
+                },
+                'YPOS': {
+                  type: 'math_number',
+                  titleName: 'NUM',
+                  titleValue: y * Studio.SQUARE_SIZE,
+                },
+              },
+            }));
+          }
         }
       }
+
+      return blocks;
+    },
+  },
+  {
+    defaultValues: {
+      allowSpritesOutsidePlayspace: false,
+    },
+    generateBlocks: args => {
+      return [blockAsXmlNode('studio_allowSpritesOutsidePlayspace', {
+        titles: {
+          'VALUE': 'true',
+        },
+      })];
     },
   }
 ];
