@@ -172,7 +172,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   def confirm_join_session
     @enrollment = build_enrollment_from_params
 
-    if !@enrollment.valid? || !@enrollment.save
+    unless @enrollment.save
       render :join_session
       return
     end
