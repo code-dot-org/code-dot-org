@@ -261,7 +261,9 @@ const ProjectCard = React.createClass({
   },
 
   componentDidMount: function () {
-    $('.versionTimestamp').timeago();
+    if ($('.versionTimestamp').timeago) {
+      $('.versionTimestamp').timeago();
+    }
   }
 });
 
