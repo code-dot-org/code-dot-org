@@ -257,8 +257,7 @@ class DashboardSection
 
   # Gets a list of valid scripts in which progress tracking has been disabled via
   # the gatekeeper key postMilestone.
-  # TODO: rename
-  def self.progress_disabled_courses(user_id = nil)
+  def self.progress_disabled_scripts(user_id = nil)
     disabled_scripts = valid_scripts(user_id).select do |script|
       !Gatekeeper.allows('postMilestone', where: {script_name: script[:script_name]}, default: true)
     end
