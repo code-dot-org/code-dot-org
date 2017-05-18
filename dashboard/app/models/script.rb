@@ -507,9 +507,6 @@ class Script < ActiveRecord::Base
     script.script_levels = raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
 
-      assessment = nil
-      named_level = nil
-      bonus = nil
       stage_flex_category = nil
       stage_lockable = nil
 
@@ -522,9 +519,6 @@ class Script < ActiveRecord::Base
         end
 
         raw_level_data = raw_level.dup
-        assessment = raw_level.delete(:assessment)
-        named_level = raw_level.delete(:named_level)
-        bonus = raw_level.delete(:bonus)
         stage_flex_category = raw_level.delete(:stage_flex_category)
         stage_lockable = !!raw_level.delete(:stage_lockable)
 
@@ -569,9 +563,6 @@ class Script < ActiveRecord::Base
       script_level_attributes = {
         script_id: script.id,
         chapter: (chapter += 1),
-        named_level: named_level,
-        bonus: bonus,
-        assessment: assessment
       }
       script_level_attributes[:properties] = properties.to_json if properties
       script_level = script.script_levels.detect do |sl|

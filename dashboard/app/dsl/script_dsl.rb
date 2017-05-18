@@ -66,18 +66,15 @@ class ScriptDSL < BaseDSL
   string :video_key_for_next_level
 
   def assessment(name, properties = {})
-    properties[:assessment] = true
-    level(name, properties)
+    level(name, properties.merge(type: ScriptLevel::ASSESSMENT))
   end
 
   def named_level(name, properties = {})
-    properties[:named_level] = true
-    level(name, properties)
+    level(name, properties.merge(type: ScriptLevel::NAMED_LEVEL))
   end
 
   def bonus(name, properties = {})
-    properties[:bonus] = true
-    level(name, properties)
+    level(name, properties.merge(type: ScriptLevel::BONUS))
   end
 
   def level(name, properties = {})
