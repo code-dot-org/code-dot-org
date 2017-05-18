@@ -29,6 +29,12 @@ exports.setMapAndColor = function (id, color, value) {
   });
 };
 
+exports.setAllowSpritesOutsidePlayspace = function (id, value) {
+  Studio.queueCmd(id, 'setAllowSpritesOutsidePlayspace', {
+    'value': value,
+  });
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,
