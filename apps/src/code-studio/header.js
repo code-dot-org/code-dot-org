@@ -92,7 +92,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
     progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId,
-      progressData.linesOfCodeText);
+      progressData.linesOfCodeText, scriptData.student_detail_progress_view);
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup(event) {
@@ -185,13 +185,15 @@ function remixProject() {
   if (dashboard.project.getCurrentId()) {
     dashboard.project.serverSideRemix();
   } else {
-    // We don't have an id. This implies we are either a legacy /c/ share page,
-    // or we're on a blank project page that hasn't been saved for the first time
-    // yet. In both cases, copy will create a new project for us.
+    // We don't have an id. This implies we are either on a legacy /c/ share
+    // page, a script level, or a blank project page that hasn't been saved for
+    // the first time yet. In all of these cases, copy will create a new project
+    // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
+    const shouldNavigate = true;
     dashboard.project.copy(newName, function () {
       $(".project_name").text(newName);
-    });
+    }, shouldNavigate);
   }
 }
 

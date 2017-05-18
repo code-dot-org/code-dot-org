@@ -2,21 +2,14 @@
 title: CS Discoveries
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 # Our newest course: CS Discoveries #
 
-## <a name="what"></a>Apply for Professional Learning
-
-Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
-
-Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
-
-[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
-
 ## <a name="what"></a>What is CS Discoveries?
 
-CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
+Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. 
 
 <div style="float:right; margin:20px 0px 20px 20px;">
 
@@ -27,20 +20,29 @@ CS Discoveries is an introductory Computer Science course that empowers students
 </div>
 
 
-### <a name="equity"></a>A CS course for everyone, designed with equity in mind
-CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
+### <a name="equity"></a>Designed with equity in mind
 
-### <a name="maker"></a>Made for Makers
-We know that students engage differently with real world physical objects than with virtual software, and that the process of making physical artifacts is a powerful tool for fun, engaging, and lasting learning experiences. CS Discoveries has the Maker ethos embedded throughout, providing students the opportunity to see and participate in the physical act of creation alongside the more abstract elements of computer science.
+CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. It provides students opportunities to engage with culturally and personally relevant topics in a wide variety of contexts and aims to show all students that CS is for them.
+
+### <a name="maker"></a>Focus on creation
+
+We know that giving students agency in their learning is a powerful tool for creating fun, engaging, and lasting learning experiences. CS Discoveries focuses on the skills that enable students to create and express themselves in a variety of contexts and media. Whether they are developing their own website, designing an app, building a game, or creating a physical computing device, students are empowered to bring their ideas to life.
 
 ### <a name="pathway"></a>Completing a K-12 pathway
-Our new course, CS Discoveries, is being designed to fit naturally between our [CS Fundamentals](/k5) course for K-5 and our [CS Principles](/csp) course for AP/Honors high school students. This allows us to offer districts, teachers and students a complete pathway of courses that build on each other and flow naturally together. 
+
+CS Discoveries is designed to fit naturally between our [CS Fundamentals](/k5) courses and our [CS Principles](/csp) course. While each of these courses is designed to be an age-appropriate entry point to computer science, students with previous experience will find many new topics to explore, and they will revisit familiar topics in novel and more challenging contexts.
+
+### <a name="supports"></a>Supports for new-to-CS teachers
+
+CS Discoveries is specifically designed to support new-to-CS teachers. The curriculum includes detailed lesson plans, and frequent teaching tips. The accompanying forum is an active community of support that teachers can use to discuss their practice and find additional resources. Teachers can also apply for our professional learning program for further support.
+
+### <a name="flexible"></a>Flexible Implementation
+
+CS Discoveries was specifically designed for 7th to 9th grade classrooms and can be used in either middle school or high school. The two semesters build on each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
 ### <a name="tools"></a>Powerful tools with a high ceiling
-CS Discoveries aims to introduce students to tools and programming languages that are accessible for beginners, but which offer plenty of room to grow and create sophisticated projects. Using our App Lab programming environment, students will be able to transition from blocks to typed code at their own pace while learning JavaScript. New improvements to this tool will enable students to build simple animations, stories, or games as well as apps. Students will also develop Maker skills through the study of physical computing on the Arduino platform  at a very accessible cost. 
 
-### <a name="flexible"></a>Designed for flexible implementation options
-CS Discoveries will be designed primarily for students in grades 7-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
+CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. Using our existing App Lab programming environment and our new programming environment, Game Lab, students will be able to transition from blocks to typed code at their own pace while learning JavaScript. Students will also develop maker skills through the study of physical computing at a very accessible cost.
 
 <hr/>
 
@@ -74,65 +76,65 @@ CS Discoveries will be designed primarily for students in grades 7-9, so it can 
 
 ## <a name="content"></a>Course Overview
 
-[**Printable course overview PDF**](https://code.org/files/programs/CSD_1-pager_final.pdf)
+[**Printable course overview PDF**](https://curriculum.code.org/media/uploads/CSD_1-pager_final.pdf)
 
 Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
-### Semester 1: CS Discoveries: Exploration and Expression
+### Semester 1 - Exploration and Expression
 
-The first semester of CS Discoveries introduces students to computer science as a vehicle for problem solving, communication, and personal expression. As a whole this semester focuses on the visible aspects of computing and computer science, encouraging students to see where computer science exists around them and how they can engage with it as a tool for exploration and expression.
+The first semester of CS Discoveries introduces students to computer science as a vehicle for problem solving, communication, and personal expression. As a whole, this semester focuses on the visible aspects of computing and computer science, and encourages students to see where computer science exists around them and how they can engage with it as a tool for exploration and expression.
 
 <div style="float:left; padding:10px; width:33%">
 
-<h4> Unit 1 - Problem Solving: Computers and Logic </h4>
+<h4> Unit 1 - Problem Solving</h4>
 
-Computers are all around us, and for students much of their everyday action is impacted by computing. In the unit students will explore what it means for something to be a computer - what core functionality brings together all these items we think of as computers. Students should know how to use computers effectively - this means being able to navigate a computer and accomplish tasks. Students look at the many things computers allow people to do.
+Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. Through a series of puzzles, challenges, and real world scenarios, students are introduced to a problem solving process that they will return to repeatedly throughout the course. Students then learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with students designing an application that helps solve a problem of their choosing.
 
 </div>
 
 <div style="float:left; padding:10px; width:33%">
 
-<h4> Unit 2 - The Internet: Web Development </h4>
+<h4> Unit 2 - Web Development</h4>
 
-Students will find empowerment through the realization that they too can take part in this creation and dissemination of information online by developing their own web pages from scratch using just HTML and CSS. By critically examining the web pages they visit every day, students will start to explore what makes a strong website and then use their new design process to implement parts of those designs. 
+In Unit 2, students are empowered to create and share the content on their own web pages. They begin by thinking about the role of the web, and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged think critically about the impact of sharing information online and how to be more critical content consumers. They are also introduced to problem solving as it relates to programming, as they learn valuable skills such as debugging, commenting, and structure of language. At the conclusion of the unit, students compile their work to create a personal website they can publish and share.
 
 </div>
 
 <div style="float:left; padding:10px; width:33%">
 
-<h4> Unit 3 - Programming: Interactive Games and Animations </h4>
+<h4> Unit 3 - Animations and Games</h4>
 
-Starting off with simple primitive shapes and building up to more sophisticated sprite-based games, students will become familiar with the basic concepts that form the foundation of computer programming. The development of a personalized final project will engage students in design, testing, and iteration as they come to see that failure and debugging are an expected (and valuable) part of the programming process that make your end product better. 
+In Unit 3, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
 
 </div>
 
 <div style="clear:both"></div>
 
-### Semester 2: CS Discoveries: Innovation and Impact
+### Semester 2 - Innovation and Impact
 
-Where the first semester centers on the immediately observable and personally applicable elements of computer science, the second semester asks students to look outward and explore the impact of computer science on society. Students will see how a thorough user-centered design process produces a better application, how their personal data is collected and used on the web, and they will work with bare circuit boards to see how computers collect input and return output in a variety of ways. Through the entirety of this semester student groups will continue to iterate on and refine a mobile app that integrates everything they’ve learned throughout the course into one capstone project.
+Where the first semester centers on the immediately observable and personally applicable elements of computer science, the second semester asks students to look outward and explore the impact of computer science on society. Students will see how a thorough user-centered design process produces a better application, how data is used to address problems that affect large numbers of people, and how physical computing with bare circuit boards allows computers to collect input and return output in a variety of ways.
 
 <div style="float:left; padding:10px; width:33%">
 
-<h4> Unit 4 - Problem Solving: The Design Process </h4>
+<h4> Unit 4 - The Design Process</h4>
 
-With the Problem Solving Process as a basis, students will start to look at how user-centered design places _others_ first in approaching the solution to a problem, whether through design of a physical object or a software application. Through several small projects, students will experience an iterative design and testing process that will then be applied to a multi-week group project. In this final project, student teams will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, teams will then develop an interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
+Unit 4 transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
 
 </div>
 
 <div style="float:left; padding:10px; width:33%">
 
-<h4> Unit 5 - The Internet: Data and Society </h4>
+<h4> Unit 5 - Data and Society</h4>
 
-Students will learn what information they leave behind online, and ways to control who has access to their information. In addition students will learn simple ways to collect data and use it to create apps the display the data to the user in visual ways so that they can gain insight into how data that is uninteresting at the individual level can reveal useful information when compiled. Finally, students will return to the app they began in unit 4 to integrate simple data collection.
+This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process.  The chapter concludes by considering how the data problem solving process can be applied to an area of the students' choosing.
 
 </div>
 
 <div style="float:left; padding:10px; width:33%">
 
-<h4> Unit 6 - Programming: The Internet of Things </h4>
+<h4> Unit 6 - Physical Computing</h4>
 
-By exploring innovative computing devices from a variety of fields, students will explore the essential elements of computer hardware. Using a bare microcontroller board with several integrated sensors and output devices students will learn how software interacts with hardware and they will develop prototypes of physical computing devices. In the final stage of the course student groups will once again return to their capstone apps, this time connecting them with their physical computing boards as a means of input, output, or both.
+In Unit 6, students further develop their programming skills while exploring the role of hardware platforms in computing. Harkening back to the Input and Output elements of the Input/Storage/Processing/Output model for a computing, students look towards current and “smart” devices to understand the ways in which different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that students saw in the smart devices they explored earlier, and they get to see how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge that asks students to use the Circuit Playground as the basis for an innovation of their own design.
 
 </div>
 
@@ -153,13 +155,13 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <div style="float:left; padding:25px; width:33%">
 
-<h4>Apply for professional learning!</h4>
+<h4>Learn more about professional learning!</h4>
 
-If you are interested in joining in 2018-19, sign up below to be added to our contact list. This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
+This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
 <br><br>
 
-<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"> <button>Join our contact list</button> </a>
+<a href="/educate/professional-learning/cs-discoveries"> <button>Click here to learn more</button> </a>
 
 </div>
 
@@ -184,12 +186,12 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 
 |                   Unit                   | Lesson Plans                             | Code Studio                              |
 | :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
-| **Unit 1 - Problem Solving: Computers and Logic** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
-| **Unit 2 - The Internet: Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
-| **Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
-| **Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
-| **Unit 5 - The Internet: Data and Society** | [Lesson plans](https://curriculum.code.org/csd/unit5) | [Code Studio](https://studio.code.org/s/csd5) |
-| **Unit 6 - Programming: The Internet of Things** | [Lesson plans](https://curriculum.code.org/csd/unit6) | [Code Studio](https://studio.code.org/s/csd6) |
+| **Unit 1 - Problem Solving** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
+| **Unit 2 - Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
+| **Unit 3 - Animations and Games** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
+| **Unit 4 - The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
+| **Unit 5 - Data and Society** | [Lesson plans](https://curriculum.code.org/csd/unit5) | [Code Studio](https://studio.code.org/s/csd5) |
+| **Unit 6 - Physical Computing** | [Lesson plans](https://curriculum.code.org/csd/unit6) | [Code Studio](https://studio.code.org/s/csd6) |
 
 
 
@@ -213,7 +215,19 @@ this website frequently as we release drafted lesson plans!
 
 ### <a name="standards"></a>Will CS Discoveries be mapped to standards?
 
-We are developing the course using the K-12 CS Framework and the interim CSTA standards as guidance. Once the course is complete, and the revised CSTA standards have been released, we will provide a mapping to those standards.
+CS Discoveries was written using both the K-12 Framework for Computer Science and the draft CSTA standards as guidance. Because the revised CSTA standards have not been finalized as of May 2017, we are holding off on publishing formal standards mapping documents to ensure that we have an opportunity to address any changes that may appear in the final draft. Once the CSTA standards have been finalized and published, we will complete a full pass to articulate, on a unit and lesson level, our mapping to not only the the CSTA standards, but also select ISTE, Common Core Math, Common Core ELA, and NGSS standards. Once this mapping has been completed, it will be available in lesson plans and at code.org/csd/standards
+
+### <a name="supplies"></a>What materials and supplies are required for CS Discoveries?
+
+* Normal classroom supplies (pens, pencils, coloring, scissors, extra paper) 
+* Computers 
+* Worksheet Printing (There are worksheets with some lessons. Some teachers get around this by doing everything digitally) 
+* Couple Decks of Cards 
+* Aluminum Foil 
+* Containers that can hold water 
+* [Adafruit's Circuit Playground Boards](https://learn.adafruit.com/introducing-circuit-playground/overview) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
+
+\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing one [classroom kit](https://www.adafruit.com/product/3399) of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. The subsidized cost of the classroom kit will be less than $100 and further details about ordering kits will be sent to teachers in winter 2017. \***
 
 <!--
 #### Can I pilot the new course?

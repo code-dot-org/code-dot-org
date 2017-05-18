@@ -370,7 +370,7 @@ module Pegasus
   end
 end
 
-require src_dir 'course'
+require src_dir 'curriculum_course'
 
 class CurriculumRouter < Pegasus::Base
   get '/curriculum/mss*' do
@@ -383,7 +383,7 @@ class CurriculumRouter < Pegasus::Base
 
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.
-    unless Course::PRODUCTION_COURSES.include? kind
+    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
       pass if rack_env == :production
     end
 
@@ -413,7 +413,7 @@ class CurriculumRouter < Pegasus::Base
   end
 
   get '/curriculum/:kind/docs/*' do |kind, file|
-    unless Course::PRODUCTION_COURSES.include? kind
+    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
       pass if rack_env == :production
     end
 
@@ -425,7 +425,7 @@ class CurriculumRouter < Pegasus::Base
   end
 
   get '/curriculum/:kind/*' do |kind, parts|
-    unless Course::PRODUCTION_COURSES.include? kind
+    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
       pass if rack_env == :production
     end
 

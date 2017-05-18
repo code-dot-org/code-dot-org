@@ -1,11 +1,11 @@
 /** @file Maker connection status visualization overlay */
 import React, {Component, PropTypes} from 'react';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
-import {isConnecting, hasConnectionError} from '../redux';
+import {isConnecting, hasConnectionError, getConnectionError, useFakeBoardOnNextRun} from '../redux';
+import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
 
 const overlayDimensionsPropTypes = {
@@ -22,23 +22,36 @@ export class UnconnectedMakerStatusOverlay extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     isConnecting: PropTypes.bool.isRequired,
+    isWrongBrowser: PropTypes.bool.isRequired,
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
-    handleDisableMaker: PropTypes.func,
+    handleDisableMaker: PropTypes.func.isRequired,
+    useFakeBoardOnNextRun: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
   };
 
   render() {
-    const {width, height, scale, isConnecting, hasConnectionError,
-      handleTryAgain, handleDisableMaker} = this.props;
+    const {width, height, scale, isConnecting, isWrongBrowser,
+      hasConnectionError, handleTryAgain, handleDisableMaker,
+      handleOpenSetupPage} = this.props;
     const dimensions = {width, height, scale};
     if (isConnecting) {
       return <WaitingToConnect {...dimensions}/>;
+    } else if (isWrongBrowser) {
+      return (
+        <UnsupportedBrowser
+          {...dimensions}
+          handleDisableMaker={handleDisableMaker}
+          handleOpenSetupPage={handleOpenSetupPage}
+        />
+      );
     } else if (hasConnectionError) {
       return (
         <BoardNotFound
           {...dimensions}
           handleTryAgain={handleTryAgain}
-          handleDisableMaker={handleDisableMaker}
+          useFakeBoardOnNextRun={this.props.useFakeBoardOnNextRun}
+          handleOpenSetupPage={handleOpenSetupPage}
         />
       );
     }
@@ -49,8 +62,14 @@ export default connect(
   state => ({
     scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
+    isWrongBrowser: getConnectionError(state) instanceof UnsupportedBrowserError,
     hasConnectionError: hasConnectionError(state),
-  })
+    handleOpenSetupPage: () => {
+      window.open('/maker/setup', '_blank');
+    }
+  }), {
+    useFakeBoardOnNextRun
+  }
 )(UnconnectedMakerStatusOverlay);
 
 const style = {
@@ -64,17 +83,13 @@ const style = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    color: color.white,
+    color: color.charcoal,
+    backgroundColor: color.lighter_gray,
   },
   padding: {
     flex: '1 0 auto',
   },
   content: {
-    flex: '0 0 auto',
-    padding: '2em',
-    textAlign: 'center',
-  },
-  footer: {
     flex: '0 0 auto',
     padding: '1em',
     textAlign: 'center',
@@ -84,29 +99,13 @@ const style = {
   },
   text: {
     margin: '1em',
-  },
-  link: {
-    display: 'inline-block',
-    fontWeight: 'bold',
-    color: color.white,
-    textDecoration: 'none',
-    lineHeight: 1.5,
-    paddingLeft: 5,
-    paddingRight: 5,
-    borderRadius: 3,
-    ':hover': {
-      color: color.black,
-      backgroundColor: color.white,
-    }
   }
 };
 
 class Overlay extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
-    backgroundColor: PropTypes.string.isRequired,
     children: PropTypes.any,
-    footer: PropTypes.any,
   };
 
   render() {
@@ -114,7 +113,6 @@ class Overlay extends Component {
       ...style.root,
       width: this.props.width,
       height: this.props.height,
-      backgroundColor: this.props.backgroundColor,
     };
 
     // If scale is undefined we are still letting media queries handle the
@@ -133,11 +131,6 @@ class Overlay extends Component {
           {this.props.children}
         </div>
         <div style={style.padding}/>
-        {this.props.footer &&
-          <div style={style.footer}>
-            {this.props.footer}
-          </div>
-        }
       </div>
     );
   }
@@ -148,12 +141,40 @@ class WaitingToConnect extends Component {
 
   render() {
     return (
-      <Overlay
-        {...this.props}
-        backgroundColor={color.light_gray}
-      >
+      <Overlay {...this.props}>
         <Icon icon="cog" spin/>
         <Text>Waiting for board to connect...</Text>
+      </Overlay>
+    );
+  }
+}
+
+class UnsupportedBrowser extends Component {
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    handleDisableMaker: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const {handleDisableMaker, handleOpenSetupPage} = this.props;
+    return (
+      <Overlay {...this.props}>
+        <Icon icon="exclamation-triangle"/>
+        <Text>
+          Maker Toolkit BETA requires<br/>Chrome&nbsp;33+.
+        </Text>
+        <OverlayButton
+          primary
+          text="Setup Instructions"
+          className="setup-instructions"
+          onClick={handleOpenSetupPage}
+        />
+        <OverlayButton
+          text="Disable Maker Toolkit"
+          className="disable-maker-toolkit"
+          onClick={handleDisableMaker}
+        />
       </Overlay>
     );
   }
@@ -163,39 +184,35 @@ class BoardNotFound extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     handleTryAgain: PropTypes.func.isRequired,
-    handleDisableMaker: PropTypes.func,
+    useFakeBoardOnNextRun: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
   };
 
-  renderFooter() {
-    const {handleDisableMaker} = this.props;
-    return (
-      <span>
-        <Text><em>Not sure what's going on?</em></Text>
-        <Text>
-          <Link href="/maker/setup">Get Help</Link>
-          {handleDisableMaker && ' or '}
-          {handleDisableMaker &&
-            <Link onClick={handleDisableMaker}>
-              Disable Maker Toolkit
-            </Link>
-          }
-        </Text>
-      </span>
-    );
-  }
+  handleRunWithoutBoard = () => {
+    this.props.useFakeBoardOnNextRun();
+    this.props.handleTryAgain();
+  };
 
   render() {
     return (
-      <Overlay
-        {...this.props}
-        backgroundColor={color.red}
-        footer={this.renderFooter()}
-      >
+      <Overlay {...this.props}>
         <Icon icon="exclamation-triangle"/>
         <Text>Make sure your board is plugged in.</Text>
         <OverlayButton
+          primary
           text="Try Again"
+          className="try-again"
           onClick={this.props.handleTryAgain}
+        />
+        <OverlayButton
+          text="Run Without Board"
+          className="run-without-board"
+          onClick={this.handleRunWithoutBoard}
+        />
+        <OverlayButton
+          text="Setup Instructions"
+          className="setup-instructions"
+          onClick={this.props.handleOpenSetupPage}
         />
       </Overlay>
     );
@@ -216,7 +233,7 @@ Text.propTypes = {
  * Render a font-awesome icon in the overlay style.
  */
 function Icon({icon, spin=false}) {
-  const classNames = ['fa-3x'];
+  const classNames = ['fa-5x'];
   if (spin) {
     classNames.push('fa-spin');
   }
@@ -232,31 +249,3 @@ Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   spin: PropTypes.bool,
 };
-
-const Link = Radium(React.createClass({
-  propTypes: {
-    href: PropTypes.string,
-    onClick: PropTypes.func,
-    children: PropTypes.any,
-  },
-
-  onClick(e) {
-    if (this.props.onClick) {
-      this.props.onClick(e);
-      e.preventDefault();
-    }
-  },
-
-  render() {
-    return (
-      <a
-        href={this.props.href || '#'}
-        target={this.props.href ? '_blank' : undefined}
-        onClick={this.onClick}
-        style={style.link}
-      >
-        {this.props.children}
-      </a>
-    );
-  }
-}));

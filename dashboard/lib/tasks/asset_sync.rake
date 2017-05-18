@@ -18,5 +18,5 @@ end
 
 Rake::Task['assets:precompile'].enhance do
   Rake::Task['assets:precompile_application_js'].invoke
-  Rake::Task['assets:sync'].invoke if CDO.sync_assets
+  Rake::Task['assets:sync'].invoke if CDO.cdn_enabled
 end

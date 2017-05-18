@@ -35,10 +35,6 @@
 #  teacher_prize_id           :integer
 #  teacher_bonus_prize_earned :boolean          default(FALSE)
 #  teacher_bonus_prize_id     :integer
-#  confirmation_token         :string(255)
-#  confirmed_at               :datetime
-#  confirmation_sent_at       :datetime
-#  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
@@ -59,7 +55,6 @@
 # Indexes
 #
 #  index_users_on_birthday                               (birthday)
-#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
@@ -72,16 +67,19 @@
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
-#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
 #  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
+require 'cdo/school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties, SchoolInfoDeduplicator
+  include SerializedProperties
+  include SchoolInfoDeduplicator
+  include LocaleHelper
+  include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -108,7 +106,16 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
+  serialized_attrs %w(
+    ops_first_name
+    ops_last_name
+    district_id
+    ops_school
+    ops_gender
+    races
+    using_text_mode
+    last_seen_school_info_interstitial
+  )
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -222,6 +229,15 @@ class User < ActiveRecord::Base
     return @permissions.include? permission
   end
 
+  # Revokes all escalated permissions associated with the user, including admin status and any
+  # granted UserPermission's.
+  def revoke_all_permissions
+    self.admin = nil
+    save(validate: false)
+
+    UserPermission.where(user_id: id).each(&:destroy)
+  end
+
   def district_contact?
     district_as_contact.present?
   end
@@ -287,7 +303,6 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-  has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
 
@@ -301,10 +316,6 @@ class User < ActiveRecord::Base
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
-
-  has_one :prize
-  has_one :teacher_prize
-  has_one :teacher_bonus_prize
 
   belongs_to :secret_picture
   before_create :generate_secret_picture
@@ -329,10 +340,6 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
-
-  validates_uniqueness_of :prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_bonus_prize_id, allow_nil: true
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
@@ -484,12 +491,16 @@ class User < ActiveRecord::Base
 
       # clever provides us these fields
       if user.user_type == TYPE_TEACHER
-        # if clever told us that the user is a teacher, we just trust
-        # that they are adults; we don't actually care about age
         user.age = 21
       else
-        # student or unspecified type
+        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+        # handle any necessary conversion, setting birthday from auth.info.dob. The later
+        # shenanigans ensure that we store the user's age rather than birthday.
         user.birthday = auth.info.dob
+        user_age = user.age
+        user.birthday = nil
+        user.age = user_age
       end
       user.gender = normalize_gender auth.info.gender
     end
@@ -618,10 +629,19 @@ class User < ActiveRecord::Base
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
-    user_levels_by_level = user_levels_by_level(script)
+    # some of our user_levels may be for levels within level_groups, or for levels
+    # that are no longer in this script. we want to ignore those, and only look
+    # user_levels that have matching script_levels
+    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # the script in multiple places (i.e. via level swapping) there's some potential
+    # for strange behavior.
+    levels = script.script_levels.map(&:level_ids).flatten
+    user_levels_by_level = user_levels.
+      where(script_id: script.id, level: levels).
+      index_by(&:level_id)
 
-    # Find the user level that we've most recently had progress on
-    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+    # Find the user_level that we've most recently had progress on
+    user_level = user_levels_by_level.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
@@ -772,9 +792,13 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def initial
+  def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
+  end
+
+  def initial
+    User.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -832,6 +856,9 @@ class User < ActiveRecord::Base
 
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
+  rescue ArgumentError
+    errors.add :base, I18n.t('password.reset_errors.invalid_email')
+    return nil
   end
 
   def generate_secret_picture
@@ -861,6 +888,28 @@ class User < ActiveRecord::Base
         # In that case we should also reject this user_script.
         true
       end
+    end
+  end
+
+  # This method is meant to return a bunch of data about a user's recent courses.
+  # Right now, it just looks at recent scripts, but we expect it to change in the
+  # very near future
+  # TODO: Once this data is more real, we should be writing tests for it.
+  def recent_courses
+    in_progress_and_completed_scripts.map do |user_script|
+      script_id = user_script[:script_id]
+      script_name = Script.get_from_cache(script_id)[:name]
+      {
+        id: script_id,
+        script_name: script_name,
+        courseName: data_t_suffix('script.name', script_name, 'title'),
+        description: data_t_suffix('script.name', script_name, 'description_short'),
+        # TODO: This can probably be generated on the client. If it can, we can also
+        # get rid of include Rails.application.routes.url_helpers
+        link: script_url(script_id),
+        image: "",
+        assignedSections: []
+      }
     end
   end
 
@@ -1085,12 +1134,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # @param script [Script] The script to assign.
+  # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.assigned_at = Time.now
-
-      user_script.save!
+      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
       return user_script
     end
   end
@@ -1184,5 +1234,13 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
+  end
+
+  def show_school_info_interstitial?
+    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
+  end
+
+  def school_info_suggestion?
+    !(school.blank? && full_address.blank?)
   end
 end

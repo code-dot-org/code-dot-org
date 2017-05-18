@@ -32,7 +32,7 @@ import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
-import codegen from '../codegen';
+import * as codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
@@ -55,6 +55,8 @@ import {
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
+import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -191,8 +193,8 @@ function loadLevel() {
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Studio.slowExecutionFactor = level.slowExecutionFactor || 1;
-  Studio.gridAlignedExtraPauseSteps = level.gridAlignedExtraPauseSteps || 0;
+  Studio.slowExecutionFactor = skin.slowExecutionFactor || 1;
+  Studio.gridAlignedExtraPauseSteps = skin.gridAlignedExtraPauseSteps || 0;
   Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
       utils.valueOr(level.ticksBeforeFaceSouth,
           constants.IDLE_TICKS_BEFORE_FACE_SOUTH);
@@ -200,6 +202,7 @@ function loadLevel() {
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
+  Studio.wallMapCollisions = level.wallMapCollisions || level.blockMovingIntoWalls;
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -326,7 +329,7 @@ var drawMap = function () {
   spriteLayer.setAttribute('id', 'spriteLayer');
   svg.appendChild(spriteLayer);
 
-  if (level.wallMapCollisions) {
+  if (Studio.wallMapCollisions) {
     Studio.drawMapTiles();
   }
 
@@ -705,7 +708,7 @@ var performQueuedMoves = function (i) {
     }
   }
 
-  if (level.blockMovingIntoWalls && (newX !== origX || newY !== origY)) {
+  if (Studio.wallMapCollisions && (newX !== origX || newY !== origY)) {
     if (Studio.willSpriteTouchWall(sprite, newX, newY)) {
       if (!Studio.willSpriteTouchWall(sprite, newX, origY)) {
         newY = origY;
@@ -920,7 +923,7 @@ function displayCollidables(list) {
  * z-sorting.
  */
 function sortDrawOrder() {
-  if (!level.sortDrawOrder) {
+  if (!skin.sortDrawOrder) {
     return;
   }
 
@@ -1028,8 +1031,7 @@ Studio.onTick = function () {
   Studio.clearDebugElements();
 
   if (Studio.tickCount === constants.CAPTURE_TICK_COUNT) {
-    const svg = document.getElementById('svgStudio');
-    captureThumbnailFromSvg(svg, constants.MIN_CAPTURE_INTERVAL_MS);
+    captureThumbnailFromSvg(document.getElementById('svgStudio'));
   }
 
   var animationOnlyFrame = Studio.pauseInterpreter ||
@@ -1460,21 +1462,16 @@ function checkForCollisions() {
           iYCenter,
           createActorEdgeCollisionHandler(i));
 
-      if (level.wallMapCollisions) {
+      if (Studio.wallMapCollisions) {
         if (Studio.willSpriteTouchWall(sprite, iPos.x, iPos.y)) {
-          if (level.blockMovingIntoWalls) {
-            cancelQueuedMovements(i, false);
-            cancelQueuedMovements(i, true);
+          cancelQueuedMovements(i, false);
+          cancelQueuedMovements(i, true);
 
-            // Since we never overlap the wall/obstacle when blockMovingIntoWalls
-            // is set, throttle the event so it doesn't fire every frame while
-            // attempting to move into a wall:
+          // Since we never overlap the wall/obstacle when blockMovingIntoWalls
+          // is set, throttle the event so it doesn't fire every frame while
+          // attempting to move into a wall:
 
-            Studio.throttledCollideSpriteWithWallFunctions[i]();
-
-          } else {
-            Studio.collideSpriteWith(i, 'wall');
-          }
+          Studio.throttledCollideSpriteWithWallFunctions[i]();
         } else {
           sprite.endCollision('wall');
         }
@@ -1546,7 +1543,7 @@ function checkForItemCollisions() {
       continue;
     }
 
-    if (level.wallMapCollisions) {
+    if (Studio.wallMapCollisions) {
       if (Studio.walls.willCollidableTouchWall(item, next.x, next.y)) {
         Studio.currentEventParams = { eventObject: item };
         // Allow cmdQueue extension (pass true) since this handler
@@ -2123,7 +2120,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMapCollisions ? level.wallMap : undefined;
+  return Studio.wallMapCollisions ? level.wallMap : undefined;
 }
 
 /**
@@ -2271,7 +2268,7 @@ Studio.reset = function (first) {
     x: 0,
     y: 0
   };
-  if (level.gridAlignedMovement) {
+  if (skin.gridAlignedMovement) {
     renderOffset.x = skin.gridSpriteRenderOffsetX || 0;
     renderOffset.y = skin.gridSpriteRenderOffsetY || 0;
   }
@@ -2511,6 +2508,10 @@ var displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
+    const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
+      project.isSupportedLevelType();
+    const {isSignedIn} = getStore().getState().pageConstants;
+
     studioApp().displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
@@ -2526,6 +2527,9 @@ var displayFeedback = function () {
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      // save to the project gallery instead of the legacy gallery
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting
@@ -2917,7 +2921,7 @@ Studio.execute = function () {
                                    'VALUE',
                                    ['any_item'].concat(skin.ItemClassNames));
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
-    if (level.wallMapCollisions) {
+    if (Studio.wallMapCollisions) {
       registerHandlers(handlers,
                        'studio_whenTouchObstacle',
                        'whenSpriteCollided-' +
@@ -2995,7 +2999,12 @@ Studio.execute = function () {
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
-      const hooks = codegen.evalWithEvents({Studio: api, Globals: Studio.Globals}, Studio.interpretedHandlers, code);
+      const {hooks, interpreter} = codegen.evalWithEvents(
+        {Studio: api, Globals: Studio.Globals},
+        Studio.interpretedHandlers,
+        code
+      );
+      Studio.interpreter = interpreter;
       hooks.forEach(hook => {
         if (hook.name === 'getGlobals') {
           // Expose `Studio.Globals` to success/failure functions. Setter is a no-op.
@@ -3051,7 +3060,7 @@ Studio.onPuzzleComplete = function () {
   Studio.clearEventHandlersKillTickLoop();
   Studio.movementAudioOff();
 
-  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+  if (skin.gridAlignedMovement && Studio.JSInterpreter) {
     // If we've been selecting code as we run, we need to call selectCurrentCode()
     // one last time to remove the highlight on the last line of code:
     Studio.JSInterpreter.selectCurrentCode();
@@ -4029,6 +4038,10 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.reduceScore(cmd.opts);
       break;
+    case 'displayScore':
+      studioApp().highlight(cmd.id);
+      Studio.displayScore(cmd.opts);
+      break;
     case 'setScoreText':
       studioApp().highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
@@ -4207,7 +4220,7 @@ Studio.addItem = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // Create stationary, grid-aligned items when skin.gridAlignedMovement,
   // otherwise, create randomly placed items travelling in a random direction.
   // Assumes that sprite[0] is in use, and avoids placing the item too close
   // to that sprite.
@@ -4242,7 +4255,7 @@ Studio.addItem = function (opts) {
   });
   var item = new Item(itemOptions);
 
-  if (level.blockMovingIntoWalls) {
+  if (Studio.wallMapCollisions) {
     // TODO (cpirich): just move within the map looking for open spaces instead
     // of randomly retrying random numbers
 
@@ -4552,7 +4565,6 @@ Studio.paramAsNumber = function (value) {
 Studio.adjustScore = function (value) {
 
   Studio.playerScore += value;
-  Studio.displayScore();
 
   Studio.displayFloatingScore(value);
 
@@ -4625,7 +4637,7 @@ Studio.setBackground = function (opts) {
       skinBackground.background);
 
     // Draw the tiles (again) now that we know which background we're using.
-    if (level.wallMapCollisions) {
+    if (Studio.wallMapCollisions) {
       // Changing background can cause a change in the map used internally,
       // since we might use a different map to suit this background, so set
       // the map again.
@@ -4688,6 +4700,7 @@ Studio.setMap = function (opts) {
 
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
+  Studio.wallMapCollisions = true;
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
@@ -4717,7 +4730,7 @@ Studio.setMap = function (opts) {
  * Currently a work in progress with known issues.
  */
 Studio.fixSpriteLocation = function () {
-  if (level.wallMapCollisions && level.blockMovingIntoWalls) {
+  if (Studio.wallMapCollisions) {
 
     for (var spriteIndex = 0; spriteIndex < Studio.sprite.length; spriteIndex++) {
       var sprite = Studio.sprite[spriteIndex];
@@ -4801,7 +4814,7 @@ Studio.setSprite = function (opts) {
   sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
   // Reset height and width:
-  if (level.gridAlignedMovement) {
+  if (skin.gridAlignedMovement) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
     sprite.size = sprite.width / skin.spriteWidth;
@@ -5041,7 +5054,7 @@ Studio.queueCallback = function (callback, args) {
   // Shift a CallExpression node on the stack that already has its func_,
   // arguments, and other state populated:
   args = args || [''];
-  const intArgs = args.map(arg => codegen.interpreter.createPrimitive(arg));
+  const intArgs = args.map(arg => Studio.interpreter.createPrimitive(arg));
   var state = {
     node: {
       type: 'CallExpression',
@@ -5054,12 +5067,12 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = codegen.interpreter.stateStack.unshift(state);
-    codegen.interpreter.paused_ = false;
-    while (codegen.interpreter.stateStack.length >= depth) {
-      codegen.interpreter.step();
+    const depth = Studio.interpreter.stateStack.unshift(state);
+    Studio.interpreter.paused_ = false;
+    while (Studio.interpreter.stateStack.length >= depth) {
+      Studio.interpreter.step();
     }
-    codegen.interpreter.paused_ = true;
+    Studio.interpreter.paused_ = true;
   });
   callHandler(handlerName);
 };
@@ -5516,7 +5529,7 @@ Studio.addGoal = function (opts) {
 Studio.getPlayspaceBoundaries = function (sprite) {
   var boundaries;
 
-  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !level.gridAlignedMovement) {
+  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !skin.gridAlignedMovement) {
     boundaries = {
       top:    0 - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
       right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
@@ -5551,7 +5564,7 @@ Studio.getSkin = function () {
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
-  var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
+  var distance = skin.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
   var deltaX = 0, deltaY = 0;
@@ -5574,7 +5587,7 @@ Studio.moveSingle = function (opts) {
   var projectedX = sprite.x + deltaX;
   var projectedY = sprite.y + deltaY;
 
-  if (level.blockMovingIntoWalls &&
+  if (Studio.wallMapCollisions &&
       Studio.willSpriteTouchWall(sprite, projectedX, projectedY)) {
     wallCollision = true;
 
@@ -5590,13 +5603,13 @@ Studio.moveSingle = function (opts) {
     playspaceEdgeCollision = true;
   }
 
-  if (level.gridAlignedMovement) {
+  if (skin.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new GridMoveAndCancel(
-          deltaX, deltaY, level.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor));
     } else {
       sprite.addAction(new GridMove(
-          deltaX, deltaY, level.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor));
     }
 
     Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
@@ -5632,7 +5645,7 @@ Studio.moveSingle = function (opts) {
 Studio.moveDistance = function (opts) {
   if (!opts.started) {
     opts.started = true;
-    if (level.gridAlignedMovement) {
+    if (skin.gridAlignedMovement) {
       opts.distance =
         Math.ceil(opts.distance / Studio.SQUARE_SIZE) * Studio.SQUARE_SIZE;
     }

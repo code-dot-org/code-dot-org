@@ -2018,7 +2018,6 @@ en:
         a variable \"length\" set to 180."
       Collector Demo_instruction: "Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!"
-      Collector Test_instruction: "Collect all the gold!"
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: "Assessment: Use the repeat block to collect
@@ -2667,9 +2666,9 @@ en:
         parameters. "
       Course 4 SCFL 1_instruction: "Solve this puzzle using the fewest number of
         blocks possible."
-      Course 4 SCFL 1a_instruction: "Can you get Skrat to his acorn using as few
+      Course 4 SCFL 1a_instruction: "Can you get Scrat to his acorn using as few
         blocks as possible?"
-      Course 4 SCFL 1b_instruction: "Can you get Skrat to his acorn using as few
+      Course 4 SCFL 1b_instruction: "Can you get Scrat to his acorn using as few
         blocks as possible?"
       Course 4 SCFL 2_instruction: "Solve this puzzle using the fewest number of
         blocks possible."
@@ -3557,6 +3556,9 @@ en:
         as a project that you can return to at any time."
       New Course 4 Artist Functions Level 4_instruction: "Use the \"draw a square\"
         function to draw this pattern."
+      New Gumball Project_instruction: "Create anything you like and share it!"
+      New Ice Age Project_instruction: "Create anything you like and share it!"
+      New Infinity Project_instruction: "Create anything you like and share it!"
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple
         videogame, and then figuring out how it works. You can use the arrow keys
         to move the ninja left, right and jump - try to catch the unicorn and avoid
@@ -3712,6 +3714,9 @@ en:
       Pixelation - AllTheThings 4_instruction: "This pixelation level demonstrates
         the use of the `hide_encoding_controls` option.  Notice that the level displays
         the image data in hexadecimal and does not let you change it back to binary."
+      Pixelation - AllTheThings 5_instruction: "This pixelation level demonstrates
+        the use of the \"Hide sliders\" option.  Notice that the width and height
+        sliders are not available, and the width and height fields are not editable."
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: "Something happened
         to the bits in this image! Find the error and fix it! Hint: a few extra bits
         were added. You should only need to remove some bits."
@@ -3799,6 +3804,11 @@ en:
         is nothing fancy going on here."
       Practice Create Performance Task_instruction: "Design and implement your practice
         Create Performance Task. (Click to see full instructions)"
+      Project - Final Image Scroller_instruction: "Update the image scroller to respond
+        to buttons and key presses. (Click to see full instructions)"
+      Project - Finish your canvas app_instruction: "Extend the functionality of
+        one of the effects, or create an entirely new one of your own. (Click to see
+        full instructions)"
       Project - Make Your Own Clicker Game_instruction: "Complete your clicker game!
         (Click to see full instructions)"
       Project - Your Own Multi Screen App_instruction: "Create your multi-screen
@@ -3812,6 +3822,12 @@ en:
         you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block."
+      Robot Doodle_instruction: "Project Idea: Create a picture of something familiar
+        from the real world. This requires persistence and planning!"
+      Robot Drawing_instruction: "Project Idea: Create a picture of something familiar
+        from the real world. This requires persistence and planning!"
+      Robot_instruction: "Project Idea: Create a picture of something familiar from
+        the real world. This requires persistence and planning!"
       Rocket Height Course A_instruction: "Follow the Design Recipe to create a function
         rocket-height."
       Ryan - 4-5 Bee Conditionals 2_instruction: "The bee only wants nectar right
@@ -5479,6 +5495,8 @@ en:
         bugs? I know which way I want to go, but I'm not sure how many steps to take."
       courseA_collector_loops_challenge2_instruction: "This time you can only use
         one of each arrow block. Get all of the treasure! "
+      courseA_forVideoTest_artist_instruction: "Use the `repeat` loop to add waves
+        to the water."
       courseA_maze_seq1_instruction: "Get the bird to the bad pig!"
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird
         to the pig! "
@@ -5515,8 +5533,13 @@ en:
         the background and playing a random sound when Jorge is clicked."
       courseA_playLab_events7_instruction: "Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?"
-      courseA_playlab_events_challenge1_instruction: "It's time for the Great Animal
-        Race! Make the animals move down when you press ▼. Who will run the fastest?"
+      courseA_playlab_events_challenge1_instruction: "Where are my friends hiding?
+        Can you write code to show the rest of my friends?"
+      courseA_playlab_events_challenge2_instruction: "Let's have a party! Give each
+        of my friends something to do when you click or tap them. What do the animals
+        say? What else will happen?"
+      courseA_toMakeLoopsVideo_Collector_instruction: "Loops let you do whatever
+        is inside over and over again!"
       courseA_video_events_instruction: "Need a better playlab/events combo"
       courseB_artist_loops1_instruction: "This is a new type of puzzle called \"Artist\".
         Play with the level and draw something fun."
@@ -5591,10 +5614,15 @@ en:
         bird to the pig?"
       courseB_maze_seq9_instruction: "Challenge: Move around the TNT to get the bird
         to the pig."
+      courseB_maze_seq9_challenge1_instruction: "*Where's that pig hiding now?*"
       courseB_maze_seqCold_instruction: "Challenge: Debug this level by adding blocks
         to get the bird to the pig!"
       courseB_maze_seqOld_instruction: "Go around the TNT to get the bird to the
         pig! "
+      courseB_maze_seq_challenge1_instruction: "You can only move up to four times
+        in each direction. Can you find a path before you run out of blocks?"
+      courseB_maze_seq_challenge2_instruction: "Debug this level. These are the right
+        blocks, but they're in the wrong order!"
       courseB_playLab_events1_instruction: "See if you can figure out what each block
         does."
       courseB_playlab_events2_instruction: "Have Daisy the Dragon say something when
@@ -5616,9 +5644,8 @@ en:
         to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: "Finish by playing a sound and making
         the knight vanish when he runs into the dragon!"
-      courseB_playlab_events_challenge1_instruction: "Make this game fun by setting
-        the knight to vanish when he runs into the dragon on his way to get the flags!  Play
-        a sound when they collide to make it feel more real."
+      courseB_playlab_events_challenge1_instruction: "It's time for the Great Animal
+        Race! Make the animals move down when you press ▼. Who will run the fastest?"
       courseB_playlab_events_challenge2_instruction: "Let's make the animals disappear
         when you click on them! You can also add sounds and score points to create
         a fun game of Animal Tag!"
@@ -5655,6 +5682,16 @@ en:
         the game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
         done, click \"Finish\" to share with friends. See story ideas in the hints."
+      courseC_PlayLab_events_challenge1_instruction: "Here is a new block that is
+        somewhat complicated. Use it to move Waddles back to the start when he runs
+        into the Dinosaur and when he scores a point. This will make your game more
+        challenging and fun!\r\n\r\nPlay the game and move Waddles with the arrows
+        until you score enough points."
+      courseC_PlayLab_events_challenge1_xy_blocks_instruction: "Here is a new block
+        that is somewhat complicated. Use it to move Waddles back to the start when
+        he runs into the Dinosaur and when he scores a point. This will make your
+        game more challenging and fun!\r\n\r\nPlay the game and move Waddles with
+        the arrows until you score enough points."
       courseC_artist_prog1_instruction: "Play with the blocks in the toolbox to see
         what they do!"
       courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the
@@ -5671,6 +5708,14 @@ en:
         you figure out how to draw the outline?"
       courseC_artist_prog8_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
         side is 150 pixels)"
+      courseC_artist_prog_challenge1-doghouse_instruction: "Let's build a dog house
+        for Jorge!"
+      courseC_artist_prog_challenge1_instruction: "Draw rooms for each of the animals.
+        There are many different ways to solve this puzzle, so have some fun!"
+      courseC_artist_prog_challenge2_instruction: "*Let's draw a shining star in
+        the night sky!*"
+      courseC_collector_loops_challenge2_instruction: "Let's hunt for treasure -
+        using loops! Help the collector by debugging this code. Get all of the treasure!"
       courseC_collector_prog1_instruction: "Play around with the blocks to see if
         you can help Laurel collect some treasure."
       courseC_collector_prog2_instruction: "Move Laurel to the treasure, then use
@@ -5691,6 +5736,10 @@ en:
       courseC_collector_progA_instruction: "Help Laurel collect all of the treasure."
       courseC_collector_progB_instruction: "Collect as many coins as you can to finish
         the stage!"
+      courseC_collector_prog_challenge1_instruction: "Look carefully! Can you collect
+        all *10* pieces of treasure?"
+      courseC_collector_prog_challenge2_instruction: "There are *20* pieces of treasure
+        to be found. Collect at least half to finish this challenge!"
       courseC_harvester_loops1_instruction: "Use loops to pick all of the pumpkins."
       courseC_harvester_loops10_instruction: "Collect all of the corn and all of
         the pumpkins."
@@ -5711,25 +5760,32 @@ en:
         and all of the pumpkins."
       courseC_harvester_loops9_instruction: "Collect all of the corn and all of the
         pumpkins."
-      courseC_maze_debugging1_instruction: "Fix the code to help get Skrat get to
+      courseC_harvester_loops_challenge1_instruction: "Collect all of the corn."
+      courseC_harvester_loops_challenge2_instruction: "Collect all of the lettuce.
+        Avoid the trees and fields!"
+      courseC_maze_debugging1_instruction: "Fix the code to help get Scrat get to
         the acorn."
       courseC_maze_debugging10_instruction: "Debug this level by rearranging and
         changing blocks to get me to the pig!"
-      courseC_maze_debugging2_instruction: "Use your debugging skills to get Skrat
+      courseC_maze_debugging2_instruction: "Use your debugging skills to get Scrat
         to the acorn."
-      courseC_maze_debugging3_instruction: "Remove blocks to get Skrat to the acorn!"
+      courseC_maze_debugging3_instruction: "Remove blocks to get Scrat to the acorn!"
       courseC_maze_debugging4_instruction: "Someone has their directions mixed up!
-        Can you help? Watch out for the ice blocks that blow up!"
+        Can you help?"
       courseC_maze_debugging5_instruction: "Debug this level by rearranging and changing
         blocks."
-      courseC_maze_debugging6_instruction: "Figure out what is wrong and get Skrat
+      courseC_maze_debugging6_instruction: "Figure out what is wrong and get Scrat
         to the acorn."
       courseC_maze_debugging7_instruction: "**Challenge:** Debug this level by rearranging,
         adding, and deleting blocks."
-      courseC_maze_debugging8_instruction: "Debug this level to get Skrat to the
+      courseC_maze_debugging8_instruction: "Debug this level to get Scrat to the
         acorn."
-      courseC_maze_debugging9_instruction: "Debug this level to get Skrat to the
+      courseC_maze_debugging9_instruction: "Debug this level to get Scrat to the
         acorn."
+      courseC_maze_debugging_challenge1_instruction: "*\"Am I just going around in
+        circles?\"*"
+      courseC_maze_debugging_challenge2_instruction: "*\"If I turn too often, I might
+        get dizzy! Help me reach the acorn with only four `turn` commands.\"*"
       courseC_maze_loops1_instruction: "Can you get the bird to the pig using 5 of
         the same kind of blocks?"
       courseC_maze_loops10_instruction: "You are doing great! Keep it up!"
@@ -5747,6 +5803,10 @@ en:
       courseC_maze_loops8_instruction: "Challenge: Combine ideas from the last few
         puzzles to complete this level."
       courseC_maze_loops9_instruction: "You are doing great! Keep it up!"
+      courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops
+        to find his acorn! "
+      courseC_maze_loops_challenge2_instruction: "Let's hunt for treasure - using
+        loops! Help the collector by debugging this code. Get all of the treasure!"
       courseC_maze_programming1_instruction: "For this puzzle, drag all of the blocks
         together and click \"Run\" to watch it go!"
       courseC_maze_programming2_instruction: "Drag an extra `move forward` block
@@ -5765,6 +5825,11 @@ en:
         the bad pig.\"*"
       courseC_maze_programming9_instruction: "*\"Now, help me sneak up on the pig
         any way you want to!\"*"
+      courseC_maze_programming_challenge1_instruction: "*\"The pig is hiding! Can
+        you help me find a way around?\"*"
+      courseC_maze_programming_challenge2_instruction: "Sometimes there is more than
+        one way to solve the same problem. Sometimes it's faster to go backwards
+        than it is to go forwards!"
       courseC_puppy_loops10_instruction: "You are doing great! Keep it up!"
       courseC_puppy_loops11_instruction: "You are almost there! This time, choose
         any path you like!"
@@ -5883,6 +5948,10 @@ en:
         all of the nectar and make all of the honey."
       courseD_bee_debugging9_instruction: "Help the bee fix the code to get all the
         nectar."
+      courseD_bee_debugging_challenge1_instruction: "Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of honey?"
+      courseD_bee_debugging_challenge2_instruction: "Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of honey?"
       courseD_bee_nestedLoops1_instruction: "Help the bee collect all of the nectar."
       courseD_bee_nestedLoops2_instruction: "This time, help the bee collect all
         of the nectar using as few blocks as possible."
@@ -5899,6 +5968,17 @@ en:
         flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_instruction: "Make all of the honey."
       courseD_bee_nestedLoops9_predict2_instruction: "Make all of the honey."
+      courseD_bee_nested_loops_challenge1_instruction: "Let's hunt for treasure
+        - using loops! Help the collector reach at least two piles of treasure using
+        only the blocks in your toolbox."
+      courseD_bee_nested_loops_challenge2_instruction: "Let's hunt for treasure
+        - using loops! Help the collector reach at least two piles of treasure using
+        only the blocks in your toolbox."
+      courseD_collector_debugging_challenge2_instruction: "Are you an expert of nested
+        loops? Use what you have learned so far to collect all of the treasure!"
+      courseD_collector_nested_loops_challenge2_instruction: "Let's hunt for treasure
+        - using loops! Help the collector reach at least two piles of treasure using
+        only the blocks in your toolbox. It is possible to collect all 3."
       courseD_collector_ramp10_instruction: "Help Laurel collect all of the treasure."
       courseD_collector_ramp8_instruction: "Help Laurel collect all of the treasure."
       courseD_collector_ramp9_instruction: "Help Laurel collect all of the treasure."
@@ -5976,6 +6056,14 @@ en:
         as few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few
         blocks as possible. "
+      courseD_harvester_nested_loops_challenge1-broken_instruction: "\"I need some
+        help on the farm! Help me harvest this corn using only the blocks in your
+        toolbox.\""
+      courseD_harvester_nested_loops_challenge1_instruction: "\"I need some help
+        on the farm! Help me harvest this corn using only the blocks in your toolbox.\""
+      courseD_maze_loops_challenge1_instruction: "Let's hunt for treasure - using
+        loops! Help the collector reach at least two piles of treasure using only
+        the blocks in your toolbox."
       courseD_maze_nestedLoops3_instruction: "Get the zombie to the sunflower using
         the fewest number of blocks possible."
       courseD_maze_nestedLoops4_instruction: "Get the zombie to the sunflower using
@@ -5994,7 +6082,7 @@ en:
       courseD_maze_ramp5_instruction: "Avoid the TNT."
       courseD_maze_ramp6_instruction: "\"Keep calm and help me find the bad pig.
         Otherwise I might get angry!\""
-      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
+      courseD_maze_ramp7_instruction: "Get the bird to the pig!"
       courseD_maze_until1_instruction: "Get the angry bird to the pig."
       courseD_maze_until10_instruction: "Help the zombie get to the sunflower."
       courseD_maze_until10_predict2_instruction: "Help the zombie get to the sunflower."
@@ -6237,8 +6325,10 @@ en:
         the last level to get this!"
       courseF_artist_for8_instruction: "Take the angle down to 72 degrees to get
         a spiraled pentagon."
-      courseF_artist_for9_instruction: "Use the counter inside the `set alpha` block
-        to get this faded center."
+      courseF_artist_for9_instruction: "**Inspiration:**  Use the counter inside
+        the `set alpha` block to get this faded center."
+      courseF_artist_for_Template_instruction: "Try using some of the code from the
+        last level, but turning 89 degrees to create this twisted square spiral."
       courseF_artist_fwp1_instruction: "Edit the function 'draw a square' to find
         bugs."
       courseF_artist_fwp2_instruction: "Edit the function to accept a parameter called
@@ -6309,6 +6399,23 @@ en:
       courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned
         and make your own drawing. \r\n\r\nHow can you use variables with squares,
         pentagons, or hexagons?"
+      courseF_bee_conditionals10_instruction: "Collect all of the nectar and make
+        all of the honey."
+      courseF_bee_conditionals1_predict1_instruction: "Check to see if there's a
+        flower under the cloud. If there's a flower, get nectar."
+      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see
+        if it is hiding a flower before you get nectar.  \r\n"
+      courseF_bee_conditionals3_instruction: "Help the bee collect all of the nectar.
+        \r\n\r\nYou can only collect nectar from flowers, but you can check any space
+        to see if there is a flower."
+      courseF_bee_conditionals4_instruction: "Get all of the nectar using as few
+        blocks as possible."
+      courseF_bee_conditionals5_instruction: "Collect all of the nectar using as
+        few blocks as possible"
+      courseF_bee_conditionals7_predict2_instruction: "Use the `if/else` block to
+        collect nectar at flowers and make honey at honeycomb."
+      courseF_bee_conditionals8_instruction: "Collect nectar if there is a flower.\r\nOtherwise,
+        make honey (because there is a honeycomb)."
       courseF_bee_for1_instruction: "Collect the nectar from each flower using the
         fewest blocks possible."
       courseF_bee_for10_instruction: "**Challenge:** Take what you've learned about
@@ -6330,6 +6437,25 @@ en:
         be to collect 3, 6, 9, 12, 15 nectar?"
       courseF_bee_for9_instruction: "Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible."
+      courseF_bee_functions2_instruction: "Use the `get only nectar` function to
+        collect the nectar from each flower."
+      courseF_bee_functions3_instruction: "Click \"edit\" to put code inside the
+        `only make honey` function, then use it to solve this puzzle."
+      courseF_bee_functions3a_instruction: "Write a function that gets nectar if
+        the bee is at a flower, otherwise it gets honey.  Use your function to solve
+        the puzzle!"
+      courseF_bee_functions4_instruction: "Create a new `move and check` function
+        to collect all of the nectar."
+      courseF_bee_functions5_instruction: "Now write the function to collect nectar
+        from the flowers."
+      courseF_bee_functions5a_instruction: "Use the `move and check` function to
+        collect all of the nectar."
+      courseF_bee_functions6_instruction: "Create a function and call it to collect
+        all of the nectar at each flower or make all of the honey at each honeycomb."
+      courseF_bee_functions7_instruction: "Collect all the nectar and make all the
+        honey!"
+      courseF_bee_functions8a_instruction: "Collect all the nectar or make all of
+        the honey!"
       courseF_bee_fwp2_instruction: "Pull this code into a function, then call the
         function to check this row for nectar."
       courseF_bee_fwp3_instruction: "Let's see if the function makes collecting
@@ -6351,7 +6477,10 @@ en:
       courseF_maze_ramp1_instruction: "For this puzzle, connect all of the blocks
         from the workspace together below the `when run` event and click \"Run\" to
         watch it go!"
-      courseF_maze_ramp13_instruction: "Time for one last puzzle to pull it all together!"
+      courseF_maze_ramp13_instruction: "Time for another Angry Birds puzzle to pull
+        it all together!"
+      courseF_maze_ramp15_instruction: "Use what you've learned to get the bird
+        to the pig!"
       courseF_maze_ramp2_instruction: "Drag a `repeat` block out of the toolbox and
         attach it to the `when run` event.   Place the `move forward` block inside
         to finish your code."
@@ -6372,15 +6501,21 @@ en:
         by changing the value of the variables in just two places! \r\n"
       courseF_playlab_variables2a_instruction: "Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r\n"
+      courseF_playlab_variables2b RYAN CLONE_instruction: "Insert the variable `color`
+        into the middle of a sentence by putting it into the empty slot in the `join`
+        block."
       courseF_playlab_variables2b_instruction: "Insert the variable `color` into
         the middle of a sentence by putting it into the empty slot in the `join` block."
       courseF_playlab_variables3_instruction: "The `ask` block will automatically
         store whatever the user answers into the variable of your choice."
       courseF_playlab_variables3b_instruction: "Help Kiki have a conversation with
-        Brian by using the variable `A1` in all of the places where age `12` should
+        Brian by using the variable `age` in all of the places where age `12` should
         be used. "
       courseF_playlab_variables3bEdit_instruction: "Help Kiki have a conversation
         with Brian by using the variable `A1` in all of the places where age `12`
+        should be used. "
+      courseF_playlab_variables3b_josh_instruction: "Help Kiki have a conversation
+        with Brian by using the variable `age` in all of the places where age `12`
         should be used. "
       courseF_playlab_variables4_instruction: "Can you find the correct variable
         in the toolbox to fill in the slot?"
@@ -6390,13 +6525,14 @@ en:
         in the toolbox to fill in the slot?"
       courseF_playlab_variables5b_instruction: "Put all of the variables in the correct
         place so that Pegleg's story makes sense."
-      courseF_playlab_variables6b_instruction: "We have provided some starter questions
-        and variables for you. Join them together and put them in the title screen
-        to make a fun story."
+      courseF_playlab_variables6b_instruction: "Join the variables together to make
+        a fun story that takes more than one speech bubble to tell."
       courseF_playlab_variables7b_instruction: "Create some questions and weave the
         answers together into your very own story."
       courseF_playlab_variables8b_instruction: "Use what you've learned to create
         an improv scene between the actors."
+      courseF_video_createFunctions_instruction: "We don't have a video for creating
+        functions, yet. This is a placeholder."
       course_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
         hard to understand these days!"
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech
@@ -7832,10 +7968,11 @@ en:
       scrat 20_instruction: "Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!"
-      skratDebugVideo1_instruction: "Get Skrat to the Acorn."
+      skratDebugVideo1_instruction: "Get Scrat to the Acorn."
       template test_instruction: "what's up"
       testArtistForTestK_instruction: "The Artist is trying to draw a line five times,
         but can't get it right.  Can you help?"
       test_sarah_instruction: "hi hi"
+      u3-old-drawing-view_instruction: "DO This"
       weird_playLab_instruction: "About My Robot Project! Write code so that clicking
         on each bird shows a new fact about your robot."

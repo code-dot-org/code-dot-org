@@ -74,6 +74,7 @@ en:
       CSD U3 Conditional Project_callout: {}
       CSD U3 Conditionals Apple 2_callout: {}
       CSD U3 Conditionals Apple_callout: {}
+      CSD U3 Diagonal Movement_callout: {}
       CSD U3 Direction Animations_callout: {}
       CSD U3 Direction Arrows_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
@@ -100,6 +101,8 @@ en:
       CSD U3 Sprites text debug_callout: {}
       CSD U3 Sprites text_callout: {}
       CSD U3 UP_ARROW_callout: {}
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: Change the number here
       CSD U3 Variables TEMPLATE square_callout: {}
       CSD U3 Variables make a big square_callout: {}
       CSD U3 Variables make a square_callout: {}
@@ -209,6 +212,7 @@ en:
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional_callout: {}
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
@@ -482,6 +486,12 @@ en:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: {}
       Poorva copy U3L2 Using Simple Commands_callout: {}
+      Robot Doodle_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
@@ -564,6 +574,7 @@ en:
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: {}
+      courseA_forVideoTest_artist_callout: {}
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq2_callout:
@@ -578,6 +589,7 @@ en:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
@@ -593,6 +605,7 @@ en:
       courseB_maze_seq7_callout: {}
       courseC_artist_prog1_callout: {}
       courseC_artist_prog2_callout: {}
+      courseC_collector_loops_challenge2_callout: {}
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
@@ -601,11 +614,14 @@ en:
       courseC_collector_prog9_callout: {}
       courseC_collector_progA_callout: {}
       courseC_collector_progB_callout: {}
+      courseC_collector_prog_challenge1_callout: {}
+      courseC_collector_prog_challenge2_callout: {}
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: {}
+      courseC_maze_loops_challenge2_callout: {}
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
@@ -623,16 +639,28 @@ en:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseD_artist_nestedLoops1a_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
       courseD_artist_ramp12_callout: {}
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_debugging_challenge2_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_nested_loops_challenge1_callout: {}
+      courseD_bee_nested_loops_challenge2_callout: {}
+      courseD_collector_debugging_challenge2_callout: {}
+      courseD_collector_nested_loops_challenge2_callout: {}
       courseD_collector_ramp10_callout: {}
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseD_collector_ramp9_callout: {}
+      courseD_harvester_nested_loops_challenge1-broken_callout: {}
+      courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseD_maze_ramp2_callout:
@@ -645,8 +673,7 @@ en:
       courseD_maze_ramp5_callout: {}
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
-      courseD_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseD_maze_ramp7_callout: {}
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseE_artist_functions1_callout:
@@ -756,6 +783,10 @@ en:
       courseF_artist_variables_8_callout: {}
       courseF_artist_variables_9_callout: {}
       courseF_artist_variables_FP_callout: {}
+      courseF_bee_conditionals2_callout:
+        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of the blocks you need are beneath these labels!
+      courseF_bee_conditionals5_callout:
+        courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: {}
@@ -763,6 +794,10 @@ en:
       courseF_bee_for6_callout: {}
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_functions2_callout:
+        courseF_bee_functions2_1: This block calls a function.  Click this "edit" button to see what is inside!
+      courseF_bee_functions6_callout:
+        courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp3_callout:
@@ -773,6 +808,8 @@ en:
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseF_maze_ramp13_callout: {}
+      courseF_maze_ramp15_callout:
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp4_callout:
@@ -781,7 +818,7 @@ en:
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseF_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program

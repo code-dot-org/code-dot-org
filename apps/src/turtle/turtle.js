@@ -49,17 +49,24 @@ import {
 } from '../containedLevels';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
+import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
+import {blockAsXmlNode} from '../block_utils';
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+const CANVAS_HEIGHT = 400;
+const CANVAS_WIDTH = 400;
 
-var MAX_STICKER_SIZE = 100;
+const DEFAULT_X = CANVAS_WIDTH / 2;
+const DEFAULT_Y = CANVAS_HEIGHT / 2;
+const DEFAULT_DIRECTION = 90;
 
-var JOINT_RADIUS = 4;
+const MAX_STICKER_SIZE = 100;
 
-var SMOOTH_ANIMATE_STEP_SIZE = 5;
-var FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
+const JOINT_RADIUS = 4;
+
+const SMOOTH_ANIMATE_STEP_SIZE = 5;
+const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 /**
 * Minimum joint segment length
@@ -89,6 +96,37 @@ var ELSA_DECORATION_DETAILS = [
   { x: 12, when: "before" },
   { x:  8, when: "after" },
   { x: 10, when: "after" }
+];
+
+const REMIX_PROPS = [
+  {
+    defaultValues: {
+      initialX: DEFAULT_X,
+      initialY: DEFAULT_Y,
+    },
+    generateBlock: args => blockAsXmlNode('jump_to_xy', {
+      titles: {
+        'XPOS': args.initialX,
+        'YPOS': args.initialY,
+      }
+    }),
+  }, {
+    defaultValues: {
+      startDirection: DEFAULT_DIRECTION
+    },
+    generateBlock: args => blockAsXmlNode('draw_turn', {
+      titles: {
+        'DIR': 'turnRight',
+      },
+      values: {
+        'VALUE': {
+          type: 'math_number',
+          titleName: 'NUM',
+          titleValue: args.startDirection - DEFAULT_DIRECTION,
+        },
+      },
+    }),
+  },
 ];
 
 /**
@@ -197,6 +235,7 @@ Artist.prototype.init = function (config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
+  config.prepareForRemix = Artist.prototype.prepareForRemix.bind(this);
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;
@@ -230,6 +269,68 @@ Artist.prototype.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+/**
+ * Add blocks that mimic level properties that are set on the current level
+ * but not set by default, in this case the artist's starting position and
+ * orientation.
+ */
+Artist.prototype.prepareForRemix = function () {
+  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+        this.level[prop] === undefined ||
+            this.level[prop] === group.defaultValues[prop]))) {
+    // If all of the level props we need to worry about are undefined or equal
+    // to the default value, we don't need to insert any new blocks.
+    return Promise.resolve();
+  }
+
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+  let whenRun = blocksDom.querySelector('block[type="when_run"]');
+  if (!whenRun) {
+    whenRun = blocksDocument.createElement('block');
+    whenRun.setAttribute('type', 'when_run');
+    blocksDom.appendChild(whenRun);
+  }
+  let next = whenRun.querySelector('next');
+  if (next) {
+    whenRun.removeChild(next);
+  }
+
+  const insertBeforeNext = block => {
+    if (next) {
+      block.appendChild(next);
+    }
+    next = blocksDocument.createElement('next');
+    next.appendChild(block);
+  };
+
+  for (let group of REMIX_PROPS) {
+    let customized = false;
+    for (let prop in group.defaultValues) {
+      const value = this.level[prop];
+      if (value !== undefined && value !== group.defaultValues[prop]) {
+        customized = true;
+        break;
+      }
+    }
+    if (!customized) {
+      continue;
+    }
+    const blockArgs = {};
+    for (let prop in group.defaultValues) {
+      blockArgs[prop] = this.level[prop] !== undefined ?
+          this.level[prop] :
+          group.defaultValues[prop];
+    }
+    insertBeforeNext(group.generateBlock(blockArgs));
+  }
+
+  whenRun.appendChild(next);
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  return Promise.resolve();
 };
 
 Artist.prototype.loadAudio_ = function () {
@@ -560,10 +661,10 @@ Artist.prototype.drawDecorationAnimation = function (when) {
  */
 Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
-  this.x = CANVAS_HEIGHT / 2;
-  this.y = CANVAS_WIDTH / 2;
+  this.x = DEFAULT_X;
+  this.y = DEFAULT_Y;
   this.heading = this.level.startDirection !== undefined ?
-      this.level.startDirection : 90;
+      this.level.startDirection : DEFAULT_DIRECTION;
   this.penDownValue = true;
   this.visible = true;
 
@@ -1347,6 +1448,9 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  */
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
+  const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
+    project.isSupportedLevelType() && !level.impressive;
+  const {isSignedIn} = getStore().getState().pageConstants;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',
@@ -1362,6 +1466,9 @@ Artist.prototype.displayFeedback_ = function () {
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    // save to the project gallery instead of the legacy gallery
+    saveToProjectGallery: saveToProjectGallery,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
@@ -1483,9 +1590,7 @@ Artist.prototype.checkAnswer = function () {
     this.testResults = TestResults.FREE_PLAY;
   }
 
-  if (project.getCurrentId() && project.isOwner()) {
-    this.getThumbnailPngBlob_(project.saveThumbnail);
-  }
+  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
   this.studioApp_.stopLoopingAudio('start');
@@ -1566,15 +1671,15 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
 };
 
 /**
- * Renders the artist's image as a Blob in PNG format. Relies on this.ctxImages,
+ * Renders the artist's image onto a canvas. Relies on this.ctxImages,
  * this.ctxPredraw, and this.ctxScratch to have already been drawn.
- * @param {function(Blob)} callback Function to call with the PNG Blob.
+ * @returns {HTMLCanvasElement} A canvas containing the thumbnail.
  * @private
  */
-Artist.prototype.getThumbnailPngBlob_ = function (callback) {
+Artist.prototype.getThumbnailCanvas_ = function () {
   this.clearImage_(this.ctxThumbnail);
   this.drawImage_(this.ctxThumbnail);
-  this.ctxThumbnail.canvas.toBlob(callback);
+  return this.ctxThumbnail.canvas;
 };
 
 Artist.prototype.clearImage_ = function (context) {

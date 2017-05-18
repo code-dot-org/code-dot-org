@@ -84,6 +84,8 @@ class TeacherApplicationDecisionProcessor
   def process_decision_row(row)
     application_id = row[DECISION_HEADERS[:application_id]]
     teacher_application = Pd::TeacherApplication.find(application_id)
+    decision = row[DECISION_HEADERS[:decision]]
+    puts "Processing application #{application_id}: #{decision}"
 
     primary_email = row[DECISION_HEADERS[:primary_email]]
     if primary_email.present? && primary_email != teacher_application.primary_email
@@ -93,10 +95,13 @@ class TeacherApplicationDecisionProcessor
     workshop_string = row[DECISION_HEADERS[:workshop_string]]
     program = row[DECISION_HEADERS[:program]].try(:downcase)
     regional_partner_override = row[DECISION_HEADERS[:partner_name]]
-    decision = row[DECISION_HEADERS[:decision]]
+
+    # First, update the dashboard DB with the fields from the spreadsheet
+    save_accepted_workshop teacher_application, program, workshop_string, regional_partner_override
+
     case decision
       when DECISIONS[:accept]
-        process_accept teacher_application, program, workshop_string, regional_partner_override
+        process_accept teacher_application
       when DECISIONS[:decline]
         process_decline teacher_application
       when DECISIONS[:waitlist]
@@ -152,77 +157,52 @@ class TeacherApplicationDecisionProcessor
   def process(decision, teacher_application, params = {})
     raise "Unexpected decision: #{decision}" unless @results.key? decision
 
-    # Make sure regional partner names have overrides applied before sending
-    if params.key? :regional_partner_name_s
-      params[:regional_partner_name_s] = apply_partner_name_overrides(params[:regional_partner_name_s])
-    end
+    email_params = Pd::TeacherApplicationEmailParams.new(teacher_application, params.merge({decision: decision}))
+    raise "Error: #{email_params.errors.inspect}" unless email_params.valid?
 
-    # Construct result hash, add to appropriate list, and return the new result
-    {
-      name: teacher_application.teacher_name,
-      email: teacher_application.primary_email,
-      preferred_first_name_s: teacher_application.teacher_first_name,
-      course_name_s: teacher_application.program_name
-    }.merge(params).tap do |result|
-      @results[decision] << result
+    # Construct the final params, save to results, and return
+    email_params.to_final_params.except(:decision).tap do |final_params|
+      @results[decision] << final_params
     end
   end
 
-  def teachercon?(workshop_string)
-    TEACHER_CONS.any? {|tc| workshop_string.include? tc}
-  end
-
-  def process_accept(teacher_application, program, accepted_workshop, regional_partner_override)
+  def process_accept(teacher_application)
     # There are 2 kinds of acceptance, TeacherCon (ours) and Regional Partner.
-    # We can tell based on the accepted workshop
-    if teachercon? accepted_workshop
-      process_accept_teachercon teacher_application, program, accepted_workshop, regional_partner_override
+    if teacher_application.accepted_program.teachercon?
+      process_accept_teachercon teacher_application
     else
-      process_accept_partner teacher_application, program, accepted_workshop
+      process_accept_partner teacher_application
     end
   end
 
-  def process_accept_teachercon(teacher_application, program, accepted_workshop, regional_partner_override)
-    # First, update the actual dashboard DB with this accepted workshop string.
-    save_accepted_workshop teacher_application, program, accepted_workshop, regional_partner_override
-
+  def process_accept_teachercon(teacher_application)
     regional_partner_name = teacher_application.regional_partner_name
     raise "Missing regional partner name for application id: #{teacher_application.id}" if regional_partner_name.blank?
 
-    # TeacherCon string is in the format: 'dates : location'
-    dates, location = accepted_workshop.split(':').map(&:strip)
-    params = {
-      teachercon_location_s: location,
-      teachercon_dates_s: dates,
-      regional_partner_name_s: regional_partner_name
-    }
-    process :accept_teachercon, teacher_application, params
+    process :accept_teachercon, teacher_application
   end
 
-  def process_accept_partner(teacher_application, program, accepted_workshop)
+  def process_accept_partner(teacher_application)
     # First, make sure this is a valid workshop string (lookup_workshop will raise an error otherwise)
-    workshop_info = lookup_workshop accepted_workshop
-
-    # Next, update the actual dashboard DB with this accepted workshop string.
-    save_accepted_workshop teacher_application, program, accepted_workshop
+    workshop_info = lookup_workshop teacher_application.accepted_workshop
 
     params = {
       regional_partner_name_s: workshop_info[:partner_name],
       regional_partner_contact_person_s: workshop_info[:partner_contact],
       regional_partner_contact_person_email_s: workshop_info[:partner_email],
-      workshop_registration_url_s: "https://studio.code.org/pd/workshops/#{workshop_info[:id]}/enroll",
+      workshop_id_i: workshop_info[:id],
       workshop_dates_s: workshop_info[:dates]
     }
     process :accept_partner, teacher_application, params
   end
 
   def process_waitlist(teacher_application)
-    process :waitlist, teacher_application, {teacher_application_id_s: teacher_application.id}
+    process :waitlist, teacher_application
   end
 
   def process_decline(teacher_application)
     decision = get_decline_decision(teacher_application)
-    process decision, teacher_application, {regional_partner_name_s: teacher_application.regional_partner_name}
+    process decision, teacher_application
   end
 
   def get_decline_decision(teacher_application)
@@ -236,15 +216,29 @@ class TeacherApplicationDecisionProcessor
     end
   end
 
-  def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override = nil)
-    teacher_application.update_application_hash('selectedCourse': program)
-    teacher_application.accepted_workshop = accepted_workshop
-    teacher_application.regional_partner_override = regional_partner_override if regional_partner_override.present?
-    teacher_application.save!(validate: false)
+  def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override)
+    update_fields = {}
+
+    if program != teacher_application.selected_course
+      puts "\tUpdating selected course from '#{teacher_application.selected_course}' to '#{program}'"
+      update_fields[:selected_course] = program
+    end
+
+    if accepted_workshop != teacher_application.accepted_workshop
+      puts "\tUpdating accepted workshop from '#{teacher_application.accepted_workshop}' to '#{accepted_workshop}'"
+      update_fields[:accepted_workshop] = accepted_workshop
+    end
+
+    if regional_partner_override != teacher_application.regional_partner_name
+      puts "\tUpdating regional partner from '#{teacher_application.regional_partner_name}' to '#{regional_partner_override}'"
+      update_fields[:regional_partner_override] = regional_partner_override
+    end
+
+    teacher_application.update! update_fields unless update_fields.empty?
   end
 
   def update_primary_email(teacher_application, primary_email)
-    puts "Updating primary email for application #{teacher_application.id} from #{teacher_application.primary_email} to #{primary_email}"
+    puts "\tUpdating primary email from #{teacher_application.primary_email} to #{primary_email}"
     teacher_application.update!(primary_email: primary_email)
   end
 

@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Buttons and Events'
 named_level 'Unit 5 Lesson 1 Introduction'
@@ -186,7 +187,7 @@ named_level 'Color Sleuth - Keeping score'
 level 'U5 ColorSleuth scoring pt1 vars function stub console'
 level 'U5 ColorSleuth scoring pt3 update UI for scoring'
 named_level 'Color Sleuth - How does it end?'
-level 'U5 ColorSleuth implement end game'
+named_level 'Project: Finish Color Sleuth'
 named_level 'Color Sleuth - Epilogue'
 
 stage 'Unit 5 Assessment 2', lockable: true
@@ -272,7 +273,7 @@ level 'CSPU5_U3 - Keys - Multiple Keys'
 level 'CSPU5_U3 - Keys - Buttons and Keys'
 level 'CSPU5_U3 - Keys - Functions'
 level 'CSPU5_U3 - Keys - Add Image URLs'
-level 'CSPU5_U3 - Keys - Final Image Scroller'
+named_level 'Project - Final Image Scroller'
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket'
 
 stage 'Unit 5 Assessment 3', lockable: true
@@ -325,7 +326,7 @@ level 'CSPU5_U3 - Canvas - movementFunction fix Orig'
 level 'CSPU5_U3 - Canvas - One Dot sprayPaint'
 level 'CSPU5_U3 - Canvas - sprayPaint'
 level 'CSPU5_U3 - Canvas - sketch'
-level 'CSPU5_U3 - Canvas - freePlay'
+named_level 'CSPU5_U3 - Canvas - freePlay'
 
 stage 'Unit 5 Assessment 4', lockable: true
 assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
@@ -336,3 +337,9 @@ named_level 'Practice Create Performance Task'
 
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
 assessment 'CSP Cumulative Assess A'
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'

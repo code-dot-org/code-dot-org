@@ -6,7 +6,7 @@
   -if value[:title_s] == 'Convince your school or state' && ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
     -url = "/files/states/#{state}.pdf"
 
-  .col-18-promote-tools
+  .promote-tools-resources
     #block.left
       %a{:href=>url, :target=>'_blank'}
         %i{:class=>"fa fa-file-#{value[:icon_s]}-o", :style => 'margin-bottom:10px;' }

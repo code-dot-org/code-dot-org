@@ -885,7 +885,7 @@ Maze.execute = function (stepMode) {
           codegen.evalWith(code, {
             Maze: api,
             executionInfo: Maze.executionInfo
-          }, true);
+          });
 
           // Sort static grids based on trial result
           Maze.onExecutionFinish();
@@ -917,7 +917,7 @@ Maze.execute = function (stepMode) {
       codegen.evalWith(code, {
         Maze: api,
         executionInfo: Maze.executionInfo
-      }, true);
+      });
     }
 
     Maze.onExecutionFinish();

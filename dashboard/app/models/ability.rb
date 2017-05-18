@@ -11,10 +11,6 @@ class Ability
     cannot :read, [
       Script, # see override below
       ScriptLevel, # see override below
-      PrizeProvider,
-      Prize,
-      TeacherPrize,
-      TeacherBonusPrize,
       :reports,
       User,
       UserPermission,
@@ -60,6 +56,7 @@ class Ability
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :read, SectionHiddenStage
       can :create, Pd::TeacherApplication, user_id: user.id
+      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
 
       if user.teacher?
         can :read, Section, user_id: user.id
@@ -120,6 +117,16 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
       end
+
+      if user.permission?(UserPermission::WORKSHOP_ADMIN)
+        can :manage, Pd::Workshop
+        can :manage, Pd::WorkshopMaterialOrder
+        can :manage, Pd::CourseFacilitator
+        can :manage, :workshop_organizer_survey_report
+        can :manage, :pd_workshop_summary_report
+        can :manage, :pd_teacher_attendance_report
+        can :manage, Pd::TeacherApplication
+      end
     end
 
     # Override Script and ScriptLevel.
@@ -154,6 +161,7 @@ class Ability
       can :manage, [
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel
       ]
@@ -176,6 +184,7 @@ class Ability
         Activity,
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel,
         UserLevel,

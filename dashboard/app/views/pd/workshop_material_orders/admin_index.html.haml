@@ -1,36 +1,41 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
 %h1 Workshop Material Orders
 
-- if @counts
-  %h3 Stats
-  %table.table.table-hover.table-condensed
-    %thead
-      - @counts.keys.each do |key|
-        %td= key.to_s.titleize
-    %tbody
-      %tr
-        - @counts.values.each do |value|
-          %td= value
+#workshop-container
 
-%h3 Orders
-%table.table.table-hover.table-condensed
-  %thead
-    %td Created
-    %td Email
-    %td Name
-    %td Status
-    %td Estimated Ship
-    %td Estimated Delivery
-    %td Tracking
-  %tbody
-    - @workshop_material_orders.each do |order|
-      %tr
-        %td= order.created_at.to_date
-        %td= order.enrollment.email
-        %td= order.enrollment.full_name
-        %td= order.order_status
-        %td= order.expected_ship_date
-        %td= order.expected_delivery_date
-        %td
-          - if order.tracking_id
-            %a{href: order.tracking_url, target: '_blank'}
-              = order.tracking_id
+  - if @counts
+    %h3 Stats
+    %table.table.table-hover.table-condensed.table-auto-width
+      %thead
+        - @counts.keys.each do |key|
+          %th= key.to_s.titleize
+      %tbody
+        %tr
+          - @counts.values.each do |value|
+            %td= value
+
+  %h3 Orders
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th Created
+      %th Email
+      %th Name
+      %th Status
+      %th Estimated Ship
+      %th Estimated Delivery
+      %th Tracking
+    %tbody
+      - @workshop_material_orders.each do |order|
+        %tr
+          %td= order.created_at.to_date
+          %td= order.enrollment.email
+          %td= order.enrollment.full_name
+          %td= order.order_status
+          %td= order.expected_ship_date
+          %td= order.expected_delivery_date
+          %td
+            - if order.tracking_id
+              %a{href: order.tracking_url, target: '_blank'}
+                = order.tracking_id

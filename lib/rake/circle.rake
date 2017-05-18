@@ -19,6 +19,9 @@ require 'json'
 # Run all unit/integration tests, not just a subset based on changed files.
 RUN_ALL_TESTS_TAG = 'test all'.freeze
 
+# Only run apps tests on container 0
+RUN_APPS_TESTS_TAG = 'test apps'.freeze
+
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
@@ -50,6 +53,10 @@ namespace :circle do
     if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
+    elsif CircleUtils.tagged?(RUN_APPS_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
+      RakeUtils.rake_stream_output 'test:apps'
+      RakeUtils.rake_stream_output 'test:changed:all_but_apps'
     else
       RakeUtils.rake_stream_output 'test:changed'
     end
@@ -74,7 +81,7 @@ namespace :circle do
       start_sauce_connect
       RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
     end
-    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -82,7 +89,7 @@ namespace :circle do
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
           " --feature #{container_features.join(',')}" \
           " --pegasus localhost.code.org:3000" \
-          " --dashboard localhost.studio.code.org:3000" \
+          " --dashboard localhost-studio.code.org:3000" \
           " --circle" \
           " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
           " --parallel #{use_saucelabs ? 16 : 8}" \
@@ -96,7 +103,7 @@ namespace :circle do
             " --feature #{container_eyes_features.join(',')}" \
             " --config ChromeLatestWin7,iPhone" \
             " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost.studio.code.org:3000" \
+            " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
             " --parallel 10" \
             " --retry_count 1" \
@@ -131,7 +138,7 @@ def browsers_to_run
 end
 
 def test_eyes?
-  CircleUtils.tagged?(TEST_EYES)
+  !CircleUtils.tagged?(SKIP_EYES)
 end
 
 def start_sauce_connect
@@ -139,7 +146,7 @@ def start_sauce_connect
   RakeUtils.system_stream_output 'tar -xzf sc-build-3265-linux.tar.gz'
   Dir.chdir(Dir.glob('sc-build-3265')[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
-    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"
+    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org --wait-tunnel-shutdown && break; done"
   end
 end
 

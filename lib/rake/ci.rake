@@ -42,7 +42,7 @@ namespace :ci do
   # Update CloudFront distribution with any changes to the http cache configuration.
   # If there are changes to be applied, the update can take 15 minutes to complete.
   task :cloudfront do
-    if CDO.daemon && CDO.chef_managed
+    if CDO.daemon && CDO.chef_managed && !rack_env?(:adhoc)
       ChatClient.wrap('Update CloudFront') do
         AWS::CloudFront.create_or_update
       end

@@ -22,6 +22,8 @@ let webLab_ = null;
 let onProjectChangedCallback_ = null;
 // the registered onBrambleReady callback function
 let onBrambleReadyCallback_ = null;
+// the registered onInspectorChanged callback function
+let onInspectorChangedCallback_ = null;
 // the set of recent changes since the last syncFilesWithBramble() called
 let _recentBrambleChanges;
 // the version id of the project at the time of the last bramble file sync
@@ -339,7 +341,7 @@ function addFileHTML() {
   brambleProxy_.addNewFile({
     basenamePrefix: 'new',
     ext: 'html',
-    contents: '<!DOCTYPE html>\n<html>\n<body>\n\n</body>\n</html>',
+    contents: '<!DOCTYPE html>\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n  </body>\n</html>',
   }, err => {
     if (err) {
       throw err;
@@ -397,6 +399,10 @@ function onProjectChanged(callback) {
 
 function onBrambleReady(callback) {
   onBrambleReadyCallback_ = callback;
+}
+
+function onInspectorChanged(callback) {
+  onInspectorChangedCallback_ = callback;
 }
 
 function startInitialFileSync(callback, forceResetToStartSources) {
@@ -477,6 +483,7 @@ const brambleHost = {
   enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
   onBrambleReady: onBrambleReady,
+  onInspectorChanged: onInspectorChanged,
   startInitialFileSync: startInitialFileSync,
   syncFiles: syncFiles,
 };
@@ -489,7 +496,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble_0.1.13/index.html?disableExtensions=bramble-move-file",
+    url: "//downloads.computinginthecore.org/bramble_0.1.15/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,
@@ -501,6 +508,12 @@ function load(Bramble) {
 
   // Event listeners
   Bramble.once("ready", function (bramble) {
+
+    function handleInspectorChange(object) {
+      if (onInspectorChangedCallback_) {
+        onInspectorChangedCallback_(object && object.enabled);
+      }
+    }
 
     function handleFileChange(path) {
       // Remove leading project root path
@@ -536,6 +549,7 @@ function load(Bramble) {
       }
     }
 
+    bramble.on("inspectorChange", handleInspectorChange);
     bramble.on("fileChange", handleFileChange);
     bramble.on("fileDelete", handleFileDelete);
     bramble.on("fileRename", handleFileRename);

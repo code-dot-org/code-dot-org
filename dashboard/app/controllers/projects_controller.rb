@@ -1,7 +1,7 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
@@ -14,6 +14,27 @@ class ProjectsController < ApplicationController
     },
     playlab: {
       name: 'New Play Lab Project'
+    },
+    starwars: {
+      name: 'New Star Wars Project'
+    },
+    iceage: {
+      name: 'New Ice Age Project'
+    },
+    infinity: {
+      name: 'New Infinity Project'
+    },
+    gumball: {
+      name: 'New Gumball Project'
+    },
+    minecraft_code: {
+      name: 'New Minecraft Code Connection Project'
+    },
+    minecraft_adventurer: {
+      name: 'New Minecraft Adventurer Project'
+    },
+    minecraft_designer: {
+      name: 'New Minecraft Designer Project'
     },
     applab: {
       name: 'New App Lab Project',
@@ -44,11 +65,16 @@ class ProjectsController < ApplicationController
 
   @@project_level_cache = {}
 
+  # GET /projects
   def index
     if current_user.try(:admin)
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
       return
     end
+  end
+
+  # GET /projects/public
+  def public
   end
 
   # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
@@ -86,11 +112,12 @@ class ProjectsController < ApplicationController
     redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
-      {
+      data: {
         name: 'Untitled Project',
         useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
-      }
+      },
+      type: params[:key]
     )
   end
 
@@ -170,9 +197,9 @@ class ProjectsController < ApplicationController
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
-      nil,
-      src_channel_id,
-      use_firebase
+      src: src_channel_id,
+      use_firebase: use_firebase,
+      type: params[:key]
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id

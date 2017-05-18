@@ -3,7 +3,6 @@
 # Table name: pd_workshops
 #
 #  id                  :integer          not null, primary key
-#  workshop_type       :string(255)      not null
 #  organizer_id        :integer          not null
 #  location_name       :string(255)
 #  location_address    :string(255)
@@ -20,6 +19,8 @@
 #  processed_at        :datetime
 #  deleted_at          :datetime
 #  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
@@ -29,12 +30,6 @@
 
 class Pd::Workshop < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
-
-  TYPES = [
-    TYPE_PUBLIC = 'Public',
-    TYPE_PRIVATE = 'Private',
-    TYPE_DISTRICT = 'District'
-  ]
 
   COURSES = [
     COURSE_CSF = 'CS Fundamentals',
@@ -56,6 +51,15 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CSD => 'CS Discoveries',
     COURSE_COUNSELOR => 'Counselor',
     COURSE_ADMIN => 'Administrator'
+  }
+
+  COURSE_URLS_MAP = {
+    COURSE_CSF => CDO.code_org_url('/educate/curriculum/elementary-school'),
+    COURSE_CSP => CDO.code_org_url('/educate/csp'),
+    COURSE_CSD => CDO.code_org_url('/educate/csd'),
+    COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
+    COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
+    COURSE_ECS => 'http://www.exploringcs.org/'
   }
 
   STATES = [
@@ -141,7 +145,6 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CS_IN_S => 'CS in Science Support'
   }.freeze
 
-  validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -290,6 +293,10 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_NAMES_MAP[course]
   end
 
+  def course_target
+    COURSE_URLS_MAP[course]
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
@@ -305,6 +312,7 @@ class Pd::Workshop < ActiveRecord::Base
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     self.started_at = Time.zone.now
+    sessions.each(&:assign_code)
     self.section = Section.create!(
       name: friendly_name,
       user_id: organizer_id,
@@ -319,6 +327,7 @@ class Pd::Workshop < ActiveRecord::Base
   def end!
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
+    sessions.each(&:remove_code)
     save!
   end
 
@@ -466,11 +475,15 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
+  end
+
+  def local_summer?
+    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
   end
 end

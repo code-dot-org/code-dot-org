@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Blocks like this: <xml>  <block type=\\\"simple_move_up_right\\\"/></xml> will let your artist move at a slant!\",\"hint_id\":\"courseB_artist_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71c1587b299877e9dea73c2447b15bec/courseB_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When you finish one of the dice, `jump` to the next!\",\"hint_id\":\"courseB_artist_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e90583186a5d5d1e42438b5228fd37e8/courseB_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to `move` or `jump` over some of the same lines twice. \",\"hint_id\":\"courseB_artist_loops_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e9f3e1e41f45c4e8e570f7829864be55/courseB_artist_loops_challenge1.mp3\"}]",
-    "ideal": "11",
+    "ideal": "0",
     "instructions_important": "false",
     "images": "[\r\n\r\n]\r\n\r\n",
     "markdown_instructions": "It's time to toss the dice! Can you help me draw these?",

@@ -114,7 +114,7 @@ module GitHub
   #   recent commit to branch.
   def self.sha(branch)
     response = Octokit.branch(REPO, branch)
-    response.commit.sha[0, 7]
+    response.commit.sha[0..7]
   end
 
   # Opens a browser URL with a candidate pull request merging head into base.
@@ -130,7 +130,7 @@ module GitHub
       "?expand=1&title=#{CGI.escape title}"
   end
 
-  private_class_method def self.open_url(url)
+  def self.open_url(url)
     # Based on http://stackoverflow.com/a/14053693/5000129
     if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
       system "sensible-browser \"#{url}\""

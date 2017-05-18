@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "instructions": "Use what you've learned to get the bird to the pig!",
-    "ideal": "8",
+    "ideal": "10",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -51,7 +51,7 @@
           <title name="DIR">turnRight</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>

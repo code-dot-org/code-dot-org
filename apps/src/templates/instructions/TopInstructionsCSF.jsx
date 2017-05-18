@@ -717,7 +717,7 @@ module.exports = connect(function propsFromStore(state) {
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     feedback: state.instructions.feedback,
-    isRtl: state.pageConstants.localeDirection === 'rtl',
+    isRtl: state.isRtl,
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
     failureAvatar: state.pageConstants.failureAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,

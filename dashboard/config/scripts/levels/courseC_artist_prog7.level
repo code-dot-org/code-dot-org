@@ -30,12 +30,15 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "discard_background": "false",
     "images": "[{\"filename\": \"https://images.code.org/6a7dceb79594082a2039a398edc86b93-image-1475812516200.png\", \"position\": [0,0]}]",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Every angle is either 45 or 90 degrees.\",\"hint_id\":\"courseC_artist_prog7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/16a2a43f17ea2453327995ed0255a5c5/courseC_artist_prog7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does it work at the first step?  \\nHow about the second?  \\nWhere does it go wrong?\",\"hint_id\":\"courseC_artist_prog7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e4509430772007d7bd4587c42c8752b7/courseC_artist_prog7.mp3\"}]",
     "ideal": "12",
     "instructions_important": "false",
+    "video_key": "CSF_artist_angles",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -154,5 +157,102 @@
         </block>
       </xml>
     </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="alpha" inline="true" id="alpha">
+                  <value name="VALUE">
+                    <block type="math_number_dropdown">
+                      <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">70</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_width_inline">
+                      <title name="WIDTH">12</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false" movable="false" editable="false">
+          <next>
+            <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">150</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown" deletable="false" movable="false" editable="false">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">45</title>
+                  <next>
+                    <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">75</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown" deletable="false" movable="false" editable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                          <next>
+                            <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">75</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown" deletable="false" movable="false" editable="false">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="45,60,90,120,180">45</title>
+                                  <next>
+                                    <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">150</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant_dropdown" deletable="false" movable="false" editable="false">
+                                          <title name="DIR">turnRight</title>
+                                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                                          <next>
+                                            <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">75</title>
+                                              <next>
+                                                <block type="draw_turn_by_constant_dropdown" deletable="false" movable="false" editable="false">
+                                                  <title name="DIR">turnRight</title>
+                                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                                  <next>
+                                                    <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
+                                                      <title name="DIR">moveForward</title>
+                                                      <title name="VALUE">75</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
   </blocks>
 </Artist>

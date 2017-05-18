@@ -8,11 +8,18 @@
  */
 import $ from 'jquery';
 
+import { getStore } from '@cdo/apps/code-studio/redux';
+import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
+const store = getStore();
+store.dispatch(setRtlFromDOM());
+
 // Shim window.console to be safe in IE
 require('@cdo/apps/code-studio/consoleShim')(window);
 
 var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
+import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -95,3 +102,6 @@ activateReferenceAreaOnLoad();
 // CDOSounds is currently used in a few haml files so we need
 // to put it on window :(
 window.CDOSounds = Sounds.getSingleton();
+
+checkForUnsupportedBrowsersOnLoad();
+initHamburger();

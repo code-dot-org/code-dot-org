@@ -2,64 +2,76 @@ import React from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
+import placeholderImage from './placeholder.jpg';
 
 const styles = {
   card: {
     border: '1px solid #bbbbbb',
     borderRadius: 2,
-    width: 215,
+    width: 220,
     backgroundColor: color.white
   },
   title: {
     paddingLeft: 15,
     paddingRight: 10,
-    paddingTop: 10,
+    paddingTop: 18,
     paddingBottom: 5,
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
-    backgroundColor: color.white,
-    color: color.gray
+    color: color.charcoal,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    height: 18
+  },
+  titleLink: {
+    color: color.charcoal
   },
   lastEdit: {
     paddingLeft: 15,
     paddingRight: 10,
     paddingBottom: 10,
-    fontSize: 12,
+    fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    backgroundColor: color.white,
-    color: color.gray
+    color: color.charcoal
   },
   studentName: {
     paddingLeft: 15,
     paddingRight: 10,
     paddingTop: 5,
-    fontSize: 12,
+    fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    backgroundColor: color.white,
-    color: color.gray
+    color: color.charcoal
   },
   ageRange: {
     paddingLeft: 10,
     paddingTop: 5,
-    fontSize: 12,
+    fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    backgroundColor: color.white,
-    color: color.gray
+    color: color.charcoal
   },
   firstInitial: {
     paddingTop: 5,
-    fontSize: 12,
+    fontSize: 11,
     paddingLeft: 15,
     fontFamily: '"Gotham", sans-serif',
-    backgroundColor: color.white,
-    color: color.gray
+    color: color.charcoal
   },
   arrowIcon: {
     paddingRight: 8
   },
   thumbnail: {
-    width: 215,
-    height: 150
+    width: 220,
+    height: 150,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden'
+  },
+  image:{
+    flexShrink: 0,
+    minWidth: '100%',
+    minHeight: '100%'
   },
   actionBox: {
     width: 160,
@@ -73,7 +85,7 @@ const styles = {
     position: "absolute"
   },
   actionText: {
-    fontSize: 12,
+    fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
     color: color.gray
   },
@@ -81,11 +93,14 @@ const styles = {
     color: color.red,
     borderTop: '1px solid lightGray',
     paddingTop: 10,
-    fontSize: 12
+    fontSize: 11
   },
   xIcon: {
     paddingRight: 5
   },
+  bold: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
 };
 
 const ProjectCard = React.createClass({
@@ -111,9 +126,10 @@ const ProjectCard = React.createClass({
   renderStudentName() {
   // The student's name should only be visible in the classroom gallery.
     if (this.props.currentGallery === 'class'){
-      return (
+      return this.props.projectData.studentName && (
         <div style={styles.studentName}>
-          {i18n.by()}: {this.props.projectData.studentName}
+          {i18n.by()}:
+          <span style={styles.bold} > {this.props.projectData.studentName}</span>
         </div>
       );
     }
@@ -121,32 +137,24 @@ const ProjectCard = React.createClass({
 
   renderFirstInitial() {
     if (this.props.currentGallery === 'public'){
-      return (
-        <span style={styles.firstInitial}>
-          {i18n.by()}: {this.props.projectData.studentName[0]}
+      // The server provides only a single letter for the student name in the
+      // public gallery for privacy reasons.
+      return this.props.projectData.studentName && (
+          <span style={styles.firstInitial}>
+          {i18n.by()}:
+          <span style={styles.bold} > {this.props.projectData.studentName}</span>
         </span>
-      );
+        );
     }
   },
 
-  checkStudentAge(studentAge) {
-    const ageCutoffs = [4, 8, 13, 18]; //<--- ask Poorva, these might change
-    let ageCutoff = 0;
-
-    for (let i = 0; i < ageCutoffs.length; i++) {
-      if (studentAge >= ageCutoffs[i]) {
-        ageCutoff = ageCutoffs[i];
-      }
-    }
-    return ageCutoff;
-  },
-
-  renderStudentAgeRange(studentAge) {
+  renderStudentAgeRange(studentAgeRange) {
   // The student's age range should only be visible in the public gallery.
     if (this.props.currentGallery === 'public') {
-      return (
+      return studentAgeRange && (
         <span style={styles.ageRange}>
-          {i18n.age()}: {this.checkStudentAge(studentAge)}+
+          {i18n.age()}:
+          <span style={styles.bold} > {studentAgeRange}</span>
         </span>
       );
     }
@@ -196,28 +204,45 @@ const ProjectCard = React.createClass({
     }
   },
 
+  renderProjectName(url, name) {
+    return (
+      <a style={styles.titleLink} href={url} target="_blank">
+        <div style={styles.title}>{name}</div>
+      </a>
+    );
+  },
+
   render() {
     const { projectData } = this.props;
+
+    const {type, channel, name} = this.props.projectData;
+    const url = `/projects/${type}/${channel}/view`;
 
     return (
       <div>
         <div style={styles.card}>
-          <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
-
-          <div style={styles.title}>
-            {projectData.projectName}
+          <div style={styles.thumbnail} >
+            <a href={url} style={{width: '100%'}}>
+              <img
+                src={projectData.thumbnailUrl || placeholderImage}
+                style={styles.image}
+              />
+            </a>
           </div>
+
+          {this.renderProjectName(url, name)}
 
           {this.renderStudentName()}
 
           <span>
             {this.renderFirstInitial()}
-            {this.renderStudentAgeRange(projectData.studentAge)}
+            {this.renderStudentAgeRange(projectData.studentAgeRange)}
           </span>
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            {i18n.lastEdited()}: {this.dateFormatter(projectData.updatedAt)} at {this.timeFormatter(projectData.updatedAt)}
+            {i18n.published()}:
+            <span style={styles.bold} > {this.dateFormatter(projectData.publishedAt)} at {this.timeFormatter(projectData.publishedAt)}</span>
           </div>
         </div>
 

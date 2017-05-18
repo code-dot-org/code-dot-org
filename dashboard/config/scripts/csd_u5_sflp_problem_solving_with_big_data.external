@@ -1,14 +1,9 @@
 name 'CSD-U5-SFLP Problem Solving with Big Data'
-display_name 'Unit 5 Lesson 13 Overview'
-css 'unplugged'
+display_name 'Level Overview'
 markdown <<MARKDOWN
-# The Internet - Data and Society: Lesson 13 - Problem Solving with Big Data
+# Overview
 
-## Background
-
-Explore some examples of how large-scale data collection has allowed problems to be solved in new and interesting ways.
-
-# Resources
+## Resources
 
 * [Data in the Real World](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=doc))
 MARKDOWN

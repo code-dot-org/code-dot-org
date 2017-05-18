@@ -36,12 +36,16 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
+    CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
+
     AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'.freeze
 
     class << self
+      attr_accessor :daemon
+
       def branch
         ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
       end
@@ -89,7 +93,10 @@ module AWS
             change_set = {changes: []}
             loop do
               sleep 1
-              change_set = cfn.describe_change_set(change_set_name: change_set_id)
+              change_set = cfn.describe_change_set(
+                change_set_name: change_set_id,
+                stack_name: stack_name
+              )
               break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
             end
             change_set.changes.each do |change|
@@ -102,7 +109,10 @@ module AWS
             CDO.log.info 'No changes' if change_set.changes.empty?
 
           ensure
-            cfn.delete_change_set(change_set_name: change_set_id)
+            cfn.delete_change_set(
+              change_set_name: change_set_id,
+              stack_name: stack_name
+            )
           end
         end
       end
@@ -143,9 +153,15 @@ module AWS
       def stack_options(template)
         {
           stack_name: stack_name,
-          capabilities: ['CAPABILITY_IAM'],
           parameters: parameters(template)
-        }.merge(string_or_url(template))
+        }.merge(string_or_url(template)).tap do |options|
+          if %w[IAM lambda].include? stack_name
+            options[:capabilities] = %w[
+              CAPABILITY_IAM
+              CAPABILITY_NAMED_IAM
+            ]
+          end
+        end
       end
 
       def create_or_update
@@ -154,7 +170,12 @@ module AWS
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
         options = stack_options(template)
-        options[:on_failure] = 'DO_NOTHING' if action == :create
+        if action == :create
+          options[:on_failure] = 'DO_NOTHING'
+          if daemon
+            options[:role_arn] = "arn:aws:iam::#{Aws::STS::Client.new.get_caller_identity.account}:role/CloudFormationRole"
+          end
+        end
         begin
           updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
         rescue Aws::CloudFormation::Errors::ValidationError => e
@@ -214,7 +235,7 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{branch}.tar.gz",
+                key: "#{CHEF_KEY}/#{branch}.tar.gz",
                 body: tmp.read
               )
             end
@@ -225,7 +246,7 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: "chef/bootstrap-#{stack_name}.sh",
+          key: "#{CHEF_KEY}/bootstrap-#{stack_name}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
@@ -328,31 +349,37 @@ module AWS
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
       LAMBDA_ZIPFILE_MAX = 4096
 
-      # Inline a javascript file into a CloudFormation template for a Lambda function resource.
+      # Inline a single javascript file into a CloudFormation template for a Lambda function resource.
       # Raises an error if the minified file is too large.
       # Use UglifyJS to compress code if `uglify` parameter is set.
       def js(filename, uglify=true)
         str = File.read(aws_dir('cloudformation', filename))
-        str = Uglifier.compile(str) if uglify
+        if uglify
+          str = Dir.chdir(aws_dir('cloudformation')) do
+            RakeUtils.npm_install
+            `$(npm bin)/uglifyjs --compress --mangle -- #{filename}`
+          end
+        end
         if str.length > LAMBDA_ZIPFILE_MAX
           raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
         end
-        file(str, filename)
+        {'Fn::Sub': erb_eval(str, filename)}.to_json
       end
 
-      def js_zip
+      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
+      def js_zip(files)
         hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
           RakeUtils.npm_install '--production'
           # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
           hash = Digest::MD5.hexdigest(
-            Dir['*.js', 'node_modules/**/*'].
+            Dir[*files, 'node_modules/**/*'].
               select(&File.method(:file?)).
               sort.
               map(&Digest::MD5.method(:file)).
               join
           )
-          `zip -qr - *.js node_modules`
+          `zip -qr - #{files.join(' ')} node_modules`
         end
         key = "lambdajs-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil

@@ -6,10 +6,18 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @admin = create(:admin)
+    @workshop_admin = create(:workshop_admin)
     @organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
 
-    @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
+    @workshop = create(
+      :pd_workshop,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      on_map: true,
+      funded: true
+    )
+
     @standalone_workshop = create(:pd_workshop)
   end
 
@@ -170,10 +178,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Show
 
   test 'admins can view workshops' do
-    sign_in @admin
-    get :show, params: {id: @workshop.id}
-    assert_response :success
-    assert_equal @workshop.id, JSON.parse(@response.body)['id']
+    [@admin, @workshop_admin].each do |admin|
+      sign_in admin
+      get :show, params: {id: @workshop.id}
+      assert_response :success
+      assert_equal @workshop.id, JSON.parse(@response.body)['id']
+      sign_out admin
+    end
   end
 
   test 'workshop organizers can view their workshops' do
@@ -548,7 +559,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_end = session_start + 8.hours
     {
       location_address: 'Seattle, WA',
-      workshop_type: Pd::Workshop::TYPE_PUBLIC,
+      on_map: true,
+      funded: true,
       course: Pd::Workshop::COURSE_CSF,
       capacity: 10,
       sessions_attributes: [

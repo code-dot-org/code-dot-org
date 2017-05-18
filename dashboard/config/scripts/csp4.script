@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'What is Big Data?'
 named_level 'Unit 4 Lesson 1 Introduction'
@@ -72,3 +73,9 @@ named_level 'Unit 4 Lesson 9 Introduction'
 
 stage 'Unit 4 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC'
+
+stage 'CSP Student Post-Course Survey'
+assessment 'CSP post-assessment survey'
+
+stage 'Participate in a longitudinal study!'
+named_level 'Click Here!'

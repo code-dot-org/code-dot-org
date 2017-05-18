@@ -3,6 +3,9 @@ import logToCloud from '../logToCloud';
 import {singleton as studioApp} from '../StudioApp';
 import {PaneButton} from './PaneHeader';
 import msg from '@cdo/locale';
+import UserPreferences from '../lib/util/UserPreferences';
+import experiments from '../util/experiments';
+import project from '../code-studio/initApp/project';
 
 const BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 const BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -26,63 +29,28 @@ const styles = {
   },
 };
 
-export default class ShowCodeToggle extends Component {
+const commonProps = {
+  hasFocus: PropTypes.bool,
+  isRtl: PropTypes.bool,
+  isMinecraft: PropTypes.bool,
+};
+
+
+class ShowCodeButton extends Component {
   static propTypes = {
-    hasFocus: PropTypes.bool,
-    isRtl: PropTypes.bool,
-    isMinecraft: PropTypes.bool,
-    onToggle: PropTypes.func,
+    ...commonProps,
+    onClick: PropTypes.func,
+
+    hidden: PropTypes.bool,
+    showingBlocks: PropTypes.bool,
+    showCodeLabel: PropTypes.string,
+    showBlocksLabel: PropTypes.string,
   };
 
-  state = {
-    showingBlocks: true,
+  static defaultProps = {
+    showBlocksLabel: msg.showBlocksHeader(),
+    showCodeLabel: msg.showCodeHeader(),
   };
-
-  afterInit = () => {
-    this.forceUpdate();
-  };
-
-  componentWillMount() {
-    if (studioApp().editor) {
-      this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
-    }
-
-    studioApp().on('afterInit', this.afterInit);
-  }
-
-  componentWillUnmount() {
-    studioApp().removeListener('afterInit', this.afterInit);
-  }
-
-  onClick = () => {
-    if (studioApp().editCode) {
-      // are we trying to toggle from blocks to text (or the opposite)
-      let fromBlocks = studioApp().editor.currentlyUsingBlocks;
-
-      let result;
-      try {
-        result = studioApp().editor.toggleBlocks();
-      } catch (err) {
-        result = {error: err, nonDropletError: true};
-      }
-      if (result && result.error) {
-        logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
-          dropletError: !result.nonDropletError,
-          fromBlocks,
-        });
-        studioApp().showToggleBlocksError();
-      } else {
-        studioApp().onDropletToggle();
-        this.setState({showingBlocks: studioApp().editor.currentlyUsingBlocks});
-      }
-    } else {
-      studioApp().showGeneratedCode();
-    }
-
-    if (this.props.onToggle) {
-      this.props.onToggle(studioApp().editCode ? studioApp().editor.currentlyUsingBlocks : true);
-    }
-  }
 
   render() {
     const blocksGlyphImage = (
@@ -91,26 +59,141 @@ export default class ShowCodeToggle extends Component {
         style={[
           styles.blocksGlyph,
           this.props.isRtl && styles.blocksGlyphRtl,
-          this.state.showingBlocks ? {display: 'none'} : {display: 'inline-block'},
+          this.props.showingBlocks ? {display: 'none'} : {display: 'inline-block'},
         ]}
       />
     );
-    let label = msg.showCodeHeader();
-    if (studioApp().editCode) {
-      label = this.state.showingBlocks ? msg.showTextHeader() : msg.showBlocksHeader();
-    }
     return (
       <PaneButton
         id="show-code-header"
         hiddenImage={blocksGlyphImage}
-        iconClass={this.state.showingBlocks ? "fa fa-code" : ""}
-        label={label}
+        iconClass={this.props.showingBlocks ? "fa fa-code" : ""}
+        label={this.props.showingBlocks ? this.props.showCodeLabel : this.props.showBlocksLabel}
         isRtl={!!this.props.isRtl}
         isMinecraft={!!this.props.isMinecraft}
         headerHasFocus={!!this.props.hasFocus}
-        onClick={this.onClick}
-        style={studioApp().enableShowCode ? {display: 'inline-block'} : {display: 'none'}}
+        onClick={this.props.onClick}
+        style={this.props.hidden ? {display: 'none'} : {display: 'inline-block'}}
       />
+    );
+  }
+}
+
+class DropletCodeToggle extends Component {
+  static propTypes = {
+    ...commonProps,
+    onToggle: PropTypes.func.isRequired,
+  };
+
+  afterInit = () => {
+    this.forceUpdate();
+  };
+
+  componentWillMount() {
+    studioApp().on('afterInit', this.afterInit);
+  }
+
+  componentWillUnmount() {
+    studioApp().removeListener('afterInit', this.afterInit);
+  }
+
+  toggle = () => {
+    // are we trying to toggle from blocks to text (or the opposite)
+    let fromBlocks = studioApp().editor.currentlyUsingBlocks;
+
+    let result;
+    try {
+      result = studioApp().editor.toggleBlocks();
+    } catch (err) {
+      result = {error: err, nonDropletError: true};
+    }
+    if (result && result.error) {
+      logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+        dropletError: !result.nonDropletError,
+        fromBlocks,
+      });
+      studioApp().showToggleBlocksError();
+    } else {
+      studioApp().onDropletToggle();
+      this.forceUpdate();
+      this.props.onToggle(studioApp().editor.currentlyUsingBlocks);
+    }
+  }
+
+  onClick = () => {
+    this.toggle();
+    if (experiments.isEnabled('saveBlockMode')) {
+      new UserPreferences().setUsingTextMode(
+        !studioApp().editor.currentlyUsingBlocks,
+        {
+          project_id: project.getCurrentId(),
+          level_id: studioApp().config.level.id,
+        }
+      );
+    }
+  }
+
+  render() {
+    return (
+      <ShowCodeButton
+        hasFocus={this.props.hasFocus}
+        isRtl={this.props.isRtl}
+        isMinecraft={this.props.isMinecraft}
+        onClick={this.onClick}
+        hidden={!studioApp().enableShowCode}
+        showingBlocks={studioApp().editor && studioApp().editor.currentlyUsingBlocks}
+        showCodeLabel={msg.showTextHeader()}
+      />
+    );
+  }
+
+}
+
+class BlocklyShowCodeButton extends Component {
+  static propTypes = {
+    ...commonProps,
+    onToggle: PropTypes.func.isRequired,
+  };
+
+  onClick = () => {
+    studioApp().showGeneratedCode();
+    this.props.onToggle(true);
+  }
+
+  render() {
+    return (
+      <ShowCodeButton
+        hasFocus={this.props.hasFocus}
+        isRtl={this.props.isRtl}
+        isMinecraft={this.props.isMinecraft}
+        onClick={this.onClick}
+        hidden={!studioApp().enableShowCode}
+        showingBlocks
+      />
+    );
+  }
+
+}
+
+export default class ShowCodeToggle extends Component {
+  static propTypes = {
+    ...commonProps,
+    onToggle: PropTypes.func.isRequired,
+  };
+
+  afterInit = () => {
+    this.forceUpdate();
+  };
+
+  componentWillMount() {
+    studioApp().on('afterInit', this.afterInit);
+  }
+
+  render() {
+    return (
+      studioApp().editCode ?
+      <DropletCodeToggle {...this.props} /> :
+      <BlocklyShowCodeButton {...this.props} />
     );
   }
 }

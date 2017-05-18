@@ -60,6 +60,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
+1. when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031).
 
 
 ### Ubuntu 14.04
@@ -107,7 +108,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso)
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso)
+  1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
+  2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
   1. `cd code-dot-org`
@@ -149,7 +152,7 @@ Please also see our other documentation, including our:
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
 
 ---
-###Tips
+### Tips
 If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
 - `convert --version`
 - `gem install imagemagick@6`

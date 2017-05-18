@@ -440,6 +440,28 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'should generate a shorter summary for header' do
+    script = create(:script, name: 'single-stage-script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    expected = {
+      name: 'single-stage-script',
+      disablePostMilestone: false,
+      isHocScript: false,
+      student_detail_progress_view: false
+    }
+    assert_equal expected, script.summarize_header
+  end
+
+  test 'should exclude stages if include_stages is false' do
+    script = create(:script, name: 'single-stage-script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    assert_equal nil, script.summarize(false)[:stages]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
@@ -543,9 +565,9 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     # Everything has Stage <number> when nothing is lockable
-    assert /^Stage 1:/.match(script.stages[0].localized_title)
-    assert /^Stage 2:/.match(script.stages[1].localized_title)
-    assert /^Stage 3:/.match(script.stages[2].localized_title)
+    assert /^Lesson 1:/.match(script.stages[0].localized_title)
+    assert /^Lesson 2:/.match(script.stages[1].localized_title)
+    assert /^Lesson 3:/.match(script.stages[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Lockable1', lockable: true
@@ -562,9 +584,9 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
-    assert /^Stage/.match(script.stages[0].localized_title).nil?
-    assert /^Stage 1:/.match(script.stages[1].localized_title)
-    assert /^Stage 2:/.match(script.stages[2].localized_title)
+    assert /^Lesson/.match(script.stages[0].localized_title).nil?
+    assert /^Lesson 1:/.match(script.stages[1].localized_title)
+    assert /^Lesson 2:/.match(script.stages[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'NonLockable1'
@@ -581,9 +603,9 @@ class ScriptTest < ActiveSupport::TestCase
     )
 
     # When only second stage is lockable, we count non-lockable stages appropriately
-    assert /^Stage 1:/.match(script.stages[0].localized_title)
-    assert /^Stage/.match(script.stages[1].localized_title).nil?
-    assert /^Stage 2:/.match(script.stages[2].localized_title)
+    assert /^Lesson 1:/.match(script.stages[0].localized_title)
+    assert /^Lesson/.match(script.stages[1].localized_title).nil?
+    assert /^Lesson 2:/.match(script.stages[2].localized_title)
   end
 
   test 'Script DSL fails when creating invalid lockable stages' do
@@ -651,5 +673,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'report-stage-1', updated_report_script['stages']['Report Stage 1']['name']
     assert_equal 'Stage 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
+  end
+
+  test 'text_to_speech_enabled? when script k1? is true' do
+    assert Script.find_by_name('course1').text_to_speech_enabled?
+  end
+
+  test '!text_to_speech_enabled? by default' do
+    refute create(:script).text_to_speech_enabled?
   end
 end

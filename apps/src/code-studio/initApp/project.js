@@ -9,8 +9,6 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
-var NON_REMIXABLE_SKINS = ['hoc2015', 'infinity', 'gumball', 'iceage'];
-
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
@@ -484,6 +482,44 @@ var projects = module.exports = {
     return this.isOwner() && hasProjectChanged;
   },
   /**
+   * @returns {string} A UI string containing the name of a new project, which
+   *   varies based on the app type and skin.
+   */
+  getNewProjectName() {
+    switch (appOptions.app) {
+      case 'applab':
+        return msg.defaultProjectNameAppLab();
+      case 'gamelab':
+        return msg.defaultProjectNameGameLab();
+      case 'weblab':
+        return msg.defaultProjectNameWebLab();
+      case 'turtle':
+        switch (appOptions.skinId) {
+          case 'artist':
+            return msg.defaultProjectNameArtist();
+          case 'anna':
+          case 'elsa':
+            return msg.defaultProjectNameFrozen();
+        }
+        break;
+      case 'studio':
+        if (appOptions.level.useContractEditor) {
+          return msg.defaultProjectNameBigGame();
+        }
+        switch (appOptions.skinId) {
+          case 'studio':
+            return msg.defaultProjectNamePlayLab();
+          case 'infinity':
+            return msg.defaultProjectNameInfinity();
+          case 'gumball':
+            return msg.defaultProjectNameGumball();
+          case 'iceage':
+            return msg.defaultProjectNameIceAge();
+        }
+    }
+    return msg.defaultProjectName();
+  },
+  /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
    */
@@ -497,13 +533,24 @@ var projects = module.exports = {
         return 'artist';
       case 'calc':
         return 'calc';
+      case 'craft':
+        if (appOptions.level.isEventLevel) {
+          return 'minecraft_designer';
+        }
+        return 'minecraft_adventurer';
       case 'eval':
         return 'eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
-        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) !== -1) {
-          return null;
+        } else if (appOptions.skinId === 'hoc2015') {
+          return 'starwars';
+        } else if (appOptions.skin === 'iceage') {
+            return 'iceage';
+        } else if (appOptions.skin === 'infinity') {
+          return 'infinity';
+        } else if (appOptions.skin === 'gumball') {
+          return 'gumball';
         }
         return 'playlab';
       case 'weblab':
@@ -511,6 +558,12 @@ var projects = module.exports = {
       default:
         return null;
     }
+  },
+  /**
+   * @returns {boolean} Whether a project can be created for this level type.
+   */
+  isSupportedLevelType() {
+    return !!this.getStandaloneApp();
   },
   /**
    * @returns {string} The path to the app capable of running
@@ -580,6 +633,7 @@ var projects = module.exports = {
     unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
+      current.projectType = this.getStandaloneApp();
     }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
@@ -632,7 +686,7 @@ var projects = module.exports = {
       });
     });
   },
-  updateCurrentData_(err, data, isNewChannel) {
+  updateCurrentData_(err, data, shouldNavigate) {
     if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
@@ -653,16 +707,16 @@ var projects = module.exports = {
     current = current || {};
     Object.assign(current, data);
 
-    if (isNewChannel) {
-      // We have a new channel, meaning either we had no channel before, or
-      // we've changed channels. If we aren't at a /projects/<appname> link,
-      // always do a redirect (i.e. we're remix from inside a script)
+    if (shouldNavigate) {
+      // If we are at a /projects/<appname> link, we can display the project
+      // without navigating and we just need to update the url.
       if (isEditing && parsePath().appName) {
         if (window.history.pushState) {
           window.history.pushState(null, document.title, this.getPathName('edit'));
         }
       } else {
-        // We're on a share page, and got a new channel id. Always do a redirect
+        // We're on a legacy share page or script level, so we must navigate
+        // in order to display the project.
         location.href = this.getPathName('edit');
       }
     }
@@ -736,8 +790,12 @@ var projects = module.exports = {
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
+   * @param {string} newName
+   * @param {function} callback
+   * @param {boolean} shouldNavigate Whether to navigate to the project URL.
    */
-  copy(newName, callback) {
+  copy(newName, callback, shouldNavigate) {
+    current = current || {};
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel,
         this.copyAnimations.bind(this, srcChannel, callback));
@@ -745,8 +803,10 @@ var projects = module.exports = {
     delete current.hidden;
     this.setName(newName);
     channels.create(current, function (err, data) {
-      this.updateCurrentData_(err, data, true);
-      this.save(wrappedCallback);
+      this.updateCurrentData_(err, data, shouldNavigate);
+      this.save(wrappedCallback,
+          false /* forceNewVersion */,
+          true /* preparingRemix */);
     }.bind(this));
   },
   copyAssets(srcChannel, callback) {

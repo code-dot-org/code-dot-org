@@ -26,7 +26,7 @@ Interested in sharing this information with another organization? <a href="/file
 
 <div style="clear: both;"></div>
 
-[<button>Appy Now!</button>](/educate/regional-partner/apply)
+[<button>Apply Now!</button>](/educate/regional-partner/apply)
 
 ## What we'd expect of you
 Below is a list of program commitments:

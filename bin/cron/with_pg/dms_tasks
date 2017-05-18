@@ -27,6 +27,17 @@ SCHEMA_PERMISSIONS = {
   pegasus_pii: ['admin', 'reader_pii']
 }.freeze
 
+# @param task_name [String] The name of the task.
+# @param task_execution_time_sec [Integer] The most recent execution time (in seconds) for the task.
+# @return [Boolean] Whether the task should be run.
+def run_task?(task_name, task_execution_time_sec)
+  return false unless task_name.start_with? 'cron'
+  if task_execution_time_sec > 4800
+    return Time.now.saturday?
+  end
+  return true
+end
+
 # @param task_execution_time_sec [Integer] The number of seconds the task's
 #   previous execution took.
 # @return [Integer] The number of seconds to wait before launching the next DMS
@@ -55,12 +66,9 @@ def main
   dms_client = Aws::DatabaseMigrationService::Client.new
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
-    next unless task_name.start_with? 'cron'
-
-    task_arn = replication_task.replication_task_arn
-    # TODO(asher): Gracefully handle the case when the DMS task has never been run.
-    task_execution_time = replication_task.replication_task_stats.elapsed_time_millis / 1000
-    task_delay = get_delay(task_execution_time)
+    task_execution_time_sec = replication_task.replication_task_stats.elapsed_time_millis / 1000
+    task_delay = get_delay task_execution_time_sec
+    next unless run_task?(task_name, task_execution_time_sec)
 
     ChatClient.message 'infra-dms',
       "Starting DMS task #{task_name} (sleep duration: #{task_delay})...",
@@ -68,13 +76,11 @@ def main
 
     dms_client.start_replication_task(
       {
-        replication_task_arn: task_arn,
+        replication_task_arn: replication_task.replication_task_arn,
         start_replication_task_type: REPLICATION_TASK_TYPE
       }
     )
-    sleep(task_delay)
-
-    ChatClient.message 'infra-dms', "Finished DMS task #{task_name}.", color: 'green'
+    sleep task_delay
   end
 
   SCHEMA_PERMISSIONS.each do |schema, groups|

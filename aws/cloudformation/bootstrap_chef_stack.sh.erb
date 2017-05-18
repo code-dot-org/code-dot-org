@@ -39,6 +39,18 @@ cat <<JSON > $FIRST_BOOT
     "build_apps": true,
     "use_my_apps": true,
 <% end -%>
+<% if @frontends -%>
+    "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
+    "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
+    "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
+    "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
+<% end -%>
+<% if environment == :adhoc && TEMPLATE == 'cloud_formation_stack.yml.erb' -%>
+    "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
+<% end -%>
+<% unless cdn_enabled -%>
+    "cdn_enabled": false,
+<% end -%>
     "stack_name": "$STACK"
   },
 <% if local_mode -%>

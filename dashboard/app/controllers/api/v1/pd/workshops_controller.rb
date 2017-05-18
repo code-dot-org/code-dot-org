@@ -18,7 +18,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
-    if current_user.admin? && params[:workshop_id]
+    if (current_user.admin? || current_user.permission?(UserPermission::WORKSHOP_ADMIN)) && params[:workshop_id]
       @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
     end
 
@@ -37,7 +37,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def filter
     limit = params[:limit].try(:to_i)
     workshops = filter_workshops(@workshops)
-    limited_workshops = workshops.limit(limit)
 
     respond_to do |format|
       limited_workshops = workshops.limit(limit)
@@ -62,7 +61,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def k5_public_map_index
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
       course: Pd::Workshop::COURSE_CSF,
-      workshop_type: Pd::Workshop::TYPE_PUBLIC
+      on_map: true
     ).where.not(processed_location: nil)
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
@@ -171,7 +170,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :location_name,
       :location_address,
       :capacity,
-      :workshop_type,
+      :on_map,
+      :funded,
       :course,
       :subject,
       :notes,

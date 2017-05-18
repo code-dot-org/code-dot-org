@@ -575,7 +575,6 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        isRtl={studioApp().isRtl()}
         visualizationColumn={<FlappyVisualizationColumn/>}
         onMount={onMount}
       />
@@ -733,7 +732,7 @@ Flappy.execute = function () {
     whenRunButton: {code: generator('when_run')}
   };
 
-  codegen.evalWithEvents({Flappy: api}, events).forEach(hook => {
+  codegen.evalWithEvents({Flappy: api}, events).hooks.forEach(hook => {
     Flappy[hook.name] = hook.func;
   });
 

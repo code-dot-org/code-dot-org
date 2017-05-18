@@ -47,18 +47,15 @@ table {width: 100%;}
 | All Month | Group 1 Budget Reviews |
 | May 1, 2017 | How to Run Traditional Programs (ECS, CS in Science, CS in Algebra) folder release |
 | May 1, 2017 | Annual Report template shared with Group 1 partners. |
-| May 5, 2017 | **Registration deadline for all TeacherCon 1 teachers accepted during cycles 6 & 7** |
 | May 8, 2017 | Code.org sends decline messages to all pending CS Discoveries and CS Principles TeacherCon teachers not on the waitlist |
-| May 10, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">Planning for the week: Create an amazing summer workshop experience  <br/> Click [here](https://code.zoom.us/j/7601459040) to join the Zoom Meeting. **(Recommended for G1)**</span> |
+| May 12, 2017 | **Registration deadline for all TeacherCon 1 teachers accepted during cycles 6 & 7** |
 | May 15, 2017 | Unclaimed seats for TeacherCon 2 released to waitlisted applicants |
 | May 15, 2017 | All quarterly workshops for the '17-'18 SY must be added to the workshop dashboard. |
-| May 17, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">Planning for the week: logistics and prep for summer workshops<br/> Click [here](https://code.zoom.us/j/7601459040) to join the Zoom Meeting. **(Recommended for G1)**</span> |
-| May 19, 2017 | Wednesday night event plans due for TeacherCon 1|
+| May 17, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">Planning for the week: summer workshops<br/> Click [here](https://code.zoom.us/j/821609800) to join the Zoom Meeting. **(Recommended for G1)**</span> |
+| May 19, 2017 | Wednesday night event plans due to Regional Manager for TeacherCon Houston |
 | May 19, 2017 | **Registration deadline for all TeacherCon 2 teachers accepted during cycles 6 & 7** |
 | May 20th - 21st, 2017 | <span style="color:green">All TeacherCon Leads Facilitator Training (arrive Friday night)<br/> Location: Chicago, IL<br/></span> |
 | May 30, 2017 | Unclaimed seats for TeacherCon 3 released to waitlisted applicants |
-| May 31, 2017 | Group 1 Annual Reports due |
-| May 31, 2017<br/> 4:00 pm - 5:00 pm PT<br/> | <span style="color:green">How to: debrief the day/week<br/> Click [here](https://code.zoom.us/j/7601459040) to join the Zoom Meeting. **(Recommended for G1)**</span> |
 
 ## June Areas of Focus
 
@@ -70,8 +67,12 @@ table {width: 100%;}
 |-----------------|--------------------------------------------------|
 | June 6, 2017 | **Registration deadline for all TeacherCon 3 teachers accepted during cycles 6 & 7** |
 | June 15, 2017 | Group 1 Annual Reports due to Carina |
+| June 15, 2017 | Group 2 Annual Report template shared |
+| June 16, 2017 | Wednesday night event plans due to Regional Manager for TeacherCon Phoenix |
 | June 18th-23rd, 2017 | TeacherCon #1 in Houston, TX<br/> Teachers and Regional Managers arrive on Sunday.<br/> <span style="color:green"> Lead facilitators arrive on Saturday, new facilitators arrive on Sunday. |
 | June 24th-25th, 2017 | <span style="color:green"> CS Principles Academic Year Workshop facilitator training<br/> Location: Houston, TX |
+| June 30, 2017 | Wednesday night event plans due to Regional Manager for TeacherCon Philadelphia |
+
 
 ## July Areas of Focus
 
@@ -84,6 +85,7 @@ table {width: 100%;}
 | July 16th - 21st, 2017 | TeacherCon #2 in Phoenix, AZ<br/> Teachers and Regional Managers arrive on Sunday.<br/> <span style="color:green"> Lead facilitators arrive on Saturday, new facilitators arrive on Sunday. |
 | July 22nd - 23rd, 2017 | <span style="color:green"> CS Principles & CS Discoveries Academic Year Workshop facilitator training<br/> Location: Phoenix, AZ |
 | July 30th - August 4th, 2017 | TeacherCon #3 in Philadelphia, PA<br/> Teachers and Regional Managers arrive on Sunday.<br/> <span style="color:green"> Lead facilitators arrive on Saturday, new facilitators arrive on Sunday.|
+| July 31, 2017 | Group 2 annual reports due to Carina |
 
 ## August Areas of Focus
 

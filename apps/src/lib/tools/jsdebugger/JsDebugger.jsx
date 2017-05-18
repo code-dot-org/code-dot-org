@@ -81,6 +81,9 @@ var styles = {
       cursor: 'pointer',
       color: 'white'
     }
+  },
+  hidden: {
+    display: 'none'
   }
 };
 
@@ -88,6 +91,7 @@ const MIN_DEBUG_AREA_HEIGHT = 120;
 const MAX_DEBUG_AREA_HEIGHT = 400;
 const MIN_WATCHERS_AREA_WIDTH = 120;
 const MAX_WATCHERS_AREA_WIDTH = 400;
+const MIN_CONSOLE_WIDTH = 345;
 
 /**
  * The parent JsDebugger component.
@@ -120,10 +124,30 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       watchersHidden: false,
       open: this.props.isOpen,
       openedHeight: 120,
+      consoleWidth: 0
     };
   },
 
+  handleResizeConsole() {
+    let debuggerWidth = 0;
+    if (document.getElementById('debug-area-header')) {
+      debuggerWidth = document.getElementById('debug-area-header').offsetWidth;
+    }
+    let commandsWidth = 0;
+    if (document.getElementById('debug-commands-header')) {
+      commandsWidth = document.getElementById('debug-commands-header').offsetWidth;
+    }
+    let watchersWidth = 0;
+    if (document.getElementById('debug-watch-header')) {
+      watchersWidth = document.getElementById('debug-watch-header').offsetWidth;
+    }
+    const consoleWidth = debuggerWidth - commandsWidth - watchersWidth;
+    this.setState({consoleWidth: consoleWidth});
+  },
+
   componentDidMount() {
+    window.addEventListener('resize', this.handleResizeConsole);
+
     this.props.setStepSpeed(this.props.stepSpeed);
     if (this.props.isOpen) {
       this.slideOpen();
@@ -185,6 +209,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       elements.debugConsoleDiv.style.removeProperty('right');
       elements.watchersResizeBar.style.removeProperty('right');
       elements.watchersHeaderDiv.style.removeProperty('width');
+
+      this.handleResizeConsole();
 
       watchersReferences = {};
     });
@@ -290,6 +316,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     codeTextbox.style.bottom = newDbgHeight + 'px';
     this.root.style.height = newDbgHeight + 'px';
 
+    this.handleResizeConsole();
+
     // Fire resize so blockly and droplet handle this type of resize properly:
     utils.fireResizeEvent();
   },
@@ -351,6 +379,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     const watchersLRBorderWidth = 2;
     const extraWidthForHeader = watchersLRBorderWidth - headerLBorderWidth;
     this._debugWatchHeader.root.style.width = newWatchersWidth + extraWidthForHeader + 'px';
+
+    this.handleResizeConsole();
   },
 
   onClearDebugOutput(event) {
@@ -395,7 +425,10 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
           style={styles.debugAreaHeader}
         >
           <span
-            style={styles.noUserSelect}
+            style={[
+              this.state.consoleWidth <= MIN_CONSOLE_WIDTH && styles.hidden,
+              styles.noUserSelect
+            ]}
             className="header-text"
           >
             {i18n.debugConsoleHeader()}

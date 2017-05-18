@@ -16,6 +16,7 @@ var PlanterCellEditor = require('./PlanterCellEditor');
 var BeeCellEditor = require('./BeeCellEditor');
 var CellEditor = require('./CellEditor');
 var StudioCellEditor = require('./StudioCellEditor');
+var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
 var Grid = require('./Grid');
 
 var CellJSON = React.createClass({
@@ -91,6 +92,8 @@ var GridEditor = React.createClass({
   getEditorClass: function () {
     if (this.props.skin === 'playlab') {
       return StudioCellEditor;
+    } else if (this.props.skin === 'starwarsgrid') {
+      return StarWarsGridCellEditor;
     } else if (mazeUtils.isBeeSkin(this.props.skin)) {
       return BeeCellEditor;
     } else if (mazeUtils.isHarvesterSkin(this.props.skin)) {

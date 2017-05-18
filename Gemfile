@@ -29,6 +29,7 @@ gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'dalli' # memcached
+gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive', '~> 1.0.0'
 gem 'le', '~> 2.2'
 gem 'os'
@@ -53,8 +54,11 @@ group :development do
   gem 'web-console'
 end
 
+# Rack::Cache middleware used in development/test;
+# Rack::Cache::Response used by Rack::Optimize in non-development environments.
+gem 'rack-cache'
+
 group :development, :test do
-  gem 'rack-cache'
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   # Use debugger
@@ -70,7 +74,6 @@ group :development, :test do
   gem 'webmock', require: false
 
   gem 'codecov', require: false
-  gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'fake_sqs'
   gem 'fakeredis', require: false
   gem 'mocha', require: false
@@ -81,8 +84,8 @@ group :development, :test do
   # For UI testing.
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
-  gem 'cucumber', '~> 2.0.2'
-  gem 'eyes_selenium', '~> 2.38.0'
+  gem 'cucumber', '~> 2.4.0'
+  gem 'eyes_selenium', '3.5.4'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters'
@@ -188,7 +191,7 @@ gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
 gem 'font-awesome-rails', '~> 4.6.3'
-gem 'sequel', '~> 4.10'
+gem 'sequel', '~> 4.30'
 gem 'user_agent_parser'
 
 # As of 2017-04-13, the recovery_window option for restores is available in the specified commit
@@ -249,3 +252,13 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
 
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
+
+# Ref: https://github.com/toy/image_optim/pull/145
+# Also include sRGB color profile conversion.
+gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
+# Image-optimization tools and binaries.
+gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
+# Ref: https://github.com/toy/image_optim_rails/pull/3
+gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_config_path'
+
+gem 'image_size', require: false

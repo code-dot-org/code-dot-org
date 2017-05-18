@@ -11,11 +11,11 @@
 #   LogEntries.
 #
 # including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
-require_relative '../../dashboard/config/environment'
+require_relative '../../deployment'
 require 'cdo/only_one'
 require 'cdo/chat_client'
 require 'cdo/user_agent_parser'
+CDO.log.level = Logger::WARN
 
 SECONDS_PER_MSEC = 1000
 ONE_HOUR_MSEC = 60 * 60 * SECONDS_PER_MSEC
@@ -134,43 +134,27 @@ class Monitor
 
   def reload(filename)
     return nil unless File.file?(filename)
-    puts "Loading..." if rack_env?(:development)
+    CDO.log.info 'Loading...'
     JSON.parse(IO.read(filename))
   end
 
   def cache(filename, dataset)
     if rack_env?(:development)
-      puts "Caching..."
+      CDO.log.info 'Caching...'
       File.open(filename, 'wb') {|f| f << dataset.to_json}
     end
     dataset
   end
 
   def fetch
-    puts "Fetching..." if rack_env?(:development)
+    CDO.log.info 'Fetching...'
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
   end
 end
 
-BROWSER_TO_BROWSER_STACK = {
-  'IE 11.0' => {os: 'Windows', os_version: '8.1', browser: 'IE', browser_version: '11.0'},
-  'IE 10.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '10.0'},
-  'IE 9.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '9.0'},
-  'Chrome' => {os: 'Windows', os_version: '8.1', browser: 'Chrome', browser_version: '39.0'},
-  'Firefox' => {os: 'Windows', os_version: '8.1', browser: 'Firefox', browser_version: '33.0'},
-  'Safari' => {os: 'OS X', os_version: 'Yosemite', browser: 'Safari', browser_version: '8.0'},
-  'Android' => {os: 'android', os_version: '4.4', device: 'Samsung Galaxy S5'},
-  'Mobile Safari' => {os: 'ios', os_version: '8.0', device: 'iPad Air'},
-  'Opera Mini' => {os: 'opera', device: 'Samsung Galaxy Tab'}
-}.freeze
-
-def browserstack_url(browser, destination_url)
-  params = BROWSER_TO_BROWSER_STACK[browser]
-  return nil unless params
-
-  # eg: http://www.browserstack.com/start#os=Windows&os_version=7&browser=IE&browser_version=11.0&zoom_to_fit=true&full_screen=true&autofit=true&url=studio.code.org&resolution=2048x1536&speed=1
-  "http://www.browserstack.com/start#" + URI.encode_www_form(params.merge(resolution: '2048x1536', url: destination_url))
+def saucelabs_url(level_id)
+  "https://saucelabs.com/beta/manual?url=studio.code.org/levels/#{level_id}"
 end
 
 def excluded_browser?(ua_string)
@@ -200,7 +184,7 @@ def main
     level_url = "https://studio.code.org/levels/#{i[:level]}"
 
     log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{HOURS_TO_TEST} hour(s)]
-    log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
+    log_string += %[ <a href="#{saucelabs_url(i[:level])}">✈ Repro It</a>]
     ChatClient.message 'ActivityMonitor', log_string, color: 'yellow', notify: 1
   end
 end

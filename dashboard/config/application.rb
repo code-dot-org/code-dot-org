@@ -42,6 +42,11 @@ module Dashboard
       config.autoload_paths << Rails.root.join('test/mailers/previews')
     end
 
+    if CDO.image_optim
+      require 'cdo/rack/optimize'
+      config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
+    end
+
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
@@ -123,18 +128,15 @@ module Dashboard
       video-js/*.css
     )
     config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('app', 'models', 'levels')
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 
-    MAX_CACHED_BYTES = 256.megabytes
-    if CDO.memcached_hosts.present?
-      config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
-        value_max_bytes: MAX_CACHED_BYTES
-      }
-    else
-      config.cache_store = :memory_store, {size: MAX_CACHED_BYTES}
-    end
+    # Rails.cache is a fast memory store, cleared every time the application reloads.
+    config.cache_store = :memory_store, {
+      size: 256.megabytes # max size of entire store
+    }
 
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
@@ -145,7 +147,8 @@ module Dashboard
 
     if CDO.newrelic_logging
       require 'newrelic_rpm'
-      require 'newrelic_ignore_downlevel_browsers'
     end
+
+    config.assets.image_optim = false unless CDO.image_optim
   end
 end

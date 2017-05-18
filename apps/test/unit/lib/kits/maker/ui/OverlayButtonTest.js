@@ -16,6 +16,11 @@ describe('OverlayButton', () => {
     expect(wrapper.text()).to.include('xyzzy');
   });
 
+  it('puts a provided className on the button', () => {
+    const wrapper = mount(<OverlayButton className="guncho" text="xyzzy" onClick={() => {}}/>);
+    expect(wrapper).to.have.className('guncho');
+  });
+
   it('calls onClick when clicked', () => {
     const spy = sinon.spy();
     const wrapper = mount(<OverlayButton text="OK" onClick={spy}/>);

@@ -86,6 +86,19 @@ class RegistrationsController < Devise::RegistrationsController
       :school,
       :full_address,
       :terms_of_service_version,
+      school_info_attributes: [
+        :country,
+        :school_type,
+        :state, :school_state,
+        :zip, :school_zip,
+        :school_district_id,
+        :school_district_other,
+        :school_district_name,
+        :school_id,
+        :school_other,
+        :school_name,
+        :full_address
+      ],
       races: []
     )
   end

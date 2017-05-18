@@ -12,6 +12,7 @@ require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
+require_relative '../lib/cdo/honeybadger'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -54,6 +55,12 @@ def puts_script_intro
 
       Known Issues
       #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+
+    #{bold 'Before You Get Started'}
+
+      Honeybadger: Join Slack#infra-honeybadger.
+
+      Robo-DTT: See Slack#infra-test. If green, run the slash command: /set-last-dtt-green yes
 
   EOS
 end
@@ -198,6 +205,25 @@ def content_push(server_name, environment_name)
   end
 end
 
+# Asks if the robo-DTT is green, if the DTT message should be reset, and if Honeybadger issues
+# should be shown.
+def finish_robo_dtt
+  wait_for 'robo-DTT to finish'
+
+  should_i 'mark robo-DTT as green' do
+    test_sha = GitHub.sha 'test'
+    InfraTestTopic.set_green_commit test_sha
+  end
+
+  should_i 'reset DTT message to yes' do
+    DevelopersTopic.set_dtt 'yes'
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
+  end
+end
+
 # Prints the commit messages of commits present in branch head but not branch
 # base. Truncates all such messages to the first line.
 # @param base [String] The base branch to compare.
@@ -216,16 +242,6 @@ def view_commits(base:, head:)
   EOS
 end
 
-# Prints the DTT message, formatted based on its contents.
-def print_dtt_message
-  message = "Slack#developers says DTT: #{DevelopersTopic.dtt}"
-  if DevelopersTopic.dtt?
-    puts dim message
-  else
-    puts red message
-  end
-end
-
 # Prints the DTP message, formatted based on its contents.
 def print_dtp_message
   message = "Slack#developers says DTP: #{DevelopersTopic.dtp}"
@@ -236,33 +252,28 @@ def print_dtp_message
   end
 end
 
-# Asks if the DTT subroutine should be performed, doing so if requested.
-def do_dtt_subroutine
-  print_dtt_message
-  should_i 'DTT' do
-    view_commits base: 'test', head: 'staging'
-    should_i 'merge from staging to test' do
-      should_i 'reset DTT message to in progress' do
-        DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
-      end
-      pr_number = GitHub.create_and_merge_pull_request(
-        base: 'test',
-        head: 'staging',
-        title: 'DTT (Staging > Test)'
-      )
-      url = GitHub.url(pr_number)
-      wait_for "DTT (#{url}) to complete, re-run / investigate failures"
-
-      should_i 'reset DTT message to yes' do
-        DevelopersTopic.set_dtt 'yes'
-      end
-
-      should_i 'update test room status with green commit and timestamp' do
-        new_sha = GitHub.sha 'test'
-        InfraTestTopic.set_green_commit new_sha
-      end
-    end
+# Retrieves recent Honeybadger issues, displaying them on the console.
+def get_honeybadger_issues
+  issues = Honeybadger.get_recent_issues
+  issues.sort_by! do |issue|
+    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
   end
+
+  puts '' if issues.count > 0
+  issues.each do |issue|
+    environment = issue[:environment] == 'production' ? (red issue[:environment]).to_s : (bold issue[:environment]).to_s
+    project = bold issue[:project]
+    message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
+    output = <<-EOS.unindent
+      [#{project}, #{environment}]: #{message}
+          #{dim issue[:url]}
+    EOS
+    # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
+    # the end of the output. This seems correlated with environment and project.
+    puts output.strip
+    puts ''
+  end
+  puts '' if issues.count > 0
 end
 
 def main
@@ -271,16 +282,7 @@ def main
   puts_script_intro
   ask_for_name
 
-  should_i 'mark robo-DTT as green' do
-    test_sha = GitHub.sha 'test'
-    InfraTestTopic.set_green_commit test_sha
-  end
-
-  should_i 'reset DTT message to yes' do
-    DevelopersTopic.set_dtt 'yes'
-  end
-
-  do_dtt_subroutine
+  2.times {finish_robo_dtt}
 
   should_i 'commit content changes from staging' do
     content_push 'staging', 'staging'
@@ -302,43 +304,73 @@ def main
     end
   end
 
-  do_dtt_subroutine
+  finish_robo_dtt
 
   wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
 
   print_dtp_message
-  should_i 'DTP' do
-    should_i 'set DTP message to in progress' do
-      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
-    end
-    GitHub.open_pull_request_in_browser(
-      base: 'production',
-      head: 'test',
-      title: 'DTP (Test > Production)'
-    )
+  test_green_commit = InfraTestTopic.green_commit
+  if test_green_commit
+    should_i "DTP #{test_green_commit}" do
+      should_i 'set DTP message to in progress' do
+        DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+      end
 
-    should_i 'DTL' do
-      # TODO(asher): Remove this wait step if it is truly unnecessary now.
-      wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
-      view_commits base: 'levelbuilder', head: 'test'
-      should_i 'merge from test to levelbuilder' do
-        pr_number = GitHub.create_and_merge_pull_request(
-          base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
+      # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
+      # request from a commit hash (only a branch name), we create and push a branch.
+      branch_name = "dtp_candidate_#{test_green_commit}"
+      begin
+        run_on(
+          'test',
+          "cd test && git checkout test && git checkout -b #{branch_name} #{test_green_commit} && git push origin #{branch_name}"
         )
-        puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+        production_pr_number = GitHub.create_pull_request(
+          base: 'production',
+          head: branch_name,
+          title: "DTP (Test > Production: #{test_green_commit})"
+        )
+        GitHub.open_url GitHub.url(production_pr_number)
+
+        should_i 'DTL' do
+          # TODO(asher): Remove this wait step if it is truly unnecessary now.
+          wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+
+          should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
+            content_push 'levelbuilder-staging', 'levelbuilder'
+          end
+
+          view_commits base: 'levelbuilder', head: test_green_commit
+          should_i 'merge from test to levelbuilder' do
+            pr_number = GitHub.create_and_merge_pull_request(
+              base: 'levelbuilder',
+              head: branch_name,
+              title: 'DTL (Test > Levelbuilder: #{test_green_commit})'
+            )
+            puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+          end
+        end
+
+        wait_for 'DTP to finish'
+        should_i 'reset DTP message to yes' do
+          DevelopersTopic.set_dtp 'yes'
+        end
+        should_i 'update Slack#infra-production topic' do
+          sha = GitHub.sha 'production'
+          InfraProductionTopic.set_dtp_commit(sha)
+        end
+
+        puts_after_dtp_tasks
+      ensure
+        run_on(
+          'test',
+          "cd test && git checkout test && git branch -D #{branch_name} && git push origin --delete #{branch_name}"
+        )
       end
     end
+  end
 
-    wait_for 'DTP to finish'
-    should_i 'reset DTP message to yes' do
-      DevelopersTopic.set_dtp 'yes'
-    end
-    should_i 'update Slack#infra-production topic' do
-      sha = GitHub.sha 'production'
-      InfraProductionTopic.set_dtp_commit(sha)
-    end
-
-    puts_after_dtp_tasks
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   puts_script_conclusion

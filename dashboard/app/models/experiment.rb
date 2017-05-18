@@ -102,3 +102,4 @@ end
 require_dependency 'user_based_experiment'
 require_dependency 'teacher_based_experiment'
 require_dependency 'single_section_experiment'
+require_dependency 'single_user_experiment'

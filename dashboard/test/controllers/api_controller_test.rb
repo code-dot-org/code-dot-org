@@ -21,11 +21,15 @@ class ApiControllerTest < ActionController::TestCase
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
-    @student_1 = create(:follower, section: @section).student_user
-    @student_2 = create(:follower, section: @section).student_user
-    @student_3 = create(:follower, section: @section).student_user
-    @student_4 = create(:follower, section: @section).student_user
-    @student_5 = create(:follower, section: @section).student_user
+
+    # some of our tests depend on sorting of students by name, thus we name them ourselves
+    @students = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @students << student
+      create(:follower, section: @section, student_user: student)
+    end
+    @student_1, @student_2, @student_3, @student_4, @student_5 = @students
 
     flappy = Script.get_from_cache(Script::FLAPPY_NAME)
     @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
@@ -163,7 +167,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -171,7 +175,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 2: Second Stage',
+        'stage' => 'Lesson 2: Second Stage',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -179,7 +183,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -277,7 +281,7 @@ class ApiControllerTest < ActionController::TestCase
     updated_at = Time.now
 
     # All students did the LevelGroup.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+    @students.each do |student|
       create :user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
@@ -442,7 +446,7 @@ class ApiControllerTest < ActionController::TestCase
     updated_at = Time.now
 
     # All students did the LevelGroup, and the free response part of the survey.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+    @students.each_with_index do |student, student_index|
       create :user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
@@ -554,7 +558,7 @@ class ApiControllerTest < ActionController::TestCase
     create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 through student_5 did the survey, just submitting a free response.
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+    @students.each_with_index do |student, student_index|
       create(
         :activity,
         user: student,
@@ -569,7 +573,7 @@ class ApiControllerTest < ActionController::TestCase
 
     updated_at = Time.now
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+    @students.each do |student|
       create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
     end
 
@@ -682,7 +686,7 @@ class ApiControllerTest < ActionController::TestCase
     stage_response = stages_response[stage.id.to_s]
     assert_equal 5, stage_response.length, "entry for each student in section"
 
-    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
+    @students.each_with_index do |student, index|
       student_response = stage_response[index]
       assert_equal(
         {
@@ -1294,13 +1298,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
   end
 
-  test "do not show prize link if you don't have a prize" do
-    sign_in create(:teacher)
-
-    get :user_menu
-    assert_select 'a[href="http://test.host/redeemprizes"]', 0
-  end
-
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
@@ -1321,15 +1318,6 @@ class ApiControllerTest < ActionController::TestCase
 
     refute assigns(:show_pairing_dialog)
     refute session[:show_pairing_dialog] # should only show once
-  end
-
-  test "do show prize link when you already have a prize" do
-    teacher = create(:teacher)
-    sign_in teacher
-    teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
-
-    get :user_menu
-    assert_select 'a[href="http://test.host/redeemprizes"]'
   end
 
   test 'student does not see links to ops dashboard or teacher dashboard' do

@@ -4,60 +4,55 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {EventEmitter} from 'events';
-var aceMode = require('./acemode/mode-javascript_codeorg');
-var color = require("./util/color");
-var parseXmlElement = require('./xml').parseElement;
-var utils = require('./utils');
-import * as dropletUtils from './dropletUtils';
-var _ = require('lodash');
-var dom = require('./dom');
-var constants = require('./constants.js');
-var KeyCodes = constants.KeyCodes;
-var msg = require('@cdo/locale');
-var blockUtils = require('./block_utils');
-var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
-var url = require('url');
-var FeedbackUtils = require('./feedback');
-var VersionHistory = require('./templates/VersionHistory');
-var Alert = require('./templates/alert');
-var codegen = require('./codegen');
-var puzzleRatingUtils = require('./puzzleRatingUtils');
-var logToCloud = require('./logToCloud');
-var AuthoredHints = require('./authoredHints');
-var DialogButtons = require('./templates/DialogButtons');
-import WireframeButtons from './templates/WireframeButtons';
-import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
-import DialogInstructions from './templates/instructions/DialogInstructions';
-var assetsApi = require('./clientApi').assets;
-import * as assetPrefix from './assetManagement/assetPrefix';
-var annotationList = require('./acemode/annotationList');
-var shareWarnings = require('./shareWarnings');
-import { setPageConstants } from './redux/pageConstants';
-import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
-import SmallFooter from './code-studio/components/SmallFooter';
-import project from './code-studio/initApp/project';
-import * as assets from './code-studio/assets';
-import i18n from './code-studio/i18n';
-import AbuseError from './code-studio/components/abuse_error';
-import {TestResults} from './constants';
+import _ from 'lodash';
+import url from 'url';
+import {Provider} from 'react-redux';
 
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
+import * as aceMode from './acemode/mode-javascript_codeorg';
+import * as assetPrefix from './assetManagement/assetPrefix';
+import * as assets from './code-studio/assets';
+import * as blockUtils from './block_utils';
+import * as codegen from './codegen';
+import * as dom from './dom';
+import * as dropletUtils from './dropletUtils';
+import * as shareWarnings from './shareWarnings';
+import * as utils from './utils';
+import AbuseError from './code-studio/components/abuse_error';
+import Alert from './templates/alert';
+import AuthoredHints from './authoredHints';
+import DialogButtons from './templates/DialogButtons';
+import DialogInstructions from './templates/instructions/DialogInstructions';
+import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
+import FeedbackUtils from './feedback';
+import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import SmallFooter from './code-studio/components/SmallFooter';
+import Sounds from './Sounds';
+import VersionHistory from './templates/VersionHistory';
+import WireframeButtons from './templates/WireframeButtons';
+import annotationList from './acemode/annotationList';
+import color from "./util/color";
+import i18n from './code-studio/i18n';
+import logToCloud from './logToCloud';
+import msg from '@cdo/locale';
+import project from './code-studio/initApp/project';
+import puzzleRatingUtils from './puzzleRatingUtils';
+import {KeyCodes, TestResults} from './constants';
+import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
-import { getStore } from './redux';
-import { Provider } from 'react-redux';
+import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
+import {getStore} from './redux';
+import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
+import {parseElement as parseXmlElement} from './xml';
+import {setIsRunning} from './redux/runState';
+import {setPageConstants} from './redux/pageConstants';
+import {setVisualizationScale} from './redux/layout';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
-import {
-  closeDialog as closeInstructionsDialog
-} from './redux/instructionsDialog';
-import { setIsRunning } from './redux/runState';
-import { setVisualizationScale } from './redux/layout';
-import Sounds from './Sounds';
-
-// Make sure polyfills are available in all code studio apps and level tests.
-import './polyfills';
 
 var copyrightStrings;
 
@@ -869,32 +864,12 @@ StudioApp.prototype.stopLoopingAudio = function (name) {
 StudioApp.prototype.inject = function (div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
-    rtl: this.isRtl(),
+    rtl: getStore().getState().isRtl,
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
-};
-
-/**
- * @returns {boolean} True if the current HTML page is in right-to-left language mode.
- */
-StudioApp.prototype.isRtl = function () {
-  var head = document.getElementsByTagName('head')[0];
-  if (head && head.parentElement) {
-    var dir = head.parentElement.getAttribute('dir');
-    return !!(dir && dir.toLowerCase() === 'rtl');
-  } else {
-    return false;
-  }
-};
-
-/**
- * @return {string} Locale direction string based on app direction.
- */
-StudioApp.prototype.localeDirection = function () {
-  return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
 StudioApp.prototype.showNextHint = function () {
@@ -910,7 +885,7 @@ StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: this.isRtl(),
+    rtl: getStore().getState().isRtl,
     scrollbars: false
   });
   this.loadBlocks(options.blocks);
@@ -1240,7 +1215,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
-  if (this.isRtl()) {
+  if (getStore().getState().isRtl) {
     offset = window.innerWidth -
       (window.pageXOffset + rect.left + (rect.width / 2)) -
       parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
@@ -1274,7 +1249,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
-  if (this.isRtl()) {
+  if (getStore().getState().isRtl) {
     visualizationResizeBar.style.right = newVizWidthString;
     editorColumn.css('right', newVizWidthString);
   } else {
@@ -2755,7 +2730,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,
-    localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,

@@ -82,6 +82,7 @@ export const blocks = [
   {func: 'digitalRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
   {func: 'analogWrite', parent: api, category: MAKER_CATEGORY, paletteParams: ['pin', 'value'], params: ['5', '150']},
   {func: 'analogRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
+  {func: 'boardConnected', parent: api, category: MAKER_CATEGORY, type: 'value'},
   {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
 
   /**
