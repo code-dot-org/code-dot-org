@@ -120,7 +120,7 @@ module ProjectsList
     end
 
     def make_cacheable(url)
-      url.sub('/v3/files/', '/v3/files-public/')
+      url.sub('/v3/files/', '/v3/files-public/') if url
     end
 
     AGE_CUTOFFS = [18, 13, 8, 4].freeze
