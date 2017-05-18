@@ -379,6 +379,13 @@ Dashboard::Application.routes.draw do
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
+
+    get 'attend/:session_code', controller: 'session_attendance', action: 'attend'
+    post 'attend/:session_code', controller: 'session_attendance', action: 'select_enrollment'
+    get 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'join_session'
+    post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
+    get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
+    post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
