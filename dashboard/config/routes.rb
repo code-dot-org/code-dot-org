@@ -343,7 +343,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get 'my-professional-learning', to: 'pd/professional_learning_landing#index'
+  get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
   namespace :pd do
     # React-router will handle sub-routes on the client.
