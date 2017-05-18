@@ -4,10 +4,6 @@ en:
   data:
     course:
       name:
-        csd:
-          title: csd
-          description_student: Students see this
-          description_teacher: Teachers see this
         csp:
           title: Computer Science Principles
           description_student: Student description will eventually go here
