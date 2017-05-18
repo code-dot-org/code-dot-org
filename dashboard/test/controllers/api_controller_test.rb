@@ -1288,16 +1288,6 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
-  test 'should show teacher-dashboard link when a teacher' do
-    teacher = create :teacher
-    sign_in teacher
-
-    get :user_menu
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
-  end
-
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
