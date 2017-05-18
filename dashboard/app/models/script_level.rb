@@ -2,17 +2,14 @@
 #
 # Table name: script_levels
 #
-#  id          :integer          not null, primary key
-#  script_id   :integer          not null
-#  chapter     :integer
-#  created_at  :datetime
-#  updated_at  :datetime
-#  stage_id    :integer
-#  position    :integer
-#  assessment  :boolean
-#  properties  :text(65535)
-#  named_level :boolean
-#  bonus       :boolean
+#  id         :integer          not null, primary key
+#  script_id  :integer          not null
+#  chapter    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  stage_id   :integer
+#  position   :integer
+#  properties :text(65535)
 #
 # Indexes
 #
@@ -41,7 +38,12 @@ class ScriptLevel < ActiveRecord::Base
     progression
     target
     challenge
+    type
   )
+
+  NAMED_LEVEL = 'named_level'
+  ASSESSMENT = 'assessment'
+  BONUS = 'bonus'
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
