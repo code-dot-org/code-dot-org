@@ -420,6 +420,7 @@ testsContext.keys().forEach(testsContext);
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'projects/index':               './src/sites/studio/pages/projects/index.js',
+    'projects/public':               './src/sites/studio/pages/projects/public.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
@@ -430,7 +431,8 @@ testsContext.keys().forEach(testsContext);
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
-    'courses/show':                 './src/sites/studio/pages/courses/show.js'
+    'courses/show':                 './src/sites/studio/pages/courses/show.js',
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js'
   };
 
   var otherEntries = {

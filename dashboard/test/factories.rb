@@ -5,7 +5,7 @@ FactoryGirl.define do
   factory :course_script do
   end
   factory :course do
-    name "MyCourseName"
+    name "my-course-name"
     properties nil
   end
   factory :experiment do
@@ -529,9 +529,11 @@ FactoryGirl.define do
   end
   factory :plc_course, class: 'Plc::Course' do
     transient do
-      name 'MyString'
+      name 'plccourse'
     end
-    course {create(:course, name: name)}
+    after(:build) do |plc_course, evaluator|
+      create(:course, name: evaluator.name, plc_course: plc_course)
+    end
   end
 
   factory :level_group, class: LevelGroup do

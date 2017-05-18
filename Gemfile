@@ -258,6 +258,7 @@ gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: '
 gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
-gem 'image_optim_rails'
+# Ref: https://github.com/toy/image_optim_rails/pull/3
+gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_config_path'
 
 gem 'image_size', require: false

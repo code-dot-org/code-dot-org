@@ -16,21 +16,35 @@ import * as designerBlocks from "@cdo/apps/craft/designer/blocks";
 import designerLevels from "@cdo/apps/craft/designer/levels";
 import designerSkins from "@cdo/apps/craft/designer/skins";
 
+/**
+ * Minecraft Code Connection
+ */
+import CodeConnectionCraft from '@cdo/apps/craft/code-connection/craft';
+import * as ccBlocks from "@cdo/apps/craft/code-connection/blocks";
+import ccLevels from "@cdo/apps/craft/code-connection/levels";
+import ccSkins from "@cdo/apps/craft/code-connection/skins";
+
 export default function loadCraft(options) {
-  window.Craft = options.level.isEventLevel ? DesignerCraft : Craft;
-  if (typeof global !== 'undefined') {
-    global.Craft = window.Craft;
-  }
-
-  options.skinsModule = options.level.isEventLevel ? designerSkins : skins;
-  options.blocksModule = options.level.isEventLevel ? designerBlocks : blocks;
-
   const appWidth = 434;
   const appHeight = 477;
   options.nativeVizWidth = appWidth;
   options.vizAspectRatio = appWidth / appHeight;
   options.maxVisualizationWidth = 600;
 
-  const levelsToUse = options.level.isEventLevel ? designerLevels : levels;
-  appMain(window.Craft, levelsToUse, options);
+  if (options.level.isConnectionLevel) {
+    window.Craft = CodeConnectionCraft;
+    options.skinsModule = ccSkins;
+    options.blocksModule = ccBlocks;
+    appMain(window.Craft, ccLevels, options);
+  } else if (options.level.isEventLevel) {
+    window.Craft = DesignerCraft;
+    options.skinsModule = designerSkins;
+    options.blocksModule = designerBlocks;
+    appMain(window.Craft, designerLevels, options);
+  } else {
+    window.Craft = Craft;
+    options.skinsModule = skins;
+    options.blocksModule = blocks;
+    appMain(window.Craft, levels, options);
+  }
 }
