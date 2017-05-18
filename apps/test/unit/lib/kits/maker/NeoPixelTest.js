@@ -15,6 +15,43 @@ describe('NeoPixel', function () {
     five.Board.Component.restore();
   });
 
+  // Pass-through properties - just check that they exist.
+  PASS_THRU_PROPERTIES.forEach(prop => {
+    describe(prop, () => {
+      it('property exists', () => {
+        const led = new NeoPixel({
+          controller: makeStubController()
+        });
+        expect(led).to.have.ownProperty(prop);
+        expect(led[prop]).to.equal(led.rgb_[prop]);
+      });
+    });
+  });
+
+  // Pass-through methods - just check that they delegate.
+  PASS_THRU_METHODS.forEach(fnName => {
+    describe(`${fnName}()`, () => {
+      let led, spy;
+
+      beforeEach(() => {
+        spy = sinon.stub(five.Led.RGB.prototype, fnName);
+        led = new NeoPixel({
+          controller: makeStubController()
+        });
+      });
+
+      afterEach(() => {
+        five.Led.RGB.prototype[fnName].restore();
+      });
+
+      it(`delegates method to RGB controller`, () => {
+        const args = [Math.random(), Math.random(), Math.random()];
+        led[fnName](...args);
+        expect(spy).to.have.been.calledOnce.calledWith(...args);
+      });
+    });
+  });
+
   describe('on()', () => {
     let led;
 
@@ -69,37 +106,15 @@ describe('NeoPixel', function () {
     });
   });
 
-  describe('pass-through properties', () => {
-    PASS_THRU_PROPERTIES.forEach(prop => {
-      it(`has property ${prop}`, () => {
-        const led = new NeoPixel({
-          controller: makeStubController()
-        });
-        expect(led).to.have.ownProperty(prop);
-        expect(led[prop]).to.equal(led.rgb_[prop]);
-      });
-    });
-  });
-
-  describe('pass-through methods', () => {
-    PASS_THRU_METHODS.forEach(fnName => {
-      it(`delegates method ${fnName} to RGB controller`, () => {
-        const spy = sinon.stub(five.Led.RGB.prototype, fnName);
-        const led = new NeoPixel({
-          controller: makeStubController()
-        });
-        const args = [Math.random(), Math.random(), Math.random()];
-        led[fnName](...args);
-        expect(spy).to.have.been.calledOnce.calledWith(...args);
-      });
-    });
-  });
-
-  // Note: The Mozilla color value documentation was very
-  // helpful when writing these tests:
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
-  describe('color()', () => {
+  describe('color() valid arguments', () => {
     let led;
+
+    // The tests are a little redundant with similar tests in johnny-five
+    // (the color method is just a pass-through) but I left these in because
+    // we particularly care about this behavior in Maker Toolkit.
+    // Note: The Mozilla color value documentation was very
+    // helpful when writing these tests:
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
 
     beforeEach(() => {
       led = new NeoPixel({
