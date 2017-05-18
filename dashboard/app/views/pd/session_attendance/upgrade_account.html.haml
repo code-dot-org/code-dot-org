@@ -12,7 +12,9 @@
         Email is required
       - else
         Email must match your login. If you want to use this email instead, first update it in
-        = link_to 'account settings', "/users/edit?user_return_to: #{request.url}"
+
+        -# TODO (Andrew/Elijah): Enable redirecting back to this page from account settings.
+        = link_to 'account settings', '/users/edit'
 
 %p
   %strong Enter the email address you use to log in to code.org:

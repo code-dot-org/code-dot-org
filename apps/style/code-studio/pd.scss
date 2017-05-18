@@ -64,6 +64,11 @@
       background-color: $realyellow !important;
     }
   }
+
+  form.form-inline {
+    display: inline-block;
+    padding: 0 2px;
+  }
 }
 
 div[role=dialog] {
