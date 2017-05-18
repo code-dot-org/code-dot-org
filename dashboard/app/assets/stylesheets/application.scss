@@ -254,6 +254,10 @@ img.video_thumbnail {
   position: relative;
 
   .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
@@ -385,6 +389,13 @@ img.video_thumbnail {
     padding-top: 4px;
     padding-left: 20px;
   }
+}
+
+#header-banner {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1000;
 }
 
 .sign_in.show_only_on_mobile {
@@ -1285,6 +1296,16 @@ a.download-video {
     font-weight: normal;
     line-height: 34px;
     text-transform: uppercase;
+  }
+
+  #heading-banner-text {
+    color: $white;
+    margin-top: 40px;
+  }
+
+  #heading-banner-subtext {
+    color: $white;
+    margin-bottom: 115px;
   }
 
   .description {

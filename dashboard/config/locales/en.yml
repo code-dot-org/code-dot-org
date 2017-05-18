@@ -355,6 +355,8 @@ en:
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
+    signed_out_banner_heading: "Home"
+    signed_out_banner_subheading: "Try an activity today."
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course"
     choose_next_course: "Try a Code Studio course by choosing one below"
