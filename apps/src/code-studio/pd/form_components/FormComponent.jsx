@@ -56,6 +56,20 @@ export default class FormComponent extends React.Component {
    * @returns {FieldGroup}
    */
   buildSelectFieldGroupFromOptions({name, label, placeholder, required, ...props}) {
+    // options for a select can be specified as either an array (in which case
+    // the values and display name will be the same) or an object(in which case
+    // we'll use the keys for the values and the values for the display names)
+    let options;
+    if (Array.isArray(this.props.options[name])) {
+      options = this.props.options[name].map(value => (
+        <option key={value} value={value}>{value}</option>
+      ));
+    } else {
+      options = Object.keys(this.props.options[name]).map(key => (
+        <option key={key} value={key}>{this.props.options[name][key]}</option>
+      ));
+    }
+
     return (
       <FieldGroup
         key={name}
@@ -68,9 +82,7 @@ export default class FormComponent extends React.Component {
         required={required}
       >
         {placeholder && <option key="placeholder">{placeholder}</option>}
-        {Object.keys(this.props.options[name]).map(key => (
-          <option key={key} value={key}>{this.props.options[name][key]}</option>
-        ))}
+        {options}
       </FieldGroup>
     );
   }

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {ButtonList} from '../form_components/button_list';
+import FieldGroup from '../form_components/FieldGroup';
 
 import {
   FormGroup,
-  FormControl,
   ControlLabel,
   Table
 } from 'react-bootstrap';
@@ -118,22 +118,17 @@ const RowVariableQuestion = React.createClass({
     }
 
     return (
-      <FormGroup
+      <FieldGroup
         key={key}
-        controlId={key}
+        id={key}
+        label={label}
         validationState={validationState}
-      >
-        <ControlLabel>
-          {label}
-        </ControlLabel>
-        <FormControl
-          componentClass="textarea"
-          name={key}
-          rows={4}
-          value={this.props.data && this.props.data[key]}
-          onChange={this.props.onChange}
-        />
-      </FormGroup>
+        componentClass="textarea"
+        name={key}
+        rows={4}
+        value={this.props.data && this.props.data[key]}
+        onChange={this.props.onChange}
+      />
     );
   },
 
@@ -159,10 +154,15 @@ const VariableFormGroup = React.createClass({
   },
 
   getInitialState() {
-    // If we have only a single sourceValue, select it by default
     let selected = [];
+
     if (this.hasSingleSourceValue()) {
+      // If we have only a single sourceValue, select it by default
       selected = [this.props.sourceValues[0]];
+    } else if (this.props.data && this.props.data[this.props.sourceName]) {
+      // otherwise, if we're a controlled component, set our initial state from
+      // the data
+      selected = this.props.data[this.props.sourceName];
     }
 
     return {selected};

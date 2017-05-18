@@ -1,7 +1,10 @@
 import sinon from 'sinon';
+import Interpreter from '@code-dot-org/js-interpreter';
 import {assert, expect} from '../util/configuredChai';
 import * as codegen from '@cdo/apps/codegen';
-import PatchedInterpreter from '@cdo/apps/lib/tools/jsinterpreter/PatchedInterpreter';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
+import {makeAssertableObj as unboundMakeAssertableObj} from './lib/tools/jsinterpreter/interpreterTestUtils.js';
 
 describe("codegen", function () {
 
@@ -24,10 +27,9 @@ describe("codegen", function () {
   });
 
   describe("marshalNativeToInterpreter function", () => {
-    let interpreter, globalScope, value;
+    let interpreter, value;
     beforeEach(() => {
-      interpreter = new PatchedInterpreter('', (interpreter, scope) => {
-        globalScope = scope;
+      interpreter = new CustomMarshalingInterpreter('', new CustomMarshaler({}), (interpreter, scope) => {
         interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
           if (truthy !== interpreter.TRUE) {
             console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
@@ -38,40 +40,8 @@ describe("codegen", function () {
       sinon.spy(interpreter, 'createPrimitive');
     });
 
-    /**
-     * Given the params for the codegen.marshalNativeToInterpreter function, executed some code
-     * inside the interpreter that can make assertions about the marshaled object.
-     *
-     * @param {string} assertion - some code to run in the interpreter. This code will have
-     *     access to a global assert() function which will throw an error in native land if
-     *     the assertion fails.
-     * @param nativeVar - same as nativeVar param of marshalNativeToInterpreter
-     * @param nativeParentObj - same as nativeParentObj param of marshalNativeToInterpreter
-     * @param maxDepth - same as maxDepth param of marshalNativeToInterpreter
-     * @returns void
-     */
-    function makeAssertion(assertion, nativeVar, nativeParentObj, maxDepth) {
-      let interpreter = new PatchedInterpreter(assertion, (interpreter, scope) => {
-        globalScope = scope;
-        interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
-          if (truthy !== interpreter.TRUE) {
-            console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
-            throw new Error("failed assertion: " + assertion);
-          }
-        }));
-        const interpreterValue = codegen.marshalNativeToInterpreter(
-          interpreter,
-          nativeVar,
-          nativeParentObj,
-          maxDepth
-        );
-        interpreter.setProperty(globalScope, 'value', interpreterValue);
-      });
-      interpreter.run();
-    }
-
     function makeAssertableObj(nativeVar, nativeParentObj, maxDepth) {
-      return {assert: assertion => makeAssertion(assertion, nativeVar, nativeParentObj, maxDepth)};
+      return unboundMakeAssertableObj(interpreter, nativeVar, nativeParentObj, maxDepth);
     }
 
     it("when given an undefined native variable, will return an undefined interpreter variable", () => {
@@ -251,6 +221,19 @@ describe("codegen", function () {
       });
     });
 
+    describe("when given an object that should be custom marshaled", () => {
+      beforeEach(() => {
+        sinon.stub(interpreter.customMarshaler, 'shouldCustomMarshalObject').returns(true);
+        sinon.stub(interpreter.customMarshaler, 'createCustomMarshalObject');
+      });
+      it("will delegate to the custom marshaler's createCustomMarshalObject", () => {
+        const nativeParentObj = {foo: 'bar'};
+        const nativeVar = nativeParentObj.foo;
+        codegen.marshalNativeToInterpreter(interpreter, nativeVar, nativeParentObj);
+        expect(interpreter.customMarshaler.createCustomMarshalObject).to.have.been.calledWith(nativeVar, nativeParentObj);
+      });
+    });
+
   });
 
   describe("evalWithEvents function", () => {
@@ -268,7 +251,7 @@ describe("codegen", function () {
     });
 
     it("will return the interpreter that was created to run the code", () => {
-      expect(codegen.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(PatchedInterpreter);
+      expect(codegen.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(Interpreter);
     });
 
     describe("when given event handlers that accept arguments", () => {
@@ -383,7 +366,7 @@ describe("codegen", function () {
     });
 
     it("does not give the evaluated code access to native functions", () => {
-      expect(() => codegen.evalWith('nativeAdd(1,2)', options)).to.throw('Unknown identifier: nativeAdd');
+      expect(() => codegen.evalWith('nativeAdd(1,2)', options)).to.throw('nativeAdd is not defined');
     });
 
     describe("when running with legacy=true", () => {
