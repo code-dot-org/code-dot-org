@@ -264,8 +264,7 @@ class DashboardSection
     disabled_scripts.map {|script| script[:id]}
   end
 
-  # TODO: rename
-  def self.valid_course_id?(script_id)
+  def self.valid_script_id?(script_id)
     valid_scripts.find {|script| script[:id] == script_id.to_i}
   end
 
@@ -277,7 +276,7 @@ class DashboardSection
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
-    script_id = params[:script] && valid_course_id?(params[:script][:id]) ?
+    script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
       params[:script][:id].to_i : params[:script_id]
     stage_extras = params[:stage_extras] ? params[:stage_extras] : false
     created_at = DateTime.now
@@ -304,7 +303,7 @@ class DashboardSection
       raise
     end
 
-    if params[:script] && valid_course_id?(params[:script][:id])
+    if params[:script] && valid_script_id?(params[:script][:id])
       DashboardUserScript.assign_script_to_user(params[:script][:id].to_i, params[:user][:id])
     end
 
@@ -517,7 +516,7 @@ class DashboardSection
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
 
-    if params[:script] && valid_course_id?(params[:script][:id])
+    if params[:script] && valid_script_id?(params[:script][:id])
       fields[:script_id] = params[:script][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
       DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)

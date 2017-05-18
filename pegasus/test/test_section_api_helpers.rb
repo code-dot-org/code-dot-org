@@ -168,7 +168,7 @@ class SectionApiHelperTest < SequelTestCase
       end
     end
 
-    describe 'valid courses' do
+    describe 'valid scripts' do
       before do
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
@@ -180,15 +180,15 @@ class SectionApiHelperTest < SequelTestCase
         ]
       end
 
-      it 'accepts valid course_ids' do
-        assert DashboardSection.valid_course_id?('1')
-        assert DashboardSection.valid_course_id?('3')
+      it 'accepts valid script ids' do
+        assert DashboardSection.valid_script_id?('1')
+        assert DashboardSection.valid_script_id?('3')
       end
 
-      it 'does not accept invalid course_ids' do
-        assert !DashboardSection.valid_course_id?('2')
-        assert !DashboardSection.valid_course_id?('111')
-        assert !DashboardSection.valid_course_id?('invalid!!')
+      it 'does not accept invalid script ids' do
+        assert !DashboardSection.valid_script_id?('2')
+        assert !DashboardSection.valid_script_id?('111')
+        assert !DashboardSection.valid_script_id?('invalid!!')
       end
 
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Classic Maze"' do
