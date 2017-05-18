@@ -82,7 +82,6 @@ var generateSetterCode = function (opts) {
 // These are set to the default values, but may be overridden
 var spriteCount = 6;
 var projectileCollisions = false;
-var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
 
 var customGameLogic = null;
@@ -93,10 +92,6 @@ exports.setSpriteCount = function (blockly, count) {
 
 exports.enableProjectileCollisions = function (blockly) {
   projectileCollisions = true;
-};
-
-exports.enableSpritesOutsidePlayspace = function (blockly) {
-  allowSpritesOutsidePlayspace = true;
 };
 
 exports.setStartAvatars = function (avatarList) {
@@ -808,14 +803,8 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite (selected by dropdown) to different position.
     helpUrl: '',
     init: function () {
-      var dropdown;
-      if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
-        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
-      } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      }
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
         this.appendDummyInput()
@@ -847,14 +836,8 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite (selected by block param) to different position.
     helpUrl: '',
     init: function () {
-      var dropdown;
-      if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
-        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
-      } else {
-        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
-        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
-      }
+      var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+      dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.00, 0.74);
 
      this.appendValueInput('SPRITE')

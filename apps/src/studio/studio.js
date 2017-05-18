@@ -1732,10 +1732,6 @@ Studio.initSprites = function () {
     if (level.projectileCollisions) {
       blocks.enableProjectileCollisions(Blockly);
     }
-
-    if (Studio.allowSpritesOutsidePlayspace) {
-      blocks.enableSpritesOutsidePlayspace(Blockly);
-    }
   }
 };
 
