@@ -111,7 +111,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal 1, categories_list.length
     project_row = categories_list['applab'].first
     assert_equal 'App with no thumbnail', project_row['name']
-    assert_equal nil, project_row['thumbnailUrl']
+    assert_nil project_row['thumbnailUrl']
   end
 
   test 'project details are correct listing all published projects' do
@@ -139,6 +139,6 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   private
 
   def db_result(result)
-    stub(join: stub(join: stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result)))))))
+    stub(select_append: stub(join: stub(join: stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result))))))))
   end
 end
