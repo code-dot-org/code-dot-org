@@ -1569,9 +1569,9 @@
           the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
-          Once you've found and fixed the first bug, go through the debugging process again to find the second one.
-
-          Repeat the process until the program works!
+          - What is Skrat supposed to do?
+          - What does Skrat do?
+          - What does that tell you?
         courseC_maze_debugging6_b: |-
           Once you've found and fixed the first bug, go through the debugging process again to find the second one.
 
