@@ -1,4 +1,10 @@
 class Pd::WorkshopEnrollmentController < ApplicationController
+  authorize_resource class: 'Pd::Enrollment', only: [:join_session, :confirm_join_session]
+  load_and_authorize_resource :session, class: 'Pd::Session', find_by: :code, id_param: :session_code,
+    only: [:join_session, :confirm_join_session]
+  load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
+    only: [:join_session, :confirm_join_session]
+
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true)
@@ -96,7 +102,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # GET /pd/workshops/join/:section_code
   def join_section
     unless current_user
-      redirect_to "/users/sign_in?return_to=#{request.url}"
+      redirect_to "/users/sign_in?user_return_to=#{request.url}"
       return
     end
 
@@ -125,9 +131,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       return
     end
 
-    @enrollment = get_workshop_user_enrollment
-    @enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
-    @enrollment.school_info_attributes = school_info_params
+    @enrollment = build_enrollment_from_params
 
     # enrollment.school should never be set when school_info.country is set. Fix this so that the following flow works:
     #   1. user enrolls using the old format (setting enrollment.school but not school_info.country)
@@ -157,7 +161,45 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
   end
 
+  # GET /pd/attend/:session_code/join
+  # TODO (Andrew): once we're satisfied with this new session attendance model, remove #join_section
+  def join_session
+    @enrollment = get_workshop_user_enrollment
+  end
+
+  # POST /pd/attend/:session_code/join
+  # TODO (Andrew): once we're satisfied with this new session attendance model, remove #confirm_join_section
+  def confirm_join_session
+    @enrollment = build_enrollment_from_params
+
+    unless @enrollment.save
+      render :join_session
+      return
+    end
+
+    if current_user.student?
+      if Digest::MD5.hexdigest(@enrollment.email) == current_user.hashed_email
+        # Email matches user's hashed email. Upgrade to teacher and set email.
+        current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email)
+      else
+        # No email match. Redirect to upgrade page.
+        redirect_to controller: 'pd/session_attendance', action: 'upgrade_account'
+        return
+      end
+    end
+
+    redirect_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
   private
+
+  def build_enrollment_from_params
+    enrollment = get_workshop_user_enrollment
+    enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
+    enrollment.school_info_attributes = school_info_params
+
+    enrollment
+  end
 
   def mark_attended(user_id, session_id)
     Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)

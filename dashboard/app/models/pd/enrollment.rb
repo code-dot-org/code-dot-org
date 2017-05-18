@@ -26,6 +26,7 @@
 #
 
 require 'cdo/code_generation'
+require 'cdo/safe_names'
 
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
@@ -36,6 +37,7 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :user
   has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
+  auto_strip_attributes :first_name, :last_name
 
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
@@ -210,6 +212,11 @@ class Pd::Enrollment < ActiveRecord::Base
     first_name, last_name = value.split(' ', 2)
     write_attribute :first_name, first_name
     write_attribute :last_name, last_name || ''
+  end
+
+  def self.get_safe_names
+    first_last_name_proc = ->(enrollment) {[enrollment.first_name, enrollment.last_name]}
+    SafeNames.get_safe_names(all, first_last_name_proc)
   end
 
   protected
