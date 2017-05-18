@@ -25,10 +25,9 @@ _Note that this only affects teachers using Units 1 - 3, revisions to Units 4 - 
 
 ### Unit 2
 
-* Modified unit-wide project to remove logistical challenges and increase student choice
+* Personal Web Site project revised to increase student choice and decrease logistical difficulties
 * Decreased reliance on external tools
 * Dispersed unplugged lessons throughout the unit
-* Reduced to 2 chapters
 
 ### Unit 3
 
@@ -43,7 +42,7 @@ We realize that changing these units up mid-year can be disruptive for classroom
 
 **If you are teaching Unit 1**, take a look at the lessons you have taught and the lessons we have changed. Due of the unplugged nature of this unit, you should be able to transfer to the new version without much worry.
 
-**If you are teaching Unit 2** many lessons have been rearranged, but most content has remained. Take a look at the new version and decide whether to transfer your students over, and where you might pick it up.
+**If you are teaching Unit 2** many lessons have been rearranged, but most content has remained. Because the Unit 2 project has been revised, student work on the project will not pull over into the new version of the unit.  If your students have already started to work on the project, it's suggested that they continue their work in the older version.
 
 **If you are teaching Unit 3** and have gotten past lesson 9 the only change between the old and new units will be a change in lesson numbering. If you are still in the first 9 lessons of the course, take a look at the new version and decide whether to transfer your students over, and where you might pick it up.
 
@@ -61,5 +60,5 @@ The new units will be located at the same URLs as the old ones were, so if you c
 
 ## When will this all happen?
 
-The new versions of Units 1 and 3 will go live at the end of the day **Friday, April 21**, giving you that weekend to transfer your classes over to the old scripts if you need to. The publishing date for Unit 2 revisions has not yet been set - this page will be updated when we are closer to publishing.
+The new versions of Units 1 and 3 went live on **Friday, April 21**. The updated Unit 2 will go live at the end of the day **Friday, May 12**, giving you that weekend to transfer your classes over to the old script if you need to.
 

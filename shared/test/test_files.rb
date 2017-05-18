@@ -20,6 +20,51 @@ class FilesTest < FilesApiTestBase
     @channel_id = nil
   end
 
+  def test_copy_object
+    file_data = 'fake-file-data'
+    old_filename = @api.randomize_filename 'old_file.html'
+    new_filename = @api.randomize_filename 'new_file.html'
+    delete_all_file_versions old_filename, URI.escape(old_filename),
+      new_filename, URI.escape(new_filename)
+    delete_all_manifest_versions
+    post_file_data @api, old_filename, file_data, 'test/html'
+
+    @api.copy_object old_filename, new_filename
+
+    assert successful?
+    @api.get_object(new_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+    @api.get_object(old_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+
+    delete_all_manifest_versions
+  end
+
+  def test_rename_object
+    file_data = 'fake-file-data'
+    old_filename = @api.randomize_filename 'old_file.html'
+    new_filename = @api.randomize_filename 'new_file.html'
+    delete_all_file_versions old_filename, URI.escape(old_filename),
+      new_filename, URI.escape(new_filename)
+    delete_all_manifest_versions
+    post_file_data @api, old_filename, file_data, 'test/html'
+
+    @api.rename_object old_filename, new_filename
+    assert successful?
+    @api.get_object(new_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+    @api.get_object(old_filename)
+    assert not_found?
+
+    @api.delete_object(new_filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_upload_files
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
@@ -299,6 +344,49 @@ class FilesTest < FilesApiTestBase
 
     @api.get_object(bogus_metadata_filename)
     assert not_found?
+  end
+
+  def test_metadata_cached
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    get "/v3/files-public/#{@channel_id}/#{thumbnail_filename}"
+    assert successful?
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+  end
+
+  def test_rename_mixed_case
+    filename = @api.randomize_filename('Mixed Case With Spaces.html')
+    escaped_filename = URI.escape(filename)
+    filename2 = @api.randomize_filename('Another Mixed Case Spaces Name.html')
+    escaped_filename2 = URI.escape(filename2)
+    delete_all_file_versions(filename, filename2)
+    delete_all_manifest_versions
+
+    post_file_data(@api, filename, 'stub-contents', 'test/html')
+    assert successful?
+
+    @api.get_object(escaped_filename)
+    assert successful?
+    assert_equal 'stub-contents', last_response.body
+
+    @api.rename_object(filename, escaped_filename2)
+    assert successful?
+
+    @api.get_object(escaped_filename2)
+    assert successful?
+    assert_equal 'stub-contents', last_response.body
+
+    @api.get_object(escaped_filename)
+    assert not_found?
+
+    @api.delete_object(escaped_filename2)
+    assert successful?
+
+    delete_all_manifest_versions
   end
 
   private

@@ -789,6 +789,18 @@ class UserTest < ActiveSupport::TestCase
     assert ActionMailer::Base.deliveries.empty?
   end
 
+  test 'provides helpful error on bad email address' do
+    # Though validation now exists to prevent grossly malformed emails, such was not always the
+    # case. Consequently, we must bypass validation to create the state of such an account.
+    user = create :user
+    user.email = 'bounce@xyz'
+    user.save(validate: false)
+
+    error_user = User.send_reset_password_instructions(email: 'bounce@xyz')
+
+    assert error_user.errors[:base]
+  end
+
   test 'send reset password for student' do
     email = 'email@email.xx'
     student = create :student, password: 'oldone', email: email

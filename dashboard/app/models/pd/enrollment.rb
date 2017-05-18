@@ -25,6 +25,8 @@
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
+require 'cdo/code_generation'
+
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
@@ -101,6 +103,14 @@ class Pd::Enrollment < ActiveRecord::Base
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
   end
 
+  def survey_class
+    if workshop.local_summer?
+      Pd::LocalSummerWorkshopSurvey
+    else
+      Pd::WorkshopSurvey
+    end
+  end
+
   # Filters a list of enrollments for survey completion, checking with Pegasus (in batch) to include
   # new unprocessed surveys that don't yet show up in this model.
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
@@ -156,6 +166,10 @@ class Pd::Enrollment < ActiveRecord::Base
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
+
+    # TODO: elijah: once the route is fully ready, add the following codition above
+    #elsif workshop.local_summer?
+    #  pd_new_workshop_survey_url(code)
   end
 
   def send_exit_survey
@@ -217,9 +231,6 @@ class Pd::Enrollment < ActiveRecord::Base
   private
 
   def unused_random_code
-    loop do
-      code = SecureRandom.hex(10)
-      return code unless Pd::Enrollment.exists?(code: code)
-    end
+    CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

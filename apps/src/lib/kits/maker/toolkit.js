@@ -2,14 +2,15 @@
  * @file Static interface to Maker Toolkit, to simplify App Lab code interfacing
  * with maker and provide clean setup/cancel/reset patterns.
  */
-import codegen from '../../../codegen';
 import {getStore} from '../../../redux';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
+import FakeBoard from './FakeBoard';
 import * as commands from './commands';
 import * as dropletConfig from './dropletConfig';
 import MakerError, {ConnectionCanceledError} from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
+/* global trackEvent */
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -74,13 +75,13 @@ export function connect({interpreter, onDisconnect}) {
   const dispatch = store.dispatch.bind(store);
   dispatch(redux.startConnecting());
 
-  return findPortWithViableDevice()
-      .then(port => {
+  return getBoard()
+      .then(board => {
         if (!isConnecting()) {
           // Must've called reset() - exit the promise chain.
           return Promise.reject(new ConnectionCanceledError());
         }
-        currentBoard = new CircuitPlaygroundBoard(port);
+        currentBoard = board;
         return currentBoard.connect();
       })
       .then(() => {
@@ -89,11 +90,12 @@ export function connect({interpreter, onDisconnect}) {
           return Promise.reject(new ConnectionCanceledError());
         }
         commands.injectBoardController(currentBoard);
-        currentBoard.installOnInterpreter(codegen, interpreter);
+        currentBoard.installOnInterpreter(interpreter);
         if (typeof onDisconnect === 'function') {
           currentBoard.once('disconnect', onDisconnect);
         }
         dispatch(redux.reportConnected());
+        trackEvent('Maker', 'ConnectionSuccess');
       })
       .catch(error => {
         if (error instanceof ConnectionCanceledError) {
@@ -102,13 +104,32 @@ export function connect({interpreter, onDisconnect}) {
         } else {
           // Something went wrong, so show the error screen.
           dispatch(redux.reportConnectionError());
+          trackEvent('Maker', 'ConnectionError');
           return Promise.reject(error);
         }
       });
 }
 
+/**
+ * Create a board controller attached to an available board (or Fake board, if
+ * appropriate).
+ * @returns {Promise.<MakerBoard>}
+ */
+function getBoard() {
+  if (shouldRunWithFakeBoard()) {
+    return Promise.resolve(new FakeBoard());
+  } else {
+    return findPortWithViableDevice()
+        .then(port => new CircuitPlaygroundBoard(port));
+  }
+}
+
 function isConnecting() {
   return redux.isConnecting(getStore().getState());
+}
+
+function shouldRunWithFakeBoard() {
+  return redux.shouldRunWithFakeBoard(getStore().getState());
 }
 
 /**

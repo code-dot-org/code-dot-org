@@ -18,7 +18,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
-    if current_user.admin? && params[:workshop_id]
+    if (current_user.admin? || current_user.permission?(UserPermission::WORKSHOP_ADMIN)) && params[:workshop_id]
       @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
     end
 
@@ -170,7 +170,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :location_name,
       :location_address,
       :capacity,
-      :workshop_type,
+      :on_map,
+      :funded,
       :course,
       :subject,
       :notes,

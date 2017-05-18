@@ -33,9 +33,17 @@
     "fast_get_nectar_animation": "false",
     "raw_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,\"1\",1,1,1,1,\"1\",0],[0,\"2\",\"+1C\",\"-1C\",\"1C\",\"1Cany\",\"1\",0],[0,\"1\",\"+1\",\"+1,1\",\"+1,2\",\"1\",\"1\",0],[0,\"1\",\"+0\",\"+0,0\",\"+0,2\",1,\"1\",0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_values": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,2,\"+1C\",\"-2C\",\"3C\",\"4Cany\",\"5Cany\",0],[0,1,\"1\",\"1\",\"1\",1,1,0],[0,1,\"1\",\"1\",\"1\",1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":2,\"cloudType\":2,\"range\":2},{\"tileType\":1,\"featureType\":2,\"value\":3,\"cloudType\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":4,\"cloudType\":4,\"range\":4},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":null,\"range\":null},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":3},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":4},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "maze_data": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

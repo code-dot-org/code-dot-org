@@ -45,7 +45,7 @@ cat <<JSON > $FIRST_BOOT
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
-<% if environment == :adhoc -%>
+<% if environment == :adhoc && TEMPLATE == 'cloud_formation_stack.yml.erb' -%>
     "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
 <% end -%>
 <% unless cdn_enabled -%>

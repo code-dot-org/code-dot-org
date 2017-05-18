@@ -36,7 +36,8 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   end
 
   test 'required application field validations' do
-    teacher_application = build :pd_teacher_application, application: {}
+    teacher_application = build :pd_teacher_application
+    teacher_application.application_hash = {}
 
     refute teacher_application.valid?
     # Three fields are validated outside the list of validated fields
@@ -332,6 +333,78 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     Pd::ProgramRegistrationValidation.expects(:validate).with(registration_data)
     mock_query_result.expects(:update)
     application.save!
+  end
+
+  test 'email field assignments match application' do
+    primary_email_1 = 'primary1@school.edu'
+    secondary_email_1 = 'secondary1@school.edu'
+    application = build :pd_teacher_application, primary_email: primary_email_1, secondary_email: secondary_email_1
+
+    assert_equal primary_email_1, application.application_hash['primaryEmail']
+    assert_equal primary_email_1, application.primary_email
+    assert_equal secondary_email_1, application.application_hash['secondaryEmail']
+    assert_equal secondary_email_1, application.secondary_email
+
+    # Verify new direct fields values are reflected in the application
+    primary_email_2 = 'primary2@school.edu'
+    secondary_email_2 = 'secondary2@school.edu'
+    application.primary_email = primary_email_2
+    assert_equal primary_email_2, application.application_hash['primaryEmail']
+    application.secondary_email = secondary_email_2
+    assert_equal secondary_email_2, application.application_hash['secondaryEmail']
+
+    # Verify new application values are reflected in the direct fields
+    primary_email_3 = 'primary3@school.edu'
+    secondary_email_3 = 'secondary3@school.edu'
+    application.update_application_hash(primaryEmail: primary_email_3, secondaryEmail: secondary_email_3)
+    assert_equal primary_email_3, application.primary_email
+    assert_equal secondary_email_3, application.secondary_email
+
+    # Finally, verify non-email fields in the application do not modify the direct email fields
+    application.update_application_hash(selectedCourse: 'csp')
+    assert_equal primary_email_3, application.primary_email
+    assert_equal secondary_email_3, application.secondary_email
+  end
+
+  test 'primary email and user must match validation runs only when they change' do
+    teacher_1 = create :teacher
+    teacher_2 = create :teacher
+    extraneous_teacher = create :teacher
+    application = build :pd_teacher_application, user: teacher_1, primary_email: teacher_2.email
+
+    # Initially invalid because the emails don't match.
+    # Save without validating as if it were an old application before this rule existed
+    refute application.valid?
+    application.save(validate: false)
+
+    # Now, without changing anything, it should be valid
+    application.reload
+    assert application.valid?
+
+    # Changing move_to_user will run the validation
+    application.move_to_user = extraneous_teacher.id
+    refute application.valid?
+    application.move_to_user = teacher_2.id
+    assert application.valid?
+
+    # Same with changing the primary_email
+    application.reload
+    application.primary_email = extraneous_teacher.email
+    refute application.valid?
+    application.primary_email = teacher_1.email
+    assert application.valid?
+
+    # Or changing the user directly
+    application.reload
+    application.user = extraneous_teacher
+    refute application.valid?
+    application.user = teacher_2
+    assert application.valid?
+
+    # But changing other fields will skip the user / email validation
+    application.reload
+    application.secondary_email = 'another@email.com'
+    assert application.valid?
   end
 
   private

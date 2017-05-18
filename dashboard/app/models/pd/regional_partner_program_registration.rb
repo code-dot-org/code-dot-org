@@ -14,9 +14,12 @@
 #  index_pd_reg_part_prog_reg_on_user_id_and_teachercon  (user_id,teachercon)
 #
 
-class Pd::RegionalPartnerProgramRegistration < Pd::ProgramRegistration
-  def self.required_fields
+class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
+  include Pd::ProgramRegistrationForm
+
+  def required_fields
     [
+      :confirm_teachercon_date,
       :full_name,
       :email,
       :contact_name,
@@ -35,9 +38,9 @@ class Pd::RegionalPartnerProgramRegistration < Pd::ProgramRegistration
   NO = 'No'
 
   def self.options
-    Pd::ProgramRegistration::TRAVEL_OPTIONS.
-      merge(Pd::ProgramRegistration::PHOTO_RELEASE_OPTIONS).
-      merge(Pd::ProgramRegistration::LIABILITY_WAIVER_OPTIONS).
+    Pd::ProgramRegistrationForm::TRAVEL_OPTIONS.
+      merge(Pd::ProgramRegistrationForm::PHOTO_RELEASE_OPTIONS).
+      merge(Pd::ProgramRegistrationForm::LIABILITY_WAIVER_OPTIONS).
       merge(
         {
           confirm_teachercon_date: [
