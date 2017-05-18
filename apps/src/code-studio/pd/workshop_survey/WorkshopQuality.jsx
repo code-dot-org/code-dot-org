@@ -73,14 +73,12 @@ export default class WorkshopQuality extends FormComponent {
           })
         }
 
-        {this.props.isLocalSummer &&
-          this.buildFieldGroup({
-            componentClass: "textarea",
-            label: "Do you have feedback about the venue and the way logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
-            name: "feedbackVenueLogistics",
-            required: true,
-          })
-        }
+        {this.buildFieldGroup({
+          componentClass: "textarea",
+          label: "Do you have feedback about the venue and the way logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
+          name: "venueFeedback",
+          required: true,
+        })}
 
         {this.buildButtonsFromOptions({
           label: "Overall, how much have you learned from your workshop about computer science?",
@@ -165,7 +163,7 @@ WorkshopQuality.associatedFields = [
   "howHeardOther",
   "receivedClearCommunication",
   "schoolHasTech",
-  "feedbackVenueLogistics",
+  "venueFeedback",
   "howMuchLearned",
   "howMotivating",
   "whoFacilitated"

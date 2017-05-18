@@ -38,6 +38,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :reason_for_attending,
       :how_heard,
       :received_clear_communication,
+      :venue_feedback,
       :school_has_tech,
       :how_much_learned,
       :how_motivating,
