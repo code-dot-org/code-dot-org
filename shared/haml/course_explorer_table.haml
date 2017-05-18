@@ -81,8 +81,9 @@
                       =course[:description]
                   - if course[:link]
                     %br/
-                    %a{href: course[:link], style: "padding-left: 0px; color: grey"}
+                    %a{href: course[:link], style: "font-size: 12px; padding-left: 0px; color: #00adbc"}
                       Learn more
+                      %i.fa.fa-chevron-right
               .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", onclick: "$('#courseextra-#{course_index}').slideUp()" }
                 %i.fa.fa-times{"aria-hidden" => "true"}
 
