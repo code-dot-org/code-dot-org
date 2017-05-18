@@ -130,6 +130,10 @@ export default class FormComponent extends React.Component {
       required = true;
     }
 
+    if (!this.props.options[name]) {
+      throw `Cannot create buttons for ${name} without options`;
+    }
+
     return (
       <ButtonList
         key={name}
