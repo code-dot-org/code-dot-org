@@ -215,7 +215,6 @@ class DashboardSection
   end
 
   @@script_cache = {}
-  # TODO: rename
   def self.valid_scripts(user_id = nil)
     # some users can see all scripts, even those marked hidden
     script_cache_key = I18n.locale.to_s +
@@ -504,7 +503,6 @@ class DashboardSection
     }
   end
 
-  #TODO: param
   def self.update_if_owner(params)
     section_id = params[:id]
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
