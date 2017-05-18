@@ -697,7 +697,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   }
 };
 
-export function makeFooterMenuItems(i18n, project) {
+export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
       text: i18n.t('footer.try_hour_of_code'),
@@ -749,7 +749,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
       width: $("#visualization").width()
     },
     className: 'dark',
-    menuItems: makeFooterMenuItems(i18n, project),
+    menuItems: makeFooterMenuItems(),
     phoneFooter: true
   };
 

@@ -1,6 +1,7 @@
 import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {singleton as studioApp, stubStudioApp, restoreStudioApp, makeFooterMenuItems} from '@cdo/apps/StudioApp';
+import i18n from '@cdo/apps/code-studio/i18n';
 import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
@@ -99,30 +100,29 @@ describe("StudioApp", () => {
     });
   });
 
-  describe('StudioApp.makeFooterMenuItems', () => {
+  describe('The StudioApp.makeFooterMenuItems function', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
+      sinon.stub(i18n, 't').callsFake(function (txt) {return txt;});
     });
 
     afterEach(() => {
       project.getUrl.restore();
+      i18n.t.restore();
     });
 
-    const i18n = {
-      t: key => key
-    };
 
-    it("How It Works URL for game lab embed page", () => {
+    it("returns a How It Works link to the project edit page from an embed page in GameLab", () => {
       project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/embed');
-      const footItems = makeFooterMenuItems(i18n, project);
+      const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(item =>
           item.text === 'footer.how_it_works');
       expect(howItWorksItem.link).to.equal('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit');
     });
 
-    it("How It Works URL for game lab share page", () => {
+    it("returns a How It Works link to the project edit page from a share page in GameLab", () => {
       project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/');
-      const footItems = makeFooterMenuItems(i18n, project);
+      const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(item =>
           item.text === 'footer.how_it_works');
       expect(howItWorksItem.link).to.equal('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit');
