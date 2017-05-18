@@ -16,8 +16,14 @@ module Rack
         return [status, headers, body]
       end
 
-      content = ''
-      body.each {|x| content += x}
+      # Read the response body into a string.
+      if body.respond_to?(:read)
+        content = body.read
+      else
+        str = StringIO.new ''
+        body.each {|x| str.write x}
+        content = str.string
+      end
       body.close if body.respond_to? :close
 
       content_type = headers['Content-Type'] || 'application/octet-stream'
