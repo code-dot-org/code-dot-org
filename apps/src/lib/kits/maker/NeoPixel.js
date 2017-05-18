@@ -1,11 +1,19 @@
 /** @file Wrapper around Johnny-Five NeoPixel component */
 import five from '@code-dot-org/johnny-five';
 
+/**
+ * Properties of the wrapped five.Led.RGB that the NeoPixel exposes as its own.
+ * @type {string[]}
+ */
 export const PASS_THRU_PROPERTIES = [
-    'board',
-    'pin',
+  'board',
+  'pin',
 ];
 
+/**
+ * Methods of the wrapped five.Led.RGB that the NeoPixel exposes unmodified.
+ * @type {string[]}
+ */
 export const PASS_THRU_METHODS = [
   'blink',
   'color',
