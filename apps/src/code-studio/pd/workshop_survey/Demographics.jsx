@@ -112,28 +112,19 @@ export default class Demographics extends FormComponent {
           The "how many years have you taught CS question is always shown on the
           local summer workshops survey, and conditionally shown on the regular
           survey based on whether or not they self-report as having taught CS
-
-          Unfortunately, the spec for some reason has the Local Summer version
-          displaying this as a dropdown and the regular version giving just a
-          text input.
-          TODO (elijah): try and get these using the same thing
         */}
-        {this.props.isLocalSummer &&
+        {(
+          this.props.isLocalSummer ||
+          (
+            this.props.data.subjectsTaught &&
+            this.props.data.subjectsTaught.includes("Computer Science")
+          )
+         ) &&
           this.buildSelectFieldGroupFromOptions({
             label: LABELS.yearsTaughtCs,
             name: "yearsTaughtCs",
             placeholder: "-",
             required: true,
-          })
-        }
-        {(
-          !this.props.isLocalSummer &&
-          this.props.data.subjectsTaught &&
-          this.props.data.subjectsTaught.includes("Computer Science")
-         ) &&
-          this.buildFieldGroup({
-            label: LABELS.yearsTaughtCs,
-            name: "yearsTaughtCs",
           })
         }
 

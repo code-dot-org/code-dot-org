@@ -286,7 +286,21 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
         'Math',
         'Arts/Music',
         OTHER
-      ]
+      ],
+
+      years_taught_cs: [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10+",
+      ],
     }.freeze
   end
 
