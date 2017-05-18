@@ -18,14 +18,11 @@ class Course < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course'
   has_many :course_scripts, -> {order('position ASC')}
 
-  validates :name,
-    presence: true,
-    uniqueness: {case_sensitive: false},
-    format: {
-      unless: :plc_course,
-      with: /\A[a-z0-9\-]+\z/,
-      message: 'can only contain lowercase letters, numbers and dashes'
-    }
+  def skip_name_format_validation
+    !!plc_course
+  end
+
+  include SerializedToFileValidation
 
   def summarize
     {
