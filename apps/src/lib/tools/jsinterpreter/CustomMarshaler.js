@@ -28,8 +28,10 @@ module.exports = class CustomMarshaler {
     return false;
   }
 
-  // When marshaling methods on "custom marshal" objects, we may need to augment
-  // the marshaling options. This returns those options.
+  /**
+   * When marshaling methods on "custom marshal" objects, we may need to augment
+   * the marshaling options. This returns those options.
+   */
   getCustomMarshalMethodOptions(nativeParentObj) {
     for (var i = 0; i < this.objectList.length; i++) {
       var marshalObj = this.objectList[i];
