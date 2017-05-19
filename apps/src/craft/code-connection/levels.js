@@ -9,11 +9,13 @@ function block(type) {
 }
 
 const log = craftBlock('log');
+const waitOneSecond = craftBlock('waitOneSecond');
+const callNativeAsync = craftBlock('callNativeAsync');
 
 module.exports = {
   custom: {
     requiredBlocks: [],
     freePlay: false,
-    toolbox: createToolbox(log + block('text')),
+    toolbox: createToolbox(log + waitOneSecond + callNativeAsync + block('text')),
   }
 };

@@ -36,15 +36,32 @@ const preloadImage = function (url) {
 const executeUserCode = function () {
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+  let interpreter;
 
   const evalApiMethods = {
     log: function (blockID, value) {
       studioApp().highlight(blockID);
       console.log('Logged: ' + value);
     },
+    prompt: function (blockID, callback) {
+      studioApp().highlight(blockID);
+      const value = prompt('Enter a value:');
+      setTimeout(() => {
+        callback(value);
+        interpreter.run();
+      }, 0);
+    },
+    delay: function (blockID, milliseconds, callback) {
+      studioApp().highlight(blockID);
+      setTimeout(() => {
+        callback();
+        interpreter.run();
+      }, milliseconds);
+    }
   };
 
-  codegen.evalWith(code, evalApiMethods);
+  codegen.asyncFunctionList = [evalApiMethods.prompt, evalApiMethods.delay];
+  interpreter = codegen.evalWith(code, evalApiMethods);
 };
 
 export default class Craft {
@@ -74,7 +91,8 @@ export default class Craft {
   static render(config) {
     const onMount = function () {
       studioApp().init({
-        ...config
+        enableShowCode: false,
+        ...config,
       });
 
       COMMON_UI_ASSETS.forEach(function (url) {

@@ -23,7 +23,7 @@ exports.ForStatementMode = {
  * @param globals {Object} - An object of globals to be added to the scope of code being executed
  * @param legacy {boolean} - If true, code will be run natively via an eval-like method,
  *     otherwise it will use the js interpreter.
- * @returns undefined unless legacy=true, in which case, it returns whatever the given code returns.
+ * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
  */
 export function evalWith(code, globals, legacy) {
   if (legacy) {
@@ -41,9 +41,11 @@ export function evalWith(code, globals, legacy) {
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
   } else {
-    new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
+    const interpreter = new PatchedInterpreter(`(function () { ${code} })()`, (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
-    }).run();
+    });
+    interpreter.run();
+    return interpreter;
   }
 }
 
