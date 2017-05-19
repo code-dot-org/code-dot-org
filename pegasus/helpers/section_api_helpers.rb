@@ -143,7 +143,6 @@ class DashboardStudent
       :users__user_type___user_type,
       :users__gender___gender,
       :users__birthday___birthday,
-      :users__prize_earned___prize_earned,
       :users__total_lines___total_lines,
       :users__secret_words___secret_words
     ]
