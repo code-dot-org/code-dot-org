@@ -2369,6 +2369,12 @@ en:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
+            Multi-Screen Apps:
+              name: Multi-Screen Apps
+            '"if" Statements Unplugged':
+              name: '"if" Statements Unplugged'
+            Boolean Expressions and "if" Statements:
+              name: Boolean Expressions and "if" Statements
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -4765,7 +4771,7 @@ en:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: ''
-          description: ''
+          description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the students' choosing.
           stages:
             Representation Matters:
               name: Representation Matters

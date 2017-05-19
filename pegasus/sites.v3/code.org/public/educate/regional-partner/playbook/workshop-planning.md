@@ -127,20 +127,10 @@ ________________
   <summary>**Workshop Preparation Process**</summary>
   <p> 
 
-1. Setup your CS Principles Workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
-2. Make sure ALL facilitators are added to the workshop *If you forget to add them, they will not get paid!*<br/>
-*(Skip to step 4 if this is not a summer workshop)*
-3. Send teachers their [accept email and information on how to setup a Code Studio account and access the Phase 1 online module](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit?usp=sharing).<br/>
-4. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
-5. Send all teachers an [email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit?usp=sharing) for their program asking them to register for your workshop using the dashboard registration link.<br/> 
-6. Four weeks prior - order catering
-7. Three to Four weeks prior (no later than 21 days) - [order your supplies](/educate/professional-learning-partner/playbook/ordering-supplies) from Mimeo.
-8. One and a half weeks prior - create a [facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators
-9. Two days prior - make sure all your supplies have arrived. 
-10. Day of the workshop 
-	 - Login to the workshop organizer dashboard to [“Start Workshop”](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.wmocqedffowl) and have teachers join it.
-	- Decide if you or your facilitators take attendance. 
-	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.<br/>
+For Local Summer Workshops follow the guidance in [this process document.](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit#)
+<br/>
+Academic Year Guidance coming soon!
+
 </p>
 </details>
 
@@ -181,17 +171,23 @@ These guidelines explain the type of space your facilitators need to run a succe
 Take a look at the <a href="https://code.org/curriculum/docs/csp/units_horizSnap.png" target=_blank>CSP pacing guide</a> for more information.<br/>
 
 **Automated Emails**<br/>
-Teachers attending your workshop will receive [this](https://docs.google.com/document/d/1KQ3OOb87mF1NZ3sSs_5VmQLQjDEBwxvRTG-3hCR2uG0/edit?usp=sharing) email 2 weeks prior to the training. 
+Teachers attending your workshop will receive automated emails 10 days and 3 days prior to attending the workshop. You can see a copy of these emails in the [Local Summer Workshop Process Document.](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit#)
 </p>
 </details>
 
 <details>
   <summary>**Teacher Packets and Agendas**</summary>
   <p> 
-**Workshop Resources**
+  <br/>
+**2017-18 Academic Year Resources**
 
-- <a href="/files/csp-p2-agenda.pdf" target=_blank>Phase 2: Summer Workshop Agenda</a>
--  Phase 3: Academic Year Development<br/>
+- Coming soon
+
+**2016-17 Academic Year Resources**
+<br/>
+
+- <a href="/files/csp-p2-agenda.pdf" target=_blank>Phase 2: Summer Workshop Agenda</a><br/>
+- Phase 3: Academic Year Development<br/>
 	- Session A
 		- <a href="https://code.org/files/CSPFirstQuarterWorkshop-teachers.pdf" target=_blank>Agenda</a>
 		- <a href="https://docs.google.com/document/d/13CPBruuyfu9xA7mhMBNEVvS0_TbfAF4PK-tlPmiKaqg/edit?usp=sharing" target=_blank>Teacher Packet</a>
@@ -217,9 +213,11 @@ Teachers attending your workshop will receive [this](https://docs.google.com/doc
 <details>
   <summary>**Ordering Supplies and Catering**</summary>
   <p> 
+  <br/>
 **Ordering Supplies**<br/>
-Code.org will send each partner a full year's worth of supplies for the continuing workshops prior to your first continuing workshop.
+Supplies for your Local Summer Workshop should be ordered through Mimeo at least 3 weeks prior to your workshop. 
 
+For the academic year workshops, you will place one order 3 weeks prior to your first workshop. This shipment will include a full year's worth of supplies to cover all the workshops during the academic year.
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
@@ -278,9 +276,26 @@ Phase 3 is best held in early October prior to when order of operations and earl
 </details>
 
 <details>
-  <summary>**Ordering Catering**</summary>
-  <p>	
+  <summary>**Teacher Packets and Agendas**</summary>
+  <p> 
 
+- [Teacher Workbook](https://code.org/curriculum/docs/algebra/CSinACourseA.pdf) - Packet to print for each teacher attending the summer workshop.
+- [Facilitator Agendas](https://docs.google.com/spreadsheets/d/13w__s1bC2bjum6_L8vxhlQ5Cd_Ai11Qp2YNzV3CVAvE/edit#gid=850221216) - Agendas to guide the facilitators.
+- [Facilitator Slide Deck for Summer Workshop](https://docs.google.com/presentation/d/1Pmry84StvBFTQiN6ydgFQCA7wDd61NUvy2NBWT3wFAY/edit#) - Slide deck facilitators should use for the summer workshop.
+</p>
+</details>
+
+<details>
+  <summary>**Ordering Supplies and Catering**</summary>
+  <p>	
+**Supplies**
+
+- 1 Workbook per teacher
+- 1 pack of poster paper
+- 2 stickies pads per table
+- 1 pack of markers per table
+<br/>
+**Catering**
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
 
 Always accommodate vegetarian needs, roughly ⅓ of the order. In communications to teachers and workshop attendees ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>

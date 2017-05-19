@@ -3,6 +3,7 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
 import placeholderImage from './placeholder.jpg';
+import $ from 'jquery';
 
 const styles = {
   card: {
@@ -212,6 +213,13 @@ const ProjectCard = React.createClass({
     );
   },
 
+  getLastModifiedTimestamp: function (timestamp) {
+    if (timestamp.toLocaleString) {
+      return timestamp.toLocaleString();
+    }
+    return timestamp.toString();
+  },
+
   render() {
     const { projectData } = this.props;
 
@@ -241,8 +249,8 @@ const ProjectCard = React.createClass({
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            {i18n.published()}:
-            <span style={styles.bold} > {this.dateFormatter(projectData.publishedAt)} at {this.timeFormatter(projectData.publishedAt)}</span>
+            {i18n.published()}:&nbsp;
+            <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}> {this.getLastModifiedTimestamp(projectData.publishedAt)}</time>
           </div>
         </div>
 
@@ -250,6 +258,12 @@ const ProjectCard = React.createClass({
 
       </div>
     );
+  },
+
+  componentDidMount: function () {
+    if ($('.versionTimestamp').timeago) {
+      $('.versionTimestamp').timeago();
+    }
   }
 });
 

@@ -588,7 +588,7 @@ class UserTest < ActiveSupport::TestCase
       :script_level,
       script: script,
       levels: [level, level2],
-      properties: '{"maze 2": {"active": false}}'
+      properties: {'maze 2': {'active': false}}
     )
     create :user_script, user: user, script: script
     UserLevel.create(
@@ -610,7 +610,7 @@ class UserTest < ActiveSupport::TestCase
       :script_level,
       script: script,
       levels: [level, level2],
-      properties: '{"maze 2": {"active": false}}'
+      properties: {'maze 2': {'active': false}}
     )
     create :user_script, user: user, script: script
     UserLevel.create(

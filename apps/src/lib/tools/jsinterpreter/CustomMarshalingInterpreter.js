@@ -141,7 +141,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         return name in obj.data;
       }
     } else {
-      if (this.getNativeParent_()) {
+      if (this.getNativeParent_(obj, name)) {
         return true;
       }
       return super.hasProperty(obj, name);

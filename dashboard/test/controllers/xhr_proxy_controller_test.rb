@@ -8,7 +8,7 @@ class XhrProxyControllerTest < ActionController::TestCase
   XHR_URI = 'https://www.wikipedia.org/foo?a=1&b=2'
   XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'
   XHR_CONTENT_TYPE = 'application/json'
-  CHANNEL_ID = $stub_encrypted_channel_id
+  CHANNEL_ID = 'STUB_CHANNEL_ID-1234'
   BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id"
 
   test "should fetch proxied media with correct content type" do
