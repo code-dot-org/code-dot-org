@@ -15,6 +15,8 @@ exports.ForStatementMode = {
   UPDATE: 3
 };
 
+exports.asyncFunctionList = [];
+
 /**
  * Evaluates a string of code parameterized with a dictionary.
  * Note that this does not currently support custom marshaling.
@@ -268,6 +270,10 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
       nativeFunc: nativeVar,
       nativeParentObj: nativeParentObj,
     };
+    if (exports.asyncFunctionList.indexOf(nativeVar) !== -1) {
+      // Mark if this should be nativeIsAsync:
+      makeNativeOpts.nativeIsAsync = true;
+    }
     if (interpreter instanceof CustomMarshalingInterpreter) {
       var extraOpts = interpreter.customMarshaler.getCustomMarshalMethodOptions(interpreter, nativeParentObj);
       // Add extra options if the parent of this function is in our custom marshal

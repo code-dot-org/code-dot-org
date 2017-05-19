@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import codegen from '@cdo/apps/codegen';
+import * as codegen from '@cdo/apps/codegen';
 import {getStore} from '@cdo/apps/redux';
 import AppView from '@cdo/apps/templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
