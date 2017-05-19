@@ -34,6 +34,23 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
   def index
+    if request.cookies['pm'] == 'new_header'
+      redirect_to '/home'
+    else
+      init_homepage
+    end
+  end
+
+  def home
+    if request.cookies['pm'] != 'new_header'
+      redirect_to '/'
+    else
+      init_homepage
+      render 'home/index'
+    end
+  end
+
+  def init_homepage
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
