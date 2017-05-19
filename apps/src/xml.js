@@ -28,7 +28,7 @@ exports.parseElement = function (text) {
 // Apply a function to a node and all of its descendants
 exports.visitAll = function (node, callback) {
   callback(node);
-  for (let child of node.children) {
+  for (let child of node.childNodes) {
     exports.visitAll(child, callback);
   }
 };
