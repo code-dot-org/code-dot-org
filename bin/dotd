@@ -205,25 +205,6 @@ def content_push(server_name, environment_name)
   end
 end
 
-# Asks if the robo-DTT is green, if the DTT message should be reset, and if Honeybadger issues
-# should be shown.
-def finish_robo_dtt
-  wait_for 'robo-DTT to finish'
-
-  should_i 'mark robo-DTT as green' do
-    test_sha = GitHub.sha 'test'
-    InfraTestTopic.set_green_commit test_sha
-  end
-
-  should_i 'reset DTT message to yes' do
-    DevelopersTopic.set_dtt 'yes'
-  end
-
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
-  end
-end
-
 # Prints the commit messages of commits present in branch head but not branch
 # base. Truncates all such messages to the first line.
 # @param base [String] The base branch to compare.
@@ -240,6 +221,16 @@ def view_commits(base:, head:)
       #{commit_list}
 
   EOS
+end
+
+# Prints the DTT message, formatted based on its contents.
+def print_dtt_message
+  message = "Slack#developers says DTT: #{DevelopersTopic.dtt}"
+  if DevelopersTopic.dtt?
+    puts dim message
+  else
+    puts red message
+  end
 end
 
 # Prints the DTP message, formatted based on its contents.
@@ -276,13 +267,55 @@ def get_honeybadger_issues
   puts '' if issues.count > 0
 end
 
+# Asks if the DTT subroutine should be performed, doing so if requested.
+def do_dtt_subroutine
+  print_dtt_message
+  should_i 'DTT' do
+    view_commits base: 'test', head: 'staging'
+    should_i 'merge from staging to test' do
+      should_i 'reset DTT message to in progress' do
+        DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
+      end
+      pr_number = GitHub.create_and_merge_pull_request(
+        base: 'test',
+        head: 'staging',
+        title: 'DTT (Staging > Test)'
+      )
+      url = GitHub.url(pr_number)
+      wait_for "DTT (#{url}) to complete, re-run / investigate failures"
+
+      should_i 'reset DTT message to yes' do
+        DevelopersTopic.set_dtt 'yes'
+      end
+
+      should_i 'update test room status with green commit and timestamp' do
+        new_sha = GitHub.sha 'test'
+        InfraTestTopic.set_green_commit new_sha
+      end
+    end
+  end
+end
+
 def main
   check_for_cdo_keys
 
   puts_script_intro
   ask_for_name
 
-  2.times {finish_robo_dtt}
+  should_i 'mark robo-DTT as green' do
+    test_sha = GitHub.sha 'test'
+    InfraTestTopic.set_green_commit test_sha
+  end
+
+  should_i 'reset DTT message to yes' do
+    DevelopersTopic.set_dtt 'yes'
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
+  end
+
+  do_dtt_subroutine
 
   should_i 'commit content changes from staging' do
     content_push 'staging', 'staging'
@@ -304,7 +337,7 @@ def main
     end
   end
 
-  finish_robo_dtt
+  do_dtt_subroutine
 
   wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
 
