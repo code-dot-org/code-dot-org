@@ -209,7 +209,7 @@ class FilesApi < Sinatra::Base
   # risking script execution. Initially limited to images since it is useful
   # to view these via the browser context menu.
   def safely_viewable_file_type?(extension)
-    %w(.jpg .jpeg .gif .png).include? extension
+    %w(.jpg .jpeg .gif .png).include? extension.downcase
   end
 
   CONTENT_TYPE = 'Content-Type'.freeze
