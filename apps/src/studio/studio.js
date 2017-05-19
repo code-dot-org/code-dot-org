@@ -199,8 +199,8 @@ const REMIX_PROPS = [
   {
     defaultValues: {
       map: DEFAULT_MAP,
-      firstSpriteIndex: 0,
-      spritesHiddenToStart: false,
+      firstSpriteIndex: 1,
+      spritesHiddenToStart: true,
     },
     generateBlocks: args => {
       const blocks = [];
@@ -214,7 +214,7 @@ const REMIX_PROPS = [
           const cell = Studio.map[y][x].serialize();
           if (cell.tileType & constants.SquareType.SPRITESTART) {
             const defaultSpriteLocation = getDefaultSpriteLocation();
-            if (level.firstSpriteIndex || cell.sprite || !args.spritesHiddenToStart) {
+            if (level.firstSpriteIndex !== 1 || cell.sprite || !args.spritesHiddenToStart) {
               blocks.push(blockAsXmlNode('studio_setSpriteParams', {
                 titles: {
                   'VALUE': `"${Studio.startAvatars[cell.sprite ? cell.sprite : spriteIndex + (level.firstSpriteIndex || 0)]}"`,
