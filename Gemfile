@@ -135,7 +135,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise'
+gem 'devise', '~> 4.2.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -262,3 +262,6 @@ gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'gu
 gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_config_path'
 
 gem 'image_size', require: false
+
+# Auto strip model attributes before validation (opt in)
+gem 'auto_strip_attributes', '~> 2.1'

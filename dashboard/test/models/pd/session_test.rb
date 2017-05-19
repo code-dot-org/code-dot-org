@@ -74,23 +74,35 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'open for attendance' do
-    Pd::Workshop.any_instance.stubs(:state).returns(Pd::Workshop::STATE_IN_PROGRESS)
+    workshop_started = create :pd_workshop, started_at: Time.now - 1.hour
     workshop_not_started = create :pd_workshop
-    workshop_not_started.stubs(:state).returns(Pd::Workshop::STATE_NOT_STARTED)
+    workshop_ended = create :pd_ended_workshop
 
-    session_open = create(:pd_session).tap(&:assign_code)
+    session_open = create(:pd_session, workshop: workshop_started).tap(&:assign_code)
     assert session_open.open_for_attendance?
 
-    session_no_code = create :pd_session
+    session_no_code = create :pd_session, workshop: workshop_started
     refute session_no_code.open_for_attendance?
 
     session_not_started = create :pd_session, workshop: workshop_not_started
     refute session_not_started.open_for_attendance?
+    assert_nil workshop_not_started.started_at
+    assert session_not_started.too_soon_for_attendance?
+    refute session_not_started.too_late_for_attendance?
 
-    session_future = create :pd_session, start: Time.now + 25.hours
+    session_future = create :pd_session, workshop: workshop_started, start: Time.now + 1.day
     refute session_future.open_for_attendance?
+    assert session_future.too_soon_for_attendance?
+    refute session_future.too_late_for_attendance?
 
-    session_past = create :pd_session, start: Time.now - 26.hours, end: Time.now - 25.hours
+    session_past = create :pd_session, workshop: workshop_started, start: Time.now - 1.day, end: Time.now - 23.hours
     refute session_past.open_for_attendance?
+    refute session_past.too_soon_for_attendance?
+    assert session_past.too_late_for_attendance?
+
+    session_ended = create :pd_session, workshop: workshop_ended
+    refute session_ended.open_for_attendance?
+    refute session_ended.too_soon_for_attendance?
+    assert session_ended.too_late_for_attendance?
   end
 end
