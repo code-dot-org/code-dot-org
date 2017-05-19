@@ -62,6 +62,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/plan'});
     $routeProvider.when('/sections',
         {templateUrl: '/teacher-dashboard/sections', controller: 'SectionsController'});
+    $routeProvider.when('/sectionsWithGoogleClassroom',
+        {templateUrl: '/teacher-dashboard/sections?enableExperiments=GoogleClassroom', controller: 'SectionsController'});
     $routeProvider.when('/sections/:id',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:id/print_signin_cards',
@@ -265,6 +267,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.new_section = function() {
+      debugger;
       $scope.sections.unshift({editing: true, login_type: 'word'});
     };
   }]);
