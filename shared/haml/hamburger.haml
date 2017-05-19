@@ -14,7 +14,7 @@
     { title: "Project Gallery", url: "#{studio_url_base}/projects" }
   ]
 
-  not_signed_in_entries = [
+  signed_out_entries = [
     { title: "Project Gallery", url: "#{studio_url_base}/projects/public" }
   ]
 
@@ -48,7 +48,7 @@
   show_teacher_options = "hide-always"
   show_student_options = "hide-always"
   show_pegasus_options = "hide-always"
-  show_not_signed_in_options = "hide-always"
+  show_signed_out_options = "hide-always"
 
   hamburger_class = "none"
 
@@ -60,7 +60,7 @@
     elsif user_type == "student"
       show_student_options = "show-always"
     else
-      show_not_signed_in_options = "show-always"
+      show_signed_out_options = "show-always"
     end
 
     # Regardless of user type, if they are English, then they also need the pegasus
@@ -79,7 +79,7 @@
     elsif user_type == "student"
       show_student_options = "show-mobile"
     else
-      show_not_signed_in_options = "show-mobile"
+      show_signed_out_options = "show-mobile"
     end
 
     if language == "en"
@@ -114,8 +114,8 @@
         %li{class: show_student_options}
           %a{href: entry[:url]}= entry[:title]
     -else
-      - not_signed_in_entries.each do |entry|
-        %li{class: show_not_signed_in_options}
+      - signed_out_entries.each do |entry|
+        %li{class: show_signed_out_options}
           %a{href: entry[:url]}= entry[:title]
 
     %li{class: show_pegasus_options}
