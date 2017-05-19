@@ -1,5 +1,5 @@
 
 def experiment_enabled?(experiment)
   experiments = params[:enableExperiments]
-  !!(experiments and experiments.include?(experiment))
+  !!(experiments && experiments.include?(experiment))
 end
