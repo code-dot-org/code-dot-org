@@ -86,6 +86,32 @@ def main
     end
   end
 
+  Level.find_each do |level|
+    next unless level.script_levels.map(&:script).select(&:k5_draft_course?)
+
+    level.contained_levels.each_with_index do |contained_level, index|
+      contained_question = get_contained_question(contained_level)
+      contained_levels << {
+        level_id: level.id,
+        contained_level_id: contained_level.id,
+        contained_level_type: contained_level.type,
+        contained_level_page: 1,
+        contained_level_position: index,
+        contained_level_text: sanitize_string_for_db(contained_question)
+      }
+
+      answers = contained_level.properties['answers']
+      answers.each_with_index do |answer, answer_number|
+        contained_level_answers << {
+          contained_level_id: contained_level.id,
+          answer_number: answer_number,
+          answer_text: sanitize_string_for_db(answer['text']),
+          correct: answer['correct']
+        }
+      end
+    end
+  end
+
   LevelSource.
     where(level_id: contained_levels.map {|row| row[:contained_level_id]}).
     find_each do |level_source|
