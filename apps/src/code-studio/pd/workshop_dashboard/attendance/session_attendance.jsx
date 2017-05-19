@@ -9,6 +9,7 @@ import VisibilitySensor from '../components/visibility_sensor';
 import Spinner from '../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
+import {COURSE_CSF} from '../workshopConstants';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -23,6 +24,7 @@ const styles = {
 const SessionAttendance = React.createClass({
   propTypes: {
     workshopId: React.PropTypes.number.isRequired,
+    course: React.PropTypes.string.isRequired,
     sessionId: React.PropTypes.number.isRequired,
     adminOverride: React.PropTypes.bool,
     isReadOnly: React.PropTypes.bool,
@@ -42,6 +44,11 @@ const SessionAttendance = React.createClass({
   componentDidMount() {
     this.load();
     this.startRefreshInterval();
+    this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
+    this.isCSF = this.props.course === COURSE_CSF;
+    this.showSectionMembership = !this.shouldUseNewAttendance && this.props.accountRequiredForAttendance;
+    this.showPuzzlesCompleted = this.shouldUseNewAttendance && this.isCSF;
+    this.isAdmin = window.dashboard.workshop.permission === "workshop_admin";
   },
 
   componentWillUnmount() {
@@ -50,7 +57,7 @@ const SessionAttendance = React.createClass({
 
   startRefreshInterval() {
     if (!this.state.refreshInterval) {
-      const refreshInterval = window.setTimeout(this.load, REFRESH_DELAY);
+      const refreshInterval = window.setInterval(this.load, REFRESH_DELAY);
       this.setState({refreshInterval});
     }
   },
@@ -144,6 +151,10 @@ const SessionAttendance = React.createClass({
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
+          sectionRequiredForAttendance={!this.shouldUseNewAttendance}
+          showSectionMembership={this.showSectionMembership}
+          showPuzzlesCompleted={this.showPuzzlesCompleted}
+          displayYesNoAttendance={this.shouldUseNewAttendance && !this.isAdmin}
         />
       );
     });
@@ -167,8 +178,18 @@ const SessionAttendance = React.createClass({
               <th>Last Name</th>
               <th>Email</th>
               {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
-              {this.props.accountRequiredForAttendance && <th>Joined Section</th>}
-              <th>Attended</th>
+              {this.showSectionMembership &&
+                <th>Joined Section</th>
+              }
+              {this.showPuzzlesCompleted &&
+                <th>Puzzles Completed</th>
+              }
+              {(!this.shouldUseNewAttendance || this.isCSF) &&
+                <th>Attended</th>
+              }
+              {this.shouldUseNewAttendance && !this.isCSF &&
+                <th>Present</th>
+              }
             </tr>
             </thead>
             <tbody>

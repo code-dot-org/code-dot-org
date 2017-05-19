@@ -62,16 +62,14 @@ const WorkshopAttendance = React.createClass({
     };
   },
 
-  isAdmin() {
-    return window.dashboard.workshop.permission === "admin";
-  },
-
   hasWorkshopEnded() {
     return this.state.workshopState === 'Ended';
   },
 
   componentDidMount() {
     this.loadSummary();
+    this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
+    this.isAdmin = window.dashboard.workshop.permission === "workshop_admin";
   },
 
   loadSummary() {
@@ -89,7 +87,8 @@ const WorkshopAttendance = React.createClass({
         workshopState: data.state,
         sectionCode: data.section_code,
         sessions: data.sessions,
-        accountRequiredForAttendance: data['account_required_for_attendance?']
+        accountRequiredForAttendance: data['account_required_for_attendance?'],
+        course: data.course
       });
     });
   },
@@ -148,7 +147,7 @@ const WorkshopAttendance = React.createClass({
   },
 
   renderAdminControls() {
-    if (!this.state.accountRequiredForAttendance || !this.isAdmin()) {
+    if (this.shouldUseNewAttendance || !this.state.accountRequiredForAttendance || !this.isAdmin) {
       return null;
     }
     const toggleClass = this.state.adminOverride ? "fa fa-toggle-on fa-lg" : "fa fa-toggle-off fa-lg";
@@ -174,7 +173,7 @@ const WorkshopAttendance = React.createClass({
       return <Spinner/>;
     }
 
-    const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin();
+    const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin;
 
     let intro = null;
     if (isReadOnly) {
@@ -183,12 +182,38 @@ const WorkshopAttendance = React.createClass({
           This workshop has ended. The attendance view is now read-only.
         </p>
       );
-    } else if (this.hasWorkshopEnded() && this.isAdmin()) {
+    } else if (this.hasWorkshopEnded() && this.isAdmin) {
       intro = (
         <p>
           This workshop has ended. As an admin, you can still update attendance.
           Note this will not be reflected in the payment report if it's already gone out.
         </p>
+      );
+    } else if (this.shouldUseNewAttendance) {
+      const activeSession = this.state.sessions.find(s => s['open_for_attendance?']);
+      const attendanceUrl = activeSession ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${activeSession.code}` : null;
+      intro = (
+        <div>
+          {attendanceUrl &&
+            <p>
+              To take attendance, direct your attendees to go to&nbsp;
+              <a href={attendanceUrl} target="_blank">
+                {attendanceUrl}
+              </a>
+            </p>
+          }
+          <p>
+            Ask your participants to log into Code Studio and go to the link provided so they can
+            get credit for attending your workshop today.&nbsp;
+            <strong>
+              Remember: they need to do this EVERY day of the workshop.
+            </strong>&nbsp;
+            You can double-check that they are marking themselves as attended by looking for their names below.
+            Note: as of May 20, 2017 participants no longer need to join a section to attend a workshop.
+            If you would like to set up a section for your workshop to show them how to do this in class,
+            you can set up a normal school section in your teacher dashboard.
+          </p>
+        </div>
       );
     } else if (this.state.sectionCode) {
       const joinUrl = this.state.accountRequiredForAttendance ?
@@ -234,6 +259,7 @@ const WorkshopAttendance = React.createClass({
         </Tabs>
         <SessionAttendance
           workshopId={this.workshopId()}
+          course={this.state.course}
           sessionId={this.activeSessionId()}
           adminOverride={this.state.adminOverride}
           isReadOnly={isReadOnly}
