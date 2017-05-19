@@ -2,54 +2,13 @@
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import Led, {PASS_THRU_PROPERTIES, PASS_THRU_METHODS} from '@cdo/apps/lib/kits/maker/Led';
+import Playground from 'playground-io';
+import Led from '@cdo/apps/lib/kits/maker/Led';
 
 describe('Led', function () {
-  beforeEach(function () {
-    // We stub five.Led's superclass to avoid calling any johnny-five
-    // logic that requires a board.
-    sinon.stub(five.Board, 'Component');
-  });
-
-  afterEach(function () {
-    five.Board.Component.restore();
-  });
-
-  // Pass-through properties - just check that they exist.
-  PASS_THRU_PROPERTIES.forEach(prop => {
-    describe(prop, () => {
-      it('property exists', () => {
-        const led = new Led({
-          controller: makeStubController()
-        });
-        expect(led).to.have.ownProperty(prop);
-        expect(led[prop]).to.equal(led.led_[prop]);
-      });
-    });
-  });
-
-  // Pass-through methods - just check that they delegate.
-  PASS_THRU_METHODS.forEach(fnName => {
-    describe(`${fnName}()`, () => {
-      let led, spy;
-
-      beforeEach(() => {
-        spy = sinon.stub(five.Led.prototype, fnName);
-        led = new Led({
-          controller: makeStubController()
-        });
-      });
-
-      afterEach(() => {
-        five.Led.prototype[fnName].restore();
-      });
-
-      it(`delegates method to five.Led controller`, () => {
-        const args = [Math.random(), Math.random(), Math.random()];
-        led[fnName](...args);
-        expect(spy).to.have.been.calledOnce.calledWith(...args);
-      });
-    });
+  it('is a five.Led', () => {
+    const led = newTestLed();
+    expect(led).to.be.an.instanceOf(five.Led);
   });
 
   describe('on()', () => {
@@ -58,9 +17,7 @@ describe('Led', function () {
     beforeEach(() => {
       sinon.stub(five.Led.prototype, 'on');
       sinon.stub(five.Led.prototype, 'stop');
-      led = new Led({
-        controller: makeStubController()
-      });
+      led = newTestLed();
     });
 
     afterEach(() => {
@@ -85,9 +42,7 @@ describe('Led', function () {
     beforeEach(() => {
       sinon.stub(five.Led.prototype, 'off');
       sinon.stub(five.Led.prototype, 'stop');
-      led = new Led({
-        controller: makeStubController()
-      });
+      led = newTestLed();
     });
 
     afterEach(() => {
@@ -105,7 +60,59 @@ describe('Led', function () {
       expect(five.Led.prototype.off).to.have.been.called;
     });
   });
+
+  describe('blink()', () => {
+    let led, clock;
+
+    beforeEach(() => {
+      clock = sinon.useFakeTimers();
+      led = newTestLed();
+      sinon.spy(led, 'stop');
+      sinon.spy(led, 'toggle');
+    });
+
+    afterEach(() => {
+      led.toggle.reset();
+      led.stop.reset();
+      clock.reset();
+    });
+
+    it(`calls stop() only once when blink starts`, () => {
+      led.stop.reset();
+      led.blink(100);
+      expect(led.stop).to.have.been.calledOnce;
+
+      // Pass some time and make sure it doesn't happen again
+      led.stop.reset();
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledOnce;
+      expect(led.stop).not.to.have.been.called;
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledTwice;
+      expect(led.stop).not.to.have.been.called;
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledThrice;
+      expect(led.stop).not.to.have.been.called;
+    });
+  });
 });
+
+function newTestLed() {
+  return new Led({
+    controller: makeStubController(),
+    board: makeStubBoard(),
+  });
+}
+
+function makeStubBoard() {
+  // We use real playground-io, but our test configuration swaps in mock-firmata
+  // for real firmata (see webpack.js) changing Playground's parent class.
+  return new five.Board({
+    io: new Playground({}),
+    debug: false,
+    repl: false
+  });
+}
 
 function makeStubController() {
   return {
@@ -113,7 +120,9 @@ function makeStubController() {
       value: () => {}
     },
     write: {
-      writable: true,
+      value: () => {}
+    },
+    update: {
       value: () => {}
     }
   };
