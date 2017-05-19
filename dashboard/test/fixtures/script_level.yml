@@ -3841,8 +3841,7 @@ script_level_48_2715:
   updated_at: 2015-10-16 22:38:13.000000000 Z
   stage_id: 344
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2759:
   id: 1740
   levels: level_2759
@@ -3861,8 +3860,7 @@ script_level_48_2710:
   updated_at: 2015-10-16 22:38:13.000000000 Z
   stage_id: 345
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2934:
   id: 1742
   levels: level_2934
@@ -3971,8 +3969,7 @@ script_level_48_2948:
   updated_at: 2015-10-16 22:38:14.000000000 Z
   stage_id: 346
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_1422:
   id: 1754
   levels: level_1422
@@ -4081,8 +4078,7 @@ script_level_48_921:
   updated_at: 2015-10-16 22:38:14.000000000 Z
   stage_id: 347
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_922:
   id: 1766
   levels: level_922
@@ -4092,8 +4088,7 @@ script_level_48_922:
   updated_at: 2015-10-16 22:38:14.000000000 Z
   stage_id: 347
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2706:
   id: 1767
   levels: level_2706
@@ -4103,8 +4098,7 @@ script_level_48_2706:
   updated_at: 2015-10-16 22:38:14.000000000 Z
   stage_id: 347
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_1527:
   id: 1768
   levels: level_1527
@@ -4114,8 +4108,7 @@ script_level_48_1527:
   updated_at: 2015-10-16 22:38:14.000000000 Z
   stage_id: 347
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_926:
   id: 1769
   levels: level_926
@@ -4215,8 +4208,7 @@ script_level_48_928:
   updated_at: 2015-10-16 22:38:15.000000000 Z
   stage_id: 348
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2709:
   id: 1780
   levels: level_2709
@@ -4226,8 +4218,7 @@ script_level_48_2709:
   updated_at: 2015-10-16 22:38:15.000000000 Z
   stage_id: 348
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2760:
   id: 1781
   levels: level_2760
@@ -4246,8 +4237,7 @@ script_level_48_2713:
   updated_at: 2015-10-16 22:38:15.000000000 Z
   stage_id: 349
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2711:
   id: 1783
   levels: level_2711
@@ -4257,8 +4247,7 @@ script_level_48_2711:
   updated_at: 2015-10-16 22:38:15.000000000 Z
   stage_id: 349
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_856:
   id: 1784
   levels: level_856
@@ -4367,8 +4356,7 @@ script_level_48_862:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 350
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_863:
   id: 1796
   levels: level_863
@@ -4378,8 +4366,7 @@ script_level_48_863:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 350
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2704:
   id: 1797
   levels: level_2704
@@ -4389,8 +4376,7 @@ script_level_48_2704:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 350
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2705:
   id: 1798
   levels: level_2705
@@ -4400,8 +4386,7 @@ script_level_48_2705:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 350
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_829:
   id: 1799
   levels: level_829
@@ -4483,8 +4468,7 @@ script_level_48_925:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 351
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_924:
   id: 1808
   levels: level_924
@@ -4494,8 +4478,7 @@ script_level_48_924:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 351
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2719:
   id: 1809
   levels: level_2719
@@ -4505,8 +4488,7 @@ script_level_48_2719:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 351
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2718:
   id: 1810
   levels: level_2718
@@ -4516,8 +4498,7 @@ script_level_48_2718:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 351
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2761:
   id: 1811
   levels: level_2761
@@ -4536,8 +4517,7 @@ script_level_48_889:
   updated_at: 2015-10-16 22:38:16.000000000 Z
   stage_id: 352
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_842:
   id: 1813
   levels: level_842
@@ -4610,8 +4590,7 @@ script_level_48_853:
   updated_at: 2015-10-16 22:38:17.000000000 Z
   stage_id: 353
   position: 8
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_1532:
   id: 1821
   levels: level_1532
@@ -4621,8 +4600,7 @@ script_level_48_1532:
   updated_at: 2015-10-16 22:38:17.000000000 Z
   stage_id: 353
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_854:
   id: 1822
   levels: level_854
@@ -4722,8 +4700,7 @@ script_level_48_2957:
   updated_at: 2015-10-16 22:38:18.000000000 Z
   stage_id: 354
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2700:
   id: 1833
   levels: level_2700
@@ -4733,8 +4710,7 @@ script_level_48_2700:
   updated_at: 2015-10-16 22:38:18.000000000 Z
   stage_id: 354
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2701:
   id: 1834
   levels: level_2701
@@ -4744,8 +4720,7 @@ script_level_48_2701:
   updated_at: 2015-10-16 22:38:18.000000000 Z
   stage_id: 354
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2762:
   id: 1835
   levels: level_2762
@@ -4764,8 +4739,7 @@ script_level_48_2714:
   updated_at: 2015-10-16 22:38:18.000000000 Z
   stage_id: 355
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_904:
   id: 1837
   levels: level_904
@@ -4865,8 +4839,7 @@ script_level_48_916:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 356
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_917:
   id: 1848
   levels: level_917
@@ -4876,8 +4849,7 @@ script_level_48_917:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 356
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2708:
   id: 1849
   levels: level_2708
@@ -4887,8 +4859,7 @@ script_level_48_2708:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 356
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2707:
   id: 1850
   levels: level_2707
@@ -4898,8 +4869,7 @@ script_level_48_2707:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 356
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_874:
   id: 1851
   levels: level_874
@@ -4999,8 +4969,7 @@ script_level_48_876:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 357
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_877:
   id: 1862
   levels: level_877
@@ -5010,8 +4979,7 @@ script_level_48_877:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 357
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_1526:
   id: 1863
   levels: level_1526
@@ -5021,8 +4989,7 @@ script_level_48_1526:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 357
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2765:
   id: 1864
   levels: level_2765
@@ -5041,8 +5008,7 @@ script_level_48_1528:
   updated_at: 2015-10-16 22:38:19.000000000 Z
   stage_id: 358
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_2946:
   id: 1866
   levels: level_2946
@@ -5115,8 +5081,7 @@ script_level_48_2712:
   updated_at: 2015-10-16 22:38:20.000000000 Z
   stage_id: 360
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_48_818:
   id: 1874
   levels: level_818
@@ -5225,8 +5190,7 @@ script_level_49_2664:
   updated_at: 2015-10-16 22:38:22.000000000 Z
   stage_id: 362
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_1516:
   id: 1886
   levels: level_1516
@@ -5236,8 +5200,7 @@ script_level_49_1516:
   updated_at: 2015-10-16 22:38:22.000000000 Z
   stage_id: 362
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2768:
   id: 1887
   levels: level_2768
@@ -5256,8 +5219,7 @@ script_level_49_2663:
   updated_at: 2015-10-16 22:38:22.000000000 Z
   stage_id: 363
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2667:
   id: 1889
   levels: level_2667
@@ -5267,8 +5229,7 @@ script_level_49_2667:
   updated_at: 2015-10-16 22:38:22.000000000 Z
   stage_id: 363
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_135:
   id: 1890
   levels: level_135
@@ -5359,8 +5320,7 @@ script_level_49_2651:
   updated_at: 2015-10-16 22:38:22.000000000 Z
   stage_id: 364
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_1508:
   id: 1900
   levels: level_1508
@@ -5370,8 +5330,7 @@ script_level_49_1508:
   updated_at: 2015-10-16 22:38:22.000000000 Z
   stage_id: 364
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_1:
   id: 1901
   levels: level_1
@@ -5471,8 +5430,7 @@ script_level_49_15:
   updated_at: 2015-10-16 22:38:23.000000000 Z
   stage_id: 365
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_1510:
   id: 1912
   levels: level_1510
@@ -5482,8 +5440,7 @@ script_level_49_1510:
   updated_at: 2015-10-16 22:38:23.000000000 Z
   stage_id: 365
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2762:
   id: 1913
   levels: level_2762
@@ -5502,8 +5459,7 @@ script_level_49_2665:
   updated_at: 2015-10-16 22:38:23.000000000 Z
   stage_id: 366
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_159:
   id: 1915
   levels: level_159
@@ -5612,8 +5568,7 @@ script_level_49_165:
   updated_at: 2015-10-16 22:38:24.000000000 Z
   stage_id: 367
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2652:
   id: 1927
   levels: level_2652
@@ -5623,8 +5578,7 @@ script_level_49_2652:
   updated_at: 2015-10-16 22:38:24.000000000 Z
   stage_id: 367
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_1509:
   id: 1928
   levels: level_1509
@@ -5634,8 +5588,7 @@ script_level_49_1509:
   updated_at: 2015-10-16 22:38:24.000000000 Z
   stage_id: 367
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_51:
   id: 1929
   levels: level_51
@@ -5762,8 +5715,7 @@ script_level_49_1511:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 368
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2654:
   id: 1943
   levels: level_2654
@@ -5773,8 +5725,7 @@ script_level_49_2654:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 368
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2656:
   id: 1944
   levels: level_2656
@@ -5784,8 +5735,7 @@ script_level_49_2656:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 368
   position: 16
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_121:
   id: 1945
   levels: level_121
@@ -5903,8 +5853,7 @@ script_level_49_120:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 369
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2660:
   id: 1958
   levels: level_2660
@@ -5914,8 +5863,7 @@ script_level_49_2660:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 369
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2763:
   id: 1959
   levels: level_2763
@@ -5934,8 +5882,7 @@ script_level_49_2668:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 370
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2666:
   id: 1961
   levels: level_2666
@@ -5945,8 +5892,7 @@ script_level_49_2666:
   updated_at: 2015-10-16 22:38:25.000000000 Z
   stage_id: 370
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_93:
   id: 1962
   levels: level_93
@@ -6046,8 +5992,7 @@ script_level_49_103:
   updated_at: 2015-10-16 22:38:26.000000000 Z
   stage_id: 371
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_16:
   id: 1973
   levels: level_16
@@ -6147,8 +6092,7 @@ script_level_49_28:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 372
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2653:
   id: 1984
   levels: level_2653
@@ -6158,8 +6102,7 @@ script_level_49_2653:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 372
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2764:
   id: 1985
   levels: level_2764
@@ -6178,8 +6121,7 @@ script_level_49_2661:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 373
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_84:
   id: 1987
   levels: level_84
@@ -6297,8 +6239,7 @@ script_level_49_92:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 374
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2658:
   id: 2000
   levels: level_2658
@@ -6308,8 +6249,7 @@ script_level_49_2658:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 374
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2659:
   id: 2001
   levels: level_2659
@@ -6319,8 +6259,7 @@ script_level_49_2659:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 374
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2769:
   id: 2002
   levels: level_2769
@@ -6339,8 +6278,7 @@ script_level_49_1514:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 375
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2662:
   id: 2004
   levels: level_2662
@@ -6350,8 +6288,7 @@ script_level_49_2662:
   updated_at: 2015-10-16 22:38:27.000000000 Z
   stage_id: 375
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2765:
   id: 2005
   levels: level_2765
@@ -6370,8 +6307,7 @@ script_level_49_1515:
   updated_at: 2015-10-16 22:38:28.000000000 Z
   stage_id: 376
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_2923:
   id: 2007
   levels: level_2923
@@ -6579,8 +6515,7 @@ script_level_49_2716:
   updated_at: 2015-10-16 22:38:29.000000000 Z
   stage_id: 379
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_49_64:
   id: 2030
   levels: level_64
@@ -6716,8 +6651,7 @@ script_level_50_2620:
   updated_at: 2015-10-16 22:38:31.000000000 Z
   stage_id: 381
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_1502:
   id: 2045
   levels: level_1502
@@ -6727,8 +6661,7 @@ script_level_50_1502:
   updated_at: 2015-10-16 22:38:31.000000000 Z
   stage_id: 381
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_289:
   id: 2046
   levels: level_289
@@ -6846,8 +6779,7 @@ script_level_50_310:
   updated_at: 2015-10-16 22:38:32.000000000 Z
   stage_id: 382
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_1499:
   id: 2059
   levels: level_1499
@@ -6857,8 +6789,7 @@ script_level_50_1499:
   updated_at: 2015-10-16 22:38:32.000000000 Z
   stage_id: 382
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2604:
   id: 2060
   levels: level_2604
@@ -6868,8 +6799,7 @@ script_level_50_2604:
   updated_at: 2015-10-16 22:38:32.000000000 Z
   stage_id: 382
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_190:
   id: 2061
   levels: level_190
@@ -6978,8 +6908,7 @@ script_level_50_202:
   updated_at: 2015-10-16 22:38:32.000000000 Z
   stage_id: 383
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2606:
   id: 2073
   levels: level_2606
@@ -6989,8 +6918,7 @@ script_level_50_2606:
   updated_at: 2015-10-16 22:38:32.000000000 Z
   stage_id: 383
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2605:
   id: 2074
   levels: level_2605
@@ -7000,8 +6928,7 @@ script_level_50_2605:
   updated_at: 2015-10-16 22:38:32.000000000 Z
   stage_id: 383
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_215:
   id: 2075
   levels: level_215
@@ -7029,8 +6956,7 @@ script_level_50_2621:
   updated_at: 2015-10-16 22:38:33.000000000 Z
   stage_id: 384
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_1501:
   id: 2078
   levels: level_1501
@@ -7040,8 +6966,7 @@ script_level_50_1501:
   updated_at: 2015-10-16 22:38:33.000000000 Z
   stage_id: 384
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_30:
   id: 2079
   levels: level_30
@@ -7132,8 +7057,7 @@ script_level_50_2655:
   updated_at: 2015-10-16 22:38:33.000000000 Z
   stage_id: 385
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_107:
   id: 2089
   levels: level_107
@@ -7224,8 +7148,7 @@ script_level_50_114:
   updated_at: 2015-10-16 22:38:34.000000000 Z
   stage_id: 386
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_115:
   id: 2099
   levels: level_115
@@ -7235,8 +7158,7 @@ script_level_50_115:
   updated_at: 2015-10-16 22:38:34.000000000 Z
   stage_id: 386
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_252:
   id: 2100
   levels: level_252
@@ -7318,8 +7240,7 @@ script_level_50_263:
   updated_at: 2015-10-16 22:38:34.000000000 Z
   stage_id: 387
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2612:
   id: 2109
   levels: level_2612
@@ -7329,8 +7250,7 @@ script_level_50_2612:
   updated_at: 2015-10-16 22:38:34.000000000 Z
   stage_id: 387
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_311:
   id: 2110
   levels: level_311
@@ -7430,8 +7350,7 @@ script_level_50_321:
   updated_at: 2015-10-16 22:38:35.000000000 Z
   stage_id: 388
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2603:
   id: 2121
   levels: level_2603
@@ -7441,8 +7360,7 @@ script_level_50_2603:
   updated_at: 2015-10-16 22:38:35.000000000 Z
   stage_id: 388
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2773:
   id: 2122
   levels: level_2773
@@ -7461,8 +7379,7 @@ script_level_50_2615:
   updated_at: 2015-10-16 22:38:35.000000000 Z
   stage_id: 389
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2774:
   id: 2124
   levels: level_2774
@@ -7481,8 +7398,7 @@ script_level_50_1500:
   updated_at: 2015-10-16 22:38:35.000000000 Z
   stage_id: 390
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2616:
   id: 2126
   levels: level_2616
@@ -7492,8 +7408,7 @@ script_level_50_2616:
   updated_at: 2015-10-16 22:38:35.000000000 Z
   stage_id: 390
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_328:
   id: 2127
   levels: level_328
@@ -7593,8 +7508,7 @@ script_level_50_339:
   updated_at: 2015-10-16 22:38:35.000000000 Z
   stage_id: 391
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2609:
   id: 2138
   levels: level_2609
@@ -7604,8 +7518,7 @@ script_level_50_2609:
   updated_at: 2015-10-16 22:38:36.000000000 Z
   stage_id: 391
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_340:
   id: 2139
   levels: level_340
@@ -7687,8 +7600,7 @@ script_level_50_348:
   updated_at: 2015-10-16 22:38:36.000000000 Z
   stage_id: 392
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_277:
   id: 2148
   levels: level_277
@@ -7788,8 +7700,7 @@ script_level_50_134:
   updated_at: 2015-10-16 22:38:36.000000000 Z
   stage_id: 393
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_286:
   id: 2159
   levels: level_286
@@ -7799,8 +7710,7 @@ script_level_50_286:
   updated_at: 2015-10-16 22:38:37.000000000 Z
   stage_id: 393
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2611:
   id: 2160
   levels: level_2611
@@ -7810,8 +7720,7 @@ script_level_50_2611:
   updated_at: 2015-10-16 22:38:37.000000000 Z
   stage_id: 393
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_264:
   id: 2161
   levels: level_264
@@ -7920,8 +7829,7 @@ script_level_50_275:
   updated_at: 2015-10-16 22:38:37.000000000 Z
   stage_id: 394
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2610:
   id: 2173
   levels: level_2610
@@ -7931,8 +7839,7 @@ script_level_50_2610:
   updated_at: 2015-10-16 22:38:37.000000000 Z
   stage_id: 394
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2909:
   id: 2174
   levels: level_2909
@@ -8158,8 +8065,7 @@ script_level_50_2619:
   updated_at: 2015-10-16 22:38:39.000000000 Z
   stage_id: 398
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2617:
   id: 2199
   levels: level_2617
@@ -8169,8 +8075,7 @@ script_level_50_2617:
   updated_at: 2015-10-16 22:38:39.000000000 Z
   stage_id: 398
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2776:
   id: 2200
   levels: level_2776
@@ -8189,8 +8094,7 @@ script_level_50_2618:
   updated_at: 2015-10-16 22:38:39.000000000 Z
   stage_id: 399
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2614:
   id: 2202
   levels: level_2614
@@ -8200,8 +8104,7 @@ script_level_50_2614:
   updated_at: 2015-10-16 22:38:40.000000000 Z
   stage_id: 399
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_2777:
   id: 2203
   levels: level_2777
@@ -8220,8 +8123,7 @@ script_level_50_2622:
   updated_at: 2015-10-16 22:38:40.000000000 Z
   stage_id: 400
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_50_234:
   id: 2205
   levels: level_234
@@ -9680,8 +9582,7 @@ script_level_53_2642:
   updated_at: 2015-10-16 22:38:51.000000000 Z
   stage_id: 429
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1576:
   id: 2398
   levels: level_1576
@@ -9691,8 +9592,7 @@ script_level_53_1576:
   updated_at: 2015-10-16 22:38:51.000000000 Z
   stage_id: 429
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1632:
   id: 2399
   levels: level_1632
@@ -9702,8 +9602,7 @@ script_level_53_1632:
   updated_at: 2015-10-16 22:38:51.000000000 Z
   stage_id: 429
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2179:
   id: 2400
   levels: level_2179
@@ -9722,8 +9621,7 @@ script_level_53_1672:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 430
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2506:
   id: 2402
   levels: level_2506
@@ -9733,8 +9631,7 @@ script_level_53_2506:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 430
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1724:
   id: 2403
   levels: level_1724
@@ -9744,8 +9641,7 @@ script_level_53_1724:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 430
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1895:
   id: 2404
   levels: level_1895
@@ -9773,8 +9669,7 @@ script_level_53_2579:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 431
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1706:
   id: 2407
   levels: level_1706
@@ -9784,8 +9679,7 @@ script_level_53_1706:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 431
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2318:
   id: 2408
   levels: level_2318
@@ -9813,8 +9707,7 @@ script_level_53_1475:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 432
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2363:
   id: 2411
   levels: level_2363
@@ -9833,8 +9726,7 @@ script_level_53_2576:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 433
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1798:
   id: 2413
   levels: level_1798
@@ -9844,8 +9736,7 @@ script_level_53_1798:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 433
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2167:
   id: 2414
   levels: level_2167
@@ -9873,8 +9764,7 @@ script_level_53_1599:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 434
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1713:
   id: 2417
   levels: level_1713
@@ -9884,8 +9774,7 @@ script_level_53_1713:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 434
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1982:
   id: 2418
   levels: level_1982
@@ -9913,8 +9802,7 @@ script_level_53_1693:
   updated_at: 2015-10-16 22:38:52.000000000 Z
   stage_id: 435
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1623:
   id: 2421
   levels: level_1623
@@ -9924,8 +9812,7 @@ script_level_53_1623:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 435
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2515:
   id: 2422
   levels: level_2515
@@ -9935,8 +9822,7 @@ script_level_53_2515:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 435
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2128:
   id: 2423
   levels: level_2128
@@ -9955,8 +9841,7 @@ script_level_53_1748:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 436
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2323:
   id: 2425
   levels: level_2323
@@ -9984,8 +9869,7 @@ script_level_53_2625:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 437
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2571:
   id: 2428
   levels: level_2571
@@ -9995,8 +9879,7 @@ script_level_53_2571:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 437
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1774:
   id: 2429
   levels: level_1774
@@ -10006,8 +9889,7 @@ script_level_53_1774:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 437
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1841:
   id: 2430
   levels: level_1841
@@ -10035,8 +9917,7 @@ script_level_53_2721:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 438
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2534:
   id: 2433
   levels: level_2534
@@ -10046,8 +9927,7 @@ script_level_53_2534:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 438
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1749:
   id: 2434
   levels: level_1749
@@ -10057,8 +9937,7 @@ script_level_53_1749:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 438
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1655:
   id: 2435
   levels: level_1655
@@ -10068,8 +9947,7 @@ script_level_53_1655:
   updated_at: 2015-10-16 22:38:53.000000000 Z
   stage_id: 438
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2461:
   id: 2436
   levels: level_2461
@@ -10088,8 +9966,7 @@ script_level_53_1702:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 439
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2354:
   id: 2438
   levels: level_2354
@@ -10117,8 +9994,7 @@ script_level_53_1797:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 440
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1645:
   id: 2441
   levels: level_1645
@@ -10128,8 +10004,7 @@ script_level_53_1645:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 440
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1581:
   id: 2442
   levels: level_1581
@@ -10139,8 +10014,7 @@ script_level_53_1581:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 440
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1708:
   id: 2443
   levels: level_1708
@@ -10150,8 +10024,7 @@ script_level_53_1708:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 440
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2248:
   id: 2444
   levels: level_2248
@@ -10197,8 +10070,7 @@ script_level_53_1547:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 441
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_1649:
   id: 2449
   levels: level_1649
@@ -10208,8 +10080,7 @@ script_level_53_1649:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 441
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2209:
   id: 2450
   levels: level_2209
@@ -10309,8 +10180,7 @@ script_level_53_1539:
   updated_at: 2015-10-16 22:38:54.000000000 Z
   stage_id: 443
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_53_2370:
   id: 2461
   levels: level_2370
@@ -10338,8 +10208,7 @@ script_level_54_2484:
   updated_at: 2015-10-16 22:38:55.000000000 Z
   stage_id: 445
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2684:
   id: 2464
   levels: level_2684
@@ -10349,8 +10218,7 @@ script_level_54_2684:
   updated_at: 2015-10-16 22:38:55.000000000 Z
   stage_id: 445
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2685:
   id: 2465
   levels: level_2685
@@ -10360,8 +10228,7 @@ script_level_54_2685:
   updated_at: 2015-10-16 22:38:55.000000000 Z
   stage_id: 445
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1586:
   id: 2466
   levels: level_1586
@@ -10371,8 +10238,7 @@ script_level_54_1586:
   updated_at: 2015-10-16 22:38:55.000000000 Z
   stage_id: 445
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2035:
   id: 2467
   levels: level_2035
@@ -10400,8 +10266,7 @@ script_level_54_1639:
   updated_at: 2015-10-16 22:38:55.000000000 Z
   stage_id: 446
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2504:
   id: 2470
   levels: level_2504
@@ -10411,8 +10276,7 @@ script_level_54_2504:
   updated_at: 2015-10-16 22:38:55.000000000 Z
   stage_id: 446
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2729:
   id: 2471
   levels: level_2729
@@ -10422,8 +10286,7 @@ script_level_54_2729:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 446
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1750:
   id: 2472
   levels: level_1750
@@ -10433,8 +10296,7 @@ script_level_54_1750:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 446
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2212:
   id: 2473
   levels: level_2212
@@ -10462,8 +10324,7 @@ script_level_54_1519:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 447
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1187:
   id: 2476
   levels: level_1187
@@ -10482,8 +10343,7 @@ script_level_54_2601:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 447
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2476:
   id: 2478
   levels: level_2476
@@ -10493,8 +10353,7 @@ script_level_54_2476:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 447
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1735:
   id: 2479
   levels: level_1735
@@ -10504,8 +10363,7 @@ script_level_54_1735:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 447
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1820:
   id: 2480
   levels: level_1820
@@ -10533,8 +10391,7 @@ script_level_54_2481:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 448
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2639:
   id: 2483
   levels: level_2639
@@ -10544,8 +10401,7 @@ script_level_54_2639:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 448
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2600:
   id: 2484
   levels: level_2600
@@ -10555,8 +10411,7 @@ script_level_54_2600:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 448
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1703:
   id: 2485
   levels: level_1703
@@ -10566,8 +10421,7 @@ script_level_54_1703:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 448
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1751:
   id: 2486
   levels: level_1751
@@ -10577,8 +10431,7 @@ script_level_54_1751:
   updated_at: 2015-10-16 22:38:56.000000000 Z
   stage_id: 448
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2295:
   id: 2487
   levels: level_2295
@@ -10615,8 +10468,7 @@ script_level_54_2483:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 449
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2690:
   id: 2491
   levels: level_2690
@@ -10626,8 +10478,7 @@ script_level_54_2690:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 449
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1722:
   id: 2492
   levels: level_1722
@@ -10637,8 +10488,7 @@ script_level_54_1722:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 449
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2083:
   id: 2493
   levels: level_2083
@@ -10657,8 +10507,7 @@ script_level_54_1503:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 450
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2680:
   id: 2495
   levels: level_2680
@@ -10668,8 +10517,7 @@ script_level_54_2680:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 450
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2632:
   id: 2496
   levels: level_2632
@@ -10679,8 +10527,7 @@ script_level_54_2632:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 450
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1815:
   id: 2497
   levels: level_1815
@@ -10699,8 +10546,7 @@ script_level_54_2687:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 451
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2740:
   id: 2499
   levels: level_2740
@@ -10710,8 +10556,7 @@ script_level_54_2740:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 451
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2543:
   id: 2500
   levels: level_2543
@@ -10721,8 +10566,7 @@ script_level_54_2543:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 451
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1680:
   id: 2501
   levels: level_1680
@@ -10732,8 +10576,7 @@ script_level_54_1680:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 451
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1718:
   id: 2502
   levels: level_1718
@@ -10743,8 +10586,7 @@ script_level_54_1718:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 451
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2419:
   id: 2503
   levels: level_2419
@@ -10763,8 +10605,7 @@ script_level_54_1736:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 452
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1690:
   id: 2505
   levels: level_1690
@@ -10774,8 +10615,7 @@ script_level_54_1690:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 452
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1560:
   id: 2506
   levels: level_1560
@@ -10785,8 +10625,7 @@ script_level_54_1560:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 452
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1728:
   id: 2507
   levels: level_1728
@@ -10796,8 +10635,7 @@ script_level_54_1728:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 452
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2567:
   id: 2508
   levels: level_2567
@@ -10807,8 +10645,7 @@ script_level_54_2567:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 452
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2114:
   id: 2509
   levels: level_2114
@@ -10836,8 +10673,7 @@ script_level_54_2494:
   updated_at: 2015-10-16 22:38:57.000000000 Z
   stage_id: 453
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1755:
   id: 2512
   levels: level_1755
@@ -10847,8 +10683,7 @@ script_level_54_1755:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 453
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1705:
   id: 2513
   levels: level_1705
@@ -10858,8 +10693,7 @@ script_level_54_1705:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 453
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2242:
   id: 2514
   levels: level_2242
@@ -10878,8 +10712,7 @@ script_level_54_1732:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 454
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2696:
   id: 2516
   levels: level_2696
@@ -10889,8 +10722,7 @@ script_level_54_2696:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 454
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2548:
   id: 2517
   levels: level_2548
@@ -10900,8 +10732,7 @@ script_level_54_2548:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 454
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1682:
   id: 2518
   levels: level_1682
@@ -10911,8 +10742,7 @@ script_level_54_1682:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 454
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1701:
   id: 2519
   levels: level_1701
@@ -10922,8 +10752,7 @@ script_level_54_1701:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 454
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2070:
   id: 2520
   levels: level_2070
@@ -10951,8 +10780,7 @@ script_level_54_2527:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 455
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2474:
   id: 2523
   levels: level_2474
@@ -10962,8 +10790,7 @@ script_level_54_2474:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 455
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1790:
   id: 2524
   levels: level_1790
@@ -10973,8 +10800,7 @@ script_level_54_1790:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 455
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2098:
   id: 2525
   levels: level_2098
@@ -11011,8 +10837,7 @@ script_level_54_1709:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 457
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1667:
   id: 2529
   levels: level_1667
@@ -11022,8 +10847,7 @@ script_level_54_1667:
   updated_at: 2015-10-16 22:38:58.000000000 Z
   stage_id: 457
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2647:
   id: 2530
   levels: level_2647
@@ -11033,8 +10857,7 @@ script_level_54_2647:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 457
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2537:
   id: 2531
   levels: level_2537
@@ -11044,8 +10867,7 @@ script_level_54_2537:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 457
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1770:
   id: 2532
   levels: level_1770
@@ -11055,8 +10877,7 @@ script_level_54_1770:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 457
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1978:
   id: 2533
   levels: level_1978
@@ -11093,8 +10914,7 @@ script_level_54_1588:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 458
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1480:
   id: 2537
   levels: level_1480
@@ -11104,8 +10924,7 @@ script_level_54_1480:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 458
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1555:
   id: 2538
   levels: level_1555
@@ -11115,8 +10934,7 @@ script_level_54_1555:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 458
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1662:
   id: 2539
   levels: level_1662
@@ -11126,8 +10944,7 @@ script_level_54_1662:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 458
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2698:
   id: 2540
   levels: level_2698
@@ -11137,8 +10954,7 @@ script_level_54_2698:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 458
   position: 8
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1541:
   id: 2541
   levels: level_1541
@@ -11148,8 +10964,7 @@ script_level_54_1541:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 458
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2134:
   id: 2542
   levels: level_2134
@@ -11168,8 +10983,7 @@ script_level_54_2542:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 459
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1619:
   id: 2544
   levels: level_1619
@@ -11179,8 +10993,7 @@ script_level_54_1619:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 459
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2564:
   id: 2545
   levels: level_2564
@@ -11190,8 +11003,7 @@ script_level_54_2564:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 459
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2742:
   id: 2546
   levels: level_2742
@@ -11201,8 +11013,7 @@ script_level_54_2742:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 459
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2326:
   id: 2547
   levels: level_2326
@@ -11221,8 +11032,7 @@ script_level_54_1607:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 460
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1699:
   id: 2549
   levels: level_1699
@@ -11232,8 +11042,7 @@ script_level_54_1699:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 460
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1625:
   id: 2550
   levels: level_1625
@@ -11243,8 +11052,7 @@ script_level_54_1625:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 460
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1565:
   id: 2551
   levels: level_1565
@@ -11254,8 +11062,7 @@ script_level_54_1565:
   updated_at: 2015-10-16 22:38:59.000000000 Z
   stage_id: 460
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1850:
   id: 2552
   levels: level_1850
@@ -11274,8 +11081,7 @@ script_level_54_1785:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 461
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2547:
   id: 2554
   levels: level_2547
@@ -11285,8 +11091,7 @@ script_level_54_2547:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 461
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1474:
   id: 2555
   levels: level_1474
@@ -11296,8 +11101,7 @@ script_level_54_1474:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 461
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1593:
   id: 2556
   levels: level_1593
@@ -11307,8 +11111,7 @@ script_level_54_1593:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 461
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1695:
   id: 2557
   levels: level_1695
@@ -11318,8 +11121,7 @@ script_level_54_1695:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 461
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1608:
   id: 2558
   levels: level_1608
@@ -11329,8 +11131,7 @@ script_level_54_1608:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 461
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2450:
   id: 2559
   levels: level_2450
@@ -11358,8 +11159,7 @@ script_level_54_1551:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 462
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1540:
   id: 2562
   levels: level_1540
@@ -11369,8 +11169,7 @@ script_level_54_1540:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 462
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1707:
   id: 2563
   levels: level_1707
@@ -11380,8 +11179,7 @@ script_level_54_1707:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 462
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2107:
   id: 2564
   levels: level_2107
@@ -11400,8 +11198,7 @@ script_level_54_1746:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 463
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2552:
   id: 2566
   levels: level_2552
@@ -11411,8 +11208,7 @@ script_level_54_2552:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 463
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_2626:
   id: 2567
   levels: level_2626
@@ -11422,8 +11218,7 @@ script_level_54_2626:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 463
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1711:
   id: 2568
   levels: level_1711
@@ -11433,8 +11228,7 @@ script_level_54_1711:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 463
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1743:
   id: 2569
   levels: level_1743
@@ -11444,8 +11238,7 @@ script_level_54_1743:
   updated_at: 2015-10-16 22:39:00.000000000 Z
   stage_id: 463
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_54_1868:
   id: 2570
   levels: level_1868
@@ -11482,8 +11275,7 @@ script_level_55_1721:
   updated_at: 2015-10-16 22:39:01.000000000 Z
   stage_id: 465
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1614:
   id: 2575
   levels: level_1614
@@ -11493,8 +11285,7 @@ script_level_55_1614:
   updated_at: 2015-10-16 22:39:01.000000000 Z
   stage_id: 465
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2205:
   id: 2576
   levels: level_2205
@@ -11540,8 +11331,7 @@ script_level_55_1794:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 466
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1582:
   id: 2581
   levels: level_1582
@@ -11551,8 +11341,7 @@ script_level_55_1582:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 466
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1698:
   id: 2582
   levels: level_1698
@@ -11562,8 +11351,7 @@ script_level_55_1698:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 466
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2223:
   id: 2583
   levels: level_2223
@@ -11645,8 +11433,7 @@ script_level_55_2634:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 467
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2629:
   id: 2592
   levels: level_2629
@@ -11656,8 +11443,7 @@ script_level_55_2629:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 467
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1696:
   id: 2593
   levels: level_1696
@@ -11667,8 +11453,7 @@ script_level_55_1696:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 467
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2346:
   id: 2594
   levels: level_2346
@@ -11705,8 +11490,7 @@ script_level_55_1595:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 468
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2485:
   id: 2598
   levels: level_2485
@@ -11716,8 +11500,7 @@ script_level_55_2485:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 468
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1617:
   id: 2599
   levels: level_1617
@@ -11727,8 +11510,7 @@ script_level_55_1617:
   updated_at: 2015-10-16 22:39:02.000000000 Z
   stage_id: 468
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2384:
   id: 2600
   levels: level_2384
@@ -11828,8 +11610,7 @@ script_level_55_2570:
   updated_at: 2015-10-16 22:39:03.000000000 Z
   stage_id: 469
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2725:
   id: 2611
   levels: level_2725
@@ -11839,8 +11620,7 @@ script_level_55_2725:
   updated_at: 2015-10-16 22:39:03.000000000 Z
   stage_id: 469
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1799:
   id: 2612
   levels: level_1799
@@ -11850,8 +11630,7 @@ script_level_55_1799:
   updated_at: 2015-10-16 22:39:03.000000000 Z
   stage_id: 469
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1901:
   id: 2613
   levels: level_1901
@@ -11969,8 +11748,7 @@ script_level_55_2546:
   updated_at: 2015-10-16 22:39:04.000000000 Z
   stage_id: 470
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1783:
   id: 2626
   levels: level_1783
@@ -11980,8 +11758,7 @@ script_level_55_1783:
   updated_at: 2015-10-16 22:39:04.000000000 Z
   stage_id: 470
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2372:
   id: 2627
   levels: level_2372
@@ -12108,8 +11885,7 @@ script_level_55_2671:
   updated_at: 2015-10-16 22:39:04.000000000 Z
   stage_id: 471
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1760:
   id: 2641
   levels: level_1760
@@ -12119,8 +11895,7 @@ script_level_55_1760:
   updated_at: 2015-10-16 22:39:04.000000000 Z
   stage_id: 471
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2395:
   id: 2642
   levels: level_2395
@@ -12256,8 +12031,7 @@ script_level_55_2583:
   updated_at: 2015-10-16 22:39:05.000000000 Z
   stage_id: 474
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1606:
   id: 2657
   levels: level_1606
@@ -12267,8 +12041,7 @@ script_level_55_1606:
   updated_at: 2015-10-16 22:39:05.000000000 Z
   stage_id: 474
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2513:
   id: 2658
   levels: level_2513
@@ -12278,8 +12051,7 @@ script_level_55_2513:
   updated_at: 2015-10-16 22:39:05.000000000 Z
   stage_id: 474
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2678:
   id: 2659
   levels: level_2678
@@ -12289,8 +12061,7 @@ script_level_55_2678:
   updated_at: 2015-10-16 22:39:05.000000000 Z
   stage_id: 474
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1884:
   id: 2660
   levels: level_1884
@@ -12345,8 +12116,7 @@ script_level_55_1522:
   updated_at: 2015-10-16 22:39:06.000000000 Z
   stage_id: 475
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1306:
   id: 2666
   levels: level_1306
@@ -12599,8 +12369,7 @@ script_level_55_1524:
   updated_at: 2015-10-16 22:39:07.000000000 Z
   stage_id: 478
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1315:
   id: 2694
   levels: level_1315
@@ -12664,8 +12433,7 @@ script_level_55_1694:
   updated_at: 2015-10-16 22:39:07.000000000 Z
   stage_id: 478
   position: 19
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1883:
   id: 2701
   levels: level_1883
@@ -12684,8 +12452,7 @@ script_level_55_2551:
   updated_at: 2015-10-16 22:39:07.000000000 Z
   stage_id: 479
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2523:
   id: 2703
   levels: level_2523
@@ -12695,8 +12462,7 @@ script_level_55_2523:
   updated_at: 2015-10-16 22:39:08.000000000 Z
   stage_id: 479
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1570:
   id: 2704
   levels: level_1570
@@ -12706,8 +12472,7 @@ script_level_55_1570:
   updated_at: 2015-10-16 22:39:08.000000000 Z
   stage_id: 479
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2276:
   id: 2705
   levels: level_2276
@@ -12726,8 +12491,7 @@ script_level_55_1777:
   updated_at: 2015-10-16 22:39:08.000000000 Z
   stage_id: 480
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1631:
   id: 2707
   levels: level_1631
@@ -12737,8 +12501,7 @@ script_level_55_1631:
   updated_at: 2015-10-16 22:39:08.000000000 Z
   stage_id: 480
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1577:
   id: 2708
   levels: level_1577
@@ -12748,8 +12511,7 @@ script_level_55_1577:
   updated_at: 2015-10-16 22:39:08.000000000 Z
   stage_id: 480
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2060:
   id: 2710
   levels: level_2060
@@ -12957,8 +12719,7 @@ script_level_55_1605:
   updated_at: 2015-10-16 22:39:09.000000000 Z
   stage_id: 482
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1307:
   id: 2733
   levels: level_1307
@@ -13058,8 +12819,7 @@ script_level_55_1758:
   updated_at: 2015-10-16 22:39:09.000000000 Z
   stage_id: 484
   position: 8
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2597:
   id: 2744
   levels: level_2597
@@ -13069,8 +12829,7 @@ script_level_55_2597:
   updated_at: 2015-10-16 22:39:09.000000000 Z
   stage_id: 484
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2557:
   id: 2745
   levels: level_2557
@@ -13080,8 +12839,7 @@ script_level_55_2557:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 10
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2646:
   id: 2746
   levels: level_2646
@@ -13091,8 +12849,7 @@ script_level_55_2646:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1648:
   id: 2747
   levels: level_1648
@@ -13102,8 +12859,7 @@ script_level_55_1648:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1808:
   id: 2748
   levels: level_1808
@@ -13113,8 +12869,7 @@ script_level_55_1808:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1583:
   id: 2749
   levels: level_1583
@@ -13124,8 +12879,7 @@ script_level_55_1583:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1587:
   id: 2750
   levels: level_1587
@@ -13135,8 +12889,7 @@ script_level_55_1587:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1752:
   id: 2751
   levels: level_1752
@@ -13146,8 +12899,7 @@ script_level_55_1752:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 16
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2568:
   id: 2752
   levels: level_2568
@@ -13157,8 +12909,7 @@ script_level_55_2568:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 17
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1550:
   id: 2753
   levels: level_1550
@@ -13168,8 +12919,7 @@ script_level_55_1550:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 484
   position: 18
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2376:
   id: 2754
   levels: level_2376
@@ -13188,8 +12938,7 @@ script_level_55_1638:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 485
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1333:
   id: 2756
   levels: level_1333
@@ -13307,8 +13056,7 @@ script_level_55_1624:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 485
   position: 15
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1788:
   id: 2769
   levels: level_1788
@@ -13318,8 +13066,7 @@ script_level_55_1788:
   updated_at: 2015-10-16 22:39:10.000000000 Z
   stage_id: 485
   position: 16
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2424:
   id: 2770
   levels: level_2424
@@ -13338,8 +13085,7 @@ script_level_55_2507:
   updated_at: 2015-10-16 22:39:11.000000000 Z
   stage_id: 486
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2509:
   id: 2772
   levels: level_2509
@@ -13349,8 +13095,7 @@ script_level_55_2509:
   updated_at: 2015-10-16 22:39:11.000000000 Z
   stage_id: 486
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2643:
   id: 2773
   levels: level_2643
@@ -13360,8 +13105,7 @@ script_level_55_2643:
   updated_at: 2015-10-16 22:39:11.000000000 Z
   stage_id: 486
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1326:
   id: 2774
   levels: level_1326
@@ -13506,8 +13250,7 @@ script_level_55_1665:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 489
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2365:
   id: 2790
   levels: level_2365
@@ -13598,8 +13341,7 @@ script_level_55_1635:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 487
   position: 11
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1726:
   id: 2801
   levels: level_1726
@@ -13609,8 +13351,7 @@ script_level_55_1726:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 487
   position: 12
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1567:
   id: 2802
   levels: level_1567
@@ -13620,8 +13361,7 @@ script_level_55_1567:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 487
   position: 13
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1670:
   id: 2803
   levels: level_1670
@@ -13631,8 +13371,7 @@ script_level_55_1670:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 487
   position: 14
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2444:
   id: 2804
   levels: level_2444
@@ -13651,8 +13390,7 @@ script_level_55_1782:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 488
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1359:
   id: 2806
   levels: level_1359
@@ -13698,8 +13436,7 @@ script_level_55_1621:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 488
   position: 8
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1549:
   id: 2812
   levels: level_1549
@@ -13709,8 +13446,7 @@ script_level_55_1549:
   updated_at: 2015-10-16 22:39:12.000000000 Z
   stage_id: 488
   position: 9
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1920:
   id: 2813
   levels: level_1920
@@ -13729,8 +13465,7 @@ script_level_55_1697:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 489
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1365:
   id: 2815
   levels: level_1365
@@ -13749,8 +13484,7 @@ script_level_55_1786:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 489
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1762:
   id: 2818
   levels: level_1762
@@ -13760,8 +13494,7 @@ script_level_55_1762:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 489
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1553:
   id: 2819
   levels: level_1553
@@ -13771,8 +13504,7 @@ script_level_55_1553:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 489
   position: 7
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2102:
   id: 2820
   levels: level_2102
@@ -13791,8 +13523,7 @@ script_level_55_1548:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 490
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1661:
   id: 2822
   levels: level_1661
@@ -13802,8 +13533,7 @@ script_level_55_1661:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 490
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2305:
   id: 2823
   levels: level_2305
@@ -13822,8 +13552,7 @@ script_level_55_1652:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 491
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1741:
   id: 2825
   levels: level_1741
@@ -13833,8 +13562,7 @@ script_level_55_1741:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 491
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2428:
   id: 2826
   levels: level_2428
@@ -13853,8 +13581,7 @@ script_level_55_1764:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 492
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2672:
   id: 2828
   levels: level_2672
@@ -13864,8 +13591,7 @@ script_level_55_2672:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 492
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2575:
   id: 2829
   levels: level_2575
@@ -13875,8 +13601,7 @@ script_level_55_2575:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 492
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2722:
   id: 2830
   levels: level_2722
@@ -13886,8 +13611,7 @@ script_level_55_2722:
   updated_at: 2015-10-16 22:39:13.000000000 Z
   stage_id: 492
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1602:
   id: 2831
   levels: level_1602
@@ -13897,8 +13621,7 @@ script_level_55_1602:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 492
   position: 6
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1915:
   id: 2832
   levels: level_1915
@@ -13917,8 +13640,7 @@ script_level_55_1663:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 493
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1792:
   id: 2834
   levels: level_1792
@@ -13928,8 +13650,7 @@ script_level_55_1792:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 493
   position: 3
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1613:
   id: 2835
   levels: level_1613
@@ -13939,8 +13660,7 @@ script_level_55_1613:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 493
   position: 4
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1811:
   id: 2836
   levels: level_1811
@@ -13950,8 +13670,7 @@ script_level_55_1811:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 493
   position: 5
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2344:
   id: 2837
   levels: level_2344
@@ -13970,8 +13689,7 @@ script_level_55_1653:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 494
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_2359:
   id: 2839
   levels: level_2359
@@ -13990,8 +13708,7 @@ script_level_55_1767:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 495
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_55_1840:
   id: 2841
   levels: level_1840
@@ -14010,8 +13727,7 @@ script_level_55_1666:
   updated_at: 2015-10-16 22:39:14.000000000 Z
   stage_id: 496
   position: 2
-  properties:
-    type: 'assessment'
+  properties: '{"type": "assessment"}'
 script_level_16_1959:
   id: 483
   levels: level_1959
