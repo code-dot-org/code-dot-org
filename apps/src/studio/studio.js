@@ -209,12 +209,12 @@ const REMIX_PROPS = [
         x: ((spriteIndex - 1) % 3) * 3,
         y: (parseInt((spriteIndex - 1) / 3)) * 2,
       });
-      for (let y = 0; y < 8; y++) {
-        for (let x = 0; x < 8; x++) {
+      for (let y = 0; y < Studio.ROWS; y++) {
+        for (let x = 0; x < Studio.COLS; x++) {
           const cell = Studio.map[y][x].serialize();
           if (cell.tileType & constants.SquareType.SPRITESTART) {
             const defaultSpriteLocation = getDefaultSpriteLocation();
-            if ((level.firstSpriteIndex !== 1 || cell.sprite) && !args.spritesHiddenToStart) {
+            if ((level.firstSpriteIndex !== 1 || cell.sprite) && !level.spritesHiddenToStart) {
               blocks.push(blockAsXmlNode('studio_setSpriteParams', {
                 titles: {
                   'VALUE': `"${Studio.startAvatars[cell.sprite ? cell.sprite : spriteIndex + (level.firstSpriteIndex || 0)]}"`,
@@ -330,7 +330,7 @@ const REMIX_PROPS = [
   }
 ];
 
-function loadLevel() {
+Studio.loadLevel = function () {
   // Load maps.
   Studio.map = level.map.map(row => row.map(cell => (
     // Each cell should be either an integer (in which case we are
@@ -407,7 +407,7 @@ function loadLevel() {
   studioApp().MAZE_HEIGHT = Studio.MAZE_HEIGHT;
 
   Studio.walls = loadWalls();
-}
+};
 
 function loadWalls() {
   if (skin.customObstacleZones) {
@@ -1894,7 +1894,7 @@ Studio.initReadonly = function (config) {
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
 
-  loadLevel();
+  Studio.loadLevel();
 
   config.appMsg = studioMsg;
 
@@ -1959,7 +1959,7 @@ Studio.init = function (config) {
   var isAlgebraLevel = !!level.useContractEditor;
   config.grayOutUndeletableBlocks = isAlgebraLevel;
 
-  loadLevel();
+  Studio.loadLevel();
 
   Studio.background = getDefaultBackgroundName();
 
@@ -2234,7 +2234,7 @@ Studio.prepareForRemix = function () {
 
   whenRun.appendChild(next);
   visitAll(blocksDom, block => {
-    if (block.getAttribute('uservisible')) {
+    if (block.getAttribute && block.getAttribute('uservisible')) {
       block.setAttribute('uservisible', "true");
     }
   });
