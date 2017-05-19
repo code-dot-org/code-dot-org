@@ -26,7 +26,9 @@ const Courses = React.createClass({
   propTypes: {
     courses: shapes.courses,
     isEnglish: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired
+    isTeacher: React.PropTypes.bool.isRequired,
+    linesCount: React.PropTypes.number.isRequired,
+    studentsCount: React.PropTypes.number.isRequired
   },
 
   componentDidMount() {
@@ -45,8 +47,10 @@ const Courses = React.createClass({
     return (
       <div>
         <HeadingBanner
-          headingText={i18n.coursesHeadingText()}
-          subHeadingText={i18n.coursesHeadingSubText()}
+          headingText={i18n.courses()}
+          subHeadingText={i18n.coursesHeadingSubText(
+            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+          )}
         />
 
         {courses && (

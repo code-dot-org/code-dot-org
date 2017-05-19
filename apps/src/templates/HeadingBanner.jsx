@@ -33,10 +33,10 @@ const HeadingBanner = React.createClass({
     return (
       <div>
         <div style={styles.bannerHeading}>
-          {this.props.headingText}
+          {this.props.headingText || <span>&nbsp;</span>}
         </div>
         <div style={styles.bannerSubHeading}>
-          {this.props.subHeadingText}
+          {this.props.subHeadingText || <span>&nbsp;</span>}
         </div>
       </div>
     );
