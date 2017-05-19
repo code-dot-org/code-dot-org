@@ -90,6 +90,7 @@ module ProjectsList
       {}.tap do |projects|
         project_types.map do |type|
           projects[type] = PEGASUS_DB[:storage_apps].
+            select_append(Sequel[:storage_apps][:id].as(:channel_id)).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
             where(state: 'active', project_type: type).
@@ -104,7 +105,7 @@ module ProjectsList
 
     def get_published_project_data(project)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
+      channel_id = storage_encrypt_channel_id(project[:storage_id], project[:channel_id])
       {
         channel: channel_id,
         name: project_value['name'],
