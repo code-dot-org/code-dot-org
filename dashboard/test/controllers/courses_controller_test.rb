@@ -7,8 +7,7 @@ class CoursesControllerTest < ActionController::TestCase
     @teacher = create :teacher
     sign_in @teacher
 
-    @levelbuilder = create :user
-    UserPermission.create(user_id: @levelbuilder.id, permission: 'levelbuilder')
+    @levelbuilder = create :levelbuilder
 
     plc_course = create :plc_course, name: 'My Plc'
     @course_plc = plc_course.course
