@@ -175,6 +175,9 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
 
+    # Append `no-transform` to existing Cache-Control header
+    response['Cache-Control'] += ', no-transform'
+
     filename.downcase! if endpoint == 'files'
     type = File.extname(filename)
     not_found if type.empty?
