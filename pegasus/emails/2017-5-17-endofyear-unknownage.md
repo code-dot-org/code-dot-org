@@ -55,3 +55,5 @@ It is entirely your responsibility to thoroughly check references or perform any
 <p> <hr/> <small> You’re receiving this email because you signed up on Code Studio or signed the petition at Code.org and let us know you’re an educator. Code.org is a 501c3 non-profit. Our address is 1501 4th Ave, Suite 900, Seattle, WA, 98101.
 
 <strong>Don't want these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
+
+![](<%= tracking_pixel %>)

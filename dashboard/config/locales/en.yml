@@ -75,7 +75,6 @@ en:
   trophies: "Trophies"
   courses: 'Courses'
   unplugged_activity: 'Unplugged Activity'
-  go_beyond: 'Go Beyond'
   of: "of"
   more: "MORE"
   less: "LESS"
@@ -665,6 +664,7 @@ en:
     delete: "Delete"
     exit: "Return to Course"
     my_projects: "My Projects"
+    project_gallery: "Project Gallery"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Share"
