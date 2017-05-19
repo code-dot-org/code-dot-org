@@ -204,16 +204,41 @@ const REMIX_PROPS = [
     },
     generateBlocks: args => {
       const blocks = [];
-      let spriteIndex = 0;
+      let spriteIndex = 1;
       const getDefaultSpriteLocation = () => ({
-        x: spriteIndex % 3,
-        y: parseInt(spriteIndex / 3),
+        x: ((spriteIndex - 1) % 3) * 3,
+        y: (parseInt((spriteIndex - 1) / 3)) * 2,
       });
       for (let y = 0; y < 8; y++) {
         for (let x = 0; x < 8; x++) {
           const cell = Studio.map[y][x].serialize();
-          if (cell.tileType & constants.SPRITESTART) {
+          if (cell.tileType & constants.SquareType.SPRITESTART) {
             const defaultSpriteLocation = getDefaultSpriteLocation();
+            if (level.firstSpriteIndex || cell.sprite || !args.spritesHiddenToStart) {
+              blocks.push(blockAsXmlNode('studio_setSpriteParams', {
+                titles: {
+                  'VALUE': `"${Studio.startAvatars[cell.sprite ? cell.sprite : spriteIndex + (level.firstSpriteIndex || 0)]}"`,
+                },
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                },
+              }));
+              if (args.spritesHiddenToStart) {
+                blocks.push(blockAsXmlNode('studio_vanishSprite', {
+                  values: {
+                    'SPRITE': {
+                      type: 'math_number',
+                      titleName: 'NUM',
+                      titleValue: spriteIndex,
+                    },
+                  },
+                }));
+              }
+            }
             if (x !== defaultSpriteLocation.x || y !== defaultSpriteLocation.y) {
               blocks.push(blockAsXmlNode('studio_setSpriteXY', {
                 values: {
@@ -225,31 +250,19 @@ const REMIX_PROPS = [
                   'XPOS': {
                     type: 'math_number',
                     titleName: 'NUM',
-                    titleValue: x * Studio.SQUARE_SIZE,
+                    titleValue: x * Studio.SQUARE_SIZE +
+                        Studio.sprite[spriteIndex - 1].width / 2,
                   },
                   'YPOS': {
                     type: 'math_number',
                     titleName: 'NUM',
-                    titleValue: y * Studio.SQUARE_SIZE,
+                    titleValue: y * Studio.SQUARE_SIZE +
+                        Studio.sprite[spriteIndex - 1].height / 2,
                   },
                 },
               }));
             }
-            if (level.firstSpriteIndex || cell.sprite) {
-              blocks.push(blockAsXmlNode('studio_setSpriteParams', {
-                titles: {
-                  'VALUE': cell.sprite,
-                },
-                values: {
-                  'SPRITE': {
-                    type: 'math_number',
-                    titleName: 'NUM',
-                    titleValue: spriteIndex + (level.firstSpriteIndex || 0),
-                  },
-                },
-              }));
-            }
-            if (cell.speed && cell.speed !== constants.DEFAULT_SPRITE_SPEED) {
+            if (cell.speed !== undefined && cell.speed !== constants.DEFAULT_SPRITE_SPEED) {
               blocks.push(blockAsXmlNode('studio_setSpriteSpeedParams', {
                 values: {
                   'SPRITE': {
@@ -265,7 +278,7 @@ const REMIX_PROPS = [
                 },
               }));
             }
-            if (cell.size && cell.size !== constants.DEFAULT_SPRITE_SIZE) {
+            if (cell.size !== undefined && cell.size !== constants.DEFAULT_SPRITE_SIZE) {
               blocks.push(blockAsXmlNode('studio_setSpriteSizeParams', {
                 values: {
                   'SPRITE': {
@@ -292,7 +305,7 @@ const REMIX_PROPS = [
 
             spriteIndex++;
           }
-          if (cell.tileType & constants.SPRITEFINISH) {
+          if (cell.tileType & constants.SquareType.SPRITEFINISH) {
             blocks.push(blockAsXmlNode('sudio_addGoalXY', {
               values: {
                 'XPOS': {
