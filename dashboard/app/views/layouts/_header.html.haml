@@ -97,6 +97,10 @@
               - if show_header2
                 = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
+- if show_header2
+  - if request.path == "/" || request.path == "/courses"
+    %img#header-banner{src: "/shared/images/banners/banner-test3.png"}
+
 - if script_level
   - view_as = @user || current_user
   - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, view_as, view_as == current_user && @public_caching).to_json
