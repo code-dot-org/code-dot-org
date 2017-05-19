@@ -14,15 +14,8 @@
 = render partial: 'home/survey_diversity' if show_diversity_survey? SurveyResult::DIVERSITY_2017
 
 - if request.cookies['pm'] == 'new_header'
-
   - if current_user
     = render partial: 'home/homepage'
-
-  - else
-    #landingpage
-      = render partial: 'home/studio_banner'
-      = render partial: 'home/all_courses'
-
 - else
   #landingpage
     .row
