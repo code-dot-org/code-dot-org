@@ -8,7 +8,9 @@ import {getStore} from '@cdo/apps/redux';
 import AppView from '@cdo/apps/templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 import cc_client from './cc-client';
+import dom from '../../dom';
 import items from './items';
+import {TestResults} from '../../constants';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -48,7 +50,7 @@ function getItemName(input) {
   return input;
 }
 
-Craft.executeUserCode = function () {
+function executeUserCode() {
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   let interpreter;
@@ -188,7 +190,13 @@ Craft.executeUserCode = function () {
   // Register async methods
   codegen.asyncFunctionList = Object.values(asyncMethods);
   interpreter = codegen.evalWith(code, Object.assign(asyncMethods, methods));
-};
+
+  studioApp().report({
+    app: 'craft',
+    result: true,
+    testResult: TestResults.ALL_PASS
+  });
+}
 
 export default class Craft {
   /**
@@ -201,6 +209,14 @@ export default class Craft {
     document.body.className += " minecraft";
 
     Craft.initialConfig = config;
+
+
+    // Initial connection status check to show pop-up if user is not connected to M:EE
+    client.connectionStatusUpdate(function (result) {
+      if (result === false) {
+        Craft.showConnectToCodeConnectionPopup();
+      }
+    });
 
     // Replace studioApp methods with our own.
     studioApp().reset = Craft.reset;
@@ -261,21 +277,50 @@ export default class Craft {
    * Click the run button.  Start the program.
    */
   static runButtonClick() {
-    console.log('run');
+    client.connectionStatusUpdate(function (result) {
+      // Only can run when minecraft is connected to code connection
+      if (result === true) {
+        console.log('run');
 
-    const runButton = document.getElementById('runButton');
-    const resetButton = document.getElementById('resetButton');
+        const runButton = document.getElementById('runButton');
+        const resetButton = document.getElementById('resetButton');
 
-    // Ensure that Reset button is at least as wide as Run button.
-    if (!resetButton.style.minWidth) {
-      resetButton.style.minWidth = runButton.offsetWidth + 'px';
-    }
+        // Ensure that Reset button is at least as wide as Run button.
+        if (!resetButton.style.minWidth) {
+          resetButton.style.minWidth = runButton.offsetWidth + 'px';
+        }
 
-    // Turn on call tracing
-    Blockly.mainBlockSpace.traceOn(true);
-    studioApp().toggleRunReset('reset');
-    studioApp().attempts++;
+        studioApp().toggleRunReset('reset');
+        // Turn on call tracing
+        Blockly.mainBlockSpace.traceOn(true);
+        studioApp().attempts++;
 
-    executeUserCode();
+        executeUserCode();
+      } else {
+        Craft.showConnectToCodeConnectionPopup();
+      }
+    });
   }
+
+  static showConnectToCodeConnectionPopup = function () {
+    var popupDiv = document.createElement('div');
+    popupDiv.innerHTML = require('./dialogs/connectToCodeConnection.html.ejs')({
+      image: studioApp().assetUrl()
+    });
+    var popupDialog = studioApp().createModalDialog({
+      contentDiv: popupDiv,
+      onHidden: function () {
+      },
+      id: 'craft-popup-connect',
+    });
+    dom.addClickTouchEvent($('#download-button')[0], function () {
+      var win = window.open('https://education.minecraft.net', '_blank');
+      win.focus();
+      popupDialog.hide();
+    }.bind(this));
+    dom.addClickTouchEvent($('#close-popup')[0], function () {
+      popupDialog.hide();
+    }.bind(this));
+    popupDialog.show();
+  };
 }

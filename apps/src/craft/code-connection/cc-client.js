@@ -15,7 +15,7 @@ export default class cc_client {
      * @param {number} timeout - timeout for async ajax
      *
      */
-    connectionStatusUpdate(asyncCallback, timeout) {
+    connectionStatusUpdate(asyncCallback, timeout = 200) {
         $.ajax({
             type: "GET",
             url: `${baseUrl}${this.port}/connected`,
@@ -52,7 +52,7 @@ export default class cc_client {
             },
             error: function (jqxhr, textStatus, error) {
                 console.log(`Command : ${command} fail`, error);
-                callback(false);
+                callback();
             }
         });
     }
