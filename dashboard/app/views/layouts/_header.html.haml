@@ -27,7 +27,6 @@
   - hamburger_options[:studio_url_base] = CDO.studio_url
 
 .hide_on_mobile{class: header_class}
-
   - if show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
@@ -100,7 +99,7 @@
 
 - if show_header2
   - if request.path == "/" || request.path == "/courses"
-    %img#header-banner{src: "/shared/images/banners/banner-test.png"}
+    %img#header-banner{src: "/shared/images/banners/banner-test3.png"}
 
 - if script_level
   - view_as = @user || current_user
