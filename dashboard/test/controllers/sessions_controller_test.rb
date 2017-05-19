@@ -47,16 +47,16 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "sign in page saves return to url in session" do
-    return_to = 'http://code.org/a-return-to-url'
-    get :new, params: {return_to:  return_to}
+    user_return_to = 'http://code.org/a-return-to-url'
+    get :new, params: {user_return_to:  user_return_to}
 
-    assert_equal return_to, session[:return_to]
+    assert_equal user_return_to, session[:user_return_to]
   end
 
   test "teachers go to specified return to url after signing in" do
     teacher = create(:teacher)
 
-    session[:return_to] = return_to = '//test.code.org/the-return-to-url'
+    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
 
     post :create, params: {
       user: {
@@ -67,7 +67,7 @@ class SessionsControllerTest < ActionController::TestCase
     }
 
     assert_signed_in_as teacher
-    assert_redirected_to return_to
+    assert_redirected_to user_return_to
   end
 
   test 'signing in as user via username' do

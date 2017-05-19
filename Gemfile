@@ -74,7 +74,6 @@ group :development, :test do
   gem 'webmock', require: false
 
   gem 'codecov', require: false
-  gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'fake_sqs'
   gem 'fakeredis', require: false
   gem 'mocha', require: false
@@ -136,7 +135,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise'
+gem 'devise', '~> 4.2.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -259,6 +258,10 @@ gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: '
 gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
-gem 'image_optim_rails'
+# Ref: https://github.com/toy/image_optim_rails/pull/3
+gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_config_path'
 
 gem 'image_size', require: false
+
+# Auto strip model attributes before validation (opt in)
+gem 'auto_strip_attributes', '~> 2.1'

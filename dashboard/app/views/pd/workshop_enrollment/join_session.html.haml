@@ -1,0 +1,13 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%div
+  %h1
+    Join this workshop
+
+= render partial: 'workshop_details'
+
+%h2
+  Please complete and confirm the information below.
+
+= render partial: 'enroll_form', locals: {action: 'confirm_join_session', submit_text: 'Confirm'}

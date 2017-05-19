@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509100000) do
+ActiveRecord::Schema.define(version: 20170518213718) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -510,6 +510,7 @@ ActiveRecord::Schema.define(version: 20170509100000) do
     t.text     "form_data",        limit: 65535, null: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.string   "type"
     t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", unique: true, using: :btree
   end
 
