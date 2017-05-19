@@ -214,7 +214,7 @@ const REMIX_PROPS = [
           const cell = Studio.map[y][x].serialize();
           if (cell.tileType & constants.SquareType.SPRITESTART) {
             const defaultSpriteLocation = getDefaultSpriteLocation();
-            if (level.firstSpriteIndex !== 1 || cell.sprite || !args.spritesHiddenToStart) {
+            if ((level.firstSpriteIndex !== 1 || cell.sprite) && !args.spritesHiddenToStart) {
               blocks.push(blockAsXmlNode('studio_setSpriteParams', {
                 titles: {
                   'VALUE': `"${Studio.startAvatars[cell.sprite ? cell.sprite : spriteIndex + (level.firstSpriteIndex || 0)]}"`,
@@ -227,17 +227,6 @@ const REMIX_PROPS = [
                   },
                 },
               }));
-              if (args.spritesHiddenToStart) {
-                blocks.push(blockAsXmlNode('studio_vanishSprite', {
-                  values: {
-                    'SPRITE': {
-                      type: 'math_number',
-                      titleName: 'NUM',
-                      titleValue: spriteIndex,
-                    },
-                  },
-                }));
-              }
             }
             if (x !== defaultSpriteLocation.x || y !== defaultSpriteLocation.y) {
               blocks.push(blockAsXmlNode('studio_setSpriteXY', {
