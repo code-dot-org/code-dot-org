@@ -252,7 +252,7 @@ en:
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'
       stats: 'Code Studio'
-      settings: 'My account'
+      settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
       signup: 'Create an account'
@@ -542,7 +542,7 @@ en:
     support: "Get Help"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
-    help_support: "Help and Support"
+    help_support: "Help and support"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:

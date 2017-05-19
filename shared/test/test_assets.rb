@@ -39,7 +39,8 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
     @api.get_object(image_filename)
-    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_match 'no-transform', last_response['Cache-Control']
 
     @api.delete_object(image_filename)
     assert successful?

@@ -14,12 +14,16 @@ function showCourses() {
   const courses = JSON.parse(coursesData.dataset.courses);
   const isEnglish = JSON.parse(coursesData.dataset.english);
   const isTeacher = JSON.parse(coursesData.dataset.teacher);
+  const linesCount = JSON.parse(coursesData.dataset.linescount);
+  const studentsCount = JSON.parse(coursesData.dataset.studentscount);
 
   ReactDOM.render (
     <Courses
       courses={courses}
       isEnglish={isEnglish}
       isTeacher={isTeacher}
+      linesCount={linesCount}
+      studentsCount={studentsCount}
     />,
     document.getElementById('courses-container')
   );
