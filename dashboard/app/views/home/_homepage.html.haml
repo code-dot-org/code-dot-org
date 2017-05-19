@@ -13,3 +13,21 @@
 .clear{style: "clear: both"}
 
 #homepage-container
+
+#admin-extras
+  -if current_user.admin?
+    %a{href: CDO.code_org_url('/ops-dashboard#/districts'), style: 'text-decoration: none;'}
+      %h2
+        Manage Districts
+  -if current_user.admin? || has_permission?('facilitator')
+    %a{href: CDO.code_org_url('/ops-dashboard#/workshops'), style: 'text-decoration: none;'}
+      %h2
+        Manage PD Workshops
+  -elsif has_permission?('district_contact')
+    %a{href: CDO.code_org_url('/ops-dashboard#/workshops'), style: 'text-decoration: none;'}
+      %h2
+        View PD Workshops
+  -if current_user.admin? || has_permission?('district_contact')
+    %a{href: CDO.code_org_url('/ops-dashboard#/teacher-cohorts'), style: 'text-decoration: none;'}
+      %h2
+        Manage Teacher Cohorts

@@ -101,7 +101,7 @@ class FilesTest < FilesApiTestBase
 
     # Verify that we download the file as an attachment when hitting the normal GET api
     @api.get_object(dog_image_filename)
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
     assert_equal "attachment; filename=\"#{dog_image_filename}\"", last_response['Content-Disposition']
     assert_equal dog_image_body, last_response.body
 
@@ -236,7 +236,7 @@ class FilesTest < FilesApiTestBase
     assert_equal v2_file_data, @api.get_object_version(filename, versions[0]['versionId'])
 
     # Check cache headers
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
 
     # List project versions.
     project_versions = @api.list_files_versions
