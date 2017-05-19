@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518213718) do
+ActiveRecord::Schema.define(version: 20170519134008) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1017,12 +1017,12 @@ ActiveRecord::Schema.define(version: 20170518213718) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "studio_person_id"
-    t.string   "email",                                    default: "",      null: false
-    t.string   "encrypted_password",                       default: ""
+    t.string   "email",                                  default: "",      null: false
+    t.string   "encrypted_password",                     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                            default: 0
+    t.integer  "sign_in_count",                          default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -1033,28 +1033,21 @@ ActiveRecord::Schema.define(version: 20170518213718) do
     t.string   "provider"
     t.string   "uid"
     t.boolean  "admin"
-    t.string   "gender",                     limit: 1
+    t.string   "gender",                   limit: 1
     t.string   "name"
-    t.string   "locale",                     limit: 10,    default: "en-US", null: false
+    t.string   "locale",                   limit: 10,    default: "en-US", null: false
     t.date     "birthday"
-    t.string   "user_type",                  limit: 16
+    t.string   "user_type",                limit: 16
     t.string   "school"
-    t.string   "full_address",               limit: 1024
+    t.string   "full_address",             limit: 1024
     t.integer  "school_info_id"
-    t.integer  "total_lines",                              default: 0,       null: false
-    t.boolean  "prize_earned",                             default: false
-    t.integer  "prize_id"
-    t.boolean  "teacher_prize_earned",                     default: false
-    t.integer  "teacher_prize_id"
-    t.boolean  "teacher_bonus_prize_earned",               default: false
-    t.integer  "teacher_bonus_prize_id"
-    t.integer  "prize_teacher_id"
+    t.integer  "total_lines",                            default: 0,       null: false
     t.integer  "secret_picture_id"
-    t.boolean  "active",                                   default: true,    null: false
+    t.boolean  "active",                                 default: true,    null: false
     t.string   "hashed_email"
     t.datetime "deleted_at"
     t.string   "secret_words"
-    t.text     "properties",                 limit: 65535
+    t.text     "properties",               limit: 65535
     t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -1062,7 +1055,7 @@ ActiveRecord::Schema.define(version: 20170518213718) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
-    t.integer  "invitations_count",                        default: 0
+    t.integer  "invitations_count",                      default: 0
     t.integer  "terms_of_service_version"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
@@ -1070,13 +1063,10 @@ ActiveRecord::Schema.define(version: 20170518213718) do
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
     t.index ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
-    t.index ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
     t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
-    t.index ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
-    t.index ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
   end
 
