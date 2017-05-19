@@ -52,7 +52,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     # renders a 404 (not found)
     raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher
 
-    create_attendance session: @session, teacher: teacher
+    Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher
     head :no_content
   end
 
@@ -64,7 +64,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     enrollment_id = params[:enrollment_id]
     enrollment = @workshop.enrollments.find(enrollment_id)
 
-    create_attendance session: @session, enrollment: enrollment
+    Pd::Attendance.find_restore_or_create_by! session: @session, enrollment: enrollment
     head :no_content
   end
 
@@ -85,17 +85,5 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     attendance.destroy! if attendance
 
     head :no_content
-  end
-
-  private
-
-  def create_attendance(attendance_params)
-    # Idempotent: Find existing, restore deleted, or create a new attendance row.
-    attendance = nil
-    Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      attendance = Pd::Attendance.with_deleted.find_by(attendance_params) ||
-        Pd::Attendance.create!(attendance_params)
-    end
-    attendance.restore if attendance.deleted?
   end
 end

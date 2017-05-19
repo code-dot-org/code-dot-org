@@ -1,8 +1,3 @@
-%script{src: "/js/videojs-ie8.min.js"}
-%script{src: "/js/video.min.js"}
-
-%link{href: "/css/video-js.css", rel: "stylesheet"}
-
 :javascript
 
   $(window).load(function() {
@@ -35,6 +30,22 @@
       // it relies upon a missing addEventListener.
       if (player == "fallback" && downloadPath && window.addEventListener)
       {
+        var doc = document,
+            video_css = doc.createElement('link'),
+            video = doc.createElement("script"),
+            video_ie = doc.createElement("script");
+
+        video_css.type="text/css";
+        video_css.href="/css/video-js.css";
+        video_css.rel="stylesheet";
+        doc.getElementsByTagName('head')[0].appendChild(video_css);
+        video_ie.type = "text/javascript";
+        video_ie.src = "/js/videojs-ie8.min.js";
+        doc.body.appendChild(video_ie);
+        video.type = "text/javascript";
+        video.src = "/js/video.min.js";
+        doc.body.appendChild(video);
+
         $(this).parent().append(
           '<video ' +
           'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%"' +
