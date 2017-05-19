@@ -135,7 +135,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise'
+gem 'devise', '~> 4.2.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
