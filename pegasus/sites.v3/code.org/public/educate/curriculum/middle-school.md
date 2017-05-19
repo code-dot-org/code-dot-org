@@ -40,12 +40,12 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 ## Units of Study
 
-* **Unit 1:** Problem Solving: Computers and Logic
-* **Unit 2:** The Internet: Web Development
-* **Unit 3:** Programming: Interactive Games & Animations
-* **Unit 4:** Problem Solving: The Design Process
-* **Unit 5:** The Internet: Data and Society
-* **Unit 6:** Programming: The Internet of Things
+* **Unit 1:** Problem Solving
+* **Unit 2:** Web Development
+* **Unit 3:** Animations and Games
+* **Unit 4:** The Design Process
+* **Unit 5:** Data and Society
+* **Unit 6:** Physical Computing
 
 [/col-50]
 

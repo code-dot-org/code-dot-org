@@ -31,6 +31,7 @@ class Ability
       Plc::CourseUnit,
       # PD models
       Pd::Workshop,
+      Pd::Session,
       Pd::Enrollment,
       Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
@@ -57,6 +58,8 @@ class Ability
       can :read, SectionHiddenStage
       can :create, Pd::TeacherApplication, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
+      can :read, Pd::Session
+      can :manage, Pd::Enrollment, user_id: user.id
 
       if user.teacher?
         can :read, Section, user_id: user.id
@@ -68,7 +71,6 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
-        can :manage, Pd::Enrollment, user_id: user.id
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
@@ -161,6 +163,7 @@ class Ability
       can :manage, [
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel
       ]
@@ -183,6 +186,7 @@ class Ability
         Activity,
         Game,
         Level,
+        Course,
         Script,
         ScriptLevel,
         UserLevel,

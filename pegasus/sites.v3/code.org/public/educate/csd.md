@@ -76,7 +76,7 @@ CS Discoveries introduces students to tools and programming languages that are a
 
 ## <a name="content"></a>Course Overview
 
-[**Printable course overview PDF**](https://code.org/files/programs/CSD_1-pager_final.pdf)
+[**Printable course overview PDF**](https://curriculum.code.org/media/uploads/CSD_1-pager_final.pdf)
 
 Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
