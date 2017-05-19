@@ -182,7 +182,7 @@ function shareProject() {
 }
 
 function remixProject() {
-  if (dashboard.project.getCurrentId()) {
+  if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {
     dashboard.project.serverSideRemix();
   } else {
     // We don't have an id. This implies we are either on a legacy /c/ share
