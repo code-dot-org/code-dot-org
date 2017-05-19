@@ -2,7 +2,6 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-require 'cdo/aws/cloudfront'
 require 'tempfile'
 
 namespace :ci do
@@ -33,19 +32,6 @@ namespace :ci do
       end
       ChatClient.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
-    end
-  end
-
-  # Deploy updates to CloudFront in parallel with the local build to optimize total CI build time.
-  multitask build_with_cloudfront: [:build, :cloudfront]
-
-  # Update CloudFront distribution with any changes to the http cache configuration.
-  # If there are changes to be applied, the update can take 15 minutes to complete.
-  task :cloudfront do
-    if CDO.daemon && CDO.chef_managed && !rack_env?(:adhoc)
-      ChatClient.wrap('Update CloudFront') do
-        AWS::CloudFront.create_or_update
-      end
     end
   end
 
@@ -83,7 +69,7 @@ namespace :ci do
 
   all_tasks = []
   all_tasks << 'firebase:ci'
-  all_tasks << :build_with_cloudfront
+  all_tasks << :build
   all_tasks << :deploy_multi
   all_tasks << :publish_github_release if rack_env?(:production)
   task all: all_tasks

@@ -278,9 +278,23 @@ Phase 3 is best held in early October prior to when order of operations and earl
 </details>
 
 <details>
-  <summary>**Ordering Catering**</summary>
-  <p>	
+  <summary>**Teacher Packets and Agendas**</summary>
+  <p> 
 
+- [Teacher Workbook](https://code.org/curriculum/docs/algebra/CSinACourseA.pdf) - Packet to print for each teacher attending the summer workshop.
+- [Facilitator Agendas](https://docs.google.com/spreadsheets/d/13w__s1bC2bjum6_L8vxhlQ5Cd_Ai11Qp2YNzV3CVAvE/edit#gid=850221216) - Agendas to guide the facilitators.
+- [Facilitator Slide Deck for Summer Workshop](https://docs.google.com/presentation/d/1Pmry84StvBFTQiN6ydgFQCA7wDd61NUvy2NBWT3wFAY/edit#) - Slide deck facilitators should use for the summer workshop.
+</p>
+</details>
+
+<details>
+  <summary>**Ordering Supplies and Catering**</summary>
+  <p>	
+**Supplies**
+
+- 1 Workbook per teacher
+
+**Catering**
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
 
 Always accommodate vegetarian needs, roughly ⅓ of the order. In communications to teachers and workshop attendees ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>

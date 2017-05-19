@@ -38,15 +38,8 @@ class Script < ActiveRecord::Base
   belongs_to :user
 
   attr_accessor :skip_name_format_validation
+  include SerializedToFileValidation
 
-  validates :name,
-    presence: true,
-    uniqueness: {case_sensitive: false},
-    format: {
-      unless: :skip_name_format_validation,
-      with: /\A[a-z0-9\-]+\z/,
-      message: 'can only contain lowercase letters, numbers and dashes'
-    }
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
