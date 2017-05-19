@@ -2,12 +2,16 @@ require 'test_helper'
 class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   freeze_time
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @organizer = create :workshop_organizer
-    @workshop = create :pd_workshop, organizer: @organizer, num_sessions: 1
     @facilitator = create :facilitator
-    @workshop.facilitators << @facilitator
+    @teacher = create :teacher
+  end
 
+  setup do
+    @workshop = create :pd_workshop, organizer: @organizer, num_sessions: 1
+    @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
   end
 
@@ -27,7 +31,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'logged-in users can enroll' do
-    sign_in create :teacher
+    sign_in @teacher
     get :new, params: {workshop_id: @workshop.id}
     assert_template :new
     # Should NOT see this message if logged in
@@ -51,7 +55,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'unrelated organizers and facilitators can enroll' do
-    unrelated_super_user = create :teacher
+    unrelated_super_user = @teacher
     unrelated_super_user.permission = UserPermission::WORKSHOP_ORGANIZER
     unrelated_super_user.permission = UserPermission::FACILITATOR
 
@@ -218,7 +222,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   test 'join_section renders join_section form' do
     # start to create section
     @workshop.start!
-    sign_in create(:teacher)
+    sign_in @teacher
     get :join_section, params: {section_code: @workshop.section.code}
     assert_template :join_section
   end
@@ -226,11 +230,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   test 'join_section without login redirects to sign_in' do
     section = create :section
     get :join_section, params: {section_code: section.code}
-    assert_redirected_to "/users/sign_in?return_to=#{request.url}"
+    assert_redirected_to "/users/sign_in?user_return_to=#{request.url}"
   end
 
   test 'join_section with a nonexistent workshop code responds with 404' do
-    sign_in create(:teacher)
+    sign_in @teacher
     get :join_section, params: {section_code: 'nonsense'}
     assert_response 404
 
@@ -241,7 +245,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'join_section with closed workshop renders closed view' do
-    sign_in create(:teacher)
+    sign_in @teacher
     workshop = create :pd_ended_workshop
     get :join_section, params: {section_code: workshop.section.code}
     assert_template :closed
@@ -273,41 +277,39 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   test 'confirm_join succeeds and joins the section' do
     # start to create section
     @workshop.start!
-    teacher = create :teacher
-    sign_in teacher
-    create :pd_enrollment, full_name: teacher.name, email: teacher.email
+    sign_in @teacher
+    create :pd_enrollment, full_name: @teacher.name, email: @teacher.email
 
     assert_creates(Follower) do
       post :confirm_join, params: {
         section_code: @workshop.section.code,
-        pd_enrollment: enrollment_test_params(teacher),
+        pd_enrollment: enrollment_test_params(@teacher),
         school_info: school_info_params
       }
     end
 
     # Make sure the new follower is for our expected teacher and workshop section
     follower = Follower.last
-    assert_equal teacher.id, follower.student_user_id
+    assert_equal @teacher.id, follower.student_user_id
     assert_equal @workshop.section.id, follower.section_id
   end
 
   test 'confirm_join with no enrollment creates enrollment' do
     # start to create section
     @workshop.start!
-    teacher = create :teacher
-    sign_in teacher
+    sign_in @teacher
 
     assert_creates(Pd::Enrollment, Follower) do
       post :confirm_join, params: {
         section_code: @workshop.section.code,
-        pd_enrollment: enrollment_test_params(teacher),
+        pd_enrollment: enrollment_test_params(@teacher),
         school_info: school_info_params
       }
     end
     enrollment = Pd::Enrollment.last
-    first_name, last_name = teacher.name.split(' ', 2)
-    assert_equal teacher.id, enrollment.user_id
-    assert_equal teacher.email, enrollment.email
+    first_name, last_name = @teacher.name.split(' ', 2)
+    assert_equal @teacher.id, enrollment.user_id
+    assert_equal @teacher.email, enrollment.email
     assert_equal first_name, enrollment.first_name
     assert_equal last_name, enrollment.last_name
     assert_redirected_to '/'
@@ -341,7 +343,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   test 'confirm_join with an email mismatch with the user email renders join_section' do
     # start to create section
     @workshop.start!
-    sign_in create(:teacher)
+    sign_in @teacher
 
     params = enrollment_test_params.merge({email: 'mismatched_email@example.net'})
     post :confirm_join, params: {
@@ -355,7 +357,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   test 'confirm_join with validation errors renders join_section' do
     # start to create section
     @workshop.start!
-    sign_in create(:teacher)
+    sign_in @teacher
     post :confirm_join, params: {
       section_code: @workshop.section.code,
       pd_enrollment: {email: nil},
@@ -366,34 +368,99 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'confirm_join for a single-day workshop also marks attendance' do
     @workshop.start!
-    teacher = create(:teacher)
-    sign_in teacher
+    sign_in @teacher
 
     assert_creates Pd::Attendance do
       post :confirm_join, params: {
         section_code: @workshop.section.code,
-        pd_enrollment: enrollment_test_params(teacher),
+        pd_enrollment: enrollment_test_params(@teacher),
         school_info: school_info_params
       }
     end
-    assert Pd::Attendance.for_workshop(@workshop).for_teacher(teacher).exists?
+    assert Pd::Attendance.for_workshop(@workshop).for_teacher(@teacher).exists?
   end
 
   test 'confirm_join for a multi-day workshop does not mark attendance' do
     @workshop.sessions << create(:pd_session, start: Date.today + 1.day)
     @workshop.start!
 
-    teacher = create(:teacher)
-    sign_in teacher
+    sign_in @teacher
 
     assert_does_not_create Pd::Attendance do
       post :confirm_join, params: {
         section_code: @workshop.section.code,
-        pd_enrollment: enrollment_test_params(teacher),
+        pd_enrollment: enrollment_test_params(@teacher),
         school_info: school_info_params
       }
     end
-    refute Pd::Attendance.for_workshop(@workshop).for_teacher(teacher).exists?
+    refute Pd::Attendance.for_workshop(@workshop).for_teacher(@teacher).exists?
+  end
+
+  test_redirect_to_sign_in_for :join_session, params: {session_code: 'XYZ'}
+  test 'join session' do
+    @workshop.start!
+    sign_in @teacher
+    get :join_session, params: {session_code: @workshop.sessions.first.code}
+    assert_response :success
+  end
+
+  test_redirect_to_sign_in_for :confirm_join_session, method: :post, params: {session_code: 'XYZ'}
+  test 'confirm_join_session' do
+    @workshop.start!
+    sign_in @teacher
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session, params: {
+        session_code: @workshop.sessions.first.code,
+        pd_enrollment: enrollment_test_params(@teacher),
+        school_info: school_info_params
+      }
+    end
+
+    assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
+  test 'confirm_join_session upgrades student account if emails match' do
+    @workshop.start!
+    email = 'accidental_student@example.net'
+    student = create :student, email: email
+    sign_in student
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session, params: {
+        session_code: @workshop.sessions.first.code,
+        pd_enrollment: enrollment_test_params(student).merge(
+          email: email,
+          email_confirmation: email
+        ),
+        school_info: school_info_params
+      }
+    end
+
+    assert student.reload.teacher?
+    assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
+  test 'confirm_join_session redirects student to upgrade account if emails dont match' do
+    @workshop.start!
+    email = 'mismatch@example.net'
+    student = create :student, email: 'accidental_student@example.net'
+    sign_in student
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session, params: {
+        session_code: @workshop.sessions.first.code,
+        pd_enrollment: enrollment_test_params(student).merge(
+          email: email,
+          email_confirmation: email
+        ),
+        school_info: school_info_params
+      }
+    end
+
+    # Still a student
+    assert student.reload.student?
+    assert_redirected_to controller: 'pd/session_attendance', action: 'upgrade_account'
   end
 
   private
