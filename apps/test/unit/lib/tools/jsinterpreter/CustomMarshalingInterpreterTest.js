@@ -3,6 +3,7 @@ import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/configuredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
+import * as codegen from '@cdo/apps/codegen';
 import {makeAssertableObj, attachAssertToInterpreter} from './interpreterTestUtils';
 
 describe("The CustomMarshalingInterpreter", () => {
@@ -281,7 +282,65 @@ describe("The CustomMarshalingInterpreter", () => {
       expect(Interpreter.prototype.getProperty).to.have.been.called;
       expect(interpreterUndefined).to.equal(interpreter.UNDEFINED);
     });
-
   });
 
+  describe("hasProperty method", () => {
+    it("delegates to the base class's hasProperty method by default", () => {
+      const propertyFound = interpreter.hasProperty(interpreter.globalScope, 'undefined');
+      expect(propertyFound).to.be.true;
+      expect(Interpreter.prototype.hasProperty).to.have.been.called;
+    });
+
+    it("correctly locates custom-marshaled globals", () => {
+      const player = {};
+      const customMarshaler = new CustomMarshaler({
+        globalProperties: {
+          name: player // meaning the 'name' property on the 'player' object
+                       // goes into the global scope
+        }
+      });
+      const interpreter = new CustomMarshalingInterpreter('', customMarshaler);
+      const propertyFound = interpreter.hasProperty(interpreter.globalScope, 'name');
+      expect(propertyFound).to.be.true;
+    });
+
+    it("correctly locates properties on custom-marshalled objects", () => {
+      class Foo {
+        constructor(name) {
+          this.name = name;
+        }
+        whatsMyName() {
+          return this.name;
+        }
+      }
+      interpreter.customMarshaler.objectList = [{
+        instance: Foo,
+      }];
+      const value = codegen.marshalNativeToInterpreter(interpreter, new Foo("hello world"));
+      const propertyFound = interpreter.hasProperty(value, 'whatsMyName');
+      expect(propertyFound).to.be.true;
+    });
+
+    it("does not locate blocked properties on custom-marshalled objects", () => {
+      class Foo {
+        constructor(name) {
+          this.name = name;
+        }
+        whatsMyName() {
+          return this.name;
+        }
+      }
+
+      interpreter = new CustomMarshalingInterpreter(
+          '',
+          new CustomMarshaler({
+            objectList: [{instance: Foo}],
+            blockedProperties: ['name']
+          })
+      );
+      const value = codegen.marshalNativeToInterpreter(interpreter, new Foo("hello world"));
+      const propertyFound = interpreter.hasProperty(value, 'name');
+      expect(propertyFound).to.be.false;
+    });
+  });
 });
