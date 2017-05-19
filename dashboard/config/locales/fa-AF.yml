@@ -55,7 +55,7 @@
     submit: "افزودن پیشنهاد"
   appname: Code.org
   stage: "مرحله"
-  stage_number: "مرحله  %{number}"
+  stage_number: Stage %{number}
   puzzle: "پازل"
   trophies: "جایزها"
   courses: "مراحل"
@@ -329,7 +329,7 @@
       label: "سلام %{username}"
       stats: "پیشرفت من"
       settings: "حساب کاربری من"
-      prizes: "جایزه ها"
+      prizes: Prizes
       logout: "خروج"
       signin: "ورود"
       signup: "ثبت نام"

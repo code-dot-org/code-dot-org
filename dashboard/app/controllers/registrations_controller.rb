@@ -2,6 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
 
   def new
+    session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
     super
   end

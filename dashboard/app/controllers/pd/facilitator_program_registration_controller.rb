@@ -7,9 +7,7 @@ class Pd::FacilitatorProgramRegistrationController < ApplicationController
   end
 
   def new
-    session[:return_to] = pd_facilitator_program_registration_path
     authorize! :create, Pd::FacilitatorProgramRegistration
-    session.delete :return_to
 
     begin
       @teachercon = params.require(:teachercon).to_i

@@ -21,6 +21,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "teachers go to specified return to url after signing up" do
+    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
+
+    assert_creates(User) do
+      post :create, params: {user: @default_params}
+    end
+
+    assert_redirected_to user_return_to
+  end
+
   test "create retries on Duplicate exception" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing user

@@ -7,11 +7,16 @@
   Hi
   = @enrollment.first_name + ','
 
-%p
-  This is a reminder about your upcoming Code.org
-  = @workshop.course_name
-  = @workshop.subject
-  workshop.
+- if @workshop.local_summer?
+  %p
+    This is a reminder about your upcoming 5-day Summer workshop on the Code.org
+    CS Principles curriculum.
+- else
+  %p
+    This is a reminder about your upcoming Code.org
+    = @workshop.course_name
+    = @workshop.subject
+    workshop.
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
