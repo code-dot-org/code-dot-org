@@ -1046,7 +1046,7 @@ class User < ActiveRecord::Base
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
-        first_or_create!
+        first_or_initialize
 
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
@@ -1073,7 +1073,7 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
-      user_level.save!
+      user_level.atomic_save!
     end
 
     if pairing_user_ids

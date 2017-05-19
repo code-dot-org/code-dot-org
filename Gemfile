@@ -68,6 +68,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'haml-rails' # haml (instead of erb) generators
+  gem 'rails-perftest'
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.

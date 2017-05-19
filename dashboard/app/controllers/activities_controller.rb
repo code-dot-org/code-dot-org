@@ -4,11 +4,12 @@ require 'cdo/share_filtering'
 class ActivitiesController < ApplicationController
   include LevelsHelper
 
-  # The action below disables the default request forgery protection from
+  # The comment below disables the default request forgery protection from
   # application controller. We don't do request forgery protection on the
   # milestone action to permit the aggressive public caching we plan to do
   # for some script level pages.
   protect_from_forgery except: :milestone
+  skip_before_action :verify_authenticity_token
 
   MAX_INT_MILESTONE = 2_147_483_647
 
@@ -179,7 +180,7 @@ class ActivitiesController < ApplicationController
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
     if synchronous_save
-      @activity = Activity.create!(attributes)
+      @activity = Activity.atomic_create!(attributes)
     else
       @activity = Activity.create_async!(attributes)
     end
