@@ -2,12 +2,10 @@
  * CC client for 3rd party extension
  *
  */
-
+const baseUrl = "http://localhost:";
 export default class cc_client {
     constructor(port) {
         this.port = port;
-        this.baseUrl = "http://localhost:";
-        this.asyncCallback = undefined;
     }
 
     /**
@@ -18,21 +16,17 @@ export default class cc_client {
      *
      */
     connectionStatusUpdate(asyncCallback, timeout) {
-        this.asyncCallback = asyncCallback;
-        var that = this;
         $.ajax({
             type: "GET",
-            url: `${this.baseUrl}${this.port}/connected`,
+            url: `${baseUrl}${this.port}/connected`,
             timeout: timeout,
             success: function (data) {
                 // cc responded
-                that.asyncCallback(data);
-                that.asyncCallback = undefined;
+                asyncCallback(data);
             },
             error: function (jqxhr, textStatus, error) {
                 // TODO: handle net::ERR_CONNECTION_REFUSED error gracefully
-                that.asyncCallback(false);
-                that.asyncCallback = undefined;
+                asyncCallback(false);
             }
         });
     }
@@ -47,7 +41,7 @@ export default class cc_client {
     async_command(command, callback, key) {
         $.ajax({
             type: "GET",
-            url: `${this.baseUrl}${this.port}/${command}`,
+            url: `${baseUrl}${this.port}/${command}`,
             success: function (data) {
                 console.log(`Command : ${command} success result : ${data.toString()}`);
                 if (key !== null) {
