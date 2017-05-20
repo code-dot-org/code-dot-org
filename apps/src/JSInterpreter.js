@@ -15,14 +15,13 @@ export default class JSInterpreter {
    * breakpoints, general debug capabilities (step in, step out, step over), and
    * an optional event queue.
    * @constructor
-   * @param {!Object} options
-   * @param {!StudioApp} options.studioApp
-   * @param {function} [options.shouldRunAtMaxSpeed]
-   * @param {number} [options.maxInterpreterStepsPerTick]
-   * @param {Object} [options.customMarshalGlobalProperties]
-   * @param {Array} [options.customMarshalBlockedProperties]
-   * @param {Array} [options.customMarshalObjectList]
-   * @param {boolean} [options.logExecution] if true, executionLog[] be populated
+   * @param {!StudioApp} studioApp
+   * @param {function} [shouldRunAtMaxSpeed]
+   * @param {number} [maxInterpreterStepsPerTick]
+   * @param {Object} [customMarshalGlobalProperties]
+   * @param {Array} [customMarshalBlockedProperties]
+   * @param {Array} [customMarshalObjectList]
+   * @param {boolean} [logExecution] if true, executionLog[] be populated
    */
   constructor({
     studioApp,

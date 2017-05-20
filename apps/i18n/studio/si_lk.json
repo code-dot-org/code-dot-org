@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "ඔබට තව Mouse Droids ලා 20ක් අවශ්‍යයි. \"when get Mouse Droid\" සිදුවීම ඇතුලත ඇති \"add a Mouse Droid\" විධානය භාවිත කර 2ක් හෝ වැඩි ගණනක් එකතු කර ගත හැකියි.",
   "failedMultiplyCharactersTimeoutGotSome": "සුභපැතුම්, ඔබ Mouse Droids සැකසීමේ කේතයන් සාර්ථකවඑකත් කර ඇත. ඔබට නැවත උත්සහ කර Mouse Droids 20ක් ලබා ගැනීමට හෝ ඊළග ප්‍රේහෙලිකවට යා හැකිය. ඔවුන්ගෙන් වැඩි ප්‍රමාණයක් භාවිතා කර මෙය පහසුවෙන් කිරීමට උත්සහ කරන්න!(වේගයෙන් යාමට යතුරු පුවරුවේ (හෝ තිරයේ) ඇති යතුරු ඔබගෙන සිටින්න.)",
   "failedChangeSettingTimeout": " Rebel Pilot ලා තුන්දෙනෙක් ලබාගෙන එහාට වෙන්න.",
-  "failedChangeSettingSettings": "Game ඔබ ම කරන්න. ඔබට සිද්ධ වෙනවා ඔබගේ droid ව සහ droid එකේ වේගය වෙනස් කරන්න, මෙම puzzle එක සමත් වෙන්න."
+  "failedChangeSettingSettings": "Game ඔබ ම කරන්න. ඔබට සිද්ධ වෙනවා ඔබගේ droid ව සහ droid එකේ වේගය වෙනස් කරන්න, මෙම puzzle එක සමත් වෙන්න.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }
