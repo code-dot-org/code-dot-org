@@ -18,26 +18,26 @@ module.exports = {
     freePlay: false,
     disable_variable_editing: false,
     toolbox: createToolbox(
+      category('Agent',
+        craftBlock('move') +
+        craftBlock('inspect') +
+        craftBlock('place') +
+        craftBlock('turn') +
+        craftBlock('till') +
+        craftBlock('destroy') +
+        craftBlock('collect') +
+        craftBlock('drop') +
+        craftBlock('dropall') +
+        craftBlock('detect') +
+        craftBlock('inspect') +
+        craftBlock('inspectdata') +
+        craftBlock('detectredstone') +
+        craftBlock('getitemdetail') +
+        craftBlock('getitemspace') +
+        craftBlock('getitemcount') +
+        craftBlock('transfer') +
+        craftBlock('tptoplayer'))+
       category('Blocks',
-        category('Agent',
-          craftBlock('move') +
-          craftBlock('inspect') +
-          craftBlock('place') +
-          craftBlock('turn') +
-          craftBlock('till') +
-          craftBlock('destroy') +
-          craftBlock('collect') +
-          craftBlock('drop') +
-          craftBlock('dropall') +
-          craftBlock('detect') +
-          craftBlock('inspect') +
-          craftBlock('inspectdata') +
-          craftBlock('detectredstone') +
-          craftBlock('getitemdetail') +
-          craftBlock('getitemspace') +
-          craftBlock('getitemcount') +
-          craftBlock('transfer') +
-          craftBlock('tptoplayer')) +
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
         craftBlock('fill') +
