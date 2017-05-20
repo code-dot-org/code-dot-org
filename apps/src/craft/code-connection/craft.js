@@ -50,9 +50,7 @@ function getItemName(input) {
   return input;
 }
 
-function executeUserCode() {
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-  const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+export const executeUserCode = function (client, code) {
   let interpreter;
 
   /**
@@ -196,7 +194,7 @@ function executeUserCode() {
     result: true,
     testResult: TestResults.ALL_PASS
   });
-}
+};
 
 export default class Craft {
   /**
@@ -295,7 +293,9 @@ export default class Craft {
         Blockly.mainBlockSpace.traceOn(true);
         studioApp().attempts++;
 
-        executeUserCode();
+        const codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+        const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+        executeUserCode(client, code);
       } else {
         Craft.showConnectToCodeConnectionPopup();
       }
