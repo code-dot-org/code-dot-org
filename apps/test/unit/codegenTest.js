@@ -359,9 +359,9 @@ describe("codegen", function () {
     });
 
     it("evaluates a string of code, prepopulating the scope with whatever is in options", () => {
-      expect(codegen.evalWith('add(1,2)', options)).to.be.undefined;
+      codegen.evalWith('add(1,2)', options);
       expect(options.add).to.have.been.calledWith(1,2);
-      expect(codegen.evalWith('add(a,2)', options)).to.be.undefined;
+      codegen.evalWith('add(a,2)', options);
       expect(options.add).to.have.been.calledWith(3,2);
     });
 
