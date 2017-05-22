@@ -35,7 +35,7 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
   def index
     if request.cookies['pm'] == 'new_header'
-      redirect_to '/home'
+      redirect_to '/courses'
     else
       init_homepage
     end

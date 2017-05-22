@@ -1,7 +1,7 @@
 
 :ruby
   teacher_entries = [
-    { title: "Home", url: "#{studio_url_base}" },
+    { title: "Home", url: "#{studio_url_base}/home" },
     { title: "Courses", url: "#{studio_url_base}/courses" },
     { title: "Project Gallery", url: "#{studio_url_base}/projects/public" },
     { title: "Sections", url: "#{code_org_url_base}/teacher-dashboard#/sections" },
@@ -9,7 +9,7 @@
   ].freeze
 
   student_entries = [
-    { title: "Home", url: "#{studio_url_base}" },
+    { title: "Home", url: "#{studio_url_base}/home" },
     { title: "Courses", url: "#{studio_url_base}/courses" },
     { title: "Project Gallery", url: "#{studio_url_base}/projects/public" }
   ]
@@ -46,7 +46,7 @@
 
   hamburger_class = "none"
 
-  if script_level
+  if level
     # The header is taken over by level-related UI, so we need the hamburger
     # to show whatever would show up in the header at desktop (and mobile) widths.
     if user_type == "teacher"
@@ -76,7 +76,7 @@
       # We want to show the pegasus options.  They're in the hamburger for desktop
       # if they didn't fit on the header, or they're just in it for mobile if they did.
       if user_type == "teacher" || user_type == "student"
-        show_pegasus_options = "show-desktop"
+        show_pegasus_options = "show-always"
       else
         show_pegasus_options = "show-mobile"
       end
@@ -84,7 +84,7 @@
   end
 
   # Do we show hamburger on all widths, only mobile, or not at all?
-  if show_teacher_options == "show-desktop" || show_student_options == "show-desktop" || show_pegasus_options == "show-desktop"
+  if show_teacher_options == "show-always" || show_student_options == "show-always" || show_pegasus_options == "show-always"
     hamburger_class = "show-always"
   elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
     hamburger_class = "show-mobile"
