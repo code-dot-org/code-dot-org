@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'rails/performance_test_help'
 
-# Test basic activity-processing performance
+# Benchmark performance of the `milestone` action with an anonymous user.
 class ActivitiesPerformanceTest < ActionDispatch::PerformanceTest
   self.profile_options = {
     runs: 10,
@@ -15,7 +15,7 @@ class ActivitiesPerformanceTest < ActionDispatch::PerformanceTest
     @script_level = Script.get_from_cache(Script::HOC_NAME).script_levels.first
     @milestone_params = {lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
 
-    # Do a warm-up post to profile the second post only.
+    # Do a warm-up post, to profile the second post only.
     post "/milestone/#{@user ? @user.id : 0}/#{@script_level.id}", params: @milestone_params
     Rails.logger.level = ActiveSupport::Logger::DEBUG
   end
@@ -25,6 +25,7 @@ class ActivitiesPerformanceTest < ActionDispatch::PerformanceTest
   end
 end
 
+# Benchmark performance of the `milestone` action with a logged-in user.
 class LoginActivitiesPerformanceTest < ActivitiesPerformanceTest
   setup do
     Rails.logger.level = ActiveSupport::Logger::INFO
