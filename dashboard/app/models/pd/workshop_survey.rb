@@ -101,7 +101,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     end
 
     # validate conditional required fields
-    if pd_enrollment.workshop.facilitators.any?
+    if pd_enrollment && pd_enrollment.workshop.facilitators.any?
       add_key_error(:who_facilitated) unless hash.key?(:who_facilitated)
     end
 
@@ -127,7 +127,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
 
     # if this is the first survey completed by this user, also require
     # demographics questions
-    if self.class.find_by_user(pd_enrollment.user).empty?
+    if pd_enrollment && self.class.find_by_user(pd_enrollment.user).empty?
       demographics_required_fields.each do |field|
         add_key_error(field) unless hash.key?(field)
       end
@@ -358,9 +358,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   def validate_options
     hash = sanitize_form_data_hash
 
-    facilitator_names = pd_enrollment.workshop.facilitators.map(&:name)
-
-    if hash[:who_facilitated]
+    if pd_enrollment && hash[:who_facilitated]
+      facilitator_names = pd_enrollment.workshop.facilitators.map(&:name)
       hash[:who_facilitated].each do |facilitator|
         add_key_error(:who_facilitated) unless facilitator_names.include? facilitator
       end
