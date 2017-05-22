@@ -560,7 +560,7 @@ var projects = module.exports = {
     }
   },
 
-  shouldSaveBeforeRemixing() {
+  canServerSideRemix() {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
     // project. See (Turtle|Studio).prepareForRemix().
