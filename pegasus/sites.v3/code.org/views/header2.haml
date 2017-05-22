@@ -20,13 +20,13 @@
             %img#logo{:src=>'/images/logo.png'}
         #headerlinks.desktop-feature
           - if user_type == "teacher"
-            %a.headerlink{:href=>CDO.studio_url("/")} Home
+            %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
             %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
             %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
             %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
           - elsif user_type == "student"
-            %a.headerlink{:href=>CDO.studio_url("/")} Home
+            %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
             %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
           - elsif request.language == "en"
