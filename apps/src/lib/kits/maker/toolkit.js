@@ -3,6 +3,7 @@
  * with maker and provide clean setup/cancel/reset patterns.
  */
 import {getStore} from '../../../redux';
+import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 import FakeBoard from './FakeBoard';
 import * as commands from './commands';
@@ -11,7 +12,6 @@ import MakerError, {ConnectionCanceledError, UnsupportedBrowserError} from './Ma
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33} from './util/browserChecks';
-/* global trackEvent */
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
