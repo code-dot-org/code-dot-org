@@ -22,19 +22,21 @@
           - if user_type == "teacher"
             %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
-            %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
+            %a.headerlink{:href=>CDO.studio_url("/projects")} Project Gallery
             %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
             %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
           - elsif user_type == "student"
             %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
-            %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
+            %a.headerlink{:href=>CDO.studio_url("/projects")} Project Gallery
           - elsif request.language == "en"
             %a.headerlink{:href=>"/student"} Learn
             %a.headerlink{:href=>"/educate"} Teach
             %a.headerlink{:href=>"/promote"} Stats
             %a.headerlink{:href=>"/help"} Help Us
             %a.headerlink{:href=>"/about"} About
+            %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
+
 
       #right
         #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
