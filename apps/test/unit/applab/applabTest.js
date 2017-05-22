@@ -1,6 +1,11 @@
 import $ from 'jquery';
 import sinon from 'sinon';
 import {assert, expect} from '../../util/configuredChai';
+import project from '@cdo/apps/code-studio/initApp/project';
+import i18n from '@cdo/apps/code-studio/i18n';
+import commonMsg from '@cdo/locale';
+
+
 var testUtils = require('../../util/testUtils');
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
@@ -600,6 +605,26 @@ describe("Applab.init()", () => {
       });
       expect(isDebuggerOpen(getStore().getState())).to.be.true;
     });
+  });
+});
+
+describe('The applab.makeFooterMenuItems ', () => {
+  beforeEach(() => {
+    sinon.stub(project, 'getUrl');
+    i18n.t.callsFake(function (txt) {return txt;});
+  });
+
+  afterEach(() => {
+    project.getUrl.restore();
+  });
+
+
+  it("returns How-It-Works item before Report-Abuse item", () => {
+    project.getUrl.returns('http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
+    expect(howItWorksIndex).to.be.below(reportAbuseIndex);
   });
 });
 
