@@ -14,11 +14,6 @@
     { title: "Project Gallery", url: "#{studio_url_base}/projects" }
   ]
 
-  signed_out_entries = [
-    { title: "Project Gallery", url: "#{studio_url_base}/projects/public" }
-  ]
-
-
   educate_entries = [
     { title: "Educator Overview", url: "#{code_org_url_base}/educate" },
     { title: "Elementary School", url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
@@ -48,7 +43,6 @@
   show_teacher_options = "hide-always"
   show_student_options = "hide-always"
   show_pegasus_options = "hide-always"
-  show_signed_out_options = "hide-always"
 
   hamburger_class = "none"
 
@@ -59,8 +53,6 @@
       show_teacher_options = "show-always"
     elsif user_type == "student"
       show_student_options = "show-always"
-    else
-      show_signed_out_options = "show-always"
     end
 
     # Regardless of user type, if they are English, then they also need the pegasus
@@ -78,8 +70,6 @@
       show_teacher_options = "show-mobile"
     elsif user_type == "student"
       show_student_options = "show-mobile"
-    else
-      show_signed_out_options = "show-mobile"
     end
 
     if language == "en"
@@ -113,10 +103,6 @@
       - student_entries.each do |entry|
         %li{class: show_student_options}
           %a{href: entry[:url]}= entry[:title]
-    -else
-      - signed_out_entries.each do |entry|
-        %li{class: show_signed_out_options}
-          %a{href: entry[:url]}= entry[:title]
 
     %li{class: show_pegasus_options}
       %a{href: "#{code_org_url_base}/student"} Learn
@@ -125,6 +111,12 @@
         Teach
         %i#educate-down{class: "fa fa-caret-down"}
         %i#educate-up{class: "fa fa-caret-up"}
+
+    - if show_gallery
+      - unless ["student", "teacher"].include? user_type
+        %li{class: show_pegasus_options}
+          %a{href: "#{studio_url_base}/projects"} Project Gallery
+
     .educate-nav.hide-educate{class: show_pegasus_options}
       - educate_entries.each do |entry|
         %li

@@ -1,7 +1,7 @@
-/* global trackEvent */
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import trackEvent from '../../util/trackEvent';
 
 // TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
 
