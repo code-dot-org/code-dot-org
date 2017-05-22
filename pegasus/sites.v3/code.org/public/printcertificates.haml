@@ -5,13 +5,17 @@ allow_post: true
 theme: none
 ---
 
--if ! request.params['course'].nil? && ! request.params['course'].empty?
-  -course = request.params['course']
+-# The correct param here is "script" but we want to support lingering usages of the
+  legacy param script as well
+-if ! request.params['script'].nil? && ! request.params['script'].empty?
+  -script = request.params['script']
+-elsif ! request.params['course'].nil? && ! request.params['course'].empty?
+  -script = request.params['course']
 -else
-  -course = ScriptConstants::HOC_NAME
+  -script = ScriptConstants::HOC_NAME
 
 %div.hide-print
-  -case course
+  -case script
     -when ScriptConstants::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
     -when ScriptConstants::HOC_NAME
@@ -68,6 +72,6 @@ theme: none
       .page-break
     -name.chomp!
     -encoded = Base64.urlsafe_encode64(name)
-    %img{:src=>"/api/hour/certificate64/#{course}/#{encoded}.jpg", :width=>"100%"}
+    %img{:src=>"/api/hour/certificate64/#{script}/#{encoded}.jpg", :width=>"100%"}
     -count += 1
-  -slog(tag: 'print_certificates', course: course, count: count)
+  -slog(tag: 'print_certificates', course: script, count: count)

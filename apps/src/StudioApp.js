@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, droplet, addToHome */
+/* global Blockly, droplet, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -7,6 +7,7 @@ import {EventEmitter} from 'events';
 import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
+import trackEvent from './util/trackEvent';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
