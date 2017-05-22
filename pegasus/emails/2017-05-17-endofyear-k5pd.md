@@ -26,7 +26,7 @@ Ten thousand passionate technologists worldwide are eager to share their love of
 
 ### Please help spread the word about Code.org workshops
 
-If you enjoyed your [Code.org](https://code.org/professional-development-workshopsworkshop) experience, forward this email to a teacher today, and urge them to [take a one-day workshop this summer](https://code.org/professional-development-workshops). Our workshops are open to any K-5 teacher - no computer background needed. Teachers can integrate computer science once a week in their classroom with our 20-hour courses for beginners. They’ll learn how to introduce computer science basics in a format that's fun and accessible to the youngest learners and receive all the supplies they need to teach!
+If you enjoyed your Code.org experience, forward this email to a teacher today, and urge them to [take a one-day workshop this summer](https://code.org/professional-development-workshops). Our workshops are open to any K-5 teacher - no computer background needed. Teachers can integrate computer science once a week in their classroom with our 20-hour courses for beginners. They’ll learn how to introduce computer science basics in a format that's fun and accessible to the youngest learners and receive all the supplies they need to teach!
 
 Computer science is key to opening so many doors for students in today’s world, and this movement is just getting started, thanks to you! Half a million passionate teachers like you have already [signed up on Code.org](https://code.org/) to make sure students have every opportunity to succeed. Take another step to grow K-12 computer science today!
 
