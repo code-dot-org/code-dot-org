@@ -99,7 +99,7 @@
 
 - if show_header2
   - if request.path == "/home" || request.path == "/courses"
-    %img#header-banner{src: "/shared/images/banners/banner-test3.png"}
+    #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.png")'}
 
 - if script_level
   - view_as = @user || current_user
