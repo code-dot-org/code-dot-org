@@ -560,7 +560,7 @@ var projects = module.exports = {
     }
   },
 
-  canServerSideRemix() {
+  shouldSaveBeforeRemixing() {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
     // project. See (Turtle|Studio).prepareForRemix().
@@ -856,8 +856,10 @@ var projects = module.exports = {
       location.href = url;
     }
     // If the user is the owner, save before remixing on the server.
-    if (current.isOwner) {
+    if (current.isOwner && projects.shouldSaveBeforeRemixing()) {
       projects.save(redirectToRemix, false, true);
+    } else if (current.isOwner) {
+      this.sourceHandler.prepareForRemix().then(redirectToRemix);
     } else {
       redirectToRemix();
     }
