@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
+import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
@@ -112,8 +113,8 @@ describe('Circuit Playground Components', () => {
               .then(({colorLeds}) => led = colorLeds[pin]);
           });
 
-          it('creates a five.Led.RGB', () => {
-            expect(led).to.be.an.instanceOf(five.Led.RGB);
+          it('creates a NeoPixel', () => {
+            expect(led).to.be.an.instanceOf(NeoPixel);
           });
 
           it('bound to the board controller', () => {
@@ -122,126 +123,6 @@ describe('Circuit Playground Components', () => {
 
           it(`on pin ${pin}`, () => {
             expect(led.pin).to.equal(pin);
-          });
-        });
-      });
-
-      // Note: The Mozilla color value documentation was very
-      // helpful when writing these tests:
-      // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
-      describe('that each accept color formats', () => {
-        let led;
-        beforeEach(() => {
-          return createCircuitPlaygroundComponents(board)
-            .then(({colorLeds}) => led = colorLeds[0]);
-        });
-
-        it('hexadecimal color "#306090"', () => {
-          led.color('#306090');
-          expect(led.color()).to.deep.equal({
-            red: 0x30,
-            green: 0x60,
-            blue: 0x90,
-          });
-        });
-
-        it('CSS1 color keywords "lime"', () => {
-          led.color('lime');
-          expect(led.color()).to.deep.equal({
-            red: 0x00,
-            green: 0xff,
-            blue: 0x00,
-          });
-        });
-
-        it('CSS2 color keywords "orange"', () => {
-          led.color('orange');
-          expect(led.color()).to.deep.equal({
-            red: 0xff,
-            green: 0xa5,
-            blue: 0x00,
-          });
-        });
-
-        it('CSS3 color keywords "chocolate"', () => {
-          led.color('chocolate');
-          expect(led.color()).to.deep.equal({
-            red: 0xd2,
-            green: 0x69,
-            blue: 0x1e,
-          });
-        });
-
-        it('CSS4 color keywords "rebeccapurple"', () => {
-          // See: https://codepen.io/trezy/post/honoring-a-great-man
-          led.color('rebeccapurple');
-          expect(led.color()).to.deep.equal({
-            red: 0x66,
-            green: 0x33,
-            blue: 0x99,
-          });
-        });
-
-        it('CSS functional notation "rgb(30, 60, 90)"', () => {
-          led.color('rgb(30, 60, 90)');
-          expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
-          });
-        });
-
-        it('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
-          led.color('rgba(30, 60, 90, 0.5)');
-          expect(led.color()).to.deep.equal({
-            red: 15,
-            green: 30,
-            blue: 45,
-          });
-        });
-
-        it('CSS4 functional notation "rgb(30, 60, 90, 0.5)"', () => {
-          led.color('rgb(30, 60, 90, 0.5)');
-          expect(led.color()).to.deep.equal({
-            red: 15,
-            green: 30,
-            blue: 45,
-          });
-        });
-
-        it('CSS4 functional notation "rgba(30, 60, 90)"', () => {
-          led.color('rgba(30, 60, 90)');
-          expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
-          });
-        });
-
-        it('Array of color values [30, 60, 90]', () => {
-          led.color([30, 60, 90]);
-          expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
-          });
-        });
-
-        it('Color object {red: 30, green: 60, blue: 90}', () => {
-          led.color({red: 30, green: 60, blue: 90});
-          expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
-          });
-        });
-
-        it('Separate color arguments (30, 60, 90)', () => {
-          led.color(30, 60, 90);
-          expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
           });
         });
       });
