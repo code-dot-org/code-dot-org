@@ -28,7 +28,8 @@ end
 class LoginActivitiesPerformanceTest < ActivitiesPerformanceTest
   setup do
     Rails.logger.level = ActiveSupport::Logger::INFO
-    sign_in create(:user)
+    @user = create(:user)
+    sign_in @user
     # Do a warm-up post to profile the second post only.
     post "/milestone/#{@user ? @user.id : 0}/#{@script_level.id}", params: @milestone_params
     Rails.logger.level = ActiveSupport::Logger::DEBUG
