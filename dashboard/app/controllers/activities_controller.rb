@@ -1,15 +1,17 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 
-class ActivitiesController < ApplicationController
-  include LevelsHelper
+class ActivitiesController < ActionController::Metal
+  include ActionController::UrlFor
+  include Rails.application.routes.url_helpers
 
-  # The comment below disables the default request forgery protection from
-  # application controller. We don't do request forgery protection on the
-  # milestone action to permit the aggressive public caching we plan to do
-  # for some script level pages.
-  protect_from_forgery except: :milestone
-  skip_before_action :verify_authenticity_token
+  include ActionController::Cookies
+  include AbstractController::Rendering
+  include ActionController::Renderers::All
+
+  include Devise::Controllers::Helpers
+
+  include MilestoneHelper
 
   MAX_INT_MILESTONE = 2_147_483_647
 
@@ -152,8 +154,8 @@ class ActivitiesController < ApplicationController
   end
 
   def track_progress_for_user
-    authorize! :create, Activity
-    authorize! :create, UserLevel
+    # authorize! :create, Activity
+    # authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
     solved = ('true' == params[:result])
@@ -253,5 +255,17 @@ class ActivitiesController < ApplicationController
     log_string += "\t#{request.user_agent}"
 
     milestone_logger.info log_string
+  end
+
+  # Returns a client state object for the current session and cookies.
+  def client_state
+    @client_state ||= ClientState.new(session, cookies)
+  end
+
+  # @return [Array of Integers] an array of user IDs of users paired with the
+  #   current user.
+  def pairing_user_ids
+    # TODO(asher): Determine whether we need to guard against it being nil.
+    session[:pairings].nil? ? [] : session[:pairings]
   end
 end
