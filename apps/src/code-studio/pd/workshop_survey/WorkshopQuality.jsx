@@ -104,31 +104,37 @@ export default class WorkshopQuality extends FormComponent {
             label: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?',
             name: 'howClearlyPresented',
             type: 'radio',
+            required: true,
             values: this.props.options.howClearlyPresented
           }, {
             label: 'How interesting did your facilitator make what you learned in the workshop?',
             name: 'howInteresting',
             type: 'radio',
+            required: true,
             values: this.props.options.howInteresting
           }, {
             label: 'How often did your facilitator give you feedback that helped you learn?',
             name: 'howOftenGivenFeedback',
             type: 'radio',
+            required: true,
             values: this.props.options.howOftenGivenFeedback
           }, {
             label: 'When you needed extra help, how good was your facilitator at giving you that help?',
             name: 'helpQuality',
             type: 'radio',
+            required: true,
             values: this.props.options.helpQuality
           }, {
             label: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?',
             name: 'howComfortableAskingQuestions',
             type: 'radio',
+            required: true,
             values: this.props.options.howComfortableAskingQuestions
           }, {
             label: "How often did your facilitator teach you things that you didn't know before taking this workshop?",
             name: 'howOftenTaughtNewThings',
             type: 'radio',
+            required: true,
             values: this.props.options.howOftenTaughtNewThings
           }]}
 
@@ -136,10 +142,12 @@ export default class WorkshopQuality extends FormComponent {
             label: "What were two things {value} did well?",
             name: 'thingsFacilitatorDidWell',
             type: 'free_response',
+            required: true
           }, {
             label: "What were two things {value} could do better?",
             name: 'thingsFacilitatorCouldImprove',
             type: 'free_response',
+            required: true
           }]}
         />
       </FormGroup>

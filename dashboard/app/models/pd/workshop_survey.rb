@@ -67,7 +67,9 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :how_often_given_feedback,
       :help_quality,
       :how_comfortable_asking_questions,
-      :how_often_taught_new_things
+      :how_often_taught_new_things,
+      :things_facilitator_did_well,
+      :things_facilitator_could_improve,
     ].freeze
   end
 
