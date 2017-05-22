@@ -700,19 +700,14 @@ StudioApp.prototype.handleSharing_ = function (options) {
 export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
-      text: i18n.t('footer.try_hour_of_code'),
-      link: 'https://code.org/learn',
-      newWindow: true
+      text: i18n.t('footer.how_it_works'),
+      link: project.getProjectUrl('/edit'),
+      newWindow: false
     },
     {
       text: i18n.t('footer.report_abuse'),
       link: "/report_abuse",
       newWindow: true
-    },
-    {
-      text: i18n.t('footer.how_it_works'),
-      link: project.getProjectUrl('/edit'),
-      newWindow: false
     },
     {
       text: i18n.t('footer.copyright'),

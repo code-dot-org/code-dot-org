@@ -160,20 +160,8 @@ function shouldRenderFooter() {
   return studioApp().share;
 }
 
-function renderFooterInSharedGame() {
-  const divApplab = document.getElementById('divApplab');
-  const footerDiv = document.createElement('div');
-  footerDiv.setAttribute('id', 'footerDiv');
-  divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
-
-  const isIframeEmbed = getStore().getState().pageConstants.isIframeEmbed;
-
-  const menuItems = [
-    {
-      text: commonMsg.reportAbuse(),
-      link: '/report_abuse',
-      newWindow: true
-    },
+Applab.makeFooterMenuItems = function (isIframeEmbed) {
+  const footerMenuItems = [
     isIframeEmbed && !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
@@ -182,6 +170,11 @@ function renderFooterInSharedGame() {
       text: commonMsg.openWorkspace(),
       link: project.getProjectUrl('/view'),
       newWindow: true,
+    },
+    {
+      text: commonMsg.reportAbuse(),
+      link: '/report_abuse',
+      newWindow: true
     },
     {
       text: commonMsg.copyright(),
@@ -194,6 +187,19 @@ function renderFooterInSharedGame() {
       newWindow: true
     }
   ].filter(item => item);
+  return footerMenuItems;
+};
+
+
+function renderFooterInSharedGame() {
+  const divApplab = document.getElementById('divApplab');
+  const footerDiv = document.createElement('div');
+  footerDiv.setAttribute('id', 'footerDiv');
+  divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
+
+  const isIframeEmbed = getStore().getState().pageConstants.isIframeEmbed;
+
+  const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
   ReactDOM.render(
     <SmallFooter
