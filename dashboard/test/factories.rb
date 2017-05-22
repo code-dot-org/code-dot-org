@@ -724,6 +724,55 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_workshop_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        "willTeach": "Yes",
+        "reasonForAttending": [
+          "Personal interest"
+        ],
+        "howHeard": [
+          "Email from Code.org"
+        ],
+        "receivedClearCommunication": "Strongly agree",
+        "schoolHasTech": "Yes",
+        "venueFeedback": "feedback about venue",
+        "howMuchLearned": "A tremendous amount",
+        "howMotivating": "Extremely motivating",
+        "howMuchParticipated": "A tremendous amount",
+        "howOftenTalkAboutIdeasOutside": "Almost always",
+        "howOftenLostTrackOfTime": "Almost always",
+        "howExcitedBefore": "Extremely excited",
+        "overallHowInterested": "Extremely interested",
+        "morePreparedThanBefore": "Strongly agree",
+        "knowWhereToGoForHelp": "Strongly agree",
+        "suitableForMyExperience": "Strongly agree",
+        "wouldRecommend": "Strongly agree",
+        "bestPdEver": "Strongly agree",
+        "partOfCommunity": "Strongly agree",
+        "thingsYouLiked": "liked most",
+        "thingsYouWouldChange": "would change",
+        "anythingElse": "like to tell",
+        "willingToTalk": "No",
+        "gender": "Male",
+        "race": [
+          "White"
+        ],
+        "age": "21 - 25",
+        "yearsTaught": "2",
+        "gradesTaught": [
+          "pre-K"
+        ],
+        "gradesPlanningToTeach": [
+          "pre-K"
+        ],
+        "subjectsTaught": [
+          "English\/Language Arts"
+        ]
+      }.stringify_keys
+    end
+  end
+
   factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
     workshop_name 'a workshop'
     course 'csd'
