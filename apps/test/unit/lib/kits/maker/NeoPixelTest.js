@@ -2,62 +2,32 @@
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import NeoPixel, {PASS_THRU_PROPERTIES, PASS_THRU_METHODS} from '@cdo/apps/lib/kits/maker/NeoPixel';
+import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
 
 describe('NeoPixel', function () {
-  beforeEach(function () {
+  beforeEach(() => {
     // We stub five.Led.RGB's superclass to avoid calling any johnny-five
     // logic that requires a board.
     sinon.stub(five.Board, 'Component');
   });
 
-  afterEach(function () {
+  afterEach(() => {
     five.Board.Component.restore();
   });
 
-  // Pass-through properties - just check that they exist.
-  PASS_THRU_PROPERTIES.forEach(prop => {
-    describe(prop, () => {
-      it('property exists', () => {
-        const led = new NeoPixel({
-          controller: makeStubController()
-        });
-        expect(led).to.have.ownProperty(prop);
-        expect(led[prop]).to.equal(led.rgb_[prop]);
-      });
+  it('is a five.Led.RGB', () => {
+    const led = new NeoPixel({
+      controller: makeStubController()
     });
-  });
-
-  // Pass-through methods - just check that they delegate.
-  PASS_THRU_METHODS.forEach(fnName => {
-    describe(`${fnName}()`, () => {
-      let led, spy;
-
-      beforeEach(() => {
-        spy = sinon.stub(five.Led.RGB.prototype, fnName);
-        led = new NeoPixel({
-          controller: makeStubController()
-        });
-      });
-
-      afterEach(() => {
-        five.Led.RGB.prototype[fnName].restore();
-      });
-
-      it(`delegates method to RGB controller`, () => {
-        const args = [Math.random(), Math.random(), Math.random()];
-        led[fnName](...args);
-        expect(spy).to.have.been.calledOnce.calledWith(...args);
-      });
-    });
+    expect(led).to.be.an.instanceOf(five.Led.RGB);
   });
 
   describe('on()', () => {
     let led;
 
     beforeEach(() => {
-      sinon.stub(five.Led.RGB.prototype, 'on');
-      sinon.stub(five.Led.RGB.prototype, 'stop');
+      sinon.spy(five.Led.RGB.prototype, 'on');
+      sinon.spy(five.Led.RGB.prototype, 'stop');
       led = new NeoPixel({
         controller: makeStubController()
       });
@@ -69,11 +39,13 @@ describe('NeoPixel', function () {
     });
 
     it(`calls the parent on() implementation`, () => {
+      five.Led.RGB.prototype.on.reset();
       led.on();
       expect(five.Led.RGB.prototype.on).to.have.been.calledOnce;
     });
 
     it(`calls stop() on the led to end any animations`, () => {
+      five.Led.RGB.prototype.stop.reset();
       led.on();
       expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
     });
@@ -83,8 +55,8 @@ describe('NeoPixel', function () {
     let led;
 
     beforeEach(() => {
-      sinon.stub(five.Led.RGB.prototype, 'off');
-      sinon.stub(five.Led.RGB.prototype, 'stop');
+      sinon.spy(five.Led.RGB.prototype, 'off');
+      sinon.spy(five.Led.RGB.prototype, 'stop');
       led = new NeoPixel({
         controller: makeStubController()
       });
@@ -95,14 +67,53 @@ describe('NeoPixel', function () {
       five.Led.RGB.prototype.off.restore();
     });
 
+    it(`calls the parent off() implementation`, () => {
+      five.Led.RGB.prototype.off.reset();
+      led.off();
+      expect(five.Led.RGB.prototype.off).to.have.been.called;
+    });
+
     it(`calls stop() on the led to end any animations`, () => {
+      five.Led.RGB.prototype.stop.reset();
       led.off();
       expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
     });
+  });
 
-    it(`calls the parent off() implementation`, () => {
-      led.off();
-      expect(five.Led.RGB.prototype.off).to.have.been.called;
+  describe('blink()', () => {
+    let led, clock;
+
+    beforeEach(() => {
+      clock = sinon.useFakeTimers();
+      led = new NeoPixel({
+        controller: makeStubController()
+      });
+      sinon.spy(led, 'stop');
+      sinon.spy(led, 'toggle');
+    });
+
+    afterEach(() => {
+      led.toggle.restore();
+      led.stop.restore();
+      clock.restore();
+    });
+
+    it(`calls stop() only once when blink starts`, () => {
+      led.stop.reset();
+      led.blink(100);
+      expect(led.stop).to.have.been.calledOnce;
+
+      // Pass some time and make sure it doesn't happen again
+      led.stop.reset();
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledOnce;
+      expect(led.stop).not.to.have.been.called;
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledTwice;
+      expect(led.stop).not.to.have.been.called;
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledThrice;
+      expect(led.stop).not.to.have.been.called;
     });
   });
 
