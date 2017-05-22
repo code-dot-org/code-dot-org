@@ -192,6 +192,7 @@ function loadLevel() {
   )));
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
+  Studio.allowSpritesOutsidePlayspace = level.allowSpritesOutsidePlayspace;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowExecutionFactor = skin.slowExecutionFactor || 1;
   Studio.gridAlignedExtraPauseSteps = skin.gridAlignedExtraPauseSteps || 0;
@@ -687,7 +688,7 @@ var performQueuedMoves = function (i) {
   var nextPosition = getNextPosition(i, true);
   var newX, newY;
 
-  if (level.allowSpritesOutsidePlayspace) {
+  if (Studio.allowSpritesOutsidePlayspace) {
     newX = nextPosition.x;
     newY = nextPosition.y;
   } else {
@@ -1363,7 +1364,7 @@ function handleActorCollisionsWithCollidableList(
  * detected. executeCollision() is expected to be called later by the caller.
  */
 function handleEdgeCollisions(collidable, xPos, yPos, onCollided) {
-  for (var i = 0; i < EdgeClassNames.length && level.edgeCollisions; i++) {
+  for (var i = 0; i < EdgeClassNames.length && !Studio.allowSpritesOutsidePlayspace; i++) {
     var edgeXCenter, edgeYCenter;
     var edgeClass = EdgeClassNames[i];
     switch (edgeClass) {
@@ -1556,7 +1557,7 @@ function checkForItemCollisions() {
       }
     }
 
-    if (level.edgeCollisions) {
+    if (!Studio.allowSpritesOutsidePlayspace) {
       handleEdgeCollisions(
           item,
           next.x,
@@ -1726,14 +1727,6 @@ Studio.initSprites = function () {
 
     if (level.projectileCollisions) {
       blocks.enableProjectileCollisions(Blockly);
-    }
-
-    if (level.edgeCollisions) {
-      blocks.enableEdgeCollisions(Blockly);
-    }
-
-    if (level.allowSpritesOutsidePlayspace) {
-      blocks.enableSpritesOutsidePlayspace(Blockly);
     }
   }
 };
@@ -3890,6 +3883,10 @@ Studio.callCmd = function (cmd) {
       Studio.setMap(cmd.opts);
       Studio.trackedBehavior.hasSetMap = true;
       break;
+    case 'setAllowSpritesOutsidePlayspace':
+      studioApp().highlight(cmd.id);
+      Studio.allowSpritesOutsidePlayspace = cmd.opts.value;
+      break;
     case 'setSprite':
       studioApp().highlight(cmd.id);
       Studio.setSprite(cmd.opts);
@@ -5598,7 +5595,7 @@ Studio.moveSingle = function (opts) {
     Studio.throttledCollideSpriteWithWallFunctions[opts.spriteIndex]();
   }
 
-  if (!level.allowSpritesOutsidePlayspace &&
+  if (!Studio.allowSpritesOutsidePlayspace &&
       Studio.willSpriteLeavePlayspace(sprite, projectedX, projectedY)) {
     playspaceEdgeCollision = true;
   }

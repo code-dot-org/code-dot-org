@@ -73,7 +73,7 @@
                   %a.headerlink{:href=>CDO.code_org_url("/student")} Learn
                   %a.headerlink{:href=>CDO.code_org_url("/educate")} Teach
                   %a.headerlink{:href=>CDO.code_org_url("/promote")} Stats
-                  %a.headerlink{:href=>CDO.code_org_url("/help")} Help us
+                  %a.headerlink{:href=>CDO.code_org_url("/help")} Help Us
                   %a.headerlink{:href=>CDO.code_org_url("/about")} About
 
           .header_right
@@ -98,8 +98,8 @@
                 = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if show_header2
-  - if request.path == "/" || request.path == "/courses"
-    %img#header-banner{src: "/shared/images/banners/banner-test3.png"}
+  - if request.path == "/home" || request.path == "/courses"
+    #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.png")'}
 
 - if script_level
   - view_as = @user || current_user
