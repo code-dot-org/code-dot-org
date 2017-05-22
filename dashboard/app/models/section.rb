@@ -15,6 +15,7 @@
 #  stage_extras      :boolean          default(FALSE), not null
 #  section_type      :string(255)
 #  first_activity_at :datetime
+#  course_id         :integer
 #
 # Indexes
 #
