@@ -1,4 +1,3 @@
-/* global trackEvent */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -21,6 +20,7 @@ import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
+import trackEvent from '../../util/trackEvent';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
