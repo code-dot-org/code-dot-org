@@ -73,7 +73,7 @@ class Activity < ActiveRecord::Base
       when 'create'
         attributes = op['attributes']
         attributes[:updated_at] = Time.now
-        Activity.atomic_create!(attributes)
+        Activity.new(attributes).atomic_save!
       else
         raise "Unknown action #{op['action']} in #{async_json}"
     end
