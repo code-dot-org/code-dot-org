@@ -584,7 +584,7 @@ describe('Circuit Playground Components', () => {
 
     it('stops Led.RGB.blink()', () => {
       // Spy on 'toggle' which blink calls internally.
-      const spy = sinon.spy(components.colorLeds[0].rgb_, 'toggle');
+      const spy = sinon.spy(components.colorLeds[0], 'toggle');
 
       // Set up a blink behavior
       components.colorLeds[0].blink(50);
