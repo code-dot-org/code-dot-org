@@ -44,6 +44,6 @@ class FileBucket < BucketHelper
     # Save the dest_manifest in the destination channel
     create_or_replace(dest_channel, FileBucket::MANIFEST_FILENAME, dest_manifest.to_json)
 
-    result
+    dest_manifest
   end
 end
