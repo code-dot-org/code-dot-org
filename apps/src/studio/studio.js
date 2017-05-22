@@ -2161,7 +2161,8 @@ Studio.init = function (config) {
 };
 
 Studio.prepareForRemix = function () {
-  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+  if (!level.initializationBlocks &&
+      REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
         level[prop] === undefined ||
             level[prop] === group.defaultValues[prop]))) {
     // Do nothing if all the props match the defaults
@@ -2214,22 +2215,45 @@ Studio.prepareForRemix = function () {
   }
 
   if (level.initializationBlocks) {
-    parseElement(level.initializationBlocks).children.forEach(topBlock => {
-      if (topBlock.getAttribute('type') === 'when_run') {
+    const root = parseElement(level.initializationBlocks);
+    const topNodes = root.childNodes;
+    for (let i = topNodes.length - 1; i >= 0; i--) {
+      const topBlock = topNodes[i];
+      if (topBlock.getAttribute && topBlock.getAttribute('type') === 'when_run') {
         let lastBlock = topBlock;
-        while (topBlock.children.some(block => block.tagName === 'NEXT')) {
-          lastBlock = topBlock.children.find(block => block.tagName === 'NEXT').firstChild;
+        let firstBlock = null;
+        let foundNextBlock = true;
+        while (foundNextBlock) {
+          foundNextBlock = false;
+          for (let block of lastBlock.childNodes) {
+            if (block.tagName && block.tagName.toLowerCase() === 'next') {
+              for (let j = 0; j < block.childNodes.length; j++) {
+                const childBlock = block.childNodes[j];
+                if (childBlock.tagName && childBlock.tagName.toLowerCase() === 'block') {
+                  lastBlock = childBlock;
+                  break;
+                }
+              }
+              foundNextBlock = true;
+              if (firstBlock === null) {
+                firstBlock = lastBlock;
+              }
+              break;
+            }
+          }
         }
         if (lastBlock === topBlock) {
-          return;
+          continue;
         }
-        const lastNext = blocksDocument.createElement('next');
-        lastNext.appendChild(next);
-        next = topBlock.querySelector('next');
+        lastBlock.appendChild(next);
+        const newNext = blocksDocument.createElement('next');
+        newNext.appendChild(firstBlock);
+        next = newNext;
       } else {
-        blocksDom.appendchild(topBlock);
+        root.removeChild(topBlock);
+        blocksDom.appendChild(topBlock);
       }
-    });
+    }
   }
 
   whenRun.appendChild(next);
