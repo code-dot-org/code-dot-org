@@ -4,28 +4,28 @@ hideable_stages true
 student_detail_progress_view true
 
 stage 'Tech Setup - Your AP Digital Portfolio and Other Tools'
-named_level 'U6 AP Performance Task Tech Setup - Student Links'
+level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'U6 AP Performance Task Tech Setup - Student Links'
 
 stage 'Create PT Prep - Reviewing the Task'
-named_level 'U6 Create PT Review - Student Links'
+level 'U6 Create PT Review - Student Links', progression: 'U6 Create PT Review - Student Links'
 
 stage 'Create PT Prep - Making a Plan'
-named_level 'U6 Create PT - Make a Plan - Student Links'
+level 'U6 Create PT - Make a Plan - Student Links', progression: 'U6 Create PT - Make a Plan - Student Links'
 
 stage 'Create PT - Complete the Task'
-named_level 'U6 Create PT - Complete the Task - Student Links'
+level 'U6 Create PT - Complete the Task - Student Links', progression: 'U6 Create PT - Complete the Task - Student Links'
 
 stage 'Explore PT Prep - Reviewing the Task'
-named_level 'U6 Explore PT Review - Student Links'
+level 'U6 Explore PT Review - Student Links', progression: 'U6 Explore PT Review - Student Links'
 
 stage 'Explore PT - Making a Plan'
-named_level 'U6 Explore PT - Make a Plan - Student Links'
+level 'U6 Explore PT - Make a Plan - Student Links', progression: 'U6 Explore PT - Make a Plan - Student Links'
 
 stage 'Explore PT - Complete the Task'
-named_level 'U6 Explore PT - Complete the Task - Student Links'
+level 'U6 Explore PT - Complete the Task - Student Links', progression: 'U6 Explore PT - Complete the Task - Student Links'
 
 stage 'CSP Student Post-Course Survey'
 assessment 'CSP post-assessment survey'
 
 stage 'Participate in a longitudinal study!'
-named_level 'Click Here!'
+level 'Click Here!', progression: 'Click Here!'

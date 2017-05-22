@@ -98,7 +98,7 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
         [
           'Led',
           'Board',
-          'RGB',
+          'NeoPixel',
           'Button',
           'Switch',
           'Piezo',

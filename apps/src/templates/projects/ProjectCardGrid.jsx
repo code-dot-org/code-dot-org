@@ -48,6 +48,7 @@ const ProjectCardGrid = React.createClass({
         {(this.state.showAll) &&
           <div>
             <ProjectAppTypeArea
+              labKey="applab"
               labName={i18n.projectTypeApplab()}
               labViewMoreString={i18n.projectTypeApplabViewMore()}
               projectList={projectLists.applab}
@@ -57,7 +58,8 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
             />
             <ProjectAppTypeArea
-              labName={i18n.projectTypeGamelab()}
+              labKey="gamelab"
+              labName={i18n.projectTypeGamelabBeta()}
               labViewMoreString={i18n.projectTypeGamelabViewMore()}
               projectList={projectLists.gamelab}
               numProjectsToShow={numProjects}
@@ -66,6 +68,7 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
             />
             <ProjectAppTypeArea
+              labKey="artist"
               labName={i18n.projectTypeArtist()}
               labViewMoreString={i18n.projectTypeArtistViewMore()}
               projectList={projectLists.artist}
@@ -75,6 +78,7 @@ const ProjectCardGrid = React.createClass({
               isDetailView={false}
             />
             <ProjectAppTypeArea
+              labKey="playlab"
               labName={i18n.projectTypePlaylab()}
               labViewMoreString={i18n.projectTypePlaylabViewMore()}
               projectList={projectLists.playlab}
@@ -90,6 +94,7 @@ const ProjectCardGrid = React.createClass({
           <div>
             {this.state.showApp === 'applab' &&
               <ProjectAppTypeArea
+                labKey="applab"
                 labName={i18n.projectTypeAllProjectsApplab()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.applab}
@@ -101,7 +106,8 @@ const ProjectCardGrid = React.createClass({
             }
             {this.state.showApp === 'gamelab' &&
               <ProjectAppTypeArea
-                labName={i18n.projectTypeAllProjectsGamelab()}
+                labKey="gamelab"
+                labName={i18n.projectTypeAllProjectsGamelabBeta()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.gamelab}
                 numProjectsToShow={numProjects}
@@ -112,6 +118,7 @@ const ProjectCardGrid = React.createClass({
             }
             {this.state.showApp === 'artist' &&
               <ProjectAppTypeArea
+                labKey="artist"
                 labName={i18n.projectTypeAllProjectsArtist()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.artist}
@@ -123,6 +130,7 @@ const ProjectCardGrid = React.createClass({
             }
             {this.state.showApp === 'playlab' &&
               <ProjectAppTypeArea
+                labKey="playlab"
                 labName={i18n.projectTypeAllProjectsPlaylab()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.playlab}
