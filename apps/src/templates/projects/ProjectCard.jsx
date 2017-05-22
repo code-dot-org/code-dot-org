@@ -225,13 +225,13 @@ const ProjectCard = React.createClass({
     const { projectData } = this.props;
 
     const {type, channel, name} = this.props.projectData;
-    const url = `/projects/${type}/${channel}/view`;
+    const url = `/projects/${type}/${channel}`;
 
     return (
       <div>
         <div style={styles.card}>
           <div style={styles.thumbnail} >
-            <a href={url} style={{width: '100%'}}>
+            <a target="_blank" href={url} style={{width: '100%'}}>
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}
