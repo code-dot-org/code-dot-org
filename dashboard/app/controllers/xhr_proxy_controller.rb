@@ -26,6 +26,7 @@ class XhrProxyController < ApplicationController
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     accuweather.com
+    apex.oracle.com
     api.data.gov
     api.open-notify.org
     api.openweathermap.org
