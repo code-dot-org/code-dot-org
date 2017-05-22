@@ -201,9 +201,9 @@ Dashboard::Application.routes.draw do
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
-  post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
-  post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
-  post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
+  post '/milestone/:user_id/level/:level_id', to: ActivitiesController.action(:milestone), as: 'milestone_level'
+  post '/milestone/:user_id/:script_level_id', to: ActivitiesController.action(:milestone), as: 'milestone'
+  post '/milestone/:user_id/:script_level_id/:level_id', to: ActivitiesController.action(:milestone), as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
