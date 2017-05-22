@@ -5,6 +5,7 @@ require 'dynamic_config/gatekeeper'
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
+  include MilestoneHelper
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
