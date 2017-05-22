@@ -6,7 +6,7 @@ class Pd::SessionAttendanceController < ApplicationController
 
   # GET pd/attend/:session_code
   def attend
-    if @session.workshop.organizer == current_user || @session.workshop.facilitators.exists?(current_user.id)
+    if @session.workshop.organizer_or_facilitator? current_user
       render_own_workshop
       return
     elsif @session.too_soon_for_attendance?
