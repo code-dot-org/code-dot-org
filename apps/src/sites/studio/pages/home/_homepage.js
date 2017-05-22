@@ -25,7 +25,7 @@ function showHomepage() {
           ]}
           courses={homepageData.courses}
           sections={homepageData.sections}
-          codeOrgUrlPrefix={homepageData.codeOrgUrlPrefix}
+          codeOrgUrlPrefix={homepageData.codeorgurlprefix}
         />
       )}
       {!isTeacher && (
