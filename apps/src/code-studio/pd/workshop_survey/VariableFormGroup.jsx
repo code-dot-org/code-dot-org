@@ -168,6 +168,17 @@ const VariableFormGroup = React.createClass({
     return {selected};
   },
 
+  componentWillMount() {
+    if (this.hasSingleSourceValue() && this.props.onChange) {
+      // if we only have a single source value, we want to default to having it
+      // already selected, so manually trigger an on change if we have one so
+      // our parent component will also think it's selected
+      this.props.onChange({
+        [this.props.sourceName]: this.state.selected
+      });
+    }
+  },
+
   hasNoSourceValues() {
     return this.props.sourceValues.length === 0;
   },
