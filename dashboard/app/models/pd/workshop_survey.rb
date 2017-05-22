@@ -312,7 +312,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
 
     if hash[:who_facilitated]
       hash[:who_facilitated].each do |facilitator|
-        add_key_error(key) unless facilitator_names.include? facilitator
+        add_key_error(:who_facilitated) unless facilitator_names.include? facilitator
       end
     end
 
