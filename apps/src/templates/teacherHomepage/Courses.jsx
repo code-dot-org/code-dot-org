@@ -27,8 +27,9 @@ const Courses = React.createClass({
     courses: shapes.courses,
     isEnglish: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
-    linesCount: React.PropTypes.number.isRequired,
-    studentsCount: React.PropTypes.number.isRequired
+    linesCount: React.PropTypes.string.isRequired,
+    studentsCount: React.PropTypes.string.isRequired,
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired
   },
 
   componentDidMount() {
@@ -42,7 +43,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix } = this.props;
 
     return (
       <div>
@@ -70,7 +71,7 @@ const Courses = React.createClass({
             </div>
             <ProtectedStatefulDiv ref="courseExplorer"/>
 
-            <TeacherCourses/>
+            <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
             <div style={styles.heading}>
               {i18n.toolExplorerHeading()}

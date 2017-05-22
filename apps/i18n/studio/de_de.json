@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "Du musst insgesamt 20 Maus-Droiden fangen. Benutze den Befehl \"Maus-Droid hinzufügen\" im Ereignis \"Wenn Maus-Droid erreicht\", um zwei oder mehr Maus-Droiden erscheinen zu lassen, immer wenn Du einen erreichst.",
   "failedMultiplyCharactersTimeoutGotSome": "Glückwunsch, du hast mit deinem Code Maus-Droiden hinzugefügt. Gehe zur nächsten Aufgabe, oder versuche noch mal, 20 von ihnen zu fangen. Je mehr du hinzufügst, desto einfacher wird es! (Drücke und halte die Pfeiltasten auf deinem Keyboard (oder Bildschirm)gedrückt, um dich schneller zu bewegen.)",
   "failedChangeSettingTimeout": "Erreiche drei Rebellenpiloten, um weiter zu kommen.",
-  "failedChangeSettingSettings": "Mache es zu deinem Spiel. Um dieses Level zu schaffen, musst Du dein Droide ändern und seine Geschwindigkeit einstellen."
+  "failedChangeSettingSettings": "Mache es zu deinem Spiel. Um dieses Level zu schaffen, musst Du dein Droide ändern und seine Geschwindigkeit einstellen.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }
