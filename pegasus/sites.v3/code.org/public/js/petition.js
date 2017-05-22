@@ -47,6 +47,13 @@ Petition.prototype.signPetition = function () {
   this.showEmailError(false);
   this.showNoError(true);
 
+  // Do not send the email or name server-side for under thirteen users for
+  // privacy reasons.
+  if (parseInt(document.getElementById('age').value) < 13) {
+    document.getElementById('email').value = 'anonymous@code.org';
+    document.getElementById('name').value = '';
+  }
+
   $.ajax({
     url: "/forms/Petition",
     type: "post",
