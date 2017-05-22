@@ -114,7 +114,7 @@ ln -fs ${SHUTDOWN_SH} /etc/rc6.d/K04chef_shutdown
 if [ "${LOCAL_MODE}" = "1" ]; then
   mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
   # Install branch-specific Chef cookbooks from s3.
-  REPO_COOKBOOK_URL=s3://${S3_BUCKET}/chef/${BRANCH}.tar.gz
+  REPO_COOKBOOK_URL=s3://${S3_BUCKET}/adhoc/chef/${BRANCH}.tar.gz
   aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH}
 
   # Boilerplate `adhoc` environment for local Chef.
