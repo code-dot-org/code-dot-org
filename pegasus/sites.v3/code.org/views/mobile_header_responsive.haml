@@ -12,4 +12,4 @@
           %img#logo{:src=>'/images/logo.png'}
 
       - if request.language == "en"
-        = view :hamburger, user_type: user_type, level: nil, language: request.language, code_org_url_base: CDO.code_org_url, studio_url_base: CDO.studio_url
+        = view :hamburger, user_type: user_type, level: nil, language: request.language, code_org_url_base: CDO.code_org_url, studio_url_base: CDO.studio_url, show_gallery: false
