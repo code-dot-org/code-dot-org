@@ -1,5 +1,6 @@
 /** @file Maker Board setup checker */
 import React, {Component, PropTypes} from 'react';
+import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
 import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
 import SetupStep, {
@@ -10,7 +11,6 @@ import SetupStep, {
   FAILED,
   CELEBRATING,
 } from './SetupStep';
-/* global trackEvent */
 
 const STATUS_IS_CHROME = 'statusIsChrome';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
