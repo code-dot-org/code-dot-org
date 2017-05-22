@@ -123,6 +123,7 @@ const RowVariableQuestion = React.createClass({
         id={key}
         label={label}
         validationState={validationState}
+        required={this.props.question.required}
         componentClass="textarea"
         name={key}
         rows={4}
