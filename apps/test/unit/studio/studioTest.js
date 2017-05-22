@@ -192,7 +192,7 @@ describe('studio', function () {
   });
 
   describe('prepareForRemix', function () {
-    let newXml, oldXml;
+    let newXml, oldXml, originalBlockly;
     const level = {
       map: DEFAULT_MAP,
       spritesHiddenToStart: true,
@@ -209,15 +209,8 @@ describe('studio', function () {
       document.body.appendChild(background);
       registerReducers({ pageConstants, instructions, instructionsDialog, runState });
       const skin = loadSkin(() => '', 'studio');
-      oldXml = `
-        <xml>
-          <block type="when_run">
-            <next>
-              <block type="studio_playSound"/>
-            </next>
-          </block>
-        </xml>`;
       const serializer = new XMLSerializer();
+      originalBlockly = window.Blockly;
       window.Blockly = {
         Xml: {
           blockSpaceToDom() {
@@ -250,7 +243,22 @@ describe('studio', function () {
     });
 
     beforeEach(function () {
+      oldXml = `<xml>
+          <block type="when_run">
+            <next>
+              <block type="studio_playSound"/>
+            </next>
+          </block>
+        </xml>`;
       newXml = undefined;
+
+      level.map = DEFAULT_MAP;
+      level.spritesHiddenToStart = true;
+      level.firstSpriteIndex = 1;
+    });
+
+    after(function () {
+      window.Blockly = originalBlockly;
     });
 
     it('does nothing if everything matches defaults', function () {
@@ -277,6 +285,7 @@ describe('studio', function () {
       expect(newDom.querySelector('block[type="studio_setSpriteXY"]')).to.not.be.null;
       expect(newDom.querySelector('value[name="XPOS"] title').textContent).to.equal('400');
       expect(newDom.querySelector('value[name="YPOS"] title').textContent).to.equal('50');
+
     });
 
     it('adds a setSprite block for a custom sprite if sprites are visible by default', function () {
@@ -310,6 +319,45 @@ describe('studio', function () {
 
       const newDom = parseElement(newXml);
       expect(newDom.querySelector('block[type="when_run"]')).to.not.be.null;
+
+      level.allowSpritesOutsidePlayspace = undefined;
+    });
+
+    it('copies initialization blocks into the regular workspace', function () {
+      level.initializationBlocks = `<xml>
+          <block type="when_run">
+            <next>
+              <block type="studio_setBackground">
+                <title name="VALUE">"cave"</title>
+              </block>
+            </next>
+          </block>
+        </xml>`;
+
+      Studio.prepareForRemix();
+
+      const newDom = parseElement(newXml);
+      expect(newDom.querySelector('block[type="studio_playSound"]')).to.not.be.null;
+      expect(newDom.querySelector('block[type="studio_setBackground"]')).to.not.be.null;
+
+      level.initializationBlocks = undefined;
+    });
+
+    it('makes all blocks visible', function () {
+      oldXml = `<xml>
+          <block type="when_run" uservisible="false">
+            <next>
+              <block type="studio_setBackground">
+                <title name="VALUE">"cave"</title>
+              </block>
+            </next>
+          </block>
+        </xml>`;
+
+      Studio.prepareForRemix();
+      const newDom = parseElement(newXml);
+      expect(newDom.querySelector('block[type="when_run"]')
+          .getAttribute('uservisible')).to.not.equal("false");
     });
   });
 });
