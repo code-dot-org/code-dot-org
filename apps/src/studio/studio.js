@@ -57,6 +57,8 @@ import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
 import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
+import {blockAsXmlNode} from '../block_utils';
+import {parseElement, visitAll} from '../xml';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -180,7 +182,155 @@ var twitterOptions = {
 /** @type {JsInterpreterLogger} */
 var consoleLogger = null;
 
-function loadLevel() {
+// Not actually the "default" map, just the map that's used in the "New Playlab
+// Project" level.
+const DEFAULT_MAP = [
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+  [16, 0, 0, 16, 0, 0, 16, 0],
+  [0,  0, 0,  0, 0, 0,  0, 0],
+];
+
+const REMIX_PROPS = [
+  {
+    defaultValues: {
+      map: DEFAULT_MAP,
+      firstSpriteIndex: 1,
+      spritesHiddenToStart: true,
+    },
+    generateBlocks: args => {
+      const blocks = [];
+      let spriteIndex = 1;
+      const getDefaultSpriteLocation = () => ({
+        x: ((spriteIndex - 1) % 3) * 3,
+        y: (parseInt((spriteIndex - 1) / 3)) * 2,
+      });
+      for (let y = 0; y < Studio.ROWS; y++) {
+        for (let x = 0; x < Studio.COLS; x++) {
+          const cell = Studio.map[y][x].serialize();
+          if (cell.tileType & constants.SquareType.SPRITESTART) {
+            const defaultSpriteLocation = getDefaultSpriteLocation();
+            if ((level.firstSpriteIndex !== 1 || cell.sprite) && !level.spritesHiddenToStart) {
+              blocks.push(blockAsXmlNode('studio_setSpriteParams', {
+                titles: {
+                  'VALUE': `"${Studio.startAvatars[cell.sprite ? cell.sprite : spriteIndex + (level.firstSpriteIndex || 0)]}"`,
+                },
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                },
+              }));
+            }
+            if (x !== defaultSpriteLocation.x || y !== defaultSpriteLocation.y) {
+              blocks.push(blockAsXmlNode('studio_setSpriteXY', {
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'XPOS': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: x * Studio.SQUARE_SIZE +
+                        Studio.sprite[spriteIndex - 1].width / 2,
+                  },
+                  'YPOS': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: y * Studio.SQUARE_SIZE +
+                        Studio.sprite[spriteIndex - 1].height / 2,
+                  },
+                },
+              }));
+            }
+            if (cell.speed !== undefined && cell.speed !== constants.DEFAULT_SPRITE_SPEED) {
+              blocks.push(blockAsXmlNode('studio_setSpriteSpeedParams', {
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'VALUE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: cell.speed,
+                  },
+                },
+              }));
+            }
+            if (cell.size !== undefined && cell.size !== constants.DEFAULT_SPRITE_SIZE) {
+              blocks.push(blockAsXmlNode('studio_setSpriteSizeParams', {
+                values: {
+                  'SPRITE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: spriteIndex,
+                  },
+                  'VALUE': {
+                    type: 'math_number',
+                    titleName: 'NUM',
+                    titleValue: cell.size,
+                  },
+                },
+              }));
+            }
+            if (cell.emotion && cell.emotion !== Emotions.NORMAL) {
+              blocks.push(blockAsXmlNode('studio_setSpriteEmotion', {
+                titles: {
+                  'SPRITE':  spriteIndex,
+                  'VALUE':  cell.emotion,
+                },
+              }));
+            }
+
+            spriteIndex++;
+          }
+          if (cell.tileType & constants.SquareType.SPRITEFINISH) {
+            blocks.push(blockAsXmlNode('sudio_addGoalXY', {
+              values: {
+                'XPOS': {
+                  type: 'math_number',
+                  titleName: 'NUM',
+                  titleValue: x * Studio.SQUARE_SIZE,
+                },
+                'YPOS': {
+                  type: 'math_number',
+                  titleName: 'NUM',
+                  titleValue: y * Studio.SQUARE_SIZE,
+                },
+              },
+            }));
+          }
+        }
+      }
+
+      return blocks;
+    },
+  },
+  {
+    defaultValues: {
+      allowSpritesOutsidePlayspace: false,
+    },
+    generateBlocks: args => {
+      return [blockAsXmlNode('studio_allowSpritesOutsidePlayspace', {
+        titles: {
+          'VALUE': 'true',
+        },
+      })];
+    },
+  }
+];
+
+Studio.loadLevel = function () {
   // Load maps.
   Studio.map = level.map.map(row => row.map(cell => (
     // Each cell should be either an integer (in which case we are
@@ -257,7 +407,7 @@ function loadLevel() {
   studioApp().MAZE_HEIGHT = Studio.MAZE_HEIGHT;
 
   Studio.walls = loadWalls();
-}
+};
 
 function loadWalls() {
   if (skin.customObstacleZones) {
@@ -1744,7 +1894,7 @@ Studio.initReadonly = function (config) {
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
 
-  loadLevel();
+  Studio.loadLevel();
 
   config.appMsg = studioMsg;
 
@@ -1809,7 +1959,7 @@ Studio.init = function (config) {
   var isAlgebraLevel = !!level.useContractEditor;
   config.grayOutUndeletableBlocks = isAlgebraLevel;
 
-  loadLevel();
+  Studio.loadLevel();
 
   Studio.background = getDefaultBackgroundName();
 
@@ -1930,6 +2080,8 @@ Studio.init = function (config) {
     return code;
   };
 
+  config.prepareForRemix = Studio.prepareForRemix;
+
   config.twitter = skin.twitterOptions || twitterOptions;
 
   // for this app, show make your own button if on share page
@@ -2006,6 +2158,114 @@ Studio.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+Studio.prepareForRemix = function () {
+  if (!level.initializationBlocks &&
+      REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+        level[prop] === undefined ||
+            level[prop] === group.defaultValues[prop]))) {
+    // Do nothing if all the props match the defaults
+    return Promise.resolve();
+  }
+
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+
+  let whenRun = blocksDom.querySelector('block[type="when_run"]');
+  if (!whenRun) {
+    whenRun = blocksDocument.createElement('block');
+    whenRun.setAttribute('type', 'when_run');
+    blocksDom.appendChild(whenRun);
+  }
+  let next = whenRun.querySelector('next');
+  if (next) {
+    whenRun.removeChild(next);
+  }
+
+  const insertBeforeNext = block => {
+    if (next) {
+      block.appendChild(next);
+    }
+    next = blocksDocument.createElement('next');
+    next.appendChild(block);
+  };
+
+  for (let group of REMIX_PROPS) {
+    let customized = false;
+    const blockArgs = {};
+    for (let prop in group.defaultValues) {
+      const value = level[prop];
+      if (value !== undefined && value !== group.defaultValues[prop]) {
+        customized = true;
+        blockArgs[prop] = value;
+      } else {
+        blockArgs[prop] = group.defaultValues[prop];
+      }
+    }
+    if (!customized) {
+      continue;
+    }
+    const newBlocks = group.generateBlocks(blockArgs);
+    // insertBeforeNext adds blocks to the top, just below when_run. Insert the
+    // blocks in reverse order so that they stay in the same order as newBlocks
+    for (let i = newBlocks.length - 1; i >= 0; i--) {
+      insertBeforeNext(newBlocks[i]);
+    }
+  }
+
+  if (level.initializationBlocks) {
+    const root = parseElement(level.initializationBlocks);
+    const topNodes = root.childNodes;
+    for (let i = topNodes.length - 1; i >= 0; i--) {
+      const topBlock = topNodes[i];
+      if (topBlock.getAttribute && topBlock.getAttribute('type') === 'when_run') {
+        let lastBlock = topBlock;
+        let firstBlock = null;
+        let foundNextBlock = true;
+        while (foundNextBlock) {
+          foundNextBlock = false;
+          for (let block of lastBlock.childNodes) {
+            if (block.tagName && block.tagName.toLowerCase() === 'next') {
+              for (let j = 0; j < block.childNodes.length; j++) {
+                const childBlock = block.childNodes[j];
+                if (childBlock.tagName && childBlock.tagName.toLowerCase() === 'block') {
+                  lastBlock = childBlock;
+                  break;
+                }
+              }
+              foundNextBlock = true;
+              if (firstBlock === null) {
+                firstBlock = lastBlock;
+              }
+              break;
+            }
+          }
+        }
+        if (lastBlock === topBlock) {
+          continue;
+        }
+        lastBlock.appendChild(next);
+        const newNext = blocksDocument.createElement('next');
+        newNext.appendChild(firstBlock);
+        next = newNext;
+      } else {
+        root.removeChild(topBlock);
+        blocksDom.appendChild(topBlock);
+      }
+    }
+  }
+
+  whenRun.appendChild(next);
+  visitAll(blocksDom, block => {
+    if (block.getAttribute && block.getAttribute('uservisible')) {
+      block.setAttribute('uservisible', "true");
+    }
+  });
+
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  return Promise.resolve();
 };
 
 /**
