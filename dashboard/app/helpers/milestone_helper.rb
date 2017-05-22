@@ -80,5 +80,4 @@ module MilestoneHelper
 
     response
   end
-
 end
