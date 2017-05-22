@@ -81,7 +81,7 @@ export default class WorkshopQuality extends FormComponent {
         })}
 
         {this.buildButtonsFromOptions({
-          label: "Overall, how much have you learned from your workshop about computer science?",
+          label: "Overall, how much have you learned about computer science from your workshop?",
           name: "howMuchLearned",
           type: 'radio'
         })}
