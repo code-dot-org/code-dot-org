@@ -5,7 +5,7 @@
 SQL="select id, \`key\` from videos; \
      select id, name, video_id from concepts; \
      select id, name, app, intro_video_id from games; \
-     select id, name, trophies, hidden, wrapup_video_id from scripts; \
+     select id, name, hidden, wrapup_video_id from scripts; \
      select id, name, game_id, level_num, properties from levels; \
      select id, script_id, level_id, chapter, game_chapter, stage_id, position, assessment from script_levels; \
      select id, name, position, script_id from stages; \
