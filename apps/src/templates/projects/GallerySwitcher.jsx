@@ -48,7 +48,8 @@ class GallerySwitcher extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleGallery = this.toggleGallery.bind(this);
+    this.toggleToGallery = this.toggleToGallery.bind(this);
+    this.toggleToMyProjects = this.toggleToMyProjects.bind(this);
 
     this.state = {
       // The source of truth for which gallery is displayed. This state should
@@ -57,12 +58,14 @@ class GallerySwitcher extends Component {
     };
   }
 
-  toggleGallery() {
-    const gallery = this.state.gallery === Galleries.PRIVATE ?
-      Galleries.PUBLIC : Galleries.PRIVATE;
+  toggleToGallery() {
+    this.props.showGallery(Galleries.PUBLIC);
+    this.setState({gallery: Galleries.PUBLIC});
+  }
 
-    this.props.showGallery(gallery);
-    this.setState({gallery});
+  toggleToMyProjects() {
+    this.props.showGallery(Galleries.PRIVATE);
+    this.setState({gallery: Galleries.PRIVATE});
   }
 
   render() {
@@ -70,13 +73,13 @@ class GallerySwitcher extends Component {
       <div style={styles.container}>
         <button
           style={[styles.pill, this.state.gallery === Galleries.PRIVATE && styles.selectedPill]}
-          onClick={this.toggleGallery}
+          onClick={this.toggleToMyProjects}
         >
           {i18n.myProjects()}
         </button>
         <button
           style={[styles.pill, this.state.gallery === Galleries.PUBLIC && styles.selectedPill]}
-          onClick={this.toggleGallery}
+          onClick={this.toggleToGallery}
         >
           {i18n.publicGallery()}
         </button>

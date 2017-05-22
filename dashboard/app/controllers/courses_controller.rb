@@ -1,7 +1,6 @@
 class CoursesController < ApplicationController
   before_action :require_levelbuilder_mode, except: [:index, :show]
-  before_action :authenticate_user!, except: :show
-  check_authorization
+  before_action :authenticate_user!, except: [:index, :show]
   authorize_resource
 
   def index

@@ -16,6 +16,7 @@ import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
+import NeoPixel from './NeoPixel';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -131,7 +132,7 @@ export function destroyCircuitPlaygroundComponents(components) {
 export const componentConstructors = {
   Led: five.Led,
   Board: five.Board,
-  RGB: five.Led.RGB,
+  NeoPixel: NeoPixel,
   Button: five.Button,
   Switch: five.Switch,
   Piezo,
@@ -155,7 +156,7 @@ function initializeColorLeds(board) {
 }
 
 function initializeColorLed(board, pin) {
-  return new five.Led.RGB({
+  return new NeoPixel({
     board,
     controller: PlaygroundIO.Pixel,
     pin
