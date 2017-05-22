@@ -43,7 +43,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :school_has_tech,
       :how_much_learned,
       :how_motivating,
-      :who_facilitated,
       :how_much_participated,
       :how_often_talk_about_ideas_outside,
       :how_often_lost_track_of_time,
@@ -102,6 +101,10 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     end
 
     # validate conditional required fields
+    if pd_enrollment.workshop.facilitators.any?
+      add_key_error(:who_facilitated) unless hash.key?(:who_facilitated)
+    end
+
     if hash.try(:[], :will_teach) == NO
       add_key_error(:will_not_teach_explanation) unless hash.key?(:will_not_teach_explanation)
     end
@@ -124,9 +127,9 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
 
     # if this is the first survey completed by this user, also require
     # demographics questions
-    if find_by_user(pd_enrollment.user).empty?
+    if self.class.find_by_user(pd_enrollment.user).empty?
       demographics_required_fields.each do |field|
-        add_key_error(field) unless hash.key?(:field)
+        add_key_error(field) unless hash.key?(field)
       end
     end
 
