@@ -213,16 +213,16 @@ class DashboardSection
     valid_grades.include? grade
   end
 
-  @@script_cache = {}
-  def self.valid_scripts(user_id = nil)
-    # some users can see all scripts, even those marked hidden
-    script_cache_key = I18n.locale.to_s +
+  @@course_cache = {}
+  def self.valid_courses(user_id = nil)
+    # some users can see all courses, even those marked hidden
+    course_cache_key = I18n.locale.to_s +
       ((user_id && Dashboard.hidden_script_access?(user_id)) ? "-all" : "-valid")
 
-    # only do this query once because in prod we only change scripts
+    # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
-    # pegasus and scripts are owned by dashboard...)
-    return @@script_cache[script_cache_key] if @@script_cache.key?(script_cache_key)
+    # pegasus and courses are owned by dashboard...)
+    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
@@ -230,22 +230,22 @@ class DashboardSection
     where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
 
     # cache result if we have to actually run the query
-    @@script_cache[script_cache_key] =
+    @@course_cache[course_cache_key] =
       Dashboard.db[:scripts].
         where(where_clause).
         select(:id, :name, :hidden).
         all.
-        map do |script|
-          name = ScriptConstants.teacher_dashboard_name(script[:name])
-          first_category = ScriptConstants.categories(script[:name])[0] || 'other'
+        map do |course|
+          name = ScriptConstants.teacher_dashboard_name(course[:name])
+          first_category = ScriptConstants.categories(course[:name])[0] || 'other'
           position = ScriptConstants.position_in_category(name, first_category)
           category_priority = ScriptConstants.category_priority(first_category)
           name = I18n.t("#{name}_name", default: name)
-          name += " *" if script[:hidden]
+          name += " *" if course[:hidden]
           {
-            id: script[:id],
+            id: course[:id],
             name: name,
-            script_name: script[:name],
+            script_name: course[:name],
             category: I18n.t("#{first_category}_category_name", default: first_category),
             position: position,
             category_priority: category_priority
@@ -253,17 +253,17 @@ class DashboardSection
         end
   end
 
-  # Gets a list of valid scripts in which progress tracking has been disabled via
+  # Gets a list of valid courses in which progress tracking has been disabled via
   # the gatekeeper key postMilestone.
-  def self.progress_disabled_scripts(user_id = nil)
-    disabled_scripts = valid_scripts(user_id).select do |script|
-      !Gatekeeper.allows('postMilestone', where: {script_name: script[:script_name]}, default: true)
+  def self.progress_disabled_courses(user_id = nil)
+    disabled_courses = valid_courses(user_id).select do |course|
+      !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
     end
-    disabled_scripts.map {|script| script[:id]}
+    disabled_courses.map {|course| course[:id]}
   end
 
-  def self.valid_script_id?(script_id)
-    valid_scripts.find {|script| script[:id] == script_id.to_i}
+  def self.valid_course_id?(course_id)
+    valid_courses.find {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)
@@ -274,8 +274,8 @@ class DashboardSection
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
-    script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
-      params[:script][:id].to_i : params[:script_id]
+    script_id = params[:course] && valid_course_id?(params[:course][:id]) ?
+      params[:course][:id].to_i : params[:script_id]
     stage_extras = params[:stage_extras] ? params[:stage_extras] : false
     created_at = DateTime.now
 
@@ -301,8 +301,8 @@ class DashboardSection
       raise
     end
 
-    if params[:script] && valid_script_id?(params[:script][:id])
-      DashboardUserScript.assign_script_to_user(params[:script][:id].to_i, params[:user][:id])
+    if params[:course] && valid_course_id?(params[:course][:id])
+      DashboardUserScript.assign_script_to_user(params[:course][:id].to_i, params[:user][:id])
     end
 
     row
@@ -475,8 +475,8 @@ class DashboardSection
     }]
   end
 
-  def script
-    @script ||= Dashboard.db[:scripts].
+  def course
+    @course ||= Dashboard.db[:scripts].
       where(id: @row[:script_id]).
       select(:id, :name).
       first
@@ -484,7 +484,7 @@ class DashboardSection
 
   def to_owner_hash
     to_member_hash.merge(
-      script: script,
+      course: course,
       teachers: teachers,
       students: students
     )
@@ -513,8 +513,8 @@ class DashboardSection
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
 
-    if params[:script] && valid_script_id?(params[:script][:id])
-      fields[:script_id] = params[:script][:id].to_i
+    if params[:course] && valid_course_id?(params[:course][:id])
+      fields[:script_id] = params[:course][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
       DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
     end
