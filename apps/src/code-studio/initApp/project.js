@@ -564,7 +564,7 @@ var projects = module.exports = {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
     // project. See (Turtle|Studio).prepareForRemix().
-    return !['turtle', 'studio'].includes(appOptions.app);
+    return !['artist', 'playlab'].includes(projects.getStandaloneApp());
   },
 
   /*
