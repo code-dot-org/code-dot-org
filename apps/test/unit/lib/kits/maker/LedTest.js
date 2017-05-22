@@ -72,9 +72,9 @@ describe('Led', function () {
     });
 
     afterEach(() => {
-      led.toggle.reset();
-      led.stop.reset();
-      clock.reset();
+      led.toggle.restore();
+      led.stop.restore();
+      clock.restore();
     });
 
     it(`calls stop() only once when blink starts`, () => {
