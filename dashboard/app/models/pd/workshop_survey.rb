@@ -77,8 +77,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     if hash.try(:[], :who_facilitated)
       hash[:who_facilitated].each do |facilitator|
         facilitator_required_fields.each do |facilitator_field|
-          field_name = "#{facilitator_field}[#{facilitator}]".to_sym
-          add_key_error(field_name) unless hash.key?(field_name)
+          field_name = "#{facilitator_field}[#{facilitator}]"
+          add_key_error(field_name) unless hash.key?(field_name.underscore.to_sym)
         end
       end
     end
