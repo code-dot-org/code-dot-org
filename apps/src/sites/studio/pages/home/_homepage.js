@@ -21,7 +21,7 @@ function showHomepage() {
               buttonText: "Learn more",
               description: "Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning.",
               link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
-              image: "coming-soon.png"
+              image: "navcard-placeholder.png"
             }
           ]}
           courses={homepageData.courses}

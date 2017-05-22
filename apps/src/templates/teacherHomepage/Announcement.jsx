@@ -62,7 +62,7 @@ const Announcement = React.createClass({
   render() {
     const { heading, buttonText, description, link, image } = this.props;
     const filenameToImgUrl = {
-      "coming-soon.png": require('../../../static/coming-soon.png'),
+      "navcard-placeholder.png": require('../../../static/navcard-placeholder.png'),
     };
 
     const imgSrc = filenameToImgUrl[image];
