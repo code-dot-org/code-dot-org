@@ -2,7 +2,7 @@
 - user_type = request.cookies[cookie_key]
 
 - hamburger_options = {}
-- hamburger_options[:script_level] = nil
+- hamburger_options[:level] = nil
 - hamburger_options[:user_type] = user_type
 - hamburger_options[:language] = request.language
 - hamburger_options[:code_org_url_base] = CDO.code_org_url
@@ -20,13 +20,13 @@
             %img#logo{:src=>'/images/logo.png'}
         #headerlinks.desktop-feature
           - if user_type == "teacher"
-            %a.headerlink{:href=>CDO.studio_url("/")} Home
+            %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
             %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
             %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
             %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
           - elsif user_type == "student"
-            %a.headerlink{:href=>CDO.studio_url("/")} Home
+            %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
             %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
           - elsif request.language == "en"

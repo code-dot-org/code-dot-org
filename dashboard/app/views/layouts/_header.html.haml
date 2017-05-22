@@ -20,7 +20,7 @@
   - user_type = request.cookies[cookie_key]
 
   - hamburger_options = {}
-  - hamburger_options[:script_level] = script_level
+  - hamburger_options[:level] = level
   - hamburger_options[:user_type] = user_type
   - hamburger_options[:language] = request.language
   - hamburger_options[:code_org_url_base] = CDO.code_org_url
@@ -57,16 +57,17 @@
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
+            - elsif level
             - elsif show_header2
               .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
                 - if user_type == "teacher"
-                  %a.headerlink{:href=>"/"} Home
+                  %a.headerlink{:href=>"/home"} Home
                   %a.headerlink{:href=>"/courses"} Courses
                   %a.headerlink{:href=>"/projects/public"} Project Gallery
                   %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
                   %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
                 - elsif user_type == "student"
-                  %a.headerlink{:href=>"/"} Home
+                  %a.headerlink{:href=>"/home"} Home
                   %a.headerlink{:href=>"/courses"} Courses
                   %a.headerlink{:href=>"/projects/public"} Project Gallery
                 - elsif request.language == "en"
@@ -91,11 +92,9 @@
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
               - if show_header2
                 %span#sign_in_or_user
+                = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
               - else
                 = render partial: 'shared/user_header_ajax'
-
-              - if show_header2
-                = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if show_header2
   - if request.path == "/home" || request.path == "/courses"
