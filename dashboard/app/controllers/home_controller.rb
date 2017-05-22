@@ -34,6 +34,48 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
   def index
+    if request.cookies['pm'] == 'new_header'
+      redirect_to '/home'
+    else
+      init_homepage
+    end
+  end
+
+  def home
+    if request.cookies['pm'] != 'new_header'
+      redirect_to '/'
+    else
+      init_homepage
+      render 'home/index'
+    end
+  end
+
+  def gallery_activities
+    if current_user
+      @gallery_activities =
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+    end
+    render partial: 'home/gallery_content'
+  end
+
+  def certificate_link_test
+    render 'certificate_link_test', formats: [:html]
+  end
+
+  # This static page combines TOS and Privacy partials all in one page
+  # for easy printing.
+  def terms_and_privacy
+    render partial: 'home/tos_and_privacy'
+  end
+
+  # This static page contains the teacher announcements for US and non-US visitors.
+  def teacher_announcements
+    render template: 'api/teacher_announcement', layout: false
+  end
+
+  private
+
+  def init_homepage
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
@@ -65,28 +107,5 @@ class HomeController < ApplicationController
         end
       end
     end
-  end
-
-  def gallery_activities
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-    end
-    render partial: 'home/gallery_content'
-  end
-
-  def certificate_link_test
-    render 'certificate_link_test', formats: [:html]
-  end
-
-  # This static page combines TOS and Privacy partials all in one page
-  # for easy printing.
-  def terms_and_privacy
-    render partial: 'home/tos_and_privacy'
-  end
-
-  # This static page contains the teacher announcements for US and non-US visitors.
-  def teacher_announcements
-    render template: 'api/teacher_announcement', layout: false
   end
 end

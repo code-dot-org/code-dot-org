@@ -98,7 +98,7 @@
                 = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if show_header2
-  - if request.path == "/" || request.path == "/courses"
+  - if request.path == "/home" || request.path == "/courses"
     %img#header-banner{src: "/shared/images/banners/banner-test3.png"}
 
 - if script_level
