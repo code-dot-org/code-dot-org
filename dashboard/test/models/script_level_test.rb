@@ -82,8 +82,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'named level summarize' do
-    sl = create(:script_level)
-    sl.update(named_level: true)
+    sl = create(:script_level, named_level: true)
 
     summary = sl.summarize
     assert_equal sl.level.name, summary[:name]
