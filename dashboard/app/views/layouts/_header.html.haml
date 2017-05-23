@@ -48,7 +48,7 @@
           .header_left
             .header_logo
               - if show_header2
-                = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+                = link_to(image_tag('logo.png'), '/home')
               - else
                 - if current_page?(root_url)
                   = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
