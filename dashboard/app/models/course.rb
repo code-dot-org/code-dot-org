@@ -77,7 +77,8 @@ class Course < ApplicationRecord
   end
 
   def write_serialization
-    return unless Rails.application.config.levelbuilder_mode
+    # Only save non-plc course, and only in LB mode
+    return unless Rails.application.config.levelbuilder_mode && !plc_course
     File.write(Course.file_path(name), serialize)
   end
 
