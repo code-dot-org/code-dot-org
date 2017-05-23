@@ -761,11 +761,12 @@ class User < ActiveRecord::Base
 
   def age
     return @age unless birthday
-    age = ((Date.today - birthday) / 365).to_i
+    age = UserHelpers.age_from_birthday(birthday)
     age = "21+" if age >= 21
     age
   end
 
+  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
   end
