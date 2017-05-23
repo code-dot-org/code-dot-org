@@ -71,8 +71,6 @@ class LevelSourceImage < ActiveRecord::Base
     AWS::S3.delete_from_bucket(S3_BUCKET, s3_framed_filename)
   end
 
-  private
-
   # @return [String] The filename for the image frame.
   def frame_image_filename
     if ['anna', 'elsa'].include? level_source.level.try(:skin)
@@ -81,7 +79,7 @@ class LevelSourceImage < ActiveRecord::Base
     'app/assets/images/blank_sharing_drawing.png'
   end
 
-  private_class_method def self.hashify_filename(plain)
+  def self.hashify_filename(plain)
     [Digest::MD5.hexdigest(plain), plain].join('=')
   end
 
