@@ -7,10 +7,12 @@
 
   %table.projects{'ng-show' => 'projects.length > 0'}
     %colgroup
+      %col{width: "52"}
       %col{width: "250"}
-      %col{width: "200"}
-      %col{'ng-style' => '{"width": isPublicGalleryEnabled ? 256 : 200}'}
+      %col{width: "180"}
+      %col{'ng-style' => '{"width": isPublicGalleryEnabled ? 296 : 240}'}
     %tr
+      %th
       %th
         %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
           = t('projects.name')
@@ -23,6 +25,8 @@
           %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
       %th
     %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
+      %td{ style: "padding: 3px;"}
+        %img{ style: "width: 50px;", "ng-src" => '{{ project.thumbnail() }}' }
       %td.name
         %span{'ng-hide' => 'project.editing'}
           %a{href: '', "ng-href" => '{{ project.editUrl() }}'}

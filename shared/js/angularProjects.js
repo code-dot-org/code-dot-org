@@ -45,6 +45,14 @@ services.factory('projectsService', ['$resource',
       }
     };
 
+    Project.prototype.thumbnail = function () {
+      if (this.thumbnailUrl) {
+        return this.thumbnailUrl;
+      } else {
+        return '/blockly/media/projects/project_default.png';
+      }
+    };
+
     return Project;
   }]);
 
