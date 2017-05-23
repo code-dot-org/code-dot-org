@@ -1,7 +1,8 @@
 class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   include Api::CsvDownload
-  load_and_authorize_resource :workshop, class: 'Pd::Workshop'
+  include ::Pd::NewAttendanceModel
 
+  load_and_authorize_resource :workshop, class: 'Pd::Workshop'
   load_resource :session, class: 'Pd::Session', through: :workshop, except: :index
 
   before_action :authorize_manage_attendance!, only: [:create, :destroy]
@@ -40,19 +41,30 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   # PUT /api/v1/pd/workshops/1/attendance/:session_id/user/:user_id
   def create
     user_id = params[:user_id]
-    teacher = @workshop.section.students.where(id: user_id).first
+    enrollment = nil
 
-    # Admins can override and add a missing teacher to the section
-    if teacher.nil? && current_user.admin? && params[:admin_override]
-      # Still the teacher account must exist.
-      teacher = User.find_by!(id: user_id, user_type: User::TYPE_TEACHER)
-      @workshop.section.add_student teacher
+    if new_attendance_model_enabled?
+      teacher = User.find(user_id)
+
+      # Attempt to find a matching enrollment
+      enrollment = @workshop.enrollments.find_by('user_id = ? OR email = ?', user_id, teacher.email)
+    else
+      # Legacy attendance.
+      # TODO(Andrew): remove once we settle on the new workflow.
+      teacher = @workshop.section.students.where(id: user_id).first
+
+      # Admins can override and add a missing teacher to the section
+      if teacher.nil? && current_user.admin? && params[:admin_override]
+        # Still the teacher account must exist.
+        teacher = User.find_by!(id: user_id, user_type: User::TYPE_TEACHER)
+        @workshop.section.add_student teacher
+      end
+
+      # renders a 404 (not found)
+      raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher || enrollment
     end
 
-    # renders a 404 (not found)
-    raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher
-
-    Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher
+    Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher, enrollment: enrollment
     head :no_content
   end
 
