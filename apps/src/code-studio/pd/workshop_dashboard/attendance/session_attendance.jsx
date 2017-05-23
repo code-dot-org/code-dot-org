@@ -184,10 +184,9 @@ const SessionAttendance = React.createClass({
               {this.showPuzzlesCompleted &&
                 <th>Puzzles Completed</th>
               }
-              {(!this.shouldUseNewAttendance || this.isCSF) &&
+              {(!this.shouldUseNewAttendance || this.isCSF) ?
                 <th>Attended</th>
-              }
-              {this.shouldUseNewAttendance && !this.isCSF &&
+                :
                 <th>Present</th>
               }
             </tr>
