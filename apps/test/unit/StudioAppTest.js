@@ -128,19 +128,34 @@ describe("StudioApp", () => {
       expect(howItWorksItem.link).to.equal('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit');
     });
 
-    it("returns How-It-Works item before Report-Abuse item", () => {
-      project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/embed');
+    it("returns How-It-Works item before Report-Abuse item in GameLab", () => {
+      project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw');
       var footItems = makeFooterMenuItems();
       var howItWorksIndex = footItems.findIndex(item => item.text === 'footer.how_it_works');
       var reportAbuseIndex = footItems.findIndex(item => item.text === 'footer.report_abuse');
       expect(howItWorksIndex).to.be.below(reportAbuseIndex);
     });
 
-    it("does not return Try-HOC menu item", () => {
-      project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/embed');
+    it("returns How-It-Works item before Report-Abuse item in AppLab", () => {
+      project.getUrl.returns('https://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ');
+      var footItems = makeFooterMenuItems();
+      var howItWorksIndex = footItems.findIndex(item => item.text === 'footer.how_it_works');
+      var reportAbuseIndex = footItems.findIndex(item => item.text === 'footer.report_abuse');
+      expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+    });
+
+    it("does not return Try-HOC menu item in GameLab", () => {
+      project.getUrl.returns('https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/');
       var footItems = makeFooterMenuItems();
       var tryHOCIndex = footItems.findIndex(item => item.text === 'footer.try_hour_of_code');
       expect(tryHOCIndex).to.be.below(0);
+    });
+
+    it("does return Try-HOC menu item in PlayLab", () => {
+      project.getUrl.returns('http://localhost-studio.code.org:3000/projects/playlab/NTMBaBSuxs0t714y4WITMg/');
+      var footItems = makeFooterMenuItems();
+      var tryHOCIndex = footItems.findIndex(item => item.text === 'footer.try_hour_of_code');
+      expect(tryHOCIndex).to.be.above(-1);
     });
   });
 });
