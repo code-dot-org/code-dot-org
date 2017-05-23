@@ -420,6 +420,7 @@ testsContext.keys().forEach(testsContext);
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'projects/index':               './src/sites/studio/pages/projects/index.js',
+    'projects/public':               './src/sites/studio/pages/projects/public.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
@@ -428,10 +429,9 @@ testsContext.keys().forEach(testsContext);
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
-    'home/_teacher_homepage':       './src/sites/studio/pages/home/_teacher_homepage.js',
-    'home/_student_homepage':       './src/sites/studio/pages/home/_student_homepage.js',
-    'home/courses':                 './src/sites/studio/pages/home/courses.js',
-    'courses/index':                './src/sites/studio/pages/courses/index.js'
+    'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
+    'courses/index':                './src/sites/studio/pages/courses/index.js',
+    'courses/show':                 './src/sites/studio/pages/courses/show.js'
   };
 
   var otherEntries = {

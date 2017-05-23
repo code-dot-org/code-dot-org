@@ -312,6 +312,7 @@ export default class FormController extends React.Component {
     }
 
     const pageButtons = (
+      this.getPageComponents().length > 1 &&
       <Pagination
         style={styles.pageButtons}
         items={this.getPageComponents().length}

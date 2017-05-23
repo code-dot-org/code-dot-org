@@ -17,6 +17,22 @@ $color_pacific_blue_approx: #00b2c0;
 
 #hamburger {
 
+  &.hide-always {
+    display: none;
+  }
+
+  &.show-mobile {
+    display: none;
+  }
+
+  &.show-always {
+    display: block;
+  }
+
+  .hide-always {
+    display: none;
+  }
+
   .show-mobile {
     display: none;
   }
@@ -178,6 +194,11 @@ $color_pacific_blue_approx: #00b2c0;
   }
 
   @media(max-width: 970px) {
+
+    &.show-mobile {
+      display: block;
+    }
+
     .show-mobile {
       display: block;
     }

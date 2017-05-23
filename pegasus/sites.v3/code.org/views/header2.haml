@@ -1,6 +1,13 @@
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
 
+- hamburger_options = {}
+- hamburger_options[:script_level] = nil
+- hamburger_options[:user_type] = user_type
+- hamburger_options[:language] = request.language
+- hamburger_options[:code_org_url_base] = CDO.code_org_url
+- hamburger_options[:studio_url_base] = CDO.studio_url
+
 %link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
@@ -11,31 +18,29 @@
         #logo-wrapper
           %a{:href=>"/"}
             %img#logo{:src=>'/images/logo.png'}
-        - if page_translated? && !partner_site?
-        - else
-          #headerlinks.desktop-feature
-            - if user_type == "teacher"
-              %a.headerlink{:href=>CDO.studio_url("/")} Home
-              %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
-              %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
-              %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
-              %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
-            - elsif user_type == "student"
-              %a.headerlink{:href=>CDO.studio_url("/")} Home
-              %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
-              %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
-            - else
-              %a.headerlink{:href=>"/student"} Learn
-              %a.headerlink{:href=>"/educate"} Teach
-              %a.headerlink{:href=>"/promote"} Stats
-              %a.headerlink{:href=>"/help"} Help us
-              %a.headerlink{:href=>"/about"} About
+        #headerlinks.desktop-feature
+          - if user_type == "teacher"
+            %a.headerlink{:href=>CDO.studio_url("/")} Home
+            %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
+            %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
+            %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
+            %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
+          - elsif user_type == "student"
+            %a.headerlink{:href=>CDO.studio_url("/")} Home
+            %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
+            %a.headerlink{:href=>CDO.studio_url("/projects/public")} Project Gallery
+          - elsif request.language == "en"
+            %a.headerlink{:href=>"/student"} Learn
+            %a.headerlink{:href=>"/educate"} Teach
+            %a.headerlink{:href=>"/promote"} Stats
+            %a.headerlink{:href=>"/help"} Help us
+            %a.headerlink{:href=>"/about"} About
 
       #right
         #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
         - hamburger_class = (user_type == "student" || user_type == "teacher" ? "" : "mobile-feature")
         %span{class: hamburger_class}
-          = view :hamburger, user_type: user_type
+          = view :hamburger, hamburger_options
 
     #clear{:style=>'clear:both'}
 

@@ -382,6 +382,87 @@ $height-to-width: 434 / 477;
   margin: $offsetY 0 0 $offsetX;
 }
 
+#code-connection-log {
+  width: 400px;
+  height: 400px;
+  margin-left: 17px;
+  margin-top: 61px;
+  overflow-y: scroll;
+  display: inline-block;
+  background-color: #333; 
+  color: #f2f2f2;
+  #log-text {
+    line-height: 50px;
+    font-size: 22px;
+    color: $lightest_gray;
+  }
+}
+
+#craft-popup-connect {
+  @include reset-dialog;
+  background-color: #3C3C3C;
+
+  @include popup-width-height(540px, 516px);
+
+  @media screen and (max-height: 630px) {
+    @include popup-width-height(540px, 400px);
+  }
+
+  border-style: solid;
+  border-width: 18px 21px 22px 19px;
+  box-shadow: none;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  -o-border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 stretch;
+  border-image: url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill stretch;
+
+  #modal-body {
+    background-color: #3C3C3C;
+  }
+
+  .modal-content.no-modal-icon {
+    margin-left: 0;
+    html[dir=rtl] & {
+      margin-right: 0;
+    }
+  }
+
+  .minecraft-big-yellow-header {
+    text-shadow: 2px 2px #565656 !important;
+    color: #F4D00B;
+    line-height: 11px;
+    font-size: 30px;
+  }
+
+  #download-text {
+    line-height: 50px;
+    font-size: 22px;
+    color: $lightest_gray;
+  }
+
+  #close-popup {
+    @include mc-x-close-button();
+  }
+
+  .download-button {
+    border-style: solid !important;
+    border-width: 4px 5px 6px !important;
+    @include pixelated();
+    @include gray-button();
+    @include mc-text-shadow();
+
+    color: #f1f1f1 !important;
+    font-size: 26px;
+    line-height: 26px;
+    font-family: $gotham-bold !important;
+
+    display: inline-block;
+    padding: 5px;
+  }
+
+}
+
 #craft-popup-player-selection {
   @include reset-dialog;
   background-color: #3C3C3C;
