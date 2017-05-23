@@ -288,8 +288,6 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetail()))
-          .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
-      this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.STRING);
@@ -297,9 +295,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_getitemdetail = function () {
-    var dir = this.getTitleValue('DIR');
     var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return [`getitemdetail('block_id_${this.id}','${slotNumber}','${dir}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`getitemdetail('block_id_${this.id}','${slotNumber}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getitemspace = {
@@ -308,8 +305,6 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpace()))
-          .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
-      this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
@@ -317,9 +312,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_getitemspace = function () {
-    var dir = this.getTitleValue('DIR');
     var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return [`getitemspace('block_id_${this.id}','${slotNumber}','${dir}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`getitemspace('block_id_${this.id}','${slotNumber}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getitemcount = {
@@ -328,8 +322,6 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCount()))
-          .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
-      this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
@@ -337,9 +329,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_getitemcount = function () {
-    var dir = this.getTitleValue('DIR');
     var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return [`getitemcount('block_id_${this.id}','${slotNumber}','${dir}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`getitemcount('block_id_${this.id}','${slotNumber}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_transfer = {
