@@ -88,7 +88,7 @@ class HomeController < ApplicationController
         @sections = current_user.sections.map do |section|
           script = nil
           if section.script_id
-            script = Script.find_by_id(section.script_id)
+            script = Script.get_from_cache(section.script_id)
           end
 
           if script

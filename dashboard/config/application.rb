@@ -107,8 +107,6 @@ module Dashboard
       end
     end
 
-    config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
-
     config.pretty_sharedjs = CDO.pretty_js
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
