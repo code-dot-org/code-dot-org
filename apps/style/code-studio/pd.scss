@@ -9,6 +9,12 @@
     text-shadow: none;
   }
 
+  .btn-orange {
+    // color, background, border
+    @include button-variant($white, $dark_orange, $light_gray);
+    text-shadow: none;
+  }
+
   .btn-gray {
     // color, background, border
     @include button-variant($default_text, $background_gray, $lightest_gray);
