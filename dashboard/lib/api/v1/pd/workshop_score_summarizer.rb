@@ -1,69 +1,67 @@
-require_dependency pegasus_dir('forms/pd_workshop_survey')
-
 module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_EFFECTIVENESS_QUESTIONS = [
-    :how_much_learned_s,
-    :how_motivating_s,
-    :how_clearly_presented_s,
-    :how_interesting_s,
-    :how_often_given_feedback_s,
-    :how_comfortable_asking_questions_s,
-    :how_often_taught_new_things_s
+    :how_much_learned,
+    :how_motivating,
+    :how_clearly_presented,
+    :how_interesting,
+    :how_often_given_feedback,
+    :how_comfortable_asking_questions,
+    :how_often_taught_new_things
   ]
 
   TEACHER_ENGAGEMENT_QUESTIONS = [
-    :how_much_participated_s,
-    :how_often_talk_about_ideas_outside_s,
-    :how_often_lost_track_of_time_s,
-    :how_excited_before_s,
-    :overall_how_interested_s
+    :how_much_participated,
+    :how_often_talk_about_ideas_outside,
+    :how_often_lost_track_of_time,
+    :how_excited_before,
+    :overall_how_interested
   ]
 
   OVERALL_SUCCESS_QUESTIONS = [
-    :more_prepared_than_before_s,
-    :know_where_to_go_for_help_s,
-    :suitable_for_my_experience_s,
-    :would_recommend_s,
-    :part_of_community_s
+    :more_prepared_than_before,
+    :know_where_to_go_for_help,
+    :suitable_for_my_experience,
+    :would_recommend,
+    :part_of_community
   ]
 
   INDIVIDUAL_RESPONSE_QUESTIONS = [
-    :how_much_learned_s,
-    :how_motivating_s,
-    :how_clearly_presented_s,
-    :how_interesting_s,
-    :how_often_given_feedback_s,
-    :how_comfortable_asking_questions_s,
-    :how_often_taught_new_things_s,
-    :how_much_participated_s,
-    :how_often_talk_about_ideas_outside_s,
-    :how_often_lost_track_of_time_s,
-    :how_excited_before_s,
-    :overall_how_interested_s,
-    :more_prepared_than_before_s,
-    :know_where_to_go_for_help_s,
-    :suitable_for_my_experience_s,
-    :would_recommend_s,
-    :part_of_community_s
+    :how_much_learned,
+    :how_motivating,
+    :how_clearly_presented,
+    :how_interesting,
+    :how_often_given_feedback,
+    :how_comfortable_asking_questions,
+    :how_often_taught_new_things,
+    :how_much_participated,
+    :how_often_talk_about_ideas_outside,
+    :how_often_lost_track_of_time,
+    :how_excited_before,
+    :overall_how_interested,
+    :more_prepared_than_before,
+    :know_where_to_go_for_help,
+    :suitable_for_my_experience,
+    :would_recommend,
+    :part_of_community
   ]
 
   FREE_RESPONSE_QUESTIONS = [
-    :things_facilitator_did_well_s,
-    :things_facilitator_could_improve_s,
-    :things_you_liked_s,
-    :things_you_would_change_s,
-    :anything_else_s
+    :things_facilitator_did_well,
+    :things_facilitator_could_improve,
+    :things_you_liked,
+    :things_you_would_change,
+    :anything_else
   ]
 
   FACILITATOR_SPECIFIC_QUESTIONS = [
-    :how_clearly_presented_s,
-    :how_interesting_s,
-    :how_often_given_feedback_s,
-    :help_quality_s,
-    :how_comfortable_asking_questions_s,
-    :how_often_taught_new_things_s,
-    :things_facilitator_did_well_s,
-    :things_facilitator_could_improve_s
+    :how_clearly_presented,
+    :how_interesting,
+    :how_often_given_feedback,
+    :help_quality,
+    :how_comfortable_asking_questions,
+    :how_often_taught_new_things,
+    :things_facilitator_did_well,
+    :things_facilitator_could_improve
   ]
 
   def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false)
@@ -89,9 +87,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
 
     workshops.each do |workshop|
-      enrollment_ids = workshop.enrollments.pluck(:id)
-
-      responses = PEGASUS_DB[:forms].where(source_id: enrollment_ids, kind: 'PdWorkshopSurvey')
+      responses = Pd::WorkshopSurvey.where(pd_enrollment: workshop.enrollments)
 
       if facilitator_breakdown
         workshop.facilitators.each do |facilitator|
@@ -105,9 +101,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
         response_count += 1
 
-        survey_response = JSON.parse(response[:data])
-
-        survey_response.symbolize_keys.each do |question, answer|
+        response.sanitize_form_data_hash.each do |question, answer|
           if answer.is_a? Hash
             # Then "answer" is actually a hash of answers for each
             # facilitator name
@@ -167,12 +161,12 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
 
     if OVERALL_SUCCESS_QUESTIONS.include?(question)
-      score = ::PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(answer) + 1
+      score = Pd::WorkshopSurvey::STRONGLY_DISAGREE_TO_STRONGLY_AGREE.index(answer) + 1
     elsif FREE_RESPONSE_QUESTIONS.include?(question)
       # Do nothing - no score to compute but don't skip this
     else
-      return unless ::PdWorkshopSurvey::OPTIONS.key?(question) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(question)
-      score = get_score_for_response(::PdWorkshopSurvey::OPTIONS, question, answer)
+      return unless Pd::WorkshopSurvey.options.key?(question) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(question)
+      score = get_score_for_response(Pd::WorkshopSurvey.options, question, answer)
     end
 
     if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(question)
