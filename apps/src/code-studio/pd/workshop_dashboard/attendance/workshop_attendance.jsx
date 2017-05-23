@@ -208,6 +208,8 @@ const WorkshopAttendance = React.createClass({
             <strong>
               Remember: they need to do this EVERY day of the workshop.
             </strong>&nbsp;
+          </p>
+          <p>
             You can double-check that they are marking themselves as attended by looking for their names below.
             Note: as of May 20, 2017 participants no longer need to join a section to attend a workshop.
             If you would like to set up a section for your workshop to show them how to do this in class,
