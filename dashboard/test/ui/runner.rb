@@ -109,6 +109,7 @@ def parse_options
       opts.separator ""
       opts.separator "Specific options:"
       opts.on("-c", "--config BrowserConfigName,BrowserConfigName1", Array, "Specify the name of one or more of the configs from ") do |c|
+        puts c
         options.config = c
       end
       opts.on("-b", "--browser BrowserName", String, "Specify a browser") do |b|
