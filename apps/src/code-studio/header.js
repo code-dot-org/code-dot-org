@@ -190,10 +190,9 @@ function remixProject() {
     // the first time yet. In all of these cases, copy will create a new project
     // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    const shouldNavigate = true;
     dashboard.project.copy(newName, function () {
       $(".project_name").text(newName);
-    }, shouldNavigate);
+    }, {shouldNavigate: true});
   }
 }
 
