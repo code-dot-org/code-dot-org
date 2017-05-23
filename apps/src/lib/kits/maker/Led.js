@@ -1,4 +1,4 @@
-/** @file Wrapper around Johnny-Five Led component */
+/** @file Extended Johnny-Five Led component with Code.org-specific behavior */
 import five from '@code-dot-org/johnny-five';
 
 export default class Led extends five.Led {
