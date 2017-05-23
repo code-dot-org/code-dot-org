@@ -18,6 +18,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
+  get "/home", to: "home#home"
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -124,12 +126,12 @@ Dashboard::Application.routes.draw do
   post '/locale', to: 'home#set_locale', as: 'locale'
 
   # quick links for cartoon network arabic
-  get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', return_to: '/flappy/1'
-  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', return_to: '/s/playlab/stage/1/puzzle/1'
-  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
+  get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
+  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/stage/1/puzzle/1'
+  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/stage/1/puzzle/1'
 
   # /lang/xx shortcut for all routes
-  get '/lang/:locale', to: 'home#set_locale', return_to: '/'
+  get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :levels do
@@ -343,7 +345,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get 'my-professional-learning', to: 'pd/professional_learning_landing#index'
+  get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
   namespace :pd do
     # React-router will handle sub-routes on the client.
@@ -379,6 +381,13 @@ Dashboard::Application.routes.draw do
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
+
+    get 'attend/:session_code', controller: 'session_attendance', action: 'attend'
+    post 'attend/:session_code', controller: 'session_attendance', action: 'select_enrollment'
+    get 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'join_session'
+    post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
+    get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
+    post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

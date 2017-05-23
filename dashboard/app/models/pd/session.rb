@@ -73,9 +73,16 @@ class Pd::Session < ActiveRecord::Base
 
   def open_for_attendance?
     code.present? &&
-      workshop.state == Pd::Workshop::STATE_IN_PROGRESS &&
-      start - 24.hours < Time.zone.now &&
-      self.end + 24.hours > Time.zone.now
+      !too_soon_for_attendance? &&
+      !too_late_for_attendance?
+  end
+
+  def too_soon_for_attendance?
+    workshop.started_at.nil? || start - 12.hours > Time.zone.now
+  end
+
+  def too_late_for_attendance?
+    workshop.ended_at || self.end + 12.hours < Time.zone.now
   end
 
   private

@@ -2,7 +2,9 @@ import React from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
-import placeholderImage from './placeholder.jpg';
+import $ from 'jquery';
+
+const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 const styles = {
   card: {
@@ -212,19 +214,26 @@ const ProjectCard = React.createClass({
     );
   },
 
+  getLastModifiedTimestamp: function (timestamp) {
+    if (timestamp.toLocaleString) {
+      return timestamp.toLocaleString();
+    }
+    return timestamp.toString();
+  },
+
   render() {
     const { projectData } = this.props;
 
     const {type, channel, name} = this.props.projectData;
-    const url = `/projects/${type}/${channel}/view`;
+    const url = `/projects/${type}/${channel}`;
 
     return (
       <div>
         <div style={styles.card}>
           <div style={styles.thumbnail} >
-            <a href={url} style={{width: '100%'}}>
+            <a target="_blank" href={url} style={{width: '100%'}}>
               <img
-                src={projectData.thumbnailUrl || placeholderImage}
+                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}
               />
             </a>
@@ -241,8 +250,8 @@ const ProjectCard = React.createClass({
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            {i18n.published()}:
-            <span style={styles.bold} > {this.dateFormatter(projectData.publishedAt)} at {this.timeFormatter(projectData.publishedAt)}</span>
+            {i18n.published()}:&nbsp;
+            <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}> {this.getLastModifiedTimestamp(projectData.publishedAt)}</time>
           </div>
         </div>
 
@@ -250,6 +259,12 @@ const ProjectCard = React.createClass({
 
       </div>
     );
+  },
+
+  componentDidMount: function () {
+    if ($('.versionTimestamp').timeago) {
+      $('.versionTimestamp').timeago();
+    }
   }
 });
 

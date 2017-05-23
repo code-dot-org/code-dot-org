@@ -168,7 +168,7 @@ class SectionApiHelperTest < SequelTestCase
       end
     end
 
-    describe 'valid courses' do
+    describe 'valid scripts' do
       before do
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
@@ -180,32 +180,32 @@ class SectionApiHelperTest < SequelTestCase
         ]
       end
 
-      it 'accepts valid course_ids' do
-        assert DashboardSection.valid_course_id?('1')
-        assert DashboardSection.valid_course_id?('3')
+      it 'accepts valid script ids' do
+        assert DashboardSection.valid_script_id?('1')
+        assert DashboardSection.valid_script_id?('3')
       end
 
-      it 'does not accept invalid course_ids' do
-        assert !DashboardSection.valid_course_id?('2')
-        assert !DashboardSection.valid_course_id?('111')
-        assert !DashboardSection.valid_course_id?('invalid!!')
+      it 'does not accept invalid script ids' do
+        assert !DashboardSection.valid_script_id?('2')
+        assert !DashboardSection.valid_script_id?('111')
+        assert !DashboardSection.valid_script_id?('invalid!!')
       end
 
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Classic Maze"' do
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Adventurer'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Designer'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Classic Maze'
-        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
-        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
+        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Adventurer'
+        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Designer'
+        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Classic Maze'
+        refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'mc'
+        refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'hourofcode'
       end
 
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Laberinto clásico" in Spanish"' do
         I18n.locale = 'es-ES'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Adventurer'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Designer'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Laberinto clásico'
-        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
-        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
+        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Adventurer'
+        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Designer'
+        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Laberinto clásico'
+        refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'mc'
+        refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'hourofcode'
       end
     end
 
@@ -293,7 +293,6 @@ class SectionApiHelperTest < SequelTestCase
                 user_type: 'student',
                 gender: nil,
                 birthday: nil,
-                prize_earned: false,
                 total_lines: 0,
                 secret_words: nil,
                 secret_picture_name: nil,
@@ -331,7 +330,6 @@ class SectionApiHelperTest < SequelTestCase
                 user_type: 'student',
                 gender: nil,
                 birthday: nil,
-                prize_earned: false,
                 total_lines: 0,
                 secret_words: nil,
                 secret_picture_name: nil,

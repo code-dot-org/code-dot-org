@@ -2369,6 +2369,12 @@ en:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
+            Multi-Screen Apps:
+              name: Multi-Screen Apps
+            '"if" Statements Unplugged':
+              name: '"if" Statements Unplugged'
+            Boolean Expressions and "if" Statements:
+              name: Boolean Expressions and "if" Statements
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -4643,7 +4649,7 @@ en:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
           description_short: Programming with physical devices
-          description: The sixth unit of CS Discoveries, in which students use App Lab and the Maker Toolkit to develop programs that communicate with a physical board.
+          description: In Unit 6, students further develop their programming skills while exploring the role of hardware platforms in computing. Harkening back to the Input and Output elements of the Input/Storage/Processing/Output model for a computing, students look towards current and “smart” devices to understand the ways in which different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that students saw in the smart devices they explored earlier, and they get to see how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge that asks students to use the Circuit Playground as the basis for an innovation of their own design.
           stages:
             Computing Innovations:
               name: Computing Innovations
@@ -4765,7 +4771,7 @@ en:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: ''
-          description: ''
+          description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the students' choosing.
           stages:
             Representation Matters:
               name: Representation Matters
@@ -5121,3 +5127,9 @@ en:
           description_audience: ''
           description_short: Web Development
           description: ''
+        artist-and-bb8:
+          stages:
+            B8 New BB8:
+              name: B8 New BB8
+            c8 to BB8:
+              name: c8 to BB8

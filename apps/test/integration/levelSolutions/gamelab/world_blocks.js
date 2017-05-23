@@ -76,6 +76,39 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    }
+    },
+    // Check that createEdgeSprites makes the edges group and the
+    // edge sprites available in the global namespace
+    {
+      description: "Edge sprites",
+      editCode: true,
+      xml:
+      'createEdgeSprites();\n' +
+      'if (!edges) console.log("Fail: edges was falsy");\n' +
+      'if (!leftEdge) console.log("Fail: edges was falsy");\n' +
+      'if (!rightEdge) console.log("Fail: edges was falsy");\n' +
+      'if (!topEdge) console.log("Fail: edges was falsy");\n' +
+      'if (!bottomEdge) console.log("Fail: edges was falsy");\n' +
+      'console.log("done")',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.tickAppUntil(Gamelab, function () {
+          var debugOutput = document.getElementById('debug-output');
+          return debugOutput.textContent !== "";
+        }).then(function () {
+          Gamelab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "done");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
   ]
 };

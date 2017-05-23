@@ -47,7 +47,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal new_file_data, second_version
 
     # Check cache headers
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
   end
 
   def test_get_source_blocks_profanity_violations

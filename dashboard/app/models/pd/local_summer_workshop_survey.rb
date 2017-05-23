@@ -7,6 +7,7 @@
 #  form_data        :text(65535)      not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  type             :string(255)
 #
 # Indexes
 #
@@ -17,7 +18,7 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
   def required_fields
     [
       :received_clear_communication,
-      :feedback_venue_logistics,
+      :venue_feedback,
       :how_much_learned,
       :how_motivating,
       :who_facilitated,

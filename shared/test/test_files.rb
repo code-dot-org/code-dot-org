@@ -99,21 +99,57 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(actual_dog_image_info, file_infos['files'][0])
     assert_fileinfo_equal(actual_cat_image_info, file_infos['files'][1])
 
-    # Verify that we download the file as an attachment when hitting the normal GET api
     @api.get_object(dog_image_filename)
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
-    assert_equal "attachment; filename=\"#{dog_image_filename}\"", last_response['Content-Disposition']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
     assert_equal dog_image_body, last_response.body
 
-    # Verify that we download the file without Content-Disposition when hitting the codeprojects.org root URL
     @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
-    assert_nil last_response['Content-Disposition']
     assert_equal dog_image_body, last_response.body
 
     @api.delete_object(dog_image_filename)
     assert successful?
 
     @api.delete_object(cat_image_filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
+  def test_content_disposition
+    dog_image_filename = @api.randomize_filename('dog.png')
+    dog_image_body = 'stub-dog-contents'
+    html_filename = @api.randomize_filename('index.html')
+    html_body = 'stub-html-contents'
+
+    post_file_data(@api, dog_image_filename, dog_image_body, 'image/png')
+    post_file_data(@api, html_filename, html_body, 'text/html')
+
+    # Verify that we download non-whitelisted file types as an attachment when
+    # hitting the normal GET api.
+
+    @api.get_object(dog_image_filename)
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.get_object(html_filename)
+    assert successful?
+    assert_equal "attachment; filename=\"#{html_filename}\"", last_response['Content-Disposition']
+
+    # Verify that we download the files without Content-Disposition when hitting
+    # the codeprojects.org root URL.
+
+    @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.get_root_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.delete_object(dog_image_filename)
+    assert successful?
+
+    @api.delete_object(html_filename)
     assert successful?
 
     delete_all_manifest_versions
@@ -236,7 +272,7 @@ class FilesTest < FilesApiTestBase
     assert_equal v2_file_data, @api.get_object_version(filename, versions[0]['versionId'])
 
     # Check cache headers
-    assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
 
     # List project versions.
     project_versions = @api.list_files_versions
@@ -389,7 +425,63 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_files_copy_all
+    # This test creates 2 channels
+    delete_all_files('files_test/1/2')
+    dest_channel_id = create_channel
+    src_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+    dest_api = FilesApiTestHelper.new(current_session, 'files', dest_channel_id)
+
+    image_filename = @api.randomize_filename('Cat.jpg')
+    image_body = 'stub-image-contents'
+
+    sound_filename = @api.randomize_filename('Woof Woof.mp3')
+    sound_body = 'stub-sound-contents'
+
+    post_file_data(src_api, image_filename, image_body, 'image/jpeg')
+    post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
+    src_api.patch_abuse(10)
+
+    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+
+    copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
+    dest_file_infos = dest_api.list_objects["files"]
+
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+
+    dest_api.get_object(URI.escape(image_filename))
+    assert successful?
+    assert_equal image_body, last_response.body
+
+    dest_api.get_object(URI.escape(sound_filename))
+    assert successful?
+    assert_equal sound_body, last_response.body
+
+    # abuse score didn't carry over
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(sound_filename.downcase))
+
+    src_api.delete_object(URI.escape(image_filename))
+    src_api.delete_object(URI.escape(sound_filename))
+    delete_all_manifest_versions
+    dest_api.delete_object(URI.escape(image_filename))
+    dest_api.delete_object(URI.escape(sound_filename))
+    delete_channel(dest_channel_id)
+  end
+
   private
+
+  def delete_all_files(bucket)
+    delete_all_objects(CDO.files_s3_bucket, bucket)
+  end
+
+  def copy_all(src_channel_id, dest_channel_id)
+    FileBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
+  end
 
   def post_file(api, uploaded_file)
     body = {files: [uploaded_file]}

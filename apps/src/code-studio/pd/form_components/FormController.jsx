@@ -68,13 +68,13 @@ export default class FormController extends React.Component {
    * @override
    */
   componentDidUpdate(prevProps, prevState) {
-    // If we got new errors or just changed pages, scroll to top of form
+    // If we got new errors or just changed pages, scroll to top of the page
     const newErrors = prevState.errors.length === 0 && this.state.errors.length > 0;
     const newPage = prevState.currentPage !== this.state.currentPage;
 
     if (newErrors || newPage) {
       $('html, body').animate({
-        scrollTop: $(this.form).offset().top
+        scrollTop: 0
       }, 200);
     }
   }

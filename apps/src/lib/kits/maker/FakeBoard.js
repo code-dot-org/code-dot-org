@@ -34,7 +34,7 @@ export default class FakeBoard extends EventEmitter {
     const constructors = {
       Led: FakeLed,
       Board: FakeComponent,
-      RGB: FakeColorLed,
+      NeoPixel: FakeColorLed,
       Button: FakeButton,
       Switch: FakeToggleSwitch,
       Piezo: FakeBuzzer,
