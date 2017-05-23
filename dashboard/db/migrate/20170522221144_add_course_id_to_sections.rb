@@ -1,6 +1,7 @@
 class AddCourseIdToSections < ActiveRecord::Migration[5.0]
   def change
-    add_column :sections, :course_id, :integer, after: :script_id
-    add_foreign_key :sections, :courses
+    change_table :sections do |t|
+      t.belongs_to :course, after: :script_id, foreign_key: true, index: false
+    end
   end
 end
