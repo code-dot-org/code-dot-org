@@ -1,0 +1,33 @@
+---
+title: Hour of Code Teacher Resources
+nav: hoc_teacher_resources_nav
+theme: responsive
+---
+%link{:href=>"/css/student.css", :rel=>"stylesheet"}
+%link(rel='stylesheet' type='text/css' href='/shared/css/course-blocks.css')
+
+%h1 Hour of Code
+
+.courses
+  .coursesheader
+    %h2{style: 'margin-bottom: 0px'}= I18n.t('dashboard_landing_available_title')
+    %h3= I18n.t('dashboard_hoc_courses')
+    = I18n.t('dashboard_hoc_courses_desc_and_cta')
+  %br/
+
+.hoc-tiles-container
+
+.full-resource-block
+  %img.side-image.left.col-50-student{src: "/images/fit-485/student/hour_of_code.jpg"}
+  .side-description-area.right.col-50-student
+    .description
+      %h2.resource-title More Activities from Partners
+      The Hour of Code website has over 100 computer science activities from Code.org and partners for all ages and experience levels.
+    %a{href: "/learn"}
+      %button.orange-button Go
+
+:javascript
+  $(document).ready(function () {
+    $(".hoc-tiles-container").load( "/dashboardapi/hoc_courses_narrow", function() {
+    });
+  });
