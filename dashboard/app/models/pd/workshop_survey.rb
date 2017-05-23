@@ -21,12 +21,12 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   validates_presence_of :pd_enrollment
 
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [
-    'Strongly disagree',
+    'Strongly Disagree',
     'Disagree',
-    'Slightly disagree',
-    'Slightly agree',
+    'Slightly Disagree',
+    'Slightly Agree',
     'Agree',
-    'Strongly agree'
+    'Strongly Agree'
   ].freeze
 
   OTHER = 'Other'.freeze
@@ -39,7 +39,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :reason_for_attending,
       :how_heard,
       :received_clear_communication,
-      :venue_feedback,
       :school_has_tech,
       :how_much_learned,
       :how_motivating,
@@ -67,7 +66,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :how_comfortable_asking_questions,
       :how_often_taught_new_things,
       :things_facilitator_did_well,
-      :things_facilitator_could_improve,
+      :things_facilitator_could_improve
     ].freeze
   end
 
