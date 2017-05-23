@@ -167,19 +167,26 @@ class FilesApi < Sinatra::Base
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
 
-    # Unless this is hosted by codeprojects.org,
-    # serve all files with Content-Disposition set to attachment so browsers will not render potential HTML content inline
-    # User-generated content can contain script that we don't want to host as authentic web content from our domain
-    response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\"" unless code_projects_domain_root_route
-
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
+
+    # Append `no-transform` to existing Cache-Control header
+    response['Cache-Control'] += ', no-transform'
 
     filename.downcase! if endpoint == 'files'
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
     content_type type
+
+    # Unless this is hosted by codeprojects.org or is a safely viewable file type,
+    # serve all files with Content-Disposition set to attachment so browsers
+    # will not render potential HTML content inline. User-generated content can
+    # contain script that we don't want to host as authentic web content from
+    # our domain.
+    unless code_projects_domain_root_route || safely_viewable_file_type?(type)
+      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+    end
 
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
@@ -196,6 +203,13 @@ class FilesApi < Sinatra::Base
     end
 
     result[:body]
+  end
+
+  # A list of some file types that are safe to view in the browser without
+  # risking script execution. Initially limited to images since it is useful
+  # to view these via the browser context menu.
+  def safely_viewable_file_type?(extension)
+    %w(.jpg .jpeg .gif .png).include? extension.downcase
   end
 
   CONTENT_TYPE = 'Content-Type'.freeze
@@ -753,10 +767,6 @@ class FilesApi < Sinatra::Base
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
   def get_manifest(bucket, encrypted_channel_id)
-    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    if manifest_result[:status] == 'NOT_FOUND'
-      return []
-    end
-    JSON.load manifest_result[:body]
+    bucket.get_manifest(encrypted_channel_id)
   end
 end

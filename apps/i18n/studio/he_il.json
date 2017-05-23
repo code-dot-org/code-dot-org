@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "אתם צריכים להשיג 20 דרואידים עכבריים. השתמשו בפקודת \"add a Mouse Droid\" בתוך אירוע \"when get Mouse Droid\" על מנת להוסיף שניים או יותר דרואידים עכבריים בכל פעם שאתם משיגים אחד.",
   "failedMultiplyCharactersTimeoutGotSome": "כל הכבוד, הוספתם קוד על מנת לייצר דרואידים עכבריים. כעת תוכלו לעבור לשלב הבא, או לנסות שוב על מנת להשיג 20 דרואידים עכבריים. יהיה לכם קל יותר אם תוסיפו יותר מהם! (הקישו והחזיקו את מקשי החצים במקלדת או המסך שלכם על מנת לנוע מהר יותר)",
   "failedChangeSettingTimeout": "השיגו שלושה טייסי מחתרת על מנת להמשיך הלאה.",
-  "failedChangeSettingSettings": "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו."
+  "failedChangeSettingSettings": "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }

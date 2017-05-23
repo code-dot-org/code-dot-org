@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HeadingBanner from '../HeadingBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import color from "../../util/color";
@@ -25,11 +26,14 @@ const Courses = React.createClass({
   propTypes: {
     courses: shapes.courses,
     isEnglish: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired
+    isTeacher: React.PropTypes.bool.isRequired,
+    linesCount: React.PropTypes.string.isRequired,
+    studentsCount: React.PropTypes.string.isRequired,
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired
   },
 
   componentDidMount() {
-    // The components used here are are implemented in legacy HAML/CSS rather than React.
+    // The components used here are implemented in legacy HAML/CSS rather than React.
     if (this.props.isEnglish && this.props.isTeacher) {
       $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
       $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
@@ -39,10 +43,17 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix } = this.props;
 
     return (
       <div>
+        <HeadingBanner
+          headingText={i18n.courses()}
+          subHeadingText={i18n.coursesHeadingSubText(
+            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+          )}
+        />
+
         {courses && (
           <RecentCoursesCollapsible
             courses={courses}
@@ -60,7 +71,7 @@ const Courses = React.createClass({
             </div>
             <ProtectedStatefulDiv ref="courseExplorer"/>
 
-            <TeacherCourses/>
+            <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
             <div style={styles.heading}>
               {i18n.toolExplorerHeading()}

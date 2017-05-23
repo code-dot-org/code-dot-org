@@ -3,6 +3,7 @@ import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/configuredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
+import * as codegen from '@cdo/apps/codegen';
 import {makeAssertableObj, attachAssertToInterpreter} from './interpreterTestUtils';
 
 describe("The CustomMarshalingInterpreter", () => {
@@ -281,7 +282,77 @@ describe("The CustomMarshalingInterpreter", () => {
       expect(Interpreter.prototype.getProperty).to.have.been.called;
       expect(interpreterUndefined).to.equal(interpreter.UNDEFINED);
     });
-
   });
 
+  describe("hasProperty method", () => {
+    let player;
+
+    class Foo {
+      constructor(name) {
+        this.name = name;
+      }
+      whatsMyName() {
+        return this.name;
+      }
+    }
+
+    beforeEach(() => {
+      // Set up a single sample case for all of the hasProperty tests.
+      player = {};
+      interpreter = new CustomMarshalingInterpreter('', new CustomMarshaler({
+        globalProperties: {
+          name: player, // meaning the 'name' property on the 'player' object
+                        // goes into the global scope
+          age: player   // also the 'age' property on the 'player' object
+        },
+        blockedProperties: ['name'],
+        objectList: [{instance: Foo}],
+      }));
+    });
+
+    it("delegates to the base class's hasProperty method by default", () => {
+      const retVal = interpreter.hasProperty(interpreter.globalScope, 'undefined');
+      expect(retVal).to.be.true;
+      expect(Interpreter.prototype.hasProperty).to.have.been.called;
+    });
+
+    it("does not find globals that don't exist", () => {
+      expect(
+          interpreter.hasProperty(interpreter.globalScope, 'notAGlobalProperty')
+      ).to.be.false;
+    });
+
+    it("finds custom-marshaled globals", () => {
+      expect(
+          interpreter.hasProperty(interpreter.globalScope, 'age')
+      ).to.be.true;
+    });
+
+    it("does not find blocked custom-marshaled globals", () => {
+      expect(
+          interpreter.hasProperty(interpreter.globalScope, 'name')
+      ).to.be.false;
+    });
+
+    it("finds properties on custom-marshaled objects", () => {
+      const customMarshaledObject = codegen.marshalNativeToInterpreter(interpreter, new Foo("hello world"));
+      expect(
+          interpreter.hasProperty(customMarshaledObject, 'whatsMyName')
+      ).to.be.true;
+    });
+
+    it("does not find properties that don't exist on custom-marshaled objects", () => {
+      const customMarshaledObject = codegen.marshalNativeToInterpreter(interpreter, new Foo("hello world"));
+      expect(
+          interpreter.hasProperty(customMarshaledObject, 'notARealProperty')
+      ).to.be.false;
+    });
+
+    it("does not find blocked properties on custom-marshaled objects", () => {
+      const value = codegen.marshalNativeToInterpreter(interpreter, new Foo("hello world"));
+      expect(
+          interpreter.hasProperty(value, 'name')
+      ).to.be.false;
+    });
+  });
 });

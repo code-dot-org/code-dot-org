@@ -47,10 +47,7 @@ function getItemName(input) {
   }
   return input;
 }
-
-Craft.executeUserCode = function () {
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-  const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+export const executeUserCode = function (client, code) {
   let interpreter;
 
   /**
@@ -276,6 +273,8 @@ export default class Craft {
     studioApp().toggleRunReset('reset');
     studioApp().attempts++;
 
-    executeUserCode();
+    const codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+    executeUserCode(client, code);
   }
 }

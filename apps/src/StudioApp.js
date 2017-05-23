@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, droplet, addToHome */
+/* global Blockly, droplet, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -7,6 +7,7 @@ import {EventEmitter} from 'events';
 import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
+import trackEvent from './util/trackEvent';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -697,6 +698,42 @@ StudioApp.prototype.handleSharing_ = function (options) {
   }
 };
 
+export function makeFooterMenuItems() {
+  const footerMenuItems = [
+    {
+      text: i18n.t('footer.try_hour_of_code'),
+      link: 'https://code.org/learn',
+      newWindow: true
+    },
+    {
+      text: i18n.t('footer.report_abuse'),
+      link: "/report_abuse",
+      newWindow: true
+    },
+    {
+      text: i18n.t('footer.how_it_works'),
+      link: project.getProjectUrl('/edit'),
+      newWindow: false
+    },
+    {
+      text: i18n.t('footer.copyright'),
+      link: '#',
+      copyright: true
+    },
+    {
+      text: i18n.t('footer.tos'),
+      link: "https://code.org/tos",
+      newWindow: true
+    },
+    {
+      text: i18n.t('footer.privacy'),
+      link: "https://code.org/privacy",
+      newWindow: true
+    }
+  ];
+  return footerMenuItems;
+}
+
 StudioApp.prototype.renderShareFooter_ = function (container) {
   var footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
@@ -713,38 +750,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
       width: $("#visualization").width()
     },
     className: 'dark',
-    menuItems: [
-      {
-        text: i18n.t('footer.try_hour_of_code'),
-        link: 'https://code.org/learn',
-        newWindow: true
-      },
-      {
-        text: i18n.t('footer.report_abuse'),
-        link: "/report_abuse",
-        newWindow: true
-      },
-      {
-        text: i18n.t('footer.how_it_works'),
-        link: location.href + "/edit",
-        newWindow: false
-      },
-      {
-        text: i18n.t('footer.copyright'),
-        link: '#',
-        copyright: true
-      },
-      {
-        text: i18n.t('footer.tos'),
-        link: "https://code.org/tos",
-        newWindow: true
-      },
-      {
-        text: i18n.t('footer.privacy'),
-        link: "https://code.org/privacy",
-        newWindow: true
-      }
-    ],
+    menuItems: makeFooterMenuItems(),
     phoneFooter: true
   };
 

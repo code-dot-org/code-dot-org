@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "Sul on vaja saada 20 hiirt. Kasuta sündmuses „kui saab hiire“ käsku „lisa hiir“, et lisada mõne hiire kättesaamisel kaks või rohkem hiirt juurde.",
   "failedMultiplyCharactersTimeoutGotSome": "Tubli töö! Lisasid hiirte loomiseks koodi. Võid liikuda järgmise mõistatuse juurde või proovida uuesti saada 20 hiirt. Et asi oleks lihtsam, lisa neid juurde! (Kiiremaks liikumiseks vajuta pikalt klaviatuuril (või ekraanil) olevaid klahve.)",
   "failedChangeSettingTimeout": "Edasiliikumiseks hangi kolm pilooti.",
-  "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse."
+  "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }

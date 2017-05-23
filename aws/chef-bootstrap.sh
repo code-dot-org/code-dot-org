@@ -112,9 +112,17 @@ ln -fs ${SHUTDOWN_SH} /etc/rc0.d/K04chef_shutdown
 ln -fs ${SHUTDOWN_SH} /etc/rc6.d/K04chef_shutdown
 
 if [ "${LOCAL_MODE}" = "1" ]; then
+
+  # Keep this in sync with CHEF_KEY constant in cloud_formation.rb
+  if [ "${ENVIRONMENT}" = "adhoc" ]; then
+    CHEF_KEY=adhoc/chef
+  else
+    CHEF_KEY=chef
+  fi
+
   mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
   # Install branch-specific Chef cookbooks from s3.
-  REPO_COOKBOOK_URL=s3://${S3_BUCKET}/chef/${BRANCH}.tar.gz
+  REPO_COOKBOOK_URL=s3://${S3_BUCKET}/${CHEF_KEY}/${BRANCH}.tar.gz
   aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH}
 
   # Boilerplate `adhoc` environment for local Chef.

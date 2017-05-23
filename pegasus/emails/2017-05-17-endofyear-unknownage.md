@@ -9,7 +9,7 @@ subject: "An amazing statistic. And together we can do more."
       } 
   }
 </style>
-
+  
 Hello teachers!
 
 The days are longer, the sun’s brighter, and students (and teachers) can’t wait to start summer break! 
@@ -24,9 +24,20 @@ Ten thousand passionate technologists worldwide are eager to share their love of
 
 <img class="pattern" src="https://s3.amazonaws.com/cdo-email-images/amy_teaching.png" alt="Volunteer in a classroom" width="400" style="display: block; border: 0;" />
 
-### Please help spread the word about Code.org workshops
+### Start preparing for the 2017-18 school year
 
-If you enjoyed your [Code.org](https://code.org/professional-development-workshopsworkshop) experience, forward this email to a teacher today, and urge them to [take a one-day workshop this summer](https://code.org/professional-development-workshops). Our workshops are open to any K-5 teacher - no computer background needed. Teachers can integrate computer science once a week in their classroom with our 20-hour courses for beginners. They’ll learn how to introduce computer science basics in a format that's fun and accessible to the youngest learners and receive all the supplies they need to teach!
+As you start planning for next school year, we’ve updated our tools for middle and high school classrooms. 
+
+Are your students hoping to move beyond blocks to learn JavaScript? [App Lab](http://code.org/applab) makes it easy for beginners to create their own apps. [Watch the video and play with it over the summer](http://code.org/applab) to see if it’s right for your class. 
+
+Make sure to look at [Code.org’s library of videos](https://code.org/educate/resources/videos) to help you teach your students computer science concepts next year. [Start with How the Internet Works series](https://code.org/educate/resources/videos) - it’s my favorite. Or, get hands-on learning on how encryption, text compression, and other concepts work with our [widget library](https://code.org/educate/csp/widgets).
+
+### Expand computer science offerings in your school
+If your high school doesn’t offer [CS Principles](http://code.org/csp) or [AP Computer Science A](https://code.org/educate/curriculum/apcsa), please speak with your principal or the administration. These are the fastest-spreading courses in secondary education, and students of all backgrounds enjoy them. If you want help selling the idea, [use this presentation](https://code.org/files/computer_science_advocacy.pptx). If your school is on board, the links above can help you get started.
+
+### Registration for summer professional learning workshops is open
+
+Led by experienced Code.org facilitators, [we offer K-5 teachers a **no cost, one-day workshop** in Computer Science Fundamentals](https://code.org/professional-development-workshops). Our workshops receive rave reviews, and are open to any K-5 teacher - no computer background needed. Integrate computer science once a week in your classroom with our 20-hour courses for beginners. You’ll learn how to introduce computer science basics in a format that's fun and accessible to the youngest learners and you’ll also receive all the supplies you need to teach!
 
 Computer science is key to opening so many doors for students in today’s world, and this movement is just getting started, thanks to you! Half a million passionate teachers like you have already [signed up on Code.org](https://code.org/) to make sure students have every opportunity to succeed. Take another step to grow K-12 computer science today!
 
@@ -44,3 +55,5 @@ It is entirely your responsibility to thoroughly check references or perform any
 <p> <hr/> <small> You’re receiving this email because you signed up on Code Studio or signed the petition at Code.org and let us know you’re an educator. Code.org is a 501c3 non-profit. Our address is 1501 4th Ave, Suite 900, Seattle, WA, 98101.
 
 <strong>Don't want these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
+
+![](<%= tracking_pixel %>)

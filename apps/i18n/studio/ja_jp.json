@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "20匹のマウスドロイドをつかまえてください。\"when get Mouse Droid\"（マウスドロイドをつかまえた時）イベントの中の \"add a Mouse Droid\"（マウスドロイドを１匹追加）コマンドをつかって、1匹つかまえるたびに、２匹(または2匹以上) のマウスドロイドが追加されるようにしましょう。",
   "failedMultiplyCharactersTimeoutGotSome": "おめでとうございます。マウスドロイドをつくるコードが追加されました。次のパズルへすすむか、または20匹のマウスドロイドをつかまえるパズルに再ちょうせんしてください。より多くのマウスドロイドを追加すると、ゲームが簡単になります。はやく動くには、キーボード (またはスクリーン) のやじるしを押しつづけてください。",
   "failedChangeSettingTimeout": "３人の反乱軍パイロットを捕まえてください。",
-  "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。"
+  "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }

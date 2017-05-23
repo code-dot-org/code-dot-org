@@ -192,6 +192,7 @@ function loadLevel() {
   )));
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
+  Studio.allowSpritesOutsidePlayspace = level.allowSpritesOutsidePlayspace;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowExecutionFactor = skin.slowExecutionFactor || 1;
   Studio.gridAlignedExtraPauseSteps = skin.gridAlignedExtraPauseSteps || 0;
@@ -202,6 +203,7 @@ function loadLevel() {
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
+  Studio.wallMapCollisions = level.wallMapCollisions || level.blockMovingIntoWalls;
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -328,7 +330,7 @@ var drawMap = function () {
   spriteLayer.setAttribute('id', 'spriteLayer');
   svg.appendChild(spriteLayer);
 
-  if (level.wallMapCollisions) {
+  if (Studio.wallMapCollisions) {
     Studio.drawMapTiles();
   }
 
@@ -686,7 +688,7 @@ var performQueuedMoves = function (i) {
   var nextPosition = getNextPosition(i, true);
   var newX, newY;
 
-  if (level.allowSpritesOutsidePlayspace) {
+  if (Studio.allowSpritesOutsidePlayspace) {
     newX = nextPosition.x;
     newY = nextPosition.y;
   } else {
@@ -707,7 +709,7 @@ var performQueuedMoves = function (i) {
     }
   }
 
-  if (level.blockMovingIntoWalls && (newX !== origX || newY !== origY)) {
+  if (Studio.wallMapCollisions && (newX !== origX || newY !== origY)) {
     if (Studio.willSpriteTouchWall(sprite, newX, newY)) {
       if (!Studio.willSpriteTouchWall(sprite, newX, origY)) {
         newY = origY;
@@ -1362,7 +1364,7 @@ function handleActorCollisionsWithCollidableList(
  * detected. executeCollision() is expected to be called later by the caller.
  */
 function handleEdgeCollisions(collidable, xPos, yPos, onCollided) {
-  for (var i = 0; i < EdgeClassNames.length && level.edgeCollisions; i++) {
+  for (var i = 0; i < EdgeClassNames.length && !Studio.allowSpritesOutsidePlayspace; i++) {
     var edgeXCenter, edgeYCenter;
     var edgeClass = EdgeClassNames[i];
     switch (edgeClass) {
@@ -1461,21 +1463,16 @@ function checkForCollisions() {
           iYCenter,
           createActorEdgeCollisionHandler(i));
 
-      if (level.wallMapCollisions) {
+      if (Studio.wallMapCollisions) {
         if (Studio.willSpriteTouchWall(sprite, iPos.x, iPos.y)) {
-          if (level.blockMovingIntoWalls) {
-            cancelQueuedMovements(i, false);
-            cancelQueuedMovements(i, true);
+          cancelQueuedMovements(i, false);
+          cancelQueuedMovements(i, true);
 
-            // Since we never overlap the wall/obstacle when blockMovingIntoWalls
-            // is set, throttle the event so it doesn't fire every frame while
-            // attempting to move into a wall:
+          // Since we never overlap the wall/obstacle when blockMovingIntoWalls
+          // is set, throttle the event so it doesn't fire every frame while
+          // attempting to move into a wall:
 
-            Studio.throttledCollideSpriteWithWallFunctions[i]();
-
-          } else {
-            Studio.collideSpriteWith(i, 'wall');
-          }
+          Studio.throttledCollideSpriteWithWallFunctions[i]();
         } else {
           sprite.endCollision('wall');
         }
@@ -1547,7 +1544,7 @@ function checkForItemCollisions() {
       continue;
     }
 
-    if (level.wallMapCollisions) {
+    if (Studio.wallMapCollisions) {
       if (Studio.walls.willCollidableTouchWall(item, next.x, next.y)) {
         Studio.currentEventParams = { eventObject: item };
         // Allow cmdQueue extension (pass true) since this handler
@@ -1560,7 +1557,7 @@ function checkForItemCollisions() {
       }
     }
 
-    if (level.edgeCollisions) {
+    if (!Studio.allowSpritesOutsidePlayspace) {
       handleEdgeCollisions(
           item,
           next.x,
@@ -1730,14 +1727,6 @@ Studio.initSprites = function () {
 
     if (level.projectileCollisions) {
       blocks.enableProjectileCollisions(Blockly);
-    }
-
-    if (level.edgeCollisions) {
-      blocks.enableEdgeCollisions(Blockly);
-    }
-
-    if (level.allowSpritesOutsidePlayspace) {
-      blocks.enableSpritesOutsidePlayspace(Blockly);
     }
   }
 };
@@ -2124,7 +2113,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMapCollisions ? level.wallMap : undefined;
+  return Studio.wallMapCollisions ? level.wallMap : undefined;
 }
 
 /**
@@ -2925,7 +2914,7 @@ Studio.execute = function () {
                                    'VALUE',
                                    ['any_item'].concat(skin.ItemClassNames));
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
-    if (level.wallMapCollisions) {
+    if (Studio.wallMapCollisions) {
       registerHandlers(handlers,
                        'studio_whenTouchObstacle',
                        'whenSpriteCollided-' +
@@ -3894,6 +3883,10 @@ Studio.callCmd = function (cmd) {
       Studio.setMap(cmd.opts);
       Studio.trackedBehavior.hasSetMap = true;
       break;
+    case 'setAllowSpritesOutsidePlayspace':
+      studioApp().highlight(cmd.id);
+      Studio.allowSpritesOutsidePlayspace = cmd.opts.value;
+      break;
     case 'setSprite':
       studioApp().highlight(cmd.id);
       Studio.setSprite(cmd.opts);
@@ -4259,7 +4252,7 @@ Studio.addItem = function (opts) {
   });
   var item = new Item(itemOptions);
 
-  if (level.blockMovingIntoWalls) {
+  if (Studio.wallMapCollisions) {
     // TODO (cpirich): just move within the map looking for open spaces instead
     // of randomly retrying random numbers
 
@@ -4641,7 +4634,7 @@ Studio.setBackground = function (opts) {
       skinBackground.background);
 
     // Draw the tiles (again) now that we know which background we're using.
-    if (level.wallMapCollisions) {
+    if (Studio.wallMapCollisions) {
       // Changing background can cause a change in the map used internally,
       // since we might use a different map to suit this background, so set
       // the map again.
@@ -4704,6 +4697,7 @@ Studio.setMap = function (opts) {
 
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
+  Studio.wallMapCollisions = true;
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
@@ -4733,7 +4727,7 @@ Studio.setMap = function (opts) {
  * Currently a work in progress with known issues.
  */
 Studio.fixSpriteLocation = function () {
-  if (level.wallMapCollisions && level.blockMovingIntoWalls) {
+  if (Studio.wallMapCollisions) {
 
     for (var spriteIndex = 0; spriteIndex < Studio.sprite.length; spriteIndex++) {
       var sprite = Studio.sprite[spriteIndex];
@@ -5590,7 +5584,7 @@ Studio.moveSingle = function (opts) {
   var projectedX = sprite.x + deltaX;
   var projectedY = sprite.y + deltaY;
 
-  if (level.blockMovingIntoWalls &&
+  if (Studio.wallMapCollisions &&
       Studio.willSpriteTouchWall(sprite, projectedX, projectedY)) {
     wallCollision = true;
 
@@ -5601,7 +5595,7 @@ Studio.moveSingle = function (opts) {
     Studio.throttledCollideSpriteWithWallFunctions[opts.spriteIndex]();
   }
 
-  if (!level.allowSpritesOutsidePlayspace &&
+  if (!Studio.allowSpritesOutsidePlayspace &&
       Studio.willSpriteLeavePlayspace(sprite, projectedX, projectedY)) {
     playspaceEdgeCollision = true;
   }
