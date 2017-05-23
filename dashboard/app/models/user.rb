@@ -399,10 +399,8 @@ class User < ActiveRecord::Base
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
-    # TODO(asher): Change this to always (primarily?) search by hashed_email,
-    # eliminating a DB query.
-    User.find_by_email(email.downcase) ||
-      User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+    hashed_email = User.hash_email(email)
+    User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
