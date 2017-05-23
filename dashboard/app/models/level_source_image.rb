@@ -74,7 +74,7 @@ class LevelSourceImage < ActiveRecord::Base
   private
 
   # @return [String] The filename for the image frame.
-  def framed_image_filename
+  def frame_image_filename
     if ['anna', 'elsa'].include? level_source.level.try(:skin)
       return "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
     end
