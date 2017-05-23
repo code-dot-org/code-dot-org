@@ -87,7 +87,7 @@ class HomeController < ApplicationController
         base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
         @sections = current_user.sections.map do |section|
           if section.script_id
-            course_name = Script.find_by_id(section.script_id)[:name]
+            course_name = Script.get_from_cache(section.script_id)[:name]
             course = data_t_suffix('script.name', course_name, 'title')
             link_to_course = script_url(section.script_id)
           else

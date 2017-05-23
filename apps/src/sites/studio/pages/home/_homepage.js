@@ -17,10 +17,11 @@ function showHomepage() {
         <TeacherHomepage
           announcements={[
             {
-              heading: "Go beyond an Hour of Code",
-              buttonText: "Go Beyond",
-              description: "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-              link: "http://teacherblog.code.org/"
+              heading: "Upcoming Changes to Site Navigation",
+              buttonText: "Learn more",
+              description: "Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning.",
+              link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
+              image: "navcard-placeholder.png"
             }
           ]}
           courses={homepageData.courses}

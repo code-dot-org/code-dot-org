@@ -14,7 +14,7 @@ const LABELS = {
   "degreeField": "What field of study is/are your degree(s) in?",
   "yearsTaughtStem": "For how many years have you taught a STEM subject?",
   "yearsTaughtCs": "For how many years have you taught Computer Science?",
-  "haveRequiredLicenses": "Do you have the required licenses / certifications to teach CS in your school district?"
+  "haveRequiredLicenses": "Do you have the required licenses/certifications to teach CS in your school district?"
 };
 
 export default class Demographics extends FormComponent {
