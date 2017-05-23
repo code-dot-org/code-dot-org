@@ -382,6 +382,22 @@ $height-to-width: 434 / 477;
   margin: $offsetY 0 0 $offsetX;
 }
 
+#code-connection-log {
+  width: 400px;
+  height: 400px;
+  margin-left: 17px;
+  margin-top: 61px;
+  overflow-y: scroll;
+  display: inline-block;
+  background-color: #333;
+  color: #f2f2f2;
+  #log-text {
+    line-height: 50px;
+    font-size: 22px;
+    color: $lightest_gray;
+  }
+}
+
 #craft-popup-connect {
   @include reset-dialog;
   background-color: #3C3C3C;
