@@ -694,7 +694,8 @@ var projects = module.exports = {
       });
     });
   },
-  updateCurrentData_(err, data, shouldNavigate) {
+  updateCurrentData_(err, data, options = {}) {
+    const { shouldNavigate } = options;
     if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
@@ -800,9 +801,9 @@ var projects = module.exports = {
    * copy as the current project.
    * @param {string} newName
    * @param {function} callback
-   * @param {boolean} shouldNavigate Whether to navigate to the project URL.
+   * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
    */
-  copy(newName, callback, shouldNavigate) {
+  copy(newName, callback, options = {}) {
     current = current || {};
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel,
@@ -811,7 +812,7 @@ var projects = module.exports = {
     delete current.hidden;
     this.setName(newName);
     channels.create(current, function (err, data) {
-      this.updateCurrentData_(err, data, shouldNavigate);
+      this.updateCurrentData_(err, data, options);
       this.save(wrappedCallback,
           false /* forceNewVersion */,
           true /* preparingRemix */);
