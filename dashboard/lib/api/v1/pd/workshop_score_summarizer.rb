@@ -182,7 +182,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
 
     if include_free_responses && FREE_RESPONSE_QUESTIONS.include?(question)
-      free_responses[question].append(answer)
+      answer_text = facilitator_name.nil? ? answer : "(#{facilitator_name}) #{answer}"
+      free_responses[question].append(answer_text)
     end
   end
 
