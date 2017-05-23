@@ -700,6 +700,11 @@ StudioApp.prototype.handleSharing_ = function (options) {
 export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
+      text: i18n.t('footer.try_hour_of_code'),
+      link: 'https://code.org/learn',
+      newWindow: true
+    },
+    {
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/edit'),
       newWindow: false
@@ -725,6 +730,13 @@ export function makeFooterMenuItems() {
       newWindow: true
     }
   ];
+
+  //Removes 'Try-HOC' from only gamelab footer menu
+  if (project.getProjectUrl().includes('gamelab')) {
+    //Look for: More elegant way to do this. -EP
+    footerMenuItems.shift();
+  }
+
   return footerMenuItems;
 }
 

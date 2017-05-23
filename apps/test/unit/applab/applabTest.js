@@ -4,6 +4,7 @@ import {assert, expect} from '../../util/configuredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import i18n from '@cdo/apps/code-studio/i18n';
 import commonMsg from '@cdo/locale';
+import applabMsg from '@cdo/applab/locale';
 
 
 var testUtils = require('../../util/testUtils');
@@ -625,6 +626,14 @@ describe('The applab.makeFooterMenuItems ', () => {
     var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
     var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
     expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+  });
+
+  it("returns How-It-Works item before Make-Own-App item", () => {
+    project.getUrl.returns('http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var makeOwnIndex = footItems.findIndex(item => item.text === applabMsg.makeMyOwnApp());
+    expect(howItWorksIndex).to.be.below(makeOwnIndex);
   });
 });
 

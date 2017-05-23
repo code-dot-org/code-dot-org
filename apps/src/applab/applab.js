@@ -162,14 +162,14 @@ function shouldRenderFooter() {
 
 Applab.makeFooterMenuItems = function (isIframeEmbed) {
   const footerMenuItems = [
-    isIframeEmbed && !dom.isMobile() && {
-      text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab/new',
-    },
     window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: project.getProjectUrl('/view'),
       newWindow: true,
+    },
+    isIframeEmbed && !dom.isMobile() && {
+      text: applabMsg.makeMyOwnApp(),
+      link: '/projects/applab/new',
     },
     {
       text: commonMsg.reportAbuse(),
