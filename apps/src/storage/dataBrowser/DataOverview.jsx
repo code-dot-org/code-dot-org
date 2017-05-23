@@ -61,6 +61,9 @@ const DataOverview = React.createClass({
       <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
         <h4>Data</h4>
 
+        <h5>{msg.dataExplanation()} <a href="https://code.org/applab/docs/tabledatastorage"><strong>{msg.dataBlocks()}</strong></a> {msg.withinApp()}</h5>
+        <br/>
+        <p>{msg.keyValueCaption()}</p>
         <table style={styles.table}>
           <tbody>
           <tr style={dataStyles.row}>
@@ -74,6 +77,8 @@ const DataOverview = React.createClass({
           </tbody>
         </table>
 
+        <br/>
+        <p>{msg.tableNameCaption()}</p>
         <table style={styles.table}>
           <colgroup>
             <col width={tableWidth - buttonColumnWidth}/>
