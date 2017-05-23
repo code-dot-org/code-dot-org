@@ -18,6 +18,14 @@ def current_user
   @dashboard_user ||= DASHBOARD_DB[:users][id: current_user_id]
 end
 
+# Returns true if the current user is under 13 or if age is unknown.
+def under_13?
+  return true unless current_user
+  birthday = current_user[:birthday]
+  age = ((Date.today - birthday) / 365).to_i
+  age < 13
+end
+
 # @returns [Boolean] true if the current user is an admin.
 def admin?
   current_user && !!current_user[:admin]
