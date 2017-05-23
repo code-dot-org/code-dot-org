@@ -1084,6 +1084,27 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
+  test "should slog the contained level id when present" do
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+    script = create :script
+    stage = create :stage, script: script
+    contained_level = create :multi, name: 'multi level'
+    level = create :maze, name: 'maze level', contained_level_names: ['multi level']
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    user = create :user
+    sign_in user
+
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1
+    }
+
+    assert_equal(contained_level.id, slogger.records.first[:level_id])
+  end
+
   test "should get user progress for stage for signed-out user" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
