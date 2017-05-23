@@ -20,6 +20,21 @@ class ChannelsTest < Minitest::Test
     assert_equal 'world', response['hello']
   end
 
+  def test_create_published_channel
+    start = DateTime.now - 1
+    post '/v3/channels', {shouldPublish: true, key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+    follow_redirect!
+
+    response = JSON.parse(last_response.body)
+    assert last_request.url.end_with? "/#{response['id']}"
+
+    refute_nil response['publishedAt']
+    published_at = DateTime.parse(response['publishedAt'])
+    assert (start..DateTime.now).cover? published_at
+    assert_equal 'val', response['key']
+  end
+
   def test_update_channel
     start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
