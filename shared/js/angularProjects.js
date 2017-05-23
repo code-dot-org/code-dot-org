@@ -46,7 +46,12 @@ services.factory('projectsService', ['$resource',
     };
 
     Project.prototype.isPublishableProjectType = function () {
-      return (this.projectType !== 'weblab');
+      return (
+        (this.projectType === 'applab') ||
+        (this.projectType === 'gamelab') ||
+        (this.projectType === 'artist') ||
+        (this.projectType === 'playlab')
+      );
     };
 
     return Project;
