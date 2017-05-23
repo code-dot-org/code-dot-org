@@ -1,6 +1,7 @@
 require_relative 'test_helper'
 require 'channels_api'
 require 'timecop'
+require 'active_support/time'
 
 class ChannelsTest < Minitest::Test
   include Rack::Test::Methods
@@ -114,6 +115,8 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_and_unpublish_channel
+    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 14.years.ago.to_datetime})
+
     start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -155,6 +158,18 @@ class ChannelsTest < Minitest::Test
     assert_nil result['publishedAt']
 
     # now the project should appear unpublished
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert_nil result['publishedAt']
+
+    # users under age 13 cannot publish projects
+
+    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 12.years.ago.to_datetime})
+    post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.unauthorized?
+
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
     result = JSON.parse(last_response.body)

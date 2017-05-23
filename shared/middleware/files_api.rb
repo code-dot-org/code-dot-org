@@ -767,10 +767,6 @@ class FilesApi < Sinatra::Base
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
   def get_manifest(bucket, encrypted_channel_id)
-    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    if manifest_result[:status] == 'NOT_FOUND'
-      return []
-    end
-    JSON.load manifest_result[:body]
+    bucket.get_manifest(encrypted_channel_id)
   end
 end
