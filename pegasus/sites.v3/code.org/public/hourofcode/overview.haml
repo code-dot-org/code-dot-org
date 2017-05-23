@@ -5,6 +5,7 @@ theme: responsive
 ---
 %link{:href=>"/css/student.css", :rel=>"stylesheet"}
 %link(rel='stylesheet' type='text/css' href='/shared/css/course-blocks.css')
+%script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
 %h1 Hour of Code for all ages
 
@@ -23,9 +24,3 @@ theme: responsive
       The Hour of Code website has over 100 computer science activities from Code.org and partners for all ages and experience levels.
     %a{href: "/learn"}
       %button.orange-button Go
-
-:javascript
-  $(document).ready(function () {
-    $(".hoc-tiles-container").load( "/dashboardapi/hoc_courses_narrow", function() {
-    });
-  });
