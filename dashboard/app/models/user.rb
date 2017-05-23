@@ -766,6 +766,7 @@ class User < ActiveRecord::Base
     age
   end
 
+  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
   end

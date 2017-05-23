@@ -19,6 +19,7 @@ def current_user
 end
 
 # Returns true if the current user is under 13 or if age is unknown.
+# Duplicates User#under_13? without using the rails model.
 def under_13?
   return true unless current_user
   birthday = current_user[:birthday]
