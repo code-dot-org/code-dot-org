@@ -48,6 +48,8 @@
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
+#  index_users_on_current_sign_in_at                   (current_sign_in_at)
+#  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at          (hashed_email,deleted_at)
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
