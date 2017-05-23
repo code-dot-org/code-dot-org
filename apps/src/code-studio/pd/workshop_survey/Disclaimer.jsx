@@ -2,7 +2,7 @@ import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import FormComponent from '../form_components/FormComponent';
 
-export default class PersonalInvolvement extends FormComponent {
+export default class Disclaimer extends FormComponent {
   render() {
     return (
       <FormGroup>
@@ -21,4 +21,4 @@ export default class PersonalInvolvement extends FormComponent {
   }
 }
 
-PersonalInvolvement.associatedFields = [];
+Disclaimer.associatedFields = [];
