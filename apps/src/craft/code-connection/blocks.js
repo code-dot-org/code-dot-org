@@ -224,7 +224,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionDetect()))
-          .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
+          .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     }
   };
