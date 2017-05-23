@@ -115,7 +115,7 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
-      js/*.js
+      js/*
       css/*.css
       assets/**/*
       angularProjects.js

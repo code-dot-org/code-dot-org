@@ -14,9 +14,21 @@ namespace :assets do
     app.assets = Sprockets::Railtie.build_environment(app)
     Sprockets::Railtie.build_manifest(app).compile('application.js')
   end
+
+  desc 'Copy digested assets to non-digested file paths'
+  task no_digests: :environment do
+    assets = Dir.glob("#{dashboard_dir}/public/assets/js/**/*")
+    regex = /-\w{32}(?:\.\w+$)/
+    assets.each do |file|
+      next if File.directory?(file) || file !~ regex
+      non_digested = file.sub(regex, '')
+      FileUtils.cp(file, non_digested)
+    end
+  end
 end
 
 Rake::Task['assets:precompile'].enhance do
   Rake::Task['assets:precompile_application_js'].invoke
+  Rake::Task['assets:no_digests'].invoke
   Rake::Task['assets:sync'].invoke if CDO.cdn_enabled
 end
