@@ -99,6 +99,8 @@ class Course < ApplicationRecord
       script = Script.find_by_name!(script_name)
       CourseScript.where(course: self, script: script).destroy_all
     end
+    # Reload model so that course_scripts is up to date
+    reload
   end
 
   def summarize
