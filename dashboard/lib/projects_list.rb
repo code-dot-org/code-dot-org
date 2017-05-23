@@ -1,3 +1,5 @@
+require 'cdo/user_helpers'
+
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
   MAX_LIMIT = 100
@@ -129,7 +131,7 @@ module ProjectsList
     # Return the highest age range applicable to the student, e.g.
     # 18+, 13+, 8+ or 4+
     def student_age_range(project)
-      age = ((Date.today - project[:birthday]) / 365).to_i
+      age = UserHelpers.age_from_birthday(project[:birthday])
       age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
       age_cutoff ? "#{age_cutoff}+" : nil
     end

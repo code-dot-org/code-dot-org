@@ -1,3 +1,5 @@
+require 'cdo/user_helpers'
+
 #
 # Utility methods that help middleware access dashboard authentication and
 # permissions information.
@@ -23,7 +25,7 @@ end
 def under_13?
   return true unless current_user
   birthday = current_user[:birthday]
-  age = ((Date.today - birthday) / 365).to_i
+  age = UserHelpers.age_from_birthday(birthday)
   age < 13
 end
 
