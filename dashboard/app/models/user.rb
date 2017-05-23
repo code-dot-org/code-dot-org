@@ -399,10 +399,8 @@ class User < ActiveRecord::Base
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
-    # TODO(asher): Change this to always (primarily?) search by hashed_email,
-    # eliminating a DB query.
-    User.find_by_email(email.downcase) ||
-      User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+    hashed_email = User.hash_email(email)
+    User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -761,11 +759,12 @@ class User < ActiveRecord::Base
 
   def age
     return @age unless birthday
-    age = ((Date.today - birthday) / 365).to_i
+    age = UserHelpers.age_from_birthday(birthday)
     age = "21+" if age >= 21
     age
   end
 
+  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
   end
