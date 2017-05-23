@@ -801,15 +801,22 @@ var projects = module.exports = {
    * copy as the current project.
    * @param {string} newName
    * @param {function} callback
+   * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
+   * @param {boolean} options.shouldPublish Whether to publish the new project.
    */
   copy(newName, callback, options = {}) {
+    const { shouldPublish } = options;
     current = current || {};
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel,
         this.copyAnimations.bind(this, srcChannel, callback));
     delete current.id;
     delete current.hidden;
+    if (shouldPublish) {
+      current.shouldPublish = true;
+      current.projectType = this.getStandaloneApp();
+    }
     this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, options);
