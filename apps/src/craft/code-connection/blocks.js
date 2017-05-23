@@ -182,7 +182,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionDrop()))
-          .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+          .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
