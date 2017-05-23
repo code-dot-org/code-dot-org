@@ -9,16 +9,17 @@
 #  updated_at        :datetime
 #  code              :string(255)
 #  script_id         :integer
+#  course_id         :integer
 #  grade             :string(255)
 #  login_type        :string(255)      default("email"), not null
 #  deleted_at        :datetime
 #  stage_extras      :boolean          default(FALSE), not null
 #  section_type      :string(255)
 #  first_activity_at :datetime
-#  course_id         :integer
 #
 # Indexes
 #
+#  fk_rails_20b1e5de46        (course_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #

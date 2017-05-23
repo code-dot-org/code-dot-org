@@ -798,14 +798,15 @@ ActiveRecord::Schema.define(version: 20170522221144) do
     t.datetime "updated_at"
     t.string   "code"
     t.integer  "script_id"
+    t.integer  "course_id"
     t.string   "grade"
     t.string   "login_type",        default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras",      default: false,   null: false
     t.string   "section_type"
     t.datetime "first_activity_at"
-    t.integer  "course_id"
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
+    t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
@@ -1128,6 +1129,7 @@ ActiveRecord::Schema.define(version: 20170522221144) do
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "sections", "courses"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
