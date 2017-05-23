@@ -91,13 +91,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     hash = sanitize_form_data_hash
 
     # validate facilitator required fields
-    if hash.try(:[], :who_facilitated)
-      hash[:who_facilitated].each do |facilitator|
-        facilitator_required_fields.each do |facilitator_field|
-          field_name = "#{facilitator_field}[#{facilitator}]"
-          add_key_error(field_name) unless hash.key?(field_name.underscore.to_sym)
-        end
-      end
+    each_facilitator_field do |facilitator, field, field_name|
+      add_key_error(field_name) unless hash.try(:[], field).try(:[], facilitator)
     end
 
     # validate conditional required fields
@@ -127,13 +122,64 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
 
     # if this is the first survey completed by this user, also require
     # demographics questions
-    if pd_enrollment && self.class.find_by_user(pd_enrollment.user).empty?
-      demographics_required_fields.each do |field|
-        add_key_error(field) unless hash.key?(field)
+    if pd_enrollment
+      if pd_enrollment.user.nil? || self.class.find_by_user(pd_enrollment.user).empty?
+        demographics_required_fields.each do |field|
+          add_key_error(field) unless hash.key?(field)
+        end
       end
     end
 
     super
+  end
+
+  # Simple helper that iterates over each facilitator as reported by the user
+  # and each facilitator-specific field and yields a block with the facilitator,
+  # the field, and the combined field name we expect in the flattened version of
+  # our hash
+  def each_facilitator_field(hash=nil)
+    hash ||= sanitize_form_data_hash
+
+    facilitators = hash.try(:[], :who_facilitated) ||
+      hash.try(:[], 'whoFacilitated') ||
+      []
+
+    # validate facilitator required fields
+    facilitators.each do |facilitator|
+      facilitator_required_fields.each do |field|
+        field_name = "#{field}[#{facilitator}]".to_sym
+        yield(facilitator, field, field_name)
+      end
+    end
+  end
+
+  # inflate all the facilitator-specific fields (stored as flattened keys) into
+  # nested hashes before saving
+  #
+  # Before:
+  #   {
+  #     "howClearlyPresented[facilitatorOne@code.org]" => "Clearly",
+  #     "howClearlyPresented[facilitatorTwo@code.org]" => "Quite clearly",
+  #   }
+  #
+  # After:
+  #   {
+  #     "howClearlyPresented" => {
+  #       "facilitatorOne@code.org" => "Clearly",
+  #       "facilitatorTwo@code.org" => "Quite clearly",
+  #     }
+  #   }
+  def form_data_hash=(hash)
+    hash = hash.dup
+
+    each_facilitator_field(hash) do |facilitator, field, field_name|
+      next unless hash.key(field_name)
+
+      hash[field] ||= {}
+      hash[field][facilitator] = hash.delete(field_name)
+    end
+
+    super(hash)
   end
 
   def self.options
