@@ -856,7 +856,7 @@ var projects = module.exports = {
       location.href = url;
     }
     // If the user is the owner, save before remixing on the server.
-    if (current.isOwner && projects.shouldSaveBeforeRemixing()) {
+    if (current.isOwner) {
       projects.save(redirectToRemix, false, true);
     } else if (current.isOwner) {
       this.sourceHandler.prepareForRemix().then(redirectToRemix);
