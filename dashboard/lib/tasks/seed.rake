@@ -154,6 +154,63 @@ namespace :seed do
     seed_regional_partners_school_districts(true)
   end
 
+  task create_pd_dashboard_data: :environment do
+    include FactoryGirl::Syntax::Methods
+
+    # Destroy existing facilitator and organizers
+    User.where(email: ['pd_test_facilitator@code.org', 'pd_test_organizer@code.org']).destroy_all
+
+    # Make a facilitator
+    facilitator = create(:facilitator, email: 'pd_test_facilitator@code.org')
+    Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: Pd::Workshop::COURSE_CSP)
+
+    # Make a workshop organizer
+    organizer = create(:workshop_organizer, email: 'pd_test_organizer@code.org')
+
+    # Create an ended workshop
+    workshop = create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, num_sessions: 1, enrolled_and_attending_users: 5, organizer: organizer)
+    workshop.facilitators << facilitator
+    workshop.start!
+    workshop.end!
+
+    # Fill in survey questions for this workshop
+    responses = {}
+
+    [
+      Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
+      Api::V1::Pd::WorkshopScoreSummarizer::TEACHER_ENGAGEMENT_QUESTIONS,
+    ].flatten.each do |question|
+      responses[question] = PdWorkshopSurvey::OPTIONS[question].last
+    end
+
+    Api::V1::Pd::WorkshopScoreSummarizer::OVERALL_SUCCESS_QUESTIONS.each do |question|
+      responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
+    end
+
+    workshop.enrollments.each do |enrollment|
+      PEGASUS_DB[:forms].insert(
+        secret: SecureRandom.hex,
+        source_id: enrollment.id,
+        kind: 'PdWorkshopSurvey',
+        email: enrollment.email,
+        data: responses.to_json,
+        created_at: Time.now,
+        created_ip: '',
+        updated_at: Time.now,
+        updated_ip: ''
+      )
+    end
+
+    # Create a started workshop
+    workshop = create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, num_sessions: 1, enrolled_and_attending_users: 5, organizer: organizer)
+    workshop.facilitators << facilitator
+    workshop.start!
+
+    # Create an unstarted workshop
+    workshop = create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, num_sessions: 1, enrolled_and_attending_users: 5, organizer: organizer)
+    workshop.facilitators << facilitator
+  end
+
   def seed_regional_partners_school_districts(force)
     # use a much smaller dataset in environments that reseed data frequently.
     mapping_tsv = CDO.stub_school_data ?
@@ -214,5 +271,5 @@ namespace :seed do
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :create_pd_dashboard_data]
 end
