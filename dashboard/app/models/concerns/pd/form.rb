@@ -50,6 +50,10 @@ module Pd::Form
         value.each do |subvalue|
           add_key_error(key) unless self.class.options[key].include? subvalue
         end
+      elsif value.is_a? Hash
+        value.each do |_key, subvalue|
+          add_key_error(key) unless self.class.options[key].include? subvalue
+        end
       else
         add_key_error(key) unless self.class.options[key].include? value
       end
