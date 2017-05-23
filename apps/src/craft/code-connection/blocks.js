@@ -734,7 +734,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_getnameof = function () {
       var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
-      return [`'${getName(item)}'`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+      return [`${item}['name']`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getdataof = {
@@ -749,7 +749,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_getdataof = function () {
       var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
-      return [`'${getData(item)}'`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+      return [`${item}['data']`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
 };
