@@ -1,5 +1,5 @@
 require 'rmagick'
-
+require 'cdo/pegasus/object'
 MAX_DIMENSION = 2880
 
 # This method returns a newly-allocated Magick::Image object.
