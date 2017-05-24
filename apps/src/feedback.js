@@ -1,5 +1,3 @@
-/* global trackEvent */
-
 import $ from 'jquery';
 import { getStore } from './redux';
 import React from 'react';
@@ -8,6 +6,7 @@ import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
+import trackEvent from './util/trackEvent';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -415,7 +414,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           }).then(() => {
             $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
           });
-      });
+      }, {shouldPublish: true});
     });
   } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
     dom.addClickTouchEvent(saveToGalleryButton, function () {

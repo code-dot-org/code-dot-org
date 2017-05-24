@@ -45,6 +45,18 @@ services.factory('projectsService', ['$resource',
       }
     };
 
+    Project.prototype.thumbnail = function () {
+      if (this.thumbnailUrl) {
+        return this.thumbnailUrl;
+      } else {
+        return '/blockly/media/projects/project_default.png';
+      }
+    };
+
+    Project.prototype.isPublishableProjectType = function () {
+      return ['applab', 'gamelab', 'artist', 'playlab'].includes(this.projectType);
+    };
+
     return Project;
   }]);
 

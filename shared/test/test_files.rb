@@ -425,7 +425,121 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_rename_case_only
+    filename = @api.randomize_filename('Mixed Case With Spaces.png')
+    escaped_filename = URI.escape(filename)
+    filename2 = filename.sub 'Mixed Case', 'mixeD casE'
+    escaped_filename2 = URI.escape(filename2)
+    delete_all_file_versions filename, filename2
+    delete_all_manifest_versions
+
+    image_body = 'stub-image-contents'
+
+    post_file_data(@api, filename, image_body, 'image/png')
+    assert successful?
+
+    @api.get_object(escaped_filename)
+    assert successful?
+    assert_equal image_body, last_response.body
+
+    @api.get_object(escaped_filename2)
+    assert successful?
+    assert_equal image_body, last_response.body
+
+    get "v3/files/#{@channel_id}"
+    response_before_rename = JSON.parse(last_response.body)
+    # There should be only one file with filename, category, and size matching our expectations
+    expected_image_info = {'filename' => filename, 'category' => 'image', 'size' => image_body.length}
+    file_infos = response_before_rename['files']
+    assert_equal(1, file_infos.length)
+    assert_fileinfo_equal(expected_image_info, file_infos[0])
+
+    @api.rename_object(filename, escaped_filename2)
+    assert successful?
+
+    @api.get_object(escaped_filename)
+    assert successful?
+    assert_equal image_body, last_response.body
+
+    @api.get_object(escaped_filename2)
+    assert successful?
+    assert_equal image_body, last_response.body
+
+    get "v3/files/#{@channel_id}"
+    response_after_rename = JSON.parse(last_response.body)
+    # There should be only one file with the new filename, category, and size matching our expectations
+    expected_image_info_after_rename = {'filename' => filename2, 'category' => 'image', 'size' => image_body.length}
+    file_infos_after_rename = response_after_rename['files']
+    assert_equal(1, file_infos_after_rename.length)
+    assert_fileinfo_equal(expected_image_info_after_rename, file_infos_after_rename[0])
+
+    # The manifest version (filesVersionId) should be different, but the file version should be the same
+    assert response_before_rename['filesVersionId'] != response_after_rename['filesVersionId']
+    assert_equal file_infos[0]['versionId'], file_infos_after_rename[0]['versionId']
+
+    @api.delete_object(escaped_filename2)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
+  def test_files_copy_all
+    # This test creates 2 channels
+    delete_all_files('files_test/1/2')
+    dest_channel_id = create_channel
+    src_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+    dest_api = FilesApiTestHelper.new(current_session, 'files', dest_channel_id)
+
+    image_filename = @api.randomize_filename('Cat.jpg')
+    image_body = 'stub-image-contents'
+
+    sound_filename = @api.randomize_filename('Woof Woof.mp3')
+    sound_body = 'stub-sound-contents'
+
+    post_file_data(src_api, image_filename, image_body, 'image/jpeg')
+    post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
+    src_api.patch_abuse(10)
+
+    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+
+    copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
+    dest_file_infos = dest_api.list_objects["files"]
+
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+
+    dest_api.get_object(URI.escape(image_filename))
+    assert successful?
+    assert_equal image_body, last_response.body
+
+    dest_api.get_object(URI.escape(sound_filename))
+    assert successful?
+    assert_equal sound_body, last_response.body
+
+    # abuse score didn't carry over
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(sound_filename.downcase))
+
+    src_api.delete_object(URI.escape(image_filename))
+    src_api.delete_object(URI.escape(sound_filename))
+    delete_all_manifest_versions
+    dest_api.delete_object(URI.escape(image_filename))
+    dest_api.delete_object(URI.escape(sound_filename))
+    delete_channel(dest_channel_id)
+  end
+
   private
+
+  def delete_all_files(bucket)
+    delete_all_objects(CDO.files_s3_bucket, bucket)
+  end
+
+  def copy_all(src_channel_id, dest_channel_id)
+    FileBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
+  end
 
   def post_file(api, uploaded_file)
     body = {files: [uploaded_file]}

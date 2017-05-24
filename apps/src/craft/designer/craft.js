@@ -1,4 +1,3 @@
-/* global trackEvent */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -21,6 +20,7 @@ import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
+import trackEvent from '../../util/trackEvent';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -257,6 +257,10 @@ Craft.init = function (config) {
       enableShowBlockCount: false,
       loadAudio: function () {},
       afterInject: function () {
+        if (config.level.showMovementBanner) {
+          studioApp().displayWorkspaceAlert('warning', <div>{craftMsg.useArrowKeys()}</div>);
+        }
+
         var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
         Craft.gameController = new GameController({
           Phaser: window.Phaser,

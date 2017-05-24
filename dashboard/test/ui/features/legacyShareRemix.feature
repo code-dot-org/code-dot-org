@@ -1,4 +1,5 @@
 @no_mobile
+@as_student
 Feature: Legacy Share Remix
 
   Background:
@@ -13,7 +14,7 @@ Feature: Legacy Share Remix
     Then I press "runButton"
     And I wait to see ".congrats"
     And I navigate to the share URL
-    And I select the "How it works" small footer item
+    And I select the "How it Works (View Code)" small footer item
     And I wait to see ".project_remix"
     And I press the first ".project_remix" element to load a new page
     And check that the URL contains "/projects/artist/"

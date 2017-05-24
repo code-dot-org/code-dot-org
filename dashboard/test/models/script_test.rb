@@ -46,6 +46,9 @@ class ScriptTest < ActiveSupport::TestCase
     script = scripts[0]
     assert_equal 'Level 1', script.levels[0].name
     assert_equal 'Stage2', script.script_levels[3].stage.name
+
+    assert_equal 'MyProgression', script.script_levels[3].progression
+    assert_equal 'MyProgression', script.script_levels[4].progression
   end
 
   test 'should not change Script[Level] ID when reseeding' do

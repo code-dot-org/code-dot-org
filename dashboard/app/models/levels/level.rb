@@ -88,7 +88,7 @@ class Level < ActiveRecord::Base
   end
 
   def related_videos
-    ([game.intro_video, specified_autoplay_video] + concepts.map(&:video)).reject(&:nil?).uniq
+    ([game.intro_video, specified_autoplay_video] + concepts.map(&:video)).compact.uniq
   end
 
   def specified_autoplay_video
@@ -249,7 +249,7 @@ class Level < ActiveRecord::Base
   end
 
   def filter_level_attributes(level_hash)
-    %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
+    %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
     level_hash.reject! {|_, v| v.nil?}
     level_hash
   end
@@ -278,6 +278,7 @@ class Level < ActiveRecord::Base
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
     'Gamelab', # freeplay
+    'GoBeyond', # unknown
     'Level', # base class
     'LevelGroup', # dsl defined, covered in dsl
     'Map', # no user submitted content

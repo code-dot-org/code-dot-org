@@ -7,6 +7,7 @@
 - hamburger_options[:language] = request.language
 - hamburger_options[:code_org_url_base] = CDO.code_org_url
 - hamburger_options[:studio_url_base] = CDO.studio_url
+- hamburger_options[:show_gallery] = true
 
 %link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
@@ -16,7 +17,7 @@
     .content
       #left
         #logo-wrapper
-          %a{:href=>"/"}
+          %a{:href=>CDO.studio_url("/home")}
             %img#logo{:src=>'/images/logo.png'}
         #headerlinks.desktop-feature
           - if user_type == "teacher"
@@ -26,7 +27,6 @@
             %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
             %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
           - elsif user_type == "student"
-            %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
             %a.headerlink{:href=>CDO.studio_url("/projects")} Project Gallery
           - elsif request.language == "en"

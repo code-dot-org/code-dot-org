@@ -6,7 +6,10 @@ class Pd::SessionAttendanceController < ApplicationController
 
   # GET pd/attend/:session_code
   def attend
-    if @session.too_soon_for_attendance?
+    if @session.workshop.organizer_or_facilitator? current_user
+      render_own_workshop
+      return
+    elsif @session.too_soon_for_attendance?
       render :too_soon
       return
     elsif @session.too_late_for_attendance?
@@ -63,6 +66,15 @@ class Pd::SessionAttendanceController < ApplicationController
   end
 
   private
+
+  def render_own_workshop
+    attend_url = CDO.code_org_url "/pd/#{@session.code}", CDO.default_scheme
+
+    flash[:notice] = "You can't attend this workshop because you organized it. "\
+      "If your attendees go to the link #{attend_url} they will see a success message here."
+
+    redirect_to CDO.studio_url('/', CDO.default_scheme)
+  end
 
   def render_confirmation
     flash[:notice] = 'Thank you for attending Code.org professional development. '\
