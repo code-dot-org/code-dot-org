@@ -241,6 +241,7 @@
   "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}.",
   "toSlotNumber": "to slot number",
   "turnRandom": "turn random",
+  "useArrowKeys": "You don't need to add any blocks! Move with the arrows, and press the space bar or tap the game board to use items.",
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
