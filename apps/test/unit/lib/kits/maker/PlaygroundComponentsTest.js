@@ -12,6 +12,7 @@ import {
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
 import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
+import Led from '@cdo/apps/lib/kits/maker/Led';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
@@ -136,8 +137,8 @@ describe('Circuit Playground Components', () => {
           .then((components) => led = components.led);
       });
 
-      it('creates a five.Led', () => {
-        expect(led).to.be.an.instanceOf(five.Led);
+      it('creates a Led', () => {
+        expect(led).to.be.an.instanceOf(Led);
       });
 
       it('bound to the board controller', () => {

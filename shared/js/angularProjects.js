@@ -53,6 +53,10 @@ services.factory('projectsService', ['$resource',
       }
     };
 
+    Project.prototype.isPublishableProjectType = function () {
+      return ['applab', 'gamelab', 'artist', 'playlab'].includes(this.projectType);
+    };
+
     return Project;
   }]);
 

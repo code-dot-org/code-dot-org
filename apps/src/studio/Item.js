@@ -2,6 +2,7 @@ import Collidable from './collidable';
 import * as constants from './constants';
 import _ from 'lodash';
 import { ShakeActor } from './spriteActions';
+import Studio from './studio';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
