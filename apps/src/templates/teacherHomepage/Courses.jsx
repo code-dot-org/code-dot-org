@@ -22,6 +22,13 @@ const styles = {
   }
 };
 
+/**
+ * Though named Courses, this component represents a collection of courses and/or
+ * scripts. These come from sections the user is in, or from courses/scripts they
+ * have recently made progress in.
+ * The component is only used on the /courses page, and also does some additional
+ * DOM manipulation on mount.
+ */
 const Courses = React.createClass({
   propTypes: {
     courses: shapes.courses,
