@@ -635,6 +635,14 @@ describe('The applab.makeFooterMenuItems ', () => {
     var makeOwnIndex = footItems.findIndex(item => item.text === applabMsg.makeMyOwnApp());
     expect(howItWorksIndex).to.be.below(makeOwnIndex);
   });
+
+  it("returns How-It-Works item before Report-Abuse item in AppLab", () => {
+    project.getUrl.returns('https://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
+    expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+  });
 });
 
 });
