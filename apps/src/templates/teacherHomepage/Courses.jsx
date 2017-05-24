@@ -27,6 +27,7 @@ const Courses = React.createClass({
     courses: shapes.courses,
     isEnglish: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
+    isSignedOut: React.PropTypes.bool.isRequired,
     linesCount: React.PropTypes.string.isRequired,
     studentsCount: React.PropTypes.string.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired
@@ -43,7 +44,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut } = this.props;
 
     return (
       <div>
@@ -52,6 +53,8 @@ const Courses = React.createClass({
           subHeadingText={i18n.coursesHeadingSubText(
             {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
           )}
+          showCreateAccount={isSignedOut}
+          description={i18n.coursesHeadingDescription()}
         />
 
         {courses && (
