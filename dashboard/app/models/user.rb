@@ -891,7 +891,6 @@ class User < ActiveRecord::Base
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
-    # TODO: assigned sections seems like it belongs somewhere else
     # TODO: currently no way for levelbuilders to edit description_short
 
     course_data = courses.map do |course|
@@ -900,6 +899,8 @@ class User < ActiveRecord::Base
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
         image: '',
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
         assignedSections: []
       }
     end
@@ -912,6 +913,8 @@ class User < ActiveRecord::Base
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
         image: "",
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
         assignedSections: []
       }
     end
