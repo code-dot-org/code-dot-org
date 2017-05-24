@@ -20,7 +20,7 @@
 require 'cdo/workshop_constants'
 
 class Workshop < ActiveRecord::Base
-  PROGRAM_TYPES = %w(1 2 3 4 5 6)
+  PROGRAM_TYPES = %w(1 2 3 4 5 6).freeze
 
   validates_inclusion_of :program_type, in: PROGRAM_TYPES, on: :create
   # A Workshop has multiple well defined Time Segments (eg. each morning/afternoon of a workshop is a separate time segment)

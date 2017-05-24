@@ -26,9 +26,9 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
     workshop_days: 'workshop_days'
   }.freeze
 
-  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}
+  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
-  NO_PARTNER = 'NO PARTNER'
+  NO_PARTNER = 'NO PARTNER'.freeze
 
   validates_inclusion_of :course, in: ['csp', 'csd'], allow_nil: true
 

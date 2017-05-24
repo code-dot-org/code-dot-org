@@ -23,7 +23,7 @@ class RegionalPartner < ActiveRecord::Base
 
   has_many :pd_workshops
 
-  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}
+  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
 
   def self.find_or_create_all_from_tsv(filename)
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
