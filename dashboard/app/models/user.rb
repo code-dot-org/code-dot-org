@@ -880,26 +880,59 @@ class User < ActiveRecord::Base
     end
   end
 
-  # This method is meant to return a bunch of data about a user's recent courses.
-  # Right now, it just looks at recent scripts, but we expect it to change in the
-  # very near future
-  # TODO: Once this data is more real, we should be writing tests for it.
-  def recent_courses
-    in_progress_and_completed_scripts.map do |user_script|
-      script_id = user_script[:script_id]
-      script_name = Script.get_from_cache(script_id)[:name]
+  # Return a collection of courses and scripts for the user. First in the list will
+  # be courses enrolled in by the user's sections. Following that will be all scripts
+  # in which the user has made progress that are not in any of the enrolled courses.
+  def recent_courses_and_scripts
+    courses = section_courses
+    course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
+
+    # filter out those that are already covered by a course
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+
+    # TODO: replace courseName with name (here and in components) as some of these
+    # are courses and some are scripts
+    # TODO: may make more sense to generate links on the client (might need to
+    # provide both name and title to accomplish this). If we do we can get rid of
+    # include Rails.application.routes.url_helpers
+    # TODO: assigned sections seems like it belongs somewhere else
+    # TODO: currently no way for levelbuilders to edit description_short
+
+    course_data = courses.map do |course|
       {
-        id: script_id,
-        script_name: script_name,
-        courseName: data_t_suffix('script.name', script_name, 'title'),
-        description: data_t_suffix('script.name', script_name, 'description_short'),
-        # TODO: This can probably be generated on the client. If it can, we can also
-        # get rid of include Rails.application.routes.url_helpers
-        link: script_url(script_id),
+        courseName: data_t_suffix('course.name', course[:name], 'title'),
+        description: data_t_suffix('course.name', course[:name], 'description_short'),
+        link: course_path(course),
+        image: '',
+        assignedSections: []
+      }
+    end
+
+    user_script_data = user_scripts.map do |user_script|
+      script_id = user_script[:script_id]
+      script = Script.get_from_cache(script_id)
+      {
+        courseName: data_t_suffix('script.name', script[:name], 'title'),
+        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+        link: script_path(script),
         image: "",
         assignedSections: []
       }
     end
+
+    course_data + user_script_data
+  end
+
+  # Figures out the unique set of courses assigned to sections that this user
+  # is a part of.
+  # @return [Array<Course>]
+  def section_courses
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+
+    # In the future we may want to make it so that if assigned a script, but that
+    # script has a default course, it shows up as a course here
+    all_sections.map(&:course).compact.uniq
   end
 
   def all_advertised_scripts_completed?
