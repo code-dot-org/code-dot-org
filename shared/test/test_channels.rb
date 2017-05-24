@@ -129,6 +129,11 @@ class ChannelsTest < Minitest::Test
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
 
+    # non-owner cannot publish
+    with_session(:non_owner) do
+      assert_cannot_publish('applab', channel_id)
+    end
+
     # publish the project and validate the result
     post "/v3/channels/#{channel_id}/publish/applab", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.ok?
@@ -148,6 +153,11 @@ class ChannelsTest < Minitest::Test
     result = JSON.parse(last_response.body).first
     assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
     assert_equal result['projectType'], 'applab'
+
+    # non-owner cannot unpublish
+    with_session(:non_owner) do
+      assert_cannot_unpublish(channel_id)
+    end
 
     # unpublish the project
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -173,6 +183,13 @@ class ChannelsTest < Minitest::Test
     assert_can_publish('playlab')
     assert_cannot_publish('weblab')
     assert_cannot_publish('foo')
+
+    # non-owners cannot publish or unpublish
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+    with_session(:non_owner) do
+      assert_cannot_publish('artist', channel_id)
+    end
 
     # users under age 13 cannot publish applab, gamelab or weblab projects,
     # but can publish artist or playlab projects.
@@ -273,9 +290,11 @@ class ChannelsTest < Minitest::Test
     assert_equal result['projectType'], project_type
   end
 
-  def assert_cannot_publish(project_type)
-    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
+  def assert_cannot_publish(project_type, channel_id = nil)
+    unless channel_id
+      post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+      channel_id = last_response.location.split('/').last
+    end
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.unauthorized?
@@ -285,5 +304,10 @@ class ChannelsTest < Minitest::Test
     result = JSON.parse(last_response.body)
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
+  end
+
+  def assert_cannot_unpublish(channel_id)
+    post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.unauthorized?
   end
 end
