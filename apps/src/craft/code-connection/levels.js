@@ -20,23 +20,24 @@ module.exports = {
     toolbox: createToolbox(
       category('Agent',
         craftBlock('move') +
-        craftBlock('inspect') +
-        craftBlock('place') +
         craftBlock('turn') +
-        craftBlock('till') +
+        craftBlock('tptoplayer')+
+        craftBlock('place') +
         craftBlock('destroy') +
+        craftBlock('till') +
+        craftBlock('attack') +
         craftBlock('collect') +
+        craftBlock('collectall') +
         craftBlock('drop') +
         craftBlock('dropall') +
         craftBlock('detect') +
         craftBlock('inspect') +
         craftBlock('inspectdata') +
-        craftBlock('detectredstone') +
         craftBlock('getitemdetail') +
         craftBlock('getitemspace') +
         craftBlock('getitemcount') +
         craftBlock('transfer') +
-        craftBlock('tptoplayer'))+
+        craftBlock('detectredstone')) +
       category('Item',
           craftBlock('block') +
           craftBlock('miscellaneous') +
