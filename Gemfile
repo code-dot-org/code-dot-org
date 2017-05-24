@@ -52,6 +52,7 @@ group :development do
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
+  gem 'rb-readline'
 end
 
 # Rack::Cache middleware used in development/test;
