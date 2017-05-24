@@ -17,7 +17,7 @@
     .content
       #left
         #logo-wrapper
-          %a{:href=>"/"}
+          %a{:href=>CDO.studio_url("/home")}
             %img#logo{:src=>'/images/logo.png'}
         #headerlinks.desktop-feature
           - if user_type == "teacher"
@@ -27,7 +27,6 @@
             %a.headerlink{:href=>"/teacher-dashboard#/sections"} Sections
             %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")} Professional Learning
           - elsif user_type == "student"
-            %a.headerlink{:href=>CDO.studio_url("/home")} Home
             %a.headerlink{:href=>CDO.studio_url("/courses")} Courses
             %a.headerlink{:href=>CDO.studio_url("/projects")} Project Gallery
           - elsif request.language == "en"

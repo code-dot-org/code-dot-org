@@ -413,6 +413,12 @@ StudioApp.prototype.init = function (config) {
       'warning',
       <div>
         {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+        {' '}
+        {config.level.pairingAttempt &&
+          <a href={config.level.pairingAttempt}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
       </div>
     );
   }

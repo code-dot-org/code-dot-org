@@ -31,10 +31,13 @@
     "tts_instructions_override": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
     "markdown_instructions": "**Challenge:** Combine ideas from the last few puzzles to complete this level.",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Challenge Puzzle",
+  "audit_log": "[{\"changed_at\":\"2017-05-23 22:29:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

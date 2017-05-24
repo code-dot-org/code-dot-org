@@ -8,7 +8,11 @@ import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 import FakeBoard from './FakeBoard';
 import * as commands from './commands';
 import * as dropletConfig from './dropletConfig';
-import MakerError, {ConnectionCanceledError, UnsupportedBrowserError} from './MakerError';
+import MakerError, {
+  ConnectionCanceledError,
+  UnsupportedBrowserError,
+  wrapKnownMakerErrors,
+} from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33} from './util/browserChecks';
@@ -105,6 +109,7 @@ export function connect({interpreter, onDisconnect}) {
           return Promise.reject(error);
         } else {
           // Something went wrong, so show the error screen.
+          error = wrapKnownMakerErrors(error);
           dispatch(redux.reportConnectionError(error));
           trackEvent('Maker', 'ConnectionError');
           return Promise.reject(error);

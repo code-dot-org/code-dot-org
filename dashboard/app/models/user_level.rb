@@ -86,10 +86,8 @@ class UserLevel < ActiveRecord::Base
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
     return nil unless most_recent
 
-    most_recent_user = most_recent.user
-    return I18n.t('user.deleted_user') unless most_recent_user
-
-    return most_recent_user.name
+    most_recent_user = most_recent.user || DeletedUser.instance
+    return most_recent_user.name, most_recent.level_source_id
   end
 
   def paired?
