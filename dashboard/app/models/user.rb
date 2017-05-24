@@ -891,8 +891,6 @@ class User < ActiveRecord::Base
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
-    # TODO: currently no way for levelbuilders to edit description_short
-
     course_data = courses.map do |course|
       {
         name: data_t_suffix('course.name', course[:name], 'title'),
