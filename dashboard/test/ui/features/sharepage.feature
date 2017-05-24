@@ -20,7 +20,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   Then I simulate a mousedown on the svg
   And ensure Flappy gameState is ACTIVE
 
-  And I select the "How it works" small footer item
+  And I select the "How it Works (View Code)" small footer item
   And I get redirected to "/edit" via "dashboard"
   And I wait to see "#codeWorkspace"
   And ensure Flappy gameState is WAITING

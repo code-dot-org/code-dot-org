@@ -82,10 +82,18 @@ class ChannelsApi < Sinatra::Base
     end
 
     timestamp = Time.now
+
+    # The client decides whether to publish the project, but we rely on the
+    # server to generate the timestamp. Remove shouldPublish from the project
+    # data because it doesn't make sense to persist it.
+    published_at = data['shouldPublish'] ? timestamp : nil
+    data.delete('shouldPublish')
+
     id = storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
       ip: request.ip,
-      type: data['projectType']
+      type: data['projectType'],
+      published_at: published_at,
     )
 
     redirect "/v3/channels/#{id}", 301
@@ -164,6 +172,8 @@ class ChannelsApi < Sinatra::Base
   # Marks the specified channel as published.
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
+    not_authorized if under_13?
+
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
     published_at = StorageApps.new(storage_id('user')).publish(channel_id, project_type)

@@ -72,12 +72,13 @@ class Course < ApplicationRecord
   # @param course_strings[Hash{String => String}]
   def persist_strings_and_scripts_changes(scripts, course_strings)
     Course.update_strings(name, course_strings)
-    update_scripts(scripts)
+    update_scripts(scripts) if scripts
     save!
   end
 
   def write_serialization
-    return unless Rails.application.config.levelbuilder_mode
+    # Only save non-plc course, and only in LB mode
+    return unless Rails.application.config.levelbuilder_mode && !plc_course
     File.write(Course.file_path(name), serialize)
   end
 
@@ -99,6 +100,8 @@ class Course < ApplicationRecord
       script = Script.find_by_name!(script_name)
       CourseScript.where(course: self, script: script).destroy_all
     end
+    # Reload model so that course_scripts is up to date
+    reload
   end
 
   def summarize

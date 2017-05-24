@@ -17,6 +17,7 @@ TeacherCon Houston
 
 TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
 
+<a id="travel"></a>
 ### **Travel & Hotel Information**
 <details>
   <summary>**Hotel Information**</summary>
@@ -91,6 +92,7 @@ Please bring your laptop/Chromebook and charger, as well as any adapters. If you
 </p>
 </details>
 
+<a id="agenda"></a>
 ### **Agenda**
 <details>
   <summary>**Schedule for the Week**</summary>
@@ -116,6 +118,33 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
+<a id="who"></a>
+### **Who's Who at TeacherCon?**
+<details>
+<summary>**Code.org Staff**</summary>
+ <p>
+ <br>
+Coming soon!
+</p>
+</details>
+
+<details>
+<summary>**Session Lead Facilitators**</summary>
+ <p>
+ <br>
+Coming soon!
+</p>
+</details>
+
+<details>
+<summary>**Regional Partners**</summary>
+ <p>
+ <br>
+Coming soon!
+</p>
+</details>
+
+<a id="previous"></a>
 ### **Previous Email Updates**
 <details>
 <summary>**It's time to book your travel to TeacherCon. Complete by May 15!**</summary>

@@ -2080,7 +2080,10 @@ Studio.init = function (config) {
     return code;
   };
 
-  config.prepareForRemix = Studio.prepareForRemix;
+  if (project.getStandaloneApp() === 'playlab') {
+    // Only apply special remixing to vanilla playlab
+    config.prepareForRemix = Studio.prepareForRemix;
+  }
 
   config.twitter = skin.twitterOptions || twitterOptions;
 
