@@ -1,22 +1,35 @@
 var i18n = require('./locale');
+import items from './items';
 
-//var decorations = ["acacia_door", "acacia_fence_gate", "anvil", "beacon", "bed", "birch_door", "birch_fence_gate", "black_glazed_terracotta", "blue_glazed_terracotta", "board", "bookshelf", "brewing_stand", "brown_glazed_terracotta", "brown_mushroom", "brown_mushroom_block", "cactus", "cake", "carpet", "cauldron", "chest", "coal_block", "cobblestone_wall", "concrete", "concretepowder", "crafting_table", "cyan_glazed_terracotta", "dark_oak_door", "dark_oak_fence_gate", "deadbush", "diamond_block", "double_plant", "dragon_egg", "emerald_block", "enchanting_table", "end_crystal", "end_portal_frame", "end_rod", "ender_chest", "fence", "fence_gate", "flower_pot", "frame", "furnace", "glass", "glass_pane", "glowstone", "gold_block", "grass_path", "gray_glazed_terracotta", "green_glazed_terracotta", "hay_block", "iron_bars", "iron_block", "iron_door", "iron_trapdoor", "jungle_door", "jungle_fence_gate", "ladder", "lapis_block", "leaves", "leaves2", "light_blue_glazed_terracotta", "lime_glazed_terracotta", "lit_pumpkin", "magenta_glazed_terracotta", "melon_block", "mob_spawner", "monster_egg", "nether_brick_fence", "noteblock", "orange_glazed_terracotta", "painting", "pink_glazed_terracotta", "pumpkin", "purple_glazed_terracotta", "red_flower", "red_glazed_terracotta", "red_mushroom", "red_mushroom_block", "redstone_block", "sapling", "sealantern", "shulker_box", "sign", "silver_glazed_terracotta", "skull", "slime", "snow_layer", "sponge", "spruce_door", "spruce_fence_gate", "stonecutter", "tallgrass", "trapdoor", "trapped_chest", "vine", "waterlily", "web", "white_glazed_terracotta", "wooden_door", "wool", "yellow_flower", "yellow_glazed_terracotta"];
+// Helper functions for block string
+function getName(blockString) {
+  return blockString.split(',')[0];
+}
 
-//var tools = ["activator_rail", "boat", "bow", "bucket", "camera", "chain_command_block", "chainmail_boots", "chainmail_chestplate", "chainmail_helmet", "chainmail_leggings", "chest_minecart", "clock", "command_block", "command_block_minecart", "comparator", "compass", "daylight_detector", "detector_rail", "diamond_axe", "diamond_boots", "diamond_chestplate", "diamond_helmet", "diamond_hoe", "diamond_leggings", "diamond_pickaxe", "diamond_shovel", "diamond_sword", "dispenser", "dropper", "elytra", "ender_eye", "ender_pearl", "fireball", "fishing_rod", "flint_and_steel", "golden_axe", "golden_boots", "golden_chestplate", "golden_helmet", "golden_hoe", "golden_leggings", "golden_pickaxe", "golden_rail", "golden_shovel", "golden_sword", "heavy_weighted_pressure_plate", "hopper", "hopper_minecart", "horsearmordiamond", "horsearmorgold", "horsearmoriron", "horsearmorleather", "iron_axe", "iron_boots", "iron_chestplate", "iron_helmet", "iron_hoe", "iron_leggings", "iron_pickaxe", "iron_shovel", "iron_sword", "lead", "leather_boots", "leather_chestplate", "leather_helmet", "leather_leggings", "lever", "light_weighted_pressure_plate", "minecart", "nametag", "observer", "piston", "portfolio", "rail", "redstone", "redstone_lamp", "redstone_torch", "repeater", "repeating_command_block", "saddle", "shears", "snowball", "spawn_egg", "sticky_piston", "stone_axe", "stone_button", "stone_hoe", "stone_pickaxe", "stone_pressure_plate", "stone_shovel", "stone_sword", "structure_block", "tnt", "tnt_minecart", "torch", "totem", "tripwire_hook", "wooden_axe", "wooden_button", "wooden_hoe", "wooden_pickaxe", "wooden_pressure_plate", "wooden_shovel", "wooden_sword"];
+function getData(blockString) {
+  var data = blockString.split(',')[1];
+  // Default data is 0
+  if (data === undefined) {
+    data = '0';
+  }
+  return data;
+}
 
-//var miscellaneous = ["apple", "appleenchanted", "arrow", "baked_potato", "beef", "beetroot", "beetroot_seeds", "beetroot_soup", "blaze_powder", "blaze_rod", "bone", "book", "bowl", "bread", "brick", "carrot", "carrotonastick", "chicken", "chorus_flower", "chorus_fruit", "chorus_fruit_popped", "chorus_plant", "clay_ball", "clownfish", "coal", "cooked_beef", "cooked_chicken", "cooked_fish", "cooked_porkchop", "cooked_rabbit", "cooked_salmon", "cookie", "diamond", "dragon_breath", "dye", "egg", "emerald", "emptymap", "enchanted_book", "experience_bottle", "feather", "fermented_spider_eye", "fish", "flint", "ghast_tear", "glass_bottle", "glowstone_dust", "gold_ingot", "gold_nugget", "golden_apple", "golden_carrot", "gunpowder", "iron_ingot", "iron_nugget", "leather", "lingering_potion", "magma_cream", "melon", "melon_seeds", "mushroom_stew", "muttoncooked", "muttonraw", "nether_wart", "netherstar", "paper", "poisonous_potato", "porkchop", "potato", "potion", "prismarine_crystals", "prismarine_shard", "pufferfish", "pumpkin_pie", "pumpkin_seeds", "quartz", "rabbit", "rabbit_foot", "rabbit_hide", "rabbit_stew", "reeds", "rotten_flesh", "salmon", "shulker_shell", "slime_ball", "speckled_melon", "spider_eye", "splash_potion", "stick", "string", "sugar", "wheat", "wheat_seeds"];
+// Custom blockly return type that has name and data in string [{name},{string}]
+const ITEM_TYPE = 'ITEM';
 
-var sixDirections = [[i18n.directionForward(),'forward'],[i18n.directionBack(), 'back'],[i18n.directionLeft(),'left'],[i18n.directionRight(),'right'],[i18n.directionUp(),'up'],[i18n.directionDown(),'down']];
+const sixDirections = [[i18n.directionForward(),'forward'],[i18n.directionBack(), 'back'],[i18n.directionLeft(),'left'],[i18n.directionRight(),'right'],[i18n.directionUp(),'up'],[i18n.directionDown(),'down']];
 
-var fourDirections = [[i18n.directionForward(),'forward'],[i18n.directionBack(), 'back'],[i18n.directionLeft(),'left'],[i18n.directionRight(),'right']];
+const fourDirections = [[i18n.directionForward(),'forward'],[i18n.directionBack(), 'back'],[i18n.directionLeft(),'left'],[i18n.directionRight(),'right']];
 
-var rotateDirections = [[i18n.directionLeft() + ' \u21BA', 'left'], [i18n.directionRight() + ' \u21BB', 'right']];
+const rotateDirections = [[i18n.directionLeft() + ' \u21BA', 'left'], [i18n.directionRight() + ' \u21BB', 'right']];
 
-var positionTypes = [['Relative' , '~'], ['Absolute', '']];
+const positionTypes = [[i18n.relative() , '~'], [i18n.absolute(), '']];
 
-var timeTypes = [['Day', 'day'], ['Night', 'night']];
+const timeTypes = [[i18n.timeDay(), 'day'], [i18n.timeNight(), 'night']];
 
-var weatherTypes = [['Clear', 'clear'], ['Rain', 'rain'], ['Thunder', 'thunder']];
+const weatherTypes = [[i18n.weatherTypeClear(), 'clear'], [i18n.weatherTypeRain(), 'rain'], [i18n.weatherTypeThunder(), 'thunder']];
+
 
 function createBlockPos(x, y, z, prefix) {
     return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
@@ -131,21 +144,36 @@ export const install = (blockly, blockInstallOptions) => {
     return `destroy('block_id_${this.id}','${dir}');`;
   };
 
-  blockly.Blocks.craft_collect = {
+  blockly.Blocks.craft_collectall = {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionCollect()))
-          .appendTitle(new blockly.FieldTextInput('all'), 'ITEM');
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionCollectAll()));
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.JavaScript.craft_collectall = function () {
+    return `collectall('block_id_${this.id}');`;
+  };
+
+  blockly.Blocks.craft_collect = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE)
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionCollect()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
   };
 
   blockly.JavaScript.craft_collect = function () {
-    var item = this.getTitleValue('ITEM');
-    return `collect('block_id_${this.id}','${item}');`;
+    var itemName = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
+    return `collect('block_id_${this.id}',${itemName});`;
   };
 
   blockly.Blocks.craft_drop = {
@@ -213,7 +241,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionInspect()))
           .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
-      this.setOutput(true, Blockly.BlockValueType.STRING);
+      this.setOutput(true, Blockly.JavaScript.STRING);
     }
   };
 
@@ -422,10 +450,8 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
           .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel('if a block type'))
-          .appendTitle(new blockly.FieldTextInput(''), 'BLOCKTYPE')
-          .appendTitle(new blockly.FieldLabel('with data'))
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'BLOCKDATA');
+          .appendTitle(new blockly.FieldLabel('if'))
+          .appendTitle(new blockly.FieldImageDropdown(items.blocks, 32, 32),'BLOCK');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel('detected at'))
           .appendTitle(new blockly.FieldDropdown(positionTypes), 'BLOCKPOSITIONTYPE')
@@ -443,15 +469,14 @@ export const install = (blockly, blockInstallOptions) => {
     var x = this.getTitleValue('X');
     var y = this.getTitleValue('Y');
     var z = this.getTitleValue('Z');
-    var blockType = this.getTitleValue('BLOCKTYPE');
-    var blockData = this.getTitleValue('BLOCKDATA');
+    var block = this.getTitleValue('BLOCK');
     var blockPositionType = this.getTitleValue('BLOCKPOSITIONTYPE');
     var blockX = this.getTitleValue('BLOCK_X');
     var blockY = this.getTitleValue('BLOCK_Y');
     var blockZ = this.getTitleValue('BLOCK_Z');
     var command = this.getTitleValue('COMMAND');
     return `executedetect('block_id_${this.id}','${target}','${createBlockPos(x, y, z, positionType)}',
-    '${blockType}','${blockData}','${createBlockPos(blockX, blockY, blockZ, blockPositionType)}','${command}');`;
+    '${getName(block)}','${getData(block)}','${createBlockPos(blockX, blockY, blockZ, blockPositionType)}','${command}');`;
   };
 
   blockly.Blocks.craft_timesetbyname = {
@@ -574,10 +599,7 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
           .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockType()))
-          .appendTitle(new blockly.FieldTextInput(''), 'BLOCKTYPE')
-          .appendTitle(new blockly.FieldLabel(i18n.tileData()))
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'BLOCKDATA');
+          .appendTitle(new blockly.FieldImageDropdown(items.blocks, 32, 32),'BLOCK');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -592,20 +614,20 @@ export const install = (blockly, blockInstallOptions) => {
     var toX = this.getTitleValue('TO_X');
     var toY = this.getTitleValue('TO_Y');
     var toZ = this.getTitleValue('TO_Z');
-    var blockType = this.getTitleValue('BLOCKTYPE');
-    var blockData = this.getTitleValue('BLOCKDATA');
-    return `fill('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${blockType}','${blockData}');`;
+    var block = this.getTitleValue('BLOCK');
+    return `fill('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${getName(block)}','${getData(block)}');`;
   };
 
   blockly.Blocks.craft_give = {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
+      this.appendValueInput('ITEM')
           .appendTitle(new blockly.FieldLabel(i18n.blockActionGive()))
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'AMOUNT')
+          .setCheck(ITEM_TYPE);
+      this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.items()))
-          .appendTitle(new blockly.FieldTextInput(''), 'ITEM');
+          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'AMOUNT');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
           .appendTitle(new blockly.FieldTextInput(''), 'PLAYER');
@@ -616,8 +638,118 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_give = function () {
     var player = encodeURIComponent(this.getTitleValue('PLAYER'));
-    var item = this.getTitleValue('ITEM');
+    var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
     var amount = this.getTitleValue('AMOUNT');
-    return `give('block_id_${this.id}','${player}','${item}','${amount}');`;
+    return `give('block_id_${this.id}','${player}', ${item},'${amount}');`;
   };
+
+  blockly.Blocks.craft_createblock = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendValueInput('BLOCKTYPE')
+          .setCheck(Blockly.JavaScript.STRING)
+          .appendTitle(new blockly.FieldLabel(i18n.blockType()));
+      this.appendValueInput('BLOCKDATA')
+          .setCheck(Blockly.JavaScript.STRING)
+          .appendTitle(new blockly.FieldLabel(i18n.blockData()));
+      this.setOutput(true, ITEM_TYPE);
+    }
+  };
+
+  blockly.JavaScript.craft_createblock = function () {
+    var blockType = Blockly.JavaScript.valueToCode(this, 'BLOCKTYPE', Blockly.JavaScript.ORDER_NONE);
+    var blockData = Blockly.JavaScript.valueToCode(this, 'BLOCKDATA', Blockly.JavaScript.ORDER_NONE);
+    return [`item('block_id_${this.id}',${blockType},${blockData})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_block = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.itemTypeBlock()))
+          .appendTitle(new blockly.FieldImageDropdown(items.blocks, 32, 32),'BLOCK');
+      this.setOutput(true, ITEM_TYPE);
+    }
+  };
+
+  blockly.JavaScript.craft_block = function () {
+    var block = this.getTitleValue('BLOCK');
+    return [`item('block_id_${this.id}','${getName(block)}','${getData(block)}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_miscellaneous = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.itemTypeMiscellaneous()))
+          .appendTitle(new blockly.FieldImageDropdown(items.miscellaneous, 32, 32),'ITEM');
+      this.setOutput(true, ITEM_TYPE);
+    }
+  };
+
+  blockly.JavaScript.craft_miscellaneous = function () {
+    var item = this.getTitleValue('ITEM');
+    return [`item('block_id_${this.id}','${getName(item)}','${getData(item)}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_decoration = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.itemTypeDecoration()))
+          .appendTitle(new blockly.FieldImageDropdown(items.decorations, 32, 32),'ITEM');
+      this.setOutput(true, ITEM_TYPE);
+    }
+  };
+
+  blockly.JavaScript.craft_decoration = function () {
+    var item = this.getTitleValue('ITEM');
+    return [`item('block_id_${this.id}','${getName(item)}','${getData(item)}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_tool = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.itemTypeTool()))
+          .appendTitle(new blockly.FieldImageDropdown(items.tools, 32, 32),'ITEM');
+      this.setOutput(true, ITEM_TYPE);
+    }
+  };
+
+  blockly.JavaScript.craft_tool = function () {
+    var item = this.getTitleValue('ITEM');
+    return [`item('block_id_${this.id}','${getName(item)}','${getData(item)}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_getnameof = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE)
+          .appendTitle(new blockly.FieldLabel(i18n.getnameof()));
+      this.setOutput(true, Blockly.JavaScript.STRING);
+    }
+  };
+
+  blockly.JavaScript.craft_getnameof = function () {
+      var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
+      return [`'${getName(item)}'`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_getdataof = {
+    init: function () {
+      this.setHSV(124, 1.00, 0.74);
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE)
+          .appendTitle(new blockly.FieldLabel(i18n.getdataof()));
+      this.setOutput(true, Blockly.JavaScript.STRING);
+    }
+  };
+
+  blockly.JavaScript.craft_getdataof = function () {
+      var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
+      return [`'${getData(item)}'`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
 };
