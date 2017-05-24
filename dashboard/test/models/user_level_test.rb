@@ -230,11 +230,11 @@ class UserLevelTest < ActiveSupport::TestCase
   test 'most_recent_driver returns deleted user if driver is deleted' do
     @driver.destroy
     assert_equal 'deleted user',
-      UserLevel.most_recent_driver(nil, @level, @navigator).last
+      UserLevel.most_recent_driver(nil, @level, @navigator).first
   end
 
   test 'most_recent_driver returns driver name' do
     assert_equal 'DriverName',
-      UserLevel.most_recent_driver(nil, @level, @navigator).last
+      UserLevel.most_recent_driver(nil, @level, @navigator).first
   end
 end
