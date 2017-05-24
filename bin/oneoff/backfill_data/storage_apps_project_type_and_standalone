@@ -23,20 +23,24 @@ PROJECT_TYPES = %w(
 # @return [String | nil] the project type of the storage_app.
 def project_type_from_value(value_parsed)
   level = value_parsed['level']
-  return nil unless level
-
-  PROJECT_TYPES.each do |type|
-    return type if level.include? type
+  if level
+    PROJECT_TYPES.each do |type|
+      return type if level.include? type
+    end
   end
 
   level_id = value_parsed['levelId']
-  PROJECT_TYPES.each do |type|
-    return type if level_id.include? type
+  if level_id
+    PROJECT_TYPES.each do |type|
+      return type if level_id.include? type
+    end
   end
 
   level_url = value_parsed['levelUrl']
-  PROJECT_TYPES.each do |type|
-    return type if level_url.include? type
+  if level_url
+    PROJECT_TYPES.each do |type|
+      return type if level_url.include? type
+    end
   end
 
   nil
@@ -65,7 +69,7 @@ def main
       hidden = value_parsed['hidden']
 
       project_type = storage_app[:project_type] ? storage_app[:project_type] : project_type
-      standalone = storage_app[:standalone] ? storage_app[:standalone] : !hidden
+      standalone = !storage_app[:standalone] ? false : !hidden
 
       updates << [storage_app[:id], project_type, standalone]
     end
