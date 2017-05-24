@@ -164,6 +164,8 @@ class ChannelsApi < Sinatra::Base
   # Marks the specified channel as published.
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
+    not_authorized if under_13?
+
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
     published_at = StorageApps.new(storage_id('user')).publish(channel_id, project_type)

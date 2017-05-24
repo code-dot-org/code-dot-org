@@ -9,6 +9,7 @@
 #  updated_at        :datetime
 #  code              :string(255)
 #  script_id         :integer
+#  course_id         :integer
 #  grade             :string(255)
 #  login_type        :string(255)      default("email"), not null
 #  deleted_at        :datetime
@@ -18,6 +19,7 @@
 #
 # Indexes
 #
+#  fk_rails_20b1e5de46        (course_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -41,6 +43,7 @@ class Section < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :script
+  belongs_to :course
 
   has_many :section_hidden_stages
 
