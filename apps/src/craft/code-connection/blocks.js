@@ -37,9 +37,9 @@ function createBlockPos(x, y, z, prefix) {
 
 // Install extensions to Blockly's language and JavaScript generator.
 export const install = (blockly, blockInstallOptions) => {
-  const agentBlockColor = { h:90, s: 0.57, v:0.7 };
-  const itemBlockColor = { h:358, s: 0.54, v:0.7 };
-  const nonAgentBlockColor = { h:42, s: 0.69, v:0.76 };
+  const agentBlockColor = { h: 90, s: 0.57, v: 0.7 };
+  const itemBlockColor = { h: 358, s: 0.54, v: 0.7 };
+  const nonAgentBlockColor = { h: 42, s: 0.69, v: 0.76 };
   // Agent related blocks
   blockly.Blocks.craft_move = {
     helpUrl: '',
