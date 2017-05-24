@@ -78,6 +78,10 @@ export const executeUserCode = function (client, code) {
       command = `${command}?${keyValuePairs.join('&')}`;
     }
     client.async_command(command, (result) => {
+      var log = document.getElementById("code-connection-log");
+      log.innerText += `${commandName} command executed. Output : ${result}\n`;
+      // Automatically scrolling down
+      log.scrollTop = log.scrollHeight;
       callback(result);
       interpreter.run();
     }, resultKey);
@@ -200,7 +204,6 @@ export default class Craft {
     document.body.className += " minecraft";
 
     Craft.initialConfig = config;
-
 
     // Initial connection status check to show pop-up if user is not connected to M:EE
     client.connectionStatusUpdate(function (result) {
