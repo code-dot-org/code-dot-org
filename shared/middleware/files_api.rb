@@ -486,25 +486,35 @@ class FilesApi < Sinatra::Base
   # manifest.
   #
   def files_put_file(encrypted_channel_id, filename, body)
-    downcased_filename = filename.downcase
-    bad_request if downcased_filename == FileBucket::MANIFEST_FILENAME
+    unescaped_filename = CGI.unescape(filename)
+    unescaped_filename_downcased = unescaped_filename.downcase
+    bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
     manifest_is_unchanged = true
 
+    unescaped_src_filename_downcased = params['src'] ? CGI.unescape(params['src']).downcase : nil
+    unescaped_delete_filename_downcased = params['delete'] ? CGI.unescape(params['delete']).downcase : nil
+    case_only_rename = unescaped_filename_downcased == unescaped_src_filename_downcased
+
     # store the new file
-    if params['src']
-      new_entry_json = copy_file('files', encrypted_channel_id, downcased_filename, params['src'].downcase)
+    if unescaped_src_filename_downcased
+      if case_only_rename
+        src_entry = manifest.detect {|e| e['filename'].downcase == unescaped_filename_downcased}
+        not_found if src_entry.nil?
+        new_entry_json = src_entry.to_json
+      else
+        new_entry_json = copy_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), URI.encode(unescaped_src_filename_downcased))
+      end
     else
-      new_entry_json = put_file('files', encrypted_channel_id, downcased_filename, body)
+      new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
-    new_entry_hash['filename'] = CGI.unescape(filename)
+    new_entry_hash['filename'] = unescaped_filename
 
-    manifest_comparison_filename = new_entry_hash['filename'].downcase
-    existing_entry = manifest.detect {|e| e['filename'].downcase == manifest_comparison_filename}
+    existing_entry = manifest.detect {|e| e['filename'].downcase == unescaped_filename_downcased}
     if existing_entry.nil?
       manifest << new_entry_hash
       manifest_is_unchanged = false
@@ -513,10 +523,10 @@ class FilesApi < Sinatra::Base
       manifest_is_unchanged = false
     end
 
-    # if we're also deleting a file (on rename), remove it from the manifest
-    if params['delete']
-      manifest_delete_comparison_filename = CGI.unescape(params['delete']).downcase
-      reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
+    deleting_separate_file = unescaped_delete_filename_downcased && unescaped_delete_filename_downcased != unescaped_filename_downcased
+    # if we're also deleting a file (on rename), remove it from the manifest (don't remove from manifest)
+    if deleting_separate_file
+      reject_result = manifest.reject! {|e| e['filename'].downcase == unescaped_delete_filename_downcased}
       manifest_is_unchanged = false unless reject_result.nil?
     end
 
@@ -531,7 +541,7 @@ class FilesApi < Sinatra::Base
     end
 
     # delete a file if requested (same as src file in a rename operation)
-    bucket.delete(encrypted_channel_id, params['delete'].downcase) if params['delete']
+    bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased)) if deleting_separate_file
 
     # return the new entry info
     new_entry_hash['filesVersionId'] = response.version_id
