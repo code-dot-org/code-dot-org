@@ -72,7 +72,7 @@ class Course < ApplicationRecord
   # @param course_strings[Hash{String => String}]
   def persist_strings_and_scripts_changes(scripts, course_strings)
     Course.update_strings(name, course_strings)
-    update_scripts(scripts)
+    update_scripts(scripts) if scripts
     save!
   end
 
