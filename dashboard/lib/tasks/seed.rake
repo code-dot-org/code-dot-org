@@ -187,18 +187,22 @@ namespace :seed do
       responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
     end
 
-    workshop.enrollments.each do |enrollment|
-      PEGASUS_DB[:forms].insert(
-        secret: SecureRandom.hex,
-        source_id: enrollment.id,
-        kind: 'PdWorkshopSurvey',
-        email: enrollment.email,
-        data: responses.to_json,
-        created_at: Time.now,
-        created_ip: '',
-        updated_at: Time.now,
-        updated_ip: ''
-      )
+    begin
+      workshop.enrollments.each do |enrollment|
+        PEGASUS_DB[:forms].insert(
+          secret: SecureRandom.hex,
+          source_id: enrollment.id,
+          kind: 'PdWorkshopSurvey',
+          email: enrollment.email,
+          data: responses.to_json,
+          created_at: Time.now,
+          created_ip: '',
+          updated_at: Time.now,
+          updated_ip: ''
+        )
+      end
+    rescue Sequel::DatabaseConnectionError
+      # Happens when we run on Circle
     end
 
     # Create a started workshop
