@@ -164,10 +164,12 @@ class ChannelsTest < Minitest::Test
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
 
-    # users under age 13 cannot publish projects
+    # users under age 13 cannot publish applab, gamelab or weblab projects,
+    # but can publish artist, playlab, and other project types.
 
     ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 12.years.ago.to_datetime})
-    post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+
+    post "/v3/channels/#{channel_id}/publish/applab", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.unauthorized?
 
     get "/v3/channels/#{channel_id}"
@@ -175,6 +177,15 @@ class ChannelsTest < Minitest::Test
     result = JSON.parse(last_response.body)
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
+
+    post "/v3/channels/#{channel_id}/publish/artist", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.ok?
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_includes result.keys, 'publishedAt'
+    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
   end
 
   def test_abuse
