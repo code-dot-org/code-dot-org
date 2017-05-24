@@ -808,9 +808,6 @@ var projects = module.exports = {
   copy(newName, callback, options = {}) {
     const { shouldPublish } = options;
     current = current || {};
-    var srcChannel = current.id;
-    var wrappedCallback = this.copyAssets.bind(this, srcChannel,
-        this.copyAnimations.bind(this, srcChannel, callback));
     delete current.id;
     delete current.hidden;
     if (shouldPublish) {
@@ -820,7 +817,7 @@ var projects = module.exports = {
     this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, options);
-      this.save(wrappedCallback,
+      this.save(callback,
           false /* forceNewVersion */,
           true /* preparingRemix */);
     }.bind(this));
