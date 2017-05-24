@@ -33,6 +33,7 @@ class HomeController < ApplicationController
   end
 
   GALLERY_PER_PAGE = 5
+
   def index
     if request.cookies['pm'] == 'new_header'
       redirect_to '/courses'
@@ -41,12 +42,23 @@ class HomeController < ApplicationController
     end
   end
 
+  # Show /home for teachers.
+  # Legacy header: redirect to studio.code.org
+  # Signed out: redirect to code.org
+  # Signed in student: redirect to studio.code.org/courses
+  # Signed in teacher: render this page
   def home
     if request.cookies['pm'] != 'new_header'
       redirect_to '/'
     else
-      init_homepage
-      render 'home/index'
+      if !current_user
+        redirect_to CDO.code_org_url
+      elsif current_user.student?
+        redirect_to '/courses'
+      else
+        init_homepage
+        render 'home/index'
+      end
     end
   end
 
