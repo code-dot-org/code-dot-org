@@ -10,4 +10,7 @@
   %script{src:'https://www.google.com/jsapi'}
 
 - if @header['video_player']
-  = view 'video_player.js'
+  :javascript
+    $(window).load(function() {
+      loadVideos(window.location.search.indexOf("force_youtube_fallback") !== -1)
+    });
