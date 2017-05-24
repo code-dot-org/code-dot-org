@@ -559,7 +559,15 @@ var projects = module.exports = {
         return null;
     }
   },
-  /**
+
+  canServerSideRemix() {
+    // The excluded app types need to make modifications to the project that
+    // apply to the remixed project, but should not be saved on the original
+    // project. See (Turtle|Studio).prepareForRemix().
+    return !['artist', 'playlab'].includes(projects.getStandaloneApp());
+  },
+
+  /*
    * @returns {boolean} Whether a project can be created for this level type.
    */
   isSupportedLevelType() {
@@ -850,6 +858,8 @@ var projects = module.exports = {
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
       projects.save(redirectToRemix, false, true);
+    } else if (current.isOwner) {
+      this.sourceHandler.prepareForRemix().then(redirectToRemix);
     } else {
       redirectToRemix();
     }
