@@ -82,10 +82,18 @@ class ChannelsApi < Sinatra::Base
     end
 
     timestamp = Time.now
+
+    # The client decides whether to publish the project, but we rely on the
+    # server to generate the timestamp. Remove shouldPublish from the project
+    # data because it doesn't make sense to persist it.
+    published_at = data['shouldPublish'] ? timestamp : nil
+    data.delete('shouldPublish')
+
     id = storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
       ip: request.ip,
-      type: data['projectType']
+      type: data['projectType'],
+      published_at: published_at,
     )
 
     redirect "/v3/channels/#{id}", 301
