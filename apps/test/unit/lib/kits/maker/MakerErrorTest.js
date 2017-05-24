@@ -15,7 +15,8 @@ describe('MakerError', () => {
     });
 
     it(`returns a ConnectionFailedError on a johnny-five timeout error`, () => {
-      const j5TimeoutMessage = 'A timeout occurred while connecting to the Board.';
+      const j5TimeoutMessage = 'A timeout occurred while connecting to the Board.'
+          + '\n\nSomething something error stuff.';
       const testError = new Error(j5TimeoutMessage);
       const returnedError = wrapKnownMakerErrors(testError);
       expect(returnedError)
