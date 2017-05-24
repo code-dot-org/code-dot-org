@@ -1,4 +1,5 @@
 - @page_title = t('project.project_gallery')
+- is_public = local_assigns[:is_public]
 
 = render partial: 'shared/angular'
 
@@ -13,9 +14,9 @@
 
   .row
     #gallery-switcher
-    #angular-my-projects-wrapper
+    #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
       %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
-    #public-gallery-wrapper{'style' => 'display: none;'}
+    #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
       #public-gallery
     #publish-confirm
 
