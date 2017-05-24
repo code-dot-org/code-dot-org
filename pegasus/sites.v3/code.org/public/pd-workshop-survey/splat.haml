@@ -4,6 +4,8 @@ title: "Professional Development Workshop Survey"
 :ruby
   dont_cache
   enrollment_code = request.splat_path_info[1..-1]
+  redirect (request.scheme || 'http') + ':' + CDO.studio_url("/pd/workshop_survey/#{enrollment_code}")
+
   enrollment = DASHBOARD_DB[:pd_enrollments].where(code: enrollment_code).first
   pass unless enrollment
 
