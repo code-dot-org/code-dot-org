@@ -122,6 +122,7 @@ Resources:
             Resource:
             - "arn:aws:s3:::cdo-dist/adhoc/*"
             - "arn:aws:s3:::cdo-build-logs/*"
+            - "arn:aws:s3:::<%=TEMP_BUCKET%>/*"
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
