@@ -44,7 +44,13 @@ And(/^I close my eyes$/) do
 
   @browser = @original_browser
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
-  @eyes.close(fail_on_mismatch)
+  begin
+    @eyes.close(fail_on_mismatch)
+  rescue Applitools::TestFailedError => e
+    match = %r{https://eyes.applitools.com/app/batches/[^ ]+}.match(e.message)
+    puts "clickable eyes link: <a href=#{match[0]}>#{match[0]}</a>" if match
+    raise e
+  end
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|
