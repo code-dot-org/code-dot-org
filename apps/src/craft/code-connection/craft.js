@@ -307,7 +307,7 @@ export default class Craft {
       id: 'craft-popup-connect',
     });
     dom.addClickTouchEvent($('#download-button')[0], function () {
-      var win = window.open('https://education.minecraft.net', '_blank');
+      var win = window.open('https://education.minecraft.net/get-started/download', '_blank');
       win.focus();
       popupDialog.hide();
     }.bind(this));
