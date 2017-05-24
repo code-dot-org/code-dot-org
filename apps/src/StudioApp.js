@@ -732,8 +732,7 @@ export function makeFooterMenuItems() {
   ];
 
   //Removes 'Try-HOC' from only gamelab footer menu
-  if (project.getProjectUrl().includes('gamelab')) {
-    //Look for: More elegant way to do this. -EP
+  if (project.getStandaloneApp() === 'gamelab') {
     footerMenuItems.shift();
   }
 
