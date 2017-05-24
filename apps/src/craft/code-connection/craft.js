@@ -8,6 +8,7 @@ import {getStore} from '@cdo/apps/redux';
 import AppView from '@cdo/apps/templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 import cc_client from './cc-client';
+import items from './items';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -36,6 +37,16 @@ const preloadImage = function (url) {
   img.src = url;
 };
 
+/**
+ * Try to get name from input
+ * @param {any} input
+ */
+function getItemName(input) {
+  if (input.hasOwnProperty('name')) {
+    input = input['name'];
+  }
+  return input;
+}
 export const executeUserCode = function (client, code) {
   let interpreter;
 
@@ -44,7 +55,7 @@ export const executeUserCode = function (client, code) {
    * @param {number} blockID blockly block id
    * @param {string} commandName name of the command
    * @param {string} resultKey key for result value
-   * @param {array} inputPairs array of input key-value pairs
+   * @param {Object[]} inputPairs array of input key-value pairs
    * @param {function} callback callback that reports execution result
    */
   function createAsyncRequestBlock(blockID, commandName, resultKey, inputPairs, callback) {
@@ -70,7 +81,7 @@ export const executeUserCode = function (client, code) {
     }, resultKey);
   }
 
-  const evalApiMethods = {
+  const asyncMethods = {
     move: function (blockID, direction, callback) {
       createAsyncRequestBlock(blockID, 'move', 'success', { 'direction': direction }, callback);
     },
@@ -90,7 +101,10 @@ export const executeUserCode = function (client, code) {
       createAsyncRequestBlock(blockID, 'destroy', 'success', { 'direction': direction }, callback);
     },
     collect: function (blockID, item, callback) {
-      createAsyncRequestBlock(blockID, 'collect', 'success', { 'item': item }, callback);
+      createAsyncRequestBlock(blockID, 'collect', 'success', { 'item': getItemName(item) }, callback);
+    },
+    collectall: function (blockID, callback) {
+      createAsyncRequestBlock(blockID, 'collect', 'success', { 'item': 'all'}, callback);
     },
     drop: function (blockID, slotNum, quantity, direction, callback) {
       createAsyncRequestBlock(blockID, 'drop', 'success', { 'slotNum': slotNum, 'quantity': quantity, 'direction': direction }, callback);
@@ -157,13 +171,20 @@ export const executeUserCode = function (client, code) {
       createAsyncRequestBlock(blockID, 'fill', 'success', { 'from': from, 'to': to, 'tileName': tileName, 'tileData': tileData }, callback);
     },
     give: function (blockID, player, item, amount, callback) {
-      createAsyncRequestBlock(blockID, 'give', 'success', { 'player': player, 'item': item, 'amount': amount }, callback);
+      createAsyncRequestBlock(blockID, 'give', 'success', { 'player': player, 'itemName': item['name'], 'data':item['data'], 'amount': amount }, callback);
     }
   };
 
-  // Use values of evalApiMethods because there is no exception
-  codegen.asyncFunctionList = Object.values(evalApiMethods);
-  interpreter = codegen.evalWith(code, evalApiMethods);
+  const methods = {
+    item: function (blockID, name, data) {
+      studioApp().highlight(blockID);
+      return { 'name': name, 'data': data };
+    }
+  };
+
+  // Register async methods
+  codegen.asyncFunctionList = Object.values(asyncMethods);
+  interpreter = codegen.evalWith(code, Object.assign(asyncMethods, methods));
 };
 
 export default class Craft {
@@ -195,6 +216,13 @@ export default class Craft {
       studioApp().init({
         enableShowCode: false,
         ...config,
+      });
+
+      var itemTypeKeys = Object.keys(items);
+      itemTypeKeys.forEach(function (itemType) {
+        items[itemType].forEach(function (item) {
+          preloadImage(item[0]);
+        });
       });
 
       COMMON_UI_ASSETS.forEach(function (url) {
