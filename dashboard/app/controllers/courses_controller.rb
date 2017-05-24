@@ -59,6 +59,7 @@ class CoursesController < ApplicationController
   def i18n_params
     params.permit(
       :title,
+      :description_short,
       :description_student,
       :description_teacher
     ).to_h
