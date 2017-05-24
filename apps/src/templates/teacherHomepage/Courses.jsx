@@ -53,7 +53,7 @@ const Courses = React.createClass({
           subHeadingText={i18n.coursesHeadingSubText(
             {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
           )}
-          extended={isSignedOut}
+          showCreateAccount={isSignedOut}
           description={i18n.coursesHeadingDescription()}
         />
 

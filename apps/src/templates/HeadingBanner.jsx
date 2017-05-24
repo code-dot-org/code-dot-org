@@ -27,31 +27,31 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
     fontSize: 16,
-    width: '600px',
+    width: 600,
     marginBottom: 20,
   },
   spacer: {
-    marginBottom: '50px'
+    marginBottom: 50
   },
   bigSpacer: {
-    marginBottom: '150px'
+    marginBottom: 150
   }
 };
 
 const HeadingBanner = React.createClass({
   propTypes: {
-    extended: React.PropTypes.bool,
+    showCreateAccount: React.PropTypes.bool,
     headingText: React.PropTypes.string,
     subHeadingText: React.PropTypes.string,
     description: React.PropTypes.string,
   },
 
   render() {
-    const {extended, headingText, subHeadingText, description} = this.props;
+    const {showCreateAccount, headingText, subHeadingText, description} = this.props;
 
     return (
       <div>
-        {!extended && (
+        {!showCreateAccount && (
           <div style={styles.spacer}/>
         )}
         <div style={styles.bannerHeading}>
@@ -60,7 +60,7 @@ const HeadingBanner = React.createClass({
         <div style={styles.bannerSubHeading}>
           {subHeadingText || <span>&nbsp;</span>}
         </div>
-        {extended ? (
+        {showCreateAccount && (
           <div>
             <div style={styles.bannerDescription}>
               {description}
@@ -73,7 +73,8 @@ const HeadingBanner = React.createClass({
             />
             <div style={styles.spacer}/>
           </div>
-        ):(
+        )}
+        {!showCreateAccount && (
           <div style={styles.bigSpacer}/>
         )}
       </div>
