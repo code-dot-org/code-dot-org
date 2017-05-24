@@ -194,9 +194,10 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
-      recent_driver = UserLevel.most_recent_driver(script, level, current_user)
+      recent_driver, recent_attempt = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
         response[:pairingDriver] = recent_driver
+        response[:pairingAttempt] = edit_level_source_path(recent_attempt) if recent_attempt
       end
     end
 
