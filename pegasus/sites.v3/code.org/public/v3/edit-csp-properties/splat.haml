@@ -8,7 +8,12 @@ angular: propertiesApp
 -api_base_url = "/v3/shared-properties/#{channel_id}"
 -not_authorized! unless owns_channel? channel_id
 
+%script{type: "text/javascript", src: "/shared/js/angular/angular.min.js"}
+%script{type: "text/javascript", src: "/shared/js/angular-route/angular-route.min.js"}
+%script{type: "text/javascript", src: "/shared/js/angular-resource/angular-resource.min.js"}
+
 %div{"ng-app" => "propertiesApp", "ng-view" => ""}
+
 
 :javascript
   'use strict';
