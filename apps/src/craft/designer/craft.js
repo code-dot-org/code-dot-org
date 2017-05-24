@@ -257,6 +257,10 @@ Craft.init = function (config) {
       enableShowBlockCount: false,
       loadAudio: function () {},
       afterInject: function () {
+        if (config.level.showMovementBanner) {
+          studioApp().displayWorkspaceAlert('warning', <div>{craftMsg.useArrowKeys()}</div>);
+        }
+
         var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
