@@ -35,7 +35,7 @@
             = link_to build_script_level_url(script_level) do
               %button.primary= t('continue')
             = link_to script_url(current_user.primary_script) do
-              %button.primary= t('home.view_course')
+              %button.primary.gray= t('home.view_course')
         - elsif current_user.all_advertised_scripts_completed?
           #suggestcourse.smalltext!= t('home.student_finished', online_link: link_to(t('home.online'), 'http://code.org/learn/beyond'), local_school_link: link_to(t('home.local_school'), 'http://code.org/learn/local'))
         - else

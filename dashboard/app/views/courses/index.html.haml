@@ -23,5 +23,8 @@
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml')
   = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
   = render partial: 'home/all_courses'
+  - unless current_user.teacher?
+    #user_hero
+      = render template: 'api/user_hero'
 
 #courses-container

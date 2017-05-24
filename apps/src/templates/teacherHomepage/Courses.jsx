@@ -52,6 +52,7 @@ const Courses = React.createClass({
       $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
       $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
     } else {
+      $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
   },
@@ -70,7 +71,21 @@ const Courses = React.createClass({
           description={i18n.coursesHeadingDescription()}
         />
 
-        {courses && (
+        {!isTeacher && (
+          <ProtectedStatefulDiv
+            style={styles.userHero}
+            ref="userHero"
+          />
+        )}
+
+        {courses && isTeacher && (
+          <RecentCoursesCollapsible
+            courses={courses}
+            showAllCoursesLink={false}
+          />
+        )}
+
+        {courses.length > 0 && !isTeacher && (
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
