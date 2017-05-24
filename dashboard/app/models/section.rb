@@ -43,6 +43,7 @@ class Section < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :script
+  belongs_to :course
 
   has_many :section_hidden_stages
 

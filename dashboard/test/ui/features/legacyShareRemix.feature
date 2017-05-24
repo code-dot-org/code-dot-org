@@ -1,4 +1,5 @@
 @no_mobile
+@as_student
 Feature: Legacy Share Remix
 
   Background:
