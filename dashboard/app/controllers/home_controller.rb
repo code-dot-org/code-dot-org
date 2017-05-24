@@ -51,11 +51,9 @@ class HomeController < ApplicationController
     if request.cookies['pm'] != 'new_header'
       redirect_to '/'
     else
-      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-
       if !current_user
         redirect_to CDO.code_org_url
-      elsif request.cookies[cookie_key] == "student"
+      elsif current_user.student?
         redirect_to '/courses'
       else
         init_homepage
