@@ -170,7 +170,7 @@ class Script < ActiveRecord::Base
   # variable (ie. in memory in the worker process) and in a
   # distributed cache (Rails.cache)
   @@script_cache = nil
-  SCRIPT_CACHE_KEY = 'script-cache'
+  SCRIPT_CACHE_KEY = 'script-cache'.freeze
 
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?

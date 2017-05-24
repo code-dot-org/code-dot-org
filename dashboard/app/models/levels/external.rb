@@ -26,7 +26,7 @@
 
 class External < DSLDefined
   # This string gets replaced with the user's id in markdown.
-  USER_ID_REPLACE_STRING = '<user_id/>'
+  USER_ID_REPLACE_STRING = '<user_id/>'.freeze
 
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?

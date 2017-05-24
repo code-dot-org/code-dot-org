@@ -241,7 +241,9 @@ class Level < ActiveRecord::Base
     builder.to_xml(PRETTY_PRINT)
   end
 
-  PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
+  PRETTY_PRINT = {
+    save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT
+  }.freeze
 
   def self.pretty_print_xml(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
@@ -309,7 +311,7 @@ class Level < ActiveRecord::Base
     Studio
     StudioEC
     StarWarsGrid
-  )
+  ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).

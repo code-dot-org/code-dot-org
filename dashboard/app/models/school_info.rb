@@ -26,19 +26,19 @@
 
 class SchoolInfo < ActiveRecord::Base
   SCHOOL_TYPES = [
-    SCHOOL_TYPE_CHARTER = "charter",
-    SCHOOL_TYPE_PRIVATE = "private",
-    SCHOOL_TYPE_PUBLIC = "public",
-    SCHOOL_TYPE_HOMESCHOOL = "homeschool",
-    SCHOOL_TYPE_AFTER_SCHOOL = "afterschool",
-    SCHOOL_TYPE_OTHER = "other"
+    SCHOOL_TYPE_CHARTER = "charter".freeze,
+    SCHOOL_TYPE_PRIVATE = "private".freeze,
+    SCHOOL_TYPE_PUBLIC = "public".freeze,
+    SCHOOL_TYPE_HOMESCHOOL = "homeschool".freeze,
+    SCHOOL_TYPE_AFTER_SCHOOL = "afterschool".freeze,
+    SCHOOL_TYPE_OTHER = "other".freeze
   ].freeze
 
   SCHOOL_STATE_OTHER = "other"
 
   VALIDATION_TYPES = [
-    VALIDATION_FULL = 'full',
-    VALIDATION_NONE = 'none'
+    VALIDATION_FULL = 'full'.freeze,
+    VALIDATION_NONE = 'none'.freeze
   ].freeze
 
   belongs_to :school_district
@@ -65,7 +65,7 @@ class SchoolInfo < ActiveRecord::Base
     school_other
     school_name
     full_address
-  )
+  ).freeze
 
   before_validation do
     ATTRIBUTES.each do |attr|

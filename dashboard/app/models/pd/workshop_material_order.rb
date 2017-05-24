@@ -39,7 +39,7 @@ module Pd
       match_text: 'Address found, but requires a apartment/suite.',
       field: :apartment_or_suite,
       message: 'is required for this address'
-    }]
+    }].freeze
 
     # Make sure the phone number contains at least 10 digits.
     # Allow any format and additional text, such as extensions.

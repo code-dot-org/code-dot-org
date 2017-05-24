@@ -115,15 +115,15 @@ class User < ActiveRecord::Base
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
-  PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
+  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'
-  TYPE_TEACHER = 'teacher'
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
+  TYPE_STUDENT = 'student'.freeze
+  TYPE_TEACHER = 'teacher'.freeze
+  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -286,7 +286,12 @@ class User < ActiveRecord::Base
     (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
   end
 
-  GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
+  GENDER_OPTIONS = [
+    [nil, ''],
+    ['gender.male', 'm'],
+    ['gender.female', 'f'],
+    ['gender.none', '-']
+  ].freeze
 
   attr_accessor :login
 
@@ -339,7 +344,7 @@ class User < ActiveRecord::Base
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ]
+  ].freeze
   validates :terms_of_service_version,
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
@@ -456,7 +461,7 @@ class User < ActiveRecord::Base
     "#{raw_name['first']} #{raw_name['last']}".squish
   end
 
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
