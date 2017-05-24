@@ -6,23 +6,25 @@ theme: responsive
 
 ---
 
-# Host an Hour of Code!
+# Vista Equity Partners Organizer Toolkit
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code”, to show that anybody can learn the basics, and to broaden participation in the field of computer science. Since 2013, the Hour of Code has been part of Computer Science Education Week, an annual celebration of the computing field and its heritage. Now a global movement, the Hour of Code has served almost 400 million Hours of Code in 180+ countries! 
 
-Hosting an Hour of Code event is a great way to get your employees involved in their local communities. Hosting an event can take many forms. Some examples include helping a local school host an assembly to inspire students about CS, inviting a local school to your offices to do an Hour of Code with your employees, inviting your employees and their families to an office hosted event, etc.
+Help bring these life changing skills to your children and local students!
 
 Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
+[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<button>Back to Vista Equity Partners Portal</button>](/employees/vista)
+
 ## Steps:
+
+As an event organizer, you will project manage the event by owning communications, planing, and coordinating an Hour of Code event for your fellow colleagues. 
 
 1. **[Reach out](#school) to a local youth organization or school.** You should do this 3-4 months prior to the event.
 2. **[Plan](#agenda)** and **[register](https://hourofcode.com)** your event. Discuss with the youth organization or school travel, agenda, and other logistics.
 3. **[Message](#1communication) out to your employees to volunteer.** Let them know about the event and encourage employees to sign up to volunteer. Once you receive employee signups, let them know they have been selected and share important event details and resources.
 5. **Host the event!**
 6. **[Celebrate!](#celebrate)** Share on social media and other marketing channels about the success of your event.
-
-### Here's the **[how-to guide](https://hourofcode.com/how-to)** for hosting an Hour of Code!
 
 <img src="/images/employee-engagement/hoc-kids.jpg" style="max-width: 100%">
 _____________________________________________
@@ -79,15 +81,16 @@ Best,
 
 Hello [NAME],
 
-Computer science is the defining field of the 21st century, yet most schools don’t teach it. Join us to help give every student in every school the opportunity to learn!
+Computer science is the defining field of the 21st century, yet most schools don’t teach it. **Join us to help give every student in every school the opportunity to learn!**
 
 I am excited to announce that [COMPANY] will be joining Code.org this year to help promote the “Hour of Code”! The Hour of Code is a global movement reaching over 100 million students of diverse backgrounds in 180+ countries to help broaden participation in computer science and promote diversity in tech.
 
 
 How you can get involved:
-Join us as [COMPANY]'s Hour of Code event! Sign up to be a volunteer here.
-[EVENT DETAILS]
+Join us as [COMPANY]'s Hour of Code event! Sign up to be a volunteer here.</br>
+We also strongly suggest to **bring your kids**!
 
+Event details: [INSERT]
 
 [COMPANY] is proud to participate in this worldwide campaign. Our efforts will help introduce many students to computer science who might not have discovered it otherwise. Technology is transforming the globe—the Hour of Code is our opportunity to transform technology by promoting equity and diversity in the field’s education and career pathways.
 
@@ -132,8 +135,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 - Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 - **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+- **Are there any Hour of Code activities for students with disabilities?**<br>
+We’re working to improve our selection but for now we only have a recommendation for Quorum. This [lesson plan](https://drive.google.com/a/code.org/file/d/0B4hvv01Osu00OTdyX0J3RkZJZ1E/view?usp=drivesdk) is for an activity designed for visually challenged students.
 
-### 4) Let you employees know!
+### 4) Get your employees to sign up!
 After you send out communication to gather employee volunteers, reach out to those who have signed up to let them know all the details. Try this suggested messaging:
 
 [letter]
@@ -142,14 +147,14 @@ Hello [NAME],
 
 Congratulations! As a Vista Equity Partners' volunteer, you have been selected to take part in our Hour of Code event on [DATE]. The Hour of Code is a global movement reaching over 100 million students of diverse backgrounds in 180+ countries to help broaden participation in computer science and promote diversity in tech.
 
-[EVENT DETAILS]
+Event details: [INSERT]
 
 To prepare, please look over these resources below:
 
+- [Volunteer Guide](/employees/vista-guide)
 - [LINK TO CHOSEN TUTORIAL]
-- Volunteer Guide
 
-Join us to help lead this movement forward! There is limited space and many eager volunteers so please let us know by [DATE] if you are able to participate. If you no longer wish to receive volunteer opportunities, please let us know.
+**Bring your kids and join us to help lead this movement forward!** There is limited space and many eager volunteers so please let us know by [DATE] if you are able to participate. If you no longer wish to receive volunteer opportunities, please let us know.
 
 -SIGNED
 
@@ -158,14 +163,14 @@ Join us to help lead this movement forward! There is limited space and many eage
 
 ### 4) Plan travel logistics
 
-Work closely with the local youth organization or school to decide what works best for travel. We strongly suggest letting the guardians or shaperones organize travel.  
+Work closely with the local youth organization or school to decide what works best for travel. We strongly suggest letting the guardians or chaperones organize travel.  
 
 ### 5) Identify an inspiring speaker
-Identify a diverse tech employee or executive leader at your office to inspire students by talking about the breadth of possibilities in computer science. Speaking points:
+Identify a diverse tech employee or executive leader at your office to inspire students by talking about the breadth of possibilities in computer science. Possible speaking points:
 
 - Share an inspirational story: How did the speaker get involved in a career in tech? Who inspired them? What do they love most about their job?
 - Why is tech important?
-- How has tech changed the world?
+- Share how computer science has broad, worldwide impact.
 - Engage students by asking questions: Do the students use apps? What are their favorite apps? What do they know about computer science/what do they think computer science is?
 - Don't forget to leave time for questions!
 
@@ -173,7 +178,7 @@ Identify a diverse tech employee or executive leader at your office to inspire s
 ### Sample Agenda
 |Time | Agenda item|
 |-----------------| ------------|
-|10-15 minutes | Introduction and inspiring speaker: </ul><li>What do you do at Vista Equity Partners, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
+|10-15 minutes | Introduction and speaker: </ul><li>What do you do at Vista Equity Partners, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
 |1-5 minutes | Show an [inspirational video](#videos)|
 |5-10 minutes | Ask the students questions and leave time for Q&A. </ul><li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul>|
 |60 minutes | Code!|

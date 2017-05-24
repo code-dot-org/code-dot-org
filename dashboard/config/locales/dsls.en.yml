@@ -4852,7 +4852,6 @@ en:
         '3': '3'
         '4': '4'
         How many times will the word 'looped' be printed in the console?: How many times will the word 'looped' be printed in the console?
-        How many times with the word 'looped' be printed in the console?: How many times with the word 'looped' be printed in the console?
         inifinite: inifinite
       CSDU6 - timed loop question for:
         The button background will be violet: The button background will be violet
@@ -7388,6 +7387,24 @@ en:
         The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
         The bird will make it to the pig.: The bird will make it to the pig.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseC_multi_starWars_predict1:
+        BB-8 will move forward 5 times, which will get him to collect all of the scrap metal: BB-8 will move forward 5 times, which will get him to collect all of the scrap metal
+        BB-8 will move forward only one space: BB-8 will move forward only one space
+        BB-8 will not move.: BB-8 will not move.
+        Correct!: Correct!
+        I don't know: I don't know
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
+        The repeat block will `move the bird forward` 5 times, taking him to the pig.: The repeat block will `move the bird forward` 5 times, taking him to the pig.
+      courseC_multi_starWars_predict2:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+        BB-8 will travel too far in the first loop.: BB-8 will travel too far in the first loop.
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
