@@ -54,12 +54,6 @@ Rails/Date:
 Rails/DynamicFindBy:
   Enabled: false
 
-# Offense count: 1
-# Configuration parameters: Include.
-# Include: app/**/*.rb, config/**/*.rb, lib/**/*.rb
-Rails/Exit:
-  Enabled: false
-
 # Offense count: 31
 # Configuration parameters: Include.
 # Include: app/**/*.rb, config/**/*.rb, db/**/*.rb, lib/**/*.rb
