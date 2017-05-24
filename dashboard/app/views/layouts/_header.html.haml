@@ -54,7 +54,10 @@
                   = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
                 - else
                   = link_to(image_tag('codeorg-studio-logo.png'), '/')
-            %span.project_info
+            - if show_header2
+              .project_info
+            - else
+              %span.project_info
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
