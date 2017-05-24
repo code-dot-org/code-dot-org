@@ -1716,4 +1716,108 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
     end
   end
+
+  class RecentCoursesAndScripts < ActiveSupport::TestCase
+    setup do
+      test_locale = :"te-ST"
+      I18n.locale = test_locale
+      custom_i18n = {
+        'data' => {
+          'course' => {
+            'name' => {
+              'csd' => {
+                'title' => 'Computer Science Discoveries',
+                'description_short' => 'CSD short description',
+              }
+            }
+          },
+          'script' => {
+            'name' => {
+              'other' => {
+                'title': 'Script Other',
+                'description_short' => 'other-description'
+              }
+            }
+          }
+        }
+      }
+
+      I18n.backend.store_translations test_locale, custom_i18n
+
+      @student = create :student
+      teacher = create :teacher
+
+      course = create :course, name: 'csd'
+      create :course_script, course: course, script: (create :script, name: 'csd1'), position: 1
+      create :course_script, course: course, script: (create :script, name: 'csd2'), position: 2
+
+      other_script = create :script, name: 'other'
+      @student.assign_script(other_script)
+
+      section = create :section, user_id: teacher.id, course: course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+    end
+
+    test "it returns both courses and scripts" do
+      courses_and_scripts = @student.recent_courses_and_scripts
+      assert_equal 2, courses_and_scripts.length
+
+      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:courseName]
+      assert_equal 'CSD short description', courses_and_scripts[0][:description]
+      assert_equal '/courses/csd', courses_and_scripts[0][:link]
+      assert_equal '', courses_and_scripts[0][:image]
+      assert_equal [], courses_and_scripts[0][:assignedSections]
+
+      assert_equal 'Script Other', courses_and_scripts[1][:courseName]
+      assert_equal 'other-description', courses_and_scripts[1][:description]
+      assert_equal '/s/other', courses_and_scripts[1][:link]
+      assert_equal '', courses_and_scripts[1][:image]
+      assert_equal [], courses_and_scripts[1][:assignedSections]
+    end
+
+    test "it does not return scripts that are in returned courses" do
+      script = Script.find_by_name('csd1')
+      @student.assign_script(script)
+
+      courses_and_scripts = @student.recent_courses_and_scripts
+      assert_equal 2, courses_and_scripts.length
+
+      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:courseName]}
+    end
+  end
+
+  class SectionCourses < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @grand_teacher = create :teacher
+      @course = create :course, name: 'csd'
+    end
+    test "it returns courses in which a teacher exists as a student" do
+      grand_section = create :section, user_id: @grand_teacher.id, course: @course
+      Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
+
+      courses = @teacher.section_courses
+      assert_equal 1, courses.length
+      assert_equal 'csd', courses[0].name
+    end
+
+    test "it returns courses in which a teacher exists as a teacher" do
+      section = create :section, user_id: @teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
+
+      courses = @teacher.section_courses
+      assert_equal 1, courses.length
+      assert_equal 'csd', courses[0].name
+    end
+
+    test "it returns courses in which a student exists as a student" do
+      section = create :section, user_id: @teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
+
+      courses = @student.section_courses
+      assert_equal 1, courses.length
+      assert_equal 'csd', courses[0].name
+    end
+  end
 end
