@@ -29,10 +29,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The best solution uses two `move forward` commands and one loop.\",\"hint_id\":\"courseC_maze_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e886950bed94d7a223ff52008f8bd18/courseC_maze_loops5.mp3\"}]",
     "markdown_instructions": "*\"Get me to the pig as quickly as possible!\"*",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
