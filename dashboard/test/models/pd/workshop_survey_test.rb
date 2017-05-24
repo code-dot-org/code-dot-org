@@ -81,6 +81,8 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
       "Form data helpQuality[Facili]",
       "Form data howComfortableAskingQuestions[Facili]",
       "Form data howOftenTaughtNewThings[Facili]",
+      "Form data thingsFacilitatorDidWell[Facili]",
+      "Form data thingsFacilitatorCouldImprove[Facili]"
     ], survey.errors.full_messages
   end
 
@@ -92,7 +94,6 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     prev_survey.pd_enrollment = create :pd_enrollment, user: user
     prev_survey.form_data = build(:pd_workshop_survey_hash).to_json
     prev_survey.save!
-
 
     survey = Pd::WorkshopSurvey.new
     survey.pd_enrollment = create :pd_enrollment, user: user
