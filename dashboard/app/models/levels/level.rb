@@ -278,6 +278,7 @@ class Level < ActiveRecord::Base
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
     'Gamelab', # freeplay
+    'GoBeyond', # unknown
     'Level', # base class
     'LevelGroup', # dsl defined, covered in dsl
     'Map', # no user submitted content
