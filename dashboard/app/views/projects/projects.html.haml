@@ -51,6 +51,10 @@
           %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
 
+  .row
+    .span12
+      = t('project.thumbnail_help')
+
 .row
   .span12
     %h3.lesson{style: 'text-align:center'}
