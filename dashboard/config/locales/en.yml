@@ -685,6 +685,7 @@ en:
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'
