@@ -7,7 +7,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    borderRadius: 3,
     width: 940
   },
   headerRow: {
