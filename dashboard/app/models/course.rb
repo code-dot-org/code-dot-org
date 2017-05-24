@@ -77,7 +77,8 @@ class Course < ApplicationRecord
   end
 
   def write_serialization
-    return unless Rails.application.config.levelbuilder_mode
+    # Only save non-plc course, and only in LB mode
+    return unless Rails.application.config.levelbuilder_mode && !plc_course
     File.write(Course.file_path(name), serialize)
   end
 
@@ -99,6 +100,8 @@ class Course < ApplicationRecord
       script = Script.find_by_name!(script_name)
       CourseScript.where(course: self, script: script).destroy_all
     end
+    # Reload model so that course_scripts is up to date
+    reload
   end
 
   def summarize

@@ -182,8 +182,10 @@ function shareProject() {
 }
 
 function remixProject() {
-  if (dashboard.project.getCurrentId()) {
+  if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {
     dashboard.project.serverSideRemix();
+  } else if (!getStore().getState().pageConstants.isSignedIn) {
+    window.location = `/users/sign_in?user_return_to=${window.location.pathname}`;
   } else {
     // We don't have an id. This implies we are either on a legacy /c/ share
     // page, a script level, or a blank project page that hasn't been saved for
