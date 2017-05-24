@@ -164,6 +164,7 @@ class ChannelsApi < Sinatra::Base
   # Marks the specified channel as published.
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
+    not_authorized unless owns_channel?(channel_id)
     not_authorized unless %w(artist playlab applab gamelab).include?(project_type)
     not_authorized if under_13? && !%w(artist playlab).include?(project_type)
 
@@ -179,6 +180,7 @@ class ChannelsApi < Sinatra::Base
   # Marks the specified channel as no longer published.
   #
   post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
+    not_authorized unless owns_channel?(channel_id)
     StorageApps.new(storage_id('user')).unpublish(channel_id)
     {publishedAt: nil}.to_json
   end
