@@ -20,23 +20,24 @@ module.exports = {
     toolbox: createToolbox(
       category('Agent',
         craftBlock('move') +
-        craftBlock('inspect') +
-        craftBlock('place') +
         craftBlock('turn') +
-        craftBlock('till') +
+        craftBlock('tptoplayer')+
+        craftBlock('place') +
         craftBlock('destroy') +
+        craftBlock('till') +
+        craftBlock('attack') +
         craftBlock('collect') +
+        craftBlock('collectall') +
         craftBlock('drop') +
         craftBlock('dropall') +
         craftBlock('detect') +
         craftBlock('inspect') +
         craftBlock('inspectdata') +
-        craftBlock('detectredstone') +
         craftBlock('getitemdetail') +
         craftBlock('getitemspace') +
         craftBlock('getitemcount') +
         craftBlock('transfer') +
-        craftBlock('tptoplayer'))+
+        craftBlock('detectredstone')) +
       category('Item',
           craftBlock('block') +
           craftBlock('miscellaneous') +
@@ -48,10 +49,10 @@ module.exports = {
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
-        craftBlock('fill') +
+        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('give') +
         craftBlock('executeasother') +
-        craftBlock('executedetect') +
+        craftBlock('executedetect', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('timesetbyname') +
         craftBlock('timesetbynumber') +
         craftBlock('weather') +
