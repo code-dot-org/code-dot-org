@@ -21,7 +21,6 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
       :venue_feedback,
       :how_much_learned,
       :how_motivating,
-      :who_facilitated,
       :how_much_participated,
       :how_often_talk_about_ideas_outside,
       :how_often_lost_track_of_time,
