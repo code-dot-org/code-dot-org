@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2017-04-03T05:34:19.000Z",
+  "created_at": "2017-05-25T17:10:19.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -64,13 +64,13 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "markdown_instructions": "# Challenge: Draw an Image\r\n\r\n_Check with your teacher before starting any of the challenges_\r\n\r\nIn the previous lesson you and your partner created several interesting images. See if you can recreate one of them using code.",
-    "display_name": "Challenge: Draw an Image",
+    "markdown_instructions": "<img src=\"https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png\" style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n\r\n# Challenge: Shape of Shapes\r\n\r\n_Check with your teacher before starting any of the challenges_\r\n\r\nUsing only the `rect` and `ellipse` commands, can you draw a new shape, like this triangle made out of circles?",
+    "display_name": "Challenge: Shape of Shapes",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:11:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:31:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
