@@ -165,8 +165,8 @@ class ChannelsApi < Sinatra::Base
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
-    not_authorized unless %w(artist playlab applab gamelab).include?(project_type)
-    not_authorized if under_13? && !%w(artist playlab).include?(project_type)
+    bad_request unless %w(artist playlab applab gamelab).include?(project_type)
+    forbidden if under_13? && !%w(artist playlab).include?(project_type)
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
