@@ -87,7 +87,9 @@ export const executeUserCode = function (client, code) {
       // Automatically scrolling down
       log.scrollTop = log.scrollHeight;
       callback(result);
-      interpreter.run();
+      if (studioApp().isRunning() === true) {
+        interpreter.run();
+      }
     }, resultKey);
   }
 
