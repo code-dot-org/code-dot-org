@@ -67,8 +67,12 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   PROGRAM_REGISTRATION_FORM_KIND = 'PdProgramRegistration'.freeze
 
+  after_initialize do
+    @custom_updates = {}
+  end
   belongs_to :user
   has_one :accepted_program, class_name: 'Pd::AcceptedProgram', foreign_key: :teacher_application_id, dependent: :destroy
+  accepts_nested_attributes_for :accepted_program, allow_destroy: true
 
   validates_presence_of :user
   validates_presence_of :application
@@ -161,21 +165,17 @@ class Pd::TeacherApplication < ActiveRecord::Base
     reload_accepted_program
 
     if workshop_name.blank?
-      accepted_program.try(:destroy)
-      return
-    end
-
-    params = {
-      workshop_name: workshop_name,
-      course: selected_course,
-      user_id: user_id,
-      teacher_application_id: id
-    }
-
-    if accepted_program
-      accepted_program.update! params
+      self.accepted_program_attributes = {
+        id: accepted_program.try(:id),
+        _destroy: true
+      }
     else
-      self.accepted_program = Pd::AcceptedProgram.find_or_create_by! params
+      self.accepted_program_attributes = {
+        id: accepted_program.try(:id),
+        workshop_name: workshop_name,
+        course: selected_course,
+        user_id: user_id
+      }
     end
   end
 
@@ -306,37 +306,30 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def program_registration
-    return @program_registration if @program_registration || @override_program_registration
+    return @custom_updates[:program_registration] if @custom_updates.key? :program_registration
+    return @cached_pegasus_program_registration if @cached_pegasus_program_registration
 
     # Lazy-load from pegasus if it hasn't yet been retrieved
     form = PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).first
-    @program_registration = form.present? ? JSON.parse(form[:data]).symbolize_keys : nil
+    @cached_pegasus_program_registration = form.present? ? JSON.parse(form[:data]).symbolize_keys : nil
   end
 
   def program_registration=(value)
-    @program_registration = value
-
-    # store this separately to differentiate nil between delete on save vs. not yet retrieved
-    @override_program_registration = true
-    @raw_program_registration_json = nil
-  end
-
-  def reload
-    @override_program_registration = false
-    @program_registration = nil
-    @move_to_user = nil
-    super
+    @custom_updates[:program_registration] = value
+    @unparseable_program_registration_json = nil
   end
 
   def program_registration_json
-    @raw_program_registration_json || JSON.pretty_generate(
+    @unparseable_program_registration_json || JSON.pretty_generate(
       program_registration.except(*automatic_program_registration_fields.keys)
     )
   end
 
   def program_registration_json=(value)
+    @unparseable_program_registration_json = nil
+
     if value.blank?
-      self.program_registration = nil
+      @custom_updates[:program_registration] = nil
       return
     end
 
@@ -344,22 +337,28 @@ class Pd::TeacherApplication < ActiveRecord::Base
       JSON.parse(value)
     rescue JSON::ParserError
       # store the raw json, and fail validation
-      @raw_program_registration_json = value
+      @unparseable_program_registration_json = value
       return
     end
 
-    @raw_program_registration_json = nil
-    self.program_registration = parsed.merge(automatic_program_registration_fields).symbolize_keys
+    @custom_updates[:program_registration] = parsed.merge(automatic_program_registration_fields).symbolize_keys
+  end
+
+  def reload
+    @custom_updates = {}
+    @cached_pegasus_program_registration = nil
+    @move_to_user = nil
+    super
   end
 
   validate :program_registration_form_must_be_valid
   def program_registration_form_must_be_valid
-    if @raw_program_registration_json
+    if @unparseable_program_registration_json
       errors.add :program_registration_json, 'is not valid JSON'
       return
     end
 
-    return nil unless @override_program_registration && @program_registration
+    return nil unless @custom_updates[:program_registration]
 
     unless accepted_program.try(&:teachercon?)
       errors.add :accepted_workshop, 'must be a TeacherCon workshop for program registration'
@@ -367,10 +366,25 @@ class Pd::TeacherApplication < ActiveRecord::Base
     end
 
     begin
-      Pd::ProgramRegistrationValidation.validate @program_registration
+      Pd::ProgramRegistrationValidation.validate @custom_updates[:program_registration]
     rescue FormError => e
       error_text = e.errors.map {|key, error| "#{key}: #{error}"}.join(',')
       errors.add :program_registration_json, "contains errors: #{error_text}"
+    end
+  end
+
+  # Update or delete registration form in the Pegasus DB, if one has been provided
+  before_save :update_program_registration
+  def update_program_registration
+    return unless @custom_updates.key? :program_registration
+    new_registration = @custom_updates.delete :program_registration
+
+    if new_registration.blank?
+      PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).delete
+      self.program_registration_id = nil
+    else
+      json_data = new_registration.to_json
+      PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).update(data: json_data)
     end
   end
 
@@ -397,20 +411,6 @@ class Pd::TeacherApplication < ActiveRecord::Base
       User.find_by id: move_to_user
     else
       User.find_by_email_or_hashed_email move_to_user
-    end
-  end
-
-  # Update or delete registration form in the Pegasus DB, if one has been provided
-  before_save :update_program_registration
-  def update_program_registration
-    return unless @override_program_registration
-
-    if @program_registration.blank?
-      PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).delete
-      self.program_registration_id = nil
-    else
-      json_data = @program_registration.to_json
-      PEGASUS_DB[:forms].where(kind: PROGRAM_REGISTRATION_FORM_KIND, source_id: id).update(data: json_data)
     end
   end
 

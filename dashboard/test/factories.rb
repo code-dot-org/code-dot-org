@@ -725,7 +725,7 @@ FactoryGirl.define do
   end
 
   factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
-    workshop_name 'a workshop'
+    workshop_name '2017: workshop'
     course 'csd'
     association :user, factory: :teacher, strategy: :create
     association :teacher_application, factory: :pd_teacher_application, strategy: :create
