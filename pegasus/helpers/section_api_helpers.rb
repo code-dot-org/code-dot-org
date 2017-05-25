@@ -277,6 +277,7 @@ class DashboardSection
     script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
       params[:script][:id].to_i : params[:script_id]
     stage_extras = params[:stage_extras] ? params[:stage_extras] : false
+    pairing_allowed = params[:pairing_allowed] ? params[:pairing_allowed] : true
     created_at = DateTime.now
 
     row = nil
@@ -291,6 +292,7 @@ class DashboardSection
           script_id: script_id,
           code: CodeGeneration.random_unique_code(length: 6),
           stage_extras: stage_extras,
+          pairing_allowed: pairing_allowed,
           created_at: created_at,
           updated_at: created_at,
         }
@@ -499,6 +501,7 @@ class DashboardSection
       grade: @row[:grade],
       code: @row[:code],
       stage_extras: @row[:stage_extras],
+      pairing_allowed: @row[:pairing_allowed],
     }
   end
 
@@ -512,6 +515,7 @@ class DashboardSection
     fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
+    fields[:pairing_allowed] = params[:pairing_allowed]
 
     if params[:script] && valid_script_id?(params[:script][:id])
       fields[:script_id] = params[:script][:id].to_i
@@ -533,6 +537,7 @@ class DashboardSection
       :sections__name___name,
       :sections__code___code,
       :sections__stage_extras___stage_extras,
+      :sections__pairing_allowed___pairing_allowed,
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,
