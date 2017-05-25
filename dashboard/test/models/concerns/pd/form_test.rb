@@ -32,7 +32,7 @@ end
 class Pd::FormTest < ActiveSupport::TestCase
   test 'pd form requires form data' do
     form = DummyForm.new
-    assert_equal false,  form.valid?
+    refute form.valid?
     assert_equal ["is required"], form.errors.messages[:form_data]
   end
 
@@ -45,18 +45,18 @@ class Pd::FormTest < ActiveSupport::TestCase
     assert form.valid?
 
     form.form_data = {firstField: "bar"}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
   end
 
   test 'pd form enforces required fields' do
     form = DummyFormWithRequiredFields.new
 
     form.form_data = {}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
     assert_equal ["firstField", "secondField"], form.errors.messages[:form_data]
 
     form.form_data = {firstField: "foo"}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
     assert_equal ["secondField"], form.errors.messages[:form_data]
 
     form.form_data = {firstField: "foo", secondField: "bar"}.to_json
@@ -67,7 +67,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyFormWithRequiredFields.new
 
     form.form_data = {firstField: "foo", secondField: ""}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
     assert_equal ["secondField"], form.errors.messages[:form_data]
   end
 
@@ -75,7 +75,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyFormWithOptions.new
 
     form.form_data = {firstOption: "foo"}.to_json
-    assert_equal false,  form.valid?
+    refute form.valid?
     assert_equal ["firstOption"], form.errors.messages[:form_data]
 
     form.form_data = {firstOption: "Yes"}.to_json
@@ -89,7 +89,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyFormWithOptions.new
 
     form.form_data = {firstOption: ["Yes", "foo"], secondOption: "Maybe so"}.to_json
-    assert_equal false,  form.valid?
+    refute form.valid?
     assert_equal ["firstOption"], form.errors.messages[:form_data]
 
     form.form_data = {firstOption: ["Yes", "No"], secondOption: "Maybe so"}.to_json
