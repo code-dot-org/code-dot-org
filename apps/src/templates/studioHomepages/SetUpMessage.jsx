@@ -16,7 +16,7 @@ const styles = {
     paddingTop: 80,
     paddingBottom: 20,
     fontSize: 38,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: 'Gotham 5r',
     color: color.teal,
   },
   description: {

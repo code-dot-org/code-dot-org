@@ -62,10 +62,10 @@
     float: right;
     line-height: 45px;
   }
-  #coursebuttons .gray {
-    background-color: $lightest_gray;
-    border: 1px solid $lightest_gray;
-    color: $charcoal;
+  .viewcourse {
+    background-color: $lighter_purple;
+    border: 1px solid $lighter_purple;
+    color: $white;
   }
   a {
     color: white;

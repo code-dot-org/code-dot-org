@@ -61,12 +61,12 @@ const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: 'Gotham 5r',
     fontSize: 14,
   },
   link: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: 'Gotham 5r',
     fontSize: 14,
     textDecoration: 'none'
   }
