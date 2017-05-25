@@ -39,6 +39,11 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
       :things_you_liked,
       :things_you_would_change,
       :give_permission_to_quote,
+    ].freeze
+  end
+
+  def demographics_required_fields
+    [
       :race,
       :highest_education,
       :degree_field,
