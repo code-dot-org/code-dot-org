@@ -7,3 +7,21 @@
     .span12{style: 'margin-left: 10px;'}
       %div.gallery#gallery
         = render partial: 'home/gallery_content'
+
+:javascript
+  $(document).ready(function() {
+    // Set up gallery pagination.
+    $('#gallery').on('click', '.pagination a', function() {
+        $.ajax({url: $(this).attr('href'),
+                data: { },
+                success: function(result) {
+                  $('#gallery').animate({opacity: '25%'},
+                    500,
+                    function() {
+                      $('#gallery').html(result);
+                    });
+                }
+        });
+        return false;
+    });
+  });

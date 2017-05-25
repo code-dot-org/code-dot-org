@@ -85,22 +85,6 @@
 
 :javascript
   $(document).ready(function() {
-
-    // Set up gallery pagination.
-    $('#gallery').on('click', '.pagination a', function() {
-        $.ajax({url: $(this).attr('href'),
-                data: { },
-                success: function(result) {
-                  $('#gallery').animate({opacity: '25%'},
-                    500,
-                    function() {
-                      $('#gallery').html(result);
-                    });
-                }
-        });
-        return false;
-    });
-
     // Show teacher announcements for US or non-US depending on location.
     $.getJSON( "/v2/client-location", function (data) {
       country_code = data['country_code'];
@@ -115,5 +99,4 @@
         trackEvent('teacher_announcement','click', $(this).data('id'));
       });
     });
-
   });
