@@ -367,7 +367,7 @@ class ApiController < ApplicationController
   # NOTE: This method assumes load_section has been previously called.
   def load_script
     script_id = params[:script_id] if params[:script_id].present?
-    script_id ||= @section.script.id if @section.script
+    script_id ||= @section.default_script.try(:id)
     @script = Script.get_from_cache(script_id) if script_id
     @script ||= Script.twenty_hour_script
   end
