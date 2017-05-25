@@ -108,6 +108,7 @@ class Course < ApplicationRecord
     {
       name: name,
       title: I18n.t("data.course.name.#{name}.title", default: name),
+      description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       scripts: course_scripts.map(&:script).map do |script|
