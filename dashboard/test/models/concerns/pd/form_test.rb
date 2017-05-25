@@ -1,40 +1,14 @@
 require 'test_helper'
 
-class DummyForm
-  include ActiveModel::Validations
-  include ActiveModel::Dirty
+class DummyForm < ActiveRecord::Base
   include Pd::Form
+end
 
-  # minimal implementation from
-  # http://api.rubyonrails.org/classes/ActiveModel/Validations.html
-  attr_accessor :form_data
-
-  # minimal implementation from
-  # http://api.rubyonrails.org/classes/ActiveModel/Dirty.html
-  define_attribute_methods :form_data
-
-  def initialize
-    @form_data = nil
-  end
-
-  def form_data=(val)
-    form_data_will_change! unless val == @form_data
-    @form_data = val
-  end
-
-  def save
-    # do persistence work
-    changes_applied
-  end
-
-  def reload!
-    # get the values from the persistence layer
-    clear_changes_information
-  end
-
-  def rollback!
-    restore_attributes
-  end
+# create a temporary table for our DummyForm record. Note that because the
+# table is temporary, it will be automatically destroyed once the session has
+# ended so we don't need to worry about dropping the table in teardown
+ActiveRecord::Base.connection.create_table(:dummy_forms, temporary: true) do |t|
+  t.string :form_data
 end
 
 class DummyFormWithRequiredFields < DummyForm
@@ -59,15 +33,17 @@ class Pd::FormTest < ActiveSupport::TestCase
   test 'pd form requires form data' do
     form = DummyForm.new
     assert_equal false,  form.valid?
-    assert_equal ["can't be blank"], form.errors.messages[:form_data]
+    assert_equal ["is required"], form.errors.messages[:form_data]
   end
 
   test 'pd form only validates form data when changed' do
     form = DummyFormWithRequiredFields.new
     form.form_data = {firstField: "foo"}.to_json
-    form.save
 
+    refute form.valid?
+    form.save(validate: false)
     assert form.valid?
+
     form.form_data = {firstField: "bar"}.to_json
     assert_equal false, form.valid?
   end
