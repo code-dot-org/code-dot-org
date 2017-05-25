@@ -1,5 +1,4 @@
 @no_mobile
-@dashboard_db_access
 @as_student
 Feature: App Lab Data Tab
 
@@ -10,4 +9,4 @@ Feature: App Lab Data Tab
     And element "#dataModeButton" is visible
     Then I press "dataModeButton"
     And I press "dataBlocksLink" to load a new page
-    And I wait until I am on "https://code.org/applab/docs/tabledatastorage"
+    And I wait until current URL contains "/code.org/applab/docs/tabledatastorage"

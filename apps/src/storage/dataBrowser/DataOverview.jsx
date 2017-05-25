@@ -57,11 +57,14 @@ const DataOverview = React.createClass({
 
   render() {
     const visible = (DataView.OVERVIEW === this.props.view);
+    const dataBlocksLink = '<a href="https://code.org/applab/docs/tabledatastorage">${msg.dataBlocks()}</a>';
+    const dataTabMessage = msg.dataTabExplanation({dataBlocks: dataBlocksLink});
+
     return (
       <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
         <h4>Data</h4>
 
-        <h5>{msg.dataTabExplanation()} <a id="dataBlocksLink" href="https://code.org/applab/docs/tabledatastorage"><strong>{msg.dataBlocks()}</strong></a> {msg.withinApp()}</h5>
+        <h5>{dataTabMessage}</h5>
         <br/>
         <p>{msg.keyValueCaption()}</p>
         <table style={styles.table}>
