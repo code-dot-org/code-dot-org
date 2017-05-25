@@ -24,7 +24,7 @@ import {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
-  setIsSummaryView,
+  setStudentDefaultsSummaryView,
   setCurrentStageId,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
@@ -148,7 +148,7 @@ progress.renderMiniView = function (element, scriptName, currentLevelId,
     linesOfCodeText, student_detail_progress_view) {
   const store = getStore();
   if (student_detail_progress_view) {
-    store.dispatch(setIsSummaryView(false));
+    store.dispatch(setStudentDefaultsSummaryView(false));
   }
 
   ReactDOM.render(
@@ -171,24 +171,18 @@ progress.renderMiniView = function (element, scriptName, currentLevelId,
 function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
 
-  if (onOverviewPage && scriptData.student_detail_progress_view) {
-    // If everyone has detail progress view, set that view immediately. Otherwise
-    // it might happen async when we determine you're a teacher.
-    store.dispatch(setIsSummaryView(false));
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
   }
 
-  // If we've cached that we're a teacher, update view type immediately rather
-  // than waiting on API
-  if (clientState.getUserIsTeacher()) {
-    const query = queryString.parse(location.search);
-    if (query.viewAs === ViewType.Student) {
-      // query param viewAs takes precedence over user being a student
-      store.dispatch(setViewType(ViewType.Student));
-    } else {
-      store.dispatch(setViewType(ViewType.Teacher));
-      store.dispatch(setIsSummaryView(false));
-    }
+  // Set our initial view type
+  const query = queryString.parse(location.search);
+  let initialViewAs = ViewType.Student;
+  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
+    // query param viewAs takes precedence over whether or not user is a teacher
+    initialViewAs = ViewType.Teacher;
   }
+  store.dispatch(setViewType(initialViewAs));
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
@@ -215,12 +209,12 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
       store.dispatch(showTeacherInfo());
 
-      // If we have viewAs=Student in query params, we dont want to change
-      // student/teache or summary/detail toggles
       const viewAs = queryString.parse(location.search).viewAs || ViewType.Teacher;
-      if (viewAs === ViewType.Teacher) {
+      if (viewAs !== initialViewAs) {
+        // We don't want to redispatch if our viewAs is the same as the initial
+        // one, since the user might have manually changed the view while making
+        // our async call
         store.dispatch(setViewType(viewAs));
-        store.dispatch(setIsSummaryView(false));
       }
       renderTeacherPanel(store, scriptData.id);
       clientState.cacheUserIsTeacher(true);

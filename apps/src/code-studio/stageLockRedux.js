@@ -14,7 +14,7 @@ export const ViewType = makeEnum('Student', 'Teacher');
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types
-const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
+export const SET_VIEW_TYPE = 'stageLock/SET_VIEW_TYPE';
 const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
 export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
 export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
