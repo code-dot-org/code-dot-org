@@ -36,19 +36,17 @@
     "discard_background": "false",
     "instructions_important": "false",
     "project_template_level_name": "courseF_artist_variables_template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-24 17:39:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="draw_colour" inline="true" id="draw-color">
