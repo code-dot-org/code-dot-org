@@ -3,7 +3,7 @@
 
 = render partial: 'shared/angular'
 
-%script{src: asset_path('angularProjects.js') }
+%script{src: asset_path('angularProjects.js'), data: {under13: current_user.under_13?.to_json} }
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: minifiable_asset_path('js/projects/index.js')}
 
