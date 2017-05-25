@@ -97,7 +97,7 @@ Feature: Checking the footer appearance
     And I close the small footer menu
 
     # While we're at it, check the footer on the "How it Works" page
-    When I select the "How it works" small footer item
+    When I select the "How it Works (View Code)" small footer item
     And I wait for 2 seconds
     And I wait until element "#runButton" is visible
     Then I see no difference for "how it works small footer"
@@ -136,7 +136,7 @@ Feature: Checking the footer appearance
     And I close the small footer menu
 
     # While we're at it, check the footer on the "How it Works" page
-    When I select the "How it works" small footer item
+    When I select the "How it Works (View Code)" small footer item
     And I wait for 2 seconds
     And I wait until element "#runButton" is visible
     Then I see no difference for "how it works small footer"

@@ -7,6 +7,7 @@ class CoursesController < ApplicationController
     @recent_courses = current_user.try(:recent_courses_and_scripts)
     @is_teacher = !!(current_user && current_user.teacher?)
     @is_english = request.language == 'en'
+    @is_signed_out = current_user.nil?
   end
 
   def show
@@ -59,6 +60,7 @@ class CoursesController < ApplicationController
   def i18n_params
     params.permit(
       :title,
+      :description_short,
       :description_student,
       :description_teacher
     ).to_h
