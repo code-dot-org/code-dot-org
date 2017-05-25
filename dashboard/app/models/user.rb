@@ -47,17 +47,19 @@
 #
 # Indexes
 #
-#  index_users_on_birthday                             (birthday)
-#  index_users_on_email_and_deleted_at                 (email,deleted_at)
-#  index_users_on_hashed_email_and_deleted_at          (hashed_email,deleted_at)
-#  index_users_on_invitation_token                     (invitation_token) UNIQUE
-#  index_users_on_invitations_count                    (invitations_count)
-#  index_users_on_invited_by_id                        (invited_by_id)
-#  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
-#  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
-#  index_users_on_school_info_id                       (school_info_id)
-#  index_users_on_studio_person_id                     (studio_person_id)
-#  index_users_on_username_and_deleted_at              (username,deleted_at) UNIQUE
+#  index_users_on_birthday                               (birthday)
+#  index_users_on_current_sign_in_at                     (current_sign_in_at)
+#  index_users_on_deleted_at                             (deleted_at)
+#  index_users_on_email_and_deleted_at                   (email,deleted_at)
+#  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
+#  index_users_on_invitation_token                       (invitation_token) UNIQUE
+#  index_users_on_invitations_count                      (invitations_count)
+#  index_users_on_invited_by_id                          (invited_by_id)
+#  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
+#  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_school_info_id                         (school_info_id)
+#  index_users_on_studio_person_id                       (studio_person_id)
+#  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
 require 'digest/md5'
