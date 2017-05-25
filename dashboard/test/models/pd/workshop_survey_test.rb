@@ -8,6 +8,11 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     refute survey.valid?
     assert_equal [
       "Form data is required",
+    ], survey.errors.full_messages
+
+    survey.form_data = {}.to_json
+    refute survey.valid?
+    assert_equal [
       "Form data gender",
       "Form data race",
       "Form data age",
