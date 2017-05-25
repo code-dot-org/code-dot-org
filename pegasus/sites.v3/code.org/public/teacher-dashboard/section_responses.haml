@@ -11,7 +11,7 @@ content-type: text/ng-template
 
 %div{'ng-show' => 'responsesLoaded'}
   = I18n.t('dashboard_responses_view')
-  %select{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
+  %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(course_id)'}
 
 %br/
 
