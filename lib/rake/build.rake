@@ -137,7 +137,6 @@ namespace :build do
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
   tasks << :restart_process_queues if CDO.daemon
-  tasks << :seed_pd_test_data
   task all: tasks
 end
 
