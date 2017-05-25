@@ -84,7 +84,7 @@ module Pd::Payment
 
       payment_term.update!(fixed_payment: 42)
 
-      assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
+      assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with sufficient attendees and facilitator payment' do
@@ -96,7 +96,7 @@ module Pd::Payment
     test 'Calculate CSP Workshop with insufficient attendees and facilitator payment' do
       create(:pd_payment_term, regional_partner: @regional_partner, fixed_payment: 42, minimum_attendees_for_payment: 30, facilitator_payment: 50)
 
-      assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
+      assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     private
