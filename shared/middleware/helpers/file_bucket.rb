@@ -26,7 +26,7 @@ class FileBucket < BucketHelper
     options[:exclude_filenames] = [MANIFEST_FILENAME]
     result = super src_channel, dest_channel, options
     # return right away if there are no files in the source project
-    return if result.empty?
+    return [] if result.empty?
 
     # update dest_manifest with the decorated filenames from the src_manifest
     # (we need the new version ids from the dest_manifest, otherwise we'd just copy the src_manifest)

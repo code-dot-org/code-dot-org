@@ -25,6 +25,11 @@
   - title = t('upsell.applab.title')
   - body = t('upsell.applab.body_short')
 
+- elsif id == 'conditionals'
+  - url = CDO.code_org_url('/hourofcode/unplugged-conditionals-with-cards')
+  - title = t('upsell.unplugged_conditionals.title')
+  - body = t('upsell.unplugged_conditionals.body')
+
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')
@@ -63,7 +68,7 @@
 .courseblock-span3.courseblock-tall{class: block_class}
   =link_to url do
     .imgspan
-      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120px')
+      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120px', width: '100%')
     .clear
     - if Script.beta? id
       .beta
