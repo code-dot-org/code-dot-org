@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from "../../util/color";
 import Radium from 'radium';
-import HeadingBanner from '../HeadingBanner';
 
 export const Galleries = {
   PUBLIC: 'PUBLIC',
@@ -40,7 +39,6 @@ const styles = {
   }
 };
 
-// Project gallery header and my project / public gallery toggle.
 class GallerySwitcher extends Component {
   static propTypes = {
     initialGallery: PropTypes.oneOf(Object.keys(Galleries)).isRequired,
@@ -72,24 +70,19 @@ class GallerySwitcher extends Component {
 
   render() {
     return (
-      <div>
-        <HeadingBanner
-          headingText={i18n.projectGalleryHeader()}
-        />
-        <div style={styles.container}>
-          <button
-            style={[styles.pill, this.state.gallery === Galleries.PRIVATE && styles.selectedPill]}
-            onClick={this.toggleToMyProjects}
-          >
-            {i18n.myProjects()}
-          </button>
-          <button
-            style={[styles.pill, this.state.gallery === Galleries.PUBLIC && styles.selectedPill]}
-            onClick={this.toggleToGallery}
-          >
-            {i18n.publicGallery()}
-          </button>
-        </div>
+      <div style={styles.container}>
+        <button
+          style={[styles.pill, this.state.gallery === Galleries.PRIVATE && styles.selectedPill]}
+          onClick={this.toggleToMyProjects}
+        >
+          {i18n.myProjects()}
+        </button>
+        <button
+          style={[styles.pill, this.state.gallery === Galleries.PUBLIC && styles.selectedPill]}
+          onClick={this.toggleToGallery}
+        >
+          {i18n.publicGallery()}
+        </button>
       </div>
     );
   }

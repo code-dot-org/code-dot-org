@@ -5,6 +5,7 @@ import Dialog from '@cdo/apps/templates/Dialog';
 import GallerySwitcher, {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import experiments from '@cdo/apps/util/experiments';
+import HeadingBanner from '@cdo/apps/templates/HeadingBanner';
 import i18n from '@cdo/locale';
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
@@ -20,6 +21,12 @@ $(document).ready(() => {
         initialGallery={Galleries.PRIVATE}
         showGallery={showGallery}
       />, gallerySwitcher);
+
+    const projectsHeader = document.getElementById('projects-header');
+    ReactDOM.render(
+      <HeadingBanner
+        headingText={i18n.projectGalleryHeader()}
+      />, projectsHeader);
 
     $.ajax({
       method: 'GET',
