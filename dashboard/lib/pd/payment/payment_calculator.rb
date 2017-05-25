@@ -41,8 +41,8 @@ module Pd::Payment
 
       payment_sum = payment_term.fixed_payment || 0
 
-      if payment_term.minimum_attendees_for_payment? &&
-          workshop.enrollments.size < payment_term.minimum_attendees_for_payment
+      if payment_term.minimum_enrollees_for_payment? &&
+          workshop.enrollments.size < payment_term.minimum_enrollees_for_payment?
         return 0
       end
 
