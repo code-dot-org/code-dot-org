@@ -2,10 +2,9 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Dialog from '@cdo/apps/templates/Dialog';
-import GallerySwitcher, {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import experiments from '@cdo/apps/util/experiments';
-import HeadingBanner from '@cdo/apps/templates/HeadingBanner';
+import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
@@ -15,18 +14,9 @@ $(document).ready(() => {
     // We need to see whether the experiment is enabled from angularProjects.js,
     // which isn't part of the apps js build pipeline.
     $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
-    const gallerySwitcher = document.getElementById('gallery-switcher');
-    ReactDOM.render(
-      <GallerySwitcher
-        initialGallery={Galleries.PRIVATE}
-        showGallery={showGallery}
-      />, gallerySwitcher);
 
     const projectsHeader = document.getElementById('projects-header');
-    ReactDOM.render(
-      <HeadingBanner
-        headingText={i18n.projectGalleryHeader()}
-      />, projectsHeader);
+    ReactDOM.render(<ProjectHeader />, projectsHeader);
 
     $.ajax({
       method: 'GET',
@@ -40,11 +30,6 @@ $(document).ready(() => {
     });
   }
 });
-
-function showGallery(gallery) {
-  $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
-  $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
-}
 
 function onShowConfirmPublishDialog(callback) {
   const publishConfirm = document.getElementById('publish-confirm');
