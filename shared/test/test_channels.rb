@@ -297,7 +297,7 @@ class ChannelsTest < Minitest::Test
     end
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.unauthorized?
+    assert last_response.client_error?
 
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
@@ -308,6 +308,6 @@ class ChannelsTest < Minitest::Test
 
   def assert_cannot_unpublish(channel_id)
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.unauthorized?
+    assert last_response.client_error?
   end
 end
