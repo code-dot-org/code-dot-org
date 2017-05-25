@@ -111,10 +111,7 @@ def main
     end
 
     # integer fields need to be converted to text
-    integers = %w(yearsTaught)
-    integers.each do |integer|
-      new_data[integer] = (new_data.try(:[], integer) || 0).to_s
-    end
+    new_data['yearsTaught'] = (new_data.try(:[], 'yearsTaught') || 0).to_s
 
     # we have also introduced some new required fields; populate them with
     # default data for those forms submitted long ago
