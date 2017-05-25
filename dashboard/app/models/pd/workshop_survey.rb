@@ -120,9 +120,11 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     end
 
     # if this is the first survey completed by this user, also require
-    # demographics questions
+    # demographics questions. Note that we use Pd::WorkshopSurvey rather than
+    # self.class because we don't care which kind of survey (local summer or
+    # regular) it was.
     if pd_enrollment
-      if pd_enrollment.user.nil? || self.class.find_by_user(pd_enrollment.user).empty?
+      if pd_enrollment.user.nil? || Pd::WorkshopSurvey.find_by_user(pd_enrollment.user).empty?
         demographics_required_fields.each do |field|
           add_key_error(field) unless hash.key?(field)
         end
