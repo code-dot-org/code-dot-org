@@ -2,9 +2,39 @@ require 'test_helper'
 
 class DummyForm
   include ActiveModel::Validations
+  include ActiveModel::Dirty
   include Pd::Form
 
+  # minimal implementation from
+  # http://api.rubyonrails.org/classes/ActiveModel/Validations.html
   attr_accessor :form_data
+
+  # minimal implementation from
+  # http://api.rubyonrails.org/classes/ActiveModel/Dirty.html
+  define_attribute_methods :form_data
+
+  def initialize
+    @form_data = nil
+  end
+
+  def form_data=(val)
+    form_data_will_change! unless val == @form_data
+    @form_data = val
+  end
+
+  def save
+    # do persistence work
+    changes_applied
+  end
+
+  def reload!
+    # get the values from the persistence layer
+    clear_changes_information
+  end
+
+  def rollback!
+    restore_attributes
+  end
 end
 
 class DummyFormWithRequiredFields < DummyForm
@@ -30,6 +60,16 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyForm.new
     assert_equal false,  form.valid?
     assert_equal ["can't be blank"], form.errors.messages[:form_data]
+  end
+
+  test 'pd form only validates form data when changed' do
+    form = DummyFormWithRequiredFields.new
+    form.form_data = {firstField: "foo"}.to_json
+    form.save
+
+    assert form.valid?
+    form.form_data = {firstField: "bar"}.to_json
+    assert_equal false, form.valid?
   end
 
   test 'pd form enforces required fields' do

@@ -3,8 +3,8 @@ module Pd::Form
 
   included do
     validates_presence_of :form_data
-    validate :validate_required_fields
-    validate :validate_options
+    validate :validate_required_fields, if: :form_data_changed?
+    validate :validate_options, if: :form_data_changed?
   end
 
   module ClassMethods
