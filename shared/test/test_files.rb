@@ -474,7 +474,7 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(expected_image_info_after_rename, file_infos_after_rename[0])
 
     # The manifest version (filesVersionId) should be different, but the file version should be the same
-    assert response_before_rename['filesVersionId'] != response_after_rename['filesVersionId']
+    refute_equal response_before_rename['filesVersionId'], response_after_rename['filesVersionId']
     assert_equal file_infos[0]['versionId'], file_infos_after_rename[0]['versionId']
 
     @api.delete_object(escaped_filename2)
