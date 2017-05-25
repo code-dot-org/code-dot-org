@@ -350,9 +350,8 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :hide_email_and_full_address_for_students,
-    :hide_school_info_for_students,
-    :sanitize_race_data
+    :sanitize_race_data,
+    :fix_by_user_type
 
   def make_teachers_21
     return unless teacher?
@@ -373,17 +372,6 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_and_full_address_for_students
-    if student?
-      self.email = ''
-      self.full_address = nil
-    end
-  end
-
-  def hide_school_info_for_students
-    self.school_info = nil if student?
-  end
-
   def sanitize_race_data
     return unless property_changed?('races')
 
@@ -395,6 +383,20 @@ class User < ActiveRecord::Base
     end
     races.each do |race|
       self.races = %w(nonsense) unless VALID_RACES.include? race
+    end
+  end
+
+  def fix_by_user_type
+    if student?
+      self.email = ''
+      self.full_address = nil
+      self.school_info = nil
+    end
+
+    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
+    # without an explicit acceptance, we clear the version accepted.
+    if teacher? && user_type_changed? && !terms_of_service_version_changed?
+      self.terms_of_service_version = nil
     end
   end
 

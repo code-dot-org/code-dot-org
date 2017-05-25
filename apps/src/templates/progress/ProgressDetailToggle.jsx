@@ -100,7 +100,7 @@ const ProgressDetailToggle = React.createClass({
 
 export default connect(
   state => ({
-    isPlc: state.progress.professionalLearningCourse,
+    isPlc: !!state.progress.professionalLearningCourse,
     isSummaryView: state.progress.isSummaryView,
     hasGroups: hasGroups(state.progress)
   }),
