@@ -131,7 +131,7 @@ class Section < ActiveRecord::Base
 
   # Figures out the default script for this section. If the section is assigned to
   # a course rather than a script, it returns the first script in that course
-  # @return [Script]
+  # @return [Script, nil]
   def default_script
     return script if script
     return course.try(:course_scripts).try(:first).try(:script)
