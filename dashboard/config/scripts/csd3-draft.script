@@ -10,7 +10,7 @@ level 'CSD U3 Entertainment Sample 2', progression: 'Sample Programs'
 
 stage 'Plotting Shapes', flex_category: 'Chapter 1: Images and Animations'
 named_level 'CSD U3 Lesson Overview 2'
-named_level 'CSD U3 Describe the Picture'
+named_level 'CSD U3 Plotting Shapes Shape Lab'
 
 stage 'Drawing in Game Lab', flex_category: 'Chapter 1: Images and Animations'
 named_level 'CSD U3 Lesson Overview 3'
