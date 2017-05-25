@@ -43,7 +43,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :school_has_tech,
       :how_much_learned,
       :how_motivating,
-      :who_facilitated,
       :how_much_participated,
       :how_often_talk_about_ideas_outside,
       :how_often_lost_track_of_time,
@@ -56,7 +55,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :best_pd_ever,
       :part_of_community,
       :willing_to_talk,
-      :how_to_contact,
     ].freeze
   end
 
@@ -73,15 +71,65 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
+  def demographics_required_fields
+    [
+      :gender,
+      :race,
+      :age,
+      :years_taught,
+      :grades_taught,
+      :grades_planning_to_teach,
+      :subjects_taught
+    ].freeze
+  end
+
+  def self.find_by_user(user)
+    joins(:pd_enrollment).where(pd_enrollments: {user_id: user.id})
+  end
+
   def validate_required_fields
     hash = sanitize_form_data_hash
 
+    # validate facilitator required fields
     if hash.try(:[], :who_facilitated)
       hash[:who_facilitated].each do |facilitator|
         facilitator_required_fields.each do |facilitator_field|
           field_name = "#{facilitator_field}[#{facilitator}]"
           add_key_error(field_name) unless hash.key?(field_name.underscore.to_sym)
         end
+      end
+    end
+
+    # validate conditional required fields
+    if pd_enrollment && pd_enrollment.workshop.facilitators.any?
+      add_key_error(:who_facilitated) unless hash.key?(:who_facilitated)
+    end
+
+    if hash.try(:[], :will_teach) == NO
+      add_key_error(:will_not_teach_explanation) unless hash.key?(:will_not_teach_explanation)
+    end
+
+    if hash.try(:[], :reason_for_attending) == OTHER
+      add_key_error(:reason_for_attending_other) unless hash.key?(:reason_for_attending_other)
+    end
+
+    if hash.try(:[], :how_heard) == OTHER
+      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
+    end
+
+    if hash.try(:[], :how_heard) == OTHER
+      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
+    end
+
+    if hash.try(:[], :willing_to_talk) == YES
+      add_key_error(:how_to_contact) unless hash.key?(:how_to_contact)
+    end
+
+    # if this is the first survey completed by this user, also require
+    # demographics questions
+    if pd_enrollment && self.class.find_by_user(pd_enrollment.user).empty?
+      demographics_required_fields.each do |field|
+        add_key_error(field) unless hash.key?(field)
       end
     end
 
@@ -310,9 +358,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   def validate_options
     hash = sanitize_form_data_hash
 
-    facilitator_names = pd_enrollment.workshop.facilitators.map(&:name)
-
-    if hash[:who_facilitated]
+    if pd_enrollment && hash[:who_facilitated]
+      facilitator_names = pd_enrollment.workshop.facilitators.map(&:name)
       hash[:who_facilitated].each do |facilitator|
         add_key_error(:who_facilitated) unless facilitator_names.include? facilitator
       end

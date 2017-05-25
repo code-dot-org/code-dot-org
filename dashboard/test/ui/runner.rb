@@ -123,7 +123,7 @@ def parse_options
       opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
         options.features = f
       end
-      opts.on("-l", "--local", "Use local webdriver (not Saucelabs) and local domains") do
+      opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
         options.pegasus_domain = 'localhost.code.org:3000'
         options.dashboard_domain = 'localhost-studio.code.org:3000'
@@ -227,7 +227,7 @@ def parse_options
 end
 
 def select_browser_configs(options)
-  if options.local
+  if options.local && !options.config
     SeleniumBrowser.ensure_chromedriver_running
     return [{
       'browser': 'local',
