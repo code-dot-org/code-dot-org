@@ -40,6 +40,7 @@ const StudentHomepage = React.createClass({
         <RecentCoursesCollapsible
           courses={courses}
           showAllCoursesLink={true}
+          header={i18n.recentCourses()}
         />
 
         <StudentResources/>
