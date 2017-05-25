@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524121212) do
+ActiveRecord::Schema.define(version: 20170522221144) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1060,8 +1060,6 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.integer  "invitations_count",                      default: 0
     t.integer  "terms_of_service_version"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
-    t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
-    t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
