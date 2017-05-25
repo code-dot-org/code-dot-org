@@ -140,17 +140,17 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   # Simple helper that iterates over each facilitator as reported by the user
   # and each facilitator-specific field and yields a block with the facilitator,
   # the field, and the combined field name we expect in the flattened version of
-  # our hash
-  def each_facilitator_field(hash=nil)
-    hash ||= sanitize_form_data_hash
+  # our hash. Supports either rails-style keys (underscored symbols) or
+  # JSON-style keys (camelCased strings)
+  def each_facilitator_field(hash=nil, camel=false)
+    hash ||= camel ? form_data_hash : sanitize_form_data_hash
 
-    facilitators = hash.try(:[], :who_facilitated) ||
-      hash.try(:[], 'whoFacilitated') ||
-      []
+    facilitators = hash.try(:[], camel ? 'whoFacilitated' : :who_facilitated) || []
 
     # validate facilitator required fields
     facilitators.each do |facilitator|
       facilitator_required_fields.each do |field|
+        field = field.to_s.camelize(:lower) if camel
         field_name = "#{field}[#{facilitator}]".to_sym
         yield(facilitator, field, field_name)
       end
@@ -176,8 +176,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   def form_data_hash=(hash)
     hash = hash.dup
 
-    each_facilitator_field(hash) do |facilitator, field, field_name|
-      next unless hash.key(field_name)
+    each_facilitator_field(hash, true) do |facilitator, field, field_name|
+      next unless hash[field_name]
 
       hash[field] ||= {}
       hash[field][facilitator] = hash.delete(field_name)
