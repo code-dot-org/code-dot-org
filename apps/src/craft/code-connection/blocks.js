@@ -30,6 +30,13 @@ const timeTypes = [[i18n.timeDay(), 'day'], [i18n.timeNight(), 'night']];
 
 const weatherTypes = [[i18n.weatherTypeClear(), 'clear'], [i18n.weatherTypeRain(), 'rain'], [i18n.weatherTypeThunder(), 'thunder']];
 
+const oldBlockHandlings = [[i18n.oldBlockHandlingsReplace(), 'replace'], [i18n.oldBlockHandlingsDestroy(), 'destroy'], [i18n.oldBlockHandlingsKeep(), 'keep']];
+
+const testModes = [[i18n.testModeAll(), 'all'], [i18n.testModeMasked(), 'masked']];
+
+const maskModes = [[i18n.maskModeReplace(), 'replace'], [i18n.maskModeMasked(), 'masked']];
+
+const cloneModes = [[i18n.cloneModeNormal(), 'normal'], [i18n.cloneModeForce(), 'force'], [i18n.cloneModeMove(), 'move']];
 
 function createBlockPos(x, y, z, prefix) {
     return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
@@ -635,6 +642,262 @@ export const install = (blockly, blockInstallOptions) => {
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
     var amount = this.getTitleValue('AMOUNT');
     return `give('block_id_${this.id}','${player}', ${item},'${amount}');`;
+  };
+
+  blockly.Blocks.craft_kill = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionKill()))
+          .appendTitle(new blockly.FieldTextInput(''), 'TARGET');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.JavaScript.craft_kill = function () {
+    var target = encodeURIComponent(this.getTitleValue('TARGET'));
+    return `kill('block_id_${this.id}','${target}');`;
+  };
+
+  blockly.Blocks.craft_setblock = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionSetBlock()));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(oldBlockHandlings), 'OLDBLOCKHANDLING')
+          .appendTitle(new blockly.FieldLabel(i18n.oldBlockHandling()));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.at()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.JavaScript.craft_setblock = function () {
+    var positionType = this.getTitleValue('POSITIONTYPE');
+    var oldBlockHandling = this.getTitleValue('OLDBLOCKHANDLING');
+    var x = this.getTitleValue('X');
+    var y = this.getTitleValue('Y');
+    var z = this.getTitleValue('Z');
+    var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
+    return `setblock('block_id_${this.id}','${createBlockPos(x, y, z, positionType)}', ${item}, '${oldBlockHandling}');`;
+  };
+
+  blockly.Blocks.craft_summon = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionSummon()));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.entityType()))
+          .appendTitle(new blockly.FieldTextInput(''), 'ENTITYTYPE');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.at()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.JavaScript.craft_summon = function () {
+    var entityType = this.getTitleValue('ENTITYTYPE');
+    var positionType = this.getTitleValue('POSITIONTYPE');
+    var x = this.getTitleValue('X');
+    var y = this.getTitleValue('Y');
+    var z = this.getTitleValue('Z');
+    return `summon('block_id_${this.id}','${entityType}','${createBlockPos(x, y, z, positionType)}');`;
+  };
+
+  blockly.Blocks.craft_testforblock = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionTestForBlock()));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.at()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE);
+      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
+    }
+  };
+
+  blockly.JavaScript.craft_testforblock = function () {
+    var positionType = this.getTitleValue('POSITIONTYPE');
+    var x = this.getTitleValue('X');
+    var y = this.getTitleValue('Y');
+    var z = this.getTitleValue('Z');
+    var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
+    return [`testforblock('block_id_${this.id}','${createBlockPos(x, y, z, positionType)}',${item})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_testforblocks = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionTestForBlocks()));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.from()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.to()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.destination()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(testModes), 'TESTMODE');
+      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
+    }
+  };
+
+  blockly.JavaScript.craft_testforblocks= function () {
+    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromX = this.getTitleValue('FROM_X');
+    var fromY = this.getTitleValue('FROM_Y');
+    var fromZ = this.getTitleValue('FROM_Z');
+    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toX = this.getTitleValue('TO_X');
+    var toY = this.getTitleValue('TO_Y');
+    var toZ = this.getTitleValue('TO_Z');
+    var positionType = this.getTitleValue('POSITIONTYPE');
+    var x = this.getTitleValue('X');
+    var y = this.getTitleValue('Y');
+    var z = this.getTitleValue('Z');
+    var testMode = this.getTitleValue('TESTMODE');
+    return [`testforblocks('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${createBlockPos(x, y, z, positionType)}','${testMode}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+
+  blockly.Blocks.craft_clone = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionClone()));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.from()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.to()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.destination()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.maskMode()))
+          .appendTitle(new blockly.FieldDropdown(maskModes), 'MASKMODE')
+          .appendTitle(new blockly.FieldLabel(i18n.cloneMode()))
+          .appendTitle(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.JavaScript.craft_clone= function () {
+    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromX = this.getTitleValue('FROM_X');
+    var fromY = this.getTitleValue('FROM_Y');
+    var fromZ = this.getTitleValue('FROM_Z');
+    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toX = this.getTitleValue('TO_X');
+    var toY = this.getTitleValue('TO_Y');
+    var toZ = this.getTitleValue('TO_Z');
+    var positionType = this.getTitleValue('POSITIONTYPE');
+    var x = this.getTitleValue('X');
+    var y = this.getTitleValue('Y');
+    var z = this.getTitleValue('Z');
+    var maskMode = this.getTitleValue('MASKMODE');
+    var cloneMode = this.getTitleValue('CLONEMODE');
+    return `clone('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${createBlockPos(x, y, z, positionType)}','${maskMode}','${cloneMode}');`;
+  };
+
+  blockly.Blocks.craft_clonefiltered = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionCloneFiltered()));
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.from()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.to()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.destination()))
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
+          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.cloneMode()))
+          .appendTitle(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  blockly.JavaScript.craft_clonefiltered= function () {
+    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromX = this.getTitleValue('FROM_X');
+    var fromY = this.getTitleValue('FROM_Y');
+    var fromZ = this.getTitleValue('FROM_Z');
+    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toX = this.getTitleValue('TO_X');
+    var toY = this.getTitleValue('TO_Y');
+    var toZ = this.getTitleValue('TO_Z');
+    var positionType = this.getTitleValue('POSITIONTYPE');
+    var x = this.getTitleValue('X');
+    var y = this.getTitleValue('Y');
+    var z = this.getTitleValue('Z');
+    var cloneMode = this.getTitleValue('CLONEMODE');
+    var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
+    return `clonefiltered('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${createBlockPos(x, y, z, positionType)}','${cloneMode}',${item});`;
   };
 
   // Item blocks
