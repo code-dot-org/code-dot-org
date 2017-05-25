@@ -28,7 +28,7 @@
   - hamburger_options[:show_gallery] = true
 
 .hide_on_mobile{class: header_class}
-  - if show_bug_links
+  - if !show_header2 && show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
       - if level && level.try(:is_project_level) && level.game == Game.gamelab
@@ -63,7 +63,7 @@
               = render partial: 'shared/header_progress'
             - elsif level
             - elsif show_header2
-              .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
+              .headerlinks.hide_on_tablet
                 - if user_type == "teacher"
                   %a.headerlink{:href=>"/home"} Home
                   %a.headerlink{:href=>"/courses"} Courses
