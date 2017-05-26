@@ -13,6 +13,7 @@ function showCourseEditor() {
     <CourseEditor
       name={courseEditorData.course_summary.name}
       title={courseEditorData.course_summary.title}
+      descriptionShort={courseEditorData.course_summary.description_short}
       descriptionStudent={courseEditorData.course_summary.description_student}
       descriptionTeacher={courseEditorData.course_summary.description_teacher}
       scriptsInCourse={courseEditorData.course_summary.scripts.map(script => script.name)}

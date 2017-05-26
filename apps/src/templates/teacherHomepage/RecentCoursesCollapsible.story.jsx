@@ -21,7 +21,7 @@ export default storybook => {
         story: () => (
           <RecentCoursesCollapsible
             courses= {[{
-              courseName: "Play Lab",
+              name: "Play Lab",
               description: "Create a story or make a game with Play Lab!",
               link: "https://code.org/playlab",
               image:"photo source",
@@ -38,14 +38,14 @@ export default storybook => {
           <RecentCoursesCollapsible
             courses= {[
               {
-                courseName: "Play Lab",
+                name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
                 image:"photo source",
                 assignedSections: ["Section 1"]
               },
               {
-                courseName: "CSP Unit 2 - Digital Information",
+                name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
                 image:"photo source",
@@ -63,21 +63,21 @@ export default storybook => {
           <RecentCoursesCollapsible
             courses= {[
               {
-                courseName: "Play Lab",
+                name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
                 image:"photo source",
                 assignedSections: ["Section 1"]
               },
               {
-                courseName: "CSP Unit 2 - Digital Information",
+                name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
                 image:"photo source",
                 assignedSections: ["Section 1"]
               },
               {
-                courseName: "CSP Unit 2 - Digital Information",
+                name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
                 image:"photo source",
@@ -95,28 +95,28 @@ export default storybook => {
           <RecentCoursesCollapsible
             courses= {[
               {
-                courseName: "Play Lab",
+                name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
                 image:"photo source",
                 assignedSections: ["Section 1"]
               },
               {
-                courseName: "Play Lab",
+                name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
                 image:"photo source",
                 assignedSections: ["Section 1"]
               },
               {
-                courseName: "CSP Unit 2 - Digital Information",
+                name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
                 image:"photo source",
                 assignedSections: ["Section 1"]
               },
               {
-                courseName: "CSP Unit 2 - Digital Information",
+                name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
                 image:"photo source",

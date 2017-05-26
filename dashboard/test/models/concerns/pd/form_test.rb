@@ -1,10 +1,14 @@
 require 'test_helper'
 
-class DummyForm
-  include ActiveModel::Validations
+class DummyForm < ActiveRecord::Base
   include Pd::Form
+end
 
-  attr_accessor :form_data
+# create a temporary table for our DummyForm record. Note that because the
+# table is temporary, it will be automatically destroyed once the session has
+# ended so we don't need to worry about dropping the table in teardown
+ActiveRecord::Base.connection.create_table(:dummy_forms, temporary: true) do |t|
+  t.string :form_data
 end
 
 class DummyFormWithRequiredFields < DummyForm
@@ -28,19 +32,31 @@ end
 class Pd::FormTest < ActiveSupport::TestCase
   test 'pd form requires form data' do
     form = DummyForm.new
-    assert_equal false,  form.valid?
-    assert_equal ["can't be blank"], form.errors.messages[:form_data]
+    refute form.valid?
+    assert_equal ["is required"], form.errors.messages[:form_data]
+  end
+
+  test 'pd form only validates form data when changed' do
+    form = DummyFormWithRequiredFields.new
+    form.form_data = {firstField: "foo"}.to_json
+
+    refute form.valid?
+    form.save(validate: false)
+    assert form.valid?
+
+    form.form_data = {firstField: "bar"}.to_json
+    refute form.valid?
   end
 
   test 'pd form enforces required fields' do
     form = DummyFormWithRequiredFields.new
 
     form.form_data = {}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
     assert_equal ["firstField", "secondField"], form.errors.messages[:form_data]
 
     form.form_data = {firstField: "foo"}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
     assert_equal ["secondField"], form.errors.messages[:form_data]
 
     form.form_data = {firstField: "foo", secondField: "bar"}.to_json
@@ -51,7 +67,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyFormWithRequiredFields.new
 
     form.form_data = {firstField: "foo", secondField: ""}.to_json
-    assert_equal false, form.valid?
+    refute form.valid?
     assert_equal ["secondField"], form.errors.messages[:form_data]
   end
 
@@ -59,7 +75,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyFormWithOptions.new
 
     form.form_data = {firstOption: "foo"}.to_json
-    assert_equal false,  form.valid?
+    refute form.valid?
     assert_equal ["firstOption"], form.errors.messages[:form_data]
 
     form.form_data = {firstOption: "Yes"}.to_json
@@ -73,7 +89,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     form = DummyFormWithOptions.new
 
     form.form_data = {firstOption: ["Yes", "foo"], secondOption: "Maybe so"}.to_json
-    assert_equal false,  form.valid?
+    refute form.valid?
     assert_equal ["firstOption"], form.errors.messages[:form_data]
 
     form.form_data = {firstOption: ["Yes", "No"], secondOption: "Maybe so"}.to_json

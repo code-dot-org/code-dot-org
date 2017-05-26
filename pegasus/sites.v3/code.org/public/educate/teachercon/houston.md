@@ -13,12 +13,12 @@ TeacherCon Houston
 ## June 18-23, 2017
 <p align="left"><img src="/images/houstonskyline.jpg" width="100%"></p> 
 
-### **What is TeacherCon?**
+## **What is TeacherCon?**
 
 TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
 
 <a id="travel"></a>
-### **Travel & Hotel Information**
+## **Travel & Hotel Information**
 <details>
   <summary>**Hotel Information**</summary>
   <p>
@@ -73,7 +73,7 @@ All participants will receive a $300 gift card upon their arrival to cover any a
 </p>
 </details>
 
-### **What to Bring**
+## **What to Bring**
 <details>
   <summary>**What should I pack?**</summary>
   <p>
@@ -93,7 +93,7 @@ Please bring your laptop/Chromebook and charger, as well as any adapters. If you
 </details>
 
 <a id="agenda"></a>
-### **Agenda**
+## **Agenda**
 <details>
   <summary>**Schedule for the Week**</summary>
   <p>
@@ -119,20 +119,21 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </details>
 
 <a id="who"></a>
-### **Who's Who at TeacherCon?**
+## **Who's Who at TeacherCon?**
 <details>
 <summary>**Code.org Staff**</summary>
  <p>
  <br>
-Coming soon!
-</p>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconstaff_houston') %></p>
 </details>
 
 <details>
 <summary>**Session Lead Facilitators**</summary>
  <p>
  <br>
-Coming soon!
+Coming soon: the incredible **CS Principles facilitators** who will be leading sessions at TeacherCon!</p>
+ <p>
+Coming soon: the amazing **CS Discoveries facilitators** who will be leading sessions at TeacherCon!
 </p>
 </details>
 
@@ -140,12 +141,12 @@ Coming soon!
 <summary>**Regional Partners**</summary>
  <p>
  <br>
-Coming soon!
+Coming soon: the awesome Regional Partners who will be supporting your professional learning throughout the year!
 </p>
 </details>
 
 <a id="previous"></a>
-### **Previous Email Updates**
+## **Previous Email Updates**
 <details>
 <summary>**It's time to book your travel to TeacherCon. Complete by May 15!**</summary>
   <p>
@@ -162,7 +163,7 @@ Coming soon!
 </p>
 </details> 
 
-### **Contact Us**
+## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
