@@ -21,12 +21,12 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   validates_presence_of :pd_enrollment
 
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [
-    'Strongly disagree',
+    'Strongly Disagree',
     'Disagree',
-    'Slightly disagree',
-    'Slightly agree',
+    'Slightly Disagree',
+    'Slightly Agree',
     'Agree',
-    'Strongly agree'
+    'Strongly Agree'
   ].freeze
 
   OTHER = 'Other'.freeze
@@ -39,11 +39,9 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :reason_for_attending,
       :how_heard,
       :received_clear_communication,
-      :venue_feedback,
       :school_has_tech,
       :how_much_learned,
       :how_motivating,
-      :who_facilitated,
       :how_much_participated,
       :how_often_talk_about_ideas_outside,
       :how_often_lost_track_of_time,
@@ -56,7 +54,6 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :best_pd_ever,
       :part_of_community,
       :willing_to_talk,
-      :how_to_contact,
     ].freeze
   end
 
@@ -69,23 +66,124 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
       :how_comfortable_asking_questions,
       :how_often_taught_new_things,
       :things_facilitator_did_well,
-      :things_facilitator_could_improve,
+      :things_facilitator_could_improve
     ].freeze
+  end
+
+  def demographics_required_fields
+    [
+      :gender,
+      :race,
+      :age,
+      :years_taught,
+      :grades_taught,
+      :grades_planning_to_teach,
+      :subjects_taught
+    ].freeze
+  end
+
+  def self.find_by_user(user)
+    joins(:pd_enrollment).where(pd_enrollments: {user_id: user.id})
+  end
+
+  # Is this the first survey completed by this user? Note that we use
+  # Pd::WorkshopSurvey rather than self.class because we don't care which kind
+  # of survey (local summer or regular) it was.
+  def first_survey_for_user?
+    pd_enrollment && (pd_enrollment.user.nil? || Pd::WorkshopSurvey.find_by_user(pd_enrollment.user).empty?)
   end
 
   def validate_required_fields
     hash = sanitize_form_data_hash
 
-    if hash.try(:[], :who_facilitated)
-      hash[:who_facilitated].each do |facilitator|
-        facilitator_required_fields.each do |facilitator_field|
-          field_name = "#{facilitator_field}[#{facilitator}]"
-          add_key_error(field_name) unless hash.key?(field_name.underscore.to_sym)
-        end
+    # validate facilitator required fields
+    each_facilitator_field do |facilitator, field, field_name|
+      add_key_error(field_name) unless hash.try(:[], field).try(:[], facilitator)
+    end
+
+    # validate conditional required fields
+    if pd_enrollment && pd_enrollment.workshop.facilitators.any?
+      add_key_error(:who_facilitated) unless hash.key?(:who_facilitated)
+    end
+
+    if hash.try(:[], :will_teach) == NO
+      add_key_error(:will_not_teach_explanation) unless hash.key?(:will_not_teach_explanation)
+    end
+
+    if hash.try(:[], :reason_for_attending) == OTHER
+      add_key_error(:reason_for_attending_other) unless hash.key?(:reason_for_attending_other)
+    end
+
+    if hash.try(:[], :how_heard) == OTHER
+      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
+    end
+
+    if hash.try(:[], :how_heard) == OTHER
+      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
+    end
+
+    if hash.try(:[], :willing_to_talk) == YES
+      add_key_error(:how_to_contact) unless hash.key?(:how_to_contact)
+    end
+
+    # if this is the first survey completed by this user, also require
+    # demographics questions.
+    if first_survey_for_user?
+      demographics_required_fields.each do |field|
+        add_key_error(field) unless hash.key?(field)
       end
     end
 
     super
+  end
+
+  # Simple helper that iterates over each facilitator as reported by the user
+  # and each facilitator-specific field and yields a block with the facilitator,
+  # the field, and the combined field name we expect in the flattened version of
+  # our hash. Supports either rails-style keys (underscored symbols) or
+  # JSON-style keys (camelCased strings)
+  def each_facilitator_field(hash=nil, camel=false)
+    hash ||= camel ? form_data_hash : sanitize_form_data_hash
+
+    facilitators = hash.try(:[], camel ? 'whoFacilitated' : :who_facilitated) || []
+
+    # validate facilitator required fields
+    facilitators.each do |facilitator|
+      facilitator_required_fields.each do |field|
+        field = field.to_s.camelize(:lower) if camel
+        field_name = "#{field}[#{facilitator}]".to_sym
+        yield(facilitator, field, field_name)
+      end
+    end
+  end
+
+  # inflate all the facilitator-specific fields (stored as flattened keys) into
+  # nested hashes before saving
+  #
+  # Before:
+  #   {
+  #     "howClearlyPresented[facilitatorOne@code.org]" => "Clearly",
+  #     "howClearlyPresented[facilitatorTwo@code.org]" => "Quite clearly",
+  #   }
+  #
+  # After:
+  #   {
+  #     "howClearlyPresented" => {
+  #       "facilitatorOne@code.org" => "Clearly",
+  #       "facilitatorTwo@code.org" => "Quite clearly",
+  #     }
+  #   }
+  def form_data_hash=(hash)
+    hash = hash.dup
+
+    each_facilitator_field(hash, true) do |facilitator, field, field_name|
+      next unless hash[field_name]
+
+      hash[field] ||= {}
+      hash[field][facilitator] = hash.delete(field_name)
+    end
+
+    super(hash)
   end
 
   def self.options
@@ -310,9 +408,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   def validate_options
     hash = sanitize_form_data_hash
 
-    facilitator_names = pd_enrollment.workshop.facilitators.map(&:name)
-
-    if hash[:who_facilitated]
+    if pd_enrollment && hash[:who_facilitated]
+      facilitator_names = pd_enrollment.workshop.facilitators.map(&:name)
       hash[:who_facilitated].each do |facilitator|
         add_key_error(:who_facilitated) unless facilitator_names.include? facilitator
       end

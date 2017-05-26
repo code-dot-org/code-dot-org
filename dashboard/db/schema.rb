@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519134008) do
+ActiveRecord::Schema.define(version: 20170524121212) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -798,6 +798,7 @@ ActiveRecord::Schema.define(version: 20170519134008) do
     t.datetime "updated_at"
     t.string   "code"
     t.integer  "script_id"
+    t.integer  "course_id"
     t.string   "grade"
     t.string   "login_type",        default: "email", null: false
     t.datetime "deleted_at"
@@ -805,6 +806,7 @@ ActiveRecord::Schema.define(version: 20170519134008) do
     t.string   "section_type"
     t.datetime "first_activity_at"
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
+    t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
@@ -1058,6 +1060,8 @@ ActiveRecord::Schema.define(version: 20170519134008) do
     t.integer  "invitations_count",                      default: 0
     t.integer  "terms_of_service_version"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
+    t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
+    t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
@@ -1127,6 +1131,7 @@ ActiveRecord::Schema.define(version: 20170519134008) do
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "sections", "courses"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"

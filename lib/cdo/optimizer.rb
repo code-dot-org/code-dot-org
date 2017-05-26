@@ -70,7 +70,7 @@ module Cdo
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
     # Don't optimize images larger than this threshold.
-    IMAGE_PIXEL_MAX = 2.megabytes
+    IMAGE_OPTIM_PIXEL_MAX = 2.megabytes
 
     IMAGE_OPTIM = ImageOptim.new(
       config_paths: dashboard_dir('config/image_optim.yml'),
@@ -82,11 +82,12 @@ module Cdo
     def perform(data)
       cache = Optimizer.cache
       cache_key = Optimizer.cache_key(data)
+      pixels = 0
       cache.fetch(cache_key) do
         # Write `false` to cache to prevent concurrent image optimizations.
         cache.write(cache_key, false)
         pixels = ImageSize.new(data).size.inject(&:*) rescue 0
-        if pixels > IMAGE_PIXEL_MAX
+        if pixels > DCDO.get('image_optim_pixel_max', IMAGE_OPTIM_PIXEL_MAX)
           raise ArgumentError, 'Image too large to be optimized'
         else
           IMAGE_OPTIM.optimize_image_data(data) || data
@@ -94,7 +95,12 @@ module Cdo
       end
     rescue => e
       # Log error and return original content.
-      Honeybadger.notify(e)
+      Honeybadger.notify(e,
+        context: {
+          pixels: pixels,
+          key: cache_key
+        }
+      )
       cache.write(cache_key, data) if cache && cache_key
       data
     end

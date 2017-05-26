@@ -1,7 +1,7 @@
 import { createToolbox } from '../../block_utils';
 
-function craftBlock(type) {
-  return block(`craft_${type}`);
+function craftBlock(type, children = "") {
+  return block(`craft_${type}`, children);
 }
 
 function category(name, children, properties = "") {
@@ -20,30 +20,39 @@ module.exports = {
     toolbox: createToolbox(
       category('Agent',
         craftBlock('move') +
-        craftBlock('inspect') +
-        craftBlock('place') +
         craftBlock('turn') +
-        craftBlock('till') +
+        craftBlock('tptoplayer')+
+        craftBlock('place') +
         craftBlock('destroy') +
+        craftBlock('till') +
+        craftBlock('attack') +
         craftBlock('collect') +
+        craftBlock('collectall') +
         craftBlock('drop') +
         craftBlock('dropall') +
         craftBlock('detect') +
         craftBlock('inspect') +
         craftBlock('inspectdata') +
-        craftBlock('detectredstone') +
         craftBlock('getitemdetail') +
         craftBlock('getitemspace') +
         craftBlock('getitemcount') +
         craftBlock('transfer') +
-        craftBlock('tptoplayer'))+
+        craftBlock('detectredstone')) +
+      category('Item',
+          craftBlock('block') +
+          craftBlock('miscellaneous') +
+          craftBlock('tool') +
+          craftBlock('decoration') +
+          craftBlock('getnameof') +
+          craftBlock('getdataof') +
+          craftBlock('createblock', `<value name='BLOCKTYPE'>${block('text')}</value><value name='BLOCKDATA'>${block('text')}</value>`)) +
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
-        craftBlock('fill') +
+        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('give') +
         craftBlock('executeasother') +
-        craftBlock('executedetect') +
+        craftBlock('executedetect', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('timesetbyname') +
         craftBlock('timesetbynumber') +
         craftBlock('weather') +

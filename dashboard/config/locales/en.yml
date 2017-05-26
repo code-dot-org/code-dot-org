@@ -426,7 +426,7 @@ en:
     report_abuse: 'Report Abuse'
     built_on_code_studio: 'Built on Code Studio'
     make_my_own_app: 'Make my own app'
-    how_it_works: 'How it works'
+    how_it_works: 'How it Works (View Code)'
     try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
     title: 'Need help?'
@@ -522,6 +522,9 @@ en:
       audience: "Ages 4+"
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+    unplugged_conditionals:
+      title: "Conditionals"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"
@@ -682,6 +685,7 @@ en:
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'
