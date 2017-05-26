@@ -17,6 +17,11 @@ social:
 %link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/buttons.css", :rel=>"stylesheet"}
 
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
+- if request.cookies['pm'] == "new_header" && ["student", "teacher"].include?(user_type)
+  - redirect CDO.studio_url('/home', CDO.default_scheme)
+
 -# The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
 
