@@ -347,6 +347,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def reload
     @custom_updates = {}
     @cached_pegasus_program_registration = nil
+    @unparseable_program_registration_json = nil
     @move_to_user = nil
     super
   end
