@@ -60,6 +60,7 @@ class Ability
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
+      can :workshops_user_enrolled_in, Pd::Workshop
 
       if user.teacher?
         can :read, Section, user_id: user.id
