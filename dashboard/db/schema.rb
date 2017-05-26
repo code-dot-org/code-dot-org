@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522221144) do
+ActiveRecord::Schema.define(version: 20170524215951) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -805,6 +805,7 @@ ActiveRecord::Schema.define(version: 20170522221144) do
     t.boolean  "stage_extras",      default: false,   null: false
     t.string   "section_type"
     t.datetime "first_activity_at"
+    t.boolean  "pairing_allowed",   default: true,    null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
