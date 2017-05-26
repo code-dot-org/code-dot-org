@@ -485,6 +485,7 @@ class DashboardSection
   def to_owner_hash
     to_member_hash.merge(
       script: script,
+      course_id: @row[:course_id],
       teachers: teachers,
       students: students
     )
@@ -536,6 +537,7 @@ class DashboardSection
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,
+      :sections__course_id___course_id,
       :sections__user_id___teacher_id
     ]
   end

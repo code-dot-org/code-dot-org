@@ -737,7 +737,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
-      // TODO
       $scope.script_id = $scope.progress.script.id;
       $scope.progress_disabled = $scope.progress_disabled_scripts.indexOf($scope.script_id) !== -1
       var hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
