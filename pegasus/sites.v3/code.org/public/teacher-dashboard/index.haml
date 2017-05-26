@@ -48,6 +48,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 :javascript
   'use strict';
 
+  // Embed some data in our JS
+  var valid_scripts = #{DashboardSection::valid_scripts(request.user_id).to_json};
+  var homepage_url = '#{homepage_url}';
+  var hoc_assign_warning = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
+  var disabled_scripts = #{DashboardSection::progress_disabled_scripts(request.user_id).to_json};
+  var error_string_none_selected = "#{error_string_none_selected}";
+  var error_string_other_section = "#{error_string_other_section}";
+
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
     'ngRoute',
@@ -63,10 +71,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   // ROUTES
 
   config(['$routeProvider', function($routeProvider) {
-    if ('#{homepage_url}') {
+    if (homepage_url) {
       $routeProvider.when('/',
         {redirectTo: function() {
-          window.location = '#{homepage_url}'
+          window.location = homepage_url;
         }});
     } else {
       $routeProvider.when('/',
@@ -198,7 +206,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                                        function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
-    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
+    $scope.script_list = valid_scripts;
 
     $scope.sections = sectionsService.query();
 
@@ -208,7 +216,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.moving_students = {editing: true};
 
-    $scope.hocAssignWarningEnabled = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
+    $scope.hocAssignWarningEnabled = hoc_assign_warning;
 
     $scope.hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
 
@@ -293,7 +301,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
-    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
+    $scope.script_list = valid_scripts;
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
@@ -346,7 +354,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       }
     );
 
-    $scope.age_list = #{((4..20).to_a << '21+').inspect};
+    $scope.age_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "21+"];
 
     $scope.gender_list = {f: '#{I18n.t('dashboard_students_female')}', m: '#{I18n.t('dashboard_students_male')}'};
 
@@ -515,9 +523,9 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
 
       if (!params['student_ids']) {
-        displayError("#{error_string_none_selected}");
+        displayError(error_string_none_selected);
       } else if (isOwnSection($scope.manuallySelectedSectionCode)) {
-        displayError("#{error_string_other_section}");
+        displayError(error_string_other_section);
       } else {
         sectionsService.moveStudents(params, {}).$promise.then(
           function success(response) {
@@ -658,8 +666,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
 
-    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
-    $scope.progress_disabled_scripts = #{DashboardSection::progress_disabled_scripts(request.user_id).to_json};
+    $scope.script_list = valid_scripts;
+    $scope.progress_disabled_scripts = disabled_scripts;
 
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
@@ -819,7 +827,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.responsesLoaded = false;
     $scope.stages = [];
 
-    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
+    $scope.script_list = valid_scripts;
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
@@ -869,7 +877,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
 
-    $scope.script_list = #{DashboardSection::valid_scripts(request.user_id).to_json};
+    $scope.script_list = valid_scripts;
 
     $scope.assessmentsLoaded = false;
     $scope.assessmentStages = [];

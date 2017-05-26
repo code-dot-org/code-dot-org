@@ -1,6 +1,7 @@
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
 require 'honeybadger'
+require 'dalli/elasticache'
 
 # Provide a long-lived, cross-instance shared cache.
 # Use for caching objects that should be shared across multiple
