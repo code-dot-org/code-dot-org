@@ -12,7 +12,7 @@ export default storybook => {
           <ResourceCard
             title= "Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            image="../../static/navcard-placeholder.png"
+            image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
           />

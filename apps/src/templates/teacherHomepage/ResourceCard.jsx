@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgressButton from '../progress/ProgressButton';
+import color from "../../util/color";
 
 const styles = {
   card: {
@@ -8,16 +9,10 @@ const styles = {
     height: 200,
     width: 458,
     float: 'left',
-    marginBottom: 20
-  },
-  overlay: {
-    background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-    right:0,
-    top:0,
-    zIndex: 1,
+    marginBottom: 20,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: color.border_gray,
   },
   image: {
     position: 'absolute',
@@ -30,9 +25,9 @@ const styles = {
     marginTop: 15,
     fontSize: 18,
     fontFamily: '"Gotham 3r", sans-serif',
-    color: 'rgba(255, 255, 255, .9)',
     zIndex: 2,
-    position: 'absolute'
+    position: 'absolute',
+    color: color.charcoal
   },
   description: {
     paddingLeft: 20,
@@ -42,10 +37,10 @@ const styles = {
     marginTop: 50,
     fontSize: 14,
     fontFamily: '"Gotham", sans-serif',
-    color: 'rgba(255, 255, 255, .9)',
     position: 'absolute',
     zIndex: 2,
-    width: 250
+    width: 250,
+    color: color.charcoal
   },
   button: {
     marginLeft: 20,
@@ -65,11 +60,19 @@ const ResourceCard = React.createClass({
   },
 
   render() {
-    const { title, description, buttonText, link } = this.props;
+    const { title, description, buttonText, link, image } = this.props;
+    const filenameToImgUrl = {
+      "teacher-community": require('../../../static/resource_cards/teachercommunity.png'),
+      "elementary": require('../../../static/resource_cards/elementary.png'),
+      "guest-speaker": require('../../../static/resource_cards/findguestspeaker.png'),
+      "professional-learning": require('../../../static/resource_cards/professionallearning.png'),
+      "standards-framework": require('../../../static/resource_cards/standardsandframework.png'),
+    };
+    const imgSrc = filenameToImgUrl[image];
 
     return (
       <div style={styles.card}>
-        <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
+        <img src={imgSrc} style={styles.image}/>
         <div style={styles.title}>
           {title}
         </div>
@@ -82,7 +85,6 @@ const ResourceCard = React.createClass({
           text={buttonText}
           style={styles.button}
         />
-        <div style={styles.overlay}/>
       </div>
     );
   }
