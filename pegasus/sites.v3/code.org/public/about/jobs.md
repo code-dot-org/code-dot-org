@@ -28,11 +28,9 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 - **Marketing**
-	- [Director of Marketing & Communications](#director)
 	- [Marketing Associate](#associate)
 	- [Marketing Coordinator](#markcoordinator)
 - **Product and Engineering**
-	- [Product Designer](#design)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
 
@@ -40,39 +38,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
-**Job Summary:**
-
-In the last 3 years, Code.org has grown exponentially. We currently have over 15 million student accounts with 10,000 additional created every day. Our social media accounts have over 2.5 million followers and a third of US schools joined the Hour of Code last year. We need your help to continue to drive momentum and opportunity for computer science education. You can find our newsroom <a href="https://code.org/about/news">here</a>.
-
-Code.org is looking for a talented and creative manager to set and execute a strategic, comprehensive marketing and communications plan for the organization. The Director of Marketing & Communications will work closely with Code.org’s leadership team as the communications partner on a variety of initiatives. 
-
-Responsibilities of the position include:
-
-- Designing and managing organization-wide communications strategy 
-- Driving and managing media and PR strategy 
-- Managing and establishing key partnerships with communications teams at related organizations
-- Managing the international Hour of Code campaign and partnerships
-- Designing and managing email communication plan for marketing and grassroots lobbying campaigns
-- Manage a small team responsible for social media, web content, email campaigns and event marketing and communications
-- Working with external vendors supporting our efforts in PR and advocacy
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communication skills and sound editorial judgment
-- Previous success in public and media relations; creating compelling stories to drive brand strategy and developing relationships with the press
-- Strong project management and strategic partnership skills to drive marketing campaigns with external partners
-- Experienced manager able to hire and develop a marketing and communications team
-- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
-- Proficient in using Google suite of applications, presentation and layout skills 
-- 5-7 years of relevant work experience in communications and technology
-- Bachelor’s degree in communications, public relations, or related field
-- Familiarity or background in educational communications preferred, no background in Computer Science needed
-
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="associate"href="#associate">Marketing Associate (Seattle, WA)</a>
 
@@ -141,52 +106,6 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="design"href="#design">Product Designer (Seattle, WA)</a>
-**Job Summary:**
-
-Code.org is looking for an experienced, creative designer with the drive to own end-to-end design of a product with major impact. This is a one-year, full time role with potential to extend on mutual agreement.   
-
-You will manage design changes across our website, marketing materials and education tutorials. These currently reach millions of people around the world. We have over 15 million students today and 10,000 new accounts created every day. 
-
-Areas of responsibility include:
-
-- Website pages for Code.org and <a href="https://hourofcode.com/us">Hour Of Code</a>
-- Tools and a development environment for middle school and high school students to learn computer science (<a href="https://code.org/educate/applab">examples</a>).
-- Tutorials to teach elementary students to code (like <a href="https://studio.code.org/s/course2/stage/4/puzzle/4">learning to draw with code</a> or <a href="https://studio.code.org/s/course2/stage/17/puzzle/8">making a story with code</a>)
-- As needed, design elements for marketing materials and <a href="https://hourofcode.com/us/promote/resources">handouts</a> that are used for schools, districts, and partnerships or social media memes/infographics
-- Managing style and design guidelines across the site 
-- Managing external contractors for illustration/animation/other work as needed
-
-You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
-
-**Experience and Qualifications:**
-
-The ideal candidate has experience in app and/or web design and strong, flexible visual design skills. We are looking for a self-starter who is passionate about improving education.  
-
-The candidate should have: 
-
-- 3+ years of UX/UI experience on websites or apps with a portfolio reflecting that experience.
-- Strong information design skills with an understanding of responsive design and best practices for web
-- Graphic design skills for print and web (layout, color, etc.)
-- Visual design skills to make activities fun and appealing to children
-- Solid intuition and passion for interaction design
-- Ability to work seamlessly with engineers and product managers end to end to create solutions that are both well designed and technically feasible
-- Proven ability to own end-to-end design for product, including style guides and design guidelines
-
-Additional preferred skills (not required to apply):
-
-- Ability to create illustrations for kids ages 5 to 18
-- Experience in education, children’s products, or video games (on personal projects, volunteer opportunities or for a previous job)
-- Bachelor's degree in graphics design, interaction design, fine arts, or a related discipline.
-
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
-To apply, please email your resume (and/or LinkedIn profile), cover letter, and portfolio to <a href="mailto:jobs@code.org">jobs@code.org</a>. 
 
 ## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
 

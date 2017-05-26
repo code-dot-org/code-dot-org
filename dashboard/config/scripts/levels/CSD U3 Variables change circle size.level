@@ -16,7 +16,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Change the value of petalSize multiple times. How does it change your drawing?",
-    "markdown_instructions": "<img src=\"https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01 AM.png\" style=\"float:right; height:150px\"> \r\n\r\n# Debug: Using Variables\r\n\r\nThis program uses the variable `circleSize` to control the width and height of a circle.\r\n\r\n# Do This\r\n\r\n* Change the value assigned to `circleSize` so that the circle takes up the entire screen.",
+    "markdown_instructions": "<img src=\"https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01 AM.png\" style=\"float:right; height:150px\">\r\n\r\n# Debug: Using Variables\r\n\r\nThis program uses the variable `circleSize` to control the width and height of a circle.\r\n\r\n# Do This\r\n\r\n* Change the value assigned to `circleSize` so that the circle takes up the entire screen.",
     "start_blocks": "var circleSize = 450;\r\n\r\nfill(\"Crimson\");\r\nellipse(200, 200, circleSize, circleSize);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -49,10 +49,14 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 19:07:44 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-25 19:09:18 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-25 19:09:56 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

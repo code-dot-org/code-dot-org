@@ -14,7 +14,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Images\r\n\r\nOver on the **Animations Tab** you'll see three images that have been loaded for you! You can get to the animations tab by clicking the **Animation** button above the display area.\r\n\r\n<img src=\"https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11 PM.png\" style=\"width:300px;float:right\">\r\n\r\nOnce you have created a sprite you can **use the `sprite.setAnimation()` command to change the look of your sprite from a rectangle to a picture.** All the images you have loaded in the Animation Tab show up in the `sprite.setAnimation()` dropdown.  The alien is set up for you as an example.\r\n\r\n# Do This\r\nChange the sprite to your favorite image from the animations tab.\r\n\r\n* A sprite that is set to an image has already been created for you.\r\n* Run the code to see how it works.\r\n* Change the input to the `setAnimation` command to change the look of the sprite.\r\n* Try out all the different images.",
+    "markdown_instructions": "# Images\r\n\r\nOver on the **Animations Tab**, you'll see three images that have been loaded for you. You can get to the animations tab by clicking the **Animation** button above the display area.\r\n\r\n<img src=\"https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11 PM.png\" style=\"width:300px;float:right\">\r\n\r\nOnce you have created a sprite, you can **use the `sprite.setAnimation()` command to change the look of your sprite from a rectangle to a picture.** All the images you have loaded in the Animation Tab show up in the `sprite.setAnimation()` dropdown.  The alien is set up for you as an example.\r\n\r\n# Do This\r\nChange the sprite to your favorite image from the animations tab.\r\n\r\n* A sprite that is set to an image has already been created for you.\r\n* Run the code to see how it works.\r\n* Change the input to the `setAnimation` command to change the look of the sprite.\r\n* Try out all the different images.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -54,6 +54,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:24:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
