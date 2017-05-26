@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw a star shape using the `draw a line of squares` function?  ",
+    "markdown_instructions": "Can you draw a star shape using the `draw a line of squares` function?  \r\n\r\n(Be sure to `move forward` 60 pixels before you turn 144 degrees!)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,12 +33,16 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Edit the `draw a line of squares` function so that you don't have to call it twice.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice, you'll have to move forward by 60 pixels and turn 144 degrees.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What code would you need if you were going to try to make a star with regular lines?\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the `draw a line of squares` function so that you don't have to call it twice.\",\"hint_id\":\"NEW_Course_4_Artist_Functions_13_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eb10977ad4aba99fb13050c9a6645d5c/NEW Course 4 Artist Functions 13.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What code would you need if you were going to try to make a star using regular lines instead of boxes?\",\"hint_id\":\"NEW_Course_4_Artist_Functions_13_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/589efe3c2a91c2aa3ea79351b444ab09/NEW Course 4 Artist Functions 13.mp3\"}]",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 17:25:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 2,

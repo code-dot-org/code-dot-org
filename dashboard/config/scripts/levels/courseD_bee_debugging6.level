@@ -37,10 +37,13 @@
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try running through the code using the \\\"Step\\\" button.  Is everything good at the first step?\\n\\nHow about the second?\\n\\nWhere do things go wrong?\",\"hint_id\":\"courseD_bee_debugging6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/13e077f14de817f8356d1aef830612c1/courseD_bee_debugging6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It looks like all of the right steps are here, you just need more of them.  How can you repeat the `get nectar` and `make honey` actions multiple times?\",\"hint_id\":\"courseD_bee_debugging6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7339ed9d629bff95db9c53905f5f9455/courseD_bee_debugging6.mp3\"}]",
     "instructions": "Challenge:  Fix the errors to collect all of the nectar and make all of the honey.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:45:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
