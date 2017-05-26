@@ -22,7 +22,7 @@ const AnnouncementsCollapsible = React.createClass({
 
     return (
       <CollapsibleSection
-        header={i18n.announcements()}
+        heading={i18n.announcements()}
         linkText={i18n.viewAllAnnouncements()}
         link="http://teacherblog.code.org/"
         showLink={true}
