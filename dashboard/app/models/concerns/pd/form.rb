@@ -3,8 +3,8 @@ module Pd::Form
 
   included do
     validates_presence_of :form_data
-    validate :validate_required_fields
-    validate :validate_options
+    validate :validate_required_fields, if: :form_data_changed?
+    validate :validate_options, if: :form_data_changed?
   end
 
   module ClassMethods
@@ -48,6 +48,10 @@ module Pd::Form
     hash_with_options.each do |key, value|
       if value.is_a? Array
         value.each do |subvalue|
+          add_key_error(key) unless self.class.options[key].include? subvalue
+        end
+      elsif value.is_a? Hash
+        value.each do |_key, subvalue|
           add_key_error(key) unless self.class.options[key].include? subvalue
         end
       else

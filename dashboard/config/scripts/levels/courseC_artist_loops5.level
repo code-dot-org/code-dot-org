@@ -35,9 +35,9 @@
     "y": "50",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/2e38ab6f77cb93d457dd13c163ff856c-image-1495580273973.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "project_template_level_name": "courseC_artist_loopsTemplate",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the `jump to` block to get your artist back toward the center:\\n\\n<xml>\\n  <block type=\\\"jump_to_xy\\\">\\n    <title name=\\\"XPOS\\\">100</title>\\n    <title name=\\\"YPOS\\\">100</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseC_artist_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a082d7a782f090fccae8a49fb1c002a2/courseC_artist_loops5.mp3\"}]",
-    "markdown_instructions": "Great!  Now it's time to make a fence inside to keep the animals out.   \r\nMake any kind of fence that you want!\r\n\r\n"
+    "markdown_instructions": "Great!  Now it's time to make a fence inside to keep the animals out.   \r\nMake any kind of fence that you want!\r\n\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

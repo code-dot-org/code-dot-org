@@ -181,7 +181,7 @@
     "edit_code": true,
     "encrypted_examples": "Hyx5WBwpaW84kgVQlkOPxN4mHkJyRf7bqqggRDNDp23qhfZWJyJ2QcnZrEWR\nkh7C\n",
     "embed": "true",
-    "markdown_instructions": "# Stamp Pad\r\n\r\nUse this stamp pad to draw pictures with simple colors and animal stamps.\r\n",
+    "markdown_instructions": "# Stamp Pad\r\n\r\nClick \"Run\" to start the program, then use the stamp pad to draw pictures with simple colors and animal stamps.\r\n",
     "instructions_important": "false",
     "display_name": "Sprite Scenes",
     "start_blocks": "World.frameRate = 60;\r\nnoStroke();\r\nvar animals = [\"zebra\", \"dog\" , \"elephant\", \"cat\", \"pig\" , \"giraffe\"];\r\nvar colors = [\"red\", \"blue\", \"yellow\", \"white\"];\r\nvar stamping = true;\r\nvar current = 0;\r\nvar palette = [];\r\nfor (var i = 0; i < 6; i++) {\r\n  palette[i] = createSprite(40 * i + 20, 370);\r\n  palette[i].setAnimation(animals[i]);\r\n  palette[i].scale = 0.5;\r\n}\r\n\r\nvar myStamp = createSprite(0,0);\r\nmyStamp.setAnimation(\"zebra\");\r\n\r\nfunction draw() {\r\n  if ( World.mouseY < 350) {\r\n    if ( stamping ) {\r\n      stamp();\r\n    } else {\r\n      if (mouseDown()) {\r\n        fill(colors[current - 6]);\r\n        ellipse(World.mouseX, World.mouseY, 40,40);\r\n      }\r\n    }\r\n  } else {\r\n    if (mouseWentDown()) {\r\n      current = Math.floor((World.mouseX - 10 ) / 40);\r\n      if (current < 6 ) {\r\n        stamping = true;\r\n        myStamp.setAnimation(animals[current]);\r\n      } else {\r\n        stamping = false;\r\n      }\r\n    }\r\n  } \r\n  drawPalette();\r\n}\r\nfunction stamp() {\r\n  if (mouseWentDown()) {\r\n    myStamp.x = World.mouseX;\r\n    myStamp.y = World.mouseY;\r\n    drawSprite( myStamp );\r\n  }\r\n}\r\n\r\nfunction drawPalette() {\r\n  fill(\"black\");\r\n  rect(0,350,400,50);\r\n  fill(\"gray\");\r\n  rect(current * 40, 350, 40, 50);\r\n  for (var i = 0; i < 6; i++) {\r\n    drawSprite(palette[i]);\r\n  }\r\n  for (var i = 0; i < 4; i++) {\r\n    fill(colors[i]);\r\n    ellipse(40*i + 260, 375, 35,35);\r\n  }\r\n}\r\n",
@@ -220,6 +220,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 19:11:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

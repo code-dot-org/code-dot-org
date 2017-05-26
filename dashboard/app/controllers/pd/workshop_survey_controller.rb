@@ -10,11 +10,8 @@ class Pd::WorkshopSurveyController < ApplicationController
 
     workshop = @pd_enrollment.workshop
 
-    user = @pd_enrollment.user
-    user_surveys = Pd::WorkshopSurvey.
-      joins(:pd_enrollment).
-      where(pd_enrollments: {user_id: user.id})
-    is_first_survey = user_surveys.count == 0
+    user_surveys = Pd::WorkshopSurvey.find_by_user(@pd_enrollment.user)
+    is_first_survey = user_surveys.empty?
 
     @script_data = {
       options: @pd_enrollment.survey_class.options.camelize_keys.to_json,

@@ -42,7 +42,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Date.new(1991, 3, 14)
-    sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+    sequence(:email) {|n| "testuser#{n}_#{SecureRandom.hex}@example.com.xx"}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -734,7 +734,7 @@ FactoryGirl.define do
         "howHeard": [
           "Email from Code.org"
         ],
-        "receivedClearCommunication": "Strongly agree",
+        "receivedClearCommunication": "Strongly Agree",
         "schoolHasTech": "Yes",
         "venueFeedback": "feedback about venue",
         "howMuchLearned": "A tremendous amount",
@@ -744,12 +744,12 @@ FactoryGirl.define do
         "howOftenLostTrackOfTime": "Almost always",
         "howExcitedBefore": "Extremely excited",
         "overallHowInterested": "Extremely interested",
-        "morePreparedThanBefore": "Strongly agree",
-        "knowWhereToGoForHelp": "Strongly agree",
-        "suitableForMyExperience": "Strongly agree",
-        "wouldRecommend": "Strongly agree",
-        "bestPdEver": "Strongly agree",
-        "partOfCommunity": "Strongly agree",
+        "morePreparedThanBefore": "Strongly Agree",
+        "knowWhereToGoForHelp": "Strongly Agree",
+        "suitableForMyExperience": "Strongly Agree",
+        "wouldRecommend": "Strongly Agree",
+        "bestPdEver": "Strongly Agree",
+        "partOfCommunity": "Strongly Agree",
         "thingsYouLiked": "liked most",
         "thingsYouWouldChange": "would change",
         "anythingElse": "like to tell",
@@ -769,6 +769,40 @@ FactoryGirl.define do
         "subjectsTaught": [
           "English\/Language Arts"
         ]
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_local_summer_workshop_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        "receivedClearCommunication": "Strongly Agree",
+        "venueFeedback": "venue feedback",
+        "howMuchLearned": "A tremendous amount",
+        "howMotivating": "Extremely motivating",
+        "howMuchParticipated": "A tremendous amount",
+        "howOftenTalkAboutIdeasOutside": "Almost always",
+        "howOftenLostTrackOfTime": "Almost always",
+        "howExcitedBefore": "Extremely excited",
+        "overallHowInterested": "Extremely interested",
+        "morePreparedThanBefore": "Strongly Agree",
+        "knowWhereToGoForHelp": "Strongly Agree",
+        "suitableForMyExperience": "Strongly Agree",
+        "wouldRecommend": "Strongly Agree",
+        "anticipateContinuing": "Strongly Agree",
+        "confidentCanTeach": "Strongly Agree",
+        "believeAllStudents": "Strongly Agree",
+        "bestPdEver": "Strongly Agree",
+        "partOfCommunity": "Strongly Agree",
+        "thingsYouLiked": "liked most",
+        "thingsYouWouldChange": "would change",
+        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
+        "race": "White",
+        "highestEducation": "High school diploma",
+        "degreeField": "Education",
+        "yearsTaughtStem": "1",
+        "yearsTaughtCs": "2",
+        "haveRequiredLicenses": "Yes",
       }.stringify_keys
     end
   end
