@@ -27,7 +27,7 @@ const styles = {
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 20,
-    fontFamily: 'Gotham 3r',
+    fontFamily: '"Gotham 3r", sans-serif',
     color: color.white,
     zIndex: 2,
     position: 'absolute',
@@ -41,7 +41,7 @@ const styles = {
     marginTop: 115,
     fontSize: 14,
     lineHeight: 1.5,
-    fontFamily: 'Gotham 3r',
+    fontFamily: '"Gotham 3r", sans-serif',
     color: color.charcoal,
     background: color.white,
     height: 130,
@@ -68,7 +68,7 @@ const styles = {
   continueLink: {
     color: color.teal,
     fontSize: 14,
-    fontFamily: 'Gotham 3r',
+    fontFamily: '"Gotham 3r", sans-serif',
     fontWeight: 'bold',
     marginTop: -5,
     display: 'inline',
@@ -129,8 +129,7 @@ const CourseCard = React.createClass({
   render() {
     const { name, description, link, image } = this.props;
     const filenameToImgUrl = {
-      "large_teal_icons": require('../../../static/large_teal_icons.png'),
-      "small_teal_icons": require('../../../static/small_teal_icons.png')
+      "small_teal_icons": require('@cdo/static/small_teal_icons.png')
     };
     const imgSrc = filenameToImgUrl[image];
 
