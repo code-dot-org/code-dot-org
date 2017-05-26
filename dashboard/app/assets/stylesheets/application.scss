@@ -1326,35 +1326,6 @@ a.download-video {
     font-size: 18px;
   }
 
-  .gallery {
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 890px;
-
-    .pagination {
-      float: left;
-      font-size: 30px;
-      line-height: 154px;
-      margin: 10px 5px;
-      width: 25px;
-      text-align: center;
-      a:hover {
-        text-decoration: none;
-      }
-    }
-
-    .gallery_activity {
-      margin: 10px 5px;
-      box-sizing: border-box;
-      height: 154px;
-      width: 154px;
-      img {
-        border: 2px solid $lighter_gray;
-        background-color: $white;
-      }
-    }
-  }
-
   h3.whitetext {
     a, a:link, a:hover, a:visited {
       color: $white;
@@ -1428,6 +1399,39 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.gallery {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 890px;
+
+  .pagination {
+    float: left;
+    font-size: 30px;
+    line-height: 154px;
+    margin: 10px 5px;
+    width: 25px;
+    text-align: center;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .gallery_activity {
+    margin: 10px 5px;
+    box-sizing: border-box;
+    height: 154px;
+    width: 154px;
+    img {
+      border: 2px solid $lighter_gray;
+      background-color: $white;
+    }
+  }
+}
+
+#angular-my-projects-wrapper .gallery {
+  margin-left: 45px;
 }
 
 .course_progress {
