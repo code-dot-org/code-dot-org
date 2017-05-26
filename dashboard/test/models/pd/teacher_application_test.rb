@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class Pd::TeacherApplicationTest < ActiveSupport::TestCase
+  setup do
+    # unless explicitly stubbed
+    PEGASUS_DB.expects(:[]).never
+  end
+
   test 'required field validations' do
     teacher_application = Pd::TeacherApplication.new
     refute teacher_application.valid?
@@ -360,6 +365,49 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     Pd::ProgramRegistrationValidation.expects(:validate).with(registration_data)
     mock_query_result.expects(:update)
     application.save!
+  end
+
+  test 'updating program_registration_json updates the program registration' do
+    application = create :pd_teacher_application
+    application.stubs(:accepted_program).returns(stub(teachercon?: true))
+    mock_pegasus_program_registration_query application.id
+    fake_registration = {key: 'value'}
+    valid_registration_json = fake_registration.to_json
+    formatted_json = JSON.pretty_generate fake_registration
+
+    application.program_registration_json = valid_registration_json
+    assert_equal formatted_json, application.program_registration_json
+
+    # registration includes automatic keys
+    expected_keys = %w(
+      key
+      email_s name_s user_id_i first_name_s last_name_s phone_number_s
+      pd_teacher_application_id_i school_district_s selected_course_s accepted_workshop_s
+    ).map(&:to_sym)
+    assert_equal expected_keys, application.program_registration.keys
+    Pd::ProgramRegistrationValidation.expects(:validate)
+    assert application.valid?
+
+    # invalid
+    form_error = FormError.new 'Pd::ProgramRegistrationValidation', {key: :invalid}
+    Pd::ProgramRegistrationValidation.expects(:validate).raises(form_error)
+    application.program_registration_json = valid_registration_json
+    refute application.valid?
+    assert_equal ['Program registration json contains errors: key: invalid'], application.errors.full_messages
+
+    # Delete by setting to blank
+    application.program_registration_json = ''
+    assert_nil application.program_registration
+    Pd::ProgramRegistrationValidation.expects(:validate).never
+    assert application.valid?
+
+    # unparseable
+    application.program_registration_json = 'unparseable as json'
+    assert_nil application.program_registration
+    refute application.valid?
+    assert_equal ['Program registration json is not valid JSON'], application.errors.full_messages
+    # the raw unparsed json is stored
+    assert_equal 'unparseable as json', application.program_registration_json
   end
 
   test 'email field assignments match application' do
