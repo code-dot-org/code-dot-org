@@ -35,6 +35,13 @@ class ApiControllerTest < ActionController::TestCase
     @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
+
+    allthings = Script.get_from_cache('allthethings')
+    @allthings_section = create(:section, user: @teacher, script_id: allthings.id)
+    @student_allthings = create(:student, name: 'student_allthings')
+    create(:follower, section: @allthings_section, student_user: @student_allthings)
+    @allthings_section.reload
+    @student_allthings.reload
   end
 
   setup do
@@ -59,79 +66,73 @@ class ApiControllerTest < ActionController::TestCase
     [script, level, stage]
   end
 
-  def make_progress_in_section(script)
-    text_response_script_levels = script.script_levels.includes(:level).where('levels.type' => TextMatch)
-
-    level = text_response_script_levels.first.level
-    UserLevel.create(level_id: level.id, user_id: @student_1.id, script_id: script.id)
+  def make_text_progress_in_script(script, student)
+    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
+    level_source = create :level_source
+    create :user_level, level: level, user: student, script: script, level_source: level_source
+    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 
   test "should get text_responses for section with default script" do
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    assert_equal Script.twenty_hour_script, assigns(:script)
+    # we fall back to twenty_hour_script, which has no text_response levels
+    assert_equal '[]', @response.body
   end
 
   test "should get text_responses for section with section script" do
-    get :section_text_responses, params: {section_id: @flappy_section.id}
+    make_text_progress_in_script(@allthings_section.script, @student_allthings)
+
+    get :section_text_responses, params: {section_id: @allthings_section.id}
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
+    response = JSON.parse(@response.body)
+
+    # make sure our response has stage from allthethingsscript
+    assert /\/s\/allthethings\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with assigned course" do
-    script1 = create :script
-    script2 = create :script
     course = create :course
-    create :course_script, course: course, script: script1, position: 1
-    create :course_script, course: course, script: script2, position: 2
+    create :course_script, course: course, script: Script.get_from_cache('allthethings'), position: 1
+    create :course_script, course: course, script: Script.get_from_cache(Script::FLAPPY_NAME), position: 2
     course.reload
 
     section = create(:section, user: @teacher, login_type: 'word', course: course)
+    student = create(:student, name: 'student_in_course')
+    create(:follower, section: section, student_user: student)
+    section.reload
+    student.reload
+
+    make_text_progress_in_script(Script.get_from_cache('allthethings'), student)
 
     get :section_text_responses, params: {section_id: section.id}
     assert_response :success
 
-    assert_equal script1, assigns(:script)
+    response = JSON.parse(@response.body)
+
+    # make sure our response has stage from allthethings
+    assert /\/s\/allthethings\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Script.find_by_name('cspunit1')
+
+    make_text_progress_in_script(@allthings_section.script, @student_allthings)
+    make_text_progress_in_script(script, @student_allthings)
 
     get :section_text_responses, params: {
-      section_id: @section.id,
+      section_id: @allthings_section.id,
       script_id: script.id
     }
     assert_response :success
 
-    assert_equal script, assigns(:script)
-  end
-
-  test "should get assessments for section with default script" do
-    get :section_assessments, params: {section_id: @section.id}
-    assert_response :success
-
-    assert_equal Script.twenty_hour_script, assigns(:script)
-  end
-
-  test "should get assessments for section with section script" do
-    get :section_assessments, params: {section_id: @flappy_section.id}
-    assert_response :success
-
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
-  end
-
-  test "should get assessments for section with specific script" do
-    script = Script.find_by_name('algebra')
-
-    get :section_assessments, params: {
-      section_id: @section.id,
-      script_id: script.id
-    }
-    assert_response :success
-
-    assert_equal script, assigns(:script)
+    response = JSON.parse(@response.body)
+    # did not receive responses from multiple scripts
+    assert_equal 1, response.length
+    # response is from script_id (not section's script)
+    assert /\/s\/cspunit1\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with script with text response" do
@@ -177,8 +178,6 @@ class ApiControllerTest < ActionController::TestCase
       script_id: script.id
     }
     assert_response :success
-
-    assert_equal script, assigns(:script)
 
     expected_response = [
       {
@@ -244,7 +243,6 @@ class ApiControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_equal script, assigns(:script)
     # all these are translation missing because we don't actually generate i18n files in tests
     expected_response = [
       {
@@ -341,8 +339,6 @@ class ApiControllerTest < ActionController::TestCase
       script_id: script.id
     }
     assert_response :success
-
-    assert_equal script, assigns(:script)
 
     # all these are translation missing because we don't actually generate i18n files in tests
     expected_response = [
@@ -482,8 +478,6 @@ class ApiControllerTest < ActionController::TestCase
       script_id: script.id
     }
     assert_response :success
-
-    assert_equal script, assigns(:script)
 
     # all these are translation missing because we don't actually generate i18n files in tests
     expected_response = [
@@ -664,7 +658,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal script, assigns(:script)
+    assert_equal '[]', @response.body
   end
 
   test "should get assessments for section with script without assessment" do
@@ -676,7 +670,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal script, assigns(:script)
+    assert_equal '[]', @response.body
   end
 
   test "should get lock state when no user_level" do
@@ -689,7 +683,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
 
-    assert_equal [@section.id.to_s, @flappy_section.id.to_s], body.keys, "entry for each section"
+    assert_equal [@section.id.to_s, @flappy_section.id.to_s, @allthings_section.id.to_s], body.keys, "entry for each section"
 
     # do a bunch of validation on our first section
     section_response = body[@section.id.to_s]
@@ -1209,7 +1203,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_progress, params: {section_id: @flappy_section.id}
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
   end
 
   test "should get progress for section with specific script" do
@@ -1221,7 +1215,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal script, assigns(:script)
+    assert_equal script.id, JSON.parse(@response.body)['script']['id']
   end
 
   test "should get progress for section with section script when blank script is specified" do
@@ -1231,17 +1225,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
-  end
-
-  test "should get progress for student" do
-    get :student_progress, params: {
-      student_id: @student_1.id,
-      section_id: @section.id
-    }
-    assert_response :success
-
-    assert_equal Script.twenty_hour_script, assigns(:script)
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
   end
 
   test "should get progress for student in section" do
@@ -1251,7 +1235,13 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal Script.twenty_hour_script, assigns(:script)
+    response = JSON.parse(@response.body)
+
+    assert_not_nil response["progressHtml"]
+    expected_student = {"id" => @student_1.id, "name" => @student_1.name}
+    assert_equal expected_student, response["student"]
+    expected_script = {"id" => Script.twenty_hour_script.id, "name" => Script.twenty_hour_script.localized_title}
+    assert_equal expected_script, response["script"]
   end
 
   test "should get progress for student in section with section script" do
@@ -1261,7 +1251,9 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
+    response = JSON.parse(@response.body)
+    expected_script = {"id" => Script.flappy_script.id, "name" => Script.flappy_script.localized_title}
+    assert_equal expected_script, response["script"]
   end
 
   test "should get progress for student in section with specified script" do
@@ -1273,7 +1265,9 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal script, assigns(:script)
+    response = JSON.parse(@response.body)
+    expected_script = {"id" => script.id, "name" => script.localized_title}
+    assert_equal expected_script, response["script"]
   end
 
   test "should get user_hero for teacher" do
