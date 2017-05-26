@@ -452,6 +452,7 @@
   "projectTypeGamelabViewMore": "View More Game Lab Projects",
   "projectTypePlaylabViewMore": "View More Play Lab Projects",
   "projectsViewAll": "View All Projects",
+  "projectGalleryHeader": "Project Gallery",
   "projectsViewOldGallery": "View old gallery with other project types",
   "publish": "Publish",
   "publishToPublicGalleryWarning": "You are about to publish your project to the public gallery, meaning anyone in the world can view your project. Make sure your project does not contain any personal information.",
