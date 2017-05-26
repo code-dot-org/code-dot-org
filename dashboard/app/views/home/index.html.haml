@@ -71,7 +71,7 @@
       %br/
       = render partial: 'home/projects'
       - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
-        = render partial: 'home/gallery'
+        = render partial: 'home/gallery', locals: {show_heading: true}
 
 %br/
 %br/
