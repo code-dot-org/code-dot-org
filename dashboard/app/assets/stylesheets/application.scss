@@ -351,7 +351,7 @@ img.video_thumbnail {
 
   .headerlinks {
     margin-top: 12px;
-    margin-left: 94px;
+    margin-left: 74px;
 
     .headerlink {
       font-family: 'Gotham 4r', sans-serif;
@@ -400,6 +400,10 @@ img.video_thumbnail {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+    }
+
+    .user_menu_glyph {
+      padding-left: 5px;
     }
   }
 
