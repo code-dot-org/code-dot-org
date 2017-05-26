@@ -8,10 +8,11 @@ require 'cdo/only_one'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
-# @param unsanitized [String] the unsanitized string
-# @returns [String] the sanitized version of the string, with newlines stripped
-#   and double quotations escaped
+# @param unsanitized [String, nil] the unsanitized string
+# @returns [String, nil] the sanitized version of the string, with newlines stripped and double
+#   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
+  return nil if unsanitized.nil?
   unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
 end
 

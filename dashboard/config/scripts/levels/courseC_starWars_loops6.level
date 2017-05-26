@@ -42,8 +42,7 @@
     "ideal": "8",
     "callout_json": "[]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.\",\"hint_id\":\"courseC_starWars_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aa8c6df62c10fd0c84a8cc9a58692e71/courseC_starWars_loops6.mp3\"}]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

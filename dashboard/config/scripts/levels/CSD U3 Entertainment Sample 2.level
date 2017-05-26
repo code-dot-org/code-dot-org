@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "true",
-    "markdown_instructions": "# Hungry Bunny\r\n\r\nThe bunny is hungry, and it's looking for mushrooms and carrots for dinner.\r\n\r\nTo win, you'll need to find a dinner bowl, then collect at least ten carrots and five mushrooms.\r\n\r\nMake sure to avoid the bugs.  Ladybugs and snails will eat your food, and bees will sting you, making you drop everything!\r\n\r\nUse the space bar to jump.  You can squash ladybugs and snails by jumping on them.",
+    "markdown_instructions": "# Hungry Bunny\r\n\r\nThe bunny is hungry, and it's looking for mushrooms and carrots for dinner.\r\n\r\nTo win, you'll need to find a dinner bowl, then collect at least ten carrots and five mushrooms.\r\n\r\nMake sure to avoid the bugs.  Ladybugs and snails will eat your food, and bees will sting you, making you drop everything!\r\n\r\nUse the space bar to jump.  You can squash ladybugs and snails by jumping on them.\r\n\r\nClick \"Run\" to start the program.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -42,10 +42,14 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 19:13:47 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
