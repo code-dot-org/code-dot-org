@@ -82,6 +82,7 @@ module Cdo
     def perform(data)
       cache = Optimizer.cache
       cache_key = Optimizer.cache_key(data)
+      pixels = 0
       cache.fetch(cache_key) do
         # Write `false` to cache to prevent concurrent image optimizations.
         cache.write(cache_key, false)
@@ -94,7 +95,12 @@ module Cdo
       end
     rescue => e
       # Log error and return original content.
-      Honeybadger.notify(e)
+      Honeybadger.notify(e,
+        context: {
+          pixels: pixels,
+          key: cache_key
+        }
+      )
       cache.write(cache_key, data) if cache && cache_key
       data
     end
