@@ -348,9 +348,8 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :hide_email_and_full_address_for_students,
-    :hide_school_info_for_students,
-    :sanitize_race_data
+    :sanitize_race_data,
+    :fix_by_user_type
 
   def make_teachers_21
     return unless teacher?
@@ -371,17 +370,6 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_and_full_address_for_students
-    if student?
-      self.email = ''
-      self.full_address = nil
-    end
-  end
-
-  def hide_school_info_for_students
-    self.school_info = nil if student?
-  end
-
   def sanitize_race_data
     return unless property_changed?('races')
 
@@ -393,6 +381,20 @@ class User < ActiveRecord::Base
     end
     races.each do |race|
       self.races = %w(nonsense) unless VALID_RACES.include? race
+    end
+  end
+
+  def fix_by_user_type
+    if student?
+      self.email = ''
+      self.full_address = nil
+      self.school_info = nil
+    end
+
+    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
+    # without an explicit acceptance, we clear the version accepted.
+    if teacher? && user_type_changed? && !terms_of_service_version_changed?
+      self.terms_of_service_version = nil
     end
   end
 
@@ -891,20 +893,14 @@ class User < ActiveRecord::Base
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
-    # TODO: replace courseName with name (here and in components) as some of these
-    # are courses and some are scripts
-    # TODO: may make more sense to generate links on the client (might need to
-    # provide both name and title to accomplish this). If we do we can get rid of
-    # include Rails.application.routes.url_helpers
-    # TODO: assigned sections seems like it belongs somewhere else
-    # TODO: currently no way for levelbuilders to edit description_short
-
     course_data = courses.map do |course|
       {
-        courseName: data_t_suffix('course.name', course[:name], 'title'),
+        name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
         image: '',
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
         assignedSections: []
       }
     end
@@ -913,10 +909,12 @@ class User < ActiveRecord::Base
       script_id = user_script[:script_id]
       script = Script.get_from_cache(script_id)
       {
-        courseName: data_t_suffix('script.name', script[:name], 'title'),
+        name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
         image: "",
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
         assignedSections: []
       }
     end

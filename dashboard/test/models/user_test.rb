@@ -734,6 +734,23 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', user.age
   end
 
+  test 'changing from student to teacher clears terms_of_service_version' do
+    user = create :student, terms_of_service_version: 1
+    user.update!(user_type: User::TYPE_TEACHER, email: 'tos@example.com')
+    assert_nil user.terms_of_service_version
+  end
+
+  test 'changing from teacher to student does not clear terms_of_service_version' do
+    user = create :teacher, terms_of_service_version: 1
+    user.update!(user_type: User::TYPE_STUDENT)
+    assert_equal 1, user.terms_of_service_version
+  end
+
+  test 'creating user with terms_of_service_version stores terms_of_service_version' do
+    user = create :teacher, terms_of_service_version: 1
+    assert_equal 1, user.terms_of_service_version
+  end
+
   test 'sanitize_race_data sanitizes closed_dialog' do
     @student.update!(races: %w(white closed_dialog))
     assert_equal %w(closed_dialog), @student.reload.races
@@ -1762,13 +1779,13 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_courses_and_scripts
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:courseName]
+      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:name]
       assert_equal 'CSD short description', courses_and_scripts[0][:description]
       assert_equal '/courses/csd', courses_and_scripts[0][:link]
       assert_equal '', courses_and_scripts[0][:image]
       assert_equal [], courses_and_scripts[0][:assignedSections]
 
-      assert_equal 'Script Other', courses_and_scripts[1][:courseName]
+      assert_equal 'Script Other', courses_and_scripts[1][:name]
       assert_equal 'other-description', courses_and_scripts[1][:description]
       assert_equal '/s/other', courses_and_scripts[1][:link]
       assert_equal '', courses_and_scripts[1][:image]
@@ -1782,7 +1799,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_courses_and_scripts
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:courseName]}
+      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:name]}
     end
   end
 

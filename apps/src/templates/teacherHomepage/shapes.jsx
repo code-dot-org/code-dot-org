@@ -1,16 +1,18 @@
 /* Common shapes used for React prop validation.
  */
 
-import React from 'react';
+import { PropTypes } from 'react';
 
 const shapes = {
-  courses: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      courseName: React.PropTypes.string.isRequired,
-      description: React.PropTypes.string.isRequired,
-      image: React.PropTypes.string.isRequired,
-      link: React.PropTypes.string.isRequired,
-      assignedSections: React.PropTypes.array.isRequired,
+  // Though this shape is called "courses", it's really a set of info about
+  // courses and/or scripts (but they have the same data shape).
+  courses: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+      assignedSections: PropTypes.array.isRequired,
     })
   )
 };
