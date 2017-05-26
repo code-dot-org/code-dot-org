@@ -1,9 +1,6 @@
 @import 'color';
 @import 'font';
 
-//colors
-$color_blue_chill_80_approx: rgba(3, 147, 158, 0.8);
-$color_pacific_blue_approx: #00b2c0;
 
 #pageheader-wrapper {
   z-index: 99;
@@ -104,8 +101,8 @@ $color_pacific_blue_approx: #00b2c0;
     width: 300px;
     right: 0;
     position: absolute;
-    top: 3em;
-    background-color: $color_pacific_blue_approx;
+    top: 55px;
+    background-color: $teal;
     z-index: 99;
     max-height: 100vh;
     overflow-y: auto;
@@ -119,7 +116,7 @@ $color_pacific_blue_approx: #00b2c0;
       list-style-type: none;
       max-width: 250px;
       text-overflow: ellipsis;
-      border-bottom: solid 2px $color_blue_chill_80_approx;
+      border-bottom: solid 2px $dark_teal;
       border-radius: 2px;
       padding-bottom: 10px;
       margin-bottom: 5px;
@@ -140,19 +137,19 @@ $color_pacific_blue_approx: #00b2c0;
         margin-right: 0;
       }
       a {
-        font-family: $gotham-regular;
+        font-family: $gotham-bold;
         color: $white;
         text-decoration: none;
       }
 
       #about-more {
-        font-family: $gotham-regular;
+        font-family: $gotham-bold;
         color: $white;
         text-decoration: none;
         cursor: pointer;
       }
       #educate-more {
-        font-family: $gotham-regular;
+        font-family: $gotham-bold;
         color: $white;
         text-decoration: none;
         cursor: pointer;
@@ -190,7 +187,7 @@ $color_pacific_blue_approx: #00b2c0;
 
   }
   .educate-nav ul li:last-of-type {
-    border-bottom: solid 2px $color_blue_chill_80_approx;
+    border-bottom: solid 2px $dark_teal;
   }
 
   @media(max-width: 970px) {
