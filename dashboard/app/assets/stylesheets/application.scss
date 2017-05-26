@@ -372,7 +372,7 @@ img.video_thumbnail {
 
   .header_button {
     &.header_button_light {
-      background-color: $lightish_teal;
+      background-color: $teal;
     }
     font-family: 'Gotham 4r', sans-serif;
     display: inline-block;
@@ -424,6 +424,10 @@ img.video_thumbnail {
     .user_options {
       top: 17px;
     }
+  }
+
+  #signin-button .header_button {
+    margin-top: 6px;
   }
 }
 
