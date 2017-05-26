@@ -214,32 +214,35 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 0,
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
       promptForHint: false,
       displayScrollButtons: true
     };
   },
 
   componentDidUpdate(prevProps, prevState) {
-    // Update right col width now that we know how much space it needs, and
-    // rerender if it has changed. One thing to note is that if we end up
-    // resizing our column significantly, it can result in our maxNeededHeight
-    // being inaccurate. This isn't that big a deal except that it means when we
-    // adjust maxNeededHeight below, it might not be as large as we want.
-    const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
-    if (width !== this.state.rightColWidth) {
-      // setting state in componentDidUpdate will trigger another
-      // re-render and is discouraged; unfortunately in this case we
-      // can't do it earlier in the lifecycle as we need to examine the
-      // actual DOM to determine the desired value. We are careful to
-      // only actually update the state when it has changed, which will
-      // prevent the possibility of an infinite loop and should serve to
-      // minimize excess rerenders.
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({
-        rightColWidth: width
-      });
+    if (this.props.collapsed !== prevProps.collapsed) {
+      // Update right col width now that we know how much space it needs, and
+      // rerender if it has changed. One thing to note is that if we end up
+      // resizing our column significantly, it can result in our maxNeededHeight
+      // being inaccurate. This isn't that big a deal except that it means when we
+      // adjust maxNeededHeight below, it might not be as large as we want.
+      const width = this.shouldDisplayCollapserButton() ?
+          $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
+
+      if (width !== this.state.rightColWidth) {
+        // setting state in componentDidUpdate will trigger another
+        // re-render and is discouraged; unfortunately in this case we
+        // can't do it earlier in the lifecycle as we need to examine the
+        // actual DOM to determine the desired value. We are careful to
+        // only actually update the state when it has changed, which will
+        // prevent the possibility of an infinite loop and should serve to
+        // minimize excess rerenders.
+        // eslint-disable-next-line react/no-did-update-set-state
+        this.setState({
+          rightColWidth: width
+        });
+      }
     }
 
     this.adjustMaxNeededHeight();
