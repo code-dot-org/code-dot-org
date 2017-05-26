@@ -26,6 +26,7 @@
   - hamburger_options[:code_org_url_base] = CDO.code_org_url
   - hamburger_options[:studio_url_base] = CDO.studio_url
   - hamburger_options[:show_gallery] = true
+  - hamburger_options[:loc_prefix] = "nav.header."
 
 .hide_on_mobile{class: header_class}
   - if !show_header2 && show_bug_links
@@ -65,20 +66,20 @@
             - elsif show_header2
               .headerlinks.hide_on_tablet
                 - if user_type == "teacher"
-                  %a.headerlink{:href=>"/home"} Home
-                  %a.headerlink{:href=>"/courses"} Courses
-                  %a.headerlink{:href=>"/projects"} Project Gallery
-                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
-                  %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
+                  %a.headerlink{:href=>"/home"}= t('nav.header.home')
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
+                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")}= t('nav.header.sections')
+                  %a.headerlink{:href=>"/my-professional-learning"}= t('nav.header.professional_learning')
                 - elsif user_type == "student"
-                  %a.headerlink{:href=>"/courses"} Courses
-                  %a.headerlink{:href=>"/projects"} Project Gallery
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
                 - elsif request.language == "en"
-                  %a.headerlink{:href=>CDO.code_org_url("/student")} Learn
-                  %a.headerlink{:href=>CDO.code_org_url("/educate")} Teach
-                  %a.headerlink{:href=>CDO.code_org_url("/promote")} Stats
-                  %a.headerlink{:href=>CDO.code_org_url("/help")} Help Us
-                  %a.headerlink{:href=>CDO.code_org_url("/about")} About
+                  %a.headerlink{:href=>CDO.code_org_url("/student")}= t('nav.header.learn')
+                  %a.headerlink{:href=>CDO.code_org_url("/educate")}= t('nav.header.teach')
+                  %a.headerlink{:href=>CDO.code_org_url("/promote")}= t('nav.header.stats')
+                  %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
+                  %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
 
           .header_right
             %span.freeplay_links
