@@ -296,6 +296,37 @@ def do_dtt_subroutine
   end
 end
 
+# Creates a new branch with the given name from the given commit on the test
+# server (without checking it out) and pushes it to GitHub.
+def create_branch_from_commit(branch_name, commit)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  # We never actually checkout the created branch so we don't interfere with
+  # anything else test might be doing at the time.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch --no-track #{branch_name} #{commit}",
+      "git push origin #{branch_name}"
+    ].join(' && ')
+  )
+end
+
+# Deletes the specified branch, both from the test server and from GitHub.
+def delete_branch(branch_name)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch -D #{branch_name}",
+      "git push origin --delete #{branch_name}"
+    ].join(' && ')
+  )
+end
+
 def main
   check_for_cdo_keys
 
@@ -353,10 +384,7 @@ def main
       # request from a commit hash (only a branch name), we create and push a branch.
       branch_name = "dtp_candidate_#{test_green_commit}"
       begin
-        run_on(
-          'test',
-          "cd test && git checkout test && git checkout -b #{branch_name} #{test_green_commit} && git push origin #{branch_name}"
-        )
+        create_branch_from_commit branch_name, test_green_commit
         production_pr_number = GitHub.create_pull_request(
           base: 'production',
           head: branch_name,
@@ -394,10 +422,7 @@ def main
 
         puts_after_dtp_tasks
       ensure
-        run_on(
-          'test',
-          "cd test && git checkout test && git branch -D #{branch_name} && git push origin --delete #{branch_name}"
-        )
+        delete_branch branch_name
       end
     end
   end
