@@ -48,7 +48,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in @teacher
   end
 
-  def create_script_with_lockable_stage
+  private def create_script_with_lockable_stage
     script = create :script
 
     # Create a LevelGroup level.
@@ -66,7 +66,7 @@ class ApiControllerTest < ActionController::TestCase
     [script, level, stage]
   end
 
-  def make_text_progress_in_script(script, student)
+  private def make_text_progress_in_script(script, student)
     level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
     level_source = create :level_source
     create :user_level, level: level, user: student, script: script, level_source: level_source
@@ -649,7 +649,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 0, JSON.parse(@response.body).length
   end
 
-  test "should get text_responses for section with script without text response" do
+  test "should get no text_responses results for section with script without text response" do
     script = Script.find_by_name('course1')
 
     get :section_text_responses, params: {
@@ -661,7 +661,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal '[]', @response.body
   end
 
-  test "should get assessments for section with script without assessment" do
+  test "should get no assessments results for section with script without assessment" do
     script = Script.find_by_name('course1')
 
     get :section_assessments, params: {
