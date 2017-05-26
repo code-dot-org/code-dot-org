@@ -47,17 +47,19 @@
 #
 # Indexes
 #
-#  index_users_on_birthday                             (birthday)
-#  index_users_on_email_and_deleted_at                 (email,deleted_at)
-#  index_users_on_hashed_email_and_deleted_at          (hashed_email,deleted_at)
-#  index_users_on_invitation_token                     (invitation_token) UNIQUE
-#  index_users_on_invitations_count                    (invitations_count)
-#  index_users_on_invited_by_id                        (invited_by_id)
-#  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
-#  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
-#  index_users_on_school_info_id                       (school_info_id)
-#  index_users_on_studio_person_id                     (studio_person_id)
-#  index_users_on_username_and_deleted_at              (username,deleted_at) UNIQUE
+#  index_users_on_birthday                               (birthday)
+#  index_users_on_current_sign_in_at                     (current_sign_in_at)
+#  index_users_on_deleted_at                             (deleted_at)
+#  index_users_on_email_and_deleted_at                   (email,deleted_at)
+#  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
+#  index_users_on_invitation_token                       (invitation_token) UNIQUE
+#  index_users_on_invitations_count                      (invitations_count)
+#  index_users_on_invited_by_id                          (invited_by_id)
+#  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
+#  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_school_info_id                         (school_info_id)
+#  index_users_on_studio_person_id                       (studio_person_id)
+#  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
 #
 
 require 'digest/md5'
@@ -348,9 +350,8 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :hide_email_and_full_address_for_students,
-    :hide_school_info_for_students,
-    :sanitize_race_data
+    :sanitize_race_data,
+    :fix_by_user_type
 
   def make_teachers_21
     return unless teacher?
@@ -371,17 +372,6 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_and_full_address_for_students
-    if student?
-      self.email = ''
-      self.full_address = nil
-    end
-  end
-
-  def hide_school_info_for_students
-    self.school_info = nil if student?
-  end
-
   def sanitize_race_data
     return unless property_changed?('races')
 
@@ -393,6 +383,20 @@ class User < ActiveRecord::Base
     end
     races.each do |race|
       self.races = %w(nonsense) unless VALID_RACES.include? race
+    end
+  end
+
+  def fix_by_user_type
+    if student?
+      self.email = ''
+      self.full_address = nil
+      self.school_info = nil
+    end
+
+    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
+    # without an explicit acceptance, we clear the version accepted.
+    if teacher? && user_type_changed? && !terms_of_service_version_changed?
+      self.terms_of_service_version = nil
     end
   end
 
@@ -546,7 +550,7 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
-      where(
+      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -880,26 +884,55 @@ class User < ActiveRecord::Base
     end
   end
 
-  # This method is meant to return a bunch of data about a user's recent courses.
-  # Right now, it just looks at recent scripts, but we expect it to change in the
-  # very near future
-  # TODO: Once this data is more real, we should be writing tests for it.
-  def recent_courses
-    in_progress_and_completed_scripts.map do |user_script|
-      script_id = user_script[:script_id]
-      script_name = Script.get_from_cache(script_id)[:name]
+  # Return a collection of courses and scripts for the user. First in the list will
+  # be courses enrolled in by the user's sections. Following that will be all scripts
+  # in which the user has made progress that are not in any of the enrolled courses.
+  def recent_courses_and_scripts
+    courses = section_courses
+    course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
+
+    # filter out those that are already covered by a course
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+
+    course_data = courses.map do |course|
       {
-        id: script_id,
-        script_name: script_name,
-        courseName: data_t_suffix('script.name', script_name, 'title'),
-        description: data_t_suffix('script.name', script_name, 'description_short'),
-        # TODO: This can probably be generated on the client. If it can, we can also
-        # get rid of include Rails.application.routes.url_helpers
-        link: script_url(script_id),
-        image: "",
+        name: data_t_suffix('course.name', course[:name], 'title'),
+        description: data_t_suffix('course.name', course[:name], 'description_short'),
+        link: course_path(course),
+        image: '',
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
         assignedSections: []
       }
     end
+
+    user_script_data = user_scripts.map do |user_script|
+      script_id = user_script[:script_id]
+      script = Script.get_from_cache(script_id)
+      {
+        name: data_t_suffix('script.name', script[:name], 'title'),
+        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+        link: script_path(script),
+        image: "",
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
+        assignedSections: []
+      }
+    end
+
+    course_data + user_script_data
+  end
+
+  # Figures out the unique set of courses assigned to sections that this user
+  # is a part of.
+  # @return [Array<Course>]
+  def section_courses
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+
+    # In the future we may want to make it so that if assigned a script, but that
+    # script has a default course, it shows up as a course here
+    all_sections.map(&:course).compact.uniq
   end
 
   def all_advertised_scripts_completed?

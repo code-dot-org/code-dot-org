@@ -414,7 +414,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           }).then(() => {
             $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
           });
-      });
+      }, {shouldPublish: true});
     });
   } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
     dom.addClickTouchEvent(saveToGalleryButton, function () {

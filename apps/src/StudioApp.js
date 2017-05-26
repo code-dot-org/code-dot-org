@@ -413,6 +413,12 @@ StudioApp.prototype.init = function (config) {
       'warning',
       <div>
         {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+        {' '}
+        {config.level.pairingAttempt &&
+          <a href={config.level.pairingAttempt}>
+            {msg.pairingNavigatorLink()}
+          </a>
+        }
       </div>
     );
   }
@@ -706,14 +712,14 @@ export function makeFooterMenuItems() {
       newWindow: true
     },
     {
-      text: i18n.t('footer.report_abuse'),
-      link: "/report_abuse",
-      newWindow: true
-    },
-    {
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/edit'),
       newWindow: false
+    },
+    {
+      text: i18n.t('footer.report_abuse'),
+      link: "/report_abuse",
+      newWindow: true
     },
     {
       text: i18n.t('footer.copyright'),
@@ -731,6 +737,12 @@ export function makeFooterMenuItems() {
       newWindow: true
     }
   ];
+
+  //Removes 'Try-HOC' from only gamelab footer menu
+  if (project.getStandaloneApp() === 'gamelab') {
+    footerMenuItems.shift();
+  }
+
   return footerMenuItems;
 }
 

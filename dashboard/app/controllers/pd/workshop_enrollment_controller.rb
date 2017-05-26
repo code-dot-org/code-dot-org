@@ -215,7 +215,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   def workshop_owned_by?(user)
     return false unless user
-    @workshop.organizer_id == user.id || @workshop.facilitators.exists?(id: user.id)
+    @workshop.organizer_or_facilitator? user
   end
 
   # Gets the workshop enrollment associated with the current user id or email if one exists.
