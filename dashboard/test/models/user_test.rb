@@ -1782,13 +1782,11 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:name]
       assert_equal 'CSD short description', courses_and_scripts[0][:description]
       assert_equal '/courses/csd', courses_and_scripts[0][:link]
-      assert_equal '', courses_and_scripts[0][:image]
       assert_equal [], courses_and_scripts[0][:assignedSections]
 
       assert_equal 'Script Other', courses_and_scripts[1][:name]
       assert_equal 'other-description', courses_and_scripts[1][:description]
       assert_equal '/s/other', courses_and_scripts[1][:link]
-      assert_equal '', courses_and_scripts[1][:image]
       assert_equal [], courses_and_scripts[1][:assignedSections]
     end
 
