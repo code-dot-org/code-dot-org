@@ -1,1 +1,2 @@
-build/
+/build/
+/js/node_modules/

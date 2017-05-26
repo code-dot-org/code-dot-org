@@ -1,0 +1,16 @@
+/.babel-cache
+/build
+/build-times.log
+/build-times-to-upload.log
+/coverage
+/newrelic_agent.log
+/node_modules/
+/test/interpreter/test-results-new*.json
+
+# Generated source files
+/src/util/color.js
+/src/util/sharedConstants.js
+/src/applab/sharedApplabBlocks.js
+/src/gamelab/sharedGamelabBlocks.js
+/src/styleConstants.js
+/test/entry-tests.js
