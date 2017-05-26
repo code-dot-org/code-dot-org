@@ -2765,7 +2765,7 @@ var displayFeedback = function () {
 
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
-      project.isSupportedLevelType();
+      skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
 
     studioApp().displayFeedback({
