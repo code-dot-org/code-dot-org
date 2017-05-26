@@ -247,6 +247,37 @@ en:
         artist: 'Draw something'
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
+      home: "Home"
+      courses: "Courses"
+      project_gallery: "Project Gallery"
+      sections: "Sections"
+      professional_learning: "Professional Learning"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Hour of Code"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "About Us"
+      about_leadership: "Leadership"
+      about_donors: "Donors"
+      about_partners: "Partners"
+      about_team: "Full Team"
+      about_news: "Newsroom"
+      about_evaluation: "Evaluation"
+      about_jobs: "Jobs"
+      about_contact: "Contact Us"
+      about_faqs: "FAQs"
+      learn: "Learn"
+      stats: "Stats"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
+
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
