@@ -14,15 +14,15 @@ const RecentCoursesCollapsible = React.createClass({
   propTypes: {
     courses: shapes.courses,
     showAllCoursesLink: PropTypes.bool.isRequired,
-    header: PropTypes.string.isRequired
+    heading: PropTypes.string.isRequired
   },
 
   render() {
-    const { courses, showAllCoursesLink, header } = this.props;
+    const { courses, showAllCoursesLink, heading } = this.props;
 
     return (
       <CollapsibleSection
-        header={header}
+        heading={heading}
         linkText={i18n.viewAllCourses()}
         link="/courses"
         showLink={showAllCoursesLink}
