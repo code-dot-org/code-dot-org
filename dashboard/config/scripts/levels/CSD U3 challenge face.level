@@ -66,10 +66,7 @@
     "callout_json": "[]",
     "markdown_instructions": "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\" style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n# Challenge: Face\r\n\r\n_Check with your teacher before starting any of the challenges._\r\n\r\nWrite a program that duplicates the face to the right. The colors used are \"lightblue\", \"red\", and \"lightgreen\".\r\nOnce you've got it, add your own personal touches to the image.\r\n\r\n\r\n",
     "display_name": "Challenge: Face",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

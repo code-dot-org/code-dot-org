@@ -36,8 +36,8 @@
     "project_template_level_name": "courseC_artist_loopsTemplate",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try a triangle flower:\\n<img src=\\\"https://images.code.org/4248a974a7631c4240effba06fdee731-image-1495821015097.49.18.png\\\" width=\\\"150px\\\" />\\n\\nOr a little green bug:\\n<img src=\\\"https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png\\\" width=\\\"150px\\\" />\\n\",\"hint_id\":\"courseC_artist_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9e9795e8fa5b97bf399bf5b2fcb70a67/courseC_artist_loops6.mp3\"}]",
     "markdown_instructions": "What should the zombie put inside of the garden?  \r\n\r\nDraw anything you'd like inside of the fence.  Would you like some flowers or a few bugs? \r\n*(See hints for more suggestions.)*\r\n\r\n\r\n",
-    "contained_level_names": null,
-    "images": "[\r\n  {\"filename\": \"https://images.code.org/2e38ab6f77cb93d457dd13c163ff856c-image-1495580273973.png\", \"position\": [0, 0]}\r\n]\r\n\r\n"
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/2e38ab6f77cb93d457dd13c163ff856c-image-1495580273973.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
