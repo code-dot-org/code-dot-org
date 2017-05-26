@@ -40,7 +40,7 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
-    .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
+    .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
     - if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
@@ -119,7 +119,8 @@
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $(".caption").css({display: "block", opacity: 0});
-    $(".widehero").css({display: "block", opacity: 0});
+    // Keep image hidden until fading in so it can lazy-load.
+    // $(".widehero").css({display: "block", opacity: 0});
 
     $("#fullwidth0").fadeTo(4000, 1);
 
