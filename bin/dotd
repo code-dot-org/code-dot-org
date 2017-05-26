@@ -405,7 +405,7 @@ def main
             pr_number = GitHub.create_and_merge_pull_request(
               base: 'levelbuilder',
               head: branch_name,
-              title: 'DTL (Test > Levelbuilder: #{test_green_commit})'
+              title: "DTL (Test > Levelbuilder: #{test_green_commit})"
             )
             puts dim "  DTL PR: #{GitHub.url(pr_number)}"
           end
