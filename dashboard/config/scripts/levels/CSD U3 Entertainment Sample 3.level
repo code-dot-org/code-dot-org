@@ -181,7 +181,7 @@
     "edit_code": true,
     "encrypted_examples": "Hyx5WBwpaW84kgVQlkOPxN4mHkJyRf7bqqggRDNDp23qhfZWJyJ2QcnZrEWR\nkh7C\n",
     "embed": "true",
-    "markdown_instructions": "# Animated Comics\r\n\r\nCombining images, text, and some subtle animation can make for really interesting comics or graphic stories.\r\n",
+    "markdown_instructions": "# Animated Comics\r\n\r\nCombining images, text, and some subtle animation can make for really interesting comics or graphic stories.  Click \"Run\" to see an example.\r\n",
     "instructions_important": "false",
     "display_name": "Sprite Scenes",
     "start_blocks": "// Create alien sprites and assign animations\r\nvar alienBlue = createSprite(100, 200);\r\nalienBlue.setAnimation(\"alienBlue\");\r\nvar alienGreen = createSprite(250, 275);\r\nalienGreen.setAnimation(\"alienGreen\");\r\nWorld.frameRate = 5;\r\n\r\nfunction draw() {\r\n  // Draw space background and planets\r\n  background(\"darkblue\");\r\n\r\n  alienBlue.rotation = randomNumber(-5, 5);\r\n  alienGreen.scale = 1 + (randomNumber(-1, 1) / 10);\r\n  \r\n  noStroke();\r\n  fill(\"yellow\");\r\n  ellipse(375, -50, 300, 300);\r\n\r\n  fill(\"darkgreen\");\r\n  ellipse(125, 75, 100, 100);\r\n\r\n  fill(\"blue\");\r\n  ellipse(350, 350, 150, 150)\r\n\r\n  // Add joke text\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"What kind of music do planets sing?\", 25, 125);\r\n  text(\"Neptunes!\", 200, 200);\r\n\r\n  drawSprites();\r\n}",
@@ -220,6 +220,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 19:12:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

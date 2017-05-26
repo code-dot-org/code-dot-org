@@ -64,13 +64,16 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "markdown_instructions": "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\" style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n# Challenge: Face\r\n\r\n_Check with your teacher before starting any of the challenges_\r\n\r\nWrite a program that duplicates the face to the right. The colors used are \"lightblue\", \"red\", and \"lightgreen\".\r\nOnce you've got it, add your own personal touches to the image.\r\n\r\n\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\" style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n# Challenge: Face\r\n\r\n_Check with your teacher before starting any of the challenges._\r\n\r\nWrite a program that duplicates the face to the right. The colors used are \"lightblue\", \"red\", and \"lightgreen\".\r\nOnce you've got it, add your own personal touches to the image.\r\n\r\n\r\n",
     "display_name": "Challenge: Face",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:11:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:21:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:11:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 17:21:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-25 19:38:05 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
