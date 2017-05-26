@@ -78,13 +78,13 @@ module Pd::Payment
     end
 
     test 'Calculate CSP Workshop with insufficient teachers' do
-      payment_term = create(:pd_payment_term, regional_partner: @regional_partner, per_attendee_payment: 10, minimum_attendees_for_payment: 30, fixed_payment: nil)
+      payment_term = create(:pd_payment_term, regional_partner: @regional_partner, per_attendee_payment: 10, minimum_enrollees_for_payment: 30, fixed_payment: nil)
 
       assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
 
       payment_term.update!(fixed_payment: 42)
 
-      assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
+      assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     test 'Calculate CSP Workshop with sufficient attendees and facilitator payment' do
@@ -94,9 +94,9 @@ module Pd::Payment
     end
 
     test 'Calculate CSP Workshop with insufficient attendees and facilitator payment' do
-      create(:pd_payment_term, regional_partner: @regional_partner, fixed_payment: 42, minimum_attendees_for_payment: 30, facilitator_payment: 50)
+      create(:pd_payment_term, regional_partner: @regional_partner, fixed_payment: 42, minimum_enrollees_for_payment: 30, facilitator_payment: 50)
 
-      assert_equal 42, PaymentCalculator.instance.calculate(@csp_workshop)
+      assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
     private
