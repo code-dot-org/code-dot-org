@@ -16,28 +16,28 @@ const TeacherCourses = React.createClass({
         <ResourceCard
           title={i18n.teacherCourseHoc()}
           description={""}
-          image="../../static/navcard-placeholder.png"
+          image="hourofcode"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/hourofcode/overview`}
         />
         <ResourceCard
           title={i18n.teacherCourseElementary()}
           description={""}
-          image="../../static/navcard-placeholder.png"
+          image="elementary"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/elementary-school`}
         />
         <ResourceCard
           title={i18n.teacherCourseMiddle()}
           description={""}
-          image="../../static/navcard-placeholder.png"
+          image="middleschool"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/middle-school`}
         />
         <ResourceCard
           title={i18n.teacherCourseHighOlder()}
           description={""}
-          image="../../static/navcard-placeholder.png"
+          image="highschool"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/high-school`}
         />

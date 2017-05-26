@@ -24,7 +24,7 @@ const styles = {
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 18,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily:'"Gotham", sans-serif',
     zIndex: 2,
     position: 'absolute',
     color: color.charcoal
@@ -39,7 +39,7 @@ const styles = {
     fontFamily: '"Gotham", sans-serif',
     position: 'absolute',
     zIndex: 2,
-    width: 250,
+    width: 270,
     color: color.charcoal
   },
   button: {
@@ -63,10 +63,14 @@ const ResourceCard = React.createClass({
     const { title, description, buttonText, link, image } = this.props;
     const filenameToImgUrl = {
       "teacher-community": require('../../../static/resource_cards/teachercommunity.png'),
-      "elementary": require('../../../static/resource_cards/elementary.png'),
       "guest-speaker": require('../../../static/resource_cards/findguestspeaker.png'),
       "professional-learning": require('../../../static/resource_cards/professionallearning.png'),
       "standards-framework": require('../../../static/resource_cards/standardsandframework.png'),
+      "elementary": require('../../../static/resource_cards/elementary.png'),
+      "middleschool": require('../../../static/resource_cards/middleschool.png'),
+      "highschool": require('../../../static/resource_cards/highschool.png'),
+      "hourofcode": require('../../../static/resource_cards/hourofcode.png'),
+      "hourofcode2": require('../../../static/resource_cards/hourofcode2.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
