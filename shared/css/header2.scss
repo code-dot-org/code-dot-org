@@ -27,7 +27,7 @@
 
     #logo-wrapper {
       display: inline-block;
-      padding: 4px 16px;
+      padding: 4px 0 4px 16px;
       float: left;
 
       #logo {
@@ -44,12 +44,13 @@
 
     #right {
       float: right;
+      padding-right: 15px;
     }
 
     #headerlinks {
       float: left;
       position: relative;
-      padding-left: 10px;
+      padding-left: 6px;
 
       .headerlink {
         display: inline-block;
