@@ -8,7 +8,6 @@ import _ from 'lodash';
 const styles = {
   card: {
     overflow: 'hidden',
-    borderRadius: 3,
     border: '1px solid gray',
     position: 'relative',
     height: 245,
@@ -16,10 +15,9 @@ const styles = {
     float: 'left',
     marginBottom: 20
   },
-  tealBar: {
+  image: {
     position: 'absolute',
     width: 458,
-    backgroundColor: color.teal,
     height: 130
   },
   name: {
@@ -28,8 +26,8 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5,
     marginTop: 15,
-    fontSize: 18,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 20,
+    fontFamily: 'Gotham 3r',
     color: color.white,
     zIndex: 2,
     position: 'absolute',
@@ -43,8 +41,8 @@ const styles = {
     marginTop: 115,
     fontSize: 14,
     lineHeight: 1.5,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.gray,
+    fontFamily: 'Gotham 3r',
+    color: color.charcoal,
     background: color.white,
     height: 130,
     width: "100%",
@@ -69,10 +67,10 @@ const styles = {
   },
   continueLink: {
     color: color.teal,
-    fontSize: 12,
-    fontFamily: '"Gotham", sans-serif',
+    fontSize: 14,
+    fontFamily: 'Gotham 3r',
     fontWeight: 'bold',
-    marginTop: -2,
+    marginTop: -5,
     display: 'inline',
   },
   chevron: {
@@ -80,12 +78,11 @@ const styles = {
     color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
-    marginLeft: 15,
+    marginLeft: 8,
   },
   linkBox: {
     display: 'block',
-    paddingBottom: 10,
-    marginTop: 20,
+    paddingBottom: 20,
     textDecoration: 'none'
   },
 };
@@ -99,7 +96,8 @@ const CourseCard = React.createClass({
     name: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
-    assignedSections: React.PropTypes.array.isRequired
+    assignedSections: React.PropTypes.array.isRequired,
+    image: React.PropTypes.string.isRequired
   },
 
   renderEnrollmentIcon() {
@@ -112,7 +110,6 @@ const CourseCard = React.createClass({
       return (
         <span>
           <FontAwesome icon="check" style={styles.checkIcon} data-tip data-for={tooltipId}/>
-
           <ReactTooltip
             id={tooltipId}
             role="tooltip"
@@ -130,23 +127,28 @@ const CourseCard = React.createClass({
   },
 
   render() {
-    const { name, description, link } = this.props;
+    const { name, description, link, image } = this.props;
+    const filenameToImgUrl = {
+      "large_teal_icons": require('../../../static/large_teal_icons.png'),
+      "small_teal_icons": require('../../../static/small_teal_icons.png')
+    };
+    const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={styles.card}>
-        <div style={styles.tealBar}/>
+      <div href={link} style={styles.card}>
+        <img src={imgSrc} style={styles.image}/>
         {this.renderEnrollmentIcon()}
         <div style={styles.name}>
           {name}
         </div>
         <div style={styles.description}>
           {description}
-          <a href={link} style={styles.linkBox}>
+          <div style={styles.linkBox}>
             <h3 style={styles.continueLink}>
               {i18n.viewCourse()}
             </h3>
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
-          </a>
+          </div>
         </div>
       </div>
     );
