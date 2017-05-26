@@ -96,6 +96,9 @@ jq "." <<JSON > $FIRST_BOOT
     "branch": "$BRANCH",
     "sync": true
   },
+  "cdo-apps": {
+    "daemon": true
+  },
   "run_list": $RUN_LIST
 }
 JSON
