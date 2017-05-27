@@ -12,7 +12,7 @@ const TeacherCourses = React.createClass({
     const codeOrgUrlPrefix = this.props.codeOrgUrlPrefix;
 
     return (
-      <CollapsibleSection header={i18n.resources()}>
+      <CollapsibleSection header={i18n.teacherCoursesHeading()}>
         <ResourceCard
           title={i18n.teacherCourseHoc()}
           description={""}
