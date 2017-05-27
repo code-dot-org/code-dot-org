@@ -183,6 +183,8 @@ en:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 challenge face_callout: {}
+      CSD U3 challenge new shape_callout: {}
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
@@ -216,9 +218,7 @@ en:
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
-      CSD U3 picture_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 picture_callout: {}
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -486,6 +486,8 @@ en:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: {}
       Poorva copy U3L2 Using Simple Commands_callout: {}
+      Quantum Bee - Ryan_callout:
+        feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for a hint!"
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Robot Drawing_callout:
@@ -635,6 +637,17 @@ en:
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
         courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
+      courseC_starWars_loops10_callout: {}
+      courseC_starWars_loops10_predict2_callout: {}
+      courseC_starWars_loops11_callout: {}
+      courseC_starWars_loops2_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+      courseC_starWars_loops4_callout: {}
+      courseC_starWars_loops5_callout: {}
+      courseC_starWars_loops6_callout: {}
+      courseC_starWars_loops7_callout: {}
+      courseC_starWars_loops8_callout: {}
+      courseC_starWars_loops9_callout: {}
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
@@ -647,6 +660,10 @@ en:
       courseD_artist_ramp12_callout: {}
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge3_callout:
+        courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
       courseD_bee_debugging_challenge2_callout:
