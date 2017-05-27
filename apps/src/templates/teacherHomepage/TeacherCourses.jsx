@@ -15,28 +15,28 @@ const TeacherCourses = React.createClass({
       <CollapsibleSection header={i18n.resources()}>
         <ResourceCard
           title={i18n.teacherCourseHoc()}
-          description={""}
+          description={i18n.teacherCourseHocDescription()}
           image="hourofcode"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/hourofcode/overview`}
         />
         <ResourceCard
           title={i18n.teacherCourseElementary()}
-          description={""}
+          description={i18n.teacherCourseElementaryDescription()}
           image="elementary"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/elementary-school`}
         />
         <ResourceCard
           title={i18n.teacherCourseMiddle()}
-          description={""}
+          description={i18n.teacherCourseMiddleDescription()}
           image="middleschool"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/middle-school`}
         />
         <ResourceCard
           title={i18n.teacherCourseHighOlder()}
-          description={""}
+          description={i18n.teacherCourseHighDescription()}
           image="highschool"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/high-school`}

@@ -13,6 +13,7 @@ const styles = {
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
+    background: color.teal
   },
   image: {
     position: 'absolute',
@@ -24,10 +25,11 @@ const styles = {
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 18,
-    fontFamily:'"Gotham", sans-serif',
+    fontFamily:'"Gotham 4r", sans-serif',
     zIndex: 2,
     position: 'absolute',
-    color: color.charcoal
+    color: color.white,
+    fontWeight: 'bold'
   },
   description: {
     paddingLeft: 20,
@@ -36,11 +38,11 @@ const styles = {
     paddingBottom: 5,
     marginTop: 50,
     fontSize: 14,
-    fontFamily: '"Gotham", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     position: 'absolute',
     zIndex: 2,
     width: 270,
-    color: color.charcoal
+    color: color.white
   },
   button: {
     marginLeft: 20,
