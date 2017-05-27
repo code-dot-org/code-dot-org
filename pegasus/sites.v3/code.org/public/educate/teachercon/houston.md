@@ -131,17 +131,14 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <summary>**Session Lead Facilitators**</summary>
  <p>
  <br>
-Coming soon: the incredible **CS Principles facilitators** who will be leading sessions at TeacherCon!</p>
- <p>
-Coming soon: the amazing **CS Discoveries facilitators** who will be leading sessions at TeacherCon!
-</p>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_houston') %></p>
 </details>
 
 <details>
 <summary>**Regional Partners**</summary>
  <p>
  <br>
-Coming soon: the awesome Regional Partners who will be supporting your professional learning throughout the year!
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrps_houston') %></p>
 </p>
 </details>
 

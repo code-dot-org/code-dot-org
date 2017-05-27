@@ -6,7 +6,7 @@ theme: responsive
 
 ---
 
-# Vista Equity Partners Organizer Toolkit
+# Vista Equity Partners and Portfolio Company Organizer Toolkit
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code”, to show that anybody can learn the basics, and to broaden participation in the field of computer science. Since 2013, the Hour of Code has been part of Computer Science Education Week, an annual celebration of the computing field and its heritage. Now a global movement, the Hour of Code has served almost 400 million Hours of Code in 180+ countries! 
 
@@ -14,11 +14,11 @@ Help bring these life changing skills to your children and local students!
 
 Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
-[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<button>Back to Vista Equity Partners Portal</button>](/employees/vista)
+[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)
 
 ## Steps:
 
-As an event organizer, you will project manage the event by owning communications, planing, and coordinating an Hour of Code event for your fellow colleagues. 
+As an event organizer, you will project manage the event by owning communications, planning, and coordinating an Hour of Code event for your fellow colleagues. 
 
 1. **[Reach out](#school) to a local youth organization or school.** You should do this 3-4 months prior to the event.
 2. **[Plan](#agenda)** and **[register](https://hourofcode.com)** your event. Discuss with the youth organization or school travel, agenda, and other logistics.
@@ -58,9 +58,9 @@ Subject Line: Bring computer science to [ORGANIZATION]!
 
 Dear [NAME],
 
-Computer science is foundational knowledge for all students in the 21st century, but most schools don’t teach it--especially at the elementary level. And within the schools that do provide CS classes, boys outnumber girls 4 to 1. [Vista Equity Partners/Partner Company] is passionate about providing these **life-changing opportunities to the diverse youth** in our communities and would like to invite you and your students to a special event!
+Computer science is foundational knowledge for all students in the 21st century, but most schools don’t teach it--especially at the elementary level. And within the schools that do provide CS classes, boys outnumber girls 4 to 1. [Vista Equity Partners/Portfolio Company] is passionate about providing these **life-changing opportunities to the diverse youth** in our communities and would like to invite you and your students to a special event!
 
-[Vista Equity Partners/Partner Company] will be hosting an Hour of Code event at our office with our employees to help **introduce students to the fun and innovative world of tech** alongside our teach professionals. Your students will go through a 1-hour tutorial that not only introduce CS, but also helps to **breakdown stereotypes on who "should" work in tech**. We will provide all the tech devices, volunteers, snacks, certificates, and other goodies - all you need to do is show up with your eager students!
+[Vista Equity Partners/Portfolio Company] will be hosting an Hour of Code event at our office with our employees to help **introduce students to the fun and innovative world of tech** alongside our teach professionals. Your students will go through a 1-hour tutorial that not only introduce CS, but also helps to **breakdown stereotypes on who "should" work in tech**. We will provide all the tech devices, volunteers, snacks, certificates, and other goodies - all you need to do is show up with your eager students!
 
 As a proud partner of Code.org, we strongly believe that all students should have the opportunity to learn this skill that is changing our world. Thank you for considering bringing these life-changing skills to our children and we would be thrilled to work with you and your fantastic organization! I look forward to hearing from you.
 
@@ -145,7 +145,7 @@ After you send out communication to gather employee volunteers, reach out to tho
 
 Hello [NAME],
 
-Congratulations! As a Vista Equity Partners' volunteer, you have been selected to take part in our Hour of Code event on [DATE]. The Hour of Code is a global movement reaching over 100 million students of diverse backgrounds in 180+ countries to help broaden participation in computer science and promote diversity in tech.
+Congratulations! As a [Vista Equity Partners/Portfolio Company] volunteer, you have been selected to take part in our Hour of Code event on [DATE]. The Hour of Code is a global movement reaching over 100 million students of diverse backgrounds in 180+ countries to help broaden participation in computer science and promote diversity in tech.
 
 Event details: [INSERT]
 
@@ -178,7 +178,7 @@ Identify a diverse tech employee or executive leader at your office to inspire s
 ### Sample Agenda
 |Time | Agenda item|
 |-----------------| ------------|
-|10-15 minutes | Introduction and speaker: </ul><li>What do you do at Vista Equity Partners, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
+|10-15 minutes | Introduction and speaker: </ul><li>What do you do at Vista Equity Partners/Portfolio Company, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
 |1-5 minutes | Show an [inspirational video](#videos)|
 |5-10 minutes | Ask the students questions and leave time for Q&A. </ul><li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul>|
 |60 minutes | Code!|
@@ -236,7 +236,7 @@ You and your employees are volunteering in your communities and spreading the wo
 - Computer science is changing our world. Help students participate in this change with one #HourOfCode
 - Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode
 - Every leap forward in technology begins with one #HourOfCode. Join [COMPANY] to help the next generation learn!
-- [Company] is proud to be a part of such an amazing worldwide movement. Join us to help every child have access to Compunter Science education!
+- [Company] is proud to be a part of such an amazing worldwide movement. Join us to help every child have access to Computer Science education!
 
 ### Stats
 
