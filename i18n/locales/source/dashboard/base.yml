@@ -75,7 +75,6 @@ en:
   trophies: "Trophies"
   courses: 'Courses'
   unplugged_activity: 'Unplugged Activity'
-  go_beyond: 'Go Beyond'
   of: "of"
   more: "MORE"
   less: "LESS"
@@ -226,55 +225,6 @@ en:
   reports:
     error:
       access_denied: "You don't have access to this person's stats"
-  redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: 'Register as a teacher on DonorsChoose.org'
-    donorschoose_project: 'Post a project'
-    donorschoose_how_to: 'How to use your code'
-    success: 'Your prize was succesfully redeemed, see code below.'
-    error: 'Your prize could not be redeemed, please try again.'
-    error_us_only: 'The prize offer is only valid for U.S. users.'
-    error_not_earned: 'You have not yet earned this prize.'
-    error_already_redeemed: 'Your prize has already been redeemed.'
-    no_prizes_available: "We're sorry, but we currently have no prizes available."
-    teacher_info_required: "Teacher prizes require school name and address information:"
-    teacher_email_required: "Teacher prizes require a confirmed email address:"
-    confirm:
-      title: 'Please Confirm'
-      'no': 'No'
-      'yes': 'Yes'
-      msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: 'Please confirm that you are a U.S. public school teacher.'
-      msg_visit_website: 'Visit website'
-    providers:
-      apple_itunes: '$10 iTunes Gift Card'
-      donors_choose: 'DonorsChoose.org $750 credit'
-      donors_choose_bonus: 'DonorsChoose.org $250 credit'
-      dropbox: '10GB of Dropbox Space'
-      valve: 'Portal 2 (PC or Mac game download)'
-      ea_bejeweled: 'Bejeweled 3 (PC game download)'
-      ea_fifa: 'FIFA Soccer 13 (PC game download)'
-      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
-      ea_pvz: 'Plants vs. Zombies (PC game download)'
-      skype: '$10 Skype credit'
-    msg:
-      choose: 'Choose a prize:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 'You have earned a prize! (U.S. students only)'
-      not_earned_title: 'Finish the tutorial, earn rewards (U.S. students only)'
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
-      teacher:
-        earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
-        bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-          earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
-          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
   crud:
     new_model: 'New %{model}'
     show: 'Show'
@@ -297,12 +247,43 @@ en:
         artist: 'Draw something'
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
+      home: "Home"
+      courses: "Courses"
+      project_gallery: "Project Gallery"
+      sections: "Sections"
+      professional_learning: "Professional Learning"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Hour of Code"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "About Us"
+      about_leadership: "Leadership"
+      about_donors: "Donors"
+      about_partners: "Partners"
+      about_team: "Full Team"
+      about_news: "Newsroom"
+      about_evaluation: "Evaluation"
+      about_jobs: "Jobs"
+      about_contact: "Contact Us"
+      about_faqs: "FAQs"
+      learn: "Learn"
+      stats: "Stats"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
+
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'
       stats: 'Code Studio'
-      settings: 'My account'
+      settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
       signup: 'Create an account'
@@ -434,6 +415,7 @@ en:
     announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
     announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
+    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
@@ -475,7 +457,7 @@ en:
     report_abuse: 'Report Abuse'
     built_on_code_studio: 'Built on Code Studio'
     make_my_own_app: 'Make my own app'
-    how_it_works: 'How it works'
+    how_it_works: 'How it Works (View Code)'
     try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
     title: 'Need help?'
@@ -571,6 +553,9 @@ en:
       audience: "Ages 4+"
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+    unplugged_conditionals:
+      title: "Conditionals"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"
@@ -592,7 +577,7 @@ en:
     support: "Get Help"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
-    help_support: "Help and Support"
+    help_support: "Help and support"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:
@@ -714,6 +699,7 @@ en:
     delete: "Delete"
     exit: "Return to Course"
     my_projects: "My Projects"
+    project_gallery: "Project Gallery"
     publish: "Publish"
     unpublish: "Unpublish"
     share: "Share"
@@ -730,6 +716,7 @@ en:
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'

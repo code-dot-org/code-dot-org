@@ -1170,8 +1170,8 @@ en:
         using a Creative Commons licensed image, you need to give credit to the original
         creator (this is also called _attribution_). There are lots of ways to provide
         attribution, but the easiest way is to add text below the image that identifies
-        the creator and website it came from.\r\n\r\nIn this page we've already added,
-        and attributed, an image of a frog. Use the Creative Commons search engine
+        the creator and website it came from.\r\n\r\nIn this page we've already added
+        and attributed an image of a frog. Use the Creative Commons search engine
         to find another image of an amphibian. Add your found image to this page,
         along with proper attribution, including:\r\n\r\n* The name of the creator
         (if available)\r\n* The website it was found on (e.g. commons.wikimedia.org)\r\n*
@@ -1205,7 +1205,7 @@ en:
         to use. That means you need to pay attention to spelling, capitalization,
         and the file extension. Each of the three images on this page is broken because
         of an improper `src` attribute. Using the file menu for reference, fix each
-        of the image tags.\r\n\r\n_Note: Even though the images are loading properly,
+        of the image tags.\r\n\r\n_Note: Even though the images are not loading properly,
         our website is still showing descriptive text of what should be there because
         we used `alt` attributes. Cool!_"
       CSD U2 Info Page Content_markdown_instruction: "# Adding Your Content\r\n\r\nYou
@@ -1240,10 +1240,10 @@ en:
         20px; margin-bottom: 10px\">If the image isn't your own, add attribution
         underneath<br/>\r\n\r\n</div>\r\n\r\n\r\n# Adding Images to Your Site\r\n\r\nYou've
         already created some pages with great content on your website, now you can
-        add some images!\r\n\r\n# Do This\r\n\r\nUsing either your own images, or
-        those found through a Commons Search, add some images to the pages you've
-        already created. Get creative! Use the checklist to the right to keep track
-        of the steps you need to follow when adding images.\r\n"
+        add some images!\r\n\r\n# Do This\r\n\r\nUsing either your own images or those
+        found through a Commons Search, add some images to the pages you've already
+        created. Get creative! Use the checklist to the right to keep track of the
+        steps you need to follow when adding images.\r\n"
       CSD U2 Info Page Images_markdown_instruction: "# Adding Your Images\r\n\r\nWith
         images and attribution information in hand, it's time to spruce up your new
         page.\r\n\r\n# Do This\r\n\r\nUpload your images to Web Lab and, using `<img>`
@@ -1258,12 +1258,12 @@ en:
       CSD U2 Inspector Warm Up_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**<span>
         How do I use the Inspector Tool? </span>**</summary>\r\nThe Inspector Tool
-        is a great way to figure out what unfamiliar code in Web Lab. To turn on the
-        Inspector Tool click the <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        is a great way to learn more about unfamiliar code in Web Lab. To turn on
+        the Inspector Tool click the <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
         PM.png\" style=\"width:100px\">. You will know that the Inspector Tool is
         on because the button will turn white and say Inspector: On. Once you turn
-        on the Inspector Tool you can hover over any element in the preview area and
-        Web Lab will highlight the associated code.\r\n</details>\r\n\r\n</div>\r\n\r\n#
+        on the Inspector Tool you can hover over anything in the preview area and
+        Web Lab will highlight the code that is making that part of the page appear.\r\n</details>\r\n\r\n</div>\r\n\r\n#
         Explore HTML\r\n\r\nThis is a web page written in HTML, the language of the
         web. You'll learn more about how it works, but first explore it by using
         the Inspector Tool. \r\n\r\n# Do This\r\n\r\n* Click the Tip \"How do I use
@@ -1353,6 +1353,40 @@ en:
         add the HTML to your pages.\r\n\r\n# Do This\r\n* For each of the new pages
         that you've created, add HTML to make the page you sketched in your project
         guide.\r\n* You may also add more HTML to the pages you've already created.\r\n"
+      CSD U2 add file - OLD_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What is a style sheet?**</summary>\r\nA
+        style sheet is a document that controls how a web page will appear.  External
+        style sheets are separate files that are linked to the HTML page.\r\n</details>\r\n<details>\r\n<summary>**What
+        is CSS?**</summary>\r\nCSS is a language that controls the way content on
+        a web site appears.  It uses rule-sets to change the look of a page.  Each
+        rule set has a selector, which specifies which elements on the page will be
+        affected, and the rules, which explain how to display the elements.   Each
+        rule consists of a property and a value for that property.\r\n\r\n\r\nHere’s
+        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
+        {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
+        example, `h2` is the selector, `color` and `font-family` are properties, and
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I create a new style sheet?**</summary>\r\nTo create a new style sheet,
+        click on the \"Add CSS\" button above the code area.\r\n</details>\r\n<details>\r\n<summary>**What
+        should I name my style sheet?**</summary>\r\nYou can name your style sheet
+        anything, but it's better to choose a relevant name, such as \"style.css\"
+        or \"aboutmestyles.css\" so that it's clear what the file is.  Your file
+        should always end in the \".css\" extension.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I rename a file?**</summary>\r\nTo rename a file, you can right click (or
+        control click) on the file name and choose the \"Rename\" option.  This will
+        allow you to type in a new file name.  Clicking on a file name after it is
+        already highlighted will also allow you to rename the file.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I add a style sheet to a web page?**</summary>\r\nTo add a style sheet
+        to a web page, open up the code for the web page.  Inside the head tag, add
+        the following code `<link rel=\"stylesheet\" href=\"style.css\">`.  Then change
+        \"style.css\" to the name of your style sheet.\r\n</details>\r\n</div>\r\n#
+        Adding a Style Sheet\r\n\r\nThis is your About Me page from before.  In the
+        next level, you'll have a chance to add some different styles to it, but
+        first, you need to add a style sheet, name it, and link it to your html page.\r\n\r\n1.
+        Create a new style sheet for your project.\r\n2. Rename the style sheet file.\r\n3.
+        Add your style sheet to your HTML page.\r\n\r\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png\"
+        style=\" max-width:500px\">"
       CSD U2 add file_markdown_instruction: "<div style=\"float: right; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**What
         is a style sheet?**</summary>\r\nA style sheet is a document that controls
@@ -1800,6 +1834,15 @@ en:
         at the `float` property inside your `img` rule-set\r\n* Discuss with your
         partner what you think the property does.\r\n* Change the value from `left`
         to `right`."
+      CSD U2 layout style freeplay - OLD_markdown_instruction: "# Personal Web Site\r\n\r\nTry
+        out these some new CSS properties on your personal web site.\r\n\r\n* Add
+        styling of your choice to your web site. Be sure to use at least 3 new CSS
+        properties.\r\n\r\n# Checklist\r\n\r\n* At least 3 of the following CSS Properties
+        are used:\r\n\r\n * `background-color`\r\n * `height`\r\n * `width`\r\n *
+        `border-style`\r\n * `border-radius`\r\n * `border-width`\r\n * `float`\r\n
+        * `margin`\r\n\r\n\r\nIf you’ve used at least 3 of the properties from the
+        checklist, you can explore some additional CSS properties to add to your About
+        Me page."
       CSD U2 layout style freeplay_markdown_instruction: "# Personal Web Site\r\n\r\nTry
         out these some new CSS properties on your personal web site.\r\n\r\n* Add
         styling of your choice to your web site. Be sure to use at least 3 new CSS
@@ -2138,6 +2181,14 @@ en:
         one you like the best.\r\n  * Choose from \"serif\", \"sans-serif\", \"cursive\",
         \"fantasy\", and \"monospace\"\r\n* Add a font family rule for the h1 or h3
         tags."
+      CSD U2 text style freeplay - OLD_markdown_instruction: "# Adding Styles\r\n\r\nNow
+        you can style the text on your personal web site!\r\n\r\n* Open your style
+        sheet and add styling of your choice to your page. Be sure to use at least
+        3 different CSS properties.\r\n\r\n# Checklist\r\n\r\n* At least 3 of the
+        following CSS Properties are used:\r\n * `font-size`\r\n * `font-family`\r\n
+        * `color`\r\n * `text-decoration`\r\n * `text-align`\r\n\r\nIf you’ve used
+        at least 3 of the properties from the checklist, you can explore some additional
+        text properties to add to your project."
       CSD U2 text style freeplay_markdown_instruction: "# Adding Styles\r\n\r\nNow
         you can style the text on your personal web site!\r\n\r\n* Open your style
         sheet and add styling of your choice to your project. Be sure to use at least
@@ -3295,21 +3346,23 @@ en:
         style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
         if block to add an else.\r\n* Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed."
-      CSD U3 Entertainment Sample 1_markdown_instruction: "Press \"Run\" to play
-        the game on the left.  You can make the alien jump with the up arrow, and
-        move it to the left and right with the arrow keys.  You score by collecting
-        stars, and if you score high enough, the background will change."
+      CSD U3 Entertainment Sample 1_markdown_instruction: "# Alien Jumper\r\n\r\nPress
+        \"Run\" to play the game on the left.  You can make the alien jump with the
+        up arrow, and move it to the left and right with the arrow keys.  You score
+        by collecting stars, and if you score high enough, the background will change."
       CSD U3 Entertainment Sample 2_markdown_instruction: "# Hungry Bunny\r\n\r\nThe
         bunny is hungry, and it's looking for mushrooms and carrots for dinner.\r\n\r\nTo
         win, you'll need to find a dinner bowl, then collect at least ten carrots
         and five mushrooms.\r\n\r\nMake sure to avoid the bugs.  Ladybugs and snails
         will eat your food, and bees will sting you, making you drop everything!\r\n\r\nUse
-        the space bar to jump.  You can squash ladybugs and snails by jumping on them."
+        the space bar to jump.  You can squash ladybugs and snails by jumping on them.\r\n\r\nClick
+        \"Run\" to start the program."
       CSD U3 Entertainment Sample 3_markdown_instruction: "# Animated Comics\r\n\r\nCombining
         images, text, and some subtle animation can make for really interesting comics
-        or graphic stories.\r\n"
-      CSD U3 Entertainment Sample 4_markdown_instruction: "# Stamp Pad\r\n\r\nUse
-        this stamp pad to draw pictures with simple colors and animal stamps.\r\n"
+        or graphic stories.  Click \"Run\" to see an example.\r\n"
+      CSD U3 Entertainment Sample 4_markdown_instruction: "# Stamp Pad\r\n\r\nClick
+        \"Run\" to start the program, then use the stamp pad to draw pictures with
+        simple colors and animal stamps.\r\n"
       CSD U3 Expressions calculator_markdown_instruction: "# Adding and Multiplying\r\n\r\nYour
         computer can calculate the results of many math problems. Try out this example,
         where we add and multiply a few numbers. Then extend it yourself to the numbers
@@ -3639,6 +3692,9 @@ en:
         the draw loop\r\n\r\n* Identify which sprite properties to change\r\n* Update
         those properties using the counter pattern\r\n\r\n_Tip: If your counter pattern
         isn't working like you expect, add watchers to help debug your program._"
+      CSD U3 Plotting Shapes Shape Lab_markdown_instruction: "# Drawing Shapes\r\n\r\nExplore
+        using this tool that lets you different colored shapes. Make sure you try
+        out turning on the grid to help you place shapes precisely."
       CSD U3 Property Conditional Multi_markdown_instruction: "# Get Creative\r\n\r\nNow
         that you've seen how we can use conditionals both to take input from the
         keyboard and to react to changes is sprite properties, it's time to come
@@ -3716,9 +3772,9 @@ en:
         wider?"
       CSD U3 Random Ellipse Behind_markdown_instruction: "<img src=\"https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write
-        code that makes an orange ellipse behind the green one\r\n* Don't worry about
-        the exact size as long as the green ellipse is entirely inside the orange
-        one"
+        code that makes an orange ellipse behind the green one.\r\n* Don't worry
+        about the exact size as long as the green ellipse is entirely inside the orange
+        one."
       CSD U3 Random FreeResponse_markdown_instruction: "# Randomness\r\n\r\nSometimes
         you will want your programs to run a bit differently every time, and a simple
         way to do this is to generate **random numbers**. The `randomNumber()` block
@@ -3803,8 +3859,9 @@ en:
       CSD U3 Random background2_markdown_instruction: "<img src=\"https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Background\r\n\r\nThe
         background block will draw on top of everything already in your drawing, so
-        order in your code is important.\r\n\r\n# Do This\r\n\r\n* Use the `background()`
-        block to make a \"black\" background behind the green circle."
+        it's important to think about the order of your blocks.\r\n\r\n# Do This\r\n\r\n*
+        Use the `background()` block to make a \"black\" background behind the green
+        circle."
       CSD U3 Random rainbow snake_markdown_instruction: "<img src=\"https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis
         program draws a very rare breed of rainbow snake. To make the snake draw differently
@@ -3830,12 +3887,12 @@ en:
       CSD U3 Scene Example_markdown_instruction: "# Sprite Scenes\r\n\r\nBy combining
         shapes, sprites, and a new block called `text`, you can create simple scenes,
         stories, or comics. While this example is fairly simple, you can combine as
-        many sprites and shapes as you like to scenes as complex or detailed as you
-        like.\r\n\r\n## Sketch It Out\r\n\r\nBefore moving on, take a second to sketch
-        out a scene that you'd like to make at the end of this lesson. Consider the
-        simple shapes that you've used in the past, sprites for your characters,
-        and any text that you'd like on screen. Once you've sketched out an idea,
-        continue to learn about the `text` block and how to compose a scene.\r\n"
+        many sprites and shapes as you like to create scenes as complex or detailed
+        as you like.\r\n\r\n## Sketch It Out\r\n\r\nBefore moving on, take a second
+        to sketch out a scene that you'd like to make at the end of this lesson.
+        Consider the simple shapes that you've used in the past, sprites for your
+        characters, and any text that you'd like on the screen. Once you've sketched
+        out an idea, you'll learn about the `text` block and how to compose a scene.\r\n"
       CSD U3 Simple Drawing - Animation 2_markdown_instruction: "# Rays of Sunshine\r\n\r\nLet's
         add a little bit more animation to the scene. The `line()` block takes in
         two pairs of x,y coordinates and draws a line between them.\r\n\r\nDraw 5
@@ -3911,11 +3968,11 @@ en:
         use the counter pattern here? Look at the code for the redSprite if you need
         help.\r\n* Your animation should look like the example at the right."
       CSD U3 Sprites anitab 1_markdown_instruction: "# Images\r\n\r\nOver on the
-        **Animations Tab** you'll see three images that have been loaded for you!
+        **Animations Tab**, you'll see three images that have been loaded for you.
         You can get to the animations tab by clicking the **Animation** button above
         the display area.\r\n\r\n<img src=\"https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11
         PM.png\" style=\"width:300px;float:right\">\r\n\r\nOnce you have created a
-        sprite you can **use the `sprite.setAnimation()` command to change the look
+        sprite, you can **use the `sprite.setAnimation()` command to change the look
         of your sprite from a rectangle to a picture.** All the images you have loaded
         in the Animation Tab show up in the `sprite.setAnimation()` dropdown.  The
         alien is set up for you as an example.\r\n\r\n# Do This\r\nChange the sprite
@@ -3932,16 +3989,15 @@ en:
         backgrounds work best.\r\n* Open the animations tab.\r\n* Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
         PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
         PM.png\" style=\"width:50px\"> to upload an image.\r\n* Select the file from
-        your computer.\r\n* Rename your image so it has a name that is easy to remember.
-        To rename it click the text below the image.\r\n* Back in code mode, add a
-        `sprite.setAnimation()` block to make your `kite` sprite uses your new animation.\r\n\r\nDon't
-        worry if your kite image is too big! You'll learn how to fix that in the
-        next level."
+        your computer.\r\n* Rename your image so it is easy to remember. To rename
+        it click the text below the image.\r\n* Back in code mode, add a `sprite.setAnimation()`
+        block to make your `kite` sprite use your new animation.\r\n\r\nDon't worry
+        if your kite image is too big! You'll learn how to fix that in the next level."
       CSD U3 Sprites anitab 3_markdown_instruction: "# Resizing with Scale\r\n\r\nIn
-        the _Sprites_ drawer of the toolbox you'll see a new block called `sprite.scale`.
+        the _Sprites_ drawer of the toolbox, you'll see a new block called `sprite.scale`.
         This command lets you change the size of a sprite in relation to its original
-        size. `sprite.scale = 1` is the normal size. `sprite.scale = 0.5` would make
-        your sprite half as big, while `sprite.scale = 2` would make it twice as big.\r\n\r\n#
+        size. `sprite.scale = 1` is the normal size. `sprite.scale = 0.5` makes your
+        sprite half as big, while `sprite.scale = 2` makes it twice as big.\r\n\r\n#
         Do This\r\n\r\nAt this point the program should include your newly uploaded
         image, but it's probably not the _perfect_ size. Add a `sprite.scale` block
         to change the size of your `kite` sprite.\r\n\r\n_Hint: the order of your
@@ -4028,9 +4084,10 @@ en:
       CSD U3 Sprites intro sprites_markdown_instruction: "# Sprites\r\n\r\n**Creating
         Sprites:** The <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41
         PM.png\" style = \"height:30px\"> block creates a new sprite and assigns it
-        to a variable (by default `sprite`).\r\n\r\n**Drawing Sprites:** Sprites only
-        appear on the screen when you draw them there. Calling the ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16
-        AM.png) command will draw all of your created sprites on screen.\r\n\r\n<img
+        to a variable.  The default name is `sprite`, so you'll want to change it
+        to something more meaningful.\r\n\r\n**Drawing Sprites:** Sprites only appear
+        on the screen when you draw them there. Calling the ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16
+        AM.png) command will draw all of your created sprites on the screen.\r\n\r\n<img
         src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\"
         style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left:
         20px\">\r\n\r\n# Do This\r\n\r\nThis program includes comments that let you
@@ -4117,25 +4174,24 @@ en:
         going to start creating a scene of your own. If you haven't already, take
         a minute to sketch out a picture of your scene (consider using graph paper).
         Once you have an idea and plan for your scene, start drawing the background.\r\n\r\n#
-        Do This\r\n\r\n* Use a `background()` commands to set fill the screen with
-        a color\r\n* Add any necessary shape commands to draw the non-sprite elements
-        of your scene"
+        Do This\r\n\r\n* Use a `background()` command to fill the screen with a color.\r\n*
+        Add any necessary shape commands to draw the non-sprite elements of your scene."
       CSD U3 Sprites scene sprites_markdown_instruction: "# Create Your Scene - Sprites\r\n\r\nWith
         your background in place, it's time to add your sprites.\r\n# Do This\r\n\r\n*
-        Add or create all of your sprite images in the Animation Tab\r\n* Create a
-        variable for each sprite at the top of your program and use `setAnimation()`
-        to assign the images you created in the Animation Tab\r\n* Call `drawSprites()`
-        once at the end of your program\r\n\r\n_Hint: You probably want to call `drawSprites()`
+        Add or create all of your sprite images in the Animation Tab.\r\n* Create
+        a variable for each sprite at the top of your program and use `setAnimation()`
+        to assign the images you created in the Animation Tab.\r\n* Call `drawSprites()`
+        once at the end of your program.\r\n\r\n_Hint: You probably want to call `drawSprites()`
         at the very end of your program so the sprites are on top of your background,
         but for some designs you may want to call `drawSprites()` earlier so that
         your sprites are on top of some shapes but below others._"
       CSD U3 Sprites scene text_markdown_instruction: "# Create Your Scene - Text\r\n\r\nThe
         final piece of your scene is to add text.\r\n\r\n# Do This\r\n\r\n* Add a
-        `text()` command for each separate line of text\r\n* If necessary, use `fill()`
-        and `textSize()` to change the appearance of your text\r\n\r\n_Hint: Most
+        `text()` command for each separate line of text.\r\n* If necessary, use `fill()`
+        and `textSize()` to change the appearance of your text.\r\n\r\n_Hint: Most
         scenes have the text on top of everything else, which would require your `text()`
         commands to be the last lines in your program. If, however, you want the text
-        layered in with other elements you might consider changing the order._"
+        layered in with other elements, you might consider changing the order._"
       CSD U3 Sprites setting properties_markdown_instruction: "# Properties\r\n\r\n<img
         src=\"https://images.code.org/9567c9df55163104ff91df0920457ad3-image-1466047307713.21.28
         PM.png\" style=\"float:right\">\r\n\r\n**Properties:** When you create a sprite
@@ -4184,14 +4240,14 @@ en:
       CSD U3 Sprites text debug_markdown_instruction: "<img src=\"https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png\"
         style=\"float: right; width: 200px; margin-left: 20px;\">\r\n# Debug\r\n\r\nThis
         scene has all the right code, but it's not in the right order. The scene
-        should look like the image to the right - can you reorder the blocks so that
+        should look like the image to the right.  Can you reorder the blocks so that
         each part of the scene is drawn in the correct order?"
       CSD U3 Sprites text_markdown_instruction: "# Adding Text\r\n\r\nThe `text`
         block lets you put text anywhere you'd like on the screen. Change this text
         in the provided block to something else and add a second `text` block to write
         in a different part of the screen.\r\n\r\n_Tip: The default text size is pretty
-        small, you can use the `textSize` block to change that. You can also use the
-        `fill` block to change the color of your text._"
+        small, but you can use the `textSize` block to change that. You can also use
+        the `fill` block to change the color of your text._"
       CSD U3 Sprites width and height_markdown_instruction: "# Setting Properties\r\n\r\nYou
         are going to start programming with **sprites**. A sprite is made up of many
         pieces of information called **properties**. The ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16
@@ -4353,7 +4409,7 @@ en:
         program once to see how it works\r\n* **Change the value assigned to size
         in line 2** and rerun the program to see what changed."
       CSD U3 Variables change circle size_markdown_instruction: "<img src=\"https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01
-        AM.png\" style=\"float:right; height:150px\"> \r\n\r\n# Debug: Using Variables\r\n\r\nThis
+        AM.png\" style=\"float:right; height:150px\">\r\n\r\n# Debug: Using Variables\r\n\r\nThis
         program uses the variable `circleSize` to control the width and height of
         a circle.\r\n\r\n# Do This\r\n\r\n* Change the value assigned to `circleSize`
         so that the circle takes up the entire screen."
@@ -5102,6 +5158,17 @@ en:
         feather move down?\r\n\r\n#Do This\r\n\r\nFind the block that will make the
         feather sprite go down the screen, and use it outside the draw loop.&nbsp;&nbsp;  [Show
         me where](#triggercallout=code_triggered)"
+      CSD U3 challenge face_markdown_instruction: "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\"
+        style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n# Challenge:
+        Face\r\n\r\n_Check with your teacher before starting any of the challenges._\r\n\r\nWrite
+        a program that duplicates the face to the right. The colors used are \"lightblue\",
+        \"red\", and \"lightgreen\".\r\nOnce you've got it, add your own personal
+        touches to the image.\r\n\r\n\r\n"
+      CSD U3 challenge new shape_markdown_instruction: "<img src=\"https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png\"
+        style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n\r\n#
+        Challenge: Shape of Shapes\r\n\r\n_Check with your teacher before starting
+        any of the challenges_\r\n\r\nUsing only the `rect` and `ellipse` commands,
+        can you draw a new shape, like this triangle made out of circles?"
       CSD U3 collisions bounce birds_markdown_instruction: "# bounce()\r\n\r\nThe
         birds are fighting for space on the wire.  Can you change the code so that
         the green bird pushes the yellow bird off the wire?\r\n\r\n# Do This\r\n\r\nUse
@@ -5553,10 +5620,9 @@ en:
         also make your rectangles different colors with the `fill` block.  The `fill`
         block will set the color for every shape that comes after it in the code.\r\n\r\n#
         Do This\r\n\r\n* Look at the code that sets the color. ( [Show me where](#triggercallout=fill)
-        )\r\n* Change the color from \"blue\" to \"yellow\"\r\n* Add a new square
-        by dragging a `rect` block into the code area bellow the fill command ( [Show
-        me where](#triggercallout=rect_block) )  The new square can go any location
-        on the screen you like you want.\r\n"
+        )\r\n* Change the color from blue to yellow.\r\n* Add a new square by dragging
+        a `rect` block into the code area below the fill command ( [Show me where](#triggercallout=rect_block)
+        ).  The new square can go any location on the screen you like.\r\n"
       CSD U3 finishing touches_markdown_instruction: "# Finishing Touches\r\n\r\nNow
         that you have the basis for your game, it's time to add some finishing touches.\r\n\r\nTo
         make your game even better, try making at least two improvements to it. You
@@ -5659,10 +5725,10 @@ en:
         )\r\n* Change the numbers in the two different openings, then try running
         the program again. \r\n* Try to place the rectangle near the bottom right
         of the screen"
-      CSD U3 picture_markdown_instruction: "# Make Your Picture\r\n\r\nYou now have
-        enough information to code the picture you designed in the last lesson.\r\n\r\n#
-        Do This\r\n\r\n* Use the instructions you wrote on your activity guide to
-        code your picture.\r\n* Improve your picture any way you want.\r\n"
+      CSD U3 picture_markdown_instruction: "# Challenge: Draw an Image\r\n\r\n_Check
+        with your teacher before starting any of the challenges_\r\n\r\nIn the previous
+        lesson you and your partner created several interesting images. See if you
+        can recreate one of them using code."
       CSD U3 platform background1_markdown_instruction: "# Background\r\n\r\nThe
         first thing that you will create for your game is the background.   The sample
         game had two different backgrounds that were chosen according to the user's
@@ -6574,11 +6640,11 @@ en:
         up your own personal website.\r\n\r\n# Do This\r\nYour personal website is
         back. So far you have just your personal home page.\r\n\r\n* Add html files
         for each of the Hobbies Page, Recipe Page, and About Me page\r\n* Copy the
-        code from the following levels <a href=\"https://studio.code.org/s/csd2/stage/4/puzzle/13\"
-        target=\"_blank\">Hobbies Page</a>, <a href=\"https://studio.code.org/s/csd2/stage/4/puzzle/17\"
-        target=\"_blank\">Recipe Page</a>, and <a href=\"https://studio.code.org/s/csd2/stage/8/puzzle/12\"
+        code from the following levels <a href=\"https://studio.code.org/s/csd2-old/stage/4/puzzle/13\"
+        target=\"_blank\">Hobbies Page</a>, <a href=\"https://studio.code.org/s/csd2-old/stage/4/puzzle/17\"
+        target=\"_blank\">Recipe Page</a>, and <a href=\"https://studio.code.org/s/csd2-old/stage/8/puzzle/12\"
         target=\"_blank\">About Me page</a> into the files you created.\r\n* Add a
-        CSS file for your <a href=\"https://studio.code.org/s/csd2/stage/8/puzzle/12\"
+        CSS file for your <a href=\"https://studio.code.org/s/csd2-old/stage/8/puzzle/12\"
         target=\"_blank\">\"About Me\" page style sheet</a>."
       CSDU2 - New Class Files_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**Why
@@ -6597,6 +6663,15 @@ en:
         clicking on it when it's already highlighted.  **Make sure the name is unique,
         descriptive and ends in \".html\"**.\r\n* Create a new CSS file and rename
         it, too."
+      CSDU2 - PW - Class Style Personal Site - OLD_markdown_instruction: "# Free
+        Play Styling\r\n\r\nYour turn to decide what you want to style! Play with
+        the classes styling and RGB colors to improve your personal website.\r\n\r\n*
+        Make sure you have completed the checklist below.\r\n* Take a screenshot of
+        your home page and save it somewhere on your computer so you can find it later.\r\n\r\n##
+        Checklist\r\n\r\n* Somewhere on your site, give text a particular color using
+        RGB values.\r\n* On your lists page, give all the list items the same background
+        color.\r\n* Use classes to style at least 2 other elements of your personal
+        website"
       CSDU2 - PW - Class Style Personal Site_markdown_instruction: "# Free Play Styling\r\n\r\nYour
         turn to decide what you want to style! Play with the classes styling and RGB
         colors to improve your personal website.\r\n\r\n* Make sure you have completed
@@ -8188,7 +8263,9 @@ en:
       CSDU6 - UI and Inputs - get set with text input_markdown_instruction: "# setText
         and getText\r\n\r\nYou've seen how to use getText and setText already. Can
         you make this app get the text the user typed once they hit enter and show
-        it in the text area at the bottom?"
+        it in the text area at the bottom?\r\n\r\n_Tip: The \"change\" event is triggered
+        when the user clicks \"enter\" in a field. Use an event handler for the text
+        input watching for the \"change\" event._"
       CSDU6 - UI and Inputs - getNumber practice_markdown_instruction: "# getNumber\r\n\r\n**Starter
         Code:** The program tries to update the valueDisplay whenever the slider value
         changes but it always sets the value to 10.\r\n\r\nCan you use `getNumber()`
@@ -8262,9 +8339,9 @@ en:
         turn them off again.\r\n\r\n"
       CSDU6 - button screen buttonL_markdown_instruction: "# Board Events\r\n\r\nThe
         `onBoardEvent()` command allows you to start taking input from your Circuit
-        Playground. This app has two screens, \"red_sreen\" and \"blue_screen\". Using
-        the provided board event handler, write a program that switches to the blue
-        screen when the left button on your board is pressed."
+        Playground. This app has two screens, \"red_screen\" and \"blue_screen\".
+        Using the provided board event handler, write a program that switches to the
+        blue screen when the left button on your board is pressed."
       CSDU6 - button screen buttonR_markdown_instruction: "# Changing the Input\r\n\r\n<img
         src=\"https://images.code.org/cc903e4a0fb57b241b90abe220f027ef-image-1487707484420.04.00.png\"
         style=\"float:right; margin-left: 10px; width: 50%\">\r\n\r\nUsing another
@@ -14106,6 +14183,18 @@ en:
       Eval Strings Images Free Play_markdown_instruction: "Free Play: Explore the
         blocks available to create something interesting. Make sure to share your
         favorite creations."
+      Final Personal Website - OLD_markdown_instruction: "# Personal Website\r\n\r\nThis
+        is it! You have been working on your Personal Website for the whole unit.
+        Put the finishing touches on it and submit it to your teacher! Remember to
+        use the problem solving process as your guide in preparing your final product.\r\n\r\n#
+        Do This\r\n\r\n* Define: Read the rubric so you know what is expected\r\n*
+        Plan: Decide what you still need to work on and put those things in priority
+        order\r\n* Try: Implement your improvements to your personal website.\r\n*
+        Reflect: Get feedback from a classmate and decide what of that feedback to
+        act on.\r\n\r\nDon't forget to take a screenshot of your home page and save
+        it somewhere on your computer so you can find it later (*Need help with how
+        to screenshot? Check out this <a href=\"http://www.take-a-screenshot.org/\">website
+        </a>.*)"
       Final Personal Website_markdown_instruction: "# Personal Website\r\n\r\nThis
         is it! You have been working on your Personal Website for the whole unit.
         Put the finishing touches on it and submit it to your teacher! Remember to
@@ -14965,7 +15054,8 @@ en:
       NEW Course 4 Artist Functions 12_markdown_instruction: "Use the `draw a line
         of squares` function from the last puzzle to draw this pattern."
       NEW Course 4 Artist Functions 13_markdown_instruction: "Can you draw a star
-        shape using the `draw a line of squares` function?  "
+        shape using the `draw a line of squares` function?  \r\n\r\n(Be sure to `move
+        forward` 60 pixels before you turn 144 degrees!)"
       NEW Course 4 Artist Functions 14_markdown_instruction: "It's free-play time!
         Draw anything you like!"
       NEW Course 4 Artist Functions 2_markdown_instruction: "Can you draw 3 squares
@@ -26665,9 +26755,26 @@ en:
       courseB_playlab_events_challenge1_markdown_instruction: "It's time for the
         Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho
         will run the fastest?\r\n"
+      courseB_starWars_prog1_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
+        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> Help BB-8
+        gather the glowing scrap metal!  \r\nWatch out for walls and crates!  \r\n\r\n"
+      courseB_starWars_prog2_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
+        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> Now, help
+        BB-8 gather **all** of the glowing scrap metal!  \r\nWatch out for walls and
+        crates!  \r\n\r\n"
+      courseB_starWars_prog3_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
+        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> Now, help
+        BB-8 gather **all** of the glowing scrap metal!  \r\nWatch out for walls and
+        crates!  \r\n\r\n"
       courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor
         1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen
         you're done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_artist_loops5_markdown_instruction: "Great!  Now it's time to make
+        a fence inside to keep the animals out.   \r\nMake any kind of fence that
+        you want!\r\n\r\n"
+      courseC_artist_loops6_markdown_instruction: "What should the zombie put inside
+        of the garden?  \r\n\r\nDraw anything you'd like inside of the fence.  Would
+        you like some flowers or a few bugs? \r\n*(See hints for more suggestions.)*\r\n\r\n\r\n"
       courseC_artist_prog1_markdown_instruction: "*\"Hi, I'm an artist. You can
         write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks
         in the toolbox to see what they do!"
@@ -26817,6 +26924,8 @@ en:
         the last few puzzles to complete this level."
       courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Challenge:**
         Combine ideas from the last few puzzles to complete this level."
+      courseC_starWars_loops8_markdown_instruction: "**Challenge:** Combine ideas
+        from the last few puzzles to complete this level."
       courseD_artist_binary1_markdown_instruction: "We've provided you with a grid
         of \"pixels\" that you can walk through and make designs by turning on only
         certain squares.\r\n\r\nUse the blocks below to have the artist draw \"01010101\"
@@ -26894,6 +27003,14 @@ en:
         width=\"200px\"/><img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\"
         width=\"200px\"/><img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\"
         width=\"200px\"/>\r\n"
+      courseD_artist_project2_markdown_instruction: "Now take your shape and draw
+        two or three in a row!"
+      courseD_artist_project3_markdown_instruction: "Next, jump Elsa back to the
+        center, and spin her around to draw the line of shapes again in a bunch of
+        different directions.   \r\nWhat amazing snowflakes you can make!\r\n"
+      courseD_artist_project4_markdown_instruction: "What would happen if we layered
+        two different shapes of snowflakes on top of one another with a little turn
+        in between?   \r\nTry it and see what you get!"
       courseD_artist_ramp11_markdown_instruction: "Great!  Now let's make a square
         using Artist!  The blocks are a little different, but the idea is the same.\r\n<hr/>\r\nEach
         side of the square has a length of 200 pixels, and you will need to turn 90
@@ -26935,6 +27052,16 @@ en:
       courseD_bee_conditionals9_markdown_instruction: "Collect all of the nectar
         or make all the honey. You can only collect nectar from flowers and make honey
         from honeycombs. Check any space to see if there is a flower or honeycomb."
+      courseD_bee_conditionals_challenge1_markdown_instruction: "Collect all of the
+        nectar or make all the honey. You can only collect nectar from flowers and
+        make honey from honeycombs. Check any space to see if there is a flower or
+        honeycomb."
+      courseD_bee_conditionals_challenge2_markdown_instruction: "Collect all of the
+        nectar and make all the honey. You can collect all of the nectar in one flower
+        by using the `while nectar > 0` loop."
+      courseD_bee_conditionals_challenge3_markdown_instruction: "Collect all of the
+        nectar and make all the honey. You can collect all of the nectar in one flower
+        by using the `while nectar > 0` loop."
       courseD_bee_debugging1_markdown_instruction: "*\"These blocks are really bugging
         me!\"*\r\n\r\nFix the error(s) to collect all of the nectar."
       courseD_bee_debugging2_markdown_instruction: "*\"Ooh, this one stings!\"*\r\n\r\nFix
@@ -26984,6 +27111,22 @@ en:
       courseD_bee_nested_loops_challenge2_markdown_instruction: "Let's hunt for
         treasure - using loops! Help the collector reach at least two piles of treasure
         using only the blocks in your toolbox."
+      courseD_collector_debugging1_markdown_instruction: "*\"These blocks are really
+        bugging me!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging2_markdown_instruction: "*\"These blocks are really
+        bugging me!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging3_markdown_instruction: "*\"These blocks are really
+        bugging me!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging4_markdown_instruction: "*\"These blocks are really
+        bugging me!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging5_markdown_instruction: "**Challenge:** *\"This
+        puzzle is making me loopy!\"*\r\n\r\nAll of the commands that you need are
+        already here...now use your debugging skills to figure out how to solve this
+        puzzle."
+      courseD_collector_debugging6_markdown_instruction: "**Challenge:**  Fix the
+        errors to collect all of the nectar and make all of the honey."
+      courseD_collector_debugging7_markdown_instruction: "**Challenge:**  Fix the
+        errors to collect all of the nectar and make all of the honey."
       courseD_collector_debugging_challenge2_markdown_instruction: "Watch how the
         bees gets the nectar. Can you use the same kind of pattern to help the bee
         make all of honey?"
@@ -27067,6 +27210,10 @@ en:
         to easily fill them all!"
       courseD_farmer_while8_markdown_instruction: "**Challenge:** Fill all of these
         holes using as few blocks as possible. "
+      courseD_farmer_while_challenge1_markdown_instruction: "Fill all of the holes
+        and remove all of the piles."
+      courseD_farmer_while_challenge2_markdown_instruction: "Fill all of the holes
+        and remove all of the piles."
       courseD_harvester_nested_loops_challenge1-broken_markdown_instruction: "*\"I
         need some help on the farm! Help me harvest this corn using only the blocks
         in your toolbox.\"*"
