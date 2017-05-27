@@ -77,7 +77,6 @@ var ScreenEvents = React.createClass({
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
-      '  moveTo(event.x, event.y);\n' +
       '});\n';
     return code;
   },
