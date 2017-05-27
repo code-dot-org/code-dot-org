@@ -25,12 +25,12 @@
           - if user_type == "teacher"
             %a.headerlink{:href=>CDO.studio_url("/home")}= I18n.t('header_home')
             %a.headerlink{:href=>CDO.studio_url("/courses")}= I18n.t('header_courses')
-            %a.headerlink{:href=>CDO.studio_url("/projects")}= I18n.t('header_projects')
+            %a.headerlink{:href=>CDO.studio_url("/projects")}= I18n.t('header_project_gallery')
             %a.headerlink{:href=>"/teacher-dashboard#/sections"}= I18n.t('header_sections')
             %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")}= I18n.t('header_professional_learning')
           - elsif user_type == "student"
             %a.headerlink{:href=>CDO.studio_url("/courses")}= I18n.t('header_courses')
-            %a.headerlink{:href=>CDO.studio_url("/projects")}= I18n.t('header_projects')
+            %a.headerlink{:href=>CDO.studio_url("/projects")}= I18n.t('header_project_gallery')
           - elsif request.language == "en"
             %a.headerlink{:href=>"/student"}= I18n.t('header_learn')
             %a.headerlink{:href=>"/educate"}= I18n.t('header_teach')
