@@ -597,9 +597,8 @@ en:
       MikeStarNested_authored_hint:
         hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: Edit the `draw a line of squares` function so that you don't have to call it twice.
-        NEW_Course_4_Artist_Functions_13_b: Notice, you'll have to move forward by 60 pixels and turn 144 degrees.
-        NEW_Course_4_Artist_Functions_13_c: What code would you need if you were going to try to make a star with regular lines?
+        NEW_Course_4_Artist_Functions_13_a: Try editing the `draw a line of squares` function so that you don't have to call it twice.
+        NEW_Course_4_Artist_Functions_13_c: What code would you need if you were going to try to make a star using regular lines instead of boxes?
       NEW Course 4 Artist Functions 4_authored_hint:
         NEW_Course_4_Artist_Functions_4_a: You will have to use a `turn right by 120 degrees` block after each square.
       NEW Course 4 Artist Functions 9_authored_hint:
@@ -643,6 +642,8 @@ en:
 
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+      Quantum Bee - Ryan_authored_hint:
+        test_hint: This is a test hint.
       aE1_authored_hint: {}
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -957,11 +958,50 @@ en:
         courseB_collector_loops9_a: |
           Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
       courseB_collector_loops_challenge1_authored_hint:
-        courseB_collector_loops_challenge1_b: |+
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
-
+        courseB_collector_loops_challenge1_b: |
+          Start by looping the commands `move south` and `get treasure`.
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
         courseB_collector_loops_challenge1_a: |
-          You can move back over the path a second time before moving east.
+          The north pattern is a little different than the south pattern.
+        courseB_collector_loops_challenge1_c: "You can do this with only 8 blocks. You need to put `repeat` blocks inside another `repeat` block. Click for one more hint to see that solution. \n<xml>\n<block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n        <statement name=\"DO\">\n          \n              <block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block></next></statement></block></xml>"
+        courseB_collector_loops_challenge1_d: |-
+          Try this!
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="controls_repeat_simplified">
+                          <title name="TIMES">5</title>
+                          <statement name="DO">
+                            <block type="collector_collect">
+                              <next>
+                                <block type="maze_moveEast"/>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="maze_moveWest"/>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_collector_loops_challenge2_authored_hint:
         courseB_collector_loops_challenge2_a: Try changing the numbers in each loop if something goes wrong.
         courseB_collector_loops_challenge2_b: If you miss any treasure, you might need to move back west one extra space.
@@ -1159,6 +1199,19 @@ en:
           Make some animals give more points than others.
           Use different sounds.
           Change the animals' moods!
+      courseB_starWars_prog10_authored_hint: {}
+      courseB_starWars_prog11_authored_hint: {}
+      courseB_starWars_prog8_authored_hint:
+        courseB_starWars_prog8_a: It is okay to go back over a set of spaces where you have already traveled.
+        courseB_starWars_prog8_b: |-
+          Try using the `repeat` block to see what happens to the code that you put inside.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog9_authored_hint: {}
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
       courseC_PlayLab_events4_authored_hint:
@@ -1216,6 +1269,23 @@ en:
               </value>
             </block></xml>
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
+      courseC_artist_loops5_authored_hint:
+        courseC_artist_loops5_a: |-
+          Try using the `jump to` block to get your artist back toward the center:
+
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">100</title>
+              <title name="YPOS">100</title>
+            </block>
+          </xml>
+      courseC_artist_loops6_authored_hint:
+        courseC_artist_loops6_a: |
+          Try a triangle flower:
+          <img src="https://images.code.org/4248a974a7631c4240effba06fdee731-image-1495821015097.49.18.png" width="150px" />
+
+          Or a little green bug:
+          <img src="https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png" width="150px" />
       courseC_artist_prog1_authored_hint: {}
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
@@ -1276,6 +1346,7 @@ en:
         courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+      courseC_external_events_authored_hint: {}
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Don't even think about try about trying this without loops!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need to, then `turn right` at each corner.
@@ -1458,6 +1529,27 @@ en:
         courseC_puppy_loops8courseC_maze_loops8_c: "There are different ways to solve this. \n\nYou will want to use at least two loops, and repeat a set of actions in the first one, then a single `move forward` in the other."
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
+      courseC_starWars_loops10_authored_hint: {}
+      courseC_starWars_loops10_predict2_authored_hint: {}
+      courseC_starWars_loops11_authored_hint: {}
+      courseC_starWars_loops2_authored_hint:
+        courseC_starWars_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
+        courseC_starWars_loops2_b: You need to repeat the a move up command 5 times to solve this puzzle.
+      courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
+      courseC_starWars_loops5_authored_hint:
+        courseC_starWars_loops5_a: The best solution uses one move down command and one loop filled with another move command.
+      courseC_starWars_loops6_authored_hint:
+        courseC_starWars_loops6_a: If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.
+      courseC_starWars_loops7_authored_hint: {}
+      courseC_starWars_loops8_authored_hint:
+        course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
+        course_starWars_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
+      courseC_starWars_loops9_authored_hint:
+        course_starWars_loops9_a: |-
+          You are doing great! Keep it up!
+
+          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
@@ -1576,6 +1668,35 @@ en:
 
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: {}
+      courseD_artist_project1_authored_hint:
+        courseD_artist_project1_a: |-
+          Need some ideas?  Here are a few shapes you could try:
+
+          ![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)
+          ![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)
+          ![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+      courseD_artist_project2_authored_hint:
+        courseD_artist_project2_a: |-
+          Need some ideas?  Here are a few shapes you could try:
+
+          ![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)
+          ![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)
+          ![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)
+      courseD_artist_project3_authored_hint:
+        courseD_artist_project3_a: |-
+          Need some ideas?  Here are a few shapes you could try:
+
+
+          ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+          ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+          ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+        courseD_artist_project3_b: You can get Elsa back to the center either by using the `jump to 200 over and 200 down` block, or by using the `jump backward` block set to the same number of pixels that she jumped forward while making her line of shapes.
+      courseD_artist_project4_authored_hint:
+        courseD_artist_project4_a: |-
+          Here is the Pentagon with a turn of 36 degrees before a triangle:
+
+          <img src="https://images.code.org/0028c30afc6bdf01bff72235e70ebd91-image-1495821912232.04.10.png" width="200px" />
+      courseD_artist_projectTemplate_authored_hint: {}
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
         courseD_artist_ramp11b: |-
@@ -1614,6 +1735,30 @@ en:
           Only check for nectar and honey at the end of your path.
       courseD_bee_conditionals9_authored_hint:
         courseD_bee_conditionals9_a: In this puzzle, you know that each square has either a flower or a honeycomb.  That means you can repeat your `if/else` conditional at each square.
+      courseD_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square.
+      courseD_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
+      courseD_bee_conditionals_challenge3_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       courseD_bee_debugging1_authored_hint:
         courseD_bee_debugging1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -1730,6 +1875,58 @@ en:
         courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
         courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+      courseD_collector_debugging1_authored_hint:
+        courseD_collector_debugging1_a: |-
+          Use the "Step" button to see if everything is right at the first step.
+
+          How about the second?
+
+          Where does it go wrong?
+        courseD_collector_debugging1_b: Do you see any patterns that could be made more simple using a `repeat` loop?
+      courseD_collector_debugging2_authored_hint:
+        courseD_collector_debugging2_a: |-
+          Use the "Step" button to see if everything is right at the first step.
+
+          How about the second?
+
+          Where does it go wrong?
+        courseD_collector_debugging2_b: Do you see any patterns that could be made more simple using a `repeat` loop?
+      courseD_collector_debugging3_authored_hint:
+        courseD_collector_debugging3_a: Is there any place where Laurel does something that doesn't make sense? What happens when you change those blocks?
+        courseD_collector_debugging3_b: Try simplifying the code using nested loops.
+      courseD_collector_debugging4_authored_hint:
+        courseD_collector_debugging4_a: "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?"
+        courseD_collector_debugging4_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
+      courseD_collector_debugging5_authored_hint:
+        courseD_collector_debugging5_a: |-
+          Start by looking at just the first loop.
+
+          What does it do?
+
+          What is it supposed to do?
+
+          What does that tell you?
+        courseD_collector_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
+        courseD_collector_debugging5_c: |-
+          Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
+
+          If not, what is still going wrong?
+      courseD_collector_debugging6_authored_hint:
+        courseD_collector_debugging6_a: |-
+          Try running through the code using the "Step" button.  Is everything good at the first step?
+
+          How about the second?
+
+          Where do things go wrong?
+        courseD_collector_debugging6_b: It looks like all of the right steps are here, you just need more of them.  How can you repeat the `collect` action multiple times?
+      courseD_collector_debugging7_authored_hint:
+        courseD_collector_debugging7_a: |-
+          Try running through the code using the "Step" button.  Is everything good at the first step?
+
+          How about the second?
+
+          Where do things go wrong?
+        courseD_collector_debugging7_b: If something needs to happen several times, try adding a `repeat` loop.
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
@@ -1837,6 +2034,7 @@ en:
 
           Where do things go wrong?
         courseD_debugging_6_b: It looks like all of the right steps are here, you just need more of them.  How can you repeat the `get nectar` and `make honey` actions multiple times?
+      courseD_external_cond_authored_hint: {}
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using a repeat loop.
         courseD_farmer_condLoops1_b: Make sure to use an `if at corn` block or you might try to pick something that's not there!
@@ -1918,6 +2116,14 @@ en:
         courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       courseD_farmer_while9_authored_hint: {}
+      courseD_farmer_while_challenge1_authored_hint:
+        courseD_farmer_while_challenge1_a: Each hole or pile is located one space **backward** from the end of the path.
+        courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell the farmer to remove a pile or fill a hole, even if one isn't there. That means you can program her to remove any dirt and fill any hole, while standing in the same place.
+        courseD_farmer_conditionals8_c: It is possible to solve this without using any `repeat` loops. To do this, you will need to use four `while` loops.
+      courseD_farmer_while_challenge2_authored_hint:
+        courseD_farmer_while_challenge1_a: Each hole or pile is located one space **backward** from the end of the path.
+        courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell the farmer to remove a pile or fill a hole, even if one isn't there. That means you can program her to remove any dirt and fill any hole, while standing in the same place.
+        courseD_farmer_conditionals8_c: It is possible to solve this without using any `repeat` loops. To do this, you will need to use four `while` loops.
       courseD_harvester_nested_loops_challenge1-broken_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
       courseD_harvester_nested_loops_challenge1_authored_hint:
