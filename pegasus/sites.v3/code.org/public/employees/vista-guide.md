@@ -5,7 +5,7 @@ video_player: true
 theme: responsive
 ---
 
-# Vista Equity Partners Volunteer Toolkit
+# Vista Equity Partners and Portfolio Company Volunteer Toolkit
 
 <div class="col-50" style="float:center; padding:10px">
 
@@ -26,9 +26,9 @@ theme: responsive
 
 Every student should have the opportunity to learn computer science. Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-*Thank you for joining Vista Equity Partners and Code.org to help introduce millions of students to computer science through the Hour of Code!*
+*Thank you for joining Code.org to help introduce millions of students to computer science through the Hour of Code!*
 
-[<button>&nbsp;&nbsp;&nbsp;&nbsp;Volunteer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<button>Back to Vista Equity Partners Portal</button>](/employees/vista)
+[<button>&nbsp;&nbsp;&nbsp;&nbsp;Volunteer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)
 
 <a name="overview"></a>
 ## Overview
@@ -76,7 +76,7 @@ Suggested speaking points:
 
 * Let the students dive into the tutorials. Walk around to help answer questions and guide students through tough puzzles. Try not to give students the solution outright, instead try asking them questions so they can answer themselves what went wrong.
 * Encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity. Often kids can solve the problems themselves and through teamwork. 
-* At the completion of the activities, hand out your Vista Equity Partners swag (stickers are awesome) and answer any remaining questions!
+* At the completion of the activities, hand out your Vista Equity Partners or Portfolio Company swag (stickers are awesome) and answer any remaining questions!
 * Also important to mention that if you do take pictures/videos during the event -- especially with students -- that your event organizer has **teacher/parent permission** if you would like to post your stories on social media.
 
 <a name="agenda"></a>
@@ -84,7 +84,7 @@ Suggested speaking points:
 
 |Time | Agenda item|
 |-----------------| ------------|
-|10-15 minutes | Introduction and speaker: </ul><li>What do you do at Vista Equity Partners, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
+|10-15 minutes | Introduction and speaker: </ul><li>What do you do at Vista Equity Partners or Portfolio Company, and what do you love most about your job, how has tech influenced you?</li><li>What or who inspired you</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone</ul>|
 |1-5 minutes | Show an [inspirational video](#videos)|
 |5-10 minutes | Ask the students questions and leave time for Q&A. </ul><li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul>|
 |60 minutes | Code!|
