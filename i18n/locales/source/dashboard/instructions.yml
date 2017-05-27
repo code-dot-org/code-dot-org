@@ -2910,6 +2910,8 @@ en:
       Finalize Your Chaser Game v.1_instruction: "Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked."
+      Find the Wizard_instruction: "Build whatever you want. This is an example of
+        a number-guessing game!"
       Food Fight!_instruction: "We've added one last function for you. \r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\" function
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
@@ -2926,10 +2928,14 @@ en:
         ideas like shapes. This requires persistence and planning!"
       Geometric Sun_instruction: "Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!"
+      Get To The Goal_instruction: "Build whatever you want. This is an example of
+        a number-guessing game!"
       'Grade 4 Example PlayLab Project #1_instruction': "Take a look at this project.  Do
         you see how it was made?"
       'Grade 4 Example PlayLab Project #2_instruction': "Take a look at this project.  Do
         you see how it was made?"
+      Guess The Number 2_instruction: "Build whatever you want. This is an example
+        of a number-guessing game!"
       Guess The Number_instruction: "Build whatever you want. This is an example
         of a number-guessing game!"
       Harvester Test_instruction: "It's harvest time! But I forgot what crop I planted
@@ -5654,6 +5660,20 @@ en:
       courseB_playlab_events_challenge2_template_instruction: "Let's make the animals
         disappear when you click on them! You can also add sounds and score points
         to create a fun game of Animal Tag!"
+      courseB_starWars_prog1_instruction: "Help BB-8 gather the scrap metal!"
+      courseB_starWars_prog10_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog11_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog2_instruction: "Help BB-8 gather **all** of the glowing
+        scrap metal"
+      courseB_starWars_prog3_instruction: "Help BB-8 gather **all** of the glowing
+        scrap metal"
+      courseB_starWars_prog4_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog5_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog6_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog7_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog8_instruction: "**Challenge:** Help BB-8 gather the glowing
+        scrap metal"
+      courseB_starWars_prog9_instruction: "Help BB-8 gather the glowing scrap metal"
       courseC_PlayLab_events1_instruction: "Make Jorge the Dog (actor 1) say \"Hi
         there.\""
       courseC_PlayLab_events2_instruction: "Can you make Jorge the Dog (actor 1)
@@ -5692,6 +5712,24 @@ en:
         he runs into the Dinosaur and when he scores a point. This will make your
         game more challenging and fun!\r\n\r\nPlay the game and move Waddles with
         the arrows until you score enough points."
+      courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\r\n\r\nThe zombie
+        wants to draw a line from where he is to the garden of sunflowers.  Can you
+        help him?  \r\n*(The garden is 250 pixels away)*  "
+      courseC_artist_loops2_instruction: "Now that the zombie knows his way, help
+        him dig **25 pixel long** holes along the path to plant more flowers!"
+      courseC_artist_loops3_instruction: "Excellent!  Now that the flowers have sprouted,
+        help the zombie place a friend every 50 pixels to guard over them until they
+        are grown."
+      courseC_artist_loops4_instruction: "The zombie has found an empty farm!  Can
+        you help him bring it to life by stamping animal stickers every 100 pixels
+        around the border?"
+      courseC_artist_loops5_instruction: "Great!  Now it's time to make a fence
+        inside to keep the animals out.   \r\n\r\n"
+      courseC_artist_loops6_instruction: "What should the zombie put inside of the
+        garden?  \r\n\r\n\r\n"
+      courseC_artist_loopsTemplate_instruction: "Excellent!  Now that the flowers
+        have sprouted, help the zombie place a friend every 50 pixels to guard over
+        them until they are grown."
       courseC_artist_prog1_instruction: "Play with the blocks in the toolbox to see
         what they do!"
       courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the
@@ -5711,7 +5749,8 @@ en:
       courseC_artist_prog_challenge1-doghouse_instruction: "Let's build a dog house
         for Jorge!"
       courseC_artist_prog_challenge1_instruction: "Draw rooms for each of the animals.
-        There are many different ways to solve this puzzle, so have some fun!"
+        There are many different ways to solve this puzzle, so have some fun. The
+        shortest possible solution is 6 blocks, but use as many as you like!"
       courseC_artist_prog_challenge2_instruction: "*Let's draw a shining star in
         the night sky!*"
       courseC_collector_loops_challenge2_instruction: "Let's hunt for treasure -
@@ -5838,6 +5877,29 @@ en:
       courseC_puppy_loops8courseC_maze_loops8_instruction: "Challenge: Combine ideas
         from the last few puzzles to complete this level."
       courseC_puppy_loops9_instruction: "You are doing great! Keep it up!"
+      courseC_starWars_loops1_instruction: "BB-8 will pick up any metal scraps along
+        the path where he moves. Use 5 of the same block to get BB-8 to pick up all
+        of the scrap metal in the play area."
+      courseC_starWars_loops10_instruction: "You are doing great! Keep it up!"
+      courseC_starWars_loops10_predict2_instruction: "You are doing great! Keep it
+        up!"
+      courseC_starWars_loops11_instruction: "You are almost there! This time, choose
+        any path you like!"
+      courseC_starWars_loops1_predict1_instruction: "BB-8 will pick up any metal
+        scraps along the path where he moves. Use 5 of the same block to get BB-8
+        to pick up all of the scrap metal in the play area."
+      courseC_starWars_loops2_instruction: "Can you get BB-8 to pick up all of the
+        scrap metal by creating a loop that uses only one block inside of a `repeat`
+        block?"
+      courseC_starWars_loops4_instruction: "In this puzzle, two `repeat` loops will
+        help you get BB-8 to all of the scrap metal with the fewest number of blocks!"
+      courseC_starWars_loops5_instruction: "*Get BB-8 to pick up all the scrap metal
+        as quickly as possible!*"
+      courseC_starWars_loops6_instruction: "Loops even work with more than one block
+        inside!  Can you loop this sequence?"
+      courseC_starWars_loops7_instruction: "Can you try to get all the scrap metal
+        using just one loop? Try programming it all out then finding the repeating
+        code to place in a loop."
       courseD_artist_binary1_instruction: "Use the blocks below to have the artist
         draw \"01010101\" in binary in the first row."
       courseD_artist_binary2_instruction: "Run this code to see how the artist uses
@@ -5906,6 +5968,12 @@ en:
         you have learned and make something that you love!"
       courseD_artist_nestedLoopsPre1_instruction: "Create a triangle to kickstart
         this stage."
+      courseD_artist_project1_instruction: "Help Elsa draw a small shape.  It can
+        be any shape that you like."
+      courseD_artist_project2_instruction: "Now take your shape and draw two or three
+        in a row!"
+      courseD_artist_project3_instruction: "Let's spin that line of shapes around!"
+      courseD_artist_project4_instruction: "Time to layer those shapes!"
       courseD_artist_ramp11_instruction: "Now make a square using Artist!"
       courseD_artist_ramp12_instruction: "Use what you've learned to draw this triangle
         inside of a square."
@@ -5934,6 +6002,12 @@ en:
         make honey (because there is a honeycomb)."
       courseD_bee_conditionals9_instruction: "Collect all of the nectar or make all
         the honey."
+      courseD_bee_conditionals_challenge1_instruction: "Collect all of the nectar
+        or make all the honey."
+      courseD_bee_conditionals_challenge2_instruction: "Collect all of the nectar
+        or make all the honey."
+      courseD_bee_conditionals_challenge3_instruction: "Collect all of the nectar
+        or make all the honey."
       courseD_bee_debugging1_instruction: "Fix the error(s) to collect all of the
         nectar."
       courseD_bee_debugging2_instruction: "Fix the error(s) to collect all of the
@@ -5974,6 +6048,23 @@ en:
       courseD_bee_nested_loops_challenge2_instruction: "Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox."
+      courseD_collector_debugging1_instruction: "Fix the error(s) to collect all
+        of the treasure."
+      courseD_collector_debugging2_instruction: "Fix the error(s) to collect all
+        of the treasure."
+      courseD_collector_debugging3_instruction: "Fix the error(s) to collect all
+        of the treasure."
+      courseD_collector_debugging4_instruction: "Fix the error(s) to collect all
+        of the treasure."
+      courseD_collector_debugging5_instruction: "Challenge: All of the commands that
+        you need are already here...now use your debugging skills to figure out how
+        to solve this puzzle."
+      courseD_collector_debugging6_instruction: "Challenge: All of the commands that
+        you need are already here...now use your debugging skills to figure out how
+        to solve this puzzle."
+      courseD_collector_debugging7_instruction: "Challenge: All of the commands that
+        you need are already here...now use your debugging skills to figure out how
+        to solve this puzzle."
       courseD_collector_debugging_challenge2_instruction: "Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!"
       courseD_collector_nested_loops_challenge2_instruction: "Let's hunt for treasure
@@ -6056,6 +6147,10 @@ en:
         as few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few
         blocks as possible. "
+      courseD_farmer_while_challenge1_instruction: "Fill all of the holes and remove
+        all of the piles."
+      courseD_farmer_while_challenge2_instruction: "Fill all of the holes and remove
+        all of the piles."
       courseD_harvester_nested_loops_challenge1-broken_instruction: "\"I need some
         help on the farm! Help me harvest this corn using only the blocks in your
         toolbox.\""
