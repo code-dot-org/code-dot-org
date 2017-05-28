@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TeacherHomepage from '@cdo/apps/templates/teacherHomepage/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/teacherHomepage/StudentHomepage';
+import UiTips from '@cdo/apps/templates/teacherHomepage/UiTips';
+import i18n from "@cdo/locale";
 
 $(document).ready(showHomepage);
 
@@ -10,9 +12,20 @@ function showHomepage() {
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = !!homepageData.sections;
+  const showUiTips = homepageData.showuitips;
 
   ReactDOM.render (
     <div>
+      {showUiTips && (
+        <UiTips
+          tips={[
+            {position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks()},
+            {position: {top: 80, right: 100}, text: i18n.homepageUiTipOtherLinks()},
+            {position: {top: 180, right: 50}, text: i18n.homepageUiTipAlreadyHome()}
+          ]}
+        />
+      )}
+
       {isTeacher && (
         <TeacherHomepage
           announcements={[
