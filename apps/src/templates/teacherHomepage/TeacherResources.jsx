@@ -14,7 +14,7 @@ const TeacherResources = React.createClass({
     const volunteerUrl = `${codeOrgUrlPrefix}/volunteer/local`;
 
     return (
-      <CollapsibleSection header={i18n.resources()}>
+      <CollapsibleSection heading={i18n.resources()}>
         <ResourceCard
           title={i18n.teacherCommunity()}
           description={i18n.teacherCommunityDescription()}
