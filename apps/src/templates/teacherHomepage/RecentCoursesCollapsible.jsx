@@ -13,15 +13,16 @@ import shapes from './shapes';
 const RecentCoursesCollapsible = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    showAllCoursesLink: PropTypes.bool.isRequired
+    showAllCoursesLink: PropTypes.bool.isRequired,
+    heading: PropTypes.string.isRequired
   },
 
   render() {
-    const { courses, showAllCoursesLink } = this.props;
+    const { courses, showAllCoursesLink, heading } = this.props;
 
     return (
       <CollapsibleSection
-        header={i18n.courses()}
+        heading={heading}
         linkText={i18n.viewAllCourses()}
         link="/courses"
         showLink={showAllCoursesLink}

@@ -28,6 +28,7 @@ const TeacherHomepage = React.createClass({
         <RecentCoursesCollapsible
           courses={courses}
           showAllCoursesLink={true}
+          heading={i18n.recentCourses()}
         />
         <ManageSectionsCollapsible
           sections={sections}
