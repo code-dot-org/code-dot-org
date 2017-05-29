@@ -3,7 +3,7 @@ import React from 'react';
 const UiTip = React.createClass({
   propTypes: {
     index: React.PropTypes.number,
-    position: React.Proptypes.object,
+    position: React.PropTypes.object,
     text: React.PropTypes.string,
     closeClicked: React.PropTypes.func.isRequired
   },

@@ -13,16 +13,32 @@ function showHomepage() {
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = !!homepageData.sections;
   const showUiTips = homepageData.showuitips;
+  const uiTipsFormId = homepageData.uitipsformid;
 
   ReactDOM.render (
     <div>
       {showUiTips && (
         <UiTips
-          tips={[
-            {position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks()},
-            {position: {top: 80, right: 100}, text: i18n.homepageUiTipOtherLinks()},
-            {position: {top: 180, right: 50}, text: i18n.homepageUiTipAlreadyHome()}
-          ]}
+          formId={uiTipsFormId}
+          beforeDialog={{
+            title: i18n.homepageUiTipsBeforeDialogTitle(),
+            body: i18n.homepageUiTipsBeforeDialogBody(),
+            cancel: i18n.homepageUiTipsBeforeDialogCancel(),
+            confirm: i18n.homepageUiTipsBeforeDialogConfirm()
+          }}
+          afterDialog={{
+            title: i18n.homepageUiTipsAfterDialogTitle(),
+            body: i18n.homepageUiTipsAfterDialogBody(),
+            cancel: i18n.homepageUiTipsAfterDialogCancel(),
+            confirm: i18n.homepageUiTipsAfterDialogConfirm(),
+            onConfirm: {action: "url", url: "http://blog.code.org"}
+          }}
+          tips={
+            [
+              {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks()},
+              {type: "initial", position: {top: 80, right: 50}, text: i18n.homepageUiTipOtherLinks()},
+              {type: "triggered", position: {top: 180, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link"}
+            ]}
         />
       )}
 
