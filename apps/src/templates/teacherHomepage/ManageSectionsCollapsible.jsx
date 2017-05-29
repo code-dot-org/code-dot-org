@@ -16,7 +16,7 @@ const ManageSectionsCollapsible = React.createClass({
 
     return (
       <CollapsibleSection
-        header={i18n.sectionsTitle()}
+        heading={i18n.sectionsTitle()}
         linkText={i18n.editSections()}
         link={editSectionsUrl}
         showLink={true}

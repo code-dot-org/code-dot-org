@@ -21,7 +21,7 @@ export default storybook => {
         description: 'Example CollapsibleSection without a link and that is not collapsible',
         story: () => (
           <CollapsibleSection
-            header="Recent Courses"
+            heading="Recent Courses"
           >
             <CourseCard
               name={exampleCard.name}
@@ -45,7 +45,7 @@ export default storybook => {
         description: `Example CollapsibleSection with a link and that is not collapsible`,
         story: () => (
           <CollapsibleSection
-            header="Recent Courses"
+            heading="Recent Courses"
             linkText="View all courses"
             link="link to see all of the courses"
           >
@@ -71,7 +71,7 @@ export default storybook => {
         description: `Example CollapsibleSection without a link and that is collapsible.`,
         story: () => (
           <CollapsibleSection
-            header="Recent Courses"
+            heading="Recent Courses"
             collapsible={true}
           >
             <CourseCard
@@ -96,7 +96,7 @@ export default storybook => {
         description: `Example CollapsibleSection with link and that is collapsible.`,
         story: () => (
           <CollapsibleSection
-            header="Recent Courses"
+            heading="Recent Courses"
             linkText="View all courses"
             link="link to see all of the courses"
             collapsible={true}

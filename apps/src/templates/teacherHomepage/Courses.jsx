@@ -68,6 +68,7 @@ const Courses = React.createClass({
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
+            heading={i18n.myCourses()}
           />
         )}
 
