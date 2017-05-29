@@ -16,6 +16,7 @@
 #  stage_extras      :boolean          default(FALSE), not null
 #  section_type      :string(255)
 #  first_activity_at :datetime
+#  pairing_allowed   :boolean          default(TRUE), not null
 #
 # Indexes
 #
