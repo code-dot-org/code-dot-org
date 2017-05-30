@@ -261,7 +261,7 @@ img.video_thumbnail {
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
-    background-color: $light_teal;
+    background-color: $teal;
     color: $header_text;
     a:link {
       color: $header_text;
@@ -285,11 +285,37 @@ img.video_thumbnail {
       left: 10px;
     }
 
+    .header_middle {
+      top: 2px;
+    }
+
     .header_logo {
-      width: 43px;
-      padding: 13px 16px;
-      background-color: $teal;
+      width: 42px;
+      padding: 4px 16px;
       margin-top: 0;
+    }
+  }
+
+  .project_info {
+    padding-top: 7px;
+
+    .header_text, .header_button {
+      float: left;
+    }
+    .project_name_wrapper .header_text {
+      float: left;
+      clear: left;
+    }
+    // TODO: Remove when Game Lab is no longer in beta
+    .beta-notice {
+      float: left;
+      margin-left: 10px;
+      display: inline-block;
+      padding: 7px 0;
+      font-family: $gotham-extra-bold;
+      font-size: 20px;
+      line-height: 20px;
+      color: $droplet_yellow;
     }
   }
 
@@ -324,7 +350,8 @@ img.video_thumbnail {
   }
 
   .headerlinks {
-    margin-top: 15px;
+    margin-top: 12px;
+    margin-left: 74px;
 
     .headerlink {
       font-family: 'Gotham 4r', sans-serif;
@@ -345,7 +372,7 @@ img.video_thumbnail {
 
   .header_button {
     &.header_button_light {
-      background-color: $lightish_teal;
+      background-color: $teal;
     }
     font-family: 'Gotham 4r', sans-serif;
     display: inline-block;
@@ -373,7 +400,10 @@ img.video_thumbnail {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      float: left;
+    }
+
+    .user_menu_glyph {
+      padding-left: 5px;
     }
   }
 
@@ -388,6 +418,16 @@ img.video_thumbnail {
   #hamburger {
     padding-top: 4px;
     padding-left: 20px;
+  }
+
+  .user_menu {
+    .user_options {
+      top: 17px;
+    }
+  }
+
+  #signin_button .header_button {
+    margin-top: 6px;
   }
 }
 
@@ -805,6 +845,8 @@ $default-modal-width: 640px;
 
 
 .project_info {
+  float: left;
+
   .header_text, .header_button {
     float: left;
   }
