@@ -11,6 +11,7 @@ Feature: Lab share page logo
     And I wait for the page to fully load
     And element "#logo-link" is visible
     And element "#logo-img" has css property "border-radius" equal to "0px"
+    And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
 
@@ -23,6 +24,7 @@ Feature: Lab share page logo
     And I wait for the page to fully load
     And element "#logo-link" is visible
     And element "#logo-img" has css property "border-radius" equal to "0px"
+    And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
 
@@ -35,6 +37,7 @@ Feature: Lab share page logo
     And I wait for the page to fully load
     And element "#logo-link" is visible
     And element "#logo-img" has css property "border-radius" equal to "0px"
+    And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
 
@@ -47,5 +50,6 @@ Feature: Lab share page logo
     And I wait for the page to fully load
     And element "#logo-link" is visible
     And element "#logo-img" has css property "border-radius" equal to "0px"
+    And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
