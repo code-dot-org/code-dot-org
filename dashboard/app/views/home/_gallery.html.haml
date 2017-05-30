@@ -15,16 +15,19 @@
   $(document).ready(function() {
     // Set up gallery pagination.
     $('#gallery').on('click', '.pagination a', function() {
-        $.ajax({url: $(this).attr('href'),
-                data: { },
-                success: function(result) {
-                  $('#gallery').animate({opacity: '25%'},
-                    500,
-                    function() {
-                      $('#gallery').html(result);
-                    });
-                }
-        });
-        return false;
+      $.ajax({
+        url: $(this).attr('href'),
+        data: { },
+        success: function(result) {
+          $('#gallery').animate(
+            {opacity: '25%'},
+            500,
+            function() {
+              $('#gallery').html(result);
+            }
+          );
+        }
+      });
+      return false;
     });
   });
