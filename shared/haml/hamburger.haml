@@ -1,42 +1,41 @@
-
 :ruby
   teacher_entries = [
-    { title: "Home", url: "#{studio_url_base}/home" },
-    { title: "Courses", url: "#{studio_url_base}/courses" },
-    { title: "Project Gallery", url: "#{studio_url_base}/projects" },
-    { title: "Sections", url: "#{code_org_url_base}/teacher-dashboard#/sections" },
-    { title: "Professional learning", url: "#{studio_url_base}/my-professional-learning" }
+    { title: I18n.t("#{loc_prefix}home"), url: "#{studio_url_base}/home" },
+    { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
+    { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" },
+    { title: I18n.t("#{loc_prefix}sections"), url: "#{code_org_url_base}/teacher-dashboard#/sections" },
+    { title: I18n.t("#{loc_prefix}professional_learning"), url: "#{studio_url_base}/my-professional-learning" }
   ].freeze
 
   student_entries = [
-    { title: "Courses", url: "#{studio_url_base}/courses" },
-    { title: "Project Gallery", url: "#{studio_url_base}/projects" }
+    { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
+    { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" }
   ]
 
   educate_entries = [
-    { title: "Educator Overview", url: "#{code_org_url_base}/educate" },
-    { title: "Elementary School", url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
-    { title: "Middle School", url: "#{code_org_url_base}/educate/curriculum/middle-school" },
-    { title: "High School", url: "#{code_org_url_base}/educate/curriculum/high-school" },
-    { title: "Hour of Code", url: "#{code_org_url_base}https://hourofcode.com" },
-    { title: "Partner with Us", url: "#{code_org_url_base}/educate/partner" },
-    { title: "Beyond Code.org", url: "#{code_org_url_base}/educate/curriculum/3rd-party" },
-    { title: "Inspire a Student", url: "#{code_org_url_base}/educate/resources/inspire" },
-    { title: "Online Community", url: "#{code_org_url_base}/educate/community" },
-    { title: "Tools and Videos", url: "#{code_org_url_base}/educate/resources/videos" },
+    { title: I18n.t("#{loc_prefix}educate_overview"), url: "#{code_org_url_base}/educate" },
+    { title: I18n.t("#{loc_prefix}educate_elementary"), url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
+    { title: I18n.t("#{loc_prefix}educate_middle"), url: "#{code_org_url_base}/educate/curriculum/middle-school" },
+    { title: I18n.t("#{loc_prefix}educate_high"), url: "#{code_org_url_base}/educate/curriculum/high-school" },
+    { title: I18n.t("#{loc_prefix}educate_hoc"), url: "#{code_org_url_base}https://hourofcode.com" },
+    { title: I18n.t("#{loc_prefix}educate_partner"), url: "#{code_org_url_base}/educate/partner" },
+    { title: I18n.t("#{loc_prefix}educate_beyond"), url: "#{code_org_url_base}/educate/curriculum/3rd-party" },
+    { title: I18n.t("#{loc_prefix}educate_inspire"), url: "#{code_org_url_base}/educate/resources/inspire" },
+    { title: I18n.t("#{loc_prefix}educate_community"), url: "#{code_org_url_base}/educate/community" },
+    { title: I18n.t("#{loc_prefix}educate_tools"), url: "#{code_org_url_base}/educate/resources/videos" },
   ]
 
   about_entries = [
-    { title: "About Us", url: "#{code_org_url_base}/about" },
-    { title: "Leadership", url: "#{code_org_url_base}/about/leadership" },
-    { title: "Donors", url: "#{code_org_url_base}/about/donors" },
-    { title: "Partners", url: "#{code_org_url_base}/about/partners" },
-    { title: "Full Team", url: "#{code_org_url_base}/about/team" },
-    { title: "Newsroom", url: "#{code_org_url_base}/about/news" },
-    { title: "Evaluation", url: "#{code_org_url_base}/about/evaluation" },
-    { title: "Jobs", url: "#{code_org_url_base}/about/jobs" },
-    { title: "Contact Us", url: "#{code_org_url_base}/contact" },
-    { title: "FAQs", url: "#{code_org_url_base}/faq" },
+    { title: I18n.t("#{loc_prefix}about_us"), url: "#{code_org_url_base}/about" },
+    { title: I18n.t("#{loc_prefix}about_leadership"), url: "#{code_org_url_base}/about/leadership" },
+    { title: I18n.t("#{loc_prefix}about_donors"), url: "#{code_org_url_base}/about/donors" },
+    { title: I18n.t("#{loc_prefix}about_partners"), url: "#{code_org_url_base}/about/partners" },
+    { title: I18n.t("#{loc_prefix}about_team"), url: "#{code_org_url_base}/about/team" },
+    { title: I18n.t("#{loc_prefix}about_news"), url: "#{code_org_url_base}/about/news" },
+    { title: I18n.t("#{loc_prefix}about_evaluation"), url: "#{code_org_url_base}/about/evaluation" },
+    { title: I18n.t("#{loc_prefix}about_jobs"), url: "#{code_org_url_base}/about/jobs" },
+    { title: I18n.t("#{loc_prefix}about_contact"), url: "#{code_org_url_base}/contact" },
+    { title: I18n.t("#{loc_prefix}about_faqs"), url: "#{code_org_url_base}/faq" },
   ]
 
   show_teacher_options = "hide-always"
@@ -104,29 +103,29 @@
           %a{href: entry[:url]}= entry[:title]
 
     %li{class: show_pegasus_options}
-      %a{href: "#{code_org_url_base}/student"} Learn
+      %a{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
     %li{class: show_pegasus_options}
       #educate-more
-        Teach
+        = I18n.t("#{loc_prefix}teach")
         %i#educate-down{class: "fa fa-caret-down"}
         %i#educate-up{class: "fa fa-caret-up"}
 
     - if show_gallery
       - unless ["student", "teacher"].include? user_type
         %li{class: show_pegasus_options}
-          %a{href: "#{studio_url_base}/projects"} Project Gallery
+          %a{href: "#{studio_url_base}/projects"}= I18n.t("#{loc_prefix}project_gallery")
 
     .educate-nav.hide-educate{class: show_pegasus_options}
       - educate_entries.each do |entry|
         %li
           %a{href: entry[:url]}= entry[:title]
     %li{class: show_pegasus_options}
-      %a{href: "#{code_org_url_base}/promote"} Stats
+      %a{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
     %li{class: show_pegasus_options}
-      %a{href: "#{code_org_url_base}/help"} Help Us
+      %a{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
     %li{class: show_pegasus_options}
       #about-more
-        About
+        = I18n.t("#{loc_prefix}about")
         %i#about-down{class: "fa fa-caret-down"}
         %i#about-up{class: "fa fa-caret-up"}
     .about-nav.hide-about{class: show_pegasus_options}

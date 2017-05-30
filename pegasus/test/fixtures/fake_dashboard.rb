@@ -87,12 +87,17 @@ module FakeDashboard
   SECTION_DELETED_USER = {
     id: 150005, user_id: TEACHER_DELETED_USER[:id], name: 'Fake Section E'
   }
+  # Section assigned to an arbitrary (made-up) course
+  SECTION_COURSE = {
+    id: 150006, user_id: TEACHER[:id], name: 'Fake Section assigned course', course_id: 15
+  }
   TEACHER_SECTIONS = [
     SECTION_NORMAL,
     SECTION_EMPTY,
     SECTION_DELETED,
     SECTION_DELETED_FOLLOWER,
-    SECTION_DELETED_USER
+    SECTION_DELETED_USER,
+    SECTION_COURSE
   ]
 
   #

@@ -52,13 +52,12 @@ class ApiController < ApplicationController
 
     data = current_user.sections.each_with_object({}) do |section, section_hash|
       next if section.deleted?
-      @section = section
-      load_script
+      script = load_script(section)
 
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: @script.stages.each_with_object({}) do |stage, stage_hash|
+        stages: script.stages.each_with_object({}) do |stage, stage_hash|
           stage_state = stage.lockable_state(section.students)
           stage_hash[stage.id] = stage_state unless stage_state.nil?
         end
@@ -69,11 +68,11 @@ class ApiController < ApplicationController
   end
 
   def section_progress
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
     # stage data
-    stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.group_by(&:stage).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
@@ -81,10 +80,10 @@ class ApiController < ApplicationController
     end
 
     # student level completion data
-    students = @section.students.map do |student|
-      level_map = student.user_levels_by_level(@script)
+    students = section.students.map do |student|
+      level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
-      student_levels = @script.script_levels.map do |script_level|
+      student_levels = script.script_levels.map do |script_level|
         user_levels = script_level.level_ids.map do |id|
           contained_levels = Script.cache_find_level(id).contained_levels
           if contained_levels.any?
@@ -100,7 +99,7 @@ class ApiController < ApplicationController
         {
           class: level_class,
           title: title,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id)
         }
       end
       {id: student.id, levels: student_levels}
@@ -109,9 +108,9 @@ class ApiController < ApplicationController
     data = {
       students: students,
       script: {
-        id: @script.id,
-        name: data_t_suffix('script.name', @script.name, 'title'),
-        levels_count: @script.script_levels.length,
+        id: script.id,
+        name: data_t_suffix('script.name', script.name, 'title'),
+        levels_count: script.script_levels.length,
         stages: stages
       }
     }
@@ -120,16 +119,17 @@ class ApiController < ApplicationController
   end
 
   def student_progress
-    load_student
-    load_section
-    load_script
+    student = load_student(params.require(:student_id))
+    section = load_section
+    # @script is used by user_states
+    @script = load_script(section)
 
-    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: @student})
+    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: student})
 
     data = {
       student: {
-        id: @student.id,
-        name: @student.name,
+        id: student.id,
+        name: student.name,
       },
       script: {
         id: @script.id,
@@ -215,12 +215,12 @@ class ApiController < ApplicationController
   end
 
   def section_text_responses
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
-    text_response_levels = @script.text_response_levels
+    text_response_levels = script.text_response_levels
 
-    data = @section.students.map do |student|
+    data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
       text_response_levels.map do |level_hash|
@@ -233,7 +233,7 @@ class ApiController < ApplicationController
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(level_hash[:script_level], section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
         }
       end.compact
     end.flatten
@@ -246,12 +246,12 @@ class ApiController < ApplicationController
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
   # is in :correct.
   def section_assessments
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
-    data = @section.students.map do |student|
+    data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
       level_group_script_levels.map do |script_level|
@@ -330,7 +330,7 @@ class ApiController < ApplicationController
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
+          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
           submitted: submitted,
@@ -347,29 +347,31 @@ class ApiController < ApplicationController
   # At least five students in the section must have submitted answers.  The answers for each contained
   # sublevel are shuffled randomly.
   def section_surveys
-    load_section
-    load_script
+    section = load_section
+    script = load_script(section)
 
-    render json: LevelGroup.get_survey_results(@script, @section)
+    render json: LevelGroup.get_survey_results(script, section)
   end
 
   private
 
-  def load_student
-    @student = User.find(params[:student_id])
-    authorize! :read, @student
+  def load_student(student_id)
+    student = User.find(student_id)
+    authorize! :read, student
+    student
   end
 
   def load_section
-    @section = Section.find(params[:section_id])
-    authorize! :read, @section
+    section = Section.find(params[:section_id])
+    authorize! :read, section
+    section
   end
 
-  # NOTE: This method assumes load_section has been previously called.
-  def load_script
+  def load_script(section=nil)
     script_id = params[:script_id] if params[:script_id].present?
-    script_id ||= @section.default_script.try(:id)
-    @script = Script.get_from_cache(script_id) if script_id
-    @script ||= Script.twenty_hour_script
+    script_id ||= section.default_script.try(:id)
+    script = Script.get_from_cache(script_id) if script_id
+    script ||= Script.twenty_hour_script
+    script
   end
 end
