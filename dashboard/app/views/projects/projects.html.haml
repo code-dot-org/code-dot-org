@@ -55,6 +55,10 @@
     .span12
       = t('project.thumbnail_help')
 
+-if !@gallery_activities.empty?
+  .row
+    = render partial: 'home/gallery'
+
 .row
   .span12
     %h3.lesson{style: 'text-align:center'}
