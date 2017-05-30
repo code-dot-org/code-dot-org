@@ -226,7 +226,7 @@ class DashboardSection
     {
       id: course_or_script[:id],
       name: name,
-      # TODO: rename script_name?
+      # TODO: rename script_name to resource_name?
       script_name: course_or_script[:name],
       category: I18n.t("#{first_category}_category_name", default: first_category),
       position: position,
@@ -266,6 +266,7 @@ class DashboardSection
 
     return {} unless (Dashboard.db[:courses].count rescue nil)
 
+    # TODO: i18n
     @@course_cache = Dashboard.db[:courses].
       select(:id, :name).
       all.
@@ -285,6 +286,10 @@ class DashboardSection
 
   def self.valid_script_id?(script_id)
     valid_scripts.find {|script| script[:id] == script_id.to_i}
+  end
+
+  def self.valid_course_id?(course_id)
+    valid_courses.find {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)

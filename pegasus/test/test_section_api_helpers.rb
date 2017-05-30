@@ -223,6 +223,40 @@ class SectionApiHelperTest < SequelTestCase
       end
     end
 
+    describe 'valid courses' do
+      before do
+        # mock scripts (the first query to the db gets the scripts)
+        @fake_db.fetch = [
+          {id: 1, name: 'csd'},
+          {id: 3, name: 'csp'}
+        ]
+      end
+
+      it 'accepts valid script ids' do
+        assert DashboardSection.valid_course_id?('1')
+        assert DashboardSection.valid_course_id?('3')
+      end
+
+      it 'does not accept invalid script ids' do
+        assert !DashboardSection.valid_course_id?('2')
+        assert !DashboardSection.valid_course_id?('111')
+        assert !DashboardSection.valid_course_id?('invalid!!')
+      end
+
+      it 'returns expected info' do
+        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
+        expected = {
+          id: 3,
+          name: 'csp',
+          script_name: 'csp',
+          category: 'full_course',
+          position: 1,
+          category_priority: 0
+        }
+        assert_equal expected, csp_course
+      end
+    end
+
     describe "fetch_user_sections" do
       before do
         FakeDashboard.use_fake_database
