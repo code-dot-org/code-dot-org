@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import HeadingBanner from '../HeadingBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
-import UiTips from '@cdo/apps/templates/teacherHomepage/UiTips';
+import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
