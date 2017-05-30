@@ -49,8 +49,7 @@ video_player: true
   - csdunit3_videos << { id: 'csd_gamelab_velocity', category_title: 'Sprite velocity', code: 'zcP94yMYqrI', download_path: 'https://videos.code.org/cs-discoveries/gamelab/gamelab_velocity.mp4', studio_stage: '/s/csd3/stage/15/puzzle/2' }
 
   - csdunit3_videos.each do |video|
-    // Show the chapter title at the
-    // beginning of each video chapter
+    // Show the chapter title at the beginning of each video chapter
     - unless video[:category_title].nil_or_empty?
       .clear
       %h2= video[:category_title]
@@ -61,6 +60,8 @@ video_player: true
 
 :javascript
   $(function() {
+    // On hovering over projects, a description and challenge will show.
+    // These descriptions are also commented in the projects so they aren't a requirement for mobile.
     $('.highlight-item').mouseover(function() {
       var caption = $(this).find('.highlight-caption');
       caption.fadeIn();
