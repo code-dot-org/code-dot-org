@@ -445,11 +445,8 @@
   "teacherCourseMiddle": "Middle school",
   "teacherCourseMiddleDescription": "Our new middle school course can be offered as a semester or year-long introduction to computer science for all students.",
   "teacherCourseHighOlder": "High school and older",
-<<<<<<< HEAD
   "teacherCoursesHeading": "Full course catalog from Code.org and 3rd party partners",
-=======
   "teacherCourseHighDescription": "We offer two year-long courses for high school: an intro course and an AP course. Both are designed to broaden participation in computer science.",
->>>>>>> staging
   "teacherPanel": "Teacher Panel",
   "textVariable": "text",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
