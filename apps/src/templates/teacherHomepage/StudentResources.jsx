@@ -8,7 +8,7 @@ const StudentResources = React.createClass({
   render() {
 
     return (
-      <CollapsibleSection header={i18n.resources()}>
+      <CollapsibleSection heading={i18n.resources()}>
         <ResourceCard
           title={i18n.courses()}
           description={i18n.coursesCardDescription()}
