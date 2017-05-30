@@ -1,6 +1,7 @@
 import React from 'react';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
+import _ from 'lodash';
 
 const UiTips = React.createClass({
   propTypes: {
@@ -20,7 +21,7 @@ const UiTips = React.createClass({
     // We might start by showing the "before" dialog.
     const showingDialog = (showInitialTips && this.props.beforeDialog) ? "before" : null;
 
-    // If we want to show the initla tips but there is no dialog, show the initial tips immediately.
+    // If we want to show the initial tips but there is no dialog, show the initial tips immediately.
     if (showInitialTips && !showingDialog) {
       this.props.tips.map((tip, index) => {
         if (tip.type === "initial") {
@@ -32,7 +33,8 @@ const UiTips = React.createClass({
     return {
       showInitialTips: showInitialTips,
       tipsShowing: tipsShowing,
-      showingDialog: showingDialog
+      showingDialog: showingDialog,
+      mobileWidth: $(window).width() <= 970
     };
   },
 
@@ -110,6 +112,8 @@ const UiTips = React.createClass({
   },
 
   componentDidMount() {
+    window.addEventListener('resize', _.debounce(this.onResize, 100));
+
     // For each triggered tip, just use jquery to set up an onClick handler
     // that will call back into us and set state to show that tip.
     this.props.tips.map((tip, index) => {
@@ -127,8 +131,18 @@ const UiTips = React.createClass({
     });
   },
 
+  onResize() {
+    this.setState({mobileWidth: $(window).width() <= 970});
+  },
+
   render() {
     const { tips } = this.props;
+
+    if (this.state.mobileWidth) {
+      return (
+        <div/>
+      );
+    }
 
     return (
       <div>
@@ -139,6 +153,7 @@ const UiTips = React.createClass({
               index = {index}
               position = {tip.position}
               text = {tip.text}
+              arrowDirection={tip.arrowDirection}
               closeClicked={this.closeClicked}
             />
           )
@@ -167,7 +182,6 @@ const UiTips = React.createClass({
             onConfirm={this.afterDialogConfirm}
           />
         )}
-
       </div>
     );
   }
