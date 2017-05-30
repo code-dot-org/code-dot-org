@@ -1179,7 +1179,7 @@ class User < ActiveRecord::Base
 
   def self.csv_attributes
     # same as in UserSerializer
-    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races, :ui_tip_dismissed_header_main, :ui_tip_dismissed_teacher_courses]
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races, :ui_tip_dismissed_homepage_header, :ui_tip_dismissed_teacher_courses]
   end
 
   def to_csv
