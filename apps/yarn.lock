@@ -9,9 +9,9 @@
   version "1.6.19"
   resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.19.tgz#5b1e6eacf5ff3b6b41ae81772f2ce8145740ded4"
 
-"@code-dot-org/bramble@0.1.15":
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.15.tgz#4c550a49665df8f03b952fe432d4ef010631397d"
+"@code-dot-org/bramble@0.1.16":
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.16.tgz#9f0b904a15397750f88ce75d1036b86725ce115e"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
@@ -5257,6 +5257,10 @@ klaw@^1.0.0:
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
+
+lazysizes@^4.0.0-rc1:
+  version "4.0.0-rc1"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.0.0-rc1.tgz#41cc669f2e76bbbc9ade08ec7af31e6781173640"
 
 lazystream@^1.0.0:
   version "1.0.0"

@@ -1,5 +1,7 @@
 /* global $, angular */
 
+var script = document.querySelector('script[data-under13]');
+var isUnder13 = JSON.parse(script.dataset.under13);
 
 // Declare app level module which depends on filters, and services
 angular.module('projectsApp', [
@@ -53,8 +55,19 @@ services.factory('projectsService', ['$resource',
       }
     };
 
+    Project.prototype.getType = function () {
+      // Until projectType is back-filled, check level when projectType is missing.
+      return this.projectType ?
+        this.projectType :
+        this.level.substr('/projects/'.length);
+    };
+
     Project.prototype.isPublishableProjectType = function () {
-      return ['applab', 'gamelab', 'artist', 'playlab'].includes(this.projectType);
+      var projectType = this.getType();
+      var publishableTypes = isUnder13 ?
+        ['artist', 'playlab'] :
+        ['applab', 'gamelab', 'artist', 'playlab'];
+      return publishableTypes.indexOf(projectType) > -1;
     };
 
     return Project;

@@ -208,7 +208,7 @@ const ProjectCard = React.createClass({
 
   renderProjectName(url, name) {
     return (
-      <a style={styles.titleLink} href={url} target="_blank">
+      <a style={styles.titleLink} href={url}>
         <div style={styles.title}>{name}</div>
       </a>
     );
@@ -231,7 +231,7 @@ const ProjectCard = React.createClass({
       <div>
         <div style={styles.card}>
           <div style={styles.thumbnail} >
-            <a target="_blank" href={url} style={{width: '100%'}}>
+            <a href={url} style={{width: '100%'}}>
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}

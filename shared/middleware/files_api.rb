@@ -505,7 +505,12 @@ class FilesApi < Sinatra::Base
         not_found if src_entry.nil?
         new_entry_json = src_entry.to_json
       else
-        new_entry_json = copy_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), URI.encode(unescaped_src_filename_downcased))
+        new_entry_json = copy_file(
+          'files',
+          encrypted_channel_id,
+          URI.encode(unescaped_filename_downcased),
+          URI.encode(unescaped_src_filename_downcased)
+        )
       end
     else
       new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
@@ -523,7 +528,8 @@ class FilesApi < Sinatra::Base
       manifest_is_unchanged = false
     end
 
-    deleting_separate_file = unescaped_delete_filename_downcased && unescaped_delete_filename_downcased != unescaped_filename_downcased
+    deleting_separate_file = unescaped_delete_filename_downcased &&
+      unescaped_delete_filename_downcased != unescaped_filename_downcased
     # if we're also deleting a file (on rename), remove it from the manifest (don't remove from manifest)
     if deleting_separate_file
       reject_result = manifest.reject! {|e| e['filename'].downcase == unescaped_delete_filename_downcased}
@@ -541,7 +547,9 @@ class FilesApi < Sinatra::Base
     end
 
     # delete a file if requested (same as src file in a rename operation)
-    bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased)) if deleting_separate_file
+    if deleting_separate_file
+      bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased))
+    end
 
     # return the new entry info
     new_entry_hash['filesVersionId'] = response.version_id

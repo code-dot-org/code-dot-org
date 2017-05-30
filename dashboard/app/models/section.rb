@@ -16,6 +16,7 @@
 #  stage_extras      :boolean          default(FALSE), not null
 #  section_type      :string(255)
 #  first_activity_at :datetime
+#  pairing_allowed   :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -127,6 +128,14 @@ class Section < ActiveRecord::Base
 
     old_follower.destroy
     add_student student
+  end
+
+  # Figures out the default script for this section. If the section is assigned to
+  # a course rather than a script, it returns the first script in that course
+  # @return [Script, nil]
+  def default_script
+    return script if script
+    return course.try(:course_scripts).try(:first).try(:script)
   end
 
   private

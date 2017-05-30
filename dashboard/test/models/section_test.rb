@@ -242,4 +242,39 @@ class SectionTest < ActiveSupport::TestCase
     expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
     assert_equal expected_url, section.teacher_dashboard_url
   end
+
+  test 'default_script: no script or course assigned' do
+    section = create :section, script: nil, course: nil
+    assert_nil section.default_script
+  end
+
+  test 'default_script: script assigned, no course assigned' do
+    script = create :script
+    section = create :section, script: script, course: nil
+    assert_equal script, section.default_script
+  end
+
+  test 'default_script: script and course assigned' do
+    script1 = create :script
+    script2 = create :script
+    course = create :course
+    create :course_script, course: course, script: script1, position: 1
+    create :course_script, course: course, script: script2, position: 2
+    course.reload
+
+    section = create :section, script: script2, course: course
+    assert_equal script2, section.default_script
+  end
+
+  test 'default_script: no script assigned, course assigned' do
+    script1 = create :script
+    script2 = create :script
+    course = create :course
+    create :course_script, course: course, script: script1, position: 1
+    create :course_script, course: course, script: script2, position: 2
+    course.reload
+
+    section = create :section, script: nil, course: course
+    assert_equal script1, section.default_script
+  end
 end

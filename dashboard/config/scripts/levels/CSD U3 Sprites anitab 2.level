@@ -31,7 +31,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Upload your own image\r\n\r\nYou can also use the Animation tab to upload or draw your own image.\r\n\r\n# Do This\r\nYou are going to make a flying kite. You can use <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:s,ic:trans,sur:f\" target=\"_blank\">this link</a> to search Google images or find one on your own. If you'd rather, you can also create a new animation from scratch and draw your own kite.\r\n\r\n* Download your kite image. Images with transparent backgrounds work best.\r\n* Open the animations tab.\r\n* Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png\" style=\"width:50px\"> to upload an image.\r\n* Select the file from your computer.\r\n* Rename your image so it has a name that is easy to remember. To rename it click the text below the image.\r\n* Back in code mode, add a `sprite.setAnimation()` block to make your `kite` sprite uses your new animation.\r\n\r\nDon't worry if your kite image is too big! You'll learn how to fix that in the next level.",
+    "markdown_instructions": "# Upload your own image\r\n\r\nYou can also use the Animation tab to upload or draw your own image.\r\n\r\n# Do This\r\nYou are going to make a flying kite. You can use <a href=\"https://www.google.com/search?as_st=y&tbm=isch&as_q=kite&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=active&tbs=isz:s,ic:trans,sur:f\" target=\"_blank\">this link</a> to search Google images or find one on your own. If you'd rather, you can also create a new animation from scratch and draw your own kite.\r\n\r\n* Download your kite image. Images with transparent backgrounds work best.\r\n* Open the animations tab.\r\n* Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png\" style=\"width:50px\"> to upload an image.\r\n* Select the file from your computer.\r\n* Rename your image so it is easy to remember. To rename it click the text below the image.\r\n* Back in code mode, add a `sprite.setAnimation()` block to make your `kite` sprite use your new animation.\r\n\r\nDon't worry if your kite image is too big! You'll learn how to fix that in the next level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -69,6 +69,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:25:41 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

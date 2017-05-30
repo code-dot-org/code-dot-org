@@ -9,6 +9,7 @@ SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
 # As the NULLness of various date columns indicates further processing is
 # necessary, we use this date to represent that an unrecoverable error happened.
 DATE_FOR_ERRORS = '1980-01-01 00:00:00'.freeze
+BATCH_SIZE = 1000
 
 # load helpers
 load pegasus_dir('helpers.rb')
@@ -33,10 +34,10 @@ def send_receipts(kind, form)
   receipts.count
 end
 
-def send_batch_of_receipts(batch_size)
+def send_batch_of_receipts
   count = 0
 
-  DB[:forms].where(notified_at: nil).exclude(processed_at: nil).limit(batch_size).each do |form|
+  DB[:forms].where(notified_at: nil).exclude(processed_at: nil).limit(BATCH_SIZE).each do |form|
     kind = Object.const_get(form[:kind])
 
     count += send_receipts(kind, form)
@@ -46,10 +47,10 @@ def send_batch_of_receipts(batch_size)
   count
 end
 
-def process_batch_of_forms(batch_size)
+def process_batch_of_forms
   count = 0
 
-  DB[:forms].where(processed_at: nil).limit(batch_size).each do |form|
+  DB[:forms].where(processed_at: nil).limit(BATCH_SIZE).each do |form|
     kind = Object.const_get(form[:kind])
 
     begin
@@ -76,11 +77,11 @@ def process_batch_of_forms(batch_size)
   count
 end
 
-def index_batch_of_forms(batch_size)
+def index_batch_of_forms
   documents = []
 
   DB.transaction do
-    DB[:forms].where(indexed_at: nil).exclude(processed_at: nil).limit(batch_size).each do |form|
+    DB[:forms].where(indexed_at: nil).exclude(processed_at: nil).limit(BATCH_SIZE).each do |form|
       kind = Object.const_get(form[:kind])
 
       begin
@@ -140,11 +141,9 @@ def index_batch_of_forms(batch_size)
 end
 
 def main
-  limit = 1000
-
-  process_batch_of_forms(limit)
-  receipt_count = send_batch_of_receipts(limit)
-  index_batch_of_forms(limit)
+  process_batch_of_forms
+  receipt_count = send_batch_of_receipts
+  index_batch_of_forms
 
   system "#{deploy_dir('bin/cron', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end

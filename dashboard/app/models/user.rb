@@ -44,10 +44,14 @@
 #  invited_by_type          :string(255)
 #  invitations_count        :integer          default(0)
 #  terms_of_service_version :integer
+#  urm                      :boolean
+#  races                    :string(255)
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
+#  index_users_on_current_sign_in_at                   (current_sign_in_at)
+#  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at          (hashed_email,deleted_at)
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
@@ -348,9 +352,8 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :hide_email_and_full_address_for_students,
-    :hide_school_info_for_students,
-    :sanitize_race_data
+    :sanitize_race_data,
+    :fix_by_user_type
 
   def make_teachers_21
     return unless teacher?
@@ -371,17 +374,6 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_and_full_address_for_students
-    if student?
-      self.email = ''
-      self.full_address = nil
-    end
-  end
-
-  def hide_school_info_for_students
-    self.school_info = nil if student?
-  end
-
   def sanitize_race_data
     return unless property_changed?('races')
 
@@ -393,6 +385,20 @@ class User < ActiveRecord::Base
     end
     races.each do |race|
       self.races = %w(nonsense) unless VALID_RACES.include? race
+    end
+  end
+
+  def fix_by_user_type
+    if student?
+      self.email = ''
+      self.full_address = nil
+      self.school_info = nil
+    end
+
+    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
+    # without an explicit acceptance, we clear the version accepted.
+    if teacher? && user_type_changed? && !terms_of_service_version_changed?
+      self.terms_of_service_version = nil
     end
   end
 
@@ -546,7 +552,7 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
-      where(
+      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -896,7 +902,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
-        image: '',
         # assigned_sections is current unused. When we support this, I think it makes
         # more sense to get/store this data separately from courses.
         assignedSections: []
@@ -910,7 +915,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
-        image: "",
         # assigned_sections is current unused. When we support this, I think it makes
         # more sense to get/store this data separately from courses.
         assignedSections: []

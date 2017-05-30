@@ -6,6 +6,13 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
     refute registration.valid?
     assert_equal [
       "Form data is required",
+      "User is required",
+      "Teachercon is not included in the list"
+    ], registration.errors.full_messages
+
+    registration.form_data = {}.to_json
+    refute registration.valid?
+    assert_equal [
       "Form data confirmTeacherconDate",
       "Form data addressStreet",
       "Form data addressCity",

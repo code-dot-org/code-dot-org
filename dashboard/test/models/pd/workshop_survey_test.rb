@@ -8,6 +8,11 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
     refute survey.valid?
     assert_equal [
       "Form data is required",
+    ], survey.errors.full_messages
+
+    survey.form_data = {}.to_json
+    refute survey.valid?
+    assert_equal [
       "Form data gender",
       "Form data race",
       "Form data age",
@@ -19,7 +24,6 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
       "Form data reasonForAttending",
       "Form data howHeard",
       "Form data receivedClearCommunication",
-      "Form data venueFeedback",
       "Form data schoolHasTech",
       "Form data howMuchLearned",
       "Form data howMotivating",
@@ -58,11 +62,13 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
   end
 
   test 'facilitator required fields' do
-    survey = Pd::WorkshopSurvey.new
-    survey.pd_enrollment = create :pd_enrollment, user: create(:user)
-
     facilitator = create :user, name: "Facili"
-    survey.pd_enrollment.workshop.facilitators = [facilitator]
+    workshop = create :pd_workshop, facilitators: [facilitator]
+
+    survey = Pd::WorkshopSurvey.new
+    survey.pd_enrollment = create :pd_enrollment,
+      workshop: workshop,
+      user: create(:user)
 
     survey.form_data = build(:pd_workshop_survey_hash).to_json
     refute survey.valid?
@@ -84,6 +90,24 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
       "Form data thingsFacilitatorDidWell[Facili]",
       "Form data thingsFacilitatorCouldImprove[Facili]"
     ], survey.errors.full_messages
+  end
+
+  test 'first_survey_for_user is survey-type-agnostic' do
+    user = create :user
+
+    prev_survey = Pd::LocalSummerWorkshopSurvey.new
+    prev_survey.pd_enrollment = create :pd_enrollment, user: user
+    prev_survey.form_data = build(:pd_local_summer_workshop_survey_hash).to_json
+    assert prev_survey.first_survey_for_user?
+    prev_survey.save!
+
+    survey = Pd::WorkshopSurvey.new
+    survey.pd_enrollment = create :pd_enrollment, user: user
+    survey.form_data = build(:pd_workshop_survey_hash).to_json
+    refute survey.first_survey_for_user?
+    survey.save!
+
+    refute prev_survey.first_survey_for_user?
   end
 
   test 'demographics required fields' do
