@@ -413,6 +413,11 @@ exports.createNativeInterpreterCallback = function (opts, intFunc) {
     state.arguments = intArgs;
     state.n_ = intArgs.length;
 
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments.length > 0) {
+      state.value = state.arguments.pop();
+    }
+
     opts.interpreter.stateStack.unshift(state);
   };
 };
