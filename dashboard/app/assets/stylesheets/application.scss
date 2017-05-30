@@ -397,12 +397,15 @@ img.video_thumbnail {
     .user_name {
       max-width: 120px;
       display: inline-block;
+      float: left;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
     }
 
     .user_menu_glyph {
+      display: inline-block;
+      float: left;
       padding-left: 5px;
     }
   }
@@ -422,7 +425,7 @@ img.video_thumbnail {
 
   .user_menu {
     .user_options {
-      top: 17px;
+      top: 37px;
     }
   }
 

@@ -5,7 +5,6 @@ import color from "../../util/color";
 const styles = {
   section: {
     width: 940,
-    marginBottom: 50,
   },
   heading: {
     paddingRight: 10,
@@ -55,7 +54,7 @@ const CollapsibleSection = React.createClass({
       React.PropTypes.node,
       React.PropTypes.arrayOf(React.PropTypes.node)
     ]),
-    header: React.PropTypes.string.isRequired,
+    heading: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
     collapsible: React.PropTypes.bool,
@@ -88,7 +87,7 @@ const CollapsibleSection = React.createClass({
   },
 
   render() {
-    const { header, link, linkText, collapsible, showLink }= this.props;
+    const { heading, link, linkText, collapsible, showLink }= this.props;
     let icon = this.state.open ? 'caret-up' : 'caret-down';
 
     return (
@@ -96,7 +95,7 @@ const CollapsibleSection = React.createClass({
         <div style={styles.heading}>
           {collapsible &&
             <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleContent}/>}
-          {header}
+          {heading}
           {showLink &&
             <a href={link} style={styles.linkBox}>
               <div style={styles.linkToViewAll}>

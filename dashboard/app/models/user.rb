@@ -44,6 +44,8 @@
 #  invited_by_type          :string(255)
 #  invitations_count        :integer          default(0)
 #  terms_of_service_version :integer
+#  urm                      :boolean
+#  races                    :string(255)
 #
 # Indexes
 #
@@ -902,7 +904,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
-        image: '',
         # assigned_sections is current unused. When we support this, I think it makes
         # more sense to get/store this data separately from courses.
         assignedSections: []
@@ -916,7 +917,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
-        image: "",
         # assigned_sections is current unused. When we support this, I think it makes
         # more sense to get/store this data separately from courses.
         assignedSections: []

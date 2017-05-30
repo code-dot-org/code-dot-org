@@ -12,6 +12,8 @@ export default storybook => {
           <RecentCoursesCollapsible
             courses={[]}
             showAllCoursesLink={true}
+            heading="Courses"
+            isTeacher={true}
           />
         )
       },
@@ -28,6 +30,8 @@ export default storybook => {
               assignedSections: ["Section 1"]
             }]}
             showAllCoursesLink={true}
+            heading="Courses"
+            isTeacher={true}
           />
         )
       },
@@ -53,6 +57,8 @@ export default storybook => {
               },
             ]}
             showAllCoursesLink={true}
+            heading="Courses"
+            isTeacher={true}
           />
         )
       },
@@ -85,6 +91,8 @@ export default storybook => {
               },
             ]}
             showAllCoursesLink={true}
+            heading="Courses"
+            isTeacher={true}
           />
         )
       },
@@ -124,6 +132,8 @@ export default storybook => {
               },
             ]}
             showAllCoursesLink={false}
+            heading="Courses"
+            isTeacher={true}
           />
         )
       },
