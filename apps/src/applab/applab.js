@@ -80,6 +80,8 @@ export default Applab;
  */
 var jsInterpreterLogger = null;
 
+console.log('noop');
+
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
  * knows about the debugger UI where logging should occur.
