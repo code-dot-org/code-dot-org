@@ -28,7 +28,6 @@ const styles = {
     width: 90,
     borderColor: color.white,
     borderWidth: 1,
-    borderRadius: 3,
     borderStyle: "solid",
   },
 };

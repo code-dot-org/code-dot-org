@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect, assert } from 'chai';
 import { shallow } from 'enzyme';
-import  CourseCard from '@cdo/apps/templates/teacherHomepage/CourseCard';
+import  CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 
 describe('CourseCard', () => {
   const noneEnrolled = {

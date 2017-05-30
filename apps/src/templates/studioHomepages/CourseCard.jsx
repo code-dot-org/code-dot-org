@@ -76,7 +76,7 @@ const styles = {
   chevron: {
     display: 'inline',
     color: color.teal,
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: 'bold',
     marginLeft: 8,
   },
