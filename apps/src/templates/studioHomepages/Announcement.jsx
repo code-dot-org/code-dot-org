@@ -9,7 +9,6 @@ const styles = {
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
-    borderRadius: 3,
     backgroundColor: color.white,
   },
   tealBar: {
@@ -44,7 +43,6 @@ const styles = {
   image: {
     height: 210,
     width: 310,
-    borderRadius: 3,
     margin: 20,
     position: 'absolute',
   }

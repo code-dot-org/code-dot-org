@@ -80,6 +80,7 @@
                   %a.headerlink{:href=>CDO.code_org_url("/promote")}= t('nav.header.stats')
                   %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
                   %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
+                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
 
           .header_right
             %span.freeplay_links
@@ -102,7 +103,10 @@
 
 - if show_header2
   - if request.path == "/home" || request.path == "/courses"
-    #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
+    - if user_type == "teacher"
+      #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+    - else
+      #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
   - if request.path == "/projects" || request.path == "/projects/public"
     #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
 
