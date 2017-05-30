@@ -19,6 +19,12 @@ const styles = {
     zIndex: 2,
     color: color.charcoal,
     width: 940
+  },
+  spacer: {
+    height: 50,
+    width: 940,
+    float: 'left',
+    color: color.white
   }
 };
 
@@ -68,6 +74,7 @@ const Courses = React.createClass({
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
+            heading={i18n.myCourses()}
           />
         )}
 
@@ -80,6 +87,7 @@ const Courses = React.createClass({
               {i18n.courseExplorerDescription()}
             </div>
             <ProtectedStatefulDiv ref="courseExplorer"/>
+            <div style={styles.spacer}>.</div>
 
             <br/>
             <br/>
