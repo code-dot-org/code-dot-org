@@ -98,15 +98,22 @@ const Courses = React.createClass({
             <ProtectedStatefulDiv ref="courseExplorer"/>
             <div style={styles.spacer}>.</div>
 
+            <br/>
+            <br/>
+
             <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
-            <div style={styles.heading}>
-              {i18n.toolExplorerHeading()}
-            </div>
-            <div>
-              {i18n.toolExplorerDescription()}
-            </div>
-            <ProtectedStatefulDiv ref="toolExplorer"/>
+            {false && (
+              <div>
+                <div style={styles.heading}>
+                  {i18n.toolExplorerHeading()}
+                </div>
+                <div>
+                  {i18n.toolExplorerDescription()}
+                </div>
+                <ProtectedStatefulDiv ref="toolExplorer"/>
+              </div>
+            )}
           </div>
         )}
 
