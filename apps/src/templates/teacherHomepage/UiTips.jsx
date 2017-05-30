@@ -144,25 +144,29 @@ const UiTips = React.createClass({
           )
         )))}
 
-        <Dialog
-          isOpen={this.state.showingDialog === "before"}
-          title={this.props.beforeDialog.title}
-          body={this.props.beforeDialog.body}
-          confirmText={this.props.beforeDialog.confirm}
-          cancelText={this.props.beforeDialog.cancel}
-          onCancel={this.beforeDialogCancel}
-          onConfirm={this.beforeDialogConfirm}
-        />
+        {this.props.beforeDialog && (
+          <Dialog
+            isOpen={this.state.showingDialog === "before"}
+            title={this.props.beforeDialog.title}
+            body={this.props.beforeDialog.body}
+            confirmText={this.props.beforeDialog.confirm}
+            cancelText={this.props.beforeDialog.cancel}
+            onCancel={this.beforeDialogCancel}
+            onConfirm={this.beforeDialogConfirm}
+          />
+        )}
 
-        <Dialog
-          isOpen={this.state.showingDialog === "after"}
-          title={this.props.afterDialog.title}
-          body={this.props.afterDialog.body}
-          confirmText={this.props.afterDialog.confirm}
-          cancelText={this.props.afterDialog.cancel}
-          onCancel={this.afterDialogCancel}
-          onConfirm={this.afterDialogConfirm}
-        />
+        {this.props.afterDialog && (
+          <Dialog
+            isOpen={this.state.showingDialog === "after"}
+            title={this.props.afterDialog.title}
+            body={this.props.afterDialog.body}
+            confirmText={this.props.afterDialog.confirm}
+            cancelText={this.props.afterDialog.cancel}
+            onCancel={this.afterDialogCancel}
+            onConfirm={this.afterDialogConfirm}
+          />
+        )}
 
       </div>
     );
