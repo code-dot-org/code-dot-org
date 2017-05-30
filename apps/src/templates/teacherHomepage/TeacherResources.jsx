@@ -18,28 +18,28 @@ const TeacherResources = React.createClass({
         <ResourceCard
           title={i18n.teacherCommunity()}
           description={i18n.teacherCommunityDescription()}
-          image="../../static/navcard-placeholder.png"
+          image="teacher-community"
           buttonText={i18n.joinCommunity()}
           link="https://forum.code.org"
         />
         <ResourceCard
           title={i18n.professionalLearning()}
           description={i18n.professionalLearningDescription()}
-          image="../../static/navcard-placeholder.png"
+          image="professional-learning"
           buttonText={i18n.learnMore()}
           link="/my-professional-learning"
         />
         <ResourceCard
           title={i18n.standardsAndFramework()}
           description={i18n.standardsAndFrameworkDescription()}
-          image="../../static/navcard-placeholder.png"
+          image="standards-framework"
           buttonText={i18n.reviewDocuments()}
           link={planUrl}
         />
         <ResourceCard
           title={i18n.findGuestSpeaker()}
           description={i18n.findGuestSpeakerDescription()}
-          image="../../static/navcard-placeholder.png"
+          image="guest-speaker"
           buttonText={i18n.inspireStudents()}
           link={volunteerUrl}
         />
