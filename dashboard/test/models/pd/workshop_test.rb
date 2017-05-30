@@ -105,6 +105,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert returned_section
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
+    assert @workshop.sessions.first.code.present?
     assert @workshop.section
     assert_equal returned_section, @workshop.section
     assert @workshop.section.workshop_section?
@@ -113,6 +114,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
+    assert @workshop.sessions.first.code.nil?
   end
 
   test 'start is idempotent' do
@@ -213,7 +215,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop_already_ended = create :pd_workshop
     workshop_already_ended.started_at = Time.now
-    workshop_already_ended.ended_at = Time.now - 1.hours
+    workshop_already_ended.ended_at = Time.now - 1.hour
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_already_ended.save!
 
@@ -378,7 +380,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_enrollment_count' do
     # Deleted enrollment should not be counted
-    create :pd_enrollment, workshop: @workshop, deleted_at: Time.now
+    pd_enrollment = create :pd_enrollment, workshop: @workshop
+    pd_enrollment.destroy
 
     # Workshops with 0 (not counting deleted), 1 and 2 enrollments
     workshops = [
@@ -525,6 +528,36 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'workshop_dashboard_url' do
     expected_url = "http://#{CDO.dashboard_hostname}/pd/workshop_dashboard/workshops/#{@workshop.id}"
     assert_equal expected_url, @workshop.workshop_dashboard_url
+  end
+
+  test 'unattended_enrollments' do
+    session = create :pd_session, workshop: @workshop
+    @workshop.sessions << session
+
+    # 2 enrollments with attendance
+    2.times do
+      enrollment = create :pd_enrollment, workshop: @workshop
+      create :pd_attendance, session: session, enrollment: enrollment
+    end
+
+    # 2 enrollments without attendance
+    enrollments = 2.times.map do
+      create :pd_enrollment, workshop: @workshop
+    end
+
+    assert_equal enrollments.map(&:id).sort, @workshop.unattended_enrollments.all.map(&:id).sort
+  end
+
+  test 'organizer_or_facilitator?' do
+    facilitator = create :facilitator
+    @workshop.facilitators << facilitator
+    another_organizer = create :workshop_organizer
+    another_facilitator = create :facilitator
+
+    assert @workshop.organizer_or_facilitator?(@organizer)
+    assert @workshop.organizer_or_facilitator?(facilitator)
+    refute @workshop.organizer_or_facilitator?(another_organizer)
+    refute @workshop.organizer_or_facilitator?(another_facilitator)
   end
 
   private

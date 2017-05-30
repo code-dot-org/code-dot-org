@@ -34,6 +34,9 @@
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your `for` loop will need to count from 1 to 7 by 2.\",\"hint_id\":\"courseF_bee_for7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4c3feb981e5dda61735103c5f1868e4a/courseF_bee_for7.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":1},{\"tileType\":1,\"value\":5,\"range\":5,\"featureType\":1},{\"tileType\":1,\"value\":7,\"range\":7,\"featureType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "contained_level_names": null
   },
   "published": true,

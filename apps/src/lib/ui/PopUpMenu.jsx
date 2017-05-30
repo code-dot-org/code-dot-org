@@ -1,6 +1,7 @@
 /** @file Pop-over menu component.  Combine with react-portal to use. */
 import React, {Component, PropTypes, Children} from 'react';
 import Radium from 'radium';
+import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 
@@ -38,7 +39,37 @@ const tailFillStyle = {
   borderColor: `transparent transparent ${BACKGROUND_COLOR} transparent`,
 };
 
-class PopUpMenu extends Component {
+export default class PopUpMenu extends Component {
+  static propTypes = {
+    targetPoint: PropTypes.shape({
+      top: PropTypes.number.isRequired,
+      left: PropTypes.number.isRequired,
+    }).isRequired,
+    children: PropTypes.any,
+    className: PropTypes.string,
+    isOpen: PropTypes.bool,
+    beforeClose: PropTypes.func,
+  };
+
+  render() {
+    return (
+      <Portal
+        closeOnEsc
+        closeOnOutsideClick
+        isOpened={this.props.isOpen}
+        beforeClose={this.props.beforeClose}
+      >
+        <MenuBubble
+          targetPoint={this.props.targetPoint}
+          className={this.props.className}
+          children={this.props.children}
+        />
+      </Portal>
+    );
+  }
+}
+
+export const MenuBubble = Radium(class extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -90,10 +121,9 @@ class PopUpMenu extends Component {
       </div>
     );
   }
-}
-export default Radium(PopUpMenu);
+});
 
-class Item extends Component {
+PopUpMenu.Item = Radium(class extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
@@ -114,7 +144,7 @@ class Item extends Component {
   render() {
     const {first, last, onClick, children} = this.props;
     const style = {
-      ...Item.style,
+      ...PopUpMenu.Item.style,
       paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
       paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
     };
@@ -128,5 +158,4 @@ class Item extends Component {
       </div>
     );
   }
-}
-PopUpMenu.Item = Radium(Item);
+});

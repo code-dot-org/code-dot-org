@@ -1,4 +1,3 @@
-var testUtils = require('../../../../util/testUtils');
 var constants = require('@cdo/apps/constants.js');
 var blockUtils = require('@cdo/apps/block_utils');
 var TestResults = constants.TestResults;

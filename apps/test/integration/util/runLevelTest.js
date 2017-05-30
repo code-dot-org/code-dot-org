@@ -1,7 +1,10 @@
 import $ from 'jquery';
+import sinon from 'sinon';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
+const project = require('@cdo/apps/code-studio/initApp/project');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -23,7 +26,7 @@ function finished() {
 
 module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
-  var data = dataItem();
+  dataItem();
   var app = testCollection.app;
 
   // skin shouldn't matter for most cases
@@ -86,24 +89,14 @@ module.exports = function (testCollection, testData, dataItem, done) {
   runLevel(app, skinId, level, validateResult, testData);
 };
 
-function logError(msg) {
-  console.log('Log: ' + msg + '\n');
-}
-
-function StubDialog(options) {
-  this.options = options;
-}
-
-StubDialog.prototype.show = function () {
-  if (this.options.body) {
-    // Examine content of the feedback in future tests?
-    // console.log(this.options.body.innerHTML);
+sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
+  if (!LegacyDialog.levelTestDontFinishOnShow) {
+    finished();
   }
-  finished();
-};
+});
 
-StubDialog.prototype.hide = function () {
-};
+sinon.stub(LegacyDialog.prototype, 'hide');
+
 
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
@@ -112,7 +105,7 @@ const appLoaders = {
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
   eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
-  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  gamelab: require('../../util/gamelab/loadTestableGamelab'),
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
@@ -121,7 +114,6 @@ const appLoaders = {
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
 function runLevel(app, skinId, level, onAttempt, testData) {
-
   var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -131,13 +123,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  window.dashboard.project.useFirebase = function () {
-    return Boolean(testData.useFirebase);
-  };
-
-  window.dashboard.project.isOwner = function () {
-    return true;
-  };
+  project.useFirebase.returns(!!testData.useFirebase);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
@@ -148,7 +134,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     channel: 'applab-channel-id',
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
-    Dialog: StubDialog,
     embed: testData.embed,
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
@@ -162,7 +147,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
-      if (level.editCode && !studioApp.editor) {
+      if (level.editCode && !studioApp().editor) {
         timeout = 500;
       }
 

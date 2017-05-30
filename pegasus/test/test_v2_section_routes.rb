@@ -5,8 +5,9 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
+require_relative 'sequel_test_case'
 
-class V2SectionRoutesTest < Minitest::Test
+class V2SectionRoutesTest < SequelTestCase
   describe 'Section Routes' do
     before do
       FakeDashboard.use_fake_database
@@ -118,7 +119,7 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'ignores deleted follower memberships' do
-        with_role FakeDashboard::SELF_STUDENT
+        with_role FakeDashboard::STUDENT_DELETED_FOLLOWER
         @pegasus.get '/v2/sections/membership'
         assert_equal 200, @pegasus.last_response.status
         assert_equal [], JSON.parse(@pegasus.last_response.body)
@@ -173,7 +174,7 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" for unconnected teacher' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_SELF
         @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
@@ -201,20 +202,20 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'does not update already deleted followers' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_FOLLOWER
         Dashboard.db.transaction(rollback: :always) do
           before_timestamp = Dashboard.db[:followers].
             where(
-              section_id: FakeDashboard::SECTION_DELETED_FOLLOWERS[:id],
-              student_user_id: FakeDashboard::SELF_STUDENT[:id]
+              section_id: FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+              student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]
             ).
             select_map(:deleted_at)
-          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWERS[:id]}/delete"
+          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWER[:id]}/delete"
           assert_equal 204, @pegasus.last_response.status
           after_timestamp = Dashboard.db[:followers].
             where(
-              section_id: FakeDashboard::SECTION_DELETED_FOLLOWERS[:id],
-              student_user_id: FakeDashboard::SELF_STUDENT[:id]
+              section_id: FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
+              student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]
             ).
             select_map(:deleted_at)
           assert_equal before_timestamp, after_timestamp
@@ -228,13 +229,13 @@ class V2SectionRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" when deleting another teachers section' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_SELF
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
         assert_equal 403, @pegasus.last_response.status
       end
 
       it 'returns 403 "Forbidden" when deleting a deleted section' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_SECTION
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/delete"
         assert_equal 403, @pegasus.last_response.status
       end
@@ -286,7 +287,7 @@ class V2SectionRoutesTest < Minitest::Test
       #end
 
       it 'returns 403 "Forbidden" when updating deleted section' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_DELETED_SECTION
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/update",
           {name: NEW_NAME}.to_json,
           'CONTENT_TYPE' => 'application/json;charset=utf-8'

@@ -1,4 +1,4 @@
-import { MockFirebase } from 'mockfirebase';
+import { MockFirebase } from 'firebase-mock';
 
 MockFirebase.prototype.originalOnce = MockFirebase.prototype.once;
 

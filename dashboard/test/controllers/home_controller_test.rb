@@ -23,35 +23,35 @@ class HomeControllerTest < ActionController::TestCase
 
     request.host = "studio.code.org"
 
-    get :set_locale, params: {return_to: "/blahblah", locale: "es-ES"}
+    get :set_locale, params: {user_return_to: "/blahblah", locale: "es-ES"}
 
     assert_equal "es-ES", cookies[:language_]
     assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-15], @response.headers["Set-Cookie"]
     assert_redirected_to 'http://studio.code.org/blahblah'
   end
 
-  test "handle nonsense in return_to by returning to home" do
+  test "handle nonsense in user_return_to by returning to home" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
     request.host = "studio.code.org"
 
-    get :set_locale, params: {return_to: ["blah"], locale: "es-ES"}
+    get :set_locale, params: {user_return_to: ["blah"], locale: "es-ES"}
 
     assert_redirected_to 'http://studio.code.org/'
   end
 
-  test "return_to should not redirect off-site" do
+  test "user_return_to should not redirect off-site" do
     request.host = "studio.code.org"
     get :set_locale, params: {
-      return_to: "http://blah.com/blerg",
+      user_return_to: "http://blah.com/blerg",
       locale: "es-ES"
     }
     assert_redirected_to 'http://studio.code.org/blerg'
   end
 
-  test "if return_to in set_locale is nil redirects to homepage" do
+  test "if user_return_to in set_locale is nil redirects to homepage" do
     request.host = "studio.code.org"
-    get :set_locale, params: {return_to: nil, locale: "es-ES"}
+    get :set_locale, params: {user_return_to: nil, locale: "es-ES"}
     assert_redirected_to ''
   end
 
@@ -187,7 +187,6 @@ class HomeControllerTest < ActionController::TestCase
     Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
       UserLevel.find_or_create_by(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
-    user.backfill_user_scripts
 
     assert_equal [], user.working_on_scripts # if you finish a script you are not working on it!
 
@@ -238,37 +237,6 @@ class HomeControllerTest < ActionController::TestCase
     # this stuff is not really a hash but it pretends to be
     assert_equal "{}", @response.cookies.inspect
     assert_equal "{}", session.inspect
-  end
-
-  test 'index shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-
-    sign_in user
-    get :index
-
-    assert_response :success
-    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert .btn[value="Resend confirmation instructions"]'
-  end
-
-  test 'index does not show alert for unconfirmed email for teachers if already confirmed' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
-
-    sign_in user
-    get :index
-
-    assert_response :success
-    assert_select '.alert', 0
-  end
-
-  test 'index does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx'
-
-    sign_in user
-    get :index
-
-    assert_response :success
-    assert_select '.alert', 0
   end
 
   test 'no more debug' do

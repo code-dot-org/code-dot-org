@@ -15,6 +15,7 @@ max_age: 60
 ---
 -cert_id = params[:i]
 -cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
+-pass unless ScriptConstants.script_in_any_category?(cert_script)
 
 -if cert_id
   -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"

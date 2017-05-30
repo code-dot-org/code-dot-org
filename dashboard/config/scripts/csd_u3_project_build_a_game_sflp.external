@@ -1,4 +1,5 @@
 name 'CSD U3 Project Build a Game SFLP'
+display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
 # Programming - Interactive Games and Animations: Lesson 18 - Project - Design a Game

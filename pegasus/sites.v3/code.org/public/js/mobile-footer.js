@@ -6,10 +6,13 @@ $(function () {
     $('#down').toggle();
   });
 
-  document.querySelector( '#footer-toggle' )
-    .addEventListener( "click", function () {
-    this.classList.toggle( 'active' );
-  });
+  var footerToggle = document.querySelector( '#footer-toggle' );
+
+  if (footerToggle) {
+    footerToggle.addEventListener( "click", function () {
+      this.classList.toggle( 'active' );
+    });
+  }
 
 //Handles cases when user resizes the screen
   addEventListener('resize', function () {

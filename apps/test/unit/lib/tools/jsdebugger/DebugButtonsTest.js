@@ -23,8 +23,6 @@ describe('The DebugConsole component', () => {
       // doesn't ignore breakpoints.
       shouldRunAtMaxSpeed: () => false,
       studioApp: {
-        reduxStore: getStore(),
-
         // set hideSource to true so interpreter doesn't try to look up
         // non-existent ace editor
         hideSource: true,

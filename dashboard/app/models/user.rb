@@ -2,86 +2,78 @@
 #
 # Table name: users
 #
-#  id                         :integer          not null, primary key
-#  studio_person_id           :integer
-#  email                      :string(255)      default(""), not null
-#  encrypted_password         :string(255)      default("")
-#  reset_password_token       :string(255)
-#  reset_password_sent_at     :datetime
-#  remember_created_at        :datetime
-#  sign_in_count              :integer          default(0)
-#  current_sign_in_at         :datetime
-#  last_sign_in_at            :datetime
-#  current_sign_in_ip         :string(255)
-#  last_sign_in_ip            :string(255)
-#  created_at                 :datetime
-#  updated_at                 :datetime
-#  username                   :string(255)
-#  provider                   :string(255)
-#  uid                        :string(255)
-#  admin                      :boolean
-#  gender                     :string(1)
-#  name                       :string(255)
-#  locale                     :string(10)       default("en-US"), not null
-#  birthday                   :date
-#  user_type                  :string(16)
-#  school                     :string(255)
-#  full_address               :string(1024)
-#  school_info_id             :integer
-#  total_lines                :integer          default(0), not null
-#  prize_earned               :boolean          default(FALSE)
-#  prize_id                   :integer
-#  teacher_prize_earned       :boolean          default(FALSE)
-#  teacher_prize_id           :integer
-#  teacher_bonus_prize_earned :boolean          default(FALSE)
-#  teacher_bonus_prize_id     :integer
-#  confirmation_token         :string(255)
-#  confirmed_at               :datetime
-#  confirmation_sent_at       :datetime
-#  unconfirmed_email          :string(255)
-#  prize_teacher_id           :integer
-#  secret_picture_id          :integer
-#  active                     :boolean          default(TRUE), not null
-#  hashed_email               :string(255)
-#  deleted_at                 :datetime
-#  secret_words               :string(255)
-#  properties                 :text(65535)
-#  invitation_token           :string(255)
-#  invitation_created_at      :datetime
-#  invitation_sent_at         :datetime
-#  invitation_accepted_at     :datetime
-#  invitation_limit           :integer
-#  invited_by_id              :integer
-#  invited_by_type            :string(255)
-#  invitations_count          :integer          default(0)
-#  terms_of_service_version   :integer
+#  id                       :integer          not null, primary key
+#  studio_person_id         :integer
+#  email                    :string(255)      default(""), not null
+#  encrypted_password       :string(255)      default("")
+#  reset_password_token     :string(255)
+#  reset_password_sent_at   :datetime
+#  remember_created_at      :datetime
+#  sign_in_count            :integer          default(0)
+#  current_sign_in_at       :datetime
+#  last_sign_in_at          :datetime
+#  current_sign_in_ip       :string(255)
+#  last_sign_in_ip          :string(255)
+#  created_at               :datetime
+#  updated_at               :datetime
+#  username                 :string(255)
+#  provider                 :string(255)
+#  uid                      :string(255)
+#  admin                    :boolean
+#  gender                   :string(1)
+#  name                     :string(255)
+#  locale                   :string(10)       default("en-US"), not null
+#  birthday                 :date
+#  user_type                :string(16)
+#  school                   :string(255)
+#  full_address             :string(1024)
+#  school_info_id           :integer
+#  total_lines              :integer          default(0), not null
+#  secret_picture_id        :integer
+#  active                   :boolean          default(TRUE), not null
+#  hashed_email             :string(255)
+#  deleted_at               :datetime
+#  secret_words             :string(255)
+#  properties               :text(65535)
+#  invitation_token         :string(255)
+#  invitation_created_at    :datetime
+#  invitation_sent_at       :datetime
+#  invitation_accepted_at   :datetime
+#  invitation_limit         :integer
+#  invited_by_id            :integer
+#  invited_by_type          :string(255)
+#  invitations_count        :integer          default(0)
+#  terms_of_service_version :integer
+#  urm                      :boolean
+#  races                    :string(255)
 #
 # Indexes
 #
-#  index_users_on_birthday                               (birthday)
-#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
-#  index_users_on_email_and_deleted_at                   (email,deleted_at)
-#  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
-#  index_users_on_invitation_token                       (invitation_token) UNIQUE
-#  index_users_on_invitations_count                      (invitations_count)
-#  index_users_on_invited_by_id                          (invited_by_id)
-#  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
-#  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
-#  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
-#  index_users_on_school_info_id                         (school_info_id)
-#  index_users_on_studio_person_id                       (studio_person_id)
-#  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
-#  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
-#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
-#  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
+#  index_users_on_birthday                             (birthday)
+#  index_users_on_current_sign_in_at                   (current_sign_in_at)
+#  index_users_on_deleted_at                           (deleted_at)
+#  index_users_on_email_and_deleted_at                 (email,deleted_at)
+#  index_users_on_hashed_email_and_deleted_at          (hashed_email,deleted_at)
+#  index_users_on_invitation_token                     (invitation_token) UNIQUE
+#  index_users_on_invitations_count                    (invitations_count)
+#  index_users_on_invited_by_id                        (invited_by_id)
+#  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
+#  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_school_info_id                       (school_info_id)
+#  index_users_on_studio_person_id                     (studio_person_id)
+#  index_users_on_username_and_deleted_at              (username,deleted_at) UNIQUE
 #
 
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
+require 'cdo/school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties, SchoolInfoDeduplicator
+  include SerializedProperties
+  include SchoolInfoDeduplicator
+  include LocaleHelper
+  include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -108,12 +100,21 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
+  serialized_attrs %w(
+    ops_first_name
+    ops_last_name
+    district_id
+    ops_school
+    ops_gender
+    races
+    using_text_mode
+    last_seen_school_info_interstitial
+  )
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
-  devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
@@ -181,9 +182,13 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  # TODO: I think we actually want to do this.
-  # You can be associated with districts through cohorts
-  # has_many :districts, through: :cohorts.
+  validate :admins_must_be_teachers
+
+  def admins_must_be_teachers
+    if admin
+      errors.add(:admin, 'must be a teacher') unless teacher?
+    end
+  end
 
   def facilitator?
     permission? UserPermission::FACILITATOR
@@ -216,6 +221,15 @@ class User < ActiveRecord::Base
     end
     # Return the cached results.
     return @permissions.include? permission
+  end
+
+  # Revokes all escalated permissions associated with the user, including admin status and any
+  # granted UserPermission's.
+  def revoke_all_permissions
+    self.admin = nil
+    save(validate: false)
+
+    UserPermission.where(user_id: id).each(&:destroy)
   end
 
   def district_contact?
@@ -283,31 +297,19 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-  has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections
+  has_many :sections, dependent: :destroy
   has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
 
-  # sections will include those that have been deleted until/unless we do the work
-  # to enable the paranoia gem. This method will return only sections that have
-  # not been deleted
-  def non_deleted_sections
-    sections.where(deleted_at: nil)
-  end
-
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
-
-  has_one :prize
-  has_one :teacher_prize
-  has_one :teacher_bonus_prize
 
   belongs_to :secret_picture
   before_create :generate_secret_picture
@@ -333,10 +335,6 @@ class User < ActiveRecord::Base
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
-  validates_uniqueness_of :prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_prize_id, allow_nil: true
-  validates_uniqueness_of :teacher_bonus_prize_id, allow_nil: true
-
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
@@ -353,10 +351,9 @@ class User < ActiveRecord::Base
   # NOTE: Order is important here.
   before_save :make_teachers_21,
     :normalize_email,
-    :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
-    :hide_email_and_full_address_for_students,
-    :sanitize_race_data
+    :sanitize_race_data,
+    :fix_by_user_type
 
   def make_teachers_21
     return unless teacher?
@@ -368,16 +365,6 @@ class User < ActiveRecord::Base
     self.email = email.strip.downcase
   end
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # We make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed.
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
@@ -385,14 +372,6 @@ class User < ActiveRecord::Base
   def hash_email
     return unless email.present?
     self.hashed_email = User.hash_email(email)
-  end
-
-  def hide_email_and_full_address_for_students
-    if student?
-      self.email = ''
-      self.unconfirmed_email = nil
-      self.full_address = nil
-    end
   end
 
   def sanitize_race_data
@@ -409,13 +388,25 @@ class User < ActiveRecord::Base
     end
   end
 
+  def fix_by_user_type
+    if student?
+      self.email = ''
+      self.full_address = nil
+      self.school_info = nil
+    end
+
+    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
+    # without an explicit acceptance, we clear the version accepted.
+    if teacher? && user_type_changed? && !terms_of_service_version_changed?
+      self.terms_of_service_version = nil
+    end
+  end
+
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
-    # TODO(asher): Change this to always (primarily?) search by hashed_email,
-    # eliminating a DB query.
-    User.find_by_email(email.downcase) ||
-      User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+    hashed_email = User.hash_email(email)
+    User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -494,12 +485,16 @@ class User < ActiveRecord::Base
 
       # clever provides us these fields
       if user.user_type == TYPE_TEACHER
-        # if clever told us that the user is a teacher, we just trust
-        # that they are adults; we don't actually care about age
         user.age = 21
       else
-        # student or unspecified type
+        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+        # handle any necessary conversion, setting birthday from auth.info.dob. The later
+        # shenanigans ensure that we store the user's age rather than birthday.
         user.birthday = auth.info.dob
+        user_age = user.age
+        user.birthday = nil
+        user.age = user_age
       end
       user.gender = normalize_gender auth.info.gender
     end
@@ -529,7 +524,7 @@ class User < ActiveRecord::Base
   end
 
   def email_required?
-    return true if teacher? || admin?
+    return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
@@ -557,7 +552,7 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
-      where(
+      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -628,10 +623,19 @@ class User < ActiveRecord::Base
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
-    user_levels_by_level = user_levels_by_level(script)
+    # some of our user_levels may be for levels within level_groups, or for levels
+    # that are no longer in this script. we want to ignore those, and only look
+    # user_levels that have matching script_levels
+    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # the script in multiple places (i.e. via level swapping) there's some potential
+    # for strange behavior.
+    levels = script.script_levels.map(&:level_ids).flatten
+    user_levels_by_level = user_levels.
+      where(script_id: script.id, level: levels).
+      index_by(&:level_id)
 
-    # Find the user level that we've most recently had progress on
-    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+    # Find the user_level that we've most recently had progress on
+    user_level = user_levels_by_level.values.max_by(&:updated_at)
 
     script_level_index = 0
     if user_level
@@ -737,7 +741,7 @@ class User < ActiveRecord::Base
   end
 
   def confirmation_required?
-    teacher? && !confirmed?
+    false
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -761,11 +765,12 @@ class User < ActiveRecord::Base
 
   def age
     return @age unless birthday
-    age = ((Date.today - birthday) / 365).to_i
+    age = UserHelpers.age_from_birthday(birthday)
     age = "21+" if age >= 21
     age
   end
 
+  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
   end
@@ -782,9 +787,13 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def initial
+  def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
+  end
+
+  def initial
+    User.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -842,6 +851,9 @@ class User < ActiveRecord::Base
 
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
+  rescue ArgumentError
+    errors.add :base, I18n.t('password.reset_errors.invalid_email')
+    return nil
   end
 
   def generate_secret_picture
@@ -863,8 +875,6 @@ class User < ActiveRecord::Base
   end
 
   def in_progress_and_completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.compact.reject do |user_script|
       begin
         user_script.script.nil?
@@ -874,6 +884,55 @@ class User < ActiveRecord::Base
         true
       end
     end
+  end
+
+  # Return a collection of courses and scripts for the user. First in the list will
+  # be courses enrolled in by the user's sections. Following that will be all scripts
+  # in which the user has made progress that are not in any of the enrolled courses.
+  def recent_courses_and_scripts
+    courses = section_courses
+    course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
+
+    # filter out those that are already covered by a course
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+
+    course_data = courses.map do |course|
+      {
+        name: data_t_suffix('course.name', course[:name], 'title'),
+        description: data_t_suffix('course.name', course[:name], 'description_short'),
+        link: course_path(course),
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
+        assignedSections: []
+      }
+    end
+
+    user_script_data = user_scripts.map do |user_script|
+      script_id = user_script[:script_id]
+      script = Script.get_from_cache(script_id)
+      {
+        name: data_t_suffix('script.name', script[:name], 'title'),
+        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+        link: script_path(script),
+        # assigned_sections is current unused. When we support this, I think it makes
+        # more sense to get/store this data separately from courses.
+        assignedSections: []
+      }
+    end
+
+    course_data + user_script_data
+  end
+
+  # Figures out the unique set of courses assigned to sections that this user
+  # is a part of.
+  # @return [Array<Course>]
+  def section_courses
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+
+    # In the future we may want to make it so that if assigned a script, but that
+    # script has a default course, it shows up as a course here
+    all_sections.map(&:course).compact.uniq
   end
 
   def all_advertised_scripts_completed?
@@ -904,24 +963,18 @@ class User < ActiveRecord::Base
   end
 
   def working_on_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
   # NOTE: Changes to this method should be mirrored in
   # in_progress_and_completed_scripts.
   def working_on_user_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.where('user_scripts.completed_at is null')
   end
 
   # NOTE: Changes to this method should be mirrored in
   # in_progress_and_completed_scripts.
   def completed_user_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.where('user_scripts.completed_at is not null')
   end
 
@@ -929,50 +982,9 @@ class User < ActiveRecord::Base
     working_on_scripts.first.try(:cached)
   end
 
-  def needs_to_backfill_user_scripts?
-    # Backfill only applies to users created before UserScript model was introduced.
-    created_at < Date.new(2014, 9, 15) &&
-      user_scripts.empty? &&
-      !user_levels.empty?
-  end
-
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
-  end
-
-  # Creates UserScript information based on data contained in UserLevels.
-  # Provides backwards compatibility with users created before the UserScript model
-  # was introduced (cf. code-dot-org/website-ci#194).
-  # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts(scripts = Script.all)
-    # backfill progress in scripts
-    scripts.each do |script|
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
-        ul_map = user_levels_by_level(script)
-        script.script_levels.each do |sl|
-          ul = ul_map[sl.level_id]
-          next unless ul
-          # is this the first level we started?
-          user_script.started_at = ul.created_at if
-            ul.created_at &&
-            (!user_script.started_at || ul.created_at < user_script.started_at)
-
-          # is this the last level we worked on?
-          user_script.last_progress_at = ul.updated_at if
-            ul.updated_at &&
-            (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
-        end
-
-        # backfill completed scripts
-        if user_script.last_progress_at && user_script.check_completed?
-          user_script.completed_at = user_script.last_progress_at
-        end
-
-        user_script.save! if user_script.changed? && !user_script.empty?
-      end
-    end
   end
 
   def self.track_script_progress(user_id, script_id)
@@ -1144,12 +1156,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Finds or creates a UserScript, setting assigned_at if not already set.
+  # @param script [Script] The script to assign.
+  # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.assigned_at = Time.now
-
-      user_script.save!
+      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
       return user_script
     end
   end
@@ -1243,5 +1256,13 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
+  end
+
+  def show_school_info_interstitial?
+    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
+  end
+
+  def school_info_suggestion?
+    !(school.blank? && full_address.blank?)
   end
 end

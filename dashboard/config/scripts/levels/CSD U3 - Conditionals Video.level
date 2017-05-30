@@ -7,7 +7,9 @@
   "properties": {
     "video_key": "csp_applab_conditionals_2",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "instructions_important": "false",
+    "display_name": "Video: Conditionals"
   },
   "published": true,
   "notes": "",

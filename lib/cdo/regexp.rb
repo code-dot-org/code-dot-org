@@ -16,6 +16,14 @@ module RegexpUtils
     US_PHONE_NUMBER_ONLY_REGEXP === text
   end
 
+  US_ZIP_CODE_REGEXP = /^\d{5}([\W-]?\d{4})?$/
+
+  # @return true if the entire text matches the format of a US zip code
+  # Note it does not verify that it's an actual zip code.
+  def self.us_zip_code?(text)
+    US_ZIP_CODE_REGEXP === text
+  end
+
   # extracts the 10 digits in a US phone number and returns as a string (without formatting)
   def self.extract_us_phone_number_digits(text)
     match = US_PHONE_NUMBER_ONLY_REGEXP.match(text)

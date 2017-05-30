@@ -1,0 +1,18 @@
+name 'CSD U2 L4 Overview'
+display_name 'Lesson Overview'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Overview
+
+
+In this lesson, students continue to use HTML to structure text on web pages, this time with headers.  Students learn how the different header elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
+## Vocabulary
+
+* **Header** - A title or summary for a document or section of a document.
+
+## New Tags
+
+*  **[Header](//docs.code.org/weblab/h/)** - `<h1></h1>`
+
+MARKDOWN

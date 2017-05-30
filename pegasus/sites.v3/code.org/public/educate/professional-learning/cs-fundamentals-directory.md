@@ -153,14 +153,6 @@ angeloff@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Mary Lou Klem
-Tucson, AZ
-
-klem@pd.code.org
-
-[/col-33]
-
 <p
 style="clear:both"&nbsp;
 </p>
@@ -215,24 +207,6 @@ khan@pd.code.org
 [/col-33]
 
 [col-33]
-
-### Swetha Bhattacharya
-San Jose, CA
-
-bhattacharya@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Eugene Lemon
-Oakland, CA
-
-lemon@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Margaret Agbowo
 Oakland, Ca
 
@@ -261,14 +235,6 @@ rogers@pd.code.org
 Fairfield, CA
 
 carter@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Rona Zollinger
-Martinez, CA
-
-zollinger@pd.code.org
 
 [/col-33]
 
@@ -320,14 +286,6 @@ packham@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-### **Central California**
-### Jason Horsman
-Fresno, CA
-
-horsman@pd.code.org
-
-<p style="clear:both">&nbsp;</p>
-
 ### **Los Angeles Area**
 [col-33]
 ### Alisa McCord
@@ -342,15 +300,6 @@ mccord@pd.code.org
 Lancaster, CA
 
 dawson@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Elizabeth Bacon
-Los Angeles, CA
-
-bacon@pd.code.org
 
 [/col-33]
 
@@ -391,15 +340,6 @@ zanotti@pd.code.org
 [/col-33]
 
 [col-33]
-
-### Victor Casas
-Chino, CA
-
-casas@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Laura Ferreira
 Riverside, CA
 
@@ -418,15 +358,6 @@ kong@pd.code.org
 
 [col-33]
 
-### Wes Kriesel
-Santa Ana
-
-kriesel@pd.code.org
-
-[/col-33]
-
-[col-33]
-
 ### Kimberly Tatera
 Apple Valley, CA
 
@@ -438,44 +369,10 @@ tatera@pd.code.org
 
 ### **San Diego Area**
 [col-33]
-### Andrew Svehaug
-San Diego, CA
-
-svehaug@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Frank Carmody
-San Diego, CA
-
-carmody@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Susie Hopper
-San Diego, CA
-
-hopper@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Kathy Gligo
 El Cajon, CA
 
 gligo@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Liz Loether
-El Cajon, CA
-
-loether@pd.code.org
 
 [/col-33]
 
@@ -563,14 +460,6 @@ marousky@pd.code.org
 [/col-33]
 
 [col-33]
-### Lisa Milenkovic
-Fort Lauderdale, FL
-
-milenkovic@pd.code.org
-
-[/col-33]
-
-[col-33]
 
 ### Rebecca Malones
 Fort Lauderdale, FL
@@ -638,14 +527,6 @@ prada@pd.code.org
 [/col-33]
 
 [col-33]
-### Pamela Wentworth
-Miami, FL
-
-wentworth@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Jasper Stone
 Navarre, FL
 
@@ -694,14 +575,6 @@ mate@pd.code.org
 [/col-33]
 
 [col-33]
-### Denise Cruz
-Sanford, FL
-
-cruz@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Suzanne Zylman
 St. Petersberg, FL
 
@@ -728,14 +601,6 @@ style="clear:both">&nbsp;
 Atlanta, GA
 
 foust@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Kelsey McNamara
-Atlanta, GA
-
-mcnamara@pd.code.org
 
 [/col-33]
 
@@ -844,22 +709,6 @@ bowens@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Todd Lash
-Champaign, IL
-
-lash@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Aaron Rauf Tan
-Des Plaines, IL
-
-tanriseven@pd.code.org
-
-[/col-33]
-
 <p
 style="clear:both">&nbsp;
 </p>
@@ -894,22 +743,6 @@ style="clear:both">&nbsp;
 Cedar Falls, IA
 
 schafer@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Leka DeGroot
-Fort Dodge, IA
-
-degroot@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Leslie Pralle Keehn
-Fort Dodge, IA
-
-prallekeehn@pd.code.org
 
 [/col-33]
 
@@ -1015,14 +848,6 @@ legrand@pd.code.org
 [/col-33]
 
 [col-33]
-### Charlotte James
-Baltimore, MD
-
-cjames@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Amy Kim
 Baltimore, MD
 
@@ -1069,22 +894,6 @@ litvin@pd.code.org
 [/col-33]
 
 [col-33]
-### Eileen Young
-Chelmsford, MA
-
-young@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Kelly Powers
-Natick, MA
-
-powers@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Stephanie Golas
 Newton, MA
 
@@ -1107,26 +916,10 @@ keskimaki@pd.code.org
 [/col-33]
 
 [col-33]
-### Adrienne Wheat
-Southfield, MI
-
-awheat@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Monica Wheat
 Southfield, MI
 
 wheat@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Olivia Snead
-Southfield, MI
-
-snead@pd.code.org
 
 [/col-33]
 
@@ -1152,14 +945,6 @@ style="clear:both">&nbsp;
 
 <a id="mn"></a>
 ## Minnesota
-[col-33]
-### Teri Sue Hitchcock
-Apple Valley, MN
-
-hitchcock@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Kirsten Lunzer
 Minnetonka, MN
@@ -1210,14 +995,6 @@ klein@pd.code.org
 St. Louis, MO
 
 brown@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Michelle Powell
-St. Louis, MO
-
-powell@pd.code.org
 
 [/col-33]
 
@@ -1351,22 +1128,6 @@ lee@pd.code.org
 [/col-33]
 
 [col-33]
-### Scott Underwood
-Las Vegas, NV
-
-underwood@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Julie Harpole
-Reno, NV
-
-harpole@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Tina Holland
 Reno, NV
 
@@ -1404,14 +1165,6 @@ bergeron@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Keledy Kenkel
-New York, NY
-
-kenkel@pd.code.org
-
-[/col-33]
-
 <p
 style="clear:both">&nbsp;
 </p>
@@ -1442,14 +1195,6 @@ puckett@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Melissa Drury
-Thornville, OH
-
-drury@pd.code.org
-
-[/col-33]
-
 <p style="clear:both">&nbsp;</p>
 
 <a id="ok"></a>
@@ -1470,14 +1215,6 @@ cherry@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Drew Robinson
-Tulsa, OK
-
-robinson@pd.code.org
-
-[/col-33]
-
 <p style="clear:both">&nbsp;</p>
 
 <a id="or"></a>
@@ -1487,14 +1224,6 @@ robinson@pd.code.org
 Beaverton, OR
 
 white@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Mindy Barron
-Hermiston, OR
-
-barron@pd.code.org
 
 [/col-33]
 
@@ -1590,14 +1319,6 @@ ficarra@pd.code.org
 
 <a id="sc"></a>
 ## South Carolina
-[col-33]
-### Oscar Vazquez-Melendez
-Boiling Springs, SC
-
-melendez@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Ann Puckett
 Columbia and Charleston, SC
@@ -1735,14 +1456,6 @@ lane@pd.code.org
 [/col-33]
 
 [col-33]
-### Lidia Velasquez
-Dallas, TX
-
-velasquez@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Kerissa Bearce
 Grapevine, TX
 
@@ -1809,34 +1522,10 @@ style="clear:both">&nbsp;
 <a id="ut"></a>
 ## Utah
 [col-33]
-### Roger Snow
-Ogden, UT
-
-snow@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Grant Smith
 Park City, UT
 
 gsmith@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Kim Broadbent
-Provo, UT
-
-broadbent@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Camille Cole
-Sandy, UT
-
-cole@pd.code.org
 
 [/col-33]
 
@@ -1857,34 +1546,10 @@ anderson@pd.code.org
 [/col-33]
 
 [col-33]
-### Sarah Young
-Salt Lake City, UT
-
-young@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Nathan Auck
-Salt Lake City, UT
-
-auck@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Carl Lyman
 Spanish Fork, UT
 
 lyman@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Rachel Ramsay
-St. George, UT
-
-ramsay@pd.code.org
 
 [/col-33]
 
@@ -1971,31 +1636,6 @@ kwhite@pd.code.org
 [/col-33]
 
 [col-33]
-### Paul LaGrange
-Marysville, WA
-
-lagrange@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Tracey Sconyers
-Seattle, WA
-
-sconyers@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Lauren Bricker
-Seattle, WA
-
-bricker@pd.code.org
-
-[/col-33]
-
-[col-33]
 
 ### Tammie Schrader
 Spokane, Washington
@@ -2017,22 +1657,6 @@ wrightmockler@pd.code.org
 Tri-cities, WA
 
 stephens@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Kimberly Astle
-Vancouver, WA
-
-astle@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Peggy Willcuts
-Walla Walla, WA
-
-willcuts@pd.code.org
 
 [/col-33]
 

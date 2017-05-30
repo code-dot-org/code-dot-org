@@ -19,16 +19,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 29 Mar 2017 20:17:52 GMT
+      - Wed, 05 Apr 2017 15:24:14 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>CA1982E78F4CBA56</RequestId><HostId>JdJIWuOfypGeRVtw2Dw2tORxYVOv+RUIL0ZrGB+irUKjUBmDQKrZRyIWTLWPpSR0rwrGFCs+Ga4=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>1FF8C3D365AF78B0</RequestId><HostId>P/+FZD3Tcr2CYmUMwMJulQLeoHO9dS+T6cEknjyqnu5Qzt4pnLmWMOgsrlcssNT+rZneF2/MokA=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:52 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:25 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
@@ -46,22 +46,22 @@ http_interactions:
       X-Amz-Delete-Marker:
       - 'true'
       X-Amz-Version-Id:
-      - UY11_A0C21GULXFlRQA7ibjbcTiLh_FC
+      - 0O8F.JMdEAzd9LUF1bkn6y73QtSdsseG
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 29 Mar 2017 20:17:52 GMT
+      - Wed, 05 Apr 2017 15:24:15 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/thumbnail.png</Key><RequestId>FE6EF092AFB44A45</RequestId><HostId>vhXwCYhMSwtDXVHxgz7XuPK1Oyr7iFBpFyuUzetaDy/Ju1w6BDx9I+QcMkRgDyfKzcG8Beof3Oo=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/thumbnail.png</Key><RequestId>FCFFE34010074CCE</RequestId><HostId>FF4gXn3C/9Y3FIo9xG/ogUVHBrH4rl+57Ez85uzZnmG1cjpAGvsQXccx7Gj3OYqzN3FDOeXQJxM=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:52 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:25 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
@@ -77,7 +77,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 29 Mar 2017 20:17:54 GMT
+      - Wed, 05 Apr 2017 15:24:16 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -92,7 +92,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:53 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:26 GMT
 - request:
     method: put
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
@@ -114,9 +114,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 29 Mar 2017 20:17:54 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       X-Amz-Version-Id:
-      - qo75ZF9WWTTJIbh4rX9m3By8Te0KS7Ws
+      - TdVG1qv6K4oV_F5QxLaDWXyifMb7HMBa
       Etag:
       - '"1c70b30125f28a277d619782301c3b27"'
       Content-Length:
@@ -127,7 +127,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:54 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:26 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
@@ -143,15 +143,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 29 Mar 2017 20:17:55 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       Last-Modified:
-      - Wed, 29 Mar 2017 20:17:54 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       Etag:
       - '"1c70b30125f28a277d619782301c3b27"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - qo75ZF9WWTTJIbh4rX9m3By8Te0KS7Ws
+      - TdVG1qv6K4oV_F5QxLaDWXyifMb7HMBa
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -164,7 +164,7 @@ http_interactions:
       encoding: UTF-8
       string: stub-thumbnail-contents
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:54 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:27 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
@@ -180,15 +180,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 29 Mar 2017 20:17:56 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       Last-Modified:
-      - Wed, 29 Mar 2017 20:17:54 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       Etag:
       - '"1c70b30125f28a277d619782301c3b27"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - qo75ZF9WWTTJIbh4rX9m3By8Te0KS7Ws
+      - TdVG1qv6K4oV_F5QxLaDWXyifMb7HMBa
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -201,7 +201,7 @@ http_interactions:
       encoding: UTF-8
       string: stub-thumbnail-contents
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:55 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:27 GMT
 - request:
     method: delete
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
@@ -217,9 +217,9 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Wed, 29 Mar 2017 20:17:56 GMT
+      - Wed, 05 Apr 2017 15:24:18 GMT
       X-Amz-Version-Id:
-      - _i9XNva1Ueq_BMXAtJdu_KTkjgq_ItDY
+      - DXU5uQI_TrPRbJD6F2JMGC8lGAn8mpA6
       X-Amz-Delete-Marker:
       - 'true'
       Server:
@@ -228,7 +228,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:56 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:28 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
@@ -246,22 +246,22 @@ http_interactions:
       X-Amz-Delete-Marker:
       - 'true'
       X-Amz-Version-Id:
-      - _i9XNva1Ueq_BMXAtJdu_KTkjgq_ItDY
+      - DXU5uQI_TrPRbJD6F2JMGC8lGAn8mpA6
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 29 Mar 2017 20:17:55 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/thumbnail.png</Key><RequestId>95A1B62CF6EB0BBD</RequestId><HostId>eUTGrMehF+SOEVGrx40KpEyr2Dhe5RRKdt0QrfwbOF8XkWsYdVA1y6igg/gBG2XGNk2wyWUY/nE=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/thumbnail.png</Key><RequestId>CF8B8FD07B3D7465</RequestId><HostId>YIyOPCuoUYB4JNPpE3CqxjnPEs2eSnal1hOfgRnSQTuId0tYOVoenbdgAlnxUo/sCkvqQdLbfI8=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:56 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:28 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -281,14 +281,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 29 Mar 2017 20:17:56 GMT
+      - Wed, 05 Apr 2017 15:24:17 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>1F358A286F6568B8</RequestId><HostId>jPlUcEvs1vsJ7farzlXKBXdoufZfNNJL2SH+q5PykoGJN9GyLDL2TCYiUt5H1EbWCVSoOebJG+0=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>9A8AC4A11360357F</RequestId><HostId>o/HSwTtnSR9bwxYQ1QnDr840mDzDWzt8WjJMRotyPghMAIzQ42BYkWORwtK0JUtzjAhm1S9fVEI=</HostId></Error>
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 20:17:56 GMT
+  recorded_at: Wed, 05 Apr 2017 15:24:28 GMT
 recorded_with: VCR 3.0.3

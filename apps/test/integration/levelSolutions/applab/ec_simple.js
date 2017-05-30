@@ -1,7 +1,5 @@
-var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 
 module.exports = {
   app: "applab",

@@ -81,7 +81,7 @@ const EnrolledWorkshopsTable = React.createClass({
               onClick={() => this.openCertificate(workshop)}
               style={styles.button}
             >
-              Print Certificate
+              Print certificate
             </Button>
           )
         }
@@ -89,7 +89,7 @@ const EnrolledWorkshopsTable = React.createClass({
           onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}
           style={styles.button}
         >
-          Workshop Details
+          Workshop details
         </Button>
       </div>
     );

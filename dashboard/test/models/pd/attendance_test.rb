@@ -111,4 +111,34 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     enrollment.destroy!
     assert_nil attendance.resolve_enrollment
   end
+
+  test 'find_restore_or_create_by' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher
+    attendance_params = {
+      session: @workshop.sessions.first,
+      teacher: teacher,
+      enrollment: enrollment
+    }
+
+    attendance = assert_creates Pd::Attendance do
+      Pd::Attendance.find_restore_or_create_by! attendance_params
+    end
+
+    # Idempotent: return same model the 2nd time
+    new_attendance = assert_does_not_create Pd::Attendance do
+      Pd::Attendance.find_restore_or_create_by! attendance_params
+    end
+    assert_equal attendance, new_attendance
+
+    # restores deleted model
+    attendance.destroy!
+    restored_attendance = assert_does_not_create 'Pd::Attendance.with_deleted' do
+      assert_creates Pd::Attendance do
+        Pd::Attendance.find_restore_or_create_by! attendance_params
+      end
+    end
+    assert_equal attendance, restored_attendance
+    refute attendance.reload.deleted?
+  end
 end

@@ -47,16 +47,24 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {getStore} from '../redux';
+import {TestResults} from '../constants';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
+import {blockAsXmlNode} from '../block_utils';
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+const CANVAS_HEIGHT = 400;
+const CANVAS_WIDTH = 400;
 
-var MAX_STICKER_SIZE = 100;
+const DEFAULT_X = CANVAS_WIDTH / 2;
+const DEFAULT_Y = CANVAS_HEIGHT / 2;
+const DEFAULT_DIRECTION = 90;
 
-var JOINT_RADIUS = 4;
+const MAX_STICKER_SIZE = 100;
 
-var SMOOTH_ANIMATE_STEP_SIZE = 5;
-var FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
+const JOINT_RADIUS = 4;
+
+const SMOOTH_ANIMATE_STEP_SIZE = 5;
+const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 /**
 * Minimum joint segment length
@@ -86,6 +94,37 @@ var ELSA_DECORATION_DETAILS = [
   { x: 12, when: "before" },
   { x:  8, when: "after" },
   { x: 10, when: "after" }
+];
+
+const REMIX_PROPS = [
+  {
+    defaultValues: {
+      initialX: DEFAULT_X,
+      initialY: DEFAULT_Y,
+    },
+    generateBlock: args => blockAsXmlNode('jump_to_xy', {
+      titles: {
+        'XPOS': args.initialX,
+        'YPOS': args.initialY,
+      }
+    }),
+  }, {
+    defaultValues: {
+      startDirection: DEFAULT_DIRECTION
+    },
+    generateBlock: args => blockAsXmlNode('draw_turn', {
+      titles: {
+        'DIR': 'turnRight',
+      },
+      values: {
+        'VALUE': {
+          type: 'math_number',
+          titleName: 'NUM',
+          titleValue: args.startDirection - DEFAULT_DIRECTION,
+        },
+      },
+    }),
+  },
 ];
 
 /**
@@ -194,6 +233,7 @@ Artist.prototype.init = function (config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
+  config.prepareForRemix = Artist.prototype.prepareForRemix.bind(this);
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;
@@ -219,7 +259,7 @@ Artist.prototype.init = function (config) {
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
   ReactDOM.render(
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={visualizationColumn}
         onMount={this.studioApp_.init.bind(this.studioApp_, config)}
@@ -227,6 +267,68 @@ Artist.prototype.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+/**
+ * Add blocks that mimic level properties that are set on the current level
+ * but not set by default, in this case the artist's starting position and
+ * orientation.
+ */
+Artist.prototype.prepareForRemix = function () {
+  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+        this.level[prop] === undefined ||
+            this.level[prop] === group.defaultValues[prop]))) {
+    // If all of the level props we need to worry about are undefined or equal
+    // to the default value, we don't need to insert any new blocks.
+    return Promise.resolve();
+  }
+
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+  let whenRun = blocksDom.querySelector('block[type="when_run"]');
+  if (!whenRun) {
+    whenRun = blocksDocument.createElement('block');
+    whenRun.setAttribute('type', 'when_run');
+    blocksDom.appendChild(whenRun);
+  }
+  let next = whenRun.querySelector('next');
+  if (next) {
+    whenRun.removeChild(next);
+  }
+
+  const insertBeforeNext = block => {
+    if (next) {
+      block.appendChild(next);
+    }
+    next = blocksDocument.createElement('next');
+    next.appendChild(block);
+  };
+
+  for (let group of REMIX_PROPS) {
+    let customized = false;
+    for (let prop in group.defaultValues) {
+      const value = this.level[prop];
+      if (value !== undefined && value !== group.defaultValues[prop]) {
+        customized = true;
+        break;
+      }
+    }
+    if (!customized) {
+      continue;
+    }
+    const blockArgs = {};
+    for (let prop in group.defaultValues) {
+      blockArgs[prop] = this.level[prop] !== undefined ?
+          this.level[prop] :
+          group.defaultValues[prop];
+    }
+    insertBeforeNext(group.generateBlock(blockArgs));
+  }
+
+  whenRun.appendChild(next);
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  return Promise.resolve();
 };
 
 Artist.prototype.loadAudio_ = function () {
@@ -261,6 +363,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
   this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
   this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
+  this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
 
   // Create display canvas.
   var displayCanvas = this.createCanvas_('display', 400, 400);
@@ -556,10 +659,10 @@ Artist.prototype.drawDecorationAnimation = function (when) {
  */
 Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
-  this.x = CANVAS_HEIGHT / 2;
-  this.y = CANVAS_WIDTH / 2;
+  this.x = DEFAULT_X;
+  this.y = DEFAULT_Y;
   this.heading = this.level.startDirection !== undefined ?
-      this.level.startDirection : 90;
+      this.level.startDirection : DEFAULT_DIRECTION;
   this.penDownValue = true;
   this.visible = true;
 
@@ -736,7 +839,7 @@ Artist.prototype.handleExecutionError = function (err, lineNumber) {
   this.executionError = { err: err, lineNumber: lineNumber };
 
   if (err instanceof SyntaxError) {
-    this.testResults = this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+    this.testResults = TestResults.SYNTAX_ERROR_FAIL;
   }
 
   this.finishExecution_();
@@ -1343,6 +1446,8 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  */
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
+  const saveToProjectGallery = this.skin.id === 'artist' && !level.impressive;
+  const {isSignedIn} = getStore().getState().pageConstants;
 
   this.studioApp_.displayFeedback({
     app: 'turtle',
@@ -1358,6 +1463,9 @@ Artist.prototype.displayFeedback_ = function () {
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
     saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
+    // save to the project gallery instead of the legacy gallery
+    saveToProjectGallery: saveToProjectGallery,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
@@ -1437,19 +1545,19 @@ Artist.prototype.checkAnswer = function () {
   if (level.isK1 && !levelComplete && !this.studioApp_.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
-    this.testResults = this.studioApp_.TestResults.APP_SPECIFIC_ERROR;
+    this.testResults = TestResults.APP_SPECIFIC_ERROR;
     this.message = turtleMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      this.testResults === this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.testResults = this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL;
+      this.testResults === TestResults.TOO_MANY_BLOCKS_FAIL) {
+    this.testResults = TestResults.TOO_MANY_BLOCKS_FAIL;
 
   } else if ((this.testResults ===
-      this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (this.testResults === this.studioApp_.TestResults.ALL_PASS)) {
+      TestResults.TOO_MANY_BLOCKS_FAIL) ||
+      (this.testResults === TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
@@ -1457,7 +1565,7 @@ Artist.prototype.checkAnswer = function () {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') === -1) {
         this.testResults =
-            this.studioApp_.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+            TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
         this.message = commonMsg.tooMuchWork();
       }
     }
@@ -1476,13 +1584,15 @@ Artist.prototype.checkAnswer = function () {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
+    this.testResults = TestResults.FREE_PLAY;
   }
+
+  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
   this.studioApp_.stopLoopingAudio('start');
-  if (this.testResults === this.studioApp_.TestResults.FREE_PLAY ||
-      this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (this.testResults === TestResults.FREE_PLAY ||
+      this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
@@ -1510,7 +1620,7 @@ Artist.prototype.checkAnswer = function () {
     var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
     // Get the canvas data for feedback.
-    if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
+    if (this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
       !isFrozen && (level.freePlay || level.impressive)) {
       reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
     }
@@ -1535,11 +1645,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   this.ctxFeedback.canvas.height = height || origHeight;
 
   // Clear the feedback layer
-  var style = this.ctxFeedback.fillStyle;
-  this.ctxFeedback.fillStyle = color.white;
-  this.ctxFeedback.clearRect(0, 0, this.ctxFeedback.canvas.width,
-    this.ctxFeedback.canvas.height);
-  this.ctxFeedback.fillStyle = style;
+  this.clearImage_(this.ctxFeedback);
 
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // For frozen skins, show everything - including background,
@@ -1548,22 +1654,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
     this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
-    // Draw the images layer.
-    if (!this.level.discardBackground) {
-      this.ctxFeedback.globalCompositeOperation = 'source-over';
-      this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
-          this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-    }
-
-    // Draw the predraw layer.
-    this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-
-    // Draw the user layer.
-    this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    this.drawImage_(this.ctxFeedback);
   }
 
   // Save the canvas as a png
@@ -1574,6 +1665,45 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   this.ctxFeedback.canvas.height = origHeight;
 
   return image;
+};
+
+/**
+ * Renders the artist's image onto a canvas. Relies on this.ctxImages,
+ * this.ctxPredraw, and this.ctxScratch to have already been drawn.
+ * @returns {HTMLCanvasElement} A canvas containing the thumbnail.
+ * @private
+ */
+Artist.prototype.getThumbnailCanvas_ = function () {
+  this.clearImage_(this.ctxThumbnail);
+  this.drawImage_(this.ctxThumbnail);
+  return this.ctxThumbnail.canvas;
+};
+
+Artist.prototype.clearImage_ = function (context) {
+  var style = context.fillStyle;
+  context.fillStyle = color.white;
+  context.clearRect(0, 0, context.canvas.width,
+    context.canvas.height);
+  context.fillStyle = style;
+};
+
+Artist.prototype.drawImage_ = function (context) {
+  // Draw the images layer.
+  if (!this.level.discardBackground) {
+    context.globalCompositeOperation = 'source-over';
+    context.drawImage(this.ctxImages.canvas, 0, 0,
+      context.canvas.width, context.canvas.height);
+  }
+
+  // Draw the predraw layer.
+  context.globalCompositeOperation = 'source-over';
+  context.drawImage(this.ctxPredraw.canvas, 0, 0,
+    context.canvas.width, context.canvas.height);
+
+  // Draw the user layer.
+  context.globalCompositeOperation = 'source-over';
+  context.drawImage(this.ctxScratch.canvas, 0, 0,
+    context.canvas.width, context.canvas.height);
 };
 
 // Helper for creating canvas elements.

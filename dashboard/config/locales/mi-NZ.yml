@@ -90,6 +90,8 @@
     forgot_password: Kua wareware i a koe tō kupuhipa?
     need_confirmation: Kāore koe i whiwhi ki ngā tohutohu whakaū?
     need_unlock: Kāore koe i whiwhi ki ngā tohutohu wetemaukati?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} ngā ākonga kua waitohu kē."
     teacher_count: "%{count} ngā pouako kua waitohu kē."
@@ -211,6 +213,14 @@
       He ngahau, he pai ā-tirohanga hoki ngā whakaakoranga, ā, ka whakaakona ngā ariā waiwai o te pūtaiao rorohiko mā ētahi wheako māmā, ārahi, rite ki te kēmu te hanga. Ka ako i ngā mahi waehere i a Bill Gates, a Mark Zuckerberg, i te kēmu Manu Takariri me Ngā Tipu ki Ngā Kairoro. :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: I tukuna te tono
     added_teacher: i tāpiritia a %{name} hei pouako mōu
@@ -227,8 +237,6 @@
       cant_join_own_section: Kia manawanui mai, tē taea e koe te hono atu ki tō wāhanga
         ake.
     mail:
-      invite_student:
-        subject: Hono atu ki tētahi whakaakoranga me %{teacher_name} ki Code.org!
       student_disassociated:
         subject: 'Whakamōhiotanga Code.org: Kāore a %{student_name} e whai hononga
           hei ākonga mōu ināianei.'
@@ -494,6 +502,7 @@
       te tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko.
     announcement_petition_button: Tāpiritia tō ingoa
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā āhuahira
       me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia ngā
       whakapāohotanga o mua.</a>
@@ -559,17 +568,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā
       whakaurua he waehere wāhanga rerekē.
-    section_code_not_entered: Tēnā whakaratoa mai he waehere_wāhanga_onāianei.
     section_code_cant_be_current_section: Kāore e whakaae ana kia rite tonu te wāhanga
       onāianei ki te wāhanga hou.
     current_section_dne: Kia manawanui mai, kāore tēnei wāhanga %{current_section_code}.
       Tēnā whakaurua he waehere wāhanga rerekē.
-    students_not_yours: Tē taea e koe ngā ākonga o tētahi wāhanga ehara i a koe, te
-      whakawhiti.
-    stay_enrolled_not_entered: Tēnā whakaratoa mai te noho_kaiuru_ki_te wāhanga_onāianei.
     student_ids_not_entered: Tēnā whakaratoa mai ngā id_ākonga.
     student_not_found: Kotahi neke atu rānei ngā ākonga kāore i kitea.
     all_students_must_be_in_current_section: Me mātua noho ngā ākonga katoa hei kaiwhakauru

@@ -3,7 +3,7 @@
 
 %div
   %h1
-    Register for a Code Studio workshop
+    = "Register for a #{@workshop.course} workshop"
   %p
     Taught by Code.org facilitators who are experienced computer science educators,
     our workshops will prepare you to teach the Code.org curriculum.
@@ -16,12 +16,18 @@
         = render partial: 'workshop_details'
         %h2
           Your Information
-        %p
-          Fields marked with a
-          %span.form-required-field
-            *
-          are required. Your email address will be shared
-          with the workshop organizer and facilitators.
+        - unless current_user
+          %div.info-box-teal
+            %div.info-box-left
+              =image_tag image_url("info_icon.png")
+            %div.info-box-right
+              %p
+                %span.info-box-message
+                  Already have a Code.org account?
+              %p
+                = link_to 'Sign in', CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
+                first to pre-fill some information.
+
         = render partial: 'enroll_form', locals: {action: 'create', submit_text: 'Register'}
 
       -# Right column

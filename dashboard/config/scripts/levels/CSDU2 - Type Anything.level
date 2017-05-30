@@ -5,11 +5,11 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Welcome to Web Lab!\r\n\r\n<img src=\"https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg\" style=\"width:700px; float:right\">\r\n\r\nThe platform you are in is called Web Lab. There are three main parts of the screen in Web Lab.\r\n\r\n\r\n\r\n# Do This\r\n\r\n* Try typing something in the Code Area\r\n* Press <img src=\"https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12 PM.png\" style=\"width:100px\"> to see it in the Preview Area!\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg\" style=\"width:400px; float:right\">\r\n\r\n# Welcome to Web Lab!\r\n\r\nThe platform you are in is called Web Lab. There are three main parts of the screen in Web Lab.\r\n\r\n# Do This\r\n\r\n* Try typing something in the Code Area\r\n* Press <img src=\"https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png\" style=\"width:150px\"> to see it in the Preview Area!",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" \"\r\n    }\r\n  ]\r\n}",
     "instructions_important": "false",
     "encrypted_examples": "NG9IR4WS4w7st/79PLjuyQrSWOlEyOJDo2miHePA+el2ho1wD38Apuy5NvGY\nSF3BKBojC4oG3UJQdrupCxV+LA==\n",
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "true"
   },
   "published": true,
   "notes": "",

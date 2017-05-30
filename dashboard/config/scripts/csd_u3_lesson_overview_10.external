@@ -1,0 +1,18 @@
+name 'CSD U3 Lesson Overview 10'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson, students are introduced to boolean values and logic, as well as conditional statements. The class starts by playing a simple game of Stand Up, Sit Down where the boolean (true/false) statements are in regard to personal properties (hair or eye color, clothing type, age, etc). This gets students thinking about how they can frame a property with multiple potential values (such as age) with a binary question.
+
+# Vocabulary
+
+* **Boolean** - A single value of either TRUE or FALSE
+* **Conditionals** - Statements that only run under certain conditions.
+* **Expression** - Any valid unit of code that resolves to a value.
+
+
+# Resources
+
+* [Boolean Properties](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/) - Activity Guide ([PDF](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=doc))
+MARKDOWN

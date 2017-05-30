@@ -37,7 +37,7 @@
     "encrypted_examples": "c5iFLENjb4wLspV7qxq9BUFj1vIHIthCGZumKlHSvm9wmZyE4dDYYuA+1r+8\nCbME\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "disable_if_else_editing": "false",

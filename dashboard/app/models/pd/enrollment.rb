@@ -25,6 +25,9 @@
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
+require 'cdo/code_generation'
+require 'cdo/safe_names'
+
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
@@ -32,6 +35,9 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
+  has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
+  has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
+  auto_strip_attributes :first_name, :last_name
 
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
@@ -80,6 +86,13 @@ class Pd::Enrollment < ActiveRecord::Base
     joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
+  scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
+  scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
+  scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
+
+  # Any enrollment with attendance, for an ended workshop, has a survey
+  scope :with_surveys, -> {for_ended_workshops.attended}
+
   def has_user?
     user_id
   end
@@ -90,6 +103,14 @@ class Pd::Enrollment < ActiveRecord::Base
     # Until the survey is processed (via process_forms cron job), it won't show up in the enrollment model.
     # Check pegasus forms directly to be sure.
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
+  end
+
+  def survey_class
+    if workshop.local_summer?
+      Pd::LocalSummerWorkshopSurvey
+    else
+      Pd::WorkshopSurvey
+    end
   end
 
   # Filters a list of enrollments for survey completion, checking with Pegasus (in batch) to include
@@ -147,6 +168,10 @@ class Pd::Enrollment < ActiveRecord::Base
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
+
+    # TODO: elijah: once the route is fully ready, add the following codition above
+    #elsif workshop.local_summer?
+    #  pd_new_workshop_survey_url(code)
   end
 
   def send_exit_survey
@@ -189,6 +214,11 @@ class Pd::Enrollment < ActiveRecord::Base
     write_attribute :last_name, last_name || ''
   end
 
+  def self.get_safe_names
+    first_last_name_proc = ->(enrollment) {[enrollment.first_name, enrollment.last_name]}
+    SafeNames.get_safe_names(all, first_last_name_proc)
+  end
+
   protected
 
   def autoupdate_user_field
@@ -208,9 +238,6 @@ class Pd::Enrollment < ActiveRecord::Base
   private
 
   def unused_random_code
-    loop do
-      code = SecureRandom.hex(10)
-      return code unless Pd::Enrollment.exists?(code: code)
-    end
+    CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

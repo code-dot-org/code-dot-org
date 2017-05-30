@@ -1,0 +1,9 @@
+name 'CSP longitudinal agree to contact'
+right 'yes'
+right 'no'
+
+markdown <<MARKDOWN
+...And you agree to let us contact you in the future....
+
+Are you willing to let us contact you in the future?
+MARKDOWN

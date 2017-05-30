@@ -88,6 +88,8 @@
     forgot_password: Zabudli ste heslo?
     need_confirmation: Neprišli ti pokyny na potvrdenie?
     need_unlock: Neprišli ti pokyny na odomknutie?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} študentov sa už zaregistrovalo."
     teacher_count: "%{count} učitelov sa už zaregistrovalo."
@@ -206,6 +208,14 @@
       Kurzy sú zábavné, vizuálne pútavé a naučia základné pojmy počítačovej vedy pomocou jednoduchého, usmerňovaného, hre podobného zážitku. Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies, naučte sa s nimi kódovať!  :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Pozvanie odoslané
     added_teacher: "%{name} pridaný ako váš učiteľ"
@@ -221,8 +231,6 @@
       blank_code: Zadaj kód sekcie
       cant_join_own_section: Prepáč, nemôžeš sa pridať do vlastnej sekcie.
     mail:
-      invite_student:
-        subject: Zúčastni sa hodiny s %{teacher_name} na Code.org!
       student_disassociated:
         subject: 'Code.org upozornenie: %{student_name} už nie je tvoj študent.'
   reports:
@@ -473,6 +481,7 @@
       informatiky v rámci celej školskej dochádzky na základných i stredných školách.
     announcement_petition_button: Pridaj svoje meno
     announcement_go_beyond_button: Pokračovať ďalej
+    announcement_apply_now: Apply now
     announcement_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom blogu.
       <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
     announcement_hoc_launch: Tisíce vyučujúcich vo viac než 180 krajinách odštartuje
@@ -536,16 +545,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje.
       Zadajte kód inej sekcie.
-    section_code_not_entered: Uveďte, prosím, current_section_code.
     section_code_cant_be_current_section: Aktuálna sekcia nemôže byť rovnaká ako nová
       sekcia.
     current_section_dne: Ospravedlňujeme sa, ale sekcia %{current_section_code} neexistuje.
       Zadajte kód inej sekcie.
-    students_not_yours: Nemôžeš presunúť študentov zo sekcie, ktorá nepatrí tebe.
-    stay_enrolled_not_entered: Uveďte, prosím, stay_enrolled_in_current_section.
     student_ids_not_entered: Uveďte, prosím, študentove ids.
     student_not_found: Jeden alebo viac študentov nemožno nájsť.
     all_students_must_be_in_current_section: Všetci študenti musia byť v súčasnosti

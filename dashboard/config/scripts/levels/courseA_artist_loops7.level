@@ -36,6 +36,9 @@
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/6502bc59737a861d230d871c92de4808-image-1477108259646.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_artist_loops7_1\",\r\n  \"callout_text\": \"This number means that only one of this kind of block can be used in the final answer.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right top\",\r\n    \"at\": \"left top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -51,7 +54,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="simple_move_up_right" limit="1"/>
+        <block type="simple_move_up_right" limit="1" id="callMe"/>
         <block type="simple_move_down_right" limit="1"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">???</title>

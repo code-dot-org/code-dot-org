@@ -79,6 +79,7 @@
     forgot_password: 'Har du glemt passordet ditt?'
     need_confirmation: "Mottok du ikke instruksjoner om hvordan du bekrefter?"
     need_unlock: "Mottok du ingen instruksjoner om hvordan du låser opp?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} elever har allerede registrert seg.'
     teacher_count: '%{count} lærere har allerede registrert seg.'
@@ -173,6 +174,14 @@
       Kursene er morsomme, visuelt stimulerende og lærer deg de grunnleggende konseptene innen informatikk ved å benytte en enkel, spill-lignende opplevelse som du loses igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Invitasjon er sendt'
     added_teacher: '%{name} er lagt til som din lærer'
@@ -186,8 +195,6 @@
       blank_code: "Vennligst skriv en seksjonskode"
       cant_join_own_section: "Beklager, du kan ikke bli med i din egen seksjon."
     mail:
-      invite_student:
-        subject: "Bli med i en av klassene til %{teacher_name} på Code.org!"
       student_disassociated:
         subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som din elev.'
   reports:
@@ -386,6 +393,7 @@
     announcement_petition: "Som lærer, er du del av en bevegelse som ønsker å gi alle elever, i alle skoler, muligheten til å lære programmering. Nå er det på tide å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning, 28 guvernører og administrerende direktører i de største selskapene i USA sammen og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning."
     announcement_petition_button: "Legg til navnet ditt"
     announcement_go_beyond_button: "Fortsett videre"
+    announcement_apply_now: "Apply now"
     announcement_all: "Hold deg oppdatert med oppdateringer og ny funksjonalitet på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere kunngjøringer.</a>"
     announcement_hoc_launch: "Tusener av lærere i mer enn 180 land vil undervise programmering under Kodetimen, 5-11 desember. Vi regner med at du vil hjelpe oss å nå flere elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer din kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise programmering."
     announcement_mc_launch: "Et av våre mest populære opplegg har fått en oppfølger! Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft. De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime."
@@ -398,13 +406,11 @@
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode."
-    section_code_not_entered: "Legg inn gjeldende_seksjons_kode."
     section_code_cant_be_current_section: "Gjeldende seksjon kan ikke være den samme som den nye seksjonen."
     current_section_dne: "Beklager, men seksjon %{current_section_code} finnes ikke. Legg inn en annen seksjonskode."
-    students_not_yours: "Du kan ikke flytte elever fra en seksjon som ikke tilhører deg."
-    stay_enrolled_not_entered: "Vennligst oppgi stay_enrolled_in_current_section."
     student_ids_not_entered: "Vennligst oppgi student_ids."
     student_not_found: "En eller flere elever ble ikke funnet."
     all_students_must_be_in_current_section: "Alle elever må være innrullert i din avdeling."

@@ -1,4 +1,5 @@
 name 'CSD U3 Defender SFLP'
+display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
 # Programming - Interactive Games and Animations: Lesson 16 - The Game Design Process

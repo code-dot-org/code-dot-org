@@ -1,8 +1,10 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-- if @user_course_enrollments.try(:any?)
-  - @user_course_enrollments.each do |user_course_enrollment|
+- user_course_enrollments = local_assigns[:user_course_enrollments]
+
+- if user_course_enrollments.try(:any?)
+  - user_course_enrollments.each do |user_course_enrollment|
     %h3.course_title
       = user_course_enrollment.plc_course.name
     -# Lame that we have to do this but Firefox doesn't support multiline flexboxes

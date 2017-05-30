@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "你必須抓住 20 個機械鼠。在「當抓到機械鼠」事件中放入「新增機械鼠」的積木，這樣你每次抓到它時就可以新增 2 個以上的機械鼠。",
   "failedMultiplyCharactersTimeoutGotSome": "恭喜！你已學會用程式碼來增加機械鼠。你可以繼續前往下一關，或是再試一次，抓住 20 個的機械鼠。新增的機械鼠愈多，關卡會更容易通過。（按住鍵盤或螢幕的方向鍵不放，角色會移動的更快些。）",
   "failedChangeSettingTimeout": "抓到 3 個反抗軍才可以繼續。",
-  "failedChangeSettingSettings": "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。"
+  "failedChangeSettingSettings": "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }

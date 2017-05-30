@@ -2,14 +2,14 @@
 - resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
 
 -#
-  Retrieve the return_to value from the session, which will also delete it.
+  Retrieve the user_return_to value from the session, which will also delete it.
   It means that a failed attempted to sign up here will no longer take the
   user to the recorded return_to URL upon a future attempt at sign-in/up, but
   that should be alright because it's really only a best-attempt, and not
   crucial, and should probably only be done immediately after the user attempted
   to go that that URL anyway, not a long time afterwards which is confusing.
 
-- return_to_url = get_and_clear_session_return_to
+- user_return_to_url = get_and_clear_session_user_return_to
 
 #signup
   .row
@@ -61,20 +61,8 @@
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
           .error_in_field
 
-        #schoolname-block.itemblock{style: "display: none"}
-          .labelblock= t('signup_form.school_name')
-          = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
-          .error_in_field
-
-        #schooladdress-block.itemblock{style: "display: none"}
-          .labelblock= t('signup_form.school_address')
-          = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 1024
-          .error_in_field
-
         #schooldropdown-block.itemblock{style: "display: none;"}
           = render partial: 'shared/school_info_registration', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
-
-        #schooldropdown-ab-test-marker{style: "display: block; position: absolute; left: 1000px; visibility: hidden;"}
 
         #age-block.itemblock
           .labelblock= t('signup_form.age')
@@ -139,7 +127,7 @@
     // Send through some values that the JavaScript will need.
     window.signupManager = new SignupManager({
       isTeacher: "#{resource.teacher?}",
-      returnToUrl: "#{return_to_url}",
+      returnToUrl: "#{user_return_to_url}",
       teacherDashboardUrl: "#{teacher_dashboard_url}",
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
       passwordMismatchString: "#{t('signup_form.mismatch_password')}",

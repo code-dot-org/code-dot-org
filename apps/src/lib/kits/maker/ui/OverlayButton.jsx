@@ -12,36 +12,51 @@ const style = {
   fontFamily: '"Gotham 4r", sans-serif',
   fontSize: 12,
   fontWeight: 'bold',
-  color: color.white,
+  color: color.charcoal,
   textDecoration: 'none',
   backgroundColor: 'transparent',
   borderStyle: 'solid',
-  borderColor: color.white,
+  borderColor: color.charcoal,
   borderWidth: 1,
   borderRadius: 3,
   outline: 'none',
   ':hover': {
-    color: color.black,
+    color: color.charcoal,
+    borderColor: color.white,
     backgroundColor: color.white,
     cursor: 'pointer',
     boxShadow: 'none',
   },
 };
 
-class OverlayButton extends Component {
+const primaryStyle = {
+  backgroundColor: color.charcoal,
+  borderColor: color.charcoal,
+  color: color.lighter_gray,
+};
+
+export default Radium(class OverlayButton extends Component {
+  static propTypes = {
+    className: PropTypes.string,
+    primary: PropTypes.bool,
+    text: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+  };
+
   render() {
+    const composedStyle = {
+      ...style,
+      ...(this.props.primary && primaryStyle),
+    };
+
     return (
       <button
-        style={style}
+        className={this.props.className}
+        style={composedStyle}
         onClick={this.props.onClick}
       >
         {this.props.text}
       </button>
     );
   }
-}
-OverlayButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-};
-export default Radium(OverlayButton);
+});

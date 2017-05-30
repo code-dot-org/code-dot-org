@@ -9,13 +9,14 @@ var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
 
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 describe('gamelabReducer', function () {
   var store;
   var initialState;
   var CODE = GameLabInterfaceMode.CODE;
   var ANIMATION = GameLabInterfaceMode.ANIMATION;
+
+  testUtils.setExternalGlobals();
 
   beforeEach(function () {
     store = createStore(combineReducers(_.assign({}, commonReducers, gamelabReducers)));

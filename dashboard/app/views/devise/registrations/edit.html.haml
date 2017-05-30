@@ -2,8 +2,6 @@
 
 %h2= @page_title
 
-= render partial: 'devise/confirmations/alert'
-
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
   - if f.object.can_edit_email?
@@ -18,11 +16,6 @@
       = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off', maxlength: 255
     -else
       = f.object.email.present? ? f.object.email : '***encrypted***'
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-      %br/
-      %br/
   - if resource.username.present?
     .field
       = f.label :username
@@ -64,10 +57,13 @@
       = f.label :full_address
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 1024
     = f.hidden_field :age, value: "21"
-  -# Don't allow editing user type unless we can also edit email, because
-  -# changing from a student (encrypted email) to a teacher (plaintext email)
-  -# requires entering an email address.
-  - if f.object.can_edit_email?
+  -#
+    Don't allow editing user type unless we can also edit email, because
+    changing from a student (encrypted email) to a teacher (plaintext email)
+    requires entering an email address.
+    Don't allow editing user type for teachers with sections, as our validations
+    require sections to be owned by teachers.
+  - if f.object.can_edit_email? && (f.object.student? || Section.where(user_id: f.object.id).empty?)
     .field
       = f.label t('signup_form.user_type')
       = f.select :user_type, user_type_options

@@ -10,10 +10,40 @@
 
 %p
   We’re excited to continue to work together to bring computer science to your classroom.
+  - if @workshop.local_summer? && @is_reminder
+    Please take a moment to complete the pre-course survey and review the
+    following logistical details about your workshop.
   If you have any questions about your workshop, reach out to your workshop organizer directly:
   = @workshop.organizer.name
   at
   = mail_to(@workshop.organizer.email) + '.'
+
+- if @workshop.local_summer? && @is_reminder
+  %h3
+    Pre-Course Survey
+  %p
+    Before starting your Summer Workshop,
+    = link_to "please take this survey", CDO.code_org_url('/csp-pre-survey', CDO.default_scheme)
+    about your thoughts on computer science in relation to teaching and
+    learning. We will not share individual results beyond Code.org, our
+    partners, and facilitators. We may, however, share aggregate data (for all
+    teachers) publicly. It should take about 20-25 minutes to complete.
+  %p
+    This survey is really important for a few reasons:
+  %ul
+    %li
+      It helps us understand who the population of teachers involved in our
+      Computer Science Principles (CSP) PD program are.
+    %li
+      Your students will be asked to take a similar survey as part of the
+      course. This gives you a bit of a preview of the kinds of questions we
+      will ask them.
+    %li
+      To better understand what helps teachers and students succeed in the
+      course.
+
+  %p
+    Thank you in advance for taking the time to do this!
 
 = render partial: 'workshop_details'
 
@@ -23,14 +53,55 @@
   %p
     = @workshop.notes
 
-%p
-  If your facilitator plans to provide lunch and you have any food allergies, please bring your own meal or eat responsibly.
+
+- if @workshop.local_summer?
+  %p
+    Check with your workshop organizer to see if breakfast or lunch is provided
+    and if you have any food allergies, please bring your own meal or eat
+    responsibly.
+- else
+  %p
+    If your facilitator plans to provide lunch and you have any food allergies,
+    please bring your own meal or eat responsibly.
 
 %p
   Other workshop attendees may post photos from the workshop to social media.
   If you don't want your photo taken, make sure the facilitator knows before the workshop begins.
 
 = render partial: 'how_to_cancel'
+
+- if @workshop.local_summer? && @is_reminder
+  %h3
+    Final reminders
+  %p
+    Be sure to check out your
+    = link_to "online professional learning page", professional_learning_landing_url
+    and complete the following pre-work, if you have not done so already:
+
+  %ul
+    %li
+      %p
+        %strong
+          Code.org’s approach to Computer Science education. (10 min)
+      %p
+        Read about the curriculum values and the philosophy Code.org brought to
+        the design of the AP CS Principles course.
+    %li
+      %p
+        %strong
+          Dive into AP CS Principles! (45-60 min)
+      %p
+        Watch this required series of videos from the College Board for useful
+        context about how AP CS Principles came to be, the goals of the course,
+        and how it was constructed.
+    %li
+      %p
+        %strong
+          Visit Code.org’s CS Principles syllabus. (10 min)
+      %p
+        Are you looking forward to the school year? Take a look at Code.org’s AP
+        CS Principles syllabus. Remember, this course can be taught as either an
+        AP- or intro-level course.
 
 %p
   Thank you,

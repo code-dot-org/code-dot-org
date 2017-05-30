@@ -39,7 +39,7 @@ var AssetManager = React.createClass({
     assetsChanged: React.PropTypes.func,
     allowedExtensions: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired
+    useFilesApi: React.PropTypes.bool
   },
 
   getInitialState: function () {
@@ -101,11 +101,12 @@ var AssetManager = React.createClass({
   },
 
   deleteAssetRow: function (name) {
+    assetListStore.remove(name);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
     this.setState({
-      assets: assetListStore.remove(name),
+      assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + name + '" successfully deleted!'
     });
   },

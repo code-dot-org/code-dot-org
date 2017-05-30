@@ -9,9 +9,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.frameRate": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,

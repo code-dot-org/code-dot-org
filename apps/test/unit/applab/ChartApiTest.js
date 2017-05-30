@@ -127,11 +127,10 @@ describe("ChartApi", function () {
   });
 
   describe("drawChartFromRecords", function () {
-    var chartApi, result, rejection;
+    var chartApi, rejection;
 
     beforeEach(function () {
       chartApi = new ChartApi(fakeDocument, fakeAppStorage);
-      result = null;
       rejection = null;
     });
 
@@ -144,7 +143,6 @@ describe("ChartApi", function () {
     var testMethod = function () {
       return chartApi.drawChartFromRecords.apply(chartApi, arguments)
           .then(function (value) {
-            result = value;
           }, function (error) {
             rejection = error;
           });

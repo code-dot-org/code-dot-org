@@ -13,8 +13,7 @@ export default storybook => {
             url="/level1"
             status={LevelStatus.perfect}
             icon="desktop"
-            text="LEVEL 1"
-            width={130}
+            text="1"
           />
         )
       },
@@ -24,8 +23,7 @@ export default storybook => {
           <ProgressPill
             status={LevelStatus.not_tried}
             icon="desktop"
-            text="LEVEL 1-4"
-            width={130}
+            text="1-4"
           />
         )
       },
@@ -35,7 +33,6 @@ export default storybook => {
           <ProgressPill
             url="/level1"
             status={LevelStatus.perfect}
-            text="UNPLUGGED ACTIVITY"
             fontSize={12}
           />
         )

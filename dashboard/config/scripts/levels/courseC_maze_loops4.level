@@ -29,10 +29,13 @@
     "markdown_instructions": "In this puzzle, two `repeat` loops will help you get the bird to the pig with the fewest number of blocks!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Not all command blocks should be repeated.\",\"hint_id\":\"courseC_maze_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/30e57306666c9fc9fb80cdad1cbdd89b/courseC_maze_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use two `repeat` blocks set to different numbers.\",\"hint_id\":\"courseC_maze_loops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/55008c2805172c1b73ef411db1facd6e/courseC_maze_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"`Turn right` once between the two loops.\",\"hint_id\":\"courseC_maze_loops4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/adb330f313dde352a01ebd650882f49d/courseC_maze_loops4.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-23 21:21:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

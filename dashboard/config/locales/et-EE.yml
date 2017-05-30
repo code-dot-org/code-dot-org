@@ -87,6 +87,8 @@
     forgot_password: Unustasid oma salasõna?
     need_confirmation: Ei saanud kinnituse juhiseid?
     need_unlock: Ei saanud lahtilukustamise juhiseid?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} õpilast on juba registreerunud."
     teacher_count: "%{count} õpetajat on juba registreerunud."
@@ -195,6 +197,14 @@
     subject: Liitu minu klassiga (Code.org lehel)
     body: |
       Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt ja Plants vs Zombielt! :-) %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Kutse saadetud
     added_teacher: "%{name} lisatud kui sinu õpetaja"
@@ -209,8 +219,6 @@
       blank_code: Sisestage jaotise kood
       cant_join_own_section: Kahjuks te ei saa ühineda iseenda osaga.
     mail:
-      invite_student:
-        subject: Liitu klassiga koos %{teacher_name} Code.org!
       student_disassociated:
         subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie
           õpilane.'
@@ -460,6 +468,7 @@
       kongress rahastaks K-12 hariduse arvutiteaduse programmi."
     announcement_petition_button: Lisa oma nimi
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Hoia end kursis uute funktsioonide ja uudistega meie õpetajate
       blogis. <a href='%{teacher_blog_url}' target='_blank'>Vaata vanemaid teadaandeid.</a>
     announcement_hoc_launch: Tuhanded õpetajad rohkem kui 180 riigis hakkavad 5.-11.
@@ -522,16 +531,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code}
       Palun lisa teine sektsiooni kood.
-    section_code_not_entered: Palun sisesta käesoleva_sektsiooni_kood.
     section_code_cant_be_current_section: Käesolev sektsioon ei saa olla sama kui
       uus sektsioon.
     current_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{current_section_code}
       Palun lisa teine sektsioonikood.
-    students_not_yours: Te ei saa õpilasi eemaldada sektsioonist, mis ei kuulu teile.
-    stay_enrolled_not_entered: Palun sisesta jää_käesolevasse_sektsiooni.
     student_ids_not_entered: Palun sisesta õpilaste_id-d.
     student_not_found: "Ühte või mitut õpilast ei leitud."
     all_students_must_be_in_current_section: Kõik õpilased peavad praegu sinu sektsiooni

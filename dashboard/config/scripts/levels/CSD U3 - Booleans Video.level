@@ -9,7 +9,8 @@
     "markdown_instructions": "# Boolean Expressions Video",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "display_name": "Video: Booleans"
   },
   "published": true,
   "notes": "",

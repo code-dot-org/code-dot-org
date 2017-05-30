@@ -46,9 +46,9 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "contained_level_names": [
-      "CSD U3 Variables Predict Where X Embed"
-    ]
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_variables\",\r\n  \"callout_text\": \"Change the number here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"var\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "markdown_instructions": "# Using Variables\r\n\r\nIn this program, the variable `xPosition` is used to store the x-coordinate of the circle.\r\n\r\n# Do This\r\n* Run the program to see how it works.\r\n* Change the number that is stored into the variable [Show me where](#triggercallout=code_triggered) and run the code again.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

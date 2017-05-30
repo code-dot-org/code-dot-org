@@ -10,9 +10,9 @@ import {
   componentConstructors
 } from './PlaygroundComponents';
 import {
-  BOARD_EVENT_ALIASES,
   SONG_CHARGE,
-  CP_COMMAND
+  CP_COMMAND,
+  J5_CONSTANTS
 } from './PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -21,17 +21,11 @@ process.hrtime = require('browser-process-hrtime');
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
 
-const J5_CONSTANTS = {
-  INPUT: 0,
-  OUTPUT: 1,
-  ANALOG: 2,
-  PWM: 3,
-  SERVO: 4
-};
-
 /**
  * Controller interface for an Adafruit Circuit Playground board using
  * Circuit Playground Firmata firmware.
+ * @extends EventEmitter
+ * @implements MakerBoard
  */
 export default class CircuitPlaygroundBoard extends EventEmitter {
   constructor(portName) {
@@ -73,7 +67,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.fiveBoard_ = board;
         resolve();
       });
-      board.once('error', reject);
+      board.on('error', reject);
     });
   }
 
@@ -81,6 +75,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * Initialize a set of johnny-five component controllers.
    * Exposed as a separate step here for the sake of the setup page; generally
    * it'd be better to just call connect(), above.
+   * @return {Promise}
    * @throws {Error} if called before connecting to firmware
    */
   initializeComponents() {
@@ -88,11 +83,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       throw new Error('Cannot initialize components: Not connected to board firmware.');
     }
 
-    this.prewiredComponents_ = {
-      board: this.fiveBoard_,
-      ...createCircuitPlaygroundComponents(this.fiveBoard_),
-      ...J5_CONSTANTS
-    };
+    return createCircuitPlaygroundComponents(this.fiveBoard_).then(components => {
+      this.prewiredComponents_ = {
+        board: this.fiveBoard_,
+        ...components,
+        ...J5_CONSTANTS
+      };
+    });
   }
 
   /**
@@ -136,12 +133,11 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
-   * @param {codegen} codegen
    * @param {JSInterpreter} jsInterpreter
    */
-  installOnInterpreter(codegen, jsInterpreter) {
+  installOnInterpreter(jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
-      codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+      jsInterpreter.addCustomMarshalObject({instance: componentConstructors[key]});
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
 
@@ -189,7 +185,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   digitalRead(pin, callback) {
-    return this.fiveBoard_.digitalRead(pin, callback);
+    this.fiveBoard_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {
@@ -197,14 +193,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   analogRead(pin, callback) {
-    return this.fiveBoard_.analogRead(pin, callback);
+    this.fiveBoard_.analogRead(pin, callback);
   }
 
-  onBoardEvent(component, event, callback) {
-    if (BOARD_EVENT_ALIASES[event]) {
-      event = BOARD_EVENT_ALIASES[event];
-    }
-    component.on(event, callback);
+  /**
+   * @returns {boolean} whether a real board is currently connected or not.
+   */
+  boardConnected() {
+    return !!this.fiveBoard_;
   }
 
   /**

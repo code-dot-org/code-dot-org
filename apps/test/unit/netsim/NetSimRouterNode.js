@@ -541,13 +541,11 @@ describe("NetSimRouterNode", function () {
     });
 
     describe("getting addresses", function () {
-      var wire1, wire2, wire3;
-
       beforeEach(function () {
         NetSimGlobals.setRandomSeed('address assignment test');
-        wire1 = makeWire(1);
-        wire2 = makeWire(2);
-        wire3 = makeWire(3);
+        makeWire(1);
+        makeWire(2);
+        makeWire(3);
         assertTableSize(testShard, 'wireTable', 3);
       });
 
@@ -934,7 +932,7 @@ describe("NetSimRouterNode", function () {
     });
 
     describe("Router bandwidth limits", function () {
-      var fromNodeID, toNodeID, fromAddress, toAddress;
+      var fromAddress, toAddress;
 
       var sendMessageOfSize = function (messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
@@ -947,8 +945,6 @@ describe("NetSimRouterNode", function () {
       };
 
       beforeEach(function () {
-        fromNodeID = clientA.entityID;
-        toNodeID = routerA.entityID;
         fromAddress = clientA.getAddress();
         toAddress = clientB.getAddress();
 

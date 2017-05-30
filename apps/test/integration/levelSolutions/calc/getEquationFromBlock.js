@@ -1,4 +1,3 @@
-var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -38,7 +37,7 @@ function validateGeneratedEquation(assert, blockXml, expectedEquation, blockInde
     }
   });
 
-  studioApp.loadBlocks(blockXml);
+  studioApp().loadBlocks(blockXml);
 
   if (blockIndex === 0) {
     assert.equal(Blockly.mainBlockSpace.getTopBlocks().length, 1);

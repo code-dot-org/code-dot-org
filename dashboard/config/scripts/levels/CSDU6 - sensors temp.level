@@ -56,7 +56,7 @@
       "led.blink": null,
       "led.stop": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.frequency": null,
       "buzzer.play": null,
       "timedLoop": null,
@@ -65,15 +65,16 @@
       "onBoardEvent": null,
       "toggleSwitch.isOpen": null,
       "isPressed": null,
-      "value": {
-        "blockPrefix": "tempSensor."
-      },
       "tempSensor.C": null,
-      "tempSensor.F": null
+      "tempSensor.F": null,
+      "soundSensor.value": null,
+      "soundSensor.setScale": null,
+      "lightSensor.value": null,
+      "lightSensor.setScale": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Make a Thermometer App\r\n\r\nSimilar to the sensors you saw in the previous levels, you can get the raw value of the temperature sensor using `tempSensor.value`. For the temperature sensor, however, there are some more interesting properties available. `tempSensor.F` and `tempSensor.C` will convert the raw input value to either Fahrenheit or Celsius.\r\n\r\n# Do This\r\n\r\nMake a simple thermometer app that reads in values from the temperature sensor. Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r\n\r\n_Challenge: can you make your app continually update the temperature readings?_",
+    "markdown_instructions": "# Make a Thermometer App\r\n\r\nWhile the light and sound sensors have just a raw value with the `value` property, the temperature sensor is a little bit smarter. Instead of `tempSensor.value`, there are two properties `tempSensor.F` and `tempSensor.C` which convert the raw input value to either Fahrenheit or Celsius.\r\n\r\n# Do This\r\n\r\nMake a simple thermometer app that reads in values from the temperature sensor. Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r\n\r\n_Challenge: can you make your app continually update the temperature readings?_",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

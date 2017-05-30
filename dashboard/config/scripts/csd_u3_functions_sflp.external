@@ -1,4 +1,5 @@
 name 'CSD U3 Functions SFLP'
+display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
 # Programming - Interactive Games and Animations: Lesson 15 - Functions

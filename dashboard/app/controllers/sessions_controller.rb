@@ -4,7 +4,7 @@ class SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    session[:return_to] ||= params[:return_to]
+    session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
     if params[:providerNotLinked]
       # This code is only reached through the oauth flow when the user already has an email account.

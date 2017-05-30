@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Use your debugging skills to get Skrat to the acorn.",
+    "instructions": "Use your debugging skills to get Scrat to the acorn.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",

@@ -30,11 +30,6 @@ module ApplicationHelper
     "#{s} ago"
   end
 
-  def format_xml(xml)
-    doc = Nokogiri::XML(xml)
-    doc.to_xhtml
-  end
-
   def gender_options
     User::GENDER_OPTIONS.map do |key, value|
       [(key ? t(key) : ''), value]
@@ -114,16 +109,14 @@ module ApplicationHelper
     CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
   end
 
-  # used by sign-up to retrieve the return_to URL from the session and delete it.
-  def get_and_clear_session_return_to
-    return session.delete(:return_to) if session[:return_to]
+  # used by sign-up to retrieve the user return_to URL from the session and delete it.
+  def get_and_clear_session_user_return_to
+    return session.delete(:user_return_to) if session[:user_return_to]
   end
 
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
-    if session[:return_to]
-      return session.delete(:return_to)
-    elsif resource_or_scope.is_a?(User) && resource_or_scope.teacher?
+    if resource_or_scope.is_a?(User) && resource_or_scope.teacher?
       return teacher_dashboard_url
     end
     '/'
@@ -197,13 +190,6 @@ module ApplicationHelper
     HTML
 
     html.html_safe
-  end
-
-  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
-  def is_k1?  # rubocop:disable PredicateName
-    is_k1 = @script.try(:is_k1?)
-    is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
-    is_k1
   end
 
   def script_certificate_image_url(user, script)

@@ -45,7 +45,7 @@ theme: responsive
 
 ## High School
 
-Looking for resources specifically for AP Computer Science Principles A in Java? See the [AP Computer Science A Resource Page](3rd-party/apcsa)
+Looking for resources specifically for AP Computer Science Principles A in Java? See the [AP Computer Science A Resource Page](/educate/curriculum/apcsa)
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|

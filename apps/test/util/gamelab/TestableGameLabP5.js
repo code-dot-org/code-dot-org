@@ -8,7 +8,6 @@ import {
   injectLevel as injectLevelToSprite
 } from '@cdo/apps/gamelab/GameLabSprite';
 import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/gamelab/GameLabGroup';
-import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 
 /**
  * Builds a GameLabP5 object ready to use in a test and then be thrown away.

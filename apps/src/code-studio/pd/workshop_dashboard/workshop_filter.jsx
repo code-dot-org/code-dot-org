@@ -16,6 +16,8 @@ import {
   Row,
   Col,
   FormGroup,
+  FormControl,
+  InputGroup,
   ControlLabel,
   DropdownButton,
   Button,
@@ -54,7 +56,9 @@ const WorkshopFilter = React.createClass({
         state: React.PropTypes.string,
         course: React.PropTypes.string,
         subject: React.PropTypes.string,
-        organizer_id: React.PropTypes.string
+        organizer_id: React.PropTypes.string,
+        teacher_email: React.PropTypes.string,
+        only_attended: React.PropTypes.string,
       })
     })
   },
@@ -71,13 +75,15 @@ const WorkshopFilter = React.createClass({
     };
   },
 
-  componentWillUnmount() {
-    if (this.organizersLoadRequest) {
-      this.organizersLoadRequest.abort();
+  componentDidMount() {
+    this.isWorkshopAdmin = window.dashboard.workshop.permission === "workshop_admin";
+
+    if (this.isWorkshopAdmin) {
+      this.loadOrganizers();
     }
   },
 
-  componentDidMount() {
+  loadOrganizers() {
     this.organizersLoadRequest = $.ajax({
       method: 'GET',
       url: '/api/v1/pd/workshop_organizers',
@@ -95,6 +101,12 @@ const WorkshopFilter = React.createClass({
         alert("We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again");
       }
     });
+  },
+
+  componentWillUnmount() {
+    if (this.organizersLoadRequest) {
+      this.organizersLoadRequest.abort();
+    }
   },
 
   handleStartChange(date) {
@@ -133,6 +145,16 @@ const WorkshopFilter = React.createClass({
   handleOrganizerChange(selected) {
     const organizer_id = selected ? selected.value : null;
     this.updateLocationAndSetFilters({organizer_id});
+  },
+
+  handleTeacherEmailChange(data) {
+    const teacher_email = data.target.value;
+    this.updateLocationAndSetFilters({teacher_email});
+  },
+
+  handleOnlyAttendedChange(data) {
+    const only_attended = data.target.checked;
+    this.updateLocationAndSetFilters({only_attended});
   },
 
   handleLimitChange(limit) {
@@ -203,7 +225,9 @@ const WorkshopFilter = React.createClass({
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
-      organizer_id: urlParams.organizer_id
+      organizer_id: urlParams.organizer_id,
+      teacher_email: urlParams.teacher_email,
+      only_attended: urlParams.only_attended,
     });
   },
 
@@ -243,8 +267,6 @@ const WorkshopFilter = React.createClass({
       limit: this.state.limit.value
     };
 
-    const permission = window.dashboard.workshop.permission;
-    const isAdmin = permission === "admin";
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
 
@@ -319,7 +341,7 @@ const WorkshopFilter = React.createClass({
           }
           <Clearfix visibleSmBlock />
           {
-            isAdmin &&
+            this.isWorkshopAdmin &&
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -335,6 +357,32 @@ const WorkshopFilter = React.createClass({
               </FormGroup>
             </Col>
           }
+          {
+            this.isWorkshopAdmin &&
+            <Col md={4}>
+              <FormGroup>
+                <ControlLabel>Teacher Email</ControlLabel>
+                <InputGroup>
+                  <FormControl
+                    type="text"
+                    value={filters.teacher_email || ''}
+                    placeholder="Enter email"
+                    onChange={this.handleTeacherEmailChange}
+                  />
+                  <InputGroup.Addon>
+                    <FormControl.Static componentClass="span">
+                      Only Attended? &nbsp;
+                    </FormControl.Static>
+                    <input
+                      type="checkbox"
+                      checked={filters.only_attended === "true"}
+                      onChange={this.handleOnlyAttendedChange}
+                    />
+                  </InputGroup.Addon>
+                </InputGroup>
+              </FormGroup>
+            </Col>
+          }
         </Row>
         <Row>
           <ServerSortWorkshopTable
@@ -342,7 +390,7 @@ const WorkshopFilter = React.createClass({
             queryParams={filters}
             canDelete
             showStatus
-            showOrganizer={isAdmin}
+            showOrganizer={this.isWorkshopAdmin}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
           />
         </Row>
@@ -350,4 +398,5 @@ const WorkshopFilter = React.createClass({
     );
   }
 });
+
 export default WorkshopFilter;

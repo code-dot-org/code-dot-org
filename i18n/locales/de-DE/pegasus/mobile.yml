@@ -314,7 +314,7 @@
   homepage_slot_text_blurb_advocates: "Vielfältigkeit in der Programmierung unterstützen"
   homepage_slot_text_link_stats: "Statistik ansehen"
   homepage_slot_text_link_buy: "Mitmachen"
-  homepage_slot_text_link_donate: "Spenden"
+  homepage_slot_text_link_donate: "Spende"
   homepage_slot_text_link_shop: "T-shirts, Hüte & mehr"
   homepage_header_codestudio: "Code Studio Schülerprojekte"
   homepage_header_donors: "Code.org dankt seinen Unterstützern"
@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "Automatisch generiert"
   dashboard_students_reset_secret: "Geheimnis zurücksetzen"
   dashboard_students_reset_password: "Passwort zurücksetzen"
-  dashboard_students_share_section: 'Teilen Sie die Anmelde-Seite dieser Lerngruppe mit Ihren Schülern:'
+  dashboard_students_share_section: "Teilen Sie die Anmelde-Seite dieser Lerngruppe mit Ihren Schülern:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Drucken Sie Karten mit den Login-Daten Ihrer Schüler aus."
   dashboard_students_secret_picture_title: "Geheimes Bild"
   dashboard_students_secret_picture: "Diese Lerngruppe verwendet <b>Bilder</b> als Login-Typ. Das bedeutet, dass sich Ihre Schüler mit einem geheimen Bild statt einem Passwort anmelden. Schüler sollten zum Anmelden die oben angegebene Anmeldeadresse verwenden."
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "Bitten Sie Ihre Schüler, ein Konto zu erstellen und Ihrer Lerngruppe beizutreten"
   dashboard_students_no_email: "Falls Ihre Schüler keine E-Mail-Adressen besitzen oder Sie die Konten selbst erstellen möchten, wechseln Sie den Login-Typ der Lerngruppe zu <b>Wort</b> oder <b>Bild</b>."
   dashboard_students_print_page: "Diese Seite drucken"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "Klicken Sie <a href=\"/privacy/student-privacy\", target=\"_blank\">hier</a>, um unsere Datenschutzinformationen auszudrucken oder mit Ihren Schülern zu teilen."
   dashboard_curriculum_k5_title: "Vor- und Grundschullehrmaterial"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Lektion 1: Das Internet'
   csp2_name: 'Einheit 2: Digitale Informationen'
   csp3_name: 'Unit 3: Algorithms and Programming'

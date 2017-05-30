@@ -54,4 +54,15 @@ class Pd::Attendance < ActiveRecord::Base
   def self.distinct_teachers
     User.where(id: all.select(:teacher_id).distinct)
   end
+
+  # Idempotent: Find existing, restore deleted, or create a new attendance row.
+  def self.find_restore_or_create_by!(attendance_params)
+    attendance = nil
+    Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      attendance = Pd::Attendance.with_deleted.find_by(attendance_params) ||
+        Pd::Attendance.create!(attendance_params)
+    end
+    attendance.restore if attendance.deleted?
+    attendance
+  end
 end

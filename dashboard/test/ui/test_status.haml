@@ -25,7 +25,7 @@
         %div.failure.bar
         %div.pending.bar
         %div.clear-both
-    - browsers.sort.map do |browser|
+    - browser_features.map {|browser, _| browser['name'] || 'UnknownBrowser'}.uniq.sort.map do |browser|
       %h3= browser
       %div{id: "#{browser}-progress"}
         %div.progress-text
@@ -36,10 +36,11 @@
           %div.clear-both
       %table
         %tbody
-          - features.sort.map do |feature|
+          - browser_features.select {|feature_browser, _| feature_browser['name'] == browser}.map {|_, feature| feature}.sort.map do |feature|
             %tr{data:{browser: browser, feature: feature}}
               %td= browser
-              %td= feature.sub(/features\//, '')
+              %td
+                %a(href="https://github.com/code-dot-org/code-dot-org/blob/#{git_branch}/dashboard/test/ui/#{feature}" target='_blank')= feature.sub(/features\//, '')
               %td.status
               %td.log-link
               %td.rerun-command

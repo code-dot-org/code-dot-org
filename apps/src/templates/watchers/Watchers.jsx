@@ -7,11 +7,11 @@ import TetherComponent from 'react-tether';
 import AutocompleteSelector from './AutocompleteSelector';
 
 const WATCH_VALUE_NOT_RUNNING = "undefined";
-const DEFAULT_AUTOCOMPLETE_OPTIONS = [
-  'Game.mouseX',
-  'Game.mouseY',
-  'Game.frameRate',
-  'Game.frameCount',
+const OPTIONS_GAMELAB = [
+  'World.mouseX',
+  'World.mouseY',
+  'World.frameRate',
+  'World.frameCount',
   'camera.x',
   'camera.y',
   'sprite.x',
@@ -89,9 +89,11 @@ export const Watchers = React.createClass({
     update: React.PropTypes.func.isRequired,
     remove: React.PropTypes.func.isRequired,
     style: React.PropTypes.object,
+    appType: React.PropTypes.string.isRequired
   },
 
   getInitialState: function () {
+    this.defaultAutocompleteOptions = this.props.appType === 'gamelab' ? OPTIONS_GAMELAB : [];
     return {
       text: "",
       history: [],
@@ -99,7 +101,7 @@ export const Watchers = React.createClass({
       autocompleteSelecting: false,
       autocompleteOpen: false,
       autocompleteIndex: 0,
-      autocompleteOptions: DEFAULT_AUTOCOMPLETE_OPTIONS,
+      autocompleteOptions: this.defaultAutocompleteOptions,
       historyIndex: -1
     };
   },
@@ -304,7 +306,7 @@ export const Watchers = React.createClass({
 
   filterOptions() {
     const text = this.state.text;
-    const filteredOptions = DEFAULT_AUTOCOMPLETE_OPTIONS.filter((option) => option.match(new RegExp(text, 'i')));
+    const filteredOptions = this.defaultAutocompleteOptions.filter((option) => option.match(new RegExp(text, 'i')));
     const completeMatch = filteredOptions.length === 1 && filteredOptions[0] === text;
     const navigatingHistory = this.state.historyIndex >= 0;
     const historyTextModified = navigatingHistory && this.state.history[this.state.historyIndex] !== text;
@@ -408,7 +410,8 @@ export const Watchers = React.createClass({
 export const ConnectedWatchers = connect(
   state => ({
     watchedExpressions: state.watchedExpressions,
-    isRunning: state.runState.isRunning
+    isRunning: state.runState.isRunning,
+    appType: state.pageConstants.appType
   }),
   {add, update, remove},
   null,

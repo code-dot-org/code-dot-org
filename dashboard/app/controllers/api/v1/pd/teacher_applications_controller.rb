@@ -2,8 +2,8 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
   authorize_resource class: 'Pd::TeacherApplication', only: :create
 
   def index
-    # Require admin or a matching secret_key param
-    unless current_user.try(:admin?)
+    # Require workshop admin or a matching secret_key param
+    unless current_user.try(:permission?, UserPermission::WORKSHOP_ADMIN)
       secret_key = CDO.pd_teacher_application_list_secret_key
       unless secret_key && secret_key == params[:secret_key]
         render_404

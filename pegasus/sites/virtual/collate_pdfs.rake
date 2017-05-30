@@ -1,5 +1,5 @@
 require_relative '../../src/env'
-require src_dir 'course'
+require src_dir 'curriculum_course'
 require 'pdf/collate'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
@@ -10,7 +10,7 @@ def collate_to_pdf_to_fetch_file(collate_file)
   source_paths = PDF.get_local_markdown_paths(collate_file) +
       PDF.get_local_pdf_paths(collate_file)
   output_filename = collate_file.sub('.collate', '.pdf')
-  v3_path = Course.virtual_to_v3_path(output_filename)
+  v3_path = CurriculumCourse.virtual_to_v3_path(output_filename)
   fetchfile_path = "#{v3_path}.fetch"
   file fetchfile_path => ([collate_file] + source_paths) do
     # Convert all local PDF paths to URLs (since some may be non-local .fetch files)

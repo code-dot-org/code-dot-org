@@ -51,10 +51,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectComponentsInitialize() {
-    return new Promise(resolve => {
-      this.boardController.initializeComponents();
-      resolve();
-    });
+    return this.boardController.initializeComponents();
   }
 
   /**

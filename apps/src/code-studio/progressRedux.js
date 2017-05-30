@@ -6,6 +6,7 @@ import { makeEnum } from '../utils';
 import { mergeActivityResult, activityCssClass } from './activityUtils';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
+import { ViewType, SET_VIEW_TYPE } from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -17,6 +18,8 @@ const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
+const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
+const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 const PEER_REVIEW_ID = -1;
@@ -24,6 +27,7 @@ const PEER_REVIEW_ID = -1;
 const initialState = {
   // These first fields never change after initialization
   currentLevelId: null,
+  currentStageId: null,
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
@@ -32,13 +36,15 @@ const initialState = {
   // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
-  focusAreaPositions: [],
+  focusAreaStageIds: [],
   peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
   isHocScript: null,
+  // Do students see summary view by default?
+  studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false
 };
@@ -100,7 +106,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       changeFocusAreaPath: action.changeFocusAreaPath,
-      focusAreaPositions: action.focusAreaPositions
+      focusAreaStageIds: action.focusAreaStageIds
     };
   }
 
@@ -136,6 +142,35 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isSummaryView: action.isSummaryView
+    };
+  }
+
+  if (action.type === SET_STUDENT_DEFAULTS_SUMMARY_VIEW) {
+    return {
+      ...state,
+      studentDefaultsSummaryView: action.studentDefaultsSummaryView
+    };
+  }
+
+  if (action.type === SET_VIEW_TYPE) {
+    const { viewAs } = action;
+    return {
+      ...state,
+      isSummaryView: viewAs === ViewType.Student && state.studentDefaultsSummaryView
+    };
+  }
+
+  if (action.type === SET_CURRENT_STAGE_ID) {
+    // if we already have a currentStageId, that means we're on a puzzle page,
+    // and we want currentStageId to remain the same (rather than reflecting
+    // the last stage the user has made progress on).
+    if (state.currentStageId) {
+      return state;
+    }
+
+    return {
+      ...state,
+      currentStageId: action.stageId
     };
   }
 
@@ -220,10 +255,10 @@ export const mergePeerReviewProgress = peerReviewsPerformed => ({
   peerReviewsPerformed
 });
 
-export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
+export const updateFocusArea = (changeFocusAreaPath, focusAreaStageIds) => ({
   type: UPDATE_FOCUS_AREAS,
   changeFocusAreaPath,
-  focusAreaPositions
+  focusAreaStageIds
 });
 
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
@@ -232,6 +267,9 @@ export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
 export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
+export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => (
+  { type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW, studentDefaultsSummaryView });
+export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stageId });
 
 // Selectors
 
@@ -249,9 +287,17 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  */
 const lessonFromStageAtIndex = (state, stageIndex) => ({
   ...lessonFromStage(state.stages[stageIndex]),
-  isFocusArea: state.focusAreaPositions.includes(state.stages[stageIndex].position)
+  isFocusArea: state.focusAreaStageIds.includes(state.stages[stageIndex].id)
 });
-const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
+const lessonFromStage = stage => _.pick(stage, [
+  'name',
+  'id',
+  'lockable',
+  'stageNumber',
+  'lesson_plan_html_url',
+  'description_student',
+  'description_teacher',
+]);
 export const lessons = state => state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**

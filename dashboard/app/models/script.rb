@@ -38,15 +38,8 @@ class Script < ActiveRecord::Base
   belongs_to :user
 
   attr_accessor :skip_name_format_validation
+  include SerializedToFileValidation
 
-  validates :name,
-    presence: true,
-    uniqueness: {case_sensitive: false},
-    format: {
-      unless: :skip_name_format_validation,
-      with: /\A[a-z0-9\-]+\z/,
-      message: 'can only contain lowercase letters, numbers and dashes'
-    }
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
@@ -63,10 +56,15 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course?
-      course = Plc::Course.find_or_create_by! name: professional_learning_course
+      course = Course.find_by_name(professional_learning_course)
+      unless course
+        course = Course.new(name: professional_learning_course)
+        course.plc_course = Plc::Course.create!(course: course)
+        course.save!
+      end
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
-        plc_course_id: course.id,
+        plc_course_id: course.plc_course.id,
         unit_name: I18n.t("data.script.name.#{name}.title"),
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
@@ -159,6 +157,12 @@ class Script < ActiveRecord::Base
     candidate_level = script_levels.first.or_next_progression_level
     raise "Script #{name} has no valid progression levels (non-unplugged) to start at" unless candidate_level
     candidate_level
+  end
+
+  # Find the lockable or non-locakble stage based on its relative position.
+  # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
+  def stage_by_relative_position(position, lockable = false)
+    stages.where(lockable: lockable).find_by!(relative_position: position)
   end
 
   # For all scripts, cache all related information (levels, etc),
@@ -385,13 +389,16 @@ class Script < ActiveRecord::Base
     name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name.start_with?('csd')
   end
 
-  # TODO(asher): Rename this method to k1?, removing the need to disable lint.
-  def is_k1?  # rubocop:disable PredicateName
+  private def k1?
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
       Script::COURSE1_NAME
     ].include?(name)
+  end
+
+  def text_to_speech_enabled?
+    k1? || name == Script::COURSEC_DRAFT_NAME
   end
 
   def hide_solutions?
@@ -425,7 +432,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -495,6 +502,7 @@ class Script < ActiveRecord::Base
 
       assessment = nil
       named_level = nil
+      bonus = nil
       stage_flex_category = nil
       stage_lockable = nil
 
@@ -509,8 +517,9 @@ class Script < ActiveRecord::Base
         raw_level_data = raw_level.dup
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
+        bonus = raw_level.delete(:bonus)
         stage_flex_category = raw_level.delete(:stage_flex_category)
-        stage_lockable = raw_level.delete(:stage_lockable)
+        stage_lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
@@ -554,9 +563,10 @@ class Script < ActiveRecord::Base
         script_id: script.id,
         chapter: (chapter += 1),
         named_level: named_level,
+        bonus: bonus,
         assessment: assessment
       }
-      script_level_attributes[:properties] = properties.to_json if properties
+      script_level_attributes[:properties] = properties.with_indifferent_access if properties
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
@@ -583,7 +593,7 @@ class Script < ActiveRecord::Base
         script_level.save! if script_level.changed?
         (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
-          if stage_lockable == true
+          if stage_lockable
             stage.assign_attributes(relative_position: (lockable_count += 1))
           else
             stage.assign_attributes(relative_position: (non_lockable_count += 1))
@@ -650,7 +660,7 @@ class Script < ActiveRecord::Base
           },
           script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
         )
-        Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
+        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -675,12 +685,37 @@ class Script < ActiveRecord::Base
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
 
-  def self.update_i18n(stages_i18n, metadata_i18n = {})
+  # This method updates scripts.en.yml with i18n data from the scripts.
+  # There are three types of i18n data
+  # 1. Stage names, which we get from the script DSL, and is passed in as stages_i18n here
+  # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
+  # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
+  def self.merge_and_write_i18n(stages_i18n, script_name = '', metadata_i18n = {})
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(stages_i18n) {|_, old, _| old}
-    i18n.deep_merge!(metadata_i18n)
-    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
+
+    updated_i18n = update_i18n(i18n, stages_i18n, script_name, metadata_i18n)
+    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + updated_i18n.to_yaml(line_width: -1))
+  end
+
+  def self.update_i18n(existing_i18n, stages_i18n, script_name = '', metadata_i18n = {})
+    if metadata_i18n != {}
+      stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      metadata_i18n['stages'] = {}
+      unless stage_descriptions.nil?
+        JSON.parse(stage_descriptions).each do |stage|
+          stage_name = stage['name']
+          metadata_i18n['stages'][stage_name] = {
+            'description_student' => stage['descriptionStudent'],
+            'description_teacher' => stage['descriptionTeacher']
+          }
+        end
+      end
+      # unlike stages_i18n, we don't expect meta_i18n to have the full tree
+      metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
+    end
+
+    existing_i18n.deep_merge(stages_i18n) {|_, old, _| old}.deep_merge!(metadata_i18n)
   end
 
   def hoc_finish_url
@@ -700,7 +735,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize
+  def summarize(include_stages=true)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -732,11 +767,12 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      stages: stages.map(&:summarize),
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?
     }
+
+    summary[:stages] = stages.map(&:summarize) if include_stages
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
@@ -744,10 +780,32 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def summarize_i18n
-    %w(title description description_short description_audience).map do |key|
+  # Similar to summarize, but returns an even more narrow set of fields, restricted
+  # to those needed in header.html.haml
+  def summarize_header
+    {
+      name: name,
+      disablePostMilestone: disable_post_milestone?,
+      isHocScript: hoc?,
+      student_detail_progress_view: student_detail_progress_view?
+    }
+  end
+
+  def summarize_i18n(include_stages=true)
+    data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+
+    if include_stages
+      data['stageDescriptions'] = stages.map do |stage|
+        {
+          name: stage.name,
+          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+        }
+      end
+    end
+    data
   end
 
   def self.clear_cache

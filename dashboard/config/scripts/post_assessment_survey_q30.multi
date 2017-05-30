@@ -1,0 +1,8 @@
+name 'post-assessment survey q30'
+question 'I enjoy my time in computer science class.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

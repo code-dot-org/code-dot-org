@@ -8,10 +8,13 @@ import {
   reportConnected,
   reportConnectionError,
   disconnect,
+  useFakeBoardOnNextRun,
   isEnabled,
   isConnecting,
   isConnected,
-  hasConnectionError
+  hasConnectionError,
+  getConnectionError,
+  shouldRunWithFakeBoard
 } from '@cdo/apps/lib/kits/maker/redux';
 
 describe('maker/redux.js', () => {
@@ -27,6 +30,8 @@ describe('maker/redux.js', () => {
       expect(isConnecting({})).to.be.false;
       expect(isConnected({})).to.be.false;
       expect(hasConnectionError({})).to.be.false;
+      expect(getConnectionError({})).to.be.null;
+      expect(shouldRunWithFakeBoard({})).to.be.false;
     });
 
     it('can safely call selectors with undefined state', () => {
@@ -34,6 +39,8 @@ describe('maker/redux.js', () => {
       expect(isConnecting()).to.be.false;
       expect(isConnected()).to.be.false;
       expect(hasConnectionError()).to.be.false;
+      expect(getConnectionError({})).to.be.null;
+      expect(shouldRunWithFakeBoard()).to.be.false;
     });
   });
 
@@ -46,6 +53,10 @@ describe('maker/redux.js', () => {
       expect(isConnected(store.getState())).to.be.false;
       expect(isConnecting(store.getState())).to.be.false;
       expect(hasConnectionError(store.getState())).to.be.false;
+    });
+
+    it('runs with a real board', () => {
+      expect(shouldRunWithFakeBoard(store.getState())).to.be.false;
     });
   });
 
@@ -70,12 +81,26 @@ describe('maker/redux.js', () => {
       expect(isConnecting(store.getState())).to.be.false;
       expect(isConnected(store.getState())).to.be.true;
     });
+
+    it('sets maker to run with a real board next time', () => {
+      store.dispatch(useFakeBoardOnNextRun());
+      expect(shouldRunWithFakeBoard(store.getState())).to.be.true;
+      store.dispatch(reportConnected());
+      expect(shouldRunWithFakeBoard(store.getState())).to.be.false;
+    });
   });
 
   describe('the reportConnectionError action', () => {
     it('sets the maker state to connection error', () => {
-      store.dispatch(reportConnectionError());
+      const error = new Error('test');
+      store.dispatch(reportConnectionError(error));
       expect(hasConnectionError(store.getState())).to.be.true;
+    });
+
+    it('stores the reported error', () => {
+      const error = new Error('test');
+      store.dispatch(reportConnectionError(error));
+      expect(getConnectionError(store.getState())).to.eq(error);
     });
   });
 
@@ -83,6 +108,21 @@ describe('maker/redux.js', () => {
     it('disconnects maker', () => {
       store.dispatch(disconnect());
       expect(isConnected(store.getState())).to.be.false;
+    });
+
+    it('clears any stored errors', () => {
+      const error = new Error('test');
+      store.dispatch(reportConnectionError(error));
+      expect(getConnectionError(store.getState())).to.eq(error);
+      store.dispatch(disconnect());
+      expect(getConnectionError(store.getState())).to.be.null;
+    });
+  });
+
+  describe('the useFakeBoardOnNextRun action', () => {
+    it('sets maker to run with a fake board', () => {
+      store.dispatch(useFakeBoardOnNextRun());
+      expect(shouldRunWithFakeBoard(store.getState())).to.be.true;
     });
   });
 });

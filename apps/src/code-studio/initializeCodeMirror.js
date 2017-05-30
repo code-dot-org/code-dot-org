@@ -16,6 +16,7 @@ import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import marked from 'marked';
+import stylelessRenderer from '@cdo/apps/util/StylelessRenderer';
 
 CodeMirrorSpellChecker({
   codeMirrorInstance: CodeMirror,
@@ -30,7 +31,7 @@ CodeMirrorSpellChecker({
  * @param {booblen} [attachments] - whether to enable attachment uploading in
  *        this editor.
  */
-module.exports = function (target, mode, callback, attachments) {
+module.exports = function initializeCodeMirror(target, mode, callback, attachments) {
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -54,7 +55,7 @@ module.exports = function (target, mode, callback, attachments) {
     if (previewElement.length > 0) {
       const originalCallback = callback;
       updatePreview = editor => {
-        previewElement.html(marked(editor.getValue()));
+        previewElement.html(marked(editor.getValue(), {renderer: stylelessRenderer}));
         previewElement.children('details').details();
       };
 

@@ -1,14 +1,12 @@
 name 'Unit 1 Lesson 2 Overview'
-css 'unplugged'
+display_name 'Lesson Overview'
 
 markdown <<MARKDOWN
-# Problem Solving - Computers and Logic: Lesson 2 - The Problem Solving Process
-
-## Background
+# Overview
 
 In this lesson you will learn a formal problem solving process that will help you to structure your approach to a wide variety of problems.
 
-# Resources
+## Resources
 
 * [The Problem Solving Process](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/) - Activity Guide ([PDF](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=doc))
 MARKDOWN

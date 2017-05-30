@@ -11,7 +11,7 @@
   %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
   %p
     If you already have an account at Code.org, please
-    %a{href: "/users/sign_in?return_to=/join/#{params[:section_code]}"} sign into your account
+    %a{href: "/users/sign_in?user_return_to=/join/#{params[:section_code]}"} sign into your account
     before joining the section.
   %p{style: 'margin-bottom: 30px;'} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
   - if @user.errors.any?

@@ -17,6 +17,9 @@ Dashboard::Application.routes.draw do
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
+  get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+
+  get "/home", to: "home#home"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -105,6 +108,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -123,12 +127,12 @@ Dashboard::Application.routes.draw do
   post '/locale', to: 'home#set_locale', as: 'locale'
 
   # quick links for cartoon network arabic
-  get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', return_to: '/flappy/1'
-  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', return_to: '/s/playlab/stage/1/puzzle/1'
-  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
+  get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
+  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/stage/1/puzzle/1'
+  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/stage/1/puzzle/1'
 
   # /lang/xx shortcut for all routes
-  get '/lang/:locale', to: 'home#set_locale', return_to: '/'
+  get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :levels do
@@ -152,6 +156,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
+      get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
@@ -178,7 +183,8 @@ Dashboard::Application.routes.draw do
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
-  get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
+  resources :courses, param: 'course_name'
+  get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
   get '/beta', to: redirect('/')
 
@@ -206,14 +212,11 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
-  get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
-  get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
-  get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/debug', to: 'admin_reports#debug'
 
   # internal search tools
@@ -227,23 +230,23 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
 
+  # internal support tools
   get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
   post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
-  get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
-  post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
   get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
   post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
+  get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+  post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
+  post '/admin/revoke_all_permissions', to: 'admin_users#revoke_all_permissions', as: 'revoke_all_permissions'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-
-  get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -335,10 +338,15 @@ Dashboard::Application.routes.draw do
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
+
+      post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
+      post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
+
+      post :workshop_surveys, to: 'workshop_surveys#create'
     end
   end
 
-  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
+  get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
   namespace :pd do
     # React-router will handle sub-routes on the client.
@@ -348,6 +356,14 @@ Dashboard::Application.routes.draw do
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
     get 'teacher_application/thanks', to: 'teacher_application#thanks'
+    get 'teacher_application/manage', to: 'teacher_application#manage'
+    get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
+    patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
+    get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
+    post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
+
+    get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
+    get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
@@ -358,11 +374,21 @@ Dashboard::Application.routes.draw do
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
-    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
-    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
+    get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
+    post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
+    get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
+
+    get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
+
+    get 'attend/:session_code', controller: 'session_attendance', action: 'attend'
+    post 'attend/:session_code', controller: 'session_attendance', action: 'select_enrollment'
+    get 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'join_session'
+    post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
+    get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
+    post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -404,10 +430,14 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
+      get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
+
+      get 'projects/gallery/public/:project_type/:limit(/:offset)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

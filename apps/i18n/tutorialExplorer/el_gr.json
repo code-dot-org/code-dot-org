@@ -1,9 +1,9 @@
 {
   "filterGrades": "Βαθμοί",
   "filterGradesPre": "Νηπιαγωγίο",
-  "filterGrades25": "Grades 2-5",
-  "filterGrades68": "Grades 6-8",
-  "filterGrades9": "Grades 9+",
+  "filterGrades25": "Τάξεις Β' Δημοτικού - Ε΄Γυμνασίου",
+  "filterGrades68": "Τάξεις ΣΤ' Δημοτικού - Β΄Γυμνασίου",
+  "filterGrades9": "Τάξεις Γ' Γυμνασίου +",
   "filterTeacherExperience": "Εμπειρία εκπαιδευτικού",
   "filterTeacherExperienceBeginner": "Αρχάριος",
   "filterTeacherExperienceComfortable": "Άνετα",

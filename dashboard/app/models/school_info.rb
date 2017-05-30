@@ -77,6 +77,14 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_without_country
   validate :validate_zip
 
+  def complete?
+    validation_type_original = validation_type
+    self.validation_type = VALIDATION_FULL
+    return_val = valid?
+    self.validation_type = validation_type_original
+    return_val
+  end
+
   def should_validate?
     validation_type != VALIDATION_NONE
   end

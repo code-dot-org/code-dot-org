@@ -175,7 +175,7 @@
     "edit_code": true,
     "embed": "true",
     "instructions_important": "false",
-    "start_blocks": "onEvent(\"picture\", \"click\", function(event) {\r\n  setPosition(\"picture\", 135, 10);\r\n});\r\nonEvent(\"safe\", \"click\", function(event) {\r\n  var guess = prompt(\"Enter the code\");\r\n  if (guess == 1234) {\r\n    showElement(\"insideSafe\");\r\n    showElement(\"key\");\r\n  }\r\n});\r\nonEvent(\"key\", \"click\", function(event) {\r\n  setPosition(\"key\", 250, 400);\r\n});\r\nonEvent(\"door\", \"click\", function(event) {\r\n  if (getXPosition(\"key\") == 250) {\r\n    showElement(\"outside\");\r\n  }\r\n});",
+    "start_blocks": "onEvent(\"picture\", \"click\", function(event) {\r\n  setPosition(\"picture\", 135, 10);\r\n});\r\nonEvent(\"safe\", \"click\", function(event) {\r\n  var guess = prompt(\"Enter the code\");\r\n  if (guess == 1205) {\r\n    showElement(\"insideSafe\");\r\n    showElement(\"key\");\r\n  }\r\n});\r\nonEvent(\"key\", \"click\", function(event) {\r\n  setPosition(\"key\", 250, 400);\r\n});\r\nonEvent(\"door\", \"click\", function(event) {\r\n  if (getXPosition(\"key\") == 250) {\r\n    showElement(\"outdoors\");\r\n  }\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

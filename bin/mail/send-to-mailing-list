@@ -68,10 +68,9 @@ def process_command_line(argv=ARGV)
 end
 
 @contacts_lock = Mutex.new
-IP_ADDRESS = '127.0.0.1'.freeze
 def send_message(template, item)
   recipient = @contacts_lock.synchronize do
-    Poste2.ensure_recipient(item['email'], name: item['name'].to_s, ip_address: IP_ADDRESS)
+    Poste2.ensure_recipient(item['email'], name: item['name'].to_s)
   end
 
   Poste2.send_message template, recipient, item.to_hash.except('email', 'name')

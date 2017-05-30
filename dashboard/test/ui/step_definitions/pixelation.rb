@@ -1,3 +1,13 @@
+When /^I am on the (\d+)(?:st|nd|rd|th) pixelation test level$/ do |level_num|
+  pixelation_stage = 17
+  steps %{
+    Given I am on "http://studio.code.org/s/allthethings/stage/#{pixelation_stage}/puzzle/#{level_num}?noautoplay=true"
+    And I wait to see a visible dialog with title containing "Puzzle #{level_num}"
+    And I close the dialog
+    And I wait until pixelation data loads
+  }
+end
+
 When /^I wait until pixelation data loads$/ do
   wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until {@browser.execute_script("return $('#pixel_data').val() != '';")}

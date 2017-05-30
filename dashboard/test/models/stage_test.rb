@@ -15,7 +15,7 @@ class StageTest < ActiveSupport::TestCase
 
   test "lockable_state with swapped level in reverse order without userlevel" do
     _, _, level2, stage, script_level = create_swapped_lockable_stage
-    script_level.properties = {variants: {level1: {active: false}}}.to_json
+    script_level.properties = {variants: {level1: {active: false}}}
     script_level.save!
 
     lockable_state = stage.lockable_state [@student]

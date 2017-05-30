@@ -141,7 +141,7 @@ function validateReport(report) {
         validateType('testResult', value, 'number');
         break;
       case 'submitted':
-        if (report.app === 'applab' || report.app === 'gamelab') {
+        if (report.app === 'applab' || report.app === 'gamelab' || report.app === 'weblab') {
           validateType('submitted', value, 'boolean');
         } else {
           // In sendResultsCompletion this becomes either "true" (the string) or false (the boolean).

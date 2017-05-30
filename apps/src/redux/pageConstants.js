@@ -29,7 +29,6 @@ var ALLOWED_KEYS = new Set([
   'showDebugWatch',
   'showDebugSlider',
   'locale',
-  'localeDirection',
   'hasContainedLevels',
   'isDroplet',
   'isBlockly',
@@ -53,7 +52,9 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'isK1',
+  'textToSpeechEnabled',
   'documentationUrl',
+  'appType'
 ]);
 
 const initialState = {

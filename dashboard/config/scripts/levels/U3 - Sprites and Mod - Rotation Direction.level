@@ -9,7 +9,7 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.frameRate": null,
+      "World.frameRate": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,

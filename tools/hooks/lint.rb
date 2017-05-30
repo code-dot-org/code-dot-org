@@ -4,12 +4,19 @@ require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
+SHARED_JS_DIR = "#{REPO_DIR}/shared/js".freeze
 SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
-def filter_grunt_jshint(modified_files)
+def filter_eslint_apps(modified_files)
   modified_files.select do |f|
     (f.end_with?(".js", ".jsx")) &&
       !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/apps\/lib\//) || f.match(/shared\//))
+  end
+end
+
+def filter_eslint_shared(modified_files)
+  modified_files.select do |f|
+    f.match(%r{/shared/js/[^/]+.js})
   end
 end
 
@@ -43,8 +50,13 @@ def run_rubocop(files)
   run("bundle exec rubocop --force-exclusion #{files.join(' ')}", REPO_DIR)
 end
 
-def run_eslint(files)
+def run_eslint_apps(files)
   run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(' ')}", APPS_DIR)
+end
+
+def run_eslint_shared(files)
+  # Use vanilla eslint parser, because babel-eslint always allows es6
+  run("../../apps/node_modules/eslint/bin/eslint.js #{files.join(' ')}", SHARED_JS_DIR)
 end
 
 def run_haml(files)
@@ -66,7 +78,8 @@ def do_linting
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_scss) => filter_scss(modified_files),
-    Object.method(:run_eslint) => filter_grunt_jshint(modified_files),
+    Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
+    Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 

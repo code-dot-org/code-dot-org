@@ -10,12 +10,15 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     TeacherApplicationDecisionProcessor.any_instance.stubs(:load_workshop_map).returns({})
     @processor = TeacherApplicationDecisionProcessor.new
     @processor.expects(:update_primary_email).never
+    @processor.stubs(:save_accepted_workshop)
 
     @mock_teacher_application = OpenStruct.new(
+      id: 1,
       teacher_name: 'Tracy Teacher',
       primary_email: 'tracy.teacher@example.net',
       teacher_first_name: 'Tracy',
-      program_name: 'CS Principles'
+      program_name: Pd::Workshop::COURSE_CSP,
+      regional_partner_name: 'Code Partner'
     )
     Pd::TeacherApplication.stubs(:find).with(is_a(Integer)).returns(@mock_teacher_application)
   end
@@ -64,17 +67,12 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     end
   end
 
-  def test_is_teachercon
-    # Match substring, with or without "(travel expenses paid)"
-    assert @processor.teachercon? 'July 16 - 21, 2017: Phoenix'
-    assert @processor.teachercon? 'June 18 - 23, 2017: Houston (travel expenses paid)'
-    refute @processor.teachercon? 'not teachercon'
-  end
-
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
-    @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
+    @mock_teacher_application.accepted_program = stub(teachercon?: true)
+    @mock_teacher_application.accepted_workshop = teachercon_name
+    @mock_teacher_application.program_name = Pd::Workshop::COURSE_CSD
 
     result = @processor.process_decision_row(
       {
@@ -89,7 +87,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSD,
       teachercon_location_s: 'Houston',
       teachercon_dates_s: 'June 18 - 23, 2017',
       regional_partner_name_s: 'Code Partner'
@@ -101,8 +99,12 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_process_decisions_row_accept_teachercon_with_partner_override
     teachercon_name = 'June 18 - 23, 2017: Houston'
     new_partner_name = 'manually selected partner override'
-    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, new_partner_name)
-    @mock_teacher_application.expects(:regional_partner_name).returns(new_partner_name)
+    @processor.expects(:save_accepted_workshop).with(
+      @mock_teacher_application, 'csd', teachercon_name, new_partner_name
+    )
+    @mock_teacher_application.accepted_program = stub(teachercon?: true)
+    @mock_teacher_application.accepted_workshop = teachercon_name
+    @mock_teacher_application.regional_partner_name = new_partner_name
 
     result = @processor.process_decision_row(
       {
@@ -118,7 +120,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
       teachercon_location_s: 'Houston',
       teachercon_dates_s: 'June 18 - 23, 2017',
       regional_partner_name_s: 'manually selected partner override'
@@ -129,8 +131,10 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
 
   def test_process_decisions_row_accept_partner
     partner_workshop = 'Code Partner: June 1 - 5, 2017'
-    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csp', partner_workshop)
-
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csp', partner_workshop, nil)
+    @mock_teacher_application.accepted_program = stub(teachercon?: false)
+    @mock_teacher_application.accepted_workshop = partner_workshop
+    Pd::Workshop.stubs(:exists?).with('1234').returns(true)
     @processor.expects(:lookup_workshop).with(partner_workshop).returns(
       {
         id: 1234,
@@ -154,7 +158,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
       regional_partner_name_s: 'Code Partner',
       regional_partner_contact_person_s: 'Mr. Contact',
       regional_partner_contact_person_email_s: 'partner.contact@example.net',
@@ -166,6 +170,10 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   end
 
   def test_process_decisions_row_accept_nonexistent_workshop
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, nil, 'nonexistent', nil)
+    @mock_teacher_application.accepted_program = stub(teachercon?: false)
+    @mock_teacher_application.accepted_workshop = 'nonexistent'
+
     e = assert_raises RuntimeError do
       @processor.process_decision_row(
         {
@@ -179,7 +187,9 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     assert_equal 'Unexpected workshop: nonexistent', e.message
   end
 
-  def test_process_decisions_row_decline
+  def test_process_decisions_row_decline_csp
+    @mock_teacher_application.selected_course = 'csp'
+
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
@@ -192,14 +202,39 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: Pd::Workshop::COURSE_CSP,
+      regional_partner_name_s: 'Code Partner',
+      teacher_application_id_s: 1
     }
     assert_equal expected, result
-    assert_result_in_set :decline, result
+    assert_result_in_set :decline_csp, result
+  end
+
+  def test_process_decisions_row_decline_csd
+    @mock_teacher_application.program_name = Pd::Workshop::COURSE_CSD
+    @mock_teacher_application.selected_course = 'csd'
+
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Decline',
+        'Workshop' => "doesn't matter"
+      }
+    )
+
+    expected = {
+      name: 'Tracy Teacher',
+      email: 'tracy.teacher@example.net',
+      preferred_first_name_s: 'Tracy',
+      course_name_s: Pd::Workshop::COURSE_CSD,
+      regional_partner_name_s: 'Code Partner',
+      teacher_application_id_s: 1
+    }
+    assert_equal expected, result
+    assert_result_in_set :decline_csd, result
   end
 
   def test_process_decisions_row_waitlist
-    @mock_teacher_application.id = 12345
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
@@ -212,8 +247,9 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
-      teacher_application_id_s: 12345
+      course_name_s: Pd::Workshop::COURSE_CSP,
+      teacher_application_id_s: 1,
+      regional_partner_name_s: 'Code Partner'
     }
     assert_equal expected, result
     assert_result_in_set :waitlist, result
@@ -222,12 +258,11 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_update_primary_email
     new_primary_email = 'new.primary.email@example.net'
     @processor.expects(:update_primary_email).with(@mock_teacher_application, new_primary_email).once
+    @mock_teacher_application.selected_course = 'csp'
     @processor.process_decision_row(
       {
         'Application ID' => 1,
         # It doesn't matter which decision: any will update the primary_email.
-        # Using Decline so we don't need a matching workshop, as that
-        # functionality is tested separately.
         'Decision' => 'Decline',
         'Workshop' => "doesn't matter",
         'Primary Email' => new_primary_email
@@ -238,8 +273,9 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_teachercon_acceptance_without_partner_raises_error
     teachercon_name = 'June 18 - 23, 2017: Houston'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
+    @mock_teacher_application.accepted_program = stub(teachercon?: true)
+    @mock_teacher_application.accepted_workshop = teachercon_name
     @mock_teacher_application.expects(:regional_partner_name).returns(nil)
-    @mock_teacher_application.stubs(id: 1)
 
     e = assert_raises RuntimeError do
       @processor.process_decision_row(
@@ -253,6 +289,17 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     end
 
     assert_equal 'Missing regional partner name for application id: 1', e.message
+  end
+
+  def partner_override_name_is_applied_to_params
+    params = {
+      regional_partner_name_s: 'Share Fair Nation and Colorado Education Initiative'
+    }
+    result = @processor.process 'decision', @mock_teacher_application, params
+    assert_equal(
+      'mindSpark Learning (formerly Share Fair Nation) and Colorado Education Initiative',
+      result[:regional_partner_name_s]
+    )
   end
 
   private

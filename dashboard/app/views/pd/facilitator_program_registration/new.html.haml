@@ -1,0 +1,15 @@
+- @page_title = 'Code.org TeacherCon Registration for Facilitators'
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+  %script{src: minifiable_asset_path('js/pd/facilitator_program_registration/new.js'), data: @script_data}
+
+#application-header
+  %h2
+    Code.org TeacherCon Registration for Facilitators
+  %h3
+    Please complete this form by April 28, 2017. Contact
+    = link_to 'facilitators@code.org', 'mailto:facilitators@code.org'
+    with any questions.
+
+  #application-container
+    -# populated by React

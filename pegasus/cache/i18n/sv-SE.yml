@@ -104,7 +104,7 @@
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_guest_speaker_cta: Hitta en gästföreläsare
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
@@ -113,7 +113,7 @@
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_all: 'Plattform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
   third_party_price_varies: 'Avgift: Prisplaner varierar'
@@ -154,7 +154,7 @@
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_learn: Lär dig CS med Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
@@ -178,10 +178,10 @@
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organisation
   third_party_curriculum: Läroplan
-  third_party_pricing: Pricing
+  third_party_pricing: Prissättning
   third_party_cost_free: Free
   third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
+  third_party_cost_299: "$2.99/nedladdning"
   third_party_cost_free_399: Gratis att prova, $399/klassrum
   third_party_cost_free_2: Gratis att prova, $2/elev
   third_party_cost_free_10: Gratis att prova, $9,99/månad
@@ -753,7 +753,7 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
+  dashboard_surveys_answers: Undersökningar
   dashboard_percent: Procent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
@@ -767,7 +767,7 @@
   dashboard_navigation_section_speakers: Datavetenskap <br/> Gästföreläsare
   dashboard_navigation_all_sections: Elevkonton och framsteg
   dashboard_navigation_view_progress: Framsteg
-  dashboard_navigation_view_text_responses: Visa Text svar
+  dashboard_navigation_view_text_responses: Textsvar
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Lägg till elever
@@ -783,10 +783,10 @@
   dashboard_progress_completed_perfect: Avklarad perfekt
   dashboard_progress_furthest_level_attempted: försökt nå bortersta nivån
   dashboard_progress_submitted: inlämnat
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_view: 'Visa framsteg i:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: parprogrammering
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Ny sektion
@@ -817,7 +817,7 @@
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_move_to_section: 'Flytta till sektion:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-tecken lång kod (ABCDEF)
   dashboard_sections_other_section: Andra lärare
@@ -870,6 +870,8 @@
   dashboard_students_reset_password: "Återställ lösenord"
   dashboard_students_share_section: 'Dela denna sektions inloggningssida med dina
     elever:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Skriv ut kort med dina elevers inloggningsuppgifter.
   dashboard_students_secret_picture_title: Hemlig bild
   dashboard_students_secret_picture: Hemlig bild
@@ -887,6 +889,7 @@
     skapa konton för dem, ändrar du denna sektions hemliga typ till <b>ord</b> eller
     <b>bild</b>.
   dashboard_students_print_page: Skriv ut sidan
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Klicka här</a> för de av våra sekretess-dokument som kan delas med eller skrivas
@@ -929,7 +932,7 @@
   dashboard_puzzle: Pussel
   dashboard_question: Fråga
   dashboard_response: Svar
-  dashboard_correctness: Correctness
+  dashboard_correctness: Korrekthet
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Rätt
@@ -938,7 +941,7 @@
   dashboard_submission_in_progress: Under arbete
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_count: "# flera val"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastiska fakta om förra årets Hour of Code. På bara
@@ -1105,6 +1108,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1113,8 +1118,8 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  cspexam1-mWU7ilDYM9_name: Test del 1 - 25 frågor
+  cspexam2-AKwgAh1ac5_name: Test del 2 - 25 frågor
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1826,7 +1831,7 @@
   sphero_beyond_longdescription: Oavsett om du är en pedagog eller förälder, ger SPRK
     lektioner barnen en rolig snabbkurs i att programmera robotar samtidigt som de
     övar upp sina färdigheter i matematik och naturvetenskap.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Dölj denna varning
   compatibility_unsupported_browser: Din webbläsare stöds inte. Uppgradera din webbläsare
     till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna
     som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar
@@ -1839,6 +1844,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

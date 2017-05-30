@@ -1,12 +1,13 @@
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 
 describe("setPropertyDropdown", function () {
   var stripQuotes = setPropertyDropdown.__TestInterface.stripQuotes;
   var getDropdownProperties = setPropertyDropdown.__TestInterface.getDropdownProperties;
+
+  testUtils.setExternalGlobals();
 
   it('stripQuotes', function () {
     assert.equal(stripQuotes('"double"'), 'double');

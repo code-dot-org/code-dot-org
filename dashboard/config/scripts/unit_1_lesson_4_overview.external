@@ -1,14 +1,12 @@
 name 'Unit 1 Lesson 4 Overview'
-css 'unplugged'
+display_name 'Lesson Overview'
 
 markdown <<MARKDOWN
-# Problem Solving - Computers and Logic: Lesson 4 - What is a Computer?
-
-## Background
+# Overview
 
 In this lesson you'll start thinking about how computers help solve certain kinds of problems and learn the key features of every computer.
 
-# Resources
+## Resources
 
 * [What is a Computer](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=doc))
 MARKDOWN

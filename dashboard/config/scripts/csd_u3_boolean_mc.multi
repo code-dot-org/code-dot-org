@@ -3,7 +3,7 @@ title 'title'
 description ''
 question 'Which result will be printed in the console by this program?'
 right 'true<br>false<br>true'
-wrong '  200<br>10<br>-20'
+wrong '  0<br>200<br>100'
 wrong '  true<br>error<br>true'
 wrong '  false<br>true<br>false'
 

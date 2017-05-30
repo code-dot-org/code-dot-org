@@ -26,8 +26,8 @@
       "x": null,
       "y": null,
       "rotation": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -63,7 +63,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "# Make Something\r\n\r\nYou've now learned a bunch sprites, properties, and objects. What kind of animation can you create with what you have learned?\r\n\r\nSprite Properties\r\n\r\n* x\r\n* y\r\n* width\r\n* height\r\n* shapeColor\r\n\r\n# Do This\r\n\r\nUse the properties you have learned in this lesson to create an animation.\r\n\r\nStuck on ideas? Try one of these.\r\n\r\n* Create a sprite in the middle of the screen that grows and rotates"
+    "markdown_instructions": "# Make Something\r\n\r\nYou've now learned a bunch sprites, properties, and objects. What kind of animation can you create with what you have learned?\r\n\r\nSprite Properties\r\n\r\n* x\r\n* y\r\n* width\r\n* height\r\n* shapeColor\r\n\r\n# Do This\r\n\r\nUse the properties you have learned in this lesson to create an animation.\r\n\r\nStuck on ideas? Try one of these.\r\n\r\n* Create a sprite in the middle of the screen that grows and rotates",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

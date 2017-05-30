@@ -13,7 +13,7 @@ var NetSimAlert = require('./NetSimAlert');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouterNode = require('./NetSimRouterNode');
-var ObservableEvent = require('../ObservableEvent');
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 
 var logger = NetSimLogger.getSingleton();
 var NetSimConstants = require('./NetSimConstants');
@@ -79,9 +79,9 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   /**
    * Change event others can observe, which we will fire when we
    * connect or disconnect from a router or remote client
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.remoteChange = new ObservableEvent();
+  this.remoteChange = new ObservableEventDEPRECATED();
 
   /**
    * Callback for when something indicates that this node has been

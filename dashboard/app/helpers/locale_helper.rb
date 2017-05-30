@@ -34,8 +34,6 @@ module LocaleHelper
     options
   end
 
-  private
-
   # Parses and ranks locale code strings from the Accept-Language header.
   def accepted_locales
     header = request.env.fetch('HTTP_X_VARNISH_ACCEPT_LANGUAGE', '')
@@ -74,15 +72,11 @@ module LocaleHelper
     I18n.t(dotted_path, {raise: true}.merge(params)) rescue nil
   end
 
-  def serve_fonts?
-    Dashboard::Application::LOCALES[locale.to_s].fetch(:webfonts, true)
-  end
-
   def i18n_dropdown
     # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
     # user input or to persist data without also updating it to enforce UTF-8
     form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-      (hidden_field_tag :return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
+      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
     end
   end
 end

@@ -79,6 +79,7 @@ nl:
     forgot_password: 'Wachtwoord vergeten?'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
     need_unlock: "Nog geen unlock instructies ontvangen?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
     teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
@@ -173,6 +174,14 @@ nl:
       De opdrachten zijn leuk, visueel boeiend, en leggen de basisbeginselen van de informatie uit in een eenvoudige, begeleide, speelse ervaring. Leer programmeren van Bill Gates, Mark Zuckerberg, Angry Bird en Planten tegen de Zombies :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Uitnodiging verstuurd'
     added_teacher: '%{name} toegevoegd als jouw leraar'
@@ -186,8 +195,6 @@ nl:
       blank_code: "Voer een sectiecode in"
       cant_join_own_section: "Sorry, je kan niet aan je eigen onderdeel deelnemen."
     mail:
-      invite_student:
-        subject: "Doe mee met een klas met %{teacher_name} op Code.org!"
       student_disassociated:
         subject: 'Code.org melding: %{student_name} is niet langer ale student aan jou gekoppeld.'
   reports:
@@ -386,6 +393,7 @@ nl:
     announcement_petition: "Als leerkracht neemt u het voortouw in een beweging die elke leerling op elke school de mogelijkheid geeft om informatica te leren. Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven onderwijsleiders, 28 gouverneurs en CEO's van Amerika's grootste bedrijven samen een open brief aan het Amerikaanse Congres met de vraag om informatica op de basisschool te financieren."
     announcement_petition_button: "Voeg je naam toe"
     announcement_go_beyond_button: "Go beyond"
+    announcement_apply_now: "Apply now"
     announcement_all: "Blijf up-to-date met nieuws en updates op onze blog voor docenten. <a href='%{teacher_blog_url}' target='_blank'> Bekijk eerdere aankondigingen.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
@@ -398,13 +406,11 @@ nl:
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Sorry, maar de groep %{new_section_code} bestaat niet. Vul een andere groepscode in."
-    section_code_not_entered: "Vul alsjeblieft uw huidige onderdeelscode in."
     section_code_cant_be_current_section: "Het huidige onderdeel kan niet hetzelfde zijn als het nieuwe onderdeel."
     current_section_dne: "Sorry, maar de groep %{current_section_code} bestaat niet. Vul een andere groepscode in."
-    students_not_yours: "U kunt leerlingen niet naar een groep verplaatsen die niet van u is."
-    stay_enrolled_not_entered: "Alsjeblieft blijf_ingeschreven_in_de_huidige_sectie."
     student_ids_not_entered: "Alsjeblieft geef student_ids."
     student_not_found: "Een of meerdere leerlingen kunnen niet worden gevonden."
     all_students_must_be_in_current_section: "Alle studenten moeten momenteel worden ingeschreven in uw groep."

@@ -4,5 +4,5 @@ level 'Level 2'
 level 'Level 3'
 
 stage 'Stage2'
-level 'Level 4'
-level 'Level 5'
+level 'Level 4', progression: 'MyProgression'
+level 'Level 5', progression: 'MyProgression'

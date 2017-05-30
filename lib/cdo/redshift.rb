@@ -1,7 +1,15 @@
-# WARNING: This is explicitly not included in our Gemfile for the reasons discussed in the PR
-# https://github.com/code-dot-org/code-dot-org/pull/14056. The PG gem should be manually installed
-# on any machines making use of this client.
-require 'pg'
+# WARNING: This is explicitly not included in our root Gemfile for the reasons discussed in the PR
+# https://github.com/code-dot-org/code-dot-org/pull/14056. A separate gemfile should be created for
+# any scripts needing usage of this client and loaded via RakeUtils.with_bundle_dir.
+# @example:
+#   RakeUtils.with_bundle_dir(File.dirname(__FILE__)) do
+#     require 'cdo/redshift'
+#   end
+
+RakeUtils.with_bundle_dir(File.expand_path('../../../bin/cron/with_pg', __FILE__)) do
+  require 'pg'
+end
+require 'singleton'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
 # instance.

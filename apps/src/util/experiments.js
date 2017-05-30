@@ -6,10 +6,7 @@
  * Experiment state is persisted across page loads using local storage.
  */
 import { trySetLocalStorage } from '../utils';
-
-// trackEvent is provided by _analytics.html.haml in most cases. In those where
-// it isn't, we still want experiments to work.
-const trackEvent = window.trackEvent || (() => {});
+import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 
@@ -30,8 +27,10 @@ experiments.getStoredExperiments_ = function () {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
     const now = Date.now();
-    const enabledExperiments = storedExperiments.filter(
-        experiment => experiment.expiration > now);
+    const enabledExperiments = storedExperiments.filter(experiment => {
+      return experiment.key &&
+        (experiment.expiration === undefined || experiment.expiration > now);
+    });
     if (enabledExperiments.length < storedExperiments.length) {
       trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
     }
@@ -45,15 +44,11 @@ experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
-experiments.setEnabled = function (key, shouldEnable) {
+experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
   const allEnabled = this.getStoredExperiments_();
   const experimentIndex =
     allEnabled.findIndex(experiment => experiment.key === key);
   if (shouldEnable) {
-    const expirationDate = new Date();
-    expirationDate.setHours(
-        expirationDate.getHours() + EXPERIMENT_LIFESPAN_HOURS);
-    const expiration = expirationDate.getTime();
     if (experimentIndex < 0) {
       allEnabled.push({ key, expiration });
       trackEvent(GA_EVENT, 'enable', key);
@@ -76,11 +71,15 @@ experiments.setEnabled = function (key, shouldEnable) {
  */
 experiments.isEnabled = function (key) {
   let enabled = this.getStoredExperiments_()
-    .some(experiment => experiment.key === key);
+    .some(experiment => experiment.key === key) ||
+    !!(window.appOptions &&
+      window.appOptions.experiments &&
+      window.appOptions.experiments.includes(key));
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
   const disableQuery = query['disableExperiments'];
+  const tempEnableQuery = query['tempEnableExperiments'];
 
   if (enableQuery) {
     const experimentsToEnable = enableQuery.split(',');
@@ -95,6 +94,19 @@ experiments.isEnabled = function (key) {
     if (experimentsToDisable.indexOf(key) >= 0) {
       enabled = false;
       this.setEnabled(key, false);
+    }
+  }
+
+  if (tempEnableQuery) {
+    const expirationDate = new Date();
+    expirationDate.setHours(
+        expirationDate.getHours() + EXPERIMENT_LIFESPAN_HOURS);
+    const expiration = expirationDate.getTime();
+
+    const experimentsToEnable = tempEnableQuery.split(',');
+    if (experimentsToEnable.indexOf(key) >= 0) {
+      enabled = true;
+      this.setEnabled(key, true, expiration);
     }
   }
 

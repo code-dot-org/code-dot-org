@@ -168,15 +168,27 @@ export default {
   },
 
   /**
+   * Gets data from an element before it is changed, should it be necessary to do so. This data will be passed to the
+   * typeSpecificPropertyChange method below.
+   */
+  getPreChangeData: function (element, name) {
+    var elementType = this.getElementType(element);
+    if (elements[elementType].beforePropertyChange) {
+      return elements[elementType].beforePropertyChange(element, name);
+    }
+    return null;
+  },
+
+  /**
    * Handle any element specific property changes. Called after designMode gets
    * first crack at handling change.
    * @returns {boolean} True if we modified the element in such a way that the
    *   property table needs to be updated.
    */
-  typeSpecificPropertyChange: function (element, name, value) {
+  typeSpecificPropertyChange: function (element, name, value, preChangeData) {
     var elementType = this.getElementType(element);
     if (elements[elementType].onPropertyChange) {
-      return elements[elementType].onPropertyChange(element, name, value);
+      return elements[elementType].onPropertyChange(element, name, value, preChangeData);
     }
     return false;
   },

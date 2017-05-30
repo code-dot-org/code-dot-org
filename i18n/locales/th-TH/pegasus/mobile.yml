@@ -673,7 +673,8 @@
   dashboard_students_auto_generated: "สร้างโดยอัตโนมัติ"
   dashboard_students_reset_secret: "รีเซ็ตคำถามลับ"
   dashboard_students_reset_password: "รีเซ็ตรหัสผ่าน"
-  dashboard_students_share_section: 'แชร์หน้าล็อกอินของกลุ่มนี้ให้แก่นักเรียน'
+  dashboard_students_share_section: "แชร์หน้าล็อกอินของกลุ่มนี้ให้แก่นักเรียน"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "พิมพ์ข้อมูลสำหรับใช้ล็อกอินให้แก่นักเรียน"
   dashboard_students_secret_picture_title: "รูปภาพสำหรับ ล๊อกอิน"
   dashboard_students_secret_picture: "รูปภาพสำหรับ ล๊อกอิน"
@@ -684,6 +685,7 @@
   dashboard_students_join_link: "แจ้งนักเรียนของคุณให้สร้างบัญชีของตัวเองและเข้ากลุ่มที่คุณสร้างได้ที่"
   dashboard_students_no_email: "ถ้านักเรียนของคุณไม่มีที่อยู่อีเมล์ หรือคุณต้องการสร้างบัญชีสำหรับพวกเขา เปลี่ยนประเภทของข้อมูลลับส่วนนี้ให้เป็น<b>ข้อความ</b>หรือ<b>รูปภาพ</b>"
   dashboard_students_print_page: "พิมพ์หน้านี้"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "ลิงค์เว็บไซต์"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">คลิกที่นี่</a>สำหรับเอกสารส่วนตัวของเราที่สามารถใช้ร่วมกัน หรือพิมพ์สำหรับนักเรียนของคุณ"
   dashboard_curriculum_k5_title: "แหล่งเครื่องมือสำหรับผู้สอน ประถม5(K-5)"
@@ -879,6 +881,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'

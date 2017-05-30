@@ -83,7 +83,7 @@
             %h4
               = t('teacher.panel.section')
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
-        - if current_user.non_deleted_sections.many?
+        - if current_user.sections.many?
           -# This is rendered into by react.
           #teacher-panel-sections
           - if @section && @script_level.stage.lockable?

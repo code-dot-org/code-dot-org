@@ -1,0 +1,6 @@
+name 'courseE_multi_farmer_predict1'
+question 'We aren\'t sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an \'if/else\' block to make the program work in either case. What will happen when you press the \'Run\' button here?'
+wrong 'Nothing. The farmer will remain standing still', feedback: 'Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.'
+wrong 'The farmer will go to the sprout and try to pick lettuce no matter what.', feedback: 'Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.'
+right 'The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn', feedback: 'Correct!'
+wrong 'I don\'t know', feedback: 'The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.'

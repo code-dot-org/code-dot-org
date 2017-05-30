@@ -57,7 +57,7 @@
       "led.blink": null,
       "led.stop": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.frequency": null,
       "buzzer.play": null,
       "timedLoop": null,
@@ -66,9 +66,12 @@
       "onBoardEvent": null,
       "toggleSwitch.isOpen": null,
       "isPressed": null,
-      "value": null,
       "tempSensor.C": null,
-      "tempSensor.F": null
+      "tempSensor.F": null,
+      "soundSensor.value": null,
+      "soundSensor.setScale": null,
+      "lightSensor.value": null,
+      "lightSensor.setScale": null
     },
     "edit_code": true,
     "embed": "false",

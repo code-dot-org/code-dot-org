@@ -54,7 +54,7 @@ CollapserButton.propTypes = {
 
 export default connect(state => {
   return {
-    isRtl: state.pageConstants.localeDirection === 'rtl',
+    isRtl: state.isRtl,
     isMinecraft: !!state.pageConstants.isMinecraft,
   };
 })(Radium(CollapserButton));

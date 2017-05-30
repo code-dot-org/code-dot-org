@@ -80,6 +80,7 @@
     forgot_password: "忘了密碼？"
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
+    not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
   signup_form:
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
@@ -179,6 +180,14 @@
       這是一個絕對會引起你注意的有趣課程。透過遊戲式的簡易引導，你將學會有關資訊科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐克伯(Mark Zuckerberg)、憤怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
 
       %{name}
+  section:
+    your_section:
+      one: "你的學習小組："
+      other: "你的學習小組："
+    code_with_teacher: "%{section_code} - %{teacher_name}"
+    confirm:
+      remove: "你確定要退出這個學習小組？"
+    remove: "（移除學習小組）"
   follower:
     invite_sent: "已發送邀請"
     added_teacher: "%{name} 已成為你的老師"
@@ -192,8 +201,6 @@
       blank_code: "請輸入學習小組代碼"
       cant_join_own_section: "抱歉, 你不能加入你自己的學習小組。"
     mail:
-      invite_student:
-        subject: "加入%{teacher_name}老師的班級！"
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
   reports:
@@ -407,6 +414,7 @@
       28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
     announcement_petition_button: "新增你的名字"
     announcement_go_beyond_button: "超越"
+    announcement_apply_now: Apply now
     announcement_all: "持續關注我們的教師部落格以追蹤最新特色和更新資訊。<a href='%{teacher_blog_url}' target='_blank'>查看過去公告。</a>"
     announcement_hoc_launch: "超過 180 個國家、數以千計的教師，在 12 月 5-11日開始用一小時玩程式課程來教導計算機科學，期待你幫助我們引進更多的學生。<a
       href='%{signup_url}' target='_blank'>登錄你舉辦的一小時玩程式活動</a>，讓其他老師知道他們也可以開始教導計算機科學。"
@@ -432,13 +440,14 @@
     announcement_apcsp_recruitment3: "今年的 AP CS Principles考試有望打破記錄。參與 AP 電腦科學考試的學生中可能有極大轉變的多樣性，但我們需要您的幫助。鼓勵每個
       CS Principles 學生參與 AP CSP 考試且你將可以贏得 <a href='%{gift_url}' target='_blank'> 一張禮品卡、
       一台筆記本電腦或其他很酷的獎品</a> ！分享 <a href='%{video_url}' target='_blank'> 這部影片</a> 所以你的學生可以聽到來自全國各地參加考試的同年紀學生。"
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
-    section_code_not_entered: "請提供 current_section_code。"
     section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"
     current_section_dne: "抱歉， 學習小組 %{current_section_code} 不存在。請輸入其他的學習小組代碼。"
-    students_not_yours: "你不能將學生移動到一個不屬於你的學習小組裡。"
-    stay_enrolled_not_entered: "請提供 stay_enrolled_in_current_section。"
     student_ids_not_entered: "請提供 student_ids。"
     student_not_found: "無法找到其中的一個或多個學生。"
     all_students_must_be_in_current_section: "所有的學生都必須在你的學習小組中。"

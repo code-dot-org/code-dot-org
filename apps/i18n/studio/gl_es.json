@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "Necesitas conseguir 20 Droides Rato. Usa o comando \"agregar un Droide Rato\" dentro do evento \"cando consegues Droide Rato\" para agregar dous ou máis Droides Rato cada vez que consegues un.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, engadiches código para facer Droides Rato. Podes ir ao seguinte crebacabezas ou tentar outra vez conseguir 20 Droides Rato. Trata de facelo máis fácil agregando máis! (Preme e mantén premidas as teclas do teu teclado (ou pantalla) para moverte máis lixeiro.)",
   "failedChangeSettingTimeout": "Consegue tres pilotos rebeldes para continuar.",
-  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade."
+  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }

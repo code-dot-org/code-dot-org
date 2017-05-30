@@ -9,7 +9,7 @@ class FollowersController < ApplicationController
 
   # join a section as a logged in student
   def create
-    @section.add_student current_user, move_for_same_teacher: true
+    @section.add_student current_user
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
   end
@@ -34,14 +34,16 @@ class FollowersController < ApplicationController
 
     authorize! :destroy, f
     f.delete
-    if @teacher.email.present?
+    # Though in theory required, we are missing an email address for many teachers.
+    if @teacher && @teacher.email.present?
       FollowerMailer.student_disassociated_notify_teacher(@teacher, current_user).deliver_now
     end
+    teacher_name = @teacher ? @teacher.name : I18n.t('user.deleted_user')
     redirect_to(
       root_path,
       notice: t(
         'teacher.student_teacher_disassociated',
-        teacher_name: @teacher.name,
+        teacher_name: teacher_name,
         section_code: params[:section_code]
       )
     )
@@ -56,7 +58,7 @@ class FollowersController < ApplicationController
     end
 
     if current_user && @section
-      @section.add_student current_user, move_for_same_teacher: true
+      @section.add_student current_user
 
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
     else
@@ -88,7 +90,7 @@ class FollowersController < ApplicationController
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       if @user.save
-        @section.add_student @user, move_for_same_teacher: true
+        @section.add_student @user
         sign_in(:user, @user)
         redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
         return

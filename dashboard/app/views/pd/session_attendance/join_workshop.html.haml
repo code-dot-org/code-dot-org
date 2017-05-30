@@ -1,0 +1,15 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%div
+  %h1
+    Join this workshop
+
+= render partial: 'pd/workshop_enrollment/workshop_details'
+
+%h2
+  Please complete and confirm the information below.
+
+-# Render the enroll form partial from the workshop_enrollment controller, but submit back to this controller.
+- submit_url = {controller: controller_name, action: 'confirm_join'}
+= render partial: 'pd/workshop_enrollment/enroll_form', locals: {submit_url: submit_url, submit_text: 'Confirm'}

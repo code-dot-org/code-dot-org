@@ -27,130 +27,17 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-
-- **Advocacy and Government Affairs**
-	- [Director of State Government Affairs](#govaffairs)
-- **Fundraising**
-	- [Fundraising Consultant](#fund)
 - **Marketing**
-	- [Director of Marketing & Communications](#director)
 	- [Marketing Associate](#associate)
 	- [Marketing Coordinator](#markcoordinator)
 - **Product and Engineering**
-	- [Director of Product](#drprod)
-	- [Product Designer](#design)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
-- **Internships**
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (Seattle, WA; location flexible)</a>
-
-**Job Summary:**
-
-Code.org is a leading voice in the national dialogue on expanding access to K12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
-
-Our team is working with policymakers and education leaders in dozens of states to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally change existing education policy.
-
-The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) and developing overall strategy for engagement in the assigned states while leading and carrying out the tactics associated with the strategy. 
-
-The person in this role will be responsible for: 
-
-- Developing and updating policy positions
-- Public speaking at events, including testimony before state authorities, interviews with the media
-- Communicate policy agenda to various audiences (stakeholder groups, legislators, - Governors and staff, educators, media, etc.) and tailor messaging for each
-Guiding the team in defining a legislative strategy and/or administrative strategy (rules and regulations) around answering three questions:
-	- What are the goals for our legislative or administrative strategy approach?
-	- How will these goals affect implementation of K-12 computer science?
-	- What’s the plan to achieve these goals?
-- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
-- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
-- Managing Code.org’s Governors Partnership for K-12 Computer Science
-- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
-- Managing and building Code.org’s Advocacy Coalition
-	- Forming and leading local coalition of supporters/advocates
-	- Leveraging local targeted support (industry partnerships, local education nonprofits, school districts)
-- Creating and managing grassroots support for policy-related efforts
-- Coordinate state and federal policy efforts internally and with partners
-
-Some of the responsibilities may shift depending on a candidate’s skill set for this position, but the primary responsibility of owning end-to-end engagement in a state will not. Ability and willingness to travel up to 35% of the time (depending on location)is required.
-
-**Experience and Qualifications:**
-
-A successful candidate’s main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. Candidates should have experience with and working knowledge of the legislative process or policy development process within state education authorities. 
-
-We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
-
-We are a non-partisan organization and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. Candidates should be have a demonstrated ability to work across political parties and ideologies.
-
-Candidates must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
-
-
-Additionally, the ideal candidate has:
-
-- Passion for our mission of #CSForAll
-- Bachelor’s degree required; Master’s degree desired
-- 5-8+ years of experience in government relations/advocacy/policy development in education (required, preferably at the state level)
-- Experience in developing K-12 computer science education policy (nice to have, but not required) 
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="fund"href="#fund">Fundraising Consultant (Seattle, WA; location flexible)</a>
-
-**Scope of Work:**
-
-Code.org is seeking a part-time Fundraising Consultant to conduct research and provide consultation services to select Code.org partners regarding the feasibility and process for applying to various grant programs.
-
-**Experience Required:**
-
-We are looking for a consultant with 3+ years experience seeking grants, able to identify early-stage potential opportunities, stay abreast of new opportunities that are released, and quickly be able to understand how to apply for and win funding. Consultant must have proven experience in successfully applying for at least one of the following:
-
-- Grants from private individuals, family foundations, or large, established foundations (corporate, family, or other)
-- Grants and/or contracts from cities, counties, states, and/or the Federal government, preferably including i3/EIR, NSF, Dept. of Ed, etc.
-
-The person we contract for this role will be experienced in building relationships with grantmakers and/or policymakers to access funds or give input into funding opportunities, and be able to guide and coach others in both seeking grants and building relationships.
-
-**Contract Terms:**
-
-Consultant will be expected to devote up to 15 hours per week for at least the next year (as needed, on contract); the work will require a minimum of 5 hours per month to cover ongoing communications and research time to stay current on grant opportunities, Code.org activities, and activities of our Regional Partners. 
-
-Interested contractors should email a resume and cover letter, and any relevant work samples, to <a href="mailto:jobs@code.org">jobs@code.org</a>. You may also choose to include a LinkedIn or related online profile. Compensation will be a contracted hourly rate, depending on experience. 
-
-## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
-**Job Summary:**
-
-In the last 3 years, Code.org has grown exponentially. We currently have over 15 million student accounts with 10,000 additional created every day. Our social media accounts have over 2.5 million followers and a third of US schools joined the Hour of Code last year. We need your help to continue to drive momentum and opportunity for computer science education. You can find our newsroom <a href="https://code.org/about/news">here</a>.
-
-Code.org is looking for a talented and creative manager to set and execute a strategic, comprehensive marketing and communications plan for the organization. The Director of Marketing & Communications will work closely with Code.org’s leadership team as the communications partner on a variety of initiatives. 
-
-Responsibilities of the position include:
-
-- Designing and managing organization-wide communications strategy 
-- Driving and managing media and PR strategy 
-- Managing and establishing key partnerships with communications teams at related organizations
-- Managing the international Hour of Code campaign and partnerships
-- Designing and managing email communication plan for marketing and grassroots lobbying campaigns
-- Manage a small team responsible for social media, web content, email campaigns and event marketing and communications
-- Working with external vendors supporting our efforts in PR and advocacy
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communication skills and sound editorial judgment
-- Previous success in public and media relations; creating compelling stories to drive brand strategy and developing relationships with the press
-- Strong project management and strategic partnership skills to drive marketing campaigns with external partners
-- Experienced manager able to hire and develop a marketing and communications team
-- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
-- Proficient in using Google suite of applications, presentation and layout skills 
-- 5-7 years of relevant work experience in communications and technology
-- Bachelor’s degree in communications, public relations, or related field
-- Familiarity or background in educational communications preferred, no background in Computer Science needed
-
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="associate"href="#associate">Marketing Associate (Seattle, WA)</a>
 
@@ -219,88 +106,6 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="drprod"href="#drprod">Director of Product (Seattle, WA)</a>
-**Job Summary:**
-
-Code.org is looking for an experienced Director of Product with a shared passion for our mission--we are transforming computer science education and changing the world! Working at Code.org, you’ll be a leader in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-
-The Director of Product will be responsible for providing end-to-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms. Code.org curriculum spans from kindergarten to grade 12 and professional learning workshops for teachers. 
-
-In addition to our curriclum platform, the product team builds tools for advocacy, marketing, and partnerships. Some examples:
-
-- Tools and a <a href="https://code.org/educate/applab">development environment</a> for middle school and high school students to learn computer science (example)
-- <a href="https://studio.code.org/s/course2/stage/4/puzzle/4">Tutorials</a> to teach elementary students to code
-- Website tools to support <a href=https://code.org/promote>advocacy</a> and <a href="https://code.org/educate/curriculum/elementary-school#teach"">professional learning</a> 
- 
-
-The Director of Product will also be responsible for: 
-
-- Managing a team comprising product management, user experience, design, data science, and customer support.
-- Managing high visibility external partnerships 
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- 7+ years experience as a Product Manager, i.e. defining product, customer/competitive research, writing specs, working with engineering team
-- 3+ years experience as a manager of other PMs
-- Experience with building / managing a Web site and/or web services
-- Bachelor’s degree with a background in Computer Science (or equivalent experience)
-
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
-To apply, please email your resume (and/or LinkedIn profile), cover letter, and portfolio to <a href="mailto:jobs@code.org">jobs@code.org</a>. 
-
-## <a name="design"href="#design">Product Designer (Seattle, WA)</a>
-**Job Summary:**
-
-Code.org is looking for an experienced, creative designer with the drive to own end-to-end design of a product with major impact. This is a one-year, full time role with potential to extend on mutual agreement.   
-
-You will manage design changes across our website, marketing materials and education tutorials. These currently reach millions of people around the world. We have over 15 million students today and 10,000 new accounts created every day. 
-
-Areas of responsibility include:
-
-- Website pages for Code.org and <a href="https://hourofcode.com/us">Hour Of Code</a>
-- Tools and a development environment for middle school and high school students to learn computer science (<a href="https://code.org/educate/applab">examples</a>).
-- Tutorials to teach elementary students to code (like <a href="https://studio.code.org/s/course2/stage/4/puzzle/4">learning to draw with code</a> or <a href="https://studio.code.org/s/course2/stage/17/puzzle/8">making a story with code</a>)
-- As needed, design elements for marketing materials and <a href="https://hourofcode.com/us/promote/resources">handouts</a> that are used for schools, districts, and partnerships or social media memes/infographics
-- Managing style and design guidelines across the site 
-- Managing external contractors for illustration/animation/other work as needed
-
-You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
-
-**Experience and Qualifications:**
-
-The ideal candidate has experience in app and/or web design and strong, flexible visual design skills. We are looking for a self-starter who is passionate about improving education.  
-
-The candidate should have: 
-
-- 3+ years of UX/UI experience on websites or apps with a portfolio reflecting that experience.
-- Strong information design skills with an understanding of responsive design and best practices for web
-- Graphic design skills for print and web (layout, color, etc.)
-- Visual design skills to make activities fun and appealing to children
-- Solid intuition and passion for interaction design
-- Ability to work seamlessly with engineers and product managers end to end to create solutions that are both well designed and technically feasible
-- Proven ability to own end-to-end design for product, including style guides and design guidelines
-
-Additional preferred skills (not required to apply):
-
-- Ability to create illustrations for kids ages 5 to 18
-- Experience in education, children’s products, or video games (on personal projects, volunteer opportunities or for a previous job)
-- Bachelor's degree in graphics design, interaction design, fine arts, or a related discipline.
-
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
-To apply, please email your resume (and/or LinkedIn profile), cover letter, and portfolio to <a href="mailto:jobs@code.org">jobs@code.org</a>. 
 
 ## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
 
@@ -362,32 +167,6 @@ In addition, candidates:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="fundintern"href="#fundintern">Fundraising Team Intern (Seattle, WA)</a>
-
-**Internship Summary:**
-
-Code.org is looking for a Fundraising Intern to join Code.org’s Fundraising team. Our team is responsible for raising funds to sustain Code.org’s operations. This is a spring (March-May) internship, part-time, approximately 10-15 hours per week on a flexible schedule. Intern’s responsibilities would include:
-
-- Researching potential fundraising sources using the Foundation Center and other online resources for Code.org and our regional partners 
-- Developing reports of qualified potential funding sources 
-- Developing an application calendar to assist the Fundraising team in prioritizing work
-- Other special projects, as needed
-
-
-**Experience and Qualifications:**
-
-Must be extremely detail-oriented, possess strong research skills, excel at written and verbal communications in English, and be tech-savvy (computer science background/experience not required). Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-Required Qualifications:
-
-- Minimum 2 years of undergraduate studies completed
-- Experience with Google suite of products
-- Have interest and prior experience in gathering online research
-- Ability to work legally in the United States
-
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>

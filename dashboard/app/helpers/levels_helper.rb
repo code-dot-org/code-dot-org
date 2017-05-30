@@ -39,20 +39,22 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
-  def set_channel
+  # Returns the channel associated with the given Level and User pair, or
+  # creates a new channel for the pair if one doesn't exist.
+  def get_channel_for(level, user = nil)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
 
-    if @user
+    if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
-      channel_token = ChannelToken.find_channel_token(@level, @user)
-      readonly_view_options
+      channel_token = ChannelToken.find_channel_token(level, user)
+      readonly_view_options # TODO: has side effects
     else
       channel_token = ChannelToken.find_or_create_channel_token(
-        @level,
+        level,
         current_user,
         request.ip,
         StorageApps.new(storage_id('user')),
@@ -63,7 +65,7 @@ module LevelsHelper
       )
     end
 
-    view_options(channel: channel_token.channel) if channel_token
+    channel_token.try :channel
   end
 
   def use_firebase
@@ -129,7 +131,7 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    set_channel if @level.channel_backed?
+    view_options(channel: get_channel_for(@level, @user)) if @level.channel_backed?
 
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
@@ -180,9 +182,10 @@ module LevelsHelper
     end
 
     if @user
-      recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
+      recent_driver, recent_attempt = UserLevel.most_recent_driver(@script, @level, @user)
       if recent_driver
         level_view_options(pairing_driver: recent_driver)
+        level_view_options(pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
       end
     end
 
@@ -214,6 +217,22 @@ module LevelsHelper
       level: @level.level_num,
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
+
+    if current_user
+      if @script
+        section = current_user.sections_as_student.find_by(script_id: @script.id) ||
+          current_user.sections_as_student.first
+      else
+        section = current_user.sections_as_student.first
+      end
+      if section && section.first_activity_at.nil?
+        section.first_activity_at = DateTime.now
+        section.save(validate: false)
+      end
+      @app_options[:experiments] =
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+      @app_options[:usingTextModePref] = !!current_user.using_text_mode
+    end
 
     @app_options
   end
@@ -432,9 +451,8 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    # TTS
-    # TTS is currently only enabled for k1
-    if script && script.is_k1?
+    # Text to speech
+    if script && script.text_to_speech_enabled?
       level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
       level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
@@ -478,6 +496,7 @@ module LevelsHelper
     end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
+    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?

@@ -16,7 +16,7 @@ Join this teacher-led movement to ensure that every student in every school has 
 <div style="float: left;">
 <a href="https://twitter.com/teachcode" class="twitter-follow-button" data-show-count="false">Follow @teachcode</a>
 
-<a href="http://teacherblog.code.org/" target="_blank"><button style="height: 20px; vertical-align: top; font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif; padding: 0px 5px 10px 5px; background-color: #36465D; border-color: #36465D"><i class="fa fa-tumblr"></i>&nbsp;&nbsp;Follow our teacher blog</button></a>
+<a href="http://teacherblog.code.org/" target="_blank"><button style="height: 20px; margin-top: 0px; vertical-align: top; font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif; padding: 0px 5px 10px 5px; background-color: #36465D; border-color: #36465D"><i class="fa fa-tumblr"></i>&nbsp;&nbsp;Follow our teacher blog</button></a>
 </div>
 
 <div style="clear: both;"></div>
@@ -47,4 +47,3 @@ Looking for other ways to get connected to computer science teachers around the 
 - **[NCWIT](http://ncwit.org):** Find your local NCWIT chapter - an organization working to correct the imbalance of gender diversity in technology.
 
 *Don't see your local CS community listed? Connect with [@TeachCode](http://twitter.com/TeachCode) on Twitter so we can get to know you!*
-

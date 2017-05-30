@@ -10,7 +10,10 @@ describe('MiniView', () => {
       <MiniView hasFullProgress={false}/>
     );
 
-    assert.equal(wrapper.find('div').props().className, 'loading');
+    const body = wrapper.childAt(1);
+
+    assert.equal(body.props().className, 'loading');
+    assert.equal(wrapper.find('MiniViewTopRow').length, 1);
     assert.equal(wrapper.find('CourseProgress').length, 0);
   });
 
@@ -19,7 +22,8 @@ describe('MiniView', () => {
       <MiniView hasFullProgress={true}/>
     );
 
-    assert.equal(wrapper.find('div').length, 0);
+    assert.equal(wrapper.find(n => n.props().className === 'loading').length, 0);
+    assert.equal(wrapper.find('MiniViewTopRow').length, 1);
     assert.equal(wrapper.find('Connect(CourseProgress)').length, 1);
     assert.equal(wrapper.find('Connect(CourseProgress)').props().onOverviewPage, false);
   });

@@ -26,6 +26,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_reminder__csf
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+  end
+
   def teacher_enrollment_reminder__admin
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN
   end

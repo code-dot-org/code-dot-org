@@ -1,0 +1,39 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2017-05-09T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "is_k1": "false",
+    "is_project_level": "true",
+    "is_connection_level": "true",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "embed": "false",
+    "free_play": "true",
+    "grid_width": "10",
+    "grid_height": "10"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Craft>

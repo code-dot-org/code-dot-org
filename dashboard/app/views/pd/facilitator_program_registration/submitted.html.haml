@@ -1,0 +1,41 @@
+- @page_title = 'Code.org TeacherCon Registration for Facilitators'
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+-if @registration.form_data_hash["confirmTeacherconDate"] == Pd::FacilitatorProgramRegistration::TEACHERCON_DECLINE
+  %p
+    Thanks for letting us know you are not attending a TeacherCon. Attendance at
+    TeacherCon is a requirement of the Facilitator Development Program.
+
+-elsif @registration.form_data_hash["confirmTeacherconDate"] == Pd::FacilitatorProgramRegistration::TEACHERCON_ALTERNATE
+  %p
+    Thanks for registering and letting us know you need to attend a different
+    TeacherCon than the one you’re assigned. We will follow-up with you directly
+    to confirm your re-assigned dates.
+
+  %p
+    If you have any questions, please contact
+    %a{href:'mailto:facilitators@code.org'}facilitators@code.org
+
+-elsif @registration.form_data_hash["declineTrainingDate"] == Pd::FacilitatorProgramRegistration::TRAINING_ALTERNATE_DECLINE
+  %p
+    Thanks for letting us know you have declined to attend the Facilitator
+    Development Program.
+
+  %p
+    If you have any questions, please contact
+    %a{href:'mailto:facilitators@code.org'}facilitators@code.org
+
+-else
+  %p
+    Thanks for registering.
+
+  %p
+    We’re excited you’re planning to join the Facilitator Development Program!
+    You will receive more information about travel approximately six weeks
+    before your training.
+
+  %p
+    In the meantime, please contact
+    %a{href:'mailto:facilitators@code.org'}facilitators@code.org
+    with any questions. We look forward to seeing you this summer!

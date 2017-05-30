@@ -52,11 +52,9 @@
       Course 4 Artist Vars 10_failure_message_override: Sides（辺）の変数を使ってください！
       Course 4 Playlab For Loops 4b_failure_message_override: "両方のキャラは、同じ回数の動きで、それぞれのハタを取れるべきです！"
       Course 4 Playlab For Loops 5b_failure_message_override: "両方のキャラは、同じ場所で止まるべきです！"
-      courseE_playLab_scaffold3_failure_message_override: 2 つ以上の新しいキャラをゲームに足して、プログラムでそれらを動かしてください。
       Eval Strings Images .2_failure_message_override: "文字列「うちゅう」を足して、「こんにちは、うちゅう」を作るコードにしてください。"
-      grade4_scaffolded_project3_failure_message_override: 2 つ以上のキャラを足して、あなたのゲームで動かしてください。
       Kiki_StarWars_Test_5_failure_message_override: Game over!
-      kikiTesta_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
+      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
       MC HOC 2016 Level 1_failure_message_override: "行くところで、羊の毛を集めます。羊の毛を集めるには、矢印キーで羊のところへ歩き、スペース
         キーを打つか、ゲームをクリックして羊の毛を切ります。「落とす 羊の毛」ブロックをコードに足してください。"
       MC HOC 2016 Level 2-2_failure_message_override: "「まえにすすむ」と「まがる」コマンドを使って、ニワトリを動かします。"
@@ -74,15 +72,18 @@
       MC HOC 2016 Nerop_failure_message_override: "行くところで、羊の毛を集めます。羊の毛を集めるには、矢印キーで羊のところへ歩き、スペース
         キーを打つか、ゲームをクリックして羊の毛を切ります。「落とす 羊の毛」ブロックをコードに足してください。"
       MC HOC 2016 New Drop_failure_message_override: "矢印キーで羊のほうに歩いて、スペース バーを おすか、ゲームボードをクリックして、羊を使います。「落とす」ブロックを入れてくださいね。"
-      MC HOC 2016 New pn_failure_message_override: "行くところで、羊の毛を集めます。羊の毛を集めるには、矢印キーで羊のところへ歩き、スペース
-        キーを打つか、ゲームをクリックして羊の毛を切ります。「落とす 羊の毛」ブロックをコードに足してください。"
       MC HOC 2016 New Spawn_failure_message_override: "「実行した時」の下に、「スポーンする 羊」を入れてください。"
       MC HOC 2016 New Walk_failure_message_override: "ドアを開けて、スペース バーをおすか、それがある間、ゲーム
         ボードをタッチします。歩いて入ってつづけます。"
+      MC HOC 2016 New pn_failure_message_override: "行くところで、羊の毛を集めます。羊の毛を集めるには、矢印キーで羊のところへ歩き、スペース
+        キーを打つか、ゲームをクリックして羊の毛を切ります。「落とす 羊の毛」ブロックをコードに足してください。"
       MC HOC 2016 SCORE LEVEL_failure_message_override: "もし、5人の ゴーレムにさわれない場合は、さわられた時に、スコアを2点くわえてください。"
       MC HOC 2016 Village Test_failure_message_override: "勝つには、アイアン ゴーレムにゾンビを追いかけさせて、こうげきをさせてください。"
+      WhileAdventure_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
+      courseE_playLab_scaffold3_failure_message_override: 2 つ以上の新しいキャラをゲームに足して、プログラムでそれらを動かしてください。
+      grade4_scaffolded_project3_failure_message_override: 2 つ以上のキャラを足して、あなたのゲームで動かしてください。
+      kikiTesta_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
       sample1_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
       sample4_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
       sample6_failure_message_override: "まだまだ。 がんばれ! 【 プレイ ゾーンに行く 】"
       sample8_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
-      WhileAdventure_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"

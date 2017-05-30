@@ -51,7 +51,7 @@ const SummaryProgressTable = React.createClass({
             </td>
             <td style={rowStyles.col2}>
               <div style={rowStyles.colText}>
-                {i18n.yourProgress()}
+                {i18n.progress()}
               </div>
             </td>
           </tr>

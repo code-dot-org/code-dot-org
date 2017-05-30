@@ -1,6 +1,7 @@
-/* global Dialog, YT, trackEvent */
+/* global Dialog, YT */
 
 import $ from 'jquery';
+import trackEvent from '../util/trackEvent';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');

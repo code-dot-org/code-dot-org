@@ -10,7 +10,14 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
+Rails:
+  Enabled: true
+
 # BEGIN CODE.ORG OVERRIDES
+
+Rails/Delegate:
+  Include:
+    - dashboard/**/*
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation

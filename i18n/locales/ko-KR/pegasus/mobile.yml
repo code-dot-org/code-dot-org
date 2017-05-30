@@ -656,7 +656,8 @@
   dashboard_students_auto_generated: "자동생성"
   dashboard_students_reset_secret: "비밀보호 재설정"
   dashboard_students_reset_password: "비밀번호 재설정"
-  dashboard_students_share_section: '이 섹션의 로그인 페이지를 학생들에게 공유하기:'
+  dashboard_students_share_section: "이 섹션의 로그인 페이지를 학생들에게 공유하기:"
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "학생 로그인 정보와 함께 카드 출력하기."
   dashboard_students_secret_picture_title: "비밀 그림"
   dashboard_students_secret_picture: "이 섹션의 비밀 형식으로 <b>그림</b>을 사용합니다.  그것은 각 학생의 비밀 그림에 로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
@@ -667,6 +668,7 @@
   dashboard_students_join_link: "학생들에게 계정을 만들고 섹션에 참여하라고 하세요:"
   dashboard_students_no_email: "학생들이 이메일이 없는 경우, 학생들을 위한 계정을 만들어 주려는 경우, 이 섹션의 비밀보호를 <b>비밀단어</b>나 <b>비밀그림</b>으로 설정해 주세요."
   dashboard_students_print_page: "이 페이지 인쇄"
+  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">학생들을 위한 개인정보보호 정책 문서</a>"
   dashboard_curriculum_k5_title: "K-5(초등학교 5학년) 교육자 리소스"
@@ -862,6 +864,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: '유닛 1: 인터넷'
   csp2_name: '유닛 2: 디지털 정보'
   csp3_name: 'Unit 3: Algorithms and Programming'

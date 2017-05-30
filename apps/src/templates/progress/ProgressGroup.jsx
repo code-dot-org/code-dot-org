@@ -19,12 +19,18 @@ const styles = {
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
   },
+  headerBlue: {
+    backgroundColor: color.cyan,
+  },
   headingText: {
     marginLeft: 10
   },
   contents: {
     backgroundColor: color.lighter_purple,
-    padding: 20
+    padding: 20,
+  },
+  contentsBlue: {
+    backgroundColor: color.lightest_cyan,
   },
   bottom: {
     borderBottomLeftRadius: 4,
@@ -43,6 +49,7 @@ const ProgressGroup = React.createClass({
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
     ).isRequired,
+    isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired
   },
 
@@ -59,7 +66,7 @@ const ProgressGroup = React.createClass({
   },
 
   render() {
-    const { groupName, lessons, levelsByLesson, isSummaryView } = this.props;
+    const { groupName, lessons, levelsByLesson, isSummaryView, isPlc } = this.props;
 
     const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
@@ -67,7 +74,11 @@ const ProgressGroup = React.createClass({
     return (
       <div style={styles.main}>
         <div
-          style={[styles.header, this.state.collapsed && styles.bottom]}
+          style={[
+            styles.header,
+            isPlc && styles.headerBlue,
+            this.state.collapsed && styles.bottom
+          ]}
           onClick={this.toggleCollapsed}
         >
           <FontAwesome icon={icon}/>
@@ -76,7 +87,13 @@ const ProgressGroup = React.createClass({
           </span>
         </div>
         {!this.state.collapsed &&
-          <div style={[styles.contents, styles.bottom]}>
+          <div
+            style={[
+              styles.contents,
+              isPlc && styles.contentsBlue,
+              styles.bottom
+            ]}
+          >
             <TableType
               lessons={lessons}
               levelsByLesson={levelsByLesson}

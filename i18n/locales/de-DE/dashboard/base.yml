@@ -79,6 +79,7 @@ de:
     forgot_password: 'Passwort vergessen?'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
@@ -173,6 +174,14 @@ de:
       Die Tutorials machen Spaß, sind visuell attraktiv und vermitteln spielend einfach die Grundlagen der Informatik. Lerne Programmieren mit Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. :-)
       
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Einladung gesendet'
     added_teacher: '%{name} wurde als dein Lehrer hinzugefügt'
@@ -186,8 +195,6 @@ de:
       blank_code: "Bitte gib einen Abschnittscode ein"
       cant_join_own_section: "Es tut uns leid, aber du kannst nicht an deinem eigenen Abschnitt teilnehmen."
     mail:
-      invite_student:
-        subject: "Besuche eine Klasse von %{teacher_name} auf Code.org!"
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e) Schüler(in) zugeordnet.'
   reports:
@@ -386,6 +393,7 @@ de:
     announcement_petition: "Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von \"K-12 computer science education\" zu erbitten."
     announcement_petition_button: "Fügen Sie Ihren Namen ein"
     announcement_go_beyond_button: "Noch weiter gehen"
+    announcement_apply_now: "Apply now"
     announcement_all: "Informieren Sie sich über neue Funktionen und Aktualisierungen in unserem Lehrkräfte-Blog. <a href='%{teacher_blog_url}' target='_blank'>Vergangene Meldungen anzeigen.</a>"
     announcement_hoc_launch: "Tausende von Pädagogen in mehr als 180 Ländern lehren Informatik während der Hour-of-Code vom 5. bis zum 11. Dezember. Wir zählen auf Ihre Hilfe, mehr Studierende als je zuvor zu erreichen. <a href='%{signup_url}' target='_blank'> Registrieren Sie Ihre Hour-of-Code- Veranstaltung</a> und sagen Sie Ihren Lehrerkollegen, dass jeder Informatik lehren kann."
     announcement_mc_launch: "Eines unserer beliebtesten Tutorials hat jetzt eine Fortsetzung! Im neuen \"Minecraft Hour of Code\"-Designer können Schülerinnen und Schüler die Regeln der Minecraft Welt nachbauen. Sie können eine Regeln in Minecraft erstellen, und diese Programme mit Freunden teile oder auf ihren Handys spielen. Versuchen Sie das mit Ihrer Klasse als Erlebnis in der 'Hour of Code'."
@@ -398,13 +406,11 @@ de:
     announcement_apcsp_recruitment: "<strong>Informatik Lehrer:</strong> Ihre Schüler könnten im nächsten viralen Video von Code.org vorgestellt werden, in dem es um die Prüfungen über die Informatik-Grundsätze geht. Wir laden dazu alle Informatik-Schüler ein uns ein 10-20 Sekunden-Video auf Twitter, Instagram oder Facebook zu schicken, in welchem ihr sagt \"I'm taking the #APCSP exam because...\". Die beste Einsendung wird in unserem Video gezeigt und die gewinnenden Schüler erhalten ganz viel Code.org Ehre und Swag!"
     announcement_apcsp_recruitment2: "Die diesjährigen Informatik Test sind darauf ausgelegt Rekorde zu brechen. Die Teilnahme der Studierenden an der Prüfung könnte die Vielfalt drastisch verschieben, aber wir brauchen ihre Hilfe. Ermutigen sie ihre Schüler teilzunehmen und wir werden ihnen für jeden <a href='%{gift_url}' target='_blank'>ein Geschenk schicken</a>. Schüler können auch ihre landesweiten Freunde dazu einladen, an unserer <a href='%{challenge_url}' target='_blank'>#APCSP Video Challenge</a> teilzunehmen."
     announcement_apcsp_recruitment3: "Die diesjährigen Informatik Test sind darauf ausgelegt Rekorde zu brechen. Die Teilnahme der Studierenden an der Prüfung könnte die Vielfalt drastisch verschieben, aber wir brauchen ihre Hilfe. Ermutigen sie ihre Schüler teilzunehmen und gewinnen sie <a href='%{gift_url}' target='_blank'>Gutscheine, Laptops und andere coole Preise</a>! Teilen sie dazu einfach <a href='%{video_url}' target='_blank'>dieses Video</a>, sodass Schüler von ihren Kollegen erfahren, dass sie an den Prüfungen teilnehmen."
+    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
   move_students:
     new_section_dne: "Entschuldigung, aber die Sektion %{new_section_code} existiert nicht. Bitte geben Sie einen anderen Sektionscode ein."
-    section_code_not_entered: "Bitte current_section_code angeben."
     section_code_cant_be_current_section: "Die derzeitige Sektion kann nicht gleich mit der neuen Sektion sein."
     current_section_dne: "Entschuldigung, aber die Sektion %{current_section_code} existiert nicht. Bitte geben Sie einen anderen Sektionscode ein."
-    students_not_yours: "Sie können keine Schüler aus einer Sektion bewegen, die Ihnen nicht gehört."
-    stay_enrolled_not_entered: "Bitte stay_enrolled_in_current_section angeben."
     student_ids_not_entered: "Bitte student_ids angeben."
     student_not_found: "Einer oder mehr Schüler konnte nicht gefunden werden."
     all_students_must_be_in_current_section: "Alle Schüler müssen zur Zeit in Ihrer Sektion eingeschrieben sein."

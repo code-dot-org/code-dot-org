@@ -5,6 +5,7 @@ import color from '../util/color';
 var consoleApi = require('../consoleApi');
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
+import {getStore} from '../redux';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -31,67 +32,68 @@ exports.injectGameLab = function (gamelab) {
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !gameLab.studioApp_.reduxStore.getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }
 
 module.exports.blocks = [
   // Game Lab
-  {func: 'draw', block: 'function draw() {}', expansion: 'function draw() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'drawSprites', category: 'Game Lab' },
-  {func: 'allSprites', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'Game.allSprites', category: 'Game Lab', type: 'readonlyproperty' },
+  {func: 'draw', block: 'function draw() {}', expansion: 'function draw() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'drawSprites', category: 'World' },
+  {func: 'allSprites', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'World.allSprites', category: 'World', type: 'readonlyproperty' },
   /* disabled since we aren't suggesting these global properties be used - commenting these out prevents droplet from turning 'width' and 'height' into blocks when referenced as locals or parameters */
-  //  {func: 'width', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  //  {func: 'height', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'Game.width', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'Game.height', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'Game.mouseX', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'Game.mouseY', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'Game.frameRate', category: 'Game Lab', type: 'property' },
-  {func: 'Game.frameCount', category: 'Game Lab', type: 'readonlyproperty' },
-  {...audioApi.dropletConfig.playSound, category: 'Game Lab'},
-  {...audioApi.dropletConfig.stopSound, category: 'Game Lab'},
-  {func: 'keyIsPressed', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'key', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'keyCode', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'keyDown', paletteParams: ['code'], params: ['"up"'], dropdown: { 0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"'] }, category: 'Game Lab', type: 'value' },
-  {func: 'keyWentDown', paletteParams: ['code'], params: ['"up"'], dropdown: { 0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"'] }, category: 'Game Lab', type: 'value' },
-  {func: 'keyWentUp', paletteParams: ['code'], params: ['"up"'], dropdown: { 0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"'] }, category: 'Game Lab', type: 'value' },
-  {func: 'keyPressed', block: 'function keyPressed() {}', expansion: 'function keyPressed() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'keyReleased', block: 'function keyReleased() {}', expansion: 'function keyReleased() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'keyTyped', block: 'function keyTyped() {}', expansion: 'function keyTyped() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mouseX', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'mouseY', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'pmouseX', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'pmouseY', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'mouseButton', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'mouseDidMove', category: 'Game Lab', type: 'value' },
-  {func: 'mouseDown', paletteParams: ['button'], params: ['"leftButton"'], category: 'Game Lab', type: 'value' },
-  {func: 'mouseIsOver', paletteParams: ['sprite'], params: ["sprite"], category: 'Game Lab', type: 'value' },
-  {func: 'mouseIsPressed', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'mouseMoved', block: 'function mouseMoved() {}', expansion: 'function mouseMoved() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mouseDragged', block: 'function mouseDragged() {}', expansion: 'function mouseDragged() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mousePressed', block: 'function mousePressed() {}', expansion: 'function mousePressed() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mouseReleased', block: 'function mouseReleased() {}', expansion: 'function mouseReleased() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mouseClicked', block: 'function mouseClicked() {}', expansion: 'function mouseClicked() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mouseWentDown', paletteParams: ['button'], params: ['"leftButton"'], category: 'Game Lab', type: 'value' },
-  {func: 'mouseWentUp', paletteParams: ['button'], params: ['"leftButton"'], category: 'Game Lab', type: 'value' },
-  {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true },
-  {func: 'mousePressedOver', paletteParams: ['sprite'], params: ["sprite"], category: 'Game Lab', type: 'value' },
-  {func: 'camera', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'camera.on', category: 'Game Lab' },
-  {func: 'camera.off', category: 'Game Lab' },
-  {func: 'camera.isActive', category: 'Game Lab', type: 'value' },
-  {func: 'camera.active', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true },
-  {func: 'camera.mouseX', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera.mouseY', category: 'Game Lab', type: 'readonlyproperty' },
-  {func: 'camera.position.x', category: 'Game Lab', type: 'property', noAutocomplete: true },
-  {func: 'camera.position.y', category: 'Game Lab', type: 'property', noAutocomplete: true },
-  {func: 'camera.x', category: 'Game Lab', type: 'property' },
-  {func: 'camera.y', category: 'Game Lab', type: 'property' },
-  {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
-  {func: 'comment_GameLab', block: '// Comment', expansion: '// ', category: 'Game Lab' },
+  //  {func: 'width', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  //  {func: 'height', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'World.width', category: 'World', type: 'readonlyproperty' },
+  {func: 'World.height', category: 'World', type: 'readonlyproperty' },
+  {func: 'World.mouseX', category: 'World', type: 'readonlyproperty' },
+  {func: 'World.mouseY', category: 'World', type: 'readonlyproperty' },
+  {func: 'World.frameRate', category: 'World', type: 'property' },
+  {func: 'World.frameCount', category: 'World', type: 'readonlyproperty' },
+  {func: 'World.seconds', category: 'World', type: 'readonlyproperty' },
+  {...audioApi.dropletConfig.playSound, category: 'World'},
+  {...audioApi.dropletConfig.stopSound, category: 'World'},
+  {func: 'keyIsPressed', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'key', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'keyCode', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'keyDown', paletteParams: ['code'], params: ['"up"'], dropdown: { 0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"'] }, category: 'World', type: 'value' },
+  {func: 'keyWentDown', paletteParams: ['code'], params: ['"up"'], dropdown: { 0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"'] }, category: 'World', type: 'value' },
+  {func: 'keyWentUp', paletteParams: ['code'], params: ['"up"'], dropdown: { 0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"'] }, category: 'World', type: 'value' },
+  {func: 'keyPressed', block: 'function keyPressed() {}', expansion: 'function keyPressed() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'keyReleased', block: 'function keyReleased() {}', expansion: 'function keyReleased() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'keyTyped', block: 'function keyTyped() {}', expansion: 'function keyTyped() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mouseX', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'mouseY', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'pmouseX', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'pmouseY', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'mouseButton', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'mouseDidMove', category: 'World', type: 'value' },
+  {func: 'mouseDown', paletteParams: ['button'], params: ['"leftButton"'], category: 'World', type: 'value' },
+  {func: 'mouseIsOver', paletteParams: ['sprite'], params: ["sprite"], category: 'World', type: 'value' },
+  {func: 'mouseIsPressed', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'mouseMoved', block: 'function mouseMoved() {}', expansion: 'function mouseMoved() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mouseDragged', block: 'function mouseDragged() {}', expansion: 'function mouseDragged() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mousePressed', block: 'function mousePressed() {}', expansion: 'function mousePressed() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mouseReleased', block: 'function mouseReleased() {}', expansion: 'function mouseReleased() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mouseClicked', block: 'function mouseClicked() {}', expansion: 'function mouseClicked() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mouseWentDown', paletteParams: ['button'], params: ['"leftButton"'], category: 'World', type: 'value' },
+  {func: 'mouseWentUp', paletteParams: ['button'], params: ['"leftButton"'], category: 'World', type: 'value' },
+  {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'World', noAutocomplete: true },
+  {func: 'mousePressedOver', paletteParams: ['sprite'], params: ["sprite"], category: 'World', type: 'value' },
+  {func: 'camera', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'camera.on', category: 'World' },
+  {func: 'camera.off', category: 'World' },
+  {func: 'camera.isActive', category: 'World', type: 'value' },
+  {func: 'camera.active', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
+  {func: 'camera.mouseX', category: 'World', type: 'readonlyproperty' },
+  {func: 'camera.mouseY', category: 'World', type: 'readonlyproperty' },
+  {func: 'camera.position.x', category: 'World', type: 'property', noAutocomplete: true },
+  {func: 'camera.position.y', category: 'World', type: 'property', noAutocomplete: true },
+  {func: 'camera.x', category: 'World', type: 'property' },
+  {func: 'camera.y', category: 'World', type: 'property' },
+  {func: 'camera.zoom', category: 'World', type: 'property' },
+  {func: 'comment_GameLab', block: '// Comment', expansion: '// ', category: 'World' },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y'], params: ["200", "200"], type: 'either' },
@@ -276,10 +278,10 @@ draw() - USEFUL?
   {func: 'rgb', category: 'Drawing', paramButtons: { minArgs: 3, maxArgs: 4}, paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value' },
   {func: 'noStroke', category: 'Drawing' },
   {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "90"] },
-  {func: 'ellipse', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"] },
+  {func: 'ellipse', category: 'Drawing', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"] },
   {func: 'line', category: 'Drawing', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"] },
   {func: 'point', category: 'Drawing', paletteParams: ['x','y'], params: ["200", "200"] },
-  {func: 'rect', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"] },
+  {func: 'rect', category: 'Drawing', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"] },
   {func: 'regularPolygon', category: 'Drawing', paletteParams: ['x','y','sides','size'], params: ["200", "200", "5", "50"] },
   {func: 'shape', category: 'Drawing', paramButtons: { minArgs: 6 }, paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"] },
   {func: 'triangle', category: 'Drawing', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"], noAutocomplete: true },
@@ -330,16 +332,16 @@ draw() - USEFUL?
   {func: 'comment_Variables', block: '// Comment', expansion: '// ', category: 'Variables' },
 
   // Data
-  {func: 'getUserId', parent: api, category: 'Game Lab', noAutocomplete: true},
-  {func: 'getKeyValue', parent: api, category: 'Game Lab', noAutocomplete: true},
-  {func: 'setKeyValue', parent: api, category: 'Game Lab', noAutocomplete: true},
+  {func: 'getUserId', parent: api, category: 'World', noAutocomplete: true},
+  {func: 'getKeyValue', parent: api, category: 'World', noAutocomplete: true},
+  {func: 'setKeyValue', parent: api, category: 'World', noAutocomplete: true},
 
   // Advanced
 ];
 
 module.exports.categories = {
-  'Game Lab': {
-    id: 'gamelab',
+  World: {
+    id: 'world',
     color: 'yellow',
     rgb: color.droplet_yellow,
     blocks: []
@@ -383,7 +385,7 @@ module.exports.categories = {
 };
 
 module.exports.additionalPredefValues = [
-  'Game',
+  'World',
   'P2D', 'WEBGL', 'ARROW', 'CROSS', 'HAND', 'MOVE',
   'TEXT', 'WAIT', 'HALF_PI', 'PI', 'QUARTER_PI', 'TAU', 'TWO_PI', 'DEGREES',
   'RADIANS', 'CORNER', 'CORNERS', 'RADIUS', 'RIGHT', 'LEFT', 'CENTER', 'TOP',

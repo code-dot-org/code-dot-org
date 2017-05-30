@@ -76,7 +76,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\nvar buttons = [\"redButton\", \"oranageButton\", \"yellowButton\", \"greenButton\", \"blueButton\", \"purpleButton\"];\r\n\r\n// Use setProperty to set the color of \r\n// the buttons in order to creat a rainbow\r\n\r\nsetProperty(\"redButton\",\"background-color\", colors[0]);\r\nsetProperty(\"orangeButton\",\"background-color\", colors[1]);\r\nsetProperty(\"yellowButton\",\"background-color\", colors[2]);\r\nsetProperty(\"greenButton\",\"background-color\", colors[3]);\r\nsetProperty(\"blueButton\",\"background-color\", colors[4]);\r\nsetProperty(\"purpleButton\",\"background-color\", colors[5]);\r\n",
+    "start_blocks": "var colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\nvar buttons = [\"redButton\", \"orangeButton\", \"yellowButton\", \"greenButton\", \"blueButton\", \"purpleButton\"];\r\n\r\n// Use setProperty to set the color of \r\n// the buttons in order to creat a rainbow\r\n\r\nsetProperty(\"redButton\",\"background-color\", colors[0]);\r\nsetProperty(\"orangeButton\",\"background-color\", colors[1]);\r\nsetProperty(\"yellowButton\",\"background-color\", colors[2]);\r\nsetProperty(\"greenButton\",\"background-color\", colors[3]);\r\nsetProperty(\"blueButton\",\"background-color\", colors[4]);\r\nsetProperty(\"purpleButton\",\"background-color\", colors[5]);\r\n",
     "encrypted_examples": "B+DdHPLd10HYwoSJ9G+oIsRURjVjxgqp17AaZ45k+5Sj9lSXoTaiJ4TZE7K6\no7w5\n",
     "instructions_important": "false",
     "show_debug_watch": "false",
@@ -91,6 +91,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-17 21:24:57 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

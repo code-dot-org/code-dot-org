@@ -8,7 +8,8 @@
     "video_key": "csd_gamelab_sprites_2",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "Video: Sprite Movement"
   },
   "published": true,
   "notes": "",

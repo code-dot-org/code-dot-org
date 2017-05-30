@@ -8,6 +8,18 @@
     @include button-variant($white, $cyan, $light_gray);
     text-shadow: none;
   }
+
+  .btn-orange {
+    // color, background, border
+    @include button-variant($white, $orange, $light_gray);
+    text-shadow: none;
+  }
+
+  .btn-gray {
+    // color, background, border
+    @include button-variant($default_text, $background_gray, $lightest_gray);
+    text-shadow: none;
+  }
 }
 
 // Apply the latest bootstrap styles only to the workshop-container div so it
@@ -34,6 +46,35 @@
     white-space: normal;
     font-weight: normal;
   }
+
+  #error_explanation {
+    padding: 0;
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  table.table.table-auto-width {
+    width: auto !important;
+  }
+
+  form.pd-admin {
+    .field_with_errors input {
+      background-color: $realyellow !important;
+    }
+    .field_with_errors select {
+      background-color: $realyellow !important;
+    }
+    .field_with_errors textarea {
+      background-color: $realyellow !important;
+    }
+  }
+
+  form.form-inline {
+    display: inline-block;
+    padding: 0 2px;
+  }
 }
 
 div[role=dialog] {
@@ -53,6 +94,6 @@ div[role=dialog] {
   }
 }
 
-.form-required-field {
+form .form-required-field {
   color: red;
 }

@@ -60,6 +60,8 @@ module ScriptConstants
       CSD2_NAME = 'csd2'.freeze,
       CSD3_NAME = 'csd3'.freeze,
       CSD4_NAME = 'csd4'.freeze,
+      CSD5_NAME = 'csd5'.freeze,
+      CSD6_NAME = 'csd6'.freeze,
     ],
     csp: [
       CSP_UNIT1_NAME = 'cspunit1'.freeze,
@@ -106,10 +108,17 @@ module ScriptConstants
   CATEGORY_ORDERING_PRIORITY = {
     research_studies: 1,
     csp: 2,
+    other: 3,
   }.freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
+  end
+
+  def self.script_in_any_category?(script)
+    CATEGORIES.keys.any? do |category|
+      script_in_category?(category, script)
+    end
   end
 
   def self.categories(script)

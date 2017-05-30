@@ -14,7 +14,7 @@
     "skip_instructions_popup": "false",
     "ideal": "3",
     "video_key": "C2_zuck_repeat_loop",
-    "markdown_instructions": "Suddenly, a magical block appears!  \r\nWith the `repeat` block, you can loop code over and over.\r\n\r\nCan you get the bird to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
+    "markdown_instructions": "With the `repeat` block, you can loop code over and over.\r\n\r\nCan you get the bird to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -37,6 +37,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-23 20:54:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

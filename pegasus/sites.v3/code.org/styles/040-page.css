@@ -647,6 +647,7 @@ a.about_list_item {
   background-color: rgb(255, 164, 0) !important;
   border-color: rgb(255, 164, 0) !important;
   color: white !important;
+  margin-top: 0px;
 }
 
 #congrats .color_boys {

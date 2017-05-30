@@ -90,7 +90,7 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
   this.myNode_ = null;
 
   /**
-   * Storage for ObservableEvent registration keys, to make sure we
+   * Storage for ObservableEventDEPRECATED registration keys, to make sure we
    * can unregister as needed.
    * @type {Object}
    */

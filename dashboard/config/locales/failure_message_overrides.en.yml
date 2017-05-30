@@ -43,6 +43,7 @@ en:
       Eval Strings Images .2_failure_message_override: "Make sure you append the
         string \"Universe\" to make the code create \"Hello, Universe\""
       Kiki_StarWars_Test_5_failure_message_override: "Game over!"
+      Kiki_StarWars_Test_5_Example_failure_message_override: "Game over!"
       MC HOC 2016 Level 1_failure_message_override: "To go on, you’ll need to collect
         wool. To collect the wool, use the arrow keys to walk to the sheep and then
         press the spacebar or click the game to shear the sheep. And, don’t forget

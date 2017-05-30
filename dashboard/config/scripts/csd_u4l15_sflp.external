@@ -1,8 +1,8 @@
 name 'CSD U4L15 SFLP'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 15 - Testing the App
-
-# Resources
+# Overview
+## Resources
 
 * [App User Testing](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=doc))
 MARKDOWN

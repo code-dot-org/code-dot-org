@@ -7,7 +7,7 @@ module Pd::Payment
     setup do
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,
-        workshop_type: Pd::Workshop::TYPE_PUBLIC,
+        on_map: true, funded: true,
         course: Pd::Workshop::COURSE_ECS,
         subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
         num_sessions: 3

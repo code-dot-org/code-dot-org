@@ -15,6 +15,19 @@ class RegexpUtilsTest < Minitest::Test
     'abc'
   ].freeze
 
+  VALID_US_ZIP_CODES = [
+    '12345',
+    '12345-6789',
+    '123456789',
+    '12345 6789'
+  ]
+  INVALID_US_ZIP_CODES = [
+    '123',
+    '1 2',
+    '123456',
+    '12345-abcd'
+  ]
+
   def test_valid_us_phone_numbers
     VALID_US_PHONE_NUMBERS.each do |number|
       assert RegexpUtils.us_phone_number?(number), "Expected #{number} to be a valid phone number."
@@ -24,6 +37,18 @@ class RegexpUtilsTest < Minitest::Test
   def test_invalid_us_phone_numbers
     INVALID_US_PHONE_NUMBERS.each do |number|
       refute RegexpUtils.us_phone_number?(number), "Expected #{number} to NOT be a valid phone number."
+    end
+  end
+
+  def test_valid_us_zip_codes
+    VALID_US_ZIP_CODES.each do |zip_code|
+      assert RegexpUtils.us_zip_code?(zip_code), "Expected #{zip_code} to be a valid zip code."
+    end
+  end
+
+  def test_invalid_us_zip_codes
+    INVALID_US_ZIP_CODES.each do |zip_code|
+      refute RegexpUtils.us_zip_code?(zip_code), "Expected #{zip_code} to NOT be a valid zip code."
     end
   end
 

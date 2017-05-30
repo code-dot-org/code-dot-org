@@ -1,0 +1,124 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-05-06T22:11:59.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "instructions": "\"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox.\"",
+    "markdown_instructions": "*\"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox.\"*",
+    "callout_json": "[]",
+    "ideal": "11",
+    "instructions_important": "false",
+    "min_collected": "2",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.\",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f63d2d7720e820a0bcb4b3d7a265df/courseD_harvester_nested_loops_challenge1.mp3\"}]",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move" limit="3">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+        <block type="collector_collect" limit="2"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">3</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="controls_repeat_dropdown">
+                      <title name="TIMES" config="3-10">3</title>
+                      <statement name="DO">
+                        <block type="collector_collect">
+                          <next>
+                            <block type="controls_repeat_dropdown">
+                              <title name="TIMES" config="3-10">3</title>
+                              <statement name="DO">
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <next>
+                                    <block type="controls_repeat_dropdown">
+                                      <title name="TIMES" config="3-10">3</title>
+                                      <statement name="DO">
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

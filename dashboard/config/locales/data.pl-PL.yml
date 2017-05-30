@@ -197,14 +197,15 @@
           użyj więc bloku "counter" (licznik). Wskazówka: Znajdziesz go w kategorii
           "Variables" (Zmienne).'
         turtle_2_7: Oto program do rysowania spirali, ale bloki są wyłączone, więc
-          nie będą działać. Utwórz nowy program używając bloku licz z (z kategorii
-          Pętle) i bloku licznik (z kategorii Zmienne), aby narysować taką samą spiralę.
+          nie będą działać. Utwórz nowy program używając bloku "dla" (for, z kategorii
+          Pętle) i bloku "licznik" (counter, z kategorii Zmienne), aby narysować taką
+          samą spiralę.
         turtle_2_7_5: Jest nowa funkcja narysuj bałwana (w kategorii Funkcje). Narysuj
           dwa bałwany o wysokość 250 i 100.
         turtle_2_8: To jest trochę podstępne. Użyj funkcji narysuj bałwana i nowego
           bloku przesuń do przodu  (w kategorii Działania). Narysuj 3 bałwany w różnych
           kolorach, w odległości 100 pikseli od siebie.
-        turtle_2_9: Skorzystaj z pętli licz z, by narysować rodzinę bałwanów o wysokości
+        turtle_2_9: Skorzystaj z pętli "dla", by narysować rodzinę bałwanów o wysokości
           110, 100, 90, 80 i 70. Bałwany powinny być oddalone od siebie o 60 pikseli.
         turtle_2_10: Tutaj mamy kawałek kodu, aby poeksperymentować z różnymi spiralami  Co
           się stanie, jeśli zmienisz wielkość obrotu? Lub ustawisz kolor losowy w
@@ -727,10 +728,10 @@
         C4_unplugged_forloops: Pętle dla (for)
         C4_unplugged_parameters: Pisanie piosenek z parametrami
         C4_unplugged_binary: Binarny
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_EF_cs_matters: Sprawy informatyki
+        CSF_stevie_big_project: Stevie i Duży Projekt (the Big Project)
         CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_zuck_loops_short: Pętle "powtórz" (repeat)
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli
         frozen_functions: Wprowadzenie do Funkcji
@@ -741,16 +742,18 @@
         infinity_playlab_intro: Play Lab - Wprowadzenie
         infinity_playlab_events: Play Lab - Zdarzenia
         infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_animation_tab: Karta Animacji
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_weblab_intro_1: Wprowadzenie do Web Lab - Część 1
+        csd_weblab_intro_2: Wprowadzenie do Web Lab - Część 2
+        csd_weblab_css_1: Wprowadzenie do CSS - Część 1
+        csd_weblab_css_2: Wprowadzenie do CSS - Część 2
+        csd_weblab_intro_3: Wprowadzenie do Web Lab - Część 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

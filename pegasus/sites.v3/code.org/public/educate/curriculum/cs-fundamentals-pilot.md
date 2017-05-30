@@ -57,7 +57,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 - **Implementation in elementary school**: Many districts we partner with are interested in building a computer science pathway throughout elementary school. With Courses A - F, there is a clear entry point for every grade that builds on concepts learned in prior years.<br><br>
 - **Where to start?** There is confusion today that Course 1 is an entry-point only for pre-readers, and Course 2 is the entry-point for readers no matter what age. With Courses A - F, teachers should start with the course that aligns to the grade they are teaching. (But what if students haven’t completed all prior courses? [More on that below!](#whatsthere))<br><br>
-- **Grade-appropriate content**: With 6 separate courses for each grade, we can better tailor instructions to reading level, reserve complex angles for later grades, and create storybooks about persistence for circle time with little ones. 
+- **Grade-appropriate content**: With 6 separate courses aligned to each K-5 grade level, we can better tailor instructions to reading level, reserve complex angles for later grades, and create storybooks about persistence for circle time with little ones. 
 
 *Also: Why the name Courses A - F if they’re aligned to the grades? We received feedback early on from our facilitators that while the courses might be aligned to specific grades, many classrooms might not be ready for their grade’s content yet. To stay neutral and avoid anyone feeling behind, we decided on Courses A - F.*
 
@@ -106,8 +106,7 @@ As these updates won’t be officially released until August 2017, there are a f
 
 | Course |Recommended Student prerequisites |
 | :------------------:|-----------|
-| *Courses A, B and C* | None |
-| *Course D* | Concept needed: Simple repeat loops <br>Recommended prerequisite: [Course 1](http://studio.code.org/s/course1) or [Course 2](http://studio.code.org/s/course2) or Code.org [Hour of Code tutorial](http://hourofcode.com/learn) |
+| *Courses A, B, C, and D* | None |
 | *Course E* | Concepts needed: Loops, conditionals (if/else statements)<br>Recommended prerequisite: [Course 2](http://studio.code.org/s/course2) |
 | *Course F* | Concepts needed: Loops, conditionals (if/else statements), functions <br>Recommended prerequisite: [Course 3](http://studio.code.org/s/course3) |
 

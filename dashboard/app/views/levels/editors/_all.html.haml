@@ -10,7 +10,7 @@
   - script_data = { editorall: { video_infos: video_infos }.to_json }
   %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
 
-- unless @level.is_a? DSLDefined
+- unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
   .field
     = f.label :display_name
     %p Optionally override how this level is displayed on the Course Overview page.

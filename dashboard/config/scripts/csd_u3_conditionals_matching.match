@@ -1,14 +1,14 @@
 name 'CSD U3 - conditionals - Matching'
 title 'Matching: Comparison Operators'
 description 'Match the boolean expression using comparison operators to the English description.'
-question 'Is the width of dog sprite less than the width of cat sprite?'
-answer 'dog.width &lt; cat.width'
-question 'Is the x of the dog sprite less than the x of the cat sprite?'
-answer 'dog.x &lt; cat.x'
-question 'Is the width of dog sprite greater than the width of cat sprite?'
-answer 'dog.width &gt; cat.width'
-question 'Is the x of the dog sprite greater than the x of the cat sprite?'
-answer 'dog.x &gt; cat.x'
-question "Is the x of the dog sprite equal to the x of the cat sprite?"
+question "Is the dog sprite's rotation less than the cat sprite's rotation?"
+answer "dog.rotation &lt; cat.rotation"
+question "Is the dog sprite's x less than the cat sprite's x?"
+answer "dog.x &lt; cat.x"
+question "Is the dog sprite's scale greater than the cat sprite's scale?"
+answer "dog.scale &gt; cat.scale"
+question "Is the dog sprite's x greater than the cat sprite's x?"
+answer "dog.x &gt; cat.x"
+question "Is the dog sprite's x equal to the cat sprite's x?"
 answer "dog.x == cat.x"
 

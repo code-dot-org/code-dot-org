@@ -89,6 +89,8 @@
     forgot_password: Ai uitat parola?
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} studenţi s-au înregistrat deja."
     teacher_count: "%{count} profesori s-au înregistrat deja."
@@ -207,6 +209,14 @@
       Tutorialele sunt distractive, captivante vizual şi te învaţă conceptele de bază din informatică folosind o metodă simplă, ghidată, similară jocului. Învață să codezi de la Bill Gates, Mark Zuckerberg, Angry-Birds și Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Invitație trimisă
     added_teacher: "%{name} adăugat(ă) ca și profesorul tău"
@@ -221,8 +231,6 @@
       blank_code: Te rugăm să introduci un cod de secţiune
       cant_join_own_section: Ne pare rău, dar nu poţi intra în propria secţiune.
     mail:
-      invite_student:
-        subject: Alătură-te clasei cu %{teacher_name} la Code.org!
       student_disassociated:
         subject: 'Notificare Code.org: %{student_name} nu mai este asociat ca student
           al tău.'
@@ -484,6 +492,7 @@
       SUA pentru a finanta calculatorul de stiinta si educaţie k-12.
     announcement_petition_button: Adaugă-ți numele
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Fii la curent cu noutățile si actualizarile de pe blogul cadrelor
       noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea
       anunturile vechi.</a>
@@ -548,16 +557,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
-    section_code_not_entered: Vă rugăm să furnizaţi current_section_code.
     section_code_cant_be_current_section: Secţiunea curentă nu poate fi la fel ca
       o secţiune nouă.
     current_section_dne: Ne pare rău, dar secțiunea %{current_section_code} nu există.
       Vă rugăm să introduceţi un cod aferent unei secţiuni diferite.
-    students_not_yours: Nu puteţi muta elevii dintr-o secţiune ce nu vă aparţine.
-    stay_enrolled_not_entered: Vă rugăm să furnizaţi stay_enrolled_in_current_section.
     student_ids_not_entered: Vă rugăm să furnizaţi student_ids.
     student_not_found: Unul sau mai mulți studenți nu au putut fi găsiți.
     all_students_must_be_in_current_section: Toţi studenţii trebuie să fie înscrişi

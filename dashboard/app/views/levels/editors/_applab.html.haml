@@ -10,7 +10,12 @@
   = boolean_check_box f, :show_turtle_before_run
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
-  = boolean_check_box f, :text_mode_at_start
+  = f.radio_button :text_mode_at_start, 'false'
+  = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
+  = f.radio_button :text_mode_at_start, 'blocks'
+  = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
+  = f.radio_button :text_mode_at_start, 'true'
+  = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
 .field
   = f.label :design_mode_at_start, 'Start in Design Mode'
   = boolean_check_box f, :design_mode_at_start

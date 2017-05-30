@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import {COLUMNS} from '@cdo/apps/templates/projects/ProjectsList';
+import {COLUMNS, COLUMNS_WITHOUT_THUMBNAILS} from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 
@@ -65,6 +65,24 @@ function assertRowThumbnail(rowElement, thumbnailUrl) {
   expect(src).to.equal(thumbnailUrl);
 }
 
+/**
+ * @param {HTMLTableRowElement} rowElement HTML row element in the projects list table
+ * @param {string} projectName Expected project name
+ * @param {string} studentName Expected student name
+ * @param {string} appType Expected app type (App Lab, Game Lab, etc)
+ * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
+ *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
+ *   The desired date format which we will show in all browsers is MM/DD/YYYY.
+ */
+function assertRowContentsWithoutThumbnail(rowElement, projectName, studentName, appType, lastEdited) {
+  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.PROJECT_NAME].innerText).to.equal(projectName);
+  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.STUDENT_NAME].innerText).to.equal(studentName);
+  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.APP_TYPE].innerText).to.equal(appType);
+  // Temporarily comment out this line to make tests pass locally in Chrome
+  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED].innerText).to.equal(lastEdited);
+}
+
+
 describe('SectionProjectsList', () => {
   let root;
 
@@ -73,6 +91,7 @@ describe('SectionProjectsList', () => {
       <SectionProjectsList
         projectsData={STUB_PROJECTS_DATA}
         studioUrlPrefix={STUDIO_URL_PREFIX}
+        showProjectThumbnails={true}
       />
     );
   });
@@ -97,7 +116,26 @@ describe('SectionProjectsList', () => {
     });
   });
 
-  it('initially shows all projects, most recently edited first', () => {
+  it('hide thumbnail column when showProjectThumbnails is disabled', () => {
+    root = mount(
+      <SectionProjectsList
+        projectsData={STUB_PROJECTS_DATA}
+        studioUrlPrefix={STUDIO_URL_PREFIX}
+        showProjectThumbnails={false}
+      />
+    );
+
+    let rows = root.find('tr');
+    expect(rows).to.have.length(5);
+
+    assertRowContentsWithoutThumbnail(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContentsWithoutThumbnail(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContentsWithoutThumbnail(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContentsWithoutThumbnail(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContentsWithoutThumbnail(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+  });
+
+    it('initially shows all projects, most recently edited first', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');

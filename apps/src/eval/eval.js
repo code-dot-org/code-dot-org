@@ -34,9 +34,9 @@ var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
 var utils = require('../utils');
+import {getStore} from '../redux';
 
-var ResultType = studioApp.ResultType;
-var TestResults = studioApp.TestResults;
+import {TestResults, ResultType} from '../constants';
 
 import canvg from 'canvg';
 // tests don't have svgelement
@@ -45,7 +45,7 @@ import '../util/svgelement-polyfill';
 var level;
 var skin;
 
-studioApp.setCheckForEmptyBlocks(false);
+studioApp().setCheckForEmptyBlocks(false);
 
 Eval.CANVAS_HEIGHT = 400;
 Eval.CANVAS_WIDTH = 400;
@@ -62,7 +62,7 @@ Eval.encodedFeedbackImage = null;
  * Initialize Blockly and the Eval.  Called on page load.
  */
 Eval.init = function (config) {
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
   level = config.level;
@@ -78,9 +78,9 @@ Eval.init = function (config) {
   config.skin.winAvatar = null;
 
   config.loadAudio = function () {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp().loadAudio(skin.winSound, 'win');
+    studioApp().loadAudio(skin.startSound, 'start');
+    studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function () {
@@ -104,7 +104,7 @@ Eval.init = function (config) {
       var background = document.getElementById('background');
       background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         skin.assetUrl('background_grid.png'));
-        studioApp.createCoordinateGridBackground({
+        studioApp().createCoordinateGridBackground({
           svg: 'svgEval',
           origin: -200,
           firstLabel: -100,
@@ -130,7 +130,7 @@ Eval.init = function (config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's studioApp.resetButtonClick will be called first
+    // base's studioApp().resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
 
@@ -140,13 +140,13 @@ Eval.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config);
+  studioApp().setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore}>
+    <Provider store={getStore()}>
       <AppView
         visualizationColumn={<EvalVisualizationColumn/>}
-        onMount={studioApp.init.bind(studioApp, config)}
+        onMount={studioApp().init.bind(studioApp(), config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -161,7 +161,7 @@ Eval.init = function (config) {
  */
 function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
   if (evaluateInPlayspace) {
-    studioApp.resetButtonClick();
+    studioApp().resetButtonClick();
     Eval.resetButtonClick();
     Eval.clearCanvasWithID('user');
   }
@@ -176,7 +176,7 @@ function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
     var actualDrawer = getDrawableFromBlock(actualBlock);
     var expectedDrawer = getDrawableFromBlock(expectedBlock);
 
-    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    studioApp().feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     if (!actualDrawer || actualDrawer instanceof CustomEvalError) {
       throw new Error('Invalid Call Block');
@@ -231,9 +231,9 @@ function displayCallAndExample() {
  * Click the run button.  Start the program.
  */
 Eval.runButtonClick = function () {
-  studioApp.toggleRunReset('reset');
+  studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioApp.attempts++;
+  studioApp().attempts++;
   Eval.execute();
 };
 
@@ -244,7 +244,7 @@ Eval.clearCanvasWithID = function (canvasID) {
   }
 };
 /**
- * App specific reset button click logic.  studioApp.resetButtonClick will be
+ * App specific reset button click logic.  studioApp().resetButtonClick will be
  * called first.
  */
 Eval.resetButtonClick = function () {
@@ -325,7 +325,7 @@ function getDrawableFromBlockXml(blockXml) {
       "we already have blocks in the workspace");
   }
   // Temporarily put the blocks into the workspace so that we can generate code
-  studioApp.loadBlocks(blockXml);
+  studioApp().loadBlocks(blockXml);
 
   var result = getDrawableFromBlockspace();
 
@@ -418,14 +418,14 @@ Eval.execute = function () {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  if (studioApp.hasUnfilledFunctionalBlock()) {
+  if (studioApp().hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = studioApp.getUnfilledFunctionalBlockError('functional_display');
-  } else if (studioApp.hasQuestionMarksInNumberField()) {
+    Eval.message = studioApp().getUnfilledFunctionalBlockError('functional_display');
+  } else if (studioApp().hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
-  } else if (studioApp.hasEmptyFunctionOrVariableName()) {
+  } else if (studioApp().hasEmptyFunctionOrVariableName()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTION_NAME;
     Eval.message = commonMsg.unnamedFunction();
@@ -456,7 +456,7 @@ Eval.execute = function () {
       // Haven't run into any errors. Do our actual comparison
       if (Eval.result === ResultType.UNSET) {
         Eval.result = canvasesMatch('user', 'answer');
-        Eval.testResults = studioApp.getTestResults(Eval.result);
+        Eval.testResults = studioApp().getTestResults(Eval.result);
       }
 
       if (level.freePlay) {
@@ -482,19 +482,19 @@ Eval.execute = function () {
   // don't try it if function is not defined, which should probably only be
   // true in our test environment
   if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
-    studioApp.report(reportData);
+    studioApp().report(reportData);
   } else {
     document.getElementById('svgEval').toDataURL("image/png", {
       callback: function (pngDataUrl) {
         Eval.feedbackImage = pngDataUrl;
         Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
 
-        studioApp.report(reportData);
+        studioApp().report(reportData);
       }
     });
   }
 
-  studioApp.playAudio(Eval.result ? 'win' : 'failure');
+  studioApp().playAudio(Eval.result ? 'win' : 'failure');
 
   if (!Eval.result && level.isProjectLevel) {
     // In projects mode, report callback is never called. In the case of a
@@ -508,7 +508,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     return;
   }
 
-  var exampleless = studioApp.getFunctionWithoutTwoExamples();
+  var exampleless = studioApp().getFunctionWithoutTwoExamples();
   if (exampleless) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
@@ -516,7 +516,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     return;
   }
 
-  var unfilled = studioApp.getUnfilledFunctionalExample();
+  var unfilled = studioApp().getUnfilledFunctionalExample();
   if (unfilled) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
@@ -527,7 +527,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     return;
   }
 
-  var failingBlockName = studioApp.checkForFailingExamples(getEvalExampleFailure);
+  var failingBlockName = studioApp().checkForFailingExamples(getEvalExampleFailure);
   if (failingBlockName) {
     // Clear user canvas, as this is meant to be a pre-execution failure
     Eval.clearCanvasWithID('user');
@@ -584,7 +584,7 @@ function canvasesMatch(canvasA, canvasB) {
 
 /**
  * App specific displayFeedback function that calls into
- * studioApp.displayFeedback when appropriate
+ * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function (response) {
   if (Eval.result === ResultType.UNSET) {
@@ -619,7 +619,7 @@ var displayFeedback = function (response) {
   if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
   }
-  studioApp.displayFeedback(options);
+  studioApp().displayFeedback(options);
 };
 
 /**

@@ -27,7 +27,7 @@ module Pd::WorkshopFilters
     course = params[:course]
 
     workshops = Pd::Workshop.in_state(::Pd::Workshop::STATE_ENDED)
-    unless current_user.admin?
+    unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
       workshops = workshops.organized_by current_user
     end
 
@@ -57,9 +57,12 @@ module Pd::WorkshopFilters
   # - course
   # - subject
   # - organizer_id
+  # - teacher_email
+  # - only_attended
   # - order_by (field followed by optional asc|desc)
   #   - location_name
-  #   - workshop_type
+  #   - on_map
+  #   - funded
   #   - course
   #   - subject
   #   - date (scheduled start date)
@@ -80,6 +83,19 @@ module Pd::WorkshopFilters
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
 
+      if current_user.permission?(UserPermission::WORKSHOP_ADMIN) && params[:teacher_email]
+        teacher = User.find_by(email: params[:teacher_email])
+        if teacher
+          if params[:only_attended]
+            workshops = workshops.attended_by(teacher)
+          else
+            workshops = workshops.enrolled_in_by(teacher)
+          end
+        else
+          workshops = workshops.none
+        end
+      end
+
       order_by = params[:order_by]
       if order_by
         parsed = order_by.downcase.match /^(\w+)(?: (asc|desc))?$/
@@ -88,8 +104,10 @@ module Pd::WorkshopFilters
         case field
           when 'location_name'
             workshops = workshops.order("location_name #{direction}".strip)
-          when 'workshop_type'
-            workshops = workshops.order("workshop_type #{direction}".strip)
+          when 'on_map'
+            workshops = workshops.order("on_map #{direction}".strip)
+          when 'funded'
+            workshops = workshops.order("funded #{direction}".strip)
           when 'course'
             workshops = workshops.order("course #{direction}".strip)
           when 'subject'
@@ -118,6 +136,8 @@ module Pd::WorkshopFilters
       :course,
       :subject,
       :organizer_id,
+      :teacher_email,
+      :only_attended,
       :order_by
     )
   end

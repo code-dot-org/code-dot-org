@@ -15,16 +15,16 @@ import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 let gamelabCommands = module.exports;
 
 gamelabCommands.getUserId = function () {
-  if (!studioApp.labUserId) {
+  if (!studioApp().labUserId) {
     throw new Error("User ID failed to load.");
   }
-  return studioApp.labUserId;
+  return studioApp().labUserId;
 };
 
 gamelabCommands.getKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError;
-  studioApp.storage.getKeyValue(opts.key, onSuccess, onError);
+  studioApp().storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
 gamelabCommands.handleReadValue = function (opts, value) {
@@ -36,7 +36,7 @@ gamelabCommands.handleReadValue = function (opts, value) {
 gamelabCommands.setKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError;
-  studioApp.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  studioApp().storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
 gamelabCommands.handleSetKeyValue = function (opts) {

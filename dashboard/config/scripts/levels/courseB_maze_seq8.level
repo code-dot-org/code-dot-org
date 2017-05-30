@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,4,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,4,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,2,1,1,1,4,0],[0,0,1,1,1,3,0,0],[0,0,0,0,0,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Your turn!  What do you need to do to get the bird to the pig?",
     "start_direction": "1",
@@ -28,6 +28,8 @@
     "examples_required": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're stuck, try adding one block at a time until you solve the puzzle.\",\"hint_id\":\"courseB_maze_seq8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ced8621269fe40dca4a7c2d18b4d9306/courseB_maze_seq8.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

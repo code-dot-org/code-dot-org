@@ -45,9 +45,7 @@ module Pd::Payment
       enrollment.try(&:school)
     end
 
-    def workshop
-      workshop_summary.workshop
-    end
+    delegate :workshop, to: :workshop_summary
 
     def generate_teacher_progress_report_line_item(with_payment = false)
       line_item = {
@@ -65,7 +63,8 @@ module Pd::Payment
         workshop_id: workshop.id,
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         workshop_name: workshop.friendly_name,
-        workshop_type: workshop.workshop_type,
+        on_map: workshop.on_map,
+        funded: workshop.funded,
         organizer_name: workshop.organizer.name,
         organizer_email: workshop.organizer.email,
         year: workshop.year,

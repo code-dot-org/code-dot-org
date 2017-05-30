@@ -1,5 +1,5 @@
 - unplugged = @level.type == 'Unplugged' ? @level.name : @game.name
-- video_key = try_t("data.unplugged.#{unplugged}.video")
+- video_key = @level.video_key || try_t("data.unplugged.#{unplugged}.video")
 - pdfs = try_t("data.unplugged.#{unplugged}.pdfs")
 - has_pegasus_lesson_plan = @script_level && @script_level.script.has_lesson_plan?
 - video =  video_key ? Video.find_by_key(video_key) : nil

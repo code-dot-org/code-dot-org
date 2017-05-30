@@ -1,14 +1,14 @@
 var testUtils = require('../util/testUtils');
-testUtils.setExternalGlobals();
 import {assert} from '../util/configuredChai';
-var ReactTestUtils = require('react-addons-test-utils');
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
-var msg = require('@cdo/locale');
 var shareWarnings = require('@cdo/apps/shareWarnings');
 
 describe('shareWarnings', function () {
+
+  testUtils.setExternalGlobals();
+
   describe('checkSharedAppWarnings function', function () {
 
     beforeEach(() => {
@@ -88,7 +88,7 @@ describe('shareWarnings', function () {
 
       it('should call the onWarningsComplete callback if specified', () => {
         var onWarningsComplete = sinon.spy();
-        var dialog = checkSharedAppWarnings({
+        checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
           onWarningsComplete,

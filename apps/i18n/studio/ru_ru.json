@@ -859,5 +859,8 @@
   "failedMultiplyCharactersTimeoutBlockly": "Тебе нужно поймать 20 Мышей-дроидов. Используй команду «добавить Мышь-дроида» внутри блока «когда поймаешь Мышь-дроида», чтобы добавлять двух и более Мышей-дроидов каждый раз, когда ты поймаешь одну Мышь-дроида.",
   "failedMultiplyCharactersTimeoutGotSome": "Поздравляем, ты добавил программу для создания Мышей-дроидов. Переходи к следующей головоломке или попробуй еще раз пройти эту, поймав 20 Мышей-дроидов. Попробуй упростить задачу, добавив больше Мышей-дроидов! (Нажимай и удерживай клавиши на клавиатуре (или экране), чтобы перемещаться быстрее.)",
   "failedChangeSettingTimeout": "Поймай три Пилота-повстанца для продолжения.",
-  "failedChangeSettingSettings": "Создай свою собственную игру. Чтобы решить эту головоломку, тебе нужно изменить свой дроид и задать скорость его передвижения."
+  "failedChangeSettingSettings": "Создай свою собственную игру. Чтобы решить эту головоломку, тебе нужно изменить свой дроид и задать скорость его передвижения.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
 }

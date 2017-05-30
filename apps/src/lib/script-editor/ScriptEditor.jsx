@@ -1,5 +1,6 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
+import StageDescriptions from './StageDescriptions';
 
 const styles = {
   input: {
@@ -21,6 +22,7 @@ const styles = {
 const ScriptEditor = React.createClass({
   propTypes: {
     beta: React.PropTypes.bool,
+    name: React.PropTypes.string.isRequired,
     i18nData: React.PropTypes.object.isRequired,
     hidden: React.PropTypes.bool,
     loginRequired: React.PropTypes.bool,
@@ -68,6 +70,10 @@ const ScriptEditor = React.createClass({
             style={styles.input}
           />
         </label>
+        <StageDescriptions
+          scriptName={this.props.name}
+          currentDescriptions={this.props.i18nData.stageDescriptions}
+        />
         <h2>Basic Settings</h2>
         <label>
           Visible in Teacher Dashboard

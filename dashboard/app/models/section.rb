@@ -2,35 +2,40 @@
 #
 # Table name: sections
 #
-#  id           :integer          not null, primary key
-#  user_id      :integer          not null
-#  name         :string(255)
-#  created_at   :datetime
-#  updated_at   :datetime
-#  code         :string(255)
-#  script_id    :integer
-#  grade        :string(255)
-#  login_type   :string(255)      default("email"), not null
-#  deleted_at   :datetime
-#  stage_extras :boolean          default(FALSE), not null
-#  section_type :string(255)
+#  id                :integer          not null, primary key
+#  user_id           :integer          not null
+#  name              :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#  code              :string(255)
+#  script_id         :integer
+#  course_id         :integer
+#  grade             :string(255)
+#  login_type        :string(255)      default("email"), not null
+#  deleted_at        :datetime
+#  stage_extras      :boolean          default(FALSE), not null
+#  section_type      :string(255)
+#  first_activity_at :datetime
+#  pairing_allowed   :boolean          default(TRUE), not null
 #
 # Indexes
 #
+#  fk_rails_20b1e5de46        (course_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
 
-require 'cdo/section_helpers'
-
 require 'full-name-splitter'
-require 'rambling-trie'
+require 'cdo/code_generation'
+require 'cdo/safe_names'
 
 class Section < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :user
   alias_attribute :teacher, :user
 
-  has_many :followers, dependent: :restrict_with_error
+  has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
   has_many :students, -> {order('name')}, through: :followers, source: :student_user
@@ -39,6 +44,7 @@ class Section < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :script
+  belongs_to :course
 
   has_many :section_hidden_stages
 
@@ -75,64 +81,12 @@ class Section < ActiveRecord::Base
   # the minimum number of letters in their last name needed to uniquely
   # identify them
   def name_safe_students
-    # Create a prefix tree of student names
-    trie = Rambling::Trie.create
+    name_splitter_proc = ->(student) {FullNameSplitter.split(student.name)}
 
-    # Add whitespace-normalized versions of the student names to the
-    # trie. Because FullNameSplitter implicitly performs whitespace
-    # normalization, this is necessary to ensure that we can recognize
-    # the name on the other side
-    students.each do |student|
-      student.name = student.name.strip.split(/\s+/).join(' ')
-      trie.add student.name
-    end
-
-    students.map do |student|
-      first, _last = FullNameSplitter.split(student.name)
-      if first.nil?
-        # if fullnamesplitter can't identify the first name, default to
-        # full name (ie do nothing)
-      elsif first.length == 1 || /^.\.$/.match(first)
-        # if the students first name is either a single character or a
-        # single character followed by a period, assume it has been
-        # abbreviated and display the full name
-      elsif trie.words(first).count == 1
-        # If the student's first name is unique, simply use that
-        student.name = first
-      else
-        # Otherwise, we first must find the leaf node representing the
-        # student's entire name
-        leaf = trie.root
-        student.name.split('').each do |letter|
-          leaf = leaf[letter.to_sym]
-        end
-
-        # we then traverse up the trie until we encounter the
-        # "rightmost" letter in the student's name which is not unique.
-        # "Not unique" means that either the letter has siblings
-        # (implying other names that share characters with our own) or
-        # its parent is a terminal node (implying a name that's a strict
-        # subset of our own)
-        leaf = leaf.parent until leaf.parent.nil? ||
-            leaf.parent.children.count > 1 ||
-            leaf.parent.terminal?
-
-        # If our "rightmost" character is a space, add an additional
-        # letter for visibility if we can. Note that by this stage we
-        # are guaranteed to have no more than one child, so we can
-        # condifently pick the first.
-        leaf = leaf.children.first if leaf.children.any? && leaf.letter == :" "
-
-        # finally, we assemble the student's unique name by continuing
-        # our way up the trie
-        newname = ""
-        until leaf.nil?
-          newname = leaf.letter.to_s + newname
-          leaf = leaf.parent
-        end
-        student.name = newname unless newname.empty?
-      end
-
+    SafeNames.get_safe_names(students, name_splitter_proc).map do |safe_name_and_student|
+      # Replace each student name with the safe name (for this instance, not saved)
+      safe_name, student = safe_name_and_student
+      student.name = safe_name
       student
     end
   end
@@ -148,35 +102,45 @@ class Section < ActiveRecord::Base
     self.followers_attributes = follower_params
   end
 
+  # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
-  # @param move_for_same_teacher [Boolean] Whether the student should be unenrolled from other
-  #   sections belonging to the same teacher.
   # @return [Follower] The newly created follower enrollment.
-  # TODO(asher): Eliminate this option.
-  def add_student(student, move_for_same_teacher:)
-    if move_for_same_teacher
-      sections_with_same_teacher = student.sections_as_student.where(user_id: user_id)
-      unless sections_with_same_teacher.empty?
-        # If this student is already in another section owned by the
-        # same teacher, move them to this section instead of creating a
-        # new one.
-        # TODO(asher): Presently, this only unenrolls the student from one of the existing sections.
-        # Change this to unenroll the student from all sections.
-        follower = sections_with_same_teacher.first.
-          followers.where(student_user_id: student.id).first
-        return follower.update_attributes!(section: self)
+  def add_student(student)
+    follower = Follower.with_deleted.find_by(section: self, student_user: student)
+    if follower
+      if follower.deleted?
+        follower.restore
       end
+      return follower
     end
 
-    Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+    Follower.create!(section: self, student_user: student)
+  end
+
+  # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
+  # student from old section.
+  # @param student [User] The student to enroll in this section.
+  # @param old_section [Section] The section from which to remove the student.
+  # @return [Follower | nil] The newly created follower enrollment (possibly nil).
+  def add_and_remove_student(student, old_section)
+    old_follower = old_section.followers.where(student_user: student).first
+    return nil unless old_follower
+
+    old_follower.destroy
+    add_student student
+  end
+
+  # Figures out the default script for this section. If the section is assigned to
+  # a course rather than a script, it returns the first script in that course
+  # @return [Script, nil]
+  def default_script
+    return script if script
+    return course.try(:course_scripts).try(:first).try(:script)
   end
 
   private
 
   def unused_random_code
-    loop do
-      code = SectionHelpers.random_code
-      return code unless Section.exists?(code: code)
-    end
+    CodeGeneration.random_unique_code length: 6, model: Section
   end
 end

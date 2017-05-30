@@ -6,9 +6,9 @@
   "user_id": 63,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":4,\"range\":4},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1,\"value\":15,\"range\":15},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":4,\"range\":4},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":4,\"range\":4},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions": "Help Laurel collect all of the treasure.",
-    "markdown_instructions": "Take the same path as before, but this time collect all of the treasure as you find it.\r\n",
+    "markdown_instructions": "Now there's more treasure.  Can you help Laurel collect it all?",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -33,8 +33,8 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "2",
     "callout_json": "[]",
-    "ideal": "16",
-    "min_collected": "19",
+    "ideal": "11",
+    "min_collected": "8",
     "contained_level_names": null
   },
   "published": true,
@@ -53,7 +53,7 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-15">???</title>
+          <title name="TIMES" config="2-15">???</title>
         </block>
         <block type="collector_collect" limit="2" id="callMe"/>
       </xml>
@@ -71,48 +71,26 @@
                 <block type="maze_turn">
                   <title name="DIR">turnRight</title>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
                       <next>
                         <block type="controls_repeat">
-                          <title name="TIMES">4</title>
+                          <title name="TIMES">3</title>
                           <statement name="DO">
-                            <block type="collector_collect"/>
+                            <block type="maze_moveForward"/>
                           </statement>
                           <next>
                             <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
+                              <title name="DIR">turnRight</title>
                               <next>
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnRight</title>
-                                      <next>
-                                        <block type="controls_repeat">
-                                          <title name="TIMES">3</title>
-                                          <statement name="DO">
-                                            <block type="maze_moveForward"/>
-                                          </statement>
-                                          <next>
-                                            <block type="maze_turn">
-                                              <title name="DIR">turnRight</title>
-                                              <next>
-                                                <block type="maze_moveForward">
-                                                  <next>
-                                                    <block type="controls_repeat">
-                                                      <title name="TIMES">15</title>
-                                                      <statement name="DO">
-                                                        <block type="collector_collect"/>
-                                                      </statement>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">4</title>
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
                                 </block>
                               </next>
                             </block>

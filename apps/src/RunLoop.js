@@ -1,5 +1,5 @@
 /* global window */
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 
 // It is more accurate to use performance.now(), but we use Date.now()
 // for compatibility with Safari and older browsers. This should only cause
@@ -85,11 +85,11 @@ var RunLoop = module.exports = function () {
    */
   this.render_ = this.buildRenderMethod_();
 
-  /**  @type {ObservableEvent} */
-  this.tick = new ObservableEvent();
+  /**  @type {ObservableEventDEPRECATED} */
+  this.tick = new ObservableEventDEPRECATED();
 
-  /** @type {ObservableEvent} */
-  this.render = new ObservableEvent();
+  /** @type {ObservableEventDEPRECATED} */
+  this.render = new ObservableEventDEPRECATED();
 };
 
 /**

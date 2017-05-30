@@ -1,3 +1,6 @@
+= view :theme_google_analytics
+
+%script{src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
 
 /[if lt IE 9]
   %script{:src=>'/js/html5shiv.js'}
@@ -7,4 +10,7 @@
   %script{src:'https://www.google.com/jsapi'}
 
 - if @header['video_player']
-  = view 'video_player.js'
+  :javascript
+    $(window).load(function() {
+      loadVideos(window.location.search.indexOf("force_youtube_fallback") !== -1)
+    });

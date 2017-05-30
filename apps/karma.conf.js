@@ -1,6 +1,4 @@
 var webpackConfig = require('./webpack').karmaConfig;
-var webpack = require('webpack');
-var _ = require('lodash');
 var envConstants = require('./envConstants');
 
 var PORT = 9876;
@@ -47,11 +45,15 @@ module.exports = function (config) {
       "test/integration-tests.js": ["webpack", "sourcemap"],
       "test/unit-tests.js": ["webpack"],
       "test/code-studio-tests.js": ["webpack", "sourcemap"],
+      "test/storybook-tests.js": ["webpack", "sourcemap"],
     },
 
     webpack: webpackConfig,
     webpackMiddleware: {
-      noInfo: true
+      noInfo: true,
+      stats: {
+        chunks: false
+      }
     },
     client: {
       // log console output in our test console
@@ -68,6 +70,7 @@ module.exports = function (config) {
 
     junitReporter: {
       outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+      outputFile: 'all.xml',
     },
     coverageReporter: {
       dir: 'coverage',

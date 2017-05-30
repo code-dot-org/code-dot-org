@@ -9,9 +9,10 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
+import {getStore} from '../redux';
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
-var ObservableEvent = require('../ObservableEvent');
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var RunLoop = require('../RunLoop');
 var Provider = require('react-redux').Provider;
 var NetSimView = require('./NetSimView');
@@ -137,9 +138,9 @@ var NetSim = module.exports = function () {
   /**
    * Event: Connected to, or disconnected from, a shard.
    * Specifically, added or removed our client node from the shard's node table.
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.shardChange = new ObservableEvent();
+  this.shardChange = new ObservableEventDEPRECATED();
   this.shardChange.register(this.onShardChange_.bind(this));
 
   /**
@@ -223,7 +224,7 @@ NetSim.prototype.init = function (config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        localeDirection: this.studioApp_.localeDirection(),
+        localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
         instructions: this.level.instructions
       }
     });
@@ -268,7 +269,7 @@ NetSim.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config);
 
   ReactDOM.render(
-    <Provider store={this.studioApp_.reduxStore}>
+    <Provider store={getStore()}>
       <NetSimView
         generateCodeAppHtml={generateCodeAppHtmlFromEjs}
         onMount={onMount}
@@ -1355,7 +1356,7 @@ NetSim.prototype.resetShard = function () {
  * Show the instrutions modal dialog on top of the NetSim interface.
  */
 NetSim.prototype.showInstructionsDialog = function () {
-  this.studioApp_.reduxStore.dispatch(openInstructionsDialog({
+  getStore().dispatch(openInstructionsDialog({
     autoClose: false,
     aniGifOnly: false,
     hintsOnly: false

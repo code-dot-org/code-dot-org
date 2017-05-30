@@ -82,7 +82,7 @@ var styles = {
  * A purple pane header that can have be focused (purple), unfocused (light purple)
  * or read only (charcoal).
  */
-var PaneHeader = React.createClass({
+const PaneHeader = Radium(React.createClass({
   propTypes: {
     hasFocus: React.PropTypes.bool.isRequired,
     readOnly: React.PropTypes.bool,
@@ -105,13 +105,13 @@ var PaneHeader = React.createClass({
       <div {...props} style={style}/>
     );
   }
-});
+}));
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
  */
-const PaneSection = React.createClass({
+export const PaneSection = Radium(React.createClass({
   propTypes: {
     style: React.PropTypes.object,
   },
@@ -125,19 +125,20 @@ const PaneSection = React.createClass({
       />
     );
   },
-});
+}));
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
  * has focus
  */
-var PaneButton = function (props) {
+export const PaneButton = Radium(function (props) {
   var divStyle = [
     styles.headerButton,
     (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
     props.isMinecraft && styles.headerButtonMinecraft,
     props.isPressed && styles.headerButtonPressed,
-    !props.headerHasFocus && styles.headerButtonUnfocused
+    !props.headerHasFocus && styles.headerButtonUnfocused,
+    props.style,
   ];
   var iconStyle = [
     styles.headerButtonIcon,
@@ -159,7 +160,7 @@ var PaneButton = function (props) {
       </span>
     </div>
   );
-};
+});
 PaneButton.propTypes = {
   headerHasFocus: React.PropTypes.bool.isRequired,
   iconClass: React.PropTypes.string.isRequired,
@@ -172,9 +173,7 @@ PaneButton.propTypes = {
   hiddenImage: React.PropTypes.element,
   isMinecraft: React.PropTypes.bool,
   id: React.PropTypes.string,
+  style: React.PropTypes.object,
 };
 
-module.exports = Radium(PaneHeader);
-
-module.exports.PaneSection = Radium(PaneSection);
-module.exports.PaneButton = Radium(PaneButton);
+export default PaneHeader;

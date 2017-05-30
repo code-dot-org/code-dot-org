@@ -11,23 +11,12 @@ nav: regional_partner_playbook_nav
 #### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
-- [Facilitator Application Process](#application)
-- [Facilitator Recommendation Form](#recommend)
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Support Documents](#support)
-- [CS Principles Resources](#csp)
+- [2016 CS Principles Resources](#csp)
 - [Facilitator Payments](#pay)
 
-________________
-<a id="application"></a>
-## Facilitator Application Process
-The facilitator application will launch on November 1, 2016. If you have any questions about the Facilitator Application Process or your role in recruiting new facilitators, please refer to [this document](https://docs.google.com/document/d/1Q8xi7xyFOIVLWWNfrW5g8WXvyk56ta4UwB3YnHKeBe4/edit).  
-
-________________
-<a id="recommend"></a>
-## Facilitator Recommendation Form
-Each Regional Partner has the opportunity to refer 4 facilitators per program. **Please use [this form](https://goo.gl/forms/VTLHe9hMDg3gIN452) to recommend facilitators.** The form is editable so you do not have to submit all your recommendations at once - however, please keep in mind, you will be asked to rank individuals if you are recommending multiple.
 
 ________________
 <a id="page"></a>
@@ -49,8 +38,9 @@ ________________
 ## Facilitator Support Documents
 
 - [Facilitator Playbook](https://docs.google.com/document/d/1d3wFP0K-Hd6CGTYgg17pI5TxzpmMUb_UlGiiC3JsvKg/edit) - Toolkit for facilitators of all programs
+- [CS Principles 2017 Facilitator Prep Checklist for G1 Partners](https://docs.google.com/document/d/1WMTzTs7jKdvreLudVjHFUWwLRTdvsRHxn9riPDdJDvk/edit) - Checklist Group 1 Regional Partners should go through with their local CS Principles facilitators.
 - [Guidelines to ECS Phase 2 Workshops](https://docs.google.com/document/d/1mFq3eC1tKpaC7fjd90Gy4NrGlrvGPRhqKfat-BSdLyc/edit) - Instructions for ECS facilitators on how to run Phase 2 Workshop
-- [CS Principles Facilitation Summit Notes](https://docs.google.com/document/d/1QawlAmavjg1FU3xtjqQGBLaC3i5_iIxLYGS5bl5ubZA/view)
+- [CS Principles 2016 Facilitation Summit Notes](https://docs.google.com/document/d/1QawlAmavjg1FU3xtjqQGBLaC3i5_iIxLYGS5bl5ubZA/view)
 - [CS in Algebra Phase 3 Agenda](https://docs.google.com/document/d/1S-nexox0U80Pp8rRyfW-PkBCNkJ-vwckJVTqRmLo-Fc/edit#)
 - [CS in Algebra Phase 3 Template Slide Deck](https://docs.google.com/presentation/d/1Jbf0VuTAJnzFgDRODVH9PyUy099w7Bl2l5oG8bzGb28/edit#slide=id.g13d52b2d7c_0_54)
 
@@ -58,7 +48,7 @@ ________________
 ________________
 <a id="csp"></a>
 
-## CS Principles Resources
+## 2016 CS Principles Resources
 
 Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
 
@@ -82,7 +72,7 @@ ________________
 **CS Principles Facilitator Payments**
 
 - All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
-- Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops.
+- Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. *(Note: this includes any out of region facilitators)*
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
 - Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
 

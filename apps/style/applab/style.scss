@@ -7,11 +7,11 @@
 @import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
-
-// ** START OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
+$defaultWidth: 320px;
+$defaultFooterlessHeight: 450px;
 
 div#visualization {
-  height: 400px;
+  height: 562.5px;
   width: 400px;
 }
 
@@ -34,13 +34,27 @@ div#visualizationResizeBar {
   width: 340px;
 }
 
-/* Shrink the visualization area on small displays. */
+/*
+ * Shrink the visualization area on small displays.
+ *
+ * Above 1150px, the play space is 400px wide. Between 1150px and 950px, the
+ * play space width responsively decreases by 50px as the window width is
+ * reduced by 50px. The scale factor and the play space height are scaled down
+ * so as to preserve the aspect ratio.
+ *
+ * Vertical responsiveness causes the playspace width to grow and shrink by the
+ * same increments. min-height and max-height breakpoints are chosen
+ * experimentally to keep about the same amount of space below the phone frame
+ * throughout the responsive range.
+ */
 
-@media screen and (min-width: 1151px), screen and (min-height: 601px) {
+@media screen and (min-width: 1151px), screen and (min-height: 849px) {
   $width: 400px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
-    max-height: $width;
+    max-height: $height;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
@@ -60,23 +74,25 @@ div#visualizationResizeBar {
   }
   div#visualizationResizeBar {
     left: $width;
-    line-height: $width;
+    line-height: $height;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    transform: scale(1.0);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
-@media screen and (min-width: 1101px) and (max-width: 1150px), screen and (min-height: 551px) and (max-height: 600px) {
+@media screen and (min-width: 1101px) and (max-width: 1150px), screen and (min-height: 777px) and (max-height: 848px) {
   $width: 350px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
-    max-height: $width;
+    max-height: $height;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
@@ -96,23 +112,25 @@ div#visualizationResizeBar {
   }
   div#visualizationResizeBar {
     left: $width;
-    line-height: $width;
+    line-height: $height;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.875);
-    -ms-transform: scale(0.875);
-    transform: scale(0.875);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
-@media screen and (min-width: 1051px) and (max-width: 1100px), screen and (min-height: 501px) and (max-height: 550px) {
+@media screen and (min-width: 1051px) and (max-width: 1100px), screen and (min-height: 708px) and (max-height: 778px) {
   $width: 300px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
-    max-height: $width;
+    max-height: $height;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
@@ -132,23 +150,25 @@ div#visualizationResizeBar {
   }
   div#visualizationResizeBar {
     left: $width;
-    line-height: $width;
+    line-height: $height;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    transform: scale(0.75);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
-@media screen and (min-width: 1001px) and (max-width: 1050px), screen and (min-height: 451px) and (max-height: 500px) {
+@media screen and (min-width: 1001px) and (max-width: 1050px), screen and (min-height: 638px) and (max-height: 707px) {
   $width: 250px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
-    max-height: $width;
+    max-height: $height;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
@@ -168,23 +188,25 @@ div#visualizationResizeBar {
   }
   div#visualizationResizeBar {
     left: $width;
-    line-height: $width;
+    line-height: $height;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.625);
-    -ms-transform: scale(0.625);
-    transform: scale(0.625);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
-@media screen and (max-width: 1000px), screen and (max-height: 450px) {
+@media screen and (max-width: 1000px), screen and (max-height: 637px) {
   $width: 200px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
-    max-height: $width;
+    max-height: $height;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
@@ -204,19 +226,17 @@ div#visualizationResizeBar {
   }
   div#visualizationResizeBar {
     left: $width;
-    line-height: $width;
+    line-height: $height;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
-
-// ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
 #visualizationColumn.wireframeShare {
   max-width: none !important;
@@ -286,6 +306,12 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1;
+}
+
+#divApplab.running {
+  label {
+    cursor: default;
+  }
 }
 
 /* When not running, show default arrow cursor for all UI elements

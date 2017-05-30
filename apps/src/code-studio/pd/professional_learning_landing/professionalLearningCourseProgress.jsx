@@ -33,7 +33,7 @@ const ProfessionalLearningCourseProgress = React.createClass({
       return (
         <div>
           <h2>
-            Professional Learning Course Enrollments
+            Online Professional Learning Courses
           </h2>
           {this.renderProfessionalLearningEnrollments()}
         </div>

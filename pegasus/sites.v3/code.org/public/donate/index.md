@@ -1,23 +1,28 @@
-<script src="https://cdn.optimizely.com/js/400912536.js"></script>
-
 ---
 title: Donate to Code.org
 require_https: true
+video_player: true
 theme: responsive
 ---
 
 # Donate to Code.org
 
-<img src="/images/fit-800/donate-wide.jpg" alt="Kids at computers" width="100%"/>
+<div class="col-50" style="padding-right: 20px;">
 
-<br/>
-[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL) &nbsp;  [<button>Donate by Amazon</button>](/donate/amazon)
+<%= view :display_video_thumbnail, id: "donate_to_codeorg", video_code: "H7vg-YRAGq8", play_button: 'center' %>
 
+</div>
 
-<br/>
+[col-50]
+
+[<button>Donate by credit card</button>](#creditcard)<br>
+[<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)<br>
+[<button>Donate by Amazon</button>](/donate/amazon)<br>
+
+[/col-50]
+
+<div style="clear: both;"></div>
 To make a donation by check, wire-transfer, or stock-transfer, [contact us](/contact).
-
-<hr/>
 
 ## For every dollar you give, one child will learn computer science
 

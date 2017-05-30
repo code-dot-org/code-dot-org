@@ -18,5 +18,18 @@
     = @workshop.location_name
     %br
     = @workshop.location_address
+
+%div.row
+  %div.span2{style: 'text-align: right'}
+    %strong
+      Course:
+  %div.span2
+    - if @workshop.course_target
+      = link_to @workshop.course, @workshop.course_target
+    - else
+      = @workshop.course
+
+    - if @workshop.subject
+      = "(#{@workshop.subject})"
 %br
 = simple_format(@workshop.notes)

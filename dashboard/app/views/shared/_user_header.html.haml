@@ -4,12 +4,12 @@
       %i.fa.fa-users
       %span= t('nav.user.label', username: t('nav.user.team'))
     - else
-      %span= t('nav.user.label', username: h(current_user.short_name))
+      %span.user_name= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
       &#x25BC;
     %div{style: 'position: relative; top: 3px;'}
       .user_options{style: 'display: none;'}
-        - if current_user.teacher?
+        - if current_user.teacher? && !(request.cookies['pm'] == 'new_header')
           = link_to t('nav.user.classroom'), teacher_dashboard_url
         - if current_user.can_pair?
           - if session[:pairings].present?
@@ -27,12 +27,11 @@
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
               %i.fa.fa-user-plus
               = t('nav.user.pair_programming')
-        = link_to t('nav.user.stats'), root_url
+        - if !(request.cookies['pm'] == 'new_header')
+          = link_to t('nav.user.stats'), root_url
         - if current_user.can_edit_account?
           = link_to t('nav.user.settings'), edit_user_registration_url
         %a.points_menu_item{href: '#', style: 'display: none'}
-        - if current_user.teacher? && (current_user.teacher_prize || current_user.teacher_bonus_prize)
-          = link_to t('nav.user.prizes'), my_prizes_url
         = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank'
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else
@@ -42,16 +41,19 @@
 
 :javascript
   function hideUserOptions() {
-    $('.user_options').hide();
+    $('.user_options').slideUp();
     $('.user_menu_glyph').html('&#x25BC;');
     $(document).off('click', hideUserOptions);
   }
   $('.user_menu').click(function (e) {
     if ($('.user_options').is(':hidden')) {
       e.stopPropagation();
-      $('.user_options').show();
+      $('.user_options').slideDown();
       $('.user_menu_glyph').html('&#x25B2;');
       $(document).on('click', hideUserOptions);
+
+      $("#hamburger-icon").removeClass('active');
+      $('#hamburger ul').slideUp();
     }
   });
   $('.user_options').click(function (e) {

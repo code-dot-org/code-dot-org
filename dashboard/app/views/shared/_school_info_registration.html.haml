@@ -9,7 +9,6 @@
 - existing_school_info[:country] ||= 'US' if us_ip
 
 - content_for(:head) do
-  %script{src: 'https://cdn.optimizely.com/js/400912536.js'}
   %script{src: minifiable_asset_path('js/schoolInfo.js')}
 
 %h5{style: "font-weight: bold;"}

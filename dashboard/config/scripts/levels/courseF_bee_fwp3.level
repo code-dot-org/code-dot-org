@@ -33,10 +33,12 @@
     "nectar_goal": "10",
     "step_speed": "1",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_fwp3_1\",\r\n  \"callout_text\": \"This same function can be used when checking for empty spaces as well as clouds.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will run no matter which direction you're facing.\",\"hint_id\":\"courseF_bee_fwp3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/03e76450542ed7078c03955258ecdfa6/courseF_bee_fwp3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will run no matter which direction you're facing.\",\"hint_id\":\"courseF_bee_fwp3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/03e76450542ed7078c03955258ecdfa6/courseF_bee_fwp3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are 3 rows of nectar, what kind of turns and movements do you need to make between each row?\",\"hint_id\":\"courseF_bee_fwp3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5caa44af5c000854fbc7a48e47d5384/courseF_bee_fwp3.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To solve this puzzle, you'll need to call your function 3 times. In between each call, you need to `turn right`, `move forward` 2 times, then `turn right` again. OR, you need to `turn left`, `move forward` 2 times, then `turn left` again.\",\"hint_id\":\"courseF_bee_fwp3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1cc1a094a2a0f98b08663b068e4359a7/courseF_bee_fwp3.mp3\"}]",
     "instructions_important": "false",
     "markdown_instructions": "Time to put the function to the test! \r\n\r\nLet's see if it makes collecting these three rows of nectar any easier.",
     "instructions": "Let's see if the function makes collecting these three rows of nectar any easier.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

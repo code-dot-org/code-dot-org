@@ -1,6 +1,4 @@
-var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
 
 // Farmer level in which we have a randomized range
 var levelDef = {

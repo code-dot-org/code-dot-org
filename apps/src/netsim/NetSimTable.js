@@ -4,7 +4,7 @@
 
 import $ from 'jquery';
 var _ = require('lodash');
-var ObservableEvent = require('../ObservableEvent');
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var NetSimApi = require('./NetSimApi');
 var NetSimGlobals = require('./NetSimGlobals');
 var ArgumentUtils = require('./ArgumentUtils');
@@ -94,9 +94,9 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   /**
    * Event that fires when full table updates indicate a change,
    * when rows are added, or when rows are removed, or when rows change.
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.tableChange = new ObservableEvent();
+  this.tableChange = new ObservableEventDEPRECATED();
 
   /**
    * Store table contents locally, so we can detect when changes occur.

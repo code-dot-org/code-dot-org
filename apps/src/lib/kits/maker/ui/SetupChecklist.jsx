@@ -1,5 +1,6 @@
 /** @file Maker Board setup checker */
 import React, {Component, PropTypes} from 'react';
+import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
 import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
 import SetupStep, {
@@ -99,11 +100,13 @@ export default class SetupChecklist extends Component {
         .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
         .then(() => setupChecker.celebrate())
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
+        .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
         .catch(error => {
           this.setState({caughtError: error});
+          trackEvent('MakerSetup', 'ConnectionError');
           if (console && typeof console.error === 'function') {
             console.error(error);
           }
@@ -184,9 +187,9 @@ export default class SetupChecklist extends Component {
               stepStatus={this.state[STATUS_APP_INSTALLED]}
               stepName="Chrome App installed"
             >
-              Please install the <a href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg">Code.org Serial Connector Chrome App extension</a>.
+              Please install the <a href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg" target="_blank">Code.org Serial Connector Chrome App extension</a>.
               <br/>Once it is installed, come back to this page and click the "re-detect" button, above.
-              <br/>If a dialog asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
+              <br/>If a prompt asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
               {surveyLink}
             </SetupStep>
             <SetupStep

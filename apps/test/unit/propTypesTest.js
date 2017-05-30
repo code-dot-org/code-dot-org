@@ -1,6 +1,5 @@
 import React from 'react';
-import sinon from 'sinon';
-import {expect, assert} from '../util/configuredChai';
+import { expect } from '../util/configuredChai';
 var propTypes = require('@cdo/apps/propTypes');
 
 describe('propTypes module', () => {

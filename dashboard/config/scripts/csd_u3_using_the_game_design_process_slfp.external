@@ -1,4 +1,5 @@
 name 'CSD U3 Using the Game Design Process SLFP'
+display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
 # Programming - Interactive Games and Animations: Lesson 17 - Platform Jumper

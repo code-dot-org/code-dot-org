@@ -43,7 +43,7 @@ class ZendeskSessionController < ApplicationController
 
   def zendesk_sso_url(payload)
     url = "https://#{SUBDOMAIN}.zendesk.com/access/jwt?jwt=#{payload}"
-    url += "&return_to=#{URI.escape(params['return_to'])}" if params["return_to"].present?
+    url += "&user_return_to=#{URI.escape(params['user_return_to'])}" if params["user_return_to"].present?
     url
   end
 end

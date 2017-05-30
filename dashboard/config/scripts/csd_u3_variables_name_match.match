@@ -1,0 +1,15 @@
+name 'CSD U3 Variables name match'
+title 'Debug: Naming Variables'
+description 'This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.'
+question 'Labels can\'t have spaces.'
+answer 'size of circle'
+question 'Labels can\'t start with a number.'
+answer '1dimension'
+question 'Labels should have the same capitalization.'
+answer 'YLocation'
+
+markdown <<MARKDOWN
+# Do This
+
+Match the variable label to the rule that it violates, then fix the code in the program below.
+MARKDOWN

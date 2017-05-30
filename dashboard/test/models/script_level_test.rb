@@ -404,6 +404,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_not script_level.can_view_last_attempt(teacher, student)
   end
 
+  test 'bonus levels do not appear in the normal progression' do
+    script_level = create :script_level, bonus: true
+    assert_empty script_level.stage.summarize[:levels]
+  end
+
   private
 
   def create_fake_plc_data

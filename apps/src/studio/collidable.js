@@ -84,9 +84,9 @@ export default class Collidable {
    */
   outOfBounds() {
     return (this.x < -(this.width / 2)) ||
-           (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
+           (this.x > studioApp().MAZE_WIDTH + (this.width / 2)) ||
            (this.y < -(this.height / 2)) ||
-           (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
+           (this.y > studioApp().MAZE_HEIGHT + (this.height / 2));
   }
 
   /**

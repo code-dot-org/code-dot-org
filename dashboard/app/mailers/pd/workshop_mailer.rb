@@ -23,12 +23,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     }
   }
 
-  # Online URL used in the details partials, organized by course.
-  ONLINE_URL = {
-    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/course/cs-in-science-support',
-    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/course/cs-in-algebra-support',
-    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/course/ecs-support'
-  }
+  ONLINE_URL = 'https://studio.code.org/my-professional-learning'
 
   after_action :save_timestamp
 
@@ -37,7 +32,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @details_partial = get_details_partial @workshop.course, @workshop.subject
-    @online_url = ONLINE_URL[@workshop.course]
+    @online_url = ONLINE_URL
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -89,6 +84,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+    @is_reminder = true
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -101,6 +97,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @user = user
     @workshop = workshop
     @cancel_url = '#'
+    @is_reminder = true
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -112,6 +109,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def organizer_enrollment_reminder(workshop)
     @workshop = workshop
     @cancel_url = '#'
+    @is_reminder = true
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -222,6 +220,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_enrollment_subject(workshop)
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
+    elsif workshop.local_summer?
+      'Your upcoming CS Principles workshop and next steps'
     else
       'Your upcoming Code.org workshop and next steps'
     end

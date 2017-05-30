@@ -6,11 +6,6 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when runni
     require 'codecov'
     SimpleCov.formatter = SimpleCov::Formatter::Codecov
   end
-elsif ENV['CI'] # this is set by circle
-  # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
-  # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
-  # require 'coveralls'
-  # Coveralls.wear!('rails')
 end
 
 require 'minitest/reporters'
@@ -455,9 +450,8 @@ def storage_id(_)
   SecureRandom.hex
 end
 
-$stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
-def storage_encrypt_channel_id(_, _)
-  $stub_encrypted_channel_id
+def storage_encrypt_channel_id(storage_id, channel_id)
+  "STUB_CHANNEL_ID-#{storage_id}-#{channel_id}"
 end
 
 $stub_channel_owner = 33

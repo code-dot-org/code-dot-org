@@ -11,7 +11,9 @@
       "value": {
         "blockPrefix": "lightSensor."
       },
-      "onEvent": null
+      "onEvent": null,
+      "lightSensor.value": null,
+      "lightSensor.setScale": null
     },
     "edit_code": true,
     "embed": "false",

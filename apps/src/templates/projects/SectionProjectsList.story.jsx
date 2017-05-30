@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionProjectsList from './SectionProjectsList';
+import experiments from '@cdo/apps/util/experiments';
 
 const STUB_PROJECTS_DATA = [
   {
@@ -32,14 +33,32 @@ export default storybook => {
     .storiesOf('SectionProjectsList', module)
     .addStoryTable([
       {
-        name: 'basic section projects list',
+        name: 'basic section projects list without thumbnail column',
         description: `This is a simple section projects list with stub data.`,
-        story: () => (
-          <SectionProjectsList
-            projectsData={STUB_PROJECTS_DATA}
-            studioUrlPrefix={'https://studio.code.org'}
-          />
-        )
+        story: () => {
+          experiments.setEnabled('showProjectThumbnails', true);
+          return (
+            <SectionProjectsList
+              projectsData={STUB_PROJECTS_DATA}
+              studioUrlPrefix={'https://studio.code.org'}
+              showProjectThumbnails={false}
+            />
+          );
+        }
+      },
+      {
+        name: 'basic section projects list with thumbnail column',
+        description: `This is a simple section projects list with stub data.`,
+        story: () => {
+          experiments.setEnabled('showProjectThumbnails', true);
+          return (
+            <SectionProjectsList
+              projectsData={STUB_PROJECTS_DATA}
+              studioUrlPrefix={'https://studio.code.org'}
+              showProjectThumbnails={true}
+            />
+          );
+        }
       },
     ]);
 };

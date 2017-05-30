@@ -3,37 +3,73 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
-import {isConnecting, hasConnectionError} from '../redux';
-import {singleton as studioApp} from '../../../../StudioApp';
+import {getVisualizationScale} from '../../../../redux/layout';
+import {isConnecting, hasConnectionError, getConnectionError, useFakeBoardOnNextRun} from '../redux';
+import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
+
+const overlayDimensionsPropTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  scale: PropTypes.number,
+};
 
 /**
  * Overlay for the play space that displays maker status updates
  * when there are connection issues.
  */
 export class UnconnectedMakerStatusOverlay extends Component {
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    isConnecting: PropTypes.bool.isRequired,
+    isWrongBrowser: PropTypes.bool.isRequired,
+    hasConnectionError: PropTypes.bool.isRequired,
+    handleTryAgain: PropTypes.func.isRequired,
+    handleDisableMaker: PropTypes.func.isRequired,
+    useFakeBoardOnNextRun: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
+  };
+
   render() {
-    const {width, height, isConnecting, hasConnectionError} = this.props;
-    const dimensions = {width, height};
+    const {width, height, scale, isConnecting, isWrongBrowser,
+      hasConnectionError, handleTryAgain, handleDisableMaker,
+      handleOpenSetupPage} = this.props;
+    const dimensions = {width, height, scale};
     if (isConnecting) {
       return <WaitingToConnect {...dimensions}/>;
+    } else if (isWrongBrowser) {
+      return (
+        <UnsupportedBrowser
+          {...dimensions}
+          handleDisableMaker={handleDisableMaker}
+          handleOpenSetupPage={handleOpenSetupPage}
+        />
+      );
     } else if (hasConnectionError) {
-      return <BoardNotFound {...dimensions}/>;
+      return (
+        <BoardNotFound
+          {...dimensions}
+          handleTryAgain={handleTryAgain}
+          useFakeBoardOnNextRun={this.props.useFakeBoardOnNextRun}
+          handleOpenSetupPage={handleOpenSetupPage}
+        />
+      );
     }
     return null;
   }
 }
-UnconnectedMakerStatusOverlay.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
-  isConnecting: PropTypes.bool.isRequired,
-  hasConnectionError: PropTypes.bool.isRequired,
-};
 export default connect(
   state => ({
+    scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
+    isWrongBrowser: getConnectionError(state) instanceof UnsupportedBrowserError,
     hasConnectionError: hasConnectionError(state),
-  })
+    handleOpenSetupPage: () => {
+      window.open('/maker/setup', '_blank');
+    }
+  }), {
+    useFakeBoardOnNextRun
+  }
 )(UnconnectedMakerStatusOverlay);
 
 const style = {
@@ -47,14 +83,15 @@ const style = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    color: color.white,
+    color: color.charcoal,
+    backgroundColor: color.lighter_gray,
   },
   padding: {
-    flex: '1 0 0',
+    flex: '1 0 auto',
   },
   content: {
-    flex: '0 0 0',
-    padding: '2em',
+    flex: '0 0 auto',
+    padding: '1em',
     textAlign: 'center',
   },
   icon: {
@@ -62,104 +99,185 @@ const style = {
   },
   text: {
     margin: '1em',
-  },
+  }
 };
 
 class Overlay extends Component {
-  icon() {
-    const classNames = [this.props.iconModifiers || '', "fa-3x"].join(' ');
-    return (
-      <FontAwesome
-        icon={this.props.icon}
-        className={classNames}
-        style={style.icon}
-      />
-    );
-  }
-
-  text() {
-    return (
-      <div style={style.text}>
-        {this.props.text}
-      </div>
-    );
-  }
-
-  button() {
-    return (
-      <OverlayButton
-        text={this.props.buttonText}
-        onClick={this.props.onClick}
-      />
-    );
-  }
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    children: PropTypes.any,
+  };
 
   render() {
-    const rootStyle = {
+    let rootStyle = {
       ...style.root,
       width: this.props.width,
       height: this.props.height,
-      backgroundColor: this.props.backgroundColor,
     };
+
+    // If scale is undefined we are still letting media queries handle the
+    // viz scaling - but if it's set the user has dragged the resize bar, and
+    // we need to set scale directly.
+    if (typeof this.props.scale === 'number') {
+      const transform = `scale(${this.props.scale})`;
+      rootStyle.transform = transform;
+      rootStyle.msTransform = transform;
+      rootStyle.WebkitTransform = transform;
+    }
     return (
       <div style={rootStyle}>
         <div style={style.padding}/>
         <div style={style.content}>
-          {this.icon()}
-          {this.text()}
-          {this.props.buttonText && this.button()}
+          {this.props.children}
         </div>
         <div style={style.padding}/>
       </div>
     );
   }
 }
-Overlay.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
-  icon: PropTypes.string.isRequired,
-  iconModifiers: PropTypes.string,
-  text: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  buttonText: PropTypes.string,
-};
 
 class WaitingToConnect extends Component {
+  static propTypes = overlayDimensionsPropTypes;
+
   render() {
     return (
-        <Overlay
-          width={this.props.width}
-          height={this.props.height}
-          icon="cog"
-          iconModifiers="fa-spin"
-          text="Waiting for board to connect..."
-          backgroundColor={color.light_gray}
-        />
+      <Overlay {...this.props}>
+        <Icon icon="cog" spin/>
+        <Text>Waiting for board to connect...</Text>
+      </Overlay>
     );
   }
 }
-WaitingToConnect.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
-};
+
+class UnsupportedBrowser extends Component {
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    handleDisableMaker: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const {handleDisableMaker, handleOpenSetupPage} = this.props;
+    return (
+      <Overlay {...this.props}>
+        <Icon icon="exclamation-triangle"/>
+        <Text>
+          Maker Toolkit BETA requires<br/>Chrome&nbsp;33+
+        </Text>
+        <UniformWidth>
+          <OverlayButton
+            primary
+            text="Setup Instructions"
+            className="setup-instructions"
+            onClick={handleOpenSetupPage}
+          />
+          <OverlayButton
+            text="Disable Maker Toolkit"
+            className="disable-maker-toolkit"
+            onClick={handleDisableMaker}
+          />
+        </UniformWidth>
+      </Overlay>
+    );
+  }
+}
 
 class BoardNotFound extends Component {
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    handleTryAgain: PropTypes.func.isRequired,
+    useFakeBoardOnNextRun: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
+  };
+
+  handleRunWithoutBoard = () => {
+    this.props.useFakeBoardOnNextRun();
+    this.props.handleTryAgain();
+  };
+
   render() {
     return (
-        <Overlay
-          width={this.props.width}
-          height={this.props.height}
-          icon="exclamation-triangle"
-          text="Make sure your board is plugged in."
-          backgroundColor={color.red}
-          onClick={() => {
-              studioApp.resetButtonClick();
-              studioApp.runButtonClick();
-            }}
-          buttonText="Try Again"
-        />
+      <Overlay {...this.props}>
+        <Icon icon="exclamation-triangle"/>
+        <Text>Make sure your board is plugged in.</Text>
+        <UniformWidth>
+          <OverlayButton
+            primary
+            text="Try Again"
+            className="try-again"
+            onClick={this.props.handleTryAgain}
+          />
+          <OverlayButton
+            text="Run Without Board"
+            className="run-without-board"
+            onClick={this.handleRunWithoutBoard}
+          />
+          <OverlayButton
+            text="Setup Instructions"
+            className="setup-instructions"
+            onClick={this.props.handleOpenSetupPage}
+          />
+        </UniformWidth>
+      </Overlay>
     );
   }
 }
-BoardNotFound.propTypes = WaitingToConnect.propTypes;
+
+/**
+ * Wraps a group of buttons in such a way that they will all be as wide
+ * as the widest button.
+ */
+function UniformWidth({children}) {
+  return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection:'row',
+          justifyContent:'center',
+        }}
+      >
+        <div
+          style={{
+            display:'flex',
+            flexDirection:'column',
+          }}
+        >
+          {children}
+        </div>
+      </div>
+  );
+}
+UniformWidth.propTypes = {
+  children: PropTypes.any,
+};
+
+/**
+ * Render a line of text in overlay style.
+ */
+function Text({children}) {
+  return <div style={style.text}>{children}</div>;
+}
+Text.propTypes = {
+  children: PropTypes.any,
+};
+
+/**
+ * Render a font-awesome icon in the overlay style.
+ */
+function Icon({icon, spin=false}) {
+  const classNames = ['fa-5x'];
+  if (spin) {
+    classNames.push('fa-spin');
+  }
+  return (
+    <FontAwesome
+      icon={icon}
+      className={classNames.join(' ')}
+      style={style.icon}
+    />
+  );
+}
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+  spin: PropTypes.bool,
+};

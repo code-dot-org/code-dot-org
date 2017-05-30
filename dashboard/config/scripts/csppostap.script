@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Creating Javascript Objects'
 level 'U4L02 Student Lesson Introduction'

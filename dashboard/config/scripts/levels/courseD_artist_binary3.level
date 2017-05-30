@@ -274,6 +274,14 @@
         <block type="text">
           <title name="TEXT">01010011</title>
         </block>
+        <block type="procedures_callnoreturn" inline="false" limit="1">
+          <mutation name="draw">
+            <arg name="binary"/>
+          </mutation>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">8</title>
+        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="binary"/>

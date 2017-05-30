@@ -1,19 +1,13 @@
 import sinon from 'sinon';
 import {expect, assert} from '../util/configuredChai';
+const project = require('@cdo/apps/code-studio/initApp/project');
 var clientApi = require('@cdo/apps/clientApi');
 
 describe('clientApi module', () => {
-  var server, xhr, requests, oldWindowDashboard;
+  var xhr, requests;
 
   beforeEach(() => {
-    // override window.dashboard... ugh...
-    oldWindowDashboard = window.dashboard;
-    window.dashboard = {
-      project: {
-        getCurrentId: () => 'some-project',
-      },
-    };
-
+    sinon.stub(project, 'getCurrentId').returns('some-project');
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
     xhr.onCreate = function (xhr) {
@@ -22,7 +16,7 @@ describe('clientApi module', () => {
   });
 
   afterEach(() => {
-    window.dashboard = oldWindowDashboard;
+    project.getCurrentId.restore();
     xhr.restore();
   });
 
@@ -36,15 +30,6 @@ describe('clientApi module', () => {
   });
 
   describe('the ajax function', (done) => {
-    it('will complain if window.dashboard is not set, because ugh...', () => {
-      window.dashboard = undefined;
-      clientApi.assets.ajax(
-        'GET',
-        '',
-        () => assert.fail('success called', 'error called'),
-        done
-      );
-    });
 
     it('will call the error handler with the xhr object when response status is >= 400', done => {
       clientApi.assets.ajax(

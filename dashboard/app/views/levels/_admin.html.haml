@@ -1,6 +1,3 @@
-- content_for(:head) do
-  %script{src: minifiable_asset_path('js/levelbuilder.js')}
-
 - if current_user && (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::RESET_ABUSE))
   = render layout: 'shared/extra_links' do
     %strong= @level.name
@@ -35,6 +32,10 @@
                   = text_field_tag :name, @level.name
                   = hidden_field_tag :authenticity_token, form_authenticity_token
                   = submit_tag 'Clone'
+              - content_for(:head) do
+                %script{src: minifiable_asset_path('js/levelbuilder.js')}
+              :javascript
+                window.levelbuilder.ajaxSubmit('.clone_level');
             -if @level.is_a? LevelGroup
               %li
                 sublevels
@@ -77,10 +78,3 @@
         Abuse score:
         %span.admin-abuse-score
         = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-
-:javascript
-  window.levelbuilder.ajaxSubmit('.clone_level');
-  $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
-    var validation_error = $('#validation-error').detach();
-    $(e.target).parent().append(validation_error);
-  });

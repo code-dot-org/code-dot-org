@@ -12,6 +12,7 @@ require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
+require_relative '../lib/cdo/honeybadger'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -53,7 +54,13 @@ def puts_script_intro
       #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
 
       Known Issues
-      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+
+    #{bold 'Before You Get Started'}
+
+      Honeybadger: Join Slack#infra-honeybadger.
+
+      Robo-DTT: See Slack#infra-test. If green, run the slash command: /set-last-dtt-green yes
 
   EOS
 end
@@ -63,7 +70,6 @@ def puts_after_dtp_tasks
   puts <<-EOS.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
     * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
     * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
@@ -237,6 +243,30 @@ def print_dtp_message
   end
 end
 
+# Retrieves recent Honeybadger issues, displaying them on the console.
+def get_honeybadger_issues
+  issues = Honeybadger.get_recent_issues
+  issues.sort_by! do |issue|
+    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
+  end
+
+  puts '' if issues.count > 0
+  issues.each do |issue|
+    environment = issue[:environment] == 'production' ? (red issue[:environment]).to_s : (bold issue[:environment]).to_s
+    project = bold issue[:project]
+    message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
+    output = <<-EOS.unindent
+      [#{project}, #{environment}]: #{message}
+          #{dim issue[:url]}
+    EOS
+    # TODO(asher): Eliminate this hackiness, for some reason, some extra newlines are showing up at
+    # the end of the output. This seems correlated with environment and project.
+    puts output.strip
+    puts ''
+  end
+  puts '' if issues.count > 0
+end
+
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
   print_dtt_message
@@ -266,11 +296,55 @@ def do_dtt_subroutine
   end
 end
 
+# Creates a new branch with the given name from the given commit on the test
+# server (without checking it out) and pushes it to GitHub.
+def create_branch_from_commit(branch_name, commit)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  # We never actually checkout the created branch so we don't interfere with
+  # anything else test might be doing at the time.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch --no-track #{branch_name} #{commit}",
+      "git push origin #{branch_name}"
+    ].join(' && ')
+  )
+end
+
+# Deletes the specified branch, both from the test server and from GitHub.
+def delete_branch(branch_name)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch -D #{branch_name}",
+      "git push origin --delete #{branch_name}"
+    ].join(' && ')
+  )
+end
+
 def main
   check_for_cdo_keys
 
   puts_script_intro
   ask_for_name
+
+  should_i 'mark robo-DTT as green' do
+    test_sha = GitHub.sha 'test'
+    InfraTestTopic.set_green_commit test_sha
+  end
+
+  should_i 'reset DTT message to yes' do
+    DevelopersTopic.set_dtt 'yes'
+  end
+
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
+  end
 
   do_dtt_subroutine
 
@@ -299,38 +373,62 @@ def main
   wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
 
   print_dtp_message
-  should_i 'DTP' do
-    should_i 'set DTP message to in progress' do
-      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
-    end
-    GitHub.open_pull_request_in_browser(
-      base: 'production',
-      head: 'test',
-      title: 'DTP (Test > Production)'
-    )
+  test_green_commit = InfraTestTopic.green_commit
+  if test_green_commit
+    should_i "DTP #{test_green_commit}" do
+      should_i 'set DTP message to in progress' do
+        DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+      end
 
-    should_i 'DTL' do
-      # TODO(asher): Remove this wait step if it is truly unnecessary now.
-      wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
-      view_commits base: 'levelbuilder', head: 'test'
-      should_i 'merge from test to levelbuilder' do
-        pr_number = GitHub.create_and_merge_pull_request(
-          base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
+      # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
+      # request from a commit hash (only a branch name), we create and push a branch.
+      branch_name = "dtp_candidate_#{test_green_commit}"
+      begin
+        create_branch_from_commit branch_name, test_green_commit
+        production_pr_number = GitHub.create_pull_request(
+          base: 'production',
+          head: branch_name,
+          title: "DTP (Test > Production: #{test_green_commit})"
         )
-        puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+        GitHub.open_url GitHub.url(production_pr_number)
+
+        should_i 'DTL' do
+          # TODO(asher): Remove this wait step if it is truly unnecessary now.
+          wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+
+          should_i 'commit content changes from levelbuilder, to help prevent merge conflicts' do
+            content_push 'levelbuilder-staging', 'levelbuilder'
+          end
+
+          view_commits base: 'levelbuilder', head: test_green_commit
+          should_i 'merge from test to levelbuilder' do
+            pr_number = GitHub.create_and_merge_pull_request(
+              base: 'levelbuilder',
+              head: branch_name,
+              title: "DTL (Test > Levelbuilder: #{test_green_commit})"
+            )
+            puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+          end
+        end
+
+        wait_for 'DTP to finish'
+        should_i 'reset DTP message to yes' do
+          DevelopersTopic.set_dtp 'yes'
+        end
+        should_i 'update Slack#infra-production topic' do
+          sha = GitHub.sha 'production'
+          InfraProductionTopic.set_dtp_commit(sha)
+        end
+
+        puts_after_dtp_tasks
+      ensure
+        delete_branch branch_name
       end
     end
+  end
 
-    wait_for 'DTP to finish'
-    should_i 'reset DTP message to yes' do
-      DevelopersTopic.set_dtp 'yes'
-    end
-    should_i 'update Slack#infra-production topic' do
-      sha = GitHub.sha 'production'
-      InfraProductionTopic.set_dtp_commit(sha)
-    end
-
-    puts_after_dtp_tasks
+  should_i 'retrieve recent honeybadger issues' do
+    get_honeybadger_issues
   end
 
   puts_script_conclusion

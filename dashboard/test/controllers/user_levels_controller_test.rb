@@ -76,7 +76,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     post :destroy, params: {id: user_level.id}
     assert_response 403
 
-    refute UserLevel.find_by(id: user_level.id).nil?
+    refute_nil UserLevel.find_by(id: user_level.id)
   end
 
   test "teacher cannot clear response for random user level" do
@@ -90,6 +90,6 @@ class UserLevelsControllerTest < ActionController::TestCase
     post :destroy, params: {id: user_level.id}
     assert_response 403
 
-    refute UserLevel.find_by(id: user_level.id).nil?
+    refute_nil UserLevel.find_by(id: user_level.id)
   end
 end

@@ -44,7 +44,7 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
       create :pd_teacher_application
     end
 
-    sign_in create(:admin)
+    sign_in create(:workshop_admin)
     get :index
     assert_response :success
 

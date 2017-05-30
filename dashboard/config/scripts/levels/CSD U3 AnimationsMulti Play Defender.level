@@ -39,6 +39,10 @@
     "start_in_animation_tab": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
+    "display_name": "Sample Game",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

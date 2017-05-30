@@ -87,6 +87,8 @@
     forgot_password: Gleymt lykilorð?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} nemendur hafa þegar skráð sig."
     teacher_count: "%{count} kennarar hafa þegar skráð sig."
@@ -204,6 +206,14 @@
       Æfingarnar eru skemmtilegar og myndrænar og kenna grunnhugtök í tölvunarfræði í gegnum leik með leiðsögn. Þú færð kennslu í forritun hjá Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Boð send
     added_teacher: "%{name} bætt við sem kennara"
@@ -218,8 +228,6 @@
       blank_code: Vinsamlegast færðu inn hópkóða
       cant_join_own_section: "Því miður getur þú ekki skráð þig í eiginn hóp."
     mail:
-      invite_student:
-        subject: Komdu í bekk sem %{teacher_name} kennir hjá Code.org!
       student_disassociated:
         subject: 'Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur)
           sem nemandi þinn.'
@@ -477,6 +485,7 @@
       í grunnskólum.
     announcement_petition_button: Bættu nafni þínu við
     announcement_go_beyond_button: Halda lengra
+    announcement_apply_now: Apply now
     announcement_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
       kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
     announcement_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja að
@@ -539,16 +548,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: "Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast
       færðu inn annan kóða fyrir hóp."
-    section_code_not_entered: Vinsamlegast tilgreindu current_section_code.
     section_code_cant_be_current_section: Núgildandi hópur getur ekki verið sami og
       nýi hópurinn.
     current_section_dne: "Því miður er hópurinn %{current_section_code} ekki til.
       Vinsamlegast færðu inn annan kóða fyrir hóp."
-    students_not_yours: "Þú getur ekki fært nemendur úr hópi sem ekki tilheyrir þér."
-    stay_enrolled_not_entered: Vinsamlegast tilgreindu stay_enrolled_in_current_section.
     student_ids_not_entered: Vinsamlegast tilgreindu student_ids.
     student_not_found: Einn eða fleiri nemendur fundust ekki.
     all_students_must_be_in_current_section: Allir nemendurnir verða að vera skráðir

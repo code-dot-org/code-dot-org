@@ -1,0 +1,8 @@
+name 'unique level name here'
+question 'When run, where will the sprite `my_sprite` be located?'
+wrong '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+right 'right answer'
+
+markdown <<MARKDOWN
+
+MARKDOWN

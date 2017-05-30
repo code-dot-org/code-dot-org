@@ -351,7 +351,7 @@
   homepage_slot_text_frozen: Frozen s Annou a Elsou
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Všetky naše tutoriály
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Kurz 4
   homepage_slot_text_shop: Obchod
   homepage_slot_text_flappy: Flappy kód
   homepage_action_text_hoc: Hodina kódu pre každého študenta.
@@ -881,6 +881,8 @@
   dashboard_students_reset_password: Obnoviť heslo
   dashboard_students_share_section: 'Zdieľajte prihlasovaciu stránku tejto sekcie
     so svojimi žiakmi:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Vytlačiť kartičky s prihlasovacími údajmi študentov.
   dashboard_students_secret_picture_title: Tajný obrázok
   dashboard_students_secret_picture: Tajný obrázok
@@ -898,6 +900,7 @@
     nich chcete vytvoriť účty sami, zmeňte typ tajomstva v tejto sekcii na <b>slovo</b>
     alebo <b>obrázok</b>.
   dashboard_students_print_page: Vytlačiť stránku
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliknite
     sem</a> pre dokument o ochrane súkromných údajov, ktorý môžete zdieľať alebo vytlačiť
@@ -1101,9 +1104,9 @@
   texasinstruments_name: 10 minút kódu
   teacherled_name: Teacher Led Lesson Plans
   course1_name: Kurz 1
-  course2_name: Course 2
-  course3_name: Course 3
-  course4_name: Course 4
+  course2_name: Kurz 2
+  course3_name: Kurz 3
+  course4_name: Kurz 4
   coursea-draft_name: Course A
   courseb-draft_name: Course B
   coursec-draft_name: Course C
@@ -1121,6 +1124,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1859,6 +1864,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

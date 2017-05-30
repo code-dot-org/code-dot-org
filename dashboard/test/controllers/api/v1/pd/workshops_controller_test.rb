@@ -6,10 +6,18 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @admin = create(:admin)
+    @workshop_admin = create(:workshop_admin)
     @organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
 
-    @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
+    @workshop = create(
+      :pd_workshop,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      on_map: true,
+      funded: true
+    )
+
     @standalone_workshop = create(:pd_workshop)
   end
 
@@ -47,6 +55,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
+  test_user_gets_response_for :workshops_user_enrolled_in, user: nil, response: :forbidden
+
   test 'workshops_user_enrolled_in returns workshops the user is enrolled in' do
     teacher = create :teacher
     sign_in(teacher)
@@ -59,6 +69,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     create(:pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id)
 
     get :workshops_user_enrolled_in
+    assert_response :success
 
     response = JSON.parse(@response.body)
     assert_equal 2, response.length
@@ -170,10 +181,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Show
 
   test 'admins can view workshops' do
-    sign_in @admin
-    get :show, params: {id: @workshop.id}
-    assert_response :success
-    assert_equal @workshop.id, JSON.parse(@response.body)['id']
+    [@admin, @workshop_admin].each do |admin|
+      sign_in admin
+      get :show, params: {id: @workshop.id}
+      assert_response :success
+      assert_equal @workshop.id, JSON.parse(@response.body)['id']
+      sign_out admin
+    end
   end
 
   test 'workshop organizers can view their workshops' do
@@ -548,7 +562,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_end = session_start + 8.hours
     {
       location_address: 'Seattle, WA',
-      workshop_type: Pd::Workshop::TYPE_PUBLIC,
+      on_map: true,
+      funded: true,
       course: Pd::Workshop::COURSE_CSF,
       capacity: 10,
       sessions_attributes: [

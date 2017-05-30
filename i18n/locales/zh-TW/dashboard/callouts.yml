@@ -12,31 +12,8 @@ zh-TW:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
-      aE1_callout:
-        aE1_1: 只能有 2 個這個和 2 個轉向
-      aE2_callout:
-        aE2_1: 還是只能有 2 個這個和 2 個轉向
-      aE3_callout:
-        aE3_1: 這些之中只有一些是有用的
-      aE3alternate_callout:
-        aE3_1: 這些之中只有一些是有用的
-      aE3alternateB_callout:
-        aE3_1: 這些之中只有一些是有用的
-      aE4_callout:
-        aE3_1: 這些之中只有一些是有用的
-      aE5_callout:
-        aE3_1: 這些之中只有一些是有用的
-      aE6_callout:
-        aE6_1: 只能有 1 個向前移動和 1 個轉向積木
-      aEfreeplay_callout:
-        aEfreeplay_1: 藝術家一出場就站在中間可能會有些尷尬，我們來想個辦法讓藝術家移動到一個固定的位置。
-      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
-      Applab test_callout: [ ]
       AppLab_test02_callout: [ ]
-      artistLoopsK2_callout:
-        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
-      artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
       Big Game Animation 1_callout: [ ]
       Big Game Animation 2 (copy 1)_callout:
@@ -78,6 +55,188 @@ zh-TW:
         big_game_bg: Click "edit" to change the background image of your game
       Big Game Vars 4 (copy 1)_callout: [ ]
       Big Game Vars 4_callout: [ ]
+      CSD U3 - complex - compound conditionals_callout: [ ]
+      CSD U3 - complex - key up and down_callout: [ ]
+      CSD U3 - complex - mouse down_callout: [ ]
+      CSD U3 - complex - mouse move_callout: [ ]
+      CSD U3 - complex - nested conditional_callout: [ ]
+      CSD U3 - conditionals - first conditional 2_callout: [ ]
+      CSD U3 - conditionals - first conditional_callout: [ ]
+      CSD U3 - conditionals - transition 2_callout: [ ]
+      CSD U3 - conditionals - transition_callout:
+        CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - images - first sprite with image_callout: [ ]
+      CSD U3 Boolean Modify_callout: [ ]
+      CSD U3 Boolean Predict_callout: [ ]
+      CSD U3 Compound Nested Challenge_callout: [ ]
+      CSD U3 Compound Nested Examples_callout: [ ]
+      CSD U3 Conditional Project_callout: [ ]
+      CSD U3 Conditionals Apple 2_callout: [ ]
+      CSD U3 Conditionals Apple_callout: [ ]
+      CSD U3 Direction Animations_callout: [ ]
+      CSD U3 Direction Arrows_callout: [ ]
+      CSD U3 Draw Loop Plugged update your scene_callout: [ ]
+      CSD U3 Else_callout: [ ]
+      CSD U3 If Else_callout: [ ]
+      CSD U3 Keyboard Input Challenge_callout: [ ]
+      CSD U3 Keypress Boolean_callout: [ ]
+      CSD U3 Keypress Watchers_callout: [ ]
+      CSD U3 Property Conditional Multi_callout: [ ]
+      CSD U3 Property Conditional_callout: [ ]
+      CSD U3 Random Choice_callout: [ ]
+      CSD U3 Random Intro_callout: [ ]
+      CSD U3 Random Min Max_callout: [ ]
+      CSD U3 Simple Drawing - Animation 2_callout: [ ]
+      CSD U3 Sprites anitab 1_callout: [ ]
+      CSD U3 Sprites intro debug_callout: [ ]
+      CSD U3 Sprites intro predict_callout: [ ]
+      CSD U3 Sprites intro sprites_callout: [ ]
+      CSD U3 Sprites scene challenge_callout: [ ]
+      CSD U3 Sprites scene drawing_callout: [ ]
+      CSD U3 Sprites scene sprites_callout: [ ]
+      CSD U3 Sprites scene template_callout: [ ]
+      CSD U3 Sprites scene text_callout: [ ]
+      CSD U3 Sprites text debug_callout: [ ]
+      CSD U3 Sprites text_callout: [ ]
+      CSD U3 UP_ARROW_callout: [ ]
+      CSD U3 Variables TEMPLATE square_callout: [ ]
+      CSD U3 Variables make a big square_callout: [ ]
+      CSD U3 Variables make a square_callout: [ ]
+      CSD U3 Watcher Debug_callout: [ ]
+      CSD U3 abstraction accelerateX_callout:
+        CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateY_callout:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction change velocityX_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction change velocityXY_callout:
+        CSD_U3_L12_S4_C1: The velocity is updated here.
+      CSD U3 abstraction change velocityY_callout:
+        CSD_U3_L11_S6_C1: Add your block here.
+      CSD U3 abstraction circle_callout:
+        CSD_U3_L12_S7_C1: Look at this line.
+      CSD U3 abstraction dragonfly (OLD)_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction dragonfly OLD_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction horse_callout:
+        CSD_U3_L11_S13_C1: Set your sprite's velocityX and velocityY here
+        CSD_U3_L11_S13_C2: Change your sprite's velocityY here.
+      CSD U3 abstraction horse2_callout:
+        CSD_U3_L11_S15_C1: Set your sprite's velocityY here
+      CSD U3 abstraction horse3_callout:
+        CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
+        CSD_U3_L11_S16_C2: Stop the horse from falling here.
+      CSD U3 abstraction jump_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jumper intro_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction jumper template_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction jumping_callout:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction looping_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction parabola_callout:
+        CSD_U3_L11_S13_C1: Add your block here.
+      CSD U3 abstraction rotation accelerate_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+        CSD_U3_L11_S5_C2: Add your code here.
+      CSD U3 abstraction rotation control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation_callout:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction setSpeed accelerate_callout:
+        CSD_U3_L11_S14_C1: Add your code here.
+      CSD U3 abstraction sidescroll intro_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction tumbleweed_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction velocityX control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX_callout:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityY 2_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 collisions getSpeed_callout:
+        CSD_U3_L11_S2_C1: Add your code for the compass here.
+        CSD_U3_L11_S2_C2: Change the code to display speed here.
+      CSD U3 collisions isTouching intro_callout:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions pinball2_callout:
+        CSD_U3_L14_S16_C1: Sprite interactions go in this function.
+      CSD U3 collisions scoreboard_callout:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the carrot go here.
+      CSD U3 collisions try blocks_callout:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions types_callout:
+        CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 game backgrounds_callout:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game variables_callout:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 這個是「運行」按鈕。
+      CSD U3 picture_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 platform background1_callout:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform platform1_callout:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform scoreboard_callout:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform variable1_callout:
+        callout: This block creates a variable.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 這個是「運行」按鈕。
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSDU4 - Design Mode - 3_callout: [ ]
+      CSPU5_U3L16 - setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
+      CSPU5_U3L16 - setPosition to move button_callout:
+        randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
+      CSPU5_setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       Calc Circles of Eval .1_callout:
         Calc Circles of Eval .1: This is the evaluation block. Click on the drop down box to change the number
       Calc Circles of Eval .2_callout:
@@ -182,10 +341,217 @@ zh-TW:
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
         Course_4_SCV_6: 這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！
-      course_playlab_variables2_callout:
-        course_playlab_variables2_1: 這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。
-      course_playlab_variables3_callout:
-        course_playlab_variables3_1: 這是如何為你的變數設定值的方式。
+      Eval Booleans 2_callout:
+        Eval Booleans 2 1: Select a number that will make this expression evaluate to true
+      Eval Cond 1_callout:
+        Eval Cond 1 1: Click edit to change the value of this variable
+      Eval Define Funcs 2_callout:
+        Eval Define Funcs 2 triangle: Change the triangle's style here
+      Eval Define Funcs 3_callout:
+        Eval Define Funcs 3: Make our function use the radius parameter instead of always having a radius of 50.
+      Eval Define Funcs 4_callout:
+        Eval Define Funcs 4: Go to the Functions drawer to "Create a Function"
+        Eval Define Funcs 4B: Click "Add" to add a domain radius, of type Number
+        Eval Define Funcs 4C: Set the range to Image
+      Eval Define Funcs Test_callout:
+        Eval Define Funcs 3: Make our function use the radius parameter instead of always having a radius of 50.
+      Eval Design Recipe .1_callout:
+        edit_function: 點擊此處以編輯你的函式。
+      Eval Design Recipe 3_callout:
+        eval_design_recipe_3: This is your function definition. This code runs every time you use the 'wide-rect' function
+      Eval Strings Images .1_callout:
+        type_string: 'Drag this string into the evaluate block in the workspace. '
+      Eval Strings Images .2_callout: [ ]
+      Eval Strings Images 1_callout:
+        purple_image_block: Purple colored blocks output Image values
+      Eval Strings Images 2_callout:
+        string_block_color: Try typing in a color as a String here
+      Eval Strings Images 3_callout:
+        Eval Strings Images 3: Use this style block and select "outline"
+      Eval Strings Images 5_callout:
+        Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
+      Eval Strings Images 7_callout: [ ]
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: 當事件發生時播放一個音效。
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: 當按向上鍵時，哪個積木可以讓杯麵向上移動？
+        Infinity_move_directions_callout_arrow: 使用這些方向鍵來進行引導
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: 添加移動積木到這兒
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: 放置移動積木到這裡面
+      Luigi's Pizza 1 (copy 1)_callout:
+        luigi's pizza 1: Try ordering a pepperoni pizza
+      Luigi's Pizza 1_callout:
+        luigi's pizza 1: Try ordering a pepperoni pizza
+      Luigi's Pizza 2 (copy 1)_callout:
+        luigi's pizza 2: Edit this function to add your own toppings
+      Luigi's Pizza 2_callout:
+        luigi_pizza_2: Edit this function to add your own toppings
+      Luigi's Pizza 3 (copy 1)_callout: [ ]
+      Luigi's Pizza 3_callout: [ ]
+      Luigi's Pizza 4_callout: [ ]
+      MC HOC 2016 Level 1_callout: [ ]
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: 當你準備好時，點擊「運行」試試你的程式。
+      MC HOC 2016 Level 6_callout: [ ]
+      MC HOC 2016 Nerop_callout: [ ]
+      MC HOC 2016 New Drop_callout: [ ]
+      MC HOC 2016 New Spawn_callout: [ ]
+      MC HOC 2016 New Walk_callout:
+        MC_HOC_2016_New_Walk_callout2: 點擊「運行」開始移動。
+      MC HOC 2016 New pn_callout: [ ]
+      MSM Defining Vars 2_callout:
+        MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
+        MSM Defining Vars 2_callout2: Define the triangle here
+      MSM Defining Vars 3_callout:
+        MSM Defining Vars 3: Click here to find your variables
+      Mike Playlab Project_callout:
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      Modular Arithmetic_callout: [ ]
+      NEW Course 4 Artist Functions 10_callout: [ ]
+      NEW Course 4 Artist Functions 3_callout:
+        NEW_Course_4_Artist_Functions_3_1: 點擊此處以編輯新的函式，好讓它能建立一個正方形。
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: 點擊此處以編輯你的函式。
+        function_editor_draw_square: 這是你的函式定義。每次你使用 draw a square（畫個正方形）積木時，這些程式就會執行一次。
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: 點擊此處以編輯你的函式。
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: 點擊此處以編輯你的函式。
+      NEW Course 4 Artist Params 10_callout:
+        create_function: 點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。
+      NEW Course 4 Artist Params 2_callout:
+        create_function: ""
+        name_function: ""
+        write_draw_triangle_function: ""
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
+        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: 拖曳 length（長度）參數到這裡以取代問號
+      NEW Course 4 Bee For Loops 4_callout:
+        bee_for_loop: 輸入你想要讓蜜蜂收集的花蜜最大數量。
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
+      New App Lab Project_callout: [ ]
+      New Artist Project_callout:
+        New Artist Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Artist Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      New Maker Lab Project_callout: [ ]
+      New Play Lab Project_callout:
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      Ninjacat Demo B_callout:
+        Ninjacat Demo B: Click `Run` to try out the game
+      Ninjacat Demo No Animate_callout:
+        Ninjacat Demo B: 點擊`運行`來試試這個遊戲
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: 點擊「運行」以試試你的程式
+        craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
+      Overworld Place Wall_callout:
+        craft_inside_repeat: 將積木放在這裡可以重複執行程式
+      PDAlg 13-16 Sam Extension Puzzle_callout: [ ]
+      PDAlg 17-20 Luigi Extension Puzzle_callout: [ ]
+      PDAlg Big Game History_callout: [ ]
+      PDAlg Big Game Remix_callout: [ ]
+      PDAlg Design Recipe Delete_callout: [ ]
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: 紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
+      Play Lab Rocket 2_callout:
+        pass_function: 這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
+        play lab rocket 2: 在這裡定義你的 rocket-height（火箭高度）函式。
+      Play Lab Rocket 2B_callout:
+        pass_function: 這個黑色的積木可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
+      Play Lab Rocket 3_callout:
+        Play Lab Rocket 3 1: 在移到至範例和定義前更新目的陳述式。
+      Play Lab Rocket Free Play_callout: [ ]
+      Poorva copy U3L2 Using Simple Commands_callout: [ ]
+      Rock Paper Scissors_callout:
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      Rocket Height Course A_callout:
+        pass_function: 這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      Sam the Butterfly 3_callout:
+        Sam the Butterfly 3 1: 編輯這個函式可以避免讓 Sam 走到右側
+      Sam the Butterfly 5_callout: [ ]
+      Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      TestLab_callout: [ ]
+      U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
+      U3 - Simple Drawing - Fill_callout: [ ]
+      U3 - Simple Drawing - No Fill_callout: [ ]
+      U3 - Simple Drawing - Order of Blocks_callout: [ ]
+      U3 - Simple Drawing - Oval_callout: [ ]
+      U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
+      U3 - Simple Drawing - Rectangle_callout: [ ]
+      U3 - Simple Drawing - Stroke and Stroke Weight_callout: [ ]
+      U3 - Simple Drawing - X and Y values_callout: [ ]
+      U3 - Simple Drawing - regular polygon_callout: [ ]
+      U3 - Simple Drawing - text_callout: [ ]
+      U3 - Sprites - Intro Sprites_callout: [ ]
+      U3 Variables flower example_callout: [ ]
+      U3 Variables gray square_callout: [ ]
+      U3 Variables make a square_callout: [ ]
+      U3L05_3x3GridEfficiencyChallenge_callout: [ ]
+      U3L05_draw3x3GridEfficiently_callout: [ ]
+      U3L2 Using Simple Commands (no tooltips)_callout: [ ]
+      U3L2 Using Simple Commands_callout: [ ]
+      U3L2_Turtle3by3Grid_callout: [ ]
+      U3L2_TurtleSquare_right_callout: [ ]
+      U5 ColorSleuth Template_callout: [ ]
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
+      Underground Iron_callout:
+        craft_what_is_iron: 開採這塊鐵礦！
+      WebLab PS test - 1-12_callout:
+        version_history_button: 檢查版本紀錄
+      WhileAdventure_callout:
+        sample1_1: This will be an adventurer collecting coins, not a farmer digging.
+      aE1_callout:
+        aE1_1: 只能有 2 個這個和 2 個轉向
+      aE2_callout:
+        aE2_1: 還是只能有 2 個這個和 2 個轉向
+      aE3_callout:
+        aE3_1: 這些之中只有一些是有用的
+      aE3alternate_callout:
+        aE3_1: 這些之中只有一些是有用的
+      aE3alternateB_callout:
+        aE3_1: 這些之中只有一些是有用的
+      aE4_callout:
+        aE3_1: 這些之中只有一些是有用的
+      aE5_callout:
+        aE3_1: 這些之中只有一些是有用的
+      aE6_callout:
+        aE6_1: 只能有 1 個向前移動和 1 個轉向積木
+      aEfreeplay_callout:
+        aEfreeplay_1: 藝術家一出場就站在中間可能會有些尷尬，我們來想個辦法讓藝術家移動到一個固定的位置。
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
+      artistLoopsK2_callout:
+        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      artistLoopsK2gradek_artist_loops3_callout:
+        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops8_callout:
@@ -267,10 +633,16 @@ zh-TW:
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions_predict1_callout: [ ]
+      courseE_artist_predict1_callout: [ ]
+      courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: 你可以修改這個數字。
         courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp12_callout: [ ]
+      courseE_artist_ramp8_callout:
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
+      courseE_artist_ramp9_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用這個積木來收集寶藏。'
@@ -296,8 +668,10 @@ zh-TW:
       courseE_farmer_functions7b_callout: [ ]
       courseE_farmer_functions8b_callout: [ ]
       courseE_farmer_functions9b_callout: [ ]
+      courseE_maze_predict1_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseE_maze_ramp13_callout: [ ]
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
@@ -309,6 +683,10 @@ zh-TW:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_maze_ramp_predict1_callout: [ ]
+      courseE_multi_maze_ramp5_callout: [ ]
+      courseE_playLab_scaffold3_callout:
+        courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
       courseF_artist_for1_callout:
         courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_for4_callout: [ ]
@@ -334,6 +712,7 @@ zh-TW:
       courseF_artist_variables7_callout: [ ]
       courseF_artist_variables8_callout: [ ]
       courseF_artist_variables9_callout: [ ]
+      courseF_artist_variablesFP_callout: [ ]
       courseF_artist_variables_10_callout: [ ]
       courseF_artist_variables_2_callout: [ ]
       courseF_artist_variables_3_callout:
@@ -348,7 +727,6 @@ zh-TW:
       courseF_artist_variables_8_callout: [ ]
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
-      courseF_artist_variablesFP_callout: [ ]
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: [ ]
@@ -362,6 +740,10 @@ zh-TW:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_playLab_func2_callout:
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
@@ -370,183 +752,11 @@ zh-TW:
       courseF_playlab_variables3_callout: [ ]
       courseF_playlab_variables4_callout: [ ]
       courseF_playlab_variables5_callout: [ ]
-      CSD U3 - complex - compound conditionals_callout: [ ]
-      CSD U3 - complex - key up and down_callout: [ ]
-      CSD U3 - complex - mouse down_callout: [ ]
-      CSD U3 - complex - mouse move_callout: [ ]
-      CSD U3 - complex - nested conditional_callout: [ ]
-      CSD U3 - conditionals - first conditional 2_callout: [ ]
-      CSD U3 - conditionals - first conditional_callout: [ ]
-      CSD U3 - conditionals - transition 2_callout: [ ]
-      CSD U3 - conditionals - transition_callout:
-        CSD_U3_L8_S6_C1: Put the console log statement here
-      CSD U3 - images - first sprite with image_callout: [ ]
-      CSD U3 abstraction accelerateX_callout:
-        CSD_U3_L11_S6_C1: Add your code here.
-      CSD U3 abstraction accelerateY_callout:
-        CSD_U3_L11_S7_C1: Add your code here.
-      CSD U3 abstraction change velocityX_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 abstraction change velocityXY_callout:
-        CSD_U3_L12_S4_C1: The velocity is updated here.
-      CSD U3 abstraction change velocityY_callout:
-        CSD_U3_L11_S6_C1: Add your block here.
-      CSD U3 abstraction circle_callout:
-        CSD_U3_L12_S7_C1: Look at this line.
-      CSD U3 abstraction dragonfly (OLD)_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 abstraction dragonfly OLD_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 abstraction horse_callout:
-        CSD_U3_L11_S13_C1: Set your sprite's velocityX and velocityY here
-        CSD_U3_L11_S13_C2: Change your sprite's velocityY here.
-      CSD U3 abstraction horse2_callout:
-        CSD_U3_L11_S15_C1: Set your sprite's velocityY here
-      CSD U3 abstraction horse3_callout:
-        CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
-        CSD_U3_L11_S16_C2: Stop the horse from falling here.
-      CSD U3 abstraction jump_callout:
-        CSD_U3_L11_S17_C1: Look at this if statement
-        CSD_U3_L11_S17_C2: Send the frog back down here
-      CSD U3 abstraction jumper intro_callout:
-        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
-        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
-        CSD_U3_L11_S17_C3: Add your if statement here.
-      CSD U3 abstraction jumper template_callout:
-        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
-        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
-        CSD_U3_L11_S17_C3: Add your if statement here.
-      CSD U3 abstraction jumping_callout:
-        CSD_U3_L13_S8_C1: Set the velocity here
-      CSD U3 abstraction looping_callout:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction parabola_callout:
-        CSD_U3_L11_S13_C1: Add your block here.
-      CSD U3 abstraction rotation accelerate_callout:
-        CSD_U3_L11_S5_C1: Look at this code.
-        CSD_U3_L11_S5_C2: Add your code here.
-      CSD U3 abstraction rotation control_callout:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction rotation_callout:
-        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
-      CSD U3 abstraction setSpeed accelerate_callout:
-        CSD_U3_L11_S14_C1: Add your code here.
-      CSD U3 abstraction sidescroll intro_callout:
-        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
-        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
-        CSD_U3_L11_S17_C3: Add your if statement here.
-      CSD U3 abstraction sidescroll template_callout:
-        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
-        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
-        CSD_U3_L11_S17_C3: Add your if statement here.
-      CSD U3 abstraction sidescroll_callout:
-        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
-        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
-        CSD_U3_L11_S17_C3: Add your if statement here.
-      CSD U3 abstraction tumbleweed_callout:
-        CSD_U3_L11_S17_C1: Look at this if statement
-      CSD U3 abstraction velocityX control_callout:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX if-statements_callout:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityX_callout:
-        CSD_U3_L11_S4_C1: Add your block here.
-      CSD U3 abstraction velocityY 2_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 abstraction velocityY control_callout:
-        CSD_U3_L11_S5_C1: Look at this code.
-      CSD U3 abstraction velocityY_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 Boolean Modify_callout: [ ]
-      CSD U3 Boolean Predict_callout: [ ]
-      CSD U3 collisions getSpeed_callout:
-        CSD_U3_L11_S2_C1: Add your code for the compass here.
-        CSD_U3_L11_S2_C2: Change the code to display speed here.
-      CSD U3 collisions isTouching intro_callout:
-        CSD_U3_L12_S2_C1: Add your block here.
-      CSD U3 collisions pinball2_callout:
-        CSD_U3_L14_S16_C1: Sprite interactions go in this function.
-      CSD U3 collisions scoreboard_callout:
-        CSD_U3_L12_S8_C1: These blocks display the score.
-        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the carrot go here.
-      CSD U3 collisions try blocks_callout:
-        CSD_U3_L13_S6_C1: Change this block.
-      CSD U3 collisions types_callout:
-        CSD_U3_L13_S6_C1: Add your code here.
-      CSD U3 Compound Nested Challenge_callout: [ ]
-      CSD U3 Compound Nested Examples_callout: [ ]
-      CSD U3 Conditional Project_callout: [ ]
-      CSD U3 Direction Animations_callout: [ ]
-      CSD U3 Direction Arrows_callout: [ ]
-      CSD U3 Else_callout: [ ]
-      CSD U3 game backgrounds_callout:
-        CSD_U3_S18_L4_C1: This block calls your function.
-        CSD_U3_L18_S4_C2: Functions area
-      CSD U3 game variables_callout:
-        CSD_U3_S18_L3_C1: This block creates a new variable.
-        CSD_U3_L18_S3_C2: Variables area
-      CSD U3 If Else_callout: [ ]
-      CSD U3 Keypress Boolean_callout: [ ]
-      CSD U3 Keypress Watchers_callout: [ ]
-      CSD U3 platform background1_callout:
-        CSD_U3_L16_S3_C1: the function that draws the background
-        CSD_U3_L16_S3_C2: the code that calls the function
-        CSD_U3_L16_S3_C3: Change this function.
-      CSD U3 platform platform1_callout:
-        CSD_U3_S17_L8_C1: This block creates a new sprite.
-      CSD U3 platform scoreboard_callout:
-        CSD_U3_L17_S7_C1: Score is printed here.
-      CSD U3 platform variable1_callout:
-        callout: This block creates a variable.
-      CSD U3 Property Conditional Multi_callout: [ ]
-      CSD U3 Property Conditional_callout: [ ]
-      CSD U3 Random Choice_callout: [ ]
-      CSD U3 Random Intro_callout: [ ]
-      CSD U3 Random Min Max_callout: [ ]
-      CSD U3 Simple Drawing - Animation 2_callout: [ ]
-      CSD U3 Sprites intro sprites_callout: [ ]
-      CSD U3 UP_ARROW_callout: [ ]
-      CSD U3 Variables make a big square_callout: [ ]
-      CSD U3 Variables make a square_callout: [ ]
-      CSD U3 Variables TEMPLATE square_callout: [ ]
-      CSDU4 - Design Mode - 3_callout: [ ]
-      CSPU5_setPosition to fixed location_callout:
-        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
-      CSPU5_U3L16 - setPosition to fixed location_callout:
-        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
-      CSPU5_U3L16 - setPosition to move button_callout:
-        randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
+      course_playlab_variables2_callout:
+        course_playlab_variables2_1: 這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。
+      course_playlab_variables3_callout:
+        course_playlab_variables3_1: 這是如何為你的變數設定值的方式。
       drawings!_callout: [ ]
-      Eval Booleans 2_callout:
-        Eval Booleans 2 1: Select a number that will make this expression evaluate to true
-      Eval Cond 1_callout:
-        Eval Cond 1 1: Click edit to change the value of this variable
-      Eval Define Funcs 2_callout:
-        Eval Define Funcs 2 triangle: Change the triangle's style here
-      Eval Define Funcs 3_callout:
-        Eval Define Funcs 3: Make our function use the radius parameter instead of always having a radius of 50.
-      Eval Define Funcs 4_callout:
-        Eval Define Funcs 4: Go to the Functions drawer to "Create a Function"
-        Eval Define Funcs 4B: Click "Add" to add a domain radius, of type Number
-        Eval Define Funcs 4C: Set the range to Image
-      Eval Define Funcs Test_callout:
-        Eval Define Funcs 3: Make our function use the radius parameter instead of always having a radius of 50.
-      Eval Design Recipe .1_callout:
-        edit_function: 點擊此處以編輯你的函式。
-      Eval Design Recipe 3_callout:
-        eval_design_recipe_3: This is your function definition. This code runs every time you use the 'wide-rect' function
-      Eval Strings Images .1_callout:
-        type_string: 'Drag this string into the evaluate block in the workspace. '
-      Eval Strings Images .2_callout: [ ]
-      Eval Strings Images 1_callout:
-        purple_image_block: Purple colored blocks output Image values
-      Eval Strings Images 2_callout:
-        string_block_color: Try typing in a color as a String here
-      Eval Strings Images 3_callout:
-        Eval Strings Images 3: Use this style block and select "outline"
-      Eval Strings Images 5_callout:
-        Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
-      Eval Strings Images 7_callout: [ ]
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross rotate_callout:
@@ -575,10 +785,6 @@ zh-TW:
         replace_questions: 使用下拉清單，把「???」換成一個數字。
       frozen square snowflake_callout:
         replace_questions: 使用下拉清單，把「???」換成一個數字。
-      Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
-      Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
       grade1_maze_sequence6_callout:
@@ -597,6 +803,8 @@ zh-TW:
       grade2_CaringForNewPet_3D_callout: [ ]
       grade2_CaringForNewPet_7D_callout:
         grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are meant to be harder and may take several tries.
+      grade2_MakeDogTag_1_callout: [ ]
+      grade2_MakeDogTag_BFP_callout: [ ]
       grade2_collector_10_callout: [ ]
       grade2_collector_7_callout:
         grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
@@ -605,8 +813,6 @@ zh-TW:
       grade2_collector_9a_callout: [ ]
       grade2_collector_A_callout: [ ]
       grade2_collector_A_predict1_callout: [ ]
-      grade2_MakeDogTag_1_callout: [ ]
-      grade2_MakeDogTag_BFP_callout: [ ]
       grade2_maze_intro10_callout: [ ]
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to run your program.
@@ -622,11 +828,11 @@ zh-TW:
       grade2_maze_intro9_callout: [ ]
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: You only have one of these blocks available in this puzzle.
-      grade3_bee_conditionals_quantum2_callout:
+      grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       grade3_Conditionals_3_callout:
         Bee_Cond_5_1a: 紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！
-      grade3_ConditionalsElse_2_callout:
+      grade3_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die, and you get to decide how many sides the die has.
@@ -743,128 +949,9 @@ zh-TW:
       gradek_playlab_events4c_callout: [ ]
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
-      Infinity_move_collide_callout:
-        Infinity_move_collide_callout: 當事件發生時播放一個音效。
-      Infinity_move_directions_callout:
-        Infinity_move_directions_callout: 當按向上鍵時，哪個積木可以讓杯麵向上移動？
-        Infinity_move_directions_callout_arrow: 使用這些方向鍵來進行引導
-      Infinity_move_right_callout:
-        Infinity_move_right_runbutton: 添加移動積木到這兒
-      Infinity_repeat_callout:
-        Infinity_repeat_callout: 放置移動積木到這裡面
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
-      Luigi's Pizza 1 (copy 1)_callout:
-        luigi's pizza 1: Try ordering a pepperoni pizza
-      Luigi's Pizza 1_callout:
-        luigi's pizza 1: Try ordering a pepperoni pizza
-      Luigi's Pizza 2 (copy 1)_callout:
-        luigi's pizza 2: Edit this function to add your own toppings
-      Luigi's Pizza 2_callout:
-        luigi_pizza_2: Edit this function to add your own toppings
-      Luigi's Pizza 3 (copy 1)_callout: [ ]
-      Luigi's Pizza 3_callout: [ ]
-      Luigi's Pizza 4_callout: [ ]
-      MC HOC 2016 Level 1_callout: [ ]
-      MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: 當你準備好時，點擊「運行」試試你的程式。
-      MC HOC 2016 Level 6_callout: [ ]
-      MC HOC 2016 Nerop_callout: [ ]
-      MC HOC 2016 New Drop_callout: [ ]
-      MC HOC 2016 New pn_callout: [ ]
-      MC HOC 2016 New Spawn_callout: [ ]
-      MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: 點擊「運行」開始移動。
-      Mike Playlab Project_callout:
-        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
-        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
-        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
-      Modular Arithmetic_callout: [ ]
-      MSM Defining Vars 2_callout:
-        MSM Defining Vars 2_callout1: Click "edit" to open the function editor to update the function
-        MSM Defining Vars 2_callout2: Define the triangle here
-      MSM Defining Vars 3_callout:
-        MSM Defining Vars 3: Click here to find your variables
-      New App Lab Project_callout: [ ]
-      New Artist Project_callout:
-        New Artist Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
-        New Artist Project_callout2: 點擊「運行」以儲存並運行你的程式
-        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
-      NEW Course 4 Artist Functions 10_callout: [ ]
-      NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: 點擊此處以編輯新的函式，好讓它能建立一個正方形。
-      NEW Course 4 Artist Functions 5_callout:
-        edit_function: 點擊此處以編輯你的函式。
-        function_editor_draw_square: 這是你的函式定義。每次你使用 draw a square（畫個正方形）積木時，這些程式就會執行一次。
-      NEW Course 4 Artist Functions 7_callout:
-        edit_function: 點擊此處以編輯你的函式。
-      NEW Course 4 Artist Functions 8_callout:
-        edit_function: 點擊此處以編輯你的函式。
-      NEW Course 4 Artist Params 10_callout:
-        create_function: 點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。
-      NEW Course 4 Artist Params 2_callout:
-        create_function: ""
-        name_function: ""
-        write_draw_triangle_function: ""
-      NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: 點一下編輯，在你的函式中添加參數
-        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
-      NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: 拖曳 length（長度）參數到這裡以取代問號
-      NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: 輸入你想要讓蜜蜂收集的花蜜最大數量。
-      NEW Course 4 Bee For Loops 5_callout:
-        actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
-      New Maker Lab Project_callout: [ ]
-      New Play Lab Project_callout:
-        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
-        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
-        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
-      Ninjacat Demo B_callout:
-        Ninjacat Demo B: Click `Run` to try out the game
-      Ninjacat Demo No Animate_callout:
-        Ninjacat Demo B: 點擊`運行`來試試這個遊戲
-      Overworld Chop Trees_callout:
-        craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
-      Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
-      Overworld Move to Sheep_callout:
-        craft_run_button_callout: 點擊「運行」以試試你的程式
-        craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
-      Overworld Place Wall_callout:
-        craft_inside_repeat: 將積木放在這裡可以重複執行程式
-      PDAlg 13-16 Sam Extension Puzzle_callout: [ ]
-      PDAlg 17-20 Luigi Extension Puzzle_callout: [ ]
-      PDAlg Big Game History_callout: [ ]
-      PDAlg Big Game Remix_callout: [ ]
-      PDAlg Design Recipe Delete_callout: [ ]
-      Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
-      Play Lab Rocket 2_callout:
-        pass_function: 這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
-        play lab rocket 2: 在這裡定義你的 rocket-height（火箭高度）函式。
-      Play Lab Rocket 2B_callout:
-        pass_function: 這個黑色的積木可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
-      Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: 在移到至範例和定義前更新目的陳述式。
-      Play Lab Rocket Free Play_callout: [ ]
       playLabDebugVideo1_callout: [ ]
-      Poorva copy U3L2 Using Simple Commands_callout: [ ]
-      PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: 紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！
-      Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
-        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
-        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
-      Rocket Height Course A_callout:
-        pass_function: 這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
-      Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
-      Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
-      Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: 編輯這個函式可以避免讓 Sam 走到右側
-      Sam the Butterfly 5_callout: [ ]
       sample1_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       sample10a_callout: [ ]
@@ -884,40 +971,9 @@ zh-TW:
         sample9_1: This should be something other than artist, but it's here to connect the previous levels to freeplay
       sample9a_callout:
         sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab does not have "turn" or "move forward". Also, the goals are not flexible (size or sprites).
-      Test Play Lab Project With Walls_callout:
+      small_actors_playlab_projects_callout:
         New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
         New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
         sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       testing code callout_callout:
         testing_code_callout: 這可以讓角色移動！
-      TestLab_callout: [ ]
-      U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
-      U3 - Simple Drawing - Fill_callout: [ ]
-      U3 - Simple Drawing - No Fill_callout: [ ]
-      U3 - Simple Drawing - Order of Blocks_callout: [ ]
-      U3 - Simple Drawing - Oval_callout: [ ]
-      U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
-      U3 - Simple Drawing - Rectangle_callout: [ ]
-      U3 - Simple Drawing - regular polygon_callout: [ ]
-      U3 - Simple Drawing - Stroke and Stroke Weight_callout: [ ]
-      U3 - Simple Drawing - text_callout: [ ]
-      U3 - Simple Drawing - X and Y values_callout: [ ]
-      U3 - Sprites - Intro Sprites_callout: [ ]
-      U3 Variables flower example_callout: [ ]
-      U3 Variables gray square_callout: [ ]
-      U3 Variables make a square_callout: [ ]
-      U3L05_3x3GridEfficiencyChallenge_callout: [ ]
-      U3L05_draw3x3GridEfficiently_callout: [ ]
-      U3L2 Using Simple Commands (no tooltips)_callout: [ ]
-      U3L2 Using Simple Commands_callout: [ ]
-      U3L2_Turtle3by3Grid_callout: [ ]
-      U3L2_TurtleSquare_right_callout: [ ]
-      U5 ColorSleuth Template_callout: [ ]
-      Underground Avoiding Lava_callout:
-        craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
-      Underground Iron_callout:
-        craft_what_is_iron: 開採這塊鐵礦！
-      WebLab PS test - 1-12_callout:
-        version_history_button: 檢查版本紀錄
-      WhileAdventure_callout:
-        sample1_1: This will be an adventurer collecting coins, not a farmer digging.

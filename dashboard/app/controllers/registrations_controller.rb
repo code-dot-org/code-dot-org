@@ -2,18 +2,14 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
 
   def new
+    session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
     super
   end
 
   def update
+    return head(:bad_request) if params[:user].nil?
     @user = User.find(current_user.id)
-
-    # If email has changed for a non-teacher: clear confirmed_at but don't send notification email
-    if  !@user.confirmation_required? && params[:user] && params[:user][:email].present?
-      @user.skip_reconfirmation!
-      @user.confirmed_at = nil
-    end
 
     successfully_updated =
       if forbidden_change?(@user, params)
@@ -23,7 +19,7 @@ class RegistrationsController < Devise::RegistrationsController
       else
         # remove the virtual current_password attribute update_without_password
         # doesn't know how to ignore it
-        params[:user].delete(:current_password) if params[:user]
+        params[:user].delete(:current_password)
         @user.update_without_password(update_params(params))
       end
 
@@ -34,7 +30,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in @user
 
         format.html do
-          set_flash_message :notice, @user.pending_reconfirmation? ? :update_needs_confirmation : :updated
+          set_flash_message :notice, :updated
           begin
             redirect_back fallback_location: after_update_path_for(@user)
           rescue ActionController::RedirectBackError
@@ -92,6 +88,19 @@ class RegistrationsController < Devise::RegistrationsController
       :school,
       :full_address,
       :terms_of_service_version,
+      school_info_attributes: [
+        :country,
+        :school_type,
+        :state, :school_state,
+        :zip, :school_zip,
+        :school_district_id,
+        :school_district_other,
+        :school_district_name,
+        :school_id,
+        :school_other,
+        :school_name,
+        :full_address
+      ],
       races: []
     )
   end

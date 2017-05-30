@@ -138,7 +138,7 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  if (experiments.isEnabled('g.stageprogress')) {
+  if (experiments.isEnabled('gamification')) {
     const oldHints = authoredHintUtils.getOldFinishedHints();
     trySetLocalStorage('old_finished_authored_hint_views',
         JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));

@@ -38,7 +38,7 @@ class DslTest < ActiveSupport::TestCase
   test 'name should not be modifiable' do
     level = External.create_from_level_builder({}, {dsl_text: "name 'test external'\ntitle 'test'"})
     assert_raises RuntimeError do
-      level = level.update(dsl_text: "name 'new test name'\ntitle 'abc'")
+      level.update(dsl_text: "name 'new test name'\ntitle 'abc'")
     end
     assert_equal 'test external', level.name
     assert_equal 'test', level.properties['title']
@@ -47,7 +47,8 @@ class DslTest < ActiveSupport::TestCase
 
   test 'should set serialized_attributes' do
     level = External.create_from_level_builder({}, {dsl_text: "name 'test external 2'"})
-    level = level.update(dsl_text: "name 'test external 2'\ntitle 'abc'", video_key: 'zzz')
+    level.update(dsl_text: "name 'test external 2'\ntitle 'abc'", video_key: 'zzz')
+    level.reload
     assert_equal 'zzz', level.video_key
     assert_equal 'abc', level.properties['title']
     assert_nil level.properties['name']

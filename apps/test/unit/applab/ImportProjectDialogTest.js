@@ -1,4 +1,3 @@
-import ReactTestUtils from 'react-addons-test-utils';
 import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
@@ -13,7 +12,7 @@ import {
 
 describe("Applab ImportProjectDialog component", function () {
 
-  var form, urlInput, nextButton, onProjectFetched;
+  var form, urlInput, nextButton;
 
   beforeEach(() => {
     sinon.stub(sourcesApi, "ajax");
@@ -23,10 +22,6 @@ describe("Applab ImportProjectDialog component", function () {
   afterEach(() => {
     sourcesApi.ajax.restore();
     channelsApi.ajax.restore();
-  });
-
-  beforeEach(() => {
-    onProjectFetched = sinon.spy();
   });
 
   function render(theForm) {

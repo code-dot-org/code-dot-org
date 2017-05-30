@@ -20,7 +20,7 @@ var ImagePicker = React.createClass({
     typeFilter: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired,
     showUnderageWarning: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool.isRequired
+    useFilesApi: React.PropTypes.bool
   },
 
   getInitialState: function () {

@@ -43,9 +43,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
-      "Game.frameRate": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.frameRate": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "keyDown": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
@@ -95,12 +95,10 @@
     },
     "show_debug_watch": "true",
     "encrypted_examples": "blVZggBahZX+qqjfD8mN+dMbg2y72VCpQK/D1VQEE5CSbXo1H1HyDz2fzb+p\nTjQd\n",
-    "contained_level_names": [
-      "CSD U3 Keypress Boolean Predict"
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

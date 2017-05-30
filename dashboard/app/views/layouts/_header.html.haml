@@ -8,8 +8,28 @@
 
 - show_bug_links = script_level || (level && level.try(:is_project_level))
 
-.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
-  - if show_bug_links
+- user_type = nil
+
+- show_header2 = request.cookies['pm'] == 'new_header'
+- header_class = show_header2 ? 'header2-wrapper' : 'header-wrapper'
+- header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
+
+- if show_header2
+  %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+  - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+  - user_type = request.cookies[cookie_key]
+
+  - hamburger_options = {}
+  - hamburger_options[:level] = level
+  - hamburger_options[:user_type] = user_type
+  - hamburger_options[:language] = request.language
+  - hamburger_options[:code_org_url_base] = CDO.code_org_url
+  - hamburger_options[:studio_url_base] = CDO.studio_url
+  - hamburger_options[:show_gallery] = true
+  - hamburger_options[:loc_prefix] = "nav.header."
+
+.hide_on_mobile{class: header_class}
+  - if !show_header2 && show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
       - if level && level.try(:is_project_level) && level.game == Game.gamelab
@@ -28,16 +48,40 @@
         .row.header_row
           .header_left
             .header_logo
-              - if current_page?(root_url)
-                = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+              - if show_header2
+                = link_to(image_tag('logo.png'), '/home')
               - else
-                = link_to(image_tag('codeorg-studio-logo.png'), '/')
-            %span.project_info
+                - if current_page?(root_url)
+                  = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+                - else
+                  = link_to(image_tag('codeorg-studio-logo.png'), '/')
+            - if show_header2
+              .project_info
+            - else
+              %span.project_info
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
-            - elsif @edit_blocks
-              .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
+            - elsif level
+            - elsif show_header2
+              .headerlinks.hide_on_tablet
+                - if user_type == "teacher"
+                  %a.headerlink{:href=>"/home"}= t('nav.header.home')
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
+                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")}= t('nav.header.sections')
+                  %a.headerlink{:href=>"/my-professional-learning"}= t('nav.header.professional_learning')
+                - elsif user_type == "student"
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
+                - elsif request.language == "en"
+                  %a.headerlink{:href=>CDO.code_org_url("/student")}= t('nav.header.learn')
+                  %a.headerlink{:href=>CDO.code_org_url("/educate")}= t('nav.header.teach')
+                  %a.headerlink{:href=>CDO.code_org_url("/promote")}= t('nav.header.stats')
+                  %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
+                  %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
+                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
+
           .header_right
             %span.freeplay_links
               %a.header_status_bar.level_free_play.playlab_free_play{title: t('nav.header.free_play.playlab'), href: playlab_project_projects_path, style: 'display: none;'}
@@ -51,7 +95,20 @@
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
-              = render partial: 'shared/user_header_ajax'
+              - if show_header2
+                %span#sign_in_or_user
+                = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+              - else
+                = render partial: 'shared/user_header_ajax'
+
+- if show_header2
+  - if request.path == "/home" || request.path == "/courses"
+    - if user_type == "teacher"
+      #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+    - else
+      #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
+  - if request.path == "/projects" || request.path == "/projects/public"
+    #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
 
 - if script_level
   - view_as = @user || current_user
@@ -61,7 +118,7 @@
   - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
   - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
 
-  - script_data = { disablePostMilestone: script.disable_post_milestone?, isHocScript: script.hoc?, name: script.name }
+  - script_data = script.summarize_header
   -# If caching, we don't know the sign in state, and should be nil
   - signed_in = @public_caching ? 'null' : !current_user.nil?
   :javascript

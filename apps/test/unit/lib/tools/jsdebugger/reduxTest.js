@@ -5,17 +5,15 @@ import {reducers, selectors, actions} from '@cdo/apps/lib/tools/jsdebugger/redux
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
   beforeEach(() => {
     stubRedux();
-    experiments.setEnabled('collapse-debugger', true);
     registerReducers(reducers);
     store = getStore();
     state = store.getState();
-    studioApp = {reduxStore: getStore(), hideSource: true};
+    studioApp = {hideSource: true};
     interpreter = new JSInterpreter({
       shouldRunAtMaxSpeed: () => false,
       studioApp

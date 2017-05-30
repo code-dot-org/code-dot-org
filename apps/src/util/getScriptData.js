@@ -25,3 +25,44 @@ export default function getScriptData(name) {
     throw e;
   }
 }
+
+/**
+ * Helper function to pull all json data off of the current script.
+ *
+ * Note that this function takes advantage of document.currentScript to retrieve
+ * the script element, and therefore will not work if called within a callback
+ * or event handler; it will only reference the element while it's initially
+ * being processed.
+ *
+ * Example: given you have the following html:
+ *
+ *   <script src="myscript.js" data-some-server-object='{"userId": "foobar"}' data-some-server-string='"hello"'></script>
+ *
+ * Then calling getCurrentScriptData() from myscript.js would return the object:
+ *
+ *  {
+ *    someServerObject: {
+ *      userId: "foobar"
+ *    },
+ *    someServerString: "hello"
+ *  }
+ *
+ * @returns an object containing the decoded json values of each of the data attributes
+ */
+export function getCurrentScriptData() {
+  if (!document.currentScript && document.currentScript.dataset) {
+    console.error("Cannot reference document.currentScript from a callback or event handler");
+    return;
+  }
+
+  return Object.keys(document.currentScript.dataset).reduce((acc, val) => {
+    try {
+      acc[val] = JSON.parse(document.currentScript.dataset[val]);
+    } catch (e) {
+      console.error("Failed to parse script data for data attribute", val);
+      throw e;
+    }
+
+    return acc;
+  }, {});
+}

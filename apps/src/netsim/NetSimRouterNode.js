@@ -13,7 +13,7 @@ var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
-var ObservableEvent = require('../ObservableEvent');
+var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var Packet = require('./Packet');
 var DataConverters = require('./DataConverters');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
@@ -209,17 +209,17 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   /**
    * Event others can observe, which we fire when our own remote row changes.
    *
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.stateChange = new ObservableEvent();
+  this.stateChange = new ObservableEventDEPRECATED();
 
   /**
    * Event others can observe, which we fire when the router statistics
    * change (which may be very frequent...)
    *
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.statsChange = new ObservableEvent();
+  this.statsChange = new ObservableEventDEPRECATED();
 
   /**
    * Local cache of wires attached to this router, used for detecting and
@@ -236,9 +236,9 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Event others can observe, which we fire when the router's set of wires
    * changes indicating a change in the local network.
    *
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.wiresChange = new ObservableEvent();
+  this.wiresChange = new ObservableEventDEPRECATED();
 
   /**
    * Local cache of log rows associated with this router, used for detecting
@@ -253,9 +253,9 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Event others can observe, which we fire when the router's log content
    * changes.
    *
-   * @type {ObservableEvent}
+   * @type {ObservableEventDEPRECATED}
    */
-  this.logChange = new ObservableEvent();
+  this.logChange = new ObservableEventDEPRECATED();
 
   /**
    * Whether router is in the middle of work.  Keeps router from picking up

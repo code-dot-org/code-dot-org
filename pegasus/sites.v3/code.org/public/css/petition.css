@@ -42,6 +42,7 @@
 
 #gobutton {
   min-width: 100px;
+  margin-top: 0px;
   margin-bottom: 10px;
   font-family: 'Gotham 5r', sans-serif;
 }

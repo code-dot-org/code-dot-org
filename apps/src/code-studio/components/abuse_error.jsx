@@ -37,8 +37,3 @@ var AbuseError = React.createClass({
   }
 });
 module.exports = AbuseError;
-
-// AbuseError is placed on the dashboard namespace so that it can be accessed
-// by apps
-window.dashboard = window.dashboard || {};
-window.dashboard.AbuseError = AbuseError;

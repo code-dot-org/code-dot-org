@@ -27,6 +27,10 @@ export function analogRead(pin, callback) {
   return executeCmd(null, 'analogRead', {pin, callback});
 }
 
+export function boardConnected() {
+  return executeCmd(null, 'boardConnected');
+}
+
 export function onBoardEvent(component, event, callback) {
   return executeCmd(null, 'onBoardEvent', {component, event, callback});
 }

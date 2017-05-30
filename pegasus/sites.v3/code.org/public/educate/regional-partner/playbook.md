@@ -7,12 +7,14 @@ theme: responsive
 
 <div id="regional-partner-playbook">
 
+  <%= view :educate_box, item: {title_s: 'Administrator and Counselor PD', description_t: "* How-To Guide
+  <br> * Set Your Agenda<br> * Logistics (Venue, Catering)<br> * Supplies & Resources", url_s: CDO.code_org_url("/educate/regional-partner/playbook/administrator"), button_s: "Learn more"} %>
+
+  <%= view :educate_box, item: {title_s: 'Advocacy', description_t: "Links to resources and websites to help you advocate for K-12 computer science policy in your state", url_s: CDO.code_org_url('/educate/regional-partner/playbook/advocacy'), button_s: "Learn more"} %>
+
   <%= view :educate_box, item: {title_s: 'Communications and Branding', description_t: "* Weekly Update Email Archive<br> * Code.org Comms. to Teachers<br> * Workshop & Email Comms.<br> * Branding Guidelines", url_s: CDO.code_org_url("/educate/regional-partner/playbook/communications"), button_s: "Learn more"} %>
 
   <%= view :educate_box, item: {title_s: 'Community Building', description_t: "* Resources & Ideas", url_s: CDO.code_org_url("/educate/regional-partner/playbook/community"), button_s: "Learn more"} %>
-
-  <%= view :educate_box, item: {title_s: 'Administrator and Counselor PD', description_t: "* How-To Guide
-  <br> * Set Your Agenda<br> * Logistics (Venue, Catering)<br> * Supplies & Resources", url_s: CDO.code_org_url("/educate/regional-partner/playbook/administrator"), button_s: "Learn more"} %>
 
   <%= view :educate_box, item: {title_s: 'Curriculum Guides', description_t: "* Links to Online Curriculum
   <br> * Curriculum 1-pagers <br> * Overview of Professional Learning", url_s: CDO.code_org_url("/educate/regional-partner/playbook/curriculum"), button_s: "Learn more"} %>
@@ -43,6 +45,4 @@ theme: responsive
   <%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Access to the Dashboard and guidance on setting up workshops, day of event troubleshooting and more", url_s: CDO.code_org_url("/educate/regional-partner/playbook/workshop-dashboard"), button_s: "Learn more"} %>
 
   <%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "Workshop Planning 101: Everything you need to know all wrapped up and tied with a bow", url_s: CDO.code_org_url('/educate/regional-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
-
-  <%= view :educate_box, item: {title_s: 'Advocacy', description_t: "Links to resources and websites to help you advocate for K-12 computer science policy in your state", url_s: CDO.code_org_url('/educate/regional-partner/playbook/advocacy'), button_s: "Learn more"} %>
 </div>

@@ -875,6 +875,8 @@
   dashboard_students_reset_password: "प्रवेस शब्द परिवर्तन गर्ने"
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Print out cards with your students' login information.
   dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Secret Picture
@@ -892,6 +894,7 @@
     would like to create accounts for them, change this section's secret type to <b>word</b>
     or <b>picture</b>.
   dashboard_students_print_page: Print this page
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
@@ -1109,6 +1112,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1833,6 +1838,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

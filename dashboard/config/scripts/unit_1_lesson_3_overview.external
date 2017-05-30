@@ -1,14 +1,11 @@
 name 'Unit 1 Lesson 3 Overview'
-css 'unplugged'
+display_name 'Lesson Overview'
 
 markdown <<MARKDOWN
-# Problem Solving - Computers and Logic: Lesson 3 - Exploring Problem Solving
-
-## Background
-
+# Overview
 In this lesson you'll apply the problem solving process to a variety of problems to explore how each step helps you develop and improve solutions to problems.
 
-# Resources
+## Resources
 
 * [Solving Problems](https://docs.google.com/document/d/1lLXe68RECOZZGOqMn35laGqTsOX4OIFb-pGMPKIy1Fo/) - Activity Guide ([PDF](https://docs.google.com/document/d/1lLXe68RECOZZGOqMn35laGqTsOX4OIFb-pGMPKIy1Fo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLXe68RECOZZGOqMn35laGqTsOX4OIFb-pGMPKIy1Fo/export?format=doc))
 MARKDOWN

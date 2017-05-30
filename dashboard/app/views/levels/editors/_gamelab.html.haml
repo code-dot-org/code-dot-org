@@ -9,7 +9,12 @@
 
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
-  = boolean_check_box f, :text_mode_at_start
+  = f.radio_button :text_mode_at_start, 'false'
+  = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
+  = f.radio_button :text_mode_at_start, 'blocks'
+  = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
+  = f.radio_button :text_mode_at_start, 'true'
+  = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
 
 .field
   = f.label :hide_animation_mode, 'Hide the Animation Tab (you can still seed a level with animations)'

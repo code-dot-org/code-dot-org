@@ -13,14 +13,37 @@ class FileBucket < BucketHelper
     Sinatra::Base.mime_type(extension)
   end
 
+  def get_manifest(channel_id)
+    manifest_result = get(channel_id, FileBucket::MANIFEST_FILENAME)
+    if manifest_result[:status] == 'NOT_FOUND'
+      return []
+    end
+    JSON.load manifest_result[:body]
+  end
+
   def copy_files(src_channel, dest_channel, options={})
     # copy everything except the manifest
     options[:exclude_filenames] = [MANIFEST_FILENAME]
     result = super src_channel, dest_channel, options
+    # return right away if there are no files in the source project
+    return [] if result.empty?
 
-    # if there are files in the project, create a new manifest in the destination channel containing the file entries (including their new versions)
-    create_or_replace(dest_channel, FileBucket::MANIFEST_FILENAME, result.to_json) unless result.empty?
+    # update dest_manifest with the decorated filenames from the src_manifest
+    # (we need the new version ids from the dest_manifest, otherwise we'd just copy the src_manifest)
+    dest_manifest = JSON.load result.to_json
+    src_manifest = get_manifest(src_channel)
+    src_manifest.each do |src_entry|
+      src_filename = src_entry['filename']
+      dest_manifest.each do |dest_entry|
+        if dest_entry['filename'].downcase == src_filename.downcase
+          dest_entry['filename'] = src_filename
+        end
+      end
+    end
 
-    result
+    # Save the dest_manifest in the destination channel
+    create_or_replace(dest_channel, FileBucket::MANIFEST_FILENAME, dest_manifest.to_json)
+
+    dest_manifest
   end
 end

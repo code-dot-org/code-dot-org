@@ -130,7 +130,7 @@
   "whenBallInGoalTooltip":"Exécuter les actions ci-dessous lorsqu'une balle entre dans le but.",
   "whenBallMissesPaddle":"quand la balle manque la raquette",
   "whenBallMissesPaddleTooltip":"Exécuter les actions ci-dessous quand une balle manque la raquette.",
-  "whenBallMissesPlayer":"quand le ballon touche le joueur",
+  "whenBallMissesPlayer":"quand la balle manque le joueur",
   "whenDown":"quand « flèche vers le bas »",
   "whenDownTooltip":"Exécuter les actions ci-dessous lorsque le joueur appuie sur la touche «&#160;flèche vers le bas&#160;».",
   "whenGameStarts":"lors du lancement du jeu",

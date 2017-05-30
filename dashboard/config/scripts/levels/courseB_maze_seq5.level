@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,1,3,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,4,0,0,0,0],[0,0,4,2,1,0,0,0],[0,0,0,1,3,0,0,0],[0,0,0,4,4,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Now try this puzzle from the start!",
     "start_direction": "2",
@@ -27,6 +27,8 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

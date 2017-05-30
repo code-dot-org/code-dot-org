@@ -1,3 +1,8 @@
+/*** ALERT ***
+ * We made a one-line change to this third-party file (based on v0.3.6 of asafdav/ng-csv)
+ * Search for ALERT to find it. Updated the .min version as well.
+ */
+
 (function(window, document) {
 
 // Create all modules and define dependencies to make sure they exist
@@ -148,11 +153,12 @@ angular.module('ngCsv.services').
 
           infoArray = [];
 
-//          console.log('columnOrder');
-//          console.log(options.columnOrder);
           var iterator = !!options.columnOrder ? options.columnOrder : row;
           angular.forEach(iterator, function (field, key) {
-//            console.log("row." + field)
+            // *** ALERT *** This line of code was changed from the original version.
+            // This is generally bad practice, but we're planning to get rid of
+            // teacher-dashboard in the nearish future so I'm leaving it here, and
+            // also make the change to the minified version.
             var val = !!options.columnOrder ? eval("row." + field) : field;
             this.push(that.stringifyField(val, options));
           }, infoArray);

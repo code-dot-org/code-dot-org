@@ -889,6 +889,8 @@
   dashboard_students_reset_password: Obnovit heslo
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
   dashboard_students_secret_picture_title: Tajný obrázek
   dashboard_students_secret_picture: Tato část používá  <b>obrázek</b>jako svůj tajný
@@ -908,6 +910,7 @@
     ně chcete vytvořit účty sami, změňte typ tajemství v této sekci na <b>slovo</b>
     nebo <b>obrázek</b>.
   dashboard_students_print_page: Vytisknout stránku
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Klikněte
     zde</a> pro dokument o ochraně soukromých údajů, který můžete sdílet nebo vytisknout
@@ -1127,6 +1130,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
+  csd5_name: 'Unit 5: Data and Society'
+  csd6_name: 'Unit 6: Physical Computing'
   csp1_name: '1. lekce: Internet'
   csp2_name: '2. lekce: Digitální informace'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1848,6 +1853,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}

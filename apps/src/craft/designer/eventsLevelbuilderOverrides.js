@@ -22,6 +22,7 @@ module.exports = {
       'vignette4-intro'
     ],
     songDelay: 4000,
+    showMovementBanner: true,
   },
   5: {
     songs: [

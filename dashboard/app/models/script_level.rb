@@ -12,6 +12,7 @@
 #  assessment  :boolean
 #  properties  :text(65535)
 #  named_level :boolean
+#  bonus       :boolean
 #
 # Indexes
 #
@@ -24,6 +25,7 @@ require 'cdo/shared_constants'
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
+  include SerializedProperties
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -33,6 +35,13 @@ class ScriptLevel < ActiveRecord::Base
   belongs_to :stage, inverse_of: :script_levels
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
+
+  serialized_attrs %w(
+    variants
+    progression
+    target
+    challenge
+  )
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
@@ -58,10 +67,6 @@ class ScriptLevel < ActiveRecord::Base
 
   def oldest_active_level
     return levels[0] if levels.length == 1
-    return levels.min_by(&:created_at) unless properties
-
-    properties_hash = JSON.parse(properties)
-    variants = properties_hash['variants']
     return levels.min_by(&:created_at) unless variants
 
     levels.sort_by(&:created_at).find do |level|
@@ -70,15 +75,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def active?(level)
-    properties_hash = JSON.parse(properties)
-    variants = properties_hash['variants']
     !variants || !variants[level.name] || variants[level.name]['active'] != false
-  end
-
-  def progression
-    return nil unless properties
-    properties_hash = JSON.parse(properties)
-    properties_hash['progression']
   end
 
   def has_another_level_to_go_to?
@@ -244,6 +241,7 @@ class ScriptLevel < ActiveRecord::Base
       icon: icon,
       title: level_display_text,
       url: build_script_level_url(self),
+      freePlay: level.try(:free_play) == "true",
     }
 
     summary[:progression] = progression if progression

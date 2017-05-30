@@ -142,6 +142,16 @@ Resources:
           FromPort: 6379
           ToPort: 6379
           SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
+  MemcachedSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Memcached access from frontends
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 11211
+          ToPort: 11211
+          SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
   EFSSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -215,30 +225,47 @@ Outputs:
   VpcId:
     Description: VPC ID
     Value: {Ref: VPC}
+    Export: {Name: !Sub "${AWS::StackName}"}
   GatewaySecurityGroup:
     Description: Security group for Gateway bastion server
     Value: {'Fn::GetAtt': [GatewaySecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-GatewaySecurityGroup"}
   ELBSecurityGroup:
     Description: Security group for Load Balancer
     Value: {'Fn::GetAtt': [ELBSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-ELBSecurityGroup"}
   FrontendSecurityGroup:
     Description: Security group for Frontend server
     Value: {'Fn::GetAtt': [FrontendSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-FrontendSecurityGroup"}
   RedisSecurityGroup:
     Description: Security group for Redis cache
     Value: {'Fn::GetAtt': [RedisSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-RedisSecurityGroup"}
+  MemcachedSecurityGroup:
+    Description: Security group for Memcached
+    Value: {'Fn::GetAtt': [MemcachedSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-MemcachedSecurityGroup"}
   DBSecurityGroup:
     Description: Security group for DB
     Value: {'Fn::GetAtt': [DBSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-DBSecurityGroup"}
+  DBSubnetGroup:
+    Description: Subnet group for DB
+    Value: {Ref: DBSubnetGroup}
+    Export: {Name: !Sub "${AWS::StackName}-DBSubnetGroup"}
   RedshiftSubnetGroup:
     Description: Subnet group for Redshift
     Value: {Ref: RedshiftSubnetGroup}
+    Export: {Name: !Sub "${AWS::StackName}-RedshiftSubnetGroup"}
   RedshiftSecurityGroup:
     Description: Security group for Redshift
     Value: {'Fn::GetAtt': [RedshiftSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-RedshiftSecurityGroup"}
   EFSSecurityGroup:
     Description: Security group for EFS
     Value: {'Fn::GetAtt': [EFSSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-EFSSecurityGroup"}
 <%
   AVAILABILITY_ZONES.each_with_index do |zone, i|
     az = zone[-1].upcase
@@ -246,7 +273,9 @@ Outputs:
   Subnet<%=az%>:
     Description: Private Subnet in <%=zone%>
     Value: {Ref: Subnet<%=az%>}
+    Export: {Name: !Sub "${AWS::StackName}-Subnet<%=az%>"}
   PublicSubnet<%=az%>:
     Description: Public Subnet in <%=zone%>
     Value: {Ref: PublicSubnet<%=az%>}
+    Export: {Name: !Sub "${AWS::StackName}-PublicSubnet<%=az%>"}
 <% end -%>

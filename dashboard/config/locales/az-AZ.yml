@@ -88,6 +88,8 @@
     forgot_password: Parolunuzu unutmusunuz?
     need_confirmation: Təsdiq göstərişlərini almamisiniz?
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} students have already signed up."
     teacher_count: "%{count} müəllim artıq qeydiyyatdan keçib."
@@ -203,6 +205,14 @@
       Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Dəvətnamə göndərildi
     added_teacher: "%{name} müəlliminiz kimi əlavə olundu"
@@ -219,8 +229,6 @@
       blank_code: Seçilmiş kodu daxil edin
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
-      invite_student:
-        subject: Code.org-da %{teacher_name} ilə dərsə qoşulun!
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as
           your student.'
@@ -476,6 +484,7 @@
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Adınızı əlavə edin
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -538,17 +547,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled

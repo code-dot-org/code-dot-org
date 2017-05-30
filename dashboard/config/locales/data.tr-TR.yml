@@ -708,10 +708,10 @@
         C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: "İkili"
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
+        CSF_stevie_big_project: Stevie ve büyük proje
         CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_zuck_loops_short: Döngüleri yineleyin
         frozen_intro: Kodlama Saati Giriş
         frozen_loops: Döngülere Giriş
         frozen_functions: Fonksiyonlara Giriş
@@ -729,9 +729,11 @@
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_weblab_intro_1: Lab - Bölüm 1 Web Tanıtım
+        csd_weblab_intro_2: Lab - Bölüm 2 Web Tanıtım
+        csd_weblab_css_1: Bilgisayar Bilimi Tanıtım Bölüm 1
+        csd_weblab_css_2: Bilgisayar Bilimi Tanıtım Bölüm 2
+        csd_weblab_intro_3: Web Tanıtım Bölüm 2
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

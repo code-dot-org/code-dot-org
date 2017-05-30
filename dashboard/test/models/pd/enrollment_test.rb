@@ -110,7 +110,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.in_section?
 
     # in section: true
-    workshop.section.add_student teacher, move_for_same_teacher: false
+    workshop.section.add_student teacher
     assert enrollment.in_section?
   end
 
@@ -308,5 +308,63 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_no_difference('Plc::UserCourseEnrollment.count') do
       create :pd_enrollment, user: teacher, workshop: workshop
     end
+  end
+
+  test 'attendance scopes' do
+    workshop = create :pd_workshop, num_sessions: 2
+    teacher = create :teacher
+    enrollment_not_attended = create :pd_enrollment
+    enrollment_attended = create :pd_enrollment, workshop: workshop
+    workshop.sessions.each do |session|
+      create :pd_attendance, session: session, teacher: teacher, enrollment: enrollment_attended
+    end
+
+    assert_equal [enrollment_attended], Pd::Enrollment.attended
+    assert_equal [enrollment_not_attended], Pd::Enrollment.not_attended
+    assert_empty Pd::Enrollment.attended.not_attended
+  end
+
+  test 'ended workshop scope' do
+    # not ended
+    create :pd_enrollment
+    enrollment_ended = create :pd_enrollment, workshop: create(:pd_ended_workshop)
+
+    assert_equal [enrollment_ended], Pd::Enrollment.for_ended_workshops
+  end
+
+  test 'with_surveys scope' do
+    ended_workshop = create :pd_ended_workshop, num_sessions: 1
+    expected_enrollment = create :pd_enrollment, workshop: ended_workshop
+    create :pd_attendance, session: ended_workshop.sessions.first, enrollment: expected_enrollment
+
+    # Non-ended workshop, no attendance
+    non_ended_workshop = create :pd_workshop, num_sessions: 1
+    create :pd_enrollment, workshop: non_ended_workshop
+
+    # Non-ended workshop, with attendance
+    create :pd_enrollment, workshop: non_ended_workshop
+    create :pd_attendance, session: non_ended_workshop.sessions.first
+
+    # Ended workshop, no attendance
+    create :pd_enrollment, workshop: ended_workshop
+
+    assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
+  end
+
+  test 'name fields are auto-stripped' do
+    enrollment = build :pd_enrollment, first_name: ' First  ', last_name: '  Last '
+    enrollment.validate
+    assert_equal 'First', enrollment.first_name
+    assert_equal 'Last', enrollment.last_name
+  end
+
+  test 'get safe names' do
+    # Here just verify all the enrollments are returned with safe names.
+    # The safe name logic itself (in #SafeNames) is tested in #SafeNamesTest
+    enrollments = 5.times.map {create :pd_enrollment}
+    safe_names = Pd::Enrollment.where(id: enrollments.map(&:id)).get_safe_names
+    assert_equal 5, safe_names.length
+    assert safe_names.all? {|n| n[0].present?}
+    assert_equal enrollments, safe_names.map(&:last)
   end
 end

@@ -1,11 +1,14 @@
 /** @file Settings menu cog icon */
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
-import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
 import color from '../../util/color';
-import SettingsMenu from './SettingsMenu';
+import * as assets from '../../code-studio/assets';
+import project from '../../code-studio/initApp/project';
+import * as maker from '../kits/maker/toolkit';
+import PopUpMenu from './PopUpMenu';
+import ConfirmEnableMakerDialog from "./ConfirmEnableMakerDialog";
 
 const style = {
   iconContainer: {
@@ -29,11 +32,6 @@ class SettingsCog extends Component {
   constructor(props) {
     super(props);
 
-    // Bind methods to instance
-    this.open = this.open.bind(this);
-    this.beforeClose = this.beforeClose.bind(this);
-    this.close = this.close.bind(this);
-
     // Default icon bounding rect for first render
     this.targetPoint = {top: 0, left: 0};
   }
@@ -51,21 +49,42 @@ class SettingsCog extends Component {
   state = {
     open: false,
     canOpen: true,
+    confirmingEnableMaker: false,
   };
 
-  open() {
-    this.setState({open: true, canOpen: false});
-  }
+  open = () => this.setState({open: true, canOpen: false});
+  close = () => this.setState({open: false});
 
-  beforeClose(_, resetPortalState) {
+  beforeClose = (_, resetPortalState) => {
     resetPortalState();
     this.setState({open: false});
     window.setTimeout(() => this.setState({canOpen: true}), 0);
-  }
+  };
 
-  close() {
-    this.setState({open: false});
-  }
+  manageAssets = () => {
+    this.close();
+    assets.showAssetManager();
+  };
+
+  toggleMakerToolkit = () => {
+    this.close();
+    if (!maker.isEnabled()) {
+      // Pop a confirmation dialog when trying to enable maker,
+      // because we've had several users do this accidentally.
+      this.showConfirmation();
+    } else {
+      // Disable without confirmation is okay.
+      project.toggleMakerEnabled();
+    }
+  };
+
+  confirmEnableMaker = () => {
+    project.toggleMakerEnabled();
+    this.hideConfirmation();
+  };
+
+  showConfirmation = () => this.setState({confirmingEnableMaker: true});
+  hideConfirmation = () => this.setState({confirmingEnableMaker: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -101,20 +120,47 @@ class SettingsCog extends Component {
           title={msg.settings()}
           onClick={this.state.canOpen ? this.open : undefined}
         />
-        <Portal
-          closeOnEsc
-          closeOnOutsideClick
-          isOpened={this.state.open}
+        <PopUpMenu
+          className="settings-cog-menu"
+          targetPoint={this.targetPoint}
+          isOpen={this.state.open}
           beforeClose={this.beforeClose}
         >
-          <SettingsMenu
-            className="settings-cog-menu"
-            targetPoint={this.targetPoint}
-            handleClose={this.close}
-          />
-        </Portal>
+          <ManageAssets onClick={this.manageAssets}/>
+          <ToggleMaker onClick={this.toggleMakerToolkit}/>
+        </PopUpMenu>
+        <ConfirmEnableMakerDialog
+          isOpen={this.state.confirmingEnableMaker}
+          handleConfirm={this.confirmEnableMaker}
+          handleCancel={this.hideConfirmation}
+        />
       </span>
     );
   }
 }
 export default Radium(SettingsCog);
+
+export function ManageAssets(props) {
+  return (
+    <PopUpMenu.Item {...props}>
+      {msg.manageAssets()}
+    </PopUpMenu.Item>
+  );
+}
+ManageAssets.propTypes = {
+  onClick: PropTypes.func,
+  first: PropTypes.bool,
+  last: PropTypes.bool,
+};
+
+export function ToggleMaker(props) {
+  if (!maker.isAvailable()) {
+    return null;
+  }
+  return (
+    <PopUpMenu.Item {...props}>
+      {maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+    </PopUpMenu.Item>
+  );
+}
+ToggleMaker.propTypes = ManageAssets.propTypes;

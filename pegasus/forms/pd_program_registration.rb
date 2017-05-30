@@ -6,8 +6,12 @@ class PdProgramRegistration
     result[:name_s] = "#{required(data[:first_name_s])} #{required(data[:last_name_s])}"
 
     result[:user_id_i] = required integer data[:user_id_i]
-    result[:pd_teacher_application_id_i] = required integer data[:pd_teacher_application_id_i]
-    [:first_name_s, :last_name_s, :phone_number_s, :selected_course_s, :accepted_workshop_s].each do |key|
+
+    result[:pd_teacher_application_id_i] = integer data[:pd_teacher_application_id_i]
+    [:first_name_s, :last_name_s, :phone_number_s].each do |key|
+      result[key] = data[key] # not required
+    end
+    [:selected_course_s, :accepted_workshop_s].each do |key|
       result[key] = required data[key]
     end
 
@@ -177,5 +181,18 @@ class PdProgramRegistration
 
   def self.receipt
     'pd_program_registration_receipt'
+  end
+
+  def self.process_(form)
+    # Save this form id in the relevant dashboard pd_teacher_application row, if applicable
+    id = form[:id]
+    data = JSON.load(form[:data])
+    application_id = data['pd_teacher_application_id_i']
+    if application_id
+      DASHBOARD_DB[:pd_teacher_applications].where(id: application_id).update(program_registration_id: id)
+    end
+
+    # We don't actually need to save any processed data with the form, so return an empty hash.
+    {}
   end
 end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCase
-  test_user_gets_response_for :index, response: :success, user: :admin
+  test_user_gets_response_for :index, response: :success, user: :workshop_admin
 
   [:teacher, :workshop_organizer].each do |user_type|
     test_user_gets_response_for :index, response: :forbidden, user: user_type
@@ -16,7 +16,7 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCa
     create :facilitator
     create :teacher
 
-    sign_in create(:admin)
+    sign_in (create :workshop_admin)
     get :index
     response = JSON.parse(@response.body)
     assert_equal 2, response.count

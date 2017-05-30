@@ -9,6 +9,8 @@ export const CHANGE_INTERFACE_MODE = 'CHANGE_INTERFACE_MODE';
 export const VIEW_ANIMATION_JSON = 'gamelab/VIEW_ANIMATION_JSON';
 export const HIDE_ANIMATION_JSON = 'gamelab/HIDE_ANIMATION_JSON';
 
+export const TOGGLE_GRID_OVERLAY = 'gamelab/TOGGLE_GRID_OVERLAY';
+
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
@@ -23,6 +25,15 @@ export function changeInterfaceMode(interfaceMode) {
     dispatch({
       type: CHANGE_INTERFACE_MODE,
       interfaceMode: interfaceMode
+    });
+  };
+}
+
+export function toggleGridOverlay(showGridOverlay) {
+  return function (dispatch) {
+    dispatch({
+      type: TOGGLE_GRID_OVERLAY,
+      showGridOverlay: showGridOverlay
     });
   };
 }

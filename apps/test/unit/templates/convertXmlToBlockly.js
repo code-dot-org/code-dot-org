@@ -1,5 +1,4 @@
 /** @file Tests for convertXmlToBlockly utility */
-import React from 'react';
 import {expect} from '../../util/configuredChai';
 
 import { convertXmlToBlockly } from '@cdo/apps/templates/instructions/utils';

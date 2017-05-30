@@ -39,9 +39,9 @@
       <button class="saved-to-gallery" disabled>
         <%= msg.savedToGallery() %>
       </button>
-    <% } else if (options.saveToGalleryUrl && !options.disableSaveToGallery) { %>
+    <% } else if ((options.saveToProjectGallery || options.saveToGalleryUrl) && !options.disableSaveToGallery) { %>
       <button id="save-to-gallery-button" class="launch">
-        <%= msg.saveToGallery() %>
+        <%= msg.saveAndPublish() %>
       </button>
     <% } %>
     <% if (options.sendToPhone) { -%>

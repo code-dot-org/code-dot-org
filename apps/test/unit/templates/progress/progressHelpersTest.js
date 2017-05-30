@@ -1,6 +1,5 @@
 import { assert } from '../../../util/configuredChai';
 import Immutable from 'immutable';
-import sinon from 'sinon';
 import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {
   lessonIsVisible,

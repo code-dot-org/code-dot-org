@@ -4,7 +4,7 @@ module Pd::Payment
   class PaymentCalculatorDistrictTest < ActiveSupport::TestCase
     setup do
       @workshop = create :pd_ended_workshop,
-        workshop_type: Pd::Workshop::TYPE_DISTRICT,
+        on_map: false, funded: false,
         course: Pd::Workshop::COURSE_CS_IN_A,
         subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2,
         num_sessions: 3

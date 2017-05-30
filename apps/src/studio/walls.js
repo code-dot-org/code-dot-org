@@ -1,6 +1,6 @@
 export default class Walls {
   constructor(level, skin, drawDebugRect) {
-    this.gridAlignedMovement = level.gridAlignedMovement;
+    this.gridAlignedMovement = skin.gridAlignedMovement;
     this.wallCollisionRectOffsetX = skin.wallCollisionRectOffsetX;
     this.wallCollisionRectOffsetY = skin.wallCollisionRectOffsetY;
     this.wallCollisionRectWidth = skin.wallCollisionRectWidth;

@@ -1,0 +1,30 @@
+- course = @pd_enrollment.workshop.course
+- subject = @pd_enrollment.workshop.subject
+- @page_title = "Satisfaction Survey for Code.org's #{course} #{subject} Professional Development Workshop"
+
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+#thanks
+  %h1 Thank you for your survey submission!
+
+  - if course == Pd::Workshop::COURSE_CSF
+    - order_url = CDO.studio_url("/pd/workshop_materials/#{@pd_enrollment.code}", CDO.default_scheme)
+
+    %h2 Request your free course kit (US attendees only)
+
+    %p
+      As part of Code.org K-5 professional development programs, attendees are provided one free course kit
+      containing supplies for the unplugged lessons in Courses 1-4. If you’d like to request your free course kit,
+      click the button below. You will have to log in to your Code Studio account to complete your order.
+
+    %p
+      %a{href: order_url}
+        %button
+          Click here to log in and order your free course kit.
+
+    %h2
+      If you are not interested in requesting a course kit, you can close this window.
+
+  - else
+    %h3 We appreciate your feedback.

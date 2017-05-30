@@ -51,12 +51,16 @@ class Game < ActiveRecord::Base
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
 
+  def self.unplugged
+    @@game_unplugged ||= find_by_name("Unplugged")
+  end
+
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
 
   def self.studio_ec
-    @@game_custom_studio ||= find_by_name("StudioEC")
+    @@game_studio_ec ||= find_by_name("StudioEC")
   end
 
   def self.custom_artist

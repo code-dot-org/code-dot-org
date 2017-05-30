@@ -4,6 +4,7 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -27,9 +28,9 @@ describe('CircuitPlaygroundBoard', () => {
       sinon.spy(playground, 'reset');
       sinon.spy(playground, 'pinMode');
       sinon.spy(playground, 'digitalWrite');
-      sinon.spy(playground, 'digitalRead');
+      sinon.stub(playground, 'digitalRead').callsArgWith(1, 0);
       sinon.spy(playground, 'analogWrite');
-      sinon.spy(playground, 'analogRead');
+      sinon.stub(playground, 'analogRead').callsArgWith(1, 0);
 
       // Pretend to be totally ready
       playground.emit('connect');
@@ -37,6 +38,13 @@ describe('CircuitPlaygroundBoard', () => {
 
       return playground;
     });
+
+    // Our sensors and thermometer block initialization until they receive data
+    // over the wire.  That's not great for unit tests, so here we stub waiting
+    // for data to resolve immediately.
+    sinon.stub(EventEmitter.prototype, 'once');
+    EventEmitter.prototype.once.withArgs('data').callsArg(1);
+    EventEmitter.prototype.once.callThrough();
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
@@ -46,11 +54,10 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
+    EventEmitter.prototype.once.restore();
   });
 
-  it('is an EventEmitter', () => {
-    expect(board).to.be.an.instanceOf(EventEmitter);
-  });
+  itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
@@ -115,11 +122,12 @@ describe('CircuitPlaygroundBoard', () => {
     });
 
     it('initializes a set of components', () => {
-      return board.connectToFirmware().then(() => {
-        board.initializeComponents();
-        // TODO (captouch): Add 8 when we re-enable
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
-      });
+      return board.connectToFirmware()
+        .then(() => board.initializeComponents())
+        .then(() => {
+          // TODO (captouch): Add 8 when we re-enable
+          expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        });
     });
   });
 
@@ -152,34 +160,6 @@ describe('CircuitPlaygroundBoard', () => {
           expect(playground.sysexResponse).to.have.been.calledTwice;
           expect(Playground.hasRegisteredSysexResponse).to.be.true;
         });
-      });
-    });
-  });
-
-  describe(`installOnInterpreter(codegen, jsInterpreter)`, () => {
-    it('adds component constructors to the customMarshalObjectList', () => {
-      return board.connect().then(() => {
-        const codegen = {
-          customMarshalObjectList: []
-        };
-        const interpreter = {
-          createGlobalProperty: sinon.spy()
-        };
-        board.installOnInterpreter(codegen, interpreter);
-        expect(codegen.customMarshalObjectList).to.have.length(13);
-      });
-    });
-
-    it('adds component constructors as global properties on the interpreter', () => {
-      return board.connect().then(() => {
-        const codegen = {
-          customMarshalObjectList: []
-        };
-        const interpreter = {
-          createGlobalProperty: sinon.spy()
-        };
-        board.installOnInterpreter(codegen, interpreter);
-        expect(interpreter.createGlobalProperty).to.have.been.called;
       });
     });
   });
@@ -310,31 +290,21 @@ describe('CircuitPlaygroundBoard', () => {
     });
   });
 
-  describe(`onBoardEvent(component, event, callback)`, () => {
-    it('forwards the call to the component', () => {
-      const fakeEventEmitter = { on: sinon.spy() };
-      const event = 'someEvent';
-      const callback = () => {};
-      board.onBoardEvent(fakeEventEmitter, event, callback);
-      expect(fakeEventEmitter.on).to.have.been.calledWith(event, callback);
+  describe(`boardConnected()`, () => {
+    it('returns false at first', () => {
+      expect(board.boardConnected()).to.be.false;
     });
 
-    describe(`event aliases`, () => {
-      let fakeEventEmitter, callback;
-
-      beforeEach(function () {
-        fakeEventEmitter = { on: sinon.spy() };
-        callback = () => {};
+    it('returns true after connecting', () => {
+      return board.connect().then(() => {
+        expect(board.boardConnected()).to.be.true;
       });
+    });
 
-      it(`aliases 'tap:single' event to 'singleTap'`, function () {
-        board.onBoardEvent(fakeEventEmitter, 'singleTap', callback);
-        expect(fakeEventEmitter.on).to.have.been.calledWith('tap:single', callback);
-      });
-
-      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
-        board.onBoardEvent(fakeEventEmitter, 'doubleTap', callback);
-        expect(fakeEventEmitter.on).to.have.been.calledWith('tap:double', callback);
+    it('returns false after destroying the board', () => {
+      return board.connect().then(() => {
+        board.destroy();
+        expect(board.boardConnected()).to.be.false;
       });
     });
   });

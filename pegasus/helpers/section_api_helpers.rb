@@ -1,19 +1,17 @@
-require 'cdo/user_helpers'
+require 'cdo/activity_constants'
 require 'cdo/script_constants'
+require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
-require 'cdo/section_helpers'
+require 'cdo/code_generation'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
-# TODO(asher): Though the APIs below mostly respect soft-deletes, edge cases may
-#   remain (e.g., if the user making the API call is soft-deleted). Fix these
-#   and make the API more consistent in its edge case handling.
 class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
     Dashboard.db[:sections].
       join(:followers, section_id: :sections__id).
       join(:users, id: :followers__student_user_id).
-      where(sections__user_id: user_id).
+      where(sections__user_id: user_id, sections__deleted_at: nil).
       where(followers__deleted_at: nil).
       where(users__deleted_at: nil).
       select(*fields).
@@ -110,7 +108,7 @@ class DashboardStudent
     return if user_to_update.empty?
     return if Dashboard.db[:sections].
       join(:followers, section_id: :sections__id).
-      where(sections__user_id: dashboard_user_id).
+      where(sections__user_id: dashboard_user_id, sections__deleted_at: nil).
       where(followers__student_user_id: params[:id], followers__deleted_at: nil).
       empty?
 
@@ -145,7 +143,6 @@ class DashboardStudent
       :users__user_type___user_type,
       :users__gender___gender,
       :users__birthday___birthday,
-      :users__prize_earned___prize_earned,
       :users__total_lines___total_lines,
       :users__secret_words___secret_words
     ]
@@ -216,16 +213,16 @@ class DashboardSection
     valid_grades.include? grade
   end
 
-  @@course_cache = {}
-  def self.valid_courses(user_id = nil)
-    # some users can see all courses, even those marked hidden
-    course_cache_key = I18n.locale.to_s +
+  @@script_cache = {}
+  def self.valid_scripts(user_id = nil)
+    # some users can see all scripts, even those marked hidden
+    script_cache_key = I18n.locale.to_s +
       ((user_id && Dashboard.hidden_script_access?(user_id)) ? "-all" : "-valid")
 
-    # only do this query once because in prod we only change courses
+    # only do this query once because in prod we only change scripts
     # when deploying (technically this isn't true since we are in
-    # pegasus and courses are owned by dashboard...)
-    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
+    # pegasus and scripts are owned by dashboard...)
+    return @@script_cache[script_cache_key] if @@script_cache.key?(script_cache_key)
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
@@ -233,22 +230,22 @@ class DashboardSection
     where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
 
     # cache result if we have to actually run the query
-    @@course_cache[course_cache_key] =
+    @@script_cache[script_cache_key] =
       Dashboard.db[:scripts].
         where(where_clause).
         select(:id, :name, :hidden).
         all.
-        map do |course|
-          name = ScriptConstants.teacher_dashboard_name(course[:name])
-          first_category = ScriptConstants.categories(course[:name])[0] || 'other'
+        map do |script|
+          name = ScriptConstants.teacher_dashboard_name(script[:name])
+          first_category = ScriptConstants.categories(script[:name])[0] || 'other'
           position = ScriptConstants.position_in_category(name, first_category)
           category_priority = ScriptConstants.category_priority(first_category)
           name = I18n.t("#{name}_name", default: name)
-          name += " *" if course[:hidden]
+          name += " *" if script[:hidden]
           {
-            id: course[:id],
+            id: script[:id],
             name: name,
-            script_name: course[:name],
+            script_name: script[:name],
             category: I18n.t("#{first_category}_category_name", default: first_category),
             position: position,
             category_priority: category_priority
@@ -256,17 +253,17 @@ class DashboardSection
         end
   end
 
-  # Gets a list of valid courses in which progress tracking has been disabled via
+  # Gets a list of valid scripts in which progress tracking has been disabled via
   # the gatekeeper key postMilestone.
-  def self.progress_disabled_courses(user_id = nil)
-    disabled_courses = valid_courses(user_id).select do |course|
-      !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
+  def self.progress_disabled_scripts(user_id = nil)
+    disabled_scripts = valid_scripts(user_id).select do |script|
+      !Gatekeeper.allows('postMilestone', where: {script_name: script[:script_name]}, default: true)
     end
-    disabled_courses.map {|course| course[:id]}
+    disabled_scripts.map {|script| script[:id]}
   end
 
-  def self.valid_course_id?(course_id)
-    valid_courses.find {|course| course[:id] == course_id.to_i}
+  def self.valid_script_id?(script_id)
+    valid_scripts.find {|script| script[:id] == script_id.to_i}
   end
 
   def self.create(params)
@@ -277,8 +274,9 @@ class DashboardSection
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
-    script_id = params[:course] && valid_course_id?(params[:course][:id]) ?
-      params[:course][:id].to_i : params[:script_id]
+    script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
+      params[:script][:id].to_i : params[:script_id]
+    stage_extras = params[:stage_extras] ? params[:stage_extras] : false
     created_at = DateTime.now
 
     row = nil
@@ -291,7 +289,8 @@ class DashboardSection
           login_type: login_type,
           grade: grade,
           script_id: script_id,
-          code: SectionHelpers.random_code,
+          code: CodeGeneration.random_unique_code(length: 6),
+          stage_extras: stage_extras,
           created_at: created_at,
           updated_at: created_at,
         }
@@ -302,8 +301,8 @@ class DashboardSection
       raise
     end
 
-    if params[:course] && valid_course_id?(params[:course][:id])
-      DashboardUserScript.assign_script_to_user(params[:course][:id].to_i, params[:user][:id])
+    if params[:script] && valid_script_id?(params[:script][:id])
+      DashboardUserScript.assign_script_to_user(params[:script][:id].to_i, params[:user][:id])
     end
 
     row
@@ -346,11 +345,9 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, id: :user_id).
       select(*fields).
-      where(sections__id: id, sections__deleted_at: nil).
+      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
-
     section = new(row)
     return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
     nil
@@ -379,15 +376,23 @@ class DashboardSection
   end
 
   def add_student(student)
-    return nil unless student_id = student[:id] || DashboardStudent.create(student)
+    student_id = student[:id] || DashboardStudent.create(student)
+    return nil unless student_id
 
-    created_at = DateTime.now
+    time_now = DateTime.now
+
+    existing_follower = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).first
+    if existing_follower
+      Dashboard.db[:followers].where(id: existing_follower[:id]).update(deleted_at: nil, updated_at: time_now)
+      return student_id
+    end
+
     Dashboard.db[:followers].insert(
       {
         section_id: @row[:id],
         student_user_id: student_id,
-        created_at: created_at,
-        updated_at: created_at,
+        created_at: time_now,
+        updated_at: time_now
       }
     )
     student_id
@@ -399,10 +404,14 @@ class DashboardSection
     return student_ids
   end
 
+  # @param student_id [Integer] The user ID of the student to unenroll.
+  # @return [Boolean] Whether the student's enrollment was removed.
   def remove_student(student_id)
     # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
 
-    rows_deleted = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
+    rows_deleted = Dashboard.db[:followers].
+      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
+      update(deleted_at: DateTime.now)
     rows_deleted > 0
   end
 
@@ -415,6 +424,8 @@ class DashboardSection
   end
 
   def students
+    return @students if @students
+
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -424,18 +435,33 @@ class DashboardSection
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path
       ).
-      distinct(:student_user_id).
+      group_by(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
+      where(followers__deleted_at: nil).
       map do |row|
         row.merge(
           {
             location: "/v2/users/#{row[:id]}",
             age: DashboardStudent.birthday_to_age(row[:birthday]),
-            completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
           }
         )
       end
+    # Though it would be simpler to query the level counts for each student via
+    # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
+    # querying all students together (as below) is significantly more performant.
+    student_ids = @students.map {|s| s[:id]}
+    level_counts = Dashboard.db[:user_levels].
+      group_and_count(:user_id).
+      where(user_id: student_ids).
+      where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+      all
+    @students.each do |datum|
+      level_count = level_counts.find {|x| x[:user_id] == datum[:id]}
+      datum[:completed_levels_count] = level_count ? level_count[:count] : 0
+    end
+
+    @students
   end
 
   def teacher?(user_id)
@@ -449,8 +475,8 @@ class DashboardSection
     }]
   end
 
-  def course
-    @course ||= Dashboard.db[:scripts].
+  def script
+    @script ||= Dashboard.db[:scripts].
       where(id: @row[:script_id]).
       select(:id, :name).
       first
@@ -458,7 +484,8 @@ class DashboardSection
 
   def to_owner_hash
     to_member_hash.merge(
-      course: course,
+      script: script,
+      course_id: @row[:course_id],
       teachers: teachers,
       students: students
     )
@@ -487,8 +514,8 @@ class DashboardSection
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
 
-    if params[:course] && valid_course_id?(params[:course][:id])
-      fields[:script_id] = params[:course][:id].to_i
+    if params[:script] && valid_script_id?(params[:script][:id])
+      fields[:script_id] = params[:script][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
       DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
     end
@@ -510,44 +537,80 @@ class DashboardSection
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,
+      :sections__course_id___course_id,
       :sections__user_id___teacher_id
     ]
   end
 end
 
 class DashboardUserScript
+  # Assigns a script to all users enrolled in the section, creating a new user_scripts object if
+  # necessary. The method noops for those user_scripts that already exist with assigned_at set.
+  # WARNING: This method does not verify that the section and student_users exist (aren't deleted).
   def self.assign_script_to_section(script_id, section_id)
-    # create userscripts for users that don't have one yet
-    Dashboard.db[:user_scripts].
-      insert_ignore.
-      import(
-        [:user_id, :script_id],
-        Dashboard.db[:followers].
-          select(:student_user_id, script_id.to_s).
-          where(section_id: section_id, deleted_at: nil)
-      )
+    student_user_ids = Dashboard.db[:followers].
+      select(:student_user_id).
+      where(section_id: section_id, deleted_at: nil).
+      map {|f| f[:student_user_id]}
+    DashboardUserScript.assign_script_to_users(script_id, student_user_ids)
   end
 
+  # Assigns a script to the user via user_scripts, creating a new user_scripts object if necessary.
+  # The method noops if a user_scripts already exists with assigned_at set.
+  # @param script_id [Integer] The dashboard ID of the script.
+  # @param user_id [Integer] The dashboard ID of the user.
   def self.assign_script_to_user(script_id, user_id)
-    # creates a userscript for a user if they don't have it yet
-    Dashboard.db[:user_scripts].
-      insert_ignore.
-      import(
-        [:user_id, :script_id],
-        Dashboard.db[:users].
-          select(user_id, script_id.to_s).
-          where(id: user_id, deleted_at: nil)
+    time_now = Time.now
+    existing = Dashboard.db[:user_scripts].where(user_id: user_id, script_id: script_id).first
+    if existing
+      return if existing[:assigned_at]
+      Dashboard.db[:user_scripts].where(user_id: user_id, script_id: script_id).update(
+        updated_at: time_now,
+        assigned_at: time_now
       )
+    else
+      Dashboard.db[:user_scripts].insert(
+        user_id: user_id,
+        script_id: script_id,
+        created_at: time_now,
+        updated_at: time_now,
+        assigned_at: time_now
+      )
+    end
   end
 
+  # Assigns a script to a set of users via user_scripts, creating new user_scripts objects if
+  # necessary. The method noops for those user_scripts that already exist with assigned_at set.
+  # WARNING: This method does not verify that the users exist (aren't deleted).
   def self.assign_script_to_users(script_id, user_ids)
+    # NOTE: This method could be more simply written by iterating over user_ids, calling
+    # DashboardUserScript#assign_script_to_user for each. This (more complex) approach is used for
+    # its better DB performance.
     return if user_ids.empty?
-    # create userscripts for users that don't have one yet
+
+    time_now = Time.now
+    all_existing = Dashboard.db[:user_scripts].where(user_id: user_ids, script_id: script_id)
+    all_existing_user_ids = all_existing.map {|user_script| user_script[:user_id]}
+
+    missing_assigned_at = []
+    all_existing.each do |existing|
+      missing_assigned_at << existing[:id] unless existing[:assigned_at]
+    end
+    Dashboard.db[:user_scripts].where(id: missing_assigned_at).update(
+      updated_at: time_now,
+      assigned_at: time_now
+    )
+    missing_user_scripts = user_ids.select {|user_id| !all_existing_user_ids.include? user_id}
+    return if missing_user_scripts.empty?
     Dashboard.db[:user_scripts].
-      insert_ignore.
       import(
-        [:user_id, :script_id],
-        user_ids.zip([script_id] * user_ids.count)
+        [:user_id, :script_id, :created_at, :updated_at, :assigned_at],
+        missing_user_scripts.zip(
+          [script_id] * missing_user_scripts.count,
+          [time_now] * missing_user_scripts.count,
+          [time_now] * missing_user_scripts.count,
+          [time_now] * missing_user_scripts.count
+        )
       )
   end
 end

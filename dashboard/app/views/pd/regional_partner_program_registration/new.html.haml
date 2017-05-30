@@ -1,0 +1,15 @@
+- @page_title = 'Code.org TeacherCon Registration for Regional Partners'
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+  %script{src: minifiable_asset_path('js/pd/regional_partner_program_registration/new.js'), data: @script_data}
+
+#application-header
+  %h2
+    Code.org TeacherCon Registration for Regional Partners
+  %h3
+    Please complete this form by May 5, 2017. Contact
+    = link_to 'partner@code.org', 'mailto:partner@code.org'
+    with any questions.
+
+  #application-container
+    -# populated by React

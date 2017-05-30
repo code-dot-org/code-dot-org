@@ -42,6 +42,7 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
+    "display_name": "Sample Platform Jumper Game",
     "contained_level_names": null
   },
   "published": true,

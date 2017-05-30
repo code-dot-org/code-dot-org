@@ -4,22 +4,30 @@ en:
     script:
       name:
         Report Script:
-          stage:
-            Report Stage 1: report-stage-1
-            Report Stage 2: report-stage-2
+          stages:
+            Report Stage 1:
+              name: report-stage-1
+            Report Stage 2:
+              name: report-stage-2
         Milestone Script:
-          stage:
-            Milestone Stage 1: milestone-stage-1
-            Milestone Stage 2: milestone-stage-2
+          stages:
+            Milestone Stage 1:
+              name: milestone-stage-1
+            Milestone Stage 2:
+              name: milestone-stage-2
         laurel:
           title: custom-script-laurel
-          stage:
-            Laurel Stage 1: laurel-stage-1
-            Laurel Stage 2: laurel-stage-2
+          stages:
+            Laurel Stage 1:
+              name: laurel-stage-1
+            Laurel Stage 2:
+              name: laurel-stage-2
         text-response-script:
-          stage:
-            First Stage: First Stage
-            Second Stage: Second Stage
+          stages:
+            First Stage:
+              name: First Stage
+            Second Stage:
+              name: Second Stage
     unplugged:
       'OldUnplugged':
         title: 'Test title'

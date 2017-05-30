@@ -16,7 +16,7 @@
     "start_direction": "90",
     "x": "245",
     "y": "105",
-    "free_play": "false",
+    "free_play": "true",
     "impressive": "true",
     "use_contract_editor": "false",
     "embed": "false",
@@ -34,6 +34,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If your function is correct, you shouldn't need to change it for this puzzle.\",\"hint_id\":\"courseF_artist_fwp8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d2433f9c2a2e075eb6a984de97515271/courseF_artist_fwp8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The only thing you should need to do between function calls is change the color of the line.\",\"hint_id\":\"courseF_artist_fwp8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5226f551f9c4f53924533eb8764fc9e7/courseF_artist_fwp8.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

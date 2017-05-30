@@ -47,6 +47,8 @@
     "markdown_instructions": "Now we need a way to win.\r\n\r\nAdd a `repeat forever` loop that continuously checks **if** the score is greater than 5, then ends the game as a **win** when it is.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use an `if` statement that compares whether `score` is `>` 5 to solve this challenge.\",\"hint_id\":\"courseD_playLab_cond5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/244d15555e8b5dda90e56b30f3646c55/courseD_playLab_cond5.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -130,6 +132,12 @@
               </value>
             </block>
           </value>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation else="1"/>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation elseif="1" else="1"/>
         </block>
       </xml>
     </toolbox_blocks>

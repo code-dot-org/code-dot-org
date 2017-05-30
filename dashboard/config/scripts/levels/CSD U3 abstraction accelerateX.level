@@ -69,10 +69,14 @@
     "instructions_important": "false",
     "encrypted_examples": "jhRAnO5eFt/lpJxKvBF0p90bDTzgdanMQUR+bgCKuzEkZRq7gtTJEUivpwkX\nHdG/\n",
     "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 16:28:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

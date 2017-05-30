@@ -29,11 +29,11 @@
         Jigsaw: Puzzle
         MazeStep: Modalità "a passi" del Labirinto
         Wordsearch: Ricerca di parole
-        Webapp: Laboratorio per le App
+        Webapp: Sviluppo App
         ArtistEC: L'artista
         TextMatch: Esercizio di Verifica (Associazioni)
         StudioEC: Laboratorio
-        Applab: Laboratorio per le App
+        Applab: Sviluppo App
         NetSim: Simulatore di Internet
         Custom: Artista
         CustomStudio: Laboratorio
@@ -775,7 +775,7 @@
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
         CSF_EF_cs_matters: L'informatica conta
-        CSF_stevie_big_project: Stevie and the Big Project
+        CSF_stevie_big_project: Stevie e il grande progetto
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Introduzione all'Ora del Codice
@@ -797,6 +797,8 @@
         csd_gamelab_velocity: Velocity
         csd_weblab_intro_1: Intro to Web Lab - Part 1
         csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_css_1: Intro to CSS - Part 1
+        csd_weblab_css_2: Intro to CSS - Part 2
         csd_weblab_intro_3: Intro to Web Lab - Part 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1

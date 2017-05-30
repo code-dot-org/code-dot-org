@@ -3,13 +3,7 @@ require_relative('../config/environment')
 require 'cdo/properties'
 
 ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR']
-
-k1_script_names = [
-  Script::COURSEA_DRAFT_NAME,
-  Script::COURSEB_DRAFT_NAME,
-  Script::COURSE1_NAME
-]
-k1_scripts = Script.where(name: k1_script_names)
+k1_scripts = Script.all.select(&:text_to_speech_enabled?)
 
 def clean(value)
   if value.nil?

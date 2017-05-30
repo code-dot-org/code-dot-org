@@ -1,0 +1,20 @@
+name 'CSD U2 Lesson 9 Overview'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  
+
+## Vocabulary
+
+* **Hyperlink** - A link from a HTML file to another location or file, typically activated by clicking on a highlighted word or image on the screen.
+
+## New Tags
+
+*  **[Hyperlink](//docs.code.org/weblab/A/)** - `<a></a>`
+
+## Resources
+
+* [Personal Website](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=doc))
+* [Personal Website](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/) - Peer Review ([PDF](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=doc))
+MARKDOWN

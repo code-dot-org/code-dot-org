@@ -3,7 +3,6 @@
 # Table name: pd_workshops
 #
 #  id                  :integer          not null, primary key
-#  workshop_type       :string(255)      not null
 #  organizer_id        :integer          not null
 #  location_name       :string(255)
 #  location_address    :string(255)
@@ -20,6 +19,8 @@
 #  processed_at        :datetime
 #  deleted_at          :datetime
 #  regional_partner_id :integer
+#  on_map              :boolean
+#  funded              :boolean
 #
 # Indexes
 #
@@ -29,12 +30,6 @@
 
 class Pd::Workshop < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
-
-  TYPES = [
-    TYPE_PUBLIC = 'Public',
-    TYPE_PRIVATE = 'Private',
-    TYPE_DISTRICT = 'District'
-  ]
 
   COURSES = [
     COURSE_CSF = 'CS Fundamentals',
@@ -56,6 +51,15 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CSD => 'CS Discoveries',
     COURSE_COUNSELOR => 'Counselor',
     COURSE_ADMIN => 'Administrator'
+  }
+
+  COURSE_URLS_MAP = {
+    COURSE_CSF => CDO.code_org_url('/educate/curriculum/elementary-school'),
+    COURSE_CSP => CDO.code_org_url('/educate/csp'),
+    COURSE_CSD => CDO.code_org_url('/educate/csd'),
+    COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
+    COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
+    COURSE_ECS => 'http://www.exploringcs.org/'
   }
 
   STATES = [
@@ -83,11 +87,17 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop',
-      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
-      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
-      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
-      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'
+      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer',
+      SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information',
+      SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming',
+      SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps',
+      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'
+    ],
+    COURSE_CSD => [
+      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development',
+      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games',
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society',
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'
     ]
   }
 
@@ -135,7 +145,6 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CS_IN_S => 'CS in Science Support'
   }.freeze
 
-  validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -208,30 +217,32 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  scope :group_by_id, -> {group('pd_workshops.id')}
+
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
+    joins(:sessions).group_by_id.having('(DATE(MIN(start)) <= ?)', date)
   end
 
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
-    joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+    joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
     joins(:sessions).
-    group('pd_workshops.id').
-    order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
+      group_by_id.
+      order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
   end
 
   # Orders by the number of active enrollments
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_enrollment_count(desc: false)
     left_outer_joins(:enrollments).
-    group('pd_workshops.id').
-    order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
+      group_by_id.
+      order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
   end
 
   # Orders by the workshop state, in order: Not Started, In Progress, Ended
@@ -248,20 +259,20 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_before(date)
-    joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) <= ?)", date)
+    joins(:sessions).group_by_id.having("(DATE(MAX(end)) <= ?)", date)
   end
 
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_after(date)
-    joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) >= ?)", date)
+    joins(:sessions).group_by_id.having("(DATE(MAX(end)) >= ?)", date)
   end
 
   def self.scheduled_start_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Date.today + days.days)
   end
 
   def self.scheduled_end_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Date.today + days.days)
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
@@ -284,6 +295,10 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_NAMES_MAP[course]
   end
 
+  def course_target
+    COURSE_URLS_MAP[course]
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
@@ -299,6 +314,7 @@ class Pd::Workshop < ActiveRecord::Base
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     self.started_at = Time.zone.now
+    sessions.each(&:assign_code)
     self.section = Section.create!(
       name: friendly_name,
       user_id: organizer_id,
@@ -313,6 +329,7 @@ class Pd::Workshop < ActiveRecord::Base
   def end!
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
+    sessions.each(&:remove_code)
     save!
   end
 
@@ -460,6 +477,24 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+  end
+
+  # Get all the teachers that have actually attended this workshop via the attendence.
+  def attending_teachers
+    sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
+  end
+
+  def local_summer?
+    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+  end
+
+  # Get all enrollments for this workshop with no associated attendances
+  def unattended_enrollments
+    enrollments.left_outer_joins(:attendances).where(pd_attendances: {id: nil})
+  end
+
+  def organizer_or_facilitator?(user)
+    organizer == user || facilitators.include?(user)
   end
 end

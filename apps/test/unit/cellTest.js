@@ -1,7 +1,5 @@
 import {assert} from '../util/configuredChai';
 
-var testUtils = require('./../util/testUtils');
-
 var Cell = require('@cdo/apps/maze/cell');
 
 describe("Cell", function () {

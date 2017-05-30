@@ -29,7 +29,7 @@ const styles = {
 const DataWorkspace = React.createClass({
   propTypes: {
     // from redux state
-    localeDirection: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
     handleVersionHistory: React.PropTypes.func.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     isVisible: React.PropTypes.bool.isRequired,
@@ -45,12 +45,11 @@ const DataWorkspace = React.createClass({
     var style = {
       display: this.props.isVisible ? 'block' : 'none'
     };
-    var isRtl = this.props.localeDirection === 'rtl';
     return (
       <div id="dataWorkspaceWrapper" style={style}>
         <PaneHeader
           id="headers"
-          dir={this.props.localeDirection}
+          dir={this.props.isRtl ? 'rtl' : 'ltr'}
           hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
@@ -60,7 +59,7 @@ const DataWorkspace = React.createClass({
               iconClass="fa fa-clock-o"
               label={msg.showVersionsHeader()}
               headerHasFocus={!this.props.isRunning}
-              isRtl={isRtl}
+              isRtl={this.props.isRtl}
               onClick={this.props.handleVersionHistory}
             />
             <PaneSection id="workspace-header">
@@ -90,7 +89,7 @@ const DataWorkspace = React.createClass({
 });
 
 export default connect(state => ({
-  localeDirection: state.pageConstants.localeDirection,
+  isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
   isVisible: ApplabInterfaceMode.DATA === state.interfaceMode,
   warningMsg: state.data.warningMsg,

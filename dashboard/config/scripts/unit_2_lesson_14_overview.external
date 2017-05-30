@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 This lesson gives students a deeper understanding of how search engines work by having them take some time to design their own algorithms for determining the relevance and trustworthiness of a website. A video about how search works will help students see how some of the real world algorithms for searching work. Motivated by the desire to have their website found, students will update their websites to make them easier to find in searching.
 # Vocabulary
 
-* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
+* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer.
 * **Relevant** - closely connected or appropriate to the matter at hand.
 * **Search Engine** - A program that searches for and identifies items in a database that correspond to keywords or characters specified by the user, used especially for finding particular sites on the World Wide Web.
 * **Search Engine Optimization** - The process of maximizing the number of visitors to a particular website by ensuring that the site appears high on the list of results returned by a search engine.

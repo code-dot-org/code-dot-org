@@ -17,9 +17,10 @@ class Overview extends Component {
 
   componentDidMount() {
     /* eslint-disable react/no-did-mount-set-state */
+    const rect = this.target.getBoundingClientRect();
     this.setState({targetPoint: {
-      top: this.target.offsetTop + this.target.offsetHeight,
-      left: this.target.offsetLeft + this.target.offsetWidth / 2,
+      top: rect.bottom,
+      left: rect.left + rect.width / 2,
     }});
     /* eslint-enable react/no-did-mount-set-state */
   }
@@ -27,7 +28,7 @@ class Overview extends Component {
   render() {
     return (
       <div>
-        This component is absolutely positioned.
+        The <tt>PopUpMenu</tt> component is absolutely-positioned.
         <div
           style={{
             border: 'solid black thin',
@@ -38,7 +39,7 @@ class Overview extends Component {
         >
           It targets the bottom-center of this element.
         </div>
-        <PopUpMenu targetPoint={this.state.targetPoint}>
+        <PopUpMenu isOpen targetPoint={this.state.targetPoint}>
           <PopUpMenu.Item>Option One</PopUpMenu.Item>
           <PopUpMenu.Item>Option Two</PopUpMenu.Item>
           <PopUpMenu.Item>Option Three</PopUpMenu.Item>

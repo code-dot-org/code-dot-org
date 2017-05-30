@@ -1,34 +1,7 @@
 require 'cdo/poste'
 require 'cdo/regexp'
 require src_dir 'database'
-
-class FormError < ArgumentError
-  attr_reader :errors
-
-  def self.detect_errors(data)
-    errors = {}
-    data.each_pair do |key, value|
-      errors[key] = [value.message] if value.class == FieldError
-    end
-    errors
-  end
-
-  def initialize(kind, errors)
-    @kind = kind
-    @errors = errors
-
-    Pegasus.logger.warn "FormError[#{@kind}]: #{@errors.to_json}"
-  end
-end
-
-class FieldError
-  attr_accessor :value, :message
-
-  def initialize(value, message)
-    @value = value
-    @message = message
-  end
-end
+require lib_dir 'forms/pegasus_form_errors'
 
 # Load forms
 Dir.glob(pegasus_dir('forms/*.rb')).each {|path| require path}

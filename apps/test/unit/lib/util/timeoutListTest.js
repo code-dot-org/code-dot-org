@@ -51,7 +51,7 @@ describe('timeoutList', () => {
       const spy1 = sinon.spy();
       const spy2 = sinon.spy();
       const key1 = timeoutList.setTimeout(spy1, 100);
-      const key2 = timeoutList.setTimeout(spy2, 100);
+      timeoutList.setTimeout(spy2, 100);
       timeoutList.clearTimeout(key1);
       clock.tick(100);
       expect(spy1).not.to.have.been.called;
@@ -112,7 +112,7 @@ describe('timeoutList', () => {
       const spy1 = sinon.spy();
       const spy2 = sinon.spy();
       const key1 = timeoutList.setInterval(spy1, 100);
-      const key2 = timeoutList.setInterval(spy2, 100);
+      timeoutList.setInterval(spy2, 100);
       clock.tick(100);
       expect(spy1).to.have.been.calledOnce;
       expect(spy2).to.have.been.calledOnce;
@@ -201,7 +201,7 @@ describe('timeoutList', () => {
       const spy1 = sinon.spy();
       const spy2 = sinon.spy();
       const key1 = timeoutList.timedLoop(100, spy1);
-      const key2 = timeoutList.timedLoop(100, spy2);
+      timeoutList.timedLoop(100, spy2);
       clock.tick(100);
       expect(spy1).to.have.been.calledOnce;
       expect(spy2).to.have.been.calledOnce;

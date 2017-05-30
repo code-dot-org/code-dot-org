@@ -21,6 +21,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "teachers go to specified return to url after signing up" do
+    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
+
+    assert_creates(User) do
+      post :create, params: {user: @default_params}
+    end
+
+    assert_redirected_to user_return_to
+  end
+
   test "create retries on Duplicate exception" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing user
@@ -179,6 +189,15 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
   end
 
+  test "update student without user param returns 400 BAD REQUEST" do
+    student = create :student
+    sign_in student
+    assert_does_not_create(User) do
+      post :update, params: {}
+    end
+    assert_response :bad_request
+  end
+
   test "update student with utf8mb4 in name fails" do
     student = create :student
 
@@ -313,39 +332,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     delete :destroy
 
     user = user.reload
-    assert user.deleted_at
-  end
-
-  test 'edit shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-
-    sign_in user
-    get :edit
-
-    assert_response :success
-    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert input[value="my_email@test.xx"]'
-    assert_select '.alert .btn[value="Resend confirmation instructions"]'
-  end
-
-  test 'edit does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-
-    sign_in user
-    get :edit
-
-    assert_response :success
-    assert_select '.alert', 0
-  end
-
-  test 'edit does not show alert for unconfirmed email for teachers if already confirmed' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
-
-    sign_in user
-    get :edit
-
-    assert_response :success
-    assert_select '.alert', 0
+    assert user.deleted?
   end
 
   # The next several tests explore profile changes for users with or without

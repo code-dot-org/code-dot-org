@@ -6,9 +6,7 @@ import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio
 
 
 describe('InlineAudio', function () {
-  beforeEach(function () {
-    setExternalGlobals();
-  });
+  setExternalGlobals();
 
   it('uses a given src if there is one', function () {
     const src = 'test';

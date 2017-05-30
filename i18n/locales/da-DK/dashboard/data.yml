@@ -419,6 +419,8 @@ da:
         'csd_gamelab_velocity': 'Velocity'
         'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
         'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
+        'csd_weblab_css_1': 'Intro to CSS - Part 1'
+        'csd_weblab_css_2': 'Intro to CSS - Part 2'
         'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'

@@ -44,14 +44,6 @@
       %br/
       %br/
 
-    - if @script.has_lesson_plan?
-      %a{href: CDO.code_org_url('/curriculum/' + @script.name)}
-        = t('home.lesson_plans')
-      %br/
-      %br/
-
-    %br/
-
 - if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
   -# Show all the levels, their names, and instructions in the extra links box.
   = render layout: 'shared/extra_links' do

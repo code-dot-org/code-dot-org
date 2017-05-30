@@ -1,0 +1,6 @@
+name 'courseC_multi_starWars_predict1'
+question 'Take a close look at the code below. What do you think will happen when you click "Run"?'
+wrong 'BB-8 will not move.', feedback: 'Incorrect. The repeat block will make the BB-8 move forward 5 times.'
+wrong 'BB-8 will move forward only one space', feedback: 'Incorrect. The repeat block will make the BB-8 move forward 5 times.'
+right 'BB-8 will move forward 5 times, which will get him to collect all of the scrap metal', feedback: 'Correct!'
+wrong 'I don\'t know', feedback: 'The repeat block will `move the bird forward` 5 times, taking him to the pig.'

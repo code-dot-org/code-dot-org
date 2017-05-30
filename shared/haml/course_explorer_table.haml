@@ -1,0 +1,89 @@
+
+-# Some programatically-generated styling to accompany that in course-explorer.scss.
+
+- (1..13).each do |n|
+  :css
+    .courses .bar-#{n} {
+      float: left;
+      width: #{n * 7}%;
+    }
+
+    .arrow-offset-#{n}:after {
+      left: #{n * 68 + 34}px;
+    }
+
+- (0..4).each do |n|
+  :css
+    .tools-arrow-offset-#{n}:after {
+      left: #{n * 140 + 60}px;
+    }
+
+- courses = []
+- courses << { name: "CS Fundamentals", starts: 0, ends: 5, subtitle: "20 hour courses for each grade can be taught once a week", link: CDO.code_org_url("/educate/curriculum/elementary-school"), img: "/shared/images/courses/logo_tall_course1.jpg", color: "#33E0EF", description: "Code.org’s CS Fundamentals courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.", prereqs: "Students at every grade level (including pre-readers) can begin CS Fundamentals with no prior programming experience." }
+- courses << { name: "CS Fundamentals: Accelerated Version", starts: 6, ends: 12, subtitle: "Condensed version of curriculum in one 20 hour course for older students", link: '/s/20-hour', img: "/shared/images/courses/logo_tall_course1.jpg", color: "rgba(51, 224, 239, .7)", description: "Code.org’s CS Fundamentals courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.", prereqs: "Students at every grade level (including pre-readers) can begin CS Fundamentals with no prior programming experience." }
+- courses << { name: "CS Discoveries", starts: 7, ends: 9, subtitle: "Semester or full year course", link: CDO.code_org_url("/educate/csd"), img: "/images/fit-500/csd/ms.jpg", color: "#1AC7D6", description: "CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.", prereqs: "No prerequisites needed. This course works for beginners or students with experience in CS Fundamentals." }
+- courses << { name: "CS Principles", starts: 9, ends: 12, subtitle: " Full year course", link: CDO.code_org_url("/educate/csp"), img: "/shared/images/teacher-announcement/csp-widgets.png", color: "#00adbc", description: "In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities. The curriculum is flexible to be taught as a normal course or as an AP course.", prereqs: "No prerequisites needed. This course works for beginners or students with experience in CS Fundamentals or CS Discoveries."}
+
+.courseexplorer.courses{style: "margin-left: 0px; margin-top: 30px"}
+  .group{style: "overflow: hidden"}
+    .grouprow.bar-6{style: "opacity: 0.7; opacity: 1"}
+      Elementary school
+    .grouprow.bar-3{style: "opacity: 0.85; opacity: 1"}
+      Middle school
+    .grouprow.bar-4{style: "opacity: 1"}
+      High school
+  .grade.break
+    .graderow.bar-1{style: "opacity: 0.7"}
+      K
+    - (1..12).each do |n|
+      - opacity = n.between?(0,5) ? 0.7 : n.between?(6,8) ? 0.85 : 1
+      .graderow.bar-1{style: "opacity: #{opacity}"}
+        = n
+  .coursebodycontainer{ style: "position: relative; overflow: hidden; clear: both"}
+    .coursebodyback{ style: "position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: -100"}
+      - (1..13).each do |n|
+        - opacity = n.between?(0,6) ? 0.6 : n.between?(7,9) ? 0.8 : 1
+        .graderow.bar-1{style: "height: 100%; background-color: rgba(200, 200, 200, #{opacity})"}
+    .coursebodymain{style: "width: 100%"}
+      - courses.each_with_index do |course, course_index|
+        - if course[:heading]
+          %h2.course.break
+            = course[:heading]
+        - else
+          .course.break{id: "course-#{course_index}", onclick: "$('#courseextra-#{course_index}').slideToggle(); $('.courseexplorer .detailcontainer').not('#courseextra-#{course_index}').slideUp();"}
+            - unless course[:starts] == 0
+              %div{class: "bar-#{course[:starts]}"}
+                &nbsp;
+            %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "background-color: #{"#1AC7D6" || course[:color] || '#00adbc'}"}
+              .title
+                =course[:name]
+              - if course[:subtitle]
+                .subtitle
+                  =(course[:subtitle])
+          .course.detailcontainer{id: "courseextra-#{course_index}", style: "display: none; color: grey; cursor: auto"}
+            .arrow_box{class: "arrow-offset-#{course[:starts]}"}
+              .arrow_box_content{style: "overflow: hidden"}
+                - if course[:img]
+                  .left{style: "float: left; width: 30%"}
+                    %a{href: course[:link]}
+                      %img.courseimage{src: course[:img]}
+                .right{style: "float: left; width: 65%"}
+                  .title
+                    =course[:name]
+                  - if course[:description]
+                    .description
+                      =course[:description]
+                      - if course[:prereqs]
+                        %br
+                        %br
+                        =course[:prereqs]
+                  - if course[:link]
+                    %br/
+                    %a{href: course[:link], style: "font-size: 12px; padding-left: 0px; color: #00adbc"}
+                      Learn more
+                      %i.fa.fa-chevron-right
+              .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", onclick: "$('#courseextra-#{course_index}').slideUp()" }
+                %i.fa.fa-times{"aria-hidden" => "true"}
+
+          .cleardiv{style: "clear: both"}
+  .cleardiv{style: "clear: both"}

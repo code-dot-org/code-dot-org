@@ -1,13 +1,17 @@
 import $ from 'jquery';
 import sinon from 'sinon';
 import {assert, expect} from '../../util/configuredChai';
+import project from '@cdo/apps/code-studio/initApp/project';
+import i18n from '@cdo/apps/code-studio/i18n';
+import commonMsg from '@cdo/locale';
+import applabMsg from '@cdo/applab/locale';
+
+
 var testUtils = require('../../util/testUtils');
-testUtils.setExternalGlobals();
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
-import experiments from '@cdo/apps/util/experiments';
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
@@ -28,6 +32,8 @@ function setupVizDom() {
     '</div>';
   return $(sampleDom);
 }
+describe('applab', () => {
+  testUtils.setExternalGlobals();
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -567,8 +573,6 @@ describe('RecordListener', function () {
 describe("Applab.init()", () => {
   before(() => sinon.stub(Applab, 'render'));
   after(() => Applab.render.restore());
-  before(() => experiments.setEnabled('collapse-debugger', true));
-  after(() => experiments.setEnabled('collapse-debugger', false));
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -603,4 +607,42 @@ describe("Applab.init()", () => {
       expect(isDebuggerOpen(getStore().getState())).to.be.true;
     });
   });
+});
+
+describe('The applab.makeFooterMenuItems ', () => {
+  beforeEach(() => {
+    sinon.stub(project, 'getUrl');
+    i18n.t.callsFake(function (txt) {return txt;});
+  });
+
+  afterEach(() => {
+    project.getUrl.restore();
+  });
+
+
+  it("returns How-It-Works item before Report-Abuse item", () => {
+    project.getUrl.returns('http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
+    expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+  });
+
+  it("returns How-It-Works item before Make-Own-App item", () => {
+    project.getUrl.returns('http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var makeOwnIndex = footItems.findIndex(item => item.text === applabMsg.makeMyOwnApp());
+    expect(howItWorksIndex).to.be.below(makeOwnIndex);
+  });
+
+  it("returns How-It-Works item before Report-Abuse item in AppLab", () => {
+    project.getUrl.returns('https://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ');
+    var footItems = Applab.makeFooterMenuItems(true);
+    var howItWorksIndex = footItems.findIndex(item => item.text === commonMsg.openWorkspace());
+    var reportAbuseIndex = footItems.findIndex(item => item.text === commonMsg.reportAbuse());
+    expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+  });
+});
+
 });

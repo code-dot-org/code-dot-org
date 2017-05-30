@@ -1,15 +1,12 @@
-require_relative '../../deployment'
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
-require 'mocha/mini_test'
+require_relative './test_helper'
 require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test
-  UNMINIFIED_ASSET_NAME = 'js/teacher-dashboard/index.js'
-  UNDIGESTED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/index.js"
-  UNMINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/"\
+  UNMINIFIED_ASSET_NAME = 'js/public/abcxyz/index.js'
+  UNDIGESTED_ASSET_PATH = "#{CDO.studio_url}/assets/js/public/abcxyz/index.js"
+  UNMINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/public/abcxyz/"\
     'index-ef90e2acd9003ff8b8bac522e6ce107da641d3b85aba5f58c77d5d28f77a496a.js'
-  MINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/"\
+  MINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/public/abcxyz/"\
     'index.min-5bb3b68c6f92cf8409eb7d0649cf572ffa0c66fca1b02b887b4454cab553daef.js'
   UNMINIFIED_ASSET_NOT_IN_MAP = 'foo.js'
   MINIFIED_ASSET_NOT_IN_MAP = 'foo.min.js'

@@ -2,12 +2,17 @@ require 'test_helper'
 
 class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @user = create :admin_teacher
-    sign_in(@user)
+    @admin = create :admin
+    sign_in(@admin)
     @plc_course = create(:plc_course, name: 'Test Course')
-    @user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
+    @user_course_enrollment = create(:plc_user_course_enrollment, user: @admin, plc_course: @plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @plc_course)
-    @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment, user: @user)
+    @enrollment_unit_assignment = create(
+      :plc_enrollment_unit_assignment,
+      plc_course_unit: @course_unit,
+      plc_user_course_enrollment: @user_course_enrollment,
+      user: @admin
+    )
     @district_contact = create :district_contact
   end
 
@@ -24,15 +29,15 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_redirected_to action: :new, notice: 'The following users did not exist <li>invalid</li><br/>'
 
     post :create, params: {
-      user_emails: "invalid\r\n#{@user.email}",
+      user_emails: "invalid\r\n#{@admin.email}",
       plc_course_id: @plc_course.id
     }
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>The following users did not exist <li>invalid</li><br/>"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@admin.email}</li><br/>The following users did not exist <li>invalid</li><br/>"
   end
 
   test 'validation failed' do
     assert_raise do
-      post :create, params: {user_emails: @user.email, plc_course_id: nil}
+      post :create, params: {user_emails: @admin.email, plc_course_id: nil}
     end
   end
 
@@ -41,12 +46,12 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
     assert_creates(Plc::UserCourseEnrollment) do
       post :create, params: {
-        user_emails: @user.email,
+        user_emails: @admin.email,
         plc_course_id: @plc_course.id
       }
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@admin.email}</li><br/>"
 
     user2 = create :teacher
     user3 = create :teacher
@@ -61,12 +66,12 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
     assert_no_difference('Plc::UserCourseEnrollment.count') do
       post :create, params: {
-        user_emails: @user.email,
+        user_emails: @admin.email,
         plc_course_id: @plc_course.id
       }
     end
 
-    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
+    assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@admin.email}</li><br/>"
   end
 
   test 'Enrollment is viewable in all possible enrollment states' do
@@ -87,7 +92,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'Teachers can view dashboard but not group view' do
-    sign_out @user
+    sign_out @admin
     teacher = create :teacher
 
     sign_in(teacher)
@@ -100,7 +105,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'Students cannot access course view nor group view' do
-    sign_out @user
+    sign_out @admin
     student = create :student
 
     sign_in(student)
@@ -113,7 +118,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'District managers cannot view teachers they do not manage' do
-    sign_out @user
+    sign_out @admin
     sign_in @district_contact
 
     get :manager_view, params: {id: @user_course_enrollment}
@@ -121,7 +126,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'Signed out users get redirected to sign in' do
-    sign_out @user
+    sign_out @admin
     assert_signed_in_as nil
 
     get :index
@@ -130,7 +135,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
   test 'Can navigate to specific course with underscored url' do
     other_course = create(:plc_course, name: 'Other Course', id: Plc::Course.maximum(:id).next)
-    create(:plc_user_course_enrollment, user: @user, plc_course: other_course)
+    create(:plc_user_course_enrollment, user: @admin, plc_course: other_course)
 
     get :index, params: {course: 'test-course'}
     assert_select '.course_title', 'Test Course'

@@ -37,7 +37,7 @@ module Rack
       end
 
       content = ''
-      body.each {|x| content += x}
+      body.each {|x| content << x}
       body.close if body.respond_to? :close
       doc = ::Nokogiri::HTML(content)
       process_doc(doc, env)

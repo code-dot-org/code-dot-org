@@ -1,8 +1,7 @@
 name 'CSD U4L12 SFLP'
+display_name 'Lesson Overview'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 13 - Event Driven Programming
-
-# New Blocks
+## New Blocks
 
 *  **[onEvent](//docs.code.org/applab/onEvent/)** - `onEvent(id, type, function(event) {
   // Code to execute

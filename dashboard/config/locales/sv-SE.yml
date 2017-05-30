@@ -89,6 +89,8 @@
     forgot_password: Glömt ditt lösenord?
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: "%{count} elever har redan kommit med."
     teacher_count: "%{count} lärare har redan kommit med."
@@ -141,23 +143,23 @@
     accept_terms: Du måste godkänna för att skapa ett konto
   school_info:
     title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
+    school_country: Skolans land
+    select_school_type: Skoltyp
     charter: Charter
-    private: Private
+    private: Privat
     public: Public
     homeschool: Homeschool
     after_school: After School
     other: Annat
     state: State
-    district: District
+    district: Distrikt
     other_district_not_listed: Other district not listed above
-    district_name: District Name
+    district_name: Distriktsnamn
     school: Skola
     other_school_not_listed: Other school not listed above
-    school_name: School Name
+    school_name: Skolnamn
     school_zip: School Zip Code
-    school_address: School Address
+    school_address: Skolans adress
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
@@ -203,6 +205,14 @@
       Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
 
       %{name}
+  section:
+    your_section:
+      one: 'Din sektion:'
+      other: 'Dina sektioner:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(ta bort sektion)"
   follower:
     invite_sent: Inbjuda skickades
     added_teacher: "%{name} är tillagd som din lärare"
@@ -217,8 +227,6 @@
       blank_code: Ange en sektion kod
       cant_join_own_section: Tyvärr, du kan inte ansluta till ditt eget avsnitt.
     mail:
-      invite_student:
-        subject: Gå med i en klass med %{teacher_name} på Code.org!
       student_disassociated:
         subject: 'Code.org anmälan: %{student_name} är inte längre associerat som
           din student.'
@@ -460,6 +468,7 @@
       ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap.
     announcement_petition_button: Ange ditt namn
     announcement_go_beyond_button: Go beyond
+    announcement_apply_now: Apply now
     announcement_all: Håll dig uppdaterad med nya funktioner och uppdateringar på
       vår lärarblogg. <a href='%{teacher_blog_url}' target='_blank'> Se tidigare meddelanden.</a>
     announcement_hoc_launch: Tusentals lärare i mer än 180 länder börjar undervisningen
@@ -522,17 +531,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Ledsen, men avsnittet %{new_section_code} existerar inte. Ange
       koden för ett annat avsnitt.
-    section_code_not_entered: Ange koden för önskat avsnitt.
     section_code_cant_be_current_section: Det aktuella avsnittet kan inte vara samma
       som det nya avsnittet.
     current_section_dne: Ledsen, men avsnittet %{current_section_code} existerar inte.
       Ange koden för ett annat avsnitt.
-    students_not_yours: Du kan inte flytta elever från ett avsnitt som inte tillhör
-      dig.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Vänligen ange elevernas id.
     student_not_found: En eller flera elever kunde inte hittas.
     all_students_must_be_in_current_section: Alla elever måste vara inskrivna i din
@@ -746,8 +755,8 @@
     support: Få hjälp
     support_url: "//support.code.org"
     help_resources: Hjälp och resurser
-    help_support: Help and Support
-    documentation: Documentation
+    help_support: Hjälp och support
+    documentation: Dokumentation
     tutorials: Tutorials
   multi:
     wrong_title: Felaktigt svar
@@ -858,7 +867,7 @@
     message: Please tell us your race (check all that apply)
     races:
     - white: Vit
-    - black: Black or African American
+    - black: Svart eller afroamerikansk
     - hispanic: Hispanic or Latino
     - asian: Asian
     - hawaiian: Native Hawaiian or other Pacific Islander
@@ -1026,46 +1035,46 @@
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
     download_message: Hämta %{app_name} för offlineanvändning (136MB)
-    download_in_Albanian: 'Download in Albanian:'
+    download_in_Albanian: 'Ladda ner på albanska:'
     download_in_Arabic: 'Download in Arabic:'
     download_in_Azerbaijani: 'Download in Azerbaijani:'
     download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bosnian: 'Ladda ner på bosniska:'
     download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
+    download_in_Catalan: 'Ladda ner på katalanska:'
     download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
+    download_in_Chinese: 'Ladda ner på kinesiska:'
+    download_in_Croatian: 'Ladda ner på kroatiska:'
     download_in_Czech: 'Download in Czech:'
     download_in_Danish: 'Download in Danish:'
     download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
+    download_in_English: 'Ladda ner på engelska:'
+    download_in_Finnish: 'Ladda ner på finska:'
     download_in_French: 'Download in French:'
     download_in_German: 'Download in German:'
     download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hebrew: 'Ladda ner på hebreiska:'
     download_in_Hungarian: 'Download in Hungarian:'
     download_in_Icelandic: 'Download in Icelandic:'
     download_in_Indonesian: 'Download in Indonesian:'
     download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
+    download_in_Italian: 'Ladda ner på italienska:'
+    download_in_Japanese: 'Ladda ner på japanska:'
+    download_in_Korean: 'Ladda ner på koreanska:'
+    download_in_Latvian: 'Ladda ner på lettiska:'
     download_in_Lithuanian: 'Download in Lithuanian:'
     download_in_Norwegian: 'Download in Norwegian:'
     download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
+    download_in_Polish: 'Ladda ner på polska:'
     download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
     download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
+    download_in_Romanian: 'Ladda ner på rumänska:'
+    download_in_Russian: 'Ladda ner på ryska:'
+    download_in_Serbian: 'Ladda ner på serbiska:'
     download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
+    download_in_Spanish: 'Ladda ner på spanska:'
+    download_in_Swedish: 'Ladda ner på svenska:'
+    download_in_Turkish: 'Ladda ner på turkiska:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows (64-bitars)

@@ -187,7 +187,7 @@ exports.install = function (blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    studioApp.playAudio(utils.stripQuotes(soundValue));
+    studioApp().playAudio(utils.stripQuotes(soundValue));
   }
 
   blockly.Blocks.flappy_playSound = {

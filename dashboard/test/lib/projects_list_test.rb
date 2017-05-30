@@ -36,4 +36,18 @@ class ProjectsListTest < ActionController::TestCase
   test 'get_project_row_data ignores hidden projects' do
     assert_nil ProjectsList.send(:get_project_row_data, @student, @hidden_project, CHANNEL_ID)
   end
+
+  test 'student_age_range returns correct age ranges' do
+    assert_equal '18+', ProjectsList.send(:student_age_range, birthday: 33.years.ago.to_datetime)
+    assert_equal '18+', ProjectsList.send(:student_age_range, birthday: 18.years.ago.to_datetime)
+    assert_equal '13+', ProjectsList.send(:student_age_range, birthday: 17.years.ago.to_datetime)
+    assert_equal '13+', ProjectsList.send(:student_age_range, birthday: 14.years.ago.to_datetime)
+    assert_equal '13+', ProjectsList.send(:student_age_range, birthday: 13.years.ago.to_datetime)
+    assert_equal '8+', ProjectsList.send(:student_age_range, birthday: 12.years.ago.to_datetime)
+    assert_equal '8+', ProjectsList.send(:student_age_range, birthday: 8.years.ago.to_datetime)
+    assert_equal '4+', ProjectsList.send(:student_age_range, birthday: 7.years.ago.to_datetime)
+    assert_equal '4+', ProjectsList.send(:student_age_range, birthday: 4.years.ago.to_datetime)
+    assert_nil ProjectsList.send(:student_age_range, birthday: 3.years.ago.to_datetime)
+    assert_nil ProjectsList.send(:student_age_range, birthday: 1.year.since.to_datetime)
+  end
 end

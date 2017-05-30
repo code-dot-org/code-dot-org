@@ -19,7 +19,7 @@ const DesignWorkspace = React.createClass({
 
     // provided by redux
     isRunning: React.PropTypes.bool.isRequired,
-    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
@@ -40,7 +40,7 @@ const DesignWorkspace = React.createClass({
         handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}
-        localeDirection={this.props.localeDirection}
+        isRtl={this.props.isRtl}
         isRunning={this.props.isRunning}
       />
       <DesignModeBox
@@ -60,6 +60,6 @@ const DesignWorkspace = React.createClass({
   }
 });
 export default connect(state => ({
-  localeDirection: state.pageConstants.localeDirection,
+  isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
 }))(DesignWorkspace);

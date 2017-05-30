@@ -6,7 +6,7 @@ module Pd::Payment
   class PaymentCalculatorBaseTest < ActiveSupport::TestCase
     test 'public unqualified' do
       empty_workshop = create :pd_ended_workshop,
-        workshop_type: Pd::Workshop::TYPE_PUBLIC,
+        on_map: true, funded: true,
         course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
 
@@ -71,7 +71,7 @@ module Pd::Payment
       # Create a workshop with 4 sessions, which will be capped at 3
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       workshop = create :pd_ended_workshop,
-        workshop_type: Pd::Workshop::TYPE_PUBLIC,
+        on_map: true, funded: true,
         course: Pd::Workshop::COURSE_ECS,
         subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
         num_sessions: 4
@@ -221,12 +221,12 @@ module Pd::Payment
     test 'teacher summaries with deleted teacher account' do
       workshop = create :pd_ended_workshop, num_sessions: 1
 
-      create :pd_workshop_participant,
+      pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
         enrolled: true,
         in_section: true,
-        attended: true,
-        deleted_at: DateTime.now
+        attended: true
+      pd_workshop_participant.destroy
 
       calculator = PaymentCalculatorBase.instance
 

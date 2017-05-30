@@ -26,13 +26,14 @@ Feature: App Lab Data Blocks
     And I wait until element "#successLabel" is visible within element "#divApplab"
 
   Scenario: Evaluate Data Blocks with Firebase
-# This level evaluates the create/read/update/deleteRecord and set/getKeyValue blocks
-# when run, and prints success if the data storage APIs are working properly.
+    # This level evaluates the create/read/update/deleteRecord and set/getKeyValue blocks
+    # when run, and prints success if the data storage APIs are working properly.
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/8?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
     And Firebase is enabled
+    And I open the debug console
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"
 
@@ -44,5 +45,6 @@ Feature: App Lab Data Blocks
     And I wait for the page to fully load
     And element "#runButton" is visible
     And Firebase is enabled
+    And I open the debug console
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"

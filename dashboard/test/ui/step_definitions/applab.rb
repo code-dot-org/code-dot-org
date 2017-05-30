@@ -71,13 +71,6 @@ When /^I switch to code mode$/ do
   STEPS
 end
 
-When /^I switch to text mode$/ do
-  steps <<-STEPS
-    When I press "show-code-header"
-    And I wait to see Droplet text mode
-  STEPS
-end
-
 And /^I wait to see Applab design mode$/ do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
   wait.until {@browser.execute_script("return $('#designWorkspace').css('display') == 'block';")}
@@ -89,7 +82,7 @@ And /^I wait to see Applab data mode$/ do
 end
 
 And /^I wait to see Applab code mode$/ do
-  wait = Selenium::WebDriver::Wait.new(timeout: 10)
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until {@browser.execute_script("return $('#codeWorkspaceWrapper').css('display') == 'block';")}
 end
 
@@ -374,8 +367,6 @@ And /^Firebase is disabled$/ do
   expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
 end
 
-And /^I wait for initial applab save to complete$/ do
-  wait_until do
-    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
-  end
+And /^I open the debug console$/ do
+  steps 'And I click selector "#debug-area-header .fa-chevron-circle-up" if it exists'
 end

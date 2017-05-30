@@ -15,6 +15,6 @@ Feature: Big Game Remix
     Then I wait until element ".project_updated_at" contains text "Saved"
     And check that the URL contains "http://studio.code.org/projects/algebra_game"
     Then I am on "http://studio.code.org/projects"
-    And I wait until element ".projects td:eq(0)" is visible
-    And I debug element ".projects td:eq(0)" text content
-    And I wait until element ".projects td:eq(0)" contains text "Remix: Big Game Template"
+    And I wait until element ".projects td:eq(1)" is visible
+    And I debug element ".projects td:eq(1)" text content
+    And I wait until element ".projects td:eq(1)" contains text "Remix: Big Game Template"

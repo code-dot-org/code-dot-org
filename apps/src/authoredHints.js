@@ -4,7 +4,7 @@
  */
 
 var authoredHintUtils = require('./authoredHintUtils');
-
+import {getStore} from './redux';
 import { setHasAuthoredHints } from './redux/instructions';
 import {
   enqueueHints,
@@ -32,14 +32,14 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  return this.studioApp_.reduxStore.getState().authoredHints.unseenHints;
+  return getStore().getState().authoredHints.unseenHints;
 };
 
 /**
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  return this.studioApp_.reduxStore.getState().authoredHints.seenHints;
+  return getStore().getState().authoredHints.seenHints;
 };
 
 /**
@@ -50,10 +50,10 @@ AuthoredHints.prototype.getSeenHints = function () {
  */
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
-  this.studioApp_.reduxStore.dispatch(displayMissingBlockHints(newContextualHints));
+  getStore().dispatch(displayMissingBlockHints(newContextualHints));
 
   if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
-    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+    getStore().dispatch(setHasAuthoredHints(true));
   }
 };
 
@@ -88,8 +88,8 @@ AuthoredHints.prototype.init = function (hints, hintsUsedIds, scriptId, levelId)
   this.levelId_ = levelId;
 
   if (hints && hints.length > 0) {
-    this.studioApp_.reduxStore.dispatch(enqueueHints(hints, hintsUsedIds));
-    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+    getStore().dispatch(enqueueHints(hints, hintsUsedIds));
+    getStore().dispatch(setHasAuthoredHints(true));
   }
 };
 
@@ -108,7 +108,7 @@ AuthoredHints.prototype.showNextHint = function () {
  * @param {AuthoredHint} hint
  */
 AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
-  this.studioApp_.reduxStore.dispatch(showNextHint(hint));
+  getStore().dispatch(showNextHint(hint));
   authoredHintUtils.recordUnfinishedHint({
     // level info
     scriptId: this.scriptId_,

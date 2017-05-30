@@ -38,6 +38,7 @@ export default storybook => {
       const withDebugConsoleStore = createApplabStore();
       withDebugConsoleStore.dispatch(setPageConstants({
         showDebugConsole: true,
+        appType: "gamelab"
       }));
       return (
         <div style={{height: 200}}>
@@ -56,6 +57,7 @@ export default storybook => {
       withDebugSliderStore.dispatch(setPageConstants({
         showDebugConsole: true,
         showDebugSlider: true,
+        appType: "gamelab"
       }));
       return (
         <Provider store={withDebugSliderStore}>
@@ -72,6 +74,7 @@ export default storybook => {
       withDebugButtonsStore.dispatch(setPageConstants({
         showDebugConsole: true,
         showDebugButtons: true,
+        appType: "gamelab"
       }));
       return (
         <Provider store={withDebugButtonsStore}>
@@ -88,6 +91,7 @@ export default storybook => {
       withDebugWatchStore.dispatch(setPageConstants({
         showDebugConsole: true,
         showDebugWatch: true,
+        appType: "gamelab"
       }));
       return (
         <Provider store={withDebugWatchStore}>
@@ -105,7 +109,8 @@ export default storybook => {
         showDebugButtons: true,
         showDebugConsole: true,
         showDebugWatch: true,
-        showDebugSlider: true
+        showDebugSlider: true,
+        appType: "gamelab"
       }));
       return (
         <Provider store={showAllStore}>

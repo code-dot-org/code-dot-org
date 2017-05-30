@@ -1,0 +1,8 @@
+name 'post-assessment survey q24'
+question 'I am interested in taking more computer science classes (in high school or after high school).'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

@@ -23,6 +23,8 @@ $(document).ready(function () {
     "buzzer.frequency": null,
     "buzzer.note": null,
     "buzzer.off": null,
+    "buzzer.stop": null,
+    "buzzer.play": null,
     "accelerometer.getOrientation": null,
     "accelerometer.start": null,
     "accelerometer.getAcceleration": null,

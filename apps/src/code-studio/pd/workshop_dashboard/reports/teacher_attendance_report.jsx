@@ -98,8 +98,8 @@ const TeacherAttendanceReport = React.createClass({
     return amount ? `$${Number(amount).toFixed(2)}` : null;
   },
 
-  isAdmin() {
-    return window.dashboard.workshop.permission === 'admin';
+  isWorkshopAdmin() {
+    return window.dashboard.workshop.permission === 'workshop_admin';
   },
 
   getColumns() {
@@ -147,8 +147,11 @@ const TeacherAttendanceReport = React.createClass({
       property: 'workshop_name',
       header: {label: 'Workshop Name'},
     }, {
-      property: 'workshop_type',
-      header: {label: 'Workshop Type'},
+      property: 'on_map',
+      header: {label: 'Shown on Map'},
+    }, {
+      property: 'funded',
+      header: {label: 'Funded'},
     }, {
       property: 'organizer_name',
       header: {label: 'Organizer Name'},
@@ -166,7 +169,7 @@ const TeacherAttendanceReport = React.createClass({
       header: {label: 'Days'}
     }];
 
-    if (this.isAdmin()) {
+    if (this.isWorkshopAdmin()) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}

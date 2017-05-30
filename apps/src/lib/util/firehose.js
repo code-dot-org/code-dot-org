@@ -1,7 +1,7 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
 import AWS from 'aws-sdk';
-import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
+import {createUuid, trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
@@ -112,17 +112,15 @@ class FirehoseClient {
    * Returns a unique user ID that is persisted across sessions through local
    * storage.
    * WARNING: Mutates local storage if an analyticsID has not already been set.
-   * @return {string | null} A unique user ID.
+   * @return {string} A unique user ID.
    */
   getAnalyticsUuid() {
-    if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
-      return window.localStorage.getItem("analyticsID");
+    let analytics_uuid = tryGetLocalStorage("analyticsID", null);
+    if (!analytics_uuid) {
+      analytics_uuid = createUuid();
     }
-    let analytics_uuid = createUuid();
-    if (trySetLocalStorage("analyticsID", analytics_uuid)) {
-      return analytics_uuid;
-    }
-    return null;
+    trySetLocalStorage("analyticsID", analytics_uuid);
+    return analytics_uuid;
   }
 
   /**

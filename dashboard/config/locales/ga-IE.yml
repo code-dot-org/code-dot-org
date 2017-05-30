@@ -89,6 +89,8 @@
     forgot_password: Focal faire dearmadta?
     need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
     need_unlock: Nach bhfuair tú na treoracha díghlasála?
+    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
+      have to sign in by typing your password below.
   signup_form:
     student_count: Tá %{count} dalta cláraithe cheana.
     teacher_count: Tá %{count} múinteoir cláraithe cheana.
@@ -207,6 +209,14 @@
       Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section:
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: "%{section_code} with %{teacher_name}"
+    confirm:
+      remove: Are you sure you want to leave this section?
+    remove: "(remove section)"
   follower:
     invite_sent: Seoladh an cuireadh
     added_teacher: Is é/í %{name} do mhúinteoir anois
@@ -222,8 +232,6 @@
       cant_join_own_section: "Ár leithscéal, níl cead agat dul isteach i do rannán
         féin."
     mail:
-      invite_student:
-        subject: Cláraigh le rang de chuid %{teacher_name} ar Code.org!
       student_disassociated:
         subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
   reports:
@@ -481,6 +489,7 @@
       na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
     announcement_petition_button: Cuir d'ainm leis
     announcement_go_beyond_button: An chéad chéim eile
+    announcement_apply_now: Apply now
     announcement_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag
       le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
       ar fhógraí roimhe seo.</a>
@@ -547,16 +556,17 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
+    announcement_csp_deadline: Final call for high school teachers! Take the lead
+      on computer science in your school and apply for our high-quality professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Applications close on April 14th.
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.
-    section_code_not_entered: Tabhair cód an rannáin reatha.
     section_code_cant_be_current_section: Is ionann iad an rannán reatha agus an rannán
       nua.
     current_section_dne: Níl rannán %{current_section_code} ann. Cuir isteach cód
       rannáin eile.
-    students_not_yours: Níl cead agat daltaí a bhogadh as rannán nach bhfuil agatsa.
-    stay_enrolled_not_entered: Tabhair "fág cláraithe leis an rannán reatha".
     student_ids_not_entered: Tabhair uimhreacha aitheantais.
     student_not_found: Níor aimsíodh dalta nó daltaí de do chuid.
     all_students_must_be_in_current_section: Ní mór do na daltaí go léir a bheith

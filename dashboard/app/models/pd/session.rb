@@ -9,11 +9,15 @@
 #  created_at     :datetime
 #  updated_at     :datetime
 #  deleted_at     :datetime
+#  code           :string(255)
 #
 # Indexes
 #
+#  index_pd_sessions_on_code            (code) UNIQUE
 #  index_pd_sessions_on_pd_workshop_id  (pd_workshop_id)
 #
+
+require 'cdo/code_generation'
 
 class Pd::Session < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
@@ -52,5 +56,38 @@ class Pd::Session < ActiveRecord::Base
 
   def hours
     (self.end - start) / 1.hour
+  end
+
+  def assign_code
+    update! code: unused_random_code
+  end
+
+  def remove_code
+    update! code: nil
+  end
+
+  def self.find_by_code(code)
+    return nil unless code
+    find_by(code: code)
+  end
+
+  def open_for_attendance?
+    code.present? &&
+      !too_soon_for_attendance? &&
+      !too_late_for_attendance?
+  end
+
+  def too_soon_for_attendance?
+    workshop.started_at.nil? || start - 12.hours > Time.zone.now
+  end
+
+  def too_late_for_attendance?
+    workshop.ended_at || self.end + 12.hours < Time.zone.now
+  end
+
+  private
+
+  def unused_random_code
+    CodeGeneration.random_unique_code length: 4, model: Pd::Session
   end
 end

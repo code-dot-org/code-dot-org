@@ -55,8 +55,8 @@ Here are some example command line options.  Run `./runner.rb --help` for a full
 
 Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-`./runner.rb -d localhost.studio.code.org:3000`
-Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -p <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
+`./runner.rb -d localhost-studio.code.org:3000`
+Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
 Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
 
@@ -81,6 +81,14 @@ Run exactly one UI test in a given feature file for all browser/os combinations
 Run the eyes tests
 
 `./runner.rb --eyes`
+
+Run one feature using chromedriver against your local machine with html output
+
+`./runner.rb -l -f features/bigGameRemix.feature --html`
+
+Run one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+
+`./runner.rb -l -f features/bigGameRemix.feature -c ChromeLatestWin7 --html`
 
 ## Tips
 

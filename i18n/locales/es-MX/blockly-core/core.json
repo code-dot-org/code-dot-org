@@ -63,7 +63,7 @@
   "CONTROLS_REPEAT_TOOLTIP":"Ejecuta algunas declaraciones varias veces.",
   "CONTROLS_WHILEUNTIL_HELPURL":"http://code.google.com/p/blockly/wiki/Repeat",
   "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL":"repetir hasta",
-  "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"repetir mientras que",
+  "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"repetir hasta que",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Mientras que un valor sea falso, haz algunas declaraciones.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Mientras que un valor sea verdadero, haz algunas declaraciones.",
   "DEFINE_HEADER_DEFINITION":"Definición",

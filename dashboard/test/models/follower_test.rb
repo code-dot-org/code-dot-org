@@ -4,6 +4,25 @@ class FollowerTest < ActiveSupport::TestCase
   setup do
     @laurel = create(:teacher)
     @laurel_section = create(:section, user: @laurel)
+    @follower = create :follower
+  end
+
+  test "followers are soft-deleted" do
+    assert_no_change("Follower.with_deleted.count") do
+      @follower.destroy
+      assert @follower.reload.deleted?
+    end
+  end
+
+  test "undeleting follower does not undelete section" do
+    @follower.section.destroy
+
+    @follower.restore
+    @follower.reload
+
+    refute @follower.deleted?
+    assert @follower.section.nil?
+    assert Section.with_deleted.find_by_id(@follower.section_id).deleted?
   end
 
   test "cannot follow yourself" do
@@ -15,14 +34,5 @@ class FollowerTest < ActiveSupport::TestCase
       )
       refute follower.valid?
     end
-  end
-
-  test 'follower.user uses section.user_id and not follower.user_id' do
-    follower = create :follower, section: @laurel_section
-    # As the user_must_be_section_user validation enforces that follower.user_id
-    # and follower.section.user_id are the same, we bypass validations to create
-    # a difference.
-    follower.update_columns(user_id: create(:teacher).id)
-    assert_equal @laurel, follower.user
   end
 end

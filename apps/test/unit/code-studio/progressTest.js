@@ -1,7 +1,6 @@
 /** @file Test of progress.js. */
 
 var assert = require('assert');
-var progress = require('@cdo/apps/code-studio/progress');
 import { __testonly__ } from '@cdo/apps/code-studio/progressRedux';
 
 describe('bestResultLevelId', function () {

@@ -1,0 +1,137 @@
+:ruby
+  teacher_entries = [
+    { title: I18n.t("#{loc_prefix}home"), url: "#{studio_url_base}/home" },
+    { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
+    { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" },
+    { title: I18n.t("#{loc_prefix}sections"), url: "#{code_org_url_base}/teacher-dashboard#/sections" },
+    { title: I18n.t("#{loc_prefix}professional_learning"), url: "#{studio_url_base}/my-professional-learning" }
+  ].freeze
+
+  student_entries = [
+    { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
+    { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" }
+  ]
+
+  educate_entries = [
+    { title: I18n.t("#{loc_prefix}educate_overview"), url: "#{code_org_url_base}/educate" },
+    { title: I18n.t("#{loc_prefix}educate_elementary"), url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
+    { title: I18n.t("#{loc_prefix}educate_middle"), url: "#{code_org_url_base}/educate/curriculum/middle-school" },
+    { title: I18n.t("#{loc_prefix}educate_high"), url: "#{code_org_url_base}/educate/curriculum/high-school" },
+    { title: I18n.t("#{loc_prefix}educate_hoc"), url: "#{code_org_url_base}https://hourofcode.com" },
+    { title: I18n.t("#{loc_prefix}educate_partner"), url: "#{code_org_url_base}/educate/partner" },
+    { title: I18n.t("#{loc_prefix}educate_beyond"), url: "#{code_org_url_base}/educate/curriculum/3rd-party" },
+    { title: I18n.t("#{loc_prefix}educate_inspire"), url: "#{code_org_url_base}/educate/resources/inspire" },
+    { title: I18n.t("#{loc_prefix}educate_community"), url: "#{code_org_url_base}/educate/community" },
+    { title: I18n.t("#{loc_prefix}educate_tools"), url: "#{code_org_url_base}/educate/resources/videos" },
+  ]
+
+  about_entries = [
+    { title: I18n.t("#{loc_prefix}about_us"), url: "#{code_org_url_base}/about" },
+    { title: I18n.t("#{loc_prefix}about_leadership"), url: "#{code_org_url_base}/about/leadership" },
+    { title: I18n.t("#{loc_prefix}about_donors"), url: "#{code_org_url_base}/about/donors" },
+    { title: I18n.t("#{loc_prefix}about_partners"), url: "#{code_org_url_base}/about/partners" },
+    { title: I18n.t("#{loc_prefix}about_team"), url: "#{code_org_url_base}/about/team" },
+    { title: I18n.t("#{loc_prefix}about_news"), url: "#{code_org_url_base}/about/news" },
+    { title: I18n.t("#{loc_prefix}about_evaluation"), url: "#{code_org_url_base}/about/evaluation" },
+    { title: I18n.t("#{loc_prefix}about_jobs"), url: "#{code_org_url_base}/about/jobs" },
+    { title: I18n.t("#{loc_prefix}about_contact"), url: "#{code_org_url_base}/contact" },
+    { title: I18n.t("#{loc_prefix}about_faqs"), url: "#{code_org_url_base}/faq" },
+  ]
+
+  show_teacher_options = "hide-always"
+  show_student_options = "hide-always"
+  show_pegasus_options = "hide-always"
+
+  hamburger_class = "none"
+
+  if level
+    # The header is taken over by level-related UI, so we need the hamburger
+    # to show whatever would show up in the header at desktop (and mobile) widths.
+    if user_type == "teacher"
+      show_teacher_options = "show-always"
+    elsif user_type == "student"
+      show_student_options = "show-always"
+    end
+
+    # Regardless of user type, if they are English, then they also need the pegasus
+    # options in the hamburger.
+    if language == "en"
+      show_pegasus_options = "show-always"
+    end
+
+  else
+
+    # The header is available for showing whichever options we want, but they should
+    # appear in the hamburger at mobile widths.
+
+    if user_type == "teacher"
+      show_teacher_options = "show-mobile"
+    elsif user_type == "student"
+      show_student_options = "show-mobile"
+    end
+
+    if language == "en"
+      # We want to show the pegasus options.  They're in the hamburger for desktop
+      # if they didn't fit on the header, or they're just in it for mobile if they did.
+      if user_type == "teacher" || user_type == "student"
+        show_pegasus_options = "show-always"
+      else
+        show_pegasus_options = "show-mobile"
+      end
+    end
+  end
+
+  # Do we show hamburger on all widths, only mobile, or not at all?
+  if show_teacher_options == "show-always" || show_student_options == "show-always" || show_pegasus_options == "show-always"
+    hamburger_class = "show-always"
+  elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
+    hamburger_class = "show-mobile"
+  else
+    hamburger_class = "hide-always"
+  end
+
+#hamburger{class: hamburger_class}
+  %ul.hide-responsive-menu
+    -# If we're a teacher, then we have special items showing here.
+    - if user_type == "teacher"
+      - teacher_entries.each do |entry|
+        %li{class: show_teacher_options}
+          %a{href: entry[:url]}= entry[:title]
+    - elsif user_type == "student"
+      - student_entries.each do |entry|
+        %li{class: show_student_options}
+          %a{href: entry[:url]}= entry[:title]
+
+    %li{class: show_pegasus_options}
+      %a{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
+    %li{class: show_pegasus_options}
+      #educate-more
+        = I18n.t("#{loc_prefix}teach")
+        %i#educate-down{class: "fa fa-caret-down"}
+        %i#educate-up{class: "fa fa-caret-up"}
+
+    - if show_gallery
+      - unless ["student", "teacher"].include? user_type
+        %li{class: show_pegasus_options}
+          %a{href: "#{studio_url_base}/projects"}= I18n.t("#{loc_prefix}project_gallery")
+
+    .educate-nav.hide-educate{class: show_pegasus_options}
+      - educate_entries.each do |entry|
+        %li
+          %a{href: entry[:url]}= entry[:title]
+    %li{class: show_pegasus_options}
+      %a{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
+    %li{class: show_pegasus_options}
+      %a{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
+    %li{class: show_pegasus_options}
+      #about-more
+        = I18n.t("#{loc_prefix}about")
+        %i#about-down{class: "fa fa-caret-down"}
+        %i#about-up{class: "fa fa-caret-up"}
+    .about-nav.hide-about{class: show_pegasus_options}
+      - about_entries.each do |entry|
+        %li
+          %a{href: entry[:url]}= entry[:title]
+
+  #hamburger-icon{class: hamburger_class}
+    %span

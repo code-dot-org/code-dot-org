@@ -1,7 +1,5 @@
 name 'CSDU2 IP Fair Use'
-title 'Fair Use'
-description 'description here'
-href 'path/to/html/in/asset/folder'
+display_name 'Fair Use Content'
 markdown <<MARKDOWN
 # Finding Supporting Content
 

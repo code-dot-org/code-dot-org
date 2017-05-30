@@ -29,6 +29,12 @@ exports.setMapAndColor = function (id, color, value) {
   });
 };
 
+exports.setAllowSpritesOutsidePlayspace = function (id, value) {
+  Studio.queueCmd(id, 'setAllowSpritesOutsidePlayspace', {
+    'value': value,
+  });
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,
@@ -229,17 +235,20 @@ exports.moveDistance = function (id, spriteIndex, dir, distance) {
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
 exports.addPoints = function (id, value) {
-  Studio.queueCmd(id, 'changeScore', {'value': value});
+  Studio.changeScore({'value': value});
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 // removePoints is a wrapper for reduceScore (used by hoc2015)
 
 exports.removePoints = function (id, value) {
-  Studio.queueCmd(id, 'reduceScore', {'value': value});
+  Studio.reduceScore({'value': value});
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 exports.changeScore = function (id, value) {
-  Studio.queueCmd(id, 'changeScore', {'value': value});
+  Studio.changeScore({'value': value});
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 exports.getScore = function () {

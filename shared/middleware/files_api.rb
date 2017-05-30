@@ -1,3 +1,4 @@
+require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
@@ -166,19 +167,26 @@ class FilesApi < Sinatra::Base
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
 
-    # Unless this is hosted by codeprojects.org,
-    # serve all files with Content-Disposition set to attachment so browsers will not render potential HTML content inline
-    # User-generated content can contain script that we don't want to host as authentic web content from our domain
-    response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\"" unless code_projects_domain_root_route
-
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
+
+    # Append `no-transform` to existing Cache-Control header
+    response['Cache-Control'] += ', no-transform'
 
     filename.downcase! if endpoint == 'files'
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
     content_type type
+
+    # Unless this is hosted by codeprojects.org or is a safely viewable file type,
+    # serve all files with Content-Disposition set to attachment so browsers
+    # will not render potential HTML content inline. User-generated content can
+    # contain script that we don't want to host as authentic web content from
+    # our domain.
+    unless code_projects_domain_root_route || safely_viewable_file_type?(type)
+      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+    end
 
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
@@ -195,6 +203,13 @@ class FilesApi < Sinatra::Base
     end
 
     result[:body]
+  end
+
+  # A list of some file types that are safe to view in the browser without
+  # risking script execution. Initially limited to images since it is useful
+  # to view these via the browser context menu.
+  def safely_viewable_file_type?(extension)
+    %w(.jpg .jpeg .gif .png).include? extension.downcase
   end
 
   CONTENT_TYPE = 'Content-Type'.freeze
@@ -398,8 +413,7 @@ class FilesApi < Sinatra::Base
   delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     get_bucket_impl(endpoint).new.delete(encrypted_channel_id, filename)
     no_content
@@ -429,8 +443,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
   end
@@ -467,51 +480,76 @@ class FilesApi < Sinatra::Base
     end
   end
 
+  #
+  # NOTE: The files API that we expose is case-insensitive, though AWS s3 is case-sensitive. As a
+  # result, we normalize s3 filenames to be downcased. That said, we maintain a case-sensitive
+  # manifest.
+  #
   def files_put_file(encrypted_channel_id, filename, body)
-    bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
+    unescaped_filename = CGI.unescape(filename)
+    unescaped_filename_downcased = unescaped_filename.downcase
+    bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
 
-    # read the manifest
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    if manifest_result[:status] == 'NOT_FOUND'
-      manifest = []
-    else
-      manifest = JSON.load manifest_result[:body]
-    end
+    manifest = get_manifest(bucket, encrypted_channel_id)
+    manifest_is_unchanged = true
+
+    unescaped_src_filename_downcased = params['src'] ? CGI.unescape(params['src']).downcase : nil
+    unescaped_delete_filename_downcased = params['delete'] ? CGI.unescape(params['delete']).downcase : nil
+    case_only_rename = unescaped_filename_downcased == unescaped_src_filename_downcased
 
     # store the new file
-    if params['src']
-      new_entry_json = copy_file('files', encrypted_channel_id, filename.downcase, params['src'])
+    if unescaped_src_filename_downcased
+      if case_only_rename
+        src_entry = manifest.detect {|e| e['filename'].downcase == unescaped_filename_downcased}
+        not_found if src_entry.nil?
+        new_entry_json = src_entry.to_json
+      else
+        new_entry_json = copy_file(
+          'files',
+          encrypted_channel_id,
+          URI.encode(unescaped_filename_downcased),
+          URI.encode(unescaped_src_filename_downcased)
+        )
+      end
     else
-      new_entry_json = put_file('files', encrypted_channel_id, filename.downcase, body)
+      new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
-    new_entry_hash['filename'] = filename
-    manifest_is_unchanged = false
+    new_entry_hash['filename'] = unescaped_filename
 
-    existing_entry = manifest.detect {|e| e['filename'].downcase == filename.downcase}
+    existing_entry = manifest.detect {|e| e['filename'].downcase == unescaped_filename_downcased}
     if existing_entry.nil?
       manifest << new_entry_hash
-    else
-      if existing_entry == new_entry_hash
-        manifest_is_unchanged = true
-      else
-        existing_entry.merge!(new_entry_hash)
-      end
+      manifest_is_unchanged = false
+    elsif existing_entry != new_entry_hash
+      existing_entry.merge!(new_entry_hash)
+      manifest_is_unchanged = false
     end
 
-    # if we're also deleting a file (on rename), remove it from the manifest
-    if params['delete']
-      reject_result = manifest.reject! {|e| e['filename'].downcase == params['delete'].downcase}
+    deleting_separate_file = unescaped_delete_filename_downcased &&
+      unescaped_delete_filename_downcased != unescaped_filename_downcased
+    # if we're also deleting a file (on rename), remove it from the manifest (don't remove from manifest)
+    if deleting_separate_file
+      reject_result = manifest.reject! {|e| e['filename'].downcase == unescaped_delete_filename_downcased}
       manifest_is_unchanged = false unless reject_result.nil?
     end
 
     # write the manifest (assuming the entry changed)
-    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version']) unless manifest_is_unchanged
+    unless manifest_is_unchanged
+      response = bucket.create_or_replace(
+        encrypted_channel_id,
+        FileBucket::MANIFEST_FILENAME,
+        manifest.to_json,
+        params['files-version']
+      )
+    end
 
     # delete a file if requested (same as src file in a rename operation)
-    bucket.delete(encrypted_channel_id, params['delete'].downcase) if params['delete']
+    if deleting_separate_file
+      bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased))
+    end
 
     # return the new entry info
     new_entry_hash['filesVersionId'] = response.version_id
@@ -568,8 +606,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # read the manifest
     bucket = FileBucket.new
@@ -597,8 +634,7 @@ class FilesApi < Sinatra::Base
 
     bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # read the manifest
     bucket = FileBucket.new
@@ -607,7 +643,8 @@ class FilesApi < Sinatra::Base
     manifest = JSON.load manifest_result[:body]
 
     # remove the file from the manifest
-    reject_result = manifest.reject! {|e| e['filename'].downcase == filename.downcase}
+    manifest_delete_comparison_filename = CGI.unescape(filename).downcase
+    reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
     not_found if reject_result.nil?
 
     # write the manifest
@@ -640,8 +677,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # read the manifest using the version-id specified
     bucket = FileBucket.new
@@ -716,6 +752,17 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
+  #
+  # Read a metadata file, caching the result for 1 hour.
+  #
+  get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+    file = get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+    cache_for 1.hour
+    file
+  end
+
+  #
   # DELETE /v3/files/<channel-id>/.metadata/<filename>?files-version=<project-version-id>
   #
   # Delete a metadata file.
@@ -730,5 +777,14 @@ class FilesApi < Sinatra::Base
 
     FileBucket.new.delete(encrypted_channel_id, filename)
     no_content
+  end
+
+  private
+
+  #
+  # Returns the (parsed) manifest associated with the given encrypted_channel_id.
+  #
+  def get_manifest(bucket, encrypted_channel_id)
+    bucket.get_manifest(encrypted_channel_id)
   end
 end

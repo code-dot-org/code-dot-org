@@ -16,6 +16,8 @@ import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
+import NeoPixel from './NeoPixel';
+import Led from './Led';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -23,40 +25,46 @@ import Piezo from './Piezo';
  *
  * @param {five.Board} board - the johnny-five board object that needs new
  *        components initialized.
- * @returns {Object.<String, Object>} board components
+ * @returns {Promise.<Object.<String, Object>>} board components
  */
 export function createCircuitPlaygroundComponents(board) {
-  return {
-    colorLeds: initializeColorLeds(board),
+  // Must initialize sound sensor BEFORE left button, otherwise left button
+  // will not respond to input.  This has something to do with them sharing
+  // pin 4 on the board.
+  return Promise.all([
+    initializeSoundSensor(board),
+    initializeLightSensor(board),
+    initializeThermometer(board),
+  ]).then(([soundSensor, lightSensor, tempSensor]) => {
+    return {
+      colorLeds: initializeColorLeds(board),
 
-    led: new five.Led({board, pin: 13}),
+      led: new Led({board, pin: 13}),
 
-    toggleSwitch: new five.Switch({board, pin: 21}),
+      toggleSwitch: new five.Switch({board, pin: 21}),
 
-    buzzer: new Piezo({
-      board,
-      pin: 5,
-      controller: PlaygroundIO.Piezo
-    }),
+      buzzer: new Piezo({
+        board,
+        pin: 5,
+        controller: PlaygroundIO.Piezo
+      }),
 
-    // Must initialize sound sensor BEFORE left button, otherwise left button
-    // will not respond to input.  This has something to do with them sharing
-    // pin 4 on the board.
-    soundSensor: initializeSoundSensor(board),
+      soundSensor,
 
-    lightSensor: initializeLightSensor(board),
+      lightSensor,
 
-    tempSensor: initializeThermometer(board),
+      tempSensor,
 
-    accelerometer: initializeAccelerometer(board),
+      accelerometer: initializeAccelerometer(board),
 
-    buttonL: initializeButton(board, '4'),
+      buttonL: initializeButton(board, '4'),
 
-    buttonR: initializeButton(board, '19'),
+      buttonR: initializeButton(board, '19'),
 
-    // TODO (captouch): Re-enable when we can lazy-enable streaming
-    // ...initializeTouchPads(board)
-  };
+      // TODO (captouch): Re-enable when we can lazy-enable streaming
+      // ...initializeTouchPads(board)
+    };
+  });
 }
 
 /**
@@ -123,9 +131,9 @@ export function destroyCircuitPlaygroundComponents(components) {
  * objects, allowing it to make methods and properties of instances available.
  */
 export const componentConstructors = {
-  Led: five.Led,
+  Led: Led,
   Board: five.Board,
-  RGB: five.Led.RGB,
+  NeoPixel: NeoPixel,
   Button: five.Button,
   Switch: five.Switch,
   Piezo,
@@ -149,7 +157,7 @@ function initializeColorLeds(board) {
 }
 
 function initializeColorLed(board, pin) {
-  return new five.Led.RGB({
+  return new NeoPixel({
     board,
     controller: PlaygroundIO.Pixel,
     pin
@@ -157,23 +165,27 @@ function initializeColorLed(board, pin) {
 }
 
 function initializeSoundSensor(board) {
-  const sensor = new five.Sensor({
-    board,
-    pin: "A4",
-    freq: 100
+  return new Promise(resolve => {
+    const sensor = new five.Sensor({
+      board,
+      pin: "A4",
+      freq: 100
+    });
+    addSensorFeatures(five.Board.fmap, sensor);
+    sensor.once('data', () => resolve(sensor));
   });
-  addSensorFeatures(five.Board.fmap, sensor);
-  return sensor;
 }
 
 function initializeLightSensor(board) {
-  const sensor = new five.Sensor({
-    board,
-    pin: "A5",
-    freq: 100
+  return new Promise(resolve => {
+    const sensor = new five.Sensor({
+      board,
+      pin: "A5",
+      freq: 100
+    });
+    addSensorFeatures(five.Board.fmap, sensor);
+    sensor.once('data', () => resolve(sensor));
   });
-  addSensorFeatures(five.Board.fmap, sensor);
-  return sensor;
 }
 
 /**
@@ -210,13 +222,15 @@ function addSensorFeatures(fmap, sensor) {
 }
 
 function initializeThermometer(board) {
-  const sensor = new five.Thermometer({
-    board,
-    controller: Thermometer,
-    pin: "A0",
-    freq: 100
+  return new Promise(resolve => {
+    const thermometer = new five.Thermometer({
+      board,
+      controller: Thermometer,
+      pin: "A0",
+      freq: 100
+    });
+    thermometer.once('data', () => resolve(thermometer));
   });
-  return sensor;
 }
 
 function initializeButton(board, pin) {

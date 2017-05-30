@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import _ from 'lodash';
+import queryString from 'query-string';
 import clientState from './clientState';
 import StageProgress from './components/progress/StageProgress.jsx';
 import CourseProgress from './components/progress/CourseProgress.jsx';
@@ -23,7 +24,8 @@ import {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
-  setIsSummaryView
+  setStudentDefaultsSummaryView,
+  setCurrentStageId,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -138,12 +140,20 @@ progress.renderCourseProgress = function (scriptData) {
  * @param {HTMLElement} element - DOM element we want to render into
  * @param {string} scriptName - name of current script
  * @param {string} currentLevelId - Level that we're current on.
+ * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
+ * @param {bool} student_detail_progress_view - Should we default to progress view
+ *   user has
  */
-progress.renderMiniView = function (element, scriptName, currentLevelId) {
+progress.renderMiniView = function (element, scriptName, currentLevelId,
+    linesOfCodeText, student_detail_progress_view) {
   const store = getStore();
+  if (student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+
   ReactDOM.render(
     <Provider store={store}>
-      <MiniView/>
+      <MiniView linesOfCodeText={linesOfCodeText}/>
     </Provider>,
     element
   );
@@ -161,11 +171,18 @@ progress.renderMiniView = function (element, scriptName, currentLevelId) {
 function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
 
-  if (onOverviewPage && scriptData.student_detail_progress_view) {
-    // If everyone has detail progress view, set that view immediately. Otherwise
-    // it might happen async when we determine you're a teacher.
-    store.dispatch(setIsSummaryView(false));
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
   }
+
+  // Set our initial view type
+  const query = queryString.parse(location.search);
+  let initialViewAs = ViewType.Student;
+  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
+    // query param viewAs takes precedence over whether or not user is a teacher
+    initialViewAs = ViewType.Teacher;
+  }
+  store.dispatch(setViewType(initialViewAs));
 
   $.ajax(
     '/api/user_progress/' + scriptData.name,
@@ -191,15 +208,21 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // overview page
     if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
       store.dispatch(showTeacherInfo());
-      store.dispatch(setViewType(ViewType.Teacher));
-      renderTeacherPanel(store, scriptData.id);
 
-      store.dispatch(setIsSummaryView(false));
+      const viewAs = queryString.parse(location.search).viewAs || ViewType.Teacher;
+      if (viewAs !== initialViewAs) {
+        // We don't want to redispatch if our viewAs is the same as the initial
+        // one, since the user might have manually changed the view while making
+        // our async call
+        store.dispatch(setViewType(viewAs));
+      }
+      renderTeacherPanel(store, scriptData.id);
+      clientState.cacheUserIsTeacher(true);
     }
 
-    if (data.focusAreaPositions) {
+    if (data.focusAreaStageIds) {
       store.dispatch(updateFocusArea(data.changeFocusAreaPath,
-        data.focusAreaPositions));
+        data.focusAreaStageIds));
     }
 
     if (data.lockableAuthorized) {
@@ -221,6 +244,9 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       store.dispatch(mergeProgress(levelProgress));
       if (data.peerReviewsPerformed) {
         store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+      if (data.current_stage) {
+        store.dispatch(setCurrentStageId(data.current_stage));
       }
     }
   });

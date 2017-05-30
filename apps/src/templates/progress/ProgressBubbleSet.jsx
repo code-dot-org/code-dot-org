@@ -94,7 +94,7 @@ const ProgressBubbleSet = React.createClass({
                   status={level.status}
                   url={level.url}
                   disabled={disabled}
-                  levelName={level.name}
+                  levelName={level.name || level.progression}
                   levelIcon={getIconForLevel(level)}
                 />
               }

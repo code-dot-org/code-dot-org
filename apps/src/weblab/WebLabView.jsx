@@ -7,8 +7,8 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
-import PaneHeader from '../templates/PaneHeader';
-var PaneButton = PaneHeader.PaneButton;
+import PaneHeader, {PaneButton} from '../templates/PaneHeader';
+import CompletionButton from '../templates/CompletionButton';
 
 /**
  * Top-level React wrapper for WebLab
@@ -26,7 +26,6 @@ const WebLabView = React.createClass({
     onAddFileHTML: React.PropTypes.func.isRequired,
     onAddFileCSS: React.PropTypes.func.isRequired,
     onAddFileImage: React.PropTypes.func.isRequired,
-    onFinish: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -62,11 +61,6 @@ const WebLabView = React.createClass({
       iframeScrolling = 'no';
       iframeClass = 'weblab-host';
     }
-    const finishStyles = {
-      position: 'absolute',
-      right: 0,
-      bottom: 0,
-    };
 
     return (
       <StudioAppWrapper>
@@ -140,10 +134,7 @@ const WebLabView = React.createClass({
               style={iframeStyles}
             />
             {!this.props.isProjectLevel &&
-              <button className="share" style={finishStyles} onClick={this.props.onFinish}>
-                <img src="/blockly/media/1x1.gif"/>
-                {msg.finish()}
-              </button>
+              <CompletionButton />
             }
           </div>
         </InstructionsWithWorkspace>
