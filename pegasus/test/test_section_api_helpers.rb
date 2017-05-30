@@ -207,6 +207,13 @@ class SectionApiHelperTest < SequelTestCase
         refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'mc'
         refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'hourofcode'
       end
+
+      describe "fetch_user_sections" do
+        it 'something' do
+          sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
+          assert_equal 5, sections.length
+        end
+      end
     end
 
     describe 'create' do
