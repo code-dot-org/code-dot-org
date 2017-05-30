@@ -4,12 +4,12 @@
   padding-top: 0;
 
   .pageheader-translucent {
-    background-color: $light_teal !important;
+    background-color: $teal !important;
   }
 
   #pageheader {
     width: 100%;
-    background-color: $light_teal;
+    background-color: $teal;
     height: 50px;
     margin: 0 0 40px 0;
 
@@ -26,14 +26,13 @@
     }
 
     #logo-wrapper {
-      background-color: $teal;
       display: inline-block;
-      padding: 13px 16px;
+      padding: 4px 0 4px 16px;
       float: left;
 
       #logo {
-        width: 43px;
-        height: 43px;
+        width: 42px;
+        height: 42px;
       }
 
       #logo-uk {
@@ -45,12 +44,13 @@
 
     #right {
       float: right;
+      padding-right: 15px;
     }
 
     #headerlinks {
       float: left;
       position: relative;
-      padding-left: 10px;
+      padding-left: 6px;
 
       .headerlink {
         display: inline-block;
@@ -80,6 +80,7 @@
       margin: 5px 0 0 0;
 
       .button-signin {
+        margin-top: -3px;
         background-color: transparent;
         border: 2px solid $white;
         color: $white;

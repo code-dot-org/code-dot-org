@@ -24,7 +24,7 @@ const styles = {
     marginLeft: 350,
     color: color.white,
     fontSize: 18,
-    fontFamily: 'Gotham 3r',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontWeight: 'bold',
     textDecoration: 'none'
   },
@@ -33,7 +33,7 @@ const styles = {
     marginRight: 20,
     marginTop: 15,
     fontSize: 14,
-    fontFamily: 'Gotham 3r',
+    fontFamily: '"Gotham 4r", sans-serif',
     lineHeight: 1.5,
     color: color.charcoal
   },
