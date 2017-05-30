@@ -213,6 +213,27 @@ class DashboardSection
     valid_grades.include? grade
   end
 
+  # Sections can be assigned to both courses and scripts. We want to make sure
+  # we give teacher dashboard the same information for both sets of assignables,
+  # which we accomplish via this shared method
+  def self.assignable_info(course_or_script, hidden=false)
+    name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
+    first_category = ScriptConstants.categories(course_or_script[:name])[0] || 'other'
+    position = ScriptConstants.position_in_category(name, first_category)
+    category_priority = ScriptConstants.category_priority(first_category)
+    name = I18n.t("#{name}_name", default: name)
+    name += " *" if hidden
+    {
+      id: course_or_script[:id],
+      name: name,
+      # TODO: rename script_name?
+      script_name: course_or_script[:name],
+      category: I18n.t("#{first_category}_category_name", default: first_category),
+      position: position,
+      category_priority: category_priority,
+    }
+  end
+
   @@script_cache = {}
   def self.valid_scripts(user_id = nil)
     # some users can see all scripts, even those marked hidden
@@ -235,22 +256,22 @@ class DashboardSection
         where(where_clause).
         select(:id, :name, :hidden).
         all.
-        map do |script|
-          name = ScriptConstants.teacher_dashboard_name(script[:name])
-          first_category = ScriptConstants.categories(script[:name])[0] || 'other'
-          position = ScriptConstants.position_in_category(name, first_category)
-          category_priority = ScriptConstants.category_priority(first_category)
-          name = I18n.t("#{name}_name", default: name)
-          name += " *" if script[:hidden]
-          {
-            id: script[:id],
-            name: name,
-            script_name: script[:name],
-            category: I18n.t("#{first_category}_category_name", default: first_category),
-            position: position,
-            category_priority: category_priority
-          }
-        end
+        map {|script| assignable_info(script, script[:hidden])}
+  end
+
+  @@course_cache = nil
+  # Mimic the behavior of valid_scripts, but return courses instead.
+  def self.valid_courses
+    return @@course_cache if @@course_cache
+
+    return {} unless (Dashboard.db[:courses].count rescue nil)
+
+    @@course_cache = Dashboard.db[:courses].
+      select(:id, :name).
+      all.
+      # Only return courses we've whitelisted in ScriptConstants
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map {|course| assignable_info(course)}
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via

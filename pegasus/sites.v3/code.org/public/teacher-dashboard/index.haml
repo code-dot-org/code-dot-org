@@ -50,6 +50,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   // Embed some data in our JS
   var valid_scripts = #{DashboardSection::valid_scripts(request.user_id).to_json};
+  var valid_courses = #{DashboardSection::valid_courses().to_json};
   var homepage_url = '#{homepage_url}';
   var hoc_assign_warning = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
   var disabled_scripts = #{DashboardSection::progress_disabled_scripts(request.user_id).to_json};
