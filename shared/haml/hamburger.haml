@@ -12,6 +12,10 @@
     { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" }
   ]
 
+  help_links_for_teachers = [
+    { title: I18n.t("#{loc_prefix}teacher_community"), url: "http://forum.code.org/"}
+  ]
+
   educate_entries = [
     { title: I18n.t("#{loc_prefix}educate_overview"), url: "#{code_org_url_base}/educate" },
     { title: I18n.t("#{loc_prefix}educate_elementary"), url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
@@ -114,6 +118,9 @@
       - unless ["student", "teacher"].include? user_type
         %li{class: show_pegasus_options}
           %a{href: "#{studio_url_base}/projects"}= I18n.t("#{loc_prefix}project_gallery")
+
+    %li
+      %a{href: "https://support.code.org"}=I18n.t("#{loc_prefix}help_support")
 
     .educate-nav.hide-educate{class: show_pegasus_options}
       - educate_entries.each do |entry|
