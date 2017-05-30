@@ -64,15 +64,15 @@ const ResourceCard = React.createClass({
   render() {
     const { title, description, buttonText, link, image } = this.props;
     const filenameToImgUrl = {
-      "teacher-community": require('../../../static/resource_cards/teachercommunity.png'),
-      "guest-speaker": require('../../../static/resource_cards/findguestspeaker.png'),
-      "professional-learning": require('../../../static/resource_cards/professionallearning.png'),
-      "standards-framework": require('../../../static/resource_cards/standardsandframework.png'),
-      "elementary": require('../../../static/resource_cards/elementary.png'),
-      "middleschool": require('../../../static/resource_cards/middleschool.png'),
-      "highschool": require('../../../static/resource_cards/highschool.png'),
-      "hourofcode": require('../../../static/resource_cards/hourofcode.png'),
-      "hourofcode2": require('../../../static/resource_cards/hourofcode2.png'),
+      "teacher-community": require('@cdo/static/resource_cards/teachercommunity.png'),
+      "guest-speaker": require('@cdo/static/resource_cards/findguestspeaker.png'),
+      "professional-learning": require('@cdo/static/resource_cards/professionallearning.png'),
+      "standards-framework": require('@cdo/static/resource_cards/standardsandframework.png'),
+      "elementary": require('@cdo/static/resource_cards/elementary.png'),
+      "middleschool": require('@cdo/static/resource_cards/middleschool.png'),
+      "highschool": require('@cdo/static/resource_cards/highschool.png'),
+      "hourofcode": require('@cdo/static/resource_cards/hourofcode.png'),
+      "hourofcode2": require('@cdo/static/resource_cards/hourofcode2.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
