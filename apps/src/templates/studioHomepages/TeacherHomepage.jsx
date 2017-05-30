@@ -1,10 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import HeadingBanner from '../HeadingBanner';
 import AnnouncementsCollapsible from './AnnouncementsCollapsible';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import ManageSectionsCollapsible from './ManageSectionsCollapsible';
 import TeacherResources from './TeacherResources';
 import shapes from './shapes';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
 const TeacherHomepage = React.createClass({
@@ -15,6 +17,11 @@ const TeacherHomepage = React.createClass({
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
   },
 
+  componentDidMount() {
+    // The component used here is implemented in legacy HAML/CSS rather than React.
+    $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
+  },
+
   render() {
     const { courses, sections, announcements, codeOrgUrlPrefix } = this.props;
 
@@ -23,6 +30,9 @@ const TeacherHomepage = React.createClass({
         <HeadingBanner
           headingText={i18n.homepageHeading()}
           extended={false}
+        />
+        <ProtectedStatefulDiv
+          ref="termsReminder"
         />
         <AnnouncementsCollapsible announcements={announcements}/>
         <RecentCoursesCollapsible
