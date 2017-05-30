@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import HeadingBanner from '../HeadingBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import UiTips from '@cdo/apps/templates/teacherHomepage/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -37,7 +38,9 @@ const Courses = React.createClass({
     isSignedOut: React.PropTypes.bool.isRequired,
     linesCount: React.PropTypes.string.isRequired,
     studentsCount: React.PropTypes.string.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
+    showInitialTips: React.PropTypes.bool.isRequired,
+    userId: React.PropTypes.number
   },
 
   componentDidMount() {
@@ -51,10 +54,22 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
 
     return (
       <div>
+        {isEnglish && isTeacher && (
+          <UiTips
+            userId={userId}
+            tipId={"teacher_courses"}
+            showInitialTips={showInitialTips}
+            tips={
+              [
+                {type: "initial", position: {top: 1520, left: 100}, text: i18n.coursesUiTipsTeacherCourses()}
+              ]}
+          />
+        )}
+
         <HeadingBanner
           headingText={i18n.courses()}
           subHeadingText={i18n.coursesHeadingSubText(
