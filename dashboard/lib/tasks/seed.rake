@@ -33,6 +33,7 @@ namespace :seed do
     'hourofcode',
     'infinity',
     'mc',
+    'minecraft',
     'playlab',
     'starwars',
     'starwarsblocks',
