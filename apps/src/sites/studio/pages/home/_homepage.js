@@ -40,7 +40,7 @@ function showHomepage() {
             [
               {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks()},
               {type: "initial", position: {top: 80, right: 50}, text: i18n.homepageUiTipOtherLinks()},
-              {type: "triggered", position: {top: 180, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link"}
+              {type: "triggered", position: {top: 80, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link"}
             ]}
         />
       )}
