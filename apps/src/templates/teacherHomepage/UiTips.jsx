@@ -4,16 +4,18 @@ import Dialog from '../Dialog';
 
 const UiTips = React.createClass({
   propTypes: {
-    formId: React.PropTypes.string,
-    tips: React.PropTypes.array,
-    beforeDialog: React.Protypes.object,
-    afterDialog: React.PropTypes.object
+    userId: React.PropTypes.number,
+    tipId: React.PropTypes.string,
+    showInitialTips: React.PropTypes.bool,
+    beforeDialog: React.PropTypes.object,
+    afterDialog: React.PropTypes.object,
+    tips: React.PropTypes.array
   },
 
   getInitialState() {
     let tipsShowing = [];
 
-    let showInitialTips = true;  // Unless user object notes they've seen them already
+    let showInitialTips = this.props.showInitialTips;
 
     // We might start by showing the "before" dialog.
     const showingDialog = (showInitialTips && this.props.beforeDialog) ? "before" : null;
@@ -51,15 +53,10 @@ const UiTips = React.createClass({
       });
 
       if (!tipRemaining) {
-        // Modify the user object to no longer show this.
-        let form = $(`#${this.props.formId}`);
-        $.ajax({
-          type: 'POST',
-          url: form.attr('action'),
-          data: form.serialize(),
-          dataType: 'json',
-          complete: function (data) {}
-        });
+        $.post(
+          `/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`,
+          { tip: this.props.tipId }
+        );
 
         // Show a concluding dialog if there is one.
         if (this.props.afterDialog) {
@@ -81,15 +78,20 @@ const UiTips = React.createClass({
 
   afterDialogConfirm() {
     if (this.props.afterDialog.onConfirm.action === "url") {
-      window.location = this.props.afterDialog.onConfirm.url;
+      window.open(this.props.afterDialog.onConfirm.url, "_blank");
     }
+    let newState = {...this.state, showingDialog: null};
+    this.setState(newState);
   },
 
   beforeDialogCancel() {
     let newState = {...newState, showInitialTips: false, showingDialog: null};
     this.setState(newState);
 
-    // todo: write to user that we don't want to see initial tips any more.
+    $.post(
+      `/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`,
+      { tip: this.props.tipId }
+    );
   },
 
   beforeDialogConfirm() {

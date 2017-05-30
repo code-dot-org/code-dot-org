@@ -13,13 +13,16 @@ function showHomepage() {
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = !!homepageData.sections;
   const showUiTips = homepageData.showuitips;
-  const uiTipsFormId = homepageData.uitipsformid;
+  const userId = homepageData.userid;
+  const showInitialTips = !homepageData.initialtipsdismissed;
 
   ReactDOM.render (
     <div>
       {showUiTips && (
         <UiTips
-          formId={uiTipsFormId}
+          userId={userId}
+          tipId={"homepage_header"}
+          showInitialTips={showInitialTips}
           beforeDialog={{
             title: i18n.homepageUiTipsBeforeDialogTitle(),
             body: i18n.homepageUiTipsBeforeDialogBody(),
