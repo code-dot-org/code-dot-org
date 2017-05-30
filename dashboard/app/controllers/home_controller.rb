@@ -67,7 +67,7 @@ class HomeController < ApplicationController
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     end
-    render partial: 'home/gallery_content'
+    render partial: 'shared/gallery_content'
   end
 
   def certificate_link_test

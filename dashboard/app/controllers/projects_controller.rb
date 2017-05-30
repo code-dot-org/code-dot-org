@@ -90,8 +90,20 @@ class ProjectsController < ApplicationController
     render layout: nil
   end
 
+  GALLERY_PER_PAGE = 5
+
   def angular
+    @gallery_activities =
+      current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     render template: "projects/projects", layout: nil
+  end
+
+  def gallery_activities
+    if current_user
+      @gallery_activities =
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+    end
+    render partial: 'shared/gallery_content'
   end
 
   def load
