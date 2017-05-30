@@ -36,7 +36,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
 
 @as_student
 Scenario: Share and save an artist level to the project gallery
-  Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10?enableExperiments=projectGallery"
+  Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10"
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
   And I drag block "1" to block "12"
@@ -53,7 +53,7 @@ Scenario: Share and save an artist level to the project gallery
 
 @as_student
 Scenario: Share and save a playlab level to the project gallery
-  Given I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10?enableExperiments=projectGallery"
+  Given I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10"
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
 

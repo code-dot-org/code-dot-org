@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524121212) do
+ActiveRecord::Schema.define(version: 20170529112233) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -643,25 +643,6 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true, using: :btree
   end
 
-  create_table "prize_providers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "description_token"
-    t.string   "image_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "prize_provider_id", null: false
-    t.string   "code",              null: false
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
-    t.index ["user_id"], name: "index_prizes_on_user_id", using: :btree
-  end
-
   create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "script_id"
@@ -805,6 +786,7 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.boolean  "stage_extras",      default: false,   null: false
     t.string   "section_type"
     t.datetime "first_activity_at"
+    t.boolean  "pairing_allowed",   default: true,    null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
@@ -855,26 +837,6 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.datetime "updated_at",               null: false
     t.index ["kind"], name: "index_survey_results_on_kind", using: :btree
     t.index ["user_id"], name: "index_survey_results_on_user_id", using: :btree
-  end
-
-  create_table "teacher_bonus_prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "prize_provider_id", null: false
-    t.string   "code",              null: false
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["prize_provider_id"], name: "index_teacher_bonus_prizes_on_prize_provider_id", using: :btree
-    t.index ["user_id"], name: "index_teacher_bonus_prizes_on_user_id", using: :btree
-  end
-
-  create_table "teacher_prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "prize_provider_id", null: false
-    t.string   "code",              null: false
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["prize_provider_id"], name: "index_teacher_prizes_on_prize_provider_id", using: :btree
-    t.index ["user_id"], name: "index_teacher_prizes_on_user_id", using: :btree
   end
 
   create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1059,6 +1021,8 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",                      default: 0
     t.integer  "terms_of_service_version"
+    t.boolean  "urm"
+    t.string   "races"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree

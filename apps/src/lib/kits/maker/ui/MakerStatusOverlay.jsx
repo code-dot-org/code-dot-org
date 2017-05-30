@@ -162,19 +162,21 @@ class UnsupportedBrowser extends Component {
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle"/>
         <Text>
-          Maker Toolkit BETA requires<br/>Chrome&nbsp;33+.
+          Maker Toolkit BETA requires<br/>Chrome&nbsp;33+
         </Text>
-        <OverlayButton
-          primary
-          text="Setup Instructions"
-          className="setup-instructions"
-          onClick={handleOpenSetupPage}
-        />
-        <OverlayButton
-          text="Disable Maker Toolkit"
-          className="disable-maker-toolkit"
-          onClick={handleDisableMaker}
-        />
+        <UniformWidth>
+          <OverlayButton
+            primary
+            text="Setup Instructions"
+            className="setup-instructions"
+            onClick={handleOpenSetupPage}
+          />
+          <OverlayButton
+            text="Disable Maker Toolkit"
+            className="disable-maker-toolkit"
+            onClick={handleDisableMaker}
+          />
+        </UniformWidth>
       </Overlay>
     );
   }
@@ -198,26 +200,56 @@ class BoardNotFound extends Component {
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle"/>
         <Text>Make sure your board is plugged in.</Text>
-        <OverlayButton
-          primary
-          text="Try Again"
-          className="try-again"
-          onClick={this.props.handleTryAgain}
-        />
-        <OverlayButton
-          text="Run Without Board"
-          className="run-without-board"
-          onClick={this.handleRunWithoutBoard}
-        />
-        <OverlayButton
-          text="Setup Instructions"
-          className="setup-instructions"
-          onClick={this.props.handleOpenSetupPage}
-        />
+        <UniformWidth>
+          <OverlayButton
+            primary
+            text="Try Again"
+            className="try-again"
+            onClick={this.props.handleTryAgain}
+          />
+          <OverlayButton
+            text="Run Without Board"
+            className="run-without-board"
+            onClick={this.handleRunWithoutBoard}
+          />
+          <OverlayButton
+            text="Setup Instructions"
+            className="setup-instructions"
+            onClick={this.props.handleOpenSetupPage}
+          />
+        </UniformWidth>
       </Overlay>
     );
   }
 }
+
+/**
+ * Wraps a group of buttons in such a way that they will all be as wide
+ * as the widest button.
+ */
+function UniformWidth({children}) {
+  return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection:'row',
+          justifyContent:'center',
+        }}
+      >
+        <div
+          style={{
+            display:'flex',
+            flexDirection:'column',
+          }}
+        >
+          {children}
+        </div>
+      </div>
+  );
+}
+UniformWidth.propTypes = {
+  children: PropTypes.any,
+};
 
 /**
  * Render a line of text in overlay style.

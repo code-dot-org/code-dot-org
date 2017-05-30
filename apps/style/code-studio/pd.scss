@@ -11,7 +11,7 @@
 
   .btn-orange {
     // color, background, border
-    @include button-variant($white, $dark_orange, $light_gray);
+    @include button-variant($white, $orange, $light_gray);
     text-shadow: none;
   }
 

@@ -66,7 +66,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 **These include:**
 
 * Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
-* A room for you at the hotel -- No need to make a resrvation, we have booked this for you!
+* A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
 All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
@@ -131,17 +131,14 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <summary>**Session Lead Facilitators**</summary>
  <p>
  <br>
-Coming soon: the incredible **CS Principles facilitators** who will be leading sessions at TeacherCon!</p>
- <p>
-Coming soon: the amazing **CS Discoveries facilitators** who will be leading sessions at TeacherCon!
-</p>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_houston') %></p>
 </details>
 
 <details>
 <summary>**Regional Partners**</summary>
  <p>
  <br>
-Coming soon: the awesome Regional Partners who will be supporting your professional learning throughout the year!
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrp_houston') %></p>
 </p>
 </details>
 
