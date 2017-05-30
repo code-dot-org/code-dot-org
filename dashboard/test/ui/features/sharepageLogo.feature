@@ -10,7 +10,8 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait for the page to fully load
     And element "#logo-link" is visible
-    And I press "logo-link" to load a new page
+    And element "#logo-img" has css property "border-radius" equal to "0px"
+    And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
 
   Scenario: Select the logo on a playlab share page while logged in and visit the homepage
@@ -21,7 +22,8 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait for the page to fully load
     And element "#logo-link" is visible
-    And I press "logo-link" to load a new page
+    And element "#logo-img" has css property "border-radius" equal to "0px"
+    And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
 
   Scenario: Select the logo on a gamelab share page while logged in and visit the homepage
@@ -32,7 +34,8 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait for the page to fully load
     And element "#logo-link" is visible
-    And I press "logo-link" to load a new page
+    And element "#logo-img" has css property "border-radius" equal to "0px"
+    And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
 
   Scenario: Select the logo on an artist share page while logged in and visit the homepage
@@ -43,5 +46,6 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait for the page to fully load
     And element "#logo-link" is visible
-    And I press "logo-link" to load a new page
+    And element "#logo-img" has css property "border-radius" equal to "0px"
+    And I press "logo-img" to load a new page
     And I wait until current URL contains "/studio.code.org/"
