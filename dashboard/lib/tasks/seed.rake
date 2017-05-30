@@ -16,6 +16,24 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten
+  UI_TEST_SCRIPTS = [
+    '20-hour',
+    'algebra',
+    'allthehiddenthings',
+    'alltheplcthings',
+    'allthethings',
+    'artist',
+    'course1',
+    'course2',
+    'course3',
+    'course4',
+    'events',
+    'frozen',
+    'mc',
+    'playlab',
+    'starwars',
+    'step',
+  ].map {|script| "config/scripts/#{script}.script"}
   SEEDED = 'config/scripts/.seeded'
 
   file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
@@ -27,8 +45,9 @@ namespace :seed do
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
+    script_files = opts[:ui_test] ? UI_TEST_SCRIPTS : SCRIPTS_GLOB
     begin
-      custom_scripts = SCRIPTS_GLOB.select {|script| File.mtime(script) > scripts_seeded_mtime}
+      custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts)
       Script.merge_and_write_i18n(custom_i18n)
@@ -45,6 +64,10 @@ namespace :seed do
 
   task scripts_incremental: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: true)
+  end
+
+  task scripts_ui_tests: SCRIPTS_DEPENDENCIES do
+    update_scripts(ui_test: true)
   end
 
   task courses: :environment do
@@ -210,6 +233,7 @@ namespace :seed do
 
   desc "seed all dashboard data"
   task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
   desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
 
