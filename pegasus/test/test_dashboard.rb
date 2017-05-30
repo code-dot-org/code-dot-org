@@ -48,7 +48,8 @@ class DashboardTest < Minitest::Test
             name: FakeDashboard::TEACHER[:name],
             owned_sections: [
               {id: FakeDashboard::TEACHER_SECTIONS[0][:id]},
-              {id: FakeDashboard::TEACHER_SECTIONS[1][:id]}
+              {id: FakeDashboard::TEACHER_SECTIONS[1][:id]},
+              {id: FakeDashboard::TEACHER_SECTIONS[5][:id]}
             ]
           },
           @teacher.select(:name, :owned_sections)
@@ -165,8 +166,8 @@ class DashboardTest < Minitest::Test
 
       it 'returns sections for a teacher' do
         sections = @teacher.owned_sections
-        assert_equal 2, sections.size
-        assert_equal [{id: 150001}, {id: 150002}], sections
+        assert_equal 3, sections.size
+        assert_equal [{id: 150001}, {id: 150002}, {id: 150006}], sections
       end
 
       it 'does not return deleted sections' do

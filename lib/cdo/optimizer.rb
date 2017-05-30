@@ -19,6 +19,9 @@ module Cdo
       image/svg+xml
     ].freeze
 
+    # Don't optimize images larger than this threshold.
+    IMAGE_OPTIM_PIXEL_MAX = 2.megabytes
+
     # Since optimization steps can take a long time,
     # cache results in shared cache to avoid duplicate work.
     mattr_accessor :cache do
@@ -51,6 +54,12 @@ module Cdo
 
     # Optimizes image content.
     def self.optimize_image(data)
+      # Skip image optimization if image is too big.
+      pixels = ImageSize.new(data).size.inject(&:*) rescue 0
+      if pixels > DCDO.get('image_optim_pixel_max', IMAGE_OPTIM_PIXEL_MAX)
+        return data
+      end
+
       cache_key = cache_key(data)
       result = cache.read(cache_key)
       OptimizeJob.perform_later(data) if result.nil?
@@ -60,7 +69,7 @@ module Cdo
     end
 
     # Increment OPTIMIZE_VERSION to change the cache key.
-    OPTIMIZE_VERSION = 1
+    OPTIMIZE_VERSION = 2
 
     def self.cache_key(data)
       "optimize-#{OPTIMIZE_VERSION}-#{Digest::MD5.hexdigest(data)}"
@@ -69,9 +78,6 @@ module Cdo
 
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
-    # Don't optimize images larger than this threshold.
-    IMAGE_OPTIM_PIXEL_MAX = 2.megabytes
-
     IMAGE_OPTIM = ImageOptim.new(
       config_paths: dashboard_dir('config/image_optim.yml'),
       cache_dir: dashboard_dir('tmp/cache/image_optim')
@@ -82,22 +88,15 @@ module Cdo
     def perform(data)
       cache = Optimizer.cache
       cache_key = Optimizer.cache_key(data)
-      pixels = 0
       cache.fetch(cache_key) do
         # Write `false` to cache to prevent concurrent image optimizations.
         cache.write(cache_key, false)
-        pixels = ImageSize.new(data).size.inject(&:*) rescue 0
-        if pixels > DCDO.get('image_optim_pixel_max', IMAGE_OPTIM_PIXEL_MAX)
-          raise ArgumentError, 'Image too large to be optimized'
-        else
-          IMAGE_OPTIM.optimize_image_data(data) || data
-        end
+        IMAGE_OPTIM.optimize_image_data(data) || data
       end
     rescue => e
       # Log error and return original content.
       Honeybadger.notify(e,
         context: {
-          pixels: pixels,
           key: cache_key
         }
       )
