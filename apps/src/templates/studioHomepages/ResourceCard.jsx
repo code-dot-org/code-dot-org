@@ -57,7 +57,8 @@ const ResourceCard = React.createClass({
     title: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     buttonText: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired
+    link: React.PropTypes.string.isRequired,
+    image: React.PropTypes.string.isRequired
   },
 
   render() {
