@@ -109,6 +109,24 @@ const UiTips = React.createClass({
     this.setState(newState);
   },
 
+  componentDidMount() {
+    // For each triggered tip, just use jquery to set up an onClick handler
+    // that will call back into us and set state to show that tip.
+    this.props.tips.map((tip, index) => {
+      if (tip.type === "triggered") {
+        $(`#${tip.triggerId}`).click(e => {
+          if (!this.state.showInitialTips) {
+            let newTipsShowing = [...this.state.tipsShowing];
+            newTipsShowing[index] = true;
+            const newState = {...this.state, tipsShowing: newTipsShowing};
+            this.setState(newState);
+          }
+          e.preventDefault();
+        });
+      }
+    });
+  },
+
   render() {
     const { tips } = this.props;
 
