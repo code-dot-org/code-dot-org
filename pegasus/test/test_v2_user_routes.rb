@@ -48,7 +48,8 @@ class V2UserRoutesTest < SequelTestCase
             'name' => FakeDashboard::TEACHER[:name],
             'owned_sections' => [
               {'id' => FakeDashboard::TEACHER_SECTIONS[0][:id]},
-              {'id' => FakeDashboard::TEACHER_SECTIONS[1][:id]}
+              {'id' => FakeDashboard::TEACHER_SECTIONS[1][:id]},
+              {'id' => FakeDashboard::TEACHER_SECTIONS[5][:id]}
             ]
           },
           JSON.parse(@pegasus.last_response.body)
