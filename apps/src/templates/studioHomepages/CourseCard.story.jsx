@@ -4,9 +4,9 @@ import CourseCard from './CourseCard';
 const exampleCard = {
   name: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-  image: "this is where there will be the source for the photo",
   link: "link to the course",
-  assignedSections: []
+  assignedSections: [],
+  image: "small_teal_icons"
 };
 
 const enrolledOne = {

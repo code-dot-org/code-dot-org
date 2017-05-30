@@ -20,6 +20,12 @@ const styles = {
     zIndex: 2,
     color: color.charcoal,
     width: 940
+  },
+  spacer: {
+    height: 50,
+    width: 940,
+    float: 'left',
+    color: color.white
   }
 };
 
@@ -49,6 +55,7 @@ const Courses = React.createClass({
       $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
       $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
     } else {
+      $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
   },
@@ -79,10 +86,19 @@ const Courses = React.createClass({
           description={i18n.coursesHeadingDescription()}
         />
 
+        {!isTeacher && (
+          <ProtectedStatefulDiv
+            style={styles.userHero}
+            ref="userHero"
+          />
+        )}
+
         {courses && (
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
+            heading={i18n.myCourses()}
+            isTeacher={isTeacher}
           />
         )}
 
@@ -95,6 +111,7 @@ const Courses = React.createClass({
               {i18n.courseExplorerDescription()}
             </div>
             <ProtectedStatefulDiv ref="courseExplorer"/>
+            <div style={styles.spacer}>.</div>
 
             <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
