@@ -26,9 +26,10 @@
   - hamburger_options[:code_org_url_base] = CDO.code_org_url
   - hamburger_options[:studio_url_base] = CDO.studio_url
   - hamburger_options[:show_gallery] = true
+  - hamburger_options[:loc_prefix] = "nav.header."
 
 .hide_on_mobile{class: header_class}
-  - if show_bug_links
+  - if !show_header2 && show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
       - if level && level.try(:is_project_level) && level.game == Game.gamelab
@@ -54,28 +55,32 @@
                   = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
                 - else
                   = link_to(image_tag('codeorg-studio-logo.png'), '/')
-            %span.project_info
+            - if show_header2
+              .project_info
+            - else
+              %span.project_info
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
             - elsif level
             - elsif show_header2
-              .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
+              .headerlinks.hide_on_tablet
                 - if user_type == "teacher"
-                  %a.headerlink{:href=>"/home"} Home
-                  %a.headerlink{:href=>"/courses"} Courses
-                  %a.headerlink{:href=>"/projects"} Project Gallery
-                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
-                  %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
+                  %a.headerlink{:href=>"/home"}= t('nav.header.home')
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
+                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")}= t('nav.header.sections')
+                  %a.headerlink{:href=>"/my-professional-learning"}= t('nav.header.professional_learning')
                 - elsif user_type == "student"
-                  %a.headerlink{:href=>"/courses"} Courses
-                  %a.headerlink{:href=>"/projects"} Project Gallery
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
                 - elsif request.language == "en"
-                  %a.headerlink{:href=>CDO.code_org_url("/student")} Learn
-                  %a.headerlink{:href=>CDO.code_org_url("/educate")} Teach
-                  %a.headerlink{:href=>CDO.code_org_url("/promote")} Stats
-                  %a.headerlink{:href=>CDO.code_org_url("/help")} Help Us
-                  %a.headerlink{:href=>CDO.code_org_url("/about")} About
+                  %a.headerlink{:href=>CDO.code_org_url("/student")}= t('nav.header.learn')
+                  %a.headerlink{:href=>CDO.code_org_url("/educate")}= t('nav.header.teach')
+                  %a.headerlink{:href=>CDO.code_org_url("/promote")}= t('nav.header.stats')
+                  %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
+                  %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
+                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
 
           .header_right
             %span.freeplay_links
@@ -98,7 +103,12 @@
 
 - if show_header2
   - if request.path == "/home" || request.path == "/courses"
-    #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
+    - if user_type == "teacher"
+      #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+    - else
+      #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
+  - if request.path == "/projects" || request.path == "/projects/public"
+    #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
 
 - if script_level
   - view_as = @user || current_user

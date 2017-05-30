@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class Pd::TeacherApplicationTest < ActiveSupport::TestCase
+  setup do
+    # unless explicitly stubbed
+    PEGASUS_DB.expects(:[]).never
+  end
+
   test 'required field validations' do
     teacher_application = Pd::TeacherApplication.new
     refute teacher_application.valid?
@@ -140,8 +145,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   end
 
   test 'validate selected course' do
-    teacher_application = build :pd_teacher_application
-    teacher_application.update_application_hash(selectedCourse: 'invalid')
+    teacher_application = build :pd_teacher_application, selected_course: 'invalid'
 
     refute teacher_application.valid?
     assert_equal 1, teacher_application.errors.count
@@ -149,12 +153,10 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   end
 
   test 'program name' do
-    teacher_application = build :pd_teacher_application
-
-    teacher_application.update_application_hash 'selectedCourse' => 'csd'
+    teacher_application = build :pd_teacher_application, selected_course: 'csd'
     assert_equal 'CS Discoveries', teacher_application.program_name
 
-    teacher_application.update_application_hash 'selectedCourse' => 'csp'
+    teacher_application.selected_course = 'csp'
     assert_equal 'CS Principles', teacher_application.program_name
   end
 
@@ -171,12 +173,12 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     expected_params = 'entry.1124819666=Severus+Snape&entry.1772278630=Hogwarts+School+of+Witchcraft+%26+Wizardry&entry.2063346846=123'
 
     # CSD
-    teacher_application.update_application_hash 'selectedCourse' => 'csd'
+    teacher_application.selected_course = 'csd'
     expected_url = "https://docs.google.com/forms/d/e/1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A/viewform?#{expected_params}"
     assert_equal expected_url, teacher_application.approval_form_url
 
     # CSP
-    teacher_application.update_application_hash 'selectedCourse' => 'csp'
+    teacher_application.selected_course = 'csp'
     expected_url = "https://docs.google.com/forms/d/e/1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ/viewform?#{expected_params}"
     assert_equal expected_url, teacher_application.approval_form_url
   end
@@ -247,27 +249,50 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   test 'setting accepted_workshop creates an accepted program entry' do
     application = create :pd_teacher_application
     assert_creates Pd::AcceptedProgram do
-      application.accepted_workshop = 'workshop name'
+      application.update!(accepted_workshop: '2017: workshop')
     end
 
     accepted_program = application.accepted_program
     assert accepted_program
-    assert_equal 'workshop name', accepted_program.workshop_name
+    assert_equal '2017: workshop', accepted_program.workshop_name
     assert_equal application.selected_course, accepted_program.course
     assert_equal application.user_id, accepted_program.user_id
     assert_equal application.id, accepted_program.teacher_application_id
   end
 
+  test 'accepted_workshop format validation' do
+    application = build :pd_teacher_application, accepted_workshop: 'invalid'
+    refute application.valid?
+    assert_equal(
+      ['Accepted workshop is not a valid format. Expected "dates : location" for teachercon, or "partner : dates" for a partner workshop'],
+      application.errors.full_messages
+    )
+  end
+
+  test 'setting accepted workshop fails when an accepted program already exists for that user and course' do
+    teacher = create :teacher
+    application = create :pd_teacher_application, user: teacher, selected_course: 'csd'
+    create :pd_accepted_program, user: teacher, course: 'csd'
+
+    application.accepted_workshop = '2017: workshop'
+
+    refute application.save
+    assert_equal(
+      ['Accepted program user already has an entry for this course'],
+      application.errors.full_messages
+    )
+  end
+
   test 'reassigning accepted_workshop updates existing accepted program entry' do
     application = create :pd_teacher_application
-    accepted_program = create :pd_accepted_program, workshop_name: 'a workshop', teacher_application: application
+    accepted_program = create :pd_accepted_program, workshop_name: '2017 : original workshop', teacher_application: application
     assert_does_not_create Pd::AcceptedProgram do
-      application.accepted_workshop = 'another workshop'
+      application.update!(accepted_workshop: '2017 : another workshop')
     end
 
     accepted_program.reload
-    assert_equal 'another workshop', accepted_program.workshop_name
-    assert_equal 'another workshop', application.accepted_workshop
+    assert_equal '2017 : another workshop', accepted_program.workshop_name
+    assert_equal '2017 : another workshop', application.accepted_workshop
   end
 
   test 'setting accepted_workshop to nil destroys existing accepted program entry' do
@@ -275,14 +300,21 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     accepted_program = create :pd_accepted_program, teacher_application: application
 
     assert_difference 'Pd::AcceptedProgram.count', -1 do
-      application.accepted_workshop = nil
+      application.update!(accepted_workshop: nil)
     end
     refute Pd::AcceptedProgram.exists?(accepted_program.id)
 
     # idempotence
     assert_no_difference 'Pd::AcceptedProgram.count' do
-      application.accepted_workshop = nil
+      application.update!(accepted_workshop: nil)
     end
+  end
+
+  test 'setting accepted_workshop with no user is invalid' do
+    application = build :pd_teacher_application, user: nil
+    application.accepted_workshop = '2017: workshop'
+    refute application.valid?
+    refute application.save
   end
 
   test 'program_registration data is retrieved and parsed from pegasus forms' do
@@ -335,6 +367,49 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     application.save!
   end
 
+  test 'updating program_registration_json updates the program registration' do
+    application = create :pd_teacher_application
+    application.stubs(:accepted_program).returns(stub(teachercon?: true))
+    mock_pegasus_program_registration_query application.id
+    fake_registration = {key: 'value'}
+    valid_registration_json = fake_registration.to_json
+    formatted_json = JSON.pretty_generate fake_registration
+
+    application.program_registration_json = valid_registration_json
+    assert_equal formatted_json, application.program_registration_json
+
+    # registration includes automatic keys
+    expected_keys = %w(
+      key
+      email_s name_s user_id_i first_name_s last_name_s phone_number_s
+      pd_teacher_application_id_i school_district_s selected_course_s accepted_workshop_s
+    ).map(&:to_sym)
+    assert_equal expected_keys, application.program_registration.keys
+    Pd::ProgramRegistrationValidation.expects(:validate)
+    assert application.valid?
+
+    # invalid
+    form_error = FormError.new 'Pd::ProgramRegistrationValidation', {key: :invalid}
+    Pd::ProgramRegistrationValidation.expects(:validate).raises(form_error)
+    application.program_registration_json = valid_registration_json
+    refute application.valid?
+    assert_equal ['Program registration json contains errors: key: invalid'], application.errors.full_messages
+
+    # Delete by setting to blank
+    application.program_registration_json = ''
+    assert_nil application.program_registration
+    Pd::ProgramRegistrationValidation.expects(:validate).never
+    assert application.valid?
+
+    # unparseable
+    application.program_registration_json = 'unparseable as json'
+    assert_nil application.program_registration
+    refute application.valid?
+    assert_equal ['Program registration json is not valid JSON'], application.errors.full_messages
+    # the raw unparsed json is stored
+    assert_equal 'unparseable as json', application.program_registration_json
+  end
+
   test 'email field assignments match application' do
     primary_email_1 = 'primary1@school.edu'
     secondary_email_1 = 'secondary1@school.edu'
@@ -361,7 +436,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     assert_equal secondary_email_3, application.secondary_email
 
     # Finally, verify non-email fields in the application do not modify the direct email fields
-    application.update_application_hash(selectedCourse: 'csp')
+    application.selected_course = 'csp'
     assert_equal primary_email_3, application.primary_email
     assert_equal secondary_email_3, application.secondary_email
   end
