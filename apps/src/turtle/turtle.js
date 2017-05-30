@@ -50,7 +50,6 @@ import {
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import experiments from '../util/experiments';
 import {blockAsXmlNode} from '../block_utils';
 
 const CANVAS_HEIGHT = 400;
@@ -1447,8 +1446,7 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  */
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
-  const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
-    this.skin.id === 'artist' && !level.impressive;
+  const saveToProjectGallery = this.skin.id === 'artist' && !level.impressive;
   const {isSignedIn} = getStore().getState().pageConstants;
 
   this.studioApp_.displayFeedback({
