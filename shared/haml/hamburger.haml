@@ -12,10 +12,6 @@
     { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" }
   ]
 
-  help_links_for_teachers = [
-    { title: I18n.t("#{loc_prefix}teacher_community"), url: "http://forum.code.org/"}
-  ]
-
   educate_entries = [
     { title: I18n.t("#{loc_prefix}educate_overview"), url: "#{code_org_url_base}/educate" },
     { title: I18n.t("#{loc_prefix}educate_elementary"), url: "#{code_org_url_base}/educate/curriculum/elementary-school" },
@@ -121,6 +117,24 @@
 
     %li
       %a{href: "https://support.code.org"}=I18n.t("#{loc_prefix}help_support")
+
+    - if user_type == "teacher"
+      %li
+        %a{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
+
+    - if level
+      - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
+      %li
+        %a{href: report_url}=I18n.t("#{loc_prefix}report_bug")
+    - else
+      %li
+        %a{href:"https://support.code.org/hc/en-us/requests/new"}=I18n.t("#{loc_prefix}report_bug")
+
+    %li
+      %a{href:" "}=I18n.t("#{loc_prefix}documentation")
+
+    %li
+      %a{href:" "}=I18n.t("#{loc_prefix}tutorials")
 
     .educate-nav.hide-educate{class: show_pegasus_options}
       - educate_entries.each do |entry|
