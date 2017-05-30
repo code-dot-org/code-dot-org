@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
-
+import { SET_VIEW_TYPE, ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import reducer, {
   initProgress,
   mergeProgress,
@@ -10,6 +10,7 @@ import reducer, {
   setUserSignedIn,
   setIsHocScript,
   setIsSummaryView,
+  setStudentDefaultsSummaryView,
   SignInState,
   levelsByLesson,
   progressionsFromLevels,
@@ -278,6 +279,52 @@ describe('progressReduxTest', () => {
 
       const stateDetail = reducer(initialState, setIsSummaryView(false));
       assert.strictEqual(stateDetail.isSummaryView, false);
+    });
+
+    it('can update studentDefaultsSummaryView', () => {
+      const stateDefaultsSummary = reducer(initialState, setStudentDefaultsSummaryView(true));
+      assert.strictEqual(stateDefaultsSummary.studentDefaultsSummaryView, true);
+
+      const stateDefaultsDetail = reducer(initialState, setStudentDefaultsSummaryView(false));
+      assert.strictEqual(stateDefaultsDetail.studentDefaultsSummaryView, false);
+    });
+
+    describe('setViewType', () => {
+      // The setViewType exported by stageLockRedux is a thunk that handles some
+      // stuff like updating query param. We just want the core action it ultimately
+      // dispatches, so we fake that here
+      function setViewType(viewAs) {
+        return ({ type: SET_VIEW_TYPE, viewAs });
+      }
+
+      it('toggles to detail view when setting viewAs to Teacher', () => {
+        const state = {
+          ...initialState,
+          isSummaryView: true
+        };
+        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        assert.strictEqual(nextState.isSummaryView, false);
+      });
+
+      it('toggles to summary view when setting viewAs to Student if studentDefaultsSummaryView', () => {
+        const state = {
+          ...initialState,
+          studentDefaultsSummaryView: true,
+          isSummaryView: false
+        };
+        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        assert.strictEqual(nextState.isSummaryView, false);
+      });
+
+      it('toggles to detail view when setting viewAs to Student if not studentDefaultsSummaryView', () => {
+        const state = {
+          ...initialState,
+          studentDefaultsSummaryView: false,
+          isSummaryView: true
+        };
+        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        assert.strictEqual(nextState.isSummaryView, false);
+      });
     });
 
     it('can setCurrentStageId', () => {

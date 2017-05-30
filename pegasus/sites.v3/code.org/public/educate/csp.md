@@ -34,23 +34,9 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
  **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
  
-And, we still have a number of openings for applicants in the following regions:
+We still have a few seats available at TeacherCon Phoenix, our five-day workshop for CS Principles, July 16 - 21. If you are available for those dates, please apply now!
 
-* Arizona
-* San Joaquin Valley, CA
-* Miami, FL
-* Illinois
-* Indiana
-* Maine
-* Maryland
-* New Jersey
-* Pennsylvania
-* Austin, TX
-* Utah
-* Virginia
-* Wisconsin
-
-[<button>See your region above? Apply now!</button>](/educate/professional-learning/cs-principles-apply)
+[<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
 
 
 ## Code.org's AP CS Principles Curriculum

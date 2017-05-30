@@ -8,6 +8,11 @@ class CreateCourses < ActiveRecord::Migration[5.0]
     belongs_to :course, class_name: '::Course', foreign_key: 'course_id', dependent: :destroy, required: true
   end
 
+  # Override Course here similar to above, so the more recent name validation won't run and fail during the migration.
+  class Course < ActiveRecord::Base
+    has_one :plc_course, class_name: 'Plc::Course'
+  end
+
   def change
     create_table :courses do |t|
       t.string :name, index: true

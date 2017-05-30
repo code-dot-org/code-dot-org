@@ -28,10 +28,9 @@
     "disable_examples": "false",
     "step_speed": "5",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P11: Add “free play” [Puzzle with many solutions]",

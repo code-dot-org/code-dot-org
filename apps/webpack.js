@@ -27,6 +27,7 @@ var baseConfig = {
       '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/weblab/locale': path.resolve(__dirname, 'src', 'weblab', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
+      '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
     }
   },
@@ -47,7 +48,7 @@ var baseConfig = {
           path.resolve(__dirname, 'test'),
           path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
-        loader: "url-loader?limit=1024",
+        loader: "url-loader?limit=1024&name=[name]-wp-[hash].[ext]",
       },
     ],
     preLoaders: [

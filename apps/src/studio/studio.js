@@ -55,7 +55,6 @@ import {
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
-import experiments from '../util/experiments';
 import project from '../code-studio/initApp/project';
 import {blockAsXmlNode} from '../block_utils';
 import {parseElement, visitAll} from '../xml';
@@ -2764,8 +2763,7 @@ var displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = experiments.isEnabled('projectGallery') &&
-      project.isSupportedLevelType();
+    const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
 
     studioApp().displayFeedback({
