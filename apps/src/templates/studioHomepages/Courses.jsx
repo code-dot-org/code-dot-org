@@ -65,18 +65,6 @@ const Courses = React.createClass({
 
     return (
       <div>
-        {isEnglish && isTeacher && (
-          <UiTips
-            userId={userId}
-            tipId={"teacher_courses"}
-            showInitialTips={showInitialTips}
-            tips={
-              [
-                {type: "initial", position: {top: 1520, left: 100}, text: i18n.coursesUiTipsTeacherCourses()}
-              ]}
-          />
-        )}
-
         <HeadingBanner
           headingText={i18n.courses()}
           subHeadingText={i18n.coursesHeadingSubText(
@@ -104,24 +92,42 @@ const Courses = React.createClass({
 
         {isEnglish && isTeacher && (
           <div>
-            <div style={styles.heading}>
-              {i18n.courseExplorerHeading()}
-            </div>
-            <div>
-              {i18n.courseExplorerDescription()}
-            </div>
-            <ProtectedStatefulDiv ref="courseExplorer"/>
-            <div style={styles.spacer}>.</div>
+            <UiTips
+              userId={userId}
+              tipId={"teacher_courses"}
+              showInitialTips={showInitialTips}
+              tips={
+                [
+                  {
+                    type: "initial",
+                    position: {top: 0, left: 0, position: "relative"},
+                    text: i18n.coursesUiTipsTeacherCourses(),
+                    arrowDirection: "down",
+                    scrollTo: ".courseexplorer"
+                  }
+                ]}
+            />
 
-            <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
-
-            <div style={styles.heading}>
-              {i18n.toolExplorerHeading()}
-            </div>
             <div>
-              {i18n.toolExplorerDescription()}
+              <div style={styles.heading}>
+                {i18n.courseExplorerHeading()}
+              </div>
+              <div>
+                {i18n.courseExplorerDescription()}
+              </div>
+              <ProtectedStatefulDiv ref="courseExplorer"/>
+              <div style={styles.spacer}>.</div>
+
+              <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+
+              <div style={styles.heading}>
+                {i18n.toolExplorerHeading()}
+              </div>
+              <div>
+                {i18n.toolExplorerDescription()}
+              </div>
+              <ProtectedStatefulDiv ref="toolExplorer"/>
             </div>
-            <ProtectedStatefulDiv ref="toolExplorer"/>
           </div>
         )}
 

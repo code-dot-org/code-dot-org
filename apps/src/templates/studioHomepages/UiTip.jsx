@@ -5,6 +5,7 @@ const UiTip = React.createClass({
     index: React.PropTypes.number,
     position: React.PropTypes.object,
     text: React.PropTypes.string,
+    arrowDirection: React.PropTypes.string,
     closeClicked: React.PropTypes.func.isRequired
   },
 
@@ -13,12 +14,11 @@ const UiTip = React.createClass({
   },
 
   render() {
-    const { index, position, text } = this.props;
-
+    const { index, position, text, arrowDirection } = this.props;
     return (
       <div>
         <div
-          className="arrow_box_up"
+          className={`arrow_box_${arrowDirection}`}
           onClick={this.closeClicked.bind(this, index)}
           style={position}
         >

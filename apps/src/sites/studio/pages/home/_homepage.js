@@ -34,13 +34,13 @@ function showHomepage() {
             body: i18n.homepageUiTipsAfterDialogBody(),
             cancel: i18n.homepageUiTipsAfterDialogCancel(),
             confirm: i18n.homepageUiTipsAfterDialogConfirm(),
-            onConfirm: {action: "url", url: "http://blog.code.org"}
+            onConfirm: {action: "url", url: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"}
           }}
           tips={
             [
-              {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks()},
-              {type: "initial", position: {top: 80, right: 50}, text: i18n.homepageUiTipOtherLinks()},
-              {type: "triggered", position: {top: 80, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link"}
+              {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks(), arrowDirection: "up"},
+              {type: "initial", position: {top: 80, right: 50}, text: i18n.homepageUiTipOtherLinks(), arrowDirection: "up"},
+              {type: "triggered", position: {top: 80, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link", arrowDirection: "up"}
             ]}
         />
       )}
