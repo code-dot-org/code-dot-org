@@ -31,9 +31,11 @@ namespace :seed do
     'flappy',
     'frozen',
     'hourofcode',
+    'infinity',
     'mc',
     'playlab',
     'starwars',
+    'starwarsblocks',
     'step',
   ].map {|script| "config/scripts/#{script}.script"}
   SEEDED = 'config/scripts/.seeded'
