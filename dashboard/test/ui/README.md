@@ -82,6 +82,14 @@ Run the eyes tests
 
 `./runner.rb --eyes`
 
+Run one feature using chromedriver against your local machine with html output
+
+`./runner.rb -l -f features/bigGameRemix.feature --html`
+
+Run one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+
+`./runner.rb -l -f features/bigGameRemix.feature -c ChromeLatestWin7 --html`
+
 ## Tips
 
 - If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).

@@ -3,7 +3,7 @@ import CollapsibleSection from './CollapsibleSection';
 import CourseCard from './CourseCard';
 
 const exampleCard = {
-  courseName: "CSP Unit 2 - Digital Information",
+  name: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
   image: "this is where there will be the source for the photo",
   link: "link to the course",
@@ -24,14 +24,14 @@ export default storybook => {
             header="Recent Courses"
           >
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
@@ -50,14 +50,14 @@ export default storybook => {
             link="link to see all of the courses"
           >
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
@@ -75,14 +75,14 @@ export default storybook => {
             collapsible={true}
           >
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
@@ -102,14 +102,14 @@ export default storybook => {
             collapsible={true}
           >
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
             <CourseCard
-              courseName={exampleCard.courseName}
+              name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}

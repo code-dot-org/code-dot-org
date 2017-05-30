@@ -9,6 +9,8 @@ import i18n from '@cdo/locale';
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
 
+const isPublic = window.location.pathname.startsWith('/projects/public');
+
 $(document).ready(() => {
   if (experiments.isEnabled('publicGallery')) {
     // We need to see whether the experiment is enabled from angularProjects.js,
@@ -17,7 +19,7 @@ $(document).ready(() => {
     const gallerySwitcher = document.getElementById('gallery-switcher');
     ReactDOM.render(
       <GallerySwitcher
-        initialGallery={Galleries.PRIVATE}
+        initialGallery={isPublic ? Galleries.PUBLIC : Galleries.PRIVATE}
         showGallery={showGallery}
       />, gallerySwitcher);
 
@@ -35,8 +37,14 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
+  updateLocation(gallery);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
+}
+
+function updateLocation(gallery) {
+  const path = (gallery === Galleries.PUBLIC) ? '/projects/public' : '/projects';
+  window.history.pushState(null, document.title, path);
 }
 
 function onShowConfirmPublishDialog(callback) {

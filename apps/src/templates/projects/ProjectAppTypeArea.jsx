@@ -40,6 +40,7 @@ const NUM_PROJECTS_TO_ADD = 12;
 
 const ProjectAppTypeArea = React.createClass({
   propTypes: {
+    labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
     projectList: PropTypes.arrayOf(projectPropType),
@@ -59,8 +60,7 @@ const ProjectAppTypeArea = React.createClass({
   },
 
   viewMore() {
-    const appName = this.props.labName.toLowerCase().replace(' ', '');
-    this.props.navigateFunction(appName);
+    this.props.navigateFunction(this.props.labKey);
   },
 
   renderProjectCardList(projectList, max) {

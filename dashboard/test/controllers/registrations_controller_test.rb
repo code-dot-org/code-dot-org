@@ -189,6 +189,15 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
   end
 
+  test "update student without user param returns 400 BAD REQUEST" do
+    student = create :student
+    sign_in student
+    assert_does_not_create(User) do
+      post :update, params: {}
+    end
+    assert_response :bad_request
+  end
+
   test "update student with utf8mb4 in name fails" do
     student = create :student
 

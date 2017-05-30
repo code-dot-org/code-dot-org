@@ -26,9 +26,19 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "true",
-    "instructions": "These clouds are bugging me! Some of the clouds have flowers inside, and some don't. I should check each cloud, and only get nectar from the flowers."
+    "instructions": "These clouds are bugging me! Some of the clouds have flowers inside, and some don't. I should check each cloud, and only get nectar from the flowers.",
+    "contained_level_names": null,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"feeling_stuck_callout_test\",\r\n  \"callout_text\": \" Feeling Stuck?<br />Click the lightbulb for a hint!\",\r\n  \"element_id\": \"#lightbulb\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"This is a test hint.\",\"hint_id\":\"test_hint\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e71f0374051be1a677b223f6cc8aa82a/Quantum Bee - Ryan.mp3\"}]"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 17:50:40 +0000\",\"changed\":[\"notes\",\"toolbox_blocks\",\"recommended_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-05-26 17:51:17 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-05-26 17:51:51 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-05-26 17:52:24 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

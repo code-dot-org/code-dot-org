@@ -6,10 +6,7 @@
  * Experiment state is persisted across page loads using local storage.
  */
 import { trySetLocalStorage } from '../utils';
-
-// trackEvent is provided by _analytics.html.haml in most cases. In those where
-// it isn't, we still want experiments to work.
-const trackEvent = window.trackEvent || (() => {});
+import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 

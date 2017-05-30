@@ -16,6 +16,30 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
 
   test_redirect_to_sign_in_for :attend, params: -> {{session_code: @session.code}}
 
+  test 'attend workshop I organized redirects with cant join message' do
+    sign_in @workshop.organizer
+
+    assert_does_not_create Pd::Attendance do
+      get :attend, params: {session_code: @session.code}
+    end
+    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
+    assert flash[:notice]
+    assert flash[:notice].start_with? "You can't attend this workshop because you organized it."
+  end
+
+  test 'attend workshop I facilitated redirects with cant join message' do
+    facilitator = create :facilitator
+    @workshop.facilitators << facilitator
+    sign_in facilitator
+
+    assert_does_not_create Pd::Attendance do
+      get :attend, params: {session_code: @session.code}
+    end
+    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
+    assert flash[:notice]
+    assert flash[:notice].start_with? "You can't attend this workshop because you organized it."
+  end
+
   test 'attend too soon renders too_soon view' do
     sign_in @teacher
     Pd::Session.any_instance.expects(:too_soon_for_attendance?).returns(true)

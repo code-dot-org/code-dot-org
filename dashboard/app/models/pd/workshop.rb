@@ -493,4 +493,8 @@ class Pd::Workshop < ActiveRecord::Base
   def unattended_enrollments
     enrollments.left_outer_joins(:attendances).where(pd_attendances: {id: nil})
   end
+
+  def organizer_or_facilitator?(user)
+    organizer == user || facilitators.include?(user)
+  end
 end

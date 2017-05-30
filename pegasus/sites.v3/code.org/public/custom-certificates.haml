@@ -10,24 +10,26 @@ theme: none
 -unless request.post?
   -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
-  - course = request.params['course'] || ScriptConstants::HOC_NAME
+  -# The correct param here is "script" but we want to support lingering usages of the
+    legacy param course as well
+  - script = request.params['script'] || request.params['course'] || ScriptConstants::HOC_NAME
 
-  - small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
-  - course_name = 'Hour of Code'
-  - if course == ScriptConstants::TWENTY_HOUR_NAME
-    - course_name = "K-8 Intro to Computer Science Course"
-  - elsif course == ScriptConstants::MINECRAFT_NAME || course == ScriptConstants::MINECRAFT_DESIGNER_NAME
-    - course_name = "Minecraft Hour of Code"
+  - small_certificate_image_url = "/images/fit-240/#{certificate_template_for(script)}"
+  - script_name = 'Hour of Code'
+  - if script == ScriptConstants::TWENTY_HOUR_NAME
+    - script_name = "K-8 Intro to Computer Science Course"
+  - elsif script == ScriptConstants::MINECRAFT_NAME || script == ScriptConstants::MINECRAFT_DESIGNER_NAME
+    - script_name = "Minecraft Hour of Code"
 
   %h1 Print a batch of certificates
   %div.clear
     %div{:style=>"float: left; margin: 0 40px 0 0;"}<
       %img{:src=>small_certificate_image_url}
     %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-      Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{course_name} certificates will be generated.
+      Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{script_name} certificates will be generated.
   %form{:method=>"post", :action=>'/custom-certificates'}
-    -if course
-      %input{:type=>"hidden", :name=>'course', :value=>course}
+    -if script
+      %input{:type=>"hidden", :name=>'script', :value=>script}
     %textarea{:name=>'names', :rows=>"10", :cols=>"40"}
       -if request.params['names']
         - request.params['names'].each do |name|
@@ -42,11 +44,11 @@ theme: none
     %br
     %input{:type=>"submit", :value=>"Submit"}
 -else
-  -course = request.params['course'] || ScriptConstants::HOC_NAME
+  -script = request.params['script'] || ScriptConstants::HOC_NAME
   -sponsor = request.params['sponsor']
 
   %div.hide-print
-    -if course == ScriptConstants::TWENTY_HOUR_NAME
+    -if script == ScriptConstants::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
     -else
       %h1 Hour of Code Certificates
@@ -70,6 +72,6 @@ theme: none
       -unless count == 0
         .page-break
       -name.chomp!
-      %img{:src=>"#{certificate_image_url(name:name, sponsor:sponsor, course:course, course_title:course_name)}", :width=>"100%"}
+      %img{:src=>"#{certificate_image_url(name:name, sponsor:sponsor, course:script, course_title:script_name)}", :width=>"100%"}
       -count += 1
-    -slog(tag: 'print_certificates', course: course, count: count)
+    -slog(tag: 'print_certificates', course: script, count: count)

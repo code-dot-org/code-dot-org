@@ -1,5 +1,6 @@
 module Pd
   class WorkshopDashboardController < ApplicationController
+    include NewAttendanceModel
     before_action :authenticate_user!
 
     def index
@@ -19,6 +20,8 @@ module Pd
         render_404
         return
       end
+
+      @new_attendance_model = new_attendance_model_enabled?
 
       view_options(full_width: true)
     end

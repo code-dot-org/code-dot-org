@@ -57,10 +57,14 @@ const DataOverview = React.createClass({
 
   render() {
     const visible = (DataView.OVERVIEW === this.props.view);
+
     return (
       <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
         <h4>Data</h4>
 
+        <h5>{msg.dataTabExplanation()}</h5>
+        <br/>
+        <p>{msg.keyValueCaption()}</p>
         <table style={styles.table}>
           <tbody>
           <tr style={dataStyles.row}>
@@ -74,6 +78,8 @@ const DataOverview = React.createClass({
           </tbody>
         </table>
 
+        <br/>
+        <p>{msg.dataTableCaption()}</p>
         <table style={styles.table}>
           <colgroup>
             <col width={tableWidth - buttonColumnWidth}/>

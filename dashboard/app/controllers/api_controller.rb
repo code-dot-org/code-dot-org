@@ -194,9 +194,10 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:isHoc] = script.hoc?
 
-      recent_driver = UserLevel.most_recent_driver(script, level, current_user)
+      recent_driver, recent_attempt = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
         response[:pairingDriver] = recent_driver
+        response[:pairingAttempt] = edit_level_source_path(recent_attempt) if recent_attempt
       end
     end
 
@@ -204,7 +205,7 @@ class ApiController < ApplicationController
       slog(
         tag: 'activity_start',
         script_level_id: script_level.try(:id),
-        level_id: level.id,
+        level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
         user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
         locale: locale
       )
@@ -367,7 +368,7 @@ class ApiController < ApplicationController
   # NOTE: This method assumes load_section has been previously called.
   def load_script
     script_id = params[:script_id] if params[:script_id].present?
-    script_id ||= @section.script.id if @section.script
+    script_id ||= @section.default_script.try(:id)
     @script = Script.get_from_cache(script_id) if script_id
     @script ||= Script.twenty_hour_script
   end

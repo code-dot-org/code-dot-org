@@ -28,11 +28,23 @@ class SurveyResult < ActiveRecord::Base
     "other" => "Other/Unknown"
   }.freeze
 
-  DIVERSITY_ATTRS = ETHNICITIES.keys.map {|key| "diversity_#{key}"}
-  DIVERSITY_ATTRS << "diversity_farm"
+  DIVERSITY_ATTRS = (ETHNICITIES.keys.map {|key| "diversity_#{key}"} + ['diversity_farm']).freeze
 
   NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment).freeze
 
+  FREE_RESPONSE_ATTRS = %w(nps_comment).freeze
+  NON_FREE_RESPONSE_ATTRS = %w(
+    diversity_white
+    diversity_black
+    diversity_hispanic
+    diversity_asian
+    diversity_asian
+    diversity_native
+    diversity_american_indian
+    diversity_other
+    diversity_farm
+    nps_value
+  ).freeze
   ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
 
   serialized_attrs ALL_ATTRS

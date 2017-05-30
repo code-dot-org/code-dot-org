@@ -9,7 +9,8 @@
     COURSES: #{Pd::Workshop::COURSES},
     SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json},
     STATES: #{Pd::Workshop::STATES},
-    permission: "#{@permission}"
+    permission: "#{@permission}",
+    newAttendance: "#{@new_attendance_model}"
   }
 %script{src: minifiable_asset_path('js/pd.js')}
 

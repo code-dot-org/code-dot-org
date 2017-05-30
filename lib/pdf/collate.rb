@@ -64,7 +64,7 @@ module PDF
 
     unless status == 0
       puts output
-      exit status
+      raise "Ghostscript error: non-zero status of #{status}"
     end
 
     temp_file_handles.each(&:unlink)

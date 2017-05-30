@@ -4,12 +4,12 @@ class Api::V1::Pd::WorkshopSurveysController < ApplicationController
 
   def create
     form_data_hash = params.try(:[], :form_data) || {}
-    form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
 
-    workshop_survey = @pd_enrollment.survey_class.create(
-      pd_enrollment: @pd_enrollment,
-      form_data: form_data_json
+    workshop_survey = @pd_enrollment.survey_class.new(
+      pd_enrollment: @pd_enrollment
     )
+    workshop_survey.form_data_hash = form_data_hash
+    workshop_survey.save
 
     if workshop_survey.valid?
       render json: {id: workshop_survey.id}, status: :created

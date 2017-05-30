@@ -65,11 +65,15 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Use this block to put text on the screen\",\r\n  \"element_id\": \"#droplet_palette_block_text\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"drawing\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "markdown_instructions": "# Adding Text\r\n\r\nThe `text` block lets you put text anywhere you'd like on the screen. Change this text in the provided block to something else and add a second `text` block to write in a different part of the screen.\r\n\r\n_Tip: The default text size is pretty small, you can use the `textSize` block to change that. You can also use the `fill` block to change the color of your text._",
-    "contained_level_names": null
+    "markdown_instructions": "# Adding Text\r\n\r\nThe `text` block lets you put text anywhere you'd like on the screen. Change this text in the provided block to something else and add a second `text` block to write in a different part of the screen.\r\n\r\n_Tip: The default text size is pretty small, but you can use the `textSize` block to change that. You can also use the `fill` block to change the color of your text._",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:32:33 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

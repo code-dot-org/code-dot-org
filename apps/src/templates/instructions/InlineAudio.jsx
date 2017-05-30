@@ -1,9 +1,8 @@
-/* global trackEvent */
 import MD5 from 'crypto-js/md5';
 import Radium from 'radium';
 import React from 'react';
-
 import { connect } from 'react-redux';
+import trackEvent from '../../util/trackEvent';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {

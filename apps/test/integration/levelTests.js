@@ -25,6 +25,8 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
+window.appOptions = {};
+
 var testUtils = require('../util/testUtils');
 import {setupBlocklyFrame} from './util/testBlockly';
 

@@ -548,6 +548,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal enrollments.map(&:id).sort, @workshop.unattended_enrollments.all.map(&:id).sort
   end
 
+  test 'organizer_or_facilitator?' do
+    facilitator = create :facilitator
+    @workshop.facilitators << facilitator
+    another_organizer = create :workshop_organizer
+    another_facilitator = create :facilitator
+
+    assert @workshop.organizer_or_facilitator?(@organizer)
+    assert @workshop.organizer_or_facilitator?(facilitator)
+    refute @workshop.organizer_or_facilitator?(another_organizer)
+    refute @workshop.organizer_or_facilitator?(another_facilitator)
+  end
+
   private
 
   def session_on_day(day_offset)

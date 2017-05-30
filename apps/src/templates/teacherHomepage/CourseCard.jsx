@@ -22,7 +22,7 @@ const styles = {
     backgroundColor: color.teal,
     height: 130
   },
-  courseName: {
+  name: {
     paddingLeft: 25,
     paddingRight: 10,
     paddingTop: 10,
@@ -90,9 +90,13 @@ const styles = {
   },
 };
 
+/**
+ * A card used on the homepage to display information about a particular course
+ * or script for a user.
+ */
 const CourseCard = React.createClass({
   propTypes: {
-    courseName: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
     assignedSections: React.PropTypes.array.isRequired
@@ -126,14 +130,14 @@ const CourseCard = React.createClass({
   },
 
   render() {
-    const { courseName, description, link } = this.props;
+    const { name, description, link } = this.props;
 
     return (
       <div style={styles.card}>
         <div style={styles.tealBar}/>
         {this.renderEnrollmentIcon()}
-        <div style={styles.courseName}>
-          {courseName}
+        <div style={styles.name}>
+          {name}
         </div>
         <div style={styles.description}>
           {description}

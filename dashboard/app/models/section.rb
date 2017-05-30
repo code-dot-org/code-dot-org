@@ -9,6 +9,7 @@
 #  updated_at        :datetime
 #  code              :string(255)
 #  script_id         :integer
+#  course_id         :integer
 #  grade             :string(255)
 #  login_type        :string(255)      default("email"), not null
 #  deleted_at        :datetime
@@ -18,6 +19,7 @@
 #
 # Indexes
 #
+#  fk_rails_20b1e5de46        (course_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -41,6 +43,7 @@ class Section < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :script
+  belongs_to :course
 
   has_many :section_hidden_stages
 
@@ -124,6 +127,14 @@ class Section < ActiveRecord::Base
 
     old_follower.destroy
     add_student student
+  end
+
+  # Figures out the default script for this section. If the section is assigned to
+  # a course rather than a script, it returns the first script in that course
+  # @return [Script, nil]
+  def default_script
+    return script if script
+    return course.try(:course_scripts).try(:first).try(:script)
   end
 
   private

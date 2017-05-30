@@ -3,18 +3,17 @@ import CollapsibleSection from './CollapsibleSection';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
+import shapes from './shapes';
 
+/**
+ * Though named RecentCoursesCollapsible, this component represents a collection
+ * of courses and/or scripts. These come from sections the user is in, or from
+ * courses/scripts they have recently made progress in.
+ */
 const RecentCoursesCollapsible = React.createClass({
   propTypes: {
-    courses: PropTypes.arrayOf(
-      PropTypes.shape({
-        courseName: React.PropTypes.string.isRequired,
-        description: React.PropTypes.string.isRequired,
-        image: React.PropTypes.string.isRequired,
-        assignedSections: React.PropTypes.array.isRequired
-      })
-    ),
-    showAllCoursesLink: React.PropTypes.bool.isRequired
+    courses: shapes.courses,
+    showAllCoursesLink: PropTypes.bool.isRequired
   },
 
   render() {
@@ -31,7 +30,7 @@ const RecentCoursesCollapsible = React.createClass({
           courses.map((course, index) =>
             <CourseCard
               key={index}
-              courseName={course.courseName}
+              name={course.name}
               description={course.description}
               image={course.image}
               link={course.link}

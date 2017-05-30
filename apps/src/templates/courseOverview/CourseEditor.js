@@ -16,6 +16,7 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    descriptionShort: PropTypes.string,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -26,6 +27,7 @@ export default class CourseEditor extends Component {
     const {
       name,
       title,
+      descriptionShort,
       descriptionStudent,
       descriptionTeacher,
       scriptsInCourse,
@@ -40,6 +42,15 @@ export default class CourseEditor extends Component {
             type="text"
             name="title"
             defaultValue={title}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Short Description (used in course cards on homepage)
+          <textarea
+            name="description_short"
+            defaultValue={descriptionShort}
+            rows={5}
             style={styles.input}
           />
         </label>

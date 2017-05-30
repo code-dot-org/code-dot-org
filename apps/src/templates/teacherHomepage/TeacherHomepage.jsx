@@ -22,6 +22,7 @@ const TeacherHomepage = React.createClass({
       <div>
         <HeadingBanner
           headingText={i18n.homepageHeading()}
+          extended={false}
         />
         <AnnouncementsCollapsible announcements={announcements}/>
         <RecentCoursesCollapsible

@@ -1,6 +1,4 @@
 var webpackConfig = require('./webpack').karmaConfig;
-var webpack = require('webpack');
-var _ = require('lodash');
 var envConstants = require('./envConstants');
 
 var PORT = 9876;
@@ -52,7 +50,10 @@ module.exports = function (config) {
 
     webpack: webpackConfig,
     webpackMiddleware: {
-      noInfo: true
+      noInfo: true,
+      stats: {
+        chunks: false
+      }
     },
     client: {
       // log console output in our test console

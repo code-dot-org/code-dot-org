@@ -2,8 +2,9 @@ import React from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
-import placeholderImage from './placeholder.jpg';
 import $ from 'jquery';
+
+const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 const styles = {
   card: {
@@ -207,7 +208,7 @@ const ProjectCard = React.createClass({
 
   renderProjectName(url, name) {
     return (
-      <a style={styles.titleLink} href={url} target="_blank">
+      <a style={styles.titleLink} href={url}>
         <div style={styles.title}>{name}</div>
       </a>
     );
@@ -224,7 +225,7 @@ const ProjectCard = React.createClass({
     const { projectData } = this.props;
 
     const {type, channel, name} = this.props.projectData;
-    const url = `/projects/${type}/${channel}/view`;
+    const url = `/projects/${type}/${channel}`;
 
     return (
       <div>
@@ -232,7 +233,7 @@ const ProjectCard = React.createClass({
           <div style={styles.thumbnail} >
             <a href={url} style={{width: '100%'}}>
               <img
-                src={projectData.thumbnailUrl || placeholderImage}
+                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                 style={styles.image}
               />
             </a>

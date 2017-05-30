@@ -7,10 +7,12 @@
 
   %table.projects{'ng-show' => 'projects.length > 0'}
     %colgroup
+      %col{width: "46"}
       %col{width: "250"}
-      %col{width: "200"}
-      %col{'ng-style' => '{"width": isPublicGalleryEnabled ? 256 : 200}'}
+      %col{width: "180"}
+      %col{'ng-style' => '{"width": isPublicGalleryEnabled ? 296 : 240}'}
     %tr
+      %th
       %th
         %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
           = t('projects.name')
@@ -23,6 +25,8 @@
           %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
       %th
     %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
+      %td{ style: "padding: 3px 0px;"}
+        %img{ style: "width: 50px;", "ng-src" => '{{ project.thumbnail() }}' }
       %td.name
         %span{'ng-hide' => 'project.editing'}
           %a{href: '', "ng-href" => '{{ project.editUrl() }}'}
@@ -35,7 +39,7 @@
         %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
         %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
 
-        %span{'ng-show' => 'isPublicGalleryEnabled && !project.deleting'}
+        %span{'ng-show' => 'isPublicGalleryEnabled && !project.deleting && project.isPublishableProjectType()'}
           %button.btn.btn-default{'ng-click' => 'showPublishProjectDialog(project)', 'ng-hide' => 'project.publishedAt'}
             = t('project.publish')
           %button.btn.btn-default{'ng-click' => 'unpublishProject(project)', 'ng-show' => 'project.publishedAt'}
@@ -46,6 +50,10 @@
           = t('project.really_delete')
           %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
+
+  .row
+    .span12
+      = t('project.thumbnail_help')
 
 .row
   .span12

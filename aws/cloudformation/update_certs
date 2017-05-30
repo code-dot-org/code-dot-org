@@ -10,6 +10,7 @@
 # - Existing valid ACME account key in the object storage (created by `acmesmith register CONTACT`)
 # - configuration in ./acmesmith.yml
 require_relative '../../deployment'
+require 'acmesmith/command'
 
 unless ARGV.length == 1
   puts "Usage: #{$0} [domain]"
@@ -22,7 +23,7 @@ unless $?.success?
   required_certs = ['', 'dashboard-', 'origin-'].map {|prefix| prefix + domain}
   CDO.log.info "Authorizing SSL certificates for subdomain: #{domain}"
   required_certs.each do |auth|
-    CDO.log.info `acmesmith authorize #{auth}`
+    Acmesmith::Command.start ['authorize', auth]
   end
-  CDO.log.info `acmesmith request #{required_certs.join(' ')}`
+  Acmesmith::Command.start ['request'].concat(required_certs)
 end

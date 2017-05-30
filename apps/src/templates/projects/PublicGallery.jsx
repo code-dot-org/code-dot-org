@@ -1,6 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
+import i18n from "@cdo/locale";
+import color from "../../util/color";
 
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -12,6 +14,12 @@ export const publishedProjectPropType = PropTypes.shape({
   publishedAt: PropTypes.string.isRequired,
 });
 
+const styles = {
+  link: {
+    color: color.light_teal,
+    paddingLeft: 30
+  }
+};
 
 class PublicGallery extends Component {
   static propTypes = {
@@ -46,10 +54,13 @@ class PublicGallery extends Component {
   render() {
     const {projectLists} = this.props;
     return (
-      <ProjectCardGrid
-        projectLists={this.mapProjectData(projectLists)}
-        galleryType="public"
-      />
+      <div>
+        <ProjectCardGrid
+          projectLists={this.mapProjectData(projectLists)}
+          galleryType="public"
+        />
+        <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
+      </div>
     );
   }
 }

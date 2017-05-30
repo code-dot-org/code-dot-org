@@ -29,14 +29,24 @@ describe("codegen", function () {
   describe("marshalNativeToInterpreter function", () => {
     let interpreter, value;
     beforeEach(() => {
-      interpreter = new CustomMarshalingInterpreter('', new CustomMarshaler({}), (interpreter, scope) => {
-        interpreter.setProperty(scope, 'assert', interpreter.createNativeFunction((truthy, message) => {
-          if (truthy !== interpreter.TRUE) {
-            console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
-            throw new Error(message);
-          }
-        }));
-      });
+      interpreter = new CustomMarshalingInterpreter(
+        '',
+        new CustomMarshaler({}),
+        (interpreter, scope) => {
+          interpreter.setProperty(
+            scope,
+            'assert',
+            interpreter.createNativeFunction((truthy, message) => {
+              if (truthy !== interpreter.TRUE) {
+                console.log(
+                  interpreter.stateStack[interpreter.stateStack.length - 1]
+                );
+                throw new Error(message);
+              }
+            })
+          );
+        }
+      );
       sinon.spy(interpreter, 'createPrimitive');
     });
 
@@ -231,6 +241,190 @@ describe("codegen", function () {
         const nativeVar = nativeParentObj.foo;
         codegen.marshalNativeToInterpreter(interpreter, nativeVar, nativeParentObj);
         expect(interpreter.customMarshaler.createCustomMarshalObject).to.have.been.calledWith(nativeVar, nativeParentObj);
+      });
+    });
+  });
+
+  describe('makeNativeMemberFunction function', () => {
+    let options, interpreter, result, isPaused;
+
+    it('returns a function', () => {
+      expect(codegen.makeNativeMemberFunction({})).to.be.an.instanceOf(
+        Function
+      );
+    });
+
+    function testTheBasics() {
+      it('will call the nativeFunc', () => {
+        expect(options.nativeFunc).to.have.been.called;
+      });
+      it("will call the nativeFunc with the nativeParentObj as the 'this'", () => {
+        expect(options.nativeFunc.thisValues[0]).to.equal(
+          options.nativeParentObj
+        );
+      });
+      it('will marshal the native return value back to an interpreter value', () => {
+        expect(result).to.be.an.instanceOf(Interpreter.Primitive);
+        expect(result.toNumber()).to.equal(6);
+      });
+    }
+
+    function runWithOptions(code, getOpts) {
+      beforeEach(() => {
+        const opts = getOpts();
+        interpreter = new CustomMarshalingInterpreter(
+          code,
+          new CustomMarshaler({}),
+          (interpreter, scope) => {
+            options = {...opts, interpreter};
+            const nativeFunc = codegen.makeNativeMemberFunction(options);
+            interpreter.setProperty(
+              scope,
+              'memberFunc',
+              opts.nativeIsAsync
+                ? interpreter.createAsyncFunction(nativeFunc)
+                : interpreter.createNativeFunction(nativeFunc)
+            );
+          }
+        );
+        isPaused = interpreter.run();
+        result = interpreter.getProperty(interpreter.globalScope, 'result');
+      });
+    }
+
+    describe('when dontMarshal=true', () => {
+      runWithOptions('var result = memberFunc(1,2,3)', () => ({
+        dontMarshal: true,
+        nativeFunc: sinon.stub().returns(6),
+        nativeParentObj: {},
+        maxDepth: 5,
+      }));
+
+      testTheBasics();
+
+      it('will pass along the unmarshaled interpreter arguments to the nativeFunc', () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args.length).to.equal(3);
+        expect(args[0]).to.be.an.instanceOf(Interpreter.Primitive);
+        expect(args[0].toNumber()).to.equal(1);
+        expect(args[1].toNumber()).to.equal(2);
+        expect(args[2].toNumber()).to.equal(3);
+      });
+    });
+
+    describe('when dontMarshal=false', () => {
+      runWithOptions('var result = memberFunc(1,2,3)', () => ({
+        dontMarshal: false,
+        nativeFunc: sinon.stub().returns(6),
+        nativeParentObj: {},
+        maxDepth: 5,
+      }));
+      testTheBasics();
+
+      it('will pass along marshaled arguments to the nativeFunc', () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args.length).to.equal(3);
+        expect(args[0]).to.equal(1);
+        expect(args[1]).to.equal(2);
+        expect(args[2]).to.equal(3);
+      });
+    });
+
+    describe('when dontMarshal=false and nativeIsAsync=true', () => {
+      runWithOptions('var result = memberFunc(1,2)', () => ({
+        dontMarshal: false,
+        nativeFunc: sinon.stub().returns(6),
+        nativeParentObj: {},
+        maxDepth: 5,
+        nativeIsAsync: true,
+      }));
+
+      it('will call the nativeFunc', () => {
+        expect(options.nativeFunc).to.have.been.called;
+      });
+      it("will call the nativeFunc with the nativeParentObj as the 'this'", () => {
+        expect(options.nativeFunc.thisValues[0]).to.equal(
+          options.nativeParentObj
+        );
+      });
+      it('will not return a result immediately, since the native function is asynchronous', () => {
+        expect(result).to.equal(interpreter.UNDEFINED);
+      });
+      it('will pause the interpreter until the function is called', () => {
+        expect(isPaused).to.be.true;
+      });
+
+      it('will automatically tack on an extra callback argument to be passed to the native func', () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args.length).to.equal(3);
+      });
+
+      it('will pass along marshaled arguments to the nativeFunc', () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args[0]).to.equal(1);
+        expect(args[1]).to.equal(2);
+      });
+
+      it('will make the last marshaled argument a native callback function', () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args[args.length - 1]).to.be.an.instanceOf(Function);
+      });
+
+      describe('when the native callback function is eventually called', () => {
+        it('the result will be populated after the interpreter gets run again', (done) => {
+          const args = options.nativeFunc.firstCall.args;
+          window.setTimeout(() => {
+            args[args.length - 1]('new value');
+            result = interpreter.getProperty(interpreter.globalScope, 'result');
+            expect(result).to.equal(interpreter.UNDEFINED);
+
+            isPaused = interpreter.run();
+            expect(isPaused).to.be.false;
+            result = interpreter.getProperty(interpreter.globalScope, 'result');
+            expect(result.toString()).to.equal("new value");
+            done();
+          }, 100);
+        });
+      });
+    });
+
+    describe('when dontMarshal=false and nativeCallsBackInterpreter=true', () => {
+      runWithOptions(
+        'var result = memberFunc(1,2, function(newResult) { result = newResult; })',
+        () => ({
+          dontMarshal: false,
+          nativeFunc: sinon.stub().returns(6),
+          nativeParentObj: {},
+          maxDepth: 5,
+          nativeCallsBackInterpreter: true,
+        })
+      );
+
+      testTheBasics();
+
+      it('will pass along marshaled arguments to the nativeFunc', () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args[0]).to.equal(1);
+        expect(args[1]).to.equal(2);
+      });
+
+      it("will wrap any interpreter function arguments into a native function", () => {
+        const args = options.nativeFunc.firstCall.args;
+        expect(args[2]).to.be.an.instanceOf(Function);
+      });
+
+      describe("when the interpreter function passed to the native func is called", () => {
+        beforeEach(() => options.nativeFunc.firstCall.args[2]("a new result"));
+
+        it("will call the interpreter function the next time the interpreter is run", () => {
+          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
+          expect(result.toNumber()).to.equal(6);
+          interpreter.run();
+          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
+          expect(result.toString()).to.equal("a new result");
+        });
       });
     });
 

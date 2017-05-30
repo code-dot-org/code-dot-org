@@ -58,6 +58,17 @@ module AWS
       filename
     end
 
+    # Attempts to delete a specified file from the given s3 bucket.
+    # @param [String] bucket The s3 bucket name.
+    # @param [String] filename The filename to delete.
+    # @return [Boolean] If the file was successfully deleted.
+    def self.delete_from_bucket(bucket, filename)
+      response = create_client.delete_object({bucket: bucket, key: filename})
+      response.delete_marker
+    rescue Aws::S3::Errors::NoSuchKey
+      false
+    end
+
     # Allow the RNG to be stubbed in tests
     def self.random
       SecureRandom.hex

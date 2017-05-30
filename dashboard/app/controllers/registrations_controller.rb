@@ -8,6 +8,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def update
+    return head(:bad_request) if params[:user].nil?
     @user = User.find(current_user.id)
 
     successfully_updated =
@@ -18,7 +19,7 @@ class RegistrationsController < Devise::RegistrationsController
       else
         # remove the virtual current_password attribute update_without_password
         # doesn't know how to ignore it
-        params[:user].delete(:current_password) if params[:user]
+        params[:user].delete(:current_password)
         @user.update_without_password(update_params(params))
       end
 

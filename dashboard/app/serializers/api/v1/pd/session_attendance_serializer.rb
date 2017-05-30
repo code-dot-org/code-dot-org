@@ -17,7 +17,8 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
         enrollment_id: enrollment.id,
         user_id: id_or_nil(enrollment.user),
         in_section: in_section?(enrollment.user),
-        attended: attended?(enrollment)
+        attended: attended?(enrollment),
+        puzzles_completed: UserLevel.where(user_id: enrollment.user_id).passing.count
       }
     end
   end

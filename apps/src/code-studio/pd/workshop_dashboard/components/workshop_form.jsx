@@ -760,4 +760,4 @@ const WorkshopForm = React.createClass({
     );
   }
 });
-module.exports = WorkshopForm;
+export default WorkshopForm;

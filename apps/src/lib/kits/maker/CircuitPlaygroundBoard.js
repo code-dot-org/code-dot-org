@@ -67,7 +67,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.fiveBoard_ = board;
         resolve();
       });
-      board.once('error', reject);
+      board.on('error', reject);
     });
   }
 

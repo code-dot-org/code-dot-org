@@ -182,9 +182,10 @@ module LevelsHelper
     end
 
     if @user
-      recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
+      recent_driver, recent_attempt = UserLevel.most_recent_driver(@script, @level, @user)
       if recent_driver
         level_view_options(pairing_driver: recent_driver)
+        level_view_options(pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
       end
     end
 

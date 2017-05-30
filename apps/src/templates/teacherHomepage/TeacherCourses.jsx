@@ -18,7 +18,7 @@ const TeacherCourses = React.createClass({
           description={""}
           image="../../static/navcard-placeholder.png"
           buttonText={i18n.learnMore()}
-          link={`${codeOrgUrlPrefix}/hourofcode/all`}
+          link={`${codeOrgUrlPrefix}/hourofcode/overview`}
         />
         <ResourceCard
           title={i18n.teacherCourseElementary()}

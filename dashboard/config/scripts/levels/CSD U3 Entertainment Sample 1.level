@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "true",
-    "markdown_instructions": "Press \"Run\" to play the game on the left.  You can make the alien jump with the up arrow, and move it to the left and right with the arrow keys.  You score by collecting stars, and if you score high enough, the background will change.",
+    "markdown_instructions": "# Alien Jumper\r\n\r\nPress \"Run\" to play the game on the left.  You can make the alien jump with the up arrow, and move it to the left and right with the arrow keys.  You score by collecting stars, and if you score high enough, the background will change.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -42,10 +42,14 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 19:13:07 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

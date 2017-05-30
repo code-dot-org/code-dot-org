@@ -1,4 +1,4 @@
-/* global addToHome trackEvent Applab Blockly */
+/* global addToHome Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
 import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
+import trackEvent from '../../util/trackEvent';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -329,6 +330,7 @@ function loadAppAsync(appOptions) {
 
           if (data.pairingDriver) {
             appOptions.level.pairingDriver = data.pairingDriver;
+            appOptions.level.pairingAttempt = data.pairingAttempt;
           }
         }
 

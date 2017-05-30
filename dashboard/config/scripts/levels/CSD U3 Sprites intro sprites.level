@@ -35,7 +35,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Do This",
-    "markdown_instructions": "# Sprites\r\n\r\n**Creating Sprites:** The <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\"> block creates a new sprite and assigns it to a variable (by default `sprite`).\r\n\r\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling the ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command will draw all of your created sprites on screen.\r\n\r\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\r\n\r\n# Do This\r\n\r\nThis program includes comments that let you know where to place code but otherwise is blank. You program should look like the image on the right.\r\n\r\n* Add a `var sprite = createSprite(200, 200)` block under the comment \"Creating Sprites\"\r\n* Add a `drawSprites()` block under the comment `Drawing`\r\n* **Run the code** to draw your first sprite on the screen.\r\n\r\n",
+    "markdown_instructions": "# Sprites\r\n\r\n**Creating Sprites:** The <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\"> block creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\r\n\r\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling the ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command will draw all of your created sprites on the screen.\r\n\r\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\r\n\r\n# Do This\r\n\r\nThis program includes comments that let you know where to place code but otherwise is blank. You program should look like the image on the right.\r\n\r\n* Add a `var sprite = createSprite(200, 200)` block under the comment \"Creating Sprites\"\r\n* Add a `drawSprites()` block under the comment `Drawing`\r\n* **Run the code** to draw your first sprite on the screen.\r\n\r\n",
     "show_d_pad": "false",
     "callout_json": "[\r\n  {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_createSprite\",\r\n  \"callout_text\": \"Use this block to create a sprite\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "start_blocks": "// Creating Sprites\r\n\r\n// Drawing",
@@ -54,6 +54,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:17:16 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

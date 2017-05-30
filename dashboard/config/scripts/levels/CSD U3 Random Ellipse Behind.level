@@ -15,7 +15,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write code that makes an orange ellipse behind the green one\r\n* Don't worry about the exact size as long as the green ellipse is entirely inside the orange one",
+    "markdown_instructions": "<img src=\"https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write code that makes an orange ellipse behind the green one.\r\n* Don't worry about the exact size as long as the green ellipse is entirely inside the orange one.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_blocks": "noStroke();\r\n\r\nfill(\"green\");\r\nellipse(200,200,200,150);",
@@ -48,10 +48,14 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 19:55:00 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

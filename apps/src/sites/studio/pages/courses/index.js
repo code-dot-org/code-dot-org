@@ -18,6 +18,7 @@ function showCourses() {
   const linesCount = coursesData.linescount;
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
+  const signedOut = coursesData.signedout;
 
   ReactDOM.render (
     <Courses
@@ -27,6 +28,7 @@ function showCourses() {
       linesCount={linesCount}
       studentsCount={studentsCount}
       codeOrgUrlPrefix={codeOrgUrlPrefix}
+      isSignedOut={signedOut}
     />,
     document.getElementById('courses-container')
   );

@@ -125,7 +125,7 @@ Scenario: Gamelab Flow
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
   And I press the first "#footerDiv .more-link" element
-  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How it works']"
+  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How it Works (View Code)']"
   Then I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "nothing"
   And I wait to see "#codeWorkspace"
   And I should see title "Code Ninja II: Uncaught Exception - Game Lab"
@@ -151,7 +151,7 @@ Scenario: Gamelab Flow
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
   And I press the first "#footerDiv .more-link" element
-  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How it works']"
+  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How it Works (View Code)']"
   Then I get redirected to "/users/sign_in" via "nothing"
   # It'd be nicer if we went to /view in this case, but that's a future feature.
 

@@ -80,6 +80,22 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
   end
 
+  test "should get text_responses for section with assigned course" do
+    script1 = create :script
+    script2 = create :script
+    course = create :course
+    create :course_script, course: course, script: script1, position: 1
+    create :course_script, course: course, script: script2, position: 2
+    course.reload
+
+    section = create(:section, user: @teacher, login_type: 'word', course: course)
+
+    get :section_text_responses, params: {section_id: section.id}
+    assert_response :success
+
+    assert_equal script1, assigns(:script)
+  end
+
   test "should get text_responses for section with specific script" do
     script = Script.find_by_name('algebra')
 
@@ -1082,6 +1098,27 @@ class ApiControllerTest < ActionController::TestCase
       ],
       slogger.records
     )
+  end
+
+  test "should slog the contained level id when present" do
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+    script = create :script
+    stage = create :stage, script: script
+    contained_level = create :multi, name: 'multi level'
+    level = create :maze, name: 'maze level', contained_level_names: ['multi level']
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    user = create :user
+    sign_in user
+
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1
+    }
+
+    assert_equal(contained_level.id, slogger.records.first[:level_id])
   end
 
   test "should get user progress for stage for signed-out user" do

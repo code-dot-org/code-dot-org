@@ -55,6 +55,7 @@ class OptimizeTest < Minitest::Test
     get(large_image_path)
     # For large image, ImageOptim is not invoked and original image is returned.
     assert_equal original_image_size, last_response.content_length
+    assert_operator 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
   end
 
   def test_gatekeeper_disable
@@ -67,5 +68,18 @@ class OptimizeTest < Minitest::Test
     assert_operator 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
   ensure
     Gatekeeper.delete 'optimize'
+  end
+
+  def test_dcdo_pixel_max
+    DCDO.set('image_optim_pixel_max', 1)
+
+    get('/images/logo.png')
+    assert_equal LOGO_SIZE, last_response.content_length
+    sleep(0.1)
+    get('/images/logo.png')
+    # ImageOptim is not invoked and original image is returned.
+    assert_equal LOGO_SIZE, last_response.content_length
+    assert_operator 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
+    DCDO.set('image_optim_pixel_max', nil)
   end
 end

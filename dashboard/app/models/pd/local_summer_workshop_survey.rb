@@ -18,10 +18,9 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
   def required_fields
     [
       :received_clear_communication,
-      :feedback_venue_logistics,
+      :venue_feedback,
       :how_much_learned,
       :how_motivating,
-      :who_facilitated,
       :how_much_participated,
       :how_often_talk_about_ideas_outside,
       :how_often_lost_track_of_time,
@@ -39,6 +38,11 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
       :things_you_liked,
       :things_you_would_change,
       :give_permission_to_quote,
+    ].freeze
+  end
+
+  def demographics_required_fields
+    [
       :race,
       :highest_education,
       :degree_field,

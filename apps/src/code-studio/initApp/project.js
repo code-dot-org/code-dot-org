@@ -559,7 +559,15 @@ var projects = module.exports = {
         return null;
     }
   },
-  /**
+
+  canServerSideRemix() {
+    // The excluded app types need to make modifications to the project that
+    // apply to the remixed project, but should not be saved on the original
+    // project. See (Turtle|Studio).prepareForRemix().
+    return !['artist', 'playlab'].includes(projects.getStandaloneApp());
+  },
+
+  /*
    * @returns {boolean} Whether a project can be created for this level type.
    */
   isSupportedLevelType() {
@@ -686,7 +694,8 @@ var projects = module.exports = {
       });
     });
   },
-  updateCurrentData_(err, data, shouldNavigate) {
+  updateCurrentData_(err, data, options = {}) {
+    const { shouldNavigate } = options;
     if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
@@ -792,19 +801,23 @@ var projects = module.exports = {
    * copy as the current project.
    * @param {string} newName
    * @param {function} callback
-   * @param {boolean} shouldNavigate Whether to navigate to the project URL.
+   * @param {Object} options Optional parameters.
+   * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
+   * @param {boolean} options.shouldPublish Whether to publish the new project.
    */
-  copy(newName, callback, shouldNavigate) {
+  copy(newName, callback, options = {}) {
+    const { shouldPublish } = options;
     current = current || {};
-    var srcChannel = current.id;
-    var wrappedCallback = this.copyAssets.bind(this, srcChannel,
-        this.copyAnimations.bind(this, srcChannel, callback));
     delete current.id;
     delete current.hidden;
+    if (shouldPublish) {
+      current.shouldPublish = true;
+      current.projectType = this.getStandaloneApp();
+    }
     this.setName(newName);
     channels.create(current, function (err, data) {
-      this.updateCurrentData_(err, data, shouldNavigate);
-      this.save(wrappedCallback,
+      this.updateCurrentData_(err, data, options);
+      this.save(callback,
           false /* forceNewVersion */,
           true /* preparingRemix */);
     }.bind(this));
@@ -850,6 +863,8 @@ var projects = module.exports = {
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
       projects.save(redirectToRemix, false, true);
+    } else if (current.isOwner) {
+      this.sourceHandler.prepareForRemix().then(redirectToRemix);
     } else {
       redirectToRemix();
     }

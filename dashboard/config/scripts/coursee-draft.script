@@ -137,6 +137,7 @@ named_level 'courseF_video_csMatters'
 named_level 'Geometric Sun'
 named_level 'Robot Doodle'
 named_level 'Alien Defender'
+named_level 'Find the Wizard'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project'

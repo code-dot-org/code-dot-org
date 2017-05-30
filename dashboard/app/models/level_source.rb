@@ -38,10 +38,6 @@ class LevelSource < ActiveRecord::Base
     self.md5 = Digest::MD5.hexdigest(data)
   end
 
-  # This string used to sometimes appear in program XML.
-  # We now strip it out, but it remains in some old LevelSource.data.
-  # A level_source is considered to be standardized if it does not have this.
-
   def self.cache_key(level_id, md5)
     "#{level_id}-#{md5}"
   end

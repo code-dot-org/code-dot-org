@@ -56,6 +56,7 @@ Resources:
           - Effect: Allow
             Action: ['s3:GetObject']
             Resource: 'arn:aws:s3:::*'
+          - Effect: Allow
             Action:
             - "s3:PutObject"
             - "s3:PutObjectAcl"
@@ -122,6 +123,7 @@ Resources:
             Resource:
             - "arn:aws:s3:::cdo-dist/adhoc/*"
             - "arn:aws:s3:::cdo-build-logs/*"
+            - "arn:aws:s3:::<%=TEMP_BUCKET%>/*"
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:

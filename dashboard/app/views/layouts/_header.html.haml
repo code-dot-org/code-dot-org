@@ -25,9 +25,10 @@
   - hamburger_options[:language] = request.language
   - hamburger_options[:code_org_url_base] = CDO.code_org_url
   - hamburger_options[:studio_url_base] = CDO.studio_url
+  - hamburger_options[:show_gallery] = true
 
 .hide_on_mobile{class: header_class}
-  - if show_bug_links
+  - if !show_header2 && show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
       - if level && level.try(:is_project_level) && level.game == Game.gamelab
@@ -47,19 +48,22 @@
           .header_left
             .header_logo
               - if show_header2
-                = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+                = link_to(image_tag('logo.png'), '/home')
               - else
                 - if current_page?(root_url)
                   = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
                 - else
                   = link_to(image_tag('codeorg-studio-logo.png'), '/')
-            %span.project_info
+            - if show_header2
+              .project_info
+            - else
+              %span.project_info
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
             - elsif level
             - elsif show_header2
-              .headerlinks.hide_on_tablet{style: "margin-left: 100px"}
+              .headerlinks.hide_on_tablet
                 - if user_type == "teacher"
                   %a.headerlink{:href=>"/home"} Home
                   %a.headerlink{:href=>"/courses"} Courses
@@ -67,7 +71,6 @@
                   %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")} Sections
                   %a.headerlink{:href=>"/my-professional-learning"} Professional Learning
                 - elsif user_type == "student"
-                  %a.headerlink{:href=>"/home"} Home
                   %a.headerlink{:href=>"/courses"} Courses
                   %a.headerlink{:href=>"/projects"} Project Gallery
                 - elsif request.language == "en"
@@ -98,7 +101,7 @@
 
 - if show_header2
   - if request.path == "/home" || request.path == "/courses"
-    #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.png")'}
+    #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
 
 - if script_level
   - view_as = @user || current_user
