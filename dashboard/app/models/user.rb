@@ -107,8 +107,7 @@ class User < ActiveRecord::Base
     races
     using_text_mode
     last_seen_school_info_interstitial
-    ui_tip_dismissed_header_main
-    ui_tip_dismissed_header_other
+    ui_tip_dismissed_homepage_header
   )
 
   # Include default devise modules. Others available are:
@@ -1179,7 +1178,7 @@ class User < ActiveRecord::Base
 
   def self.csv_attributes
     # same as in UserSerializer
-    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races]
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races, :ui_tip_dismissed_header_main]
   end
 
   def to_csv
