@@ -38,7 +38,7 @@ const RecentCoursesCollapsible = React.createClass({
         )}
         {courses.length === 0 && isTeacher && (
           <CollapsibleSection
-            header={i18n.courses()}
+            heading={i18n.courses()}
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
