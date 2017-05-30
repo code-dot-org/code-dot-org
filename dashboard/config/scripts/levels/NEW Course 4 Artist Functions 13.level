@@ -35,10 +35,10 @@
     "permitted_errors": "0",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the `draw a line of squares` function so that you don't have to call it twice.\",\"hint_id\":\"NEW_Course_4_Artist_Functions_13_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eb10977ad4aba99fb13050c9a6645d5c/NEW Course 4 Artist Functions 13.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What code would you need if you were going to try to make a star using regular lines instead of boxes?\",\"hint_id\":\"NEW_Course_4_Artist_Functions_13_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/589efe3c2a91c2aa3ea79351b444ab09/NEW Course 4 Artist Functions 13.mp3\"}]",
     "discard_background": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

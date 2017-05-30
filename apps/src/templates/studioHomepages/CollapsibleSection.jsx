@@ -5,7 +5,6 @@ import color from "../../util/color";
 const styles = {
   section: {
     width: 940,
-    marginBottom: 50,
   },
   heading: {
     paddingRight: 10,

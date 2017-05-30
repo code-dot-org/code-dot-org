@@ -14,7 +14,7 @@ Help bring these life changing skills to your children and local students!
 
 Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
-[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)
+[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](https://form.jotform.com/71494745584166)
 
 ## Steps:
 
@@ -87,7 +87,7 @@ I am excited to announce that [COMPANY] will be joining Code.org this year to he
 
 
 How you can get involved:
-Join us as [COMPANY]'s Hour of Code event! Sign up to be a volunteer here.</br>
+Join us as [COMPANY]'s Hour of Code event! Sign up to be a volunteer [here](https://form.jotform.com/71494745584166).</br>
 We also strongly suggest to **bring your kids**!
 
 Event details: [INSERT]

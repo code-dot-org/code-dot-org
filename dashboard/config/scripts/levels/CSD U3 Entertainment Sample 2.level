@@ -42,10 +42,7 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

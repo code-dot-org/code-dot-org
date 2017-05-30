@@ -10,14 +10,13 @@ const styles = {
     borderStyle: 'dashed',
     borderWidth: 1,
     borderColor: color.border_gray,
-    borderRadius: 2,
   },
   heading: {
     paddingLeft: 50,
     paddingTop: 80,
     paddingBottom: 20,
     fontSize: 38,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: 'Gotham 5r',
     color: color.teal,
   },
   description: {
