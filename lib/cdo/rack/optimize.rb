@@ -49,11 +49,8 @@ module Rack
     end
 
     def should_process?(env, status, headers, body)
-      # Skip empty entity body responses and responses with no-transform set.
-      if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status) ||
-        headers['Cache-Control'].to_s =~ /\bno-transform\b/
-        return false
-      end
+      # Skip empty entity body responses.
+      return false if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status)
 
       # Skip if content-type header doesn't include one of allowed types.
       if @content_types
@@ -62,6 +59,9 @@ module Rack
       end
 
       return false unless Gatekeeper.allows('optimize', default: true)
+
+      # Skip no-transform or uncacheable responses.
+      return false if headers['Cache-Control'].to_s =~ /\b(no-transform|private|no-store|max-age=0)\b/
 
       true
     end
