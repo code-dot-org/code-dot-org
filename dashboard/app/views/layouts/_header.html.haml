@@ -103,10 +103,7 @@
 
 - if show_header2
   - if request.path == "/home" || request.path == "/courses"
-    - if user_type == "teacher" || !user_type
-      #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
-    - else
-      #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
+    #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
   - if request.path == "/projects" || request.path == "/projects/public"
     #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
 
