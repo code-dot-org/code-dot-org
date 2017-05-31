@@ -226,7 +226,9 @@ class DashboardSection
     {
       id: course_or_script[:id],
       name: name,
-      # TODO: rename script_name to resource_name?
+      # This is really course_or_script_name (or perhaps something like resource_name),
+      # but is currently used in a bunch of places in the client, so I don't want
+      # to change it just yet
       script_name: course_or_script[:name],
       category: I18n.t("#{first_category}_category_name", default: first_category),
       position: position,
@@ -259,15 +261,17 @@ class DashboardSection
         map {|script| assignable_info(script, script[:hidden])}
   end
 
-  @@course_cache = nil
-  # Mimic the behavior of valid_scripts, but return courses instead.
+  @@course_cache = {}
+  # Mimic the behavior of valid_scripts, but return courses instead. Also simpler
+  # in that we don't have to worry about hidden courses.
   def self.valid_courses
-    return @@course_cache if @@course_cache
+    course_cache_key = I18n.locale.to_s
+
+    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
 
     return {} unless (Dashboard.db[:courses].count rescue nil)
 
-    # TODO: i18n
-    @@course_cache = Dashboard.db[:courses].
+    @@course_cache[course_cache_key] = Dashboard.db[:courses].
       select(:id, :name).
       all.
       # Only return courses we've whitelisted in ScriptConstants
