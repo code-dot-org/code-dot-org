@@ -12,6 +12,8 @@ export const publishedProjectPropType = PropTypes.shape({
   publishedAt: PropTypes.string.isRequired,
 });
 
+export const MAX_PROJECTS_PER_CATEGORY = 100;
+
 class PublicGallery extends Component {
   static propTypes = {
     initialProjectLists: PropTypes.shape({
@@ -29,7 +31,6 @@ class PublicGallery extends Component {
       projectLists: props.initialProjectLists,
     };
   }
-
 
   /**
    * Transform the projectsLists data from the format expected by the
