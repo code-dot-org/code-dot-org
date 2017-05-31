@@ -2495,7 +2495,7 @@ Studio.reset = function (first) {
   };
 
   // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = null;
+  Studio.lastMoveSingleDir = Direction.EAST;
 
   // Reset goal successState:
   if (level.goal) {
@@ -4267,6 +4267,13 @@ Studio.callCmd = function (cmd) {
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.SOUTH,
+      });
+      break;
+    case 'moveForward':
+      studioApp().highlight(cmd.id);
+      Studio.moveSingle({
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Studio.lastMoveSingleDir,
       });
       break;
     case 'moveDistance':

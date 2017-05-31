@@ -232,6 +232,10 @@ exports.moveDistance = function (id, spriteIndex, dir, distance) {
   });
 };
 
+exports.moveForward = function (id) {
+  Studio.queueCmd(id, 'moveForward');
+};
+
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
 exports.addPoints = function (id, value) {
