@@ -28,7 +28,6 @@
         - if current_user.can_edit_account?
           = link_to t('nav.user.settings'), edit_user_registration_url
         %a.points_menu_item{href: '#', style: 'display: none'}
-        = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank'
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else
   = link_to new_user_session_url, class: 'button-signin', id: 'signin_button'  do
