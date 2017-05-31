@@ -21,7 +21,7 @@ function showHomepage() {
       {showUiTips && (
         <UiTips
           userId={userId}
-          tipId={"homepage_header"}
+          tipId="homepage_header"
           showInitialTips={showInitialTips}
           beforeDialog={{
             title: i18n.homepageUiTipsBeforeDialogTitle(),
