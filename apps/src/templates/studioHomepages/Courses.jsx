@@ -81,7 +81,7 @@ const Courses = React.createClass({
           />
         )}
 
-        {courses && (
+        {courses && courses.length > 0 && (
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
