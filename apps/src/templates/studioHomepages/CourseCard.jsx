@@ -97,7 +97,6 @@ const CourseCard = React.createClass({
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
     assignedSections: React.PropTypes.array.isRequired,
-    image: React.PropTypes.string.isRequired
   },
 
   renderEnrollmentIcon() {
@@ -127,15 +126,11 @@ const CourseCard = React.createClass({
   },
 
   render() {
-    const { name, description, link, image } = this.props;
-    const filenameToImgUrl = {
-      "small_teal_icons": require('@cdo/static/small_teal_icons.png')
-    };
-    const imgSrc = filenameToImgUrl[image];
+    const { name, description, link } = this.props;
 
     return (
-      <div href={link} style={styles.card}>
-        <img src={imgSrc} style={styles.image}/>
+      <a href={link} style={styles.card}>
+        <img src={require('@cdo/static/small_teal_icons.png')} style={styles.image}/>
         {this.renderEnrollmentIcon()}
         <div style={styles.name}>
           {name}
@@ -149,7 +144,7 @@ const CourseCard = React.createClass({
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
           </div>
         </div>
-      </div>
+      </a>
     );
   }
 });
