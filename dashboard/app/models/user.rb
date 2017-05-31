@@ -109,6 +109,8 @@ class User < ActiveRecord::Base
     races
     using_text_mode
     last_seen_school_info_interstitial
+    ui_tip_dismissed_homepage_header
+    ui_tip_dismissed_teacher_courses
   )
 
   # Include default devise modules. Others available are:
