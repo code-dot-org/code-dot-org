@@ -25,7 +25,7 @@ const styles = {
     border: 'none',
     borderRadius: 50,
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
+    fontSize: 20,
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
     margin: '0 0 0 20px',
@@ -35,7 +35,8 @@ const styles = {
   },
   selectedPill: {
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
+    border: 'none'
   }
 };
 
