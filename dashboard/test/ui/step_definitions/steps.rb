@@ -1156,13 +1156,14 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 end
 
 Then /^I scroll our lockable stage into view$/ do
-  wait_short_until {@browser.execute_script('return $(".uitest-locked").length') > 0}
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
+  # use visible pseudo selector as we also have lock icons in (hidden) summary view
+  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").length') > 0}
+  @browser.execute_script('$(".fa-lock:visible")[0].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
-  @browser.execute_script("$('.uitest-locksettings').click()")
+  @browser.execute_script("$('.uitest-locksettings').children().first().click()")
 end
 
 Then /^I unlock the stage for students$/ do

@@ -14,8 +14,15 @@
 - header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
 
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
-- cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-- user_type = request.cookies[cookie_key]
+- if current_user
+  - if current_user.teacher?
+    - user_type = "teacher"
+  - elsif current_user.student?
+    - user_type = "student"
+
+- if !current_user
+  - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+  - user_type = request.cookies[cookie_key]
 
 - hamburger_options = {}
 - hamburger_options[:level] = level
@@ -75,6 +82,7 @@
               %span#sign_in_or_user
               = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
+<<<<<<< HEAD
 - if request.path == "/home" || request.path == "/courses"
   - if user_type == "teacher"
     #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
@@ -82,6 +90,13 @@
     #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
 - if request.path == "/projects" || request.path == "/projects/public"
   #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
+=======
+- if show_header2
+  - if request.path == "/home" || request.path == "/courses"
+    #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+  - if request.path == "/projects" || request.path == "/projects/public"
+    #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
+>>>>>>> staging
 
 - if script_level
   - view_as = @user || current_user
