@@ -66,7 +66,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/image_optim_rails.git
-  revision: fa264d81c952490708a1b95f66d4d253f9313aa8
+  revision: 4d4a346e4879886973a9d7e5709e343b1867e0a9
   ref: rails_root_config_path
   specs:
     image_optim_rails (0.3.0)
