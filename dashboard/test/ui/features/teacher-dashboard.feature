@@ -7,7 +7,7 @@ Feature: Using the teacher dashboard
   Scenario: Loading the teacher dashboard
     Given I am on "http://code.org/"
     And I am a teacher
-    And I am on "http://code.org/teacher-dashboard"
+    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     Then I wait to see ".outerblock"
     Then I click selector "div.title:contains('Student Accounts and Progress')"
     Then check that I am on "http://code.org/teacher-dashboard#/sections"
@@ -18,7 +18,7 @@ Feature: Using the teacher dashboard
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
     And I sign out
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard"
+    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
     And I click selector "a:contains('SectionName')" once I see it
     And I click selector "a:contains('Sally')" once I see it
