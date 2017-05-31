@@ -73,6 +73,18 @@ module FakeDashboard
   ]
 
   #
+  # Fake Data: Courses
+  #
+  COURSES = [
+    {
+      id: 15,
+      name: 'csp',
+      created_at: '2016-01-01 00:01:02',
+      updated_at: '2016-01-01 00:01:02'
+    }
+  ]
+
+  #
   # Fake Data: Sections
   #
   SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
@@ -89,7 +101,7 @@ module FakeDashboard
   }
   # Section assigned to an arbitrary (made-up) course
   SECTION_COURSE = {
-    id: 150006, user_id: TEACHER[:id], name: 'Fake Section assigned course', course_id: 15
+    id: 150006, user_id: TEACHER[:id], name: 'Fake Section assigned course', course_id: COURSES[0][:id]
   }
   TEACHER_SECTIONS = [
     SECTION_NORMAL,
@@ -170,6 +182,11 @@ module FakeDashboard
     USER_PERMISSIONS.each do |perm|
       new_id = @@fake_db[:user_permissions].insert(perm)
       perm.merge! @@fake_db[:user_permissions][id: new_id]
+    end
+
+    COURSES.each do |course|
+      new_id = @@fake_db[:courses].insert(course)
+      course.merge! @@fake_db[:courses][id: new_id]
     end
 
     TEACHER_SECTIONS.each do |section|
