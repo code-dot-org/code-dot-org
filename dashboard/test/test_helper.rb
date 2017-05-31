@@ -57,7 +57,6 @@ class ActiveSupport::TestCase
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
-    Geocoder.stubs(:search).raises("Don't actually search the geocoder in tests... mock it if you want to test it")
 
     set_env :test
 
