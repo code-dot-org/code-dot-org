@@ -85,6 +85,17 @@ module FakeDashboard
   ]
 
   #
+  # Fake Data: Scripts
+  #
+  SCRIPTS = [
+    {
+      id: 10,
+      name: 'flappy',
+      hidden: 0
+    }
+  ]
+
+  #
   # Fake Data: Sections
   #
   SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
@@ -187,6 +198,11 @@ module FakeDashboard
     COURSES.each do |course|
       new_id = @@fake_db[:courses].insert(course)
       course.merge! @@fake_db[:courses][id: new_id]
+    end
+
+    SCRIPTS.each do |script|
+      new_id = @@fake_db[:scripts].insert(script)
+      script.merge! @@fake_db[:scripts][id: new_id]
     end
 
     TEACHER_SECTIONS.each do |section|
