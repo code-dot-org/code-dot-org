@@ -2,6 +2,9 @@
 - if current_user.teacher?
   - homepage_data[:sections] = @sections
 - homepage_data[:codeorgurlprefix] = CDO.code_org_url
+- homepage_data[:showuitips] = show_ui_tips
+- homepage_data[:initialtipsdismissed] = current_user.ui_tip_dismissed_homepage_header
+- homepage_data[:userid] = current_user.id
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/home/_homepage.js'), data: {homepage: homepage_data.to_json}}
@@ -13,6 +16,13 @@
       = render template: 'api/user_hero'
 
 .clear{style: "clear: both"}
+
+- if current_user
+  - if current_user.teacher?
+    #terms_reminder
+      - unless current_user.accepted_latest_terms?
+        = render template: 'api/accept_terms_reminder'
+        = render partial: 'layouts/terms_interstitial'
 
 #homepage-container
 

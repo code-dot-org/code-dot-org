@@ -19,6 +19,8 @@ function showCourses() {
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
+  const showInitialTips = !coursesData.initialtipsdismissed;
+  const userId = coursesData.userid;
 
   ReactDOM.render (
     <Courses
@@ -29,6 +31,8 @@ function showCourses() {
       studentsCount={studentsCount}
       codeOrgUrlPrefix={codeOrgUrlPrefix}
       isSignedOut={signedOut}
+      showInitialTips={showInitialTips}
+      userId={userId}
     />,
     document.getElementById('courses-container')
   );

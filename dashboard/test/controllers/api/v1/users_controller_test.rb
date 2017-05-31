@@ -38,4 +38,13 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     post :post_using_text_mode, params: {user_id: '12345', using_text_mode: 'true'}
     assert_response 403
   end
+
+  test 'a post request to post_ui_tip_dismissed updates ui_tip_dismissed_homepage_header' do
+    sign_in(@user)
+    assert !@user.ui_tip_dismissed_homepage_header
+    post :post_ui_tip_dismissed, params: {user_id: 'me', tip: 'homepage_header'}
+    assert_response :success
+    @user.reload
+    assert @user.ui_tip_dismissed_homepage_header
+  end
 end
