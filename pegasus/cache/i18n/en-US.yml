@@ -1352,3 +1352,8 @@
   header_stats: "Stats"
   header_help_us: "Help Us"
   header_about: "About"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  'header_report_bug ': 'Report bug '
+  'header_tutorials ': 'Tutorials '
+  header_documentation: "Documentation"

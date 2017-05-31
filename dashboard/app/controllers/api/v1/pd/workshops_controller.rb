@@ -2,7 +2,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
 
-  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index, :workshops_user_enrolled_in]
+  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index]
 
   # GET /api/v1/pd/workshops
   def index

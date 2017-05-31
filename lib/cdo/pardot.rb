@@ -19,8 +19,10 @@ class Pardot
   PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate".freeze
   # URL for prospect query
   PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query".freeze
+  # URL for prospect deletion
+  PARDOT_PROSPECT_DELETION_URL = "#{PARDOT_API_V4_BASE}/do/delete/id".freeze
 
-  PARDOT_SUCCESS_HTTP_CODES = %w(200 201).freeze
+  PARDOT_SUCCESS_HTTP_CODES = %w(200 201 204).freeze
 
   # Max # of prospects allowed in one batch
   MAX_PROSPECT_BATCH_SIZE = 50
@@ -62,6 +64,30 @@ class Pardot
   # Exception to throw to ourselves if Pardot API key is invalid (which probably
   # means it needs to be re-authed)
   class InvalidApiKeyException < Exception
+  end
+
+  # Deletes a list of prospects from Pardot. For Pardot API documentation, see
+  # http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects.
+  # @param [Array[Integer]] prospect_ids of the prospects to be deleted.
+  # @return [Array[Integer]] the set of prospect_ids that failed to be deleted.
+  def self.delete_pardot_prospects(prospect_ids)
+    failed_prospect_ids = []
+
+    prospect_ids.each do |prospect_id|
+      begin
+        url = "#{PARDOT_PROSPECT_DELETION_URL}/#{prospect_id}"
+        post_request_with_auth url
+      rescue RuntimeError => e
+        if e.message =~ /Pardot request failed with HTTP/
+          failed_prospect_ids << prospect_id
+          next
+        else
+          raise e
+        end
+      end
+    end
+
+    failed_prospect_ids
   end
 
   # Perform inserts, updates and reconciliation from contact rollups into Pardot
@@ -402,7 +428,7 @@ class Pardot
   # Make an API request with Pardot authentication, including appending auth
   # params and refreshing Pardot API key and retrying if necessary.
   # @param url [String] URL to post to
-  # @return [Nokogiri::XML] XML response from Pardot
+  # @return [Nokogiri::XML, nil] XML response from Pardot
   def self.post_with_auth_retry(url)
     # do the post to Pardot
     post_request_with_auth(url)
@@ -429,7 +455,7 @@ class Pardot
   # @param url [String] URL to post to - must already include Pardot auth params
   #   in query string
   # @param params [Hash] hash of POST params (may be empty hash)
-  # @return [Nokogiri::XML] XML response from Pardot
+  # @return [Nokogiri::XML, nil] XML response from Pardot
   def self.post_request(url, params)
     uri = URI(url)
 
@@ -438,6 +464,10 @@ class Pardot
     # Do common error handling for Pardot response.
     unless PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
       raise "Pardot request failed with HTTP #{response.code}"
+    end
+
+    if response.code == '204'
+      return nil
     end
 
     doc = Nokogiri::XML(response.body, &:noblanks)
