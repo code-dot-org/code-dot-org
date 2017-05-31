@@ -393,6 +393,113 @@ class SectionApiHelperTest < SequelTestCase
       end
     end
 
+    describe 'update_if_owner' do
+      it 'assigns a script to a section without one' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            user: {id: 15, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          script_id = FakeDashboard::SCRIPTS[0][:id]
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            script: {id: script_id},
+            stage_extras: false
+          }
+          DashboardSection.update_if_owner(update_params)
+
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal script_id, row[:script_id]
+        end
+      end
+
+      it 'assigns a course to a section without one' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            user: {id: 15, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          course_id = FakeDashboard::COURSES[0][:id]
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id,
+            stage_extras: false
+          }
+          DashboardSection.update_if_owner(update_params)
+
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+        end
+      end
+
+      it 'assigns a course and script to a section' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            user: {id: 15, user_type: 'teacher'}
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_nil row[:script_id]
+
+          course_id = FakeDashboard::COURSES[0][:id]
+          script_id = FakeDashboard::SCRIPTS[0][:id]
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id,
+            script: {id: script_id},
+            stage_extras: false
+          }
+          DashboardSection.update_if_owner(update_params)
+
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_equal script_id, row[:script_id]
+        end
+      end
+
+      it 'replaces a script assignment with a course assignment' do
+        Dashboard.db.transaction(rollback: :always) do
+          params = {
+            user: {id: 15, user_type: 'teacher'},
+            script_id: 1
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_equal 1, row[:script_id]
+
+          course_id = FakeDashboard::COURSES[0][:id]
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id,
+            stage_extras: false
+          }
+          DashboardSection.update_if_owner(update_params)
+
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_nil row[:script_id]
+        end
+      end
+    end
+
     describe 'teachers' do
       it 'returns an array of hashes of information' do
         pegasus_section = DashboardSection.fetch_if_teacher(
