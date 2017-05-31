@@ -17,6 +17,13 @@
 
 .clear{style: "clear: both"}
 
+- if current_user
+  - if current_user.teacher?
+    #terms_reminder
+      - unless current_user.accepted_latest_terms?
+        = render template: 'api/accept_terms_reminder'
+        = render partial: 'layouts/terms_interstitial'
+
 #homepage-container
 
 #admin-extras
