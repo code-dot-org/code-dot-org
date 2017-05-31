@@ -130,7 +130,7 @@ const CourseCard = React.createClass({
 
     return (
       <a href={link} style={styles.card}>
-        <img src={require('@cdo/static/small_teal_icons.png')} style={styles.image}/>
+        <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
         {this.renderEnrollmentIcon()}
         <div style={styles.name}>
           {name}
