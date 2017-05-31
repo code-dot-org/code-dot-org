@@ -129,12 +129,12 @@
     // Use retina versions of the hero background images if on a retina display.
     $(".widehero").each(function()
     {
-      var imageUrl = $(this).data('background-image');
+      var imageUrl = $(this).data('bg');
       if (window.devicePixelRatio >= 2)
       {
         imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
       }
-      $(this).css('background-image', imageUrl);
+      $(this).data('bg', imageUrl);
     });
   }
 
