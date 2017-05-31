@@ -70,7 +70,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   // ROUTES
 
   config(['$routeProvider', function($routeProvider) {
-    if (homepage_url) {
+    if (homepage_url && window.location.search.indexOf("no_home_redirect") === -1) {
       $routeProvider.when('/',
         {redirectTo: function() {
           window.location = homepage_url;
