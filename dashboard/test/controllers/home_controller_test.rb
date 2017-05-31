@@ -108,7 +108,6 @@ class HomeControllerTest < ActionController::TestCase
 
   test "do not show admin links when not admin" do
     sign_in create(:user)
-
     get :index
     assert_select 'a[href="/admin"]', 0
   end
@@ -117,7 +116,6 @@ class HomeControllerTest < ActionController::TestCase
     return  # TODO: get :home
 
     sign_in create(:admin)
-
     get :index
     assert_select 'a[href="/admin"]'
   end
@@ -193,5 +191,39 @@ class HomeControllerTest < ActionController::TestCase
     assert_raises ActionController::UrlGenerationError do
       get :debug
     end
+  end
+
+  test 'workshop organizers see only new dashboard links' do
+    sign_in create(:workshop_organizer, terms_of_service_version: 1)
+    get :home
+    assert_select 'h1', text: 'Workshop Dashboard'
+  end
+
+  test 'workshop admins see new and old dashboard links' do
+    sign_in create(:workshop_admin, terms_of_service_version: 1)
+    get :home
+    assert_select 'h1', text: 'Workshop Dashboard'
+    assert_select 'h1', text: 'Old CSF Workshop Dashboard'
+  end
+
+  test 'facilitators see only new dashboard links' do
+    facilitator = create(:facilitator, terms_of_service_version: 1)
+    sign_in facilitator
+    get :home
+    assert_select 'h1', text: 'Workshop Dashboard'
+  end
+
+  test 'legacy workshop creators see old dashboard links' do
+    teacher = create :teacher, terms_of_service_version: 1
+    teacher.permission = UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP
+    sign_in teacher
+    get :home
+    assert_select 'h1', text: 'Old CSF Workshop Dashboard'
+  end
+
+  test 'teachers cannot see dashboard links' do
+    sign_in create(:teacher, terms_of_service_version: 1)
+    get :home
+    assert_select 'h1', false, text: 'Workshop Dashboard'
   end
 end
