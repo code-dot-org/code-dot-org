@@ -52,7 +52,7 @@ const StageLock = React.createClass({
 
     return (
       <div style={styles.main}>
-        <div style={styles.buttonContainer}>
+        <div style={styles.buttonContainer} className="uitest-locksettings">
           <ProgressButton
             onClick={this.openLockDialog}
             color={ProgressButton.ButtonColor.gray}
