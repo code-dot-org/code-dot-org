@@ -278,14 +278,32 @@ class SectionApiHelperTest < SequelTestCase
         end
       end
     end
+  end
+
+  # A set of tests that use our fake database
+  describe 'DashboardSectionMore' do
+    before do
+      FakeDashboard.use_fake_database
+    end
 
     describe 'create' do
       it 'creates a row in the database with defaults' do
         params = {
           user: {id: 15, user_type: 'teacher'}
         }
-        DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `stage_extras`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', 0, DATE, DATE\)), remove_dates(@fake_db.sqls.first)
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal 15, row[:user_id]
+          assert_equal 'New Section', row[:name]
+          assert_equal 'word', row[:login_type]
+          assert_nil row[:script_id]
+          # assert_nil row[:course_id]
+          assert_nil row[:grade]
+          assert !row[:code].nil?
+          assert_equal false, row[:stage_extras]
+        end
       end
 
       it 'creates a row in the database with name' do
@@ -293,15 +311,20 @@ class SectionApiHelperTest < SequelTestCase
           user: {id: 15, user_type: 'teacher'},
           name: 'My cool section'
         }
-        DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `stage_extras`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', 0, DATE, DATE\)), remove_dates(@fake_db.sqls.first)
-      end
-    end
-  end
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
 
-  describe 'DashboardSectionMore' do
-    before do
-      FakeDashboard.use_fake_database
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal 15, row[:user_id]
+          assert_equal 'My cool section', row[:name]
+          assert_equal 'word', row[:login_type]
+          assert_nil row[:script_id]
+          # assert_nil row[:course_id]
+          assert_nil row[:grade]
+          assert !row[:code].nil?
+          assert_equal false, row[:stage_extras]
+        end
+      end
     end
 
     describe 'teachers' do
