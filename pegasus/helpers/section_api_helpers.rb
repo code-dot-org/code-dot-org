@@ -213,6 +213,13 @@ class DashboardSection
     valid_grades.include? grade
   end
 
+  # Method used by tests to clear our caches, so that we're not sharing caches
+  # across tests
+  def self.clear_caches
+    @@script_cache = {}
+    @@course_cache = {}
+  end
+
   # @typedef AssignableInfo Hash
   # @option [Number] :id
   # @option [String] :name,
@@ -328,6 +335,8 @@ class DashboardSection
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
     script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
       params[:script][:id].to_i : params[:script_id]
+    course_id = params[:course_id] && valid_course_id?(params[:course_id]) ?
+      params[:course_id].to_i : nil
     stage_extras = params[:stage_extras] ? params[:stage_extras] : false
     created_at = DateTime.now
 
@@ -341,6 +350,7 @@ class DashboardSection
           login_type: login_type,
           grade: grade,
           script_id: script_id,
+          course_id: course_id,
           code: CodeGeneration.random_unique_code(length: 6),
           stage_extras: stage_extras,
           created_at: created_at,
