@@ -47,7 +47,7 @@ class StarWarsGrid < Studio
 
   def common_blocks(_)
     <<-XML.strip_heredoc.chomp
-      <category name="Text Blocks">
+      <category name="Direction Movement (Text)">
         <block type="studio_move">
           <title name="DIR">1</title>
         </block>
@@ -64,7 +64,7 @@ class StarWarsGrid < Studio
           <title name="TIMES">5</title>
         </block>
       </category>
-      <category name="K1 Blocks">
+      <category name="Direction Movement (K1)">
         <block type="studio_moveNorth"/>
         <block type="studio_moveSouth"/>
         <block type="studio_moveEast"/>
@@ -75,6 +75,10 @@ class StarWarsGrid < Studio
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>
         </block>
+      </category>
+      <category name="Orientation Movement">
+        <block type="studio_moveOrientation"/>
+        <block type="studio_turnOrientation"/>
       </category>
     XML
   end
