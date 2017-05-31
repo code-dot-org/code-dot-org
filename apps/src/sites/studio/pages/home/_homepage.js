@@ -49,11 +49,11 @@ function showHomepage() {
         <TeacherHomepage
           announcements={[
             {
-              heading: "Upcoming Changes to Site Navigation",
-              buttonText: "Learn more",
-              description: "Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning.",
+              heading: i18n.announcementHeading(),
+              buttonText: i18n.learnMore(),
+              description: i18n.announcementDescription(),
               link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
-              image: "navcard-placeholder.png"
+              image: "redesign-screencast"
             }
           ]}
           courses={homepageData.courses}
