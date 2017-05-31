@@ -28,7 +28,7 @@ Every student should have the opportunity to learn computer science. Computation
 
 *Thank you for joining Code.org to help introduce millions of students to computer science through the Hour of Code!*
 
-[<button>&nbsp;&nbsp;&nbsp;&nbsp;Volunteer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](/volunteer)
+[<button>&nbsp;&nbsp;&nbsp;&nbsp;Volunteer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](https://form.jotform.com/71494745584166)
 
 <a name="overview"></a>
 ## Overview

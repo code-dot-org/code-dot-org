@@ -55,6 +55,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
+  test_user_gets_response_for :workshops_user_enrolled_in, user: nil, response: :forbidden
+
   test 'workshops_user_enrolled_in returns workshops the user is enrolled in' do
     teacher = create :teacher
     sign_in(teacher)
@@ -67,6 +69,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     create(:pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id)
 
     get :workshops_user_enrolled_in
+    assert_response :success
 
     response = JSON.parse(@response.body)
     assert_equal 2, response.length

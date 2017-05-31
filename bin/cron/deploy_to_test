@@ -10,43 +10,43 @@ require 'cdo/only_one'
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 
-def exit_unless_slack_permission
+def slack_permission?
   no_branches = {DTP: DevelopersTopic.dtp?, DTT: DevelopersTopic.dtt?, DTS: DevelopersTopic.dts?}.
     select {|_branch, allowed| !allowed}
-  return if no_branches.empty?
+  return true if no_branches.empty?
 
   ChatClient.message(
     'infra-test',
     "robo-DTT skipped (#{no_branches.keys.join(',')} was not yes)",
     color: 'yellow'
   )
-  exit
+  false
 end
 
-def exit_unless_last_dtt_green
+def last_dtt_green?
   current_sha = GitHub.sha('test')
   green_sha = InfraTestTopic.green_commit
-  return if current_sha == green_sha
+  return true if current_sha == green_sha
 
   ChatClient.message(
     'infra-test',
     "robo-DTT skipped (test (#{current_sha}) not marked :greenbeer:)",
     color: 'yellow'
   )
-  exit
+  false
 end
 
-def exit_unless_new_commits
-  return if GitHub.behind?(base: 'staging', compare: 'test')
+def new_commits?
+  return true if GitHub.behind?(base: 'staging', compare: 'test')
 
   ChatClient.message 'infra-test', "robo-DTT skipped (nothing to DTT)"
-  exit
+  false
 end
 
 def main
-  exit_unless_slack_permission
-  exit_unless_last_dtt_green
-  exit_unless_new_commits
+  exit unless slack_permission?
+  exit unless last_dtt_green?
+  exit unless new_commits?
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
