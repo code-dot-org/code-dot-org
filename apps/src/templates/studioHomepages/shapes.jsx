@@ -10,7 +10,6 @@ const shapes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
       assignedSections: PropTypes.array.isRequired,
     })

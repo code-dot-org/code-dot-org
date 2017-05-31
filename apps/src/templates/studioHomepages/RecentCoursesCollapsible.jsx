@@ -29,7 +29,6 @@ const RecentCoursesCollapsible = React.createClass({
                 key={index}
                 name={course.name}
                 description={course.description}
-                image={course.image}
                 link={course.link}
                 assignedSections={course.assignedSections}
               />
