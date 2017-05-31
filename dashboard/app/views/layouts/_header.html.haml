@@ -34,7 +34,7 @@
         .row.header_row
           .header_left
             .header_logo
-              = link_to(image_tag('logo.png'), '/home')
+              = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
             .project_info
           .header_middle
             - if script_level
