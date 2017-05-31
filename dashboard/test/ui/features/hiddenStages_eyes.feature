@@ -10,8 +10,8 @@ Scenario: Hidden Stages
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"
   And I select the first section
-  And I wait to see ".uitest-hidden"
-  Then I click selector ".uitest-hidden:nth(1)"
+  And I wait to see ".uitest-togglehidden"
+  Then I click selector ".uitest-togglehidden:nth(1) div:contains('Hidden')"
   And I see no difference for "teacher overview with hidden stage"
   And I sign out
   Then I sign in as "bobby"
