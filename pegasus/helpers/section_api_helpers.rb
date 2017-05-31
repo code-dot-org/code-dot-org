@@ -576,6 +576,13 @@ class DashboardSection
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
 
+    if params[:course_id] && valid_course_id?(params[:course_id])
+      fields[:course_id] = params[:course_id].to_i
+      # explicitly clear script_id (unless we're also passed in a valid script id
+      # as a param
+      fields[:script_id] = nil
+    end
+
     if params[:script] && valid_script_id?(params[:script][:id])
       fields[:script_id] = params[:script][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
