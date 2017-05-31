@@ -19,7 +19,7 @@ $(document).ready(() => {
         <HeadingBanner
           headingText={i18n.projectGalleryHeader()}
         />
-        <PublicGallery projectLists={projectLists}/>
+        <PublicGallery initialProjectLists={projectLists}/>
       </div>,
       publicGallery);
   });
