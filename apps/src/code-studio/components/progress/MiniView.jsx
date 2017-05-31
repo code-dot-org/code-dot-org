@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import CourseProgress from './CourseProgress';
 import MiniViewTopRow from './MiniViewTopRow';
 import { hasGroups } from '@cdo/apps/code-studio/progressRedux';
-import experiments from '@cdo/apps/util/experiments';
 
-const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
+const progressRedesignEnabled = true;
 
 const styles = {
   // For our non-redesigned view, we want margins on the left and right
