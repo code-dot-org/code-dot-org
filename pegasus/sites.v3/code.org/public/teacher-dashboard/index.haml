@@ -8,8 +8,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
 - error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
 
-- if request.cookies['pm'] == 'new_header'
-  - homepage_url = CDO.studio_url('/home')
+- homepage_url = CDO.studio_url('/home')
 
 -#
   Temporarily include the terms interstitial.  There is JavaScript served by Pegasus (and
