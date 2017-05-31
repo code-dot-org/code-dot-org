@@ -92,7 +92,7 @@
 
 #hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
-    - if level
+    - if level || script_level
       - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
       %li
         %a{href: report_url}=I18n.t("#{loc_prefix}report_bug")
