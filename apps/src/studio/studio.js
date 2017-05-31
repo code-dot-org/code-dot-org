@@ -67,6 +67,8 @@ var CardinalDirections = constants.CardinalDirections;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
+const turnRight90 = constants.turnRight90;
+const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 
@@ -4275,6 +4277,22 @@ Studio.callCmd = function (cmd) {
         spriteIndex: Studio.protagonistSpriteIndex || 0,
         dir: Studio.lastMoveSingleDir,
       });
+      break;
+    case 'moveBackward':
+      studioApp().highlight(cmd.id);
+      Studio.moveSingle({
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: turnRight90(turnRight90(Studio.lastMoveSingleDir)),
+      });
+      Studio.lastMoveSingleDir = turnRight90(turnRight90(Studio.lastMoveSingleDir));
+      break;
+    case 'turnRight':
+      studioApp().highlight(cmd.id);
+      Studio.lastMoveSingleDir = turnRight90(Studio.lastMoveSingleDir);
+      break;
+    case 'turnLeft':
+      studioApp().highlight(cmd.id);
+      Studio.lastMoveSingleDir = turnLeft90(Studio.lastMoveSingleDir);
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
