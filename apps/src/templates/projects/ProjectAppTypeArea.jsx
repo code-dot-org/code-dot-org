@@ -99,7 +99,7 @@ const ProjectAppTypeArea = React.createClass({
           />
         }
         <ProgressButton
-          href="#gallery-switcher"
+          href="#top"
           color={ProgressButton.ButtonColor.gray}
           icon="chevron-circle-up"
           text="Back to top"
