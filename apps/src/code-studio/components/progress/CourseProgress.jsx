@@ -2,7 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 import { stageShape } from './types';
 import CourseProgressRow from './CourseProgressRow';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
@@ -61,7 +60,7 @@ const CourseProgress = React.createClass({
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
-    const progressRedesign = experiments.isEnabled('progressRedesign');
+    const progressRedesign = true;
 
     return (
       <div>
