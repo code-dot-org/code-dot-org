@@ -18,10 +18,11 @@ namespace :assets do
   desc 'Copy digested assets to non-digested file paths'
   task no_digests: :environment do
     assets = Dir.glob("#{dashboard_dir}/public/assets/js/**/*")
-    regex = /-\w{32}(?:\.\w+$)/
+    regex = /(^.*)-\w{32,64}(\.\w+$)/
     assets.each do |file|
       next if File.directory?(file) || file !~ regex
-      non_digested = file.sub(regex, '')
+      non_digested = file.gsub(regex, '\1\2')
+      puts "Copying file #{file} to #{non_digested}"
       FileUtils.cp(file, non_digested)
     end
   end
