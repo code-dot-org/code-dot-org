@@ -25,7 +25,7 @@ $(document).ready(() => {
   }).done(projectLists => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <PublicGallery projectLists={projectLists}/>,
+      <PublicGallery initialProjectLists={projectLists}/>,
       publicGallery);
   });
 });

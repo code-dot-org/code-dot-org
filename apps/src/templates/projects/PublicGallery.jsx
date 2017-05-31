@@ -14,13 +14,22 @@ export const publishedProjectPropType = PropTypes.shape({
 
 class PublicGallery extends Component {
   static propTypes = {
-    projectLists: PropTypes.shape({
+    initialProjectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
       playlab: PropTypes.arrayOf(publishedProjectPropType),
       artist: PropTypes.arrayOf(publishedProjectPropType),
     }),
   }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      projectLists: props.initialProjectLists,
+    };
+  }
+
 
   /**
    * Transform the projectsLists data from the format expected by the
@@ -43,7 +52,7 @@ class PublicGallery extends Component {
   }
 
   render() {
-    const {projectLists} = this.props;
+    const {projectLists} = this.state;
     return (
       <div>
         <ProjectCardGrid
