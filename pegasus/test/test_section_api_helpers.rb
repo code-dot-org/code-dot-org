@@ -225,6 +225,7 @@ class SectionApiHelperTest < SequelTestCase
 
     describe 'valid courses' do
       before do
+        DashboardSection.clear_caches
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
           {id: 1, name: 'csd'},
@@ -283,6 +284,7 @@ class SectionApiHelperTest < SequelTestCase
   # A set of tests that use our fake database
   describe 'DashboardSectionMore' do
     before do
+      DashboardSection.clear_caches
       FakeDashboard.use_fake_database
     end
 
@@ -299,7 +301,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal 'New Section', row[:name]
           assert_equal 'word', row[:login_type]
           assert_nil row[:script_id]
-          # assert_nil row[:course_id]
+          assert_nil row[:course_id]
           assert_nil row[:grade]
           assert !row[:code].nil?
           assert_equal false, row[:stage_extras]
@@ -319,7 +321,68 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal 'My cool section', row[:name]
           assert_equal 'word', row[:login_type]
           assert_nil row[:script_id]
-          # assert_nil row[:course_id]
+          assert_nil row[:course_id]
+          assert_nil row[:grade]
+          assert !row[:code].nil?
+          assert_equal false, row[:stage_extras]
+        end
+      end
+
+      it 'creates a row with a course_id and no script_id' do
+        params = {
+          user: {id: 15, user_type: 'teacher'},
+          course_id: FakeDashboard::COURSES[0][:id]
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal 15, row[:user_id]
+          assert_equal 'New Section', row[:name]
+          assert_equal 'word', row[:login_type]
+          assert_nil row[:script_id]
+          assert_equal params[:course_id], row[:course_id]
+          assert_nil row[:grade]
+          assert !row[:code].nil?
+          assert_equal false, row[:stage_extras]
+        end
+      end
+
+      it 'creates a row with a script_id and no course_id' do
+        params = {
+          user: {id: 15, user_type: 'teacher'},
+          script_id: 1
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal 15, row[:user_id]
+          assert_equal 'New Section', row[:name]
+          assert_equal 'word', row[:login_type]
+          assert_equal 1, row[:script_id]
+          assert_nil row[:course_id]
+          assert_nil row[:grade]
+          assert !row[:code].nil?
+          assert_equal false, row[:stage_extras]
+        end
+      end
+
+      it 'creates a row with both a script_id and a course_id' do
+        params = {
+          user: {id: 15, user_type: 'teacher'},
+          course_id: FakeDashboard::COURSES[0][:id],
+          script_id: 1
+        }
+        Dashboard.db.transaction(rollback: :always) do
+          row_id = DashboardSection.create(params)
+
+          row = Dashboard.db[:sections].where(id: row_id).first
+          assert_equal 15, row[:user_id]
+          assert_equal 'New Section', row[:name]
+          assert_equal 'word', row[:login_type]
+          assert_equal 1, row[:script_id]
+          assert_equal params[:course_id], row[:course_id]
           assert_nil row[:grade]
           assert !row[:code].nil?
           assert_equal false, row[:stage_extras]
