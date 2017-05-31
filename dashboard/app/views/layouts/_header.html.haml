@@ -22,6 +22,10 @@
     - elsif current_user.student?
       - user_type = "student"
 
+  - if !current_user
+    - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    - user_type = request.cookies[cookie_key]
+
   - hamburger_options = {}
   - hamburger_options[:level] = level
   - hamburger_options[:user_type] = user_type
