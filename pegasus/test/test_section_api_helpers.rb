@@ -14,6 +14,7 @@ end
 class SectionApiHelperTest < SequelTestCase
   describe DashboardStudent do
     before do
+      DashboardSection.clear_caches
       FakeDashboard.use_fake_database
     end
 
@@ -146,6 +147,7 @@ class SectionApiHelperTest < SequelTestCase
 
   describe DashboardSection do
     before do
+      DashboardSection.clear_caches
       # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
       @fake_db = Sequel.connect "mock://mysql"
       @fake_db.server_version = 50616
@@ -260,6 +262,7 @@ class SectionApiHelperTest < SequelTestCase
 
     describe "fetch_user_sections" do
       before do
+        DashboardSection.clear_caches
         FakeDashboard.use_fake_database
       end
 
@@ -581,6 +584,7 @@ class SectionApiHelperTest < SequelTestCase
 
   describe DashboardUserScript do
     before do
+      DashboardSection.clear_caches
       FakeDashboard.use_fake_database
       @script_id = 1
       @time_in_past = Time.new(2017, 1, 2)
