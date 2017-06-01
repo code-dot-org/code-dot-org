@@ -5,7 +5,7 @@ class ExceptionsTest < ActionDispatch::IntegrationTest
   end
 
   test "invalid format for template raises 406 not 500" do
-    get '/', params: {}, headers: {'HTTP_ACCEPT' => 'image/jpeg'}
+    get '/courses', params: {}, headers: {'HTTP_ACCEPT' => 'image/jpeg'}
 
     assert_response 406
   end
