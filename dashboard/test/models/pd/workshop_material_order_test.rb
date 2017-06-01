@@ -301,4 +301,18 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     order.refresh
     assert_nil order.tracking_id
   end
+
+  test 'orders are still valid if the user is deleted' do
+    order = create :pd_workshop_material_order, user: @teacher
+    assert_equal @teacher, order.user
+
+    @teacher.destroy
+    order.reload
+    assert order.valid?
+    assert_nil order.user
+
+    # but not if the user is changed
+    order.user = nil
+    refute order.valid?
+  end
 end
