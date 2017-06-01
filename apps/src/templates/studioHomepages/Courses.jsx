@@ -145,7 +145,7 @@ const Courses = React.createClass({
         )}
 
         {!isTeacher && !isSignedOut && (
-          <ProgressButton text="View my projects" href="/projects" color={ProgressButton.ButtonColor.orange}/>
+          <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
         )}
       </div>
     );
