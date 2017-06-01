@@ -14,6 +14,8 @@
   "addPointsTooltip": "Přidat nebo odebrat bod ze skóre.",
   "alien": "mimozemšťan",
   "alienInvasion": "Mimozemská invaze!",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
   "backgroundBlack": "černé",
   "backgroundCave": "jeskyně",
   "backgroundCloudy": "zamračeno",
@@ -71,6 +73,7 @@
   "defaultSayText": "Piš zde",
   "dinosaur": "dinosaurus",
   "dog": "pes",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
   "dragon": "drak",
   "dropletBlock_addCharacter_description": "Přidej postavu na scénu.",
   "dropletBlock_addCharacter_param0": "typ",
@@ -859,8 +862,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Potřebuješ dostat 20 Myších Droidů. Použij povel \"přidejte Myší Droid\" uvnitř události \"když dostane Myší Droid\" k přidání dvou nebo více Myších Droidů, když dostaneš jednoho.",
   "failedMultiplyCharactersTimeoutGotSome": "Blahopřejeme, přidal jsi kód, abys vytvořil Myší Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Myších Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)",
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
-  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
-  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
-  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."
 }
