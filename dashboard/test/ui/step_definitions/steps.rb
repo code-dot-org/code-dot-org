@@ -498,7 +498,7 @@ Then /^I open the progress drop down of the current page$/ do
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
-  selector = ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
+  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) :first-child"
   steps %{
     And I wait until element "#{selector}" is in the DOM
     And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
@@ -517,7 +517,7 @@ Then /^I navigate to the course page for "([^"]*)"$/ do |course|
 end
 
 Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
-  selector = ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1}) :first-child"
+  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) :first-child"
   steps %{
     And I wait until element "#{selector}" is visible
     And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
@@ -897,7 +897,7 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
-    And I wait until I am on "http://studio.code.org/"
+    And I wait until I am on "http://studio.code.org/courses"
   }
 end
 
@@ -929,7 +929,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
     And I click selector "#signup-button"
-    And I wait until I am on "http://studio.code.org/"
+    And I wait until I am on "http://studio.code.org/courses"
   }
 end
 
@@ -947,7 +947,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
-    And I wait until current URL contains "http://code.org/teacher-dashboard"
+    And I wait until I am on "http://studio.code.org/home"
   }
 end
 
@@ -1156,13 +1156,14 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 end
 
 Then /^I scroll our lockable stage into view$/ do
-  wait_short_until {@browser.execute_script('return $(".uitest-locked").length') > 0}
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
+  # use visible pseudo selector as we also have lock icons in (hidden) summary view
+  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").length') > 0}
+  @browser.execute_script('$(".fa-lock:visible")[0].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
-  @browser.execute_script("$('.uitest-locksettings').click()")
+  @browser.execute_script("$('.uitest-locksettings').children().first().click()")
 end
 
 Then /^I unlock the stage for students$/ do

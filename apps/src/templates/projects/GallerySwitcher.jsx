@@ -22,20 +22,29 @@ const styles = {
     height: 36
   },
   pill: {
+    ':hover': {
+      color: color.teal
+    },
     border: 'none',
     borderRadius: 50,
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
+    fontSize: 20,
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
     margin: '0 0 0 20px',
     boxShadow: 'none',
     outline: 'none',
-    padding: '8px 18px'
+    padding: '8px 18px',
+    float: 'left',
+    cursor: 'pointer',
   },
   selectedPill: {
+    ':hover': {
+      color: color.white
+    },
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
+    border: 'none'
   }
 };
 
@@ -71,18 +80,26 @@ class GallerySwitcher extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <button
-          style={[styles.pill, this.state.gallery === Galleries.PRIVATE && styles.selectedPill]}
+        <div
+          key={'private'}
+          style={[
+            styles.pill,
+            this.state.gallery === Galleries.PRIVATE && styles.selectedPill
+          ]}
           onClick={this.toggleToMyProjects}
         >
           {i18n.myProjects()}
-        </button>
-        <button
-          style={[styles.pill, this.state.gallery === Galleries.PUBLIC && styles.selectedPill]}
+        </div>
+        <div
+          key={'public'}
+          style={[
+            styles.pill,
+            this.state.gallery === Galleries.PUBLIC && styles.selectedPill
+          ]}
           onClick={this.toggleToGallery}
         >
           {i18n.publicGallery()}
-        </button>
+        </div>
       </div>
     );
   }
