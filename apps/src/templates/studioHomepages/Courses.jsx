@@ -4,9 +4,11 @@ import ReactDOM from 'react-dom';
 import HeadingBanner from '../HeadingBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import i18n from "@cdo/locale";
 
 const styles = {
@@ -43,7 +45,9 @@ const Courses = React.createClass({
     isSignedOut: React.PropTypes.bool.isRequired,
     linesCount: React.PropTypes.string.isRequired,
     studentsCount: React.PropTypes.string.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
+    showInitialTips: React.PropTypes.bool.isRequired,
+    userId: React.PropTypes.number
   },
 
   componentDidMount() {
@@ -58,7 +62,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
 
     return (
       <div>
@@ -78,7 +82,7 @@ const Courses = React.createClass({
           />
         )}
 
-        {courses && (
+        {courses && courses.length > 0 && (
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
@@ -89,31 +93,48 @@ const Courses = React.createClass({
 
         {isEnglish && isTeacher && (
           <div>
-            <div style={styles.heading}>
-              {i18n.courseExplorerHeading()}
-            </div>
+            <UiTips
+              userId={userId}
+              tipId={"teacher_courses"}
+              showInitialTips={showInitialTips}
+              tips={
+                [
+                  {
+                    type: "initial",
+                    position: {top: 0, left: 0, position: "relative"},
+                    text: i18n.coursesUiTipsTeacherCourses(),
+                    arrowDirection: "down",
+                    scrollTo: ".courseexplorer"
+                  }
+                ]}
+            />
+
             <div>
-              {i18n.courseExplorerDescription()}
-            </div>
-            <ProtectedStatefulDiv ref="courseExplorer"/>
-            <div style={styles.spacer}>.</div>
-
-            <br/>
-            <br/>
-
-            <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
-
-            {false && (
-              <div>
-                <div style={styles.heading}>
-                  {i18n.toolExplorerHeading()}
-                </div>
-                <div>
-                  {i18n.toolExplorerDescription()}
-                </div>
-                <ProtectedStatefulDiv ref="toolExplorer"/>
+              <div style={styles.heading}>
+                {i18n.courseExplorerHeading()}
               </div>
-            )}
+              <div>
+                {i18n.courseExplorerDescription()}
+              </div>
+              <ProtectedStatefulDiv ref="courseExplorer"/>
+              <div style={styles.spacer}>.</div>
+
+              <br/>
+              <br/>
+              <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+
+              {false && (
+                <div>
+                  <div style={styles.heading}>
+                    {i18n.toolExplorerHeading()}
+                  </div>
+                  <div>
+                    {i18n.toolExplorerDescription()}
+                  </div>
+                  <ProtectedStatefulDiv ref="toolExplorer"/>
+                </div>
+              )}
+            </div>
           </div>
         )}
 
@@ -121,6 +142,10 @@ const Courses = React.createClass({
           <div>
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
+        )}
+
+        {!isTeacher && !isSignedOut && (
+          <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
         )}
       </div>
     );

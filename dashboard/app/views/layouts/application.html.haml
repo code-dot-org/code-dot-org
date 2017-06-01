@@ -10,6 +10,7 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
+    = render partial: 'layouts/analytics'
     // essential.js is ordered above application.js to filter new relic errors
     %script{src: minifiable_asset_path('js/essential.js')}
     = javascript_include_tag 'application'
@@ -24,7 +25,6 @@
       = tag 'meta', property: 'og:title', content: title
       = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')
-    = render partial: 'layouts/analytics'
     = render partial: 'layouts/javascript_strings'
   %body
     - unless Rails.env.production?

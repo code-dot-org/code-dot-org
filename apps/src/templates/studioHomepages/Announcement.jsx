@@ -38,7 +38,7 @@ const styles = {
   },
   button: {
     marginLeft: 350,
-    marginTop: 10
+    marginTop: 50
   },
   image: {
     height: 210,
@@ -60,7 +60,7 @@ const Announcement = React.createClass({
   render() {
     const { heading, buttonText, description, link, image } = this.props;
     const filenameToImgUrl = {
-      "navcard-placeholder.png": require('../../../static/navcard-placeholder.png'),
+      "redesign-screencast": require('@cdo/static/redesign-screencast.png'),
     };
 
     const imgSrc = filenameToImgUrl[image];
