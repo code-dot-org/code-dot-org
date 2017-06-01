@@ -389,7 +389,13 @@ class User < ActiveRecord::Base
 
   def sanitize_and_set_race_data
     return unless property_changed?('races')
-    return unless races
+    # Though not possible from the UI, it seems wise to support manual clearing of this field. Thus
+    # we check for this edge case.
+    if races.nil?
+      update_column(:races, nil)
+      update_column(:urm, nil)
+      return
+    end
 
     # Sanitize the old (properties) data.
     if races.include? 'closed_dialog'
@@ -562,13 +568,6 @@ class User < ActiveRecord::Base
     else
       super
     end
-  end
-
-  def update_without_password(params, *options)
-    if params[:races]
-      update_column(:races, params[:races].join(','))
-    end
-    super
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
