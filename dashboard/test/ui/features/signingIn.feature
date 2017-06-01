@@ -15,7 +15,8 @@ Scenario: Student sign in from code.org
   And I wait to see ".new_user"
   And I fill in username and password for "Bob"
   And I click selector "#signin-button"
-  Then check that I am on "http://studio.code.org/courses"
+  Then I wait until I am on "http://studio.code.org/courses"
+  Then I wait to see ".user_menu"
   Then element ".user_menu span:first" has text "Hi Bob"
 
 Scenario: Student sign in from studio.code.org
@@ -30,7 +31,8 @@ Scenario: Student sign in from studio.code.org
   And I wait to see ".new_user"
   And I fill in username and password for "Alice"
   And I click selector "#signin-button"
-  Then check that I am on "http://studio.code.org/courses"
+  Then I wait until I am on "http://studio.code.org/courses"
+  Then I wait to see ".user_menu"
   Then element ".user_menu span:first" has text "Hi Alice"
 
 Scenario: Teacher sign in from studio.code.org
@@ -45,5 +47,6 @@ Scenario: Teacher sign in from studio.code.org
   And I wait to see ".new_user"
   And I fill in username and password for "Casey"
   And I click selector "#signin-button" to load a new page
-  Then check that I am on "http://studio.code.org/home"
+  Then I wait until I am on "http://studio.code.org/home"
+  Then I wait to see ".user_menu"
   Then element ".user_menu span:first" has text "Hi Casey"
