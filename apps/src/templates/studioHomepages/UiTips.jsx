@@ -175,6 +175,7 @@ const UiTips = React.createClass({
             confirmText={this.props.beforeDialog.confirm}
             cancelText={this.props.beforeDialog.cancel}
             onCancel={this.beforeDialogCancel}
+            handleClose={this.beforeDialogCancel}
             onConfirm={this.beforeDialogConfirm}
           />
         )}
@@ -187,6 +188,7 @@ const UiTips = React.createClass({
             confirmText={this.props.afterDialog.confirm}
             cancelText={this.props.afterDialog.cancel}
             onCancel={this.afterDialogCancel}
+            handleClose={this.afterDialogCancel}
             onConfirm={this.afterDialogConfirm}
           />
         )}
