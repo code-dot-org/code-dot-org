@@ -8,6 +8,7 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import i18n from "@cdo/locale";
 
 const styles = {
@@ -56,7 +57,6 @@ const Courses = React.createClass({
       $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
     } else {
       $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
-      $('#view_projects').appendTo(ReactDOM.findDOMNode(this.refs.viewProjects)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
   },
@@ -144,10 +144,8 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {!isTeacher && (
-          <ProtectedStatefulDiv
-            ref="viewProjects"
-          />
+        {!isTeacher && !isSignedOut && (
+          <ProgressButton text="View my projects" href="/projects" color={ProgressButton.ButtonColor.orange}/>
         )}
       </div>
     );
