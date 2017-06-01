@@ -39,6 +39,7 @@ class Pd::Attendance < ActiveRecord::Base
 
   def resolve_enrollment
     enrollment ||
+      Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
       workshop.enrollments.find_by(user_id: teacher_id) ||
       workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email))
   end
