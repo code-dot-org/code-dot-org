@@ -10,60 +10,44 @@
 
 - user_type = nil
 
-- show_header2 = request.cookies['pm'] == 'new_header'
-- header_class = show_header2 ? 'header2-wrapper' : 'header-wrapper'
+- header_class = 'header2-wrapper'
 - header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
 
-- if show_header2
-  %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+- if current_user
+  - if current_user.teacher?
+    - user_type = "teacher"
+  - elsif current_user.student?
+    - user_type = "student"
+
+- if !current_user
   - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
   - user_type = request.cookies[cookie_key]
 
-  - hamburger_options = {}
-  - hamburger_options[:level] = level
-  - hamburger_options[:user_type] = user_type
-  - hamburger_options[:language] = request.language
-  - hamburger_options[:code_org_url_base] = CDO.code_org_url
-  - hamburger_options[:studio_url_base] = CDO.studio_url
-  - hamburger_options[:show_gallery] = true
-  - hamburger_options[:loc_prefix] = "nav.header."
+- hamburger_options = {}
+- hamburger_options[:level] = level
+- hamburger_options[:script_level] = script_level
+- hamburger_options[:user_type] = user_type
+- hamburger_options[:language] = request.language
+- hamburger_options[:code_org_url_base] = CDO.code_org_url
+- hamburger_options[:studio_url_base] = CDO.studio_url
+- hamburger_options[:show_gallery] = true
+- hamburger_options[:loc_prefix] = "nav.header."
 
 .hide_on_mobile{class: header_class}
-  - if !show_header2 && show_bug_links
-    - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
-    #betainfo
-      - if level && level.try(:is_project_level) && level.game == Game.gamelab
-        = link_to t('landing.documentation'), 'https://docs.code.org/gamelab/', target: '_blank'
-        |
-      - if level && level.try(:is_project_level) && level.game == Game.applab
-        = link_to t('landing.documentation'), 'https://docs.code.org/applab/', target: '_blank'
-        |
-        = link_to t('landing.tutorials'), CDO.code_org_url('/educate/applab'), target: '_blank'
-        |
-      = link_to t('landing.report_bug'), report_url, target: '_blank'
-
   .navbar-static-top.header{class: 'hide_on_mobile'}
     .container{style: (full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
           .header_left
             .header_logo
-              - if show_header2
-                = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
-              - else
-                - if current_page?(root_url)
-                  = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
-                - else
-                  = link_to(image_tag('codeorg-studio-logo.png'), '/')
-            - if show_header2
-              .project_info
-            - else
-              %span.project_info
+              = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
+            .project_info
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
             - elsif level
-            - elsif show_header2
+            - else
               .headerlinks.hide_on_tablet
                 - if user_type == "teacher"
                   %a.headerlink{:href=>"/home"}= t('nav.header.home')
@@ -95,20 +79,13 @@
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
-              - if show_header2
-                %span#sign_in_or_user
-                = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
-              - else
-                = render partial: 'shared/user_header_ajax'
+              %span#sign_in_or_user
+              = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
-- if show_header2
-  - if request.path == "/home" || request.path == "/courses"
-    - if user_type == "teacher"
-      #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
-    - else
-      #header-banner{style: 'background-image: url("/shared/images/banners/banner-test3.jpg")'}
-  - if request.path == "/projects" || request.path == "/projects/public"
-    #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
+- if request.path == "/home" || request.path == "/courses"
+  #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+- if request.path == "/projects" || request.path == "/projects/public"
+  #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
 
 - if script_level
   - view_as = @user || current_user
