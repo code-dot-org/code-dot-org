@@ -30,27 +30,37 @@ These workshops are facilitated by experienced computer science educators across
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started.
 
-<br><br>
+<br>
 
-#### 7-9th grade teachers: Computer Science Discoveries
+<div class="col-50" style="padding-right: 20px; padding-bottom: 20px;">
+
+<h4>7-9th grade: Computer Science Discoveries</h4>
 
 For educators in 7-9th grade classrooms, our Computer Science Discoveries course is a great place to start. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data. The program is currently full for the 2017-18 school year, but sign up on our interest form today if you'd like to apply next year.
 
-[<button>Learn more</button>](/educate/csd)
+<br>
+<a href="/educate/csd"><button>Learn more</button>
 
-<br><br>
+</div>
 
-#### 9-12th grade teachers: Computer Science Principles
+<div class="col-50" style="padding-left: 20px; padding-bottom: 20px;">
 
-If you're teaching 9-12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in. We have a few workshop seats left this summer in select regions. Or, join our interest form if you're interested in teaching in the 2018-19 school year.
+<h4>9-12th grade: Computer Science Principles</h4>
 
-[<button>Learn more</button>](/educate/csp)
+If you're teaching 9-12th grade students, our Computer Science Principles course can be taught as an AP or non-AP course. Either way, there are no prerequisites required. The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course. It explores many of the big, foundational ideas of computing so all students understand how these concepts are transforming the world we live in. We have a few workshop seats left this summer in select regions. Or, sign up on our interest form if you're interested in teaching in the 2018-19 school year.
+
+<br>
+<a href="/educate/csp"><button>Learn more</button>
+
+</div>
+
+<div style="clear: both;"></div>
 
 ## International
 
-Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. (The intended audience is primary school teachers)
+Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. The intended audience for this online workshop is primary school teachers.
 
-At this point, our in-person  workshops are only available in the United States, but the [curriculum, lesson plans, tools, and support](https://studio.code.org/courses) are available at no cost worldwide. And, [join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices.
+At this point, our in-person  workshops are only available in the United States, but the [curriculum, lesson plans, tools, and support](https://studio.code.org/courses) are available at no cost worldwide. And, [join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices. Our forums are for teachers of all grade levels.
 
 You can also contact our [international partners](https://hourofcode.com/international-partners) for more information on local professional learning opportunities.
 
