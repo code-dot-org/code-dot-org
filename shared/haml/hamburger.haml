@@ -101,9 +101,6 @@
         - student_entries.each do |entry|
           %li{class: show_student_options}
             %a{href: entry[:url]}= entry[:title]
-      - else
-        %li
-          %a{ href: "#{studio_url_base}/projects/public"}=I18n.t("#{loc_prefix}project_gallery")
 
     .help-links
       - if level || script_level
@@ -154,6 +151,10 @@
         - about_entries.each do |entry|
           %li
             %a{href: entry[:url]}= entry[:title]
+      .project-gallery-signed-out
+        - if !user_type
+          %li
+            %a{ href: "#{studio_url_base}/projects/public"}=I18n.t("#{loc_prefix}project_gallery")
 
   #hamburger-icon{class: hamburger_class}
     %span
