@@ -25,7 +25,11 @@
 #
 
 class Maze < Grid
-  serialized_attrs :start_direction, :step_mode
+  serialized_attrs %w(
+    start_direction
+    step_mode
+    shape_shift
+  )
 
   # List of possible skins, the first is used as a default.
   def self.skins
