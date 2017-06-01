@@ -142,14 +142,15 @@
     interaktiven Kurse zum Selbststudium und unsere auf, spielerischer Basis beruhenden,
     Programmier-Anwendungen bieten eine einfache Einführung ins Programmieren und
     ermutigen Kinder zu Innovation und Kreativität.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_curriculum: Probiere Tynker Lehr-Programm für Leseanfänger
   third_party_tynker_btn_site: Besuche Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Scratch Jr. ist eine einfache Programmiersprache, mit
+    der jüngere Kinder (zwischen 5-7 Jahren) eigene interaktive Geschichten und Spiele
+    erstellen können. Kinder verbinden in dieser Programmiersprache grafische Programmier-Blöcke;
+    damit bewegen sie Figuren, lassen diese hochspringen, tanzen und singen. Kinder
+    können die Figuren auch verändern, eigene Stimmen und Klänge hinzufügen, sogar
+    Fotos von sich selbst einfügen. Mit den Programmier-Blöcken erwecken sie diese
+    Figuren zum Leben.
   third_party_scratchjr_btn_curriculum: Lade Scratch Jr. Curriculum herunter
   third_party_scratchjr_btn_site: Besuche Scratch J.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
@@ -157,7 +158,7 @@
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Lade Scratch Jr. Curriculum herunter
-  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_forum: Forum für Scratch-Tutoren
   third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
@@ -185,7 +186,7 @@
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_try: Einführung in die Informatik - Informationen für Schulen
   third_party_codecademy_desc: Wir überdenken Bildung von Grund auf. Im Internet wurde
     fast alles - Handel, soziale Netzwerke, Gesundheitswesen und vieles mehr neu überdacht.
     Wir machen die Bildung, die die Welt benötigt - Die erste echte heimische Programmierausbildung.
@@ -204,12 +205,12 @@
     4-8
   third_party_desc_10to12_kto3: Ungefähr 10-12 Lektionen, ausgerichtet auf die Jahrgangsstufen
     Kinergarten 3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_11_kto5: 'Ungefähr 11 Lerneinheiten. Zielgruppe: 5- Klasse'
+  third_party_desc_10to12_kto5: 'Ungefähr 10-12 Lerneinheiten. Zielgruppe: 5- Klasse'
+  third_party_desc_40_4to8: 'Mehr als 40 Lerneinheiten. Zielgruppe: 4-8. Klasse'
+  third_party_desc_dozens_kto8: Zahlreiche weitere Lerneinheiten für alle Stufen,
+    ca. 8. Klasse
+  third_party_desc_10to15_3to12: '10-15 Lerneinheiten. Zielgruppe: 3.-12. Klasse'
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
   third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
@@ -263,8 +264,8 @@
   continue_learning_header: "￼Erweitern Sie Ihr Wissen"
   continue_learning_body: Es gibt unzählige Optionen. Du kannst online lernen, an
     einer örtlichen Schule oder in einem Feriencamp.
-  learn_code_studio: Try Code Studio courses
-  learn_next_level: Weiter zum nächsten Code Studio Kurs
+  learn_code_studio: Try Code.org's courses
+  learn_next_level: Weiter zum nächsten Level
   learn_online: Probiere andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
   learn_back_to_minecraft: Lerne mehr mit Minecraft
@@ -301,7 +302,7 @@
   stats_michael: '"Ich habe meine Schüler<b>noch niemals</b> so begeistert lernen
     sehen." – Michael Clark, Lehrer'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> kennenlernen"
-  studiobar_title_nolink: Code Studio kennenlernen
+  studiobar_title_nolink: Entdecke das Code Studio
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_hoc_title: Die Hour of Code
@@ -414,7 +415,7 @@
   homepage_slot_text_link_buy: Mitmachen
   homepage_slot_text_link_donate: Spende
   homepage_slot_text_link_shop: T-shirts, Hüte & mehr
-  homepage_header_codestudio: Code Studio Schülerprojekte
+  homepage_header_codestudio: Kreationen der Schüler im Code Studio
   homepage_header_donors: Code.org dankt seinen Unterstützern
   homepage_donors_seall: Alle anzeigen
   homepage_donors_donate: Spenden
@@ -760,7 +761,7 @@
   dashboard_assessments_view: 'Zeige Bewertungen in:'
   dashboard_assessments_none: Keine Bewertungen
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -1898,15 +1899,15 @@
   playlab_shortcode: spielen
   artist_shortcode: art
   header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
+  header_courses: Kurse
+  header_project_gallery: Projekt Galerie
+  header_sections: Sektionen
+  header_professional_learning: Professionelles Lernen
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Stunde des Codes
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1924,11 +1925,11 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: Statistiken
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Einführungen
+  header_documentation: Dokumentation
