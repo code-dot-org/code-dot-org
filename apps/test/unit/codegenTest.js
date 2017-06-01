@@ -38,9 +38,6 @@ describe("codegen", function () {
             'assert',
             interpreter.createNativeFunction((truthy, message) => {
               if (truthy !== interpreter.TRUE) {
-                console.log(
-                  interpreter.stateStack[interpreter.stateStack.length - 1]
-                );
                 throw new Error(message);
               }
             })

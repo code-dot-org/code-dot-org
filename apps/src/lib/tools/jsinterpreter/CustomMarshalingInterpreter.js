@@ -178,7 +178,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   }
 
   step() {
-    const state = this.stateStack[0];
+    const state = this.stateStack[this.stateStack.length - 1];
     // Program nodes always have end=0 for some reason (acorn related).
     // The Interpreter.step method assumes that a falsey state.node.end value means
     // the interpreter is inside polyfill code, because it strips all location information from ast nodes for polyfill code.
@@ -271,11 +271,11 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @override
    */
   stepVariableDeclarator() {
-    var state = this.stateStack[0];
+    var state = this.stateStack[this.stateStack.length - 1];
     var node = state.node;
     if (node.init && !state.done) {
       state.done = true;
-      this.stateStack.unshift({node: node.init});
+      this.stateStack.push({node: node.init});
       return;
     }
     if (!this.hasProperty(this, node.id.name) || node.init) {
@@ -284,7 +284,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         this.setValue(this.createPrimitive(node.id.name), value, true);
       }
     }
-    this.stateStack.shift();
+    this.stateStack.pop();
   }
 
 };
