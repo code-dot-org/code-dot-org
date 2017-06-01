@@ -13,6 +13,7 @@ class Pd::TeacherconSurveyController < ApplicationController
     @script_data = {
       props: {
         apiEndpoint: "/api/v1/pd/teachercon_surveys",
+        facilitatorNames: workshop.facilitators.map(&:name),
         course: workshop.course,
         subject: workshop.subject,
         options: Pd::TeacherconSurvey.options.camelize_keys,

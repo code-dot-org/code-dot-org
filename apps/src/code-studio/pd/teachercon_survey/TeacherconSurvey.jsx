@@ -21,6 +21,7 @@ export default class TeacherconSurvey extends FormController {
   getPageProps() {
     return {
       ...super.getPageProps(),
+      facilitatorNames: this.props.facilitatorNames,
       course: this.props.course,
       subject: this.props.subject,
     };
@@ -50,4 +51,5 @@ TeacherconSurvey.propTypes = {
   course: React.PropTypes.string.isRequired,
   subject: React.PropTypes.string,
   pdEnrollmentCode: React.PropTypes.string.isRequired,
+  facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 };
