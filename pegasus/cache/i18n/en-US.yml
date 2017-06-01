@@ -605,7 +605,7 @@
   dashboard_navigation_view_assessments_surveys: "Assessments/Surveys"
   dashboard_navigation_add_students: "Add Students"
   dashboard_navigation_manage_students: "Manage Students"
-  dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
+  dashboard_navigation_lesson_plans_resources: "Curriculum Standards"
   dashboard_navigation_view_stats: "Stats"
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
@@ -1354,6 +1354,6 @@
   header_about: "About"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
-  'header_report_bug ': 'Report bug '
-  'header_tutorials ': 'Tutorials '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
   header_documentation: "Documentation"

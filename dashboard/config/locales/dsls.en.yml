@@ -7388,7 +7388,6 @@ en:
         The bird will make it to the pig.: The bird will make it to the pig.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseC_multi_starWars_predict1:
-        BB-8 will move forward 5 times, which will get him to collect all of the scrap metal: BB-8 will move forward 5 times, which will get him to collect all of the scrap metal
         BB-8 will move forward 5 times, which will get it to collect all of the scrap metal: BB-8 will move forward 5 times, which will get it to collect all of the scrap metal
         BB-8 will move forward only one space: BB-8 will move forward only one space
         BB-8 will not move.: BB-8 will not move.
@@ -7396,7 +7395,6 @@ en:
         I don't know: I don't know
         Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
         Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
-        The repeat block will `move the bird forward` 5 times, taking him to the pig.: The repeat block will `move the bird forward` 5 times, taking him to the pig.
         The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
       courseC_multi_starWars_predict2:
         BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
@@ -7429,23 +7427,17 @@ en:
         I don't know.: I don't know.
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
-        ? The cloud is blocking the view. There could be a flower or honeycomb under this cloud. If there is a flower, the bee will need to collect one nectar. If it is a honeycomb, the bee will need to make one honey. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        : The cloud is blocking the view. There could be a flower or honeycomb under this cloud. If there is a flower, the bee will need to collect one nectar. If it is a honeycomb, the bee will need to make one honey. Take a good look at the code below.  What do you think will happen after you click "Run"?
         ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
         : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect one nectar. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect one nectar. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseD_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
         Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
         ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
         : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
         The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.

@@ -3,7 +3,11 @@
 .projects-table-wrapper.center
   = render partial: 'projects/links'
 
-  %div.loading{'ng-show' => 'projects.length === 0'}
+  %div{'ng-show' => 'projects.length === 0 && projectsLoaded'}
+    %div{style: "padding: 10px;"}
+      = t('project.no_projects')
+
+  %div.loading{'ng-show' => 'projects.length === 0 && !projectsLoaded'}
 
   %table.projects{'ng-show' => 'projects.length > 0'}
     %colgroup
@@ -52,7 +56,7 @@
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
 
   .row
-    .span12
+    .span12{'ng-show' => 'projects.length !== 0'}
       = t('project.thumbnail_help')
 
 -if !@gallery_activities.empty?
