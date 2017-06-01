@@ -92,71 +92,65 @@
 
 #hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
-    - if level
-      - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
-      %li
-        %a{href: report_url}=I18n.t("#{loc_prefix}report_bug")
-      %li
-        %a{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
-    - else
-      %li
-        %a{href:"https://support.code.org/hc/en-us/requests/new"}=I18n.t("#{loc_prefix}report_bug")
+    .user-links{class: show_teacher_options}
+      - if user_type == "teacher"
+        - teacher_entries.each do |entry|
+          %li{class: show_teacher_options}
+            %a{href: entry[:url]}= entry[:title]
+      - elsif user_type == "student"
+        - student_entries.each do |entry|
+          %li{class: show_student_options}
+            %a{href: entry[:url]}= entry[:title]
 
-    %li
-      %a{href: "https://support.code.org"}=I18n.t("#{loc_prefix}help_support")
-
-    - if user_type == "teacher"
-      %li
-        %a{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
-
-    -# If we're a teacher, then we have special items showing here.
-    - if user_type == "teacher"
-      - teacher_entries.each do |entry|
-        %li{class: show_teacher_options}
-          %a{href: entry[:url]}= entry[:title]
-    - elsif user_type == "student"
-      - student_entries.each do |entry|
-        %li{class: show_student_options}
-          %a{href: entry[:url]}= entry[:title]
-
-    %li{class: show_pegasus_options}
-      %a{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
-    %li{class: show_pegasus_options}
-      #educate-more
-        = I18n.t("#{loc_prefix}teach")
-        %i#educate-down{class: "fa fa-caret-down"}
-        %i#educate-up{class: "fa fa-caret-up"}
-
-    - if show_gallery
-      - unless ["student", "teacher"].include? user_type
-        %li{class: show_pegasus_options}
-          %a{href: "#{studio_url_base}/projects"}= I18n.t("#{loc_prefix}project_gallery")
-
-    - if level && level.try(:is_project_level) && level.game == Game.gamelab
-      %li
-        %a{href:"https://docs.code.org/gamelab/"}=I18n.t("#{loc_prefix}documentation")
-
-    - if level && level.try(:is_project_level) && level.game == Game.applab
-      %li
-        %a{href:"https://docs.code.org/applab/"}=I18n.t("#{loc_prefix}documentation")
-
-    .educate-nav.hide-educate{class: show_pegasus_options}
-      - educate_entries.each do |entry|
+    .help-links
+      - if level || script_level
+        - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
         %li
-          %a{href: entry[:url]}= entry[:title]
-    %li{class: show_pegasus_options}
-      %a{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
-    %li{class: show_pegasus_options}
-      %a{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
-    %li{class: show_pegasus_options}
-      #about-more
-        = I18n.t("#{loc_prefix}about")
-        %i#about-down{class: "fa fa-caret-down"}
-        %i#about-up{class: "fa fa-caret-up"}
-    .about-nav.hide-about{class: show_pegasus_options}
-      - about_entries.each do |entry|
+          %a{href: report_url}=I18n.t("#{loc_prefix}report_bug")
+      - else
         %li
-          %a{href: entry[:url]}= entry[:title]
+          %a{href:"https://support.code.org/hc/en-us/requests/new"}=I18n.t("#{loc_prefix}report_bug")
+      %li
+        %a{href: "https://support.code.org"}=I18n.t("#{loc_prefix}help_support")
+      - if user_type == "teacher"
+        %li
+          %a{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
+      - if level && level.try(:is_project_level) && level.game == Game.gamelab
+        %li
+          %a{href:"https://docs.code.org/gamelab/"}=I18n.t("#{loc_prefix}documentation")
+      - if level && level.try(:is_project_level) && level.game == Game.applab
+        %li
+          %a{href:"https://docs.code.org/applab/"}=I18n.t("#{loc_prefix}documentation")
+      - if level || script_level
+        %li
+          %a{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
+
+    .pegasus-links{class: show_pegasus_options}
+      %li{class: show_pegasus_options}
+        %a{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
+      %li{class: show_pegasus_options}
+        #educate-more
+          = I18n.t("#{loc_prefix}teach")
+          %i#educate-down{class: "fa fa-caret-down"}
+          %i#educate-up{class: "fa fa-caret-up"}
+
+      .educate-nav.hide-educate{class: show_pegasus_options}
+        - educate_entries.each do |entry|
+          %li
+            %a{href: entry[:url]}= entry[:title]
+      %li{class: show_pegasus_options}
+        %a{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
+      %li{class: show_pegasus_options}
+        %a{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
+      %li{class: show_pegasus_options}
+        #about-more
+          = I18n.t("#{loc_prefix}about")
+          %i#about-down{class: "fa fa-caret-down"}
+          %i#about-up{class: "fa fa-caret-up"}
+      .about-nav.hide-about{class: show_pegasus_options}
+        - about_entries.each do |entry|
+          %li
+            %a{href: entry[:url]}= entry[:title]
 
   #hamburger-icon{class: hamburger_class}
     %span
