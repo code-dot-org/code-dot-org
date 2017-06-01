@@ -56,6 +56,7 @@ const Courses = React.createClass({
       $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
     } else {
       $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
+      $('#view_projects').appendTo(ReactDOM.findDOMNode(this.refs.viewProjects)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
   },
@@ -141,6 +142,12 @@ const Courses = React.createClass({
           <div>
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
+        )}
+
+        {!isTeacher && (
+          <ProtectedStatefulDiv
+            ref="viewProjects"
+          />
         )}
       </div>
     );
