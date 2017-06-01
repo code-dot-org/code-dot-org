@@ -31,14 +31,8 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
-  updateLocation(gallery);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
-}
-
-function updateLocation(gallery) {
-  const path = (gallery === Galleries.PUBLIC) ? '/projects/public' : '/projects';
-  window.history.pushState(null, document.title, path);
 }
 
 function onShowConfirmPublishDialog(callback) {
