@@ -92,7 +92,7 @@
 
 #hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
-    .user-links{class: show_teacher_options}
+    .user-links
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
           %li{class: show_teacher_options}
@@ -151,6 +151,10 @@
         - about_entries.each do |entry|
           %li
             %a{href: entry[:url]}= entry[:title]
+      .project-gallery-signed-out
+        - if !user_type
+          %li
+            %a{ href: "#{studio_url_base}/projects/public"}=I18n.t("#{loc_prefix}project_gallery")
 
   #hamburger-icon{class: hamburger_class}
     %span
