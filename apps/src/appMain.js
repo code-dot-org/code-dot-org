@@ -62,6 +62,15 @@ export default function (app, levels, options) {
 
   studioApp().configure(options);
 
+  const rotate = m => m[0].map((x, i) => m.map(x => x[m.length - i - 1]));
+  for (let i = 0; i < Math.random() * 4; i++) {
+    options.level.map = rotate(options.level.map);
+    options.level.startDirection = (options.level.startDirection + 3) % 4;
+  }
+  const skins = 'birds farmer farmer_night pvz scrat'.split(' ');
+  if (skins.some(s => s === options.skinId)) {
+    options.skinId = skins[Math.floor(Math.random() * 5)];
+  }
   options.skin = options.skinsModule.load(studioApp().assetUrl, options.skinId);
 
   if (studioApp().isUsingBlockly()) {
