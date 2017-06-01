@@ -106,7 +106,6 @@ const Workshop = React.createClass({
       });
     }).fail(data => {
       if (data.statusText !== "abort") {
-        console.log(`Failed to get workshop: ${this.props.params.workshopId}`);
         this.setState({
           loadingWorkshop: false,
           workshop: null
