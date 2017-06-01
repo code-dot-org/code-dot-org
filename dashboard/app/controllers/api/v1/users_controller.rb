@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
 
   def load_user
     user_id = params[:user_id]
-    if user_id != 'me' && user_id != current_user.id
+    if user_id != 'me' && user_id.to_i != current_user.id
       raise CanCan::AccessDenied
     end
     @user = current_user
@@ -34,5 +34,14 @@ class Api::V1::UsersController < ApplicationController
     )
 
     render json: {using_text_mode: !!@user.using_text_mode}
+  end
+
+  # POST /api/v1/users/<user_id>/post_ui_tip_dismissed
+  def post_ui_tip_dismissed
+    property_name = "ui_tip_dismissed_" + params[:tip]
+    @user.send("#{property_name}=", true)
+    @user.save
+
+    render status: 200, json: {set: property_name}
   end
 end

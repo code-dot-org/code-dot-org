@@ -242,8 +242,7 @@ img.video_thumbnail {
 }
 
 .header2-wrapper {
-  &.hide_on_mobile,
-  header.hide_on_mobile {
+  .hide_on_mobile {
     @media screen and (max-device-width: 500px) {
       display: none;
     }
@@ -430,6 +429,16 @@ img.video_thumbnail {
   }
 
   #signin_button .header_button {
+    margin-top: 6px;
+  }
+
+  .freeplay_links {
+    float: left;
+    padding-top: 13px;
+  }
+
+  .project_list {
+    float: left;
     margin-top: 6px;
   }
 }
@@ -2873,4 +2882,133 @@ code {
     float: left;
     padding: 5px;
   }
+}
+
+.arrow_box_up {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_up::after, .arrow_box_up::before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_up::after {
+  border-bottom-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_up::before {
+  border-bottom-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.arrow_box_down {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_down::after, .arrow_box_down::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_down::after {
+  border-top-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_down::before {
+  border-top-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+/* An arrow box with an arrow going up, but the pointer is in the
+ * top-right corner */
+
+.arrow_box_up_corner {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_up_corner::after, .arrow_box_up_corner::before {
+  bottom: 100%;
+  left: 90%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_up_corner::after {
+  border-bottom-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_up_corner::before {
+  border-bottom-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.arrow_box_down {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_down::after, .arrow_box_down::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_down::after {
+  border-top-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_down::before {
+  border-top-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
 }

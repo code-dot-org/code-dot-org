@@ -3,29 +3,17 @@ const codegen = require('../../../codegen');
 const CustomMarshaler = require('./CustomMarshaler');
 
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
-
   constructor(code, customMarshaler, opt_initFunc) {
-    super(code);
-    if (!(customMarshaler instanceof CustomMarshaler)) {
-      throw new Error("You must provide a CustomMarshaler to CustomMarshalingInterpreter");
-    }
-    this.customMarshaler = customMarshaler;
-
-    // Because of the way the interpreter is written, we have to re-do
-    // this work from the parent class's constructor because it needs
-    // customMarshaler to have been set before-hand. Unfortunately, javascript
-    // does not allow us to set customMarshaler until after the parent constructor
-    // has finished.
-    // TODO (pcardune): change the initialization process of the Interpreter
-    // class to make this work better.
-    this.initFunc_ = opt_initFunc;
-    this.globalScope = this.createScope(this.ast, null);
-    this.stateStack = [{
-      node: this.ast,
-      scope: this.globalScope,
-      thisExpression: this.globalScope,
-      done: false
-    }];
+    super(code, (thisInterpreter, scope) => {
+      if (!(customMarshaler instanceof CustomMarshaler)) {
+        throw new Error("You must provide a CustomMarshaler to CustomMarshalingInterpreter");
+      }
+      thisInterpreter.customMarshaler = customMarshaler;
+      thisInterpreter.globalScope = scope;
+      if (opt_initFunc) {
+        opt_initFunc(thisInterpreter, scope);
+      }
+    });
   }
 
   /**
