@@ -50,7 +50,7 @@ module Pd
     has_one :workshop, class_name: 'Pd::Workshop', through: :enrollment, foreign_key: :pd_workshop_id
 
     validates :enrollment, presence: true, uniqueness: true
-    validates :user, presence: true, uniqueness: true, if: -> {user_id_changed?}
+    validates :user, presence: true, uniqueness: true, if: -> {new_record? || user_id_changed?}
     validates_presence_of :street
     validates_presence_of :city
     validates_presence_of :state
