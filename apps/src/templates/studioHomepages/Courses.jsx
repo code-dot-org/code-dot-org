@@ -8,6 +8,7 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import i18n from "@cdo/locale";
 
 const styles = {
@@ -81,7 +82,7 @@ const Courses = React.createClass({
           />
         )}
 
-        {courses && (
+        {courses && courses.length > 0 && (
           <RecentCoursesCollapsible
             courses={courses}
             showAllCoursesLink={false}
@@ -141,6 +142,10 @@ const Courses = React.createClass({
           <div>
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
+        )}
+
+        {!isTeacher && !isSignedOut && (
+          <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
         )}
       </div>
     );

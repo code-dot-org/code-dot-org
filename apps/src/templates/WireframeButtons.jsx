@@ -44,8 +44,8 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   applab_legacy: 'https://code.org/educate/applab',
   artist: '/p/artist',
   artist_legacy: '/s/artist',
-  gamelab: '/projects/gamelab/new',
-  gamelab_legacy: '/projects/gamelab/new',
+  gamelab: 'https://code.org/educate/gamelab',
+  gamelab_legacy: 'https://code.org/educate/gamelab',
   playlab: '/p/playlab',
   playlab_legacy: '/s/playlab',
 };
