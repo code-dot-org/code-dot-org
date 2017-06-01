@@ -87,7 +87,7 @@ module SolrHelper
     unless solr_id.nil?
       puts "DELETING SOLR DOCUMENT: #{solr_id}..."
       begin
-        SolrHelper.delete_by_id(solr_server, solr_id)
+        solr_server.delete_by_id(solr_server, solr_id)
       rescue Exception => e
         puts "EXCEPTION OCCURRED: #{e.message}"
       end

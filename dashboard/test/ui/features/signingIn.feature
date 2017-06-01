@@ -3,8 +3,7 @@
 
 Feature: Signing in and signing out
 
-# student signin from code.org
-Scenario:
+Scenario: Student sign in from code.org
   Given I am on "http://code.org/"
   And I set the language cookie
   And I create a student named "Bob"
@@ -16,15 +15,10 @@ Scenario:
   And I wait to see ".new_user"
   And I fill in username and password for "Bob"
   And I click selector "#signin-button"
-  And I wait to see ".header_user"
-  Then check that I am on "http://studio.code.org/"
+  Then check that I am on "http://studio.code.org/courses"
   Then element ".user_menu span:first" has text "Hi Bob"
-  Then I click selector ".user_menu span:first"
-  Then I click selector ".user_menu a:last" to load a new page
-  Then I wait to see ".header_user"
 
-# student signin from studio.code.org
-Scenario:
+Scenario: Student sign in from studio.code.org
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a student named "Alice"
@@ -36,15 +30,10 @@ Scenario:
   And I wait to see ".new_user"
   And I fill in username and password for "Alice"
   And I click selector "#signin-button"
-  And I wait to see ".header_user"
-  Then check that I am on "http://studio.code.org/"
+  Then check that I am on "http://studio.code.org/courses"
   Then element ".user_menu span:first" has text "Hi Alice"
-  Then I click selector ".user_menu span:first"
-  Then I click selector ".user_menu a:last" to load a new page
-  Then I wait to see ".header_user"
 
-# teacher sign in
-Scenario:
+Scenario: Teacher sign in from studio.code.org
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a teacher named "Casey"
@@ -56,9 +45,5 @@ Scenario:
   And I wait to see ".new_user"
   And I fill in username and password for "Casey"
   And I click selector "#signin-button" to load a new page
-  And I wait to see ".header_user"
-  Then check that the url contains "teacher-dashboard"
+  Then check that I am on "http://studio.code.org/home"
   Then element ".user_menu span:first" has text "Hi Casey"
-  Then I click selector ".user_menu span:first"
-  Then I click selector ".user_menu a:last" to load a new page
-  Then I wait to see ".header_user"
