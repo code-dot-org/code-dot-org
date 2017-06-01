@@ -58,7 +58,6 @@ FactoryGirl.define do
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
-      admin false
       factory :admin do
         admin true
       end
@@ -90,7 +89,6 @@ FactoryGirl.define do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
-        admin false
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
         end
