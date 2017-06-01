@@ -92,7 +92,7 @@
 
 #hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
-    .user-links{class: show_teacher_options}
+    .user-links
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
           %li{class: show_teacher_options}
