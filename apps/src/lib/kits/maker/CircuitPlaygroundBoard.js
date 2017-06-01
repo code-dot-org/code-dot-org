@@ -1,6 +1,5 @@
 /** @file Board controller for Adafruit Circuit Playground */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import Firmata from 'firmata';
@@ -14,6 +13,7 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
+/* global MakerBridge */
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -209,9 +209,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    return new ChromeSerialPort.SerialPort(portName, {
-      bitrate: SERIAL_BAUD
-    }, true);
+    return MakerBridge.openSerialPort(portName, SERIAL_BAUD);
   }
 
   /**
