@@ -8,7 +8,7 @@ video_player: true
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "Game Lab (beta)", desc: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Design an animation or game, code with blocks or JavaScript to make it work, then share your app in seconds.", specs: "Ages 13+, all modern browsers, English only", url: CDO.studio_url('/p/gamelab'), cta: "Make an animation or game", photo_cred: "Photo courtesy of Fundación Sadosky", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
+= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "Game Lab (beta)", desc: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Design an animation or game, code with blocks or JavaScript to make it work, then share your app in seconds.", specs: "Ages 13+, all modern browsers, English only", url: CDO.studio_url('/p/gamelab'), cta: "Make an animation or game", photo_cred: "Photo courtesy of Fundación Sadosky", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Sample Projects', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
 
 #resources.responsive-body
   %h1 Resources
@@ -27,14 +27,17 @@ video_player: true
     - cta = "Remix the project"
     = view :highlight_item, item: {image: "game-lab/example-sunset", title: "Sunset shapes", desc: "Watch the sun set. Challenge: Make the sky go dark once the sun has set.", cta: cta, url: 'https://studio.code.org/projects/gamelab/Z9QRSmJBfNY25T3ViLp0MTy4uAuXNNXpZrmhPsUdEro/remix'}
     = view :highlight_item, item: {image: "game-lab/example-trees", title: "Make your own character", desc: "Use your arrow keys to move the character around. Challenge: add more to the scene and make the character look like you.", cta: cta, url: 'https://studio.code.org/projects/gamelab/XVEFITms8-c7_F-ND-FKL8w3A-oEpFD_GKAJCB2VPCQ/remix'}
-    = view :highlight_item, item: {image: "game-lab/example-bounce", title: "Bounce", desc: "Move the platform to avoid the ball hitting the bottom. Challenge: Add different obstacles and points", cta: cta, url: 'https://studio.code.org/projects/gamelab/J2R-PHcvE4Wgb2xO2bjk0Q/remix'}
+    = view :highlight_item, item: {image: "game-lab/example-bounce", title: "Bounce", desc: "Move the platform to avoid the ball hitting the bottom. Challenge: Add different obstacles and points.", cta: cta, url: 'https://studio.code.org/projects/gamelab/J2R-PHcvE4Wgb2xO2bjk0Q/remix'}
   .clear
   %a{:href=>CDO.studio_url("/projects/public")}
-    %button.default See more student projects in the public gallery
+    %button.default View project gallery
 
 #videos
   %h1.responsive-body Video library
-  Some of these videos appear in Unit 3 (Animations and Games) of the CS Discoveries course and are displayed here as a quick introduction to each of the main concepts from the unit. Check out each video to see how you can add new features to your project.
+  Some of these videos appear in Unit 3 (Animations and Games) of the
+  %a{href: "/educate/csd"}
+    CS Discoveries course
+  and are displayed here as a quick introduction to each of the main concepts from the unit. Check out each video to see how you can add new features to your project.
 
   - csdunit3_videos = []
   - csdunit3_videos << { id: 'csd_gamelab_draw_1', category_title: 'Drawing in Game Lab', code: 'PXn9gKiKKFo', download_path: 'https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_1.mp4', studio_stage: '/s/csd3/stage/3/puzzle/2' }
