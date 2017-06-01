@@ -34,16 +34,16 @@
 - hamburger_options[:show_gallery] = true
 - hamburger_options[:loc_prefix] = "nav.header."
 
-.hide_on_mobile{class: header_class}
-  .navbar-static-top.header{class: 'hide_on_mobile'}
+%div{class: header_class}
+  .navbar-static-top.header
     .container{style: (full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
           .header_left
             .header_logo
               = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
-            .project_info
-          .header_middle
+            .project_info.hide_on_mobile
+          .header_middle.hide_on_mobile
             - if script_level
               = render partial: 'shared/header_progress'
             - elsif level
@@ -66,7 +66,7 @@
                   %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
                   %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
 
-          .header_right
+          .header_right.hide_on_mobile
             %span.freeplay_links
               %a.header_status_bar.level_free_play.playlab_free_play{title: t('nav.header.free_play.playlab'), href: playlab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-rocket
