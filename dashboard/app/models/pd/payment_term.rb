@@ -31,7 +31,7 @@ class Pd::PaymentTerm < ApplicationRecord
   serialized_attrs %w(
     per_attendee_payment
     fixed_payment
-    minimum_attendees_for_payment
+    minimum_enrollees_for_payment
     maximum_attendees_for_payment
     facilitator_payment
     pay_facilitators

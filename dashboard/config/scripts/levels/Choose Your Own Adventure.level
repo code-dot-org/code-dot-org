@@ -38,9 +38,9 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "first_sprite_index": "10",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

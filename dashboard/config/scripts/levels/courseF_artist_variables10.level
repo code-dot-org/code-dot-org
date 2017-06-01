@@ -36,9 +36,9 @@
     "discard_background": "false",
     "instructions_important": "false",
     "project_template_level_name": "courseF_artist_variables_template",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

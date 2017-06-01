@@ -51,11 +51,7 @@ class OptimizeTest < Minitest::Test
 
     get(large_image_path)
     assert_equal original_image_size, last_response.content_length
-    sleep(0.1)
-    get(large_image_path)
-    # For large image, ImageOptim is not invoked and original image is returned.
-    assert_equal original_image_size, last_response.content_length
-    assert_operator 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
+    refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
   end
 
   def test_gatekeeper_disable
@@ -65,7 +61,7 @@ class OptimizeTest < Minitest::Test
     # Returns original unoptimized image with full cache headers.
     get('/images/logo.png')
     assert_equal LOGO_SIZE, last_response.content_length
-    assert_operator 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
+    refute_equal 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
   ensure
     Gatekeeper.delete 'optimize'
   end
@@ -75,11 +71,13 @@ class OptimizeTest < Minitest::Test
 
     get('/images/logo.png')
     assert_equal LOGO_SIZE, last_response.content_length
-    sleep(0.1)
-    get('/images/logo.png')
-    # ImageOptim is not invoked and original image is returned.
-    assert_equal LOGO_SIZE, last_response.content_length
-    assert_operator 10, :<, Rack::Cache::Response.new(*last_response.to_a).max_age
+    refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
     DCDO.set('image_optim_pixel_max', nil)
+  end
+
+  def test_uncacheable
+    path = '/api/hour/begin_mc.png'
+    get path
+    refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
   end
 end

@@ -44,10 +44,14 @@
 #  invited_by_type          :string(255)
 #  invitations_count        :integer          default(0)
 #  terms_of_service_version :integer
+#  urm                      :boolean
+#  races                    :string(255)
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
+#  index_users_on_current_sign_in_at                   (current_sign_in_at)
+#  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at          (hashed_email,deleted_at)
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
@@ -105,6 +109,8 @@ class User < ActiveRecord::Base
     races
     using_text_mode
     last_seen_school_info_interstitial
+    ui_tip_dismissed_homepage_header
+    ui_tip_dismissed_teacher_courses
   )
 
   # Include default devise modules. Others available are:
@@ -548,7 +554,7 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
-      where(
+      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -898,7 +904,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
-        image: '',
         # assigned_sections is current unused. When we support this, I think it makes
         # more sense to get/store this data separately from courses.
         assignedSections: []
@@ -912,7 +917,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
-        image: "",
         # assigned_sections is current unused. When we support this, I think it makes
         # more sense to get/store this data separately from courses.
         assignedSections: []

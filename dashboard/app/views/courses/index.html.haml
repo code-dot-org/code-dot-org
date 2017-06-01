@@ -13,8 +13,13 @@
   courses_data[:studentscount] = students_count
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
+  courses_data[:initialtipsdismissed] = current_user ? current_user.ui_tip_dismissed_teacher_courses : nil
+  courses_data[:userid] = current_user.try(:id)
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
+
+- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+  = render partial: 'layouts/race_interstitial'
 
 %script{src: minifiable_asset_path('js/courses/index.js'), data: {courses: courses_data.to_json}}
 
@@ -23,5 +28,8 @@
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml')
   = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
   = render partial: 'home/all_courses'
+  -if current_user && !current_user.teacher?
+    #user_hero
+      = render template: 'api/user_hero'
 
 #courses-container

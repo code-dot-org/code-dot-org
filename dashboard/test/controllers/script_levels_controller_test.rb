@@ -761,26 +761,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
   end
 
-  test 'report bug link for 20 hour' do
-    get :show, params: {script_id: '20-hour', stage_position: 1, id: 1}
-    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
-  end
-
-  test 'report bug link for course1' do
-    get :show, params: {script_id: 'course1', stage_position: 3, id: 1}
-    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
-  end
-
-  test 'report bug link for frozen' do
-    get :show, params: {script_id: 'frozen', stage_position: 1, id: 1}
-    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
-  end
-
-  test 'report bug link for course4' do
-    get :show, params: {script_id: 'course4', stage_position: 1, id: 1}
-    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
-  end
-
   test "should 404 for invalid chapter for flappy" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
       get :show, params: {script_id: 'flappy', chapter: 40000}
