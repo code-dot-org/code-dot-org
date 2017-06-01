@@ -283,11 +283,11 @@
   continue_learning_body: "Υπάρχουν πολλές επιλογές.  Μπορείτε να μάθετε σε απευθείας
     σύνδεση (on-line), ή σε ένα τοπικό σχολείο, ή σε θερινό σχολείο."
   learn_code_studio: "Δοκιμάστε μαθήματα του Code Studio"
-  learn_next_level: "Δοκιμάστε ένα άλλο μάθημα στο Code Studio"
+  learn_next_level: "Συνεχίστε στο επόμενο επίπεδο"
   learn_online: "Δοκιμάστε τα άλλα μαθήματα online"
   learn_classes: "Βρείτε τάξεις κοντά σας"
-  learn_back_to_minecraft: Keep learning with Minecraft
-  hoc_is_here: "Μάθετε την επιστήμη των υπολογιστών. Αυτό αλλάζει τα πάντα.  https://youtu.be/xJqSu1IbcHg."
+  learn_back_to_minecraft: "Εξακολουθήστε να μαθαίνετε με το Minecraft"
+  hoc_is_here: 'H #ΏραΤουΚώδικα έρχεται και πάλι στις 5-11 Δεκεμβρίου. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: "Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg"
   just_did_course1: "Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg"
   just_did_course2: "Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg"
@@ -329,8 +329,7 @@
   studiobar_flappy_title: Flappy κώδικας
   studiobar_flappy_body: "Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy"
   studiobar_teacher_title: "Φτιαγμένο για εκπαιδευτικούς"
-  studiobar_teacher_body: "Παρουσιάστε το Στούντιο Κώδικα (Code Studio) στην τάξη
-    σας"
+  studiobar_teacher_body: "Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας"
   studiobar_frozen_title: "Ώρα του Κώδικα"
   studiobar_frozen_body: "Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
     και την Έλσα"
@@ -406,8 +405,8 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
+  homepage_banner_emailprivacy: "Κάνουμε μια σημαντική αλλαγή στην υποστήριξη της
+    προστασίας των προσωπικών δεδομένων των μαθητών."
   homepage_banner_emailprivacy_link: "Διαβάστε περισσότερα"
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: "Μάθετε περισσότερα"
@@ -483,10 +482,10 @@
   class_submission_level_college: "Κολλέγιο"
   class_submission_level_vocational: "Επαγγελματικά"
   class_submission_languages_other: "Άλλες γλώσσες"
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
+  videos_more: "Περισσότερα <a href='%{inspiring_videos_playlist}'> εμπνευσμένα βίντεο</a>
+    από ανθρώπους που αποτελούν πρότυπα και από διασημότητες"
+  careers_page_more: "Περισσότερα <a href='%{careers_url}' target='_blank'> εμπνευσμένα
+    βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας"
   playlab_choose_theme: "Διαλέξτε το θέμα Play Lab"
   playlab_classic_title: "Κλασικό"
   playlab_gumball_title: "Τσιχλόμπαλα"
@@ -511,80 +510,85 @@
   mc_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
   mc_specs: "Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets | Ηλικίες
     6+"
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer: "Σχεδιαστής Minecraft"
+  minecraft_adventurer: "Ζήστε μια περιπέτεια στο Minecraft"
+  minecraft_tutorials: "Μαθήματα Minecraft από την Ώρα του Κώδικα"
+  minecraft_specs: "Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets |
+    Ηλικίες 2+"
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
   minecraft_designer_button: "Έναρξη"
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: "Χρησιμοποιήστε κώδικα για να οδηγήσετε τον Alex
+    ή τον Steve σε μια περιπέτεια."
   minecraft_adventurer_button: "Έναρξη"
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_no_internet: "Δεν έχετε Internet;"
+  minecraft_download_adventurer: "Κατεβάστε την offline έκδοση της Περιπέτειας στο
+    Minecraft."
   minecraft_subtitle: "Η Ώρα του Κώδικα με το Minecraft"
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
+  sports_page_title: "Τα Αθλήματα της Ώρας του Κώδικα"
+  sports_og_title: "Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει."
+  sports_og_description: "Πρωταθλητές και Ολυμπιονίκες σας συνιστούμε να δοκιμάσετε
+    την Ώρα του Κώδικα. Γράψτε κώδικα για το δικό σας άθλημα."
   sports_title: Code your own sports game
   sports_watch_video: "Δείτε το βίντεο"
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
+  sports_video_title: "Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει."
+  sports_select_theme: "Επιλέξτε το θέμα του μαθήματός σας"
+  sports_basketball_title: "Φτιάξτε ένα παιχνίδι μπάσκετ"
   sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
+  sports_featured_athletes: "Δείτε προτεινόμενους αθλητές"
+  sports_athletes_title: "Προτεινόμενοι αθλητές"
+  sports_athlete_Draymond: "Ντρέιμοντ Γκριν, χρυσός Ολυμπιονίκης και πρωταθλητής του
+    NBA, Golden State Warriors"
+  sports_athlete_Serena: "Σερένα Γουίλιαμς, Χρυσή Ολυμπιονίκης και Πρωταθλήτρια του
+    Τένις"
+  sports_athlete_Russell: "Ράσελ Όκουνγκ, πρωταθλητής Super Bowl και παίκτης NFL,
+    Denver Broncos"
+  sports_athlete_Sergio: "Σέρχιο Ράμος, Παγκόσμιος Πρωταθλητής και Ποδοσφαιριστής,
+    Ρεάλ Μαδρίτης"
+  sports_athlete_Sue: "Σου Μπέρντ, χρυσή Ολυμπιονίκης και πρωταθλήτρια του WNBA, Seattle
+    Storm"
+  sports_athlete_Alana: "Αλάνα Μπέρντ, χρυσή Ολυμπιονίκης και Σταρ του WNBA, Los Angeles
+    Sparks"
+  sports_athlete_Angelo: "Άντζελο Μάθιους, αρχηγός της ομάδας κρίκετ της Σρι Λάνκα"
+  sports_athlete_Nneka: "Νέγκα Ογκουμίκε, χρυσή Ολυμπιονίκης, πρωταθλήτρια WNBA και
+    2016 MVP, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Καρμέλο Άντονι, χρυσός Ολυμπιονίκης και σταρ του NBA, New
+    York Knicks"
+  sports_athlete_Marco: "Μάρκο Μπελινέλι, πρωταθλητής NBA, Charlotte Hornets"
+  sports_athlete_Neymar: "Νεϊμάρ, χρυσός Ολυμπιονίκης και ποδοσφαιριστής, Μπαρτσελόνα
+    και Εθνική Βραζιλίας"
+  sports_athlete_Sarah: "Σάρα Κουιτά Οφρίγκα, Πρωταθλήτρια Ιστιοσανίδας"
+  sports_athlete_Marcelo: "Μαρτσέλο, Πρωταθλητής Ποδοσφαίρου, Ρεάλ Μαδρίτης και Εθνική
+    Βραζιλίας"
+  sports_athlete_Erika: "Έρικα Ολιβέρα, Πρωταθλήτρια Μαραθωνοδρόμος"
+  sports_athlete_John: "Τζον Γουόλ, σταρ του NBA, Washington Wizards"
+  sports_athlete_Chris: "Κρις Μπος, Χρυσός Ολυμπιονίκης και Πρωταθλητής NBA, Miami
+    Heat"
+  sports_athlete_Harrison: "Χάρισον Μπάρνς, Χρυσός Ολυμπιονίκης και Πρωταθλητής ΝΒΑ,
+    Dallas Mavericks"
+  watch_inspirational_videos: "Πριν ξεκινήσετε, δείτε ένα από αυτά τα βίντεο"
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: "Εμπνεύστε ένα κορίτσι"
   video_title_cs_intro: "Εισαγωγή Πληροφορικής"
   video_title_schools_dont_teach: "Τι δεν διδάσκουν στα περισσότερα σχολεία"
   video_title_obama: "Ο Πρόεδρος Ομπάμα για την Πληροφορική"
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_hoc_is_here: "Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί να Μάθει"
+  video_title_anybody_can_learn: "Οποιοσδήποτε Μπορεί να Μάθει"
+  video_title_draymond_green: "Η Ώρα του Κώδικα με τον Ντρέιμοντ Γκριν"
+  video_title_russell_okung: "Η Ώρα του Κώδικα με τον Ράσελ Όκουνγκ"
+  video_title_real_madrid: "Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης"
+  video_title_marco_belinelli: "Η Ώρα του Κώδικα με τον Μάρκο Μπελινέλι"
   video_title_chris_bosh: "Ο Κρις Μπος για την Πληροφορική"
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  video_1min: 1 λεπτό
+  video_2min: 2 λεπτά
+  video_5min: 5 λεπτά
+  speak_another_language: "Μιλάτε άλλη γλώσσα;"
+  help_translate: "Βοηθήστε μας με τη μετάφραση."
+  no_internet: "Δεν έχετε Internet;"
+  download_offline: "Κατεβάστε την έκδοση χωρίς σύνδεση."
   are_you_teacher: "Είσαι δάσκαλος;"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: "Αξιολογήστε το σχέδιο μαθήματος και τους άλλους εκπαιδευτικούς
+    πόρους."
   volunteer_engineer_submission_title: "Εμπνεύστε μαθητές και προσφέρετε εθελοντική
     εργασία για την Ώρα του Κώδικα."
   volunteer_engineer_submission_subtitle_generic: '100.000 εκπαιδευτικοί πρόκειται
@@ -798,7 +802,7 @@
   dashboard_assessments_view: "Δείτε τις αξιολογήσεις σε:"
   dashboard_assessments_none: "Δεν υπάρχουν αξιολογήσεις"
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -1210,22 +1214,22 @@
   classicmaze_name: "Κλασικός λαβύρινθος"
   iceage_name: "Εποχή των Παγετώνων"
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: "Πόλεμος τον Άστρων (μπλοκ)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: "Απλή Κρυπτογράφηση"
   text-compression_name: Text Compression
   math_category_name: "Μαθηματικά"
   hoc_category_name: "Ώρα του Κώδικα"
-  csf_category_name: CS Fundamentals
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf_category_name: "Βασικές αρχές της Επιστήμης των Υπολογιστών"
+  csf2_draft_category_name: "Υπό ανάπτυξη: Μαθήματα A - F"
   csd_category_name: 'Under Development: CS Discoveries'
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csp_category_name: "Αρχές της Επιστήμης των Υπολογιστών ' 15-'16"
+  csp17_category_name: "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17"
+  cspexams_category_name: "Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών"
   research_studies_category_name: Research Studies
   applab_name: "Εργαστήριο εφαρμογών"
-  basketball_name: Make a basketball game
+  basketball_name: "Φτιάξτε ένα παιχνίδι μπάσκετ"
   sports_name: Code your own sports game
   applab_gradelevel: "Ηλικίες 13+"
   applab_shortdescription_congrats: "Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον
@@ -1997,7 +2001,7 @@
   sphero_beyond_longdescription: "Είστε είστε εκπαιδευτικός είτε γονέας, τα μαθήματα
     SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό εντατικό μάθημα στον προγραμματισμό
     των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη."
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: "Απόκρυψη αυτής της προειδοποίησης"
   compatibility_unsupported_browser: Your browser is not supported. Please upgrade
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality
@@ -2011,7 +2015,7 @@
   playlab_shortcode: "παίξε"
   artist_shortcode: art
   header_home: Home
-  header_courses: Courses
+  header_courses: "Τες"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2019,7 +2023,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "Ώρα του Κώδικα"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
