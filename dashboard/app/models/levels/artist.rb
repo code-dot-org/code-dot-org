@@ -191,7 +191,7 @@ class Artist < Blockly
         <title name="TIMES">4</title>
       </block>
       <block type="controls_repeat_dropdown">
-        <title name="TIMES" config="3-10">???</title>
+        <title name="TIMES" config="2-10">???</title>
       </block>
       <block type="controls_repeat_ext">
         <value name="TIMES"></value>
@@ -251,7 +251,7 @@ class Artist < Blockly
         <title name="TIMES">5</title>
       </block>
       <block type="controls_repeat_simplified_dropdown">
-        <title name="TIMES" config="3-10">3</title>
+        <title name="TIMES" config="2-10">3</title>
       </block>
       <block type="draw_colour_simple"></block>
       <block type="draw_line_style_pattern"></block>
