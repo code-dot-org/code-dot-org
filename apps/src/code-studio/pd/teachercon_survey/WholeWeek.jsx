@@ -51,6 +51,7 @@ export default class WholeWeek extends FormComponent {
           componentClass: "textarea",
           label: this.labelFor('venueFeedback'),
           name: "venueFeedback",
+          required: true
         })}
 
         <h4>Please rate your level of agreement with each statement below.</h4>
@@ -100,7 +101,6 @@ export default class WholeWeek extends FormComponent {
           "facilitatorsCouldImprove",
           "likedMost",
           "wouldChange",
-          "otherFeedbackWholeWeek",
         ].map(key => (
           this.buildFieldGroup({
             componentClass: 'textarea',
@@ -109,6 +109,13 @@ export default class WholeWeek extends FormComponent {
             required: true,
           })
         ))}
+
+        {this.buildFieldGroup({
+          componentClass: "textarea",
+          label: this.labelFor('otherFeedbackWholeWeek'),
+          name: "otherFeedbackWholeWeek",
+          required: false
+        })}
 
         {this.buildButtonsFromOptions({
           label: this.labelFor('givePermissionToQuote'),

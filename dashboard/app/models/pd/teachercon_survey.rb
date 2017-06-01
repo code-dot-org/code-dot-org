@@ -14,7 +14,7 @@
 #
 
 class Pd::TeacherconSurvey < ActiveRecord::Base
-  include Pd::Form
+  include Pd::FacilitatorSpecificForm
 
   belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
   validates_presence_of :pd_enrollment
@@ -45,6 +45,7 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
       :what_helped_most,
       :what_detracted,
 
+      :venue_feedback,
       :received_clear_communication,
       :know_where_to_go_for_help,
       :suitable_for_my_experience,
@@ -67,9 +68,19 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
       :facilitators_could_improve,
       :liked_most,
       :would_change,
-      :other_feedback,
       :give_permission_to_quote,
     ].freeze
+  end
+
+  def facilitator_required_fields
+    [
+      :things_facilitator_did_well,
+      :things_facilitator_could_improve
+    ].freeze
+  end
+
+  def get_facilitator_names
+    pd_enrollment ? pd_enrollment.workshop.facilitators.map(&:name) : []
   end
 
   def self.options

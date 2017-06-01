@@ -1,6 +1,7 @@
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import FormComponent from '../form_components/FormComponent';
+import VariableFormGroup from '../workshop_survey/VariableFormGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
 
 const LABELS = {
@@ -19,6 +20,9 @@ const LABELS = {
   "whatHelpedMost": "What helped you learn the most today and why?",
   "whatDetracted": "What detracted from your learning today and why?",
   "otherFeedbackFridayOnly": "Is there anything else you’d like to tell us about your experience today?",
+  "whoFacilitated": "Who facilitated your workshop today? (check at least one)",
+  "thingsFacilitatorDidWell": "What were two things {value} did well?",
+  "thingsFacilitatorCouldImprove": "What were two things {value} could do better?",
 };
 
 export default class FridayOnly extends FormComponent {
@@ -72,6 +76,28 @@ export default class FridayOnly extends FormComponent {
             name: key,
             required: true,
           }))}
+        />
+
+        <VariableFormGroup
+          sourceName="whoFacilitated"
+          sourceLabel={this.labelFor("whoFacilitated")}
+          sourceValues={this.props.facilitatorNames}
+
+          onChange={this.handleChange}
+          data={this.props.data}
+          errors={this.props.errors}
+
+          rowVariableQuestions={[{
+            label: this.labelFor("thingsFacilitatorDidWell"),
+            name: 'thingsFacilitatorDidWell',
+            type: 'free_response',
+            required: true
+          }, {
+            label: this.labelFor("thingsFacilitatorCouldImprove"),
+            name: 'thingsFacilitatorCouldImprove',
+            type: 'free_response',
+            required: true
+          }]}
         />
 
         {this.buildFieldGroup({
