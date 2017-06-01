@@ -108,11 +108,8 @@
     overflow-y: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-    .help-links, .user-links {
+    .help-links {
       border-bottom: solid 10px $dark_teal;
-    }
-    .project-gallery-signed-out {
-      border-top: solid 10px $dark_teal;
     }
     li {
       color: $white;
