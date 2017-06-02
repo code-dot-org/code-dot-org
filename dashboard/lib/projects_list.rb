@@ -95,7 +95,7 @@ module ProjectsList
             select_append(Sequel[:storage_apps][:id].as(:channel_id)).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: type).
+            where(state: 'active', project_type: type, abuse_score: 0).
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
