@@ -19,14 +19,19 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
   validates_presence_of :pd_enrollment
 
-  STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [
+  DISAGREES = [
     'Strongly Disagree',
     'Disagree',
     'Slightly Disagree',
+  ].freeze
+
+  AGREES = [
     'Slightly Agree',
     'Agree',
     'Strongly Agree'
   ].freeze
+
+  STRONGLY_DISAGREE_TO_STRONGLY_AGREE = (DISAGREES + AGREES).freeze
 
   def required_fields
     [
@@ -81,6 +86,17 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
 
   def get_facilitator_names
     pd_enrollment ? pd_enrollment.workshop.facilitators.map(&:name) : []
+  end
+
+  def validate_required_fields
+    hash = sanitize_form_data_hash
+
+    # validate conditional required fields
+    if DISAGREES.include?(hash.try(:[], :personal_learning_needs_met))
+      add_key_error(:how_could_improve) unless hash.key?(:how_could_improve)
+    end
+
+    super
   end
 
   def self.options
