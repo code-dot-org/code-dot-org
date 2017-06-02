@@ -40,6 +40,7 @@ export const install = (blockly, blockInstallOptions) => {
   const agentBlockColor = { h: 90, s: 0.57, v: 0.7 };
   const itemBlockColor = { h: 358, s: 0.54, v: 0.7 };
   const nonAgentBlockColor = { h: 42, s: 0.69, v: 0.76 };
+  const controlBlockColor = { h: 358, s: 0.88, v: 0.94 };
   // Agent related blocks
   blockly.Blocks.craft_move = {
     helpUrl: '',
@@ -290,8 +291,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetail()))
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetailInSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.STRING);
     }
@@ -307,8 +307,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpace()))
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpaceInSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
@@ -324,8 +323,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCount()))
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCountInSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
@@ -381,7 +379,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_wait = {
     helpUrl: '',
     init: function () {
-      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setHSV(controlBlockColor.h, controlBlockColor.s, controlBlockColor.v);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionWait()))
           .appendTitle(new blockly.FieldTextInput('1000', blockly.FieldTextInput.numberValidator), 'MILLISECONDS')

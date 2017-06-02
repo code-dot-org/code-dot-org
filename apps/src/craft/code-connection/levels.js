@@ -49,14 +49,13 @@ module.exports = {
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
-        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('fill') +
         craftBlock('give') +
         craftBlock('executeasother') +
-        craftBlock('executedetect', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('executedetect') +
         craftBlock('timesetbyname') +
         craftBlock('timesetbynumber') +
-        craftBlock('weather') +
-        craftBlock('wait')) +
+        craftBlock('weather')) +
       category('Logic',
         block('logic_compare') +
         block('logic_operation') +
@@ -68,7 +67,8 @@ module.exports = {
         block('controls_if', "<mutation else='1'></mutation>") +
         block('controls_for') +
         block('controls_whileUntil') +
-        block('controls_repeat_ext', `<value name='TIMES'>${block('math_number', '<field name="NUM">10</field>')}</value>`))+
+        block('controls_repeat_ext', `<value name='TIMES'>${block('math_number', '<field name="NUM">10</field>')}</value>`)+
+        craftBlock('wait')) +
       category('Variables', "", 'custom="VARIABLE"') +
       category('Functions', "", 'custom="PROCEDURE"') +
       category('Math',
