@@ -50,6 +50,7 @@ export default class FridayOnly extends FormComponent {
             componentClass: "textarea",
             label: this.labelFor("howCouldImprove"),
             name: "howCouldImprove",
+            required: true
           })
         }
 
