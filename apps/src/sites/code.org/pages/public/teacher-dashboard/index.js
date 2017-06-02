@@ -240,7 +240,7 @@ function main() {
           }
         }
         if ($scope.hocAssignWarningEnabled &&
-            course.category === $scope.hocCategoryName) {
+            script.category === $scope.hocCategoryName) {
           $scope.sectionToSave = $scope.sections.indexOf(section);
           $('#assign-confirm').modal('show');
           return;
