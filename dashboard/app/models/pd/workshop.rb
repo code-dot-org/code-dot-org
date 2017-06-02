@@ -163,6 +163,9 @@ class Pd::Workshop < ActiveRecord::Base
 
   belongs_to :regional_partner
 
+  before_save :process_location, if: -> {location_address_changed?}
+  auto_strip_attributes :location_name, :location_address
+
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
       unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
@@ -424,11 +427,36 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
-  def self.process_location(address)
-    result = Geocoder.search(address).try(:first)
-    return nil unless result
+  def process_location
+    result = nil
 
-    {
+    unless location_address.blank?
+      begin
+        Geocoder.with_errors do
+          # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
+          # See https://github.com/alexreisner/geocoder#error-handling
+          Retryable.retryable(on: StandardError) do
+            result = Geocoder.search(location_address).try(:first)
+          end
+        end
+      rescue StandardError => e
+        # Log geocoding errors to honeybadger but don't fail
+        Honeybadger.notify(e,
+          error_message: 'Error geocoding workshop location_address',
+          context: {
+            pd_workshop_id: id,
+            location_address: location_address
+          }
+        )
+      end
+    end
+
+    unless result
+      self.processed_location = nil
+      return
+    end
+
+    self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
       formatted_address: result.formatted_address
