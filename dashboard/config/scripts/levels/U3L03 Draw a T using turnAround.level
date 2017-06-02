@@ -138,10 +138,16 @@
     ],
     "makerlab_enabled": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "The exemplar programs have been written in the style that will be favored in this curriculum. These choices do not affect the functionality of a program but may affect the clarity with which a program can be read. In practice, so long as a consistent style is used, then programs will be easier to read and write.\r\n    \r\n**camelCase:** Function names are written in the camelCase. \"Camel Case\" refers to a stylized way of writing compound words or phrases. This means that multi-word function names are made a single word which begins in lowercase and uses uppercase letters to indicate the start of a new word. For example: camelCaseFunction()\r\n    \r\n**Function Definitions at Bottom:** Function definitions appear at the bottom of the program. This is done so that the first line of the program is the first line of code actually run. The opposite format is also very common.\r\n    \r\n**Functions Names Can't Start with Numbers:** In most programming languages, including JavaScript, function names are not allowed to begin with numbers or most symbols. Underscore, however, is allowed."
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
