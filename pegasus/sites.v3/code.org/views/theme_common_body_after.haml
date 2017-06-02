@@ -1,18 +1,2 @@
-:javascript
-  function isIE() {
-    const nav = navigator.appVersion.toUpperCase();
-    return (nav.indexOf("MSIE") != -1 || nav.indexOf("TRIDENT") != -1 || nav
-        .indexOf("EDGE") != -1)
-  }
-  
-  if (isIE()) {
-    const doc = document;
-    doc.write("<link rel='stylesheet' href='/shared/css/details-polyfill.css'\/>");
-    doc.write("<script src='/shared/js/details-polyfill/jquery.details.min.js'>"
-        + "<\/script>");
-    doc.write("<script src='/shared/js/details-polyfill/details-polyfill.js'>"
-        + "<\/script>");
-  }
-
 =view :theme_fastclick
 =view :display_language_lightbox
