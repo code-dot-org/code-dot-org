@@ -1,3 +1,5 @@
+/* global angular */
+
 /**
  * Entry point for teacher-dashboard/index.js bundle
  */
@@ -11,7 +13,7 @@ import experiments from '@cdo/apps/util/experiments';
 const script = document.querySelector('script[data-teacherdashboard]');
 const data = JSON.parse(script.dataset.teacherdashboard);
 
-main();
+main(data);
 
 // Check the experiment at the top level, so that the enableExperiments and
 // disableExperiments url params will cause a persistent setting to be stored
@@ -38,7 +40,6 @@ function renderSectionProjects(sectionId) {
       element);
   });
 }
-window.renderSectionProjects = renderSectionProjects;
 
 /* eslint-disable */
 /**
@@ -624,7 +625,7 @@ function main() {
     $scope.$on('section-projects-rendered', function () {
       $scope.section.$promise.then(
         function (section) {
-          window.renderSectionProjects(section.id);
+          renderSectionProjects(section.id);
         }
       );
     });
