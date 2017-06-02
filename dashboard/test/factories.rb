@@ -724,6 +724,50 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_teachercon_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        "personalLearningNeedsMet": "Strongly Agree",
+        "haveIdeasAboutFormative": "Strongly Disagree",
+        "haveIdeasAboutSummative": "Disagree",
+        "haveConcreteIdeas": "Slightly Disagree",
+        "toolsWillHelp": "Slightly Agree",
+        "learnedEnoughToMoveForward": "Agree",
+        "feelConfidentUsingMaterials": "Strongly Agree",
+        "feelConfidentCanHelpStudents": "Agree",
+        "havePlan": "Slightly Agree",
+        "feelComfortableLeading": "Slightly Disagree",
+        "haveLessAnxiety": "Disagree",
+        "whatHelpedMost": "helped learn most",
+        "whatDetracted": "detracted",
+        "receivedClearCommunication": "Strongly Agree",
+        "venueFeedback": "venue feedback",
+        "knowWhereToGoForHelp": "Strongly Disagree",
+        "suitableForMyExperience": "Disagree",
+        "practicingTeachingHelped": "Slightly Disagree",
+        "seeingOthersTeachHelped": "Slightly Agree",
+        "facilitatorsPresentedInformationClearly": "Agree",
+        "facilitatorsProvidedFeedback": "Strongly Agree",
+        "feltComfortableAskingQuestions": "Agree",
+        "morePreparedThanBefore": "Slightly Agree",
+        "lookForwardToContinuing": "Slightly Disagree",
+        "partOfCommunity": "Disagree",
+        "allStudentsShouldTake": "Strongly Disagree",
+        "wouldRecommend": "Disagree",
+        "bestPdEver": "Slightly Disagree",
+        "howMuchParticipated": "A tremendous amount",
+        "howOftenLostTrackOfTime": "Almost always",
+        "howHappyAfter": "Extremely happy",
+        "howExcitedBefore": "Extremely excited",
+        "facilitatorsDidWell": "facilitators did well",
+        "facilitatorsCouldImprove": "facilitators could improve",
+        "likedMost": "liked most",
+        "wouldChange": "would change",
+        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name."
+      }.stringify_keys
+    end
+  end
+
   factory :pd_workshop_survey_hash, class: 'Hash' do
     initialize_with do
       {
