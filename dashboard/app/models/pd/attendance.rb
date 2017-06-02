@@ -23,6 +23,7 @@ class Pd::Attendance < ActiveRecord::Base
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
   belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
+  belongs_to :marked_by_user, class_name: 'User', foreign_key: :marked_by_user_id
 
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
 
@@ -57,13 +58,18 @@ class Pd::Attendance < ActiveRecord::Base
   end
 
   # Idempotent: Find existing, restore deleted, or create a new attendance row.
-  def self.find_restore_or_create_by!(attendance_params)
+  # @param search_params [Hash] params to search, or create by
+  # @param then_update [Hash] optional additional params to set after retrieving or creating from the search params.
+  # @return [Pd::Attendance] resulting attendance model
+  def self.find_restore_or_create_by!(search_params, then_update: {})
     attendance = nil
     Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      attendance = Pd::Attendance.with_deleted.find_by(attendance_params) ||
-        Pd::Attendance.create!(attendance_params)
+      attendance = Pd::Attendance.with_deleted.find_by(search_params) ||
+        Pd::Attendance.new(search_params)
     end
-    attendance.restore if attendance.deleted?
+
+    attendance.assign_attributes(then_update.merge(deleted_at: nil))
+    attendance.save! if attendance.changed?
     attendance
   end
 end

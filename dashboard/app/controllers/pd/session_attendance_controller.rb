@@ -26,7 +26,9 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    Pd::Attendance.find_restore_or_create_by!(session: @session, teacher: current_user, enrollment: enrollment)
+    Pd::Attendance.find_restore_or_create_by!({session: @session, teacher: current_user, enrollment: enrollment},
+      then_update: {marked_by_user: nil}
+    )
     render_confirmation
   end
 
@@ -43,7 +45,9 @@ class Pd::SessionAttendanceController < ApplicationController
     end
 
     enrollment.update!(user: current_user, email: current_user.email)
-    Pd::Attendance.find_restore_or_create_by!(session: @session, teacher: current_user, enrollment: enrollment)
+    Pd::Attendance.find_restore_or_create_by!({session: @session, teacher: current_user, enrollment: enrollment},
+      then_update: {marked_by_user: nil}
+    )
     render_confirmation
   end
 

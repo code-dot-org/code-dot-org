@@ -141,4 +141,38 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert_equal attendance, restored_attendance
     refute attendance.reload.deleted?
   end
+
+  test 'find_restore_or_create_by then_update' do
+    teacher = create :teacher
+    workshop_admins = 3.times.map {create :workshop_admin}
+    enrollment = create :pd_enrollment, :from_user, user: teacher
+    attendance_params = {
+      session: @workshop.sessions.first,
+      teacher: teacher,
+      enrollment: enrollment
+    }
+
+    attendance = assert_creates Pd::Attendance do
+      Pd::Attendance.find_restore_or_create_by! attendance_params, then_update: {marked_by_user: workshop_admins[0]}
+    end
+    assert_equal workshop_admins[0], attendance.marked_by_user
+
+    # Idempotent: return same model the 2nd time, and updates the marked_by_user
+    new_attendance = assert_does_not_create Pd::Attendance do
+      Pd::Attendance.find_restore_or_create_by! attendance_params, then_update: {marked_by_user: workshop_admins[1]}
+    end
+    assert_equal attendance, new_attendance
+    assert_equal workshop_admins[1], new_attendance.marked_by_user
+
+    # restores deleted model
+    attendance.destroy!
+    restored_attendance = assert_does_not_create 'Pd::Attendance.with_deleted' do
+      assert_creates Pd::Attendance do
+        Pd::Attendance.find_restore_or_create_by! attendance_params, then_update: {marked_by_user: workshop_admins[2]}
+      end
+    end
+    assert_equal attendance, restored_attendance
+    refute attendance.reload.deleted?
+    assert_equal workshop_admins[2], restored_attendance.marked_by_user
+  end
 end

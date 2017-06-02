@@ -49,6 +49,7 @@ const SessionAttendance = React.createClass({
     this.showSectionMembership = !this.shouldUseNewAttendance && this.props.accountRequiredForAttendance;
     this.showPuzzlesCompleted = this.shouldUseNewAttendance && this.isCSF;
     this.isAdmin = window.dashboard.workshop.permission === "workshop_admin";
+    this.isPlp = window.dashboard.workshop.permission.indexOf('plp') >= 0;
   },
 
   componentWillUnmount() {
@@ -154,7 +155,7 @@ const SessionAttendance = React.createClass({
           sectionRequiredForAttendance={!this.shouldUseNewAttendance}
           showSectionMembership={this.showSectionMembership}
           showPuzzlesCompleted={this.showPuzzlesCompleted}
-          displayYesNoAttendance={this.shouldUseNewAttendance && !this.isAdmin}
+          displayYesNoAttendance={this.shouldUseNewAttendance && !this.isAdmin && !this.isPlp}
         />
       );
     });
