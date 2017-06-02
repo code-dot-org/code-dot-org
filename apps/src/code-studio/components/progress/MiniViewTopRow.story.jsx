@@ -7,12 +7,6 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 export default storybook => {
   const initialState = {
     progress: {
-      stages: [
-        {
-          levels: []
-        }
-      ],
-      focusAreaStageIds: [],
       isSummaryView: false,
       professionalLearningCourse: false
     }
