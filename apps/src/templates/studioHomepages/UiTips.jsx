@@ -10,6 +10,7 @@ import React from 'react';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
 import _ from 'lodash';
+import trackEvent from '../../util/trackEvent';
 
 const UiTips = React.createClass({
   propTypes: {
@@ -84,6 +85,8 @@ const UiTips = React.createClass({
   afterDialogCancel() {
     let newState = {...this.state, showingDialog: null};
     this.setState(newState);
+
+    trackEvent("ui_tips", this.props.tipId, "after_dialog_cancel");
   },
 
   afterDialogConfirm() {
@@ -92,6 +95,8 @@ const UiTips = React.createClass({
     }
     let newState = {...this.state, showingDialog: null};
     this.setState(newState);
+
+    trackEvent("ui_tips", this.props.tipId, "after_dialog_confirm");
   },
 
   beforeDialogCancel() {
@@ -102,6 +107,8 @@ const UiTips = React.createClass({
       `/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`,
       { tip: this.props.tipId }
     );
+
+    trackEvent("ui_tips", this.props.tipId, "before_dialog_cancel");
   },
 
   beforeDialogConfirm() {
@@ -117,6 +124,8 @@ const UiTips = React.createClass({
 
     let newState = {...this.state, tipsShowing: tipsShowing, showingDialog: null};
     this.setState(newState);
+
+    trackEvent("ui_tips", this.props.tipId, "before_dialog_confirm");
   },
 
   componentDidMount() {
