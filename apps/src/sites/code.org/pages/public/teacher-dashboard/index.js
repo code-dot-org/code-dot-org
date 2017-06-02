@@ -1,3 +1,5 @@
+/* global angular */
+
 /**
  * Entry point for teacher-dashboard/index.js bundle
  */
@@ -16,8 +18,11 @@ const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
 const script = document.querySelector('script[data-teacherdashboard]');
 const data = JSON.parse(script.dataset.teacherdashboard);
 
-main();
+main(data);
 
+/**
+ * Called when projects tab is selected, this renders our project list (using React)
+ */
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
@@ -38,18 +43,14 @@ function renderSectionProjects(sectionId) {
       element);
   });
 }
-window.renderSectionProjects = renderSectionProjects;
-
 
 /* eslint-disable */
 /**
   Everything below was copied wholesale from index.haml, where we had no linting.
   I'm initially disabling linting, but at some point we should make this conform
 */
-function main() {
+function main(data) {
   'use strict';
-
-  const angular = window.angular;
 
   // Embed some data in our JS
   var valid_scripts = data.valid_scripts;
@@ -627,7 +628,7 @@ function main() {
     $scope.$on('section-projects-rendered', function () {
       $scope.section.$promise.then(
         function (section) {
-          window.renderSectionProjects(section.id);
+          renderSectionProjects(section.id);
         }
       );
     });
