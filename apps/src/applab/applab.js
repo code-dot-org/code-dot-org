@@ -627,6 +627,12 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  //Scale old-sized apps to fit the new sized display. Old height - 480.
+  if ($(".screen").height() === 480) {
+    var ratio = 450 / 480;
+    $("#visualization").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+  }
 };
 
 function changedToDataMode(state, lastState) {
