@@ -1,7 +1,7 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
-/* global MakerBridge */
+/* global SerialPort */
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -57,7 +57,7 @@ export function ensureAppInstalled() {
  */
 function listSerialDevices() {
   return new Promise((resolve, reject) => {
-    MakerBridge.list((error, list) => error ? reject(error) : resolve(list));
+    SerialPort.list((error, list) => error ? reject(error) : resolve(list));
   });
 }
 

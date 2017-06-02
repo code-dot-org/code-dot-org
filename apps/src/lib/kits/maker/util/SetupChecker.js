@@ -12,7 +12,7 @@ export default class SetupChecker {
    */
   detectChromeVersion() {
     return new Promise((resolve, reject) => {
-      if (window.MakerBridge && window.MakerBridge.getVersion && window.MakerBridge.getVersion() === '0.0.0') {
+      if (window.MakerBridge && window.MakerBridge.getVersion && window.MakerBridge.getVersion() === '0.0.1') {
         resolve();
       }
       reject(new Error('Not using Maker Bridge'));

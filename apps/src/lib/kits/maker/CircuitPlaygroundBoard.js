@@ -13,7 +13,7 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
-/* global MakerBridge */
+/* global SerialPort */
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -209,7 +209,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    return MakerBridge.openSerialPort(portName, SERIAL_BAUD);
+    return new SerialPort(portName, {
+      autoOpen: true,
+      bitrate: SERIAL_BAUD,
+    });
   }
 
   /**
