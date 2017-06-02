@@ -34,9 +34,9 @@
     "markdown_instructions": "*\"Now I just want to make honey.\"*\r\n\r\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey *once*.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to use an `if` statement to check for honeycomb beneath each cloud.\",\"hint_id\":\"courseD_bee_conditionals6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a1c63dbb2fde09a7b1db2eae1cc2733e/courseD_bee_conditionals6.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
