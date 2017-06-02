@@ -62,13 +62,6 @@ export default function (app, levels, options) {
 
   studioApp().configure(options);
 
-  if (options.level && options.level.shapeShift) {
-    const rotate = m => m[0].map((x, i) => m.map(x => x[m.length - i - 1]));
-    for (let i = 0; i < Math.random() * 4; i++) {
-      options.level.map = rotate(options.level.map);
-      options.level.startDirection = (options.level.startDirection + 3) % 4;
-    }
-  }
   options.skin = options.skinsModule.load(studioApp().assetUrl, options.skinId);
 
   if (studioApp().isUsingBlockly()) {
