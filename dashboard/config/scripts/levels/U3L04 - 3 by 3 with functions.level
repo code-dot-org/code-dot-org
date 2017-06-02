@@ -135,10 +135,16 @@
     ],
     "instructions_important": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "Then we revisit the 3x3 grid challenge; this time students can write much more efficient and clear solutions by using a top-down design strategy to figure out good functions to write.\r\n\r\n***Notes***: \r\n\r\n* It’s very possible that in writing a solution with functions, the turtle might actually execute more primitive operations than in the student’s previous version.  \r\n* That’s OK, because the code should be *much* shorter and *much* easier to read.  \r\n* We will trade a well-designed, well-written program for a clumsy hard-to-read program at the cost of a few primitive operations."
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:24:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

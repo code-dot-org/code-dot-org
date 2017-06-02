@@ -42,8 +42,7 @@
     "ideal": "6",
     "callout_json": "[]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use two `repeat` blocks set to different numbers.\",\"hint_id\":\"courseC_starWars_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/55008c2805172c1b73ef411db1facd6e/courseC_starWars_loops4.mp3\"}]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
