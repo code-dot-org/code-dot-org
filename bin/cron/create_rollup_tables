@@ -91,6 +91,8 @@ def main
     next unless level.script_levels.map(&:script).select(&:k5_draft_course?)
 
     level.contained_levels.each_with_index do |contained_level, index|
+      next unless contained_level.type == 'Multi'
+
       contained_question = get_contained_question(contained_level)
       contained_levels << {
         level_id: level.id,
