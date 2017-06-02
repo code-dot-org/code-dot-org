@@ -40,8 +40,8 @@
     "sprites_hidden_to_start": "false",
     "instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "ideal": "6",
-    "contained_level_names": null,
-    "markdown_instructions": "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\" style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!  \r\nWatch out for walls and crates!  \r\n"
+    "markdown_instructions": "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\" style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!  \r\nWatch out for walls and crates!  \r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

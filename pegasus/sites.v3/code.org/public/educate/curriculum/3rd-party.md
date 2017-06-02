@@ -125,4 +125,4 @@ To decide which resources to list here, we used a rubric that looked for:
  * Affordable
 
 There was a degree of subjective editorial choices involved, because what's most important to us is to showcase a short list of resources that we believe will provide the best experience
-for educators visiting our site. We've closed new submissions to this page for now, until after we try out using an external review board for Hour of Code 2016 activities. We may re-open submissions to this page based on that experience.
+for educators visiting our site. If you would like your course to be considered for the Fall 2017 review process, which will utilize external reviewers, [please fill out this form](https://docs.google.com/forms/d/e/1FAIpQLScfsDH3-7PmtO48KCVKHg8vQ8r8uAHDPuoyAuLCXtNqyXPfxg/viewform?usp=send_form).

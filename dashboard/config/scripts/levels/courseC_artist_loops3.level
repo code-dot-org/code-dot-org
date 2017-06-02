@@ -33,8 +33,8 @@
     "start_direction": "90",
     "x": "70",
     "y": "280",
-    "contained_level_names": null,
-    "images": "[\r\n  {\"filename\": \"https://images.code.org/12d6122b944141004c50135195fafae8-image-1495571533144.png\", \"position\": [0, 0]}\r\n]\r\n\r\n"
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/12d6122b944141004c50135195fafae8-image-1495571533144.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -5178,14 +5178,14 @@ en:
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
       CSPFinal_Question_8update:
         " ": " "
-        ? 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
-        : 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
-        ? 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
-        : 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
-        ? 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
-        : 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
-        ? 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
-        : 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+        : '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -6171,6 +6171,11 @@ en:
         No, that is not even close.: No, that is not even close.
         What is 1 + 1?: What is 1 + 1?
         Yes, you are a genius!: Yes, you are a genius!
+      U1 Ch1 Assessment question 4 to 8 bit:
+        2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
+        2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
+        2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
+        2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
       U1L07 Assessment 1:
         A: A
         B: B
@@ -7687,18 +7692,20 @@ en:
         I don't know.: I don't know.
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseF_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
         ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
         : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
-        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        ? Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be one flower or one honeycomb under each cloud. Look carefully at the code below.  What do you think will happen after you click "Run"?
+        : Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be one flower or one honeycomb under each cloud. Look carefully at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
         The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
         The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
@@ -8968,10 +8975,11 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
-        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
-        When run, where will the sprite `my_sprite` be located?: When run, where will the sprite `my_sprite` be located?
+        Question: Question
+        description here: description here
         right answer: right answer
+        title: title
+        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
