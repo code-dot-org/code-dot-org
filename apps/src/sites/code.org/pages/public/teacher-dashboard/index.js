@@ -47,7 +47,7 @@ function renderSectionProjects(sectionId) {
   I'm initially disabling linting, but at some point we should make this conform
 */
 function main() {
-  'use strict';
+
 
   var valid_scripts = data.valid_scripts;
   var valid_courses = data.valid_courses;
@@ -68,14 +68,14 @@ function main() {
     'teacherDashboard.services',
     'teacherDashboard.directives',
     'teacherDashboard.filters'
-  ]).
+  ])
 
   // ROUTES
 
-  config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     if (homepage_url && window.location.search.indexOf("no_home_redirect") === -1) {
       $routeProvider.when('/',
-        {redirectTo: function() {
+        {redirectTo: function () {
           window.location = homepage_url;
         }});
     } else {
@@ -115,20 +115,20 @@ function main() {
   }]);
 
   // DIRECTIVES
-  var directives = angular.module('teacherDashboard.directives', []).
-    value('version', '0.1');
+  var directives = angular.module('teacherDashboard.directives', [])
+    .value('version', '0.1');
 
-  directives.directive('teacherNav', ['$location', '$routeParams', function($location, $routeParams) {
+  directives.directive('teacherNav', ['$location', '$routeParams', function ($location, $routeParams) {
     return {
       templateUrl: 'teacher-dashboard/nav',
-      controller: function($scope) {
+      controller: function ($scope) {
         var selectedSection = $scope.selectedSection = $scope.section || null;
 
-        $scope.sectionNavigate = function(section) {
+        $scope.sectionNavigate = function (section) {
           if (section && section.id) {
-            $location.path('/sections/' + section.id)
+            $location.path('/sections/' + section.id);
           } else {
-            $location.path('/sections')
+            $location.path('/sections');
           }
         };
       }
@@ -136,32 +136,32 @@ function main() {
   }]);
 
   // FILTERS
-  var filters = angular.module('teacherDashboard.filters', []).
-    value('version', '0.1');
+  var filters = angular.module('teacherDashboard.filters', [])
+    .value('version', '0.1');
 
-  filters.filter('htmlSafe', function($sce) {
-    return function(val) {
+  filters.filter('htmlSafe', function ($sce) {
+    return function (val) {
         return $sce.trustAsHtml(val);
     };
   });
 
   // This is probably not the best way to do this, but this fix is time-sensitive
   // TODO(ram): make this better (or migrate to React)
-  filters.filter('getNameById', function() {
-    return function(input, id) {
-        var matching = input.filter(function(val) { return val.id == id; });
+  filters.filter('getNameById', function () {
+    return function (input, id) {
+        var matching = input.filter(function (val) { return val.id == id; });
         return matching.length > 0 ? matching[0].name : null;
     };
   });
 
   // SERVICES
 
-  var services = angular.module('teacherDashboard.services', []).
-    value('version', '0.1');
+  var services = angular.module('teacherDashboard.services', [])
+    .value('version', '0.1');
 
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('sectionsService', ['$resource',
-    function($resource){
+    function ($resource){
       return $resource('/v2/sections/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
@@ -180,7 +180,7 @@ function main() {
          assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
          surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
       });
-    }]).config(['$httpProvider', function($httpProvider) {
+    }]).config(['$httpProvider', function ($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
       // Angular originally set this, but removed it in a breaking change in v1.4 because it is "rarely used in practice":
       // https://github.com/angular/angular.js/commit/3a75b1124d062f64093a90b26630938558909e8d
@@ -188,7 +188,7 @@ function main() {
     }]);
 
   services.factory('studentsService', ['$resource',
-    function($resource){
+    function ($resource){
       return $resource('/v2/students/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
@@ -205,14 +205,14 @@ function main() {
   var app = angular.module('teacherDashboard.controllers', []);
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
-                                       function($scope, $window, sectionsService){
+                                       function ($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
 
     $scope.sections = sectionsService.query();
 
-    $scope.sections.$promise.then(function( sections ){
+    $scope.sections.$promise.then(function ( sections ){
       $scope.sectionsLoaded = true;
     });
 
@@ -222,15 +222,15 @@ function main() {
 
     $scope.hocCategoryName = i18n.hoc_category_name;
 
-    $scope.edit = function(section) {
+    $scope.edit = function (section) {
       section.editing = true;
     };
 
-    $scope.genericError = function(result) {
+    $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
-    $scope.save = function(section) {
+    $scope.save = function (section) {
       if (section.script) {
         var script = null;
         for (var i = 0; i < $scope.script_list.length; i++) {
@@ -249,43 +249,43 @@ function main() {
       $scope.send_save(section);
     };
 
-    $scope.confirm_save = function() {
+    $scope.confirm_save = function () {
       $scope.send_save($scope.sections[$scope.sectionToSave]);
       $('#assign-confirm').modal('hide');
-    }
+    };
 
-    $scope.send_save = function(section) {
+    $scope.send_save = function (section) {
       if (section.id) { // update existing
         sectionsService.update({id: section.id}, section).$promise.then(
-          function(result_section) {
+          function (result_section) {
             $scope.sections[$scope.sections.indexOf(section)] = result_section;
           }
         ).catch($scope.genericError);
       } else { // save new
         sectionsService.save(section).$promise.then(
-          function(result_section) {
+          function (result_section) {
             $scope.sections[$scope.sections.indexOf(section)] = result_section;
           }
         ).catch($scope.genericError);
       }
     };
 
-    $scope.confirm_delete = function(section) {
+    $scope.confirm_delete = function (section) {
       section.confirmDelete = true;
     };
 
-    $scope.del = function(section) {
+    $scope.del = function (section) {
       sectionsService.remove(section).$promise.then(
-        function() {
+        function () {
           $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
           section.confirmDelete = false;
         }
       ).catch(
-        function() { $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.") }
+        function () { $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page."); }
       );
     };
 
-    $scope.cancel = function(section) {
+    $scope.cancel = function (section) {
       if (section.id) {
         section.editing = false;
       } else {
@@ -293,13 +293,13 @@ function main() {
       }
     };
 
-    $scope.new_section = function() {
+    $scope.new_section = function () {
       $scope.sections.unshift({editing: true, login_type: 'word'});
     };
   }]);
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
-                                             function($scope, $routeParams, sectionsService) {
+                                             function ($scope, $routeParams, sectionsService) {
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
@@ -307,24 +307,24 @@ function main() {
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
-    $scope.changeProgress = function() {
+    $scope.changeProgress = function () {
       $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid, script_id: $scope.script_id});
     };
   }]);
 
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
+                                             function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
 
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
     // error handling
-    $scope.genericError = function(result) {
+    $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
-    $scope.section.$promise.catch(function(result) {
+    $scope.section.$promise.catch(function (result) {
       if (result.status == 403 || result.status == 404) {
         $window.alert("You are not the owner of this section or this section doesn’t exist.");
       } else {
@@ -336,7 +336,7 @@ function main() {
     $scope.tab = $routeParams.tab;
 
     $scope.section.$promise.then(
-      function( section ){
+      function ( section ){
         if (!$scope.tab) {
           if ($scope.section.students.length > 0) {
             $location.path('/sections/' + $routeParams.id + '/progress');
@@ -351,8 +351,8 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      function ( sections ){
+        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
@@ -362,14 +362,14 @@ function main() {
 
     $scope.bulk_import = {editing: false, students: ''};
 
-    $scope.edit = function(student) {
+    $scope.edit = function (student) {
       student.editing = true;
     };
 
-    $scope.resetSecrets = function(student) {
+    $scope.resetSecrets = function (student) {
       var newStudent = studentsService.update({id: student.id}, {secrets: 'reset'});
       newStudent.$promise.then(
-        function(student) {
+        function (student) {
           student.showing_password = true;
         }
       );
@@ -378,7 +378,7 @@ function main() {
       $scope.section.students[$scope.section.students.indexOf(student)] = newStudent;
     };
 
-    $scope.save = function(students) {
+    $scope.save = function (students) {
       if (!$.isArray(students)) {
         return $scope.save([students]); // heh
       }
@@ -386,7 +386,7 @@ function main() {
       var newStudents = [];
       var modifiedStudents = [];
 
-      $.each(students, function(index, student) {
+      $.each(students, function (index, student) {
         if (student.editing || student.editing_password) {
           if (student.id) {
             modifiedStudents.push(student);
@@ -399,22 +399,22 @@ function main() {
       // create new students
       if (newStudents && newStudents.length > 0) {
         // remove 'new' students from array
-        $.each(newStudents, function(index, student) {
+        $.each(newStudents, function (index, student) {
           $scope.section.students.splice($scope.section.students.indexOf(student), 1);
         });
 
         // add the results from the service to the array
-        sectionsService.addStudents({id: $scope.section.id}, newStudents, function(resultStudents) {
-          $.each(resultStudents, function(index, student) {
+        sectionsService.addStudents({id: $scope.section.id}, newStudents, function (resultStudents) {
+          $.each(resultStudents, function (index, student) {
             $scope.section.students.unshift(student);
           });
         }).$promise.catch($scope.genericError);
       }
 
       // update existing students
-      $.each(modifiedStudents, function(index, student) {
+      $.each(modifiedStudents, function (index, student) {
         studentsService.update({id: student.id}, student).$promise.then(
-          function(result_student) {
+          function (result_student) {
             result_student.editing = false;
             $scope.section.students[$scope.section.students.indexOf(student)] = result_student;
           }
@@ -422,19 +422,19 @@ function main() {
       });
    };
 
-   $scope.confirm_delete = function(student) {
+   $scope.confirm_delete = function (student) {
      student.confirmDelete = true;
    };
 
-    $scope.del = function(student) { // note -- IE doesn't like it when you name things 'delete'
+    $scope.del = function (student) { // note -- IE doesn't like it when you name things 'delete'
       sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
-        function() {
+        function () {
           $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
       ).catch($scope.genericError);
     };
 
-    $scope.cancel = function(student) {
+    $scope.cancel = function (student) {
       if (student.id) {
         student.editing = false;
       } else {
@@ -442,20 +442,20 @@ function main() {
       }
     };
 
-    $scope.new_student = function() {
+    $scope.new_student = function () {
       $scope.section.students.unshift({editing: true});
     };
 
-    $scope.showMoveStudentsModal = function() {
+    $scope.showMoveStudentsModal = function () {
       $('#move-students').modal('show');
-    }
+    };
 
-    $scope.clear_bulk_import = function() {
+    $scope.clear_bulk_import = function () {
       $scope.bulk_import.editing = false;
       $scope.bulk_import.students = '';
     };
 
-    $scope.add_bulk_import = function() {
+    $scope.add_bulk_import = function () {
       var student_names = $scope.bulk_import.students.split("\n");
       for (var i = 0; i < student_names.length; i++) {
         var student_name = student_names[i];
@@ -467,7 +467,7 @@ function main() {
       $scope.clear_bulk_import();
     };
 
-    $scope.editingAny = function(things) {
+    $scope.editingAny = function (things) {
       if (!things) {
         return false;
       }
@@ -477,9 +477,9 @@ function main() {
         }
       }
       return false;
-    }
+    };
 
-    $scope.editingAll = function(things) {
+    $scope.editingAll = function (things) {
       if (!things) {
         return false;
       }
@@ -489,15 +489,15 @@ function main() {
         }
       }
       return true;
-    }
+    };
 
-    $scope.print = function() {
+    $scope.print = function () {
       $window.print();
     };
 
   }]);
 
-  app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
+  app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
     var self = this;
 
     // 'Other Section' selected
@@ -509,9 +509,9 @@ function main() {
     $scope.sections = sectionsService.query();
     $scope.students = sectionsService.allStudents({id: $routeParams.id});
 
-    $scope.moveStudents = function() {
+    $scope.moveStudents = function () {
       function isOwnSection(sectionCode) {
-        return $scope.sections.some(function(section) {return section.code === sectionCode});
+        return $scope.sections.some(function (section) {return section.code === sectionCode;});
       }
 
       function displayError(errorMessage) {
@@ -540,26 +540,26 @@ function main() {
       }
     };
 
-    $scope.showModal = function() {
-      $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function() {
+    $scope.showModal = function () {
+      $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function () {
         $('#move-students').modal('show');
-      })
+      });
     };
 
-    $scope.checkAll = function() {
+    $scope.checkAll = function () {
       $scope.selectedAll = !$scope.selectedAll;
-      angular.forEach($scope.students, function(student) {
+      angular.forEach($scope.students, function (student) {
         student.selected = $scope.selectedAll;
       });
     };
 
-    $scope.getCurrentSectionCode = function() {
+    $scope.getCurrentSectionCode = function () {
       return $scope.section.code;
     };
 
-    $scope.getSelectedStudentIds = function() {
+    $scope.getSelectedStudentIds = function () {
       var student_ids = [];
-      angular.forEach($scope.students, function(student) {
+      angular.forEach($scope.students, function (student) {
         if (student.selected) {
           student_ids.push(student.id);
         }
@@ -568,7 +568,7 @@ function main() {
       return student_ids;
     };
 
-    $scope.getNewSectionCode = function() {
+    $scope.getNewSectionCode = function () {
       if ($scope.selectedSectionCode !== $scope.otherTeacher) {
         return $scope.selectedSectionCode;
       } else {
@@ -576,7 +576,7 @@ function main() {
       }
     };
 
-    $scope.getStayEnrolledInCurrentSection = function() {
+    $scope.getStayEnrolledInCurrentSection = function () {
       if ($scope.selectedSectionCode == $scope.otherTeacher) {
         return $scope.stayEnrolledInCurrentSection;
       } else {
@@ -586,13 +586,13 @@ function main() {
   }]);
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
-                                             function($scope, $routeParams, $window, $q, sectionsService) {
+                                             function ($scope, $routeParams, $window, $q, sectionsService) {
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
     // error handling
-    $scope.genericError = function(result) {
+    $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
     $scope.section.$promise.catch($scope.genericError);
@@ -601,19 +601,19 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      function ( sections ){
+        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
-    $scope.print = function() {
+    $scope.print = function () {
       $window.print();
     };
 
   }]);
 
   app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
-      function($scope, $routeParams,  sectionsService) {
+      function ($scope, $routeParams,  sectionsService) {
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.tab = 'projects';
@@ -642,7 +642,7 @@ function main() {
   }]);
 
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.progress = sectionsService.progress({id: $routeParams.id});
@@ -650,7 +650,7 @@ function main() {
     $scope.page = {zoom: false};
 
     // error handling
-    $scope.genericError = function(result) {
+    $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
     $scope.section.$promise.catch($scope.genericError);
@@ -660,8 +660,8 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      function ( sections ){
+        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
@@ -672,13 +672,13 @@ function main() {
     $scope.progress_disabled_scripts = disabled_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
+    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function (){
       $scope.mergeProgress();
       $scope.progressLoadedFirst = true;
       $scope.progressLoaded = true;
     });
 
-    $scope.changeProgress = function(scriptId) {
+    $scope.changeProgress = function (scriptId) {
       $scope.progressLoadedFirst = false;
       // $scope.progressLoaded = false;
 
@@ -691,16 +691,16 @@ function main() {
 
       $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: scriptId});
 
-      $scope.progress.$promise.then(function(){
+      $scope.progress.$promise.then(function (){
         $scope.mergeProgress();
         $scope.progressLoadedFirst = true;
         $scope.progressLoaded = true;
       });
     };
 
-    $scope.progressWidth = function() {
+    $scope.progressWidth = function () {
       return $scope.page.zoom ? Math.max(34 * $scope.progress.script.levels_count, 770) : 770;
-    }
+    };
 
     // refresh progress every 30s
     // TODO: 'update' progress instead of replacing it
@@ -718,14 +718,14 @@ function main() {
     //   });
     // }, 30 * 1000);
 
-    $scope.scrollToStage = function($event){
-      var doScroll = function() {
+    $scope.scrollToStage = function ($event){
+      var doScroll = function () {
         var element = $( $event.currentTarget );
         var wrapper = $('.table-wrapper');
         var LEFT_COLUMN_WIDTH = 200; // scrolling the entire table not just this col, so we have to know about the left col width
         var LEFT_OFFSET = 20; // a little offset so we can see the previous stage
         wrapper.animate({scrollLeft: (element.position().left - wrapper.position().left + wrapper.scrollLeft() - LEFT_COLUMN_WIDTH - LEFT_OFFSET)}, 500);
-      }
+      };
 
       if ($scope.page.zoom) {
         doScroll();
@@ -746,24 +746,21 @@ function main() {
     };
 
     // merge the data returned by progress api into the data returned by the section students api
-    $scope.mergeProgress = function() {
+    $scope.mergeProgress = function () {
       $scope.script_id = $scope.progress.script.id;
-      $scope.progress_disabled = $scope.progress_disabled_scripts.indexOf($scope.script_id) !== -1
+      $scope.progress_disabled = $scope.progress_disabled_scripts.indexOf($scope.script_id) !== -1;
       var hocCategoryName = i18n.hoc_category_name;
       $scope.is_hoc_course = isInCategory($scope.script_list, $scope.script_id, hocCategoryName);
       // calculate width of each level in the progress bar assuming the overall width is 780 px
 
       // Takes the level's position in the script, and returns its level number in its stage
-      var getLevelNumberInStage = function(overallLevel) {
+      var getLevelNumberInStage = function (overallLevel) {
         for (var i = 0; i < $scope.progress.script.stages.length; i++) {
           var stage = $scope.progress.script.stages[i];
-          if (overallLevel < stage.length)
-            return overallLevel + 1;
-          else
-            overallLevel -= stage.length;
+          if (overallLevel < stage.length)            {return overallLevel + 1;}          else            {overallLevel -= stage.length;}
         }
         return 0;
-      }
+      };
 
       // Put levels on the student object
       for (var i = 0; i < $scope.section.students.length; i++) {
@@ -775,14 +772,14 @@ function main() {
         student.highest_level_in_stage = 0;
 
         // if we have progress
-        var progress_student = $.grep($scope.progress.students, function(e){ return e.id == student.id; })[0];
+        var progress_student = $.grep($scope.progress.students, function (e){ return e.id == student.id; })[0];
         if (progress_student) {
           student.levels = progress_student.levels;
 
           // find the last level attempted
           for (var l = student.levels.length - 1; l >= 0; l--) {
             if (student.levels[l] && student.levels[l].class != 'not_tried') {
-              var delayedSetHighestLevel = function(student, l) {
+              var delayedSetHighestLevel = function (student, l) {
                 student.highest_level = l;
                 student.highest_level_in_stage = getLevelNumberInStage(l);
               };
@@ -792,18 +789,18 @@ function main() {
           }
         }
       }
-    }
+    };
   }]);
 
   app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
 
     $scope.responses = sectionsService.responses({id: $routeParams.id});
     // error handling
-    $scope.genericError = function(result) {
+    $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
     $scope.section.$promise.catch($scope.genericError);
@@ -812,7 +809,7 @@ function main() {
 
     // fill in the course dropdown with the section's default course
     $scope.section.$promise.then(
-      function(section) {
+      function (section) {
         $scope.script_id = section.script.id;
       }
     );
@@ -820,8 +817,8 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      function ( sections ){
+        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
@@ -831,35 +828,35 @@ function main() {
     $scope.script_list = valid_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
+    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function (){
       $scope.responsesLoaded = true;
       $scope.findStages();
     });
 
-    $scope.changeScript = function(scriptId) {
+    $scope.changeScript = function (scriptId) {
       $scope.responsesLoaded = false;
       $scope.stages = [];
 
       $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
 
-      $scope.responses.$promise.then(function(){
+      $scope.responses.$promise.then(function (){
         $scope.responsesLoaded = true;
         $scope.findStages();
       });
     };
 
-    $scope.findStages = function() {
-      $scope.stages = $.map($scope.responses, function(row) {
+    $scope.findStages = function () {
+      $scope.stages = $.map($scope.responses, function (row) {
         return row.stage;
-      }).filter(function(item, i, array) { // uniquify
+      }).filter(function (item, i, array) { // uniquify
         return array.indexOf(item) == i;
       });
-    }
+    };
   }]);
 
 
   app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     // Some strings.
     var submission_list = {
       submitted:   i18n.dashboard_submission_submitted,
@@ -889,7 +886,7 @@ function main() {
     $scope.surveys = sectionsService.surveys({id: $routeParams.id});
 
     // Error handling.
-    $scope.genericError = function(result) {
+    $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
     $scope.section.$promise.catch($scope.genericError);
@@ -898,7 +895,7 @@ function main() {
 
     // Fill in the course dropdown with the section's default script.
     $scope.section.$promise.then(
-      function(section) {
+      function (section) {
         $scope.scriptid = section.script.id;
       }
     );
@@ -906,13 +903,13 @@ function main() {
     // The ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      function ( sections ){
+        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
     // Wait until we have initial section, assessment, and survey data.
-    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function(){
+    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function (){
       $scope.assessmentsLoaded = true;
       $scope.surveysLoaded = true;
       $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
@@ -922,12 +919,12 @@ function main() {
     });
 
     // Re-retrieve assessment and survey data when the script is changed using the dropdown.
-    $scope.changeScript = function(scriptId) {
+    $scope.changeScript = function (scriptId) {
 
       // Load assessments.
       $scope.assessmentsLoaded = false;
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
-      $scope.assessments.$promise.then(function(){
+      $scope.assessments.$promise.then(function (){
         $scope.assessmentsLoaded = true;
         $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
         $scope.assessmentStages = $scope.findStages($scope.assessments);
@@ -936,25 +933,25 @@ function main() {
       // Load surveys.
       $scope.surveysLoaded = false;
       $scope.surveys = sectionsService.surveys({id: $routeParams.id, script_id: scriptId});
-      $scope.surveys.$promise.then(function() {
+      $scope.surveys.$promise.then(function () {
         $scope.surveysLoaded = true;
         $scope.surveyStages = $scope.findStages($scope.surveys);
         $scope.surveyLevels = $scope.getSurveyData($scope.surveys);
       });
     };
 
-    $scope.findStages = function(source) {
-      return $.map(source, function(row) {
+    $scope.findStages = function (source) {
+      return $.map(source, function (row) {
         return row.stage;
-      }).filter(function(item, i, array) { // uniquify
+      }).filter(function (item, i, array) { // uniquify
         return array.indexOf(item) == i;
       });
-    }
+    };
 
-    $scope.getAssessmentData = function(assessments) {
+    $scope.getAssessmentData = function (assessments) {
       var results = [];
 
-      $.each(assessments, function(index, assessment) {
+      $.each(assessments, function (index, assessment) {
 
         if (assessment.multi_count === 0) {
           assessment.multi_correct_percent = 0;
@@ -971,7 +968,7 @@ function main() {
         // Each LevelGroup's result has a list of the results for the levels in that order.
         // Because angular's nested iterators are kind of funky when trying to generate a table,
         // let's just generate a flat list of the level results to go into $scope.
-        $.each(assessment.level_results, function(index, level_result) {
+        $.each(assessment.level_results, function (index, level_result) {
           var levelResult = {
             stage: assessment.stage,
             puzzle: assessment.puzzle,
@@ -985,15 +982,15 @@ function main() {
       });
 
       return results;
-    }
+    };
 
-    $scope.getSurveyData = function(surveys) {
+    $scope.getSurveyData = function (surveys) {
       // The ASCII value of A.  Used for rendering multiple choice captions.
       var asciiForA = 65;
 
       var surveyResults = [];
 
-      $.each($scope.surveys, function(surveyIndex, survey) {
+      $.each($scope.surveys, function (surveyIndex, survey) {
 
         survey.status = survey.submitted ? submission_list.submitted : submission_list.in_progress;
 
@@ -1002,7 +999,7 @@ function main() {
           // Each LevelGroup's result has a list of the results for the levels in that order.
           // Because angular's nested iterators are kind of funky when trying to generate a table,
           // let's just generate a flat list of the level results to go into $scope.
-          $.each(survey.levelgroup_results, function(sublevelIndex, sublevelResults) {
+          $.each(survey.levelgroup_results, function (sublevelIndex, sublevelResults) {
             var questionText = sublevelResults.question;
 
             // How many students answered this question?
@@ -1010,7 +1007,7 @@ function main() {
 
             if (sublevelResults.type == "free_response") {
               // Free response: just add all of the responses.
-              $.each(sublevelResults.results, function(sublevelResultIndex, sublevelResult) {
+              $.each(sublevelResults.results, function (sublevelResultIndex, sublevelResult) {
                 // Disambiguate free responses that are unsubmitted and that are empty strings.
                 if (sublevelResult.result === undefined || sublevelResult.result === "") {
                   sublevelResult.result = null;
@@ -1040,7 +1037,7 @@ function main() {
               var multiResults = [];
 
               // First, build a result entry for each possible answer.
-              $.each(sublevelResults.answer_texts, function(answerTextIndex, answerText) {
+              $.each(sublevelResults.answer_texts, function (answerTextIndex, answerText) {
                 var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
                 var answerFieldText = String.fromCharCode(asciiForA + answerTextIndex) + ". " + answerText;
 
@@ -1057,7 +1054,7 @@ function main() {
               });
 
               // Second, go through each result and update the count for that result.
-              $.each(sublevelResults.results, function(sublevelResultIndex, sublevelResult) {
+              $.each(sublevelResults.results, function (sublevelResultIndex, sublevelResult) {
                 if ("answer_index" in sublevelResult) {
                   var answerIndex = sublevelResult.answer_index;
                   multiResults[answerIndex].count ++;
@@ -1084,7 +1081,7 @@ function main() {
       });
 
       return surveyResults;
-    }
+    };
   }]);
 
 }
