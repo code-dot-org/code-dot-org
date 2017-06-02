@@ -31,7 +31,8 @@ const ProgressTable = React.createClass({
     // TODO - This modifies things outside of our scope. This is done right now
     // because we only want to modify this (dashboard-owned) markup in the case
     // where an experiment is enabled (leading to this component being rendered).
-    // Once we're not behind an experiment, we should make these changes elsewhere.
+    // Once we're not behind an experiment for progressRedesign, we should make
+    // these changes elsewhere.
     const padding = 80;
     $(".container.main").css({
       width: 'initial',
