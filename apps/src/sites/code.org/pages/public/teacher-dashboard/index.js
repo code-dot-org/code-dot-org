@@ -44,13 +44,10 @@ function renderSectionProjects(sectionId) {
   });
 }
 
-/* eslint-disable */
-/**
-  Everything below was copied wholesale from index.haml, where we had no linting.
-  I'm initially disabling linting, but at some point we should make this conform
-*/
+//  Everything below was copied wholesale from index.haml, where we had no linting.
+// TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
+/* eslint-disable eqeqeq, no-unused-vars */
 function main(data) {
-
 
   // Embed some data in our JS
   var valid_scripts = data.valid_scripts;
