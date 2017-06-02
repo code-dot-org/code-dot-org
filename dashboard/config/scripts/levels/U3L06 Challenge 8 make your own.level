@@ -93,7 +93,7 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
-    "teacher_markdown": "Validation note: Since this is a free form drawing we only check the bare minimum requirements: \r\n* set the `penColor` at least 3 times\r\n* called `moveTo` at least once.",
+    "teacher_markdown": "The term API is used somewhat ambiguously at times, often used to mean: a programming language, a library of commands provided by a language, or the documentation itself.  \r\n\r\nRemind students that they know how to write functions! And in their drawing, they might use them to make more sophisticated things.\r\n\r\n**The Full Turtle API:** Students are introduced to the term API - “Application Program Interface” - a term that means “the full set of commands provided to the programmer by the given language.”\r\n\r\nThe set of all turtle commands is revealed and students are asked to make any kind of drawing that they like.\r\n\r\nValidation note: Since this is a free form drawing we only check the bare minimum requirements: \r\n* set the `penColor` at least 3 times\r\n* called `moveTo` at least once.",
     "log_conditions": [
       {
         "entries": [
@@ -123,10 +123,17 @@
     ],
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:48:23 +0000\",\"changed\":[\"code_functions\",\"teacher_markdown\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
