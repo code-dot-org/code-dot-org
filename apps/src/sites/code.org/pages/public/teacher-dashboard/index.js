@@ -17,8 +17,9 @@ function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
 
-  const script = document.querySelector('script[data-studiourlprefix]');
-  const studioUrlPrefix = script.dataset.studiourlprefix;
+  const script = document.querySelector('script[data-teacherdashboard]');
+  const data = JSON.parse(script.dataset.teacherdashboard);
+  const studioUrlPrefix = data.studiourlprefix;
 
   $.ajax({
     method: 'GET',
