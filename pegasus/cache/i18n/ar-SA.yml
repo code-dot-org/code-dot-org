@@ -719,12 +719,15 @@
   dashboard_action_required: "متطلب"
   dashboard_action_print_certificates: "إطْبَع الشَهَادَات"
   dashboard_assessments_view: "عرض التقييمات في:"
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none: Most teachers measure their students' progress using
+    the "View Progress" tab. If you are interested in giving your students additional
+    assessments, you can find recommended questions and areas in the lesson plans.
+    These are done outside of Code Studio.
+  dashboard_assessments_none_part2: If you are teaching a middle or high school course,
+    we have assessment questions available as part of Code Studio to help your students
+    prepare for the AP test. To use these assessments, first assign the course to
+    your class and then pick the course from the drop down above and you'll see your
+    students' answers here.
   dashboard_assessments_summaries: "الخلاصات"
   dashboard_assessments_answers: "جميع الأجوبة"
   dashboard_surveys_answers: Surveys
@@ -1774,3 +1777,38 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
+  header_home: Home
+  header_courses: Courses
+  header_project_gallery: Project Gallery
+  header_sections: Sections
+  header_professional_learning: Professional Learning
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Elementary School
+  header_educate_middle: Middle School
+  header_educate_high: High School
+  header_educate_hoc: Hour of Code
+  header_educate_partner: Partner with Us
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspire a Student
+  header_educate_community: Online Community
+  header_educate_tools: Tools and Videos
+  header_about_us: About Us
+  header_about_leadership: Leadership
+  header_about_donors: Donors
+  header_about_partners: Partners
+  header_about_team: Full Team
+  header_about_news: Newsroom
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Contact Us
+  header_about_faqs: FAQs
+  header_learn: Learn
+  header_teach: Teach
+  header_stats: Stats
+  header_help_us: Help Us
+  header_about: About
+  header_teacher_community: Teacher community
+  header_help_support: 'Help and support '
+  header_report_bug: Report bug
+  header_tutorials: Tutorials
+  header_documentation: Documentation
