@@ -62,8 +62,11 @@ FactoryGirl.define do
       factory :admin do
         admin true
       end
-      factory :terms_of_service_teacher do
+      trait :with_terms_of_service do
         terms_of_service_version 1
+      end
+      factory :terms_of_service_teacher do
+        with_terms_of_service
       end
       factory :facilitator do
         name 'Facilitator Person'

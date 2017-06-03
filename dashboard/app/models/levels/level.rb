@@ -309,7 +309,7 @@ class Level < ActiveRecord::Base
     Studio
     StudioEC
     StarWarsGrid
-  )
+  ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
