@@ -359,7 +359,7 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :sanitize_race_data,
+    :sanitize_and_set_race_data,
     :fix_by_user_type
 
   def make_teachers_21
@@ -381,9 +381,30 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def sanitize_race_data
-    return unless property_changed?('races')
+  # Returns whether the comma separated list of races represents an under-represented minority user.
+  # @return [Boolean, nil] Whether races_comma_separated represents a URM user.
+  #   - true: Yes, a URM user.
+  #   - false: No, not a URM user.
+  #   - nil: Don't know, may or may not be a URM user.
+  def self.urm_from_races(races_comma_separated)
+    races_array = races_comma_separated.split(',')
+    return nil if races_array.empty?
+    return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    false
+  end
 
+  def sanitize_and_set_race_data
+    return unless property_changed?('races')
+    # Though not possible from the UI, it seems wise to support manual clearing of this field. Thus
+    # we check for this edge case.
+    if races.nil?
+      update_column(:races, nil)
+      update_column(:urm, nil)
+      return
+    end
+
+    # Sanitize the old (properties) data.
     if races.include? 'closed_dialog'
       self.races = %w(closed_dialog)
     end
@@ -393,6 +414,11 @@ class User < ActiveRecord::Base
     races.each do |race|
       self.races = %w(nonsense) unless VALID_RACES.include? race
     end
+
+    # Set the new (urm and races columns) data.
+    races_comma_separated = races.join(',')
+    update_column(:races, races_comma_separated)
+    update_column(:urm, User.urm_from_races(races_comma_separated))
   end
 
   def fix_by_user_type
