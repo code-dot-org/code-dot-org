@@ -4,12 +4,17 @@
     { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
     { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" },
     { title: I18n.t("#{loc_prefix}sections"), url: "#{code_org_url_base}/teacher-dashboard#/sections" },
-    { title: I18n.t("#{loc_prefix}professional_learning"), url: "#{studio_url_base}/my-professional-learning" }
+    { title: I18n.t("#{loc_prefix}professional_learning"), url: "#{studio_url_base}/my-professional-learning" },
   ].freeze
 
   student_entries = [
     { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
     { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects" }
+  ]
+
+  signed_out_entries = [
+    { title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses" },
+    { title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects/public" }
   ]
 
   educate_entries = [
@@ -40,7 +45,10 @@
 
   show_teacher_options = "hide-always"
   show_student_options = "hide-always"
+  show_user_options = "hide-always"
   show_pegasus_options = "hide-always"
+  show_help_options = "show-always"
+  show_signed_out_options = "hide-always"
 
   hamburger_class = "none"
 
@@ -48,15 +56,21 @@
     # The header is taken over by level-related UI, so we need the hamburger
     # to show whatever would show up in the header at desktop (and mobile) widths.
     if user_type == "teacher"
+      show_user_options = "show-always"
       show_teacher_options = "show-always"
     elsif user_type == "student"
+      show_user_options = "show-always"
       show_student_options = "show-always"
+    else
+      show_user_options = "show-always"
+      show_signed_out_options = "show-always"
     end
 
     # Regardless of user type, if they are English, then they also need the pegasus
     # options in the hamburger.
     if language == "en"
       show_pegasus_options = "show-always"
+      show_help_options = "show-always"
     end
 
   else
@@ -65,9 +79,16 @@
     # appear in the hamburger at mobile widths.
 
     if user_type == "teacher"
+      show_user_options = "show-mobile"
       show_teacher_options = "show-mobile"
+      show_help_options = "show-always"
     elsif user_type == "student"
+      show_user_options = "show-mobile"
       show_student_options = "show-mobile"
+      show_help_options = "show-always"
+    else
+      show_user_options = "show-mobile"
+      show_signed_out_options = "show-mobile"
     end
 
     if language == "en"
@@ -82,7 +103,7 @@
   end
 
   # Do we show hamburger on all widths, only mobile, or not at all?
-  if show_teacher_options == "show-always" || show_student_options == "show-always" || show_pegasus_options == "show-always"
+  if show_teacher_options == "show-always" || show_student_options == "show-always" || show_pegasus_options == "show-always" || language != "en"
     hamburger_class = "show-always"
   elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
     hamburger_class = "show-mobile"
@@ -92,17 +113,27 @@
 
 #hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
-    .user-links
+    .user-links{class: show_user_options}
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
           %li{class: show_teacher_options}
             %a{href: entry[:url]}= entry[:title]
+        %div{class: "divider"}
       - elsif user_type == "student"
         - student_entries.each do |entry|
           %li{class: show_student_options}
             %a{href: entry[:url]}= entry[:title]
+        %div{class: "divider"}
+      - else
+        - signed_out_entries.each do |entry|
+          %li{class: show_signed_out_options}
+            %a{href: entry[:url]}= entry[:title]
+        %div{class: "divider"}
 
-    .help-links
+    .help-links{class: show_help_options}
+      - if user_type == "teacher"
+        %li
+          %a{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
       - if level || script_level
         - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
         %li
@@ -112,9 +143,6 @@
           %a{href:"https://support.code.org/hc/en-us/requests/new"}=I18n.t("#{loc_prefix}report_bug")
       %li
         %a{href: "https://support.code.org"}=I18n.t("#{loc_prefix}help_support")
-      - if user_type == "teacher"
-        %li
-          %a{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
       - if level && level.try(:is_project_level) && level.game == Game.gamelab
         %li
           %a{href:"https://docs.code.org/gamelab/"}=I18n.t("#{loc_prefix}documentation")
@@ -124,6 +152,8 @@
       - if level || script_level
         %li
           %a{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
+      -if language == "en"
+        %div{class: "divider"}
 
     .pegasus-links{class: show_pegasus_options}
       %li{class: show_pegasus_options}
@@ -151,10 +181,6 @@
         - about_entries.each do |entry|
           %li
             %a{href: entry[:url]}= entry[:title]
-      .project-gallery-signed-out
-        - if !user_type
-          %li
-            %a{ href: "#{studio_url_base}/projects/public"}=I18n.t("#{loc_prefix}project_gallery")
 
   #hamburger-icon{class: hamburger_class}
     %span
