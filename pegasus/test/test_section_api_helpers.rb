@@ -366,7 +366,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal 1, row[:script_id]
           assert_nil row[:course_id]
           assert_nil row[:grade]
-          assert !row[:code].nil?
+          refute_nil row[:code]
           assert_equal false, row[:stage_extras]
         end
       end
@@ -387,7 +387,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal 1, row[:script_id]
           assert_equal params[:course_id], row[:course_id]
           assert_nil row[:grade]
-          assert !row[:code].nil?
+          refute_nil row[:code]
           assert_equal false, row[:stage_extras]
         end
       end
