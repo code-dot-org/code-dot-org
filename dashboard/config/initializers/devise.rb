@@ -316,17 +316,13 @@ Devise.setup do |config|
   end
 
   Warden::Manager.after_set_user do |user, auth|
-    if auth.cookies[:pm] == "new_header"
-      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-      auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
-    end
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
   end
 
   Warden::Manager.before_logout do |_, auth|
-    if auth.cookies[:pm] == "new_header"
-      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-      auth.cookies[cookie_key] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
-    end
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    auth.cookies[cookie_key] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
   end
 
   # ==> Mountable engine configurations

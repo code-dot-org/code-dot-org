@@ -48,7 +48,12 @@ var baseConfig = {
           path.resolve(__dirname, 'test'),
           path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
-        loader: "url-loader?limit=1024&name=[name]-wp-[hash].[ext]",
+        // note that in the name template given below, a dash prefixing
+        // the hash is explicitly avoided. If rails tries to serve
+        // this file when asset digests are turned off, it will return a
+        // 404 because it thinks the hash is a digest and it won't
+        // be able to find the file without the hash. :( :(
+        loader: "url-loader?limit=1024&name=[name]wp[hash].[ext]",
       },
     ],
     preLoaders: [

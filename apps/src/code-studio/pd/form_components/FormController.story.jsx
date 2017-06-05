@@ -2,6 +2,7 @@ import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import FormComponent from './FormComponent';
 import FormController from './FormController';
+import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 class TestPageOne extends FormComponent {
   render() {
@@ -103,15 +104,6 @@ const OPTIONS = {
   three: ["Seventh", "Eighth", "Ninth"]
 };
 
-const reactBootstrapStoryDecorator = (story) => (
-  // Currently the Bootstrap 3 styles required by React-Bootstrap are only
-  // applied inside div#application-container. This is to prevent conflicts with
-  // other parts of Code Studio using Bootstrap 2. See pd.scss. Without this
-  // container div it won't render properly.
-  <div id="application-container">
-    {story()}
-  </div>
-);
 
 export default storybook => {
   storybook

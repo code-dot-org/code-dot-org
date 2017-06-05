@@ -564,7 +564,9 @@ var projects = module.exports = {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
     // project. See (Turtle|Studio).prepareForRemix().
-    return !['artist', 'playlab'].includes(projects.getStandaloneApp());
+    // If you're viewing somebody else's project, it will always be based on
+    // the standard project level, so that's safe to server-side remix.
+    return !current.isOwner || !['artist', 'playlab'].includes(projects.getStandaloneApp());
   },
 
   /*
