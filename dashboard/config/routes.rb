@@ -359,6 +359,7 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage', to: 'teacher_application#manage'
     get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
     patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
+    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 

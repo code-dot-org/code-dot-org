@@ -250,7 +250,7 @@ class SectionApiHelperTest < SequelTestCase
         csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
         expected = {
           id: 3,
-          name: 'csp',
+          name: 'Computer Science Principles',
           script_name: 'csp',
           category: 'full_course',
           position: 1,
