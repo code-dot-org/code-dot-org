@@ -116,11 +116,11 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "teacher_markdown": "**Potential stop/recap point**\r\n\r\nYou might consider having students work up to this level and then stopping to review it as a whole class.\r\n\r\nThis task is challenging and represents the crux of the whole parameters \"thing\". It's worth the time to get this level right and to explain the terminology and what's happening."
+    "teacher_markdown": "**Potential stop/recap point**\r\n\r\nYou might consider having students work up to this level and then stopping to review it as a whole class.\r\n\r\nThis task is challenging and represents the crux of the whole parameters \"thing\". It's worth the time to get this level right and to explain the terminology and what's happening.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

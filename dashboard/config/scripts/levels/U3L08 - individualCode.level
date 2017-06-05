@@ -109,17 +109,14 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "**Program Functions:**  Students should work individually to program the functions they have been assigned. While they are responsible for writing these portions of the project, they may still consult with the other members of their group."
+    "teacher_markdown": "**Program Functions:**  Students should work individually to program the functions they have been assigned. While they are responsible for writing these portions of the project, they may still consult with the other members of their group.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

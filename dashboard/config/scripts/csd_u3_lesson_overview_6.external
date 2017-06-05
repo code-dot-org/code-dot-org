@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 In order to create more interesting and detailed images, students are introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when we start making animations.
 # Vocabulary
 
-* **Property** - Attributes that describe an object's characteristics
+* **Property** - Attribute that describes an object's characteristics
 * **Sprite** - A graphic character on the screen with properties that describe its location, movement, and look.
 
 # New Blocks
