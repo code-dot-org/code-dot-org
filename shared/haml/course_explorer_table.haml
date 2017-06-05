@@ -8,6 +8,8 @@
       width: #{n * 72}px;
     }
 
+- (0..12).each do |n|
+  :css
     .arrow-offset-#{n}:after {
       left: #{n * 72 + 34}px;
     }
