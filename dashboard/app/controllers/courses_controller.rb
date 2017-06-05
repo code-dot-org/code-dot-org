@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
     @is_teacher = !!(current_user && current_user.teacher?)
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
+    @force_race_interstitial = params[:forceRaceInterstitial]
   end
 
   def show

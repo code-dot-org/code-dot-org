@@ -8,8 +8,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
 - error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
 
-- if request.cookies['pm'] == 'new_header'
-  - homepage_url = CDO.studio_url('/home')
+- homepage_url = CDO.studio_url('/home')
 
 -#
   Temporarily include the terms interstitial.  There is JavaScript served by Pegasus (and
@@ -50,6 +49,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   // Embed some data in our JS
   var valid_scripts = #{DashboardSection::valid_scripts(request.user_id).to_json};
+  var valid_courses = #{DashboardSection::valid_courses().to_json};
   var homepage_url = '#{homepage_url}';
   var hoc_assign_warning = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
   var disabled_scripts = #{DashboardSection::progress_disabled_scripts(request.user_id).to_json};
@@ -71,7 +71,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   // ROUTES
 
   config(['$routeProvider', function($routeProvider) {
-    if (homepage_url) {
+    if (homepage_url && window.location.search.indexOf("no_home_redirect") === -1) {
       $routeProvider.when('/',
         {redirectTo: function() {
           window.location = homepage_url;

@@ -44,9 +44,9 @@ def new_commits?
 end
 
 def main
-  exit unless slack_permission?
-  exit unless last_dtt_green?
-  exit unless new_commits?
+  return unless slack_permission?
+  return unless last_dtt_green?
+  return unless new_commits?
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 

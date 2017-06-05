@@ -1218,6 +1218,35 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal script.id, JSON.parse(@response.body)['script']['id']
   end
 
+  test "should get paired icons for paired user levels" do
+    sl = create :script_level
+    driver_ul = create(
+      :user_level,
+      user: @student_4,
+      level: sl.level,
+      script: sl.script,
+      best_result: 100
+    )
+    navigator_ul = create(
+      :user_level,
+      user: @student_5,
+      level: sl.level,
+      script: sl.script,
+      best_result: 100
+    )
+    create :paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul
+
+    get :section_progress, params: {
+      section_id: @section.id,
+      script_id: sl.script.id
+    }
+    assert_response :success
+    parsed = JSON.parse(response.body)
+
+    assert_match /paired/, parsed['students'][3]['levels'].first['class']
+    assert_match /paired/, parsed['students'][4]['levels'].first['class']
+  end
+
   test "should get progress for section with section script when blank script is specified" do
     get :section_progress, params: {
       section_id: @flappy_section.id,

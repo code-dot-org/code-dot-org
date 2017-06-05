@@ -1,13 +1,12 @@
 import React, { PropTypes } from 'react';
 import SectionSelector from './SectionSelector';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import HrefButton from '@cdo/apps/templates/HrefButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
-const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
+const progressRedesignEnabled = true;
 
 const styles = {
   buttonRow: {
