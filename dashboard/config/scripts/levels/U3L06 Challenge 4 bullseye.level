@@ -107,10 +107,10 @@
     "teacher_markdown": "Validation note: we don't check to see if the student actually drew a bullseye.  We checks that the student: \r\n* set the `penColor` three times\r\n* made 3 dots",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
