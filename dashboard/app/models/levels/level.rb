@@ -318,10 +318,9 @@ class Level < ActiveRecord::Base
   end
 
   def calculate_ideal_level_source_id
-    ideal_level_source =
-      level_sources.
-        includes(:activities).
-        max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
+    ideal_level_source = level_sources.
+      includes(:activities).
+      max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
