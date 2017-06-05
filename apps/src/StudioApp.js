@@ -55,6 +55,10 @@ import {
   setFeedback
 } from './redux/instructions';
 
+if (window.DoesNotExist) {
+  console.log("this coverage went down...");
+}
+
 var copyrightStrings;
 
 /**
