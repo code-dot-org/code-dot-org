@@ -5,6 +5,7 @@ import FieldGroup from '../form_components/FieldGroup';
 
 import {
   FormGroup,
+  FormControl,
   ControlLabel,
   Table
 } from 'react-bootstrap';
@@ -93,6 +94,13 @@ const ColumnVariableQuestion = React.createClass({
             {this.props.question.required && <span className="form-required-field"> *</span>}
           </ControlLabel>
         </td>
+        {(this.props.selectedValues.length < 1) &&
+          <td className="warning">
+            <FormControl.Static>
+              Please select one or more answers from the question above.
+            </FormControl.Static>
+          </td>
+        }
         {this.props.selectedValues.map(this.buildColumn)}
       </tr>
     );
@@ -228,7 +236,7 @@ const VariableFormGroup = React.createClass({
     ));
 
     const thStyle = {
-      width: `${100 / (this.state.selected.length + 1)}%`,
+      width: `${100 / ((this.state.selected.length || 1) + 1)}%`,
       backgroundColor: "#00b2c0",
       color: "white"
     };
@@ -259,6 +267,7 @@ const VariableFormGroup = React.createClass({
           <thead>
             <tr>
               <th style={thStyle}></th>
+              {(this.state.selected.length < 1) && <th style={thStyle}></th>}
               {this.state.selected.map(value => <th key={value} style={thStyle}><label>{value}</label></th>)}
             </tr>
           </thead>
