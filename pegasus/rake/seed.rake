@@ -83,6 +83,11 @@ class CsvToSqlTable
   def column_name_to_schema(name)
     i = name.rindex('_')
 
+    if i.nil?
+      ChatClient.log "Bad column name (#{name}) for table (#{@table}), see this " \
+        "<a href='https://drive.google.com/drive/folders/0B0OFfWqnAHxhM0prRGd0UWczMUU'>Google Drive</a> folder."
+    end
+
     if name.ends_with?('!') || name.ends_with?('*')
       type_flag = name[-1..-1]
       name = name[0..-2]

@@ -127,10 +127,10 @@
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Unlike in math class, the y-axis moves from top to bottom and 0 degrees is straight up. The screen size is 320 * 480 pixels.\r\n\r\n**Moving Relative to the Screen:** Students are introduced to `moveTo` and `turnTo`, functions which move and turn the turtle based on fixed locations on the screen. A student can specify an exact location to move the turtle using x and y coordinates, and can specify a direction for the turtle to turn using a value between 0 and 360. Students combine these commands with those used previously to draw a smiley face.\r\n\r\nValidation note: we don't check to see if the student actually drew this exact figure. We check that the student:\r\n\r\n* called `moveTo(x,y)` at least once\r\n* called `turnTo` at least once\r\n* made at least 2 dots - one for the background and one for the face. (The eyes can be made with dots, but don't have to be.).",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
