@@ -38,7 +38,7 @@ const styles = {
   }
 };
 
-const HeadingBanner = React.createClass({
+const HeaderBanner = React.createClass({
   propTypes: {
     showCreateAccount: React.PropTypes.bool,
     headingText: React.PropTypes.string,
@@ -82,4 +82,4 @@ const HeadingBanner = React.createClass({
   }
 });
 
-export default HeadingBanner;
+export default HeaderBanner;

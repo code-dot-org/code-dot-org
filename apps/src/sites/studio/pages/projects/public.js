@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import HeadingBanner from '@cdo/apps/templates/HeadingBanner';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import i18n from "@cdo/locale";
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
@@ -16,7 +16,7 @@ $(document).ready(() => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.projectGalleryHeader()}
         />
         <PublicGallery projectLists={projectLists}/>
