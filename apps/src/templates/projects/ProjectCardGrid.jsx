@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
-import {projectPropType} from './projectConstants';
+import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";
+import {connect} from 'react-redux';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
@@ -21,7 +22,8 @@ const ProjectCardGrid = React.createClass({
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
     }).isRequired,
-    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
+    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
+    pageLocation: PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -29,6 +31,12 @@ const ProjectCardGrid = React.createClass({
       showAll: true,
       showApp: ''
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.pageLocation === Galleries.PUBLIC) {
+      this.setState({showAll: true, showApp: ''});
+    }
   },
 
   onSelectApp(appType) {
@@ -148,4 +156,6 @@ const ProjectCardGrid = React.createClass({
   }
 });
 
-export default ProjectCardGrid;
+export default connect(state => ({
+  pageLocation: state.pageLocation
+}))(ProjectCardGrid);

@@ -16,3 +16,8 @@ export const projectPropType = PropTypes.shape({
   projectData: projectDataPropType.isRequired,
   currentGallery: PropTypes.string.isRequired,
 });
+
+export const Galleries = {
+  PUBLIC: 'PUBLIC',
+  PRIVATE: 'PRIVATE',
+};
