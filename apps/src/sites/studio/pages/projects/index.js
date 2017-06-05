@@ -8,7 +8,6 @@ import i18n from '@cdo/locale';
 import {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
-const isPublic = window.location.pathname.startsWith('/projects/public');
 
 $(document).ready(() => {
   // We need to see whether the experiment is enabled from angularProjects.js,
@@ -16,7 +15,7 @@ $(document).ready(() => {
   $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
 
   const projectsHeader = document.getElementById('projects-header');
-  ReactDOM.render(<ProjectHeader showGallery={showGallery} isPublic={isPublic}/>, projectsHeader);
+  ReactDOM.render(<ProjectHeader showGallery={showGallery} isPublic={false}/>, projectsHeader);
 
   $.ajax({
     method: 'GET',
