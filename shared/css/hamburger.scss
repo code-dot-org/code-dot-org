@@ -108,9 +108,6 @@
     overflow-y: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-    .help-links {
-      border-bottom: solid 10px $dark_teal;
-    }
     li {
       color: $white;
       line-height: 20px;
@@ -190,6 +187,10 @@
   }
   .educate-nav ul li:last-of-type {
     border-bottom: solid 2px $dark_teal;
+  }
+  .divider {
+    height: 10px;
+    background: $dark_teal;
   }
 
   @media(max-width: 970px) {
