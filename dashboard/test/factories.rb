@@ -48,17 +48,9 @@ FactoryGirl.define do
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
 
-    factory :levelbuilder do
-      after(:create) do |levelbuilder|
-        levelbuilder.permission = UserPermission::LEVELBUILDER
-        levelbuilder.save
-      end
-    end
-
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
-      admin false
       factory :admin do
         admin true
       end
@@ -67,6 +59,12 @@ FactoryGirl.define do
       end
       factory :terms_of_service_teacher do
         with_terms_of_service
+      end
+      factory :levelbuilder do
+        after(:create) do |levelbuilder|
+          levelbuilder.permission = UserPermission::LEVELBUILDER
+          levelbuilder.save
+        end
       end
       factory :facilitator do
         name 'Facilitator Person'
@@ -90,7 +88,6 @@ FactoryGirl.define do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
-        admin false
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
         end
