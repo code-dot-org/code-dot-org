@@ -32,8 +32,6 @@ class StarWarsGrid < Studio
         game: Game.custom_studio,
         level_num: 'custom',
         start_blocks: '<xml><block type="when_run"/></xml>',
-        wall_map_collisions: true,
-        block_moving_into_walls: true,
       )
     )
     level.create_maze(level_params, params)

@@ -136,11 +136,11 @@
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
