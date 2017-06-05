@@ -1,11 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { getStore } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
-import {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
+import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
+
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
 const isPublic = window.location.pathname.startsWith('/projects/public');
@@ -16,7 +19,12 @@ $(document).ready(() => {
   $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
 
   const projectsHeader = document.getElementById('projects-header');
-  ReactDOM.render(<ProjectHeader showGallery={showGallery} isPublic={isPublic}/>, projectsHeader);
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <ProjectHeader showGallery={showGallery} isPublic={isPublic}/>
+    </Provider>,
+    projectsHeader
+  );
 
   $.ajax({
     method: 'GET',
@@ -25,7 +33,9 @@ $(document).ready(() => {
   }).done(projectLists => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <PublicGallery projectLists={projectLists}/>,
+      <Provider store={getStore()}>
+        <PublicGallery projectLists={projectLists}/>
+      </Provider>,
       publicGallery);
   });
 });

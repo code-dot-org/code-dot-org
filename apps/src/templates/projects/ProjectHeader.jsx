@@ -1,7 +1,8 @@
 /** @file Header banner and gallery naviation for the project gallery */
 import React from 'react';
 import i18n from "@cdo/locale";
-import GallerySwitcher, {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
+import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
+import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
 import HeadingBanner from '@cdo/apps/templates/HeadingBanner';
 
 const ProjectHeader = React.createClass({
