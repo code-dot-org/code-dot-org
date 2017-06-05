@@ -146,6 +146,7 @@ class ScriptLevel < ActiveRecord::Base
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
     return false if locked_or_hidden?(user)
+    return false if bonus
     true
   end
 
