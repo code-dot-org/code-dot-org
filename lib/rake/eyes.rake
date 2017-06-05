@@ -8,7 +8,7 @@ if rack_env?(:development) || rack_env?(:test)
   require 'gemoji'
 end
 
-MERGE_EMOJI = "\u{1F500}"
+MERGE_EMOJI = "\u{1F500}".freeze
 
 def create_branch(branch)
   require 'eyes_selenium'

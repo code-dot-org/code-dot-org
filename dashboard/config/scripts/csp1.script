@@ -55,7 +55,7 @@ assessment 'U1L11 Reflection Free Response', progression: 'Check Your Understand
 assessment 'U1L11 Collaboration Reflection', progression: 'Check Your Understanding'
 
 stage 'Unit 1 Chapter 1 Assessment', lockable: true
-assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group'
+assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2'
 
 stage 'The Internet'
 level 'v2 U1 Internet is for Everyone Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -114,9 +114,6 @@ level 'v2 U1L14 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 
 stage 'Unit 1 Chapter 2 Assessment', lockable: true
 assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group'
-
-stage 'CSP Student Post-Course Survey'
-assessment 'CSP post-assessment survey'
 
 stage 'Participate in a longitudinal study!'
 named_level 'Click Here!', progression: 'Click Here!'

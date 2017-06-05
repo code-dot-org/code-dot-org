@@ -38,7 +38,7 @@
   },
   "published": true,
   "notes": "I'm using a solution that matches the given solutions for other puzzles in this stage. However, another solution uses fewer blocks and doesn't require If/Else blocks.\r\n",
-  "audit_log": "[{\"changed_at\":\"2017-05-27 12:29:28 +0000\",\"changed\":[\"notes\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:30:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:32:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:34:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:35:12 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:40:06 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:42:36 +0000\",\"changed\":[\"notes\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:43:26 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 15:37:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-27 12:29:28 +0000\",\"changed\":[\"notes\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:30:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:32:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:34:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:35:12 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:40:06 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:42:36 +0000\",\"changed\":[\"notes\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 12:43:26 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 15:37:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-30 20:45:19 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-30 20:45:53 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-30 20:46:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -78,18 +78,13 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_whileHasCrop">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
-                        <block type="harvester_whileHasCrop">
-                          <title name="LOC">Corn</title>
-                          <statement name="DO">
-                            <block type="harvester_corn"/>
-                          </statement>
-                        </block>
+                        <block type="harvester_corn"/>
                       </statement>
-                      <statement name="ELSE">
-                        <block type="harvester_ifAtCropElse">
+                      <next>
+                        <block type="harvester_ifAtCrop">
                           <title name="LOC">Pumpkin</title>
                           <statement name="DO">
                             <block type="maze_turn">
@@ -104,7 +99,7 @@
                               </next>
                             </block>
                           </statement>
-                          <statement name="ELSE">
+                          <next>
                             <block type="harvester_ifAtCrop">
                               <title name="LOC">Lettuce</title>
                               <statement name="DO">
@@ -121,9 +116,9 @@
                                 </block>
                               </statement>
                             </block>
-                          </statement>
+                          </next>
                         </block>
-                      </statement>
+                      </next>
                     </block>
                   </next>
                 </block>
