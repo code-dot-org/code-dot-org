@@ -104,10 +104,10 @@
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "**Documentation:** Students are shown where to find documentation about new commands so they can learn how to use them.\r\n\r\n**New Commands:** `penColor` and `penWidth`\r\n\r\nStudents are asked to look up how to use these commands in order to create a colored rectangle.\r\n\r\nValidation note: this does not verify that a student actually drew a blue square.  Only that they used `penColor` and `penWidth`",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
