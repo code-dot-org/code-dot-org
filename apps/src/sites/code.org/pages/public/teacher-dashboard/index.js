@@ -45,8 +45,6 @@ function renderSectionProjects(sectionId) {
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
 function main() {
-
-
   var valid_scripts = data.valid_scripts;
   var valid_courses = data.valid_courses;
   var homepage_url = data.homepage_url;
@@ -55,6 +53,30 @@ function main() {
   var i18n = data.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
+
+  // Sections can be assigned to either a course or a script. Since there's a
+  // possibility that we could have a script and a course with the same id, we
+  // need a way to differentiate them. We do that by giving scripts and courses
+  // assignment ids, which are guaranteed to be unique across the population of
+  // both courses and scripts.
+  function scriptAssignmentId(script_id) {
+    return 's_' + script_id;
+  }
+
+  function courseAssignmentId(course_id) {
+    return 'c_' + course_id;
+  }
+
+  valid_scripts.forEach(function (script) {
+    script.assign_id = scriptAssignmentId(script.id);
+  });
+  valid_courses.forEach(function (course) {
+    course.assign_id = courseAssignmentId(course.id);
+  });
+
+  // Just scripts, unless experiment is enabled
+  const valid_assignments = experiments.isEnabled('assignCourses') ?
+    valid_courses.concat(valid_scripts) : valid_scripts;
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -143,15 +165,6 @@ function main() {
     };
   });
 
-  // This is probably not the best way to do this, but this fix is time-sensitive
-  // TODO(ram): make this better (or migrate to React)
-  filters.filter('getNameById', function () {
-    return function (input, id) {
-        var matching = input.filter(function (val) { return val.id == id; });
-        return matching.length > 0 ? matching[0].name : null;
-    };
-  });
-
   // SERVICES
 
   var services = angular.module('teacherDashboard.services', [])
@@ -207,6 +220,7 @@ function main() {
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
+    $scope.assignable_list = valid_assignments;
 
     $scope.sections = sectionsService.query();
 
@@ -219,6 +233,23 @@ function main() {
     $scope.hocAssignWarningEnabled = hoc_assign_warning;
 
     $scope.hocCategoryName = i18n.hoc_category_name;
+
+    $scope.getName = function (section) {
+      let assignId = '';
+      if (section.course_id) {
+        assignId = courseAssignmentId(section.course_id);
+      }
+      if (section.script) {
+        assignId = scriptAssignmentId(section.script.id);
+      }
+
+      const input = $scope.assignable_list;
+      const firstMatch = input.filter(val => val.assign_id == assignId)[0];
+      if (!firstMatch) {
+        return null;
+      }
+      return firstMatch.name;
+    };
 
     $scope.edit = function (section) {
       section.editing = true;
