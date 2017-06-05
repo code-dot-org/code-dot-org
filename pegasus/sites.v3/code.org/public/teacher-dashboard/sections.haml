@@ -28,6 +28,10 @@ content-type: text/ng-template
   %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_all_sections')
   %br/
   %br/
+  - google_classroom_enabled = experiment_enabled? "GoogleClassroom"
+  - if google_classroom_enabled
+    %div
+      Google Classroom is enabled
   %button.btn.btn-white{"ng-click" => "new_section()"}= I18n.t('dashboard_sections_new_section')
   %br/
   %br/
