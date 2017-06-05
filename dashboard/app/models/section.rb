@@ -41,7 +41,7 @@ class Section < ActiveRecord::Base
   has_many :students, -> {order('name')}, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
-  validates :name, presence: true
+  validates :name, presence: true, unless: -> {deleted?}
 
   belongs_to :script
   belongs_to :course
@@ -60,12 +60,12 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
-  validates_presence_of :user
+  validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
     return unless user
     errors.add(:user_id, 'must be a teacher') unless user.teacher?
   end
-  validate :user_must_be_teacher
+  validate :user_must_be_teacher, unless: -> {deleted?}
 
   before_create :assign_code
   def assign_code
