@@ -32,6 +32,7 @@ class Pd::FacilitatorProgramRegistrationController < ApplicationController
       props: {
         options: Pd::FacilitatorProgramRegistration.options.camelize_keys,
         requiredFields: Pd::FacilitatorProgramRegistration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/facilitator_program_registrations",
         attendanceDates: dates.camelize_keys,
         teachercon: @teachercon,
         course: Pd::FacilitatorProgramRegistration.course(current_user, @teachercon),
