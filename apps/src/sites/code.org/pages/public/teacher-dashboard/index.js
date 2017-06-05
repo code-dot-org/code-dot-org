@@ -72,6 +72,7 @@ function main() {
   });
   valid_courses.forEach(function (course) {
     course.assign_id = courseAssignmentId(course.id);
+    course.is_course = true;
   });
 
   // Just scripts, unless experiment is enabled
@@ -295,19 +296,14 @@ function main() {
     };
 
     $scope.save = function (section) {
-      if (section.script) {
-        var script = null;
-        for (var i = 0; i < $scope.script_list.length; i++) {
-          if ($scope.script_list[i].id === section.script.id) {
-            script = $scope.script_list[i];
-            break;
-          }
-        }
-        if ($scope.hocAssignWarningEnabled &&
-            script.category === $scope.hocCategoryName) {
+      // Changing our dropdown changes the assign_id. If that assign_id has changed,
+      // that indicates we're updating our script/course assigment
+      const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
+      if (assignIdChanged) {
+        const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
+        if ($scope.hocAssignWarningEnabled && assignable.category === $scope.hocCategoryName) {
           $scope.sectionToSave = $scope.sections.indexOf(section);
           $('#assign-confirm').modal('show');
-          return;
         }
       }
       $scope.send_save(section);
@@ -319,15 +315,32 @@ function main() {
     };
 
     $scope.send_save = function (section) {
+      const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
+      if (assignIdChanged) {
+        const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
+        if (assignable.is_course) {
+          section.script = null;
+          section.course_id = assignable.id;
+        } else {
+          section.course_id = null;
+          section.script = {
+            id: assignable.id,
+            name: assignable.name
+          };
+        }
+      }
+
       if (section.id) { // update existing
         sectionsService.update({id: section.id}, section).$promise.then(
           function (result_section) {
+            result_section.assign_id = $scope.getAssignmentId(result_section);
             $scope.sections[$scope.sections.indexOf(section)] = result_section;
           }
         ).catch($scope.genericError);
       } else { // save new
         sectionsService.save(section).$promise.then(
           function (result_section) {
+            result_section.assign_id = $scope.getAssignmentId(result_section);
             $scope.sections[$scope.sections.indexOf(section)] = result_section;
           }
         ).catch($scope.genericError);
