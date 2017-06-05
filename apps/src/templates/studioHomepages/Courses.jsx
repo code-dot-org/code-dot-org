@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeadingBanner from '../HeadingBanner';
+import HeaderBanner from '../HeaderBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -66,7 +66,7 @@ const Courses = React.createClass({
 
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.courses()}
           subHeadingText={i18n.coursesHeadingSubText(
             {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
