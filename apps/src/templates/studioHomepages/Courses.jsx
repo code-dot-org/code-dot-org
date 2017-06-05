@@ -63,30 +63,18 @@ const Courses = React.createClass({
 
   render() {
     const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
+    const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
 
     return (
       <div>
-        {isSignedOut && (
-          <HeadingBanner
-            headingText={i18n.coursesCodeStudio()}
-            subHeadingText={i18n.coursesHeadingSubText(
-              {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
-            )}
-            showCreateAccount={isSignedOut}
-            description={i18n.coursesHeadingDescription()}
-          />
-        )}
-
-        {!isSignedOut && (
-          <HeadingBanner
-            headingText={i18n.courses()}
-            subHeadingText={i18n.coursesHeadingSubText(
-              {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
-            )}
-            showCreateAccount={isSignedOut}
-            description={i18n.coursesHeadingDescription()}
-          />
-        )}
+        <HeadingBanner
+          headingText={headingText}
+          subHeadingText={i18n.coursesHeadingSubText(
+            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+          )}
+          showCreateAccount={isSignedOut}
+          description={i18n.coursesHeadingDescription()}
+        />
 
         {!isTeacher && (
           <ProtectedStatefulDiv
