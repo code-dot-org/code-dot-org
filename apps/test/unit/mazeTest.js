@@ -59,18 +59,4 @@ describe("Maze", function () {
       assert.equal(image.getAttribute('visibility'), 'hidden', 'tile is flat, image is therefore hidden');
     });
   });
-
-  it("rotate maze map", () => {
-    const map = MazeMap.parseFromOldValues([
-      [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9],
-    ], null, Cell);
-    map.rotate();
-    assert.deepEqual(map.grid_, MazeMap.parseFromOldValues([
-      [3, 6, 9],
-      [2, 5, 8],
-      [1, 4, 7],
-    ], null, Cell).grid_);
-  });
 });
