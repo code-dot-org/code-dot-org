@@ -43,7 +43,7 @@
     .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
-    - if request.cookies['pm'] == 'new_header' && request.site == 'code.org'
+    - if request.site == 'code.org'
       = view :header2
     - else
       #desktop-header.desktop-feature
@@ -129,12 +129,12 @@
     // Use retina versions of the hero background images if on a retina display.
     $(".widehero").each(function()
     {
-      var imageUrl = $(this).data('background-image');
+      var imageUrl = $(this).data('bg');
       if (window.devicePixelRatio >= 2)
       {
         imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
       }
-      $(this).css('background-image', imageUrl);
+      $(this).attr('data-bg', imageUrl);
     });
   }
 

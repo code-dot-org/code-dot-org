@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Dialog from '@cdo/apps/templates/Dialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import experiments from '@cdo/apps/util/experiments';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
@@ -12,36 +11,28 @@ const MAX_PROJECTS_PER_CATEGORY = 100;
 const isPublic = window.location.pathname.startsWith('/projects/public');
 
 $(document).ready(() => {
-  if (experiments.isEnabled('publicGallery')) {
-    // We need to see whether the experiment is enabled from angularProjects.js,
-    // which isn't part of the apps js build pipeline.
-    $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
+  // We need to see whether the experiment is enabled from angularProjects.js,
+  // which isn't part of the apps js build pipeline.
+  $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
 
-    const projectsHeader = document.getElementById('projects-header');
-    ReactDOM.render(<ProjectHeader showGallery={showGallery} isPublic={isPublic}/>, projectsHeader);
+  const projectsHeader = document.getElementById('projects-header');
+  ReactDOM.render(<ProjectHeader showGallery={showGallery} isPublic={isPublic}/>, projectsHeader);
 
-    $.ajax({
-      method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
-      dataType: 'json'
-    }).done(projectLists => {
-      const publicGallery = document.getElementById('public-gallery');
-      ReactDOM.render(
-        <PublicGallery projectLists={projectLists}/>,
-        publicGallery);
-    });
-  }
+  $.ajax({
+    method: 'GET',
+    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    dataType: 'json'
+  }).done(projectLists => {
+    const publicGallery = document.getElementById('public-gallery');
+    ReactDOM.render(
+      <PublicGallery projectLists={projectLists}/>,
+      publicGallery);
+  });
 });
 
 function showGallery(gallery) {
-  updateLocation(gallery);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
-}
-
-function updateLocation(gallery) {
-  const path = (gallery === Galleries.PUBLIC) ? '/projects/public' : '/projects';
-  window.history.pushState(null, document.title, path);
 }
 
 function onShowConfirmPublishDialog(callback) {

@@ -41,6 +41,8 @@ namespace :install do
         puts CDO.dashboard_db_writer
         if ENV['CI'] && ENV['CIRCLE_NODE_INDEX'] != '1'
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
+        elsif ENV['CI'] && ENV['CIRCLE_NODE_INDEX'] == '1'
+          RakeUtils.rake 'db:setup_or_migrate seed:ui_test'
         else
           RakeUtils.rake 'dashboard:setup_db'
         end

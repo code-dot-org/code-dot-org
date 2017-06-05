@@ -359,6 +359,7 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage', to: 'teacher_application#manage'
     get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
     patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
+    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
@@ -432,6 +433,8 @@ Dashboard::Application.routes.draw do
       concerns :api_v1_pd_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
+
+      post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}

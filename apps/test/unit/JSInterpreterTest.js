@@ -39,9 +39,7 @@ describe("The JSInterpreter class", function () {
   }
 
   function verifyStepSequence(expectedStates) {
-    expectedStates.forEach(function (expected) {
-      stepAndVerify(expected);
-    });
+    expectedStates.forEach(stepAndVerify);
   }
 
   describe("the constructor", () => {

@@ -8,7 +8,7 @@ const styles = {
     width: 940,
     backgroundColor: color.white,
     borderStyle: 'dashed',
-    borderWidth: 1,
+    borderWidth: 5,
     borderColor: color.border_gray,
   },
   heading: {

@@ -21,8 +21,8 @@ theme: responsive
 - studio_text = capture_haml do
   .side-description-area
     .description
-      %h2.resource-title Courses on Code Studio
-      Code Studio is the most popular coding platform in K-12 education. We offer fun introductory courses you can learn alone or in a classroom, all the way through full year computer science curriculum for middle or high school.
+      %h2.resource-title Code.org courses
+      Code.org is the most popular coding platform in K-12 education. We offer fun introductory courses you can learn alone or in a classroom, all the way through full year computer science curriculum for middle or high school.
     %a{href: CDO.studio_url}
       %button.orange-button I'm a student
     &nbsp;&nbsp;
@@ -46,7 +46,7 @@ theme: responsive
     %a{href: "/learn/local"}
       %button.gray-button Local classes
 
--# Show Hour of Code first when soon or actually Hour of Code time.  Otherwise, show Code Studio first.
+-# Show Hour of Code first when soon or actually Hour of Code time.  Otherwise, show Code.org block first.
 - if ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
   .full-resource-block
     .left.col-50-student= hoc_picture

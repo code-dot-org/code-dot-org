@@ -9,17 +9,18 @@ const RecentCoursesCollapsible = React.createClass({
   propTypes: {
     courses: shapes.courses,
     showAllCoursesLink: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.bool.isRequired
+    isTeacher: PropTypes.bool.isRequired,
+    heading: PropTypes.string.isRequired
   },
 
   render() {
-    const { courses, showAllCoursesLink, isTeacher } = this.props;
+    const { courses, showAllCoursesLink, isTeacher, heading } = this.props;
 
     return (
       <div>
         {courses.length > 0 && (
           <CollapsibleSection
-            heading={i18n.courses()}
+            heading={heading}
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
@@ -29,7 +30,6 @@ const RecentCoursesCollapsible = React.createClass({
                 key={index}
                 name={course.name}
                 description={course.description}
-                image={course.image}
                 link={course.link}
                 assignedSections={course.assignedSections}
               />
@@ -38,7 +38,7 @@ const RecentCoursesCollapsible = React.createClass({
         )}
         {courses.length === 0 && isTeacher && (
           <CollapsibleSection
-            heading={i18n.courses()}
+            heading={heading}
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}

@@ -3,9 +3,6 @@ import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import ProgressDetailToggle from "@cdo/apps/templates/progress/ProgressDetailToggle";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import experiments from '@cdo/apps/util/experiments';
-
-const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
 
 const styles = {
   main: {
@@ -28,7 +25,7 @@ const styles = {
   },
   linesOfCodeText: {
     position: 'absolute',
-    right: progressRedesignEnabled ? 105 : 15
+    right: 105
   },
   toggle: {
     position: 'absolute',
@@ -56,14 +53,12 @@ const MiniViewTopRow = React.createClass({
         <span style={styles.linesOfCodeText}>
           {linesOfCodeText}
         </span>
-        {progressRedesignEnabled &&
-          <div style={styles.toggle}>
-            <ProgressDetailToggle
-              activeColor={color.teal}
-              whiteBorder={true}
-            />
-          </div>
-        }
+        <div style={styles.toggle}>
+          <ProgressDetailToggle
+            activeColor={color.teal}
+            whiteBorder={true}
+          />
+        </div>
       </div>
     );
   }

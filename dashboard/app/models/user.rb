@@ -109,6 +109,8 @@ class User < ActiveRecord::Base
     races
     using_text_mode
     last_seen_school_info_interstitial
+    ui_tip_dismissed_homepage_header
+    ui_tip_dismissed_teacher_courses
   )
 
   # Include default devise modules. Others available are:
@@ -119,15 +121,15 @@ class User < ActiveRecord::Base
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
-  PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
+  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'
-  TYPE_TEACHER = 'teacher'
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
+  TYPE_STUDENT = 'student'.freeze
+  TYPE_TEACHER = 'teacher'.freeze
+  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -290,7 +292,12 @@ class User < ActiveRecord::Base
     (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
   end
 
-  GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
+  GENDER_OPTIONS = [
+    [nil, ''],
+    ['gender.male', 'm'],
+    ['gender.female', 'f'],
+    ['gender.none', '-']
+  ].freeze
 
   attr_accessor :login
 
@@ -343,7 +350,7 @@ class User < ActiveRecord::Base
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ]
+  ].freeze
   validates :terms_of_service_version,
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
@@ -352,7 +359,7 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :sanitize_race_data,
+    :sanitize_and_set_race_data,
     :fix_by_user_type
 
   def make_teachers_21
@@ -374,9 +381,30 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def sanitize_race_data
-    return unless property_changed?('races')
+  # Returns whether the comma separated list of races represents an under-represented minority user.
+  # @return [Boolean, nil] Whether races_comma_separated represents a URM user.
+  #   - true: Yes, a URM user.
+  #   - false: No, not a URM user.
+  #   - nil: Don't know, may or may not be a URM user.
+  def self.urm_from_races(races_comma_separated)
+    races_array = races_comma_separated.split(',')
+    return nil if races_array.empty?
+    return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    false
+  end
 
+  def sanitize_and_set_race_data
+    return unless property_changed?('races')
+    # Though not possible from the UI, it seems wise to support manual clearing of this field. Thus
+    # we check for this edge case.
+    if races.nil?
+      update_column(:races, nil)
+      update_column(:urm, nil)
+      return
+    end
+
+    # Sanitize the old (properties) data.
     if races.include? 'closed_dialog'
       self.races = %w(closed_dialog)
     end
@@ -386,6 +414,11 @@ class User < ActiveRecord::Base
     races.each do |race|
       self.races = %w(nonsense) unless VALID_RACES.include? race
     end
+
+    # Set the new (urm and races columns) data.
+    races_comma_separated = races.join(',')
+    update_column(:races, races_comma_separated)
+    update_column(:urm, User.urm_from_races(races_comma_separated))
   end
 
   def fix_by_user_type
@@ -462,7 +495,7 @@ class User < ActiveRecord::Base
     "#{raw_name['first']} #{raw_name['last']}".squish
   end
 
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider

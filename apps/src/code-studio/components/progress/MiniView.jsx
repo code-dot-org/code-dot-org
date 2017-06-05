@@ -3,16 +3,8 @@ import { connect } from 'react-redux';
 import CourseProgress from './CourseProgress';
 import MiniViewTopRow from './MiniViewTopRow';
 import { hasGroups } from '@cdo/apps/code-studio/progressRedux';
-import experiments from '@cdo/apps/util/experiments';
-
-const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
 
 const styles = {
-  // For our non-redesigned view, we want margins on the left and right
-  oldProgress: {
-    marginLeft: 10,
-    marginRight: 10
-  },
   // For the detail view (without groups) we want some margins
   detailView: {
     margin: 10
@@ -50,9 +42,8 @@ const MiniView = React.createClass({
       body = (
         <div
           style={{
-            ...(!progressRedesignEnabled && styles.oldProgress),
-            ...(progressRedesignEnabled && !hasGroups && !isSummaryView && styles.detailView),
-            ...(progressRedesignEnabled && hasGroups && styles.groupView)
+            ...(!hasGroups && !isSummaryView && styles.detailView),
+            ...(hasGroups && styles.groupView)
           }}
         >
           <CourseProgress onOverviewPage={false}/>

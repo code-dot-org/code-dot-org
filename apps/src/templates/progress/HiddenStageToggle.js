@@ -34,7 +34,7 @@ const HiddenStageToggle = React.createClass({
   render() {
     const { hidden, onChange } = this.props;
     return (
-      <div style={styles.main}>
+      <div style={styles.main} className="uitest-togglehidden">
         <ProgressButton
           onClick={() => onChange('visible')}
           text={i18n.visible()}
