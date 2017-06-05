@@ -45,9 +45,9 @@ function renderSectionProjects(sectionId) {
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
 function main() {
+  const studioUrlPrefix = data.studiourlprefix;
   var valid_scripts = data.valid_scripts;
   var valid_courses = data.valid_courses;
-  var homepage_url = data.homepage_url;
   var hoc_assign_warning = data.hoc_assign_warning;
   var disabled_scripts = data.disabled_scripts;
   var i18n = data.i18n;
@@ -93,10 +93,10 @@ function main() {
   // ROUTES
 
   .config(['$routeProvider', function ($routeProvider) {
-    if (homepage_url && window.location.search.indexOf("no_home_redirect") === -1) {
+    if (studioUrlPrefix && window.location.search.indexOf("no_home_redirect") === -1) {
       $routeProvider.when('/',
         {redirectTo: function () {
-          window.location = homepage_url;
+          window.location = `${studioUrlPrefix}/home`;
         }});
     } else {
       $routeProvider.when('/',
@@ -234,21 +234,58 @@ function main() {
 
     $scope.hocCategoryName = i18n.hoc_category_name;
 
-    $scope.getName = function (section) {
-      let assignId = '';
+    /**
+     * Given a section, returns the assignment id of the course/script the section
+     * is assigned to (or null if not assigned to anything)
+     * @param {Section} section - The section we want the assignment id for
+     * @returns {string|null}
+     */
+    $scope.getAssignmentId = function (section) {
       if (section.course_id) {
-        assignId = courseAssignmentId(section.course_id);
+        return courseAssignmentId(section.course_id);
       }
       if (section.script) {
-        assignId = scriptAssignmentId(section.script.id);
+        return scriptAssignmentId(section.script.id);
+      }
+      return null;
+    };
+
+    /**
+     * Given a section, return the name of the course/script the section is
+     * assigned to
+     * @param {Section} section
+     * @returns {string}
+     */
+    $scope.getName = function (section) {
+      const assignId = $scope.getAssignmentId(section);
+      if (!assignId) {
+        return '';
       }
 
-      const input = $scope.assignable_list;
-      const firstMatch = input.filter(val => val.assign_id == assignId)[0];
-      if (!firstMatch) {
-        return null;
+      const firstMatch = $scope.assignable_list.find(val => val.assign_id == assignId);
+      return firstMatch ? firstMatch.name : null;
+    };
+
+    /**
+     * Given a section, return the a link to the course/script the section is
+     * assigned to
+     * @param {Section} section
+     * @returns {string|null}
+     */
+    $scope.getPath = function (section) {
+      if (section.course_id) {
+        const course = valid_courses.find(course => course.id === section.course_id);
+        if (!course) {
+          // We're assigned a course that's not in our list of valid courses. Don't
+          // attempt to provide a link.
+          return null;
+        }
+        return `${studioUrlPrefix}/courses/${course.script_name}`;
       }
-      return firstMatch.name;
+      if (section.script) {
+        return `${studioUrlPrefix}/s/${section.script.name}`;
+      }
+      return null;
     };
 
     $scope.edit = function (section) {
