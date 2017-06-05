@@ -124,7 +124,6 @@
       "andOperator": null,
       "orOperator": null,
       "randomNumber_min_max": null,
-      "mathRandom": null,
       "comment_Math": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
@@ -138,10 +137,14 @@
     },
     "show_debug_watch": "false",
     "encrypted_examples": "hBYEo3wudGBFMFzTZ/joDBvBc0h7k5p7JWdsCu9nmhxMPKlb7gdxA2UfwmPx\nbdwa\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 20:08:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
