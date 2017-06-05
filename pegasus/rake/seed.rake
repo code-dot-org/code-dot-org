@@ -84,7 +84,8 @@ class CsvToSqlTable
     i = name.rindex('_')
 
     if i.nil?
-      ChatClient.log "Bad column name (#{name}) for table (#{@table})."
+      ChatClient.log "Bad column name (#{name}) for table (#{@table}), see this " \
+        "<a href='https://drive.google.com/drive/folders/0B0OFfWqnAHxhM0prRGd0UWczMUU'>Google Drive</a> folder."
     end
 
     if name.ends_with?('!') || name.ends_with?('*')
