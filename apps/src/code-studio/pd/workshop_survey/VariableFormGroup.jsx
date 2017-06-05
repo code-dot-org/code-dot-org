@@ -94,13 +94,6 @@ const ColumnVariableQuestion = React.createClass({
             {this.props.question.required && <span className="form-required-field"> *</span>}
           </ControlLabel>
         </td>
-        {(this.props.selectedValues.length < 1) &&
-          <td className="warning">
-            <FormControl.Static>
-              Please select one or more answers from the question above.
-            </FormControl.Static>
-          </td>
-        }
         {this.props.selectedValues.map(this.buildColumn)}
       </tr>
     );
@@ -213,16 +206,32 @@ const VariableFormGroup = React.createClass({
       return (<FormGroup />);
     }
 
-    const columnQuestions = this.props.columnVariableQuestions.map(question => (
-      <ColumnVariableQuestion
-        key={question.name}
-        question={question}
-        selectedValues={this.state.selected}
-        data={this.props.data}
-        errors={this.props.errors}
-        onChange={this.props.onChange}
-      />
-    ));
+    let columnQuestions;
+    if (this.state.selected.length < 1) {
+      columnQuestions = (
+        <tr>
+          <td style={styles.tdLabel} className="warning">
+            <ControlLabel>
+              <FormControl.Static>
+                Please select one or more answers from the question above.
+                <span className="form-required-field"> *</span>
+              </FormControl.Static>
+            </ControlLabel>
+          </td>
+        </tr>
+      );
+    } else {
+      columnQuestions = this.props.columnVariableQuestions.map(question => (
+        <ColumnVariableQuestion
+          key={question.name}
+          question={question}
+          selectedValues={this.state.selected}
+          data={this.props.data}
+          errors={this.props.errors}
+          onChange={this.props.onChange}
+        />
+      ));
+    }
 
     const rowQuestions = this.props.rowVariableQuestions.map(question => (
       <RowVariableQuestion
@@ -236,7 +245,7 @@ const VariableFormGroup = React.createClass({
     ));
 
     const thStyle = {
-      width: `${100 / ((this.state.selected.length || 1) + 1)}%`,
+      width: `${100 / (this.state.selected.length + 1)}%`,
       backgroundColor: "#00b2c0",
       color: "white"
     };
@@ -267,7 +276,6 @@ const VariableFormGroup = React.createClass({
           <thead>
             <tr>
               <th style={thStyle}></th>
-              {(this.state.selected.length < 1) && <th style={thStyle}></th>}
               {this.state.selected.map(value => <th key={value} style={thStyle}><label>{value}</label></th>)}
             </tr>
           </thead>
