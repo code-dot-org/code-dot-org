@@ -414,7 +414,6 @@
   "defaultProjectNameGumball": "Gumball Project",
   "defaultProjectNameIceAge": "Ice Age Project",
   "defaultProjectName": "My Project",
-  "editSections": "Edit sections",
   "extrasStageNumberCompleted": "You Completed Lesson {number}!",
   "extrasTryAChallenge": "Try a Challenge",
   "extrasCreateSomething": "Create Something",
@@ -429,7 +428,7 @@
   "homepageUiTipKeyLinks": "1 of 2: All your key links are right here",
   "homepageUiTipOtherLinks": "2 of 2: All other links are in this menu",
   "homepageUiTipsBeforeDialogTitle": "We've personalized your teacher homepage",
-  "homepageUiTipsBeforeDialogBody": "This new design makes it easier to find all the things you need to prepare for your class, like reading your next plan and reviewing students' progress.",
+  "homepageUiTipsBeforeDialogBody": "This new design makes it easier to find all the things you need to prepare for your class, like reading your next lesson plan and reviewing students' progress.",
   "homepageUiTipsBeforeDialogCancel": "Skip",
   "homepageUiTipsBeforeDialogConfirm": "Show me",
   "homepageUiTipsAfterDialogTitle": "",
@@ -500,6 +499,7 @@
   "toolExplorerDescription": "In addition to our courses, teachers can use App Lab in any course to introduce students to JavaScript programming. And, we have lessons and widgets to teach encryption, text compression, and other computer science concepts.",
   "viewAllAnnouncements": "View all announcements",
   "viewAllCourses": "View all courses",
+  "viewAllSections": "View all sections",
   "viewCourses": "View courses",
   "viewMyProjects": "View my projects"
 }

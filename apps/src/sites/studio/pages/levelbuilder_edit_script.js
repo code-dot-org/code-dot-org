@@ -10,7 +10,7 @@ import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
-  const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
+  const stages = (scriptData.stages || []).filter(stage => stage.id).map(stage => ({
     position: stage.position,
     flex_category: stage.flex_category,
     lockable: stage.lockable,

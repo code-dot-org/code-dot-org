@@ -2,13 +2,14 @@
 #
 # Table name: pd_attendances
 #
-#  id               :integer          not null, primary key
-#  pd_session_id    :integer          not null
-#  teacher_id       :integer
-#  created_at       :datetime
-#  updated_at       :datetime
-#  deleted_at       :datetime
-#  pd_enrollment_id :integer
+#  id                :integer          not null, primary key
+#  pd_session_id     :integer          not null
+#  teacher_id        :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#  deleted_at        :datetime
+#  pd_enrollment_id  :integer
+#  marked_by_user_id :integer
 #
 # Indexes
 #
@@ -38,7 +39,7 @@ class Pd::Attendance < ActiveRecord::Base
   end
 
   def resolve_enrollment
-    enrollment ||
+    Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
       workshop.enrollments.find_by(user_id: teacher_id) ||
       workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email))
   end

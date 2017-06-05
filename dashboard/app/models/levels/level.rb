@@ -2,21 +2,20 @@
 #
 # Table name: levels
 #
-#  id                       :integer          not null, primary key
-#  game_id                  :integer
-#  name                     :string(255)      not null
-#  created_at               :datetime
-#  updated_at               :datetime
-#  level_num                :string(255)
-#  ideal_level_source_id    :integer
-#  solution_level_source_id :integer
-#  user_id                  :integer
-#  properties               :text(65535)
-#  type                     :string(255)
-#  md5                      :string(255)
-#  published                :boolean          default(FALSE), not null
-#  notes                    :text(65535)
-#  audit_log                :text(65535)
+#  id                    :integer          not null, primary key
+#  game_id               :integer
+#  name                  :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  level_num             :string(255)
+#  ideal_level_source_id :integer
+#  user_id               :integer
+#  properties            :text(65535)
+#  type                  :string(255)
+#  md5                   :string(255)
+#  published             :boolean          default(FALSE), not null
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
 #
 # Indexes
 #
@@ -309,7 +308,7 @@ class Level < ActiveRecord::Base
     Studio
     StudioEC
     StarWarsGrid
-  )
+  ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).

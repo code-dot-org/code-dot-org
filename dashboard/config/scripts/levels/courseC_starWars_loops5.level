@@ -42,8 +42,7 @@
     "ideal": "4",
     "callout_json": "[]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The best solution uses one move down command and one loop filled with another move command.\",\"hint_id\":\"courseC_starWars_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a203263ee393e490243c8b2d04611755/courseC_starWars_loops5.mp3\"}]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

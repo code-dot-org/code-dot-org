@@ -35,7 +35,7 @@ class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
     ].freeze
   end
 
-  NO = 'No'
+  NO = 'No'.freeze
 
   def self.options
     Pd::ProgramRegistrationForm::TRAVEL_OPTIONS.
