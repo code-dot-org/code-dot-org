@@ -224,7 +224,10 @@ function main() {
 
     $scope.sections = sectionsService.query();
 
-    $scope.sections.$promise.then(function ( sections ){
+    $scope.sections.$promise.then(sections => {
+      $scope.sections.forEach(section => {
+        section.assign_id = $scope.getAssignmentId(section);
+      });
       $scope.sectionsLoaded = true;
     });
 
@@ -257,12 +260,7 @@ function main() {
      * @returns {string}
      */
     $scope.getName = function (section) {
-      const assignId = $scope.getAssignmentId(section);
-      if (!assignId) {
-        return '';
-      }
-
-      const firstMatch = $scope.assignable_list.find(val => val.assign_id == assignId);
+      const firstMatch = $scope.assignable_list.find(val => val.assign_id == section.assign_id);
       return firstMatch ? firstMatch.name : null;
     };
 
