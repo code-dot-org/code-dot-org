@@ -2,11 +2,8 @@ import React, { PropTypes } from 'react';
 import SectionSelector from './SectionSelector';
 import i18n from '@cdo/locale';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import HrefButton from '@cdo/apps/templates/HrefButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-
-const progressRedesignEnabled = true;
 
 const styles = {
   buttonRow: {
@@ -16,7 +13,7 @@ const styles = {
   sectionSelector: {
     // offset selector's margin so that we're aligned flush right
     position: 'relative',
-    right: progressRedesignEnabled ? 0 : -10,
+    right: 0,
     // vertically center
     bottom: 4
   },
@@ -50,57 +47,33 @@ const CourseOverviewTopRow = React.createClass({
       isRtl
     } = this.props;
 
-    let headerButtons;
-    if (progressRedesignEnabled) {
-      headerButtons = (
-        <div>
-          <ProgressButton
-            href={`/s/${scriptName}/next.next`}
-            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-            size={ProgressButton.ButtonSize.large}
-          />
-          <ProgressButton
-            href="//support.code.org"
-            text={i18n.getHelp()}
-            color={ProgressButton.ButtonColor.white}
-            size={ProgressButton.ButtonSize.large}
-            style={{marginLeft: 10}}
-          />
-        </div>
-      );
-    } else {
-      headerButtons = (
-        <div>
-          <HrefButton
-            href={`/s/${scriptName}/next.next`}
-            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-            type="primary"
-            style={{marginBottom: 10}}
-          />
-          <HrefButton
-            href="//support.code.org"
-            text={i18n.getHelp()}
-            type="default"
-            style={{marginLeft: 10, marginBottom: 10}}
-          />
-        </div>
-      );
-    }
-
     return (
       <div style={styles.buttonRow}>
-        {!professionalLearningCourse && headerButtons}
+        {!professionalLearningCourse && (
+          <div>
+            <ProgressButton
+              href={`/s/${scriptName}/next.next`}
+              text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+              size={ProgressButton.ButtonSize.large}
+            />
+            <ProgressButton
+              href="//support.code.org"
+              text={i18n.getHelp()}
+              color={ProgressButton.ButtonColor.white}
+              size={ProgressButton.ButtonSize.large}
+              style={{marginLeft: 10}}
+            />
+          </div>
+        )}
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&
             <span style={styles.sectionSelector}>
               <SectionSelector/>
             </span>
           }
-          {progressRedesignEnabled && (
-            <span>
-              <ProgressDetailToggle/>
-            </span>
-          )}
+          <span>
+            <ProgressDetailToggle/>
+          </span>
         </div>
       </div>
     );
