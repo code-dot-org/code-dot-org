@@ -13,6 +13,7 @@ class Pd::RegionalPartnerProgramRegistrationController < ApplicationController
       props: {
         options: Pd::RegionalPartnerProgramRegistration.options.camelize_keys,
         requiredFields: Pd::RegionalPartnerProgramRegistration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/regional_partner_program_registrations",
         teachercon: @teachercon,
         teacherconLocation: Pd::RegionalPartnerProgramRegistration::LOCATIONS[@teachercon - 1],
         teacherconDates: Pd::RegionalPartnerProgramRegistration::DATES[@teachercon - 1]
