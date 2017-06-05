@@ -95,7 +95,7 @@ class SectionTest < ActiveSupport::TestCase
     assert_does_not_create(Section) do
       section = Section.new name: 'a section'
       refute section.valid?
-      assert_equal ['User is required'], section.errors.full_messages
+      assert_equal ['User is required', 'User must be a teacher'], section.errors.full_messages
     end
   end
 

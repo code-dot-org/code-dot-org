@@ -62,8 +62,7 @@ class Section < ActiveRecord::Base
 
   validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
-    return unless user
-    errors.add(:user_id, 'must be a teacher') unless user.teacher?
+    errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
