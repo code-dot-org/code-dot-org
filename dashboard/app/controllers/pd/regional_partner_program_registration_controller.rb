@@ -10,10 +10,13 @@ class Pd::RegionalPartnerProgramRegistrationController < ApplicationController
     end
 
     @script_data = {
-      options: Pd::RegionalPartnerProgramRegistration.options.camelize_keys.to_json,
-      teachercon: @teachercon,
-      teacherconLocation: Pd::RegionalPartnerProgramRegistration::LOCATIONS[@teachercon - 1].to_json,
-      teacherconDates: Pd::RegionalPartnerProgramRegistration::DATES[@teachercon - 1].to_json
+      props: {
+        options: Pd::RegionalPartnerProgramRegistration.options.camelize_keys,
+        requiredFields: Pd::RegionalPartnerProgramRegistration.camelize_required_fields,
+        teachercon: @teachercon,
+        teacherconLocation: Pd::RegionalPartnerProgramRegistration::LOCATIONS[@teachercon - 1],
+        teacherconDates: Pd::RegionalPartnerProgramRegistration::DATES[@teachercon - 1]
+      }.to_json
     }
   end
 end
