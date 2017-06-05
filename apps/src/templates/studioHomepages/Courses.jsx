@@ -67,7 +67,7 @@ const Courses = React.createClass({
     return (
       <div>
         <HeadingBanner
-          headingText={i18n.courses()}
+          headingText={i18n.coursesCodeStudio()}
           subHeadingText={i18n.coursesHeadingSubText(
             {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
           )}
