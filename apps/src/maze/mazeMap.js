@@ -93,10 +93,6 @@ class MazeMap {
   hasMultiplePossibleGrids() {
     return this.staticGrids.length > 1;
   }
-
-  rotate() {
-    this.grid_ = this.grid_[0].map((x, i) => this.grid_.map(x => x[this.grid_.length - i - 1]));
-  }
 }
 
 export default MazeMap;
