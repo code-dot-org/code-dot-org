@@ -45,24 +45,28 @@
 
   show_teacher_options = "hide-always"
   show_student_options = "hide-always"
-  show_user_options = "hide-always"
-  show_pegasus_options = "hide-always"
   show_signed_out_options = "hide-always"
+  show_pegasus_options = "hide-always"
   show_help_options = "hide-always"
+
+  user_options_were_shown = false
 
   hamburger_class = "none"
 
   if level
     # The header is taken over by level-related UI, so we need the hamburger
     # to show whatever would show up in the header at desktop (and mobile) widths.
-    show_user_options = "show-always"
     show_help_options = "show-always"
+
     if user_type == "teacher"
       show_teacher_options = "show-always"
+      user_options_were_shown = true
     elsif user_type == "student"
       show_student_options = "show-always"
+      user_options_were_shown = true
     else
       show_signed_out_options = "show-always"
+      user_options_were_shown = true
     end
 
     # Regardless of user type, if they are English, then they also need the pegasus
@@ -76,13 +80,15 @@
     # The header is available for showing whichever options we want, but they should
     # appear in the hamburger at mobile widths.
     show_help_options = "show-mobile"
-    show_user_options = "show-mobile"
     if user_type == "teacher"
       show_teacher_options = "show-mobile"
+      user_options_were_shown = true
     elsif user_type == "student"
       show_student_options = "show-mobile"
+      user_options_were_shown = true
     else
       show_signed_out_options = "show-mobile"
+      user_options_were_shown = true
     end
 
     if language == "en"
@@ -110,22 +116,22 @@
 
 #hamburger{class: hamburger_class}
   %ul.hide-responsive-menu
-    .user-links{class: show_user_options}
+    .user-links
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
           %li{class: show_teacher_options}
             %a{href: entry[:url]}= entry[:title]
-        %div{class: "divider"}
+        .divider{class: show_teacher_options}
       - elsif user_type == "student"
         - student_entries.each do |entry|
           %li{class: show_student_options}
             %a{href: entry[:url]}= entry[:title]
-        %div{class: "divider"}
+        .divider{class: show_student_options}
       - else
         - signed_out_entries.each do |entry|
           %li{class: show_signed_out_options}
             %a{href: entry[:url]}= entry[:title]
-        %div{class: "divider"}
+        .divider{class: show_signed_out_options}
 
     .help-links{class: show_help_options}
       - if level || script_level
@@ -149,8 +155,7 @@
       - if level || script_level
         %li
           %a{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
-      -if show_pegasus_options
-        %div{class: "divider"}
+      .divider{class: show_pegasus_options}
 
     .pegasus-links{class: show_pegasus_options}
       %li{class: show_pegasus_options}
