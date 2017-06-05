@@ -63,10 +63,10 @@ class Maze < Grid
     <title name='TIMES'>5</title>
   </block>
   <block type="controls_repeat_dropdown">
-    <title name="TIMES" config="3-10">???</title>
+    <title name="TIMES" config="2-10">???</title>
   </block>
   <block type="controls_repeat_dropdown">
-    <title name="TIMES" config="3-10">3</title>
+    <title name="TIMES" config="2-10">3</title>
   </block>
   <block type='controls_repeat_ext'></block>
   <block type="maze_forever"></block>
@@ -104,7 +104,7 @@ class Maze < Grid
     <title name="TIMES">5</title>
   </block>
   <block type="controls_repeat_simplified_dropdown">
-    <title name="TIMES" config="3-10">3</title>
+    <title name="TIMES" config="2-10">3</title>
   </block>
   <block type="maze_moveNorth"></block>
   <block type="maze_moveSouth"></block>
