@@ -103,9 +103,8 @@ var loadLevel = function () {
   Maze.startDirection = level.startDirection;
 
   if (level.shapeShift) {
-    const rotate = m => m[0].map((x, i) => m.map(x => x[m.length - i - 1]));
     for (let i = 1, max = Math.random() * 4; i < max; i++) {
-      Maze.map = rotate(Maze.map);
+      Maze.map.rotate();
       Maze.startDirection = (Maze.startDirection + 3) % 4;
     }
   }
