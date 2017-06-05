@@ -16,7 +16,6 @@
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
 #  notes                    :text(65535)
-#  audit_log                :text(65535)
 #
 # Indexes
 #
@@ -330,7 +329,7 @@ class Blockly < Level
         translated_text = translations.try(:[], hint['hint_id'].to_sym)
         original_text = hint['hint_markdown']
 
-        if !translated_text.nil? && translated_text != original_text
+        if translated_text != original_text
           hint['hint_markdown'] = translated_text
           hint["tts_url"] = tts_url(TTSSafeRenderer.render(translated_text))
         end

@@ -16,7 +16,6 @@
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
 #  notes                    :text(65535)
-#  audit_log                :text(65535)
 #
 # Indexes
 #
@@ -28,6 +27,7 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
+  belongs_to :solution_level_source, class_name: "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_one :level_concept_difficulty, dependent: :destroy
@@ -88,7 +88,7 @@ class Level < ActiveRecord::Base
   end
 
   def related_videos
-    ([game.intro_video, specified_autoplay_video] + concepts.map(&:video)).compact.uniq
+    ([game.intro_video, specified_autoplay_video] + concepts.map(&:video)).reject(&:nil?).uniq
   end
 
   def specified_autoplay_video
@@ -184,8 +184,8 @@ class Level < ActiveRecord::Base
 
         return JSON.parse(callout_json).map do |callout_definition|
           callout_text = (should_localize? && translations.instance_of?(Hash)) ?
-              translations.try(:[], callout_definition['localization_key'].to_sym) :
-              callout_definition['callout_text']
+            translations.try(:[], callout_definition['localization_key'].to_sym) :
+            callout_definition['callout_text']
 
           Callout.new(
             element_id: callout_definition['element_id'],
@@ -241,7 +241,9 @@ class Level < ActiveRecord::Base
     builder.to_xml(PRETTY_PRINT)
   end
 
-  PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
+  PRETTY_PRINT = {
+    save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT
+  }.freeze
 
   def self.pretty_print_xml(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
@@ -249,7 +251,7 @@ class Level < ActiveRecord::Base
   end
 
   def filter_level_attributes(level_hash)
-    %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
+    %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
     level_hash.reject! {|_, v| v.nil?}
     level_hash
   end
@@ -267,61 +269,37 @@ class Level < ActiveRecord::Base
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
-    'Applab', # freeplay
-    'ContractMatch', # dsl defined, covered in dsl
-    'CurriculumReference', # no user submitted content
-    'DSLDefined', # dsl defined, covered in dsl
-    'EvaluationMulti', # unknown
-    'EvaluationQuestion', # plc evaluation
-    'External', # dsl defined, covered in dsl
-    'ExternalLink', # no user submitted content
-    'FreeResponse', # no ideal solution
-    'FrequencyAnalysis', # widget
-    'Gamelab', # freeplay
-    'GoBeyond', # unknown
-    'Level', # base class
-    'LevelGroup', # dsl defined, covered in dsl
-    'Map', # no user submitted content
-    'Match', # dsl defined, covered in dsl
-    'Multi', # dsl defined, covered in dsl
-    'NetSim', # widget
-    'Pixelation', # widget
-    'PublicKeyCryptography', # widget
-    'Odometer', # widget
-    'ScriptCompletion', # unknown
-    'StandaloneVideo', # no user submitted content
-    'TextCompression', # widget
-    'TextMatch', # dsl defined, covered in dsl
     'Unplugged', # no solutions
+    'TextMatch', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
+    'External', # dsl defined, covered in dsl
+    'Match', # dsl defined, covered in dsl
+    'ContractMatch', # dsl defined, covered in dsl
+    'LevelGroup', # dsl defined, covered in dsl
+    'Applab', # freeplay
+    'Gamelab', # freeplay
+    'EvaluationQuestion', # plc evaluation
+    'NetSim', # widget
+    'Odometer', # widget
     'Vigenere', # widget
-    'Weblab', # no ideal solution
-    'Widget', # widget
+    'FrequencyAnalysis', # widget
+    'TextCompression', # widget
+    'Pixelation', # widget
+    'PublicKeyCryptography' # widget
   ].freeze
-  TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
-    Artist
-    Blockly
-    Calc
-    Craft
-    Eval
-    Grid
-    Karel
-    Maze
-    Studio
-    StudioEC
-    StarWarsGrid
-  ).freeze
+  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
       where('ideal_level_source_id is null').
-      to_a.reject {|level| level.try(:free_play)}
+      to_a.
+      reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id
-    ideal_level_source =
-      level_sources.
-        includes(:activities).
-        max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
+    ideal_level_source = level_sources.
+      includes(:activities).
+      max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
@@ -373,40 +351,6 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
-  def log_changes(user=nil)
-    return unless changed?
-
-    log = JSON.parse(audit_log || "[]")
-
-    # gather all field changes; if the properties JSON blob is one of the things
-    # that changed, rather than including just 'properties' in the list, include
-    # all of those attributes within properties that changed.
-    latest_changes = changed.dup
-    if latest_changes.include?('properties') && changed_attributes['properties']
-      latest_changes.delete('properties')
-      changed_attributes['properties'].each do |key, value|
-        latest_changes.push(key) unless properties[key] == value
-      end
-    end
-
-    entry = {
-      changed_at: Time.now,
-      changed: latest_changes
-    }
-    unless user.nil?
-      entry[:changed_by_id] = user.id
-      entry[:changed_by_email] = user.email
-    end
-    log.push(entry)
-
-    # Because this ever-growing log is stored in a limited column and because we
-    # will tend to care a lot less about older entries than newer ones, we will
-    # here drop older entries until this log gets down to a reasonable size
-    log.shift while JSON.dump(log).length >= 65535
-
-    self.audit_log = JSON.dump(log)
-  end
-
   def remove_empty_script_levels
     script_levels.each do |script_level|
       if script_level.levels.length == 1 && script_level.levels[0] == self
@@ -430,30 +374,6 @@ class Level < ActiveRecord::Base
     properties["contained_level_names"].map do |contained_level_name|
       Script.cache_find_level(contained_level_name)
     end
-  end
-
-  def summary_for_lesson_plans
-    summary = {
-      level_id: id,
-      type: self.class.to_s,
-      name: name,
-      display_name: display_name
-    }
-
-    %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
-      value = properties[key] || try(key)
-      summary[key] = value if value
-    end
-    if video_key
-      summary[:video_youtube] = specified_autoplay_video.youtube_url
-      summary[:video_download] = specified_autoplay_video.download
-    end
-
-    unless contained_levels.empty?
-      summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
-    end
-
-    summary
   end
 
   private

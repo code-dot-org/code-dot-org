@@ -5,9 +5,9 @@
 class PopulateHashedEmailSkippingValidation < ActiveRecord::Migration[4.2]
   def up
     User.with_deleted.
-        where('email IS NOT NULL AND email <> ""').
-        where('hashed_email IS NULL OR hashed_email = ""').
-        find_each do |user|
+      where('email IS NOT NULL AND email <> ""').
+      where('hashed_email IS NULL OR hashed_email = ""').
+      find_each do |user|
       user.hash_email
       user.save(validate: false)
     end

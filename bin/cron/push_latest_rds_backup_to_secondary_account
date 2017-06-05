@@ -98,8 +98,8 @@ def main
 
   # Find the latest automated backup
   sorted_snapshots = production_instance.snapshots.
-      select {|snap| snap.status == 'available' && !snap.snapshot_id.start_with?('temp-snapshot-')}.
-      sort_by(&:snapshot_create_time)
+    select {|snap| snap.status == 'available' && !snap.snapshot_id.start_with?('temp-snapshot-')}.
+    sort_by(&:snapshot_create_time)
   latest_snapshot = sorted_snapshots.last
 
   begin
