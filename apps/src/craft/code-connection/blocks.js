@@ -290,8 +290,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetail()))
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetailInSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.STRING);
     }
@@ -307,8 +306,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpace()))
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpaceInSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
@@ -324,8 +322,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCount()))
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCountInSlotNumber()))
           .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
