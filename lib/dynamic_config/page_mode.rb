@@ -6,7 +6,7 @@
 # (e.g. A-B testing of different modes with session stickiness).
 class PageModeBase
   DEFAULT_PAGE_MODE = nil
-  PAGE_MODE_KEY = 'pm'
+  PAGE_MODE_KEY = 'pm'.freeze
 
   # Returns the page mode to use for rendering the given request.
   # @param {ActionDispatch::Request} request

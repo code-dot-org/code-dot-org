@@ -32,8 +32,6 @@ class StarWarsGrid < Studio
         game: Game.custom_studio,
         level_num: 'custom',
         start_blocks: '<xml><block type="when_run"/></xml>',
-        wall_map_collisions: true,
-        block_moving_into_walls: true,
       )
     )
     level.create_maze(level_params, params)
@@ -73,7 +71,7 @@ class StarWarsGrid < Studio
           <title name="TIMES">5</title>
         </block>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="2-10">3</title>
         </block>
       </category>
     XML
