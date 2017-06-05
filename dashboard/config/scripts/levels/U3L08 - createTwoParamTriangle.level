@@ -116,10 +116,15 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "**Potential stop/recap point**\r\n\r\nYou might consider having students work up to this level and then stopping to review it as a whole class.\r\n\r\nThis task is challenging and represents the crux of the whole parameters \"thing\". It's worth the time to get this level right and to explain the terminology and what's happening.",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:59:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

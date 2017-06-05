@@ -210,10 +210,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "encrypted_examples": "34S07rJBkyUUc/Ectbo1EQUhZRiA2rbPMM/aukdnkkeD6oQdwZB2VB7SQDM1\nQGC1\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:56:30 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

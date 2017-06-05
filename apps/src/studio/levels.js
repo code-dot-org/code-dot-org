@@ -1882,8 +1882,6 @@ levels.js_hoc2015_move_right = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
@@ -1948,8 +1946,6 @@ levels.js_hoc2015_move_right_down = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
@@ -1993,8 +1989,6 @@ levels.js_hoc2015_move_backtrack = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
@@ -2041,8 +2035,6 @@ levels.js_hoc2015_move_diagonal = {
   'startBlocks': [
     'moveDown();',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
@@ -2109,8 +2101,6 @@ levels.js_hoc2015_move_around = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
@@ -2157,8 +2147,6 @@ levels.js_hoc2015_move_finale = {
   'startBlocks': [
     'moveDown();',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
@@ -2234,8 +2222,6 @@ levels.js_hoc2015_event_two_items = {
     'function whenDown() {',
     '  ',
     '}'].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -2335,8 +2321,6 @@ levels.js_hoc2015_event_four_items = {
     'function whenDown() {',
     '  ',
     '}'].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
@@ -2407,8 +2391,6 @@ levels.js_hoc2015_score =
       'R2-D2sound4': true
     }
   },
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
@@ -2524,8 +2506,6 @@ levels.js_hoc2015_win_lose = {
       'R2-D2sound4': true
     }
   },
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
@@ -2639,8 +2619,6 @@ levels.js_hoc2015_add_characters = {
       'PufferPigSound3': true
     }
   },
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
@@ -2748,8 +2726,6 @@ levels.js_hoc2015_chain_characters = {
       'MynockSound3': true,
     }
   },
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
@@ -2834,8 +2810,6 @@ levels.js_hoc2015_multiply_characters = {
       'MouseDroidSound3': true
     }
   },
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
@@ -2950,8 +2924,6 @@ levels.js_hoc2015_change_setting = {
       'ProbotSound3': true,
     }
   },
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
@@ -3114,8 +3086,6 @@ levels.js_hoc2015_event_free = {
     '  goRight();',
     '}',
     ''].join('\n'),
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'tapSvgToRunAndReset': true,
