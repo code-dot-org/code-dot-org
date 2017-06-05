@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20170602202903) do
-
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "level_id"
@@ -295,19 +294,18 @@ ActiveRecord::Schema.define(version: 20170602202903) do
 
   create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "game_id"
-    t.string   "name",                                                   null: false
+    t.string   "name",                                                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
     t.integer  "ideal_level_source_id"
-    t.integer  "solution_level_source_id"
     t.integer  "user_id"
-    t.text     "properties",               limit: 65535
+    t.text     "properties",            limit: 65535
     t.string   "type"
     t.string   "md5"
-    t.boolean  "published",                              default: false, null: false
-    t.text     "notes",                    limit: 65535
-    t.text     "audit_log",                limit: 65535
+    t.boolean  "published",                           default: false, null: false
+    t.text     "notes",                 limit: 65535
+    t.text     "audit_log",             limit: 65535
     t.index ["game_id"], name: "index_levels_on_game_id", using: :btree
     t.index ["name"], name: "index_levels_on_name", using: :btree
   end

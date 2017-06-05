@@ -2,21 +2,20 @@
 #
 # Table name: levels
 #
-#  id                       :integer          not null, primary key
-#  game_id                  :integer
-#  name                     :string(255)      not null
-#  created_at               :datetime
-#  updated_at               :datetime
-#  level_num                :string(255)
-#  ideal_level_source_id    :integer
-#  solution_level_source_id :integer
-#  user_id                  :integer
-#  properties               :text(65535)
-#  type                     :string(255)
-#  md5                      :string(255)
-#  published                :boolean          default(FALSE), not null
-#  notes                    :text(65535)
-#  audit_log                :text(65535)
+#  id                    :integer          not null, primary key
+#  game_id               :integer
+#  name                  :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  level_num             :string(255)
+#  ideal_level_source_id :integer
+#  user_id               :integer
+#  properties            :text(65535)
+#  type                  :string(255)
+#  md5                   :string(255)
+#  published             :boolean          default(FALSE), not null
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
 #
 # Indexes
 #
@@ -191,7 +190,7 @@ class Artist < Blockly
         <title name="TIMES">4</title>
       </block>
       <block type="controls_repeat_dropdown">
-        <title name="TIMES" config="3-10">???</title>
+        <title name="TIMES" config="2-10">???</title>
       </block>
       <block type="controls_repeat_ext">
         <value name="TIMES"></value>
@@ -251,7 +250,7 @@ class Artist < Blockly
         <title name="TIMES">5</title>
       </block>
       <block type="controls_repeat_simplified_dropdown">
-        <title name="TIMES" config="3-10">3</title>
+        <title name="TIMES" config="2-10">3</title>
       </block>
       <block type="draw_colour_simple"></block>
       <block type="draw_line_style_pattern"></block>

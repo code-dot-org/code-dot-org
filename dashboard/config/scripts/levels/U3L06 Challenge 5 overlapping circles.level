@@ -126,10 +126,10 @@
     "teacher_markdown": "The alpha channel is, oddly, specified as a decimal value between 0 and 1, while the three RGB values are all specified as integers in the range 0-255.  That’s because the transparency is a percentage, not a color.  So an alpha value of 0.5 means “50% transparent.\r\n\r\nValidation note: we don't check to see if the student actually drew this exact figure. We check that the student:\r\n\r\n* called `penRGBA(r,g,b,a)` at least twice\r\n* drew at least 2 dots\r\n* moved forward at least once",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
