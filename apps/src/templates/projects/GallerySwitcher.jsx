@@ -62,12 +62,6 @@ class GallerySwitcher extends Component {
 
     this.toggleToGallery = this.toggleToGallery.bind(this);
     this.toggleToMyProjects = this.toggleToMyProjects.bind(this);
-
-    this.state = {
-      // The source of truth for which gallery is displayed. This state should
-      // live in the parent component, once there is one.
-      gallery: props.initialGallery,
-    };
   }
 
   toggleToGallery() {

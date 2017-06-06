@@ -4,9 +4,12 @@ import {registerReducers} from '@cdo/apps/redux';
 // Actions
 const TOGGLE_GALLERY = 'Projects/TOGGLE_GALLERY';
 
+const isPublic = window.location.pathname.startsWith('/projects/public');
+
 // Reducer
 function pageLocation(state, action) {
-  state = state || 'PRIVATE';
+  const defaultState = isPublic ? 'PUBLIC' : 'PRIVATE';
+  state = state || defaultState;
   switch (action.type) {
     case TOGGLE_GALLERY:
       return action.projectType;

@@ -11,7 +11,6 @@ import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
 
 
 const MAX_PROJECTS_PER_CATEGORY = 100;
-const isPublic = window.location.pathname.startsWith('/projects/public');
 
 $(document).ready(() => {
   // We need to see whether the experiment is enabled from angularProjects.js,
@@ -21,7 +20,7 @@ $(document).ready(() => {
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ProjectHeader showGallery={showGallery} isPublic={isPublic}/>
+      <ProjectHeader showGallery={showGallery} />
     </Provider>,
     projectsHeader
   );
