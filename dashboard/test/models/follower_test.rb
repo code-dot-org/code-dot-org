@@ -7,6 +7,30 @@ class FollowerTest < ActiveSupport::TestCase
     @follower = create :follower
   end
 
+  test 'student_user is required' do
+    @follower.student_user = nil
+    refute @follower.valid?
+    assert_equal ['Student user is required'], @follower.errors.full_messages
+  end
+
+  test 'section is required' do
+    @follower.section = nil
+    refute @follower.valid?
+    assert_equal ['Section is required'], @follower.errors.full_messages
+  end
+
+  # Ideally this test would also confirm cannot_follow_yourself and teacher_must_be_teacher are only
+  # validated for non-deleted followers. As this situation cannot happen without manipulating the DB
+  # (dependent callbacks), we do not worry about testing it.
+  test 'student_user and section not required for deleted followers' do
+    follower = create :follower
+    follower.destroy
+    follower.student_user = nil
+    follower.section = nil
+
+    assert follower.valid?
+  end
+
   test "followers are soft-deleted" do
     assert_no_change("Follower.with_deleted.count") do
       @follower.destroy
