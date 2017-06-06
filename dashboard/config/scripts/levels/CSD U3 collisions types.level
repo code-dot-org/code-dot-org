@@ -27,7 +27,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Collision Types\r\n\r\nThere are four types of collisions that we use in Game Lab.  These blocks will cause a certain type of interaction between the _sprite_ and its _target_.\r\n\r\n## displace\r\n\r\nThe `displace` block causes the sprite to push the target as long as they are touching each other. The sprite keeps moving normally.\r\n\r\n## collide\r\n\r\nThe `collide` block makes the sprite stop when it runs into the target.  If the target is moving, it will push the sprite with it.  The target keeps moving normally.\r\n\r\n## bounce\r\n\r\nThe `bounce` block makes the sprite and the target bounce when they touch each other.  Both the sprite and the target change how they are moving.\r\n\r\n## bounceOff\r\n\r\nThe `bounceOff` block makes the sprite bounce off the target.  The target keeps moving normally.\r\n\r\n\r\n\r\n# Do This\r\n\r\nChoose the best block to model the basketball bouncing off the floor. [Show me where](#triggercallout=code_triggered)\r\n\r\n[//]: # (https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png)\r\n\r\n[//]: # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)",
+    "markdown_instructions": "# Collision Types\r\n\r\nThere are four types of collisions that we use in Game Lab.  These blocks will cause a certain type of interaction between the _sprite_ and its _target_.\r\n\r\n## displace\r\n\r\nThe `displace` block causes the sprite to push the target as long as they are touching each other. The sprite keeps moving normally.\r\n\r\n## collide\r\n\r\nThe `collide` block makes the sprite stop when it runs into the target.  If the target is moving, it will push the sprite with it.  The target keeps moving normally.\r\n\r\n## bounce\r\n\r\nThe `bounce` block makes the sprite and the target bounce when they touch each other.  Both the sprite and the target change how they are moving.\r\n\r\n## bounceOff\r\n\r\nThe `bounceOff` block makes the sprite bounce off the target.  The target keeps moving normally.\r\n\r\n\r\n\r\n# Do This\r\n\r\nChoose the best block to model the basketball bouncing off the floor. ( [Show me where](#triggercallout=code_triggered) )\r\n\r\n[//]: # (https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png)\r\n\r\n[//]: # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -61,10 +61,14 @@
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
     "encrypted_examples": "0klXlfHo501U4d5KtUNj/vfBKHDJQEhu3D6Zy8sQ2nI+41kOXYR1MQYNnICa\nISDf\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:44:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
