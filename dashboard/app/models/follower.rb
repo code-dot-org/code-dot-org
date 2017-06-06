@@ -35,9 +35,11 @@ class Follower < ActiveRecord::Base
     errors.add(:user, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
 
-  validate :cannot_follow_yourself, :teacher_must_be_teacher
+  validate :cannot_follow_yourself, unless: -> {deleted?}
+  validate :teacher_must_be_teacher, unless: -> {deleted?}
 
-  validates_presence_of :student_user, :section
+  validates_presence_of :student_user, unless: -> {deleted?}
+  validates_presence_of :section, unless: -> {deleted?}
 
   after_create :assign_script
   def assign_script
