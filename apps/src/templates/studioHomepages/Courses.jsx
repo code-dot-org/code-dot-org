@@ -63,11 +63,12 @@ const Courses = React.createClass({
 
   render() {
     const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
+    const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
 
     return (
       <div>
         <HeadingBanner
-          headingText={i18n.courses()}
+          headingText={headingText}
           subHeadingText={i18n.coursesHeadingSubText(
             {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
           )}

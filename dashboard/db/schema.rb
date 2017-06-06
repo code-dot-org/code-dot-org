@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530191817) do
+ActiveRecord::Schema.define(version: 20170605131206) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -350,12 +350,13 @@ ActiveRecord::Schema.define(version: 20170530191817) do
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "pd_session_id",    null: false
+    t.integer  "pd_session_id",     null: false
     t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.integer  "pd_enrollment_id"
+    t.integer  "marked_by_user_id",              comment: "User id for the partner or admin who marked this teacher in attendance, or nil if the teacher self-attended."
     t.index ["pd_enrollment_id"], name: "index_pd_attendances_on_pd_enrollment_id", using: :btree
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
@@ -476,6 +477,14 @@ ActiveRecord::Schema.define(version: 20170530191817) do
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "pd_teachercon_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id"], name: "index_pd_teachercon_surveys_on_pd_enrollment_id", unique: true, using: :btree
   end
 
   create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
