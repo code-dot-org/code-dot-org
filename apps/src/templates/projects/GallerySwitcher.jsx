@@ -48,7 +48,6 @@ const styles = {
 
 class GallerySwitcher extends Component {
   static propTypes = {
-    initialGallery: PropTypes.oneOf(Object.keys(Galleries)).isRequired,
     pageLocation: PropTypes.string.isRequired,
 
     // showGallery hides and shows dom elements in angular and selectGallery updates redux
