@@ -356,7 +356,7 @@ function main() {
 
     $scope.age_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "21+"];
 
-    $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_female};
+    $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_male};
 
     $scope.bulk_import = {editing: false, students: ''};
 
