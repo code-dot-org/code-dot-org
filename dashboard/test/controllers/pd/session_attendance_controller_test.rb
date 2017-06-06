@@ -111,6 +111,30 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     assert flash[:error].end_with? 'has been claimed. Please look again.'
   end
 
+  test 'select_enrollment automatically upgrades accidental student accounts if the emails match' do
+    enrollment = create :pd_enrollment, :from_user, user: @teacher, workshop: @workshop
+    @teacher.update!(user_type: User::TYPE_STUDENT)
+    sign_in @teacher
+
+    assert_creates Pd::Attendance do
+      post :select_enrollment, params: {session_code: @session.code, enrollment_code: enrollment.code}
+    end
+    @teacher.reload
+    assert @teacher.teacher?
+    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
+  end
+
+  test 'select_enrollment redirects to upgrade_account when accidental student account emails dont match' do
+    student = create :student
+    enrollment = create :pd_enrollment, user: student, workshop: @workshop
+    sign_in student
+
+    assert_creates Pd::Attendance do
+      post :select_enrollment, params: {session_code: @session.code, enrollment_code: enrollment.code}
+    end
+    assert_redirected_to action: :upgrade_account
+  end
+
   test_redirect_to_sign_in_for :upgrade_account, params: -> {{session_code: @session.code}}
 
   test 'upgrade_account succeeds for students' do

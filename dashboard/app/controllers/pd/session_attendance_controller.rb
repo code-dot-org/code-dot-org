@@ -42,8 +42,20 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    enrollment.update!(user: current_user, email: current_user.email)
+    enrollment.update!(user: current_user)
     Pd::Attendance.find_restore_or_create_by!(session: @session, teacher: current_user, enrollment: enrollment)
+
+    if current_user.student?
+      if Digest::MD5.hexdigest(enrollment.email) == current_user.hashed_email
+        # Email matches user's hashed email. Upgrade to teacher and set email.
+        current_user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email)
+      else
+        # No email match. Redirect to upgrade page.
+        redirect_to action: 'upgrade_account'
+        return
+      end
+    end
+
     render_confirmation
   end
 
