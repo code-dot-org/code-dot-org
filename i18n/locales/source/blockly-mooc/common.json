@@ -47,6 +47,7 @@
   "courses": "Courses",
   "coursesCardAction": "Find a course",
   "coursesCardDescription": "Find a new course to keep challenging yourself.",
+  "coursesCodeStudio": "Courses from Code Studio",
   "coursesHeadingDescription":"Create an account to save your progress and projects. Or just start coding - no account needed. All courses are available at no cost.",
   "coursesHeadingSubText": "{linesCount} lines of code written by {studentsCount} million students.",
   "coursesUiTipsTeacherCourses": "We've updated this page just for teachers. Find the next course for your classroom here.",

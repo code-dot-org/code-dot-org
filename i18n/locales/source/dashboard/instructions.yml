@@ -3929,6 +3929,7 @@ en:
         Each side should be 100 pixels long."
       StepIntro_instruction: "Here's how to use the \"Step\" button."
       Test Play Lab_instruction: "This is a test play lab level."
+      Test of comment block_instruction: "Drag out the subgoal label block you want."
       Testing Quantum Farmer_instruction: "Wow, look at that! \r\n\r\nI don't know
         how many shovelfuls of dirt this hole needs.  \r\nCan you write a program
         that keeps using the `fill` block until the ground is even?  "
@@ -5660,7 +5661,7 @@ en:
       courseB_playlab_events_challenge2_template_instruction: "Let's make the animals
         disappear when you click on them! You can also add sounds and score points
         to create a fun game of Animal Tag!"
-      courseB_starWars_prog1_instruction: "Help BB-8 gather the scrap metal!"
+      courseB_starWars_prog1_instruction: "Help BB-8 get the scrap metal!"
       courseB_starWars_prog10_instruction: "Help BB-8 gather the glowing scrap metal"
       courseB_starWars_prog11_instruction: "Help BB-8 gather the glowing scrap metal"
       courseB_starWars_prog2_instruction: "Help BB-8 gather **all** of the glowing
@@ -5716,7 +5717,7 @@ en:
         wants to draw a line from where he is to the garden of sunflowers.  Can you
         help him?  \r\n*(The garden is 250 pixels away)*  "
       courseC_artist_loops2_instruction: "Now that the zombie knows his way, help
-        him dig **25 pixel long** holes along the path to plant more flowers!"
+        him dig holes along the path to plant more flowers!"
       courseC_artist_loops3_instruction: "Excellent!  Now that the flowers have sprouted,
         help the zombie place a friend every 50 pixels to guard over them until they
         are grown."
@@ -5825,8 +5826,7 @@ en:
         circles?\"*"
       courseC_maze_debugging_challenge2_instruction: "*\"If I turn too often, I might
         get dizzy! Help me reach the acorn with only four `turn` commands.\"*"
-      courseC_maze_loops1_instruction: "Can you get the bird to the pig using 5 of
-        the same kind of blocks?"
+      courseC_maze_loops1_instruction: "Can you get the bird to the pig?"
       courseC_maze_loops10_instruction: "You are doing great! Keep it up!"
       courseC_maze_loops11_instruction: "You are almost there! This time, choose
         any path you like!"
@@ -5968,12 +5968,29 @@ en:
         you have learned and make something that you love!"
       courseD_artist_nestedLoopsPre1_instruction: "Create a triangle to kickstart
         this stage."
+      courseD_artist_nestedLoops_challenge1_instruction: "Can you figure out how
+        to make a picture like this?"
+      courseD_artist_nestedLoops_challenge2_instruction: "Can you figure out how
+        to make a picture like this?"
       courseD_artist_project1_instruction: "Help Elsa draw a small shape.  It can
         be any shape that you like."
+      courseD_artist_project1a_instruction: "Draw a stair-step pattern that uses
+        turns between 75 and 105 degrees."
       courseD_artist_project2_instruction: "Now take your shape and draw two or three
         in a row!"
+      courseD_artist_project2a_instruction: "Now, turn around 180 degrees and draw
+        the stair pattern again!"
       courseD_artist_project3_instruction: "Let's spin that line of shapes around!"
+      courseD_artist_project3a_instruction: "Spin that shape around 5 or 6 times
+        in a circle.\r\n- If you choose 5,  you can use a turn of 72 degrees\r\n-
+        If you choose 6,  you can use a turn of 60 degrees"
       courseD_artist_project4_instruction: "Time to layer those shapes!"
+      courseD_artist_project4a_instruction: "Try playing around with what you've
+        created. Draw whatever you like!\r\n- What happens if you use two different
+        angles in your stair step pattern?\r\n- What happens if you make your diamond
+        pattern longer or shorter?\r\n- What does it look like to draw two snowflakes
+        on top of one another?"
+      courseD_artist_project5_instruction: "Play with the snowflakes!"
       courseD_artist_ramp11_instruction: "Now make a square using Artist!"
       courseD_artist_ramp12_instruction: "Use what you've learned to draw this triangle
         inside of a square."
@@ -6073,6 +6090,8 @@ en:
       courseD_collector_ramp10_instruction: "Help Laurel collect all of the treasure."
       courseD_collector_ramp8_instruction: "Help Laurel collect all of the treasure."
       courseD_collector_ramp9_instruction: "Help Laurel collect all of the treasure."
+      courseD_collector_until_challenge1_instruction: "Are you an expert of nested
+        loops? Use what you have learned so far to collect all of the treasure!"
       courseD_debugging_1_instruction: "Fix the error(s) to collect all of the nectar."
       courseD_debugging_2_instruction: "Fix the error(s) to collect all of the nectar."
       courseD_debugging_3_instruction: "Fix the error(s) to collect all of the nectar
@@ -6084,13 +6103,14 @@ en:
       courseD_debugging_6_instruction: "Challenge:  Fix the errors to collect all
         of the nectar and make all of the honey."
       courseD_farmer_condLoops1_instruction: "Use conditionals to make sure that
-        you pick all of the corn, but don't disturb the stalks where nothing is growing
-        yet."
+        you pick all of the corn, and nothing else."
       courseD_farmer_condLoops2_instruction: "Help the farmer collect both corn and
         lettuce from the field."
       courseD_farmer_condLoops3_instruction: "*\"Corn, lettuce, AND pumpkins! Help
         me harvest them all.\"*"
       courseD_farmer_condLoops4_instruction: "Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch."
+      courseD_farmer_condLoops4a_instruction: "Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch."
       courseD_farmer_condLoops5_instruction: "This field has clusters of corn, lettuce,
         and pumpkins all growing together.  Can you collect them all?"
@@ -6104,6 +6124,13 @@ en:
         then pick the pumpkin."
       courseD_farmer_condLoops9_predict1_instruction: "Collect all of the corn and
         lettuce, then pick the pumpkin."
+      courseD_farmer_condLoops_challenge1_instruction: "Turn right at the pumpkins.
+        Collect everything to complete the level. Each hidden crop has only one corn
+        or lettuce."
+      courseD_farmer_condLoops_challenge2_instruction: "Collect everything to complete
+        the level."
+      courseD_farmer_condLoops_challenge2_clone_instruction: "Collect everything
+        to complete the level."
       courseD_farmer_conditionals1_instruction: "Move to the pile of dirt and use
         the `remove` block to remove it."
       courseD_farmer_conditionals10_instruction: "Flatten all of these piles using
@@ -6124,6 +6151,9 @@ en:
         using as few blocks as possible. "
       courseD_farmer_conditionals9_instruction: "Flatten all of these piles using
         as few blocks as possible. "
+      courseD_farmer_until_challenge2_instruction: "Use If/Else blocks to follow
+        the curvy path. At each corner, use the `remove 1` command in a loop to clear
+        the piles."
       courseD_farmer_while1_instruction: "Move to the pile of dirt and use the `remove`
         block to remove it."
       courseD_farmer_while10_instruction: "Flatten all of these piles using as few
@@ -6193,6 +6223,14 @@ en:
       courseD_maze_until8_instruction: "Help the zombie get to the sunflower."
       courseD_maze_until9_instruction: "**Challenge:** Avoid the chompers and help
         the zombie get to the sunflower."
+      courseD_maze_until_challenge_instruction: "No hints, just challenge. Get the
+        zombie to the sunflower."
+      courseD_maze_until_challenge1-delete-this-copy_instruction: "No hints, just
+        challenge. Get the zombie to the sunflower."
+      courseD_maze_until_challenge1_instruction: "No hints, just challenge. Get the
+        zombie to the sunflower."
+      courseD_maze_until_challenge2_instruction: "No hints, just challenge. Get the
+        zombie to the sunflower."
       courseD_playLab_cond1_instruction: "Get Pegleg to the dragon to solve this
         puzzle."
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes
