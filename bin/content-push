@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'optparse'
 require_relative '../deployment.rb'
 require 'cdo/git_utils'
 require 'cdo/only_one'
