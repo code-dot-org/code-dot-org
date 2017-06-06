@@ -50,8 +50,8 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
 
   test_user_gets_response_for(
     :index,
-    name: 'anonymous user can specify an offset',
-    params: -> {{project_type: 'applab', limit: 1, offset: 3}},
+    name: 'anonymous user can specify published_before',
+    params: -> {{project_type: 'applab', limit: 1, published_before: '2017-02-17T13:59:11.000-08:00'}},
   )
 
   test_user_gets_response_for(
@@ -69,8 +69,8 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
 
   test_user_gets_response_for(
     :index,
-    name: 'bad request when offset is specified for project type all',
-    params: -> {{project_type: 'all', limit: 1, offset: 2}},
+    name: 'bad request when published_before is specified for project type all',
+    params: -> {{project_type: 'all', limit: 1, published_before: '2017-02-17T13:59:11.000-08:00'}},
     response: :bad_request,
   )
 
@@ -140,6 +140,6 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   private
 
   def db_result(result)
-    stub(select_append: stub(join: stub(join: stub(where: stub(exclude: stub(order: stub(limit: stub(offset: result))))))))
+    stub(select_append: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
 end

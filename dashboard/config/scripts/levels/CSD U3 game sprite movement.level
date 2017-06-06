@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Stage 17 Puzzle 9](/s/csd3/stage/17/puzzle/9) and `playerFall` in [Stage 17 Puzzle 14](/s/csd3/stage/17/puzzle/14).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
+    "markdown_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 17 Puzzle 9](/s/csd3/stage/17/puzzle/9) and `playerFall` in [Lesson 17 Puzzle 14](/s/csd3/stage/17/puzzle/14).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,10 +40,13 @@
     "show_debug_watch": "true",
     "encrypted_examples": "SDewzDkoYvxsl9CsyGPZb8lwQCpgRH0+ywhgqmajxmR/xpj1gGdVscvDt4Vu\nOG2U\n",
     "hide_share_and_remix": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-06 17:42:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
