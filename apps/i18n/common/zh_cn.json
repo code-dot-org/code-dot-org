@@ -395,6 +395,7 @@
   "courses": "Courses",
   "coursesCardAction": "Find a course",
   "coursesCardDescription": "Find a new course to keep challenging yourself.",
+  "coursesCodeStudio": "Courses from Code Studio",
   "coursesHeadingDescription": "Create an account to save your progress and projects. Or just start coding - no account needed. All courses are available at no cost.",
   "coursesHeadingSubText": "{linesCount} lines of code written by {studentsCount} million students.",
   "coursesUiTipsTeacherCourses": "We've updated this page just for teachers. Find the next course for your classroom here.",
@@ -414,7 +415,6 @@
   "defaultProjectNameGumball": "Gumball Project",
   "defaultProjectNameIceAge": "Ice Age Project",
   "defaultProjectName": "My Project",
-  "editSections": "Edit sections",
   "extrasStageNumberCompleted": "You Completed Lesson {number}!",
   "extrasTryAChallenge": "Try a Challenge",
   "extrasCreateSomething": "Create Something",
@@ -500,6 +500,7 @@
   "toolExplorerDescription": "In addition to our courses, teachers can use App Lab in any course to introduce students to JavaScript programming. And, we have lessons and widgets to teach encryption, text compression, and other computer science concepts.",
   "viewAllAnnouncements": "View all announcements",
   "viewAllCourses": "View all courses",
+  "viewAllSections": "View all sections",
   "viewCourses": "View courses",
   "viewMyProjects": "View my projects"
 }

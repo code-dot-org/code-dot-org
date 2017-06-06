@@ -3548,7 +3548,7 @@ en:
         Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
         Is the dog sprite's x greater than the cat sprite's x?: Is the dog sprite's x greater than the cat sprite's x?
         Is the dog sprite's x less than the cat sprite's x?: Is the dog sprite's x less than the cat sprite's x?
-        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        Match the boolean expression to the English description.: Match the boolean expression to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
         dog.rotation &lt; cat.rotation: dog.rotation &lt; cat.rotation
         dog.scale &gt; cat.scale: dog.scale &gt; cat.scale
@@ -7618,7 +7618,7 @@ en:
         : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
         ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
         : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
-        The farmer will not anywhere because there's no pumpkin in the first place.: The farmer will not anywhere because there's no pumpkin in the first place.
+        The farmer will not walk anywhere because there's no pumpkin in the first place.: The farmer will not walk anywhere because there's no pumpkin in the first place.
         The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
         The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
         What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?

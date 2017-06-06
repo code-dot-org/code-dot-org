@@ -62,7 +62,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge\r\n_Check with your teacher before pursuing this challenge._\r\n\r\nHere's the bug program you've been working on for the past few levels. Choose one of more of following challenges, or add new features of your own!\r\n\r\n* Use the \"space\" key to control another properties of your bug sprite, like rotation or scale.\r\n* Add some randomization to your movement.\r\n* Add a second sprite and control it with a different set of keys (\"w\", \"a\", \"s\", and \"d\" are common choices).\r\n* Add some shapes to your background to make the scene more interesting.",
+    "markdown_instructions": "# Challenge\r\n_Check with your teacher before trying this challenge._\r\n\r\nHere's the bug program you've been working on for the past few levels. Choose one or more of following challenges, or add new features of your own!\r\n\r\n* Use the \"space\" key to control another property of your bug sprite, such as rotation or scale.\r\n* Add some randomization to your movement.\r\n* Add a second sprite and control it with a different set of keys (\"w\", \"a\", \"s\", and \"d\" are common choices).\r\n* Add some shapes to your background to make the scene more interesting.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -102,6 +102,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 19:08:38 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

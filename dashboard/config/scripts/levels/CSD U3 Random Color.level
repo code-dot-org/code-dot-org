@@ -44,7 +44,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Randomized Colors\r\n\r\nCould you use `randomNumber()` to pick random colors as well? Back in unit 2 you learned that colors can be composed of Red, Green, and Blue channel values - each of which is represented by a number value. What's the maximum and minimum that those channels can be set to?\r\n\r\n# Do This\r\n\r\nUsing the `color()` function, set the `fill` or `stroke` of your shape to a random color.\r\n\r\n# Challenge\r\n\r\nCan you generate random colors that are limited to a narrow range of colors, such as a random shade or purple, or a random shade of teal?",
+    "markdown_instructions": "# Randomized Colors\r\n\r\nCould you use `randomNumber()` to pick random colors as well? Back in Unit 2 you learned that colors can be composed of Red, Green, and Blue channel values - each of which is represented by a number value. What's the maximum and minimum that those channels can be set to?\r\n\r\n# Do This\r\n\r\nUsing the `color()` function, set the `fill` or `stroke` of your shape to a random color.\r\n\r\n# Challenge\r\n\r\nCan you generate random colors that are limited to a narrow range of colors, such as a random shade or purple, or a random shade of teal?",
     "instructions": "Could you use randomNumber() to pick random colors as well? Try setting one or more of the channels in the rgb block with a random number. What should the maximum value be?",
     "instructions_important": "false",
     "hide_animation_mode": "true",
@@ -54,10 +54,14 @@
     "pause_animations_by_default": "false",
     "encrypted_examples": "16uExe+l1dEbadq1SWMg6u06I547h83FPa3j38f8Mkh6mUzov8hHULf0HlwB\n9Squ\n",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 21:51:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

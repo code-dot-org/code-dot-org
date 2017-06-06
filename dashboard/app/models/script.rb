@@ -170,7 +170,7 @@ class Script < ActiveRecord::Base
   # variable (ie. in memory in the worker process) and in a
   # distributed cache (Rails.cache)
   @@script_cache = nil
-  SCRIPT_CACHE_KEY = 'script-cache'
+  SCRIPT_CACHE_KEY = 'script-cache'.freeze
 
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
@@ -371,7 +371,10 @@ class Script < ActiveRecord::Base
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
     script_levels.to_a.find do |sl|
-      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_i && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable &&
+        sl.stage.relative_position == relative_position.to_i &&
+        sl.position == puzzle_position.to_i &&
+        !sl.bonus
     end
   end
 
