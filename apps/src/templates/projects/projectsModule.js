@@ -1,15 +1,12 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 import {registerReducers} from '@cdo/apps/redux';
 
-// Actions
-const TOGGLE_GALLERY = 'Projects/TOGGLE_GALLERY';
-
-const isPublic = window.location.pathname.startsWith('/projects/public');
+// Action types
+const TOGGLE_GALLERY = 'projectsModule/TOGGLE_GALLERY';
 
 // Reducer
-function pageLocation(state, action) {
-  const defaultState = isPublic ? 'PUBLIC' : 'PRIVATE';
-  state = state || defaultState;
+function selectedGallery(state, action) {
+  state = state || 'PUBLIC';
   switch (action.type) {
     case TOGGLE_GALLERY:
       return action.projectType;
@@ -18,6 +15,7 @@ function pageLocation(state, action) {
   }
 }
 
+// Action creators
 /**
  * Select a gallery to display on the projects page.
  * @param {string} projectType
@@ -27,4 +25,4 @@ export function selectGallery(projectType) {
   return { type: TOGGLE_GALLERY, projectType: projectType };
 }
 
-registerReducers({pageLocation});
+registerReducers({selectedGallery});

@@ -48,7 +48,7 @@ const styles = {
 
 class GallerySwitcher extends Component {
   static propTypes = {
-    pageLocation: PropTypes.string.isRequired,
+    selectedGallery: PropTypes.string.isRequired,
 
     // showGallery hides and shows dom elements in angular and selectGallery updates redux
     // Once the projects page is in react, we should not need both of these functions
@@ -80,7 +80,7 @@ class GallerySwitcher extends Component {
           key={'private'}
           style={[
             styles.pill,
-            this.props.pageLocation === Galleries.PRIVATE && styles.selectedPill
+            this.props.selectedGallery === Galleries.PRIVATE && styles.selectedPill
           ]}
           onClick={this.toggleToMyProjects}
         >
@@ -90,7 +90,7 @@ class GallerySwitcher extends Component {
           key={'public'}
           style={[
             styles.pill,
-            this.props.pageLocation === Galleries.PUBLIC && styles.selectedPill
+            this.props.selectedGallery === Galleries.PUBLIC && styles.selectedPill
           ]}
           onClick={this.toggleToGallery}
         >
@@ -102,7 +102,7 @@ class GallerySwitcher extends Component {
 }
 
 export default connect(state => ({
-  pageLocation: state.pageLocation
+  selectedGallery: state.selectedGallery
 }), dispatch => ({
   selectGallery(gallery){
     dispatch(selectGallery(gallery));
