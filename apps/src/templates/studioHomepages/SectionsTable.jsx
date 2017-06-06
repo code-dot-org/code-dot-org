@@ -36,7 +36,6 @@ const styles = {
     borderRightWidth: 1,
     borderRightColor: color.border_light_gray,
     borderRightStyle: 'solid',
-    lineHeight: '52px',
     color: color.charcoal,
     paddingLeft: 20,
     paddingRight: 20,
