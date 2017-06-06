@@ -14,6 +14,8 @@
   "addPointsTooltip": "افزودن یا حذف یک امتیاز به امتیازات .\n",
   "alien": "alien",
   "alienInvasion": "حمله ی موجودات فضایی!",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
   "backgroundBlack": "سیاه",
   "backgroundCave": "غار",
   "backgroundCloudy": "ابری",
@@ -71,6 +73,7 @@
   "defaultSayText": "ایجا تایپ کن",
   "dinosaur": "دایناسور",
   "dog": "سگ",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
   "dragon": "اژدها",
   "dropletBlock_addCharacter_description": "یک شخصیت به سکانس اضافه کنید.",
   "dropletBlock_addCharacter_param0": "نوع",
@@ -859,8 +862,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "شما باید 20موش روبات بگیرید. از فرمان \"یک موش روبات اضافه کن\" داخل رویداد\"وقتی موش روبات میگیری\" برای اضافه کردن دو یا چند روبات موش هر بار که یکی میگیرید استفاده کنید.",
   "failedMultiplyCharactersTimeoutGotSome": "مبارکه، شما کدگذاری برای درست کردن روباتهای موش را اضافه نمودید. میتوانید به پازل بعدی بروید یا دوباره برای درست کردن 20 روبات موش ادامه دهید. سعی کنید با اضافه کردن تعداد بیشتری از آنها آن را آسانتر کنید! (کلیدها روی صفحه کیبورد (یا صفحه نمایش) را فشار داده و نگه دارید تا سریعتر حرکت نمائید.)",
   "failedChangeSettingTimeout": "برای ادامه سه خلبان شورشی بگیر.",
-  "failedChangeSettingSettings": "بازی را ازان خود کن. برای قبول شدن این پازل شما باید روبات خود را عوض کرده و سرعت آن را تنظیم نمائید.",
-  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
-  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "failedChangeSettingSettings": "بازی را ازان خود کن. برای قبول شدن این پازل شما باید روبات خود را عوض کرده و سرعت آن را تنظیم نمائید."
 }

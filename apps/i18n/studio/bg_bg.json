@@ -14,6 +14,8 @@
   "addPointsTooltip": "Добавяне или премахване на точка към резултата.",
   "alien": "извънземно",
   "alienInvasion": "Извънземна инвазия!",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
   "backgroundBlack": "черно",
   "backgroundCave": "пещера",
   "backgroundCloudy": "облачен",
@@ -71,6 +73,7 @@
   "defaultSayText": "Въведете тук",
   "dinosaur": "динозавър",
   "dog": "куче",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
   "dragon": "дракон",
   "dropletBlock_addCharacter_description": "Добавяне на герой в сцената.",
   "dropletBlock_addCharacter_param0": "тип",
@@ -859,8 +862,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Трябват още 20 мишки дроиди. Използвайте командата \"добави мишка дроид\" и я вмъкнете в Събитието \"когато взема мишка дроид\", за да добавите две или повече мишки дроиди всеки път, когато хванете една от тях.",
   "failedMultiplyCharactersTimeoutGotSome": "Поздравления, добавихте код, за да направите мишка дроид. Можете да отидете на следващия пъзел или да се върнете на този и да заловите още 20 мишки дроиди. Направете го лесно като поставите още от тях. (Натиснете и задръжте стрелките на вашата клавиатура или екран, за да се движите по-бързо.)",
   "failedChangeSettingTimeout": "Стигни до трима Бунтовник пилоти, за да продължиш.",
-  "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му.",
-  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
-  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."
 }
