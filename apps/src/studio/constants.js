@@ -29,6 +29,14 @@ export const Direction = {
   NORTHWEST: 9
 };
 
+export const turnLeft90 = function (direction) {
+  return direction >> 1 || Direction.WEST;
+};
+
+export const turnRight90 = function (direction) {
+  return (direction << 1) & 0xF || Direction.NORTH;
+};
+
 const Dir = Direction;
 
 /**
