@@ -55,8 +55,7 @@ export default class FormController extends React.Component {
     // If we got new errors, navigate to the first page containing errors
     if (this.state.errors.length === 0 && nextState.errors.length > 0) {
       for (let i = 0; i < this.getPageComponents().length; i++) {
-        const pageFields = this.getPageComponents()[i].associatedFields;
-        if (pageFields.some(field => nextState.errors.includes(field))) {
+        if (this.pageHasError(i, nextState.errors)) {
           nextState.currentPage = i;
           break;
         }
@@ -182,16 +181,8 @@ export default class FormController extends React.Component {
    * @returns {Element|undefined}
    */
   renderErrorFeedback() {
-    const pageFields = this.getCurrentPageComponent().associatedFields;
-    if (!pageFields) {
-      throw new TypeError(`
-        Every PageComponent of a FormController must define an array
-        PageComponent.associatedFields for error handling
-      `);
-    }
-
     const shouldShowError = this.state.errorHeader &&
-      (this.state.globalError ||pageFields.some(field => this.state.errors.includes(field)));
+      (this.state.globalError || this.pageHasError());
 
     if (shouldShowError) {
       return (
@@ -200,6 +191,37 @@ export default class FormController extends React.Component {
         </Alert>
       );
     }
+  }
+
+  /**
+   * Determines if a given page (defaults to current page) is responsible for any
+   * of the given errors (defaults to current state errors).
+   *
+   * Note that for purposes of page errors, error strings like
+   * "fieldName[some_extra_data]" will be normalized to "fieldName"
+   *
+   * @param {number} [page=this.state.currentPage] which page to examine
+   * @param {String[]} [errors=this.state.errors] which errors to consider
+   *
+   * @returns {boolean}
+   */
+  pageHasError(page=this.state.currentPage, errors=this.state.errors) {
+    const pageFields = this.getPageComponents()[page].associatedFields;
+    if (!pageFields) {
+      throw new TypeError(`
+        Every PageComponent of a FormController must define an array
+        PageComponent.associatedFields for error handling
+      `);
+    }
+
+    // When using VariableFormGroups that allow for nesting questions, the
+    // errors returned from the server can include state-specific data like
+    // "howInteresting[facilitator_name]". This is great for being able to flag
+    // the specific question on the page, but for purposes of determining which
+    // page a given error is on we really only care about the "howInteresting"
+    // key, not the "facilitator_name" data.
+    const flattenedErrors = errors.map(e => e.replace(/\[\w*\]/, ''));
+    return pageFields.some(field => flattenedErrors.includes(field));
   }
 
   /**
