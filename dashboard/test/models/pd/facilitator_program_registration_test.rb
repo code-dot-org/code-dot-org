@@ -13,7 +13,6 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
     registration.form_data = {}.to_json
     refute registration.valid?
     assert_equal [
-      "Form data confirmTeacherconDate",
       "Form data addressStreet",
       "Form data addressCity",
       "Form data addressState",
