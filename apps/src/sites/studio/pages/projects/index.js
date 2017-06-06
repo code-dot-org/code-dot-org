@@ -8,6 +8,7 @@ import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/proj
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import { selectGallery } from '@cdo/apps/templates/projects/projectsModule';
 
 $(document).ready(() => {
   // We need to see whether the experiment is enabled from angularProjects.js,
@@ -21,6 +22,10 @@ $(document).ready(() => {
     </Provider>,
     projectsHeader
   );
+
+  const isPublic = window.location.pathname.startsWith('/projects/public');
+  const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
+  getStore().dispatch(selectGallery(initialState));
 
   $.ajax({
     method: 'GET',

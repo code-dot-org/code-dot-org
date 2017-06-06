@@ -35,7 +35,7 @@ const ProjectCardGrid = React.createClass({
     }).isRequired,
     fetchOlderProjects: PropTypes.func.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    pageLocation: PropTypes.string.isRequired
+    selectedGallery: PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -46,7 +46,7 @@ const ProjectCardGrid = React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.pageLocation !== this.props.pageLocation && nextProps.pageLocation === Galleries.PUBLIC) {
+    if (nextProps.selectedGallery !== this.props.selectedGallery && nextProps.selectedGallery === Galleries.PUBLIC) {
       this.setState({showAll: true, showApp: ''});
     }
   },
@@ -178,5 +178,5 @@ const ProjectCardGrid = React.createClass({
 });
 
 export default connect(state => ({
-  pageLocation: state.pageLocation
+  selectedGallery: state.selectedGallery
 }))(ProjectCardGrid);
