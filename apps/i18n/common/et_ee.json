@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "Muudetav",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Funktsioonil{name} on täitmata sisend.",
   "emptyBlockInVariable": "Muutujal {name} on täitmata sisend.",
   "emptyBlocksErrorMsg": "\"Korda\" või \"Kui\" ploki sees peavad olema teised plokid et see töötaks. Veendu et sisemine plokk sobib plokiga mille sees ta on.",
@@ -499,5 +498,6 @@
   "whenRun": "pärast käivitamist",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Tööruum: ",
-  "yes": "Jah"
+  "yes": "Jah",
+  "viewAllSections": "View all sections"
 }

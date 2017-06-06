@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "সম্পাদনাযোগ্য",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "ফাংশনটিতে কোন ইনপুট দেয়া হয়নি.",
   "emptyBlockInVariable": "চলরাশিটির {name} একটি ভরাট না হওয়া ইনপুট আছে।",
   "emptyBlocksErrorMsg": "\"পুনরাবৃত্ত\" ব্লক এবং \"যদি\" ব্লক কাজ করার জন্য এর ভিতর অন্য ব্লক প্রয়োজন। ভিতরের ব্লক গুলো ঠিকভাবে বসেছে কিনা নিশ্চিত করুন।.",
@@ -499,5 +498,6 @@
   "whenRun": "চালানোর সময়",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "কর্মপরিসর:",
-  "yes": "\"হ্যাঁ\""
+  "yes": "\"হ্যাঁ\"",
+  "viewAllSections": "View all sections"
 }

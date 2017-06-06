@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while-silmukka",
   "editable": "Muokattava",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Funktion {name} syötettä ei ole annettu.",
   "emptyBlockInVariable": "Muuttujan {name} syötettä ei ole annettu.",
   "emptyBlocksErrorMsg": "\"Toista\" ja \"Jos\"-lohkot tarvitsevat toisen lohkon sisäänsä toimiakseen. Varmista, että sisempi lohko asettuu oikein ulompaan lohkoon.",
@@ -499,5 +498,6 @@
   "whenRun": "suoritettaessa",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Työtila: ",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "viewAllSections": "View all sections"
 }

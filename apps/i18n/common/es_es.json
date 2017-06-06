@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Crea un bucle que consta de una expresión condicional y un bloque de comandos ejecutados en cada iteración del bucle. El bucle continúa ejecutar mientras la condición se evalúa como true",
   "dropletBlock_whileBlock_signatureOverride": "bucle \"while\"",
   "editable": "Editable",
-  "editSections": "Edite secciones",
   "emptyBlockInFunction": "La función {name} tiene una entrada sin rellenar.",
   "emptyBlockInVariable": "La variable {name} tiene una entrada sin rellenar.",
   "emptyBlocksErrorMsg": "Los bloques \"repetir\" o \"si\" deben tener otros bloques dentro de ellos para funcionar. Asegúrate de que el bloque interno quede correctamente dentro del bloque que lo contiene.",
@@ -499,5 +498,6 @@
   "whenRun": "al ejecutar",
   "withoutHints": "¡Sin usar ninguna pista!",
   "workspaceHeaderShort": "Espacio de trabajo: ",
-  "yes": "Sí"
+  "yes": "Sí",
+  "viewAllSections": "View all sections"
 }

@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Creates a loop consisting of a conditional expression and a block of statements executed for each iteration of the loop. The loop continues to execute as long as the condition evaluates to true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "Editabil",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
@@ -499,5 +498,6 @@
   "whenRun": "when run",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "viewAllSections": "View all sections"
 }

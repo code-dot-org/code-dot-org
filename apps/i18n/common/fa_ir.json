@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "قابل ویرایش",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "تابع {name} یک وروردی پر نشده دارد.",
   "emptyBlockInVariable": "متغیر {name} یک ورودی پر نشده دارد.",
   "emptyBlocksErrorMsg": "بلوکهای \"تکرار\" یا \"شرطی\" برای کار کردن نیاز به بلوکهای دیگری در داخل خود دارند. مطمئن شوید که بلوک داخلی به درستی درون بلوک اصلی قرار گرفته است.",
@@ -499,5 +498,6 @@
   "whenRun": "زمان اجرا",
   "withoutHints": "بدون استفاده از هر گونه نکته!",
   "workspaceHeaderShort": "محیط کار: ",
-  "yes": "بله"
+  "yes": "بله",
+  "viewAllSections": "View all sections"
 }

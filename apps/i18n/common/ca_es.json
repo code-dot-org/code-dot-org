@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "Editable",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "La funció {name} té una entrada buida.",
   "emptyBlockInVariable": "La variable {name} té una entrada buida.",
   "emptyBlocksErrorMsg": "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté.",
@@ -499,5 +498,6 @@
   "whenRun": "quan s'executa",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Zona de treball: ",
-  "yes": "Sí"
+  "yes": "Sí",
+  "viewAllSections": "View all sections"
 }

@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "Editable",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Ang function na {name} ay walang input.",
   "emptyBlockInVariable": "Ang variable {name} ay walang input.",
   "emptyBlocksErrorMsg": "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block.",
@@ -499,5 +498,6 @@
   "whenRun": "kapag tumakbo",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Oo"
+  "yes": "Oo",
+  "viewAllSections": "View all sections"
 }

@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while-Schleife",
   "editable": "Editierbar",
-  "editSections": "Sektionen bearbeiten",
   "emptyBlockInFunction": "Die Funktion {name} hat ein leeres Feld.",
   "emptyBlockInVariable": "Die Variable {name} hat ein leeres Feld.",
   "emptyBlocksErrorMsg": "Der \"Wiederholen\"- oder \"Wenn\"-Baustein muss andere Blöcke beinhalten, um zu funktionieren. Überprüfe, ob der innere Baustein richtig in den äußeren Baustein passt.",
@@ -499,5 +498,6 @@
   "whenRun": "wenn Ausführen",
   "withoutHints": "Ohne Tipps zu benutzen!",
   "workspaceHeaderShort": "Arbeitsbereich: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "viewAllSections": "View all sections"
 }

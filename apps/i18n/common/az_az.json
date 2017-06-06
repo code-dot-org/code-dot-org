@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "Redaktə edilə bilən",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "{name} funksiyasının boş qalmış girişi var.",
   "emptyBlockInVariable": "{name} dəyişəninin boş qalmış girişi var.",
   "emptyBlocksErrorMsg": "\"Təkrar\" və ya \"Əgər\" blokları işləsin deyə içərisində başqa blokların olmağı lazımdır. Əmin olun ki, daxili blokun konteyner blokun içərisinə düz yerləşir.",
@@ -499,5 +498,6 @@
   "whenRun": "icra etdikdə",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "iş sahəsi: ",
-  "yes": "Bəli"
+  "yes": "Bəli",
+  "viewAllSections": "View all sections"
 }

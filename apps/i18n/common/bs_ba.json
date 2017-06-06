@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Stvara petlju koja se sastoji od uvjetnog izraza i bloka izraza koji se izvršavaju pri svakoj iteraciji petlje. Petlja se nastavlja izvršavati sve dok je uvjet istinit",
   "dropletBlock_whileBlock_signatureOverride": "dok petlja",
   "editable": "Editable",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Funkciji {name} nedostaje unešena vrijednost.",
   "emptyBlockInVariable": "Promjenjivoj {name} nije dodijeljena vrijednost.",
   "emptyBlocksErrorMsg": "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok.",
@@ -499,5 +498,6 @@
   "whenRun": "pri pokretanju",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Radni prostor: ",
-  "yes": "Da"
+  "yes": "Da",
+  "viewAllSections": "View all sections"
 }

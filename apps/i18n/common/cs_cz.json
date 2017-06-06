@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "Upravovatelné",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Funkce {name} má nevyplněné vstupy.",
   "emptyBlockInVariable": "Proměnná {name} má nevyplněné vstupy.",
   "emptyBlocksErrorMsg": "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků.",
@@ -499,5 +498,6 @@
   "whenRun": "při spuštění",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Pracovní prostor: ",
-  "yes": "Ano"
+  "yes": "Ano",
+  "viewAllSections": "View all sections"
 }

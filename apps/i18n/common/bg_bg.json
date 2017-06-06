@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Създава цикъл, състоящ се от условен израз и блок на изпълнение за всяко взаимодействие в цикъла. Той ще продължава да се изпълнява, докато условието се промени на истина",
   "dropletBlock_whileBlock_signatureOverride": "\"докато\" цикъл",
   "editable": "Може да се редактира",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Функцията {name} има незапълнен вход.",
   "emptyBlockInVariable": "Променливата {name} има незапълнен вход.",
   "emptyBlocksErrorMsg": "Блоковете \"Повтори\" и \"или\" трябва да съдържат други блокове в себе си, за да работят. Уверете се, че вътрешния блок се вписва правилно във външния блок.",
@@ -499,5 +498,6 @@
   "whenRun": "при стартиране",
   "withoutHints": "Без да се използват съвети!",
   "workspaceHeaderShort": "Работна област: ",
-  "yes": "Да"
+  "yes": "Да",
+  "viewAllSections": "View all sections"
 }

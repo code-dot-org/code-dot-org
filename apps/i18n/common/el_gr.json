@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Δημιουργεί ένα βρόχο που αποτελείται από μία έκφραση υπό συνθήκη και ένα μπλοκ εντολών που εκτελούνται σε κάθε επανάληψη του βρόχου. Ο βρόχος συνεχίζει να εκτελεταί όσο η συνθήκη υπολογίζεται ως αληθής",
   "dropletBlock_whileBlock_signatureOverride": "βρόχος ενώ",
   "editable": "Επεξεργάσιμο",
-  "editSections": "Επεξεργασία τομέων",
   "emptyBlockInFunction": "Η συνάρτηση {name} έχει μία είσοδο που δεν έχει συμπληρωθεί.",
   "emptyBlockInVariable": "Η μεταβλητή {name} έχει μία είσοδο που δεν έχει συμπληρωθεί.",
   "emptyBlocksErrorMsg": "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ χωράει σωστά μέσα στο μπλόκ που το περιέχει.",
@@ -499,5 +498,6 @@
   "whenRun": "όταν εκτελείται",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "viewAllSections": "View all sections"
 }

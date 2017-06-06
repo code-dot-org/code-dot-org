@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "editable": "للتحرير",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "الدالة {name} فيها إدخال فارغ.",
   "emptyBlockInVariable": "المتغيّر {name} فيه إدخال فارغ.",
   "emptyBlocksErrorMsg": "تحتاج المربعات البرمجية \"تكرار\" و \"إذا كان\" إلى أن تحتوي على مربعات برمجية أخرى داخلها كي تعمل. الرجاء التأكد من أن المربعات البرمجية الداخلية تتناسب بشكل صحيح مع المربعات البرمجية الحاوية لها.",
@@ -499,5 +498,6 @@
   "whenRun": "عند التشغيل",
   "withoutHints": "بدون استخدام أي تلميحات! ",
   "workspaceHeaderShort": "مساحة العمل: ",
-  "yes": "نعم"
+  "yes": "نعم",
+  "viewAllSections": "View all sections"
 }

@@ -187,7 +187,6 @@
   "dropletBlock_whileBlock_description": "Opretter en løkke, bestående af et betinget udtryk og en sætningsblok, der eksekveres for hver gentagelse af løkken. Løkken fortsætter eksekvering så længe betingelsen evalueres er sand",
   "dropletBlock_whileBlock_signatureOverride": "imens løkke",
   "editable": "Redigerbar",
-  "editSections": "Edit sections",
   "emptyBlockInFunction": "Funktionen {name} har manglende input.",
   "emptyBlockInVariable": "Variablen {name} har manglende input.",
   "emptyBlocksErrorMsg": "\"Gentag\" eller \"Hvis\" blokkene skal have andre blokke inden i for at virke. Kontroller, at den indre blok passer ordentligt inde i blokken.",
@@ -499,5 +498,6 @@
   "whenRun": "når programmet kører",
   "withoutHints": "Uden at bruge nogle tips!",
   "workspaceHeaderShort": "Arbejdsområde: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "viewAllSections": "View all sections"
 }
