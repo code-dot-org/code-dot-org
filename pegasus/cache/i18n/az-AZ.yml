@@ -51,7 +51,7 @@
   hoc2014_everyone: Hamı
   hoc2014_support: Dəstək verin &#x25BE;
   hoc2014_whatishoc: Kod Saatı nədir?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: "# CSEdWeek / Bütün dünyada Kod Saatı tədbirləri"
   csedweek_map_signup: Tədbirinizi qeydiyyatdan keçirin
   csedweek_map_search_placeholder: Kod Saatı tədbirlərini axtarın
   csedweek_map_search_search: Axtar
@@ -587,8 +587,8 @@
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_header_shared: Könüllülər xəritəsində müəllimlərlə
+    bölüşülən məlumat
   volunteer_engineer_submission_field_name: Ad
   volunteer_engineer_submission_field_name_placeholder: Tam Ad
   volunteer_engineer_submission_field_company: "Şirkət (və ya universitet)"
@@ -614,8 +614,8 @@
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_header_private: Məxfi saxlanaraq heç vaxt bölüşülməyən
+    məlumat
   volunteer_engineer_submission_field_email: E-poçt ünvanı
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
@@ -757,9 +757,9 @@
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -784,7 +784,7 @@
   dashboard_navigation_view_assessments_surveys: Yoxlamalar və sorğular
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
+  dashboard_navigation_lesson_plans_resources: Curriculum Standards
   dashboard_navigation_view_stats: Göstəricilər
   dashboard_navigation_section: 'Bölmə: %{section_name}'
   dashboard_navigation_student: "Şagird: %{student_name}"
@@ -1847,34 +1847,34 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
+  header_home: Ev səhifəsi
+  header_courses: marşrutlar
+  header_project_gallery: Layihə qalereyası
+  header_sections: Bölmələr
+  header_professional_learning: Peşəkar təhsil
+  header_educate_overview: Təlimçi üçün xülasə
+  header_educate_elementary: "İbtidai məktəb"
+  header_educate_middle: Orta məktəb
+  header_educate_high: Orta məktəbin yuxarı sinifləri
+  header_educate_hoc: Kod Saatı
+  header_educate_partner: Bizə tərəfadaş olun
   header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
+  header_educate_inspire: Bir şagirdi həvəsləndirin
+  header_educate_community: Onlayn icma
+  header_educate_tools: Alətlər və videolar
+  header_about_us: Haqqımızda
+  header_about_leadership: Rəhbərlik
+  header_about_donors: Donorlar
+  header_about_partners: Tərəfdaşlar
+  header_about_team: Tam komanda
+  header_about_news: Xəbər otağı
+  header_about_evaluation: Qiymətləndirmə
+  header_about_jobs: Vakansiyalar
+  header_about_contact: Bizimlə əlaqə saxlayın
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: Göstəricilər
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
