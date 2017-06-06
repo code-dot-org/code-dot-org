@@ -59,17 +59,15 @@ class Pd::Attendance < ActiveRecord::Base
 
   # Idempotent: Find existing, restore deleted, or create a new attendance row.
   # @param search_params [Hash] params to search, or create by
-  # @param then_update [Hash] optional additional params to set after retrieving or creating from the search params.
   # @return [Pd::Attendance] resulting attendance model
-  def self.find_restore_or_create_by!(search_params, then_update: {})
+  def self.find_restore_or_create_by!(search_params)
     attendance = nil
     Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       attendance = Pd::Attendance.with_deleted.find_by(search_params) ||
-        Pd::Attendance.new(search_params)
+        Pd::Attendance.create!(search_params)
     end
 
-    attendance.assign_attributes(then_update.merge(deleted_at: nil))
-    attendance.save! if attendance.changed?
+    attendance.restore! if attendance.deleted?
     attendance
   end
 end

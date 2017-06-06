@@ -2,6 +2,7 @@ import React from 'react';
 
 import WorkshopTableLoader from './components/workshop_table_loader';
 import SurveyResultsHeader from './components/survey_results_header';
+import Permission from '../permission';
 
 const SurveyResults = React.createClass({
   propTypes: {
@@ -10,10 +11,14 @@ const SurveyResults = React.createClass({
     })
   },
 
+  componentDidMount() {
+    this.permission = new Permission();
+  },
+
   render() {
     let queryUrl = '/api/v1/pd/workshops/?state=Ended&facilitator_view=1';
 
-    if (window.dashboard.workshop.permission === 'workshop_admin' && this.props.params.workshopId) {
+    if (this.permission.isAdmin && this.props.params.workshopId) {
       queryUrl += `&workshop_id=${this.props.params.workshopId}`;
     }
 
