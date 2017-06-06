@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import HeadingBanner from '../HeadingBanner';
+import HeaderBanner from '../HeaderBanner';
 import AnnouncementsCollapsible from './AnnouncementsCollapsible';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import ManageSectionsCollapsible from './ManageSectionsCollapsible';
@@ -28,7 +28,7 @@ const TeacherHomepage = React.createClass({
 
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.homepageHeading()}
           extended={false}
         />
