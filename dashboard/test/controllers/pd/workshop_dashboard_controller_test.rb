@@ -29,7 +29,7 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     assert_equal [:workshop_organizer, :facilitator], assigns(:permission)
   end
 
-  test 'plps have plp permissions' do
+  test 'partners have partner permissions' do
     # PLPs are also organizers
     user = create(:workshop_organizer)
     create :regional_partner, contact: user
@@ -37,7 +37,7 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     sign_in user
     get :index
     assert_response :success
-    assert_equal [:workshop_organizer, :plp], assigns(:permission)
+    assert_equal [:workshop_organizer, :partner], assigns(:permission)
   end
 
   test_user_gets_response_for :index, user: :teacher, response: :not_found
