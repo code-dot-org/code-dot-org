@@ -65,6 +65,9 @@
                   %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
                   %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
                   %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
+                - else
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
 
           .header_right.hide_on_mobile
             %span.freeplay_links

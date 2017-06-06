@@ -2,12 +2,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Dialog from '@cdo/apps/templates/Dialog';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
 
-const MAX_PROJECTS_PER_CATEGORY = 100;
 const isPublic = window.location.pathname.startsWith('/projects/public');
 
 $(document).ready(() => {
@@ -25,7 +24,7 @@ $(document).ready(() => {
   }).done(projectLists => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <PublicGallery projectLists={projectLists}/>,
+      <PublicGallery initialProjectLists={projectLists}/>,
       publicGallery);
   });
 });

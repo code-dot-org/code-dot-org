@@ -31,7 +31,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
       url: 'https://code.org/educate/professional-learning/cs-principles',
       approval_form_id: '1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ'
     }
-  }
+  }.freeze
 
   # principalEmail is not included
   REQUIRED_APPLICATION_FIELDS = %w[
@@ -63,7 +63,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     currentCsOpportunities
     whyCsIsImportant
     whatTeachingSteps
-  ]
+  ].freeze
 
   PROGRAM_REGISTRATION_FORM_KIND = 'PdProgramRegistration'.freeze
 

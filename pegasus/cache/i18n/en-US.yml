@@ -270,7 +270,7 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: "2.5 million girls are enrolled to learn on Code.org"
+  homepage_hero_text_stat_loc: "8.5 million girls are enrolled to learn on Code.org"
   homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "The Hour of Code"
@@ -317,7 +317,7 @@
   homepage_slot_text_title_students: "Students"
   homepage_slot_text_blurb_students: "Explore all of our tutorials"
   homepage_slot_text_blurb_students_courses: "Explore our courses"
-  homepage_slot_text_link_codestudio: "Try Code.org courses"
+  homepage_slot_text_link_codestudio: "Try Code Studio"
   homepage_slot_text_link_local: "Find a local class"
   homepage_slot_text_link_othercourses: "Other online courses"
   homepage_slot_text_title_educators: "Educators"
@@ -1357,3 +1357,6 @@
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"
+  csp_name: "Computer Science Principles"
+  csd_name: "Computer Science Discoveries"
+  full_course_category_name: "Full Courses"

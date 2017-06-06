@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {projectPropType} from './projectConstants';
 import i18n from "@cdo/locale";
+import color from "../../util/color";
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
@@ -10,6 +11,10 @@ const styles = {
   grid: {
     padding: 10,
     width: 1000
+  },
+  link: {
+    color: color.light_teal,
+    paddingLeft: 30
   }
 };
 
@@ -21,6 +26,13 @@ const ProjectCardGrid = React.createClass({
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
     }).isRequired,
+    hasOlderProjects: PropTypes.shape({
+      applab: PropTypes.bool.isRequired,
+      gamelab: PropTypes.bool.isRequired,
+      playlab: PropTypes.bool.isRequired,
+      artist: PropTypes.bool.isRequired,
+    }).isRequired,
+    fetchOlderProjects: PropTypes.func.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
@@ -87,6 +99,7 @@ const ProjectCardGrid = React.createClass({
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
+            <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
           </div>
         }
 
@@ -102,6 +115,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.playlab}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
             {this.state.showApp === 'artist' &&
@@ -114,6 +129,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.artist}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
             {this.state.showApp === 'applab' &&
@@ -126,6 +143,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.applab}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
             {this.state.showApp === 'gamelab' &&
@@ -138,6 +157,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.gamelab}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
           </div>

@@ -359,6 +359,7 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage', to: 'teacher_application#manage'
     get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
     patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
+    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
@@ -439,7 +440,7 @@ Dashboard::Application.routes.draw do
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
 
-      get 'projects/gallery/public/:project_type/:limit(/:offset)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+      get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
