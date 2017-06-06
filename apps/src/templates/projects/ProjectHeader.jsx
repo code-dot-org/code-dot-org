@@ -2,13 +2,11 @@
 import React from 'react';
 import i18n from "@cdo/locale";
 import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
-import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
 import HeadingBanner from '@cdo/apps/templates/HeadingBanner';
 
 const ProjectHeader = React.createClass({
   propTypes: {
-    showGallery: React.PropTypes.func.isRequired,
-    isPublic: React.PropTypes.bool
+    showGallery: React.PropTypes.func.isRequired
   },
 
   render() {
@@ -18,7 +16,6 @@ const ProjectHeader = React.createClass({
           headingText={i18n.projectGalleryHeader()}
         />
         <GallerySwitcher
-          initialGallery={this.props.isPublic ? Galleries.PUBLIC : Galleries.PRIVATE}
           showGallery={this.props.showGallery}
         />
       </div>

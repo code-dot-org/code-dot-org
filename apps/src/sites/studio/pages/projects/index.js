@@ -9,8 +9,6 @@ import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
 
-const isPublic = window.location.pathname.startsWith('/projects/public');
-
 $(document).ready(() => {
   // We need to see whether the experiment is enabled from angularProjects.js,
   // which isn't part of the apps js build pipeline.
