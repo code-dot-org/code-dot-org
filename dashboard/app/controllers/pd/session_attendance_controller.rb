@@ -46,7 +46,7 @@ class Pd::SessionAttendanceController < ApplicationController
     Pd::Attendance.find_restore_or_create_by!(session: @session, teacher: current_user, enrollment: enrollment)
 
     if current_user.student?
-      if Digest::MD5.hexdigest(enrollment.email) == current_user.hashed_email
+      if User.hash_email(enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
         current_user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email)
       else
