@@ -31,6 +31,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Marketing Associate](#associate)
 	- [Marketing Coordinator](#markcoordinator)
 - **Product and Engineering**
+	- [Infrastructure/Data Engineer](#data)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
 
@@ -135,6 +136,34 @@ In addition, candidates:
 - Must be a U.S. Citizen or Permanent Resident
 - Must pass a pre-employment background check
 
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="data"href="#data">Infrastructure/Data Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Infrastructure/Data Engineer, you’ll be responsible for Code.org’s AWS cloud infrastructure and operational and developer tools. You’ll drive and build improvements to our production and internal infrastructure to best serve our millions of student and teacher users worldwide at high scale. You’ll also be responsible for Code.org’s data warehouse and pipeline and be an important part of our data mission. You’ll collaborate with our data scientist and other stakeholders to ensure we obtain the data we need it and make it ready for analysis.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Bachelor’s degree with a major in Computer Science or related field
+- 5+ years professional experience in software engineering, infrastructure or DevOps
+- Experience with any of the following:
+	- Cloud infrastructure (AWS or equivalent)
+	- SQL and relational databases (MySQL preferred)
+	- Server-side programming (Ruby on Rails preferred)
+	- Building developer tools and/or infrastructure
+	
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

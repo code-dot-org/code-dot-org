@@ -5149,3 +5149,249 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        coursea:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+            'Programming: Happy Maps':
+              name: 'Programming: Happy Maps'
+            Programming in Maze:
+              name: Programming in Maze
+            Going Places Safely:
+              name: Going Places Safely
+            'Loops: Happy Loops':
+              name: 'Loops: Happy Loops'
+            Loops in Collector:
+              name: Loops in Collector
+            Loops in Artist:
+              name: Loops in Artist
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Play Lab:
+              name: Events in Play Lab
+          title: 'CS Fundamentals: Course A'
+          description_audience: ''
+          description_short: An introduction to computer science for early readers.
+          description: 'Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. '
+        courseb:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Programming in Maze:
+              name: Programming in Maze
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Collector:
+              name: Loops in Collector
+            Loops in Artist:
+              name: Loops in Artist
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Play Lab:
+              name: Events in Play Lab
+          title: 'CS Fundamentals: Course B'
+          description_audience: ''
+          description_short: An introduction to computer science for early readers.
+          description: Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share.
+        coursec:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            Programming in Maze:
+              name: Programming in Maze
+            Debugging in Maze:
+              name: Debugging in Maze
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life Algorithms: Paper Planes'
+            Programming in Collector:
+              name: Programming in Collector
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+            Loops in Maze:
+              name: Loops in Maze
+            Loops in Harvester:
+              name: Loops in Harvester
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Build a Flappy Game:
+              name: Build a Flappy Game
+            Events in Play Lab:
+              name: Events in Play Lab
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            Binary Bracelets:
+              name: Binary Bracelets
+          title: 'CS Fundamentals: Course C'
+          description_audience: ''
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. '
+        coursed:
+          stages:
+            Introduction:
+              name: Introduction
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            Events in Bounce:
+              name: Events in Bounce
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Bee:
+              name: Debugging in Bee
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Conditionals in Bee:
+              name: Conditionals in Bee
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Digital Citizenship:
+              name: Digital Citizenship
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share.
+        coursee:
+          stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: Introduction
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Envelope Variables:
+              name: Envelope Variables
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: For Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Songwriting with Parameters
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Presentation Your Project:
+              name: Presentation Your Project
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Conditionals:
+              name: Conditionals
+            Private and Personal Information:
+              name: Private and Personal Information
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+          title: ''
+          description_audience: ''
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project.
+        coursef:
+          stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: Introduction
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Envelope Variables:
+              name: Envelope Variables
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: For Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Songwriting with Parameters
+            Conditionals and Functions in Bee:
+              name: Conditionals and Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Presentation Your Project:
+              name: Presentation Your Project
+          title: 'CS Fundamentals: Course F'
+          description_audience: ''
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project.
