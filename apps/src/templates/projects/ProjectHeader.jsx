@@ -2,7 +2,7 @@
 import React from 'react';
 import i18n from "@cdo/locale";
 import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
-import HeadingBanner from '@cdo/apps/templates/HeadingBanner';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 const ProjectHeader = React.createClass({
   propTypes: {
@@ -12,7 +12,7 @@ const ProjectHeader = React.createClass({
   render() {
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.projectGalleryHeader()}
         />
         <GallerySwitcher
