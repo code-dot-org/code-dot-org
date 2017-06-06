@@ -5,11 +5,13 @@
   :css
     .courses .bar-#{n} {
       float: left;
-      width: #{n * 68}px;
+      width: #{n * 72}px;
     }
 
+- (0..12).each do |n|
+  :css
     .arrow-offset-#{n}:after {
-      left: #{n * 68 + 34}px;
+      left: #{n * 72 + 34}px;
     }
 
 - (0..4).each do |n|

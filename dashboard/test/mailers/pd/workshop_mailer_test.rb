@@ -20,4 +20,50 @@ class WorkshopMailerTest < ActionMailer::TestCase
       Pd::WorkshopMailer.teacher_enrollment_receipt(transient_enrollment).deliver_now
     end
   end
+
+  test 'reminder emails are sent for workshops without suppress_reminders?' do
+    facilitator = create :facilitator
+    workshop = create :pd_workshop, facilitators: [facilitator]
+    enrollment = create :pd_enrollment, workshop: workshop
+    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(3)
+
+    assert_emails 3 do
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
+      Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
+    end
+  end
+
+  test 'reminder emails are skipped for workshops with suppress_reminders?' do
+    facilitator = create :facilitator
+    workshop = create :pd_workshop, facilitators: [facilitator]
+    enrollment = create :pd_enrollment, workshop: workshop
+    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(3)
+
+    assert_emails 0 do
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
+      Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
+    end
+  end
+
+  test 'exit survey emails are sent for workshops with exit surveys' do
+    workshop = create :pd_ended_workshop
+    enrollment = create :pd_enrollment, workshop: workshop
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns('a url')
+
+    assert_emails 1 do
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
+    end
+  end
+
+  test 'exit survey emails are skipped for workshops without exit surveys' do
+    workshop = create :pd_ended_workshop
+    enrollment = create :pd_enrollment, workshop: workshop
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns(nil)
+
+    assert_emails 0 do
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
+    end
+  end
 end

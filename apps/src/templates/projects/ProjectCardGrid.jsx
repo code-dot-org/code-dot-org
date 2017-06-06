@@ -27,6 +27,13 @@ const ProjectCardGrid = React.createClass({
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
     }).isRequired,
+    hasOlderProjects: PropTypes.shape({
+      applab: PropTypes.bool.isRequired,
+      gamelab: PropTypes.bool.isRequired,
+      playlab: PropTypes.bool.isRequired,
+      artist: PropTypes.bool.isRequired,
+    }).isRequired,
+    fetchOlderProjects: PropTypes.func.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     pageLocation: PropTypes.string.isRequired
   },
@@ -116,6 +123,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.playlab}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
             {this.state.showApp === 'artist' &&
@@ -128,6 +137,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.artist}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
             {this.state.showApp === 'applab' &&
@@ -140,6 +151,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.applab}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
             {this.state.showApp === 'gamelab' &&
@@ -152,6 +165,8 @@ const ProjectCardGrid = React.createClass({
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
+                hasOlderProjects={this.props.hasOlderProjects.gamelab}
+                fetchOlderProjects={this.props.fetchOlderProjects}
               />
             }
           </div>
