@@ -248,5 +248,8 @@
   "weather": "eguraldia",
   "weatherTypeClear": "oskarbi",
   "weatherTypeRain": "euria",
-  "weatherTypeThunder": "trumoia"
+  "weatherTypeThunder": "trumoia",
+  "blockActionGetItemCountInSlotNumber": "get item count in slot number",
+  "blockActionGetItemDetailInSlotNumber": "get item detail in slot number",
+  "blockActionGetItemSpaceInSlotNumber": "get item space in slot number"
 }

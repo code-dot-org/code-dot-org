@@ -248,5 +248,8 @@
   "weather": "météo",
   "weatherTypeClear": "dégagé",
   "weatherTypeRain": "pluie",
-  "weatherTypeThunder": "tonnerre"
+  "weatherTypeThunder": "tonnerre",
+  "blockActionGetItemCountInSlotNumber": "get item count in slot number",
+  "blockActionGetItemDetailInSlotNumber": "get item detail in slot number",
+  "blockActionGetItemSpaceInSlotNumber": "get item space in slot number"
 }

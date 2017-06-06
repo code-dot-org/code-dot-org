@@ -248,5 +248,8 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder"
+  "weatherTypeThunder": "thunder",
+  "blockActionGetItemCountInSlotNumber": "get item count in slot number",
+  "blockActionGetItemDetailInSlotNumber": "get item detail in slot number",
+  "blockActionGetItemSpaceInSlotNumber": "get item space in slot number"
 }
