@@ -46,7 +46,7 @@ const ProjectCardGrid = React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.pageLocation === Galleries.PUBLIC) {
+    if (nextProps.pageLocation !== this.props.pageLocation && nextProps.pageLocation === Galleries.PUBLIC) {
       this.setState({showAll: true, showApp: ''});
     }
   },
