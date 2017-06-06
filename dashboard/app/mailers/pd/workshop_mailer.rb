@@ -86,6 +86,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
 
+    return if @workshop.suppress_reminders?
+
     mail content_type: 'text/html',
       from: from_teacher,
       subject: teacher_enrollment_subject(@workshop),
@@ -99,6 +101,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
     @is_reminder = true
 
+    return if @workshop.suppress_reminders?
+
     mail content_type: 'text/html',
          from: from_teacher,
          subject: teacher_enrollment_subject(@workshop),
@@ -110,6 +114,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = workshop
     @cancel_url = '#'
     @is_reminder = true
+
+    return if @workshop.suppress_reminders?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -160,6 +166,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @teacher = enrollment.user
     @enrollment = enrollment
     @survey_url = enrollment.exit_survey_url
+
+    # Don't send if there's no associated survey
+    return unless @survey_url
 
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
 
