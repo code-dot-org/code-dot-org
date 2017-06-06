@@ -54,7 +54,7 @@ const Courses = React.createClass({
     // The components used here are implemented in legacy HAML/CSS rather than React.
     if (this.props.isEnglish && this.props.isTeacher) {
       $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
-      $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
+      $('.standalone-tools').appendTo(ReactDOM.findDOMNode(this.refs.standaloneTools)).show();
     } else {
       $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
@@ -124,17 +124,16 @@ const Courses = React.createClass({
               <br/>
               <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
-              {false && (
-                <div>
-                  <div style={styles.heading}>
-                    {i18n.toolExplorerHeading()}
-                  </div>
-                  <div>
-                    {i18n.toolExplorerDescription()}
-                  </div>
-                  <ProtectedStatefulDiv ref="toolExplorer"/>
+              <div>
+                <div style={styles.heading}>
+                  {i18n.standaloneToolsHeading()}
                 </div>
-              )}
+                <div>
+                  {i18n.standaloneToolsDescription()}
+                </div>
+                <ProtectedStatefulDiv ref="standaloneTools"/>
+              </div>
+
             </div>
           </div>
         )}
