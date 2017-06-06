@@ -21,6 +21,13 @@ const defaultProject = {
   currentGallery: "public"
 };
 
+const hasOlderProjects = {
+  applab: true,
+  gamelab: true,
+  playlab: true,
+  artist: true,
+};
+
 function generateFakeProject(overrideData) {
   return {
     ...defaultProject,
@@ -105,6 +112,8 @@ export default storybook => {
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakePublicProjectsWithStudentInfo()}
+            hasOlderProjects = {hasOlderProjects}
+            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
             galleryType = "public"
           />
         )
@@ -115,6 +124,8 @@ export default storybook => {
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
+            hasOlderProjects = {hasOlderProjects}
+            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
             galleryType = "public"
           />
         )
@@ -125,6 +136,8 @@ export default storybook => {
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakeClassProjects()}
+            hasOlderProjects = {hasOlderProjects}
+            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
             galleryType = "class"
           />
         )
@@ -135,6 +148,8 @@ export default storybook => {
         story: () => (
           <ProjectCardGrid
             projectLists = {generateFakePersonalProjects()}
+            hasOlderProjects = {hasOlderProjects}
+            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
             galleryType = "personal"
           />
         )
