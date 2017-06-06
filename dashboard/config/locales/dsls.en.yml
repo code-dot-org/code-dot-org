@@ -3548,6 +3548,7 @@ en:
         Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
         Is the dog sprite's x greater than the cat sprite's x?: Is the dog sprite's x greater than the cat sprite's x?
         Is the dog sprite's x less than the cat sprite's x?: Is the dog sprite's x less than the cat sprite's x?
+        Match the boolean expression to the English description.: Match the boolean expression to the English description.
         Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
         dog.rotation &lt; cat.rotation: dog.rotation &lt; cat.rotation

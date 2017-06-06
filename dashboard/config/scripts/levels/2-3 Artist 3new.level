@@ -35,10 +35,14 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What is 100-70?  Based on the story problem, that's how tall the hat needs to be!\",\r\n  \"hint_id\": \"2-3_Artist_3new_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?\",\r\n  \"hint_id\": \"2-3_Artist_3new_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:16:03 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }
@@ -65,7 +69,7 @@
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_picker">
-              <title name="COLOUR">#ff0000</title>
+              <title name="COLOUR">#000000</title>
             </block>
           </value>
         </block>
