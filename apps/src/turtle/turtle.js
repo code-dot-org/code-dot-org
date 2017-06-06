@@ -25,27 +25,38 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var color = require("../util/color");
-var commonMsg = require('@cdo/locale');
-var turtleMsg = require('./locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
-var ArtistAPI = require('./api');
-var apiJavascript = require('./apiJavascript');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var utils = require('../utils');
-var Slider = require('../slider');
-var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+import React from 'react';
+import {Provider} from 'react-redux';
+import ReactDOM from 'react-dom';
+
+import color from "../util/color";
+import commonMsg from '@cdo/locale';
+import turtleMsg from './locale';
+
+import {evalWith} from '../lib/tools/jsinterpreter/codegen';
+
+import ArtistAPI from './api';
+import apiJavascript from './apiJavascript';
+import AppView from '../templates/AppView';
+import ArtistVisualizationColumn from './ArtistVisualizationColumn';
+
+import {
+  xFromPosition,
+  yFromPosition,
+  degreesToRadians
+} from '../utils';
+
+import Slider from '../slider';
+import dropletConfig from './dropletConfig';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
@@ -68,13 +79,13 @@ const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 /**
 * Minimum joint segment length
 */
-var JOINT_SEGMENT_LENGTH = 50;
+const JOINT_SEGMENT_LENGTH = 50;
 
 /**
  * An x offset against the sprite edge where the decoration should be drawn,
  * along with whether it should be drawn before or after the turtle sprite itself.
  */
-var ELSA_DECORATION_DETAILS = [
+const ELSA_DECORATION_DETAILS = [
   { x: 15, when: "after" },
   { x: 26, when: "after" },
   { x: 37, when: "after" },
@@ -790,7 +801,7 @@ Artist.prototype.runButtonClick = function () {
 
 Artist.prototype.evalCode = function (code) {
   try {
-    codegen.evalWith(code, {
+    evalWith(code, {
       Turtle: this.api
     });
   } catch (e) {
@@ -1115,7 +1126,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'DP':  // Draw Print
       this.ctxScratch.save();
       this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+      this.ctxScratch.rotate(degreesToRadians(this.heading - 90));
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
       break;
@@ -1222,16 +1233,16 @@ Artist.prototype.jumpTo_ = function (pos) {
   if (Array.isArray(pos)) {
     [x, y] = pos;
   } else {
-    x = utils.xFromPosition(pos, CANVAS_WIDTH);
-    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
+    x = xFromPosition(pos, CANVAS_WIDTH);
+    y = yFromPosition(pos, CANVAS_HEIGHT);
   }
   this.x = Number(x);
   this.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {
-  this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
-  this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+  this.x += distance * Math.sin(degreesToRadians(this.heading));
+  this.y -= distance * Math.cos(degreesToRadians(this.heading));
 };
 
 Artist.prototype.moveByRelativePosition_ = function (x, y) {
@@ -1364,7 +1375,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+    this.ctxPattern.rotate(degreesToRadians(this.heading - 90));
 
     var clipSize;
     if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -1401,7 +1412,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+    this.ctxScratch.rotate(degreesToRadians(this.heading - 90));
 
     if (img.width !== 0) {
       this.ctxScratch.drawImage(img,
