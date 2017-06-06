@@ -14,8 +14,6 @@
   "addPointsTooltip": "Πρόσθεσε ή αφαίρεσε έναν πόντο στη βαθμολογία.",
   "alien": "εξωγήινος",
   "alienInvasion": "Εισβολή εξωγήινων!",
-  "allowActorsOutsidePlayspaceTooltip": "Επίτρεψε τους ηθοποιούς να μετακινηθούν εκτός οθόνης παιχνιδιού, όπου δεν θα φαίνονται",
-  "allowActorsToLeaveThePlayspace": "Επίτρεψε στους ηθοποιούς να φύγουν από τον χώρο παιχνιδιού",
   "backgroundBlack": "μαύρο",
   "backgroundCave": "σπηλιά",
   "backgroundCloudy": "συννεφιασμένος",
@@ -73,7 +71,6 @@
   "defaultSayText": "γράψε εδώ",
   "dinosaur": "δεινόσαυρος",
   "dog": "σκύλος",
-  "dontAllowActorsToLeaveThePlayspace": "Μην επιτρέπεις στους ηθοποιούς να φύγουν από τον χώρο παιχνιδιού",
   "dragon": "δράκος",
   "dropletBlock_addCharacter_description": "Πρόσθεσε ένα χαρακτήρα στη σκηνή.",
   "dropletBlock_addCharacter_param0": "τύπος",
@@ -862,5 +859,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "Χρειάζεται να πάρεις 20 Ανδροειδή Ποντίκια. Χρησιμοποίησε την εντολή \"βάλε ένα Ανδροειδές Ποντίκι\" μέσα στο γεγονός \"όταν πάρεις Ανδροειδές Ποντίκι\" για να προσθέσεις δύο ή περισσότερα Ανδροειδή Ποντίκια κάθε φορά που παίρνεις ένα.",
   "failedMultiplyCharactersTimeoutGotSome": "Συγχαρητήρια, έβαλες κώδικα για να κάνεις Ανδροειδή Ποντίκια. Μπορείς να πας στο επόμενο παζλ ή να δοκιμάσεις να πάρεις 20 Ανδροειδή Ποντίκια. Δοκίμασε να το κάνεις πιο εύκολο βάζοντας περισσότερα από αυτά (Πάτησε και κράτα πατημένα τα πλήκτρα στο πληκτρολόγιό σου (ή την οθόνη σου) για να κινηθείς ταχύτερα.)",
   "failedChangeSettingTimeout": "Πάρε τρεις Αντάρτες Πιλότους για να προχωρήσεις.",
-  "failedChangeSettingSettings": "Κάνε το παιχνίδι δικό σου. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του."
+  "failedChangeSettingSettings": "Κάνε το παιχνίδι δικό σου. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του.",
+  "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
+  "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
+  "moveForward": "move forward",
+  "moveBackward": "move backward",
+  "turnLeft": "turn left",
+  "turnRight": "turn right",
+  "turnTooltip": "Turn an actor left or right by 90 degrees."
 }

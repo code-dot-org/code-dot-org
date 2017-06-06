@@ -862,5 +862,10 @@
   "failedChangeSettingSettings": "게임을 직접 만들어보세요. 이 퍼즐을 해결하기 위해서는 드로이드와 드로이드의 속도를 변경해야 합니다.",
   "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
   "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
+  "moveForward": "move forward",
+  "moveBackward": "move backward",
+  "turnLeft": "turn left",
+  "turnRight": "turn right",
+  "turnTooltip": "Turn an actor left or right by 90 degrees."
 }
