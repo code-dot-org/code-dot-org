@@ -57,9 +57,7 @@ const WorkshopTable = React.createClass({
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
-  },
 
-  componentDidMount() {
     this.permission = new Permission();
   },
 

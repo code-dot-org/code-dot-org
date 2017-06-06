@@ -34,8 +34,11 @@ const TeacherAttendanceReport = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
+  },
+
+  componentDidMount() {
     this.load();
   },
 
