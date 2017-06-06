@@ -124,14 +124,14 @@
         "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
       }
     ],
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "NOTE: this is a problem from the worksheet. Students are now being asked to write code for it.\r\n\r\nStudents' solutions should involve writing multiple layers of functions following the principles of top-down design."
+    "teacher_markdown": "NOTE: this is a problem from the worksheet. Students are now being asked to write code for it.\r\n\r\nStudents' solutions should involve writing multiple layers of functions following the principles of top-down design.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

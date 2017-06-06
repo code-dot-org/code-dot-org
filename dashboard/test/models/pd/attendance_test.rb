@@ -94,22 +94,27 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
   test 'resolve_enrollment' do
     teacher = create :teacher
     enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email
-    attendance = build :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
+    attendance = create :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
 
     # by user id
     assert_equal enrollment, attendance.resolve_enrollment
 
     # by email
     enrollment.update!(user_id: nil)
-    assert_equal enrollment, attendance.resolve_enrollment
+    assert_equal enrollment, attendance.reload.resolve_enrollment
 
     # by email with deleted user
     teacher.destroy!
-    assert_equal enrollment, attendance.resolve_enrollment
+    assert_equal enrollment, attendance.reload.resolve_enrollment
+
+    # soft-deleted enrollments are still matched
+    enrollment.destroy!
+    assert_equal enrollment, Pd::Enrollment.with_deleted.find_by(id: attendance.pd_enrollment_id)
+    assert_equal enrollment, attendance.reload.resolve_enrollment
 
     # no match
-    enrollment.destroy!
-    assert_nil attendance.resolve_enrollment
+    enrollment.really_destroy!
+    assert_nil attendance.reload.resolve_enrollment
   end
 
   test 'find_restore_or_create_by' do

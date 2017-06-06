@@ -1668,6 +1668,19 @@ en:
 
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: {}
+      courseD_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to create four octagons. Turn 45 degrees to make the octagon. Jump, then turn 90 degrees after each one.
+        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          Use a nested loop:
+           - Repeat 8 times
+              - draw an octagon
+              - draw a triangle
+              - jump forward 50 pixels
+              - turn right by 90 degrees
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees at a time.
+        courseD_artist_nestedLoops_challenge2_b: To draw a regular hexagon, the artist needs to turn 60 degrees at a time.
       courseD_artist_project1_authored_hint:
         courseD_artist_project1_a: |-
           Need some ideas?  Here are a few shapes you could try:
@@ -1675,6 +1688,11 @@ en:
           ![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)
           ![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)
           ![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+      courseD_artist_project1a_authored_hint:
+        courseD_artist_project1a_a: |
+          This stair step uses a 76 degree turn and repeats 4 times.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
       courseD_artist_project2_authored_hint:
         courseD_artist_project2_a: |-
           Need some ideas?  Here are a few shapes you could try:
@@ -1682,6 +1700,12 @@ en:
           ![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)
           ![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)
           ![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)
+      courseD_artist_project2Template_authored_hint: {}
+      courseD_artist_project2a_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_a: |-
           Need some ideas?  Here are a few shapes you could try:
@@ -1691,11 +1715,31 @@ en:
           ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
           ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
         courseD_artist_project3_b: You can get Elsa back to the center either by using the `jump to 200 over and 200 down` block, or by using the `jump backward` block set to the same number of pixels that she jumped forward while making her line of shapes.
-      courseD_artist_project4_authored_hint:
-        courseD_artist_project4_a: |-
-          Here is the Pentagon with a turn of 36 degrees before a triangle:
+      courseD_artist_project3a_authored_hint:
+        courseD_artist_project3a_a: |
+          Here is a 4 diamond shape that has been spun 6 times in a circle (using 60 degrees.)
 
-          <img src="https://images.code.org/0028c30afc6bdf01bff72235e70ebd91-image-1495821912232.04.10.png" width="200px" />
+          <img src="https://images.code.org/94d252d65fdfe023b040a41935093a63-image-1495834172828.19.34.png" width="200px" />
+      courseD_artist_project4_authored_hint:
+        courseD_artist_project4_a: |
+          Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+
+          Here's a set of hexagons with squares:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+      courseD_artist_project4a_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_project5_authored_hint:
+        courseD_artist_project4_a: |
+          Lines of 2 hexagons and 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: {}
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
@@ -1883,6 +1927,9 @@ en:
 
           Where does it go wrong?
         courseD_collector_debugging1_b: Do you see any patterns that could be made more simple using a `repeat` loop?
+      courseD_collector_debugging10_predict1_authored_hint:
+        courseD_collector_debugging9_a: There are several ways to solve this problem...but they all involve turns!
+        courseD_collector_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
       courseD_collector_debugging2_authored_hint:
         courseD_collector_debugging2_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -1927,6 +1974,12 @@ en:
 
           Where do things go wrong?
         courseD_collector_debugging7_b: If something needs to happen several times, try adding a `repeat` loop.
+      courseD_collector_debugging8_authored_hint:
+        courseD_collector_debugging8_a: Do you see a pattern that you can simplify with a loop?
+        courseD_collector_debugging8_b: Try using a nested loop to make this code shorter.
+      courseD_collector_debugging9_authored_hint:
+        courseD_collector_debugging9_a: There are several ways to solve this problem...but they all involve turns!
+        courseD_collector_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
@@ -1990,6 +2043,7 @@ en:
                                                       </statement>
                                                     </block></xml>
         courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then turn after each set of steps!
+      courseD_collector_until_challenge1_authored_hint: {}
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -2052,6 +2106,11 @@ en:
           No one knows how many heads of lettuce will grow from each sprout.
 
           Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
+      courseD_farmer_condLoops4a_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          No one knows how many heads of lettuce will grow from each sprout.
+
+          Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
       courseD_farmer_condLoops5_authored_hint:
         courseD_farmer_condLoops5_a: You will need to check for each type of crop that the farmer can pick.  Try using two `if/else` statements and one  `if` block.
       courseD_farmer_condLoops6_authored_hint:
@@ -2070,6 +2129,9 @@ en:
         courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop this time.
       courseD_farmer_condLoops9_predict1_authored_hint:
         courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop this time.
+      courseD_farmer_condLoops_challenge1_authored_hint: {}
+      courseD_farmer_condLoops_challenge2_authored_hint: {}
+      courseD_farmer_condLoops_challenge2_clone_authored_hint: {}
       courseD_farmer_conditionals10_authored_hint: {}
       courseD_farmer_conditionals4_authored_hint:
         courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while` loop to keep digging until the pile is gone.
@@ -2085,6 +2147,7 @@ en:
         courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       courseD_farmer_conditionals9_authored_hint: {}
+      courseD_farmer_until_challenge2_authored_hint: {}
       courseD_farmer_while10_authored_hint: {}
       courseD_farmer_while10_predict2_authored_hint: {}
       courseD_farmer_while4_authored_hint:
@@ -2190,6 +2253,10 @@ en:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the zombie headed the right direction.
       courseD_maze_until9_authored_hint:
         courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.
+      courseD_maze_until_challenge_authored_hint: {}
+      courseD_maze_until_challenge1-delete-this-copy_authored_hint: {}
+      courseD_maze_until_challenge1_authored_hint: {}
+      courseD_maze_until_challenge2_authored_hint: {}
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
       courseD_playLab_cond2_authored_hint:

@@ -101,8 +101,5 @@ level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene
 stage 'Unit 3 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
 
-stage 'CSP Student Post-Course Survey'
-assessment 'CSP post-assessment survey'
-
 stage 'Participate in a longitudinal study!'
 level 'Click Here!', progression: 'Click Here!'

@@ -33,6 +33,15 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
     }
   end
 
+  test_workshop_admin_only :post, :upgrade_to_teacher, :redirect, -> {{teacher_application_id: @teacher_application.id}}
+  test 'upgrade to teacher' do
+    @teacher_application.user.update!(user_type: User::TYPE_STUDENT)
+    sign_in @workshop_admin
+    post :upgrade_to_teacher, params: {teacher_application_id: @teacher_application.id}
+    assert_redirected_to action: :edit
+    assert @teacher_application.user.reload.teacher?
+  end
+
   test_workshop_admin_only :get, :construct_email, :success, -> {{teacher_application_id: @teacher_application.id}}
   test_workshop_admin_only :post, :send_email, :success, -> {{teacher_application_id: @teacher_application.id}}
 end

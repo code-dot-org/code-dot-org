@@ -301,4 +301,26 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     order.refresh
     assert_nil order.tracking_id
   end
+
+  test 'order must have a user on creation' do
+    order = build :pd_workshop_material_order, user: nil
+    refute order.valid?
+    assert_equal ['User is required'], order.errors.full_messages
+  end
+
+  test 'existing orders are still valid if the user is deleted' do
+    order = create :pd_workshop_material_order, user: @teacher
+
+    @teacher.destroy
+    order.reload
+    assert order.valid?
+    assert_nil order.user
+  end
+
+  test 'existing orders are not valid if the user association is removed' do
+    order = create :pd_workshop_material_order, user: @teacher
+
+    order.user = nil
+    refute order.valid?
+  end
 end

@@ -331,14 +331,18 @@ const REMIX_PROPS = [
 
 Studio.loadLevel = function () {
   // Load maps.
-  Studio.map = level.map.map(row => row.map(cell => (
+  Studio.map = level.map.map(row => row.map(cell => {
     // Each cell should be either an integer (in which case we are
     // dealing with the legacy format and should treat that value as
     // the tileType for the cell) or an object (in which case we are
     // dealing with the new format and should treat that value as a
     // serialization of the cell).
-    isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell)
-  )));
+    const value = isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell);
+    if (value.tileType_ & constants.WallCoordsMask) {
+      Studio.wallMapCollisions = true;
+    }
+    return value;
+  }));
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.allowSpritesOutsidePlayspace = level.allowSpritesOutsidePlayspace;
@@ -352,7 +356,6 @@ Studio.loadLevel = function () {
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
-  Studio.wallMapCollisions = level.wallMapCollisions || level.blockMovingIntoWalls;
 
   switch (level.customGameType) {
     case 'Big Game':
