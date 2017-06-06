@@ -616,6 +616,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_nil @workshop.processed_location
   end
 
+  test 'suppress_reminders?' do
+    suppressed = [
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT),
+    ]
+
+    refute @workshop.suppress_reminders?
+    suppressed.each do |workshop|
+      assert workshop.suppress_reminders?
+    end
+  end
+
   private
 
   def session_on_day(day_offset)
