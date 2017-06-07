@@ -37,6 +37,28 @@ describe('FacilitatorProgramRegistration', function () {
       "gradesPlanningToTeach": ["Pre-K", "Elementary", "Middle School/Junior High", "High School", "I am not teaching this course"],
       "subjectsTaught": ["Computer Science", "English/Language Arts", "Science", "Math", "Arts/Music", "Other"]
     },
+    requiredFields: [
+      "addressStreet",
+      "addressCity",
+      "addressState",
+      "addressZip",
+      "contactName",
+      "contactRelationship",
+      "contactPhone",
+      "dietaryNeeds",
+      "liveFarAway",
+      "howTraveling",
+      "needHotel",
+      "needAda",
+      "photoRelease",
+      "liabilityWaiver",
+      "gender",
+      "race",
+      "age",
+      "gradesTaught",
+      "gradesPlanningToTeach",
+      "subjectsTaught",
+    ],
     attendanceDates: {},
     teachercon: 1,
     teacherconLocation: "Whereever"
@@ -241,5 +263,36 @@ describe('FacilitatorProgramRegistration', function () {
       subjectsTaught: ["Computer Science"]
     });
     assert.lengthOf(wrapper.find('#csYearsTaught'), 1);
+  });
+
+  it('validates required fields', function () {
+    const wrapper = mount(
+      <FacilitatorProgramRegistration
+        {...DEFAULTS}
+      />
+    );
+
+    wrapper.setState({
+      currentPage: 1
+    });
+
+    assert.lengthOf(wrapper.state('errors'), 0);
+
+    let valid = wrapper.instance().validateCurrentPageRequiredFields();
+    assert.isFalse(valid);
+    assert.deepEqual(wrapper.state('errors'), [
+      'addressStreet',
+      'addressCity',
+      'addressState',
+      'addressZip',
+      'contactName',
+      'contactRelationship',
+      'contactPhone',
+      'dietaryNeeds',
+      'liveFarAway',
+      'howTraveling',
+      'needHotel',
+      'needAda'
+    ]);
   });
 });
