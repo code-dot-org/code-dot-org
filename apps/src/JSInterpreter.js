@@ -531,21 +531,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     this.executionError = safeStepInterpreter(this);
     if (!this.executionError && this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
-
-      // Determine whether we are done executing a line of user code. This is detected by checking
-      // that one fo the following conditions are true:
-      //   1. We've reached an "interstitial" node, which gets placed onto the stack
-      //      once an earlier expression has finished
-      //   2. The node on the stack has been explicitly marked as done by the interpreter
-      //   3. In the case of "update expression" nodes, like i++, the done state is tracked
-      //      in the doneLeft value for reasons I don't fully comprehend
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
-      if (inUserCode && !doneUserLine) {
-        doneUserLine = (
-          this.atInterstitialNode ||
-          state.done ||
-          (state.node.type === 'UpdateExpression' && state.doneLeft)
-        );
+      if (inUserCode) {
+        doneUserLine = doneUserLine || (state.done || this.atInterstitialNode);
       }
 
       var stackDepth = this.interpreter.stateStack.length;

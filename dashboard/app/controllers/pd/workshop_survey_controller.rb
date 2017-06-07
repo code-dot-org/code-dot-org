@@ -16,6 +16,7 @@ class Pd::WorkshopSurveyController < ApplicationController
     @script_data = {
       props: {
         options: @pd_enrollment.survey_class.options.camelize_keys,
+        requiredFields: @pd_enrollment.survey_class.camelize_required_fields,
         pdEnrollmentCode: @pd_enrollment.code,
         facilitatorNames: workshop.facilitators.map(&:name),
         course: workshop.course,

@@ -17,7 +17,7 @@
 class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
   include Pd::ProgramRegistrationForm
 
-  def required_fields
+  def self.required_fields
     [
       :confirm_teachercon_date,
       :full_name,
