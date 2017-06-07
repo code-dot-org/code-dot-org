@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react';
-import CollapsibleSection from './CollapsibleSection';
+import ContentBox from './ContentBox';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
 
-const RecentCoursesCollapsible = React.createClass({
+const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
     showAllCoursesLink: PropTypes.bool.isRequired,
@@ -19,7 +19,7 @@ const RecentCoursesCollapsible = React.createClass({
     return (
       <div>
         {courses.length > 0 && (
-          <CollapsibleSection
+          <ContentBox
             heading={heading}
             linkText={i18n.viewAllCourses()}
             link="/courses"
@@ -34,21 +34,21 @@ const RecentCoursesCollapsible = React.createClass({
                 assignedSections={course.assignedSections}
               />
             )}
-          </CollapsibleSection>
+          </ContentBox>
         )}
         {courses.length === 0 && isTeacher && (
-          <CollapsibleSection
+          <ContentBox
             heading={heading}
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
           >
             <SetUpMessage type="courses"/>
-          </CollapsibleSection>
+          </ContentBox>
         )}
       </div>
     );
   }
 });
 
-export default RecentCoursesCollapsible;
+export default RecentCourses;

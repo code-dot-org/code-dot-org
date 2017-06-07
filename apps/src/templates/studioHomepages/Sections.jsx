@@ -1,10 +1,10 @@
 import React from 'react';
-import CollapsibleSection from './CollapsibleSection';
+import ContentBox from './ContentBox';
 import SectionsTable from './SectionsTable';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
 
-const ManageSectionsCollapsible = React.createClass({
+const Sections = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
@@ -15,23 +15,24 @@ const ManageSectionsCollapsible = React.createClass({
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
-      <CollapsibleSection
+      <ContentBox
         heading={i18n.sectionsTitle()}
         linkText={i18n.viewAllSections()}
         link={editSectionsUrl}
         showLink={true}
       >
-      {sections.length > 0 ? (
+      {sections.length > 0 && (
         <SectionsTable sections={sections}/>
-      ) : (
+      )}
+      {sections.length == 0 && (
         <SetUpMessage
           type="sections"
           codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
       )}
-      </CollapsibleSection>
+    </ContentBox>
     );
   }
 });
 
-export default ManageSectionsCollapsible;
+export default Sections;

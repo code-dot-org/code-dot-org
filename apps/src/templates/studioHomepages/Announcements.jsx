@@ -1,5 +1,5 @@
 import React, { PropTypes} from 'react';
-import CollapsibleSection from './CollapsibleSection';
+import ContentBox from './ContentBox';
 import Announcement from './Announcement';
 import AnnouncementsCarousel from './AnnouncementsCarousel';
 import i18n from "@cdo/locale";
@@ -21,7 +21,7 @@ const AnnouncementsCollapsible = React.createClass({
     const { announcements } = this.props;
 
     return (
-      <CollapsibleSection
+      <ContentBox
         heading={i18n.announcements()}
         linkText={i18n.viewAllAnnouncements()}
         link="http://teacherblog.code.org/"
@@ -39,7 +39,7 @@ const AnnouncementsCollapsible = React.createClass({
             />
            )}
         </AnnouncementsCarousel>
-      </CollapsibleSection>
+      </ContentBox>
     );
   }
 });

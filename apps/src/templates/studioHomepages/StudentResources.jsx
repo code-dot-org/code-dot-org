@@ -1,13 +1,13 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
-import CollapsibleSection from './CollapsibleSection';
+import ContentBox from './ContentBox';
 import i18n from "@cdo/locale";
 
 const StudentResources = React.createClass({
 
   render() {
     return (
-      <CollapsibleSection heading={i18n.resources()}>
+      <ContentBox heading={i18n.resources()}>
         <ResourceCard
           title={i18n.courses()}
           description={i18n.coursesCardDescription()}
@@ -22,7 +22,7 @@ const StudentResources = React.createClass({
           buttonText={i18n.projectGalleryCardAction()}
           link="/gallery"
         />
-      </CollapsibleSection>
+      </ContentBox>
     );
   }
 });

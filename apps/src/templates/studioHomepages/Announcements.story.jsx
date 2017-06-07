@@ -1,15 +1,15 @@
 import React from 'react';
-import AnnouncementsCollapsible from './AnnouncementsCollapsible';
+import Announcements from './Announcements';
 
 export default storybook => {
   return storybook
-    .storiesOf('AnnouncementsCollapsible', module)
+    .storiesOf('Announcements', module)
     .addStoryTable([
       {
-        name: 'Announcement Collapsible - 1 announcement',
+        name: 'Announcements - 1 announcement',
         description: 'This is an example of of the Announcements section for the teacher homepage.',
         story: () => (
-          <AnnouncementsCollapsible
+          <Announcements
             announcements={[
               {
                 heading: "Go beyond an Hour of Code",
@@ -22,10 +22,10 @@ export default storybook => {
         )
       },
       {
-        name: 'Announcement Collapsible - 3 announcements',
+        name: 'Announcements - 3 announcements',
         description: 'This is an example of of the Announcements section for the teacher homepage.',
         story: () => (
-          <AnnouncementsCollapsible
+          <Announcements
             announcements={[
               {
                 heading: "Go beyond an Hour of Code",
