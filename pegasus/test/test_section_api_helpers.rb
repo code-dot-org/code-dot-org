@@ -415,6 +415,7 @@ class SectionApiHelperTest < SequelTestCase
             id: section_id,
             user: {id: 15, user_type: 'teacher'},
             script: {id: script_id},
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -440,6 +441,7 @@ class SectionApiHelperTest < SequelTestCase
             id: section_id,
             user: {id: 15, user_type: 'teacher'},
             course_id: course_id,
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -467,6 +469,7 @@ class SectionApiHelperTest < SequelTestCase
             user: {id: 15, user_type: 'teacher'},
             course_id: course_id,
             script: {id: script_id},
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -494,6 +497,7 @@ class SectionApiHelperTest < SequelTestCase
             id: section_id,
             user: {id: 15, user_type: 'teacher'},
             course_id: course_id,
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
