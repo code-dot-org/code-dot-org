@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import CourseProgress from './CourseProgress';
+import ScriptOverview from './ScriptOverview';
 import MiniViewTopRow from './MiniViewTopRow';
 import { hasGroups } from '@cdo/apps/code-studio/progressRedux';
 
@@ -46,7 +46,7 @@ const MiniView = React.createClass({
             ...(hasGroups && styles.groupView)
           }}
         >
-          <CourseProgress onOverviewPage={false}/>
+          <ScriptOverview onOverviewPage={false}/>
         </div>
       );
     }
