@@ -81,7 +81,7 @@ content-type: text/ng-template
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::valid_grades.inspect}"}
       %td
-        %span{"ng-hide" => "section.editing"} {{script_list | getNameById:section.script.id}}
+        %a{"ng-hide" => "section.editing", "ng-href" => "{{getPath(section)}}"} {{getName(section)}}
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.script.id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']"}
             %option{value: ''}
