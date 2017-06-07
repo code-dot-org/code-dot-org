@@ -10,7 +10,7 @@ export default class BonusLevels extends React.Component {
       <div>
         {this.props.bonusLevels.map((bonus, index) => (
           <div key={index}>
-            <a href="#">{bonus.name}</a>
+            <a href={`?id=${bonus.id}`}>{bonus.name}</a>
           </div>
         ))}
       </div>

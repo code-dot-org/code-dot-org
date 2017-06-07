@@ -137,11 +137,30 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
+    if params[:id]
+      @script_level = Script.cache_find_script_level params[:id]
+      @level = @script_level.level
+      @stage = @script_level.stage
+      @script = @script_level.script
+      @game = @level.game
+
+      view_options(
+        full_width: true,
+        callouts: [],
+        small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
+        has_i18n: @game.has_i18n?,
+        game_display_name: data_t('game.name', @game.name),
+      )
+
+      render 'levels/show'
+      return
+    end
+
     stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @stage_extras = {
       stage_number: stage.relative_position,
       next_level_path: stage.script_levels.last.next_level_or_redirect_path_for_user(current_user),
-      bonus_levels: stage.script_levels.select(&:bonus).map {|sl| {name: sl.level.display_name || sl.level.name}},
+      bonus_levels: stage.script_levels.select(&:bonus).map {|sl| {id: sl.id, name: sl.level.display_name || sl.level.name}},
     }.camelize_keys
 
     render 'scripts/stage_extras'
