@@ -63,7 +63,7 @@ const WorkshopIndex = React.createClass({
   },
 
   render() {
-    const showOrganizer = this.permission.isAdmin;
+    const showOrganizer = this.permission.isWorkshopAdmin;
 
     return (
       <div>
@@ -72,7 +72,7 @@ const WorkshopIndex = React.createClass({
           <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
             New Workshop
           </Button>
-          {(this.permission.isAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
           <Button

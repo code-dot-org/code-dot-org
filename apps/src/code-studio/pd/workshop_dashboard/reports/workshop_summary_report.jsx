@@ -176,7 +176,7 @@ const WorkshopSummaryReport = React.createClass({
       });
     }
 
-    if (this.permission.isAdmin) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}
