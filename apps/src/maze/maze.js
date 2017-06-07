@@ -113,9 +113,7 @@ var loadLevel = function () {
   if (level.fastGetNectarAnimation) {
     skin.actionSpeedScale.nectar = 0.5;
   }
-  // Measure maze dimensions and set sizes.
-  // Initialize the wallMap.
-  initWallMap();
+
   // Pixel height and width of each maze square (i.e. tile).
   Maze.SQUARE_SIZE = 50;
   Maze.PEGMAN_HEIGHT = skin.pegmanHeight;
@@ -126,19 +124,6 @@ var loadLevel = function () {
   Maze.MAZE_WIDTH = Maze.SQUARE_SIZE * Maze.map.COLS;
   Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.map.ROWS;
   Maze.PATH_WIDTH = Maze.SQUARE_SIZE / 3;
-};
-
-
-/**
- * Initialize the wallMap.  For any cell at location x,y Maze.wallMap[y][x] will
- * be the index of which wall tile to use for that cell.  If the cell is not a
- * wall, Maze.wallMap[y][x] is undefined.
- */
-var initWallMap = function () {
-  Maze.wallMap = new Array(Maze.map.ROWS);
-  for (var y = 0; y < Maze.map.ROWS; y++) {
-    Maze.wallMap[y] = new Array(Maze.map.COLS);
-  }
 };
 
 /**
@@ -355,6 +340,7 @@ Maze.init = function (config) {
     Maze.map.resetDirt();
 
     Maze.subtype.createDrawer();
+    Maze.subtype.initWallMap();
 
     const svg = document.getElementById('svgMaze');
 
@@ -366,7 +352,7 @@ Maze.init = function (config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = Maze.MAZE_WIDTH + 'px';
 
-    drawMap(svg, skin, Maze.subtype, Maze.wallMap, Maze.SQUARE_SIZE);
+    drawMap(svg, skin, Maze.subtype, Maze.map, Maze.SQUARE_SIZE);
     createAnimations(svg);
 
     var stepButton = document.getElementById('stepButton');
@@ -1310,7 +1296,7 @@ Maze.scheduleFail = function (forward) {
     studioApp().playAudio('wall');
     if (squareType !== undefined) {
       // Check which type of wall pegman is hitting
-      studioApp().playAudio('wall' + Maze.wallMap[targetY][targetX]);
+      studioApp().playAudio('wall' + Maze.subtype.wallMap[targetY][targetX]);
     }
 
     // Play the animation of hitting the wall
