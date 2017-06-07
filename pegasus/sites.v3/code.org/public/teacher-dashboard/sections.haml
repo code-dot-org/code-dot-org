@@ -83,7 +83,7 @@ content-type: text/ng-template
       %td
         %a{"ng-hide" => "section.editing", "ng-href" => "{{getPath(section)}}"} {{getName(section)}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.script.id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']"}
+          %select{"ng-model" => "section.assign_id", "ng-options"=>"assignable.assign_id as assignable.name group by assignable.category for assignable in assignable_list | orderBy:['category_priority', 'category', 'position', 'name']"}
             %option{value: ''}
       %td
         %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
