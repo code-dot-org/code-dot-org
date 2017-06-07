@@ -862,5 +862,10 @@
   "failedChangeSettingSettings": "Prispôsob si hru. Aby si prešiel týmto rébusom, potrebuješ si zmeniť droida a nastaviť jeho rýchlosť.",
   "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
   "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
+  "moveForward": "move forward",
+  "moveBackward": "move backward",
+  "turnLeft": "turn left",
+  "turnRight": "turn right",
+  "turnTooltip": "Turn an actor left or right by 90 degrees."
 }

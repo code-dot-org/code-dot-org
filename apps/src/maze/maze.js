@@ -346,6 +346,14 @@ function resetDirtImages(running) {
 }
 
 /**
+ * Rotate the given 2d array.
+ * @param data
+ */
+function rotate(data) {
+  return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
+}
+
+/**
  * Initialize Blockly and the maze.  Called on page load.
  */
 Maze.init = function (config) {
@@ -355,6 +363,13 @@ Maze.init = function (config) {
 
   skin = config.skin;
   level = config.level;
+
+  if (level.map && level.shapeShift) {
+    for (let i = 1, max = Math.random() * 4; i < max; i++) {
+      level.map = rotate(level.map);
+      level.startDirection = (level.startDirection + 3) % 4;
+    }
+  }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';

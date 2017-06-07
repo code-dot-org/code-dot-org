@@ -45,16 +45,38 @@ function renderSectionProjects(sectionId) {
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
 function main() {
-
-
+  const studioUrlPrefix = data.studiourlprefix;
   var valid_scripts = data.valid_scripts;
   var valid_courses = data.valid_courses;
-  var homepage_url = data.homepage_url;
   var hoc_assign_warning = data.hoc_assign_warning;
   var disabled_scripts = data.disabled_scripts;
   var i18n = data.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
+
+  // Sections can be assigned to either a course or a script. Since there's a
+  // possibility that we could have a script and a course with the same id, we
+  // need a way to differentiate them. We do that by giving scripts and courses
+  // assignment ids, which are guaranteed to be unique across the population of
+  // both courses and scripts.
+  function scriptAssignmentId(script_id) {
+    return 's_' + script_id;
+  }
+
+  function courseAssignmentId(course_id) {
+    return 'c_' + course_id;
+  }
+
+  valid_scripts.forEach(function (script) {
+    script.assign_id = scriptAssignmentId(script.id);
+  });
+  valid_courses.forEach(function (course) {
+    course.assign_id = courseAssignmentId(course.id);
+  });
+
+  // Just scripts, unless experiment is enabled
+  const valid_assignments = experiments.isEnabled('assignCourses') ?
+    valid_courses.concat(valid_scripts) : valid_scripts;
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -71,10 +93,10 @@ function main() {
   // ROUTES
 
   .config(['$routeProvider', function ($routeProvider) {
-    if (homepage_url && window.location.search.indexOf("no_home_redirect") === -1) {
+    if (studioUrlPrefix && window.location.search.indexOf("no_home_redirect") === -1) {
       $routeProvider.when('/',
         {redirectTo: function () {
-          window.location = homepage_url;
+          window.location = `${studioUrlPrefix}/home`;
         }});
     } else {
       $routeProvider.when('/',
@@ -143,15 +165,6 @@ function main() {
     };
   });
 
-  // This is probably not the best way to do this, but this fix is time-sensitive
-  // TODO(ram): make this better (or migrate to React)
-  filters.filter('getNameById', function () {
-    return function (input, id) {
-        var matching = input.filter(function (val) { return val.id == id; });
-        return matching.length > 0 ? matching[0].name : null;
-    };
-  });
-
   // SERVICES
 
   var services = angular.module('teacherDashboard.services', [])
@@ -207,6 +220,7 @@ function main() {
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
+    $scope.assignable_list = valid_assignments;
 
     $scope.sections = sectionsService.query();
 
@@ -219,6 +233,60 @@ function main() {
     $scope.hocAssignWarningEnabled = hoc_assign_warning;
 
     $scope.hocCategoryName = i18n.hoc_category_name;
+
+    /**
+     * Given a section, returns the assignment id of the course/script the section
+     * is assigned to (or null if not assigned to anything)
+     * @param {Section} section - The section we want the assignment id for
+     * @returns {string|null}
+     */
+    $scope.getAssignmentId = function (section) {
+      if (section.course_id) {
+        return courseAssignmentId(section.course_id);
+      }
+      if (section.script) {
+        return scriptAssignmentId(section.script.id);
+      }
+      return null;
+    };
+
+    /**
+     * Given a section, return the name of the course/script the section is
+     * assigned to
+     * @param {Section} section
+     * @returns {string}
+     */
+    $scope.getName = function (section) {
+      const assignId = $scope.getAssignmentId(section);
+      if (!assignId) {
+        return '';
+      }
+
+      const firstMatch = $scope.assignable_list.find(val => val.assign_id == assignId);
+      return firstMatch ? firstMatch.name : null;
+    };
+
+    /**
+     * Given a section, return the a link to the course/script the section is
+     * assigned to
+     * @param {Section} section
+     * @returns {string|null}
+     */
+    $scope.getPath = function (section) {
+      if (section.course_id) {
+        const course = valid_courses.find(course => course.id === section.course_id);
+        if (!course) {
+          // We're assigned a course that's not in our list of valid courses. Don't
+          // attempt to provide a link.
+          return null;
+        }
+        return `${studioUrlPrefix}/courses/${course.script_name}`;
+      }
+      if (section.script) {
+        return `${studioUrlPrefix}/s/${section.script.name}`;
+      }
+      return null;
+    };
 
     $scope.edit = function (section) {
       section.editing = true;
@@ -356,7 +424,7 @@ function main() {
 
     $scope.age_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "21+"];
 
-    $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_female};
+    $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_male};
 
     $scope.bulk_import = {editing: false, students: ''};
 

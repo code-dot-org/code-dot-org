@@ -247,6 +247,7 @@ en:
         artist: 'Draw something'
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
+        gamelab: 'Make a Game Lab project'
       home: "Home"
       courses: "Courses"
       project_gallery: "Project Gallery"
@@ -540,6 +541,11 @@ en:
     gallery:
       title: "Gallery"
       body: "View a gallery of app and artist images created by our users"
+    gamelab:
+      title: "Game Lab (beta)"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ages 13+"
+      cta: "Learn how"
     frozen:
       title: "Frozen"
     starwars:
@@ -561,6 +567,11 @@ en:
     unplugged_conditionals:
       title: "Conditionals"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+    widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Ages 14+"
+      cta: "Learn how"
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"
