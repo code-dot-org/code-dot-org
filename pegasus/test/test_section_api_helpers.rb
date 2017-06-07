@@ -247,14 +247,23 @@ class SectionApiHelperTest < SequelTestCase
       end
 
       it 'returns expected info' do
+        # Use custom i18n strings so that updating strings in gsheet doesnt break test
+        test_locale = :"te-ST"
+        I18n.locale = test_locale
+        custom_i18n = {
+          "csp_name" => "CS Principles",
+          "full_course_category_name" => "Full Courses"
+        }
+        I18n.backend.store_translations test_locale, custom_i18n
+
         csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
         expected = {
           id: 3,
-          name: 'Computer Science Principles',
+          name: 'CS Principles',
           script_name: 'csp',
           category: 'Full Courses',
           position: 1,
-          category_priority: 0
+          category_priority: -1
         }
         assert_equal expected, csp_course
       end
@@ -496,6 +505,35 @@ class SectionApiHelperTest < SequelTestCase
           row = Dashboard.db[:sections].where(id: section_id).first
           assert_equal course_id, row[:course_id]
           assert_nil row[:script_id]
+        end
+      end
+
+      it 'replaces a course assignment with a script assignment' do
+        Dashboard.db.transaction(rollback: :always) do
+          course_id = FakeDashboard::COURSES[0][:id]
+          script_id = FakeDashboard::SCRIPTS[0][:id]
+
+          params = {
+            user: {id: 15, user_type: 'teacher'},
+            course_id: course_id
+          }
+          section_id = DashboardSection.create(params)
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_equal course_id, row[:course_id]
+          assert_nil row[:script_id]
+
+          update_params = {
+            id: section_id,
+            user: {id: 15, user_type: 'teacher'},
+            course_id: nil,
+            script: {id: script_id},
+            stage_extras: false
+          }
+          DashboardSection.update_if_owner(update_params)
+
+          row = Dashboard.db[:sections].where(id: section_id).first
+          assert_nil row[:course_id]
+          assert_equal script_id, row[:script_id]
         end
       end
     end
