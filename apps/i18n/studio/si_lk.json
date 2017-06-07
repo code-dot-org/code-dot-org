@@ -862,5 +862,10 @@
   "failedChangeSettingSettings": "Game ඔබ ම කරන්න. ඔබට සිද්ධ වෙනවා ඔබගේ droid ව සහ droid එකේ වේගය වෙනස් කරන්න, මෙම puzzle එක සමත් වෙන්න.",
   "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
   "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
+  "moveForward": "move forward",
+  "moveBackward": "move backward",
+  "turnLeft": "turn left",
+  "turnRight": "turn right",
+  "turnTooltip": "Turn an actor left or right by 90 degrees."
 }
