@@ -143,16 +143,16 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @param {!Object} obj Data object.
    * @param {*} name Name of property.
    * @param {*} value New property value.
-   * @param {Object=} opt_descriptor Optional descriptor object.
-   * @return {!Interpreter.Object|undefined} Returns a setter function if one
-   *     needs to be called, otherwise undefined.
+   * @param {boolean} opt_fixed Unchangeable property if true.
+   * @param {boolean} opt_nonenum Non-enumerable property if true.
    * @override
    */
   setProperty(
     obj,
     name,
     value,
-    opt_descriptor
+    opt_fixed,
+    opt_nonenum
   ) {
     name = name.toString();
     if (obj.isCustomMarshal) {
@@ -164,7 +164,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       if (nativeParent) {
         nativeParent[name] = codegen.marshalInterpreterToNative(this, value);
       } else {
-        return super.setProperty(obj, name, value, opt_descriptor);
+        return super.setProperty(obj, name, value, opt_fixed, opt_nonenum);
       }
     }
   }
@@ -255,11 +255,12 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @override
    */
   setValue(left, value, declarator) {
-    if (left instanceof Array) {
-      return super.setValue(left, value);
+    if (left.length) {
+      var obj = left[0];
+      var prop = left[1];
+      this.setProperty(obj, prop, value);
     } else {
       this.setValueToScope(left, value, declarator);
-      return undefined;
     }
   }
 
