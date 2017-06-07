@@ -380,18 +380,27 @@ function createNativeCallbackForAsyncFunction(opts, callback) {
  * @param {!Object} opts Options block
  * @param {!Interpreter} opts.interpreter Interpreter instance
  * @param {number} [opts.maxDepth] Maximum depth to marshal objects
+ * @param {boolean} [opts.dontMarshal] Do not marshal parameters if true
  * @param {Object} [opts.callbackState] callback state object, which will
  *        hold the unmarshaled return value as a 'value' property later.
  * @param {Function} intFunc The interpreter supplied callback function
  */
-function createNativeInterpreterCallback(opts, intFunc) {
-  return function (...args) {
-    const intArgs = args.map(arg => marshalNativeToInterpreter(
-      opts.interpreter,
-      arg,
-      null,
-      opts.maxDepth
-    ));
+exports.createNativeInterpreterCallback = function (opts, intFunc) {
+  return function (nativeValue) {
+    var args = Array.prototype.slice.call(arguments);
+    var intArgs;
+    if (opts.dontMarshal) {
+      intArgs = args;
+    } else {
+      intArgs = [];
+      for (var i = 0; i < args.length; i++) {
+        intArgs[i] = marshalNativeToInterpreter(
+          opts.interpreter,
+          args[i],
+          null,
+          opts.maxDepth);
+      }
+    }
     // Shift a CallExpression node on the stack that already has its func_,
     // arguments, and other state populated:
     var state = opts.callbackState || {};
@@ -404,14 +413,9 @@ function createNativeInterpreterCallback(opts, intFunc) {
     state.arguments = intArgs;
     state.n_ = intArgs.length;
 
-    // remove the last argument because stepCallExpression always wants to push it back on.
-    if (state.arguments.length > 0) {
-      state.value = state.arguments.pop();
-    }
-
     opts.interpreter.stateStack.unshift(state);
   };
-}
+};
 
 /**
  * Generate a native function wrapper for use with the JS interpreter.
@@ -465,7 +469,7 @@ export function makeNativeMemberFunction(opts) {
           // A select class of native functions is aware of the interpreter and
           // capable of calling the interpreter on the stack immediately. We
           // marshal these differently:
-          nativeArgs[i] = createNativeInterpreterCallback(opts, args[i]);
+          nativeArgs[i] = exports.createNativeInterpreterCallback(opts, args[i]);
         } else {
           nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, args[i]);
         }
