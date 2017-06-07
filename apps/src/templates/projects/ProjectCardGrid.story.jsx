@@ -1,9 +1,10 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
-import {selectedGallery} from './projectsModule';
+import {selectedGallery, selectGallery} from './projectsModule';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {Galleries} from './projectConstants';
 
 let projectTypes = [
   'applab',
@@ -106,7 +107,7 @@ function generateFakeClassProjects() {
 
 const createProjectsStore = function () {
   return createStore(combineReducers({
-    ...selectedGallery
+    selectedGallery: selectedGallery
   }));
 };
 
@@ -120,6 +121,7 @@ export default storybook => {
         description: 'Public gallery, with shortened student names and student age ranges.',
         story: () => {
           const store = createProjectsStore();
+          store.dispatch(selectGallery(Galleries.PUBlIC));
           return (
             <Provider store={store}>
               <ProjectCardGrid
@@ -137,6 +139,7 @@ export default storybook => {
         description: 'Public gallery, without student name and age.',
         story: () => {
           const store = createProjectsStore();
+          store.dispatch(selectGallery(Galleries.PUBlIC));
           return (
             <Provider store={store}>
               <ProjectCardGrid
@@ -154,6 +157,7 @@ export default storybook => {
         description: 'Class gallery, showing full names',
         story: () => {
           const store = createProjectsStore();
+          store.dispatch(selectGallery(Galleries.PUBlIC));
           return (
             <Provider store={store}>
               <ProjectCardGrid
@@ -171,6 +175,7 @@ export default storybook => {
         description: 'Personal gallery, showing full names and the "quick action" dropdowns',
         story: () => {
           const store = createProjectsStore();
+          store.dispatch(selectGallery(Galleries.PUBlIC));
           return (
             <Provider store={store}>
               <ProjectCardGrid
