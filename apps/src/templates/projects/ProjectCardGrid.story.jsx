@@ -1,6 +1,9 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
+import {selectedGallery} from './projectsModule';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
 
 let projectTypes = [
   'applab',
@@ -101,6 +104,12 @@ function generateFakeClassProjects() {
   return classProjects;
 }
 
+const createProjectsStore = function () {
+  return createStore(combineReducers({
+    ...selectedGallery
+  }));
+};
+
 
 export default storybook => {
   storybook
@@ -109,50 +118,70 @@ export default storybook => {
       {
         name: 'Public Gallery with student info',
         description: 'Public gallery, with shortened student names and student age ranges.',
-        story: () => (
-          <ProjectCardGrid
-            projectLists = {generateFakePublicProjectsWithStudentInfo()}
-            hasOlderProjects = {hasOlderProjects}
-            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
-            galleryType = "public"
-          />
-        )
+        story: () => {
+          const store = createProjectsStore();
+          return (
+            <Provider store={store}>
+              <ProjectCardGrid
+                projectLists = {generateFakePublicProjectsWithStudentInfo()}
+                hasOlderProjects = {hasOlderProjects}
+                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
+                galleryType = "public"
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Public Gallery without student info',
         description: 'Public gallery, without student name and age.',
-        story: () => (
-          <ProjectCardGrid
-            projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
-            hasOlderProjects = {hasOlderProjects}
-            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
-            galleryType = "public"
-          />
-        )
+        story: () => {
+          const store = createProjectsStore();
+          return (
+            <Provider store={store}>
+              <ProjectCardGrid
+                projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
+                hasOlderProjects = {hasOlderProjects}
+                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
+                galleryType = "public"
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Class Gallery',
         description: 'Class gallery, showing full names',
-        story: () => (
-          <ProjectCardGrid
-            projectLists = {generateFakeClassProjects()}
-            hasOlderProjects = {hasOlderProjects}
-            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
-            galleryType = "class"
-          />
-        )
+        story: () => {
+          const store = createProjectsStore();
+          return (
+            <Provider store={store}>
+              <ProjectCardGrid
+                projectLists = {generateFakeClassProjects()}
+                hasOlderProjects = {hasOlderProjects}
+                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
+                galleryType = "class"
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Personal Gallery',
         description: 'Personal gallery, showing full names and the "quick action" dropdowns',
-        story: () => (
-          <ProjectCardGrid
-            projectLists = {generateFakePersonalProjects()}
-            hasOlderProjects = {hasOlderProjects}
-            fetchOlderProjects = {storybook.action('fetchOlderProjects')}
-            galleryType = "personal"
-          />
-        )
+        story: () => {
+          const store = createProjectsStore();
+          return (
+            <Provider store={store}>
+              <ProjectCardGrid
+                projectLists = {generateFakePersonalProjects()}
+                hasOlderProjects = {hasOlderProjects}
+                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
+                galleryType = "personal"
+              />
+            </Provider>
+          );
+        }
       },
     ]);
 };
