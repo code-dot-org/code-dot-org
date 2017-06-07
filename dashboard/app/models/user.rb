@@ -568,6 +568,15 @@ class User < ActiveRecord::Base
     provider == User::PROVIDER_MANUAL
   end
 
+  def update_without_password(params, *options)
+    if params[:races]
+      races_comma_separated = params[:races].join(',')
+      update_column(:races, races_comma_separated)
+      update_column(:urm, User.urm_from_races(races_comma_separated))
+    end
+    super
+  end
+
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
