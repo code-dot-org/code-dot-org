@@ -76,9 +76,11 @@ const WorkshopFilter = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
+  },
 
+  componentDidMount() {
     if (this.permission.isAdmin) {
       this.loadOrganizers();
     }

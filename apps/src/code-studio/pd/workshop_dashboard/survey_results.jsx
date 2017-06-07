@@ -11,7 +11,7 @@ const SurveyResults = React.createClass({
     })
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
   },
 

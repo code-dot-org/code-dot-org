@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeadingBanner from '../HeadingBanner';
+import HeaderBanner from '../HeaderBanner';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import StudentResources from './StudentResources';
 import shapes from './shapes';
@@ -28,7 +28,7 @@ const StudentHomepage = React.createClass({
 
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.homepageHeading()}
         />
 
