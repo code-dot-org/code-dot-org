@@ -7,9 +7,9 @@ const SquareType = tiles.SquareType;
 const MARKER_HEIGHT = 43;
 const MARKER_WIDTH = 50;
 
-export default function drawMap(svg, skin, subtype, wallMap, squareSize = 50) {
-  const MAZE_WIDTH = wallMap[0].length * squareSize;
-  const MAZE_HEIGHT = wallMap.length * squareSize;
+export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
+  const MAZE_WIDTH = map.COLS * squareSize;
+  const MAZE_HEIGHT = map.ROWS * squareSize;
 
   var x, y, tile;
 
@@ -33,7 +33,7 @@ export default function drawMap(svg, skin, subtype, wallMap, squareSize = 50) {
     svg.appendChild(tile);
   }
 
-  subtype.drawMapTiles(svg, wallMap);
+  subtype.drawMapTiles(svg);
 
   // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
   var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
@@ -89,9 +89,9 @@ export default function drawMap(svg, skin, subtype, wallMap, squareSize = 50) {
 
   // Add obstacles.
   var obsId = 0;
-  for (y = 0; y < Maze.map.ROWS; y++) {
-    for (x = 0; x < Maze.map.COLS; x++) {
-      if (Maze.map.getTile(y, x) === SquareType.OBSTACLE) {
+  for (y = 0; y < map.ROWS; y++) {
+    for (x = 0; x < map.COLS; x++) {
+      if (map.getTile(y, x) === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', MARKER_HEIGHT * skin.obstacleScale);
