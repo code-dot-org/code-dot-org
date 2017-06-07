@@ -9,6 +9,7 @@ import React from 'react';
 import SessionTime from '../components/session_time';
 import Spinner from '../components/spinner';
 import SessionAttendance from './session_attendance';
+import Permission from '../../permission';
 import color from '@cdo/apps/util/color';
 import {
   Row,
@@ -66,10 +67,13 @@ const WorkshopAttendance = React.createClass({
     return this.state.workshopState === 'Ended';
   },
 
+  componentWillMount() {
+    this.permission = new Permission();
+  },
+
   componentDidMount() {
     this.loadSummary();
     this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
-    this.isAdmin = window.dashboard.workshop.permission === "workshop_admin";
   },
 
   loadSummary() {

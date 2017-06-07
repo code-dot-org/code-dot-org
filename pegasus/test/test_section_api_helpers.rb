@@ -252,7 +252,7 @@ class SectionApiHelperTest < SequelTestCase
           id: 3,
           name: 'Computer Science Principles',
           script_name: 'csp',
-          category: 'full_course',
+          category: 'Full Courses',
           position: 1,
           category_priority: 0
         }

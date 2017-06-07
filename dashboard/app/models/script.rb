@@ -21,6 +21,8 @@
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
 
+TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include ScriptConstants
@@ -317,7 +319,8 @@ class Script < ActiveRecord::Base
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        next if level.contained_levels.empty?
+        next if level.contained_levels.empty? ||
+          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
@@ -327,7 +330,7 @@ class Script < ActiveRecord::Base
 
     text_response_levels.concat(
       script_levels.includes(:levels).
-        where('levels.type' => [TextMatch, FreeResponse]).
+        where('levels.type' => TEXT_RESPONSE_TYPES).
         map do |script_level|
           {
             script_level: script_level,

@@ -10,6 +10,7 @@ import Spinner from '../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
+import Permission from '../../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -41,6 +42,10 @@ const SessionAttendance = React.createClass({
     };
   },
 
+  componentWillMount() {
+    this.permission = new Permission();
+  },
+
   componentDidMount() {
     this.load();
     this.startRefreshInterval();
@@ -48,7 +53,6 @@ const SessionAttendance = React.createClass({
     this.isCSF = this.props.course === COURSE_CSF;
     this.showSectionMembership = !this.shouldUseNewAttendance && this.props.accountRequiredForAttendance;
     this.showPuzzlesCompleted = this.shouldUseNewAttendance && this.isCSF;
-    this.isAdmin = window.dashboard.workshop.permission === "workshop_admin";
   },
 
   componentWillUnmount() {
@@ -154,7 +158,7 @@ const SessionAttendance = React.createClass({
           sectionRequiredForAttendance={!this.shouldUseNewAttendance}
           showSectionMembership={this.showSectionMembership}
           showPuzzlesCompleted={this.showPuzzlesCompleted}
-          displayYesNoAttendance={this.shouldUseNewAttendance && !this.isAdmin}
+          displayYesNoAttendance={this.shouldUseNewAttendance && !this.permission.isAdmin && !this.permission.isPartner}
         />
       );
     });
