@@ -11,6 +11,10 @@ export default storybook => {
         <StageExtras
           stageNumber="Test Stage"
           nextLevelPath="#"
+          bonusLevels={[
+            {name: 'Sample Bonus Level'},
+            {name: 'Another Bonus Level'},
+          ]}
         />
       )
     );
