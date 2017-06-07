@@ -8,8 +8,8 @@ export default class BonusLevels extends React.Component {
   render() {
     return (
       <div>
-        {this.props.bonusLevels.map(bonus => (
-          <div>
+        {this.props.bonusLevels.map((bonus, index) => (
+          <div key={index}>
             <a href="#">{bonus.name}</a>
           </div>
         ))}
