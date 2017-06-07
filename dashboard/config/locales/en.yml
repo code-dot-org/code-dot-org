@@ -247,6 +247,7 @@ en:
         artist: 'Draw something'
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
+        gamelab: 'Make a Game Lab project'
       home: "Home"
       courses: "Courses"
       project_gallery: "Project Gallery"
@@ -821,6 +822,7 @@ en:
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: 'Survey'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

@@ -35,10 +35,10 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What is 100-70?  Based on the story problem, that's how tall the hat needs to be!\",\r\n  \"hint_id\": \"2-3_Artist_3new_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?\",\r\n  \"hint_id\": \"2-3_Artist_3new_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

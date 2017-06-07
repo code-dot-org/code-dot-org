@@ -58,7 +58,7 @@ CS Discoveries introduces students to tools and programming languages that are a
 
 <center><img src="/images/animated-examples/tennis_jump.gif" width="90%"></center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in Game Lab</div>
+<div style="margin-left: 15px; margin-top: 5px;">Students explore programming concepts through the development of animations and games in <a href="/gamelab">Game Lab</a></div>
 
 [/col-33]
 
@@ -66,7 +66,7 @@ CS Discoveries introduces students to tools and programming languages that are a
 
 <center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and App Lab</div>
+<div style="margin-left: 15px; margin-top: 5px;">Students create prototypes of internet-connected physical computing devices using Adafruit's Circuit Playground board and <a href="/applab">App Lab</a></div>
 
 [/col-33]
 
