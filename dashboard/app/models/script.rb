@@ -39,6 +39,8 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
+  has_many :course_scripts
+  has_many :courses, through: :course_scripts
 
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
@@ -208,7 +210,8 @@ class Script < ActiveRecord::Base
             },
             {
               stages: [{script_levels: [:levels]}]
-            }
+            },
+            :course_scripts
           ]
         ).find(script_id)
 
@@ -841,8 +844,7 @@ class Script < ActiveRecord::Base
   #   is one. A script is considered to have a matching course if there is exactly
   #   one course for this script
   def course_link
-    course_scripts = CourseScript.where(script_id: id)
-    return nil if course_scripts.length != 1
-    course_path(course_scripts[0].course)
+    return nil if courses.length != 1
+    course_path(courses[0])
   end
 end
