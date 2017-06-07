@@ -1,14 +1,14 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
+import ScriptOverviewTopRow from './ScriptOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 
 /**
- * Stage progress component used in level header and course overview.
+ * Stage progress component used in level header and script overview.
  */
-const CourseProgress = React.createClass({
+const ScriptOverview = React.createClass({
   propTypes: {
     onOverviewPage: React.PropTypes.bool.isRequired,
 
@@ -34,7 +34,7 @@ const CourseProgress = React.createClass({
     return (
       <div>
         {onOverviewPage && (
-          <CourseOverviewTopRow
+          <ScriptOverviewTopRow
             professionalLearningCourse={professionalLearningCourse}
             hasLevelProgress={hasLevelProgress}
             scriptName={scriptName}
@@ -55,4 +55,4 @@ export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.stageLock.viewAs,
   isRtl: state.isRtl,
-}))(Radium(CourseProgress));
+}))(Radium(ScriptOverview));

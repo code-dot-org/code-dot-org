@@ -58,10 +58,7 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
