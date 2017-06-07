@@ -304,6 +304,7 @@ function main() {
         if ($scope.hocAssignWarningEnabled && assignable.category === $scope.hocCategoryName) {
           $scope.sectionToSave = $scope.sections.indexOf(section);
           $('#assign-confirm').modal('show');
+          return;
         }
       }
       $scope.send_save(section);
@@ -319,7 +320,7 @@ function main() {
       if (assignIdChanged) {
         const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
         // update course/script assigned to section. Right now a section can only
-        // have one or the other, but that will change in th efuture.
+        // have one or the other, but that will change in the future.
         section.script = null;
         section.course_id = null;
 
