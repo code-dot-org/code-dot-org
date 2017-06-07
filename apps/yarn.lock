@@ -75,9 +75,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.0.tgz#fe325ef92b4a620b6abea0fcf095cfde61b770df"
+"@code-dot-org/js-interpreter@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.2.0.tgz#1a48bb0a7be85144ea26228f9a13cdff4e9ec88a"
   dependencies:
     yargs "^7.0.1"
 
