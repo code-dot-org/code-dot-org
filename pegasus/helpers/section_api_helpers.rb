@@ -582,7 +582,7 @@ class DashboardSection
       # as a param
       fields[:script_id] = nil
     else
-      # If no course_id provided, make sure we clear an existing course_id
+      # If no valid course_id provided, make sure we clear any existing course_id
       fields[:course_id] = nil
     end
 
