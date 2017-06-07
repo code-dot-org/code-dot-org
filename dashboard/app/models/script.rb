@@ -27,6 +27,7 @@ TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 class Script < ActiveRecord::Base
   include ScriptConstants
   include SharedConstants
+  include Rails.application.routes.url_helpers
 
   include Seeded
   has_many :levels, through: :script_levels
@@ -834,5 +835,14 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false
     }.compact
+  end
+
+  # @return {String|nil} path to the course overview page for this script if there
+  #   is one. A script is considered to have a matching course if there is exactly
+  #   one course for this script
+  def course_link
+    course_scripts = CourseScript.where(script_id: id)
+    return nil if course_scripts.length != 1
+    course_path(course_scripts[0].course)
   end
 end

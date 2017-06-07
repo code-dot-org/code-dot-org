@@ -723,4 +723,29 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_empty script.text_response_levels
   end
+
+  test "course_link retuns nil if script is in no courses" do
+    create :script
+    create :course, name: 'csp'
+
+    assert_equal nil, script.course_link
+  end
+
+  test "course_link retuns nil if script is in two courses" do
+    script = create :script
+    course = create :course, name: 'csp'
+    other_course = create :course, name: 'othercsp'
+    create :course_script, position: 1, course: course, script: script
+    create :course_script, position: 1, course: other_course, script: script
+
+    assert_equal nil, script.course_link
+  end
+
+  test "course_link retuns course_path if script is in one course" do
+    script = create :script
+    course = create :course, name: 'csp'
+    create :course_script, position: 1, course: course, script: script
+
+    assert_equal '/courses/csp', script.course_link
+  end
 end
