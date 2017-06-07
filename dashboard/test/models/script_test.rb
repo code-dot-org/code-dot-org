@@ -725,7 +725,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "course_link retuns nil if script is in no courses" do
-    create :script
+    script = create :script
     create :course, name: 'csp'
 
     assert_equal nil, script.course_link
