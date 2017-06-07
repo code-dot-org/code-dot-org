@@ -1,3 +1,4 @@
+import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
 import {SVG_NS} from '@cdo/apps/constants';
@@ -10,6 +11,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
+import * as codegen from '@cdo/apps/codegen';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
@@ -367,6 +369,25 @@ describe('studio', function () {
       const newDom = parseElement(newXml);
       expect(newDom.querySelector('block[type="when_run"]')
           .getAttribute('uservisible')).to.not.equal("false");
+    });
+  });
+
+  describe("queueCallback method", () => {
+    beforeEach(() => {
+      Studio.interpreter = codegen.evalWithEvents({}, {}, '').interpreter;
+      Studio.eventHandlers = [];
+      Studio.setLevel({});
+    });
+
+    it("will call the given interpreter callback function with the given parameters", () => {
+      const cb = sinon.spy();
+      const interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
+        nativeFunc: cb,
+        interpreterFunc: Studio.interpreter,
+      }));
+      Studio.queueCallback(interpreterFunc, [1, 2, 3]);
+      expect(cb).to.have.been.calledOnce;
+      expect(cb).to.have.been.calledWith(1,2,3);
     });
   });
 });
