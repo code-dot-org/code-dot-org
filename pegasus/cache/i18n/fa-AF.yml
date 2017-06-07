@@ -255,8 +255,8 @@
   continue_learning_header: "ادامه یادگیری فراتر از یک ساعت"
   continue_learning_body: "گزینه های بسیاری وجود دارند.  شما می توانید آنلاین، یا
     در مدرسه محلی و یا دراردوگاه تابستانی به یادگیری ادامه دهید."
-  learn_code_studio: Try Code Studio courses
-  learn_next_level: Try another Code Studio course
+  learn_code_studio: Try Code.org's courses
+  learn_next_level: Try another Code.org course
   learn_online: "درس های آنلاین دیگری را امتحان کن"
   learn_classes: "پیدا کردن کلاس های محلی"
   learn_back_to_minecraft: Keep learning with Minecraft
@@ -294,8 +294,8 @@
     الزيت، كلاس پنجمي'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     -  Frank Martinez, Teacher'
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title: Explore <a href='http://studio.code.org'>Code.org's courses</a>
+  studiobar_title_nolink: Explore Code.org's courses
   studiobar_elementary_title: "دوره‌های مقدماتی"
   studiobar_elementary_body: "سه درس جدید ما برای کلاس K&#8209;پنجمی ها"
   studiobar_hoc_title: "ساعتی با کدنویسی"
@@ -303,7 +303,7 @@
   studiobar_flappy_title: "کدنویسی Flappy"
   studiobar_flappy_body: "با پرنده بال زن، بازیهای خودتان را بسازید و به اشتراک بگذارید"
   studiobar_teacher_title: "ساخته شده برای دبیران"
-  studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_teacher_body: Introduce Code.org in your classroom
   studiobar_frozen_title: "ساعتی با کد"
   studiobar_frozen_body: "یک سرزمین عجایب یخی با آنا و السا بسازید"
   studiobar_donate_title: "کمک مالی بدهید"
@@ -354,8 +354,8 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code.org
+  homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: "ساعت کد نویسی: # طی شده گذرانده"
   homepage_slot_text_hoc: "ساعتی با کدنویسی"
   homepage_slot_text_frozen: "کارتون Frozen با آنا و السا"
@@ -406,7 +406,7 @@
   homepage_slot_text_title_students: "دانش آموزان"
   homepage_slot_text_blurb_students: "تمام آموزش های ما را کشف کنید"
   homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_codestudio: Try Code.org courses
   homepage_slot_text_link_local: "یک کلاس محلی پیدا کنید"
   homepage_slot_text_link_othercourses: "دوره های آنلاین دیگر"
   homepage_slot_text_title_educators: "آموزگاران"
@@ -423,7 +423,7 @@
   homepage_slot_text_link_buy: "شرکت کنید"
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_header_codestudio: Code Studio student creations
+  homepage_header_codestudio: Code.org student creations
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: "تمامش را ببینید"
   homepage_donors_donate: "کمک مالی بدهید"
@@ -768,9 +768,9 @@
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -796,7 +796,7 @@
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "افزودن دانش آموز"
   dashboard_navigation_manage_students: "مدیریت دانش آموزان"
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
+  dashboard_navigation_lesson_plans_resources: Curriculum Standards
   dashboard_navigation_view_stats: "مشاهده وضعیت"
   dashboard_navigation_section: "بخش: %{section_name}"
   dashboard_navigation_student: "دانش آموز: %{student_name}"

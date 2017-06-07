@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeadingBanner from '../HeadingBanner';
+import HeaderBanner from '../HeaderBanner';
 import TeacherCourses from './TeacherCourses';
 import RecentCoursesCollapsible from './RecentCoursesCollapsible';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -54,7 +54,7 @@ const Courses = React.createClass({
     // The components used here are implemented in legacy HAML/CSS rather than React.
     if (this.props.isEnglish && this.props.isTeacher) {
       $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
-      $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
+      $('.standalone-tools').appendTo(ReactDOM.findDOMNode(this.refs.standaloneTools)).show();
     } else {
       $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
@@ -67,7 +67,7 @@ const Courses = React.createClass({
 
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={headingText}
           subHeadingText={i18n.coursesHeadingSubText(
             {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -124,17 +124,16 @@ const Courses = React.createClass({
               <br/>
               <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
-              {false && (
-                <div>
-                  <div style={styles.heading}>
-                    {i18n.toolExplorerHeading()}
-                  </div>
-                  <div>
-                    {i18n.toolExplorerDescription()}
-                  </div>
-                  <ProtectedStatefulDiv ref="toolExplorer"/>
+              <div>
+                <div style={styles.heading}>
+                  {i18n.standaloneToolsHeading()}
                 </div>
-              )}
+                <div>
+                  {i18n.standaloneToolsDescription()}
+                </div>
+                <ProtectedStatefulDiv ref="standaloneTools"/>
+              </div>
+
             </div>
           </div>
         )}
