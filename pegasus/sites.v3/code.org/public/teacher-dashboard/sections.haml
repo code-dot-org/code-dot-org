@@ -35,6 +35,8 @@ content-type: text/ng-template
   %div.jumbotron{'ng-show' => 'sectionsLoaded && sections.length <= 0'}
     %p= I18n.t('dashboard_sections_jumbotron_instruction')
 
+  #sections-table-react{'ng-init' => '$emit("sections-table-rendered");'}
+
   %table{style: "width:100%; table-layout:auto;", 'ng-show' => 'sections.length > 0'}
     %colgroup
       %col{width:"200"}

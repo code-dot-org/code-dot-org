@@ -8,6 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -39,6 +40,15 @@ function renderSectionProjects(sectionId) {
       />,
       element);
   });
+}
+
+function renderSectionsTable() {
+  const element = document.getElementById('sections-table-react');
+
+  ReactDOM.render(
+    <SectionTable/>,
+    element
+  );
 }
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
@@ -215,7 +225,14 @@ function main() {
   var app = angular.module('teacherDashboard.controllers', []);
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
-                                       function ($scope, $window, sectionsService){
+      function ($scope, $window, sectionsService) {
+
+    // Angular does not offer a reliable way to wait for the template to load,
+    // so do it using a custom event here. The call to listen for the custom
+    // event must not be nested inside another deferred call or we might
+    // miss the event.
+    $scope.$on('sections-table-rendered', renderSectionsTable);
+
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
