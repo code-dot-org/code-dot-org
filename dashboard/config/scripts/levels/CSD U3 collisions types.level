@@ -61,10 +61,10 @@
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
     "encrypted_examples": "0klXlfHo501U4d5KtUNj/vfBKHDJQEhu3D6Zy8sQ2nI+41kOXYR1MQYNnICa\nISDf\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
