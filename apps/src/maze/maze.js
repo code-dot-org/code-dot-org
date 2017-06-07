@@ -122,9 +122,6 @@ var loadLevel = function () {
   Maze.PEGMAN_WIDTH = skin.pegmanWidth;
   Maze.PEGMAN_X_OFFSET = skin.pegmanXOffset || 0;
   Maze.PEGMAN_Y_OFFSET = skin.pegmanYOffset;
-  // Height and width of the goal and obstacles.
-  Maze.MARKER_HEIGHT = 43;
-  Maze.MARKER_WIDTH = 50;
 
   Maze.MAZE_WIDTH = Maze.SQUARE_SIZE * Maze.map.COLS;
   Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.map.ROWS;
@@ -369,7 +366,7 @@ Maze.init = function (config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = Maze.MAZE_WIDTH + 'px';
 
-    drawMap(svg, skin, Maze.subtype, Maze.wallMap);
+    drawMap(svg, skin, Maze.subtype, Maze.wallMap, Maze.SQUARE_SIZE);
     createAnimations(svg);
 
     var stepButton = document.getElementById('stepButton');
