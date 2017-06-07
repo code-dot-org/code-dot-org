@@ -892,7 +892,8 @@ function main() {
     // fill in the course dropdown with the section's default course
     $scope.section.$promise.then(
       function (section) {
-        // TODO - also handle case where we have a course, but not a script
+        // TODO:(bjvanminnen) - also handle case where we have a course, but not
+        // a script assigned, likely by figuring out the first script in that course
         if (section.script) {
           $scope.script_id = section.script.id;
         }
