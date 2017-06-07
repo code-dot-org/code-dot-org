@@ -42,6 +42,10 @@ const SessionAttendance = React.createClass({
     };
   },
 
+  componentWillMount() {
+    this.permission = new Permission();
+  },
+
   componentDidMount() {
     this.load();
     this.startRefreshInterval();
@@ -49,7 +53,6 @@ const SessionAttendance = React.createClass({
     this.isCSF = this.props.course === COURSE_CSF;
     this.showSectionMembership = !this.shouldUseNewAttendance && this.props.accountRequiredForAttendance;
     this.showPuzzlesCompleted = this.shouldUseNewAttendance && this.isCSF;
-    this.permission = new Permission();
   },
 
   componentWillUnmount() {
