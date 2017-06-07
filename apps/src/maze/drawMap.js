@@ -3,13 +3,20 @@ import tiles from './tiles';
 
 const SquareType = tiles.SquareType;
 
-export default function drawMap(svg, skin, subtype, wallMap) {
+// Height and width of the goal and obstacles.
+const MARKER_HEIGHT = 43;
+const MARKER_WIDTH = 50;
+
+export default function drawMap(svg, skin, subtype, wallMap, squareSize = 50) {
+  const MAZE_WIDTH = wallMap[0].length * squareSize;
+  const MAZE_HEIGHT = wallMap.length * squareSize;
+
   var x, y, tile;
 
   // Draw the outer square.
   var square = document.createElementNS(SVG_NS, 'rect');
-  square.setAttribute('width', Maze.MAZE_WIDTH);
-  square.setAttribute('height', Maze.MAZE_HEIGHT);
+  square.setAttribute('width', MAZE_WIDTH);
+  square.setAttribute('height', MAZE_HEIGHT);
   square.setAttribute('fill', '#F1EEE7');
   square.setAttribute('stroke-width', 1);
   square.setAttribute('stroke', '#CCB');
@@ -19,8 +26,8 @@ export default function drawMap(svg, skin, subtype, wallMap) {
     tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin.background);
-    tile.setAttribute('height', Maze.MAZE_HEIGHT);
-    tile.setAttribute('width', Maze.MAZE_WIDTH);
+    tile.setAttribute('height', MAZE_HEIGHT);
+    tile.setAttribute('width', MAZE_WIDTH);
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     svg.appendChild(tile);
@@ -33,8 +40,8 @@ export default function drawMap(svg, skin, subtype, wallMap) {
   pegmanClip.setAttribute('id', 'pegmanClipPath');
   var clipRect = document.createElementNS(SVG_NS, 'rect');
   clipRect.setAttribute('id', 'clipRect');
-  clipRect.setAttribute('width', Maze.PEGMAN_WIDTH);
-  clipRect.setAttribute('height', Maze.PEGMAN_HEIGHT);
+  clipRect.setAttribute('width', skin.pegmanWidth);
+  clipRect.setAttribute('height', skin.pegmanHeight);
   pegmanClip.appendChild(clipRect);
   svg.appendChild(pegmanClip);
 
@@ -44,8 +51,8 @@ export default function drawMap(svg, skin, subtype, wallMap) {
   pegmanIcon.setAttribute('class', 'pegman-location');
   pegmanIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     skin.avatar);
-  pegmanIcon.setAttribute('height', Maze.PEGMAN_HEIGHT);
-  pegmanIcon.setAttribute('width', Maze.PEGMAN_WIDTH * 21); // 49 * 21 = 1029
+  pegmanIcon.setAttribute('height', skin.pegmanHeight);
+  pegmanIcon.setAttribute('width', skin.pegmanWidth * 21); // 49 * 21 = 1029
   pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
   svg.appendChild(pegmanIcon);
 
@@ -65,8 +72,8 @@ export default function drawMap(svg, skin, subtype, wallMap) {
     finishMarker.setAttribute('id', 'finish');
     finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin.goalIdle);
-    finishMarker.setAttribute('height', Maze.MARKER_HEIGHT);
-    finishMarker.setAttribute('width', Maze.MARKER_WIDTH);
+    finishMarker.setAttribute('height', MARKER_HEIGHT);
+    finishMarker.setAttribute('width', MARKER_WIDTH);
     svg.appendChild(finishMarker);
   }
 
@@ -74,8 +81,8 @@ export default function drawMap(svg, skin, subtype, wallMap) {
   if (skin.hittingWallAnimation) {
     var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
     wallAnimationIcon.setAttribute('id', 'wallAnimation');
-    wallAnimationIcon.setAttribute('height', Maze.SQUARE_SIZE);
-    wallAnimationIcon.setAttribute('width', Maze.SQUARE_SIZE);
+    wallAnimationIcon.setAttribute('height', squareSize);
+    wallAnimationIcon.setAttribute('width', squareSize);
     wallAnimationIcon.setAttribute('visibility', 'hidden');
     svg.appendChild(wallAnimationIcon);
   }
@@ -87,15 +94,15 @@ export default function drawMap(svg, skin, subtype, wallMap) {
       if (Maze.map.getTile(y, x) === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
-        obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
-        obsIcon.setAttribute('width', Maze.MARKER_WIDTH * skin.obstacleScale);
+        obsIcon.setAttribute('height', MARKER_HEIGHT * skin.obstacleScale);
+        obsIcon.setAttribute('width', MARKER_WIDTH * skin.obstacleScale);
         obsIcon.setAttributeNS(
           'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
         obsIcon.setAttribute('x',
-          Maze.SQUARE_SIZE * (x + 0.5) -
+          squareSize * (x + 0.5) -
           obsIcon.getAttribute('width') / 2);
         obsIcon.setAttribute('y',
-          Maze.SQUARE_SIZE * (y + 0.9) -
+          squareSize * (y + 0.9) -
           obsIcon.getAttribute('height'));
         svg.appendChild(obsIcon);
       }
