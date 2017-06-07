@@ -29,7 +29,7 @@ const styles = {
   }
 };
 
-const CourseOverviewTopRow = React.createClass({
+const ScriptOverviewTopRow = React.createClass({
   propTypes: {
     professionalLearningCourse: PropTypes.bool,
     hasLevelProgress: PropTypes.bool.isRequired,
@@ -80,4 +80,4 @@ const CourseOverviewTopRow = React.createClass({
   }
 });
 
-export default CourseOverviewTopRow;
+export default ScriptOverviewTopRow;
