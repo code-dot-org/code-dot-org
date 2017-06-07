@@ -33,7 +33,7 @@ const WorkshopIndex = React.createClass({
     router: React.PropTypes.object.isRequired
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
   },
 
