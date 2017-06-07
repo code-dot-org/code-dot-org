@@ -1,3 +1,4 @@
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
@@ -25,6 +26,15 @@ const DEFAULT_MAP = [
 ];
 
 describe('studio', function () {
+
+  before(() => {
+    replaceOnWindow('appOptions', {});
+  });
+
+  after(() => {
+    restoreOnWindow('appOptions');
+  });
+
 
   describe('setSvgText', function () {
     let speechBubbleText;
@@ -192,7 +202,7 @@ describe('studio', function () {
   });
 
   describe('prepareForRemix', function () {
-    let newXml, oldXml, originalBlockly;
+    let newXml, oldXml;
     const level = {
       map: DEFAULT_MAP,
       spritesHiddenToStart: true,
@@ -210,8 +220,7 @@ describe('studio', function () {
       registerReducers({ pageConstants, instructions, instructionsDialog, runState });
       const skin = loadSkin(() => '', 'studio');
       const serializer = new XMLSerializer();
-      originalBlockly = window.Blockly;
-      window.Blockly = {
+      replaceOnWindow('Blockly', {
         Xml: {
           blockSpaceToDom() {
             return parseElement(oldXml);
@@ -234,7 +243,7 @@ describe('studio', function () {
           addChangeListener() {},
         },
         inject() {},
-      };
+      });
       Studio.init({
         level: level,
         skin,
@@ -257,8 +266,8 @@ describe('studio', function () {
       level.firstSpriteIndex = 1;
     });
 
-    after(function () {
-      window.Blockly = originalBlockly;
+    after(() => {
+      restoreOnWindow('Blockly');
     });
 
     it('does nothing if everything matches defaults', function () {
