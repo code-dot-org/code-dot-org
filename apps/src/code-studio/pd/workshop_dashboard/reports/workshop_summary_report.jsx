@@ -39,8 +39,11 @@ const WorkshopSummaryReport = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
+  },
+
+  componentDidMount() {
     this.load();
   },
 

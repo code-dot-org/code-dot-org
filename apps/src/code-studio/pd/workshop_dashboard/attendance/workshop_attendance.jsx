@@ -67,10 +67,13 @@ const WorkshopAttendance = React.createClass({
     return this.state.workshopState === 'Ended';
   },
 
+  componentWillMount() {
+    this.permission = new Permission();
+  },
+
   componentDidMount() {
     this.loadSummary();
     this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
-    this.permission = new Permission();
   },
 
   loadSummary() {

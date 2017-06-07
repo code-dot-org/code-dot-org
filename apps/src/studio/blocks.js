@@ -1295,6 +1295,52 @@ exports.install = function (blockly, blockInstallOptions) {
         spriteParam + ', ' + dirParam + ', ' + distParam + ');\n';
   };
 
+  blockly.Blocks.studio_moveOrientation = {
+    // Block for moving forward/backward
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.DIRECTIONS), 'DIR');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.moveTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_moveOrientation.DIRECTIONS =
+    [[msg.moveForward(), 'moveForward'],
+      [msg.moveBackward(), 'moveBackward']];
+
+  generator.studio_moveOrientation = function () {
+    // Generate JavaScript for moving forward/backward
+    var dir = this.getTitleValue('DIR');
+    return 'Studio.' + dir + '(\'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.studio_turnOrientation = {
+    // Block for turning left or right.
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.DIRECTIONS), 'DIR');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.turnTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_turnOrientation.DIRECTIONS =
+    [[msg.turnLeft() + ' \u21BA', 'turnLeft'],
+      [msg.turnRight() + ' \u21BB', 'turnRight']];
+
+  generator.studio_turnOrientation = function () {
+    // Generate JavaScript for turning left or right.
+    var dir = this.getTitleValue('DIR');
+    return 'Studio.' + dir + '(\'block_id_' + this.id + '\');\n';
+  };
+
   function onSoundSelected(soundValue) {
     var lowercaseSound = stripQuotes(soundValue).toLowerCase().trim();
 

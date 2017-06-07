@@ -256,7 +256,7 @@
   continue_learning_header: "ادامه یادگیری فراتر از یک ساعت"
   continue_learning_body: "گزینه های بسیاری وجود دارند.  شما می توانید آنلاین، یا
     در مدرسه محلی و یا دراردوگاه تابستانی به یادگیری ادامه دهید."
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Try Code.org's courses
   learn_next_level: "به مرحله بعدی برو"
   learn_online: "درس های آنلاین دیگری را امتحان کن"
   learn_classes: "پیدا کردن کلاس های محلی"
@@ -766,9 +766,9 @@
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -1905,7 +1905,7 @@
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
   header_home: Home
-  header_courses: Courses
+  header_courses: "مراحل"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1913,7 +1913,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "ساعت کد نویسی"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
