@@ -1,32 +1,28 @@
 ---
-title: CS Discoveries
+title: The Circuit Playground
 nav: educate_nav
 video_player: true
 theme: responsive
 ---
 
-# Our newest course: CS Discoveries #
-
-## <a name="what"></a>What is CS Discoveries?
-
-Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. 
-
-<div style="float:right; margin:20px 0px 20px 20px;">
-
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
-
-<i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
-
-</div>
+# The Circuit Playground
 
 
-### <a name="equity"></a>Designed with equity in mind
+The Circuit Playground is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in CS Discoveries Unit 6, Physical Computing.
+
+## <a name="how"></a>Programming with the Circuit Playground
+
+Being based on the Arduino means that there are many options for programming the Circuit Playground, including using the standard Arduino IDE. Code.org, however, has developed a special set of commands for <a href="/applab/">App Lab</a>, our block-to-text app development environment, called the Maker Toolkit. Using App Lab and the Maker Toolkit, students can quickly build apps that communicate with external hardware using the same language and environment they've already become comfortable with.
+
+### <a name="requirements"></a>Software Requirements
+
+One of our primary goals in integrating the Circuit Playground into CS Discoveries was to decrease the barriers that teachers often encounter attempting to teach physical computing 
 
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. It provides students opportunities to engage with culturally and personally relevant topics in a wide variety of contexts and aims to show all students that CS is for them.
 
 ### <a name="maker"></a>Focus on creation
 
-We know that giving students agency in their learning is a powerful tool for creating fun, engaging, and lasting learning experiences. CS Discoveries focuses on the skills that enable students to create and express themselves in a variety of contexts and media. Whether they are developing their own website, designing an app, building a game, or creating a physical computing device, students are empowered to bring their ideas to life.
+We know that giving students agency in their learning is a powerful tool for creating fun, engaging, and lasting learning experiences. CS Discoveries focuses on the skills that enable students to create and express themselves in a variety of contexts and media. Whether they are developing their own website, designing an app, building a game, or creating a physical computing device, students are empowered to bring their ideaghhhhhhh4rrggrs to life.
 
 ### <a name="pathway"></a>Completing a K-12 pathway
 
