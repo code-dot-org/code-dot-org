@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 
 const createProjectsStore = function () {
   return createStore(combineReducers({
-    ...selectedGallery
+    selectedGallery: selectedGallery
   }));
 };
 

@@ -5,7 +5,7 @@ import {registerReducers} from '@cdo/apps/redux';
 const TOGGLE_GALLERY = 'projectsModule/TOGGLE_GALLERY';
 
 // Reducer
-function selectedGallery(state, action) {
+export function selectedGallery(state, action) {
   state = state || 'PUBLIC';
   switch (action.type) {
     case TOGGLE_GALLERY:
@@ -22,6 +22,7 @@ function selectedGallery(state, action) {
  * @returns {{type: string, projectType: string}}
  */
 export function selectGallery(projectType) {
+  projectType = projectType || 'PUBLIC';
   return { type: TOGGLE_GALLERY, projectType: projectType };
 }
 
