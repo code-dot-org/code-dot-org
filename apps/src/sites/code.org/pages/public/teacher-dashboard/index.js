@@ -318,15 +318,20 @@ function main() {
       const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
       if (assignIdChanged) {
         const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
-        if (assignable.is_course) {
-          section.script = null;
-          section.course_id = assignable.id;
-        } else {
-          section.course_id = null;
-          section.script = {
-            id: assignable.id,
-            name: assignable.name
-          };
+        // update course/script assigned to section. Right now a section can only
+        // have one or the other, but that will change in th efuture.
+        section.script = null;
+        section.course_id = null;
+
+        if (assignable) {
+          if (assignable.is_course) {
+            section.course_id = assignable.id;
+          } else {
+            section.script = {
+              id: assignable.id,
+              name: assignable.name
+            };
+          }
         }
       }
 
