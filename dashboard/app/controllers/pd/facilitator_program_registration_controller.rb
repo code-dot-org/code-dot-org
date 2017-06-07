@@ -29,11 +29,15 @@ class Pd::FacilitatorProgramRegistrationController < ApplicationController
     end
 
     @script_data = {
-      options: Pd::FacilitatorProgramRegistration.options.camelize_keys.to_json,
-      attendanceDates: dates.camelize_keys.to_json,
-      teachercon: @teachercon,
-      course: Pd::FacilitatorProgramRegistration.course(current_user, @teachercon).to_json,
-      teacherconLocation: Pd::FacilitatorProgramRegistration::LOCATIONS[@teachercon - 1].to_json
+      props: {
+        options: Pd::FacilitatorProgramRegistration.options.camelize_keys,
+        requiredFields: Pd::FacilitatorProgramRegistration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/facilitator_program_registrations",
+        attendanceDates: dates.camelize_keys,
+        teachercon: @teachercon,
+        course: Pd::FacilitatorProgramRegistration.course(current_user, @teachercon),
+        teacherconLocation: Pd::FacilitatorProgramRegistration::LOCATIONS[@teachercon - 1]
+      }.to_json
     }
   end
 end
