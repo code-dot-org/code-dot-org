@@ -1,4 +1,3 @@
 %div{id: 'main-logo'}
-  %a{href: 'https://studio.code.org/home', id:'logo-link'}
-    %div{id: 'logo-container'}
-      = image_tag(image_url('logo.png'), id:'logo-img')
+  %div{id: 'logo-container'}
+    = link_to(image_tag('logo.png'), '/home', id:'logo-img')
