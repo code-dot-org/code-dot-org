@@ -64,7 +64,7 @@ class StorageApps
     JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, updatedAt: row[:updated_at])
   end
 
-  def publish(channel_id, type)
+  def publish(channel_id, type, user)
     owner, id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
@@ -74,7 +74,18 @@ class StorageApps
     update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    row[:published_at]
+    project = @table.where(id: id).first
+    project_value = project[:value] ? JSON.parse(project[:value]) : {}
+    {
+      channel: channel_id,
+      name: project_value['name'],
+      thumbnailUrl: project_value['thumbnailUrl'],
+      type: project[:project_type],
+      publishedAt: project[:published_at],
+      # For privacy reasons, include only the first initial of the student's name.
+      studentName: user && UserHelpers.initial(user[:name]),
+      studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
+    }
   end
 
   def unpublish(channel_id)
