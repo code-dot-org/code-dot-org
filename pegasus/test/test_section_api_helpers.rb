@@ -536,6 +536,7 @@ class SectionApiHelperTest < SequelTestCase
             user: {id: 15, user_type: 'teacher'},
             course_id: nil,
             script: {id: script_id},
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
