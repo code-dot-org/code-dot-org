@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import RecentCourses from './RecentCourses';
 import StudentResources from './StudentResources';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -37,7 +37,7 @@ const StudentHomepage = React.createClass({
           ref="userHero"
         />
 
-        <RecentCoursesCollapsible
+        <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           header={i18n.recentCourses()}

@@ -7,7 +7,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Resources for students',
-        description: `This is the StudentResources section that will be used on the student homepage.`,
+        description: `StudentResources that will be used on the student homepage.`,
         story: () => (
           <StudentResources/>
         )

@@ -1,15 +1,15 @@
 import React from 'react';
-import ManageSectionsCollapsible from './ManageSectionsCollapsible';
+import Sections from './Sections';
 
 export default storybook => {
   return storybook
-    .storiesOf('ManageSectionsCollapsible', module)
+    .storiesOf('Sections', module)
     .addStoryTable([
       {
-        name: 'Manage Sections - at least one section',
-        description: 'Manage Sections collapsible section for the teacher homepage that shows a table of sections',
+        name: 'Sections - at least one section',
+        description: 'shows a table of sections on the teacher homepage',
         story: () => (
-          <ManageSectionsCollapsible
+          <Sections
             sections={[
               {
                 name: "Algebra Period 1",
@@ -44,10 +44,10 @@ export default storybook => {
         )
       },
       {
-        name: 'Manage Sections - no sections yet',
-        description: 'Manage Sections collapsible section for the teacher homepage that shows a set up message if the teacher does not have any sections yet',
+        name: 'Sections - no sections yet',
+        description: 'shows a set up message if the teacher does not have any sections yet',
         story: () => (
-          <ManageSectionsCollapsible
+          <Sections
             sections={[]}
             codeOrgUrlPrefix = "http://code.org/"
           />
