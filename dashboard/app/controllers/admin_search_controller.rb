@@ -30,16 +30,12 @@ class AdminSearchController < ApplicationController
           # matched.
         end
         if teachers.first
-          array_of_student_ids = Follower.
-            where(user: teachers.first).pluck('student_user_id').to_a
+          array_of_student_ids = teachers.first.students.pluck(:id)
           users = users.where(id: array_of_student_ids)
         end
       end
       if params[:sectionFilter].present?
-        array_of_student_ids = Section.where(code: params[:sectionFilter]).
-          joins("INNER JOIN followers ON followers.section_id = sections.id").
-          pluck('student_user_id').
-          to_a
+        array_of_student_ids = Section.find_by_code(params[:sectionFilter]).students.pluck(:id)
         users = users.where(id: array_of_student_ids)
       end
 
