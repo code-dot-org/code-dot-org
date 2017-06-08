@@ -374,9 +374,9 @@ JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) 
 JSInterpreter.prototype.isProgramDone = function () {
   return this.executionError ||
       !this.interpreter ||
-      !this.interpreter.stateStack[0] ||
-      (this.interpreter.stateStack[0].node.type === 'Program' &&
-        this.interpreter.stateStack[0].done);
+      !this.interpreter.stateStack[this.interpreter.stateStack.length - 1] ||
+      (this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node.type === 'Program' &&
+        this.interpreter.stateStack[this.interpreter.stateStack.length - 1].done);
 };
 
 /**
@@ -530,10 +530,24 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     this.executionError = safeStepInterpreter(this);
     if (!this.executionError && this.interpreter.stateStack.length) {
-      var state = this.interpreter.stateStack[0], nodeType = state.node.type;
+      var state = this.interpreter.stateStack[this.interpreter.stateStack.length - 1], nodeType = state.node.type;
+
+      // Determine whether we are done executing a line of user code. This is detected by checking
+      // that one of the following conditions are true:
+      //   1. We've reached an "interstitial" node, which gets placed onto the stack
+      //      once an earlier expression has finished
+      //   2. The node on the stack has been explicitly marked as done by the interpreter
+      //   3. In the case of "update expression" nodes, like i++ or i--, the done state is tracked
+      //      in the doneLeft value, because the expression kind of looks like i = i + 1 which
+      //      has a left (i = ) and a right (i + 1) side, and the left side is where the assignment
+      //      actually takes place.
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
-      if (inUserCode) {
-        doneUserLine = doneUserLine || (state.done || this.atInterstitialNode);
+      if (inUserCode && !doneUserLine) {
+        doneUserLine = (
+          this.atInterstitialNode ||
+          state.done ||
+          (state.node.type === 'UpdateExpression' && state.doneLeft)
+        );
       }
 
       var stackDepth = this.interpreter.stateStack.length;
@@ -547,14 +561,14 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       }
       this.maxValidCallExpressionDepth = stackDepth;
 
-      if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+      if (inUserCode && this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
         this.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (this.paused) {
         // Store the first call expression stack depth seen while in this step operation:
-        if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+        if (inUserCode && this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node.type === "CallExpression") {
           if (typeof this.firstCallStackDepthThisStep === 'undefined') {
             this.firstCallStackDepthThisStep = stackDepth;
           }
@@ -680,7 +694,7 @@ JSInterpreter.getMemberExpressionName_ = function (node) {
  * @private
  */
 JSInterpreter.prototype.logStep_ = function () {
-  var state = this.interpreter.stateStack[0];
+  var state = this.interpreter.stateStack[this.interpreter.stateStack.length - 1];
   var node = state.node;
 
   if (!this.isOffsetInUserCode_(node.start)) {
@@ -787,8 +801,8 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
   var userCodeRow = -1;
-  if (this.interpreter.stateStack[0]) {
-    var node = this.interpreter.stateStack[0].node;
+  if (this.interpreter.stateStack[this.interpreter.stateStack.length - 1]) {
+    var node = this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node;
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
@@ -816,7 +830,7 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
   }
   var userCodeRow = -1;
   for (var i = 0; i < this.interpreter.stateStack.length; i++) {
-    var node = this.interpreter.stateStack[i].node;
+    var node = this.interpreter.stateStack[this.interpreter.stateStack.length - 1 - i].node;
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
@@ -998,7 +1012,7 @@ JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
  * Returns the current interpreter state object.
  */
 JSInterpreter.prototype.getCurrentState = function () {
-  return this.interpreter && this.interpreter.stateStack[0];
+  return this.interpreter && this.interpreter.stateStack[this.interpreter.stateStack.length - 1];
 };
 
 /**

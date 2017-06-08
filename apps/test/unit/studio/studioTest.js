@@ -1,6 +1,7 @@
-import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import sinon from 'sinon';
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
+import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
 import {singleton as StudioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
@@ -11,6 +12,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
+import * as codegen from '@cdo/apps/codegen';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
@@ -27,6 +29,15 @@ const DEFAULT_MAP = [
 ];
 
 describe('studio', function () {
+
+  before(() => {
+    replaceOnWindow('appOptions', {});
+  });
+
+  after(() => {
+    restoreOnWindow('appOptions');
+  });
+
 
   describe('setSvgText', function () {
     let speechBubbleText;
@@ -194,7 +205,7 @@ describe('studio', function () {
   });
 
   describe('prepareForRemix', function () {
-    let newXml, oldXml, originalBlockly;
+    let newXml, oldXml;
     const level = {
       map: DEFAULT_MAP,
       spritesHiddenToStart: true,
@@ -212,8 +223,7 @@ describe('studio', function () {
       registerReducers({ pageConstants, instructions, instructionsDialog, runState });
       const skin = loadSkin(() => '', 'studio');
       const serializer = new XMLSerializer();
-      originalBlockly = window.Blockly;
-      window.Blockly = {
+      replaceOnWindow('Blockly', {
         Xml: {
           blockSpaceToDom() {
             return parseElement(oldXml);
@@ -236,7 +246,7 @@ describe('studio', function () {
           addChangeListener() {},
         },
         inject() {},
-      };
+      });
       Studio.init({
         level: level,
         skin,
@@ -259,8 +269,8 @@ describe('studio', function () {
       level.firstSpriteIndex = 1;
     });
 
-    after(function () {
-      window.Blockly = originalBlockly;
+    after(() => {
+      restoreOnWindow('Blockly');
     });
 
     it('does nothing if everything matches defaults', function () {
@@ -382,7 +392,7 @@ describe('studio', function () {
       stubStudioApp();
       getContainedLevelResultStub =
         sinon.stub(codeStudioLevels, 'getContainedLevelResult')
-          .returns(containedLevelResult);
+             .returns(containedLevelResult);
       StudioApp().onFeedback = () => {};
     });
     afterEach(() => {
@@ -416,6 +426,25 @@ describe('studio', function () {
       Studio.displayFeedback();
 
       expect(displayFeedbackSpy.getCall(0).args[0].showFailureIcon).to.be.true;
+    });
+  });
+
+  describe("queueCallback method", () => {
+    beforeEach(() => {
+      Studio.interpreter = codegen.evalWithEvents({}, {}, '').interpreter;
+      Studio.eventHandlers = [];
+      Studio.setLevel({});
+    });
+
+    it("will call the given interpreter callback function with the given parameters", () => {
+      const cb = sinon.spy();
+      const interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
+        nativeFunc: cb,
+        interpreterFunc: Studio.interpreter,
+      }));
+      Studio.queueCallback(interpreterFunc, [1, 2, 3]);
+      expect(cb).to.have.been.calledOnce;
+      expect(cb).to.have.been.calledWith(1,2,3);
     });
   });
 });
