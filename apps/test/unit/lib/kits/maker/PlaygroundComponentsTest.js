@@ -694,6 +694,12 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledOnce;
     });
 
+    it('calls disable on the tempSensor', () => {
+      const spy = sinon.spy(components.tempSensor, 'disable');
+      destroyCircuitPlaygroundComponents(components);
+      expect(spy).to.have.been.calledOnce;
+    });
+
     it('calls stop on the accelerometer', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
