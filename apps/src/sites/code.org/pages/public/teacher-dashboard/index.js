@@ -75,9 +75,7 @@ function main() {
     course.is_course = true;
   });
 
-  // Just scripts, unless experiment is enabled
-  const valid_assignments = experiments.isEnabled('assignCourses') ?
-    valid_courses.concat(valid_scripts) : valid_scripts;
+  const valid_assignments = valid_courses.concat(valid_scripts);
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
