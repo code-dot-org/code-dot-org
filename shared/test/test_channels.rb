@@ -130,8 +130,8 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_and_unpublish_channel
-    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 14.years.ago.to_datetime})
-
+    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -191,7 +191,8 @@ class ChannelsTest < Minitest::Test
 
   def test_publish_permissions
     # only whitelisted project types can be published
-    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 14.years.ago.to_datetime})
+    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
     assert_can_publish('gamelab')
     assert_can_publish('artist')
@@ -208,7 +209,8 @@ class ChannelsTest < Minitest::Test
 
     # users under age 13 cannot publish applab, gamelab or weblab projects,
     # but can publish artist or playlab projects.
-    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 12.years.ago.to_datetime})
+    stub_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
     assert_cannot_publish('gamelab')
     assert_can_publish('artist')
