@@ -137,7 +137,7 @@ export default class JSInterpreter {
 
     if (!this.studioApp.hideSource) {
       var session = this.studioApp.editor.aceEditor.getSession();
-      this.isBreakpointRow = () => codegen.isAceBreakpointRow(session);
+      this.isBreakpointRow = (row) => codegen.isAceBreakpointRow(session, row);
     } else {
       this.isBreakpointRow = () => false;
     }
@@ -386,11 +386,11 @@ export default class JSInterpreter {
    * @return {boolean} true if program is complete (or an error has occurred).
    */
   isProgramDone() {
+    const topStackFrame = this.interpreter.peekStackFrame();
     return this.executionError ||
            !this.interpreter ||
-           !this.interpreter.stateStack[this.interpreter.stateStack.length - 1] ||
-           (this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node.type === 'Program' &&
-            this.interpreter.stateStack[this.interpreter.stateStack.length - 1].done);
+           !topStackFrame ||
+           (topStackFrame.node.type === 'Program' && topStackFrame.done);
   }
 
 
@@ -534,8 +534,8 @@ export default class JSInterpreter {
         this.logStep_();
       }
       this.executionError = safeStepInterpreter(this);
-      if (!this.executionError && this.interpreter.stateStack.length) {
-        var state = this.interpreter.stateStack[this.interpreter.stateStack.length - 1], nodeType = state.node.type;
+      if (!this.executionError && this.interpreter.getStackDepth()) {
+        var state = this.interpreter.peekStackFrame(), nodeType = state.node.type;
 
         // Determine whether we are done executing a line of user code. This is detected by checking
         // that one of the following conditions are true:
@@ -555,7 +555,7 @@ export default class JSInterpreter {
           );
         }
 
-        var stackDepth = this.interpreter.stateStack.length;
+        var stackDepth = this.interpreter.getStackDepth();
         // Remember the stack depths of call expressions (so we can implement 'step out')
 
         // Truncate any history of call expressions seen deeper than our current stack position:
@@ -566,14 +566,14 @@ export default class JSInterpreter {
         }
         this.maxValidCallExpressionDepth = stackDepth;
 
-        if (inUserCode && this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node.type === "CallExpression") {
+        if (inUserCode && this.interpreter.peekStackFrame().node.type === "CallExpression") {
           // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
           this.callExpressionSeenAtDepth[stackDepth] = true;
         }
 
         if (this.paused) {
           // Store the first call expression stack depth seen while in this step operation:
-          if (inUserCode && this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node.type === "CallExpression") {
+          if (inUserCode && this.interpreter.peekStackFrame().node.type === "CallExpression") {
             if (typeof this.firstCallStackDepthThisStep === 'undefined') {
               this.firstCallStackDepthThisStep = stackDepth;
             }
@@ -699,7 +699,7 @@ export default class JSInterpreter {
    * @private
    */
   logStep_() {
-    var state = this.interpreter.stateStack[this.interpreter.stateStack.length - 1];
+    var state = this.interpreter.peekStackFrame();
     var node = state.node;
 
     if (!this.isOffsetInUserCode_(node.start)) {
@@ -806,8 +806,8 @@ export default class JSInterpreter {
    */
   getUserCodeLine() {
     var userCodeRow = -1;
-    if (this.interpreter.stateStack[this.interpreter.stateStack.length - 1]) {
-      var node = this.interpreter.stateStack[this.interpreter.stateStack.length - 1].node;
+    if (this.interpreter.peekStackFrame()) {
+      var node = this.interpreter.peekStackFrame().node;
       // Adjust start/end by userCodeStartOffset since the code running
       // has been expanded vs. what the user sees in the editor window:
       var start = node.start - this.codeInfo.userCodeStartOffset;
@@ -834,8 +834,8 @@ export default class JSInterpreter {
       return -1;
     }
     var userCodeRow = -1;
-    for (var i = 0; i < this.interpreter.stateStack.length; i++) {
-      var node = this.interpreter.stateStack[this.interpreter.stateStack.length - 1 - i].node;
+    for (var i = 0; i < this.interpreter.getStackDepth(); i++) {
+      var node = this.interpreter.peekStackFrame(i).node;
       // Adjust start/end by userCodeStartOffset since the code running
       // has been expanded vs. what the user sees in the editor window:
       var start = node.start - this.codeInfo.userCodeStartOffset;
@@ -1017,7 +1017,7 @@ export default class JSInterpreter {
    * Returns the current interpreter state object.
    */
   getCurrentState() {
-    return this.interpreter && this.interpreter.stateStack[this.interpreter.stateStack.length - 1];
+    return this.interpreter && this.interpreter.peekStackFrame();
   }
 
   /**
@@ -1035,11 +1035,11 @@ export default class JSInterpreter {
     // part of the Interpreter constructor with a different interpreter's
     // scope)
     evalInterpreter.populateScope_(evalInterpreter.ast, currentScope);
-    evalInterpreter.stateStack = [{
+    evalInterpreter.setStack([{
       node: evalInterpreter.ast,
       scope: currentScope,
       thisExpression: currentScope
-    }];
+    }]);
     // Copy these properties directly into the evalInterpreter so the .isa()
     // method behaves as expected
     ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
