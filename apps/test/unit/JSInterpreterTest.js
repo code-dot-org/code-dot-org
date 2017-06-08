@@ -28,7 +28,7 @@ describe("The JSInterpreter class", function () {
   }
 
   function assertCurrentState(expected) {
-    var state = jsInterpreter.interpreter.stateStack[0];
+    var state = jsInterpreter.interpreter.stateStack[jsInterpreter.interpreter.stateStack.length - 1];
     assert.containSubset(state, expected);
   }
 

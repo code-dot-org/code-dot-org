@@ -5363,7 +5363,7 @@ Studio.queueCallback = function (callback, args) {
       state.value = state.arguments.pop();
     }
 
-    const depth = Studio.interpreter.stateStack.unshift(state);
+    const depth = Studio.interpreter.stateStack.push(state);
     Studio.interpreter.paused_ = false;
     while (Studio.interpreter.stateStack.length >= depth) {
       Studio.interpreter.step();

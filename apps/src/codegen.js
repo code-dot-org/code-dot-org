@@ -409,7 +409,7 @@ function createNativeInterpreterCallback(opts, intFunc) {
       state.value = state.arguments.pop();
     }
 
-    opts.interpreter.stateStack.unshift(state);
+    opts.interpreter.stateStack.push(state);
   };
 }
 
@@ -602,7 +602,7 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
  * (Called repeatedly after completing a step where the node was marked 'done')
  */
 exports.isNextStepSafeWhileUnwinding = function (interpreter) {
-  var state = interpreter.stateStack[0];
+  var state = interpreter.stateStack[interpreter.stateStack.length - 1];
   var type = state.node.type;
   if (state.done) {
     return true;
@@ -814,11 +814,11 @@ exports.selectCurrentCode = function (interpreter,
                                       editor,
                                       highlightClass) {
   var userCodeRow = -1;
-  if (interpreter && interpreter.stateStack[0]) {
-    var node = interpreter.stateStack[0].node;
+  if (interpreter && interpreter.stateStack[interpreter.stateStack.length - 1]) {
+    var node = interpreter.stateStack[interpreter.stateStack.length - 1].node;
 
     if (node.type === 'ForStatement') {
-      var mode = interpreter.stateStack[0].mode || 0, subNode;
+      var mode = interpreter.stateStack[interpreter.stateStack.length - 1].mode || 0, subNode;
       switch (mode) {
         case exports.ForStatementMode.INIT:
           subNode = node.init;
