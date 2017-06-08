@@ -42,11 +42,11 @@ function renderSectionProjects(sectionId) {
   });
 }
 
-function renderSectionsTable() {
+function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
 
   ReactDOM.render(
-    <SectionTable/>,
+    <SectionTable sections={sections}/>,
     element
   );
 }
@@ -231,7 +231,7 @@ function main() {
     // so do it using a custom event here. The call to listen for the custom
     // event must not be nested inside another deferred call or we might
     // miss the event.
-    $scope.$on('sections-table-rendered', renderSectionsTable);
+    // $scope.$on('sections-table-rendered', () => renderSectionsTable($scope.sections));
 
     $scope.sectionsLoaded = false;
 
@@ -244,6 +244,8 @@ function main() {
       $scope.sections.forEach(section => {
         section.assign_id = $scope.getAssignmentId(section);
       });
+      // TODO - eventually React should own this query
+      renderSectionsTable(sections);
       $scope.sectionsLoaded = true;
     });
 
