@@ -17,7 +17,7 @@ import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';

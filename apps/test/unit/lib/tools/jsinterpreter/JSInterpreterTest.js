@@ -1,8 +1,8 @@
-import {expect, assert} from '../util/configuredChai';
+import {expect, assert} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 describe("The JSInterpreter class", function () {
   var jsInterpreter;
