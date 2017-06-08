@@ -1,12 +1,12 @@
-var codegen = require('./codegen');
-var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
-var utils = require('./utils');
+var codegen = require('../../../codegen');
+var ObservableEventDEPRECATED = require('../../../ObservableEventDEPRECATED');
+var utils = require('../../../utils');
 var acorn = require('@code-dot-org/js-interpreter/acorn');
-import CustomMarshalingInterpreter from './lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import CustomMarshaler from './lib/tools/jsinterpreter/CustomMarshaler';
-import {getStore} from './redux';
+import {getStore} from '../../../redux';
+import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
+import CustomMarshaler from './CustomMarshaler';
 
-import { setIsDebuggerPaused } from './redux/runState';
+import { setIsDebuggerPaused } from '../../../redux/runState';
 
 export default class JSInterpreter {
   /**
