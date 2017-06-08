@@ -72,6 +72,7 @@ function main() {
   });
   valid_courses.forEach(function (course) {
     course.assign_id = courseAssignmentId(course.id);
+    course.is_course = true;
   });
 
   // Just scripts, unless experiment is enabled
@@ -224,7 +225,10 @@ function main() {
 
     $scope.sections = sectionsService.query();
 
-    $scope.sections.$promise.then(function ( sections ){
+    $scope.sections.$promise.then(sections => {
+      $scope.sections.forEach(section => {
+        section.assign_id = $scope.getAssignmentId(section);
+      });
       $scope.sectionsLoaded = true;
     });
 
@@ -257,12 +261,7 @@ function main() {
      * @returns {string}
      */
     $scope.getName = function (section) {
-      const assignId = $scope.getAssignmentId(section);
-      if (!assignId) {
-        return '';
-      }
-
-      const firstMatch = $scope.assignable_list.find(val => val.assign_id == assignId);
+      const firstMatch = $scope.assignable_list.find(val => val.assign_id == section.assign_id);
       return firstMatch ? firstMatch.name : null;
     };
 
@@ -297,16 +296,12 @@ function main() {
     };
 
     $scope.save = function (section) {
-      if (section.script) {
-        var script = null;
-        for (var i = 0; i < $scope.script_list.length; i++) {
-          if ($scope.script_list[i].id === section.script.id) {
-            script = $scope.script_list[i];
-            break;
-          }
-        }
-        if ($scope.hocAssignWarningEnabled &&
-            script.category === $scope.hocCategoryName) {
+      // Changing our dropdown changes the assign_id. If that assign_id has changed,
+      // that indicates we're updating our script/course assigment
+      const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
+      if (assignIdChanged) {
+        const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
+        if ($scope.hocAssignWarningEnabled && assignable.category === $scope.hocCategoryName) {
           $scope.sectionToSave = $scope.sections.indexOf(section);
           $('#assign-confirm').modal('show');
           return;
@@ -321,15 +316,37 @@ function main() {
     };
 
     $scope.send_save = function (section) {
+      const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
+      if (assignIdChanged) {
+        const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
+        // update course/script assigned to section. Right now a section can only
+        // have one or the other, but that will change in the future.
+        section.script = null;
+        section.course_id = null;
+
+        if (assignable) {
+          if (assignable.is_course) {
+            section.course_id = assignable.id;
+          } else {
+            section.script = {
+              id: assignable.id,
+              name: assignable.name
+            };
+          }
+        }
+      }
+
       if (section.id) { // update existing
         sectionsService.update({id: section.id}, section).$promise.then(
           function (result_section) {
+            result_section.assign_id = $scope.getAssignmentId(result_section);
             $scope.sections[$scope.sections.indexOf(section)] = result_section;
           }
         ).catch($scope.genericError);
       } else { // save new
         sectionsService.save(section).$promise.then(
           function (result_section) {
+            result_section.assign_id = $scope.getAssignmentId(result_section);
             $scope.sections[$scope.sections.indexOf(section)] = result_section;
           }
         ).catch($scope.genericError);
@@ -876,7 +893,11 @@ function main() {
     // fill in the course dropdown with the section's default course
     $scope.section.$promise.then(
       function (section) {
-        $scope.script_id = section.script.id;
+        // TODO:(bjvanminnen) - also handle case where we have a course, but not
+        // a script assigned, likely by figuring out the first script in that course
+        if (section.script) {
+          $scope.script_id = section.script.id;
+        }
       }
     );
 
