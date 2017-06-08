@@ -5358,6 +5358,11 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments.length > 0) {
+      state.value = state.arguments.pop();
+    }
+
     const depth = Studio.interpreter.stateStack.unshift(state);
     Studio.interpreter.paused_ = false;
     while (Studio.interpreter.stateStack.length >= depth) {
