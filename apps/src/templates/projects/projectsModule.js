@@ -46,7 +46,7 @@ function projectLists(state, action) {
   }
 }
 
-function hasOlderProjects(state, action) {
+export function hasOlderProjects(state, action) {
   // Whether there are more projects of each type on the server which are
   // older than the ones we have on the client.
   state = state || {
