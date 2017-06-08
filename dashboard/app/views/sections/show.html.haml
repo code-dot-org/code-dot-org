@@ -5,6 +5,7 @@
   var loginType = "#{escape_javascript @section.login_type}";
   var loginTypePicture = "#{Section::LOGIN_TYPE_PICTURE}";
   var loginTypeWord = "#{Section::LOGIN_TYPE_WORD}";
+  var pairingAllowed = #{@section.pairing_allowed};
 
   $(function() {
     // Select name.
@@ -42,7 +43,9 @@
       $('input#secret_picture_id').val($(this).attr('id'));
 
       // Show the pairing checkbox
-      $('#pairing_checkbox').show();
+      if (pairingAllowed) {
+        $('#pairing_checkbox').show();
+      }
 
       // Enable the login button.
       $('#login_button').prop('disabled', false);
@@ -51,7 +54,9 @@
     // Type something in password box.
     $('#secret_words').keyup(function() {
       // Show the pairing checkbox
-      $('#pairing_checkbox').show();
+      if (pairingAllowed) {
+        $('#pairing_checkbox').show();
+      }
 
       // Enable the login button.
       $('#login_button').prop('disabled', false);
