@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentBox from './ContentBox';
+import ContentContainer from './ContentContainer';
 import CourseCard from './CourseCard';
 
 const exampleCard = {
@@ -10,17 +10,17 @@ const exampleCard = {
   assignedSections: []
 };
 
-// ContentBox is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
+// ContentContainer is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
 
 export default storybook => {
   return storybook
-    .storiesOf('ContentBox', module)
+    .storiesOf('ContentContainer', module)
     .addStoryTable([
       {
         name: 'no link',
-        description: 'Example CollapsibleSection without a link',
+        description: 'Example ContentContainer without a link',
         story: () => (
-          <ContentBox
+          <ContentContainer
             heading="Recent Courses"
           >
             <CourseCard
@@ -37,17 +37,18 @@ export default storybook => {
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
-          </ContentBox>
+          </ContentContainer>
         )
       },
       {
         name: 'link',
-        description: `Example CollapsibleSection with a link`,
+        description: `Example ContentContainer with a link`,
         story: () => (
-          <ContentBox
+          <ContentContainer
             heading="Recent Courses"
             linkText="View all courses"
             link="link to see all of the courses"
+            showLink={true}
           >
             <CourseCard
               name={exampleCard.name}
@@ -63,7 +64,7 @@ export default storybook => {
               link={exampleCard.link}
               assignedSections={exampleCard.assignedSections}
             />
-        </ContentBox>
+        </ContentContainer>
         )
       },
     ]);

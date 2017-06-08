@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentBox from './ContentBox';
+import ContentContainer from './ContentContainer';
 import SectionsTable from './SectionsTable';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
@@ -15,7 +15,7 @@ const Sections = React.createClass({
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
-      <ContentBox
+      <ContentContainer
         heading={i18n.sectionsTitle()}
         linkText={i18n.viewAllSections()}
         link={editSectionsUrl}
@@ -24,13 +24,13 @@ const Sections = React.createClass({
       {sections.length > 0 && (
         <SectionsTable sections={sections}/>
       )}
-      {sections.length == 0 && (
+      {sections.length === 0 && (
         <SetUpMessage
           type="sections"
           codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
       )}
-    </ContentBox>
+    </ContentContainer>
     );
   }
 });

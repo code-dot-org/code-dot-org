@@ -1,13 +1,13 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
-import ContentBox from './ContentBox';
+import ContentContainer from './ContentContainer';
 import i18n from "@cdo/locale";
 
 const StudentResources = React.createClass({
 
   render() {
     return (
-      <ContentBox heading={i18n.resources()}>
+      <ContentContainer heading={i18n.resources()}>
         <ResourceCard
           title={i18n.courses()}
           description={i18n.coursesCardDescription()}
@@ -22,7 +22,7 @@ const StudentResources = React.createClass({
           buttonText={i18n.projectGalleryCardAction()}
           link="/gallery"
         />
-      </ContentBox>
+      </ContentContainer>
     );
   }
 });

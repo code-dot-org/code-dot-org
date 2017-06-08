@@ -2,6 +2,8 @@ import React from 'react';
 import FontAwesome from '../FontAwesome';
 import color from "../../util/color";
 
+// ContentContainer provides a full-width container which will render whatever children are passed to it. The component is useful for creating clear, sub-sections on a page because it was built to reuse the styling and funtionality of a heading and the option to show a link. You can find an example of its use on studio.code.org/home.
+
 const styles = {
   box: {
     width: 940,
@@ -15,9 +17,6 @@ const styles = {
     zIndex: 2,
     color: color.charcoal,
     width: 940
-  },
-  arrowIcon: {
-    paddingRight: 8
   },
   linkToViewAll: {
     color: color.teal,
@@ -49,7 +48,7 @@ const styles = {
   }
 };
 
-const ContentBox= React.createClass({
+const ContentContainer= React.createClass({
   propTypes: {
     children: React.PropTypes.oneOfType([
       React.PropTypes.node,
@@ -90,4 +89,4 @@ const ContentBox= React.createClass({
   }
 });
 
-export default ContentBox;
+export default ContentContainer;

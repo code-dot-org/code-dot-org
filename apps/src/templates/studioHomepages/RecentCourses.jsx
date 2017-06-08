@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ContentBox from './ContentBox';
+import ContentContainer from './ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
@@ -19,7 +19,7 @@ const RecentCourses = React.createClass({
     return (
       <div>
         {courses.length > 0 && (
-          <ContentBox
+          <ContentContainer
             heading={heading}
             linkText={i18n.viewAllCourses()}
             link="/courses"
@@ -34,17 +34,17 @@ const RecentCourses = React.createClass({
                 assignedSections={course.assignedSections}
               />
             )}
-          </ContentBox>
+          </ContentContainer>
         )}
         {courses.length === 0 && isTeacher && (
-          <ContentBox
+          <ContentContainer
             heading={heading}
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
           >
             <SetUpMessage type="courses"/>
-          </ContentBox>
+          </ContentContainer>
         )}
       </div>
     );

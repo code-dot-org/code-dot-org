@@ -1,6 +1,6 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
-import ContentBox from './ContentBox';
+import ContentContainer from './ContentContainer';
 import i18n from "@cdo/locale";
 
 const TeacherResources = React.createClass({
@@ -14,7 +14,7 @@ const TeacherResources = React.createClass({
     const volunteerUrl = `${codeOrgUrlPrefix}/volunteer/local`;
 
     return (
-      <ContentBox heading={i18n.resources()}>
+      <ContentContainer heading={i18n.resources()}>
         <ResourceCard
           title={i18n.teacherCommunity()}
           description={i18n.teacherCommunityDescription()}
@@ -43,7 +43,7 @@ const TeacherResources = React.createClass({
           buttonText={i18n.inspireStudents()}
           link={volunteerUrl}
         />
-      </ContentBox>
+      </ContentContainer>
     );
   }
 });
