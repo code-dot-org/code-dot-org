@@ -1,11 +1,13 @@
 import React from 'react';
 import msg from '@cdo/locale';
+import BonusLevels from './BonusLevels';
 import CreateSomething from './CreateSomething';
 
 export default class StageExtras extends React.Component {
   static propTypes = {
     stageNumber: React.PropTypes.number.isRequired,
     nextLevelPath: React.PropTypes.string.isRequired,
+    bonusLevels: React.PropTypes.array,
   }
 
   render() {
@@ -18,7 +20,10 @@ export default class StageExtras extends React.Component {
         <h1>{msg.extrasStageNumberCompleted({number: this.props.stageNumber})}</h1>
 
         <h2>{msg.extrasTryAChallenge()}</h2>
-        <p>{msg.extrasNoBonusLevels()}</p>
+        {this.props.bonusLevels ?
+          <BonusLevels bonusLevels={this.props.bonusLevels}/> :
+          <p>{msg.extrasNoBonusLevels()}</p>
+        }
 
         <h2>{msg.extrasCreateSomething()}</h2>
         <CreateSomething />

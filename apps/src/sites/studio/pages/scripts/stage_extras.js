@@ -9,6 +9,7 @@ ReactDOM.render(
   <StageExtras
     stageNumber={config.stageNumber}
     nextLevelPath={config.nextLevelPath}
+    bonusLevels={config.bonusLevels}
   />,
   document.querySelector('#stage-extras')
 );

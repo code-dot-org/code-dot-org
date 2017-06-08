@@ -264,8 +264,8 @@
   continue_learning_header: "￼Erweitern Sie Ihr Wissen"
   continue_learning_body: Es gibt unzählige Optionen. Du kannst online lernen, an
     einer örtlichen Schule oder in einem Feriencamp.
-  learn_code_studio: Try Code.org's courses
-  learn_next_level: Weiter zum nächsten Level
+  learn_code_studio: Try Code Studio courses
+  learn_next_level: Weiter zum nächsten Code Studio Kurs
   learn_online: Probiere andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
   learn_back_to_minecraft: Lerne mehr mit Minecraft
@@ -302,7 +302,7 @@
   stats_michael: '"Ich habe meine Schüler<b>noch niemals</b> so begeistert lernen
     sehen." – Michael Clark, Lehrer'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> kennenlernen"
-  studiobar_title_nolink: Entdecke das Code Studio
+  studiobar_title_nolink: Code Studio kennenlernen
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_hoc_title: Die Hour of Code
@@ -415,7 +415,7 @@
   homepage_slot_text_link_buy: Mitmachen
   homepage_slot_text_link_donate: Spende
   homepage_slot_text_link_shop: T-shirts, Hüte & mehr
-  homepage_header_codestudio: Kreationen der Schüler im Code Studio
+  homepage_header_codestudio: Code Studio Schülerprojekte
   homepage_header_donors: Code.org dankt seinen Unterstützern
   homepage_donors_seall: Alle anzeigen
   homepage_donors_donate: Spenden
@@ -761,7 +761,7 @@
   dashboard_assessments_view: 'Zeige Bewertungen in:'
   dashboard_assessments_none: Keine Bewertungen
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code.org to help your students
+    we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -1898,16 +1898,17 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Kurse
-  header_project_gallery: Projekt Galerie
-  header_sections: Sektionen
-  header_professional_learning: Professionelles Lernen
+  header_courses: Courses
+  header_project_gallery: Project Gallery
+  header_sections: Sections
+  header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Stunde des Codes
+  header_educate_hoc: Hour of Code
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1925,11 +1926,14 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Statistiken
+  header_stats: Stats
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
-  header_tutorials: Einführungen
-  header_documentation: Dokumentation
+  header_tutorials: Tutorials
+  header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
