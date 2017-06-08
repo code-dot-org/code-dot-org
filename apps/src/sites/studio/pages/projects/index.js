@@ -11,10 +11,6 @@ import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
 import { selectGallery } from '@cdo/apps/templates/projects/projectsModule';
 
 $(document).ready(() => {
-  // We need to see whether the experiment is enabled from angularProjects.js,
-  // which isn't part of the apps js build pipeline.
-  $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
-
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={getStore()}>
