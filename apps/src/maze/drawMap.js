@@ -77,16 +77,6 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
     svg.appendChild(finishMarker);
   }
 
-  // Add wall hitting animation
-  if (skin.hittingWallAnimation) {
-    var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
-    wallAnimationIcon.setAttribute('id', 'wallAnimation');
-    wallAnimationIcon.setAttribute('height', squareSize);
-    wallAnimationIcon.setAttribute('width', squareSize);
-    wallAnimationIcon.setAttribute('visibility', 'hidden');
-    svg.appendChild(wallAnimationIcon);
-  }
-
   // Add obstacles.
   var obsId = 0;
   for (y = 0; y < map.ROWS; y++) {

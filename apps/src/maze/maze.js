@@ -208,6 +208,16 @@ function createAnimations(svg) {
       numRowPegman: (skin.movePegmanAnimationFrameNumber || 9)
     });
   }
+
+  // Add wall hitting animation
+  if (skin.hittingWallAnimation) {
+    var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
+    wallAnimationIcon.setAttribute('id', 'wallAnimation');
+    wallAnimationIcon.setAttribute('height', Maze.SQUARE_SIZE);
+    wallAnimationIcon.setAttribute('width', Maze.SQUARE_SIZE);
+    wallAnimationIcon.setAttribute('visibility', 'hidden');
+    svg.appendChild(wallAnimationIcon);
+  }
 }
 
 /**
