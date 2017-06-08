@@ -751,53 +751,64 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.terms_of_service_version
   end
 
-  test 'sanitize_race_data sanitizes closed_dialog' do
-    @student.update!(races: %w(white closed_dialog))
-    assert_equal %w(closed_dialog), @student.reload.races
-    assert_equal 'closed_dialog', @student.read_attribute(:races)
-    assert_nil @student.urm
-  end
+  # TODO(asher): Uncomment these tests, as part of reenabling the sanitize_and_set_race_data
+  # callback, after completely eliminating the `races` serialized attribute.
 
-  test 'sanitize_race_data sanitizes too many races' do
-    @student.reload.update!(races: %w(white black hispanic asian american_indian hawaiian))
-    assert_equal %w(nonsense), @student.reload.races
-    assert_equal 'nonsense', @student.read_attribute(:races)
-    assert_nil @student.urm
-  end
+  #  test 'sanitize_race_data sanitizes closed_dialog' do
+  #    @student.update_columns(races: 'white,closed_dialog')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'closed_dialog', @student.read_attribute(:races)
+  #    assert_nil @student.urm
+  #  end
 
-  test 'sanitize_race_data sanitizes non-races' do
-    @student.update!(races: %w(not_a_race white))
-    assert_equal %w(nonsense), @student.reload.races
-    assert_equal 'nonsense', @student.read_attribute(:races)
-    assert_nil @student.urm
-  end
+  #  test 'sanitize_race_data sanitizes too many races' do
+  #    @student.update_columns(races: 'white,black,hispanic,asian,american_indian,hawaiian')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'nonsense', @student.read_attribute(:races)
+  #    assert_nil @student.urm
+  #  end
 
-  test 'sanitize_race_data noops valid responses' do
-    @student.update!(races: %w(black hispanic))
-    assert_equal %w(black hispanic), @student.reload.races
-    assert_equal 'black,hispanic', @student.read_attribute(:races)
-    assert @student.urm
-  end
+  #  test 'sanitize_race_data sanitizes non-races' do
+  #    @student.update_columns(races: 'not_a_race,white')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'nonsense', @student.read_attribute(:races)
+  #    assert_nil @student.urm
+  #  end
+
+  #  test 'sanitize_race_data noops valid responses' do
+  #    @student.update_columns(races: 'black,hispanic')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'black,hispanic', @student.read_attribute(:races)
+  #    assert @student.urm
+  #  end
 
   test 'urm_from_races with empty string' do
-    assert_nil User.urm_from_races('')
+    @student.update_columns(races: '')
+    assert_nil @student.urm_from_races
   end
 
   test 'urm_from_races with non-answer responses' do
     %w(opt_out nonsense closed_dialog).each do |response|
-      assert_nil User.urm_from_races(response)
+      @student.update_columns(races: response)
+      assert_nil @student.urm_from_races
     end
   end
 
   test 'urm_from_races with urm responses' do
     ['white,black', 'hispanic,hawaiian', 'american_indian'].each do |response|
-      assert User.urm_from_races(response)
+      @student.update_columns(races: response)
+      assert @student.urm_from_races
     end
   end
 
   test 'urm_from_races with non-urm response' do
     ['white', 'white,asian', 'asian'].each do |response|
-      refute User.urm_from_races(response)
+      @student.update_columns(races: response)
+      refute @student.urm_from_races
     end
   end
 
