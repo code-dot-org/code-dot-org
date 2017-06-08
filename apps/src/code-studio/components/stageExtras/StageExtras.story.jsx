@@ -9,7 +9,7 @@ export default storybook => {
       'This is the StageExtras component.',
       () => (
         <StageExtras
-          stageNumber="Test Stage"
+          stageNumber={1}
           nextLevelPath="#"
           bonusLevels={[
             {name: 'Sample Bonus Level'},
