@@ -273,7 +273,7 @@
   continue_learning_body: Il y a beaucoup d'options. Tu peux apprendre en ligne, dans
     une école près de chez toi ou à l'occasion d’un stage en été.
   learn_code_studio: Essayez les cours de Code Studio
-  learn_next_level: Essayez un autre cours de Code Studio
+  learn_next_level: Essaie un autre cours de Code Studio
   learn_online: Essaie d'autres cours en ligne
   learn_classes: Trouve des cours près de chez toi
   learn_back_to_minecraft: Continuer à apprendre avec Minecraft
@@ -1997,38 +1997,42 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  header_home: Accueil
-  header_courses: Cours
-  header_project_gallery: Galerie de projets
+  dashboard_sections_table_pairing_allowed: Pair Programming
+  header_home: Home
+  header_courses: Courses
+  header_project_gallery: Project Gallery
   header_sections: Sections
-  header_professional_learning: Apprentissage professionnel
-  header_educate_overview: Aperçu enseignant
-  header_educate_elementary: "École primaire"
-  header_educate_middle: Collège
-  header_educate_high: Lycée
-  header_educate_hoc: Heure de Code
-  header_educate_partner: Devenir partenaire
-  header_educate_beyond: Aller plus loin
-  header_educate_inspire: Inspirer un élève
-  header_educate_community: Communauté en ligne
-  header_educate_tools: Outils et vidéos
-  header_about_us: "À propos"
-  header_about_leadership: "Équipe de direction"
-  header_about_donors: Donateurs
-  header_about_partners: Partenaires
-  header_about_team: Toute l'équipe
-  header_about_news: Actualité
-  header_about_evaluation: "Évaluation"
-  header_about_jobs: Emplois
-  header_about_contact: Nous contacter
-  header_about_faqs: FAQ
-  header_learn: Apprendre
-  header_teach: Enseigner
-  header_stats: Statistiques
-  header_help_us: Nous aider
-  header_about: "À propos"
+  header_professional_learning: Professional Learning
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Elementary School
+  header_educate_middle: Middle School
+  header_educate_high: High School
+  header_educate_hoc: Hour of Code
+  header_educate_partner: Partner with Us
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspire a Student
+  header_educate_community: Online Community
+  header_educate_tools: Tools and Videos
+  header_about_us: About Us
+  header_about_leadership: Leadership
+  header_about_donors: Donors
+  header_about_partners: Partners
+  header_about_team: Full Team
+  header_about_news: Newsroom
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Contact Us
+  header_about_faqs: FAQs
+  header_learn: Learn
+  header_teach: Teach
+  header_stats: Stats
+  header_help_us: Help Us
+  header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
-  header_tutorials: Tutoriels
+  header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
