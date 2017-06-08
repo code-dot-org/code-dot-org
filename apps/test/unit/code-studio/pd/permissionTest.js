@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import Permission from '@cdo/apps/code-studio/pd/permission';
 
-describe("Tests for Permission class", () => {
+describe("Permission class", () => {
   const setGlobalPermissionString = (permissionString) => {
     window.dashboard = {
       workshop: {
@@ -10,7 +10,7 @@ describe("Tests for Permission class", () => {
     };
   };
 
-  it("Detects admin", () => {
+  it("Detects workshop admin", () => {
     setGlobalPermissionString("workshop_admin");
     const permission = new Permission();
     expect(permission.isWorkshopAdmin).to.be.true;
