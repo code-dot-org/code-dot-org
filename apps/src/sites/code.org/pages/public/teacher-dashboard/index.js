@@ -377,7 +377,7 @@ function main() {
     };
 
     $scope.new_section = function () {
-      $scope.sections.unshift({editing: true, login_type: 'word'});
+      $scope.sections.unshift({editing: true, login_type: 'word', pairing_allowed: true});
     };
   }]);
 
