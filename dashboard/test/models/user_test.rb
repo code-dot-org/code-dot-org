@@ -1606,14 +1606,14 @@ class UserTest < ActiveSupport::TestCase
   test 'do not show race interstitial to user accounts that have already entered race information' do
     mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
-    student.races = %w(white black)
+    student.update_columns(races: 'white,black')
     refute student.show_race_interstitial?('ignored_ip')
   end
 
   test 'do not show race interstitial to user accounts that have closed the dialog already' do
     mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
-    student.races = %w(closed_dialog)
+    student.update_columns(races: 'closed_dialog')
     refute student.show_race_interstitial?('ignored_ip')
   end
 
