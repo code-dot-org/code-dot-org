@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
-import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/PublicGallery';
+import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
-import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
-import { selectGallery } from '@cdo/apps/templates/projects/projectsModule';
+import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import { selectGallery, setProjectLists } from '@cdo/apps/templates/projects/projectsModule';
 
 $(document).ready(() => {
   // We need to see whether the experiment is enabled from angularProjects.js,
@@ -32,10 +32,11 @@ $(document).ready(() => {
     url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
     dataType: 'json'
   }).done(projectLists => {
+    getStore().dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
       <Provider store={getStore()}>
-        <PublicGallery initialProjectLists={projectLists}/>
+        <PublicGallery />
       </Provider>,
       publicGallery);
   });
