@@ -39,10 +39,16 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "instructions_important": "false",
-    "teacher_markdown": "!!!tip\r\n\r\n\tThis level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code."
+    "teacher_markdown": "!!!tip\r\n\r\n\tThis level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code.",
+    "display_name": "Velocity and the Counter Pattern",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 16:51:25 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -28,7 +28,7 @@ describe("The JSInterpreter class", function () {
   }
 
   function assertCurrentState(expected) {
-    var state = jsInterpreter.interpreter.stateStack[0];
+    var state = jsInterpreter.interpreter.stateStack[jsInterpreter.interpreter.stateStack.length - 1];
     assert.containSubset(state, expected);
   }
 
@@ -39,9 +39,7 @@ describe("The JSInterpreter class", function () {
   }
 
   function verifyStepSequence(expectedStates) {
-    expectedStates.forEach(function (expected) {
-      stepAndVerify(expected);
-    });
+    expectedStates.forEach(stepAndVerify);
   }
 
   describe("the constructor", () => {

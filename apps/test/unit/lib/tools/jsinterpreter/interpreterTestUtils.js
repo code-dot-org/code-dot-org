@@ -8,7 +8,6 @@ export function attachAssertToInterpreter(interpreter, scope, assertion) {
     'assert',
     interpreter.createNativeFunction((truthy, message) => {
       if (truthy !== interpreter.TRUE) {
-        console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
         throw new Error("failed assertion: " + assertion);
       }
     })
