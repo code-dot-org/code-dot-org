@@ -1935,38 +1935,42 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  header_home: Inicio
-  header_courses: cursos
-  header_project_gallery: Lista de Proyectos
+  dashboard_sections_table_pairing_allowed: Pair Programming
+  header_home: Home
+  header_courses: Courses
+  header_project_gallery: Project Gallery
   header_sections: Sections
-  header_professional_learning: Aprendizaje Profesional
-  header_educate_overview: Resumen del docente
-  header_educate_elementary: Primaria
-  header_educate_middle: Secundaria
-  header_educate_high: Escuela Superior
-  header_educate_hoc: Hora del código
-  header_educate_partner: Asociese con nosotros
-  header_educate_beyond: Más allá de Code.org
-  header_educate_inspire: Inspire a un estudiante
-  header_educate_community: Comunidad en línea
-  header_educate_tools: Herramientas y videos
-  header_about_us: Acerca de nosotros
-  header_about_leadership: Liderazgo
-  header_about_donors: Donantes
-  header_about_partners: Asociados
-  header_about_team: Equipo completo
-  header_about_news: Centro de noticias
-  header_about_evaluation: Evaluación
-  header_about_jobs: Empleos
-  header_about_contact: Contáctanos
-  header_about_faqs: Preguntas Frecuentes
-  header_learn: Aprenda
-  header_teach: Enseña
-  header_stats: Estadísticas
-  header_help_us: Ayudenos
-  header_about: Acerca de
+  header_professional_learning: Professional Learning
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Elementary School
+  header_educate_middle: Middle School
+  header_educate_high: High School
+  header_educate_hoc: Hour of Code
+  header_educate_partner: Partner with Us
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspire a Student
+  header_educate_community: Online Community
+  header_educate_tools: Tools and Videos
+  header_about_us: About Us
+  header_about_leadership: Leadership
+  header_about_donors: Donors
+  header_about_partners: Partners
+  header_about_team: Full Team
+  header_about_news: Newsroom
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Contact Us
+  header_about_faqs: FAQs
+  header_learn: Learn
+  header_teach: Teach
+  header_stats: Stats
+  header_help_us: Help Us
+  header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

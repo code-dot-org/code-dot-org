@@ -248,8 +248,8 @@
   continue_learning_header: Continue learning beyond One Hour
   continue_learning_body: There are lots of options.  You can learn online, or at
     a local school, or summer camp.
-  learn_code_studio: Try Code.org's courses
-  learn_next_level: Try another Code.org course
+  learn_code_studio: Try Code Studio courses
+  learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
   learn_classes: Find local classes
   learn_back_to_minecraft: Keep learning with Minecraft
@@ -414,7 +414,7 @@
   homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_header_codestudio: Code.org student creations
+  homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
   homepage_donors_donate: Donate
@@ -752,9 +752,9 @@
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code.org.
+    These are done outside of Code Studio.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code.org to help your students
+    we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -779,7 +779,7 @@
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Curriculum Standards
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
@@ -1840,6 +1840,7 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1875,3 +1876,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

@@ -1851,8 +1851,9 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: kurzy
+  header_courses: Courses
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1860,7 +1861,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hodina kódu
+  header_educate_hoc: Hour of Code
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1878,7 +1879,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Statistiky
+  header_stats: Stats
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1886,3 +1887,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
