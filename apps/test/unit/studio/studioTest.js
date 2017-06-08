@@ -1,3 +1,5 @@
+import sinon from 'sinon';
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
@@ -9,6 +11,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
+import * as codegen from '@cdo/apps/codegen';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
@@ -25,6 +28,15 @@ const DEFAULT_MAP = [
 ];
 
 describe('studio', function () {
+
+  before(() => {
+    replaceOnWindow('appOptions', {});
+  });
+
+  after(() => {
+    restoreOnWindow('appOptions');
+  });
+
 
   describe('setSvgText', function () {
     let speechBubbleText;
@@ -192,7 +204,7 @@ describe('studio', function () {
   });
 
   describe('prepareForRemix', function () {
-    let newXml, oldXml, originalBlockly;
+    let newXml, oldXml;
     const level = {
       map: DEFAULT_MAP,
       spritesHiddenToStart: true,
@@ -210,8 +222,7 @@ describe('studio', function () {
       registerReducers({ pageConstants, instructions, instructionsDialog, runState });
       const skin = loadSkin(() => '', 'studio');
       const serializer = new XMLSerializer();
-      originalBlockly = window.Blockly;
-      window.Blockly = {
+      replaceOnWindow('Blockly', {
         Xml: {
           blockSpaceToDom() {
             return parseElement(oldXml);
@@ -234,7 +245,7 @@ describe('studio', function () {
           addChangeListener() {},
         },
         inject() {},
-      };
+      });
       Studio.init({
         level: level,
         skin,
@@ -257,8 +268,8 @@ describe('studio', function () {
       level.firstSpriteIndex = 1;
     });
 
-    after(function () {
-      window.Blockly = originalBlockly;
+    after(() => {
+      restoreOnWindow('Blockly');
     });
 
     it('does nothing if everything matches defaults', function () {
@@ -358,6 +369,25 @@ describe('studio', function () {
       const newDom = parseElement(newXml);
       expect(newDom.querySelector('block[type="when_run"]')
           .getAttribute('uservisible')).to.not.equal("false");
+    });
+  });
+
+  describe("queueCallback method", () => {
+    beforeEach(() => {
+      Studio.interpreter = codegen.evalWithEvents({}, {}, '').interpreter;
+      Studio.eventHandlers = [];
+      Studio.setLevel({});
+    });
+
+    it("will call the given interpreter callback function with the given parameters", () => {
+      const cb = sinon.spy();
+      const interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
+        nativeFunc: cb,
+        interpreterFunc: Studio.interpreter,
+      }));
+      Studio.queueCallback(interpreterFunc, [1, 2, 3]);
+      expect(cb).to.have.been.calledOnce;
+      expect(cb).to.have.been.calledWith(1,2,3);
     });
   });
 });
