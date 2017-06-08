@@ -823,6 +823,7 @@ en:
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
     cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
