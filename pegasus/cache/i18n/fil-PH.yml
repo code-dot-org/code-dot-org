@@ -256,7 +256,7 @@
   continue_learning_header: Magpatuloy matuto ng lampas sa Isang Oras
   continue_learning_body: Maraming mga pagpipilian. Maaari kang matuto online, o sa
     lokal na eskwelahan, o summer camp.
-  learn_code_studio: Try Code.org's courses
+  learn_code_studio: Try Code Studio courses
   learn_next_level: Magpatuloy sa sunod ne level
   learn_online: Subukan ang ibang pang mga kurso online
   learn_classes: Hanapin ang lokal na mga klase
@@ -295,7 +295,7 @@
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     -  Frank Martinez, Teacher'
   studiobar_title: Tingnan ang <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore Code.org's courses
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Mga kurso pang elementary
   studiobar_elementary_body: Ang tatlong bagong kurso namin para sa K&#8209;5
   studiobar_hoc_title: Ang Hour of Code
@@ -354,8 +354,8 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code.org
-  homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
+  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Ang Hour of Code
   homepage_slot_text_frozen: Frozen kasama sina Anna at Elsa
@@ -423,7 +423,7 @@
   homepage_slot_text_link_buy: Sumali
   homepage_slot_text_link_donate: Magbigay ng donasyon
   homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_header_codestudio: Code Studio mga gawa ng estudyante
+  homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Pinasasalamatan ng Code.org ang mag tagasuporta nito
   homepage_donors_seall: See all
   homepage_donors_donate: Mag-donate
@@ -764,9 +764,9 @@
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code.org.
+    These are done outside of Code Studio.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code.org to help your students
+    we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -1870,38 +1870,42 @@
   infinity_shortcode: inf
   playlab_shortcode: i-play
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Mga kurso
+  header_courses: Courses
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Overview ng Nagtuturo
-  header_educate_elementary: Mababang Paaralan
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Elementary School
   header_educate_middle: Middle School
-  header_educate_high: Mataas na Paaralan
+  header_educate_high: High School
   header_educate_hoc: Hour of Code
-  header_educate_partner: Makipag-partner sa Amin
-  header_educate_beyond: Pagkatapos ng Code.org
-  header_educate_inspire: Magbigay Inspirasyon sa Estudyante
-  header_educate_community: Online na Komunidad
-  header_educate_tools: Mga Tools at Videos
-  header_about_us: Tungkol sa Amin
-  header_about_leadership: Pamumuno
-  header_about_donors: Mga Donor
-  header_about_partners: Mga Partner
-  header_about_team: Buong Team
+  header_educate_partner: Partner with Us
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspire a Student
+  header_educate_community: Online Community
+  header_educate_tools: Tools and Videos
+  header_about_us: About Us
+  header_about_leadership: Leadership
+  header_about_donors: Donors
+  header_about_partners: Partners
+  header_about_team: Full Team
   header_about_news: Newsroom
-  header_about_evaluation: Ebalwasyon
-  header_about_jobs: Mga Trabaho
-  header_about_contact: Kontakin Kami
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Contact Us
   header_about_faqs: FAQs
-  header_learn: Matuto
-  header_teach: Magturo
+  header_learn: Learn
+  header_teach: Teach
   header_stats: Stats
-  header_help_us: Tulungan Kami
-  header_about: Tungkol
+  header_help_us: Help Us
+  header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
