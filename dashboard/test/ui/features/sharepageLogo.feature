@@ -1,5 +1,5 @@
-@no_mobile
 @as_student
+@no_mobile
 Feature: Lab share page logo
 
   Scenario: Select the logo on an applab share page while logged in and visit the homepage
@@ -9,7 +9,6 @@ Feature: Lab share page logo
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
     And I wait for the page to fully load
-    And element "#logo-img" has css property "border-radius" equal to "0px"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -21,7 +20,6 @@ Feature: Lab share page logo
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
     And I wait for the page to fully load
-    And element "#logo-img" has css property "border-radius" equal to "0px"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -33,7 +31,6 @@ Feature: Lab share page logo
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
     And I wait for the page to fully load
-    And element "#logo-img" has css property "border-radius" equal to "0px"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -45,7 +42,6 @@ Feature: Lab share page logo
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
     And I wait for the page to fully load
-    And element "#logo-img" has css property "border-radius" equal to "0px"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -60,7 +56,6 @@ Feature: Lab share page logo
     And I am on "http://studio.code.org/users/sign_out"
     And I reload the page
     And I navigate to the last shared URL
-    And element "#logo-img" has css property "border-radius" equal to "0px"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://code.org/"
@@ -75,7 +70,6 @@ Feature: Lab share page logo
     And I am on "http://studio.code.org/users/sign_out"
     And I reload the page
     And I navigate to the last shared URL
-    And element "#logo-img" has css property "border-radius" equal to "0px"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://code.org/"
