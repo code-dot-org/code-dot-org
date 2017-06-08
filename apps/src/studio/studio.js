@@ -2745,7 +2745,7 @@ Studio.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
@@ -2806,7 +2806,7 @@ Studio.onReportComplete = function (response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
-  displayFeedback();
+  Studio.displayFeedback();
 };
 
 var registerEventHandler = function (handlers, name, func) {
