@@ -338,7 +338,7 @@ class DashboardSection
     course_id = params[:course_id] && valid_course_id?(params[:course_id]) ?
       params[:course_id].to_i : nil
     stage_extras = params[:stage_extras] ? params[:stage_extras] : false
-    pairing_allowed = params[:pairing_allowed]
+    pairing_allowed = params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
     created_at = DateTime.now
 
     row = nil
