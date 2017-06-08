@@ -317,6 +317,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_nil row[:grade]
           assert !row[:code].nil?
           assert_equal false, row[:stage_extras]
+          assert_equal true, row[:pairing_allowed]
         end
       end
 
@@ -337,6 +338,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_nil row[:grade]
           assert !row[:code].nil?
           assert_equal false, row[:stage_extras]
+          assert_equal true, row[:pairing_allowed]
         end
       end
 
@@ -357,6 +359,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_nil row[:grade]
           assert !row[:code].nil?
           assert_equal false, row[:stage_extras]
+          assert_equal true, row[:pairing_allowed]
         end
       end
 
@@ -377,6 +380,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_nil row[:grade]
           refute_nil row[:code]
           assert_equal false, row[:stage_extras]
+          assert_equal true, row[:pairing_allowed]
         end
       end
 
@@ -398,6 +402,7 @@ class SectionApiHelperTest < SequelTestCase
           assert_nil row[:grade]
           refute_nil row[:code]
           assert_equal false, row[:stage_extras]
+          assert_equal true, row[:pairing_allowed]
         end
       end
     end
@@ -419,6 +424,7 @@ class SectionApiHelperTest < SequelTestCase
             id: section_id,
             user: {id: 15, user_type: 'teacher'},
             script: {id: script_id},
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -444,6 +450,7 @@ class SectionApiHelperTest < SequelTestCase
             id: section_id,
             user: {id: 15, user_type: 'teacher'},
             course_id: course_id,
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -471,6 +478,7 @@ class SectionApiHelperTest < SequelTestCase
             user: {id: 15, user_type: 'teacher'},
             course_id: course_id,
             script: {id: script_id},
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -498,6 +506,7 @@ class SectionApiHelperTest < SequelTestCase
             id: section_id,
             user: {id: 15, user_type: 'teacher'},
             course_id: course_id,
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)

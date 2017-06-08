@@ -56,6 +56,8 @@ content-type: text/ng-template
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'stage_extras'"}= I18n.t('dashboard_sections_table_stage_extras')
       %th.manage-th
+        %a{href: "", "ng-click" => "order = 'pairing_allowed'"}= I18n.t('dashboard_sections_table_pairing_allowed')
+      %th.manage-th
         %a{href: "", "ng-click" => "order = 'students.length'"}= I18n.t('dashboard_sections_table_students')
       %th.manage-th= I18n.t('dashboard_sections_table_code')
       %th.manage-th
@@ -89,6 +91,10 @@ content-type: text/ng-template
         %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
         %span{"ng-show" => "section.editing"}
           %input{"ng-model" => "section.stage_extras", type: "checkbox"}/
+      %td
+        %span{"ng-hide" => "section.editing"} {{section.pairing_allowed ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
+        %span{"ng-show" => "section.editing"}
+          %input{"ng-model" => "section.pairing_allowed", type: "checkbox"}/
       %td {{section.students.length}}
       %td
         {{section.code}}
