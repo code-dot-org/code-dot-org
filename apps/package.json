@@ -143,7 +143,7 @@
     "newrelic": "^1.27.2",
     "node-sass": "^4.0.0",
     "phantomjs-prebuilt": "^2.1.14",
-    "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.0",
+    "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.1",
     "progress-bar-webpack-plugin": "^1.8.0",
     "pusher-js": "3.2.1",
     "radium": "0.18.1",
