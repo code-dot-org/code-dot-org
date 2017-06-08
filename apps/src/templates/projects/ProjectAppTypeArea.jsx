@@ -41,7 +41,7 @@ const styles = {
 
 const NUM_PROJECTS_TO_ADD = 12;
 
-export const ProjectAppTypeArea = React.createClass({
+const ProjectAppTypeArea = React.createClass({
   propTypes: {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
@@ -194,6 +194,6 @@ export const ProjectAppTypeArea = React.createClass({
   }
 });
 
-export const ConnectedProjectAppTypeArea = connect((state, ownProps) => ({
+export default connect((state, ownProps) => ({
   hasOlderProjects: state.hasOlderProjects[ownProps.labKey]
 }), { addOlderProjects, setHasOlderProjects })(ProjectAppTypeArea);
