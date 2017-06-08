@@ -512,6 +512,18 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.first.try(:start)
   end
 
+  def workshop_ending_date
+    sessions.last.try(:start)
+  end
+
+  def workshop_date_range_string
+    if workshop_starting_date == workshop_ending_date
+      workshop_starting_date.strftime('%B %e, %Y')
+    else
+      "#{workshop_starting_date.strftime('%B %e, %Y')} - #{workshop_ending_date.strftime('%B %e, %Y')}"
+    end
+  end
+
   # @return [String] url for this workshop in the workshop dashboard
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
