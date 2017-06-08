@@ -34,7 +34,7 @@ gem 'google_drive', '~> 1.0.0'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
-gem 'redis', '~> 3.3.1'
+gem 'redis', '~> 3.3.3'
 # Using commit ref until maintainer publishes a new version
 # Ref: https://github.com/cheald/redis-slave-read/pull/2
 gem 'redis-slave-read', require: false, github: 'cheald/redis-slave-read', ref: '370d5da2b71f795d8145fcf89c0648f866a125a6'
