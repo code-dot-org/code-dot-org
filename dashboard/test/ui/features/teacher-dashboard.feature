@@ -77,7 +77,7 @@ Feature: Using the teacher dashboard
 
     When I am on "http://studio.code.org/projects/gamelab/new"
     And I wait for the page to fully load
-    # Since apps remember text mode preference, game lab is already in text mode
+    And I switch to text mode
     And I append text to droplet "\nfill('orange');\nellipse(200,200,400,400);"
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
