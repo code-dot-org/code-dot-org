@@ -143,16 +143,16 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @param {!Object} obj Data object.
    * @param {*} name Name of property.
    * @param {*} value New property value.
-   * @param {boolean} opt_fixed Unchangeable property if true.
-   * @param {boolean} opt_nonenum Non-enumerable property if true.
+   * @param {Object=} opt_descriptor Optional descriptor object.
+   * @return {!Interpreter.Object|undefined} Returns a setter function if one
+   *     needs to be called, otherwise undefined.
    * @override
    */
   setProperty(
     obj,
     name,
     value,
-    opt_fixed,
-    opt_nonenum
+    opt_descriptor
   ) {
     name = name.toString();
     if (obj.isCustomMarshal) {
@@ -164,7 +164,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       if (nativeParent) {
         nativeParent[name] = codegen.marshalInterpreterToNative(this, value);
       } else {
-        return super.setProperty(obj, name, value, opt_fixed, opt_nonenum);
+        return super.setProperty(obj, name, value, opt_descriptor);
       }
     }
   }
@@ -175,6 +175,24 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    */
   setPropertyWithoutCustomMarshaling(...args) {
     return super.setProperty(...args);
+  }
+
+  step() {
+    const state = this.stateStack[this.stateStack.length - 1];
+    // Program nodes always have end=0 for some reason (acorn related).
+    // The Interpreter.step method assumes that a falsey state.node.end value means
+    // the interpreter is inside polyfill code, because it strips all location information from ast nodes for polyfill code.
+    // This means the interpreter will sometimes step more often than necessary. This is a problem for us when breakpoints
+    // are turned on because the interpreter can step over nodes that we need to check before they get stepped, resulting
+    // in an infinite loop.
+    // See this line in the interpreter code which introduced this behavior:
+    //   https://github.com/NeilFraser/JS-Interpreter/commit/a4ded3ed1de7960cda9177d1bacb6a2526440d14#diff-966ad2ec9f775b3820dd37b4d36b650aR116
+    // TODO: push a fix upstream that checks state.node.end === undefined so the interpreter
+    // doesn't step unnecessarily for Program nodes.
+    if (state && state.node.type === 'Program') {
+      state.node.end = 1;
+    }
+    return super.step();
   }
 
 
@@ -237,12 +255,11 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @override
    */
   setValue(left, value, declarator) {
-    if (left.length) {
-      var obj = left[0];
-      var prop = left[1];
-      this.setProperty(obj, prop, value);
+    if (left instanceof Array) {
+      return super.setValue(left, value);
     } else {
       this.setValueToScope(left, value, declarator);
+      return undefined;
     }
   }
 
@@ -254,11 +271,11 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @override
    */
   stepVariableDeclarator() {
-    var state = this.stateStack[0];
+    var state = this.stateStack[this.stateStack.length - 1];
     var node = state.node;
     if (node.init && !state.done) {
       state.done = true;
-      this.stateStack.unshift({node: node.init});
+      this.stateStack.push({node: node.init});
       return;
     }
     if (!this.hasProperty(this, node.id.name) || node.init) {
@@ -267,7 +284,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         this.setValue(this.createPrimitive(node.id.name), value, true);
       }
     }
-    this.stateStack.shift();
+    this.stateStack.pop();
   }
 
 };

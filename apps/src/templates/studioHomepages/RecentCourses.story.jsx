@@ -1,15 +1,15 @@
 import React from 'react';
-import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import RecentCourses from './RecentCourses';
 
 export default storybook => {
   return storybook
-    .storiesOf('RecentCoursesCollapsible', module)
+    .storiesOf('RecentCourses', module)
     .addStoryTable([
       {
         name: "Recent Courses - no courses yet",
         description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
-          <RecentCoursesCollapsible
+          <RecentCourses
             courses={[]}
             showAllCoursesLink={true}
             heading="Courses"
@@ -19,9 +19,9 @@ export default storybook => {
       },
       {
         name: 'Recent Courses - 1 course ',
-        description: `Collapsible section that holds Recent Courses when the teacher has sections enrolled in only 1 course.`,
+        description: ` Recent Courses when the teacher has sections enrolled in only 1 course.`,
         story: () => (
-          <RecentCoursesCollapsible
+          <RecentCourses
             courses= {[{
               name: "Play Lab",
               description: "Create a story or make a game with Play Lab!",
@@ -38,7 +38,7 @@ export default storybook => {
         name: 'Recent Courses - 2 courses ',
         description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
         story: () => (
-          <RecentCoursesCollapsible
+          <RecentCourses
             courses= {[
               {
                 name: "Play Lab",
@@ -63,7 +63,7 @@ export default storybook => {
         name: 'Recent Courses - 3 courses ',
         description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
         story: () => (
-          <RecentCoursesCollapsible
+          <RecentCourses
             courses= {[
               {
                 name: "Play Lab",
@@ -94,7 +94,7 @@ export default storybook => {
         name: 'Recent Courses - 4 courses ',
         description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
         story: () => (
-          <RecentCoursesCollapsible
+          <RecentCourses
             courses= {[
               {
                 name: "Play Lab",

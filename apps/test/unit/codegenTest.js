@@ -38,9 +38,6 @@ describe("codegen", function () {
             'assert',
             interpreter.createNativeFunction((truthy, message) => {
               if (truthy !== interpreter.TRUE) {
-                console.log(
-                  interpreter.stateStack[interpreter.stateStack.length - 1]
-                );
                 throw new Error(message);
               }
             })
@@ -390,7 +387,17 @@ describe("codegen", function () {
 
     describe('when dontMarshal=false and nativeCallsBackInterpreter=true', () => {
       runWithOptions(
-        'var result = memberFunc(1,2, function(newResult) { result = newResult; })',
+        `
+          var otherResult;
+          var result = memberFunc(
+            1,
+            2,
+            function(newResult, newOtherResult) {
+              result = newResult;
+              otherResult = newOtherResult;
+            }
+          )
+        `,
         () => ({
           dontMarshal: false,
           nativeFunc: sinon.stub().returns(6),
@@ -414,9 +421,13 @@ describe("codegen", function () {
       });
 
       describe("when the interpreter function passed to the native func is called", () => {
-        beforeEach(() => options.nativeFunc.firstCall.args[2]("a new result"));
+        let returnToInterpreter;
+        beforeEach(() => {
+          returnToInterpreter = options.nativeFunc.firstCall.args[2];
+        });
 
         it("will call the interpreter function the next time the interpreter is run", () => {
+          returnToInterpreter("a new result");
           result = interpreter.getProperty(interpreter.globalScope, 'result');
           expect(result).to.be.an.instanceOf(Interpreter.Primitive);
           expect(result.toNumber()).to.equal(6);
@@ -424,6 +435,24 @@ describe("codegen", function () {
           result = interpreter.getProperty(interpreter.globalScope, 'result');
           expect(result).to.be.an.instanceOf(Interpreter.Primitive);
           expect(result.toString()).to.equal("a new result");
+        });
+
+        it("will marshal all the arguments that were passed", () => {
+          returnToInterpreter("a new result", "another result");
+          interpreter.run();
+          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
+          expect(result.toString()).to.equal("a new result");
+          result = interpreter.getProperty(interpreter.globalScope, 'otherResult');
+          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
+          expect(result.toString()).to.equal("another result");
+        });
+
+        it("will marshall no arguments if none were passed", () => {
+          returnToInterpreter();
+          interpreter.run();
+          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          expect(result).to.equal(interpreter.UNDEFINED);
         });
       });
     });
