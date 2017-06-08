@@ -137,7 +137,7 @@ export default class JSInterpreter {
 
     if (!this.studioApp.hideSource) {
       var session = this.studioApp.editor.aceEditor.getSession();
-      this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
+      this.isBreakpointRow = () => codegen.isAceBreakpointRow(session);
     } else {
       this.isBreakpointRow = () => false;
     }
@@ -203,20 +203,24 @@ export default class JSInterpreter {
           // properties that recurse over and over...
           var wrapper = codegen.makeNativeMemberFunction({
             interpreter: interpreter,
-            nativeFunc: this.nativeGetCallback.bind(this),
+            nativeFunc: this.nativeGetCallback,
             maxDepth: 5
           });
-          interpreter.setProperty(scope,
-                                  'getCallback',
-                                  interpreter.createNativeFunction(wrapper));
+          interpreter.setProperty(
+            scope,
+            'getCallback',
+            interpreter.createNativeFunction(wrapper)
+          );
 
           wrapper = codegen.makeNativeMemberFunction({
             interpreter: interpreter,
-            nativeFunc: this.nativeSetCallbackRetVal.bind(this),
+            nativeFunc: this.nativeSetCallbackRetVal,
           });
-          interpreter.setProperty(scope,
-                                  'setCallbackRetVal',
-                                  interpreter.createNativeFunction(wrapper));
+          interpreter.setProperty(
+            scope,
+            'setCallbackRetVal',
+            interpreter.createNativeFunction(wrapper)
+          );
         }
       );
       // We initialize with an empty program so that all of our global functions
@@ -269,7 +273,7 @@ export default class JSInterpreter {
    * that contains an interpreted callback function (stored in "fn") and,
    * optionally, callback arguments (stored in "arguments")
    */
-  nativeGetCallback() {
+  nativeGetCallback = () => {
     this.startedHandlingEvents = true;
     var retVal = this.eventQueue.shift();
     if (typeof retVal === "undefined") {
@@ -278,7 +282,7 @@ export default class JSInterpreter {
     return retVal;
   }
 
-  nativeSetCallbackRetVal(retVal) {
+  nativeSetCallbackRetVal = (retVal) => {
     if (this.eventQueue.length === 0) {
       // If nothing else is in the event queue, then store this return value
       // away so it can be returned in the native event handler
