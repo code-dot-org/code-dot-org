@@ -245,7 +245,18 @@ function main() {
         section.assign_id = $scope.getAssignmentId(section);
       });
       // TODO - eventually React should own this query
-      renderSectionsTable(sections);
+      renderSectionsTable(sections.map(s => ({
+        id: s.id,
+        name: s.name,
+        loginType: s.login_type,
+        grade: s.grade,
+        stageExtras: s.stage_extras,
+        pairingAllowed: s.pairing_allowed,
+        numStudents: s.students.length,
+        code: s.code,
+        assignmentName: $scope.getName(s),
+        assignmentPath: $scope.getPath(s)
+      })));
       $scope.sectionsLoaded = true;
     });
 
