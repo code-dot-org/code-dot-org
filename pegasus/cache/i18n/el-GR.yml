@@ -283,7 +283,7 @@
   continue_learning_body: "Υπάρχουν πολλές επιλογές.  Μπορείτε να μάθετε σε απευθείας
     σύνδεση (on-line), ή σε ένα τοπικό σχολείο, ή σε θερινό σχολείο."
   learn_code_studio: "Δοκιμάστε μαθήματα του Code Studio"
-  learn_next_level: "Συνεχίστε στο επόμενο επίπεδο"
+  learn_next_level: "Δοκιμάστε ένα άλλο μάθημα στο Code Studio"
   learn_online: "Δοκιμάστε τα άλλα μαθήματα online"
   learn_classes: "Βρείτε τάξεις κοντά σας"
   learn_back_to_minecraft: "Εξακολουθήστε να μαθαίνετε με το Minecraft"
@@ -329,7 +329,8 @@
   studiobar_flappy_title: Flappy κώδικας
   studiobar_flappy_body: "Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy"
   studiobar_teacher_title: "Φτιαγμένο για εκπαιδευτικούς"
-  studiobar_teacher_body: "Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας"
+  studiobar_teacher_body: "Παρουσιάστε το Στούντιο Κώδικα (Code Studio) στην τάξη
+    σας"
   studiobar_frozen_title: "Ώρα του Κώδικα"
   studiobar_frozen_body: "Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
     και την Έλσα"
@@ -802,7 +803,7 @@
   dashboard_assessments_view: "Δείτε τις αξιολογήσεις σε:"
   dashboard_assessments_none: "Δεν υπάρχουν αξιολογήσεις"
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code.org to help your students
+    we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -2014,8 +2015,9 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: "Τες"
+  header_courses: Courses
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2023,7 +2025,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "Ώρα του Κώδικα"
+  header_educate_hoc: Hour of Code
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -2049,3 +2051,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

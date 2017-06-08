@@ -1846,6 +1846,7 @@
   infinity_shortcode: inf
   playlab_shortcode: Main
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1881,3 +1882,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
