@@ -54,7 +54,7 @@
     "all_animations_single_frame": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
