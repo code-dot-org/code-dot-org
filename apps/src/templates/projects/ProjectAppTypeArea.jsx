@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
 import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
@@ -40,7 +41,7 @@ const styles = {
 
 const NUM_PROJECTS_TO_ADD = 12;
 
-const ProjectAppTypeArea = React.createClass({
+export const ProjectAppTypeArea = React.createClass({
   propTypes: {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
@@ -193,6 +194,6 @@ const ProjectAppTypeArea = React.createClass({
   }
 });
 
-export default connect((state, ownProps) => ({
+export const ConnectedProjectAppTypeArea = connect((state, ownProps) => ({
   hasOlderProjects: state.hasOlderProjects[ownProps.labKey]
 }), { addOlderProjects, setHasOlderProjects })(ProjectAppTypeArea);
