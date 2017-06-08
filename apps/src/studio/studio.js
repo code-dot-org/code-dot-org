@@ -79,18 +79,18 @@ var showDebugInfo = false;
 /**
  * Create a namespace for the application.
  */
-var Studio = module.exports;
+let Studio = module.exports;
 
 Studio.keyState = {};
 Studio.gesturesObserved = {};
 Studio.btnState = {};
 
-var ButtonState = {
+const ButtonState = {
   UP: 0,
   DOWN: 1
 };
 
-var ArrowIds = {
+const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
@@ -103,20 +103,20 @@ Studio.GameStates = {
   OVER: 2
 };
 
-var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
+const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
 
-var EdgeClassNames = [
+const EdgeClassNames = [
   'top',
   'left',
   'bottom',
   'right'
 ];
 
-var level;
-var skin;
+let level;
+let skin;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -5358,7 +5358,12 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = Studio.interpreter.stateStack.unshift(state);
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments.length > 0) {
+      state.value = state.arguments.pop();
+    }
+
+    const depth = Studio.interpreter.stateStack.push(state);
     Studio.interpreter.paused_ = false;
     while (Studio.interpreter.stateStack.length >= depth) {
       Studio.interpreter.step();
@@ -6295,3 +6300,9 @@ var checkFinished = function () {
 
   return false;
 };
+
+if (IN_UNIT_TEST) {
+  module.exports.setLevel = (newLevel) => {
+    level = newLevel;
+  };
+}
