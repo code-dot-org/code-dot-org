@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherCourses from './TeacherCourses';
-import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
@@ -84,7 +84,7 @@ const Courses = React.createClass({
         )}
 
         {courses && courses.length > 0 && (
-          <RecentCoursesCollapsible
+          <RecentCourses
             courses={courses}
             showAllCoursesLink={false}
             heading={i18n.myCourses()}
