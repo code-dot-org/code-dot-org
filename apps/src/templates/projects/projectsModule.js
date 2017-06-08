@@ -21,7 +21,7 @@ export function selectedGallery(state, action) {
   }
 }
 
-function projectLists(state, action) {
+export function projectLists(state, action) {
   // A map from project type to array of projects, e.g.:
   //   {
   //     applab: [{...}, {...}, {...}]
