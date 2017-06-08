@@ -49,6 +49,7 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
+  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -2746,7 +2747,7 @@ Studio.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
@@ -2770,6 +2771,8 @@ var displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
+    const showFailureIcon = studioApp().hasContainedLevels &&
+      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2791,7 +2794,8 @@ var displayFeedback = function () {
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting
+      disablePrinting: level.disablePrinting,
+      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -2804,7 +2808,7 @@ Studio.onReportComplete = function (response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
-  displayFeedback();
+  Studio.displayFeedback();
 };
 
 var registerEventHandler = function (handlers, name, func) {
@@ -3337,7 +3341,8 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
+      (!studioApp().hasContainedLevels || getValidatedResult())) {
     Studio.playSound({ soundName: 'win' });
   } else {
     Studio.playSound({ soundName: 'failure' });

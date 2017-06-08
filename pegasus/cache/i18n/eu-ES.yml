@@ -254,7 +254,7 @@
   continue_learning_header: Jarraitu ordubetetik haratago ikasten
   continue_learning_body: Aukera asko daude. Online ikas dezakezu, edo gertuko eskola
     batean, edo udaleku batean.
-  learn_code_studio: Try Code.org's courses
+  learn_code_studio: Try Code Studio courses
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
@@ -756,9 +756,9 @@
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code.org.
+    These are done outside of Code Studio.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code.org to help your students
+    we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
@@ -1872,16 +1872,17 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Mailak
-  header_project_gallery: Proiektuen galeria
+  header_courses: Courses
+  header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Kode Ordua
+  header_educate_hoc: Hour of Code
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1907,3 +1908,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

@@ -5,9 +5,9 @@
   'no': 'No'
   select_language: Selecciona tu idioma
   upgrade_ie_message: Code.org pronto eliminará el soporte para Internet Explorer
-    8, 9 y 10. Por favor actualícese a un navegador moderno.
+    8, 9 y 10. Por favor actualicese a un navegador moderno.
   upgrade_ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet
-    Explorer 8, 9 y 10. Por favor actualícese a un navegador moderno.
+    Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
@@ -50,7 +50,7 @@
   hoc2014_everyone: Todos
   hoc2014_support: Apóyalo ▾
   hoc2014_whatishoc: "¿Qué es la Hora de Programación?"
-  csedweek_map_header: "世界中で # CSEdWeek / Hour of Code のイベント"
+  csedweek_map_header: "# CSEdWeek / Eventos sobre Hora de Code en el mundo"
   csedweek_map_signup: Registra tu evento
   csedweek_map_search_placeholder: Busca eventos sobre Hora de Code
   csedweek_map_search_search: Buscar
@@ -257,11 +257,11 @@
   used_infrequent_updates: Sólo se utiliza para actualizaciones poco frecuentes
   privacy_practices_children: Consulta nuestras políticas de privacidad para niños
   petition_thankyou: Gracias por firmar la petición
-  continue_learning_header: 1 時間以上の学習を続けましょう
+  continue_learning_header: Sigue aprendiendo más allá de Una Hora
   continue_learning_body: Hay muchas opciones. Puedes aprender en línea, en una escuela
     local o en un campamento de verano.
   learn_code_studio: Pruebe los cursos de Code Studio
-  learn_next_level: Intente otro curso de Code Studio
+  learn_next_level: Continuar al siguiente nivel
   learn_online: Prueba otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
   learn_back_to_minecraft: "Продолжаем учиться с Minecraft"
@@ -408,13 +408,13 @@
   homepage_slot_text_link_fullcurriculum: Ver nuestro currículum completo
   homepage_slot_text_link_pd: Desarrollo profesional
   homepage_slot_text_title_advocates: Defensores
-  homepage_slot_text_blurb_advocates: Apoye la diversidad en la computación
+  homepage_slot_text_blurb_advocates: Apoye nuestro trabajo
   homepage_slot_text_link_stats: Ver las estadísticas
   homepage_slot_text_link_buy: Involucrarse
   homepage_slot_text_link_donate: Haga una donación
   homepage_slot_text_link_shop: Camisetas, sombreros y más
-  homepage_header_codestudio: Creaciones de los estudiantes de Code Studio
-  homepage_header_donors: Code.orgはサポートしてくださる皆様に感謝致します。
+  homepage_header_codestudio: Creaciones de los estudiante de Code Studio
+  homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
   contact_form_topic_student: Soy un estudiante
@@ -592,8 +592,8 @@
     Aprende más</a> sobre cómo organizar tu propio evento Hora de Code y encontrando
     un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.
   volunteer_engineer_submission_update_information: Actualiza tu información
-  volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants
-    sur la carte de localisation des bénévoles
+  volunteer_engineer_submission_header_shared: Información compartida con docentes
+    en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
   volunteer_engineer_submission_field_company: Empresa (o Universidad)
@@ -619,7 +619,8 @@
     Informática y cómo te gustaría participar como voluntario con docentes locales.
   volunteer_engineer_submission_field_description_placeholder: Descripción de experiencia
     y/o participación
-  volunteer_engineer_submission_header_private: "非公開として共有されない情報"
+  volunteer_engineer_submission_header_private: La información se mantiene en privado
+    y nunca es compartida
   volunteer_engineer_submission_field_email: Dirección de correo electrónico
   volunteer_engineer_submission_field_email_desc: Tu dirección de correo electrónico
     nunca será compartida, pero te enviaremos solicitudes enviadas por docentes.
@@ -657,8 +658,7 @@
     de tecnología
   volunteer_engineer_submission_experience_university_student_or_researcher: Alumno
     actual de Universidad (o investigador)
-  volunteer_engineer_submission_experience_software_professional: Ingeniero de software
-    o especialista técnico
+  volunteer_engineer_submission_experience_software_professional: Profesional en software
   volunteer_engineer_submission_distance_8: 5 kilómetros
   volunteer_engineer_submission_distance_16: 10 kilómetros
   volunteer_engineer_submission_distance_24: 15 kilómetros
@@ -796,7 +796,7 @@
   dashboard_navigation_view_assessments_surveys: Evaluaciones/Encuestas
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
-  dashboard_navigation_lesson_plans_resources: Lecciones y recursos
+  dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
   dashboard_navigation_view_stats: Estadísticas
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
@@ -931,7 +931,7 @@
   dashboard_curriculum_middle_title: Recursos del educador para Secundaria
   dashboard_curriculum_high_title: Recursos del educador para Bachillerato
   dashboard_lesson_plans: Planes de lecciones
-  dashboard_view_all_lesson_plans: Descargar curriculum completo para los cursos 1-4
+  dashboard_view_all_lesson_plans: Ver todos los planes de estudio
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
@@ -987,8 +987,7 @@
   dashboard_sections_account_creation_question: "¿Quién crea la cuenta del estudiante?"
   dashboard_sections_password_question: ¿Qué usan los estudiantes como "contraseña"?
   dashboard_sections_picture_account_creation: Una foto asignada por Code.org
-  dashboard_sections_word_account_creation: Un par de palabras simple asignada por
-    Code.org
+  dashboard_sections_word_account_creation: Una palabra simple asignada por Code.org
   dashboard_sections_sign_in_question: "¿Dónde se registran los estudiantes?"
   dashboard_sections_sign_in_unique: Una página web única listada en la pestaña de
     "Gestión de estudiantes"
@@ -1043,7 +1042,7 @@
   carousel_heading_third_party: Tutoriales realizados por terceros
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Guías disponibles en inglés
-  carousel_heading_beginners: Tutoriales de socio para grados K-8
+  carousel_heading_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_javascript: Guías que enseñan JavaScript
   carousel_heading_beyond_javascript: Tutoriales para aprender JavaScript
@@ -1925,38 +1924,42 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
-  header_home: Inicio
-  header_courses: cursos
-  header_project_gallery: Lista de Proyectos
-  header_sections: Secciones
-  header_professional_learning: Aprendizaje Profesional
-  header_educate_overview: Resumen del docente
-  header_educate_elementary: Escuela primaria
-  header_educate_middle: Secundaria
-  header_educate_high: Escuela Superior
-  header_educate_hoc: Hora del Código
-  header_educate_partner: Asociese con nosotros
-  header_educate_beyond: Más allá de Code.org
-  header_educate_inspire: Inspire a un estudiante
-  header_educate_community: Comunidad en línea
-  header_educate_tools: Herramientas y videos
-  header_about_us: Acerca de nosotros
-  header_about_leadership: Liderazgo
-  header_about_donors: Donantes
-  header_about_partners: Asociados
-  header_about_team: Equipo completo
-  header_about_news: Centro de noticias
-  header_about_evaluation: Evaluación
-  header_about_jobs: Empleos
-  header_about_contact: Contáctanos
-  header_about_faqs: Preguntas Frecuentes
-  header_learn: Aprenda
-  header_teach: Enseña
-  header_stats: Estadísticas
-  header_help_us: Ayudenos
-  header_about: Acerca de
+  dashboard_sections_table_pairing_allowed: Pair Programming
+  header_home: Home
+  header_courses: Courses
+  header_project_gallery: Project Gallery
+  header_sections: Sections
+  header_professional_learning: Professional Learning
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Elementary School
+  header_educate_middle: Middle School
+  header_educate_high: High School
+  header_educate_hoc: Hour of Code
+  header_educate_partner: Partner with Us
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspire a Student
+  header_educate_community: Online Community
+  header_educate_tools: Tools and Videos
+  header_about_us: About Us
+  header_about_leadership: Leadership
+  header_about_donors: Donors
+  header_about_partners: Partners
+  header_about_team: Full Team
+  header_about_news: Newsroom
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Contact Us
+  header_about_faqs: FAQs
+  header_learn: Learn
+  header_teach: Teach
+  header_stats: Stats
+  header_help_us: Help Us
+  header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
