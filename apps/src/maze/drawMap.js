@@ -35,38 +35,40 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
 
   subtype.drawMapTiles(svg);
 
-  // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
-  var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
-  pegmanClip.setAttribute('id', 'pegmanClipPath');
-  var clipRect = document.createElementNS(SVG_NS, 'rect');
-  clipRect.setAttribute('id', 'clipRect');
-  clipRect.setAttribute('width', skin.pegmanWidth);
-  clipRect.setAttribute('height', skin.pegmanHeight);
-  pegmanClip.appendChild(clipRect);
-  svg.appendChild(pegmanClip);
+  if (subtype.start) {
+    // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
+    var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
+    pegmanClip.setAttribute('id', 'pegmanClipPath');
+    var clipRect = document.createElementNS(SVG_NS, 'rect');
+    clipRect.setAttribute('id', 'clipRect');
+    clipRect.setAttribute('width', skin.pegmanWidth);
+    clipRect.setAttribute('height', skin.pegmanHeight);
+    pegmanClip.appendChild(clipRect);
+    svg.appendChild(pegmanClip);
 
-  // Add pegman.
-  var pegmanIcon = document.createElementNS(SVG_NS, 'image');
-  pegmanIcon.setAttribute('id', 'pegman');
-  pegmanIcon.setAttribute('class', 'pegman-location');
-  pegmanIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skin.avatar);
-  pegmanIcon.setAttribute('height', skin.pegmanHeight);
-  pegmanIcon.setAttribute('width', skin.pegmanWidth * 21); // 49 * 21 = 1029
-  pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
-  svg.appendChild(pegmanIcon);
+    // Add pegman.
+    var pegmanIcon = document.createElementNS(SVG_NS, 'image');
+    pegmanIcon.setAttribute('id', 'pegman');
+    pegmanIcon.setAttribute('class', 'pegman-location');
+    pegmanIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin.avatar);
+    pegmanIcon.setAttribute('height', skin.pegmanHeight);
+    pegmanIcon.setAttribute('width', skin.pegmanWidth * 21); // 49 * 21 = 1029
+    pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
+    svg.appendChild(pegmanIcon);
 
-  var pegmanFadeoutAnimation = document.createElementNS(SVG_NS, 'animate');
-  pegmanFadeoutAnimation.setAttribute('id', 'pegmanFadeoutAnimation');
-  pegmanFadeoutAnimation.setAttribute('attributeType', 'CSS');
-  pegmanFadeoutAnimation.setAttribute('attributeName', 'opacity');
-  pegmanFadeoutAnimation.setAttribute('from', 1);
-  pegmanFadeoutAnimation.setAttribute('to', 0);
-  pegmanFadeoutAnimation.setAttribute('dur', '1s');
-  pegmanFadeoutAnimation.setAttribute('begin', 'indefinite');
-  pegmanIcon.appendChild(pegmanFadeoutAnimation);
+    var pegmanFadeoutAnimation = document.createElementNS(SVG_NS, 'animate');
+    pegmanFadeoutAnimation.setAttribute('id', 'pegmanFadeoutAnimation');
+    pegmanFadeoutAnimation.setAttribute('attributeType', 'CSS');
+    pegmanFadeoutAnimation.setAttribute('attributeName', 'opacity');
+    pegmanFadeoutAnimation.setAttribute('from', 1);
+    pegmanFadeoutAnimation.setAttribute('to', 0);
+    pegmanFadeoutAnimation.setAttribute('dur', '1s');
+    pegmanFadeoutAnimation.setAttribute('begin', 'indefinite');
+    pegmanIcon.appendChild(pegmanFadeoutAnimation);
+  }
 
-  if (Maze.finish_ && skin.goalIdle) {
+  if (subtype.finish && skin.goalIdle) {
     // Add finish marker.
     var finishMarker = document.createElementNS(SVG_NS, 'image');
     finishMarker.setAttribute('id', 'finish');

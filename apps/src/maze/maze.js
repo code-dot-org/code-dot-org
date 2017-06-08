@@ -137,8 +137,8 @@ function createAnimations(svg) {
     createPegmanAnimation(svg, {
       idStr: 'idle',
       pegmanImage: skin.idlePegmanAnimation,
-      row: Maze.start_.y,
-      col: Maze.start_.x,
+      row: Maze.subtype.start.y,
+      col: Maze.subtype.start.x,
       direction: Maze.startDirection,
       numColPegman: skin.idlePegmanCol,
       numRowPegman: skin.idlePegmanRow
@@ -157,8 +157,8 @@ function createAnimations(svg) {
         if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
           updatePegmanAnimation({
             idStr: 'idle',
-            row: Maze.start_.y,
-            col: Maze.start_.x,
+            row: Maze.subtype.start.y,
+            col: Maze.subtype.start.x,
             direction: Maze.startDirection,
             animationRow: idleAnimationFrame
           });
@@ -172,8 +172,8 @@ function createAnimations(svg) {
     createPegmanAnimation(svg, {
       idStr: 'celebrate',
       pegmanImage: skin.celebrateAnimation,
-      row: Maze.start_.y,
-      col: Maze.start_.x,
+      row: Maze.subtype.start.y,
+      col: Maze.subtype.start.x,
       direction: Direction.NORTH,
       numColPegman: skin.celebratePegmanCol,
       numRowPegman: skin.celebratePegmanRow
@@ -329,20 +329,20 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
-    Maze.start_ = undefined;
-    Maze.finish_ = undefined;
+    Maze.subtype.start = undefined;
+    Maze.subtype.finish = undefined;
 
     // Locate the start and finish squares.
     for (var y = 0; y < Maze.map.ROWS; y++) {
       for (var x = 0; x < Maze.map.COLS; x++) {
         var cell = Maze.map.getTile(y, x);
         if (cell === SquareType.START) {
-          Maze.start_ = {x: x, y: y};
+          Maze.subtype.start = {x: x, y: y};
         } else if (cell === SquareType.FINISH) {
-          Maze.finish_ = {x: x, y: y};
+          Maze.subtype.finish = {x: x, y: y};
         } else if (cell === SquareType.STARTANDFINISH) {
-          Maze.start_ = {x: x, y: y};
-          Maze.finish_ = {x: x, y: y};
+          Maze.subtype.start = {x: x, y: y};
+          Maze.subtype.finish = {x: x, y: y};
         }
       }
     }
@@ -514,8 +514,8 @@ Maze.reset = function (first) {
   Maze.animating_ = false;
 
   // Move Pegman into position.
-  Maze.pegmanX = Maze.start_.x;
-  Maze.pegmanY = Maze.start_.y;
+  Maze.pegmanX = Maze.subtype.start.x;
+  Maze.pegmanY = Maze.subtype.start.y;
 
   Maze.pegmanD = Maze.startDirection;
   if (first) {
@@ -535,9 +535,9 @@ Maze.reset = function (first) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     // Move the finish icon into position.
-    finishIcon.setAttribute('x', Maze.SQUARE_SIZE * (Maze.finish_.x + 0.5) -
+    finishIcon.setAttribute('x', Maze.SQUARE_SIZE * (Maze.subtype.finish.x + 0.5) -
       finishIcon.getAttribute('width') / 2);
-    finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.finish_.y + 0.9) -
+    finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.subtype.finish.y + 0.9) -
       finishIcon.getAttribute('height'));
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin.goalIdle);
@@ -1224,8 +1224,8 @@ function scheduleMove(endX, endY, timeForAnimation) {
     var finishIcon = document.getElementById('finish');
     // If pegman is close to the goal
     // Replace the goal file with approachingGoalAnimation
-    if (Maze.finish_ && Math.abs(endX - Maze.finish_.x) <= 1 &&
-        Math.abs(endY - Maze.finish_.y) <= 1) {
+    if (Maze.subtype.finish && Math.abs(endX - Maze.subtype.finish.x) <= 1 &&
+        Math.abs(endY - Maze.subtype.finish.y) <= 1) {
       finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         skin.approachingGoalAnimation);
     } else {
@@ -1608,8 +1608,8 @@ Maze.scheduleLookStep = function (path, delay) {
 };
 
 function atFinish() {
-  return !Maze.finish_ ||
-      (Maze.pegmanX === Maze.finish_.x && Maze.pegmanY === Maze.finish_.y);
+  return !Maze.subtype.finish ||
+      (Maze.pegmanX === Maze.subtype.finish.x && Maze.pegmanY === Maze.subtype.finish.y);
 }
 
 /**
