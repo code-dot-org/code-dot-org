@@ -176,6 +176,7 @@ gem 'kaminari' # pagination
 gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
 gem 'naturally' # for sorting string naturally
+gem 'OptionParser'
 
 gem 'retryable' # retry code blocks when they throw exceptions
 
