@@ -34,23 +34,27 @@ export default class SectionRow extends Component {
           </span>
         </td>
         <td>
-          {section.login_type}
+          {section.loginType}
         </td>
         <td>
           {section.grade}
         </td>
         <td>
-          Course name/link here
+          {section.assignmentName &&
+            <a href={section.assignmentPath}>
+              {section.assignmentName}
+            </a>
+          }
         </td>
         <td>
-          {section.stage_extras ? i18n.yes() : i18n.no()}
+          {section.stageExtras ? i18n.yes() : i18n.no()}
         </td>
         <td>
-          {section.pairing_allowed ? i18n.yes() : i18n.no()}
+          {section.pairingAllowed ? i18n.yes() : i18n.no()}
         </td>
         <td>
           <a href={`#/sections/${section.id}/manage`}>
-            {section.students.length}
+            {section.numStudents}
           </a>
         </td>
         <td>
