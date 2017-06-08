@@ -627,6 +627,7 @@
   dashboard_sections_table_secret: "Login Type"
   dashboard_sections_table_grade: "Grade"
   dashboard_sections_table_course: "Course"
+  dashboard_sections_table_pairing_allowed: "Pair Programming"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
