@@ -412,7 +412,6 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     le (2.7.2)
-    libv8 (3.16.14.15)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -580,7 +579,6 @@ GEM
       json (~> 1.4)
     redcarpet (3.3.4)
     redis (3.3.1)
-    ref (2.0.0)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
     responders (2.2.0)
@@ -672,9 +670,6 @@ GEM
       i18n
       json (>= 1.4.3)
     sysexits (1.2.0)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thin (1.7.0)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -769,7 +764,6 @@ DEPENDENCIES
   dalli-elasticache
   devise (~> 4.2.0)
   devise_invitable (~> 1.6.0)
-  execjs
   eyes_selenium (= 3.5.4)
   factory_girl_rails
   fake_sqs
@@ -864,7 +858,6 @@ DEPENDENCIES
   sqlite3
   sshkit
   stringex (~> 2.5.2)
-  therubyracer (~> 0.12.2)
   thin
   timecop
   twilio-ruby
