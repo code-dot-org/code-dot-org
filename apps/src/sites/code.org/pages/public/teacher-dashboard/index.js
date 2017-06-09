@@ -227,12 +227,6 @@ function main() {
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
 
-    // Angular does not offer a reliable way to wait for the template to load,
-    // so do it using a custom event here. The call to listen for the custom
-    // event must not be nested inside another deferred call or we might
-    // miss the event.
-    // $scope.$on('sections-table-rendered', () => renderSectionsTable($scope.sections));
-
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
@@ -244,19 +238,22 @@ function main() {
       $scope.sections.forEach(section => {
         section.assign_id = $scope.getAssignmentId(section);
       });
-      // TODO - eventually React should own this query
-      renderSectionsTable(sections.map(s => ({
-        id: s.id,
-        name: s.name,
-        loginType: s.login_type,
-        grade: s.grade,
-        stageExtras: s.stage_extras,
-        pairingAllowed: s.pairing_allowed,
-        numStudents: s.students.length,
-        code: s.code,
-        assignmentName: $scope.getName(s),
-        assignmentPath: $scope.getPath(s)
-      })));
+      if (experiments.isEnabled('reactSections')) {
+        // TODO - eventually React should own this query
+        renderSectionsTable(sections.map(s => ({
+          id: s.id,
+          name: s.name,
+          loginType: s.login_type,
+          grade: s.grade,
+          stageExtras: s.stage_extras,
+          pairingAllowed: s.pairing_allowed,
+          numStudents: s.students.length,
+          code: s.code,
+          assignmentName: $scope.getName(s),
+          assignmentPath: $scope.getPath(s)
+        })));
+        $scope.hideSectionsTable = true;
+      }
       $scope.sectionsLoaded = true;
     });
 
