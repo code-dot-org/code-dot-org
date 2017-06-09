@@ -262,7 +262,7 @@ class SectionApiHelperTest < SequelTestCase
           name: 'CS Principles',
           script_name: 'csp',
           category: 'Full Courses',
-          position: 1,
+          position: 0,
           category_priority: -1
         }
         assert_equal expected, csp_course
