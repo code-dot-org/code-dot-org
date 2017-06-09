@@ -179,10 +179,6 @@ gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
 
-# Used by a build script.
-gem 'execjs'
-gem 'therubyracer', '~> 0.12.2', platforms: :ruby
-
 gem 'jwt' # single signon for zendesk
 
 gem 'codemirror-rails' # edit code in textarea
