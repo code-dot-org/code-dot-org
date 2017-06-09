@@ -38,7 +38,7 @@
     "project_template_level_name": "CSD U3 AnimationsMulti defender template",
     "encrypted_examples": "UR9zXeoBdkZWN2d6F/Fp8A1G6AKq1Cz9tlfJQSf4XtReX9/Mk+KflLRDR1h/\nf96R\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
