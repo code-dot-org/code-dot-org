@@ -6,7 +6,7 @@ class PasswordsController < Devise::PasswordsController
 
   def create
     email = request.parameters['user']['email']
-    if email_in_hoc_2016_signups?(email)
+    if email_in_hoc_signups?(email)
       # If the user has a full account as well, don't use the HOC flow
       user = User.find_by_email_or_hashed_email(email)
       unless user
@@ -29,9 +29,9 @@ class PasswordsController < Devise::PasswordsController
 
   private
 
-  def email_in_hoc_2016_signups?(email)
+  def email_in_hoc_signups?(email)
     normalized_email = email.strip.downcase
-    PEGASUS_DB[:forms].where(email: normalized_email, kind: 'HocSignup2016').any?
+    PEGASUS_DB[:forms].where(email: normalized_email, kind: 'HocSignup2017').any?
   end
 
   def show_reset_url_if_admin
