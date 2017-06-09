@@ -67,7 +67,7 @@
     "project_template_level_name": "CSD U3 collisions egg template",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "encrypted_examples": "5nmDd/bDGrN4ZDWNjjtlm69CAMrFvi7K4pfRvOB8eRg4njLOjS37CNJRtRca\nwVaT\n",
     "hide_share_and_remix": "false",

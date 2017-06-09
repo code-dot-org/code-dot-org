@@ -70,7 +70,7 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "encrypted_examples": "XlTm8xF1427wH97Z7WD04Xif48nSOilcAQ2qnK4b9GcbK9w6bCSXtn2S5Uve\nWcew\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "display_name": "Collision Detection",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

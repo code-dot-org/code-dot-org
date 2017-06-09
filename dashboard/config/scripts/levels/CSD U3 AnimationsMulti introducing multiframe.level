@@ -135,7 +135,7 @@
       "comment": null,
       "stopSound": null
     },
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "encrypted_examples": "hBYEo3wudGBFMFzTZ/joDBvBc0h7k5p7JWdsCu9nmhxMPKlb7gdxA2UfwmPx\nbdwa\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
