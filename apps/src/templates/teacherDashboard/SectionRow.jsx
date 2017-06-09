@@ -1,28 +1,24 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-
-export const sectionShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  loginType: PropTypes.oneOf(['word', 'email', 'picture']).isRequired,
-  stageExtras: PropTypes.bool.isRequired,
-  pairingAllowed: PropTypes.bool.isRequired,
-  numStudents: PropTypes.number.isRequired,
-  code: PropTypes.string.isRequired,
-  assignmentName: PropTypes.string,
-  assignmentPath: PropTypes.string
-});
+import EditSectionRow from './EditSectionRow';
+import sectionShape from './sectionShape';
 
 const styles = {
   sectionName: {
     fontSize: 18,
     paddingTop: 12
   },
+  nowrap: {
+    whiteSpace: 'nowrap'
+  }
 };
 
+/**
+ * Buttons for confirming whether or not we want to delete a section
+ */
 const ConfirmDelete = ({onClickYes, onClickNo}) => (
-  <div>
+  <div style={styles.nowrap}>
     <div>Delete?</div>
     <ProgressButton
       text={i18n.yes()}
@@ -48,6 +44,7 @@ export default class SectionRow extends Component {
   };
 
   state = {
+    editing: false,
     deleting: false
   };
 
@@ -57,8 +54,24 @@ export default class SectionRow extends Component {
 
   onClickDeleteYes = () => console.log('this is where our delete will happen');
 
+  onClickEdit = () => this.setState({editing: true});
+
+  onClickEditSave = () => console.log('this is where our save will happen');
+
+  onClickEditCancel = () => this.setState({editing: false});
+
   render() {
     const { section } = this.props;
+    if (this.state.editing) {
+      return (
+        <EditSectionRow
+          section={section}
+          onClickSave={this.onClickEditSave}
+          onCancel={this.onClickEditCancel}
+        />
+      );
+    }
+
     return (
       <tr>
         <td>
@@ -97,11 +110,11 @@ export default class SectionRow extends Component {
         </td>
         <td>
           {/*TODO: i18n */}
-          {!this.state.deleting && (
-            <div style={{whiteSpace: 'nowrap'}}>
+          {!this.state.editing && !this.state.deleting && (
+            <div style={styles.nowrap}>
               <ProgressButton
                 text={"Edit"}
-                onClick={() => console.log('start editing')}
+                onClick={this.onClickEdit}
                 color={ProgressButton.ButtonColor.gray}
               />
               {section.numStudents > 0 && (
@@ -120,12 +133,11 @@ export default class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-          <ProgressButton
-            text={"Print Certificates"}
-            onClick={() => console.log('print certificates here')}
-            color={ProgressButton.ButtonColor.gray}
-          />
-
+           <ProgressButton
+             text={"Print Certificates"}
+             onClick={() => console.log('print certificates here')}
+             color={ProgressButton.ButtonColor.gray}
+           />
         </td>
       </tr>
     );
