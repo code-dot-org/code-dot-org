@@ -1,26 +1,28 @@
 import $ from 'jquery';
 import clientState from '@cdo/apps/code-studio/clientState';
+import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import loadAppOptions, {setupApp, setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;
+const OLD_CODE = '<some><blocks with="stuff">in<them/></blocks></some>';
 
 describe('loadApp.js', () => {
-  let oldAppOptions, appOptions, oldWriteSource, oldSourceForLevel, oldAjax, writtenLevelId, readLevelId;
+  let oldAppOptions, appOptions, writtenLevelId, readLevelId;
 
   before(() => {
     oldAppOptions = window.appOptions;
-    oldWriteSource = clientState.writeSourceForLevel;
-    clientState.writeSourceForLevel = (scriptName, levelId, date, program) => {
+    sinon.stub(clientState, 'writeSourceForLevel').callsFake(
+        (scriptName, levelId, date, program) => {
       writtenLevelId = levelId;
-    };
-    oldSourceForLevel = clientState.sourceForLevel;
-    clientState.sourceForLevel = (scriptName, levelId, timestamp) => {
+    });
+    sinon.stub(clientState, 'sourceForLevel').callsFake(
+        (scriptName, levelId, timestamp) => {
       readLevelId = levelId;
-    };
-    oldAjax = $.ajax;
-    $.ajax = () => {
+      return OLD_CODE;
+    });
+    sinon.stub($, 'ajax').callsFake(() => {
       return {
         done() {
           return {
@@ -30,7 +32,7 @@ describe('loadApp.js', () => {
           };
         },
       };
-    };
+    });
   });
   beforeEach(() => {
     writtenLevelId = undefined;
@@ -45,9 +47,9 @@ describe('loadApp.js', () => {
     setAppOptions(appOptions);
   });
   after(() => {
-    clientState.writeSourceForLevel = oldWriteSource;
-    clientState.sourceForLevel = oldSourceForLevel;
-    $.ajax = oldAjax;
+    clientState.writeSourceForLevel.restore();
+    clientState.sourceForLevel.restore();
+    $.ajax.restore();
     window.appOptions = oldAppOptions;
   });
 
@@ -88,6 +90,7 @@ describe('loadApp.js', () => {
 
     loadAppOptions().then(() => {
       expect(readLevelId).to.equal(SERVER_LEVEL_ID);
+      expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
 
       document.body.removeChild(appOptionsData);
       done();
@@ -102,8 +105,51 @@ describe('loadApp.js', () => {
 
     loadAppOptions().then(() => {
       expect(readLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
+      expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
 
       document.body.removeChild(appOptionsData);
+      done();
+    });
+  });
+
+  it('does not load a last attempt when viewing a solution', (done) => {
+    const appOptionsData = document.createElement('script');
+    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
+    document.body.appendChild(appOptionsData);
+    const queryParamsStub = sinon.stub(clientState, 'queryParams').callsFake((param) => {
+      if (param === 'solution') {
+        return 'true';
+      }
+      return undefined;
+    });
+
+    loadAppOptions().then(() => {
+      expect(window.appOptions.level.lastAttempt).to.be.undefined;
+      expect(readLevelId).to.be.undefined;
+
+      document.body.removeChild(appOptionsData);
+      queryParamsStub.restore();
+      done();
+    });
+  });
+
+  it('does not load a last attempt when viewing a student solution', (done) => {
+    const appOptionsData = document.createElement('script');
+    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
+    document.body.appendChild(appOptionsData);
+    const queryParamsStub = sinon.stub(clientState, 'queryParams').callsFake((param) => {
+      if (param === 'user_id') {
+        return 'true';
+      }
+      return undefined;
+    });
+
+    loadAppOptions().then(() => {
+      expect(window.appOptions.level.lastAttempt).to.be.undefined;
+      expect(readLevelId).to.be.undefined;
+
+      document.body.removeChild(appOptionsData);
+      queryParamsStub.restore();
       done();
     });
   });
