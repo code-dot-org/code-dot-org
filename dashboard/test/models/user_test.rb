@@ -1036,6 +1036,44 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'picture_or_word_account? is false for user in no sections' do
+    refute @student.picture_or_word_account?
+  end
+
+  test 'picture_or_word_account? is false for users in picture or word sections with passwords' do
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+
+    # picture section
+    student_with_password = create(:student, encrypted_password: '123456')
+    create(:follower, student_user: student_with_password, section: picture_section)
+    student_with_password.reload
+    refute student_with_password.picture_or_word_account?
+
+    # word section
+    student_with_password = create(:student, encrypted_password: '123456')
+    create(:follower, student_user: student_with_password, section: word_section)
+    student_with_password.reload
+    refute student_with_password.picture_or_word_account?
+  end
+
+  test 'picture_or_word_account? is true for users in picture or word sections' do
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+
+    # picture section
+    student_without_password = create(:student, encrypted_password: '')
+    create(:follower, student_user: student_without_password, section: picture_section)
+    student_without_password.reload
+    assert student_without_password.picture_or_word_account?
+
+    # word section
+    student_without_password = create(:student, encrypted_password: '')
+    create(:follower, student_user: student_without_password, section: word_section)
+    student_without_password.reload
+    assert student_without_password.picture_or_word_account?
+  end
+
   test 'can_edit_email? is false for user without password' do
     user = create :student
     user.update_attribute(:encrypted_password, '')
