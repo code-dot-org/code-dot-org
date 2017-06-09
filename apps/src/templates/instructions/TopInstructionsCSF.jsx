@@ -27,7 +27,7 @@ import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
-import Button from '../Button';
+import LegacyButton from '../LegacyButton';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
@@ -637,9 +637,9 @@ var TopInstructions = React.createClass({
                 />
               }
               {this.props.overlayVisible &&
-                <Button type="primary" onClick={this.props.hideOverlay}>
+                <LegacyButton type="primary" onClick={this.props.hideOverlay}>
                   {msg.dialogOK()}
-                </Button>
+                </LegacyButton>
               }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
