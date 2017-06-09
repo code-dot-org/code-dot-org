@@ -68,7 +68,7 @@ class Gamelab < Blockly
           code_functions: JSON.parse(palette),
           show_d_pad: true,
           edit_code: true,
-          show_debug_watch: false
+          show_debug_watch: true
         }
       )
     )
