@@ -132,7 +132,7 @@
       "comment": null,
       "stopSound": null
     },
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "hide_share_and_remix": "false",

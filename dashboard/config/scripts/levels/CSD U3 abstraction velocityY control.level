@@ -70,7 +70,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "encrypted_examples": "xzi2haAq36Zvf/N3k78VJ352bpGvWdDyQJCGHuqclWdJ7fVJQ9qaOXH80wsd\nD1CM\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
