@@ -43,97 +43,31 @@
     { title: I18n.t("#{loc_prefix}about_faqs"), url: "#{code_org_url_base}/faq" },
   ]
 
-  show_teacher_options = "hide-always"
-  show_student_options = "hide-always"
-  show_signed_out_options = "hide-always"
-  show_pegasus_options = "hide-always"
-  show_help_options = "hide-always"
+  require 'cdo/hamburger'
 
-  user_options_were_shown = false
+  options = { level: level, language: language, user_type: user_type }
+  visibility = Hamburger.get_visibility(options)
 
-  hamburger_class = "none"
-
-  if level
-    # The header is taken over by level-related UI, so we need the hamburger
-    # to show whatever would show up in the header at desktop (and mobile) widths.
-    show_help_options = "show-always"
-
-    if user_type == "teacher"
-      show_teacher_options = "show-always"
-      user_options_were_shown = true
-    elsif user_type == "student"
-      show_student_options = "show-always"
-      user_options_were_shown = true
-    else
-      show_signed_out_options = "show-always"
-      user_options_were_shown = true
-    end
-
-    # Regardless of user type, if they are English, then they also need the pegasus
-    # options in the hamburger.
-    if language == "en"
-      show_pegasus_options = "show-always"
-    end
-
-  else
-
-    # The header is available for showing whichever options we want, but they should
-    # appear in the hamburger at mobile widths.
-    show_help_options = "show-mobile"
-    if user_type == "teacher"
-      show_teacher_options = "show-mobile"
-      user_options_were_shown = true
-    elsif user_type == "student"
-      show_student_options = "show-mobile"
-      user_options_were_shown = true
-    else
-      show_signed_out_options = "show-mobile"
-      user_options_were_shown = true
-    end
-
-    if language == "en"
-      # We want to show the pegasus options.  They're in the hamburger for desktop
-      # if they didn't fit on the header, or they're just in it for mobile if they did.
-      if user_type == "teacher" || user_type == "student"
-        show_pegasus_options = "show-always"
-        show_help_options = "show-always"
-      else
-        show_pegasus_options = "show-mobile"
-      end
-    else
-      show_help_options = "show-always"
-    end
-  end
-
-  # Do we show hamburger on all widths, only mobile, or not at all?
-  if show_teacher_options == "show-always" || show_student_options == "show-always" || show_pegasus_options == "show-always" || show_help_options == "show-always"
-    hamburger_class = "show-always"
-  elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
-    hamburger_class = "show-mobile"
-  else
-    hamburger_class = "hide-always"
-  end
-
-#hamburger{class: hamburger_class}
+#hamburger{class: visibility[:hamburger_class]}
   %ul.hide-responsive-menu
     .user-links
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
-          %li{class: show_teacher_options}
+          %li{class: visibility[:show_teacher_options]}
             %a{href: entry[:url]}= entry[:title]
-        .divider{class: show_teacher_options}
+        .divider{class: visibility[:show_teacher_options]}
       - elsif user_type == "student"
         - student_entries.each do |entry|
-          %li{class: show_student_options}
+          %li{class: visibility[:show_student_options]}
             %a{href: entry[:url]}= entry[:title]
-        .divider{class: show_student_options}
+        .divider{class: visibility[:show_student_options]}
       - else
         - signed_out_entries.each do |entry|
-          %li{class: show_signed_out_options}
+          %li{class: visibility[:show_signed_out_options]}
             %a{href: entry[:url]}= entry[:title]
-        .divider{class: show_signed_out_options}
+        .divider{class: visibility[:show_signed_out_options]}
 
-    .help-links{class: show_help_options}
+    .help-links{class: visibility[:show_help_options]}
       - if level || script_level
         - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
         %li
@@ -155,34 +89,34 @@
       - if level || script_level
         %li
           %a{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
-      .divider{class: show_pegasus_options}
+      .divider{class: visibility[:show_pegasus_options]}
 
-    .pegasus-links{class: show_pegasus_options}
-      %li{class: show_pegasus_options}
+    .pegasus-links{class: visibility[:show_pegasus_options]}
+      %li{class: visibility[:show_pegasus_options]}
         %a{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
-      %li{class: show_pegasus_options}
+      %li{class: visibility[:show_pegasus_options]}
         #educate-more
           = I18n.t("#{loc_prefix}teach")
           %i#educate-down{class: "fa fa-caret-down"}
           %i#educate-up{class: "fa fa-caret-up"}
 
-      .educate-nav.hide-educate{class: show_pegasus_options}
+      .educate-nav.hide-educate{class: visibility[:show_pegasus_options]}
         - educate_entries.each do |entry|
           %li
             %a{href: entry[:url]}= entry[:title]
-      %li{class: show_pegasus_options}
+      %li{class: visibility[:show_pegasus_options]}
         %a{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
-      %li{class: show_pegasus_options}
+      %li{class: visibility[:show_pegasus_options]}
         %a{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
-      %li{class: show_pegasus_options}
+      %li{class: visibility[:show_pegasus_options]}
         #about-more
           = I18n.t("#{loc_prefix}about")
           %i#about-down{class: "fa fa-caret-down"}
           %i#about-up{class: "fa fa-caret-up"}
-      .about-nav.hide-about{class: show_pegasus_options}
+      .about-nav.hide-about{class: visibility[:show_pegasus_options]}
         - about_entries.each do |entry|
           %li
             %a{href: entry[:url]}= entry[:title]
 
-  #hamburger-icon{class: hamburger_class}
+  #hamburger-icon{class: visibility[:hamburger_class]}
     %span
