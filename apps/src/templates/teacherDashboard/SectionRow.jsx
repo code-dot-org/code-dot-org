@@ -2,6 +2,18 @@ import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 
+export const sectionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  loginType: PropTypes.oneOf(['word', 'email', 'picture']).isRequired,
+  stageExtras: PropTypes.bool.isRequired,
+  pairingAllowed: PropTypes.bool.isRequired,
+  numStudents: PropTypes.number.isRequired,
+  code: PropTypes.string.isRequired,
+  assignmentName: PropTypes.string,
+  assignmentPath: PropTypes.string
+});
+
 const styles = {
   sectionName: {
     fontSize: 18,
@@ -11,8 +23,7 @@ const styles = {
 
 export default class SectionRow extends Component {
   static propTypes = {
-    // TODO: provide more detail
-    section: PropTypes.object.isRequired
+    section: sectionShape.isRequired
   };
 
   constructor(props) {

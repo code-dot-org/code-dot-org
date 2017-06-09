@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
-import SectionRow from './SectionRow';
+import SectionRow, { sectionShape } from './SectionRow';
 
 const styles = {
   table: {
@@ -33,8 +33,7 @@ const styles = {
 
 export default class SectionTable extends Component {
   static propTypes = {
-    // TODO: provide more detail
-    sections: PropTypes.arrayOf(PropTypes.object).isRequired
+    sections: PropTypes.arrayOf(sectionShape).isRequired
   };
 
   render() {
