@@ -419,6 +419,11 @@ Applab.init = function (config) {
     }
   }
 
+  //Mobile share pages do not show the logo
+  if (dom.isMobile() && config.share) {
+    $('#main-logo').hide();
+  }
+
   // Set up an error handler for student errors and warnings.
   injectErrorHandler(new JavaScriptModeErrorHandler(
     () => Applab.JSInterpreter,
