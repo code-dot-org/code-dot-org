@@ -49,6 +49,8 @@ export default class SectionTable extends Component {
           <col/>
           <col/>
           <col/>
+          <col/>
+          <col/>
         </colgroup>
         <tbody>
           <tr>
