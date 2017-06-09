@@ -21,35 +21,41 @@ const styles = {
   },
 };
 
+const ConfirmDelete = ({onClickYes, onClickNo}) => (
+  <div>
+    <div>Delete?</div>
+    <ProgressButton
+      text={i18n.yes()}
+      onClick={onClickYes}
+      color={ProgressButton.ButtonColor.red}
+    />
+    <ProgressButton
+      text={i18n.no()}
+      style={{marginLeft: 5}}
+      onClick={onClickNo}
+      color={ProgressButton.ButtonColor.gray}
+    />
+  </div>
+);
+ConfirmDelete.propTypes = {
+  onClickYes: PropTypes.func.isRequired,
+  onClickNo: PropTypes.func.isRequired,
+};
+
 export default class SectionRow extends Component {
   static propTypes = {
     section: sectionShape.isRequired
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    deleting: false
+  };
 
-    this.onClickDelete = this.onClickDelete.bind(this);
-    this.onClickDeleteNo = this.onClickDeleteNo.bind(this);
-    this.onClickDeleteYes = this.onClickDeleteYes.bind(this);
+  onClickDelete = () => this.setState({deleting: true});
 
-    this.state = {
-      editing: false,
-      deleting: false
-    };
-  }
+  onClickDeleteNo = () => this.setState({deleting: false});
 
-  onClickDelete() {
-    this.setState({deleting: true});
-  }
-
-  onClickDeleteNo() {
-    this.setState({deleting: false});
-  }
-
-  onClickDeleteYes() {
-    console.log('this is where our delete will happen');
-  }
+  onClickDeleteYes = () => console.log('this is where our delete will happen');
 
   render() {
     const { section } = this.props;
@@ -109,20 +115,10 @@ export default class SectionRow extends Component {
             </div>
           )}
           {this.state.deleting && (
-            <div>
-              <div>Delete?</div>
-              <ProgressButton
-                text={i18n.yes()}
-                onClick={this.onClickDeleteYes}
-                color={ProgressButton.ButtonColor.red}
-              />
-              <ProgressButton
-                text={i18n.no()}
-                style={{marginLeft: 5}}
-                onClick={this.onClickDeleteNo}
-                color={ProgressButton.ButtonColor.gray}
-              />
-            </div>
+            <ConfirmDelete
+              onClickYes={this.onClickDeleteYes}
+              onClickNo={this.onClickDeleteNo}
+            />
           )}
           <ProgressButton
             text={"Print Certificates"}
