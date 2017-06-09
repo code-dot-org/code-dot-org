@@ -141,6 +141,8 @@ We are revising Courses 1 - 4 based on the great feedback we've gotten in the la
 is to break the content up into 6 courses aligned to each K-5 grade level. We're collecting feedback in Spring 2017 in preparation for making these courses broadly
 available for the '17 - '18 school year. [Learn more and sign up for the pilot](/educate/curriculum/cs-fundamentals-pilot).
 
+If you are preparing for the transition from Courses 1 - 4 to Courses A - F, check out our short [transition guide](https://drive.google.com/file/d/0B2rFfrktasxBNUZDc2l5N01HYms/view) and [webinar](https://drive.google.com/open?id=0B2rFfrktasxBYVFCMDhfNVRFTjg) so that you have all the information you need to get started!
+
 [solid-block-header]
 
 <a name="other"></a>Other Resources
