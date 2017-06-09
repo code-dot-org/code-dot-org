@@ -23,4 +23,10 @@ class LevelSourceTest < ActiveSupport::TestCase
     refute level_source.valid?
     assert_equal ['Data is invalid'], level_source.errors.full_messages
   end
+
+  test 'clear_data should overwrite data' do
+    level_source = create :level_source
+    level_source.clear_data
+    assert_equal LevelSource::DELETED_BY_THE_SYSTEM, level_source.data
+  end
 end

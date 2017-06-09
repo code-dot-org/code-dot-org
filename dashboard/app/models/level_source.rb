@@ -19,6 +19,7 @@ require 'digest/md5'
 
 # A specific solution attempt for a specific level
 class LevelSource < ActiveRecord::Base
+  DELETED_BY_THE_SYSTEM = 'deleted_by_the_system'
   # TODO(asher): At some point, the following string appeared in program XML.
   #   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
   # It remains in some old LevelSource.data. Migrate any existing LevelSource
@@ -50,5 +51,9 @@ class LevelSource < ActiveRecord::Base
         ls.data = data
       end
     end
+  end
+
+  def clear_data
+    update(data: DELETED_BY_THE_SYSTEM)
   end
 end
