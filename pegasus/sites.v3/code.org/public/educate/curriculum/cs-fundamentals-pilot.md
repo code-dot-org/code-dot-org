@@ -148,7 +148,7 @@ When you’re ready to have your students access the course, you can assign the 
 We’re sharing these courses as drafts because we value your thoughts and would like to hear your feedback as early as possible. If you see any issue while on a puzzle in Code Studio, just click “Report Bug” in the upper right hand corner. It could be an issue in the puzzle, or just your feedback that you think it’s too hard or too easy -- we want to hear it all!
 
 ### Join the community
-If you have questions about the course or have a great idea you tried out in your classroom, we want to hear about it, and so would your peers! Our forum is a supportive place to learn from others and share your ideas. Check out the [CS Fundamentals Courses A-F Pilot forum](http://forum.code.org/c/csf/csfABCDEF)!
+If you have questions about the course or have a great idea you tried out in your classroom, we want to hear about it, and so would your peers! Our forum is a supportive place to learn from others and share your ideas. Check out the [CS Fundamentals Courses A-F Pilot forum](http://forum.code.org/c/csf)!
 
 ### Monthly updates
 We'll be sending monthly updates on our progress throughout the spring and summer leading up to our August launch of the updated CS Fundamentals courses. If you [sign up to participate in the pilot](http://go.pardot.com/l/153401/2017-01-31/djn4q4), you'll get the emails!
