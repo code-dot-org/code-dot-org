@@ -43,7 +43,7 @@
     "display_name": "Velocity and the Counter Pattern",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "expand_debugger": "false"
   },
   "published": true,

@@ -40,7 +40,7 @@
     "markdown_instructions": "# Sprite Interactions\r\n\r\nSo far you've been able to create simple sprite interactions by using the `sprite.isTouching()` block. For example, you've reset a coin to a different location on the screen when a character touches it. Now it's time to start making sprites have more complex interactions.\r\n\r\n# Do This\r\n\r\n* Run the program and observe the interaction between the two sprites\r\n* Discuss with a neighbor: Using only the commands you already know how could you create this kind of interaction? There are many ways to do it, but here are some blocks to consider.\r\n\t* `sprite.isTouching()`\r\n    * `sprite.velocityX`\r\n    * `sprite.velocityY`\r\n    * `sprite.x`\r\n    * `sprite.y`\r\n\r\nBe ready to share your ideas with your classmates.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "expand_debugger": "false",
     "display_name": "Sprite Interactions",
     "contained_level_names": null
