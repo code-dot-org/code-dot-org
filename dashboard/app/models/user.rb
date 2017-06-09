@@ -1252,6 +1252,10 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  def can_edit_display_name?
+    !picture_or_word_account?
+  end
+
   def picture_or_word_account?
     return false if sections_as_student.empty?
     return false if encrypted_password.present?
