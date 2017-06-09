@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import Permission from '@cdo/apps/code-studio/pd/permission';
 
-describe("Tests for Permission class", () => {
+describe("Permission class", () => {
   const setGlobalPermissionString = (permissionString) => {
     window.dashboard = {
       workshop: {
@@ -10,10 +10,10 @@ describe("Tests for Permission class", () => {
     };
   };
 
-  it("Detects admin", () => {
+  it("Detects workshop admin", () => {
     setGlobalPermissionString("workshop_admin");
     const permission = new Permission();
-    expect(permission.isAdmin).to.be.true;
+    expect(permission.isWorkshopAdmin).to.be.true;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.false;
     expect(permission.isPartner).to.be.false;
@@ -22,7 +22,7 @@ describe("Tests for Permission class", () => {
   it("Detects facilitator", () => {
     setGlobalPermissionString("[facilitator]");
     const permission = new Permission();
-    expect(permission.isAdmin).to.be.false;
+    expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.true;
     expect(permission.isOrganizer).to.be.false;
     expect(permission.isPartner).to.be.false;
@@ -31,7 +31,7 @@ describe("Tests for Permission class", () => {
   it("Detects organizer", () => {
     setGlobalPermissionString("[workshop_organizer]");
     const permission = new Permission();
-    expect(permission.isAdmin).to.be.false;
+    expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.true;
     expect(permission.isPartner).to.be.false;
@@ -40,7 +40,7 @@ describe("Tests for Permission class", () => {
   it("Detects partner", () => {
     setGlobalPermissionString("[partner]");
     const permission = new Permission();
-    expect(permission.isAdmin).to.be.false;
+    expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.false;
     expect(permission.isPartner).to.be.true;
@@ -49,7 +49,7 @@ describe("Tests for Permission class", () => {
   it("Detects multiple permissions for organizer-partners", () => {
     setGlobalPermissionString("[workshop_organizer,partner]");
     const permission = new Permission();
-    expect(permission.isAdmin).to.be.false;
+    expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.true;
     expect(permission.isPartner).to.be.true;
@@ -58,7 +58,7 @@ describe("Tests for Permission class", () => {
   it("Detects multiple permissions for CSF Facilitators", () => {
     setGlobalPermissionString("[facilitator,workshop_organizer]");
     const permission = new Permission();
-    expect(permission.isAdmin).to.be.false;
+    expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.true;
     expect(permission.isOrganizer).to.be.true;
     expect(permission.isPartner).to.be.false;
