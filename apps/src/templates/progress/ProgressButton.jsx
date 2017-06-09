@@ -14,7 +14,8 @@ const ButtonColor = {
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
-  white: 'white'
+  white: 'white',
+  red: 'red'
 };
 
 const ButtonSize = {
@@ -82,6 +83,16 @@ const styles = {
       ':hover': {
         boxShadow: 'none',
         backgroundColor: color.lightest_gray
+      }
+    },
+    [ButtonColor.red]: {
+      color: color.white,
+      backgroundColor: color.red,
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.red,
+        borderColor: color.red,
       }
     }
   },
