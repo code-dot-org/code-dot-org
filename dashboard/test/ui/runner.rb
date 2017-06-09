@@ -574,6 +574,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += ' -t ~@local_only' unless options.local
   arguments += ' -t ~@no_mobile' if browser['mobile']
+  arguments += ' -t ~@only_mobile' unless browser['mobile']
   arguments += ' -t ~@no_circle' if options.is_circle
   arguments += ' -t ~@no_circle_ie' if options.is_circle && browser['browserName'] == 'Internet Explorer'
   arguments += ' -t ~@no_ie' if browser['browserName'] == 'Internet Explorer'
