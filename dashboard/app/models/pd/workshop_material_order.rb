@@ -73,6 +73,9 @@ module Pd
         if found.first.postal_code != zip_code
           errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
         end
+        if found.first.state_code != state
+          errors.add(:state, "doesn't match the address. Did you mean #{found.first.state_code}?")
+        end
         unless found.first.street_number
           errors.add(:street, 'must be a valid street address (no PO boxes)')
         end
