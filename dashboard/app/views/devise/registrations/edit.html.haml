@@ -9,7 +9,10 @@
   %div
   .field
     = f.label :name
-    = f.text_field :name, autofocus: true, maxlength: 255
+    - if f.object.can_edit_display_name?
+      = f.text_field :name, autofocus: true, maxlength: 255
+    - else
+      = f.object.name
   - if f.object.should_show_email?
     .field
       = f.label :email
