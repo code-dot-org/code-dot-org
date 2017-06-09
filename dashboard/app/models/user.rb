@@ -1252,6 +1252,22 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  def picture_or_word_account?
+    return false if sections_as_student.empty?
+    return false if encrypted_password.present?
+    sections_as_student.all? do |section|
+      section.login_type == Section::LOGIN_TYPE_PICTURE || section.login_type == Section::LOGIN_TYPE_WORD
+    end
+  end
+
+  def should_show_email?
+    !picture_or_word_account?
+  end
+
+  def can_delete_account?
+    !picture_or_word_account?
+  end
+
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id}
   end
