@@ -42,8 +42,8 @@
     "show_debug_watch": "true",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "display_name": "Improve Your Game"
+    "display_name": "Improve Your Game",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
