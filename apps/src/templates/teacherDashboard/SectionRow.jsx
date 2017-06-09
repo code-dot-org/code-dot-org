@@ -18,10 +18,28 @@ export default class SectionRow extends Component {
   constructor(props) {
     super(props);
 
+    this.onClickDelete = this.onClickDelete.bind(this);
+    this.onClickDeleteNo = this.onClickDeleteNo.bind(this);
+    this.onClickDeleteYes = this.onClickDeleteYes.bind(this);
+
     this.state = {
-      editing: false
+      editing: false,
+      deleting: false
     };
   }
+
+  onClickDelete() {
+    this.setState({deleting: true});
+  }
+
+  onClickDeleteNo() {
+    this.setState({deleting: false});
+  }
+
+  onClickDeleteYes() {
+    console.log('this is where our delete will happen');
+  }
+
   render() {
     const { section } = this.props;
     return (
@@ -62,14 +80,42 @@ export default class SectionRow extends Component {
         </td>
         <td>
           {/*TODO: i18n */}
-          <ProgressButton
-            text={"Edit"}
-            onClick={() => console.log('click')}
-            color={ProgressButton.ButtonColor.gray}
-          />
+          {!this.state.deleting && (
+            <div style={{whiteSpace: 'nowrap'}}>
+              <ProgressButton
+                text={"Edit"}
+                onClick={() => console.log('start editing')}
+                color={ProgressButton.ButtonColor.gray}
+              />
+              {section.numStudents > 0 && (
+                <ProgressButton
+                  style={{marginLeft: 5}}
+                  text={"Delete"}
+                  onClick={this.onClickDelete}
+                  color={ProgressButton.ButtonColor.red}
+                />
+              )}
+            </div>
+          )}
+          {this.state.deleting && (
+            <div>
+              <div>Delete?</div>
+              <ProgressButton
+                text={i18n.yes()}
+                onClick={this.onClickDeleteYes}
+                color={ProgressButton.ButtonColor.red}
+              />
+              <ProgressButton
+                text={i18n.no()}
+                style={{marginLeft: 5}}
+                onClick={this.onClickDeleteNo}
+                color={ProgressButton.ButtonColor.gray}
+              />
+            </div>
+          )}
           <ProgressButton
             text={"Print Certificates"}
-            onClick={() => console.log('click')}
+            onClick={() => console.log('print certificates here')}
             color={ProgressButton.ButtonColor.gray}
           />
 
