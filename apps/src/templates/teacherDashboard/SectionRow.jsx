@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
+import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import EditSectionRow from './EditSectionRow';
 import sectionShape from './sectionShape';
@@ -11,6 +12,14 @@ const styles = {
   },
   nowrap: {
     whiteSpace: 'nowrap'
+  },
+  td: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    borderColor: color.light_gray,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    padding: 15
   }
 };
 
@@ -74,41 +83,41 @@ export default class SectionRow extends Component {
 
     return (
       <tr>
-        <td>
+        <td style={styles.td}>
           <span style={styles.sectionName}>
             <a href={`#/sections/${section.id}/`}>
               {section.name}
             </a>
           </span>
         </td>
-        <td>
+        <td style={styles.td}>
           {section.loginType}
         </td>
-        <td>
+        <td style={styles.td}>
           {section.grade}
         </td>
-        <td>
+        <td style={styles.td}>
           {section.assignmentName &&
             <a href={section.assignmentPath}>
               {section.assignmentName}
             </a>
           }
         </td>
-        <td>
+        <td style={styles.td}>
           {section.stageExtras ? i18n.yes() : i18n.no()}
         </td>
-        <td>
+        <td style={styles.td}>
           {section.pairingAllowed ? i18n.yes() : i18n.no()}
         </td>
-        <td>
+        <td style={styles.td}>
           <a href={`#/sections/${section.id}/manage`}>
             {section.numStudents}
           </a>
         </td>
-        <td>
+        <td style={styles.td}>
           {section.code}
         </td>
-        <td>
+        <td style={styles.td}>
           {/*TODO: i18n */}
           {!this.state.editing && !this.state.deleting && (
             <div style={styles.nowrap}>
