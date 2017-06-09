@@ -201,19 +201,25 @@ social:
     %h1=hoc_s(:front_join_us_button)
     %div
       .row
-        -# Hide signup form until next Hour of Code launches
+        -# During Hour of Code season, show signup form and announcements.
+        -# When it's not Hour of Code, hide signup form and show announcements and highlights.
+        -if ["pre-hoc", "soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
           .col-md-6
             =view :signup_form
-        .col-md-5
-          =view :join_us_description
-        .col-md-1
-        .col-md-6.highlights-column
-          %h2.join-us-header=hoc_s(:highlights_title)
-          - HIGHLIGHTS_CONSTANTS.reverse_each do |item|
-            = view :highlight_item, item: item
-          .clear
-          %a{href: "/highlights"}
-            %button=hoc_s(:higlights_see_more)
+          .col-md-5
+            =view :announcements
+          .col-md-1
+        -else
+          .col-md-5
+            =view :announcements
+          .col-md-1
+          .col-md-6.highlights-column
+            %h2.join-us-header=hoc_s(:highlights_title)
+            - HIGHLIGHTS_CONSTANTS.reverse_each do |item|
+              = view :highlight_item, item: item
+            .clear
+            %a{href: "/highlights"}
+              %button=hoc_s(:higlights_see_more)
 
   -# FAQ
 
