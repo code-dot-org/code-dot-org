@@ -7204,9 +7204,9 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-pusher-js@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-3.2.1.tgz#46a30800c263e837081cf7084f0a7eee55973e60"
+pusher-js@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-4.1.0.tgz#5297973de935994ba65c2048ccf3b8c007247341"
   dependencies:
     faye-websocket "0.9.4"
     xmlhttprequest "^1.8.0"
