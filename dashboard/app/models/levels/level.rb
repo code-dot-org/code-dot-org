@@ -283,9 +283,9 @@ class Level < ActiveRecord::Base
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
     'NetSim', # widget
+    'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
-    'Odometer', # widget
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
