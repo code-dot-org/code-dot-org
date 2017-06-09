@@ -523,6 +523,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.sessions << session
     @workshop.sessions << session2
     assert_equal session.start, @workshop.workshop_starting_date
+    assert_equal session2.start, @workshop.workshop_ending_date
+  end
+
+  test 'workshop date range string for single session workshop' do
+    workshop = create :pd_workshop, num_sessions: 1
+    assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
+  end
+
+  test 'workshop date range string for multi session workshop' do
+    workshop = create :pd_workshop, num_sessions: 2
+    assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do

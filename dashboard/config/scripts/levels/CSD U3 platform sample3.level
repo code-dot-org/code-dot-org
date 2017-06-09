@@ -39,14 +39,11 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "Bunny Jumper",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

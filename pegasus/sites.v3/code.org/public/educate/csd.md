@@ -180,9 +180,12 @@ Want to know when we've posted new lesson drafts and have tools that are ready t
 <div style="clear:both"></div>
 
 
-## <a name="lessons"></a>Lesson Drafts
-We are releasing drafts of CS Discoveries units as they are finished, and would love for teachers and others in the CS education community to try them out and provide feedback. On the first page of every lesson plan, there is a Give Us Feedback! button that will open up a quick survey you can fill out with your thoughts and feedback. We really appreciate it!
+## <a name="lessons"></a>Lessons
 
+The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into lessons. The curriculum guide contains
+details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations. 
+
+<br>
 
 |                   Unit                   | Lesson Plans                             | Code Studio                              |
 | :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |

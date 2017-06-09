@@ -1,6 +1,6 @@
 export default class Permission {
   constructor() {
-    this.isAdmin = this.hasPermission('workshop_admin');
+    this.isWorkshopAdmin = this.hasPermission('workshop_admin');
     this.isFacilitator = this.hasPermission('facilitator');
     this.isOrganizer = this.hasPermission('workshop_organizer');
     this.isPartner = this.hasPermission('partner');
