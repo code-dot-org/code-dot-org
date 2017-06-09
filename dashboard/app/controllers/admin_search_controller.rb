@@ -44,9 +44,12 @@ class AdminSearchController < ApplicationController
   end
 
   def lookup_section
-    @section = Section.find_by_code params[:section_code]
+    @section = Section.with_deleted.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
       flash[:alert] = 'Section code not found'
+    end
+    if params[:section_code] && @section.try(:deleted?)
+      flash[:alert] = 'Section is deleted'
     end
   end
 
