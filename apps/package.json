@@ -145,7 +145,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "playground-io": "code-dot-org/playground-io#v0.5.0-cdo.0",
     "progress-bar-webpack-plugin": "^1.8.0",
-    "pusher-js": "3.2.1",
+    "pusher-js": "4.1.0",
     "radium": "0.18.1",
     "react": "15.3.2",
     "react-addons-test-utils": "15.3.0",
