@@ -131,9 +131,15 @@ social:
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
     = view :hoc_events_counter
     #maparea.full-width
-      %a{href: resolve_url('/map')}
-        %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
-      .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+      -# During pre-Hour of Code season, show the embedded gmap.
+      -# All other times show a picture of the map.
+      -if ["pre-hoc"].include?(DCDO.get("hoc_mode", false))
+        = view :hoc_events_map, max_height_percentage: 1
+        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+      -else
+        %a{href: resolve_url('/map')}
+          %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
+        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
 
   -# Highlights
   %br/
