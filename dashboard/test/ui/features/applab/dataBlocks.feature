@@ -35,7 +35,8 @@ Feature: App Lab Data Blocks
     And Firebase is enabled
     And I open the debug console
     Then I press "runButton"
-    And I wait until element "#successLabel" is visible within element "#divApplab"
+    And I wait until element "#keyValueLabel" is visible within element "#divApplab"
+    And I wait until element "#recordLabel" is visible within element "#divApplab"
 
   Scenario: Evaluate onRecordEvent block with Firebase
     # The level verifies that onRecordEvent captures the correct events when
