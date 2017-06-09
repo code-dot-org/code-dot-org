@@ -415,7 +415,7 @@ def main
             content_push 'levelbuilder-staging', 'levelbuilder'
           end
 
-          view_commits base: 'levelbuilder', head: test_green_commit
+          view_commits base: 'levelbuilder', head: branch_name
           should_i 'merge from test to levelbuilder' do
             pr_number = GitHub.create_and_merge_pull_request(
               base: 'levelbuilder',
