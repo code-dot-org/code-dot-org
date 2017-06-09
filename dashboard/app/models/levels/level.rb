@@ -271,7 +271,6 @@ class Level < ActiveRecord::Base
     'CurriculumReference', # no user submitted content
     'DSLDefined', # dsl defined, covered in dsl
     'EvaluationMulti', # unknown
-    'EvaluationQuestion', # plc evaluation
     'External', # dsl defined, covered in dsl
     'ExternalLink', # no user submitted content
     'FreeResponse', # no ideal solution
