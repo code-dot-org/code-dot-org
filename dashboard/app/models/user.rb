@@ -1201,7 +1201,7 @@ class User < ActiveRecord::Base
   end
 
   def can_pair?
-    !sections_as_student.empty?
+    sections_as_student.any?(&:pairing_allowed)
   end
 
   def can_pair_with?(other_user)
