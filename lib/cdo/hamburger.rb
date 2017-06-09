@@ -31,7 +31,6 @@ class Hamburger
 
       # The header is available for showing whichever options we want, but they should
       # appear in the hamburger at mobile widths.
-      show_help_options = "show-mobile"
       if options[:user_type] == "teacher"
         show_teacher_options = "show-mobile"
       elsif options[:user_type] == "student"
@@ -48,6 +47,7 @@ class Hamburger
           show_help_options = "show-always"
         else
           show_pegasus_options = "show-mobile"
+          show_help_options = "show-mobile"
         end
       else
         show_help_options = "show-always"
@@ -55,9 +55,10 @@ class Hamburger
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    if show_teacher_options == "show-always" || show_student_options == "show-always" || show_pegasus_options == "show-always" || show_help_options == "show-always"
+    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options, show_help_options]
+    if show_set.include? "show-always"
       hamburger_class = "show-always"
-    elsif show_teacher_options == "show-mobile" || show_student_options == "show-mobile" || show_pegasus_options == "show-mobile"
+    elsif show_set.include? "show-mobile"
       hamburger_class = "show-mobile"
     else
       hamburger_class = "hide-always"
