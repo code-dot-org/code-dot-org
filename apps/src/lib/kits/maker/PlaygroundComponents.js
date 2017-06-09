@@ -104,10 +104,9 @@ export function destroyCircuitPlaygroundComponents(components) {
   }
   delete components.lightSensor;
 
-  // five.Thermometer makes an untracked setInterval call, so it can't be
-  // cleaned up.
-  // TODO: Fork / fix johnny-five Thermometer to be clean-uppable
-  // See https://github.com/rwaldron/johnny-five/issues/1297
+  if (components.tempSensor) {
+    components.tempSensor.disable();
+  }
   delete components.tempSensor;
 
   if (components.accelerometer) {
