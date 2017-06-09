@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
-import SectionRow, { sectionShape } from './SectionRow';
+import SectionRow from './SectionRow';
+import sectionShape from './sectionShape';
 
 const styles = {
   table: {
