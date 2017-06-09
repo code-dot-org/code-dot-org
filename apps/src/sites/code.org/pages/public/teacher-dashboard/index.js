@@ -8,6 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -39,6 +40,15 @@ function renderSectionProjects(sectionId) {
       />,
       element);
   });
+}
+
+function renderSectionsTable(sections) {
+  const element = document.getElementById('sections-table-react');
+
+  ReactDOM.render(
+    <SectionTable sections={sections}/>,
+    element
+  );
 }
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
@@ -215,7 +225,8 @@ function main() {
   var app = angular.module('teacherDashboard.controllers', []);
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
-                                       function ($scope, $window, sectionsService){
+      function ($scope, $window, sectionsService) {
+
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
@@ -227,6 +238,22 @@ function main() {
       $scope.sections.forEach(section => {
         section.assign_id = $scope.getAssignmentId(section);
       });
+      if (experiments.isEnabled('reactSections')) {
+        // TODO - eventually React should own this query
+        renderSectionsTable(sections.map(s => ({
+          id: s.id,
+          name: s.name,
+          loginType: s.login_type,
+          grade: s.grade,
+          stageExtras: s.stage_extras,
+          pairingAllowed: s.pairing_allowed,
+          numStudents: s.students.length,
+          code: s.code,
+          assignmentName: $scope.getName(s),
+          assignmentPath: $scope.getPath(s)
+        })));
+        $scope.hideSectionsTable = true;
+      }
       $scope.sectionsLoaded = true;
     });
 
