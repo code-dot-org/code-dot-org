@@ -5,7 +5,7 @@ export const initHamburger = function () {
 
     $('#hamburger-icon').click(function (e){
       $(this).toggleClass( 'active' );
-      $('#hamburger ul').slideToggle();
+      $('#hamburger #hamburger-contents').slideToggle();
       e.preventDefault();
     });
 
@@ -13,23 +13,18 @@ export const initHamburger = function () {
       var nav = $('#hamburger');
       if (!nav.is(e.target)
           && nav.has(e.target).length === 0) {
-        nav.children('ul').hide();
+        nav.children('#hamburger-contents').hide();
         $('#hamburger-icon').removeClass('active');
       }
     });
 
-    $('#about-more').click(function (e){
-      $('#hamburger ul .about-nav').slideToggle();
-      $('#about-down').toggle();
-      $('#about-up').toggle();
-      e.preventDefault();
-    });
-
-    $('#educate-more').click(function (e){
-      $('#hamburger ul .educate-nav').slideToggle();
-      $('#educate-down').toggle();
-      $('#educate-up').toggle();
-      e.preventDefault();
+    $(".hamburger-expandable-item").each(function () {
+      $(this).click(function (e) {
+        $("#" + $(this).attr('id') + "-items").slideToggle();
+        $(this).find(".arrow-down").toggle();
+        $(this).find(".arrow-up").toggle();
+        e.preventDefault();
+      });
     });
 
     $.ajax({
