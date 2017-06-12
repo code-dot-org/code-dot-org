@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionTable from './SectionTable';
+import { UnconnectedSectionTable as SectionTable } from './SectionTable';
 
 const sections = [
   {

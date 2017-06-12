@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
 import { sectionShape, assignmentShape } from './shapes';
@@ -32,13 +33,15 @@ const styles = {
   }
 };
 
-export default class SectionTable extends Component {
+class SectionTable extends Component {
   static propTypes = {
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
     validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
-    sections: PropTypes.arrayOf(sectionShape).isRequired
+    sections: PropTypes.arrayOf(sectionShape).isRequired,
+
+    // redux provided
+    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
@@ -103,3 +106,9 @@ export default class SectionTable extends Component {
     );
   }
 }
+
+export const UnconnectedSectionTable = SectionTable;
+
+export default connect(state => ({
+  validLoginTypes: state.teacherSections.validLoginTypes
+}))(SectionTable);
