@@ -359,7 +359,9 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :sanitize_and_set_race_data,
+    # TODO(asher): Add sanitize_and_set_race_data to the before_save callbacks after completely
+    # eliminating the `races` serialized attribute in all environments.
+    # :sanitize_and_set_race_data,
     :fix_by_user_type
 
   def make_teachers_21
@@ -386,8 +388,10 @@ class User < ActiveRecord::Base
   #   - true: Yes, a URM user.
   #   - false: No, not a URM user.
   #   - nil: Don't know, may or may not be a URM user.
-  def self.urm_from_races(races_comma_separated)
-    races_array = races_comma_separated.split(',')
+  # TODO(asher): Replace instances of `read_attribute(:races)` with `races` after the serialized
+  # property `races` key has been fully eliminated.
+  def urm_from_races
+    races_array = read_attribute(:races).split(',')
     return nil if races_array.empty?
     return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
     return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
@@ -395,30 +399,24 @@ class User < ActiveRecord::Base
   end
 
   def sanitize_and_set_race_data
-    return unless property_changed?('races')
-    # Though not possible from the UI, it seems wise to support manual clearing of this field. Thus
-    # we check for this edge case.
+    return unless races_changed?
+
     if races.nil?
-      update_column(:races, nil)
-      update_column(:urm, nil)
+      self.urm = nil
       return
     end
 
-    # Sanitize the old (properties) data.
-    if races.include? 'closed_dialog'
-      self.races = %w(closed_dialog)
+    races_array = races.split(',')
+    if races_array.include? 'closed_dialog'
+      self.races = 'closed_dialog'
     end
-    if races.length > 5
-      self.races = %w(nonsense)
+    if races_array.length > 5
+      self.races = 'nonsense'
     end
-    races.each do |race|
-      self.races = %w(nonsense) unless VALID_RACES.include? race
+    races_array.each do |race|
+      self.races = 'nonsense' unless VALID_RACES.include? race
     end
-
-    # Set the new (urm and races columns) data.
-    races_comma_separated = races.join(',')
-    update_column(:races, races_comma_separated)
-    update_column(:urm, User.urm_from_races(races_comma_separated))
+    self.urm = urm_from_races
   end
 
   def fix_by_user_type
@@ -566,6 +564,23 @@ class User < ActiveRecord::Base
 
   def username_required?
     provider == User::PROVIDER_MANUAL
+  end
+
+  def update_without_password(params, *options)
+    if params[:races]
+      update_columns(races: params[:races].join(','))
+      if params[:races].include? 'closed_dialog'
+        update_columns(races: 'closed_dialog')
+      end
+      if params[:races].length > 5
+        update_columns(races: 'nonsense')
+      end
+      params[:races].each do |race|
+        update_column(races: 'nonsense') unless VALID_RACES.include? race
+      end
+      update_column(:urm, urm_from_races)
+    end
+    super
   end
 
   def update_with_password(params, *options)
