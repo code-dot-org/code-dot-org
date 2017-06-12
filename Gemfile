@@ -217,7 +217,7 @@ gem 'lograge'
 gem 'rack-ssl-enforcer'
 
 # PubSub for NetSim
-gem 'pusher', '~> 1.3.0', require: false
+gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 

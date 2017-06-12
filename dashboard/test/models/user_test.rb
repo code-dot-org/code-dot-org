@@ -1394,6 +1394,11 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair_with?(teacher)
     refute teacher.can_pair_with?(student)
     refute student.can_pair_with?(student)
+
+    # disable pair programming
+    section.update!(pairing_allowed: false)
+    student.reload
+    refute student.can_pair?
   end
 
   test "authorized teacher" do
