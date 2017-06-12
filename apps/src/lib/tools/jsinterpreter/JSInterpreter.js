@@ -1,4 +1,4 @@
-import * as codegen from '../../../codegen';
+import * as codegen from './codegen';
 import ObservableEventDEPRECATED from '../../../ObservableEventDEPRECATED';
 import * as utils from '../../../utils';
 import acorn from '@code-dot-org/js-interpreter/acorn';

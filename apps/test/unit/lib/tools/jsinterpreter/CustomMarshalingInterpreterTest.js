@@ -3,7 +3,7 @@ import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/configuredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
-import * as codegen from '@cdo/apps/codegen';
+import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import {makeAssertableObj, attachAssertToInterpreter} from './interpreterTestUtils';
 
 describe("The CustomMarshalingInterpreter", () => {

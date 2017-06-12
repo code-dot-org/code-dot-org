@@ -1,8 +1,8 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
 import Interpreter from '@code-dot-org/js-interpreter';
-import {dropletGlobalConfigBlocks} from './dropletUtils';
-import * as utils from './utils';
-import CustomMarshaler from './lib/tools/jsinterpreter/CustomMarshaler';
+import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
+import * as utils from '../../../utils';
+import CustomMarshaler from './CustomMarshaler';
 
 /*
  * Note: These are defined to match the state.mode of the interpreter. The
@@ -94,7 +94,7 @@ export function evalWithEvents(apis, events, evalCode = '') {
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
   // TODO (pcardune): remove circular dependency
-  const CustomMarshalingInterpreter = require('./lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+  const CustomMarshalingInterpreter = require('./CustomMarshalingInterpreter');
   interpreter = new CustomMarshalingInterpreter(
     evalCode + eventLoop,
     new CustomMarshaler({}),
@@ -252,7 +252,7 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
     maxDepth = Infinity; // default to infinite levels of depth
   }
   // TODO (pcardune): remove circular dependency
-  const CustomMarshalingInterpreter = require('./lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+  const CustomMarshalingInterpreter = require('./CustomMarshalingInterpreter');
   if (interpreter instanceof CustomMarshalingInterpreter) {
     if (interpreter.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
       return interpreter.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
