@@ -7,9 +7,12 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import teacherSections, { setValidLoginTypes } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
+import { getStore, registerReducers } from '@cdo/apps/redux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const data = JSON.parse(script.dataset.teacherdashboard);
@@ -44,15 +47,19 @@ function renderSectionProjects(sectionId) {
 
 function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
+  registerReducers({teacherSections});
+  const store = getStore();
+  store.dispatch(setValidLoginTypes(data.valid_login_types));
 
   ReactDOM.render(
-    <SectionTable
-      validLoginTypes={data.valid_login_types}
-      validGrades={data.valid_grades}
-      validCourses={data.valid_courses}
-      validScripts={data.valid_scripts}
-      sections={sections}
-    />,
+    <Provider store={store}>
+      <SectionTable
+        validGrades={data.valid_grades}
+        validCourses={data.valid_courses}
+        validScripts={data.valid_scripts}
+        sections={sections}
+      />
+    </Provider>,
     element
   );
 }
@@ -260,7 +267,7 @@ function main() {
           assignmentName: $scope.getName(s),
           assignmentPath: $scope.getPath(s)
         })));
-        $scope.hideSectionsTable = true;
+        // $scope.hideSectionsTable = true;
       }
       $scope.sectionsLoaded = true;
     });
