@@ -40,6 +40,65 @@ const sections = [
   }
 ];
 
+const validAssignments = [
+  {
+    id: 29,
+    name: "CS Discoveries",
+    script_name: "csd",
+    category: "Full Courses",
+    position: 1,
+    category_priority: -1,
+    assign_id: "c_29",
+    is_course: true
+  },
+  {
+    id: 30,
+    name: "CS Principles",
+    script_name: "csp",
+    category: "Full Courses",
+    position: 0,
+    category_priority: -1,
+    assign_id: "c_30",
+    is_course: true
+  },
+  {
+    id: 1,
+    name: "Accelerated Course",
+    script_name: "20-hour",
+    category: "CS Fundamentals",
+    position: 0,
+    category_priority: 0,
+   assign_id: "s_1"
+  },
+  {
+    id: 2,
+    name: "Hour of Code *",
+    script_name: "Hour of Code",
+    category: "Hour of Code",
+    position: 1,
+    category_priority: 0,
+    assign_id: "s_2"
+  },
+  {
+    id: 3,
+    name: "edit-code *",
+    script_name: "edit-code",
+    category: "other",
+    position: null,
+    category_priority: 3,
+    assign_id: "s_3"
+  },
+  {
+    id: 4,
+    name: "events *",
+    script_name: "events",
+    category: "other",
+    position: null,
+    category_priority: 3,
+    assign_id: "s_4"
+  }
+];
+
 export default storybook => {
   storybook
     .storiesOf('SectionTable (teacher dashboard)', module)
@@ -50,6 +109,7 @@ export default storybook => {
           <SectionTable
             validLoginTypes={['word', 'email', 'picture']}
             validGrades={["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]}
+            validAssignments={validAssignments}
             sections={sections}
           />
         )

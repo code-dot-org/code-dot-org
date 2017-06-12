@@ -3,6 +3,7 @@ import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import sectionShape from './sectionShape';
+import AssignmentSelector from './AssignmentSelector';
 
 const styles = {
   sectionName: {
@@ -108,7 +109,7 @@ export default class SectionRow extends Component {
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     // TODO
-    validAssignments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    groupedValidAssignemnts: PropTypes.object.isRequired,
     section: sectionShape.isRequired
   };
 
@@ -130,7 +131,7 @@ export default class SectionRow extends Component {
   onClickEditCancel = () => this.setState({editing: false});
 
   render() {
-    const { section, validLoginTypes, validGrades } = this.props;
+    const { section, validLoginTypes, validGrades, groupedValidAssignemnts } = this.props;
     const { editing, deleting } = this.state;
 
     return (
@@ -168,11 +169,14 @@ export default class SectionRow extends Component {
           )}
         </td>
         <td style={styles.td}>
-          {section.assignmentName &&
+          {!editing && section.assignmentName &&
             <a href={section.assignmentPath}>
               {section.assignmentName}
             </a>
           }
+          {editing && (
+            <AssignmentSelector groupedValidAssignemnts={groupedValidAssignemnts}/>
+          )}
         </td>
         <td style={styles.td}>
           {section.stageExtras ? i18n.yes() : i18n.no()}
