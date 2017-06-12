@@ -5421,3 +5421,57 @@ en:
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: Reflection questions for novice facilitators at TeacherCon.
+        csp-explore-task:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+          title: CSP Explore PT Prep
+          description_audience: ''
+          description_short: These lessons cover the preparation and completion of the CS Principles AP Explore Performance Task.
+          description: These lessons cover the preparation and completion of the CS Principles AP Explore Performance Task.
+        csp-create-task:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: ''
+          description_audience: ''
+          description_short: These lessons cover the preparation and completion of the CS Principles AP Create Performance Task.
+          description: These lessons cover the preparation and completion of the CS Principles AP Create Performance Task.
+        csp-ap-tech-setup:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+          title: CSP AP Digital Portfolio and Other Tools
+          description_audience: ''
+          description_short: ''
+          description: Covers AP Digital Portfolio setup and other technical tools required for completing and submitting the AP Performance Tasks.
+        csp-ap:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+          title: CSP AP Exam and Performance Tasks
+          description_audience: ''
+          description_short: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
+          description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.

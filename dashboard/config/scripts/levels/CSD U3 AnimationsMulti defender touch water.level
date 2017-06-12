@@ -39,7 +39,7 @@
     "start_in_animation_tab": "false",
     "encrypted_examples": "lSkSI2heIBkuveq6aO/EkBGZyJQXK0smuzkKtSJTSGx1ajuJyuxE07EzQ1mE\nTJbO\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

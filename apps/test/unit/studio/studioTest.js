@@ -430,21 +430,37 @@ describe('studio', function () {
   });
 
   describe("queueCallback method", () => {
+    let cb, interpreterFunc, someHook;
     beforeEach(() => {
-      Studio.interpreter = codegen.evalWithEvents({}, {}, '').interpreter;
+      const {hooks, interpreter} = codegen.evalWithEvents(
+        {
+          someGlobal: 1,
+        }, {
+          someHook: {code: 'return someGlobal;'},
+        },
+        'function someInterpreterFunc(a) { someGlobal = a; }'
+      );
+      someHook = hooks.find(hook => hook.name === 'someHook');
+      Studio.interpreter = interpreter;
       Studio.eventHandlers = [];
       Studio.setLevel({});
-    });
-
-    it("will call the given interpreter callback function with the given parameters", () => {
-      const cb = sinon.spy();
-      const interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
+      cb = sinon.spy();
+      interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
         nativeFunc: cb,
         interpreterFunc: Studio.interpreter,
       }));
+    });
+
+    it("will call the given interpreter callback function with the given parameters", () => {
       Studio.queueCallback(interpreterFunc, [1, 2, 3]);
       expect(cb).to.have.been.calledOnce;
       expect(cb).to.have.been.calledWith(1,2,3);
+    });
+
+    it("will not mess up any async functions that might be in the process of executing (regression test)", () => {
+      expect(someHook.func()).to.equal(1);
+      Studio.queueCallback(Studio.interpreter.getValueFromScope('someInterpreterFunc'), [5]);
+      expect(someHook.func()).to.equal(5);
     });
   });
 });
