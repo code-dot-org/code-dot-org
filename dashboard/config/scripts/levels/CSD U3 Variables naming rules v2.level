@@ -46,7 +46,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "6yYSYrDinrdr+geSjJnPvgLQexZNrmmGirHjWxdAJJE8LedaTe7rMdR2OVfg\njpfH\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

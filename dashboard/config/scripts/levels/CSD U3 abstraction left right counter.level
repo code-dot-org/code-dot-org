@@ -74,7 +74,7 @@
     "project_template_level_name": "CSD U3 abstraction jumping template",
     "encrypted_examples": "zINmsNx37NNcAvpcQHAZYSjBMwYa6S0d5y2efrUSmCsJAuN5UvuikiUa2y8g\n3dRW\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

@@ -57,7 +57,8 @@
     "palette_category_at_start": "sprites",
     "contained_level_names": [
       "CSD U3 displace prediction"
-    ]
+    ],
+    "show_debug_watch": "true"
   },
   "published": true,
   "notes": "",
