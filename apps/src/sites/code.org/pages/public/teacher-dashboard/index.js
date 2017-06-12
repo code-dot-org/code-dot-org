@@ -46,7 +46,12 @@ function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
 
   ReactDOM.render(
-    <SectionTable sections={sections}/>,
+    <SectionTable
+      validLoginTypes={data.valid_login_types}
+      validGrades={data.valid_grades}
+      validAssignments={data.valid_courses.concat(data.valid_scripts)}
+      sections={sections}
+    />,
     element
   );
 }

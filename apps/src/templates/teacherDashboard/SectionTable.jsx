@@ -34,11 +34,15 @@ const styles = {
 
 export default class SectionTable extends Component {
   static propTypes = {
+    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
+    // TODO
+    validAssignments: PropTypes.arrayOf(PropTypes.object).isRequired,
     sections: PropTypes.arrayOf(sectionShape).isRequired
   };
 
   render() {
-    const { sections } = this.props;
+    const { sections, validLoginTypes, validGrades, validAssignments } = this.props;
     // TODO: i18n
     return (
       <table style={styles.table}>
@@ -82,7 +86,15 @@ export default class SectionTable extends Component {
             <th style={styles.headerRow}>
             </th>
           </tr>
-          {sections.map((s, index) => <SectionRow key={index} section={s}/>)}
+          {sections.map((s, index) => (
+            <SectionRow
+              key={index}
+              validLoginTypes={validLoginTypes}
+              validGrades={validGrades}
+              validAssignments={validAssignments}
+              section={s}
+            />
+          ))}
         </tbody>
 
       </table>
