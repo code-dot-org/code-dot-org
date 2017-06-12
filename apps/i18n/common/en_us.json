@@ -34,6 +34,7 @@
   "clearPuzzle": "Start Over",
   "clearPuzzleConfirm": "This will reset the puzzle to its start state and delete all the blocks you've added or changed.",
   "clearPuzzleConfirmHeader": "Are you sure you want to start over?",
+  "chooseSection": "Choose Section",
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
