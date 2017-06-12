@@ -12,6 +12,8 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
 
+  require 'cdo/hamburger'
+
 %link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
@@ -23,25 +25,8 @@
           %a{:href=>CDO.studio_url("/home")}
             %img#logo{:src=>'/images/logo.png'}
         #headerlinks.desktop-feature
-          - if user_type == "teacher"
-            %a.headerlink{:href=>CDO.studio_url("/home")}= I18n.t('header_home')
-            %a.headerlink{:href=>CDO.studio_url("/courses")}= I18n.t('header_courses')
-            %a.headerlink{:href=>CDO.studio_url("/projects")}= I18n.t('header_project_gallery')
-            %a.headerlink{:href=>"/teacher-dashboard#/sections"}= I18n.t('header_sections')
-            %a.headerlink{:href=>CDO.studio_url("/my-professional-learning")}= I18n.t('header_professional_learning')
-          - elsif user_type == "student"
-            %a.headerlink{:href=>CDO.studio_url("/courses")}= I18n.t('header_courses')
-            %a.headerlink{:href=>CDO.studio_url("/projects")}= I18n.t('header_project_gallery')
-          - elsif request.language == "en"
-            %a.headerlink{:href=>"/student"}= I18n.t('header_learn')
-            %a.headerlink{:href=>"/educate"}= I18n.t('header_teach')
-            %a.headerlink{:href=>"/promote"}= I18n.t('header_stats')
-            %a.headerlink{:href=>"/help"}= I18n.t('header_help_us')
-            %a.headerlink{:href=>"/about"}= I18n.t('header_about')
-            %a.headerlink{:href=>CDO.studio_url("/projects/public")}= I18n.t('header_project_gallery')
-          - else
-            %a.headerlink{:href=>"/courses"}=I18n.t('header_courses')
-            %a.headerlink{:href=>"/projects/public"}=I18n.t('header_project_gallery')
+          - Hamburger.get_header_contents(user_type, request.language).each do |entry|
+            %a.headerlink{href: entry[:url]}= entry[:title]
 
       #right
         #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}

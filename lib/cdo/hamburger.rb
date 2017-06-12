@@ -87,48 +87,58 @@ class Hamburger
     code_org_url_base = options[:code_org_url_base]
 
     teacher_entries = [
-      {title: I18n.t("#{loc_prefix}home"), url: "#{studio_url_base}/home"},
-      {title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects"},
-      {title: I18n.t("#{loc_prefix}sections"), url: "#{code_org_url_base}/teacher-dashboard#/sections"},
-      {title: I18n.t("#{loc_prefix}professional_learning"), url: "#{studio_url_base}/my-professional-learning"}
-    ].freeze
+      {title: "home", url: "#{studio_url_base}/home"},
+      {title: "courses", url: "#{studio_url_base}/courses"},
+      {title: "project_gallery", url: "#{studio_url_base}/projects"},
+      {title: "sections", url: "#{code_org_url_base}/teacher-dashboard#/sections"},
+      {title: "professional_learning", url: "#{studio_url_base}/my-professional-learning"}
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
 
     student_entries = [
-      {title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects"}
-    ]
+      {title: "courses", url: "#{studio_url_base}/courses"},
+      {title: "project_gallery", url: "#{studio_url_base}/projects"}
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
 
     signed_out_entries = [
-      {title: I18n.t("#{loc_prefix}courses"), url: "#{studio_url_base}/courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: "#{studio_url_base}/projects/public"}
-    ]
+      {title: "courses", url: "#{studio_url_base}/courses"},
+      {title: "project_gallery", url: "#{studio_url_base}/projects/public"}
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
 
     educate_entries = [
-      {title: I18n.t("#{loc_prefix}educate_overview"), url: "#{code_org_url_base}/educate"},
-      {title: I18n.t("#{loc_prefix}educate_elementary"), url: "#{code_org_url_base}/educate/curriculum/elementary-school"},
-      {title: I18n.t("#{loc_prefix}educate_middle"), url: "#{code_org_url_base}/educate/curriculum/middle-school"},
-      {title: I18n.t("#{loc_prefix}educate_high"), url: "#{code_org_url_base}/educate/curriculum/high-school"},
-      {title: I18n.t("#{loc_prefix}educate_hoc"), url: "https://hourofcode.com"},
-      {title: I18n.t("#{loc_prefix}educate_partner"), url: "#{code_org_url_base}/educate/partner"},
-      {title: I18n.t("#{loc_prefix}educate_beyond"), url: "#{code_org_url_base}/educate/curriculum/3rd-party"},
-      {title: I18n.t("#{loc_prefix}educate_inspire"), url: "#{code_org_url_base}/educate/resources/inspire"},
-      {title: I18n.t("#{loc_prefix}educate_community"), url: "#{code_org_url_base}/educate/community"},
-      {title: I18n.t("#{loc_prefix}educate_tools"), url: "#{code_org_url_base}/educate/resources/videos"},
-    ]
+      {title: "educate_overview", url: "#{code_org_url_base}/educate"},
+      {title: "educate_elementary", url: "#{code_org_url_base}/educate/curriculum/elementary-school"},
+      {title: "educate_middle", url: "#{code_org_url_base}/educate/curriculum/middle-school"},
+      {title: "educate_high", url: "#{code_org_url_base}/educate/curriculum/high-school"},
+      {title: "educate_hoc", url: "https://hourofcode.com"},
+      {title: "educate_partner", url: "#{code_org_url_base}/educate/partner"},
+      {title: "educate_beyond", url: "#{code_org_url_base}/educate/curriculum/3rd-party"},
+      {title: "educate_inspire", url: "#{code_org_url_base}/educate/resources/inspire"},
+      {title: "educate_community", url: "#{code_org_url_base}/educate/community"},
+      {title: "educate_tools", url: "#{code_org_url_base}/educate/resources/videos"},
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
 
     about_entries = [
-      {title: I18n.t("#{loc_prefix}about_us"), url: "#{code_org_url_base}/about"},
-      {title: I18n.t("#{loc_prefix}about_leadership"), url: "#{code_org_url_base}/about/leadership"},
-      {title: I18n.t("#{loc_prefix}about_donors"), url: "#{code_org_url_base}/about/donors"},
-      {title: I18n.t("#{loc_prefix}about_partners"), url: "#{code_org_url_base}/about/partners"},
-      {title: I18n.t("#{loc_prefix}about_team"), url: "#{code_org_url_base}/about/team"},
-      {title: I18n.t("#{loc_prefix}about_news"), url: "#{code_org_url_base}/about/news"},
-      {title: I18n.t("#{loc_prefix}about_evaluation"), url: "#{code_org_url_base}/about/evaluation"},
-      {title: I18n.t("#{loc_prefix}about_jobs"), url: "#{code_org_url_base}/about/jobs"},
-      {title: I18n.t("#{loc_prefix}about_contact"), url: "#{code_org_url_base}/contact"},
-      {title: I18n.t("#{loc_prefix}about_faqs"), url: "#{code_org_url_base}/faq"},
-    ]
+      {title: "about_us", url: "#{code_org_url_base}/about"},
+      {title: "about_leadership", url: "#{code_org_url_base}/about/leadership"},
+      {title: "about_donors", url: "#{code_org_url_base}/about/donors"},
+      {title: "about_partners", url: "#{code_org_url_base}/about/partners"},
+      {title: "about_team", url: "#{code_org_url_base}/about/team"},
+      {title: "about_news", url: "#{code_org_url_base}/about/news"},
+      {title: "about_evaluation", url: "#{code_org_url_base}/about/evaluation"},
+      {title: "about_jobs", url: "#{code_org_url_base}/about/jobs"},
+      {title: "about_contact", url: "#{code_org_url_base}/contact"},
+      {title: "about_faqs", url: "#{code_org_url_base}/faq"},
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
 
     # Get visibility CSS.
     visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
@@ -154,44 +164,129 @@ class Hamburger
     # Help-related.
 
     if options[:level] || options[:script_level]
-      report_url = options[:script_level] ? options[:script_level].report_bug_url(options[:request]) : options[:level].report_bug_url(options[:request])
-      entries << {title: I18n.t("#{loc_prefix}report_bug"), url: report_url, class: visibility[:show_help_options]}
+      report_url = options[:script_level] ?
+        options[:script_level].report_bug_url(options[:request]) :
+        options[:level].report_bug_url(options[:request])
+      entries << {
+        title: I18n.t("#{loc_prefix}report_bug"),
+        url: report_url,
+        class: visibility[:show_help_options]
+      }
     else
-      entries << {title: I18n.t("#{loc_prefix}report_bug"), url: "https://support.code.org/hc/en-us/requests/new", class: visibility[:show_help_options]}
+      entries << {
+        title: I18n.t("#{loc_prefix}report_bug"),
+        url: "https://support.code.org/hc/en-us/requests/new",
+        class: visibility[:show_help_options]
+      }
     end
 
-    entries << {title: I18n.t("#{loc_prefix}help_support"), url: "https://support.code.org", class: visibility[:show_help_options]}
+    entries << {
+      title: I18n.t("#{loc_prefix}help_support"),
+      url: "https://support.code.org",
+      class: visibility[:show_help_options]
+    }
 
     if options[:user_type] == "teacher"
-      entries << {title: I18n.t("#{loc_prefix}teacher_community"), url: "http://forum.code.org/", class: visibility[:show_help_options]}
+      entries << {
+        title: I18n.t("#{loc_prefix}teacher_community"),
+        url: "http://forum.code.org/",
+        class: visibility[:show_help_options]
+      }
     end
 
-    if options[:level] && options[:level].try(:is_project_level) && options[:level.game] == Game.gamelab
-      entries << {title: I18n.t("#{loc_prefix}documentation"), url: "https://docs.code.org/gamelab/", class: visibility[:show_help_options]}
+    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
+      entries << {
+        title: I18n.t("#{loc_prefix}documentation"),
+        url: "https://docs.code.org/gamelab/",
+        class: visibility[:show_help_options]
+      }
     end
 
     if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
-      entries << {title: I18n.t("#{loc_prefix}documentation"), url: "https://docs.code.org/applab/", class: visibility[:show_help_options]}
+      entries << {
+        title: I18n.t("#{loc_prefix}documentation"),
+        url: "https://docs.code.org/applab/",
+        class: visibility[:show_help_options]
+      }
     end
 
     if options[:level] || options[:script_level]
-      entries << {title: I18n.t("#{loc_prefix}tutorials"), url: CDO.code_org_url('/educate/applab'), class: visibility[:show_help_options]}
+      entries << {
+        title: I18n.t("#{loc_prefix}tutorials"),
+        url: CDO.code_org_url('/educate/applab'),
+        class: visibility[:show_help_options]
+      }
     end
 
     entries << {type: "divider", class: visibility[:show_pegasus_options]}
 
     # Pegasus options.
 
-    entries << {title: I18n.t("#{loc_prefix}learn"), url: "#{code_org_url_base}/student", class: visibility[:show_pegasus_options]}
+    entries << {
+      title: I18n.t("#{loc_prefix}learn"),
+      url: "#{code_org_url_base}/student",
+      class: visibility[:show_pegasus_options]
+    }
 
-    entries << {type: "expander", title: I18n.t("#{loc_prefix}teach"), id: "educate_entries", subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]}, class: visibility[:show_pegasus_options]}
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}teach"),
+      id: "educate_entries",
+      subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
-    entries << {title: I18n.t("#{loc_prefix}stats"), url: "#{code_org_url_base}/promote", class: visibility[:show_pegasus_options]}
+    entries << {
+      title: I18n.t("#{loc_prefix}stats"),
+      url: "#{code_org_url_base}/promote",
+      class: visibility[:show_pegasus_options]
+    }
 
-    entries << {title: I18n.t("#{loc_prefix}help_us"), url: "#{code_org_url_base}/help", class: visibility[:show_pegasus_options]}
+    entries << {
+      title: I18n.t("#{loc_prefix}help_us"),
+      url: "#{code_org_url_base}/help",
+      class: visibility[:show_pegasus_options]
+    }
 
-    entries << {type: "expander", title: I18n.t("#{loc_prefix}about"), id: "about_entries", subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]}, class: visibility[:show_pegasus_options]}
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}about"),
+      id: "about_entries",
+      subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
     {entries: entries, visibility: visibility[:hamburger_class]}
+  end
+
+  def self.get_header_contents(user_type, language)
+    if user_type == "teacher"
+      [
+        {title: I18n.t('header_home'), url: CDO.studio_url("/home")},
+        {title: I18n.t('header_courses'), url: CDO.studio_url("/courses")},
+        {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects")},
+        {title: I18n.t('header_sections'), url: CDO.code_org_url("/teacher-dashboard#/sections")},
+        {title: I18n.t('header_professional_learning'), url: CDO.studio_url("/my-professional-learning")}
+      ]
+    elsif user_type == "student"
+      [
+        {title: I18n.t('header_courses'), url: CDO.studio_url("/courses")},
+        {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects")}
+      ]
+    elsif language == "en"
+      [
+        {title: I18n.t('header_learn'), url: CDO.code_org_url("/student")},
+        {title: I18n.t('header_teach'), url: CDO.code_org_url("/educate")},
+        {title: I18n.t('header_stats'), url: CDO.code_org_url("/promote")},
+        {title: I18n.t('header_help_us'), url: CDO.code_org_url("/help")},
+        {title: I18n.t('header_about'), url: CDO.code_org_url("/about")},
+        {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects/public")}
+      ]
+    else
+      [
+        {title: I18n.t('header_courses'), url: CDO.code_org_url("/courses")},
+        {title: I18n.t('header_project_gallery'), url: CDO.code_org_url(url: "/projects/public")}
+      ]
+    end
   end
 end
