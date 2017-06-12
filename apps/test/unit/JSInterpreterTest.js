@@ -328,6 +328,42 @@ myCallback("this message is coming from inside the interpreter");
       return interpreterValue.toNumber();
     }
 
+    describe("When executed while logExecution=true", () => {
+      beforeEach(() => {
+        jsInterpreter.logExecution = true;
+        jsInterpreter.parse({code:`
+          var incrementor = {
+            value: 1,
+            next: function () { this.value++; }
+          };
+          function add(a) {
+            for (var j = 0; j < a; j++) {
+              incrementor.next();
+            }
+          }
+          add(3);
+        `});
+        jsInterpreter.executeInterpreter(true);
+      });
+
+      it("will populate the execution log with function calls and for loops", () => {
+        expect(jsInterpreter.executionLog).to.deep.equal([
+          'add:1',
+          '[forInit]',
+          '[forTest]',
+          'incrementor.next:0',
+          '[forUpdate]',
+          '[forTest]',
+          'incrementor.next:0',
+          '[forUpdate]',
+          '[forTest]',
+          'incrementor.next:0',
+          '[forUpdate]',
+          '[forTest]',
+        ]);
+      });
+    });
+
     describe("When executed while breakpoints are set", () => {
       beforeEach(() => {
         aceEditor.getSession().getBreakpoints()[2] = true;
