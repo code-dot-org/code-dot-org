@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import sectionShape from './sectionShape';
+import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 
 const styles = {
@@ -108,8 +108,8 @@ export default class SectionRow extends Component {
   static propTypes = {
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    // TODO
-    groupedValidAssignemnts: PropTypes.object.isRequired,
+    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
+    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
     section: sectionShape.isRequired
   };
 
@@ -126,12 +126,15 @@ export default class SectionRow extends Component {
 
   onClickEdit = () => this.setState({editing: true});
 
-  onClickEditSave = () => console.log('this is where our save will happen');
+  onClickEditSave = () => {
+    console.log('this is where our save will happen');
+    console.log(this.assignment.getSelectedAssignment());
+  }
 
   onClickEditCancel = () => this.setState({editing: false});
 
   render() {
-    const { section, validLoginTypes, validGrades, groupedValidAssignemnts } = this.props;
+    const { section, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
     const { editing, deleting } = this.state;
 
     return (
@@ -175,7 +178,13 @@ export default class SectionRow extends Component {
             </a>
           }
           {editing && (
-            <AssignmentSelector groupedValidAssignemnts={groupedValidAssignemnts}/>
+            <AssignmentSelector
+              ref={element => this.assignment = element}
+              courseId={section.course_id}
+              scriptId={section.script_id}
+              validCourses={validCourses}
+              validScripts={validScripts}
+            />
           )}
         </td>
         <td style={styles.td}>

@@ -40,7 +40,7 @@ const sections = [
   }
 ];
 
-const validAssignments = [
+const validCourses = [
   {
     id: 29,
     name: "CS Discoveries",
@@ -48,8 +48,6 @@ const validAssignments = [
     category: "Full Courses",
     position: 1,
     category_priority: -1,
-    assign_id: "c_29",
-    is_course: true
   },
   {
     id: 30,
@@ -58,9 +56,9 @@ const validAssignments = [
     category: "Full Courses",
     position: 0,
     category_priority: -1,
-    assign_id: "c_30",
-    is_course: true
-  },
+  }];
+
+  const validScripts = [
   {
     id: 1,
     name: "Accelerated Course",
@@ -68,7 +66,6 @@ const validAssignments = [
     category: "CS Fundamentals",
     position: 0,
     category_priority: 0,
-   assign_id: "s_1"
   },
   {
     id: 2,
@@ -77,7 +74,6 @@ const validAssignments = [
     category: "Hour of Code",
     position: 1,
     category_priority: 0,
-    assign_id: "s_2"
   },
   {
     id: 3,
@@ -86,7 +82,6 @@ const validAssignments = [
     category: "other",
     position: null,
     category_priority: 3,
-    assign_id: "s_3"
   },
   {
     id: 4,
@@ -95,7 +90,6 @@ const validAssignments = [
     category: "other",
     position: null,
     category_priority: 3,
-    assign_id: "s_4"
   }
 ];
 
@@ -109,7 +103,8 @@ export default storybook => {
           <SectionTable
             validLoginTypes={['word', 'email', 'picture']}
             validGrades={["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]}
-            validAssignments={validAssignments}
+            validCourses={validCourses}
+            validScripts={validScripts}
             sections={sections}
           />
         )
