@@ -9,11 +9,11 @@
   %div
   .field
     = f.label :name
-    - if f.object.can_edit_display_name?
+    - if !f.object.teacher_managed_account?
       = f.text_field :name, autofocus: true, maxlength: 255
     - else
       = f.object.name
-  - if f.object.should_show_email?
+  - if !f.object.teacher_managed_account?
     .field
       = f.label :email
       - if f.object.can_edit_email?
@@ -73,7 +73,7 @@
       = f.select :user_type, user_type_options
 
   %div= f.submit t('crud.update'), class: 'btn btn-default'
-- if current_user.can_delete_account?
+- if !current_user.teacher_managed_account?
   %h3= t('user.delete')
   %p
     = t('user.delete_text')
