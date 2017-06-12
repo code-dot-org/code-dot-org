@@ -49,6 +49,7 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
+  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -67,6 +68,8 @@ var CardinalDirections = constants.CardinalDirections;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
+const turnRight90 = constants.turnRight90;
+const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 
@@ -76,18 +79,18 @@ var showDebugInfo = false;
 /**
  * Create a namespace for the application.
  */
-var Studio = module.exports;
+let Studio = module.exports;
 
 Studio.keyState = {};
 Studio.gesturesObserved = {};
 Studio.btnState = {};
 
-var ButtonState = {
+const ButtonState = {
   UP: 0,
   DOWN: 1
 };
 
-var ArrowIds = {
+const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
@@ -100,20 +103,20 @@ Studio.GameStates = {
   OVER: 2
 };
 
-var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
+const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
 
-var EdgeClassNames = [
+const EdgeClassNames = [
   'top',
   'left',
   'bottom',
   'right'
 ];
 
-var level;
-var skin;
+let level;
+let skin;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -2498,7 +2501,7 @@ Studio.reset = function (first) {
   };
 
   // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = null;
+  Studio.lastMoveSingleDir = Direction.EAST;
 
   // Reset goal successState:
   if (level.goal) {
@@ -2744,7 +2747,7 @@ Studio.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
@@ -2768,6 +2771,8 @@ var displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
+    const showFailureIcon = studioApp().hasContainedLevels &&
+      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2789,7 +2794,8 @@ var displayFeedback = function () {
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting
+      disablePrinting: level.disablePrinting,
+      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -2802,7 +2808,7 @@ Studio.onReportComplete = function (response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
-  displayFeedback();
+  Studio.displayFeedback();
 };
 
 var registerEventHandler = function (handlers, name, func) {
@@ -3335,7 +3341,8 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
+      (!studioApp().hasContainedLevels || getValidatedResult())) {
     Studio.playSound({ soundName: 'win' });
   } else {
     Studio.playSound({ soundName: 'failure' });
@@ -4271,6 +4278,29 @@ Studio.callCmd = function (cmd) {
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.SOUTH,
       });
+      break;
+    case 'moveForward':
+      studioApp().highlight(cmd.id);
+      Studio.moveSingle({
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Studio.lastMoveSingleDir,
+      });
+      break;
+    case 'moveBackward':
+      studioApp().highlight(cmd.id);
+      Studio.moveSingle({
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: turnRight90(turnRight90(Studio.lastMoveSingleDir)),
+      });
+      Studio.lastMoveSingleDir = turnRight90(turnRight90(Studio.lastMoveSingleDir));
+      break;
+    case 'turnRight':
+      studioApp().highlight(cmd.id);
+      Studio.lastMoveSingleDir = turnRight90(Studio.lastMoveSingleDir);
+      break;
+    case 'turnLeft':
+      studioApp().highlight(cmd.id);
+      Studio.lastMoveSingleDir = turnLeft90(Studio.lastMoveSingleDir);
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
@@ -5319,7 +5349,10 @@ Studio.queueCallback = function (callback, args) {
   var state = {
     node: {
       type: 'CallExpression',
-      arguments: intArgs /* this just needs to be an array of the same size */
+      arguments: intArgs, /* this just needs to be an array of the same size */
+      // give this node an end so that the interpreter doesn't treat it
+      // like polyfill code and do weird weird scray terrible things.
+      end: 1,
     },
     doneCallee_: true,
     func_: callback,
@@ -5328,7 +5361,12 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = Studio.interpreter.stateStack.unshift(state);
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments.length > 0) {
+      state.value = state.arguments.pop();
+    }
+
+    const depth = Studio.interpreter.stateStack.push(state);
     Studio.interpreter.paused_ = false;
     while (Studio.interpreter.stateStack.length >= depth) {
       Studio.interpreter.step();
@@ -6265,3 +6303,9 @@ var checkFinished = function () {
 
   return false;
 };
+
+if (IN_UNIT_TEST) {
+  module.exports.setLevel = (newLevel) => {
+    level = newLevel;
+  };
+}

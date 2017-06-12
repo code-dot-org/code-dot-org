@@ -11,11 +11,12 @@
   - if @section && @section.user
     %p= "Section code: #{@section.code}"
     %p{id: 'section_owner'}= "Owner: #{@section.user.email}"
-    %a{href: teacher_dashboard_section_progress_url(@section)}
-      %p View this section
     - if @section.deleted?
       = hidden_field_tag 'section_code', @section.code
       = submit_tag 'Undelete!'
+    - else
+      %a{href: teacher_dashboard_section_progress_url(@section)}
+        %p View this section
     %h3 Section dump
     %pre= @section.inspect
     %h3 Teacher dump

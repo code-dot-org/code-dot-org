@@ -192,6 +192,24 @@ App Lab is a JavaScript programming environment for students to make simple apps
 
 <div style='clear:both'></div>
 
+# Create a animation or game with Game Lab (beta)
+
+<div class="col-50" style="padding-right: 20px;">
+
+<%= view :display_video_thumbnail, id: "csd_gamelab_draw_1", video_code: "PXn9gKiKKFo", play_button: 'center', download_path: "https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_1.mp4" %>
+
+</div>
+
+[col-50]
+
+Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Design an animation or game, code with blocks or JavaScript to make it work, then share your app in seconds.
+
+<a href="/educate/gamelab"><button>Learn more</button></a>
+
+[/col-50]
+
+<div style='clear:both'></div>
+
 # Build on problem solving skills with these digital tools
 
 <div class="col-50" style="padding-right: 20px;">

@@ -382,8 +382,8 @@
               name: Writing computer programs
         netsim:
           title: Internet Simulator
-          description: ''
-          description_short: ''
+          description: Learn about how the Internet works.
+          description_short: Learn about how the Internet works.
           description_audience: ''
           stages:
             Automatic DNS node:
@@ -554,7 +554,11 @@
               name: Gåder
         cspunit1:
           title: CSP Unit 1
-          description: CSP Unit 1 Stages
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. This unit is a pilot
+            version and is no longer supported or updated. You can find the new units
+            at code.org/educate/csp.
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
@@ -591,6 +595,7 @@
               name: Sending Numbers
             Text Compression:
               name: Text Compression
+          description_audience: ''
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -997,12 +1002,10 @@
               name: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description: |
-            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-            structure and design of the internet and the implications of those design decisions including
-            the reliability of network communication, the security of data, and personal privacy. Topics
-            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-            concerns.
+          description: In this unit, students extend their understanding of the internet
+            and how it functions by building off the concepts learned when sending
+            bits in Unit 1. This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_short: Internettet
           stages:
             Algorithms Detour - Hard Problems TSP:
@@ -1045,6 +1048,7 @@
               name: The Need for Addressing
             The Need for DNS:
               name: The Need for DNS
+          description_audience: ''
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Blandet Sommerkursus'
@@ -1467,7 +1471,8 @@
           description: Use the Odometer widget to control odometers with various number
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
-          description_short: Odometer widget
+          description_short: Use the Odometer widget to control odometers with various
+            number bases.
           description_audience: ''
           stages:
             Odometer Widget:
@@ -1514,8 +1519,9 @@
         vigenere:
           title: Vigenere Cipher Widget
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
-            messages using a Vigenere Cipher
-          description_short: Vigenere Cipher Widget
+            messages using a Vigenere Cipher.
+          description_short: Use the Vigenere Cipher Widget to explore encrypting
+            and decrypting messages using a Vigenere Cipher.
           description_audience: ''
           stages:
             Vigenere:
@@ -1551,10 +1557,13 @@
           description: Use the Frequency Analysis Widget to analyze letter frequencies
             in an input text compared to expected frequencies for standard English.
             Use that comparison to explore cracking Shift and Substitution Ciphers.
-          description_short: Frequency Analysis Widget
+          description_short: Use the Frequency Analysis Widget to analyze letter frequencies
+            in a text compared to expected frequencies. Crack Shift and Substitution
+            Ciphers.
           stages:
             Frequency Analysis:
               name: Frequency Analysis
+          description_audience: ''
         ECSPD3-Unit2:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1906,12 +1915,13 @@
               name: Hour of Code 2015
         mc:
           title: Minecraft Hour of Code
-          description: Brug kodeblokkene til at styre Steve eller Alex gennem et eventyr
-            i Minecraft
-          description_short: Udforsk Minecrafts verden gennem programmering
+          description: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
+            i denne Minecraft verden
+          description_short: Udforsk en Minecraft-verden gennem kode
           stages:
             Hour of Code 2015:
               name: Hour of Code 2015
+          description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -2064,7 +2074,7 @@
             use data in your apps. The following material provides an overview of
             how these tools work, a sampling of example projects that can be built
             using these tools, and a space in which to build and submit a final project.
-          description_short: Data Apps
+          description_short: Learn to collect and use data in App Lab apps.
           description_audience: ''
           stages:
             Creating Javascript Objects:
@@ -2236,7 +2246,8 @@
             be learned or extracted from it, and being able to use computational tools
             to manipulate data and communicate about it are the primary skills addressed
             in the unit.
-          description_short: Digital Information
+          description_short: Explore how more complex digital information is represented
+            and manipulated through computation and visualization.
           description_audience: ''
           stages:
             Bytes and File Sizes:
@@ -2319,6 +2330,8 @@
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -2471,6 +2484,12 @@
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
+            Multi-Screen Apps:
+              name: Multi-Screen Apps
+            '"if" Statements Unplugged':
+              name: '"if" Statements Unplugged'
+            Boolean Expressions and "if" Statements:
+              name: Boolean Expressions and "if" Statements
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
           description: This unit covers the preparation and completion of the Create
@@ -2773,7 +2792,8 @@
           description: 'This 55-question multiple choice assessment covers questions
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact. '
-          description_short: Culminating
+          description_short: This assessment has been deprecated and is scheduled
+            for removal in Summer of 2017.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -2797,7 +2817,9 @@
           description: 'This 25 question multiple choice assessment covers questions
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact.'
-          description_short: Culminating
+          description_short: This multiple choice assessment covers questions across
+            7 big ideas of computer science. It is part 1 of a two-part 50 question
+            exam.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
@@ -2808,7 +2830,9 @@
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact.  It is part
             2 of a two-part 50 question exam'
-          description_short: Culminating
+          description_short: This multiple choice assessment covers questions across
+            7 big ideas of computer science. It is part 2 of a two-part 50 question
+            exam.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
@@ -3876,7 +3900,7 @@
               name: 'Anonymous student survey: Taking the AP exam'
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
-          description_short: Problem Solving
+          description_short: Learn how computers work with humans to solve problems.
           description: |
             Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. Through a series of puzzles, challenges, and real world scenarios, students are introduced to a problem solving process that they will return to repeatedly throughout the course. Students then learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with students designing an application that helps solve a problem of their choosing.\r
           description_audience: ''
@@ -4232,7 +4256,7 @@
         csd2:
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
-          description_short: Web Development
+          description_short: Learn to build your own web pages in Web Lab.
           description: ''
           stages:
             new stage:
@@ -4513,7 +4537,7 @@
         csd4:
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
-          description_short: The Design Process
+          description_short: Learn how create user centered designs.
           description: ''
           stages:
             Analysis of Design:
@@ -4822,7 +4846,7 @@
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: ''
+          description_short: An introduction to computer science for early readers.
           description: |-
             Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
             Recommended for grade K.
@@ -4860,7 +4884,7 @@
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: ''
+          description_short: An introduction to computer science for early readers.
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4902,7 +4926,8 @@
         coursec-draft:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. Recommended for
             2nd grade.
@@ -4946,7 +4971,8 @@
         coursed-draft:
           title: 'CS Fundamentals: Course D'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. Recommended for
             3rd grade.
@@ -4996,7 +5022,8 @@
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. The course culminates
             in a multi-day project. Recommended for 4th grade.
@@ -5044,7 +5071,8 @@
         coursef-draft:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. The course culminates
             in a multi-day project. Recommended for 5th grade.
@@ -5357,7 +5385,7 @@
         csppostap:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
-          description_short: ''
+          description_short: Learn to collect and use data in App Lab apps.
           description: App Lab has a number of tools that allow you to collect and
             use data in your apps. The following material provides an overview of
             how these tools work, a sampling of example projects that can be built
@@ -5592,7 +5620,7 @@
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
-          description_short: Programming with physical devices
+          description_short: Learn to program with physical devices.
           description: The sixth unit of CS Discoveries, in which students use App
             Lab and the Maker Toolkit to develop programs that communicate with a
             physical board.
@@ -5806,7 +5834,7 @@
         csd5:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
-          description_short: ''
+          description_short: Learn about how data can be used in solving problems.
           description: ''
           stages:
             Representation Matters:
@@ -6402,4 +6430,24 @@
           title: CSD Unit 2 (DEPRECATED)
           description_audience: ''
           description_short: Web Development
+          description: ''
+        artist-and-bb8:
+          stages:
+            B8 New BB8:
+              name: B8 New BB8
+            c8 to BB8:
+              name: c8 to BB8
+            B8 BB8:
+              name: B8 BB8
+            C9 Artist Loops:
+              name: C9 Artist Loops
+            C8 to BB8:
+              name: C8 to BB8
+            D7 to Laurel:
+              name: D7 to Laurel
+            D6 Frozen Artist:
+              name: D6 Frozen Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
           description: ''

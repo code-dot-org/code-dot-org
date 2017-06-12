@@ -167,6 +167,7 @@ export default storybook => {
           storybook={storybook}
           apiEndpoint=""
           options={OPTIONS}
+          requiredFields={[]}
         />
       )
     }]);

@@ -1,19 +1,23 @@
 import $ from 'jquery';
+import trackEvent from '../util/trackEvent';
 
 export const initHamburger = function () {
   $(function () {
 
-    $('#hamburger-icon').click(function (e){
+    $('#hamburger-icon').click(function (e) {
       $(this).toggleClass( 'active' );
       $('#hamburger #hamburger-contents').slideToggle();
       e.preventDefault();
     });
 
     $(document).on('click',function (e) {
-      var nav = $('#hamburger');
-      if (!nav.is(e.target)
-          && nav.has(e.target).length === 0) {
-        nav.children('#hamburger-contents').hide();
+      var hamburger = $('#hamburger');
+
+      // If we didn't click the hamburger itself, and also nothing inside it,
+      // then hide it.
+      if (!hamburger.is(e.target)
+          && hamburger.has(e.target).length === 0) {
+        hamburger.children('ul').slideUp();
         $('#hamburger-icon').removeClass('active');
       }
     });
@@ -33,6 +37,27 @@ export const initHamburger = function () {
       success: function (data) {
         $('#sign_in_or_user').html(data);
       }
+    });
+
+    $("#hamburger #report-bug").click(function () {
+      trackEvent("help_ui", "report-bug", "hamburger");
+    });
+
+    $("#hamburger #support").click(function () {
+      trackEvent("help_ui", "support", "hamburger");
+    });
+
+    // This item is not in the hamburger, but actually in the studio footer.
+    $(".footer #support").click(function () {
+      trackEvent("help_ui", "support", "studio_footer");
+    });
+
+    // This item is not in the hamburger, but actually in the pegasus footers for
+    // desktop and mobile.
+    $("#pagefooter #support").each(function () {
+      $(this).click(function () {
+        trackEvent("help_ui", "support", "studio_footer");
+      });
     });
 
   });

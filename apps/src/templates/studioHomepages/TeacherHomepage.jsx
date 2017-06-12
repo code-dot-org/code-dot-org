@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import HeadingBanner from '../HeadingBanner';
-import AnnouncementsCollapsible from './AnnouncementsCollapsible';
-import RecentCoursesCollapsible from './RecentCoursesCollapsible';
-import ManageSectionsCollapsible from './ManageSectionsCollapsible';
+import HeaderBanner from '../HeaderBanner';
+import Announcements from './Announcements';
+import RecentCourses from './RecentCourses';
+import Sections from './Sections';
 import TeacherResources from './TeacherResources';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -28,21 +28,23 @@ const TeacherHomepage = React.createClass({
 
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.homepageHeading()}
           extended={false}
         />
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        <AnnouncementsCollapsible announcements={announcements}/>
-        <RecentCoursesCollapsible
+        <Announcements
+          announcements={announcements}
+        />
+        <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           heading={i18n.recentCourses()}
           isTeacher={true}
         />
-        <ManageSectionsCollapsible
+        <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
         />

@@ -4,7 +4,7 @@ markdown <<MARKDOWN
 # Overview
 
 
-By combining the Draw Loop and the Counter Pattern, students will write programs that move sprites across the screen, as well as animate other sprite properties.
+By combining the draw loop and the counter pattern, students will write programs that move sprites across the screen, as well as animate other sprite properties.
 
 
 MARKDOWN
