@@ -5349,7 +5349,10 @@ Studio.queueCallback = function (callback, args) {
   var state = {
     node: {
       type: 'CallExpression',
-      arguments: intArgs /* this just needs to be an array of the same size */
+      arguments: intArgs, /* this just needs to be an array of the same size */
+      // give this node an end so that the interpreter doesn't treat it
+      // like polyfill code and do weird weird scray terrible things.
+      end: 1,
     },
     doneCallee_: true,
     func_: callback,

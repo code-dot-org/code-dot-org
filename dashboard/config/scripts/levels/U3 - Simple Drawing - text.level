@@ -56,7 +56,7 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "encrypted_examples": "El7svF2B3LptxlyeMxz12fLbibMusHuc49Rxx04hi33Xq2RAaWz0yJDZ5sov\nD8yi\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

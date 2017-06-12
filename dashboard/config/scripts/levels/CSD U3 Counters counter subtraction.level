@@ -71,7 +71,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "7COhPG2jjd0/WdubGtdDnrA55r63WerN/bFyoInM7S7DqCYU4eyk6BOwxOET\ni+kr\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,
