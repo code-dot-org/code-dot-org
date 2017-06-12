@@ -5,7 +5,7 @@ import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
 import ProgressButton from "../progress/ProgressButton";
 import {connect} from 'react-redux';
-import {addOlderProjects, setHasOlderProjects} from './projectsModule';
+import {appendProjects, setHasOlderProjects} from './projectsModule';
 
 const styles = {
   grid: {
@@ -58,7 +58,7 @@ const ProjectAppTypeArea = React.createClass({
     hasOlderProjects: PropTypes.bool.isRequired,
 
     // from redux dispatch
-    addOlderProjects: PropTypes.func.isRequired,
+    appendProjects: PropTypes.func.isRequired,
     setHasOlderProjects: PropTypes.func.isRequired,
   },
 
@@ -144,8 +144,9 @@ const ProjectAppTypeArea = React.createClass({
       }
 
       // Append any projects we just received to the appropriate list,
-      // ignoring any duplicates.
-      this.props.addOlderProjects(olderProjects, projectType);
+      // ignoring any duplicates. This preserves the newest-to-oldest
+      // ordering of the project list.
+      this.props.appendProjects(olderProjects, projectType);
     });
   },
 
@@ -197,4 +198,4 @@ const ProjectAppTypeArea = React.createClass({
 
 export default connect((state, ownProps) => ({
   hasOlderProjects: state.hasOlderProjects[ownProps.labKey]
-}), { addOlderProjects, setHasOlderProjects })(ProjectAppTypeArea);
+}), { appendProjects, setHasOlderProjects })(ProjectAppTypeArea);

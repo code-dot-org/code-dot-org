@@ -5,10 +5,10 @@ import _ from 'lodash';
 // Action types
 
 const TOGGLE_GALLERY = 'selectedGallery/TOGGLE_GALLERY';
-const ADD_OLDER_PROJECTS = 'projectLists/ADD_OLDER_PROJECTS';
+const APPEND_PROJECTS = 'projectLists/APPEND_PROJECTS';
 const SET_PROJECT_LISTS = 'projectLists/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'hasOlderProjects/SET_HAS_OLDER_PROJECTS';
-const ADD_NEWER_PROJECTS = 'projectLists/ADD_NEWER_PROJECTS';
+const PREPEND_PROJECTS = 'projectLists/PREPEND_PROJECTS';
 
 // Reducers
 
@@ -34,7 +34,7 @@ export function projectLists(state = initialProjectListState, action) {
   switch (action.type) {
     case SET_PROJECT_LISTS:
       return action.projectLists;
-    case ADD_OLDER_PROJECTS: {
+    case APPEND_PROJECTS: {
       // Append the incoming list of older projects to the existing list,
       // removing duplicates.
       const {projects, projectType} = action;
@@ -42,7 +42,7 @@ export function projectLists(state = initialProjectListState, action) {
       state[projectType] = _.unionBy(state[projectType], projects, 'channel');
       return state;
     }
-    case ADD_NEWER_PROJECTS: {
+    case PREPEND_PROJECTS: {
       // Prepend newer projects to the existing list, removing duplicates.
       const {projects, projectType} = action;
       return {
@@ -89,19 +89,19 @@ export function selectGallery(projectType) {
 }
 
 /**
- * Takes a list of older projects and appends it to the existing list of
+ * Takes a list of projects and appends it to the existing list of
  * projects of the specified type.
  * @param {Array} projects A list of projects which are all older than the
  * the current oldest project, newest first.
  * @param {string} projectType The type of the projects being added.
  * @returns {{projects: Array, projectType: string, type: string}}
  */
-export function addOlderProjects(projects, projectType) {
-  return {type: ADD_OLDER_PROJECTS, projects, projectType};
+export function appendProjects(projects, projectType) {
+  return {type: APPEND_PROJECTS, projects, projectType};
 }
 
-export function addNewerProjects(projects, projectType) {
-  return {type: ADD_NEWER_PROJECTS, projects, projectType};
+export function prependProjects(projects, projectType) {
+  return {type: PREPEND_PROJECTS, projects, projectType};
 }
 
 export function setProjectLists(projectLists) {
