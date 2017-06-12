@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-# This script destroys sections and followers of deleted users, making the integration of the
-# paranoia gem backwards compatible.
+# This script destroys sections and followers of deleted users and destroys followers of deleted
+# sections, making the integration of the paranoia gem backwards compatible.
 
 # NOTE: Throughout, we would prefer to call `my_model.destroy` rather than
 # `my_model.update!(deleted_at: my_timestamp)`. Unfortunately, the paranoia gem does not offer
@@ -11,6 +11,7 @@
 
 require_relative '../../../dashboard/config/environment'
 
+# Perform the dependent destroys for users.
 count = 0
 start_id = ARGV[0].try(:to_i) || 0
 begin
@@ -40,6 +41,21 @@ begin
 rescue Exception => e
   puts "PROCESSED: #{count} records."
   raise e
+ensure
+  ActiveRecord::Base.record_timestamps = true
+end
+
+# Perform the depedent destroys for sections.
+begin
+  ActiveRecord::Base.record_timestamps = false
+  Section.only_deleted.find_each do |section|
+    ActiveRecord::Base.transaction do
+      # Manually execute the `dependent destroy` for `has_many :followers`. Note that the followers
+      # scopes to non-deletes followers, so this does not overwrite the timestamp for already
+      # deleted followers.
+      section.followers.update_all(deleted_at: section.deleted_at)
+    end
+  end
 ensure
   ActiveRecord::Base.record_timestamps = true
 end
