@@ -71,10 +71,15 @@
     "instructions_important": "false",
     "encrypted_examples": "XlTm8xF1427wH97Z7WD04Xif48nSOilcAQ2qnK4b9GcbK9w6bCSXtn2S5Uve\nWcew\n",
     "show_debug_watch": "false",
+    "display_name": "Collision Detection",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 16:43:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

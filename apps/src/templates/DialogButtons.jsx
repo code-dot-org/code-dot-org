@@ -1,4 +1,4 @@
-import Button from './Button';
+import LegacyButton from './LegacyButton';
 var React = require('react');
 var msg = require('@cdo/locale');
 var Lightbulb = require('./Lightbulb');
@@ -40,41 +40,41 @@ var DialogButtons = React.createClass({
     if (this.props.ok) {
       okButton = (
         <div className="farSide">
-          <Button type="primary" id="ok-button">
+          <LegacyButton type="primary" id="ok-button">
             {msg.dialogOK()}
-          </Button>
+          </LegacyButton>
         </div>
       );
     }
 
     if (this.props.cancelText) {
       cancelButton = (
-        <Button type="cancel" id="again-button" className={this.props.cancelButtonClass || ''}>
+        <LegacyButton type="cancel" id="again-button" className={this.props.cancelButtonClass || ''}>
           {this.props.cancelText}
-        </Button>
+        </LegacyButton>
       );
     }
 
     if (this.props.confirmText) {
       confirmButton = (
-        <Button type="primary" id="confirm-button" className="launch" style={style.confirmButton}>
+        <LegacyButton type="primary" id="confirm-button" className="launch" style={style.confirmButton}>
           {this.props.confirmText}
-        </Button>
+        </LegacyButton>
       );
     }
 
     if (this.props.previousLevel) {
       previousButton = (
-        <Button type="primary" id="back-button" className="launch">
+        <LegacyButton type="primary" id="back-button" className="launch">
           {msg.backToPreviousLevel()}
-        </Button>
+        </LegacyButton>
       );
     }
 
     if (this.props.tryAgain) {
       if (this.props.isK1 && !this.props.freePlay) {
         againButton = (
-          <Button
+          <LegacyButton
             type="cancel"
             size="large"
             arrow="left"
@@ -82,21 +82,21 @@ var DialogButtons = React.createClass({
             className="launch"
           >
             {this.props.tryAgain}
-          </Button>
+          </LegacyButton>
         );
       } else {
         if (this.props.shouldPromptForHint) {
           hintButton = (
-            <Button type="default" id="hint-request-button" style={style.hintButton}>
+            <LegacyButton type="default" id="hint-request-button" style={style.hintButton}>
               <Lightbulb size={32} style={style.lightbulb}/>
               {msg.hintRequest()}
-            </Button>
+            </LegacyButton>
           );
         }
         againButton = (
-          <Button type="cancel" id="again-button" className="launch">
+          <LegacyButton type="cancel" id="again-button" className="launch">
             {this.props.tryAgain}
-          </Button>
+          </LegacyButton>
         );
       }
     }
@@ -104,7 +104,7 @@ var DialogButtons = React.createClass({
     if (this.props.nextLevel) {
       nextButton = (this.props.isK1 && !this.props.freePlay) ?
                    (
-                     <Button
+                     <LegacyButton
                        type="primary"
                        size="large"
                        arrow="right"
@@ -113,16 +113,16 @@ var DialogButtons = React.createClass({
                        style={style.nextButton}
                      >
                        {this.props.continueText}
-                     </Button>
+                     </LegacyButton>
                    ) : (
-                     <Button
+                     <LegacyButton
                        type="primary"
                        id="continue-button"
                        className="launch"
                        style={style.nextButton}
                      >
                        {this.props.continueText}
-                     </Button>
+                     </LegacyButton>
                    );
     }
 

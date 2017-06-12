@@ -142,14 +142,15 @@
     interaktiven Kurse zum Selbststudium und unsere auf, spielerischer Basis beruhenden,
     Programmier-Anwendungen bieten eine einfache Einführung ins Programmieren und
     ermutigen Kinder zu Innovation und Kreativität.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_curriculum: Probiere Tynker Lehr-Programm für Leseanfänger
   third_party_tynker_btn_site: Besuche Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Scratch Jr. ist eine einfache Programmiersprache, mit
+    der jüngere Kinder (zwischen 5-7 Jahren) eigene interaktive Geschichten und Spiele
+    erstellen können. Kinder verbinden in dieser Programmiersprache grafische Programmier-Blöcke;
+    damit bewegen sie Figuren, lassen diese hochspringen, tanzen und singen. Kinder
+    können die Figuren auch verändern, eigene Stimmen und Klänge hinzufügen, sogar
+    Fotos von sich selbst einfügen. Mit den Programmier-Blöcken erwecken sie diese
+    Figuren zum Leben.
   third_party_scratchjr_btn_curriculum: Lade Scratch Jr. Curriculum herunter
   third_party_scratchjr_btn_site: Besuche Scratch J.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
@@ -157,7 +158,7 @@
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Lade Scratch Jr. Curriculum herunter
-  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_forum: Forum für Scratch-Tutoren
   third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
@@ -185,7 +186,7 @@
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_try: Einführung in die Informatik - Informationen für Schulen
   third_party_codecademy_desc: Wir überdenken Bildung von Grund auf. Im Internet wurde
     fast alles - Handel, soziale Netzwerke, Gesundheitswesen und vieles mehr neu überdacht.
     Wir machen die Bildung, die die Welt benötigt - Die erste echte heimische Programmierausbildung.
@@ -204,12 +205,12 @@
     4-8
   third_party_desc_10to12_kto3: Ungefähr 10-12 Lektionen, ausgerichtet auf die Jahrgangsstufen
     Kinergarten 3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_11_kto5: 'Ungefähr 11 Lerneinheiten. Zielgruppe: 5- Klasse'
+  third_party_desc_10to12_kto5: 'Ungefähr 10-12 Lerneinheiten. Zielgruppe: 5- Klasse'
+  third_party_desc_40_4to8: 'Mehr als 40 Lerneinheiten. Zielgruppe: 4-8. Klasse'
+  third_party_desc_dozens_kto8: Zahlreiche weitere Lerneinheiten für alle Stufen,
+    ca. 8. Klasse
+  third_party_desc_10to15_3to12: '10-15 Lerneinheiten. Zielgruppe: 3.-12. Klasse'
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
   third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
@@ -1897,6 +1898,7 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1932,3 +1934,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

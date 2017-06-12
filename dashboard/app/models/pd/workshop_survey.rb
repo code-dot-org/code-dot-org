@@ -33,7 +33,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   YES = 'Yes'.freeze
   NO = 'No'.freeze
 
-  def required_fields
+  def self.required_fields
     [
       :will_teach,
       :reason_for_attending,
@@ -57,7 +57,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
-  def facilitator_required_fields
+  def self.facilitator_required_fields
     [
       :how_clearly_presented,
       :how_interesting,
@@ -70,7 +70,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
-  def demographics_required_fields
+  def self.demographics_required_fields
     [
       :gender,
       :race,
@@ -129,7 +129,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     # if this is the first survey completed by this user, also require
     # demographics questions.
     if first_survey_for_user?
-      demographics_required_fields.each do |field|
+      self.class.demographics_required_fields.each do |field|
         add_key_error(field) unless hash.key?(field)
       end
     end
@@ -149,7 +149,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
 
     # validate facilitator required fields
     facilitators.each do |facilitator|
-      facilitator_required_fields.each do |field|
+      self.class.facilitator_required_fields.each do |field|
         field = field.to_s.camelize(:lower) if camel
         field_name = "#{field}[#{facilitator}]".to_sym
         yield(facilitator, field, field_name)

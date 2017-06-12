@@ -50,7 +50,7 @@
   hoc2014_everyone: Lahat
   hoc2014_support: Suportahan ito &#x25BE;
   hoc2014_whatishoc: Ano ba ang Hour of Code?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: "# CSEdWeek / Mga pangyayari sa Hour of Code sa buong mundo"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -406,7 +406,7 @@
   homepage_slot_text_title_students: Mga mag-aaral
   homepage_slot_text_blurb_students: Galugarin ang lahat ng aming mga tutorial
   homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_codestudio: Try Code.org courses
   homepage_slot_text_link_local: Maghanap ng isang lokal na klase
   homepage_slot_text_link_othercourses: Iba pang mga online na kurso
   homepage_slot_text_title_educators: Educators
@@ -592,8 +592,8 @@
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_header_shared: Mga impormasyong ibinahagi sa mga guro
+    sa volunteer map
   volunteer_engineer_submission_field_name: Pangalan
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
@@ -619,8 +619,8 @@
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_header_private: Ang impormasyon ay nananatiling pribado
+    at hindi kailanman ibinabahagi
   volunteer_engineer_submission_field_email: Email address
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
@@ -1870,6 +1870,7 @@
   infinity_shortcode: inf
   playlab_shortcode: i-play
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1905,3 +1906,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

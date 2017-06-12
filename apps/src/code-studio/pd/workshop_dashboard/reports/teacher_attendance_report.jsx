@@ -34,8 +34,11 @@ const TeacherAttendanceReport = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
+  },
+
+  componentDidMount() {
     this.load();
   },
 
@@ -167,7 +170,7 @@ const TeacherAttendanceReport = React.createClass({
       header: {label: 'Days'}
     }];
 
-    if (this.permission.isAdmin) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}

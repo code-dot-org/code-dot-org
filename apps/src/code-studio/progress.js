@@ -6,7 +6,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import StageProgress from './components/progress/StageProgress.jsx';
-import CourseProgress from './components/progress/CourseProgress.jsx';
+import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
@@ -130,7 +130,7 @@ progress.renderCourseProgress = function (scriptData) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <CourseProgress onOverviewPage={true}/>
+      <ScriptOverview onOverviewPage={true}/>
     </Provider>,
     mountPoint
   );
