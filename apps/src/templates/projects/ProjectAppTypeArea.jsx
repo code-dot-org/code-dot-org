@@ -112,7 +112,7 @@ const ProjectAppTypeArea = React.createClass({
     const {hasOlderProjects} = this.props;
     if (this.state.maxNumProjects < newNumProjects && hasOlderProjects) {
       this.setState({disableViewMore: true});
-      this.fetchOlderProjects(() => {
+      this.fetchOlderProjects().always(() => {
         this.setState({disableViewMore: false});
       });
     }
@@ -121,14 +121,15 @@ const ProjectAppTypeArea = React.createClass({
   /**
    * Fetch additional projects of the specified type which were published
    * earlier than the oldest published project currently in our list.
-   * @param {function} callback Callback to call after network request completes.
+   * @returns {$.Deferred} Deferred object after the network request has
+   *   completed and the done handler has been run (if successful).
    */
-  fetchOlderProjects(callback) {
+  fetchOlderProjects() {
     const {projectList, labKey: projectType} = this.props;
     const oldestProject = projectList[projectList.length - 1];
     const oldestPublishedAt = oldestProject && oldestProject.projectData.publishedAt;
 
-    $.ajax({
+    return $.ajax({
       method: 'GET',
       url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
       dataType: 'json'
@@ -145,7 +146,7 @@ const ProjectAppTypeArea = React.createClass({
       // Append any projects we just received to the appropriate list,
       // ignoring any duplicates.
       this.props.addOlderProjects(olderProjects, projectType);
-    }).always(callback);
+    });
   },
 
   renderViewMoreButtons() {

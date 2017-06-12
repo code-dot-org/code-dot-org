@@ -4,11 +4,11 @@ import _ from 'lodash';
 
 // Action types
 
-const TOGGLE_GALLERY = 'projectsModule/TOGGLE_GALLERY';
-const ADD_OLDER_PROJECTS = 'projectsModule/ADD_OLDER_PROJECTS';
-const SET_PROJECT_LISTS = 'projectsModule/SET_PROJECT_LISTS';
-const SET_HAS_OLDER_PROJECTS = 'projectsModule/SET_HAS_OLDER_PROJECTS';
-const ADD_NEWER_PROJECTS = 'projectsModule/ADD_NEWER_PROJECTS';
+const TOGGLE_GALLERY = 'selectedGallery/TOGGLE_GALLERY';
+const ADD_OLDER_PROJECTS = 'projectLists/ADD_OLDER_PROJECTS';
+const SET_PROJECT_LISTS = 'projectLists/SET_PROJECT_LISTS';
+const SET_HAS_OLDER_PROJECTS = 'hasOlderProjects/SET_HAS_OLDER_PROJECTS';
+const ADD_NEWER_PROJECTS = 'projectLists/ADD_NEWER_PROJECTS';
 
 // Reducers
 
@@ -45,29 +45,32 @@ export function projectLists(state = initialProjectListState, action) {
     case ADD_NEWER_PROJECTS: {
       // Prepend newer projects to the existing list, removing duplicates.
       const {projects, projectType} = action;
-      state = {...state};
-      state[projectType] = _.unionBy(projects, state[projectType], 'channel');
-      return state;
+      return {
+        ...state,
+        [projectType]: _.unionBy(projects, state[projectType], 'channel'),
+      };
     }
     default:
       return state;
   }
 }
 
-export function hasOlderProjects(state, action) {
-  // Whether there are more projects of each type on the server which are
-  // older than the ones we have on the client.
-  state = state || {
-    applab: true,
-    gamelab: true,
-    playlab: true,
-    artist: true,
-  };
+// Whether there are more projects of each type on the server which are
+// older than the ones we have on the client.
+const initialHasOlderProjects = {
+  applab: true,
+  gamelab: true,
+  playlab: true,
+  artist: true,
+};
+
+export function hasOlderProjects(state = initialHasOlderProjects, action) {
   switch (action.type) {
     case SET_HAS_OLDER_PROJECTS:
-      state = {...state};
-      state[action.projectType] = action.hasOlderProjects;
-      return state;
+      return {
+        ...state,
+        [action.projectType]: action.hasOlderProjects,
+      };
     default:
       return state;
   }
@@ -94,19 +97,19 @@ export function selectGallery(projectType) {
  * @returns {{projects: Array, projectType: string, type: string}}
  */
 export function addOlderProjects(projects, projectType) {
-  return {projects, projectType, type: ADD_OLDER_PROJECTS};
+  return {type: ADD_OLDER_PROJECTS, projects, projectType};
 }
 
 export function addNewerProjects(projects, projectType) {
-  return {projects, projectType, type: ADD_NEWER_PROJECTS};
+  return {type: ADD_NEWER_PROJECTS, projects, projectType};
 }
 
 export function setProjectLists(projectLists) {
-  return {projectLists, type: SET_PROJECT_LISTS};
+  return {type: SET_PROJECT_LISTS, projectLists};
 }
 
 export function setHasOlderProjects(hasOlderProjects, projectType) {
-  return {hasOlderProjects, projectType, type: SET_HAS_OLDER_PROJECTS};
+  return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
 }
 
 registerReducers({selectedGallery, projectLists, hasOlderProjects});
