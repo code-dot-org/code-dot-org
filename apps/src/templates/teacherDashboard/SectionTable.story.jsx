@@ -42,7 +42,7 @@ const sections = [
 
 export default storybook => {
   storybook
-    .storiesOf('SectionTable', module)
+    .storiesOf('SectionTable (teacher dashboard)', module)
     .addStoryTable([
       {
         name: 'section table',

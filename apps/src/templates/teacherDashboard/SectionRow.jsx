@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import EditSectionRow from './EditSectionRow';
 import sectionShape from './sectionShape';
 
 const styles = {
@@ -20,7 +19,37 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     padding: 15
+  },
+  rightButton: {
+    marginLeft: 5
   }
+};
+
+// TODO: i18n
+/**
+ * Our base buttons (Edit and delete).
+ */
+const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
+  <div style={styles.nowrap}>
+    <ProgressButton
+      text={"Edit"}
+      onClick={onEdit}
+      color={ProgressButton.ButtonColor.gray}
+    />
+    {canDelete && (
+      <ProgressButton
+        style={{marginLeft: 5}}
+        text={"Delete"}
+        onClick={onDelete}
+        color={ProgressButton.ButtonColor.red}
+      />
+    )}
+  </div>
+);
+EditOrDelete.propTypes = {
+  canDelete: PropTypes.bool.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 /**
@@ -36,7 +65,7 @@ const ConfirmDelete = ({onClickYes, onClickNo}) => (
     />
     <ProgressButton
       text={i18n.no()}
-      style={{marginLeft: 5}}
+      style={styles.rightButton}
       onClick={onClickNo}
       color={ProgressButton.ButtonColor.gray}
     />
@@ -47,6 +76,33 @@ ConfirmDelete.propTypes = {
   onClickNo: PropTypes.func.isRequired,
 };
 
+/**
+ * Buttons for committing or canceling a save.
+ */
+const ConfirmSave = ({onClickSave, onCancel}) => (
+  <div style={styles.nowrap}>
+    <ProgressButton
+      text={i18n.save()}
+      onClick={onClickSave}
+      color={ProgressButton.ButtonColor.blue}
+    />
+    <ProgressButton
+      text={i18n.dialogCancel()}
+      style={styles.rightButton}
+      onClick={onCancel}
+      color={ProgressButton.ButtonColor.gray}
+    />
+  </div>
+);
+ConfirmSave.propTypes = {
+  onClickSave: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+};
+
+/**
+ * A component for displaying and editing information about a particular section
+ * in the teacher dashboard.
+ */
 export default class SectionRow extends Component {
   static propTypes = {
     section: sectionShape.isRequired
@@ -71,24 +127,19 @@ export default class SectionRow extends Component {
 
   render() {
     const { section } = this.props;
-    if (this.state.editing) {
-      return (
-        <EditSectionRow
-          section={section}
-          onClickSave={this.onClickEditSave}
-          onCancel={this.onClickEditCancel}
-        />
-      );
-    }
+    const { editing, deleting } = this.state;
 
     return (
       <tr>
         <td style={styles.td}>
-          <span style={styles.sectionName}>
-            <a href={`#/sections/${section.id}/`}>
-              {section.name}
-            </a>
-          </span>
+          {!editing && (
+            <span style={styles.sectionName}>
+              <a href={`#/sections/${section.id}/`}>
+                {section.name}
+              </a>
+            </span>
+          )}
+          {editing && <span>EDIT</span>}
         </td>
         <td style={styles.td}>
           {section.loginType}
@@ -118,25 +169,20 @@ export default class SectionRow extends Component {
           {section.code}
         </td>
         <td style={styles.td}>
-          {/*TODO: i18n */}
-          {!this.state.editing && !this.state.deleting && (
-            <div style={styles.nowrap}>
-              <ProgressButton
-                text={"Edit"}
-                onClick={this.onClickEdit}
-                color={ProgressButton.ButtonColor.gray}
-              />
-              {section.numStudents > 0 && (
-                <ProgressButton
-                  style={{marginLeft: 5}}
-                  text={"Delete"}
-                  onClick={this.onClickDelete}
-                  color={ProgressButton.ButtonColor.red}
-                />
-              )}
-            </div>
+          {!editing && !deleting && (
+            <EditOrDelete
+              canDelete={section.numStudents > 0}
+              onEdit={this.onClickEdit}
+              onDelete={this.onClickDelete}
+            />
           )}
-          {this.state.deleting && (
+          {editing && (
+            <ConfirmSave
+              onClickSave={this.onClickEditSave}
+              onCancel={this.onClickEditCancel}
+            />
+          )}
+          {deleting && (
             <ConfirmDelete
               onClickYes={this.onClickDeleteYes}
               onClickNo={this.onClickDeleteNo}
