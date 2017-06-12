@@ -203,47 +203,48 @@ class HamburgerTest < Minitest::Test
   # Hamburger content tests.
 
   def test_hamburger_content_teacher
-    contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: "teacher", language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "teacher", language: "en"})
     assert contents[:entries].find {|e| e[:id] == "hamburger-teacher-sections"}
   end
 
   def test_hamburger_content_student
-    contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: "student", language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "student", language: "en"})
     assert contents[:entries].find {|e| e[:id] == "hamburger-student-projects"}
   end
 
   def test_hamburger_content_nobody
-    contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:id] == "hamburger-signed-out-projects"}
   end
 
   def test_hamburger_content_script_level
-    contents = Hamburger.get_contents({level: nil, script_level: Level.new, user_type: nil, language: "en", request: nil})
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: Level.new, user_type: nil, language: "en", request: nil})
     assert contents[:entries].find {|e| e[:id] == "report-bug"}
   end
 
   def test_hamburger_content_level
-    contents = Hamburger.get_contents({level: Level.new, script_level: nil, user_type: nil, language: "en", request: nil})
+    contents = Hamburger.get_hamburger_contents({level: Level.new, script_level: nil, user_type: nil, language: "en", request: nil})
     assert contents[:entries].find {|e| e[:id] == "report-bug"}
   end
 
   def test_hamburger_content_nolevel
-    contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:id] == "hamburger-learn"}
   end
 
   def test_hamburger_content_gamelab_project_level
-    contents = Hamburger.get_contents({level: LevelGameLab.new, script_level: nil, user_type: nil, language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: LevelGameLab.new, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:id] == "hamburger-gamelab-documentation"}
   end
 
   def test_hamburger_content_applab_project_level
-    contents = Hamburger.get_contents({level: LevelAppLab.new, script_level: nil, user_type: nil, language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: LevelAppLab.new, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:id] == "hamburger-applab-documentation"}
+    assert contents[:entries].find {|e| e[:id] == "hamburger-applab-tutorials"}
   end
 
   def test_hamburger_content_expandable
-    contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:type] == "expander"}
   end
 
