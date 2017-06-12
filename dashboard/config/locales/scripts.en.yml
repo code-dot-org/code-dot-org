@@ -5420,4 +5420,58 @@ en:
           title: CS Discoveries TeacherCon - Novice Facilitators Reflection
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: Reflection questions for novice facilitators at TeacherCon.
+          description: "During the day at TeacherCon you will be focusing on learning about the curriculum by participating as a teacher learning about the course. At the end of the day on Tuesday, Wednesday and Thursday we would like you to take some time to think about facilitating. In order to guide your reflection, we have created reflection questions for each day.  \r\n \r\nOn Tuesday, Wednesday and Thursday we ask that you find ~30 minutes to do your reflection. We will be providing a room for you to do this right at the end of the day if you would like to have a quiet place with other facilitators to do this work. \r\n \r\nYou may complete your reflection on paper or on the computer but we ask that once you have completed it you put your answers in the CS Discoveries Novice Course on Code.org which we created to help you keep track of your questions. This will mean you always have access to these notes going forward no matter what materials you bring with you to a workshop.\r\n"
+        csp-explore-task:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+          title: CSP Explore PT Prep
+          description_audience: ''
+          description_short: These lessons cover the preparation and completion of the CS Principles AP Explore Performance Task.
+          description: These lessons cover the preparation and completion of the CS Principles AP Explore Performance Task.
+        csp-create-task:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: ''
+          description_audience: ''
+          description_short: These lessons cover the preparation and completion of the CS Principles AP Create Performance Task.
+          description: These lessons cover the preparation and completion of the CS Principles AP Create Performance Task.
+        csp-ap-tech-setup:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+          title: CSP AP Digital Portfolio and Other Tools
+          description_audience: ''
+          description_short: ''
+          description: Covers AP Digital Portfolio setup and other technical tools required for completing and submitting the AP Performance Tasks.
+        csp-ap:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Participate in a longitudinal study!:
+              name: Participate in a longitudinal study!
+          title: CSP AP Exam and Performance Tasks
+          description_audience: ''
+          description_short: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
+          description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.

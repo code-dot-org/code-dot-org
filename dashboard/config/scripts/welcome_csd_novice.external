@@ -1,6 +1,5 @@
-name 'unique level name here'
-title 'title'
-description 'description here'
+name 'welcome-csd-novice'
+display_name 'Welcome CS Discoveries Novices!'
 markdown <<MARKDOWN
 # Welcome CS Discoveries Novice Facilitators!
 
