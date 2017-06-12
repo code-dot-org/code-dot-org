@@ -8,6 +8,7 @@ const TOGGLE_GALLERY = 'projectsModule/TOGGLE_GALLERY';
 const ADD_OLDER_PROJECTS = 'projectsModule/ADD_OLDER_PROJECTS';
 const SET_PROJECT_LISTS = 'projectsModule/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projectsModule/SET_HAS_OLDER_PROJECTS';
+const ADD_NEWER_PROJECTS = 'projectsModule/ADD_NEWER_PROJECTS';
 
 // Reducers
 
@@ -21,15 +22,15 @@ export function selectedGallery(state, action) {
   }
 }
 
-export function projectLists(state, action) {
-  // A map from project type to array of projects, e.g.:
-  //   {
-  //     applab: [{...}, {...}, {...}]
-  //     gamelab: [{...}, {...}, {...}]
-  //     playlab: [{...}, {...}, {...}]
-  //     artist: [{...}, {...}, {...}]
-  //   }
-  state = state || {};
+// A map from project type to array of projects
+const initialProjectListState = {
+  applab: [],
+  gamelab: [],
+  playlab: [],
+  artist: [],
+};
+
+export function projectLists(state = initialProjectListState, action) {
   switch (action.type) {
     case SET_PROJECT_LISTS:
       return action.projectLists;
@@ -39,6 +40,13 @@ export function projectLists(state, action) {
       const {projects, projectType} = action;
       state = {...state};
       state[projectType] = _.unionBy(state[projectType], projects, 'channel');
+      return state;
+    }
+    case ADD_NEWER_PROJECTS: {
+      // Prepend newer projects to the existing list, removing duplicates.
+      const {projects, projectType} = action;
+      state = {...state};
+      state[projectType] = _.unionBy(projects, state[projectType], 'channel');
       return state;
     }
     default:
@@ -87,6 +95,10 @@ export function selectGallery(projectType) {
  */
 export function addOlderProjects(projects, projectType) {
   return {projects, projectType, type: ADD_OLDER_PROJECTS};
+}
+
+export function addNewerProjects(projects, projectType) {
+  return {projects, projectType, type: ADD_NEWER_PROJECTS};
 }
 
 export function setProjectLists(projectLists) {
