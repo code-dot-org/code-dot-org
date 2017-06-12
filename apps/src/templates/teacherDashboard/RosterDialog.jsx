@@ -21,6 +21,7 @@ const styles = {
     padding: '8px 20px',
   },
   buttonSecondary: {
+    float: 'left',
     background: '#eee',
     color: '#5b6770',
     border: '1px solid #c5c5c5',
@@ -49,9 +50,15 @@ export default class RosterDialog extends React.Component {
         <div style={styles.footer}>
           <button
             onClick={this.handleClose}
+            style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
+          >
+            {locale.dialogCancel()}
+          </button>
+          <button
+            onClick={this.handleClose}
             style={styles.buttonPrimary}
           >
-            {locale.continue()}
+            {locale.chooseSection()}
           </button>
         </div>
       </BaseDialog>
