@@ -4,9 +4,15 @@ import color from '../../util/color';
 import locale from '@cdo/locale';
 
 const styles = {
+  title: {
+    position: 'absolute',
+    left: 20,
+    color: color.dark_charcoal,
+    margin: '15px 0',
+  },
   footer: {
     position: 'absolute',
-    bottom: 10,
+    bottom: 15,
     right: 20,
     left: 20,
   },
@@ -33,6 +39,7 @@ export default class RosterDialog extends React.Component {
     handleClose: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
   }
+
   constructor(props) {
     super(props);
     this.handleClose = this.props.handleClose.bind(this);
@@ -47,6 +54,9 @@ export default class RosterDialog extends React.Component {
         assetUrl={() => ''}
         {...this.props}
       >
+        <h2 style={styles.title}>
+          {locale.selectGoogleClassroom()}
+        </h2>
         <div style={styles.footer}>
           <button
             onClick={this.handleClose}
