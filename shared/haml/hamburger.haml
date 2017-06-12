@@ -119,19 +119,19 @@
     .user-links
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
-          %li{class: show_teacher_options}
+          %li#teacher-entry{class: show_teacher_options}
             %a{href: entry[:url]}= entry[:title]
-        .divider{class: show_teacher_options}
+        .divider#after-teacher{class: show_teacher_options}
       - elsif user_type == "student"
         - student_entries.each do |entry|
-          %li{class: show_student_options}
+          %li#student-entry{class: show_student_options}
             %a{href: entry[:url]}= entry[:title]
-        .divider{class: show_student_options}
+        .divider#after-student{class: show_student_options}
       - else
         - signed_out_entries.each do |entry|
           %li{class: show_signed_out_options}
             %a{href: entry[:url]}= entry[:title]
-        .divider{class: show_signed_out_options}
+        .divider#after-signed-out{class: show_signed_out_options}
 
     .help-links{class: show_help_options}
       - if level || script_level
@@ -145,21 +145,21 @@
         %a#support{href: "https://support.code.org", target: "_blank"}=I18n.t("#{loc_prefix}help_support")
       - if user_type == "teacher"
         %li
-          %a{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
+          %a#teacher-community{href: "http://forum.code.org/"}=I18n.t("#{loc_prefix}teacher_community")
       - if level && level.try(:is_project_level) && level.game == Game.gamelab
         %li
-          %a{href:"https://docs.code.org/gamelab/"}=I18n.t("#{loc_prefix}documentation")
+          %a#gamelab-docs{href:"https://docs.code.org/gamelab/"}=I18n.t("#{loc_prefix}documentation")
       - if level && level.try(:is_project_level) && level.game == Game.applab
         %li
-          %a{href:"https://docs.code.org/applab/"}=I18n.t("#{loc_prefix}documentation")
+          %a#applab-docs{href:"https://docs.code.org/applab/"}=I18n.t("#{loc_prefix}documentation")
       - if level || script_level
         %li
-          %a{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
-      .divider{class: show_pegasus_options}
+          %a#applap-tutorials{href: CDO.code_org_url('/educate/applab')}=I18n.t("#{loc_prefix}tutorials")
+      .divider#before-pegasus{class: show_pegasus_options}
 
     .pegasus-links{class: show_pegasus_options}
       %li{class: show_pegasus_options}
-        %a{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
+        %a#learn{href: "#{code_org_url_base}/student"}= I18n.t("#{loc_prefix}learn")
       %li{class: show_pegasus_options}
         #educate-more
           = I18n.t("#{loc_prefix}teach")
@@ -169,11 +169,11 @@
       .educate-nav.hide-educate{class: show_pegasus_options}
         - educate_entries.each do |entry|
           %li
-            %a{href: entry[:url]}= entry[:title]
+            %a#educate-link{href: entry[:url]}= entry[:title]
       %li{class: show_pegasus_options}
-        %a{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
+        %a#stats{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
       %li{class: show_pegasus_options}
-        %a{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
+        %a#help_us{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
       %li{class: show_pegasus_options}
         #about-more
           = I18n.t("#{loc_prefix}about")
@@ -182,7 +182,7 @@
       .about-nav.hide-about{class: show_pegasus_options}
         - about_entries.each do |entry|
           %li
-            %a{href: entry[:url]}= entry[:title]
+            %a#about-link{href: entry[:url]}= entry[:title]
 
   #hamburger-icon{class: hamburger_class}
     %span
