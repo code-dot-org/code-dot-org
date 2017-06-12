@@ -35,12 +35,14 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   setup do
-    Geocoder.stubs(:search).returns(
-      [OpenStruct.new(
+    @fake_geocoder_response = [
+      OpenStruct.new(
         postal_code: '98101',
+        state_code: 'WA',
         street_number: '1501'
-      )]
-    )
+      )
+    ]
+    Geocoder.stubs(:search).returns(@fake_geocoder_response)
     @mock_mimeo_rest_client = mock('Pd::MimeoRestClient')
     Pd::MimeoRestClient.stubs(:new).returns(@mock_mimeo_rest_client)
   end
@@ -147,22 +149,26 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   test 'address validation fails for incorrect zip code' do
-    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(
-      [OpenStruct.new(
-        postal_code: '98101',
-        street_number: '1501'
-      )]
-    )
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(@fake_geocoder_response)
 
-    order = build :pd_workshop_material_order, street: '1501 4th Ave', zip_code: '99999'
+    order = build :pd_workshop_material_order, zip_code: '99999'
     refute order.valid?
     assert_equal ["Zip code doesn't match the address. Did you mean 98101?"], order.errors.full_messages
+  end
+
+  test 'address validation fails for incorrect state' do
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, OR, 98101').returns(@fake_geocoder_response)
+
+    order = build :pd_workshop_material_order, state: 'OR'
+    refute order.valid?
+    assert_equal ["State doesn't match the address. Did you mean WA?"], order.errors.full_messages
   end
 
   test 'address validation fails for PO boxes' do
     Geocoder.expects(:search).with('PO Box 123, Seattle, WA, 98155').returns(
       [OpenStruct.new(
-        postal_code: '98155'
+        postal_code: '98155',
+        state_code: 'WA'
       )]
     )
 
