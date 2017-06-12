@@ -188,10 +188,16 @@ export default class SectionRow extends Component {
           )}
         </td>
         <td style={styles.td}>
-          {section.stageExtras ? i18n.yes() : i18n.no()}
+          {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
+          {editing && (
+            <input type="checkbox" defaultChecked={section.stageExtras}/>
+          )}
         </td>
         <td style={styles.td}>
-          {section.pairingAllowed ? i18n.yes() : i18n.no()}
+          {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
+          {editing && (
+            <input type="checkbox" defaultChecked={section.pairingAllowed}/>
+          )}
         </td>
         <td style={styles.td}>
           <a href={`#/sections/${section.id}/manage`}>
