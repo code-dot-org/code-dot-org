@@ -21,6 +21,7 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - [January 2017](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=7fcf661144&e=a5b693f06b)
 - [February/March 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=6ee90e50da)
 - [April 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=f666af3b5b)
+- [End of School Update 2017](http://mailchi.mp/code/8u8akp7iv7)
 
 ## Sign-up information
 <!-- Begin MailChimp Signup Form -->
