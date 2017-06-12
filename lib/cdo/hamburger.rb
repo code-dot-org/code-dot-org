@@ -220,9 +220,7 @@ class Hamburger
         class: visibility[:show_help_options],
         id: "hamburger-applab-documentation"
       }
-    end
 
-    if options[:level] || options[:script_level]
       entries << {
         title: I18n.t("#{loc_prefix}tutorials"),
         url: CDO.code_org_url('/educate/applab'),
