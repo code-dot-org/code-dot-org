@@ -1,3 +1,8 @@
+# This class provides the content for both the hamburger and the header.
+#
+# As part of this content, it also provides CSS classes which determine
+# responsive visibility for the header itself and the items inside it.
+
 class Hamburger
   # These are the CSS classes applied to items in the hamburger,
   # and to the hamburger itself.
@@ -81,61 +86,59 @@ class Hamburger
     }
   end
 
-  def self.get_contents(options)
+  def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
-    studio_url_base = options[:studio_url_base]
-    code_org_url_base = options[:code_org_url_base]
 
     teacher_entries = [
-      {title: "home", url: "#{studio_url_base}/home"},
-      {title: "courses", url: "#{studio_url_base}/courses"},
-      {title: "project_gallery", url: "#{studio_url_base}/projects"},
-      {title: "sections", url: "#{code_org_url_base}/teacher-dashboard#/sections", id: "hamburger-teacher-sections"},
-      {title: "professional_learning", url: "#{studio_url_base}/my-professional-learning"}
+      {title: "home", url: CDO.studio_url("/home")},
+      {title: "courses", url: CDO.studio_url("/courses")},
+      {title: "project_gallery", url: CDO.studio_url("/projects")},
+      {title: "sections", url: CDO.code_org_url("/teacher-dashboard#/sections"), id: "hamburger-teacher-sections"},
+      {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
     student_entries = [
-      {title: "courses", url: "#{studio_url_base}/courses"},
-      {title: "project_gallery", url: "#{studio_url_base}/projects", id: "hamburger-student-projects"}
+      {title: "courses", url: CDO.studio_url("/courses")},
+      {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
     signed_out_entries = [
-      {title: "courses", url: "#{studio_url_base}/courses"},
-      {title: "project_gallery", url: "#{studio_url_base}/projects/public", id: "hamburger-signed-out-projects"}
+      {title: "courses", url: CDO.studio_url("/courses")},
+      {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
     educate_entries = [
-      {title: "educate_overview", url: "#{code_org_url_base}/educate"},
-      {title: "educate_elementary", url: "#{code_org_url_base}/educate/curriculum/elementary-school"},
-      {title: "educate_middle", url: "#{code_org_url_base}/educate/curriculum/middle-school"},
-      {title: "educate_high", url: "#{code_org_url_base}/educate/curriculum/high-school"},
+      {title: "educate_overview", url: CDO.code_org_url("/educate")},
+      {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
+      {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
+      {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
       {title: "educate_hoc", url: "https://hourofcode.com"},
-      {title: "educate_partner", url: "#{code_org_url_base}/educate/partner"},
-      {title: "educate_beyond", url: "#{code_org_url_base}/educate/curriculum/3rd-party"},
-      {title: "educate_inspire", url: "#{code_org_url_base}/educate/resources/inspire"},
-      {title: "educate_community", url: "#{code_org_url_base}/educate/community"},
-      {title: "educate_tools", url: "#{code_org_url_base}/educate/resources/videos"},
+      {title: "educate_partner", url: CDO.code_org_url("/educate/partner")},
+      {title: "educate_beyond", url: CDO.code_org_url("/educate/curriculum/3rd-party")},
+      {title: "educate_inspire", url: CDO.code_org_url("/educate/resources/inspire")},
+      {title: "educate_community", url: CDO.code_org_url("/educate/community")},
+      {title: "educate_tools", url: CDO.code_org_url("/educate/resources/videos")},
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
     about_entries = [
-      {title: "about_us", url: "#{code_org_url_base}/about"},
-      {title: "about_leadership", url: "#{code_org_url_base}/about/leadership"},
-      {title: "about_donors", url: "#{code_org_url_base}/about/donors"},
-      {title: "about_partners", url: "#{code_org_url_base}/about/partners"},
-      {title: "about_team", url: "#{code_org_url_base}/about/team"},
-      {title: "about_news", url: "#{code_org_url_base}/about/news"},
-      {title: "about_evaluation", url: "#{code_org_url_base}/about/evaluation"},
-      {title: "about_jobs", url: "#{code_org_url_base}/about/jobs"},
-      {title: "about_contact", url: "#{code_org_url_base}/contact"},
-      {title: "about_faqs", url: "#{code_org_url_base}/faq"},
+      {title: "about_us", url: CDO.code_org_url("/about")},
+      {title: "about_leadership", url: CDO.code_org_url("/about/leadership")},
+      {title: "about_donors", url: CDO.code_org_url("/about/donors")},
+      {title: "about_partners", url: CDO.code_org_url("/about/partners")},
+      {title: "about_team", url: CDO.code_org_url("/about/team")},
+      {title: "about_news", url: CDO.code_org_url("/about/news")},
+      {title: "about_evaluation", url: CDO.code_org_url("/about/evaluation")},
+      {title: "about_jobs", url: CDO.code_org_url("/about/jobs")},
+      {title: "about_contact", url: CDO.code_org_url("/contact")},
+      {title: "about_faqs", url: CDO.code_org_url("/faq")},
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
@@ -234,7 +237,7 @@ class Hamburger
 
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
-      url: "#{code_org_url_base}/student",
+      url: CDO.code_org_url("/student"),
       class: visibility[:show_pegasus_options],
       id: "hamburger-learn"
     }
@@ -249,13 +252,13 @@ class Hamburger
 
     entries << {
       title: I18n.t("#{loc_prefix}stats"),
-      url: "#{code_org_url_base}/promote",
+      url: CDO.code_org_url("/promote"),
       class: visibility[:show_pegasus_options]
     }
 
     entries << {
       title: I18n.t("#{loc_prefix}help_us"),
-      url: "#{code_org_url_base}/help",
+      url: CDO.code_org_url("/help"),
       class: visibility[:show_pegasus_options]
     }
 

@@ -1,9 +1,7 @@
 :ruby
-  require 'cdo/hamburger'
+  options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
 
-  options = { level: level, script_level: script_level, language: language, user_type: user_type, code_org_url_base: code_org_url_base, studio_url_base: studio_url_base, loc_prefix: loc_prefix, request: request }
-
-  contents = Hamburger.get_contents(options)
+  contents = Hamburger.get_hamburger_contents(options)
 
 #hamburger{class: contents[:visibility]}
   #hamburger-contents.hide-responsive-menu
