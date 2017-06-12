@@ -389,11 +389,10 @@ export default class JSInterpreter {
    */
   isProgramDone() {
     if (!this.interpreter) {
-      throw new Error("Program has not even been run yet.");
+      return true;
     }
     const topStackFrame = this.interpreter.peekStackFrame();
     return this.executionError ||
-           !this.interpreter ||
            !topStackFrame ||
            (topStackFrame.node.type === 'Program' && topStackFrame.done);
   }
