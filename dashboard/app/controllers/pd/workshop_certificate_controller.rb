@@ -44,7 +44,7 @@ class Pd::WorkshopCertificateController < ApplicationController
             pointsize: 40,
           },
           {
-            string: workshop.workshop_starting_date.strftime('%B %e, %Y'),
+            string: workshop.workshop_date_range_string,
             y: 1042,
             height: 50,
             pointsize: 45,

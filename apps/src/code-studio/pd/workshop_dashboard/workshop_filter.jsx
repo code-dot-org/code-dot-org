@@ -76,10 +76,12 @@ const WorkshopFilter = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
+  },
 
-    if (this.permission.isAdmin) {
+  componentDidMount() {
+    if (this.permission.isWorkshopAdmin) {
       this.loadOrganizers();
     }
   },
@@ -342,7 +344,7 @@ const WorkshopFilter = React.createClass({
           }
           <Clearfix visibleSmBlock />
           {
-            this.permission.isAdmin &&
+            this.permission.isWorkshopAdmin &&
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -359,7 +361,7 @@ const WorkshopFilter = React.createClass({
             </Col>
           }
           {
-            this.permission.isAdmin &&
+            this.permission.isWorkshopAdmin &&
             <Col md={4}>
               <FormGroup>
                 <ControlLabel>Teacher Email</ControlLabel>
@@ -391,7 +393,7 @@ const WorkshopFilter = React.createClass({
             queryParams={filters}
             canDelete
             showStatus
-            showOrganizer={this.permission.isAdmin}
+            showOrganizer={this.permission.isWorkshopAdmin}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
           />
         </Row>

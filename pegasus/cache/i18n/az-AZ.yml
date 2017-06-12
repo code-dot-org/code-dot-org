@@ -51,7 +51,7 @@
   hoc2014_everyone: Hamı
   hoc2014_support: Dəstək verin &#x25BE;
   hoc2014_whatishoc: Kod Saatı nədir?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: "# CSEdWeek / Bütün dünyada Kod Saatı tədbirləri"
   csedweek_map_signup: Tədbirinizi qeydiyyatdan keçirin
   csedweek_map_search_placeholder: Kod Saatı tədbirlərini axtarın
   csedweek_map_search_search: Axtar
@@ -587,8 +587,8 @@
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_header_shared: Könüllülər xəritəsində müəllimlərlə
+    bölüşülən məlumat
   volunteer_engineer_submission_field_name: Ad
   volunteer_engineer_submission_field_name_placeholder: Tam Ad
   volunteer_engineer_submission_field_company: "Şirkət (və ya universitet)"
@@ -614,8 +614,8 @@
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_header_private: Məxfi saxlanaraq heç vaxt bölüşülməyən
+    məlumat
   volunteer_engineer_submission_field_email: E-poçt ünvanı
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
@@ -1847,6 +1847,7 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1882,3 +1883,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses
