@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import _ from 'lodash';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
 import sectionShape from './sectionShape';
@@ -43,6 +44,12 @@ export default class SectionTable extends Component {
 
   render() {
     const { sections, validLoginTypes, validGrades, validAssignments } = this.props;
+
+    const groupedValidAssignemnts = _.groupBy(
+      _.orderBy(validAssignments, ['category_priority', 'category', 'position', 'name']),
+      'category'
+    );
+
     // TODO: i18n
     return (
       <table style={styles.table}>
@@ -91,7 +98,7 @@ export default class SectionTable extends Component {
               key={index}
               validLoginTypes={validLoginTypes}
               validGrades={validGrades}
-              validAssignments={validAssignments}
+              groupedValidAssignemnts={groupedValidAssignemnts}
               section={s}
             />
           ))}
