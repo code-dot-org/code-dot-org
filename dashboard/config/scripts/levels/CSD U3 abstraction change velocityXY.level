@@ -62,6 +62,7 @@
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"green_car\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"green_car\": {\r\n            \"name\": \"green_car\",\r\n            \"sourceUrl\": \"https://images.code.org/4d1af9cc274f30b9d9263a47f9f64f13-image-1470941637433.png\",\r\n            \"frameSize\": {\r\n                \"x\": 100,\r\n                \"y\": 50\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "pause_animations_by_default": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L12_S4_C1\",\r\n  \"callout_text\": \"The velocity is updated here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// update the sprite's velocity\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

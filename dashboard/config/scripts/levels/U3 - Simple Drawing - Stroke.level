@@ -182,6 +182,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Simple Drawing - Road Template",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,
