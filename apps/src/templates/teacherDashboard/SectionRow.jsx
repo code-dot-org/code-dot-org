@@ -105,6 +105,10 @@ ConfirmSave.propTypes = {
  */
 export default class SectionRow extends Component {
   static propTypes = {
+    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
+    // TODO
+    validAssignments: PropTypes.arrayOf(PropTypes.object).isRequired,
     section: sectionShape.isRequired
   };
 
@@ -126,7 +130,7 @@ export default class SectionRow extends Component {
   onClickEditCancel = () => this.setState({editing: false});
 
   render() {
-    const { section } = this.props;
+    const { section, validLoginTypes, validGrades } = this.props;
     const { editing, deleting } = this.state;
 
     return (
@@ -139,13 +143,29 @@ export default class SectionRow extends Component {
               </a>
             </span>
           )}
-          {editing && <span>EDIT</span>}
+          {editing && (
+            <input placeholder="Section Name" defaultValue={section.name}/>
+          )}
         </td>
         <td style={styles.td}>
-          {section.loginType}
+          {!editing && section.loginType}
+          {editing && (
+            <select defaultValue={section.loginType}>
+              {validLoginTypes.map((type, index) => (
+                <option key={index} value={type}>{type}</option>
+              ))}
+            </select>
+          )}
         </td>
         <td style={styles.td}>
-          {section.grade}
+          {!editing && section.grade}
+          {editing && (
+            <select defaultValue={section.grade}>
+              {[""].concat(validGrades).map((grade, index) => (
+                <option key={index} value={grade}>{grade}</option>
+              ))}
+            </select>
+          )}
         </td>
         <td style={styles.td}>
           {section.assignmentName &&
