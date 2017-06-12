@@ -90,7 +90,7 @@ class Hamburger
       {title: "home", url: "#{studio_url_base}/home"},
       {title: "courses", url: "#{studio_url_base}/courses"},
       {title: "project_gallery", url: "#{studio_url_base}/projects"},
-      {title: "sections", url: "#{code_org_url_base}/teacher-dashboard#/sections"},
+      {title: "sections", url: "#{code_org_url_base}/teacher-dashboard#/sections", id: "hamburger-teacher-sections"},
       {title: "professional_learning", url: "#{studio_url_base}/my-professional-learning"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
@@ -98,14 +98,14 @@ class Hamburger
 
     student_entries = [
       {title: "courses", url: "#{studio_url_base}/courses"},
-      {title: "project_gallery", url: "#{studio_url_base}/projects"}
+      {title: "project_gallery", url: "#{studio_url_base}/projects", id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
     signed_out_entries = [
       {title: "courses", url: "#{studio_url_base}/courses"},
-      {title: "project_gallery", url: "#{studio_url_base}/projects/public"}
+      {title: "project_gallery", url: "#{studio_url_base}/projects/public", id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
@@ -205,7 +205,8 @@ class Hamburger
       entries << {
         title: I18n.t("#{loc_prefix}documentation"),
         url: "https://docs.code.org/gamelab/",
-        class: visibility[:show_help_options]
+        class: visibility[:show_help_options],
+        id: "hamburger-gamelab-documentation"
       }
     end
 
@@ -213,7 +214,8 @@ class Hamburger
       entries << {
         title: I18n.t("#{loc_prefix}documentation"),
         url: "https://docs.code.org/applab/",
-        class: visibility[:show_help_options]
+        class: visibility[:show_help_options],
+        id: "hamburger-applab-documentation"
       }
     end
 
@@ -221,7 +223,8 @@ class Hamburger
       entries << {
         title: I18n.t("#{loc_prefix}tutorials"),
         url: CDO.code_org_url('/educate/applab'),
-        class: visibility[:show_help_options]
+        class: visibility[:show_help_options],
+        id: "hamburger-applab-tutorials"
       }
     end
 
@@ -232,7 +235,8 @@ class Hamburger
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
       url: "#{code_org_url_base}/student",
-      class: visibility[:show_pegasus_options]
+      class: visibility[:show_pegasus_options],
+      id: "hamburger-learn"
     }
 
     entries << {
@@ -272,13 +276,13 @@ class Hamburger
         {title: I18n.t('header_home'), url: CDO.studio_url("/home")},
         {title: I18n.t('header_courses'), url: CDO.studio_url("/courses")},
         {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects")},
-        {title: I18n.t('header_sections'), url: CDO.code_org_url("/teacher-dashboard#/sections")},
+        {title: I18n.t('header_sections'), url: CDO.code_org_url("/teacher-dashboard#/sections"), id: "header-teacher-sections"},
         {title: I18n.t('header_professional_learning'), url: CDO.studio_url("/my-professional-learning")}
       ]
     elsif user_type == "student"
       [
         {title: I18n.t('header_courses'), url: CDO.studio_url("/courses")},
-        {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects")}
+        {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects"), id: "header-student-projects"}
       ]
     elsif language == "en"
       [
@@ -286,13 +290,13 @@ class Hamburger
         {title: I18n.t('header_teach'), url: CDO.code_org_url("/educate")},
         {title: I18n.t('header_stats'), url: CDO.code_org_url("/promote")},
         {title: I18n.t('header_help_us'), url: CDO.code_org_url("/help")},
-        {title: I18n.t('header_about'), url: CDO.code_org_url("/about")},
+        {title: I18n.t('header_about'), url: CDO.code_org_url("/about"), id: "header-en-about"},
         {title: I18n.t('header_project_gallery'), url: CDO.studio_url("/projects/public")}
       ]
     else
       [
         {title: I18n.t('header_courses'), url: CDO.code_org_url("/courses")},
-        {title: I18n.t('header_project_gallery'), url: CDO.code_org_url(url: "/projects/public")}
+        {title: I18n.t('header_project_gallery'), url: CDO.code_org_url(url: "/projects/public"), id: "header-signed-out-projects"}
       ]
     end
   end
