@@ -706,7 +706,7 @@ JSInterpreter.prototype.logStep_ = function () {
   // async function call may appear multiple times in the log)
   if ((node.type === "CallExpression" || node.type === "NewExpression") &&
       state.doneCallee_ &&
-      !state.doneExec &&
+      !state.doneExec_ &&
       !node.arguments[state.n_ || 0]) {
     switch (node.callee.type) {
       case "Identifier":
