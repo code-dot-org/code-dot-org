@@ -12,8 +12,8 @@ import i18n from "@cdo/locale";
 
 const TeacherHomepage = React.createClass({
   propTypes: {
-    courses: shapes.courses,
     sections: React.PropTypes.array,
+    courses: shapes.courses,
     announcements: React.PropTypes.array.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
   },
@@ -38,15 +38,15 @@ const TeacherHomepage = React.createClass({
         <Announcements
           announcements={announcements}
         />
+        <Sections
+          sections={sections}
+          codeOrgUrlPrefix={codeOrgUrlPrefix}
+        />
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           heading={i18n.recentCourses()}
           isTeacher={true}
-        />
-        <Sections
-          sections={sections}
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
         <TeacherResources codeOrgUrlPrefix={codeOrgUrlPrefix}/>
       </div>
