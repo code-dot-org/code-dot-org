@@ -17,8 +17,8 @@ module ScriptConstants
   # a category will be the order in which they appear in the dropdown.
   CATEGORIES = {
     full_course: [
+      CSP = 'csp'.freeze,
       CSD = 'csd'.freeze,
-      CSP = 'csp'.freeze
     ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
@@ -110,6 +110,8 @@ module ScriptConstants
   # This can be used to override that, with lower numbers ordered sooner, and higher numbers
   # ordered later.
   CATEGORY_ORDERING_PRIORITY = {
+    # We want full courses to show up first in our list
+    full_course: -1,
     research_studies: 1,
     csp: 2,
     other: 3,

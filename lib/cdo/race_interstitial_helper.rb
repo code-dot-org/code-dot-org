@@ -5,7 +5,9 @@ module RaceInterstitialHelper
     return false if user.under_13?
     return false if user.account_age_days < 7
     # If there is race information at all, that means we shouldn't show the dialog
-    return false if user.races && !user.races.empty?
+    # TODO(asher): Update this to read the column directly after the serialized attribute is
+    # eliminated.
+    return false if user.read_attribute(:races)
 
     # Restrict to cases where we can successfully geolocate to the US
     return false if request_ip.nil?

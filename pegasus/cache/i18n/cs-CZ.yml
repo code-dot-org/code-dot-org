@@ -271,8 +271,7 @@
   just_did_accelerated: Právě jsem dokončil zrychlený kurz - zkus si ho! @codeorg
   twitter_teach_cs: 9 z 10 lidí souhlasí s tím, že školy by měly učit informatiku.
     http://youtu.be/nKIu9yen5nc. Navštivte https://code.org/.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
+  twitter_cs_foundational: Studium informatiky je pro každého studenta základní. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Učte se s Hodinou Kódu
   beyond_hoc: Po Jedné Hodině
   what_gender: Jakého jsi pohlaví?
@@ -509,15 +508,14 @@
   sports_select_theme: Vyberte si vaše výukové téma
   sports_basketball_title: Vytvoř basketbalovou hru
   sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
+  sports_featured_athletes: Podívejte se na vybrané sportovce
+  sports_athletes_title: Vybraní sportovci
+  sports_athlete_Draymond: Draymond Green, olympijský vítěz a mistr NBA, Golden State
+    Warriors
+  sports_athlete_Serena: Serena Williams, olympijská vítězka a tenisová šampionka
+  sports_athlete_Russell: Russell Okung, mistr Super Bowl a hráč NFL, Denver Broncos
+  sports_athlete_Sergio: Sergio Ramos, vítěz světového poháru a fotbalový hráč, Real
+    Madrid
   sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
   sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
     Sparks
@@ -626,8 +624,8 @@
   volunteer_engineer_submission_checkbox_contact: 'Souhlasím, že učitelé mě mohou
     kontaktovat na příležitosti pro dobrovolníky (Poznámka: vaše e-mailová adresa
     nebude sdílená)'
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
+  volunteer_engineer_submission_checkbox_age_18_plus: Potvrzuji, že jsem starší 18
+    let.
   volunteer_engineer_submission_submit: Odeslat
   volunteer_engineer_submission_thankyou: Děkujeme vám za dobrovolnictví pro Hodinu
     kódu. Připravte se na Hodinu kódu a získejte další inženýři <a href="%{url}">
@@ -858,7 +856,7 @@
     go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
      Our teacher dashboard will let you track your student's progress every other
     week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_activity: Přiřadit kurz
   dashboard_error_none_selected: Nevybrali jste žádné studenty pro přesun. Vyberte
     prosím alespoň jednoho studenta.
   dashboard_error_other_section: Jestliže přesouváte studenty mezi vašimi vlastními
@@ -1113,12 +1111,12 @@
   course2_name: Kurz 2
   course3_name: Kurz 3
   course4_name: Kurz 4
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
+  coursea-draft_name: Kurz A
+  courseb-draft_name: Kurz B
+  coursec-draft_name: Kurz C
+  coursed-draft_name: Kurz D
+  coursee-draft_name: Kurz E
+  coursef-draft_name: Kurz F
   accelerated_name: Zrychlený kurz
   cspunit1_name: '1. lekce: Digitální informace'
   cspunit2_name: '2. lekce: Internet'
@@ -1130,15 +1128,15 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Lekce 5: Data a společnost'
+  csd6_name: 'Lekce 6: Fyzikální výpočty'
   csp1_name: '1. lekce: Internet'
   csp2_name: '2. lekce: Digitální informace'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csppostap_name: 'Post AP: Databases in Apps'
+  csppostap_name: 'Po testu: Databáze v aplikacích'
   cspassessment_name: "Úplný test - 50 otázek"
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
   cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek
@@ -1159,12 +1157,12 @@
   starwarsblocks_name: Hvězdné války (kostky)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Jednoduché šifrování
   text-compression_name: Text Compression
   math_category_name: Matematika
   hoc_category_name: Hodina kódu
   csf_category_name: Základy informatiky
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: Principy informatiky 2015-2016
   csp17_category_name: Principy informatiky 2016-2017
@@ -1853,6 +1851,7 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1888,3 +1887,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

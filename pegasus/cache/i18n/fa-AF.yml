@@ -406,7 +406,7 @@
   homepage_slot_text_title_students: "دانش آموزان"
   homepage_slot_text_blurb_students: "تمام آموزش های ما را کشف کنید"
   homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_codestudio: Try Code.org courses
   homepage_slot_text_link_local: "یک کلاس محلی پیدا کنید"
   homepage_slot_text_link_othercourses: "دوره های آنلاین دیگر"
   homepage_slot_text_title_educators: "آموزگاران"
@@ -1906,6 +1906,7 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1941,3 +1942,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

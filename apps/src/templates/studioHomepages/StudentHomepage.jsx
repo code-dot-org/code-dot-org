@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeadingBanner from '../HeadingBanner';
-import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import HeaderBanner from '../HeaderBanner';
+import RecentCourses from './RecentCourses';
 import StudentResources from './StudentResources';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -28,7 +28,7 @@ const StudentHomepage = React.createClass({
 
     return (
       <div>
-        <HeadingBanner
+        <HeaderBanner
           headingText={i18n.homepageHeading()}
         />
 
@@ -37,7 +37,7 @@ const StudentHomepage = React.createClass({
           ref="userHero"
         />
 
-        <RecentCoursesCollapsible
+        <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           header={i18n.recentCourses()}

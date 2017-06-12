@@ -6,5 +6,5 @@ markdown <<MARKDOWN
 
 ## Background
 
-You'll learn a number of new ways to make your sprites interact with one another, like bouncing, colliding, and displacing one another. First learn how you might create these interactions with code you can already write, then check out the new set of abstractions that will take care of those details for you. You'll use the new blocks and sprite interactions you learn to complete the game you started in the last lesson.
+You'll learn a number of new ways to make your sprites interact with one another, such as bouncing, colliding, and displacing one another. First learn how you might create these interactions with code you can already write, then check out the new set of abstractions that will take care of those details for you. You'll use the new blocks and sprite interactions you learn to complete the game you started in the last lesson.
 MARKDOWN
