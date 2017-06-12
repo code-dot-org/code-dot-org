@@ -1,5 +1,5 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
-const codegen = require('../../../codegen');
+const codegen = require('../../../lib/tools/jsinterpreter/codegen');
 const CustomMarshaler = require('./CustomMarshaler');
 
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
