@@ -260,7 +260,7 @@ function main() {
           assignmentName: $scope.getName(s),
           assignmentPath: $scope.getPath(s)
         })));
-        // $scope.hideSectionsTable = true;
+        $scope.hideSectionsTable = true;
       }
       $scope.sectionsLoaded = true;
     });
