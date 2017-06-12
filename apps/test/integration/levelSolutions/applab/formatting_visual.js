@@ -28,8 +28,8 @@ export default {
         assert.equal($('#phoneFrameWrapper').css('transform'), 'matrix(0.9375, 0, 0, 0.9375, 0, 0)');
 
         //Screens appear at correct height
-        var screens = document.getElementsByClassName('screen');
-        for (var i = 0; i < screens.length; i++) {
+        const screens = document.getElementsByClassName('screen');
+        for (let i = 0; i < screens.length; i++) {
           //If screen had original height of 0, expect no scaling
           if (screens[i].getBoundingClientRect().height === 0) {
             assert.equal(screens[i].getBoundingClientRect().height, 0);
@@ -39,8 +39,8 @@ export default {
         }
 
         //Footer only scaled in x direction
-        var bases = document.getElementsByClassName('small-footer-base');
-        for (var j = 0; j < bases.length; j++) {
+        const bases = document.getElementsByClassName('small-footer-base');
+        for (let j = 0; j < bases.length; j++) {
           assert.equal(bases[j].getBoundingClientRect().width, 318.75);
           assert.equal(bases[j].css('transform'), 'matrix(0.9375, 0, 0, 0, 0, 0)');
         }
@@ -75,8 +75,8 @@ export default {
         assert.notEqual($('#phoneFrameWrapper').css('transform'), 'matrix(0.9375, 0, 0, 0.9375, 0, 0)');
 
         //Screens appear at correct height
-        var screens = document.getElementsByClassName('screen');
-        for (var i = 0; i < screens.length; i++) {
+        const screens = document.getElementsByClassName('screen');
+        for (let i = 0; i < screens.length; i++) {
           //If screen had original height of 0, expect no scaling
           if (screens[i].getBoundingClientRect().height === 0) {
             assert.equal(screens[i].getBoundingClientRect().height, 0);
@@ -86,8 +86,8 @@ export default {
         }
 
         //Footer not scaled in x direction
-        var bases = document.getElementsByClassName('small-footer-base');
-        for (var j = 0; j < bases.length; j++) {
+        const bases = document.getElementsByClassName('small-footer-base');
+        for (let j = 0; j < bases.length; j++) {
           assert.notEqual(bases[j].getBoundingClientRect().width, 318.75);
           assert.notEqual(bases[j].css('transform'), 'matrix(0.9375, 0, 0, 0, 0, 0)');
         }
