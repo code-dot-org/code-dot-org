@@ -41,7 +41,8 @@ const styles = {
       cursor: 'pointer',
     },
     boxSizing: 'border-box',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
   },
   icon: {
     marginRight: 5

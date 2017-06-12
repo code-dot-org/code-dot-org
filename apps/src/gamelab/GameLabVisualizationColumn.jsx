@@ -120,7 +120,7 @@ var GameLabVisualizationColumn = React.createClass({
 
           <CompletionButton />
 
-          {this.renderGridCheckbox()}
+          {!this.props.isShareView && this.renderGridCheckbox()}
         </GameButtons>
         {this.renderAppSpaceCoordinates()}
         {this.props.awaitingContainedResponse && (

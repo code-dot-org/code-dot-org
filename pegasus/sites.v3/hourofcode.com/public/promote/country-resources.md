@@ -97,6 +97,12 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 **Get your students excited - give them a short intro**
 
+<% elsif @country ==  'pe' %>
+
+# La Hora del Código Perú
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=whSt53kn0lM"><strong>Pedro Pablo Kuczynski. Presidente del Perú 2016-2021</strong></a>
+
 <% else %>
 
 # Additional resources coming soon!

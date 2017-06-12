@@ -1,5 +1,5 @@
 import React from 'react';
-import Button, {BUTTON_TYPES, style} from './Button';
+import LegacyButton, {BUTTON_TYPES, style} from './LegacyButton';
 
 const docs = {
   "default": 'Use for actions that don\'t need to be the focus of the page',
@@ -11,7 +11,7 @@ const docs = {
 
 export default storybook => {
   storybook
-    .storiesOf('Button', module)
+    .storiesOf('LegacyButton', module)
     .addWithInfo(
       'overview',
       '',
@@ -19,7 +19,7 @@ export default storybook => {
         <div>
           <h1>Intro</h1>
           <p>
-            Buttons come in many different shapes and sizes! Some aspects of buttons
+            LegacyButtons come in many different shapes and sizes! Some aspects of buttons
             that are worth mentioning:
           </p>
           <ul>
@@ -46,13 +46,13 @@ export default storybook => {
                <tr key={type}>
                  <td>{type}</td>
                  <td style={{textAlign: 'left'}}>{docs[type]}</td>
-                 <td><Button type={type}>{type}</Button></td>
-                 <td><Button type={type} size="large">{type}</Button></td>
+                 <td><LegacyButton type={type}>{type}</LegacyButton></td>
+                 <td><LegacyButton type={type} size="large">{type}</LegacyButton></td>
                  <td>
-                   <Button type={type} size="large" arrow="left">{type}</Button>
+                   <LegacyButton type={type} size="large" arrow="left">{type}</LegacyButton>
                  </td>
                  <td>
-                   <Button type={type} size="large" arrow="right">{type}</Button>
+                   <LegacyButton type={type} size="large" arrow="right">{type}</LegacyButton>
                  </td>
                </tr>
              ))}
