@@ -170,27 +170,34 @@ class Hamburger
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),
         url: report_url,
-        class: visibility[:show_help_options]
+        class: visibility[:show_help_options],
+        id: "report-bug",
+        target: "_blank"
       }
     else
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),
         url: "https://support.code.org/hc/en-us/requests/new",
-        class: visibility[:show_help_options]
+        class: visibility[:show_help_options],
+        id: "report-bug",
+        target: "_blank"
       }
     end
 
     entries << {
       title: I18n.t("#{loc_prefix}help_support"),
       url: "https://support.code.org",
-      class: visibility[:show_help_options]
+      class: visibility[:show_help_options],
+      id: "support",
+      target: "_blank"
     }
 
     if options[:user_type] == "teacher"
       entries << {
         title: I18n.t("#{loc_prefix}teacher_community"),
         url: "http://forum.code.org/",
-        class: visibility[:show_help_options]
+        class: visibility[:show_help_options],
+        target: "_blank"
       }
     end
 
