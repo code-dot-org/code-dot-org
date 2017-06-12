@@ -192,8 +192,10 @@ class Stage < ActiveRecord::Base
     end
   end
 
-  # Ensures we get the cached ScriptLevels, vs hitting the db.
+  # Ensures we get the cached ScriptLevels if they are being cached, vs hitting the db.
   def cached_script_levels
+    return script_levels unless Script.should_cache?
+
     script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
   end
 end
