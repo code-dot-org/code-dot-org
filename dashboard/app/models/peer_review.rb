@@ -38,7 +38,7 @@ class PeerReview < ActiveRecord::Base
 
   REVIEWS_PER_SUBMISSION = 2
   REVIEWS_FOR_CONSENSUS = 2
-  SYSTEM_DELETED_DATA = 'system_deleted_data'
+  SYSTEM_DELETED_DATA = ''.freeze
 
   enum status: {
     accepted: 0,
