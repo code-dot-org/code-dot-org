@@ -73,39 +73,43 @@ const PhoneFrame = React.createClass({
     const { isDark, screenIds, showSelector, isPaused, onScreenCreate } = this.props;
     return (
       <span id="phoneFrame">
-        <div
-          style={[
-            styles.phoneFrame,
-            styles.phoneFrameTop,
-            isDark && styles.phoneFrameDark
-          ]}
-        >
-          {showSelector &&
-          <div style={styles.screenSelector}>
-            <ScreenSelector
-              screenIds={screenIds}
-              onCreate={onScreenCreate}
-            />
+        <div id="phoneFrameWrapper">
+          <div
+            id="phoneTop"
+            style={[
+              styles.phoneFrame,
+              styles.phoneFrameTop,
+              isDark && styles.phoneFrameDark
+            ]}
+          >
+            {showSelector &&
+            <div style={styles.screenSelector}>
+              <ScreenSelector
+                screenIds={screenIds}
+                onCreate={onScreenCreate}
+              />
+              </div>
+            }
+            {isPaused &&
+            <div style={[styles.centeredInFrame, styles.paused]}>
+              <FontAwesome icon="pause" style={styles.pauseIcon}/>
+              PAUSED
             </div>
-          }
-          {isPaused &&
-          <div style={[styles.centeredInFrame, styles.paused]}>
-            <FontAwesome icon="pause" style={styles.pauseIcon}/>
-            PAUSED
+            }
           </div>
-          }
-        </div>
-        {this.props.children}
-        <div
-          style={[
-            styles.phoneFrame,
-            styles.phoneFrameBottom,
-            isDark && styles.phoneFrameDark
-          ]}
-        >
-          <div style={styles.centeredInFrame}>
-            <RunButton hidden={false} style={styles.buttonMinWidth}/>
-            <ResetButton style={styles.buttonMinWidth}/>
+          {this.props.children}
+          <div
+            id="phoneBottom"
+            style={[
+              styles.phoneFrame,
+              styles.phoneFrameBottom,
+              isDark && styles.phoneFrameDark
+            ]}
+          >
+            <div style={styles.centeredInFrame}>
+              <RunButton hidden={false} style={styles.buttonMinWidth}/>
+              <ResetButton style={styles.buttonMinWidth}/>
+            </div>
           </div>
         </div>
       </span>
