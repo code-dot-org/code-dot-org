@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import _ from 'lodash';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
-import sectionShape from './sectionShape';
+import { sectionShape, assignmentShape } from './shapes';
 
 const styles = {
   table: {
@@ -37,18 +36,13 @@ export default class SectionTable extends Component {
   static propTypes = {
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    // TODO
-    validAssignments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
+    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
     sections: PropTypes.arrayOf(sectionShape).isRequired
   };
 
   render() {
-    const { sections, validLoginTypes, validGrades, validAssignments } = this.props;
-
-    const groupedValidAssignemnts = _.groupBy(
-      _.orderBy(validAssignments, ['category_priority', 'category', 'position', 'name']),
-      'category'
-    );
+    const { sections, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
 
     // TODO: i18n
     return (
@@ -98,7 +92,8 @@ export default class SectionTable extends Component {
               key={index}
               validLoginTypes={validLoginTypes}
               validGrades={validGrades}
-              groupedValidAssignemnts={groupedValidAssignemnts}
+              validCourses={validCourses}
+              validScripts={validScripts}
               section={s}
             />
           ))}
