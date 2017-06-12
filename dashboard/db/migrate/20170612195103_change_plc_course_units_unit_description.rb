@@ -1,14 +1,13 @@
 class ChangePlcCourseUnitsUnitDescription < ActiveRecord::Migration[5.0]
-  def change
-    reversible do |dir|
-      change_table :plc_course_units do |t|
-        dir.up do
-          t.change :unit_description, :text
-        end
-        dir.down do
-          t.change :unit_description, :string
-        end
-      end
+  def up
+    change_table :plc_course_units do |t|
+      t.change :unit_description, :text
+    end
+  end
+
+  def down
+    change_table :plc_course_units do |t|
+      t.change :unit_description, :string
     end
   end
 end
