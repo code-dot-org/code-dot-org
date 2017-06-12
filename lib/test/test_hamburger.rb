@@ -19,7 +19,7 @@ end
 
 class Level
   def report_bug_url(request)
-    "yo"
+    "url"
   end
 
   def try(property)
@@ -29,17 +29,21 @@ end
 
 class LevelAppLab
   def report_bug_url(request)
-    "yo"
+    "url"
   end
 
   def try(property)
     property == :is_project_level
   end
+
+  def game
+    "AppLab"
+  end
 end
 
 class LevelGameLab
   def report_bug_url(request)
-    "yo"
+    "url"
   end
 
   def try(property)
@@ -200,78 +204,68 @@ class HamburgerTest < Minitest::Test
 
   def test_hamburger_content_teacher
     contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: "teacher", language: "en"})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "hamburger-teacher-sections"}
   end
 
   def test_hamburger_content_student
     contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: "student", language: "en"})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "hamburger-student-projects"}
   end
 
   def test_hamburger_content_nobody
     contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "hamburger-signed-out-projects"}
   end
 
   def test_hamburger_content_script_level
     contents = Hamburger.get_contents({level: nil, script_level: Level.new, user_type: nil, language: "en", request: nil})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "report-bug"}
   end
 
   def test_hamburger_content_level
     contents = Hamburger.get_contents({level: Level.new, script_level: nil, user_type: nil, language: "en", request: nil})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "report-bug"}
   end
 
   def test_hamburger_content_nolevel
     contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "hamburger-learn"}
   end
 
   def test_hamburger_content_gamelab_project_level
     contents = Hamburger.get_contents({level: LevelGameLab.new, script_level: nil, user_type: nil, language: "en"})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:id] == "hamburger-gamelab-documentation"}
   end
 
   def test_hamburger_content_applab_project_level
-    contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert !contents.empty?
+    contents = Hamburger.get_contents({level: LevelAppLab.new, script_level: nil, user_type: nil, language: "en"})
+    assert contents[:entries].find {|e| e[:id] == "hamburger-applab-documentation"}
   end
 
   def test_hamburger_content_expandable
     contents = Hamburger.get_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert !contents.empty?
+    assert contents[:entries].find {|e| e[:type] == "expander"}
   end
 
   # Header content tests.
 
-  def test_header_content_teacher_en
+  def test_header_content_teacher
     contents = Hamburger.get_header_contents("teacher", "en")
-    assert !contents.empty?
+    assert contents.find {|e| e[:id] == "header-teacher-sections"}
   end
 
-  def test_header_content_teacher_nonen
-    contents = Hamburger.get_header_contents("teacher", "fr")
-    assert !contents.empty?
-  end
-
-  def test_header_content_student_en
+  def test_header_content_student
     contents = Hamburger.get_header_contents("student", "en")
-    assert !contents.empty?
-  end
-
-  def test_header_content_student_nonen
-    contents = Hamburger.get_header_contents("student", "fr")
-    assert !contents.empty?
+    assert contents.find {|e| e[:id] == "header-student-projects"}
   end
 
   def test_header_content_nobody_en
     contents = Hamburger.get_header_contents(nil, "en")
-    assert !contents.empty?
+    assert contents.find {|e| e[:id] == "header-en-about"}
   end
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents(nil, "fr")
-    assert !contents.empty?
+    assert contents.find {|e| e[:id] == "header-signed-out-projects"}
   end
 end
