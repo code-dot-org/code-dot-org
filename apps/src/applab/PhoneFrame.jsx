@@ -75,7 +75,6 @@ const PhoneFrame = React.createClass({
       <span id="phoneFrame">
         <div id="phoneFrameWrapper">
           <div
-            id="phoneTop"
             style={[
               styles.phoneFrame,
               styles.phoneFrameTop,
@@ -99,7 +98,6 @@ const PhoneFrame = React.createClass({
           </div>
           {this.props.children}
           <div
-            id="phoneBottom"
             style={[
               styles.phoneFrame,
               styles.phoneFrameBottom,

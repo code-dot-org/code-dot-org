@@ -630,7 +630,7 @@ Applab.init = function (config) {
 
   //Scale old-sized apps to fit the new sized display. Old height - 480.
   if ($(".screen").height() === 480) {
-    var ratio = 450 / 480;
+    const ratio = 450 / 480;
     if (studioApp().share) { //share and embed pages
       $("#divApplab").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
       $(".small-footer-base").css('transform', 'scale('+ ratio + ', 1)');
