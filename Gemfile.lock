@@ -573,7 +573,7 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     redcarpet (3.3.4)
-    redis (3.3.1)
+    redis (3.3.3)
     ref (2.0.0)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
@@ -831,7 +831,7 @@ DEPENDENCIES
   rails-controller-testing
   rambling-trie
   redcarpet (~> 3.3.4)
-  redis (~> 3.3.1)
+  redis (~> 3.3.3)
   redis-slave-read!
   rerun (~> 0.10.0)
   responders (~> 2.0)
