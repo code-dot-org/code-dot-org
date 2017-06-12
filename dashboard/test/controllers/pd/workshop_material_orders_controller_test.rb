@@ -12,6 +12,7 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
     Geocoder.stubs(:search).returns(
       [OpenStruct.new(
         postal_code: '98101',
+        state_code: 'WA',
         street_number: '1501'
       )]
     )
