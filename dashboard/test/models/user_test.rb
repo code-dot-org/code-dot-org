@@ -1036,8 +1036,8 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
-  test 'picture_or_word_account? is false for user in no sections' do
-    refute @student.picture_or_word_account?
+  test 'teacher_managed_account? is false for normal user account with password' do
+    refute @student.teacher_managed_account?
   end
 
   test 'picture_or_word_account? is false for users in picture or word sections with passwords' do
@@ -1048,13 +1048,13 @@ class UserTest < ActiveSupport::TestCase
     student_with_password = create(:student, encrypted_password: '123456')
     create(:follower, student_user: student_with_password, section: picture_section)
     student_with_password.reload
-    refute student_with_password.picture_or_word_account?
+    refute student_with_password.teacher_managed_account?
 
     # word section
     student_with_password = create(:student, encrypted_password: '123456')
     create(:follower, student_user: student_with_password, section: word_section)
     student_with_password.reload
-    refute student_with_password.picture_or_word_account?
+    refute student_with_password.teacher_managed_account?
   end
 
   test 'picture_or_word_account? is true for users in picture or word sections' do
@@ -1065,13 +1065,13 @@ class UserTest < ActiveSupport::TestCase
     student_without_password = create(:student, encrypted_password: '')
     create(:follower, student_user: student_without_password, section: picture_section)
     student_without_password.reload
-    assert student_without_password.picture_or_word_account?
+    assert student_without_password.teacher_managed_account?
 
     # word section
     student_without_password = create(:student, encrypted_password: '')
     create(:follower, student_user: student_without_password, section: word_section)
     student_without_password.reload
-    assert student_without_password.picture_or_word_account?
+    assert student_without_password.teacher_managed_account?
   end
 
   test 'can_edit_email? is false for user without password' do
