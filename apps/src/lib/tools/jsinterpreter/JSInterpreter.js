@@ -282,7 +282,7 @@ export default class JSInterpreter {
       this.yield();
     }
     return retVal;
-  }
+  };
 
   nativeSetCallbackRetVal = (retVal) => {
     if (this.eventQueue.length === 0) {
@@ -306,7 +306,7 @@ export default class JSInterpreter {
                                                 "slider to its maximum value)");
       }
     }
-  }
+  };
 
   /**
    * Yield execution (causes executeInterpreter loop to break out if this is
@@ -388,6 +388,9 @@ export default class JSInterpreter {
    * @return {boolean} true if program is complete (or an error has occurred).
    */
   isProgramDone() {
+    if (!this.interpreter) {
+      throw new Error("Program has not even been run yet.");
+    }
     const topStackFrame = this.interpreter.peekStackFrame();
     return this.executionError ||
            !this.interpreter ||
@@ -566,14 +569,15 @@ export default class JSInterpreter {
         }
         this.maxValidCallExpressionDepth = stackDepth;
 
-        if (inUserCode && this.interpreter.peekStackFrame().node.type === "CallExpression") {
+        const inUserCallExpression = inUserCode && this.interpreter.peekStackFrame().node.type === "CallExpression";
+        if (inUserCallExpression) {
           // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
           this.callExpressionSeenAtDepth[stackDepth] = true;
         }
 
         if (this.paused) {
           // Store the first call expression stack depth seen while in this step operation:
-          if (inUserCode && this.interpreter.peekStackFrame().node.type === "CallExpression") {
+          if (inUserCallExpression) {
             if (typeof this.firstCallStackDepthThisStep === 'undefined') {
               this.firstCallStackDepthThisStep = stackDepth;
             }
