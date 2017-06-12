@@ -58,7 +58,7 @@
       "comment_Sprites": null
     },
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",

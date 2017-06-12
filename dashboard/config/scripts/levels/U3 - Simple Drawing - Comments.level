@@ -53,7 +53,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "encrypted_examples": "AZcoRsavYh6eJoxhcxCsIIE8BwfI+jqWk8zj4mO7SKbEUDfCcNv9aYGbe7D+\nI5fy\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,
