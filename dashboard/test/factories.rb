@@ -4,10 +4,12 @@ FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :course_script do
   end
+
   factory :course do
     name "my-course-name"
     properties nil
   end
+
   factory :experiment do
     name "fancyFeature"
 
@@ -28,10 +30,12 @@ FactoryGirl.define do
       type "SingleUserExperiment"
     end
   end
+
   factory :section_hidden_stage do
-    section nil
-    stage nil
+    section
+    stage
   end
+
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
