@@ -5,8 +5,7 @@ video_player: true
 theme: responsive
 ---
 
-# Computer Science Principles &nbsp;&nbsp; [<button style="margin-top:0;">View course</button>](https://studio.code.org/courses/csp)
-
+# Computer Science Principles &nbsp;&nbsp; <a href="<%= CDO.studio_url('/courses/csp')%>" name="CS Principles Course"><button style="margin-top: 0">View course</button></a>
 
 ## <a name="whatis"></a>What is CS Principles?
 
