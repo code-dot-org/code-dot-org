@@ -153,8 +153,8 @@ FactoryGirl.define do
   end
 
   factory :districts_users do
-    district nil
-    user nil
+    district
+    user
   end
 
   factory :section do
