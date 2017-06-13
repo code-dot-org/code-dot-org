@@ -1,24 +1,3 @@
-Given(/^I am a facilitator with started and completed courses$/) do
-  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people
-  }
-end
-
-Given(/^I am an organizer with started and completed courses$/) do
-  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
-  }
-end
 
 Given(/^I am a teacher who has just followed a survey link$/) do
   random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
