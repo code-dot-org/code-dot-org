@@ -8,6 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -39,6 +40,21 @@ function renderSectionProjects(sectionId) {
       />,
       element);
   });
+}
+
+function renderSectionsTable(sections) {
+  const element = document.getElementById('sections-table-react');
+
+  ReactDOM.render(
+    <SectionTable
+      validLoginTypes={data.valid_login_types}
+      validGrades={data.valid_grades}
+      validCourses={data.valid_courses}
+      validScripts={data.valid_scripts}
+      sections={sections}
+    />,
+    element
+  );
 }
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
@@ -75,9 +91,7 @@ function main() {
     course.is_course = true;
   });
 
-  // Just scripts, unless experiment is enabled
-  const valid_assignments = experiments.isEnabled('assignCourses') ?
-    valid_courses.concat(valid_scripts) : valid_scripts;
+  const valid_assignments = valid_courses.concat(valid_scripts);
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -217,7 +231,8 @@ function main() {
   var app = angular.module('teacherDashboard.controllers', []);
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
-                                       function ($scope, $window, sectionsService){
+      function ($scope, $window, sectionsService) {
+
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
@@ -229,6 +244,24 @@ function main() {
       $scope.sections.forEach(section => {
         section.assign_id = $scope.getAssignmentId(section);
       });
+      if (experiments.isEnabled('reactSections')) {
+        // TODO - eventually React should own this query
+        renderSectionsTable(sections.map(s => ({
+          id: s.id,
+          name: s.name,
+          loginType: s.login_type,
+          grade: s.grade,
+          stageExtras: s.stage_extras,
+          pairingAllowed: s.pairing_allowed,
+          numStudents: s.students.length,
+          code: s.code,
+          course_id: s.course_id,
+          script_id: s.script ? s.script.id : null,
+          assignmentName: $scope.getName(s),
+          assignmentPath: $scope.getPath(s)
+        })));
+        $scope.hideSectionsTable = true;
+      }
       $scope.sectionsLoaded = true;
     });
 
@@ -377,7 +410,7 @@ function main() {
     };
 
     $scope.new_section = function () {
-      $scope.sections.unshift({editing: true, login_type: 'word'});
+      $scope.sections.unshift({editing: true, login_type: 'word', pairing_allowed: true});
     };
   }]);
 

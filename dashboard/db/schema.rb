@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605131206) do
+ActiveRecord::Schema.define(version: 20170612195103) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -573,12 +573,12 @@ ActiveRecord::Schema.define(version: 20170605131206) do
   create_table "plc_course_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "plc_course_id"
     t.string   "unit_name"
-    t.string   "unit_description"
+    t.text     "unit_description", limit: 65535
     t.integer  "unit_order"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "script_id"
-    t.boolean  "started",          default: false, null: false
+    t.boolean  "started",                        default: false, null: false
     t.index ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
     t.index ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
   end

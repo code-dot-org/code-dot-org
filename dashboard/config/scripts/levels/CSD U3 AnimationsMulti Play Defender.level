@@ -38,7 +38,7 @@
     "all_animations_single_frame": "false",
     "start_in_animation_tab": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "display_name": "Sample Game",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

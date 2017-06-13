@@ -187,7 +187,7 @@ la:
   front_join_us_volunteer_header: 'Voluntarios para la Hora del Código'
   front_join_us_tutorials: "Prueba los nuevos tutoriales!"
   front_join_us_tutorials_link: '¡Filtra y navega por una lista ampliada de <i>más de 200 tutoriales y lecciones</i>! Encuentra actividades para diferentes áreas, múltiples necesidades de hardware y estudiantes de cualquier nivel.'
-  front_join_us_robotics: 'Got robots?'
+  front_join_us_robotics: '¿Tienes robots?'
   front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
   front_join_us_teacher: '¿Eres profesor?'
   front_join_us_inspire: 'Motiva a los estudiantes con'
@@ -250,13 +250,14 @@ la:
   map_header: '# eventos de la Hora del Código alrededor del mundo'
   see_all_events: 'Ver todos los eventos'
   map_header_company: '# por los organizadores de la compañía'
-  map_header_country: '# en España / %{country}'
+  map_header_country: '# en %{country}'
   map_search_placeholder: 'Buscar eventos de la Hora del Código'
   map_search_search: 'Buscar'
   map_search_reset: 'Reestablecer'
   map_legend_title: 'Leyenda'
   map_legend_hoc_events: 'Evento de la Hora del Código'
   map_legend_cs_tech_jam: 'Evento especial'
+  map_warning: "El mapa de Hora de Código sólo muestra los primeros 200.000 eventos registrados. Todos los eventos registrados con una dirección válida se pueden ver en <a href='%{events_url}'>la página de eventos.</a>"
   meta_tag_og_title: 'La Hora del Código está aquí'
   meta_tag_og_description: 'La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas, con edades entre 4 y 104 años.'
   meta_tag_twitter_title: 'La Hora del Código está aquí'
@@ -267,7 +268,7 @@ la:
   hoc_faq_what_is_hoc_a: "La Hora del Código es una introducción de una hora de duración a las Ciencias de la Computación, diseñada para mostrar que todo el mundo puede aprender a programar y así comprender los fundamentos básicos de la disciplina. \n<a href='http://code.org/learn'>Accede a los tutoriales</a>."
   hoc_faq_last_year: "Prueba los tutoriales."
   hoc_faq_when_is_hoc_q: '¿Cuándo es la Hora del Código?'
-  hoc_faq_when_is_hoc_a: "Cualquiera puede organizar \"Una Hora del Código\" en cualquier momento, pero el objetivo de esta campaña popular es que decenas de millones de estudiantes prueben \"Una Hora del Código\" entre el %{campaign_date} de 2015, en celebración de la <a href='http://csedweek.org'>Semana Educativa de las Ciencias de la Computación</a>. ¿Se trata de una <i>hora</i> específica? No. Puedes celebrar \"Una Hora del Código\" en cualquier momento de esa semana. (Y si no puedes hacerlo durante dicha semana hazlo una antes o una después)."
+  hoc_faq_when_is_hoc_a: "La Hora del Código tiene lugar cada año durante la <a href='%{csedweek_url}'> Semana de la Educación en Ciencias de la Computación </a>. La semana de educación en informática %{campaign_date_year} será %{campaign_date_full}, pero puede alojar una hora de código durante todo el año. La Semana de la Educación en Ciencias de la Computación se celebra anualmente en reconocimiento al cumpleaños de la <a href='%{grace_hopper}'> peregrina de computación, el Almirante Grace Murray Hopper </a> (9 de diciembre de 1906)."
   hoc_faq_why_cs_q: '¿Por qué Ciencias de la computación?'
   hoc_faq_why_cs_a: "<i>Todos</i> los estudiantes deben tener la oportunidad de aprender Ciencias de la Computación. Ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Introducir a los estudiantes de forma temprana en las ciencias de la computación, les permitirá disponer de conocimientos imprescindibles en el s.XXI; fundamentales sea cual sea su futuro desarrollo profesional. Ver más estadísticas en <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: '¿Cómo puedo participar en la Hora del Código?'
@@ -277,7 +278,7 @@ la:
   hoc_faq_host_q: "No sé nada acerca de programación. ¿Aún así puedo organizar un evento?"
   hoc_faq_host_a: "Por supuesto. Las actividades de La Hora del Código son auto guiadas. Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>probar nuestros actuales tutoriales</a>, seleccionar el tutorial que quieras y elegir una hora &mdash; nosotros nos encargaremos del resto. Tenemos opciones para cada edad y nivel de experiencia, desde jardín de infancia para arriba. Empieza a planear tu evento leyendo nuestra <a href='/how-to'>guía</a>."
   hoc_faq_devices_q: "¿Qué dispositivos debo usar para mis estudiantes?"
-  hoc_faq_devices_a: "Los tutoriales de Code.org funcionan en todos los dispositivos y navegadores. Puedes ver más información sobre las necesidades tecnológicas del tutorial de Code.org en < a href = '%{codeorg_url}/educate/it'>. Las necesidades tecnológicas de los tutoriales que no son de Code.org pueden encontrarse en <a href =''%{codeorg_url}/learn'> en la descripción específica del tutorial. ¡No olvides que también ofrecemos actividades sin conexión si tu escuela no puede alojar los tutoriales!"
+  hoc_faq_devices_a: "Los tutoriales de Code.org funcionan en todos los dispositivos y navegadores. Puedes ver más información sobre las necesidades de tecnología de tutorial de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>. Las necesidades de tecnología para los tutoriales de nonCode.org se pueden encontrar en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> en la descripción específica del tutorial. No olvide que también ofrecemos <a href='%{unplugged_url}'>actividades desconectadas</a> si su escuela no puede acomodar los tutoriales!"
   hoc_faq_need_computers_q: '¿Necesito ordenadores para cada participante?'
   hoc_faq_need_computers_a: "No. Tenemos tutoriales de la Hora del Código que funcionan en PCs, teléfonos móviles, tabletas y algunos que no requieren ¡ordenador! Tú puedes unirte desde donde estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor en<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo un ordenador y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Un cañón proyector.</b> Si tú tienes un proyector y un ordenador conectado a Internet, el grupo entero puede hacer una Hora del Código juntos. Viendo partes de los vídeos y estableciendo turnos para resolver y responder las preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ordenador. </ul>"
   hoc_faq_international_q: "Estoy en España, ¿Cómo puedo participar internacionalmente?"
@@ -399,7 +400,7 @@ la:
   learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_robotics_banner_heading: 'ROBOTICS'
-  learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
+  learn_robotics_banner_blurb: '¿Tienes robots? ¡Utilízalos con las actividades a continuación y haz una Hora de Código tangible para estudiantes de cualquier edad!'
   tutorial_moana_name: 'Moana: Wayfinding with Code'
   tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
   tutorial_gumadventure_name: "Gumball's Coding Adventure"

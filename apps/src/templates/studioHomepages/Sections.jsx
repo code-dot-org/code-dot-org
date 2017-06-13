@@ -15,22 +15,24 @@ const Sections = React.createClass({
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
-      <ContentContainer
-        heading={i18n.sectionsTitle()}
-        linkText={i18n.viewAllSections()}
-        link={editSectionsUrl}
-        showLink={true}
-      >
-      {sections.length > 0 && (
-        <SectionsTable sections={sections}/>
-      )}
-      {sections.length === 0 && (
-        <SetUpMessage
-          type="sections"
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
-        />
-      )}
-    </ContentContainer>
+      <div>
+        <ContentContainer
+          heading={i18n.sectionsTitle()}
+          linkText={i18n.viewAllSections()}
+          link={editSectionsUrl}
+          showLink={true}
+        >
+        {sections.length > 0 && (
+          <SectionsTable sections={sections}/>
+        )}
+        {sections.length === 0 && (
+          <SetUpMessage
+            type="sections"
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+          />
+        )}
+      </ContentContainer>
+    </div>
     );
   }
 });

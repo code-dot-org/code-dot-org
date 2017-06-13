@@ -126,38 +126,38 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot create user with panda in name" do
-    user = User.create(@good_data.merge({name: panda_panda}))
+  test "cannot build user with panda in name" do
+    user = build :user, name: panda_panda
     refute user.valid?
     assert user.errors[:name].length == 1
   end
 
-  test "cannot create user with panda in email" do
-    user = User.create(@good_data.merge({email: "#{panda_panda}@panda.com"}))
+  test "cannot build user with panda in email" do
+    user = build :user, email: panda_panda
     refute user.valid?
     assert user.errors[:email].length == 1
   end
 
-  test "cannot create user with invalid email" do
-    user = User.create(@good_data.merge({email: 'foo@bar@com'}))
+  test "cannot build user with invalid email" do
+    user = build :user, email: 'foo@bar@com'
     refute user.valid?
     assert user.errors[:email].length == 1
   end
 
-  test "cannot create user with no type" do
-    user = User.create(@good_data.merge(user_type: nil))
+  test "cannot build user with no type" do
+    user = build :user, user_type: nil
     refute user.valid?
     assert user.errors[:user_type].length == 1
   end
 
-  test "cannot create user with no name" do
-    user = User.create(@good_data.merge(name: nil))
+  test "cannot build user with no name" do
+    user = build :user, name: nil
     refute user.valid?
     assert user.errors[:name].length == 1
   end
 
-  test "cannot create user with invalid type" do
-    user = User.create(@good_data.merge(user_type: 'xxxxx'))
+  test "cannot build user with invalid type" do
+    user = build :user, user_type: 'invalid_type'
     refute user.valid?
     assert user.errors[:user_type].length == 1
   end
@@ -319,10 +319,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot make a student admin" do
-    student = create :student
+    student = build :student
     student.admin = true
     refute student.valid?
-    refute student.save
 
     assert_raises(ActiveRecord::RecordInvalid) do
       assert_does_not_create(User) do
@@ -365,21 +364,21 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "short name" do
-    assert_equal 'Laurel', create(:user, name: 'Laurel Fan').short_name # first name last name
-    assert_equal 'Winnie', create(:user, name: 'Winnie the Pooh').short_name # middle name
-    assert_equal "D'Andre", create(:user, name: "D'Andre Means").short_name # punctuation ok
-    assert_equal '樊瑞', create(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
-    assert_equal 'Laurel', create(:user, name: 'Laurel').short_name # just one name
-    assert_equal 'some', create(:user, name: '  some whitespace in front  ').short_name # whitespace in front
+    assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
+    assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
+    assert_equal "D'Andre", build(:user, name: "D'Andre Means").short_name # punctuation ok
+    assert_equal '樊瑞', build(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
+    assert_equal 'Laurel', build(:user, name: 'Laurel').short_name # just one name
+    assert_equal 'some', build(:user, name: '  some whitespace in front  ').short_name # whitespace in front
   end
 
   test "initial" do
-    assert_equal 'L', create(:user, name: 'Laurel Fan').initial # first name last name
-    assert_equal 'W', create(:user, name: 'Winnie the Pooh').initial # middle name
-    assert_equal "D", create(:user, name: "D'Andre Means").initial # punctuation ok
-    assert_equal '樊', create(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
-    assert_equal 'L', create(:user, name: 'Laurel').initial # just one name
-    assert_equal 'S', create(:user, name: '  some whitespace in front  ').initial # whitespace in front
+    assert_equal 'L', build(:user, name: 'Laurel Fan').initial # first name last name
+    assert_equal 'W', build(:user, name: 'Winnie the Pooh').initial # middle name
+    assert_equal "D", build(:user, name: "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', build(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', build(:user, name: 'Laurel').initial # just one name
+    assert_equal 'S', build(:user, name: '  some whitespace in front  ').initial # whitespace in front
   end
 
   test "find_for_authentication with nonsense" do
@@ -751,53 +750,64 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.terms_of_service_version
   end
 
-  test 'sanitize_race_data sanitizes closed_dialog' do
-    @student.update!(races: %w(white closed_dialog))
-    assert_equal %w(closed_dialog), @student.reload.races
-    assert_equal 'closed_dialog', @student.read_attribute(:races)
-    assert_nil @student.urm
-  end
+  # TODO(asher): Uncomment these tests, as part of reenabling the sanitize_and_set_race_data
+  # callback, after completely eliminating the `races` serialized attribute.
 
-  test 'sanitize_race_data sanitizes too many races' do
-    @student.reload.update!(races: %w(white black hispanic asian american_indian hawaiian))
-    assert_equal %w(nonsense), @student.reload.races
-    assert_equal 'nonsense', @student.read_attribute(:races)
-    assert_nil @student.urm
-  end
+  #  test 'sanitize_race_data sanitizes closed_dialog' do
+  #    @student.update_columns(races: 'white,closed_dialog')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'closed_dialog', @student.read_attribute(:races)
+  #    assert_nil @student.urm
+  #  end
 
-  test 'sanitize_race_data sanitizes non-races' do
-    @student.update!(races: %w(not_a_race white))
-    assert_equal %w(nonsense), @student.reload.races
-    assert_equal 'nonsense', @student.read_attribute(:races)
-    assert_nil @student.urm
-  end
+  #  test 'sanitize_race_data sanitizes too many races' do
+  #    @student.update_columns(races: 'white,black,hispanic,asian,american_indian,hawaiian')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'nonsense', @student.read_attribute(:races)
+  #    assert_nil @student.urm
+  #  end
 
-  test 'sanitize_race_data noops valid responses' do
-    @student.update!(races: %w(black hispanic))
-    assert_equal %w(black hispanic), @student.reload.races
-    assert_equal 'black,hispanic', @student.read_attribute(:races)
-    assert @student.urm
-  end
+  #  test 'sanitize_race_data sanitizes non-races' do
+  #    @student.update_columns(races: 'not_a_race,white')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'nonsense', @student.read_attribute(:races)
+  #    assert_nil @student.urm
+  #  end
+
+  #  test 'sanitize_race_data noops valid responses' do
+  #    @student.update_columns(races: 'black,hispanic')
+  #    @student.sanitize_and_set_race_data
+  #    @student.reload
+  #    assert_equal 'black,hispanic', @student.read_attribute(:races)
+  #    assert @student.urm
+  #  end
 
   test 'urm_from_races with empty string' do
-    assert_nil User.urm_from_races('')
+    @student.update_columns(races: '')
+    assert_nil @student.urm_from_races
   end
 
   test 'urm_from_races with non-answer responses' do
     %w(opt_out nonsense closed_dialog).each do |response|
-      assert_nil User.urm_from_races(response)
+      @student.update_columns(races: response)
+      assert_nil @student.urm_from_races
     end
   end
 
   test 'urm_from_races with urm responses' do
     ['white,black', 'hispanic,hawaiian', 'american_indian'].each do |response|
-      assert User.urm_from_races(response)
+      @student.update_columns(races: response)
+      assert @student.urm_from_races
     end
   end
 
   test 'urm_from_races with non-urm response' do
     ['white', 'white,asian', 'asian'].each do |response|
-      refute User.urm_from_races(response)
+      @student.update_columns(races: response)
+      refute @student.urm_from_races
     end
   end
 
@@ -1422,6 +1432,11 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair_with?(teacher)
     refute teacher.can_pair_with?(student)
     refute student.can_pair_with?(student)
+
+    # disable pair programming
+    section.update!(pairing_allowed: false)
+    student.reload
+    refute student.can_pair?
   end
 
   test "authorized teacher" do
@@ -1500,7 +1515,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'terms_of_service_version for teacher with version' do
-    teacher = create :teacher, terms_of_service_version: 1
+    teacher = build :teacher, terms_of_service_version: 1
     assert_equal 1, teacher.terms_version
   end
 
@@ -1561,7 +1576,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'revoke_all_permissions revokes admin status' do
-    admin_user = create :admin
+    admin_user = build :admin
     admin_user.revoke_all_permissions
     assert_nil admin_user.reload.admin
   end
@@ -1623,14 +1638,14 @@ class UserTest < ActiveSupport::TestCase
   test 'do not show race interstitial to user accounts that have already entered race information' do
     mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
-    student.races = %w(white black)
+    student.update_columns(races: 'white,black')
     refute student.show_race_interstitial?('ignored_ip')
   end
 
   test 'do not show race interstitial to user accounts that have closed the dialog already' do
     mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
-    student.races = %w(closed_dialog)
+    student.update_columns(races: 'closed_dialog')
     refute student.show_race_interstitial?('ignored_ip')
   end
 

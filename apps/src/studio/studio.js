@@ -17,7 +17,7 @@ import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';
@@ -32,7 +32,7 @@ import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
-import * as codegen from '../codegen';
+import * as codegen from '../lib/tools/jsinterpreter/codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
@@ -5349,7 +5349,10 @@ Studio.queueCallback = function (callback, args) {
   var state = {
     node: {
       type: 'CallExpression',
-      arguments: intArgs /* this just needs to be an array of the same size */
+      arguments: intArgs, /* this just needs to be an array of the same size */
+      // give this node an end so that the interpreter doesn't treat it
+      // like polyfill code and do weird weird scray terrible things.
+      end: 1,
     },
     doneCallee_: true,
     func_: callback,
@@ -5363,9 +5366,9 @@ Studio.queueCallback = function (callback, args) {
       state.value = state.arguments.pop();
     }
 
-    const depth = Studio.interpreter.stateStack.push(state);
+    const depth = Studio.interpreter.pushStackFrame(state);
     Studio.interpreter.paused_ = false;
-    while (Studio.interpreter.stateStack.length >= depth) {
+    while (Studio.interpreter.getStackDepth() >= depth) {
       Studio.interpreter.step();
     }
     Studio.interpreter.paused_ = true;

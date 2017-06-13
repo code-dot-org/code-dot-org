@@ -46,7 +46,7 @@
     "instructions_important": "false",
     "video_key": "csd_gamelab_draw_2",
     "encrypted_examples": "17/bY807qc45JxYNekRxxkCOZKk8TXnlwURZdk5zJ4cYk6dbqA44mPwNKRxs\nETen\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,
