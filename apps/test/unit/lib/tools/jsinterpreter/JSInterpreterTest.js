@@ -1,8 +1,8 @@
-import {expect, assert} from '../util/configuredChai';
+import {expect, assert} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 describe("The JSInterpreter class", function () {
   var jsInterpreter;
@@ -28,7 +28,7 @@ describe("The JSInterpreter class", function () {
   }
 
   function assertCurrentState(expected) {
-    var state = jsInterpreter.interpreter.stateStack[jsInterpreter.interpreter.stateStack.length - 1];
+    var state = jsInterpreter.interpreter.peekStackFrame();
     assert.containSubset(state, expected);
   }
 
