@@ -73,18 +73,6 @@ exports.workspaceCode = function (blockly) {
   return exports.strip(code);
 };
 
-//
-// Property access wrapped in try/catch. This is in an indepedendent function
-// so the JIT compiler can optimize the calling function.
-//
-
-export function safeReadProperty(object, property) {
-  try {
-    return object[property];
-  } catch (e) { }
-}
-
-
 export function isCanvasImageData(nativeVar) {
   // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
   if (typeof(Uint8ClampedArray) !== "undefined") {
