@@ -53,6 +53,8 @@ class LevelSource < ActiveRecord::Base
     end
   end
 
+  # WARNING: This deletes user data. It should be called sparingly, with the knowledge that we
+  # cannot tell which users reference this LevelSource.
   def clear_data
     update(data: DELETED_BY_THE_SYSTEM)
   end
