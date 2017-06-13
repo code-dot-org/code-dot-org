@@ -4,10 +4,12 @@ FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :course_script do
   end
+
   factory :course do
     name "my-course-name"
     properties nil
   end
+
   factory :experiment do
     name "fancyFeature"
 
@@ -28,10 +30,12 @@ FactoryGirl.define do
       type "SingleUserExperiment"
     end
   end
+
   factory :section_hidden_stage do
-    section nil
-    stage nil
+    section
+    stage
   end
+
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
@@ -118,23 +122,21 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-    end
 
-    factory :young_student do
-      user_type User::TYPE_STUDENT
-      birthday Time.zone.today - 10.years
-    end
+      factory :young_student do
+        birthday Time.zone.today - 10.years
 
-    factory :young_student_with_tos_teacher do
-      after(:create) do |user|
-        section = create(:section, user: create(:terms_of_service_teacher))
-        create(:follower, section: section, student_user: user)
+        factory :young_student_with_tos_teacher do
+          after(:create) do |user|
+            section = create(:section, user: create(:terms_of_service_teacher))
+            create(:follower, section: section, student_user: user)
+          end
+        end
       end
-    end
 
-    factory :old_student do
-      user_type User::TYPE_STUDENT
-      birthday Time.zone.today - 30.years
+      factory :old_student do
+        birthday Time.zone.today - 30.years
+      end
     end
 
     trait :with_puzzles do
@@ -151,8 +153,8 @@ FactoryGirl.define do
   end
 
   factory :districts_users do
-    district nil
-    user nil
+    district
+    user
   end
 
   factory :section do
