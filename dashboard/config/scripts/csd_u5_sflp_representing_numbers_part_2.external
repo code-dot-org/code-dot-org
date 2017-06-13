@@ -2,4 +2,12 @@ name 'CSD-U5-SFLP Representing Numbers Part 2'
 display_name 'Lesson Overview'
 markdown <<MARKDOWN
 # Overview
+
+This lesson continues the study of binary numbers with a focus on using a standard bit length.  The class makes flippy-dos, paper manipulatives that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, the class discusses how they could extend that standardization to the other types of data.
+
+
+## Resources
+
+* [World Records](https://docs.google.com/document/d/1ZI8_LJ897S8ljE8NbsmEun2_yo5r0bTxo5p83R0uPMo/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1ZI8_LJ897S8ljE8NbsmEun2_yo5r0bTxo5p83R0uPMo/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ZI8_LJ897S8ljE8NbsmEun2_yo5r0bTxo5p83R0uPMo/export?format=doc))
+* [Flippy-Do Template](https://docs.google.com/document/d/130gl1lCFFGdohPfCNliSScyR8Ecq_etwcgg8pjtIP30/edit) - Manipulative ([PDF](https://docs.google.com/document/d/130gl1lCFFGdohPfCNliSScyR8Ecq_etwcgg8pjtIP30/export?format=pdf) | [DOCX](https://docs.google.com/document/d/130gl1lCFFGdohPfCNliSScyR8Ecq_etwcgg8pjtIP30/export?format=doc))
 MARKDOWN

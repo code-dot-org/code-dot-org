@@ -3,11 +3,12 @@ display_name 'Lesson Overview'
 markdown <<MARKDOWN
 # Overview
 
-In this cumulative project for Chapter 1, students will plan for and develop and an interactive greeting card using all of the programming techniques they've learned to this point.
+In this cumulative project for Chapter 1, the class plans for and develops an interactive greeting card using all of the programming techniques they've learned to this point.
 
 
-# Resources
+## Resources
 
-* [Interactive Card](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/) - Activity Guide ([PDF](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=doc))
+* [Interactive Card](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/) - Project Guide ([PDF](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=doc))
 * [Interactive Card](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/) - Rubric ([PDF](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=doc))
+* [Interactive Card](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs) - Peer Review ([PDF](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=doc))
 MARKDOWN
