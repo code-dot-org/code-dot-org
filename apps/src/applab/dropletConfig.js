@@ -13,8 +13,8 @@ import {setPropertyDropdown, setImageSelector} from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
 
-var DEFAULT_WIDTH = "320";
-var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
+var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
+var DEFAULT_HEIGHT = (applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
@@ -100,9 +100,9 @@ export var blocks = [
 
   {func: 'createCanvas', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 3 }, paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
   {func: 'setActiveCanvas', parent: api, category: 'Canvas', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("canvas") } },
-  {func: 'line', parent: api, category: 'Canvas', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "160", DEFAULT_HEIGHT/2] },
-  {func: 'circle', parent: api, category: 'Canvas', paletteParams: ['x','y','radius'], params: ["160", DEFAULT_HEIGHT/2, "100"] },
-  {func: 'rect', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["80", "120", "160", DEFAULT_HEIGHT/2] },
+  {func: 'line', parent: api, category: 'Canvas', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", DEFAULT_WIDTH/2, DEFAULT_HEIGHT/2] },
+  {func: 'circle', parent: api, category: 'Canvas', paletteParams: ['x','y','radius'], params: [DEFAULT_WIDTH/2, DEFAULT_HEIGHT/2, "100"] },
+  {func: 'rect', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["80", "120", DEFAULT_WIDTH/2, DEFAULT_HEIGHT/2] },
   {func: 'setStrokeWidth', parent: api, category: 'Canvas', paletteParams: ['width'], params: ["3"] },
   {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'] } },
   {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', 'rgb(255,255,0)', 'rgb(255,255,0,0.5)', '"#FFFF00"'] } },
