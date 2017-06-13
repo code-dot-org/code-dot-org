@@ -26,6 +26,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var tiles = require('./tiles');
 var codegen = require('../lib/tools/jsinterpreter/codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -794,7 +795,7 @@ Maze.execute = function (stepMode) {
           Maze.subtype.reset();
 
           // Run trial
-          codegen.evalWith(code, {
+          CustomMarshalingInterpreter.evalWith(code, {
             Maze: api,
             executionInfo: Maze.executionInfo
           });
@@ -826,7 +827,7 @@ Maze.execute = function (stepMode) {
         Maze.subtype.reset();
       }
 
-      codegen.evalWith(code, {
+      CustomMarshalingInterpreter.evalWith(code, {
         Maze: api,
         executionInfo: Maze.executionInfo
       });
