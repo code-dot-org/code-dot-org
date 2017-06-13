@@ -5,7 +5,7 @@ video_player: true
 theme: responsive
 ---
 
-# Our newest course: CS Discoveries &nbsp;&nbsp; [<button style="margin-top:0;">View course</button>](https://studio.code.org/courses/csd)
+# Our newest course: CS Discoveries &nbsp;&nbsp; <a href="<%= CDO.studio_url('/courses/csd')%>" name="CS Discoveries Course"><button style="margin-top: 0">View course</button></a>
 
 ## <a name="what"></a>What is CS Discoveries?
 
