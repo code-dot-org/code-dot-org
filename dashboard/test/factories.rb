@@ -118,23 +118,21 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-    end
 
-    factory :young_student do
-      user_type User::TYPE_STUDENT
-      birthday Time.zone.today - 10.years
-    end
+      factory :young_student do
+        birthday Time.zone.today - 10.years
 
-    factory :young_student_with_tos_teacher do
-      after(:create) do |user|
-        section = create(:section, user: create(:terms_of_service_teacher))
-        create(:follower, section: section, student_user: user)
+        factory :young_student_with_tos_teacher do
+          after(:create) do |user|
+            section = create(:section, user: create(:terms_of_service_teacher))
+            create(:follower, section: section, student_user: user)
+          end
+        end
       end
-    end
 
-    factory :old_student do
-      user_type User::TYPE_STUDENT
-      birthday Time.zone.today - 30.years
+      factory :old_student do
+        birthday Time.zone.today - 30.years
+      end
     end
 
     trait :with_puzzles do
