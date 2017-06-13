@@ -150,7 +150,7 @@ level 'courseC_PlayLab_eventsA'
 level 'courseC_PlayLab_eventsFP'
 
 stage 'Screen Out the Mean'
-level 'courseC_screenoutthemean'
+level 'courseC_Unplugged_ScreenOutTheMean'
 
 stage 'Binary Bracelets'
 level 'BinaryBracelets'
