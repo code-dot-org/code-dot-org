@@ -31,8 +31,6 @@ require_relative './utils/selenium_browser'
 
 require 'active_support/core_ext/object/blank'
 
-require_relative './ui_test_helpers'
-
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
@@ -353,8 +351,11 @@ def configure_for_eyes
   ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
 
   # Also seed eyes data
-  puts "Seeding eyes data"
-  UiTestHelpers.seed_pd_eyes_data
+  ChatClient.log "Seeding eyes data"
+  unless system('ruby ../../../bin/test_utils/seed_pd_eyes_data.rb ')
+    ChatClient.log 'Unable to seed data for eyes tests', color: 'red'
+    exit
+  end
 end
 
 def applitools_batch_url
