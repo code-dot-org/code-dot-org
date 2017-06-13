@@ -3,7 +3,6 @@ import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/configuredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
-import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import {makeAssertableObj, attachAssertToInterpreter} from './interpreterTestUtils';
 
 describe("The CustomMarshalingInterpreter", () => {
@@ -750,15 +749,15 @@ describe("The CustomMarshalingInterpreter", () => {
       );
     });
 
-    it("marshals functions by delegating to codegen.createNativeFunctionFromInterpreterFunction", () => {
-      codegen.createNativeFunctionFromInterpreterFunction = sinon.stub().returns('foo');
+    it("marshals functions by delegating to CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction", () => {
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = sinon.stub().returns('foo');
       expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal('foo');
-      expect(codegen.createNativeFunctionFromInterpreterFunction).to.have.been.calledOnce;
-      delete codegen.createNativeFunctionFromInterpreterFunction;
+      expect(CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction).to.have.been.calledOnce;
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = null;
     });
 
-    it("marshals functions by doing nothing when codegen.createNativeFunctionFromInterpreterFunction is not set", () => {
-      expect(codegen.createNativeFunctionFromInterpreterFunction).to.be.undefined;
+    it("marshals functions by doing nothing when CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction is not set", () => {
+      expect(CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction).to.be.null;
       expect(evalExpression(`function (a,b) { return a+b; }`))
         .to.equal(interpreter.getValueFromScope('result'));
     });
