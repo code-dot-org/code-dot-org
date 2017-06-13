@@ -880,10 +880,10 @@ export default class JSInterpreter {
       });
       interpreterVal = this.interpreter.createNativeFunction(wrapper);
     } else {
-      interpreterVal = codegen.marshalNativeToInterpreter(
-        this.interpreter,
+      interpreterVal = this.interpreter.marshalNativeToInterpreter(
         value,
-        utils.valueOr(parent, window));
+        utils.valueOr(parent, window)
+      );
     }
 
     // Bypass setProperty since we've hooked it and it will not create the
