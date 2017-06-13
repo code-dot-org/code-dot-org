@@ -301,7 +301,7 @@ describe("The CustomMarshalingInterpreter", () => {
       interpreter = new CustomMarshalingInterpreter('', new CustomMarshaler({
         globalProperties: {
           name: player, // meaning the 'name' property on the 'player' object
-          // goes into the global scope
+                        // goes into the global scope
           age: player   // also the 'age' property on the 'player' object
         },
         blockedProperties: ['name'],
@@ -317,40 +317,40 @@ describe("The CustomMarshalingInterpreter", () => {
 
     it("does not find globals that don't exist", () => {
       expect(
-        interpreter.hasProperty(interpreter.globalScope, 'notAGlobalProperty')
+          interpreter.hasProperty(interpreter.globalScope, 'notAGlobalProperty')
       ).to.be.false;
     });
 
     it("finds custom-marshaled globals", () => {
       expect(
-        interpreter.hasProperty(interpreter.globalScope, 'age')
+          interpreter.hasProperty(interpreter.globalScope, 'age')
       ).to.be.true;
     });
 
     it("does not find blocked custom-marshaled globals", () => {
       expect(
-        interpreter.hasProperty(interpreter.globalScope, 'name')
+          interpreter.hasProperty(interpreter.globalScope, 'name')
       ).to.be.false;
     });
 
     it("finds properties on custom-marshaled objects", () => {
       const customMarshaledObject = interpreter.marshalNativeToInterpreter(new Foo("hello world"));
       expect(
-        interpreter.hasProperty(customMarshaledObject, 'whatsMyName')
+          interpreter.hasProperty(customMarshaledObject, 'whatsMyName')
       ).to.be.true;
     });
 
     it("does not find properties that don't exist on custom-marshaled objects", () => {
       const customMarshaledObject = interpreter.marshalNativeToInterpreter(new Foo("hello world"));
       expect(
-        interpreter.hasProperty(customMarshaledObject, 'notARealProperty')
+          interpreter.hasProperty(customMarshaledObject, 'notARealProperty')
       ).to.be.false;
     });
 
     it("does not find blocked properties on custom-marshaled objects", () => {
       const value = interpreter.marshalNativeToInterpreter(new Foo("hello world"));
       expect(
-        interpreter.hasProperty(value, 'name')
+          interpreter.hasProperty(value, 'name')
       ).to.be.false;
     });
   });
