@@ -4,7 +4,7 @@ import Announcement from './Announcement';
 import AnnouncementsCarousel from './AnnouncementsCarousel';
 import i18n from "@cdo/locale";
 
-const AnnouncementsCollapsible = React.createClass({
+const Announcements = React.createClass({
   propTypes: {
     announcements: PropTypes.arrayOf(
       PropTypes.shape({
@@ -21,27 +21,29 @@ const AnnouncementsCollapsible = React.createClass({
     const { announcements } = this.props;
 
     return (
-      <ContentContainer
-        heading={i18n.announcements()}
-        linkText={i18n.viewAllAnnouncements()}
-        link="http://teacherblog.code.org/"
-        showLink={true}
-      >
-        <AnnouncementsCarousel>
-          {announcements.map((announcement, index) =>
-            <Announcement
-              key={index}
-              heading={announcement.heading}
-              description={announcement.description}
-              buttonText={announcement.buttonText}
-              link={announcement.link}
-              image={announcement.image}
-            />
-           )}
-        </AnnouncementsCarousel>
-      </ContentContainer>
+      <div>
+        <ContentContainer
+          heading={i18n.announcements()}
+          linkText={i18n.viewAllAnnouncements()}
+          link="http://teacherblog.code.org/"
+          showLink={true}
+        >
+          <AnnouncementsCarousel>
+            {announcements.map((announcement, index) =>
+              <Announcement
+                key={index}
+                heading={announcement.heading}
+                description={announcement.description}
+                buttonText={announcement.buttonText}
+                link={announcement.link}
+                image={announcement.image}
+              />
+             )}
+          </AnnouncementsCarousel>
+        </ContentContainer>
+      </div>
     );
   }
 });
 
-export default AnnouncementsCollapsible;
+export default Announcements;
