@@ -4,15 +4,14 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Overview
 
-In this lesson, students first learn how to specify custom colors using their RGB (red, green, blue) values.  They then apply these colors to a new Four Seasons web page, which uses CSS classes.  CSS classes allow web developers to treat groups of elements they want styled differently than other elements of the same type. Using classes, students add more styles to the Four Seasons web page, then use them to style their personal websites.
-
+This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
 ## Vocabulary
 
 * **HTML Class** - Makes it possible to define equal styles for elements by giving them all the same class name.
 
-## New Properties
+## Introduced Code
 
-*  **[RGB Color](//docs.code.org/weblab/rgb-color/)** - `RGB Color`
+* [RGB Color](//docs.code.org/weblab/rgb-color/)
 
 ## Resources
 

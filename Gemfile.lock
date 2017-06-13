@@ -6,9 +6,9 @@ GIT
       omniauth-oauth2 (~> 1.1)
 
 GIT
-  remote: https://github.com/cheald/redis-slave-read.git
-  revision: 370d5da2b71f795d8145fcf89c0648f866a125a6
-  ref: 370d5da2b71f795d8145fcf89c0648f866a125a6
+  remote: https://github.com/code-dot-org/redis-slave-read.git
+  revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
+  ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   specs:
     redis-slave-read (0.2.1)
       connection_pool

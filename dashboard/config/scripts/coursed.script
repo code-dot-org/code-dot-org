@@ -159,7 +159,7 @@ level 'courseD_farmer_condLoops9'
 assessment 'courseD_farmer_condLoops9_predict1'
 
 stage 'Digital Citizenship'
-level 'DigitalCitizenship2'
+level 'courseD_unplugged_digitalCitizenship'
 
 stage 'Build a Play Lab Game'
 level 'courseD_playLab_cond1'
