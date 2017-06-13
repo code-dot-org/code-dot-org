@@ -48,6 +48,8 @@ class Section < ActiveRecord::Base
 
   has_many :section_hidden_stages
 
+  SYSTEM_DELETED_NAME = 'system_deleted'.freeze
+
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
 
@@ -129,8 +131,13 @@ class Section < ActiveRecord::Base
     add_student student
   end
 
+  # Clears all personal data from the section object.
+  def clean_data
+    update(name: SYSTEM_DELETED_NAME)
+  end
+
   # Figures out the default script for this section. If the section is assigned to
-  # a course rather than a script, it returns the first script in that course
+  # a course rather than a script, it returns the first script in that course.
   # @return [Script, nil]
   def default_script
     return script if script
