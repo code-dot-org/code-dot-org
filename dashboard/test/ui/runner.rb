@@ -31,7 +31,7 @@ require_relative './utils/selenium_browser'
 
 require 'active_support/core_ext/object/blank'
 
-require_relative './ui_test_helpers'
+# require_relative './ui_test_helpers'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
