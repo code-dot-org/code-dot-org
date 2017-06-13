@@ -7,7 +7,7 @@
   #hamburger-contents.hide-responsive-menu
     - contents[:entries].each do |entry|
       - if entry[:type] == "divider"
-        .divider{class: entry[:class]}
+        .divider{id: entry[:id], class: entry[:class]}
       - elsif entry[:type] == "expander"
         .hamburger-expandable-item.item{id: entry[:id]}
           = entry[:title]
@@ -16,7 +16,7 @@
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
           - entry[:subentries].each do |subentry|
             .item
-              %a{href: subentry[:url]}= subentry[:title]
+              %a{id: subentry[:id], href: subentry[:url]}= subentry[:title]
       - else
         %div{class: entry[:class]}
           .item
