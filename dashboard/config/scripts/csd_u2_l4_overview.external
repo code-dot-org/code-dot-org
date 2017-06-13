@@ -5,13 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Overview
 
-
-In this lesson, students continue to use HTML to structure text on web pages, this time with headers.  Students learn how the different header elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
+This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
 ## Vocabulary
 
 * **Header** - A title or summary for a document or section of a document.
 
-## New Tags
+## Introduced Code
 
 *  **[Header](//docs.code.org/weblab/h/)** - `<h1></h1>`
 

@@ -30,7 +30,7 @@ var ReactDOM = require('react-dom');
 var color = require("../util/color");
 var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
-var codegen = require('../codegen');
+var codegen = require('../lib/tools/jsinterpreter/codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var Provider = require('react-redux').Provider;
@@ -40,7 +40,7 @@ var utils = require('../utils');
 var Slider = require('../slider');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../JSInterpreter');
+var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 import {
   getContainedLevelResultInfo,

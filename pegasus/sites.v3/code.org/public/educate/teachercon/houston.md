@@ -19,6 +19,32 @@ TeacherCon is an intensive, hands-on, in-person workshop providing foundational 
 
 <a id="travel"></a>
 ## **Travel & Hotel Information**
+### NEW INFO: How to get from the airport to the hotel!
+**Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**
+<p>
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm inside the airport (see suggested meeting locations below), and then find a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
+</p> 
+
+**Suggested meeting locations:**
+ <details>
+ <summary>George Bush Intercontinental Airport (IAH)</summary>
+  <p>
+  
+  * Terminal A: Door A-115 (TNC//Uber/Lyft pick-up zone)
+  * Terminal B: Door B-103 (TNC//Uber/Lyft pick-up zone)
+  * Terminal C: Door C-105 (TNC//Uber/Lyft pick-up zone)
+</p>
+</details>
+
+ <details>
+ <summary>Hobby Airport</summary>
+ <p>
+ 
+ * Meet at Baggage Claim 1. Taxis are available outside at Curb 1, and Uber/Lyfts are available outside at Curb 5. 
+</p>
+</details>
+
+<br>
 <details>
   <summary>**Hotel Information**</summary>
   <p>
@@ -167,9 +193,20 @@ We expect you to attend for the full conference. Make plans to be with us from R
 **CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/192669001/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 </p>
  <p>
- <br>
 **CS Principles teachers:** [Click here](http://go.pardot.com/webmail/153401/192669301/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 </p>
+</details>
+
+<details>
+<summary>**We're one week away from TeacherCon!**</summary>
+ <p>
+ <br>
+**CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/201249975/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+ <p>
+**CS Principles teachers:** [Click here](http://go.pardot.com/webmail/153401/201249429/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+</details>
 
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)

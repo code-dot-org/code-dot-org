@@ -46,7 +46,13 @@ function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
 
   ReactDOM.render(
-    <SectionTable sections={sections}/>,
+    <SectionTable
+      validLoginTypes={data.valid_login_types}
+      validGrades={data.valid_grades}
+      validCourses={data.valid_courses}
+      validScripts={data.valid_scripts}
+      sections={sections}
+    />,
     element
   );
 }
@@ -249,6 +255,8 @@ function main() {
           pairingAllowed: s.pairing_allowed,
           numStudents: s.students.length,
           code: s.code,
+          course_id: s.course_id,
+          script_id: s.script ? s.script.id : null,
           assignmentName: $scope.getName(s),
           assignmentPath: $scope.getPath(s)
         })));
