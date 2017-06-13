@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
-var codegen = require('../../codegen');
+var codegen = require('../../lib/tools/jsinterpreter/codegen');
 var GameController = require('./game/GameController');
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');

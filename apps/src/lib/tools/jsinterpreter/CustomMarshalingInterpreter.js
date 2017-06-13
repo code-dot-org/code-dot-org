@@ -1,5 +1,5 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
-const codegen = require('../../../codegen');
+const codegen = require('../../../lib/tools/jsinterpreter/codegen');
 const CustomMarshaler = require('./CustomMarshaler');
 
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
@@ -14,6 +14,44 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         opt_initFunc(thisInterpreter, scope);
       }
     });
+  }
+
+  /**
+   * Look at a single frame on the stack.
+   * @param {number} [i] - optional index to look down to on the stack
+   */
+  peekStackFrame(i=0) {
+    return this.stateStack[this.stateStack.length - 1 - i];
+  }
+
+  /**
+   * Pop the top frame off the stack and return it.
+   */
+  popStackFrame() {
+    return this.stateStack.pop();
+  }
+
+  /**
+   * Push a new frame onto the stack
+   * @returns the size of the stack after pushing the new frame
+   */
+  pushStackFrame(state) {
+    return this.stateStack.push(state);
+  }
+
+  /**
+   * Get the current size/depth of the stack
+   */
+  getStackDepth() {
+    return this.stateStack.length;
+  }
+
+  /**
+   * Set the entire stack to the provided value
+   * @param {Array} stack - an array of stack frames
+   */
+  setStack(stack) {
+    this.stateStack = stack;
   }
 
   /**
@@ -178,7 +216,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   }
 
   step() {
-    const state = this.stateStack[this.stateStack.length - 1];
+    const state = this.peekStackFrame();
     // Program nodes always have end=0 for some reason (acorn related).
     // The Interpreter.step method assumes that a falsey state.node.end value means
     // the interpreter is inside polyfill code, because it strips all location information from ast nodes for polyfill code.
@@ -271,11 +309,11 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @override
    */
   stepVariableDeclarator() {
-    var state = this.stateStack[this.stateStack.length - 1];
+    var state = this.peekStackFrame();
     var node = state.node;
     if (node.init && !state.done) {
       state.done = true;
-      this.stateStack.push({node: node.init});
+      this.pushStackFrame({node: node.init});
       return;
     }
     if (!this.hasProperty(this, node.id.name) || node.init) {
@@ -284,7 +322,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         this.setValue(this.createPrimitive(node.id.name), value, true);
       }
     }
-    this.stateStack.pop();
+    this.popStackFrame();
   }
 
 };

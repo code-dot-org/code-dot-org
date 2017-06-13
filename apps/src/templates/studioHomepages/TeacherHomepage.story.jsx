@@ -10,23 +10,6 @@ const announcements = [
   }
 ];
 
-const courses = [
-  {
-    name: "Play Lab",
-    description: "Create a story or make a game with Play Lab!",
-    link: "https://code.org/playlab",
-    image:"photo source",
-    assignedSections: []
-  },
-  {
-    name: "CSP Unit 2 - Digital Information",
-    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-    link: "https://curriculum.code.org/csp/unit2/",
-    image:"photo source",
-    assignedSections: []
-  },
-];
-
 const sections = [
   {
     name: "Algebra Period 1",
@@ -57,6 +40,23 @@ const sections = [
   },
 ];
 
+const courses = [
+  {
+    name: "Play Lab",
+    description: "Create a story or make a game with Play Lab!",
+    link: "https://code.org/playlab",
+    image:"photo source",
+    assignedSections: []
+  },
+  {
+    name: "CSP Unit 2 - Digital Information",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit2/",
+    image:"photo source",
+    assignedSections: []
+  },
+];
+
 
 export default storybook => {
   return storybook
@@ -68,8 +68,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={[]}
             sections={[]}
+            courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
@@ -80,8 +80,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={courses}
             sections={[]}
+            courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
@@ -92,8 +92,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={[]}
             sections={sections}
+            courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
@@ -104,8 +104,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={courses}
             sections={sections}
+            courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )

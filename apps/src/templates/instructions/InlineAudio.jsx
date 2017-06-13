@@ -85,8 +85,11 @@ const InlineAudio = React.createClass({
         this.props.message !== nextProps.message) {
       // unload current Audio object
       var audio = this.state.audio;
-      audio.src = undefined;
-      audio.load();
+
+      if (audio) {
+        audio.src = undefined;
+        audio.load();
+      }
 
       this.setState({
         audio: undefined,

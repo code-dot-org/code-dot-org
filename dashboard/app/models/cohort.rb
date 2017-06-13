@@ -51,7 +51,6 @@ class Cohort < ActiveRecord::Base
   belongs_to :script
   before_save :assign_script_to_teachers, if: -> {script && script_id_changed?}
   def assign_script_to_teachers
-    return if teachers.empty? || script.nil?
     teachers.each do |teacher|
       assign_script_to_teacher(teacher)
     end
