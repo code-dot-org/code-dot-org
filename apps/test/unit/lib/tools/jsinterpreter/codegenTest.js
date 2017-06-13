@@ -481,7 +481,7 @@ describe("codegen", function () {
     });
 
     it("does not give the evaluated code access to native functions", () => {
-      expect(() => codegen.evalWith('nativeAdd(1,2)', options)).to.throw('nativeAdd is not defined');
+      expect(() => codegen.evalWith('nativeAdd(1,2)', options)).to.throw('Unknown identifier: nativeAdd');
     });
 
     describe("when running with legacy=true", () => {

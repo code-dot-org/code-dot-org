@@ -1,7 +1,7 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
-import Interpreter from '@code-dot-org/js-interpreter';
 import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
 import * as utils from '../../../utils';
+import CustomMarshaler from './CustomMarshaler';
 
 /*
  * Note: These are defined to match the state.mode of the interpreter. The
@@ -43,10 +43,13 @@ export function evalWith(code, globals, legacy) {
     ctor.prototype = Function.prototype;
     return new ctor().apply(null, args);
   } else {
-    const interpreter = new Interpreter(
+    // TODO (pcardune): remove circular dependency
+    const CustomMarshalingInterpreter = require('./CustomMarshalingInterpreter');
+    const interpreter = new CustomMarshalingInterpreter(
       `(function () { ${code} })()`,
+      new CustomMarshaler({}),
       (interpreter, scope) => {
-        marshalNativeToInterpreterObject(interpreter, globals, 5, scope);
+        interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
       }
     );
     interpreter.run();
@@ -116,57 +119,14 @@ exports.workspaceCode = function (blockly) {
 // so the JIT compiler can optimize the calling function.
 //
 
-function safeReadProperty(object, property) {
+export function safeReadProperty(object, property) {
   try {
     return object[property];
   } catch (e) { }
 }
 
-//
-// Marshal a single native object from native to interpreter. This is in an
-// indepedendent function so the JIT compiler can optimize the calling function.
-// (Chrome V8 says ForInStatement is not fast case)
-//
 
-/**
- * Marshal a native object to an interpreter object.
- *
- * @param {Interpreter} interpreter Interpreter instance
- * @param {Object} nativeObject Object to marshal
- * @param {Number} maxDepth Optional maximum depth to traverse in properties
- * @param {Object} interpreterObject Optional existing interpreter object
- * @return {!Object} The interpreter object, which was created if needed.
- */
-export function marshalNativeToInterpreterObject(
-    interpreter,
-    nativeObject,
-    maxDepth,
-    interpreterObject) {
-  var retVal = interpreterObject || interpreter.createObject(interpreter.OBJECT);
-  var isFunc = interpreter.isa(retVal, interpreter.FUNCTION);
-  for (var prop in nativeObject) {
-    var value = safeReadProperty(nativeObject, prop);
-    if (isFunc &&
-        (value === Function.prototype.trigger ||
-            value === Function.prototype.inherits)) {
-      // Don't marshal these that were added by jquery or else we will recurse
-      continue;
-    }
-    interpreter.setProperty(
-      retVal,
-      prop,
-      marshalNativeToInterpreter(
-        interpreter,
-        value,
-        nativeObject,
-        maxDepth
-      )
-    );
-  }
-  return retVal;
-}
-
-function isCanvasImageData(nativeVar) {
+export function isCanvasImageData(nativeVar) {
   // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
   if (typeof(Uint8ClampedArray) !== "undefined") {
     return nativeVar instanceof Uint8ClampedArray;
@@ -238,7 +198,7 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
       retVal = interpreter.createNativeFunction(wrapper);
     }
     // Also marshal properties on the native function object:
-    marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1, retVal);
+    interpreter.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1, retVal);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
     if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
@@ -251,7 +211,7 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
 
       retVal = nativeVar;
     } else {
-      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
+      retVal = interpreter.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);

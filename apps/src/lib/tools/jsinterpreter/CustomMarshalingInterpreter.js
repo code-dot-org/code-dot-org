@@ -367,7 +367,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       evalCode + eventLoop,
       new CustomMarshaler({}),
       (interpreter, scope) => {
-        codegen.marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
+        interpreter.marshalNativeToInterpreterObject(apis, 5, scope);
         interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
           currentCallback = callback;
         }));
@@ -379,6 +379,46 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     interpreter.run();
 
     return {hooks, interpreter};
+  }
+
+  /**
+   * Marshal a single native object from native to interpreter. This is in an
+   * indepedendent function so the JIT compiler can optimize the calling function.
+   * (Chrome V8 says ForInStatement is not fast case)
+   *
+   * @param {Interpreter} interpreter Interpreter instance
+   * @param {Object} nativeObject Object to marshal
+   * @param {Number} maxDepth Optional maximum depth to traverse in properties
+   * @param {Object} interpreterObject Optional existing interpreter object
+   * @return {!Object} The interpreter object, which was created if needed.
+   */
+  marshalNativeToInterpreterObject(
+    nativeObject,
+    maxDepth,
+    interpreterObject
+  ) {
+    var retVal = interpreterObject || this.createObject(this.OBJECT);
+    var isFunc = this.isa(retVal, this.FUNCTION);
+    for (var prop in nativeObject) {
+      var value = codegen.safeReadProperty(nativeObject, prop);
+      if (isFunc &&
+          (value === Function.prototype.trigger ||
+           value === Function.prototype.inherits)) {
+        // Don't marshal these that were added by jquery or else we will recurse
+        continue;
+      }
+      this.setProperty(
+        retVal,
+        prop,
+        codegen.marshalNativeToInterpreter(
+          this,
+          value,
+          nativeObject,
+          maxDepth
+        )
+      );
+    }
+    return retVal;
   }
 
 };
