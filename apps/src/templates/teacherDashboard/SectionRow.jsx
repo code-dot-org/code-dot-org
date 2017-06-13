@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
@@ -104,13 +105,15 @@ ConfirmSave.propTypes = {
  * A component for displaying and editing information about a particular section
  * in the teacher dashboard.
  */
-export default class SectionRow extends Component {
+class SectionRow extends Component {
   static propTypes = {
+    section: sectionShape.isRequired,
+
+    // redux provided
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
     validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
-    section: sectionShape.isRequired
   };
 
   state = {
@@ -237,3 +240,10 @@ export default class SectionRow extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  validLoginTypes: state.teacherSections.validLoginTypes,
+  validGrades: state.teacherSections.validGrades,
+  validCourses: state.teacherSections.validCourses,
+  validScripts: state.teacherSections.validScripts,
+}))(SectionRow);

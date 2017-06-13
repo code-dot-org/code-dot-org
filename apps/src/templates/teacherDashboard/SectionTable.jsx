@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
-import { sectionShape, assignmentShape } from './shapes';
+import { sectionShape } from './shapes';
 
 const styles = {
   table: {
@@ -36,16 +36,10 @@ const styles = {
 class SectionTable extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionShape).isRequired,
-
-    // redux provided
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
   };
 
   render() {
-    const { sections, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
+    const { sections } = this.props;
 
     // TODO: i18n
     return (
@@ -93,10 +87,6 @@ class SectionTable extends Component {
           {sections.map((s, index) => (
             <SectionRow
               key={index}
-              validLoginTypes={validLoginTypes}
-              validGrades={validGrades}
-              validCourses={validCourses}
-              validScripts={validScripts}
               section={s}
             />
           ))}
@@ -107,11 +97,6 @@ class SectionTable extends Component {
   }
 }
 
-export const UnconnectedSectionTable = SectionTable;
-
 export default connect(state => ({
-  validLoginTypes: state.teacherSections.validLoginTypes,
-  validGrades: state.teacherSections.validGrades,
-  validCourses: state.teacherSections.validCourses,
-  validScripts: state.teacherSections.validScripts,
+
 }))(SectionTable);

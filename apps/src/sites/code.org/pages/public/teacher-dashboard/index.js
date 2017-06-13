@@ -9,7 +9,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import teacherSections, { setValidLoginTypes } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setValidLoginTypes,
+  setValidGrades,
+  setValidCourses,
+  setValidScripts
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
 import { getStore, registerReducers } from '@cdo/apps/redux';
@@ -50,13 +55,13 @@ function renderSectionsTable(sections) {
   registerReducers({teacherSections});
   const store = getStore();
   store.dispatch(setValidLoginTypes(data.valid_login_types));
+  store.dispatch(setValidGrades(data.valid_grades));
+  store.dispatch(setValidCourses(data.valid_courses));
+  store.dispatch(setValidScripts(data.valid_scripts));
 
   ReactDOM.render(
     <Provider store={store}>
       <SectionTable
-        validGrades={data.valid_grades}
-        validCourses={data.valid_courses}
-        validScripts={data.valid_scripts}
         sections={sections}
       />
     </Provider>,
