@@ -12,11 +12,15 @@ module Pd::Form
       # should be overridden by including model
       {}
     end
-  end
 
-  def required_fields
-    # should be overridden by including model
-    []
+    def required_fields
+      # should be overridden by including model
+      []
+    end
+
+    def camelize_required_fields
+      required_fields.map {|s| s.to_s.camelize :lower}
+    end
   end
 
   def add_key_error(key)
@@ -33,7 +37,7 @@ module Pd::Form
       value.empty?
     end
 
-    required_fields.each do |key|
+    self.class.required_fields.each do |key|
       add_key_error(key) unless hash.key?(key)
     end
   end

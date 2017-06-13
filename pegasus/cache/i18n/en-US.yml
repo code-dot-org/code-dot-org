@@ -270,7 +270,7 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: "2.5 million girls are enrolled to learn on Code.org"
+  homepage_hero_text_stat_loc: "8.5 million girls are enrolled to learn on Code.org"
   homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "The Hour of Code"
@@ -311,6 +311,7 @@
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Try the Hour of Code"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Host an Hour of Code"
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: "Volunteer for the Hour of Code"
@@ -627,6 +628,7 @@
   dashboard_sections_table_secret: "Login Type"
   dashboard_sections_table_grade: "Grade"
   dashboard_sections_table_course: "Course"
+  dashboard_sections_table_pairing_allowed: "Pair Programming"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
@@ -1357,5 +1359,6 @@
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"
-  csp_name: "Computer Science Principles"
-  csd_name: "Computer Science Discoveries"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

@@ -65,6 +65,9 @@
                   %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
                   %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
                   %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
+                - else
+                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
+                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
 
           .header_right.hide_on_mobile
             %span.freeplay_links
@@ -85,7 +88,7 @@
 - if request.path == "/home" || request.path == "/courses"
   #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
 - if request.path == "/projects" || request.path == "/projects/public"
-  #header-banner{style: 'background-image: url("/shared/images/banners/banner_default.jpg")'}
+  #header-banner{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
 
 - if script_level
   - view_as = @user || current_user

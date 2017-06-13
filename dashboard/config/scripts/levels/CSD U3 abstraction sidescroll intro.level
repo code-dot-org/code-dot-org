@@ -76,6 +76,7 @@
     "markdown_instructions": "# Horse Jumper\r\n\r\nNow that you've learned these new blocks, you can start to make a horse jumper game.  Press \"Run\" to play the game on the left.  You can use the up arrow to jump over the tumbleweed.  What block will you need to make the tumbleweed move?  How many different ways does the horse move?\r\n\r\n\r\n",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

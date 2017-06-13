@@ -84,5 +84,8 @@
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
   "replayButton": "Replay",
   "selectChooseButton": "Select",
-  "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail": "Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}.",
+  "blockActionGetItemCountInSlotNumber": "get item count in slot number",
+  "blockActionGetItemDetailInSlotNumber": "get item detail in slot number",
+  "blockActionGetItemSpaceInSlotNumber": "get item space in slot number"
 }

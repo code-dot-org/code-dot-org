@@ -685,4 +685,67 @@ class ScriptTest < ActiveSupport::TestCase
   test '!text_to_speech_enabled? by default' do
     refute create(:script).text_to_speech_enabled?
   end
+
+  test 'FreeResponse level is listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :free_response
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_equal level, script.text_response_levels.first[:levels].first
+  end
+
+  test 'Multi level is not listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :multi
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_empty script.text_response_levels
+  end
+
+  test 'contained FreeResponse level is listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    contained_level = create :free_response, name: 'Contained Free Response'
+    level = create :maze, properties: {contained_level_names: [contained_level.name]}
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_equal contained_level, script.text_response_levels.first[:levels].first
+  end
+
+  test 'contained Multi level is not listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    contained_level = create :multi, name: 'Contained Multi'
+    level = create :maze, properties: {contained_level_names: [contained_level.name]}
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_empty script.text_response_levels
+  end
+
+  test "course_link retuns nil if script is in no courses" do
+    script = create :script
+    create :course, name: 'csp'
+
+    assert_equal nil, script.course_link
+  end
+
+  test "course_link retuns nil if script is in two courses" do
+    script = create :script
+    course = create :course, name: 'csp'
+    other_course = create :course, name: 'othercsp'
+    create :course_script, position: 1, course: course, script: script
+    create :course_script, position: 1, course: other_course, script: script
+
+    assert_equal nil, script.course_link
+  end
+
+  test "course_link retuns course_path if script is in one course" do
+    script = create :script
+    course = create :course, name: 'csp'
+    create :course_script, position: 1, course: course, script: script
+
+    assert_equal '/courses/csp', script.course_link
+  end
 end

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab\r\n",
+    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation Tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab.\r\n",
     "submittable": "false",
     "start_blocks": "var sprite1, sprite2;\r\n\r\nsprite1 = createSprite(100,100);\r\nsprite2 = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "is_k1": "false",
@@ -135,7 +135,7 @@
       "comment": null,
       "stopSound": null
     },
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "encrypted_examples": "hBYEo3wudGBFMFzTZ/joDBvBc0h7k5p7JWdsCu9nmhxMPKlb7gdxA2UfwmPx\nbdwa\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -144,7 +144,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 20:08:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 20:08:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 20:39:25 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

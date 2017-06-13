@@ -5,6 +5,13 @@
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'shared/check_admin'
+
+- if @script.course_link
+  #script-breadcrumb
+    %a{href: @script.course_link}
+      %i.fa.fa-chevron-left
+      %span
+        = I18n.t('view_all_units')
 #landingpage
   #lesson
     - if @script.professional_learning_course? && @current_user

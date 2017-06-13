@@ -60,6 +60,9 @@
           %td{style: value ? '' : 'color: red' }
             = yes_no value
 
+  - if !@teacher_application.user.try(:teacher?) && @teacher_application.primary_email_matches_user_email?
+    = button_to 'Upgrade to teacher', {action: :upgrade_to_teacher}, class: 'btn btn-default btn-sm'
+
   = form_for @teacher_application, url: {action: 'update'}, html: {class: 'form-horizontal pd-admin'} do |form|
     .form-group
       = form.label :move_to_user, 'Move to user (email or id):', class: 'col-sm-3'

@@ -67,7 +67,7 @@
     "encrypted_examples": "UrbGo9/B2ngixq6JXaYc8B1pNnSEMSiKQYnK++hrP2euwd+ORkJ12mKLRyM5\nyJtLGPYbilxKo7qocPEFRXs8nw==\n",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

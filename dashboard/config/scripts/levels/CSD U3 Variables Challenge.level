@@ -25,7 +25,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge: Updating Variables\r\n\r\n_Check with your teacher before tackling this challenge level_\r\n\r\nSo far we've only ever assigned a value to a variable once, but did you know you can update a variable during a program? Read through the example program we've provided, run it a few times to understand how it works, and then attempt to modify the program to draw one of the following images.\r\n\r\n\r\n<img src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n",
+    "markdown_instructions": "# Challenge: Updating Variables\r\n\r\n_Check with your teacher before tackling this challenge level._\r\n\r\nSo far we've only ever assigned a value to a variable once, but did you know you can update a variable during a program?  Read through the example program we've provided, run it a few times to understand how it works, and then attempt to modify the program to draw one of the following images.\r\n\r\n\r\n<img src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n",
     "instructions_important": "false",
     "display_name": "Challenge: Updating Variables",
     "hide_share_and_remix": "false",
@@ -54,7 +54,7 @@
     "all_animations_single_frame": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
@@ -62,6 +62,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 22:13:13 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:14:07 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -26,11 +26,7 @@ named_level 'CSD U1 Lesson 7 Overview'
 
 stage 'Apps and Problem Solving', flex_category: 'csd1_2'
 named_level 'CSD U1 Lesson 8 Overview'
-level 'CSD U1 Input Output Intro', progression: 'Input/Output Challenges'
-level 'CSD U1 Input Output C1', progression: 'Input/Output Challenges'
-level 'CSD U1 Input Output C2', progression: 'Input/Output Challenges'
-level 'CSD U1 Input Output C3', progression: 'Input/Output Challenges'
-level 'CSD U1 Input Output C4', progression: 'Input/Output Challenges'
+named_level 'CSD U1 Input Output Intro'
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
 named_level 'CSD U1 Lesson 9 Overview'

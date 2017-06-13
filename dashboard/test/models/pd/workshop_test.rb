@@ -523,6 +523,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.sessions << session
     @workshop.sessions << session2
     assert_equal session.start, @workshop.workshop_starting_date
+    assert_equal session2.start, @workshop.workshop_ending_date
+  end
+
+  test 'workshop date range string for single session workshop' do
+    workshop = create :pd_workshop, num_sessions: 1
+    assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
+  end
+
+  test 'workshop date range string for multi session workshop' do
+    workshop = create :pd_workshop, num_sessions: 2
+    assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do
@@ -614,6 +625,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.location_address = '1501 4th Ave, Seattle WA'
     @workshop.process_location
     assert_nil @workshop.processed_location
+  end
+
+  test 'suppress_reminders?' do
+    suppressed = [
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT),
+    ]
+
+    refute @workshop.suppress_reminders?
+    suppressed.each do |workshop|
+      assert workshop.suppress_reminders?
+    end
   end
 
   private

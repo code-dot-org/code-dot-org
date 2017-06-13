@@ -91,13 +91,17 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
-      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze
+      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze,
+      SUBJECT_CSP_TEACHER_CON = 'Code.org TeacherCon'.freeze,
+      SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze
     ],
     COURSE_CSD => [
       SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development'.freeze,
       SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games'.freeze,
       SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society'.freeze,
-      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
+      SUBJECT_CSD_TEACHER_CON = 'Code.org TeacherCon'.freeze,
+      SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze
     ]
   }.freeze
 
@@ -347,6 +351,16 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
+  # Suppress 3 and 10-day reminders for certain workshops
+  def suppress_reminders?
+    [
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_TEACHER_CON,
+      SUBJECT_CSD_FIT
+    ].include? subject
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -496,6 +510,18 @@ class Pd::Workshop < ActiveRecord::Base
 
   def workshop_starting_date
     sessions.first.try(:start)
+  end
+
+  def workshop_ending_date
+    sessions.last.try(:start)
+  end
+
+  def workshop_date_range_string
+    if workshop_starting_date == workshop_ending_date
+      workshop_starting_date.strftime('%B %e, %Y')
+    else
+      "#{workshop_starting_date.strftime('%B %e, %Y')} - #{workshop_ending_date.strftime('%B %e, %Y')}"
+    end
   end
 
   # @return [String] url for this workshop in the workshop dashboard

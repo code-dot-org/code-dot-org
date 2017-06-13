@@ -31,5 +31,14 @@
   -if current_user && !current_user.teacher?
     #user_hero
       = render template: 'api/user_hero'
+  .standalone-tools
+    %br/
+    .row
+      = render partial: 'shared/course_wide_block', locals: { id: "applab" }
+      = render partial: 'shared/course_wide_block', locals: { id: "widgets" }
+    %br/
+    .row
+      = render partial: 'shared/course_wide_block', locals: { id: "gamelab" }
+    %br/
 
 #courses-container
