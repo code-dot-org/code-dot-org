@@ -115,16 +115,16 @@
   end
 
 #hamburger{class: hamburger_class}
-  %ul.hide-responsive-menu
+  %ul#hamburger-contents.hide-responsive-menu
     .user-links
       - if user_type == "teacher"
         - teacher_entries.each do |entry|
-          %li#teacher-entry{class: show_teacher_options}
+          %li{class: show_teacher_options}
             %a{href: entry[:url]}= entry[:title]
         .divider#after-teacher{class: show_teacher_options}
       - elsif user_type == "student"
         - student_entries.each do |entry|
-          %li#student-entry{class: show_student_options}
+          %li{class: show_student_options}
             %a{href: entry[:url]}= entry[:title]
         .divider#after-student{class: show_student_options}
       - else
@@ -169,11 +169,11 @@
       .educate-nav.hide-educate{class: show_pegasus_options}
         - educate_entries.each do |entry|
           %li
-            %a#educate-link{href: entry[:url]}= entry[:title]
+            %a#educate-overview{href: entry[:url]}= entry[:title]
       %li{class: show_pegasus_options}
         %a#stats{href: "#{code_org_url_base}/promote"}= I18n.t("#{loc_prefix}stats")
       %li{class: show_pegasus_options}
-        %a#help_us{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help_us")
+        %a#help-us{href: "#{code_org_url_base}/help"}= I18n.t("#{loc_prefix}help-us")
       %li{class: show_pegasus_options}
         #about-more
           = I18n.t("#{loc_prefix}about")
@@ -182,7 +182,7 @@
       .about-nav.hide-about{class: show_pegasus_options}
         - about_entries.each do |entry|
           %li
-            %a#about-link{href: entry[:url]}= entry[:title]
+            %a#about-us{href: entry[:url]}= entry[:title]
 
   #hamburger-icon{class: hamburger_class}
     %span
