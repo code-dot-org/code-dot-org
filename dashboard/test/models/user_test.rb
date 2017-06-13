@@ -1040,38 +1040,28 @@ class UserTest < ActiveSupport::TestCase
     refute @student.teacher_managed_account?
   end
 
-  test 'picture_or_word_account? is false for users in picture or word sections with passwords' do
+  test 'teacher_managed_account? is false for users in picture or word sections with passwords' do
     picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
-    # picture section
-    student_with_password = create(:student, encrypted_password: '123456')
-    create(:follower, student_user: student_with_password, section: picture_section)
-    student_with_password.reload
-    refute student_with_password.teacher_managed_account?
-
-    # word section
-    student_with_password = create(:student, encrypted_password: '123456')
-    create(:follower, student_user: student_with_password, section: word_section)
-    student_with_password.reload
-    refute student_with_password.teacher_managed_account?
+    [picture_section, word_section].each do |section|
+      student_with_password = create(:student, encrypted_password: '123456')
+      create(:follower, student_user: student_with_password, section: section)
+      student_with_password.reload
+      refute student_with_password.teacher_managed_account?
+    end
   end
 
-  test 'picture_or_word_account? is true for users in picture or word sections' do
+  test 'teacher_managed_account? is true for users in picture or word sections without passwords' do
     picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
-    # picture section
-    student_without_password = create(:student, encrypted_password: '')
-    create(:follower, student_user: student_without_password, section: picture_section)
-    student_without_password.reload
-    assert student_without_password.teacher_managed_account?
-
-    # word section
-    student_without_password = create(:student, encrypted_password: '')
-    create(:follower, student_user: student_without_password, section: word_section)
-    student_without_password.reload
-    assert student_without_password.teacher_managed_account?
+    [picture_section, word_section].each do |section|
+      student_without_password = create(:student, encrypted_password: '')
+      create(:follower, student_user: student_without_password, section: section)
+      student_without_password.reload
+      assert student_without_password.teacher_managed_account?
+    end
   end
 
   test 'can_edit_email? is false for user without password' do
