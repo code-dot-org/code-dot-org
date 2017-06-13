@@ -238,8 +238,6 @@ Artist.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  const stickersLoaded = this.preloadAllStickerImages();
-
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // let's try adding a background image
     this.level.images = [{}];
@@ -277,7 +275,7 @@ Artist.prototype.init = function (config) {
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
-  stickersLoaded.then(() => {
+  this.preloadAllStickerImages().then(() => {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AppView
