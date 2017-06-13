@@ -7,10 +7,15 @@ import {mount, shallow} from 'enzyme';
 
 describe("WorkshopTableLoader", () => {
   let server;
+  let debounceStub;
 
   before(() => {
     // stub out debounce to return the original function, so it's called immediately
-    sinon.stub(_, 'debounce').callsFake(f => f);
+    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
+  });
+
+  after(() => {
+    debounceStub.restore();
   });
 
   beforeEach(() => {
