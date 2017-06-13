@@ -2681,7 +2681,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
     if (exampleCode) {
-      var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+      var resultBoolean = CustomMarshalingInterpreter.evalWith(defCode + '; return' + exampleCode, {
         Studio: api,
         Globals: Studio.Globals
       }, true);
@@ -2949,7 +2949,7 @@ var registerHandlersWithSpriteAndGroupParams = function (
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try {
-    codegen.evalWith(code, {
+    CustomMarshalingInterpreter.evalWith(code, {
       Studio: api,
       Globals: Studio.Globals
     }, true);

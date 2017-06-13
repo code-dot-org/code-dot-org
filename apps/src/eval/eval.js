@@ -24,7 +24,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var evalMsg = require('./locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -264,7 +264,7 @@ Eval.resetButtonClick = function () {
  */
 function evalCode(code) {
   try {
-    codegen.evalWith(code, {
+    CustomMarshalingInterpreter.evalWith(code, {
       Eval: api
     }, true);
 

@@ -678,4 +678,54 @@ describe("The CustomMarshalingInterpreter", () => {
     });
   });
 
+  describe("evalWith function", () => {
+    let options;
+    beforeEach(() => {
+      options = {
+        add: sinon.spy(),
+        a: 3,
+      };
+      window.nativeAdd = sinon.spy();
+    });
+
+    afterEach(() => {
+      delete window.nativeAdd;
+    });
+
+    it("evaluates a string of code, prepopulating the scope with whatever is in options", () => {
+      CustomMarshalingInterpreter.evalWith('add(1,2)', options);
+      expect(options.add).to.have.been.calledWith(1,2);
+      CustomMarshalingInterpreter.evalWith('add(a,2)', options);
+      expect(options.add).to.have.been.calledWith(3,2);
+    });
+
+    it("does not give the evaluated code access to native functions", () => {
+      expect(() => CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options)).to.throw('Unknown identifier: nativeAdd');
+    });
+
+    describe("when running with legacy=true", () => {
+
+      it("the evaluated code will have access to 'native' functions", () => {
+        expect(() => CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, true)).not.to.throw;
+        CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, true);
+        expect(window.nativeAdd).to.have.been.calledWith(1,2);
+        CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, true);
+        expect(window.nativeAdd).to.have.been.calledWith(1,2);
+      });
+
+      it("the evaluated code will have access to functions passed in through options", () => {
+        CustomMarshalingInterpreter.evalWith('add(1,2)', options, true);
+        expect(options.add).to.have.been.calledWith(1,2);
+      });
+
+      it("the evaluated code will have access to variables passed in through options", () => {
+        CustomMarshalingInterpreter.evalWith('add(a,2)', options, true);
+        expect(options.add).to.have.been.calledWith(3,2);
+        CustomMarshalingInterpreter.evalWith('nativeAdd(a,2)', options, true);
+        expect(window.nativeAdd).to.have.been.calledWith(3,2);
+      });
+
+    });
+  });
+
 });
