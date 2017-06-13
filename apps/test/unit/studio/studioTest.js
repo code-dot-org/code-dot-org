@@ -13,7 +13,6 @@ import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
@@ -446,9 +445,8 @@ describe('studio', function () {
       Studio.eventHandlers = [];
       Studio.setLevel({});
       cb = sinon.spy();
-      interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
+      interpreterFunc = Studio.interpreter.createNativeFunction(Studio.interpreter.makeNativeMemberFunction({
         nativeFunc: cb,
-        interpreterFunc: Studio.interpreter,
       }));
     });
 
