@@ -1,3 +1,4 @@
+import 'details-element-polyfill';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
