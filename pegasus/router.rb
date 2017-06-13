@@ -20,7 +20,7 @@ require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
-require 'sass/engine'
+require 'sass'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
