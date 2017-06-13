@@ -66,6 +66,10 @@ class Game
 end
 
 class HamburgerTest < Minitest::Test
+  def assert_includes_id(items, id)
+    assert items.find {|e| e[:id] == id}
+  end
+
   # Visibility CSS class tests.
 
   def test_level_teacher_en
@@ -204,43 +208,43 @@ class HamburgerTest < Minitest::Test
 
   def test_hamburger_content_teacher
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "teacher", language: "en"})
-    assert contents[:entries].find {|e| e[:id] == "hamburger-teacher-sections"}
+    assert_includes_id contents[:entries], "hamburger-teacher-sections"
   end
 
   def test_hamburger_content_student
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "student", language: "en"})
-    assert contents[:entries].find {|e| e[:id] == "hamburger-student-projects"}
+    assert_includes_id contents[:entries], "hamburger-student-projects"
   end
 
   def test_hamburger_content_nobody
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert contents[:entries].find {|e| e[:id] == "hamburger-signed-out-projects"}
+    assert_includes_id contents[:entries], "hamburger-signed-out-projects"
   end
 
   def test_hamburger_content_script_level
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: Level.new, user_type: nil, language: "en", request: nil})
-    assert contents[:entries].find {|e| e[:id] == "report-bug"}
+    assert_includes_id contents[:entries], "report-bug"
   end
 
   def test_hamburger_content_level
     contents = Hamburger.get_hamburger_contents({level: Level.new, script_level: nil, user_type: nil, language: "en", request: nil})
-    assert contents[:entries].find {|e| e[:id] == "report-bug"}
+    assert_includes_id contents[:entries], "report-bug"
   end
 
   def test_hamburger_content_nolevel
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert contents[:entries].find {|e| e[:id] == "learn"}
+    assert_includes_id contents[:entries], "learn"
   end
 
   def test_hamburger_content_gamelab_project_level
     contents = Hamburger.get_hamburger_contents({level: LevelGameLab.new, script_level: nil, user_type: nil, language: "en"})
-    assert contents[:entries].find {|e| e[:id] == "gamelab-docs"}
+    assert_includes_id contents[:entries], "gamelab-docs"
   end
 
   def test_hamburger_content_applab_project_level
     contents = Hamburger.get_hamburger_contents({level: LevelAppLab.new, script_level: nil, user_type: nil, language: "en"})
-    assert contents[:entries].find {|e| e[:id] == "applab-docs"}
-    assert contents[:entries].find {|e| e[:id] == "applab-tutorials"}
+    assert_includes_id contents[:entries], "applab-docs"
+    assert_includes_id contents[:entries], "applab-tutorials"
   end
 
   def test_hamburger_content_expandable
@@ -252,21 +256,21 @@ class HamburgerTest < Minitest::Test
 
   def test_header_content_teacher
     contents = Hamburger.get_header_contents("teacher", "en")
-    assert contents.find {|e| e[:id] == "header-teacher-sections"}
+    assert_includes_id contents, "header-teacher-sections"
   end
 
   def test_header_content_student
     contents = Hamburger.get_header_contents("student", "en")
-    assert contents.find {|e| e[:id] == "header-student-projects"}
+    assert_includes_id contents, "header-student-projects"
   end
 
   def test_header_content_nobody_en
     contents = Hamburger.get_header_contents(nil, "en")
-    assert contents.find {|e| e[:id] == "header-en-about"}
+    assert_includes_id contents, "header-en-about"
   end
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents(nil, "fr")
-    assert contents.find {|e| e[:id] == "header-signed-out-projects"}
+    assert_includes_id contents, "header-signed-out-projects"
   end
 end
