@@ -15,7 +15,7 @@
 #
 
 class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
-  def required_fields
+  def self.required_fields
     [
       :received_clear_communication,
       :venue_feedback,
@@ -41,7 +41,7 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
     ].freeze
   end
 
-  def demographics_required_fields
+  def self.demographics_required_fields
     [
       :race,
       :highest_education,

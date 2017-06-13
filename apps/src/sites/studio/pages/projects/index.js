@@ -1,22 +1,27 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { getStore } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
-import {Galleries} from '@cdo/apps/templates/projects/GallerySwitcher';
-
-const MAX_PROJECTS_PER_CATEGORY = 100;
-const isPublic = window.location.pathname.startsWith('/projects/public');
+import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import { selectGallery } from '@cdo/apps/templates/projects/projectsModule';
 
 $(document).ready(() => {
-  // We need to see whether the experiment is enabled from angularProjects.js,
-  // which isn't part of the apps js build pipeline.
-  $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled', 'true');
-
   const projectsHeader = document.getElementById('projects-header');
-  ReactDOM.render(<ProjectHeader showGallery={showGallery} isPublic={isPublic}/>, projectsHeader);
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <ProjectHeader showGallery={showGallery} />
+    </Provider>,
+    projectsHeader
+  );
+
+  const isPublic = window.location.pathname.startsWith('/projects/public');
+  const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
+  getStore().dispatch(selectGallery(initialState));
 
   $.ajax({
     method: 'GET',
@@ -25,20 +30,16 @@ $(document).ready(() => {
   }).done(projectLists => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <PublicGallery projectLists={projectLists}/>,
+      <Provider store={getStore()}>
+        <PublicGallery initialProjectLists={projectLists}/>
+      </Provider>,
       publicGallery);
   });
 });
 
 function showGallery(gallery) {
-  updateLocation(gallery);
   $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
-}
-
-function updateLocation(gallery) {
-  const path = (gallery === Galleries.PUBLIC) ? '/projects/public' : '/projects';
-  window.history.pushState(null, document.title, path);
 }
 
 function onShowConfirmPublishDialog(callback) {

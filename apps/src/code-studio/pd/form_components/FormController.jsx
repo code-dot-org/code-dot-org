@@ -55,8 +55,7 @@ export default class FormController extends React.Component {
     // If we got new errors, navigate to the first page containing errors
     if (this.state.errors.length === 0 && nextState.errors.length > 0) {
       for (let i = 0; i < this.getPageComponents().length; i++) {
-        const pageFields = this.getPageComponents()[i].associatedFields;
-        if (pageFields.some(field => nextState.errors.includes(field))) {
+        if (this.pageHasError(i, nextState.errors)) {
           nextState.currentPage = i;
           break;
         }
@@ -69,7 +68,7 @@ export default class FormController extends React.Component {
    */
   componentDidUpdate(prevProps, prevState) {
     // If we got new errors or just changed pages, scroll to top of the page
-    const newErrors = prevState.errors.length === 0 && this.state.errors.length > 0;
+    const newErrors = prevState.errors.length !== this.state.errors.length;
     const newPage = prevState.currentPage !== this.state.currentPage;
 
     if (newErrors || newPage) {
@@ -182,16 +181,8 @@ export default class FormController extends React.Component {
    * @returns {Element|undefined}
    */
   renderErrorFeedback() {
-    const pageFields = this.getCurrentPageComponent().associatedFields;
-    if (!pageFields) {
-      throw new TypeError(`
-        Every PageComponent of a FormController must define an array
-        PageComponent.associatedFields for error handling
-      `);
-    }
-
     const shouldShowError = this.state.errorHeader &&
-      (this.state.globalError ||pageFields.some(field => this.state.errors.includes(field)));
+      (this.state.globalError || this.pageHasError());
 
     if (shouldShowError) {
       return (
@@ -200,6 +191,37 @@ export default class FormController extends React.Component {
         </Alert>
       );
     }
+  }
+
+  /**
+   * Determines if a given page (defaults to current page) is responsible for any
+   * of the given errors (defaults to current state errors).
+   *
+   * Note that for purposes of page errors, error strings like
+   * "fieldName[some_extra_data]" will be normalized to "fieldName"
+   *
+   * @param {number} [page=this.state.currentPage] which page to examine
+   * @param {String[]} [errors=this.state.errors] which errors to consider
+   *
+   * @returns {boolean}
+   */
+  pageHasError(page=this.state.currentPage, errors=this.state.errors) {
+    const pageFields = this.getPageComponents()[page].associatedFields;
+    if (!pageFields) {
+      throw new TypeError(`
+        Every PageComponent of a FormController must define an array
+        PageComponent.associatedFields for error handling
+      `);
+    }
+
+    // When using VariableFormGroups that allow for nesting questions, the
+    // errors returned from the server can include state-specific data like
+    // "howInteresting[facilitator_name]". This is great for being able to flag
+    // the specific question on the page, but for purposes of determining which
+    // page a given error is on we really only care about the "howInteresting"
+    // key, not the "facilitator_name" data.
+    const flattenedErrors = errors.map(e => e.replace(/\[\w*\]/, ''));
+    return pageFields.some(field => flattenedErrors.includes(field));
   }
 
   /**
@@ -228,42 +250,60 @@ export default class FormController extends React.Component {
   }
 
   /**
+   * checks the data collected so far against the required fields and the fields
+   * for this page, to make sure that all required fields on this page have been
+   * filled out. Flags any such fields with an error, and returns a boolean
+   * indicating whether any were found.
+   *
+   * @return {boolean} true if this page is valid, false if any required fields
+   *         are missing
+   */
+  validateCurrentPageRequiredFields() {
+    const pageFields = this.getCurrentPageComponent().associatedFields;
+    const pageRequiredFields = pageFields.filter(f => this.props.requiredFields.includes(f));
+    const missingRequiredFields = pageRequiredFields.filter(f => !this.state.data[f]);
+
+    if (missingRequiredFields.length) {
+      this.setState({
+        errors: missingRequiredFields,
+        errorHeader: "Please fill out all required fields"
+      });
+
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
    * switch to the next page in sequence, if it exists
    */
   nextPage() {
-    const page = Math.min(
-      this.state.currentPage + 1,
-      this.getPageComponents().length - 1
-    );
-
-    this.setState({
-      currentPage: page
-    });
+    this.setPage(this.state.currentPage + 1);
   }
 
   /**
    * switch to the previous page in sequence, if it exists
    */
   prevPage() {
-    const page = Math.max(this.state.currentPage - 1, 0);
-
-    this.setState({
-      currentPage: page
-    });
+    this.setPage(this.state.currentPage - 1);
   }
 
   /**
    * switch to the specified page in sequence, if it exists
    */
   setPage(i) {
-    const page = Math.min(
+    const newPage = Math.min(
       Math.max(i, 0),
       this.getPageComponents().length - 1
     );
 
-    this.setState({
-      currentPage: page
-    });
+    const currentPageValid = this.validateCurrentPageRequiredFields();
+    if (currentPageValid) {
+      this.setState({
+        currentPage: newPage
+      });
+    }
   }
 
   /**
@@ -350,4 +390,5 @@ export default class FormController extends React.Component {
 FormController.propTypes = {
   apiEndpoint: React.PropTypes.string.isRequired,
   options: React.PropTypes.object.isRequired,
+  requiredFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 };

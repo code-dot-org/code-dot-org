@@ -2,6 +2,7 @@
 import Interpreter from '@code-dot-org/js-interpreter';
 import {dropletGlobalConfigBlocks} from './dropletUtils';
 import * as utils from './utils';
+import CustomMarshaler from './lib/tools/jsinterpreter/CustomMarshaler';
 
 /*
  * Note: These are defined to match the state.mode of the interpreter. The
@@ -92,8 +93,11 @@ export function evalWithEvents(apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  interpreter = new Interpreter(
+  // TODO (pcardune): remove circular dependency
+  const CustomMarshalingInterpreter = require('./lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+  interpreter = new CustomMarshalingInterpreter(
     evalCode + eventLoop,
+    new CustomMarshaler({}),
     (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
       interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
@@ -380,27 +384,18 @@ function createNativeCallbackForAsyncFunction(opts, callback) {
  * @param {!Object} opts Options block
  * @param {!Interpreter} opts.interpreter Interpreter instance
  * @param {number} [opts.maxDepth] Maximum depth to marshal objects
- * @param {boolean} [opts.dontMarshal] Do not marshal parameters if true
  * @param {Object} [opts.callbackState] callback state object, which will
  *        hold the unmarshaled return value as a 'value' property later.
  * @param {Function} intFunc The interpreter supplied callback function
  */
-exports.createNativeInterpreterCallback = function (opts, intFunc) {
-  return function (nativeValue) {
-    var args = Array.prototype.slice.call(arguments);
-    var intArgs;
-    if (opts.dontMarshal) {
-      intArgs = args;
-    } else {
-      intArgs = [];
-      for (var i = 0; i < args.length; i++) {
-        intArgs[i] = marshalNativeToInterpreter(
-          opts.interpreter,
-          args[i],
-          null,
-          opts.maxDepth);
-      }
-    }
+function createNativeInterpreterCallback(opts, intFunc) {
+  return function (...args) {
+    const intArgs = args.map(arg => marshalNativeToInterpreter(
+      opts.interpreter,
+      arg,
+      null,
+      opts.maxDepth
+    ));
     // Shift a CallExpression node on the stack that already has its func_,
     // arguments, and other state populated:
     var state = opts.callbackState || {};
@@ -413,9 +408,14 @@ exports.createNativeInterpreterCallback = function (opts, intFunc) {
     state.arguments = intArgs;
     state.n_ = intArgs.length;
 
-    opts.interpreter.stateStack.unshift(state);
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments.length > 0) {
+      state.value = state.arguments.pop();
+    }
+
+    opts.interpreter.pushStackFrame(state);
   };
-};
+}
 
 /**
  * Generate a native function wrapper for use with the JS interpreter.
@@ -469,7 +469,7 @@ export function makeNativeMemberFunction(opts) {
           // A select class of native functions is aware of the interpreter and
           // capable of calling the interpreter on the stack immediately. We
           // marshal these differently:
-          nativeArgs[i] = exports.createNativeInterpreterCallback(opts, args[i]);
+          nativeArgs[i] = createNativeInterpreterCallback(opts, args[i]);
         } else {
           nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, args[i]);
         }
@@ -606,7 +606,7 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
  * (Called repeatedly after completing a step where the node was marked 'done')
  */
 exports.isNextStepSafeWhileUnwinding = function (interpreter) {
-  var state = interpreter.stateStack[0];
+  var state = interpreter.peekStackFrame();
   var type = state.node.type;
   if (state.done) {
     return true;
@@ -818,11 +818,11 @@ exports.selectCurrentCode = function (interpreter,
                                       editor,
                                       highlightClass) {
   var userCodeRow = -1;
-  if (interpreter && interpreter.stateStack[0]) {
-    var node = interpreter.stateStack[0].node;
+  if (interpreter && interpreter.peekStackFrame()) {
+    var node = interpreter.peekStackFrame().node;
 
     if (node.type === 'ForStatement') {
-      var mode = interpreter.stateStack[0].mode || 0, subNode;
+      var mode = interpreter.peekStackFrame().mode || 0, subNode;
       switch (mode) {
         case exports.ForStatementMode.INIT:
           subNode = node.init;

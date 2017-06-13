@@ -213,7 +213,54 @@ class DashboardSection
     valid_grades.include? grade
   end
 
+  # Method used by tests to clear our caches, so that we're not sharing caches
+  # across tests
+  def self.clear_caches
+    @@script_cache = {}
+    @@course_cache = {}
+  end
+
+  # @typedef AssignableInfo Hash
+  # @option [Number] :id
+  # @option [String] :name,
+  # TODO: This is really course_or_script_name (or perhaps something like resource_name),
+  # but is currently used in a bunch of places in the client, so I don't want
+  # to change it just yet
+  # @option [String] :script_name
+  # @option [String] :category
+  # @option [Number] :position
+  # @option [Number] :category_priority
+
+  # Sections can be assigned to both courses and scripts. We want to make sure
+  # we give teacher dashboard the same information for both sets of assignables,
+  # which we accomplish via this shared method
+  # @param course_or_script [Course|Script] A row object from either our courses
+  #   or scripts dashboard db tables.
+  # @param hidden [Boolean] True if the passed in item is hidden
+  # @return AssignableInfo
+  def self.assignable_info(course_or_script, hidden=false)
+    name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
+    first_category = ScriptConstants.categories(course_or_script[:name])[0] || 'other'
+    position = ScriptConstants.position_in_category(name, first_category)
+    category_priority = ScriptConstants.category_priority(first_category)
+    name = I18n.t("#{name}_name", default: name)
+    name += " *" if hidden
+    {
+      id: course_or_script[:id],
+      name: name,
+      script_name: course_or_script[:name],
+      category: I18n.t("#{first_category}_category_name", default: first_category),
+      position: position,
+      category_priority: category_priority,
+    }
+  end
+
   @@script_cache = {}
+  # Find the set of scripts that are valid for the current user, ignoring those
+  # scripts that are hidden based on the user's permission. Caches results based
+  # on language and whether hidden scripts are included.
+  # @param user_id [Integer]
+  # @return AssignableInfo[]
   def self.valid_scripts(user_id = nil)
     # some users can see all scripts, even those marked hidden
     script_cache_key = I18n.locale.to_s +
@@ -235,22 +282,26 @@ class DashboardSection
         where(where_clause).
         select(:id, :name, :hidden).
         all.
-        map do |script|
-          name = ScriptConstants.teacher_dashboard_name(script[:name])
-          first_category = ScriptConstants.categories(script[:name])[0] || 'other'
-          position = ScriptConstants.position_in_category(name, first_category)
-          category_priority = ScriptConstants.category_priority(first_category)
-          name = I18n.t("#{name}_name", default: name)
-          name += " *" if script[:hidden]
-          {
-            id: script[:id],
-            name: name,
-            script_name: script[:name],
-            category: I18n.t("#{first_category}_category_name", default: first_category),
-            position: position,
-            category_priority: category_priority
-          }
-        end
+        map {|script| assignable_info(script, script[:hidden])}
+  end
+
+  @@course_cache = {}
+  # Mimic the behavior of valid_scripts, but return courses instead. Also simpler
+  # in that we don't have to worry about hidden courses.
+  # @return AssignableInfo[]
+  def self.valid_courses
+    course_cache_key = I18n.locale.to_s
+
+    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
+
+    return {} unless (Dashboard.db[:courses].count rescue nil)
+
+    @@course_cache[course_cache_key] = Dashboard.db[:courses].
+      select(:id, :name).
+      all.
+      # Only return courses we've whitelisted in ScriptConstants
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map {|course| assignable_info(course)}
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via
@@ -262,8 +313,16 @@ class DashboardSection
     disabled_scripts.map {|script| script[:id]}
   end
 
+  # @param script_id [String] id of the script we're checking the validity of
+  # @return [Script|nil] The valid script if we have one, otherwise nil
   def self.valid_script_id?(script_id)
     valid_scripts.find {|script| script[:id] == script_id.to_i}
+  end
+
+  # @param script_id [String] id of the course we're checking the validity of
+  # @return [Course|nil] The valid course if we have one, otherwise nil
+  def self.valid_course_id?(course_id)
+    valid_courses.find {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)
@@ -276,7 +335,10 @@ class DashboardSection
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
     script_id = params[:script] && valid_script_id?(params[:script][:id]) ?
       params[:script][:id].to_i : params[:script_id]
+    course_id = params[:course_id] && valid_course_id?(params[:course_id]) ?
+      params[:course_id].to_i : nil
     stage_extras = params[:stage_extras] ? params[:stage_extras] : false
+    pairing_allowed = params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
     created_at = DateTime.now
 
     row = nil
@@ -289,8 +351,10 @@ class DashboardSection
           login_type: login_type,
           grade: grade,
           script_id: script_id,
+          course_id: course_id,
           code: CodeGeneration.random_unique_code(length: 6),
           stage_extras: stage_extras,
+          pairing_allowed: pairing_allowed,
           created_at: created_at,
           updated_at: created_at,
         }
@@ -500,6 +564,7 @@ class DashboardSection
       grade: @row[:grade],
       code: @row[:code],
       stage_extras: @row[:stage_extras],
+      pairing_allowed: @row[:pairing_allowed],
     }
   end
 
@@ -513,6 +578,17 @@ class DashboardSection
     fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
     fields[:stage_extras] = params[:stage_extras]
+    fields[:pairing_allowed] = params[:pairing_allowed]
+
+    if params[:course_id] && valid_course_id?(params[:course_id])
+      fields[:course_id] = params[:course_id].to_i
+      # explicitly clear script_id (unless we're also passed in a valid script id
+      # as a param
+      fields[:script_id] = nil
+    else
+      # If no valid course_id provided, make sure we clear any existing course_id
+      fields[:course_id] = nil
+    end
 
     if params[:script] && valid_script_id?(params[:script][:id])
       fields[:script_id] = params[:script][:id].to_i
@@ -534,6 +610,7 @@ class DashboardSection
       :sections__name___name,
       :sections__code___code,
       :sections__stage_extras___stage_extras,
+      :sections__pairing_allowed___pairing_allowed,
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,

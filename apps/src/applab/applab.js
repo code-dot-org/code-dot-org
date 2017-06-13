@@ -26,7 +26,7 @@ import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
@@ -67,6 +67,7 @@ import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 
 import {TestResults, ResultType} from '../constants';
+import i18n from '../code-studio/i18n';
 
 /**
  * Create a namespace for the application.
@@ -163,7 +164,7 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function (isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
-      text: commonMsg.openWorkspace(),
+      text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true,
     },
@@ -416,6 +417,11 @@ Applab.init = function (config) {
     if (config.level.expandDebugger) {
       getStore().dispatch(jsDebugger.open());
     }
+  }
+
+  //Mobile share pages do not show the logo
+  if (dom.isMobile() && config.share) {
+    $('#main-logo').hide();
   }
 
   // Set up an error handler for student errors and warnings.

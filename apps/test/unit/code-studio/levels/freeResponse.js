@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';
 import { writeSourceForLevel } from '@cdo/apps/code-studio/clientState';
 
@@ -8,7 +9,6 @@ describe('Free Response', () => {
   const lastAttemptString = 'This is my final answer';
   const otherLastAttemptString = 'This is some other answer';
   let textarea;
-  let originalAppOptions;
 
   before(() => {
     // FreeResponse expects to find a textarea element in the document with id
@@ -18,12 +18,11 @@ describe('Free Response', () => {
     textarea.setAttribute('class', 'response');
     document.body.appendChild(textarea);
 
-    originalAppOptions = window.appOptions;
-    window.appOptions = {};
+    replaceOnWindow('appOptions', {});
   });
 
   after(() => {
-    window.appOptions = originalAppOptions;
+    restoreOnWindow('appOptions');
   });
 
   describe('Shows last attempt', () => {

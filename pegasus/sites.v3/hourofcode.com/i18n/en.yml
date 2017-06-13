@@ -6,12 +6,12 @@
   coming_soon: 'Coming Soon'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
 
-  campaign_date_start_short: "Dec. 5"
-  campaign_date_start_long: "December 5"
-  campaign_date_short: "Dec. 5-11"
-  campaign_date_full: "December 5-11"
-  campaign_date_year: "2016"
-  campaign_date_full_year: "December 5-11, 2016"
+  campaign_date_start_short: "Dec. 4"
+  campaign_date_start_long: "December 4"
+  campaign_date_short: "Dec. 4-10"
+  campaign_date_full: "December 4-10"
+  campaign_date_year: "2017"
+  campaign_date_full_year: "December 4-10, 2017"
 
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
@@ -197,8 +197,8 @@
   front_what_is_hoc: 'What is the Hour of Code?'
   front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
   front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
-  front_join_us_tutorials: "Try this year's new tutorials!"
-  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_tutorials: "Choose your Hour of Code tutorial!"
+  front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
   front_join_us_robotics: 'Got robots?'
   front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
   front_join_us_teacher: 'Are you a teacher?'
@@ -246,7 +246,7 @@
   signup_host_an_hour: 'Host an hour'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_registration_deadline: "Registration for the Hour of Code closes December 11."
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'

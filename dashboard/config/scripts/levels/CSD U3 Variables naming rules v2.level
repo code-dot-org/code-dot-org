@@ -10,7 +10,8 @@
       "fill": null,
       "rect": null,
       "comment_Drawing": null,
-      "declareAssign_x": null
+      "declareAssign_x": null,
+      "ellipse": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -45,7 +46,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "6yYSYrDinrdr+geSjJnPvgLQexZNrmmGirHjWxdAJJE8LedaTe7rMdR2OVfg\njpfH\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -54,6 +55,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 17:43:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

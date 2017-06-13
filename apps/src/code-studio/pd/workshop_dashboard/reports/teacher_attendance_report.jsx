@@ -3,6 +3,7 @@
  */
 import React from "react";
 import ReportTable from "./report_table";
+import Permission from "../../permission";
 import {Button} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../components/spinner';
@@ -31,6 +32,10 @@ const TeacherAttendanceReport = React.createClass({
       rows: null,
       showFacilitatorDetails: false
     };
+  },
+
+  componentWillMount() {
+    this.permission = new Permission();
   },
 
   componentDidMount() {
@@ -96,10 +101,6 @@ const TeacherAttendanceReport = React.createClass({
 
   formatCurrency(amount) {
     return amount ? `$${Number(amount).toFixed(2)}` : null;
-  },
-
-  isWorkshopAdmin() {
-    return window.dashboard.workshop.permission === 'workshop_admin';
   },
 
   getColumns() {
@@ -169,7 +170,7 @@ const TeacherAttendanceReport = React.createClass({
       header: {label: 'Days'}
     }];
 
-    if (this.isWorkshopAdmin()) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}

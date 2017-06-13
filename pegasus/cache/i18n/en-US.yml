@@ -270,7 +270,7 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: "2.5 million girls are enrolled to learn on Code.org"
+  homepage_hero_text_stat_loc: "8.5 million girls are enrolled to learn on Code.org"
   homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "The Hour of Code"
@@ -311,13 +311,14 @@
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Try the Hour of Code"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Host an Hour of Code"
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: "Volunteer for the Hour of Code"
   homepage_slot_text_title_students: "Students"
   homepage_slot_text_blurb_students: "Explore all of our tutorials"
   homepage_slot_text_blurb_students_courses: "Explore our courses"
-  homepage_slot_text_link_codestudio: "Try Code.org courses"
+  homepage_slot_text_link_codestudio: "Try Code Studio"
   homepage_slot_text_link_local: "Find a local class"
   homepage_slot_text_link_othercourses: "Other online courses"
   homepage_slot_text_title_educators: "Educators"
@@ -627,6 +628,7 @@
   dashboard_sections_table_secret: "Login Type"
   dashboard_sections_table_grade: "Grade"
   dashboard_sections_table_course: "Course"
+  dashboard_sections_table_pairing_allowed: "Pair Programming"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
@@ -913,7 +915,7 @@
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
@@ -1354,6 +1356,9 @@
   header_about: "About"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
-  header_report_bug: 'Report bug'
-  header_tutorials: 'Tutorials'
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
   header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

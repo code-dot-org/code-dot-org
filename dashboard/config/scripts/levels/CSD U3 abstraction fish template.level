@@ -37,6 +37,7 @@
     "markdown_instructions": "# velocityX\r\n\r\nLast time you made the fish move, you did it by changing its `x` property in the draw loop.  Now, you can use `velocityX` to make your sprites move left or right by a certain amount each time they are drawn.\r\n\r\n# Do This\r\n\r\nUse the `velocityX` block to make the sprite go across the screen.\r\n",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

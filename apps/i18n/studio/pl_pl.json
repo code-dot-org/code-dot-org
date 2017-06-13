@@ -862,5 +862,10 @@
   "failedChangeSettingSettings": "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość.",
   "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
   "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
+  "moveForward": "move forward",
+  "moveBackward": "move backward",
+  "turnLeft": "turn left",
+  "turnRight": "turn right",
+  "turnTooltip": "Turn an actor left or right by 90 degrees."
 }

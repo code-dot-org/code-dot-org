@@ -49,10 +49,17 @@ module.exports = {
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
-        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('fill') +
         craftBlock('give') +
+        craftBlock('kill') +
+        craftBlock('setblock', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('summon') +
+        craftBlock('testforblock', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('testforblocks') +
+        craftBlock('clone') +
+        craftBlock('clonefiltered', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('executeasother') +
-        craftBlock('executedetect', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('executedetect') +
         craftBlock('timesetbyname') +
         craftBlock('timesetbynumber') +
         craftBlock('weather') +

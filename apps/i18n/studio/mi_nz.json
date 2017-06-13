@@ -862,5 +862,10 @@
   "failedChangeSettingSettings": "Whakamaua tō kēmu kia tīna. Kia tutuki tēnei wahanga, me huri te droid, tautuhia hoki te tere.",
   "allowActorsOutsidePlayspaceTooltip": "Allow actors to move off the playspace, where they can't be seen",
   "allowActorsToLeaveThePlayspace": "Allow actors to leave the playspace",
-  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace"
+  "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
+  "moveForward": "move forward",
+  "moveBackward": "move backward",
+  "turnLeft": "turn left",
+  "turnRight": "turn right",
+  "turnTooltip": "Turn an actor left or right by 90 degrees."
 }

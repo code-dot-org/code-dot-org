@@ -2,11 +2,9 @@ import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from "../../util/color";
 import Radium from 'radium';
-
-export const Galleries = {
-  PUBLIC: 'PUBLIC',
-  PRIVATE: 'PRIVATE',
-};
+import {selectGallery} from './projectsModule.js';
+import {connect} from 'react-redux';
+import {Galleries} from './projectConstants';
 
 const styles = {
   container: {
@@ -50,8 +48,12 @@ const styles = {
 
 class GallerySwitcher extends Component {
   static propTypes = {
-    initialGallery: PropTypes.oneOf(Object.keys(Galleries)).isRequired,
+    selectedGallery: PropTypes.string.isRequired,
+
+    // showGallery hides and shows dom elements in angular and selectGallery updates redux
+    // Once the projects page is in react, we should not need both of these functions
     showGallery: PropTypes.func.isRequired,
+    selectGallery: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -59,22 +61,16 @@ class GallerySwitcher extends Component {
 
     this.toggleToGallery = this.toggleToGallery.bind(this);
     this.toggleToMyProjects = this.toggleToMyProjects.bind(this);
-
-    this.state = {
-      // The source of truth for which gallery is displayed. This state should
-      // live in the parent component, once there is one.
-      gallery: props.initialGallery,
-    };
   }
 
   toggleToGallery() {
     this.props.showGallery(Galleries.PUBLIC);
-    this.setState({gallery: Galleries.PUBLIC});
+    this.props.selectGallery(Galleries.PUBLIC);
   }
 
   toggleToMyProjects() {
     this.props.showGallery(Galleries.PRIVATE);
-    this.setState({gallery: Galleries.PRIVATE});
+    this.props.selectGallery(Galleries.PRIVATE);
   }
 
   render() {
@@ -84,7 +80,7 @@ class GallerySwitcher extends Component {
           key={'private'}
           style={[
             styles.pill,
-            this.state.gallery === Galleries.PRIVATE && styles.selectedPill
+            this.props.selectedGallery === Galleries.PRIVATE && styles.selectedPill
           ]}
           onClick={this.toggleToMyProjects}
         >
@@ -94,7 +90,7 @@ class GallerySwitcher extends Component {
           key={'public'}
           style={[
             styles.pill,
-            this.state.gallery === Galleries.PUBLIC && styles.selectedPill
+            this.props.selectedGallery === Galleries.PUBLIC && styles.selectedPill
           ]}
           onClick={this.toggleToGallery}
         >
@@ -104,4 +100,11 @@ class GallerySwitcher extends Component {
     );
   }
 }
-export default Radium(GallerySwitcher);
+
+export default connect(state => ({
+  selectedGallery: state.selectedGallery
+}), dispatch => ({
+  selectGallery(gallery){
+    dispatch(selectGallery(gallery));
+  }
+}))(Radium(GallerySwitcher));

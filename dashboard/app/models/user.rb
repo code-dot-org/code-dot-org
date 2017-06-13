@@ -121,15 +121,15 @@ class User < ActiveRecord::Base
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
-  PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
+  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'
-  TYPE_TEACHER = 'teacher'
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
+  TYPE_STUDENT = 'student'.freeze
+  TYPE_TEACHER = 'teacher'.freeze
+  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -292,7 +292,12 @@ class User < ActiveRecord::Base
     (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
   end
 
-  GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
+  GENDER_OPTIONS = [
+    [nil, ''],
+    ['gender.male', 'm'],
+    ['gender.female', 'f'],
+    ['gender.none', '-']
+  ].freeze
 
   attr_accessor :login
 
@@ -345,7 +350,7 @@ class User < ActiveRecord::Base
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ]
+  ].freeze
   validates :terms_of_service_version,
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
@@ -354,7 +359,9 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :sanitize_race_data,
+    # TODO(asher): Add sanitize_and_set_race_data to the before_save callbacks after completely
+    # eliminating the `races` serialized attribute in all environments.
+    # :sanitize_and_set_race_data,
     :fix_by_user_type
 
   def make_teachers_21
@@ -376,18 +383,40 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def sanitize_race_data
-    return unless property_changed?('races')
+  # Returns whether the comma separated list of races represents an under-represented minority user.
+  # @return [Boolean, nil] Whether races_comma_separated represents a URM user.
+  #   - true: Yes, a URM user.
+  #   - false: No, not a URM user.
+  #   - nil: Don't know, may or may not be a URM user.
+  # TODO(asher): Replace instances of `read_attribute(:races)` with `races` after the serialized
+  # property `races` key has been fully eliminated.
+  def urm_from_races
+    races_array = read_attribute(:races).split(',')
+    return nil if races_array.empty?
+    return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    false
+  end
 
-    if races.include? 'closed_dialog'
-      self.races = %w(closed_dialog)
+  def sanitize_and_set_race_data
+    return unless races_changed?
+
+    if races.nil?
+      self.urm = nil
+      return
     end
-    if races.length > 5
-      self.races = %w(nonsense)
+
+    races_array = races.split(',')
+    if races_array.include? 'closed_dialog'
+      self.races = 'closed_dialog'
     end
-    races.each do |race|
-      self.races = %w(nonsense) unless VALID_RACES.include? race
+    if races_array.length > 5
+      self.races = 'nonsense'
     end
+    races_array.each do |race|
+      self.races = 'nonsense' unless VALID_RACES.include? race
+    end
+    self.urm = urm_from_races
   end
 
   def fix_by_user_type
@@ -464,7 +493,7 @@ class User < ActiveRecord::Base
     "#{raw_name['first']} #{raw_name['last']}".squish
   end
 
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
@@ -535,6 +564,23 @@ class User < ActiveRecord::Base
 
   def username_required?
     provider == User::PROVIDER_MANUAL
+  end
+
+  def update_without_password(params, *options)
+    if params[:races]
+      update_columns(races: params[:races].join(','))
+      if params[:races].include? 'closed_dialog'
+        update_columns(races: 'closed_dialog')
+      end
+      if params[:races].length > 5
+        update_columns(races: 'nonsense')
+      end
+      params[:races].each do |race|
+        update_column(races: 'nonsense') unless VALID_RACES.include? race
+      end
+      update_column(:urm, urm_from_races)
+    end
+    super
   end
 
   def update_with_password(params, *options)
@@ -1170,7 +1216,7 @@ class User < ActiveRecord::Base
   end
 
   def can_pair?
-    !sections_as_student.empty?
+    sections_as_student.any?(&:pairing_allowed)
   end
 
   def can_pair_with?(other_user)

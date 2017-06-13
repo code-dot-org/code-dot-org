@@ -49,19 +49,20 @@ module ProjectsList
     # PUBLISHED_PROJECT_TYPES, or 'all' to retrieve a list of each project type.
     # @param limit [Integer] Maximum number of projects to retrieve of each type.
     #   Must be between 1 and MAX_LIMIT, inclusive.
-    # @param offset [Integer] Number of projects to skip. Default: 0.
-    #   Must not be specified when requesting all project types.
+    # @param published_before [string] String representing a DateTime before
+    #   which to search for the requested projects. Must not be specified
+    #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_type, limit:, offset:)
+    def fetch_published_projects(project_type, limit:, published_before:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_type == 'all'
-        raise ArgumentError, 'Cannot specify offset when requesting all project types' if offset
+        raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return fetch_published_project_types(PUBLISHED_PROJECT_TYPES, limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_type}" unless PUBLISHED_PROJECT_TYPES.include?(project_type)
-      fetch_published_project_types([project_type], limit: limit, offset: offset)
+      fetch_published_project_types([project_type], limit: limit, published_before: published_before)
     end
 
     private
@@ -87,7 +88,7 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    def fetch_published_project_types(project_types, limit:, offset: 0)
+    def fetch_published_project_types(project_types, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
       {}.tap do |projects|
         project_types.map do |type|
@@ -95,11 +96,11 @@ module ProjectsList
             select_append(Sequel[:storage_apps][:id].as(:channel_id)).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: type).
+            where(state: 'active', project_type: type, abuse_score: 0).
+            where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            offset(offset).
             map {|project| get_published_project_data project}
         end
       end

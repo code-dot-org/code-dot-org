@@ -71,6 +71,18 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
+  # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
+  # we do not worry about testing it.
+  test 'name and user not required for deleted sections' do
+    section = create :section
+    section.destroy
+    section.name = nil
+    section.user = nil
+
+    assert section.valid?
+  end
+
   test 'name is required' do
     assert_does_not_create(Section) do
       section = Section.new user: @teacher
@@ -83,7 +95,7 @@ class SectionTest < ActiveSupport::TestCase
     assert_does_not_create(Section) do
       section = Section.new name: 'a section'
       refute section.valid?
-      assert_equal ['User is required'], section.errors.full_messages
+      assert_equal ['User is required', 'User must be a teacher'], section.errors.full_messages
     end
   end
 

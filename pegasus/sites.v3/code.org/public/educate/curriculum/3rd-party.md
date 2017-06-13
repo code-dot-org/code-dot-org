@@ -81,6 +81,15 @@ Your school or district may be able to use Title I or Title II funds, and other 
 
 The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
+## Scholarship opportunities for students
+Raise.me is a college preparedness platform empowering millions of high school students to reach their full potential by helping them earn scholarship dollars from colleges for all the things that set them up to succeed - whether that’s getting good grades, volunteering in the community, or joining extracurriculars.
+
+ <p>
+Click below to learn more about how Raise.me can help your students earn scholarships to stay motivated and pursue computer science education in preparation for college.
+</p>
+
+[<button>Learn more</button>](/educate/scholarships)
+
 ## More resources &mdash; for classrooms, afterschool clubs or learning online
 
 ### [Khan Academy](http://khanacademy.org/cs/programming)
@@ -125,4 +134,4 @@ To decide which resources to list here, we used a rubric that looked for:
  * Affordable
 
 There was a degree of subjective editorial choices involved, because what's most important to us is to showcase a short list of resources that we believe will provide the best experience
-for educators visiting our site. We've closed new submissions to this page for now, until after we try out using an external review board for Hour of Code 2016 activities. We may re-open submissions to this page based on that experience.
+for educators visiting our site. If you would like your course to be considered for the Fall 2017 review process, which will utilize external reviewers, [please fill out this form](https://docs.google.com/forms/d/e/1FAIpQLScfsDH3-7PmtO48KCVKHg8vQ8r8uAHDPuoyAuLCXtNqyXPfxg/viewform?usp=send_form).

@@ -50,6 +50,7 @@
       "functionParams_none": null,
       "callMyFunction": null
     },
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

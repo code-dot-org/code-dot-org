@@ -1,6 +1,6 @@
 module CodeGeneration
-  CONSONANTS = ('A'..'Z').to_a - %w(A E I O U)
-  BANNED_SUBSTRINGS = %w(CNT DCK DMN FCK PNS PSS SHT TTS)
+  CONSONANTS = (('A'..'Z').to_a - %w(A E I O U)).freeze
+  BANNED_SUBSTRINGS = %w(CNT DCK DMN FCK PNS PSS SHT TTS).freeze
   MAX_ATTEMPTS = 100
 
   # Generates a semi-random consonant string of the specified length,

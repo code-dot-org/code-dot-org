@@ -39,7 +39,7 @@ module Pd
       match_text: 'Address found, but requires a apartment/suite.',
       field: :apartment_or_suite,
       message: 'is required for this address'
-    }]
+    }].freeze
 
     # Make sure the phone number contains at least 10 digits.
     # Allow any format and additional text, such as extensions.
@@ -50,7 +50,7 @@ module Pd
     has_one :workshop, class_name: 'Pd::Workshop', through: :enrollment, foreign_key: :pd_workshop_id
 
     validates :enrollment, presence: true, uniqueness: true
-    validates :user, presence: true, uniqueness: true
+    validates :user, presence: true, uniqueness: true, if: -> {new_record? || user_id_changed?}
     validates_presence_of :street
     validates_presence_of :city
     validates_presence_of :state
@@ -72,6 +72,9 @@ module Pd
       else
         if found.first.postal_code != zip_code
           errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
+        end
+        if found.first.state_code != state
+          errors.add(:state, "doesn't match the address. Did you mean #{found.first.state_code}?")
         end
         unless found.first.street_number
           errors.add(:street, 'must be a valid street address (no PO boxes)')

@@ -59,6 +59,17 @@ export default storybook => {
       },
 
       {
+        name:'red button',
+        story: () => (
+          <ProgressButton
+            href="/foo/bar"
+            color={ProgressButton.ButtonColor.red}
+            text="Batman & Robin"
+          />
+        )
+      },
+
+      {
         name: 'large button',
         story: () => (
           <ProgressButton

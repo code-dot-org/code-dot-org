@@ -256,7 +256,7 @@
   continue_learning_body: "گزینه های بسیاری وجود دارند.  شما می توانید آنلاین، یا
     در مدرسه محلی و یا دراردوگاه تابستانی به یادگیری ادامه دهید."
   learn_code_studio: Try Code Studio courses
-  learn_next_level: "به مرحله بعدی برو"
+  learn_next_level: Try another Code Studio course
   learn_online: "درس های آنلاین دیگری را امتحان کن"
   learn_classes: "پیدا کردن کلاس های محلی"
   learn_back_to_minecraft: Keep learning with Minecraft
@@ -294,9 +294,8 @@
     الزيت، كلاس پنجمي'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     -  Frank Martinez, Teacher'
-  studiobar_title: "<a href='http://studio.code.org'>استودیوی برنامه نویسی</a> ما
-    را کشف کنید"
-  studiobar_title_nolink: "استودیوی برنامه نویسی ما را کشف کنید"
+  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: "دوره‌های مقدماتی"
   studiobar_elementary_body: "سه درس جدید ما برای کلاس K&#8209;پنجمی ها"
   studiobar_hoc_title: "ساعتی با کدنویسی"
@@ -304,7 +303,7 @@
   studiobar_flappy_title: "کدنویسی Flappy"
   studiobar_flappy_body: "با پرنده بال زن، بازیهای خودتان را بسازید و به اشتراک بگذارید"
   studiobar_teacher_title: "ساخته شده برای دبیران"
-  studiobar_teacher_body: "در کلاس درسیِ خود Code Studio را معرفی کنید"
+  studiobar_teacher_body: Introduce Code Studio in your classroom
   studiobar_frozen_title: "ساعتی با کد"
   studiobar_frozen_body: "یک سرزمین عجایب یخی با آنا و السا بسازید"
   studiobar_donate_title: "کمک مالی بدهید"
@@ -355,9 +354,8 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: "خطوط #کد نوشته شده توسط دانش آموزان"
-  homepage_hero_text_stat_students: "#دانش آموز- حساب کاربری نگه دارنده سوابق و اطلاعات
-    دانش آموز در استودیو ی کد"
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
+  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: "ساعت کد نویسی: # طی شده گذرانده"
   homepage_slot_text_hoc: "ساعتی با کدنویسی"
   homepage_slot_text_frozen: "کارتون Frozen با آنا و السا"
@@ -408,7 +406,7 @@
   homepage_slot_text_title_students: "دانش آموزان"
   homepage_slot_text_blurb_students: "تمام آموزش های ما را کشف کنید"
   homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: "استودیو ی کد را امتحان کنید"
+  homepage_slot_text_link_codestudio: Try Code.org courses
   homepage_slot_text_link_local: "یک کلاس محلی پیدا کنید"
   homepage_slot_text_link_othercourses: "دوره های آنلاین دیگر"
   homepage_slot_text_title_educators: "آموزگاران"
@@ -425,7 +423,7 @@
   homepage_slot_text_link_buy: "شرکت کنید"
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_header_codestudio: "ابداعات دانش آموزان استودیو ی کد"
+  homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: "تمامش را ببینید"
   homepage_donors_donate: "کمک مالی بدهید"
@@ -767,12 +765,15 @@
   dashboard_action_required: "اجباری"
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none: Most teachers measure their students' progress using
+    the "View Progress" tab. If you are interested in giving your students additional
+    assessments, you can find recommended questions and areas in the lesson plans.
+    These are done outside of Code Studio.
+  dashboard_assessments_none_part2: If you are teaching a middle or high school course,
+    we have assessment questions available as part of Code Studio to help your students
+    prepare for the AP test. To use these assessments, first assign the course to
+    your class and then pick the course from the drop down above and you'll see your
+    students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Surveys
@@ -795,7 +796,7 @@
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: "افزودن دانش آموز"
   dashboard_navigation_manage_students: "مدیریت دانش آموزان"
-  dashboard_navigation_lesson_plans_resources: "برنامه‌ها و منابع درس"
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: "مشاهده وضعیت"
   dashboard_navigation_section: "بخش: %{section_name}"
   dashboard_navigation_student: "دانش آموز: %{student_name}"
@@ -1905,3 +1906,42 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
+  dashboard_sections_table_pairing_allowed: Pair Programming
+  header_home: Home
+  header_courses: Courses
+  header_project_gallery: Project Gallery
+  header_sections: Sections
+  header_professional_learning: Professional Learning
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Elementary School
+  header_educate_middle: Middle School
+  header_educate_high: High School
+  header_educate_hoc: Hour of Code
+  header_educate_partner: Partner with Us
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspire a Student
+  header_educate_community: Online Community
+  header_educate_tools: Tools and Videos
+  header_about_us: About Us
+  header_about_leadership: Leadership
+  header_about_donors: Donors
+  header_about_partners: Partners
+  header_about_team: Full Team
+  header_about_news: Newsroom
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Contact Us
+  header_about_faqs: FAQs
+  header_learn: Learn
+  header_teach: Teach
+  header_stats: Stats
+  header_help_us: Help Us
+  header_about: About
+  header_teacher_community: Teacher community
+  header_help_support: 'Help and support '
+  header_report_bug: Report bug
+  header_tutorials: Tutorials
+  header_documentation: Documentation
+  csp_name: Computer Science Principles
+  csd_name: Computer Science Discoveries
+  full_course_category_name: Full Courses

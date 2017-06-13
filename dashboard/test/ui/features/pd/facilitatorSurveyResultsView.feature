@@ -1,5 +1,6 @@
 @dashboard_db_access
 @eyes
+@skip
 
 Feature: Basic appearance for Facilitator Survey UI
 
