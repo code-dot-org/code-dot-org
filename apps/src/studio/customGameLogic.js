@@ -1,5 +1,5 @@
 import api from './api';
-import * as codegen from '../codegen';
+import * as codegen from '../lib/tools/jsinterpreter/codegen';
 
 /**
  * Interface for a set of custom game logic for playlab
