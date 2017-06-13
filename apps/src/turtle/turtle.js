@@ -282,7 +282,7 @@ Artist.prototype.init = function (config) {
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
-  this.preloadAllStickerImages().then(() => {
+  return this.preloadAllStickerImages().then(() => {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AppView
