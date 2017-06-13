@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
-import SectionRow, { sectionShape } from './SectionRow';
+import SectionRow from './SectionRow';
+import { sectionShape, assignmentShape } from './shapes';
 
 const styles = {
   table: {
@@ -33,11 +34,16 @@ const styles = {
 
 export default class SectionTable extends Component {
   static propTypes = {
+    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
+    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
     sections: PropTypes.arrayOf(sectionShape).isRequired
   };
 
   render() {
-    const { sections } = this.props;
+    const { sections, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
+
     // TODO: i18n
     return (
       <table style={styles.table}>
@@ -81,7 +87,16 @@ export default class SectionTable extends Component {
             <th style={styles.headerRow}>
             </th>
           </tr>
-          {sections.map((s, index) => <SectionRow key={index} section={s}/>)}
+          {sections.map((s, index) => (
+            <SectionRow
+              key={index}
+              validLoginTypes={validLoginTypes}
+              validGrades={validGrades}
+              validCourses={validCourses}
+              validScripts={validScripts}
+              section={s}
+            />
+          ))}
         </tbody>
 
       </table>
