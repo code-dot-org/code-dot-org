@@ -1,4 +1,3 @@
-/* global CanvasPixelArray, Uint8ClampedArray */
 import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
 import * as utils from '../../../utils';
 
@@ -70,14 +69,6 @@ exports.workspaceCode = function (blockly) {
   var code = blockly.Generator.blockSpaceToCode('JavaScript', null, false);
   return exports.strip(code);
 };
-
-export function isCanvasImageData(nativeVar) {
-  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
-  if (typeof(Uint8ClampedArray) !== "undefined") {
-    return nativeVar instanceof Uint8ClampedArray;
-  }
-  return nativeVar instanceof CanvasPixelArray;
-}
 
 exports.createNativeFunctionFromInterpreterFunction = null;
 

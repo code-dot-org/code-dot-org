@@ -1,3 +1,5 @@
+/* global CanvasPixelArray */
+
 const Interpreter = require('@code-dot-org/js-interpreter');
 const codegen = require('../../../lib/tools/jsinterpreter/codegen');
 const CustomMarshaler = require('./CustomMarshaler');
@@ -10,6 +12,14 @@ function safeReadProperty(object, property) {
   try {
     return object[property];
   } catch (e) { }
+}
+
+function isCanvasImageData(nativeVar) {
+  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
+  if (typeof(Uint8ClampedArray) !== "undefined") {
+    return nativeVar instanceof Uint8ClampedArray;
+  }
+  return nativeVar instanceof CanvasPixelArray;
 }
 
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
@@ -460,7 +470,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         retVal.properties[i] = this.marshalNativeToInterpreter(nativeVar[i], null, maxDepth - 1);
       }
       retVal.length = nativeVar.length;
-    } else if (codegen.isCanvasImageData(nativeVar)) {
+    } else if (isCanvasImageData(nativeVar)) {
       // Special case for canvas image data - could expand to support TypedArray
       retVal = this.createObject(this.ARRAY);
       for (i = 0; i < nativeVar.length; i++) {
