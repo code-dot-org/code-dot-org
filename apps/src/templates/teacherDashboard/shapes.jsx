@@ -10,14 +10,16 @@ export const sectionShape = PropTypes.shape({
   pairingAllowed: PropTypes.bool.isRequired,
   numStudents: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
-  course_id: PropTypes.number,
-  script_id: PropTypes.number,
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
   assignmentName: PropTypes.string,
   assignmentPath: PropTypes.string
 });
 
 export const assignmentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
   category_priority: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   position: PropTypes.number,

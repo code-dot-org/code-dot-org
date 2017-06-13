@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
+import { assignments, currentAssignmentIndex } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -30,7 +32,7 @@ const styles = {
 /**
  * Our base buttons (Edit and delete).
  */
-const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
+export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
     <ProgressButton
       text={"Edit"}
@@ -56,7 +58,7 @@ EditOrDelete.propTypes = {
 /**
  * Buttons for confirming whether or not we want to delete a section
  */
-const ConfirmDelete = ({onClickYes, onClickNo}) => (
+export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
     <div>Delete?</div>
     <ProgressButton
@@ -80,7 +82,7 @@ ConfirmDelete.propTypes = {
 /**
  * Buttons for committing or canceling a save.
  */
-const ConfirmSave = ({onClickSave, onCancel}) => (
+export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
     <ProgressButton
       text={i18n.save()}
@@ -104,13 +106,16 @@ ConfirmSave.propTypes = {
  * A component for displaying and editing information about a particular section
  * in the teacher dashboard.
  */
-export default class SectionRow extends Component {
+class SectionRow extends Component {
   static propTypes = {
+    sectionId: PropTypes.number.isRequired,
+
+    // redux provided
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
-    section: sectionShape.isRequired
+    validAssignments: PropTypes.arrayOf(assignmentShape).isRequired,
+    currentAssignmentIndex: PropTypes.number,
+    section: sectionShape.isRequired,
   };
 
   state = {
@@ -133,8 +138,16 @@ export default class SectionRow extends Component {
 
   onClickEditCancel = () => this.setState({editing: false});
 
+  onClickPrintCerts = () => console.log('print certificates here');
+
   render() {
-    const { section, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
+    const {
+      section,
+      validLoginTypes,
+      validGrades,
+      validAssignments,
+      currentAssignmentIndex
+    } = this.props;
     const { editing, deleting } = this.state;
 
     return (
@@ -180,10 +193,8 @@ export default class SectionRow extends Component {
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              courseId={section.course_id}
-              scriptId={section.script_id}
-              validCourses={validCourses}
-              validScripts={validScripts}
+              currentAssignmentIndex={currentAssignmentIndex}
+              assignments={validAssignments}
             />
           )}
         </td>
@@ -227,13 +238,23 @@ export default class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-           <ProgressButton
-             text={"Print Certificates"}
-             onClick={() => console.log('print certificates here')}
-             color={ProgressButton.ButtonColor.gray}
-           />
+          <ProgressButton
+            text={"Print Certificates"}
+            onClick={this.onClickPrintCerts}
+            color={ProgressButton.ButtonColor.gray}
+          />
         </td>
       </tr>
     );
   }
 }
+
+export const UnconnectedSectionRow = SectionRow;
+
+export default connect((state, ownProps) => ({
+  validLoginTypes: state.teacherSections.validLoginTypes,
+  validGrades: state.teacherSections.validGrades,
+  validAssignments: assignments(state.teacherSections),
+  currentAssignmentIndex: currentAssignmentIndex(state.teacherSections, ownProps.sectionId),
+  section: state.teacherSections.sections[ownProps.sectionId],
+}))(SectionRow);
