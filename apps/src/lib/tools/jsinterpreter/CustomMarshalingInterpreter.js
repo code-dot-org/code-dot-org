@@ -18,6 +18,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       if (!(customMarshaler instanceof CustomMarshaler)) {
         throw new Error("You must provide a CustomMarshaler to CustomMarshalingInterpreter");
       }
+      thisInterpreter.asyncFunctionList = [];
       thisInterpreter.customMarshaler = customMarshaler;
       thisInterpreter.globalScope = scope;
       if (opt_initFunc) {
@@ -472,7 +473,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         nativeFunc: nativeVar,
         nativeParentObj: nativeParentObj,
       };
-      if (codegen.asyncFunctionList.indexOf(nativeVar) !== -1) {
+      if (this.asyncFunctionList.indexOf(nativeVar) !== -1) {
         // Mark if this should be nativeIsAsync:
         makeNativeOpts.nativeIsAsync = true;
       }
@@ -516,11 +517,13 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    *
    * @param code {string} - the code to evaluation
    * @param globals {Object} - An object of globals to be added to the scope of code being executed
-   * @param legacy {boolean} - If true, code will be run natively via an eval-like method,
+   * @param {Object} opts - Additional options to control behavior
+   * @param {Array} opts.asyncFunctionList - list of functions to treat asynchronously
+   * @param {boolean} opts.legacy - If true, code will be run natively via an eval-like method,
    *     otherwise it will use the js interpreter.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, globals, legacy) {
+  static evalWith(code, globals, {asyncFunctionList, legacy}={}) {
     if (legacy) {
       // execute JS code "natively"
       var params = [];
@@ -540,6 +543,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         `(function () { ${code} })()`,
         new CustomMarshaler({}),
         (interpreter, scope) => {
+          interpreter.asyncFunctionList = asyncFunctionList || [];
           interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
         }
       );

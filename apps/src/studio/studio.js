@@ -2684,7 +2684,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
       var resultBoolean = CustomMarshalingInterpreter.evalWith(defCode + '; return' + exampleCode, {
         Studio: api,
         Globals: Studio.Globals
-      }, true);
+      }, {legacy: true});
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2952,7 +2952,7 @@ var defineProcedures = function (blockType) {
     CustomMarshalingInterpreter.evalWith(code, {
       Studio: api,
       Globals: Studio.Globals
-    }, true);
+    }, {legacy: true});
   } catch (e) { }
 };
 

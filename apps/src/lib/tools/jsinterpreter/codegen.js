@@ -14,8 +14,6 @@ exports.ForStatementMode = {
   UPDATE: 3
 };
 
-exports.asyncFunctionList = [];
-
 //
 // Blockly specific codegen functions:
 //

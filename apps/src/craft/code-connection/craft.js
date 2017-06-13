@@ -218,7 +218,11 @@ export const executeUserCode = function (client, code) {
 
   // Register async methods
   codegen.asyncFunctionList = Object.values(asyncMethods);
-  interpreter = CustomMarshalingInterpreter.evalWith(code, Object.assign(asyncMethods, methods));
+  interpreter = CustomMarshalingInterpreter.evalWith(
+    code,
+    Object.assign(asyncMethods, methods),
+    {asyncFunctionList: asyncMethods}
+  );
 };
 
 export default class Craft {
