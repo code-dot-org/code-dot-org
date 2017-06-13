@@ -960,7 +960,7 @@ export default class JSInterpreter {
         return new Error(err);
       }
     }
-    return codegen.marshalInterpreterToNative(this.interpreter, value);
+    return this.interpreter.marshalInterpreterToNative(value);
   }
 
   /**

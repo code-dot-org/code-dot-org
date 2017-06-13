@@ -3,6 +3,7 @@ import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/configuredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
+import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import {makeAssertableObj, attachAssertToInterpreter} from './interpreterTestUtils';
 
 describe("The CustomMarshalingInterpreter", () => {
@@ -725,6 +726,50 @@ describe("The CustomMarshalingInterpreter", () => {
         expect(window.nativeAdd).to.have.been.calledWith(3,2);
       });
 
+    });
+  });
+
+  describe("marshalInterpreterToNative", () => {
+    let interpreter;
+    function evalExpression(expression) {
+      interpreter = new CustomMarshalingInterpreter(
+        `var result = ${expression};`,
+        new CustomMarshaler({})
+      );
+      interpreter.run();
+      return interpreter.marshalInterpreterToNative(interpreter.getValueFromScope('result'));
+    }
+
+    it("correctly marshals arrays", () => {
+      expect(evalExpression(`["one", 2, ["three"]]`)).to.deep.equal(["one", 2, ["three"]]);
+    });
+
+    it("correctly marshals objects", () => {
+      expect(evalExpression(`{one: 1, two: "two", three: {four: 4}}`)).to.deep.equal(
+        {one: 1, two: "two", three: {four: 4}}
+      );
+    });
+
+    it("marshals functions by delegating to codegen.createNativeFunctionFromInterpreterFunction", () => {
+      codegen.createNativeFunctionFromInterpreterFunction = sinon.stub().returns('foo');
+      expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal('foo');
+      expect(codegen.createNativeFunctionFromInterpreterFunction).to.have.been.calledOnce;
+      delete codegen.createNativeFunctionFromInterpreterFunction;
+    });
+
+    it("marshals functions by doing nothing when codegen.createNativeFunctionFromInterpreterFunction is not set", () => {
+      expect(codegen.createNativeFunctionFromInterpreterFunction).to.be.undefined;
+      expect(evalExpression(`function (a,b) { return a+b; }`))
+        .to.equal(interpreter.getValueFromScope('result'));
+    });
+
+    it("throws an error if you try to give it something it does not understand", () => {
+      const interpreter = new CustomMarshalingInterpreter(
+        ``,
+        new CustomMarshaler({})
+      );
+      expect(() => interpreter.marshalInterpreterToNative({notAnInterpreterObject: true}))
+        .to.throw("Can't marshal type object");
     });
   });
 

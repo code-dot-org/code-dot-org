@@ -206,12 +206,12 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
-        obj.data[name] = codegen.marshalInterpreterToNative(this, value);
+        obj.data[name] = this.marshalInterpreterToNative(value);
       }
     } else {
       const nativeParent = this.getNativeParent_(obj, name);
       if (nativeParent) {
-        nativeParent[name] = codegen.marshalInterpreterToNative(this, value);
+        nativeParent[name] = this.marshalInterpreterToNative(value);
       } else {
         return super.setProperty(obj, name, value, opt_descriptor);
       }
@@ -383,7 +383,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
           currentCallback = callback;
         }));
         interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
-          lastReturnValue = codegen.marshalInterpreterToNative(interpreter, returnValue);
+          lastReturnValue = interpreter.marshalInterpreterToNative(returnValue);
         }));
       }
     );
@@ -549,6 +549,37 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       );
       interpreter.run();
       return interpreter;
+    }
+  }
+
+  marshalInterpreterToNative(interpreterVar) {
+    if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
+      return interpreterVar.data;
+    } else if (this.isa(interpreterVar, this.ARRAY)) {
+      var nativeArray = [];
+      nativeArray.length = interpreterVar.length;
+      for (var i = 0; i < nativeArray.length; i++) {
+        nativeArray[i] = this.marshalInterpreterToNative(interpreterVar.properties[i]);
+      }
+      return nativeArray;
+    } else if (this.isa(interpreterVar, this.OBJECT) ||
+               interpreterVar.type === 'object') {
+      var nativeObject = {};
+      for (var prop in interpreterVar.properties) {
+        nativeObject[prop] = this.marshalInterpreterToNative(interpreterVar.properties[prop]);
+      }
+      return nativeObject;
+    } else if (this.isa(interpreterVar, this.FUNCTION)) {
+      if (codegen.createNativeFunctionFromInterpreterFunction) {
+        return codegen.createNativeFunctionFromInterpreterFunction(interpreterVar);
+      } else {
+        // Just return the interpreter object if we can't convert it. This is needed
+        // for passing interpreter callback functions into native.
+
+        return interpreterVar;
+      }
+    } else {
+      throw new Error("Can't marshal type " + typeof interpreterVar);
     }
   }
 

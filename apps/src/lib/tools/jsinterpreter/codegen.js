@@ -81,39 +81,6 @@ export function isCanvasImageData(nativeVar) {
 
 exports.createNativeFunctionFromInterpreterFunction = null;
 
-exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
-  if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
-    return interpreterVar.data;
-  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
-    var nativeArray = [];
-    nativeArray.length = interpreterVar.length;
-    for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
-                                                          interpreterVar.properties[i]);
-    }
-    return nativeArray;
-  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT) ||
-             interpreterVar.type === 'object') {
-    var nativeObject = {};
-    for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
-                                                              interpreterVar.properties[prop]);
-    }
-    return nativeObject;
-  } else if (interpreter.isa(interpreterVar, interpreter.FUNCTION)) {
-    if (exports.createNativeFunctionFromInterpreterFunction) {
-      return exports.createNativeFunctionFromInterpreterFunction(interpreterVar);
-    } else {
-      // Just return the interpreter object if we can't convert it. This is needed
-      // for passing interpreter callback functions into native.
-
-      return interpreterVar;
-    }
-  } else {
-    throw "Can't marshal type " + typeof interpreterVar;
-  }
-};
-
 /**
  * Generate a function wrapper for an interpreter async function callback.
  * The interpreter async function callback takes a single parameter, which
@@ -232,7 +199,7 @@ export function makeNativeMemberFunction(opts) {
           // marshal these differently:
           nativeArgs[i] = createNativeInterpreterCallback(opts, args[i]);
         } else {
-          nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, args[i]);
+          nativeArgs[i] = interpreter.marshalInterpreterToNative(args[i]);
         }
       }
     }
