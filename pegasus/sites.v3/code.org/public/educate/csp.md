@@ -5,7 +5,7 @@ video_player: true
 theme: responsive
 ---
 
-# Computer Science Principles #
+# Computer Science Principles &nbsp;&nbsp; [<button style="margin-top:0;">View course</button>](https://studio.code.org/courses/csp)
 
 
 ## <a name="whatis"></a>What is CS Principles?

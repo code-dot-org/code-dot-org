@@ -5,7 +5,7 @@ video_player: true
 theme: responsive
 ---
 
-# Our newest course: CS Discoveries #
+# Our newest course: CS Discoveries &nbsp;&nbsp; [<button style="margin-top:0;">View course</button>](https://studio.code.org/courses/csd)
 
 ## <a name="what"></a>What is CS Discoveries?
 
