@@ -1,8 +1,8 @@
-import {expect, assert} from '../util/configuredChai';
+import {expect, assert} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 describe("The JSInterpreter class", function () {
   var jsInterpreter;
@@ -28,7 +28,7 @@ describe("The JSInterpreter class", function () {
   }
 
   function assertCurrentState(expected) {
-    var state = jsInterpreter.interpreter.stateStack[jsInterpreter.interpreter.stateStack.length - 1];
+    var state = jsInterpreter.interpreter.peekStackFrame();
     assert.containSubset(state, expected);
   }
 
@@ -327,6 +327,42 @@ myCallback("this message is coming from inside the interpreter");
       }
       return interpreterValue.toNumber();
     }
+
+    describe("When executed while logExecution=true", () => {
+      beforeEach(() => {
+        jsInterpreter.logExecution = true;
+        jsInterpreter.parse({code:`
+          var incrementor = {
+            value: 1,
+            next: function () { this.value++; }
+          };
+          function add(a) {
+            for (var j = 0; j < a; j++) {
+              incrementor.next();
+            }
+          }
+          add(3);
+        `});
+        jsInterpreter.executeInterpreter(true);
+      });
+
+      it("will populate the execution log with function calls and for loops", () => {
+        expect(jsInterpreter.executionLog).to.deep.equal([
+          'add:1',
+          '[forInit]',
+          '[forTest]',
+          'incrementor.next:0',
+          '[forUpdate]',
+          '[forTest]',
+          'incrementor.next:0',
+          '[forUpdate]',
+          '[forTest]',
+          'incrementor.next:0',
+          '[forUpdate]',
+          '[forTest]',
+        ]);
+      });
+    });
 
     describe("When executed while breakpoints are set", () => {
       beforeEach(() => {
