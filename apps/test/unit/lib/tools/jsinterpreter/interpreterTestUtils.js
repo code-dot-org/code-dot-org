@@ -1,4 +1,4 @@
-import * as codegen from '@cdo/apps/codegen';
+import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 

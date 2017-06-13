@@ -126,7 +126,7 @@ export function setupApp(appOptions) {
         // the contained level id
         const levelId = (appOptions.hasContainedLevels && !appOptions.level.edit_blocks) ?
           getContainedLevelId() :
-          appOptions.serverLevelId;
+          (appOptions.serverProjectLevelId || appOptions.serverLevelId);
         clientState.writeSourceForLevel(appOptions.scriptName, levelId,
             +new Date(), lastSavedProgram);
       }
@@ -149,8 +149,11 @@ export function setupApp(appOptions) {
     onComplete: function (response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
-        clientState.writeSourceForLevel(appOptions.scriptName,
-            appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        clientState.writeSourceForLevel(
+            appOptions.scriptName,
+            appOptions.serverProjectLevelId || appOptions.serverLevelId,
+            response.timestamp,
+            lastSavedProgram);
       }
     },
     onResetPressed: function () {
@@ -261,7 +264,7 @@ function loadAppAsync(appOptions) {
         // Load the locally-cached last attempt (if one exists)
         appOptions.level.lastAttempt = clientState.sourceForLevel(
           appOptions.scriptName,
-          appOptions.serverLevelId
+          appOptions.serverProjectLevelId || appOptions.serverLevelId
         );
 
         resolve(appOptions);
@@ -354,7 +357,7 @@ function loadAppAsync(appOptions) {
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else if (window.dashboard && project) {
+    } else {
       project.load().then(function () {
         if (project.hideBecauseAbusive()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
@@ -365,8 +368,6 @@ function loadAppAsync(appOptions) {
           return $.Deferred().reject();
         }
       }).then(() => resolve(appOptions));
-    } else {
-      loadLastAttemptFromSessionStorage();
     }
   });
 }

@@ -98,7 +98,7 @@ stage 'Going Places Safely'
 level 'GoingPlacesSafely'
 
 stage 'Loops: Happy Loops'
-level 'gradeK_unplugged_loops'
+level 'courseA_unplugged_loops'
 
 stage 'Loops in Collector'
 level 'courseAB_video_collector'
