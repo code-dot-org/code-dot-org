@@ -5419,10 +5419,12 @@ en:
               name: Wednesday
             Thursday:
               name: Thursday
+            Welcome:
+              name: Welcome
           title: CS Discoveries TeacherCon - Novice Facilitators Reflection
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: Reflection questions for novice facilitators at TeacherCon.
+          description: 'A place for CS Discoveries Novice facilitators to collect their thoughts during TeacherCon. '
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:

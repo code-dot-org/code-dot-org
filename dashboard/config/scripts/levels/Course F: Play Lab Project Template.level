@@ -43,10 +43,13 @@
     "sprites_hidden_to_start": "true",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "This is the final project level template for Course F",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 22:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -185,9 +188,17 @@
               </block>
             </value>
           </block>
-          <block type="studio_setSpriteSize">
-            <title name="SPRITE">0</title>
-            <title name="VALUE">Studio.SpriteSize.NORMAL</title>
+          <block type="studio_setSpriteSizeParams" inline="true">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
           </block>
           <block type="studio_playSound">
             <title name="SOUND">hit</title>
@@ -218,6 +229,10 @@
               </block>
             </value>
           </block>
+          <block type="studio_ask">
+            <title name="TEXT"/>
+            <title name="VAR">answer</title>
+          </block>
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">
               <block type="text">
@@ -234,9 +249,14 @@
             <title name="TITLE">type title here</title>
             <title name="TEXT">type text here</title>
           </block>
-          <block type="studio_setSpriteEmotion">
-            <title name="SPRITE">0</title>
+          <block type="text_join_simple" inline="false" inputcount="2"/>
+          <block type="studio_setSpriteEmotionParams" inline="true">
             <title name="VALUE">0</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
           </block>
           <block type="studio_vanishSprite" inline="true">
             <value name="SPRITE">
@@ -272,6 +292,47 @@
             <value name="SPEED">
               <block type="math_number">
                 <title name="NUM">5</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setSpriteBehavior" inline="true">
+            <title name="VALUE">"chase"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TARGETSPRITE">
+              <block type="math_number">
+                <title name="NUM">2</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setSpriteXY" inline="true">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="XPOS">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+            <value name="YPOS">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setMap">
+            <title name="VALUE">random</title>
+          </block>
+          <block type="studio_setMapAndColor" inline="true">
+            <title name="VALUE">random</title>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
@@ -370,6 +431,72 @@
           <block type="logic_boolean">
             <title name="BOOL">TRUE</title>
           </block>
+          <block type="studio_ifActorHasEmotionParams" inline="true">
+            <title name="EMOTION">1</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorPositionParams" inline="true">
+            <title name="POSITION">x</title>
+            <title name="OPERATOR">EQ</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsVisibleParams" inline="true">
+            <title name="VISIBILITY">false</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsSpriteParams" inline="true">
+            <title name="VALUE">"witch"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorHasEmotionElseParams" inline="true">
+            <title name="EMOTION">1</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorPositionElseParams" inline="true">
+            <title name="POSITION">x</title>
+            <title name="OPERATOR">EQ</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsVisibleElseParams" inline="true">
+            <title name="VISIBILITY">false</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsSpriteElseParams" inline="true">
+            <title name="VALUE">"witch"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn" inline="false">
@@ -385,14 +512,7 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
-        <category name="Input">
-          <block type="studio_ask">
-            <title name="TEXT"/>
-            <title name="VAR">i</title>
-          </block>
-        </category>
+        <category name="Variables" custom="VARIABLE"/>
         <category name="Games/Score">
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">
@@ -439,6 +559,22 @@
           </block>
           <block type="studio_endGame">
             <title name="VALUE">win</title>
+          </block>
+          <block type="studio_getScore"/>
+          <block type="controls_if" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" inline="true" movable="false">
+                <title name="OP">EQ</title>
+                <value name="A">
+                  <block type="studio_getScore" movable="false"/>
+                </value>
+                <value name="B">
+                  <block type="math_number" movable="false">
+                    <title name="NUM">5</title>
+                  </block>
+                </value>
+              </block>
+            </value>
           </block>
         </category>
       </xml>
