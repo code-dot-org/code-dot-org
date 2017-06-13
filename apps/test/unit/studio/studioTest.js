@@ -12,6 +12,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 const STUDIO_WIDTH = 400;
@@ -73,9 +74,9 @@ describe('studio', function () {
     it('maxes out for long strings', function () {
       const size = setSvgText(Object.assign({}, opts, {
         text: 'We hold these truths to be self-evident, that all people are ' +
-          'created equal, that they are endowed by their Creator with ' +
-          'certain unalienable Rights, that among these are Life, Liberty ' +
-          'and the pursuit of Happiness.',
+              'created equal, that they are endowed by their Creator with ' +
+              'certain unalienable Rights, that among these are Life, Liberty ' +
+              'and the pursuit of Happiness.',
       }));
       expect(size.height).to.equal(opts.fullHeight);
       expect(size.width).to.equal(opts.maxWidth);
@@ -84,8 +85,8 @@ describe('studio', function () {
     it('increases width to less than maxWidth for medium strings', function () {
       const size = setSvgText(Object.assign({}, opts, {
         text: 'Arma virumque cano, Troiae qui primus ab oris' +
-          'Italiam, fato profugus, Laviniaque venit' +
-          'litora, multum ille et terris iactatus et alto',
+              'Italiam, fato profugus, Laviniaque venit' +
+              'litora, multum ille et terris iactatus et alto',
       }));
       expect(size.width).to.be.above(opts.width);
       expect(size.width).to.be.below(opts.maxWidth);
@@ -95,14 +96,14 @@ describe('studio', function () {
   describe('calculateBubblePosition', function () {
     it('positions a small bubble on the top right', function () {
       const position = calculateBubblePosition({
-          x: 150,
-          y: 100,
-          height: 50,
-          width: 50,
-        },
-        40 /* bubbleHeight */,
-        180 /* bubbleWidth */,
-        STUDIO_WIDTH);
+        x: 150,
+        y: 100,
+        height: 50,
+        width: 50,
+      },
+                                               40 /* bubbleHeight */,
+                                               180 /* bubbleWidth */,
+                                               STUDIO_WIDTH);
 
       expect(position.onTop).to.be.true;
       expect(position.onRight).to.be.true;
@@ -118,9 +119,9 @@ describe('studio', function () {
         height: 50,
         width: 50,
       },
-      40 /* bubbleHeight */,
-      180 /* bubbleWidth */,
-      STUDIO_WIDTH);
+                                               40 /* bubbleHeight */,
+                                               180 /* bubbleWidth */,
+                                               STUDIO_WIDTH);
 
       expect(position.onTop).to.be.true;
       expect(position.onRight).to.be.false;
@@ -131,14 +132,14 @@ describe('studio', function () {
 
     it('positions a small bubble on the botom right', function () {
       const position = calculateBubblePosition({
-          x: 150,
-          y: 0,
-          height: 50,
-          width: 50,
-        },
-        40 /* bubbleHeight */,
-        180 /* bubbleWidth */,
-        STUDIO_WIDTH);
+        x: 150,
+        y: 0,
+        height: 50,
+        width: 50,
+      },
+                                               40 /* bubbleHeight */,
+                                               180 /* bubbleWidth */,
+                                               STUDIO_WIDTH);
 
       expect(position.onTop).to.be.false;
       expect(position.onRight).to.be.true;
@@ -149,14 +150,14 @@ describe('studio', function () {
 
     it('positions a small bubble on the botom left', function () {
       const position = calculateBubblePosition({
-          x: 250,
-          y: 0,
-          height: 50,
-          width: 50,
-        },
-        40 /* bubbleHeight */,
-        180 /* bubbleWidth */,
-        STUDIO_WIDTH);
+        x: 250,
+        y: 0,
+        height: 50,
+        width: 50,
+      },
+                                               40 /* bubbleHeight */,
+                                               180 /* bubbleWidth */,
+                                               STUDIO_WIDTH);
 
       expect(position.onTop).to.be.false;
       expect(position.onRight).to.be.false;
@@ -179,7 +180,7 @@ describe('studio', function () {
         STUDIO_WIDTH);
 
       expect(SPEECH_BUBBLE_SIDE_MARGIN + position.tipOffset).to.equal(
-          sprite.x + SPEECH_BUBBLE_H_OFFSET);
+        sprite.x + SPEECH_BUBBLE_H_OFFSET);
       expect(position.xSpeech).to.equal(10);
       expect(position.ySpeech).to.be.above(0);
     });
@@ -198,7 +199,7 @@ describe('studio', function () {
         STUDIO_WIDTH);
 
       expect(SPEECH_BUBBLE_SIDE_MARGIN + position.tipOffset).to.equal(
-          STUDIO_WIDTH - sprite.width - sprite.x + SPEECH_BUBBLE_H_OFFSET);
+        STUDIO_WIDTH - sprite.width - sprite.x + SPEECH_BUBBLE_H_OFFSET);
       expect(position.xSpeech).to.equal(10);
       expect(position.ySpeech).to.be.below(250);
     });
@@ -369,7 +370,7 @@ describe('studio', function () {
       Studio.prepareForRemix();
       const newDom = parseElement(newXml);
       expect(newDom.querySelector('block[type="when_run"]')
-          .getAttribute('uservisible')).to.not.equal("false");
+                   .getAttribute('uservisible')).to.not.equal("false");
     });
   });
 
@@ -432,7 +433,7 @@ describe('studio', function () {
   describe("queueCallback method", () => {
     let cb, interpreterFunc, someHook;
     beforeEach(() => {
-      const {hooks, interpreter} = codegen.evalWithEvents(
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
         {
           someGlobal: 1,
         }, {

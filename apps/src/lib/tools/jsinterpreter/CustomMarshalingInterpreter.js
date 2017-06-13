@@ -325,4 +325,60 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     this.popStackFrame();
   }
 
+  /**
+   * Generate code for each of the given events, and evaluate it using the
+   * provided APIs as context. Note that this does not currently support custom marshaling.
+   *
+   * @param {Object} apis - Context to be set as globals in the interpreted runtime.
+   * @param {Object} events - Mapping of hook names to the corresponding handler code.
+   *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
+   * @param {string} [evalCode] - Optional extra code to evaluate.
+   * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
+   *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
+   */
+  static evalWithEvents(apis, events, evalCode = '') {
+    let interpreter, currentCallback, lastReturnValue;
+    const hooks = [];
+
+    Object.keys(events).forEach(event => {
+      let {code, args} = events[event];
+      if (typeof code === 'string') {
+        code = [code];
+      }
+      code.forEach((c, index) => {
+        const eventId = `${event}-${index}`;
+        // Create a hook that triggers an event inside the interpreter.
+        hooks.push({name: event, func: (...args) => {
+          const eventArgs = {name: eventId, args};
+          currentCallback(codegen.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
+          interpreter.run();
+          return lastReturnValue;
+        }});
+        evalCode += `this['${eventId}']=function(${args ? args.join() : ''}){${c}};`;
+      });
+    });
+
+    // The event loop pauses the interpreter until the native async function
+    // `currentCallback` returns a value. The value contains the name of the event
+    // to call, and any arguments.
+    const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
+
+    interpreter = new CustomMarshalingInterpreter(
+      evalCode + eventLoop,
+      new CustomMarshaler({}),
+      (interpreter, scope) => {
+        codegen.marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
+        interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+          currentCallback = callback;
+        }));
+        interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
+          lastReturnValue = codegen.marshalInterpreterToNative(interpreter, returnValue);
+        }));
+      }
+    );
+    interpreter.run();
+
+    return {hooks, interpreter};
+  }
+
 };
