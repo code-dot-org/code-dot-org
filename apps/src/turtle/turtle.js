@@ -202,6 +202,32 @@ Artist.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
+ * Initializes all sticker images as defined in this.skin.stickers, storing the
+ * created images in this.stickers.
+ *
+ * NOTE: initializes this.stickers as a side effect
+ *
+ * @return {Promise} that resolves once all images have finished loading,
+ *         whether they did so successfully or not.
+ */
+Artist.prototype.preloadAllStickerImages = function () {
+  this.stickers = {};
+
+  const loadSticker = name => new Promise(resolve => {
+    const img = new Image();
+
+    img.onload = () => resolve();
+    img.onerror = () => resolve();
+
+    img.src = this.skin.stickers[name];
+    this.stickers[name] = img;
+  });
+
+  const stickerNames = Object.keys(this.skin.stickers);
+  return Promise.all(stickerNames.map(loadSticker));
+};
+
+/**
  * Initialize Blockly and the turtle.  Called on page load.
  */
 Artist.prototype.init = function (config) {
@@ -212,14 +238,7 @@ Artist.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  // Preload sticker images
-  this.stickers = {};
-  for (var name in this.skin.stickers) {
-    var img = new Image();
-    img.src = this.skin.stickers[name];
-
-    this.stickers[name] = img;
-  }
+  const stickersLoaded = this.preloadAllStickerImages();
 
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // let's try adding a background image
@@ -258,15 +277,17 @@ Artist.prototype.init = function (config) {
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={visualizationColumn}
-        onMount={this.studioApp_.init.bind(this.studioApp_, config)}
-      />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  stickersLoaded.then(() => {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    );
+  });
 };
 
 /**
