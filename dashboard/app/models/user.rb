@@ -127,9 +127,10 @@ class User < ActiveRecord::Base
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'.freeze
-  TYPE_TEACHER = 'teacher'.freeze
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = 'student'.freeze,
+    TYPE_TEACHER = 'teacher'.freeze
+  ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
