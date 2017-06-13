@@ -6,14 +6,15 @@ import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
   setValidCourses,
-  setValidScripts
+  setValidScripts,
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sections = [
   {
     id: 11,
-    course_id: 29,
-    script_id: null,
+    courseId: 29,
+    scriptId: null,
     name: "brent_section",
     loginType: "word",
     grade: null,
@@ -26,8 +27,8 @@ const sections = [
   },
   {
     id: 12,
-    course_id: null,
-    script_id: 36,
+    courseId: null,
+    scriptId: 36,
     name: "section2",
     loginType: "picture",
     grade: "11",
@@ -40,8 +41,8 @@ const sections = [
   },
   {
     id: 307,
-    course_id: null,
-    script_id: 46,
+    courseId: null,
+    scriptId: 46,
     name: "plc",
     loginType: "email",
     grade: "10",
@@ -135,11 +136,10 @@ export default storybook => {
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
           store.dispatch(setValidCourses(validCourses));
           store.dispatch(setValidScripts(validScripts));
+          store.dispatch(setSections(sections));
           return (
             <Provider store={store}>
-              <SectionTable
-                sections={sections}
-              />
+              <SectionTable/>
             </Provider>
           );
         }

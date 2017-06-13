@@ -13,7 +13,8 @@ import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
   setValidCourses,
-  setValidScripts
+  setValidScripts,
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
@@ -58,6 +59,7 @@ function renderSectionsTable(sections) {
   store.dispatch(setValidGrades(data.valid_grades));
   store.dispatch(setValidCourses(data.valid_courses));
   store.dispatch(setValidScripts(data.valid_scripts));
+  store.dispatch(setSections(sections));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -267,8 +269,8 @@ function main() {
           pairingAllowed: s.pairing_allowed,
           numStudents: s.students.length,
           code: s.code,
-          course_id: s.course_id,
-          script_id: s.script ? s.script.id : null,
+          courseId: s.course_id,
+          scriptId: s.script ? s.script.id : null,
           assignmentName: $scope.getName(s),
           assignmentPath: $scope.getPath(s)
         })));
