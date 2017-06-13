@@ -201,6 +201,7 @@
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "markdown_instructions": "# Animate the Satellite\r\n\r\nNow you are ready for the final piece of the drawing: making the satellite circle the moon.\r\n\r\n#Do This\r\n\r\nUse `setSpeed()` and `getDirection()` to make the satellite circle the moon. ",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

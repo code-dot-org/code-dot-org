@@ -133,7 +133,7 @@ describe('functional_cond_number', function () {
     //   else { return   3; }
     // })()
 
-    var codegen = require('@cdo/apps/codegen');
+    var codegen = require('@cdo/apps/lib/tools/jsinterpreter/codegen');
     var result = codegen.evalWith('return ' + code, {}, true);
     assert(result === 3);
   });

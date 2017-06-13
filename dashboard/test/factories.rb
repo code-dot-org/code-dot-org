@@ -4,10 +4,12 @@ FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :course_script do
   end
+
   factory :course do
     name "my-course-name"
     properties nil
   end
+
   factory :experiment do
     name "fancyFeature"
 
@@ -28,10 +30,12 @@ FactoryGirl.define do
       type "SingleUserExperiment"
     end
   end
+
   factory :section_hidden_stage do
-    section nil
-    stage nil
+    section
+    stage
   end
+
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
@@ -118,23 +122,21 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
-    end
 
-    factory :young_student do
-      user_type User::TYPE_STUDENT
-      birthday Time.zone.today - 10.years
-    end
+      factory :young_student do
+        birthday Time.zone.today - 10.years
 
-    factory :young_student_with_tos_teacher do
-      after(:create) do |user|
-        section = create(:section, user: create(:terms_of_service_teacher))
-        create(:follower, section: section, student_user: user)
+        factory :young_student_with_tos_teacher do
+          after(:create) do |user|
+            section = create(:section, user: create(:terms_of_service_teacher))
+            create(:follower, section: section, student_user: user)
+          end
+        end
       end
-    end
 
-    factory :old_student do
-      user_type User::TYPE_STUDENT
-      birthday Time.zone.today - 30.years
+      factory :old_student do
+        birthday Time.zone.today - 30.years
+      end
     end
 
     trait :with_puzzles do
@@ -151,8 +153,8 @@ FactoryGirl.define do
   end
 
   factory :districts_users do
-    district nil
-    user nil
+    district
+    user
   end
 
   factory :section do
@@ -720,6 +722,50 @@ FactoryGirl.define do
         subjectsTaught: ["Science"],
         csYearsTaught: "1",
         liabilityWaiver: ["Yes"]
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_teachercon_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        "personalLearningNeedsMet": "Strongly Agree",
+        "haveIdeasAboutFormative": "Strongly Disagree",
+        "haveIdeasAboutSummative": "Disagree",
+        "haveConcreteIdeas": "Slightly Disagree",
+        "toolsWillHelp": "Slightly Agree",
+        "learnedEnoughToMoveForward": "Agree",
+        "feelConfidentUsingMaterials": "Strongly Agree",
+        "feelConfidentCanHelpStudents": "Agree",
+        "havePlan": "Slightly Agree",
+        "feelComfortableLeading": "Slightly Disagree",
+        "haveLessAnxiety": "Disagree",
+        "whatHelpedMost": "helped learn most",
+        "whatDetracted": "detracted",
+        "receivedClearCommunication": "Strongly Agree",
+        "venueFeedback": "venue feedback",
+        "knowWhereToGoForHelp": "Strongly Disagree",
+        "suitableForMyExperience": "Disagree",
+        "practicingTeachingHelped": "Slightly Disagree",
+        "seeingOthersTeachHelped": "Slightly Agree",
+        "facilitatorsPresentedInformationClearly": "Agree",
+        "facilitatorsProvidedFeedback": "Strongly Agree",
+        "feltComfortableAskingQuestions": "Agree",
+        "morePreparedThanBefore": "Slightly Agree",
+        "lookForwardToContinuing": "Slightly Disagree",
+        "partOfCommunity": "Disagree",
+        "allStudentsShouldTake": "Strongly Disagree",
+        "wouldRecommend": "Disagree",
+        "bestPdEver": "Slightly Disagree",
+        "howMuchParticipated": "A tremendous amount",
+        "howOftenLostTrackOfTime": "Almost always",
+        "howHappyAfter": "Extremely happy",
+        "howExcitedBefore": "Extremely excited",
+        "facilitatorsDidWell": "facilitators did well",
+        "facilitatorsCouldImprove": "facilitators could improve",
+        "likedMost": "liked most",
+        "wouldChange": "would change",
+        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name."
       }.stringify_keys
     end
   end

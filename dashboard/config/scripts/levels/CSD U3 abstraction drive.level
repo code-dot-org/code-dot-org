@@ -204,6 +204,7 @@
     "hide_animation_mode": "false",
     "project_template_level_name": "CSD U3 abstraction race template",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

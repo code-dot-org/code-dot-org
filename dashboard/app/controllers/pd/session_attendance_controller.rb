@@ -26,8 +26,8 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user, enrollment: enrollment
-    attendance.update! marked_by_user: nil
+    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
+    attendance.update! marked_by_user: nil, enrollment: enrollment
     render_confirmation
   end
 
@@ -44,8 +44,8 @@ class Pd::SessionAttendanceController < ApplicationController
     end
 
     enrollment.update!(user: current_user)
-    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user, enrollment: enrollment
-    attendance.update! marked_by_user: nil
+    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
+    attendance.update! marked_by_user: nil, enrollment: enrollment
 
     if current_user.student?
       if User.hash_email(enrollment.email) == current_user.hashed_email

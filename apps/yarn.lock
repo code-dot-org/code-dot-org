@@ -2538,6 +2538,10 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
+"details-element-polyfill@https://github.com/javan/details-element-polyfill":
+  version "1.1.0"
+  resolved "https://github.com/javan/details-element-polyfill#25f3fa9b42c2dbe59e45cd0778ee7c425263d9c1"
+
 detect-file@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/detect-file/-/detect-file-0.1.0.tgz#4935dedfd9488648e006b0129566e9386711ea63"
@@ -6080,9 +6084,9 @@ mocha@^3.1.2:
     mkdirp "0.5.1"
     supports-color "3.1.2"
 
-mock-firmata@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/mock-firmata/-/mock-firmata-0.1.0.tgz#017c1ef5b6ec1f7a3021556c8a96ce0cf31e4613"
+mock-firmata@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/mock-firmata/-/mock-firmata-0.2.0.tgz#b7a1757fa88de322c4344a25a6cfc67dab92dd96"
   dependencies:
     board-io "^3.0.5"
 
@@ -6797,9 +6801,9 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@code-dot-org/playground-io#v0.5.0-cdo.0:
-  version "0.5.0-cdo.0"
-  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/693229a47fba288ac95b303bc23cde56804f23ee"
+playground-io@code-dot-org/playground-io#v0.6.0-cdo.0:
+  version "0.6.0-cdo.0"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/bcd92896945c2615926b4cc6b3d3f395bc080b38"
   dependencies:
     buffer "^4.6.0"
     firmata ">=0.11.3"
@@ -7204,9 +7208,9 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-pusher-js@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-3.2.1.tgz#46a30800c263e837081cf7084f0a7eee55973e60"
+pusher-js@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-4.1.0.tgz#5297973de935994ba65c2048ccf3b8c007247341"
   dependencies:
     faye-websocket "0.9.4"
     xmlhttprequest "^1.8.0"

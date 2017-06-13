@@ -1,6 +1,7 @@
 - @header['social'].each_pair do |property, content|
   %meta{property:property, content:content}
 
+
 %title= page_title_with_tagline
 
 %link{rel:'shortcut icon', href:'/images/favicon.ico'}
@@ -16,10 +17,8 @@
 
 %link{rel:'stylesheet', type:'text/css', href:'/style.css'}
 %link{rel:'stylesheet', type:'text/css', href:'/shared/css/user-menu.css'}
-%link{rel:'stylesheet', type:'text/css', href:'/shared/css/details-polyfill.css'}
 
 %script{src:'/js/jquery.min.js'}
-%script{src:'/shared/js/details-polyfill/jquery.details.min.js'}
-%script{src:'/shared/js/details-polyfill/details-polyfill.js'}
+
 
 
