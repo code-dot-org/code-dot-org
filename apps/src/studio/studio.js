@@ -17,7 +17,7 @@ import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';
@@ -5366,9 +5366,9 @@ Studio.queueCallback = function (callback, args) {
       state.value = state.arguments.pop();
     }
 
-    const depth = Studio.interpreter.stateStack.push(state);
+    const depth = Studio.interpreter.pushStackFrame(state);
     Studio.interpreter.paused_ = false;
-    while (Studio.interpreter.stateStack.length >= depth) {
+    while (Studio.interpreter.getStackDepth() >= depth) {
       Studio.interpreter.step();
     }
     Studio.interpreter.paused_ = true;

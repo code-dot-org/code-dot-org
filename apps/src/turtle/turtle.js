@@ -40,7 +40,7 @@ var utils = require('../utils');
 var Slider = require('../slider');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../JSInterpreter');
+var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 import {
   getContainedLevelResultInfo,

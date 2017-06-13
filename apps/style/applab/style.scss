@@ -272,10 +272,8 @@ div#visualizationResizeBar {
 }
 
 #divApplab, #designModeViz {
-  overflow: visible;
   outline: none;
   -webkit-touch-callout: none;
-
   @include user-selects(none);
 }
 
@@ -285,12 +283,17 @@ div#visualizationResizeBar {
   background-color: white;
 }
 
-#designModeViz.clip-content {
-  overflow: hidden;
-}
-
-#designModeViz .screen {
+// Allow design mode elements to be visible outside of designModeViz when
+// dragging, but clip them when dropped by applying the .clip-content class.
+#designModeViz {
   overflow: visible;
+  &.clip-content {
+    overflow: hidden;
+  }
+
+  .screen {
+    overflow: visible;
+  }
 }
 
 #visualizationOverlay {
