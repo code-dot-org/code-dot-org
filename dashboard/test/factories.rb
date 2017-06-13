@@ -321,8 +321,17 @@ FactoryGirl.define do
   factory :script_level do
     script
 
-    trait :assessment do
-      assessment true
+    transient do
+      named_level false
+      assessment false
+      bonus false
+    end
+
+    after(:create) do |script_level, evaluator|
+      script_level.type = ScriptLevel::NAMED_LEVEL if evaluator.named_level
+      script_level.type = ScriptLevel::ASSESSMENT if evaluator.assessment
+      script_level.type = ScriptLevel::BONUS if evaluator.bonus
+      script_level.save!
     end
 
     stage do |script_level|

@@ -66,21 +66,18 @@ class ScriptDSL < BaseDSL
   string :video_key_for_next_level
 
   def assessment(name, properties = {})
-    properties[:assessment] = true
-    level(name, properties)
+    level(name, properties, ScriptLevel::ASSESSMENT)
   end
 
   def named_level(name, properties = {})
-    properties[:named_level] = true
-    level(name, properties)
+    level(name, properties, ScriptLevel::NAMED_LEVEL)
   end
 
   def bonus(name, properties = {})
-    properties[:bonus] = true
-    level(name, properties)
+    level(name, properties, ScriptLevel::BONUS)
   end
 
-  def level(name, properties = {})
+  def level(name, properties = {}, type = nil)
     active = properties.delete(:active)
     progression = properties.delete(:progression)
     target = properties.delete(:target)
@@ -122,11 +119,12 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
 
-      if progression || target || challenge
+      if progression || target || challenge || type
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
         script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
+        script_level[:properties][:type] = type unless type.nil?
       end
 
       @scriptlevels << script_level
