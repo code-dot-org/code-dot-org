@@ -1040,6 +1040,7 @@ function onInterfaceModeChange(mode) {
 
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp().resetButtonClick();
+    designMode.setAppSpaceClipping(true);
   } else if (mode === ApplabInterfaceMode.CODE) {
     setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {
