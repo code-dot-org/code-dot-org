@@ -84,13 +84,13 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'name is required' do
-    section = Section.new user: @teacher
+    section = build :section, name: nil
     refute section.valid?
     assert_equal ['Name is required'], section.errors.full_messages
   end
 
   test 'user is required' do
-    section = Section.new name: 'a section'
+    section = build :section, user: nil
     refute section.valid?
     assert_equal ['User is required', 'User must be a teacher'], section.errors.full_messages
   end
