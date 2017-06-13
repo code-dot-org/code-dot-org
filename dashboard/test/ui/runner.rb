@@ -353,8 +353,8 @@ def configure_for_eyes
   ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
 
   # Also seed eyes data
-  puts "Seeding eyes data"
-  UiTestHelpers.seed_pd_eyes_data
+  # puts "Seeding eyes data"
+  # UiTestHelpers.seed_pd_eyes_data
 end
 
 def applitools_batch_url
