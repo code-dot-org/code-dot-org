@@ -10,6 +10,18 @@ const styles = {
     color: color.dark_charcoal,
     margin: '15px 0',
   },
+  content: {
+    position: 'absolute',
+    left: 20,
+    top: 50,
+    right: 20,
+    bottom: 70,
+    overflowY: 'scroll',
+  },
+  classroomRow: {
+    padding: 10,
+    cursor: 'pointer',
+  },
   footer: {
     position: 'absolute',
     bottom: 15,
@@ -34,10 +46,29 @@ const styles = {
   },
 };
 
+const ClassroomList = ({classrooms}) => classrooms.length ?
+  <div>
+    {classrooms.map(classroom => (
+      <div style={styles.classroomRow} key={classroom.id}>
+        {classroom.name}
+        {classroom.section && <span style={{color: '#999'}}> ({classroom.section})</span>}
+        <span style={{float: 'right'}}>Code: <span style={{fontFamily: 'monospace'}}>{classroom.code}</span></span>
+      </div>
+    ))}
+  </div> :
+  <div>
+    No classrooms found. Visit <a href="https://classroom.google.com/">https://classroom.google.com/</a> to add and remove classrooms.
+  </div>
+;
+ClassroomList.propTypes = {
+  classrooms: React.PropTypes.array.isRequired,
+};
+
 export default class RosterDialog extends React.Component {
   static propTypes = {
     handleClose: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
+    classrooms: React.PropTypes.array,
   }
 
   constructor(props) {
@@ -57,6 +88,12 @@ export default class RosterDialog extends React.Component {
         <h2 style={styles.title}>
           {locale.selectGoogleClassroom()}
         </h2>
+        <div style={styles.content}>
+          {this.props.classrooms ?
+            <ClassroomList classrooms={this.props.classrooms} /> :
+            "Loading..."
+          }
+        </div>
         <div style={styles.footer}>
           <button
             onClick={this.handleClose}
