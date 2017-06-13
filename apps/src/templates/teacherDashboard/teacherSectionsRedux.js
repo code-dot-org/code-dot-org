@@ -88,6 +88,7 @@ export const assignments = state =>
  * @param {Object} state - Current state of this reducer
  * @param {number} sectionId - Id of the section we want the current assignment
  *   index for
+ * @returns {number|null}
  */
 export const currentAssignmentIndex = (state, sectionId) => {
   const section = state.sections[sectionId];
