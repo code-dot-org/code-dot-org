@@ -114,7 +114,7 @@ class Hamburger
     end.freeze
 
     educate_entries = [
-      {title: "educate_overview", url: CDO.code_org_url("/educate")},
+      {title: "educate_overview", url: CDO.code_org_url("/educate"), id: "educate-overview"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
@@ -129,7 +129,7 @@ class Hamburger
     end.freeze
 
     about_entries = [
-      {title: "about_us", url: CDO.code_org_url("/about")},
+      {title: "about_us", url: CDO.code_org_url("/about"), id: "about-us"},
       {title: "about_leadership", url: CDO.code_org_url("/about/leadership")},
       {title: "about_donors", url: CDO.code_org_url("/about/donors")},
       {title: "about_partners", url: CDO.code_org_url("/about/partners")},
@@ -155,13 +155,13 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
-      entries << {type: "divider", class: visibility[:show_teacher_options]}
+      entries << {type: "divider", class: visibility[:show_teacher_options], id: "after-teacher"}
     elsif options[:user_type] == "student"
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
-      entries << {type: "divider", class: visibility[:show_student_options]}
+      entries << {type: "divider", class: visibility[:show_student_options], id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: visibility[:show_signed_out_options]}
+      entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
     end
 
     # Help-related.
@@ -200,7 +200,8 @@ class Hamburger
         title: I18n.t("#{loc_prefix}teacher_community"),
         url: "http://forum.code.org/",
         class: visibility[:show_help_options],
-        target: "_blank"
+        target: "_blank",
+        id: "teacher-community"
       }
     end
 
@@ -209,7 +210,7 @@ class Hamburger
         title: I18n.t("#{loc_prefix}documentation"),
         url: "https://docs.code.org/gamelab/",
         class: visibility[:show_help_options],
-        id: "hamburger-gamelab-documentation"
+        id: "gamelab-docs"
       }
     end
 
@@ -218,18 +219,18 @@ class Hamburger
         title: I18n.t("#{loc_prefix}documentation"),
         url: "https://docs.code.org/applab/",
         class: visibility[:show_help_options],
-        id: "hamburger-applab-documentation"
+        id: "applab-docs"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}tutorials"),
         url: CDO.code_org_url('/educate/applab'),
         class: visibility[:show_help_options],
-        id: "hamburger-applab-tutorials"
+        id: "applab-tutorials"
       }
     end
 
-    entries << {type: "divider", class: visibility[:show_pegasus_options]}
+    entries << {type: "divider", class: visibility[:show_pegasus_options], id: "before-pegasus"}
 
     # Pegasus options.
 
@@ -237,7 +238,7 @@ class Hamburger
       title: I18n.t("#{loc_prefix}learn"),
       url: CDO.code_org_url("/student"),
       class: visibility[:show_pegasus_options],
-      id: "hamburger-learn"
+      id: "learn"
     }
 
     entries << {
@@ -251,13 +252,15 @@ class Hamburger
     entries << {
       title: I18n.t("#{loc_prefix}stats"),
       url: CDO.code_org_url("/promote"),
-      class: visibility[:show_pegasus_options]
+      class: visibility[:show_pegasus_options],
+      id: "stats"
     }
 
     entries << {
       title: I18n.t("#{loc_prefix}help_us"),
       url: CDO.code_org_url("/help"),
-      class: visibility[:show_pegasus_options]
+      class: visibility[:show_pegasus_options],
+      id: "help-us"
     }
 
     entries << {
