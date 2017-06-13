@@ -134,91 +134,6 @@ export function isCanvasImageData(nativeVar) {
   return nativeVar instanceof CanvasPixelArray;
 }
 
-//
-// Droplet/JavaScript/Interpreter codegen functions:
-//
-/**
- * @param {CustomMarshalingInterpreter} interpreter - instance of the interpreter to marshal objects to
- * @param {boolean|string|number|Object|Array|Function} [nativeVar] - the native object to marshal into the interpreter.
- * @param {Object} [nativeParentObj] - optional native parent object that the given nativeVar is a member of
- * @param {number} [maxDepth] - optional maximum depth to recurse down when marhsaling the given object. Defaults to Infinity
- * @returns The interpreter's representation of the marshaled object.
- */
-export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentObj, maxDepth) {
-  if (maxDepth === 0 || typeof nativeVar === 'undefined') {
-    return interpreter.UNDEFINED;
-  }
-  var i, retVal;
-  if (typeof maxDepth === "undefined") {
-    maxDepth = Infinity; // default to infinite levels of depth
-  }
-  // TODO (pcardune): remove circular dependency
-  const CustomMarshalingInterpreter = require('./CustomMarshalingInterpreter');
-  if (interpreter instanceof CustomMarshalingInterpreter) {
-    if (interpreter.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
-      return interpreter.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
-    }
-  }
-  if (nativeVar instanceof Array) {
-    retVal = interpreter.createObject(interpreter.ARRAY);
-    for (i = 0; i < nativeVar.length; i++) {
-      retVal.properties[i] = marshalNativeToInterpreter(interpreter,
-        nativeVar[i], null, maxDepth - 1);
-    }
-    retVal.length = nativeVar.length;
-  } else if (isCanvasImageData(nativeVar)) {
-    // Special case for canvas image data - could expand to support TypedArray
-    retVal = interpreter.createObject(interpreter.ARRAY);
-    for (i = 0; i < nativeVar.length; i++) {
-      retVal.properties[i] = interpreter.createPrimitive(nativeVar[i]);
-    }
-    retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Function) {
-    var makeNativeOpts = {
-      interpreter: interpreter,
-      nativeFunc: nativeVar,
-      nativeParentObj: nativeParentObj,
-    };
-    if (exports.asyncFunctionList.indexOf(nativeVar) !== -1) {
-      // Mark if this should be nativeIsAsync:
-      makeNativeOpts.nativeIsAsync = true;
-    }
-    if (interpreter instanceof CustomMarshalingInterpreter) {
-      var extraOpts = interpreter.customMarshaler.getCustomMarshalMethodOptions(interpreter, nativeParentObj);
-      // Add extra options if the parent of this function is in our custom marshal
-      // modified object list:
-      for (var prop in extraOpts) {
-        makeNativeOpts[prop] = extraOpts[prop];
-      }
-    }
-    var wrapper = makeNativeMemberFunction(makeNativeOpts);
-    if (makeNativeOpts.nativeIsAsync) {
-      retVal = interpreter.createAsyncFunction(wrapper);
-    } else {
-      retVal = interpreter.createNativeFunction(wrapper);
-    }
-    // Also marshal properties on the native function object:
-    interpreter.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1, retVal);
-  } else if (nativeVar instanceof Object) {
-    // note Object must be checked after Function and Array (since they are also Objects)
-    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
-      // Special case to see if we are trying to marshal an interpreter object
-      // (this currently happens when we store interpreter function objects in native
-      //  and return them back in nativeGetCallback)
-
-      // NOTE: this check could be expanded to check for other interpreter object types
-      // if we have reason to believe that we may be passing those back
-
-      retVal = nativeVar;
-    } else {
-      retVal = interpreter.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1);
-    }
-  } else {
-    retVal = interpreter.createPrimitive(nativeVar);
-  }
-  return retVal;
-}
-
 exports.createNativeFunctionFromInterpreterFunction = null;
 
 exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
@@ -261,14 +176,15 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
  * world. Here, we wrap the supplied callback to marshal the single parameter
  * from native to interpreter before calling the supplied callback.
  *
- * @param {Object} opts Options block with interpreter and maxDepth provided
- * @param {function} callback The interpreter supplied callback function
+ * @param {Object} opts - Options block with interpreter and maxDepth provided
+ * @param {CustomMarshalingInterpreter} opts.interpreter - the interpreter instance to use
+ * @param {number} opts.maxDepth - the maximum depth to recurse when marshaling
+ * @param {function} callback - The interpreter supplied callback function
  */
 function createNativeCallbackForAsyncFunction(opts, callback) {
   return nativeValue => {
     callback(
-      marshalNativeToInterpreter(
-        opts.interpreter,
+      opts.interpreter.marshalNativeToInterpreter(
         nativeValue,
         null,
         opts.maxDepth
@@ -283,7 +199,7 @@ function createNativeCallbackForAsyncFunction(opts, callback) {
  * on the interpreter stack.
  *
  * @param {!Object} opts Options block
- * @param {!Interpreter} opts.interpreter Interpreter instance
+ * @param {!CustomMarshalingInterpreter} opts.interpreter Interpreter instance
  * @param {number} [opts.maxDepth] Maximum depth to marshal objects
  * @param {Object} [opts.callbackState] callback state object, which will
  *        hold the unmarshaled return value as a 'value' property later.
@@ -291,8 +207,7 @@ function createNativeCallbackForAsyncFunction(opts, callback) {
  */
 function createNativeInterpreterCallback(opts, intFunc) {
   return function (...args) {
-    const intArgs = args.map(arg => marshalNativeToInterpreter(
-      opts.interpreter,
+    const intArgs = args.map(arg => opts.interpreter.marshalNativeToInterpreter(
       arg,
       null,
       opts.maxDepth
@@ -377,8 +292,7 @@ export function makeNativeMemberFunction(opts) {
       }
     }
     var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return marshalNativeToInterpreter(
-      interpreter,
+    return interpreter.marshalNativeToInterpreter(
       nativeRetVal,
       null,
       maxDepth

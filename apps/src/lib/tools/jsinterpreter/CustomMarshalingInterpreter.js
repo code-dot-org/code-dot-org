@@ -107,7 +107,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         type === 'undefined' || customMarshalValue === null) {
       return this.createPrimitive(customMarshalValue);
     } else {
-      return codegen.marshalNativeToInterpreter(this, customMarshalValue, obj.data);
+      return this.marshalNativeToInterpreter(customMarshalValue, obj.data);
     }
   }
 
@@ -350,7 +350,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         // Create a hook that triggers an event inside the interpreter.
         hooks.push({name: event, func: (...args) => {
           const eventArgs = {name: eventId, args};
-          currentCallback(codegen.marshalNativeToInterpreter(interpreter, eventArgs, null, 5));
+          currentCallback(interpreter.marshalNativeToInterpreter(eventArgs, null, 5));
           interpreter.run();
           return lastReturnValue;
         }});
@@ -410,13 +410,92 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       this.setProperty(
         retVal,
         prop,
-        codegen.marshalNativeToInterpreter(
-          this,
+        this.marshalNativeToInterpreter(
           value,
           nativeObject,
           maxDepth
         )
       );
+    }
+    return retVal;
+  }
+
+  /**
+   * Generate a function wrapper for an interpreter callback that will be
+   * invoked by a special native function that can execute these callbacks inline
+   * on the interpreter stack.
+   *
+   * @param {!Object} opts Options block
+   * @param {!Interpreter} opts.interpreter Interpreter instance
+   * @param {number} [opts.maxDepth] Maximum depth to marshal objects
+   * @param {Object} [opts.callbackState] callback state object, which will
+   *        hold the unmarshaled return value as a 'value' property later.
+   * @param {Function} intFunc The interpreter supplied callback function
+   */
+  marshalNativeToInterpreter(nativeVar, nativeParentObj, maxDepth) {
+    if (maxDepth === 0 || typeof nativeVar === 'undefined') {
+      return this.UNDEFINED;
+    }
+    var i, retVal;
+    if (typeof maxDepth === "undefined") {
+      maxDepth = Infinity; // default to infinite levels of depth
+    }
+    if (this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+      return this.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
+    }
+    if (nativeVar instanceof Array) {
+      retVal = this.createObject(this.ARRAY);
+      for (i = 0; i < nativeVar.length; i++) {
+        retVal.properties[i] = this.marshalNativeToInterpreter(nativeVar[i], null, maxDepth - 1);
+      }
+      retVal.length = nativeVar.length;
+    } else if (codegen.isCanvasImageData(nativeVar)) {
+      // Special case for canvas image data - could expand to support TypedArray
+      retVal = this.createObject(this.ARRAY);
+      for (i = 0; i < nativeVar.length; i++) {
+        retVal.properties[i] = this.createPrimitive(nativeVar[i]);
+      }
+      retVal.length = nativeVar.length;
+    } else if (nativeVar instanceof Function) {
+      var makeNativeOpts = {
+        interpreter: this,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+      };
+      if (codegen.asyncFunctionList.indexOf(nativeVar) !== -1) {
+        // Mark if this should be nativeIsAsync:
+        makeNativeOpts.nativeIsAsync = true;
+      }
+      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(this, nativeParentObj);
+      // Add extra options if the parent of this function is in our custom marshal
+      // modified object list:
+      for (var prop in extraOpts) {
+        makeNativeOpts[prop] = extraOpts[prop];
+      }
+      var wrapper = codegen.makeNativeMemberFunction(makeNativeOpts);
+      if (makeNativeOpts.nativeIsAsync) {
+        retVal = this.createAsyncFunction(wrapper);
+      } else {
+        retVal = this.createNativeFunction(wrapper);
+      }
+      // Also marshal properties on the native function object:
+      this.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1, retVal);
+    } else if (nativeVar instanceof Object) {
+      // note Object must be checked after Function and Array (since they are also Objects)
+      if (this.isa(nativeVar, this.FUNCTION)) {
+        // Special case to see if we are trying to marshal an interpreter object
+        // (this currently happens when we store interpreter function objects in native
+        //  and return them back in nativeGetCallback)
+
+        // NOTE: this check could be expanded to check for other interpreter object types
+        // if we have reason to believe that we may be passing those back
+
+        retVal = nativeVar;
+      } else {
+        retVal = this.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1);
+      }
+    } else {
+      retVal = this.createPrimitive(nativeVar);
     }
     return retVal;
   }
