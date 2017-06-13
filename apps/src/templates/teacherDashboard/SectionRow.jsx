@@ -32,7 +32,7 @@ const styles = {
 /**
  * Our base buttons (Edit and delete).
  */
-const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
+export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
     <ProgressButton
       text={"Edit"}
@@ -58,7 +58,7 @@ EditOrDelete.propTypes = {
 /**
  * Buttons for confirming whether or not we want to delete a section
  */
-const ConfirmDelete = ({onClickYes, onClickNo}) => (
+export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
     <div>Delete?</div>
     <ProgressButton
@@ -82,7 +82,7 @@ ConfirmDelete.propTypes = {
 /**
  * Buttons for committing or canceling a save.
  */
-const ConfirmSave = ({onClickSave, onCancel}) => (
+export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
     <ProgressButton
       text={i18n.save()}
@@ -137,6 +137,8 @@ class SectionRow extends Component {
   }
 
   onClickEditCancel = () => this.setState({editing: false});
+
+  onClickPrintCerts = () => console.log('print certificates here');
 
   render() {
     const {
@@ -236,16 +238,18 @@ class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-           <ProgressButton
-             text={"Print Certificates"}
-             onClick={() => console.log('print certificates here')}
-             color={ProgressButton.ButtonColor.gray}
-           />
+          <ProgressButton
+            text={"Print Certificates"}
+            onClick={this.onClickPrintCerts}
+            color={ProgressButton.ButtonColor.gray}
+          />
         </td>
       </tr>
     );
   }
 }
+
+export const UnconnectedSectionRow = SectionRow;
 
 export default connect((state, ownProps) => ({
   validLoginTypes: state.teacherSections.validLoginTypes,

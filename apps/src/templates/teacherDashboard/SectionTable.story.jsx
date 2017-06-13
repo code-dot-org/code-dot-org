@@ -15,7 +15,7 @@ const sections = [
     id: 11,
     courseId: 29,
     scriptId: null,
-    name: "brent_section",
+    name: "my_section",
     loginType: "word",
     grade: null,
     stageExtras: false,
