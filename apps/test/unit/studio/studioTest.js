@@ -12,6 +12,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 const STUDIO_WIDTH = 400;
@@ -432,7 +433,7 @@ describe('studio', function () {
   describe("queueCallback method", () => {
     let cb, interpreterFunc, someHook;
     beforeEach(() => {
-      const {hooks, interpreter} = codegen.evalWithEvents(
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
         {
           someGlobal: 1,
         }, {
