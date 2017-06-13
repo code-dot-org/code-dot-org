@@ -2,8 +2,10 @@ module Pd::FacilitatorSpecificForm
   extend ActiveSupport::Concern
   include Pd::Form
 
-  def facilitator_required_fields
-    []
+  module ClassMethods
+    def facilitator_required_fields
+      []
+    end
   end
 
   def get_facilitator_names
@@ -50,7 +52,7 @@ module Pd::FacilitatorSpecificForm
 
     # validate facilitator required fields
     facilitators.each do |facilitator|
-      facilitator_required_fields.each do |field|
+      self.class.facilitator_required_fields.each do |field|
         field = field.to_s.camelize(:lower) if camel
         field_name = "#{field}[#{facilitator}]"
         field_name = field_name.to_sym unless camel

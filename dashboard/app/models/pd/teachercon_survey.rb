@@ -33,7 +33,7 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
 
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = (DISAGREES + AGREES).freeze
 
-  def required_fields
+  def self.required_fields
     [
       :personal_learning_needs_met,
       :have_ideas_about_formative,
@@ -77,7 +77,7 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
     ].freeze
   end
 
-  def facilitator_required_fields
+  def self.facilitator_required_fields
     [
       :things_facilitator_did_well,
       :things_facilitator_could_improve
