@@ -150,7 +150,7 @@ export default class JSInterpreter {
                       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                       'setCallbackRetVal(ret); }}';
 
-      codegen.createNativeFunctionFromInterpreterFunction = (intFunc) => {
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = (intFunc) => {
         return (...args) => {
           if (this.initialized()) {
             this.eventQueue.push({

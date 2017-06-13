@@ -70,8 +70,6 @@ exports.workspaceCode = function (blockly) {
   return exports.strip(code);
 };
 
-exports.createNativeFunctionFromInterpreterFunction = null;
-
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj, options) {
   for (var prop in funcsObj) {
     var func = funcsObj[prop];

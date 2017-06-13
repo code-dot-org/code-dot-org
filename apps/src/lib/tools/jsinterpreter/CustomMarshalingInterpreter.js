@@ -1,7 +1,6 @@
 /* global CanvasPixelArray */
 
 const Interpreter = require('@code-dot-org/js-interpreter');
-const codegen = require('../../../lib/tools/jsinterpreter/codegen');
 const CustomMarshaler = require('./CustomMarshaler');
 
 /**
@@ -561,6 +560,8 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     }
   }
 
+  static createNativeFunctionFromInterpreterFunction = null;
+
   marshalInterpreterToNative(interpreterVar) {
     if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
       return interpreterVar.data;
@@ -579,8 +580,8 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       }
       return nativeObject;
     } else if (this.isa(interpreterVar, this.FUNCTION)) {
-      if (codegen.createNativeFunctionFromInterpreterFunction) {
-        return codegen.createNativeFunctionFromInterpreterFunction(interpreterVar);
+      if (CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction) {
+        return CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(interpreterVar);
       } else {
         // Just return the interpreter object if we can't convert it. This is needed
         // for passing interpreter callback functions into native.
