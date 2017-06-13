@@ -378,6 +378,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def bin_dir(*dirs)
+  deploy_dir('bin', *dirs)
+end
+
 def tools_dir(*dirs)
   deploy_dir('tools', *dirs)
 end
