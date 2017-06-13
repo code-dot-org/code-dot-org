@@ -54,7 +54,10 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
   <div>
     {classrooms.map(classroom => (
       <div
-        style={Object.assign({}, styles.classroomRow, selectedId === classroom.id && styles.highlightRow)}
+        style={Object.assign({},
+          styles.classroomRow,
+          selectedId === classroom.id && styles.highlightRow
+        )}
         key={classroom.id}
         onClick={onSelect.bind(null, classroom.id)}
       >
@@ -63,14 +66,19 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
           <span style={{color: '#aaa'}}> ({classroom.section})</span>
         }
         <span style={{float: 'right'}}>
-          Code:
+          {locale.code()}
           <span style={{fontFamily: 'monospace'}}> {classroom.code}</span>
         </span>
       </div>
     ))}
   </div> :
   <div>
-    No classrooms found. Visit <a href="https://classroom.google.com/">https://classroom.google.com/</a> to add and remove classrooms.
+    <p>
+      {locale.noClassroomsFound()}
+    </p>
+    <a href="https://classroom.google.com/">
+      {locale.addRemoveGoogleClassrooms()}
+    </a>
   </div>
 ;
 ClassroomList.propTypes = {
@@ -89,8 +97,12 @@ export default class RosterDialog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.handleClose = this.props.handleClose.bind(this);
+    this.handleClose = this.handleClose.bind(this);
     this.onClassroomSelected = this.onClassroomSelected.bind(this);
+  }
+
+  handleClose() {
+    this.props.handleClose(this.state.selectedId);
   }
 
   onClassroomSelected(id) {
@@ -116,7 +128,7 @@ export default class RosterDialog extends React.Component {
               onSelect={this.onClassroomSelected}
               selectedId={this.state.selectedId}
             /> :
-            "Loading..."
+            locale.loading()
           }
         </div>
         <div style={styles.footer}>
@@ -128,7 +140,10 @@ export default class RosterDialog extends React.Component {
           </button>
           <button
             onClick={this.handleClose}
-            style={styles.buttonPrimary}
+            style={Object.assign({},
+              styles.buttonPrimary,
+              !this.state.selectedId && {opacity: 0.5}
+            )}
           >
             {locale.chooseSection()}
           </button>
