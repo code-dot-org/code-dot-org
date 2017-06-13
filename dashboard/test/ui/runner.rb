@@ -31,8 +31,6 @@ require_relative './utils/selenium_browser'
 
 require 'active_support/core_ext/object/blank'
 
-require_relative './ui_test_helpers'
-
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
@@ -351,10 +349,6 @@ def configure_for_eyes
   # See "Aggregating tests from different processes"
   # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
   ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
-
-  # Also seed eyes data
-  puts "Seeding eyes data"
-  UiTestHelpers.seed_pd_eyes_data
 end
 
 def applitools_batch_url
