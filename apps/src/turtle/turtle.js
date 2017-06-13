@@ -202,13 +202,14 @@ Artist.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Initializes all sticker images as defined in this.skin.stickers, storing the
- * created images in this.stickers.
+ * Initializes all sticker images as defined in this.skin.stickers, if any,
+ * storing the created images in this.stickers.
  *
  * NOTE: initializes this.stickers as a side effect
  *
  * @return {Promise} that resolves once all images have finished loading,
- *         whether they did so successfully or not.
+ *         whether they did so successfully or not (or that resolves instantly
+ *         if there are no images to load).
  */
 Artist.prototype.preloadAllStickerImages = function () {
   this.stickers = {};
@@ -223,8 +224,14 @@ Artist.prototype.preloadAllStickerImages = function () {
     this.stickers[name] = img;
   });
 
-  const stickerNames = Object.keys(this.skin.stickers);
-  return Promise.all(stickerNames.map(loadSticker));
+  const stickers = (this.skin && this.skin.stickers) || {};
+  const stickerNames = Object.keys(stickers);
+
+  if (stickerNames.length) {
+    return Promise.all(stickerNames.map(loadSticker));
+  } else {
+    return Promise.resolve();
+  }
 };
 
 /**
