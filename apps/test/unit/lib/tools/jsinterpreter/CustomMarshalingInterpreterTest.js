@@ -706,22 +706,22 @@ describe("The CustomMarshalingInterpreter", () => {
     describe("when running with legacy=true", () => {
 
       it("the evaluated code will have access to 'native' functions", () => {
-        expect(() => CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, true)).not.to.throw;
-        CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, true);
+        expect(() => CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {legacy: true})).not.to.throw;
+        CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {legacy: true});
         expect(window.nativeAdd).to.have.been.calledWith(1,2);
-        CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, true);
+        CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {legacy: true});
         expect(window.nativeAdd).to.have.been.calledWith(1,2);
       });
 
       it("the evaluated code will have access to functions passed in through options", () => {
-        CustomMarshalingInterpreter.evalWith('add(1,2)', options, true);
+        CustomMarshalingInterpreter.evalWith('add(1,2)', options, {legacy: true});
         expect(options.add).to.have.been.calledWith(1,2);
       });
 
       it("the evaluated code will have access to variables passed in through options", () => {
-        CustomMarshalingInterpreter.evalWith('add(a,2)', options, true);
+        CustomMarshalingInterpreter.evalWith('add(a,2)', options, {legacy: true});
         expect(options.add).to.have.been.calledWith(3,2);
-        CustomMarshalingInterpreter.evalWith('nativeAdd(a,2)', options, true);
+        CustomMarshalingInterpreter.evalWith('nativeAdd(a,2)', options, {legacy: true});
         expect(window.nativeAdd).to.have.been.calledWith(3,2);
       });
 
