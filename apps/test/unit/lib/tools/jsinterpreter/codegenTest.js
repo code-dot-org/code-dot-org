@@ -1,10 +1,10 @@
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
-import {assert, expect} from '../util/configuredChai';
-import * as codegen from '@cdo/apps/codegen';
+import {assert, expect} from '../../../../util/configuredChai';
+import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
-import {makeAssertableObj as unboundMakeAssertableObj} from './lib/tools/jsinterpreter/interpreterTestUtils.js';
+import {makeAssertableObj as unboundMakeAssertableObj} from './interpreterTestUtils.js';
 
 describe("codegen", function () {
 
@@ -279,8 +279,8 @@ describe("codegen", function () {
               scope,
               'memberFunc',
               opts.nativeIsAsync
-                ? interpreter.createAsyncFunction(nativeFunc)
-                : interpreter.createNativeFunction(nativeFunc)
+              ? interpreter.createAsyncFunction(nativeFunc)
+              : interpreter.createNativeFunction(nativeFunc)
             );
           }
         );
