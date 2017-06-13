@@ -1,5 +1,8 @@
 professional_learning_course 'CS Discoviers TeacherCon Novice'
 
+stage 'Welcome'
+named_level 'welcome-csd-novice'
+
 stage 'Tuesday'
 level 'csd-tuesday-unit', progression: 'Unit Reflection'
 level 'csd-tuesday-unit2', progression: 'Unit Reflection'

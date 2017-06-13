@@ -30,10 +30,15 @@
     "y": "200",
     "impressive": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:41:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -476,6 +481,13 @@
               </block>
             </value>
           </block>
+          <block type="jump_to">
+            <title name="VALUE">7</title>
+          </block>
+          <block type="jump_to_xy">
+            <title name="XPOS">0</title>
+            <title name="YPOS">0</title>
+          </block>
         </category>
         <category name="Brushes">
           <block type="draw_colour" inline="true" id="draw-color">
@@ -533,8 +545,7 @@
           </block>
         </category>
         <category name="Loops">
-          <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
+          <block type="controls_for" inline="true">
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">???</title>
