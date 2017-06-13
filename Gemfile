@@ -35,9 +35,8 @@ gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'
-# Using commit ref until maintainer publishes a new version
-# Ref: https://github.com/cheald/redis-slave-read/pull/2
-gem 'redis-slave-read', require: false, github: 'cheald/redis-slave-read', ref: '370d5da2b71f795d8145fcf89c0648f866a125a6'
+# Using commit ref on fork until maintainer publishes a new version
+gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 
 gem 'google-api-client'
 
