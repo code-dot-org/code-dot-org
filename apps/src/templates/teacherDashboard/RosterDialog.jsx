@@ -22,6 +22,10 @@ const styles = {
     padding: 10,
     cursor: 'pointer',
   },
+  highlightRow: {
+    backgroundColor: color.default_blue,
+    color: color.white,
+  },
   footer: {
     position: 'absolute',
     bottom: 15,
@@ -46,13 +50,22 @@ const styles = {
   },
 };
 
-const ClassroomList = ({classrooms}) => classrooms.length ?
+const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length ?
   <div>
     {classrooms.map(classroom => (
-      <div style={styles.classroomRow} key={classroom.id}>
+      <div
+        style={Object.assign({}, styles.classroomRow, selectedId === classroom.id && styles.highlightRow)}
+        key={classroom.id}
+        onClick={onSelect.bind(null, classroom.id)}
+      >
         {classroom.name}
-        {classroom.section && <span style={{color: '#999'}}> ({classroom.section})</span>}
-        <span style={{float: 'right'}}>Code: <span style={{fontFamily: 'monospace'}}>{classroom.code}</span></span>
+        {classroom.section &&
+          <span style={{color: '#aaa'}}> ({classroom.section})</span>
+        }
+        <span style={{float: 'right'}}>
+          Code:
+          <span style={{fontFamily: 'monospace'}}> {classroom.code}</span>
+        </span>
       </div>
     ))}
   </div> :
@@ -62,6 +75,8 @@ const ClassroomList = ({classrooms}) => classrooms.length ?
 ;
 ClassroomList.propTypes = {
   classrooms: React.PropTypes.array.isRequired,
+  onSelect: React.PropTypes.func.isRequired,
+  selectedId: React.PropTypes.number,
 };
 
 export default class RosterDialog extends React.Component {
@@ -73,7 +88,13 @@ export default class RosterDialog extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {};
     this.handleClose = this.props.handleClose.bind(this);
+    this.onClassroomSelected = this.onClassroomSelected.bind(this);
+  }
+
+  onClassroomSelected(id) {
+    this.setState({selectedId: id});
   }
 
   render() {
@@ -90,7 +111,11 @@ export default class RosterDialog extends React.Component {
         </h2>
         <div style={styles.content}>
           {this.props.classrooms ?
-            <ClassroomList classrooms={this.props.classrooms} /> :
+            <ClassroomList
+              classrooms={this.props.classrooms}
+              onSelect={this.onClassroomSelected}
+              selectedId={this.state.selectedId}
+            /> :
             "Loading..."
           }
         </div>
