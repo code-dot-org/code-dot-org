@@ -79,7 +79,8 @@
     = t('user.delete_text')
     - if current_user.teacher?
       = t('user.delete_text_teacher_note')
-    = button_to t('user.delete'), registration_path(resource_name), data: { confirm: t('user.delete_confirm') }, method: :delete, class: 'btn btn-danger'
+    - data_hash = { confirm: t('user.delete_confirm') }
+    = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
 = link_to t('crud.back'), :back
 
 :javascript
