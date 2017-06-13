@@ -2,6 +2,22 @@ import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import { assignmentShape } from './shapes';
 
+/**
+ * Group our assignments into categories for our dropdown. Memoize this method
+ * as over the course of a session we'll be calling multiple times, always with
+ * the same set of assignments
+ */
+const groupedAssignments = _.memoize(assignments => (
+  _(assignments)
+    .orderBy(['category_priority', 'category', 'position', 'name'])
+    .groupBy('category')
+    .value()
+  ));
+
+/**
+ * This component displays a dropdown of courses/scripts, with each of these
+ * grouped and ordered appropriately.
+ */
 export default class AssignmentSelector extends Component {
   static propTypes = {
     currentAssignmentIndex: PropTypes.number,
@@ -19,10 +35,7 @@ export default class AssignmentSelector extends Component {
   render() {
     const { currentAssignmentIndex, assignments } = this.props;
 
-    const grouped = _(assignments)
-      .orderBy(['category_priority', 'category', 'position', 'name'])
-      .groupBy('category')
-      .value();
+    const grouped = groupedAssignments(assignments);
 
     return (
       <select
