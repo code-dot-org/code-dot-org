@@ -469,7 +469,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       retVal.length = nativeVar.length;
     } else if (nativeVar instanceof Function) {
       var makeNativeOpts = {
-        interpreter: this,
         nativeFunc: nativeVar,
         nativeParentObj: nativeParentObj,
       };
@@ -483,7 +482,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       for (var prop in extraOpts) {
         makeNativeOpts[prop] = extraOpts[prop];
       }
-      var wrapper = codegen.makeNativeMemberFunction(makeNativeOpts);
+      var wrapper = this.makeNativeMemberFunction(makeNativeOpts);
       if (makeNativeOpts.nativeIsAsync) {
         retVal = this.createAsyncFunction(wrapper);
       } else {
@@ -581,6 +580,134 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     } else {
       throw new Error("Can't marshal type " + typeof interpreterVar);
     }
+  }
+
+  /**
+   * Generate a function wrapper for an interpreter async function callback.
+   * The interpreter async function callback takes a single parameter, which
+   * becomes the return value of the synchronous function in the interpreter
+   * world. Here, we wrap the supplied callback to marshal the single parameter
+   * from native to interpreter before calling the supplied callback.
+   *
+   * @param {Object} opts - Options block with interpreter and maxDepth provided
+   * @param {number} opts.maxDepth - the maximum depth to recurse when marshaling
+   * @param {function} callback - The interpreter supplied callback function
+   * @private
+   */
+  createNativeCallbackForAsyncFunction_(opts, callback) {
+    return nativeValue => {
+      callback(
+        this.marshalNativeToInterpreter(
+          nativeValue,
+          null,
+          opts.maxDepth
+        )
+      );
+    };
+  }
+
+  /**
+   * Generate a function wrapper for an interpreter callback that will be
+   * invoked by a special native function that can execute these callbacks inline
+   * on the interpreter stack.
+   *
+   * @param {!Object} opts Options block
+   * @param {number} [opts.maxDepth] Maximum depth to marshal objects
+   * @param {Object} [opts.callbackState] callback state object, which will
+   *        hold the unmarshaled return value as a 'value' property later.
+   * @param {Function} intFunc The interpreter supplied callback function
+   * @private
+   */
+  createNativeInterpreterCallback_(opts, intFunc) {
+    return (...args) => {
+      const intArgs = args.map(arg => this.marshalNativeToInterpreter(
+        arg,
+        null,
+        opts.maxDepth
+      ));
+      // Shift a CallExpression node on the stack that already has its func_,
+      // arguments, and other state populated:
+      var state = opts.callbackState || {};
+      state.node = {
+        type: 'CallExpression',
+        arguments: intArgs /* this just needs to be an array of the same size */
+      };
+      state.doneCallee_ = true;
+      state.func_ = intFunc;
+      state.arguments = intArgs;
+      state.n_ = intArgs.length;
+
+      // remove the last argument because stepCallExpression always wants to push it back on.
+      if (state.arguments.length > 0) {
+        state.value = state.arguments.pop();
+      }
+
+      this.pushStackFrame(state);
+    };
+  }
+
+  /**
+   * Generate a native function wrapper for use with the JS interpreter.
+   * @param {Object} opts - configuration options. See below.
+   * @param {boolean} opts.dontMarshal - Whether or not to marshal the arguments passed to
+   *     the native function from interpreter objects to native objects.
+   * @param {Function} opts.nativeFunc - The native function that you want to make available
+   *     to the interpreter via a wrapped interpreter function.
+   * @param {Object} opts.nativeParentObj - The parent object that the native function
+   *     should be bound to when it is called.
+   * @param {number} opts.maxDepth - The maximum depth of objects that should be custom
+   *     marshaled.
+   * @param {boolean} opts.nativeIsAsync - When true, the return value of the native function
+   *     is not marshaled back to the interpreter. Rather, a callback is given allowing
+   *     the native function to perform asynchronous tasks before returning control back
+   *     to the interpreter by calling the callback with the return value.
+   * @param {boolean} opts.nativeCallsBackInterpreter - When true, the native function
+   *     can receive wrapped interpreter functions as arguments, which it can then call
+   *     to return control back to the interpreter.
+   * @returns a wrapped version of native func that performs appropriate custom marshaling
+   *     on all the arguments that it is called with. This is expected to be used with
+   *     Interpreter.createAsyncFunction and Interpreter.createNativeFunction to give
+   *     interpreted code safe access to native functions.
+   */
+  makeNativeMemberFunction(opts) {
+    const {
+      dontMarshal,
+      nativeFunc,
+      nativeParentObj,
+      maxDepth,
+      nativeIsAsync,
+      nativeCallsBackInterpreter,
+    } = opts;
+    return (...args) => {
+      let nativeArgs = [];
+      if (dontMarshal) {
+        nativeArgs = args;
+      } else {
+        // Call the native function after marshalling parameters:
+        for (var i = 0; i < args.length; i++) {
+          if (nativeIsAsync && (i === args.length - 1)) {
+            // Async functions receive a native callback method as their last
+            // parameter, and we want to wrap that callback to ease marshalling:
+            nativeArgs[i] = this.createNativeCallbackForAsyncFunction_(opts, args[i]);
+          } else if (nativeCallsBackInterpreter &&
+                     typeof args[i] === 'object' &&
+                     this.isa(args[i], this.FUNCTION)) {
+            // A select class of native functions is aware of the interpreter and
+            // capable of calling the interpreter on the stack immediately. We
+            // marshal these differently:
+            nativeArgs[i] = this.createNativeInterpreterCallback_(opts, args[i]);
+          } else {
+            nativeArgs[i] = this.marshalInterpreterToNative(args[i]);
+          }
+        }
+      }
+      var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+      return this.marshalNativeToInterpreter(
+        nativeRetVal,
+        null,
+        maxDepth
+      );
+    };
   }
 
 };

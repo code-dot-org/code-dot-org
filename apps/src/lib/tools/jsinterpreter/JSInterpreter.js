@@ -205,8 +205,7 @@ export default class JSInterpreter {
             scope,
             'getCallback',
             interpreter.createNativeFunction(
-              codegen.makeNativeMemberFunction({
-                interpreter: interpreter,
+              interpreter.makeNativeMemberFunction({
                 nativeFunc: this.nativeGetCallback,
                 maxDepth: 5
               })
@@ -217,8 +216,7 @@ export default class JSInterpreter {
             scope,
             'setCallbackRetVal',
             interpreter.createNativeFunction(
-              codegen.makeNativeMemberFunction({
-                interpreter: interpreter,
+              interpreter.makeNativeMemberFunction({
                 nativeFunc: this.nativeSetCallbackRetVal,
               })
             )
@@ -873,8 +871,7 @@ export default class JSInterpreter {
 
     let interpreterVal;
     if (typeof value === 'function') {
-      const wrapper = codegen.makeNativeMemberFunction({
-        interpreter: this.interpreter,
+      const wrapper = this.interpreter.makeNativeMemberFunction({
         nativeFunc: value,
         nativeParentObj: parent
       });
