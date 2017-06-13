@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Hamburger dropdown
 
   Scenario: Signed out user in English should not see hamburger on desktop
@@ -85,9 +86,9 @@ Feature: Hamburger dropdown
     Given I create a teacher named "Tessa Teacher"
     Given I am on "http://studio.code.org/projects/gamelab/new"
     Then I wait to see "#hamburger-icon"
-    #And I click selector "#hamburger-icon"
-    #Then I wait to see ".hide-responsive-menu"
-    #And I see "#gamelab-docs"
+    And I click selector "#hamburger-icon"
+    Then I wait to see ".hide-responsive-menu"
+    And I see "#gamelab-docs"
 
   Scenario: Student viewing hamburger dropdown in English on desktop on level
     And I create a student named "Sally Student"
