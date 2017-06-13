@@ -32,6 +32,7 @@ import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import * as codegen from '../lib/tools/jsinterpreter/codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
@@ -3262,7 +3263,7 @@ Studio.execute = function () {
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
-      const {hooks, interpreter} = codegen.evalWithEvents(
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
         {Studio: api, Globals: Studio.Globals},
         Studio.interpretedHandlers,
         code
