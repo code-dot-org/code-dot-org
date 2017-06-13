@@ -62,11 +62,11 @@
     "encrypted_examples": "3rRFMYAEjb3UY4NmQ5IMt10UT5ee5iSYBE0Ogy4blhr5HinKyHy3cOkqMc/p\n4UCS\n",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -128,7 +128,6 @@
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "maxTimes": 1,
         "message": "You need to define \"function drawDiamond()\" and make a call it exactly once. Did you spell and capitalize it the same way as the instructions? Did you call it?"
       },
       {
@@ -151,10 +150,15 @@
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
     "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-09 15:38:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 15:40:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 15:41:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 15:41:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 15:41:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 17:42:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 17:44:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 17:48:39 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-09 22:13:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

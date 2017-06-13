@@ -91,13 +91,17 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN
   end
 
-  # Exit survey has a variation for CSF. It's the same for all other courses.
+  # Exit survey has variations for CSF and CSP Local Summer. It's the same for all other courses.
   def exit_survey__general
     mail :exit_survey
   end
 
   def exit_survey__csf
     mail :exit_survey, Pd::Workshop::COURSE_CSF
+  end
+
+  def exit_survey__csp_summer_workshop
+    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
   private

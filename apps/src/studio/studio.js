@@ -17,7 +17,7 @@ import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';
@@ -49,6 +49,7 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
+  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -78,18 +79,18 @@ var showDebugInfo = false;
 /**
  * Create a namespace for the application.
  */
-var Studio = module.exports;
+let Studio = module.exports;
 
 Studio.keyState = {};
 Studio.gesturesObserved = {};
 Studio.btnState = {};
 
-var ButtonState = {
+const ButtonState = {
   UP: 0,
   DOWN: 1
 };
 
-var ArrowIds = {
+const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
@@ -102,20 +103,20 @@ Studio.GameStates = {
   OVER: 2
 };
 
-var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
+const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
 
-var EdgeClassNames = [
+const EdgeClassNames = [
   'top',
   'left',
   'bottom',
   'right'
 ];
 
-var level;
-var skin;
+let level;
+let skin;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -2746,7 +2747,7 @@ Studio.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
@@ -2770,6 +2771,8 @@ var displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
+    const showFailureIcon = studioApp().hasContainedLevels &&
+      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2791,7 +2794,8 @@ var displayFeedback = function () {
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting
+      disablePrinting: level.disablePrinting,
+      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -2804,7 +2808,7 @@ Studio.onReportComplete = function (response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
-  displayFeedback();
+  Studio.displayFeedback();
 };
 
 var registerEventHandler = function (handlers, name, func) {
@@ -3337,7 +3341,8 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
+      (!studioApp().hasContainedLevels || getValidatedResult())) {
     Studio.playSound({ soundName: 'win' });
   } else {
     Studio.playSound({ soundName: 'failure' });
@@ -5344,7 +5349,10 @@ Studio.queueCallback = function (callback, args) {
   var state = {
     node: {
       type: 'CallExpression',
-      arguments: intArgs /* this just needs to be an array of the same size */
+      arguments: intArgs, /* this just needs to be an array of the same size */
+      // give this node an end so that the interpreter doesn't treat it
+      // like polyfill code and do weird weird scray terrible things.
+      end: 1,
     },
     doneCallee_: true,
     func_: callback,
@@ -5353,9 +5361,14 @@ Studio.queueCallback = function (callback, args) {
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = Studio.interpreter.stateStack.unshift(state);
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments.length > 0) {
+      state.value = state.arguments.pop();
+    }
+
+    const depth = Studio.interpreter.pushStackFrame(state);
     Studio.interpreter.paused_ = false;
-    while (Studio.interpreter.stateStack.length >= depth) {
+    while (Studio.interpreter.getStackDepth() >= depth) {
       Studio.interpreter.step();
     }
     Studio.interpreter.paused_ = true;
@@ -6290,3 +6303,9 @@ var checkFinished = function () {
 
   return false;
 };
+
+if (IN_UNIT_TEST) {
+  module.exports.setLevel = (newLevel) => {
+    level = newLevel;
+  };
+}

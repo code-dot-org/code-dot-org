@@ -39,8 +39,11 @@ const WorkshopSummaryReport = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.permission = new Permission();
+  },
+
+  componentDidMount() {
     this.load();
   },
 
@@ -173,7 +176,7 @@ const WorkshopSummaryReport = React.createClass({
       });
     }
 
-    if (this.permission.isAdmin) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}

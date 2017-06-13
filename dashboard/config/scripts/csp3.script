@@ -3,19 +3,20 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 
-stage 'The Need For Programming Languages'
+stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 assessment 'U3L01 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L01 Assessment3', progression: 'Check Your Understanding'
 
-stage 'The Need for Algorithms'
+stage 'The Need for Algorithms', flex_category: 'csp3_1'
 level 'v2 U3L02 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-stage 'Creativity in Algorithms'
+stage 'Creativity in Algorithms', flex_category: 'csp3_1'
 level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-stage 'Using Simple Commands'
+stage 'Using Simple Commands', flex_category: 'csp3_1'
 named_level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+level 'csp_applab_turtle', progression: 'Using Simple Turtle Commands'
 level 'U3L2 Using Simple Commands', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
@@ -23,8 +24,9 @@ assessment 'U3L02 Assessment', progression: 'Check Your Understanding'
 assessment 'U3L02 Free Response Getting Started', progression: 'Check Your Understanding'
 assessment 'U3L02 Free Response Wrap Up', progression: 'Check Your Understanding'
 
-stage 'Creating Functions'
+stage 'Creating Functions', flex_category: 'csp3_1'
 named_level 'v2 U3L05 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+level 'csp_applab_functions', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Define and use turnAround', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Draw a T using turnAround', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 define turnRight and draw a rectangle', progression: 'Using Functions With Turtle Commands'
@@ -36,7 +38,7 @@ assessment 'U3L03 - multiselect - properties of functions', progression: 'Check 
 assessment 'U3L03 Assessment', progression: 'Check Your Understanding'
 assessment 'U3L03 Free Response Wrap Up', progression: 'Check Your Understanding'
 
-stage 'Functions and Top-Down Design'
+stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
 named_level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L04 - snowflake', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions', progression: 'Using Functions with Turtle Commands'
@@ -44,7 +46,7 @@ assessment 'U3L04 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L04 Assessment2', progression: 'Check Your Understanding'
 assessment 'U3L04 Free Response Wrap Up', progression: 'Check Your Understanding'
 
-stage 'APIs and Function Parameters'
+stage 'APIs and Function Parameters', flex_category: 'csp3_1'
 named_level 'v2 U3L07 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L06 - moveForwardwithParams', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 1 triangle', progression: 'Introduction to Parameters'
@@ -59,8 +61,9 @@ assessment 'U3L06 Assessment2', progression: 'Check Your Understanding'
 assessment 'U3L06-API-multichoice', progression: 'Check Your Understanding'
 assessment 'U3L06 Assessment', progression: 'Check Your Understanding'
 
-stage 'Creating functions with Parameters'
+stage 'Creating functions with Parameters', flex_category: 'csp3_1'
 named_level 'v2 U3L08 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+level 'csp_applab_functions_parameters', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - drawSquareWithParam', progression: 'Drawing Shapes With Parameters'
 level 'U3L07 - createTriangleParam', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - squareTwoParams', progression: 'Drawing Shapes With Parameters'
@@ -75,8 +78,9 @@ level 'U3L08 - freePlay', progression: 'Challenge: Continue Your Drawing With Mo
 assessment 'U3L08 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L08 Assessment2', progression: 'Check Your Understanding'
 
-stage 'Looping and Random Numbers'
+stage 'Looping and Random Numbers', flex_category: 'csp3_1'
 named_level 'v2 U3L09 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
+level 'csp_applab_loops', progression: 'Introduction to Loops'
 level 'U3L07 - introSquare', progression: 'Introduction to Loops'
 level 'U3L07 - randomSquare', progression: 'Introduction to Loops'
 level 'U3L07 - randomDots1', progression: 'Introduction to Loops'
@@ -92,7 +96,7 @@ level 'U3L07 - Free Play Loops and Random', progression: 'Project: Under the Sea
 assessment 'U3L07 - MC remove line of code loops', progression: 'Check Your Understanding'
 assessment 'U3L07 Free Response Reflection', progression: 'Check Your Understanding'
 
-stage 'Practice PT - Design a Digital Scene'
+stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
 named_level 'v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L08 - individualCode', progression: 'Design Your Components'
 named_level 'How To: Share Code with Teammates'
@@ -100,6 +104,3 @@ level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
-
-stage 'Participate in a longitudinal study!'
-level 'Click Here!', progression: 'Click Here!'

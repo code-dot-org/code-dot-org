@@ -68,7 +68,7 @@ export default class FormController extends React.Component {
    */
   componentDidUpdate(prevProps, prevState) {
     // If we got new errors or just changed pages, scroll to top of the page
-    const newErrors = prevState.errors.length === 0 && this.state.errors.length > 0;
+    const newErrors = prevState.errors.length !== this.state.errors.length;
     const newPage = prevState.currentPage !== this.state.currentPage;
 
     if (newErrors || newPage) {
@@ -250,42 +250,60 @@ export default class FormController extends React.Component {
   }
 
   /**
+   * checks the data collected so far against the required fields and the fields
+   * for this page, to make sure that all required fields on this page have been
+   * filled out. Flags any such fields with an error, and returns a boolean
+   * indicating whether any were found.
+   *
+   * @return {boolean} true if this page is valid, false if any required fields
+   *         are missing
+   */
+  validateCurrentPageRequiredFields() {
+    const pageFields = this.getCurrentPageComponent().associatedFields;
+    const pageRequiredFields = pageFields.filter(f => this.props.requiredFields.includes(f));
+    const missingRequiredFields = pageRequiredFields.filter(f => !this.state.data[f]);
+
+    if (missingRequiredFields.length) {
+      this.setState({
+        errors: missingRequiredFields,
+        errorHeader: "Please fill out all required fields"
+      });
+
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
    * switch to the next page in sequence, if it exists
    */
   nextPage() {
-    const page = Math.min(
-      this.state.currentPage + 1,
-      this.getPageComponents().length - 1
-    );
-
-    this.setState({
-      currentPage: page
-    });
+    this.setPage(this.state.currentPage + 1);
   }
 
   /**
    * switch to the previous page in sequence, if it exists
    */
   prevPage() {
-    const page = Math.max(this.state.currentPage - 1, 0);
-
-    this.setState({
-      currentPage: page
-    });
+    this.setPage(this.state.currentPage - 1);
   }
 
   /**
    * switch to the specified page in sequence, if it exists
    */
   setPage(i) {
-    const page = Math.min(
+    const newPage = Math.min(
       Math.max(i, 0),
       this.getPageComponents().length - 1
     );
 
-    this.setState({
-      currentPage: page
-    });
+    const currentPageValid = this.validateCurrentPageRequiredFields();
+    if (currentPageValid) {
+      this.setState({
+        currentPage: newPage
+      });
+    }
   }
 
   /**
@@ -372,4 +390,5 @@ export default class FormController extends React.Component {
 FormController.propTypes = {
   apiEndpoint: React.PropTypes.string.isRequired,
   options: React.PropTypes.object.isRequired,
+  requiredFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 };

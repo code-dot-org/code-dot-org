@@ -58,13 +58,13 @@
     "callout_json": "[\r\n \r\n {\r\n  \"localization_key\": \"CSD_U3_L13_S6_C1\",\r\n  \"callout_text\": \"Add your code here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"function draw() {\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "encrypted_examples": "0klXlfHo501U4d5KtUNj/vfBKHDJQEhu3D6Zy8sQ2nI+41kOXYR1MQYNnICa\nISDf\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

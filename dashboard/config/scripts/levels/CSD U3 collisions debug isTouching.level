@@ -61,7 +61,7 @@
     "all_animations_single_frame": "true",
     "encrypted_examples": "d866C+YDShrmUkRni4E3jE9Awyrzru6xcKdEqTNZCKyH1v4it+Q58upfOVkS\nyl49\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "contained_level_names": null
   },

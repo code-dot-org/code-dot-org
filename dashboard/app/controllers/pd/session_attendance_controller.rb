@@ -26,8 +26,8 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user, enrollment: enrollment
-    attendance.update! marked_by_user: nil
+    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
+    attendance.update! marked_by_user: nil, enrollment: enrollment
     render_confirmation
   end
 
@@ -43,9 +43,21 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    enrollment.update!(user: current_user, email: current_user.email)
-    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user, enrollment: enrollment
-    attendance.update! marked_by_user: nil
+    enrollment.update!(user: current_user)
+    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
+    attendance.update! marked_by_user: nil, enrollment: enrollment
+
+    if current_user.student?
+      if User.hash_email(enrollment.email) == current_user.hashed_email
+        # Email matches user's hashed email. Upgrade to teacher and set email.
+        current_user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email)
+      else
+        # No email match. Redirect to upgrade page.
+        redirect_to action: 'upgrade_account'
+        return
+      end
+    end
+
     render_confirmation
   end
 

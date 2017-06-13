@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/johnny-five@0.10.10-cdo.0":
-  version "0.10.10-cdo.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.10.10-cdo.0.tgz#bf2d2316cc897d0fd8ba5e8e6b348cdb0f5aeedb"
+"@code-dot-org/johnny-five@0.11.1-cdo.0":
+  version "0.11.1-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.11.1-cdo.0.tgz#54b67b3db0cc2e1471850b5a4b1579f8df222b1d"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
@@ -75,9 +75,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.0.tgz#fe325ef92b4a620b6abea0fcf095cfde61b770df"
+"@code-dot-org/js-interpreter@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.1.tgz#ba709dc67938b10c51738c6a0d6baff64ec777b0"
   dependencies:
     yargs "^7.0.1"
 
@@ -6084,9 +6084,9 @@ mocha@^3.1.2:
     mkdirp "0.5.1"
     supports-color "3.1.2"
 
-mock-firmata@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/mock-firmata/-/mock-firmata-0.1.0.tgz#017c1ef5b6ec1f7a3021556c8a96ce0cf31e4613"
+mock-firmata@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/mock-firmata/-/mock-firmata-0.2.0.tgz#b7a1757fa88de322c4344a25a6cfc67dab92dd96"
   dependencies:
     board-io "^3.0.5"
 
@@ -6801,9 +6801,9 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@code-dot-org/playground-io#v0.5.0-cdo.0:
-  version "0.5.0-cdo.0"
-  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/693229a47fba288ac95b303bc23cde56804f23ee"
+playground-io@code-dot-org/playground-io#v0.6.0-cdo.0:
+  version "0.6.0-cdo.0"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/bcd92896945c2615926b4cc6b3d3f395bc080b38"
   dependencies:
     buffer "^4.6.0"
     firmata ">=0.11.3"
@@ -7208,9 +7208,9 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-pusher-js@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-3.2.1.tgz#46a30800c263e837081cf7084f0a7eee55973e60"
+pusher-js@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-4.1.0.tgz#5297973de935994ba65c2048ccf3b8c007247341"
   dependencies:
     faye-websocket "0.9.4"
     xmlhttprequest "^1.8.0"
