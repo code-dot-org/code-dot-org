@@ -5,6 +5,7 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
+import { assignments } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -112,8 +113,7 @@ class SectionRow extends Component {
     // redux provided
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
+    validAssignments: PropTypes.arrayOf(assignmentShape).isRequired
   };
 
   state = {
@@ -137,7 +137,7 @@ class SectionRow extends Component {
   onClickEditCancel = () => this.setState({editing: false});
 
   render() {
-    const { section, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
+    const { section, validLoginTypes, validGrades, validAssignments } = this.props;
     const { editing, deleting } = this.state;
 
     return (
@@ -185,8 +185,7 @@ class SectionRow extends Component {
               ref={element => this.assignment = element}
               courseId={section.course_id}
               scriptId={section.script_id}
-              validCourses={validCourses}
-              validScripts={validScripts}
+              assignments={validAssignments}
             />
           )}
         </td>
@@ -244,6 +243,5 @@ class SectionRow extends Component {
 export default connect(state => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
-  validCourses: state.teacherSections.validCourses,
-  validScripts: state.teacherSections.validScripts,
+  validAssignments: assignments(state.teacherSections)
 }))(SectionRow);

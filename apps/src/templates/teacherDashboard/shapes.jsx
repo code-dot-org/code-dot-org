@@ -18,6 +18,8 @@ export const sectionShape = PropTypes.shape({
 
 export const assignmentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
   category_priority: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   position: PropTypes.number,

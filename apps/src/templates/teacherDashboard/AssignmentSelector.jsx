@@ -6,12 +6,11 @@ export default class AssignmentSelector extends Component {
   static propTypes = {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
+    assignments: PropTypes.arrayOf(assignmentShape).isRequired,
   };
 
   getSelectedAssignment() {
-    const assignment = this.assignments[this.root.value];
+    const assignment = this.props.assignments[this.root.value];
     return {
       course_id: assignment.course_id,
       script_id: assignment.script_id
@@ -19,49 +18,25 @@ export default class AssignmentSelector extends Component {
   }
 
   render() {
-    const { courseId, scriptId, validCourses, validScripts } = this.props;
+    const { courseId, scriptId, assignments } = this.props;
 
-    // TODO(bjvanminnen): It's not clear that all of this data manipulation belongs
-    // here. If we move our data to redux, it likely belongs there. Otherwise, it
-    // may still make more sense for this to all happen before instantiating our
-    // React tree.
+    const target = {
+      courseId: courseId,
+      scriptId: courseId ? null : scriptId
+    };
 
-    // Differentiate courses and scripts by giving them course_ids and script_ids fields.
-    const courses = validCourses.map(course => ({
-      ...course,
-      course_id: course.id
-    }));
-    const scripts = validScripts.map(script => ({
-      ...script,
-      script_id: script.id
-    }));
+    // TODO: after sections are in redux, currentAssignment can also likely become
+    // a redux selector
+    // Find an assignment with the appropriate id
+    const assignmentIndex = assignments.findIndex(assignment => (
+      assignment.courseId === target.courseId && assignment.scriptId === target.scriptId
+    ));
+    const currentAssignment = assignmentIndex === -1 ? '' : assignmentIndex;
 
-    // concat courses and scripts, giving them an index to that we can easily
-    // get back to assignment.
-    this.assignments = courses.concat(scripts).map((assignment, index) => ({
-      ...assignment,
-      index
-    }));
-
-    let currentAssignment = '';
-    if (courseId) {
-      const selectedCourse = this.assignments.findIndex(assignment =>
-        assignment.course_id === courseId);
-      if (selectedCourse !== -1) {
-        currentAssignment = selectedCourse;
-      }
-    } else if (scriptId) {
-      const selectedScript = this.assignments.findIndex(assignment =>
-        assignment.script_id === scriptId);
-      if (selectedScript !== -1) {
-        currentAssignment = selectedScript;
-      }
-    }
-
-    const grouped = _.groupBy(
-      _.orderBy(this.assignments, ['category_priority', 'category', 'position', 'name']),
-      'category'
-    );
+    const grouped = _(assignments)
+      .orderBy(['category_priority', 'category', 'position', 'name'])
+      .groupBy('category')
+      .value();
 
     return (
       <select

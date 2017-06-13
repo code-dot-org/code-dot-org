@@ -26,8 +26,8 @@ const sections = [
   },
   {
     id: 12,
-    course_id: 30,
-    script_id: null,
+    course_id: null,
+    script_id: 36,
     name: "section2",
     loginType: "picture",
     grade: "11",
@@ -104,6 +104,22 @@ const validCourses = [
     category: "other",
     position: null,
     category_priority: 3,
+  },
+  {
+    id: 36,
+    name: "Course 3",
+    script_name: "course3",
+    category: "CS Fundamentals",
+    position: 3,
+    category_priority: 0,
+  },
+  {
+    id: 46,
+    name: "Infinity Play Lab",
+    script_name: "infinity",
+    category: "Hour of Code",
+    position: 12,
+    category_priority: 0,
   }
 ];
 
