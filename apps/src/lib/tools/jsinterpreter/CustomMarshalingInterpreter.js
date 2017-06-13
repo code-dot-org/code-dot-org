@@ -2,6 +2,16 @@ const Interpreter = require('@code-dot-org/js-interpreter');
 const codegen = require('../../../lib/tools/jsinterpreter/codegen');
 const CustomMarshaler = require('./CustomMarshaler');
 
+/**
+ * Property access wrapped in try/catch. This is in an indepedendent function
+ * so the JIT compiler can optimize the calling function.
+ */
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
 module.exports = class CustomMarshalingInterpreter extends Interpreter {
   constructor(code, customMarshaler, opt_initFunc) {
     super(code, (thisInterpreter, scope) => {
@@ -400,7 +410,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     var retVal = interpreterObject || this.createObject(this.OBJECT);
     var isFunc = this.isa(retVal, this.FUNCTION);
     for (var prop in nativeObject) {
-      var value = codegen.safeReadProperty(nativeObject, prop);
+      var value = safeReadProperty(nativeObject, prop);
       if (isFunc &&
           (value === Function.prototype.trigger ||
            value === Function.prototype.inherits)) {
