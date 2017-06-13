@@ -40,7 +40,7 @@ level 'courseE_farmer_ramp16'
 level 'courseE_bee_ramp17'
 
 stage 'Private and Personal Information'
-level 'coursee-privateandpersonalinformation'
+level 'courseE_unplugged_privateInformation'
 
 stage 'Build a Star Wars Game'
 skin 'hoc2015'

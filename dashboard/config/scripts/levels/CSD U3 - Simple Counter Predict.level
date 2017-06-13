@@ -71,7 +71,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "contained_level_names": [
       "CSD U3 Counters explaining counters contained 2"
     ],
@@ -81,6 +81,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:46:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
