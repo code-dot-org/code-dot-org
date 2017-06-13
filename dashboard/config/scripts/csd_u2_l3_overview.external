@@ -16,9 +16,9 @@ This lesson introduces to HTML as a solution to the problem of how to communicat
 
 ## Introduced Code
 
-* [HTML](//docs.code.org/weblab/html/)
-* [Doctype](//docs.code.org/weblab/doctype/)
-* [Paragraph](//docs.code.org/weblab/P/)
-* [Body](//docs.code.org/weblab/body/)
-* [Head](//docs.code.org/weblab/head/)
+* **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
+* **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
+* **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+* **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
+* **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
 MARKDOWN

@@ -5,11 +5,11 @@ markdown <<MARKDOWN
 
 Following the introduction to booleans and if statements in the previous lesson, students are introduced to a new block called keyDown() which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson students will have written programs that take keyboard input from the user to control sprites on the screen.
 
-# New Blocks
+## Introduced Code
 
-*  **[keyDown()](//docs.code.org/gamelab/keyDown/)** - `keyDown(code)`
+* [keyDown()](//docs.code.org/gamelab/keyDown/)
 
-# Resources
+## Resources
 
 * [Boolean Expressions](https://youtu.be/y3rCKJNOwpA) - Video ([download](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
 MARKDOWN
