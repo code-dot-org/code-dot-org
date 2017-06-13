@@ -51,6 +51,9 @@ function renderSectionProjects(sectionId) {
   });
 }
 
+/**
+ * Render our sections table using React
+ */
 function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
   registerReducers({teacherSections});
@@ -63,9 +66,7 @@ function renderSectionsTable(sections) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionTable
-        sections={sections}
-      />
+      <SectionTable/>
     </Provider>,
     element
   );
@@ -274,7 +275,7 @@ function main() {
           assignmentName: $scope.getName(s),
           assignmentPath: $scope.getPath(s)
         })));
-        // $scope.hideSectionsTable = true;
+        $scope.hideSectionsTable = true;
       }
       $scope.sectionsLoaded = true;
     });
