@@ -90,11 +90,12 @@ class SectionTable extends Component {
             />
           ))}
         </tbody>
-
       </table>
     );
   }
 }
+
+export const UnconnectedSectionTable = SectionTable;
 
 export default connect(state => ({
   sectionIds: state.teacherSections.sectionIds
