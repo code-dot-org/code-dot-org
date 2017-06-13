@@ -12,7 +12,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
-import * as codegen from '@cdo/apps/codegen';
+import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;

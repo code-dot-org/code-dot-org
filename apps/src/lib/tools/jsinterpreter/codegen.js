@@ -1,7 +1,8 @@
 /* global CanvasPixelArray, Uint8ClampedArray */
 import Interpreter from '@code-dot-org/js-interpreter';
-import {dropletGlobalConfigBlocks} from './dropletUtils';
-import * as utils from './utils';
+import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
+import * as utils from '../../../utils';
+import CustomMarshaler from './CustomMarshaler';
 
 /*
  * Note: These are defined to match the state.mode of the interpreter. The
@@ -92,8 +93,11 @@ export function evalWithEvents(apis, events, evalCode = '') {
   // to call, and any arguments.
   const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
 
-  interpreter = new Interpreter(
+  // TODO (pcardune): remove circular dependency
+  const CustomMarshalingInterpreter = require('./CustomMarshalingInterpreter');
+  interpreter = new CustomMarshalingInterpreter(
     evalCode + eventLoop,
+    new CustomMarshaler({}),
     (interpreter, scope) => {
       marshalNativeToInterpreterObject(interpreter, apis, 5, scope);
       interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
@@ -248,7 +252,7 @@ export function marshalNativeToInterpreter(interpreter, nativeVar, nativeParentO
     maxDepth = Infinity; // default to infinite levels of depth
   }
   // TODO (pcardune): remove circular dependency
-  const CustomMarshalingInterpreter = require('./lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+  const CustomMarshalingInterpreter = require('./CustomMarshalingInterpreter');
   if (interpreter instanceof CustomMarshalingInterpreter) {
     if (interpreter.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
       return interpreter.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
@@ -409,7 +413,7 @@ function createNativeInterpreterCallback(opts, intFunc) {
       state.value = state.arguments.pop();
     }
 
-    opts.interpreter.stateStack.push(state);
+    opts.interpreter.pushStackFrame(state);
   };
 }
 
@@ -602,7 +606,7 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
  * (Called repeatedly after completing a step where the node was marked 'done')
  */
 exports.isNextStepSafeWhileUnwinding = function (interpreter) {
-  var state = interpreter.stateStack[interpreter.stateStack.length - 1];
+  var state = interpreter.peekStackFrame();
   var type = state.node.type;
   if (state.done) {
     return true;
@@ -814,11 +818,11 @@ exports.selectCurrentCode = function (interpreter,
                                       editor,
                                       highlightClass) {
   var userCodeRow = -1;
-  if (interpreter && interpreter.stateStack[interpreter.stateStack.length - 1]) {
-    var node = interpreter.stateStack[interpreter.stateStack.length - 1].node;
+  if (interpreter && interpreter.peekStackFrame()) {
+    var node = interpreter.peekStackFrame().node;
 
     if (node.type === 'ForStatement') {
-      var mode = interpreter.stateStack[interpreter.stateStack.length - 1].mode || 0, subNode;
+      var mode = interpreter.peekStackFrame().mode || 0, subNode;
       switch (mode) {
         case exports.ForStatementMode.INIT:
           subNode = node.init;

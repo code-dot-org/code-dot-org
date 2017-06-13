@@ -127,9 +127,10 @@ class User < ActiveRecord::Base
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'.freeze
-  TYPE_TEACHER = 'teacher'.freeze
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = 'student'.freeze,
+    TYPE_TEACHER = 'teacher'.freeze
+  ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -400,22 +401,6 @@ class User < ActiveRecord::Base
 
   def sanitize_and_set_race_data
     return unless races_changed?
-
-    if races.nil?
-      self.urm = nil
-      return
-    end
-
-    races_array = races.split(',')
-    if races_array.include? 'closed_dialog'
-      self.races = 'closed_dialog'
-    end
-    if races_array.length > 5
-      self.races = 'nonsense'
-    end
-    races_array.each do |race|
-      self.races = 'nonsense' unless VALID_RACES.include? race
-    end
     self.urm = urm_from_races
   end
 
