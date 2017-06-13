@@ -29,7 +29,7 @@ end
 commands = ARGV.map(&:to_s).map(&:strip).each_slice(2).to_a.map do |regex, filename|
   # print tsv headers
   File.open(filename, 'w') do |file|
-    file << %w{owner_storage_id match project_url created_at updated_at}.join("\t") + "\n"
+    file << %w{channel_id owner_storage_id match project_url created_at updated_at}.join("\t") + "\n"
   end
 
   # construct regex
@@ -88,7 +88,7 @@ applab_channels.each_slice(MAX_THREADS) do |chunk|
 
             File.open(filename, 'a') do |file|
               file.flock(File::LOCK_EX)
-              file << "#{owner_storage_id}\t#{match}\t#{project_url}\t#{created_at}\t#{updated_at}\n"
+              file << "#{channel_id}\t#{owner_storage_id}\t#{match}\t#{project_url}\t#{created_at}\t#{updated_at}\n"
               file.flock(File::LOCK_UN)
             end
           end
