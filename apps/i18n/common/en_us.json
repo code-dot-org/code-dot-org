@@ -1,4 +1,5 @@
 {
+  "addRemoveGoogleClassrooms": "Visit https://classroom.google.com/ to add and remove classrooms.",
   "age": "Age",
   "allStudents": "All",
   "allowEditing": "Allow editing",
@@ -35,6 +36,7 @@
   "clearPuzzleConfirm": "This will reset the puzzle to its start state and delete all the blocks you've added or changed.",
   "clearPuzzleConfirmHeader": "Are you sure you want to start over?",
   "chooseSection": "Choose Section",
+  "code": "Code:",
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
@@ -301,6 +303,7 @@
   "nextStage": "Congratulations! You completed {stageName}.",
   "nextStageTrophies": "Congratulations! You completed {stageName} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "no": "No",
+  "noClassroomsFound": "No classrooms found.",
   "noIconsFound": "No icons found",
   "noMenuItemsAvailable": "No menu items available.",
   "nPoints": "{numPoints, plural, one {1 point} other {# points}}",
