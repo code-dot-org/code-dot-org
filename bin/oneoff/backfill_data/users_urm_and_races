@@ -6,7 +6,7 @@
 require_relative '../../../dashboard/config/environment'
 
 batch_number = 0
-User.where("properties LIKE '%races%'").find_in_batches(batch_size: 2_500) do |batch|
+User.with_deleted.where("properties LIKE '%races%'").find_in_batches(batch_size: 2_500) do |batch|
   puts "PROCESSING: #{batch_number}..."
   ActiveRecord::Base.transaction do
     batch.each do |user|
