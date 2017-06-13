@@ -352,9 +352,9 @@ def configure_for_eyes
 
   # Also seed eyes data
   ChatClient.log "Seeding eyes data"
-  unless system('ruby ../../../bin/test_utils/seed_pd_eyes_data.rb ')
+  unless system("bundle exec ruby #{bin_dir('test_utils/seed_pd_eyes_data.rb')}")
     ChatClient.log 'Unable to seed data for eyes tests', color: 'red'
-    exit
+    exit 1
   end
 end
 
