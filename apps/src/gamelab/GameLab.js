@@ -11,7 +11,7 @@ import {
 } from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
-var codegen = require('../codegen');
+var codegen = require('../lib/tools/jsinterpreter/codegen');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
