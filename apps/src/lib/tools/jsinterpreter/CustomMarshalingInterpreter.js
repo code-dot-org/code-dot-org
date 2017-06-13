@@ -107,7 +107,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         type === 'undefined' || customMarshalValue === null) {
       return this.createPrimitive(customMarshalValue);
     } else {
-      return codegen.marshalNativeToInterpreter(this, customMarshalValue, obj.data);
+      return this.marshalNativeToInterpreter(customMarshalValue, obj.data);
     }
   }
 
@@ -323,6 +323,219 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       }
     }
     this.popStackFrame();
+  }
+
+  /**
+   * Generate code for each of the given events, and evaluate it using the
+   * provided APIs as context. Note that this does not currently support custom marshaling.
+   *
+   * @param {Object} apis - Context to be set as globals in the interpreted runtime.
+   * @param {Object} events - Mapping of hook names to the corresponding handler code.
+   *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
+   * @param {string} [evalCode] - Optional extra code to evaluate.
+   * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
+   *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
+   */
+  static evalWithEvents(apis, events, evalCode = '') {
+    let interpreter, currentCallback, lastReturnValue;
+    const hooks = [];
+
+    Object.keys(events).forEach(event => {
+      let {code, args} = events[event];
+      if (typeof code === 'string') {
+        code = [code];
+      }
+      code.forEach((c, index) => {
+        const eventId = `${event}-${index}`;
+        // Create a hook that triggers an event inside the interpreter.
+        hooks.push({name: event, func: (...args) => {
+          const eventArgs = {name: eventId, args};
+          currentCallback(interpreter.marshalNativeToInterpreter(eventArgs, null, 5));
+          interpreter.run();
+          return lastReturnValue;
+        }});
+        evalCode += `this['${eventId}']=function(${args ? args.join() : ''}){${c}};`;
+      });
+    });
+
+    // The event loop pauses the interpreter until the native async function
+    // `currentCallback` returns a value. The value contains the name of the event
+    // to call, and any arguments.
+    const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
+
+    interpreter = new CustomMarshalingInterpreter(
+      evalCode + eventLoop,
+      new CustomMarshaler({}),
+      (interpreter, scope) => {
+        interpreter.marshalNativeToInterpreterObject(apis, 5, scope);
+        interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+          currentCallback = callback;
+        }));
+        interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
+          lastReturnValue = codegen.marshalInterpreterToNative(interpreter, returnValue);
+        }));
+      }
+    );
+    interpreter.run();
+
+    return {hooks, interpreter};
+  }
+
+  /**
+   * Marshal a single native object from native to interpreter. This is in an
+   * indepedendent function so the JIT compiler can optimize the calling function.
+   * (Chrome V8 says ForInStatement is not fast case)
+   *
+   * @param {Interpreter} interpreter Interpreter instance
+   * @param {Object} nativeObject Object to marshal
+   * @param {Number} maxDepth Optional maximum depth to traverse in properties
+   * @param {Object} interpreterObject Optional existing interpreter object
+   * @return {!Object} The interpreter object, which was created if needed.
+   */
+  marshalNativeToInterpreterObject(
+    nativeObject,
+    maxDepth,
+    interpreterObject
+  ) {
+    var retVal = interpreterObject || this.createObject(this.OBJECT);
+    var isFunc = this.isa(retVal, this.FUNCTION);
+    for (var prop in nativeObject) {
+      var value = codegen.safeReadProperty(nativeObject, prop);
+      if (isFunc &&
+          (value === Function.prototype.trigger ||
+           value === Function.prototype.inherits)) {
+        // Don't marshal these that were added by jquery or else we will recurse
+        continue;
+      }
+      this.setProperty(
+        retVal,
+        prop,
+        this.marshalNativeToInterpreter(
+          value,
+          nativeObject,
+          maxDepth
+        )
+      );
+    }
+    return retVal;
+  }
+
+  /**
+   * Generate a function wrapper for an interpreter callback that will be
+   * invoked by a special native function that can execute these callbacks inline
+   * on the interpreter stack.
+   *
+   * @param {!Object} opts Options block
+   * @param {!Interpreter} opts.interpreter Interpreter instance
+   * @param {number} [opts.maxDepth] Maximum depth to marshal objects
+   * @param {Object} [opts.callbackState] callback state object, which will
+   *        hold the unmarshaled return value as a 'value' property later.
+   * @param {Function} intFunc The interpreter supplied callback function
+   */
+  marshalNativeToInterpreter(nativeVar, nativeParentObj, maxDepth) {
+    if (maxDepth === 0 || typeof nativeVar === 'undefined') {
+      return this.UNDEFINED;
+    }
+    var i, retVal;
+    if (typeof maxDepth === "undefined") {
+      maxDepth = Infinity; // default to infinite levels of depth
+    }
+    if (this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+      return this.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
+    }
+    if (nativeVar instanceof Array) {
+      retVal = this.createObject(this.ARRAY);
+      for (i = 0; i < nativeVar.length; i++) {
+        retVal.properties[i] = this.marshalNativeToInterpreter(nativeVar[i], null, maxDepth - 1);
+      }
+      retVal.length = nativeVar.length;
+    } else if (codegen.isCanvasImageData(nativeVar)) {
+      // Special case for canvas image data - could expand to support TypedArray
+      retVal = this.createObject(this.ARRAY);
+      for (i = 0; i < nativeVar.length; i++) {
+        retVal.properties[i] = this.createPrimitive(nativeVar[i]);
+      }
+      retVal.length = nativeVar.length;
+    } else if (nativeVar instanceof Function) {
+      var makeNativeOpts = {
+        interpreter: this,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+      };
+      if (codegen.asyncFunctionList.indexOf(nativeVar) !== -1) {
+        // Mark if this should be nativeIsAsync:
+        makeNativeOpts.nativeIsAsync = true;
+      }
+      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(this, nativeParentObj);
+      // Add extra options if the parent of this function is in our custom marshal
+      // modified object list:
+      for (var prop in extraOpts) {
+        makeNativeOpts[prop] = extraOpts[prop];
+      }
+      var wrapper = codegen.makeNativeMemberFunction(makeNativeOpts);
+      if (makeNativeOpts.nativeIsAsync) {
+        retVal = this.createAsyncFunction(wrapper);
+      } else {
+        retVal = this.createNativeFunction(wrapper);
+      }
+      // Also marshal properties on the native function object:
+      this.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1, retVal);
+    } else if (nativeVar instanceof Object) {
+      // note Object must be checked after Function and Array (since they are also Objects)
+      if (this.isa(nativeVar, this.FUNCTION)) {
+        // Special case to see if we are trying to marshal an interpreter object
+        // (this currently happens when we store interpreter function objects in native
+        //  and return them back in nativeGetCallback)
+
+        // NOTE: this check could be expanded to check for other interpreter object types
+        // if we have reason to believe that we may be passing those back
+
+        retVal = nativeVar;
+      } else {
+        retVal = this.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1);
+      }
+    } else {
+      retVal = this.createPrimitive(nativeVar);
+    }
+    return retVal;
+  }
+
+  /**
+   * Evaluates a string of code parameterized with a dictionary.
+   * Note that this does not currently support custom marshaling.
+   *
+   * @param code {string} - the code to evaluation
+   * @param globals {Object} - An object of globals to be added to the scope of code being executed
+   * @param legacy {boolean} - If true, code will be run natively via an eval-like method,
+   *     otherwise it will use the js interpreter.
+   * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
+   */
+  static evalWith(code, globals, legacy) {
+    if (legacy) {
+      // execute JS code "natively"
+      var params = [];
+      var args = [];
+      for (var k in globals) {
+        params.push(k);
+        args.push(globals[k]);
+      }
+      params.push(code);
+      var ctor = function () {
+        return Function.apply(this, params);
+      };
+      ctor.prototype = Function.prototype;
+      return new ctor().apply(null, args);
+    } else {
+      const interpreter = new CustomMarshalingInterpreter(
+        `(function () { ${code} })()`,
+        new CustomMarshaler({}),
+        (interpreter, scope) => {
+          interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
+        }
+      );
+      interpreter.run();
+      return interpreter;
+    }
   }
 
 };
