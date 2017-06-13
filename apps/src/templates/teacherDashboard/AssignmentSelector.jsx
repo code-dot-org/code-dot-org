@@ -26,7 +26,7 @@ export default class AssignmentSelector extends Component {
     // may still make more sense for this to all happen before instantiating our
     // React tree.
 
-    // Differentiate courses and ids by giving them course_ids and script_ids fields.
+    // Differentiate courses and scripts by giving them course_ids and script_ids fields.
     const courses = validCourses.map(course => ({
       ...course,
       course_id: course.id
@@ -36,30 +36,30 @@ export default class AssignmentSelector extends Component {
       script_id: script.id
     }));
 
-    // concat courses and scripts, givin them an index to that we can easily
+    // concat courses and scripts, giving them an index to that we can easily
     // get back to assignment.
-    const assignments = courses.concat(scripts).map((assignment, index) => ({
+    this.assignments = courses.concat(scripts).map((assignment, index) => ({
       ...assignment,
       index
     }));
 
-    // store as instance variable so that getSelectedAssignment doesnt need to
-    // regenerate
-    this.assignments = assignments;
-
     let currentAssignment = '';
     if (courseId) {
-      const selectedCourse = validCourses.findIndex(c => c.id === courseId);
+      const selectedCourse = this.assignments.findIndex(assignment =>
+        assignment.course_id === courseId);
       if (selectedCourse !== -1) {
         currentAssignment = selectedCourse;
       }
     } else if (scriptId) {
-      const selectedScript = validScripts.findIndex(s => s.id === scriptId);
-      currentAssignment = validCourses.length + selectedScript;
+      const selectedScript = this.assignments.findIndex(assignment =>
+        assignment.script_id === scriptId);
+      if (selectedScript !== -1) {
+        currentAssignment = selectedScript;
+      }
     }
 
     const grouped = _.groupBy(
-      _.orderBy(assignments, ['category_priority', 'category', 'position', 'name']),
+      _.orderBy(this.assignments, ['category_priority', 'category', 'position', 'name']),
       'category'
     );
 
