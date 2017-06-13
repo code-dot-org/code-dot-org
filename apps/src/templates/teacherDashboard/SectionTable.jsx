@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
-import { sectionShape } from './shapes';
 
 const styles = {
   table: {
@@ -35,11 +34,11 @@ const styles = {
 
 class SectionTable extends Component {
   static propTypes = {
-    sections: PropTypes.arrayOf(sectionShape).isRequired,
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   render() {
-    const { sections } = this.props;
+    const { sectionIds } = this.props;
 
     // TODO: i18n
     return (
@@ -84,10 +83,10 @@ class SectionTable extends Component {
             <th style={styles.headerRow}>
             </th>
           </tr>
-          {sections.map((s, index) => (
+          {sectionIds.map((sid, index) => (
             <SectionRow
               key={index}
-              section={s}
+              sectionId={sid}
             />
           ))}
         </tbody>
@@ -98,5 +97,5 @@ class SectionTable extends Component {
 }
 
 export default connect(state => ({
-
+  sectionIds: state.teacherSections.sectionIds
 }))(SectionTable);

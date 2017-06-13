@@ -5,7 +5,7 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
-import { assignments } from './teacherSectionsRedux';
+import { assignments, currentAssignmentIndex } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -108,12 +108,14 @@ ConfirmSave.propTypes = {
  */
 class SectionRow extends Component {
   static propTypes = {
-    section: sectionShape.isRequired,
+    sectionId: PropTypes.number.isRequired,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validAssignments: PropTypes.arrayOf(assignmentShape).isRequired
+    validAssignments: PropTypes.arrayOf(assignmentShape).isRequired,
+    currentAssignmentIndex: PropTypes.number,
+    section: sectionShape.isRequired,
   };
 
   state = {
@@ -137,7 +139,13 @@ class SectionRow extends Component {
   onClickEditCancel = () => this.setState({editing: false});
 
   render() {
-    const { section, validLoginTypes, validGrades, validAssignments } = this.props;
+    const {
+      section,
+      validLoginTypes,
+      validGrades,
+      validAssignments,
+      currentAssignmentIndex
+    } = this.props;
     const { editing, deleting } = this.state;
 
     return (
@@ -183,8 +191,7 @@ class SectionRow extends Component {
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              courseId={section.course_id}
-              scriptId={section.script_id}
+              currentAssignmentIndex={currentAssignmentIndex}
               assignments={validAssignments}
             />
           )}
@@ -240,8 +247,10 @@ class SectionRow extends Component {
   }
 }
 
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
-  validAssignments: assignments(state.teacherSections)
+  validAssignments: assignments(state.teacherSections),
+  currentAssignmentIndex: currentAssignmentIndex(state.teacherSections, ownProps.sectionId),
+  section: state.teacherSections.sections[ownProps.sectionId],
 }))(SectionRow);
