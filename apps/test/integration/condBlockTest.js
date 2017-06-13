@@ -1,5 +1,6 @@
 import {assert} from '../util/configuredChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 describe('functional_cond_number', function () {
   var studioApp;
@@ -38,7 +39,7 @@ describe('functional_cond_number', function () {
     var numRects = block.svg_.getRootElement().querySelectorAll('rect[width="30"]').length;
     var expectedNumRects = block.pairs_.length * 2 + 1;
     assert(numRects === expectedNumRects,
-        '\nGot: ' + numRects + '\nExpected: ' + expectedNumRects);
+           '\nGot: ' + numRects + '\nExpected: ' + expectedNumRects);
   }
 
   it('it can addConditionalRow multiple times', function () {
@@ -133,8 +134,7 @@ describe('functional_cond_number', function () {
     //   else { return   3; }
     // })()
 
-    var codegen = require('@cdo/apps/lib/tools/jsinterpreter/codegen');
-    var result = codegen.evalWith('return ' + code, {}, true);
+    var result = CustomMarshalingInterpreter.evalWith('return ' + code, {}, true);
     assert(result === 3);
   });
 

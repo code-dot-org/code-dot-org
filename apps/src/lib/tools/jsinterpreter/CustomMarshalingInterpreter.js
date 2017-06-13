@@ -500,4 +500,42 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     return retVal;
   }
 
+  /**
+   * Evaluates a string of code parameterized with a dictionary.
+   * Note that this does not currently support custom marshaling.
+   *
+   * @param code {string} - the code to evaluation
+   * @param globals {Object} - An object of globals to be added to the scope of code being executed
+   * @param legacy {boolean} - If true, code will be run natively via an eval-like method,
+   *     otherwise it will use the js interpreter.
+   * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
+   */
+  static evalWith(code, globals, legacy) {
+    if (legacy) {
+      // execute JS code "natively"
+      var params = [];
+      var args = [];
+      for (var k in globals) {
+        params.push(k);
+        args.push(globals[k]);
+      }
+      params.push(code);
+      var ctor = function () {
+        return Function.apply(this, params);
+      };
+      ctor.prototype = Function.prototype;
+      return new ctor().apply(null, args);
+    } else {
+      const interpreter = new CustomMarshalingInterpreter(
+        `(function () { ${code} })()`,
+        new CustomMarshaler({}),
+        (interpreter, scope) => {
+          interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
+        }
+      );
+      interpreter.run();
+      return interpreter;
+    }
+  }
+
 };
