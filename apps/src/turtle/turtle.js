@@ -25,28 +25,38 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var color = require("../util/color");
-var commonMsg = require('@cdo/locale');
-var turtleMsg = require('./locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
-var ArtistAPI = require('./api');
-var apiJavascript = require('./apiJavascript');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var utils = require('../utils');
-var Slider = require('../slider');
-var _ = require('lodash');
-var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+import React from 'react';
+import {Provider} from 'react-redux';
+import ReactDOM from 'react-dom';
+
+import color from "../util/color";
+import commonMsg from '@cdo/locale';
+import turtleMsg from './locale';
+
+import {evalWith} from '../lib/tools/jsinterpreter/codegen';
+
+import ArtistAPI from './api';
+import apiJavascript from './apiJavascript';
+import AppView from '../templates/AppView';
+import ArtistVisualizationColumn from './ArtistVisualizationColumn';
+
+import {
+  xFromPosition,
+  yFromPosition,
+  degreesToRadians
+} from '../utils';
+
+import Slider from '../slider';
+import dropletConfig from './dropletConfig';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
@@ -69,13 +79,13 @@ const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 /**
 * Minimum joint segment length
 */
-var JOINT_SEGMENT_LENGTH = 50;
+const JOINT_SEGMENT_LENGTH = 50;
 
 /**
  * An x offset against the sprite edge where the decoration should be drawn,
  * along with whether it should be drawn before or after the turtle sprite itself.
  */
-var ELSA_DECORATION_DETAILS = [
+const ELSA_DECORATION_DETAILS = [
   { x: 15, when: "after" },
   { x: 26, when: "after" },
   { x: 37, when: "after" },
@@ -195,8 +205,8 @@ module.exports = Artist;
  */
 Artist.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  this.studioApp_.reset = _.bind(this.reset, this);
-  this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
+  this.studioApp_.reset = this.reset.bind(this);
+  this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
@@ -248,8 +258,8 @@ Artist.prototype.init = function (config) {
     this.avatarHeight = 51;
   }
 
-  config.loadAudio = _.bind(this.loadAudio_, this);
-  config.afterInject = _.bind(this.afterInject_, this, config);
+  config.loadAudio = this.loadAudio_.bind(this);
+  config.afterInject = this.afterInject_.bind(this, config);
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config);
@@ -413,10 +423,10 @@ Artist.prototype.afterInject_ = function (config) {
   // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
   // enough in this case, so we're actually creating and reusing the object within the document body.
   var imageContainer = document.createElement('div');
-  imageContainer.style.display='none';
+  imageContainer.style.display = 'none';
   document.body.appendChild(imageContainer);
 
-  for ( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+  for (var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
     var pattern = this.skin.lineStylePatternOptions[i][1];
     if (this.skin[pattern]) {
       var img = new Image();
@@ -489,7 +499,7 @@ Artist.prototype.drawCurrentBlocksOnCanvas = function (canvas) {
  */
 Artist.prototype.placeImage = function (filename, position, scale) {
   var img = new Image();
-  img.onload = _.bind(function () {
+  img.onload = () => {
     if (img.width !== 0) {
       if (scale) {
         this.ctxImages.drawImage(img, position[0], position[1], img.width,
@@ -499,7 +509,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
       }
     }
     this.display();
-  }, this);
+  };
 
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
@@ -534,7 +544,7 @@ Artist.prototype.drawImages = function () {
  * Initial the turtle image on load.
  */
 Artist.prototype.loadTurtle = function () {
-  this.avatarImage.onload = _.bind(this.display, this);
+  this.avatarImage.onload = this.display.bind(this);
 
   this.avatarImage.src = this.skin.avatar;
   if (this.skin.id === "anna") {
@@ -791,7 +801,7 @@ Artist.prototype.runButtonClick = function () {
 
 Artist.prototype.evalCode = function (code) {
   try {
-    codegen.evalWith(code, {
+    evalWith(code, {
       Turtle: this.api
     });
   } catch (e) {
@@ -877,7 +887,7 @@ Artist.prototype.execute = function () {
   this.studioApp_.playAudio('start', {loop : true});
   // animate the transcript.
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  this.pid = window.setTimeout(this.animate.bind(this), 100);
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
@@ -1012,7 +1022,7 @@ Artist.prototype.animate = function () {
     }
   }
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  this.pid = window.setTimeout(this.animate.bind(this), stepSpeed);
 };
 
 Artist.prototype.calculateSmoothAnimate = function (options, distance) {
@@ -1116,7 +1126,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'DP':  // Draw Print
       this.ctxScratch.save();
       this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+      this.ctxScratch.rotate(degreesToRadians(this.heading - 90));
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
       break;
@@ -1223,16 +1233,16 @@ Artist.prototype.jumpTo_ = function (pos) {
   if (Array.isArray(pos)) {
     [x, y] = pos;
   } else {
-    x = utils.xFromPosition(pos, CANVAS_WIDTH);
-    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
+    x = xFromPosition(pos, CANVAS_WIDTH);
+    y = yFromPosition(pos, CANVAS_HEIGHT);
   }
   this.x = Number(x);
   this.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {
-  this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
-  this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+  this.x += distance * Math.sin(degreesToRadians(this.heading));
+  this.y -= distance * Math.cos(degreesToRadians(this.heading));
 };
 
 Artist.prototype.moveByRelativePosition_ = function (x, y) {
@@ -1365,7 +1375,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+    this.ctxPattern.rotate(degreesToRadians(this.heading - 90));
 
     var clipSize;
     if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -1402,7 +1412,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+    this.ctxScratch.rotate(degreesToRadians(this.heading - 90));
 
     if (img.width !== 0) {
       this.ctxScratch.drawImage(img,
@@ -1611,7 +1621,7 @@ Artist.prototype.checkAnswer = function () {
       result: levelComplete,
       testResult: this.testResults,
       program: encodeURIComponent(program),
-      onComplete: _.bind(this.onReportComplete, this),
+      onComplete: this.onReportComplete.bind(this),
       save_to_gallery: level.impressive
     };
 
