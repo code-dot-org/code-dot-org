@@ -20,6 +20,7 @@ require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
+require 'sass'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -178,7 +179,10 @@ class Documents < Sinatra::Base
     end.join("\n\n")
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
-    css
+    Sass::Engine.new(css,
+      :syntax => :scss,
+      :style => :compressed
+    ).render
   end
 
   # rubocop:disable Lint/Eval
