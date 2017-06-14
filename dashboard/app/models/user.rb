@@ -1253,6 +1253,15 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  def teacher_managed_account?
+    return false unless student?
+    # We consider the account teacher-managed if the student can't reasonably log in on their own.
+    # In some cases, a student might have a password but no e-mail (from our old UI)
+    return false if encrypted_password.present? && hashed_email.present?
+    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    !oauth?
+  end
+
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id}
   end
