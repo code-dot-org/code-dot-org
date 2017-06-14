@@ -39,6 +39,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-30 17:09:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -50,15 +51,15 @@
             <block type="maze_forever">
               <statement name="DO">
                 <block type="maze_ifElse">
-                  <title name="DIR">isPathForward</title>
+                  <title name="DIR">isPathRight</title>
                   <statement name="DO">
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                     </block>
                   </statement>
                   <statement name="ELSE">
-                    <block type="maze_turn">
-                      <title name="DIR">turnRight</title>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
                     </block>
                   </statement>
                 </block>

@@ -1,4 +1,4 @@
-hidden 'false'
+hidden false
 
 stage 'Unplugged: Tangrams'
 level 'TangramAlgorithms'

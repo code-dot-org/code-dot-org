@@ -71,20 +71,28 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
+  # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
+  # we do not worry about testing it.
+  test 'name and user not required for deleted sections' do
+    section = create :section
+    section.destroy
+    section.name = nil
+    section.user = nil
+
+    assert section.valid?
+  end
+
   test 'name is required' do
-    assert_does_not_create(Section) do
-      section = Section.new user: @teacher
-      refute section.valid?
-      assert_equal ['Name is required'], section.errors.full_messages
-    end
+    section = build :section, name: nil
+    refute section.valid?
+    assert_equal ['Name is required'], section.errors.full_messages
   end
 
   test 'user is required' do
-    assert_does_not_create(Section) do
-      section = Section.new name: 'a section'
-      refute section.valid?
-      assert_equal ['User is required'], section.errors.full_messages
-    end
+    section = build :section, user: nil
+    refute section.valid?
+    assert_equal ['User is required', 'User must be a teacher'], section.errors.full_messages
   end
 
   test "user must be teacher" do
@@ -172,7 +180,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section_type validation' do
-    section = create :section
+    section = build :section
 
     section.section_type = 'invalid_section_type'
     refute section.valid?
@@ -237,10 +245,16 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'teacher_dashboard_url' do
-    section = create :section
+    section = build :section
 
     expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
     assert_equal expected_url, section.teacher_dashboard_url
+  end
+
+  test 'clean_data' do
+    section = create :section
+    section.clean_data
+    assert_equal Section::SYSTEM_DELETED_NAME, section.reload.name
   end
 
   test 'default_script: no script or course assigned' do

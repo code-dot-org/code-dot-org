@@ -228,7 +228,7 @@ const ProjectCard = React.createClass({
     const url = `/projects/${type}/${channel}`;
 
     return (
-      <div>
+      <div className="project_card">
         <div style={styles.card}>
           <div style={styles.thumbnail} >
             <a href={url} style={{width: '100%'}}>

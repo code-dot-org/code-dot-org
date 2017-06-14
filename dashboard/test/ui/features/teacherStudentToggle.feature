@@ -24,8 +24,8 @@ Scenario: Toggle on Hidden Maze Level
   Then I sign in as "Teacher_Arya"
   Then I am on "http://studio.code.org/s/allthethings"
   And I select the first section
-  And I wait to see ".uitest-hidden"
-  Then I click selector ".uitest-hidden:nth(1)"
+  And I wait to see ".uitest-togglehidden"
+  Then I click selector ".uitest-togglehidden:nth(1) div:contains('Hidden')"
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I wait for the page to fully load
   And I see no difference for "page load"

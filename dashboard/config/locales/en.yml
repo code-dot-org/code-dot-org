@@ -247,6 +247,43 @@ en:
         artist: 'Draw something'
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
+        gamelab: 'Make a Game Lab project'
+      home: "Home"
+      courses: "Courses"
+      project_gallery: "Project Gallery"
+      sections: "Sections"
+      help_support: "Help and support"
+      report_bug: "Report bug"
+      teacher_community: "Teacher community"
+      professional_learning: "Professional Learning"
+      documentation: "Documentation"
+      tutorials: "Tutorials"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Hour of Code"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "About Us"
+      about_leadership: "Leadership"
+      about_donors: "Donors"
+      about_partners: "Partners"
+      about_team: "Full Team"
+      about_news: "Newsroom"
+      about_evaluation: "Evaluation"
+      about_jobs: "Jobs"
+      about_contact: "Contact Us"
+      about_faqs: "FAQs"
+      learn: "Learn"
+      stats: "Stats"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
+
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -504,6 +541,11 @@ en:
     gallery:
       title: "Gallery"
       body: "View a gallery of app and artist images created by our users"
+    gamelab:
+      title: "Game Lab (beta)"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ages 13+"
+      cta: "Learn how"
     frozen:
       title: "Frozen"
     starwars:
@@ -525,6 +567,11 @@ en:
     unplugged_conditionals:
       title: "Conditionals"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+    widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Ages 14+"
+      cta: "Learn how"
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"
@@ -678,6 +725,7 @@ en:
     share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Embed"
     advanced_share: "Show advanced options"
+    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "Close"
     more: "More"
     name: "Name"
@@ -766,6 +814,19 @@ en:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -836,6 +897,7 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   return_course_overview: 'Go to unit overview'
+  view_all_units: 'View all units'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

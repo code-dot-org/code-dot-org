@@ -9,6 +9,7 @@ import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
+import Permission from '../../permission';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
@@ -56,6 +57,8 @@ const WorkshopTable = React.createClass({
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
+
+    this.permission = new Permission();
   },
 
   componentWillReceiveProps(nextProps) {
@@ -266,8 +269,7 @@ const WorkshopTable = React.createClass({
 
   formatManagement(manageData) {
     const {id, state} = manageData;
-    const isPlp = window.dashboard.workshop.permission.indexOf('plp') >= 0;
-    const surveyBaseUrl = isPlp ? "/organizer_survey_results" : "/survey_results";
+    const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
 
     return (
       <WorkshopManagement

@@ -25,11 +25,11 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge: Draw an Image\r\n\r\n_Check with your teacher before tackling this challenge level_\r\n\r\nUsing variables, draw an image where many of the items rely on a common variable for size or placement. For example, draw a face with variables controlling the size and/or placement of both eyes, ears, and nostrils. Once you have your drawing completed, try changing the values of your variables to make sure that the whole image changes together.\r\n",
+    "markdown_instructions": "# Challenge: Draw an Image\r\n\r\n_Check with your teacher before tackling this challenge level._\r\n\r\nUsing variables, draw an image where many of the items rely on a common variable for size or placement. For example, draw a face with variables controlling the size and/or placement of both eyes, ears, and nostrils. Once you have your drawing completed, try changing the values of your variables to make sure that the whole image changes together.\r\n",
     "instructions_important": "false",
     "display_name": "Challenge: Draw an Image",
     "hide_share_and_remix": "false",
-    "start_blocks": "var x = 50;\r\nvar y = 50;\r\n\r\nfill(\"red\");\r\nellipse(x, y);\r\nx = x + 50; // Increase x by 50, now x is 100\r\nellipse(x, y);\r\nx = x + 50; // Increase x by 50, now x is 150\r\nellipse(x, y);",
+    "start_blocks": "var y = 50;\r\n\r\nfill(\"red\");\r\nellipse(150, y);\r\nellipse(250, y);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -62,6 +62,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 22:12:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:15:15 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:47 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -54,7 +54,7 @@
     "all_animations_single_frame": "true",
     "encrypted_examples": "XyS2g3B/I2cRugv1cAV+w/Jt0k4FJbBDcgEjou/pNMDKwG1dFUGPm/UwTWow\nOQvB\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

@@ -243,6 +243,20 @@ def print_dtp_message
   end
 end
 
+# Prints the files in the pull request that are in our DB migration directories.
+def print_database_changes(pull_request_number)
+  database_changes = GitHub.database_changes(pull_request_number)
+  return if database_changes.empty?
+  database_changes_output = database_changes.join("\n       ")
+  puts <<-EOS.unindent
+
+     #{red 'WARNING: THIS PR CONTAINS DATABASE CHANGES:'}
+
+       #{red database_changes_output}
+
+  EOS
+end
+
 # Retrieves recent Honeybadger issues, displaying them on the console.
 def get_honeybadger_issues
   issues = Honeybadger.get_recent_issues
@@ -294,6 +308,37 @@ def do_dtt_subroutine
       end
     end
   end
+end
+
+# Creates a new branch with the given name from the given commit on the test
+# server (without checking it out) and pushes it to GitHub.
+def create_branch_from_commit(branch_name, commit)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  # We never actually checkout the created branch so we don't interfere with
+  # anything else test might be doing at the time.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch --no-track #{branch_name} #{commit}",
+      "git push origin #{branch_name}"
+    ].join(' && ')
+  )
+end
+
+# Deletes the specified branch, both from the test server and from GitHub.
+def delete_branch(branch_name)
+  # We use the test server as a workspace because we don't want to require that
+  # the DOTD script be run from within the repo.
+  run_on(
+    'test',
+    [
+      'cd test',
+      "git branch -D #{branch_name}",
+      "git push origin --delete #{branch_name}"
+    ].join(' && ')
+  )
 end
 
 def main
@@ -353,15 +398,13 @@ def main
       # request from a commit hash (only a branch name), we create and push a branch.
       branch_name = "dtp_candidate_#{test_green_commit}"
       begin
-        run_on(
-          'test',
-          "cd test && git checkout test && git checkout -b #{branch_name} #{test_green_commit} && git push origin #{branch_name}"
-        )
+        create_branch_from_commit branch_name, test_green_commit
         production_pr_number = GitHub.create_pull_request(
           base: 'production',
           head: branch_name,
           title: "DTP (Test > Production: #{test_green_commit})"
         )
+        print_database_changes production_pr_number
         GitHub.open_url GitHub.url(production_pr_number)
 
         should_i 'DTL' do
@@ -372,12 +415,12 @@ def main
             content_push 'levelbuilder-staging', 'levelbuilder'
           end
 
-          view_commits base: 'levelbuilder', head: test_green_commit
+          view_commits base: 'levelbuilder', head: branch_name
           should_i 'merge from test to levelbuilder' do
             pr_number = GitHub.create_and_merge_pull_request(
               base: 'levelbuilder',
               head: branch_name,
-              title: 'DTL (Test > Levelbuilder: #{test_green_commit})'
+              title: "DTL (Test > Levelbuilder: #{test_green_commit})"
             )
             puts dim "  DTL PR: #{GitHub.url(pr_number)}"
           end
@@ -394,10 +437,7 @@ def main
 
         puts_after_dtp_tasks
       ensure
-        run_on(
-          'test',
-          "cd test && git checkout test && git branch -D #{branch_name} && git push origin --delete #{branch_name}"
-        )
+        delete_branch branch_name
       end
     end
   end

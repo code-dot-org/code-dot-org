@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+# This script sets the `urm` and `races` column for users having race data in the `races`
+# SerializedAttribute key.
+
+require_relative '../../../dashboard/config/environment'
+
+batch_number = 0
+User.with_deleted.where("properties LIKE '%races%'").find_in_batches(batch_size: 2_500) do |batch|
+  puts "PROCESSING: #{batch_number}..."
+  ActiveRecord::Base.transaction do
+    batch.each do |user|
+      # Note that this reads the SerializedProperties key rather than the ActiveRecord column.
+      races_comma_separated = user.races.join(',')
+      # Note that this sets the ActiveRecord column rather than the SerializedProperties key.
+      user.update_column :races, races_comma_separated
+      user.update_column :urm, User.urm_from_races(races_comma_separated)
+    end
+  end
+  puts "PROCESSED: #{batch_number}..."
+  batch_number += 1
+end

@@ -2,13 +2,14 @@
 #
 # Table name: pd_attendances
 #
-#  id               :integer          not null, primary key
-#  pd_session_id    :integer          not null
-#  teacher_id       :integer
-#  created_at       :datetime
-#  updated_at       :datetime
-#  deleted_at       :datetime
-#  pd_enrollment_id :integer
+#  id                :integer          not null, primary key
+#  pd_session_id     :integer          not null
+#  teacher_id        :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#  deleted_at        :datetime
+#  pd_enrollment_id  :integer
+#  marked_by_user_id :integer
 #
 # Indexes
 #
@@ -22,6 +23,7 @@ class Pd::Attendance < ActiveRecord::Base
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
   belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
+  belongs_to :marked_by_user, class_name: 'User', foreign_key: :marked_by_user_id
 
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
 
@@ -38,7 +40,7 @@ class Pd::Attendance < ActiveRecord::Base
   end
 
   def resolve_enrollment
-    enrollment ||
+    Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
       workshop.enrollments.find_by(user_id: teacher_id) ||
       workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email))
   end
@@ -56,13 +58,16 @@ class Pd::Attendance < ActiveRecord::Base
   end
 
   # Idempotent: Find existing, restore deleted, or create a new attendance row.
-  def self.find_restore_or_create_by!(attendance_params)
+  # @param search_params [Hash] params to search, or create by
+  # @return [Pd::Attendance] resulting attendance model
+  def self.find_restore_or_create_by!(search_params)
     attendance = nil
     Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      attendance = Pd::Attendance.with_deleted.find_by(attendance_params) ||
-        Pd::Attendance.create!(attendance_params)
+      attendance = Pd::Attendance.with_deleted.find_by(search_params) ||
+        Pd::Attendance.create!(search_params)
     end
-    attendance.restore if attendance.deleted?
+
+    attendance.restore! if attendance.deleted?
     attendance
   end
 end

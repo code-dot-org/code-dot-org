@@ -16,6 +16,7 @@
 #  stage_extras      :boolean          default(FALSE), not null
 #  section_type      :string(255)
 #  first_activity_at :datetime
+#  pairing_allowed   :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -40,12 +41,14 @@ class Section < ActiveRecord::Base
   has_many :students, -> {order('name')}, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
-  validates :name, presence: true
+  validates :name, presence: true, unless: -> {deleted?}
 
   belongs_to :script
   belongs_to :course
 
   has_many :section_hidden_stages
+
+  SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
@@ -59,12 +62,11 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
-  validates_presence_of :user
+  validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
-    return unless user
-    errors.add(:user_id, 'must be a teacher') unless user.teacher?
+    errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
   end
-  validate :user_must_be_teacher
+  validate :user_must_be_teacher, unless: -> {deleted?}
 
   before_create :assign_code
   def assign_code
@@ -129,8 +131,13 @@ class Section < ActiveRecord::Base
     add_student student
   end
 
+  # Clears all personal data from the section object.
+  def clean_data
+    update(name: SYSTEM_DELETED_NAME)
+  end
+
   # Figures out the default script for this section. If the section is assigned to
-  # a course rather than a script, it returns the first script in that course
+  # a course rather than a script, it returns the first script in that course.
   # @return [Script, nil]
   def default_script
     return script if script

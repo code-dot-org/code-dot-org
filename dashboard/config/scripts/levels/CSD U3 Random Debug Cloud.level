@@ -23,7 +23,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nNow that the grass is working let's add a cloud to the sky. Unfortunately it looks a little funny right now.\r\n\r\n# Do This\r\n\r\n* Debug this program to make the cloud wider than it is tall, like in the image.\r\n* Hint: You'll need to change two parameters. Which ones set your cloud's width and height?",
+    "markdown_instructions": "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nNow that the grass is working, let's add a cloud to the sky. Unfortunately, it looks a little funny right now.\r\n\r\n# Do This\r\n\r\n* Debug this program to make the cloud wider than it is tall, like in the image.\r\n* Hint: You'll need to change two parameters. Which ones set your cloud's width and height?\r\n\r\n_Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_blocks": "noStroke();\r\n\r\n// Draw sky\r\nbackground(\"skyblue\");\r\n\r\n// Draw sun\r\nfill(\"yellow\");\r\nellipse(300,50,50,50);\r\n\r\n// Draw grass\r\nfill(\"green\");\r\nrect(0,300,400,100);\r\n\r\n// Draw cloud\r\nfill(\"white\");\r\nellipse(150,100,100,200);",
@@ -60,6 +60,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 15:53:22 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 15:54:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:38:54 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

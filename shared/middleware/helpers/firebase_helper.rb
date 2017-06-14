@@ -3,8 +3,8 @@ require 'firebase'
 
 class FirebaseHelper
   def initialize(channel_id, table_name)
-    throw "CDO.firebase_name not defined" unless CDO.firebase_name
-    throw "CDO.firebase_secret not defined" unless CDO.firebase_secret
+    raise "CDO.firebase_name not defined" unless CDO.firebase_name
+    raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
 
     base_uri = "https://#{CDO.firebase_name}.firebaseio.com/"
     @firebase = Firebase::Client.new(base_uri, CDO.firebase_secret)

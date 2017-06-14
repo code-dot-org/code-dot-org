@@ -338,8 +338,5 @@ level 'Practice Create Performance Task', progression: 'Practice Create Performa
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
 assessment 'CSP Cumulative Assess A'
 
-stage 'CSP Student Post-Course Survey'
-assessment 'CSP post-assessment survey'
-
 stage 'Participate in a longitudinal study!'
 level 'Click Here!', progression: 'Click Here!'

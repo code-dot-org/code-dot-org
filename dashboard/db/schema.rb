@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524121212) do
+ActiveRecord::Schema.define(version: 20170612195103) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -295,19 +295,18 @@ ActiveRecord::Schema.define(version: 20170524121212) do
 
   create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "game_id"
-    t.string   "name",                                                   null: false
+    t.string   "name",                                                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
     t.integer  "ideal_level_source_id"
-    t.integer  "solution_level_source_id"
     t.integer  "user_id"
-    t.text     "properties",               limit: 65535
+    t.text     "properties",            limit: 65535
     t.string   "type"
     t.string   "md5"
-    t.boolean  "published",                              default: false, null: false
-    t.text     "notes",                    limit: 65535
-    t.text     "audit_log",                limit: 65535
+    t.boolean  "published",                           default: false, null: false
+    t.text     "notes",                 limit: 65535
+    t.text     "audit_log",             limit: 65535
     t.index ["game_id"], name: "index_levels_on_game_id", using: :btree
     t.index ["name"], name: "index_levels_on_name", using: :btree
   end
@@ -351,12 +350,13 @@ ActiveRecord::Schema.define(version: 20170524121212) do
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "pd_session_id",    null: false
+    t.integer  "pd_session_id",     null: false
     t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.integer  "pd_enrollment_id"
+    t.integer  "marked_by_user_id",              comment: "User id for the partner or admin who marked this teacher in attendance, or nil if the teacher self-attended."
     t.index ["pd_enrollment_id"], name: "index_pd_attendances_on_pd_enrollment_id", using: :btree
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
@@ -479,6 +479,14 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
   end
 
+  create_table "pd_teachercon_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id"], name: "index_pd_teachercon_surveys_on_pd_enrollment_id", unique: true, using: :btree
+  end
+
   create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
@@ -565,12 +573,12 @@ ActiveRecord::Schema.define(version: 20170524121212) do
   create_table "plc_course_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "plc_course_id"
     t.string   "unit_name"
-    t.string   "unit_description"
+    t.text     "unit_description", limit: 65535
     t.integer  "unit_order"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "script_id"
-    t.boolean  "started",          default: false, null: false
+    t.boolean  "started",                        default: false, null: false
     t.index ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
     t.index ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
   end
@@ -641,25 +649,6 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.datetime "updated_at",    null: false
     t.index ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id", using: :btree
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true, using: :btree
-  end
-
-  create_table "prize_providers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "description_token"
-    t.string   "image_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "prize_provider_id", null: false
-    t.string   "code",              null: false
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
-    t.index ["user_id"], name: "index_prizes_on_user_id", using: :btree
   end
 
   create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -805,6 +794,7 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.boolean  "stage_extras",      default: false,   null: false
     t.string   "section_type"
     t.datetime "first_activity_at"
+    t.boolean  "pairing_allowed",   default: true,    null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
@@ -855,26 +845,6 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.datetime "updated_at",               null: false
     t.index ["kind"], name: "index_survey_results_on_kind", using: :btree
     t.index ["user_id"], name: "index_survey_results_on_user_id", using: :btree
-  end
-
-  create_table "teacher_bonus_prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "prize_provider_id", null: false
-    t.string   "code",              null: false
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["prize_provider_id"], name: "index_teacher_bonus_prizes_on_prize_provider_id", using: :btree
-    t.index ["user_id"], name: "index_teacher_bonus_prizes_on_user_id", using: :btree
-  end
-
-  create_table "teacher_prizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "prize_provider_id", null: false
-    t.string   "code",              null: false
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["prize_provider_id"], name: "index_teacher_prizes_on_prize_provider_id", using: :btree
-    t.index ["user_id"], name: "index_teacher_prizes_on_user_id", using: :btree
   end
 
   create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1059,6 +1029,8 @@ ActiveRecord::Schema.define(version: 20170524121212) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",                      default: 0
     t.integer  "terms_of_service_version"
+    t.boolean  "urm"
+    t.string   "races"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree

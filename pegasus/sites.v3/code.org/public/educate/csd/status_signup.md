@@ -3,7 +3,7 @@ title: Computer Science Discoveries
 nav: educate_nav
 ---
 
-# CS Discoveries Monthly Status Updates
+# CS Discoveries Status Updates
 
 Sign up below to receive monthly email updates on the progress of Code.org’s Computer Science Discoveries project. These mails are intended to be shared with members of the Computer Science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. As a part of these monthly updates, we will include the latest information on what lessons are drafted and available on the website to try out in your classroom. You'll be able to unsubscribe at any time from the emails.
 
@@ -19,7 +19,9 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - [October 2016](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=78dd289775&e=a5b693f06b)
 - [Nov/December 2016](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=46b9207931&e=a5b693f06b)
 - [January 2017](http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=7fcf661144&e=a5b693f06b)
-- [February 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=6ee90e50da)
+- [February/March 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=6ee90e50da)
+- [April 2017](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=f666af3b5b)
+- [End of School Update 2017](http://mailchi.mp/code/8u8akp7iv7)
 
 ## Sign-up information
 <!-- Begin MailChimp Signup Form -->

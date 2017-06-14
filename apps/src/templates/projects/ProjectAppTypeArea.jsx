@@ -50,13 +50,25 @@ const ProjectAppTypeArea = React.createClass({
 
     // Only show one project type.
     isDetailView: PropTypes.bool.isRequired,
+
+    hasOlderProjects: PropTypes.bool,
+    fetchOlderProjects: PropTypes.func,
   },
 
   getInitialState() {
     return {
       maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
-      numProjects: this.props.numProjectsToShow
+      numProjects: this.props.numProjectsToShow,
+
+      // Disables the View More button when a network request is pending.
+      disableViewMore: false,
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
+    });
   },
 
   viewMore() {
@@ -82,14 +94,34 @@ const ProjectAppTypeArea = React.createClass({
   },
 
   loadMore() {
-    this.setState({numProjects: this.state.numProjects + NUM_PROJECTS_TO_ADD});
+    if (this.state.disableViewMore) {
+      return;
+    }
+
+    const newNumProjects = this.state.numProjects + NUM_PROJECTS_TO_ADD;
+    this.setState({numProjects: newNumProjects});
+
+    // Fetch more projects if we do not have enough to show.
+    const {hasOlderProjects} = this.props;
+    if (this.state.maxNumProjects < newNumProjects && hasOlderProjects) {
+      this.setState({disableViewMore: true});
+      this.props.fetchOlderProjects(this.props.labKey, () => {
+        this.setState({disableViewMore: false});
+      });
+    }
   },
 
   renderViewMoreButtons() {
+    // Show the View More button if there are more projects to show on the
+    // client or if there are more we could fetch from the server.
+    const {hasOlderProjects} = this.props;
+    const {maxNumProjects, numProjects} = this.state;
+    const showViewMore = maxNumProjects >= numProjects || hasOlderProjects;
+
     return (
       <div style={{float: "right", marginRight: 22}}>
         {
-          this.state.maxNumProjects >= this.state.numProjects &&
+          showViewMore &&
           <ProgressButton
             onClick={this.loadMore}
             color={ProgressButton.ButtonColor.gray}
@@ -99,7 +131,7 @@ const ProjectAppTypeArea = React.createClass({
           />
         }
         <ProgressButton
-          href="#gallery-switcher"
+          href="#top"
           color={ProgressButton.ButtonColor.gray}
           icon="chevron-circle-up"
           text="Back to top"

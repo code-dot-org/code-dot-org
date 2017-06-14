@@ -13,11 +13,11 @@ TeacherCon Phoenix
 ## July 16-21, 2017
 <p align="left"><img src="/images/PhoenixSkyline.jpg" width="100%"></p> 
 
-### **What is TeacherCon?**
+## **What is TeacherCon?**
 
 TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
 
-### **Travel & Hotel Information**
+## **Travel & Hotel Information**
 <details>
   <summary>**Hotel Information**</summary>
   <p>
@@ -72,7 +72,7 @@ All participants will receive a $300 gift card upon their arrival to cover any a
 </p>
 </details>
 
-### **What to Bring**
+## **What to Bring**
 <details>
   <summary>**What should I pack?**</summary>
   <p>
@@ -91,7 +91,7 @@ Please bring your laptop/Chromebook and charger, as well as any adapters. If you
 </p>
 </details>
 
-### **Agenda**
+## **Agenda**
 <details>
   <summary>**Schedule for the Week**</summary>
   <p>
@@ -116,11 +116,19 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
-### **Previous Email Updates**
+## **Previous Email Updates**
 This section will be updated as emails are sent for this event.
 
+<details>
+<summary>**It's time to book your travel to TeacherCon. Complete by June 12th!**</summary>
+ <p>
+ <br>
+[Click Here](http://go.pardot.com/webmail/153401/191426343/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
+</p>
+</details>
 
-### **Contact Us**
+
+## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 

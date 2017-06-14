@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Courses from '@cdo/apps/templates/teacherHomepage/Courses';
+import Courses from '@cdo/apps/templates/studioHomepages/Courses';
 import {initCourseExplorer} from '@cdo/apps/courseExplorer/courseExplorer';
 
 $(document).ready(showCourses);
@@ -19,6 +19,8 @@ function showCourses() {
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
+  const showInitialTips = !coursesData.initialtipsdismissed;
+  const userId = coursesData.userid;
 
   ReactDOM.render (
     <Courses
@@ -29,6 +31,8 @@ function showCourses() {
       studentsCount={studentsCount}
       codeOrgUrlPrefix={codeOrgUrlPrefix}
       isSignedOut={signedOut}
+      showInitialTips={showInitialTips}
+      userId={userId}
     />,
     document.getElementById('courses-container')
   );

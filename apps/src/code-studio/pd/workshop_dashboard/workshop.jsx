@@ -104,6 +104,13 @@ const Workshop = React.createClass({
           'account_required_for_attendance?'
         ])
       });
+    }).fail(data => {
+      if (data.statusText !== "abort") {
+        this.setState({
+          loadingWorkshop: false,
+          workshop: null
+        });
+      }
     });
   },
 
@@ -663,7 +670,10 @@ const Workshop = React.createClass({
   render() {
     if (this.state.loadingWorkshop) {
       return <Spinner/>;
+    } else if (!this.state.workshop) {
+      return <p>No workshop found</p>;
     }
+
     return (
       <Grid>
         {this.renderSignupPanel()}

@@ -5,7 +5,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   def index
     if Pd::Enrollment.for_user(current_user).empty?
-      redirect_to CDO.code_org_url('professional-development-workshops', Rails.env.development? ? 'http:' : 'https:')
+      redirect_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
       return
     end
 

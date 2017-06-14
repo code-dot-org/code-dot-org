@@ -19,6 +19,32 @@ TeacherCon is an intensive, hands-on, in-person workshop providing foundational 
 
 <a id="travel"></a>
 ## **Travel & Hotel Information**
+### NEW INFO: How to get from the airport to the hotel!
+**Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**
+<p>
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm inside the airport (see suggested meeting locations below), and then find a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
+</p> 
+
+**Suggested meeting locations:**
+ <details>
+ <summary>George Bush Intercontinental Airport (IAH)</summary>
+  <p>
+  
+  * Terminal A: Door A-115 (TNC//Uber/Lyft pick-up zone)
+  * Terminal B: Door B-103 (TNC//Uber/Lyft pick-up zone)
+  * Terminal C: Door C-105 (TNC//Uber/Lyft pick-up zone)
+</p>
+</details>
+
+ <details>
+ <summary>Hobby Airport</summary>
+ <p>
+ 
+ * Meet at Baggage Claim 1. Taxis are available outside at Curb 1, and Uber/Lyfts are available outside at Curb 5. 
+</p>
+</details>
+
+<br>
 <details>
   <summary>**Hotel Information**</summary>
   <p>
@@ -66,7 +92,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 **These include:**
 
 * Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
-* A room for you at the hotel -- No need to make a resrvation, we have booked this for you!
+* A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
 All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
@@ -131,17 +157,14 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <summary>**Session Lead Facilitators**</summary>
  <p>
  <br>
-Coming soon: the incredible **CS Principles facilitators** who will be leading sessions at TeacherCon!</p>
- <p>
-Coming soon: the amazing **CS Discoveries facilitators** who will be leading sessions at TeacherCon!
-</p>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_houston') %></p>
 </details>
 
 <details>
 <summary>**Regional Partners**</summary>
  <p>
  <br>
-Coming soon: the awesome Regional Partners who will be supporting your professional learning throughout the year!
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrp_houston') %></p>
 </p>
 </details>
 
@@ -162,6 +185,28 @@ Coming soon: the awesome Regional Partners who will be supporting your professio
 [Click here](http://go.pardot.com/webmail/153401/177440463/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
 </p>
 </details> 
+
+<details>
+<summary>**Pre-work and important info for your upcoming TeacherCon**</summary>
+ <p>
+ <br>
+**CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/192669001/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+ <p>
+**CS Principles teachers:** [Click here](http://go.pardot.com/webmail/153401/192669301/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+</details>
+
+<details>
+<summary>**We're one week away from TeacherCon!**</summary>
+ <p>
+ <br>
+**CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/201249975/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+ <p>
+**CS Principles teachers:** [Click here](http://go.pardot.com/webmail/153401/201249429/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+</details>
 
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)

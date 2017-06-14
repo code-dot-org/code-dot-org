@@ -343,6 +343,7 @@ Dashboard::Application.routes.draw do
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
       post :workshop_surveys, to: 'workshop_surveys#create'
+      post :teachercon_surveys, to: 'teachercon_surveys#create'
     end
   end
 
@@ -359,6 +360,7 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage', to: 'teacher_application#manage'
     get 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#edit'
     patch 'teacher_application/manage/:teacher_application_id', to: 'teacher_application#update'
+    post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
@@ -379,6 +381,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
+    get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
@@ -433,11 +436,13 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
+      post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
 
-      get 'projects/gallery/public/:project_type/:limit(/:offset)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+      get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

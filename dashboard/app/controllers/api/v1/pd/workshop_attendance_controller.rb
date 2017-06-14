@@ -64,7 +64,8 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher || enrollment
     end
 
-    Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher, enrollment: enrollment
+    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher
+    attendance.update! marked_by_user: current_user, enrollment: enrollment
     head :no_content
   end
 
@@ -76,7 +77,8 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     enrollment_id = params[:enrollment_id]
     enrollment = @workshop.enrollments.find(enrollment_id)
 
-    Pd::Attendance.find_restore_or_create_by! session: @session, enrollment: enrollment
+    attendance = Pd::Attendance.find_restore_or_create_by! session: @session, enrollment: enrollment
+    attendance.update! marked_by_user: current_user
     head :no_content
   end
 

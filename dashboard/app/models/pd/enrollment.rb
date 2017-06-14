@@ -30,6 +30,8 @@ require 'cdo/safe_names'
 
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
+  include Rails.application.routes.url_helpers
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
@@ -165,13 +167,13 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
+    elsif workshop.local_summer?
+      pd_new_workshop_survey_url(code)
+    elsif workshop.teachercon?
+      pd_new_teachercon_survey_url(code)
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
-
-    # TODO: elijah: once the route is fully ready, add the following codition above
-    #elsif workshop.local_summer?
-    #  pd_new_workshop_survey_url(code)
   end
 
   def send_exit_survey

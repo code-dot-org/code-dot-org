@@ -560,7 +560,8 @@ module.exports = {
     'toolbox': toolbox(2, 1),
     'startBlocks': startBlocks(2, 1),
     'ideal': null,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [MOVE_FORWARD], [DIG], [FILL], [TURN_LEFT, TURN_RIGHT]
     ],
     'scale': {
@@ -593,7 +594,8 @@ module.exports = {
     'toolbox': toolbox(2, 2),
     'startBlocks': startBlocks(2, 2),
     'ideal': 6,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [MOVE_FORWARD], [fill(5)]
     ],
     'map': [
@@ -623,7 +625,8 @@ module.exports = {
     'toolbox': toolbox(2, 3),
     'startBlocks': startBlocks(2, 3),
     'ideal': 8,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [MOVE_FORWARD], [fill(5)], [UNTIL_BLOCKED, REPEAT]
     ],
     'scale': {
@@ -656,7 +659,8 @@ module.exports = {
     'toolbox': toolbox(2, 4),
     'startBlocks': startBlocks(2, 4),
     'ideal': 13,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [DIG],
       [REPEAT],
       [remove(7)],
@@ -694,7 +698,8 @@ module.exports = {
     'toolbox': toolbox(2, 5),
     'startBlocks': startBlocks(2, 5),
     'ideal': 8,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [DIG],
       [REPEAT],
       [remove(6)],
@@ -730,7 +735,8 @@ module.exports = {
     'toolbox': toolbox(2, 6),
     'startBlocks': startBlocks(2, 6),
     'ideal': 11,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [remove(8)], [fill(8)], [MOVE_FORWARD], [UNTIL_BLOCKED, REPEAT]
     ],
     'scale': {
@@ -763,7 +769,8 @@ module.exports = {
     'toolbox': toolbox(2, 7),
     'startBlocks': startBlocks(2, 7),
     'ideal': 11,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [TURN_LEFT], [MOVE_FORWARD], [TURN_RIGHT], [DIG]
     ],
     'map': [
@@ -793,7 +800,8 @@ module.exports = {
     'toolbox': toolbox(2, 8),
     'startBlocks': startBlocks(2, 8),
     'ideal': 13,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [REPEAT], [AVOID_OBSTACLE_AND_REMOVE]
     ],
     'scale': {
@@ -826,7 +834,8 @@ module.exports = {
     'toolbox': toolbox(2, 9),
     'startBlocks': startBlocks(2, 9),
     'ideal': 14,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [REMOVE_PILES],
       [MOVE_FORWARD],
       [UNTIL_BLOCKED, REPEAT]
@@ -861,7 +870,8 @@ module.exports = {
     'toolbox': toolbox(2, 10),
     'startBlocks': startBlocks(2, 10),
     'ideal': 27,
-    'requiredBlocks': [
+    'requiredBlocks': [],
+    'recommendedBlocks': [
       [REMOVE_PILES],
       [MOVE_FORWARD],
       [FILL_HOLES],

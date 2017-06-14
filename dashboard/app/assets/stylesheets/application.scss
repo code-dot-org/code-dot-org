@@ -242,8 +242,7 @@ img.video_thumbnail {
 }
 
 .header2-wrapper {
-  &.hide_on_mobile,
-  header.hide_on_mobile {
+  .hide_on_mobile {
     @media screen and (max-device-width: 500px) {
       display: none;
     }
@@ -397,12 +396,15 @@ img.video_thumbnail {
     .user_name {
       max-width: 120px;
       display: inline-block;
+      float: left;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
     }
 
     .user_menu_glyph {
+      display: inline-block;
+      float: left;
       padding-left: 5px;
     }
   }
@@ -422,11 +424,21 @@ img.video_thumbnail {
 
   .user_menu {
     .user_options {
-      top: 17px;
+      top: 37px;
     }
   }
 
   #signin_button .header_button {
+    margin-top: 6px;
+  }
+
+  .freeplay_links {
+    float: left;
+    padding-top: 13px;
+  }
+
+  .project_list {
+    float: left;
     margin-top: 6px;
   }
 }
@@ -1302,6 +1314,15 @@ a.download-video {
   padding-left: 5px;
 }
 
+#section-management {
+  #edit_teachers {
+    .padtopbottom {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
 #landingpage {
   .welcome {
     background-color: $light_purple;
@@ -1368,35 +1389,6 @@ a.download-video {
     font-size: 18px;
   }
 
-  .gallery {
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 890px;
-
-    .pagination {
-      float: left;
-      font-size: 30px;
-      line-height: 154px;
-      margin: 10px 5px;
-      width: 25px;
-      text-align: center;
-      a:hover {
-        text-decoration: none;
-      }
-    }
-
-    .gallery_activity {
-      margin: 10px 5px;
-      box-sizing: border-box;
-      height: 154px;
-      width: 154px;
-      img {
-        border: 2px solid $lighter_gray;
-        background-color: $white;
-      }
-    }
-  }
-
   h3.whitetext {
     a, a:link, a:hover, a:visited {
       color: $white;
@@ -1426,11 +1418,6 @@ a.download-video {
       text-decoration: none;
       background-color: $white;
     }
-  }
-
-  .padtopbottom {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   #signup {
@@ -1470,6 +1457,39 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.gallery {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 890px;
+
+  .pagination {
+    float: left;
+    font-size: 30px;
+    line-height: 154px;
+    margin: 10px 5px;
+    width: 25px;
+    text-align: center;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .gallery_activity {
+    margin: 10px 5px;
+    box-sizing: border-box;
+    height: 154px;
+    width: 154px;
+    img {
+      border: 2px solid $lighter_gray;
+      background-color: $white;
+    }
+  }
+}
+
+#angular-my-projects-wrapper .gallery {
+  margin-left: 45px;
 }
 
 .course_progress {
@@ -2702,7 +2722,7 @@ $width: 400px;
     padding: 4px;
     background-color: $light_gray;
     width: 60px;
-    border-radius: 5px;
+    border-radius: 0;
     margin-bottom: 4px;
   }
 }
@@ -2865,5 +2885,152 @@ code {
     max-width: 400px;
     float: left;
     padding: 5px;
+  }
+}
+
+.arrow_box_up {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_up::after, .arrow_box_up::before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_up::after {
+  border-bottom-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_up::before {
+  border-bottom-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.arrow_box_down {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_down::after, .arrow_box_down::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_down::after {
+  border-top-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_down::before {
+  border-top-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+/* An arrow box with an arrow going up, but the pointer is in the
+ * top-right corner */
+
+.arrow_box_up_corner {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_up_corner::after, .arrow_box_up_corner::before {
+  bottom: 100%;
+  left: 90%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_up_corner::after {
+  border-bottom-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_up_corner::before {
+  border-bottom-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.arrow_box_down {
+  width: 300px;
+  padding: 5px 5px 20px 20px;
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: $dark_charcoal;
+
+  background: $white;
+  border: 2px solid $border_gray;
+}
+.arrow_box_down::after, .arrow_box_down::before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box_down::after {
+  border-top-color: $white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+.arrow_box_down::before {
+  border-top-color: $border_gray;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+#script-breadcrumb {
+  padding-bottom: 10px;
+  a:hover {
+    // Don't underline despite the fact that we're technically a link
+    text-decoration: none;
+  }
+  i {
+    color: $teal;
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  span {
+    color: $teal;
+    font-size: 20px;
+    font-family: "Gotham 4r", sans-serif;
   }
 }

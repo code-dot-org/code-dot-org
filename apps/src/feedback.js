@@ -27,7 +27,7 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var codegen = require('./codegen');
+var codegen = require('./lib/tools/jsinterpreter/codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -192,7 +192,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var icon;
   if (!options.hideIcon) {
-    icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+    icon = canContinue && !options.showFailureIcon ?
+      this.studioApp_.winIcon :
+      this.studioApp_.failureIcon;
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 

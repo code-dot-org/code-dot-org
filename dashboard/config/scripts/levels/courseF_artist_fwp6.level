@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Challenge:** Edit `draw a spiral edge` to use `length` and `sides` parameters, then recreate these shapes.\r\n\r\n- The square goes from 3 pixels to 90 pixels.\r\n- The hexagon goes from 3 pixels to 100 pixels.\r\n- The triangle goes from 3 pixels to 105 pixels.",
+    "markdown_instructions": "**Challenge:** Edit `draw a spiral edge` to use `length` and `sides` parameters, then recreate these shapes.\r\n\r\n- The square goes from 3 pixels to 90 pixels.\r\n- The hexagon goes from 3 pixels to 100 pixels.\r\n- The triangle goes from 3 pixels to 95 pixels.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -35,10 +35,13 @@
     "discard_background": "false",
     "instructions_important": "false",
     "ideal": "27",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-12 17:49:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

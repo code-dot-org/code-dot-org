@@ -66,7 +66,7 @@
     "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "pause_animations_by_default": "false",
     "contained_level_names": null
   },

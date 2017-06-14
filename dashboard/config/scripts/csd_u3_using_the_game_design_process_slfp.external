@@ -2,14 +2,13 @@ name 'CSD U3 Using the Game Design Process SLFP'
 display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
-# Programming - Interactive Games and Animations: Lesson 17 - Platform Jumper
+# Overview
 
-## Background
-
-In this multi-day lesson, students will use the problem solving process from Unit 1 to create a platform jumper game.  They will start by looking at an example of a platform jumper, then define what their games will look like.  Next, they will use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game.  After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.
+In this multi-day lesson, the class uses the problem solving process from Unit 1 to create a platform jumper game.  After looking at a sample game, the class defines what their games will look like and uses a structured process to build them.  Finally, the class reflects on how the games could be improved, and implements those changes.
 
 
-# Resources
+## Resources
 
 * [Planning Your Platform Game](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=doc))
+
 MARKDOWN

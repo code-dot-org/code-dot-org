@@ -28,15 +28,17 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Write the code to get all of this treasure.",
     "ideal": "10",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.\",\"hint_id\":\"courseA_collector_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e9150e916e446436584527dee61700c1/courseA_collector_loops8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.\",\"hint_id\":\"courseA_collector_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f808586f155d8ca1e28c8ed2c8566692/courseA_collector_loops8.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:30:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

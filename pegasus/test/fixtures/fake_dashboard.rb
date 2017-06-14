@@ -73,6 +73,29 @@ module FakeDashboard
   ]
 
   #
+  # Fake Data: Courses
+  #
+  COURSES = [
+    {
+      id: 15,
+      name: 'csp',
+      created_at: '2016-01-01 00:01:02',
+      updated_at: '2016-01-01 00:01:02'
+    }
+  ]
+
+  #
+  # Fake Data: Scripts
+  #
+  SCRIPTS = [
+    {
+      id: 10,
+      name: 'flappy',
+      hidden: 0
+    }
+  ]
+
+  #
   # Fake Data: Sections
   #
   SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
@@ -87,12 +110,17 @@ module FakeDashboard
   SECTION_DELETED_USER = {
     id: 150005, user_id: TEACHER_DELETED_USER[:id], name: 'Fake Section E'
   }
+  # Section assigned to an arbitrary (made-up) course
+  SECTION_COURSE = {
+    id: 150006, user_id: TEACHER[:id], name: 'Fake Section assigned course', course_id: COURSES[0][:id]
+  }
   TEACHER_SECTIONS = [
     SECTION_NORMAL,
     SECTION_EMPTY,
     SECTION_DELETED,
     SECTION_DELETED_FOLLOWER,
-    SECTION_DELETED_USER
+    SECTION_DELETED_USER,
+    SECTION_COURSE
   ]
 
   #
@@ -165,6 +193,16 @@ module FakeDashboard
     USER_PERMISSIONS.each do |perm|
       new_id = @@fake_db[:user_permissions].insert(perm)
       perm.merge! @@fake_db[:user_permissions][id: new_id]
+    end
+
+    COURSES.each do |course|
+      new_id = @@fake_db[:courses].insert(course)
+      course.merge! @@fake_db[:courses][id: new_id]
+    end
+
+    SCRIPTS.each do |script|
+      new_id = @@fake_db[:scripts].insert(script)
+      script.merge! @@fake_db[:scripts][id: new_id]
     end
 
     TEACHER_SECTIONS.each do |section|

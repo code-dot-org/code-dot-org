@@ -41,7 +41,9 @@
     "debugger_disabled": "false",
     "instructions": "Do This",
     "markdown_instructions": "# Stuff",
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "show_debug_watch": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

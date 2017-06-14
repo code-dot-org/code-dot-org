@@ -21,10 +21,13 @@
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
 
+TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include ScriptConstants
   include SharedConstants
+  include Rails.application.routes.url_helpers
 
   include Seeded
   has_many :levels, through: :script_levels
@@ -36,6 +39,8 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
+  has_many :course_scripts
+  has_many :courses, through: :course_scripts
 
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
@@ -170,7 +175,7 @@ class Script < ActiveRecord::Base
   # variable (ie. in memory in the worker process) and in a
   # distributed cache (Rails.cache)
   @@script_cache = nil
-  SCRIPT_CACHE_KEY = 'script-cache'
+  SCRIPT_CACHE_KEY = 'script-cache'.freeze
 
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
@@ -205,7 +210,8 @@ class Script < ActiveRecord::Base
             },
             {
               stages: [{script_levels: [:levels]}]
-            }
+            },
+            :course_scripts
           ]
         ).find(script_id)
 
@@ -317,7 +323,8 @@ class Script < ActiveRecord::Base
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        next if level.contained_levels.empty?
+        next if level.contained_levels.empty? ||
+          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
@@ -327,7 +334,7 @@ class Script < ActiveRecord::Base
 
     text_response_levels.concat(
       script_levels.includes(:levels).
-        where('levels.type' => [TextMatch, FreeResponse]).
+        where('levels.type' => TEXT_RESPONSE_TYPES).
         map do |script_level|
           {
             script_level: script_level,
@@ -371,7 +378,10 @@ class Script < ActiveRecord::Base
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
     script_levels.to_a.find do |sl|
-      sl.stage.lockable? == lockable && sl.stage.relative_position == relative_position.to_i && sl.position == puzzle_position.to_i
+      sl.stage.lockable? == lockable &&
+        sl.stage.relative_position == relative_position.to_i &&
+        sl.position == puzzle_position.to_i &&
+        !sl.bonus
     end
   end
 
@@ -432,7 +442,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -828,5 +838,13 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false
     }.compact
+  end
+
+  # @return {String|nil} path to the course overview page for this script if there
+  #   is one. A script is considered to have a matching course if there is exactly
+  #   one course for this script
+  def course_link
+    return nil if courses.length != 1
+    course_path(courses[0])
   end
 end

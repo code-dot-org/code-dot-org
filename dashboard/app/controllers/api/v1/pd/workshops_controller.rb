@@ -2,7 +2,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
 
-  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index, :workshops_user_enrolled_in]
+  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index]
 
   # GET /api/v1/pd/workshops
   def index
@@ -75,7 +75,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
-    process_location
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -88,7 +87,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
-    process_location force: true
     if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -134,13 +132,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
     end
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
-  end
-
-  def process_location(force: false)
-    location_address = workshop_params[:location_address]
-    if force || location_address != @workshop.location_address
-      @workshop.processed_location = Pd::Workshop.process_location(location_address)
-    end
   end
 
   def adjust_facilitators

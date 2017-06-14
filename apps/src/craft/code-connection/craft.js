@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import * as codegen from '@cdo/apps/codegen';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '@cdo/apps/redux';
 import AppView from '@cdo/apps/templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
@@ -79,11 +79,17 @@ export const executeUserCode = function (client, code) {
     }
     client.async_command(command, (result) => {
       var log = document.getElementById("code-connection-log");
-      log.innerText += `${commandName} command executed. Output : ${result}\n`;
+      log.innerText += `${commandName} command executed.`;
+      if (resultKey !== null) {
+        log.innerText += ` ${resultKey}: ${result}`;
+      }
+      log.innerText += '\n';
       // Automatically scrolling down
       log.scrollTop = log.scrollHeight;
       callback(result);
-      interpreter.run();
+      if (studioApp().isRunning() === true) {
+        interpreter.run();
+      }
     }, resultKey);
   }
 
@@ -174,10 +180,31 @@ export const executeUserCode = function (client, code) {
       createAsyncRequestBlock(blockID, 'tptargettopos', 'success', { 'victim': victim, 'destination': destination }, callback);
     },
     fill: function (blockID, from, to, tileName, tileData, callback) {
-      createAsyncRequestBlock(blockID, 'fill', 'success', { 'from': from, 'to': to, 'tileName': tileName, 'tileData': tileData }, callback);
+      createAsyncRequestBlock(blockID, 'fill', 'fillCount', { 'from': from, 'to': to, 'tileName': tileName, 'tileData': tileData }, callback);
     },
     give: function (blockID, player, item, amount, callback) {
-      createAsyncRequestBlock(blockID, 'give', 'success', { 'player': player, 'itemName': item['name'], 'data':item['data'], 'amount': amount }, callback);
+      createAsyncRequestBlock(blockID, 'give', 'itemAmount', { 'player': player, 'itemName': item['name'], 'data':item['data'], 'amount': amount }, callback);
+    },
+    kill: function (blockID, target, callback) {
+      createAsyncRequestBlock(blockID, 'kill', null, { 'target': target }, callback);
+    },
+    setblock: function (blockID, position, item, oldBlockHandling, callback) {
+      createAsyncRequestBlock(blockID, 'setblock', null, { 'position': position, 'tileName': item['name'], 'tileData':item['data'], 'oldBlockHandling': oldBlockHandling  }, callback);
+    },
+    summon: function (blockID, entityType, spawnPos, callback) {
+      createAsyncRequestBlock(blockID, 'summon', 'wasSpawned', { 'entityType': entityType, 'spawnPos': spawnPos }, callback);
+    },
+    testforblock: function (blockID, position, item, callback) {
+      createAsyncRequestBlock(blockID, 'testforblock', 'matches', { 'position': position, 'tileName': item['name'], 'dataValue':item['data'] }, callback);
+    },
+    testforblocks: function (blockID, begin, end, destination, mode, callback) {
+      createAsyncRequestBlock(blockID, 'testforblocks', 'matches', { 'begin': begin, 'end': end, 'destination':destination, 'mode':mode }, callback);
+    },
+    clone: function (blockID, begin, end, destination, maskMode, cloneMode, callback) {
+      createAsyncRequestBlock(blockID, 'clone', 'count', { 'begin': begin, 'end': end, 'destination':destination, 'maskMode':maskMode, 'cloneMode':cloneMode}, callback);
+    },
+    clonefiltered: function (blockID, begin, end, destination, cloneMode, item, callback) {
+      createAsyncRequestBlock(blockID, 'clone', 'count', { 'begin': begin, 'end': end, 'destination':destination, 'maskMode':'filtered', 'cloneMode':cloneMode, 'tileName': item['name'], 'tileData':item['data'] }, callback);
     }
   };
 
@@ -192,8 +219,11 @@ export const executeUserCode = function (client, code) {
   };
 
   // Register async methods
-  codegen.asyncFunctionList = Object.values(asyncMethods);
-  interpreter = codegen.evalWith(code, Object.assign(asyncMethods, methods));
+  interpreter = CustomMarshalingInterpreter.evalWith(
+    code,
+    {...asyncMethods, ...methods},
+    {asyncFunctionList: Object.values(asyncMethods)}
+  );
 };
 
 export default class Craft {

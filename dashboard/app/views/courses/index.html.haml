@@ -13,8 +13,13 @@
   courses_data[:studentscount] = students_count
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
+  courses_data[:initialtipsdismissed] = current_user ? current_user.ui_tip_dismissed_teacher_courses : nil
+  courses_data[:userid] = current_user.try(:id)
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
+
+- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+  = render partial: 'layouts/race_interstitial'
 
 %script{src: minifiable_asset_path('js/courses/index.js'), data: {courses: courses_data.to_json}}
 
@@ -23,5 +28,36 @@
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml')
   = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
   = render partial: 'home/all_courses'
+  -if current_user && !current_user.teacher?
+    #user_hero
+      = render template: 'api/user_hero'
+  .standalone-tools
+    %br/
+    .row
+      = render partial: 'shared/course_wide_block', locals: { id: "applab" }
+      = render partial: 'shared/course_wide_block', locals: { id: "widgets" }
+    %br/
+    .row
+      = render partial: 'shared/course_wide_block', locals: { id: "gamelab" }
+    %br/
+
+  #section-management
+    - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
+      .row#edit_teachers
+        .span12
+          .padtopbottom
+            - current_user_sections_as_student = current_user.sections_as_student
+            - if current_user_sections_as_student.empty?
+              = form_for([Follower.new], html: {class: 'form-inline'}) do |f|
+                %label= t('add_teacher_form.code.label')
+                = text_field_tag :section_code, nil, class: 'form-control', placeholder: t('add_teacher_form.code.placeholder'), :required => true
+                = hidden_field_tag :redirect, root_path
+                %button.btn.btn-default{type: 'submit', style: 'margin-top:0'}= t('add_teacher_form.submit')
+            - else
+              = t('section.your_section', count: current_user_sections_as_student.length)
+              - if current_user.encrypted_password?
+                = raw current_user_sections_as_student.map {|section| t('section.code_with_teacher', section_code: section.code, teacher_name: section.teacher.try(:name) || I18n.t('user.deleted_user')) + ' ' + link_to(t('section.remove'), remove_follower_path(section_code: section[:code], student_user_id: current_user.id), confirm: t('section.confirm.remove'), method: :post)}.join(', ')
+              - else
+                = raw current_user_sections_as_student.map {|section| t('section.code_with_teacher', section_code: section.code, teacher_name: section.teacher.try(:name) || I18n.t('user.deleted_user'))}.join(', ')
 
 #courses-container

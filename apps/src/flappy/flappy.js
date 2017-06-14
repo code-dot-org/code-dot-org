@@ -10,7 +10,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var flappyMsg = require('./locale');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -732,7 +732,7 @@ Flappy.execute = function () {
     whenRunButton: {code: generator('when_run')}
   };
 
-  codegen.evalWithEvents({Flappy: api}, events).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents({Flappy: api}, events).hooks.forEach(hook => {
     Flappy[hook.name] = hook.func;
   });
 

@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-06-14T00:39:18.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Wednesday Unit Reflection Part 2\r\n\r\n## Explaining Internet Simulator\r\n\r\nHow would you explain the Internet Simulator to a new teacher who is interested in using it?\r\n\r\n* In what ways is Internet Simulator an educational rather than professional tool? \r\n* What teaching philosophy seems most effective with the Internet Simulator? \r\n",
+    "instructions_important": "false",
+    "display_name": "Unit Reflection",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 00:39:24 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 00:50:01 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

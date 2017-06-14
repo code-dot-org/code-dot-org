@@ -2,14 +2,12 @@ name 'CSD U3 Defender SFLP'
 display_name 'Lesson Overview'
 css 'unplugged'
 markdown <<MARKDOWN
-# Programming - Interactive Games and Animations: Lesson 16 - The Game Design Process
+# Overview
 
-## Background
-
-This lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. As part of this lesson students also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson students have an opportunity to make improvements to the game to make it their own.
+This lesson introduces the process the class will use to design games for the remainder of the unit. The class walks through through this process in a series of levels. As part of this lesson the class also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson they have an opportunity to make improvements to the game to make it their own.
 
 
-# Resources
+## Resources
 
 * [Project Guide - Defender Game](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=doc))
 MARKDOWN

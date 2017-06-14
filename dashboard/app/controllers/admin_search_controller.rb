@@ -30,16 +30,12 @@ class AdminSearchController < ApplicationController
           # matched.
         end
         if teachers.first
-          array_of_student_ids = Follower.
-            where(user: teachers.first).pluck('student_user_id').to_a
+          array_of_student_ids = teachers.first.students.pluck(:id)
           users = users.where(id: array_of_student_ids)
         end
       end
       if params[:sectionFilter].present?
-        array_of_student_ids = Section.where(code: params[:sectionFilter]).
-          joins("INNER JOIN followers ON followers.section_id = sections.id").
-          pluck('student_user_id').
-          to_a
+        array_of_student_ids = Section.find_by_code(params[:sectionFilter]).students.pluck(:id)
         users = users.where(id: array_of_student_ids)
       end
 
@@ -48,9 +44,12 @@ class AdminSearchController < ApplicationController
   end
 
   def lookup_section
-    @section = Section.find_by_code params[:section_code]
+    @section = Section.with_deleted.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
       flash[:alert] = 'Section code not found'
+    end
+    if params[:section_code] && @section.try(:deleted?)
+      flash[:alert] = 'Section is deleted'
     end
   end
 

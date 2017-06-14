@@ -523,6 +523,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.sessions << session
     @workshop.sessions << session2
     assert_equal session.start, @workshop.workshop_starting_date
+    assert_equal session2.start, @workshop.workshop_ending_date
+  end
+
+  test 'workshop date range string for single session workshop' do
+    workshop = create :pd_workshop, num_sessions: 1
+    assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
+  end
+
+  test 'workshop date range string for multi session workshop' do
+    workshop = create :pd_workshop, num_sessions: 2
+    assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do
@@ -558,6 +569,76 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert @workshop.organizer_or_facilitator?(facilitator)
     refute @workshop.organizer_or_facilitator?(another_organizer)
     refute @workshop.organizer_or_facilitator?(another_facilitator)
+  end
+
+  test 'process_location is called when location_address changes' do
+    @workshop.expects(:process_location).once
+    @workshop.update!(location_address: '1501 4th Ave, Seattle WA')
+
+    # Changing another field does not process location
+    @workshop.expects(:process_location).never
+    @workshop.update!(location_name: 'Code.org')
+
+    # Setting location_address to the same value does not process location
+    @workshop.expects(:process_location).never
+    @workshop.update!(location_address: '1501 4th Ave, Seattle WA')
+  end
+
+  test 'process_location' do
+    mock_geocoder_result = [
+      OpenStruct.new(
+        latitude: 47.6101003,
+        longitude: -122.33746,
+        formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
+      )
+    ]
+    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    Honeybadger.expects(:notify).never
+
+    # Normal lookup
+    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').returns(mock_geocoder_result)
+    @workshop.location_address = '1501 4th Ave, Seattle WA'
+    @workshop.process_location
+    assert_equal expected_processed_location, @workshop.processed_location
+
+    # Nonexistent location clears processed_location
+    Geocoder.expects(:search).with('nonexistent location').returns([])
+    @workshop.location_address = 'nonexistent location'
+    @workshop.process_location
+    assert_nil @workshop.processed_location
+
+    # Don't bother looking up blank addresses
+    Geocoder.expects(:search).never
+    @workshop.location_address = ''
+    @workshop.process_location
+    assert_nil @workshop.processed_location
+
+    # Retry on errors
+    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).then.returns(mock_geocoder_result).twice
+    @workshop.location_address = '1501 4th Ave, Seattle WA'
+    @workshop.process_location
+    assert_equal expected_processed_location, @workshop.processed_location
+
+    # Repeated errors are logged to honeybadger
+    Honeybadger.expects(:notify).once
+    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).twice
+    @workshop.location_address = '1501 4th Ave, Seattle WA'
+    @workshop.process_location
+    assert_nil @workshop.processed_location
+  end
+
+  test 'suppress_reminders?' do
+    suppressed = [
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT),
+    ]
+
+    refute @workshop.suppress_reminders?
+    suppressed.each do |workshop|
+      assert workshop.suppress_reminders?
+    end
   end
 
   private

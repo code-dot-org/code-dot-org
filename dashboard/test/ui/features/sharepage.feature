@@ -36,7 +36,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
 
 @as_student
 Scenario: Share and save an artist level to the project gallery
-  Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10?enableExperiments=projectGallery"
+  Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10"
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
   And I drag block "1" to block "12"
@@ -51,9 +51,19 @@ Scenario: Share and save an artist level to the project gallery
   And the project list contains 1 entry
   And the project at index 0 is named "Artist Project"
 
+  # Make sure the published project shows up in the public gallery
+
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  And I wait until element "#public-gallery" is visible
+  And I wait until element ".project_card:contains(Artist Project)" is visible
+  And I sign out
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Artist Project)" is visible
+
 @as_student
 Scenario: Share and save a playlab level to the project gallery
-  Given I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10?enableExperiments=projectGallery"
+  Given I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10"
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
 
@@ -67,3 +77,13 @@ Scenario: Share and save a playlab level to the project gallery
   And I wait until element "table.projects" is visible
   And the project list contains 1 entry
   And the project at index 0 is named "Play Lab Project"
+
+  # Make sure the published project shows up in the public gallery
+
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  And I wait until element "#public-gallery" is visible
+  And I wait until element ".project_card:contains(Play Lab Project)" is visible
+  And I sign out
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Play Lab Project)" is visible
