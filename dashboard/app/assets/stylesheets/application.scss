@@ -1322,6 +1322,15 @@ a.download-video {
   padding-left: 5px;
 }
 
+#section-management {
+  #edit_teachers {
+    .padtopbottom {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
 #landingpage {
   .welcome {
     background-color: $light_purple;
@@ -1417,11 +1426,6 @@ a.download-video {
       text-decoration: none;
       background-color: $white;
     }
-  }
-
-  .padtopbottom {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   #signup {
