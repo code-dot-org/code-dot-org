@@ -1,0 +1,11 @@
+name 'csp-novice-congrats'
+display_name 'Congrats on completing the novice program!'
+markdown <<MARKDOWN
+# Congrats on completing the novice program!
+
+Signing on to facilitate a program you have not taught before or gone through PD for is a very courageous move. We could not be training so many teachers on CS Principles without your help and courage. Thank you for taking the leap and spending the week at TeacherCon with us. Hopefully, you gained a better understanding of the course but also the kind of professional learning experiences we hope to provide all teachers.  We know that you will do great things this year as you head off to your local areas after the facilitator training weekend.
+
+### Welcome to the Principles Family!
+
+
+MARKDOWN

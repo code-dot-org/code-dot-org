@@ -69,6 +69,7 @@ stage 'Loops: Getting Loopy'
 level 'GettingLoopy'
 
 stage 'Loops in Maze'
+level 'elementary_video_pairProgramming'
 level 'courseC_maze_loops1'
 level 'courseC_video_loops'
 level 'courseC_maze_loops2_predict1'

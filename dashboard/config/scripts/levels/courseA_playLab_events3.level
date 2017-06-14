@@ -51,8 +51,8 @@
     "tts_instructions_override": "Help Jorge the Dog get moving by connecting the move block to the when event block that is already in the workspace. Finish the level by getting Jorge to the flag!",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "Help Jorge the Dog get moving by connecting the move left block to the when left arrow pressed event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!"
+    "tts_markdown_instructions_override": "Help Jorge the Dog get moving by connecting the move left block to the when left arrow pressed event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
