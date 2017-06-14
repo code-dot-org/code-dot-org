@@ -51,6 +51,13 @@ Scenario: Share and save an artist level to the project gallery
   And the project list contains 1 entry
   And the project at index 0 is named "Artist Project"
 
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Artist Project)" is visible
+  And I sign out
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Artist Project)" is visible
+
 @as_student
 Scenario: Share and save a playlab level to the project gallery
   Given I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10"
@@ -67,3 +74,10 @@ Scenario: Share and save a playlab level to the project gallery
   And I wait until element "table.projects" is visible
   And the project list contains 1 entry
   And the project at index 0 is named "Play Lab Project"
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Playlab Project)" is visible
+  And I sign out
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Playlab Project)" is visible
