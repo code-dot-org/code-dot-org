@@ -185,6 +185,9 @@ export const executeUserCode = function (client, code) {
     item: function (blockID, name, data) {
       studioApp().highlight(blockID);
       return { 'name': name, 'data': data };
+    },
+    createBlockPos: function (x, y, z, prefix) {
+      return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
     }
   };
 
