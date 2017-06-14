@@ -10,16 +10,13 @@ module Pd::Payment
         num_sessions: 2
 
       # 2 facilitators
-      2.times do
-        @workshop.facilitators << create(:facilitator)
-      end
+      @workshop.facilitators += create_list(:facilitator, 2)
 
       # 10 qualified teachers: 1 at partial (1 day) attendance, and 9 more at full (2 days) attendance
       create :pd_workshop_participant, workshop: @workshop,
         enrolled: true, in_section: true, attended: @workshop.sessions.first(1)
 
-      9.times do
-        create :pd_workshop_participant, workshop: @workshop,
+      create_list :pd_workshop_participant, 9, workshop: @workshop,
           enrolled: true, in_section: true, attended: @workshop.sessions
       end
     end
