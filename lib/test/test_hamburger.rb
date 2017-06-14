@@ -1,6 +1,5 @@
-require_relative '../../lib/cdo/hamburger'
 require_relative 'test_helper'
-require 'minitest/autorun'
+require_relative '../../lib/cdo/hamburger'
 
 class Level
   def report_bug_url(request)
