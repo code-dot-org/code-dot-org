@@ -180,8 +180,8 @@ class Documents < Sinatra::Base
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
     Sass::Engine.new(css,
-      :syntax => :scss,
-      :style => :compressed
+      syntax: :scss,
+      style: :compressed
     ).render
   end
 
