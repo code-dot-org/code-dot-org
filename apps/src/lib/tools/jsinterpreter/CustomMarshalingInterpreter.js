@@ -323,7 +323,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
 
   /**
    * Patched to add the 3rd "declarator" parameter on the setValue() call(s).
-   * Also removed erroneous? call to hasProperty when there is node.init
    * Changed to call setValue with this.UNDEFINED when there is no node.init
    * and JSInterpreter.baseHasProperty returns false for current scope.
    * @override
@@ -331,16 +330,15 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   stepVariableDeclarator() {
     var state = this.peekStackFrame();
     var node = state.node;
-    if (node.init && !state.done) {
-      state.done = true;
+    if (node.init && !state.done_) {
+      state.done_ = true;
       this.pushStackFrame({node: node.init});
       return;
     }
-    if (!this.hasProperty(this, node.id.name) || node.init) {
-      if (node.init) {
-        var value = state.value;
-        this.setValue(this.createPrimitive(node.id.name), value, true);
-      }
+    if (node.init) {
+      this.setValue(this.createPrimitive(node.id.name), state.value, true);
+    } else {
+      this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
     }
     this.popStackFrame();
   }
