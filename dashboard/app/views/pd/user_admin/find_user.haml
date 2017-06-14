@@ -1,0 +1,6 @@
+%h1 Manager User Permissions
+%p Type a User Id to view and edit their permissions
+= form_tag url_for(action: 'find_user'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :q, params[:q], class: 'form-control'
+  %button.btn{type: 'submit'}
+

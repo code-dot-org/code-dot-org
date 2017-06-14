@@ -6,6 +6,10 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
+  namespace :pd do
+    get 'user_admin/find_user'
+  end
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
