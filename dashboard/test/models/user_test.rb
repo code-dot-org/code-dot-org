@@ -1070,7 +1070,7 @@ class UserTest < ActiveSupport::TestCase
     student_with_password_no_email = create(
       :student,
       encrypted_password: '123456',
-      email: nil,
+      email: '',
       hashed_email: nil,
       provider: 'manual'
     )
