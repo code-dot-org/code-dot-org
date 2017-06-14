@@ -39,8 +39,8 @@
     "disable_if_else_editing": "false",
     "min_collected": "6",
     "step_speed": "1",
-    "contained_level_names": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

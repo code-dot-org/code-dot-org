@@ -75,8 +75,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "teacher_markdown": "The code in this level is overwhelming.  The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions.  They should understand that the `isTouching` block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier."
+    "teacher_markdown": "The code in this level is overwhelming.  The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions.  They should understand that the `isTouching` block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

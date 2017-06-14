@@ -42,8 +42,8 @@
     "callout_json": "[]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You are doing great! Keep it up!\\n\\nIf you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.\",\"hint_id\":\"course_starWars_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/363f9817ba1f691f890f0a4202bc9e63/courseC_starWars_loops9.mp3\"}]",
     "step_speed": "3",
-    "contained_level_names": null,
-    "instructions": "Use what you have learned to pick up all of the scrap metal!"
+    "instructions": "Use what you have learned to pick up all of the scrap metal!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
