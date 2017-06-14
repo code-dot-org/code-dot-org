@@ -1133,6 +1133,14 @@ input.header_input {
   }
 }
 
+// TEMPORARY HOTFIX (bbuchanan)
+// Hide video thumbnails in App Lab because they are covering the run button.
+// Remove when issue is properly fixed.
+// See https://github.com/code-dot-org/code-dot-org/pull/15848
+#phoneFrame + #gameButtons + #belowVisualization > .reference_area {
+  display: none;
+}
+
 #notes-outer {
   overflow-y: scroll;
   padding: 0;
