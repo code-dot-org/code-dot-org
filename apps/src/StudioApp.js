@@ -1926,7 +1926,17 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
-  this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+
+  // Create a child element of codeTextbox to instantiate droplet on, because
+  // droplet sets css properties on its wrapper that would interfere with our
+  // layout otherwise.
+
+  const codeTextbox = document.getElementById('codeTextbox');
+  const dropletCodeTextbox = document.createElement('div');
+  dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  codeTextbox.appendChild(dropletCodeTextbox);
+
+  this.editor = new droplet.Editor(dropletCodeTextbox, {
     mode: 'javascript',
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
