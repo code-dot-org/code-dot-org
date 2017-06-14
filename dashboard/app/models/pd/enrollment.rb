@@ -177,9 +177,7 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def should_send_exit_survey?
-    return false if workshop.fit_weekend?
-
-    true
+    !workshop.fit_weekend?
   end
 
   def send_exit_survey
