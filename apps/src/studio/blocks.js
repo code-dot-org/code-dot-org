@@ -507,6 +507,7 @@ exports.install = function (blockly, blockInstallOptions) {
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
         dropdownArray2 = dropdownArray2.concat([['touches a flag', 'goal']]);
+        dropdownArray2 = dropdownArray2.concat([['touches an obstacle', 'wall']]);
         dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
         dropdownArray2 = dropdownArray2.concat(this.EDGES);
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
