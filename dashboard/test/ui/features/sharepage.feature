@@ -51,7 +51,8 @@ Scenario: Share and save an artist level to the project gallery
   And the project list contains 1 entry
   And the project at index 0 is named "Artist Project"
 
-  Then I am on "http://studio.code.org/projects/public"
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  And I wait until element "#public-gallery" is visible
   And I wait until element ".project_card:contains(Artist Project)" is visible
   And I sign out
 
@@ -75,7 +76,8 @@ Scenario: Share and save a playlab level to the project gallery
   And the project list contains 1 entry
   And the project at index 0 is named "Play Lab Project"
 
-  Then I am on "http://studio.code.org/projects/public"
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  And I wait until element "#public-gallery" is visible
   And I wait until element ".project_card:contains(Playlab Project)" is visible
   And I sign out
 
