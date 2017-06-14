@@ -29,6 +29,7 @@ content-type: text/ng-template
   %br/
   %br/
   %button.btn.btn-white{"ng-click" => "new_section()"}= I18n.t('dashboard_sections_new_section')
+  %button.btn.btn-white#google-section{style: "display: none", "ng-click" => "new_google_section()"}= I18n.t('dashboard_sections_new_google_section')
   %br/
   %br/
 
@@ -155,3 +156,5 @@ content-type: text/ng-template
   %br
     %p= I18n.t('dashboard_privacy_document_link')
   %br/
+
+%script{src: 'https://apis.google.com/js/api.js'}
