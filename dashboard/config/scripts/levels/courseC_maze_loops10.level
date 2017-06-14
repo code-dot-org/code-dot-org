@@ -12,7 +12,7 @@
     "skip_instructions_popup": "false",
     "start_direction": "1",
     "maze": "[[0,0,0,0,0,0,0,0],[2,1,1,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,1,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,3,0]]",
-    "ideal": "9",
+    "ideal": "12",
     "authored_hints": "[]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -31,11 +31,12 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "efficacy repairing puzzle",
-  "audit_log": "[{\"changed_at\":\"2017-05-24 15:14:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-24 15:14:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-14 16:33:50 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-14 16:38:52 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-14 16:39:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,6 +87,19 @@
                               <statement name="DO">
                                 <block type="maze_moveForward"/>
                               </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">3</title>
+                                      <statement name="DO">
+                                        <block type="maze_moveForward"/>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>

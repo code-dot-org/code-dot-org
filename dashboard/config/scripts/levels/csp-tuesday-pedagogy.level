@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-06-14T00:37:40.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Tuesday Pedagogy Reflection\r\n\r\n## Classroom Practices\r\n\r\nName two <a href=\"https://docs.google.com/document/d/1trq3FeCBaq2G-CFugZP4ElkJapAqAtoBfl4zf7DbW48/edit#heading=h.f8m5xr9s44e2\"> pedagogical approaches</a> you saw modeled in the 5 TLOs you’ve seen in the past couple of days? \r\n\r\n* When were they successful?\r\n* What were characteristics of situations where was their room for improvement?",
+    "instructions_important": "false",
+    "display_name": "Pedagogy Reflection",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 00:37:44 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 00:46:17 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 01:05:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
