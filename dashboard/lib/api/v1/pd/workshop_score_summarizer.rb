@@ -1,4 +1,4 @@
-require_dependency pegasus_dir('forms/pd_workshop_survey')
+require pegasus_dir('forms/pd_workshop_survey')
 
 module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_EFFECTIVENESS_QUESTIONS = [

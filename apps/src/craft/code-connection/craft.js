@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import {getStore} from '@cdo/apps/redux';
 import AppView from '@cdo/apps/templates/AppView';
@@ -217,7 +218,7 @@ export const executeUserCode = function (client, code) {
 
   // Register async methods
   codegen.asyncFunctionList = Object.values(asyncMethods);
-  interpreter = codegen.evalWith(code, Object.assign(asyncMethods, methods));
+  interpreter = CustomMarshalingInterpreter.evalWith(code, Object.assign(asyncMethods, methods));
 };
 
 export default class Craft {

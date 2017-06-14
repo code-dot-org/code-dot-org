@@ -827,6 +827,19 @@ Given(/^I sign in as "([^"]*)"/) do |name|
   }
 end
 
+Given(/^I log in as "([^"]*)" with password "([^"]*)"/) do |email, password|
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    Then I am on "http://studio.code.org/"
+    And I wait to see "#signin_button"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password with "#{email}" and "#{password}"
+    And I click selector "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
 Given(/^I am a (student|teacher)$/) do |user_type|
   random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
   steps %Q{
@@ -996,6 +1009,13 @@ And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
     And I type "#{@users[name][:password]}" into "#user_password"
+  }
+end
+
+And(/I fill in username and password with "([^"]*)" and "([^"]*)"/) do |username, password|
+  steps %Q{
+    And I type "#{username}" into "#user_login"
+    And I type "#{password}" into "#user_password"
   }
 end
 
