@@ -259,7 +259,7 @@ module Pd
     end
 
     # Parse and report error
-    # @param method [String]
+    # @param method [Symbol]
     # @param error [RestClient::ExceptionWithResponse]
     # @return [Hash] hash of parsed error details, code: and body:
     def report_error(method, error, notify_honeybadger: true)
