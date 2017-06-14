@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import TeacherCourses from './TeacherCourses';
+import TeacherCourseCatalog from './TeacherCourseCatalog';
 import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
@@ -126,7 +126,7 @@ const Courses = React.createClass({
 
               <br/>
               <br/>
-              <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+              <TeacherCourseCatalog codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
               <div>
                 <div style={styles.heading}>

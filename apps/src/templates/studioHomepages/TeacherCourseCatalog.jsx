@@ -3,7 +3,7 @@ import ResourceCard from './ResourceCard';
 import ContentContainer from './ContentContainer';
 import i18n from "@cdo/locale";
 
-const TeacherCourses = React.createClass({
+const TeacherCourseCatalog = React.createClass({
   propTypes: {
     codeOrgUrlPrefix: React.PropTypes.string.isRequired
   },
@@ -46,4 +46,4 @@ const TeacherCourses = React.createClass({
   }
 });
 
-export default TeacherCourses;
+export default TeacherCourseCatalog;
