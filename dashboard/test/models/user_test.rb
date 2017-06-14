@@ -1077,18 +1077,6 @@ class UserTest < ActiveSupport::TestCase
     assert student_with_password_no_email.teacher_managed_account?
   end
 
-  test 'teacher_managed_account? is false for users in picture or word sections with passwords' do
-    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
-
-    [picture_section, word_section].each do |section|
-      student_with_password = create(:student, encrypted_password: '123456')
-      create(:follower, student_user: student_with_password, section: section)
-      student_with_password.reload
-      refute student_with_password.teacher_managed_account?
-    end
-  end
-
   test 'teacher_managed_account? is true for users in picture or word sections without passwords' do
     picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
     word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
