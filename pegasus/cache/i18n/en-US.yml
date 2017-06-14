@@ -623,6 +623,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "New section"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts."
   dashboard_sections_table_section: "Section"
   dashboard_sections_table_secret: "Login Type"
