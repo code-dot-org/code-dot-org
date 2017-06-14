@@ -2918,6 +2918,8 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'goal');
   }
 };
 
@@ -5689,6 +5691,7 @@ function executeCollision(src, target) {
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
   Studio.executeQueue(srcPrefix + 'anything');
+  Studio.executeQueue(srcPrefix + 'goal');
 
   if (isEdgeClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_edge');
@@ -6072,18 +6075,21 @@ Studio.allGoalsVisited = function () {
           var allowQueueExtension = false;
           var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
+          callHandler(prefix + 'goal', allowQueueExtension);
         }
 
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
-          if (spriteAtGoal(Studio.sprite[j], goal)) {
+          if (Studio.sprite[j].visible &&
+              spriteAtGoal(Studio.sprite[j], goal)) {
             goal.finished = true;
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
             }
 
             callHandler('whenTouchGoal');
+            callHandler('whenSpriteCollided-' + j + '-goal');
 
             break;
           }
