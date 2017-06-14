@@ -349,13 +349,6 @@ def configure_for_eyes
   # See "Aggregating tests from different processes"
   # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
   ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
-
-  # Also seed eyes data
-  ChatClient.log "Seeding eyes data"
-  unless system("bundle exec ruby #{bin_dir('test_utils/seed_pd_eyes_data.rb')}")
-    ChatClient.log 'Unable to seed data for eyes tests', color: 'red'
-    exit 1
-  end
 end
 
 def applitools_batch_url
