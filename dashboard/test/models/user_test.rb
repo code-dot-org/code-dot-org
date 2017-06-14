@@ -1477,8 +1477,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "can_edit_account?" do
-    # a student who only logs in with picture accounts cannot edit their account
-
     assert create(:student).can_edit_account?
     assert create(:student, age: 4).can_edit_account?
     assert create(:teacher).can_edit_account?
@@ -1493,7 +1491,7 @@ class UserTest < ActiveSupport::TestCase
     # join picture section
     create(:follower, student_user: student_without_password, section: picture_section)
     student_without_password.reload
-    refute student_without_password.can_edit_account? # only in a picture section
+    assert student_without_password.can_edit_account? # only in a picture section
 
     # join word section
     create(:follower, student_user: student_without_password, section: word_section)
