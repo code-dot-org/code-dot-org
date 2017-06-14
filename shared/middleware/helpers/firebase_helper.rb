@@ -1,6 +1,8 @@
 require 'csv'
 require 'firebase'
 
+# A wrapper around the firebase gem. For gem documentation, see
+# https://github.com/oscardelben/firebase-ruby.
 class FirebaseHelper
   def initialize(channel_id)
     raise "CDO.firebase_name not defined" unless CDO.firebase_name
