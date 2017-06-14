@@ -661,12 +661,12 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
-      state.arguments = intArgs;
+      state.arguments_ = intArgs;
       state.n_ = intArgs.length;
 
       // remove the last argument because stepCallExpression always wants to push it back on.
-      if (state.arguments.length > 0) {
-        state.value = state.arguments.pop();
+      if (state.arguments_.length > 0) {
+        state.value = state.arguments_.pop();
       }
 
       this.pushStackFrame(state);
