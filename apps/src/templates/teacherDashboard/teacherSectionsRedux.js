@@ -118,7 +118,7 @@ const sectionFromServerSection = (serverSection, assignmentList, studioUrl) => {
   const courseId = serverSection.course_id || null;
   const scriptId = serverSection.script ? serverSection.script.id : null;
 
-  const assignmentIndex = getAssignmentIndex(assignmentList, courseId, scriptId);
+  const assignmentIndex = getAssignmentIndex(assignmentList)(courseId, scriptId);
   const assignment = assignmentList[assignmentIndex];
 
   return {
@@ -135,7 +135,7 @@ const sectionFromServerSection = (serverSection, assignmentList, studioUrl) => {
     // TODO : should maybe be getting these fields as selectors instead of
     // living in state
     assignmentName: assignment ? assignment.name : '',
-    assignmentPath: assignment ? (studioUrl + '/' + getPath(assignment)) : ''
+    assignmentPath: assignment ? (studioUrl + getPath(assignment)) : ''
   };
 };
 
@@ -160,7 +160,7 @@ export const assignments = state =>
 export const currentAssignmentIndex = (state, sectionId) => {
   const section = state.sections[sectionId];
 
-  const assignmentIndex = getAssignmentIndex(assignments(state),
+  const assignmentIndex = getAssignmentIndex(assignments(state))(
     section.courseId, section.scriptId);
 
   return assignmentIndex === -1 ? null : assignmentIndex;
@@ -169,14 +169,20 @@ export const currentAssignmentIndex = (state, sectionId) => {
 /**
  * Find an assignment with the appropriate id. If both courseId and scriptId are
  * non-null, look only at the courseId.
+ * This is memoized at two separate levels because JS doesnt have any good way
+ * to have a cache key consisting of an object (assignmentList) and two strings.
+ * @param {object[]} assignmentList - array of valid courses/scripts
+ * @param {string} courseId - course id of the assignment we're looking for
+ * @param {string} scriptId - script id of the assignment we're looking for
  */
-// TODO(bjvanminnen) : I'd like for this to be memoized, but for various reasons that is not
-// trivial, so I'm going to leave this as is for now.
-const getAssignmentIndex = (assignmentList, courseId, scriptId) => (
-  assignmentList.findIndex(assignment =>
-    assignment.courseId === courseId &&
-    (courseId || assignment.scriptId === scriptId)
-  ));
+const getAssignmentIndex = _.memoize(assignmentList => (
+  _.memoize((courseId, scriptId) => (
+    assignmentList.findIndex(assignment =>
+      assignment.courseId === courseId &&
+      (courseId || assignment.scriptId === scriptId)
+    )
+  ), (courseId, scriptId) => `${courseId}_${scriptId}`)
+));
 
 const getPath = assignment => {
   if (assignment.courseId) {
