@@ -25,4 +25,8 @@ class FirebaseHelper
     records.map! {|record| JSON.parse(record)}
     table_to_csv(records, column_order: ['id'])
   end
+
+  def delete_channel
+    @firebase.delete("/v3/channels/#{@channel_id}")
+  end
 end
