@@ -65,8 +65,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "teacher_markdown": "# Recommended Search Engines\r\n\r\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\r\n\r\n* [Creative Commons Search](https://search.creativecommons.org/)\r\n* [Google Image Advanced Search](https://www.google.com/advanced_image_search)\r\n* [Wikimedia Commons](https://commons.wikimedia.org/)\r\n* [Flickr Creative Commons](https://www.flickr.com/creativecommons/)"
+    "teacher_markdown": "# Recommended Search Engines\r\n\r\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\r\n\r\n* [Creative Commons Search](https://search.creativecommons.org/)\r\n* [Google Image Advanced Search](https://www.google.com/advanced_image_search)\r\n* [Wikimedia Commons](https://commons.wikimedia.org/)\r\n* [Flickr Creative Commons](https://www.flickr.com/creativecommons/)",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

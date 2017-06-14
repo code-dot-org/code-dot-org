@@ -12,7 +12,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
-import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
@@ -432,7 +432,7 @@ describe('studio', function () {
   describe("queueCallback method", () => {
     let cb, interpreterFunc, someHook;
     beforeEach(() => {
-      const {hooks, interpreter} = codegen.evalWithEvents(
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
         {
           someGlobal: 1,
         }, {
@@ -445,9 +445,8 @@ describe('studio', function () {
       Studio.eventHandlers = [];
       Studio.setLevel({});
       cb = sinon.spy();
-      interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
+      interpreterFunc = Studio.interpreter.createNativeFunction(Studio.interpreter.makeNativeMemberFunction({
         nativeFunc: cb,
-        interpreterFunc: Studio.interpreter,
       }));
     });
 

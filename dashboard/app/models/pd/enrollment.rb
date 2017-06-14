@@ -169,6 +169,8 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
     elsif workshop.local_summer?
       pd_new_workshop_survey_url(code)
+    elsif workshop.teachercon?
+      pd_new_teachercon_survey_url(code)
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end

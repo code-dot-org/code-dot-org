@@ -1,5 +1,5 @@
 import api from './api';
-import * as codegen from '../lib/tools/jsinterpreter/codegen';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 /**
  * Interface for a set of custom game logic for playlab
@@ -49,10 +49,10 @@ CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
   }
 
   var code = 'return ' + Blockly.JavaScript.blockToCode(block);
-  result = codegen.evalWith(code, {
+  result = CustomMarshalingInterpreter.evalWith(code, {
     Studio: api,
     Globals: Studio.Globals
-  }, true);
+  }, {legacy: true});
   return result;
 };
 

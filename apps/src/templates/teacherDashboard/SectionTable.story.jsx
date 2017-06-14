@@ -1,10 +1,21 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
 import SectionTable from './SectionTable';
+import teacherSections, {
+  setValidLoginTypes,
+  setValidGrades,
+  setValidCourses,
+  setValidScripts,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sections = [
   {
     id: 11,
-    name: "brent_section",
+    courseId: 29,
+    scriptId: null,
+    name: "my_section",
     loginType: "word",
     grade: null,
     stageExtras: false,
@@ -16,6 +27,8 @@ const sections = [
   },
   {
     id: 12,
+    courseId: null,
+    scriptId: 36,
     name: "section2",
     loginType: "picture",
     grade: "11",
@@ -28,6 +41,8 @@ const sections = [
   },
   {
     id: 307,
+    courseId: null,
+    scriptId: 46,
     name: "plc",
     loginType: "email",
     grade: "10",
@@ -90,6 +105,22 @@ const validCourses = [
     category: "other",
     position: null,
     category_priority: 3,
+  },
+  {
+    id: 36,
+    name: "Course 3",
+    script_name: "course3",
+    category: "CS Fundamentals",
+    position: 3,
+    category_priority: 0,
+  },
+  {
+    id: 46,
+    name: "Infinity Play Lab",
+    script_name: "infinity",
+    category: "Hour of Code",
+    position: 12,
+    category_priority: 0,
   }
 ];
 
@@ -99,15 +130,19 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'section table',
-        story: () => (
-          <SectionTable
-            validLoginTypes={['word', 'email', 'picture']}
-            validGrades={["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]}
-            validCourses={validCourses}
-            validScripts={validScripts}
-            sections={sections}
-          />
-        )
+        story: () => {
+          const store = createStore(combineReducers({teacherSections}));
+          store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
+          store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
+          store.dispatch(setValidCourses(validCourses));
+          store.dispatch(setValidScripts(validScripts));
+          store.dispatch(setSections(sections));
+          return (
+            <Provider store={store}>
+              <SectionTable/>
+            </Provider>
+          );
+        }
       }
     ]);
 };
