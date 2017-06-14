@@ -59,6 +59,14 @@ class Section < ActiveRecord::Base
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
+  # TODO(bjvanminnen): once we have a courses cache, we should create an accessor
+  # that takes advantage of that
+
+  # Override default script accessor to use our cache
+  def script
+    Script.get_from_cache(script_id) if script_id
+  end
+
   def workshop_section?
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
@@ -153,13 +161,10 @@ class Section < ActiveRecord::Base
     title = ''
     link_to_course = base_url
 
-    if course_id
-      # TODO: course cache similar to script cache
-      course = Course.find(course_id)
+    if course
       title = course.localized_title
       link_to_course = course_path(course)
     elsif script_id
-      script = Script.get_from_cache(script_id)
       title = script.localized_title
       link_to_course = script_path(script)
     end
