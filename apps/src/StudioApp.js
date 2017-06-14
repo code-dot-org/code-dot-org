@@ -1157,7 +1157,7 @@ function resizePinnedBelowVisualizationArea() {
   var visualization = document.getElementById('visualization');
   if (visualization) {
     var parent = $(visualization).parent();
-    if (parent.attr('id') === 'phoneFrame') {
+    if (parent.attr('id') === 'phoneFrameWrapper') {
       // Phone frame itself doesnt have height. Loop through children
       parent.children().each(function () {
         top += $(this).outerHeight(true);
