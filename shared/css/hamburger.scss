@@ -93,25 +93,7 @@
     }
   }
 
-  .hamburger-expandable-item {
-    cursor: pointer;
-    .arrow-down {
-      font-size: 30px;
-      float: right;
-    }
-    .arrow-up {
-      font-size: 30px;
-      float: right;
-      display: none;
-    }
-  }
-
-  .hamburger-expandable-items {
-    margin-left: 20px;
-    display: none;
-  }
-
-  #hamburger-contents {
+  ul {
     font-size: 14px;
     list-style: none;
     margin: 0;
@@ -126,7 +108,7 @@
     overflow-y: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-    .item {
+    li {
       color: $white;
       line-height: 20px;
       padding: 0.25em;
