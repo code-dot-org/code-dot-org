@@ -1335,7 +1335,7 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
 */
 StudioApp.prototype.resizeToolboxHeader = function () {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor && this.editor.paletteEnabled) {
+  if (this.editCode && this.editor && this.editor.session && this.editor.session.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
