@@ -33,8 +33,12 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "nav.header."
 
-  require 'cdo/hamburger'
+  header_contents_options = {}
+  header_contents_options[:user_type] = user_type
+  header_contents_options[:language] = request.language
+  header_contents_options[:loc_prefix] = "nav.header."
 
+  require 'cdo/hamburger'
 
 = console if @use_web_console
 
@@ -57,7 +61,7 @@
             - elsif level
             - else
               .headerlinks.hide_on_tablet
-                - Hamburger.get_header_contents(user_type, request.language).each do |entry|
+                - Hamburger.get_header_contents(header_contents_options).each do |entry|
                   %a.headerlink{href: entry[:url]}= entry[:title]
 
           .header_right.hide_on_mobile

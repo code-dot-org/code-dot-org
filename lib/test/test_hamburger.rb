@@ -239,22 +239,22 @@ class HamburgerTest < Minitest::Test
   # Header content tests.
 
   def test_header_content_teacher
-    contents = Hamburger.get_header_contents("teacher", "en")
+    contents = Hamburger.get_header_contents({user_type: "teacher", language: "en"})
     assert_includes_id contents, "header-teacher-sections"
   end
 
   def test_header_content_student
-    contents = Hamburger.get_header_contents("student", "en")
+    contents = Hamburger.get_header_contents({user_type: "student", language: "en"})
     assert_includes_id contents, "header-student-projects"
   end
 
   def test_header_content_nobody_en
-    contents = Hamburger.get_header_contents(nil, "en")
+    contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
     assert_includes_id contents, "header-en-about"
   end
 
   def test_header_content_nobody_nonen
-    contents = Hamburger.get_header_contents(nil, "fr")
+    contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
     assert_includes_id contents, "header-signed-out-projects"
   end
 end
