@@ -4434,10 +4434,10 @@ en:
               name: Measuring Student Learning
         csp6-support:
           stage: {}
-          title: Unit 6 Online Professional Learning Course
+          title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+          description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: {}
         csppostap:
           title: CSP Post-AP - Databases and Using Data in Your Apps
@@ -5421,10 +5421,14 @@ en:
               name: Thursday
             Welcome:
               name: Welcome
-          title: CS Discoveries TeacherCon - Novice Facilitators Reflection
+            Congrats:
+              name: Congrats
+            Wrap Up:
+              name: Wrap Up
+          title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: 'A place for CS Discoveries Novice facilitators to collect their thoughts during TeacherCon. '
+          description: "During the day at TeacherCon you will be focusing on learning about the curriculum by participating as a teacher learning about the course. At the end of the day on Tuesday, Wednesday and Thursday we would like you to take some time to think about facilitating. In order to guide your reflection, we have created reflection questions for each day. \r\n\r\nOn Tuesday, Wednesday and Thursday we ask that you find ~30 minutes to do your reflection. We will be providing a room for you to do this right at the end of the day if you would like to have a quiet place with other facilitators to do this work.\r\n\r\nYou may complete your reflection on paper or on the computer but we ask that once you have completed it you put your answers in the CS Discoveries Novice Course on Code.org which we created to help you keep track of your questions. This will mean you always have access to these notes going forward no matter what materials you bring with you to a workshop.\r\n"
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:
@@ -5479,3 +5483,19 @@ en:
           description_audience: ''
           description_short: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
           description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
+        cspnovice:
+          stages:
+            Welcome:
+              name: Welcome
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+          title: CS Principles TeacherCon Novice Facilitators
+          description_audience: CSP Novice Facilitators
+          description_short: Reflection questions for novice facilitators at TeacherCon.
+          description: "During the day at TeacherCon you will be focusing on learning about the curriculum by participating as a teacher learning about the course. At the end of the day on Tuesday, Wednesday and Thursday we would like you to take some time to think about facilitating. In order to guide your reflection, we have created reflection questions for each day. \r\n\r\nOn Tuesday, Wednesday and Thursday we ask that you find ~30 minutes to do your reflection. We will be providing a room for you to do this right at the end of the day if you would like to have a quiet place with other facilitators to do this work.\r\n\r\nYou may complete your reflection on paper or on the computer but we ask that once you have completed it you put your answers in the CS Principles Novice Course on Code.org which we created to help you keep track of your questions. This will mean you always have access to these notes going forward no matter what materials you bring with you to a workshop."
