@@ -139,7 +139,8 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <label>
-          Peer Reviews to Complete
+          Peer Reviews to Complete. Currently only supported for professional learning
+          courses
           <input
             name="peer_reviews_to_complete"
             defaultValue={this.props.peerReviewsRequired}
