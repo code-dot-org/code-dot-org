@@ -565,6 +565,7 @@ class User < ActiveRecord::Base
       end
       update_column(:urm, urm_from_races)
     end
+    params.delete(:races)
     super
   end
 
