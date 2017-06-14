@@ -30,7 +30,7 @@ var ReactDOM = require('react-dom');
 var color = require("../util/color");
 var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var Provider = require('react-redux').Provider;
@@ -791,7 +791,7 @@ Artist.prototype.runButtonClick = function () {
 
 Artist.prototype.evalCode = function (code) {
   try {
-    codegen.evalWith(code, {
+    CustomMarshalingInterpreter.evalWith(code, {
       Turtle: this.api
     });
   } catch (e) {
