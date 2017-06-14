@@ -14,7 +14,7 @@ const sections = [
   {
     name: "Algebra Period 1",
     linkToProgress: "to Progress tab",
-    course: "CS in Algebra",
+    assignedTitle: "CS in Algebra",
     linkToCourse: "to Course",
     numberOfStudents: 14,
     linkToStudents: "to Manage Students tab",
@@ -23,7 +23,7 @@ const sections = [
   {
     name: "Algebra Period 2",
     linkToProgress: "to Progress tab",
-    course: "CS in Algebra",
+    assignedTitle: "CS in Algebra",
     linkToCourse: "to Course",
     numberOfStudents: 19,
     linkToStudents: "to Manage Students tab",
@@ -32,7 +32,7 @@ const sections = [
   {
     name: "Period 3",
     linkToProgress: "to Progress tab",
-    course: "Course 4",
+    assignedTitle: "Course 4",
     linkToCourse: "to Course",
     numberOfStudents: 22,
     linkToStudents: "to Manage Students tab",

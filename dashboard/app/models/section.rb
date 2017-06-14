@@ -145,6 +145,7 @@ class Section < ActiveRecord::Base
     return course.try(:course_scripts).try(:first).try(:script)
   end
 
+  # TODO: add a test
   def summarize
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
@@ -166,8 +167,7 @@ class Section < ActiveRecord::Base
       id: id,
       name: name,
       linkToProgress: "#{base_url}#{id}/progress",
-      # TODO: rename field
-      course: title,
+      assignedTitle: title,
       linkToCourse: link_to_course,
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
