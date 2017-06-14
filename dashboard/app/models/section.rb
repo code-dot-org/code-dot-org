@@ -145,7 +145,8 @@ class Section < ActiveRecord::Base
     return course.try(:course_scripts).try(:first).try(:script)
   end
 
-  # TODO: add a test
+  # Provides some information about a section. This is consumed by our SectionsTable
+  # React component on the teacher homepage
   def summarize
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
