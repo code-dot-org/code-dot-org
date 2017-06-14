@@ -78,8 +78,8 @@ Scenario: Share and save a playlab level to the project gallery
 
   Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
   And I wait until element "#public-gallery" is visible
-  And I wait until element ".project_card:contains(Playlab Project)" is visible
+  And I wait until element ".project_card:contains(Play Lab Project)" is visible
   And I sign out
 
   Then I am on "http://studio.code.org/projects/public"
-  And I wait until element ".project_card:contains(Playlab Project)" is visible
+  And I wait until element ".project_card:contains(Play Lab Project)" is visible
