@@ -10,9 +10,6 @@
     "hide_share_and_remix": "true",
     "markdown_instructions": "# Add Text to the Body\r\n\r\nWhen you start any Web Lab project it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects you'll need to do it between the `<body>` and `</body>` tags since it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write three separate sentences about any topic you like inside of the body tags of your web page\r\n* Hit \"Refresh and Save\" if you don't see the changes in the preview area\r\n* Compare your work with a neighbor. Make sure you're placing code in the same place.\r\n",
     "project_template_level_name": "CSD U2 HTML Adding Paragraphs Template",
-    "encrypted_examples": [
-
-    ],
     "submittable": "false"
   },
   "published": true,

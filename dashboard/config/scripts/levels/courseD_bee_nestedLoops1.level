@@ -13,7 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "ideal": "16",
+    "ideal": "8",
     "step_speed": "2",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -35,10 +35,12 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Not working?  Try using the \\\"Step\\\" button to see what happens line by line.\",\"hint_id\":\"courseD_bee_nestedLoops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd4b05e196784186c0fdf9d471dd2f2a/courseD_bee_nestedLoops1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 21:27:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

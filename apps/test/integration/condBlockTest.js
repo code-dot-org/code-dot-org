@@ -134,7 +134,7 @@ describe('functional_cond_number', function () {
     //   else { return   3; }
     // })()
 
-    var result = CustomMarshalingInterpreter.evalWith('return ' + code, {}, true);
+    var result = CustomMarshalingInterpreter.evalWith('return ' + code, {}, {legacy: true});
     assert(result === 3);
   });
 
