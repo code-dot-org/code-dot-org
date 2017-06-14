@@ -1,21 +1,6 @@
 require_relative '../../lib/cdo/hamburger'
+require_relative 'test_helper'
 require 'minitest/autorun'
-
-class I18n
-  def self.t(key)
-    key
-  end
-end
-
-class CDO
-  def self.code_org_url(path)
-    path
-  end
-
-  def self.studio_url(path)
-    path
-  end
-end
 
 class Level
   def report_bug_url(request)
