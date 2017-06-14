@@ -4,13 +4,13 @@ Feature: Hamburger dropdown
   Scenario: Signed out user in English should not see hamburger on desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
-    Then I wait until element ".header_button" is visible
-    Then I wait until element "#hamburger-icon" is not visible
+    Then element ".header_button" is visible
+    Then element "#hamburger-icon" is not visible
 
   Scenario: Student viewing hamburger dropdown in English on desktop on Code.org
-    Given I am on "http://code.org/"
+    Given I create a student named "Sally Student"
+    Then I am on "http://code.org/"
     And I dismiss the language selector
-    And I create a student named "Sally Student"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -51,13 +51,13 @@ Feature: Hamburger dropdown
     Then I wait to see "#hamburger-contents"
     And I see "#report-bug"
     And I see "#support"
-    Then I wait until element "#teacher-community" is not visible
-    Then I wait until element "#learn" is not visible
-    Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#learn" is not visible
-    Then I wait until element "#educate-more" is not visible
-    Then I wait until element "#stats" is not visible
-    Then I wait until element "#help-us" is not visible
+    Then element "#teacher-community" is not visible
+    Then element "#learn" is not visible
+    Then element ".divider#before-pegasus" is not visible
+    Then element "#learn" is not visible
+    Then element "#educate-more" is not visible
+    Then element "#stats" is not visible
+    Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
 
@@ -69,12 +69,12 @@ Feature: Hamburger dropdown
     Then I wait to see "#hamburger-contents"
     And I see "#report-bug"
     And I see "#support"
-    Then I wait until element "#teacher-community" is not visible
-    Then I wait until element "#learn" is not visible
-    Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#educate-more" is not visible
-    Then I wait until element "#stats" is not visible
-    Then I wait until element "#help-us" is not visible
+    Then element "#teacher-community" is not visible
+    Then element "#learn" is not visible
+    Then element ".divider#before-pegasus" is not visible
+    Then element "#educate-more" is not visible
+    Then element "#stats" is not visible
+    Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
 
@@ -87,11 +87,11 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
     And I see "#teacher-community"
-    Then I wait until element "#learn" is not visible
-    Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#educate-more" is not visible
-    Then I wait until element "#stats" is not visible
-    Then I wait until element "#help-us" is not visible
+    Then element "#learn" is not visible
+    Then element ".divider#before-pegasus" is not visible
+    Then element "#educate-more" is not visible
+    Then element "#stats" is not visible
+    Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
 
@@ -150,11 +150,11 @@ Feature: Hamburger dropdown
     And I see ".divider#after-student"
     And I see "#report-bug"
     And I see "#support"
-    Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#learn" is not visible
-    Then I wait until element "#educate-more" is not visible
-    Then I wait until element "#stats" is not visible
-    Then I wait until element "#help-us" is not visible
+    Then element ".divider#before-pegasus" is not visible
+    Then element "#learn" is not visible
+    Then element "#educate-more" is not visible
+    Then element "#stats" is not visible
+    Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
 
@@ -168,10 +168,10 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
     And I see "#teacher-community"
-    Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#learn" is not visible
-    Then I wait until element "#educate-more" is not visible
-    Then I wait until element "#stats" is not visible
-    Then I wait until element "#help-us" is not visible
+    Then element ".divider#before-pegasus" is not visible
+    Then element "#learn" is not visible
+    Then element "#educate-more" is not visible
+    Then element "#stats" is not visible
+    Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
