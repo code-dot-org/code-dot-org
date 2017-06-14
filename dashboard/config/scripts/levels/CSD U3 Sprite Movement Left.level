@@ -58,10 +58,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"b159dcd2-d5cd-4197-9512-d393704c2141\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"b159dcd2-d5cd-4197-9512-d393704c2141\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/Z5q2fOxdlrRwxpO8wISelUFvYGA_J95g/category_animals/fly.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 47\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Z5q2fOxdlrRwxpO8wISelUFvYGA_J95g\"\r\n    }\r\n  }\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

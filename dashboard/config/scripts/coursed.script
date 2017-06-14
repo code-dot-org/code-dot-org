@@ -22,6 +22,7 @@ stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
 
 stage 'Events in Bounce'
+level 'elementary_video_pairProgramming'
 skin 'bounce'
 level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Bounce:1'

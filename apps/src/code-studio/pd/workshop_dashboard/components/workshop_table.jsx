@@ -269,7 +269,7 @@ const WorkshopTable = React.createClass({
 
   formatManagement(manageData) {
     const {id, state} = manageData;
-    const surveyBaseUrl = this.permission.isPartner ? "/organizer_survey_results" : "/survey_results";
+    const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
 
     return (
       <WorkshopManagement

@@ -52,7 +52,7 @@ CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
   result = CustomMarshalingInterpreter.evalWith(code, {
     Studio: api,
     Globals: Studio.Globals
-  }, true);
+  }, {legacy: true});
   return result;
 };
 
