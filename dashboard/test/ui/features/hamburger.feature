@@ -46,6 +46,7 @@ Feature: Hamburger dropdown
 
   Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop on Code.org
     Given I am on "http://code.org/lang/es"
+    Then wait until I am on "http://code.org"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -64,6 +65,7 @@ Feature: Hamburger dropdown
   Scenario: Student viewing hamburger dropdown in Spanish on desktop on Code.org
     Given I create a student named "Estrella Estudiante"
     Then I am on "http://code.org/lang/es"
+    Then wait until I am on "http://code.org"
     And I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -81,6 +83,7 @@ Feature: Hamburger dropdown
   Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on Code.org
     Given I create a teacher named "Pabla Profesora"
     And I am on "http://code.org/lang/es"
+    Then wait until I am on "http://code.org"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -144,6 +147,7 @@ Feature: Hamburger dropdown
   Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
     Given I create a student named "Estrella Estudiante"
     Given I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2/lang/es"
+    Then wait until I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -161,6 +165,7 @@ Feature: Hamburger dropdown
   Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on level
     Given I create a teacher named "Pabla Profesora"
     Given I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2/lang/es"
+    Then wait until I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
