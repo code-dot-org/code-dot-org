@@ -51,6 +51,7 @@ import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode} from '../block_utils';
+import ArtistSkins from './skins';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -221,6 +222,7 @@ Artist.prototype.init = function (config) {
     this.stickers[name] = img;
   }
 
+  this.artistId = this.skin.id;
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // let's try adding a background image
     this.level.images = [{}];
@@ -410,24 +412,22 @@ Artist.prototype.afterInject_ = function (config) {
     this.isPredrawing_ = false;
   }
 
-  // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
-  // enough in this case, so we're actually creating and reusing the object within the document body.
-  var imageContainer = document.createElement('div');
-  imageContainer.style.display='none';
-  document.body.appendChild(imageContainer);
+  this.loadPatterns();
 
+  // Adjust visualizationColumn width.
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  visualizationColumn.style.width = '400px';
+};
+
+Artist.prototype.loadPatterns = function () {
   for ( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
     var pattern = this.skin.lineStylePatternOptions[i][1];
-    if (this.skin[pattern]) {
+    if (this.skin[pattern] && !this.loadedPathPatterns[pattern]) {
       var img = new Image();
       img.src = this.skin[pattern];
       this.loadedPathPatterns[pattern] = img;
     }
   }
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = '400px';
 };
 
 /**
@@ -676,11 +676,7 @@ Artist.prototype.reset = function (ignore) {
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
   this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
-  if (this.skin.id === "anna") {
-    this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    this.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    this.ctxScratch.lineWidth = 2;
-  } else if (this.skin.id === "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
@@ -698,14 +694,7 @@ Artist.prototype.reset = function (ignore) {
   this.ctxFeedback.clearRect(
       0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
-  if (this.skin.id === "anna") {
-    this.setPattern("annaLine");
-  } else if (this.skin.id === "elsa") {
-    this.setPattern("elsaLine");
-  } else {
-    // Reset to empty pattern
-    this.setPattern(null);
-  }
+  this.selectPattern();
 
   // Kill any task.
   if (this.pid) {
@@ -1175,6 +1164,14 @@ Artist.prototype.step = function (command, values, options) {
       this.ctxScratch.restore();
 
       break;
+    case 'setArtist':
+      if (this.skin.id !== values[0]) {
+        this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
+        this.loadTurtle();
+        this.loadPatterns();
+        this.selectPattern();
+      }
+      break;
   }
 
   return tupleDone;
@@ -1207,6 +1204,17 @@ function scaleToBoundingBox(maxSize, width, height) {
 
   return {width: newWidth, height: newHeight};
 }
+
+Artist.prototype.selectPattern = function () {
+  if (this.skin.id === "anna") {
+    this.setPattern("annaLine");
+  } else if (this.skin.id === "elsa") {
+    this.setPattern("elsaLine");
+  } else {
+    // Reset to empty pattern
+    this.setPattern(null);
+  }
+};
 
 Artist.prototype.setPattern = function (pattern) {
   if (this.loadedPathPatterns[pattern]) {
