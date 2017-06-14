@@ -36,13 +36,15 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     other_failure_users = []
     other_failure_errors = []
 
-    user_emails.each do |email|
-      user = User.find_by_email_or_hashed_email(email)
+    user_emails.each do |user_key|
+      user = user_key =~ /^\d+$/ ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
+
+      email = user.try(:email)
 
       if user.nil?
-        nonexistent_users << email
+        nonexistent_users << user_key
       elsif !user.teacher?
-        nonteacher_users << email
+        nonteacher_users << user_key
       else
         enrollment = find_or_create_by(user: user, plc_course: course)
         if enrollment.valid?
