@@ -33,7 +33,6 @@ import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import * as codegen from '../lib/tools/jsinterpreter/codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
@@ -1041,7 +1040,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
 Studio.initAutoHandlers = function (map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
-    var nativeFunc = codegen.createNativeFunctionFromInterpreterFunction(func);
+    var nativeFunc = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     if (func) {
       registerEventHandler(Studio.eventHandlers, map[funcName], nativeFunc);
     }
@@ -2684,7 +2683,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
       var resultBoolean = CustomMarshalingInterpreter.evalWith(defCode + '; return' + exampleCode, {
         Studio: api,
         Globals: Studio.Globals
-      }, true);
+      }, {legacy: true});
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2952,7 +2951,7 @@ var defineProcedures = function (blockType) {
     CustomMarshalingInterpreter.evalWith(code, {
       Studio: api,
       Globals: Studio.Globals
-    }, true);
+    }, {legacy: true});
   } catch (e) { }
 };
 
