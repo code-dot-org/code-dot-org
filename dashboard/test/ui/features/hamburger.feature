@@ -3,11 +3,13 @@ Feature: Hamburger dropdown
 
   Scenario: Signed out user in English should not see hamburger on desktop
     Given I am on "http://code.org/"
+    And I dismiss the language selector
     Then I wait until element ".header_button" is visible
     Then I wait until element "#hamburger-icon" is not visible
 
   Scenario: Student viewing hamburger dropdown in English on desktop on Code.org
     Given I am on "http://code.org/"
+    And I dismiss the language selector
     And I create a student named "Sally Student"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
@@ -16,13 +18,14 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see ".divider#before-pegasus"
     And I see "#learn"
-    And I see "#educate-more"
     And I see "#stats"
     And I see "#help-us"
-    And I see "#about-more"
+    And I see "#about_entries"
+    And I see "#educate_entries"
 
   Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop on Code.org
     Given I am on "http://code.org/"
+    And I dismiss the language selector
     And I create a teacher named "Tessa Teacher"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
@@ -32,14 +35,14 @@ Feature: Hamburger dropdown
     And I see "#teacher-community"
     And I see ".divider#before-pegasus"
     And I see "#learn"
-    And I see "#educate-more"
     And I see "#stats"
     And I see "#help-us"
-    And I see "#about-more"
-    And I click selector "#educate-more"
-    And I see "#educate-overview"
-    And I click selector "#about-more"
-    And I see "#about-us"
+    And I see "#about_entries"
+    And I click selector "#about_entries"
+    And I wait to see "#about-us"
+    And I see "#educate_entries"
+    And I click selector "#educate_entries"
+    And I wait to see "#educate-overview"
 
   Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop on Code.org
     Given I am on "http://code.org/lang/es"
@@ -69,7 +72,6 @@ Feature: Hamburger dropdown
     Then I wait until element "#teacher-community" is not visible
     Then I wait until element "#learn" is not visible
     Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#learn" is not visible
     Then I wait until element "#educate-more" is not visible
     Then I wait until element "#stats" is not visible
     Then I wait until element "#help-us" is not visible
@@ -77,8 +79,8 @@ Feature: Hamburger dropdown
     And I wait for 2 seconds
 
   Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on Code.org
-    Given I am on "http://code.org/lang/es"
-    And I create a teacher named "Pabla Profesora"
+    Given I create a teacher named "Pabla Profesora"
+    And I am on "http://code.org/lang/es"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -87,7 +89,6 @@ Feature: Hamburger dropdown
     And I see "#teacher-community"
     Then I wait until element "#learn" is not visible
     Then I wait until element ".divider#before-pegasus" is not visible
-    Then I wait until element "#learn" is not visible
     Then I wait until element "#educate-more" is not visible
     Then I wait until element "#stats" is not visible
     Then I wait until element "#help-us" is not visible
@@ -101,7 +102,7 @@ Feature: Hamburger dropdown
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see "#applab-docs"
-    And I see "#applap-tutorials"
+    And I see "#applab-tutorials"
 
   Scenario: Gamelab-specific help links
     Given I create a teacher named "Tessa Teacher"
@@ -122,10 +123,8 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see ".divider#before-pegasus"
     And I see "#learn"
-    And I see "#educate-more"
     And I see "#stats"
     And I see "#help-us"
-    And I see "#about-more"
 
   Scenario: Teacher viewing hamburger dropdown in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
@@ -139,10 +138,8 @@ Feature: Hamburger dropdown
     And I see "#teacher-community"
     And I see ".divider#before-pegasus"
     And I see "#learn"
-    And I see "#educate-more"
     And I see "#stats"
     And I see "#help-us"
-    And I see "#about-more"
 
   Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
     Given I create a student named "Estrella Estudiante"
