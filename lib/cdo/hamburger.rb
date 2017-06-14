@@ -301,8 +301,8 @@ class Hamburger
       ]
     else
       [
-        {title: I18n.t("header_courses"), url: CDO.studio_url("/courses")},
-        {title: I18n.t("header_project_gallery"), url: CDO.code_org_url("/projects/public"), id: "header-signed-out-projects"}
+        {title: I18n.t("#{loc_prefix}header_courses"), url: CDO.studio_url("/courses")},
+        {title: I18n.t("#{loc_prefix}header_project_gallery"), url: CDO.code_org_url("/projects/public"), id: "header-signed-out-projects"}
       ]
     end
   end
