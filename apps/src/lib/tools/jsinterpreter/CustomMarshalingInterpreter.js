@@ -322,6 +322,26 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   }
 
   /**
+   * Patches stepVariableDeclaration to not include performance improvement from
+   * https://github.com/NeilFraser/JS-Interpreter/commit/5139e93ae5a918206642d05d40bbea208d379b01
+   * which causes various other patches we've made to break.
+   * TODO (pcardune): revisit this and see if you can get the new version to work
+   *      with all of our other stuff.
+   * @override
+   */
+  stepVariableDeclaration() {
+    var state = this.peekStackFrame();
+    var node = state.node;
+    var n = state.n_ || 0;
+    if (node.declarations[n]) {
+      state.n_ = n + 1;
+      this.stateStack.push({node: node.declarations[n]});
+    } else {
+      this.stateStack.pop();
+    }
+  }
+
+  /**
    * Patched to add the 3rd "declarator" parameter on the setValue() call(s).
    * Changed to call setValue with this.UNDEFINED when there is no node.init
    * and JSInterpreter.baseHasProperty returns false for current scope.
@@ -337,8 +357,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     }
     if (node.init) {
       this.setValue(this.createPrimitive(node.id.name), state.value, true);
-    } else {
-      this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
     }
     this.popStackFrame();
   }
