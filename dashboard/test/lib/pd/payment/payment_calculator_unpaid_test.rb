@@ -18,7 +18,6 @@ module Pd::Payment
 
       create_list :pd_workshop_participant, 9, workshop: @workshop,
           enrolled: true, in_section: true, attended: @workshop.sessions
-      end
     end
 
     test 'unpaid summary' do
