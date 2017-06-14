@@ -113,7 +113,7 @@ export default function teacherSections(state=initialState, action) {
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-// TODO: write some tests for this
+// TODO(bjvanminnen): write some tests for this
 const sectionFromServerSection = (serverSection, assignmentList, studioUrl) => {
   const courseId = serverSection.course_id || null;
   const scriptId = serverSection.script ? serverSection.script.id : null;
@@ -132,7 +132,7 @@ const sectionFromServerSection = (serverSection, assignmentList, studioUrl) => {
     code: serverSection.code,
     courseId: serverSection.course_id,
     scriptId: scriptId,
-    // TODO : should maybe be getting these fields as selectors instead of
+    // TODO(bjvanminnen): should maybe be getting these fields as selectors instead of
     // living in state
     assignmentName: assignment ? assignment.name : '',
     assignmentPath: assignment ? (studioUrl + getPath(assignment)) : ''

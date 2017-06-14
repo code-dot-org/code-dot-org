@@ -164,6 +164,7 @@ class SectionRow extends Component {
         editing: false
       });
     }).fail((jqXhr, status) => {
+      // TODO(bjvanminnen): figure out how what we want to do in this case
       console.error(status);
     });
   }
