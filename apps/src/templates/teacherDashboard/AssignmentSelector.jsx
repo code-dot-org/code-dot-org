@@ -2,73 +2,47 @@ import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import { assignmentShape } from './shapes';
 
+/**
+ * Group our assignments into categories for our dropdown. Memoize this method
+ * as over the course of a session we'll be calling multiple times, always with
+ * the same set of assignments
+ */
+const groupedAssignments = _.memoize(assignments => (
+  _(assignments)
+    .orderBy(['category_priority', 'category', 'position', 'name'])
+    .groupBy('category')
+    .value()
+  ));
+
+/**
+ * This component displays a dropdown of courses/scripts, with each of these
+ * grouped and ordered appropriately.
+ */
 export default class AssignmentSelector extends Component {
   static propTypes = {
-    courseId: PropTypes.number,
-    scriptId: PropTypes.number,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
+    currentAssignmentIndex: PropTypes.number,
+    assignments: PropTypes.arrayOf(assignmentShape).isRequired,
   };
 
   getSelectedAssignment() {
-    const assignment = this.assignments[this.root.value];
+    const assignment = this.props.assignments[this.root.value];
     return {
-      course_id: assignment.course_id,
-      script_id: assignment.script_id
+      courseId: assignment.courseId,
+      scriptId: assignment.scriptId
     };
   }
 
   render() {
-    const { courseId, scriptId, validCourses, validScripts } = this.props;
+    const { currentAssignmentIndex, assignments } = this.props;
 
-    // TODO(bjvanminnen): It's not clear that all of this data manipulation belongs
-    // here. If we move our data to redux, it likely belongs there. Otherwise, it
-    // may still make more sense for this to all happen before instantiating our
-    // React tree.
-
-    // Differentiate courses and scripts by giving them course_ids and script_ids fields.
-    const courses = validCourses.map(course => ({
-      ...course,
-      course_id: course.id
-    }));
-    const scripts = validScripts.map(script => ({
-      ...script,
-      script_id: script.id
-    }));
-
-    // concat courses and scripts, giving them an index to that we can easily
-    // get back to assignment.
-    this.assignments = courses.concat(scripts).map((assignment, index) => ({
-      ...assignment,
-      index
-    }));
-
-    let currentAssignment = '';
-    if (courseId) {
-      const selectedCourse = this.assignments.findIndex(assignment =>
-        assignment.course_id === courseId);
-      if (selectedCourse !== -1) {
-        currentAssignment = selectedCourse;
-      }
-    } else if (scriptId) {
-      const selectedScript = this.assignments.findIndex(assignment =>
-        assignment.script_id === scriptId);
-      if (selectedScript !== -1) {
-        currentAssignment = selectedScript;
-      }
-    }
-
-    const grouped = _.groupBy(
-      _.orderBy(this.assignments, ['category_priority', 'category', 'position', 'name']),
-      'category'
-    );
+    const grouped = groupedAssignments(assignments);
 
     return (
       <select
-        defaultValue={currentAssignment}
+        defaultValue={currentAssignmentIndex}
         ref={element => this.root = element}
       >
-        <option key="default"/>
+        <option key="default" value="-1"/>
         {Object.keys(grouped).map((groupName, index) => (
           <optgroup key={index} label={groupName}>
             {grouped[groupName].map((assignment) => (

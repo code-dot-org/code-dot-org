@@ -150,7 +150,7 @@ export default class JSInterpreter {
                       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                       'setCallbackRetVal(ret); }}';
 
-      codegen.createNativeFunctionFromInterpreterFunction = (intFunc) => {
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = (intFunc) => {
         return (...args) => {
           if (this.initialized()) {
             this.eventQueue.push({
@@ -205,8 +205,7 @@ export default class JSInterpreter {
             scope,
             'getCallback',
             interpreter.createNativeFunction(
-              codegen.makeNativeMemberFunction({
-                interpreter: interpreter,
+              interpreter.makeNativeMemberFunction({
                 nativeFunc: this.nativeGetCallback,
                 maxDepth: 5
               })
@@ -217,8 +216,7 @@ export default class JSInterpreter {
             scope,
             'setCallbackRetVal',
             interpreter.createNativeFunction(
-              codegen.makeNativeMemberFunction({
-                interpreter: interpreter,
+              interpreter.makeNativeMemberFunction({
                 nativeFunc: this.nativeSetCallbackRetVal,
               })
             )
@@ -873,17 +871,16 @@ export default class JSInterpreter {
 
     let interpreterVal;
     if (typeof value === 'function') {
-      const wrapper = codegen.makeNativeMemberFunction({
-        interpreter: this.interpreter,
+      const wrapper = this.interpreter.makeNativeMemberFunction({
         nativeFunc: value,
         nativeParentObj: parent
       });
       interpreterVal = this.interpreter.createNativeFunction(wrapper);
     } else {
-      interpreterVal = codegen.marshalNativeToInterpreter(
-        this.interpreter,
+      interpreterVal = this.interpreter.marshalNativeToInterpreter(
         value,
-        utils.valueOr(parent, window));
+        utils.valueOr(parent, window)
+      );
     }
 
     // Bypass setProperty since we've hooked it and it will not create the
@@ -960,7 +957,7 @@ export default class JSInterpreter {
         return new Error(err);
       }
     }
-    return codegen.marshalInterpreterToNative(this.interpreter, value);
+    return this.interpreter.marshalInterpreterToNative(value);
   }
 
   /**

@@ -24,7 +24,7 @@ The content of this course is appropriate for kindergartners through 8th graders
 
 This course was developed in accordance with our [educational philosophy](/educate/curriculum#philosophy).
 
-[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](https://studio.code.org/s/20-hour)
+[<button>View course</button>](https://studio.code.org/s/20-hour)
 
 ## How to get started
 

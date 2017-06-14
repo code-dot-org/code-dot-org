@@ -7,9 +7,18 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import teacherSections, {
+  setValidLoginTypes,
+  setValidGrades,
+  setValidCourses,
+  setValidScripts,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
+import { getStore, registerReducers } from '@cdo/apps/redux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const data = JSON.parse(script.dataset.teacherdashboard);
@@ -42,17 +51,23 @@ function renderSectionProjects(sectionId) {
   });
 }
 
+/**
+ * Render our sections table using React
+ */
 function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
+  registerReducers({teacherSections});
+  const store = getStore();
+  store.dispatch(setValidLoginTypes(data.valid_login_types));
+  store.dispatch(setValidGrades(data.valid_grades));
+  store.dispatch(setValidCourses(data.valid_courses));
+  store.dispatch(setValidScripts(data.valid_scripts));
+  store.dispatch(setSections(sections));
 
   ReactDOM.render(
-    <SectionTable
-      validLoginTypes={data.valid_login_types}
-      validGrades={data.valid_grades}
-      validCourses={data.valid_courses}
-      validScripts={data.valid_scripts}
-      sections={sections}
-    />,
+    <Provider store={store}>
+      <SectionTable/>
+    </Provider>,
     element
   );
 }
@@ -255,8 +270,8 @@ function main() {
           pairingAllowed: s.pairing_allowed,
           numStudents: s.students.length,
           code: s.code,
-          course_id: s.course_id,
-          script_id: s.script ? s.script.id : null,
+          courseId: s.course_id,
+          scriptId: s.script ? s.script.id : null,
           assignmentName: $scope.getName(s),
           assignmentPath: $scope.getPath(s)
         })));

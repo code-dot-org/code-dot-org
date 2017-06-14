@@ -17,6 +17,7 @@ class Pd::TeacherconSurveyController < ApplicationController
         course: workshop.course,
         subject: workshop.subject,
         options: Pd::TeacherconSurvey.options.camelize_keys,
+        requiredFields: Pd::TeacherconSurvey.camelize_required_fields,
         pdEnrollmentCode: @pd_enrollment.code,
       }.to_json
     }

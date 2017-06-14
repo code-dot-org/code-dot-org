@@ -31,14 +31,17 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember that the jump blocks can be used to move forward without drawing a line.\",\"hint_id\":\"courseB_artist_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/796ecf1da95b33e5098444ace62972b6/courseB_artist_loops9.mp3\"}]",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/0058e4d1db7196777fc090d5b3c95c30-image-1478646586853.png\", \"position\": [0,0]}\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 03:59:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

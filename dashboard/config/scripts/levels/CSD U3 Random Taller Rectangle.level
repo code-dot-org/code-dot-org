@@ -56,10 +56,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
