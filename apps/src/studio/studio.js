@@ -2920,6 +2920,8 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'anything');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'goal');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'wall');
   }
 };
 
