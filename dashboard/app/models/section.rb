@@ -30,6 +30,8 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Section < ActiveRecord::Base
+  include LocaleHelper
+  include Rails.application.routes.url_helpers
   acts_as_paranoid
 
   belongs_to :user
@@ -142,6 +144,29 @@ class Section < ActiveRecord::Base
   def default_script
     return script if script
     return course.try(:course_scripts).try(:first).try(:script)
+  end
+
+  def summarize
+    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+
+    if script_id
+      course_name = Script.get_from_cache(script_id)[:name]
+      course = data_t_suffix('script.name', course_name, 'title')
+      link_to_course = script_url(script_id)
+    else
+      course = ""
+      link_to_course = base_url
+    end
+    {
+      id: id,
+      name: name,
+      linkToProgress: "#{base_url}#{id}/progress",
+      course: course,
+      linkToCourse: link_to_course,
+      numberOfStudents: students.length,
+      linkToStudents: "#{base_url}#{id}/manage",
+      sectionCode: code
+    }
   end
 
   private
