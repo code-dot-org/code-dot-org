@@ -1046,6 +1046,49 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'teacher_managed_account? is false for teacher' do
+    refute @teacher.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is false for normal student account with hashed email and password' do
+    refute @student.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is false for student account in section with oauth connection' do
+    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
+
+    # join picture section
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    create(:follower, student_user: student_with_oauth, section: picture_section)
+    student_with_oauth.reload
+    refute student_with_oauth.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is true for user account with password but no e-mail' do
+    # These types of accounts happen when teachers created username/password accounts
+    # without e-mails for students (this is no longer allowed)
+    student_with_password_no_email = create(
+      :student,
+      encrypted_password: '123456',
+      email: '',
+      hashed_email: nil,
+      provider: 'manual'
+    )
+    assert student_with_password_no_email.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is true for users in picture or word sections without passwords' do
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+
+    [picture_section, word_section].each do |section|
+      student_without_password = create(:student, encrypted_password: '')
+      create(:follower, student_user: student_without_password, section: section)
+      student_without_password.reload
+      assert student_without_password.teacher_managed_account?
+    end
+  end
+
   test 'can_edit_email? is false for user without password' do
     user = create :student
     user.update_attribute(:encrypted_password, '')
