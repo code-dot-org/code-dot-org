@@ -134,6 +134,9 @@ class DropletCodeToggle extends Component {
   }
 
   render() {
+    const currentlyUsingBlocks = studioApp().editor &&
+      studioApp().editor.session &&
+      studioApp().editor.session.currentlyUsingBlocks;
     return (
       <ShowCodeButton
         hasFocus={this.props.hasFocus}
@@ -141,7 +144,7 @@ class DropletCodeToggle extends Component {
         isMinecraft={this.props.isMinecraft}
         onClick={this.onClick}
         hidden={!studioApp().enableShowCode}
-        showingBlocks={studioApp().editor && studioApp().editor.currentlyUsingBlocks}
+        showingBlocks={currentlyUsingBlocks}
         showCodeLabel={msg.showTextHeader()}
       />
     );
