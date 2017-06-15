@@ -144,6 +144,11 @@ class SectionRow extends Component {
       course_id: assignment.courseId,
     };
 
+    // We used to have some additional logic that would display a string
+    // (dashboard_sections_assign_hoc_script_msg) when assigning a HOC script
+    // just before HOC. If we end up needing that again in the future, we'll need
+    // to port that here.
+
     // Due in part to it's angular history, this API expects {script: { id }}
     // instead of script_id
     if (assignment.scriptId) {
