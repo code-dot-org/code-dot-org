@@ -7,11 +7,32 @@ theme: responsive
 
 # The Circuit Playground
 
-The Circuit Playground is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at [Adafruit](//adafruit.com), the Circuit Playground is the core tool used in [CS Discoveries Unit 6, Physical Computing](//studiocode.org/s/csd6).
+<div class="col-66" style="padding-right: 20px;">
+
+The Circuit Playground is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studiocode.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
+
+</div>
+
+<div class="col-33">
+<img src="/images/animated-examples/circuitplayground.gif" style="max-width: 90%">
+</div>
+
+<div syle="clear:both;"></div>
 
 ## <a name="how"></a>Programming with the Circuit Playground
 
+<div class="col-33">
+<img src="/images/cp_sensors_all.png" style="max-width: 90%">
+</div>
+
+<div class="col-66" style="padding-left: 20px;">
+
 Being based on the Arduino means that there are many options for programming the Circuit Playground, including using the standard Arduino IDE. Code.org, however, has developed a special set of commands for <a href="/applab/">App Lab</a>, our block-to-text app development environment, called the Maker Toolkit. Using App Lab and the Maker Toolkit, students can quickly build apps that communicate with external hardware using the same language and environment they've already become comfortable with.
+
+</div>
+
+<div style="clear:both;"></div>
+
 
 ## <a name="requirements"></a>Software Requirements
 
@@ -34,8 +55,17 @@ The **Circuit Playground** is an Arduino-based circuit board produced by Adafrui
 The **Maker Toolkit** is an additional set of commands in App Lab that allow you to communicate with and control a Circuit Playground plugged into USB. You can enable the Maker Toolkit in any App Lab project by clicking the settings gear above the toolbox and selecting "Enable Maker Toolkit [BETA]."
 
 ## <a name="ordering"></a>Getting Circuit Playgrounds for your Classroom
-Code.org has partnered with Adafruit to create a [classroom kit](https://www.adafruit.com/product/3399) of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards,
+
+<div class="col-66">
+
+Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/product/3399">classroom kit</a> of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards,
  15 Micro USB cables to connect the board to a computer, and a few other accessories. The curriculum is designed for a 2:1 student to board ratio, so a single classroom kit supports a classroom of 30 students.
+ 
+ </div>
+ 
+ <div class="col-33">
+ <img src="/images/cp_class_pack.jpg" style="max-width: 90%; margin: 0 0 20px 20px;">
+ </div>
  
 ### For teachers in Code.org's CS Discoveries Professional Learning Program
 For teachers participating in the 2017-18 CS Discoveries Professional Learning Program and implementing the full-year version of the course, we're happy to announce that we 
@@ -50,28 +80,3 @@ Eligible teachers in our Professional Learning Program will be sent details in W
 
 While teachers not in the 2017-18 CS Discoveries Professional Learning Program are not eligible for the subsidized cost of the kit, the classroom kit can still be purchased directly on [Adafruit's website](https://www.adafruit.com/product/3399). 
 
-
-
-<hr/>
-
-[col-33]
-
-<center><img src="/images/maker_applab_sm.gif" width="90%"></center>
-
-[/col-33]
-
-[col-33]
-
-<center><img src="/images/cp_hands.png" width="90%"></center>
-
-[/col-33]
-
-[col-33]
-
-<center><img src="/images/animated-examples/circuitplayground.gif" width="90%"></center>
-
-[/col-33]
-
-<p style="clear:both"></p>
-
-<hr/>

@@ -1665,6 +1665,18 @@ class UserTest < ActiveSupport::TestCase
     assert user_with_invalid_email.save
   end
 
+  test 'age is required for new users' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :user, birthday: nil
+    end
+    assert_equal 'Validation failed: Age is required', e.message
+  end
+
+  test 'age validation is bypassed for Google OAuth users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'google_oauth2'
+  end
+
   test 'users updating the email field must provide a valid email address' do
     user = create :user
 

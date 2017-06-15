@@ -28,13 +28,12 @@
     "authored_hints": "[]",
     "markdown_instructions": "*\"Now, help me sneak up on the pig any way you want to!\"*",
     "instructions_important": "false",
-    "contained_level_names": null,
     "tts_instructions_override": "Now, help me sneak up on the pig any way you want to!",
     "tts_markdown_instructions_override": "Now, help me sneak up on the pig any way you want to!",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
