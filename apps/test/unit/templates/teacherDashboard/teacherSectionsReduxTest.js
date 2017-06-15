@@ -6,6 +6,7 @@ import reducer, {
   setValidCourses,
   setValidScripts,
   setSections,
+  updateSection,
   assignments,
   currentAssignmentIndex,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -196,6 +197,54 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
       assert.strictEqual(nextState.sections[307].id, 307);
+    });
+  });
+
+  describe('updateSection', () => {
+    // create a state that has our sections set, and valid courses/scripts
+    const stateWithSections = reducer({
+      ...initialState,
+      validCourses,
+      validScripts
+    }, setSections(sections));
+
+    const updatedSection = {
+      ...sections[0],
+      // change login type from picture to word
+      login_type: 'word'
+    };
+
+    it('does not change our list of section ids', () => {
+      const action = updateSection(sections[0].id, updatedSection);
+      const state = reducer(stateWithSections, action);
+      assert.strictEqual(state.sectionIds, stateWithSections.sectionIds);
+    });
+
+    it('modifies the given section id', () => {
+      const sectionId = sections[0].id;
+      const action = updateSection(sectionId, updatedSection);
+      const state = reducer(stateWithSections, action);
+
+      assert.strictEqual(stateWithSections.sections[sectionId].loginType, 'picture');
+      assert.strictEqual(state.sections[sectionId].loginType, 'word');
+
+      // Other fields should remain unchanged
+      Object.keys(stateWithSections.sections[sectionId]).forEach(field => {
+        if (field === 'loginType') {
+          return;
+        }
+        assert.strictEqual(state.sections[sectionId][field],
+          stateWithSections.sections[sectionId][field]);
+      });
+    });
+
+    it('does not modify other section ids', () => {
+      const action = updateSection(sections[0].id, updatedSection);
+      const state = reducer(stateWithSections, action);
+      const otherSectionId = sections[1].id;
+
+      assert.strictEqual(state.sections[otherSectionId],
+        stateWithSections.sections[otherSectionId]);
     });
   });
 
