@@ -332,7 +332,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
+  is_google = proc {|user| user.provider == 'google_oauth2'}
+  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
