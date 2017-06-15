@@ -87,12 +87,18 @@ export default function (app, levels, options) {
         studioApp().initReadonly(options);
       }
     } else {
-      const appReady = app.init(options) || Promise.resolve();
-      appReady.then(() => {
+      const appReady = app.init(options);
+      const next = () => {
         if (options.onInitialize) {
           options.onInitialize();
         }
-      });
+      };
+
+      if (appReady && appReady.then) {
+        appReady.then(next);
+      } else {
+        next();
+      }
     }
   }
   // exported apps can and need to be setup synchronously
