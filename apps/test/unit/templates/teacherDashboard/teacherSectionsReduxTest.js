@@ -3,8 +3,7 @@ import _ from 'lodash';
 import reducer, {
   setValidLoginTypes,
   setValidGrades,
-  setValidCourses,
-  setValidScripts,
+  setValidAssignments,
   setSections,
   updateSection,
   assignments,
@@ -151,32 +150,23 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('setValidCourses', () => {
+  describe('setValidAssignments', () => {
+    it('sets both valid courses and scripts', () => {
+      const action = setValidAssignments(validCourses, validScripts);
+      const nextState = reducer(initialState, action);
+      assert.equal(nextState.validCourses.length, 2);
+      assert.equal(nextState.validScripts.length, 6);
+    });
+
     it('adds courseId/scriptId to courses', () => {
-      const action = setValidCourses([{
-        id: 29,
-        name: "CS Discoveries",
-        script_name: "csd",
-        category: "Full Courses",
-        position: 1,
-        category_priority: -1,
-      }]);
+      const action = setValidAssignments(validCourses, validScripts);
       const nextState = reducer(initialState, action);
       assert.strictEqual(nextState.validCourses[0].courseId, 29);
       assert.strictEqual(nextState.validCourses[0].scriptId, null);
     });
-  });
 
-  describe('setValidScripts', () => {
-    it('adds courseId/scriptId to courses', () => {
-      const action = setValidScripts([{
-        id: 1,
-        name: "Accelerated Course",
-        script_name: "20-hour",
-        category: "CS Fundamentals",
-        position: 0,
-        category_priority: 0,
-      }]);
+    it('adds courseId/scriptId to scripts', () => {
+      const action = setValidAssignments(validCourses, validScripts);
       const nextState = reducer(initialState, action);
       assert.strictEqual(nextState.validScripts[0].courseId, null);
       assert.strictEqual(nextState.validScripts[0].scriptId, 1);
@@ -280,9 +270,9 @@ describe('teacherSectionsRedux', () => {
       if (scriptId) {
         section.script = { id: scriptId };
       }
-      const state1 = reducer(initialState, setValidCourses(validCourses));
-      const state2 = reducer(state1, setValidScripts(validScripts));
-      return reducer(state2, setSections(sections.concat(section)));
+      const stateWithAssigns = reducer(initialState,
+        setValidAssignments(validCourses, validScripts));
+      return reducer(stateWithAssigns, setSections(sections.concat(section)));
     };
 
     it('returns null if the section has no course/script', () => {

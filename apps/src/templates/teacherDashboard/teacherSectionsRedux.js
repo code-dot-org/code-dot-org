@@ -3,16 +3,18 @@ import _ from 'lodash';
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
-const SET_VALID_COURSES = 'teacherDashboard/SET_VALID_COURSES';
-const SET_VALID_SCRIPTS = 'teacherDashboard/SET_VALID_SCRIPTS';
+const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
-export const setValidCourses = courses => ({ type: SET_VALID_COURSES, courses });
-export const setValidScripts = scripts => ({ type: SET_VALID_SCRIPTS, scripts });
+export const setValidAssignments = (validCourses, validScripts) => ({
+  type: SET_VALID_ASSIGNMENTS,
+  validCourses,
+  validScripts
+});
 export const setSections = sections => ({ type: SET_SECTIONS, sections });
 export const updateSection = (sectionId, serverSection) => ({
   type: UPDATE_SECTION,
@@ -53,21 +55,16 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === SET_VALID_COURSES) {
+  if (action.type === SET_VALID_ASSIGNMENTS) {
     return {
       ...state,
-      validCourses: action.courses.map(course => ({
+      // TODO: may not need these individually
+      validCourses: action.validCourses.map(course => ({
         ...course,
         courseId: course.id,
         scriptId: null,
-      }))
-    };
-  }
-
-  if (action.type === SET_VALID_SCRIPTS) {
-    return {
-      ...state,
-      validScripts: action.scripts.map(script => ({
+      })),
+      validScripts: action.validScripts.map(script => ({
         ...script,
         courseId: null,
         scriptId: script.id
