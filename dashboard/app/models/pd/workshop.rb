@@ -550,6 +550,13 @@ class Pd::Workshop < ActiveRecord::Base
     ].include?(subject)
   end
 
+  def fit_weekend?
+    [
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_FIT
+    ].include?(subject)
+  end
+
   # Get all enrollments for this workshop with no associated attendances
   def unattended_enrollments
     enrollments.left_outer_joins(:attendances).where(pd_attendances: {id: nil})
