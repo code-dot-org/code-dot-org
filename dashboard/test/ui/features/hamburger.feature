@@ -7,10 +7,9 @@ Feature: Hamburger dropdown
     Then element ".header_button" is visible
     Then element "#hamburger-icon" is not visible
 
-  Scenario: Student viewing hamburger dropdown in English on desktop on Code.org
+  Scenario: Student viewing hamburger dropdown in English on desktop
     Given I create a student named "Sally Student"
-    Then I am on "http://code.org/"
-    And I dismiss the language selector
+    Then I wait until I am on "http://studio.code.org/courses"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -23,13 +22,11 @@ Feature: Hamburger dropdown
     And I see "#about_entries"
     And I see "#educate_entries"
 
-  Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop on Code.org
+  Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop
     Given I create a teacher named "Tessa Teacher"
-    Then check that I am on "http://studio.code.org/home"
+    Then I wait until I am on "http://studio.code.org/home"
     And I wait to see "#x-close"
     And I click selector "x-close" if it exists
-    And I am on "http://code.org/"
-    And I dismiss the language selector
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -47,7 +44,7 @@ Feature: Hamburger dropdown
     And I click selector "#educate_entries"
     And I wait to see "#educate-overview"
 
-  Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop on Code.org
+  Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
     Given I am on "http://code.org/lang/es"
     Then I wait until I am on "http://code.org/"
     And I dismiss the language selector
@@ -60,18 +57,18 @@ Feature: Hamburger dropdown
     Then element "#learn" is not visible
     Then element ".divider#before-pegasus" is not visible
     Then element "#learn" is not visible
-    Then element "#educate-more" is not visible
+    Then element "#educate_entries" is not visible
+    Then element "#about_entries" is not visible
     Then element "#stats" is not visible
     Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
 
-  Scenario: Student viewing hamburger dropdown in Spanish on desktop on Code.org
+  Scenario: Student viewing hamburger dropdown in Spanish on desktop
     Given I create a student named "Estrella Estudiante"
-    Then I am on "http://code.org/lang/es"
     Then I wait until I am on "http://studio.code.org/courses"
-    And I dismiss the language selector
-    And I dismiss the language selector
+    Given I am on "http://studio.code.org/courses/lang/es"
+    Then I wait until I am on "http://studio.code.org/courses"
     And I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -80,15 +77,17 @@ Feature: Hamburger dropdown
     Then element "#teacher-community" is not visible
     Then element "#learn" is not visible
     Then element ".divider#before-pegasus" is not visible
-    Then element "#educate-more" is not visible
+    Then element "#educate_entries" is not visible
+    Then element "#about_entries" is not visible
     Then element "#stats" is not visible
     Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
     And I wait for 2 seconds
 
-  Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on Code.org
+  Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
     Given I create a teacher named "Pabla Profesora"
-    And I am on "http://code.org/lang/es"
+    Then I wait until I am on "http://studio.code.org/home"
+    Given I am on "http://studio.code.org/home/lang/es"
     Then I wait until I am on "http://studio.code.org/home"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
@@ -98,7 +97,8 @@ Feature: Hamburger dropdown
     And I see "#teacher-community"
     Then element "#learn" is not visible
     Then element ".divider#before-pegasus" is not visible
-    Then element "#educate-more" is not visible
+    Then element "#educate_entries" is not visible
+    Then element "#about_entries" is not visible
     Then element "#stats" is not visible
     Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
@@ -131,6 +131,8 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
     And I see ".divider#before-pegasus"
+    And I see "#about_entries"
+    And I see "#educate_entries"
     And I see "#learn"
     And I see "#stats"
     And I see "#help-us"
@@ -138,6 +140,7 @@ Feature: Hamburger dropdown
   Scenario: Teacher viewing hamburger dropdown in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
+    Then I wait until I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -146,6 +149,8 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see "#teacher-community"
     And I see ".divider#before-pegasus"
+    And I see "#about_entries"
+    And I see "#educate_entries"
     And I see "#learn"
     And I see "#stats"
     And I see "#help-us"
@@ -162,7 +167,7 @@ Feature: Hamburger dropdown
     And I see "#support"
     Then element ".divider#before-pegasus" is not visible
     Then element "#learn" is not visible
-    Then element "#educate-more" is not visible
+    Then element "#educate_entries" is not visible
     Then element "#stats" is not visible
     Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
@@ -181,7 +186,7 @@ Feature: Hamburger dropdown
     And I see "#teacher-community"
     Then element ".divider#before-pegasus" is not visible
     Then element "#learn" is not visible
-    Then element "#educate-more" is not visible
+    Then element "#educate_entries" is not visible
     Then element "#stats" is not visible
     Then element "#help-us" is not visible
     Given I am on "http://studio.code.org/reset_session/lang/en"
