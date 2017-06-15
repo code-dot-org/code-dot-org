@@ -88,10 +88,14 @@
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
-    cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
-    cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
+
+    # Don't run memory-intensive tasks on (usually low-memory) adhoc instances.
+    unless node.chef_environment == 'adhoc'
+      cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
+      cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
+    end
   end
 
   # cronjobs that run on all instances in all environments go here:
