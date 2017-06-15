@@ -7,7 +7,8 @@ import reducer, {
   setValidAssignments,
   setSections,
   updateSection,
-  assignmentId
+  assignmentId,
+  sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Our actual student object are much more complex than this, but really all we
@@ -267,5 +268,58 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(state.sections[otherSectionId],
         stateWithSections.sections[otherSectionId]);
     });
+  });
+
+  describe('sectionFromServerSection', () => {
+    const serverSection = {
+      id: 11,
+      location: "/v2/sections/11",
+      name: "brent_section",
+      login_type: "picture",
+      grade: "2",
+      code: "PMTKVH",
+      stage_extras: false,
+      pairing_allowed: true,
+      script: null,
+      course_id: 29,
+      students: fakeStudents(10)
+    };
+    const stateWithUrl = reducer(initialState, setStudioUrl('//test-studio.code.org'));
+    const stateWithAssigns = reducer(stateWithUrl, setValidAssignments(validCourses, validScripts));
+    const validAssignments = stateWithAssigns.validAssignments;
+
+    it('transfers some fields directly, mapping from snake_case to camelCase', () => {
+      const section = sectionFromServerSection(serverSection, validAssignments);
+      assert.strictEqual(section.id, serverSection.id);
+      assert.strictEqual(section.name, serverSection.name);
+      assert.strictEqual(section.login_type, serverSection.loginType);
+      assert.strictEqual(section.grade, serverSection.grade);
+      assert.strictEqual(section.code, serverSection.code);
+      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
+      assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
+      assert.strictEqual(section.course_id, serverSection.courseId);
+    });
+
+    it('maps from a script object to a script_id', () => {
+      const sectionWithoutScript = sectionFromServerSection(serverSection, validAssignments);
+      assert.strictEqual(sectionWithoutScript.scriptId, null);
+
+      const sectionWithScript = sectionFromServerSection({
+        ...serverSection,
+        script: {
+          id: 1,
+          name: 'Accelerated Course'
+        }
+      }, validAssignments);
+      assert.strictEqual(sectionWithScript.scriptId, 1);
+    });
+
+    it('maps from students to number of students', () => {
+      const section = sectionFromServerSection(serverSection, validAssignments);
+      assert.strictEqual(section.numStudents, 10);
+    });
+
+    // TODO(bjvanminnen): plan to move assignmentName/assignmentPath out of
+    // sectionFromServerSection. If I don't, they deserve tests
   });
 });

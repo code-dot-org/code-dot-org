@@ -122,8 +122,7 @@ export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-// TODO(bjvanminnen): write some tests for this
-const sectionFromServerSection = (serverSection, validAssignments) => {
+export const sectionFromServerSection = (serverSection, validAssignments) => {
   const courseId = serverSection.course_id || null;
   const scriptId = serverSection.script ? serverSection.script.id : null;
 
