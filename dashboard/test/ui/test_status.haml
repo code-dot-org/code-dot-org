@@ -20,7 +20,7 @@
         |
         %a#commit-hash{href: "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}", data: {hash: commit_hash}}= commit_hash[0..7]
         |
-        %span#start-time= start_time
+        %span#start-time= start_time.iso8601
       %div#total-progress
         %div.progress-text
         %div.progress-bar
