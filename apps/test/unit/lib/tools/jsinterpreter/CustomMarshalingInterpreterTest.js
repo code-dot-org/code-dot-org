@@ -370,7 +370,7 @@ describe("The CustomMarshalingInterpreter", () => {
     });
 
     it("will return the interpreter that was created to run the code", () => {
-      expect(CustomMarshalingInterpreter.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(Interpreter);
+      expect(CustomMarshalingInterpreter.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(CustomMarshalingInterpreter);
     });
 
     describe("when given event handlers that accept arguments", () => {
