@@ -33,9 +33,9 @@
     "min_collected": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "tts_instructions_override": "Help me get the treasure from this deep valley.",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -35,17 +35,70 @@
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need the `repeat` loop inside when making this spiral!\",\"hint_id\":\"courseF_artist_for5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0693b087e61cabfedbf3456fa04a428e/courseF_artist_for5.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:41:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">15</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">300</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">15</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
