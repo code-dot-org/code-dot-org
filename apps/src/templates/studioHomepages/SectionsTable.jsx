@@ -78,7 +78,7 @@ const SectionsTable = React.createClass({
         name: React.PropTypes.string.isRequired,
         linkToProgress: React.PropTypes.string.isRequired,
         assignedTitle: React.PropTypes.string,
-        linkToCourse: React.PropTypes.string,
+        linkToAssigned: React.PropTypes.string,
         numberOfStudents: React.PropTypes.number.isRequired,
         linkToStudents: React.PropTypes.string.isRequired,
         sectionCode: React.PropTypes.string.isRequired
@@ -124,7 +124,7 @@ const SectionsTable = React.createClass({
                 </a>
               </td>
               <td style={styles.col2}>
-                <a href={section.linkToCourse} style={styles.link}>
+                <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
               </td>

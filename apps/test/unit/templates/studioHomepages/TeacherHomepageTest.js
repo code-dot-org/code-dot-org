@@ -23,7 +23,7 @@ const sections = [
     name: "Period 1",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/111111/progress",
     assignedTitle: "Course 1",
-    linkToCourse: "https://studio.code.org/s/course1",
+    linkToAssigned: "https://studio.code.org/s/course1",
     numberOfStudents: 1,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/111111/manage",
     sectionCode: "ABCDEF"
@@ -32,7 +32,7 @@ const sections = [
     name: "Period 2",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/222222/progress",
     assignedTitle: "Course 2",
-    linkToCourse: "https://studio.code.org/s/course2",
+    linkToAssigned: "https://studio.code.org/s/course2",
     numberOfStudents: 2,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
     sectionCode: "EEBSKR"
@@ -173,7 +173,7 @@ describe('TeacherHomepage', () => {
     assert.equal(section1.name, sections[0].name);
     assert.equal(section1.linkToProgress, sections[0].linkToProgress);
     assert.equal(section1.assignedTitle, sections[0].assignedTitle);
-    assert.equal(section1.linkToCourse, sections[0].linkToCourse);
+    assert.equal(section1.linkToAssigned, sections[0].linkToAssigned);
     assert.equal(section1.numberOfStudents, 1);
     assert.equal(section1.linkToStudents, sections[0].linkToStudents);
     assert.equal(section1.sectionCode, sections[0].sectionCode);
@@ -181,7 +181,7 @@ describe('TeacherHomepage', () => {
     assert.equal(section2.name, sections[1].name);
     assert.equal(section2.linkToProgress, sections[1].linkToProgress);
     assert.equal(section2.assignedTitle, sections[1].assignedTitle);
-    assert.equal(section2.linkToCourse, sections[1].linkToCourse);
+    assert.equal(section2.linkToAssigned, sections[1].linkToAssigned);
     assert.equal(section2.numberOfStudents, 2);
     assert.equal(section2.linkToStudents, sections[1].linkToStudents);
     assert.equal(section2.sectionCode, sections[1].sectionCode);
