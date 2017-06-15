@@ -72,8 +72,8 @@ class Documents < Sinatra::Base
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
-    default /= 10 if rack_env? :staging
-    default /= 60 if rack_env? :development
+    default /= 360 if rack_env? :staging
+    default /= ONE_HOUR if rack_env? :development
     set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
