@@ -301,7 +301,7 @@ class SectionTest < ActiveSupport::TestCase
       name: section.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: 'somecourse',
-      linkToCourse: '/courses/somecourse',
+      linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       sectionCode: section.code
@@ -319,7 +319,7 @@ class SectionTest < ActiveSupport::TestCase
       name: section.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: 'Jigsaw',
-      linkToCourse: '/s/jigsaw',
+      linkToAssigned: '/s/jigsaw',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       sectionCode: section.code
@@ -340,7 +340,7 @@ class SectionTest < ActiveSupport::TestCase
       name: section.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: 'somecourse',
-      linkToCourse: '/courses/somecourse',
+      linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       sectionCode: section.code
@@ -356,7 +356,7 @@ class SectionTest < ActiveSupport::TestCase
       name: section.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: '',
-      linkToCourse: '//test.code.org/teacher-dashboard#/sections/',
+      linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       sectionCode: section.code
