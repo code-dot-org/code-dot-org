@@ -30,6 +30,10 @@ class Course < ApplicationRecord
     name
   end
 
+  def localized_title
+    I18n.t("data.course.name.#{name}.title", default: name)
+  end
+
   def self.file_path(name)
     Rails.root.join("config/courses/#{name}.course")
   end
@@ -107,7 +111,7 @@ class Course < ApplicationRecord
   def summarize
     {
       name: name,
-      title: I18n.t("data.course.name.#{name}.title", default: name),
+      title: localized_title,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
