@@ -291,7 +291,7 @@ class TablesApi < Sinatra::Base
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    return FirebaseHelper.new(channel_id, table_name).table_as_csv
+    return FirebaseHelper.new(channel_id).table_as_csv(table_name)
   end
 
   #
