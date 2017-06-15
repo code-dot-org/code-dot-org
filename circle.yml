@@ -93,8 +93,12 @@ dependencies:
     # Run rake build (twice in case of intermittent test failures within rake build)
     # Each run has its own 13 minute timeout
     # See notes above rake install for ts and mispipe reasoning
-    - for i in 1 2; do mispipe "timeout 13m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break; done:
-        timeout: 960
+    - ? |
+        for i in 1 2; do
+          mispipe "timeout 13m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
+          echo "rake build failed on attempt $i with error code $?";
+        done:
+          timeout: 960
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
     - bundle exec rake firebase:ci
