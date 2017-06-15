@@ -203,6 +203,73 @@ Artist.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
+ * Initializes all sticker images as defined in this.skin.stickers, if any,
+ * storing the created images in this.stickers.
+ *
+ * NOTE: initializes this.stickers as a side effect
+ *
+ * @return {Promise} that resolves once all images have finished loading,
+ *         whether they did so successfully or not (or that resolves instantly
+ *         if there are no images to load).
+ */
+Artist.prototype.preloadAllStickerImages = function () {
+  this.stickers = {};
+
+  const loadSticker = name => new Promise(resolve => {
+    const img = new Image();
+
+    img.onload = () => resolve();
+    img.onerror = () => resolve();
+
+    img.src = this.skin.stickers[name];
+    this.stickers[name] = img;
+  });
+
+  const stickers = (this.skin && this.skin.stickers) || {};
+  const stickerNames = Object.keys(stickers);
+
+  if (stickerNames.length) {
+    return Promise.all(stickerNames.map(loadSticker));
+  } else {
+    return Promise.resolve();
+  }
+};
+
+/**
+ * Initializes all pattern images as defined in
+ * this.skin.lineStylePatternOptions, if any, storing the created images in
+ * this.loadedPathPatterns.
+ *
+ * @return {Promise} that resolves once all images have finished loading,
+ *         whether they did so successfully or not (or that resolves instantly
+ *         if there are no images to load).
+ */
+Artist.prototype.preloadAllPatternImages = function () {
+  const loadPattern = patternOption => new Promise(resolve => {
+    const pattern = patternOption[1];
+
+    if (this.skin[pattern]) {
+      const img = new Image();
+
+      img.onload = () => resolve();
+      img.onerror = () => resolve();
+
+      img.src = this.skin[pattern];
+      this.loadedPathPatterns[pattern] = img;
+    } else {
+      resolve();
+    }
+  });
+
+  const patternOptions = (this.skin && this.skin.lineStylePatternOptions);
+  if (patternOptions.length) {
+    return Promise.all(patternOptions.map(loadPattern));
+  } else {
+    return Promise.resolve();
+  }
+};
+
+/**
  * Initialize Blockly and the turtle.  Called on page load.
  */
 Artist.prototype.init = function (config) {
@@ -213,16 +280,6 @@ Artist.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  // Preload sticker images
-  this.stickers = {};
-  for (var name in this.skin.stickers) {
-    var img = new Image();
-    img.src = this.skin.stickers[name];
-
-    this.stickers[name] = img;
-  }
-
-  this.artistId = this.skin.id;
   if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // let's try adding a background image
     this.level.images = [{}];
@@ -258,17 +315,22 @@ Artist.prototype.init = function (config) {
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
+  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath} />;
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={visualizationColumn}
-        onMount={this.studioApp_.init.bind(this.studioApp_, config)}
-      />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  return Promise.all([
+    this.preloadAllStickerImages(),
+    this.preloadAllPatternImages()
+  ]).then(() => {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    );
+  });
 };
 
 /**

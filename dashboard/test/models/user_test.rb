@@ -133,7 +133,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot build user with panda in email" do
-    user = build :user, email: panda_panda
+    user = build :user, email: "#{panda_panda}@panda.org"
     refute user.valid?
     assert user.errors[:email].length == 1
   end
@@ -1476,55 +1476,6 @@ class UserTest < ActiveSupport::TestCase
     assert @admin.authorized_teacher?
   end
 
-  test "can_edit_account?" do
-    # a student who only logs in with picture accounts cannot edit their account
-
-    assert create(:student).can_edit_account?
-    assert create(:student, age: 4).can_edit_account?
-    assert create(:teacher).can_edit_account?
-
-    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
-    assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
-    assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
-
-    student_without_password = create(:student, encrypted_password: '')
-
-    # join picture section
-    create(:follower, student_user: student_without_password, section: picture_section)
-    student_without_password.reload
-    refute student_without_password.can_edit_account? # only in a picture section
-
-    # join word section
-    create(:follower, student_user: student_without_password, section: word_section)
-    student_without_password.reload
-    assert student_without_password.can_edit_account? # also in a word section
-
-    student_with_password = create(:student, encrypted_password: 'xxxxxx')
-
-    # join picture section
-    create(:follower, student_user: student_with_password, section: picture_section)
-    student_with_password.reload
-    assert student_with_password.can_edit_account? # only in a picture section
-
-    # join word section
-    create(:follower, student_user: student_with_password, section: word_section)
-    student_with_password.reload
-    assert student_with_password.can_edit_account? # also in a word section
-
-    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
-
-    # join picture section
-    create(:follower, student_user: student_with_oauth, section: picture_section)
-    student_with_oauth.reload
-    assert student_with_oauth.can_edit_account? # only in a picture section
-
-    # join word section
-    create(:follower, student_user: student_with_oauth, section: word_section)
-    student_with_oauth.reload
-    assert student_with_oauth.can_edit_account? # also in a word section
-  end
-
   test 'terms_of_service_version for teacher without version' do
     assert_nil @teacher.terms_version
   end
@@ -1712,6 +1663,18 @@ class UserTest < ActiveSupport::TestCase
     user_with_invalid_email.name = 'updated name'
     assert user_with_invalid_email.valid?
     assert user_with_invalid_email.save
+  end
+
+  test 'age is required for new users' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :user, birthday: nil
+    end
+    assert_equal 'Validation failed: Age is required', e.message
+  end
+
+  test 'age validation is bypassed for Google OAuth users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'google_oauth2'
   end
 
   test 'users updating the email field must provide a valid email address' do
