@@ -159,14 +159,14 @@ class Section < ActiveRecord::Base
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
     title = ''
-    link_to_course = base_url
+    link_to_assigned = base_url
 
     if course
       title = course.localized_title
-      link_to_course = course_path(course)
+      link_to_assigned = course_path(course)
     elsif script_id
       title = script.localized_title
-      link_to_course = script_path(script)
+      link_to_assigned = script_path(script)
     end
 
     {
@@ -174,7 +174,7 @@ class Section < ActiveRecord::Base
       name: name,
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
-      linkToCourse: link_to_course,
+      linkToAssigned: link_to_assigned,
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       sectionCode: code
