@@ -21,7 +21,10 @@ content-type: text/ng-template
             %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
             %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "confirm_save()" }= I18n.t('dashboard_sections_assign_activity')
 
-%div
+
+#sections-page
+
+%div{'ng-show' => '!hideSectionsTable'}
   %br/
   %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
@@ -34,8 +37,6 @@ content-type: text/ng-template
 
   %div.jumbotron{'ng-show' => 'sectionsLoaded && sections.length <= 0'}
     %p= I18n.t('dashboard_sections_jumbotron_instruction')
-
-  #sections-table-react
 
   %table{style: "width:100%; table-layout:auto;", 'ng-show' => 'sections.length > 0 && !hideSectionsTable'}
     %colgroup

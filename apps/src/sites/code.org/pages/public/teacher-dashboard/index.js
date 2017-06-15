@@ -16,7 +16,7 @@ import teacherSections, {
   setSections,
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
+import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import experiments from '@cdo/apps/util/experiments';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
@@ -56,8 +56,8 @@ function renderSectionProjects(sectionId) {
  * @param {object[]} sections - Data returned from server about what sections
  *   this user owns.
  */
-function renderSectionsTable(sections) {
-  const element = document.getElementById('sections-table-react');
+function renderSectionsPage(sections) {
+  const element = document.getElementById('sections-page');
   registerReducers({teacherSections});
   const store = getStore();
   store.dispatch(setStudioUrl(data.studiourlprefix));
@@ -68,7 +68,7 @@ function renderSectionsTable(sections) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionTable/>
+      <SectionsPage/>
     </Provider>,
     element
   );
@@ -263,7 +263,7 @@ function main() {
       });
       if (experiments.isEnabled('reactSections')) {
         // TODO - eventually React should own this query
-        renderSectionsTable(sections);
+        renderSectionsPage(sections);
         $scope.hideSectionsTable = true;
       }
       $scope.sectionsLoaded = true;
