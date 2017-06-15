@@ -68,9 +68,11 @@ class SharedResources < Sinatra::Base
       path = pegasus_dir('cache', 'css', uri)
       pass unless File.file?(path)
     end
+    last_modified = ::File.mtime(path)
+    pass if md5 && md5.to_s != "-#{Digest::MD5.hexdigest(last_modified.httpdate)}"
 
     content_type :css
-    send_file(path)
+    send_file(path, last_modified: last_modified)
   end
 
   # JavaScripts

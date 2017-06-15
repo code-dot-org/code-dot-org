@@ -177,19 +177,23 @@ class Documents < Sinatra::Base
       cache :static
     end
     pass unless (path = resolve_static('public', uri))
+    last_modified = ::File.mtime(path)
+    pass if md5 && md5.to_s != "-#{Digest::MD5.hexdigest(last_modified.httpdate)}"
     NewRelic::Agent.set_transaction_name(uri) if defined? NewRelic
-    send_file(path)
+    send_file(path, last_modified: last_modified)
   end
 
-  get /\/style#{MD5_REGEX}?.css/ do
-    content_type :css
+  get /\/style(#{MD5_REGEX}?).css/ do |md5|
     css_last_modified = Time.at(0)
     css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles/*.css')).sort.map do |i|
       css_last_modified = [css_last_modified, File.mtime(i)].max
       IO.read(i)
     end.join("\n\n")
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache :static
+    pass if !md5.empty? && md5 != "-#{Digest::MD5.hexdigest(css_last_modified.httpdate)}"
+    content_type :css
+
+    cache(md5 ? :static_digest : :static)
     Sass::Engine.new(css,
       syntax: :scss,
       style: :compressed
