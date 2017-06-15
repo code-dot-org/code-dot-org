@@ -86,7 +86,6 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  // TODO: write tests for this
   if (action.type === UPDATE_SECTION) {
     const assignmentList = assignments(state);
     const section = sectionFromServerSection(action.serverSection,
