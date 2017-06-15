@@ -176,12 +176,18 @@ class Pd::Enrollment < ActiveRecord::Base
     end
   end
 
+  def should_send_exit_survey?
+    !workshop.fit_weekend?
+  end
+
   def send_exit_survey
     # In case the workshop is reprocessed, do not send duplicate exit surveys.
     if survey_sent_at
       CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
       return
     end
+
+    return unless should_send_exit_survey?
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 
