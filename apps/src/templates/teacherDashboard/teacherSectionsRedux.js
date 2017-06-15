@@ -27,6 +27,7 @@ const initialState = {
   validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
+  validAssignments: [],
   // Mapping from sectionId to section object
   sections: {}
 };
