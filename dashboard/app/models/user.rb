@@ -1222,23 +1222,6 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
-  # can this user edit their own account?
-  def can_edit_account?
-    # Teachers can always edit their account
-    return true if teacher?
-    # Users with passwords can always edit their account
-    return true if encrypted_password.present?
-    # Oauth users can always edit their account
-    return true if oauth?
-    # Users that don't belong to any sections (i.e. can't be managed by any other
-    # user) can always edit their account
-    return true if sections_as_student.empty?
-    # if you log in only through picture passwords you can't edit your account
-    return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-
-    false
-  end
-
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
