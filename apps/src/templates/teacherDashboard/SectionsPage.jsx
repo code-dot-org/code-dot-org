@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import { setSections } from './teacherSectionsRedux';
 
 const styles = {
   breadcrumb: {
@@ -16,14 +17,27 @@ const styles = {
 
 class SectionsPage extends Component {
   static propTypes = {
-    sectionsLoaded: PropTypes.bool.isRequired,
     numSections: PropTypes.number.isRequired,
+    setSections: PropTypes.func.isRequired,
   };
 
+  state = {
+    sectionsLoaded: false
+  };
+
+  componentDidMount() {
+    $.getJSON("/v2/sections/").done(sections => {
+      this.props.setSections(sections);
+      this.setState({
+        sectionsLoaded: true
+      });
+    });
+  }
+
   render() {
-    const { sectionsLoaded, numSections } = this.props;
+    const { numSections } = this.props;
+    const { sectionsLoaded } = this.state;
     // TODO: i18n
-    // TODO: what to render before loaded?
     return (
       <div>
         <div style={styles.breadcrumb}>
@@ -50,13 +64,12 @@ class SectionsPage extends Component {
             </p>
           </div>
         }
-        {numSections > 0 && <SectionTable/>}
+        {sectionsLoaded && numSections > 0 && <SectionTable/>}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  sectionsLoaded: true,
   numSections: state.teacherSections.sectionIds.length
-}))(SectionsPage);
+}), { setSections })(SectionsPage);
