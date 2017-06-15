@@ -46,8 +46,8 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "tts_instructions_override": "Now, write a program to make Waddles the Penguin move around using the up, down, left, and right keys to hit all of the targets!"
+    "tts_instructions_override": "Now, write a program to make Waddles the Penguin move around using the up, down, left, and right keys to hit all of the targets!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
