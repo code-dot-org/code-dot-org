@@ -35,10 +35,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time, try saying the steps you need to take outloud first.\",\"hint_id\":\"courseC_collector_prog9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba21b9fbe7adbab189a6a1dcedf9f06b/courseC_collector_prog9.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "tts_instructions_override": "Let's get all of the treasure!",
     "tts_markdown_instructions_override": "Let's get all of the treasure!",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",
