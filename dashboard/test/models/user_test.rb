@@ -133,7 +133,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot build user with panda in email" do
-    user = build :user, email: panda_panda
+    user = build :user, email: "#{panda_panda}@panda.org"
     refute user.valid?
     assert user.errors[:email].length == 1
   end
