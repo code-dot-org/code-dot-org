@@ -277,7 +277,24 @@ Artist.prototype.init = function (config) {
  * orientation.
  */
 Artist.prototype.prepareForRemix = function () {
-  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+  let next, removedBlock = false;
+  let setArtistBlock = blocksDom.querySelector('block[type="turtle_setArtist"]');
+  while (setArtistBlock) {
+    removedBlock = true;
+    next = setArtistBlock.querySelector('next');
+    let parentNext = setArtistBlock.parentNode;
+    let parentBlock = parentNext.parentNode;
+    parentBlock.removeChild(parentNext);
+    if (next) {
+      parentBlock.appendChild(next);
+    }
+    setArtistBlock = blocksDom.querySelector('block[type="turtle_setArtist"]');
+  }
+
+  if (!removedBlock &&
+      REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
         this.level[prop] === undefined ||
             this.level[prop] === group.defaultValues[prop]))) {
     // If all of the level props we need to worry about are undefined or equal
@@ -285,15 +302,13 @@ Artist.prototype.prepareForRemix = function () {
     return Promise.resolve();
   }
 
-  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  const blocksDocument = blocksDom.ownerDocument;
   let whenRun = blocksDom.querySelector('block[type="when_run"]');
   if (!whenRun) {
     whenRun = blocksDocument.createElement('block');
     whenRun.setAttribute('type', 'when_run');
     blocksDom.appendChild(whenRun);
   }
-  let next = whenRun.querySelector('next');
+  next = whenRun.querySelector('next');
   if (next) {
     whenRun.removeChild(next);
   }
@@ -328,6 +343,7 @@ Artist.prototype.prepareForRemix = function () {
   }
 
   whenRun.appendChild(next);
+
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
   return Promise.resolve();
