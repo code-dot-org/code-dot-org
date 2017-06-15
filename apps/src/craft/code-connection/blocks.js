@@ -47,6 +47,7 @@ export const install = (blockly, blockInstallOptions) => {
   const agentBlockColor = { h: 90, s: 0.57, v: 0.7 };
   const itemBlockColor = { h: 358, s: 0.54, v: 0.7 };
   const nonAgentBlockColor = { h: 42, s: 0.69, v: 0.76 };
+  const customControlColor = { h: 359, s: 0.8, v: 0.8 };
   // Agent related blocks
   blockly.Blocks.craft_move = {
     helpUrl: '',
@@ -385,7 +386,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_wait = {
     helpUrl: '',
     init: function () {
-      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setHSV(customControlColor.h, customControlColor.s, customControlColor.v);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionWait()))
           .appendTitle(new blockly.FieldTextInput('1000', blockly.FieldTextInput.numberValidator), 'MILLISECONDS')
@@ -404,6 +405,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionExecute()))
           .appendTitle(new blockly.FieldTextInput(''), 'COMMAND');
@@ -431,10 +433,12 @@ export const install = (blockly, blockInstallOptions) => {
     return `executeasother('block_id_${this.id}','${target}','${createBlockPos(x, y, z, positionType)}','${command}');`;
   };
 
+  //Execute-if is depreciated and no longer used
   blockly.Blocks.craft_executedetect = {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionExecute()))
           .appendTitle(new blockly.FieldTextInput(''), 'COMMAND');
@@ -532,9 +536,9 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTeleport()))
-          .appendTitle(new blockly.FieldLabel(i18n.target()))
           .appendTitle(new blockly.FieldTextInput(''), 'VICTIM');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
@@ -554,9 +558,9 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTeleport()))
-          .appendTitle(new blockly.FieldLabel(i18n.target()))
           .appendTitle(new blockly.FieldTextInput(''), 'VICTIM');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
@@ -582,10 +586,10 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionFill()));
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.from()))
           .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE');
       this.appendValueInput('FROM_X')
           .setCheck('Number');
@@ -602,6 +606,14 @@ export const install = (blockly, blockInstallOptions) => {
           .setCheck('Number');
       this.appendValueInput('TO_Z')
           .setCheck('Number');
+      this.appendValueInput("TO_X")
+          .setCheck("Number");
+      this.appendValueInput("TO_Y")
+          .setCheck("Number");
+      this.appendValueInput("TO_Z")
+          .setCheck("Number");
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionWith()));
       this.appendValueInput('ITEM')
           .setCheck(ITEM_TYPE);
       this.setPreviousStatement(true);
@@ -626,6 +638,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendValueInput('ITEM')
           .appendTitle(new blockly.FieldLabel(i18n.blockActionGive()))
           .setCheck(ITEM_TYPE);
@@ -651,6 +664,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionKill()))
           .appendTitle(new blockly.FieldTextInput(''), 'TARGET');
@@ -668,6 +682,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionSetBlock()));
       this.appendDummyInput()
@@ -700,6 +715,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionSummon()));
       this.appendDummyInput()
@@ -729,6 +745,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTestForBlock()));
       this.appendDummyInput()
@@ -756,6 +773,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTestForBlocks()));
       this.appendDummyInput()
@@ -803,6 +821,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionClone()));
       this.appendDummyInput()
@@ -855,6 +874,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionCloneFiltered()));
       this.appendValueInput('ITEM')

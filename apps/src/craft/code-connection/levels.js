@@ -45,25 +45,23 @@ module.exports = {
           craftBlock('decoration') +
           craftBlock('getnameof') +
           craftBlock('getdataof') +
-          craftBlock('createblock', `<value name='BLOCKTYPE'>${block('text')}</value><value name='BLOCKDATA'>${block('text')}</value>`)) +
+          craftBlock('createblock')) +
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
         craftBlock('fill') +
         craftBlock('give') +
         craftBlock('kill') +
-        craftBlock('setblock', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('setblock') +
         craftBlock('summon') +
-        craftBlock('testforblock', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('testforblock') +
         craftBlock('testforblocks') +
         craftBlock('clone') +
-        craftBlock('clonefiltered', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('clonefiltered') +
         craftBlock('executeasother') +
-        craftBlock('executedetect') +
         craftBlock('timesetbyname') +
         craftBlock('timesetbynumber') +
-        craftBlock('weather') +
-        craftBlock('wait')) +
+        craftBlock('weather')) +
       category('Logic',
         block('logic_compare') +
         block('logic_operation') +
@@ -75,7 +73,8 @@ module.exports = {
         block('controls_if', "<mutation else='1'></mutation>") +
         block('controls_for') +
         block('controls_whileUntil') +
-        block('controls_repeat_ext', `<value name='TIMES'>${block('math_number', '<field name="NUM">10</field>')}</value>`))+
+        block('controls_repeat_ext', `<value name='TIMES'>${block('math_number', '<field name="NUM">10</field>')}</value>`) +
+        craftBlock('wait')) +
       category('Variables', "", 'custom="VARIABLE"') +
       category('Functions', "", 'custom="PROCEDURE"') +
       category('Math',
