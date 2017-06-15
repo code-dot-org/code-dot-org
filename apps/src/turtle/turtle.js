@@ -415,7 +415,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.loadDecorationAnimation();
 
   // Set their initial contents.
-  this.loadTurtle();
+  this.loadTurtle(true /* initializing */);
   this.drawImages();
 
   this.isDrawingAnswer_ = true;
@@ -547,10 +547,11 @@ Artist.prototype.drawImages = function () {
 };
 
 /**
- * Initial the turtle image on load.
+ * Initialize the turtle image on load.
  */
-Artist.prototype.loadTurtle = function () {
-  this.avatarImage.onload = _.bind(this.display, this);
+Artist.prototype.loadTurtle = function (initializing = true) {
+  const onloadCallback = initializing ? this.display : this.drawTurtle;
+  this.avatarImage.onload = _.bind(onloadCallback, this);
 
   this.avatarImage.src = this.skin.avatar;
   if (this.skin.id === "anna") {
@@ -582,6 +583,11 @@ var turtleFrame = 0;
  * Draw the turtle image based on this.x, this.y, and this.heading.
  */
 Artist.prototype.drawTurtle = function () {
+  if (!this.visible) {
+    return;
+  }
+  this.drawDecorationAnimation("before");
+
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
@@ -625,6 +631,8 @@ Artist.prototype.drawTurtle = function () {
       Math.round(destX), Math.round(destY),
       destWidth - 0, destHeight);
   }
+
+  this.drawDecorationAnimation("after");
 };
 
 /**
@@ -774,11 +782,7 @@ Artist.prototype.display = function () {
   this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
 
   // Draw the turtle.
-  if (this.visible) {
-    this.drawDecorationAnimation("before");
-    this.drawTurtle();
-    this.drawDecorationAnimation("after");
-  }
+  this.drawTurtle();
 };
 
 /**
@@ -1183,7 +1187,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
-        this.loadTurtle();
+        this.loadTurtle(false /* initializing */);
         this.loadPatterns();
         this.selectPattern();
       }
