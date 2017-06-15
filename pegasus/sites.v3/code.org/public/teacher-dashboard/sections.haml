@@ -22,9 +22,10 @@ content-type: text/ng-template
             %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "confirm_save()" }= I18n.t('dashboard_sections_assign_activity')
 
 
-#sections-page
+/sections-page is rendered by React
+#sections-page{'ng-init' => '$emit("section-page-rendered");'}
 
-%div{'ng-show' => '!hideSectionsTable'}
+#sections-page-angular
   %br/
   %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;

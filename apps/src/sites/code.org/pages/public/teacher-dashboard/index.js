@@ -13,7 +13,6 @@ import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
-  setSections,
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
@@ -64,7 +63,8 @@ function renderSectionsPage(sections) {
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
   store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
-  store.dispatch(setSections(sections));
+
+  $("#sections-page-angular").hide();
 
   ReactDOM.render(
     <Provider store={store}>
@@ -261,11 +261,6 @@ function main() {
       $scope.sections.forEach(section => {
         section.assign_id = $scope.getAssignmentId(section);
       });
-      if (experiments.isEnabled('reactSections')) {
-        // TODO - eventually React should own this query
-        renderSectionsPage(sections);
-        $scope.hideSectionsTable = true;
-      }
       $scope.sectionsLoaded = true;
     });
 
@@ -274,6 +269,14 @@ function main() {
     $scope.hocAssignWarningEnabled = hoc_assign_warning;
 
     $scope.hocCategoryName = i18n.hoc_category_name;
+
+    // Angular does not offer a reliable way to wait for the template to load,
+    // so do it using a custom event here.
+    $scope.$on('section-page-rendered', () => {
+      if (experiments.isEnabled('reactSections')) {
+        renderSectionsPage();
+      }
+    });
 
     /**
      * Given a section, returns the assignment id of the course/script the section
