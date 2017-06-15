@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import TeacherCourses from './TeacherCourses';
+import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
@@ -32,7 +32,7 @@ const styles = {
 
 /**
  * Though named Courses, this component represents a collection of courses and/or
- * scripts. These come from sections the user is in, or from courses/scripts they
+ * scripts, refered to collectively as "assignables". These come from sections the user is in, or from courses/scripts they
  * have recently made progress in.
  * The component is only used on the /courses page, and also does some additional
  * DOM manipulation on mount.
@@ -126,7 +126,7 @@ const Courses = React.createClass({
 
               <br/>
               <br/>
-              <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+              <TeacherAssignablesCatalog codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
               <div>
                 <div style={styles.heading}>
