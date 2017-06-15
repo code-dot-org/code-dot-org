@@ -18,6 +18,7 @@ const groupedAssignments = _.memoize(assignments => (
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
+ * TODO(bjvanminnen): could use some tests
  */
 export default class AssignmentSelector extends Component {
   static propTypes = {
