@@ -30,6 +30,7 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Section < ActiveRecord::Base
+  include Rails.application.routes.url_helpers
   acts_as_paranoid
 
   belongs_to :user
@@ -57,6 +58,14 @@ class Section < ActiveRecord::Base
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  # TODO(bjvanminnen): once we have a courses cache, we should create an accessor
+  # that takes advantage of that
+
+  # Override default script accessor to use our cache
+  def script
+    Script.get_from_cache(script_id) if script_id
+  end
 
   def workshop_section?
     Pd::Workshop::SECTION_TYPES.include? section_type
@@ -142,6 +151,34 @@ class Section < ActiveRecord::Base
   def default_script
     return script if script
     return course.try(:course_scripts).try(:first).try(:script)
+  end
+
+  # Provides some information about a section. This is consumed by our SectionsTable
+  # React component on the teacher homepage
+  def summarize
+    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+
+    title = ''
+    link_to_course = base_url
+
+    if course
+      title = course.localized_title
+      link_to_course = course_path(course)
+    elsif script_id
+      title = script.localized_title
+      link_to_course = script_path(script)
+    end
+
+    {
+      id: id,
+      name: name,
+      linkToProgress: "#{base_url}#{id}/progress",
+      assignedTitle: title,
+      linkToCourse: link_to_course,
+      numberOfStudents: students.length,
+      linkToStudents: "#{base_url}#{id}/manage",
+      sectionCode: code
+    }
   end
 
   private
