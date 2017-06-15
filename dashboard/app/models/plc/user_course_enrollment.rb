@@ -28,7 +28,11 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   after_save :create_enrollment_unit_assignments
 
-  def self.enroll_users(user_emails, course_id)
+  # Method for
+  # @param user_keys: list of user IDs or email addresses
+  # @param course_id: course_id to enroll users in
+  # @returns list of enrolled users, user_keys that did not correspond to extant users, user_keys that belonged to students, or user_emails that failed for other reasons
+  def self.enroll_users(user_keys, course_id)
     course = Plc::Course.find(course_id)
     enrolled_users = []
     nonexistent_users = []
@@ -36,7 +40,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     other_failure_users = []
     other_failure_errors = []
 
-    user_emails.each do |user_key|
+    user_keys.each do |user_key|
       user = user_key =~ /^\d+$/ ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
 
       email = user.try(:email)
