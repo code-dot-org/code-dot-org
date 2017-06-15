@@ -32,11 +32,11 @@
     "fast_get_nectar_animation": "false",
     "ideal": "10",
     "step_speed": "2",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can put multiple blocks in one repeat loop.\",\"hint_id\":\"courseC_harvester_loops6\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d8d2d0f5d9b6ca4d6dfe9d4b3851a275/courseC_harvester_loops6.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

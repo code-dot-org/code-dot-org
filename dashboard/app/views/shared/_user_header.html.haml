@@ -25,8 +25,7 @@
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
               %i.fa.fa-user-plus
               = t('nav.user.pair_programming')
-        - if current_user.can_edit_account?
-          = link_to t('nav.user.settings'), edit_user_registration_url
+        = link_to t('nav.user.settings'), edit_user_registration_url
         %a.points_menu_item{href: '#', style: 'display: none'}
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else

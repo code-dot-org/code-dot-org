@@ -22,8 +22,8 @@ const sections = [
   {
     name: "Period 1",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/111111/progress",
-    course: "Course 1",
-    linkToCourse: "https://studio.code.org/s/course1",
+    assignedTitle: "Course 1",
+    linkToAssigned: "https://studio.code.org/s/course1",
     numberOfStudents: 1,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/111111/manage",
     sectionCode: "ABCDEF"
@@ -31,8 +31,8 @@ const sections = [
   {
     name: "Period 2",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/222222/progress",
-    course: "Course 2",
-    linkToCourse: "https://studio.code.org/s/course2",
+    assignedTitle: "Course 2",
+    linkToAssigned: "https://studio.code.org/s/course2",
     numberOfStudents: 2,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
     sectionCode: "EEBSKR"
@@ -172,16 +172,16 @@ describe('TeacherHomepage', () => {
     const section1 = sectionsContainer.props().sections[0];
     assert.equal(section1.name, sections[0].name);
     assert.equal(section1.linkToProgress, sections[0].linkToProgress);
-    assert.equal(section1.course, sections[0].course);
-    assert.equal(section1.linkToCourse, sections[0].linkToCourse);
+    assert.equal(section1.assignedTitle, sections[0].assignedTitle);
+    assert.equal(section1.linkToAssigned, sections[0].linkToAssigned);
     assert.equal(section1.numberOfStudents, 1);
     assert.equal(section1.linkToStudents, sections[0].linkToStudents);
     assert.equal(section1.sectionCode, sections[0].sectionCode);
     const section2 = sectionsContainer.props().sections[1];
     assert.equal(section2.name, sections[1].name);
     assert.equal(section2.linkToProgress, sections[1].linkToProgress);
-    assert.equal(section2.course, sections[1].course);
-    assert.equal(section2.linkToCourse, sections[1].linkToCourse);
+    assert.equal(section2.assignedTitle, sections[1].assignedTitle);
+    assert.equal(section2.linkToAssigned, sections[1].linkToAssigned);
     assert.equal(section2.numberOfStudents, 2);
     assert.equal(section2.linkToStudents, sections[1].linkToStudents);
     assert.equal(section2.sectionCode, sections[1].sectionCode);
@@ -208,12 +208,12 @@ describe('TeacherHomepage', () => {
     // Check if a row in the SectionTable is rendered for each section.
     const row1 = sectionsTable.childAt(1).childAt(0);
     assert.equal(row1.childAt(0).text(), sections[0].name);
-    assert.equal(row1.childAt(1).text(), sections[0].course);
+    assert.equal(row1.childAt(1).text(), sections[0].assignedTitle);
     assert.equal(row1.childAt(2).text(), sections[0].numberOfStudents);
     assert.equal(row1.childAt(3).text(), sections[0].sectionCode);
     const row2 = sectionsTable.childAt(1).childAt(1);
     assert.equal(row2.childAt(0).text(), sections[1].name);
-    assert.equal(row2.childAt(1).text(), sections[1].course);
+    assert.equal(row2.childAt(1).text(), sections[1].assignedTitle);
     assert.equal(row2.childAt(2).text(), sections[1].numberOfStudents);
     assert.equal(row2.childAt(3).text(), sections[1].sectionCode);
   });

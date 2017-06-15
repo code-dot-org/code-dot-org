@@ -35,10 +35,13 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**What is the smallest number you will need?  \\nWhat is the largest number?  \\nHow big is the increase each time?**\\n\\nThose are the questions you need to ask to fill in the blanks of the `for` loop.\",\"hint_id\":\"courseF_artist_for4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aca7cb7b7ac3a315dd7225fc88faf739/courseF_artist_for4.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

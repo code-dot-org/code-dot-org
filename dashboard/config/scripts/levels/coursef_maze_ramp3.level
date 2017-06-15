@@ -32,10 +32,13 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:07:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,7 +71,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="2"/>
+        <block type="maze_moveForward" limit="3"/>
         <block type="maze_turn" limit="1">
           <title name="DIR">turnLeft</title>
         </block>
