@@ -552,8 +552,8 @@ export default class JSInterpreter {
         if (inUserCode && !doneUserLine) {
           doneUserLine = (
             this.atInterstitialNode ||
-            state.done ||
-            (state.node.type === 'UpdateExpression' && state.doneLeft)
+            state.done_ ||
+            (state.node.type === 'UpdateExpression' && state.doneLeft_)
           );
         }
 
@@ -726,7 +726,7 @@ export default class JSInterpreter {
           throw "Unexpected callee node property type: " + node.object.type;
       }
     } else if (node.type === "ForStatement") {
-      const mode = state.mode || 0;
+      const mode = state.mode_ || 0;
       switch (mode) {
         case codegen.ForStatementMode.INIT:
           this.executionLog.push("[forInit]");
