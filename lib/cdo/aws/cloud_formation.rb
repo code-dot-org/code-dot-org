@@ -69,6 +69,13 @@ module AWS
         "#{cname}-studio.#{DOMAIN}".downcase
       end
 
+      def adhoc_image_id
+        cfn.describe_stacks(stack_name: 'AMI-adhoc').
+          stacks.first.outputs.
+          find{|o| o.output_key == 'AMI'}.
+          output_value
+      end
+
       # Validates that the template is valid CloudFormation syntax.
       # Does not check validity of the resource properties, just the base syntax.
       # First prints the JSON-formatted template, then either raises an error (if invalid)
