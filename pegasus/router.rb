@@ -17,6 +17,7 @@ require 'cgi'
 require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
+require 'cdo/rack/content_digest'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
@@ -66,12 +67,13 @@ class Documents < Sinatra::Base
 
   use Rack::Locale
   use Rack::CdoDeflater
+  use Rack::ContentDigest
   use Rack::UpgradeInsecureRequests
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
-    default = 60 if rack_env? :staging
-    default = 0 if rack_env? :development
+    default /= 10 if rack_env? :staging
+    default /= 60 if rack_env? :development
     set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
@@ -89,6 +91,8 @@ class Documents < Sinatra::Base
     set_max_age :image, ONE_HOUR * 10
     set_max_age :image_proxy, ONE_HOUR * 5
     set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_digest, ONE_HOUR * 24 * 7
+    set_max_age :static_digest_proxy, ONE_HOUR * 24 * 7
     set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found', '.404']
@@ -162,15 +166,22 @@ class Documents < Sinatra::Base
     end
   end
 
+  MD5_REGEX = /-[a-fA-F0-9]{32}/
+
   # Static files
   get '*' do |uri|
-    pass unless path = resolve_static('public', uri)
-    cache :static
+    if (md5 = uri.match(MD5_REGEX))
+      cache :static_digest
+      uri.slice!(md5.to_s)
+    else
+      cache :static
+    end
+    pass unless (path = resolve_static('public', uri))
     NewRelic::Agent.set_transaction_name(uri) if defined? NewRelic
     send_file(path)
   end
 
-  get '/style.css' do
+  get /\/style#{MD5_REGEX}?.css/ do
     content_type :css
     css_last_modified = Time.at(0)
     css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles/*.css')).sort.map do |i|

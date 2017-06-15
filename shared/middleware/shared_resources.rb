@@ -25,6 +25,8 @@ class SharedResources < Sinatra::Base
     set_max_age :image_proxy, ONE_HOUR * 5
     set_max_age :static, ONE_HOUR * 10
     set_max_age :static_proxy, ONE_HOUR * 5
+    set_max_age :static_digest, ONE_HOUR * 24 * 7
+    set_max_age :static_digest_proxy, ONE_HOUR * 24 * 7
   end
 
   before do
@@ -48,8 +50,17 @@ class SharedResources < Sinatra::Base
     end
   end
 
+  MD5_REGEX = /-[a-fA-F0-9]{32}/
+
   # CSS
   get "/shared/css/*" do |uri|
+    if (md5 = uri.match(MD5_REGEX))
+      cache :static_digest
+      uri.slice!(md5.to_s)
+    else
+      cache :static
+    end
+
     path = shared_dir('css', uri)
     unless File.file?(path)
       path = pegasus_dir('cache', 'css', uri)
@@ -57,7 +68,6 @@ class SharedResources < Sinatra::Base
     end
 
     content_type :css
-    cache :static
     send_file(path)
   end
 
