@@ -87,27 +87,7 @@ class HomeController < ApplicationController
       @recent_courses = current_user.recent_courses_and_scripts.slice(0, 2)
 
       if current_user.teacher?
-        base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
-        @sections = current_user.sections.map do |section|
-          if section.script_id
-            course_name = Script.get_from_cache(section.script_id)[:name]
-            course = data_t_suffix('script.name', course_name, 'title')
-            link_to_course = script_url(section.script_id)
-          else
-            course = ""
-            link_to_course = base_url
-          end
-          {
-            id: section.id,
-            name: section.name,
-            linkToProgress: "#{base_url}#{section.id}/progress",
-            course: course,
-            linkToCourse: link_to_course,
-            numberOfStudents: section.students.length,
-            linkToStudents: "#{base_url}#{section.id}/manage",
-            sectionCode: section.code
-          }
-        end
+        @sections = current_user.sections.map(&:summarize)
       end
     end
   end

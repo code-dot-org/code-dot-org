@@ -291,4 +291,76 @@ class SectionTest < ActiveSupport::TestCase
     section = create :section, script: nil, course: course
     assert_equal script1, section.default_script
   end
+
+  test 'summarize: section with a course assigned' do
+    course = create :course, name: 'somecourse'
+    section = create :section, script: nil, course: course
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: 'somecourse',
+      linkToCourse: '/courses/somecourse',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with a script assigned' do
+    # Use an existing script so that it has a translation
+    script = Script.find_by_name('jigsaw')
+    section = create :section, script: script, course: nil
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: 'Jigsaw',
+      linkToCourse: '/s/jigsaw',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with both a course and a script' do
+    # Use an existing script so that it has a translation
+    script = Script.find_by_name('jigsaw')
+    course = create :course, name: 'somecourse'
+    # If this were a real section, it would actually have a script that is part of
+    # the provided course
+    section = create :section, script: script, course: course
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: 'somecourse',
+      linkToCourse: '/courses/somecourse',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with neither course or script assigned' do
+    section = create :section, script: nil, course: nil
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: '',
+      linkToCourse: '//test.code.org/teacher-dashboard#/sections/',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
 end
