@@ -1,56 +1,65 @@
 import { assert } from '../../../util/configuredChai';
+import _ from 'lodash';
 import reducer, {
   setValidLoginTypes,
   setValidGrades,
   setValidCourses,
   setValidScripts,
   setSections,
+  updateSection,
   assignments,
   currentAssignmentIndex,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
+// Our actual student object are much more complex than this, but really all we
+// care about is how many there are.
+const fakeStudents = num => _.range(num).map(x => ({id: x}));
+
 const sections = [
   {
     id: 11,
-    courseId: 29,
-    scriptId: null,
+    location: "/v2/sections/11",
     name: "brent_section",
-    loginType: "word",
-    grade: null,
-    stageExtras: false,
-    pairingAllowed: true,
-    numStudents: 10,
+    login_type: "picture",
+    grade: "2",
     code: "PMTKVH",
-    assignmentName: "CS Discoveries",
-    assignmentPath: "//localhost-studio.code.org:3000/courses/csd"
+    stage_extras: false,
+    pairing_allowed: true,
+    script: null,
+    course_id: 29,
+    students: fakeStudents(10)
   },
   {
     id: 12,
-    courseId: null,
-    scriptId: 36,
+    location: "/v2/sections/12",
     name: "section2",
-    loginType: "picture",
+    login_type: "picture",
     grade: "11",
-    stageExtras: false,
-    pairingAllowed: true,
-    numStudents: 1,
     code: "DWGMFX",
-    assignmentName: "Course 3",
-    assignmentPath: "//localhost-studio.code.org:3000/s/course3"
+    stage_extras: false,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
+    students: fakeStudents(1)
   },
   {
     id: 307,
-    courseId: null,
-    scriptId: 46,
+    location: "/v2/sections/307",
     name: "plc",
-    loginType: "email",
+    login_type: "email",
     grade: "10",
-    stageExtras: false,
-    pairingAllowed: true,
-    numStudents: 0,
     code: "WGYXTR",
-    assignmentName: "Infinity Play Lab",
-    assignmentPath: "//localhost-studio.code.org:3000/s/infinity"
+    stage_extras: true,
+    pairing_allowed: false,
+    script: {
+      id: 46,
+      name: 'infinity'
+    },
+    course_id: null,
+    students: []
   }
 ];
 
@@ -184,11 +193,58 @@ describe('teacherSectionsRedux', () => {
     it('groups our sections by id', () => {
       const action = setSections(sections);
       const nextState = reducer(initialState, action);
-      assert.deepEqual(nextState.sections, {
-        11: sections[0],
-        12: sections[1],
-        307: sections[2]
+      assert.deepEqual(Object.keys(nextState.sections), ['11', '12', '307']);
+      assert.strictEqual(nextState.sections[11].id, 11);
+      assert.strictEqual(nextState.sections[12].id, 12);
+      assert.strictEqual(nextState.sections[307].id, 307);
+    });
+  });
+
+  describe('updateSection', () => {
+    // create a state that has our sections set, and valid courses/scripts
+    const stateWithSections = reducer({
+      ...initialState,
+      validCourses,
+      validScripts
+    }, setSections(sections));
+
+    const updatedSection = {
+      ...sections[0],
+      // change login type from picture to word
+      login_type: 'word'
+    };
+
+    it('does not change our list of section ids', () => {
+      const action = updateSection(sections[0].id, updatedSection);
+      const state = reducer(stateWithSections, action);
+      assert.strictEqual(state.sectionIds, stateWithSections.sectionIds);
+    });
+
+    it('modifies the given section id', () => {
+      const sectionId = sections[0].id;
+      const action = updateSection(sectionId, updatedSection);
+      const state = reducer(stateWithSections, action);
+
+      assert.strictEqual(stateWithSections.sections[sectionId].loginType, 'picture');
+      assert.strictEqual(state.sections[sectionId].loginType, 'word');
+
+      // Other fields should remain unchanged
+      Object.keys(stateWithSections.sections[sectionId]).forEach(field => {
+        if (field === 'loginType') {
+          return;
+        }
+        assert.strictEqual(state.sections[sectionId][field],
+          stateWithSections.sections[sectionId][field]);
       });
+    });
+
+    it('does not modify other section ids', () => {
+      const action = updateSection(sections[0].id, updatedSection);
+      const state = reducer(stateWithSections, action);
+      const otherSectionId = sections[1].id;
+
+      assert.strictEqual(state.sections[otherSectionId],
+        stateWithSections.sections[otherSectionId]);
     });
   });
 
@@ -214,50 +270,38 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('currentAssignmentIndex', () => {
-    const stateWithSection = section => {
+    const stateWithSection = (id, courseId, scriptId) => {
+      const section = {
+        id: id,
+        course_id: courseId,
+        students: [],
+        // unnecessary fields truncated as they're unneeded here
+      };
+      if (scriptId) {
+        section.script = { id: scriptId };
+      }
       const state1 = reducer(initialState, setValidCourses(validCourses));
       const state2 = reducer(state1, setValidScripts(validScripts));
       return reducer(state2, setSections(sections.concat(section)));
     };
 
     it('returns null if the section has no course/script', () => {
-      const state = stateWithSection({
-        id: 101,
-        courseId: null,
-        scriptId: null,
-        // unnecessary fields truncated as they're unneeded here
-      });
-
+      const state = stateWithSection(101, null, null);
       assert.equal(currentAssignmentIndex(state, 101), null);
     });
 
     it('returns the index of the course if the section is assigned a course', () => {
-      const state = stateWithSection({
-        id: 101,
-        courseId: validCourses[1].id,
-        scriptId: null,
-        // unnecessary fields truncated as they're unneeded here
-      });
+      const state = stateWithSection(101, validCourses[1].id, null);
       assert.equal(currentAssignmentIndex(state, 101), 1);
     });
 
     it('returns the index of the script if the section is assigned a script', () => {
-      const state = stateWithSection({
-        id: 101,
-        courseId: null,
-        scriptId: validScripts[1].id,
-        // unnecessary fields truncated as they're unneeded here
-      });
+      const state = stateWithSection(101, null, validScripts[1].id);
       assert.equal(currentAssignmentIndex(state, 101), validCourses.length + 1);
     });
 
     it('returns the index of the course  if the section is assigned a course and a script', () => {
-      const state = stateWithSection({
-        id: 101,
-        courseId: validCourses[1].id,
-        scriptId: validScripts[1].id,
-        // unnecessary fields truncated as they're unneeded here
-      });
+      const state = stateWithSection(101, validCourses[1].id, validScripts[1].id);
       assert.equal(currentAssignmentIndex(state, 101), 1);
     });
   });
