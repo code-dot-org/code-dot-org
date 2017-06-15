@@ -1,13 +1,13 @@
 import { assert } from '../../../util/configuredChai';
 import _ from 'lodash';
 import reducer, {
+  setStudioUrl,
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
   setSections,
   updateSection,
-  assignments,
-  currentAssignmentIndex,
+  assignmentId
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Our actual student object are much more complex than this, but really all we
@@ -134,6 +134,14 @@ const validCourses = [
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
 
+  describe('setStudioUrl', () => {
+    it('sets our url', () => {
+      const action = setStudioUrl('//test-studio.code.org');
+      const nextState = reducer(initialState, action);
+      assert.equal(nextState.studioUrl, '//test-studio.code.org');
+    });
+  });
+
   describe('setValidLoginTypes', () => {
     it('sets a list of valid login types', () => {
       const action = setValidLoginTypes(['email', 'password', 'picture']);
@@ -151,38 +159,63 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('setValidAssignments', () => {
-    it('sets both valid courses and scripts', () => {
+    const startState = reducer(initialState, setStudioUrl('//test-studio.code.org'));
+
+    it('combines validCourse and scripts into an object keyed by assignId', () => {
       const action = setValidAssignments(validCourses, validScripts);
-      const nextState = reducer(initialState, action);
-      assert.equal(nextState.validCourses.length, 2);
-      assert.equal(nextState.validScripts.length, 6);
+      const nextState = reducer(startState, action);
+      assert.equal(Object.keys(nextState.validAssignments).length,
+        validCourses.length + validScripts.length);
     });
 
-    it('adds courseId/scriptId to courses', () => {
+    it('adds courseId/scriptId/assignId to courses', () => {
       const action = setValidAssignments(validCourses, validScripts);
-      const nextState = reducer(initialState, action);
-      assert.strictEqual(nextState.validCourses[0].courseId, 29);
-      assert.strictEqual(nextState.validCourses[0].scriptId, null);
+      const nextState = reducer(startState, action);
+      const assignId = assignmentId(validCourses[0].id, null);
+      assert.strictEqual(nextState.validAssignments[assignId].courseId, 29);
+      assert.strictEqual(nextState.validAssignments[assignId].scriptId, null);
+      assert.strictEqual(nextState.validAssignments[assignId].assignId, assignId);
     });
 
-    it('adds courseId/scriptId to scripts', () => {
+    it('adds courseId/scriptId/assignId to scripts', () => {
       const action = setValidAssignments(validCourses, validScripts);
-      const nextState = reducer(initialState, action);
-      assert.strictEqual(nextState.validScripts[0].courseId, null);
-      assert.strictEqual(nextState.validScripts[0].scriptId, 1);
+      const nextState = reducer(startState, action);
+      const assignId = assignmentId(null, validScripts[0].id);
+      assert.strictEqual(nextState.validAssignments[assignId].courseId, null);
+      assert.strictEqual(nextState.validAssignments[assignId].scriptId, 1);
+      assert.strictEqual(nextState.validAssignments[assignId].assignId, assignId);
+    });
+
+    it('adds path to courses', () => {
+      const action = setValidAssignments(validCourses, validScripts);
+      const nextState = reducer(startState, action);
+      const assignId = assignmentId(validCourses[0].id, null);
+      assert.strictEqual(nextState.validAssignments[assignId].path,
+        '//test-studio.code.org/courses/csd');
+    });
+
+    it('adds path to scripts', () => {
+      const action = setValidAssignments(validCourses, validScripts);
+      const nextState = reducer(startState, action);
+      const assignId = assignmentId(null, validScripts[0].id);
+      assert.strictEqual(nextState.validAssignments[assignId].path,
+        '//test-studio.code.org/s/20-hour');
     });
   });
 
   describe('setSections', () => {
+    const stateWithUrl = reducer(initialState, setStudioUrl('//test-studio.code.org'));
+    const startState = reducer(stateWithUrl, setValidAssignments(validCourses, validScripts));
+
     it('adds an id for each section', () => {
       const action = setSections(sections);
-      const nextState = reducer(initialState, action);
+      const nextState = reducer(startState, action);
       assert.deepEqual(nextState.sectionIds, [11, 12, 307]);
     });
 
     it('groups our sections by id', () => {
       const action = setSections(sections);
-      const nextState = reducer(initialState, action);
+      const nextState = reducer(startState, action);
       assert.deepEqual(Object.keys(nextState.sections), ['11', '12', '307']);
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
@@ -192,11 +225,9 @@ describe('teacherSectionsRedux', () => {
 
   describe('updateSection', () => {
     // create a state that has our sections set, and valid courses/scripts
-    const stateWithSections = reducer({
-      ...initialState,
-      validCourses,
-      validScripts
-    }, setSections(sections));
+    const stateWithUrl = reducer(initialState, setStudioUrl('//test-studio.code.org'));
+    const stateWithAssigns = reducer(stateWithUrl, setValidAssignments(validCourses, validScripts));
+    const stateWithSections = reducer(stateWithAssigns, setSections(sections));
 
     const updatedSection = {
       ...sections[0],
@@ -235,64 +266,6 @@ describe('teacherSectionsRedux', () => {
 
       assert.strictEqual(state.sections[otherSectionId],
         stateWithSections.sections[otherSectionId]);
-    });
-  });
-
-  describe('assignments', () => {
-    const state = {
-      validCourses,
-      validScripts
-    };
-
-    it('concats courses and scripts', () => {
-      const assignmentList = assignments(state);
-      assert.equal(assignmentList.length, validCourses.length + validScripts.length);
-      assert.equal(assignmentList[0].name, validCourses[0].name);
-      assert.equal(assignmentList[2].name, validScripts[0].name);
-    });
-
-    it('gives each assignment an index', () => {
-      const assignmentList = assignments(state);
-      assignmentList.forEach((assignment, index) => {
-        assert.equal(assignment.index, index);
-      });
-    });
-  });
-
-  describe('currentAssignmentIndex', () => {
-    const stateWithSection = (id, courseId, scriptId) => {
-      const section = {
-        id: id,
-        course_id: courseId,
-        students: [],
-        // unnecessary fields truncated as they're unneeded here
-      };
-      if (scriptId) {
-        section.script = { id: scriptId };
-      }
-      const stateWithAssigns = reducer(initialState,
-        setValidAssignments(validCourses, validScripts));
-      return reducer(stateWithAssigns, setSections(sections.concat(section)));
-    };
-
-    it('returns null if the section has no course/script', () => {
-      const state = stateWithSection(101, null, null);
-      assert.equal(currentAssignmentIndex(state, 101), null);
-    });
-
-    it('returns the index of the course if the section is assigned a course', () => {
-      const state = stateWithSection(101, validCourses[1].id, null);
-      assert.equal(currentAssignmentIndex(state, 101), 1);
-    });
-
-    it('returns the index of the script if the section is assigned a script', () => {
-      const state = stateWithSection(101, null, validScripts[1].id);
-      assert.equal(currentAssignmentIndex(state, 101), validCourses.length + 1);
-    });
-
-    it('returns the index of the course  if the section is assigned a course and a script', () => {
-      const state = stateWithSection(101, validCourses[1].id, validScripts[1].id);
-      assert.equal(currentAssignmentIndex(state, 101), 1);
     });
   });
 });
