@@ -2029,12 +2029,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (hideToolboxIcon && showToolboxHeader) {
     hideToolboxIcon.style.display = 'inline-block';
     const handleTogglePalette = () => {
-      if (this.editor) {
-        this.editor.enablePalette(!this.editor.paletteEnabled);
+      if (this.editor && this.editor.session) {
+        this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display =
-            this.editor.paletteEnabled ? 'none' : 'inline-block';
+            this.editor.session.paletteEnabled ? 'none' : 'inline-block';
         hideToolboxIcon.style.display =
-            !this.editor.paletteEnabled ? 'none' : 'inline-block';
+            !this.editor.session.paletteEnabled ? 'none' : 'inline-block';
         this.resizeToolboxHeader();
       }
     };
