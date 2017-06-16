@@ -275,7 +275,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
     assert workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
 
     workshop.send_exit_surveys
   end
