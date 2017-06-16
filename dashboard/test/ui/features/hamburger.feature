@@ -123,7 +123,8 @@ Feature: Hamburger dropdown
 
   Scenario: Student viewing hamburger dropdown in English on desktop on level
     Given I create a student named "Sally Student"
-    And I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
+    And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
+    Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -139,8 +140,8 @@ Feature: Hamburger dropdown
 
   Scenario: Teacher viewing hamburger dropdown in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
-    And I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
-    Then I wait until I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
+    And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
+    Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -157,8 +158,8 @@ Feature: Hamburger dropdown
 
   Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
     Given I create a student named "Estrella Estudiante"
-    Given I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2/lang/es"
-    Then I wait until I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
+    Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
+    Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
@@ -175,8 +176,8 @@ Feature: Hamburger dropdown
 
   Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on level
     Given I create a teacher named "Pabla Profesora"
-    Given I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2/lang/es"
-    Then I wait until I am on "http://studio.code.org/s/csp1/stage/2/puzzle/2"
+    Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
+    Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
