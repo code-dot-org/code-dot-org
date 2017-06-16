@@ -54,8 +54,9 @@ class LevelSource < ActiveRecord::Base
   end
 
   # WARNING: This deletes user data. It should be called sparingly, with the knowledge that we
-  # cannot tell which users reference this LevelSource.
-  def clear_data
+  # cannot tell which users reference this LevelSource or the corresponding LevelSourceImage.
+  def clear_data_and_image
     update(data: DELETED_BY_THE_SYSTEM)
+    level_source_image.delete_image_or_framed_image if level_source_image
   end
 end
