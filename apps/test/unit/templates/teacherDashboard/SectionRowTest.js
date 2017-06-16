@@ -32,7 +32,8 @@ const defaultProps = {
   validGrades,
   validAssignments: {},
   section,
-  updateSection: () => {}
+  updateSection: () => {},
+  cancelNewSection: () => {},
 };
 
 describe('SectionRow', () => {
