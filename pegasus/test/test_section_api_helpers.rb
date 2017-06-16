@@ -726,6 +726,16 @@ class SectionApiHelperTest < SequelTestCase
             1,
             Dashboard.db[:followers].where(student_user_id: FakeDashboard::STUDENT_OAUTH[:id]).count
           )
+
+          user = Dashboard.db[:users].where(id: FakeDashboard::STUDENT_OAUTH[:id])
+          assert_equal(
+            FakeDashboard::STUDENT_OAUTH[:uid],
+            user[:uid]
+          )
+          assert_equal(
+            FakeDashboard::STUDENT_OAUTH[:name],
+            user[:name]
+          )
         end
       end
 
