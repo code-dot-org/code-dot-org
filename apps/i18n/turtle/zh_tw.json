@@ -90,5 +90,6 @@
   "turnTooltip": "讓小藝術家向左或向右轉一個指定的角度。",
   "turtleVisibilityTooltip": "將藝術家隱藏或顯示。",
   "widthTooltip": "更改畫筆筆跡的寬度。",
-  "wrongColour": "你的圖形的顏色不正確。在這關必須用 %1。"
+  "wrongColour": "你的圖形的顏色不正確。在這關必須用 %1。",
+  "setCharacter": "set character to {character}"
 }

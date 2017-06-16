@@ -173,6 +173,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <details>
 <summary>**It's time to book your travel to TeacherCon. Complete by May 15!**</summary>
   <p>
+  <br>
 [Click here](http://go.pardot.com/webmail/153401/175591515/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
 </p>
 </details>
@@ -180,6 +181,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <details>
 <summary>**Courtesy Reminder: Your travel information for TeacherCon!**</summary>
   <p>
+  <br>
 [Click here](http://go.pardot.com/webmail/153401/177440463/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
 </p>
 </details> 
@@ -187,6 +189,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <details>
 <summary>**Pre-work and important info for your upcoming TeacherCon**</summary>
  <p>
+ <br>
 **CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/192669001/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 </p>
  <p>
@@ -197,6 +200,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <details>
 <summary>**We're one week away from TeacherCon!**</summary>
  <p>
+ <br>
 **CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/201249975/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 </p>
  <p>
@@ -207,6 +211,7 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <details>
 <summary>**We look forward to seeing you at TeacherCon!**</summary>
  <p>
+ <br>
 **CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/204221123/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 </p>
  <p>
