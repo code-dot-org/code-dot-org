@@ -5,6 +5,7 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
+import PrintCertificates from './PrintCertificates';
 import { assignmentId, updateSection, cancelNewSection } from './teacherSectionsRedux';
 
 const styles = {
@@ -195,9 +196,6 @@ class SectionRow extends Component {
     this.setState({editing: false});
   }
 
-  // TODO(bjvanminnen)
-  onClickPrintCerts = () => console.log('print certificates here');
-
   render() {
     const {
       section,
@@ -290,7 +288,7 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`}>
-              {section.numStudents}
+              {section.studentNames.length}
             </a>
           }
         </td>
@@ -300,7 +298,7 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.numStudents === 0}
+              canDelete={section.studentNames.length === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -317,11 +315,7 @@ class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-          <ProgressButton
-            text={"Print Certificates"}
-            onClick={this.onClickPrintCerts}
-            color={ProgressButton.ButtonColor.gray}
-          />
+          <PrintCertificates section={section}/>
         </td>
       </tr>
     );
