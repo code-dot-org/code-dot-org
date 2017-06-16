@@ -721,13 +721,13 @@ class SectionApiHelperTest < SequelTestCase
             FakeDashboard::TEACHER[:id]
           )
 
-          pegasus_section.add_student(FakeDashboard::STUDENT_OAUTH)
+          id = pegasus_section.add_student(FakeDashboard::STUDENT_OAUTH)
           assert_equal(
             1,
-            Dashboard.db[:followers].where(student_user_id: FakeDashboard::STUDENT_OAUTH[:id]).count
+            Dashboard.db[:followers].where(student_user_id: id).count
           )
 
-          user = Dashboard.db[:users].where(id: FakeDashboard::STUDENT_OAUTH[:id])
+          user = Dashboard.db[:users].first(id: id)
           assert_equal(
             FakeDashboard::STUDENT_OAUTH[:uid],
             user[:uid]

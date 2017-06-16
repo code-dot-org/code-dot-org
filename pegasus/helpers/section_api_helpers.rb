@@ -43,8 +43,9 @@ class DashboardStudent
     else
       uid = params[:uid].to_s
       data[:uid] = uid
-      row = Dashboard.db[:users].find_or_create(provider: provider, uid: uid) do |user|
-        user.merge!(data)
+      row = Dashboard.db[:users].first(provider: provider, uid: uid)
+      if row.nil?
+        row = Dashboard.db[:users].insert(data)
       end
     end
     return nil unless row
