@@ -53,6 +53,9 @@ Outputs:
     Value: ami-ee45d7f8
     Export: {Name: !Sub "${AWS::StackName}-ImageId"}
   ImageId2:
+    Description: Image ID (old)
+    Value: ami-14136c02
+    Export: {Name: !Sub "${AWS::StackName}-ImageId2"}
+  AMI:
     Description: Image ID
     Value: {"Fn::GetAtt": [AMI<%=ami%>, ImageId]}
-    Export: {Name: !Sub "${AWS::StackName}-ImageId2"}

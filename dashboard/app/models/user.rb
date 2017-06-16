@@ -124,7 +124,15 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
+  OAUTH_PROVIDERS = %w(
+    clever
+    facebook
+    google_oauth2
+    lti_lti_prod_kids.qwikcamps.com
+    the_school_project
+    twitter
+    windowslive
+  ).freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -332,7 +340,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
+  is_google = proc {|user| user.provider == 'google_oauth2'}
+  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
@@ -1220,23 +1229,6 @@ class User < ActiveRecord::Base
 
   def self.progress_queue
     AsyncProgressHandler.progress_queue
-  end
-
-  # can this user edit their own account?
-  def can_edit_account?
-    # Teachers can always edit their account
-    return true if teacher?
-    # Users with passwords can always edit their account
-    return true if encrypted_password.present?
-    # Oauth users can always edit their account
-    return true if oauth?
-    # Users that don't belong to any sections (i.e. can't be managed by any other
-    # user) can always edit their account
-    return true if sections_as_student.empty?
-    # if you log in only through picture passwords you can't edit your account
-    return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-
-    false
   end
 
   # We restrict certain users from editing their email address, because we

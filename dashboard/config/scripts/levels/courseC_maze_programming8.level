@@ -29,13 +29,12 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can use the step button to look through your code line by line if you get stuck.\",\"hint_id\":\"courseC_maze_programming8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3ec1f373fe6d787f286190cf2c2c33a9/courseC_maze_programming8.mp3\"}]",
     "markdown_instructions": "*\"Keep calm and help me find the bad pig.\"*",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
     "shape_shift": "false",
     "tts_instructions_override": "Keep calm and help me find the bad pig.",
-    "tts_markdown_instructions_override": "Keep calm and help me find the bad pig."
+    "tts_markdown_instructions_override": "Keep calm and help me find the bad pig.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

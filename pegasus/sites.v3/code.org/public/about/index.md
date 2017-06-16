@@ -22,7 +22,7 @@ theme: responsive
 
 <div class="col-50">
 
-Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
+Code.org&reg; is a non-profit dedicated to expanding access to computer science and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
 
 
 </div>
@@ -91,12 +91,12 @@ Our work builds upon [decades of effort, by countless organizations and individu
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 
 ## Our commitment to free curriculum and open source technology
-All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for noncommercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
 <hr/>
 
 ## Code.org Advocacy Coalition
-The [Code.org Advocacy Coalition](/advocacy) is a bipartisan coalition of corporations and nonprofits that work together to help establish federal and state policies to expand and sustain access to K-12 computer science, and to broaden participation and diversity in the field.
+The [Code.org Advocacy Coalition](/advocacy) is a bipartisan coalition of corporations and nonprofits that work together to help establish federal and state policies to expand and sustain access to K-12 computer science and to broaden participation and diversity in the field.
 
 <hr/>
 
