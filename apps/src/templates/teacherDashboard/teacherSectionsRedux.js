@@ -7,7 +7,7 @@ const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
-const CANCEL_NEW_SECTION = 'teacherDashboard/CANCEL_NEW_SECTION';
+const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -24,7 +24,7 @@ export const updateSection = (sectionId, serverSection) => ({
   serverSection
 });
 export const newSection = () => ({ type: NEW_SECTION });
-export const cancelNewSection = sectionId => ({ type: CANCEL_NEW_SECTION, sectionId });
+export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 const initialState = {
   nextTempId: -1,
@@ -160,11 +160,11 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === CANCEL_NEW_SECTION) {
+  if (action.type === REMOVE_SECTION) {
     const sectionId = action.sectionId;
     const section = state.sections[sectionId];
-    if (section.code) {
-      throw new Error('Can not cancel persisted section');
+    if (!section) {
+      throw new Error('section does not exist');
     }
     return {
       ...state,

@@ -8,7 +8,7 @@ import reducer, {
   setSections,
   updateSection,
   newSection,
-  cancelNewSection,
+  removeSection,
   assignmentId,
   sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -347,24 +347,39 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('cancelNewSection', () => {
+  describe('removeSection', () => {
     const startState = reducer(initialState, newSection());
-    it('removes sectionId', () => {
-      const action = cancelNewSection(-1);
+    const stateWithSections = reducer(initialState, setSections(sections));
+
+    it('removes sectionId for non-persisted section', () => {
+      const action = removeSection(-1);
       const state = reducer(startState, action);
       assert.equal(state.sectionIds.includes(-1), false);
     });
 
-    it('removes section', () => {
-      const action = cancelNewSection(-1);
+    it('removes non-persisted section', () => {
+      const action = removeSection(-1);
       const state = reducer(startState, action);
       assert.strictEqual(state.sections[-1], undefined);
     });
 
-    it('doesnt let you cancel an existing section',  () => {
-      const stateWithSections = reducer(initialState, setSections(sections));
+    it('removes sectionid for a persisted section', () => {
+      const sectionId = sections[0].id;
+      const action = removeSection(sectionId);
+      const state = reducer(stateWithSections, action);
+      assert.equal(state.sectionIds.includes(sectionId), false);
+    });
+
+    it('removes a persisted section', () => {
+      const sectionId = sections[0].id;
+      const action = removeSection(sectionId);
+      const state = reducer(stateWithSections, action);
+      assert.strictEqual(state.sections[sectionId], undefined);
+    });
+
+    it('doesnt let you remove a non-existent section',  () => {
       assert.throws(() => {
-        reducer(stateWithSections, cancelNewSection(stateWithSections.sectionIds[0]));
+        reducer(stateWithSections, removeSection(1234));
       });
     });
   });
