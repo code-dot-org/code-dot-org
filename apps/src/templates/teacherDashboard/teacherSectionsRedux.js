@@ -144,7 +144,7 @@ export default function teacherSections(state=initialState, action) {
         [sectionId]: {
           id: sectionId,
           name: '',
-          // TODO - shared enum with server
+          // TODO(bjvanminnen) - shared enum with server
           loginType: 'word',
           grade: '',
           stageExtras: false,
