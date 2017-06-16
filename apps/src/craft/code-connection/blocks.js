@@ -47,6 +47,7 @@ export const install = (blockly, blockInstallOptions) => {
   const agentBlockColor = { h: 90, s: 0.57, v: 0.7 };
   const itemBlockColor = { h: 358, s: 0.54, v: 0.7 };
   const nonAgentBlockColor = { h: 42, s: 0.69, v: 0.76 };
+  const controlBlockColor = { h: 358, s: 0.88, v: 0.94 };
   // Agent related blocks
   blockly.Blocks.craft_move = {
     helpUrl: '',
@@ -385,7 +386,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_wait = {
     helpUrl: '',
     init: function () {
-      this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setHSV(controlBlockColor.h, controlBlockColor.s, controlBlockColor.v);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionWait()))
           .appendTitle(new blockly.FieldTextInput('1000', blockly.FieldTextInput.numberValidator), 'MILLISECONDS')
@@ -586,16 +587,22 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldLabel(i18n.blockActionFill()));
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.from()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE');
+      this.appendValueInput("FROM_X")
+          .setCheck("Number");
+      this.appendValueInput("FROM_Y")
+          .setCheck("Number");
+      this.appendValueInput("FROM_Z")
+          .setCheck("Number");
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE');
+      this.appendValueInput("TO_X")
+          .setCheck("Number");
+      this.appendValueInput("TO_Y")
+          .setCheck("Number");
+      this.appendValueInput("TO_Z")
+          .setCheck("Number");
       this.appendValueInput('ITEM')
           .setCheck(ITEM_TYPE);
       this.setPreviousStatement(true);
@@ -604,16 +611,16 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_fill = function () {
-    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
-    var fromX = this.getTitleValue('FROM_X');
-    var fromY = this.getTitleValue('FROM_Y');
-    var fromZ = this.getTitleValue('FROM_Z');
-    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
-    var toX = this.getTitleValue('TO_X');
-    var toY = this.getTitleValue('TO_Y');
-    var toZ = this.getTitleValue('TO_Z');
+    var fromPositionType = "\"" + this.getTitleValue('FROMPOSITIONTYPE') + "\"";
+    var fromX = Blockly.JavaScript.valueToCode(this, 'FROM_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromY = Blockly.JavaScript.valueToCode(this, 'FROM_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromZ = Blockly.JavaScript.valueToCode(this, 'FROM_Z', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toPositionType = "\"" + this.getTitleValue('TOPOSITIONTYPE') + "\"";
+    var toX = Blockly.JavaScript.valueToCode(this, 'TO_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toY = Blockly.JavaScript.valueToCode(this, 'TO_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toZ = Blockly.JavaScript.valueToCode(this, 'TO_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
-    return `fill('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}',${item}['name'],${item}['data']);`;
+    return `fill('block_id_${this.id}',createBlockPos(${fromX}, ${fromY}, ${fromZ}, ${fromPositionType}),createBlockPos(${toX}, ${toY}, ${toZ}, ${toPositionType}),${item}['name'],${item}['data']);`;
   };
 
   blockly.Blocks.craft_give = {
