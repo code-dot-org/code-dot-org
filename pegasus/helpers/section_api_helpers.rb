@@ -21,7 +21,7 @@ class DashboardStudent
   def self.create(params)
     name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Student'
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
-    provider = valid_provider?(params[:provider]) ? params[:provider] : 'sponsored'
+    provider = supported_provider?(params[:provider]) ? params[:provider] : 'sponsored'
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
 
@@ -37,13 +37,16 @@ class DashboardStudent
         created_at: created_at,
         updated_at: created_at,
         username: UserHelpers.generate_username(Dashboard.db[:users], name)
-      }
+      }.merge(random_secrets)
     if provider == 'sponsored'
-      data.merge!(random_secrets)
+      row = Dashboard.db[:users].insert(data)
     else
-      data[uid] = params[:uid].to_i
+      uid = params[:uid].to_s
+      data[:uid] = uid
+      row = Dashboard.db[:users].find_or_create(provider: provider, uid: uid) do |user|
+        user.merge!(data)
+      end
     end
-    row = Dashboard.db[:users].insert(data)
     return nil unless row
 
     row
@@ -165,9 +168,9 @@ class DashboardStudent
     VALID_GENDERS.include?(gender)
   end
 
-  VALID_PROVIDERS = %w(google_oauth2)
-  def self.valid_provider?(provider)
-    VALID_PROVIDERS.include?(provider)
+  SUPPORTED_PROVIDERS = %w(google_oauth2)
+  def self.supported_provider?(provider)
+    SUPPORTED_PROVIDERS.include?(provider)
   end
 
   def self.age_to_birthday(age)
