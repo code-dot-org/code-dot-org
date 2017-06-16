@@ -5,7 +5,7 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
-import { assignments, currentAssignmentIndex, updateSection } from './teacherSectionsRedux';
+import { assignmentId, updateSection } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -113,8 +113,7 @@ class SectionRow extends Component {
     // redux provided
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validAssignments: PropTypes.arrayOf(assignmentShape).isRequired,
-    currentAssignmentIndex: PropTypes.number,
+    validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     section: sectionShape.isRequired,
     updateSection: PropTypes.func.isRequired,
   };
@@ -178,8 +177,7 @@ class SectionRow extends Component {
       section,
       validLoginTypes,
       validGrades,
-      validAssignments,
-      currentAssignmentIndex
+      validAssignments
     } = this.props;
     const { editing, deleting } = this.state;
 
@@ -236,7 +234,7 @@ class SectionRow extends Component {
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              currentAssignmentIndex={currentAssignmentIndex}
+              currentAssignId={assignmentId(section.courseId, section.scriptId)}
               assignments={validAssignments}
             />
           )}
@@ -305,7 +303,6 @@ export const UnconnectedSectionRow = SectionRow;
 export default connect((state, ownProps) => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
-  validAssignments: assignments(state.teacherSections),
-  currentAssignmentIndex: currentAssignmentIndex(state.teacherSections, ownProps.sectionId),
+  validAssignments: state.teacherSections.validAssignments,
   section: state.teacherSections.sections[ownProps.sectionId],
 }), { updateSection })(SectionRow);
