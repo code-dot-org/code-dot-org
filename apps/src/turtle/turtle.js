@@ -51,6 +51,7 @@ import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode} from '../block_utils';
+import ArtistSkins from './skins';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -338,7 +339,24 @@ Artist.prototype.init = function (config) {
  * orientation.
  */
 Artist.prototype.prepareForRemix = function () {
-  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDocument = blocksDom.ownerDocument;
+  let next, removedBlock = false;
+  let setArtistBlock = blocksDom.querySelector('block[type="turtle_setArtist"]');
+  while (setArtistBlock) {
+    removedBlock = true;
+    next = setArtistBlock.querySelector('next');
+    let parentNext = setArtistBlock.parentNode;
+    let parentBlock = parentNext.parentNode;
+    parentBlock.removeChild(parentNext);
+    if (next) {
+      parentBlock.appendChild(next);
+    }
+    setArtistBlock = blocksDom.querySelector('block[type="turtle_setArtist"]');
+  }
+
+  if (!removedBlock &&
+      REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
         this.level[prop] === undefined ||
             this.level[prop] === group.defaultValues[prop]))) {
     // If all of the level props we need to worry about are undefined or equal
@@ -346,15 +364,13 @@ Artist.prototype.prepareForRemix = function () {
     return Promise.resolve();
   }
 
-  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  const blocksDocument = blocksDom.ownerDocument;
   let whenRun = blocksDom.querySelector('block[type="when_run"]');
   if (!whenRun) {
     whenRun = blocksDocument.createElement('block');
     whenRun.setAttribute('type', 'when_run');
     blocksDom.appendChild(whenRun);
   }
-  let next = whenRun.querySelector('next');
+  next = whenRun.querySelector('next');
   if (next) {
     whenRun.removeChild(next);
   }
@@ -389,6 +405,7 @@ Artist.prototype.prepareForRemix = function () {
   }
 
   whenRun.appendChild(next);
+
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
   return Promise.resolve();
@@ -460,7 +477,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.loadDecorationAnimation();
 
   // Set their initial contents.
-  this.loadTurtle();
+  this.loadTurtle(true /* initializing */);
   this.drawImages();
 
   this.isDrawingAnswer_ = true;
@@ -473,15 +490,22 @@ Artist.prototype.afterInject_ = function (config) {
     this.isPredrawing_ = false;
   }
 
-  // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
-  // enough in this case, so we're actually creating and reusing the object within the document body.
-  var imageContainer = document.createElement('div');
-  imageContainer.style.display='none';
-  document.body.appendChild(imageContainer);
+  this.loadPatterns();
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.width = '400px';
+};
+
+Artist.prototype.loadPatterns = function () {
+  for ( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+    var pattern = this.skin.lineStylePatternOptions[i][1];
+    if (this.skin[pattern] && !this.loadedPathPatterns[pattern]) {
+      var img = new Image();
+      img.src = this.skin[pattern];
+      this.loadedPathPatterns[pattern] = img;
+    }
+  }
 };
 
 /**
@@ -585,10 +609,11 @@ Artist.prototype.drawImages = function () {
 };
 
 /**
- * Initial the turtle image on load.
+ * Initialize the turtle image on load.
  */
-Artist.prototype.loadTurtle = function () {
-  this.avatarImage.onload = _.bind(this.display, this);
+Artist.prototype.loadTurtle = function (initializing = true) {
+  const onloadCallback = initializing ? this.display : this.drawTurtle;
+  this.avatarImage.onload = _.bind(onloadCallback, this);
 
   this.avatarImage.src = this.skin.avatar;
   if (this.skin.id === "anna") {
@@ -620,6 +645,11 @@ var turtleFrame = 0;
  * Draw the turtle image based on this.x, this.y, and this.heading.
  */
 Artist.prototype.drawTurtle = function () {
+  if (!this.visible) {
+    return;
+  }
+  this.drawDecorationAnimation("before");
+
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
@@ -663,6 +693,8 @@ Artist.prototype.drawTurtle = function () {
       Math.round(destX), Math.round(destY),
       destWidth - 0, destHeight);
   }
+
+  this.drawDecorationAnimation("after");
 };
 
 /**
@@ -730,11 +762,7 @@ Artist.prototype.reset = function (ignore) {
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
   this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
-  if (this.skin.id === "anna") {
-    this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    this.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    this.ctxScratch.lineWidth = 2;
-  } else if (this.skin.id === "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
@@ -752,14 +780,7 @@ Artist.prototype.reset = function (ignore) {
   this.ctxFeedback.clearRect(
       0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
-  if (this.skin.id === "anna") {
-    this.setPattern("annaLine");
-  } else if (this.skin.id === "elsa") {
-    this.setPattern("elsaLine");
-  } else {
-    // Reset to empty pattern
-    this.setPattern(null);
-  }
+  this.selectPattern();
 
   // Kill any task.
   if (this.pid) {
@@ -823,11 +844,7 @@ Artist.prototype.display = function () {
   this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
 
   // Draw the turtle.
-  if (this.visible) {
-    this.drawDecorationAnimation("before");
-    this.drawTurtle();
-    this.drawDecorationAnimation("after");
-  }
+  this.drawTurtle();
 };
 
 /**
@@ -1229,6 +1246,14 @@ Artist.prototype.step = function (command, values, options) {
       this.ctxScratch.restore();
 
       break;
+    case 'setArtist':
+      if (this.skin.id !== values[0]) {
+        this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
+        this.loadTurtle(false /* initializing */);
+        this.loadPatterns();
+        this.selectPattern();
+      }
+      break;
   }
 
   return tupleDone;
@@ -1261,6 +1286,17 @@ function scaleToBoundingBox(maxSize, width, height) {
 
   return {width: newWidth, height: newHeight};
 }
+
+Artist.prototype.selectPattern = function () {
+  if (this.skin.id === "anna") {
+    this.setPattern("annaLine");
+  } else if (this.skin.id === "elsa") {
+    this.setPattern("elsaLine");
+  } else {
+    // Reset to empty pattern
+    this.setPattern(null);
+  }
+};
 
 Artist.prototype.setPattern = function (pattern) {
   if (this.loadedPathPatterns[pattern]) {
