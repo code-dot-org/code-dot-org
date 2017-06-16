@@ -42,8 +42,8 @@
     "instructions_important": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `set actor 1 to ??? image` block can be used to add an actor to the stage.\",\"hint_id\":\"courseE_playLab_scaffold1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1cf3941a36a16e8374a8175563175dff/courseE_playLab_scaffold1.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `set actor 1 to ??? image` block can be used to add an actor to the stage.\",\"hint_id\":\"courseE_playLab_scaffold1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1cf3941a36a16e8374a8175563175dff/courseE_playLab_scaffold1.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
