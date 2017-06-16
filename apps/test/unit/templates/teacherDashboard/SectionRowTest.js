@@ -18,7 +18,7 @@ const section = {
   grade: "3",
   stageExtras: false,
   pairingAllowed: true,
-  numStudents: 10,
+  studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
   code: "PMTKVH",
   assignmentName: "CS Discoveries",
   assignmentPath: "//localhost-studio.code.org:3000/courses/csd"
@@ -177,8 +177,7 @@ describe('SectionRow', () => {
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'EditOrDelete');
       assert.equal(col.find('EditOrDelete').props().canDelete, false);
-      assert.equal(col.children().at(1).name(), 'ProgressButton');
-      assert.equal(col.children().at(1).props().text, 'Print Certificates');
+      assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
     describe('EditOrDelete', () => {
@@ -218,8 +217,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'ConfirmSave');
-      assert.equal(col.children().at(1).name(), 'ProgressButton');
-      assert.equal(col.children().at(1).props().text, 'Print Certificates');
+      assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
     describe('ConfirmSave', () => {
@@ -245,8 +243,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'ConfirmDelete');
-      assert.equal(col.children().at(1).name(), 'ProgressButton');
-      assert.equal(col.children().at(1).props().text, 'Print Certificates');
+      assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
     describe('ConfirmDelete', () => {
