@@ -300,7 +300,7 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.numStudents > 0}
+              canDelete={section.numStudents === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
