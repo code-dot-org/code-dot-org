@@ -6,10 +6,6 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  namespace :pd do
-    get 'user_admin/find_user'
-  end
-
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -396,6 +392,8 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
+
+    get 'user_admin/find_user', to: 'user_admin#find_user'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
