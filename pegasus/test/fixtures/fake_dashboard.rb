@@ -38,7 +38,7 @@ module FakeDashboard
   UNUSED_USER_ID = 12345
   STUDENT = {id: 1, name: 'Sally Student', user_type: 'student'}
   STUDENT_SELF = {id: 2, name: 'Self Studying Student', user_type: 'student'}
-  STUDENT_OAUTH = {id: 13, name: 'Test OAuth Student', provider: 'google_oauth2', uid: '1111111111'}
+  STUDENT_OAUTH = {name: 'Test OAuth Student', provider: 'google_oauth2', uid: '1111111111'}
   STUDENT_DELETED = {
     id: 3, name: 'Stricken Student', user_type: 'student', deleted_at: '2016-01-01 12:34:56'
   }
