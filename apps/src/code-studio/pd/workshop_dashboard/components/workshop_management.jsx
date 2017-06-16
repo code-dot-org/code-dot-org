@@ -4,6 +4,7 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
+import Permission from '../../permission';
 
 const WorkshopManagement = React.createClass({
   contextTypes: {
@@ -15,7 +16,7 @@ const WorkshopManagement = React.createClass({
     viewUrl: React.PropTypes.string.isRequired,
     editUrl: React.PropTypes.string,
     onDelete: React.PropTypes.func,
-    surveyUrl: React.PropTypes.string
+    showSurveyUrl: React.PropTypes.bool
   },
 
   getDefaultProps() {
@@ -25,9 +26,22 @@ const WorkshopManagement = React.createClass({
     };
   },
 
+  componentWillMount() {
+    if (this.props.showSurveyUrl) {
+      this.permission = new Permission();
+
+      const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
+      const surveyUrl = this.props.showSurveyUrl && `${surveyBaseUrl}/${this.props.workshopId}`;
+
+      this.setState({
+        surveyUrl: surveyUrl
+      });
+    }
+  },
+
   getInitialState() {
     return {
-      showDeleteConfirmation: false
+      showDeleteConfirmation: false,
     };
   },
 
@@ -56,10 +70,12 @@ const WorkshopManagement = React.createClass({
 
   handleSurveyClick(event) {
     event.preventDefault();
-    this.context.router.push(this.props.surveyUrl);
+    this.context.router.push(this.state.surveyUrl);
   },
 
   renderViewButton() {
+    console.log(this.context.router);
+
     return (
       <Button
         bsSize="xsmall"
@@ -88,14 +104,14 @@ const WorkshopManagement = React.createClass({
   },
 
   renderSurveyButton() {
-    if (!this.props.surveyUrl) {
+    if (!this.props.showSurveyUrl) {
       return null;
     }
 
     return (
       <Button
         bsSize="xsmall"
-        href={this.context.router.createHref(this.props.surveyUrl)}
+        href={this.context.router.createHref(this.state.surveyUrl)}
         onClick={this.handleSurveyClick}
       >
         View Survey Results
