@@ -6,8 +6,7 @@ import SectionTable from './SectionTable';
 import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
-  setValidCourses,
-  setValidScripts,
+  setValidAssignments,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -139,8 +138,7 @@ export default storybook => {
           const store = createStore(combineReducers({teacherSections}));
           store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
-          store.dispatch(setValidCourses(validCourses));
-          store.dispatch(setValidScripts(validScripts));
+          store.dispatch(setValidAssignments(validCourses, validScripts));
           store.dispatch(setSections(sections));
           return (
             <Provider store={store}>
