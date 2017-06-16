@@ -20,8 +20,10 @@ export const assignmentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
+  assignId: PropTypes.string.isRequried,
   category_priority: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   position: PropTypes.number,
   name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 });
