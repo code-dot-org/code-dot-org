@@ -17,7 +17,7 @@ We send events directly to [Redshift] via [Firehose].  See the wrapper classes f
 
 ## Google Analytics
 
-In JavaScript, you can use the function [`trackEvent`][ga-js-code] ([Example][ga-js-example]) to report an event to Google Analytics. For more information, see the [ga.js docs on event tracking][ga-js-docs].
+In JavaScript, you can use the function [`trackEvent`][ga-js-code] ([Example][ga-js-example]) to report an event to [Google Analytics]. For more information, see the [ga.js docs on event tracking][ga-js-docs].
 
 ### Testing your Google Analytics call
 
