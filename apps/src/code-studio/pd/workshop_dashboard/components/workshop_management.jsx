@@ -74,8 +74,6 @@ const WorkshopManagement = React.createClass({
   },
 
   renderViewButton() {
-    console.log(this.context.router);
-
     return (
       <Button
         bsSize="xsmall"
