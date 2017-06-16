@@ -282,6 +282,13 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_throw" />
+  <block type="studio_throwParam">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />
   <block type="studio_setSpriteSpeedParams">
