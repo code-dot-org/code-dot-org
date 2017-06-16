@@ -17,7 +17,7 @@ export const initHamburger = function () {
       // then hide it.
       if (!hamburger.is(e.target)
           && hamburger.has(e.target).length === 0) {
-        hamburger.children('ul').slideUp();
+        hamburger.children('#hamburger-contents').slideUp();
         $('#hamburger-icon').removeClass('active');
       }
     });
