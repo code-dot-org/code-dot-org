@@ -32,6 +32,8 @@ In JavaScript, you can use the function [`trackEvent`][ga-js-code] ([Example][ga
 - In Ruby, use [`NewRelic::Agent.record_custom_event`] and [`NewRelic::Agent.record_metric`] ([Example][new-relic-ruby-example])
 - In JavaScript, we record custom events with [`logToCloud.addPageAction`][new-relic-js-docs] ([Example][new-relic-js-example]).  We haven't set up any custom metrics from JavaScript yet.
 
+Currently, we use New Relic "metrics" in cases where we want to be able to monitor and alert based on the metric's value over time. An example alerting rule based on metrics can be seen here: [FilesApi policy](https://alerts.newrelic.com/accounts/501463/policies/36). We plan to sunset New Relic "custom events" by saving them instead to redshift.
+
 [Firehose]: https://aws.amazon.com/kinesis/firehose/
 [Google Analytics]: https://analytics.google.com/
 [Google Analytics debugger]: https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna
