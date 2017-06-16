@@ -768,6 +768,54 @@ exports.install = function (blockly, blockInstallOptions) {
         valParam + ');\n';
   };
 
+  blockly.Blocks.studio_throwParam = {
+    // Block for throwing a projectile from a sprite.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('SPRITE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.actor());
+      this.appendDummyInput()
+        .appendTitle(msg.throwSprite());
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
+      this.appendDummyInput()
+        .appendTitle('\t');
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.DIR), 'DIR');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.throwTooltip());
+    },
+    DIR: blockly.Blocks.studio_throw.DIR
+  };
+
+  generator.studio_throwParam = function () {
+    // Generate JavaScript for throwing a projectile from a sprite.
+    var allDirections = this.DIR.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var dirParam = this.getTitleValue('DIR');
+    if (dirParam === 'random') {
+      dirParam = 'Studio.random([' + allDirections + '])';
+    }
+    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var valParam = this.getTitleValue('VALUE');
+    if (valParam === 'random') {
+      valParam = 'Studio.random([' + allValues + '])';
+    }
+
+    return 'Studio.throwProjectile(\'block_id_' + this.id +
+        '\', ' +
+        (getSpriteIndex(this) || '0') + ', ' +
+        dirParam + ', ' +
+        valParam + ');\n';
+  };
+
   // Note: this block is for causing an action to happen to a projectile, not
   // to create a projectile
   blockly.Blocks.studio_makeProjectile = {
