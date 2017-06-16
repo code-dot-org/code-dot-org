@@ -53,7 +53,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-09 17:19:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"success_condition\",\"timeout_failure_tick\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 17:22:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 22:51:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 22:52:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 23:00:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-09 17:19:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"success_condition\",\"timeout_failure_tick\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 17:22:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 22:51:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 22:52:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 23:00:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-06-16 00:39:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-16 00:40:36 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-16 00:42:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-16 00:42:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-16 00:43:15 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,15 +63,15 @@
         <block type="when_run">
           <next>
             <block type="studio_ask">
-              <title name="TEXT">What be yer name?</title>
+              <title name="TEXT">What is your name?</title>
               <title name="VAR">name</title>
               <next>
                 <block type="studio_ask">
-                  <title name="TEXT">What be yer age?</title>
+                  <title name="TEXT">What is your age?</title>
                   <title name="VAR">age</title>
                   <next>
                     <block type="studio_ask">
-                      <title name="TEXT">What be yer favorite animal?</title>
+                      <title name="TEXT">What is your favorite animal?</title>
                       <title name="VAR">animal</title>
                       <next>
                         <block type="studio_saySpriteParams" inline="true">
@@ -314,6 +314,47 @@
         <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="text_join_simple" inline="false" inputcount="7">
+          <value name="ADD0">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="variables_get">
+              <title name="VAR">name</title>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="variables_get">
+              <title name="VAR">age</title>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+          <value name="ADD5">
+            <block type="variables_get">
+              <title name="VAR">animal</title>
+            </block>
+          </value>
+          <value name="ADD6">
+            <block type="text">
+              <title name="TEXT">???</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run">
@@ -327,8 +368,8 @@
                   <title name="VAR">age</title>
                   <next>
                     <block type="studio_ask">
-                      <title name="TEXT">What be yer favorite color?</title>
-                      <title name="VAR">color</title>
+                      <title name="TEXT">What be yer favorite animal?</title>
+                      <title name="VAR">animal</title>
                       <next>
                         <block type="studio_saySpriteParams" inline="true">
                           <title name="SPRITE">0</title>
@@ -361,7 +402,7 @@
                               </value>
                               <value name="ADD5">
                                 <block type="variables_get">
-                                  <title name="VAR">color</title>
+                                  <title name="VAR">animal</title>
                                 </block>
                               </value>
                               <value name="ADD6">

@@ -42,6 +42,9 @@ else
   pegasus_workers *= scale_cores
 end
 
+# Account for queue-processor running in daemon
+dashboard_workers -= 1 if node['cdo-apps']['daemon']
+
 node.default['cdo-secrets']['dashboard_workers'] = [1, dashboard_workers].max.to_i
 node.default['cdo-secrets']['pegasus_workers'] = [1, pegasus_workers].max.to_i
 

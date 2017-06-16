@@ -12,8 +12,7 @@ import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsLis
 import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
-  setValidCourses,
-  setValidScripts,
+  setValidAssignments,
   setSections,
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -64,8 +63,7 @@ function renderSectionsTable(sections) {
   store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
-  store.dispatch(setValidCourses(data.valid_courses));
-  store.dispatch(setValidScripts(data.valid_scripts));
+  store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
   store.dispatch(setSections(sections));
 
   ReactDOM.render(

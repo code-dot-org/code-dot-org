@@ -433,8 +433,7 @@ class Pd::Workshop < ActiveRecord::Base
       if account_required_for_attendance?
         next unless enrollment.user
 
-        # Make sure user joined the section
-        next unless section.students.exists?(enrollment.user.id)
+        next unless attending_teachers.include?(enrollment.user)
       end
 
       enrollment.send_exit_survey
