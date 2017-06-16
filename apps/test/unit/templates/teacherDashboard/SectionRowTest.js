@@ -33,7 +33,7 @@ const defaultProps = {
   validAssignments: {},
   section,
   updateSection: () => {},
-  cancelNewSection: () => {},
+  removeSection: () => {},
 };
 
 describe('SectionRow', () => {
