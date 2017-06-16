@@ -14,6 +14,7 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
+import Led from './Led';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -194,6 +195,11 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   analogRead(pin, callback) {
     this.fiveBoard_.analogRead(pin, callback);
+  }
+
+  createLed(pin) {
+    return new Led({board: this.fiveBoard_, pin});
+    // TODO: Should we track these and `stop()` them when destroying the board?
   }
 
   /**
