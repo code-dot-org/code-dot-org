@@ -231,9 +231,14 @@ class HamburgerTest < Minitest::Test
     assert_includes_id contents[:entries], "applab-tutorials"
   end
 
-  def test_hamburger_content_expandable
+  def test_hamburger_content_expandable_en
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:type] == "expander"}
+  end
+
+  def test_hamburger_content_noexpandable_nonen
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
+    refute contents[:entries].find {|e| e[:type] == "expander"}
   end
 
   # Header content tests.
