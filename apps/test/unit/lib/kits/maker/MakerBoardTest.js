@@ -379,5 +379,23 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
         expect(board.boardConnected()).to.be.a('boolean');
       });
     });
+
+    /**
+     * @function
+     * @name MakerBoard#createLed
+     * @param {number} pin
+     * @return {Led} a newly constructed Led component
+     */
+    describe(`createLed(pin)`, () => {
+      beforeEach(() => {
+        return board.connect();
+      });
+
+      it(`returns an Led component`, () => {
+        const retVal = board.createLed(10);
+        expect(retVal).to.be.an('object');
+        // TODO: More detail here?  What can we check for?
+      });
+    });
   });
 }
