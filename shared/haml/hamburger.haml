@@ -10,7 +10,7 @@
         .divider{id: entry[:id], class: entry[:class]}
       - elsif entry[:type] == "expander"
         .hamburger-expandable-item.item{id: entry[:id]}
-          = entry[:title]
+          .text= entry[:title]
           %i.arrow-down{class: "fa fa-caret-down"}
           %i.arrow-up{class: "fa fa-caret-up"}
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
