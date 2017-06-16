@@ -29,8 +29,8 @@ export default class AssignmentSelector extends Component {
   getSelectedAssignment() {
     const assignment = this.props.assignments[this.root.value];
     return {
-      courseId: assignment.courseId,
-      scriptId: assignment.scriptId
+      courseId: assignment ? assignment.courseId : null,
+      scriptId: assignment ? assignment.scriptId : null,
     };
   }
 

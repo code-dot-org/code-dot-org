@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import { setSections } from './teacherSectionsRedux';
+import { setSections, newSection } from './teacherSectionsRedux';
 
 const styles = {
   breadcrumb: {
@@ -18,6 +18,7 @@ const styles = {
 class SectionsPage extends Component {
   static propTypes = {
     numSections: PropTypes.number.isRequired,
+    newSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
   };
 
@@ -35,7 +36,7 @@ class SectionsPage extends Component {
   }
 
   render() {
-    const { numSections } = this.props;
+    const { newSection, numSections } = this.props;
     const { sectionsLoaded } = this.state;
     // TODO: i18n
     return (
@@ -52,7 +53,7 @@ class SectionsPage extends Component {
         <ProgressButton
           text={"New section"}
           style={styles.button}
-          onClick={() => console.log('create new section')}
+          onClick={newSection}
           color={ProgressButton.ButtonColor.gray}
         />
         {sectionsLoaded && numSections === 0 &&
@@ -72,4 +73,4 @@ class SectionsPage extends Component {
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length
-}), { setSections })(SectionsPage);
+}), { newSection, setSections })(SectionsPage);
