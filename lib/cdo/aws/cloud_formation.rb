@@ -72,7 +72,7 @@ module AWS
       def adhoc_image_id
         cfn.describe_stacks(stack_name: 'AMI-adhoc').
           stacks.first.outputs.
-          find{|o| o.output_key == 'AMI'}.
+          find {|o| o.output_key == 'AMI'}.
           output_value
       end
 
