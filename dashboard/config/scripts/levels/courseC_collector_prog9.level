@@ -35,10 +35,14 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time, try saying the steps you need to take outloud first.\",\"hint_id\":\"courseC_collector_prog9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba21b9fbe7adbab189a6a1dcedf9f06b/courseC_collector_prog9.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "tts_instructions_override": "Let's get all of the treasure!",
+    "tts_markdown_instructions_override": "Let's get all of the treasure!",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 17:32:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

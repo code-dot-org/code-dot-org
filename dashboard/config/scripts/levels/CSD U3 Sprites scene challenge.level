@@ -67,10 +67,7 @@
     "markdown_instructions": "# Challenge: Extend your scene\r\n\r\n_Check with your teacher before starting this challenge._\r\n\r\nNow that you've finished your scene, consider adding to it or creating another.",
     "project_template_level_name": "CSD U3 Sprites scene template",
     "display_name": "Challenge: Extend Your Scene",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

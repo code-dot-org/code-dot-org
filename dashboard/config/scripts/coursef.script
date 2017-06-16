@@ -26,6 +26,7 @@ stage 'The Power of Words'
 level 'courseF_unplugged_powerOfWords'
 
 stage 'Ice Age Play Lab'
+level 'elementary_video_pairProgramming'
 skin 'iceage'
 video_key_for_next_level 'iceage_intro'
 level 'blockly:Studio:iceage_hello1'

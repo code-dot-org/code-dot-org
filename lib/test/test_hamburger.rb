@@ -231,30 +231,35 @@ class HamburgerTest < Minitest::Test
     assert_includes_id contents[:entries], "applab-tutorials"
   end
 
-  def test_hamburger_content_expandable
+  def test_hamburger_content_expandable_en
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert contents[:entries].find {|e| e[:type] == "expander"}
+  end
+
+  def test_hamburger_content_noexpandable_nonen
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
+    refute contents[:entries].find {|e| e[:type] == "expander"}
   end
 
   # Header content tests.
 
   def test_header_content_teacher
-    contents = Hamburger.get_header_contents("teacher", "en")
+    contents = Hamburger.get_header_contents({user_type: "teacher", language: "en"})
     assert_includes_id contents, "header-teacher-sections"
   end
 
   def test_header_content_student
-    contents = Hamburger.get_header_contents("student", "en")
+    contents = Hamburger.get_header_contents({user_type: "student", language: "en"})
     assert_includes_id contents, "header-student-projects"
   end
 
   def test_header_content_nobody_en
-    contents = Hamburger.get_header_contents(nil, "en")
+    contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
     assert_includes_id contents, "header-en-about"
   end
 
   def test_header_content_nobody_nonen
-    contents = Hamburger.get_header_contents(nil, "fr")
+    contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
     assert_includes_id contents, "header-signed-out-projects"
   end
 end

@@ -30,8 +30,9 @@ const defaultProps = {
   sectionId: 11,
   validLoginTypes,
   validGrades,
-  validAssignments: [],
+  validAssignments: {},
   section,
+  updateSection: () => {}
 };
 
 describe('SectionRow', () => {

@@ -5,7 +5,7 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
-import { assignments, currentAssignmentIndex } from './teacherSectionsRedux';
+import { assignmentId, updateSection } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -113,9 +113,9 @@ class SectionRow extends Component {
     // redux provided
     validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validAssignments: PropTypes.arrayOf(assignmentShape).isRequired,
-    currentAssignmentIndex: PropTypes.number,
+    validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     section: sectionShape.isRequired,
+    updateSection: PropTypes.func.isRequired,
   };
 
   state = {
@@ -132,8 +132,40 @@ class SectionRow extends Component {
   onClickEdit = () => this.setState({editing: true});
 
   onClickEditSave = () => {
-    console.log('this is where our save will happen');
-    console.log(this.assignment.getSelectedAssignment());
+    const { sectionId, updateSection } = this.props;
+    const assignment = this.assignment.getSelectedAssignment();
+    const data = {
+      id: sectionId,
+      name: this.name.value,
+      login_type: this.loginType.value,
+      grade: this.grade.value,
+      stage_extras: this.stageExtras.checked,
+      pairing_allowed: this.pairingAllowed.checked,
+      course_id: assignment.courseId,
+    };
+
+    // Due in part to it's angular history, this API expects {script: { id }}
+    // instead of script_id
+    if (assignment.scriptId) {
+      data.script = {
+        id: assignment.scriptId
+      };
+    }
+
+    $.ajax({
+      url: `/v2/sections/${sectionId}/update`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(data),
+    }).done(result => {
+      updateSection(sectionId, result);
+      this.setState({
+        editing: false
+      });
+    }).fail((jqXhr, status) => {
+      // TODO(bjvanminnen): figure out how what we want to do in this case
+      console.error(status);
+    });
   }
 
   onClickEditCancel = () => this.setState({editing: false});
@@ -145,8 +177,7 @@ class SectionRow extends Component {
       section,
       validLoginTypes,
       validGrades,
-      validAssignments,
-      currentAssignmentIndex
+      validAssignments
     } = this.props;
     const { editing, deleting } = this.state;
 
@@ -161,13 +192,20 @@ class SectionRow extends Component {
             </span>
           )}
           {editing && (
-            <input placeholder="Section Name" defaultValue={section.name}/>
+            <input
+              ref={element => this.name = element}
+              placeholder="Section Name"
+              defaultValue={section.name}
+            />
           )}
         </td>
         <td style={styles.td}>
           {!editing && section.loginType}
           {editing && (
-            <select defaultValue={section.loginType}>
+            <select
+              defaultValue={section.loginType}
+              ref={element => this.loginType = element}
+            >
               {validLoginTypes.map((type, index) => (
                 <option key={index} value={type}>{type}</option>
               ))}
@@ -177,7 +215,10 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {!editing && section.grade}
           {editing && (
-            <select defaultValue={section.grade}>
+            <select
+              defaultValue={section.grade}
+              ref={element => this.grade = element}
+            >
               {[""].concat(validGrades).map((grade, index) => (
                 <option key={index} value={grade}>{grade}</option>
               ))}
@@ -193,7 +234,7 @@ class SectionRow extends Component {
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              currentAssignmentIndex={currentAssignmentIndex}
+              currentAssignId={assignmentId(section.courseId, section.scriptId)}
               assignments={validAssignments}
             />
           )}
@@ -201,13 +242,21 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
           {editing && (
-            <input type="checkbox" defaultChecked={section.stageExtras}/>
+            <input
+              ref={element => this.stageExtras = element}
+              type="checkbox"
+              defaultChecked={section.stageExtras}
+            />
           )}
         </td>
         <td style={styles.td}>
           {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
           {editing && (
-            <input type="checkbox" defaultChecked={section.pairingAllowed}/>
+            <input
+              ref={element => this.pairingAllowed = element}
+              type="checkbox"
+              defaultChecked={section.pairingAllowed}
+            />
           )}
         </td>
         <td style={styles.td}>
@@ -254,7 +303,6 @@ export const UnconnectedSectionRow = SectionRow;
 export default connect((state, ownProps) => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
-  validAssignments: assignments(state.teacherSections),
-  currentAssignmentIndex: currentAssignmentIndex(state.teacherSections, ownProps.sectionId),
+  validAssignments: state.teacherSections.validAssignments,
   section: state.teacherSections.sections[ownProps.sectionId],
-}))(SectionRow);
+}), { updateSection })(SectionRow);

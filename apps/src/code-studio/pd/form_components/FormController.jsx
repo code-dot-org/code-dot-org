@@ -392,3 +392,7 @@ FormController.propTypes = {
   options: React.PropTypes.object.isRequired,
   requiredFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 };
+
+FormController.defaultProps = {
+  requiredFields: []
+};

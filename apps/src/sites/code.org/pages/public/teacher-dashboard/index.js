@@ -12,9 +12,9 @@ import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsLis
 import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
-  setValidCourses,
-  setValidScripts,
+  setValidAssignments,
   setSections,
+  setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
 import experiments from '@cdo/apps/util/experiments';
@@ -53,15 +53,17 @@ function renderSectionProjects(sectionId) {
 
 /**
  * Render our sections table using React
+ * @param {object[]} sections - Data returned from server about what sections
+ *   this user owns.
  */
 function renderSectionsTable(sections) {
   const element = document.getElementById('sections-table-react');
   registerReducers({teacherSections});
   const store = getStore();
+  store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
-  store.dispatch(setValidCourses(data.valid_courses));
-  store.dispatch(setValidScripts(data.valid_scripts));
+  store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
   store.dispatch(setSections(sections));
 
   ReactDOM.render(
@@ -261,20 +263,7 @@ function main() {
       });
       if (experiments.isEnabled('reactSections')) {
         // TODO - eventually React should own this query
-        renderSectionsTable(sections.map(s => ({
-          id: s.id,
-          name: s.name,
-          loginType: s.login_type,
-          grade: s.grade,
-          stageExtras: s.stage_extras,
-          pairingAllowed: s.pairing_allowed,
-          numStudents: s.students.length,
-          code: s.code,
-          courseId: s.course_id,
-          scriptId: s.script ? s.script.id : null,
-          assignmentName: $scope.getName(s),
-          assignmentPath: $scope.getPath(s)
-        })));
+        renderSectionsTable(sections);
         $scope.hideSectionsTable = true;
       }
       $scope.sectionsLoaded = true;

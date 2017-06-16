@@ -75,7 +75,7 @@ class GallerySwitcher extends Component {
 
   render() {
     return (
-      <div style={styles.container}>
+      <div style={styles.container} id="uitest-gallery-switcher">
         <div
           key={'private'}
           style={[

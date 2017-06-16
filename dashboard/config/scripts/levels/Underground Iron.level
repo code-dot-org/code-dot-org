@@ -36,7 +36,6 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_what_is_iron\",\r\n  \"callout_text\": \"Mine this iron!\",\r\n  \"element_id\": \"#visualization\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 90\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "grid_width": "10",
     "grid_height": "10",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -45,7 +44,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
-    "use_player": "false"
+    "use_player": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

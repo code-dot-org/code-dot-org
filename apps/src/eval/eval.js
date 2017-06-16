@@ -266,7 +266,7 @@ function evalCode(code) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
       Eval: api
-    }, true);
+    }, {legacy: true});
 
     var object = Eval.displayedObject;
     Eval.displayedObject = null;

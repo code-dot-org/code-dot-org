@@ -4434,10 +4434,10 @@ en:
               name: Measuring Student Learning
         csp6-support:
           stage: {}
-          title: Unit 6 Online Professional Learning Course
+          title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+          description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: {}
         csppostap:
           title: CSP Post-AP - Databases and Using Data in Your Apps
@@ -5419,10 +5419,16 @@ en:
               name: Wednesday
             Thursday:
               name: Thursday
-          title: CS Discoveries TeacherCon - Novice Facilitators Reflection
+            Welcome:
+              name: Welcome
+            Congrats:
+              name: Congrats
+            Wrap Up:
+              name: Wrap Up
+          title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: Reflection questions for novice facilitators at TeacherCon.
+          description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:
@@ -5477,3 +5483,19 @@ en:
           description_audience: ''
           description_short: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
           description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
+        cspnovice:
+          stages:
+            Welcome:
+              name: Welcome
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+          title: CS Principles TeacherCon Novice Facilitators
+          description_audience: CSP Novice Facilitators
+          description_short: Reflection questions for novice facilitators at TeacherCon.
+          description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '

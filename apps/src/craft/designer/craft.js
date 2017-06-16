@@ -806,7 +806,7 @@ Craft.executeUserCode = function () {
     };
   });
 
-  CustomMarshalingInterpreter.evalWith(code, evalApiMethods, true);
+  CustomMarshalingInterpreter.evalWith(code, evalApiMethods, {legacy: true});
   appCodeOrgAPI.startAttempt(function (success) {
     $('#soft-buttons').hide();
     if (Craft.level.freePlay) {

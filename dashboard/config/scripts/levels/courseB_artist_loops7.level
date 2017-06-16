@@ -36,10 +36,14 @@
     "ideal": "13",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/8fc2cb860d7b70682430e766bdffee31-image-1478640373096.png\", \"position\": [0,0]}\r\n]",
+    "tts_instructions_override": "Challenge: It's a hidden garden! Let's walk around.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 03:55:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

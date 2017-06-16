@@ -228,9 +228,9 @@ CS Discoveries was written using both the K-12 Framework for Computer Science an
 * Couple Decks of Cards 
 * Aluminum Foil 
 * Containers that can hold water 
-* [Adafruit's Circuit Playground Boards](https://learn.adafruit.com/introducing-circuit-playground/overview) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
+* [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
 
-\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing one [classroom kit](https://www.adafruit.com/product/3399) of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. The subsidized cost of the classroom kit will be less than $100 and further details about ordering kits will be sent to teachers in winter 2017. \***
+\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing or partially subsidizing one classroom kit of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
 
 <!--
 #### Can I pilot the new course?

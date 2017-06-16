@@ -10,6 +10,11 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
 
+  header_contents_options = {}
+  header_contents_options[:user_type] = user_type
+  header_contents_options[:language] = request.language
+  header_contents_options[:loc_prefix] = "header_"
+
   require 'cdo/hamburger'
 
 %link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
@@ -23,7 +28,7 @@
           %a{:href=>CDO.studio_url("/home")}
             %img#logo{:src=>'/images/logo.png'}
         #headerlinks.desktop-feature
-          - Hamburger.get_header_contents(user_type, request.language).each do |entry|
+          - Hamburger.get_header_contents(header_contents_options).each do |entry|
             %a.headerlink{href: entry[:url]}= entry[:title]
 
       #right
