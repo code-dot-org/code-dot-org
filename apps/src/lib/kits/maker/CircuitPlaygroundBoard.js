@@ -40,6 +40,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
+
+    /** @private {Array} List of dynamically-created component controllers. */
+    this.dynamicComponents_ = [];
   }
 
   /**
@@ -111,6 +114,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
+    this.dynamicComponents_.forEach(component => {
+      // For now, these are _always_ Leds.  Complain if they're not.
+      if (component instanceof Led) {
+        component.stop();
+      } else {
+        throw new Error('Added an unsupported component to dynamic components');
+      }
+    });
+    this.dynamicComponents_.length = 0;
+
     if (this.prewiredComponents_) {
       destroyCircuitPlaygroundComponents(this.prewiredComponents_);
     }
@@ -198,8 +211,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   createLed(pin) {
-    return new Led({board: this.fiveBoard_, pin});
-    // TODO: Should we track these and `stop()` them when destroying the board?
+    const newLed = new Led({board: this.fiveBoard_, pin});
+    this.dynamicComponents_.push(newLed);
+    return newLed;
   }
 
   /**
