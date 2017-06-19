@@ -7,7 +7,13 @@ import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
-import { assignmentId, updateSection, removeSection } from './teacherSectionsRedux';
+import {
+  assignmentId,
+  assignmentName,
+  assignmentPath,
+  updateSection,
+  removeSection
+} from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
@@ -119,6 +125,8 @@ class SectionRow extends Component {
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     section: sectionShape.isRequired,
+    assignmentName: PropTypes.string,
+    assignmentPath: PropTypes.string,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
   };
@@ -212,6 +220,8 @@ class SectionRow extends Component {
   render() {
     const {
       section,
+      assignmentName,
+      assignmentPath,
       validLoginTypes,
       validGrades,
       validAssignments
@@ -271,9 +281,9 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.td}>
-          {!editing && section.assignmentName &&
-            <a href={section.assignmentPath}>
-              {section.assignmentName}
+          {!editing && assignmentName &&
+            <a href={assignmentPath}>
+              {assignmentName}
             </a>
           }
           {editing && (
@@ -334,7 +344,10 @@ class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-          <PrintCertificates section={section}/>
+          <PrintCertificates
+            section={section}
+            assignmentName={assignmentName}
+          />
         </td>
       </tr>
     );
@@ -347,5 +360,8 @@ export default connect((state, ownProps) => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
+  // TODO - dont use ownProps
+  assignmentName: assignmentName(state.teacherSections, state.teacherSections.sections[ownProps.sectionId]),
+  assignmentPath: assignmentPath(state.teacherSections, state.teacherSections.sections[ownProps.sectionId]),
   section: state.teacherSections.sections[ownProps.sectionId],
 }), { updateSection, removeSection })(SectionRow);
