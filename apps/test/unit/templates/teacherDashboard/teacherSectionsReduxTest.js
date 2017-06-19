@@ -8,14 +8,17 @@ import reducer, {
   setSections,
   updateSection,
   newSection,
-  cancelNewSection,
+  removeSection,
   assignmentId,
   sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Our actual student object are much more complex than this, but really all we
 // care about is how many there are.
-const fakeStudents = num => _.range(num).map(x => ({id: x}));
+const fakeStudents = num => _.range(num).map(x => ({
+  id: x,
+  name: 'Student' + x,
+}));
 
 const sections = [
   {
@@ -271,8 +274,13 @@ describe('teacherSectionsRedux', () => {
         if (field === 'loginType') {
           return;
         }
-        assert.strictEqual(state.sections[sectionId][field],
-          stateWithSections.sections[sectionId][field]);
+        if (field === 'studentNames') {
+          assert.deepEqual(state.sections[sectionId][field],
+            stateWithSections.sections[sectionId][field]);
+        } else {
+          assert.strictEqual(state.sections[sectionId][field],
+            stateWithSections.sections[sectionId][field]);
+        }
       });
     });
 
@@ -323,7 +331,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        numStudents: 0,
+        studentNames: [],
         code: '',
         courseId: null,
         scriptId: null,
@@ -339,24 +347,39 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('cancelNewSection', () => {
+  describe('removeSection', () => {
     const startState = reducer(initialState, newSection());
-    it('removes sectionId', () => {
-      const action = cancelNewSection(-1);
+    const stateWithSections = reducer(initialState, setSections(sections));
+
+    it('removes sectionId for non-persisted section', () => {
+      const action = removeSection(-1);
       const state = reducer(startState, action);
       assert.equal(state.sectionIds.includes(-1), false);
     });
 
-    it('removes section', () => {
-      const action = cancelNewSection(-1);
+    it('removes non-persisted section', () => {
+      const action = removeSection(-1);
       const state = reducer(startState, action);
       assert.strictEqual(state.sections[-1], undefined);
     });
 
-    it('doesnt let you cancel an existing section',  () => {
-      const stateWithSections = reducer(initialState, setSections(sections));
+    it('removes sectionid for a persisted section', () => {
+      const sectionId = sections[0].id;
+      const action = removeSection(sectionId);
+      const state = reducer(stateWithSections, action);
+      assert.equal(state.sectionIds.includes(sectionId), false);
+    });
+
+    it('removes a persisted section', () => {
+      const sectionId = sections[0].id;
+      const action = removeSection(sectionId);
+      const state = reducer(stateWithSections, action);
+      assert.strictEqual(state.sections[sectionId], undefined);
+    });
+
+    it('doesnt let you remove a non-existent section',  () => {
       assert.throws(() => {
-        reducer(stateWithSections, cancelNewSection(stateWithSections.sectionIds[0]));
+        reducer(stateWithSections, removeSection(1234));
       });
     });
   });
@@ -405,9 +428,12 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(sectionWithScript.scriptId, 1);
     });
 
-    it('maps from students to number of students', () => {
+    it('maps from students to names of students', () => {
       const section = sectionFromServerSection(serverSection, validAssignments);
-      assert.strictEqual(section.numStudents, 10);
+      assert.equal(section.studentNames.length, 10);
+      section.studentNames.forEach(name => {
+        assert.equal(typeof(name), 'string');
+      });
     });
 
     // TODO(bjvanminnen): plan to move assignmentName/assignmentPath out of
