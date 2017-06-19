@@ -4,6 +4,7 @@ import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, newSection } from './teacherSectionsRedux';
+import i18n from '@cdo/locale';
 
 const styles = {
   breadcrumb: {
@@ -38,31 +39,26 @@ class SectionsPage extends Component {
   render() {
     const { newSection, numSections } = this.props;
     const { sectionsLoaded } = this.state;
-    // TODO: i18n
     return (
       <div>
         <div style={styles.breadcrumb}>
           <a href="/teacher-dashboard#/">
-            Teacher home page
+            {i18n.teacherHomePage()}
           </a>
           <span style={{opacity: 0.5}}>{"\u00a0 \u25b6 \u00a0"}</span>
           <b style={{color: color.dark_orange}}>
-            Student Accounts and Progress
+            {i18n.studentAccountsAndProgress()}
           </b>
         </div>
         <ProgressButton
-          text={"New section"}
+          text={i18n.newSection()}
           style={styles.button}
           onClick={newSection}
           color={ProgressButton.ButtonColor.gray}
         />
         {sectionsLoaded && numSections === 0 &&
           <div className="jumbotron">
-            <p>
-              Create new sections and add students to them. Sections help you
-              organize students into smaller groups so you can track their progress
-              and manage their accounts.
-            </p>
+            <p>{i18n.createSectionsInfo()}</p>
           </div>
         }
         {sectionsLoaded && numSections > 0 && <SectionTable/>}
