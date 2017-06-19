@@ -65,12 +65,12 @@ const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: 'Gotham 5r',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
   },
   link: {
     color: color.teal,
-    fontFamily: 'Gotham 5r',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     textDecoration: 'none'
   }
