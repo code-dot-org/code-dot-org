@@ -11,7 +11,7 @@ import {
 } from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
@@ -825,7 +825,7 @@ GameLab.prototype.initInterpreter = function () {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
       this.eventHandlers[eventName] =
-          codegen.createNativeFunctionFromInterpreterFunction(func);
+          CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     }
   }, this);
 

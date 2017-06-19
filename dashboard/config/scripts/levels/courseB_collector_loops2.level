@@ -32,10 +32,13 @@
     "markdown_instructions": "Move Laurel to the treasure, then use the<xml><block type=\"collector_collect\"/></xml>block to pick it up.\r\n\r\nGet all four piles to pass this level.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "tts_markdown_instructions_override": "Move Laurel to the treasure, then use the get treasure block to pick it up.\r\n\r\nGet all four piles to pass this level.",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 03:21:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,4 +1,7 @@
-professional_learning_course 'CS Discoviers TeacherCon Novice'
+professional_learning_course 'CS Discoveries TeacherCon Novice'
+
+stage 'Welcome'
+named_level 'welcome-csd-novice'
 
 stage 'Tuesday'
 level 'csd-tuesday-unit', progression: 'Unit Reflection'
@@ -18,3 +21,6 @@ level 'csd-thursday-unit2', progression: 'Unit Reflection'
 level 'csd-thursday-pedagogy', progression: 'Pedagogy Reflection'
 level 'csd-thursday-pedagogy2', progression: 'Pedagogy Reflection'
 named_level 'csd-thursday-facilitation'
+
+stage 'Wrap Up'
+named_level 'csd-novice-congrats'

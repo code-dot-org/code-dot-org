@@ -259,7 +259,7 @@ module Pd
     end
 
     # Parse and report error
-    # @param method [String]
+    # @param method [Symbol]
     # @param error [RestClient::ExceptionWithResponse]
     # @return [Hash] hash of parsed error details, code: and body:
     def report_error(method, error, notify_honeybadger: true)
@@ -267,7 +267,7 @@ module Pd
       # the body is a different format and can't be parsed, use the raw string
       body_raw = error.response.try(:body)
       body_parsed = JSON.parse(body_raw) rescue body_raw
-      error_details = {code: error.response.code, body: body_parsed}
+      error_details = {code: error.response.try(:code), body: body_parsed}
 
       if notify_honeybadger
         Honeybadger.notify(error,

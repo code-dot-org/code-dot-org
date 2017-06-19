@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import * as codegen from '@cdo/apps/codegen';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '@cdo/apps/redux';
 import AppView from '@cdo/apps/templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
@@ -212,12 +212,18 @@ export const executeUserCode = function (client, code) {
     item: function (blockID, name, data) {
       studioApp().highlight(blockID);
       return { 'name': name, 'data': data };
+    },
+    createBlockPos: function (x, y, z, prefix) {
+      return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
     }
   };
 
   // Register async methods
-  codegen.asyncFunctionList = Object.values(asyncMethods);
-  interpreter = codegen.evalWith(code, Object.assign(asyncMethods, methods));
+  interpreter = CustomMarshalingInterpreter.evalWith(
+    code,
+    {...asyncMethods, ...methods},
+    {asyncFunctionList: Object.values(asyncMethods)}
+  );
 };
 
 export default class Craft {

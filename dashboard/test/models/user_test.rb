@@ -126,38 +126,38 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot create user with panda in name" do
-    user = User.create(@good_data.merge({name: panda_panda}))
+  test "cannot build user with panda in name" do
+    user = build :user, name: panda_panda
     refute user.valid?
     assert user.errors[:name].length == 1
   end
 
-  test "cannot create user with panda in email" do
-    user = User.create(@good_data.merge({email: "#{panda_panda}@panda.com"}))
+  test "cannot build user with panda in email" do
+    user = build :user, email: "#{panda_panda}@panda.org"
     refute user.valid?
     assert user.errors[:email].length == 1
   end
 
-  test "cannot create user with invalid email" do
-    user = User.create(@good_data.merge({email: 'foo@bar@com'}))
+  test "cannot build user with invalid email" do
+    user = build :user, email: 'foo@bar@com'
     refute user.valid?
     assert user.errors[:email].length == 1
   end
 
-  test "cannot create user with no type" do
-    user = User.create(@good_data.merge(user_type: nil))
+  test "cannot build user with no type" do
+    user = build :user, user_type: nil
     refute user.valid?
     assert user.errors[:user_type].length == 1
   end
 
-  test "cannot create user with no name" do
-    user = User.create(@good_data.merge(name: nil))
+  test "cannot build user with no name" do
+    user = build :user, name: nil
     refute user.valid?
     assert user.errors[:name].length == 1
   end
 
-  test "cannot create user with invalid type" do
-    user = User.create(@good_data.merge(user_type: 'xxxxx'))
+  test "cannot build user with invalid type" do
+    user = build :user, user_type: 'invalid_type'
     refute user.valid?
     assert user.errors[:user_type].length == 1
   end
@@ -319,10 +319,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot make a student admin" do
-    student = create :student
+    student = build :student
     student.admin = true
     refute student.valid?
-    refute student.save
 
     assert_raises(ActiveRecord::RecordInvalid) do
       assert_does_not_create(User) do
@@ -365,21 +364,21 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "short name" do
-    assert_equal 'Laurel', create(:user, name: 'Laurel Fan').short_name # first name last name
-    assert_equal 'Winnie', create(:user, name: 'Winnie the Pooh').short_name # middle name
-    assert_equal "D'Andre", create(:user, name: "D'Andre Means").short_name # punctuation ok
-    assert_equal '樊瑞', create(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
-    assert_equal 'Laurel', create(:user, name: 'Laurel').short_name # just one name
-    assert_equal 'some', create(:user, name: '  some whitespace in front  ').short_name # whitespace in front
+    assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
+    assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
+    assert_equal "D'Andre", build(:user, name: "D'Andre Means").short_name # punctuation ok
+    assert_equal '樊瑞', build(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
+    assert_equal 'Laurel', build(:user, name: 'Laurel').short_name # just one name
+    assert_equal 'some', build(:user, name: '  some whitespace in front  ').short_name # whitespace in front
   end
 
   test "initial" do
-    assert_equal 'L', create(:user, name: 'Laurel Fan').initial # first name last name
-    assert_equal 'W', create(:user, name: 'Winnie the Pooh').initial # middle name
-    assert_equal "D", create(:user, name: "D'Andre Means").initial # punctuation ok
-    assert_equal '樊', create(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
-    assert_equal 'L', create(:user, name: 'Laurel').initial # just one name
-    assert_equal 'S', create(:user, name: '  some whitespace in front  ').initial # whitespace in front
+    assert_equal 'L', build(:user, name: 'Laurel Fan').initial # first name last name
+    assert_equal 'W', build(:user, name: 'Winnie the Pooh').initial # middle name
+    assert_equal "D", build(:user, name: "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', build(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', build(:user, name: 'Laurel').initial # just one name
+    assert_equal 'S', build(:user, name: '  some whitespace in front  ').initial # whitespace in front
   end
 
   test "find_for_authentication with nonsense" do
@@ -1047,6 +1046,49 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'teacher_managed_account? is false for teacher' do
+    refute @teacher.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is false for normal student account with hashed email and password' do
+    refute @student.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is false for student account in section with oauth connection' do
+    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
+
+    # join picture section
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    create(:follower, student_user: student_with_oauth, section: picture_section)
+    student_with_oauth.reload
+    refute student_with_oauth.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is true for user account with password but no e-mail' do
+    # These types of accounts happen when teachers created username/password accounts
+    # without e-mails for students (this is no longer allowed)
+    student_with_password_no_email = create(
+      :student,
+      encrypted_password: '123456',
+      email: '',
+      hashed_email: nil,
+      provider: 'manual'
+    )
+    assert student_with_password_no_email.teacher_managed_account?
+  end
+
+  test 'teacher_managed_account? is true for users in picture or word sections without passwords' do
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+
+    [picture_section, word_section].each do |section|
+      student_without_password = create(:student, encrypted_password: '')
+      create(:follower, student_user: student_without_password, section: section)
+      student_without_password.reload
+      assert student_without_password.teacher_managed_account?
+    end
+  end
+
   test 'can_edit_email? is false for user without password' do
     user = create :student
     user.update_attribute(:encrypted_password, '')
@@ -1434,61 +1476,12 @@ class UserTest < ActiveSupport::TestCase
     assert @admin.authorized_teacher?
   end
 
-  test "can_edit_account?" do
-    # a student who only logs in with picture accounts cannot edit their account
-
-    assert create(:student).can_edit_account?
-    assert create(:student, age: 4).can_edit_account?
-    assert create(:teacher).can_edit_account?
-
-    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
-    assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
-    assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
-
-    student_without_password = create(:student, encrypted_password: '')
-
-    # join picture section
-    create(:follower, student_user: student_without_password, section: picture_section)
-    student_without_password.reload
-    refute student_without_password.can_edit_account? # only in a picture section
-
-    # join word section
-    create(:follower, student_user: student_without_password, section: word_section)
-    student_without_password.reload
-    assert student_without_password.can_edit_account? # also in a word section
-
-    student_with_password = create(:student, encrypted_password: 'xxxxxx')
-
-    # join picture section
-    create(:follower, student_user: student_with_password, section: picture_section)
-    student_with_password.reload
-    assert student_with_password.can_edit_account? # only in a picture section
-
-    # join word section
-    create(:follower, student_user: student_with_password, section: word_section)
-    student_with_password.reload
-    assert student_with_password.can_edit_account? # also in a word section
-
-    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
-
-    # join picture section
-    create(:follower, student_user: student_with_oauth, section: picture_section)
-    student_with_oauth.reload
-    assert student_with_oauth.can_edit_account? # only in a picture section
-
-    # join word section
-    create(:follower, student_user: student_with_oauth, section: word_section)
-    student_with_oauth.reload
-    assert student_with_oauth.can_edit_account? # also in a word section
-  end
-
   test 'terms_of_service_version for teacher without version' do
     assert_nil @teacher.terms_version
   end
 
   test 'terms_of_service_version for teacher with version' do
-    teacher = create :teacher, terms_of_service_version: 1
+    teacher = build :teacher, terms_of_service_version: 1
     assert_equal 1, teacher.terms_version
   end
 
@@ -1549,7 +1542,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'revoke_all_permissions revokes admin status' do
-    admin_user = create :admin
+    admin_user = build :admin
     admin_user.revoke_all_permissions
     assert_nil admin_user.reload.admin
   end
@@ -1670,6 +1663,18 @@ class UserTest < ActiveSupport::TestCase
     user_with_invalid_email.name = 'updated name'
     assert user_with_invalid_email.valid?
     assert user_with_invalid_email.save
+  end
+
+  test 'age is required for new users' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :user, birthday: nil
+    end
+    assert_equal 'Validation failed: Age is required', e.message
+  end
+
+  test 'age validation is bypassed for Google OAuth users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'google_oauth2'
   end
 
   test 'users updating the email field must provide a valid email address' do

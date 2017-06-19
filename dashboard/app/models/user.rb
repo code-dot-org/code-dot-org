@@ -124,12 +124,21 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
+  OAUTH_PROVIDERS = %w(
+    clever
+    facebook
+    google_oauth2
+    lti_lti_prod_kids.qwikcamps.com
+    the_school_project
+    twitter
+    windowslive
+  ).freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'.freeze
-  TYPE_TEACHER = 'teacher'.freeze
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = 'student'.freeze,
+    TYPE_TEACHER = 'teacher'.freeze
+  ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -331,7 +340,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
+  is_google = proc {|user| user.provider == 'google_oauth2'}
+  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
@@ -400,22 +410,6 @@ class User < ActiveRecord::Base
 
   def sanitize_and_set_race_data
     return unless races_changed?
-
-    if races.nil?
-      self.urm = nil
-      return
-    end
-
-    races_array = races.split(',')
-    if races_array.include? 'closed_dialog'
-      self.races = 'closed_dialog'
-    end
-    if races_array.length > 5
-      self.races = 'nonsense'
-    end
-    races_array.each do |race|
-      self.races = 'nonsense' unless VALID_RACES.include? race
-    end
     self.urm = urm_from_races
   end
 
@@ -580,6 +574,7 @@ class User < ActiveRecord::Base
       end
       update_column(:urm, urm_from_races)
     end
+    params.delete(:races)
     super
   end
 
@@ -1236,23 +1231,6 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
-  # can this user edit their own account?
-  def can_edit_account?
-    # Teachers can always edit their account
-    return true if teacher?
-    # Users with passwords can always edit their account
-    return true if encrypted_password.present?
-    # Oauth users can always edit their account
-    return true if oauth?
-    # Users that don't belong to any sections (i.e. can't be managed by any other
-    # user) can always edit their account
-    return true if sections_as_student.empty?
-    # if you log in only through picture passwords you can't edit your account
-    return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-
-    false
-  end
-
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1265,6 +1243,15 @@ class User < ActiveRecord::Base
   # picture, or some other unusual method
   def can_edit_password?
     encrypted_password.present?
+  end
+
+  def teacher_managed_account?
+    return false unless student?
+    # We consider the account teacher-managed if the student can't reasonably log in on their own.
+    # In some cases, a student might have a password but no e-mail (from our old UI)
+    return false if encrypted_password.present? && hashed_email.present?
+    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    !oauth?
   end
 
   def section_for_script(script)
