@@ -66,6 +66,13 @@ body {
   font-family: 'Gotham 4r', sans-serif;
 }
 
+.whitefooterlink:visited {
+  color: white;
+  font-size: 14px;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+
 /* styling for the embedded dashboard components... */
 #user_hero #contents {
   margin: 10px 0px;
