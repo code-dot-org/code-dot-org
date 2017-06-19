@@ -3,6 +3,7 @@ require 'cdo/script_constants'
 require 'cdo/user_helpers'
 require_relative '../helper_modules/dashboard'
 require 'cdo/code_generation'
+require 'cdo/shared_constants'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
@@ -213,7 +214,7 @@ class DashboardSection
   end
 
   def self.valid_login_types
-    %w(word picture email)
+    SharedConstants::SECTION_LOGIN_TYPE.to_h.values
   end
 
   def self.valid_login_type?(login_type)

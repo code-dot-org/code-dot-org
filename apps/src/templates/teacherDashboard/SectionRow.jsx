@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
@@ -7,6 +8,7 @@ import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
 import { assignmentId, updateSection, removeSection } from './teacherSectionsRedux';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   sectionName: {
@@ -111,7 +113,9 @@ class SectionRow extends Component {
     sectionId: PropTypes.number.isRequired,
 
     // redux provided
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validLoginTypes: PropTypes.arrayOf(
+      PropTypes.oneOf(_.values(SectionLoginType))
+    ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     section: sectionShape.isRequired,

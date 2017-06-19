@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
@@ -144,8 +145,7 @@ export default function teacherSections(state=initialState, action) {
         [sectionId]: {
           id: sectionId,
           name: '',
-          // TODO(bjvanminnen) - shared enum with server
-          loginType: 'word',
+          loginType: SectionLoginType.word,
           grade: '',
           stageExtras: false,
           pairingAllowed: true,
