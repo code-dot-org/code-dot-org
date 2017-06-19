@@ -28,7 +28,7 @@ social:
   = view :homepage_hero, languageFilter: languageFilter
 
   #petitionexpand{style: "display: none"}
-    %script{:src=>"/js/jquery.placeholder.js"}
+    %script{:defer =>"defer",:src=>"/js/jquery.placeholder.js"}
     - if DB[:cdo_homepage].where(type_s: "petition")
       = view :petition_expand
 
