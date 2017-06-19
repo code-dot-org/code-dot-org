@@ -1,42 +1,61 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
+import _ from 'lodash';
 import SectionTable from './SectionTable';
+import teacherSections, {
+  setValidLoginTypes,
+  setValidGrades,
+  setValidAssignments,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
+const fakeStudents = num => _.range(num).map(x => ({id: x}));
 const sections = [
   {
     id: 11,
+    location: "/v2/sections/11",
     name: "brent_section",
-    loginType: "word",
-    grade: null,
-    stageExtras: false,
-    pairingAllowed: true,
-    numStudents: 10,
+    login_type: "picture",
+    grade: "2",
     code: "PMTKVH",
-    assignmentName: "CS Discoveries",
-    assignmentPath: "//localhost-studio.code.org:3000/courses/csd"
+    stage_extras: false,
+    pairing_allowed: true,
+    script: null,
+    course_id: 29,
+    students: fakeStudents(10)
   },
   {
     id: 12,
+    location: "/v2/sections/12",
     name: "section2",
-    loginType: "picture",
+    login_type: "picture",
     grade: "11",
-    stageExtras: false,
-    pairingAllowed: true,
-    numStudents: 1,
     code: "DWGMFX",
-    assignmentName: "Course 3",
-    assignmentPath: "//localhost-studio.code.org:3000/s/course3"
+    stage_extras: false,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
+    students: fakeStudents(1)
   },
   {
     id: 307,
+    location: "/v2/sections/307",
     name: "plc",
-    loginType: "email",
+    login_type: "email",
     grade: "10",
-    stageExtras: false,
-    pairingAllowed: true,
-    numStudents: 0,
     code: "WGYXTR",
-    assignmentName: "Infinity Play Lab",
-    assignmentPath: "//localhost-studio.code.org:3000/s/infinity"
+    stage_extras: true,
+    pairing_allowed: false,
+    script: {
+      id: 46,
+      name: 'infinity'
+    },
+    course_id: null,
+    students: []
   }
 ];
 
@@ -90,6 +109,22 @@ const validCourses = [
     category: "other",
     position: null,
     category_priority: 3,
+  },
+  {
+    id: 36,
+    name: "Course 3",
+    script_name: "course3",
+    category: "CS Fundamentals",
+    position: 3,
+    category_priority: 0,
+  },
+  {
+    id: 46,
+    name: "Infinity Play Lab",
+    script_name: "infinity",
+    category: "Hour of Code",
+    position: 12,
+    category_priority: 0,
   }
 ];
 
@@ -99,15 +134,18 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'section table',
-        story: () => (
-          <SectionTable
-            validLoginTypes={['word', 'email', 'picture']}
-            validGrades={["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]}
-            validCourses={validCourses}
-            validScripts={validScripts}
-            sections={sections}
-          />
-        )
+        story: () => {
+          const store = createStore(combineReducers({teacherSections}));
+          store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
+          store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
+          store.dispatch(setValidAssignments(validCourses, validScripts));
+          store.dispatch(setSections(sections));
+          return (
+            <Provider store={store}>
+              <SectionTable/>
+            </Provider>
+          );
+        }
       }
     ]);
 };

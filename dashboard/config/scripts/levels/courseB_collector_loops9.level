@@ -27,16 +27,19 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "*\"Help me get the treasure from this deep valley.\"*",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Does this seem too hard?  Break it up into 4 little problems to make it feel easier.\\n\",\"hint_id\":\"courseB_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de3a2f945eebf3c58e7be623a1c5ae78/courseB_collector_loops9.mp3\"}]",
-    "ideal": "12",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Does this seem too hard?  Break it up into 3 little problems to make it feel easier.\\n\",\"hint_id\":\"courseB_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/185839edb26f9285d7b8cd7c8ea399e8/courseB_collector_loops9.mp3\"}]",
+    "ideal": "10",
     "instructions_important": "false",
     "min_collected": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "tts_instructions_override": "Help me get the treasure from this deep valley.",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 03:41:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 03:44:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 03:46:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

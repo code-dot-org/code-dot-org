@@ -87,9 +87,17 @@ export default function (app, levels, options) {
         studioApp().initReadonly(options);
       }
     } else {
-      app.init(options);
-      if (options.onInitialize) {
-        options.onInitialize();
+      const appReady = app.init(options);
+      const next = () => {
+        if (options.onInitialize) {
+          options.onInitialize();
+        }
+      };
+
+      if (appReady && appReady.then) {
+        appReady.then(next);
+      } else {
+        next();
       }
     }
   }

@@ -40,9 +40,10 @@ level 'courseE_farmer_ramp16'
 level 'courseE_bee_ramp17'
 
 stage 'Private and Personal Information'
-level 'coursee-privateandpersonalinformation'
+level 'courseE_unplugged_privateInformation'
 
 stage 'Build a Star Wars Game'
+level 'elementary_video_pairProgramming'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
 skin 'hoc2015'

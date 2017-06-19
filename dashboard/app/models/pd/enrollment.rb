@@ -169,9 +169,15 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
     elsif workshop.local_summer?
       pd_new_workshop_survey_url(code)
+    elsif workshop.teachercon?
+      pd_new_teachercon_survey_url(code)
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
+  end
+
+  def should_send_exit_survey?
+    !workshop.fit_weekend?
   end
 
   def send_exit_survey
@@ -180,6 +186,8 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
       return
     end
+
+    return unless should_send_exit_survey?
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 

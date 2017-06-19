@@ -106,7 +106,6 @@ class User < ActiveRecord::Base
     district_id
     ops_school
     ops_gender
-    races
     using_text_mode
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
@@ -124,12 +123,21 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
+  OAUTH_PROVIDERS = %w(
+    clever
+    facebook
+    google_oauth2
+    lti_lti_prod_kids.qwikcamps.com
+    the_school_project
+    twitter
+    windowslive
+  ).freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'.freeze
-  TYPE_TEACHER = 'teacher'.freeze
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = 'student'.freeze,
+    TYPE_TEACHER = 'teacher'.freeze
+  ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -331,7 +339,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
+  is_google = proc {|user| user.provider == 'google_oauth2'}
+  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
@@ -359,9 +368,7 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    # TODO(asher): Add sanitize_and_set_race_data to the before_save callbacks after completely
-    # eliminating the `races` serialized attribute in all environments.
-    # :sanitize_and_set_race_data,
+    :sanitize_race_data_set_urm,
     :fix_by_user_type
 
   def make_teachers_21
@@ -383,40 +390,40 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  # Returns whether the comma separated list of races represents an under-represented minority user.
-  # @return [Boolean, nil] Whether races_comma_separated represents a URM user.
+  # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
+  # under-represented minority.
   #   - true: Yes, a URM user.
   #   - false: No, not a URM user.
   #   - nil: Don't know, may or may not be a URM user.
-  # TODO(asher): Replace instances of `read_attribute(:races)` with `races` after the serialized
-  # property `races` key has been fully eliminated.
   def urm_from_races
-    races_array = read_attribute(:races).split(',')
-    return nil if races_array.empty?
-    return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    return nil unless races
+
+    races_as_list = races.split ','
+    return nil if races_as_list.empty?
+    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
     false
   end
 
-  def sanitize_and_set_race_data
-    return unless races_changed?
+  def sanitize_race_data_set_urm
+    return true unless races_changed?
 
-    if races.nil?
-      self.urm = nil
-      return
+    if races
+      races_as_list = races.split ','
+      if races_as_list.include? 'closed_dialog'
+        self.races = 'closed_dialog'
+      elsif races_as_list.length > 5
+        self.races = 'nonsense'
+      else
+        races_as_list.each do |race|
+          self.races = 'nonsense' unless VALID_RACES.include? race
+        end
+      end
     end
 
-    races_array = races.split(',')
-    if races_array.include? 'closed_dialog'
-      self.races = 'closed_dialog'
-    end
-    if races_array.length > 5
-      self.races = 'nonsense'
-    end
-    races_array.each do |race|
-      self.races = 'nonsense' unless VALID_RACES.include? race
-    end
     self.urm = urm_from_races
+
+    true
   end
 
   def fix_by_user_type
@@ -568,18 +575,9 @@ class User < ActiveRecord::Base
 
   def update_without_password(params, *options)
     if params[:races]
-      update_columns(races: params[:races].join(','))
-      if params[:races].include? 'closed_dialog'
-        update_columns(races: 'closed_dialog')
-      end
-      if params[:races].length > 5
-        update_columns(races: 'nonsense')
-      end
-      params[:races].each do |race|
-        update_column(races: 'nonsense') unless VALID_RACES.include? race
-      end
-      update_column(:urm, urm_from_races)
+      self.races = params[:races].join ','
     end
+    params.delete(:races)
     super
   end
 
@@ -1236,23 +1234,6 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
-  # can this user edit their own account?
-  def can_edit_account?
-    # Teachers can always edit their account
-    return true if teacher?
-    # Users with passwords can always edit their account
-    return true if encrypted_password.present?
-    # Oauth users can always edit their account
-    return true if oauth?
-    # Users that don't belong to any sections (i.e. can't be managed by any other
-    # user) can always edit their account
-    return true if sections_as_student.empty?
-    # if you log in only through picture passwords you can't edit your account
-    return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-
-    false
-  end
-
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1265,6 +1246,15 @@ class User < ActiveRecord::Base
   # picture, or some other unusual method
   def can_edit_password?
     encrypted_password.present?
+  end
+
+  def teacher_managed_account?
+    return false unless student?
+    # We consider the account teacher-managed if the student can't reasonably log in on their own.
+    # In some cases, a student might have a password but no e-mail (from our old UI)
+    return false if encrypted_password.present? && hashed_email.present?
+    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    !oauth?
   end
 
   def section_for_script(script)

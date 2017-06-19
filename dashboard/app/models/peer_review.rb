@@ -38,6 +38,7 @@ class PeerReview < ActiveRecord::Base
 
   REVIEWS_PER_SUBMISSION = 2
   REVIEWS_FOR_CONSENSUS = 2
+  SYSTEM_DELETED_DATA = ''.freeze
 
   enum status: {
     accepted: 0,
@@ -207,5 +208,9 @@ class PeerReview < ActiveRecord::Base
       submitter: user,
       level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     )
+  end
+
+  def clear_data
+    update(data: SYSTEM_DELETED_DATA)
   end
 end

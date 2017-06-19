@@ -21,7 +21,11 @@ content-type: text/ng-template
             %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
             %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "confirm_save()" }= I18n.t('dashboard_sections_assign_activity')
 
-%div
+
+/sections-page is rendered by React
+#sections-page{'ng-init' => '$emit("section-page-rendered");'}
+
+#sections-page-angular
   %br/
   %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
@@ -34,8 +38,6 @@ content-type: text/ng-template
 
   %div.jumbotron{'ng-show' => 'sectionsLoaded && sections.length <= 0'}
     %p= I18n.t('dashboard_sections_jumbotron_instruction')
-
-  #sections-table-react
 
   %table{style: "width:100%; table-layout:auto;", 'ng-show' => 'sections.length > 0 && !hideSectionsTable'}
     %colgroup
@@ -116,42 +118,42 @@ content-type: text/ng-template
           %input{:type=>'hidden', :name=>'script', :value=>'{{section.script.name}}'}
           %input.btn.btn-white{type:"submit", value: I18n.t('dashboard_action_print_certificates'), style:"margin-top:10px; width:100%"}
 
-  %br/
-  %br/
+%br/
+%br/
 
-  %p{style: "font-size:18px; color: #7665a0;"}= I18n.t('dashboard_sections_table_secret')
-  %p= I18n.t('dashboard_sections_login_type_explanation')
+%p{style: "font-size:18px; color: #7665a0;"}= I18n.t('dashboard_sections_table_secret')
+%p= I18n.t('dashboard_sections_login_type_explanation')
 
-  %br/
+%br/
 
-  %div
-    %table{style: "width:100%; table-layout:fixed;"}
-      %tr
-        %th.manage-th
-        %th.manage-th= I18n.t('dashboard_login_picture')
-        %th.manage-th= I18n.t('dashboard_login_word')
-        %th.manage-th= I18n.t('dashboard_login_none')
-      %tr
-        %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_email_question')
-        %td= I18n.t('dashboard_action_delete_no')
-        %td= I18n.t('dashboard_action_delete_no')
-        %td= I18n.t('dashboard_action_delete_yes')
-      %tr
-        %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_account_creation_question')
-        %td= I18n.t('dashboard_teacher')
-        %td= I18n.t('dashboard_teacher')
-        %td= I18n.t('dashboard_student')
-      %tr
-        %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_password_question')
-        %td= I18n.t('dashboard_sections_picture_account_creation')
-        %td= I18n.t('dashboard_sections_word_account_creation')
-        %td= I18n.t('dashboard_sections_password_account_creation')
-      %tr
-        %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_sign_in_question')
-        %td= I18n.t('dashboard_sections_sign_in_unique')
-        %td= I18n.t('dashboard_sections_sign_in_unique')
-        %td= I18n.t('dashboard_sections_sign_in_main')
+%div
+  %table{style: "width:100%; table-layout:fixed;"}
+    %tr
+      %th.manage-th
+      %th.manage-th= I18n.t('dashboard_login_picture')
+      %th.manage-th= I18n.t('dashboard_login_word')
+      %th.manage-th= I18n.t('dashboard_login_none')
+    %tr
+      %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_email_question')
+      %td= I18n.t('dashboard_action_delete_no')
+      %td= I18n.t('dashboard_action_delete_no')
+      %td= I18n.t('dashboard_action_delete_yes')
+    %tr
+      %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_account_creation_question')
+      %td= I18n.t('dashboard_teacher')
+      %td= I18n.t('dashboard_teacher')
+      %td= I18n.t('dashboard_student')
+    %tr
+      %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_password_question')
+      %td= I18n.t('dashboard_sections_picture_account_creation')
+      %td= I18n.t('dashboard_sections_word_account_creation')
+      %td= I18n.t('dashboard_sections_password_account_creation')
+    %tr
+      %td{style: "font-family: 'Gotham 7r', sans-serif;"}= I18n.t('dashboard_sections_sign_in_question')
+      %td= I18n.t('dashboard_sections_sign_in_unique')
+      %td= I18n.t('dashboard_sections_sign_in_unique')
+      %td= I18n.t('dashboard_sections_sign_in_main')
 
-  %br
-    %p= I18n.t('dashboard_privacy_document_link')
-  %br/
+%br
+  %p= I18n.t('dashboard_privacy_document_link')
+%br/

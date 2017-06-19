@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
-import { sectionShape, assignmentShape } from './shapes';
 
 const styles = {
   table: {
@@ -32,17 +32,25 @@ const styles = {
   }
 };
 
-export default class SectionTable extends Component {
+/**
+ * This is a component that shows information about the sections that a teacher
+ * owns, and allows for editing them.
+ * It shows some of the same information as the SectionsTable used on the teacher
+ * homepage. However, for historical reasons it unfortunately has a somewhat
+ * different set/shape of input data. This component gets its data from
+ * section_api_helpers in pegasus via an AJAX call, whereas that component gets
+ * its data from section.summarize on page load.
+ * Both ultimately source data from the dashboard db.
+ * Long term it would be ideal if section_api_helpers went away and both components
+ * used dashboard.
+ */
+class SectionTable extends Component {
   static propTypes = {
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
-    sections: PropTypes.arrayOf(sectionShape).isRequired
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   render() {
-    const { sections, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
+    const { sectionIds } = this.props;
 
     // TODO: i18n
     return (
@@ -87,19 +95,20 @@ export default class SectionTable extends Component {
             <th style={styles.headerRow}>
             </th>
           </tr>
-          {sections.map((s, index) => (
+          {sectionIds.map((sid, index) => (
             <SectionRow
-              key={index}
-              validLoginTypes={validLoginTypes}
-              validGrades={validGrades}
-              validCourses={validCourses}
-              validScripts={validScripts}
-              section={s}
+              key={sid}
+              sectionId={sid}
             />
           ))}
         </tbody>
-
       </table>
     );
   }
 }
+
+export const UnconnectedSectionTable = SectionTable;
+
+export default connect(state => ({
+  sectionIds: state.teacherSections.sectionIds
+}))(SectionTable);

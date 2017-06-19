@@ -1,5 +1,5 @@
 var msg = require('./locale');
-var codegen = require('../codegen');
+var codegen = require('../lib/tools/jsinterpreter/codegen');
 var blockUtils = require('../block_utils');
 
 exports.install = function (blockly, blockInstallOptions) {

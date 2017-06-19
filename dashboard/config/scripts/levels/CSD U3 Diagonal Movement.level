@@ -66,8 +66,8 @@
       "divideOperator": null
     },
     "disable_if_else_editing": "false",
-    "show_debug_watch": "true",
-    "expand_debugger": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
@@ -80,6 +80,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:29:58 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

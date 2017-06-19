@@ -9,7 +9,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var bounceMsg = require('./locale');
 var tiles = require('./tiles');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -1053,7 +1053,7 @@ Bounce.execute = function () {
   studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp().reset(false);
 
-  codegen.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
     Bounce[hook.name] = hook.func;
   });
 
