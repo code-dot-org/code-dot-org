@@ -1,7 +1,8 @@
 ---
 title: Hour of Code event
 ---
+-hoc_year = DCDO.get("hoc_year", 2017)
 -id = File.basename(request.path_info)
--pass unless form = Form2.from_row(DB[:forms].where(kind:'HocSignup2017', id:id).first)
+-pass unless form = Form2.from_row(DB[:forms].where(kind:"HocSignup#{hoc_year}", id:id).first)
 
 %h1= id

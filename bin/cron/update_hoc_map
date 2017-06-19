@@ -23,7 +23,9 @@ DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
 TABLE_ID = CDO.hoc_map_table_id
 
-all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2017')
+hoc_year = DCDO.get("hoc_year", 2017)
+
+all_forms = DB_READONLY[:forms].where(kind: "HocSignup#{hoc_year}")
 
 file = Tempfile.new(['data', '.csv'])
 
