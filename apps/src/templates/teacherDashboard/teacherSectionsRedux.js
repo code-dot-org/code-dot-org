@@ -6,6 +6,8 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
+const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
+const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -21,8 +23,11 @@ export const updateSection = (sectionId, serverSection) => ({
   sectionId,
   serverSection
 });
+export const newSection = () => ({ type: NEW_SECTION });
+export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 const initialState = {
+  nextTempId: -1,
   studioUrl: '',
   validLoginTypes: [],
   validGrades: [],
@@ -99,16 +104,72 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === UPDATE_SECTION) {
     const section = sectionFromServerSection(action.serverSection,
       state.validAssignments);
+    const oldSectionId = action.sectionId;
+    const newSection = section.id !== oldSectionId;
 
+    // When updating a persisted section, oldSectionId will be identical to
+    // section.id. However, if this is a newly persisted section, oldSectionId
+    // will represent our temporary section. In that case, we want to delete that
+    // section, and replace it with our new one.
     return {
       ...state,
+      sectionIds: newSection ?
+        // replace oldSectionId with new section.id
+        state.sectionIds.map(id => id === oldSectionId ? section.id : id) :
+        state.sectionIds,
       sections: {
-        ...state.sections,
-        [action.sectionId]: {
-          ...state.sections[action.sectionId],
+        // When updating a persisted section, omitting oldSectionId is still fine
+        // because we're adding it back on the next line
+        ..._.omit(state.sections, oldSectionId),
+        [section.id]: {
+          ...state.sections[section.id],
           ...section
         }
       }
+    };
+  }
+
+  if (action.type === NEW_SECTION) {
+    // create an id that we can use in our local store that will be replaced
+    // once persisted
+    const sectionId = state.nextTempId;
+    return {
+      ...state,
+      // use negative numbers for our temp ids so that we dont need to worry about
+      // conflicting with server ids
+      nextTempId: state.nextTempId - 1,
+      sectionIds: [sectionId, ...state.sectionIds],
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          id: sectionId,
+          name: '',
+          // TODO(bjvanminnen) - shared enum with server
+          loginType: 'word',
+          grade: '',
+          stageExtras: false,
+          pairingAllowed: true,
+          studentNames: [],
+          code: '',
+          courseId: null,
+          scriptId: null,
+          assignmentName: '',
+          assignmentPath: '',
+        }
+      }
+    };
+  }
+
+  if (action.type === REMOVE_SECTION) {
+    const sectionId = action.sectionId;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+    return {
+      ...state,
+      sectionIds: _.without(state.sectionIds, sectionId),
+      sections: _.omit(state.sections, sectionId)
     };
   }
 
@@ -139,7 +200,7 @@ export const sectionFromServerSection = (serverSection, validAssignments) => {
     grade: serverSection.grade,
     stageExtras: serverSection.stage_extras,
     pairingAllowed: serverSection.pairing_allowed,
-    numStudents: serverSection.students.length,
+    studentNames: serverSection.students.map(student => student.name),
     code: serverSection.code,
     courseId: serverSection.course_id,
     scriptId: scriptId,

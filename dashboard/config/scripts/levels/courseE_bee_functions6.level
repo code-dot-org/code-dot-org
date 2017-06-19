@@ -34,10 +34,10 @@
     "fast_get_nectar_animation": "true",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\\n\\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)\",\"hint_id\":\"courseE_bee_functions6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/43ab5adbae7c4b5dd5eb9c3746439283/courseE_bee_functions6.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

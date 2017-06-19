@@ -1125,5 +1125,26 @@ exports.install = function (blockly, blockInstallOptions) {
         '", \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.turtle_setArtist = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      var values = (skin.artistOptions || ['default'])
+        .map(artist => [
+          msg.setCharacter({character: artist.charAt(0).toUpperCase() + artist.slice(1)}),
+          artist
+        ]);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(values), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    },
+  };
+
+  generator.turtle_setArtist = function () {
+    return `Turtle.setArtist('${this.getTitleValue('VALUE')}',
+      'block_id_${this.id}');\n`;
+  };
+
   customLevelBlocks.install(blockly, generator, gensym);
 };
