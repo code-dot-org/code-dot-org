@@ -12,7 +12,7 @@ import runState from '@cdo/apps/redux/runState';
 import {registerReducers} from '@cdo/apps/redux';
 import {load as loadSkin} from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
-import * as codegen from '@cdo/apps/codegen';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
@@ -430,21 +430,36 @@ describe('studio', function () {
   });
 
   describe("queueCallback method", () => {
+    let cb, interpreterFunc, someHook;
     beforeEach(() => {
-      Studio.interpreter = codegen.evalWithEvents({}, {}, '').interpreter;
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
+        {
+          someGlobal: 1,
+        }, {
+          someHook: {code: 'return someGlobal;'},
+        },
+        'function someInterpreterFunc(a) { someGlobal = a; }'
+      );
+      someHook = hooks.find(hook => hook.name === 'someHook');
+      Studio.interpreter = interpreter;
       Studio.eventHandlers = [];
       Studio.setLevel({});
+      cb = sinon.spy();
+      interpreterFunc = Studio.interpreter.createNativeFunction(Studio.interpreter.makeNativeMemberFunction({
+        nativeFunc: cb,
+      }));
     });
 
     it("will call the given interpreter callback function with the given parameters", () => {
-      const cb = sinon.spy();
-      const interpreterFunc = Studio.interpreter.createNativeFunction(codegen.makeNativeMemberFunction({
-        nativeFunc: cb,
-        interpreterFunc: Studio.interpreter,
-      }));
       Studio.queueCallback(interpreterFunc, [1, 2, 3]);
       expect(cb).to.have.been.calledOnce;
       expect(cb).to.have.been.calledWith(1,2,3);
+    });
+
+    it("will not mess up any async functions that might be in the process of executing (regression test)", () => {
+      expect(someHook.func()).to.equal(1);
+      Studio.queueCallback(Studio.interpreter.getValueFromScope('someInterpreterFunc'), [5]);
+      expect(someHook.func()).to.equal(5);
     });
   });
 });

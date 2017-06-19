@@ -23,7 +23,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10 PM.png\" style=\"float:right;height:150px\">\r\n# Rectangle Size\r\n\r\nThese `rect` blocks have two more parameters that you can use to control the size.\r\n\r\n# Do This\r\n\r\n* Look at the code and try to figure out how the last two inputs in the `rect` block work.\r\n* Change the numbers in the second `rect` block to make red rectangle longer than the blue one.\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10 PM.png\" style=\"float:right;height:150px\">\r\n# Rectangle Size\r\n\r\nThese `rect` blocks have two more parameters that you can use to control the size.\r\n\r\n# Do This\r\n\r\n* Look at the code and try to figure out how the last two inputs in `rect` work.\r\n* Change the numbers in the second `rect` to make red rectangle longer than the blue one.\r\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_blocks": "noStroke();\r\n\r\nfill(\"blue\");\r\nrect(100,100,100,200);\r\n\r\nfill(\"red\");\r\nrect(250,100,100,150);",
@@ -60,6 +60,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 23:31:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:15 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

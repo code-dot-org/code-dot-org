@@ -49,6 +49,7 @@ We are building a growing library of educational videos available for re-use by 
 <div style="clear: both;"></div>
 
 ## How the internet works
+<a name="Howtheinternetworks"></a>
 
 <div class="col-50" style="float: left; padding: 10px;">
 

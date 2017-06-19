@@ -343,6 +343,7 @@ Dashboard::Application.routes.draw do
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
       post :workshop_surveys, to: 'workshop_surveys#create'
+      post :teachercon_surveys, to: 'teachercon_surveys#create'
     end
   end
 
@@ -380,6 +381,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
+    get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'

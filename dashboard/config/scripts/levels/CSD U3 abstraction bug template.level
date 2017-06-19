@@ -37,6 +37,7 @@
     "markdown_instructions": "# velocityY\r\n\r\n`velocityY` is like `velocityX`, but it moves things up and down.  Can you use it to make the dragonfly walk up the screen?\r\n\r\n#Do This\r\n\r\nUse `velocityY` to make the sprite go up the screen.\r\n\r\n*Hint: Should velocity by positive or negative to move the sprite up the screen?*",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

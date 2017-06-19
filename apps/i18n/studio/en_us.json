@@ -783,6 +783,8 @@
   "whenSpriteCollidedWithAnyActor": "touches any actor",
   "whenSpriteCollidedWithAnyEdge": "touches any edge",
   "whenSpriteCollidedWithAnyProjectile": "touches any projectile",
+  "whenSpriteCollidedWithAnyGoal": "touches a flag",
+  "whenSpriteCollidedWithAnyObstacle": "touches an obstacle",
   "whenSpriteCollidedWithAnything": "touches anything",
   "whenSpriteCollidedWithN": "touches actor {spriteIndex}",
   "whenSpriteCollidedWithAirplane": "touches airplane",

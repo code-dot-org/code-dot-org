@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
-  attributes :id, :status, :dates, :organizer_name, :organizer_email, :location_address,
+  attributes :id, :status, :start_date, :sessions, :organizer_name, :organizer_email, :location_address,
     :location_name, :on_map, :funded, :course, :subject, :enrollment_url,
     :enrolled_teacher_count, :capacity, :facilitators, :notes
 
@@ -7,7 +7,11 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
     object.state
   end
 
-  def dates
+  def start_date
+    object.workshop_starting_date.to_date.iso8601
+  end
+
+  def sessions
     object.sessions.map(&:formatted_date_with_start_and_end_times).join("\n")
   end
 

@@ -77,7 +77,7 @@ stage 'Your Digital Footprint'
 level 'DigitalFootprint'
 
 stage 'Programming: My Robotic Friends'
-level 'courseB_external_MRF'
+level 'courseB_unplugged_MRF'
 
 stage 'Programming in Maze'
 level 'courseAB_video_NewIntro'
@@ -98,7 +98,7 @@ bonus 'courseB_maze_seq_challenge1', challenge: true
 bonus 'courseB_maze_seq_challenge2', challenge: true
 
 stage 'Loops: My Loopy Robotic Friends'
-level 'courseB_external_loopMRF'
+level 'courseB_unplugged_loopyMRF'
 
 stage 'Loops in Collector'
 level 'courseAB_video_collector'

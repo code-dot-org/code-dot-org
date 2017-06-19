@@ -10,6 +10,36 @@ const announcements = [
   }
 ];
 
+const sections = [
+  {
+    name: "Algebra Period 1",
+    linkToProgress: "to Progress tab",
+    assignedTitle: "CS in Algebra",
+    linkToAssigned: "to Course",
+    numberOfStudents: 14,
+    linkToStudents: "to Manage Students tab",
+    sectionCode: "ABCDEF"
+  },
+  {
+    name: "Algebra Period 2",
+    linkToProgress: "to Progress tab",
+    assignedTitle: "CS in Algebra",
+    linkToAssigned: "to Course",
+    numberOfStudents: 19,
+    linkToStudents: "to Manage Students tab",
+    sectionCode: "EEB206"
+  },
+  {
+    name: "Period 3",
+    linkToProgress: "to Progress tab",
+    assignedTitle: "Course 4",
+    linkToAssigned: "to Course",
+    numberOfStudents: 22,
+    linkToStudents: "to Manage Students tab",
+    sectionCode: "HPRWHG"
+  },
+];
+
 const courses = [
   {
     name: "Play Lab",
@@ -27,36 +57,6 @@ const courses = [
   },
 ];
 
-const sections = [
-  {
-    name: "Algebra Period 1",
-    linkToProgress: "to Progress tab",
-    course: "CS in Algebra",
-    linkToCourse: "to Course",
-    numberOfStudents: 14,
-    linkToStudents: "to Manage Students tab",
-    sectionCode: "ABCDEF"
-  },
-  {
-    name: "Algebra Period 2",
-    linkToProgress: "to Progress tab",
-    course: "CS in Algebra",
-    linkToCourse: "to Course",
-    numberOfStudents: 19,
-    linkToStudents: "to Manage Students tab",
-    sectionCode: "EEB206"
-  },
-  {
-    name: "Period 3",
-    linkToProgress: "to Progress tab",
-    course: "Course 4",
-    linkToCourse: "to Course",
-    numberOfStudents: 22,
-    linkToStudents: "to Manage Students tab",
-    sectionCode: "HPRWHG"
-  },
-];
-
 
 export default storybook => {
   return storybook
@@ -68,8 +68,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={[]}
             sections={[]}
+            courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
@@ -80,8 +80,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={courses}
             sections={[]}
+            courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
@@ -92,8 +92,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={[]}
             sections={sections}
+            courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )
@@ -104,8 +104,8 @@ export default storybook => {
         story: () => (
           <TeacherHomepage
             announcements={announcements}
-            courses={courses}
             sections={sections}
+            courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
           />
         )

@@ -68,7 +68,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "ewgc2jQeZHcRvtDoKZmz11nw/buQ6JgCZCUQKp1UjVqfRAwPBtmEgOPBnPOX\nZa8h\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

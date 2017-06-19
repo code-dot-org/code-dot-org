@@ -55,7 +55,7 @@
     "pause_animations_by_default": "false",
     "encrypted_examples": "dYovxVeM/5CaA7fBWShAKzTFS3BF2CD4O4vIif32/m6at17f7egCPjDVufYp\nvSvK\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "contained_level_names": null

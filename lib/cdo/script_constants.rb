@@ -17,8 +17,8 @@ module ScriptConstants
   # a category will be the order in which they appear in the dropdown.
   CATEGORIES = {
     full_course: [
+      CSP = 'csp'.freeze,
       CSD = 'csd'.freeze,
-      CSP = 'csp'.freeze
     ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.

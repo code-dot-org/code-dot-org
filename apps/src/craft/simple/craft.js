@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
-var codegen = require('../../codegen');
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var GameController = require('./game/GameController');
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
@@ -618,7 +618,7 @@ Craft.executeUserCode = function () {
   }
 
   code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  codegen.evalWith(code, {
+  CustomMarshalingInterpreter.evalWith(code, {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
     },
@@ -676,7 +676,7 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.placeInFront(studioApp().highlight.bind(studioApp(), blockID),
         blockType);
     }
-  }, true);
+  }, {legacy: true});
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
     if (Craft.level.freePlay) {
       return;

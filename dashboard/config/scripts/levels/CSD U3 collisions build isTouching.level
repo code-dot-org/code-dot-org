@@ -39,7 +39,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Balloon\r\n\r\nThe code below will change the balloon sprite's animation when the tack touches it.  Use the arrow keys to move the tack until it touches the balloon.\r\n\r\n# Do This\r\n\r\n* You do not need to change any code on this level.\r\n* Read the if statements inside the draw loop and discuss with your partner how they work.\r\n\r\n\r\n[//]: # (https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png)\r\n\r\n[//]: # (https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png)\r\n\r\n[//]: # (https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png)",
+    "markdown_instructions": "# Balloon\r\n\r\nThe code below uses the sprites' x and y positions to check whether they are touching.  It will change the balloon sprite's animation when the tack touches it.  Use the arrow keys to move the tack until it touches the balloon.\r\n\r\n# Do This\r\n\r\n* You do not need to change any code on this level.\r\n* Read the if statements inside the draw loop and find the different sprite properties and how they are compared.\r\n* Discuss the code with your partner.  Would you want to write this code every time you checked whether sprites were touching?\r\n\r\n\r\n[//]: # (https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png)\r\n\r\n[//]: # (https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png)\r\n\r\n[//]: # (https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -70,16 +70,17 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "encrypted_examples": "XlTm8xF1427wH97Z7WD04Xif48nSOilcAQ2qnK4b9GcbK9w6bCSXtn2S5Uve\nWcew\n",
-    "show_debug_watch": "false",
-    "contained_level_names": null,
+    "show_debug_watch": "true",
     "display_name": "Collision Detection",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "teacher_markdown": "The code in this level is overwhelming.  The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions.  They should understand that the `isTouching` block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 16:43:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 16:43:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 18:31:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

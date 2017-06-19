@@ -22,6 +22,7 @@ stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
 
 stage 'Events in Bounce'
+level 'elementary_video_pairProgramming'
 skin 'bounce'
 level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Bounce:1'
@@ -159,7 +160,7 @@ level 'courseD_farmer_condLoops9'
 assessment 'courseD_farmer_condLoops9_predict1'
 
 stage 'Digital Citizenship'
-level 'DigitalCitizenship2'
+level 'courseD_unplugged_digitalCitizenship'
 
 stage 'Build a Play Lab Game'
 level 'courseD_playLab_cond1'

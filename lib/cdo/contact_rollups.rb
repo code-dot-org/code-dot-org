@@ -83,6 +83,7 @@ class ContactRollups
       {kind: "'HocSignup2014'", dest_field: "hoc_organizer_years", dest_value: "'2014'"},
       {kind: "'HocSignup2015'", dest_field: "hoc_organizer_years", dest_value: "'2015'"},
       {kind: "'HocSignup2016'", dest_field: "hoc_organizer_years", dest_value: "'2016'"},
+      {kind: "'HocSignup2017'", dest_field: "hoc_organizer_years", dest_value: "'2017'"},
       {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
     ].freeze
 
