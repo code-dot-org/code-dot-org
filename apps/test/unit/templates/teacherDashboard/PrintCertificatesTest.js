@@ -25,7 +25,6 @@ describe('PrintCertificates', () => {
     <PrintCertificates
       section={section}
       assignmentName="playlab"
-      assignmentPath="//localhost-studio.code.org:3000/s/playlab"
     />
   );
 
