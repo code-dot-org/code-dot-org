@@ -3,13 +3,13 @@ class Pd::UserAdminController < ApplicationController
 
   def find_user
     @permissions = Array.new
-    email = user_admin_params[:email]
-    if email
-      @user = User.where(email: email).first # use the first result if there are multiple users with the same email address
-    end
-    user_id = user_admin_params[:user_id]
-    if user_id
+    search_term = user_admin_params[:search_term]
+    if search_term =~ /^\d+$/
+      user_id = search_term
       @user = User.find(user_id)
+    else
+      email = search_term
+      @user = User.where(email: email).first # use the first result if there are multiple users with the same email address
     end
     @permissions = @user.permissions if @user
   end
@@ -24,6 +24,6 @@ class Pd::UserAdminController < ApplicationController
 
   # white list permitted request parameters
   def user_admin_params
-    params.permit(:user_id, :email, :permission)
+    params.permit(:search_term, :user_id, :permission)
   end
 end
