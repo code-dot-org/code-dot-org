@@ -2,15 +2,15 @@
 
 We measure site health and activity using a few different tools:
 
-- [Redshift] is where we track KPIs and analyze learning outcomes.
+- [Redshift] is where we track Key Performance Indicators and analyze learning outcomes.
 - [Google Analytics] we use for simple event counting and traffic.
 - [New Relic] is for site health and anything that might trigger an alert.
 
-As a dev, if you're instrumenting a site health metric, use New Relic.  Otherwise, work with your PM to decide whether to use Redshift or GA.
+As a dev, if you're instrumenting a site health metric, use New Relic.  Otherwise, work with your PM to decide whether to use Redshift or Google Analytics.
 
 ## Redshift
 
-We send events directly to [Redshift] via [Firehose].  See the wrapper classes for documentation and example code.
+[Redshift] is used for tracking Key Performance Indicators and learning outcomes.  It's also the only service where we correlate gathered analytics with DB data. We send events directly to Redshift via [Firehose].  See the wrapper classes for documentation and example code.
 
 - In Ruby use [`FirehoseClient.instance.put_record`][redshift-ruby-docs] ([Example][redshift-ruby-example])
 - In JavaScript use [`firehoseClient.putRecord`][redshift-js-docs]
