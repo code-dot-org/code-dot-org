@@ -42,11 +42,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "display_name": "Plane Jumper"
+    "display_name": "Plane Jumper",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

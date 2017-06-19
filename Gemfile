@@ -34,10 +34,9 @@ gem 'google_drive', '~> 1.0.0'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
-gem 'redis', '~> 3.3.1'
-# Using commit ref until maintainer publishes a new version
-# Ref: https://github.com/cheald/redis-slave-read/pull/2
-gem 'redis-slave-read', require: false, github: 'cheald/redis-slave-read', ref: '370d5da2b71f795d8145fcf89c0648f866a125a6'
+gem 'redis', '~> 3.3.3'
+# Using commit ref on fork until maintainer publishes a new version
+gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 
 gem 'google-api-client'
 
@@ -194,10 +193,7 @@ gem 'font-awesome-rails', '~> 4.6.3'
 gem 'sequel', '~> 4.30'
 gem 'user_agent_parser'
 
-# As of 2017-04-13, the recovery_window option for restores is available in the specified commit
-# but not any released version. After version 2.2.2 is released, change to using an official
-# release.
-gem 'paranoia', github: 'rubysherpas/paranoia', ref: '9e43d569abf077aa95ac11f3151fbdde7dd219b5'
+gem 'paranoia'
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
@@ -217,7 +213,7 @@ gem 'lograge'
 gem 'rack-ssl-enforcer'
 
 # PubSub for NetSim
-gem 'pusher', '~> 1.3.0', require: false
+gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 

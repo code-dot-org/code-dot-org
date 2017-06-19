@@ -26,7 +26,7 @@ import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
@@ -419,6 +419,11 @@ Applab.init = function (config) {
     }
   }
 
+  //Mobile share pages do not show the logo
+  if (dom.isMobile() && config.share) {
+    $('#main-logo').hide();
+  }
+
   // Set up an error handler for student errors and warnings.
   injectErrorHandler(new JavaScriptModeErrorHandler(
     () => Applab.JSInterpreter,
@@ -622,6 +627,17 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  //Scale old-sized apps to fit the new sized display. Old height - 480.
+  if ($(".screen").height() === 480) {
+    const ratio = 450 / 480;
+    if (studioApp().share) { //share and embed pages
+      $("#divApplab").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+      $(".small-footer-base").css('transform', 'scale('+ ratio + ', 1)');
+    } else { //includes the frame on the edit page
+      $("#phoneFrameWrapper").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+    }
+  }
 };
 
 function changedToDataMode(state, lastState) {
@@ -1040,6 +1056,7 @@ function onInterfaceModeChange(mode) {
 
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp().resetButtonClick();
+    designMode.setAppSpaceClipping(true);
   } else if (mode === ApplabInterfaceMode.CODE) {
     setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {

@@ -7,8 +7,17 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import teacherSections, {
+  setValidLoginTypes,
+  setValidGrades,
+  setValidAssignments,
+  setStudioUrl,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import experiments from '@cdo/apps/util/experiments';
+import { getStore, registerReducers } from '@cdo/apps/redux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const data = JSON.parse(script.dataset.teacherdashboard);
@@ -39,6 +48,30 @@ function renderSectionProjects(sectionId) {
       />,
       element);
   });
+}
+
+/**
+ * Render our sections table using React
+ * @param {object[]} sections - Data returned from server about what sections
+ *   this user owns.
+ */
+function renderSectionsPage(sections) {
+  const element = document.getElementById('sections-page');
+  registerReducers({teacherSections});
+  const store = getStore();
+  store.dispatch(setStudioUrl(data.studiourlprefix));
+  store.dispatch(setValidLoginTypes(data.valid_login_types));
+  store.dispatch(setValidGrades(data.valid_grades));
+  store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
+
+  $("#sections-page-angular").hide();
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <SectionsPage/>
+    </Provider>,
+    element
+  );
 }
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
@@ -215,7 +248,8 @@ function main() {
   var app = angular.module('teacherDashboard.controllers', []);
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
-                                       function ($scope, $window, sectionsService){
+      function ($scope, $window, sectionsService) {
+
     $scope.sectionsLoaded = false;
 
     $scope.script_list = valid_scripts;
@@ -235,6 +269,14 @@ function main() {
     $scope.hocAssignWarningEnabled = hoc_assign_warning;
 
     $scope.hocCategoryName = i18n.hoc_category_name;
+
+    // Angular does not offer a reliable way to wait for the template to load,
+    // so do it using a custom event here.
+    $scope.$on('section-page-rendered', () => {
+      if (experiments.isEnabled('reactSections')) {
+        renderSectionsPage();
+      }
+    });
 
     /**
      * Given a section, returns the assignment id of the course/script the section

@@ -73,6 +73,9 @@ module Pd
         if found.first.postal_code != zip_code
           errors.add(:zip_code, "doesn't match the address. Did you mean #{found.first.postal_code}?")
         end
+        if found.first.state_code != state
+          errors.add(:state, "doesn't match the address. Did you mean #{found.first.state_code}?")
+        end
         unless found.first.street_number
           errors.add(:street, 'must be a valid street address (no PO boxes)')
         end
@@ -256,7 +259,7 @@ module Pd
     end
 
     # Parse and report error
-    # @param method [String]
+    # @param method [Symbol]
     # @param error [RestClient::ExceptionWithResponse]
     # @return [Hash] hash of parsed error details, code: and body:
     def report_error(method, error, notify_honeybadger: true)
@@ -264,7 +267,7 @@ module Pd
       # the body is a different format and can't be parsed, use the raw string
       body_raw = error.response.try(:body)
       body_parsed = JSON.parse(body_raw) rescue body_raw
-      error_details = {code: error.response.code, body: body_parsed}
+      error_details = {code: error.response.try(:code), body: body_parsed}
 
       if notify_honeybadger
         Honeybadger.notify(error,

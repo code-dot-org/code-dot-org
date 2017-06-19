@@ -104,6 +104,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
+  def exit_survey__csd_teacher_con
+    mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_TEACHER_CON
+  end
+
   private
 
   def mail(method, course = nil, subject = nil, options: nil, target: :enrollment)

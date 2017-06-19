@@ -33,10 +33,13 @@
     "ideal": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you get stuck, try writing out the steps on a piece of paper.\",\"hint_id\":\"courseC_collector_prog4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/98c65d781d9d5c0aec0d42c65b28e1b9/courseC_collector_prog4.mp3\"}]",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 17:26:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

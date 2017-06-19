@@ -867,5 +867,7 @@
   "moveBackward": "move backward",
   "turnLeft": "turn left",
   "turnRight": "turn right",
-  "turnTooltip": "Turn an actor left or right by 90 degrees."
+  "turnTooltip": "Turn an actor left or right by 90 degrees.",
+  "whenSpriteCollidedWithAnyGoal": "touches a flag",
+  "whenSpriteCollidedWithAnyObstacle": "touches an obstacle"
 }

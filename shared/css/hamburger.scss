@@ -93,7 +93,8 @@
     }
   }
 
-  ul {
+
+  #hamburger-contents {
     font-size: 14px;
     list-style: none;
     margin: 0;
@@ -108,14 +109,12 @@
     overflow-y: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-    li {
+    .item {
       color: $white;
       line-height: 20px;
-      padding: 0.25em;
+      padding: 4px;
       text-indent: 0;
       list-style-type: none;
-      max-width: 250px;
-      text-overflow: ellipsis;
       border-radius: 2px;
       padding-bottom: 10px;
       margin-bottom: 5px;
@@ -123,8 +122,11 @@
       margin-left: 25px;
       display: block;
       float: none;
-      white-space: normal;
-      overflow: visible;
+
+      max-width: 240px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
 
       &:last-of-type {
         border-bottom: none;
@@ -184,51 +186,64 @@
       display: none;
     }
 
+    .hamburger-expandable-item {
+      cursor: pointer;
+      .text {
+        float: left;
+        max-width: 210px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .arrow-down {
+        font-size: 30px;
+        float: right;
+        margin-top: -7px
+      }
+      .arrow-up {
+        font-size: 30px;
+        float: right;
+        margin-top: -7px;
+        display: none;
+      }
+    }
+
+    .hamburger-expandable-items {
+      margin-left: 20px;
+      display: none;
+      .item {
+        max-width: 220px;
+        margin-top: 0px;
+      }
+    }
+
+    @media(max-width: 400px) {
+      .item {
+        max-width: 240px;
+      }
+      .hamburger-expandable-item .text {
+        max-width: 210px;
+      }
+      .hamburger-expandable-items .item {
+        max-width: 220px;
+      }
+    }
   }
-  .educate-nav ul li:last-of-type {
-    border-bottom: solid 2px $dark_teal;
-  }
+
   .divider {
     height: 10px;
     background: $dark_teal;
   }
 
   @media(max-width: 970px) {
-
     &.show-mobile {
       display: block;
     }
-
     .show-mobile {
       display: block;
     }
-
-    ul {
+    #hamburger-contents {
       font-size: 18px;
     }
   }
-
-  @media(max-width: 400px) {
-    #nav {
-      ul {
-        max-width: 245px;
-        li {
-          max-width: 200px;
-        }
-      }
-      .educate-nav li {
-        max-width: 180px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-    }
-  }
-  .about-nav li a {
-    padding-left: 20px;
-  }
-  .educate-nav li a {
-    padding-left: 20px;
-  }
-
 }

@@ -1,4 +1,3 @@
-import * as codegen from '@cdo/apps/codegen';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 
@@ -34,8 +33,7 @@ export function makeAssertion(interpreter, assertion, nativeVar, nativeParentObj
     interpreter.customMarshaler,
     (assertingInterpreter, scope) => {
       attachAssertToInterpreter(assertingInterpreter, scope, assertion);
-      const interpreterValue = codegen.marshalNativeToInterpreter(
-        assertingInterpreter,
+      const interpreterValue = assertingInterpreter.marshalNativeToInterpreter(
         nativeVar,
         nativeParentObj,
         maxDepth
@@ -47,8 +45,7 @@ export function makeAssertion(interpreter, assertion, nativeVar, nativeParentObj
 }
 
 export function makeAssertableObj(interpreter, nativeVar, nativeParentObj, maxDepth) {
-  const interpreterValue = codegen.marshalNativeToInterpreter(
-    interpreter,
+  const interpreterValue = interpreter.marshalNativeToInterpreter(
     nativeVar,
     nativeParentObj,
     maxDepth
