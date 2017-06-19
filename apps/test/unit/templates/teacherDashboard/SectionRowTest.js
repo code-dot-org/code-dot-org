@@ -9,17 +9,19 @@ import {
   ConfirmSave
 } from '@cdo/apps/templates/teacherDashboard/SectionRow';
 
-const section = {
-  id: 11,
-  courseId: 29,
-  scriptId: null,
-  name: "my_section",
-  loginType: "word",
-  grade: "3",
-  stageExtras: false,
-  pairingAllowed: true,
-  studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
-  code: "PMTKVH",
+const sections = {
+  11: {
+    id: 11,
+    courseId: 29,
+    scriptId: null,
+    name: "my_section",
+    loginType: "word",
+    grade: "3",
+    stageExtras: false,
+    pairingAllowed: true,
+    studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
+    code: "PMTKVH",
+  }
 };
 const validLoginTypes = ['word', 'email', 'picture'];
 const validGrades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"];
@@ -28,10 +30,21 @@ const defaultProps = {
   sectionId: 11,
   validLoginTypes,
   validGrades,
-  validAssignments: {},
-  section,
-  assignmentName: "CS Discoveries",
-  assignmentPath: "//localhost-studio.code.org:3000/courses/csd",
+  validAssignments: {
+    '29_null': {
+      id: 29,
+      name: "CS Discoveries",
+      script_name: "csd",
+      category: "Full Courses",
+      position: 1,
+      category_priority: -1,
+      courseId: 29,
+      scriptId: null,
+      assignId: "29_null",
+      path: '//localhost-studio.code.org:3000/courses/csd',
+    }
+  },
+  sections,
   updateSection: () => {},
   removeSection: () => {},
 };
@@ -113,7 +126,7 @@ describe('SectionRow', () => {
       );
       const col = wrapper.find('td').at(3);
       assert.equal(col.find('a').length, 1);
-      assert.equal(col.find('a').props().href, defaultProps.assignmentPath);
+      assert.equal(col.find('a').props().href, '//localhost-studio.code.org:3000/courses/csd');
       assert.equal(col.find('a').text(), 'CS Discoveries');
     });
 
