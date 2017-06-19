@@ -29,7 +29,7 @@ const WorkshopEnrollment = React.createClass({
         district_name: React.PropTypes.string,
         school: React.PropTypes.string.isRequired,
         user_id: React.PropTypes.number,
-        in_section: React.PropTypes.bool.isRequired,
+        attended: React.PropTypes.bool.isRequired,
       })
     ).isRequired,
     workshopId: React.PropTypes.string.isRequired,
@@ -83,8 +83,8 @@ const WorkshopEnrollment = React.createClass({
     const sortedEnrollments = _.sortBy(this.props.enrollments, ['last_name', 'first_name']);
     const enrollmentRows = sortedEnrollments.map((enrollment, i) => {
       let deleteCell;
-      if (enrollment.in_section) {
-        // Don't give the option to delete an enrollment once the teacher has joined the section.
+      if (enrollment.attended) {
+        // Don't give the option to delete an enrollment once the teacher has been marked attended.
         deleteCell = <td />;
       } else {
         deleteCell = (
@@ -111,7 +111,6 @@ const WorkshopEnrollment = React.createClass({
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
-          {this.props.accountRequiredForAttendance && <td>{enrollment.in_section ? 'Yes' : 'No'}</td>}
         </tr>
       );
     });
@@ -146,7 +145,6 @@ const WorkshopEnrollment = React.createClass({
           <th style={styles.th}>District</th>
           <th style={styles.th}>School</th>
           {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
-          {this.props.accountRequiredForAttendance && <th style={styles.th}>Joined Section?</th>}
         </tr>
         </thead>
         <tbody>
