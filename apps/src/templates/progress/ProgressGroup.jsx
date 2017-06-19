@@ -18,6 +18,7 @@ const styles = {
     color: 'white',
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
+    cursor: 'pointer'
   },
   headerBlue: {
     backgroundColor: color.cyan,
