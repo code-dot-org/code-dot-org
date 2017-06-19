@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/indent'
+
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s
   tagline = @header['tagline'] || @config[:page_default_tagline].to_s
