@@ -7,6 +7,8 @@ import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+import InlineAudio from './InlineAudio';
+import experiments from '../../util/experiments';
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -60,6 +62,10 @@ var styles = {
     textAlign: 'center',
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
+  },
+  audioControls: {
+    position: 'absolute',
+    right: 12,
   }
 };
 
@@ -79,7 +85,9 @@ var TopInstructions = React.createClass({
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
-    documentationUrl: React.PropTypes.string
+    documentationUrl: React.PropTypes.string,
+    ttsInstructionsUrl: React.PropTypes.string,
+    ttsMarkdownInstructionsUrl:  React.PropTypes.string
   },
 
   /**
@@ -173,11 +181,17 @@ var TopInstructions = React.createClass({
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
     ];
+    const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
 
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
+
           <div style={styles.paneHeaderOverride}>
+            {experiments.isEnabled('CSDTTS') &&
+            <div id="foundIt!" style={styles.audioControls}>
+              <InlineAudio src={ttsUrl}/>
+            </div>}
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
@@ -238,7 +252,9 @@ module.exports = connect(function propsFromStore(state) {
     markdown: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed,
-    documentationUrl: state.pageConstants.documentationUrl
+    documentationUrl: state.pageConstants.documentationUrl,
+    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
   };
 }, function propsFromDispatch(dispatch) {
   return {
