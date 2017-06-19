@@ -52,7 +52,7 @@ module.exports = {
         craftBlock('fill') +
         craftBlock('give') +
         craftBlock('kill') +
-        craftBlock('setblock') +
+        craftBlock('setblock',`<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('summon') +
         craftBlock('testforblock') +
         craftBlock('testforblocks') +
