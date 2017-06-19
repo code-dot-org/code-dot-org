@@ -15,7 +15,7 @@
     "instructions": "This time, use lines of 8 hexagons with 25 pixel sides.",
     "ideal": "14",
     "embed": "false",
-    "markdown_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the side 6 times, turning 60 degrees.\r\n- To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
+    "markdown_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the side 6 times, turning 60 degrees.\r\n- Jump 25 pixels between each hexagon.\r\n- To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 22:22:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-13 22:37:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 22:22:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-13 22:37:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 22:54:55 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

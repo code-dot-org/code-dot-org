@@ -9,6 +9,7 @@ import { assignmentShape } from './shapes';
  */
 const groupedAssignments = _.memoize(assignments => (
   _(assignments)
+    .values()
     .orderBy(['category_priority', 'category', 'position', 'name'])
     .groupBy('category')
     .value()
@@ -17,29 +18,30 @@ const groupedAssignments = _.memoize(assignments => (
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
+ * TODO(bjvanminnen): could use some tests
  */
 export default class AssignmentSelector extends Component {
   static propTypes = {
-    currentAssignmentIndex: PropTypes.number,
-    assignments: PropTypes.arrayOf(assignmentShape).isRequired,
+    currentAssignId: PropTypes.string,
+    assignments: PropTypes.objectOf(assignmentShape).isRequired,
   };
 
   getSelectedAssignment() {
     const assignment = this.props.assignments[this.root.value];
     return {
-      courseId: assignment.courseId,
-      scriptId: assignment.scriptId
+      courseId: assignment ? assignment.courseId : null,
+      scriptId: assignment ? assignment.scriptId : null,
     };
   }
 
   render() {
-    const { currentAssignmentIndex, assignments } = this.props;
+    const { currentAssignId, assignments } = this.props;
 
     const grouped = groupedAssignments(assignments);
 
     return (
       <select
-        defaultValue={currentAssignmentIndex}
+        defaultValue={currentAssignId}
         ref={element => this.root = element}
       >
         <option key="default" value="-1"/>
@@ -47,8 +49,8 @@ export default class AssignmentSelector extends Component {
           <optgroup key={index} label={groupName}>
             {grouped[groupName].map((assignment) => (
               <option
-                key={assignment.index}
-                value={assignment.index}
+                key={assignment.assignId}
+                value={assignment.assignId}
               >
                 {assignment.name}
               </option>

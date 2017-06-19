@@ -107,7 +107,7 @@ class Stage < ActiveRecord::Base
         title: localized_title,
         flex_category: localized_category,
         lockable: !!lockable,
-        levels: cached_script_levels.reject(&:bonus).map(&:summarize),
+        levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
@@ -192,8 +192,10 @@ class Stage < ActiveRecord::Base
     end
   end
 
-  # Ensures we get the cached ScriptLevels, vs hitting the db.
+  # Ensures we get the cached ScriptLevels if they are being cached, vs hitting the db.
   def cached_script_levels
+    return script_levels unless Script.should_cache?
+
     script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
   end
 end

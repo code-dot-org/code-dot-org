@@ -28,12 +28,16 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Help the farmer get to the pumpkin and pick it.",
     "instructions_important": "false",
-    "ideal": "5",
+    "ideal": "4",
     "markdown_instructions": "*\"Have we met before? I'm the farmer!\"*\r\n\r\nHelp the farmer get to the pumpkin and pick it.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 16:27:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

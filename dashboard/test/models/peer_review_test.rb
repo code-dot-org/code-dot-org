@@ -326,4 +326,15 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     assert_nil PeerReview.get_review_completion_status(@user, @script)
   end
+
+  test 'clear_data clears the data column' do
+    # TODO(asher): Fix the peer_review factory so that it can be used here. Presently, the
+    # after_save callback fails.
+    level_source = create :level_source, data: 'not yet deleted'
+    track_progress level_source.id
+    peer_review = PeerReview.last
+    assert_equal 'not yet deleted', peer_review.level_source.data
+    peer_review.clear_data
+    assert_equal PeerReview::SYSTEM_DELETED_DATA, peer_review.data
+  end
 end
