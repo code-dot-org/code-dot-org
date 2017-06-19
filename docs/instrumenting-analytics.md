@@ -4,9 +4,12 @@ We measure site health and activity using a few different tools:
 
 - [Redshift] is where we track Key Performance Indicators and analyze learning outcomes.
 - [Google Analytics] we use for simple event counting and traffic.
-- [New Relic] is for site health and anything that might trigger an alert.
+- [New Relic] is for application-layer health indicators.
+- [CloudWatch] is for infrastructure-layer health indicators.
 
-As a dev, if you're instrumenting a site health metric, use New Relic.  Otherwise, work with your PM to decide whether to use Redshift or Google Analytics.
+Redshift and Google Analytics are product tools. Work with your PM to decide whether Redshift or Google Analytics are right for your feature.
+
+New Relic and CloudWatch are engineering tools. Use them when instrumenting a site-health metric, or one that should be able to trigger a PagerDuty alert.
 
 ## Redshift
 
@@ -27,13 +30,22 @@ In JavaScript, you can use the function [`trackEvent`][ga-js-code] ([Example][ga
 
 ## New Relic
 
-[New Relic] has separate APIs for recording "events" and "metrics."  It's a little hard to find good resources on the distinction; [this thread][new-relic-events-vs-metrics] may be helpful.
+[New Relic] should be used for recording application-layer metrics in cases where we want to be able to monitor and alert based on the metric's value over time. An example alerting rule based on metrics can be seen here: [FilesApi policy](https://alerts.newrelic.com/accounts/501463/policies/36).
+
+[New Relic] has separate APIs for recording "events" and "metrics."  It's a little hard to find good resources on the distinction; [this thread][new-relic-events-vs-metrics] may be helpful. We plan to sunset New Relic "custom events" by saving them instead to Redshift.
 
 - In Ruby, use [`NewRelic::Agent.record_custom_event`] and [`NewRelic::Agent.record_metric`] ([Example][new-relic-ruby-example])
 - In JavaScript, we record custom events with [`logToCloud.addPageAction`][new-relic-js-docs] ([Example][new-relic-js-example]).  We haven't set up any custom metrics from JavaScript yet.
 
-Currently, we use New Relic "metrics" in cases where we want to be able to monitor and alert based on the metric's value over time. An example alerting rule based on metrics can be seen here: [FilesApi policy](https://alerts.newrelic.com/accounts/501463/policies/36). We plan to sunset New Relic "custom events" by saving them instead to redshift.
+## CloudWatch
 
+[CloudWatch] should be used for recording infrastructure-layer metrics in cases where we want to be able to monitor and alert based on the metric's value over time. In Ruby, use [`Aws::CloudWatch::Client.new.put_metric_data`][cloudwatch-ruby-docs] ([Example][cloudwatch-ruby-example]) to record a custom metric.
+
+If you create metrics for CloudWatch, you'll probably want to add them to one of the dashboards that we look at there, and possibly configure alarms around that metric - otherwise there are *so* many tracked that nobody will ever notice yours.
+
+[CloudWatch]: https://aws.amazon.com/cloudwatch/
+[cloudwatch-ruby-docs]: http://docs.aws.amazon.com/sdkforruby/api/Aws/CloudWatch/Client.html#put_metric_data-instance_method
+[cloudwatch-ruby-example]: ../bin/cron/mysql-metrics#L355
 [Firehose]: https://aws.amazon.com/kinesis/firehose/
 [Google Analytics]: https://analytics.google.com/
 [Google Analytics debugger]: https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna
