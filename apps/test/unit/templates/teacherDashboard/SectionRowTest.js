@@ -32,7 +32,8 @@ const defaultProps = {
   validGrades,
   validAssignments: {},
   section,
-  updateSection: () => {}
+  updateSection: () => {},
+  cancelNewSection: () => {},
 };
 
 describe('SectionRow', () => {
@@ -175,6 +176,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'EditOrDelete');
+      assert.equal(col.find('EditOrDelete').props().canDelete, false);
       assert.equal(col.children().at(1).name(), 'ProgressButton');
       assert.equal(col.children().at(1).props().text, 'Print Certificates');
     });
