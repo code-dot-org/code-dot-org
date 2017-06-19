@@ -97,7 +97,7 @@ class SectionTable extends Component {
           </tr>
           {sectionIds.map((sid, index) => (
             <SectionRow
-              key={index}
+              key={sid}
               sectionId={sid}
             />
           ))}
