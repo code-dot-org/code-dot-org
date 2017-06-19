@@ -224,6 +224,7 @@ level 'CSD U3 collisions flyman bounceOff', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman displace coin', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman change colliders', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman make it your own', progression: 'Flyer Game'
+named_level 'CSD U3 interactions map'
 
 stage 'Functions', flex_category: 'csd3_2'
 named_level 'CSD U3 Functions SFLP'

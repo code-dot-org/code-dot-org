@@ -40,6 +40,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 18:13:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -50,11 +51,17 @@
           <mutation>
             <arg name="length"/>
             <arg name="sides"/>
+            <arg name="min"/>
           </mutation>
           <title name="NAME">draw a spiral edge</title>
           <statement name="STACK">
             <block type="controls_for_counter" inline="true">
               <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="parameters_get">
+                  <title name="VAR">min</title>
+                </block>
+              </value>
               <value name="TO">
                 <block type="parameters_get">
                   <title name="VAR">length</title>
@@ -116,6 +123,7 @@
                       <mutation name="draw a spiral edge">
                         <arg name="length"/>
                         <arg name="sides"/>
+                        <arg name="min"/>
                       </mutation>
                     </block>
                   </next>

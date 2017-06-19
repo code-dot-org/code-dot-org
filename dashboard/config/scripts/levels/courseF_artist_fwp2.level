@@ -21,7 +21,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".5",
-    "markdown_instructions": "Edit the function to accept a parameter called `length`.  \r\n\r\nThe sides of each square should be 25 pixels larger than the last.  The first square has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
+    "markdown_instructions": "Edit the function to accept a parameter called `length`.  \r\n\r\nThe sides of each square should be 25 pixels larger than the last.  The first square has 25 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -36,10 +36,13 @@
     "discard_background": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You need to click the \\\"edit\\\" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!\",\"hint_id\":\"courseF_artist_fwp2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b7defcaec660038f173a08dcd10da1a7/courseF_artist_fwp2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When calling your function, use a `for loop` for the best possible code!\",\"hint_id\":\"courseF_artist_fwp2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/062ac7c51ade064cc84b325a0e4b17db/courseF_artist_fwp2.mp3\"}]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 17:54:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 3,
