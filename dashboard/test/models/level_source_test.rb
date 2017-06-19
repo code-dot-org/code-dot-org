@@ -25,8 +25,9 @@ class LevelSourceTest < ActiveSupport::TestCase
   end
 
   test 'clear_data should overwrite data' do
+    LevelSourceImage.any_instance.stubs(:delete_image_or_framed_image).returns(true)
     level_source = create :level_source
-    level_source.clear_data
+    level_source.clear_data_and_image
     assert_equal LevelSource::DELETED_BY_THE_SYSTEM, level_source.data
   end
 end

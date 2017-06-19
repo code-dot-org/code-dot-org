@@ -5,7 +5,8 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
-import { assignmentId, updateSection } from './teacherSectionsRedux';
+import PrintCertificates from './PrintCertificates';
+import { assignmentId, updateSection, removeSection } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -116,61 +117,94 @@ class SectionRow extends Component {
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     section: sectionShape.isRequired,
     updateSection: PropTypes.func.isRequired,
+    removeSection: PropTypes.func.isRequired,
   };
 
-  state = {
-    editing: false,
-    deleting: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      // Start in editing mode if we don't have a section code (implying this is
+      // a new section that has not been persisted to the server)
+      editing: !props.section.code,
+      deleting: false
+    };
+  }
 
   onClickDelete = () => this.setState({deleting: true});
 
   onClickDeleteNo = () => this.setState({deleting: false});
 
-  onClickDeleteYes = () => console.log('this is where our delete will happen');
-
-  onClickEdit = () => this.setState({editing: true});
-
-  onClickEditSave = () => {
-    const { sectionId, updateSection } = this.props;
-    const assignment = this.assignment.getSelectedAssignment();
-    const data = {
-      id: sectionId,
-      name: this.name.value,
-      login_type: this.loginType.value,
-      grade: this.grade.value,
-      stage_extras: this.stageExtras.checked,
-      pairing_allowed: this.pairingAllowed.checked,
-      course_id: assignment.courseId,
-    };
-
-    // Due in part to it's angular history, this API expects {script: { id }}
-    // instead of script_id
-    if (assignment.scriptId) {
-      data.script = {
-        id: assignment.scriptId
-      };
-    }
-
+  onClickDeleteYes = () => {
+    const { section, removeSection } = this.props;
     $.ajax({
-      url: `/v2/sections/${sectionId}/update`,
-      method: 'POST',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(data),
-    }).done(result => {
-      updateSection(sectionId, result);
-      this.setState({
-        editing: false
-      });
+      url: `/v2/sections/${section.id}`,
+      method: 'DELETE',
+    }).done(() => {
+      removeSection(section.id);
     }).fail((jqXhr, status) => {
       // TODO(bjvanminnen): figure out how what we want to do in this case
       console.error(status);
     });
   }
 
-  onClickEditCancel = () => this.setState({editing: false});
+  onClickEdit = () => this.setState({editing: true});
 
-  onClickPrintCerts = () => console.log('print certificates here');
+  onClickEditSave = () => {
+    const { section, sectionId, updateSection } = this.props;
+    const persistedSection = !!section.code;
+    const assignment = this.assignment.getSelectedAssignment();
+    const data = {
+      id: persistedSection ? sectionId : null,
+      name: this.name.value,
+      login_type: this.loginType.value,
+      grade: this.grade.value,
+      stage_extras: this.stageExtras.checked,
+      pairing_allowed: this.pairingAllowed.checked,
+      course_id: assignment ? assignment.courseId : null,
+    };
+
+    // We used to have some additional logic that would display a string
+    // (dashboard_sections_assign_hoc_script_msg) when assigning a HOC script
+    // just before HOC. If we end up needing that again in the future, we'll need
+    // to port that here.
+
+    // Due in part to it's angular history, this API expects {script: { id }}
+    // instead of script_id
+    if (assignment && assignment.scriptId) {
+      data.script = {
+        id: assignment.scriptId
+      };
+    }
+
+    const suffix = persistedSection ? `/${sectionId}/update` : '';
+
+    $.ajax({
+      url: `/v2/sections${suffix}`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(data),
+    }).done(result => {
+      updateSection(sectionId, result);
+      // we don't want to set state for non-persisted sections, as the updateSection
+      // call results in the SectionRow unmounting
+      if (persistedSection) {
+        this.setState({ editing: false });
+      }
+    }).fail((jqXhr, status) => {
+      // TODO(bjvanminnen): figure out how what we want to do in this case
+      console.error(status);
+    });
+  }
+
+  onClickEditCancel = () => {
+    const { section, removeSection } = this.props;
+    const persistedSection = !!section.code;
+    if (!persistedSection) {
+      removeSection(section.id);
+    }
+    this.setState({editing: false});
+  }
 
   render() {
     const {
@@ -180,6 +214,14 @@ class SectionRow extends Component {
       validAssignments
     } = this.props;
     const { editing, deleting } = this.state;
+
+    // When deleting a section, I've occasionally seen us attempt a render with
+    // a null section for some reason. This is here to provide defense against this.
+    if (!section) {
+      return null;
+    }
+
+    const persistedSection = !!section.code;
 
     return (
       <tr>
@@ -260,9 +302,11 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.td}>
-          <a href={`#/sections/${section.id}/manage`}>
-            {section.numStudents}
-          </a>
+          {persistedSection &&
+            <a href={`#/sections/${section.id}/manage`}>
+              {section.studentNames.length}
+            </a>
+          }
         </td>
         <td style={styles.td}>
           {section.code}
@@ -270,7 +314,7 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.numStudents > 0}
+              canDelete={section.studentNames.length === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -287,11 +331,7 @@ class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-          <ProgressButton
-            text={"Print Certificates"}
-            onClick={this.onClickPrintCerts}
-            color={ProgressButton.ButtonColor.gray}
-          />
+          <PrintCertificates section={section}/>
         </td>
       </tr>
     );
@@ -305,4 +345,4 @@ export default connect((state, ownProps) => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   section: state.teacherSections.sections[ownProps.sectionId],
-}), { updateSection })(SectionRow);
+}), { updateSection, removeSection })(SectionRow);
