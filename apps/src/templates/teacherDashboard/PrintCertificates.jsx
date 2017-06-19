@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape } from './shapes';
+import i18n from '@cdo/locale';
 
 export default class PrintCertificates extends Component {
   static propTypes = {
@@ -11,7 +12,6 @@ export default class PrintCertificates extends Component {
 
   render() {
     const { section } = this.props;
-    // TODO: i18n
     return (
       <form
         ref={element => this.certForm = element}
@@ -23,7 +23,7 @@ export default class PrintCertificates extends Component {
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
         <ProgressButton
-          text={"Print Certificates"}
+          text={i18n.printCertificates()}
           onClick={this.onClickPrintCerts}
           color={ProgressButton.ButtonColor.gray}
         />
