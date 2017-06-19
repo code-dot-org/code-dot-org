@@ -49,6 +49,6 @@ describe('PrintCertificates', () => {
 
   it('has a submission button', () => {
     assert.equal(wrapper.find('ProgressButton').length, 1);
-    assert.equal(wrapper.find('ProgressButton').props().text, 'Print Certificates');
+    assert.equal(wrapper.find('ProgressButton').props().text, 'Print certificates');
   });
 });

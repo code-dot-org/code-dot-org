@@ -29,21 +29,20 @@ const styles = {
   }
 };
 
-// TODO: i18n
 /**
  * Our base buttons (Edit and delete).
  */
 export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
     <ProgressButton
-      text={"Edit"}
+      text={i18n.edit()}
       onClick={onEdit}
       color={ProgressButton.ButtonColor.gray}
     />
     {canDelete && (
       <ProgressButton
         style={{marginLeft: 5}}
-        text={"Delete"}
+        text={i18n.delete()}
         onClick={onDelete}
         color={ProgressButton.ButtonColor.red}
       />
@@ -61,7 +60,7 @@ EditOrDelete.propTypes = {
  */
 export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
-    <div>Delete?</div>
+    <div>{i18n.deleteConfirm()}</div>
     <ProgressButton
       text={i18n.yes()}
       onClick={onClickYes}
@@ -236,7 +235,7 @@ class SectionRow extends Component {
           {editing && (
             <input
               ref={element => this.name = element}
-              placeholder="Section Name"
+              placeholder={i18n.sectionName()}
               defaultValue={section.name}
             />
           )}

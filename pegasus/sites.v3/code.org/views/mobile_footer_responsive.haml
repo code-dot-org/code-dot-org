@@ -1,5 +1,5 @@
 =inline_css 'mobile-footer.css'
-%script{src: '/js/mobile-footer.js'}
+%script{:defer => "defer", src: '/js/mobile-footer.js'}
 
 -if request.language == "en"
   %footer#pagefooter
