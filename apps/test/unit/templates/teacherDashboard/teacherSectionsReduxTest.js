@@ -7,6 +7,8 @@ import reducer, {
   setValidAssignments,
   setSections,
   updateSection,
+  newSection,
+  cancelNewSection,
   assignmentId,
   sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -236,7 +238,21 @@ describe('teacherSectionsRedux', () => {
       login_type: 'word'
     };
 
-    it('does not change our list of section ids', () => {
+    const newServerSection = {
+      id: 21,
+      location: "/v2/sections/21",
+      name: "brent_section",
+      login_type: "picture",
+      grade: "2",
+      code: "ABCDEF",
+      stage_extras: false,
+      pairing_allowed: true,
+      script: null,
+      course_id: 29,
+      students: fakeStudents(10)
+    };
+
+    it('does not change our list of section ids when updating a persisted section', () => {
       const action = updateSection(sections[0].id, updatedSection);
       const state = reducer(stateWithSections, action);
       assert.strictEqual(state.sectionIds, stateWithSections.sectionIds);
@@ -267,6 +283,81 @@ describe('teacherSectionsRedux', () => {
 
       assert.strictEqual(state.sections[otherSectionId],
         stateWithSections.sections[otherSectionId]);
+    });
+
+    it('replaces the sectionId of a non-persisted section', () => {
+      const stateWithNewSection = reducer(stateWithSections, newSection());
+      assert.deepEqual(stateWithNewSection.sectionIds, [-1, 11, 12 ,307]);
+
+      const action = updateSection(-1, newServerSection);
+      const state = reducer(stateWithNewSection, action);
+      assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
+    });
+
+    it('replaces the section of a non-persisted section', () => {
+      const stateWithNewSection = reducer(stateWithSections, newSection());
+
+      const action = updateSection(-1, newServerSection);
+      const state = reducer(stateWithNewSection, action);
+      assert.strictEqual(state.sections[-1], undefined);
+      assert.strictEqual(state.sections[21].id, 21);
+    });
+  });
+
+  describe('newSection', () => {
+    it('creates a new section', () => {
+      const action = newSection();
+      const state = reducer(initialState, action);
+
+      assert.strictEqual(state.sectionIds[0], -1);
+      assert(state.sections[-1]);
+    });
+
+    it('initializes new section', () => {
+      const action = newSection();
+      const state = reducer(initialState, action);
+      assert.deepEqual(state.sections[-1], {
+        id: -1,
+        name: '',
+        loginType: 'word',
+        grade: '',
+        stageExtras: false,
+        pairingAllowed: true,
+        numStudents: 0,
+        code: '',
+        courseId: null,
+        scriptId: null,
+        assignmentName: '',
+        assignmentPath: ''
+      });
+    });
+
+    it('updates our nextTempId', () => {
+      const action = newSection();
+      const state = reducer(initialState, action);
+      assert.strictEqual(state.nextTempId, -2);
+    });
+  });
+
+  describe('cancelNewSection', () => {
+    const startState = reducer(initialState, newSection());
+    it('removes sectionId', () => {
+      const action = cancelNewSection(-1);
+      const state = reducer(startState, action);
+      assert.equal(state.sectionIds.includes(-1), false);
+    });
+
+    it('removes section', () => {
+      const action = cancelNewSection(-1);
+      const state = reducer(startState, action);
+      assert.strictEqual(state.sections[-1], undefined);
+    });
+
+    it('doesnt let you cancel an existing section',  () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      assert.throws(() => {
+        reducer(stateWithSections, cancelNewSection(stateWithSections.sectionIds[0]));
+      });
     });
   });
 
