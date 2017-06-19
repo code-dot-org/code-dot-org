@@ -235,6 +235,9 @@ class SectionRow extends Component {
     const { editing, deleting } = this.state;
 
     const section = sections[sectionId];
+    if (!section) {
+      return null;
+    }
     const assignName = assignmentName(validAssignments, section);
     const assignPath = assignmentPath(validAssignments, section);
 
