@@ -20,8 +20,6 @@ const section = {
   pairingAllowed: true,
   studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
   code: "PMTKVH",
-  assignmentName: "CS Discoveries",
-  assignmentPath: "//localhost-studio.code.org:3000/courses/csd"
 };
 const validLoginTypes = ['word', 'email', 'picture'];
 const validGrades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"];
@@ -32,6 +30,8 @@ const defaultProps = {
   validGrades,
   validAssignments: {},
   section,
+  assignmentName: "CS Discoveries",
+  assignmentPath: "//localhost-studio.code.org:3000/courses/csd",
   updateSection: () => {},
   removeSection: () => {},
 };
@@ -113,7 +113,7 @@ describe('SectionRow', () => {
       );
       const col = wrapper.find('td').at(3);
       assert.equal(col.find('a').length, 1);
-      assert.equal(col.find('a').props().href, section.assignmentPath);
+      assert.equal(col.find('a').props().href, defaultProps.assignmentPath);
       assert.equal(col.find('a').text(), 'CS Discoveries');
     });
 

@@ -33,7 +33,7 @@ const initialState = {
   validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
-  validAssignments: [],
+  validAssignments: {},
   // Mapping from sectionId to section object
   sections: {}
 };
@@ -152,9 +152,7 @@ export default function teacherSections(state=initialState, action) {
           studentNames: [],
           code: '',
           courseId: null,
-          scriptId: null,
-          assignmentName: '',
-          assignmentPath: '',
+          scriptId: null
         }
       }
     };
@@ -184,29 +182,37 @@ export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-export const sectionFromServerSection = (serverSection, validAssignments) => {
-  const courseId = serverSection.course_id || null;
-  const scriptId = serverSection.script ? serverSection.script.id : null;
+export const sectionFromServerSection = (serverSection, validAssignments) => ({
+  id: serverSection.id,
+  name: serverSection.name,
+  loginType: serverSection.login_type,
+  grade: serverSection.grade,
+  stageExtras: serverSection.stage_extras,
+  pairingAllowed: serverSection.pairing_allowed,
+  studentNames: serverSection.students.map(student => student.name),
+  code: serverSection.code,
+  courseId: serverSection.course_id,
+  scriptId: serverSection.script ? serverSection.script.id : null
+});
 
-  // When generating our assignment id, we want to ignore scriptId if we're assigned
-  // to both a script and course (i.e. we want to find the Course).
-  const assignId = assignmentId(courseId, courseId ? null : scriptId);
-  const assignment = validAssignments[assignId];
+const assignmentForSection = (state, section) => {
+  const assignId = assignmentId(section.courseId, section.courseId ? null : section.scriptId);
+  const assignment = state.validAssignments[assignId];
+  return assignment;
+};
 
-  return {
-    id: serverSection.id,
-    name: serverSection.name,
-    loginType: serverSection.login_type,
-    grade: serverSection.grade,
-    stageExtras: serverSection.stage_extras,
-    pairingAllowed: serverSection.pairing_allowed,
-    studentNames: serverSection.students.map(student => student.name),
-    code: serverSection.code,
-    courseId: serverSection.course_id,
-    scriptId: scriptId,
-    // TODO(bjvanminnen): should maybe be getting these fields as selectors instead of
-    // living in state
-    assignmentName: assignment ? assignment.name : '',
-    assignmentPath: assignment ? assignment.path : ''
-  };
+/**
+ * Get the name of the course/script assigned to the given section
+ */
+export const assignmentName = (state, section) => {
+  const assignment = assignmentForSection(state, section);
+  return assignment ? assignment.name : '';
+};
+
+/**
+ * Get the path of the course/script assigned to the given section
+ */
+export const assignmentPath = (state, section) => {
+  const assignment = assignmentForSection(state, section);
+  return assignment ? assignment.path : '';
 };

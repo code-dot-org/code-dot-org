@@ -14,9 +14,7 @@ const section = {
   stageExtras: false,
   pairingAllowed: true,
   studentNames: ['joe', 'jane'],
-  code: "PMTKVH",
-  assignmentName: "playlab",
-  assignmentPath: "//localhost-studio.code.org:3000/s/playlab"
+  code: "PMTKVH"
 };
 
 describe('PrintCertificates', () => {
@@ -24,7 +22,11 @@ describe('PrintCertificates', () => {
   throwOnConsoleWarnings();
 
   const wrapper = shallow(
-    <PrintCertificates section={section} />
+    <PrintCertificates
+      section={section}
+      assignmentName="playlab"
+      assignmentPath="//localhost-studio.code.org:3000/s/playlab"
+    />
   );
 
   it('renders a form', () => {

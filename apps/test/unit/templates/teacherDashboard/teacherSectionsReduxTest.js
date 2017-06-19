@@ -10,6 +10,8 @@ import reducer, {
   newSection,
   removeSection,
   assignmentId,
+  assignmentName,
+  assignmentPath,
   sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -334,9 +336,7 @@ describe('teacherSectionsRedux', () => {
         studentNames: [],
         code: '',
         courseId: null,
-        scriptId: null,
-        assignmentName: '',
-        assignmentPath: ''
+        scriptId: null
       });
     });
 
@@ -435,8 +435,35 @@ describe('teacherSectionsRedux', () => {
         assert.equal(typeof(name), 'string');
       });
     });
+  });
 
-    // TODO(bjvanminnen): plan to move assignmentName/assignmentPath out of
-    // sectionFromServerSection. If I don't, they deserve tests
+  describe('assignmentName/assignmentPath', () => {
+    const stateWithUrl = reducer(initialState, setStudioUrl('//test-studio.code.org'));
+    const stateWithAssigns = reducer(stateWithUrl, setValidAssignments(validCourses, validScripts));
+    const stateWithSections = reducer(stateWithAssigns, setSections(sections));
+    const stateWithNewSection = reducer(stateWithSections, newSection());
+
+    const unassignedSection = stateWithNewSection.sections["-1"];
+    const assignedSection = stateWithNewSection.sections["11"];
+
+    it('assignmentName returns the name if the section is assigned a course/script', () => {
+      const name = assignmentName(stateWithNewSection, assignedSection);
+      assert.equal(name, 'CS Discoveries');
+    });
+
+    it('assignmentName returns empty string otherwise', () => {
+      const name = assignmentName(stateWithNewSection, unassignedSection);
+      assert.equal(name, '');
+    });
+
+    it('assignmentPath returns the path if the section is assigned a course/script', () => {
+      const path = assignmentPath(stateWithNewSection, assignedSection);
+      assert.equal(path, '//test-studio.code.org/courses/csd');
+    });
+
+    it('assignmentPath returns empty string otherwise', () => {
+      const path = assignmentPath(stateWithNewSection, unassignedSection);
+      assert.equal(path, '');
+    });
   });
 });
