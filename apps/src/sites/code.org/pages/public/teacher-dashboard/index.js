@@ -17,6 +17,7 @@ import teacherSections, {
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
+import RosterDialog from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import experiments from '@cdo/apps/util/experiments';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
@@ -89,7 +90,23 @@ function initGoogleClassroom() {
 }
 
 function getClassroomList() {
-  gapi.client.classroom.courses.list({teacherId: 'me'}).then(response => console.log(response.body));
+  gapi.client.classroom.courses.list({teacherId: 'me'}).then(response => renderRosterDialog(response.result.courses));
+}
+
+function renderRosterDialog(data) {
+  const element = document.querySelector('#roster-dialog');
+  const handleClose = selectedId => {
+    ReactDOM.unmountComponentAtNode(element);
+    console.log(selectedId);
+  };
+  ReactDOM.render(
+    <RosterDialog
+      isOpen={true}
+      handleClose={handleClose}
+      classrooms={data}
+    />,
+    element
+  );
 }
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
