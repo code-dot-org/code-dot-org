@@ -2,6 +2,14 @@ import {expect} from 'chai';
 import Permission from '@cdo/apps/code-studio/pd/permission';
 
 describe("Permission class", () => {
+  const setGlobalPermissionString = (permissionString) => {
+    window.dashboard = {
+      workshop: {
+        permission: permissionString
+      }
+    };
+  };
+
   it("Detects workshop admin", () => {
     setGlobalPermissionString("workshop_admin");
     const permission = new Permission();
@@ -56,13 +64,3 @@ describe("Permission class", () => {
     expect(permission.isPartner).to.be.false;
   });
 });
-
-const setGlobalPermissionString = (permissionString) => {
-  window.dashboard = {
-    workshop: {
-      permission: permissionString
-    }
-  };
-};
-
-export default setGlobalPermissionString;
