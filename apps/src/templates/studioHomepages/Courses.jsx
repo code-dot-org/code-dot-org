@@ -65,20 +65,48 @@ const Courses = React.createClass({
     }
   },
 
+  onClickFindCourse: function () {
+    $('html, body').animate({
+      scrollTop: $("#course-explorer-heading").offset().top
+    }, 1000);
+  },
+
   render() {
     const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
 
     return (
       <div>
-        <HeaderBanner
-          headingText={headingText}
-          subHeadingText={i18n.coursesHeadingSubText(
-            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
-          )}
-          showCreateAccount={isSignedOut}
-          description={i18n.coursesHeadingDescription()}
-        />
+        {isSignedOut && (
+          <HeaderBanner
+            headingText={headingText}
+            subHeadingText={i18n.coursesHeadingSubText(
+              {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+            )}
+            description={i18n.coursesHeadingDescription()}
+          >
+            <ProgressButton
+              href= "/users/sign_up"
+              color={ProgressButton.ButtonColor.gray}
+              text={i18n.createAccount()}
+              style={styles.button}
+            />
+          </HeaderBanner>
+        )}
+
+        {!isSignedOut &&  (
+          <HeaderBanner
+            headingText={headingText}
+            subHeadingText={i18n.coursesHeadingSubTextSignedIn()}
+          >
+            <ProgressButton
+              color={ProgressButton.ButtonColor.gray}
+              text={i18n.findCourse()}
+              style={styles.button}
+              onClick={this.onClickFindCourse}
+            />
+          </HeaderBanner>
+        )}
 
         {!isTeacher && (
           <ProtectedStatefulDiv
@@ -115,7 +143,10 @@ const Courses = React.createClass({
             />
 
             <div>
-              <div style={styles.heading}>
+              <div
+                id="course-explorer-heading"
+                style={styles.heading}
+              >
                 {i18n.courseExplorerHeading()}
               </div>
               <div>
