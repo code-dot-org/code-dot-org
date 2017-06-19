@@ -183,5 +183,5 @@ stage 'Revise Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project - Revise'
 named_level 'Course F: Play Lab Project - Revise'
 
-stage 'Presentation Your Project', flex_category: 'end_of_course_project'
+stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation'

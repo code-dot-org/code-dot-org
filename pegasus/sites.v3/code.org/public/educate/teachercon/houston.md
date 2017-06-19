@@ -208,6 +208,17 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
+<details>
+<summary>**We look forward to seeing you at TeacherCon!**</summary>
+ <p>
+ <br>
+**CS Discoveries teachers:** [Click here](http://go.pardot.com/webmail/153401/204221123/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+ <p>
+**CS Principles teachers:** [Click here](http://go.pardot.com/webmail/153401/204219819/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
+</p>
+</details>
+
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)
 

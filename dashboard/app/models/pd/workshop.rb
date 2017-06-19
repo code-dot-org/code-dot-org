@@ -433,8 +433,7 @@ class Pd::Workshop < ActiveRecord::Base
       if account_required_for_attendance?
         next unless enrollment.user
 
-        # Make sure user joined the section
-        next unless section.students.exists?(enrollment.user.id)
+        next unless attending_teachers.include?(enrollment.user)
       end
 
       enrollment.send_exit_survey
@@ -547,6 +546,13 @@ class Pd::Workshop < ActiveRecord::Base
     [
       SUBJECT_CSP_TEACHER_CON,
       SUBJECT_CSD_TEACHER_CON,
+    ].include?(subject)
+  end
+
+  def fit_weekend?
+    [
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_FIT
     ].include?(subject)
   end
 

@@ -14,8 +14,8 @@ export default storybook => {
               {
                 name: "Algebra Period 1",
                 linkToProgress: "to Progress tab",
-                course: "CS in Algebra",
-                linkToCourse: "to Course",
+                assignedTitle: "CS in Algebra",
+                linkToAssigned: "to Course",
                 numberOfStudents: 14,
                 linkToStudents: "to Manage Students tab",
                 sectionCode: "ABCDEF"
@@ -23,8 +23,8 @@ export default storybook => {
               {
                 name: "Algebra Period 2",
                 linkToProgress: "to Progress tab",
-                course: "CS in Algebra",
-                linkToCourse: "to Course",
+                assignedTitle: "CS in Algebra",
+                linkToAssigned: "to Course",
                 numberOfStudents: 19,
                 linkToStudents: "to Manage Students tab",
                 sectionCode: "EEB206"
@@ -32,8 +32,8 @@ export default storybook => {
               {
                 name: "Period 3",
                 linkToProgress: "to Progress tab",
-                course: "Course 4",
-                linkToCourse: "to Course",
+                assignedTitle: "Course 4",
+                linkToAssigned: "to Course",
                 numberOfStudents: 22,
                 linkToStudents: "to Manage Students tab",
                 sectionCode: "HPRWHG"

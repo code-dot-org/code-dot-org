@@ -241,13 +241,15 @@ class Hamburger
       id: "learn"
     }
 
-    entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}teach"),
-      id: "educate_entries",
-      subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
-    }
+    if options[:language] == "en"
+      entries << {
+        type: "expander",
+        title: I18n.t("#{loc_prefix}teach"),
+        id: "educate_entries",
+        subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+        class: visibility[:show_pegasus_options]
+      }
+    end
 
     entries << {
       title: I18n.t("#{loc_prefix}stats"),
@@ -263,13 +265,15 @@ class Hamburger
       id: "help-us"
     }
 
-    entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}about"),
-      id: "about_entries",
-      subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
-    }
+    if options[:language] == "en"
+      entries << {
+        type: "expander",
+        title: I18n.t("#{loc_prefix}about"),
+        id: "about_entries",
+        subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+        class: visibility[:show_pegasus_options]
+      }
+    end
 
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
