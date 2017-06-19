@@ -6,12 +6,17 @@ import sinon from 'sinon';
 // import {Router} from 'react-router';
 
 describe("WorkshopManagement", () => {
-  it("Renders expected buttons for not-started workshop", () => {
-    const fakeRouter = {
-      createHref() {}
-    };
 
+  const fakeRouter = {
+    createHref() {}
+  };
+  const context = {
+    router: fakeRouter
+  };
+
+  it("Renders expected buttons for not-started workshop", () => {
     const mock = sinon.mock(fakeRouter);
+
     mock.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
     mock.expects("createHref").withExactArgs("editUrl").returns("editHref");
 
@@ -20,6 +25,55 @@ describe("WorkshopManagement", () => {
         workshopId = {1}
         viewUrl = "viewUrl"
         editUrl = "editUrl"
+        onDelete={() => {}}
+      />, {context}
+    );
+
+    const renderedButtons = workshopManagement.find("Button");
+    expect(renderedButtons).to.have.length(3);
+    expect(renderedButtons.get(0).props.href).to.eql("viewHref");
+    expect(renderedButtons.get(1).props.href).to.eql("editHref");
+    expect(renderedButtons.get(2).props.children).to.eql("Delete");
+
+    mock.verify();
+  });
+
+  it("Renders expected buttons for started workshop", () => {
+    const mock = sinon.mock(fakeRouter);
+
+    mock.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+
+    const workshopManagement = shallow(
+      <WorkshopManagement
+        workshopId = {1}
+        viewUrl = "viewUrl"
+      />, {context}
+    );
+
+    const renderedButtons = workshopManagement.find("Button");
+    expect(renderedButtons).to.have.length(1);
+    expect(renderedButtons.get(0).props.href).to.eql("viewHref");
+
+    mock.verify();
+  });
+
+  it("Renders expected buttons for completed workshop for workshop organizer", () => {
+    const mock = sinon.mock(fakeRouter);
+
+    window.dashboard = {
+      workshop: {
+        permission: 'workshop_organizer'
+      }
+    };
+
+    mock.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+    mock.expects("createHref").withExactArgs("/organizer_survey_results/1").returns("organizerResultsHref");
+
+    const workshopManagement = shallow(
+      <WorkshopManagement
+        workshopId = {1}
+        viewUrl = "viewUrl"
+        showSurveyUrl={true}
       />,
       {
         context: {
@@ -31,40 +85,39 @@ describe("WorkshopManagement", () => {
     const renderedButtons = workshopManagement.find("Button");
     expect(renderedButtons).to.have.length(2);
     expect(renderedButtons.get(0).props.href).to.eql("viewHref");
-    expect(renderedButtons.get(1).props.href).to.eql("editHref");
+    expect(renderedButtons.get(1).props.href).to.eql("organizerResultsHref");
 
     mock.verify();
   });
-  // it("Renders expected buttons for in-progress workshop", () => {
-  //   const workshopManagement = shallow(
-  //     <WorkshopManagement
-  //       workshopId = '1'
-  //       viewUrl = 'viewUrl'
-  //       deleteUrl = 'deleteUrl'
-  //     />
-  //   );
-  // });
-  // it("Renders expected buttons for completed workshop", () => {
-  //   setGlobalPermissionString("[workshop_organizer]");
-  //
-  //   let workshopManagment = shallow(
-  //     <WorkshopManagement
-  //       workshop = '1'
-  //       viewUrl = 'viewUrl'
-  //       surveyUrl = 'surveyUrl'
-  //     />
-  //   );
-  //
-  //   expect(workshopManagment.state.surveyUrl = '/organizer_survey_results/1');
-  //
-  //   workshopManagment = shallow(
-  //     <WorkshopManagement
-  //       workshop = '1'
-  //       viewUrl = 'viewUrl'
-  //       surveyUrl = 'surveyUrl'
-  //     />
-  //   );
-  //
-  //   expect(workshopManagment.state.surveyUrl = '/survey_results/1');
-  // });
+
+  it("Renders expected buttons for completed workshop for facilitator", () => {
+    const mock = sinon.mock(fakeRouter);
+
+    window.dashboard = {
+      workshop: {
+        permission: 'facilitator'
+      }
+    };
+
+    mock.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+    mock.expects("createHref").withExactArgs("/survey_results/1").returns("facilitatorResultsHref");
+
+    const workshopManagement = shallow(
+      <WorkshopManagement
+        workshopId = {1}
+        viewUrl = "viewUrl"
+        showSurveyUrl={true}
+      />,
+      {
+        context: {
+          router: fakeRouter
+        }
+      }
+    );
+
+    const renderedButtons = workshopManagement.find("Button");
+    expect(renderedButtons).to.have.length(2);
+    expect(renderedButtons.get(0).props.href).to.eql("viewHref");
+    expect(renderedButtons.get(1).props.href).to.eql("facilitatorResultsHref");
+  });
 });
