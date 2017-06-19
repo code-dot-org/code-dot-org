@@ -620,13 +620,13 @@ myCallback("this message is coming from inside the interpreter");
 
     // Continue stepping
     verifyStepSequence([
-      {node: {type: 'ForStatement'}, mode: 1}, // (test) i < 2;
+      {node: {type: 'ForStatement'}, mode_: 1}, // (test) i < 2;
       {node: {type: 'ExpressionStatement'}},   // (body) 1;
-      {node: {type: 'ForStatement'}, mode: 3}, // (update) i++
-      {node: {type: 'ForStatement'}, mode: 1}, // (test) i < 2;
+      {node: {type: 'ForStatement'}, mode_: 3}, // (update) i++
+      {node: {type: 'ForStatement'}, mode_: 1}, // (test) i < 2;
       {node: {type: 'ExpressionStatement'}},   // (body) 1;
-      {node: {type: 'ForStatement'}, mode: 3}, // (update) i++
-      {node: {type: 'ForStatement'}, mode: 1}  // (test) i < 2;
+      {node: {type: 'ForStatement'}, mode_: 3}, // (update) i++
+      {node: {type: 'ForStatement'}, mode_: 1}  // (test) i < 2;
     ]);
   });
 

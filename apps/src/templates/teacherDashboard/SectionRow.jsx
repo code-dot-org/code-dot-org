@@ -5,7 +5,8 @@ import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
-import { assignmentId, updateSection, cancelNewSection } from './teacherSectionsRedux';
+import PrintCertificates from './PrintCertificates';
+import { assignmentId, updateSection, removeSection } from './teacherSectionsRedux';
 
 const styles = {
   sectionName: {
@@ -116,7 +117,7 @@ class SectionRow extends Component {
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     section: sectionShape.isRequired,
     updateSection: PropTypes.func.isRequired,
-    cancelNewSection: PropTypes.func.isRequired,
+    removeSection: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -134,8 +135,18 @@ class SectionRow extends Component {
 
   onClickDeleteNo = () => this.setState({deleting: false});
 
-  // TODO(bjvanminnen)
-  onClickDeleteYes = () => console.log('this is where our delete will happen');
+  onClickDeleteYes = () => {
+    const { section, removeSection } = this.props;
+    $.ajax({
+      url: `/v2/sections/${section.id}`,
+      method: 'DELETE',
+    }).done(() => {
+      removeSection(section.id);
+    }).fail((jqXhr, status) => {
+      // TODO(bjvanminnen): figure out how what we want to do in this case
+      console.error(status);
+    });
+  }
 
   onClickEdit = () => this.setState({editing: true});
 
@@ -187,16 +198,13 @@ class SectionRow extends Component {
   }
 
   onClickEditCancel = () => {
-    const { section, cancelNewSection } = this.props;
+    const { section, removeSection } = this.props;
     const persistedSection = !!section.code;
     if (!persistedSection) {
-      cancelNewSection(section.id);
+      removeSection(section.id);
     }
     this.setState({editing: false});
   }
-
-  // TODO(bjvanminnen)
-  onClickPrintCerts = () => console.log('print certificates here');
 
   render() {
     const {
@@ -206,6 +214,12 @@ class SectionRow extends Component {
       validAssignments
     } = this.props;
     const { editing, deleting } = this.state;
+
+    // When deleting a section, I've occasionally seen us attempt a render with
+    // a null section for some reason. This is here to provide defense against this.
+    if (!section) {
+      return null;
+    }
 
     const persistedSection = !!section.code;
 
@@ -290,7 +304,7 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`}>
-              {section.numStudents}
+              {section.studentNames.length}
             </a>
           }
         </td>
@@ -300,7 +314,7 @@ class SectionRow extends Component {
         <td style={styles.td}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.numStudents === 0}
+              canDelete={section.studentNames.length === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -317,11 +331,7 @@ class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-          <ProgressButton
-            text={"Print Certificates"}
-            onClick={this.onClickPrintCerts}
-            color={ProgressButton.ButtonColor.gray}
-          />
+          <PrintCertificates section={section}/>
         </td>
       </tr>
     );
@@ -335,4 +345,4 @@ export default connect((state, ownProps) => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   section: state.teacherSections.sections[ownProps.sectionId],
-}), { updateSection, cancelNewSection })(SectionRow);
+}), { updateSection, removeSection })(SectionRow);

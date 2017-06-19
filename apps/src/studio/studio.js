@@ -5360,14 +5360,14 @@ Studio.queueCallback = function (callback, args) {
     },
     doneCallee_: true,
     func_: callback,
-    arguments: intArgs,
+    arguments_: intArgs,
     n_: intArgs.length
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
     // remove the last argument because stepCallExpression always wants to push it back on.
-    if (state.arguments.length > 0) {
-      state.value = state.arguments.pop();
+    if (state.arguments_.length > 0) {
+      state.value = state.arguments_.pop();
     }
 
     const depth = Studio.interpreter.pushStackFrame(state);
