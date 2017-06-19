@@ -48,9 +48,9 @@ Scenario: Signed out user in Spanish should see 2 header links
   And I dismiss the language selector
   And I wait to see "#headerlinks"
   And I see "#header-non-en-courses"
+  And element "#header-non-en-courses" contains text "Courses"
   And I see "#header-non-en-projects"
-  And element "#header-non-en-courses" has "es" text from key "header_courses"
-  And element "#header-non-en-projects" has "es" text from key "header_project_gallery"
+  And element "#header-non-en-projects" contains text "Project Gallery"
 
 Scenario: Student in Spanish should see 2 header links
   Given I create a student named "Estrella Estudiante"
