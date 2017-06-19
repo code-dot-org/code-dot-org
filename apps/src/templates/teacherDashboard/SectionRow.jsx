@@ -124,9 +124,7 @@ class SectionRow extends Component {
     ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-    section: sectionShape.isRequired,
-    assignmentName: PropTypes.string,
-    assignmentPath: PropTypes.string,
+    sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
   };
@@ -134,10 +132,12 @@ class SectionRow extends Component {
   constructor(props) {
     super(props);
 
+    const section = props.sections[props.sectionId];
+
     this.state = {
       // Start in editing mode if we don't have a section code (implying this is
       // a new section that has not been persisted to the server)
-      editing: !props.section.code,
+      editing: !section.code,
       deleting: false
     };
   }
@@ -147,7 +147,8 @@ class SectionRow extends Component {
   onClickDeleteNo = () => this.setState({deleting: false});
 
   onClickDeleteYes = () => {
-    const { section, removeSection } = this.props;
+    const { sections, sectionId, removeSection } = this.props;
+    const section = sections[sectionId];
     $.ajax({
       url: `/v2/sections/${section.id}`,
       method: 'DELETE',
@@ -162,7 +163,8 @@ class SectionRow extends Component {
   onClickEdit = () => this.setState({editing: true});
 
   onClickEditSave = () => {
-    const { section, sectionId, updateSection } = this.props;
+    const { sections, sectionId, updateSection } = this.props;
+    const section = sections[sectionId];
     const persistedSection = !!section.code;
     const assignment = this.assignment.getSelectedAssignment();
     const data = {
@@ -209,7 +211,8 @@ class SectionRow extends Component {
   }
 
   onClickEditCancel = () => {
-    const { section, removeSection } = this.props;
+    const { sections, sectionId, removeSection } = this.props;
+    const section = sections[sectionId];
     const persistedSection = !!section.code;
     if (!persistedSection) {
       removeSection(section.id);
@@ -219,20 +222,17 @@ class SectionRow extends Component {
 
   render() {
     const {
-      section,
-      assignmentName,
-      assignmentPath,
+      sections,
+      sectionId,
       validLoginTypes,
       validGrades,
       validAssignments
     } = this.props;
     const { editing, deleting } = this.state;
 
-    // When deleting a section, I've occasionally seen us attempt a render with
-    // a null section for some reason. This is here to provide defense against this.
-    if (!section) {
-      return null;
-    }
+    const section = sections[sectionId];
+    const assignName = assignmentName(validAssignments, section);
+    const assignPath = assignmentPath(validAssignments, section);
 
     const persistedSection = !!section.code;
 
@@ -281,9 +281,9 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.td}>
-          {!editing && assignmentName &&
-            <a href={assignmentPath}>
-              {assignmentName}
+          {!editing && assignName &&
+            <a href={assignPath}>
+              {assignName}
             </a>
           }
           {editing && (
@@ -346,7 +346,7 @@ class SectionRow extends Component {
           )}
           <PrintCertificates
             section={section}
-            assignmentName={assignmentName}
+            assignmentName={assignName}
           />
         </td>
       </tr>
@@ -356,12 +356,9 @@ class SectionRow extends Component {
 
 export const UnconnectedSectionRow = SectionRow;
 
-export default connect((state, ownProps) => ({
+export default connect(state => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
-  // TODO - dont use ownProps
-  assignmentName: assignmentName(state.teacherSections, state.teacherSections.sections[ownProps.sectionId]),
-  assignmentPath: assignmentPath(state.teacherSections, state.teacherSections.sections[ownProps.sectionId]),
-  section: state.teacherSections.sections[ownProps.sectionId],
+  sections: state.teacherSections.sections,
 }), { updateSection, removeSection })(SectionRow);

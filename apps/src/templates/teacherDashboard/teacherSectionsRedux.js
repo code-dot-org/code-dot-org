@@ -195,24 +195,24 @@ export const sectionFromServerSection = (serverSection, validAssignments) => ({
   scriptId: serverSection.script ? serverSection.script.id : null
 });
 
-const assignmentForSection = (state, section) => {
+const assignmentForSection = (validAssignments, section) => {
   const assignId = assignmentId(section.courseId, section.courseId ? null : section.scriptId);
-  const assignment = state.validAssignments[assignId];
+  const assignment = validAssignments[assignId];
   return assignment;
 };
 
 /**
  * Get the name of the course/script assigned to the given section
  */
-export const assignmentName = (state, section) => {
-  const assignment = assignmentForSection(state, section);
+export const assignmentName = (validAssignments, section) => {
+  const assignment = assignmentForSection(validAssignments, section);
   return assignment ? assignment.name : '';
 };
 
 /**
  * Get the path of the course/script assigned to the given section
  */
-export const assignmentPath = (state, section) => {
-  const assignment = assignmentForSection(state, section);
+export const assignmentPath = (validAssignments, section) => {
+  const assignment = assignmentForSection(validAssignments, section);
   return assignment ? assignment.path : '';
 };

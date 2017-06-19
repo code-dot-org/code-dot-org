@@ -447,21 +447,21 @@ describe('teacherSectionsRedux', () => {
     const assignedSection = stateWithNewSection.sections["11"];
 
     it('assignmentName returns the name if the section is assigned a course/script', () => {
-      const name = assignmentName(stateWithNewSection, assignedSection);
+      const name = assignmentName(stateWithNewSection.validAssignments, assignedSection);
       assert.equal(name, 'CS Discoveries');
     });
 
     it('assignmentName returns empty string otherwise', () => {
-      const name = assignmentName(stateWithNewSection, unassignedSection);
+      const name = assignmentName(stateWithNewSection.validAssignments, unassignedSection);
       assert.equal(name, '');
     });
 
     it('assignmentPath returns the path if the section is assigned a course/script', () => {
-      const path = assignmentPath(stateWithNewSection, assignedSection);
+      const path = assignmentPath(stateWithNewSection.validAssignments, assignedSection);
       assert.equal(path, '//test-studio.code.org/courses/csd');
     });
 
-    it('assignmentPath returns empty string otherwise', () => {
+    it('assignmentPath returns empty string otherwise.validAssignments', () => {
       const path = assignmentPath(stateWithNewSection, unassignedSection);
       assert.equal(path, '');
     });
