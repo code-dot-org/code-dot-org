@@ -408,7 +408,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    k1? || name == Script::COURSEC_DRAFT_NAME
+    k1? || name == Script::COURSEC_DRAFT_NAME || name == Script::CSD3_NAME
   end
 
   def hide_solutions?
