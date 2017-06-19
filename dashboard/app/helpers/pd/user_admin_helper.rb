@@ -1,2 +1,0 @@
-module Pd::UserAdminHelper
-end

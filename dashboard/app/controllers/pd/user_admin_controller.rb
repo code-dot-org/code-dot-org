@@ -9,7 +9,7 @@ class Pd::UserAdminController < ApplicationController
       @user = User.find(user_id)
     else
       email = search_term
-      @user = User.where(email: email).first # use the first result if there are multiple users with the same email address
+      @user = User.find_by(email: email) # This retrieves the first result if there are multiple users with the same email address
     end
     @permissions = @user.permissions if @user
   end

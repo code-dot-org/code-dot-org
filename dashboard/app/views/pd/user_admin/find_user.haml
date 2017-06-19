@@ -23,6 +23,8 @@
           %td= link_to @user.id, action: :find_user, user_id: @user.id
           %td= @user.email
           %td= @user.name
+  -else
+    %p No User Found
   -if @permissions
     = form_tag(action: 'assign_permission') do
       %table.table.table-hover.table-condensed.table-auto-width
