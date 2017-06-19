@@ -155,7 +155,9 @@ class SectionRow extends Component {
     }).done(() => {
       removeSection(section.id);
     }).fail((jqXhr, status) => {
-      // TODO(bjvanminnen): figure out how what we want to do in this case
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
       console.error(status);
     });
   }
@@ -205,7 +207,9 @@ class SectionRow extends Component {
         this.setState({ editing: false });
       }
     }).fail((jqXhr, status) => {
-      // TODO(bjvanminnen): figure out how what we want to do in this case
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
       console.error(status);
     });
   }
