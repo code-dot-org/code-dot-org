@@ -193,19 +193,19 @@ exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, g
 exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   var state = interpreter.peekStackFrame();
   var type = state.node.type;
-  if (state.done) {
+  if (state.done_) {
     return true;
   }
   if (type === "SwitchStatement") {
     // Safe to skip over SwitchStatement's except the very start (before a
     // switchValue has been set):
-    return typeof state.switchValue !== 'undefined';
+    return typeof state.switchValue_ !== 'undefined';
   }
   if (type === "VariableDeclaration") {
     // Only stop the first time this VariableDeclaration is processed (the
     // interpreter will stop on this node multiple times, but with different
     // `state.n` representing which VariableDeclarator is being executed).
-    return state.n > 0;
+    return state.n_ > 0;
   }
   /* eslint-disable no-fallthrough */
   switch (type) {
@@ -407,7 +407,7 @@ exports.selectCurrentCode = function (interpreter,
     var node = interpreter.peekStackFrame().node;
 
     if (node.type === 'ForStatement') {
-      var mode = interpreter.peekStackFrame().mode || 0, subNode;
+      var mode = interpreter.peekStackFrame().mode_ || 0, subNode;
       switch (mode) {
         case exports.ForStatementMode.INIT:
           subNode = node.init;
@@ -421,6 +421,8 @@ exports.selectCurrentCode = function (interpreter,
         case exports.ForStatementMode.UPDATE:
           subNode = node.update;
           break;
+        default:
+          throw new Error("unknown mode", mode);
       }
       node = subNode || node;
     }

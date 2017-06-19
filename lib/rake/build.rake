@@ -125,10 +125,8 @@ namespace :build do
   end
 
   task :restart_process_queues do
-    if CDO.daemon
-      ChatClient.log 'Restarting <b>process_queues</b>...'
-      RakeUtils.restart_service 'process_queues'
-    end
+    ChatClient.log 'Restarting <b>process_queues</b>...'
+    RakeUtils.restart_service 'process_queues'
   end
 
   tasks = []
@@ -136,7 +134,7 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  tasks << :restart_process_queues if CDO.daemon
+  tasks << :restart_process_queues if CDO.process_queues
   task all: tasks
 end
 
