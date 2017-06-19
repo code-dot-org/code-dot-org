@@ -5407,6 +5407,8 @@ en:
               name: Revise Your Project
             Presentation Your Project:
               name: Presentation Your Project
+            Present Your Project:
+              name: Present Your Project
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
