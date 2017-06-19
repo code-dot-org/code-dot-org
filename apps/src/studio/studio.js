@@ -32,7 +32,7 @@ import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
-import * as codegen from '../codegen';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
@@ -1040,7 +1040,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
 Studio.initAutoHandlers = function (map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
-    var nativeFunc = codegen.createNativeFunctionFromInterpreterFunction(func);
+    var nativeFunc = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     if (func) {
       registerEventHandler(Studio.eventHandlers, map[funcName], nativeFunc);
     }
@@ -2680,10 +2680,10 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
     if (exampleCode) {
-      var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+      var resultBoolean = CustomMarshalingInterpreter.evalWith(defCode + '; return' + exampleCode, {
         Studio: api,
         Globals: Studio.Globals
-      }, true);
+      }, {legacy: true});
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2918,6 +2918,10 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'goal');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'wall');
   }
 };
 
@@ -2948,10 +2952,10 @@ var registerHandlersWithSpriteAndGroupParams = function (
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try {
-    codegen.evalWith(code, {
+    CustomMarshalingInterpreter.evalWith(code, {
       Studio: api,
       Globals: Studio.Globals
-    }, true);
+    }, {legacy: true});
   } catch (e) { }
 };
 
@@ -3262,7 +3266,7 @@ Studio.execute = function () {
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
-      const {hooks, interpreter} = codegen.evalWithEvents(
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
         {Studio: api, Globals: Studio.Globals},
         Studio.interpretedHandlers,
         code
@@ -5356,14 +5360,14 @@ Studio.queueCallback = function (callback, args) {
     },
     doneCallee_: true,
     func_: callback,
-    arguments: intArgs,
+    arguments_: intArgs,
     n_: intArgs.length
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
     // remove the last argument because stepCallExpression always wants to push it back on.
-    if (state.arguments.length > 0) {
-      state.value = state.arguments.pop();
+    if (state.arguments_.length > 0) {
+      state.value = state.arguments_.pop();
     }
 
     const depth = Studio.interpreter.pushStackFrame(state);
@@ -5689,6 +5693,7 @@ function executeCollision(src, target) {
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
   Studio.executeQueue(srcPrefix + 'anything');
+  Studio.executeQueue(srcPrefix + 'goal');
 
   if (isEdgeClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_edge');
@@ -6072,18 +6077,21 @@ Studio.allGoalsVisited = function () {
           var allowQueueExtension = false;
           var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
+          callHandler(prefix + 'goal', allowQueueExtension);
         }
 
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
-          if (spriteAtGoal(Studio.sprite[j], goal)) {
+          if (Studio.sprite[j].visible &&
+              spriteAtGoal(Studio.sprite[j], goal)) {
             goal.finished = true;
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
             }
 
             callHandler('whenTouchGoal');
+            callHandler('whenSpriteCollided-' + j + '-goal');
 
             break;
           }

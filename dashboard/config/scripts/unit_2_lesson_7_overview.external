@@ -4,14 +4,13 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Overview
 
-This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their About Me page.
-
+This lesson introduces CSS as a way to style elements on the page. The class learns the basic syntax for CSS rule-sets and then explores properties that impact HTML text elements.  Finally, everyone applies text styles to their personal websites.
 ## Vocabulary
 
 * **CSS** - CSS stands for Cascading Style Sheets. CSS allows each HTML element to be styled according to certain set of rules.
 * **CSS Selector** - Specifies the part of the code which the style should be applied to.
 
-## New Tags
+## Introduced Code
 
 *  **[Color](//docs.code.org/weblab/color/)** - `color: value;`
 *  **[Text Align](//docs.code.org/weblab/text-align/)** - `text-align: value;`

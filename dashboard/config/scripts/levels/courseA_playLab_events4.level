@@ -51,10 +51,12 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)\",\"hint_id\":\"courseA_playLab_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/321ffeed9aa0b3f8cf96ac440e650672/courseA_playLab_events4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the block you should connect to the `when right` event:\\n\\n![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)\",\"hint_id\":\"courseA_playLab_events4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be92fc2b8339b9e5650d9fe356b36ce0/courseA_playLab_events4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "tts_markdown_instructions_override": "Now, get Jorge to move right when the right arrow button is clicked.",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:42:16 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

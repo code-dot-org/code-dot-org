@@ -1,38 +1,50 @@
+:ruby
+
+  script = local_assigns[:script] || Script.twenty_hour_script
+  script_level = local_assigns[:script_level]
+  level = local_assigns[:level]
+  full_width = local_assigns[:full_width]
+
+  show_bug_links = script_level || (level && level.try(:is_project_level))
+
+  user_type = nil
+
+  header_class = 'header2-wrapper'
+  header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
+
+  if current_user
+    if current_user.teacher?
+      user_type = "teacher"
+    elsif current_user.student?
+      user_type = "student"
+    end
+  end
+
+  if !current_user
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    user_type = request.cookies[cookie_key]
+  end
+
+  hamburger_options = {}
+  hamburger_options[:level] = level
+  hamburger_options[:script_level] = script_level
+  hamburger_options[:user_type] = user_type
+  hamburger_options[:language] = request.language
+  hamburger_options[:show_gallery] = true
+  hamburger_options[:loc_prefix] = "nav.header."
+
+  header_contents_options = {}
+  header_contents_options[:user_type] = user_type
+  header_contents_options[:language] = request.language
+  header_contents_options[:loc_prefix] = "nav.header."
+
+  require 'cdo/hamburger'
+
 = console if @use_web_console
-- script = local_assigns[:script] || Script.twenty_hour_script
-- script_level = local_assigns[:script_level]
-- level = local_assigns[:level]
-- full_width = local_assigns[:full_width]
 
 = render partial: 'layouts/unsupported_browser'
 
-- show_bug_links = script_level || (level && level.try(:is_project_level))
-
-- user_type = nil
-
-- header_class = 'header2-wrapper'
-- header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
-
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
-- if current_user
-  - if current_user.teacher?
-    - user_type = "teacher"
-  - elsif current_user.student?
-    - user_type = "student"
-
-- if !current_user
-  - cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-  - user_type = request.cookies[cookie_key]
-
-- hamburger_options = {}
-- hamburger_options[:level] = level
-- hamburger_options[:script_level] = script_level
-- hamburger_options[:user_type] = user_type
-- hamburger_options[:language] = request.language
-- hamburger_options[:code_org_url_base] = CDO.code_org_url
-- hamburger_options[:studio_url_base] = CDO.studio_url
-- hamburger_options[:show_gallery] = true
-- hamburger_options[:loc_prefix] = "nav.header."
 
 %div{class: header_class}
   .navbar-static-top.header
@@ -49,25 +61,8 @@
             - elsif level
             - else
               .headerlinks.hide_on_tablet
-                - if user_type == "teacher"
-                  %a.headerlink{:href=>"/home"}= t('nav.header.home')
-                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
-                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
-                  %a.headerlink{:href=>CDO.code_org_url("/teacher-dashboard#/sections")}= t('nav.header.sections')
-                  %a.headerlink{:href=>"/my-professional-learning"}= t('nav.header.professional_learning')
-                - elsif user_type == "student"
-                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
-                  %a.headerlink{:href=>"/projects"}= t('nav.header.project_gallery')
-                - elsif request.language == "en"
-                  %a.headerlink{:href=>CDO.code_org_url("/student")}= t('nav.header.learn')
-                  %a.headerlink{:href=>CDO.code_org_url("/educate")}= t('nav.header.teach')
-                  %a.headerlink{:href=>CDO.code_org_url("/promote")}= t('nav.header.stats')
-                  %a.headerlink{:href=>CDO.code_org_url("/help")}= t('nav.header.help_us')
-                  %a.headerlink{:href=>CDO.code_org_url("/about")}= t('nav.header.about')
-                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
-                - else
-                  %a.headerlink{:href=>"/courses"}= t('nav.header.courses')
-                  %a.headerlink{:href=>"/projects/public"}= t('nav.header.project_gallery')
+                - Hamburger.get_header_contents(header_contents_options).each do |entry|
+                  %a.headerlink{href: entry[:url]}= entry[:title]
 
           .header_right.hide_on_mobile
             %span.freeplay_links

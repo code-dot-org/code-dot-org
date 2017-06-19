@@ -16,7 +16,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-09 13:46:06 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-09 14:12:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-09 13:46:06 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-09 14:12:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 00:36:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 00:37:00 +0000\",\"changed\":[\"name\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

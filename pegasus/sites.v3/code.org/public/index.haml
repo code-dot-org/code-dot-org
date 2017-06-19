@@ -15,7 +15,6 @@ social:
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
-%link{:href=>"/shared/css/buttons.css", :rel=>"stylesheet"}
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]

@@ -42,7 +42,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
@@ -54,6 +54,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:44:37 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

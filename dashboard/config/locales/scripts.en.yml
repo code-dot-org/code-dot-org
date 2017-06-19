@@ -93,7 +93,7 @@ en:
         course3:
           title: Course 3
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          description_short: Delve deeper into programming while building games and interactive stories. Course 3 is a follow-up to Course 2.
+          description_short: Delve even deeper into programming while building games and interactive stories. This is a follow-up to Course 2.
           description_audience: Ages 8-18
           stages:
             Artist:
@@ -169,7 +169,7 @@ en:
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-          description_short: Build more complex programs with new concepts such as for loops and functions with parameters. Course 4 is a follow-up to Course 3.
+          description_short: Build more complex programs with concepts such as for loops and functions with parameters. This is a follow-up to Course 3.
           description_audience: Ages 9-18
           stages:
             Artist:
@@ -4434,10 +4434,10 @@ en:
               name: Measuring Student Learning
         csp6-support:
           stage: {}
-          title: Unit 6 Online Professional Learning Course
+          title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+          description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: {}
         csppostap:
           title: CSP Post-AP - Databases and Using Data in Your Apps
@@ -5159,6 +5159,8 @@ en:
               name: D6 Frozen Artist
             F7 add Conditionals:
               name: F7 add Conditionals
+            F5 Minecraft:
+              name: F5 Minecraft
           title: ''
           description_audience: ''
           description_short: ''
@@ -5405,6 +5407,8 @@ en:
               name: Revise Your Project
             Presentation Your Project:
               name: Presentation Your Project
+            Present Your Project:
+              name: Present Your Project
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -5417,10 +5421,16 @@ en:
               name: Wednesday
             Thursday:
               name: Thursday
-          title: CS Discoveries TeacherCon - Novice Facilitators Reflection
+            Welcome:
+              name: Welcome
+            Congrats:
+              name: Congrats
+            Wrap Up:
+              name: Wrap Up
+          title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: Reflection questions for novice facilitators at TeacherCon.
+          description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:
@@ -5475,3 +5485,19 @@ en:
           description_audience: ''
           description_short: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
           description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
+        cspnovice:
+          stages:
+            Welcome:
+              name: Welcome
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+          title: CS Principles TeacherCon Novice Facilitators
+          description_audience: CSP Novice Facilitators
+          description_short: Reflection questions for novice facilitators at TeacherCon.
+          description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '

@@ -40,10 +40,19 @@
     "first_sprite_index": "0",
     "instructions_important": "false",
     "timeout_failure_tick": "0",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 16:03:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
