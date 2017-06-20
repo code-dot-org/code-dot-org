@@ -333,6 +333,8 @@ class User < ActiveRecord::Base
 
   before_create :generate_secret_words
 
+  before_create :clear_ui_tips
+
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
@@ -910,6 +912,13 @@ class User < ActiveRecord::Base
 
   def generate_secret_words
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+  end
+
+  def clear_ui_tips
+    # New teachers don't need to see the UI tips for their home and course pages,
+    # so set them as already dismissed.
+    self.ui_tip_dismissed_homepage_header = true
+    self.ui_tip_dismissed_teacher_courses = true
   end
 
   def advertised_scripts
