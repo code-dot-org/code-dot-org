@@ -20,19 +20,17 @@ echo "Compiling application.css using rails asset pipeline"
 pushd ../dashboard
 bundle install
 bundle exec rake assets:precompile
-cp public/assets/css/application-*.css ../apps/build/package/application.css 2>/dev/null || cp public/assets/application-*.css ../apps/build/package/application.css 2>/dev/null || echo "failed to find and copy application.css"
+cp public/assets/css/application-*.css ../apps/build/package/css/application.css 2>/dev/null || cp public/assets/application-*.css ../apps/build/package/css/application.css 2>/dev/null || echo "failed to find and copy application.css"
 popd
 
 # build the static storybook site
 echo "Building the static storybook site"
-node --max_old_space_size=4096 `npm bin`/build-storybook -o $DIR_TO_DEPLOY -s build/package/
+node --max_old_space_size=4096 `npm bin`/build-storybook -o $DIR_TO_DEPLOY
 
-# remove a bunch of crap we don't actually need.
-echo "Removing some unused files"
-pushd $DIR_TO_DEPLOY
-rm -rf media
-rm -rf js
-popd
+# manually copy over static files
+echo "Copying static files"
+cp -R build/package/css $DIR_TO_DEPLOY/css
+cp -R build/package/js/en_us $DIR_TO_DEPLOY/js/en_us
 
 echo "Pushing to github... cloning gh-pages branch"
 # Clone the gh-pages branch to /tmp/pages
