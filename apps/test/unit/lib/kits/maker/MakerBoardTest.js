@@ -392,9 +392,14 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
       });
 
       it(`returns an Led component`, () => {
-        const retVal = board.createLed(10);
-        expect(retVal).to.be.an('object');
-        // TODO: More detail here?  What can we check for?
+        const led = board.createLed(10);
+        // FakeBoard doesn't provide an LED component, so check the basic LED
+        // shape instead.
+        expect(led.on).to.be.a('function');
+        expect(led.off).to.be.a('function');
+        expect(led.blink).to.be.a('function');
+        expect(led.toggle).to.be.a('function');
+        expect(led.pulse).to.be.a('function');
       });
     });
   });
