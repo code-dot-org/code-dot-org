@@ -425,6 +425,22 @@ Artist.prototype.loadAudio_ = function () {
 };
 
 /**
+ * We only attempt normalization for blockly levels, for two reasons;
+ *
+ * First, the blocks that we normalize (sticker and pattern) only exist in
+ * blockly land.
+ *
+ * Second, the way we retrieve the user code in droplet does not use
+ * this.api.log, so we'd have to make an alternate pathway for that use
+ * case.
+ *
+ * @return {boolean}
+ */
+Artist.prototype.shouldSupportNormalization = function () {
+  return this.studioApp_.isUsingBlockly();
+};
+
+/**
  * Code called after the blockly div + blockly core is injected into the document
  */
 Artist.prototype.afterInject_ = function (config) {
@@ -962,16 +978,18 @@ Artist.prototype.execute = function () {
 
   // api.log now contains a transcript of all the user's actions.
 
-  // First, draw a normalized version of the user's actions (ie, one which
-  // doesn't vary patterns or stickers) to a dedicated context. Note that we
-  // clone this.api.log so the real log doesn't get mutated
-  this.shouldDrawNormalized_ = true;
-  this.drawLogOnCanvas(this.api.log.slice(), this.ctxNormalizedScratch);
-  this.shouldDrawNormalized_ = false;
+  if (this.shouldSupportNormalization()) {
+    // First, draw a normalized version of the user's actions (ie, one which
+    // doesn't vary patterns or stickers) to a dedicated context. Note that we
+    // clone this.api.log so the real log doesn't get mutated
+    this.shouldDrawNormalized_ = true;
+    this.drawLogOnCanvas(this.api.log.slice(), this.ctxNormalizedScratch);
+    this.shouldDrawNormalized_ = false;
 
-  // Then, reset our state and draw the user's actions in a visible, animated
-  // way
-  this.studioApp_.reset();
+    // Then, reset our state and draw the user's actions in a visible, animated
+    // way
+    this.studioApp_.reset();
+  }
 
   this.studioApp_.playAudio('start', {loop : true});
 
@@ -1629,8 +1647,12 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
 Artist.prototype.checkAnswer = function () {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
-  var userImage =
-      this.ctxNormalizedScratch.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+  var userCanvas = this.shouldSupportNormalization() ?
+      this.ctxNormalizedScratch :
+      this.ctxScratch;
+
+  var userImage = userCanvas.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var answerImage =
       this.ctxNormalizedAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
