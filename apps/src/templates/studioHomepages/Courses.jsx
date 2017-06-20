@@ -125,10 +125,7 @@ const Courses = React.createClass({
             />
 
             <div>
-              <div
-                id="course-explorer-heading"
-                style={styles.heading}
-              >
+              <div style={styles.heading}>
                 {i18n.courseExplorerHeading()}
               </div>
               <div>
