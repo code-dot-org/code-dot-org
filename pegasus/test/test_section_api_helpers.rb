@@ -714,6 +714,31 @@ class SectionApiHelperTest < SequelTestCase
         end
       end
 
+      it 'creates a google classroom student' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+
+          id = pegasus_section.add_student(FakeDashboard::STUDENT_OAUTH)
+          assert_equal(
+            1,
+            Dashboard.db[:followers].where(student_user_id: id).count
+          )
+
+          user = Dashboard.db[:users].first(id: id)
+          assert_equal(
+            FakeDashboard::STUDENT_OAUTH[:uid],
+            user[:uid]
+          )
+          assert_equal(
+            FakeDashboard::STUDENT_OAUTH[:name],
+            user[:name]
+          )
+        end
+      end
+
       it 'restores deleted follower' do
         Dashboard.db.transaction(rollback: :always) do
           pegasus_section = DashboardSection.fetch_if_teacher(

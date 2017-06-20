@@ -25,8 +25,6 @@ Feature: Hamburger dropdown
   Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop
     Given I create a teacher named "Tessa Teacher"
     Then I wait until I am on "http://studio.code.org/home"
-    And I wait to see "#x-close"
-    And I click selector "x-close" if it exists
     Then I wait to see "#hamburger-icon"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"

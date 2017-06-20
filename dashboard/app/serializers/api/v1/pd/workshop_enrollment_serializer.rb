@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email, :district_name, :school, :user_id, :in_section
+  attributes :id, :first_name, :last_name, :email, :district_name, :school, :user_id, :attended
 
   def user_id
     user = object.resolve_user
@@ -14,7 +14,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
     object.try(:school_info).try(:school_district).try(:name)
   end
 
-  def in_section
-    object.in_section?
+  def attended
+    object.attendances.exists?
   end
 end
