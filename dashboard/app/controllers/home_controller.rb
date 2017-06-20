@@ -35,7 +35,11 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
 
   def index
-    redirect_to '/courses'
+    if current_user.try(:admin?)
+      redirect_to '/admin'
+    else
+      redirect_to '/courses'
+    end
   end
 
   # Show /home for teachers.
