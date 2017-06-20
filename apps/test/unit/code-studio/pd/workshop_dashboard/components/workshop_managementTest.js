@@ -15,6 +15,7 @@ describe("WorkshopManagement", () => {
 
   it("Renders expected buttons for not-started workshop", () => {
     const mock = sinon.mock(fakeRouter);
+    const deleteStub = sinon.spy();
 
     mock.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
     mock.expects("createHref").withExactArgs("editUrl").returns("editHref");
@@ -24,11 +25,12 @@ describe("WorkshopManagement", () => {
         workshopId = {1}
         viewUrl = "viewUrl"
         editUrl = "editUrl"
-        onDelete={() => {}}
+        onDelete={deleteStub}
       />, {context}
     );
 
     const renderedButtons = workshopManagement.find("Button");
+
     expect(renderedButtons).to.have.length(3);
     expect(renderedButtons.get(0).props.href).to.eql("viewHref");
     expect(renderedButtons.get(1).props.href).to.eql("editHref");
