@@ -33,15 +33,13 @@ const WorkshopManagement = React.createClass({
       const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
       const surveyUrl = this.props.showSurveyUrl && `${surveyBaseUrl}/${this.props.workshopId}`;
 
-      this.setState({
-        surveyUrl: surveyUrl
-      });
+      this.surveyUrl = surveyUrl;
     }
   },
 
   getInitialState() {
     return {
-      showDeleteConfirmation: false,
+      showDeleteConfirmation: false
     };
   },
 
@@ -109,7 +107,7 @@ const WorkshopManagement = React.createClass({
     return (
       <Button
         bsSize="xsmall"
-        href={this.context.router.createHref(this.state.surveyUrl)}
+        href={this.context.router.createHref(this.surveyUrl)}
         onClick={this.handleSurveyClick}
       >
         View Survey Results
