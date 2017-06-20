@@ -6,28 +6,21 @@ theme: responsive
 
 [solid-block-header]
 
-CS Fundamentals Courses A-F Pilot
+Coming Soon: CS Fundamentals Courses A-F
 
 [/solid-block-header]
 
 <img src="/images/csfundamentalspilot/classroompic.jpg" width="80%"/>
 
-### We’re looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017.
+Teachers like you play a critical role in building our computer science curriculum for all students. We're getting ready to release exciting new updates to Computer Science Fundamentals Courses 1-4 for the '17-'18 school year.
 
-<br />
-[<button>Sign up for the pilot</button>](http://go.pardot.com/l/153401/2017-01-31/djn4q4)<br />
-
-Teachers like you play a critical role in building our computer science curriculum for all students. We're getting ready to release exciting new updates to Computer Science Fundamentals Courses 1-4 and we are eager to hear your feedback before these updates fully go live in August 2017 for the ‘17 - ‘18 school year. Help us by piloting the updated CS Fundamentals in your class now!
-
-Learn more about the big updates below, and if you’d like to pilot this curriculum in your classroom, <a href="http://go.pardot.com/l/153401/2017-01-31/djn4q4" target="_blank">sign up to receive the development plans, latest updates, and new resources</a>.
-
-### Why the Pilot?
+### Why update Courses 1 -4?
 
 CS Fundamentals has been used by millions of students, thanks to the passion and dedication of tens of thousands of teachers. And our teachers have given us fantastic feedback on how to improve. Some feedback we’ve been able to add to the current courses, like <a href="http://teacherblog.code.org/post/153273698774/course-1-now-has-an-audio-option-for" target="_blank">text-to-speech</a> for early readers, and the <a href="http://teacherblog.code.org/post/152126473234/cut-back-on-wrong-turns-with-the-new-protractor" target="_blank">protractor tool</a> for angle help. 
 
 Some changes, however, are bigger, and would significantly disrupt classrooms if released mid-year as part of the existing courses. We have been working on these updates separately. 
 
-And now we’re ready to share them with teachers willing to give feedback! **The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).** 
+**The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).** 
 
 ### What stays the same? 
 
@@ -44,9 +37,7 @@ Read on for more details about the updates!
 
 [Puzzle Scaffolding Updates](#puzzle)
 
-[Piloting the updates: What’s there, what’s not](#whatsthere)
-
-[Piloting the updates: Getting started](#gettingstarted)
+[Eager to Get Started?](#gettingstarted)
 
 <a name="intro"></a>
 ### Introducing Courses A - F
@@ -98,26 +89,10 @@ We've created several tools that improve the way that concepts within a stage ar
 
 <a name="whatsthere"></a>
 
-### Piloting the updates: What’s there, what’s not
 
-As these updates won’t be officially released until August 2017, there are a few things that do not exist in Courses A - F—as of right now.
+### Eager to Get Started?
 
-- **Concept ramp-up stages**: We’ve drafted the “core” content of each course, which assumes that students have been exposed to the pathway of the previous courses. We know, though, that in the first years of implementation and for new students who join your class, they will not have completed all of the previous courses. In the Spring, we will be adding ramp-up stages to each course that will ensure coverage of any necessary concepts. Because these don’t exist right now, there are some recommended prerequisites for teachers and students who want to pilot the updated courses this winter/spring. Follow the table below to figure out if your class is a good fit to try the courses this winter/spring:
-
-| Course |Recommended Student prerequisites |
-| :------------------:|-----------|
-| *Courses A, B, C, and D* | None |
-| *Course E* | Concepts needed: Loops, conditionals (if/else statements)<br>Recommended prerequisite: [Course 2](http://studio.code.org/s/course2) |
-| *Course F* | Concepts needed: Loops, conditionals (if/else statements), functions <br>Recommended prerequisite: [Course 3](http://studio.code.org/s/course3) |
-
-- **Assessment support**: Available by full rollout in August<br><br>
-- **Full teacher guides for plugged stages**: Available by full rollout in August. Right now there is a general lesson plan for all plugged stages with recommendations for journaling, bridging activities from unplugged activities, debugging, and more.
-
-<a name="gettingstarted"></a>
-
-### Piloting the updates: Getting started
-
-These courses are not yet listed on [the Code Studio homepage](studio.code.org), but can be accessed directly at:
+These courses are not yet promoted on the Code.org website, but can be accessed directly at:
 
 [col-50]
 
@@ -145,14 +120,10 @@ When you’re ready to have your students access the course, you can assign the 
 
 ### Send us feedback!
 <img src="/images/csfundamentalspilot/reportbug.png" width="35%" align="left"/>
-We’re sharing these courses as drafts because we value your thoughts and would like to hear your feedback as early as possible. If you see any issue while on a puzzle in Code Studio, just click “Report Bug” in the upper right hand corner. It could be an issue in the puzzle, or just your feedback that you think it’s too hard or too easy -- we want to hear it all!
+If you see any issue while on a puzzle in Code Studio, just click “Report Bug” in the upper right hand corner. It could be an issue in the puzzle, or just your feedback that you think it’s too hard or too easy -- we want to hear it all!
 
 ### Join the community
 If you have questions about the course or have a great idea you tried out in your classroom, we want to hear about it, and so would your peers! Our forum is a supportive place to learn from others and share your ideas. Check out the [CS Fundamentals Courses A-F Pilot forum](http://forum.code.org/c/csf)!
-
-### Monthly updates
-We'll be sending monthly updates on our progress throughout the spring and summer leading up to our August launch of the updated CS Fundamentals courses. If you [sign up to participate in the pilot](http://go.pardot.com/l/153401/2017-01-31/djn4q4), you'll get the emails!
-
 
 
 
