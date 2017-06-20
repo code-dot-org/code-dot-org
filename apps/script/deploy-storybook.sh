@@ -29,8 +29,9 @@ node --max_old_space_size=4096 `npm bin`/build-storybook -o $DIR_TO_DEPLOY
 
 # manually copy over static files
 echo "Copying static files"
-cp -R build/package/css $DIR_TO_DEPLOY/css
-cp -R build/package/js/en_us $DIR_TO_DEPLOY/js/en_us
+mkdir -p $DIR_TO_DEPLOY/js
+cp -R build/package/css $DIR_TO_DEPLOY
+cp -R build/package/js/en_us $DIR_TO_DEPLOY/js
 
 echo "Pushing to github... cloning gh-pages branch"
 # Clone the gh-pages branch to /tmp/pages
