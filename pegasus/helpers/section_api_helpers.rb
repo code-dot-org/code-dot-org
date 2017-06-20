@@ -429,8 +429,7 @@ class DashboardSection
       where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
     section = new(row)
-    return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
-    nil
+    return section
   end
 
   def self.fetch_user_sections(user_id)
