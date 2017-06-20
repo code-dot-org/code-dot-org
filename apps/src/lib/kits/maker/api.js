@@ -31,6 +31,10 @@ export function boardConnected() {
   return executeCmd(null, 'boardConnected');
 }
 
+export function createLed(pin) {
+  return executeCmd(null, 'createLed', {pin});
+}
+
 export function onBoardEvent(component, event, callback) {
   return executeCmd(null, 'onBoardEvent', {component, event, callback});
 }
