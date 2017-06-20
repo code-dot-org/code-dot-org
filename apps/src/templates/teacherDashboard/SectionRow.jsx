@@ -1,12 +1,20 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
-import { assignmentId, updateSection, removeSection } from './teacherSectionsRedux';
+import {
+  assignmentId,
+  assignmentName,
+  assignmentPath,
+  updateSection,
+  removeSection
+} from './teacherSectionsRedux';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   sectionName: {
@@ -29,21 +37,20 @@ const styles = {
   }
 };
 
-// TODO: i18n
 /**
  * Our base buttons (Edit and delete).
  */
 export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
     <ProgressButton
-      text={"Edit"}
+      text={i18n.edit()}
       onClick={onEdit}
       color={ProgressButton.ButtonColor.gray}
     />
     {canDelete && (
       <ProgressButton
         style={{marginLeft: 5}}
-        text={"Delete"}
+        text={i18n.delete()}
         onClick={onDelete}
         color={ProgressButton.ButtonColor.red}
       />
@@ -61,7 +68,7 @@ EditOrDelete.propTypes = {
  */
 export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
-    <div>Delete?</div>
+    <div>{i18n.deleteConfirm()}</div>
     <ProgressButton
       text={i18n.yes()}
       onClick={onClickYes}
@@ -112,10 +119,12 @@ class SectionRow extends Component {
     sectionId: PropTypes.number.isRequired,
 
     // redux provided
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validLoginTypes: PropTypes.arrayOf(
+      PropTypes.oneOf(_.values(SectionLoginType))
+    ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-    section: sectionShape.isRequired,
+    sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
   };
@@ -123,10 +132,12 @@ class SectionRow extends Component {
   constructor(props) {
     super(props);
 
+    const section = props.sections[props.sectionId];
+
     this.state = {
       // Start in editing mode if we don't have a section code (implying this is
       // a new section that has not been persisted to the server)
-      editing: !props.section.code,
+      editing: !section.code,
       deleting: false
     };
   }
@@ -136,14 +147,17 @@ class SectionRow extends Component {
   onClickDeleteNo = () => this.setState({deleting: false});
 
   onClickDeleteYes = () => {
-    const { section, removeSection } = this.props;
+    const { sections, sectionId, removeSection } = this.props;
+    const section = sections[sectionId];
     $.ajax({
       url: `/v2/sections/${section.id}`,
       method: 'DELETE',
     }).done(() => {
       removeSection(section.id);
     }).fail((jqXhr, status) => {
-      // TODO(bjvanminnen): figure out how what we want to do in this case
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
       console.error(status);
     });
   }
@@ -151,7 +165,8 @@ class SectionRow extends Component {
   onClickEdit = () => this.setState({editing: true});
 
   onClickEditSave = () => {
-    const { section, sectionId, updateSection } = this.props;
+    const { sections, sectionId, updateSection } = this.props;
+    const section = sections[sectionId];
     const persistedSection = !!section.code;
     const assignment = this.assignment.getSelectedAssignment();
     const data = {
@@ -192,13 +207,16 @@ class SectionRow extends Component {
         this.setState({ editing: false });
       }
     }).fail((jqXhr, status) => {
-      // TODO(bjvanminnen): figure out how what we want to do in this case
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
       console.error(status);
     });
   }
 
   onClickEditCancel = () => {
-    const { section, removeSection } = this.props;
+    const { sections, sectionId, removeSection } = this.props;
+    const section = sections[sectionId];
     const persistedSection = !!section.code;
     if (!persistedSection) {
       removeSection(section.id);
@@ -208,18 +226,20 @@ class SectionRow extends Component {
 
   render() {
     const {
-      section,
+      sections,
+      sectionId,
       validLoginTypes,
       validGrades,
       validAssignments
     } = this.props;
     const { editing, deleting } = this.state;
 
-    // When deleting a section, I've occasionally seen us attempt a render with
-    // a null section for some reason. This is here to provide defense against this.
+    const section = sections[sectionId];
     if (!section) {
       return null;
     }
+    const assignName = assignmentName(validAssignments, section);
+    const assignPath = assignmentPath(validAssignments, section);
 
     const persistedSection = !!section.code;
 
@@ -236,7 +256,7 @@ class SectionRow extends Component {
           {editing && (
             <input
               ref={element => this.name = element}
-              placeholder="Section Name"
+              placeholder={i18n.sectionName()}
               defaultValue={section.name}
             />
           )}
@@ -268,9 +288,9 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.td}>
-          {!editing && section.assignmentName &&
-            <a href={section.assignmentPath}>
-              {section.assignmentName}
+          {!editing && assignName &&
+            <a href={assignPath}>
+              {assignName}
             </a>
           }
           {editing && (
@@ -331,7 +351,10 @@ class SectionRow extends Component {
               onClickNo={this.onClickDeleteNo}
             />
           )}
-          <PrintCertificates section={section}/>
+          <PrintCertificates
+            section={section}
+            assignmentName={assignName}
+          />
         </td>
       </tr>
     );
@@ -340,9 +363,9 @@ class SectionRow extends Component {
 
 export const UnconnectedSectionRow = SectionRow;
 
-export default connect((state, ownProps) => ({
+export default connect(state => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
-  section: state.teacherSections.sections[ownProps.sectionId],
+  sections: state.teacherSections.sections,
 }), { updateSection, removeSection })(SectionRow);
