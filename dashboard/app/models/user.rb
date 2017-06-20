@@ -33,6 +33,7 @@
 #  active                   :boolean          default(TRUE), not null
 #  hashed_email             :string(255)
 #  deleted_at               :datetime
+#  purged_at                :datetime
 #  secret_words             :string(255)
 #  properties               :text(65535)
 #  invitation_token         :string(255)
@@ -58,6 +59,7 @@
 #  index_users_on_invitations_count                    (invitations_count)
 #  index_users_on_invited_by_id                        (invited_by_id)
 #  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
+#  index_users_on_purged_at                            (purged_at)
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
 #  index_users_on_school_info_id                       (school_info_id)
 #  index_users_on_studio_person_id                     (studio_person_id)
