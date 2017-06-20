@@ -40,6 +40,9 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
+    - if index == 0
+      %link{rel: 'preload', href: entry[:image_t], as: 'image', media: css_retina?(false)}
+      %link{rel: 'preload', href: entry[:image_t].gsub('.jpg', '_2x.jpg'), as: 'image', media: css_retina?}
     .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
@@ -112,6 +115,13 @@
   .clear{style: "clear: both"}
 
 :javascript
+  // Use retina versions of the hero background images if on a retina display.
+  if (window.matchMedia('#{css_retina?}').matches) {
+    document.querySelectorAll('#hero .widehero').forEach(function(item) {
+      item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+    });
+  }
+
   var petition;
 
   $(document).ready()
@@ -119,23 +129,8 @@
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $(".caption").css({display: "block", opacity: 0});
-    // Keep image hidden until fading in so it can lazy-load.
-    // $(".widehero").css({display: "block", opacity: 0});
-
-    $("#fullwidth0").fadeTo(4000, 1);
 
     showQuote(null, 0);
-
-    // Use retina versions of the hero background images if on a retina display.
-    $(".widehero").each(function()
-    {
-      var imageUrl = $(this).data('bg');
-      if (window.devicePixelRatio >= 2)
-      {
-        imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
-      }
-      $(this).attr('data-bg', imageUrl);
-    });
   }
 
   function showQuote(lastImage, nextImage)
